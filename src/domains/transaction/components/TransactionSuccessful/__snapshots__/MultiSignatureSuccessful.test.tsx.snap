@@ -7,13 +7,13 @@ exports[`MultiSignatureSuccessful > should handle empty wallet and transation pr
     data-testid="TransactionSuccessful"
   >
     <div
-      class="flex items-end justify-between bg-theme-background"
+      class="flex justify-between items-end bg-theme-background"
     >
       <div
         class="space-y-2"
       >
         <div
-          class="flex items-center gap-3"
+          class="flex gap-3 items-center"
         >
           <h1
             class="mb-0 text-2xl leading-[29px]"
@@ -121,12 +121,12 @@ exports[`MultiSignatureSuccessful > should handle empty wallet and transation pr
       />
     </svg>
     <p
-      class="hidden text-theme-secondary-text md:block"
+      class="hidden md:block text-theme-secondary-text"
     >
       Your transaction has been created successfully. Participants can now sign the transaction to broadcast it to the network. The following is relevant information for your transaction:
     </p>
     <div
-      class="flex flex-col overflow-hidden rounded-xl md:hidden"
+      class="flex overflow-hidden flex-col rounded-xl md:hidden"
     >
       <div
         class="css-1o2lvkz"
@@ -187,13 +187,13 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
     data-testid="TransactionSuccessful"
   >
     <div
-      class="flex items-end justify-between bg-theme-background"
+      class="flex justify-between items-end bg-theme-background"
     >
       <div
         class="space-y-2"
       >
         <div
-          class="flex items-center gap-3"
+          class="flex gap-3 items-center"
         >
           <h1
             class="mb-0 text-2xl leading-[29px]"
@@ -301,12 +301,12 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
       />
     </svg>
     <p
-      class="hidden text-theme-secondary-text md:block"
+      class="hidden md:block text-theme-secondary-text"
     >
       Your transaction has been created successfully. Participants can now sign the transaction to broadcast it to the network. The following is relevant information for your transaction:
     </p>
     <div
-      class="flex flex-col overflow-hidden rounded-xl md:hidden"
+      class="flex overflow-hidden flex-col rounded-xl md:hidden"
     >
       <div
         class="css-1o2lvkz"
@@ -359,11 +359,11 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
         data-testid="TransactionDetail"
       >
         <div
-          class="w-40 flex-1 space-y-2 whitespace-nowrap"
+          class="flex-1 space-y-2 w-40 whitespace-nowrap"
           data-testid="TransactionDetail--desktop"
         >
           <div
-            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+            class="text-sm font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
           >
             ID
           </div>
@@ -371,13 +371,13 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
             class="flex items-center font-semibold"
           >
             <div
-              class="flex w-full items-center space-x-3 overflow-hidden"
+              class="flex overflow-hidden items-center space-x-3 w-full"
             >
               <span
                 class="overflow-hidden"
               >
                 <a
-                  class="ring-focus group inline-block flex items-center css-1flyqpm"
+                  class="inline-block flex items-center ring-focus group css-1flyqpm"
                   data-ring-focus-margin="-m-1"
                   data-testid="Link"
                   href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
@@ -394,7 +394,7 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
                     </span>
                   </span>
                   <div
-                    class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                    class="inline-block text-sm align-middle duration-200 mb-[3px] shrink-0 css-v0ob3f"
                     data-testid="Link__external"
                     height="16"
                     width="16"
@@ -423,7 +423,7 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
                 class="flex text-theme-primary-300 dark:text-theme-secondary-600"
               >
                 <button
-                  class="ring-focus relative focus:outline-none"
+                  class="relative ring-focus focus:outline-hidden"
                   data-ring-focus-margin="-m-1"
                   data-testid="clipboard-icon__wrapper"
                   type="button"
@@ -470,11 +470,11 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
           data-testid="DetailWrapper"
         >
           <div
-            class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+            class="py-2 px-3 border-l-2 sm:p-0 sm:bg-transparent sm:border-none dark:bg-black border-x-theme-primary-400 bg-theme-secondary-100 dark:sm:bg-transparent"
             data-testid="DetailLabel"
           >
             <div
-              class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+              class="font-semibold no-ligatures text-md min-w-24 text-theme-secondary-700 dark:text-theme-secondary-500"
               data-testid="DetailLabelText"
             >
               Transaction Type
@@ -484,10 +484,10 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
             class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
           >
             <div
-              class="flex w-full justify-between sm:justify-start"
+              class="flex justify-between w-full sm:justify-start"
             >
               <div
-                class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                class="font-semibold no-ligatures text-md min-w-24 text-theme-secondary-700 dark:text-theme-secondary-500"
                 data-testid="DetailLabelText"
               >
                 Category
@@ -507,11 +507,11 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
         data-testid="TransactionNetwork"
       >
         <div
-          class="w-40 flex-1 space-y-2 whitespace-nowrap"
+          class="flex-1 space-y-2 w-40 whitespace-nowrap"
           data-testid="TransactionDetail--desktop"
         >
           <div
-            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+            class="text-sm font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
           >
             Cryptoasset
           </div>
@@ -523,7 +523,7 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
         </div>
         <div
           aria-label="ARK Devnet"
-          class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-1nqcsx"
+          class="duration-100 text-theme-secondary-700 border-theme-secondary-300 ring-theme-background css-1nqcsx dark:border-theme-secondary-700"
           data-testid="NetworkIcon-ARK-ark.devnet"
         >
           <div
@@ -553,11 +553,11 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
         data-testid="TransactionSuccessful__musig-address"
       >
         <div
-          class="w-40 flex-1 space-y-2 whitespace-nowrap"
+          class="flex-1 space-y-2 w-40 whitespace-nowrap"
           data-testid="TransactionDetail--desktop"
         >
           <div
-            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+            class="text-sm font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
           >
             <div
               class="flex items-center space-x-2"
@@ -603,16 +603,16 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
             class="flex items-center font-semibold"
           >
             <div
-              class="flex grow items-center space-x-2 text-theme-primary-300 dark:text-theme-secondary-600"
+              class="flex items-center space-x-2 grow text-theme-primary-300 dark:text-theme-secondary-600"
             >
               <div
-                class="w-0 flex-1 text-right md:text-left"
+                class="flex-1 w-0 text-right md:text-left"
               >
                 <div
-                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                  class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
                 >
                   <span
-                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                    class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-text"
                     data-testid="Address__address"
                   >
                     DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH
@@ -620,7 +620,7 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
                 </div>
               </div>
               <button
-                class="ring-focus relative focus:outline-none"
+                class="relative ring-focus focus:outline-hidden"
                 data-ring-focus-margin="-m-1"
                 data-testid="clipboard-icon__wrapper"
                 type="button"
@@ -666,7 +666,7 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
             data-testid="Avatar"
           >
             <div
-              class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+              class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded-full"
             >
               <img
                 alt="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
@@ -682,11 +682,11 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
         data-testid="TransactionSender"
       >
         <div
-          class="w-40 flex-1 space-y-2 whitespace-nowrap"
+          class="flex-1 space-y-2 w-40 whitespace-nowrap"
           data-testid="TransactionDetail--desktop"
         >
           <div
-            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+            class="text-sm font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
           >
             Sender
           </div>
@@ -694,13 +694,13 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
             class="flex items-center font-semibold"
           >
             <div
-              class="w-0 flex-1 overflow-auto text-right md:text-left"
+              class="overflow-auto flex-1 w-0 text-right md:text-left"
             >
               <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
               >
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                  class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-text"
                   data-testid="Address__address"
                 >
                   DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH
@@ -717,7 +717,7 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
             data-testid="Avatar"
           >
             <div
-              class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+              class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded-full"
             >
               <img
                 alt="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
@@ -733,11 +733,11 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
         data-testid="TransactionRecipients"
       >
         <div
-          class="w-40 flex-1 space-y-2 whitespace-nowrap"
+          class="flex-1 space-y-2 w-40 whitespace-nowrap"
           data-testid="TransactionDetail--desktop"
         >
           <div
-            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+            class="text-sm font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
           >
             Multisignature Participants (2)
           </div>
@@ -760,13 +760,13 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
                       role="row"
                     >
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="relative p-3 m-0 text-sm font-semibold text-left select-none first:pl-6 first:rounded-tl-xl last:pr-6 last:rounded-tr-xl group text-theme-secondary-700 border-theme-secondary-300 bg-theme-secondary-100 dark:text-theme-secondary-500 dark:border-theme-secondary-800 dark:bg-theme-secondary-800"
                         colspan="1"
                         data-testid="table__th--0"
                         role="columnheader"
                       >
                         <div
-                          class="flex flex-inline align-top hidden"
+                          class="flex hidden align-top flex-inline"
                         >
                           <div
                             class=""
@@ -776,13 +776,13 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="relative p-3 m-0 text-sm font-semibold text-left select-none first:pl-6 first:rounded-tl-xl last:pr-6 last:rounded-tr-xl group text-theme-secondary-700 border-theme-secondary-300 bg-theme-secondary-100 dark:text-theme-secondary-500 dark:border-theme-secondary-800 dark:bg-theme-secondary-800"
                         colspan="1"
                         data-testid="table__th--1"
                         role="columnheader"
                       >
                         <div
-                          class="flex flex-inline align-top hidden"
+                          class="flex hidden align-top flex-inline"
                         >
                           <div
                             class=""
@@ -792,13 +792,13 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="relative p-3 m-0 text-sm font-semibold text-left select-none first:pl-6 first:rounded-tl-xl last:pr-6 last:rounded-tr-xl group text-theme-secondary-700 border-theme-secondary-300 bg-theme-secondary-100 dark:text-theme-secondary-500 dark:border-theme-secondary-800 dark:bg-theme-secondary-800"
                         colspan="1"
                         data-testid="table__th--2"
                         role="columnheader"
                       >
                         <div
-                          class="flex flex-inline align-top hidden"
+                          class="flex hidden align-top flex-inline"
                         >
                           <div
                             class=""
@@ -813,11 +813,11 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
                     role="rowgroup"
                   >
                     <tr
-                      class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
+                      class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
                       data-testid="recipient-list__recipient-list-item"
                     >
                       <td
-                        class="mr-3 table-cell md:hidden"
+                        class="table-cell mr-3 md:hidden"
                       />
                       <td
                         class="hidden md:table-cell"
@@ -827,7 +827,7 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+                            class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded-full"
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -838,13 +838,13 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
                         </div>
                       </td>
                       <td
-                        class="w-28 flex-1 justify-end md:ml-4"
+                        class="flex-1 justify-end w-28 md:ml-4"
                       >
                         <div
-                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                            class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-text"
                             data-testid="Address__address"
                           >
                             D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -852,14 +852,14 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
                         </div>
                       </td>
                       <td
-                        class="ml-2 table-cell md:hidden"
+                        class="table-cell ml-2 md:hidden"
                       >
                         <div
                           class="shrink-0 css-1yk316i"
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+                            class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded-full"
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -874,11 +874,11 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
                       />
                     </tr>
                     <tr
-                      class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
+                      class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
                       data-testid="recipient-list__recipient-list-item"
                     >
                       <td
-                        class="mr-3 table-cell md:hidden"
+                        class="table-cell mr-3 md:hidden"
                       />
                       <td
                         class="hidden md:table-cell"
@@ -888,7 +888,7 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+                            class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded-full"
                           >
                             <img
                               alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -899,13 +899,13 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
                         </div>
                       </td>
                       <td
-                        class="w-28 flex-1 justify-end md:ml-4"
+                        class="flex-1 justify-end w-28 md:ml-4"
                       >
                         <div
-                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                            class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-text"
                             data-testid="Address__address"
                           >
                             D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -913,14 +913,14 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
                         </div>
                       </td>
                       <td
-                        class="ml-2 table-cell md:hidden"
+                        class="table-cell ml-2 md:hidden"
                       >
                         <div
                           class="shrink-0 css-1yk316i"
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+                            class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded-full"
                           >
                             <img
                               alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -946,11 +946,11 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
         data-testid="TransactionDetail"
       >
         <div
-          class="w-40 flex-1 space-y-2 whitespace-nowrap"
+          class="flex-1 space-y-2 w-40 whitespace-nowrap"
           data-testid="TransactionDetail--desktop"
         >
           <div
-            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+            class="text-sm font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
           >
             Minimum Required Signatures
           </div>
@@ -978,11 +978,11 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
         data-testid="TransactionAmount"
       >
         <div
-          class="w-40 flex-1 space-y-2 whitespace-nowrap"
+          class="flex-1 space-y-2 w-40 whitespace-nowrap"
           data-testid="TransactionDetail--desktop"
         >
           <div
-            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+            class="text-sm font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
           >
             Amount
           </div>
@@ -990,15 +990,15 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
             class="flex items-center font-semibold"
           >
             <div
-              class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+              class="flex justify-center items-center px-1.5 h-full rounded css-xqt0aw"
               color="danger-bg"
               data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex h-full items-center space-x-1"
+                class="flex items-center space-x-1 h-full"
               >
                 <span
-                  class="whitespace-nowrap text-sm"
+                  class="text-sm whitespace-nowrap"
                   data-testid="Amount"
                 >
                   - 100 DARK
@@ -1008,7 +1008,7 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
           </div>
         </div>
         <div
-          class="border-theme-danger-100 text-theme-danger-500 dark:border-theme-danger-400 dark:text-theme-danger-400 ring-theme-background duration-100 css-1nqcsx"
+          class="duration-100 border-theme-danger-100 text-theme-danger-500 ring-theme-background css-1nqcsx dark:border-theme-danger-400 dark:text-theme-danger-400"
         >
           <div
             class="css-1i4b0eq"
@@ -1048,13 +1048,13 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
     data-testid="TransactionSuccessful"
   >
     <div
-      class="flex items-end justify-between bg-theme-background"
+      class="flex justify-between items-end bg-theme-background"
     >
       <div
         class="space-y-2"
       >
         <div
-          class="flex items-center gap-3"
+          class="flex gap-3 items-center"
         >
           <h1
             class="mb-0 text-2xl leading-[29px]"
@@ -1162,12 +1162,12 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
       />
     </svg>
     <p
-      class="hidden text-theme-secondary-text md:block"
+      class="hidden md:block text-theme-secondary-text"
     >
       Your transaction has been created successfully. Participants can now sign the transaction to broadcast it to the network. The following is relevant information for your transaction:
     </p>
     <div
-      class="flex flex-col overflow-hidden rounded-xl md:hidden"
+      class="flex overflow-hidden flex-col rounded-xl md:hidden"
     >
       <div
         class="css-1o2lvkz"
@@ -1220,11 +1220,11 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
         data-testid="TransactionDetail"
       >
         <div
-          class="w-40 flex-1 space-y-2 whitespace-nowrap"
+          class="flex-1 space-y-2 w-40 whitespace-nowrap"
           data-testid="TransactionDetail--desktop"
         >
           <div
-            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+            class="text-sm font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
           >
             ID
           </div>
@@ -1232,13 +1232,13 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
             class="flex items-center font-semibold"
           >
             <div
-              class="flex w-full items-center space-x-3 overflow-hidden"
+              class="flex overflow-hidden items-center space-x-3 w-full"
             >
               <span
                 class="overflow-hidden"
               >
                 <a
-                  class="ring-focus group inline-block flex items-center css-1flyqpm"
+                  class="inline-block flex items-center ring-focus group css-1flyqpm"
                   data-ring-focus-margin="-m-1"
                   data-testid="Link"
                   href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
@@ -1255,7 +1255,7 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
                     </span>
                   </span>
                   <div
-                    class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                    class="inline-block text-sm align-middle duration-200 mb-[3px] shrink-0 css-v0ob3f"
                     data-testid="Link__external"
                     height="16"
                     width="16"
@@ -1284,7 +1284,7 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
                 class="flex text-theme-primary-300 dark:text-theme-secondary-600"
               >
                 <button
-                  class="ring-focus relative focus:outline-none"
+                  class="relative ring-focus focus:outline-hidden"
                   data-ring-focus-margin="-m-1"
                   data-testid="clipboard-icon__wrapper"
                   type="button"
@@ -1331,11 +1331,11 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
           data-testid="DetailWrapper"
         >
           <div
-            class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+            class="py-2 px-3 border-l-2 sm:p-0 sm:bg-transparent sm:border-none dark:bg-black border-x-theme-primary-400 bg-theme-secondary-100 dark:sm:bg-transparent"
             data-testid="DetailLabel"
           >
             <div
-              class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+              class="font-semibold no-ligatures text-md min-w-24 text-theme-secondary-700 dark:text-theme-secondary-500"
               data-testid="DetailLabelText"
             >
               Transaction Type
@@ -1345,10 +1345,10 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
             class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
           >
             <div
-              class="flex w-full justify-between sm:justify-start"
+              class="flex justify-between w-full sm:justify-start"
             >
               <div
-                class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                class="font-semibold no-ligatures text-md min-w-24 text-theme-secondary-700 dark:text-theme-secondary-500"
                 data-testid="DetailLabelText"
               >
                 Category
@@ -1368,11 +1368,11 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
         data-testid="TransactionNetwork"
       >
         <div
-          class="w-40 flex-1 space-y-2 whitespace-nowrap"
+          class="flex-1 space-y-2 w-40 whitespace-nowrap"
           data-testid="TransactionDetail--desktop"
         >
           <div
-            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+            class="text-sm font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
           >
             Cryptoasset
           </div>
@@ -1384,7 +1384,7 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
         </div>
         <div
           aria-label="ARK Devnet"
-          class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-1nqcsx"
+          class="duration-100 text-theme-secondary-700 border-theme-secondary-300 ring-theme-background css-1nqcsx dark:border-theme-secondary-700"
           data-testid="NetworkIcon-ARK-ark.devnet"
         >
           <div
@@ -1414,11 +1414,11 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
         data-testid="TransactionSuccessful__musig-address"
       >
         <div
-          class="w-40 flex-1 space-y-2 whitespace-nowrap"
+          class="flex-1 space-y-2 w-40 whitespace-nowrap"
           data-testid="TransactionDetail--desktop"
         >
           <div
-            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+            class="text-sm font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
           >
             <div
               class="flex items-center space-x-2"
@@ -1464,16 +1464,16 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
             class="flex items-center font-semibold"
           >
             <div
-              class="flex grow items-center space-x-2 text-theme-primary-300 dark:text-theme-secondary-600"
+              class="flex items-center space-x-2 grow text-theme-primary-300 dark:text-theme-secondary-600"
             >
               <div
-                class="w-0 flex-1 text-right md:text-left"
+                class="flex-1 w-0 text-right md:text-left"
               >
                 <div
-                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                  class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
                 >
                   <span
-                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                    class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-text"
                     data-testid="Address__address"
                   >
                     DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH
@@ -1481,7 +1481,7 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
                 </div>
               </div>
               <button
-                class="ring-focus relative focus:outline-none"
+                class="relative ring-focus focus:outline-hidden"
                 data-ring-focus-margin="-m-1"
                 data-testid="clipboard-icon__wrapper"
                 type="button"
@@ -1527,7 +1527,7 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
             data-testid="Avatar"
           >
             <div
-              class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+              class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded-full"
             >
               <img
                 alt="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
@@ -1543,11 +1543,11 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
         data-testid="TransactionSender"
       >
         <div
-          class="w-40 flex-1 space-y-2 whitespace-nowrap"
+          class="flex-1 space-y-2 w-40 whitespace-nowrap"
           data-testid="TransactionDetail--desktop"
         >
           <div
-            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+            class="text-sm font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
           >
             Sender
           </div>
@@ -1555,13 +1555,13 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
             class="flex items-center font-semibold"
           >
             <div
-              class="w-0 flex-1 overflow-auto text-right md:text-left"
+              class="overflow-auto flex-1 w-0 text-right md:text-left"
             >
               <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
               >
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                  class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-text"
                   data-testid="Address__address"
                 >
                   DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH
@@ -1578,7 +1578,7 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
             data-testid="Avatar"
           >
             <div
-              class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+              class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded-full"
             >
               <img
                 alt="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
@@ -1594,11 +1594,11 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
         data-testid="TransactionRecipients"
       >
         <div
-          class="w-40 flex-1 space-y-2 whitespace-nowrap"
+          class="flex-1 space-y-2 w-40 whitespace-nowrap"
           data-testid="TransactionDetail--desktop"
         >
           <div
-            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+            class="text-sm font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
           >
             Multisignature Participants (2)
           </div>
@@ -1621,13 +1621,13 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
                       role="row"
                     >
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="relative p-3 m-0 text-sm font-semibold text-left select-none first:pl-6 first:rounded-tl-xl last:pr-6 last:rounded-tr-xl group text-theme-secondary-700 border-theme-secondary-300 bg-theme-secondary-100 dark:text-theme-secondary-500 dark:border-theme-secondary-800 dark:bg-theme-secondary-800"
                         colspan="1"
                         data-testid="table__th--0"
                         role="columnheader"
                       >
                         <div
-                          class="flex flex-inline align-top hidden"
+                          class="flex hidden align-top flex-inline"
                         >
                           <div
                             class=""
@@ -1637,13 +1637,13 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="relative p-3 m-0 text-sm font-semibold text-left select-none first:pl-6 first:rounded-tl-xl last:pr-6 last:rounded-tr-xl group text-theme-secondary-700 border-theme-secondary-300 bg-theme-secondary-100 dark:text-theme-secondary-500 dark:border-theme-secondary-800 dark:bg-theme-secondary-800"
                         colspan="1"
                         data-testid="table__th--1"
                         role="columnheader"
                       >
                         <div
-                          class="flex flex-inline align-top hidden"
+                          class="flex hidden align-top flex-inline"
                         >
                           <div
                             class=""
@@ -1653,13 +1653,13 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="relative p-3 m-0 text-sm font-semibold text-left select-none first:pl-6 first:rounded-tl-xl last:pr-6 last:rounded-tr-xl group text-theme-secondary-700 border-theme-secondary-300 bg-theme-secondary-100 dark:text-theme-secondary-500 dark:border-theme-secondary-800 dark:bg-theme-secondary-800"
                         colspan="1"
                         data-testid="table__th--2"
                         role="columnheader"
                       >
                         <div
-                          class="flex flex-inline align-top hidden"
+                          class="flex hidden align-top flex-inline"
                         >
                           <div
                             class=""
@@ -1674,11 +1674,11 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
                     role="rowgroup"
                   >
                     <tr
-                      class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
+                      class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
                       data-testid="recipient-list__recipient-list-item"
                     >
                       <td
-                        class="mr-3 table-cell md:hidden"
+                        class="table-cell mr-3 md:hidden"
                       />
                       <td
                         class="hidden md:table-cell"
@@ -1688,7 +1688,7 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+                            class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded-full"
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -1699,13 +1699,13 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
                         </div>
                       </td>
                       <td
-                        class="w-28 flex-1 justify-end md:ml-4"
+                        class="flex-1 justify-end w-28 md:ml-4"
                       >
                         <div
-                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                            class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-text"
                             data-testid="Address__address"
                           >
                             D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -1713,14 +1713,14 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
                         </div>
                       </td>
                       <td
-                        class="ml-2 table-cell md:hidden"
+                        class="table-cell ml-2 md:hidden"
                       >
                         <div
                           class="shrink-0 css-1yk316i"
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+                            class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded-full"
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -1735,11 +1735,11 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
                       />
                     </tr>
                     <tr
-                      class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
+                      class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
                       data-testid="recipient-list__recipient-list-item"
                     >
                       <td
-                        class="mr-3 table-cell md:hidden"
+                        class="table-cell mr-3 md:hidden"
                       />
                       <td
                         class="hidden md:table-cell"
@@ -1749,7 +1749,7 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+                            class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded-full"
                           >
                             <img
                               alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -1760,13 +1760,13 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
                         </div>
                       </td>
                       <td
-                        class="w-28 flex-1 justify-end md:ml-4"
+                        class="flex-1 justify-end w-28 md:ml-4"
                       >
                         <div
-                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                            class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-text"
                             data-testid="Address__address"
                           >
                             D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -1774,14 +1774,14 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
                         </div>
                       </td>
                       <td
-                        class="ml-2 table-cell md:hidden"
+                        class="table-cell ml-2 md:hidden"
                       >
                         <div
                           class="shrink-0 css-1yk316i"
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+                            class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded-full"
                           >
                             <img
                               alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -1807,11 +1807,11 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
         data-testid="TransactionDetail"
       >
         <div
-          class="w-40 flex-1 space-y-2 whitespace-nowrap"
+          class="flex-1 space-y-2 w-40 whitespace-nowrap"
           data-testid="TransactionDetail--desktop"
         >
           <div
-            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+            class="text-sm font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
           >
             Minimum Required Signatures
           </div>
@@ -1839,11 +1839,11 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
         data-testid="TransactionAmount"
       >
         <div
-          class="w-40 flex-1 space-y-2 whitespace-nowrap"
+          class="flex-1 space-y-2 w-40 whitespace-nowrap"
           data-testid="TransactionDetail--desktop"
         >
           <div
-            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+            class="text-sm font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
           >
             Amount
           </div>
@@ -1851,15 +1851,15 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
             class="flex items-center font-semibold"
           >
             <div
-              class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+              class="flex justify-center items-center px-1.5 h-full rounded css-xqt0aw"
               color="danger-bg"
               data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex h-full items-center space-x-1"
+                class="flex items-center space-x-1 h-full"
               >
                 <span
-                  class="whitespace-nowrap text-sm"
+                  class="text-sm whitespace-nowrap"
                   data-testid="Amount"
                 >
                   - 100 DARK
@@ -1869,7 +1869,7 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
           </div>
         </div>
         <div
-          class="border-theme-danger-100 text-theme-danger-500 dark:border-theme-danger-400 dark:text-theme-danger-400 ring-theme-background duration-100 css-1nqcsx"
+          class="duration-100 border-theme-danger-100 text-theme-danger-500 ring-theme-background css-1nqcsx dark:border-theme-danger-400 dark:text-theme-danger-400"
         >
           <div
             class="css-1i4b0eq"
@@ -1909,13 +1909,13 @@ exports[`MultiSignatureSuccessful > should render in sm 1`] = `
     data-testid="TransactionSuccessful"
   >
     <div
-      class="flex items-end justify-between bg-theme-background"
+      class="flex justify-between items-end bg-theme-background"
     >
       <div
         class="space-y-2"
       >
         <div
-          class="flex items-center gap-3"
+          class="flex gap-3 items-center"
         >
           <h1
             class="mb-0 text-2xl leading-[29px]"
@@ -2023,12 +2023,12 @@ exports[`MultiSignatureSuccessful > should render in sm 1`] = `
       />
     </svg>
     <p
-      class="hidden text-theme-secondary-text md:block"
+      class="hidden md:block text-theme-secondary-text"
     >
       Your transaction has been created successfully. Participants can now sign the transaction to broadcast it to the network. The following is relevant information for your transaction:
     </p>
     <div
-      class="flex flex-col overflow-hidden rounded-xl md:hidden"
+      class="flex overflow-hidden flex-col rounded-xl md:hidden"
     >
       <div
         class="css-1o2lvkz"
@@ -2081,28 +2081,28 @@ exports[`MultiSignatureSuccessful > should render in sm 1`] = `
         data-testid="TransactionDetail"
       >
         <div
-          class="items-top flex w-full justify-between space-x-4 md:items-center"
+          class="flex justify-between space-x-4 w-full md:items-center items-top"
           data-testid="TransactionDetail--mobile"
         >
           <div
-            class="text-md md:theme-text group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+            class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 md:theme-text dark:border-theme-secondary-800 dark:text-theme-secondary-500"
           >
             ID
           </div>
           <div
-            class="flex min-w-0 grow items-center justify-end space-x-4"
+            class="flex justify-end items-center space-x-4 min-w-0 grow"
           >
             <div
-              class="md:theme-text flex w-full justify-end text-theme-secondary-700 dark:text-theme-secondary-500"
+              class="flex justify-end w-full text-theme-secondary-700 md:theme-text dark:text-theme-secondary-500"
             >
               <div
-                class="flex w-full items-center space-x-3 overflow-hidden"
+                class="flex overflow-hidden items-center space-x-3 w-full"
               >
                 <span
                   class="overflow-hidden w-full"
                 >
                   <a
-                    class="ring-focus group inline-block flex items-center justify-end css-1flyqpm"
+                    class="inline-block flex justify-end items-center ring-focus group css-1flyqpm"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
@@ -2119,7 +2119,7 @@ exports[`MultiSignatureSuccessful > should render in sm 1`] = `
                       </span>
                     </span>
                     <div
-                      class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                      class="inline-block text-sm align-middle duration-200 mb-[3px] shrink-0 css-v0ob3f"
                       data-testid="Link__external"
                       height="16"
                       width="16"
@@ -2148,7 +2148,7 @@ exports[`MultiSignatureSuccessful > should render in sm 1`] = `
                   class="flex text-theme-primary-300 dark:text-theme-secondary-600"
                 >
                   <button
-                    class="ring-focus relative focus:outline-none"
+                    class="relative ring-focus focus:outline-hidden"
                     data-ring-focus-margin="-m-1"
                     data-testid="clipboard-icon__wrapper"
                     type="button"
@@ -2196,11 +2196,11 @@ exports[`MultiSignatureSuccessful > should render in sm 1`] = `
           data-testid="DetailWrapper"
         >
           <div
-            class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+            class="py-2 px-3 border-l-2 sm:p-0 sm:bg-transparent sm:border-none dark:bg-black border-x-theme-primary-400 bg-theme-secondary-100 dark:sm:bg-transparent"
             data-testid="DetailLabel"
           >
             <div
-              class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+              class="font-semibold no-ligatures text-md min-w-24 text-theme-secondary-700 dark:text-theme-secondary-500"
               data-testid="DetailLabelText"
             >
               Transaction Type
@@ -2210,10 +2210,10 @@ exports[`MultiSignatureSuccessful > should render in sm 1`] = `
             class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
           >
             <div
-              class="flex w-full justify-between sm:justify-start"
+              class="flex justify-between w-full sm:justify-start"
             >
               <div
-                class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                class="font-semibold no-ligatures text-md min-w-24 text-theme-secondary-700 dark:text-theme-secondary-500"
                 data-testid="DetailLabelText"
               >
                 Category
@@ -2233,25 +2233,25 @@ exports[`MultiSignatureSuccessful > should render in sm 1`] = `
         data-testid="TransactionNetwork"
       >
         <div
-          class="items-top flex w-full justify-between space-x-4 md:items-center"
+          class="flex justify-between space-x-4 w-full md:items-center items-top"
           data-testid="TransactionDetail--mobile"
         >
           <div
-            class="text-md md:theme-text group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+            class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 md:theme-text dark:border-theme-secondary-800 dark:text-theme-secondary-500"
           >
             Cryptoasset
           </div>
           <div
-            class="flex min-w-0 grow items-center justify-end space-x-4"
+            class="flex justify-end items-center space-x-4 min-w-0 grow"
           >
             <div
-              class="md:theme-text flex w-full justify-end text-theme-secondary-700 dark:text-theme-secondary-500"
+              class="flex justify-end w-full text-theme-secondary-700 md:theme-text dark:text-theme-secondary-500"
             >
               ARK Devnet
             </div>
             <div
               aria-label="ARK Devnet"
-              class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
+              class="inline-flex justify-center items-center w-5 h-5 text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
               data-testid="NetworkIcon-ARK-ark.devnet"
             >
               <div
@@ -2283,11 +2283,11 @@ exports[`MultiSignatureSuccessful > should render in sm 1`] = `
         data-testid="TransactionSuccessful__musig-address"
       >
         <div
-          class="items-top flex w-full justify-between space-x-4 md:items-center"
+          class="flex justify-between space-x-4 w-full md:items-center items-top"
           data-testid="TransactionDetail--mobile"
         >
           <div
-            class="text-md md:theme-text group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+            class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 md:theme-text dark:border-theme-secondary-800 dark:text-theme-secondary-500"
           >
             <div
               class="flex items-center space-x-2"
@@ -2330,22 +2330,22 @@ exports[`MultiSignatureSuccessful > should render in sm 1`] = `
             </div>
           </div>
           <div
-            class="flex min-w-0 grow items-center justify-end space-x-4"
+            class="flex justify-end items-center space-x-4 min-w-0 grow"
           >
             <div
-              class="md:theme-text flex w-full justify-end text-theme-secondary-700 dark:text-theme-secondary-500"
+              class="flex justify-end w-full text-theme-secondary-700 md:theme-text dark:text-theme-secondary-500"
             >
               <div
-                class="flex grow items-center space-x-2 text-theme-primary-300 dark:text-theme-secondary-600"
+                class="flex items-center space-x-2 grow text-theme-primary-300 dark:text-theme-secondary-600"
               >
                 <div
-                  class="w-0 flex-1 text-right md:text-left"
+                  class="flex-1 w-0 text-right md:text-left"
                 >
                   <div
-                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
                   >
                     <span
-                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-text"
                       data-testid="Address__address"
                     >
                       DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH
@@ -2353,7 +2353,7 @@ exports[`MultiSignatureSuccessful > should render in sm 1`] = `
                   </div>
                 </div>
                 <button
-                  class="ring-focus relative focus:outline-none"
+                  class="relative ring-focus focus:outline-hidden"
                   data-ring-focus-margin="-m-1"
                   data-testid="clipboard-icon__wrapper"
                   type="button"
@@ -2398,7 +2398,7 @@ exports[`MultiSignatureSuccessful > should render in sm 1`] = `
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+                  class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded-full"
                 >
                   <img
                     alt="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
@@ -2416,28 +2416,28 @@ exports[`MultiSignatureSuccessful > should render in sm 1`] = `
         data-testid="TransactionSender"
       >
         <div
-          class="items-top flex w-full justify-between space-x-4 md:items-center"
+          class="flex justify-between space-x-4 w-full md:items-center items-top"
           data-testid="TransactionDetail--mobile"
         >
           <div
-            class="text-md md:theme-text group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+            class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 md:theme-text dark:border-theme-secondary-800 dark:text-theme-secondary-500"
           >
             Sender
           </div>
           <div
-            class="flex min-w-0 grow items-center justify-end space-x-4"
+            class="flex justify-end items-center space-x-4 min-w-0 grow"
           >
             <div
-              class="md:theme-text flex w-full justify-end text-theme-secondary-700 dark:text-theme-secondary-500"
+              class="flex justify-end w-full text-theme-secondary-700 md:theme-text dark:text-theme-secondary-500"
             >
               <div
-                class="w-0 flex-1 overflow-auto text-right md:text-left"
+                class="overflow-auto flex-1 w-0 text-right md:text-left"
               >
                 <div
-                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                  class="flex overflow-hidden justify-end items-center space-x-2 w-full whitespace-nowrap"
                 >
                   <span
-                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                    class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-text"
                     data-testid="Address__address"
                   >
                     DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH
@@ -2453,7 +2453,7 @@ exports[`MultiSignatureSuccessful > should render in sm 1`] = `
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+                  class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded-full"
                 >
                   <img
                     alt="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
@@ -2467,7 +2467,7 @@ exports[`MultiSignatureSuccessful > should render in sm 1`] = `
         </div>
       </div>
       <div
-        class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+        class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
       >
         <div
           class="my-2 whitespace-nowrap"
@@ -2480,23 +2480,23 @@ exports[`MultiSignatureSuccessful > should render in sm 1`] = `
         data-testid="TransactionRecipient"
       >
         <div
-          class="items-top flex w-full justify-between space-x-4 md:items-center"
+          class="flex justify-between space-x-4 w-full md:items-center items-top"
           data-testid="TransactionDetail--mobile"
         >
           <div
-            class="flex min-w-0 grow items-center justify-end space-x-4"
+            class="flex justify-end items-center space-x-4 min-w-0 grow"
           >
             <div
-              class="md:theme-text flex w-full justify-end text-theme-secondary-700 dark:text-theme-secondary-500"
+              class="flex justify-end w-full text-theme-secondary-700 md:theme-text dark:text-theme-secondary-500"
             >
               <div
-                class="w-full flex-col space-y-4"
+                class="flex-col space-y-4 w-full"
               >
                 <div
-                  class="flex items-center justify-between space-x-4"
+                  class="flex justify-between items-center space-x-4"
                 >
                   <div
-                    class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                    class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
                   >
                     <div
                       class="whitespace-nowrap"
@@ -2505,16 +2505,16 @@ exports[`MultiSignatureSuccessful > should render in sm 1`] = `
                     </div>
                   </div>
                   <div
-                    class="flex w-full items-center space-x-2 text-right"
+                    class="flex items-center space-x-2 w-full text-right"
                   >
                     <div
-                      class="w-0 flex-1 overflow-auto text-right md:text-left"
+                      class="overflow-auto flex-1 w-0 text-right md:text-left"
                     >
                       <div
-                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                        class="flex overflow-hidden justify-end items-center space-x-2 w-full whitespace-nowrap"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-text"
                           data-testid="Address__address"
                         >
                           D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -2526,7 +2526,7 @@ exports[`MultiSignatureSuccessful > should render in sm 1`] = `
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+                        class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded-full"
                       >
                         <img
                           alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -2547,23 +2547,23 @@ exports[`MultiSignatureSuccessful > should render in sm 1`] = `
         data-testid="TransactionRecipient"
       >
         <div
-          class="items-top flex w-full justify-between space-x-4 md:items-center"
+          class="flex justify-between space-x-4 w-full md:items-center items-top"
           data-testid="TransactionDetail--mobile"
         >
           <div
-            class="flex min-w-0 grow items-center justify-end space-x-4"
+            class="flex justify-end items-center space-x-4 min-w-0 grow"
           >
             <div
-              class="md:theme-text flex w-full justify-end text-theme-secondary-700 dark:text-theme-secondary-500"
+              class="flex justify-end w-full text-theme-secondary-700 md:theme-text dark:text-theme-secondary-500"
             >
               <div
-                class="w-full flex-col space-y-4"
+                class="flex-col space-y-4 w-full"
               >
                 <div
-                  class="flex items-center justify-between space-x-4"
+                  class="flex justify-between items-center space-x-4"
                 >
                   <div
-                    class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                    class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
                   >
                     <div
                       class="whitespace-nowrap"
@@ -2572,16 +2572,16 @@ exports[`MultiSignatureSuccessful > should render in sm 1`] = `
                     </div>
                   </div>
                   <div
-                    class="flex w-full items-center space-x-2 text-right"
+                    class="flex items-center space-x-2 w-full text-right"
                   >
                     <div
-                      class="w-0 flex-1 overflow-auto text-right md:text-left"
+                      class="overflow-auto flex-1 w-0 text-right md:text-left"
                     >
                       <div
-                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                        class="flex overflow-hidden justify-end items-center space-x-2 w-full whitespace-nowrap"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-text"
                           data-testid="Address__address"
                         >
                           D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -2593,7 +2593,7 @@ exports[`MultiSignatureSuccessful > should render in sm 1`] = `
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+                        class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded-full"
                       >
                         <img
                           alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -2614,19 +2614,19 @@ exports[`MultiSignatureSuccessful > should render in sm 1`] = `
         data-testid="TransactionDetail"
       >
         <div
-          class="items-top flex w-full justify-between space-x-4 md:items-center"
+          class="flex justify-between space-x-4 w-full md:items-center items-top"
           data-testid="TransactionDetail--mobile"
         >
           <div
-            class="text-md md:theme-text group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+            class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 md:theme-text dark:border-theme-secondary-800 dark:text-theme-secondary-500"
           >
             Minimum Required Signatures
           </div>
           <div
-            class="flex min-w-0 grow items-center justify-end space-x-4"
+            class="flex justify-end items-center space-x-4 min-w-0 grow"
           >
             <div
-              class="md:theme-text flex w-full justify-end text-theme-secondary-700 dark:text-theme-secondary-500"
+              class="flex justify-end w-full text-theme-secondary-700 md:theme-text dark:text-theme-secondary-500"
             >
               <div
                 class="whitespace-nowrap"
@@ -2650,30 +2650,30 @@ exports[`MultiSignatureSuccessful > should render in sm 1`] = `
         data-testid="TransactionAmount"
       >
         <div
-          class="items-top flex w-full justify-between space-x-4 md:items-center"
+          class="flex justify-between space-x-4 w-full md:items-center items-top"
           data-testid="TransactionDetail--mobile"
         >
           <div
-            class="text-md md:theme-text group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+            class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 md:theme-text dark:border-theme-secondary-800 dark:text-theme-secondary-500"
           >
             Amount
           </div>
           <div
-            class="flex min-w-0 grow items-center justify-end space-x-4"
+            class="flex justify-end items-center space-x-4 min-w-0 grow"
           >
             <div
-              class="md:theme-text flex w-full justify-end text-theme-secondary-700 dark:text-theme-secondary-500"
+              class="flex justify-end w-full text-theme-secondary-700 md:theme-text dark:text-theme-secondary-500"
             >
               <div
-                class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                class="flex justify-center items-center px-1.5 h-full rounded css-xqt0aw"
                 color="danger-bg"
                 data-testid="AmountLabel__wrapper"
               >
                 <div
-                  class="flex h-full items-center space-x-1"
+                  class="flex items-center space-x-1 h-full"
                 >
                   <span
-                    class="whitespace-nowrap text-sm"
+                    class="text-sm whitespace-nowrap"
                     data-testid="Amount"
                   >
                     - 100 DARK
@@ -2697,13 +2697,13 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
     data-testid="TransactionSuccessful"
   >
     <div
-      class="flex items-end justify-between bg-theme-background"
+      class="flex justify-between items-end bg-theme-background"
     >
       <div
         class="space-y-2"
       >
         <div
-          class="flex items-center gap-3"
+          class="flex gap-3 items-center"
         >
           <h1
             class="mb-0 text-2xl leading-[29px]"
@@ -2811,12 +2811,12 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
       />
     </svg>
     <p
-      class="hidden text-theme-secondary-text md:block"
+      class="hidden md:block text-theme-secondary-text"
     >
       Your transaction has been created successfully. Participants can now sign the transaction to broadcast it to the network. The following is relevant information for your transaction:
     </p>
     <div
-      class="flex flex-col overflow-hidden rounded-xl md:hidden"
+      class="flex overflow-hidden flex-col rounded-xl md:hidden"
     >
       <div
         class="css-1o2lvkz"
@@ -2869,11 +2869,11 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
         data-testid="TransactionDetail"
       >
         <div
-          class="w-40 flex-1 space-y-2 whitespace-nowrap"
+          class="flex-1 space-y-2 w-40 whitespace-nowrap"
           data-testid="TransactionDetail--desktop"
         >
           <div
-            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+            class="text-sm font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
           >
             ID
           </div>
@@ -2881,13 +2881,13 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
             class="flex items-center font-semibold"
           >
             <div
-              class="flex w-full items-center space-x-3 overflow-hidden"
+              class="flex overflow-hidden items-center space-x-3 w-full"
             >
               <span
                 class="overflow-hidden"
               >
                 <a
-                  class="ring-focus group inline-block flex items-center css-1flyqpm"
+                  class="inline-block flex items-center ring-focus group css-1flyqpm"
                   data-ring-focus-margin="-m-1"
                   data-testid="Link"
                   href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
@@ -2904,7 +2904,7 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
                     </span>
                   </span>
                   <div
-                    class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                    class="inline-block text-sm align-middle duration-200 mb-[3px] shrink-0 css-v0ob3f"
                     data-testid="Link__external"
                     height="16"
                     width="16"
@@ -2933,7 +2933,7 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
                 class="flex text-theme-primary-300 dark:text-theme-secondary-600"
               >
                 <button
-                  class="ring-focus relative focus:outline-none"
+                  class="relative ring-focus focus:outline-hidden"
                   data-ring-focus-margin="-m-1"
                   data-testid="clipboard-icon__wrapper"
                   type="button"
@@ -2980,11 +2980,11 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
           data-testid="DetailWrapper"
         >
           <div
-            class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+            class="py-2 px-3 border-l-2 sm:p-0 sm:bg-transparent sm:border-none dark:bg-black border-x-theme-primary-400 bg-theme-secondary-100 dark:sm:bg-transparent"
             data-testid="DetailLabel"
           >
             <div
-              class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+              class="font-semibold no-ligatures text-md min-w-24 text-theme-secondary-700 dark:text-theme-secondary-500"
               data-testid="DetailLabelText"
             >
               Transaction Type
@@ -2994,10 +2994,10 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
             class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
           >
             <div
-              class="flex w-full justify-between sm:justify-start"
+              class="flex justify-between w-full sm:justify-start"
             >
               <div
-                class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                class="font-semibold no-ligatures text-md min-w-24 text-theme-secondary-700 dark:text-theme-secondary-500"
                 data-testid="DetailLabelText"
               >
                 Category
@@ -3017,11 +3017,11 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
         data-testid="TransactionNetwork"
       >
         <div
-          class="w-40 flex-1 space-y-2 whitespace-nowrap"
+          class="flex-1 space-y-2 w-40 whitespace-nowrap"
           data-testid="TransactionDetail--desktop"
         >
           <div
-            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+            class="text-sm font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
           >
             Cryptoasset
           </div>
@@ -3033,7 +3033,7 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
         </div>
         <div
           aria-label="ARK Devnet"
-          class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-1nqcsx"
+          class="duration-100 text-theme-secondary-700 border-theme-secondary-300 ring-theme-background css-1nqcsx dark:border-theme-secondary-700"
           data-testid="NetworkIcon-ARK-ark.devnet"
         >
           <div
@@ -3063,11 +3063,11 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
         data-testid="TransactionSuccessful__musig-address"
       >
         <div
-          class="w-40 flex-1 space-y-2 whitespace-nowrap"
+          class="flex-1 space-y-2 w-40 whitespace-nowrap"
           data-testid="TransactionDetail--desktop"
         >
           <div
-            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+            class="text-sm font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
           >
             <div
               class="flex items-center space-x-2"
@@ -3113,16 +3113,16 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
             class="flex items-center font-semibold"
           >
             <div
-              class="flex grow items-center space-x-2 text-theme-primary-300 dark:text-theme-secondary-600"
+              class="flex items-center space-x-2 grow text-theme-primary-300 dark:text-theme-secondary-600"
             >
               <div
-                class="w-0 flex-1 text-right md:text-left"
+                class="flex-1 w-0 text-right md:text-left"
               >
                 <div
-                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                  class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
                 >
                   <span
-                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                    class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-text"
                     data-testid="Address__address"
                   >
                     DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH
@@ -3130,7 +3130,7 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
                 </div>
               </div>
               <button
-                class="ring-focus relative focus:outline-none"
+                class="relative ring-focus focus:outline-hidden"
                 data-ring-focus-margin="-m-1"
                 data-testid="clipboard-icon__wrapper"
                 type="button"
@@ -3176,7 +3176,7 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
             data-testid="Avatar"
           >
             <div
-              class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+              class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded-full"
             >
               <img
                 alt="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
@@ -3192,11 +3192,11 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
         data-testid="TransactionSender"
       >
         <div
-          class="w-40 flex-1 space-y-2 whitespace-nowrap"
+          class="flex-1 space-y-2 w-40 whitespace-nowrap"
           data-testid="TransactionDetail--desktop"
         >
           <div
-            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+            class="text-sm font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
           >
             Sender
           </div>
@@ -3204,13 +3204,13 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
             class="flex items-center font-semibold"
           >
             <div
-              class="w-0 flex-1 overflow-auto text-right md:text-left"
+              class="overflow-auto flex-1 w-0 text-right md:text-left"
             >
               <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
               >
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                  class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-text"
                   data-testid="Address__address"
                 >
                   DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH
@@ -3227,7 +3227,7 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
             data-testid="Avatar"
           >
             <div
-              class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+              class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded-full"
             >
               <img
                 alt="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
@@ -3243,11 +3243,11 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
         data-testid="TransactionRecipients"
       >
         <div
-          class="w-40 flex-1 space-y-2 whitespace-nowrap"
+          class="flex-1 space-y-2 w-40 whitespace-nowrap"
           data-testid="TransactionDetail--desktop"
         >
           <div
-            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+            class="text-sm font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
           >
             Multisignature Participants (2)
           </div>
@@ -3270,13 +3270,13 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
                       role="row"
                     >
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="relative p-3 m-0 text-sm font-semibold text-left select-none first:pl-6 first:rounded-tl-xl last:pr-6 last:rounded-tr-xl group text-theme-secondary-700 border-theme-secondary-300 bg-theme-secondary-100 dark:text-theme-secondary-500 dark:border-theme-secondary-800 dark:bg-theme-secondary-800"
                         colspan="1"
                         data-testid="table__th--0"
                         role="columnheader"
                       >
                         <div
-                          class="flex flex-inline align-top hidden"
+                          class="flex hidden align-top flex-inline"
                         >
                           <div
                             class=""
@@ -3286,13 +3286,13 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="relative p-3 m-0 text-sm font-semibold text-left select-none first:pl-6 first:rounded-tl-xl last:pr-6 last:rounded-tr-xl group text-theme-secondary-700 border-theme-secondary-300 bg-theme-secondary-100 dark:text-theme-secondary-500 dark:border-theme-secondary-800 dark:bg-theme-secondary-800"
                         colspan="1"
                         data-testid="table__th--1"
                         role="columnheader"
                       >
                         <div
-                          class="flex flex-inline align-top hidden"
+                          class="flex hidden align-top flex-inline"
                         >
                           <div
                             class=""
@@ -3302,13 +3302,13 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="relative p-3 m-0 text-sm font-semibold text-left select-none first:pl-6 first:rounded-tl-xl last:pr-6 last:rounded-tr-xl group text-theme-secondary-700 border-theme-secondary-300 bg-theme-secondary-100 dark:text-theme-secondary-500 dark:border-theme-secondary-800 dark:bg-theme-secondary-800"
                         colspan="1"
                         data-testid="table__th--2"
                         role="columnheader"
                       >
                         <div
-                          class="flex flex-inline align-top hidden"
+                          class="flex hidden align-top flex-inline"
                         >
                           <div
                             class=""
@@ -3323,11 +3323,11 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
                     role="rowgroup"
                   >
                     <tr
-                      class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
+                      class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
                       data-testid="recipient-list__recipient-list-item"
                     >
                       <td
-                        class="mr-3 table-cell md:hidden"
+                        class="table-cell mr-3 md:hidden"
                       />
                       <td
                         class="hidden md:table-cell"
@@ -3337,7 +3337,7 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+                            class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded-full"
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -3348,13 +3348,13 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
                         </div>
                       </td>
                       <td
-                        class="w-28 flex-1 justify-end md:ml-4"
+                        class="flex-1 justify-end w-28 md:ml-4"
                       >
                         <div
-                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                            class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-text"
                             data-testid="Address__address"
                           >
                             D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -3362,14 +3362,14 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
                         </div>
                       </td>
                       <td
-                        class="ml-2 table-cell md:hidden"
+                        class="table-cell ml-2 md:hidden"
                       >
                         <div
                           class="shrink-0 css-1yk316i"
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+                            class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded-full"
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -3384,11 +3384,11 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
                       />
                     </tr>
                     <tr
-                      class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
+                      class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
                       data-testid="recipient-list__recipient-list-item"
                     >
                       <td
-                        class="mr-3 table-cell md:hidden"
+                        class="table-cell mr-3 md:hidden"
                       />
                       <td
                         class="hidden md:table-cell"
@@ -3398,7 +3398,7 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+                            class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded-full"
                           >
                             <img
                               alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -3409,13 +3409,13 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
                         </div>
                       </td>
                       <td
-                        class="w-28 flex-1 justify-end md:ml-4"
+                        class="flex-1 justify-end w-28 md:ml-4"
                       >
                         <div
-                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                            class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-text"
                             data-testid="Address__address"
                           >
                             D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -3423,14 +3423,14 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
                         </div>
                       </td>
                       <td
-                        class="ml-2 table-cell md:hidden"
+                        class="table-cell ml-2 md:hidden"
                       >
                         <div
                           class="shrink-0 css-1yk316i"
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+                            class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded-full"
                           >
                             <img
                               alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -3456,11 +3456,11 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
         data-testid="TransactionDetail"
       >
         <div
-          class="w-40 flex-1 space-y-2 whitespace-nowrap"
+          class="flex-1 space-y-2 w-40 whitespace-nowrap"
           data-testid="TransactionDetail--desktop"
         >
           <div
-            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+            class="text-sm font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
           >
             Minimum Required Signatures
           </div>
@@ -3488,11 +3488,11 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
         data-testid="TransactionAmount"
       >
         <div
-          class="w-40 flex-1 space-y-2 whitespace-nowrap"
+          class="flex-1 space-y-2 w-40 whitespace-nowrap"
           data-testid="TransactionDetail--desktop"
         >
           <div
-            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+            class="text-sm font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
           >
             Amount
           </div>
@@ -3500,15 +3500,15 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
             class="flex items-center font-semibold"
           >
             <div
-              class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+              class="flex justify-center items-center px-1.5 h-full rounded css-xqt0aw"
               color="danger-bg"
               data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex h-full items-center space-x-1"
+                class="flex items-center space-x-1 h-full"
               >
                 <span
-                  class="whitespace-nowrap text-sm"
+                  class="text-sm whitespace-nowrap"
                   data-testid="Amount"
                 >
                   - 100 DARK
@@ -3518,7 +3518,7 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
           </div>
         </div>
         <div
-          class="border-theme-danger-100 text-theme-danger-500 dark:border-theme-danger-400 dark:text-theme-danger-400 ring-theme-background duration-100 css-1nqcsx"
+          class="duration-100 border-theme-danger-100 text-theme-danger-500 ring-theme-background css-1nqcsx dark:border-theme-danger-400 dark:text-theme-danger-400"
         >
           <div
             class="css-1i4b0eq"
@@ -3558,13 +3558,13 @@ exports[`MultiSignatureSuccessful > should render in xs 1`] = `
     data-testid="TransactionSuccessful"
   >
     <div
-      class="flex items-end justify-between bg-theme-background"
+      class="flex justify-between items-end bg-theme-background"
     >
       <div
         class="space-y-2"
       >
         <div
-          class="flex items-center gap-3"
+          class="flex gap-3 items-center"
         >
           <h1
             class="mb-0 text-2xl leading-[29px]"
@@ -3672,12 +3672,12 @@ exports[`MultiSignatureSuccessful > should render in xs 1`] = `
       />
     </svg>
     <p
-      class="hidden text-theme-secondary-text md:block"
+      class="hidden md:block text-theme-secondary-text"
     >
       Your transaction has been created successfully. Participants can now sign the transaction to broadcast it to the network. The following is relevant information for your transaction:
     </p>
     <div
-      class="flex flex-col overflow-hidden rounded-xl md:hidden"
+      class="flex overflow-hidden flex-col rounded-xl md:hidden"
     >
       <div
         class="css-1o2lvkz"
@@ -3730,28 +3730,28 @@ exports[`MultiSignatureSuccessful > should render in xs 1`] = `
         data-testid="TransactionDetail"
       >
         <div
-          class="items-top flex w-full justify-between space-x-4 md:items-center"
+          class="flex justify-between space-x-4 w-full md:items-center items-top"
           data-testid="TransactionDetail--mobile"
         >
           <div
-            class="text-md md:theme-text group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+            class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 md:theme-text dark:border-theme-secondary-800 dark:text-theme-secondary-500"
           >
             ID
           </div>
           <div
-            class="flex min-w-0 grow items-center justify-end space-x-4"
+            class="flex justify-end items-center space-x-4 min-w-0 grow"
           >
             <div
-              class="md:theme-text flex w-full justify-end text-theme-secondary-700 dark:text-theme-secondary-500"
+              class="flex justify-end w-full text-theme-secondary-700 md:theme-text dark:text-theme-secondary-500"
             >
               <div
-                class="flex w-full items-center space-x-3 overflow-hidden"
+                class="flex overflow-hidden items-center space-x-3 w-full"
               >
                 <span
                   class="overflow-hidden w-full"
                 >
                   <a
-                    class="ring-focus group inline-block flex items-center justify-end css-1flyqpm"
+                    class="inline-block flex justify-end items-center ring-focus group css-1flyqpm"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
@@ -3768,7 +3768,7 @@ exports[`MultiSignatureSuccessful > should render in xs 1`] = `
                       </span>
                     </span>
                     <div
-                      class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                      class="inline-block text-sm align-middle duration-200 mb-[3px] shrink-0 css-v0ob3f"
                       data-testid="Link__external"
                       height="16"
                       width="16"
@@ -3797,7 +3797,7 @@ exports[`MultiSignatureSuccessful > should render in xs 1`] = `
                   class="flex text-theme-primary-300 dark:text-theme-secondary-600"
                 >
                   <button
-                    class="ring-focus relative focus:outline-none"
+                    class="relative ring-focus focus:outline-hidden"
                     data-ring-focus-margin="-m-1"
                     data-testid="clipboard-icon__wrapper"
                     type="button"
@@ -3845,11 +3845,11 @@ exports[`MultiSignatureSuccessful > should render in xs 1`] = `
           data-testid="DetailWrapper"
         >
           <div
-            class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+            class="py-2 px-3 border-l-2 sm:p-0 sm:bg-transparent sm:border-none dark:bg-black border-x-theme-primary-400 bg-theme-secondary-100 dark:sm:bg-transparent"
             data-testid="DetailLabel"
           >
             <div
-              class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+              class="font-semibold no-ligatures text-md min-w-24 text-theme-secondary-700 dark:text-theme-secondary-500"
               data-testid="DetailLabelText"
             >
               Transaction Type
@@ -3859,10 +3859,10 @@ exports[`MultiSignatureSuccessful > should render in xs 1`] = `
             class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
           >
             <div
-              class="flex w-full justify-between sm:justify-start"
+              class="flex justify-between w-full sm:justify-start"
             >
               <div
-                class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                class="font-semibold no-ligatures text-md min-w-24 text-theme-secondary-700 dark:text-theme-secondary-500"
                 data-testid="DetailLabelText"
               >
                 Category
@@ -3882,25 +3882,25 @@ exports[`MultiSignatureSuccessful > should render in xs 1`] = `
         data-testid="TransactionNetwork"
       >
         <div
-          class="items-top flex w-full justify-between space-x-4 md:items-center"
+          class="flex justify-between space-x-4 w-full md:items-center items-top"
           data-testid="TransactionDetail--mobile"
         >
           <div
-            class="text-md md:theme-text group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+            class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 md:theme-text dark:border-theme-secondary-800 dark:text-theme-secondary-500"
           >
             Cryptoasset
           </div>
           <div
-            class="flex min-w-0 grow items-center justify-end space-x-4"
+            class="flex justify-end items-center space-x-4 min-w-0 grow"
           >
             <div
-              class="md:theme-text flex w-full justify-end text-theme-secondary-700 dark:text-theme-secondary-500"
+              class="flex justify-end w-full text-theme-secondary-700 md:theme-text dark:text-theme-secondary-500"
             >
               ARK Devnet
             </div>
             <div
               aria-label="ARK Devnet"
-              class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
+              class="inline-flex justify-center items-center w-5 h-5 text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
               data-testid="NetworkIcon-ARK-ark.devnet"
             >
               <div
@@ -3932,11 +3932,11 @@ exports[`MultiSignatureSuccessful > should render in xs 1`] = `
         data-testid="TransactionSuccessful__musig-address"
       >
         <div
-          class="items-top flex w-full justify-between space-x-4 md:items-center"
+          class="flex justify-between space-x-4 w-full md:items-center items-top"
           data-testid="TransactionDetail--mobile"
         >
           <div
-            class="text-md md:theme-text group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+            class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 md:theme-text dark:border-theme-secondary-800 dark:text-theme-secondary-500"
           >
             <div
               class="flex items-center space-x-2"
@@ -3979,22 +3979,22 @@ exports[`MultiSignatureSuccessful > should render in xs 1`] = `
             </div>
           </div>
           <div
-            class="flex min-w-0 grow items-center justify-end space-x-4"
+            class="flex justify-end items-center space-x-4 min-w-0 grow"
           >
             <div
-              class="md:theme-text flex w-full justify-end text-theme-secondary-700 dark:text-theme-secondary-500"
+              class="flex justify-end w-full text-theme-secondary-700 md:theme-text dark:text-theme-secondary-500"
             >
               <div
-                class="flex grow items-center space-x-2 text-theme-primary-300 dark:text-theme-secondary-600"
+                class="flex items-center space-x-2 grow text-theme-primary-300 dark:text-theme-secondary-600"
               >
                 <div
-                  class="w-0 flex-1 text-right md:text-left"
+                  class="flex-1 w-0 text-right md:text-left"
                 >
                   <div
-                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
                   >
                     <span
-                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-text"
                       data-testid="Address__address"
                     >
                       DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH
@@ -4002,7 +4002,7 @@ exports[`MultiSignatureSuccessful > should render in xs 1`] = `
                   </div>
                 </div>
                 <button
-                  class="ring-focus relative focus:outline-none"
+                  class="relative ring-focus focus:outline-hidden"
                   data-ring-focus-margin="-m-1"
                   data-testid="clipboard-icon__wrapper"
                   type="button"
@@ -4047,7 +4047,7 @@ exports[`MultiSignatureSuccessful > should render in xs 1`] = `
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+                  class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded-full"
                 >
                   <img
                     alt="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
@@ -4065,28 +4065,28 @@ exports[`MultiSignatureSuccessful > should render in xs 1`] = `
         data-testid="TransactionSender"
       >
         <div
-          class="items-top flex w-full justify-between space-x-4 md:items-center"
+          class="flex justify-between space-x-4 w-full md:items-center items-top"
           data-testid="TransactionDetail--mobile"
         >
           <div
-            class="text-md md:theme-text group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+            class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 md:theme-text dark:border-theme-secondary-800 dark:text-theme-secondary-500"
           >
             Sender
           </div>
           <div
-            class="flex min-w-0 grow items-center justify-end space-x-4"
+            class="flex justify-end items-center space-x-4 min-w-0 grow"
           >
             <div
-              class="md:theme-text flex w-full justify-end text-theme-secondary-700 dark:text-theme-secondary-500"
+              class="flex justify-end w-full text-theme-secondary-700 md:theme-text dark:text-theme-secondary-500"
             >
               <div
-                class="w-0 flex-1 overflow-auto text-right md:text-left"
+                class="overflow-auto flex-1 w-0 text-right md:text-left"
               >
                 <div
-                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                  class="flex overflow-hidden justify-end items-center space-x-2 w-full whitespace-nowrap"
                 >
                   <span
-                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                    class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-text"
                     data-testid="Address__address"
                   >
                     DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH
@@ -4102,7 +4102,7 @@ exports[`MultiSignatureSuccessful > should render in xs 1`] = `
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+                  class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded-full"
                 >
                   <img
                     alt="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
@@ -4116,7 +4116,7 @@ exports[`MultiSignatureSuccessful > should render in xs 1`] = `
         </div>
       </div>
       <div
-        class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+        class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
       >
         <div
           class="my-2 whitespace-nowrap"
@@ -4129,23 +4129,23 @@ exports[`MultiSignatureSuccessful > should render in xs 1`] = `
         data-testid="TransactionRecipient"
       >
         <div
-          class="items-top flex w-full justify-between space-x-4 md:items-center"
+          class="flex justify-between space-x-4 w-full md:items-center items-top"
           data-testid="TransactionDetail--mobile"
         >
           <div
-            class="flex min-w-0 grow items-center justify-end space-x-4"
+            class="flex justify-end items-center space-x-4 min-w-0 grow"
           >
             <div
-              class="md:theme-text flex w-full justify-end text-theme-secondary-700 dark:text-theme-secondary-500"
+              class="flex justify-end w-full text-theme-secondary-700 md:theme-text dark:text-theme-secondary-500"
             >
               <div
-                class="w-full flex-col space-y-4"
+                class="flex-col space-y-4 w-full"
               >
                 <div
-                  class="flex items-center justify-between space-x-4"
+                  class="flex justify-between items-center space-x-4"
                 >
                   <div
-                    class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                    class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
                   >
                     <div
                       class="whitespace-nowrap"
@@ -4154,16 +4154,16 @@ exports[`MultiSignatureSuccessful > should render in xs 1`] = `
                     </div>
                   </div>
                   <div
-                    class="flex w-full items-center space-x-2 text-right"
+                    class="flex items-center space-x-2 w-full text-right"
                   >
                     <div
-                      class="w-0 flex-1 overflow-auto text-right md:text-left"
+                      class="overflow-auto flex-1 w-0 text-right md:text-left"
                     >
                       <div
-                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                        class="flex overflow-hidden justify-end items-center space-x-2 w-full whitespace-nowrap"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-text"
                           data-testid="Address__address"
                         >
                           D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -4175,7 +4175,7 @@ exports[`MultiSignatureSuccessful > should render in xs 1`] = `
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+                        class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded-full"
                       >
                         <img
                           alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -4196,23 +4196,23 @@ exports[`MultiSignatureSuccessful > should render in xs 1`] = `
         data-testid="TransactionRecipient"
       >
         <div
-          class="items-top flex w-full justify-between space-x-4 md:items-center"
+          class="flex justify-between space-x-4 w-full md:items-center items-top"
           data-testid="TransactionDetail--mobile"
         >
           <div
-            class="flex min-w-0 grow items-center justify-end space-x-4"
+            class="flex justify-end items-center space-x-4 min-w-0 grow"
           >
             <div
-              class="md:theme-text flex w-full justify-end text-theme-secondary-700 dark:text-theme-secondary-500"
+              class="flex justify-end w-full text-theme-secondary-700 md:theme-text dark:text-theme-secondary-500"
             >
               <div
-                class="w-full flex-col space-y-4"
+                class="flex-col space-y-4 w-full"
               >
                 <div
-                  class="flex items-center justify-between space-x-4"
+                  class="flex justify-between items-center space-x-4"
                 >
                   <div
-                    class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                    class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
                   >
                     <div
                       class="whitespace-nowrap"
@@ -4221,16 +4221,16 @@ exports[`MultiSignatureSuccessful > should render in xs 1`] = `
                     </div>
                   </div>
                   <div
-                    class="flex w-full items-center space-x-2 text-right"
+                    class="flex items-center space-x-2 w-full text-right"
                   >
                     <div
-                      class="w-0 flex-1 overflow-auto text-right md:text-left"
+                      class="overflow-auto flex-1 w-0 text-right md:text-left"
                     >
                       <div
-                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                        class="flex overflow-hidden justify-end items-center space-x-2 w-full whitespace-nowrap"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-text"
                           data-testid="Address__address"
                         >
                           D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -4242,7 +4242,7 @@ exports[`MultiSignatureSuccessful > should render in xs 1`] = `
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+                        class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded-full"
                       >
                         <img
                           alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -4263,19 +4263,19 @@ exports[`MultiSignatureSuccessful > should render in xs 1`] = `
         data-testid="TransactionDetail"
       >
         <div
-          class="items-top flex w-full justify-between space-x-4 md:items-center"
+          class="flex justify-between space-x-4 w-full md:items-center items-top"
           data-testid="TransactionDetail--mobile"
         >
           <div
-            class="text-md md:theme-text group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+            class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 md:theme-text dark:border-theme-secondary-800 dark:text-theme-secondary-500"
           >
             Minimum Required Signatures
           </div>
           <div
-            class="flex min-w-0 grow items-center justify-end space-x-4"
+            class="flex justify-end items-center space-x-4 min-w-0 grow"
           >
             <div
-              class="md:theme-text flex w-full justify-end text-theme-secondary-700 dark:text-theme-secondary-500"
+              class="flex justify-end w-full text-theme-secondary-700 md:theme-text dark:text-theme-secondary-500"
             >
               <div
                 class="whitespace-nowrap"
@@ -4299,30 +4299,30 @@ exports[`MultiSignatureSuccessful > should render in xs 1`] = `
         data-testid="TransactionAmount"
       >
         <div
-          class="items-top flex w-full justify-between space-x-4 md:items-center"
+          class="flex justify-between space-x-4 w-full md:items-center items-top"
           data-testid="TransactionDetail--mobile"
         >
           <div
-            class="text-md md:theme-text group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+            class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 md:theme-text dark:border-theme-secondary-800 dark:text-theme-secondary-500"
           >
             Amount
           </div>
           <div
-            class="flex min-w-0 grow items-center justify-end space-x-4"
+            class="flex justify-end items-center space-x-4 min-w-0 grow"
           >
             <div
-              class="md:theme-text flex w-full justify-end text-theme-secondary-700 dark:text-theme-secondary-500"
+              class="flex justify-end w-full text-theme-secondary-700 md:theme-text dark:text-theme-secondary-500"
             >
               <div
-                class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                class="flex justify-center items-center px-1.5 h-full rounded css-xqt0aw"
                 color="danger-bg"
                 data-testid="AmountLabel__wrapper"
               >
                 <div
-                  class="flex h-full items-center space-x-1"
+                  class="flex items-center space-x-1 h-full"
                 >
                   <span
-                    class="whitespace-nowrap text-sm"
+                    class="text-sm whitespace-nowrap"
                     data-testid="Amount"
                   >
                     - 100 DARK
@@ -4346,13 +4346,13 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
     data-testid="TransactionSuccessful"
   >
     <div
-      class="flex items-end justify-between bg-theme-background"
+      class="flex justify-between items-end bg-theme-background"
     >
       <div
         class="space-y-2"
       >
         <div
-          class="flex items-center gap-3"
+          class="flex gap-3 items-center"
         >
           <h1
             class="mb-0 text-2xl leading-[29px]"
@@ -4460,12 +4460,12 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
       />
     </svg>
     <p
-      class="hidden text-theme-secondary-text md:block"
+      class="hidden md:block text-theme-secondary-text"
     >
       Your transaction has been created successfully. Participants can now sign the transaction to broadcast it to the network. The following is relevant information for your transaction:
     </p>
     <div
-      class="flex flex-col overflow-hidden rounded-xl md:hidden"
+      class="flex overflow-hidden flex-col rounded-xl md:hidden"
     >
       <div
         class="css-1o2lvkz"
@@ -4518,11 +4518,11 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
         data-testid="TransactionDetail"
       >
         <div
-          class="w-40 flex-1 space-y-2 whitespace-nowrap"
+          class="flex-1 space-y-2 w-40 whitespace-nowrap"
           data-testid="TransactionDetail--desktop"
         >
           <div
-            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+            class="text-sm font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
           >
             ID
           </div>
@@ -4530,13 +4530,13 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
             class="flex items-center font-semibold"
           >
             <div
-              class="flex w-full items-center space-x-3 overflow-hidden"
+              class="flex overflow-hidden items-center space-x-3 w-full"
             >
               <span
                 class="overflow-hidden"
               >
                 <a
-                  class="ring-focus group inline-block flex items-center css-1flyqpm"
+                  class="inline-block flex items-center ring-focus group css-1flyqpm"
                   data-ring-focus-margin="-m-1"
                   data-testid="Link"
                   href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
@@ -4553,7 +4553,7 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
                     </span>
                   </span>
                   <div
-                    class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                    class="inline-block text-sm align-middle duration-200 mb-[3px] shrink-0 css-v0ob3f"
                     data-testid="Link__external"
                     height="16"
                     width="16"
@@ -4582,7 +4582,7 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
                 class="flex text-theme-primary-300 dark:text-theme-secondary-600"
               >
                 <button
-                  class="ring-focus relative focus:outline-none"
+                  class="relative ring-focus focus:outline-hidden"
                   data-ring-focus-margin="-m-1"
                   data-testid="clipboard-icon__wrapper"
                   type="button"
@@ -4629,11 +4629,11 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
           data-testid="DetailWrapper"
         >
           <div
-            class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+            class="py-2 px-3 border-l-2 sm:p-0 sm:bg-transparent sm:border-none dark:bg-black border-x-theme-primary-400 bg-theme-secondary-100 dark:sm:bg-transparent"
             data-testid="DetailLabel"
           >
             <div
-              class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+              class="font-semibold no-ligatures text-md min-w-24 text-theme-secondary-700 dark:text-theme-secondary-500"
               data-testid="DetailLabelText"
             >
               Transaction Type
@@ -4643,10 +4643,10 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
             class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
           >
             <div
-              class="flex w-full justify-between sm:justify-start"
+              class="flex justify-between w-full sm:justify-start"
             >
               <div
-                class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                class="font-semibold no-ligatures text-md min-w-24 text-theme-secondary-700 dark:text-theme-secondary-500"
                 data-testid="DetailLabelText"
               >
                 Category
@@ -4666,11 +4666,11 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
         data-testid="TransactionNetwork"
       >
         <div
-          class="w-40 flex-1 space-y-2 whitespace-nowrap"
+          class="flex-1 space-y-2 w-40 whitespace-nowrap"
           data-testid="TransactionDetail--desktop"
         >
           <div
-            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+            class="text-sm font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
           >
             Cryptoasset
           </div>
@@ -4682,7 +4682,7 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
         </div>
         <div
           aria-label="ARK Devnet"
-          class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-1nqcsx"
+          class="duration-100 text-theme-secondary-700 border-theme-secondary-300 ring-theme-background css-1nqcsx dark:border-theme-secondary-700"
           data-testid="NetworkIcon-ARK-ark.devnet"
         >
           <div
@@ -4712,11 +4712,11 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
         data-testid="TransactionSuccessful__musig-address"
       >
         <div
-          class="w-40 flex-1 space-y-2 whitespace-nowrap"
+          class="flex-1 space-y-2 w-40 whitespace-nowrap"
           data-testid="TransactionDetail--desktop"
         >
           <div
-            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+            class="text-sm font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
           >
             <div
               class="flex items-center space-x-2"
@@ -4762,16 +4762,16 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
             class="flex items-center font-semibold"
           >
             <div
-              class="flex grow items-center space-x-2 text-theme-primary-300 dark:text-theme-secondary-600"
+              class="flex items-center space-x-2 grow text-theme-primary-300 dark:text-theme-secondary-600"
             >
               <div
-                class="w-0 flex-1 text-right md:text-left"
+                class="flex-1 w-0 text-right md:text-left"
               >
                 <div
-                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                  class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
                 >
                   <span
-                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                    class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-text"
                     data-testid="Address__address"
                   >
                     DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH
@@ -4779,7 +4779,7 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
                 </div>
               </div>
               <button
-                class="ring-focus relative focus:outline-none"
+                class="relative ring-focus focus:outline-hidden"
                 data-ring-focus-margin="-m-1"
                 data-testid="clipboard-icon__wrapper"
                 type="button"
@@ -4825,7 +4825,7 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
             data-testid="Avatar"
           >
             <div
-              class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+              class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded-full"
             >
               <img
                 alt="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
@@ -4841,11 +4841,11 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
         data-testid="TransactionSender"
       >
         <div
-          class="w-40 flex-1 space-y-2 whitespace-nowrap"
+          class="flex-1 space-y-2 w-40 whitespace-nowrap"
           data-testid="TransactionDetail--desktop"
         >
           <div
-            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+            class="text-sm font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
           >
             Sender
           </div>
@@ -4853,13 +4853,13 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
             class="flex items-center font-semibold"
           >
             <div
-              class="w-0 flex-1 overflow-auto text-right md:text-left"
+              class="overflow-auto flex-1 w-0 text-right md:text-left"
             >
               <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
               >
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                  class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-text"
                   data-testid="Address__address"
                 >
                   DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH
@@ -4876,7 +4876,7 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
             data-testid="Avatar"
           >
             <div
-              class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+              class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded-full"
             >
               <img
                 alt="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
@@ -4892,11 +4892,11 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
         data-testid="TransactionRecipients"
       >
         <div
-          class="w-40 flex-1 space-y-2 whitespace-nowrap"
+          class="flex-1 space-y-2 w-40 whitespace-nowrap"
           data-testid="TransactionDetail--desktop"
         >
           <div
-            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+            class="text-sm font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
           >
             Multisignature Participants (2)
           </div>
@@ -4919,13 +4919,13 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
                       role="row"
                     >
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="relative p-3 m-0 text-sm font-semibold text-left select-none first:pl-6 first:rounded-tl-xl last:pr-6 last:rounded-tr-xl group text-theme-secondary-700 border-theme-secondary-300 bg-theme-secondary-100 dark:text-theme-secondary-500 dark:border-theme-secondary-800 dark:bg-theme-secondary-800"
                         colspan="1"
                         data-testid="table__th--0"
                         role="columnheader"
                       >
                         <div
-                          class="flex flex-inline align-top hidden"
+                          class="flex hidden align-top flex-inline"
                         >
                           <div
                             class=""
@@ -4935,13 +4935,13 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="relative p-3 m-0 text-sm font-semibold text-left select-none first:pl-6 first:rounded-tl-xl last:pr-6 last:rounded-tr-xl group text-theme-secondary-700 border-theme-secondary-300 bg-theme-secondary-100 dark:text-theme-secondary-500 dark:border-theme-secondary-800 dark:bg-theme-secondary-800"
                         colspan="1"
                         data-testid="table__th--1"
                         role="columnheader"
                       >
                         <div
-                          class="flex flex-inline align-top hidden"
+                          class="flex hidden align-top flex-inline"
                         >
                           <div
                             class=""
@@ -4951,13 +4951,13 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="relative p-3 m-0 text-sm font-semibold text-left select-none first:pl-6 first:rounded-tl-xl last:pr-6 last:rounded-tr-xl group text-theme-secondary-700 border-theme-secondary-300 bg-theme-secondary-100 dark:text-theme-secondary-500 dark:border-theme-secondary-800 dark:bg-theme-secondary-800"
                         colspan="1"
                         data-testid="table__th--2"
                         role="columnheader"
                       >
                         <div
-                          class="flex flex-inline align-top hidden"
+                          class="flex hidden align-top flex-inline"
                         >
                           <div
                             class=""
@@ -4972,11 +4972,11 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
                     role="rowgroup"
                   >
                     <tr
-                      class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
+                      class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
                       data-testid="recipient-list__recipient-list-item"
                     >
                       <td
-                        class="mr-3 table-cell md:hidden"
+                        class="table-cell mr-3 md:hidden"
                       />
                       <td
                         class="hidden md:table-cell"
@@ -4986,7 +4986,7 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+                            class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded-full"
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -4997,13 +4997,13 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
                         </div>
                       </td>
                       <td
-                        class="w-28 flex-1 justify-end md:ml-4"
+                        class="flex-1 justify-end w-28 md:ml-4"
                       >
                         <div
-                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                            class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-text"
                             data-testid="Address__address"
                           >
                             D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -5011,14 +5011,14 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
                         </div>
                       </td>
                       <td
-                        class="ml-2 table-cell md:hidden"
+                        class="table-cell ml-2 md:hidden"
                       >
                         <div
                           class="shrink-0 css-1yk316i"
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+                            class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded-full"
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -5033,11 +5033,11 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
                       />
                     </tr>
                     <tr
-                      class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
+                      class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
                       data-testid="recipient-list__recipient-list-item"
                     >
                       <td
-                        class="mr-3 table-cell md:hidden"
+                        class="table-cell mr-3 md:hidden"
                       />
                       <td
                         class="hidden md:table-cell"
@@ -5047,7 +5047,7 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+                            class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded-full"
                           >
                             <img
                               alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -5058,13 +5058,13 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
                         </div>
                       </td>
                       <td
-                        class="w-28 flex-1 justify-end md:ml-4"
+                        class="flex-1 justify-end w-28 md:ml-4"
                       >
                         <div
-                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                            class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-text"
                             data-testid="Address__address"
                           >
                             D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -5072,14 +5072,14 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
                         </div>
                       </td>
                       <td
-                        class="ml-2 table-cell md:hidden"
+                        class="table-cell ml-2 md:hidden"
                       >
                         <div
                           class="shrink-0 css-1yk316i"
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+                            class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded-full"
                           >
                             <img
                               alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -5105,11 +5105,11 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
         data-testid="TransactionDetail"
       >
         <div
-          class="w-40 flex-1 space-y-2 whitespace-nowrap"
+          class="flex-1 space-y-2 w-40 whitespace-nowrap"
           data-testid="TransactionDetail--desktop"
         >
           <div
-            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+            class="text-sm font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
           >
             Minimum Required Signatures
           </div>
@@ -5137,11 +5137,11 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
         data-testid="TransactionAmount"
       >
         <div
-          class="w-40 flex-1 space-y-2 whitespace-nowrap"
+          class="flex-1 space-y-2 w-40 whitespace-nowrap"
           data-testid="TransactionDetail--desktop"
         >
           <div
-            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+            class="text-sm font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
           >
             Amount
           </div>
@@ -5149,15 +5149,15 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
             class="flex items-center font-semibold"
           >
             <div
-              class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+              class="flex justify-center items-center px-1.5 h-full rounded css-xqt0aw"
               color="danger-bg"
               data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex h-full items-center space-x-1"
+                class="flex items-center space-x-1 h-full"
               >
                 <span
-                  class="whitespace-nowrap text-sm"
+                  class="text-sm whitespace-nowrap"
                   data-testid="Amount"
                 >
                   - 100 DARK
@@ -5167,7 +5167,7 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
           </div>
         </div>
         <div
-          class="border-theme-danger-100 text-theme-danger-500 dark:border-theme-danger-400 dark:text-theme-danger-400 ring-theme-background duration-100 css-1nqcsx"
+          class="duration-100 border-theme-danger-100 text-theme-danger-500 ring-theme-background css-1nqcsx dark:border-theme-danger-400 dark:text-theme-danger-400"
         >
           <div
             class="css-1i4b0eq"
@@ -5207,13 +5207,13 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
     data-testid="TransactionSuccessful"
   >
     <div
-      class="flex items-end justify-between bg-theme-background"
+      class="flex justify-between items-end bg-theme-background"
     >
       <div
         class="space-y-2"
       >
         <div
-          class="flex items-center gap-3"
+          class="flex gap-3 items-center"
         >
           <h1
             class="mb-0 text-2xl leading-[29px]"
@@ -5321,12 +5321,12 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
       />
     </svg>
     <p
-      class="hidden text-theme-secondary-text md:block"
+      class="hidden md:block text-theme-secondary-text"
     >
       Your transaction has been created successfully. Participants can now sign the transaction to broadcast it to the network. The following is relevant information for your transaction:
     </p>
     <div
-      class="flex flex-col overflow-hidden rounded-xl md:hidden"
+      class="flex overflow-hidden flex-col rounded-xl md:hidden"
     >
       <div
         class="css-1o2lvkz"
@@ -5379,11 +5379,11 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
         data-testid="TransactionDetail"
       >
         <div
-          class="w-40 flex-1 space-y-2 whitespace-nowrap"
+          class="flex-1 space-y-2 w-40 whitespace-nowrap"
           data-testid="TransactionDetail--desktop"
         >
           <div
-            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+            class="text-sm font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
           >
             ID
           </div>
@@ -5391,13 +5391,13 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
             class="flex items-center font-semibold"
           >
             <div
-              class="flex w-full items-center space-x-3 overflow-hidden"
+              class="flex overflow-hidden items-center space-x-3 w-full"
             >
               <span
                 class="overflow-hidden"
               >
                 <a
-                  class="ring-focus group inline-block flex items-center css-1flyqpm"
+                  class="inline-block flex items-center ring-focus group css-1flyqpm"
                   data-ring-focus-margin="-m-1"
                   data-testid="Link"
                   href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
@@ -5414,7 +5414,7 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
                     </span>
                   </span>
                   <div
-                    class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                    class="inline-block text-sm align-middle duration-200 mb-[3px] shrink-0 css-v0ob3f"
                     data-testid="Link__external"
                     height="16"
                     width="16"
@@ -5443,7 +5443,7 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
                 class="flex text-theme-primary-300 dark:text-theme-secondary-600"
               >
                 <button
-                  class="ring-focus relative focus:outline-none"
+                  class="relative ring-focus focus:outline-hidden"
                   data-ring-focus-margin="-m-1"
                   data-testid="clipboard-icon__wrapper"
                   type="button"
@@ -5490,11 +5490,11 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
           data-testid="DetailWrapper"
         >
           <div
-            class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+            class="py-2 px-3 border-l-2 sm:p-0 sm:bg-transparent sm:border-none dark:bg-black border-x-theme-primary-400 bg-theme-secondary-100 dark:sm:bg-transparent"
             data-testid="DetailLabel"
           >
             <div
-              class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+              class="font-semibold no-ligatures text-md min-w-24 text-theme-secondary-700 dark:text-theme-secondary-500"
               data-testid="DetailLabelText"
             >
               Transaction Type
@@ -5504,10 +5504,10 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
             class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
           >
             <div
-              class="flex w-full justify-between sm:justify-start"
+              class="flex justify-between w-full sm:justify-start"
             >
               <div
-                class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                class="font-semibold no-ligatures text-md min-w-24 text-theme-secondary-700 dark:text-theme-secondary-500"
                 data-testid="DetailLabelText"
               >
                 Category
@@ -5527,11 +5527,11 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
         data-testid="TransactionNetwork"
       >
         <div
-          class="w-40 flex-1 space-y-2 whitespace-nowrap"
+          class="flex-1 space-y-2 w-40 whitespace-nowrap"
           data-testid="TransactionDetail--desktop"
         >
           <div
-            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+            class="text-sm font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
           >
             Cryptoasset
           </div>
@@ -5543,7 +5543,7 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
         </div>
         <div
           aria-label="ARK Devnet"
-          class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-1nqcsx"
+          class="duration-100 text-theme-secondary-700 border-theme-secondary-300 ring-theme-background css-1nqcsx dark:border-theme-secondary-700"
           data-testid="NetworkIcon-ARK-ark.devnet"
         >
           <div
@@ -5573,11 +5573,11 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
         data-testid="TransactionRecipients"
       >
         <div
-          class="w-40 flex-1 space-y-2 whitespace-nowrap"
+          class="flex-1 space-y-2 w-40 whitespace-nowrap"
           data-testid="TransactionDetail--desktop"
         >
           <div
-            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+            class="text-sm font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
           >
             Multisignature Participants (2)
           </div>
@@ -5600,13 +5600,13 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
                       role="row"
                     >
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="relative p-3 m-0 text-sm font-semibold text-left select-none first:pl-6 first:rounded-tl-xl last:pr-6 last:rounded-tr-xl group text-theme-secondary-700 border-theme-secondary-300 bg-theme-secondary-100 dark:text-theme-secondary-500 dark:border-theme-secondary-800 dark:bg-theme-secondary-800"
                         colspan="1"
                         data-testid="table__th--0"
                         role="columnheader"
                       >
                         <div
-                          class="flex flex-inline align-top hidden"
+                          class="flex hidden align-top flex-inline"
                         >
                           <div
                             class=""
@@ -5616,13 +5616,13 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="relative p-3 m-0 text-sm font-semibold text-left select-none first:pl-6 first:rounded-tl-xl last:pr-6 last:rounded-tr-xl group text-theme-secondary-700 border-theme-secondary-300 bg-theme-secondary-100 dark:text-theme-secondary-500 dark:border-theme-secondary-800 dark:bg-theme-secondary-800"
                         colspan="1"
                         data-testid="table__th--1"
                         role="columnheader"
                       >
                         <div
-                          class="flex flex-inline align-top hidden"
+                          class="flex hidden align-top flex-inline"
                         >
                           <div
                             class=""
@@ -5632,13 +5632,13 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="relative p-3 m-0 text-sm font-semibold text-left select-none first:pl-6 first:rounded-tl-xl last:pr-6 last:rounded-tr-xl group text-theme-secondary-700 border-theme-secondary-300 bg-theme-secondary-100 dark:text-theme-secondary-500 dark:border-theme-secondary-800 dark:bg-theme-secondary-800"
                         colspan="1"
                         data-testid="table__th--2"
                         role="columnheader"
                       >
                         <div
-                          class="flex flex-inline align-top hidden"
+                          class="flex hidden align-top flex-inline"
                         >
                           <div
                             class=""
@@ -5653,11 +5653,11 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
                     role="rowgroup"
                   >
                     <tr
-                      class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
+                      class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
                       data-testid="recipient-list__recipient-list-item"
                     >
                       <td
-                        class="mr-3 table-cell md:hidden"
+                        class="table-cell mr-3 md:hidden"
                       />
                       <td
                         class="hidden md:table-cell"
@@ -5667,7 +5667,7 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+                            class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded-full"
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -5678,13 +5678,13 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
                         </div>
                       </td>
                       <td
-                        class="w-28 flex-1 justify-end md:ml-4"
+                        class="flex-1 justify-end w-28 md:ml-4"
                       >
                         <div
-                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                            class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-text"
                             data-testid="Address__address"
                           >
                             D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -5692,14 +5692,14 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
                         </div>
                       </td>
                       <td
-                        class="ml-2 table-cell md:hidden"
+                        class="table-cell ml-2 md:hidden"
                       >
                         <div
                           class="shrink-0 css-1yk316i"
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+                            class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded-full"
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -5714,11 +5714,11 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
                       />
                     </tr>
                     <tr
-                      class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
+                      class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
                       data-testid="recipient-list__recipient-list-item"
                     >
                       <td
-                        class="mr-3 table-cell md:hidden"
+                        class="table-cell mr-3 md:hidden"
                       />
                       <td
                         class="hidden md:table-cell"
@@ -5728,7 +5728,7 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+                            class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded-full"
                           >
                             <img
                               alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -5739,13 +5739,13 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
                         </div>
                       </td>
                       <td
-                        class="w-28 flex-1 justify-end md:ml-4"
+                        class="flex-1 justify-end w-28 md:ml-4"
                       >
                         <div
-                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                            class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-text"
                             data-testid="Address__address"
                           >
                             D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -5753,14 +5753,14 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
                         </div>
                       </td>
                       <td
-                        class="ml-2 table-cell md:hidden"
+                        class="table-cell ml-2 md:hidden"
                       >
                         <div
                           class="shrink-0 css-1yk316i"
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+                            class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded-full"
                           >
                             <img
                               alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -5786,11 +5786,11 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
         data-testid="TransactionDetail"
       >
         <div
-          class="w-40 flex-1 space-y-2 whitespace-nowrap"
+          class="flex-1 space-y-2 w-40 whitespace-nowrap"
           data-testid="TransactionDetail--desktop"
         >
           <div
-            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+            class="text-sm font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
           >
             Minimum Required Signatures
           </div>
@@ -5818,11 +5818,11 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
         data-testid="TransactionAmount"
       >
         <div
-          class="w-40 flex-1 space-y-2 whitespace-nowrap"
+          class="flex-1 space-y-2 w-40 whitespace-nowrap"
           data-testid="TransactionDetail--desktop"
         >
           <div
-            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+            class="text-sm font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
           >
             Amount
           </div>
@@ -5830,15 +5830,15 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
             class="flex items-center font-semibold"
           >
             <div
-              class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+              class="flex justify-center items-center px-1.5 h-full rounded css-xqt0aw"
               color="danger-bg"
               data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex h-full items-center space-x-1"
+                class="flex items-center space-x-1 h-full"
               >
                 <span
-                  class="whitespace-nowrap text-sm"
+                  class="text-sm whitespace-nowrap"
                   data-testid="Amount"
                 >
                   - 100 DARK
@@ -5848,7 +5848,7 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
           </div>
         </div>
         <div
-          class="border-theme-danger-100 text-theme-danger-500 dark:border-theme-danger-400 dark:text-theme-danger-400 ring-theme-background duration-100 css-1nqcsx"
+          class="duration-100 border-theme-danger-100 text-theme-danger-500 ring-theme-background css-1nqcsx dark:border-theme-danger-400 dark:text-theme-danger-400"
         >
           <div
             class="css-1i4b0eq"
@@ -5888,13 +5888,13 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
     data-testid="TransactionSuccessful"
   >
     <div
-      class="flex items-end justify-between bg-theme-background"
+      class="flex justify-between items-end bg-theme-background"
     >
       <div
         class="space-y-2"
       >
         <div
-          class="flex items-center gap-3"
+          class="flex gap-3 items-center"
         >
           <h1
             class="mb-0 text-2xl leading-[29px]"
@@ -6002,12 +6002,12 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
       />
     </svg>
     <p
-      class="hidden text-theme-secondary-text md:block"
+      class="hidden md:block text-theme-secondary-text"
     >
       Your transaction has been created successfully. Participants can now sign the transaction to broadcast it to the network. The following is relevant information for your transaction:
     </p>
     <div
-      class="flex flex-col overflow-hidden rounded-xl md:hidden"
+      class="flex overflow-hidden flex-col rounded-xl md:hidden"
     >
       <div
         class="css-1o2lvkz"
@@ -6060,11 +6060,11 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
         data-testid="TransactionDetail"
       >
         <div
-          class="w-40 flex-1 space-y-2 whitespace-nowrap"
+          class="flex-1 space-y-2 w-40 whitespace-nowrap"
           data-testid="TransactionDetail--desktop"
         >
           <div
-            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+            class="text-sm font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
           >
             ID
           </div>
@@ -6072,13 +6072,13 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
             class="flex items-center font-semibold"
           >
             <div
-              class="flex w-full items-center space-x-3 overflow-hidden"
+              class="flex overflow-hidden items-center space-x-3 w-full"
             >
               <span
                 class="overflow-hidden"
               >
                 <a
-                  class="ring-focus group inline-block flex items-center css-1flyqpm"
+                  class="inline-block flex items-center ring-focus group css-1flyqpm"
                   data-ring-focus-margin="-m-1"
                   data-testid="Link"
                   href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
@@ -6095,7 +6095,7 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
                     </span>
                   </span>
                   <div
-                    class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                    class="inline-block text-sm align-middle duration-200 mb-[3px] shrink-0 css-v0ob3f"
                     data-testid="Link__external"
                     height="16"
                     width="16"
@@ -6124,7 +6124,7 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
                 class="flex text-theme-primary-300 dark:text-theme-secondary-600"
               >
                 <button
-                  class="ring-focus relative focus:outline-none"
+                  class="relative ring-focus focus:outline-hidden"
                   data-ring-focus-margin="-m-1"
                   data-testid="clipboard-icon__wrapper"
                   type="button"
@@ -6171,11 +6171,11 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
           data-testid="DetailWrapper"
         >
           <div
-            class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+            class="py-2 px-3 border-l-2 sm:p-0 sm:bg-transparent sm:border-none dark:bg-black border-x-theme-primary-400 bg-theme-secondary-100 dark:sm:bg-transparent"
             data-testid="DetailLabel"
           >
             <div
-              class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+              class="font-semibold no-ligatures text-md min-w-24 text-theme-secondary-700 dark:text-theme-secondary-500"
               data-testid="DetailLabelText"
             >
               Transaction Type
@@ -6185,10 +6185,10 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
             class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
           >
             <div
-              class="flex w-full justify-between sm:justify-start"
+              class="flex justify-between w-full sm:justify-start"
             >
               <div
-                class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                class="font-semibold no-ligatures text-md min-w-24 text-theme-secondary-700 dark:text-theme-secondary-500"
                 data-testid="DetailLabelText"
               >
                 Category
@@ -6208,11 +6208,11 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
         data-testid="TransactionNetwork"
       >
         <div
-          class="w-40 flex-1 space-y-2 whitespace-nowrap"
+          class="flex-1 space-y-2 w-40 whitespace-nowrap"
           data-testid="TransactionDetail--desktop"
         >
           <div
-            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+            class="text-sm font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
           >
             Cryptoasset
           </div>
@@ -6224,7 +6224,7 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
         </div>
         <div
           aria-label="ARK Devnet"
-          class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-1nqcsx"
+          class="duration-100 text-theme-secondary-700 border-theme-secondary-300 ring-theme-background css-1nqcsx dark:border-theme-secondary-700"
           data-testid="NetworkIcon-ARK-ark.devnet"
         >
           <div
@@ -6254,11 +6254,11 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
         data-testid="TransactionRecipients"
       >
         <div
-          class="w-40 flex-1 space-y-2 whitespace-nowrap"
+          class="flex-1 space-y-2 w-40 whitespace-nowrap"
           data-testid="TransactionDetail--desktop"
         >
           <div
-            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+            class="text-sm font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
           >
             Multisignature Participants (2)
           </div>
@@ -6281,13 +6281,13 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
                       role="row"
                     >
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="relative p-3 m-0 text-sm font-semibold text-left select-none first:pl-6 first:rounded-tl-xl last:pr-6 last:rounded-tr-xl group text-theme-secondary-700 border-theme-secondary-300 bg-theme-secondary-100 dark:text-theme-secondary-500 dark:border-theme-secondary-800 dark:bg-theme-secondary-800"
                         colspan="1"
                         data-testid="table__th--0"
                         role="columnheader"
                       >
                         <div
-                          class="flex flex-inline align-top hidden"
+                          class="flex hidden align-top flex-inline"
                         >
                           <div
                             class=""
@@ -6297,13 +6297,13 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="relative p-3 m-0 text-sm font-semibold text-left select-none first:pl-6 first:rounded-tl-xl last:pr-6 last:rounded-tr-xl group text-theme-secondary-700 border-theme-secondary-300 bg-theme-secondary-100 dark:text-theme-secondary-500 dark:border-theme-secondary-800 dark:bg-theme-secondary-800"
                         colspan="1"
                         data-testid="table__th--1"
                         role="columnheader"
                       >
                         <div
-                          class="flex flex-inline align-top hidden"
+                          class="flex hidden align-top flex-inline"
                         >
                           <div
                             class=""
@@ -6313,13 +6313,13 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="relative p-3 m-0 text-sm font-semibold text-left select-none first:pl-6 first:rounded-tl-xl last:pr-6 last:rounded-tr-xl group text-theme-secondary-700 border-theme-secondary-300 bg-theme-secondary-100 dark:text-theme-secondary-500 dark:border-theme-secondary-800 dark:bg-theme-secondary-800"
                         colspan="1"
                         data-testid="table__th--2"
                         role="columnheader"
                       >
                         <div
-                          class="flex flex-inline align-top hidden"
+                          class="flex hidden align-top flex-inline"
                         >
                           <div
                             class=""
@@ -6334,11 +6334,11 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
                     role="rowgroup"
                   >
                     <tr
-                      class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
+                      class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
                       data-testid="recipient-list__recipient-list-item"
                     >
                       <td
-                        class="mr-3 table-cell md:hidden"
+                        class="table-cell mr-3 md:hidden"
                       />
                       <td
                         class="hidden md:table-cell"
@@ -6348,7 +6348,7 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+                            class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded-full"
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -6359,13 +6359,13 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
                         </div>
                       </td>
                       <td
-                        class="w-28 flex-1 justify-end md:ml-4"
+                        class="flex-1 justify-end w-28 md:ml-4"
                       >
                         <div
-                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                            class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-text"
                             data-testid="Address__address"
                           >
                             D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -6373,14 +6373,14 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
                         </div>
                       </td>
                       <td
-                        class="ml-2 table-cell md:hidden"
+                        class="table-cell ml-2 md:hidden"
                       >
                         <div
                           class="shrink-0 css-1yk316i"
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+                            class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded-full"
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -6395,11 +6395,11 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
                       />
                     </tr>
                     <tr
-                      class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
+                      class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
                       data-testid="recipient-list__recipient-list-item"
                     >
                       <td
-                        class="mr-3 table-cell md:hidden"
+                        class="table-cell mr-3 md:hidden"
                       />
                       <td
                         class="hidden md:table-cell"
@@ -6409,7 +6409,7 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+                            class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded-full"
                           >
                             <img
                               alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -6420,13 +6420,13 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
                         </div>
                       </td>
                       <td
-                        class="w-28 flex-1 justify-end md:ml-4"
+                        class="flex-1 justify-end w-28 md:ml-4"
                       >
                         <div
-                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                            class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-text"
                             data-testid="Address__address"
                           >
                             D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -6434,14 +6434,14 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
                         </div>
                       </td>
                       <td
-                        class="ml-2 table-cell md:hidden"
+                        class="table-cell ml-2 md:hidden"
                       >
                         <div
                           class="shrink-0 css-1yk316i"
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+                            class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded-full"
                           >
                             <img
                               alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -6467,11 +6467,11 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
         data-testid="TransactionDetail"
       >
         <div
-          class="w-40 flex-1 space-y-2 whitespace-nowrap"
+          class="flex-1 space-y-2 w-40 whitespace-nowrap"
           data-testid="TransactionDetail--desktop"
         >
           <div
-            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+            class="text-sm font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
           >
             Minimum Required Signatures
           </div>
@@ -6499,11 +6499,11 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
         data-testid="TransactionAmount"
       >
         <div
-          class="w-40 flex-1 space-y-2 whitespace-nowrap"
+          class="flex-1 space-y-2 w-40 whitespace-nowrap"
           data-testid="TransactionDetail--desktop"
         >
           <div
-            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+            class="text-sm font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
           >
             Amount
           </div>
@@ -6511,15 +6511,15 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
             class="flex items-center font-semibold"
           >
             <div
-              class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+              class="flex justify-center items-center px-1.5 h-full rounded css-xqt0aw"
               color="danger-bg"
               data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex h-full items-center space-x-1"
+                class="flex items-center space-x-1 h-full"
               >
                 <span
-                  class="whitespace-nowrap text-sm"
+                  class="text-sm whitespace-nowrap"
                   data-testid="Amount"
                 >
                   - 100 DARK
@@ -6529,7 +6529,7 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
           </div>
         </div>
         <div
-          class="border-theme-danger-100 text-theme-danger-500 dark:border-theme-danger-400 dark:text-theme-danger-400 ring-theme-background duration-100 css-1nqcsx"
+          class="duration-100 border-theme-danger-100 text-theme-danger-500 ring-theme-background css-1nqcsx dark:border-theme-danger-400 dark:text-theme-danger-400"
         >
           <div
             class="css-1i4b0eq"

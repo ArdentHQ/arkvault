@@ -26,7 +26,7 @@ export const ToastMessage = ({
 	return (
 		<Toast variant={variant}>
 			<div className="flex items-center space-x-4 break-words">
-				<div data-testid="ToastMessage__content" className="flex-1 overflow-hidden text-theme-text">
+				<div data-testid="ToastMessage__content" className="text-theme-text flex-1 overflow-hidden">
 					{children}
 				</div>
 
@@ -36,7 +36,7 @@ export const ToastMessage = ({
 					size="icon"
 					onClick={closeToast}
 					className={cn(
-						"h-11 w-11 text-theme-secondary-900",
+						"text-theme-secondary-900 h-11 w-11",
 						`bg-theme-${variant === "info" ? "primary" : variant}-100 hover:bg-theme-${
 							variant === "info" ? "primary" : variant
 						}-200`,

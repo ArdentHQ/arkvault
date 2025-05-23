@@ -325,7 +325,7 @@ const ExchangeForm = ({
 				<Tabs activeId={activeTab}>
 					<StepIndicator steps={Array.from({ length: 4 })} activeIndex={activeTab} />
 
-					<div className="mb-24 mt-6 sm:mb-0 sm:mt-8">
+					<div className="mt-6 mb-24 sm:mt-8 sm:mb-0">
 						<TabPanel tabId={1}>
 							<FormStep profile={activeProfile} />
 						</TabPanel>
@@ -359,7 +359,7 @@ const ExchangeForm = ({
 											data-testid="ExchangeForm__manual_transfer"
 											onClick={() => handleNext({ bypassSignStep: true })}
 											disabled={isSubmitting || !isValid}
-											className="text-sm leading-[17px] text-theme-primary-600 sm:pl-0"
+											className="text-theme-primary-600 text-sm leading-[17px] sm:pl-0"
 										>
 											{t("EXCHANGE.MANUAL_TRANSFER")}
 										</Button>

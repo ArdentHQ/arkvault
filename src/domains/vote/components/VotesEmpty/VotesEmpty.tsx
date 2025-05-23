@@ -14,7 +14,7 @@ export const VotesEmpty = ({ onCreateWallet, onImportWallet }: VotesEmptyPropert
 
 	return (
 		<EmptyBlock>
-			<div className="flex flex-col items-center justify-between space-x-3 space-y-4 md:flex-row md:space-y-0">
+			<div className="flex flex-col items-center justify-between space-y-4 space-x-3 md:flex-row md:space-y-0">
 				<span className="text-center md:text-left">
 					<Trans
 						i18nKey="VOTE.VOTES_PAGE.EMPTY_MESSAGE"

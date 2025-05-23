@@ -6,7 +6,7 @@ import cn from "classnames";
 export const LabelWrapper = ({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) => (
 	<div
 		{...props}
-		className={twMerge("text-sm text-theme-secondary-700 dark:text-theme-dark-200 sm:text-base", className)}
+		className={twMerge("text-theme-secondary-700 dark:text-theme-dark-200 text-sm sm:text-base", className)}
 	/>
 );
 
