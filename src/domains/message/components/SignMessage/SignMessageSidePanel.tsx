@@ -64,14 +64,6 @@ export const SignMessageSidePanel = ({
 
 	const [activeTab, setActiveTab] = useState<Step>(Step.FormStep);
 
-	const wallets = useMemo(
-		() =>
-			activeNetwork
-				? activeProfile.wallets().findByCoinWithNetwork(activeNetwork.coin(), activeNetwork.id())
-				: [],
-		[activeNetwork, activeProfile],
-	);
-
 	const initialState: Services.SignedMessage = {
 		message: queryParameters.get("message") || "",
 		signatory: "",
@@ -112,7 +104,7 @@ export const SignMessageSidePanel = ({
 	const { sign } = useMessageSigner();
 
 	const connectLedger = useCallback(async () => {
-		await connect(activeProfile, selectedWallet!.coinId(), selectedWallet!.networkId());
+		await connect(activeProfile, selectedWallet!.networkId());
 		handleSubmit(submitForm)();
 	}, [selectedWallet, activeProfile, connect]);
 
@@ -191,7 +183,7 @@ export const SignMessageSidePanel = ({
 									<FormStep
 										disabled={false}
 										profile={activeProfile}
-										wallets={wallets}
+										wallets={activeProfile.wallets().values()}
 										disableMessageInput={false}
 										maxLength={signMessage.message().maxLength.value}
 										wallet={selectedWallet}
