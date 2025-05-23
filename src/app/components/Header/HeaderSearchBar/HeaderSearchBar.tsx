@@ -14,7 +14,7 @@ const SearchBarInputWrapper = forwardRef<HTMLDivElement, React.HTMLAttributes<HT
 		{...props}
 		ref={ref}
 		className={twMerge(
-			"dark:border dark:border-theme-secondary-800 xs:[min-width:300px] sm:[min-width:448px]",
+			"dark:border-theme-secondary-800 xs:[min-width:300px] sm:[min-width:448px] dark:border",
 			props.className,
 		)}
 	/>
@@ -77,7 +77,7 @@ export const HeaderSearchBar: FC<HeaderSearchBarProperties> = ({
 					data-testid="HeaderSearchBar__input"
 					ref={reference}
 					className={cn(
-						"absolute z-50 -mx-10 flex items-center rounded-lg bg-theme-background px-6 py-2.5 text-base shadow-xl",
+						"bg-theme-background absolute z-50 -mx-10 flex items-center rounded-lg px-6 py-2.5 text-base shadow-xl",
 						offsetClassName || "top-1/2 -translate-y-1/2",
 						{
 							"right-0": noToggleBorder,
@@ -88,13 +88,13 @@ export const HeaderSearchBar: FC<HeaderSearchBarProperties> = ({
 					{extra && (
 						<div className="flex items-center">
 							<div>{extra}</div>
-							<div className="mr-8 h-10 border-l border-theme-secondary-300 dark:border-theme-secondary-800" />
+							<div className="border-theme-secondary-300 dark:border-theme-secondary-800 mr-8 h-10 border-l" />
 						</div>
 					)}
 
 					<button
 						data-testid="header-search-bar__reset"
-						className={cn("transition-all duration-300 focus:outline-none", {
+						className={cn("transition-all duration-300 focus:outline-hidden", {
 							"mr-4": query !== "" || alwaysDisplayClearButton,
 						})}
 						onClick={handleQueryReset}

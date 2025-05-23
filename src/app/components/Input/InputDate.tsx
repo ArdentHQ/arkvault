@@ -57,7 +57,7 @@ export const InputDate = React.forwardRef<HTMLInputElement, InputDateProperties>
 												data-testid="InputDate__calendar"
 												type="button"
 												onClick={() => (calenderReference.current as any)?.setOpen(true)}
-												className="ring-focus relative flex h-full w-full items-center justify-center text-2xl text-theme-secondary-700 focus:outline-none dark:text-theme-secondary-200"
+												className="ring-focus text-theme-secondary-700 dark:text-theme-secondary-200 relative flex h-full w-full items-center justify-center text-2xl focus:outline-hidden"
 												data-ring-focus-margin="-m-1"
 											>
 												<Icon name="Calendar" size="lg" />

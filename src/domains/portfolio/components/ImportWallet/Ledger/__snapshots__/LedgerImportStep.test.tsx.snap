@@ -10,11 +10,11 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
         class="mb-3 sm:hidden"
       >
         <div
-          class="flex h-9 w-full flex-row items-center justify-between border-l-2 border-l-theme-primary-400 bg-theme-primary-100 px-3 dark:border-l-theme-primary-300 dark:bg-theme-secondary-800"
+          class="border-l-theme-primary-400 bg-theme-primary-100 dark:border-l-theme-primary-300 dark:bg-theme-secondary-800 flex h-9 w-full flex-row items-center justify-between border-l-2 px-3"
           data-testid="SectionHeaderMobile__wrapper"
         >
           <span
-            class="text-base font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+            class="text-theme-secondary-700 dark:text-theme-secondary-500 text-base font-semibold"
           >
             Addresses
           </span>
@@ -24,19 +24,19 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
         class="flex flex-col gap-2"
       >
         <div
-          class="w-full cursor-pointer overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-background"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-background w-full cursor-pointer overflow-hidden rounded border bg-white"
           data-testid="LedgerMobileItem__wrapper"
         >
           <div
-            class="flex h-11 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
+            class="bg-theme-secondary-100 flex h-11 w-full items-center justify-between px-4 dark:bg-black"
           >
             <span
-              class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+              class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
             >
               Address #1
             </span>
             <button
-              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none !p-0 text-theme-primary-600 dark:text-theme-secondary-500"
+              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:text-theme-secondary-500 p-0!"
               data-testid="LedgerImportStep__edit-alias"
               type="button"
             >
@@ -74,18 +74,18 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
             </button>
           </div>
           <div
-            class="flex w-full flex-col gap-4 px-4 pb-4 pt-2.5"
+            class="flex w-full flex-col gap-4 px-4 pt-2.5 pb-4"
           >
             <div
               class="flex w-36 flex-col gap-2"
             >
               <span
-                class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
               >
                 Address
               </span>
               <div
-                class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+                class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
               >
                 <div
                   class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -97,13 +97,13 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
                     DJpFwW39QnQvQRQJF2MCfAoKvsX4DJ28jq
                   </span>
                   <button
-                    class="ring-focus relative focus:outline-none"
+                    class="ring-focus relative cursor-pointer focus:outline-hidden"
                     data-ring-focus-margin="-m-1"
                     data-testid="clipboard-icon__wrapper"
                     type="button"
                   >
                     <div
-                      class="text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+                      class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                     >
                       <div
                         style="height: 16px; width: 16px;"
@@ -143,12 +143,12 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
               data-testid="LedgerMobileItem__network"
             >
               <span
-                class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
               >
                 Value (ARK)
               </span>
               <div
-                class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+                class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
               >
                 <div>
                   <span
@@ -163,19 +163,19 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
           </div>
         </div>
         <div
-          class="w-full cursor-pointer overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-background"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-background w-full cursor-pointer overflow-hidden rounded border bg-white"
           data-testid="LedgerMobileItem__wrapper"
         >
           <div
-            class="flex h-11 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
+            class="bg-theme-secondary-100 flex h-11 w-full items-center justify-between px-4 dark:bg-black"
           >
             <span
-              class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+              class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
             >
               Address #1
             </span>
             <button
-              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none !p-0 text-theme-primary-600 dark:text-theme-secondary-500"
+              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:text-theme-secondary-500 p-0!"
               data-testid="LedgerImportStep__edit-alias"
               type="button"
             >
@@ -213,18 +213,18 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
             </button>
           </div>
           <div
-            class="flex w-full flex-col gap-4 px-4 pb-4 pt-2.5"
+            class="flex w-full flex-col gap-4 px-4 pt-2.5 pb-4"
           >
             <div
               class="flex w-36 flex-col gap-2"
             >
               <span
-                class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
               >
                 Address
               </span>
               <div
-                class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+                class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
               >
                 <div
                   class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -236,13 +236,13 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
                     DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
                   </span>
                   <button
-                    class="ring-focus relative focus:outline-none"
+                    class="ring-focus relative cursor-pointer focus:outline-hidden"
                     data-ring-focus-margin="-m-1"
                     data-testid="clipboard-icon__wrapper"
                     type="button"
                   >
                     <div
-                      class="text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+                      class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                     >
                       <div
                         style="height: 16px; width: 16px;"
@@ -282,12 +282,12 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
               data-testid="LedgerMobileItem__network"
             >
               <span
-                class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
               >
                 Value (ARK)
               </span>
               <div
-                class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+                class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
               >
                 <div>
                   <span
@@ -317,18 +317,18 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
         class="mb-3 sm:hidden"
       >
         <div
-          class="flex h-9 w-full flex-row items-center justify-between border-l-2 border-l-theme-primary-400 bg-theme-primary-100 px-3 dark:border-l-theme-primary-300 dark:bg-theme-secondary-800"
+          class="border-l-theme-primary-400 bg-theme-primary-100 dark:border-l-theme-primary-300 dark:bg-theme-secondary-800 flex h-9 w-full flex-row items-center justify-between border-l-2 px-3"
           data-testid="SectionHeaderMobile__wrapper"
         >
           <span
-            class="text-base font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+            class="text-theme-secondary-700 dark:text-theme-secondary-500 text-base font-semibold"
           >
             Addresses
           </span>
         </div>
       </div>
       <div
-        class="rounded-xl pb-2 outline outline-1 outline-transparent md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 border-transparent md:border-b-[5px] md:border-b-theme-secondary-200 md:border-b-0"
+        class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px] md:border-b-0"
         data-testid="TableWrapper"
       >
         <div
@@ -485,13 +485,13 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                           </span>
                         </div>
                         <button
-                          class="ring-focus relative focus:outline-none"
+                          class="ring-focus relative cursor-pointer focus:outline-hidden"
                           data-ring-focus-margin="-m-1"
                           data-testid="clipboard-icon__wrapper"
                           type="button"
                         >
                           <div
-                            class="text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+                            class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                           >
                             <div
                               style="height: 16px; width: 16px;"
@@ -526,7 +526,7 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                       </div>
                       <div>
                         <span
-                          class="whitespace-nowrap text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                          class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
                           data-testid="Amount"
                         >
                           0 ARK
@@ -540,7 +540,7 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                     class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end font-semibold"
                   >
                     <button
-                      class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 my-2.5 p-4"
+                      class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 my-2.5 p-4"
                       data-testid="LedgerImportStep__edit-alias"
                       type="button"
                     >
@@ -615,13 +615,13 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                           </span>
                         </div>
                         <button
-                          class="ring-focus relative focus:outline-none"
+                          class="ring-focus relative cursor-pointer focus:outline-hidden"
                           data-ring-focus-margin="-m-1"
                           data-testid="clipboard-icon__wrapper"
                           type="button"
                         >
                           <div
-                            class="text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+                            class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                           >
                             <div
                               style="height: 16px; width: 16px;"
@@ -656,7 +656,7 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                       </div>
                       <div>
                         <span
-                          class="whitespace-nowrap text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                          class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
                           data-testid="Amount"
                         >
                           0 ARK
@@ -670,7 +670,7 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                     class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end font-semibold"
                   >
                     <button
-                      class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 my-2.5 p-4"
+                      class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 my-2.5 p-4"
                       data-testid="LedgerImportStep__edit-alias"
                       type="button"
                     >
@@ -731,12 +731,12 @@ exports[`LedgerImportStep > should render with single import (lg) 1`] = `
           class="flex flex-col gap-2"
         >
           <span
-            class="text-base font-semibold text-theme-secondary-700"
+            class="text-theme-secondary-700 text-base font-semibold"
           >
             Imported
           </span>
           <div
-            class="flex flex-col gap-4 rounded-xl border border-theme-secondary-300 px-6 py-5 dark:border-theme-secondary-800"
+            class="border-theme-secondary-300 dark:border-theme-secondary-800 flex flex-col gap-4 rounded-xl border px-6 py-5"
           >
             <div
               class="flex w-full flex-row items-center justify-between text-sm font-semibold sm:justify-start sm:gap-3 sm:text-base"
@@ -767,13 +767,13 @@ exports[`LedgerImportStep > should render with single import (lg) 1`] = `
                     </span>
                   </div>
                   <button
-                    class="ring-focus relative focus:outline-none"
+                    class="ring-focus relative cursor-pointer focus:outline-hidden"
                     data-ring-focus-margin="-m-1"
                     data-testid="clipboard-icon__wrapper"
                     type="button"
                   >
                     <div
-                      class="text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+                      class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                     >
                       <div
                         style="height: 16px; width: 16px;"
@@ -809,7 +809,7 @@ exports[`LedgerImportStep > should render with single import (lg) 1`] = `
               </div>
             </div>
             <hr
-              class="w-full border border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 w-full border border-dashed"
             />
             <div
               class="flex w-full flex-row items-center justify-between text-sm font-semibold sm:justify-start sm:gap-3 sm:text-base"
@@ -842,12 +842,12 @@ exports[`LedgerImportStep > should render with single import (lg) 1`] = `
           class="flex flex-col gap-2"
         >
           <span
-            class="text-base font-semibold text-theme-secondary-700"
+            class="text-theme-secondary-700 text-base font-semibold"
           >
             Address Name
           </span>
           <div
-            class="flex flex-col gap-4 rounded-xl border border-theme-secondary-300 px-6 py-5 dark:border-theme-secondary-800"
+            class="border-theme-secondary-300 dark:border-theme-secondary-800 flex flex-col gap-4 rounded-xl border px-6 py-5"
           >
             <div
               class="flex w-full flex-row items-center justify-between text-sm font-semibold sm:justify-start sm:gap-3 sm:text-base"
@@ -868,7 +868,7 @@ exports[`LedgerImportStep > should render with single import (lg) 1`] = `
                     Address #1
                   </span>
                   <button
-                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none !p-0 text-theme-primary-600 dark:text-theme-secondary-500"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:text-theme-secondary-500 p-0!"
                     data-testid="LedgerImportStep__edit-alias"
                     type="button"
                   >
@@ -926,11 +926,11 @@ exports[`LedgerImportStep > should render with single import (xs) 1`] = `
     >
       <div>
         <div
-          class="flex h-9 w-full flex-row items-center justify-between border-l-2 border-l-theme-primary-400 bg-theme-primary-100 px-3 dark:border-l-theme-primary-300 dark:bg-theme-secondary-800"
+          class="border-l-theme-primary-400 bg-theme-primary-100 dark:border-l-theme-primary-300 dark:bg-theme-secondary-800 flex h-9 w-full flex-row items-center justify-between border-l-2 px-3"
           data-testid="SectionHeaderMobile__wrapper"
         >
           <span
-            class="text-base font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+            class="text-theme-secondary-700 dark:text-theme-secondary-500 text-base font-semibold"
           >
             Imported
           </span>
@@ -963,13 +963,13 @@ exports[`LedgerImportStep > should render with single import (xs) 1`] = `
                     DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
                   </span>
                   <button
-                    class="ring-focus relative focus:outline-none"
+                    class="ring-focus relative cursor-pointer focus:outline-hidden"
                     data-ring-focus-margin="-m-1"
                     data-testid="clipboard-icon__wrapper"
                     type="button"
                   >
                     <div
-                      class="text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+                      class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                     >
                       <div
                         style="height: 16px; width: 16px;"
@@ -1029,11 +1029,11 @@ exports[`LedgerImportStep > should render with single import (xs) 1`] = `
       </div>
       <div>
         <div
-          class="flex h-9 w-full flex-row items-center justify-between border-l-2 border-l-theme-primary-400 bg-theme-primary-100 px-3 dark:border-l-theme-primary-300 dark:bg-theme-secondary-800"
+          class="border-l-theme-primary-400 bg-theme-primary-100 dark:border-l-theme-primary-300 dark:bg-theme-secondary-800 flex h-9 w-full flex-row items-center justify-between border-l-2 px-3"
           data-testid="SectionHeaderMobile__wrapper"
         >
           <span
-            class="text-base font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+            class="text-theme-secondary-700 dark:text-theme-secondary-500 text-base font-semibold"
           >
             Address Name
           </span>
@@ -1058,10 +1058,10 @@ exports[`LedgerImportStep > should render with single import (xs) 1`] = `
               >
                 Address #1
                 <hr
-                  class="h-5 w-px border-transparent bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                  class="bg-theme-secondary-300 dark:bg-theme-secondary-800 h-5 w-px border-transparent"
                 />
                 <button
-                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none !p-0 text-theme-primary-600 dark:text-theme-secondary-500"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:text-theme-secondary-500 p-0!"
                   data-testid="LedgerImportStep__edit-alias"
                   type="button"
                 >

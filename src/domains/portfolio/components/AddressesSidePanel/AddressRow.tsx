@@ -65,7 +65,7 @@ export const AddressRow = ({
 				"bg-theme-secondary-200 dark:bg-theme-dark-950": isSelected && !usesDeleteMode,
 				"border-theme-danger-400 dark:border-theme-danger-400": isError,
 				"border-theme-primary-200 dark:border-theme-dark-700": !isError,
-				"hover:bg-theme-navy-100 hover:dark:bg-theme-dark-700":
+				"hover:bg-theme-navy-100 dark:hover:bg-theme-dark-700":
 					(!isSelected && !isError) || (usesDeleteMode && !deleteContent),
 			})}
 		>
@@ -75,7 +75,7 @@ export const AddressRow = ({
 						onClick={() => onDelete(wallet.address())}
 						data-testid={`AddressRow--delete-${wallet.address()}`}
 						size="icon"
-						className="p-1 text-theme-secondary-700 hover:bg-theme-danger-400 hover:text-white dark:text-theme-secondary-500 hover:dark:text-white"
+						className="text-theme-secondary-700 dark:text-theme-secondary-500 hover:bg-theme-danger-400 p-1 hover:text-white dark:hover:text-white"
 						variant="transparent"
 					>
 						<Icon name="Trash" dimensions={[16, 16]} />
@@ -87,7 +87,7 @@ export const AddressRow = ({
 						data-testid="icon-MarkedTrash"
 						name="MarkedTrash"
 						dimensions={[16, 16]}
-						className="p-1 text-theme-secondary-500 dark:text-theme-dark-500"
+						className="text-theme-secondary-500 dark:text-theme-dark-500 p-1"
 					/>
 				)}
 
@@ -112,11 +112,11 @@ export const AddressRow = ({
 					/>
 				)}
 
-				<div className="ml-4 flex w-full min-w-0 items-center justify-between border-l border-theme-primary-200 pl-4 font-semibold text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200">
+				<div className="border-theme-primary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 ml-4 flex w-full min-w-0 items-center justify-between border-l pl-4 font-semibold">
 					<div className="flex w-1/2 min-w-0 flex-col space-y-2 truncate">
 						<div
 							className={cn("leading-5", {
-								"group-hover:text-theme-primary-900 group-hover:dark:text-theme-dark-200": !isSelected,
+								"group-hover:text-theme-primary-900 dark:group-hover:text-theme-dark-200": !isSelected,
 								"text-theme-secondary-900 dark:text-theme-dark-50": isSelected && !usesDeleteMode,
 							})}
 						>
@@ -133,7 +133,7 @@ export const AddressRow = ({
 							ticker={wallet.network().ticker()}
 							value={+wallet.balance().toFixed(2)}
 							className={cn("leading-5", {
-								"group-hover:text-theme-primary-900 group-hover:dark:text-theme-dark-200": !isSelected,
+								"group-hover:text-theme-primary-900 dark:group-hover:text-theme-dark-200": !isSelected,
 								"text-theme-secondary-900 dark:text-theme-dark-50": isSelected && !usesDeleteMode,
 							})}
 						/>
@@ -146,7 +146,7 @@ export const AddressRow = ({
 				</div>
 			</div>
 			{!!errorMessage && (
-				<div className="flex items-center space-x-4 rounded-b-lg bg-theme-danger-50 px-4 py-3 dark:bg-theme-dark-800">
+				<div className="bg-theme-danger-50 dark:bg-theme-dark-800 flex items-center space-x-4 rounded-b-lg px-4 py-3">
 					<div className="mx-[2px] flex w-5 items-center justify-center">
 						<Icon
 							name="CircleCross"
@@ -154,7 +154,7 @@ export const AddressRow = ({
 							size="md"
 						/>
 					</div>
-					<p className="text-sm text-theme-secondary-700 dark:text-theme-dark-50">{errorMessage}</p>
+					<p className="text-theme-secondary-700 dark:text-theme-dark-50 text-sm">{errorMessage}</p>
 				</div>
 			)}
 			<div

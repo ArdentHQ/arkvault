@@ -43,7 +43,7 @@ export const ErrorStep = ({
 				</div>
 
 				<div className="space-y-4">
-					<p className="hidden text-theme-secondary-text md:block">
+					<p className="text-theme-secondary-text hidden md:block">
 						{description || t("TRANSACTION.ERROR.DESCRIPTION")}
 					</p>
 

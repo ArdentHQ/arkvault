@@ -39,10 +39,10 @@ jobs:
             - name: Format
               run: pnpm format
 
-            # - name: RustyWind
-            #   run: |
-            #     curl -LSfs https://avencera.github.io/rustywind/install.sh | sh -s -- --git avencera/rustywind
-            #     rustywind --write .
+#            - name: RustyWind
+#              run: |
+#                curl -LSfs https://avencera.github.io/rustywind/install.sh | sh -s -- --git avencera/rustywind
+#                rustywind --write .
 
             - uses: stefanzweifel/git-auto-commit-action@v4
               with:

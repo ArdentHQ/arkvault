@@ -63,7 +63,7 @@
 }
 
 .react-datepicker__day {
-	@apply m-0.5 flex h-8 w-8 cursor-pointer items-center justify-center rounded text-sm transition-colors;
+	@apply m-0.5 flex h-8 w-8 cursor-pointer items-center justify-center rounded-sm text-sm transition-colors;
 }
 
 .react-datepicker__day:not(.react-datepicker__day--disabled):hover {

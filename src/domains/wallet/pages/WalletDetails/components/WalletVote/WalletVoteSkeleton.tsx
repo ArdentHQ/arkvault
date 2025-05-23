@@ -12,11 +12,11 @@ export const WalletVoteSkeleton = () => {
 	return (
 		<div
 			data-testid="WalletVote__skeleton"
-			className="flex flex-col rounded-xl border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-800 dark:bg-black md:border-0 md:bg-transparent md:dark:bg-transparent"
+			className="border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-800 flex flex-col rounded-xl border md:border-0 md:bg-transparent dark:bg-black md:dark:bg-transparent"
 		>
 			<div className="flex h-[1.688rem] w-full items-center px-8 py-4 md:p-0">
 				<div className="flex items-center space-x-2">
-					<p className="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200 md:text-base md:leading-5">
+					<p className="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold md:text-base md:leading-5">
 						{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.VOTING_FOR")}
 					</p>
 
@@ -24,7 +24,7 @@ export const WalletVoteSkeleton = () => {
 				</div>
 
 				<div className="ml-auto flex items-center space-x-2">
-					<p className="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200 md:text-base md:leading-5">
+					<p className="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold md:text-base md:leading-5">
 						{t("COMMON.RANK")}
 					</p>
 					<Skeleton height={20} width={62} />
@@ -38,7 +38,7 @@ export const WalletVoteSkeleton = () => {
 							type="button"
 							disabled
 							variant="secondary"
-							className="mt-4 hidden w-full space-x-2 text-theme-primary-600 disabled:bg-transparent dark:text-theme-dark-navy-400 dark:disabled:bg-transparent md:mt-0 md:flex md:w-auto md:px-2 md:py-[3px]"
+							className="text-theme-primary-600 dark:text-theme-dark-navy-400 mt-4 hidden w-full space-x-2 disabled:bg-transparent md:mt-0 md:flex md:w-auto md:px-2 md:py-[3px] dark:disabled:bg-transparent"
 						>
 							<Icon name="Vote" />
 							<span>{t("COMMON.VOTE")}</span>
@@ -47,7 +47,7 @@ export const WalletVoteSkeleton = () => {
 				</div>
 			</div>
 
-			<div className="flex justify-center border-t border-theme-secondary-300 px-6 py-4 dark:border-theme-secondary-800 md:hidden">
+			<div className="border-theme-secondary-300 dark:border-theme-secondary-800 flex justify-center border-t px-6 py-4 md:hidden">
 				<div className="flex h-10 flex-col items-center justify-between">
 					<Skeleton height={16} width={150} />
 					<Skeleton height={14} width={100} />

@@ -11,7 +11,7 @@ exports[`TransactionDetail > should always render as desktop is useDesktop is se
       data-testid="TransactionDetail--desktop"
     >
       <div
-        class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+        class="no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold"
       >
         Test
       </div>
@@ -36,7 +36,7 @@ exports[`TransactionDetail > should always render as desktop is useDesktop is se
       data-testid="TransactionDetail--desktop"
     >
       <div
-        class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+        class="no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold"
       >
         Test
       </div>
@@ -61,7 +61,7 @@ exports[`TransactionDetail > should always render as desktop is useDesktop is se
       data-testid="TransactionDetail--desktop"
     >
       <div
-        class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+        class="no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold"
       >
         Test
       </div>
@@ -86,7 +86,7 @@ exports[`TransactionDetail > should always render as desktop is useDesktop is se
       data-testid="TransactionDetail--desktop"
     >
       <div
-        class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+        class="no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold"
       >
         Test
       </div>
@@ -111,7 +111,7 @@ exports[`TransactionDetail > should always render as desktop is useDesktop is se
       data-testid="TransactionDetail--desktop"
     >
       <div
-        class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+        class="no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold"
       >
         Test
       </div>
@@ -136,7 +136,7 @@ exports[`TransactionDetail > should render in lg desktop screen 1`] = `
       data-testid="TransactionDetail--desktop"
     >
       <div
-        class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+        class="no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold"
       >
         Test
       </div>
@@ -161,7 +161,7 @@ exports[`TransactionDetail > should render in md desktop screen 1`] = `
       data-testid="TransactionDetail--desktop"
     >
       <div
-        class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+        class="no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold"
       >
         Test
       </div>
@@ -186,7 +186,7 @@ exports[`TransactionDetail > should render in sm mobile screen 1`] = `
       data-testid="TransactionDetail--mobile"
     >
       <div
-        class="text-md md:theme-text group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+        class="text-md group border-theme-secondary-300 text-theme-secondary-700 md:theme-text dark:border-theme-secondary-800 dark:text-theme-secondary-500 relative m-0 text-left font-semibold select-none first:pl-0 last:pr-0"
       >
         Test
       </div>
@@ -194,7 +194,7 @@ exports[`TransactionDetail > should render in sm mobile screen 1`] = `
         class="flex min-w-0 grow items-center justify-end space-x-4"
       >
         <div
-          class="md:theme-text flex w-full justify-end text-theme-secondary-700 dark:text-theme-secondary-500"
+          class="text-theme-secondary-700 md:theme-text dark:text-theme-secondary-500 flex w-full justify-end"
         >
           test
         </div>
@@ -215,7 +215,7 @@ exports[`TransactionDetail > should render in xl desktop screen 1`] = `
       data-testid="TransactionDetail--desktop"
     >
       <div
-        class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+        class="no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold"
       >
         Test
       </div>
@@ -240,7 +240,7 @@ exports[`TransactionDetail > should render in xs mobile screen 1`] = `
       data-testid="TransactionDetail--mobile"
     >
       <div
-        class="text-md md:theme-text group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+        class="text-md group border-theme-secondary-300 text-theme-secondary-700 md:theme-text dark:border-theme-secondary-800 dark:text-theme-secondary-500 relative m-0 text-left font-semibold select-none first:pl-0 last:pr-0"
       >
         Test
       </div>
@@ -248,7 +248,7 @@ exports[`TransactionDetail > should render in xs mobile screen 1`] = `
         class="flex min-w-0 grow items-center justify-end space-x-4"
       >
         <div
-          class="md:theme-text flex w-full justify-end text-theme-secondary-700 dark:text-theme-secondary-500"
+          class="text-theme-secondary-700 md:theme-text dark:text-theme-secondary-500 flex w-full justify-end"
         >
           test
         </div>
@@ -269,7 +269,7 @@ exports[`TransactionDetail > should render with bottom border 1`] = `
       data-testid="TransactionDetail--desktop"
     >
       <div
-        class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+        class="no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold"
       >
         Test
       </div>
@@ -294,7 +294,7 @@ exports[`TransactionDetail > should render with extra children 1`] = `
       data-testid="TransactionDetail--desktop"
     >
       <div
-        class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+        class="no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold"
       >
         Test
       </div>
@@ -322,7 +322,7 @@ exports[`TransactionDetail > should render with top border 1`] = `
       data-testid="TransactionDetail--desktop"
     >
       <div
-        class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+        class="no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold"
       >
         Test
       </div>
@@ -347,7 +347,7 @@ exports[`TransactionDetail > should render without border 1`] = `
       data-testid="TransactionDetail--desktop"
     >
       <div
-        class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+        class="no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold"
       >
         Test
       </div>
@@ -372,7 +372,7 @@ exports[`TransactionDetail > should render without padding 1`] = `
       data-testid="TransactionDetail--desktop"
     >
       <div
-        class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+        class="no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold"
       >
         Test
       </div>

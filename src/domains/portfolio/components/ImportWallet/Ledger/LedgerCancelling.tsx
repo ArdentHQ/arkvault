@@ -11,7 +11,7 @@ export const LedgerCancelling = () => {
 
 			<div className="inline-flex w-full items-center justify-center space-x-3">
 				<Spinner />
-				<span className="animate-pulse font-semibold text-theme-secondary-text">
+				<span className="text-theme-secondary-text animate-pulse font-semibold">
 					{t("WALLETS.PAGE_IMPORT_WALLET.CANCELLING_STATE.TITLE")}
 				</span>
 			</div>

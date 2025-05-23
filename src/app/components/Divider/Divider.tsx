@@ -32,7 +32,7 @@ export const Divider = ({
 				"h-4": type !== "horizontal" && (!size || !["sm", "md", "lg", "xl"].includes(size)),
 				"h-5": type !== "horizontal" && size === "md",
 				"h-8": type !== "horizontal" && size === "lg",
-				"relative mx-2 inline-block border-l border-t-0 border-solid align-middle": type !== "horizontal",
+				"relative mx-2 inline-block border-t-0 border-l border-solid align-middle": type !== "horizontal",
 			}),
 			className,
 		)}

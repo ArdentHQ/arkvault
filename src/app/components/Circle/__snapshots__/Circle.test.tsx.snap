@@ -11,7 +11,7 @@ exports[`Circle > should render 1`] = `
 exports[`Circle > should render as avatar 1`] = `
 <div>
   <div
-    class="inline-flex items-center justify-center rounded-full align-middle transition-all border-0 bg-theme-info-200 h-10 w-10 px-4 py-2 ring-6 ring-theme-background duration-100"
+    class="inline-flex items-center justify-center rounded-full align-middle transition-all bg-theme-info-200 border-0 h-10 w-10 px-4 py-2 ring-6 ring-theme-background duration-100"
   />
 </div>
 `;

@@ -105,7 +105,7 @@ export const PasswordSettings = () => {
 			itemValueClass: "w-full sm:w-auto",
 			label: t("SETTINGS.PASSWORD.REMOVE_PASSWORD.TITLE"),
 			labelDescription: t("SETTINGS.PASSWORD.REMOVE_PASSWORD.DESCRIPTION"),
-			labelWrapperClass: "flex flex-col sm:flex-row space-y-3 justify-between items-center",
+			labelWrapperClass: "flex flex-col sm:flex-row justify-between items-center",
 			value: (
 				<Tooltip disabled={usesPassword} content={t("SETTINGS.PASSWORD.REMOVE_PASSWORD.TOOLTIP")}>
 					<div>
@@ -113,7 +113,7 @@ export const PasswordSettings = () => {
 							disabled={!usesPassword}
 							data-testid="Password-settings__remove-button"
 							variant="danger"
-							className="w-full bg-theme-danger-50 sm:w-auto"
+							className="bg-theme-danger-50 w-full sm:w-auto"
 							onClick={() => setIsConfirmRemovalVisible(true)}
 						>
 							<Icon name="Trash" />
@@ -130,7 +130,7 @@ export const PasswordSettings = () => {
 			<SettingsWrapper profile={activeProfile} activeSettings="password">
 				<Form id="password-settings__form" context={form} onSubmit={handleSubmit} className="space-y-0">
 					<SettingsGroup title={t("SETTINGS.PASSWORD.TITLE")}>
-						<div className="mb-6 space-y-5 border-b border-dashed border-theme-secondary-300 pb-6 dark:border-theme-secondary-800">
+						<div className="border-theme-secondary-300 dark:border-theme-secondary-800 mb-6 space-y-5 border-b border-dashed pb-6">
 							{usesPassword && (
 								<FormField name="currentPassword">
 									<FormLabel label={t("SETTINGS.PASSWORD.CURRENT")} />
