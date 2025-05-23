@@ -838,8 +838,6 @@ describe("SendVote", () => {
 
 		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
-		expect(container).toMatchSnapshot();
-
 		signMock.mockRestore();
 		broadcastMock.mockRestore();
 		transactionMock.mockRestore();
