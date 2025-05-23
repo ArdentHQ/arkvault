@@ -46,7 +46,7 @@ exports[`ExchangeStatus > should show expired status 1`] = `
       </span>
     </div>
     <div
-      class="w-full break-words p-4 text-left text-sm leading-relaxed dark:bg-theme-secondary-800 bg-theme-danger-50"
+      class="dark:bg-theme-secondary-800 w-full p-4 text-left text-sm leading-relaxed break-words bg-theme-danger-50"
     >
       This transaction has expired.
     </div>
@@ -100,7 +100,7 @@ exports[`ExchangeStatus > should show failed status 1`] = `
       </span>
     </div>
     <div
-      class="w-full break-words p-4 text-left text-sm leading-relaxed dark:bg-theme-secondary-800 bg-theme-danger-50"
+      class="dark:bg-theme-secondary-800 w-full p-4 text-left text-sm leading-relaxed break-words bg-theme-danger-50"
     >
       This transaction has failed.
     </div>
@@ -159,7 +159,7 @@ exports[`ExchangeStatus > should show refunded status 1`] = `
       </span>
     </div>
     <div
-      class="w-full break-words p-4 text-left text-sm leading-relaxed dark:bg-theme-secondary-800 bg-theme-warning-50"
+      class="dark:bg-theme-secondary-800 w-full p-4 text-left text-sm leading-relaxed break-words bg-theme-warning-50"
     >
       This transaction has been refunded.
     </div>
@@ -218,7 +218,7 @@ exports[`ExchangeStatus > should show verifying status 1`] = `
       </span>
     </div>
     <div
-      class="w-full break-words p-4 text-left text-sm leading-relaxed dark:bg-theme-secondary-800 bg-theme-warning-50"
+      class="dark:bg-theme-secondary-800 w-full p-4 text-left text-sm leading-relaxed break-words bg-theme-warning-50"
     >
       This transaction is being verified by the provider.
     </div>

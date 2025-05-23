@@ -6,7 +6,7 @@ export const RowWrapper = ({ children }: { children: React.ReactNode }) => (
 );
 
 export const RowLabel = ({ children }: { children: React.ReactNode }) => (
-	<div className="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500">
+	<div className="text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 relative m-0 text-left font-semibold select-none first:pl-0 last:pr-0">
 		{children}
 	</div>
 );

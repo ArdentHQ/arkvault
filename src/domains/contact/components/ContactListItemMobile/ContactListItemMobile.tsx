@@ -59,18 +59,18 @@ export const ContactListItemMobile: React.VFC<Properties> = ({
 										e.stopPropagation();
 										onSend(contact.addresses().first());
 									}}
-									className="p-0 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
+									className="text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 p-0 text-sm hover:underline"
 									data-testid="ContactListItemMobileAddress__send-button"
 								>
 									{t("COMMON.SEND")}
 								</Button>
 							</Tooltip>
 
-							<span className="block h-5 w-px bg-theme-secondary-300 dark:bg-theme-secondary-800" />
+							<span className="bg-theme-secondary-300 dark:bg-theme-secondary-800 block h-5 w-px" />
 
 							<Dropdown
 								toggleContent={
-									<button type="button" className="flex text-theme-secondary-700">
+									<button type="button" className="text-theme-secondary-700 flex">
 										<Icon name="EllipsisVerticalFilled" size="md" />
 									</button>
 								}

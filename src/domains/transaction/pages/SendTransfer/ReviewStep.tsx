@@ -112,7 +112,7 @@ export const ReviewStep: React.VFC<ReviewStepProperties> = ({ wallet, network })
 									<div className="flex flex-row items-center gap-2">
 										<Amount ticker={ticker} value={amount} className="font-semibold" />
 										{!isTestnet && !!convertedAmount && !!exchangeTicker && (
-											<div className="font-semibold text-theme-secondary-700">
+											<div className="text-theme-secondary-700 font-semibold">
 												(~
 												<Amount ticker={exchangeTicker} value={convertedAmount} />)
 											</div>

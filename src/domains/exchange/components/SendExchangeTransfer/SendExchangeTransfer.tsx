@@ -175,8 +175,8 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({
 				isOpen
 				onClose={onClose}
 				title={t("EXCHANGE.MODAL_SIGN_EXCHANGE_TRANSACTION.SUCCESS_TITLE")}
-				contentClassName="p-6 sm:p-8 sm:[&>div.absolute]:!m-8 [&>div.absolute]:!m-6"
-				titleClass="!leading-[21px] sm!:leading-7"
+				contentClassName="p-6 sm:p-8 sm:[&>div.absolute]:m-8! [&>div.absolute]:m-6!"
+				titleClass="leading-[21px]! sm!:leading-7"
 			>
 				<div className="mt-4 space-y-4">
 					<Alert variant="success"> {t("EXCHANGE.TRANSACTION_SENT")} </Alert>
@@ -197,8 +197,8 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({
 			isOpen
 			onClose={onClose}
 			title={t("EXCHANGE.MODAL_SIGN_EXCHANGE_TRANSACTION.TITLE")}
-			contentClassName="p-6 sm:p-8 sm:[&>div.absolute]:!m-8 [&>div.absolute]:!m-6"
-			titleClass="!leading-[21px] sm!:leading-7"
+			contentClassName="p-6 sm:p-8 sm:[&>div.absolute]:m-8! [&>div.absolute]:m-6!"
+			titleClass="leading-[21px]! sm!:leading-7"
 		>
 			{errorMessage && (
 				<div className="mt-4" data-testid="ErrorState">
