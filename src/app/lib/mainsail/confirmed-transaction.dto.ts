@@ -4,9 +4,9 @@ import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
 
 import { AbiType, decodeFunctionData } from "./helpers/decode-function-data";
-import { formatUnits } from "./helpers/format-units";
 import { TransactionTypeService } from "./transaction-type.service";
 import { AddressService } from "./address.service";
+import { UnitConverter } from "@arkecosystem/typescript-crypto";
 export type KeyValuePair = Record<string, any>;
 
 export class ConfirmedTransactionData {
@@ -179,11 +179,11 @@ export class ConfirmedTransactionData {
 			return BigNumber.sum(this.payments().map(({ amount }) => amount));
 		}
 
-		return formatUnits(this.data.value, "ark");
+		return BigNumber.make(UnitConverter.formatUnits(this.data.value, "ark"));
 	}
 
 	public fee(): BigNumber {
-		const gasPrice = formatUnits(this.data.gasPrice, "ark");
+		const gasPrice = BigNumber.make(UnitConverter.formatUnits(this.data.gasPrice, "ark"));
 		return gasPrice.times(this.data.gas);
 	}
 
@@ -280,7 +280,7 @@ export class ConfirmedTransactionData {
 
 		for (const index in recipients) {
 			payments[index] = {
-				amount: formatUnits(amounts[index], "ark"),
+				amount: BigNumber.make(UnitConverter.formatUnits(amounts[index], "ark")),
 				recipientId: recipients[index],
 			};
 		}

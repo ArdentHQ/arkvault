@@ -99,7 +99,7 @@ describe("TransactionRecipients", () => {
 				<TransactionRecipients
 					currency={currency}
 					recipients={[
-						{ address, amount: 1, isDelegate: true },
+						{ address, amount: 1, isValidator: true },
 						{ address, amount: 1 },
 					]}
 				/>

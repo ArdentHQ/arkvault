@@ -103,14 +103,6 @@ export class Signatory {
 		return this.#signatory instanceof ConfirmationMnemonicSignatory;
 	}
 
-	public actsWithWIF(): boolean {
-		return this.#signatory instanceof WIFSignatory;
-	}
-
-	public actsWithConfirmationWIF(): boolean {
-		return this.#signatory instanceof ConfirmationWIFSignatory;
-	}
-
 	public actsWithLedger(): boolean {
 		return this.#signatory instanceof LedgerSignatory;
 	}

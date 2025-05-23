@@ -41,13 +41,8 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({
 
 	const { sendTransfer } = useValidation();
 
-	const wallets = useMemo(
-		() => profile.wallets().findByCoinWithNetwork(network.coin(), network.id()),
-		[network, profile],
-	);
-
 	const [senderWallet, setSenderWallet] = useState<Contracts.IReadWriteWallet | undefined>(() =>
-		wallets.length === 1 ? wallets[0] : undefined,
+		profile.wallets().count() === 1 ? profile.wallets().first() : undefined,
 	);
 
 	const exchangeInput = exchangeTransaction.input();
@@ -167,7 +162,7 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({
 				return;
 			}
 
-			await connect(profile, senderWallet!.coinId(), senderWallet!.networkId());
+			await connect(profile, senderWallet!.networkId());
 			handleSubmit(() => submit())();
 		};
 
@@ -227,9 +222,9 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({
 												}
 											: undefined
 									}
-									wallets={wallets}
+									wallets={profile.wallets().values()}
 									profile={profile}
-									disabled={wallets.length === 1}
+									disabled={profile.wallets().count() === 1}
 									onChange={handleWalletSelect}
 								/>
 							</div>
