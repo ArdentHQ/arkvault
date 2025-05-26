@@ -127,6 +127,8 @@ import SecretImportMethod from "./secret-import-method.svg?react";
 import AddressImportMethod from "./address-import-method.svg?react";
 import SettingsDark from "./settings-dark.svg?react";
 import SettingsLight from "./settings-light.svg?react";
+import CompletedLight from "./completed-light.svg?react";
+import CompletedDark from "./completed-dark.svg?react";
 
 export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	...ArrowIcons,
@@ -158,6 +160,8 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	Cloud,
 	Code,
 	Completed,
+	CompletedDark,
+	CompletedLight,
 	ConfirmYourPassphrase,
 	ContactsDark,
 	ContactsLight,
@@ -233,6 +237,8 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	SettingsDark,
 	SettingsLight,
 	ShieldCheckMark,
+	SignMessageDark,
+	SignMessageLight,
 	Sliders,
 	SlidersVertical,
 	Star,
@@ -253,6 +259,4 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	WalletEncryptionLight,
 	YourPassphraseDark,
 	YourPassphraseLight,
-	SignMessageLight,
-	SignMessageDark,
 };

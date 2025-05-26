@@ -55,18 +55,6 @@ export const SuccessStep = ({
 
 	return (
 		<section>
-			<StepHeader
-				title={t("MESSAGE.PAGE_SIGN_MESSAGE.SUCCESS_STEP.TITLE")}
-				titleIcon={
-					<Icon
-						className="text-theme-success-100 dark:text-theme-success-900"
-						dimensions={[24, 24]}
-						name="Completed"
-						data-testid="icon-Completed"
-					/>
-				}
-			/>
-
 			<div className="space-y-4">
 				<SigningMessageInfo message={signedMessage.message} wallet={wallet} />
 

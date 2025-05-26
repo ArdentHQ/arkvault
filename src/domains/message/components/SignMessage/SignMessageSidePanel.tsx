@@ -160,29 +160,54 @@ export const SignMessageSidePanel = ({
 		[activeProfile, activeNetwork],
 	);
 
-	const getSubtitle = () => {
-		if (!selectedWallet) {
-			return t("MESSAGE.PAGE_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_SELECT_WALLET");
+	const getTitle = () => {
+		if (activeTab === Step.AuthenticationStep) {
+			return t("TRANSACTION.AUTHENTICATION_STEP.TITLE");
 		}
 
-		if (selectedWallet.isLedger()) {
-			return t("MESSAGE.PAGE_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_LEDGER");
+		if (activeTab === Step.SuccessStep) {
+			return t("MESSAGE.PAGE_SIGN_MESSAGE.SUCCESS_STEP.TITLE");
 		}
 
-		if (selectedWallet.actsWithSecret()) {
-			return t("MESSAGE.PAGE_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_SECRET");
-		}
-
-		return selectedWallet.signingKey().exists()
-			? t("MESSAGE.PAGE_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_ENCRYPTION_PASSWORD")
-			: t("MESSAGE.PAGE_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_MNEMONIC");
+		return t("MESSAGE.PAGE_SIGN_MESSAGE.TITLE");
 	};
 
+	const getSubtitle = () => {
+		if (activeTab === Step.AuthenticationStep) {
+			return t("MESSAGE.PAGE_SIGN_MESSAGE.AUTHENTICATION_STEP.DESCRIPTION_SECRET");
+		}
+
+		if (activeTab === Step.FormStep) {
+			if (!selectedWallet) {
+				return t("MESSAGE.PAGE_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_SELECT_WALLET");
+			}
+
+			if (selectedWallet.isLedger()) {
+				return t("MESSAGE.PAGE_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_LEDGER");
+			}
+
+			if (selectedWallet.actsWithSecret()) {
+				return t("MESSAGE.PAGE_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_SECRET");
+			}
+
+			return selectedWallet.signingKey().exists()
+				? t("MESSAGE.PAGE_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_ENCRYPTION_PASSWORD")
+				: t("MESSAGE.PAGE_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_MNEMONIC");
+		}
+	};
+
+	const getTitleIcon = () => {
+		if (activeTab === Step.SuccessStep) {
+			return <ThemeIcon lightIcon="CompletedLight" darkIcon="CompletedDark" dimensions={[24, 24]} />;
+		}
+
+		return <ThemeIcon lightIcon="SignMessageLight" darkIcon="SignMessageDark" dimensions={[24, 24]} />;
+	};
 	return (
 		<SidePanel
-			title={t("MESSAGE.PAGE_SIGN_MESSAGE.TITLE")}
+			title={getTitle()}
 			subtitle={getSubtitle()}
-			titleIcon={<ThemeIcon lightIcon="SignMessageLight" darkIcon="SignMessageDark" dimensions={[24, 24]} />}
+			titleIcon={getTitleIcon()}
 			open={open}
 			onOpenChange={onOpenChange}
 			dataTestId="SignMessageSidePanel"
