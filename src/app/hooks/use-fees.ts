@@ -51,9 +51,7 @@ export function getEstimateGasParams(formData: Record<string, any>, type: string
 
 			for (const payment of recipientList) {
 				recipients.push(payment.address);
-				amounts.push(
-					BigNumber.make(UnitConverter.parseUnits(payment.amount, "ark").toString())
-				);
+				amounts.push(BigNumber.make(UnitConverter.parseUnits(payment.amount, "ark").toString()));
 			}
 
 			const value = numberToHex(BigNumber.sum(amounts).toBigInt());
