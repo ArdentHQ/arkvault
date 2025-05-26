@@ -124,6 +124,7 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 		[clearErrors, gasLimit, gasPrice, getValues, persist, transactionBuilder, wallet],
 	);
 
+	const walletBalance = wallet?.balance();
 	useEffect(() => {
 		register("remainingBalance");
 		register("network", sendTransferValidation.network());
