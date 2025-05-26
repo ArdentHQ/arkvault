@@ -263,6 +263,7 @@ export const SignMessageSidePanel = ({
 								description={t("MESSAGE.PAGE_SIGN_MESSAGE.ERROR_STEP.DESCRIPTION")}
 								onClose={handleBack}
 								errorMessage={errorMessage}
+								hideHeader
 								onBack={() => {
 									setActiveTab(Step.FormStep);
 								}}

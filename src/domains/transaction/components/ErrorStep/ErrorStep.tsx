@@ -17,6 +17,7 @@ interface Properties {
 	onClose?: () => void;
 	onBack?: () => void;
 	errorMessage?: string;
+	hideHeader?: boolean;
 }
 
 export const ErrorStep = ({
@@ -26,6 +27,7 @@ export const ErrorStep = ({
 	onClose,
 	isBackDisabled = false,
 	errorMessage,
+	hideHeader = false,
 }: Properties) => {
 	const { t } = useTranslation();
 	const errorMessageReference = useRef();
@@ -33,14 +35,20 @@ export const ErrorStep = ({
 	return (
 		<div data-testid="ErrorStep">
 			<div className="space-y-2">
-				<div className="flex flex-row items-center justify-start gap-3">
-					<StepHeader
-						title={title || t("TRANSACTION.ERROR.TITLE")}
-						titleIcon={
-							<Image name="ErrorHeaderIcon" domain="transaction" className="block h-[22px] w-[22px]" />
-						}
-					/>
-				</div>
+				{!hideHeader && (
+					<div className="flex flex-row items-center justify-start gap-3">
+						<StepHeader
+							title={title || t("TRANSACTION.ERROR.TITLE")}
+							titleIcon={
+								<Image
+									name="ErrorHeaderIcon"
+									domain="transaction"
+									className="block h-[22px] w-[22px]"
+								/>
+							}
+						/>
+					</div>
+				)}
 
 				<div className="space-y-4">
 					<p className="text-theme-secondary-text hidden md:block">
