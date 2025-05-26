@@ -112,11 +112,7 @@ export const SignMessageSidePanel = ({
 		// Abort any existing listener
 		abortReference.current.abort();
 
-		if (selectedWallet) {
-			return history.push(`/profiles/${activeProfile.id()}/dashboard`);
-		}
-
-		return history.push(ProfilePaths.Welcome);
+		onOpenChange(false);
 	};
 
 	const handleNext = () => {
