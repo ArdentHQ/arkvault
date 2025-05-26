@@ -5,9 +5,7 @@ import { useTranslation } from "react-i18next";
 
 import { FormField, FormLabel } from "@/app/components/Form";
 import { InputCounter } from "@/app/components/Input";
-import { StepHeader } from "@/app/components/StepHeader";
 import { SelectAddress } from "@/domains/profile/components/SelectAddress";
-import { ThemeIcon } from "@/app/components/Icon";
 
 export const FormStep = ({
 	disabled,
@@ -34,24 +32,6 @@ export const FormStep = ({
 	useEffect(() => {
 		unregister("mnemonic");
 	}, [unregister]);
-
-	const getSubtitle = () => {
-		if (!wallet) {
-			return t("MESSAGE.PAGE_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_SELECT_WALLET");
-		}
-
-		if (wallet.isLedger()) {
-			return t("MESSAGE.PAGE_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_LEDGER");
-		}
-
-		if (wallet.actsWithSecret()) {
-			return t("MESSAGE.PAGE_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_SECRET");
-		}
-
-		return wallet.signingKey().exists()
-			? t("MESSAGE.PAGE_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_ENCRYPTION_PASSWORD")
-			: t("MESSAGE.PAGE_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_MNEMONIC");
-	};
 
 	return (
 		<section className="space-y-4">

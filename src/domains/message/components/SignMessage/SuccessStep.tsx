@@ -5,10 +5,8 @@ import { useTranslation } from "react-i18next";
 
 import { Address } from "@/app/components/Address";
 import { FormField } from "@/app/components/Form";
-import { StepHeader } from "@/app/components/StepHeader";
 import { TextArea } from "@/app/components/TextArea";
 import { DetailLabel, DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
-import { Icon } from "@/app/components/Icon";
 
 export const SigningMessageInfo = ({
 	message,

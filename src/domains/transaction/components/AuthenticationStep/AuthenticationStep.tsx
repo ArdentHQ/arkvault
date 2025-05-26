@@ -17,7 +17,6 @@ import { StepHeader } from "@/app/components/StepHeader";
 import { Spinner } from "@/app/components/Spinner";
 import { Image } from "@/app/components/Image";
 import { Icon } from "@/app/components/Icon";
-import { Alert } from "@/app/components/Alert";
 import { Loader } from "@/app/components/Loader";
 export interface LedgerStates {
 	ledgerIsAwaitingDevice?: boolean;

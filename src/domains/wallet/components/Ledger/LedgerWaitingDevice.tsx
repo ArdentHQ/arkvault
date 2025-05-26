@@ -6,7 +6,6 @@ import { Image } from "@/app/components/Image";
 import { Modal } from "@/app/components/Modal";
 import { Spinner } from "@/app/components/Spinner";
 import { useLedgerContext } from "@/app/contexts/Ledger/Ledger";
-import { Alert } from "@/app/components/Alert";
 import { Loader } from "@/app/components/Loader";
 
 export const LedgerWaitingDeviceContent = ({

@@ -38,8 +38,6 @@ export const Portfolio = () => {
 				</Page>
 			)}
 
-			<button onClick={() => setShowSignMessagePanel(true)}>Sign Message</button>
-
 			<ResetWhenUnmounted>
 				<CreateAddressesSidePanel open={showCreateAddressPanel} onOpenChange={setShowCreateAddressPanel} />
 			</ResetWhenUnmounted>
