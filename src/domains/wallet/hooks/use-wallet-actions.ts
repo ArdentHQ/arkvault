@@ -11,7 +11,13 @@ import { ProfilePaths } from "@/router/paths";
 import { useLink } from "@/app/hooks/use-link";
 import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
 
-export const useWalletActions = (...wallets: Contracts.IReadWriteWallet[]) => {
+export const useWalletActions = ({
+	handleSignMessage,
+	wallets,
+}: {
+	handleSignMessage?: () => void;
+	wallets: Contracts.IReadWriteWallet[];
+}) => {
 	const { persist } = useEnvironmentContext();
 	const profile = useActiveProfile();
 	const history = useHistory();
@@ -103,18 +109,7 @@ export const useWalletActions = (...wallets: Contracts.IReadWriteWallet[]) => {
 			}
 
 			if (option.value === "sign-message") {
-				let url = generatePath(ProfilePaths.SignMessageWallet, {
-					profileId: profile.id(),
-					walletId: wallet.id(),
-				});
-
-				if (hasMultipleWallets) {
-					url = generatePath(ProfilePaths.SignMessage, {
-						profileId: profile.id(),
-					});
-				}
-
-				history.push(url);
+				handleSignMessage?.();
 			}
 
 			if (option.value === "verify-message") {

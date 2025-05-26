@@ -17,10 +17,12 @@ import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
 export const Dashboard = ({
 	onCreateAddress,
 	onImportAddress,
+	onSignMessage,
 	hasFocus,
 }: {
 	onCreateAddress?: (open: boolean) => void;
 	onImportAddress?: (open: boolean) => void;
+	onSignMessage?: (open: boolean) => void;
 	hasFocus?: boolean;
 }) => {
 	const [isUpdatingTransactions, setIsUpdatingTransactions] = useState(false);
@@ -109,6 +111,7 @@ export const Dashboard = ({
 						onUpdate={setIsUpdatingWallet}
 						onCreateAddress={onCreateAddress}
 						onImportAddress={onImportAddress}
+						onSignMessage={onSignMessage}
 					/>
 				)}
 			</Section>

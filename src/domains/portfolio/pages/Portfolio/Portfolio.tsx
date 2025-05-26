@@ -26,6 +26,7 @@ export const Portfolio = () => {
 					hasFocus={!showCreateAddressPanel && !showImportAddressPanel}
 					onImportAddress={setShowImportAddressPanel}
 					onCreateAddress={setShowCreateAddressPanel}
+					onSignMessage={setShowSignMessagePanel}
 				/>
 			)}
 
