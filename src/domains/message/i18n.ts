@@ -35,7 +35,6 @@ export const translations = {
 		SUCCESS_STEP: {
 			TITLE: "Message Successfully Signed",
 		},
-
 		TITLE: "Sign Message",
 	},
 

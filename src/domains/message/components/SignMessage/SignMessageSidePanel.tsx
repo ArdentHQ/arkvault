@@ -20,7 +20,7 @@ import { useQueryParameters } from "@/app/hooks/use-query-parameters";
 import { ProfilePaths } from "@/router/paths";
 import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
 import { SidePanel } from "@/app/components/SidePanel/SidePanel";
-
+import { useActiveNetwork } from "@/app/hooks/use-active-network";
 enum Step {
 	FormStep = 1,
 	AuthenticationStep,
@@ -45,9 +45,10 @@ export const SignMessageSidePanel = ({
 
 	const activeProfile = useActiveProfile();
 	const queryParameters = useQueryParameters();
-	const [activeNetwork] = useNetworks({ profile: activeProfile });
+	const { activeNetwork } = useActiveNetwork({ profile: activeProfile });
 
 	const walletFromPath = useActiveWalletWhenNeeded(!!walletId);
+
 	const walletFromDeeplink = useMemo(() => {
 		const address = queryParameters.get("address");
 
@@ -159,13 +160,29 @@ export const SignMessageSidePanel = ({
 		[activeProfile, activeNetwork],
 	);
 
+	const getSubtitle = () => {
+		if (!selectedWallet) {
+			return t("MESSAGE.PAGE_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_SELECT_WALLET");
+		}
+
+		if (selectedWallet.isLedger()) {
+			return t("MESSAGE.PAGE_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_LEDGER");
+		}
+
+		if (selectedWallet.actsWithSecret()) {
+			return t("MESSAGE.PAGE_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_SECRET");
+		}
+
+		return selectedWallet.signingKey().exists()
+			? t("MESSAGE.PAGE_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_ENCRYPTION_PASSWORD")
+			: t("MESSAGE.PAGE_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_MNEMONIC");
+	};
+
 	return (
 		<SidePanel
 			title={t("MESSAGE.PAGE_SIGN_MESSAGE.TITLE")}
-			subtitle={"@todo"}
-			titleIcon={
-				<ThemeIcon lightIcon="SignMessageLight" darkIcon="SignMessageDark" dimensions={[24, 24]} />
-			}
+			subtitle={getSubtitle()}
+			titleIcon={<ThemeIcon lightIcon="SignMessageLight" darkIcon="SignMessageDark" dimensions={[24, 24]} />}
 			open={open}
 			onOpenChange={onOpenChange}
 			dataTestId="SignMessageSidePanel"
@@ -174,118 +191,103 @@ export const SignMessageSidePanel = ({
 			totalSteps={selectedWallet?.isLedger() ? 3 : 2}
 			activeStep={activeTab}
 		>
-			<Section className="flex-1">
-				<Form className="mx-auto max-w-172" data-testid="SignMessage" context={form} onSubmit={submitForm}>
-					<Tabs activeId={activeTab}>
-						<StepsProvider steps={selectedWallet?.isLedger() ? 3 : 2} activeStep={activeTab}>
-							<TabPanel tabId={Step.FormStep}>
-								<div>
-									<FormStep
-										disabled={false}
-										profile={activeProfile}
-										wallets={activeProfile.wallets().values()}
-										disableMessageInput={false}
-										maxLength={signMessage.message().maxLength.value}
-										wallet={selectedWallet}
-										handleSelectAddress={handleSelectAddress}
-									/>
-
-									{selectedWallet && !selectedWallet.isLedger() && (
-										<div className="mt-4">
-											<AuthenticationStep noHeading wallet={selectedWallet} subject="message" />
-										</div>
-									)}
-								</div>
-							</TabPanel>
-
-							<TabPanel tabId={Step.AuthenticationStep}>
-								{selectedWallet && (
-									<AuthenticationStep
-										wallet={selectedWallet}
-										ledgerDetails={
-											<SigningMessageInfo
-												wallet={selectedWallet}
-												message={getValues("message")}
-											/>
-										}
-										ledgerIsAwaitingDevice={!hasDeviceAvailable}
-										ledgerIsAwaitingApp={hasDeviceAvailable && !isConnected}
-										subject="message"
-									/>
-								)}
-							</TabPanel>
-
-							<TabPanel tabId={Step.SuccessStep}>
-								{selectedWallet && (
-									<SuccessStep signedMessage={signedMessage} wallet={selectedWallet} />
-								)}
-							</TabPanel>
-
-							<TabPanel tabId={Step.ErrorStep}>
-								<ErrorStep
-									title={t("MESSAGE.PAGE_SIGN_MESSAGE.ERROR_STEP.TITLE")}
-									description={t("MESSAGE.PAGE_SIGN_MESSAGE.ERROR_STEP.DESCRIPTION")}
-									onClose={handleBack}
-									errorMessage={errorMessage}
-									onBack={() => {
-										setActiveTab(Step.FormStep);
-									}}
+			<Form data-testid="SignMessage" context={form} onSubmit={submitForm}>
+				<Tabs activeId={activeTab}>
+					<StepsProvider steps={selectedWallet?.isLedger() ? 3 : 2} activeStep={activeTab}>
+						<TabPanel tabId={Step.FormStep}>
+							<div>
+								<FormStep
+									disabled={false}
+									profile={activeProfile}
+									wallets={activeProfile.wallets().values()}
+									disableMessageInput={false}
+									maxLength={signMessage.message().maxLength.value}
+									wallet={selectedWallet}
+									handleSelectAddress={handleSelectAddress}
 								/>
-							</TabPanel>
 
-							{activeTab === Step.FormStep && (
-								<FormButtons>
-									<Button
-										data-testid="SignMessage__back-button"
-										variant="secondary"
-										onClick={handleBack}
-									>
-										{t("COMMON.BACK")}
-									</Button>
+								{selectedWallet && !selectedWallet.isLedger() && (
+									<div className="mt-4">
+										<AuthenticationStep noHeading wallet={selectedWallet} subject="message" />
+									</div>
+								)}
+							</div>
+						</TabPanel>
 
-									<Button
-										type="submit"
-										disabled={!isValid || !selectedWallet}
-										onClick={handleNext}
-										data-testid="SignMessage__continue-button"
-									>
-										{t("COMMON.SIGN")}
-									</Button>
-								</FormButtons>
+						<TabPanel tabId={Step.AuthenticationStep}>
+							{selectedWallet && (
+								<AuthenticationStep
+									wallet={selectedWallet}
+									ledgerDetails={
+										<SigningMessageInfo wallet={selectedWallet} message={getValues("message")} />
+									}
+									ledgerIsAwaitingDevice={!hasDeviceAvailable}
+									ledgerIsAwaitingApp={hasDeviceAvailable && !isConnected}
+									subject="message"
+								/>
 							)}
+						</TabPanel>
 
-							{activeTab === Step.SuccessStep && (
-								<FormButtons>
-									<Button
-										data-testid="SignMessage__back-button"
-										variant="secondary"
-										onClick={handleBack}
-									>
-										{t("COMMON.CLOSE")}
-									</Button>
+						<TabPanel tabId={Step.SuccessStep}>
+							{selectedWallet && <SuccessStep signedMessage={signedMessage} wallet={selectedWallet} />}
+						</TabPanel>
 
-									<Clipboard
-										buttonVariant="primary"
-										variant="button"
-										data={JSON.stringify(signedMessage)}
-										data-testid="SignMessage__copy-button"
-										wrapperClassName="flex-1 md:flex-none"
-										buttonClassName="bg-theme-primary-600 text-center text-base font-semibold text-white hover:bg-theme-primary-700"
+						<TabPanel tabId={Step.ErrorStep}>
+							<ErrorStep
+								title={t("MESSAGE.PAGE_SIGN_MESSAGE.ERROR_STEP.TITLE")}
+								description={t("MESSAGE.PAGE_SIGN_MESSAGE.ERROR_STEP.DESCRIPTION")}
+								onClose={handleBack}
+								errorMessage={errorMessage}
+								onBack={() => {
+									setActiveTab(Step.FormStep);
+								}}
+							/>
+						</TabPanel>
+
+						{activeTab === Step.FormStep && (
+							<FormButtons>
+								<Button data-testid="SignMessage__back-button" variant="secondary" onClick={handleBack}>
+									{t("COMMON.BACK")}
+								</Button>
+
+								<Button
+									type="submit"
+									disabled={!isValid || !selectedWallet}
+									onClick={handleNext}
+									data-testid="SignMessage__continue-button"
+								>
+									{t("COMMON.SIGN")}
+								</Button>
+							</FormButtons>
+						)}
+
+						{activeTab === Step.SuccessStep && (
+							<FormButtons>
+								<Button data-testid="SignMessage__back-button" variant="secondary" onClick={handleBack}>
+									{t("COMMON.CLOSE")}
+								</Button>
+
+								<Clipboard
+									buttonVariant="primary"
+									variant="button"
+									data={JSON.stringify(signedMessage)}
+									data-testid="SignMessage__copy-button"
+									wrapperClassName="flex-1 md:flex-none"
+									buttonClassName="bg-theme-primary-600 text-center text-base font-semibold text-white hover:bg-theme-primary-700"
+								>
+									<div
+										className="relative inline-flex items-center space-x-3 rounded"
+										data-testid="SignMessage__back-to-wallet-button"
 									>
-										<div
-											className="relative inline-flex items-center space-x-3 rounded"
-											data-testid="SignMessage__back-to-wallet-button"
-										>
-											<Icon name="Copy" />
-											<div className="whitespace-nowrap">{t("COMMON.COPY_SIGNATURE")}</div>
-										</div>
-									</Clipboard>
-								</FormButtons>
-							)}
-						</StepsProvider>
-					</Tabs>
-				</Form>
-			</Section>
+										<Icon name="Copy" />
+										<div className="whitespace-nowrap">{t("COMMON.COPY_SIGNATURE")}</div>
+									</div>
+								</Clipboard>
+							</FormButtons>
+						)}
+					</StepsProvider>
+				</Tabs>
+			</Form>
 		</SidePanel>
 	);
 };

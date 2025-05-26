@@ -55,14 +55,6 @@ export const FormStep = ({
 
 	return (
 		<section className="space-y-4">
-			<StepHeader
-				title={t("MESSAGE.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE")}
-				subtitle={getSubtitle()}
-				titleIcon={
-					<ThemeIcon dimensions={[24, 24]} lightIcon="SendTransactionLight" darkIcon="SendTransactionDark" />
-				}
-			/>
-
 			<FormField name="signatory-address">
 				<FormLabel label={t("COMMON.SIGNING_WALLET")} />
 
