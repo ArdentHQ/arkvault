@@ -6,8 +6,18 @@ import { Image } from "@/app/components/Image";
 import { Modal } from "@/app/components/Modal";
 import { Spinner } from "@/app/components/Spinner";
 import { useLedgerContext } from "@/app/contexts/Ledger/Ledger";
+import { Alert } from "@/app/components/Alert";
+import { Loader } from "@/app/components/Loader";
 
-export const LedgerWaitingDeviceContent = ({ subtitle, noHeading }: { subtitle?: string; noHeading?: boolean }) => {
+export const LedgerWaitingDeviceContent = ({
+	subtitle,
+	noHeading,
+	subject,
+}: {
+	subtitle?: string;
+	noHeading?: boolean;
+	subject?: "transaction" | "message";
+}) => {
 	const { t } = useTranslation();
 	return (
 		<div className="space-y-8">
@@ -18,17 +28,28 @@ export const LedgerWaitingDeviceContent = ({ subtitle, noHeading }: { subtitle?:
 				/>
 			)}
 
-			<Image name="WaitingLedgerDevice" domain="wallet" className="mx-auto max-w-full" />
-
-			<div className="inline-flex w-full items-center justify-center space-x-3">
-				<Spinner />
-				<span
-					className="text-theme-secondary-text animate-pulse font-semibold"
+			{subject === "message" && (
+				<Loader
 					data-testid="LedgerWaitingDevice-loading_message"
-				>
-					{t("WALLETS.MODAL_LEDGER_WALLET.WAITING_DEVICE")}
-				</span>
-			</div>
+					text={t("WALLETS.MODAL_LEDGER_WALLET.WAITING_DEVICE")}
+				/>
+			)}
+
+			{subject !== "message" && (
+				<>
+					<Image name="WaitingLedgerDevice" domain="wallet" className="mx-auto max-w-full" />
+
+					<div className="inline-flex w-full items-center justify-center space-x-3">
+						<Spinner />
+						<span
+							className="text-theme-secondary-text animate-pulse font-semibold"
+							data-testid="LedgerWaitingDevice-loading_message"
+						>
+							{t("WALLETS.MODAL_LEDGER_WALLET.WAITING_DEVICE")}
+						</span>
+					</div>
+				</>
+			)}
 		</div>
 	);
 };

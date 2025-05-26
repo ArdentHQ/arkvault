@@ -16,12 +16,12 @@ import { useActiveProfile, useActiveWalletWhenNeeded, useValidation } from "@/ap
 import { useMessageSigner } from "@/domains/message/hooks/use-message-signer";
 import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
 import { useQueryParameters } from "@/app/hooks/use-query-parameters";
-import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
+import { AuthenticationStep, LedgerAuthentication } from "@/domains/transaction/components/AuthenticationStep";
 import { SidePanel } from "@/app/components/SidePanel/SidePanel";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
+
 enum Step {
 	FormStep = 1,
-	AuthenticationStep,
 	SuccessStep,
 	ErrorStep,
 }
@@ -60,6 +60,7 @@ export const SignMessageSidePanel = ({
 	const [selectedWallet, setSelectedWallet] = useState<Contracts.IReadWriteWallet | undefined>(activeWallet);
 
 	const [activeTab, setActiveTab] = useState<Step>(Step.FormStep);
+	const [authenticateLedger, setAuthenticateLedger] = useState<boolean>(false);
 
 	const initialState: Services.SignedMessage = {
 		message: queryParameters.get("message") || "",
@@ -109,6 +110,8 @@ export const SignMessageSidePanel = ({
 		// Abort any existing listener
 		abortReference.current.abort();
 
+		setAuthenticateLedger(false);
+
 		onOpenChange(false);
 	};
 
@@ -116,10 +119,12 @@ export const SignMessageSidePanel = ({
 		abortReference.current = new AbortController();
 
 		if (selectedWallet?.isLedger()) {
-			setActiveTab(activeTab + 1);
+			setAuthenticateLedger(true);
 			connectLedger();
 			return;
 		}
+
+		setAuthenticateLedger(false);
 
 		handleSubmit(submitForm)();
 	};
@@ -153,7 +158,7 @@ export const SignMessageSidePanel = ({
 	);
 
 	const getTitle = () => {
-		if (activeTab === Step.AuthenticationStep) {
+		if (authenticateLedger) {
 			return t("TRANSACTION.AUTHENTICATION_STEP.TITLE");
 		}
 
@@ -165,7 +170,7 @@ export const SignMessageSidePanel = ({
 	};
 
 	const getSubtitle = () => {
-		if (activeTab === Step.AuthenticationStep) {
+		if (authenticateLedger) {
 			return t("MESSAGE.PAGE_SIGN_MESSAGE.AUTHENTICATION_STEP.DESCRIPTION_SECRET");
 		}
 
@@ -193,7 +198,7 @@ export const SignMessageSidePanel = ({
 			return <ThemeIcon lightIcon="CompletedLight" darkIcon="CompletedDark" dimensions={[24, 24]} />;
 		}
 
-		if (activeTab === Step.AuthenticationStep && selectedWallet?.isLedger()) {
+		if (authenticateLedger) {
 			return <ThemeIcon lightIcon="LedgerLight" darkIcon="LedgerDark" dimensions={[24, 24]} />;
 		}
 
@@ -217,6 +222,23 @@ export const SignMessageSidePanel = ({
 					<StepsProvider steps={selectedWallet?.isLedger() ? 3 : 2} activeStep={activeTab}>
 						<TabPanel tabId={Step.FormStep}>
 							<div>
+								{authenticateLedger && selectedWallet && (
+									<div className="mb-4">
+										<LedgerAuthentication
+											ledgerDetails={
+												<SigningMessageInfo
+													wallet={selectedWallet}
+													message={getValues("message")}
+												/>
+											}
+											ledgerIsAwaitingApp={hasDeviceAvailable && !isConnected}
+											ledgerIsAwaitingDevice={!hasDeviceAvailable}
+											wallet={selectedWallet}
+											noHeading
+											subject="message"
+										/>
+									</div>
+								)}
 								<FormStep
 									disabled={false}
 									profile={activeProfile}
@@ -233,21 +255,6 @@ export const SignMessageSidePanel = ({
 									</div>
 								)}
 							</div>
-						</TabPanel>
-
-						<TabPanel tabId={Step.AuthenticationStep}>
-							{selectedWallet && (
-								<AuthenticationStep
-									wallet={selectedWallet}
-									ledgerDetails={
-										<SigningMessageInfo wallet={selectedWallet} message={getValues("message")} />
-									}
-									ledgerIsAwaitingDevice={!hasDeviceAvailable}
-									ledgerIsAwaitingApp={hasDeviceAvailable && !isConnected}
-									subject="message"
-									noHeading
-								/>
-							)}
 						</TabPanel>
 
 						<TabPanel tabId={Step.SuccessStep}>

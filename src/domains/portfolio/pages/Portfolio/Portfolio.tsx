@@ -9,6 +9,7 @@ import { CreateAddressesSidePanel } from "@/domains/portfolio/components/CreateW
 import { ImportAddressesSidePanel } from "@/domains/portfolio/components/ImportWallet";
 import { ResetWhenUnmounted } from "@/app/components/SidePanel/ResetWhenUnmounted";
 import SignMessageSidePanel from "@/domains/message/components/SignMessage";
+import { Loader } from "@/app/components/Loader";
 
 export const Portfolio = () => {
 	const profile = useActiveProfile();
