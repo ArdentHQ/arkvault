@@ -13,10 +13,8 @@ export const common = (t: TFunction) => ({
 	}),
 	gasLimit: (balance = 0, getValues: () => object, network?: Networks.Network) => ({
 		validate: {
-			valid: (rawGasLimit: BigNumber|undefined) => {
-				const gasLimit = BigNumber.make(rawGasLimit ?? 0);
-
-				if (!network?.coin()) {
+			valid: (gasLimit: BigNumber|undefined) => {
+				if (!network?.coin() || !gasLimit) {
 					return true;
 				}
 
@@ -68,10 +66,8 @@ export const common = (t: TFunction) => ({
 	}),
 	gasPrice: (balance = 0, getValues: () => object, network?: Networks.Network) => ({
 		validate: {
-			valid: (rawGasPrice: BigNumber|undefined) => {
-				const gasPrice = BigNumber.make(rawGasPrice ?? 0);
-
-				if (!network?.coin()) {
+			valid: (gasPrice: BigNumber|undefined) => {
+				if (!network?.coin() || !gasPrice) {
 					return true;
 				}
 
