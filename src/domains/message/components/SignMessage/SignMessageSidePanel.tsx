@@ -200,6 +200,10 @@ export const SignMessageSidePanel = ({
 			return <ThemeIcon lightIcon="CompletedLight" darkIcon="CompletedDark" dimensions={[24, 24]} />;
 		}
 
+		if (activeTab === Step.AuthenticationStep && selectedWallet?.isLedger()) {
+			return <ThemeIcon lightIcon="LedgerLight" darkIcon="LedgerDark" dimensions={[24, 24]} />;
+		}
+
 		return <ThemeIcon lightIcon="SignMessageLight" darkIcon="SignMessageDark" dimensions={[24, 24]} />;
 	};
 	return (
@@ -248,6 +252,7 @@ export const SignMessageSidePanel = ({
 									ledgerIsAwaitingDevice={!hasDeviceAvailable}
 									ledgerIsAwaitingApp={hasDeviceAvailable && !isConnected}
 									subject="message"
+									noHeading
 								/>
 							)}
 						</TabPanel>
