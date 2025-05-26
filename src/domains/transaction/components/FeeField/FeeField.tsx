@@ -5,6 +5,7 @@ import { useFormContext } from "react-hook-form";
 
 import { useDebounce, useFees } from "@/app/hooks";
 import { InputFee } from "@/domains/transaction/components/InputFee";
+import { BigNumber } from "@/app/lib/helpers";
 
 interface Properties {
 	type:
@@ -57,7 +58,8 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 			let gasLimit = defaultGasLimit;
 
 			try {
-				gasLimit = await estimateGas({ data: { ...getValues(), ...data }, type });
+				const gasLimitBigInt = await estimateGas({ data: { ...getValues(), ...data }, type });
+				gasLimit = BigNumber.make(gasLimitBigInt).toNumber();
 			} catch (error) {
 				console.warn(error);
 			}

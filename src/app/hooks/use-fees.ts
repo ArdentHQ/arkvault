@@ -47,11 +47,13 @@ export function getEstimateGasParams(formData: Record<string, any>, type: string
 	const paramBuilders: Record<string, () => Omit<EstimateGasPayload, "from">> = {
 		multiPayment: () => {
 			const recipients: string[] = [];
-			const amounts: number[] = [];
+			const amounts: BigNumber[] = [];
 
 			for (const payment of recipientList) {
 				recipients.push(payment.address);
-				amounts.push(UnitConverter.parseUnits(payment.amount, "ark").toNumber());
+				amounts.push(
+					BigNumber.make(UnitConverter.parseUnits(payment.amount, "ark").toString())
+				);
 			}
 
 			const value = numberToHex(BigNumber.sum(amounts).toBigInt());

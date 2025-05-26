@@ -7,7 +7,7 @@ import { ArkClient } from "@arkecosystem/typescript-client";
 import { IProfile } from "@/app/lib/profiles/profile.contract";
 import { UnitConverter } from "@arkecosystem/typescript-crypto";
 import { EstimateGasPayload } from "@/app/lib/mainsail/fee.contract";
-import { hexToNumber } from "viem";
+import { hexToBigInt } from "viem";
 
 interface Fees {
 	min: string;
@@ -49,7 +49,7 @@ export class FeeService {
 			params: [payload],
 		});
 
-		return hexToNumber(gasResponse.result);
+		return hexToBigInt(gasResponse.result);
 	}
 
 	public async calculate(
