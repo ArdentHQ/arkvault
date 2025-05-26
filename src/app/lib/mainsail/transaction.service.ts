@@ -81,7 +81,7 @@ export class TransactionService {
 		const nonce = await this.#generateNonce(input);
 
 		const builder = TransferBuilder.new()
-			.value(UnitConverter.parseUnits(input.data.amount, "ark").valueOf())
+			.value(UnitConverter.parseUnits(input.data.amount, "ark"))
 			.to(input.data.to)
 			.nonce(nonce)
 			.gasPrice(UnitConverter.parseUnits(input.gasPrice, "gwei").toNumber())
