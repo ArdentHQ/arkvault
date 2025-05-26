@@ -1,4 +1,3 @@
-import { Services } from "@/app/lib/mainsail";
 import { Contracts } from "@/app/lib/profiles";
 import { useCallback } from "react";
 
@@ -161,15 +160,15 @@ export const useFees = (profile: Contracts.IProfile) => {
 				]);
 
 				return {
-					avg: avg.toHuman(),
-					max: max.toHuman(),
-					min: min.toHuman(),
+					avg,
+					max,
+					min,
 				};
 			} catch {
 				return {
-					avg: 0,
-					max: 0,
-					min: 0,
+					avg: BigNumber.make(0),
+					max: BigNumber.make(0),
+					min: BigNumber.make(0),
 				};
 			}
 		},
@@ -186,10 +185,8 @@ export const useFees = (profile: Contracts.IProfile) => {
 
 	const calculate = useCallback(
 		async ({ network, type, data }: CalculateProperties): Promise<TransactionFees> => {
-			let transactionFees: Services.TransactionFee;
-
 			await env.fees().sync(profile);
-			transactionFees = env.fees().findByType(network, type);
+			const transactionFees = env.fees().findByType(network, type);
 
 			if (!!data && type === "multiSignature") {
 				const feesBySize = await calculateBySize({ data, type });
@@ -200,9 +197,9 @@ export const useFees = (profile: Contracts.IProfile) => {
 			}
 
 			return {
-				avg: transactionFees.avg.toNumber(),
-				max: transactionFees.max.toNumber(),
-				min: transactionFees.min.toNumber(),
+				avg: transactionFees.avg,
+				max: transactionFees.max,
+				min: transactionFees.min,
 			};
 		},
 		[profile, calculateBySize, env],

@@ -49,7 +49,7 @@ export class FeeService {
 			params: [payload],
 		});
 
-		return hexToBigInt(gasResponse.result);
+		return BigNumber.make(hexToBigInt(gasResponse.result ?? 0));
 	}
 
 	public async calculate(

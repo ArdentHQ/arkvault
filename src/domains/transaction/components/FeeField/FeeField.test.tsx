@@ -5,7 +5,7 @@ import userEvent from "@testing-library/user-event";
 import { FormProvider, useForm } from "react-hook-form";
 import * as useFeesHook from "@/app/hooks/use-fees";
 import { useValidation } from "@/app/hooks";
-import { FeeField, GasLimit, MIN_GAS_PRICE } from "@/domains/transaction/components/FeeField/FeeField";
+import { FeeField, GasLimit, } from "@/domains/transaction/components/FeeField/FeeField";
 import { calculateGasFee } from "@/domains/transaction/components/InputFee/InputFee";
 import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
 import { expect } from "vitest";

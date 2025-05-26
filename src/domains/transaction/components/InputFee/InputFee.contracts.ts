@@ -1,5 +1,6 @@
 import { Networks } from "@/app/lib/mainsail";
 import { Contracts } from "@/app/lib/profiles";
+import { BigNumber } from "@/app/lib/helpers";
 
 enum InputFeeViewType {
 	Simple,
@@ -17,26 +18,26 @@ const DEFAULT_VIEW_TYPE = InputFeeViewType.Simple;
 
 type InputFeeOptions = {
 	[key in InputFeeOption]: {
-		gasPrice: number;
+		gasPrice: BigNumber;
 		label: string;
 		displayValue: number;
 		displayValueConverted: number;
 	};
 };
 
+type OnGasPriceChange = (value: BigNumber|string|number) => void;
+type OnGasLimitChange = (value: BigNumber|string|number) => void;
+
 interface InputFeeAdvancedProperties {
 	convert: (value?: number) => number;
 	disabled?: boolean;
 	exchangeTicker: string;
-	onChangeGasPrice: (value: number) => void;
-	onChangeGasLimit: (value: number) => void;
+	onChangeGasPrice: OnGasPriceChange;
+	onChangeGasLimit: OnGasLimitChange;
 	showConvertedValue: boolean;
-	gasPriceStep: number;
 	network: Networks.Network;
-	gasPrice: number;
-	gasLimit: number;
-	defaultGasLimit: number;
-	minGasPrice: number;
+	gasPrice: BigNumber;
+	gasLimit: BigNumber;
 }
 
 interface InputFeeSimpleProperties {
@@ -50,22 +51,20 @@ interface InputFeeSimpleProperties {
 }
 
 interface InputFeeProperties {
-	min: number;
-	avg: number;
-	max: number;
-	gasPriceStep: number;
-	defaultGasLimit: number;
-	minGasPrice: number;
+	min: BigNumber;
+	avg: BigNumber;
+	max: BigNumber;
 	disabled?: boolean;
 	network: Networks.Network;
 	profile: Contracts.IProfile;
 	loading?: boolean;
 	viewType?: InputFeeViewType;
 	selectedFeeOption?: InputFeeOption;
-	gasPrice: number;
-	gasLimit: number;
-	onChangeGasPrice: (value: number) => void;
-	onChangeGasLimit: (value: number) => void;
+	gasPrice: BigNumber;
+	gasLimit: BigNumber;
+	estimatedGasLimit: BigNumber;
+	onChangeGasPrice: OnGasPriceChange;
+	onChangeGasLimit: OnGasLimitChange;
 	onChangeViewType?: (value: InputFeeViewType) => void;
 	onChangeFeeOption?: (value: InputFeeOption) => void;
 }
