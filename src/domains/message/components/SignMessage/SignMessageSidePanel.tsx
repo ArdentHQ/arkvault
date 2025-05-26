@@ -2,7 +2,7 @@ import { Services } from "@/app/lib/mainsail";
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-import { useHistory, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { Contracts } from "@/app/lib/profiles";
 import { FormStep } from "./FormStep";
 import { SigningMessageInfo, SuccessStep } from "./SuccessStep";
@@ -16,7 +16,6 @@ import { useActiveProfile, useActiveWalletWhenNeeded, useValidation } from "@/ap
 import { useMessageSigner } from "@/domains/message/hooks/use-message-signer";
 import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
 import { useQueryParameters } from "@/app/hooks/use-query-parameters";
-import { ProfilePaths } from "@/router/paths";
 import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
 import { SidePanel } from "@/app/components/SidePanel/SidePanel";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
@@ -37,8 +36,6 @@ export const SignMessageSidePanel = ({
 	onMountChange?: (mounted: boolean) => void;
 }): JSX.Element => {
 	const { t } = useTranslation();
-
-	const history = useHistory();
 
 	const { walletId } = useParams<{ walletId: string }>();
 
