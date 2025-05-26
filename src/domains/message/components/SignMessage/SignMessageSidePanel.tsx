@@ -110,8 +110,6 @@ export const SignMessageSidePanel = ({
 		// Abort any existing listener
 		abortReference.current.abort();
 
-		setAuthenticateLedger(false);
-
 		onOpenChange(false);
 	};
 
@@ -123,8 +121,6 @@ export const SignMessageSidePanel = ({
 			connectLedger();
 			return;
 		}
-
-		setAuthenticateLedger(false);
 
 		handleSubmit(submitForm)();
 	};
@@ -269,6 +265,8 @@ export const SignMessageSidePanel = ({
 								errorMessage={errorMessage}
 								hideHeader
 								onBack={() => {
+									setAuthenticateLedger(false);
+
 									setActiveTab(Step.FormStep);
 								}}
 							/>
