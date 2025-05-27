@@ -279,6 +279,21 @@ describe("InputFee", () => {
 			expect(inputElement).toHaveValue("1.4");
 		});
 
+		it("should handle when gasLimit field is empty", async () => {
+			defaultProps.viewType = InputFeeViewType.Advanced;
+
+			render(<InputFee {...defaultProps} />);
+
+			const inputElement: HTMLInputElement = screen.getByTestId("Input_GasLimit");
+
+			inputElement.select();
+			await userEvent.clear(inputElement);
+			await userEvent.type(inputElement, " ");
+
+			expect(inputElement).toHaveValue("");
+			expect(defaultProps.onChangeGasLimit).toHaveBeenCalledWith(BigNumber.make(0));
+		});
+
 		it("should render disabled", () => {
 			defaultProps.viewType = InputFeeViewType.Advanced;
 
