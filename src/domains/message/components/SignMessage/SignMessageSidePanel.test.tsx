@@ -6,15 +6,7 @@ import { Route } from "react-router-dom";
 
 import { SignMessageSidePanel } from "./SignMessageSidePanel";
 import { translations as messageTranslations } from "@/domains/message/i18n";
-import {
-	env,
-	getMainsailProfileId,
-	render,
-	screen,
-	waitFor,
-	triggerMessageSignOnce,
-	MAINSAIL_MNEMONICS,
-} from "@/utils/testing-library";
+import { env, render, screen, waitFor, triggerMessageSignOnce, MAINSAIL_MNEMONICS } from "@/utils/testing-library";
 import { afterAll } from "vitest";
 
 const history = createHashHistory();
@@ -92,7 +84,7 @@ describe("SignMessageSidePanel", () => {
 			history.push(dashboardUrl);
 		});
 
-		it("should render", async (breakpoint) => {
+		it("should render", async () => {
 			const { asFragment } = render(
 				<Route path="/profiles/:profileId/dashboard">
 					<SignMessageSidePanel open={true} onOpenChange={vi.fn()} onMountChange={vi.fn()} />,

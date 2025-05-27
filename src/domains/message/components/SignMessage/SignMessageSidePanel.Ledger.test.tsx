@@ -8,7 +8,6 @@ import { Route } from "react-router-dom";
 import { translations as messageTranslations } from "@/domains/message/i18n";
 import {
 	env,
-	getMainsailProfileId,
 	render,
 	screen,
 	waitFor,
@@ -17,11 +16,9 @@ import {
 	MAINSAIL_MNEMONICS,
 } from "@/utils/testing-library";
 import { SignMessageSidePanel } from "./SignMessageSidePanel";
-import { selectFirstAddress, selectNthAddress } from "./SignMessageSidePanel.test";
+import { selectFirstAddress } from "./SignMessageSidePanel.test";
 
 const history = createHashHistory();
-
-const walletUrl = (walletId: string) => `/profiles/${getMainsailProfileId()}/wallets/${walletId}/sign-message`;
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
