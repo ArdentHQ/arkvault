@@ -44,10 +44,7 @@ export const ReviewStep: React.VFC<ReviewStepProperties> = ({ wallet, network })
 
 	useEffect(() => {
 		register("gasPrice", commonValidation.gasPrice(walletBalance, getValues, wallet.network()));
-		register(
-			"gasLimit",
-			commonValidation.gasLimit(walletBalance, getValues, wallet.network()),
-		);
+		register("gasLimit", commonValidation.gasLimit(walletBalance, getValues, wallet.network()));
 	}, [commonValidation, register, walletBalance]);
 
 	useEffect(() => {

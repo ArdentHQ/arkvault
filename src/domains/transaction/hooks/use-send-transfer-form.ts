@@ -54,7 +54,7 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 	const { senderAddress, fees, gasPrice, gasLimit, remainingBalance, amount, isSendAllSelected, network } = watch();
 	const { sendTransfer: sendTransferValidation, common: commonValidation } = useValidation();
 
-	const gasPriceStr= gasPrice?.toString();
+	const gasPriceStr = gasPrice?.toString();
 	const gasLimitStr = gasLimit?.toString();
 
 	const resetForm = useCallback(
@@ -135,10 +135,7 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 		register("senderAddress", sendTransferValidation.senderAddress());
 		register("fees");
 		register("gasPrice", commonValidation.gasPrice(walletBalance, getValues, wallet?.network()));
-		register(
-			"gasLimit",
-			commonValidation.gasLimit(walletBalance, getValues, wallet?.network()),
-		);
+		register("gasLimit", commonValidation.gasLimit(walletBalance, getValues, wallet?.network()));
 		register("memo", sendTransferValidation.memo());
 
 		register("remainingBalance");

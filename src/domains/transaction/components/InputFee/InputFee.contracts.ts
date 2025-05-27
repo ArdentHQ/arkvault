@@ -25,8 +25,8 @@ type InputFeeOptions = {
 	};
 };
 
-type OnGasPriceChange = (value: BigNumber|string|number) => void;
-type OnGasLimitChange = (value: BigNumber|string|number) => void;
+type OnGasPriceChange = (value: BigNumber | string | number) => void;
+type OnGasLimitChange = (value: BigNumber | string | number) => void;
 
 interface InputFeeAdvancedProperties {
 	convert: (value?: number) => number;

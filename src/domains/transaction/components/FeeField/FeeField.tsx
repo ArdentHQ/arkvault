@@ -52,9 +52,7 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 		/* istanbul ignore else -- @preserve */
 		const isMultiPayment = type === "multiPayment";
 		const recipientsCount = isMultiPayment && Array.isArray(data?.payments) ? data.payments.length : 1;
-		const fallbackGasLimit = isMultiPayment
-			? GasLimit.multiPayment.times(recipientsCount)
-			: GasLimit[type];
+		const fallbackGasLimit = isMultiPayment ? GasLimit.multiPayment.times(recipientsCount) : GasLimit[type];
 
 		const estimate = async () => {
 			let gasLimit = fallbackGasLimit;

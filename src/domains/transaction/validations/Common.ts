@@ -13,7 +13,7 @@ export const common = (t: TFunction) => ({
 	}),
 	gasLimit: (balance = 0, getValues: () => object, network?: Networks.Network) => ({
 		validate: {
-			valid: (gasLimit: BigNumber|undefined) => {
+			valid: (gasLimit: BigNumber | undefined) => {
 				if (!network?.coin() || !gasLimit) {
 					return true;
 				}
@@ -24,7 +24,7 @@ export const common = (t: TFunction) => ({
 					});
 				}
 
-				const {minGasLimit, maxGasLimit} = getFeeMinMax();
+				const { minGasLimit, maxGasLimit } = getFeeMinMax();
 
 				if (gasLimit.isLessThan(minGasLimit)) {
 					return t("COMMON.VALIDATION.GAS_LIMIT_IS_TOO_LOW", {
@@ -66,7 +66,7 @@ export const common = (t: TFunction) => ({
 	}),
 	gasPrice: (balance = 0, getValues: () => object, network?: Networks.Network) => ({
 		validate: {
-			valid: (gasPrice: BigNumber|undefined) => {
+			valid: (gasPrice: BigNumber | undefined) => {
 				if (!network?.coin() || !gasPrice) {
 					return true;
 				}
