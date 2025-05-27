@@ -35,6 +35,18 @@ describe("useValidation hook", () => {
 			expect(isValid).toBe(true);
 		});
 
+		it("should ignore validation if gasPrice is not provided", () => {
+			const wrapper = ({ children }: any) => <EnvironmentProvider env={env}>{children} </EnvironmentProvider>;
+			const {
+				result: { current },
+			} = renderHook(() => useValidation(), { wrapper });
+			const balance = BigNumber.make(5).toNumber();
+			const validation = current.common.gasPrice(balance, getValuesMock);
+			const isValid = validation.validate.valid(undefined);
+
+			expect(isValid).toBe(true);
+		});
+
 		it("should error for no gasPrice", () => {
 			const wrapper = ({ children }: any) => <EnvironmentProvider env={env}>{children} </EnvironmentProvider>;
 			const {
@@ -106,6 +118,18 @@ describe("useValidation hook", () => {
 			const balance = BigNumber.make(5).toNumber();
 			const validation = current.common.gasLimit(balance, getValuesMock);
 			const isValid = validation.validate.valid(BigNumber.make(21_000));
+
+			expect(isValid).toBe(true);
+		});
+
+		it("should ignore validation if gas limit is not provided", () => {
+			const wrapper = ({ children }: any) => <EnvironmentProvider env={env}>{children} </EnvironmentProvider>;
+			const {
+				result: { current },
+			} = renderHook(() => useValidation(), { wrapper });
+			const balance = BigNumber.make(5).toNumber();
+			const validation = current.common.gasLimit(balance, getValuesMock);
+			const isValid = validation.validate.valid(undefined);
 
 			expect(isValid).toBe(true);
 		});
