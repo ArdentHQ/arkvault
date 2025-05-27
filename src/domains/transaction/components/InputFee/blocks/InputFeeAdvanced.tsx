@@ -29,7 +29,10 @@ export const InputFeeAdvanced: React.FC<InputFeeAdvancedProperties> = ({
 
 	const { decrement: decrementGasFee, increment: incrementGasFee } = useStepMath(GAS_PRICE_STEP, gasPrice.toString());
 
-	const { decrement: decrementGasLimit, increment: incrementGasLimit } = useStepMath(GAS_LIMIT_STEP, gasLimit.toString());
+	const { decrement: decrementGasLimit, increment: incrementGasLimit } = useStepMath(
+		GAS_LIMIT_STEP,
+		gasLimit.toString(),
+	);
 
 	const { minGasPrice, maxGasPrice, minGasLimit, maxGasLimit } = getFeeMinMax();
 
@@ -37,8 +40,8 @@ export const InputFeeAdvanced: React.FC<InputFeeAdvancedProperties> = ({
 	const hasError = formField?.isInvalid;
 
 	const handleGasPriceIncrement = () => {
-		const incrementedValue= BigNumber.make(incrementGasFee());
-		const value = incrementedValue.isGreaterThan(maxGasPrice) ? maxGasPrice: incrementedValue;
+		const incrementedValue = BigNumber.make(incrementGasFee());
+		const value = incrementedValue.isGreaterThan(maxGasPrice) ? maxGasPrice : incrementedValue;
 		onChangeGasPrice(BigNumber.make(value));
 	};
 
@@ -49,8 +52,8 @@ export const InputFeeAdvanced: React.FC<InputFeeAdvancedProperties> = ({
 	};
 
 	const handleGasLimitIncrement = () => {
-		const incrementedValue= BigNumber.make(incrementGasLimit());
-		const value = incrementedValue.isGreaterThan(maxGasLimit) ? maxGasLimit: incrementedValue;
+		const incrementedValue = BigNumber.make(incrementGasLimit());
+		const value = incrementedValue.isGreaterThan(maxGasLimit) ? maxGasLimit : incrementedValue;
 		onChangeGasLimit(BigNumber.make(value));
 	};
 

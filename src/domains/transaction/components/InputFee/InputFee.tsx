@@ -30,22 +30,22 @@ export const getFeeMinMax = () => {
 	const minGasPrice = BigNumber.make(
 		UnitConverter.formatUnits(
 			BigNumber.make(configManager.getMilestone()["gas"]["minimumGasPrice"] ?? 0).toString(),
-			"gwei"
-		)
+			"gwei",
+		),
 	);
 
 	const maxGasPrice = BigNumber.make(
 		UnitConverter.formatUnits(
 			BigNumber.make(configManager.getMilestone()["gas"]["maximumGasPrice"] ?? 0).toString(),
-			"gwei"
-		)
+			"gwei",
+		),
 	);
 
 	const minGasLimit = BigNumber.make(configManager.getMilestone()["gas"]["minimumGasLimit"] ?? 0);
 	const maxGasLimit = BigNumber.make(configManager.getMilestone()["gas"]["maximumGasLimit"] ?? 0);
 
 	return { maxGasLimit, maxGasPrice, minGasLimit, minGasPrice };
-}
+};
 
 export const InputFee: React.FC<InputFeeProperties> = memo(
 	({
@@ -115,10 +115,10 @@ export const InputFee: React.FC<InputFeeProperties> = memo(
 				convert={convert}
 				disabled={disabled || loading}
 				exchangeTicker={exchangeTicker!}
-				onChangeGasPrice={(gasPrice: BigNumber|number|string) => {
+				onChangeGasPrice={(gasPrice: BigNumber | number | string) => {
 					onChangeGasPrice(BigNumber.make(gasPrice));
 				}}
-				onChangeGasLimit={(gasLimit: BigNumber|number|string) => {
+				onChangeGasLimit={(gasLimit: BigNumber | number | string) => {
 					onChangeGasLimit(BigNumber.make(gasLimit));
 				}}
 				showConvertedValue={showConvertedValues}
