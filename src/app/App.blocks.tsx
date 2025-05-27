@@ -19,7 +19,7 @@ import { InstallPWA } from "@/domains/dashboard/components/InstallPWA";
 const AppRouter = ({ children }: { children: React.ReactNode }) => {
 	const [isOpen, setIsOpen] = useState(false);
 
-	const confirmationFunctionReference = useRef<(allowNavigate: boolean) => void>();
+	const confirmationFunctionReference = useRef<(allowNavigate: boolean) => void>(undefined);
 
 	const onCancel = () => {
 		confirmationFunctionReference.current?.(false);
@@ -39,7 +39,7 @@ const AppRouter = ({ children }: { children: React.ReactNode }) => {
 	return (
 		<React.Suspense fallback={<PageSkeleton />}>
 			<HashRouter getUserConfirmation={getUserConfirmation}>
-				{children}
+				<>{children}</>
 				<ConfirmationModal isOpen={isOpen} onCancel={onCancel} onConfirm={onConfirm} />
 			</HashRouter>
 		</React.Suspense>
@@ -50,7 +50,7 @@ const Main = () => {
 	const { env, persist, isEnvironmentBooted, setIsEnvironmentBooted } = useEnvironmentContext();
 	const isOnline = useNetworkStatus();
 	const history = useHistory();
-	const syncingMessageToastId = useRef<number | string>();
+	const syncingMessageToastId = useRef<number | string>(undefined);
 
 	const { resetTheme } = useTheme();
 

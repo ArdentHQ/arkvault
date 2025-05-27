@@ -1,5 +1,5 @@
 import { DefaultTReturn, TOptions } from "i18next";
-import React, { useEffect, useMemo, useRef, useState } from "react";
+import React, { RefObject, useEffect, useMemo, useRef, useState } from "react";
 import { SidePanel } from "@/app/components/SidePanel/SidePanel";
 import { Form } from "@/app/components/Form";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
@@ -257,7 +257,7 @@ export const CreateAddressesSidePanel = ({
 			open={open}
 			onOpenChange={onOpenChange}
 			dataTestId="CreateAddressSidePanel"
-			scrollRef={scrollContainerRef}
+			scrollRef={scrollContainerRef as RefObject<HTMLDivElement>}
 			onMountChange={onMountChange}
 			hasSteps
 			totalSteps={allSteps.length}

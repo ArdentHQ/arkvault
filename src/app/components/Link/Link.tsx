@@ -86,8 +86,6 @@ const Anchor = React.forwardRef<HTMLAnchorElement, AnchorProperties>(
 	),
 );
 
-Anchor.displayName = "Anchor";
-
 type Properties = {
 	isDisabled?: boolean;
 	isExternal?: boolean;
@@ -133,7 +131,15 @@ export const Link = ({
 					{properties.children}
 				</Anchor>
 			) : (
-				<RouterLink component={Anchor} {...properties} />
+				<RouterLink {...properties}>
+					<Anchor
+						className={className}
+						isDisabled={isDisabled}
+						showExternalIcon={showExternalIcon}
+					>
+						{properties.children}
+					</Anchor>
+				</RouterLink>
 			)}
 		</Tooltip>
 	);

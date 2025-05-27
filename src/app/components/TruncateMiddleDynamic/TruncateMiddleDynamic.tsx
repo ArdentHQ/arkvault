@@ -41,7 +41,7 @@ export const getTruncatedValue = (referenceElement: HTMLElement, elementWidth: n
 	return temporary;
 };
 
-export const TruncateMiddleDynamic: React.VFC<TruncateMiddleDynamicProperties> = ({
+export const TruncateMiddleDynamic = ({
 	value,
 	offset = 0,
 	className,
@@ -49,7 +49,7 @@ export const TruncateMiddleDynamic: React.VFC<TruncateMiddleDynamicProperties> =
 	parentRef,
 	availableWidth,
 	...properties
-}) => {
+}: TruncateMiddleDynamicProperties) => {
 	const [truncatedValue, setTruncatedValue] = useState(value);
 
 	const internalReference = useRef<HTMLElement>(null);

@@ -15,7 +15,7 @@ interface AmountLabelHintProperties {
 	tooltipContent?: string;
 }
 
-const AmountLabelHint: React.VFC<AmountLabelHintProperties> = ({ className, isCompact, tooltipContent }) => (
+const AmountLabelHint = ({ className, isCompact, tooltipContent }: AmountLabelHintProperties) => (
 	<Tooltip content={tooltipContent}>
 		<div
 			data-testid="AmountLabel__hint"
