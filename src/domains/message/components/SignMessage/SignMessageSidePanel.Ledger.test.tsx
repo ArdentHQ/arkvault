@@ -5,7 +5,6 @@ import { createHashHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
 
-import { SignMessage } from "./SignMessage";
 import { translations as messageTranslations } from "@/domains/message/i18n";
 import {
 	env,
@@ -17,6 +16,8 @@ import {
 	triggerMessageSignOnce,
 	MAINSAIL_MNEMONICS,
 } from "@/utils/testing-library";
+import { SignMessageSidePanel } from "./SignMessageSidePanel";
+import { selectFirstAddress, selectNthAddress } from "./SignMessageSidePanel.test";
 
 const history = createHashHistory();
 
@@ -34,13 +35,13 @@ const signMessage = "Hello World";
 
 const expectHeading = async (text: string) => {
 	await waitFor(() => {
-		expect(screen.findByRole("heading", { name: text })).toBeDefined();
+		expect(screen.getByTestId("SidePanel__title")).toHaveTextContent(text);
 	});
 };
 
 describe("SignMessage with ledger", () => {
 	beforeAll(async () => {
-		profile = env.profiles().findById(getMainsailProfileId());
+		profile = await env.profiles().create("Test");
 
 		wallet = await profile.walletFactory().fromMnemonicWithBIP39({
 			mnemonic,
@@ -51,8 +52,14 @@ describe("SignMessage with ledger", () => {
 		await triggerMessageSignOnce(wallet);
 	});
 
+	afterAll(() => {
+		env.profiles().forget(profile.id());
+	});
+
 	beforeEach(() => {
-		history.push(walletUrl(wallet.id()));
+		const dashboardUrl = `/profiles/${profile.id()}/dashboard`;
+
+		history.push(dashboardUrl);
 	});
 
 	it("should display error step if user rejects", async () => {
@@ -70,17 +77,20 @@ describe("SignMessage with ledger", () => {
 
 		const ledgerListenMock = mockNanoXTransport();
 
+		const onOpenChangeMock = vi.fn();
+
 		render(
-			<Route path="/profiles/:profileId/wallets/:walletId/sign-message">
-				<SignMessage />
+			<Route path="/profiles/:profileId/dashboard">
+				<SignMessageSidePanel open={true} onOpenChange={onOpenChangeMock} onMountChange={vi.fn()} />,
 			</Route>,
 			{
 				history,
-				route: walletUrl(wallet.id()),
 			},
 		);
 
 		await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
+
+		await selectFirstAddress();
 
 		await userEvent.type(messageInput(), signMessage);
 
@@ -90,17 +100,13 @@ describe("SignMessage with ledger", () => {
 
 		await waitFor(() => expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.ERROR_STEP.TITLE));
 
-		const historySpy = vi.spyOn(history, "push");
-
 		await waitFor(() => {
 			expect(screen.getByTestId("ErrorStep__close-button")).toBeInTheDocument();
 		});
 
 		await userEvent.click(screen.getByTestId("ErrorStep__close-button"));
 
-		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/dashboard`);
-
-		historySpy.mockRestore();
+		expect(onOpenChangeMock).toHaveBeenCalledWith(false);
 
 		signMessageSpy.mockRestore();
 		isLedgerMock.mockRestore();
@@ -132,16 +138,17 @@ describe("SignMessage with ledger", () => {
 		const ledgerListenMock = mockNanoXTransport();
 
 		render(
-			<Route path="/profiles/:profileId/wallets/:walletId/sign-message">
-				<SignMessage />
+			<Route path="/profiles/:profileId/dashboard">
+				<SignMessageSidePanel open={true} onOpenChange={onOpenChangeMock} onMountChange={vi.fn()} />,
 			</Route>,
 			{
 				history,
-				route: walletUrl(wallet.id()),
 			},
 		);
 
 		await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
+
+		await selectFirstAddress();
 
 		expect(
 			screen.getByText(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_LEDGER),

@@ -15,10 +15,9 @@ import {
 	triggerMessageSignOnce,
 	MAINSAIL_MNEMONICS,
 } from "@/utils/testing-library";
+import { afterAll } from "vitest";
 
 const history = createHashHistory();
-
-const walletUrl = (walletId: string) => `/profiles/${getMainsailProfileId()}/wallets/${walletId}/sign-message`;
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
@@ -38,7 +37,7 @@ const expectHeading = async (text: string) => {
 	});
 };
 
-const selectNthAddress = async (index = 0) => {
+export const selectNthAddress = async (index = 0) => {
 	await userEvent.click(screen.getByTestId("SelectAddress__wrapper"));
 
 	await waitFor(() => {
@@ -48,6 +47,10 @@ const selectNthAddress = async (index = 0) => {
 	const nthAddress = screen.getByTestId(`SearchWalletListItem__select-${index}`);
 
 	await userEvent.click(nthAddress);
+};
+
+export const selectFirstAddress = async () => {
+	await selectNthAddress();
 };
 
 // Mock implementation of TextEncoder to always return Uint8Array.
@@ -62,7 +65,7 @@ vi.stubGlobal(
 
 describe("SignMessageSidePanel", () => {
 	beforeAll(async () => {
-		profile = await env.profiles().create("Test");
+		profile = await env.profiles().create("Example");
 
 		wallet = await profile.walletFactory().fromMnemonicWithBIP39({
 			mnemonic,
@@ -76,6 +79,10 @@ describe("SignMessageSidePanel", () => {
 		profile.wallets().push(wallet2);
 
 		await triggerMessageSignOnce(wallet);
+	});
+
+	afterAll(() => {
+		env.profiles().forget(profile.id());
 	});
 
 	describe("Sign with Wallet", () => {
@@ -127,7 +134,7 @@ describe("SignMessageSidePanel", () => {
 				screen.getByText(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_SELECT_WALLET),
 			).toBeInTheDocument();
 
-			await selectNthAddress();
+			await selectFirstAddress();
 
 			expect(
 				screen.getByText(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_MNEMONIC),

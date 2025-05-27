@@ -154,6 +154,10 @@ export const SignMessageSidePanel = ({
 	);
 
 	const getTitle = () => {
+		if (activeTab === Step.ErrorStep) {
+			return t("MESSAGE.PAGE_SIGN_MESSAGE.ERROR_STEP.TITLE");
+		}
+
 		if (authenticateLedger) {
 			return t("TRANSACTION.AUTHENTICATION_STEP.TITLE");
 		}
@@ -259,7 +263,6 @@ export const SignMessageSidePanel = ({
 
 						<TabPanel tabId={Step.ErrorStep}>
 							<ErrorStep
-								title={t("MESSAGE.PAGE_SIGN_MESSAGE.ERROR_STEP.TITLE")}
 								description={t("MESSAGE.PAGE_SIGN_MESSAGE.ERROR_STEP.DESCRIPTION")}
 								onClose={handleBack}
 								errorMessage={errorMessage}
