@@ -1,5 +1,4 @@
 import { UUID } from "@ardenthq/arkvault-crypto";
-import { Except } from "type-fest";
 
 import { INotification, INotificationRepository, IProfile } from "./contracts.js";
 import { DataRepository } from "./data.repository";
@@ -50,7 +49,7 @@ export class NotificationRepository implements INotificationRepository {
 	}
 
 	/** {@inheritDoc INotificationRepository.push} */
-	public push(value: Partial<Except<INotification, "id">>): INotification {
+	public push(value: Partial<Omit<INotification, "id">>): INotification {
 		const id: string = UUID.random();
 		const meta = {};
 
