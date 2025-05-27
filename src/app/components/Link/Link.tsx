@@ -31,6 +31,7 @@ const AnchorStyled = forwardRef<HTMLAnchorElement, AnchorStyledProps>(({ isDisab
 ));
 
 AnchorStyled.displayName = "AnchorStyled";
+Anchor.displayName = "Anchor";
 
 const Content = ({
 	isDisabled,
@@ -85,6 +86,8 @@ const Anchor = React.forwardRef<HTMLAnchorElement, AnchorProperties>(
 		</AnchorStyled>
 	),
 );
+
+Anchor.displayName = "Anchor";
 
 type Properties = {
 	isDisabled?: boolean;
