@@ -86,18 +86,17 @@ describe("FeeField", () => {
 
 	it("should fallback to default gas limit when estimateGas call fail", async () => {
 		const calculate = vi.fn().mockResolvedValue({ avg: 30, max: 1, min: 1 });
-		const estimateGas= vi.fn().mockImplementation(() => {
+		const estimateGas = vi.fn().mockImplementation(() => {
 			throw new Error("Failed to fetch");
 		});
 
-		const useFeesMock
-			= vi.spyOn(useFeesHook, "useFees").mockImplementation(() => ({ calculate, estimateGas  }));
+		const useFeesMock = vi.spyOn(useFeesHook, "useFees").mockImplementation(() => ({ calculate, estimateGas }));
 
 		render(<Component type="transfer" data={{ amount: 1, to: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6" }} />);
 
-		await userEvent.click(screen.getByText('Advanced'));
+		await userEvent.click(screen.getByText("Advanced"));
 
-		expect(screen.getByTestId("Input_GasLimit")).toHaveValue("21000")
+		expect(screen.getByTestId("Input_GasLimit")).toHaveValue("21000");
 
 		estimateGas.mockRestore();
 		calculate.mockRestore();
