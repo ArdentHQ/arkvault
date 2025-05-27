@@ -1,5 +1,5 @@
 import cn from "classnames";
-import React, { cloneElement, FC, useCallback, useState } from "react";
+import React, { Attributes, cloneElement, FC, useCallback, useState } from "react";
 
 import { DropdownOption, DropdownProperties, DropdownVariantType } from "./Dropdown.contracts";
 import { renderOptions } from "./Dropdown.helpers";
@@ -103,7 +103,7 @@ export const Dropdown: FC<DropdownProperties> = ({
 	const testId: string | undefined = properties["data-testid"];
 	const testIdSuffix = testId ? `-${testId}` : "";
 
-	const clonedElement = children ? cloneElement(children, { hideDropdown: () => setIsOpen(false) }) : undefined;
+	const clonedElement = children ? cloneElement(children, { hideDropdown: () => setIsOpen(false) } as Partial<unknown> & Attributes) : undefined;
 
 	return (
 		<>

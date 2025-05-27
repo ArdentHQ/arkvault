@@ -22,13 +22,12 @@ const Wrapper = ({ width, height, children, ...props }: WrapperProperties & Reac
 		<div style={{ height, width }}>
 			{
 				React.isValidElement(children)
-					? React.cloneElement(children as React.ReactElement, {
-							style: {
-								height: "100%",
-								width: "100%",
-								...children.props?.style,
-							},
-						})
+					? React.cloneElement(children as React.ReactElement<React.SVGProps<SVGSVGElement>>, {
+						style: {
+							height: "100%",
+							width: "100%",
+						},
+					})
 					: children // Render directly if it's not a valid React element
 			}
 		</div>
