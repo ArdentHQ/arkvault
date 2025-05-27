@@ -49,7 +49,7 @@ describe("InputFee", () => {
 			const [simpleValue, setSimpleValue] = useState(defaultProps.selectedFeeOption);
 			const [gasLimit, setGasLimit] = useState(defaultProps.gasLimit);
 
-			const handleChangeGasPrice = (newValue: BigNumber|string|number) => {
+			const handleChangeGasPrice = (newValue: BigNumber | string | number) => {
 				setGasPrice(BigNumber.make(newValue));
 				defaultProps.onChangeGasPrice(newValue);
 			};
@@ -64,7 +64,7 @@ describe("InputFee", () => {
 				defaultProps.onChangeFeeOption?.(value_);
 			};
 
-			const handleChangeGasLimit = (value: BigNumber|string|number) => {
+			const handleChangeGasLimit = (value: BigNumber | string | number) => {
 				setGasLimit(BigNumber.make(value));
 				defaultProps.onChangeGasLimit(value);
 			};
