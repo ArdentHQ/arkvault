@@ -85,7 +85,7 @@ export class TransactionService {
 			.value(UnitConverter.parseUnits(input.data.amount, "ark"))
 			.to(input.data.to)
 			.nonce(nonce)
-			.gasPrice(UnitConverter.parseUnits(input.gasPrice, "gwei"))
+			.gasPrice(UnitConverter.parseUnits(input.gasPrice.toString(), "gwei"))
 			// @TODO https://app.clickup.com/t/86dwvx1ya get rid of .toString() for all `gas` calls
 			.gas(input.gasLimit.toString())
 			.network(this.#configCrypto.crypto.network.chainId);
@@ -114,7 +114,7 @@ export class TransactionService {
 		const builder = await ValidatorRegistrationBuilder.new()
 			.validatorPublicKey(`0x${input.data.validatorPublicKey}`)
 			.nonce(nonce)
-			.gasPrice(UnitConverter.parseUnits(input.gasPrice, "gwei"))
+			.gasPrice(UnitConverter.parseUnits(input.gasPrice.toString(), "gwei"))
 			.gas(input.gasLimit.toString())
 			.network(this.#configCrypto.crypto.network.chainId);
 
@@ -140,7 +140,7 @@ export class TransactionService {
 		if (unvote) {
 			const builder = await UnvoteBuilder.new()
 				.nonce(nonce)
-				.gasPrice(UnitConverter.parseUnits(input.gasPrice, "gwei"))
+				.gasPrice(UnitConverter.parseUnits(input.gasPrice.toString(), "gwei"))
 				.gas(input.gasLimit.toString())
 				.network(this.#configCrypto.crypto.network.chainId);
 
@@ -157,7 +157,7 @@ export class TransactionService {
 		const builder = await VoteBuilder.new()
 			.vote(vote.id)
 			.nonce(nonce)
-			.gasPrice(UnitConverter.parseUnits(input.gasPrice, "gwei"))
+			.gasPrice(UnitConverter.parseUnits(input.gasPrice.toString(), "gwei"))
 			.gas(input.gasLimit.toString())
 			.network(this.#configCrypto.crypto.network.chainId);
 
@@ -219,7 +219,7 @@ export class TransactionService {
 		const builder = await UsernameRegistrationBuilder.new()
 			.username(input.data.username)
 			.nonce(nonce)
-			.gasPrice(UnitConverter.parseUnits(input.gasPrice, "gwei"))
+			.gasPrice(UnitConverter.parseUnits(input.gasPrice.toString(), "gwei"))
 			.gas(input.gasLimit.toString())
 			.network(this.#configCrypto.crypto.network.chainId);
 
@@ -239,7 +239,7 @@ export class TransactionService {
 
 		const builder = await UsernameResignationBuilder.new()
 			.nonce(nonce)
-			.gasPrice(UnitConverter.parseUnits(input.gasPrice, "gwei"))
+			.gasPrice(UnitConverter.parseUnits(input.gasPrice.toString(), "gwei"))
 			.gas(input.gasLimit.toString())
 			.network(this.#configCrypto.crypto.network.chainId)
 			.sign(input.signatory.signingKey());
@@ -260,7 +260,7 @@ export class TransactionService {
 
 		const builder = await ValidatorResignationBuilder.new()
 			.nonce(nonce)
-			.gasPrice(UnitConverter.parseUnits(input.gasPrice, "gwei"))
+			.gasPrice(UnitConverter.parseUnits(input.gasPrice.toString(), "gwei"))
 			.gas(input.gasLimit.toString())
 			.network(this.#configCrypto.crypto.network.chainId)
 			.sign(input.signatory.signingKey());
