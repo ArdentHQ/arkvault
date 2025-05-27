@@ -54,6 +54,9 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 	const { senderAddress, fees, gasPrice, gasLimit, remainingBalance, amount, isSendAllSelected, network } = watch();
 	const { sendTransfer: sendTransferValidation, common: commonValidation } = useValidation();
 
+	const gasPriceStr= gasPrice?.toString();
+	const gasLimitStr = gasLimit?.toString();
+
 	const resetForm = useCallback(
 		(callback?: () => void) => {
 			reset({ ...formDefaultValues, network });
@@ -121,7 +124,7 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 
 			return transaction;
 		},
-		[clearErrors, gasLimit, gasPrice, getValues, persist, transactionBuilder, wallet],
+		[clearErrors, gasLimitStr, gasPriceStr, getValues, persist, transactionBuilder, wallet],
 	);
 
 	const walletBalance = wallet?.balance();
@@ -213,7 +216,7 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 		setValue("amount", precisionRound(remaining, 18));
 
 		void trigger(["gasPrice", "gasLimit", "amount"]);
-	}, [gasLimit, gasPrice]); // eslint-disable-line react-hooks/exhaustive-deps
+	}, [gasLimitStr, gasPriceStr]); // eslint-disable-line react-hooks/exhaustive-deps
 
 	return {
 		form,
