@@ -86,7 +86,8 @@ describe("SendExchangeTransfer", () => {
 			}
 		});
 
-		const profileWalletsMock = vi.spyOn(profile.wallets(), "findByCoinWithNetwork").mockReturnValue([wallet]);
+		const profileWalletsCountMock = vi.spyOn(profile.wallets(), "count").mockReturnValue(1);
+		const profileWalletsMock = vi.spyOn(profile.wallets(), "values").mockReturnValue([wallet]);
 
 		const ledgerGetPublicKeyMock = vi
 			.spyOn(wallet.ledger(), "getPublicKey")
@@ -113,6 +114,7 @@ describe("SendExchangeTransfer", () => {
 		renderComponent();
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 		profileWalletsMock.mockRestore();
+		profileWalletsCountMock.mockRestore();
 		versionMock.mockRestore();
 		connectMock.mockRestore();
 		mockWalletData.mockRestore();
@@ -127,7 +129,8 @@ describe("SendExchangeTransfer", () => {
 		const isLedgerMock = vi.spyOn(wallet, "isLedger").mockImplementation(() => true);
 
 		const ledgerErrorMock = mockLedgerTransportError("Access denied to use Ledger device");
-		const profileWalletsMock = vi.spyOn(profile.wallets(), "findByCoinWithNetwork").mockReturnValue([wallet]);
+		const profileWalletsCountMock = vi.spyOn(profile.wallets(), "count").mockReturnValue(1);
+		const profileWalletsMock = vi.spyOn(profile.wallets(), "values").mockReturnValue([wallet]);
 
 		renderComponent();
 
@@ -137,6 +140,7 @@ describe("SendExchangeTransfer", () => {
 		ledgerErrorMock.mockRestore();
 		isLedgerMock.mockRestore();
 		profileWalletsMock.mockRestore();
+		profileWalletsCountMock.mockRestore();
 	});
 
 	it("should show browser compatibility error ledger is not supported", async () => {
@@ -157,7 +161,8 @@ describe("SendExchangeTransfer", () => {
 			};
 		});
 
-		vi.spyOn(profile.wallets(), "findByCoinWithNetwork").mockReturnValue([wallet]);
+		vi.spyOn(profile.wallets(), "count").mockReturnValue(1);
+		vi.spyOn(profile.wallets(), "values").mockReturnValue([wallet]);
 		mockNanoXTransport();
 
 		process.env.REACT_APP_IS_UNIT = null;
@@ -173,7 +178,7 @@ describe("SendExchangeTransfer", () => {
 		const isLedgerMock = vi.spyOn(wallet, "isLedger").mockImplementation(() => true);
 
 		const ledgerErrorMock = mockLedgerTransportError("error");
-		const profileWalletsMock = vi.spyOn(profile.wallets(), "findByCoinWithNetwork").mockReturnValue([wallet]);
+		const profileWalletsMock = vi.spyOn(profile.wallets(), "values").mockReturnValue([wallet]);
 
 		vi.spyOn(wallet.ledger(), "getPublicKey").mockResolvedValue(
 			"0335a27397927bfa1704116814474d39c2b933aabb990e7226389f022886e48deb",

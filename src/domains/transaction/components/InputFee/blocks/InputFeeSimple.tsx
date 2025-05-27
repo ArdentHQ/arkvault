@@ -27,7 +27,7 @@ export const InputFeeSimple: React.FC<InputFeeSimpleProperties> = ({
 	const { t } = useTranslation();
 
 	return (
-		<ButtonGroup className="flex-col space-y-2 sm:flex-row sm:space-x-2 sm:space-y-0">
+		<ButtonGroup className="flex-col space-y-2 sm:flex-row sm:space-y-0 sm:space-x-2">
 			{Object.entries(options).map(([optionValue, { label, displayValue, displayValueConverted }]) => {
 				const isSelected = optionValue === selectedOption;
 
@@ -36,12 +36,12 @@ export const InputFeeSimple: React.FC<InputFeeSimpleProperties> = ({
 						key={optionValue}
 						value={displayValue}
 						isSelected={() => optionValue === selectedOption}
-						className="group p-0 dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800"
+						className="group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 p-0"
 						setSelectedValue={() => onChange(optionValue as InputFeeOption)}
 					>
 						<div
 							className={cn(
-								"flex w-full flex-col text-theme-secondary-700 transition-all dark:text-theme-dark-200",
+								"text-theme-secondary-700 dark:text-theme-dark-200 flex w-full flex-col transition-all",
 								{
 									"dark:group-hover:text-theme-dark-50": !isSelected,
 								},
@@ -70,7 +70,7 @@ export const InputFeeSimple: React.FC<InputFeeSimpleProperties> = ({
 											ticker={ticker}
 											value={displayValue}
 											className={cn(
-												"hidden text-xs leading-[15px] transition-all sm:block sm:text-theme-secondary-500",
+												"sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block",
 												{
 													"dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500":
 														!isSelected,
@@ -82,7 +82,7 @@ export const InputFeeSimple: React.FC<InputFeeSimpleProperties> = ({
 							</div>
 							<div
 								className={cn(
-									"flex w-full justify-between px-3 py-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 transition-all dark:text-theme-dark-200",
+									"text-theme-secondary-700 dark:text-theme-dark-200 flex w-full justify-between px-3 py-2 text-xs leading-[15px] font-semibold transition-all",
 									{
 										"bg-theme-navy-100 dark:bg-theme-dark-500": isSelected,
 										"bg-theme-navy-50 dark:bg-theme-dark-800 dark:group-hover:bg-theme-dark-600 dark:group-hover:text-theme-dark-50":

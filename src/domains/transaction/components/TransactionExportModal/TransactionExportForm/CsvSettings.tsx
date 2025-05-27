@@ -12,9 +12,9 @@ import { ListDivided } from "@/app/components/ListDivided";
 const SelectDelimiterLabel = ({ label, symbol }: { label?: string; symbol?: string }) => (
 	<>
 		{label}
-		<span className="px-1 leading-tight text-theme-secondary-500 dark:text-theme-secondary-600">(</span>
+		<span className="text-theme-secondary-500 dark:text-theme-secondary-600 px-1 leading-tight">(</span>
 		{symbol}
-		<span className="leading-tight text-theme-secondary-500 dark:text-theme-secondary-600">)</span>
+		<span className="text-theme-secondary-500 dark:text-theme-secondary-600 leading-tight">)</span>
 	</>
 );
 
@@ -54,7 +54,7 @@ export const CSVSettings = () => {
 
 	return (
 		<>
-			<div className="mb-4 mt-8 text-lg font-semibold">{t("TRANSACTION.EXPORT.FORM.CSV_SETTINGS")}</div>
+			<div className="mt-8 mb-4 text-lg font-semibold">{t("TRANSACTION.EXPORT.FORM.CSV_SETTINGS")}</div>
 
 			<ListDivided
 				items={[

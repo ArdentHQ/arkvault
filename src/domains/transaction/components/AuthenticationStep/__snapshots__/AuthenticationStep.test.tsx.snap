@@ -7,7 +7,7 @@ exports[`AuthenticationStep (message) > should request mnemonic if wallet was im
     data-testid="AuthenticationStep"
   >
     <div
-      class="flex items-end justify-between bg-theme-background"
+      class="bg-theme-background flex items-end justify-between"
     >
       <div
         class="space-y-2"
@@ -23,7 +23,7 @@ exports[`AuthenticationStep (message) > should request mnemonic if wallet was im
           </h1>
         </div>
         <div
-          class="flex items-center text-sm leading-5 text-theme-secondary-text md:text-base"
+          class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
           data-testid="header__subtitle"
         >
           Enter your mnemonic passphrase to sign the message.
@@ -34,14 +34,14 @@ exports[`AuthenticationStep (message) > should request mnemonic if wallet was im
       class="[&:focus-within_.FormLabel]:text-theme-danger-500 [&>.FormLabel]:text-theme-danger-500 flex min-w-0 flex-col"
     >
       <label
-        class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
+        class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex text-sm leading-[17px] font-semibold transition-colors duration-100"
         data-testid="FormLabel"
         for="mnemonic"
       >
         Mnemonic
       </label>
       <div
-        class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+        class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
       >
         <div
           class="relative flex h-full flex-1"
@@ -49,7 +49,7 @@ exports[`AuthenticationStep (message) > should request mnemonic if wallet was im
           <input
             aria-invalid="true"
             autocomplete="off"
-            class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
+            class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
             data-testid="AuthenticationStep__mnemonic"
             name="mnemonic"
             type="password"
@@ -57,7 +57,7 @@ exports[`AuthenticationStep (message) > should request mnemonic if wallet was im
           />
         </div>
         <div
-          class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-danger-500"
+          class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-danger-500"
           data-testid="Input__addon-end"
         >
           <span
@@ -65,7 +65,7 @@ exports[`AuthenticationStep (message) > should request mnemonic if wallet was im
             data-testid="Input__error"
           >
             <div
-              class="text-theme-danger-500"
+              class="text-theme-danger-500 pr-3"
             >
               <div
                 style="height: 20px; width: 20px;"
@@ -109,7 +109,7 @@ exports[`AuthenticationStep (message) > should request mnemonic if wallet was im
             class="pl-3"
           >
             <button
-              class="ring-focus relative flex h-full w-full items-center justify-center text-2xl focus:outline-none"
+              class="ring-focus relative flex h-full w-full items-center justify-center text-2xl focus:outline-hidden"
               data-ring-focus-margin="-m-1"
               data-testid="InputPassword__toggle"
               type="button"
@@ -162,7 +162,7 @@ exports[`AuthenticationStep (message) > should request mnemonic if wallet was im
     data-testid="AuthenticationStep"
   >
     <div
-      class="flex items-end justify-between bg-theme-background"
+      class="bg-theme-background flex items-end justify-between"
     >
       <div
         class="space-y-2"
@@ -178,7 +178,7 @@ exports[`AuthenticationStep (message) > should request mnemonic if wallet was im
           </h1>
         </div>
         <div
-          class="flex items-center text-sm leading-5 text-theme-secondary-text md:text-base"
+          class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
           data-testid="header__subtitle"
         >
           Enter your mnemonic passphrase to sign the message.
@@ -189,14 +189,14 @@ exports[`AuthenticationStep (message) > should request mnemonic if wallet was im
       class="[&:focus-within_.FormLabel]:text-theme-danger-500 [&>.FormLabel]:text-theme-danger-500 flex min-w-0 flex-col"
     >
       <label
-        class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
+        class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex text-sm leading-[17px] font-semibold transition-colors duration-100"
         data-testid="FormLabel"
         for="mnemonic"
       >
         Mnemonic
       </label>
       <div
-        class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+        class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
       >
         <div
           class="relative flex h-full flex-1"
@@ -204,7 +204,7 @@ exports[`AuthenticationStep (message) > should request mnemonic if wallet was im
           <input
             aria-invalid="true"
             autocomplete="off"
-            class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
+            class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
             data-testid="AuthenticationStep__mnemonic"
             name="mnemonic"
             type="password"
@@ -212,7 +212,7 @@ exports[`AuthenticationStep (message) > should request mnemonic if wallet was im
           />
         </div>
         <div
-          class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-danger-500"
+          class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-danger-500"
           data-testid="Input__addon-end"
         >
           <span
@@ -220,7 +220,7 @@ exports[`AuthenticationStep (message) > should request mnemonic if wallet was im
             data-testid="Input__error"
           >
             <div
-              class="text-theme-danger-500"
+              class="text-theme-danger-500 pr-3"
             >
               <div
                 style="height: 20px; width: 20px;"
@@ -264,7 +264,7 @@ exports[`AuthenticationStep (message) > should request mnemonic if wallet was im
             class="pl-3"
           >
             <button
-              class="ring-focus relative flex h-full w-full items-center justify-center text-2xl focus:outline-none"
+              class="ring-focus relative flex h-full w-full items-center justify-center text-2xl focus:outline-hidden"
               data-ring-focus-margin="-m-1"
               data-testid="InputPassword__toggle"
               type="button"
@@ -317,7 +317,7 @@ exports[`AuthenticationStep (message) > should request secret if wallet was impo
     data-testid="AuthenticationStep"
   >
     <div
-      class="flex items-end justify-between bg-theme-background"
+      class="bg-theme-background flex items-end justify-between"
     >
       <div
         class="space-y-2"
@@ -333,7 +333,7 @@ exports[`AuthenticationStep (message) > should request secret if wallet was impo
           </h1>
         </div>
         <div
-          class="flex items-center text-sm leading-5 text-theme-secondary-text md:text-base"
+          class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
           data-testid="header__subtitle"
         >
           Enter your secret to sign the message.
@@ -344,21 +344,21 @@ exports[`AuthenticationStep (message) > should request secret if wallet was impo
       class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
     >
       <label
-        class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
+        class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex text-sm leading-[17px] font-semibold transition-colors duration-100"
         data-testid="FormLabel"
         for="secret"
       >
         Secret
       </label>
       <div
-        class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+        class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
       >
         <div
           class="relative flex h-full flex-1"
         >
           <input
             autocomplete="off"
-            class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
+            class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
             data-testid="AuthenticationStep__secret"
             name="secret"
             type="password"
@@ -366,14 +366,14 @@ exports[`AuthenticationStep (message) > should request secret if wallet was impo
           />
         </div>
         <div
-          class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+          class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
           data-testid="Input__addon-end"
         >
           <div
             class=""
           >
             <button
-              class="ring-focus relative flex h-full w-full items-center justify-center text-2xl focus:outline-none"
+              class="ring-focus relative flex h-full w-full items-center justify-center text-2xl focus:outline-hidden"
               data-ring-focus-margin="-m-1"
               data-testid="InputPassword__toggle"
               type="button"
@@ -430,7 +430,7 @@ exports[`AuthenticationStep (message) > should show ledger waiting app screen 1`
       data-testid="LedgerWaitingAppContent"
     >
       <div
-        class="flex items-end justify-between bg-theme-background"
+        class="bg-theme-background flex items-end justify-between"
       >
         <div
           class="space-y-2"
@@ -446,7 +446,7 @@ exports[`AuthenticationStep (message) > should show ledger waiting app screen 1`
             </h1>
           </div>
           <div
-            class="flex items-center text-sm leading-5 text-theme-secondary-text md:text-base"
+            class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
             data-testid="header__subtitle"
           >
             Connect your Ledger and confirm input.
@@ -563,10 +563,10 @@ exports[`AuthenticationStep (message) > should show ledger waiting app screen 1`
         class="inline-flex w-full items-center justify-center space-x-3"
       >
         <div
-          class="animate-spin rounded-full border-[5px] flex-shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black border-l-theme-primary-600 dark:border-l-theme-primary-600"
+          class="animate-spin rounded-full border-[5px] shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black border-l-theme-primary-600 dark:border-l-theme-primary-600"
         />
         <span
-          class="animate-pulse font-semibold text-theme-secondary-text"
+          class="text-theme-secondary-text animate-pulse font-semibold"
           data-testid="LedgerWaitingApp-loading_message"
         >
           Open the Mainsail app on your device ...
@@ -587,7 +587,7 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
       class="space-y-8"
     >
       <div
-        class="flex items-end justify-between bg-theme-background"
+        class="bg-theme-background flex items-end justify-between"
       >
         <div
           class="space-y-2"
@@ -603,7 +603,7 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
             </h1>
           </div>
           <div
-            class="flex items-center text-sm leading-5 text-theme-secondary-text md:text-base"
+            class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
             data-testid="header__subtitle"
           >
             Connect your Ledger and confirm input.
@@ -720,10 +720,10 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
         class="inline-flex w-full items-center justify-center space-x-3"
       >
         <div
-          class="animate-spin rounded-full border-[5px] flex-shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black border-l-theme-primary-600 dark:border-l-theme-primary-600"
+          class="animate-spin rounded-full border-[5px] shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black border-l-theme-primary-600 dark:border-l-theme-primary-600"
         />
         <span
-          class="animate-pulse font-semibold text-theme-secondary-text"
+          class="text-theme-secondary-text animate-pulse font-semibold"
           data-testid="LedgerWaitingDevice-loading_message"
         >
           Waiting for Ledger ...
@@ -741,7 +741,7 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
     data-testid="AuthenticationStep"
   >
     <div
-      class="flex items-end justify-between bg-theme-background"
+      class="bg-theme-background flex items-end justify-between"
     >
       <div
         class="space-y-2"
@@ -768,17 +768,17 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
         Please review and verify the information on your Ledger device. Choose Accept to complete your transaction.
       </div>
       <div
-        class="flex items-center space-x-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-6 py-5 dark:border-theme-warning-600 dark:bg-transparent"
+        class="border-theme-warning-200 bg-theme-warning-50 dark:border-theme-warning-600 flex items-center space-x-3 rounded-xl border px-6 py-5 dark:bg-transparent"
         data-testid="LedgerConfirmation-loading_message"
       >
         <div
-          class="animate-spin rounded-full border-[5px] flex-shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 border-l-theme-warning-900 dark:border-l-theme-warning-600"
+          class="animate-spin rounded-full border-[5px] shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 border-l-theme-warning-900 dark:border-l-theme-warning-600"
         />
         <div
-          class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle text-theme-warning-200 dark:text-theme-secondary-800"
+          class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle text-theme-warning-200 dark:text-theme-secondary-800"
         />
         <p
-          class="font-semibold text-theme-secondary-700 dark:text-theme-warning-600"
+          class="text-theme-secondary-700 dark:text-theme-warning-600 font-semibold"
         >
           This transaction is pending confirmation.
         </p>
@@ -795,7 +795,7 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
     data-testid="AuthenticationStep"
   >
     <div
-      class="flex items-end justify-between bg-theme-background"
+      class="bg-theme-background flex items-end justify-between"
     >
       <div
         class="space-y-2"
@@ -822,17 +822,17 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
         Please review and verify the information on your Ledger device. Choose Accept to complete your transaction.
       </div>
       <div
-        class="flex items-center space-x-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-6 py-5 dark:border-theme-warning-600 dark:bg-transparent"
+        class="border-theme-warning-200 bg-theme-warning-50 dark:border-theme-warning-600 flex items-center space-x-3 rounded-xl border px-6 py-5 dark:bg-transparent"
         data-testid="LedgerConfirmation-loading_message"
       >
         <div
-          class="animate-spin rounded-full border-[5px] flex-shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 border-l-theme-warning-900 dark:border-l-theme-warning-600"
+          class="animate-spin rounded-full border-[5px] shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 border-l-theme-warning-900 dark:border-l-theme-warning-600"
         />
         <div
-          class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle text-theme-warning-200 dark:text-theme-secondary-800"
+          class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle text-theme-warning-200 dark:text-theme-secondary-800"
         />
         <p
-          class="font-semibold text-theme-secondary-700 dark:text-theme-warning-600"
+          class="text-theme-secondary-700 dark:text-theme-warning-600 font-semibold"
         >
           This transaction is pending confirmation.
         </p>
@@ -849,7 +849,7 @@ exports[`AuthenticationStep (message) > should show only ledger confirmation 1`]
     data-testid="AuthenticationStep"
   >
     <div
-      class="flex items-end justify-between bg-theme-background"
+      class="bg-theme-background flex items-end justify-between"
     >
       <div
         class="space-y-2"
@@ -876,17 +876,17 @@ exports[`AuthenticationStep (message) > should show only ledger confirmation 1`]
         Please review and verify the information on your Ledger device. Choose Accept to complete your transaction.
       </div>
       <div
-        class="flex items-center space-x-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-6 py-5 dark:border-theme-warning-600 dark:bg-transparent"
+        class="border-theme-warning-200 bg-theme-warning-50 dark:border-theme-warning-600 flex items-center space-x-3 rounded-xl border px-6 py-5 dark:bg-transparent"
         data-testid="LedgerConfirmation-loading_message"
       >
         <div
-          class="animate-spin rounded-full border-[5px] flex-shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 border-l-theme-warning-900 dark:border-l-theme-warning-600"
+          class="animate-spin rounded-full border-[5px] shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 border-l-theme-warning-900 dark:border-l-theme-warning-600"
         />
         <div
-          class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle text-theme-warning-200 dark:text-theme-secondary-800"
+          class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle text-theme-warning-200 dark:text-theme-secondary-800"
         />
         <p
-          class="font-semibold text-theme-secondary-700 dark:text-theme-warning-600"
+          class="text-theme-secondary-700 dark:text-theme-warning-600 font-semibold"
         >
           This transaction is pending confirmation.
         </p>
@@ -907,7 +907,7 @@ exports[`AuthenticationStep (message) > should specify ledger supported model 1`
       data-testid="LedgerDeviceError"
     >
       <div
-        class="flex items-end justify-between bg-theme-background"
+        class="bg-theme-background flex items-end justify-between"
       >
         <div
           class="space-y-2"
@@ -923,7 +923,7 @@ exports[`AuthenticationStep (message) > should specify ledger supported model 1`
             </h1>
           </div>
           <div
-            class="flex items-center text-sm leading-5 text-theme-secondary-text md:text-base"
+            class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
             data-testid="header__subtitle"
           >
             Connect your Ledger Nano X and confirm input.
@@ -1071,7 +1071,7 @@ exports[`AuthenticationStep (message) > should specify ledger supported model 1`
           </span>
         </div>
         <div
-          class="w-full break-words p-4 text-left text-sm leading-relaxed dark:bg-theme-secondary-800 bg-theme-danger-50"
+          class="dark:bg-theme-secondary-800 w-full p-4 text-left text-sm leading-relaxed break-words bg-theme-danger-50"
         >
           A 
           <strong>
@@ -1088,10 +1088,10 @@ exports[`AuthenticationStep (message) > should specify ledger supported model 1`
         class="inline-flex w-full items-center justify-center space-x-3"
       >
         <div
-          class="animate-spin rounded-full border-[5px] flex-shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black border-l-theme-primary-600 dark:border-l-theme-primary-600"
+          class="animate-spin rounded-full border-[5px] shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black border-l-theme-primary-600 dark:border-l-theme-primary-600"
         />
         <span
-          class="animate-pulse font-semibold text-theme-secondary-text"
+          class="text-theme-secondary-text animate-pulse font-semibold"
           data-testid="LedgerWaitingDevice-loading_message"
         >
           Waiting for Ledger ...
@@ -1109,7 +1109,7 @@ exports[`AuthenticationStep (transaction) > should request mnemonic if wallet wa
     data-testid="AuthenticationStep"
   >
     <div
-      class="flex items-end justify-between bg-theme-background"
+      class="bg-theme-background flex items-end justify-between"
     >
       <div
         class="space-y-2"
@@ -1125,7 +1125,7 @@ exports[`AuthenticationStep (transaction) > should request mnemonic if wallet wa
           </h1>
         </div>
         <div
-          class="flex items-center text-sm leading-5 text-theme-secondary-text md:text-base"
+          class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
           data-testid="header__subtitle"
         >
           Enter your mnemonic passphrase to authenticate the transaction.
@@ -1136,14 +1136,14 @@ exports[`AuthenticationStep (transaction) > should request mnemonic if wallet wa
       class="[&:focus-within_.FormLabel]:text-theme-danger-500 [&>.FormLabel]:text-theme-danger-500 flex min-w-0 flex-col"
     >
       <label
-        class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
+        class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex text-sm leading-[17px] font-semibold transition-colors duration-100"
         data-testid="FormLabel"
         for="mnemonic"
       >
         Mnemonic
       </label>
       <div
-        class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+        class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
       >
         <div
           class="relative flex h-full flex-1"
@@ -1151,7 +1151,7 @@ exports[`AuthenticationStep (transaction) > should request mnemonic if wallet wa
           <input
             aria-invalid="true"
             autocomplete="off"
-            class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
+            class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
             data-testid="AuthenticationStep__mnemonic"
             name="mnemonic"
             type="password"
@@ -1159,7 +1159,7 @@ exports[`AuthenticationStep (transaction) > should request mnemonic if wallet wa
           />
         </div>
         <div
-          class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-danger-500"
+          class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-danger-500"
           data-testid="Input__addon-end"
         >
           <span
@@ -1167,7 +1167,7 @@ exports[`AuthenticationStep (transaction) > should request mnemonic if wallet wa
             data-testid="Input__error"
           >
             <div
-              class="text-theme-danger-500"
+              class="text-theme-danger-500 pr-3"
             >
               <div
                 style="height: 20px; width: 20px;"
@@ -1211,7 +1211,7 @@ exports[`AuthenticationStep (transaction) > should request mnemonic if wallet wa
             class="pl-3"
           >
             <button
-              class="ring-focus relative flex h-full w-full items-center justify-center text-2xl focus:outline-none"
+              class="ring-focus relative flex h-full w-full items-center justify-center text-2xl focus:outline-hidden"
               data-ring-focus-margin="-m-1"
               data-testid="InputPassword__toggle"
               type="button"
@@ -1264,7 +1264,7 @@ exports[`AuthenticationStep (transaction) > should request mnemonic if wallet wa
     data-testid="AuthenticationStep"
   >
     <div
-      class="flex items-end justify-between bg-theme-background"
+      class="bg-theme-background flex items-end justify-between"
     >
       <div
         class="space-y-2"
@@ -1280,7 +1280,7 @@ exports[`AuthenticationStep (transaction) > should request mnemonic if wallet wa
           </h1>
         </div>
         <div
-          class="flex items-center text-sm leading-5 text-theme-secondary-text md:text-base"
+          class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
           data-testid="header__subtitle"
         >
           Enter your mnemonic passphrase to authenticate the transaction.
@@ -1291,14 +1291,14 @@ exports[`AuthenticationStep (transaction) > should request mnemonic if wallet wa
       class="[&:focus-within_.FormLabel]:text-theme-danger-500 [&>.FormLabel]:text-theme-danger-500 flex min-w-0 flex-col"
     >
       <label
-        class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
+        class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex text-sm leading-[17px] font-semibold transition-colors duration-100"
         data-testid="FormLabel"
         for="mnemonic"
       >
         Mnemonic
       </label>
       <div
-        class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+        class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
       >
         <div
           class="relative flex h-full flex-1"
@@ -1306,7 +1306,7 @@ exports[`AuthenticationStep (transaction) > should request mnemonic if wallet wa
           <input
             aria-invalid="true"
             autocomplete="off"
-            class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
+            class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
             data-testid="AuthenticationStep__mnemonic"
             name="mnemonic"
             type="password"
@@ -1314,7 +1314,7 @@ exports[`AuthenticationStep (transaction) > should request mnemonic if wallet wa
           />
         </div>
         <div
-          class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-danger-500"
+          class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-danger-500"
           data-testid="Input__addon-end"
         >
           <span
@@ -1322,7 +1322,7 @@ exports[`AuthenticationStep (transaction) > should request mnemonic if wallet wa
             data-testid="Input__error"
           >
             <div
-              class="text-theme-danger-500"
+              class="text-theme-danger-500 pr-3"
             >
               <div
                 style="height: 20px; width: 20px;"
@@ -1366,7 +1366,7 @@ exports[`AuthenticationStep (transaction) > should request mnemonic if wallet wa
             class="pl-3"
           >
             <button
-              class="ring-focus relative flex h-full w-full items-center justify-center text-2xl focus:outline-none"
+              class="ring-focus relative flex h-full w-full items-center justify-center text-2xl focus:outline-hidden"
               data-ring-focus-margin="-m-1"
               data-testid="InputPassword__toggle"
               type="button"
@@ -1419,7 +1419,7 @@ exports[`AuthenticationStep (transaction) > should request secret if wallet was 
     data-testid="AuthenticationStep"
   >
     <div
-      class="flex items-end justify-between bg-theme-background"
+      class="bg-theme-background flex items-end justify-between"
     >
       <div
         class="space-y-2"
@@ -1435,7 +1435,7 @@ exports[`AuthenticationStep (transaction) > should request secret if wallet was 
           </h1>
         </div>
         <div
-          class="flex items-center text-sm leading-5 text-theme-secondary-text md:text-base"
+          class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
           data-testid="header__subtitle"
         >
           Enter your secret to authenticate the transaction.
@@ -1446,21 +1446,21 @@ exports[`AuthenticationStep (transaction) > should request secret if wallet was 
       class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
     >
       <label
-        class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
+        class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex text-sm leading-[17px] font-semibold transition-colors duration-100"
         data-testid="FormLabel"
         for="secret"
       >
         Secret
       </label>
       <div
-        class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+        class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
       >
         <div
           class="relative flex h-full flex-1"
         >
           <input
             autocomplete="off"
-            class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
+            class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
             data-testid="AuthenticationStep__secret"
             name="secret"
             type="password"
@@ -1468,14 +1468,14 @@ exports[`AuthenticationStep (transaction) > should request secret if wallet was 
           />
         </div>
         <div
-          class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+          class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
           data-testid="Input__addon-end"
         >
           <div
             class=""
           >
             <button
-              class="ring-focus relative flex h-full w-full items-center justify-center text-2xl focus:outline-none"
+              class="ring-focus relative flex h-full w-full items-center justify-center text-2xl focus:outline-hidden"
               data-ring-focus-margin="-m-1"
               data-testid="InputPassword__toggle"
               type="button"
@@ -1532,7 +1532,7 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting app scree
       data-testid="LedgerWaitingAppContent"
     >
       <div
-        class="flex items-end justify-between bg-theme-background"
+        class="bg-theme-background flex items-end justify-between"
       >
         <div
           class="space-y-2"
@@ -1548,7 +1548,7 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting app scree
             </h1>
           </div>
           <div
-            class="flex items-center text-sm leading-5 text-theme-secondary-text md:text-base"
+            class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
             data-testid="header__subtitle"
           >
             Connect your Ledger and confirm input.
@@ -1665,10 +1665,10 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting app scree
         class="inline-flex w-full items-center justify-center space-x-3"
       >
         <div
-          class="animate-spin rounded-full border-[5px] flex-shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black border-l-theme-primary-600 dark:border-l-theme-primary-600"
+          class="animate-spin rounded-full border-[5px] shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black border-l-theme-primary-600 dark:border-l-theme-primary-600"
         />
         <span
-          class="animate-pulse font-semibold text-theme-secondary-text"
+          class="text-theme-secondary-text animate-pulse font-semibold"
           data-testid="LedgerWaitingApp-loading_message"
         >
           Open the Mainsail app on your device ...
@@ -1689,7 +1689,7 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
       class="space-y-8"
     >
       <div
-        class="flex items-end justify-between bg-theme-background"
+        class="bg-theme-background flex items-end justify-between"
       >
         <div
           class="space-y-2"
@@ -1705,7 +1705,7 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
             </h1>
           </div>
           <div
-            class="flex items-center text-sm leading-5 text-theme-secondary-text md:text-base"
+            class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
             data-testid="header__subtitle"
           >
             Connect your Ledger and confirm input.
@@ -1822,10 +1822,10 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
         class="inline-flex w-full items-center justify-center space-x-3"
       >
         <div
-          class="animate-spin rounded-full border-[5px] flex-shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black border-l-theme-primary-600 dark:border-l-theme-primary-600"
+          class="animate-spin rounded-full border-[5px] shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black border-l-theme-primary-600 dark:border-l-theme-primary-600"
         />
         <span
-          class="animate-pulse font-semibold text-theme-secondary-text"
+          class="text-theme-secondary-text animate-pulse font-semibold"
           data-testid="LedgerWaitingDevice-loading_message"
         >
           Waiting for Ledger ...
@@ -1843,7 +1843,7 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
     data-testid="AuthenticationStep"
   >
     <div
-      class="flex items-end justify-between bg-theme-background"
+      class="bg-theme-background flex items-end justify-between"
     >
       <div
         class="space-y-2"
@@ -1870,17 +1870,17 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
         Please review and verify the information on your Ledger device. Choose Accept to complete your transaction.
       </div>
       <div
-        class="flex items-center space-x-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-6 py-5 dark:border-theme-warning-600 dark:bg-transparent"
+        class="border-theme-warning-200 bg-theme-warning-50 dark:border-theme-warning-600 flex items-center space-x-3 rounded-xl border px-6 py-5 dark:bg-transparent"
         data-testid="LedgerConfirmation-loading_message"
       >
         <div
-          class="animate-spin rounded-full border-[5px] flex-shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 border-l-theme-warning-900 dark:border-l-theme-warning-600"
+          class="animate-spin rounded-full border-[5px] shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 border-l-theme-warning-900 dark:border-l-theme-warning-600"
         />
         <div
-          class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle text-theme-warning-200 dark:text-theme-secondary-800"
+          class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle text-theme-warning-200 dark:text-theme-secondary-800"
         />
         <p
-          class="font-semibold text-theme-secondary-700 dark:text-theme-warning-600"
+          class="text-theme-secondary-700 dark:text-theme-warning-600 font-semibold"
         >
           This transaction is pending confirmation.
         </p>
@@ -1897,7 +1897,7 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
     data-testid="AuthenticationStep"
   >
     <div
-      class="flex items-end justify-between bg-theme-background"
+      class="bg-theme-background flex items-end justify-between"
     >
       <div
         class="space-y-2"
@@ -1924,17 +1924,17 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
         Please review and verify the information on your Ledger device. Choose Accept to complete your transaction.
       </div>
       <div
-        class="flex items-center space-x-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-6 py-5 dark:border-theme-warning-600 dark:bg-transparent"
+        class="border-theme-warning-200 bg-theme-warning-50 dark:border-theme-warning-600 flex items-center space-x-3 rounded-xl border px-6 py-5 dark:bg-transparent"
         data-testid="LedgerConfirmation-loading_message"
       >
         <div
-          class="animate-spin rounded-full border-[5px] flex-shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 border-l-theme-warning-900 dark:border-l-theme-warning-600"
+          class="animate-spin rounded-full border-[5px] shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 border-l-theme-warning-900 dark:border-l-theme-warning-600"
         />
         <div
-          class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle text-theme-warning-200 dark:text-theme-secondary-800"
+          class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle text-theme-warning-200 dark:text-theme-secondary-800"
         />
         <p
-          class="font-semibold text-theme-secondary-700 dark:text-theme-warning-600"
+          class="text-theme-secondary-700 dark:text-theme-warning-600 font-semibold"
         >
           This transaction is pending confirmation.
         </p>
@@ -1951,7 +1951,7 @@ exports[`AuthenticationStep (transaction) > should show only ledger confirmation
     data-testid="AuthenticationStep"
   >
     <div
-      class="flex items-end justify-between bg-theme-background"
+      class="bg-theme-background flex items-end justify-between"
     >
       <div
         class="space-y-2"
@@ -1978,17 +1978,17 @@ exports[`AuthenticationStep (transaction) > should show only ledger confirmation
         Please review and verify the information on your Ledger device. Choose Accept to complete your transaction.
       </div>
       <div
-        class="flex items-center space-x-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-6 py-5 dark:border-theme-warning-600 dark:bg-transparent"
+        class="border-theme-warning-200 bg-theme-warning-50 dark:border-theme-warning-600 flex items-center space-x-3 rounded-xl border px-6 py-5 dark:bg-transparent"
         data-testid="LedgerConfirmation-loading_message"
       >
         <div
-          class="animate-spin rounded-full border-[5px] flex-shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 border-l-theme-warning-900 dark:border-l-theme-warning-600"
+          class="animate-spin rounded-full border-[5px] shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 border-l-theme-warning-900 dark:border-l-theme-warning-600"
         />
         <div
-          class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle text-theme-warning-200 dark:text-theme-secondary-800"
+          class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle text-theme-warning-200 dark:text-theme-secondary-800"
         />
         <p
-          class="font-semibold text-theme-secondary-700 dark:text-theme-warning-600"
+          class="text-theme-secondary-700 dark:text-theme-warning-600 font-semibold"
         >
           This transaction is pending confirmation.
         </p>
@@ -2009,7 +2009,7 @@ exports[`AuthenticationStep (transaction) > should specify ledger supported mode
       data-testid="LedgerDeviceError"
     >
       <div
-        class="flex items-end justify-between bg-theme-background"
+        class="bg-theme-background flex items-end justify-between"
       >
         <div
           class="space-y-2"
@@ -2025,7 +2025,7 @@ exports[`AuthenticationStep (transaction) > should specify ledger supported mode
             </h1>
           </div>
           <div
-            class="flex items-center text-sm leading-5 text-theme-secondary-text md:text-base"
+            class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
             data-testid="header__subtitle"
           >
             Connect your Ledger Nano X and confirm input.
@@ -2173,7 +2173,7 @@ exports[`AuthenticationStep (transaction) > should specify ledger supported mode
           </span>
         </div>
         <div
-          class="w-full break-words p-4 text-left text-sm leading-relaxed dark:bg-theme-secondary-800 bg-theme-danger-50"
+          class="dark:bg-theme-secondary-800 w-full p-4 text-left text-sm leading-relaxed break-words bg-theme-danger-50"
         >
           A 
           <strong>
@@ -2190,10 +2190,10 @@ exports[`AuthenticationStep (transaction) > should specify ledger supported mode
         class="inline-flex w-full items-center justify-center space-x-3"
       >
         <div
-          class="animate-spin rounded-full border-[5px] flex-shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black border-l-theme-primary-600 dark:border-l-theme-primary-600"
+          class="animate-spin rounded-full border-[5px] shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black border-l-theme-primary-600 dark:border-l-theme-primary-600"
         />
         <span
-          class="animate-pulse font-semibold text-theme-secondary-text"
+          class="text-theme-secondary-text animate-pulse font-semibold"
           data-testid="LedgerWaitingDevice-loading_message"
         >
           Waiting for Ledger ...

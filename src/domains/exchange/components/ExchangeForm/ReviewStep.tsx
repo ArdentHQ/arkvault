@@ -21,9 +21,9 @@ export const ReviewStep = () => {
 
 	return (
 		<div data-testid="ExchangeForm__review-step" className="space-y-4">
-			<div className="flex flex-col rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800">
+			<div className="border-theme-secondary-300 dark:border-theme-secondary-800 flex flex-col rounded-xl border">
 				<div className="flex flex-col gap-2 px-6 py-5">
-					<span className="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
+					<span className="text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold">
 						{t("EXCHANGE.EXCHANGE_FORM.YOU_SEND")}
 					</span>
 					<Amount value={payinAmount} ticker={fromCurrency?.coin} className="text-lg font-semibold" />
@@ -32,14 +32,14 @@ export const ReviewStep = () => {
 					</span>
 				</div>
 
-				<div className="relative border-t border-theme-secondary-300 dark:border-theme-secondary-800">
-					<div className="absolute right-6 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-theme-secondary-300 bg-theme-background dark:border-theme-secondary-800">
+				<div className="border-theme-secondary-300 dark:border-theme-secondary-800 relative border-t">
+					<div className="border-theme-secondary-300 bg-theme-background dark:border-theme-secondary-800 absolute top-1/2 right-6 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border">
 						<Icon name="DoubleArrowDashed" className="text-theme-secondary-900 dark:text-white" size="lg" />
 					</div>
 				</div>
 
 				<div className="flex flex-col gap-2 px-6 py-5">
-					<span className="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
+					<span className="text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold">
 						{t("EXCHANGE.EXCHANGE_FORM.YOU_GET")}
 					</span>
 					<span className="pb-1 text-lg font-semibold">
@@ -51,7 +51,7 @@ export const ReviewStep = () => {
 
 			{estimatedTime && (
 				<div className="flex flex-col">
-					<span className="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
+					<span className="text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold">
 						{t("EXCHANGE.EXCHANGE_FORM.ESTIMATED_ARRIVAL")}
 					</span>
 					<span className="text-lg font-semibold">

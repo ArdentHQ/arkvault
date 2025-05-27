@@ -18,7 +18,7 @@ const UploadButtonWrapper = ({ ...props }: React.HTMLAttributes<HTMLDivElement>)
 const ProfileImageStyled = ({ ...props }: React.HTMLAttributes<HTMLDivElement>) => (
 	<div
 		{...props}
-		className="profile-image relative inline-flex h-full cursor-pointer items-center justify-center overflow-hidden rounded-md focus-within:ring-2 focus-within:ring-theme-primary-400"
+		className="profile-image focus-within:ring-theme-primary-400 relative inline-flex h-full cursor-pointer items-center justify-center overflow-hidden rounded-md focus-within:ring-2"
 	/>
 );
 
@@ -56,21 +56,21 @@ export const SelectProfileImage = ({ value, onSelect }: SelectProfileImageProper
 
 						<button
 							type="button"
-							className="absolute z-10 h-full w-full overflow-hidden p-1 opacity-0 transition-opacity duration-200 focus:outline-none"
+							className="absolute z-10 h-full w-full overflow-hidden p-1 opacity-0 transition-opacity duration-200 focus:outline-hidden"
 							onClick={handleOpenFile}
 							data-testid="SelectProfileImage__upload-button"
 						>
-							<div className="flex h-full items-center justify-center rounded-full bg-theme-secondary-900 opacity-85 dark:bg-black">
+							<div className="bg-theme-secondary-900 flex h-full items-center justify-center rounded-full opacity-85 dark:bg-black">
 								<Icon
 									name="ArrowUpBracket"
-									className="text-white dark:text-theme-secondary-200"
+									className="dark:text-theme-secondary-200 text-white"
 									size="lg"
 								/>
 							</div>
 						</button>
 					</ProfileImageStyled>
 
-					<div className="absolute -right-2 -top-2 z-20">
+					<div className="absolute -top-2 -right-2 z-20">
 						<Button
 							size="icon"
 							variant="danger"
@@ -86,7 +86,7 @@ export const SelectProfileImage = ({ value, onSelect }: SelectProfileImageProper
 		}
 
 		return (
-			<div className="h-[92px] w-[92px] rounded-lg border border-theme-secondary-300 p-1.5 focus-within:border-solid focus-within:border-theme-primary-400 dark:border-theme-dark-700">
+			<div className="border-theme-secondary-300 dark:border-theme-dark-700 focus-within:border-theme-primary-400 h-[92px] w-[92px] rounded-lg border p-1.5 focus-within:border-solid">
 				<div className="h-full overflow-hidden rounded">
 					<UploadButtonWrapper>
 						<Button

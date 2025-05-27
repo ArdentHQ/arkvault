@@ -1,15 +1,18 @@
 import path from "path";
 import { mergeConfig } from "vite";
 import { defineConfig } from "vitest/config";
-
 import viteConfig from "./vite.config";
+import svgr from "vite-plugin-svgr";
+import { VitePWA } from "vite-plugin-pwa";
 
 const coverageThresholdLines = Number(process.env.COVERAGE_THRESHOLD_LINES || 100);
 const coverageThresholdFunctions = Number(process.env.COVERAGE_THRESHOLD_FUNCTIONS || 100);
 const coverageThresholdStatements = Number(process.env.COVERAGE_THRESHOLD_STATEMENTS || 100);
 const coverageThresholdBranches = Number(process.env.COVERAGE_THRESHOLD_BRANCHES || 100);
 
-export default defineConfig((env) => {
+export default defineConfig(async (env) => {
+	const tailwindcss = (await import("@tailwindcss/vite")).default;
+
 	return mergeConfig(
 		viteConfig(env),
 		defineConfig({
@@ -67,6 +70,7 @@ export default defineConfig((env) => {
 					"identity-obj-proxy": require.resolve("identity-obj-proxy"),
 				},
 			},
+			plugins: [tailwindcss(), svgr(), VitePWA({ registerType: "autoUpdate" })],
 		}),
 	);
 });

@@ -13,7 +13,7 @@ describe("cloneDeep", () => {
 				this.address = address;
 			}
 
-			isDelegate() {
+			isValidator() {
 				return true;
 			}
 		}
@@ -21,13 +21,13 @@ describe("cloneDeep", () => {
 		const original = new Wallet("address");
 
 		expect(original).toEqual(original);
-		expect(original.isDelegate()).toBe(true);
+		expect(original.isValidator()).toBe(true);
 		expect(original.address).toBe("address");
 
 		const clone = cloneDeep(original);
 
 		expect(clone).toEqual(original);
-		expect(clone.isDelegate()).toBe(true);
+		expect(clone.isValidator()).toBe(true);
 		expect(clone.address).toBe("address");
 	});
 });

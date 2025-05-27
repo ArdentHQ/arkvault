@@ -14,7 +14,7 @@ export const Offline = () => {
 			navbarVariant="logo-only"
 			title={<Trans i18nKey="COMMON.APP_NAME" />}
 		>
-			<Section className="flex flex-1 flex-col justify-center !pt-0 text-center">
+			<Section className="flex flex-1 flex-col justify-center pt-0! text-center">
 				<div className="mx-auto flex w-full max-w-xs justify-center">
 					<Image name="ConnectionError" domain="error" />
 				</div>

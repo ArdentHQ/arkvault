@@ -22,7 +22,7 @@ import { ConfirmSendTransaction } from "@/domains/transaction/components/Confirm
 import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
 import { useTransaction } from "@/domains/transaction/hooks";
 import { useTransactionQueryParameters } from "@/domains/transaction/hooks/use-transaction-query-parameters";
-import { assertNetwork, assertString, assertWallet } from "@/utils/assertions";
+import { assertNetwork, assertWallet } from "@/utils/assertions";
 import { useTransactionURL } from "@/domains/transaction/hooks/use-transaction-url";
 import { toasts } from "@/app/services";
 import { useSearchParametersValidation } from "@/app/hooks/use-search-parameters-validation";
@@ -91,7 +91,7 @@ export const SendTransfer = () => {
 
 	const connectLedger = useCallback(async () => {
 		if (wallet) {
-			await connect(activeProfile, wallet.coinId(), wallet.networkId());
+			await connect(activeProfile, wallet.networkId());
 			void handleSubmit(() => submit(true))();
 		}
 	}, [wallet, activeProfile, connect]);
@@ -178,11 +178,6 @@ export const SendTransfer = () => {
 
 		const nextStep = activeTab + 1;
 
-		// if (nextStep === SendTransferStep.AuthenticationStep && senderWallet?.isMultiSignature()) {
-		// 	await handleSubmit(() => submit(true))();
-		// 	return;
-		// }
-
 		if (nextStep === SendTransferStep.AuthenticationStep && senderWallet?.isLedger()) {
 			if (!isLedgerTransportSupported()) {
 				setErrorMessage(t("WALLETS.MODAL_LEDGER_WALLET.COMPATIBILITY_ERROR"));
@@ -234,12 +229,7 @@ export const SendTransfer = () => {
 			if (!isValidUrl(url)) {
 				const urlBuilder = new URLBuilder();
 
-				const coin = network?.coin();
-				assertString(coin);
-
-				urlBuilder.setCoin(coin);
 				urlBuilder.setNethash(network?.meta().nethash);
-
 				uri = urlBuilder.generateTransfer(url);
 			}
 
@@ -252,7 +242,6 @@ export const SendTransfer = () => {
 		}
 
 		const result = await validateSearchParameters(activeProfile, env, qrData, {
-			coin: network?.coin(),
 			nethash: network?.meta().nethash,
 			network: network?.id(),
 		});

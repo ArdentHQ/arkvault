@@ -27,10 +27,10 @@ export const PendingTransferRowMobile = ({
 		<TableRow data-testid="TableRow__mobile" onClick={() => onRowClick?.(transaction)} border={false}>
 			<td>
 				<MobileCard className="mb-3">
-					<div className="flex h-11 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black">
+					<div className="bg-theme-secondary-100 flex h-11 w-full items-center justify-between px-4 dark:bg-black">
 						<div className="text-sm font-semibold">
 							<TruncateMiddle
-								className="cursor-pointer text-theme-primary-600"
+								className="text-theme-primary-600 cursor-pointer"
 								text={transaction.hash()}
 								maxChars={14}
 								onClick={() => onRowClick?.(transaction)}
@@ -39,7 +39,7 @@ export const PendingTransferRowMobile = ({
 						</div>
 
 						<div className="flex flex-row items-center">
-							<span className="hidden text-sm font-semibold text-theme-secondary-700 sm:block">
+							<span className="text-theme-secondary-700 hidden text-sm font-semibold sm:block">
 								{timeStamp ? (
 									<TimeAgo date={DateTime.fromUnix(timeStamp.toUNIX()).toISOString()} />
 								) : (
@@ -48,15 +48,15 @@ export const PendingTransferRowMobile = ({
 							</span>
 							<Divider
 								type="vertical"
-								className="m-0 border-transparent sm:border-theme-secondary-300 sm:dark:border-theme-secondary-800"
+								className="sm:border-theme-secondary-300 sm:dark:border-theme-secondary-800 m-0 border-transparent"
 							/>
-							<span className="flex flex-row items-center text-sm font-semibold text-theme-secondary-500">
+							<span className="text-theme-secondary-500 flex flex-row items-center text-sm font-semibold">
 								{t("TRANSACTION.WAITING")}...
 							</span>
 						</div>
 					</div>
 
-					<div className="flex w-full flex-col gap-4 px-4 pb-4 pt-3 sm:grid sm:grid-cols-[auto_auto_80px] sm:pb-2">
+					<div className="flex w-full flex-col gap-4 px-4 pt-3 pb-4 sm:grid sm:grid-cols-[auto_auto_80px] sm:pb-2">
 						<MobileSection title={t("COMMON.TRANSFER")}>
 							<div className="flex flex-row items-center gap-2">
 								<Label color="danger-bg" size="xs" noBorder className="rounded px-[11px] py-[3px]">
@@ -64,7 +64,7 @@ export const PendingTransferRowMobile = ({
 								</Label>
 								<span className="text-sm">
 									<TruncateMiddle
-										className="cursor-pointer font-semibold text-theme-primary-600"
+										className="text-theme-primary-600 cursor-pointer font-semibold"
 										text={transaction.to() || ""}
 										maxChars={14}
 										data-testid="PendingTransactionRowRecipientLabel"

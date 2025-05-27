@@ -77,7 +77,10 @@ export const ReviewStep = ({ unvotes, votes, wallet, profile }: SendVoteStepProp
 								<FormLabel label={t("TRANSACTION.TRANSACTION_FEE")} />
 								<FeeField
 									type="vote"
-									data={feeTransactionData}
+									data={{
+										...feeTransactionData,
+										voteAddresses: votes.map((vote) => vote.wallet?.address()),
+									}}
 									network={wallet.network()}
 									profile={profile}
 								/>

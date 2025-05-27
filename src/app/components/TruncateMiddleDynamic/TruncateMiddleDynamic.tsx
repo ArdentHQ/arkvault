@@ -16,7 +16,7 @@ export const getTruncatedValue = (referenceElement: HTMLElement, elementWidth: n
 
 	const element = document.createElement("span");
 	element.innerHTML = value;
-	element.classList.add("fixed", "invisible", "w-auto", "whitespace-nowrap", "!m-0", "!p-0");
+	element.classList.add("fixed", "invisible", "w-auto", "whitespace-nowrap", "m-0!", "p-0!");
 	referenceElement.append(element);
 
 	if (!hasOverflow(element)) {

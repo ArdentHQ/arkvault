@@ -12,10 +12,10 @@ export const TransactionRowMobileSkeleton = ({ hideSender = false }: { hideSende
 	const currencyWidth = Math.floor(amountWidth * 0.75);
 
 	return (
-		<TableRow className="group !border-b-0">
+		<TableRow className="group border-b-0!">
 			<td data-testid="TransactionRow__skeleton">
 				<MobileCard className="mb-3">
-					<div className="flex h-10 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black">
+					<div className="bg-theme-secondary-100 flex h-10 w-full items-center justify-between px-4 dark:bg-black">
 						<Skeleton height={17} width={70} />
 						{!hideSender && (
 							<div data-testid="TransactionRow__skeleton-sender">
@@ -24,7 +24,7 @@ export const TransactionRowMobileSkeleton = ({ hideSender = false }: { hideSende
 						)}
 					</div>
 
-					<div className="flex w-full flex-col gap-4 px-4 pb-4 pt-3 sm:grid sm:grid-cols-[200px_auto_130px] sm:pb-2">
+					<div className="flex w-full flex-col gap-4 px-4 pt-3 pb-4 sm:grid sm:grid-cols-[200px_auto_130px] sm:pb-2">
 						<div className="flex flex-col gap-2">
 							<Skeleton height={17} width={70} />
 							<Skeleton height={17} width={recipientWidth} />

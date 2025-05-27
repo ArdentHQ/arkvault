@@ -48,8 +48,8 @@ export const NotificationTransactionItem = ({
 			<TableRow onClick={() => onTransactionClick?.(transaction)} className="relative">
 				<TableCell variant="start" className="w-2/5" innerClassName="pl-6 static mx-0">
 					{isNotificationUnread(transaction) && (
-						<div className="absolute bottom-0 left-2 top-0 flex items-center">
-							<div className="h-2 w-2 rounded-full bg-theme-danger-400" />
+						<div className="absolute top-0 bottom-0 left-2 flex items-center">
+							<div className="bg-theme-danger-400 h-2 w-2 rounded-full" />
 						</div>
 					)}
 					<div className="w-20 flex-1">
@@ -68,7 +68,7 @@ export const NotificationTransactionItem = ({
 							isNegative={transaction.isSent()}
 							ticker={transaction.wallet().currency()}
 						/>
-						<div className="absolute -bottom-px right-0 h-px w-8 bg-white dark:bg-theme-secondary-900" />
+						<div className="dark:bg-theme-secondary-900 absolute right-0 -bottom-px h-px w-8 bg-white" />
 					</div>
 				</TableCell>
 			</TableRow>

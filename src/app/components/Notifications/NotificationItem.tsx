@@ -24,7 +24,7 @@ export const NotificationItem = ({
 			containment={containmentRef?.current}
 		>
 			<div>
-				<span className="text-md font-bold text-theme-secondary-600">{name}</span>
+				<span className="text-md text-theme-secondary-600 font-bold">{name}</span>
 				<span className="text-md text-theme-secondary-600"> {body}</span>
 			</div>
 		</VisibilitySensor>
@@ -40,7 +40,7 @@ export const NotificationItem = ({
 				{action && action.label && (
 					<div
 						data-testid="NotificationItem__action"
-						className="text-md cursor-pointer text-right font-bold text-theme-primary-500"
+						className="text-md text-theme-primary-500 cursor-pointer text-right font-bold"
 						onClick={() => onAction?.(id)}
 					>
 						{action.label}

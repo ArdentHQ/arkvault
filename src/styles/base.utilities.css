@@ -1,0 +1,7 @@
+@utility overflow-overlay {
+  overflow: overlay;
+}
+
+@utility filter-grayscale {
+  filter: grayscale(1);
+}

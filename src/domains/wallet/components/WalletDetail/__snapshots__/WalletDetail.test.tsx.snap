@@ -13,7 +13,7 @@ exports[`WalletDetail > should render 1`] = `
         class="w-40 space-y-2 whitespace-nowrap sm:flex-1"
       >
         <div
-          class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+          class="no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold"
         >
           Test
         </div>
@@ -54,7 +54,7 @@ exports[`WalletDetail > should render with bottom border 1`] = `
         class="w-40 space-y-2 whitespace-nowrap sm:flex-1"
       >
         <div
-          class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+          class="no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold"
         >
           Test
         </div>
@@ -95,7 +95,7 @@ exports[`WalletDetail > should render with extra children 1`] = `
         class="w-40 space-y-2 whitespace-nowrap sm:flex-1"
       >
         <div
-          class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+          class="no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold"
         >
           Test
         </div>
@@ -139,7 +139,7 @@ exports[`WalletDetail > should render with top border 1`] = `
         class="w-40 space-y-2 whitespace-nowrap sm:flex-1"
       >
         <div
-          class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+          class="no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold"
         >
           Test
         </div>
@@ -180,7 +180,7 @@ exports[`WalletDetail > should render without border 1`] = `
         class="w-40 space-y-2 whitespace-nowrap sm:flex-1"
       >
         <div
-          class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+          class="no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold"
         >
           Test
         </div>
@@ -221,7 +221,7 @@ exports[`WalletDetail > should render without padding 1`] = `
         class="w-40 space-y-2 whitespace-nowrap sm:flex-1"
       >
         <div
-          class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+          class="no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold"
         >
           Test
         </div>

@@ -37,7 +37,7 @@ const Handle = ({ small, ...properties }: HandleProperties) => (
 	<div
 		{...properties}
 		className={twMerge(
-			"toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800",
+			"toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full",
 			cn({ "w-6": small, "w-[30px]": !small }),
 		)}
 	/>

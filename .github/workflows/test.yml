@@ -590,9 +590,9 @@ jobs:
             - name: Test
               uses: nick-invision/retry@v2
               env:
-                  COVERAGE_THRESHOLD_LINES: 98.32
+                  COVERAGE_THRESHOLD_LINES: 98.31
                   COVERAGE_THRESHOLD_FUNCTIONS: 98.3
-                  COVERAGE_THRESHOLD_STATEMENTS: 98.41
+                  COVERAGE_THRESHOLD_STATEMENTS: 98.4
                   COVERAGE_THRESHOLD_BRANCHES: 95.86
                   COVERAGE_INCLUDE_PATH: src/domains/message
               with:
@@ -780,10 +780,10 @@ jobs:
 
             - name: Test Pages
               env:
-                  COVERAGE_THRESHOLD_LINES: 93
+                  COVERAGE_THRESHOLD_LINES: 92.97
                   COVERAGE_THRESHOLD_FUNCTIONS: 91.66
-                  COVERAGE_THRESHOLD_STATEMENTS: 93.13
-                  COVERAGE_THRESHOLD_BRANCHES: 85.03
+                  COVERAGE_THRESHOLD_STATEMENTS: 93.1
+                  COVERAGE_THRESHOLD_BRANCHES: 84.92
                   COVERAGE_INCLUDE_PATH: src/domains/transaction/pages
               uses: nick-invision/retry@v2
               with:

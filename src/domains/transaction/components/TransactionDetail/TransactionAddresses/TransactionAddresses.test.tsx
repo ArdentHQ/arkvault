@@ -22,7 +22,7 @@ describe("TransactionAddresses", () => {
 			address: wallet.address(),
 			alias: wallet.alias(),
 			amount: 100,
-			isDelegate: false,
+			isValidator: false,
 		}));
 	});
 

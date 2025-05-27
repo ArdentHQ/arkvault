@@ -89,7 +89,7 @@ export const SidePanel = ({
 			<FloatingPortal>
 				{isMounted && (
 					<>
-						<div className="fixed inset-0 z-40 bg-[#212225] bg-opacity-10 backdrop-blur-xl dark:bg-[#191d22]/90 dark:backdrop-blur-none" />
+						<div className="fixed inset-0 z-40 bg-[#212225]/10 backdrop-blur-xl dark:bg-[#191d22]/90 dark:backdrop-blur-none" />
 						<FloatingOverlay className="z-50 transition-opacity duration-300" lockScroll>
 							<FloatingFocusManager context={context} disabled={isUnit()}>
 								<div
@@ -100,37 +100,37 @@ export const SidePanel = ({
 								>
 									<div
 										style={{ ...styles }}
-										className={cn("fixed right-0 top-0 w-full md:w-[608px]", className)}
+										className={cn("fixed top-0 right-0 w-full md:w-[608px]", className)}
 									>
 										<div
 											data-testid="SidePanel__scrollable-content"
-											className="navy-scroll h-dvh w-full overflow-y-scroll bg-theme-background pt-14 text-theme-text shadow-[0_15px_35px_0px_rgba(33,34,37,0.08)]"
+											className="navy-scroll bg-theme-background text-theme-text h-dvh w-full overflow-y-scroll pt-14 shadow-[0_15px_35px_0px_rgba(33,34,37,0.08)]"
 											ref={scrollRef}
 										>
 											<div className="relative">
-												<div className="fixed left-0 right-0 top-0 z-10 w-full bg-theme-background">
+												<div className="bg-theme-background fixed top-0 right-0 left-0 z-10 w-full">
 													<div className="relative flex flex-col">
 														<div
 															className={cn(
 																"flex items-start justify-between px-6 py-4",
 																{
-																	"border-b border-b-theme-secondary-300 dark:border-b-theme-secondary-800":
+																	"border-b-theme-secondary-300 dark:border-b-theme-secondary-800 border-b":
 																		!hasSteps,
 																},
 															)}
 														>
 															<div className="flex items-center gap-2">
 																{titleIcon && (
-																	<div className="flex-shrink-0 text-theme-primary-600 dark:text-theme-navy-500">
+																	<div className="text-theme-primary-600 dark:text-theme-navy-500 shrink-0">
 																		{titleIcon}
 																	</div>
 																)}
-																<h2 className="mb-0 text-lg font-semibold leading-[21px] md:pt-0">
+																<h2 className="mb-0 text-lg leading-[21px] font-semibold md:pt-0">
 																	{title}
 																</h2>
 															</div>
 
-															<div className="h-6 w-6 rounded bg-transparent text-theme-secondary-700 transition-all duration-100 ease-linear hover:bg-theme-primary-800 hover:text-white dark:bg-transparent dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white">
+															<div className="text-theme-secondary-700 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 h-6 w-6 rounded bg-transparent transition-all duration-100 ease-linear hover:text-white dark:bg-transparent dark:hover:text-white">
 																<Button
 																	data-testid="SidePanel__close-button"
 																	variant="transparent"
@@ -159,7 +159,7 @@ export const SidePanel = ({
 
 											<div className="flex flex-col gap-4 px-6 py-4">
 												{subtitle && (
-													<div className="text-sm font-normal leading-5 text-theme-secondary-text md:text-base">
+													<div className="text-theme-secondary-text text-sm leading-5 font-normal md:text-base">
 														{subtitle}
 													</div>
 												)}

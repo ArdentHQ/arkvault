@@ -44,7 +44,7 @@ export const RecipientListItem: React.VFC<RecipientListItemProperties> = ({
 
 		return (
 			<td className="flex-1 shrink-0 py-6 pl-3 text-right">
-				<div className="mb-1 text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
+				<div className="text-theme-secondary-500 dark:text-theme-secondary-700 mb-1 text-sm font-semibold">
 					{showExchangeAmount ? (
 						<Amount ticker={exchangeTicker} value={convert(amount)} />
 					) : (
@@ -61,7 +61,7 @@ export const RecipientListItem: React.VFC<RecipientListItemProperties> = ({
 	if (variant === "condensed") {
 		return (
 			<tr
-				className="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
+				className="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
 				data-testid="recipient-list__recipient-list-item"
 			>
 				<td className="mr-3 table-cell md:hidden">{renderAmount()}</td>
@@ -87,7 +87,7 @@ export const RecipientListItem: React.VFC<RecipientListItemProperties> = ({
 
 	return (
 		<tr
-			className="flex border-b border-dashed border-theme-secondary-300 last:border-b-0 dark:border-theme-secondary-800"
+			className="border-theme-secondary-300 dark:border-theme-secondary-800 flex border-b border-dashed last:border-b-0"
 			data-testid="recipient-list__recipient-list-item"
 		>
 			<td className="flex-none py-6">
@@ -95,7 +95,7 @@ export const RecipientListItem: React.VFC<RecipientListItemProperties> = ({
 			</td>
 
 			<td className="ml-5 w-28 flex-1 py-6">
-				<div className="mb-1 text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
+				<div className="text-theme-secondary-500 dark:text-theme-secondary-700 mb-1 text-sm font-semibold">
 					<span>{t(label ?? "COMMON.RECIPIENT_#", { count: listIndex + 1 })}</span>
 				</div>
 				<Address address={address} walletName={alias} />

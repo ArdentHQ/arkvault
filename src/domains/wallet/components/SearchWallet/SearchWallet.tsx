@@ -43,7 +43,7 @@ const SearchWalletListItem = ({
 					size="icon"
 					variant="transparent"
 					onClick={() => onAction({ address: wallet.address(), name: alias, network: wallet.network() })}
-					className="-mr-3 py-0 text-sm leading-[17px] text-theme-primary-reverse-600"
+					className="text-theme-primary-reverse-600 -mr-3 py-0 text-sm leading-[17px]"
 				>
 					{t("COMMON.SELECTED")}
 				</Button>
@@ -58,7 +58,7 @@ const SearchWalletListItem = ({
 						disabled={disabled || !isLedgerWalletCompatible(wallet)}
 						size="icon"
 						variant="transparent"
-						className="-mr-3 text-sm leading-[17px] text-theme-primary-600"
+						className="text-theme-primary-600 -mr-3 text-sm leading-[17px]"
 						onClick={() => onAction({ address: wallet.address(), name: alias, network: wallet.network() })}
 					>
 						{t("COMMON.SELECT")}

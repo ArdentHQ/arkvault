@@ -41,11 +41,7 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 	});
 
 	it("should validate if mnemonic match the wallet address", async () => {
-		wallet = await profile.walletFactory().fromMnemonicWithBIP39({
-			coin: "Mainsail",
-			mnemonic: MAINSAIL_MNEMONICS[0],
-			network: MainsailDevnet,
-		});
+		wallet = await profile.walletFactory().fromMnemonicWithBIP39({ mnemonic: MAINSAIL_MNEMONICS[0] });
 
 		const walletExists = profile.wallets().findByAddressWithNetwork(wallet.address(), wallet.networkId());
 
@@ -74,11 +70,7 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 	});
 
 	it("should request mnemonic if wallet was imported using mnemonic", async () => {
-		wallet = await profile.walletFactory().fromMnemonicWithBIP39({
-			coin: "Mainsail",
-			mnemonic: MAINSAIL_MNEMONICS[2],
-			network: MainsailDevnet,
-		});
+		wallet = await profile.walletFactory().fromMnemonicWithBIP39({ mnemonic: MAINSAIL_MNEMONICS[2] });
 
 		const { form, asFragment } = renderWithForm(<AuthenticationStep subject={subject} wallet={wallet} />, {
 			withProviders: true,
@@ -94,11 +86,7 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 	});
 
 	it("should request secret if wallet was imported using secret", async () => {
-		wallet = await profile.walletFactory().fromSecret({
-			coin: "Mainsail",
-			network: MainsailDevnet,
-			secret: "secret",
-		});
+		wallet = await profile.walletFactory().fromSecret({ secret: "secret" });
 
 		const { form, asFragment } = renderWithForm(<AuthenticationStep subject={subject} wallet={wallet} />, {
 			withProviders: true,
@@ -300,8 +288,9 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 
 	it("should render with encryption password input", async () => {
 		mockNanoXTransport();
+
 		vi.spyOn(wallet, "actsWithMnemonic").mockReturnValue(false);
-		vi.spyOn(wallet, "actsWithWifWithEncryption").mockReturnValue(true);
+		vi.spyOn(wallet, "actsWithSecretWithEncryption").mockReturnValue(true);
 		vi.spyOn(wallet.signingKey(), "get").mockReturnValue(PBKDF2.encrypt(getDefaultWalletMnemonic(), "password"));
 		renderWithForm(<AuthenticationStep subject={subject} wallet={wallet} />, { withProviders: true });
 

@@ -11,7 +11,7 @@ exports[`PageSkeleton > should render without profile 1`] = `
     >
       <nav
         aria-labelledby="main menu"
-        class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 dark:bg-theme-dark-900 h-21"
+        class="custom-nav-wrapper dark:bg-theme-dark-900 sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 h-21"
       >
         <div
           class="relative flex"
@@ -23,7 +23,7 @@ exports[`PageSkeleton > should render without profile 1`] = `
               class="my-auto flex h-12 items-center"
             >
               <button
-                class="my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-11 w-11 rounded-xl"
+                class="bg-theme-primary-600 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 my-auto flex cursor-pointer items-center justify-center text-white outline-hidden focus:ring-2 focus:outline-hidden h-11 w-11 rounded-xl"
                 data-testid="NavigationBarLogo--button"
                 type="button"
               >
@@ -48,7 +48,7 @@ exports[`PageSkeleton > should render without profile 1`] = `
                 </span>
               </button>
               <span
-                class="ml-4 text-lg uppercase leading-[21px]"
+                class="ml-4 text-lg leading-[21px] uppercase"
               >
                 <strong>
                   ARK
@@ -66,13 +66,13 @@ exports[`PageSkeleton > should render without profile 1`] = `
           class="w-full py-4 first:pt-8 last:pb-8 -mt-5 flex flex-1 md:mt-0 xl:px-10"
         >
           <div
-            class="mx-auto px-6 lg:container md:px-10 w-full lg:max-w-screen-xl"
+            class="mx-auto px-6 md:px-10 lg:container w-full lg:max-w-screen-xl"
           >
             <div
               class="flex flex-col gap-3 lg:flex-row"
             >
               <div
-                class="hidden min-w-0 basis-1/2 rounded-xl border border-theme-navy-100 bg-theme-navy-50 bg-[url('/welcome-bg-white.svg')] dark:border-theme-secondary-800 dark:bg-theme-secondary-800 dark:bg-[url('/welcome-bg-dark.svg')] sm:block"
+                class="border-theme-navy-100 bg-theme-navy-50 bg-[url( dark:border-theme-secondary-800 dark:bg-theme-secondary-800'/welcome-bg-white.svg')] hidden min-w-0 basis-1/2 rounded-xl border sm:block dark:bg-[url('/welcome-bg-dark.svg')]"
               >
                 <div
                   class="slick-slider slick-initialized"
@@ -97,15 +97,15 @@ exports[`PageSkeleton > should render without profile 1`] = `
                             class="flex w-full flex-row md:w-auto lg:flex-col"
                           >
                             <div
-                              class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                              class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                             >
                               <h3
-                                class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                                class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                               >
                                 Fully Customizable
                               </h3>
                               <p
-                                class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                                class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                               >
                                 Tailor your experience by setting your local currency, adjusting timezones, and easily customizing themes and colors to your liking.
                               </p>
@@ -124,7 +124,7 @@ exports[`PageSkeleton > should render without profile 1`] = `
                               </div>
                               <img
                                 alt="Fully Customizable"
-                                class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                                class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                                 loading="lazy"
                                 src="/src/domains/profile/images/welcome-slide-3-sm-light.png"
                               />
@@ -144,15 +144,15 @@ exports[`PageSkeleton > should render without profile 1`] = `
                             class="flex w-full flex-row md:w-auto lg:flex-col"
                           >
                             <div
-                              class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                              class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                             >
                               <h3
-                                class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                                class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                               >
                                 Easy Access to Your Digital Assets
                               </h3>
                               <p
-                                class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                                class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                               >
                                 Access and manage your ARK assets with ease. Importing and viewing your addresses has never been simpler.
                               </p>
@@ -171,7 +171,7 @@ exports[`PageSkeleton > should render without profile 1`] = `
                               </div>
                               <img
                                 alt="Easy Access to Your Digital Assets"
-                                class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                                class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                                 loading="lazy"
                                 src="/src/domains/profile/images/welcome-slide-1-sm-light.png"
                               />
@@ -191,15 +191,15 @@ exports[`PageSkeleton > should render without profile 1`] = `
                             class="flex w-full flex-row md:w-auto lg:flex-col"
                           >
                             <div
-                              class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                              class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                             >
                               <h3
-                                class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                                class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                               >
                                 Integrated Exchanges
                               </h3>
                               <p
-                                class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                                class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                               >
                                 Effortlessly swap your assets to and from ARK right within the wallet, with native support for Changelly and ChangeNow services.
                               </p>
@@ -218,7 +218,7 @@ exports[`PageSkeleton > should render without profile 1`] = `
                               </div>
                               <img
                                 alt="Integrated Exchanges"
-                                class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                                class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                                 loading="lazy"
                                 src="/src/domains/profile/images/welcome-slide-2-sm-light.png"
                               />
@@ -238,15 +238,15 @@ exports[`PageSkeleton > should render without profile 1`] = `
                             class="flex w-full flex-row md:w-auto lg:flex-col"
                           >
                             <div
-                              class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                              class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                             >
                               <h3
-                                class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                                class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                               >
                                 Fully Customizable
                               </h3>
                               <p
-                                class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                                class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                               >
                                 Tailor your experience by setting your local currency, adjusting timezones, and easily customizing themes and colors to your liking.
                               </p>
@@ -265,7 +265,7 @@ exports[`PageSkeleton > should render without profile 1`] = `
                               </div>
                               <img
                                 alt="Fully Customizable"
-                                class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                                class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                                 loading="lazy"
                                 src="/src/domains/profile/images/welcome-slide-3-sm-light.png"
                               />
@@ -285,15 +285,15 @@ exports[`PageSkeleton > should render without profile 1`] = `
                             class="flex w-full flex-row md:w-auto lg:flex-col"
                           >
                             <div
-                              class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                              class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                             >
                               <h3
-                                class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                                class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                               >
                                 Easy Access to Your Digital Assets
                               </h3>
                               <p
-                                class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                                class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                               >
                                 Access and manage your ARK assets with ease. Importing and viewing your addresses has never been simpler.
                               </p>
@@ -312,7 +312,7 @@ exports[`PageSkeleton > should render without profile 1`] = `
                               </div>
                               <img
                                 alt="Easy Access to Your Digital Assets"
-                                class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                                class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                                 loading="lazy"
                                 src="/src/domains/profile/images/welcome-slide-1-sm-light.png"
                               />
@@ -332,15 +332,15 @@ exports[`PageSkeleton > should render without profile 1`] = `
                             class="flex w-full flex-row md:w-auto lg:flex-col"
                           >
                             <div
-                              class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                              class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                             >
                               <h3
-                                class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                                class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                               >
                                 Integrated Exchanges
                               </h3>
                               <p
-                                class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                                class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                               >
                                 Effortlessly swap your assets to and from ARK right within the wallet, with native support for Changelly and ChangeNow services.
                               </p>
@@ -359,7 +359,7 @@ exports[`PageSkeleton > should render without profile 1`] = `
                               </div>
                               <img
                                 alt="Integrated Exchanges"
-                                class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                                class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                                 loading="lazy"
                                 src="/src/domains/profile/images/welcome-slide-2-sm-light.png"
                               />
@@ -379,15 +379,15 @@ exports[`PageSkeleton > should render without profile 1`] = `
                             class="flex w-full flex-row md:w-auto lg:flex-col"
                           >
                             <div
-                              class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                              class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                             >
                               <h3
-                                class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                                class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                               >
                                 Fully Customizable
                               </h3>
                               <p
-                                class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                                class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                               >
                                 Tailor your experience by setting your local currency, adjusting timezones, and easily customizing themes and colors to your liking.
                               </p>
@@ -406,7 +406,7 @@ exports[`PageSkeleton > should render without profile 1`] = `
                               </div>
                               <img
                                 alt="Fully Customizable"
-                                class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                                class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                                 loading="lazy"
                                 src="/src/domains/profile/images/welcome-slide-3-sm-light.png"
                               />
@@ -427,21 +427,21 @@ exports[`PageSkeleton > should render without profile 1`] = `
                         class="slick-active"
                       >
                         <button
-                          class="h-3 w-3 rounded-full border-2 border-theme-navy-200 hover:border-transparent hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:border-transparent dark:hover:bg-theme-secondary-600"
+                          class="border-theme-navy-200 dark:border-theme-secondary-600 dark:hover:bg-theme-secondary-600 hover:bg-theme-navy-700 h-3 w-3 rounded-full border-2 hover:border-transparent dark:hover:border-transparent"
                         />
                       </li>
                       <li
                         class=""
                       >
                         <button
-                          class="h-3 w-3 rounded-full border-2 border-theme-navy-200 hover:border-transparent hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:border-transparent dark:hover:bg-theme-secondary-600"
+                          class="border-theme-navy-200 dark:border-theme-secondary-600 dark:hover:bg-theme-secondary-600 hover:bg-theme-navy-700 h-3 w-3 rounded-full border-2 hover:border-transparent dark:hover:border-transparent"
                         />
                       </li>
                       <li
                         class=""
                       >
                         <button
-                          class="h-3 w-3 rounded-full border-2 border-theme-navy-200 hover:border-transparent hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:border-transparent dark:hover:bg-theme-secondary-600"
+                          class="border-theme-navy-200 dark:border-theme-secondary-600 dark:hover:bg-theme-secondary-600 hover:bg-theme-navy-700 h-3 w-3 rounded-full border-2 hover:border-transparent dark:hover:border-transparent"
                         />
                       </li>
                        
@@ -450,7 +450,7 @@ exports[`PageSkeleton > should render without profile 1`] = `
                 </div>
               </div>
               <div
-                class="min-w-0 basis-1/2 rounded-xl border-theme-navy-100 dark:border-theme-secondary-800 sm:border sm:p-6"
+                class="border-theme-navy-100 dark:border-theme-secondary-800 min-w-0 basis-1/2 rounded-xl sm:border sm:p-6"
               >
                 <div
                   class="mx-auto flex h-[calc(100vh_-_160px)] max-w-[400px] flex-col sm:h-full"
@@ -564,14 +564,14 @@ exports[`PageSkeleton > should render without profile 1`] = `
                         class="w-full space-y-3"
                       >
                         <div
-                          class="flex items-center justify-between rounded-lg border border-theme-secondary-200 p-1 dark:border-theme-secondary-800"
+                          class="border-theme-secondary-200 dark:border-theme-secondary-800 flex items-center justify-between rounded-lg border p-1"
                           data-testid="ProfileRowSkeleton"
                         >
                           <div
-                            class="h-10 w-10 bg-theme-secondary-100 dark:bg-theme-secondary-800"
+                            class="bg-theme-secondary-100 dark:bg-theme-secondary-800 h-10 w-10"
                           />
                           <div
-                            class="mr-1.5 pr-1.5 text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
+                            class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 mr-1.5 pr-1.5 transition-colors duration-200"
                           >
                             <div
                               style="height: 16px; width: 16px;"
@@ -608,14 +608,14 @@ exports[`PageSkeleton > should render without profile 1`] = `
                           </div>
                         </div>
                         <div
-                          class="flex items-center justify-between rounded-lg border border-theme-secondary-200 p-1 dark:border-theme-secondary-800"
+                          class="border-theme-secondary-200 dark:border-theme-secondary-800 flex items-center justify-between rounded-lg border p-1"
                           data-testid="ProfileRowSkeleton"
                         >
                           <div
-                            class="h-10 w-10 bg-theme-secondary-100 dark:bg-theme-secondary-800"
+                            class="bg-theme-secondary-100 dark:bg-theme-secondary-800 h-10 w-10"
                           />
                           <div
-                            class="mr-1.5 pr-1.5 text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
+                            class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 mr-1.5 pr-1.5 transition-colors duration-200"
                           >
                             <div
                               style="height: 16px; width: 16px;"
