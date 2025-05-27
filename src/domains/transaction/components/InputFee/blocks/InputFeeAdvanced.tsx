@@ -39,28 +39,48 @@ export const InputFeeAdvanced: React.FC<InputFeeAdvancedProperties> = ({
 	const formField = useFormField();
 	const hasError = formField?.isInvalid;
 
+	const handleGasPriceChange = (nextValue: BigNumber) => {
+		if (nextValue.isLessThan(minGasPrice)) {
+			onChangeGasPrice(minGasPrice);
+			return;
+		}
+
+		if (nextValue.isGreaterThan(maxGasPrice)) {
+			onChangeGasPrice(maxGasPrice);
+			return;
+		}
+
+		onChangeGasPrice(nextValue);
+	}
+
 	const handleGasPriceIncrement = () => {
-		const incrementedValue = BigNumber.make(incrementGasFee());
-		const value = incrementedValue.isGreaterThan(maxGasPrice) ? maxGasPrice : incrementedValue;
-		onChangeGasPrice(BigNumber.make(value));
+		handleGasPriceChange(BigNumber.make(incrementGasFee()));
 	};
 
 	const handleGasPriceDecrement = () => {
-		const decrementedValue = BigNumber.make(decrementGasFee());
-		const value = decrementedValue.isLessThan(minGasPrice) ? minGasPrice : decrementedValue;
-		onChangeGasPrice(value);
+		handleGasPriceChange(BigNumber.make(decrementGasFee()));
 	};
 
+	const handleGasLimitChange = (nextValue: BigNumber) => {
+		if (nextValue.isLessThan(minGasLimit)) {
+			onChangeGasLimit(minGasLimit);
+			return;
+		}
+
+		if (nextValue.isGreaterThan(maxGasLimit)) {
+			onChangeGasLimit(maxGasLimit);
+			return;
+		}
+
+		onChangeGasLimit(nextValue);
+	}
+
 	const handleGasLimitIncrement = () => {
-		const incrementedValue = BigNumber.make(incrementGasLimit());
-		const value = incrementedValue.isGreaterThan(maxGasLimit) ? maxGasLimit : incrementedValue;
-		onChangeGasLimit(BigNumber.make(value));
+		handleGasLimitChange(BigNumber.make(incrementGasLimit()));
 	};
 
 	const handleGasLimitDecrement = () => {
-		const decrementedValue = BigNumber.make(decrementGasLimit());
-		const value = decrementedValue.isLessThan(minGasLimit) ? minGasLimit : decrementedValue;
-		onChangeGasLimit(value);
+		handleGasLimitChange(BigNumber.make(decrementGasLimit()));
 	};
 
 	const gasFee = calculateGasFee(gasPrice, gasLimit);

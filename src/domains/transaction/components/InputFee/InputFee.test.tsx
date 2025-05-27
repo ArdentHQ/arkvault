@@ -7,18 +7,17 @@ import { InputFee } from "./InputFee";
 import { InputFeeProperties, InputFeeOption, InputFeeViewType } from "./InputFee.contracts";
 import { translations } from "@/domains/transaction/i18n";
 import { env, render, renderResponsive, screen } from "@/utils/testing-library";
+import { BigNumber } from "@/app/lib/helpers";
 
 const getDefaultProperties = (): Omit<InputFeeProperties, "network" | "profile"> => ({
-	avg: 0.456,
-	defaultGasLimit: 100_000,
+	avg: BigNumber.make(0.456),
 	disabled: false,
-	gasLimit: 100_000,
-	gasPrice: 0.3,
-	gasPriceStep: 0.001,
+	estimatedGasLimit: BigNumber.make(100_000),
+	gasLimit: BigNumber.make(100_000),
+	gasPrice: BigNumber.make(0.3),
 	loading: false,
-	max: 0.5,
-	min: 0.006,
-	minGasPrice: 0.006,
+	max: BigNumber.make(0.5),
+	min: BigNumber.make(0.006),
 	onChangeFeeOption: vi.fn(),
 	onChangeGasLimit: vi.fn(),
 	onChangeGasPrice: vi.fn(),
@@ -50,8 +49,8 @@ describe("InputFee", () => {
 			const [simpleValue, setSimpleValue] = useState(defaultProps.selectedFeeOption);
 			const [gasLimit, setGasLimit] = useState(defaultProps.gasLimit);
 
-			const handleChangeGasPrice = (newValue: number) => {
-				setGasPrice(newValue);
+			const handleChangeGasPrice = (newValue: BigNumber|string|number) => {
+				setGasPrice(BigNumber.make(newValue));
 				defaultProps.onChangeGasPrice(newValue);
 			};
 
@@ -65,8 +64,8 @@ describe("InputFee", () => {
 				defaultProps.onChangeFeeOption?.(value_);
 			};
 
-			const handleChangeGasLimit = (value: number) => {
-				setGasLimit(value);
+			const handleChangeGasLimit = (value: BigNumber|string|number) => {
+				setGasLimit(BigNumber.make(value));
 				defaultProps.onChangeGasLimit(value);
 			};
 
@@ -117,7 +116,7 @@ describe("InputFee", () => {
 	});
 
 	it("should switch to simple and advanced type when value is number", async () => {
-		defaultProps.gasPrice = 0.123 as unknown as string;
+		defaultProps.gasPrice = BigNumber.make(0.123);
 
 		render(<Wrapper />);
 
@@ -219,42 +218,47 @@ describe("InputFee", () => {
 
 			inputElement.select();
 			await userEvent.clear(inputElement);
-			await userEvent.type(inputElement, "0.447");
+			await userEvent.type(inputElement, "2.447");
 
-			expect(defaultProps.onChangeGasPrice).toHaveBeenCalledWith(0.447);
-			expect(inputElement).toHaveValue("0.447");
+			expect(defaultProps.onChangeGasPrice).toHaveBeenCalledWith(BigNumber.make(0.447));
+			expect(inputElement).toHaveValue("2.447");
 			expect(asFragment()).toMatchSnapshot();
 		});
 
 		it("should increment value by step when up button is clicked", async () => {
 			defaultProps.viewType = InputFeeViewType.Advanced;
-			defaultProps.gasPriceStep = 0.01;
-			defaultProps.gasPrice = 0.5;
+			defaultProps.gasPrice = BigNumber.make(0.5);
 
 			render(<InputFee {...defaultProps} />);
 
 			await userEvent.click(screen.getByTestId("InputFeeAdvanced__up"));
 
-			expect(defaultProps.onChangeGasPrice).toHaveBeenCalledWith(0.51);
+			expect(defaultProps.onChangeGasPrice).toHaveBeenCalledWith(BigNumber.make(1.5));
 		});
 
 		it("should decrement value by step when down button is clicked", async () => {
 			defaultProps.viewType = InputFeeViewType.Advanced;
-			defaultProps.gasPriceStep = 0.01;
-			defaultProps.gasPrice = 0.5;
+			defaultProps.gasPrice = BigNumber.make(6.5);
 
 			render(<InputFee {...defaultProps} />);
 
 			await userEvent.click(screen.getByTestId("InputFeeAdvanced__down"));
 
-			expect(defaultProps.onChangeGasPrice).toHaveBeenCalledWith(0.49);
+			expect(defaultProps.onChangeGasPrice).toHaveBeenCalledWith(BigNumber.make(5.5));
 		});
 
 		it("should disable down button when value is zero", () => {
 			defaultProps.viewType = InputFeeViewType.Advanced;
-			defaultProps.gasPriceStep = 0.01;
-			defaultProps.gasPrice = 0;
-			defaultProps.minGasPrice = 0;
+			defaultProps.gasPrice = BigNumber.make(0);
+
+			render(<InputFee {...defaultProps} />);
+
+			expect(screen.getByTestId("InputFeeAdvanced__down")).toBeDisabled();
+		});
+
+		it("should disable down button when gasPrice is less than min gas Price", () => {
+			defaultProps.viewType = InputFeeViewType.Advanced;
+			defaultProps.gasPrice = BigNumber.make(3);
 
 			render(<InputFee {...defaultProps} />);
 
@@ -275,21 +279,6 @@ describe("InputFee", () => {
 			expect(inputElement).toHaveValue("1.4");
 		});
 
-		it("should not allow to set a negative value with down button", async () => {
-			defaultProps.viewType = InputFeeViewType.Advanced;
-			defaultProps.gasPriceStep = 2;
-			defaultProps.gasPrice = 1.5;
-			defaultProps.minGasPrice = 0;
-
-			render(<InputFee {...defaultProps} />);
-
-			expect(screen.getByTestId("Input_GasPrice")).toHaveValue("1.5");
-
-			await userEvent.click(screen.getByTestId("InputFeeAdvanced__down"));
-
-			expect(defaultProps.onChangeGasPrice).toHaveBeenCalledWith(0);
-		});
-
 		it("should render disabled", () => {
 			defaultProps.viewType = InputFeeViewType.Advanced;
 
@@ -302,22 +291,25 @@ describe("InputFee", () => {
 			expect(asFragment()).toMatchSnapshot();
 		});
 
-		it("should set value = step when empty and up button is clicked", async () => {
+		it("should set min gasPrice when field is empty and up button is clicked", async () => {
 			defaultProps.viewType = InputFeeViewType.Advanced;
-			defaultProps.gasPriceStep = 0.01;
-			// @ts-ignore
-			defaultProps.gasPrice = "";
-			defaultProps.minGasPrice = 0.01;
+			defaultProps.gasPrice = BigNumber.make(0);
 
 			render(<InputFee {...defaultProps} />);
 
-			expect(screen.getByTestId("Input_GasPrice")).toHaveValue("");
+			const inputElement: HTMLInputElement = screen.getByTestId("Input_GasPrice");
+
+			inputElement.select();
+			await userEvent.clear(inputElement);
+
+			expect(inputElement).toHaveValue("");
+
 			expect(screen.getByTestId("InputFeeAdvanced__up")).not.toBeDisabled();
 			expect(screen.getByTestId("InputFeeAdvanced__down")).toBeDisabled();
 
 			await userEvent.click(screen.getByTestId("InputFeeAdvanced__up"));
 
-			expect(defaultProps.onChangeGasPrice).toHaveBeenCalledWith(0.01);
+			expect(defaultProps.onChangeGasPrice).toHaveBeenCalledWith(BigNumber.make(5));
 		});
 
 		it("should display converted value when on live net", () => {
