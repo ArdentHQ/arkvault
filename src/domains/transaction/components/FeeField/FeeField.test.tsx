@@ -10,6 +10,7 @@ import { calculateGasFee } from "@/domains/transaction/components/InputFee/Input
 import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
 import { expect } from "vitest";
 import { vi } from "vitest";
+import { BigNumber } from "@/app/lib/helpers";
 
 describe("FeeField", () => {
 	let profile: Contracts.IProfile;
@@ -75,9 +76,29 @@ describe("FeeField", () => {
 		await waitFor(() => expect(screen.getAllByTestId("Amount")[0]).toHaveTextContent("1 ARK"));
 
 		expect(screen.getByRole("radio", { checked: true })).toHaveTextContent(
-			calculateGasFee(30, GasLimit.transfer) + " ARK",
+			calculateGasFee(BigNumber.make(30), GasLimit.transfer) + " ARK",
 		);
 
+		calculate.mockRestore();
+		useFeesMock.mockRestore();
+	});
+
+	it("should fallback to default gas limit when estimateGas call fail", async () => {
+		const calculate = vi.fn().mockResolvedValue({ avg: 30, max: 1, min: 1 });
+		const estimateGas= vi.fn().mockImplementation(() => {
+			throw new Error("Failed to fetch");
+		});
+
+		const useFeesMock
+			= vi.spyOn(useFeesHook, "useFees").mockImplementation(() => ({ calculate, estimateGas  }));
+
+		render(<Component type="transfer" data={{ amount: 1, to: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6" }} />);
+
+		await userEvent.click(screen.getByText('Advanced'));
+
+		expect(screen.getByTestId("Input_GasLimit")).toHaveValue("21000")
+
+		estimateGas.mockRestore();
 		calculate.mockRestore();
 		useFeesMock.mockRestore();
 	});
