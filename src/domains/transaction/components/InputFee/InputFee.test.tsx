@@ -3,11 +3,12 @@ import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
 import React, { useState } from "react";
 
-import { InputFee } from "./InputFee";
+import { getFeeMinMax, InputFee } from "./InputFee";
 import { InputFeeProperties, InputFeeOption, InputFeeViewType } from "./InputFee.contracts";
 import { translations } from "@/domains/transaction/i18n";
 import { env, render, renderResponsive, screen } from "@/utils/testing-library";
 import { BigNumber } from "@/app/lib/helpers";
+import { describe, expect } from "vitest";
 
 const getDefaultProperties = (): Omit<InputFeeProperties, "network" | "profile"> => ({
 	avg: BigNumber.make(7.456),
@@ -345,3 +346,14 @@ describe("InputFee", () => {
 		});
 	});
 });
+
+describe("getFeeMinMax", () => {
+	it("should return min/max values for gasPrice/gasLimit", () => {
+		const { minGasPrice, maxGasPrice, minGasLimit, maxGasLimit } = getFeeMinMax();
+
+		expect(minGasPrice.toString()).toBe("5");
+		expect(maxGasPrice.toString()).toBe("10000");
+		expect(minGasLimit.toString()).toBe("21000");
+		expect(maxGasLimit.toString()).toBe("2000000");
+	});
+})
