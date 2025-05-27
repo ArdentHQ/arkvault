@@ -1,5 +1,3 @@
-import { Except } from "type-fest";
-
 import { AggregateQuery } from "./transaction.aggregate.contract.js";
 import { ExtendedConfirmedTransactionData } from "./transaction.dto.js";
 
@@ -110,11 +108,11 @@ export interface INotificationRepository {
 	/**
 	 * Create a new notification.
 	 *
-	 * @param {Partial<Except<INotification, "id">>} value
+	 * @param {Partial<Omit<INotification, "id">>} value
 	 * @returns {INotification}
 	 * @memberof INotificationRepository
 	 */
-	push(value: Partial<Except<INotification, "id">>): INotification;
+	push(value: Partial<Omit<INotification, "id">>): INotification;
 
 	/**
 	 * Fill the storage with notification data.
@@ -334,11 +332,11 @@ export interface IWalletReleaseNotificationService {
 	/**
 	 * Push a a new version release notification
 	 *
-	 * @param {Partial<Except<INotification, "id">>} value
+	 * @param {Partial<Omit<INotification, "id">>} value
 	 * @returns {INotification}
 	 * @memberof IWalletReleaseNotificationService
 	 */
-	push(notification: Partial<Except<INotification, "id">>): INotification | undefined;
+	push(notification: Partial<Omit<INotification, "id">>): INotification | undefined;
 
 	/**
 	 * Remove the notification for the given version.
