@@ -4,21 +4,12 @@ import { createHashHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
 
-import { SignMessage } from "./SignMessage";
 import { translations as messageTranslations } from "@/domains/message/i18n";
-import {
-	env,
-	getMainsailProfileId,
-	render,
-	screen,
-	waitFor,
-	triggerMessageSignOnce,
-	MAINSAIL_MNEMONICS,
-} from "@/utils/testing-library";
+import { env, render, screen, waitFor, triggerMessageSignOnce, MAINSAIL_MNEMONICS } from "@/utils/testing-library";
+import { selectFirstAddress } from "./SignMessageSidePanel.test";
+import { SignMessageSidePanel } from "./SignMessageSidePanel";
 
 const history = createHashHistory();
-
-const walletUrl = (walletId: string) => `/profiles/${getMainsailProfileId()}/wallets/${walletId}/sign-message`;
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
@@ -38,45 +29,45 @@ const expectHeading = async (text: string) => {
 
 describe("SignMessage with encrypted mnemonic", () => {
 	beforeAll(async () => {
-		profile = env.profiles().findById(getMainsailProfileId());
-
-		wallet = await profile.walletFactory().fromMnemonicWithBIP39({
-			mnemonic,
-			network: "mainsail.devnet",
-		});
-
-		profile.wallets().push(wallet);
+		profile = await env.profiles().create("Example");
 
 		await triggerMessageSignOnce(wallet);
 	});
 
+	afterAll(() => {
+		env.profiles().forget(profile.id());
+	});
+
 	beforeEach(() => {
-		history.push(walletUrl(wallet.id()));
+		const dashboardUrl = `/profiles/${profile.id()}/dashboard`;
+
+		history.push(dashboardUrl);
 	});
 
 	it(
 		"should sign message with encrypted mnemonic",
 		async () => {
 			const encryptedWallet = await profile.walletFactory().fromMnemonicWithBIP39({
-				mnemonic: MAINSAIL_MNEMONICS[1],
+				mnemonic,
 				password: "password",
 			});
 
+			vi.spyOn(encryptedWallet.signingKey(), "get").mockReturnValue(mnemonic);
+
 			profile.wallets().push(encryptedWallet);
 
-			history.push(walletUrl(encryptedWallet.id()));
-
 			render(
-				<Route path="/profiles/:profileId/wallets/:walletId/sign-message">
-					<SignMessage />
+				<Route path="/profiles/:profileId/dashboard">
+					<SignMessageSidePanel open={true} onOpenChange={vi.fn()} onMountChange={vi.fn()} />,
 				</Route>,
 				{
 					history,
-					route: walletUrl(encryptedWallet.id()),
 				},
 			);
 
 			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
+
+			await selectFirstAddress();
 
 			expect(
 				screen.getByText(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_ENCRYPTION_PASSWORD),
