@@ -21,10 +21,11 @@ import { ConfigRepository } from "@/app/lib/mainsail";
 import { IProfile } from "@/app/lib/profiles/profile.contract.js";
 import { NetworkConfig } from "./contracts.js";
 import { configManager } from "./config.manager.js";
+import { BigNumber } from "@/app/lib/helpers";
 
 interface ValidatedTransferInput extends Services.TransferInput {
-	gasPrice: number;
-	gasLimit: number;
+	gasPrice: BigNumber;
+	gasLimit: BigNumber;
 }
 
 type TransactionsInputs =
