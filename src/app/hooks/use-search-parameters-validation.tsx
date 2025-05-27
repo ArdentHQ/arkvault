@@ -144,23 +144,6 @@ const validateTransfer = ({ parameters }: ValidateParameters) => {
 	}
 };
 
-const validateSign = ({ parameters }: ValidateParameters) => {
-	const message = parameters.get("message");
-	const address = parameters.get("address");
-
-	if (!message) {
-		return { error: { type: SearchParametersError.MessageMissing } };
-	}
-
-	if (address) {
-		const isValid = new AddressService().validate(address);
-
-		if (!isValid) {
-			return { error: { type: SearchParametersError.InvalidAddress } };
-		}
-	}
-};
-
 /* istanbul ignore next -- @preserve */
 const WrapperQR = ({ children }) => {
 	const { t } = useTranslation();
