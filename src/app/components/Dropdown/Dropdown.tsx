@@ -103,7 +103,9 @@ export const Dropdown: FC<DropdownProperties> = ({
 	const testId: string | undefined = properties["data-testid"];
 	const testIdSuffix = testId ? `-${testId}` : "";
 
-	const clonedElement = children ? cloneElement(children, { hideDropdown: () => setIsOpen(false) } as Partial<unknown> & Attributes) : undefined;
+	const clonedElement = children
+		? cloneElement(children, { hideDropdown: () => setIsOpen(false) } as Partial<unknown> & Attributes)
+		: undefined;
 
 	return (
 		<>

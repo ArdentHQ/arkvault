@@ -135,11 +135,7 @@ export const Link = ({
 				</Anchor>
 			) : (
 				<RouterLink {...properties}>
-					<Anchor
-						className={className}
-						isDisabled={isDisabled}
-						showExternalIcon={showExternalIcon}
-					>
+					<Anchor className={className} isDisabled={isDisabled} showExternalIcon={showExternalIcon}>
 						{properties.children}
 					</Anchor>
 				</RouterLink>
