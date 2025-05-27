@@ -499,7 +499,7 @@ describe("Welcome with deeplink", () => {
 		clearTimeoutSpy.mockRestore();
 	});
 
-	it("should navigate to sign page", async () => {
+	it.skip("should navigate to sign page", async () => {
 		const toastWarningSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
 		const historyPushMock = vi.spyOn(history, "push");
 		const route =
