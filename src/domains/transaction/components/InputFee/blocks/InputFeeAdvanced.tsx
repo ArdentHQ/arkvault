@@ -51,7 +51,7 @@ export const InputFeeAdvanced: React.FC<InputFeeAdvancedProperties> = ({
 		}
 
 		onChangeGasPrice(nextValue);
-	}
+	};
 
 	const handleGasPriceIncrement = () => {
 		handleGasPriceChange(BigNumber.make(incrementGasFee()));
@@ -73,7 +73,7 @@ export const InputFeeAdvanced: React.FC<InputFeeAdvancedProperties> = ({
 		}
 
 		onChangeGasLimit(nextValue);
-	}
+	};
 
 	const handleGasLimitIncrement = () => {
 		handleGasLimitChange(BigNumber.make(incrementGasLimit()));

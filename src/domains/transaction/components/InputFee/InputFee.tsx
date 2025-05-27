@@ -116,11 +116,11 @@ export const InputFee: React.FC<InputFeeProperties> = memo(
 				disabled={disabled || loading}
 				exchangeTicker={exchangeTicker!}
 				onChangeGasPrice={(gasPrice: BigNumber | number | string) => {
-					const value = (gasPrice === "") ? 0 : gasPrice;
+					const value = gasPrice === "" ? 0 : gasPrice;
 					onChangeGasPrice(BigNumber.make(value));
 				}}
 				onChangeGasLimit={(gasLimit: BigNumber | number | string) => {
-					const value = (gasLimit === "") ? 0 : gasLimit;
+					const value = gasLimit === "" ? 0 : gasLimit;
 					onChangeGasLimit(BigNumber.make(value));
 				}}
 				showConvertedValue={showConvertedValues}
