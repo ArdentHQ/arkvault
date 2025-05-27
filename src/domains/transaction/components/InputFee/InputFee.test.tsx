@@ -27,6 +27,16 @@ const getDefaultProperties = (): Omit<InputFeeProperties, "network" | "profile">
 	viewType: InputFeeViewType.Simple,
 });
 
+const getOnChangeGasPriceLastCallArg = () => {
+	const callArg = defaultProps.onChangeGasPrice.mock.lastCall as BigNumber;
+	return callArg.toString();
+}
+
+const getOnChangeGasLimitLastCallArg = () => {
+	const callArg = defaultProps.onChangeGasLimit.mock.lastCall as BigNumber;
+	return callArg.toString();
+}
+
 let defaultProps: InputFeeProperties;
 let network: Networks.Network;
 let profile: Contracts.IProfile;
@@ -221,20 +231,21 @@ describe("InputFee", () => {
 			await userEvent.clear(inputElement);
 			await userEvent.type(inputElement, "8.447");
 
-			expect(defaultProps.onChangeGasPrice).toHaveBeenCalledWith(BigNumber.make(8.447));
+			expect(getOnChangeGasPriceLastCallArg()).toBe("8.447");
+
 			expect(inputElement).toHaveValue("8.447");
 			expect(asFragment()).toMatchSnapshot();
 		});
 
 		it("should increment value by step when up button is clicked", async () => {
 			defaultProps.viewType = InputFeeViewType.Advanced;
-			defaultProps.gasPrice = BigNumber.make(0.5);
+			defaultProps.gasPrice = BigNumber.make(6);
 
 			render(<InputFee {...defaultProps} />);
 
 			await userEvent.click(screen.getByTestId("InputFeeAdvanced__up"));
 
-			expect(defaultProps.onChangeGasPrice).toHaveBeenCalledWith(BigNumber.make(1.5));
+			expect(getOnChangeGasPriceLastCallArg()).toBe("7");
 		});
 
 		it("should decrement value by step when down button is clicked", async () => {
@@ -245,7 +256,7 @@ describe("InputFee", () => {
 
 			await userEvent.click(screen.getByTestId("InputFeeAdvanced__down"));
 
-			expect(defaultProps.onChangeGasPrice).toHaveBeenCalledWith(BigNumber.make(5.5));
+			expect(getOnChangeGasPriceLastCallArg()).toBe("5.5");
 		});
 
 		it("should disable down button when value is zero", () => {
@@ -274,10 +285,10 @@ describe("InputFee", () => {
 			const inputElement: HTMLInputElement = screen.getByTestId("Input_GasPrice");
 
 			inputElement.select();
-			await userEvent.clear(inputElement, "-1.4");
+			await userEvent.clear(inputElement);
 			await userEvent.type(inputElement, "-1.4");
 
-			expect(inputElement).toHaveValue("1.4");
+			expect(getOnChangeGasPriceLastCallArg()).toBe("1.4");
 		});
 
 		it("should handle when gasLimit field is empty", async () => {
@@ -292,7 +303,7 @@ describe("InputFee", () => {
 			await userEvent.type(inputElement, " ");
 
 			expect(inputElement).toHaveValue("");
-			expect(defaultProps.onChangeGasLimit).toHaveBeenCalledWith(BigNumber.make(0));
+			expect(getOnChangeGasLimitLastCallArg()).toBe("0");
 		});
 
 		it("should render disabled", () => {
@@ -325,7 +336,7 @@ describe("InputFee", () => {
 
 			await userEvent.click(screen.getByTestId("InputFeeAdvanced__up"));
 
-			expect(defaultProps.onChangeGasPrice).toHaveBeenCalledWith(BigNumber.make(5));
+			expect(getOnChangeGasPriceLastCallArg()).toBe("5");
 		});
 
 		it("should display converted value when on live net", () => {
