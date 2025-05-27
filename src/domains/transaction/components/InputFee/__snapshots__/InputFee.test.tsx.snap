@@ -74,7 +74,7 @@ exports[`InputFee > advanced view type > should allow to input a value 1`] = `
                   data-testid="Input_GasPrice"
                   name="gasPrice"
                   type="text"
-                  value="2.447"
+                  value="8.447"
                 />
               </div>
               <div
@@ -123,7 +123,6 @@ exports[`InputFee > advanced view type > should allow to input a value 1`] = `
                       <button
                         class="hover:bg-theme-primary-100 hover:text-theme-primary-600 active:bg-theme-primary-700 disabled:border-theme-secondary-300 disabled:bg-theme-secondary-100 disabled:text-theme-secondary-400 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-primary-200 dark:disabled:border-theme-secondary-700 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-600 flex flex-1 items-center justify-center active:text-white disabled:cursor-default"
                         data-testid="InputFeeAdvanced__down"
-                        disabled=""
                         type="button"
                       >
                         <div>
@@ -278,7 +277,7 @@ exports[`InputFee > advanced view type > should allow to input a value 1`] = `
             class="whitespace-nowrap"
             data-testid="Amount"
           >
-            0.0002447 ARK
+            0.0008447 ARK
           </span>
         </div>
         <div>

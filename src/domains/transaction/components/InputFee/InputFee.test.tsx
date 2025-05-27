@@ -218,10 +218,10 @@ describe("InputFee", () => {
 
 			inputElement.select();
 			await userEvent.clear(inputElement);
-			await userEvent.type(inputElement, "2.447");
+			await userEvent.type(inputElement, "8.447");
 
-			expect(defaultProps.onChangeGasPrice).toHaveBeenCalledWith(BigNumber.make(0.447));
-			expect(inputElement).toHaveValue("2.447");
+			expect(defaultProps.onChangeGasPrice).toHaveBeenCalledWith(BigNumber.make(8.447));
+			expect(inputElement).toHaveValue("8.447");
 			expect(asFragment()).toMatchSnapshot();
 		});
 
