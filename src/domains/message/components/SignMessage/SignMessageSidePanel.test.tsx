@@ -199,6 +199,8 @@ describe("SignMessageSidePanel", () => {
 			await userEvent.click(continueButton());
 
 			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.SUCCESS_STEP.TITLE);
+
+			profile.wallets().forget(walletWithSecret.id());
 		});
 
 		it("should error and go back", async () => {
@@ -238,6 +240,8 @@ describe("SignMessageSidePanel", () => {
 
 			await userEvent.click(screen.getByTestId("ErrorStep__back-button"));
 			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
+
+			profile.wallets().forget(walletWithSecret.id());
 		});
 	});
 });
