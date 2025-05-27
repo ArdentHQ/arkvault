@@ -1,6 +1,5 @@
 import { AddRecipientProperties, ToggleButtonProperties } from "./AddRecipient.contracts";
 import { FormField, FormLabel, SubForm } from "@/app/components/Form";
-// import { GasLimit, MIN_GAS_PRICE } from "@/domains/transaction/components/FeeField/FeeField";
 import React, { VFC, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { WalletAliasResult, useValidation } from "@/app/hooks";
 
