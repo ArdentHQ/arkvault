@@ -30,12 +30,12 @@ const getDefaultProperties = (): Omit<InputFeeProperties, "network" | "profile">
 const getOnChangeGasPriceLastCallArg = () => {
 	const callArg = defaultProps.onChangeGasPrice.mock.lastCall as BigNumber;
 	return callArg.toString();
-}
+};
 
 const getOnChangeGasLimitLastCallArg = () => {
 	const callArg = defaultProps.onChangeGasLimit.mock.lastCall as BigNumber;
 	return callArg.toString();
-}
+};
 
 let defaultProps: InputFeeProperties;
 let network: Networks.Network;
