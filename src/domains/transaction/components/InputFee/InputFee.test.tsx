@@ -392,7 +392,7 @@ describe("getFeeMinMax", () => {
 
 	it("should handle when config manager doesn't include min/max values", () => {
 		const configSpy = vi.spyOn(configManager, "getMilestone").mockReturnValue({
-			gas: {}
+			gas: {},
 		});
 
 		const { minGasPrice, maxGasPrice, minGasLimit, maxGasLimit } = getFeeMinMax();
