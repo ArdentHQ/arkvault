@@ -273,6 +273,7 @@ export default [
 			"simple-import-sort/exports": "off",
 			"@typescript-eslint/no-duplicate-type-constituents": "off",
 			"unicorn/prefer-string-raw": "off",
+			"unicorn/expiring-todo-comments": "off",
 		},
 	},
 	{
