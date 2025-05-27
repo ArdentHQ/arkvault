@@ -7,11 +7,10 @@ import { useValidation } from "@/app/hooks";
 interface Properties {
 	wallet?: Contracts.IReadWriteWallet;
 	activeTab: number;
-	gasLimitType: keyof typeof GasLimit;
 	form: ReturnType<typeof useFormContext>;
 }
 
-export const useToggleFeeFields = ({ wallet, activeTab, gasLimitType, form }: Properties) => {
+export const useToggleFeeFields = ({ wallet, activeTab, form }: Properties) => {
 	const { register, unregister, getValues } = form;
 
 	const { common } = useValidation();
