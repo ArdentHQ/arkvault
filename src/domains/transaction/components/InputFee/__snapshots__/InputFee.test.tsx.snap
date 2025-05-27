@@ -369,7 +369,7 @@ exports[`InputFee > advanced view type > should display converted value when on 
                   data-testid="Input_GasPrice"
                   name="gasPrice"
                   type="text"
-                  value="0.3"
+                  value="5.3"
                 />
               </div>
               <div
@@ -418,7 +418,6 @@ exports[`InputFee > advanced view type > should display converted value when on 
                       <button
                         class="hover:bg-theme-primary-100 hover:text-theme-primary-600 active:bg-theme-primary-700 disabled:border-theme-secondary-300 disabled:bg-theme-secondary-100 disabled:text-theme-secondary-400 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-primary-200 dark:disabled:border-theme-secondary-700 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-600 flex flex-1 items-center justify-center active:text-white disabled:cursor-default"
                         data-testid="InputFeeAdvanced__down"
-                        disabled=""
                         type="button"
                       >
                         <div>
@@ -573,7 +572,7 @@ exports[`InputFee > advanced view type > should display converted value when on 
             class="whitespace-nowrap"
             data-testid="Amount"
           >
-            0.00003 ARK
+            0.00053 ARK
           </span>
           <span
             data-testid="InputFeeAdvanced__convertedGasFee"
@@ -637,7 +636,7 @@ exports[`InputFee > advanced view type > should render disabled 1`] = `
                 disabled=""
                 name="gasPrice"
                 type="text"
-                value="0.3"
+                value="5.3"
               />
             </div>
             <div
@@ -845,7 +844,7 @@ exports[`InputFee > advanced view type > should render disabled 1`] = `
           class="whitespace-nowrap"
           data-testid="Amount"
         >
-          0.00003 ARK
+          0.00053 ARK
         </span>
       </div>
       <div>
@@ -934,7 +933,7 @@ exports[`InputFee > should keep different values for simple and advanced view ty
                   data-testid="Input_GasPrice"
                   name="gasPrice"
                   type="text"
-                  value="0.3"
+                  value="5.3"
                 />
               </div>
               <div
@@ -983,7 +982,6 @@ exports[`InputFee > should keep different values for simple and advanced view ty
                       <button
                         class="hover:bg-theme-primary-100 hover:text-theme-primary-600 active:bg-theme-primary-700 disabled:border-theme-secondary-300 disabled:bg-theme-secondary-100 disabled:text-theme-secondary-400 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-primary-200 dark:disabled:border-theme-secondary-700 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-600 flex flex-1 items-center justify-center active:text-white disabled:cursor-default"
                         data-testid="InputFeeAdvanced__down"
-                        disabled=""
                         type="button"
                       >
                         <div>
@@ -1138,7 +1136,7 @@ exports[`InputFee > should keep different values for simple and advanced view ty
             class="whitespace-nowrap"
             data-testid="Amount"
           >
-            0.00003 ARK
+            0.00053 ARK
           </span>
         </div>
         <div>
@@ -1203,7 +1201,7 @@ exports[`InputFee > should keep different values for simple and advanced view ty
     >
       <button
         aria-checked="false"
-        aria-label="6e-7"
+        aria-label="0.0005006"
         class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 p-0"
         data-testid="ButtonGroupOption"
         role="radio"
@@ -1227,7 +1225,7 @@ exports[`InputFee > should keep different values for simple and advanced view ty
                 class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500"
                 data-testid="Amount"
               >
-                0.0000006 ARK
+                0.0005006 ARK
               </span>
             </div>
           </div>
@@ -1245,7 +1243,7 @@ exports[`InputFee > should keep different values for simple and advanced view ty
       </button>
       <button
         aria-checked="true"
-        aria-label="0.0000456"
+        aria-label="0.0007456"
         class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 p-0"
         data-testid="ButtonGroupOption"
         role="radio"
@@ -1269,7 +1267,7 @@ exports[`InputFee > should keep different values for simple and advanced view ty
                 class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block"
                 data-testid="Amount"
               >
-                0.0000456 ARK
+                0.0007456 ARK
               </span>
             </div>
           </div>
@@ -1287,7 +1285,7 @@ exports[`InputFee > should keep different values for simple and advanced view ty
       </button>
       <button
         aria-checked="false"
-        aria-label="0.00005"
+        aria-label="0.00085"
         class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 p-0"
         data-testid="ButtonGroupOption"
         role="radio"
@@ -1311,7 +1309,7 @@ exports[`InputFee > should keep different values for simple and advanced view ty
                 class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500"
                 data-testid="Amount"
               >
-                0.00005 ARK
+                0.00085 ARK
               </span>
             </div>
           </div>
@@ -1380,7 +1378,7 @@ exports[`InputFee > simple view type > should display converted values when on l
     >
       <button
         aria-checked="false"
-        aria-label="6e-7"
+        aria-label="0.0005006"
         class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 p-0"
         data-testid="ButtonGroupOption"
         role="radio"
@@ -1415,7 +1413,7 @@ exports[`InputFee > simple view type > should display converted values when on l
                 class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500"
                 data-testid="Amount"
               >
-                0.0000006 ARK
+                0.0005006 ARK
               </span>
             </div>
           </div>
@@ -1433,7 +1431,7 @@ exports[`InputFee > simple view type > should display converted values when on l
       </button>
       <button
         aria-checked="true"
-        aria-label="0.0000456"
+        aria-label="0.0007456"
         class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 p-0"
         data-testid="ButtonGroupOption"
         role="radio"
@@ -1468,7 +1466,7 @@ exports[`InputFee > simple view type > should display converted values when on l
                 class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block"
                 data-testid="Amount"
               >
-                0.0000456 ARK
+                0.0007456 ARK
               </span>
             </div>
           </div>
@@ -1486,7 +1484,7 @@ exports[`InputFee > simple view type > should display converted values when on l
       </button>
       <button
         aria-checked="false"
-        aria-label="0.00005"
+        aria-label="0.00085"
         class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 p-0"
         data-testid="ButtonGroupOption"
         role="radio"
@@ -1521,7 +1519,7 @@ exports[`InputFee > simple view type > should display converted values when on l
                 class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500"
                 data-testid="Amount"
               >
-                0.00005 ARK
+                0.00085 ARK
               </span>
             </div>
           </div>
@@ -1591,7 +1589,7 @@ exports[`InputFee > simple view type > should render loading state of simple vie
     >
       <button
         aria-checked="false"
-        aria-label="6e-7"
+        aria-label="0.0005006"
         class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 p-0"
         data-testid="ButtonGroupOption"
         role="radio"
@@ -1636,7 +1634,7 @@ exports[`InputFee > simple view type > should render loading state of simple vie
       </button>
       <button
         aria-checked="true"
-        aria-label="0.0000456"
+        aria-label="0.0007456"
         class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 p-0"
         data-testid="ButtonGroupOption"
         role="radio"
@@ -1681,7 +1679,7 @@ exports[`InputFee > simple view type > should render loading state of simple vie
       </button>
       <button
         aria-checked="false"
-        aria-label="0.00005"
+        aria-label="0.00085"
         class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 p-0"
         data-testid="ButtonGroupOption"
         role="radio"
@@ -1778,7 +1776,7 @@ exports[`InputFee > simple view type > should render loading state of simple vie
     >
       <button
         aria-checked="false"
-        aria-label="6e-7"
+        aria-label="0.0005006"
         class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 p-0"
         data-testid="ButtonGroupOption"
         role="radio"
@@ -1823,7 +1821,7 @@ exports[`InputFee > simple view type > should render loading state of simple vie
       </button>
       <button
         aria-checked="true"
-        aria-label="0.0000456"
+        aria-label="0.0007456"
         class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 p-0"
         data-testid="ButtonGroupOption"
         role="radio"
@@ -1868,7 +1866,7 @@ exports[`InputFee > simple view type > should render loading state of simple vie
       </button>
       <button
         aria-checked="false"
-        aria-label="0.00005"
+        aria-label="0.00085"
         class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 p-0"
         data-testid="ButtonGroupOption"
         role="radio"
@@ -1964,7 +1962,7 @@ exports[`InputFee > simple view type > should render simple view in lg 1`] = `
     >
       <button
         aria-checked="false"
-        aria-label="6e-7"
+        aria-label="0.0005006"
         class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 p-0"
         data-testid="ButtonGroupOption"
         role="radio"
@@ -1988,7 +1986,7 @@ exports[`InputFee > simple view type > should render simple view in lg 1`] = `
                 class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500"
                 data-testid="Amount"
               >
-                0.0000006 ARK
+                0.0005006 ARK
               </span>
             </div>
           </div>
@@ -2006,7 +2004,7 @@ exports[`InputFee > simple view type > should render simple view in lg 1`] = `
       </button>
       <button
         aria-checked="true"
-        aria-label="0.0000456"
+        aria-label="0.0007456"
         class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 p-0"
         data-testid="ButtonGroupOption"
         role="radio"
@@ -2030,7 +2028,7 @@ exports[`InputFee > simple view type > should render simple view in lg 1`] = `
                 class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block"
                 data-testid="Amount"
               >
-                0.0000456 ARK
+                0.0007456 ARK
               </span>
             </div>
           </div>
@@ -2048,7 +2046,7 @@ exports[`InputFee > simple view type > should render simple view in lg 1`] = `
       </button>
       <button
         aria-checked="false"
-        aria-label="0.00005"
+        aria-label="0.00085"
         class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 p-0"
         data-testid="ButtonGroupOption"
         role="radio"
@@ -2072,7 +2070,7 @@ exports[`InputFee > simple view type > should render simple view in lg 1`] = `
                 class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500"
                 data-testid="Amount"
               >
-                0.00005 ARK
+                0.00085 ARK
               </span>
             </div>
           </div>
@@ -2141,7 +2139,7 @@ exports[`InputFee > simple view type > should render simple view in md 1`] = `
     >
       <button
         aria-checked="false"
-        aria-label="6e-7"
+        aria-label="0.0005006"
         class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 p-0"
         data-testid="ButtonGroupOption"
         role="radio"
@@ -2165,7 +2163,7 @@ exports[`InputFee > simple view type > should render simple view in md 1`] = `
                 class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500"
                 data-testid="Amount"
               >
-                0.0000006 ARK
+                0.0005006 ARK
               </span>
             </div>
           </div>
@@ -2183,7 +2181,7 @@ exports[`InputFee > simple view type > should render simple view in md 1`] = `
       </button>
       <button
         aria-checked="true"
-        aria-label="0.0000456"
+        aria-label="0.0007456"
         class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 p-0"
         data-testid="ButtonGroupOption"
         role="radio"
@@ -2207,7 +2205,7 @@ exports[`InputFee > simple view type > should render simple view in md 1`] = `
                 class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block"
                 data-testid="Amount"
               >
-                0.0000456 ARK
+                0.0007456 ARK
               </span>
             </div>
           </div>
@@ -2225,7 +2223,7 @@ exports[`InputFee > simple view type > should render simple view in md 1`] = `
       </button>
       <button
         aria-checked="false"
-        aria-label="0.00005"
+        aria-label="0.00085"
         class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 p-0"
         data-testid="ButtonGroupOption"
         role="radio"
@@ -2249,7 +2247,7 @@ exports[`InputFee > simple view type > should render simple view in md 1`] = `
                 class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500"
                 data-testid="Amount"
               >
-                0.00005 ARK
+                0.00085 ARK
               </span>
             </div>
           </div>
@@ -2318,7 +2316,7 @@ exports[`InputFee > simple view type > should render simple view in sm 1`] = `
     >
       <button
         aria-checked="false"
-        aria-label="6e-7"
+        aria-label="0.0005006"
         class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 p-0"
         data-testid="ButtonGroupOption"
         role="radio"
@@ -2342,7 +2340,7 @@ exports[`InputFee > simple view type > should render simple view in sm 1`] = `
                 class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500"
                 data-testid="Amount"
               >
-                0.0000006 ARK
+                0.0005006 ARK
               </span>
             </div>
           </div>
@@ -2360,7 +2358,7 @@ exports[`InputFee > simple view type > should render simple view in sm 1`] = `
       </button>
       <button
         aria-checked="true"
-        aria-label="0.0000456"
+        aria-label="0.0007456"
         class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 p-0"
         data-testid="ButtonGroupOption"
         role="radio"
@@ -2384,7 +2382,7 @@ exports[`InputFee > simple view type > should render simple view in sm 1`] = `
                 class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block"
                 data-testid="Amount"
               >
-                0.0000456 ARK
+                0.0007456 ARK
               </span>
             </div>
           </div>
@@ -2402,7 +2400,7 @@ exports[`InputFee > simple view type > should render simple view in sm 1`] = `
       </button>
       <button
         aria-checked="false"
-        aria-label="0.00005"
+        aria-label="0.00085"
         class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 p-0"
         data-testid="ButtonGroupOption"
         role="radio"
@@ -2426,7 +2424,7 @@ exports[`InputFee > simple view type > should render simple view in sm 1`] = `
                 class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500"
                 data-testid="Amount"
               >
-                0.00005 ARK
+                0.00085 ARK
               </span>
             </div>
           </div>
@@ -2495,7 +2493,7 @@ exports[`InputFee > simple view type > should render simple view in xl 1`] = `
     >
       <button
         aria-checked="false"
-        aria-label="6e-7"
+        aria-label="0.0005006"
         class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 p-0"
         data-testid="ButtonGroupOption"
         role="radio"
@@ -2519,7 +2517,7 @@ exports[`InputFee > simple view type > should render simple view in xl 1`] = `
                 class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500"
                 data-testid="Amount"
               >
-                0.0000006 ARK
+                0.0005006 ARK
               </span>
             </div>
           </div>
@@ -2537,7 +2535,7 @@ exports[`InputFee > simple view type > should render simple view in xl 1`] = `
       </button>
       <button
         aria-checked="true"
-        aria-label="0.0000456"
+        aria-label="0.0007456"
         class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 p-0"
         data-testid="ButtonGroupOption"
         role="radio"
@@ -2561,7 +2559,7 @@ exports[`InputFee > simple view type > should render simple view in xl 1`] = `
                 class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block"
                 data-testid="Amount"
               >
-                0.0000456 ARK
+                0.0007456 ARK
               </span>
             </div>
           </div>
@@ -2579,7 +2577,7 @@ exports[`InputFee > simple view type > should render simple view in xl 1`] = `
       </button>
       <button
         aria-checked="false"
-        aria-label="0.00005"
+        aria-label="0.00085"
         class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 p-0"
         data-testid="ButtonGroupOption"
         role="radio"
@@ -2603,7 +2601,7 @@ exports[`InputFee > simple view type > should render simple view in xl 1`] = `
                 class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500"
                 data-testid="Amount"
               >
-                0.00005 ARK
+                0.00085 ARK
               </span>
             </div>
           </div>
@@ -2672,7 +2670,7 @@ exports[`InputFee > simple view type > should render simple view in xs 1`] = `
     >
       <button
         aria-checked="false"
-        aria-label="6e-7"
+        aria-label="0.0005006"
         class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 p-0"
         data-testid="ButtonGroupOption"
         role="radio"
@@ -2696,7 +2694,7 @@ exports[`InputFee > simple view type > should render simple view in xs 1`] = `
                 class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500"
                 data-testid="Amount"
               >
-                0.0000006 ARK
+                0.0005006 ARK
               </span>
             </div>
           </div>
@@ -2714,7 +2712,7 @@ exports[`InputFee > simple view type > should render simple view in xs 1`] = `
       </button>
       <button
         aria-checked="true"
-        aria-label="0.0000456"
+        aria-label="0.0007456"
         class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 p-0"
         data-testid="ButtonGroupOption"
         role="radio"
@@ -2738,7 +2736,7 @@ exports[`InputFee > simple view type > should render simple view in xs 1`] = `
                 class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block"
                 data-testid="Amount"
               >
-                0.0000456 ARK
+                0.0007456 ARK
               </span>
             </div>
           </div>
@@ -2756,7 +2754,7 @@ exports[`InputFee > simple view type > should render simple view in xs 1`] = `
       </button>
       <button
         aria-checked="false"
-        aria-label="0.00005"
+        aria-label="0.00085"
         class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 p-0"
         data-testid="ButtonGroupOption"
         role="radio"
@@ -2780,7 +2778,7 @@ exports[`InputFee > simple view type > should render simple view in xs 1`] = `
                 class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500"
                 data-testid="Amount"
               >
-                0.00005 ARK
+                0.00085 ARK
               </span>
             </div>
           </div>
@@ -2849,7 +2847,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
     >
       <button
         aria-checked="false"
-        aria-label="6e-7"
+        aria-label="0.0005006"
         class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 p-0"
         data-testid="ButtonGroupOption"
         role="radio"
@@ -2884,7 +2882,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
                 class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500"
                 data-testid="Amount"
               >
-                0.0000006 ARK
+                0.0005006 ARK
               </span>
             </div>
           </div>
@@ -2902,7 +2900,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
       </button>
       <button
         aria-checked="true"
-        aria-label="0.0000456"
+        aria-label="0.0007456"
         class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 p-0"
         data-testid="ButtonGroupOption"
         role="radio"
@@ -2937,7 +2935,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
                 class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block"
                 data-testid="Amount"
               >
-                0.0000456 ARK
+                0.0007456 ARK
               </span>
             </div>
           </div>
@@ -2955,7 +2953,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
       </button>
       <button
         aria-checked="false"
-        aria-label="0.00005"
+        aria-label="0.00085"
         class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 p-0"
         data-testid="ButtonGroupOption"
         role="radio"
@@ -2990,7 +2988,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
                 class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500"
                 data-testid="Amount"
               >
-                0.00005 ARK
+                0.00085 ARK
               </span>
             </div>
           </div>
@@ -3059,7 +3057,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
     >
       <button
         aria-checked="false"
-        aria-label="6e-7"
+        aria-label="0.0005006"
         class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 p-0"
         data-testid="ButtonGroupOption"
         role="radio"
@@ -3094,7 +3092,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
                 class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500"
                 data-testid="Amount"
               >
-                0.0000006 ARK
+                0.0005006 ARK
               </span>
             </div>
           </div>
@@ -3112,7 +3110,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
       </button>
       <button
         aria-checked="true"
-        aria-label="0.0000456"
+        aria-label="0.0007456"
         class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 p-0"
         data-testid="ButtonGroupOption"
         role="radio"
@@ -3147,7 +3145,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
                 class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block"
                 data-testid="Amount"
               >
-                0.0000456 ARK
+                0.0007456 ARK
               </span>
             </div>
           </div>
@@ -3165,7 +3163,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
       </button>
       <button
         aria-checked="false"
-        aria-label="0.00005"
+        aria-label="0.00085"
         class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 p-0"
         data-testid="ButtonGroupOption"
         role="radio"
@@ -3200,7 +3198,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
                 class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500"
                 data-testid="Amount"
               >
-                0.00005 ARK
+                0.00085 ARK
               </span>
             </div>
           </div>
@@ -3269,7 +3267,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
     >
       <button
         aria-checked="false"
-        aria-label="6e-7"
+        aria-label="0.0005006"
         class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 p-0"
         data-testid="ButtonGroupOption"
         role="radio"
@@ -3304,7 +3302,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
                 class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500"
                 data-testid="Amount"
               >
-                0.0000006 ARK
+                0.0005006 ARK
               </span>
             </div>
           </div>
@@ -3322,7 +3320,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
       </button>
       <button
         aria-checked="true"
-        aria-label="0.0000456"
+        aria-label="0.0007456"
         class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 p-0"
         data-testid="ButtonGroupOption"
         role="radio"
@@ -3357,7 +3355,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
                 class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block"
                 data-testid="Amount"
               >
-                0.0000456 ARK
+                0.0007456 ARK
               </span>
             </div>
           </div>
@@ -3375,7 +3373,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
       </button>
       <button
         aria-checked="false"
-        aria-label="0.00005"
+        aria-label="0.00085"
         class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 p-0"
         data-testid="ButtonGroupOption"
         role="radio"
@@ -3410,7 +3408,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
                 class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500"
                 data-testid="Amount"
               >
-                0.00005 ARK
+                0.00085 ARK
               </span>
             </div>
           </div>
@@ -3479,7 +3477,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
     >
       <button
         aria-checked="false"
-        aria-label="6e-7"
+        aria-label="0.0005006"
         class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 p-0"
         data-testid="ButtonGroupOption"
         role="radio"
@@ -3514,7 +3512,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
                 class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500"
                 data-testid="Amount"
               >
-                0.0000006 ARK
+                0.0005006 ARK
               </span>
             </div>
           </div>
@@ -3532,7 +3530,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
       </button>
       <button
         aria-checked="true"
-        aria-label="0.0000456"
+        aria-label="0.0007456"
         class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 p-0"
         data-testid="ButtonGroupOption"
         role="radio"
@@ -3567,7 +3565,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
                 class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block"
                 data-testid="Amount"
               >
-                0.0000456 ARK
+                0.0007456 ARK
               </span>
             </div>
           </div>
@@ -3585,7 +3583,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
       </button>
       <button
         aria-checked="false"
-        aria-label="0.00005"
+        aria-label="0.00085"
         class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 p-0"
         data-testid="ButtonGroupOption"
         role="radio"
@@ -3620,7 +3618,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
                 class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500"
                 data-testid="Amount"
               >
-                0.00005 ARK
+                0.00085 ARK
               </span>
             </div>
           </div>
@@ -3689,7 +3687,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
     >
       <button
         aria-checked="false"
-        aria-label="6e-7"
+        aria-label="0.0005006"
         class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 p-0"
         data-testid="ButtonGroupOption"
         role="radio"
@@ -3724,7 +3722,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
                 class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500"
                 data-testid="Amount"
               >
-                0.0000006 ARK
+                0.0005006 ARK
               </span>
             </div>
           </div>
@@ -3742,7 +3740,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
       </button>
       <button
         aria-checked="true"
-        aria-label="0.0000456"
+        aria-label="0.0007456"
         class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 p-0"
         data-testid="ButtonGroupOption"
         role="radio"
@@ -3777,7 +3775,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
                 class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block"
                 data-testid="Amount"
               >
-                0.0000456 ARK
+                0.0007456 ARK
               </span>
             </div>
           </div>
@@ -3795,7 +3793,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
       </button>
       <button
         aria-checked="false"
-        aria-label="0.00005"
+        aria-label="0.00085"
         class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 p-0"
         data-testid="ButtonGroupOption"
         role="radio"
@@ -3830,7 +3828,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
                 class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500"
                 data-testid="Amount"
               >
-                0.00005 ARK
+                0.00085 ARK
               </span>
             </div>
           </div>
@@ -3899,7 +3897,7 @@ exports[`InputFee > simple view type > should update value when clicking button 
     >
       <button
         aria-checked="false"
-        aria-label="6e-7"
+        aria-label="0.0005006"
         class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 p-0"
         data-testid="ButtonGroupOption"
         role="radio"
@@ -3923,7 +3921,7 @@ exports[`InputFee > simple view type > should update value when clicking button 
                 class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500"
                 data-testid="Amount"
               >
-                0.0000006 ARK
+                0.0005006 ARK
               </span>
             </div>
           </div>
@@ -3941,7 +3939,7 @@ exports[`InputFee > simple view type > should update value when clicking button 
       </button>
       <button
         aria-checked="true"
-        aria-label="0.0000456"
+        aria-label="0.0007456"
         class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 p-0"
         data-testid="ButtonGroupOption"
         role="radio"
@@ -3965,7 +3963,7 @@ exports[`InputFee > simple view type > should update value when clicking button 
                 class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block"
                 data-testid="Amount"
               >
-                0.0000456 ARK
+                0.0007456 ARK
               </span>
             </div>
           </div>
@@ -3983,7 +3981,7 @@ exports[`InputFee > simple view type > should update value when clicking button 
       </button>
       <button
         aria-checked="false"
-        aria-label="0.00005"
+        aria-label="0.00085"
         class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 p-0"
         data-testid="ButtonGroupOption"
         role="radio"
@@ -4007,7 +4005,7 @@ exports[`InputFee > simple view type > should update value when clicking button 
                 class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500"
                 data-testid="Amount"
               >
-                0.00005 ARK
+                0.00085 ARK
               </span>
             </div>
           </div>
@@ -4076,7 +4074,7 @@ exports[`InputFee > simple view type > should update value when clicking button 
     >
       <button
         aria-checked="false"
-        aria-label="6e-7"
+        aria-label="0.0005006"
         class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 p-0"
         data-testid="ButtonGroupOption"
         role="radio"
@@ -4100,7 +4098,7 @@ exports[`InputFee > simple view type > should update value when clicking button 
                 class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500"
                 data-testid="Amount"
               >
-                0.0000006 ARK
+                0.0005006 ARK
               </span>
             </div>
           </div>
@@ -4118,7 +4116,7 @@ exports[`InputFee > simple view type > should update value when clicking button 
       </button>
       <button
         aria-checked="false"
-        aria-label="0.0000456"
+        aria-label="0.0007456"
         class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 p-0"
         data-testid="ButtonGroupOption"
         role="radio"
@@ -4142,7 +4140,7 @@ exports[`InputFee > simple view type > should update value when clicking button 
                 class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500"
                 data-testid="Amount"
               >
-                0.0000456 ARK
+                0.0007456 ARK
               </span>
             </div>
           </div>
@@ -4160,7 +4158,7 @@ exports[`InputFee > simple view type > should update value when clicking button 
       </button>
       <button
         aria-checked="true"
-        aria-label="0.00005"
+        aria-label="0.00085"
         class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 p-0"
         data-testid="ButtonGroupOption"
         role="radio"
@@ -4184,7 +4182,7 @@ exports[`InputFee > simple view type > should update value when clicking button 
                 class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block"
                 data-testid="Amount"
               >
-                0.00005 ARK
+                0.00085 ARK
               </span>
             </div>
           </div>
@@ -4253,7 +4251,7 @@ exports[`InputFee > simple view type > should update value when clicking button 
     >
       <button
         aria-checked="true"
-        aria-label="6e-7"
+        aria-label="0.0005006"
         class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 p-0"
         data-testid="ButtonGroupOption"
         role="radio"
@@ -4277,7 +4275,7 @@ exports[`InputFee > simple view type > should update value when clicking button 
                 class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block"
                 data-testid="Amount"
               >
-                0.0000006 ARK
+                0.0005006 ARK
               </span>
             </div>
           </div>
@@ -4295,7 +4293,7 @@ exports[`InputFee > simple view type > should update value when clicking button 
       </button>
       <button
         aria-checked="false"
-        aria-label="0.0000456"
+        aria-label="0.0007456"
         class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 p-0"
         data-testid="ButtonGroupOption"
         role="radio"
@@ -4319,7 +4317,7 @@ exports[`InputFee > simple view type > should update value when clicking button 
                 class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500"
                 data-testid="Amount"
               >
-                0.0000456 ARK
+                0.0007456 ARK
               </span>
             </div>
           </div>
@@ -4337,7 +4335,7 @@ exports[`InputFee > simple view type > should update value when clicking button 
       </button>
       <button
         aria-checked="false"
-        aria-label="0.00005"
+        aria-label="0.00085"
         class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 p-0"
         data-testid="ButtonGroupOption"
         role="radio"
@@ -4361,7 +4359,7 @@ exports[`InputFee > simple view type > should update value when clicking button 
                 class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500"
                 data-testid="Amount"
               >
-                0.00005 ARK
+                0.00085 ARK
               </span>
             </div>
           </div>

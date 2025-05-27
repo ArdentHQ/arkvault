@@ -10,14 +10,14 @@ import { env, render, renderResponsive, screen } from "@/utils/testing-library";
 import { BigNumber } from "@/app/lib/helpers";
 
 const getDefaultProperties = (): Omit<InputFeeProperties, "network" | "profile"> => ({
-	avg: BigNumber.make(0.456),
+	avg: BigNumber.make(7.456),
 	disabled: false,
 	estimatedGasLimit: BigNumber.make(100_000),
 	gasLimit: BigNumber.make(100_000),
-	gasPrice: BigNumber.make(0.3),
+	gasPrice: BigNumber.make(5.3),
 	loading: false,
-	max: BigNumber.make(0.5),
-	min: BigNumber.make(0.006),
+	max: BigNumber.make(8.5),
+	min: BigNumber.make(5.006),
 	onChangeFeeOption: vi.fn(),
 	onChangeGasLimit: vi.fn(),
 	onChangeGasPrice: vi.fn(),
@@ -116,7 +116,7 @@ describe("InputFee", () => {
 	});
 
 	it("should switch to simple and advanced type when value is number", async () => {
-		defaultProps.gasPrice = BigNumber.make(0.123);
+		defaultProps.gasPrice = BigNumber.make(8.5);
 
 		render(<Wrapper />);
 
@@ -128,7 +128,7 @@ describe("InputFee", () => {
 		expect(screen.getByTestId("Input_GasPrice")).toBeInTheDocument();
 		expect(screen.queryByTestId("ButtonGroup")).not.toBeInTheDocument();
 
-		expect(screen.getByTestId("Input_GasPrice")).toHaveValue("0.123");
+		expect(screen.getByTestId("Input_GasPrice")).toHaveValue("8.5");
 
 		// go to simple mode
 		await userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.SIMPLE));
