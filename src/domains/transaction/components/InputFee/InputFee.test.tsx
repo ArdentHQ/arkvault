@@ -1,4 +1,4 @@
-import { Networks } from "@/app/lib/mainsail";
+import { configManager, Networks } from "@/app/lib/mainsail";
 import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
 import React, { useState } from "react";
@@ -9,6 +9,8 @@ import { translations } from "@/domains/transaction/i18n";
 import { env, render, renderResponsive, screen } from "@/utils/testing-library";
 import { BigNumber } from "@/app/lib/helpers";
 import { describe, expect } from "vitest";
+import { requestMock, server } from "@/tests/mocks/server";
+import cryptoJson from "@/tests/fixtures/coins/mainsail/devnet/cryptoConfiguration.json"
 
 const getDefaultProperties = (): Omit<InputFeeProperties, "network" | "profile"> => ({
 	avg: BigNumber.make(7.456),
@@ -366,5 +368,20 @@ describe("getFeeMinMax", () => {
 		expect(maxGasPrice.toString()).toBe("10000");
 		expect(minGasLimit.toString()).toBe("21000");
 		expect(maxGasLimit.toString()).toBe("2000000");
+	});
+
+	it("should handle when config manager doesn't include min/max values", () => {
+		const configSpy = vi.spyOn(configManager, "getMilestone").mockReturnValue({
+			gas: {}
+		});
+
+		const { minGasPrice, maxGasPrice, minGasLimit, maxGasLimit } = getFeeMinMax();
+
+		expect(minGasPrice.toString()).toBe("0");
+		expect(maxGasPrice.toString()).toBe("0");
+		expect(minGasLimit.toString()).toBe("0");
+		expect(maxGasLimit.toString()).toBe("0");
+
+		configSpy.mockRestore();
 	});
 });
