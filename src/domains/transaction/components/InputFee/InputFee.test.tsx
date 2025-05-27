@@ -9,8 +9,6 @@ import { translations } from "@/domains/transaction/i18n";
 import { env, render, renderResponsive, screen } from "@/utils/testing-library";
 import { BigNumber } from "@/app/lib/helpers";
 import { describe, expect } from "vitest";
-import { requestMock, server } from "@/tests/mocks/server";
-import cryptoJson from "@/tests/fixtures/coins/mainsail/devnet/cryptoConfiguration.json"
 
 const getDefaultProperties = (): Omit<InputFeeProperties, "network" | "profile"> => ({
 	avg: BigNumber.make(7.456),
@@ -239,7 +237,7 @@ describe("InputFee", () => {
 			expect(asFragment()).toMatchSnapshot();
 		});
 
-		it("should increment value by step when up button is clicked", async () => {
+		it("should increment gasPrice when up button is clicked", async () => {
 			defaultProps.viewType = InputFeeViewType.Advanced;
 			defaultProps.gasPrice = BigNumber.make(6);
 
@@ -250,7 +248,7 @@ describe("InputFee", () => {
 			expect(getOnChangeGasPriceLastCallArg()).toBe("7");
 		});
 
-		it("should decrement value by step when down button is clicked", async () => {
+		it("should decrement gasPrice by step when down button is clicked", async () => {
 			defaultProps.viewType = InputFeeViewType.Advanced;
 			defaultProps.gasPrice = BigNumber.make(6.5);
 
@@ -261,7 +259,29 @@ describe("InputFee", () => {
 			expect(getOnChangeGasPriceLastCallArg()).toBe("5.5");
 		});
 
-		it("should disable down button when value is zero", () => {
+		it("should increment gasLimit when up button is clicked", async () => {
+			defaultProps.viewType = InputFeeViewType.Advanced;
+			defaultProps.gasLimit = BigNumber.make(22_000);
+
+			render(<InputFee {...defaultProps} />);
+
+			await userEvent.click(screen.getByTestId("InputFeeAdvanced__gasLimit__up"));
+
+			expect(getOnChangeGasLimitLastCallArg()).toBe("23000");
+		});
+
+		it("should decrement gasLimit when down button is clicked", async () => {
+			defaultProps.viewType = InputFeeViewType.Advanced;
+			defaultProps.gasLimit = BigNumber.make(22_000);
+
+			render(<InputFee {...defaultProps} />);
+
+			await userEvent.click(screen.getByTestId("InputFeeAdvanced__gasLimit__down"));
+
+			expect(getOnChangeGasLimitLastCallArg()).toBe("21000");
+		});
+
+		it("should disable down button when gasPrice is zero", () => {
 			defaultProps.viewType = InputFeeViewType.Advanced;
 			defaultProps.gasPrice = BigNumber.make(0);
 
