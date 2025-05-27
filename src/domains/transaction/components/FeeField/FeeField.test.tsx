@@ -69,7 +69,8 @@ describe("FeeField", () => {
 
 	it("should set fee to fees.avg when it has no value yet", async () => {
 		const calculate = vi.fn().mockResolvedValue({ avg: 30, max: 1, min: 1 });
-		const useFeesMock = vi.spyOn(useFeesHook, "useFees").mockImplementation(() => ({ calculate }));
+		const estimateGas = vi.fn().mockResolvedValue(BigNumber.make(21_000));
+		const useFeesMock = vi.spyOn(useFeesHook, "useFees").mockImplementation(() => ({ calculate, estimateGas }));
 
 		render(<Component type="transfer" data={{ amount: 1, to: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6" }} />);
 
