@@ -22,23 +22,23 @@ interface Properties {
 	profile: Contracts.IProfile;
 }
 
-const defaultGasLimit = BigNumber.make(21_000);
+const gasLimit21k = BigNumber.make(21_000);
 export const GasLimit: Record<Properties["type"], BigNumber> = {
-	multiPayment: defaultGasLimit,
-	multiSignature: defaultGasLimit,
-	transfer: defaultGasLimit,
-	usernameRegistration: defaultGasLimit,
-	usernameResignation: defaultGasLimit,
-	validatorRegistration: defaultGasLimit,
-	validatorResignation: defaultGasLimit,
-	vote: defaultGasLimit,
+	multiPayment: gasLimit21k,
+	multiSignature: gasLimit21k,
+	transfer: gasLimit21k,
+	usernameRegistration: BigNumber.make(200_000),
+	usernameResignation: BigNumber.make(200_000),
+	validatorRegistration: BigNumber.make(500_000),
+	validatorResignation: BigNumber.make(150_000),
+	vote: BigNumber.make(200_000),
 };
 
 export const FeeField: React.FC<Properties> = ({ type, network, profile, ...properties }: Properties) => {
 	const { calculate, estimateGas } = useFees(profile);
 
 	const [isLoadingFee, setIsLoadingFee] = useState(false);
-	const [estimatedGasLimit, setEstimateGasLimit] = useState(BigNumber.make(0));
+	const [estimatedGasLimit, setEstimatedGasLimit] = useState(BigNumber.make(0));
 
 	const { watch, setValue, getValues } = useFormContext();
 	const { fees, inputFeeSettings = {} } = watch(["fees", "inputFeeSettings"]);
@@ -65,7 +65,7 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 				console.warn(error);
 			}
 
-			setEstimateGasLimit(gasLimit);
+			setEstimatedGasLimit(gasLimit);
 			setValue("gasLimit", gasLimit, { shouldDirty: true, shouldValidate: true });
 		};
 
