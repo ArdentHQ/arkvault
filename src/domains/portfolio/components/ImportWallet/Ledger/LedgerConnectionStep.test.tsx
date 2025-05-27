@@ -58,16 +58,16 @@ describe("LedgerConnectionStep", () => {
 		await profile.sync();
 
 		networkMock = {
-			coin: () => "ARK",
-			id: () => "ark.devnet",
+			coin: () => "Mainsail",
+			id: () => "mainsail",
 			isLive: () => true,
 			isTest: () => false,
 			ticker: () => "ARK",
-			toObject: () => ({ id: "ark.devnet", name: "ARK Devnet" }),
+			toObject: () => ({ id: "mainsail", name: "Mainsail" }),
 		};
 
 		wallet = {
-			address: () => "AThxdp8reMapvBNKgyG1XWZKy4vwSivKhf",
+			address: () => "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
 			coin: vi.fn().mockReturnValue({
 				ledger: () => ({
 					getPublicKey: vi
