@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Networks } from "@/app/lib/sdk";
+import { Networks } from "@/app/lib/mainsail";
 import { useForm } from "react-hook-form";
 import { Modal } from "@/app/components/Modal";
 import { Form, FormButtons, FormField, FormLabel } from "@/app/components/Form";
@@ -8,7 +8,7 @@ import { Input, InputDefault } from "@/app/components/Input";
 import { CustomNetwork, NormalizedNetwork } from "@/domains/setting/pages/Servers/Servers.contracts";
 import { useHandleServers } from "@/domains/setting/hooks/use-handle-servers";
 import { Button } from "@/app/components/Button";
-import { useActiveProfile, useNetworkOptions, useValidation } from "@/app/hooks";
+import { useActiveProfile, useDebounce, useNetworkOptions, useValidation } from "@/app/hooks";
 import { SelectNetworkDropdown } from "@/app/components/SelectNetworkDropdown/SelectNetworkDropdown";
 import { networkDisplayName, profileAllEnabledNetworkIds } from "@/utils/network-utils";
 import { Alert } from "@/app/components/Alert";
@@ -45,15 +45,18 @@ const ServerFormModal: React.VFC<{
 
 	const { evmApiEndpoint, transactionApiEndpoint, publicApiEndpoint, network } = watch();
 
+	const [debouncedPublic] = useDebounce(publicApiEndpoint, 500);
+	const [debouncedTransaction] = useDebounce(transactionApiEndpoint, 500);
+	const [debouncedEvm] = useDebounce(evmApiEndpoint, 500);
+
 	const { fetchingDetails, serverHeight } = useHandleServers({
 		clearErrors,
 		errors,
-		evmApiEndpoint,
+		evmApiEndpoint: debouncedEvm,
 		network: networks.find((item) => item.id() === network),
-		profile,
-		publicApiEndpoint,
+		publicApiEndpoint: debouncedPublic,
 		setError,
-		transactionApiEndpoint,
+		transactionApiEndpoint: debouncedTransaction,
 	});
 
 	function updateServerName() {
@@ -222,7 +225,7 @@ const ServerFormModal: React.VFC<{
 						<div data-testid="Servertype-fetching" className="flex items-center space-x-2">
 							<Icon className="text-theme-secondary-300 dark:text-theme-secondary-800" name="Clock" />
 
-							<span className="font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
+							<span className="text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold">
 								{t("SETTINGS.SERVERS.ADD_NEW_SERVER.FETCHING_DETAILS")}
 							</span>
 						</div>

@@ -8,7 +8,7 @@ import { assertExchangeService, isUnavailablePairError } from "@/domains/exchang
 
 import { Alert } from "@/app/components/Alert";
 import { Contracts } from "@/app/lib/profiles";
-import { Networks } from "@/app/lib/sdk";
+import { Networks } from "@/app/lib/mainsail";
 import { SelectRecipient } from "@/domains/profile/components/SelectRecipient";
 import { Spinner } from "@/app/components/Spinner";
 import cn from "classnames";
@@ -164,9 +164,7 @@ export const FormStep = ({ profile }: FormStepProperties) => {
 
 			await updateAmounts();
 
-			const wallets = profile.wallets().findByCoin(currency.coin.toUpperCase());
-
-			for (const wallet of wallets) {
+			for (const wallet of profile.wallets().values()) {
 				/* istanbul ignore if -- @preserve */
 				if (wallet.network().isLive()) {
 					return setSenderNetwork(wallet.network());
@@ -196,9 +194,7 @@ export const FormStep = ({ profile }: FormStepProperties) => {
 
 			await updateAmounts();
 
-			const wallets = profile.wallets().findByCoin(currency.coin.toUpperCase());
-
-			for (const wallet of wallets) {
+			for (const wallet of profile.wallets().values()) {
 				/* istanbul ignore if -- @preserve */
 				if (wallet.network().isLive()) {
 					return setRecipientNetwork(wallet.network());
@@ -293,7 +289,7 @@ export const FormStep = ({ profile }: FormStepProperties) => {
 				>
 					{currency?.coin?.toUpperCase()}
 				</span>
-				<span className="dark:theme-text-secondary-700 text-sm text-theme-secondary-500">{currency.name}</span>
+				<span className="text-theme-secondary-500 dark:theme-text-secondary-700 text-sm">{currency.name}</span>
 			</div>
 		);
 	};

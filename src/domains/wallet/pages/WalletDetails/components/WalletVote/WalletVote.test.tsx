@@ -70,7 +70,7 @@ describe("WalletVote", () => {
 		ledgerMock.mockRestore();
 	});
 
-	it("should render skelethon if loading", async () => {
+	it("should render skeleton if loading", async () => {
 		const { asFragment } = render(
 			<WalletVote wallet={wallet} onButtonClick={vi.fn()} votes={votes} isLoadingVotes={true} />,
 		);
@@ -331,7 +331,6 @@ describe("WalletVote", () => {
 
 		await wallet.synchroniser().votes();
 		await wallet.synchroniser().identity();
-		await wallet.synchroniser().coin();
 
 		const votes = [];
 

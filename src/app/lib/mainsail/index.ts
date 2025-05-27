@@ -1,43 +1,14 @@
-import { bundle, Coins } from "@/app/lib/sdk";
+export { configManager } from "./config.manager";
+export { manifest } from "./manifest";
 
-import { AddressService } from "./address.service";
-import { ClientService } from "./client.service";
-import { ServiceProvider } from "./coin.provider";
-import { ConfirmedTransactionData } from "./confirmed-transaction.dto";
-import { FeeService } from "./fee.service";
-import { KnownWalletService } from "./known-wallet.service";
-import { LedgerService } from "./ledger.service";
-import { manifest } from "./manifest";
-import { MessageService } from "./message.service";
-import { PrivateKeyService } from "./private-key.service";
-import { PublicKeyService } from "./public-key.service";
-import { SignedTransactionData } from "./signed-transaction.dto";
-import { TransactionService } from "./transaction.service";
-import { WalletData } from "./wallet.dto";
-import { WIFService } from "./wif.service";
+export * as Networks from "./networks";
+export * as Enums from "./enums";
+export * as Services from "./services";
+export * as Http from "./http";
+export * as Collections from "./collections";
+export * as Contracts from "./contracts";
+export * as DTO from "./dto";
+export * as Signatories from "./signatories";
+export * as Exceptions from "./exceptions";
 
-export { configManager } from "./crypto/managers/config.js";
-export * from "./helpers/format-units";
-export * from "./helpers/parse-units";
-
-export const Mainsail: Coins.CoinBundle = bundle({
-	dataTransferObjects: {
-		ConfirmedTransactionData,
-		SignedTransactionData,
-		WalletData,
-	},
-	manifest,
-	serviceProvider: ServiceProvider,
-	services: {
-		AddressService,
-		ClientService,
-		FeeService,
-		KnownWalletService,
-		LedgerService,
-		MessageService,
-		PrivateKeyService,
-		PublicKeyService,
-		TransactionService,
-		WIFService,
-	},
-});
+export * from "./config.repository.js";

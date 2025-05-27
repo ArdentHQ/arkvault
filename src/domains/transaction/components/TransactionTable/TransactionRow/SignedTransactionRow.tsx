@@ -42,7 +42,7 @@ export const SignButton = ({
 
 	if (!canBeSigned && !isAwaitingOurFinalSignature) {
 		return (
-			<span className="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-600">
+			<span className="text-theme-secondary-500 dark:text-theme-secondary-600 text-sm font-semibold">
 				{t("COMMON.WAITING")}...
 			</span>
 		);
@@ -69,7 +69,7 @@ export const SignButton = ({
 			size="sm"
 			data-testid="TransactionRow__sign"
 			variant="transparent"
-			className={`p-0 text-theme-primary-600 hover:text-theme-primary-500 hover:underline ${className}`}
+			className={`text-theme-primary-600 hover:text-theme-primary-500 p-0 hover:underline ${className}`}
 			onClick={onClick}
 		>
 			<ButtonContent />
@@ -102,14 +102,14 @@ export const SignedTransactionRow = ({
 				<div className="flex flex-col gap-1 font-semibold">
 					<span className="text-sm">
 						<TruncateMiddle
-							className="cursor-pointer text-theme-primary-600"
+							className="text-theme-primary-600 cursor-pointer"
 							text={transaction.hash()}
 							maxChars={14}
 							onClick={() => onRowClick?.(transaction)}
 							data-testid="TransactionRow__transaction-id"
 						/>
 					</span>
-					<span className="text-xs text-theme-secondary-700 xl:hidden">
+					<span className="text-theme-secondary-700 text-xs xl:hidden">
 						<TimeAgo date={DateTime.fromUnix(transaction.timestamp().toUNIX()).toISOString()} />
 					</span>
 				</div>
@@ -152,7 +152,7 @@ export const SignedTransactionRow = ({
 			<TableCell innerClassName="justify-end items-start my-1 pt-3 min-h-14 xl:min-h-11">
 				<div className="flex flex-col items-end gap-1">
 					<TransactionAmountLabel transaction={transaction} />
-					<span className="text-xs font-semibold text-theme-secondary-700 lg:hidden">
+					<span className="text-theme-secondary-700 text-xs font-semibold lg:hidden">
 						<TransactionFiatAmount transaction={transaction} exchangeCurrency={wallet.exchangeCurrency()} />
 					</span>
 				</div>
@@ -175,7 +175,7 @@ export const SignedTransactionRow = ({
 					/>
 					<Divider
 						type="vertical"
-						className="m-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+						className="border-theme-secondary-300 dark:border-theme-secondary-800 m-0"
 					/>
 					<div className="flex items-center">
 						<TableRemoveButton onClick={handleRemove} className="m-0 p-1" />

@@ -1,5 +1,4 @@
-/* eslint-disable @typescript-eslint/require-await */
-import { Contracts } from "@/app/lib/sdk";
+import { Contracts } from "@/app/lib/mainsail";
 import { Contracts as ProfilesContracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
 import React, { useEffect } from "react";
@@ -8,8 +7,9 @@ import { Route } from "react-router-dom";
 
 import { ValidatorRegistrationForm, signValidatorRegistration } from "./ValidatorRegistrationForm";
 import * as useFeesHook from "@/app/hooks/use-fees";
-import { translations } from "@/domains/transaction/i18n";
 import validatorRegistrationFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/validator-registration.json";
+import { TransactionFixture } from "@/tests/fixtures/transactions";
+
 import {
 	env,
 	getDefaultProfileId,
@@ -24,7 +24,7 @@ import {
 let profile: ProfilesContracts.IProfile;
 let wallet: ProfilesContracts.IReadWriteWallet;
 
-const fees = { avg: 1.354, isDynamic: true, max: 10, min: 0, static: 0 };
+const fees = { avg: 1.354, max: 10, min: 0 };
 
 const renderComponent = (properties?: any) => {
 	let form: UseFormMethods | undefined;
@@ -67,12 +67,11 @@ const createTransactionMock = (wallet: ProfilesContracts.IReadWriteWallet) =>
 	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
 		amount: () => +validatorRegistrationFixture.data.amount / 1e8,
 		data: () => ({ data: () => validatorRegistrationFixture.data }),
-		explorerLink: () => `https://test.arkscan.io/transaction/${validatorRegistrationFixture.data.id}`,
-		fee: () => +validatorRegistrationFixture.data.fee / 1e8,
-		id: () => validatorRegistrationFixture.data.id,
-		recipient: () => validatorRegistrationFixture.data.recipient,
-		sender: () => validatorRegistrationFixture.data.sender,
-		username: () => validatorRegistrationFixture.data.asset.validator.username,
+		explorerLink: () => `https://test.arkscan.io/transaction/${validatorRegistrationFixture.data.hash}`,
+		from: () => validatorRegistrationFixture.data.from,
+		gasPrice: () => +validatorRegistrationFixture.data.gasPrice / 1e8,
+		hash: () => validatorRegistrationFixture.data.hash,
+		to: () => validatorRegistrationFixture.data.to,
 	});
 
 const formStepID = "ValidatorRegistrationForm_form-step";
@@ -109,31 +108,6 @@ describe("ValidatorRegistrationForm", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should set fee", async () => {
-		const { asFragment } = renderComponent({
-			defaultValues: {
-				fee: "10",
-			},
-		});
-
-		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
-		await expect(screen.findByTestId("InputFee")).resolves.toBeVisible();
-
-		await userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
-
-		const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
-
-		await waitFor(() => expect(inputElement).toHaveValue("10"));
-
-		inputElement.select();
-		await userEvent.clear(inputElement);
-		await userEvent.type(inputElement, "11");
-
-		await waitFor(() => expect(inputElement).toHaveValue("11"));
-
-		expect(asFragment()).toMatchSnapshot();
-	});
-
 	it("should error if public key is too long", async () => {
 		renderComponent();
 
@@ -164,7 +138,8 @@ describe("ValidatorRegistrationForm", () => {
 		const form = {
 			clearErrors: vi.fn(),
 			getValues: () => ({
-				fee: "1",
+				gasLimit: "1",
+				gasPrice: "1",
 				mnemonic: MNEMONICS[0],
 				network: wallet.network(),
 				senderAddress: wallet.address(),
@@ -175,9 +150,9 @@ describe("ValidatorRegistrationForm", () => {
 		};
 		const signMock = vi
 			.spyOn(wallet.transaction(), "signValidatorRegistration")
-			.mockReturnValue(Promise.resolve(validatorRegistrationFixture.data.id));
+			.mockReturnValue(Promise.resolve(validatorRegistrationFixture.data.hash));
 		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
-			accepted: [validatorRegistrationFixture.data.id],
+			accepted: [validatorRegistrationFixture.data.hash],
 			errors: {},
 			rejected: [],
 		});
@@ -191,10 +166,12 @@ describe("ValidatorRegistrationForm", () => {
 
 		expect(signMock).toHaveBeenCalledWith({
 			data: { validatorPublicKey: "02147bf63839be7abb44707619b012a8b59ad3eda90be1c6e04eb9c630232268de" },
-			fee: 1,
+			gasLimit: "1",
+			gasPrice: "1",
+			signatory: undefined,
 		});
-		expect(broadcastMock).toHaveBeenCalledWith(validatorRegistrationFixture.data.id);
-		expect(transactionMock).toHaveBeenCalledWith(validatorRegistrationFixture.data.id);
+		expect(broadcastMock).toHaveBeenCalledWith(validatorRegistrationFixture.data.hash);
+		expect(transactionMock).toHaveBeenCalledWith(validatorRegistrationFixture.data.hash);
 
 		signMock.mockRestore();
 		broadcastMock.mockRestore();
@@ -204,12 +181,16 @@ describe("ValidatorRegistrationForm", () => {
 	it("should output transaction details", () => {
 		const translations = vi.fn((translation) => translation);
 		const transaction = {
-			amount: () => validatorRegistrationFixture.data.amount / 1e8,
+			...TransactionFixture,
 			data: () => ({ data: () => validatorRegistrationFixture.data }),
 			fee: () => validatorRegistrationFixture.data.fee / 1e8,
-			id: () => validatorRegistrationFixture.data.id,
-			recipient: () => validatorRegistrationFixture.data.recipient,
-			sender: () => validatorRegistrationFixture.data.sender,
+			from: () => validatorRegistrationFixture.data.from,
+			gasLimit: () => validatorRegistrationFixture.data.gas,
+			gasPrice: () => validatorRegistrationFixture.data.gasPrice,
+			hash: () => validatorRegistrationFixture.data.hash,
+			to: () => validatorRegistrationFixture.data.to,
+			validatorPublicKey: () => "validatorPublickey.",
+			value: () => validatorRegistrationFixture.data.amount / 1e8,
 		} as Contracts.SignedTransactionData;
 
 		render(
@@ -221,9 +202,7 @@ describe("ValidatorRegistrationForm", () => {
 		);
 
 		expect(screen.getByText("TRANSACTION.VALIDATOR_PUBLIC_KEY")).toBeInTheDocument();
-		expect(
-			screen.getByText("02147bf63839be7abb44707619b012a8b59ad3eda90be1c6e04eb9c630232268de"),
-		).toBeInTheDocument();
+		expect(screen.getByText(/validatorPublickey/)).toBeInTheDocument();
 	});
 
 	it("should sign transaction using password encryption", async () => {
@@ -234,7 +213,8 @@ describe("ValidatorRegistrationForm", () => {
 			clearErrors: vi.fn(),
 			getValues: () => ({
 				encryptionPassword: "password",
-				fee: "1",
+				gasLimit: "1",
+				gasPrice: "1",
 				mnemonic: MNEMONICS[0],
 				network: wallet.network(),
 				senderAddress: wallet.address(),
@@ -245,9 +225,9 @@ describe("ValidatorRegistrationForm", () => {
 		};
 		const signMock = vi
 			.spyOn(wallet.transaction(), "signValidatorRegistration")
-			.mockReturnValue(Promise.resolve(validatorRegistrationFixture.data.id));
+			.mockReturnValue(Promise.resolve(validatorRegistrationFixture.data.hash));
 		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
-			accepted: [validatorRegistrationFixture.data.id],
+			accepted: [validatorRegistrationFixture.data.hash],
 			errors: {},
 			rejected: [],
 		});
@@ -261,10 +241,12 @@ describe("ValidatorRegistrationForm", () => {
 
 		expect(signMock).toHaveBeenCalledWith({
 			data: { validatorPublicKey: "02147bf63839be7abb44707619b012a8b59ad3eda90be1c6e04eb9c630232268de" },
-			fee: 1,
+			gasLimit: "1",
+			gasPrice: "1",
+			signatory: undefined,
 		});
-		expect(broadcastMock).toHaveBeenCalledWith(validatorRegistrationFixture.data.id);
-		expect(transactionMock).toHaveBeenCalledWith(validatorRegistrationFixture.data.id);
+		expect(broadcastMock).toHaveBeenCalledWith(validatorRegistrationFixture.data.hash);
+		expect(transactionMock).toHaveBeenCalledWith(validatorRegistrationFixture.data.hash);
 
 		signMock.mockRestore();
 		broadcastMock.mockRestore();

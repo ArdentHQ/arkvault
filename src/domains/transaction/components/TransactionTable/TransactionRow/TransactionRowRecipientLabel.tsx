@@ -2,7 +2,6 @@ import { Contracts, DTO } from "@/app/lib/profiles";
 import React, { useEffect, useState } from "react";
 
 import { Address } from "@/app/components/Address";
-import { useEnvironmentContext } from "@/app/contexts";
 import { useTransactionTypes } from "@/domains/transaction/hooks/use-transaction-types";
 import { useBreakpoint } from "@/app/hooks";
 
@@ -17,7 +16,7 @@ interface Properties {
 const RecipientLabel = ({ type }: { type: string }) => {
 	const { getLabel } = useTransactionTypes();
 	return (
-		<span data-testid="TransactionRowRecipientLabel" className="font-semibold text-theme-text">
+		<span data-testid="TransactionRowRecipientLabel" className="text-theme-text font-semibold">
 			{getLabel(type)}
 		</span>
 	);
@@ -43,7 +42,7 @@ const VoteCombinationLabel = ({
 				<span className="inline-flex max-w-72">
 					<RecipientLabel type="vote" />
 					{votes.length > 1 && (
-						<span className="ml-1 font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
+						<span className="text-theme-secondary-500 dark:text-theme-secondary-700 ml-1 font-semibold">
 							{votes.length}
 						</span>
 					)}
@@ -54,7 +53,7 @@ const VoteCombinationLabel = ({
 				<span>
 					<RecipientLabel type="unvote" />
 					{unvotes.length > 1 && (
-						<span className="ml-1 font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
+						<span className="text-theme-secondary-500 dark:text-theme-secondary-700 ml-1 font-semibold">
 							{unvotes.length}
 						</span>
 					)}
@@ -65,7 +64,7 @@ const VoteCombinationLabel = ({
 );
 
 const ValidatorLabel = ({ username, count }: { username?: string; count?: number }) => (
-	<span className="ml-2 truncate border-l border-theme-secondary-300 pl-2 font-semibold text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-700">
+	<span className="border-theme-secondary-300 text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-700 ml-2 truncate border-l pl-2 font-semibold">
 		{username}
 		{count !== undefined && count > 1 && <span className="ml-1">+{count - 1}</span>}
 	</span>
@@ -85,8 +84,6 @@ export const BaseTransactionRowRecipientLabel = ({
 	walletName,
 	addressClass,
 }: Properties) => {
-	const { env } = useEnvironmentContext();
-
 	const { isXs, isSm } = useBreakpoint();
 
 	const [validators, setValidators] = useState<{
@@ -100,11 +97,11 @@ export const BaseTransactionRowRecipientLabel = ({
 	useEffect(() => {
 		if (transaction?.isVote() || transaction?.isUnvote()) {
 			setValidators({
-				unvotes: env.validators().map(transaction.wallet(), transaction.unvotes()),
-				votes: env.validators().map(transaction.wallet(), transaction.votes()),
+				unvotes: transaction.wallet().validators().map(transaction.wallet(), transaction.unvotes()),
+				votes: transaction.wallet().validators().map(transaction.wallet(), transaction.votes()),
 			});
 		}
-	}, [env, transaction]);
+	}, [transaction]);
 
 	if (type === "transfer") {
 		return (
@@ -121,8 +118,8 @@ export const BaseTransactionRowRecipientLabel = ({
 		return (
 			<span>
 				<RecipientLabel type="multiPayment" />
-				<span className="ml-1 font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
-					{transaction?.recipients().length}
+				<span className="text-theme-secondary-500 dark:text-theme-secondary-700 ml-1 font-semibold">
+					{transaction.recipients().length}
 				</span>
 			</span>
 		);
@@ -132,8 +129,8 @@ export const BaseTransactionRowRecipientLabel = ({
 		return (
 			<VoteCombinationLabel
 				validator={validators.votes[0]}
-				votes={transaction?.votes()}
-				unvotes={transaction?.unvotes()}
+				votes={transaction.votes()}
+				unvotes={transaction.unvotes()}
 			/>
 		);
 	}
@@ -141,7 +138,7 @@ export const BaseTransactionRowRecipientLabel = ({
 	if (transaction?.isVote() || transaction?.isUnvote()) {
 		return (
 			<VoteLabel
-				validators={validators[transaction?.isVote() ? "votes" : "unvotes"]}
+				validators={validators[transaction.isVote() ? "votes" : "unvotes"]}
 				isUnvote={transaction.isUnvote()}
 			/>
 		);

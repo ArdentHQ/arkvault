@@ -4,7 +4,7 @@ import { createHashHistory } from "history";
 import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { Route } from "react-router-dom";
-
+import { renderHook } from "@testing-library/react";
 import { SuccessStep } from "./SuccessStep";
 import { EnvironmentProvider } from "@/app/contexts";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
@@ -18,17 +18,18 @@ import {
 	mockNanoXTransport,
 	mockProfileWithPublicAndTestNetworks,
 	getMainsailProfileId,
-	fixUInt8ArrayIssue,
 } from "@/utils/testing-library";
 import * as usePortfolio from "@/domains/portfolio/hooks/use-portfolio";
 import { ImportAddressesSidePanel } from "./ImportAddressSidePanel";
 import { expect } from "vitest";
+import { ImportAddressStep, useLedgerStepHeaderConfig, useStepHeaderConfig } from "./ImportAddressSidePanel.blocks";
+import { LedgerTabStep } from "./Ledger/LedgerTabs.contracts";
 
 let profile: Contracts.IProfile;
 const fixtureProfileId = getMainsailProfileId();
 
-const mnemonic = "buddy year cost vendor honey tonight viable nut female alarm duck symptom";
-const randomAddress = "D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib";
+const mnemonic =
+	"skin fortune security mom coin hurdle click emotion heart brisk exact rather code feature era leopard grocery tide gift power lawsuit sight vehicle coin";
 
 const route = `/profiles/${fixtureProfileId}/dashboard`;
 const history = createHashHistory();
@@ -40,53 +41,31 @@ const finishButton = () => screen.getByTestId("ImportWallet__finish-button");
 const successStep = () => screen.getByTestId("ImportWallet__success-step");
 const methodStep = () => screen.getByTestId("ImportWallet__method-step");
 const detailStep = () => screen.getByTestId("ImportWallet__detail-step");
-const privateKeyInput = () => screen.getByTestId("ImportWallet__privatekey-input");
-const wifInput = () => screen.getByTestId("ImportWallet__wif-input");
-const encryptedWifInput = () => screen.getByTestId("ImportWallet__encryptedWif-input");
-
-const testNetwork = "mainsail.devnet";
-let network;
 
 describe("ImportSidePanel", () => {
+	let network;
 	let resetProfileNetworksMock: () => void;
-	let uInt8ArrayFix: () => void;
+
+	const Component = () => (
+		<EnvironmentProvider env={env}>
+			<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
+		</EnvironmentProvider>
+	);
 
 	beforeEach(async () => {
 		profile = env.profiles().findById(fixtureProfileId);
-		network = profile.availableNetworks().find((net) => net.coin() === "Mainsail" && net.id() === testNetwork);
+		network = profile.activeNetwork();
 
 		await env.profiles().restore(profile);
 
-		const walletId = profile.wallets().findByAddressWithNetwork(randomAddress, testNetwork)?.id();
-
-		if (walletId) {
-			profile.wallets().forget(walletId);
-		}
-
 		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
-		uInt8ArrayFix = fixUInt8ArrayIssue();
 	});
 
 	afterEach(() => {
 		resetProfileNetworksMock();
-		uInt8ArrayFix();
 	});
 
 	it("should render method step", async () => {
-		const Component = () => {
-			network.importMethods = () => ({
-				bip39: {
-					default: false,
-					permissions: [],
-				},
-			});
-			return (
-				<EnvironmentProvider env={env}>
-					<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
-				</EnvironmentProvider>
-			);
-		};
-
 		history.push(`/profiles/${profile.id()}`);
 		render(
 			<Route path="/profiles/:profileId">
@@ -116,7 +95,7 @@ describe("ImportSidePanel", () => {
 	it("should be possible to change import type in method step", async () => {
 		let form: ReturnType<typeof useForm>;
 
-		const Component = () => {
+		const ImportAddressesSidePanelComponent = () => {
 			network.importMethods = () => ({
 				address: {
 					default: false,
@@ -147,7 +126,7 @@ describe("ImportSidePanel", () => {
 		history.push(`/profiles/${profile.id()}`);
 		render(
 			<Route path="/profiles/:profileId">
-				<Component />
+				<ImportAddressesSidePanelComponent />
 			</Route>,
 			{ history, withProviders: false },
 		);
@@ -280,223 +259,76 @@ describe("ImportSidePanel", () => {
 
 		historySpy.mockRestore();
 	});
+});
 
-	describe("import with private key", () => {
-		const privateKey = "d8839c2432bfd0a67ef10a804ba991eabba19f154a3d707917681d45822a5712";
-
-		const Component = () => {
-			network.importMethods = () => ({
-				privateKey: {
-					canBeEncrypted: true,
-					default: true,
-					permissions: ["read", "write"],
-				},
-			});
-
-			return (
-				<EnvironmentProvider env={env}>
-					<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
-				</EnvironmentProvider>
-			);
-		};
-
-		it("when is valid", async () => {
-			const coin = profile.coins().get("Mainsail", testNetwork);
-			const coinMock = vi.spyOn(coin.address(), "fromPrivateKey").mockResolvedValue({ address: "whatever" });
-
-			history.push(`/profiles/${profile.id()}`);
-
-			render(
-				<Route path="/profiles/:profileId">
-					<Component />
-				</Route>,
-				{ history, withProviders: false },
-			);
-
-			expect(methodStep()).toBeInTheDocument();
-
-			await expect(screen.findByText(commonTranslations.PRIVATE_KEY)).resolves.toBeVisible();
-
-			await userEvent.click(screen.getByText(commonTranslations.PRIVATE_KEY));
-
-			await waitFor(() => expect(privateKeyInput()));
-
-			await userEvent.clear(privateKeyInput());
-			await userEvent.type(privateKeyInput(), privateKey);
-
-			await waitFor(() => expect(continueButton()).toBeEnabled());
-
-			coinMock.mockRestore();
-		});
-
-		it("when is not valid", async () => {
-			const coin = profile.coins().get("Mainsail", testNetwork);
-			const coinMock = vi.spyOn(coin.address(), "fromPrivateKey").mockImplementation(() => {
-				throw new Error("test");
-			});
-
-			history.push(`/profiles/${profile.id()}`);
-
-			render(
-				<Route path="/profiles/:profileId">
-					<Component />
-				</Route>,
-				{ history, withProviders: false },
-			);
-
-			expect(methodStep()).toBeInTheDocument();
-
-			await expect(screen.findByText(commonTranslations.PRIVATE_KEY)).resolves.toBeVisible();
-
-			await userEvent.click(screen.getByText(commonTranslations.PRIVATE_KEY));
-
-			await waitFor(() => expect(privateKeyInput()));
-
-			await userEvent.clear(privateKeyInput());
-			await userEvent.type(privateKeyInput(), privateKey);
-
-			await waitFor(() => expect(continueButton()).not.toBeEnabled());
-
-			await waitFor(() => {
-				expect(screen.getByTestId("Input__error")).toHaveAttribute("data-errortext", "Invalid Private Key.");
-			});
-
-			coinMock.mockRestore();
+describe("useStepHeaderConfig", () => {
+	it("returns correct config for MethodStep", () => {
+		const { result } = renderHook(() => useStepHeaderConfig(ImportAddressStep.MethodStep));
+		expect(result.current).toEqual({
+			subtitle: "Select the method you want to use to import your address.",
+			title: "Import",
 		});
 	});
 
-	describe("import with wif", () => {
-		const wif = "wif.1111";
-
-		const Component = () => {
-			network.importMethods = () => ({
-				wif: {
-					canBeEncrypted: true,
-					default: true,
-					permissions: ["read", "write"],
-				},
-			});
-
-			return (
-				<EnvironmentProvider env={env}>
-					<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
-				</EnvironmentProvider>
-			);
-		};
-
-		it("with valid wif", async () => {
-			const coin = profile.coins().get("Mainsail", testNetwork);
-			const coinMock = vi
-				.spyOn(coin.address(), "fromWIF")
-				.mockResolvedValue({ address: "whatever", type: "bip39" });
-
-			history.push(`/profiles/${profile.id()}`);
-
-			render(
-				<Route path="/profiles/:profileId">
-					<Component />
-				</Route>,
-				{ history, withProviders: false },
-			);
-
-			expect(methodStep()).toBeInTheDocument();
-
-			await expect(screen.findByText(commonTranslations.WIF)).resolves.toBeVisible();
-
-			await userEvent.click(screen.getByText(commonTranslations.WIF));
-
-			await waitFor(() => expect(wifInput()));
-
-			await userEvent.type(wifInput(), wif);
-
-			await waitFor(() => expect(continueButton()).toBeEnabled());
-
-			coinMock.mockRestore();
-		});
-
-		it("with invalid wif", async () => {
-			const coin = profile.coins().get("Mainsail", testNetwork);
-
-			const coinMock = vi.spyOn(coin.address(), "fromWIF").mockImplementation(() => {
-				throw new Error("Something went wrong");
-			});
-
-			history.push(`/profiles/${profile.id()}`);
-
-			render(
-				<Route path="/profiles/:profileId">
-					<Component />
-				</Route>,
-				{ history, withProviders: false },
-			);
-
-			expect(methodStep()).toBeInTheDocument();
-
-			await expect(screen.findByText(commonTranslations.WIF)).resolves.toBeVisible();
-
-			await userEvent.click(screen.getByText(commonTranslations.WIF));
-
-			await waitFor(() => expect(wifInput()));
-
-			await userEvent.type(wifInput(), wif);
-
-			await waitFor(() => {
-				expect(wifInput()).toHaveValue(wif);
-			});
-
-			await waitFor(() => expect(continueButton()).not.toBeEnabled());
-
-			coinMock.mockRestore();
+	it("returns config for ImportDetailStep with importOption", () => {
+		const option = { description: "Desc", header: "Header", icon: <span>Icon</span> } as unknown as ImportOption;
+		const { result } = renderHook(() => useStepHeaderConfig(ImportAddressStep.ImportDetailStep, option));
+		expect(result.current).toEqual({
+			subtitle: "Desc",
+			title: "Header",
+			titleIcon: option.icon,
 		});
 	});
 
-	it("should import with encryped wif", async () => {
-		const wif = "wif.1111";
-		const wifPassword = "password";
-
-		const Component = () => {
-			//ts-ignore
-			network.importMethods = () => ({
-				//ts-ignore
-				encryptedWif: true,
-			});
-
-			return (
-				<EnvironmentProvider env={env}>
-					<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
-				</EnvironmentProvider>
-			);
-		};
-
-		history.push(`/profiles/${profile.id()}`);
-
-		render(
-			<Route path="/profiles/:profileId">
-				<Component />
-			</Route>,
-			{ history, withProviders: false },
-		);
-
-		expect(methodStep()).toBeInTheDocument();
-
-		expect(methodStep()).toBeInTheDocument();
-
-		await expect(screen.findByText(commonTranslations.ENCRYPTED_WIF)).resolves.toBeVisible();
-
-		await userEvent.click(screen.getByText(commonTranslations.ENCRYPTED_WIF));
-
-		await waitFor(() => expect(encryptedWifInput()));
-
-		await userEvent.clear(encryptedWifInput());
-		await userEvent.type(encryptedWifInput(), wif);
-
-		await userEvent.clear(screen.getByTestId("ImportWallet__encryptedWif__password-input"));
-		await userEvent.type(screen.getByTestId("ImportWallet__encryptedWif__password-input"), wifPassword);
-
-		await waitFor(() => {
-			expect(encryptedWifInput()).toHaveValue(wif);
+	it("returns correct config for EncryptPasswordStep", () => {
+		const { result } = renderHook(() => useStepHeaderConfig(ImportAddressStep.EncryptPasswordStep));
+		expect(result.current).toMatchObject({
+			title: "Encryption Password",
 		});
+	});
 
-		await waitFor(() => expect(continueButton()).toBeEnabled());
+	it("returns correct config for SummaryStep", () => {
+		const { result } = renderHook(() => useStepHeaderConfig(ImportAddressStep.SummaryStep));
+		expect(result.current).toMatchObject({
+			subtitle: "The address has been successfully imported.",
+			title: "Import Completed",
+		});
+	});
+});
+
+describe("useLedgerStepHeaderConfig", () => {
+	it("returns config for LedgerConnectionStep with importOption", () => {
+		const option = { description: "LDesc", header: "LHeader", icon: <span>LICON</span> } as unknown as ImportOption;
+		const { result } = renderHook(() => useLedgerStepHeaderConfig(LedgerTabStep.LedgerConnectionStep, option));
+		expect(result.current).toEqual({
+			subtitle: "LDesc",
+			title: "LHeader",
+			titleIcon: option.icon,
+		});
+	});
+
+	it("returns config for LedgerScanStep", () => {
+		const { result } = renderHook(() => useLedgerStepHeaderConfig(LedgerTabStep.LedgerScanStep));
+		expect(result.current).toEqual({
+			subtitle: "Select the addresses that you want to import.",
+			title: "Ledger Addresses",
+			titleIcon: expect.anything(),
+		});
+	});
+
+	it("returns config for LedgerImportStep", () => {
+		const { result } = renderHook(() => useLedgerStepHeaderConfig(LedgerTabStep.LedgerImportStep));
+		expect(result.current).toEqual({
+			subtitle: "Your Ledger addresses have been imported.",
+			title: "Import Completed",
+			titleIcon: expect.anything(),
+		});
+	});
+
+	it("returns default config for unknown step", () => {
+		const { result } = renderHook(() => useStepHeaderConfig(999 as unknown as ImportAddressStep));
+		expect(result.current).toEqual({
+			title: "",
+		});
 	});
 });

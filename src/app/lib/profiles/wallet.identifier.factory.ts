@@ -1,4 +1,4 @@
-import { Services } from "@/app/lib/sdk";
+import { Services } from "@/app/lib/mainsail";
 
 import { IReadWriteWallet } from "./wallet.contract.js";
 
@@ -24,23 +24,11 @@ export class WalletIdentifierFactory {
 			return this.#addressOrPublicKey(wallet);
 		}
 
-		if (wallet.actsWithPrivateKey()) {
-			return this.#addressOrPublicKey(wallet);
-		}
-
-		if (wallet.actsWithWifWithEncryption()) {
-			return this.#addressOrPublicKey(wallet);
-		}
-
 		if (wallet.actsWithSecret()) {
 			return this.#addressOrPublicKey(wallet);
 		}
 
 		if (wallet.actsWithSecretWithEncryption()) {
-			return this.#addressOrPublicKey(wallet);
-		}
-
-		if (wallet.actsWithWif()) {
 			return this.#addressOrPublicKey(wallet);
 		}
 

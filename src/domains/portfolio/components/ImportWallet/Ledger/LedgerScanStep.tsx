@@ -1,4 +1,4 @@
-import { Networks, Contracts } from "@/app/lib/sdk";
+import { Networks, Contracts } from "@/app/lib/mainsail";
 import { Contracts as ProfilesContracts } from "@/app/lib/profiles";
 import Tippy from "@tippyjs/react";
 import React, { FC, useCallback, useEffect, useMemo, useState } from "react";
@@ -135,7 +135,7 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 
 	return (
 		<div>
-			<div className="relative hidden rounded-xl border border-transparent sm:block md:border-theme-secondary-300 dark:md:border-theme-secondary-800">
+			<div className="md:border-theme-secondary-300 dark:md:border-theme-secondary-800 relative hidden rounded-xl border border-transparent sm:block">
 				<div>
 					<Table columns={columns} data={showAll ? data : data.slice(0, 6)} className="with-x-padding">
 						{renderTableRow}
@@ -188,8 +188,8 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 			</div>
 
 			<div className="sm:hidden">
-				<div className="mb-3 flex h-9 w-full flex-row items-center justify-between border-l-2 border-l-theme-primary-400 bg-theme-primary-100 px-3 dark:border-l-theme-primary-300 dark:bg-theme-secondary-800">
-					<span className="text-base font-semibold text-theme-secondary-700 dark:text-theme-secondary-500">
+				<div className="border-l-theme-primary-400 bg-theme-primary-100 dark:border-l-theme-primary-300 dark:bg-theme-secondary-800 mb-3 flex h-9 w-full flex-row items-center justify-between border-l-2 px-3">
+					<span className="text-theme-secondary-700 dark:text-theme-secondary-500 text-base font-semibold">
 						{t("COMMON.ADDRESS")}
 					</span>
 					<label

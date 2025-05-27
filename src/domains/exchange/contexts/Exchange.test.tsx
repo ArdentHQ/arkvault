@@ -41,7 +41,7 @@ describe("Exchange Context", () => {
 			</ExchangeProvider>,
 		);
 
-		userEvent.click(screen.getByRole("button"));
+		await userEvent.click(screen.getByRole("button"));
 
 		await waitFor(() => {
 			expect(container).toHaveTextContent("provider count: 2");
@@ -57,7 +57,7 @@ describe("Exchange Context", () => {
 			</ExchangeProvider>,
 		);
 
-		userEvent.click(screen.getByRole("button"));
+		await userEvent.click(screen.getByRole("button"));
 
 		await waitFor(() => {
 			expect(container).toHaveTextContent("provider count: 0");
@@ -84,7 +84,7 @@ describe("Exchange Context", () => {
 
 		expect(container).toHaveTextContent("exchangeService is undefined");
 
-		userEvent.click(screen.getByRole("button"));
+		await userEvent.click(screen.getByRole("button"));
 
 		await waitFor(() => {
 			expect(container).toHaveTextContent("exchangeService is set");

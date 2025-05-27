@@ -1,10 +1,13 @@
 /* eslint unicorn/no-abusive-eslint-disable: "off" */
 /* eslint-disable */
-import { Contracts, IoC, Networks, Services } from "@/app/lib/sdk";
+import { ConfigRepository, Contracts, Services } from "@/app/lib/mainsail";
 import { BigNumber } from "@/app/lib/helpers";
 
-import { formatUnits } from "./helpers/format-units";
 import { ArkClient } from "@arkecosystem/typescript-client";
+import { IProfile } from "@/app/lib/profiles/profile.contract";
+import { UnitConverter } from "@arkecosystem/typescript-crypto";
+import { EstimateGasPayload } from "@/app/lib/mainsail/fee.contract";
+import { hexToNumber } from "viem";
 
 interface Fees {
 	min: string;
@@ -12,22 +15,21 @@ interface Fees {
 	max: string;
 }
 
-export class FeeService extends Services.AbstractFeeService {
+export class FeeService {
 	readonly #client: ArkClient;
+	#config: ConfigRepository;
 
-	public constructor(container: IoC.IContainer) {
-		super(container);
-
-		const hostSelector = container.get<Networks.NetworkHostSelector>(IoC.BindingType.NetworkHostSelector);
-		const host = hostSelector(container.get(IoC.BindingType.ConfigRepository));
-
-		this.#client = new ArkClient(host.host);
+	constructor({ config, profile }: { config: ConfigRepository; profile: IProfile }) {
+		this.#config = config;
+		const api = this.#config.host("full", profile);
+		const evm = this.#config.host("evm", profile);
+		this.#client = new ArkClient({ api, evm });
 	}
 
-	public override async all(): Promise<Services.TransactionFees> {
+	public async all(): Promise<Services.TransactionFees> {
 		const node = await this.#client.node().fees();
-		const dynamicFees: Fees = node.data.evmCall;
-		const fees = this.#transform(dynamicFees);
+		const fees = this.#transform(node.data.evmCall);
+
 		return {
 			validatorRegistration: fees,
 			validatorResignation: fees,
@@ -40,20 +42,28 @@ export class FeeService extends Services.AbstractFeeService {
 		};
 	}
 
-	public override async calculate(
+	public async estimateGas(payload: EstimateGasPayload) {
+		const gasResponse = await this.#client.evm().call({
+			id: "1",
+			method: "eth_estimateGas",
+			params: [payload],
+		});
+
+		return hexToNumber(gasResponse.result);
+	}
+
+	public async calculate(
 		transaction: Contracts.RawTransactionData,
 		options?: Services.TransactionFeeOptions,
 	): Promise<BigNumber> {
 		return BigNumber.ZERO;
 	}
 
-	#transform(dynamicFees: Fees): Services.TransactionFee {
+	#transform(fees: Fees): Services.TransactionFee {
 		return {
-			avg: formatUnits(dynamicFees.avg ?? "0", "gwei"),
-			isDynamic: true,
-			max: formatUnits(dynamicFees.max ?? "0", "gwei"),
-			min: formatUnits(dynamicFees.min ?? "0", "gwei"),
-			static: BigNumber.make("0"),
+			avg: BigNumber.make(UnitConverter.formatUnits(fees.avg ?? "0", "gwei")),
+			max: BigNumber.make(UnitConverter.formatUnits(fees.max ?? "0", "gwei")),
+			min: BigNumber.make(UnitConverter.formatUnits(fees.min ?? "0", "gwei")),
 		};
 	}
 }

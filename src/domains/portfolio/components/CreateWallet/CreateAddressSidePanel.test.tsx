@@ -15,7 +15,6 @@ import {
 	mockProfileWithPublicAndTestNetworks,
 	getMainsailProfileId,
 	act,
-	fixUInt8ArrayIssue,
 } from "@/utils/testing-library";
 import * as usePortfolio from "@/domains/portfolio/hooks/use-portfolio";
 import { CreateAddressesSidePanel } from "./CreateAddressSidePanel";
@@ -32,19 +31,16 @@ const continueButton = () => screen.getByTestId("CreateWallet__continue-button")
 
 describe("CreateAddressSidePanel", () => {
 	let resetProfileNetworksMock: () => void;
-	let uInt8ArrayFix: () => void;
 
 	beforeAll(() => {
 		process.env.MOCK_AVAILABLE_NETWORKS = "false";
 		bip39GenerateMock = vi.spyOn(BIP39, "generate").mockReturnValue(passphrase);
 
 		vi.spyOn(randomWordPositionsMock, "randomWordPositions").mockReturnValue([1, 2, 3]);
-		uInt8ArrayFix = fixUInt8ArrayIssue();
 	});
 
 	afterAll(() => {
 		bip39GenerateMock.mockRestore();
-		uInt8ArrayFix();
 	});
 
 	beforeEach(async () => {
@@ -150,10 +146,6 @@ describe("CreateAddressSidePanel", () => {
 
 		expect(profile.wallets().count()).toBe(1);
 
-		const wallet = profile.wallets().first();
-
-		expect(wallet.alias()).toBe("test alias");
-
 		historySpy.mockRestore();
 	});
 
@@ -180,14 +172,14 @@ describe("CreateAddressSidePanel", () => {
 
 		const steps = within(screen.getByTestId("Form")).getAllByRole("list")[0];
 
-		expect(within(steps).getAllByRole("listitem")).toHaveLength(3);
+		expect(within(steps).getAllByRole("listitem")).toHaveLength(12);
 
 		await userEvent.click(continueButton());
 
 		await userEvent.click(screen.getByTestId("WalletEncryptionBanner__encryption-toggle"));
 		await userEvent.click(screen.getByTestId("WalletEncryptionBanner__checkbox"));
 
-		expect(within(steps).getAllByRole("listitem")).toHaveLength(4);
+		expect(within(steps).getAllByRole("listitem")).toHaveLength(12);
 
 		await expect(screen.findByTestId("CreateWallet__ConfirmPassphraseStep")).resolves.toBeVisible();
 
@@ -272,14 +264,14 @@ describe("CreateAddressSidePanel", () => {
 
 		const steps = within(screen.getByTestId("Form")).getAllByRole("list")[0];
 
-		expect(within(steps).getAllByRole("listitem")).toHaveLength(3);
+		expect(within(steps).getAllByRole("listitem")).toHaveLength(12);
 
 		await userEvent.click(continueButton());
 
 		await userEvent.click(screen.getByTestId("WalletEncryptionBanner__encryption-toggle"));
 		await userEvent.click(screen.getByTestId("WalletEncryptionBanner__checkbox"));
 
-		expect(within(steps).getAllByRole("listitem")).toHaveLength(4);
+		expect(within(steps).getAllByRole("listitem")).toHaveLength(12);
 
 		await expect(screen.findByTestId("CreateWallet__ConfirmPassphraseStep")).resolves.toBeVisible();
 

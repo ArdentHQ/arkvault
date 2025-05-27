@@ -7,6 +7,9 @@ interface WalletImportTypes {
 
 const syncBalance = async (wallet: Contracts.IReadWriteWallet) => wallet.synchroniser().identity();
 
+const syncRates = (profile: Contracts.IProfile, wallet: Contracts.IReadWriteWallet) =>
+	profile.exchangeRates().syncAll(profile, wallet.currency());
+
 export const useWalletSync = ({ profile, env }: WalletImportTypes) => {
 	const syncFees = async (wallet: Contracts.IReadWriteWallet) => {
 		const network = wallet.network();
@@ -14,22 +17,19 @@ export const useWalletSync = ({ profile, env }: WalletImportTypes) => {
 			env.fees().all(network.coin(), network.id());
 		} catch {
 			// Sync network fees for the first time
-			await env.fees().sync(profile, network.coin(), network.id());
+			await env.fees().sync(profile);
 		}
 	};
-
-	const syncRates = (profile: Contracts.IProfile, wallet: Contracts.IReadWriteWallet) =>
-		env.exchangeRates().syncAll(profile, wallet.currency());
 
 	const syncVotes = async (wallet: Contracts.IReadWriteWallet) => {
 		const network = wallet.network();
 
 		if (network.allowsVoting()) {
 			try {
-				env.validators().all(network.coin(), network.id());
+				profile.validators().all(network.id());
 			} catch {
 				// Sync network validators for the first time
-				await env.validators().sync(profile, network.coin(), network.id());
+				await profile.validators().sync(profile, network.id());
 			}
 
 			if (wallet.hasSyncedWithNetwork()) {

@@ -1,4 +1,4 @@
-@import "tippy.js/dist/tippy.css";
+@import 'tippy.js/dist/tippy.css';
 
 .tippy-box {
 	font-feature-settings: "liga" off, "calt" off;

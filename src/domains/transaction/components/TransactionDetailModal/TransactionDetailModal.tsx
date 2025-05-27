@@ -18,7 +18,7 @@ import { VoteTransactionType } from "@/domains/transaction/components/VoteTransa
 import { useTransactionRecipients } from "@/domains/transaction/hooks/use-transaction-recipients";
 import cn from "classnames";
 import { Contracts } from "@/app/lib/profiles";
-import { DTO } from "@/app/lib/sdk";
+import { DTO } from "@/app/lib/mainsail";
 import { isContractDeployment } from "@/domains/transaction/utils";
 
 export const TransactionDetailContent = ({

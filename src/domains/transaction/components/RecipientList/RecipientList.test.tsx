@@ -199,7 +199,7 @@ describe("RecipientList", () => {
 	});
 
 	it("should render exchange amount", async () => {
-		const exchangeMock = vi.spyOn(env.exchangeRates(), "exchange").mockReturnValue(5);
+		const exchangeMock = vi.spyOn(profile.exchangeRates(), "exchange").mockReturnValue(5);
 		const exchangeCurrencyMock = vi.spyOn(profile.settings(), "get").mockReturnValue("USD");
 
 		const recipients: RecipientItem[] = [

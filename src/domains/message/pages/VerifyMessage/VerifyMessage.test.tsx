@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
@@ -16,7 +15,7 @@ import {
 	screen,
 	waitFor,
 	triggerMessageSignOnce,
-	MAINSAIL_MNEMONICS,
+	getDefaultMainsailWalletMnemonic,
 } from "@/utils/testing-library";
 
 const history = createHashHistory();
@@ -53,6 +52,8 @@ vi.stubGlobal(
 	},
 );
 
+const originalHasInstance = Uint8Array[Symbol.hasInstance];
+
 describe("VerifyMessage", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getMainsailProfileId());
@@ -64,13 +65,23 @@ describe("VerifyMessage", () => {
 
 		signedMessageText = "Hello World";
 
-		const signatory = await wallet.coin().signatory().mnemonic(MAINSAIL_MNEMONICS[0]);
+		const signatory = await wallet.signatory().mnemonic(getDefaultMainsailWalletMnemonic());
 
 		await triggerMessageSignOnce(wallet);
 
 		signedMessage = await wallet.message().sign({
 			message: signedMessageText,
 			signatory,
+		});
+
+		Object.defineProperty(Uint8Array, Symbol.hasInstance, {
+			configurable: true,
+			value(potentialInstance: unknown) {
+				if (this === Uint8Array) {
+					return Object.prototype.toString.call(potentialInstance) === "[object Uint8Array]";
+				}
+				return originalHasInstance.call(this, potentialInstance);
+			},
 		});
 	});
 
@@ -109,20 +120,18 @@ describe("VerifyMessage", () => {
 		);
 
 		await userEvent.type(signatoryInput(), signedMessage.signatory);
-		await userEvent.type(messageInput(), signedMessage.message);
-		await userEvent.type(signatureInput(), signedMessage.signature);
 
 		await waitFor(() => {
 			expect(signatoryInput()).toHaveValue(signedMessage.signatory);
 		});
 
+		await userEvent.type(messageInput(), signedMessage.message);
+
 		await waitFor(() => {
 			expect(messageInput()).toHaveValue(signedMessage.message);
 		});
 
-		await waitFor(() => {
-			expect(signatureInput()).toHaveValue(signedMessage.signature);
-		});
+		await userEvent.type(signatureInput(), signedMessage.signature);
 
 		await waitFor(() => {
 			expect(verifyButton()).toBeEnabled();
@@ -178,26 +187,22 @@ describe("VerifyMessage", () => {
 		);
 
 		await userEvent.type(signatoryInput(), signedMessage.signatory);
-		await userEvent.type(messageInput(), signedMessage.message);
-		await userEvent.type(signatureInput(), signedMessage.signature);
 
 		await waitFor(() => {
 			expect(signatoryInput()).toHaveValue(signedMessage.signatory);
 		});
 
+		await userEvent.type(messageInput(), signedMessage.message);
+
 		await waitFor(() => {
 			expect(messageInput()).toHaveValue(signedMessage.message);
 		});
 
-		await waitFor(() => {
-			expect(signatureInput()).toHaveValue(signedMessage.signature);
-		});
+		await userEvent.type(signatureInput(), signedMessage.signature);
 
 		await waitFor(() => {
 			expect(verifyButton()).toBeEnabled();
 		});
-
-		await userEvent.click(screen.getByRole("checkbox"));
 
 		await userEvent.click(verifyButton());
 
@@ -216,8 +221,21 @@ describe("VerifyMessage", () => {
 		);
 
 		await userEvent.type(signatoryInput(), signedMessage.signatory);
+		await waitFor(() => {
+			expect(signatoryInput()).toHaveValue(signedMessage.signatory);
+		});
+
 		await userEvent.type(messageInput(), signedMessage.message);
+
+		await waitFor(() => {
+			expect(messageInput()).toHaveValue(signedMessage.message);
+		});
+
 		await userEvent.type(signatureInput(), signedMessage.signature);
+
+		await waitFor(() => {
+			expect(verifyButton()).toBeEnabled();
+		});
 
 		await userEvent.click(screen.getByRole("checkbox"));
 
@@ -248,6 +266,10 @@ describe("VerifyMessage", () => {
 		await userEvent.clear(messageInput());
 		await userEvent.clear(signatureInput());
 		await userEvent.type(signatureInput(), signedMessage.signature);
+
+		await waitFor(() => {
+			expect(verifyButton()).toBeEnabled();
+		});
 
 		await userEvent.click(screen.getByRole("checkbox"));
 
@@ -287,7 +309,7 @@ describe("VerifyMessage", () => {
 
 		await userEvent.click(verifyButton());
 
-		await expectHeading(messageTranslations.PAGE_VERIFY_MESSAGE.ERROR_STEP.TITLE);
+		await expectHeading(messageTranslations.PAGE_VERIFY_MESSAGE.SUCCESS_STEP.NOT_VERIFIED.TITLE);
 	});
 
 	it("should return to dashboard when accessed through deeplink", async () => {
@@ -325,10 +347,28 @@ describe("VerifyMessage", () => {
 			},
 		);
 
+		await expectHeading(messageTranslations.PAGE_VERIFY_MESSAGE.FORM_STEP.TITLE);
+
 		await userEvent.type(signatoryInput(), signedMessage.signatory);
+
+		await waitFor(() => {
+			expect(signatoryInput()).toHaveValue(signedMessage.signatory);
+		});
+
 		await userEvent.type(messageInput(), signedMessage.message);
-		await userEvent.clear(signatureInput());
-		await userEvent.type(signatureInput(), "fake-signature");
+
+		await waitFor(() => {
+			expect(messageInput()).toHaveValue(signedMessage.message);
+		});
+
+		const signature =
+			"a2bc0c7de7e0615b752697f5789e5ecb1e6ff400fc1a55df4b620bc17721b7ea552898e0df75aa4fa7a4f301119e9a0315f4abc2e71f31b19e1c6e17bda5ab301b";
+
+		await userEvent.type(signatureInput(), signature);
+
+		await waitFor(() => {
+			expect(signatureInput()).toHaveValue(signature);
+		});
 
 		await waitFor(() => {
 			expect(verifyButton()).toBeEnabled();
@@ -352,10 +392,28 @@ describe("VerifyMessage", () => {
 
 		const messageSpy = vi.spyOn(wallet.message(), "verify").mockResolvedValue(false);
 
+		await expectHeading(messageTranslations.PAGE_VERIFY_MESSAGE.FORM_STEP.TITLE);
+
 		await userEvent.type(signatoryInput(), signedMessage.signatory);
+
+		await waitFor(() => {
+			expect(signatoryInput()).toHaveValue(signedMessage.signatory);
+		});
+
 		await userEvent.type(messageInput(), signedMessage.message);
-		await userEvent.clear(signatureInput());
-		await userEvent.type(signatureInput(), "fake-signature");
+
+		await waitFor(() => {
+			expect(messageInput()).toHaveValue(signedMessage.message);
+		});
+
+		const signature =
+			"a2bc0c7de7e0615b752697f5789e5ecb1e6ff400fc1a55df4b620bc17721b7ea552898e0df75aa4fa7a4f301119e9a0315f4abc2e71f31b19e1c6e17bda5ab301b";
+
+		await userEvent.type(signatureInput(), signature);
+
+		await waitFor(() => {
+			expect(signatureInput()).toHaveValue(signature);
+		});
 
 		await waitFor(() => {
 			expect(verifyButton()).toBeEnabled();
@@ -379,10 +437,22 @@ describe("VerifyMessage", () => {
 			},
 		);
 
+		await expectHeading(messageTranslations.PAGE_VERIFY_MESSAGE.FORM_STEP.TITLE);
+
 		const messageSpy = vi.spyOn(wallet.message(), "verify").mockRejectedValue(new Error("error"));
 
 		await userEvent.type(signatoryInput(), signedMessage.signatory);
+
+		await waitFor(() => {
+			expect(signatoryInput()).toHaveValue(signedMessage.signatory);
+		});
+
 		await userEvent.type(messageInput(), signedMessage.message);
+
+		await waitFor(() => {
+			expect(messageInput()).toHaveValue(signedMessage.message);
+		});
+
 		await userEvent.clear(signatureInput());
 		await userEvent.type(signatureInput(), "fake-signature");
 

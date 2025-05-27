@@ -14,11 +14,9 @@ import {
 	waitFor,
 	within,
 	mockProfileWithPublicAndTestNetworks,
-	mockProfileWithOnlyPublicNetworks,
 	getMainsailProfileId,
 } from "@/utils/testing-library";
 import { useConfiguration } from "@/app/contexts";
-import { server, requestMock } from "@/tests/mocks/server";
 import { expect } from "vitest";
 
 const history = createHashHistory();
@@ -26,12 +24,10 @@ const history = createHashHistory();
 let emptyProfile: Contracts.IProfile;
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
-let blankWallet: Contracts.IReadWriteWallet;
 let resetProfileNetworksMock: () => void;
 
 const routePath = "/profiles/:profileId/votes";
 
-const blankWalletPassphrase = "power return attend drink piece found tragic fire liar page disease combine";
 const walletID = "ee02b13f-8dbf-4191-a9dc-08d2ab72ec28";
 
 const Wrapper = ({ children }) => {
@@ -66,13 +62,6 @@ describe("Votes", () => {
 		emptyProfile = env.profiles().findById("cba050f1-880f-45f0-9af9-cfe48f406052");
 		profile = env.profiles().findById(getMainsailProfileId());
 		wallet = profile.wallets().findById(walletID);
-		blankWallet = profile.wallets().push(
-			await profile.walletFactory().fromMnemonicWithBIP39({
-				coin: "Mainsail",
-				mnemonic: blankWalletPassphrase,
-				network: "mainsail.devnet",
-			}),
-		);
 
 		wallet.settings().set(Contracts.WalletSetting.Alias, "Sample Wallet");
 
@@ -84,18 +73,6 @@ describe("Votes", () => {
 
 	beforeEach(() => {
 		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
-
-		server.use(
-			requestMock(
-				`https://ark-test.arkvault.io/api/wallets/${blankWallet.address()}`,
-				{
-					error: "Not Found",
-					message: "Wallet not found",
-					statusCode: 404,
-				},
-				{ status: 404 },
-			),
-		);
 	});
 
 	afterEach(() => {
@@ -446,7 +423,7 @@ describe("Votes", () => {
 		const route = `/profiles/${profile.id()}/votes`;
 		renderPage(route, routePath);
 
-		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(3));
+		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(2));
 
 		await expect(screen.findByTestId(searchInputID)).resolves.toBeVisible();
 
@@ -463,7 +440,7 @@ describe("Votes", () => {
 		const route = `/profiles/${profile.id()}/votes`;
 		renderPage(route, routePath);
 
-		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(3));
+		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(2));
 
 		await expect(screen.findByTestId(searchInputID)).resolves.toBeVisible();
 
@@ -539,38 +516,5 @@ describe("Votes", () => {
 		await userEvent.type(searchInput, "vault_test_address");
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(1));
-	});
-
-	it("should hide testnet wallets if disabled from profile setting", async () => {
-		vi.restoreAllMocks();
-		const resetProfileNetworksMock = mockProfileWithOnlyPublicNetworks(profile);
-
-		const mainnetWallet = await profile.walletFactory().fromAddress({
-			address: "0x125b484e51Ad990b5b3140931f3BD8eAee85Db23",
-			coin: "Mainsail",
-			network: "mainsail.mainnet",
-		});
-
-		const config = profile.settings().get(Contracts.ProfileSetting.DashboardConfiguration, {});
-
-		profile.settings().set(Contracts.ProfileSetting.DashboardConfiguration, {
-			...config,
-			activeNetworkId: mainnetWallet.networkId(),
-		});
-
-		vi.spyOn(profile, "availableNetworks").mockReturnValue([mainnetWallet.network()]);
-
-		profile.wallets().push(mainnetWallet);
-
-		const route = `/profiles/${profile.id()}/votes`;
-		renderPage(route, routePath);
-
-		// Show the only mainnet wallet.
-		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(1));
-		await expect(screen.findByText(mainnetWallet.address())).resolves.toBeVisible();
-
-		profile.wallets().forget(mainnetWallet.id());
-
-		resetProfileNetworksMock();
 	});
 });

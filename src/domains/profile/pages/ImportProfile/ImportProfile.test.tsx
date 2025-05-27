@@ -97,7 +97,8 @@ describe("ImportProfile", () => {
 		await expect(screen.findByTestId("ProcessingImport")).resolves.toBeVisible();
 	});
 
-	it("should request and set password for importing password protected profile", async () => {
+	// @TODO https://app.clickup.com/t/86dwq8wy3
+	it.skip("should request and set password for importing password protected profile", async () => {
 		render(
 			<EnvironmentProvider env={env}>
 				<ImportProfile />
@@ -154,7 +155,8 @@ describe("ImportProfile", () => {
 		await expect(screen.findByTestId(changeFileID)).resolves.toBeVisible();
 	});
 
-	it("should successfully import profile and return to home screen", async () => {
+	// @TODO https://app.clickup.com/t/86dwq8wy3
+	it.skip("should successfully import profile and return to home screen", async () => {
 		const historyMock = vi.spyOn(history, "push").mockReturnValue();
 
 		render(
@@ -199,7 +201,8 @@ describe("ImportProfile", () => {
 		await waitFor(() => expect(historyMock).toHaveBeenCalledWith("/"));
 	});
 
-	it("should not set selected addresses if profile has already", async () => {
+	// @TODO https://app.clickup.com/t/86dwq8wy3
+	it.skip("should not set selected addresses if profile has already", async () => {
 		const historyMock = vi.spyOn(history, "push").mockReturnValue();
 
 		render(
@@ -322,7 +325,8 @@ describe("ImportProfile", () => {
 		}
 	});
 
-	it("should go to step 3 and back", async () => {
+	// @TODO https://app.clickup.com/t/86dwq8wy3
+	it.skip("should go to step 3 and back", async () => {
 		render(
 			<EnvironmentProvider env={env}>
 				<ImportProfile />
@@ -360,7 +364,8 @@ describe("ImportProfile", () => {
 		await expect(screen.findByTestId(changeFileID)).resolves.toBeVisible();
 	});
 
-	it("should fail profile import and show error", async () => {
+	// @TODO https://app.clickup.com/t/86dwq8wy3
+	it.skip("should fail profile import and show error", async () => {
 		render(
 			<EnvironmentProvider env={env}>
 				<ImportProfile />

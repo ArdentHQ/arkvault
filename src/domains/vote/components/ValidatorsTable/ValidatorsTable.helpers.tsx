@@ -58,7 +58,7 @@ export const useValidatorsTableColumns = ({ network, isLoading }: ValidatorsTabl
 								coinId: network.coin(),
 							})}
 						>
-							<span className="rounded-full bg-theme-primary-100 p-1 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200">
+							<span className="bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 rounded-full p-1">
 								<Icon name="QuestionMarkSmall" size="sm" />
 							</span>
 						</Tooltip>

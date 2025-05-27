@@ -38,7 +38,7 @@ const SearchRecipientListItem: FC<SearchRecipientListItemProperties> = ({
 					size="icon"
 					variant="transparent"
 					onClick={() => onAction(recipient.address)}
-					className="-mr-3 py-0 text-sm font-semibold leading-[17px] text-theme-primary-reverse-600"
+					className="text-theme-primary-reverse-600 -mr-3 py-0 text-sm leading-[17px] font-semibold"
 				>
 					{t("COMMON.SELECTED")}
 				</Button>
@@ -51,7 +51,7 @@ const SearchRecipientListItem: FC<SearchRecipientListItemProperties> = ({
 				size="icon"
 				variant="transparent"
 				onClick={() => onAction(recipient.address)}
-				className="-mr-3 text-sm font-semibold leading-[17px] text-theme-primary-600"
+				className="text-theme-primary-600 -mr-3 text-sm leading-[17px] font-semibold"
 			>
 				{t("COMMON.SELECT")}
 			</Button>
@@ -73,7 +73,7 @@ const SearchRecipientListItem: FC<SearchRecipientListItemProperties> = ({
 			<TableCell isSelected={isSelected} innerClassName="my-0.5">
 				<span
 					data-testid="RecipientListItem__type"
-					className="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500"
+					className="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm leading-[17px] font-semibold whitespace-nowrap"
 				>
 					{recipient.type === "wallet" ? t("COMMON.MY_WALLET") : t("COMMON.CONTACT")}
 				</span>
@@ -107,7 +107,7 @@ const SearchRecipientListItemResponsive: FC<SearchRecipientListItemResponsivePro
 							data-testid="Address__address_condensed"
 							value={recipient.address}
 							availableWidth={isSmAndAbove ? undefined : 100}
-							className="text-xs font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+							className="text-theme-secondary-700 dark:text-theme-secondary-500 text-xs font-semibold"
 						/>
 					}
 					type={recipient.type === "wallet" ? t("COMMON.MY_WALLET") : t("COMMON.CONTACT")}
@@ -128,12 +128,14 @@ export const SearchRecipient: FC<SearchRecipientProperties> = ({
 	onAction,
 	recipients,
 	selectedAddress,
+	profile,
 }) => {
 	const {
 		setSearchKeyword,
 		filteredList: filteredRecipients,
 		isEmptyResults,
 	} = useSearchWallet({
+		profile,
 		wallets: recipients,
 	});
 

@@ -1,10 +1,10 @@
 import React from "react";
-import { Networks } from "@/app/lib/sdk";
+import { Networks } from "@/app/lib/mainsail";
 import { useTranslation } from "react-i18next";
 import { Tooltip } from "@/app/components/Tooltip";
 import { Icon } from "@/app/components/Icon";
 import { networkDisplayName } from "@/utils/network-utils";
-import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
+import { NetworkIcon } from "@/app/components/NetworkIcon";
 
 export const NetworkTestnetCodeIcon = () => {
 	const { t } = useTranslation();
@@ -26,7 +26,7 @@ export const NetworkOptionLabel = ({ network }: { network?: Networks.Network }) 
 	return (
 		<div className="flex items-center space-x-3">
 			<NetworkIcon network={network} showTooltip={false} isCompact />
-			<div className="flex-grow">{networkDisplayName(network)}</div>
+			<div className="grow">{networkDisplayName(network)}</div>
 			{network.isTest() && <NetworkTestnetCodeIcon />}
 		</div>
 	);

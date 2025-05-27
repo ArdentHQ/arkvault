@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/require-await */
 import { createHashHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
@@ -25,7 +24,6 @@ vi.mock("@/utils/delay", () => ({
 
 describe("useProfileSyncStatus", () => {
 	it("should sync profile and handle resync with errored networks", async () => {
-		vi.useFakeTimers({ shouldAdvanceTime: true });
 		history.push(dashboardURL);
 
 		let configuration: any;
@@ -40,12 +38,7 @@ describe("useProfileSyncStatus", () => {
 
 		const Component = () => {
 			configuration = useConfiguration();
-
-			useProfileSynchronizer({
-				onProfileSyncError,
-				onProfileSyncStart,
-			});
-
+			useProfileSynchronizer({ onProfileSyncError, onProfileSyncStart });
 			return <div data-testid="ProfileSynced">test</div>;
 		};
 
@@ -53,10 +46,7 @@ describe("useProfileSyncStatus", () => {
 			<Route path="/profiles/:profileId/dashboard">
 				<Component />
 			</Route>,
-			{
-				history,
-				route: dashboardURL,
-			},
+			{ history, route: dashboardURL },
 		);
 
 		await expect(screen.findByTestId("ProfileSynced")).resolves.toBeVisible();
@@ -66,15 +56,14 @@ describe("useProfileSyncStatus", () => {
 
 		const mockWalletSyncStatus = vi.spyOn(profile.wallets().first(), "hasBeenFullyRestored").mockReturnValue(false);
 
-		await renderAct(async () => {
+		await renderAct(() => {
 			configuration.setConfiguration(profile.id(), { profileIsSyncingWallets: true });
 		});
-		await waitFor(
-			() => expect(configuration.getProfileConfiguration(profile.id()).profileIsSyncingWallets).toBe(true),
-			{ timeout: 5000 },
+		await waitFor(() =>
+			expect(configuration.getProfileConfiguration(profile.id()).profileIsSyncingWallets).toBe(true),
 		);
 
-		await renderAct(async () => {
+		await renderAct(() => {
 			configuration.setConfiguration(profile.id(), { profileIsSyncingWallets: false });
 		});
 
@@ -87,14 +76,10 @@ describe("useProfileSyncStatus", () => {
 
 		mockWalletSyncStatus.mockRestore();
 		resetProfileNetworksMock();
-
-		vi.useRealTimers();
-		vi.clearAllTimers();
 	});
 
 	it("should sync profile and handle resync with sync error", async () => {
 		vi.useFakeTimers({ shouldAdvanceTime: true });
-
 		history.push(dashboardURL);
 		let configuration: any;
 
@@ -110,12 +95,7 @@ describe("useProfileSyncStatus", () => {
 
 		const Component = () => {
 			configuration = useConfiguration();
-
-			useProfileSynchronizer({
-				onProfileSyncError,
-				onProfileSyncStart,
-			});
-
+			useProfileSynchronizer({ onProfileSyncError, onProfileSyncStart });
 			return <div data-testid="ProfileSyncedWithError">test</div>;
 		};
 
@@ -123,17 +103,14 @@ describe("useProfileSyncStatus", () => {
 			<Route path="/profiles/:profileId/dashboard">
 				<Component />
 			</Route>,
-			{
-				history,
-				route: dashboardURL,
-			},
+			{ history, route: dashboardURL },
 		);
 
 		await expect(screen.findByTestId("ProfileSyncedWithError")).resolves.toBeVisible();
 
 		const mockWalletSyncStatus = vi.spyOn(profile.wallets().first(), "hasBeenFullyRestored").mockReturnValue(false);
 
-		await renderAct(async () => {
+		await renderAct(() => {
 			configuration.setConfiguration(profile.id(), { profileIsSyncingWallets: true });
 		});
 
@@ -146,6 +123,7 @@ describe("useProfileSyncStatus", () => {
 		vi.clearAllTimers();
 		vi.useRealTimers();
 	});
+
 	it("should restore profile", async () => {
 		process.env.TEST_PROFILES_RESTORE_STATUS = undefined;
 		process.env.REACT_APP_IS_E2E = undefined;
@@ -166,11 +144,7 @@ describe("useProfileSyncStatus", () => {
 			<Route path="/profiles/:profileId/dashboard">
 				<div data-testid="ProfileRestored">test</div>
 			</Route>,
-			{
-				history,
-				route: `/profiles/${profile.id()}/dashboard`,
-				withProfileSynchronizer: true,
-			},
+			{ history, route: `/profiles/${profile.id()}/dashboard`, withProfileSynchronizer: true },
 		);
 
 		const historyMock = vi.spyOn(history, "push").mockReturnValue();
@@ -182,7 +156,6 @@ describe("useProfileSyncStatus", () => {
 		profileStatusMock.mockRestore();
 		historyMock.mockRestore();
 		resetProfileNetworksMock();
-
 		vi.clearAllTimers();
 	});
 });

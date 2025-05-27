@@ -18,7 +18,7 @@ exports[`Notifications > should render notification item 1`] = `
           <div>
             <div>
               <span
-                class="text-md font-bold text-theme-secondary-600"
+                class="text-md text-theme-secondary-600 font-bold"
               >
                 ARK Vault
               </span>
@@ -33,7 +33,7 @@ exports[`Notifications > should render notification item 1`] = `
         </td>
         <td>
           <div
-            class="text-md cursor-pointer text-right font-bold text-theme-primary-500"
+            class="text-md text-theme-primary-500 cursor-pointer text-right font-bold"
             data-testid="NotificationItem__action"
           >
             Update
@@ -63,7 +63,7 @@ exports[`Notifications > should render with custom action name 1`] = `
           <div>
             <div>
               <span
-                class="text-md font-bold text-theme-secondary-600"
+                class="text-md text-theme-secondary-600 font-bold"
               >
                 ARK Vault
               </span>
@@ -78,7 +78,7 @@ exports[`Notifications > should render with custom action name 1`] = `
         </td>
         <td>
           <div
-            class="text-md cursor-pointer text-right font-bold text-theme-primary-500"
+            class="text-md text-theme-primary-500 cursor-pointer text-right font-bold"
             data-testid="NotificationItem__action"
           >
             Update

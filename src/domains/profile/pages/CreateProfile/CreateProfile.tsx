@@ -52,7 +52,7 @@ export const CreateProfile = () => {
 			title={<Trans i18nKey="COMMON.APP_NAME" />}
 			wrapperClassName="pb-32 sm:pb-0"
 		>
-			<div className="flex min-h-page sm:items-center" data-testid="CreateProfile">
+			<div className="min-h-page flex sm:items-center" data-testid="CreateProfile">
 				<div className="mx-auto max-w-172 px-6">
 					<Header
 						title={t("PROFILE.PAGE_CREATE_PROFILE.TITLE")}
@@ -62,7 +62,7 @@ export const CreateProfile = () => {
 						className="block"
 					/>
 
-					<div className="mb-16 mt-4 rounded-lg border-theme-secondary-300 bg-theme-background pt-1 dark:border-theme-secondary-800 sm:mb-0 sm:border sm:p-6 md:w-172">
+					<div className="border-theme-secondary-300 bg-theme-background dark:border-theme-secondary-800 mt-4 mb-16 rounded-lg pt-1 sm:mb-0 sm:border sm:p-6 md:w-172">
 						<ProfileForm
 							defaultValues={{
 								currency: defaultCurrency,

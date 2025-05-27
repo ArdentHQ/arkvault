@@ -1,4 +1,3 @@
-import { Networks } from "@/app/lib/sdk";
 import { Contracts, DTO } from "@/app/lib/profiles";
 import React, { useEffect, useLayoutEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
@@ -104,13 +103,7 @@ export const SendRegistration = () => {
 
 		setValue("senderAddress", activeWallet.address(), { shouldDirty: true, shouldValidate: true });
 
-		const network = env
-			.availableNetworks()
-			.find(
-				(network: Networks.Network) =>
-					network.coin() === activeWallet.coinId() && network.id() === activeWallet.networkId(),
-			);
-		setValue("network", network, { shouldDirty: true, shouldValidate: true });
+		setValue("network", activeProfile.activeNetwork(), { shouldDirty: true, shouldValidate: true });
 	}, [activeWallet, env, setValue]);
 
 	useLayoutEffect(() => {
@@ -148,18 +141,16 @@ export const SendRegistration = () => {
 		assertWallet(activeWallet);
 
 		try {
-			const { mnemonic, encryptionPassword, wif, privateKey, secret } = getValues();
+			const { mnemonic, encryptionPassword, secret } = getValues();
 
 			if (activeWallet.isLedger()) {
-				await connect(activeProfile, activeWallet.coinId(), activeWallet.networkId());
+				await connect(activeProfile, activeWallet.networkId());
 			}
 
 			const signatory = await activeWallet.signatoryFactory().make({
 				encryptionPassword,
 				mnemonic,
-				privateKey,
 				secret,
-				wif,
 			});
 
 			if (registrationType === "validatorRegistration") {

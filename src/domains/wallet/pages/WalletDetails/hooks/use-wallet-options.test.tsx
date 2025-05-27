@@ -1,5 +1,5 @@
 /* eslint-disable sonarjs/no-duplicate-string */
-import { Enums } from "@/app/lib/sdk";
+import { Enums } from "@/app/lib/mainsail";
 import { Contracts } from "@/app/lib/profiles";
 
 import { renderHook } from "@testing-library/react";

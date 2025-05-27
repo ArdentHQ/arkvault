@@ -405,7 +405,7 @@ describe("SelectDropdown", () => {
 	);
 
 	it.each([OptionType.base, OptionType.group])(
-		"should select match on blur if available in option %s",
+		"should select match on blur-xs if available in option %s",
 		async (optType) => {
 			render(<Select options={getOptions(optType)} />);
 			const selectDropdown = screen.getByTestId("SelectDropdown__input");
@@ -419,7 +419,7 @@ describe("SelectDropdown", () => {
 	);
 
 	it.each([OptionType.base, OptionType.group])(
-		"should clear input on blur if there is no match in option %s",
+		"should clear input on blur-xs if there is no match in option %s",
 		async (optType) => {
 			render(<Select options={getOptions(optType)} />);
 			const selectDropdown = screen.getByTestId("SelectDropdown__input");
@@ -433,7 +433,7 @@ describe("SelectDropdown", () => {
 	);
 
 	it.each([OptionType.base, OptionType.group])(
-		"should not clear input on blur if selected in option %s",
+		"should not clear input on blur-xs if selected in option %s",
 		async (optType) => {
 			render(<Select options={getOptions(optType)} />);
 			const selectDropdown = screen.getByTestId("SelectDropdown__input");
@@ -507,7 +507,7 @@ describe("SelectDropdown", () => {
 	});
 
 	it.each([OptionType.base, OptionType.group])(
-		"should allow entering free text and handle blur event in option %s",
+		"should allow entering free text and handle blur-xs event in option %s",
 		async (optType) => {
 			render(<Select options={getOptions(optType)} allowFreeInput={true} />);
 			const selectDropdown = screen.getByTestId("SelectDropdown__input");

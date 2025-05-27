@@ -17,12 +17,12 @@ exports[`Notifications > should render in xs 1`] = `
               class="flex items-center justify-between space-x-4"
             >
               <div
-                class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                class="text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 relative m-0 text-left font-semibold select-none first:pl-0 last:pr-0"
               >
                 Address
               </div>
               <div
-                class="min-[480px]:w-2/3 w-40 xs:w-50"
+                class="xs:w-50 w-40 min-[480px]:w-2/3"
               >
                 <div
                   class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -51,7 +51,7 @@ exports[`Notifications > should render in xs 1`] = `
               class="flex items-center justify-between space-x-4"
             >
               <div
-                class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                class="text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 relative m-0 text-left font-semibold select-none first:pl-0 last:pr-0"
               >
                 Amount
               </div>
@@ -96,12 +96,12 @@ exports[`Notifications > should render in xs 2`] = `
               class="flex items-center justify-between space-x-4"
             >
               <div
-                class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                class="text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 relative m-0 text-left font-semibold select-none first:pl-0 last:pr-0"
               >
                 Address
               </div>
               <div
-                class="min-[480px]:w-2/3 w-40 xs:w-50"
+                class="xs:w-50 w-40 min-[480px]:w-2/3"
               >
                 <div
                   class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -130,7 +130,7 @@ exports[`Notifications > should render in xs 2`] = `
               class="flex items-center justify-between space-x-4"
             >
               <div
-                class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                class="text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 relative m-0 text-left font-semibold select-none first:pl-0 last:pr-0"
               >
                 Amount
               </div>
@@ -174,10 +174,10 @@ exports[`Notifications > should render in xs 3`] = `
               class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 pl-6 static mx-0"
             >
               <div
-                class="absolute bottom-0 left-2 top-0 flex items-center"
+                class="absolute top-0 bottom-0 left-2 flex items-center"
               >
                 <div
-                  class="h-2 w-2 rounded-full bg-theme-danger-400"
+                  class="bg-theme-danger-400 h-2 w-2 rounded-full"
                 />
               </div>
               <div
@@ -241,7 +241,7 @@ exports[`Notifications > should render in xs 3`] = `
                   </div>
                 </div>
                 <div
-                  class="absolute -bottom-px right-0 h-px w-8 bg-white dark:bg-theme-secondary-900"
+                  class="dark:bg-theme-secondary-900 absolute right-0 -bottom-px h-px w-8 bg-white"
                 />
               </div>
             </div>
@@ -269,10 +269,10 @@ exports[`Notifications > should render in xs 4`] = `
               class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 pl-6 static mx-0"
             >
               <div
-                class="absolute bottom-0 left-2 top-0 flex items-center"
+                class="absolute top-0 bottom-0 left-2 flex items-center"
               >
                 <div
-                  class="h-2 w-2 rounded-full bg-theme-danger-400"
+                  class="bg-theme-danger-400 h-2 w-2 rounded-full"
                 />
               </div>
               <div
@@ -336,7 +336,7 @@ exports[`Notifications > should render in xs 4`] = `
                   </div>
                 </div>
                 <div
-                  class="absolute -bottom-px right-0 h-px w-8 bg-white dark:bg-theme-secondary-900"
+                  class="dark:bg-theme-secondary-900 absolute right-0 -bottom-px h-px w-8 bg-white"
                 />
               </div>
             </div>
@@ -364,10 +364,10 @@ exports[`Notifications > should render in xs 5`] = `
               class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 pl-6 static mx-0"
             >
               <div
-                class="absolute bottom-0 left-2 top-0 flex items-center"
+                class="absolute top-0 bottom-0 left-2 flex items-center"
               >
                 <div
-                  class="h-2 w-2 rounded-full bg-theme-danger-400"
+                  class="bg-theme-danger-400 h-2 w-2 rounded-full"
                 />
               </div>
               <div
@@ -431,7 +431,7 @@ exports[`Notifications > should render in xs 5`] = `
                   </div>
                 </div>
                 <div
-                  class="absolute -bottom-px right-0 h-px w-8 bg-white dark:bg-theme-secondary-900"
+                  class="dark:bg-theme-secondary-900 absolute right-0 -bottom-px h-px w-8 bg-white"
                 />
               </div>
             </div>
@@ -459,10 +459,10 @@ exports[`Notifications > should render notification item 1`] = `
               class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 pl-6 static mx-0"
             >
               <div
-                class="absolute bottom-0 left-2 top-0 flex items-center"
+                class="absolute top-0 bottom-0 left-2 flex items-center"
               >
                 <div
-                  class="h-2 w-2 rounded-full bg-theme-danger-400"
+                  class="bg-theme-danger-400 h-2 w-2 rounded-full"
                 />
               </div>
               <div
@@ -526,7 +526,7 @@ exports[`Notifications > should render notification item 1`] = `
                   </div>
                 </div>
                 <div
-                  class="absolute -bottom-px right-0 h-px w-8 bg-white dark:bg-theme-secondary-900"
+                  class="dark:bg-theme-secondary-900 absolute right-0 -bottom-px h-px w-8 bg-white"
                 />
               </div>
             </div>

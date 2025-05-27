@@ -94,6 +94,7 @@ import UnderlineMoon from "./underline-moon.svg?react";
 import UnderlineSun from "./underline-sun.svg?react";
 import User from "./user.svg?react";
 import UserCheckMark from "./user-check-mark.svg?react";
+import UserCircledCheckMark from "./user-circled-check-mark.svg?react";
 import Dashboard from "./dashboard.svg?react";
 import DocumentView from "./document-view.svg?react";
 import ImportWalletLight from "./import-wallet-light.svg?react";
@@ -242,6 +243,7 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	UnderlineSun,
 	User,
 	UserCheckMark,
+	UserCircledCheckMark,
 	VotesDark,
 	VotesLight,
 	WalletEncryptionDark,

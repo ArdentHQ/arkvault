@@ -6,21 +6,21 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 1`] =
     data-testid="DetailWrapper"
   >
     <div
-      class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+      class="border-x-theme-primary-400 bg-theme-secondary-100 border-l-2 px-3 py-2 sm:border-none sm:bg-transparent sm:p-0 dark:bg-black dark:sm:bg-transparent"
       data-testid="DetailLabel"
     >
       <div
-        class="no-ligatures min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-md leading-5"
+        class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24 font-semibold text-md leading-5"
         data-testid="DetailLabelText"
       >
         Transaction Summary
       </div>
     </div>
     <div
-      class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-dark-700 sm:border rounded-xl mt-0 sm:mt-2"
+      class="border-theme-secondary-300 dark:border-theme-dark-700 overflow-hidden rounded-xl sm:border rounded-xl mt-0 sm:mt-2"
     >
       <div
-        class="w-full break-words p-3 sm:px-6 sm:py-5 [.condensed_&]:sm:py-4"
+        class="w-full p-3 break-words sm:px-6 sm:py-5 sm:in-[.condensed]:py-4"
       >
         <div
           class="flex flex-col gap-3"
@@ -30,7 +30,7 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 1`] =
             data-testid="AmountSection"
           >
             <div
-              class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-36"
+              class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-36"
             >
               Amount
             </div>
@@ -49,7 +49,7 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 1`] =
             class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
           >
             <div
-              class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-36"
+              class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-36"
             >
               Fee
             </div>
@@ -68,7 +68,7 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 1`] =
             class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
           >
             <div
-              class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-36"
+              class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-36"
             >
               Total
             </div>
@@ -86,18 +86,18 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 1`] =
         </div>
       </div>
       <div
-        class="flex w-full flex-col bg-theme-secondary-300 px-6 py-3 dark:bg-theme-secondary-800"
+        class="bg-theme-secondary-300 dark:bg-theme-secondary-800 flex w-full flex-col px-6 py-3"
       >
         <div
           class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
         >
           <div
-            class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 w-auto !leading-4 sm:min-w-36 sm:text-sm"
+            class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 shrink-0 text-sm leading-[17px] font-semibold w-auto leading-4! sm:min-w-36 sm:text-sm"
           >
             Confirmation Time
           </div>
           <div
-            class="flex flex-row items-center gap-2 lowercase !leading-4 sm:text-sm"
+            class="flex flex-row items-center gap-2 leading-4! lowercase sm:text-sm"
           >
             ~10s
           </div>
@@ -114,21 +114,21 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 2`] =
     data-testid="DetailWrapper"
   >
     <div
-      class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+      class="border-x-theme-primary-400 bg-theme-secondary-100 border-l-2 px-3 py-2 sm:border-none sm:bg-transparent sm:p-0 dark:bg-black dark:sm:bg-transparent"
       data-testid="DetailLabel"
     >
       <div
-        class="no-ligatures min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-md leading-5"
+        class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24 font-semibold text-md leading-5"
         data-testid="DetailLabelText"
       >
         Transaction Summary
       </div>
     </div>
     <div
-      class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-dark-700 sm:border rounded-xl mt-0 sm:mt-2"
+      class="border-theme-secondary-300 dark:border-theme-dark-700 overflow-hidden rounded-xl sm:border rounded-xl mt-0 sm:mt-2"
     >
       <div
-        class="w-full break-words p-3 sm:px-6 sm:py-5 [.condensed_&]:sm:py-4"
+        class="w-full p-3 break-words sm:px-6 sm:py-5 sm:in-[.condensed]:py-4"
       >
         <div
           class="flex flex-col gap-3"
@@ -138,7 +138,7 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 2`] =
             data-testid="AmountSection"
           >
             <div
-              class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-36"
+              class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-36"
             >
               Amount
             </div>
@@ -157,7 +157,7 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 2`] =
             class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
           >
             <div
-              class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-36"
+              class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-36"
             >
               Fee
             </div>
@@ -176,7 +176,7 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 2`] =
             class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
           >
             <div
-              class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-36"
+              class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-36"
             >
               Total
             </div>
@@ -194,18 +194,18 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 2`] =
         </div>
       </div>
       <div
-        class="flex w-full flex-col bg-theme-secondary-300 px-6 py-3 dark:bg-theme-secondary-800"
+        class="bg-theme-secondary-300 dark:bg-theme-secondary-800 flex w-full flex-col px-6 py-3"
       >
         <div
           class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
         >
           <div
-            class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 w-auto !leading-4 sm:min-w-36 sm:text-sm"
+            class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 shrink-0 text-sm leading-[17px] font-semibold w-auto leading-4! sm:min-w-36 sm:text-sm"
           >
             Confirmation Time
           </div>
           <div
-            class="flex flex-row items-center gap-2 lowercase !leading-4 sm:text-sm"
+            class="flex flex-row items-center gap-2 leading-4! lowercase sm:text-sm"
           >
             ~10s
           </div>
@@ -222,21 +222,21 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 3`] =
     data-testid="DetailWrapper"
   >
     <div
-      class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+      class="border-x-theme-primary-400 bg-theme-secondary-100 border-l-2 px-3 py-2 sm:border-none sm:bg-transparent sm:p-0 dark:bg-black dark:sm:bg-transparent"
       data-testid="DetailLabel"
     >
       <div
-        class="no-ligatures min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-md leading-5"
+        class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24 font-semibold text-md leading-5"
         data-testid="DetailLabelText"
       >
         Transaction Summary
       </div>
     </div>
     <div
-      class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-dark-700 sm:border rounded-xl mt-0 sm:mt-2"
+      class="border-theme-secondary-300 dark:border-theme-dark-700 overflow-hidden rounded-xl sm:border rounded-xl mt-0 sm:mt-2"
     >
       <div
-        class="w-full break-words p-3 sm:px-6 sm:py-5 [.condensed_&]:sm:py-4"
+        class="w-full p-3 break-words sm:px-6 sm:py-5 sm:in-[.condensed]:py-4"
       >
         <div
           class="flex flex-col gap-3"
@@ -246,7 +246,7 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 3`] =
             data-testid="AmountSection"
           >
             <div
-              class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-36"
+              class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-36"
             >
               Amount
             </div>
@@ -265,7 +265,7 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 3`] =
             class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
           >
             <div
-              class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-36"
+              class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-36"
             >
               Fee
             </div>
@@ -284,7 +284,7 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 3`] =
             class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
           >
             <div
-              class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-36"
+              class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-36"
             >
               Total
             </div>
@@ -302,18 +302,18 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 3`] =
         </div>
       </div>
       <div
-        class="flex w-full flex-col bg-theme-secondary-300 px-6 py-3 dark:bg-theme-secondary-800"
+        class="bg-theme-secondary-300 dark:bg-theme-secondary-800 flex w-full flex-col px-6 py-3"
       >
         <div
           class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
         >
           <div
-            class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 w-auto !leading-4 sm:min-w-36 sm:text-sm"
+            class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 shrink-0 text-sm leading-[17px] font-semibold w-auto leading-4! sm:min-w-36 sm:text-sm"
           >
             Confirmation Time
           </div>
           <div
-            class="flex flex-row items-center gap-2 lowercase !leading-4 sm:text-sm"
+            class="flex flex-row items-center gap-2 leading-4! lowercase sm:text-sm"
           >
             ~10s
           </div>
@@ -330,21 +330,21 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 4`] =
     data-testid="DetailWrapper"
   >
     <div
-      class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+      class="border-x-theme-primary-400 bg-theme-secondary-100 border-l-2 px-3 py-2 sm:border-none sm:bg-transparent sm:p-0 dark:bg-black dark:sm:bg-transparent"
       data-testid="DetailLabel"
     >
       <div
-        class="no-ligatures min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-md leading-5"
+        class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24 font-semibold text-md leading-5"
         data-testid="DetailLabelText"
       >
         Transaction Summary
       </div>
     </div>
     <div
-      class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-dark-700 sm:border rounded-xl mt-0 sm:mt-2"
+      class="border-theme-secondary-300 dark:border-theme-dark-700 overflow-hidden rounded-xl sm:border rounded-xl mt-0 sm:mt-2"
     >
       <div
-        class="w-full break-words p-3 sm:px-6 sm:py-5 [.condensed_&]:sm:py-4"
+        class="w-full p-3 break-words sm:px-6 sm:py-5 sm:in-[.condensed]:py-4"
       >
         <div
           class="flex flex-col gap-3"
@@ -354,7 +354,7 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 4`] =
             data-testid="AmountSection"
           >
             <div
-              class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-36"
+              class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-36"
             >
               Amount
             </div>
@@ -373,7 +373,7 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 4`] =
             class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
           >
             <div
-              class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-36"
+              class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-36"
             >
               Fee
             </div>
@@ -392,7 +392,7 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 4`] =
             class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
           >
             <div
-              class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-36"
+              class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-36"
             >
               Total
             </div>
@@ -410,18 +410,18 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 4`] =
         </div>
       </div>
       <div
-        class="flex w-full flex-col bg-theme-secondary-300 px-6 py-3 dark:bg-theme-secondary-800"
+        class="bg-theme-secondary-300 dark:bg-theme-secondary-800 flex w-full flex-col px-6 py-3"
       >
         <div
           class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
         >
           <div
-            class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 w-auto !leading-4 sm:min-w-36 sm:text-sm"
+            class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 shrink-0 text-sm leading-[17px] font-semibold w-auto leading-4! sm:min-w-36 sm:text-sm"
           >
             Confirmation Time
           </div>
           <div
-            class="flex flex-row items-center gap-2 lowercase !leading-4 sm:text-sm"
+            class="flex flex-row items-center gap-2 leading-4! lowercase sm:text-sm"
           >
             ~10s
           </div>

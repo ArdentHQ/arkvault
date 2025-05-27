@@ -36,7 +36,7 @@ describe("ValidatorsTable", () => {
 					isResignedValidator: false,
 					isValidator: true,
 					publicKey: data[index].publicKey,
-					username: data[index].username,
+					username: data[index].attributes.username,
 				}),
 		);
 
@@ -105,7 +105,7 @@ describe("ValidatorsTable", () => {
 	});
 
 	describe.each(["base", "requiresAmount"])("loading state for %s", (voteType) => {
-		it.each([true, false])("should render when isCompact = %s", (isCompact: boolean) => {
+		it("should render when isCompact = %s", () => {
 			const votesAmountMinimumMock = vi
 				.spyOn(wallet.network(), "votesAmountMinimum")
 				.mockReturnValue(voteType === "requiresAmount" ? 10 : 0);
@@ -119,7 +119,6 @@ describe("ValidatorsTable", () => {
 					unvoteValidators={[]}
 					selectedWallet={wallet}
 					maxVotes={wallet.network().maximumVotesPerTransaction()}
-					isCompact={isCompact}
 				/>,
 			);
 

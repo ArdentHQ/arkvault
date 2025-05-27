@@ -50,14 +50,14 @@ export const LedgerMobileItem = ({
 		return (
 			<div className="relative">
 				<div
-					className="w-full overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-secondary-900"
+					className="border-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-secondary-900 w-full overflow-hidden rounded border bg-white"
 					data-testid="LedgerMobileItem__skeleton"
 				>
-					<div className="h-11 w-full bg-theme-secondary-100 pl-4 pt-3 dark:bg-black">
+					<div className="bg-theme-secondary-100 h-11 w-full pt-3 pl-4 dark:bg-black">
 						<Skeleton width={20} height={20} />
 					</div>
 
-					<div className="flex w-full flex-col gap-4 px-4 pb-4 pt-2.5">
+					<div className="flex w-full flex-col gap-4 px-4 pt-2.5 pb-4">
 						<div className="flex flex-col gap-2">
 							<Skeleton height={16} width={126} />
 							<Skeleton height={16} width={amountWidth} />
@@ -85,11 +85,11 @@ export const LedgerMobileItem = ({
 
 	return (
 		<MobileCard data-testid="LedgerMobileItem__wrapper">
-			<div className="h-11 w-full bg-theme-secondary-100 pl-4 pt-3 dark:bg-black">
+			<div className="bg-theme-secondary-100 h-11 w-full pt-3 pl-4 dark:bg-black">
 				<Checkbox checked={isSelected} onChange={handleClick} data-testid="LedgerMobileItem__checkbox" />
 			</div>
 
-			<div className="flex w-full flex-col gap-4 px-4 pb-4 pt-2.5">
+			<div className="flex w-full flex-col gap-4 px-4 pt-2.5 pb-4">
 				<MobileSection title={t("COMMON.ADDRESS")}>
 					<Address
 						address={address}
@@ -111,11 +111,11 @@ export const LedgerLoaderOverlay = ({ children, className }: { className?: strin
 	<div>
 		<div
 			className={twMerge(
-				"absolute inset-0 -m-px rounded border border-theme-secondary-300 bg-white opacity-75 dark:border-theme-secondary-800 dark:bg-theme-background",
+				"border-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-background absolute inset-0 -m-px rounded border bg-white opacity-75",
 				className,
 			)}
 		/>
-		<div className="absolute inset-0 flex h-full w-full items-center justify-center space-x-3 text-theme-secondary-700 dark:text-white">
+		<div className="text-theme-secondary-700 absolute inset-0 flex h-full w-full items-center justify-center space-x-3 dark:text-white">
 			{children && (
 				<div>
 					<Spinner size="sm" width={3} />

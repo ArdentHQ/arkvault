@@ -2,16 +2,24 @@ import { renderHook, RenderHookResult } from "@testing-library/react";
 import React from "react";
 
 import { useExchangeRate } from "./use-exchange-rate";
-import { env, WithProviders } from "@/utils/testing-library";
+import { env, WithProviders, getDefaultProfileId } from "@/utils/testing-library";
 
 describe("useExchangeRate", () => {
 	const wrapper = ({ children }: React.PropsWithChildren<{}>) => <WithProviders>{children}</WithProviders>;
+	let profile: IProfile;
+
+	beforeAll(async () => {
+		await env.boot();
+		profile = env.profiles().findById(getDefaultProfileId());
+		await env.profiles().restore(profile);
+	});
 
 	const renderExchangeRate = () =>
 		renderHook(
 			() =>
 				useExchangeRate({
 					exchangeTicker: "USD",
+					profile,
 					ticker: "ARK",
 				}),
 			{
@@ -20,7 +28,7 @@ describe("useExchangeRate", () => {
 		);
 
 	it("should return a function to convert values based on exchange rates", () => {
-		vi.spyOn(env.exchangeRates(), "exchange").mockReturnValueOnce(1);
+		vi.spyOn(profile.exchangeRates(), "exchange").mockReturnValueOnce(1);
 
 		const { result } = renderExchangeRate();
 
@@ -38,6 +46,7 @@ describe("useExchangeRate", () => {
 			() =>
 				useExchangeRate({
 					exchangeTicker: "USD",
+					profile,
 				}),
 			{
 				wrapper,
@@ -49,6 +58,7 @@ describe("useExchangeRate", () => {
 		hook = renderHook(
 			() =>
 				useExchangeRate({
+					profile,
 					ticker: "ARK",
 				}),
 			{

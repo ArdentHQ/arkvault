@@ -1,48 +1,63 @@
-import { Contracts, DTO } from "@/app/lib/sdk";
+import { Contracts } from "@/app/lib/mainsail";
 import { BigNumber, get, has } from "@/app/lib/helpers";
+import { KeyValuePair } from "@/app/lib/mainsail/contracts";
+import { ConfigKey, ConfigRepository } from "@/app/lib/mainsail";
 
-export class WalletData extends DTO.AbstractWalletData implements Contracts.WalletData {
-	public override primaryKey(): string {
+export class WalletData {
+	protected data!: KeyValuePair;
+	#config: ConfigRepository;
+
+	constructor({ config }: { config: ConfigRepository }) {
+		this.#config = config;
+	}
+
+	public fill(data: KeyValuePair) {
+		this.data = data;
+
+		return this;
+	}
+
+	public primaryKey(): string {
 		return this.address();
 	}
 
-	public override address(): string {
+	public address(): string {
 		return this.data.address;
 	}
 
-	public override publicKey(): string | undefined {
+	public publicKey(): string | undefined {
 		return this.data.publicKey;
 	}
 
-	public override balance(): Contracts.WalletBalance {
+	public balance(): Contracts.WalletBalance {
 		return {
-			available: this.bigNumberService.make(this.data.balance ?? 0),
-			fees: this.bigNumberService.make(this.data.balance ?? 0),
-			total: this.bigNumberService.make(this.data.balance ?? 0),
+			available: BigNumber.make(this.data.balance ?? 0, this.#config.get(ConfigKey.CurrencyDecimals)),
+			fees: BigNumber.make(this.data.balance ?? 0, this.#config.get(ConfigKey.CurrencyDecimals)),
+			total: BigNumber.make(this.data.balance ?? 0, this.#config.get(ConfigKey.CurrencyDecimals)),
 		};
 	}
 
-	public override nonce(): BigNumber {
+	public nonce(): BigNumber {
 		return BigNumber.make(this.data.nonce ?? 0);
 	}
 
-	public override secondPublicKey(): string | undefined {
+	public secondPublicKey(): string | undefined {
 		return this.#getProperty(["secondPublicKey", "attributes.secondPublicKey"]);
 	}
 
-	public override username(): string | undefined {
+	public username(): string | undefined {
 		return this.#getProperty(["username", "attributes.username"]);
 	}
 
-	public override validatorPublicKey(): string | undefined {
+	public validatorPublicKey(): string | undefined {
 		return this.#getProperty(["attributes.validatorPublicKey"]);
 	}
 
-	public override rank(): number | undefined {
+	public rank(): number | undefined {
 		return this.#getProperty(["rank", "attributes.validatorRank"]);
 	}
 
-	public override votes(): BigNumber | undefined {
+	public votes(): BigNumber | undefined {
 		const balance: string | undefined = this.#getProperty(["votes", "attributes.validatorVoteBalance"]);
 
 		if (balance === undefined) {
@@ -52,15 +67,11 @@ export class WalletData extends DTO.AbstractWalletData implements Contracts.Wall
 		return BigNumber.make(balance);
 	}
 
-	public override isDelegate(): boolean {
-		return this.isValidator();
-	}
-
-	public override isResignedDelegate(): boolean {
+	public isResignedDelegate(): boolean {
 		return this.isResignedValidator();
 	}
 
-	public override isValidator(): boolean {
+	public isValidator(): boolean {
 		if (this.isResignedValidator()) {
 			return false;
 		}
@@ -68,11 +79,11 @@ export class WalletData extends DTO.AbstractWalletData implements Contracts.Wall
 		return !!this.#getProperty(["attributes.validatorPublicKey"]);
 	}
 
-	public override isResignedValidator(): boolean {
+	public isResignedValidator(): boolean {
 		return !!this.#getProperty(["attributes.validatorResigned"]);
 	}
 
-	public override isSecondSignature(): boolean {
+	public isSecondSignature(): boolean {
 		return !!this.#getProperty(["secondPublicKey", "attributes.secondPublicKey"]);
 	}
 
@@ -84,5 +95,66 @@ export class WalletData extends DTO.AbstractWalletData implements Contracts.Wall
 		}
 
 		return undefined;
+	}
+
+	public toObject(): KeyValuePair {
+		return {
+			address: this.address(),
+			balance: this.balance(),
+			isResignedDelegate: this.isResignedDelegate(),
+			isResignedValidator: this.isResignedValidator(),
+			isSecondSignature: this.isSecondSignature(),
+			isValidator: this.isValidator(),
+			nonce: this.nonce(),
+			publicKey: this.publicKey(),
+			rank: this.rank(),
+			username: this.username(),
+			votes: this.votes(),
+		};
+	}
+
+	public toHuman(): KeyValuePair {
+		const { available, fees, locked, tokens } = this.balance();
+
+		const balance: {
+			available: number;
+			fees: number;
+			locked?: number | undefined;
+			tokens?: Record<string, number> | undefined;
+		} = {
+			available: available.toHuman(),
+			fees: fees.toHuman(),
+			locked: undefined,
+			tokens: undefined,
+		};
+
+		if (locked) {
+			balance.locked = locked.toHuman();
+		}
+
+		if (tokens) {
+			balance.tokens = {};
+
+			for (const [key, value] of Object.entries(tokens)) {
+				balance.tokens[key] = value.toHuman();
+			}
+		}
+
+		return {
+			...this.toObject(),
+			balance,
+		};
+	}
+
+	public raw(): KeyValuePair {
+		return this.data;
+	}
+
+	public hasPassed(): boolean {
+		return Object.keys(this.data).length > 0;
+	}
+
+	public hasFailed(): boolean {
+		return !this.hasPassed();
 	}
 }

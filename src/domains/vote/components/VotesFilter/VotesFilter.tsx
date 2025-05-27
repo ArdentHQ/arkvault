@@ -28,12 +28,22 @@ export const VotesFilter = ({
 					</Button>
 				}
 			>
-				<div className="flex w-56 flex-col items-start space-y-5 px-10 py-7 text-theme-secondary-700 dark:text-theme-secondary-200">
+				<div className="text-theme-secondary-700 dark:text-theme-secondary-200 flex w-56 flex-col items-start space-y-5 px-10 py-7">
 					<label
 						className="flex h-5 cursor-pointer items-center space-x-3 rounded-md"
 						data-testid="VotesFilter__option--all"
 					>
-						<Checkbox name="all" checked={selectedOption === "all"} onChange={() => onChange?.("all")} />
+						<Checkbox
+							name="all"
+							checked={selectedOption === "all"}
+							onChange={() => onChange?.("all")}
+							onKeyDown={(event) => {
+								/* istanbul ignore next -- @preserve */
+								if (event.key === "Enter" || event.key === " ") {
+									onChange?.("all");
+								}
+							}}
+						/>
 						<span className="text-base font-medium">{t("VOTE.FILTERS.ALL")}</span>
 					</label>
 
@@ -50,6 +60,12 @@ export const VotesFilter = ({
 								name="current"
 								checked={selectedOption === "current"}
 								onChange={() => onChange?.("current")}
+								onKeyDown={(event) => {
+									/* istanbul ignore next -- @preserve */
+									if (event.key === "Enter" || event.key === " ") {
+										onChange?.("current");
+									}
+								}}
 							/>
 							<span className="text-base font-medium">{t("VOTE.FILTERS.CURRENT_VOTES")}</span>
 						</label>

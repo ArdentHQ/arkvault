@@ -1,6 +1,6 @@
 import { Contracts } from "@/app/lib/profiles";
 import { NormalizedNetwork } from "@/domains/setting/pages/Servers/Servers.contracts";
-import { NetworkHostType } from "@/app/lib/sdk/network.models";
+import { NetworkHostType } from "@/app/lib/mainsail/network.models";
 import { HostSet } from "@/app/lib/profiles/host.repository.contract";
 
 const findNetworkIndex = (profile: Contracts.IProfile, normalizedNetwork: NormalizedNetwork, type: NetworkHostType) => {

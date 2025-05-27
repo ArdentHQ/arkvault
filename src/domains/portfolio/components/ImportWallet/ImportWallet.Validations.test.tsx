@@ -14,7 +14,6 @@ import {
 	mockProfileWithPublicAndTestNetworks,
 	getMainsailProfileId,
 	MAINSAIL_MNEMONICS,
-	fixUInt8ArrayIssue,
 } from "@/utils/testing-library";
 import * as usePortfolio from "@/domains/portfolio/hooks/use-portfolio";
 import { ImportAddressesSidePanel } from "./ImportAddressSidePanel";
@@ -43,7 +42,6 @@ const testNetwork = "mainsail.devnet";
 
 describe("ImportAddress Validations", () => {
 	let resetProfileNetworksMock: () => void;
-	let uInt8ArrayFix: () => void;
 
 	beforeEach(async () => {
 		vi.spyOn(usePortfolio, "usePortfolio").mockReturnValue({
@@ -62,18 +60,15 @@ describe("ImportAddress Validations", () => {
 		}
 
 		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
-		uInt8ArrayFix = fixUInt8ArrayIssue();
 	});
 
 	afterEach(() => {
 		resetProfileNetworksMock();
-		uInt8ArrayFix();
 	});
 
 	it("should error if address cannot be created", async () => {
-		const coin = profile.coins().get("Mainsail", testNetwork);
-		const coinMock = vi.spyOn(coin.address(), "fromSecret").mockImplementation(() => {
-			throw new Error("test");
+		const validationMock = vi.spyOn(profile.walletFactory(), "fromSecret").mockImplementation(() => {
+			throw new Error("error");
 		});
 
 		render(
@@ -98,17 +93,15 @@ describe("ImportAddress Validations", () => {
 
 		expect(secretInput).toBeInTheDocument();
 
-		await userEvent.clear(secretInput);
 		await userEvent.type(secretInput, "wrong-secret");
 
 		await waitFor(() => expect(continueButton()).not.toBeEnabled());
-		coinMock.mockRestore();
+		validationMock.mockRestore();
 	});
 
 	it("should prompt for mnemonic if user enters bip39 compliant secret", async () => {
-		const coin = profile.coins().get("Mainsail", testNetwork);
-		const coinMock = vi.spyOn(coin.address(), "fromSecret").mockImplementation(() => {
-			throw new Error("value is BIP39");
+		const validationMock = vi.spyOn(profile.walletFactory(), "fromSecret").mockImplementation(() => {
+			throw new Error("error");
 		});
 
 		render(
@@ -137,7 +130,7 @@ describe("ImportAddress Validations", () => {
 		await userEvent.type(passphraseInput, MNEMONICS[0]);
 
 		await waitFor(() => expect(continueButton()).not.toBeEnabled());
-		coinMock.mockRestore();
+		validationMock.mockRestore();
 	});
 
 	// @TODO enable when we have 2nd signature enabled

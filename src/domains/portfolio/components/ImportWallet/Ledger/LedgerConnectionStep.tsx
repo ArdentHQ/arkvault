@@ -1,4 +1,4 @@
-import { Networks } from "@/app/lib/sdk";
+import { Networks } from "@/app/lib/mainsail";
 import React, { useEffect } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
@@ -63,7 +63,7 @@ export const LedgerConnectionStep = ({
 	}, [register, unregister]);
 
 	useEffect(() => {
-		connect(activeProfile, network.coin(), network.id());
+		connect(activeProfile, network.id());
 	}, [activeProfile, network]); // eslint-disable-line react-hooks/exhaustive-deps
 
 	useEffect(() => {

@@ -5,7 +5,7 @@ exports[`ContactListItem > should render 1`] = `
   <table>
     <tbody>
       <tr
-        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group last:border-theme-secondary-200 dark:last:border-theme-secondary-800 relative last:border-b-4! last:border-solid"
         data-testid="ContactListItem"
       >
         <td>
@@ -13,7 +13,7 @@ exports[`ContactListItem > should render 1`] = `
             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-4 whitespace-nowrap"
           >
             <span
-              class="text-sm font-semibold leading-[17px]"
+              class="text-sm leading-[17px] font-semibold"
               data-testid="ContactListItem__name"
             >
               <span
@@ -62,7 +62,7 @@ exports[`ContactListItem > should render 1`] = `
             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-4 justify-center"
           >
             <button
-              class="ring-focus relative focus:outline-none"
+              class="ring-focus relative cursor-pointer focus:outline-hidden"
               data-ring-focus-margin="-m-1"
               data-testid="clipboard-icon__wrapper"
               type="button"
@@ -117,7 +117,7 @@ exports[`ContactListItem > should render 1`] = `
                 data-testid="ContactListItem__send-button-wrapper"
               >
                 <button
-                  class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 text-sm hover:underline"
                   data-testid="ContactListItem__send-button"
                   type="button"
                 >
@@ -129,7 +129,7 @@ exports[`ContactListItem > should render 1`] = `
                 </button>
               </div>
               <div
-                class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle height-[17px] !m-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+                class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle height-[17px] border-theme-secondary-300 dark:border-theme-secondary-800 m-0!"
               />
               <div
                 class="visible"
@@ -140,14 +140,14 @@ exports[`ContactListItem > should render 1`] = `
                   data-testid="dropdown__toggle"
                 >
                   <button
-                    class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none mr-3 p-1 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
+                    class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none dark:hover:bg-theme-secondary-700 hover:bg-theme-navy-200 mr-3 p-1"
                     type="button"
                   >
                     <div
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
+                        class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 transition-colors duration-200"
                       >
                         <div
                           style="height: 16px; width: 16px;"
@@ -200,7 +200,7 @@ exports[`ContactListItem > should render as validator 1`] = `
   <table>
     <tbody>
       <tr
-        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group last:border-theme-secondary-200 dark:last:border-theme-secondary-800 relative last:border-b-4! last:border-solid"
         data-testid="ContactListItem"
       >
         <td>
@@ -208,7 +208,7 @@ exports[`ContactListItem > should render as validator 1`] = `
             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-4 whitespace-nowrap"
           >
             <span
-              class="text-sm font-semibold leading-[17px]"
+              class="text-sm leading-[17px] font-semibold"
               data-testid="ContactListItem__name"
             >
               <span
@@ -257,7 +257,7 @@ exports[`ContactListItem > should render as validator 1`] = `
             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-4 justify-center"
           >
             <button
-              class="ring-focus relative focus:outline-none"
+              class="ring-focus relative cursor-pointer focus:outline-hidden"
               data-ring-focus-margin="-m-1"
               data-testid="clipboard-icon__wrapper"
               type="button"
@@ -312,7 +312,7 @@ exports[`ContactListItem > should render as validator 1`] = `
                 data-testid="ContactListItem__send-button-wrapper"
               >
                 <button
-                  class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 text-sm hover:underline"
                   data-testid="ContactListItem__send-button"
                   type="button"
                 >
@@ -324,7 +324,7 @@ exports[`ContactListItem > should render as validator 1`] = `
                 </button>
               </div>
               <div
-                class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle height-[17px] !m-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+                class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle height-[17px] border-theme-secondary-300 dark:border-theme-secondary-800 m-0!"
               />
               <div
                 class="visible"
@@ -335,14 +335,14 @@ exports[`ContactListItem > should render as validator 1`] = `
                   data-testid="dropdown__toggle"
                 >
                   <button
-                    class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none mr-3 p-1 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
+                    class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none dark:hover:bg-theme-secondary-700 hover:bg-theme-navy-200 mr-3 p-1"
                     type="button"
                   >
                     <div
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
+                        class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 transition-colors duration-200"
                       >
                         <div
                           style="height: 16px; width: 16px;"
@@ -395,7 +395,7 @@ exports[`ContactListItem > should render options 1`] = `
   <table>
     <tbody>
       <tr
-        class="transition-colors duration-100 group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
+        class="transition-colors duration-100 group last:border-theme-secondary-200 dark:last:border-theme-secondary-800 relative last:border-b-4! last:border-solid"
         data-testid="ContactListItem"
       >
         <td>
@@ -403,7 +403,7 @@ exports[`ContactListItem > should render options 1`] = `
             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-4 whitespace-nowrap"
           >
             <span
-              class="text-sm font-semibold leading-[17px]"
+              class="text-sm leading-[17px] font-semibold"
               data-testid="ContactListItem__name"
             >
               <span
@@ -452,7 +452,7 @@ exports[`ContactListItem > should render options 1`] = `
             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-4 justify-center"
           >
             <button
-              class="ring-focus relative focus:outline-none"
+              class="ring-focus relative cursor-pointer focus:outline-hidden"
               data-ring-focus-margin="-m-1"
               data-testid="clipboard-icon__wrapper"
               type="button"
@@ -507,7 +507,7 @@ exports[`ContactListItem > should render options 1`] = `
                 data-testid="ContactListItem__send-button-wrapper"
               >
                 <button
-                  class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 text-sm hover:underline"
                   data-testid="ContactListItem__send-button"
                   type="button"
                 >
@@ -519,7 +519,7 @@ exports[`ContactListItem > should render options 1`] = `
                 </button>
               </div>
               <div
-                class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle height-[17px] !m-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+                class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle height-[17px] border-theme-secondary-300 dark:border-theme-secondary-800 m-0!"
               />
               <div
                 class="visible"
@@ -530,14 +530,14 @@ exports[`ContactListItem > should render options 1`] = `
                   data-testid="dropdown__toggle"
                 >
                   <button
-                    class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none mr-3 p-1 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
+                    class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none dark:hover:bg-theme-secondary-700 hover:bg-theme-navy-200 mr-3 p-1"
                     type="button"
                   >
                     <div
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
+                        class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 transition-colors duration-200"
                       >
                         <div
                           style="height: 16px; width: 16px;"
@@ -581,7 +581,7 @@ exports[`ContactListItem > should render options 1`] = `
         </td>
       </tr>
       <tr
-        class="transition-colors duration-100 group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
+        class="transition-colors duration-100 group last:border-theme-secondary-200 dark:last:border-theme-secondary-800 relative last:border-b-4! last:border-solid"
         data-testid="ContactListItem"
       >
         <td>
@@ -626,7 +626,7 @@ exports[`ContactListItem > should render options 1`] = `
             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-4 justify-center"
           >
             <button
-              class="ring-focus relative focus:outline-none"
+              class="ring-focus relative cursor-pointer focus:outline-hidden"
               data-ring-focus-margin="-m-1"
               data-testid="clipboard-icon__wrapper"
               type="button"
@@ -681,7 +681,7 @@ exports[`ContactListItem > should render options 1`] = `
                 data-testid="ContactListItem__send-button-wrapper"
               >
                 <button
-                  class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 text-sm hover:underline"
                   data-testid="ContactListItem__send-button"
                   type="button"
                 >
@@ -701,14 +701,14 @@ exports[`ContactListItem > should render options 1`] = `
                   data-testid="dropdown__toggle"
                 >
                   <button
-                    class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none mr-3 p-1 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
+                    class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none dark:hover:bg-theme-secondary-700 hover:bg-theme-navy-200 mr-3 p-1"
                     type="button"
                   >
                     <div
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
+                        class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 transition-colors duration-200"
                       >
                         <div
                           style="height: 16px; width: 16px;"
@@ -752,7 +752,7 @@ exports[`ContactListItem > should render options 1`] = `
         </td>
       </tr>
       <tr
-        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group last:border-theme-secondary-200 dark:last:border-theme-secondary-800 relative last:border-b-4! last:border-solid"
         data-testid="ContactListItem"
       >
         <td>
@@ -797,7 +797,7 @@ exports[`ContactListItem > should render options 1`] = `
             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-4 justify-center"
           >
             <button
-              class="ring-focus relative focus:outline-none"
+              class="ring-focus relative cursor-pointer focus:outline-hidden"
               data-ring-focus-margin="-m-1"
               data-testid="clipboard-icon__wrapper"
               type="button"
@@ -852,7 +852,7 @@ exports[`ContactListItem > should render options 1`] = `
                 data-testid="ContactListItem__send-button-wrapper"
               >
                 <button
-                  class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 text-sm hover:underline"
                   data-testid="ContactListItem__send-button"
                   type="button"
                 >
@@ -872,14 +872,14 @@ exports[`ContactListItem > should render options 1`] = `
                   data-testid="dropdown__toggle"
                 >
                   <button
-                    class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none mr-3 p-1 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
+                    class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none dark:hover:bg-theme-secondary-700 hover:bg-theme-navy-200 mr-3 p-1"
                     type="button"
                   >
                     <div
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
+                        class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 transition-colors duration-200"
                       >
                         <div
                           style="height: 16px; width: 16px;"
@@ -932,7 +932,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
   <table>
     <tbody>
       <tr
-        class="transition-colors duration-100 group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
+        class="transition-colors duration-100 group last:border-theme-secondary-200 dark:last:border-theme-secondary-800 relative last:border-b-4! last:border-solid"
         data-testid="ContactListItem"
       >
         <td>
@@ -940,7 +940,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-4 whitespace-nowrap"
           >
             <span
-              class="text-sm font-semibold leading-[17px]"
+              class="text-sm leading-[17px] font-semibold"
               data-testid="ContactListItem__name"
             >
               <span
@@ -989,7 +989,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-4 justify-center"
           >
             <button
-              class="ring-focus relative focus:outline-none"
+              class="ring-focus relative cursor-pointer focus:outline-hidden"
               data-ring-focus-margin="-m-1"
               data-testid="clipboard-icon__wrapper"
               type="button"
@@ -1044,7 +1044,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
                 data-testid="ContactListItem__send-button-wrapper"
               >
                 <button
-                  class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 text-sm hover:underline"
                   data-testid="ContactListItem__send-button"
                   type="button"
                 >
@@ -1056,7 +1056,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
                 </button>
               </div>
               <div
-                class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle height-[17px] !m-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+                class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle height-[17px] border-theme-secondary-300 dark:border-theme-secondary-800 m-0!"
               />
               <div
                 class="visible"
@@ -1067,14 +1067,14 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
                   data-testid="dropdown__toggle"
                 >
                   <button
-                    class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none mr-3 p-1 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
+                    class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none dark:hover:bg-theme-secondary-700 hover:bg-theme-navy-200 mr-3 p-1"
                     type="button"
                   >
                     <div
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
+                        class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 transition-colors duration-200"
                       >
                         <div
                           style="height: 16px; width: 16px;"
@@ -1118,7 +1118,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
         </td>
       </tr>
       <tr
-        class="transition-colors duration-100 group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
+        class="transition-colors duration-100 group last:border-theme-secondary-200 dark:last:border-theme-secondary-800 relative last:border-b-4! last:border-solid"
         data-testid="ContactListItem"
       >
         <td>
@@ -1163,7 +1163,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-4 justify-center"
           >
             <button
-              class="ring-focus relative focus:outline-none"
+              class="ring-focus relative cursor-pointer focus:outline-hidden"
               data-ring-focus-margin="-m-1"
               data-testid="clipboard-icon__wrapper"
               type="button"
@@ -1218,7 +1218,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
                 data-testid="ContactListItem__send-button-wrapper"
               >
                 <button
-                  class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 text-sm hover:underline"
                   data-testid="ContactListItem__send-button"
                   type="button"
                 >
@@ -1238,14 +1238,14 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
                   data-testid="dropdown__toggle"
                 >
                   <button
-                    class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none mr-3 p-1 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
+                    class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none dark:hover:bg-theme-secondary-700 hover:bg-theme-navy-200 mr-3 p-1"
                     type="button"
                   >
                     <div
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
+                        class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 transition-colors duration-200"
                       >
                         <div
                           style="height: 16px; width: 16px;"
@@ -1289,7 +1289,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
         </td>
       </tr>
       <tr
-        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group last:border-theme-secondary-200 dark:last:border-theme-secondary-800 relative last:border-b-4! last:border-solid"
         data-testid="ContactListItem"
       >
         <td>
@@ -1334,7 +1334,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-4 justify-center"
           >
             <button
-              class="ring-focus relative focus:outline-none"
+              class="ring-focus relative cursor-pointer focus:outline-hidden"
               data-ring-focus-margin="-m-1"
               data-testid="clipboard-icon__wrapper"
               type="button"
@@ -1389,7 +1389,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
                 data-testid="ContactListItem__send-button-wrapper"
               >
                 <button
-                  class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 text-sm hover:underline"
                   data-testid="ContactListItem__send-button"
                   type="button"
                 >
@@ -1409,14 +1409,14 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
                   data-testid="dropdown__toggle"
                 >
                   <button
-                    class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none mr-3 p-1 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
+                    class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none dark:hover:bg-theme-secondary-700 hover:bg-theme-navy-200 mr-3 p-1"
                     type="button"
                   >
                     <div
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
+                        class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 transition-colors duration-200"
                       >
                         <div
                           style="height: 16px; width: 16px;"

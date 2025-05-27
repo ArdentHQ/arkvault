@@ -19,7 +19,7 @@ const StatusIcon = ({ label, isDone, isLoading }: StatusIconProperties) => {
 			return (
 				<div
 					data-testid="StatusIcon__check-mark"
-					className="flex h-6 w-6 items-center justify-center rounded-full bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200"
+					className="bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 flex h-6 w-6 items-center justify-center rounded-full"
 				>
 					<Icon name="CheckmarkSmall" size="sm" />
 				</div>
@@ -29,7 +29,7 @@ const StatusIcon = ({ label, isDone, isLoading }: StatusIconProperties) => {
 		if (isLoading) {
 			return (
 				<span data-testid="StatusIcon__spinner">
-					<Spinner className="!h-6 !w-6 !border-[3px]" />
+					<Spinner className="h-6! w-6! border-[3px]!" />
 				</span>
 			);
 		}
@@ -37,7 +37,7 @@ const StatusIcon = ({ label, isDone, isLoading }: StatusIconProperties) => {
 		return (
 			<div
 				data-testid="StatusIcon__empty"
-				className="h-6 w-6 rounded-full border-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+				className="border-theme-secondary-300 dark:border-theme-secondary-800 h-6 w-6 rounded-full border-2"
 			/>
 		);
 	};
@@ -47,7 +47,7 @@ const StatusIcon = ({ label, isDone, isLoading }: StatusIconProperties) => {
 			{renderIcon()}
 			<span
 				className={cn(
-					"whitespace-nowrap text-xs font-semibold sm:text-sm",
+					"text-xs font-semibold whitespace-nowrap sm:text-sm",
 					isDone
 						? "text-theme-secondary-700 dark:text-theme-secondary-600"
 						: "text-theme-secondary-500 dark:text-theme-secondary-700",

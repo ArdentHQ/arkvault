@@ -122,8 +122,8 @@ describe("Welcome with deeplink", () => {
 	});
 
 	it("should navigate to vote page", async () => {
-		const mockValidatorName = vi
-			.spyOn(env.validators(), "findByUsername")
+		const mockDelegateName = vi
+			.spyOn(profile.validators(), "findByUsername")
 			.mockReturnValue(profile.wallets().first());
 		const toastWarningSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
 		const historyPushMock = vi.spyOn(history, "push");
@@ -196,7 +196,7 @@ describe("Welcome with deeplink", () => {
 			.spyOn(passwordProtectedProfile.password(), "get")
 			.mockReturnValue(getDefaultPassword());
 
-		const mockDelegateName = vi.spyOn(env.delegates(), "findByUsername").mockReturnValue(profile.wallets().first());
+		const mockDelegateName = vi.spyOn(profile.validators(), "findByUsername").mockReturnValue(profile.wallets().first());
 
 		render(
 			<Route path="/">
@@ -225,26 +225,6 @@ describe("Welcome with deeplink", () => {
 		mockDelegateName.mockRestore();
 		mockPasswordGetter.mockRestore();
 	}); */
-
-	it("should show a warning if the coin is not supported", async () => {
-		const { container } = render(
-			<Route path="/">
-				<Welcome />
-			</Route>,
-			{
-				history,
-				route: "/?method=transfer&coin=doge&network=ark.mainnet",
-			},
-		);
-
-		const { result } = renderHook(() => useSearchParametersValidation());
-
-		expect(container).toBeInTheDocument();
-
-		await userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
-
-		await expectToast(result.current.buildSearchParametersError({ type: "COIN_NOT_SUPPORTED", value: "DOGE" }));
-	});
 
 	it("should ignore multiple clicks", async () => {
 		const { container } = render(
@@ -333,26 +313,6 @@ describe("Welcome with deeplink", () => {
 		await expectToast(result.current.buildSearchParametersError({ type: "NETWORK_INVALID", value: "custom" }));
 	});
 
-	it("should show a warning if there are no available senders for network", async () => {
-		const { container } = render(
-			<Route path="/">
-				<Welcome />
-			</Route>,
-			{
-				history,
-				route: mainnetDeepLink,
-			},
-		);
-
-		const { result } = renderHook(() => useSearchParametersValidation());
-
-		expect(container).toBeInTheDocument();
-
-		await userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
-
-		await expectToast(result.current.buildSearchParametersError({ type: "NETWORK_NO_WALLETS", value: "Mainsail" }));
-	});
-
 	it("should show a warning if there is no network for the given nethash", async () => {
 		const nethash = "6e84d08bd299ed97c212c886c98a57e36545c8f5d645ca7eeae63a8bd62d8987";
 		const { container } = render(
@@ -377,27 +337,6 @@ describe("Welcome with deeplink", () => {
 		});
 
 		await expectToast(result.current.buildSearchParametersError({ type: "NETHASH_NOT_ENABLED", value: truncated }));
-	});
-
-	it("should show a warning if there are no available senders for the network with the given nethash", async () => {
-		const nethash = "d481dea3dcc13708364e576dff94dd499692b56cbc646d5acd22a3902297dd51";
-		const { container } = render(
-			<Route path="/">
-				<Welcome />
-			</Route>,
-			{
-				history,
-				route: `/?method=transfer&coin=mainsail&nethash=${nethash}`,
-			},
-		);
-
-		const { result } = renderHook(() => useSearchParametersValidation());
-
-		expect(container).toBeInTheDocument();
-
-		await userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
-
-		await expectToast(result.current.buildSearchParametersError({ type: "NETWORK_NO_WALLETS", value: "Mainsail" }));
 	});
 
 	it("should navigate to transfer page with network parameter", async () => {
@@ -593,8 +532,8 @@ describe("Welcome with deeplink", () => {
 	});
 
 	it("should not navigate when clicking multiple times", async () => {
-		const mockValidatorName = vi
-			.spyOn(env.validators(), "findByUsername")
+		const mockDelegateName = vi
+			.spyOn(profile.validators(), "findByUsername")
 			.mockReturnValue(profile.wallets().first());
 		const mockProfiles = vi.spyOn(env.profiles(), "values").mockReturnValue([profile]);
 		const mockUsesPassword = vi.spyOn(profile, "usesPassword").mockReturnValue(true);

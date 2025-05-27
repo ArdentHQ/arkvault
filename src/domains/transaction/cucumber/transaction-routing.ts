@@ -80,7 +80,7 @@ cucumber(
 					},
 				},
 				balance: "10000000000",
-				isDelegate: true,
+				isValidator: true,
 				isResigned: false,
 				nonce: "1",
 				publicKey: "02e012f0a7cac12a74bdc17d844cbc9f637177b470019c32a53cef94c7a56e2ea9",

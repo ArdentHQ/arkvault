@@ -10,11 +10,10 @@ import {
 	waitFor,
 	within,
 } from "@/utils/testing-library";
+import { Contracts, DTO } from "@/app/lib/profiles";
 import { requestMock, server } from "@/tests/mocks/server";
-
-import { BigNumber } from "@/app/lib/helpers";
+import { AddressService } from "@/app/lib/mainsail/address.service";
 import { Contracts } from "@/app/lib/profiles";
-import { DateTime } from "@/app/lib/intl";
 import React from "react";
 import { Route } from "react-router-dom";
 import { SendValidatorResignation } from "./SendValidatorResignation";
@@ -23,6 +22,9 @@ import { expect } from "vitest";
 import transactionFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/transfer.json";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import userEvent from "@testing-library/user-event";
+import { signedTransactionMock } from "@/domains/transaction/pages/SendTransfer/SendTransfer.test";
+import { BigNumber } from "@/app/lib/helpers";
+import { DateTime } from "@/app/lib/intl";
 
 let wallet: Contracts.IReadWriteWallet;
 let profile: Contracts.IProfile;
@@ -50,42 +52,63 @@ const renderPage = () => {
 	);
 };
 
-const transactionResponse = {
-	amount: () => +transactionFixture.data.amount / 1e18,
-	blockId: () => "1",
-	confirmations: () => 154_178,
-	convertedAmount: () => BigNumber.make(10),
-	data: () => ({ data: () => transactionFixture.data }),
-	explorerLink: () => `https://mainsail-explorer.ihost.org/transactions/${transactionFixture.data.id}`,
-	explorerLinkForBlock: () => `https://mainsail-explorer.ihost.org/block/${transactionFixture.data.blockId}`,
-	fee: () => BigNumber.make(0.000_106_4),
-	id: () => transactionFixture.data.id,
-	isConfirmed: () => true,
-	isDelegateRegistration: () => false,
-	isDelegateResignation: () => true,
-	isIpfs: () => false,
+const signedTransactionMock = {
+	blockHash: () => {},
+	confirmations: () => BigNumber.ZERO,
+	convertedAmount: () => +transactionFixture.data.value / 1e8,
+	convertedFee: () => {
+		const fee = BigNumber.make(transactionFixture.data.gasPrice).times(transactionFixture.data.gas).dividedBy(1e8);
+		return fee.toNumber();
+	},
+	convertedTotal: () => BigNumber.ZERO,
+	data: () => transactionFixture.data,
+	explorerLink: () => `https://test.arkscan.io/transaction/${transactionFixture.data.hash}`,
+	explorerLinkForBlock: () => {},
+	fee: () => BigNumber.make(transactionFixture.data.gasPrice).times(transactionFixture.data.gas),
+	from: () => transactionFixture.data.from,
+	hash: () => transactionFixture.data.hash,
+	isConfirmed: () => false,
 	isMultiPayment: () => false,
 	isMultiSignatureRegistration: () => false,
 	isReturn: () => false,
+	isSecondSignature: () => false,
 	isSent: () => true,
 	isSuccess: () => true,
-	isTransfer: () => false,
+	isTransfer: () => true,
 	isUnvote: () => false,
 	isUsernameRegistration: () => false,
 	isUsernameResignation: () => false,
 	isValidatorRegistration: () => false,
-	isValidatorResignation: () => true,
+	isValidatorResignation: () => false,
 	isVote: () => false,
 	isVoteCombination: () => false,
-	memo: () => null,
-	nonce: () => BigNumber.make(1),
-	recipient: () => transactionFixture.data.recipient,
-	sender: () => transactionFixture.data.senderAddress,
-	timestamp: () => DateTime.make(),
-	total: () => +transactionFixture.data.amount / 1e8,
-	type: () => "validatorResignation",
+	memo: () => transactionFixture.data.memo || undefined,
+	nonce: () => BigNumber.make(transactionFixture.data.nonce),
+	payments: () => [],
+	recipients: () => [
+		{
+			address: transactionFixture.data.to,
+			amount: +transactionFixture.data.value / 1e8,
+		},
+	],
+	timestamp: () => DateTime.make(transactionFixture.data.timestamp),
+	to: () => transactionFixture.data.to,
+	total: () => {
+		const value = BigNumber.make(transactionFixture.data.value);
+		const feeVal = BigNumber.make(transactionFixture.data.gasPrice).times(transactionFixture.data.gas);
+		return value.plus(feeVal);
+	},
+	type: () => "transfer",
 	usesMultiSignature: () => false,
+	value: () => +transactionFixture.data.value / 1e8,
 	wallet: () => wallet,
+} as DTO.ExtendedSignedTransactionData;
+
+const transactionResponse = {
+	...signedTransactionMock,
+	isTransfer: () => false,
+	isValidatorResignation: () => true,
+	type: () => "validatorResignation",
 };
 
 const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
@@ -120,7 +143,6 @@ describe("SendValidatorResignation", () => {
 
 		vi.spyOn(wallet, "balance").mockReturnValue(1200);
 		vi.spyOn(wallet, "validatorPublicKey").mockReturnValue("validator-public-key");
-		vi.spyOn(wallet, "isMultiSignature").mockImplementation(() => false);
 
 		const config = profile.settings().get(Contracts.ProfileSetting.DashboardConfiguration, {});
 		profile.settings().set(Contracts.ProfileSetting.DashboardConfiguration, {
@@ -144,13 +166,17 @@ describe("SendValidatorResignation", () => {
 			history.push(resignationUrl);
 
 			mnemonicMock = vi
-				.spyOn(wallet.coin().address(), "fromMnemonic")
-				.mockResolvedValue({ address: wallet.address() });
+				.spyOn(AddressService.prototype, "fromMnemonic")
+				.mockReturnValue({ address: wallet.address() });
 
 			server.use(
 				requestMock(
 					"https://dwallets-evm.mainsailhq.com/api/transactions/8e4a8c3eaf2f9543a5bd61bb85ddd2205d5091597a77446c8b99692e0854b978",
 					transactionFixture,
+				),
+				requestMock(
+					"https://dwallets-evm.mainsailhq.com/api/blocks/f7054cf37ce49e17cf2b06a0a868cac183bf78e2f1b4a6fe675f2412364fe0ae",
+					{ data: {} }, // Basic mock for block data
 				),
 			);
 		});
@@ -283,7 +309,7 @@ describe("SendValidatorResignation", () => {
 		it("should show error step and go back", async () => {
 			const signMock = vi
 				.spyOn(wallet.transaction(), "signValidatorResignation")
-				.mockReturnValue(Promise.resolve(transactionFixture.data.id));
+				.mockReturnValue(Promise.resolve(transactionFixture.data.hash));
 
 			const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockImplementation(() => {
 				throw new Error("broadcast error");
@@ -334,10 +360,10 @@ describe("SendValidatorResignation", () => {
 		it("should successfully sign and submit resignation transaction", async () => {
 			const signMock = vi
 				.spyOn(wallet.transaction(), "signValidatorResignation")
-				.mockReturnValue(Promise.resolve(transactionFixture.data.id));
+				.mockReturnValue(Promise.resolve(transactionFixture.data.hash));
 
 			const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
-				accepted: [transactionFixture.data.id],
+				accepted: [transactionFixture.data.hash],
 				errors: {},
 				rejected: [],
 			});
@@ -380,10 +406,10 @@ describe("SendValidatorResignation", () => {
 		it("should successfully sign and submit resignation transaction with keyboard", async () => {
 			const signMock = vi
 				.spyOn(wallet.transaction(), "signValidatorResignation")
-				.mockReturnValue(Promise.resolve(transactionFixture.data.id));
+				.mockReturnValue(Promise.resolve(transactionFixture.data.hash));
 
 			const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
-				accepted: [transactionFixture.data.id],
+				accepted: [transactionFixture.data.hash],
 				errors: {},
 				rejected: [],
 			});
@@ -424,10 +450,10 @@ describe("SendValidatorResignation", () => {
 		it("should click back button after successful submission", async () => {
 			const signMock = vi
 				.spyOn(wallet.transaction(), "signValidatorResignation")
-				.mockReturnValue(Promise.resolve(transactionFixture.data.id));
+				.mockReturnValue(Promise.resolve(transactionFixture.data.hash));
 
 			const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
-				accepted: [transactionFixture.data.id],
+				accepted: [transactionFixture.data.hash],
 				errors: {},
 				rejected: [],
 			});
@@ -481,16 +507,18 @@ describe("SendValidatorResignation", () => {
 
 		it("should successfully sign and submit resignation transaction using encryption password", async () => {
 			const actsWithMnemonicMock = vi.spyOn(wallet, "actsWithMnemonic").mockReturnValue(false);
-			const actsWithWifWithEncryptionMock = vi.spyOn(wallet, "actsWithWifWithEncryption").mockReturnValue(true);
-			const wifGetMock = vi.spyOn(wallet.signingKey(), "get").mockReturnValue(passphrase);
+			const actsWithSecretWithEncryptionMock = vi
+				.spyOn(wallet, "actsWithMnemonicWithEncryption")
+				.mockReturnValue(true);
+			const passphraseMock = vi.spyOn(wallet.signingKey(), "get").mockReturnValue(passphrase);
 
 			const secondPublicKeyMock = vi.spyOn(wallet, "isSecondSignature").mockReturnValue(false);
 			const signMock = vi
 				.spyOn(wallet.transaction(), "signValidatorResignation")
-				.mockReturnValue(Promise.resolve(transactionFixture.data.id));
+				.mockReturnValue(Promise.resolve(transactionFixture.data.hash));
 
 			const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
-				accepted: [transactionFixture.data.id],
+				accepted: [transactionFixture.data.hash],
 				errors: {},
 				rejected: [],
 			});
@@ -521,11 +549,9 @@ describe("SendValidatorResignation", () => {
 			await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
 			await userEvent.clear(screen.getByTestId("AuthenticationStep__encryption-password"));
-			await userEvent.type(screen.getByTestId("AuthenticationStep__encryption-password"), "password", {
-				delay: 100,
-			});
+			await userEvent.type(screen.getByTestId("AuthenticationStep__encryption-password"), passphrase);
 			await waitFor(() =>
-				expect(screen.getByTestId("AuthenticationStep__encryption-password")).toHaveValue("password"),
+				expect(screen.getByTestId("AuthenticationStep__encryption-password")).toHaveValue(passphrase),
 			);
 
 			await waitFor(() => expect(sendButton()).not.toBeDisabled());
@@ -543,8 +569,8 @@ describe("SendValidatorResignation", () => {
 			broadcastMock.mockRestore();
 			transactionMock.mockRestore();
 			actsWithMnemonicMock.mockRestore();
-			actsWithWifWithEncryptionMock.mockRestore();
-			wifGetMock.mockRestore();
+			actsWithSecretWithEncryptionMock.mockRestore();
+			passphraseMock.mockRestore();
 		});
 	});
 });

@@ -7,11 +7,13 @@ const ContactsHeader = () => {
 	const { t } = useTranslation();
 
 	return (
-		<PageHeader
-			title={t("CONTACTS.CONTACTS_PAGE.TITLE")}
-			subtitle={t("CONTACTS.CONTACTS_PAGE.SUBTITLE")}
-			titleIcon={<ThemeIcon dimensions={[54, 55]} lightIcon="ContactsLight" darkIcon="ContactsDark" />}
-		/>
+		<div className="mb-4 md:mb-0">
+			<PageHeader
+				title={t("CONTACTS.CONTACTS_PAGE.TITLE")}
+				subtitle={t("CONTACTS.CONTACTS_PAGE.SUBTITLE")}
+				titleIcon={<ThemeIcon dimensions={[54, 55]} lightIcon="ContactsLight" darkIcon="ContactsDark" />}
+			/>
+		</div>
 	);
 };
 

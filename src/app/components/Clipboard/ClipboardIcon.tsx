@@ -32,8 +32,12 @@ export const ClipboardIcon = ({
 			<button
 				type="button"
 				data-testid="clipboard-icon__wrapper"
-				className={cn("ring-focus relative focus:outline-none", iconButtonClassName)}
+				className={cn("ring-focus relative cursor-pointer focus:outline-hidden", iconButtonClassName)}
 				onClick={(e) => {
+					e.stopPropagation();
+					copy(data);
+				}}
+				onKeyPress={(e) => {
 					e.stopPropagation();
 					copy(data);
 				}}

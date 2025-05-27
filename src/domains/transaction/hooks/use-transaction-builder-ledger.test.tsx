@@ -6,21 +6,21 @@ import { BigNumber } from "@/app/lib/helpers";
 import { Contracts } from "@/app/lib/profiles";
 import { LedgerProvider } from "@/app/contexts";
 import React from "react";
-import { Services } from "@/app/lib/sdk";
+import { Services } from "@/app/lib/mainsail";
 import transactionFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/transfer.json";
 import { useTransactionBuilder } from "./use-transaction-builder";
 
 const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 	// @ts-ignore
 	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
-		amount: () => BigNumber.make(transactionFixture.data.amount),
 		data: () => ({ data: () => transactionFixture.data }),
-		explorerLink: () => `https://test.arkscan.io/transaction/${transactionFixture.data.id}`,
-		fee: () => BigNumber.make(transactionFixture.data.fee),
-		id: () => transactionFixture.data.id,
+		explorerLink: () => `https://test.arkscan.io/transaction/${transactionFixture.data.hash}`,
+		from: () => transactionFixture.data.from,
+		gasPrice: () => BigNumber.make(transactionFixture.data.gasPrice),
+		hash: () => transactionFixture.data.hash,
 		nonce: () => BigNumber.make(1),
-		recipient: () => transactionFixture.data.recipient,
-		sender: () => transactionFixture.data.sender,
+		to: () => transactionFixture.data.to,
+		value: () => BigNumber.make(transactionFixture.data.value),
 	});
 
 describe("Use Transaction Builder with Ledger", () => {
@@ -44,12 +44,8 @@ describe("Use Transaction Builder with Ledger", () => {
 	it("should sign transfer with ledger", async () => {
 		const { result: builder } = renderHook(() => useTransactionBuilder(), { wrapper });
 
-		vi.spyOn(wallet.coin(), "__construct").mockImplementation(vi.fn());
-		vi.spyOn(wallet.coin().ledger(), "getPublicKey").mockResolvedValue(
-			"027716e659220085e41389efc7cf6a05f7f7c659cf3db9126caabce6cda9156582",
-		);
 		vi.spyOn(wallet, "isLedger").mockImplementation(() => true);
-		vi.spyOn(wallet.transaction(), "signTransfer").mockResolvedValue(transactionFixture.data.id);
+		vi.spyOn(wallet.transaction(), "signTransfer").mockResolvedValue(transactionFixture.data.hash);
 
 		createTransactionMock(wallet);
 
@@ -60,7 +56,8 @@ describe("Use Transaction Builder with Ledger", () => {
 				amount: 1,
 				to: wallet.address(),
 			},
-			fee: 1,
+			gasLimit: 1,
+			gasPrice: 1,
 			nonce: "1",
 			signatory,
 		};
@@ -72,7 +69,7 @@ describe("Use Transaction Builder with Ledger", () => {
 			transaction = result.transaction;
 		});
 
-		await waitFor(() => expect(transaction.id()).toBe(transactionFixture.data.id));
+		await waitFor(() => expect(transaction.hash()).toBe(transactionFixture.data.hash));
 
 		vi.clearAllMocks();
 	});
@@ -80,15 +77,10 @@ describe("Use Transaction Builder with Ledger", () => {
 	it("should sign transfer with cold ledger wallet", async () => {
 		const { result: builder } = renderHook(() => useTransactionBuilder(), { wrapper });
 
-		vi.spyOn(wallet.coin(), "__construct").mockImplementation(vi.fn());
-		vi.spyOn(wallet, "publicKey").mockImplementation(() => void 0);
 		vi.spyOn(wallet, "isLedger").mockImplementation(() => true);
 
-		vi.spyOn(wallet.coin().ledger(), "getPublicKey").mockResolvedValue(
-			"0335a27397927bfa1704116814474d39c2b933aabb990e7226389f022886e48deb",
-		);
+		vi.spyOn(wallet.transaction(), "signTransfer").mockResolvedValue(transactionFixture.data.hash);
 
-		vi.spyOn(wallet.transaction(), "signTransfer").mockResolvedValue(transactionFixture.data.id);
 		createTransactionMock(wallet);
 
 		const signatory = await wallet.signatory().mnemonic(getDefaultWalletMnemonic());
@@ -97,7 +89,8 @@ describe("Use Transaction Builder with Ledger", () => {
 				amount: 1,
 				to: wallet.address(),
 			},
-			fee: 1,
+			gasLimit: 1,
+			gasPrice: 1,
 			nonce: "1",
 			signatory,
 		};
@@ -109,7 +102,7 @@ describe("Use Transaction Builder with Ledger", () => {
 			transaction = result.transaction;
 		});
 
-		expect(transaction.id()).toBe(transactionFixture.data.id);
+		expect(transaction.hash()).toBe(transactionFixture.data.hash);
 
 		vi.clearAllMocks();
 	});
@@ -121,14 +114,12 @@ describe("Use Transaction Builder with Ledger", () => {
 		const { result: builder } = renderHook(() => useTransactionBuilder(), { wrapper });
 
 		vi.spyOn(wallet, "isLedger").mockImplementation(() => true);
-		vi.spyOn(wallet.signatory(), "ledger").mockImplementation(
-			() =>
-				new Promise((resolve) =>
-					setTimeout(() => {
-						resolve();
-					}, 20_000),
-				),
-		);
+		vi.spyOn(wallet, "signatory").mockImplementation(() => ({
+			ledger: vi.fn().mockResolvedValue(new Promise((resolve) => setTimeout(() => resolve(), 20_000))),
+			mnemonic: vi.fn().mockResolvedValue(getDefaultWalletMnemonic()),
+		}));
+
+		createTransactionMock(wallet);
 
 		createTransactionMock(wallet);
 		const signatory = await wallet.signatory().mnemonic(getDefaultWalletMnemonic());
@@ -138,7 +129,8 @@ describe("Use Transaction Builder with Ledger", () => {
 				amount: 1,
 				to: wallet.address(),
 			},
-			fee: 1,
+			gasLimit: 1,
+			gasPrice: 1,
 			nonce: "1",
 			signatory,
 		};

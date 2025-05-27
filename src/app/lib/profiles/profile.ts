@@ -1,20 +1,17 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
-import { Networks } from "@/app/lib/sdk";
+import { Networks } from "@/app/lib/mainsail";
 
 import { AppearanceService } from "./appearance.service.js";
 import { Authenticator } from "./authenticator.js";
-import { CoinService } from "./coin.service.js";
 import { ContactRepository } from "./contact.repository.js";
 import {
 	IAppearanceService,
 	IAuthenticator,
-	ICoinService,
 	IContactRepository,
 	ICountAggregate,
 	IDataRepository,
 	IExchangeTransactionRepository,
 	IPasswordManager,
-	IPortfolio,
 	IProfile,
 	IProfileInput,
 	IProfileStatus,
@@ -35,12 +32,10 @@ import { AttributeBag } from "./helpers/attribute-bag.js";
 import { Avatar } from "./helpers/avatar.js";
 import { IHostRepository } from "./host.repository.contract.js";
 import { HostRepository } from "./host.repository.js";
-import { INetworkRepository } from "./network.repository.contract.js";
 import { NetworkRepository } from "./network.repository.js";
 import { IProfileNotificationService } from "./notification.repository.contract.js";
 import { ProfileNotificationService } from "./notification.service.js";
 import { PasswordManager } from "./password.js";
-import { Portfolio } from "./portfolio.js";
 import { ProfileInitialiser } from "./profile.initialiser.js";
 import { ProfileStatus } from "./profile.status.js";
 import { RegistrationAggregate } from "./registration.aggregate.js";
@@ -49,23 +44,21 @@ import { TransactionAggregate } from "./transaction.aggregate.js";
 import { WalletAggregate } from "./wallet.aggregate.js";
 import { WalletFactory } from "./wallet.factory.js";
 import { WalletRepository } from "./wallet.repository.js";
+import { Contracts, Environment } from "./index.js";
+import { UsernamesService } from "./usernames.service.js";
+import { LedgerService } from "@/app/lib/mainsail/ledger.service.js";
+import { ValidatorService } from "./validator.service.js";
+import { KnownWalletService } from "./known-wallet.service.js";
+import { ExchangeRateService } from "./exchange-rate.service.js";
 
 export class Profile implements IProfile {
 	/**
-	 * The coin service.
+	 * The known wallets service.
 	 *
-	 * @type {ICoinService}
+	 * @type {KnownWalletService}
 	 * @memberof Profile
 	 */
-	readonly #coinService: ICoinService;
-
-	/**
-	 * The portfolio service.
-	 *
-	 * @type {IPortfolio}
-	 * @memberof Profile
-	 */
-	readonly #portfolio: IPortfolio;
+	readonly #knownWalletService: KnownWalletService;
 
 	/**
 	 * The contact repository.
@@ -92,12 +85,20 @@ export class Profile implements IProfile {
 	readonly #hostRepository: IHostRepository;
 
 	/**
-	 * The network repository.
+	 * The profile's active network.
 	 *
-	 * @type {INetworkRepository}
+	 * @type {Networks.Network}
 	 * @memberof Profile
 	 */
-	readonly #networkRepository: INetworkRepository;
+	#activeNetwork!: Networks.Network;
+
+	/**
+	 * The network repository.
+	 *
+	 * @type {NetworkRepository}
+	 * @memberof Profile
+	 */
+	readonly #networkRepository: NetworkRepository;
 
 	/**
 	 * The exchange transaction repository.
@@ -164,6 +165,14 @@ export class Profile implements IProfile {
 	readonly #registrationAggregate: IRegistrationAggregate;
 
 	/**
+	 * The validators service.
+	 *
+	 * @type {ValidatorService}
+	 * @memberof Profile
+	 */
+	readonly #validators: ValidatorService;
+
+	/**
 	 * The transaction aggregate service.
 	 *
 	 * @type {ITransactionAggregate}
@@ -204,6 +213,22 @@ export class Profile implements IProfile {
 	readonly #attributes: AttributeBag<IProfileInput>;
 
 	/**
+	 * The username service
+	 *
+	 * @type {UsernamesService}
+	 * @memberof Profile
+	 */
+	readonly #usernameService: UsernamesService;
+
+	/**
+	 * The username service
+	 *
+	 * @type {UsernamesService}
+	 * @memberof Profile
+	 */
+	readonly #exchangeRateService: ExchangeRateService;
+
+	/**
 	 * The status service.
 	 *
 	 * @type {IProfileStatus}
@@ -211,10 +236,8 @@ export class Profile implements IProfile {
 	 */
 	readonly #status: IProfileStatus;
 
-	public constructor(data: IProfileInput) {
+	public constructor(data: IProfileInput, env: Environment) {
 		this.#attributes = new AttributeBag<IProfileInput>(data);
-		this.#coinService = new CoinService(this, new DataRepository());
-		this.#portfolio = new Portfolio(this);
 		this.#contactRepository = new ContactRepository(this);
 		this.#dataRepository = new DataRepository();
 		this.#hostRepository = new HostRepository(this);
@@ -230,8 +253,12 @@ export class Profile implements IProfile {
 		this.#transactionAggregate = new TransactionAggregate(this);
 		this.#walletAggregate = new WalletAggregate(this);
 		this.#authenticator = new Authenticator(this);
+		this.#validators = new ValidatorService();
 		this.#password = new PasswordManager();
 		this.#status = new ProfileStatus();
+		this.#knownWalletService = new KnownWalletService();
+		this.#usernameService = new UsernamesService({ config: this.activeNetwork().config(), profile: this });
+		this.#exchangeRateService = new ExchangeRateService({ storage: env.storage() });
 	}
 
 	/** {@inheritDoc IProfile.id} */
@@ -300,16 +327,6 @@ export class Profile implements IProfile {
 		new ProfileInitialiser(this).initialiseSettings(name);
 	}
 
-	/** {@inheritDoc IProfile.coins} */
-	public coins(): ICoinService {
-		return this.#coinService;
-	}
-
-	/** {@inheritDoc IProfile.portfolio} */
-	public portfolio(): IPortfolio {
-		return this.#portfolio;
-	}
-
 	/** {@inheritDoc IProfile.contacts} */
 	public contacts(): IContactRepository {
 		return this.#contactRepository;
@@ -326,13 +343,49 @@ export class Profile implements IProfile {
 	}
 
 	/** {@inheritDoc IProfile.networks} */
-	public networks(): INetworkRepository {
+	public networks(): NetworkRepository {
 		return this.#networkRepository;
 	}
 
 	/** {@inheritDoc IProfile.availableNetworks} */
 	public availableNetworks(): Networks.Network[] {
-		return this.coins().availableNetworks();
+		return this.networks().availableNetworks();
+	}
+
+	/** {@inheritDoc IProfile.activeNetwork} */
+	public activeNetwork(): Networks.Network {
+		const { activeNetworkId }: { activeNetworkId?: string } = this.settings().get(
+			Contracts.ProfileSetting.DashboardConfiguration,
+		) ?? {
+			activeNetworkId: undefined,
+		};
+
+		if (this.#activeNetwork && this.#activeNetwork.id() === activeNetworkId) {
+			return this.#activeNetwork;
+		}
+
+		const activeNetwork = this.networks()
+			.availableNetworks()
+			.find((network) => {
+				if (!network) {
+					return;
+				}
+
+				if (activeNetworkId === network.id()) {
+					return network;
+				}
+
+				// @TODO: Return mainnet as the default network once it will be available.
+				return network.isTest();
+			});
+
+		if (!activeNetwork) {
+			throw new Error("Active network is missing");
+		}
+
+		this.#activeNetwork = activeNetwork;
+
+		return activeNetwork;
 	}
 
 	/** {@inheritDoc IProfile.exchangeTransactions} */
@@ -410,9 +463,23 @@ export class Profile implements IProfile {
 		return this.#attributes;
 	}
 
+	/** {@inheritDoc IProfile.usernames} */
+	public usernames(): UsernamesService {
+		return this.#usernameService;
+	}
+
+	/** {@inheritDoc IProfile.ValidatorService} */
+	public validators(): ValidatorService {
+		return this.#validators;
+	}
+
 	/** {@inheritDoc IProfile.async} */
 	public async sync(options?: { networkId?: string; ttl?: number }): Promise<void> {
 		await this.wallets().restore(options);
+
+		if (this.wallets().count() > 0) {
+			await this.activeNetwork().sync();
+		}
 	}
 
 	/** {@inheritDoc IProfile.markIntroductoryTutorialAsComplete} */
@@ -437,5 +504,17 @@ export class Profile implements IProfile {
 	/** {@inheritDoc IProfile.hasAcceptedManualInstallationDisclaimer} */
 	public hasAcceptedManualInstallationDisclaimer(): boolean {
 		return this.data().has(ProfileData.HasAcceptedManualInstallationDisclaimer);
+	}
+
+	public ledger(): LedgerService {
+		return new LedgerService({ config: this.activeNetwork().config() });
+	}
+
+	public knownWallets(): KnownWalletService {
+		return this.#knownWalletService;
+	}
+
+	public exchangeRates(): ExchangeRateService {
+		return this.#exchangeRateService;
 	}
 }

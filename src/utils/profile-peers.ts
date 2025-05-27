@@ -1,7 +1,7 @@
 import { Contracts, Environment } from "@/app/lib/profiles";
 
 import { NetworkHostType } from "@/domains/setting/pages/Servers/Servers.contracts";
-import { Networks } from "@/app/lib/sdk";
+import { Networks } from "@/app/lib/mainsail";
 import { customNetworks } from "@/utils/server-utils";
 import { groupBy } from "@/app/lib/helpers";
 import { pingServerAddress } from "@/utils/peers";
@@ -42,12 +42,12 @@ const Peer = (peer: PeerData): IPeer => {
 const groupPeersByNetwork = (peers: IPeer[]) =>
 	groupBy(peers, (peer) => peer.network().id()) as Record<string, IPeer[]>;
 
-const customPeers = (env: Environment, profile: Contracts.IProfile) =>
-	customNetworks(env, profile)
+const customPeers = (profile: Contracts.IProfile) =>
+	customNetworks(profile)
 		.filter((network) => network.enabled)
 		.map(Peer);
 
-const defaultPeers = (env: Environment, profile: Contracts.IProfile) => {
+const defaultPeers = (profile: Contracts.IProfile) => {
 	const peers: IPeer[] = [];
 
 	for (const network of profileAllEnabledNetworks(profile)) {
@@ -69,7 +69,7 @@ const defaultPeers = (env: Environment, profile: Contracts.IProfile) => {
 
 export const ProfilePeers = (env: Environment, profile: Contracts.IProfile) => {
 	const healthStatusByNetwork = async (): Promise<ServerStatus> => {
-		const peers: IPeer[] = [...customPeers(env, profile), ...defaultPeers(env, profile)];
+		const peers: IPeer[] = [...customPeers(profile), ...defaultPeers(profile)];
 
 		await Promise.all(peers.map((peer) => peer.sync()));
 

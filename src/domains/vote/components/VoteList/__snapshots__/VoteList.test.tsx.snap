@@ -6,19 +6,51 @@ exports[`VoteList > should render in lg 1`] = `
     class="-my-2 flex-1"
   >
     <div
-      class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
+      class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
     >
       <div
-        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-0 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
         data-testid="Avatar"
       >
         <div
           class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
-            alt="0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2"
+            alt="0xB8Be76b31E402a2D89294Aa107056484Bef94362"
+            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%233898F9%22%2F%3E%3C%2Fsvg%3E"
+            title="0xB8Be76b31E402a2D89294Aa107056484Bef94362"
+          />
+        </div>
+      </div>
+      <div
+        class="ml-4 w-28 flex-1"
+      >
+        <div
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+        >
+          <span
+            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+            data-testid="Address__address"
+          >
+            0xB8Be76b31E402a2D89294Aa107056484Bef94362
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
+    >
+      <div
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
+        data-testid="Avatar"
+      >
+        <div
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
+        >
+          <img
+            alt="0x03BC306C369A55c0336EB003bB07F29E5c150F36"
             src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
-            title="0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2"
+            title="0x03BC306C369A55c0336EB003bB07F29E5c150F36"
           />
         </div>
       </div>
@@ -32,25 +64,25 @@ exports[`VoteList > should render in lg 1`] = `
             class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
-            0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
+            0x03BC306C369A55c0336EB003bB07F29E5c150F36
           </span>
         </div>
       </div>
     </div>
     <div
-      class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
+      class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
     >
       <div
-        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-0 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
         data-testid="Avatar"
       >
         <div
           class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
-            alt="0x3F8eCbF08078F22038235F9834540A960E99085b"
-            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23FC9F0F%22%2F%3E%3C%2Fsvg%3E"
-            title="0x3F8eCbF08078F22038235F9834540A960E99085b"
+            alt="0x56F925416Ef2725646442D5E0150088bd7202aCd"
+            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%232A64E6%22%2F%3E%3C%2Fsvg%3E"
+            title="0x56F925416Ef2725646442D5E0150088bd7202aCd"
           />
         </div>
       </div>
@@ -64,39 +96,7 @@ exports[`VoteList > should render in lg 1`] = `
             class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
-            0x3F8eCbF08078F22038235F9834540A960E99085b
-          </span>
-        </div>
-      </div>
-    </div>
-    <div
-      class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
-    >
-      <div
-        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-0 ring-theme-background shrink-0"
-        data-testid="Avatar"
-      >
-        <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
-        >
-          <img
-            alt="0x137c59f371a7049159ef19a72f908773Ade219b1"
-            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%235CA481%22%2F%3E%3C%2Fsvg%3E"
-            title="0x137c59f371a7049159ef19a72f908773Ade219b1"
-          />
-        </div>
-      </div>
-      <div
-        class="ml-4 w-28 flex-1"
-      >
-        <div
-          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-        >
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-            data-testid="Address__address"
-          >
-            0x137c59f371a7049159ef19a72f908773Ade219b1
+            0x56F925416Ef2725646442D5E0150088bd7202aCd
           </span>
         </div>
       </div>
@@ -111,19 +111,51 @@ exports[`VoteList > should render in md 1`] = `
     class="-my-2 flex-1"
   >
     <div
-      class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
+      class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
     >
       <div
-        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-0 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
         data-testid="Avatar"
       >
         <div
           class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
-            alt="0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2"
+            alt="0xB8Be76b31E402a2D89294Aa107056484Bef94362"
+            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%233898F9%22%2F%3E%3C%2Fsvg%3E"
+            title="0xB8Be76b31E402a2D89294Aa107056484Bef94362"
+          />
+        </div>
+      </div>
+      <div
+        class="ml-4 w-28 flex-1"
+      >
+        <div
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+        >
+          <span
+            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+            data-testid="Address__address"
+          >
+            0xB8Be76b31E402a2D89294Aa107056484Bef94362
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
+    >
+      <div
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
+        data-testid="Avatar"
+      >
+        <div
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
+        >
+          <img
+            alt="0x03BC306C369A55c0336EB003bB07F29E5c150F36"
             src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
-            title="0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2"
+            title="0x03BC306C369A55c0336EB003bB07F29E5c150F36"
           />
         </div>
       </div>
@@ -137,25 +169,25 @@ exports[`VoteList > should render in md 1`] = `
             class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
-            0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
+            0x03BC306C369A55c0336EB003bB07F29E5c150F36
           </span>
         </div>
       </div>
     </div>
     <div
-      class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
+      class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
     >
       <div
-        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-0 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
         data-testid="Avatar"
       >
         <div
           class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
-            alt="0x3F8eCbF08078F22038235F9834540A960E99085b"
-            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23FC9F0F%22%2F%3E%3C%2Fsvg%3E"
-            title="0x3F8eCbF08078F22038235F9834540A960E99085b"
+            alt="0x56F925416Ef2725646442D5E0150088bd7202aCd"
+            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%232A64E6%22%2F%3E%3C%2Fsvg%3E"
+            title="0x56F925416Ef2725646442D5E0150088bd7202aCd"
           />
         </div>
       </div>
@@ -169,39 +201,7 @@ exports[`VoteList > should render in md 1`] = `
             class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
-            0x3F8eCbF08078F22038235F9834540A960E99085b
-          </span>
-        </div>
-      </div>
-    </div>
-    <div
-      class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
-    >
-      <div
-        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-0 ring-theme-background shrink-0"
-        data-testid="Avatar"
-      >
-        <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
-        >
-          <img
-            alt="0x137c59f371a7049159ef19a72f908773Ade219b1"
-            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%235CA481%22%2F%3E%3C%2Fsvg%3E"
-            title="0x137c59f371a7049159ef19a72f908773Ade219b1"
-          />
-        </div>
-      </div>
-      <div
-        class="ml-4 w-28 flex-1"
-      >
-        <div
-          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-        >
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-            data-testid="Address__address"
-          >
-            0x137c59f371a7049159ef19a72f908773Ade219b1
+            0x56F925416Ef2725646442D5E0150088bd7202aCd
           </span>
         </div>
       </div>
@@ -216,7 +216,7 @@ exports[`VoteList > should render in sm 1`] = `
     class="-my-2 flex-1"
   >
     <div
-      class="relative flex items-center justify-end space-x-4 border-b border-dashed border-theme-secondary-300 py-4 pb-0 pt-0 last:border-b-0 dark:border-theme-secondary-800 md:pb-4 md:pt-4"
+      class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center justify-end space-x-4 border-b border-dashed py-4 pt-0 pb-0 last:border-b-0 md:pt-4 md:pb-4"
     >
       <div
         class="w-0 flex-1 text-right md:text-left"
@@ -228,27 +228,59 @@ exports[`VoteList > should render in sm 1`] = `
             class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
-            0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
+            0xB8Be76b31E402a2D89294Aa107056484Bef94362
           </span>
         </div>
       </div>
       <div
-        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-0 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-theme-background ring-0 shrink-0"
         data-testid="Avatar"
       >
         <div
           class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
-            alt="0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2"
+            alt="0xB8Be76b31E402a2D89294Aa107056484Bef94362"
+            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%233898F9%22%2F%3E%3C%2Fsvg%3E"
+            title="0xB8Be76b31E402a2D89294Aa107056484Bef94362"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center justify-end space-x-4 border-b border-dashed py-4 pt-0 pb-0 last:border-b-0 md:pt-4 md:pb-4"
+    >
+      <div
+        class="w-0 flex-1 text-right md:text-left"
+      >
+        <div
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+        >
+          <span
+            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+            data-testid="Address__address"
+          >
+            0x03BC306C369A55c0336EB003bB07F29E5c150F36
+          </span>
+        </div>
+      </div>
+      <div
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-theme-background ring-0 shrink-0"
+        data-testid="Avatar"
+      >
+        <div
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
+        >
+          <img
+            alt="0x03BC306C369A55c0336EB003bB07F29E5c150F36"
             src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
-            title="0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2"
+            title="0x03BC306C369A55c0336EB003bB07F29E5c150F36"
           />
         </div>
       </div>
     </div>
     <div
-      class="relative flex items-center justify-end space-x-4 border-b border-dashed border-theme-secondary-300 py-4 pb-0 pt-0 last:border-b-0 dark:border-theme-secondary-800 md:pb-4 md:pt-4"
+      class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center justify-end space-x-4 border-b border-dashed py-4 pt-0 pb-0 last:border-b-0 md:pt-4 md:pb-4"
     >
       <div
         class="w-0 flex-1 text-right md:text-left"
@@ -260,53 +292,21 @@ exports[`VoteList > should render in sm 1`] = `
             class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
-            0x3F8eCbF08078F22038235F9834540A960E99085b
+            0x56F925416Ef2725646442D5E0150088bd7202aCd
           </span>
         </div>
       </div>
       <div
-        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-0 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-theme-background ring-0 shrink-0"
         data-testid="Avatar"
       >
         <div
           class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
-            alt="0x3F8eCbF08078F22038235F9834540A960E99085b"
-            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23FC9F0F%22%2F%3E%3C%2Fsvg%3E"
-            title="0x3F8eCbF08078F22038235F9834540A960E99085b"
-          />
-        </div>
-      </div>
-    </div>
-    <div
-      class="relative flex items-center justify-end space-x-4 border-b border-dashed border-theme-secondary-300 py-4 pb-0 pt-0 last:border-b-0 dark:border-theme-secondary-800 md:pb-4 md:pt-4"
-    >
-      <div
-        class="w-0 flex-1 text-right md:text-left"
-      >
-        <div
-          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
-        >
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-            data-testid="Address__address"
-          >
-            0x137c59f371a7049159ef19a72f908773Ade219b1
-          </span>
-        </div>
-      </div>
-      <div
-        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-0 ring-theme-background shrink-0"
-        data-testid="Avatar"
-      >
-        <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
-        >
-          <img
-            alt="0x137c59f371a7049159ef19a72f908773Ade219b1"
-            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%235CA481%22%2F%3E%3C%2Fsvg%3E"
-            title="0x137c59f371a7049159ef19a72f908773Ade219b1"
+            alt="0x56F925416Ef2725646442D5E0150088bd7202aCd"
+            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%232A64E6%22%2F%3E%3C%2Fsvg%3E"
+            title="0x56F925416Ef2725646442D5E0150088bd7202aCd"
           />
         </div>
       </div>
@@ -321,19 +321,51 @@ exports[`VoteList > should render in xl 1`] = `
     class="-my-2 flex-1"
   >
     <div
-      class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
+      class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
     >
       <div
-        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-0 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
         data-testid="Avatar"
       >
         <div
           class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
-            alt="0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2"
+            alt="0xB8Be76b31E402a2D89294Aa107056484Bef94362"
+            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%233898F9%22%2F%3E%3C%2Fsvg%3E"
+            title="0xB8Be76b31E402a2D89294Aa107056484Bef94362"
+          />
+        </div>
+      </div>
+      <div
+        class="ml-4 w-28 flex-1"
+      >
+        <div
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+        >
+          <span
+            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+            data-testid="Address__address"
+          >
+            0xB8Be76b31E402a2D89294Aa107056484Bef94362
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
+    >
+      <div
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
+        data-testid="Avatar"
+      >
+        <div
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
+        >
+          <img
+            alt="0x03BC306C369A55c0336EB003bB07F29E5c150F36"
             src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
-            title="0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2"
+            title="0x03BC306C369A55c0336EB003bB07F29E5c150F36"
           />
         </div>
       </div>
@@ -347,25 +379,25 @@ exports[`VoteList > should render in xl 1`] = `
             class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
-            0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
+            0x03BC306C369A55c0336EB003bB07F29E5c150F36
           </span>
         </div>
       </div>
     </div>
     <div
-      class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
+      class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
     >
       <div
-        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-0 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
         data-testid="Avatar"
       >
         <div
           class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
-            alt="0x3F8eCbF08078F22038235F9834540A960E99085b"
-            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23FC9F0F%22%2F%3E%3C%2Fsvg%3E"
-            title="0x3F8eCbF08078F22038235F9834540A960E99085b"
+            alt="0x56F925416Ef2725646442D5E0150088bd7202aCd"
+            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%232A64E6%22%2F%3E%3C%2Fsvg%3E"
+            title="0x56F925416Ef2725646442D5E0150088bd7202aCd"
           />
         </div>
       </div>
@@ -379,39 +411,7 @@ exports[`VoteList > should render in xl 1`] = `
             class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
-            0x3F8eCbF08078F22038235F9834540A960E99085b
-          </span>
-        </div>
-      </div>
-    </div>
-    <div
-      class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
-    >
-      <div
-        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-0 ring-theme-background shrink-0"
-        data-testid="Avatar"
-      >
-        <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
-        >
-          <img
-            alt="0x137c59f371a7049159ef19a72f908773Ade219b1"
-            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%235CA481%22%2F%3E%3C%2Fsvg%3E"
-            title="0x137c59f371a7049159ef19a72f908773Ade219b1"
-          />
-        </div>
-      </div>
-      <div
-        class="ml-4 w-28 flex-1"
-      >
-        <div
-          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-        >
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-            data-testid="Address__address"
-          >
-            0x137c59f371a7049159ef19a72f908773Ade219b1
+            0x56F925416Ef2725646442D5E0150088bd7202aCd
           </span>
         </div>
       </div>
@@ -426,7 +426,7 @@ exports[`VoteList > should render in xs 1`] = `
     class="-my-2 flex-1"
   >
     <div
-      class="relative flex items-center justify-end space-x-4 border-b border-dashed border-theme-secondary-300 py-4 pb-0 pt-0 last:border-b-0 dark:border-theme-secondary-800 md:pb-4 md:pt-4"
+      class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center justify-end space-x-4 border-b border-dashed py-4 pt-0 pb-0 last:border-b-0 md:pt-4 md:pb-4"
     >
       <div
         class="w-0 flex-1 text-right md:text-left"
@@ -438,27 +438,59 @@ exports[`VoteList > should render in xs 1`] = `
             class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
-            0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
+            0xB8Be76b31E402a2D89294Aa107056484Bef94362
           </span>
         </div>
       </div>
       <div
-        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-0 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-theme-background ring-0 shrink-0"
         data-testid="Avatar"
       >
         <div
           class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
-            alt="0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2"
+            alt="0xB8Be76b31E402a2D89294Aa107056484Bef94362"
+            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%233898F9%22%2F%3E%3C%2Fsvg%3E"
+            title="0xB8Be76b31E402a2D89294Aa107056484Bef94362"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center justify-end space-x-4 border-b border-dashed py-4 pt-0 pb-0 last:border-b-0 md:pt-4 md:pb-4"
+    >
+      <div
+        class="w-0 flex-1 text-right md:text-left"
+      >
+        <div
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+        >
+          <span
+            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+            data-testid="Address__address"
+          >
+            0x03BC306C369A55c0336EB003bB07F29E5c150F36
+          </span>
+        </div>
+      </div>
+      <div
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-theme-background ring-0 shrink-0"
+        data-testid="Avatar"
+      >
+        <div
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
+        >
+          <img
+            alt="0x03BC306C369A55c0336EB003bB07F29E5c150F36"
             src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
-            title="0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2"
+            title="0x03BC306C369A55c0336EB003bB07F29E5c150F36"
           />
         </div>
       </div>
     </div>
     <div
-      class="relative flex items-center justify-end space-x-4 border-b border-dashed border-theme-secondary-300 py-4 pb-0 pt-0 last:border-b-0 dark:border-theme-secondary-800 md:pb-4 md:pt-4"
+      class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center justify-end space-x-4 border-b border-dashed py-4 pt-0 pb-0 last:border-b-0 md:pt-4 md:pb-4"
     >
       <div
         class="w-0 flex-1 text-right md:text-left"
@@ -470,53 +502,21 @@ exports[`VoteList > should render in xs 1`] = `
             class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
-            0x3F8eCbF08078F22038235F9834540A960E99085b
+            0x56F925416Ef2725646442D5E0150088bd7202aCd
           </span>
         </div>
       </div>
       <div
-        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-0 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-theme-background ring-0 shrink-0"
         data-testid="Avatar"
       >
         <div
           class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
-            alt="0x3F8eCbF08078F22038235F9834540A960E99085b"
-            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23FC9F0F%22%2F%3E%3C%2Fsvg%3E"
-            title="0x3F8eCbF08078F22038235F9834540A960E99085b"
-          />
-        </div>
-      </div>
-    </div>
-    <div
-      class="relative flex items-center justify-end space-x-4 border-b border-dashed border-theme-secondary-300 py-4 pb-0 pt-0 last:border-b-0 dark:border-theme-secondary-800 md:pb-4 md:pt-4"
-    >
-      <div
-        class="w-0 flex-1 text-right md:text-left"
-      >
-        <div
-          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
-        >
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-            data-testid="Address__address"
-          >
-            0x137c59f371a7049159ef19a72f908773Ade219b1
-          </span>
-        </div>
-      </div>
-      <div
-        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-0 ring-theme-background shrink-0"
-        data-testid="Avatar"
-      >
-        <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
-        >
-          <img
-            alt="0x137c59f371a7049159ef19a72f908773Ade219b1"
-            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%235CA481%22%2F%3E%3C%2Fsvg%3E"
-            title="0x137c59f371a7049159ef19a72f908773Ade219b1"
+            alt="0x56F925416Ef2725646442D5E0150088bd7202aCd"
+            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%232A64E6%22%2F%3E%3C%2Fsvg%3E"
+            title="0x56F925416Ef2725646442D5E0150088bd7202aCd"
           />
         </div>
       </div>
@@ -531,19 +531,61 @@ exports[`VoteList > should render with amount in lg 1`] = `
     class="-my-2 flex-1"
   >
     <div
-      class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
+      class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
     >
       <div
-        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-0 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
         data-testid="Avatar"
       >
         <div
           class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
-            alt="0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2"
+            alt="0xB8Be76b31E402a2D89294Aa107056484Bef94362"
+            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%233898F9%22%2F%3E%3C%2Fsvg%3E"
+            title="0xB8Be76b31E402a2D89294Aa107056484Bef94362"
+          />
+        </div>
+      </div>
+      <div
+        class="ml-4 w-28 flex-1"
+      >
+        <div
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+        >
+          <span
+            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+            data-testid="Address__address"
+          >
+            0xB8Be76b31E402a2D89294Aa107056484Bef94362
+          </span>
+        </div>
+      </div>
+      <div
+        class="grow pl-3 text-right"
+      >
+        <span
+          class="whitespace-nowrap"
+          data-testid="Amount"
+        >
+          + 10 BTC
+        </span>
+      </div>
+    </div>
+    <div
+      class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
+    >
+      <div
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
+        data-testid="Avatar"
+      >
+        <div
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
+        >
+          <img
+            alt="0x03BC306C369A55c0336EB003bB07F29E5c150F36"
             src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
-            title="0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2"
+            title="0x03BC306C369A55c0336EB003bB07F29E5c150F36"
           />
         </div>
       </div>
@@ -557,7 +599,7 @@ exports[`VoteList > should render with amount in lg 1`] = `
             class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
-            0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
+            0x03BC306C369A55c0336EB003bB07F29E5c150F36
           </span>
         </div>
       </div>
@@ -573,19 +615,19 @@ exports[`VoteList > should render with amount in lg 1`] = `
       </div>
     </div>
     <div
-      class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
+      class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
     >
       <div
-        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-0 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
         data-testid="Avatar"
       >
         <div
           class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
-            alt="0x3F8eCbF08078F22038235F9834540A960E99085b"
-            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23FC9F0F%22%2F%3E%3C%2Fsvg%3E"
-            title="0x3F8eCbF08078F22038235F9834540A960E99085b"
+            alt="0x56F925416Ef2725646442D5E0150088bd7202aCd"
+            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%232A64E6%22%2F%3E%3C%2Fsvg%3E"
+            title="0x56F925416Ef2725646442D5E0150088bd7202aCd"
           />
         </div>
       </div>
@@ -599,49 +641,7 @@ exports[`VoteList > should render with amount in lg 1`] = `
             class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
-            0x3F8eCbF08078F22038235F9834540A960E99085b
-          </span>
-        </div>
-      </div>
-      <div
-        class="grow pl-3 text-right"
-      >
-        <span
-          class="whitespace-nowrap"
-          data-testid="Amount"
-        >
-          + 10 BTC
-        </span>
-      </div>
-    </div>
-    <div
-      class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
-    >
-      <div
-        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-0 ring-theme-background shrink-0"
-        data-testid="Avatar"
-      >
-        <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
-        >
-          <img
-            alt="0x137c59f371a7049159ef19a72f908773Ade219b1"
-            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%235CA481%22%2F%3E%3C%2Fsvg%3E"
-            title="0x137c59f371a7049159ef19a72f908773Ade219b1"
-          />
-        </div>
-      </div>
-      <div
-        class="ml-4 w-28 flex-1"
-      >
-        <div
-          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-        >
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-            data-testid="Address__address"
-          >
-            0x137c59f371a7049159ef19a72f908773Ade219b1
+            0x56F925416Ef2725646442D5E0150088bd7202aCd
           </span>
         </div>
       </div>
@@ -666,19 +666,61 @@ exports[`VoteList > should render with amount in md 1`] = `
     class="-my-2 flex-1"
   >
     <div
-      class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
+      class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
     >
       <div
-        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-0 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
         data-testid="Avatar"
       >
         <div
           class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
-            alt="0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2"
+            alt="0xB8Be76b31E402a2D89294Aa107056484Bef94362"
+            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%233898F9%22%2F%3E%3C%2Fsvg%3E"
+            title="0xB8Be76b31E402a2D89294Aa107056484Bef94362"
+          />
+        </div>
+      </div>
+      <div
+        class="ml-4 w-28 flex-1"
+      >
+        <div
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+        >
+          <span
+            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+            data-testid="Address__address"
+          >
+            0xB8Be76b31E402a2D89294Aa107056484Bef94362
+          </span>
+        </div>
+      </div>
+      <div
+        class="grow pl-3 text-right"
+      >
+        <span
+          class="whitespace-nowrap"
+          data-testid="Amount"
+        >
+          + 10 BTC
+        </span>
+      </div>
+    </div>
+    <div
+      class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
+    >
+      <div
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
+        data-testid="Avatar"
+      >
+        <div
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
+        >
+          <img
+            alt="0x03BC306C369A55c0336EB003bB07F29E5c150F36"
             src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
-            title="0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2"
+            title="0x03BC306C369A55c0336EB003bB07F29E5c150F36"
           />
         </div>
       </div>
@@ -692,7 +734,7 @@ exports[`VoteList > should render with amount in md 1`] = `
             class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
-            0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
+            0x03BC306C369A55c0336EB003bB07F29E5c150F36
           </span>
         </div>
       </div>
@@ -708,19 +750,19 @@ exports[`VoteList > should render with amount in md 1`] = `
       </div>
     </div>
     <div
-      class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
+      class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
     >
       <div
-        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-0 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
         data-testid="Avatar"
       >
         <div
           class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
-            alt="0x3F8eCbF08078F22038235F9834540A960E99085b"
-            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23FC9F0F%22%2F%3E%3C%2Fsvg%3E"
-            title="0x3F8eCbF08078F22038235F9834540A960E99085b"
+            alt="0x56F925416Ef2725646442D5E0150088bd7202aCd"
+            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%232A64E6%22%2F%3E%3C%2Fsvg%3E"
+            title="0x56F925416Ef2725646442D5E0150088bd7202aCd"
           />
         </div>
       </div>
@@ -734,49 +776,7 @@ exports[`VoteList > should render with amount in md 1`] = `
             class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
-            0x3F8eCbF08078F22038235F9834540A960E99085b
-          </span>
-        </div>
-      </div>
-      <div
-        class="grow pl-3 text-right"
-      >
-        <span
-          class="whitespace-nowrap"
-          data-testid="Amount"
-        >
-          + 10 BTC
-        </span>
-      </div>
-    </div>
-    <div
-      class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
-    >
-      <div
-        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-0 ring-theme-background shrink-0"
-        data-testid="Avatar"
-      >
-        <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
-        >
-          <img
-            alt="0x137c59f371a7049159ef19a72f908773Ade219b1"
-            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%235CA481%22%2F%3E%3C%2Fsvg%3E"
-            title="0x137c59f371a7049159ef19a72f908773Ade219b1"
-          />
-        </div>
-      </div>
-      <div
-        class="ml-4 w-28 flex-1"
-      >
-        <div
-          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-        >
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-            data-testid="Address__address"
-          >
-            0x137c59f371a7049159ef19a72f908773Ade219b1
+            0x56F925416Ef2725646442D5E0150088bd7202aCd
           </span>
         </div>
       </div>
@@ -801,10 +801,10 @@ exports[`VoteList > should render with amount in sm 1`] = `
     class="-my-2 flex-1"
   >
     <div
-      class="relative flex items-center justify-end space-x-4 border-b border-dashed border-theme-secondary-300 py-4 pb-0 pt-0 last:border-b-0 dark:border-theme-secondary-800 md:pb-4 md:pt-4"
+      class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center justify-end space-x-4 border-b border-dashed py-4 pt-0 pb-0 last:border-b-0 md:pt-4 md:pb-4"
     >
       <div
-        class="w-0 flex-1 pl-3 pr-4 text-right sm:px-0"
+        class="w-0 flex-1 pr-4 pl-3 text-right sm:px-0"
       >
         <span
           class="whitespace-nowrap"
@@ -823,30 +823,72 @@ exports[`VoteList > should render with amount in sm 1`] = `
             class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
-            0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
+            0xB8Be76b31E402a2D89294Aa107056484Bef94362
           </span>
         </div>
       </div>
       <div
-        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-0 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-theme-background ring-0 shrink-0"
         data-testid="Avatar"
       >
         <div
           class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
-            alt="0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2"
+            alt="0xB8Be76b31E402a2D89294Aa107056484Bef94362"
+            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%233898F9%22%2F%3E%3C%2Fsvg%3E"
+            title="0xB8Be76b31E402a2D89294Aa107056484Bef94362"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center justify-end space-x-4 border-b border-dashed py-4 pt-0 pb-0 last:border-b-0 md:pt-4 md:pb-4"
+    >
+      <div
+        class="w-0 flex-1 pr-4 pl-3 text-right sm:px-0"
+      >
+        <span
+          class="whitespace-nowrap"
+          data-testid="Amount"
+        >
+          + 10 BTC
+        </span>
+      </div>
+      <div
+        class="w-0 flex-1 text-right md:text-left"
+      >
+        <div
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+        >
+          <span
+            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+            data-testid="Address__address"
+          >
+            0x03BC306C369A55c0336EB003bB07F29E5c150F36
+          </span>
+        </div>
+      </div>
+      <div
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-theme-background ring-0 shrink-0"
+        data-testid="Avatar"
+      >
+        <div
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
+        >
+          <img
+            alt="0x03BC306C369A55c0336EB003bB07F29E5c150F36"
             src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
-            title="0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2"
+            title="0x03BC306C369A55c0336EB003bB07F29E5c150F36"
           />
         </div>
       </div>
     </div>
     <div
-      class="relative flex items-center justify-end space-x-4 border-b border-dashed border-theme-secondary-300 py-4 pb-0 pt-0 last:border-b-0 dark:border-theme-secondary-800 md:pb-4 md:pt-4"
+      class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center justify-end space-x-4 border-b border-dashed py-4 pt-0 pb-0 last:border-b-0 md:pt-4 md:pb-4"
     >
       <div
-        class="w-0 flex-1 pl-3 pr-4 text-right sm:px-0"
+        class="w-0 flex-1 pr-4 pl-3 text-right sm:px-0"
       >
         <span
           class="whitespace-nowrap"
@@ -865,63 +907,21 @@ exports[`VoteList > should render with amount in sm 1`] = `
             class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
-            0x3F8eCbF08078F22038235F9834540A960E99085b
+            0x56F925416Ef2725646442D5E0150088bd7202aCd
           </span>
         </div>
       </div>
       <div
-        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-0 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-theme-background ring-0 shrink-0"
         data-testid="Avatar"
       >
         <div
           class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
-            alt="0x3F8eCbF08078F22038235F9834540A960E99085b"
-            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23FC9F0F%22%2F%3E%3C%2Fsvg%3E"
-            title="0x3F8eCbF08078F22038235F9834540A960E99085b"
-          />
-        </div>
-      </div>
-    </div>
-    <div
-      class="relative flex items-center justify-end space-x-4 border-b border-dashed border-theme-secondary-300 py-4 pb-0 pt-0 last:border-b-0 dark:border-theme-secondary-800 md:pb-4 md:pt-4"
-    >
-      <div
-        class="w-0 flex-1 pl-3 pr-4 text-right sm:px-0"
-      >
-        <span
-          class="whitespace-nowrap"
-          data-testid="Amount"
-        >
-          + 10 BTC
-        </span>
-      </div>
-      <div
-        class="w-0 flex-1 text-right md:text-left"
-      >
-        <div
-          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
-        >
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-            data-testid="Address__address"
-          >
-            0x137c59f371a7049159ef19a72f908773Ade219b1
-          </span>
-        </div>
-      </div>
-      <div
-        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-0 ring-theme-background shrink-0"
-        data-testid="Avatar"
-      >
-        <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
-        >
-          <img
-            alt="0x137c59f371a7049159ef19a72f908773Ade219b1"
-            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%235CA481%22%2F%3E%3C%2Fsvg%3E"
-            title="0x137c59f371a7049159ef19a72f908773Ade219b1"
+            alt="0x56F925416Ef2725646442D5E0150088bd7202aCd"
+            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%232A64E6%22%2F%3E%3C%2Fsvg%3E"
+            title="0x56F925416Ef2725646442D5E0150088bd7202aCd"
           />
         </div>
       </div>
@@ -936,19 +936,61 @@ exports[`VoteList > should render with amount in xl 1`] = `
     class="-my-2 flex-1"
   >
     <div
-      class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
+      class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
     >
       <div
-        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-0 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
         data-testid="Avatar"
       >
         <div
           class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
-            alt="0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2"
+            alt="0xB8Be76b31E402a2D89294Aa107056484Bef94362"
+            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%233898F9%22%2F%3E%3C%2Fsvg%3E"
+            title="0xB8Be76b31E402a2D89294Aa107056484Bef94362"
+          />
+        </div>
+      </div>
+      <div
+        class="ml-4 w-28 flex-1"
+      >
+        <div
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+        >
+          <span
+            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+            data-testid="Address__address"
+          >
+            0xB8Be76b31E402a2D89294Aa107056484Bef94362
+          </span>
+        </div>
+      </div>
+      <div
+        class="grow pl-3 text-right"
+      >
+        <span
+          class="whitespace-nowrap"
+          data-testid="Amount"
+        >
+          + 10 BTC
+        </span>
+      </div>
+    </div>
+    <div
+      class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
+    >
+      <div
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
+        data-testid="Avatar"
+      >
+        <div
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
+        >
+          <img
+            alt="0x03BC306C369A55c0336EB003bB07F29E5c150F36"
             src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
-            title="0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2"
+            title="0x03BC306C369A55c0336EB003bB07F29E5c150F36"
           />
         </div>
       </div>
@@ -962,7 +1004,7 @@ exports[`VoteList > should render with amount in xl 1`] = `
             class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
-            0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
+            0x03BC306C369A55c0336EB003bB07F29E5c150F36
           </span>
         </div>
       </div>
@@ -978,19 +1020,19 @@ exports[`VoteList > should render with amount in xl 1`] = `
       </div>
     </div>
     <div
-      class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
+      class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
     >
       <div
-        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-0 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
         data-testid="Avatar"
       >
         <div
           class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
-            alt="0x3F8eCbF08078F22038235F9834540A960E99085b"
-            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23FC9F0F%22%2F%3E%3C%2Fsvg%3E"
-            title="0x3F8eCbF08078F22038235F9834540A960E99085b"
+            alt="0x56F925416Ef2725646442D5E0150088bd7202aCd"
+            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%232A64E6%22%2F%3E%3C%2Fsvg%3E"
+            title="0x56F925416Ef2725646442D5E0150088bd7202aCd"
           />
         </div>
       </div>
@@ -1004,49 +1046,7 @@ exports[`VoteList > should render with amount in xl 1`] = `
             class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
-            0x3F8eCbF08078F22038235F9834540A960E99085b
-          </span>
-        </div>
-      </div>
-      <div
-        class="grow pl-3 text-right"
-      >
-        <span
-          class="whitespace-nowrap"
-          data-testid="Amount"
-        >
-          + 10 BTC
-        </span>
-      </div>
-    </div>
-    <div
-      class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
-    >
-      <div
-        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-0 ring-theme-background shrink-0"
-        data-testid="Avatar"
-      >
-        <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
-        >
-          <img
-            alt="0x137c59f371a7049159ef19a72f908773Ade219b1"
-            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%235CA481%22%2F%3E%3C%2Fsvg%3E"
-            title="0x137c59f371a7049159ef19a72f908773Ade219b1"
-          />
-        </div>
-      </div>
-      <div
-        class="ml-4 w-28 flex-1"
-      >
-        <div
-          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-        >
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-            data-testid="Address__address"
-          >
-            0x137c59f371a7049159ef19a72f908773Ade219b1
+            0x56F925416Ef2725646442D5E0150088bd7202aCd
           </span>
         </div>
       </div>
@@ -1071,10 +1071,10 @@ exports[`VoteList > should render with amount in xs 1`] = `
     class="-my-2 flex-1"
   >
     <div
-      class="relative flex items-center justify-end space-x-4 border-b border-dashed border-theme-secondary-300 py-4 pb-0 pt-0 last:border-b-0 dark:border-theme-secondary-800 md:pb-4 md:pt-4"
+      class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center justify-end space-x-4 border-b border-dashed py-4 pt-0 pb-0 last:border-b-0 md:pt-4 md:pb-4"
     >
       <div
-        class="w-0 flex-1 pl-3 pr-4 text-right sm:px-0"
+        class="w-0 flex-1 pr-4 pl-3 text-right sm:px-0"
       >
         <span
           class="whitespace-nowrap"
@@ -1093,30 +1093,72 @@ exports[`VoteList > should render with amount in xs 1`] = `
             class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
-            0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
+            0xB8Be76b31E402a2D89294Aa107056484Bef94362
           </span>
         </div>
       </div>
       <div
-        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-0 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-theme-background ring-0 shrink-0"
         data-testid="Avatar"
       >
         <div
           class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
-            alt="0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2"
+            alt="0xB8Be76b31E402a2D89294Aa107056484Bef94362"
+            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%233898F9%22%2F%3E%3C%2Fsvg%3E"
+            title="0xB8Be76b31E402a2D89294Aa107056484Bef94362"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center justify-end space-x-4 border-b border-dashed py-4 pt-0 pb-0 last:border-b-0 md:pt-4 md:pb-4"
+    >
+      <div
+        class="w-0 flex-1 pr-4 pl-3 text-right sm:px-0"
+      >
+        <span
+          class="whitespace-nowrap"
+          data-testid="Amount"
+        >
+          + 10 BTC
+        </span>
+      </div>
+      <div
+        class="w-0 flex-1 text-right md:text-left"
+      >
+        <div
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+        >
+          <span
+            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+            data-testid="Address__address"
+          >
+            0x03BC306C369A55c0336EB003bB07F29E5c150F36
+          </span>
+        </div>
+      </div>
+      <div
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-theme-background ring-0 shrink-0"
+        data-testid="Avatar"
+      >
+        <div
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
+        >
+          <img
+            alt="0x03BC306C369A55c0336EB003bB07F29E5c150F36"
             src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
-            title="0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2"
+            title="0x03BC306C369A55c0336EB003bB07F29E5c150F36"
           />
         </div>
       </div>
     </div>
     <div
-      class="relative flex items-center justify-end space-x-4 border-b border-dashed border-theme-secondary-300 py-4 pb-0 pt-0 last:border-b-0 dark:border-theme-secondary-800 md:pb-4 md:pt-4"
+      class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center justify-end space-x-4 border-b border-dashed py-4 pt-0 pb-0 last:border-b-0 md:pt-4 md:pb-4"
     >
       <div
-        class="w-0 flex-1 pl-3 pr-4 text-right sm:px-0"
+        class="w-0 flex-1 pr-4 pl-3 text-right sm:px-0"
       >
         <span
           class="whitespace-nowrap"
@@ -1135,63 +1177,21 @@ exports[`VoteList > should render with amount in xs 1`] = `
             class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
-            0x3F8eCbF08078F22038235F9834540A960E99085b
+            0x56F925416Ef2725646442D5E0150088bd7202aCd
           </span>
         </div>
       </div>
       <div
-        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-0 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-theme-background ring-0 shrink-0"
         data-testid="Avatar"
       >
         <div
           class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
-            alt="0x3F8eCbF08078F22038235F9834540A960E99085b"
-            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23FC9F0F%22%2F%3E%3C%2Fsvg%3E"
-            title="0x3F8eCbF08078F22038235F9834540A960E99085b"
-          />
-        </div>
-      </div>
-    </div>
-    <div
-      class="relative flex items-center justify-end space-x-4 border-b border-dashed border-theme-secondary-300 py-4 pb-0 pt-0 last:border-b-0 dark:border-theme-secondary-800 md:pb-4 md:pt-4"
-    >
-      <div
-        class="w-0 flex-1 pl-3 pr-4 text-right sm:px-0"
-      >
-        <span
-          class="whitespace-nowrap"
-          data-testid="Amount"
-        >
-          + 10 BTC
-        </span>
-      </div>
-      <div
-        class="w-0 flex-1 text-right md:text-left"
-      >
-        <div
-          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
-        >
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-            data-testid="Address__address"
-          >
-            0x137c59f371a7049159ef19a72f908773Ade219b1
-          </span>
-        </div>
-      </div>
-      <div
-        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-0 ring-theme-background shrink-0"
-        data-testid="Avatar"
-      >
-        <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
-        >
-          <img
-            alt="0x137c59f371a7049159ef19a72f908773Ade219b1"
-            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%235CA481%22%2F%3E%3C%2Fsvg%3E"
-            title="0x137c59f371a7049159ef19a72f908773Ade219b1"
+            alt="0x56F925416Ef2725646442D5E0150088bd7202aCd"
+            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%232A64E6%22%2F%3E%3C%2Fsvg%3E"
+            title="0x56F925416Ef2725646442D5E0150088bd7202aCd"
           />
         </div>
       </div>

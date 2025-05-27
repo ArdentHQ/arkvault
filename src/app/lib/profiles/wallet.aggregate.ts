@@ -36,39 +36,10 @@ export class WalletAggregate implements IWalletAggregate {
 		let total = BigNumber.ZERO;
 
 		// same here—no .reduce, just loop
-		for (const wallet of this.#profile.wallets().valuesWithCoin()) {
+		for (const wallet of this.#profile.wallets().values()) {
 			total = total.plus(wallet.convertedBalance());
 		}
 
 		return total.toNumber();
-	}
-
-	/** {@inheritDoc IWalletAggregate.balancePerCoin} */
-	public balancePerCoin(networkType: NetworkType = "live"): Record<string, { total: string; percentage: string }> {
-		const result: Record<string, { total: string; percentage: string }> = {};
-		const totalByProfile = this.balance(networkType);
-		const walletsByCoin = this.#profile.wallets().allByCoin();
-
-		for (const [coin, wallets] of Object.entries(walletsByCoin)) {
-			const matchingWallets = Object.values(wallets).filter(
-				(w) => w.network().isLive() === (networkType === "live"),
-			);
-
-			if (matchingWallets.length > 0) {
-				let totalByCoin = BigNumber.ZERO;
-				for (const w of matchingWallets) {
-					totalByCoin = totalByCoin.plus(w.balance());
-				}
-
-				result[coin] = {
-					// exactly as before
-					percentage:
-						totalByProfile === 0 ? "0.00" : totalByCoin.divide(totalByProfile).times(100).toFixed(2),
-					total: totalByCoin.toString(),
-				};
-			}
-		}
-
-		return result;
 	}
 }

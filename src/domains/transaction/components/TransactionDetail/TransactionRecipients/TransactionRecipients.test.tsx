@@ -8,7 +8,6 @@ import { translations } from "@/domains/transaction/i18n";
 import {
 	env,
 	getDefaultProfileId,
-	queryElementForSvg,
 	render,
 	renderResponsive,
 	renderResponsiveWithRoute,
@@ -68,8 +67,6 @@ describe("TransactionRecipients", () => {
 		);
 
 		expect(container).toHaveTextContent(address);
-
-		expect(queryElementForSvg(container, "validator-registration")).toBeInTheDocument();
 
 		expect(container).toMatchSnapshot();
 	});

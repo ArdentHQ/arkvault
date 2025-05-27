@@ -8,7 +8,9 @@ import react from "@vitejs/plugin-react";
 import svgrPlugin from "vite-plugin-svgr";
 import { visualizer } from "rollup-plugin-visualizer";
 
-export default defineConfig(() => {
+export default defineConfig(async () => {
+	const tailwindcss = (await import("@tailwindcss/vite")).default;
+
 	return {
 		resolve: {
 			alias: {
@@ -48,10 +50,8 @@ export default defineConfig(() => {
 							"react-hook-form",
 							"react-i18next",
 							"react-idle-timer",
-							"react-linkify",
 							"react-loading-skeleton",
 							"react-qr-reader",
-							"react-range",
 							"react-router",
 							"react-router-dom",
 							"react-table",
@@ -73,6 +73,7 @@ export default defineConfig(() => {
 			},
 		},
 		plugins: [
+			tailwindcss(),
 			react(),
 			svgrPlugin(),
 			PkgConfig(),
@@ -157,11 +158,11 @@ export default defineConfig(() => {
 					"buffer",
 					"os",
 					"process",
-					"fs",
+					// "fs",
 					"path",
 					"http",
 					"https",
-					"crypto",
+					// "crypto",
 					"module",
 					"util",
 					"events",

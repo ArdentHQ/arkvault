@@ -1,11 +1,10 @@
-import { Bcrypt } from "@ardenthq/arkvault-crypto";
 import { createHashHistory } from "history";
 import React from "react";
 import userEvent from "@testing-library/user-event";
 import { App } from "./App";
 import { toasts } from "@/app/services";
 import { translations as profileTranslations } from "@/domains/profile/i18n";
-import { env, render, screen, waitFor } from "@/utils/testing-library";
+import { render, screen, waitFor } from "@/utils/testing-library";
 
 const history = createHashHistory();
 
@@ -24,7 +23,6 @@ describe("App", () => {
 		process.env.MOCK_SYNCHRONIZER = "TRUE";
 
 		history.replace("/");
-		env.reset();
 	});
 
 	it("should redirect to root if profile restoration error occurs", async () => {
@@ -46,25 +44,14 @@ describe("App", () => {
 		});
 
 		await userEvent.clear(passwordInput());
-		await userEvent.type(passwordInput(), "password");
+		await userEvent.type(passwordInput(), "invalid-password");
 
 		await waitFor(() => {
-			expect(passwordInput()).toHaveValue("password");
-		});
-
-		const profile = env.profiles().findById("cba050f1-880f-45f0-9af9-cfe48f406052");
-
-		const verifyPasswordMock = vi.spyOn(Bcrypt, "verify").mockReturnValue(true);
-		const memoryPasswordMock = vi.spyOn(profile.password(), "get").mockImplementation(() => {
-			throw new Error("password not found");
+			expect(passwordInput()).toHaveValue("invalid-password");
 		});
 
 		await userEvent.click(screen.getByTestId("SignIn__submit-button"));
 
-		await waitFor(() => expect(memoryPasswordMock).toHaveBeenCalled(), { timeout: 4000 });
 		await waitFor(() => expect(history.location.pathname).toBe("/"));
-
-		memoryPasswordMock.mockRestore();
-		verifyPasswordMock.mockRestore();
 	});
 });

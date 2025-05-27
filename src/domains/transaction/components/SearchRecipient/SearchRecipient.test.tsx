@@ -94,7 +94,7 @@ describe("SearchRecipient", () => {
 				profile={profile}
 				isOpen={true}
 				recipients={recipients}
-				selectedAddress="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+				selectedAddress="0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6"
 				onAction={onAction}
 			/>,
 		);
@@ -242,7 +242,7 @@ describe("SearchRecipient", () => {
 				profile={profile}
 				isOpen={true}
 				recipients={recipients}
-				selectedAddress="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+				selectedAddress="0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6"
 				onAction={onAction}
 			/>,
 			"xs",
@@ -270,7 +270,7 @@ describe("SearchRecipient", () => {
 			<SearchRecipient
 				isOpen={true}
 				recipients={recipients}
-				selectedAddress="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+				selectedAddress="0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6"
 				onAction={onAction}
 			/>,
 			"md",
@@ -302,7 +302,7 @@ describe("SearchRecipient", () => {
 		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
-		await userEvent.type(searchInput, "D8rr7B1d6TL6pf1");
+		await userEvent.type(searchInput, "0xcd15953dD076e56D");
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(1));
 	});
@@ -324,7 +324,7 @@ describe("SearchRecipient", () => {
 		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
-		await userEvent.type(searchInput, "Ark Wallet 1");
+		await userEvent.type(searchInput, "Mainsail Wallet 1");
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(1));
 	});
@@ -346,7 +346,7 @@ describe("SearchRecipient", () => {
 		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
-		await userEvent.type(searchInput, "Ark Wallet 1");
+		await userEvent.type(searchInput, "Mainsail Wallet 1");
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(1));
 
@@ -388,7 +388,7 @@ describe("SearchRecipient", () => {
 				profile={profile}
 				isOpen={true}
 				recipients={recipients}
-				selectedAddress="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+				selectedAddress="0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6"
 			/>,
 			breakpoint,
 		);

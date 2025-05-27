@@ -48,7 +48,7 @@ const votingMockReturnValue = (validatorsIndex: number[]) =>
 			isResignedValidator: false,
 			isValidator: true,
 			publicKey: data[index].publicKey,
-			username: data[index].username,
+			username: data[index].attributes.username,
 		}),
 	}));
 
@@ -60,16 +60,12 @@ describe("AddressRow", () => {
 		wallet.data().set(Contracts.WalletData.DerivationPath, "0");
 
 		blankWallet = await profile.walletFactory().fromMnemonicWithBIP39({
-			coin: "Mainsail",
 			mnemonic: blankWalletPassphrase,
-			network: "mainsail.devnet",
 		});
 		profile.wallets().push(blankWallet);
 
 		unvotedWallet = await profile.walletFactory().fromMnemonicWithBIP39({
-			coin: "Mainsail",
 			mnemonic: MAINSAIL_MNEMONICS[0],
-			network: "mainsail.devnet",
 		});
 
 		profile.wallets().push(unvotedWallet);
@@ -77,9 +73,7 @@ describe("AddressRow", () => {
 		emptyProfile = env.profiles().findById("cba050f1-880f-45f0-9af9-cfe48f406052");
 
 		wallet2 = await emptyProfile.walletFactory().fromMnemonicWithBIP39({
-			coin: "Mainsail",
 			mnemonic: MAINSAIL_MNEMONICS[1],
-			network: "mainsail.devnet",
 		});
 		profile.wallets().push(wallet2);
 
@@ -88,7 +82,6 @@ describe("AddressRow", () => {
 
 		await wallet.synchroniser().votes();
 		await wallet.synchroniser().identity();
-		await wallet.synchroniser().coin();
 	});
 
 	it("should render", async () => {
@@ -164,26 +157,6 @@ describe("AddressRow", () => {
 		expect(asFragment()).toMatchSnapshot();
 
 		votesMock.mockRestore();
-	});
-
-	it("should render for a multisignature wallet", async () => {
-		const isMultiSignatureSpy = vi.spyOn(wallet, "isMultiSignature").mockImplementation(() => true);
-		const { asFragment, container } = render(
-			<AddressWrapper>
-				<AddressRow index={0} maxVotes={1} wallet={wallet} />
-			</AddressWrapper>,
-			{
-				route: `/profiles/${profile.id()}/votes`,
-			},
-		);
-
-		expect(container).toBeInTheDocument();
-
-		await expect(screen.findByTestId(ADDRESS_ROW_STATUS_TEST_ID)).resolves.toBeVisible();
-
-		expect(asFragment()).toMatchSnapshot();
-
-		isMultiSignatureSpy.mockRestore();
 	});
 
 	it("should render when wallet not found for votes", async () => {
@@ -331,7 +304,6 @@ describe("AddressRow", () => {
 	it("should emit action on select button", async () => {
 		await wallet.synchroniser().identity();
 		await wallet.synchroniser().votes();
-		await wallet.synchroniser().coin();
 
 		const onSelect = vi.fn();
 		const { asFragment, container } = render(
@@ -474,7 +446,7 @@ describe("AddressRow", () => {
 		expect(container).toBeInTheDocument();
 
 		const address = screen.getByTestId("AddressRow__wallet-vote");
-		expect(address).toHaveTextContent("0x1Bf…353e2");
+		expect(address).toHaveTextContent("0xB8B…94362");
 
 		votesMock.mockRestore();
 	});

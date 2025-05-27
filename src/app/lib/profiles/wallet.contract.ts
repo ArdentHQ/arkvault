@@ -1,4 +1,4 @@
-import { Coins, Contracts, Networks, Services } from "@/app/lib/sdk";
+import { Contracts, Networks, Services } from "@/app/lib/mainsail";
 import { BigNumber } from "@/app/lib/helpers";
 
 import {
@@ -15,6 +15,15 @@ import {
 	IWalletSynchroniser,
 } from "./contracts.js";
 import { AttributeBag } from "./helpers/attribute-bag.js";
+import { MessageService } from "@/app/lib/mainsail/message.service.js";
+import { ClientService } from "@/app/lib/mainsail/client.service.js";
+import { AddressService } from "@/app/lib/mainsail/address.service.js";
+import { PublicKeyService } from "@/app/lib/mainsail/public-key.service.js";
+import { TransactionService } from "@/app/lib/mainsail/transaction.service.js";
+import { ValidatorService } from "./validator.service.js";
+import { ExchangeRateService } from "./exchange-rate.service.js";
+import { SignatoryService } from "@/app/lib/mainsail/signatory.service.js";
+import { Manifest } from "@/app/lib/mainsail/manifest.class";
 
 export type WalletBalanceType = keyof Contracts.WalletBalance;
 
@@ -43,13 +52,10 @@ export interface IReadWriteWalletAttributes {
 	initialState: IWalletData;
 	restorationState: { full: boolean; partial: boolean };
 	// Will be empty initially
-	coin: Coins.Coin;
 	wallet: Contracts.WalletData | undefined;
 	address: string;
 	publicKey: string | undefined;
 	avatar: string;
-	// Will be set when the client removes implementations
-	isMissingCoin: boolean;
 	isMissingNetwork: boolean;
 }
 
@@ -83,14 +89,6 @@ export interface IReadWriteWallet {
 	 * @memberof IReadWriteWallet
 	 */
 	id(): string;
-
-	/**
-	 * Get the coin instance.
-	 *
-	 * @return {Coins.Coin}
-	 * @memberof IReadWriteWallet
-	 */
-	coin(): Coins.Coin;
 
 	/**
 	 * Get the network data.
@@ -269,16 +267,6 @@ export interface IReadWriteWallet {
 	validatorPublicKey(): string | undefined;
 
 	/**
-	 * Determine if the wallet is a delegate.
-	 *
-	 * @deprecated
-	 *
-	 * @return {boolean}
-	 * @memberof IReadWriteWallet
-	 */
-	isDelegate(): boolean;
-
-	/**
 	 * Determine if the wallet is a resigned delegate.
 	 *
 	 * @deprecated
@@ -384,14 +372,6 @@ export interface IReadWriteWallet {
 	toggleStarred(): void;
 
 	/**
-	 * Get the coin ID.
-	 *
-	 * @return {string}
-	 * @memberof IReadWriteWallet
-	 */
-	coinId(): string;
-
-	/**
 	 * Get the network ID.
 	 *
 	 * @return {string}
@@ -400,36 +380,36 @@ export interface IReadWriteWallet {
 	networkId(): string;
 
 	/**
-	 * Get the coin manifest.
+	 * Get the manifest.
 	 *
-	 * @return {Coins.Manifest}
+	 * @return {Manifest}
 	 * @memberof IReadWriteWallet
 	 */
-	manifest(): Coins.Manifest;
+	manifest(): Manifest;
 
 	/**
-	 * Get the coin configuration.
+	 * Get the profile validators service.
 	 *
-	 * @return {Coins.Config}
+	 * @return {ValidatorService}
 	 * @memberof IReadWriteWallet
 	 */
-	config(): Coins.ConfigRepository;
+	validators(): ValidatorService;
 
 	/**
 	 * Get the client service instance.
 	 *
-	 * @return {Services.ClientService}
+	 * @return {ClientService}
 	 * @memberof IReadWriteWallet
 	 */
-	client(): Services.ClientService;
+	client(): ClientService;
 
 	/**
-	 * Get the data transfer object service instance.
+	 * Get the identity service instance.
 	 *
-	 * @return {Services.DataTransferObjectService}
+	 * @return {ExchangeRateService}
 	 * @memberof IReadWriteWallet
 	 */
-	dataTransferObject(): Services.DataTransferObjectService;
+	exchangeRates(): ExchangeRateService;
 
 	/**
 	 * Get the identity service instance.
@@ -437,7 +417,7 @@ export interface IReadWriteWallet {
 	 * @return {Services.IdentityService}
 	 * @memberof IReadWriteWallet
 	 */
-	addressService(): Services.AddressService;
+	addressService(): AddressService;
 
 	/**
 	 * Get the identity service instance.
@@ -445,39 +425,7 @@ export interface IReadWriteWallet {
 	 * @return {Services.IdentityService}
 	 * @memberof IReadWriteWallet
 	 */
-	extendedAddressService(): Services.ExtendedAddressService;
-
-	/**
-	 * Get the identity service instance.
-	 *
-	 * @return {Services.IdentityService}
-	 * @memberof IReadWriteWallet
-	 */
-	keyPairService(): Services.KeyPairService;
-
-	/**
-	 * Get the identity service instance.
-	 *
-	 * @return {Services.IdentityService}
-	 * @memberof IReadWriteWallet
-	 */
-	privateKeyService(): Services.PrivateKeyService;
-
-	/**
-	 * Get the identity service instance.
-	 *
-	 * @return {Services.IdentityService}
-	 * @memberof IReadWriteWallet
-	 */
-	publicKeyService(): Services.PublicKeyService;
-
-	/**
-	 * Get the identity service instance.
-	 *
-	 * @return {Services.IdentityService}
-	 * @memberof IReadWriteWallet
-	 */
-	wifService(): Services.WIFService;
+	publicKeyService(): PublicKeyService;
 
 	/**
 	 * Get the ledger service instance.
@@ -498,10 +446,10 @@ export interface IReadWriteWallet {
 	/**
 	 * Get the message service instance.
 	 *
-	 * @return {Services.MessageService}
+	 * @return {MessageService}
 	 * @memberof IReadWriteWallet
 	 */
-	message(): Services.MessageService;
+	message(): MessageService;
 
 	/**
 	 * Get the signatory service instance.
@@ -509,15 +457,23 @@ export interface IReadWriteWallet {
 	 * @return {Services.SignatoryService}
 	 * @memberof IReadWriteWallet
 	 */
-	signatory(): Services.SignatoryService;
+	signatory(): SignatoryService;
 
 	/**
-	 * Get the transaction service instance.
+	 * Get the wallet transaction service instance.
 	 *
 	 * @return {ITransactionService}
 	 * @memberof IReadWriteWallet
 	 */
 	transaction(): ITransactionService;
+
+	/**
+	 * Get the transaction service instance.
+	 *
+	 * @return {TransactionService}
+	 * @memberof IReadWriteWallet
+	 */
+	transactionService(): TransactionService;
 
 	/**
 	 * Get the supported transaction types.
@@ -566,21 +522,6 @@ export interface IReadWriteWallet {
 	hasBeenPartiallyRestored(): boolean;
 
 	/**
-	 * Mark the wallet as missing its coin.
-	 *
-	 * @memberof IReadWriteWallet
-	 */
-	markAsMissingCoin(): void;
-
-	/**
-	 * Determine if the wallet is missing its coin.
-	 *
-	 * @return {boolean}
-	 * @memberof IReadWriteWallet
-	 */
-	isMissingCoin(): boolean;
-
-	/**
 	 * Mark the wallet as missing its network.
 	 *
 	 * @memberof IReadWriteWallet
@@ -594,22 +535,6 @@ export interface IReadWriteWallet {
 	 * @memberof IReadWriteWallet
 	 */
 	isMissingNetwork(): boolean;
-
-	/**
-	 * Connect the coin to the network.
-	 *
-	 * @return {Promise<void>}
-	 * @memberof IReadWriteWallet
-	 */
-	connect(): Promise<void>;
-
-	/**
-	 * Determine if the wallet has yet configured a coin.
-	 *
-	 * @return {boolean}
-	 * @memberof IReadWriteWallet
-	 */
-	hasCoin(): boolean;
 
 	/**
 	 * Get the underlying attributes.
@@ -716,14 +641,6 @@ export interface IReadWriteWallet {
 	actsWithPublicKey(): boolean;
 
 	/**
-	 * Determines if the wallet has been imported with a private key.
-	 *
-	 * @return {*}  {boolean}
-	 * @memberof IReadWriteWallet
-	 */
-	actsWithPrivateKey(): boolean;
-
-	/**
 	 * Determines if the wallet has been imported with an address with a derivation path.
 	 *
 	 * @return {*}  {boolean}
@@ -738,22 +655,6 @@ export interface IReadWriteWallet {
 	 * @memberof IReadWriteWallet
 	 */
 	actsWithMnemonicWithEncryption(): boolean;
-
-	/**
-	 * Determines if the wallet has been imported with a wif.
-	 *
-	 * @return {*}  {boolean}
-	 * @memberof IReadWriteWallet
-	 */
-	actsWithWif(): boolean;
-
-	/**
-	 * Determines if the wallet has been imported with a wif with encryption.
-	 *
-	 * @return {*}  {boolean}
-	 * @memberof IReadWriteWallet
-	 */
-	actsWithWifWithEncryption(): boolean;
 
 	/**
 	 * Determines if the wallet has been imported with a secret.

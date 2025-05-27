@@ -1,4 +1,3 @@
-import { Coins } from "@/app/lib/sdk";
 import { Contracts } from "@/app/lib/profiles";
 import { Options } from "p-retry";
 import { useCallback, useEffect, useMemo, useReducer, useRef, useState } from "react";
@@ -65,11 +64,10 @@ export const useLedgerConnection = () => {
 	}, []);
 
 	const handleLedgerConnectionError = useCallback(
-		async (error: { statusText?: string; message: string }, coin: Coins.Coin) => {
+		async (error: { statusText?: string; message: string }, profile: Contracts.IProfile) => {
 			try {
 				await disconnect();
 				await resetConnectionState();
-				await coin.ledger().disconnect();
 			} catch {
 				//
 			}
@@ -89,8 +87,7 @@ export const useLedgerConnection = () => {
 			if (error.message === "VERSION_ERROR") {
 				return dispatch({
 					message: t("WALLETS.MODAL_LEDGER_WALLET.UPDATE_ERROR", {
-						coin: coin.network().coin(),
-						version: await coin.ledger().getVersion(),
+						coin: profile.activeNetwork().name(),
 					}),
 					type: "failed",
 				});
@@ -103,43 +100,39 @@ export const useLedgerConnection = () => {
 
 	const isAttemptingConnect = useRef(false);
 
-	const connect = useCallback(
-		async (profile: Contracts.IProfile, coin: string, network: string, retryOptions?: Options) => {
-			if (isAttemptingConnect.current) {
-				return;
-			}
+	const connect = useCallback(async (profile: Contracts.IProfile, string, retryOptions?: Options) => {
+		if (isAttemptingConnect.current) {
+			return;
+		}
 
-			isAttemptingConnect.current = true;
-			const coinInstance = profile.coins().set(coin, network);
+		isAttemptingConnect.current = true;
 
-			if (!isLedgerTransportSupported()) {
-				handleLedgerConnectionError({ message: "COMPATIBILITY_ERROR" }, coinInstance);
-				return;
-			}
+		if (!isLedgerTransportSupported()) {
+			handleLedgerConnectionError({ message: "COMPATIBILITY_ERROR" }, profile);
+			return;
+		}
 
-			const options = retryOptions || { factor: 1, randomize: false, retries: 50 };
+		const options = retryOptions || { factor: 1, randomize: false, retries: 50 };
 
-			await resetConnectionState();
+		await resetConnectionState();
 
-			dispatch({ type: "waiting" });
-			abortRetryReference.current = false;
+		dispatch({ type: "waiting" });
+		abortRetryReference.current = false;
 
-			try {
-				await persistLedgerConnection({
-					coin: coinInstance,
-					hasRequestedAbort: () => abortRetryReference.current,
-					options,
-				});
+		try {
+			await persistLedgerConnection({
+				hasRequestedAbort: () => abortRetryReference.current,
+				ledgerService: profile.ledger(),
+				options,
+			});
 
-				dispatch({ type: "connected" });
-			} catch (connectError) {
-				handleLedgerConnectionError(connectError, coinInstance);
-			}
+			dispatch({ type: "connected" });
+		} catch (connectError) {
+			handleLedgerConnectionError(connectError, profile);
+		}
 
-			isAttemptingConnect.current = false;
-		},
-		[],
-	);
+		isAttemptingConnect.current = false;
+	}, []);
 
 	const setBusy = useCallback(() => dispatch({ type: "busy" }), []);
 	const setIdle = useCallback(() => dispatch({ type: "connected" }), []);

@@ -1,4 +1,4 @@
-import { Services } from "@/app/lib/sdk";
+import { Services } from "@/app/lib/mainsail";
 
 import { IReadWriteWallet } from "./contracts.js";
 
@@ -8,8 +8,6 @@ import { IReadWriteWallet } from "./contracts.js";
  * @interface IGenerateOptions
  */
 export interface IGenerateOptions {
-	coin: string;
-	network: string;
 	locale?: string;
 	wordCount?: number;
 	withPublicKey?: boolean;
@@ -21,8 +19,6 @@ export interface IGenerateOptions {
  * @interface IMnemonicOptions
  */
 export interface IMnemonicOptions {
-	coin: string;
-	network: string;
 	mnemonic: string;
 	password?: string;
 }
@@ -37,8 +33,6 @@ export interface IMnemonicDerivativeOptions extends IMnemonicOptions {
  * @interface IAddressOptions
  */
 export interface IAddressOptions {
-	coin: string;
-	network: string;
 	address: string;
 }
 
@@ -48,8 +42,6 @@ export interface IAddressOptions {
  * @interface IPublicKeyOptions
  */
 export interface IPublicKeyOptions {
-	coin: string;
-	network: string;
 	publicKey: string;
 	bip44?: Services.IdentityLevels;
 	bip49?: Services.IdentityLevels;
@@ -62,8 +54,6 @@ export interface IPublicKeyOptions {
  * @interface IPrivateKeyOptions
  */
 export interface IPrivateKeyOptions {
-	coin: string;
-	network: string;
 	privateKey: string;
 }
 
@@ -73,8 +63,6 @@ export interface IPrivateKeyOptions {
  * @interface IAddressWithDerivationPathOptions
  */
 export interface IAddressWithDerivationPathOptions {
-	coin: string;
-	network: string;
 	address: string;
 	path: string;
 }
@@ -85,8 +73,6 @@ export interface IAddressWithDerivationPathOptions {
  * @interface ISecretOptions
  */
 export interface ISecretOptions {
-	coin: string;
-	network: string;
 	secret: string;
 	password?: string;
 }
@@ -97,8 +83,6 @@ export interface ISecretOptions {
  * @interface IWifOptions
  */
 export interface IWifOptions {
-	coin: string;
-	network: string;
 	wif: string;
 	password?: string;
 }
@@ -117,7 +101,7 @@ export interface IWalletFactory {
 	 * @return {Promise<{ mnemonic: string; wallet: IReadWriteWallet }>}
 	 * @memberof IWalletFactory
 	 */
-	generate(options: IGenerateOptions): Promise<{ mnemonic: string; wallet: IReadWriteWallet }>;
+	generate(options?: IGenerateOptions): Promise<{ mnemonic: string; wallet: IReadWriteWallet }>;
 
 	/**
 	 * Imports a wallet from a mnemonic, using the BIP39 proposal.
@@ -199,13 +183,4 @@ export interface IWalletFactory {
 	 * @memberof IWalletFactory
 	 */
 	fromSecret(options: ISecretOptions): Promise<IReadWriteWallet>;
-
-	/**
-	 * Imports a wallet from a WIF.
-	 *
-	 * @param {IWifOptions} options
-	 * @return {Promise<IReadWriteWallet>}
-	 * @memberof IWalletFactory
-	 */
-	fromWIF(options: IWifOptions): Promise<IReadWriteWallet>;
 }

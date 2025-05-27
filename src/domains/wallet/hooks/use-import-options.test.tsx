@@ -12,14 +12,10 @@ describe("useImportOptions", () => {
 					default: true,
 					permissions: [],
 				},
-				privateKey: {
-					default: false,
-					permissions: [],
-				},
 			}),
 		);
 
-		expect(current.options).toHaveLength(3);
+		expect(current.options).toHaveLength(2);
 		expect(current.options[1].value).toBe(OptionsValue.ADDRESS);
 		expect(current.defaultOption).contains({ label: "Address", value: OptionsValue.ADDRESS });
 	});
@@ -65,9 +61,8 @@ describe("useImportOptions", () => {
 			}),
 		);
 
-		expect(current.options).toHaveLength(3);
+		expect(current.options).toHaveLength(2);
 		expect(current.options[1].value).toBe(OptionsValue.BIP84);
-		expect(current.options[2].value).toBe(OptionsValue.ENCRYPTED_WIF);
 	});
 
 	it("should return default option if exist in the available options", () => {

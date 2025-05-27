@@ -32,14 +32,6 @@ export interface IWalletRepository {
 	last(): IReadWriteWallet;
 
 	/**
-	 * Get all wallets grouped by their coin and network.
-	 *
-	 * @returns {Record<string, Record<string, IReadWriteWallet>>}
-	 * @memberof IWalletRepository
-	 */
-	allByCoin(): Record<string, Record<string, IReadWriteWallet>>;
-
-	/**
 	 * Get all keys.
 	 *
 	 * @returns {string[]}
@@ -56,21 +48,13 @@ export interface IWalletRepository {
 	values(): IReadWriteWallet[];
 
 	/**
-	 * Get all values that are not missing the coin.
-	 *
-	 * @returns {IReadWriteWallet[]}
-	 * @memberof IWalletRepository
-	 */
-	valuesWithCoin(): IReadWriteWallet[];
-
-	/**
 	 * Fill the storage with wallet data.
 	 *
 	 * @param {Record<string, IWalletData>} struct
 	 * @returns {Promise<void>}
 	 * @memberof IWalletRepository
 	 */
-	fill(struct: Record<string, IWalletData>): Promise<void>;
+	fill(struct: Record<string, IWalletData>): void;
 
 	/**
 	 * Restore the wallets.
@@ -116,35 +100,6 @@ export interface IWalletRepository {
 	 * @memberof IWalletRepository
 	 */
 	findByPublicKey(publicKey: string): IReadWriteWallet | undefined;
-
-	/**
-	 * Find many wallets by their coins.
-	 *
-	 * @param {string} coin
-	 * @returns {IReadWriteWallet[]}
-	 * @memberof IWalletRepository
-	 */
-	findByCoin(coin: string): IReadWriteWallet[];
-
-	/**
-	 * Find many wallets by their coin and network.
-	 *
-	 * @param {string} coin
-	 * @param {string} network
-	 * @returns {IReadWriteWallet[]}
-	 * @memberof IWalletRepository
-	 */
-	findByCoinWithNetwork(coin: string, network: string): IReadWriteWallet[];
-
-	/**
-	 * Find many wallets by their coin and network's nethash.
-	 *
-	 * @param {string} coin
-	 * @param {string} nethash
-	 * @returns {IReadWriteWallet[]}
-	 * @memberof IWalletRepository
-	 */
-	findByCoinWithNethash(coin: string, nethash: string): IReadWriteWallet[];
 
 	/**
 	 * Find a wallet by its alias.

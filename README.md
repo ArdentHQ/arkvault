@@ -11,15 +11,15 @@ ARK Vault is a custom web-based wallet designed for ARK Core-based blockchains. 
 
 ### Requirements
 
-#### Node 20.12.2 (LTS)
+#### Node 22 (LTS)
 
-To download, head over to [here](https://nodejs.org/en/) and download Node 20.12.2.
+To download, head over to [here](https://nodejs.org/en/) and download Node 22.
 
 If you already have npm installed, you can run
 
 ```
 npm install -g n
-sudo n 20.12.2
+sudo n 22
 ```
 
 #### pnpm

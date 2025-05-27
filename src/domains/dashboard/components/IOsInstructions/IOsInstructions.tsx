@@ -9,13 +9,13 @@ export const IOsInstructions = ({ onClose }: { onClose: () => void }) => {
 	return (
 		<div className="mt-8" data-testid="IOsInstructions">
 			<div className="flex flex-col items-start">
-				<div className="mb-4 font-semibold text-theme-secondary-text">{t("COMMON.INSTALL_ARKVAULT_STEP1")}</div>
+				<div className="text-theme-secondary-text mb-4 font-semibold">{t("COMMON.INSTALL_ARKVAULT_STEP1")}</div>
 				<Image name="IOsInstructionsStep1" className="mb-8 h-auto w-full" />
 
-				<div className="mb-4 font-semibold text-theme-secondary-text">{t("COMMON.INSTALL_ARKVAULT_STEP2")}</div>
+				<div className="text-theme-secondary-text mb-4 font-semibold">{t("COMMON.INSTALL_ARKVAULT_STEP2")}</div>
 				<Image name="IOsInstructionsStep2" className="mb-8 h-auto w-full" />
 
-				<div className="mb-4 font-semibold text-theme-secondary-text">{t("COMMON.INSTALL_ARKVAULT_STEP3")}</div>
+				<div className="text-theme-secondary-text mb-4 font-semibold">{t("COMMON.INSTALL_ARKVAULT_STEP3")}</div>
 				<Image name="IOsInstructionsStep3" className="h-auto w-full" />
 			</div>
 

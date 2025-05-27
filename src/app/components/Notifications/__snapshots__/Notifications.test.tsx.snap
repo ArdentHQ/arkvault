@@ -3,14 +3,14 @@
 exports[`Notifications > should emit transactionClick event 1`] = `
 <div>
   <div
-    class="w-full dark:bg-theme-dark-900 sm:w-[35rem]"
+    class="dark:bg-theme-dark-900 w-full sm:w-[35rem]"
     data-testid="NotificationsWrapper"
   >
     <div
-      class="flex items-center justify-between rounded-t-xl bg-theme-secondary-100 px-6 py-4 dark:bg-black"
+      class="bg-theme-secondary-100 flex items-center justify-between rounded-t-xl px-6 py-4 dark:bg-black"
     >
       <div
-        class="text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200"
+        class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm leading-[17px] font-semibold"
       >
         Notification
       </div>
@@ -106,7 +106,7 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                             </div>
                           </div>
                           <div
-                            class="absolute -bottom-px right-0 h-px w-8 bg-white dark:bg-theme-secondary-900"
+                            class="dark:bg-theme-secondary-900 absolute right-0 -bottom-px h-px w-8 bg-white"
                           />
                         </div>
                       </div>
@@ -185,7 +185,7 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                             </div>
                           </div>
                           <div
-                            class="absolute -bottom-px right-0 h-px w-8 bg-white dark:bg-theme-secondary-900"
+                            class="dark:bg-theme-secondary-900 absolute right-0 -bottom-px h-px w-8 bg-white"
                           />
                         </div>
                       </div>
@@ -264,7 +264,7 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                             </div>
                           </div>
                           <div
-                            class="absolute -bottom-px right-0 h-px w-8 bg-white dark:bg-theme-secondary-900"
+                            class="dark:bg-theme-secondary-900 absolute right-0 -bottom-px h-px w-8 bg-white"
                           />
                         </div>
                       </div>
@@ -284,23 +284,23 @@ exports[`Notifications > should emit transactionClick event 1`] = `
 exports[`Notifications > should render with empty notifications 1`] = `
 <div>
   <div
-    class="w-full dark:bg-theme-dark-900 sm:w-[35rem]"
+    class="dark:bg-theme-dark-900 w-full sm:w-[35rem]"
     data-testid="NotificationsWrapper"
   >
     <div
-      class="flex items-center justify-between rounded-t-xl bg-theme-secondary-100 px-6 py-4 dark:bg-black"
+      class="bg-theme-secondary-100 flex items-center justify-between rounded-t-xl px-6 py-4 dark:bg-black"
     >
       <div
-        class="text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200"
+        class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm leading-[17px] font-semibold"
       >
         Notification
       </div>
     </div>
     <div
-      class="px-6 pb-8 pt-4"
+      class="px-6 pt-4 pb-8"
     >
       <div
-        class="rounded-lg border-solid border-theme-secondary-300 text-center leading-5 text-theme-secondary-text dark:border-theme-secondary-800 sm:border sm:p-6 py-4"
+        class="border-theme-secondary-300 text-theme-secondary-text dark:border-theme-secondary-800 rounded-lg border-solid text-center leading-5 sm:border sm:p-6 py-4"
         data-testid="EmptyBlock"
       >
         <div>
@@ -310,7 +310,7 @@ exports[`Notifications > should render with empty notifications 1`] = `
         </div>
       </div>
       <div
-        class="mb-2 mt-8 w-full"
+        class="mt-8 mb-2 w-full"
       >
         <svg
           class="mx-auto w-full sm:w-64"
@@ -377,17 +377,17 @@ exports[`Notifications > should render with empty notifications 1`] = `
 </div>
 `;
 
-exports[`Notifications > should render with transactions and plugins 1`] = `
+exports[`Notifications > should render with transactions 1`] = `
 <div>
   <div
-    class="w-full dark:bg-theme-dark-900 sm:w-[35rem]"
+    class="dark:bg-theme-dark-900 w-full sm:w-[35rem]"
     data-testid="NotificationsWrapper"
   >
     <div
-      class="flex items-center justify-between rounded-t-xl bg-theme-secondary-100 px-6 py-4 dark:bg-black"
+      class="bg-theme-secondary-100 flex items-center justify-between rounded-t-xl px-6 py-4 dark:bg-black"
     >
       <div
-        class="text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200"
+        class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm leading-[17px] font-semibold"
       >
         Notification
       </div>
@@ -483,7 +483,7 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
                             </div>
                           </div>
                           <div
-                            class="absolute -bottom-px right-0 h-px w-8 bg-white dark:bg-theme-secondary-900"
+                            class="dark:bg-theme-secondary-900 absolute right-0 -bottom-px h-px w-8 bg-white"
                           />
                         </div>
                       </div>
@@ -562,7 +562,7 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
                             </div>
                           </div>
                           <div
-                            class="absolute -bottom-px right-0 h-px w-8 bg-white dark:bg-theme-secondary-900"
+                            class="dark:bg-theme-secondary-900 absolute right-0 -bottom-px h-px w-8 bg-white"
                           />
                         </div>
                       </div>
@@ -641,7 +641,7 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
                             </div>
                           </div>
                           <div
-                            class="absolute -bottom-px right-0 h-px w-8 bg-white dark:bg-theme-secondary-900"
+                            class="dark:bg-theme-secondary-900 absolute right-0 -bottom-px h-px w-8 bg-white"
                           />
                         </div>
                       </div>

@@ -35,18 +35,15 @@ export const ImportProfile = () => {
 	};
 
 	const handleProfileSave = async (submittedProfile) => {
-		const availableNetworks = submittedProfile.availableNetworks();
-		for (const network of availableNetworks) {
-			const selectedAddresses = SelectedAddresses({ activeNetwork: network, profile: submittedProfile });
-			// If imported profile doesn't have selected addresses, mark them all as selected.
-			if (!selectedAddresses.hasSelected()) {
-				await selectedAddresses.set(
-					submittedProfile
-						.wallets()
-						.findByCoinWithNetwork(network.coin(), network.id())
-						.map((wallet) => wallet.address()),
-				);
-			}
+		const selectedAddresses = SelectedAddresses({ profile: submittedProfile });
+		// If imported profile doesn't have selected addresses, mark them all as selected.
+		if (!selectedAddresses.hasSelected()) {
+			await selectedAddresses.set(
+				submittedProfile
+					.wallets()
+					.values()
+					.map((wallet) => wallet.address()),
+			);
 		}
 
 		await persist();
