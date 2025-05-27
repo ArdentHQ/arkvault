@@ -104,8 +104,8 @@ describe("useValidation hook", () => {
 				result: { current },
 			} = renderHook(() => useValidation(), { wrapper });
 			const balance = BigNumber.make(5).toNumber();
-			const validation = current.common.gasLimit(balance, getValuesMock, 21_000);
-			const isValid = validation.validate.valid(21_000);
+			const validation = current.common.gasLimit(balance, getValuesMock);
+			const isValid = validation.validate.valid(BigNumber.make(21_000));
 
 			expect(isValid).toBe(true);
 		});
@@ -116,8 +116,8 @@ describe("useValidation hook", () => {
 				result: { current },
 			} = renderHook(() => useValidation(), { wrapper });
 
-			const validation = current.common.gasLimit(0, getValuesMock, 21_000, mockNetwork);
-			const isValid = validation.validate.valid(0);
+			const validation = current.common.gasLimit(0, getValuesMock, mockNetwork);
+			const isValid = validation.validate.valid(BigNumber.make(0));
 
 			expect(isValid).toBe("Gas Limit required.");
 		});
@@ -128,8 +128,8 @@ describe("useValidation hook", () => {
 				result: { current },
 			} = renderHook(() => useValidation(), { wrapper });
 
-			const validation = current.common.gasLimit(0, getValuesMock, 21_000, mockNetwork);
-			const isValid = validation.validate.valid(300);
+			const validation = current.common.gasLimit(0, getValuesMock, mockNetwork);
+			const isValid = validation.validate.valid(BigNumber.make(300));
 
 			expect(isValid).toBe("Gas Limit cannot be less than 21000.");
 		});
@@ -140,8 +140,8 @@ describe("useValidation hook", () => {
 				result: { current },
 			} = renderHook(() => useValidation(), { wrapper });
 
-			const validation = current.common.gasLimit(0, getValuesMock, 21_000, mockNetwork);
-			const isValid = validation.validate.valid(21_000);
+			const validation = current.common.gasLimit(0, getValuesMock, mockNetwork);
+			const isValid = validation.validate.valid(BigNumber.make(21_000));
 
 			expect(isValid).contains(LOW_BALANCE_MESSAGE);
 		});
@@ -152,8 +152,8 @@ describe("useValidation hook", () => {
 				result: { current },
 			} = renderHook(() => useValidation(), { wrapper });
 
-			const validation = current.common.gasLimit(-5, getValuesMock, 21_000, mockNetwork);
-			const isValid = validation.validate.valid(21_000);
+			const validation = current.common.gasLimit(-5, getValuesMock, mockNetwork);
+			const isValid = validation.validate.valid(BigNumber.make(21_000));
 
 			expect(isValid).contains(LOW_BALANCE_MESSAGE);
 		});
@@ -165,8 +165,8 @@ describe("useValidation hook", () => {
 			} = renderHook(() => useValidation(), { wrapper });
 
 			const balance = BigNumber.make(0.0002).toNumber();
-			const validation = current.common.gasLimit(balance, getValuesMock, 21_000, mockNetwork);
-			const isValid = validation.validate.valid(21_000);
+			const validation = current.common.gasLimit(balance, getValuesMock, mockNetwork);
+			const isValid = validation.validate.valid(BigNumber.make(21_000));
 
 			expect(isValid).contains(LOW_BALANCE_MESSAGE);
 		});
