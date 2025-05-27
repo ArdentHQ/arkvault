@@ -93,9 +93,7 @@ const getIcon = (status: Contracts.ExchangeTransactionStatus) => {
 	};
 };
 
-const ExchangeTransactionsRowStatusIcon = ({
-	status,
-}: ExchangeTransactionsRowStatusProperties) => {
+const ExchangeTransactionsRowStatusIcon = ({ status }: ExchangeTransactionsRowStatusProperties) => {
 	const { name, color } = getIcon(status);
 	return (
 		<span className="text-theme-secondary-700 dark:text-theme-secondary-200 flex items-center space-x-2">

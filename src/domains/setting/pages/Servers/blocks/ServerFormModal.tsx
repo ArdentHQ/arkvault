@@ -14,7 +14,14 @@ import { networkDisplayName, profileAllEnabledNetworkIds } from "@/utils/network
 import { Alert } from "@/app/components/Alert";
 import { Icon } from "@/app/components/Icon";
 
-const ServerFormModal = ({ onClose, onCreate, onUpdate, networks, networkToUpdate, customNetworks }: {
+const ServerFormModal = ({
+	onClose,
+	onCreate,
+	onUpdate,
+	networks,
+	networkToUpdate,
+	customNetworks,
+}: {
 	onClose: () => void;
 	onCreate: (network: NormalizedNetwork) => void;
 	onUpdate: (network: NormalizedNetwork) => void;
@@ -236,10 +243,10 @@ const ServerFormModal = ({ onClose, onCreate, onUpdate, networks, networkToUpdat
 						errors.publicApiEndpoint?.type,
 						errors.evmApiEndpoint?.type,
 					].includes("invalidUrl") && (
-							<Alert data-testid="ServerFormModal-alert" className="mt-3" variant="danger">
-								{t("SETTINGS.SERVERS.ADD_NEW_SERVER.FETCHING_ERROR")}
-							</Alert>
-						)}
+						<Alert data-testid="ServerFormModal-alert" className="mt-3" variant="danger">
+							{t("SETTINGS.SERVERS.ADD_NEW_SERVER.FETCHING_ERROR")}
+						</Alert>
+					)}
 				</FormField>
 
 				<FormButtons>

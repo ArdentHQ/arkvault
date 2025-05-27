@@ -127,7 +127,7 @@ const NavigationBarMobile = ({
 	receiveButtonClickHandler,
 	homeButtonHandler,
 	disabled,
-	hasFixedFormButtons
+	hasFixedFormButtons,
 }: {
 	sendButtonClickHandler: () => void;
 	receiveButtonClickHandler: () => void;

@@ -13,13 +13,7 @@ interface DeleteContactProperties {
 	onDelete: (contactId: string) => void;
 }
 
-export const DeleteContact = ({
-	contact,
-	profile,
-	onCancel,
-	onClose,
-	onDelete,
-}: DeleteContactProperties) => {
+export const DeleteContact = ({ contact, profile, onCancel, onClose, onDelete }: DeleteContactProperties) => {
 	const { t } = useTranslation();
 
 	const { persist } = useEnvironmentContext();

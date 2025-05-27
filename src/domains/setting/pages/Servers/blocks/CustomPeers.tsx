@@ -209,7 +209,7 @@ const CustomPeersPeer = ({
 	onDelete,
 	onUpdate,
 	onToggle,
-	profile
+	profile,
 }: {
 	index: number;
 	profile: Contracts.IProfile;
@@ -469,7 +469,14 @@ const CustomPeersTableFooter = ({
 	);
 };
 
-const CustomPeers = ({ addNewServerHandler, networks, onDelete, onUpdate, profile, onToggle }: {
+const CustomPeers = ({
+	addNewServerHandler,
+	networks,
+	onDelete,
+	onUpdate,
+	profile,
+	onToggle,
+}: {
 	addNewServerHandler: () => void;
 	networks: NormalizedNetwork[];
 	onDelete: (network: NormalizedNetwork) => void;

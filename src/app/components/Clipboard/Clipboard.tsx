@@ -8,11 +8,7 @@ const defaultProps = {
 	options: {},
 };
 
-export const Clipboard = ({
-	options = defaultProps.options,
-	variant,
-	...properties
-}: ClipboardProperties) => {
+export const Clipboard = ({ options = defaultProps.options, variant, ...properties }: ClipboardProperties) => {
 	if (!properties.children) {
 		return <></>;
 	}
