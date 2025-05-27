@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import { GasLimit } from "@/domains/transaction/components/FeeField/FeeField";
 import { Contracts } from "@/app/lib/profiles";
 import { useFormContext } from "react-hook-form";
 import { useValidation } from "@/app/hooks";
