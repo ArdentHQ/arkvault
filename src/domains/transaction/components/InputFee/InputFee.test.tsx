@@ -356,4 +356,4 @@ describe("getFeeMinMax", () => {
 		expect(minGasLimit.toString()).toBe("21000");
 		expect(maxGasLimit.toString()).toBe("2000000");
 	});
-})
+});
