@@ -33,7 +33,13 @@ describe("useWalletActions", () => {
 	it("should return undefined if there is no wallet", async () => {
 		const {
 			result: { current },
-		} = renderHook(() => useWalletActions(), { wrapper });
+		} = renderHook(
+			() =>
+				useWalletActions({
+					wallets: [],
+				}),
+			{ wrapper },
+		);
 
 		expect(current.handleOpen()).toBeUndefined();
 		expect(current.handleSend()).toBeUndefined();
@@ -46,7 +52,13 @@ describe("useWalletActions", () => {
 	it("should return undefined if no wallets passed", () => {
 		const {
 			result: { current },
-		} = renderHook(() => useWalletActions(), { wrapper });
+		} = renderHook(
+			() =>
+				useWalletActions({
+					wallets: [],
+				}),
+			{ wrapper },
+		);
 
 		expect(current.handleSend()).toBeUndefined();
 	});
@@ -54,7 +66,9 @@ describe("useWalletActions", () => {
 	it("should push right url to history if there are multiple wallets", () => {
 		const {
 			result: { current },
-		} = renderHook(() => useWalletActions(wallet, profile.wallets().last()), { wrapper });
+		} = renderHook(() => useWalletActions({ wallets: [wallet, profile.wallets().last()] }), {
+			wrapper,
+		});
 
 		act(() => {
 			current.handleSend();
