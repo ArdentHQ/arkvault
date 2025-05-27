@@ -92,7 +92,7 @@ const getOrderByStr = ({ column, desc }: SortBy): string => {
 };
 
 export const useProfileTransactions = ({ profile, wallets, limit = 30 }: ProfileTransactionsProperties) => {
-	const lastQuery = useRef<string>();
+	const lastQuery = useRef<string>(undefined);
 	const isMounted = useRef(true);
 	const cursor = useRef(1);
 	const LIMIT = limit;

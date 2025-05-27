@@ -22,7 +22,7 @@ interface ReviewStepProperties {
 	network: Networks.Network;
 }
 
-export const ReviewStep: React.VFC<ReviewStepProperties> = ({ wallet, network }) => {
+export const ReviewStep = ({ wallet, network }: ReviewStepProperties) => {
 	const { t } = useTranslation();
 
 	const { unregister, watch, register, getValues } = useFormContext();

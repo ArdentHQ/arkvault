@@ -14,7 +14,7 @@ interface AmountProperties {
 	profile?: Contracts.IProfile;
 }
 
-const Amount: React.VFC<AmountProperties> = ({
+const Amount = ({
 	value,
 	ticker,
 	showTicker = true,
@@ -23,7 +23,7 @@ const Amount: React.VFC<AmountProperties> = ({
 	className,
 	allowHideBalance = false,
 	profile,
-}) => {
+}: AmountProperties) => {
 	let formattedAmount = Helpers.Currency.format(value, ticker, { withTicker: showTicker });
 
 	const { hideBalance } = useBalanceVisibility({ profile });

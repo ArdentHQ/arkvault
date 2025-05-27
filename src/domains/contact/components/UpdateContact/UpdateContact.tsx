@@ -17,14 +17,14 @@ interface UpdateContactProperties {
 	onSave: (contactId: string) => void;
 }
 
-export const UpdateContact: React.VFC<UpdateContactProperties> = ({
+export const UpdateContact = ({
 	contact,
 	onClose,
 	onCancel,
 	onDelete,
 	onSave,
 	profile,
-}) => {
+}: UpdateContactProperties) => {
 	const [errors, setErrors] = useState<Partial<Record<keyof ContactFormState, string>>>({});
 
 	const { t } = useTranslation();

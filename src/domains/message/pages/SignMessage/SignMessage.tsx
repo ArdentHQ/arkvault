@@ -27,7 +27,7 @@ enum Step {
 	ErrorStep,
 }
 
-export const SignMessage: React.VFC = () => {
+export const SignMessage = () => {
 	const { t } = useTranslation();
 
 	const history = useHistory();

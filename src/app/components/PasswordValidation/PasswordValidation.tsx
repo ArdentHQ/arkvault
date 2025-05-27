@@ -12,7 +12,7 @@ interface RulesProperties {
 	validationState: ValidationState;
 }
 
-const Rules: React.VFC<RulesProperties> = ({ validationState }) => {
+const Rules = ({ validationState }: RulesProperties) => {
 	const renderRule = (rule: ValidationRule, isValid: boolean) => (
 		<div key={rule} className="flex items-center space-x-2">
 			<span
@@ -48,14 +48,14 @@ interface PasswordValidationProperties {
 	optional?: boolean;
 }
 
-export const PasswordValidation: React.VFC<PasswordValidationProperties> = ({
+export const PasswordValidation = ({
 	confirmPasswordField,
 	confirmPasswordFieldLabel,
 	currentPasswordField,
 	passwordField,
 	passwordFieldLabel,
 	optional = true,
-}) => {
+}: PasswordValidationProperties) => {
 	const [hasError, setHasError] = useState(false);
 	const [showPasswordValidation, setShowPasswordValidation] = useState(false);
 

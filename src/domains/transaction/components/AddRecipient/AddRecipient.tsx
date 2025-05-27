@@ -1,7 +1,7 @@
 import { AddRecipientProperties, ToggleButtonProperties } from "./AddRecipient.contracts";
 import { FormField, FormLabel, SubForm } from "@/app/components/Form";
 import { GasLimit, MIN_GAS_PRICE } from "@/domains/transaction/components/FeeField/FeeField";
-import React, { VFC, useCallback, useEffect, useMemo, useRef, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { WalletAliasResult, useValidation } from "@/app/hooks";
 
 import { AddRecipientItem } from "./AddRecipientItem";
@@ -57,14 +57,14 @@ const TransferType = ({ isSingle, disableMultiple, onChange, maxRecipients }: To
 	);
 };
 
-export const AddRecipient: VFC<AddRecipientProperties> = ({
+export const AddRecipient = ({
 	disableMultiPaymentOption,
 	onChange,
 	profile,
 	recipients = [],
 	showMultiPaymentOption = true,
 	wallet,
-}) => {
+}: AddRecipientProperties) => {
 	const { t } = useTranslation();
 	const [addedRecipients, setAddedRecipients] = useState<RecipientItem[]>([]);
 	const [isSingle, setIsSingle] = useState(recipients.length <= 1);
@@ -86,7 +86,7 @@ export const AddRecipient: VFC<AddRecipientProperties> = ({
 	const fee = calculateGasFee(gasPrice ?? MIN_GAS_PRICE, gasLimit ?? GasLimit["transfer"]);
 
 	const ticker = network?.ticker();
-	const exchangeTicker = profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency) as string;
+	const exchangeTicker = profile.settings().get(Contracts.ProfileSetting.ExchangeCurrency) as string;
 	const { convert } = useExchangeRate({ exchangeTicker, profile, ticker });
 
 	const maxRecipients = network?.multiPaymentRecipients() ?? 0;
@@ -280,17 +280,17 @@ export const AddRecipient: VFC<AddRecipientProperties> = ({
 	const amountAddons =
 		!errors.amount && !errors.gasPrice && !errors.gasLimit && isSenderFilled && !wallet?.network().isTest()
 			? {
-					end: {
-						content: (
-							<Amount
-								value={convert(amount || 0)}
-								ticker={exchangeTicker}
-								data-testid="AddRecipient__currency-balance"
-								className="whitespace-no-break text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold"
-							/>
-						),
-					},
-				}
+				end: {
+					content: (
+						<Amount
+							value={convert(amount || 0)}
+							ticker={exchangeTicker}
+							data-testid="AddRecipient__currency-balance"
+							className="whitespace-no-break text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold"
+						/>
+					),
+				},
+			}
 			: undefined;
 
 	return (

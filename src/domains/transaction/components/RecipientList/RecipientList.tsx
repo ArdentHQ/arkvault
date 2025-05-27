@@ -8,7 +8,7 @@ import { assertString } from "@/utils/assertions";
 import { useActiveProfile } from "@/app/hooks";
 import { Table } from "@/app/components/Table";
 
-export const RecipientList: React.VFC<RecipientListProperties> = ({
+export const RecipientList = ({
 	disableButton,
 	isEditable,
 	label,
@@ -19,7 +19,7 @@ export const RecipientList: React.VFC<RecipientListProperties> = ({
 	ticker,
 	tooltipDisabled,
 	variant,
-}) => {
+}: RecipientListProperties) => {
 	const columns = useColumns({ isEditable, showAmount });
 
 	const profile = useActiveProfile();

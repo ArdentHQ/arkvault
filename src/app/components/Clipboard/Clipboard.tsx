@@ -8,11 +8,11 @@ const defaultProps = {
 	options: {},
 };
 
-export const Clipboard: React.VFC<ClipboardProperties> = ({
+export const Clipboard = ({
 	options = defaultProps.options,
 	variant,
 	...properties
-}) => {
+}: ClipboardProperties) => {
 	if (!properties.children) {
 		return <></>;
 	}

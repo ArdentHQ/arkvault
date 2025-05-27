@@ -1,4 +1,4 @@
-import React, { useRef, VFC } from "react";
+import React, { useRef } from "react";
 import cn from "classnames";
 
 interface InputSuggestionProperties {
@@ -7,7 +7,7 @@ interface InputSuggestionProperties {
 	hiddenReference?: React.RefObject<HTMLElement>;
 }
 
-export const InputSuggestion: VFC<InputSuggestionProperties> = ({ hiddenReference, suggestion, innerClassName }) => {
+export const InputSuggestion = ({ hiddenReference, suggestion, innerClassName }: InputSuggestionProperties) => {
 	const suggestionReference = useRef<HTMLSpanElement>(null);
 
 	if (!suggestion) {

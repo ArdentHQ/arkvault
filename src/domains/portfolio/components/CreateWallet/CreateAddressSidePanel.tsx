@@ -59,7 +59,7 @@ export const CreateAddressesSidePanel = ({
 	const [isGeneratingWallet, setIsGeneratingWallet] = useState(true);
 	const [_, setGenerationError] = useState<string | DefaultTReturn<TOptions>>("");
 	const [isEditAliasModalOpen, setIsEditAliasModalOpen] = useState(false);
-	const scrollContainerRef = useRef<HTMLDivElement | null>(null);
+	const scrollContainerRef = useRef<HTMLDivElement>(undefined);
 	const [isScrollable, setIsScrollable] = useState(false);
 	const { title, subtitle, titleIcon } = useCreateStepHeaderConfig(activeTab);
 

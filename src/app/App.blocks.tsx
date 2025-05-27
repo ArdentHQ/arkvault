@@ -46,7 +46,7 @@ const AppRouter = ({ children }: { children: React.ReactNode }) => {
 	);
 };
 
-const Main: React.VFC = () => {
+const Main = () => {
 	const { env, persist, isEnvironmentBooted, setIsEnvironmentBooted } = useEnvironmentContext();
 	const isOnline = useNetworkStatus();
 	const history = useHistory();

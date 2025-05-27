@@ -11,7 +11,7 @@ type ImageProperties = {
 	loading?: "eager" | "lazy";
 } & React.HTMLProps<any>;
 
-export const Image: React.VFC<ImageProperties> = ({ name, domain = "common", loading = "lazy", ...properties }) => {
+export const Image = ({ name, domain = "common", loading = "lazy", ...properties }: ImageProperties) => {
 	const [imageName, setImageName] = React.useState("");
 
 	// TODO: remove try/catch usage

@@ -6,7 +6,7 @@ type UseSchedulerHook = (config: { handler: () => void; timeout: number; autosta
 };
 
 export const useScheduler: UseSchedulerHook = ({ handler, timeout, autostart }) => {
-	const interval = useRef<number>();
+	const interval = useRef<number>(undefined);
 
 	const start = () => {
 		if (interval.current) {

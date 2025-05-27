@@ -51,7 +51,7 @@ const getDimensions = (size?: Size, dimensions?: [number, number]): [number, num
 	return sizeMap[size || "md"];
 };
 
-export const Icon: React.VFC<IconProperties> = ({ name, fallback, size, dimensions, ...properties }) => {
+export const Icon = ({ name, fallback, size, dimensions, ...properties }: IconProperties) => {
 	const Svg = SvgCollection[name];
 
 	const [width, height] = getDimensions(size, dimensions);

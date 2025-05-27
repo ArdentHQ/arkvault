@@ -96,7 +96,7 @@ const NavigationBarLogo: React.FC<NavigationBarLogoOnlyProperties> = ({
 	);
 };
 
-export const NavigationBarLogoOnly: React.VFC<NavigationBarLogoOnlyProperties> = ({ title }) => (
+export const NavigationBarLogoOnly = ({ title }: NavigationBarLogoOnlyProperties) => (
 	<NavWrapper aria-labelledby="main menu" variant="logo-only">
 		<div className="relative flex">
 			<div className="mt-6 flex flex-1 px-6 md:px-10">
@@ -122,13 +122,19 @@ const NavigationBarMobileWrapper = ({
 	/>
 );
 
-const NavigationBarMobile: React.VFC<{
+const NavigationBarMobile = ({
+	sendButtonClickHandler,
+	receiveButtonClickHandler,
+	homeButtonHandler,
+	disabled,
+	hasFixedFormButtons
+}: {
 	sendButtonClickHandler: () => void;
 	receiveButtonClickHandler: () => void;
 	homeButtonHandler: () => void;
 	disabled: boolean;
 	hasFixedFormButtons: boolean;
-}> = ({ sendButtonClickHandler, receiveButtonClickHandler, homeButtonHandler, disabled, hasFixedFormButtons }) => {
+}) => {
 	const { isInputElementFocused } = useInputFocus();
 
 	if (isInputElementFocused) {

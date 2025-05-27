@@ -21,7 +21,7 @@ interface SignInProperties {
 const MAX_ATTEMPTS = 3;
 const TIMEOUT = 60;
 
-export const SignIn: React.VFC<SignInProperties> = ({ isOpen, profile, onCancel, onClose, onSuccess }) => {
+export const SignIn = ({ isOpen, profile, onCancel, onClose, onSuccess }: SignInProperties) => {
 	const { t } = useTranslation();
 
 	const methods = useForm({ mode: "onChange" });

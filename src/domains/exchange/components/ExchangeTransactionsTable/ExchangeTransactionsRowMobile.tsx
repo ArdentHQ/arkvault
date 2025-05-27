@@ -18,7 +18,7 @@ interface ExchangeTransactionProviderProperties {
 	slug: string;
 }
 
-const ExchangeTransactionProvider: React.VFC<ExchangeTransactionProviderProperties> = ({ slug }) => {
+const ExchangeTransactionProvider = ({ slug }: ExchangeTransactionProviderProperties) => {
 	const { exchangeProviders } = useExchangeContext();
 
 	if (!exchangeProviders) {
@@ -36,7 +36,7 @@ interface ExchangeTransactionRowAmountProperties {
 	isPending?: boolean;
 }
 
-const ExchangeTransactionRowAmount: React.VFC<ExchangeTransactionRowAmountProperties> = ({ type, data, isPending }) => {
+const ExchangeTransactionRowAmount = ({ type, data, isPending }: ExchangeTransactionRowAmountProperties) => {
 	const { t } = useTranslation();
 
 	return (
@@ -93,7 +93,7 @@ const getIcon = (status: Contracts.ExchangeTransactionStatus) => {
 	};
 };
 
-const ExchangeTransactionsRowStatusIcon: React.VFC<ExchangeTransactionsRowStatusProperties> = ({
+const ExchangeTransactionsRowStatusIcon = ({
 	status,
 }: ExchangeTransactionsRowStatusProperties) => {
 	const { name, color } = getIcon(status);
@@ -110,11 +110,11 @@ interface ExchangeTransactionsRowMobileProperties {
 	onRemove: (exchangeTransaction: Contracts.IExchangeTransaction) => void;
 }
 
-export const ExchangeTransactionsRowMobile: React.VFC<ExchangeTransactionsRowMobileProperties> = ({
+export const ExchangeTransactionsRowMobile = ({
 	exchangeTransaction,
 	onClick,
 	onRemove,
-}) => {
+}: ExchangeTransactionsRowMobileProperties) => {
 	const { t } = useTranslation();
 
 	const handleRemove = (event: MouseEvent) => {

@@ -336,7 +336,7 @@ export const useProfileSynchronizer = ({
 	const { setProfileTheme, resetTheme } = useTheme();
 	const { startIdleTimer, resetIdleTimer } = useAutoSignOut(profile);
 	const [activeProfileId, setActiveProfileId] = useState<string | undefined>();
-	const lastPathname = useRef<string | undefined>();
+	const lastPathname = useRef<string>(undefined);
 
 	const history = useHistory();
 

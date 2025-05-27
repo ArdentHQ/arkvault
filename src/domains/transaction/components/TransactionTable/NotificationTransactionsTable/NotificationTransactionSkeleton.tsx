@@ -1,10 +1,10 @@
-import React, { VFC } from "react";
+import React from "react";
 
 import { NotificationTransactionSkeletonRow } from "./NotificationTransactionSkeletonRow";
 import { NotificationTransactionsSkeletonProperties } from "./NotificationTransactionsTable.contracts";
 import { Table } from "@/app/components/Table";
 
-export const NotificationTransactionsSkeleton: VFC<NotificationTransactionsSkeletonProperties> = ({ limit = 10 }) => {
+export const NotificationTransactionsSkeleton = ({ limit = 10 }: NotificationTransactionsSkeletonProperties) => {
 	const skeletonRows: any[] = Array.from({ length: limit }).fill({});
 
 	return (

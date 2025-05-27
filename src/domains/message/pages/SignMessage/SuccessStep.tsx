@@ -51,7 +51,7 @@ export const SuccessStep = ({
 }) => {
 	const { t } = useTranslation();
 
-	const messageReference = useRef();
+	const messageReference = useRef(undefined);
 
 	return (
 		<section>
