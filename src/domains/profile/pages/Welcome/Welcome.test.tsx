@@ -122,7 +122,7 @@ describe("Welcome with deeplink", () => {
 	});
 
 	it("should navigate to vote page", async () => {
-		const mockDelegateName = vi
+		const mockValidatorName = vi
 			.spyOn(profile.validators(), "findByUsername")
 			.mockReturnValue(profile.wallets().first());
 		const toastWarningSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
@@ -532,7 +532,7 @@ describe("Welcome with deeplink", () => {
 	});
 
 	it("should not navigate when clicking multiple times", async () => {
-		const mockDelegateName = vi
+		const mockValidatorName = vi
 			.spyOn(profile.validators(), "findByUsername")
 			.mockReturnValue(profile.wallets().first());
 		const mockProfiles = vi.spyOn(env.profiles(), "values").mockReturnValue([profile]);
