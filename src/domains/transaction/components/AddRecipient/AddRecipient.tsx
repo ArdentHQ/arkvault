@@ -83,7 +83,7 @@ export const AddRecipient: VFC<AddRecipientProperties> = ({
 	const { sendTransfer } = useValidation();
 
 	const { minGasPrice } = getFeeMinMax();
-	const fee = calculateGasFee(minGasPrice, GasLimit["transfer"].times(recipients.length));
+	const fee = calculateGasFee(minGasPrice, GasLimit["transfer"].times(Math.max(recipients.length, 1)));
 
 	const ticker = network?.ticker();
 	const exchangeTicker = profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency) as string;
