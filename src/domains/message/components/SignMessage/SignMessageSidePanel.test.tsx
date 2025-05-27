@@ -4,13 +4,12 @@ import { createHashHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
 
-import { SignMessage } from "./SignMessageSidePanel";
+import { SignMessageSidePanel } from "./SignMessageSidePanel";
 import { translations as messageTranslations } from "@/domains/message/i18n";
 import {
 	env,
 	getMainsailProfileId,
 	render,
-	renderResponsiveWithRoute,
 	screen,
 	waitFor,
 	triggerMessageSignOnce,
@@ -35,8 +34,20 @@ const signMessage = "Hello World";
 
 const expectHeading = async (text: string) => {
 	await waitFor(() => {
-		expect(screen.getByTestId("header__title")).toHaveTextContent(text);
+		expect(screen.getByTestId("SidePanel__title")).toHaveTextContent(text);
 	});
+};
+
+const selectNthAddress = async (index = 0) => {
+	await userEvent.click(screen.getByTestId("SelectAddress__wrapper"));
+
+	await waitFor(() => {
+		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
+	});
+
+	const nthAddress = screen.getByTestId(`SearchWalletListItem__select-${index}`);
+
+	await userEvent.click(nthAddress);
 };
 
 // Mock implementation of TextEncoder to always return Uint8Array.
@@ -49,9 +60,9 @@ vi.stubGlobal(
 	},
 );
 
-describe("SignMessage", () => {
+describe("SignMessageSidePanel", () => {
 	beforeAll(async () => {
-		profile = env.profiles().findById(getMainsailProfileId());
+		profile = await env.profiles().create("Test");
 
 		wallet = await profile.walletFactory().fromMnemonicWithBIP39({
 			mnemonic,
@@ -69,49 +80,28 @@ describe("SignMessage", () => {
 
 	describe("Sign with Wallet", () => {
 		beforeEach(() => {
-			history.push(walletUrl(wallet.id()));
+			const dashboardUrl = `/profiles/${profile.id()}/dashboard`;
+
+			history.push(dashboardUrl);
 		});
 
-		it.each(["xs", "lg"])("should render (%s)", async (breakpoint) => {
-			await wallet.synchroniser().identity();
-
-			const { asFragment } = renderResponsiveWithRoute(
-				<Route path="/profiles/:profileId/wallets/:walletId/sign-message">
-					<SignMessage />
+		it("should render", async (breakpoint) => {
+			const { asFragment } = render(
+				<Route path="/profiles/:profileId/dashboard">
+					<SignMessageSidePanel open={true} onOpenChange={vi.fn()} onMountChange={vi.fn()} />,
 				</Route>,
-				breakpoint,
 				{
 					history,
-					route: walletUrl(wallet.id()),
 				},
 			);
 
-			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
+			await waitFor(() => {
+				expect(screen.getByTestId("SignMessage")).toBeInTheDocument();
+			});
 
 			expect(messageInput()).toBeInTheDocument();
 
 			expect(asFragment()).toMatchSnapshot();
-		});
-
-		it("should render for ledger wallets", async () => {
-			const isLedgerMock = vi.spyOn(wallet, "isLedger").mockReturnValue(true);
-
-			render(
-				<Route path="/profiles/:profileId/wallets/:walletId/sign-message">
-					<SignMessage />
-				</Route>,
-				{
-					history,
-					route: walletUrl(wallet.id()),
-				},
-			);
-
-			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
-			await expect(screen.findByTestId("AuthenticationStep__mnemonic")).rejects.toThrow(/Unable to find/);
-
-			expect(messageInput()).toBeInTheDocument();
-
-			isLedgerMock.mockRestore();
 		});
 
 		it("should sign message with mnemonic", async () => {
@@ -123,16 +113,21 @@ describe("SignMessage", () => {
 			};
 
 			render(
-				<Route path="/profiles/:profileId/wallets/:walletId/sign-message">
-					<SignMessage />
+				<Route path="/profiles/:profileId/dashboard">
+					<SignMessageSidePanel open={true} onOpenChange={vi.fn()} onMountChange={vi.fn()} />,
 				</Route>,
 				{
 					history,
-					route: walletUrl(wallet.id()),
 				},
 			);
 
 			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
+
+			expect(
+				screen.getByText(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_SELECT_WALLET),
+			).toBeInTheDocument();
+
+			await selectNthAddress();
 
 			expect(
 				screen.getByText(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_MNEMONIC),
@@ -178,14 +173,14 @@ describe("SignMessage", () => {
 			profile.wallets().push(walletWithSecret);
 
 			render(
-				<Route path="/profiles/:profileId/wallets/:walletId/sign-message">
-					<SignMessage />
+				<Route path="/profiles/:profileId/dashboard">
+					<SignMessageSidePanel open={true} onOpenChange={vi.fn()} onMountChange={vi.fn()} />,
 				</Route>,
 				{
 					history,
-					route: walletUrl(walletWithSecret.id()),
 				},
 			);
+			await selectNthAddress(2);
 
 			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
 
@@ -211,14 +206,15 @@ describe("SignMessage", () => {
 			profile.wallets().push(walletWithSecret);
 
 			render(
-				<Route path="/profiles/:profileId/wallets/:walletId/sign-message">
-					<SignMessage />
+				<Route path="/profiles/:profileId/dashboard">
+					<SignMessageSidePanel open={true} onOpenChange={vi.fn()} onMountChange={vi.fn()} />,
 				</Route>,
 				{
 					history,
-					route: walletUrl(walletWithSecret.id()),
 				},
 			);
+
+			await selectNthAddress(2);
 
 			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
 

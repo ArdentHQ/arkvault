@@ -125,7 +125,10 @@ export const SidePanel = ({
 																		{titleIcon}
 																	</div>
 																)}
-																<h2 className="mb-0 text-lg leading-[21px] font-semibold md:pt-0">
+																<h2
+																	data-testid="SidePanel__title"
+																	className="mb-0 text-lg leading-[21px] font-semibold md:pt-0"
+																>
 																	{title}
 																</h2>
 															</div>
