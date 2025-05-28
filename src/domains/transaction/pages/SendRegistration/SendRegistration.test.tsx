@@ -158,7 +158,7 @@ const continueButton = () => screen.getByTestId("StepNavigation__continue-button
 const formStep = () => screen.findByTestId("ValidatorRegistrationForm_form-step");
 const sendButton = () => screen.getByTestId("StepNavigation__send-button");
 
-const reviewStepID = "DelegateRegistrationForm__review-step";
+const reviewStepID = "ValidatorRegistrationForm__review-step";
 const multisignatureTitle = "Multisignature Registration";
 const withKeyboard = "with keyboard";
 

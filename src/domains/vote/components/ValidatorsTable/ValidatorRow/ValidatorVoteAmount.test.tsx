@@ -26,7 +26,7 @@ const Wrapper = ({ children }: { children: React.ReactNode }) => (
 	</table>
 );
 
-describe("DelegateVoteAmount", () => {
+describe("ValidatorVoteAmount", () => {
 	beforeAll(() => {
 		const profile = env.profiles().findById(getMainsailProfileId());
 		wallet = profile.wallets().values()[0];
@@ -35,7 +35,7 @@ describe("DelegateVoteAmount", () => {
 			address: data[0].address,
 			explorerLink: "",
 			governanceIdentifier: "address",
-			isResignedDelegate: false,
+			isResignedValidator: false,
 			isValidator: true,
 			publicKey: data[0].publicKey,
 			username: data[0].username,
@@ -97,7 +97,7 @@ describe("DelegateVoteAmount", () => {
 
 		const amountField = screen.getByTestId("InputCurrency");
 
-		await userEvent.click(screen.getByTestId("DelegateVoteAmount__ticker"));
+		await userEvent.click(screen.getByTestId("ValidatorVoteAmount__ticker"));
 
 		await waitFor(() => expect(amountField).toHaveFocus());
 	});
@@ -122,7 +122,7 @@ describe("DelegateVoteAmount", () => {
 
 		const amountField = screen.getByTestId("InputCurrency");
 
-		await userEvent.click(screen.getByTestId("DelegateVoteAmount__ticker"));
+		await userEvent.click(screen.getByTestId("ValidatorVoteAmount__ticker"));
 
 		await waitFor(() => expect(amountField).not.toHaveFocus());
 	});

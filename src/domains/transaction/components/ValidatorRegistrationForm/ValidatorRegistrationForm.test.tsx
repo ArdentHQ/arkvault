@@ -103,7 +103,7 @@ describe("ValidatorRegistrationForm", () => {
 	it("should render review step", async () => {
 		const { asFragment } = renderComponent({ activeTab: 2 });
 
-		await expect(screen.findByTestId("DelegateRegistrationForm__review-step")).resolves.toBeVisible();
+		await expect(screen.findByTestId("ValidatorRegistrationForm__review-step")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 	});

@@ -58,13 +58,13 @@ export const useValidatorRow = ({
 	const isSelectedUnvote = useMemo(
 		() =>
 			!!selectedUnvotes?.find((unvote) => {
-				const isEqualToDelegate = unvote.validatorAddress === validator?.address?.();
+				const isEqualToValidator = unvote.validatorAddress === validator?.address?.();
 
-				if (isEqualToDelegate && requiresStakeAmount) {
+				if (isEqualToValidator && requiresStakeAmount) {
 					return unvote.amount === voted?.amount;
 				}
 
-				return isEqualToDelegate;
+				return isEqualToValidator;
 			}),
 		[validator, requiresStakeAmount, selectedUnvotes, voted],
 	);
@@ -251,32 +251,23 @@ export const useValidatorRow = ({
 export const ValidatorStatus = ({ isActive, className }: { isActive: boolean; className?: string }) => {
 	const { t } = useTranslation();
 
-	if (isActive) {
-		return (
-			<Tooltip content={t("VOTE.VALIDATOR_TABLE.TOOLTIP.VALIDATOR_IN_FORGING_POSITION")}>
-				<div
-					data-testid="ValidatorStatus__active"
-					className={twMerge(
-						"bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent",
-						className,
-					)}
-				>
-					{t("WALLETS.STATUS.ACTIVE")}
-				</div>
-			</Tooltip>
-		);
-	}
+	const tooltipContent = isActive
+		? t("VOTE.VALIDATOR_TABLE.TOOLTIP.VALIDATOR_IN_FORGING_POSITION")
+		: t("VOTE.VALIDATOR_TABLE.TOOLTIP.VALIDATOR_IN_STANDY_POSITION");
+
+	const statusText = isActive ? t("WALLETS.STATUS.ACTIVE") : t("WALLETS.STATUS.STANDBY");
+	const testId = isActive ? "ValidatorStatus__active" : "ValidatorStatus__standby";
 
 	return (
-		<Tooltip content={t("VOTE.VALIDATOR_TABLE.TOOLTIP.VALIDATOR_IN_STANDY_POSITION")}>
+		<Tooltip content={tooltipContent}>
 			<div
-				data-testid="ValidatorStatus__standby"
+				data-testid={testId}
 				className={twMerge(
-					"bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent",
+					"bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 group-hover:bg-theme-secondary-300 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent dark:group-hover:bg-transparent",
 					className,
 				)}
 			>
-				{t("WALLETS.STATUS.STANDBY")}
+				{statusText}
 			</div>
 		</Tooltip>
 	);
