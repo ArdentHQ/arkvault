@@ -263,7 +263,7 @@ export const ValidatorStatus = ({ isActive, className }: { isActive: boolean; cl
 			<div
 				data-testid={testId}
 				className={twMerge(
-					"bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent",
+					"bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 group-hover:bg-theme-secondary-300 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent dark:group-hover:bg-transparent",
 					className,
 				)}
 			>
