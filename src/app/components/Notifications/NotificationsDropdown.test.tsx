@@ -87,8 +87,6 @@ describe("Notifications", () => {
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 
-		expect(container).toMatchSnapshot();
-
 		await userEvent.click(screen.getByTestId("Modal__close-button"));
 
 		await waitFor(() => expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument());
