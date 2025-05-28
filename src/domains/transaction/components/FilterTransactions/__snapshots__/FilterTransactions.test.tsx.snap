@@ -6,7 +6,7 @@ exports[`FilterTransactions > should open dropdown list with all transaction typ
     data-testid="FilterTransactions"
   >
     <div
-      aria-controls=":r4:"
+      aria-controls="«r4»"
       aria-expanded="true"
       aria-haspopup="dialog"
       data-testid="dropdown__toggle"
