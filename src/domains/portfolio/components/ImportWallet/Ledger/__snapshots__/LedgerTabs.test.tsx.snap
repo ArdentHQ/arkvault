@@ -24,17 +24,17 @@ exports[`LedgerTabs > should render connection step 1`] = `
               class="inline-flex w-full items-center justify-center space-x-3"
             >
               <div
-                class="flex w-full flex-row items-center gap-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-6 py-5 dark:border-theme-warning-600 dark:bg-transparent"
+                class="border-theme-warning-200 bg-theme-warning-50 dark:border-theme-warning-600 flex w-full flex-row items-center gap-3 rounded-xl border px-6 py-5 dark:bg-transparent"
                 data-testid="Loader__wrapper"
               >
                 <div
-                  class="animate-spin border-[5px] flex-shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 border-l-theme-warning-900 dark:border-l-theme-warning-600 rounded-full"
+                  class="animate-spin border-[5px] shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 border-l-theme-warning-900 dark:border-l-theme-warning-600 rounded-full"
                 />
                 <hr
-                  class="h-5 w-px border-transparent bg-theme-warning-200 dark:bg-theme-secondary-800"
+                  class="bg-theme-warning-200 dark:bg-theme-secondary-800 h-5 w-px border-transparent"
                 />
                 <span
-                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-warning-600 md:text-base"
+                  class="text-theme-secondary-700 dark:text-theme-warning-600 text-sm font-semibold md:text-base"
                   data-testid="Loader__text"
                 >
                   Open the Mainsail app on your device ...

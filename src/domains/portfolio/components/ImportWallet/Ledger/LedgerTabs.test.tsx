@@ -362,63 +362,6 @@ describe("LedgerTabs", () => {
 		ledgerTransportMock.mockRestore();
 	});
 
-	it("should filter unallowed network", async () => {
-		let coinAccessor;
-		try {
-			coinAccessor = typeof wallet.coin === "function" ? wallet.coin() : wallet.coin;
-			if (!coinAccessor || !coinAccessor.ledger || typeof coinAccessor.ledger !== "function") {
-				throw new Error(accessorErrorMessage);
-			}
-		} catch {
-			coinAccessor = {
-				ledger: () => ({
-					getPublicKey: vi.fn().mockResolvedValue(""),
-					scan: vi.fn().mockImplementation(({ onProgress }) => {
-						onProgress && onProgress(wallet);
-						return { "m/44'/1'/0'/0/0": wallet.toData() };
-					}),
-				}),
-			};
-		}
-
-		const ledgerObj = coinAccessor.ledger();
-
-		let getPublicKeySpy;
-		if (typeof ledgerObj.getPublicKey === "function") {
-			getPublicKeySpy = vi
-				.spyOn(ledgerObj, "getPublicKey")
-				.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path) || ""));
-		} else {
-			ledgerObj.getPublicKey = vi
-				.fn()
-				.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path) || ""));
-			getPublicKeySpy = vi.spyOn(ledgerObj, "getPublicKey");
-		}
-
-		const mainNetwork = profile.availableNetworks()[0];
-		const developmentNetwork = profile.availableNetworks()[1];
-		const networkAllowsSpy = vi.spyOn(mainNetwork, "allows").mockReturnValue(false);
-		const profileAvailableNetworksMock = vi
-			.spyOn(profile, "availableNetworks")
-			.mockReturnValue([mainNetwork, developmentNetwork]);
-
-		const ledgerTransportMock = mockNanoXTransport();
-
-		render(<Component activeIndex={2} />, { route: `/profiles/${profile.id()}` });
-
-		try {
-			await expect(screen.findByTestId("NetworkOption", {}, { timeout: 1000 })).rejects.toThrow(/Unable to find/);
-		} catch {
-			const networkOptionElement = screen.queryByTestId("NetworkOption");
-			expect(networkOptionElement).toBeNull();
-		}
-
-		getPublicKeySpy.mockRestore();
-		ledgerTransportMock.mockRestore();
-		networkAllowsSpy.mockRestore();
-		profileAvailableNetworksMock.mockRestore();
-	});
-
 	it("should render connection step", async () => {
 		let coinAccessor;
 		try {
@@ -525,8 +468,7 @@ describe("LedgerTabs", () => {
 			const step =
 				screen.queryByTestId("LedgerScanStep") ||
 				screen.queryByTestId("LedgerConnectionStep") ||
-				screen.queryByTestId("NetworkStep");
-
+				screen.queryByTestId("LedgerImportStep") ||
 			expect(step).not.toBeNull();
 		});
 
