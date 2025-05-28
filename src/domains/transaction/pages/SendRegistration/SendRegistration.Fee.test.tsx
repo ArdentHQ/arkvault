@@ -71,7 +71,7 @@ const renderPage = async (wallet: Contracts.IReadWriteWallet, type = "validatorR
 const continueButton = () => screen.getByTestId("StepNavigation__continue-button");
 const formStep = () => screen.findByTestId("ValidatorRegistrationForm_form-step");
 
-const reviewStepID = "DelegateRegistrationForm__review-step";
+const reviewStepID = "ValidatorRegistrationForm__review-step";
 
 describe("Registration Fee", () => {
 	beforeAll(async () => {
