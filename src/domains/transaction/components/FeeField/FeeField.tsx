@@ -5,6 +5,7 @@ import { useFormContext } from "react-hook-form";
 
 import { useDebounce, useFees } from "@/app/hooks";
 import { InputFee } from "@/domains/transaction/components/InputFee";
+import { BigNumber } from "@/app/lib/helpers";
 
 interface Properties {
 	type:
@@ -21,29 +22,29 @@ interface Properties {
 	profile: Contracts.IProfile;
 }
 
-export const GasLimit: Record<Properties["type"], number> = {
-	multiPayment: 21_000,
-	multiSignature: 21_000,
-	transfer: 21_000,
-	usernameRegistration: 21_000,
-	usernameResignation: 21_000,
-	validatorRegistration: 21_000,
-	validatorResignation: 21_000,
-	vote: 21_000,
+const gasLimit21k = BigNumber.make(21_000);
+export const GasLimit: Record<Properties["type"], BigNumber> = {
+	multiPayment: gasLimit21k,
+	multiSignature: gasLimit21k,
+	transfer: gasLimit21k,
+	usernameRegistration: BigNumber.make(200_000),
+	usernameResignation: BigNumber.make(200_000),
+	validatorRegistration: BigNumber.make(500_000),
+	validatorResignation: BigNumber.make(150_000),
+	vote: BigNumber.make(200_000),
 };
-
-export const MIN_GAS_PRICE = 5;
 
 export const FeeField: React.FC<Properties> = ({ type, network, profile, ...properties }: Properties) => {
 	const { calculate, estimateGas } = useFees(profile);
 
 	const [isLoadingFee, setIsLoadingFee] = useState(false);
+	const [estimatedGasLimit, setEstimatedGasLimit] = useState(BigNumber.make(0));
 
 	const { watch, setValue, getValues } = useFormContext();
 	const { fees, inputFeeSettings = {} } = watch(["fees", "inputFeeSettings"]);
 
-	const gasPrice = getValues("gasPrice") as number;
-	const gasLimit = getValues("gasLimit") as number;
+	const gasPrice = BigNumber.make(getValues("gasPrice") ?? 0);
+	const gasLimit = BigNumber.make(getValues("gasLimit") ?? 0);
 
 	const [data, _isLoadingData] = useDebounce(properties.data, 700);
 
@@ -51,10 +52,10 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 		/* istanbul ignore else -- @preserve */
 		const isMultiPayment = type === "multiPayment";
 		const recipientsCount = isMultiPayment && Array.isArray(data?.payments) ? data.payments.length : 1;
-		const defaultGasLimit = isMultiPayment ? GasLimit.multiPayment * recipientsCount : GasLimit[type];
+		const fallbackGasLimit = isMultiPayment ? GasLimit.multiPayment.times(recipientsCount) : GasLimit[type];
 
 		const estimate = async () => {
-			let gasLimit = defaultGasLimit;
+			let gasLimit = fallbackGasLimit;
 
 			try {
 				gasLimit = await estimateGas({ data: { ...getValues(), ...data }, type });
@@ -62,6 +63,7 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 				console.warn(error);
 			}
 
+			setEstimatedGasLimit(gasLimit);
 			setValue("gasLimit", gasLimit, { shouldDirty: true, shouldValidate: true });
 		};
 
@@ -98,9 +100,7 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 			loading={!fees || isLoadingFee}
 			gasPrice={gasPrice}
 			gasLimit={gasLimit}
-			defaultGasLimit={gasLimit ?? GasLimit[type]}
-			minGasPrice={MIN_GAS_PRICE}
-			gasPriceStep={1}
+			estimatedGasLimit={estimatedGasLimit}
 			network={network}
 			profile={profile}
 			onChangeGasPrice={(value) => {

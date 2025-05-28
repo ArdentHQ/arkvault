@@ -1,5 +1,6 @@
 import { Signatory } from "./signatories";
 import { SignedTransactionData } from "./contracts";
+import { BigNumber } from "@/app/lib/helpers";
 
 export interface TransactionService {
 	// Core
@@ -20,8 +21,8 @@ export interface TransactionService {
 export interface TransactionInput {
 	fee?: number;
 	feeLimit?: number;
-	gasPrice?: number;
-	gasLimit?: number;
+	gasPrice?: BigNumber;
+	gasLimit?: BigNumber;
 	nonce?: string;
 	signatory: Signatory;
 	contract?: {

@@ -24,6 +24,7 @@ import { translations as transactionTranslations } from "@/domains/transaction/i
 import transactionsFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions.json";
 import userEvent from "@testing-library/user-event";
 import { signedTransactionMock } from "./SendTransfer.test";
+import { BigNumber } from "@/app/lib/helpers";
 
 const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue(signedTransactionMock);
@@ -339,7 +340,6 @@ describe("SendTransfer Fee Handling", () => {
 
 	it("should correctly handle fees when network's fee type is size", async () => {
 		const { wallet: arkWallet } = await profile.walletFactory().generate({
-			coin: "Mainsail",
 			network: "mainsail.devnet",
 		});
 
@@ -355,11 +355,9 @@ describe("SendTransfer Fee Handling", () => {
 		const useFeesMock = vi.spyOn(useFeesHook, "useFees").mockReturnValue({
 			calculate: () =>
 				Promise.resolve({
-					avg: 2,
-					isDynamic: true,
-					max: 3,
-					min: 1,
-					static: 1,
+					avg: BigNumber.make(2),
+					max: BigNumber.make(3),
+					min: BigNumber.make(1),
 				}),
 		});
 

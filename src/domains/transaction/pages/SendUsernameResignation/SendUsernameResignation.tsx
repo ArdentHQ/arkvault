@@ -77,7 +77,6 @@ export const SendUsernameResignation = () => {
 	useToggleFeeFields({
 		activeTab,
 		form,
-		gasLimitType: "usernameResignation",
 		wallet: activeWallet,
 	});
 

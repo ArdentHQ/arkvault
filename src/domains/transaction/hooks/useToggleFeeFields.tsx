@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import { GasLimit, MIN_GAS_PRICE } from "@/domains/transaction/components/FeeField/FeeField";
 import { Contracts } from "@/app/lib/profiles";
 import { useFormContext } from "react-hook-form";
 import { useValidation } from "@/app/hooks";
@@ -7,11 +6,10 @@ import { useValidation } from "@/app/hooks";
 interface Properties {
 	wallet?: Contracts.IReadWriteWallet;
 	activeTab: number;
-	gasLimitType: keyof typeof GasLimit;
 	form: ReturnType<typeof useFormContext>;
 }
 
-export const useToggleFeeFields = ({ wallet, activeTab, gasLimitType, form }: Properties) => {
+export const useToggleFeeFields = ({ wallet, activeTab, form }: Properties) => {
 	const { register, unregister, getValues } = form;
 
 	const { common } = useValidation();
@@ -23,8 +21,8 @@ export const useToggleFeeFields = ({ wallet, activeTab, gasLimitType, form }: Pr
 		if (activeTab === 1) {
 			unregister(["gasPrice", "gasLimit"]);
 		} else if (activeTab === 2) {
-			register("gasPrice", common.gasPrice(walletBalance, getValues, MIN_GAS_PRICE, wallet?.network()));
-			register("gasLimit", common.gasLimit(walletBalance, getValues, GasLimit[gasLimitType], wallet?.network()));
+			register("gasPrice", common.gasPrice(walletBalance, getValues, wallet?.network()));
+			register("gasLimit", common.gasLimit(walletBalance, getValues, wallet?.network()));
 		}
 	}, [activeTab, wallet, common]);
 };

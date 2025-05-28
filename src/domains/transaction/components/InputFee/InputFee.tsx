@@ -16,13 +16,35 @@ import { Switch } from "@/app/components/Switch";
 import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
 import { useTranslation } from "react-i18next";
 import { UnitConverter } from "@arkecosystem/typescript-crypto";
+import { configManager } from "@/app/lib/mainsail";
 
-export const calculateGasFee = (gasPrice?: number, gasLimit?: number): number => {
+export const calculateGasFee = (gasPrice?: BigNumber, gasLimit?: BigNumber): number => {
 	if (!gasPrice || !gasLimit) {
 		return 0;
 	}
 
-	return UnitConverter.formatUnits(BigNumber.make(gasLimit).times(gasPrice).toString(), "gwei");
+	return UnitConverter.formatUnits(gasLimit.times(gasPrice).toString(), "gwei");
+};
+
+export const getFeeMinMax = () => {
+	const minGasPrice = BigNumber.make(
+		UnitConverter.formatUnits(
+			BigNumber.make(configManager.getMilestone()["gas"]["minimumGasPrice"] ?? 0).toString(),
+			"gwei",
+		),
+	);
+
+	const maxGasPrice = BigNumber.make(
+		UnitConverter.formatUnits(
+			BigNumber.make(configManager.getMilestone()["gas"]["maximumGasPrice"] ?? 0).toString(),
+			"gwei",
+		),
+	);
+
+	const minGasLimit = BigNumber.make(configManager.getMilestone()["gas"]["minimumGasLimit"] ?? 0);
+	const maxGasLimit = BigNumber.make(configManager.getMilestone()["gas"]["maximumGasLimit"] ?? 0);
+
+	return { maxGasLimit, maxGasPrice, minGasLimit, minGasPrice };
 };
 
 export const InputFee: React.FC<InputFeeProperties> = memo(
@@ -30,15 +52,13 @@ export const InputFee: React.FC<InputFeeProperties> = memo(
 		min,
 		avg,
 		max,
-		gasPriceStep,
 		disabled,
 		network,
 		profile,
 		loading,
-		defaultGasLimit,
 		onChangeGasPrice,
+		estimatedGasLimit,
 		onChangeGasLimit,
-		minGasPrice,
 		gasPrice,
 		gasLimit,
 		...properties
@@ -80,7 +100,7 @@ export const InputFee: React.FC<InputFeeProperties> = memo(
 
 			if (newValue === InputFeeViewType.Simple) {
 				onChangeGasPrice(options[selectedFeeOption].gasPrice);
-				onChangeGasLimit(defaultGasLimit);
+				onChangeGasLimit(estimatedGasLimit);
 			}
 		};
 
@@ -95,16 +115,15 @@ export const InputFee: React.FC<InputFeeProperties> = memo(
 				convert={convert}
 				disabled={disabled || loading}
 				exchangeTicker={exchangeTicker!}
-				defaultGasLimit={defaultGasLimit}
-				onChangeGasPrice={(gasPrice: number) => {
-					onChangeGasPrice(Number(gasPrice));
+				onChangeGasPrice={(gasPrice: BigNumber | number | string) => {
+					const value = gasPrice === "" ? 0 : gasPrice;
+					onChangeGasPrice(BigNumber.make(value));
 				}}
-				onChangeGasLimit={(gasLimit: number) => {
-					onChangeGasLimit(Number(gasLimit));
+				onChangeGasLimit={(gasLimit: BigNumber | number | string) => {
+					const value = gasLimit === "" ? 0 : gasLimit;
+					onChangeGasLimit(BigNumber.make(value));
 				}}
 				showConvertedValue={showConvertedValues}
-				gasPriceStep={gasPriceStep}
-				minGasPrice={minGasPrice}
 				gasPrice={gasPrice}
 				gasLimit={gasLimit}
 			/>
