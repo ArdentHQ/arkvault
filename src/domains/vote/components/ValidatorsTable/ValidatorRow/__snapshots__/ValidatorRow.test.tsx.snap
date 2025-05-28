@@ -45,7 +45,7 @@ exports[`ValidatorRow > should emit action on select button 1`] = `
             class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
           >
             <div
-              class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent"
+              class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 group-hover:bg-theme-secondary-300 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent dark:group-hover:bg-transparent"
               data-testid="ValidatorStatus__standby"
             >
               Standby
@@ -176,7 +176,7 @@ exports[`ValidatorRow > should render 1`] = `
             class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
           >
             <div
-              class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent"
+              class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 group-hover:bg-theme-secondary-300 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent dark:group-hover:bg-transparent"
               data-testid="ValidatorStatus__standby"
             >
               Standby
@@ -307,7 +307,7 @@ exports[`ValidatorRow > should render changed style when network requires vote a
             class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-warning-50 dark:bg-theme-background dark:border-theme-warning-600"
           >
             <div
-              class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent"
+              class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 group-hover:bg-theme-secondary-300 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent dark:group-hover:bg-transparent"
               data-testid="ValidatorStatus__standby"
             >
               Standby
@@ -483,7 +483,7 @@ exports[`ValidatorRow > should render the selected validator 1`] = `
             class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600"
           >
             <div
-              class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent"
+              class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 group-hover:bg-theme-secondary-300 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent dark:group-hover:bg-transparent"
               data-testid="ValidatorStatus__standby"
             >
               Standby
@@ -614,7 +614,7 @@ exports[`ValidatorRow > should render the selected vote 1`] = `
             class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
           >
             <div
-              class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent"
+              class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 group-hover:bg-theme-secondary-300 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent dark:group-hover:bg-transparent"
               data-testid="ValidatorStatus__standby"
             >
               Standby
@@ -736,7 +736,7 @@ exports[`ValidatorRow > should render the selected vote 1`] = `
             class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
           >
             <div
-              class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent"
+              class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 group-hover:bg-theme-secondary-300 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent dark:group-hover:bg-transparent"
               data-testid="ValidatorStatus__standby"
             >
               Standby
@@ -858,7 +858,7 @@ exports[`ValidatorRow > should render the selected vote 1`] = `
             class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
           >
             <div
-              class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent"
+              class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 group-hover:bg-theme-secondary-300 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent dark:group-hover:bg-transparent"
               data-testid="ValidatorStatus__standby"
             >
               Standby
@@ -994,7 +994,7 @@ exports[`ValidatorRow > should render the unselected vote 1`] = `
             class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
           >
             <div
-              class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent"
+              class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 group-hover:bg-theme-secondary-300 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent dark:group-hover:bg-transparent"
               data-testid="ValidatorStatus__standby"
             >
               Standby
@@ -1125,7 +1125,7 @@ exports[`ValidatorRow > should render when network requires vote amount 1`] = `
             class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
           >
             <div
-              class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent"
+              class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 group-hover:bg-theme-secondary-300 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent dark:group-hover:bg-transparent"
               data-testid="ValidatorStatus__standby"
             >
               Standby
