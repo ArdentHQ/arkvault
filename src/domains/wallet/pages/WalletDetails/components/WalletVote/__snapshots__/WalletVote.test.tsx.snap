@@ -13,7 +13,7 @@ exports[`WalletVote > should disable vote button when balance is less than votes
       <div
         class="text-theme-secondary-700 dark:text-theme-dark-200 px-[22px] pb-4 text-center text-base font-semibold md:mt-0 md:px-0 md:pb-0 md:text-left"
       >
-        You have not voted for a Delegate yet. 
+        You have not voted for a Validator yet. 
         <a
           class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-flex items-center"
           data-ring-focus-margin="-m-1"
@@ -169,7 +169,7 @@ exports[`WalletVote > should render 1`] = `
       <div
         class="text-theme-secondary-700 dark:text-theme-dark-200 px-[22px] pb-4 text-center text-base font-semibold md:mt-0 md:px-0 md:pb-0 md:text-left"
       >
-        You have not voted for a Delegate yet. 
+        You have not voted for a Validator yet. 
         <a
           class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-flex items-center"
           data-ring-focus-margin="-m-1"
@@ -271,7 +271,7 @@ exports[`WalletVote > should render as all resigned 1`] = `
         <p
           class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm md:hidden"
         >
-          Delegate Status
+          Validator Status
         </p>
         <div
           class="font-semibold overflow-hidden no-ligatures px-1 border-2 rounded text-theme-danger-500 border-theme-danger-100 bg-theme-danger-100 flex h-fit w-fit items-center justify-center border-none py-0.5 text-xs dark:border-solid"
@@ -390,7 +390,7 @@ exports[`WalletVote > should render disabled vote button 1`] = `
       <div
         class="text-theme-secondary-700 dark:text-theme-dark-200 px-[22px] pb-4 text-center text-base font-semibold md:mt-0 md:px-0 md:pb-0 md:text-left"
       >
-        You have not voted for a Delegate yet. 
+        You have not voted for a Validator yet. 
         <a
           class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-flex items-center"
           data-ring-focus-margin="-m-1"
@@ -546,7 +546,7 @@ exports[`WalletVote > should render ledger for incompatible ledger wallet 1`] = 
       <div
         class="text-theme-secondary-700 dark:text-theme-dark-200 px-[22px] pb-4 text-center text-base font-semibold md:mt-0 md:px-0 md:pb-0 md:text-left"
       >
-        You have not voted for a Delegate yet. 
+        You have not voted for a Validator yet. 
         <a
           class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-flex items-center"
           data-ring-focus-margin="-m-1"
@@ -768,7 +768,7 @@ exports[`WalletVote > should render the maximum votes 1`] = `
       <div
         class="text-theme-secondary-700 dark:text-theme-dark-200 px-[22px] pb-4 text-center text-base font-semibold md:mt-0 md:px-0 md:pb-0 md:text-left"
       >
-        You have not voted for a Delegate yet. 
+        You have not voted for a Validator yet. 
         <a
           class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-flex items-center"
           data-ring-focus-margin="-m-1"
@@ -922,7 +922,7 @@ exports[`WalletVote > should render without votes 1`] = `
       <div
         class="text-theme-secondary-700 dark:text-theme-dark-200 px-[22px] pb-4 text-center text-base font-semibold md:mt-0 md:px-0 md:pb-0 md:text-left"
       >
-        You have not voted for a Delegate yet. 
+        You have not voted for a Validator yet. 
         <a
           class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-flex items-center"
           data-ring-focus-margin="-m-1"
@@ -976,7 +976,74 @@ exports[`WalletVote > should render without votes 1`] = `
 </DocumentFragment>
 `;
 
-exports[`WalletVote > single vote networks > should render a vote for a delegate without rank 1`] = `
+exports[`WalletVote > single vote networks > should render a vote for a standby validator 1`] = `
+<DocumentFragment>
+  <div
+    class="-mt-4 flex w-full flex-col items-center md:mt-0 md:flex-row md:items-center"
+    data-testid="WalletVote"
+  >
+    <div
+      class="border-theme-secondary-300 dark:border-theme-dark-700 mb-3 flex w-full flex-col items-start justify-between gap-0 overflow-hidden rounded border md:mb-0 md:flex-row md:items-center md:gap-2 md:rounded-none md:border-none"
+    >
+      <div
+        class="bg-theme-secondary-100 dark:bg-theme-dark-950 flex w-full flex-row items-center gap-2 p-3 text-sm leading-[17px] font-semibold md:w-auto md:bg-transparent md:p-0 md:text-base md:leading-5 md:dark:bg-transparent"
+      >
+        <p
+          class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm md:text-base md:leading-5"
+        >
+          Voting for
+        </p>
+        <div
+          class="xs:max-w-32 max-w-28 truncate sm:max-w-40 md:max-w-48"
+        >
+          <div
+            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+          >
+            <span
+              class="no-ligatures min-w-0 overflow-hidden dark:text-theme-dark-50 text-sm md:text-base md:leading-5 font-semibold text-base"
+              data-testid="Address__address"
+            >
+              0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+            </span>
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex flex-col gap-2 px-4 py-3 text-base leading-5 font-semibold md:flex-row md:px-0 md:py-0"
+      >
+        <p
+          class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm md:text-base md:leading-5"
+        >
+          Rank
+        </p>
+        <p
+          class="text-theme-secondary-900 dark:text-theme-dark-50 mb-2 text-sm font-semibold md:mb-0 md:text-base md:leading-5"
+        >
+          #54
+        </p>
+        <p
+          class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm md:hidden"
+        >
+          Validator Status
+        </p>
+        <div
+          class="font-semibold overflow-hidden no-ligatures px-1 border-2 rounded text-theme-warning-700 border-theme-danger-100 dark:border-theme-warning-700 flex h-fit w-fit items-center justify-center border-none py-0.5 text-xs dark:border-solid"
+        >
+          Standby
+        </div>
+        <div
+          class="relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-s-theme-dark-700 mr-3 ml-1 hidden h-5 p-0 md:flex"
+        />
+      </div>
+    </div>
+    <div
+      class="w-full md:w-auto md:max-md:self-end"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`WalletVote > single vote networks > should render a vote for a validator without rank 1`] = `
 <DocumentFragment>
   <div
     class="-mt-4 flex w-full flex-col items-center md:mt-0 md:flex-row md:items-center"
@@ -1024,7 +1091,7 @@ exports[`WalletVote > single vote networks > should render a vote for a delegate
         <p
           class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm md:hidden"
         >
-          Delegate Status
+          Validator Status
         </p>
         <div
           class="font-semibold overflow-hidden no-ligatures px-1 border-2 rounded text-theme-warning-700 border-theme-danger-100 dark:border-theme-warning-700 flex h-fit w-fit items-center justify-center border-none py-0.5 text-xs dark:border-solid"
@@ -1130,73 +1197,6 @@ exports[`WalletVote > single vote networks > should render a vote for a delegate
 </DocumentFragment>
 `;
 
-exports[`WalletVote > single vote networks > should render a vote for a standby delegate 1`] = `
-<DocumentFragment>
-  <div
-    class="-mt-4 flex w-full flex-col items-center md:mt-0 md:flex-row md:items-center"
-    data-testid="WalletVote"
-  >
-    <div
-      class="border-theme-secondary-300 dark:border-theme-dark-700 mb-3 flex w-full flex-col items-start justify-between gap-0 overflow-hidden rounded border md:mb-0 md:flex-row md:items-center md:gap-2 md:rounded-none md:border-none"
-    >
-      <div
-        class="bg-theme-secondary-100 dark:bg-theme-dark-950 flex w-full flex-row items-center gap-2 p-3 text-sm leading-[17px] font-semibold md:w-auto md:bg-transparent md:p-0 md:text-base md:leading-5 md:dark:bg-transparent"
-      >
-        <p
-          class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm md:text-base md:leading-5"
-        >
-          Voting for
-        </p>
-        <div
-          class="xs:max-w-32 max-w-28 truncate sm:max-w-40 md:max-w-48"
-        >
-          <div
-            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-          >
-            <span
-              class="no-ligatures min-w-0 overflow-hidden dark:text-theme-dark-50 text-sm md:text-base md:leading-5 font-semibold text-base"
-              data-testid="Address__address"
-            >
-              0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-            </span>
-          </div>
-        </div>
-      </div>
-      <div
-        class="flex flex-col gap-2 px-4 py-3 text-base leading-5 font-semibold md:flex-row md:px-0 md:py-0"
-      >
-        <p
-          class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm md:text-base md:leading-5"
-        >
-          Rank
-        </p>
-        <p
-          class="text-theme-secondary-900 dark:text-theme-dark-50 mb-2 text-sm font-semibold md:mb-0 md:text-base md:leading-5"
-        >
-          #54
-        </p>
-        <p
-          class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm md:hidden"
-        >
-          Delegate Status
-        </p>
-        <div
-          class="font-semibold overflow-hidden no-ligatures px-1 border-2 rounded text-theme-warning-700 border-theme-danger-100 dark:border-theme-warning-700 flex h-fit w-fit items-center justify-center border-none py-0.5 text-xs dark:border-solid"
-        >
-          Standby
-        </div>
-        <div
-          class="relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-s-theme-dark-700 mr-3 ml-1 hidden h-5 p-0 md:flex"
-        />
-      </div>
-    </div>
-    <div
-      class="w-full md:w-auto md:max-md:self-end"
-    />
-  </div>
-</DocumentFragment>
-`;
-
 exports[`WalletVote > single vote networks > should render a vote for an active validator 1`] = `
 <DocumentFragment>
   <div
@@ -1245,7 +1245,7 @@ exports[`WalletVote > single vote networks > should render a vote for an active 
         <p
           class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm md:hidden"
         >
-          Delegate Status
+          Validator Status
         </p>
         <div
           class="font-semibold overflow-hidden no-ligatures px-1 border-2 rounded bg-theme-success-100 text-theme-success-700 dark:border dark:bg-transparent dark:text-theme-success-500 dark:border-theme-success-800 flex h-fit w-fit items-center justify-center border-none py-0.5 text-xs dark:border-solid"

@@ -35,7 +35,7 @@ const VoteCombinationLabel = ({
 		{votes.length === 1 && unvotes.length === 1 ? (
 			<>
 				<RecipientLabel type="voteCombination" />
-				<DelegateLabel username={validator?.username()} />
+				<ValidatorLabel username={validator?.username()} />
 			</>
 		) : (
 			<div className="space-x-1">
@@ -63,7 +63,7 @@ const VoteCombinationLabel = ({
 	</span>
 );
 
-const DelegateLabel = ({ username, count }: { username?: string; count?: number }) => (
+const ValidatorLabel = ({ username, count }: { username?: string; count?: number }) => (
 	<span className="border-theme-secondary-300 text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-700 ml-2 truncate border-l pl-2 font-semibold">
 		{username}
 		{count !== undefined && count > 1 && <span className="ml-1">+{count - 1}</span>}
@@ -73,7 +73,7 @@ const DelegateLabel = ({ username, count }: { username?: string; count?: number 
 const VoteLabel = ({ validators, isUnvote }: { validators: Contracts.IReadOnlyWallet[]; isUnvote?: boolean }) => (
 	<span data-testid="TransactionRowVoteLabel">
 		<RecipientLabel type={isUnvote ? "unvote" : "vote"} />
-		{validators.length > 0 && <DelegateLabel username={validators[0]?.username()} count={validators.length} />}
+		{validators.length > 0 && <ValidatorLabel username={validators[0]?.username()} count={validators.length} />}
 	</span>
 );
 

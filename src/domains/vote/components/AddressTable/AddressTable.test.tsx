@@ -114,7 +114,7 @@ describe("AddressTable", () => {
 		maxVotesMock.mockRestore();
 	});
 
-	it("should render with voting delegates and handle exception", async () => {
+	it("should render with voting validators and handle exception", async () => {
 		const walletVotingMock = vi.spyOn(wallet.voting(), "current").mockImplementation(() => {
 			throw new Error("error");
 		});

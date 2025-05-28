@@ -25,7 +25,7 @@ const CompactButton = ({ index, disabled, compactClassName, onClick, children }:
 			compactClassName,
 		)}
 		onClick={onClick}
-		data-testid={`DelegateRow__toggle-${index}`}
+		data-testid={`ValidatorRow__toggle-${index}`}
 	>
 		{children}
 	</Button>

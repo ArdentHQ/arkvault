@@ -14,7 +14,7 @@ let validator: Contracts.IReadOnlyWallet;
 
 const translations = buildTranslations();
 
-const continueButton = () => screen.getByTestId("DelegateTable__continue-button");
+const continueButton = () => screen.getByTestId("ValidatorTable__continue-button");
 
 describe("ValidatorFooter", () => {
 	beforeAll(() => {
@@ -25,7 +25,7 @@ describe("ValidatorFooter", () => {
 			address: data[0].address,
 			explorerLink: "",
 			governanceIdentifier: "address",
-			isResignedDelegate: false,
+			isResignedValidator: false,
 			isValidator: true,
 			publicKey: data[0].publicKey,
 			username: data[0].username,
@@ -58,7 +58,7 @@ describe("ValidatorFooter", () => {
 			/>,
 		);
 
-		expect(screen.queryByTestId("DelegateTable__available-balance")).not.toBeInTheDocument();
+		expect(screen.queryByTestId("ValidatorTable__available-balance")).not.toBeInTheDocument();
 
 		const votesAmountMinimumMock = vi.spyOn(wallet.network(), "votesAmountMinimum").mockReturnValue(10);
 
@@ -72,7 +72,7 @@ describe("ValidatorFooter", () => {
 			/>,
 		);
 
-		expect(screen.getByTestId("DelegateTable__available-balance")).toBeInTheDocument();
+		expect(screen.getByTestId("ValidatorTable__available-balance")).toBeInTheDocument();
 
 		votesAmountMinimumMock.mockRestore();
 	});
@@ -90,7 +90,7 @@ describe("ValidatorFooter", () => {
 			/>,
 		);
 
-		expect(screen.getByTestId("DelegateTable__available-balance")).toBeInTheDocument();
+		expect(screen.getByTestId("ValidatorTable__available-balance")).toBeInTheDocument();
 
 		expect(
 			screen.getByText(
@@ -104,7 +104,7 @@ describe("ValidatorFooter", () => {
 	});
 
 	it("should disable continue button with tooltip if user doesn't select a validator", async () => {
-		const selectedDelegate: VoteValidatorProperties[] = [
+		const selectedValidator: VoteValidatorProperties[] = [
 			{
 				amount: 0,
 				validatorAddress: validator.address(),
@@ -124,7 +124,7 @@ describe("ValidatorFooter", () => {
 
 		expect(continueButton()).toBeDisabled();
 
-		await userEvent.hover(screen.getByTestId("DelegateTable__continue--wrapper"));
+		await userEvent.hover(screen.getByTestId("ValidatorTable__continue--wrapper"));
 
 		expect(baseElement).toHaveTextContent(voteTranslations.VALIDATOR_TABLE.TOOLTIP.SELECTED_VALIDATOR);
 
@@ -132,7 +132,7 @@ describe("ValidatorFooter", () => {
 			<ValidatorFooter
 				selectedWallet={wallet}
 				availableBalance={wallet.balance()}
-				selectedVotes={selectedDelegate}
+				selectedVotes={selectedValidator}
 				selectedUnvotes={[]}
 				maxVotes={wallet.network().maximumVotesPerTransaction()}
 			/>,
@@ -145,14 +145,14 @@ describe("ValidatorFooter", () => {
 				selectedWallet={wallet}
 				availableBalance={wallet.balance()}
 				selectedVotes={[]}
-				selectedUnvotes={selectedDelegate}
+				selectedUnvotes={selectedValidator}
 				maxVotes={wallet.network().maximumVotesPerTransaction()}
 			/>,
 		);
 
 		expect(continueButton()).not.toBeDisabled();
 
-		await userEvent.hover(screen.getByTestId("DelegateTable__continue--wrapper"));
+		await userEvent.hover(screen.getByTestId("ValidatorTable__continue--wrapper"));
 
 		expect(baseElement).not.toHaveTextContent(voteTranslations.VALIDATOR_TABLE.TOOLTIP.SELECTED_VALIDATOR);
 	});
@@ -160,7 +160,7 @@ describe("ValidatorFooter", () => {
 	it("should disable continue button with tooltip if there is at least 1 empty amount field when network requires vote amount", async () => {
 		const votesAmountMinimumMock = vi.spyOn(wallet.network(), "votesAmountMinimum").mockReturnValue(10);
 
-		const selectedDelegate: VoteValidatorProperties[] = [
+		const selectedValidator: VoteValidatorProperties[] = [
 			{
 				amount: 0,
 				validatorAddress: validator.address(),
@@ -171,7 +171,7 @@ describe("ValidatorFooter", () => {
 			<ValidatorFooter
 				selectedWallet={wallet}
 				availableBalance={wallet.balance()}
-				selectedVotes={selectedDelegate}
+				selectedVotes={selectedValidator}
 				selectedUnvotes={[]}
 				maxVotes={wallet.network().maximumVotesPerTransaction()}
 				onContinue={vi.fn()}
@@ -180,7 +180,7 @@ describe("ValidatorFooter", () => {
 
 		expect(continueButton()).toBeDisabled();
 
-		await userEvent.hover(screen.getByTestId("DelegateTable__continue--wrapper"));
+		await userEvent.hover(screen.getByTestId("ValidatorTable__continue--wrapper"));
 
 		expect(baseElement).toHaveTextContent(voteTranslations.VALIDATOR_TABLE.TOOLTIP.INVALID_AMOUNT);
 
