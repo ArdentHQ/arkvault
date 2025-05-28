@@ -82,8 +82,8 @@ This is a guide on how to structure your code.
 
 ## Linting and code styling
 
--   Code needs to be formatted using [TypeScript ESLint](https://github.com/typescript-eslint/typescript-eslint) and [Prettier](https://prettier.io).
--   All code should follow the `TypeScript` standard and always make use of `types` and `strict mode`.
+- Code needs to be formatted using [TypeScript ESLint](https://github.com/typescript-eslint/typescript-eslint) and [Prettier](https://prettier.io).
+- All code should follow the `TypeScript` standard and always make use of `types` and `strict mode`.
 
 ### React
 
@@ -95,9 +95,9 @@ Components should ideally be composable, this makes them more flexible and reusa
 
 ### General rules about writing new components
 
--   A standard practice is to avoid having too much functionality in one page with gigantic renders.
--   Each file should have 1 set of functionality.
--   Everything else should be broken into a new component and be included as a child.
+- A standard practice is to avoid having too much functionality in one page with gigantic renders.
+- Each file should have 1 set of functionality.
+- Everything else should be broken into a new component and be included as a child.
 
 ## Generic
 
