@@ -469,7 +469,7 @@ describe("LedgerTabs", () => {
 				screen.queryByTestId("LedgerScanStep") ||
 				screen.queryByTestId("LedgerConnectionStep") ||
 				screen.queryByTestId("LedgerImportStep") ||
-			expect(step).not.toBeNull();
+				expect(step).not.toBeNull();
 		});
 
 		getPublicKeySpy.mockRestore();
