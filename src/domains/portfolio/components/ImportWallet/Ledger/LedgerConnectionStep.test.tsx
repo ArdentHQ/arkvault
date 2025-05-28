@@ -7,7 +7,8 @@ import { Route } from "react-router-dom";
 import { LedgerConnectionStep } from "./LedgerConnectionStep";
 import { minVersionList } from "@/app/contexts";
 import { useLedgerContext } from "@/app/contexts/Ledger/Ledger";
-import { env, getDefaultProfileId, render, screen, waitFor, mockNanoXTransport } from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, screen, waitFor, mockNanoXTransport, renderHook } from "@/utils/testing-library";
+import { useTranslation } from "react-i18next";
 
 import { afterAll } from "vitest";
 const history = createHashHistory();
@@ -20,30 +21,11 @@ vi.mock("@/app/contexts/Ledger/Ledger", async () => {
 	};
 });
 
-vi.mock("react-i18next", () => ({
-	useTranslation: () => ({
-		t: (key: string, options?: any) => {
-			const translations = {
-				"WALLETS.MODAL_LEDGER_WALLET.CONNECT_SUCCESS": "Successfully connected.",
-				"WALLETS.MODAL_LEDGER_WALLET.GENERIC_CONNECTION_ERROR":
-					"Unable to connect to Ledger device. Please ensure that all other applications that connect to your Ledger are closed.",
-				"WALLETS.MODAL_LEDGER_WALLET.OPEN_APP": "Open the {{coin}} app on your device ...",
-				"WALLETS.MODAL_LEDGER_WALLET.UPDATE_ERROR":
-					"The {{coin}} app version is {{version}}. Please update the {{coin}} app via Ledger Live.",
-				"WALLETS.PAGE_IMPORT_WALLET.CANCELLING_STATE.TITLE": "Cancelling...",
-			};
-
-			let translation = translations[key] || key;
-			if (options) {
-				for (const [optKey, value] of Object.entries(options)) {
-					translation = translation.replace(`{{${optKey}}}`, value);
-				}
-			}
-
-			return translation;
-		},
-	}),
-}));
+const {
+	result: {
+		current: { t },
+	},
+} = renderHook(() => useTranslation());
 
 describe("LedgerConnectionStep", () => {
 	let profile: Contracts.IProfile;
@@ -280,6 +262,9 @@ describe("LedgerConnectionStep", () => {
 		);
 
 		await expect(screen.findByText(/cancelling/i, { timeout: 4000 })).resolves.toBeInTheDocument();
+		
+		const cancellingTranslation = t("WALLETS.PAGE_IMPORT_WALLET.CANCELLING_STATE.TITLE");
+		expect(screen.getByText(cancellingTranslation)).toBeInTheDocument();
 
 		ledgerTransportMock.mockRestore();
 	});

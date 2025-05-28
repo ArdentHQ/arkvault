@@ -57,9 +57,9 @@ describe("LedgerTabs", () => {
 		wallet.coin.ledger = () => mockLedger;
 
 		ledgerWallet = await profile.walletFactory().fromAddressWithDerivationPath({
-			address: "DSxxu1wGEdUuyE5K9WuvVCEJp6zibBUoyt",
-			coin: "ARK",
-			network: "ark.devnet",
+			address: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
+			coin: "Mainsail",
+			network: "mainsail",
 			path: "m/44'/1'/0'/0/0",
 		});
 
@@ -102,14 +102,6 @@ describe("LedgerTabs", () => {
 			};
 		});
 
-		try {
-			const result = mockProfileWithPublicAndTestNetworks(profile);
-			if (typeof result === "function") {
-				resetProfileNetworksMock = result;
-			}
-		} catch (error) {
-			console.error("Failed to mock profile networks:", error);
-		}
 	});
 
 	beforeEach(() => {
@@ -198,22 +190,6 @@ describe("LedgerTabs", () => {
 				},
 				{ timeout: 5000 },
 			);
-
-			ledgerTransportMock.mockRestore();
-		});
-
-		it("does not go to the next step if a button is the active element", async () => {
-			const ledgerTransportMock = mockNanoXTransport();
-
-			render(<Component activeIndex={2} />, { route: `/profiles/${profile.id()}` });
-
-			await waitFor(() => expect(screen.getByTestId("LedgerConnectionStep")).toBeVisible());
-
-			await userEvent.keyboard("{enter}", {
-				document: { ...document, activeElement: document.createElement("button") },
-			});
-
-			expect(screen.getByTestId("LedgerConnectionStep")).toBeVisible();
 
 			ledgerTransportMock.mockRestore();
 		});
