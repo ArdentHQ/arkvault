@@ -18,11 +18,11 @@ Please fill out the information below to expedite the review and (hopefully) mer
 
 <!-- Have you done all of these things?  -->
 
--   [ ] My changes look good in both light AND dark mode
--   [ ] The change is not hardcoded to a single network, but has multi-asset in mind
--   [ ] I checked my changes for obvious issues, debug statements and commented code
--   [ ] Documentation _(if necessary)_
--   [ ] Tests _(if necessary)_
--   [ ] Ready to be merged
+- [ ] My changes look good in both light AND dark mode
+- [ ] The change is not hardcoded to a single network, but has multi-asset in mind
+- [ ] I checked my changes for obvious issues, debug statements and commented code
+- [ ] Documentation _(if necessary)_
+- [ ] Tests _(if necessary)_
+- [ ] Ready to be merged
 
 <!-- Feel free to add additional comments. -->
