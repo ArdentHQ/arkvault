@@ -4394,7 +4394,6 @@ exports[`SendValidatorResignation > Validator Resignation > should render 3rd st
                           data-testid="AuthenticationStep__mnemonic"
                           name="mnemonic"
                           type="password"
-                          value=""
                         />
                       </div>
                       <div
