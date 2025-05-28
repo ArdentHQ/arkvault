@@ -20,7 +20,6 @@ import {
 import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
 import { TransactionSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
 import { assertWallet } from "@/utils/assertions";
-import { GasLimit } from "@/domains/transaction/components/FeeField/FeeField";
 import {
 	signUsernameRegistration,
 	UsernameRegistrationForm,
@@ -87,12 +86,9 @@ export const SendRegistration = () => {
 		register("isLoading");
 	}, [register, activeWallet, common, fees]);
 
-	const type = registrationType as keyof typeof GasLimit;
-
 	useToggleFeeFields({
 		activeTab,
 		form,
-		gasLimitType: type,
 		wallet: activeWallet,
 	});
 

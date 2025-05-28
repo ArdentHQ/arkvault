@@ -353,7 +353,7 @@ describe("useFees", () => {
 				},
 				type: "transfer",
 			}),
-		).resolves.toStrictEqual(21_000);
+		).resolves.toStrictEqual(BigNumber.make(21_000));
 	});
 });
 

@@ -1,10 +1,8 @@
 import { Networks } from "@/app/lib/mainsail";
 import { TFunction } from "@/app/i18n/react-i18next.contracts";
-import { calculateGasFee } from "@/domains/transaction/components/InputFee/InputFee";
+import { calculateGasFee, getFeeMinMax } from "@/domains/transaction/components/InputFee/InputFee";
 import { TransactionFees } from "@/types";
-import { configManager } from "@/app/lib/mainsail";
 import { BigNumber } from "@/app/lib/helpers";
-import { UnitConverter } from "@arkecosystem/typescript-crypto";
 
 export const common = (t: TFunction) => ({
 	fee: (balance = 0, network?: Networks.Network, fees?: TransactionFees) => ({
@@ -13,35 +11,30 @@ export const common = (t: TFunction) => ({
 			return true;
 		},
 	}),
-	gasLimit: (balance = 0, getValues: () => object, defaultGasLimit: number, network?: Networks.Network) => ({
+	gasLimit: (balance = 0, getValues: () => object, network?: Networks.Network) => ({
 		validate: {
-			valid: (gasLimit: number) => {
-				if (!network?.coin()) {
+			valid: (gasLimit: BigNumber | undefined) => {
+				if (!network?.coin() || !gasLimit) {
 					return true;
 				}
 
-				if (gasLimit === 0) {
+				if (gasLimit.isZero()) {
 					return t("COMMON.VALIDATION.FIELD_REQUIRED", {
 						field: t("COMMON.GAS_LIMIT"),
 					});
 				}
 
-				const minimumGasLimit = Math.max(
-					configManager.getMilestone()["gas"]["minimumGasLimit"],
-					defaultGasLimit,
-				);
+				const { minGasLimit, maxGasLimit } = getFeeMinMax();
 
-				if (gasLimit < minimumGasLimit) {
+				if (gasLimit.isLessThan(minGasLimit)) {
 					return t("COMMON.VALIDATION.GAS_LIMIT_IS_TOO_LOW", {
-						minGasLimit: defaultGasLimit,
+						minGasLimit,
 					});
 				}
 
-				const maximumGasLimit = configManager.getMilestone()["gas"]["maximumGasLimit"];
-
-				if (gasLimit > maximumGasLimit) {
+				if (gasLimit.isGreaterThan(maxGasLimit)) {
 					return t("COMMON.VALIDATION.GAS_LIMIT_IS_TOO_HIGH", {
-						maxGasLimit: maximumGasLimit,
+						maxGasLimit,
 					});
 				}
 
@@ -52,7 +45,7 @@ export const common = (t: TFunction) => ({
 					});
 				}
 
-				const { gasPrice } = getValues() as { gasPrice: number | undefined };
+				const { gasPrice } = getValues() as { gasPrice: BigNumber | undefined };
 
 				if (gasPrice === undefined) {
 					return true;
@@ -71,14 +64,14 @@ export const common = (t: TFunction) => ({
 			},
 		},
 	}),
-	gasPrice: (balance = 0, getValues: () => object, minGasPrice: number, network?: Networks.Network) => ({
+	gasPrice: (balance = 0, getValues: () => object, network?: Networks.Network) => ({
 		validate: {
-			valid: (gasPrice: number) => {
-				if (!network?.coin()) {
+			valid: (gasPrice: BigNumber | undefined) => {
+				if (!network?.coin() || !gasPrice) {
 					return true;
 				}
 
-				if (gasPrice === 0) {
+				if (gasPrice.isZero()) {
 					return t("COMMON.VALIDATION.FIELD_REQUIRED", {
 						field: t("COMMON.GAS_PRICE"),
 					});
@@ -91,34 +84,21 @@ export const common = (t: TFunction) => ({
 					});
 				}
 
-				const minimumGasPrice = Math.max(
-					UnitConverter.formatUnits(
-						BigNumber.make(configManager.getMilestone()["gas"]["minimumGasPrice"]).toString(),
-						"gwei",
-					),
-					minGasPrice,
-				);
+				const { minGasPrice, maxGasPrice } = getFeeMinMax();
 
-				if (gasPrice < minimumGasPrice) {
+				if (gasPrice.isLessThan(minGasPrice)) {
 					return t("COMMON.VALIDATION.GAS_PRICE_IS_TOO_LOW", {
-						minGasPrice: minimumGasPrice,
+						minGasPrice,
 					});
 				}
 
-				const maximumGasPrice = BigNumber.make(
-					UnitConverter.formatUnits(
-						BigNumber.make(configManager.getMilestone()["gas"]["maximumGasPrice"]).toString(),
-						"gwei",
-					),
-				);
-
-				if (maximumGasPrice.isLessThan(gasPrice ?? 0)) {
+				if (maxGasPrice.isLessThan(gasPrice)) {
 					return t("COMMON.VALIDATION.GAS_PRICE_IS_TOO_HIGH", {
-						maxGasPrice: maximumGasPrice,
+						maxGasPrice,
 					});
 				}
 
-				const { gasLimit } = getValues() as { gasLimit: number | undefined };
+				const { gasLimit } = getValues() as { gasLimit: BigNumber | undefined };
 
 				if (gasLimit === undefined) {
 					return true;

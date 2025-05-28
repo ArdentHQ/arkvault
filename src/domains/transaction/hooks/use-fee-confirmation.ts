@@ -4,6 +4,7 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import { useEnvironmentContext } from "@/app/contexts";
 import { useActiveProfile } from "@/app/hooks";
 import { TransactionFees } from "@/types";
+import { BigNumber } from "@/app/lib/helpers";
 
 type CallbackFunction = () => void;
 
@@ -24,11 +25,11 @@ export const useFeeConfirmation = (fee: number | string, fees: TransactionFees) 
 			return;
 		}
 
-		if (+fee < fees.min) {
+		if (BigNumber.make(fee).isLessThan(fees.min)) {
 			setFeeWarningVariant(FeeWarningVariant.Low);
 		}
 
-		if (+fee >= fees.min) {
+		if (BigNumber.make(fee).isGreaterThanOrEqualTo(fees.min)) {
 			setFeeWarningVariant(undefined);
 		}
 	}, [fee, fees]);

@@ -1,3 +1,5 @@
+import { BigNumber } from "@/app/lib/helpers";
+
 export type Color = "info" | "success" | "warning" | "danger" | "hint";
 
 export type Size =
@@ -49,9 +51,9 @@ export type NavbarVariant = "full" | "logo-only";
 export type Theme = "system" | "dark" | "light";
 
 export interface TransactionFees {
-	max: number;
-	min: number;
-	avg: number;
+	max: BigNumber;
+	min: BigNumber;
+	avg: BigNumber;
 }
 export type ResponsiveButtonVariantStyles = {
 	[key in LayoutBreakpoint]?: string;
