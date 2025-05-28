@@ -58,13 +58,13 @@ export const useValidatorRow = ({
 	const isSelectedUnvote = useMemo(
 		() =>
 			!!selectedUnvotes?.find((unvote) => {
-				const isEqualToDelegate = unvote.validatorAddress === validator?.address?.();
+				const isEqualToValidator = unvote.validatorAddress === validator?.address?.();
 
-				if (isEqualToDelegate && requiresStakeAmount) {
+				if (isEqualToValidator && requiresStakeAmount) {
 					return unvote.amount === voted?.amount;
 				}
 
-				return isEqualToDelegate;
+				return isEqualToValidator;
 			}),
 		[validator, requiresStakeAmount, selectedUnvotes, voted],
 	);

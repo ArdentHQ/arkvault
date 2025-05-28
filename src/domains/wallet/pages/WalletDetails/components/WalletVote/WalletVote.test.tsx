@@ -13,7 +13,7 @@ import {
 	screen,
 	waitFor,
 } from "@/utils/testing-library";
-import { DelegateName, DelegateStatus } from "./WalletVote.blocks";
+import { ValidatorName, ValidatorStatus } from "./WalletVote.blocks";
 import { renderResponsive } from "@/utils/testing-library";
 
 let wallet: Contracts.IReadWriteWallet;
@@ -240,7 +240,7 @@ describe("WalletVote", () => {
 		const { t } = result.current;
 
 		it("should render a vote for an active validator", async () => {
-			const delegate = {
+			const validator = {
 				amount: 0,
 				wallet: new ReadOnlyWallet({
 					...defaultValidator,
@@ -253,25 +253,25 @@ describe("WalletVote", () => {
 					wallets={[wallet]}
 					wallet={wallet}
 					onButtonClick={vi.fn()}
-					votes={[delegate]}
+					votes={[validator]}
 					isLoadingVotes={false}
 				/>,
 			);
 
 			await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
 
-			expect(screen.getByText(`#${delegate.wallet.rank()}`)).toBeInTheDocument();
+			expect(screen.getByText(`#${validator.wallet.rank()}`)).toBeInTheDocument();
 
 			expect(screen.getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.ACTIVE", { count: 1 }))).toBeInTheDocument();
 
 			expect(asFragment()).toMatchSnapshot();
 		});
 
-		it("should render a vote for a standby delegate", async () => {
+		it("should render a vote for a standby validator", async () => {
 			const { result } = renderHook(() => useTranslation());
 			const { t } = result.current;
 
-			const delegate = {
+			const validator = {
 				amount: 0,
 				wallet: new ReadOnlyWallet({
 					...defaultValidator,
@@ -280,19 +280,19 @@ describe("WalletVote", () => {
 			};
 
 			const { asFragment } = render(
-				<WalletVote wallet={wallet} onButtonClick={vi.fn()} votes={[delegate]} isLoadingVotes={false} />,
+				<WalletVote wallet={wallet} onButtonClick={vi.fn()} votes={[validator]} isLoadingVotes={false} />,
 			);
 
 			await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
 
-			expect(screen.getByText(`#${delegate.wallet.rank()}`)).toBeInTheDocument();
+			expect(screen.getByText(`#${validator.wallet.rank()}`)).toBeInTheDocument();
 
 			expect(screen.getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.STANDBY", { count: 1 }))).toBeInTheDocument();
 
 			expect(asFragment()).toMatchSnapshot();
 		});
 
-		it("should render a vote for a delegate without rank", async () => {
+		it("should render a vote for a validator without rank", async () => {
 			const { result } = renderHook(() => useTranslation());
 			const { t } = result.current;
 
@@ -414,22 +414,22 @@ describe("WalletVote", () => {
 	});
 });
 
-describe("DelegateName", () => {
+describe("ValidatorName", () => {
 	it("should render an address", () => {
-		render(<DelegateName delegateName={wallet.address()} isUsername={false} />);
+		render(<ValidatorName validatorName={wallet.address()} isUsername={false} />);
 
 		expect(screen.getByText(wallet.address())).toBeInTheDocument();
 	});
 
 	it("should render a username", () => {
-		render(<DelegateName delegateName={"TestingUsername"} isUsername={true} />);
+		render(<ValidatorName validatorName={"TestingUsername"} isUsername={true} />);
 		expect(screen.getByText("TestingUsername")).toBeInTheDocument();
 	});
 });
 
-describe("DelegateStatus", () => {
+describe("ValidatorStatus", () => {
 	it("should render stand by", () => {
-		render(<DelegateStatus votes={votes} activeValidators={10} />);
+		render(<ValidatorStatus votes={votes} activeValidators={10} />);
 		expect(screen.getByText("Standby")).toBeInTheDocument();
 	});
 
@@ -445,7 +445,7 @@ describe("DelegateStatus", () => {
 			},
 		];
 
-		render(<DelegateStatus votes={votes} activeValidators={10} />);
+		render(<ValidatorStatus votes={votes} activeValidators={10} />);
 		expect(screen.getByText("Resigned")).toBeInTheDocument();
 	});
 
@@ -462,11 +462,11 @@ describe("DelegateStatus", () => {
 			},
 		];
 
-		render(<DelegateStatus votes={votes} activeValidators={10} />);
+		render(<ValidatorStatus votes={votes} activeValidators={10} />);
 		expect(screen.getByText("Active")).toBeInTheDocument();
 	});
 
-	it("should render the three delegates", () => {
+	it("should render the three validators", () => {
 		const votes = [
 			{
 				amount: 1,
@@ -496,14 +496,14 @@ describe("DelegateStatus", () => {
 			},
 		];
 
-		render(<DelegateStatus votes={votes} activeValidators={10} />);
+		render(<ValidatorStatus votes={votes} activeValidators={10} />);
 
 		expect(screen.getByText("Active 1")).toBeInTheDocument();
 		expect(screen.getByText("/ Standby 1")).toBeInTheDocument();
 		expect(screen.getByText("& Resigned 1")).toBeInTheDocument();
 	});
 
-	it("should render with '&' separator when there are active and standby delegates", () => {
+	it("should render with '&' separator when there are active and standby validators", () => {
 		const votes = [
 			{
 				amount: 1,
@@ -533,12 +533,12 @@ describe("DelegateStatus", () => {
 			},
 		];
 
-		render(<DelegateStatus votes={votes} activeValidators={10} />);
+		render(<ValidatorStatus votes={votes} activeValidators={10} />);
 
 		expect(screen.getByText("& Resigned 1")).toBeInTheDocument();
 	});
 
-	it("should render with '/' separator when there are only active and resigned delegates", () => {
+	it("should render with '/' separator when there are only active and resigned validators", () => {
 		const votes = [
 			{
 				amount: 1,
@@ -559,7 +559,7 @@ describe("DelegateStatus", () => {
 			},
 		];
 
-		render(<DelegateStatus votes={votes} activeValidators={10} />);
+		render(<ValidatorStatus votes={votes} activeValidators={10} />);
 
 		expect(screen.getByText("/ Resigned 1")).toBeInTheDocument();
 	});

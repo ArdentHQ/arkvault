@@ -38,8 +38,8 @@ const AddressWrapper = ({ children }) => {
 	);
 };
 
-const votingMockReturnValue = (delegatesIndex: number[]) =>
-	delegatesIndex.map((index) => ({
+const votingMockReturnValue = (validatorsIndex: number[]) =>
+	validatorsIndex.map((index) => ({
 		amount: 0,
 		wallet: new ReadOnlyWallet({
 			address: data[index].address,

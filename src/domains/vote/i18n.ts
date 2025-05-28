@@ -2,6 +2,7 @@ export const translations = {
 	FILTERS: {
 		ALL: "All",
 		CURRENT_VOTES: "Current Votes",
+		NO_VOTES: "You have not yet voted for validators",
 	},
 
 	VALIDATOR_TABLE: {

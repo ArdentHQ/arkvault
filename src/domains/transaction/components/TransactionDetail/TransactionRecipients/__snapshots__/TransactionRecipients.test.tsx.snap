@@ -1872,7 +1872,7 @@ exports[`TransactionRecipients > should render multiple recipients in xs 1`] = `
 </div>
 `;
 
-exports[`TransactionRecipients > should render recipients with delegate icon in lg 1`] = `
+exports[`TransactionRecipients > should render recipients with validator icon in lg 1`] = `
 <div>
   <div
     class="flex items-center space-x-4 border-dashed border-theme-secondary-300 dark:border-theme-secondary-800 border-t py-4 sm:py-6 no-ligatures"
@@ -2129,7 +2129,7 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
 </div>
 `;
 
-exports[`TransactionRecipients > should render recipients with delegate icon in md 1`] = `
+exports[`TransactionRecipients > should render recipients with validator icon in md 1`] = `
 <div>
   <div
     class="flex items-center space-x-4 border-dashed border-theme-secondary-300 dark:border-theme-secondary-800 border-t py-4 sm:py-6 no-ligatures"
@@ -2386,7 +2386,7 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
 </div>
 `;
 
-exports[`TransactionRecipients > should render recipients with delegate icon in sm 1`] = `
+exports[`TransactionRecipients > should render recipients with validator icon in sm 1`] = `
 <div>
   <div
     class="flex items-center space-x-4 border-dashed border-theme-secondary-300 dark:border-theme-secondary-800 border-b py-4 sm:py-6 no-ligatures"
@@ -2525,7 +2525,7 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
 </div>
 `;
 
-exports[`TransactionRecipients > should render recipients with delegate icon in xl 1`] = `
+exports[`TransactionRecipients > should render recipients with validator icon in xl 1`] = `
 <div>
   <div
     class="flex items-center space-x-4 border-dashed border-theme-secondary-300 dark:border-theme-secondary-800 border-t py-4 sm:py-6 no-ligatures"
@@ -2782,7 +2782,7 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
 </div>
 `;
 
-exports[`TransactionRecipients > should render recipients with delegate icon in xs 1`] = `
+exports[`TransactionRecipients > should render recipients with validator icon in xs 1`] = `
 <div>
   <div
     class="flex items-center space-x-4 border-dashed border-theme-secondary-300 dark:border-theme-secondary-800 border-b py-4 sm:py-6 no-ligatures"

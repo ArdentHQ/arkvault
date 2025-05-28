@@ -45,7 +45,7 @@ export const ValidatorRowMobile = (properties: ValidatorRowProperties) => {
 	}
 
 	return (
-		<tr data-testid="DelegateRowMobile">
+		<tr data-testid="ValidatorRowMobile">
 			<td className="pt-3">
 				<MobileTableElement
 					variant={tableElementVariant}

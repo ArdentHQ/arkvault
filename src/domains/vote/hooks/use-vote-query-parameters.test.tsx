@@ -19,7 +19,7 @@ let profile: Contracts.IProfile;
 let nethash: string;
 let resetProfileNetworksMock: () => void;
 
-const delegateAddresses = [
+const validatorAddresses = [
 	"0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2",
 	"0x3F8eCbF08078F22038235F9834540A960E99085b",
 	"0x137c59f371a7049159ef19a72f908773Ade219b1",
@@ -53,7 +53,7 @@ describe("useWalletFromQueryParameters hook", () => {
 		);
 	};
 
-	it("should not find vote & unvote delegates from url", async () => {
+	it("should not find vote & unvote validators from url", async () => {
 		history.push("/");
 
 		render(<TestComponent />, { history, withProviders: false });
@@ -65,7 +65,7 @@ describe("useWalletFromQueryParameters hook", () => {
 	});
 
 	it("should find vote validator from url", () => {
-		history.push(`/?vote=${delegateAddresses[0]},2&nethash=${nethash}`);
+		history.push(`/?vote=${validatorAddresses[0]},2&nethash=${nethash}`);
 
 		render(<TestComponent />, { history, withProviders: false });
 
@@ -74,7 +74,7 @@ describe("useWalletFromQueryParameters hook", () => {
 	});
 
 	it("should find unvote validator from url", () => {
-		history.push(`/?unvote=${delegateAddresses[0]},2&nethash=${nethash}`);
+		history.push(`/?unvote=${validatorAddresses[0]},2&nethash=${nethash}`);
 
 		render(<TestComponent />, { history, withProviders: false });
 
