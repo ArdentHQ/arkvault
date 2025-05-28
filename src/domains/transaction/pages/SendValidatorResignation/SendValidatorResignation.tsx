@@ -77,7 +77,6 @@ export const SendValidatorResignation = () => {
 	useToggleFeeFields({
 		activeTab,
 		form,
-		gasLimitType: "validatorResignation",
 		wallet: activeWallet,
 	});
 

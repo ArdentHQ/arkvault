@@ -146,7 +146,7 @@ export const Votes: FC = () => {
 
 	return (
 		<Page pageTitle={isSelectValidatorStep ? t("VOTE.VALIDATOR_TABLE.TITLE") : t("VOTE.VOTES_PAGE.TITLE")}>
-			<VotesHeader isSelectDelegateStep={!!selectedAddress} />
+			<VotesHeader isSelectValidatorStep={!!selectedAddress} />
 
 			{!hasWallets && (
 				<Section className="pt-0">

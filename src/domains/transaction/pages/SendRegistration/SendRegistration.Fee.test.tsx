@@ -34,7 +34,7 @@ vi.mock("@/utils/delay", () => ({
 
 const path = "/profiles/:profileId/wallets/:walletId/send-registration/:registrationType";
 
-const renderPage = async (wallet: Contracts.IReadWriteWallet, type = "delegateRegistration") => {
+const renderPage = async (wallet: Contracts.IReadWriteWallet, type = "validatorRegistration") => {
 	const registrationURL = `/profiles/${profile.id()}/wallets/${wallet.id()}/send-registration/${type}`;
 
 	history.push(registrationURL);
@@ -71,7 +71,7 @@ const renderPage = async (wallet: Contracts.IReadWriteWallet, type = "delegateRe
 const continueButton = () => screen.getByTestId("StepNavigation__continue-button");
 const formStep = () => screen.findByTestId("ValidatorRegistrationForm_form-step");
 
-const reviewStepID = "DelegateRegistrationForm__review-step";
+const reviewStepID = "ValidatorRegistrationForm__review-step";
 
 describe("Registration Fee", () => {
 	beforeAll(async () => {
@@ -166,10 +166,10 @@ describe("Registration Fee", () => {
 
 		await expect(formStep()).resolves.toBeVisible();
 
-		await userEvent.clear(screen.getByTestId("Input__username"), "test_delegate");
-		await userEvent.type(screen.getByTestId("Input__username"), "test_delegate");
+		await userEvent.clear(screen.getByTestId("Input__username"), "test_validator");
+		await userEvent.type(screen.getByTestId("Input__username"), "test_validator");
 
-		expect(screen.getByTestId("Input__username")).toHaveValue("test_delegate");
+		expect(screen.getByTestId("Input__username")).toHaveValue("test_validator");
 
 		// Fee
 		await userEvent.click(
@@ -209,9 +209,9 @@ describe("Registration Fee", () => {
 		await expect(formStep()).resolves.toBeVisible();
 
 		await userEvent.clear(screen.getByTestId("Input__username"));
-		await userEvent.type(screen.getByTestId("Input__username"), "test_delegate");
+		await userEvent.type(screen.getByTestId("Input__username"), "test_validator");
 
-		expect(screen.getByTestId("Input__username")).toHaveValue("test_delegate");
+		expect(screen.getByTestId("Input__username")).toHaveValue("test_validator");
 
 		// Fee
 		await userEvent.click(

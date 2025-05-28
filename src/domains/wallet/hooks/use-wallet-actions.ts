@@ -124,8 +124,8 @@ export const useWalletActions = ({
 				);
 			}
 
-			if (option.value === "delegate-registration") {
-				let url = generatePath(ProfilePaths.SendDelegateRegistration, {
+			if (option.value === "validator-registration") {
+				let url = generatePath(ProfilePaths.SendValidatorRegistration, {
 					profileId: profile.id(),
 					walletId: wallet.id(),
 				});
@@ -140,7 +140,7 @@ export const useWalletActions = ({
 				history.push(url);
 			}
 
-			if (option.value === "delegate-resignation") {
+			if (option.value === "validator-resignation") {
 				let url = generatePath(ProfilePaths.SendValidatorResignation, {
 					profileId: profile.id(),
 					walletId: wallet.id(),

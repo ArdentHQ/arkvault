@@ -93,7 +93,7 @@ describe("TransactionRecipients", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it.each(["xs", "sm", "md", "lg", "xl"])("should render recipients with delegate icon in %s", (breakpoint) => {
+	it.each(["xs", "sm", "md", "lg", "xl"])("should render recipients with validator icon in %s", (breakpoint) => {
 		const { container } = renderResponsiveWithRoute(
 			<Route path="/profiles/:profileId">
 				<TransactionRecipients

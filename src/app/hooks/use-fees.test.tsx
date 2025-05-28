@@ -27,7 +27,7 @@ describe("useFees", () => {
 		await env.fees().sync(profile, "Mainsail", MainsailDevnet);
 
 		await expect(
-			current.calculate({ coin: "Mainsail", network: MainsailDevnet, type: "delegateRegistration" }),
+			current.calculate({ coin: "Mainsail", network: MainsailDevnet, type: "validatorRegistration" }),
 		).resolves.toStrictEqual({
 			avg: 25,
 			isDynamic: true,
@@ -61,7 +61,7 @@ describe("useFees", () => {
 		await env.fees().sync(profile, "Mainsail", MainsailDevnet);
 
 		await expect(
-			current.calculate({ coin: "Mainsail", network: MainsailDevnet, type: "delegateRegistration" }),
+			current.calculate({ coin: "Mainsail", network: MainsailDevnet, type: "validatorRegistration" }),
 		).resolves.toStrictEqual({
 			avg: 25,
 			isDynamic: true,
@@ -99,7 +99,7 @@ describe("useFees", () => {
 		await env.fees().sync(profile, "Mainsail", MainsailDevnet);
 
 		await expect(
-			current.calculate({ coin: "Mainsail", network: MainsailDevnet, type: "delegateRegistration" }),
+			current.calculate({ coin: "Mainsail", network: MainsailDevnet, type: "validatorRegistration" }),
 		).resolves.toStrictEqual({
 			avg: 25,
 			isDynamic: true,
@@ -353,7 +353,7 @@ describe("useFees", () => {
 				},
 				type: "transfer",
 			}),
-		).resolves.toStrictEqual(21_000);
+		).resolves.toStrictEqual(BigNumber.make(21_000));
 	});
 });
 

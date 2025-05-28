@@ -77,13 +77,13 @@ describe("useWalletActions", () => {
 		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/send-transfer`);
 
 		act(() => {
-			current.handleSelectOption({ value: "delegate-registration" } as DropdownOption);
+			current.handleSelectOption({ value: "validator-registration" } as DropdownOption);
 		});
 
 		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/send-registration/validatorRegistration`);
 
 		act(() => {
-			current.handleSelectOption({ value: "delegate-resignation" } as DropdownOption);
+			current.handleSelectOption({ value: "validator-resignation" } as DropdownOption);
 		});
 
 		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/send-validator-resignation`);

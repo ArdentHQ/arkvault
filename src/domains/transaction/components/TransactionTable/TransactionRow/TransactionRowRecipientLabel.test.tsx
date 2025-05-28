@@ -17,7 +17,7 @@ describe("TransactionRowRecipientLabel", () => {
 					// @ts-ignore
 					new ReadOnlyWallet({
 						address: vote,
-						username: `delegate-${index}`,
+						username: `validator-${index}`,
 					}),
 			),
 		);
@@ -90,7 +90,7 @@ describe("TransactionRowRecipientLabel", () => {
 			expect(screen.getByTestId("TransactionRowVoteLabel")).toHaveTextContent(
 				translations.TRANSACTION_TYPES.VOTE,
 			);
-			expect(screen.getByTestId("TransactionRowVoteLabel")).toHaveTextContent("delegate-0");
+			expect(screen.getByTestId("TransactionRowVoteLabel")).toHaveTextContent("validator-0");
 		});
 
 		it("should show a vote label with counter", () => {
@@ -113,7 +113,7 @@ describe("TransactionRowRecipientLabel", () => {
 			expect(screen.getByTestId("TransactionRowVoteLabel")).toHaveTextContent(
 				translations.TRANSACTION_TYPES.VOTE,
 			);
-			expect(screen.getByTestId("TransactionRowVoteLabel")).toHaveTextContent("delegate-0");
+			expect(screen.getByTestId("TransactionRowVoteLabel")).toHaveTextContent("validator-0");
 			expect(screen.getByTestId("TransactionRowVoteLabel")).toHaveTextContent("+1");
 		});
 
@@ -137,7 +137,7 @@ describe("TransactionRowRecipientLabel", () => {
 			expect(screen.getByTestId("TransactionRowVoteLabel")).toHaveTextContent(
 				translations.TRANSACTION_TYPES.UNVOTE,
 			);
-			expect(screen.getByTestId("TransactionRowVoteLabel")).toHaveTextContent("delegate-0");
+			expect(screen.getByTestId("TransactionRowVoteLabel")).toHaveTextContent("validator-0");
 		});
 
 		it("should show a vote label with counter if there are multiple votes", () => {
@@ -160,7 +160,7 @@ describe("TransactionRowRecipientLabel", () => {
 			expect(screen.getByTestId("TransactionRowVoteLabel")).toHaveTextContent(
 				translations.TRANSACTION_TYPES.UNVOTE,
 			);
-			expect(screen.getByTestId("TransactionRowVoteLabel")).toHaveTextContent("delegate-0");
+			expect(screen.getByTestId("TransactionRowVoteLabel")).toHaveTextContent("validator-0");
 			expect(screen.getByTestId("TransactionRowVoteLabel")).toHaveTextContent("+1");
 		});
 

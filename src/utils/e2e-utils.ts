@@ -56,7 +56,7 @@ const pingServerUrls = new Set([
 const knownWallets: any[] = [];
 
 const transactionsFixture = "coins/ark/devnet/transactions";
-const delegatesFixture = "coins/ark/devnet/delegates";
+const validatorsFixture = "coins/ark/devnet/validators";
 const imageFixture = "/assets/background.png";
 
 const walletMocks = () => {
@@ -244,18 +244,6 @@ export const requestMocks = {
 		mockRequest("https://qredit.dev/api/node/syncing", "coins/ark/devnet/syncing"),
 		mockRequest("https://static.zdassets.com/ekr/snippet.js?key=0e4c4d37-9d38-4be4-925d-e659dd4d12bd", () => ""),
 	],
-	delegates: [
-		// devnet
-		mockRequest("https://ark-test.arkvault.io/api/delegates", delegatesFixture),
-		mockRequest("https://ark-test.arkvault.io/api/delegates?page=1", delegatesFixture),
-		mockRequest("https://ark-test.arkvault.io/api/delegates?page=2", delegatesFixture),
-		mockRequest("https://ark-test.arkvault.io/api/delegates?page=3", delegatesFixture),
-		mockRequest("https://ark-test.arkvault.io/api/delegates?page=4", delegatesFixture),
-		mockRequest("https://ark-test.arkvault.io/api/delegates?page=5", delegatesFixture),
-
-		// mainnet
-		mockRequest("https://ark-live.arkvault.io/api/delegates", "coins/ark/mainnet/delegates"),
-	],
 	exchange: [
 		mockRequest(
 			// eslint-disable-next-line unicorn/better-regex
@@ -397,6 +385,18 @@ export const requestMocks = {
 
 		...searchAddressesMocks(),
 	],
+	validators: [
+		// devnet
+		mockRequest("https://ark-test.arkvault.io/api/validators", validatorsFixture),
+		mockRequest("https://ark-test.arkvault.io/api/validators?page=1", validatorsFixture),
+		mockRequest("https://ark-test.arkvault.io/api/validators?page=2", validatorsFixture),
+		mockRequest("https://ark-test.arkvault.io/api/validators?page=3", validatorsFixture),
+		mockRequest("https://ark-test.arkvault.io/api/validators?page=4", validatorsFixture),
+		mockRequest("https://ark-test.arkvault.io/api/validators?page=5", validatorsFixture),
+
+		// mainnet
+		mockRequest("https://ark-live.arkvault.io/api/validators", "coins/ark/mainnet/validators"),
+	],
 	wallets: [
 		mockRequest("https://ark-live.arkvault.io/api/wallets?limit=1&nonce=0", {}),
 		mockRequest("https://ark-test.arkvault.io/api/wallets?limit=1&nonce=0", {}),
@@ -412,7 +412,7 @@ export const requestMocks = {
 const combineRequestMocks = (preHooks: RequestMock[] = [], postHooks: RequestMock[] = []): RequestMock[] => [
 	...preHooks,
 	...requestMocks.configuration,
-	...requestMocks.delegates,
+	...requestMocks.validators,
 	...requestMocks.transactions,
 	...requestMocks.wallets,
 	...requestMocks.other,

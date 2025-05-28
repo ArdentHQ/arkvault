@@ -178,7 +178,7 @@ exports[`ValidatorRegistrationForm > should render review step 1`] = `
       data-testid="tab-pabel__active-panel"
     >
       <section
-        data-testid="DelegateRegistrationForm__review-step"
+        data-testid="ValidatorRegistrationForm__review-step"
       >
         <div
           class="bg-theme-background flex items-end justify-between"

@@ -122,7 +122,7 @@ describe("Welcome with deeplink", () => {
 	});
 
 	it("should navigate to vote page", async () => {
-		const mockDelegateName = vi
+		const mockValidatorName = vi
 			.spyOn(profile.validators(), "findByUsername")
 			.mockReturnValue(profile.wallets().first());
 		const toastWarningSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
@@ -154,7 +154,7 @@ describe("Welcome with deeplink", () => {
 
 		toastWarningSpy.mockRestore();
 		historyPushMock.mockRestore();
-		mockDelegateName.mockRestore();
+		mockValidatorName.mockRestore();
 	});
 
 	it("should navigate to verify message page", async () => {
@@ -532,7 +532,7 @@ describe("Welcome with deeplink", () => {
 	});
 
 	it("should not navigate when clicking multiple times", async () => {
-		const mockDelegateName = vi
+		const mockValidatorName = vi
 			.spyOn(profile.validators(), "findByUsername")
 			.mockReturnValue(profile.wallets().first());
 		const mockProfiles = vi.spyOn(env.profiles(), "values").mockReturnValue([profile]);
@@ -544,7 +544,7 @@ describe("Welcome with deeplink", () => {
 			</Route>,
 			{
 				history,
-				route: "/?method=vote&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&delegate=test",
+				route: "/?method=vote&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&validator=test",
 			},
 		);
 
@@ -553,7 +553,7 @@ describe("Welcome with deeplink", () => {
 		await userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)));
 		await waitFor(() => expect(history.location.pathname).toBe("/"));
 
-		mockDelegateName.mockRestore();
+		mockValidatorName.mockRestore();
 		mockProfiles.mockRestore();
 		mockUsesPassword.mockRestore();
 	});

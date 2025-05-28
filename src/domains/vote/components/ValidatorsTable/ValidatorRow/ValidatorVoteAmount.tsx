@@ -10,7 +10,7 @@ import { VoteValidatorProperties } from "@/domains/vote/components/ValidatorsTab
 import { validatorExistsInVotes } from "@/domains/vote/components/ValidatorsTable/ValidatorsTable.helpers";
 import { VoteAmount } from "@/domains/vote/validations/VoteAmount";
 
-interface DelegateVoteAmountProperties {
+interface ValidatorVoteAmountProperties {
 	rowColor?: string;
 	isSelectedVote: boolean;
 	isSelectedUnvote: boolean;
@@ -38,7 +38,7 @@ export const ValidatorVoteAmount = ({
 	setAvailableBalance,
 	toggleUnvotesSelected,
 	toggleVotesSelected,
-}: DelegateVoteAmountProperties) => {
+}: ValidatorVoteAmountProperties) => {
 	const { t } = useTranslation();
 
 	const [isFocused, setIsFocused] = useState(false);
@@ -306,7 +306,7 @@ export const ValidatorVoteAmount = ({
 						input.current?.focus();
 						setIsFocused(true);
 					}}
-					data-testid="DelegateVoteAmount__ticker"
+					data-testid="ValidatorVoteAmount__ticker"
 				>
 					<span className={tickerColor()}>{selectedWallet.network().coin()}</span>
 

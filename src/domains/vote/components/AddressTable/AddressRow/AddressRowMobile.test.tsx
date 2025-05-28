@@ -8,7 +8,7 @@ import { Route } from "react-router-dom";
 import { Context as ResponsiveContext } from "react-responsive";
 import {
 	AddressRowMobile,
-	AddressRowMobileDelegateName,
+	AddressRowMobileValidatorName,
 } from "@/domains/vote/components/AddressTable/AddressRow/AddressRowMobile";
 import { data } from "@/tests/fixtures/coins/mainsail/devnet/validators.json";
 import { env, getMainsailProfileId, MAINSAIL_MNEMONICS, render, screen, syncValidators } from "@/utils/testing-library";
@@ -43,8 +43,8 @@ const AddressWrapper = ({ children }) => {
 	);
 };
 
-const votingMockReturnValue = (delegatesIndex: number[]) =>
-	delegatesIndex.map((index) => ({
+const votingMockReturnValue = (validatorsIndex: number[]) =>
+	validatorsIndex.map((index) => ({
 		amount: 0,
 		wallet: new ReadOnlyWallet({
 			address: data[index].address,
@@ -112,7 +112,7 @@ describe("AddressRowMobile", () => {
 	});
 
 	it("should not render validator name if name is not provided", async () => {
-		const { asFragment } = render(<AddressRowMobileDelegateName />, {
+		const { asFragment } = render(<AddressRowMobileValidatorName />, {
 			route: `/profiles/${profile.id()}/votes`,
 		});
 

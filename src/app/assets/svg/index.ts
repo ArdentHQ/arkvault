@@ -175,7 +175,6 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	CrossSmall,
 	Dash,
 	Dashboard,
-	Delegate: TransactionIcons.DelegateRegistration,
 	DocumentView,
 	DoubleCheckedCircle,
 	Download,

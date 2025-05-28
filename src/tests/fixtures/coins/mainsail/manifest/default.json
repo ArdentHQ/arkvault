@@ -21,8 +21,8 @@
 			"transactions",
 			"wallet",
 			"wallets",
-			"delegate",
-			"delegates",
+			"validator",
+			"validators",
 			"votes",
 			"voters",
 			"broadcast"
@@ -34,8 +34,6 @@
 		"PrivateKey": ["mnemonic.bip39", "wif"],
 		"PublicKey": ["mnemonic.bip39", "multiSignature", "wif"],
 		"Transaction": [
-			"delegateRegistration",
-			"delegateResignation",
 			"estimateExpiration",
 			"ipfs.ledgerS",
 			"ipfs.ledgerX",
@@ -51,6 +49,8 @@
 			"transfer.ledgerX",
 			"transfer.musig",
 			"transfer",
+			"validatorRegistration",
+			"validatorResignation",
 			"vote.ledgerS",
 			"vote.ledgerX",
 			"vote.musig",
@@ -59,7 +59,7 @@
 		"WIF": ["mnemonic.bip39"]
 	},
 	"governance": {
-		"delegateCount": 53,
+		"validatorCount": 53,
 		"votesPerTransaction": 1,
 		"votesPerWallet": 1
 	},
@@ -123,13 +123,13 @@
 		"memo": true,
 		"multiPaymentRecipients": 128,
 		"types": [
-			"delegateRegistration",
-			"delegateResignation",
 			"ipfs",
 			"multiPayment",
 			"multiSignature",
 			"secondSignature",
 			"transfer",
+			"validatorRegistration",
+			"validatorResignation",
 			"vote"
 		]
 	},
