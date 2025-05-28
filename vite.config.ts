@@ -1,5 +1,3 @@
-import OptimizationPersist from "vite-plugin-optimize-persist";
-import PkgConfig from "vite-plugin-package-config";
 import { VitePWA } from "vite-plugin-pwa";
 import { defineConfig } from "vite";
 import { nodePolyfills } from "vite-plugin-node-polyfills";
@@ -76,8 +74,6 @@ export default defineConfig(async () => {
 			tailwindcss(),
 			react(),
 			svgrPlugin(),
-			PkgConfig(),
-			OptimizationPersist(),
 			VitePWA({
 				workbox: {
 					// Prevent from precaching html files. Caching index.html causes white-screen after each deployment.
@@ -177,5 +173,51 @@ export default defineConfig(async () => {
 				},
 			}),
 		],
+		optimizeDeps: {
+			include: [
+				"@ardenthq/arkvault-crypto",
+				"rollup-plugin-polyfill-node/polyfills/util",
+				"@faustbrian/node-haveibeenpwned",
+				"@ardenthq/arkvault-url",
+				"@tippyjs/react",
+				"assert",
+				"browser-fs-access",
+				"classnames",
+				"cross-fetch",
+				"downshift",
+				"focus-visible",
+				"framer-motion",
+				"i18next",
+				"locale-currency",
+				"multiformats",
+				"p-retry",
+				"qr-scanner",
+				"react",
+				"react-datepicker",
+				"react-dom",
+				"react-error-boundary",
+				"react-hook-form",
+				"react-i18next",
+				"react-idle-timer",
+				"react-linkify",
+				"react-loading-skeleton",
+				"react-qr-reader",
+				"react-resize-detector",
+				"react-responsive",
+				"react-router",
+				"react-router-dom",
+				"react-table",
+				"react-toastify",
+				"react-visibility-sensor",
+				"semver",
+				"socks-proxy-agent",
+				"string-hash",
+				"yup",
+				"react-zendesk",
+				"@ledgerhq/hw-app-eth",
+				"@ledgerhq/hw-transport-webhid",
+				"@ledgerhq/hw-transport-webusb",
+			],
+		},
 	};
 });
