@@ -62,7 +62,7 @@ describe("LedgerTabs", () => {
 		await ledgerWallet.synchroniser().identity();
 
 		getVersionSpy = vi
-			.spyOn(wallet.coin().ledger(), "getVersion")
+			.spyOn(wallet.ledger(), "getVersion")
 			.mockResolvedValue(minVersionList[wallet.network().coin()]);
 
 		await wallet.synchroniser().identity();
@@ -83,9 +83,9 @@ describe("LedgerTabs", () => {
 		]);
 
 		vi.spyOn(wallet.coin(), "__construct").mockImplementation(vi.fn());
-		vi.spyOn(wallet.coin().ledger(), "getExtendedPublicKey").mockResolvedValue(wallet.publicKey()!);
+		vi.spyOn(wallet.ledger(), "getExtendedPublicKey").mockResolvedValue(wallet.publicKey()!);
 
-		vi.spyOn(wallet.coin().ledger(), "scan").mockImplementation(({ onProgress }) => {
+		vi.spyOn(wallet.ledger(), "scan").mockImplementation(({ onProgress }) => {
 			onProgress(wallet);
 			return {
 				"m/44'/1'/0'/0/0": wallet.toData(),
@@ -156,7 +156,7 @@ describe("LedgerTabs", () => {
 	describe("Enter key handling", () => {
 		it("should go to the next step", async () => {
 			const getPublicKeySpy = vi
-				.spyOn(wallet.coin().ledger(), "getPublicKey")
+				.spyOn(wallet.ledger(), "getPublicKey")
 				.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path)!));
 
 			const ledgerTransportMock = mockNanoXTransport();
@@ -175,7 +175,7 @@ describe("LedgerTabs", () => {
 
 		it("does not go to the next step if a button is the active element", async () => {
 			const getPublicKeySpy = vi
-				.spyOn(wallet.coin().ledger(), "getPublicKey")
+				.spyOn(wallet.ledger(), "getPublicKey")
 				.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path)!));
 
 			const ledgerTransportMock = mockNanoXTransport();
@@ -206,7 +206,7 @@ describe("LedgerTabs", () => {
 			});
 
 			const getPublicKeySpy = vi
-				.spyOn(wallet.coin().ledger(), "getPublicKey")
+				.spyOn(wallet.ledger(), "getPublicKey")
 				.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path)!));
 
 			const ledgerTransportMock = mockNanoXTransport();

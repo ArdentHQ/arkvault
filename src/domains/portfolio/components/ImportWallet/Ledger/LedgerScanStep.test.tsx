@@ -109,13 +109,13 @@ describe("LedgerScanStep", () => {
 			["m/44'/1'/4'/0/0", "03d3c6889608074b44155ad2e6577c3368e27e6e129c457418eb3e5ed029544e8d"],
 		]);
 
-		vi.spyOn(wallet.coin().ledger(), "getPublicKey").mockImplementation((path) =>
+		vi.spyOn(wallet.ledger(), "getPublicKey").mockImplementation((path) =>
 			Promise.resolve(publicKeyPaths.get(path)!),
 		);
 
-		vi.spyOn(wallet.coin().ledger(), "getExtendedPublicKey").mockResolvedValue(wallet.publicKey()!);
+		vi.spyOn(wallet.ledger(), "getExtendedPublicKey").mockResolvedValue(wallet.publicKey()!);
 
-		vi.spyOn(wallet.coin().ledger(), "scan").mockImplementation(({ onProgress }) => {
+		vi.spyOn(wallet.ledger(), "scan").mockImplementation(({ onProgress }) => {
 			onProgress(wallet);
 			return {
 				"m/44'/1'/0'/0/0": wallet.toData(),

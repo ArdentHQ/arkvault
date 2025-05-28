@@ -30,7 +30,7 @@ describe("LedgerTabs", () => {
 		wallet = profile.wallets().first();
 
 		getVersionSpy = vi
-			.spyOn(wallet.coin().ledger(), "getVersion")
+			.spyOn(wallet.ledger(), "getVersion")
 			.mockResolvedValue(minVersionList[wallet.network().coin()]);
 
 		await wallet.synchroniser().identity();
@@ -51,7 +51,7 @@ describe("LedgerTabs", () => {
 		]);
 
 		vi.spyOn(wallet.coin(), "__construct").mockImplementation(vi.fn());
-		vi.spyOn(wallet.coin().ledger(), "getExtendedPublicKey").mockResolvedValue(wallet.publicKey()!);
+		vi.spyOn(wallet.ledger(), "getExtendedPublicKey").mockResolvedValue(wallet.publicKey()!);
 	});
 
 	beforeEach(() => {
@@ -116,7 +116,7 @@ describe("LedgerTabs", () => {
 	it("should cancel and redirect to network step", async () => {
 		const ledgerTransportMock = mockNanoXTransport();
 		const getPublicKeySpy = vi
-			.spyOn(wallet.coin().ledger(), "getPublicKey")
+			.spyOn(wallet.ledger(), "getPublicKey")
 			.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path)!));
 
 		render(<Component activeIndex={3} />, { route: `/profiles/${profile.id()}` });
@@ -145,7 +145,7 @@ describe("LedgerTabs", () => {
 	it("should click back and go to network step", async () => {
 		const ledgerTransportMock = mockNanoXTransport();
 		const getPublicKeySpy = vi
-			.spyOn(wallet.coin().ledger(), "getPublicKey")
+			.spyOn(wallet.ledger(), "getPublicKey")
 			.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path)!));
 
 		render(<Component activeIndex={1} />, { route: `/profiles/${profile.id()}` });
@@ -161,7 +161,7 @@ describe("LedgerTabs", () => {
 	it("should render with listen ledger step as default active step", async () => {
 		const ledgerTransportMock = mockNanoXTransport();
 		const getPublicKeySpy = vi
-			.spyOn(wallet.coin().ledger(), "getPublicKey")
+			.spyOn(wallet.ledger(), "getPublicKey")
 			.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path)!));
 
 		render(<Component />, { route: `/profiles/${profile.id()}` });

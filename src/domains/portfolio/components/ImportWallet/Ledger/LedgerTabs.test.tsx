@@ -69,7 +69,7 @@ describe("LedgerTabs", () => {
 		await ledgerWallet.synchroniser().identity();
 
 		getVersionSpy = vi
-			.spyOn(wallet.coin().ledger(), "getVersion")
+			.spyOn(wallet.ledger(), "getVersion")
 			.mockResolvedValue(minVersionList[wallet.network().coin()]);
 
 		await wallet.synchroniser().identity();
@@ -90,9 +90,9 @@ describe("LedgerTabs", () => {
 		]);
 
 		vi.spyOn(wallet.coin(), "__construct").mockImplementation(vi.fn());
-		vi.spyOn(wallet.coin().ledger(), "getExtendedPublicKey").mockResolvedValue(wallet.publicKey()!);
+		vi.spyOn(wallet.ledger(), "getExtendedPublicKey").mockResolvedValue(wallet.publicKey()!);
 
-		vi.spyOn(wallet.coin().ledger(), "scan").mockImplementation(({ onProgress }) => {
+		vi.spyOn(wallet.ledger(), "scan").mockImplementation(({ onProgress }) => {
 			onProgress(wallet);
 			return {
 				"m/44'/1'/0'/0/0": wallet.toData(),
@@ -161,10 +161,10 @@ describe("LedgerTabs", () => {
 	};
 
 	it("should load more address", async () => {
-		const scanSpy = vi.spyOn(wallet.coin().ledger(), "scan");
+		const scanSpy = vi.spyOn(wallet.ledger(), "scan");
 
 		const getPublicKeySpy = vi
-			.spyOn(wallet.coin().ledger(), "getPublicKey")
+			.spyOn(wallet.ledger(), "getPublicKey")
 			.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path)!));
 
 		const ledgerTransportMock = mockNanoXTransport();
@@ -201,7 +201,7 @@ describe("LedgerTabs", () => {
 
 	it("should render scan step", async () => {
 		const getPublicKeySpy = vi
-			.spyOn(wallet.coin().ledger(), "getPublicKey")
+			.spyOn(wallet.ledger(), "getPublicKey")
 			.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path)!));
 
 		const ledgerTransportMock = mockNanoXTransport();
@@ -220,7 +220,7 @@ describe("LedgerTabs", () => {
 
 	it("should filter unallowed network", async () => {
 		const getPublicKeySpy = vi
-			.spyOn(wallet.coin().ledger(), "getPublicKey")
+			.spyOn(wallet.ledger(), "getPublicKey")
 			.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path)!));
 
 		const mainNetwork = profile.availableNetworks()[0];
@@ -244,7 +244,7 @@ describe("LedgerTabs", () => {
 
 	it("should render connection step", async () => {
 		const getPublicKeySpy = vi
-			.spyOn(wallet.coin().ledger(), "getPublicKey")
+			.spyOn(wallet.ledger(), "getPublicKey")
 			.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path)!));
 
 		let formReference: ReturnType<typeof useForm>;
@@ -308,7 +308,7 @@ describe("LedgerTabs", () => {
 		const ledgerTransportMock = mockNanoXTransport();
 
 		const getPublicKeySpy = vi
-			.spyOn(wallet.coin().ledger(), "getPublicKey")
+			.spyOn(wallet.ledger(), "getPublicKey")
 			.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path)!));
 
 		const { history } = render(<Component activeIndex={3} />, {
@@ -375,7 +375,7 @@ describe("LedgerTabs", () => {
 		vi.spyOn(wallet.ledger(), "scan").mockRejectedValue(new Error("Scan Failed"));
 
 		const getPublicKeySpy = vi
-			.spyOn(wallet.coin().ledger(), "getPublicKey")
+			.spyOn(wallet.ledger(), "getPublicKey")
 			.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path)!));
 
 		const ledgerTransportMock = mockNanoXTransport();
@@ -413,7 +413,7 @@ describe("LedgerTabs", () => {
 		resetProfileNetworksMock = mockProfileWithOnlyPublicNetworks(profile);
 
 		const getPublicKeySpy = vi
-			.spyOn(wallet.coin().ledger(), "getPublicKey")
+			.spyOn(wallet.ledger(), "getPublicKey")
 			.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path)!));
 
 		const ledgerTransportMock = mockNanoXTransport();
@@ -436,7 +436,7 @@ describe("LedgerTabs", () => {
 
 	it("should render finish step multiple", async () => {
 		const getPublicKeySpy = vi
-			.spyOn(wallet.coin().ledger(), "getPublicKey")
+			.spyOn(wallet.ledger(), "getPublicKey")
 			.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path)!));
 
 		const scannerMock = vi.spyOn(scanner, "scannerReducer").mockReturnValue({
@@ -496,7 +496,7 @@ describe("LedgerTabs", () => {
 
 	it("redirects user to dashboard if device not available", async () => {
 		const getPublicKeySpy = vi
-			.spyOn(wallet.coin().ledger(), "getPublicKey")
+			.spyOn(wallet.ledger(), "getPublicKey")
 			.mockResolvedValue(publicKeyPaths.values().next().value);
 
 		const ledgerTransportMock = mockLedgerTransportError("Access denied to use Ledger device");

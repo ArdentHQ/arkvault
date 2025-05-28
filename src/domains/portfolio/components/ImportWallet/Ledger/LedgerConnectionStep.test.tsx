@@ -26,7 +26,7 @@ describe("LedgerConnectionStep", () => {
 
 		wallet = profile.wallets().first();
 		getVersionSpy = vi
-			.spyOn(wallet.coin().ledger(), "getVersion")
+			.spyOn(wallet.ledger(), "getVersion")
 			.mockResolvedValue(minVersionList[wallet.network().coin()]);
 	});
 
@@ -70,7 +70,7 @@ describe("LedgerConnectionStep", () => {
 		]);
 
 		const getPublicKeySpy = vi
-			.spyOn(wallet.coin().ledger(), "getPublicKey")
+			.spyOn(wallet.ledger(), "getPublicKey")
 			.mockResolvedValue(publicKeyPaths.values().next().value);
 
 		const onConnect = vi.fn();
@@ -101,7 +101,7 @@ describe("LedgerConnectionStep", () => {
 		const { result } = renderHook(() => useTranslation());
 		const { t } = result.current;
 
-		const getPublicKeySpy = vi.spyOn(wallet.coin().ledger(), "getPublicKey").mockImplementation(() => {
+		const getPublicKeySpy = vi.spyOn(wallet.ledger(), "getPublicKey").mockImplementation(() => {
 			throw new Error(t("WALLETS.MODAL_LEDGER_WALLET.GENERIC_CONNECTION_ERROR"));
 		});
 
@@ -140,7 +140,7 @@ describe("LedgerConnectionStep", () => {
 		const outdatedVersion = "1.0.1";
 		getVersionSpy.mockResolvedValueOnce(outdatedVersion);
 
-		const getPublicKeySpy = vi.spyOn(wallet.coin().ledger(), "getPublicKey").mockImplementation(() => {
+		const getPublicKeySpy = vi.spyOn(wallet.ledger(), "getPublicKey").mockImplementation(() => {
 			throw new Error(
 				t("WALLETS.MODAL_LEDGER_WALLET.UPDATE_ERROR", {
 					coin: wallet.network().coin(),
