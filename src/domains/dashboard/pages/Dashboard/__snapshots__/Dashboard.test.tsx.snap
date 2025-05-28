@@ -1310,6 +1310,9 @@ exports[`Dashboard > should render 1`] = `
                 </div>
               </div>
             </div>
+            <div
+              style="display: contents;"
+            />
           </header>
         </div>
       </div>
