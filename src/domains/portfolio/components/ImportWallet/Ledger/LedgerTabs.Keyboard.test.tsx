@@ -7,15 +7,7 @@ import { Route } from "react-router-dom";
 import * as reactHookForm from "react-hook-form";
 import { LedgerTabs } from "./LedgerTabs";
 import { minVersionList } from "@/app/contexts";
-import {
-	env,
-	getDefaultProfileId,
-	render,
-	screen,
-	waitFor,
-	mockNanoXTransport,
-	mockProfileWithPublicAndTestNetworks,
-} from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, screen, waitFor, mockNanoXTransport } from "@/utils/testing-library";
 import { useLedgerContext } from "@/app/contexts/Ledger/Ledger";
 import { server, requestMock, requestMockOnce } from "@/tests/mocks/server";
 import { getDefaultAlias } from "@/domains/wallet/utils/get-default-alias";
@@ -97,7 +89,6 @@ describe("LedgerTabs", () => {
 				"m/44'/1'/0'/0/0": wallet.toData(),
 			};
 		});
-
 	});
 
 	beforeEach(() => {

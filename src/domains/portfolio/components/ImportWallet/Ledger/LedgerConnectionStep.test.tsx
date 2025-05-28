@@ -7,7 +7,15 @@ import { Route } from "react-router-dom";
 import { LedgerConnectionStep } from "./LedgerConnectionStep";
 import { minVersionList } from "@/app/contexts";
 import { useLedgerContext } from "@/app/contexts/Ledger/Ledger";
-import { env, getDefaultProfileId, render, screen, waitFor, mockNanoXTransport, renderHook } from "@/utils/testing-library";
+import {
+	env,
+	getDefaultProfileId,
+	render,
+	screen,
+	waitFor,
+	mockNanoXTransport,
+	renderHook,
+} from "@/utils/testing-library";
 import { useTranslation } from "react-i18next";
 
 import { afterAll } from "vitest";
@@ -262,7 +270,7 @@ describe("LedgerConnectionStep", () => {
 		);
 
 		await expect(screen.findByText(/cancelling/i, { timeout: 4000 })).resolves.toBeInTheDocument();
-		
+
 		const cancellingTranslation = t("WALLETS.PAGE_IMPORT_WALLET.CANCELLING_STATE.TITLE");
 		expect(screen.getByText(cancellingTranslation)).toBeInTheDocument();
 
