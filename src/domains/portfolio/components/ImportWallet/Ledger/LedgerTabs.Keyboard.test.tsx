@@ -50,11 +50,7 @@ describe("LedgerTabs", () => {
 			scan: vi.fn(),
 		};
 
-		if (!wallet.coin) {
-			wallet.coin = {};
-		}
-
-		wallet.coin.ledger = () => mockLedger;
+		wallet.ledger = () => mockLedger;
 
 		ledgerWallet = await profile.walletFactory().fromAddressWithDerivationPath({
 			address: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
