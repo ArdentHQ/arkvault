@@ -999,7 +999,6 @@ exports[`SignMessage > Sign with Wallet > should render (lg) 1`] = `
                               data-testid="AuthenticationStep__mnemonic"
                               name="mnemonic"
                               type="password"
-                              value=""
                             />
                           </div>
                           <div
@@ -2091,7 +2090,6 @@ exports[`SignMessage > Sign with Wallet > should render (xs) 1`] = `
                               data-testid="AuthenticationStep__mnemonic"
                               name="mnemonic"
                               type="password"
-                              value=""
                             />
                           </div>
                           <div

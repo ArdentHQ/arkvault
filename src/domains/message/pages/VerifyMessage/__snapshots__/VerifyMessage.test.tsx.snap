@@ -898,7 +898,6 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                             data-testid="VerifyMessage__manual-signatory"
                             name="signatory"
                             type="text"
-                            value=""
                           />
                         </div>
                       </div>
@@ -925,7 +924,6 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                             data-testid="VerifyMessage__manual-message"
                             name="message"
                             type="text"
-                            value=""
                           />
                         </div>
                       </div>
@@ -952,7 +950,6 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                             data-testid="VerifyMessage__manual-signature"
                             name="signature"
                             type="text"
-                            value=""
                           />
                         </div>
                       </div>
@@ -1894,7 +1891,6 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                             data-testid="VerifyMessage__manual-signatory"
                             name="signatory"
                             type="text"
-                            value=""
                           />
                         </div>
                       </div>
@@ -1921,7 +1917,6 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                             data-testid="VerifyMessage__manual-message"
                             name="message"
                             type="text"
-                            value=""
                           />
                         </div>
                       </div>
@@ -1948,7 +1943,6 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                             data-testid="VerifyMessage__manual-signature"
                             name="signature"
                             type="text"
-                            value=""
                           />
                         </div>
                       </div>
