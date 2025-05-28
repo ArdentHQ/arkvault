@@ -13632,7 +13632,7 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -13754,7 +13754,7 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -13876,7 +13876,7 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -14448,7 +14448,7 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -14570,7 +14570,7 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -14692,7 +14692,7 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -15264,7 +15264,7 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -15386,7 +15386,7 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -15508,7 +15508,7 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -16080,7 +16080,7 @@ exports[`ValidatorsTable > should render 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -16202,7 +16202,7 @@ exports[`ValidatorsTable > should render 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -16324,7 +16324,7 @@ exports[`ValidatorsTable > should render 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -16950,7 +16950,7 @@ exports[`ValidatorsTable > should render vote amount column 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -17118,7 +17118,7 @@ exports[`ValidatorsTable > should render vote amount column 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -17286,7 +17286,7 @@ exports[`ValidatorsTable > should render vote amount column 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -17925,7 +17925,7 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -18047,7 +18047,7 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -18169,7 +18169,7 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -18741,7 +18741,7 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -18863,7 +18863,7 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -18985,7 +18985,7 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -19562,7 +19562,7 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -19684,7 +19684,7 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -19806,7 +19806,7 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -20857,7 +20857,7 @@ exports[`ValidatorsTable > should render with subtitle 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -20979,7 +20979,7 @@ exports[`ValidatorsTable > should render with subtitle 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -21101,7 +21101,7 @@ exports[`ValidatorsTable > should render with subtitle 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -21727,7 +21727,7 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -21894,7 +21894,7 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -22062,7 +22062,7 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -22701,7 +22701,7 @@ exports[`ValidatorsTable > should select a validator to unvote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -22823,7 +22823,7 @@ exports[`ValidatorsTable > should select a validator to unvote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -22945,7 +22945,7 @@ exports[`ValidatorsTable > should select a validator to unvote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -23518,7 +23518,7 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -23640,7 +23640,7 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -23762,7 +23762,7 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -24339,7 +24339,7 @@ exports[`ValidatorsTable > should select a validator to vote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -24461,7 +24461,7 @@ exports[`ValidatorsTable > should select a validator to vote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -24583,7 +24583,7 @@ exports[`ValidatorsTable > should select a validator to vote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -25209,7 +25209,7 @@ exports[`ValidatorsTable > should select a validator with vote amount and make i
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -25376,7 +25376,7 @@ exports[`ValidatorsTable > should select a validator with vote amount and make i
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -25544,7 +25544,7 @@ exports[`ValidatorsTable > should select a validator with vote amount and make i
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -26183,7 +26183,7 @@ exports[`ValidatorsTable > should select multiple validators to unvote/vote 1`] 
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -26305,7 +26305,7 @@ exports[`ValidatorsTable > should select multiple validators to unvote/vote 1`] 
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -26427,7 +26427,7 @@ exports[`ValidatorsTable > should select multiple validators to unvote/vote 1`] 
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -26999,7 +26999,7 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -27121,7 +27121,7 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -27243,7 +27243,7 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -27816,7 +27816,7 @@ exports[`ValidatorsTable > should unselect a validator to vote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -27938,7 +27938,7 @@ exports[`ValidatorsTable > should unselect a validator to vote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -28060,7 +28060,7 @@ exports[`ValidatorsTable > should unselect a validator to vote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby

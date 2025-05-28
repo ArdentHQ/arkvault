@@ -25,7 +25,7 @@ exports[`ValidatorRowMobile > should render the selected vote 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent mr-3 sm:hidden"
+                  class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent mr-3 sm:hidden"
                   data-testid="ValidatorStatus__standby"
                 >
                   Standby
@@ -81,7 +81,7 @@ exports[`ValidatorRowMobile > should render the selected vote 1`] = `
                 </div>
                 <div>
                   <div
-                    class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                    class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent"
                     data-testid="ValidatorStatus__standby"
                   >
                     Standby
@@ -168,7 +168,7 @@ exports[`ValidatorRowMobile > should render the selected vote 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent mr-3 sm:hidden"
+                  class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent mr-3 sm:hidden"
                   data-testid="ValidatorStatus__standby"
                 >
                   Standby
@@ -224,7 +224,7 @@ exports[`ValidatorRowMobile > should render the selected vote 1`] = `
                 </div>
                 <div>
                   <div
-                    class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                    class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent"
                     data-testid="ValidatorStatus__standby"
                   >
                     Standby
@@ -311,7 +311,7 @@ exports[`ValidatorRowMobile > should render the selected vote 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent mr-3 sm:hidden"
+                  class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent mr-3 sm:hidden"
                   data-testid="ValidatorStatus__standby"
                 >
                   Standby
@@ -372,7 +372,7 @@ exports[`ValidatorRowMobile > should render the selected vote 1`] = `
                 </div>
                 <div>
                   <div
-                    class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                    class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent"
                     data-testid="ValidatorStatus__standby"
                   >
                     Standby
