@@ -81,7 +81,7 @@ describe("Page", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it.each(["Settings", "Documentation"])("should handle '%s' click on user actions dropdown", async (label) => {
+	it.each(["Settings", "Docs"])("should handle '%s' click on user actions dropdown", async (label) => {
 		const windowSpy = vi.spyOn(window, "open").mockImplementation(vi.fn());
 		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
 
@@ -105,7 +105,7 @@ describe("Page", () => {
 
 		await userEvent.click(await screen.findByText(label));
 
-		if (label === "Documentation") {
+		if (label === "Docs") {
 			expect(windowSpy).toHaveBeenCalledWith("https://arkvault.io/docs", "_blank");
 		} else {
 			expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/${label.toLowerCase()}`);

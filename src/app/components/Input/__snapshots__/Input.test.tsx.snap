@@ -32,7 +32,6 @@ exports[`Input > should render as textarea 1`] = `
         class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
         data-testid="Input"
         type="text"
-        value=""
       />
     </div>
   </div>
@@ -53,7 +52,6 @@ exports[`Input > should render disabled 1`] = `
         data-testid="Input"
         disabled=""
         type="text"
-        value=""
       />
     </div>
   </div>
@@ -74,7 +72,6 @@ exports[`Input > should render invalid 1`] = `
         class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
         data-testid="Input"
         type="text"
-        value=""
       />
     </div>
     <div
@@ -146,7 +143,6 @@ exports[`Input > should render invalid and disabled 1`] = `
         data-testid="Input"
         disabled=""
         type="text"
-        value=""
       />
     </div>
     <div
@@ -216,7 +212,6 @@ exports[`Input > should render when isCompact = false 1`] = `
         class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
         data-testid="Input"
         type="text"
-        value=""
       />
     </div>
   </div>
@@ -236,7 +231,6 @@ exports[`Input > should render when isCompact = true 1`] = `
         class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
         data-testid="Input"
         type="text"
-        value=""
       />
     </div>
   </div>
@@ -259,7 +253,6 @@ exports[`Input > should render with addons 1`] = `
         class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
         data-testid="Input"
         type="text"
-        value=""
       />
     </div>
     <div
@@ -291,7 +284,6 @@ exports[`Input > should render with focus 1`] = `
         class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
         data-testid="Input"
         type="text"
-        value=""
       />
     </div>
   </div>
@@ -316,7 +308,6 @@ exports[`Input > should render with suggestion 1`] = `
         class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
         data-testid="Input"
         type="text"
-        value=""
       />
       <span
         class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"

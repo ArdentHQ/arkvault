@@ -15,7 +15,6 @@ exports[`InputCounter > should render 1`] = `
         maxlength="10"
         maxlengthlabel="10"
         type="text"
-        value=""
       />
     </div>
     <div
@@ -54,7 +53,6 @@ exports[`InputCounter > should render with invalid state 1`] = `
         maxlengthlabel="10"
         name="vendorField"
         type="text"
-        value=""
       />
     </div>
     <div

@@ -666,7 +666,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                 <div
                                   class="text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
                                 >
-                                  03.04.2025 8:34 AM
+                                  03.04.2025 10:34 AM
                                 </div>
                               </div>
                               <div
@@ -876,7 +876,7 @@ exports[`Notifications > should render with transactions in lg 1`] = `
 <div>
   <div>
     <div
-      aria-controls=":r9:"
+      aria-controls="«r9»"
       aria-expanded="true"
       aria-haspopup="dialog"
       data-testid="dropdown__toggle"
@@ -933,7 +933,7 @@ exports[`Notifications > should render with transactions in md 1`] = `
 <div>
   <div>
     <div
-      aria-controls=":r6:"
+      aria-controls="«r6»"
       aria-expanded="true"
       aria-haspopup="dialog"
       data-testid="dropdown__toggle"
@@ -990,7 +990,7 @@ exports[`Notifications > should render with transactions in sm 1`] = `
 <div>
   <div>
     <div
-      aria-controls=":r3:"
+      aria-controls="«r3»"
       aria-expanded="true"
       aria-haspopup="dialog"
       data-testid="dropdown__toggle"
@@ -1047,7 +1047,7 @@ exports[`Notifications > should render with transactions in xl 1`] = `
 <div>
   <div>
     <div
-      aria-controls=":rc:"
+      aria-controls="«rc»"
       aria-expanded="true"
       aria-haspopup="dialog"
       data-testid="dropdown__toggle"
@@ -1104,7 +1104,7 @@ exports[`Notifications > should render with transactions in xs 1`] = `
 <div>
   <div>
     <div
-      aria-controls=":r0:"
+      aria-controls="«r0»"
       aria-expanded="true"
       aria-haspopup="dialog"
       data-testid="dropdown__toggle"

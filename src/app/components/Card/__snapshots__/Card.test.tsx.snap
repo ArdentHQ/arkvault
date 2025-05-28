@@ -47,7 +47,7 @@ exports[`Card > should render with custom options 1`] = `
         class="absolute -top-1 -right-1 m-4 flex items-center space-x-1"
       >
         <div
-          aria-controls=":r0:"
+          aria-controls="«r0»"
           aria-expanded="true"
           aria-haspopup="dialog"
           data-testid="dropdown__toggle"
