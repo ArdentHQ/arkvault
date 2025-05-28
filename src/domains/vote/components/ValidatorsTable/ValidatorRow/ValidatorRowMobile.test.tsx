@@ -9,7 +9,7 @@ import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 let wallet: Contracts.IReadWriteWallet;
 let validator: Contracts.IReadOnlyWallet;
 
-const firstValidatorVoteButton = () => screen.getByTestId("DelegateRow__toggle-0");
+const firstValidatorVoteButton = () => screen.getByTestId("ValidatorRow__toggle-0");
 
 describe("ValidatorRowMobile", () => {
 	beforeAll(() => {
@@ -19,7 +19,7 @@ describe("ValidatorRowMobile", () => {
 			address: data[0].address,
 			explorerLink: "",
 			governanceIdentifier: "address",
-			isResignedDelegate: false,
+			isResignedValidator: false,
 			isValidator: true,
 			publicKey: data[0].publicKey,
 			username: data[0].username,
@@ -44,7 +44,7 @@ describe("ValidatorRowMobile", () => {
 				</tbody>
 			</table>,
 		);
-		expect(screen.getAllByTestId("DelegateRowMobile")[0]).toBeInTheDocument();
+		expect(screen.getAllByTestId("ValidatorRowMobile")[0]).toBeInTheDocument();
 	});
 
 	it("should render mobile skeleton while loading", () => {
@@ -102,21 +102,21 @@ describe("ValidatorRowMobile", () => {
 	});
 
 	it("should render the selected vote", () => {
-		const secondDelegate = new ReadOnlyWallet({
+		const secondValidator = new ReadOnlyWallet({
 			address: data[1].address,
 			explorerLink: "",
 			governanceIdentifier: "address",
-			isResignedDelegate: false,
+			isResignedValidator: false,
 			isValidator: true,
 			publicKey: data[1].publicKey,
 			username: data[1].username,
 		});
 
-		const thirdDelegate = new ReadOnlyWallet({
+		const thirdValidator = new ReadOnlyWallet({
 			address: data[2].address,
 			explorerLink: "",
 			governanceIdentifier: "address",
-			isResignedDelegate: false,
+			isResignedValidator: false,
 			isValidator: true,
 			publicKey: data[2].publicKey,
 			username: data[2].username,
@@ -142,7 +142,7 @@ describe("ValidatorRowMobile", () => {
 					/>
 					<ValidatorRowMobile
 						index={1}
-						validator={secondDelegate}
+						validator={secondValidator}
 						selectedVotes={[]}
 						selectedUnvotes={[]}
 						availableBalance={wallet.balance()}
@@ -153,7 +153,7 @@ describe("ValidatorRowMobile", () => {
 					/>
 					<ValidatorRowMobile
 						index={2}
-						validator={thirdDelegate}
+						validator={thirdValidator}
 						selectedVotes={[]}
 						selectedUnvotes={[]}
 						isVoteDisabled={true}
@@ -169,8 +169,8 @@ describe("ValidatorRowMobile", () => {
 
 		expect(container).toBeInTheDocument();
 		expect(firstValidatorVoteButton()).toHaveTextContent(commonTranslations.CURRENT);
-		expect(screen.getByTestId("DelegateRow__toggle-1")).toHaveTextContent(commonTranslations.SELECT);
-		expect(screen.getByTestId("DelegateRow__toggle-2")).toBeDisabled();
+		expect(screen.getByTestId("ValidatorRow__toggle-1")).toHaveTextContent(commonTranslations.SELECT);
+		expect(screen.getByTestId("ValidatorRow__toggle-2")).toBeDisabled();
 
 		expect(asFragment()).toMatchSnapshot();
 	});

@@ -18,7 +18,7 @@ export enum ProfilePaths {
 	SendVote = "/profiles/:profileId/send-vote",
 	SendVoteWallet = "/profiles/:profileId/wallets/:walletId/send-vote",
 	SendMultiSignature = "/profiles/:profileId/wallets/:walletId/send-registration/multiSignature",
-	SendDelegateRegistration = "/profiles/:profileId/wallets/:walletId/send-registration/validatorRegistration",
+	SendValidatorRegistration = "/profiles/:profileId/wallets/:walletId/send-registration/validatorRegistration",
 	SendValidatorResignationProfile = "/profiles/:profileId/send-validator-resignation",
 	SendUsernameRegistration = "/profiles/:profileId/wallets/:walletId/send-registration/usernameRegistration",
 	SendRegistrationProfile = "/profiles/:profileId/send-registration/:registrationType",

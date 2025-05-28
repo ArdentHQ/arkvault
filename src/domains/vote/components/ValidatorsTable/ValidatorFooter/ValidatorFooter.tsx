@@ -24,7 +24,7 @@ const FooterContent = ({ label, value, disabled, className }: FooterContentPrope
 	<div className={twMerge("flex space-x-3 pr-4 pl-4 first:pl-6 last:pr-6", className)}>
 		<div className="flex flex-row items-center space-x-2">
 			<LabelWrapper>{label}</LabelWrapper>
-			<TextWrapper disabled={disabled} data-testid={`DelegateTable__footer--${label.toLocaleLowerCase()}`}>
+			<TextWrapper disabled={disabled} data-testid={`ValidatorTable__footer--${label.toLocaleLowerCase()}`}>
 				<div className="flex items-center justify-start md:justify-end">
 					<div>{value}</div>
 				</div>
@@ -101,7 +101,7 @@ export const ValidatorFooter = ({
 	return (
 		<div
 			className="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0"
-			data-testid="DelegateTable__footer"
+			data-testid="ValidatorTable__footer"
 		>
 			<div className="mx-auto px-8 md:px-10 lg:container">
 				<div className="flex flex-col font-semibold sm:flex-row sm:space-x-3">
@@ -132,7 +132,7 @@ export const ValidatorFooter = ({
 						{requiresStakeAmount && (
 							<div
 								className="flex flex-row space-x-2 px-6"
-								data-testid="DelegateTable__available-balance"
+								data-testid="ValidatorTable__available-balance"
 							>
 								<LabelWrapper>
 									{t("VOTE.VALIDATOR_TABLE.VOTE_AMOUNT.AVAILABLE_TO_VOTE", {
@@ -175,11 +175,11 @@ export const ValidatorFooter = ({
 							<span className="bg-theme-secondary-300 dark:bg-theme-secondary-800 hidden h-5 w-px md:block" />
 
 							<Tooltip content={tooltipContent} disabled={!isContinueDisabled}>
-								<span data-testid="DelegateTable__continue--wrapper" className="sm:ml-auto sm:pl-6">
+								<span data-testid="ValidatorTable__continue--wrapper" className="sm:ml-auto sm:pl-6">
 									<Button
 										disabled={isContinueDisabled}
 										onClick={() => onContinue?.(selectedUnvotes, selectedVotes)}
-										data-testid="DelegateTable__continue-button"
+										data-testid="ValidatorTable__continue-button"
 										size="sm"
 										className="w-full sm:w-auto"
 									>

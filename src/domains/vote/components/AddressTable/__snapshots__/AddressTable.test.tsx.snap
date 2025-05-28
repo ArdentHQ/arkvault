@@ -1017,7 +1017,7 @@ exports[`AddressTable > should render with empty results 1`] = `
 </DocumentFragment>
 `;
 
-exports[`AddressTable > should render with voting delegates and handle exception 1`] = `
+exports[`AddressTable > should render with voting validators and handle exception 1`] = `
 <DocumentFragment>
   <div
     data-testid="AddressTable"

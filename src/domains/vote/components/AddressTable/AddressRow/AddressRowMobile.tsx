@@ -19,7 +19,7 @@ interface AddressRowMobileProperties {
 	onSelect?: (walletAddress: string) => void;
 }
 
-export const AddressRowMobileDelegateName = ({ name }: { name?: string }) => {
+export const AddressRowMobileValidatorName = ({ name }: { name?: string }) => {
 	const is2Xs = useMediaQuery({ maxWidth: 410 });
 
 	if (!name) {
@@ -107,7 +107,7 @@ export const AddressRowMobile = ({ index, wallet, onSelect }: AddressRowMobilePr
 								to={votes[0].wallet.explorerLink()}
 								className="[&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500 flex w-full items-center text-sm"
 							>
-								<AddressRowMobileDelegateName name={votes[0].wallet.address()} />
+								<AddressRowMobileValidatorName name={votes[0].wallet.address()} />
 							</Link>
 						</div>
 					</div>
