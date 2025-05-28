@@ -1,12 +1,13 @@
 /* eslint unicorn/no-abusive-eslint-disable: "off" */
 /* eslint-disable */
-import { Contracts, Services } from "@/app/lib/mainsail";
+import { ConfigRepository, Contracts, Services } from "@/app/lib/mainsail";
 import { BigNumber } from "@/app/lib/helpers";
 
-import { formatUnits } from "./helpers/format-units";
 import { ArkClient } from "@arkecosystem/typescript-client";
-import { ConfigRepository } from "@/app/lib/mainsail";
 import { IProfile } from "@/app/lib/profiles/profile.contract";
+import { UnitConverter } from "@arkecosystem/typescript-crypto";
+import { EstimateGasPayload } from "@/app/lib/mainsail/fee.contract";
+import { hexToNumber } from "viem";
 
 interface Fees {
 	min: string;
@@ -20,7 +21,9 @@ export class FeeService {
 
 	constructor({ config, profile }: { config: ConfigRepository; profile: IProfile }) {
 		this.#config = config;
-		this.#client = new ArkClient(this.#config.host("full", profile));
+		const api = this.#config.host("full", profile);
+		const evm = this.#config.host("evm", profile);
+		this.#client = new ArkClient({ api, evm });
 	}
 
 	public async all(): Promise<Services.TransactionFees> {
@@ -39,6 +42,16 @@ export class FeeService {
 		};
 	}
 
+	public async estimateGas(payload: EstimateGasPayload) {
+		const gasResponse = await this.#client.evm().call({
+			id: "1",
+			method: "eth_estimateGas",
+			params: [payload],
+		});
+
+		return hexToNumber(gasResponse.result);
+	}
+
 	public async calculate(
 		transaction: Contracts.RawTransactionData,
 		options?: Services.TransactionFeeOptions,
@@ -48,9 +61,9 @@ export class FeeService {
 
 	#transform(fees: Fees): Services.TransactionFee {
 		return {
-			avg: formatUnits(fees.avg ?? "0", "gwei"),
-			max: formatUnits(fees.max ?? "0", "gwei"),
-			min: formatUnits(fees.min ?? "0", "gwei"),
+			avg: BigNumber.make(UnitConverter.formatUnits(fees.avg ?? "0", "gwei")),
+			max: BigNumber.make(UnitConverter.formatUnits(fees.max ?? "0", "gwei")),
+			min: BigNumber.make(UnitConverter.formatUnits(fees.min ?? "0", "gwei")),
 		};
 	}
 }

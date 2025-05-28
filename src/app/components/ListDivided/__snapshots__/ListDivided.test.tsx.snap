@@ -13,7 +13,7 @@ exports[`ListDivided > should render an empty list divided 1`] = `
 exports[`ListDivided > should render an list divided with lastBorder = false 1`] = `
 <DocumentFragment>
   <ul
-    class="[&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:border-theme-secondary-300 [&>li]:pb-6 dark:[&>li]:border-theme-secondary-800"
+    class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6"
     data-testid="list-divided__items"
   >
     <li
@@ -31,14 +31,14 @@ exports[`ListDivided > should render an list divided with lastBorder = false 1`]
             class="flex items-center justify-between space-x-5"
           >
             <span
-              class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
+              class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
               data-testid="list-divided-item__label"
             >
               New Profile
             </span>
           </div>
           <span
-            class="text-sm font-medium text-theme-secondary-700 dark:text-theme-dark-200"
+            class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-medium"
             data-testid="list-divided-item__label--description"
           >
             Select Profile Image
@@ -53,10 +53,10 @@ exports[`ListDivided > should render an list divided with lastBorder = false 1`]
           class="mt-2 flex flex-row"
         >
           <div
-            class="mr-6 flex h-24 w-24 items-center justify-center rounded border-2 border-dashed border-theme-secondary-500"
+            class="border-theme-secondary-500 mr-6 flex h-24 w-24 items-center justify-center rounded border-2 border-dashed"
           />
           <div
-            class="relative h-24 w-24 rounded bg-theme-secondary-500"
+            class="bg-theme-secondary-500 relative h-24 w-24 rounded"
           >
             <img
               alt="random avatar"
@@ -74,7 +74,7 @@ exports[`ListDivided > should render an list divided with lastBorder = false 1`]
 exports[`ListDivided > should render an list divided with lastBorder = true 1`] = `
 <DocumentFragment>
   <ul
-    class="[&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:border-theme-secondary-300 [&>li]:pb-6 dark:[&>li]:border-theme-secondary-800 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+    class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
     data-testid="list-divided__items"
   >
     <li
@@ -92,14 +92,14 @@ exports[`ListDivided > should render an list divided with lastBorder = true 1`] 
             class="flex items-center justify-between space-x-5"
           >
             <span
-              class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
+              class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
               data-testid="list-divided-item__label"
             >
               New Profile
             </span>
           </div>
           <span
-            class="text-sm font-medium text-theme-secondary-700 dark:text-theme-dark-200"
+            class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-medium"
             data-testid="list-divided-item__label--description"
           >
             Select Profile Image
@@ -114,10 +114,10 @@ exports[`ListDivided > should render an list divided with lastBorder = true 1`] 
           class="mt-2 flex flex-row"
         >
           <div
-            class="mr-6 flex h-24 w-24 items-center justify-center rounded border-2 border-dashed border-theme-secondary-500"
+            class="border-theme-secondary-500 mr-6 flex h-24 w-24 items-center justify-center rounded border-2 border-dashed"
           />
           <div
-            class="relative h-24 w-24 rounded bg-theme-secondary-500"
+            class="bg-theme-secondary-500 relative h-24 w-24 rounded"
           >
             <img
               alt="random avatar"

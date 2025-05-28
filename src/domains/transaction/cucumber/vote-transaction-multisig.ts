@@ -106,7 +106,7 @@ cucumber(
 						},
 					},
 					balance: "3375089801",
-					isDelegate: false,
+					isValidator: false,
 					isResigned: false,
 					lockedBalance: "0",
 					multiSignature: {},

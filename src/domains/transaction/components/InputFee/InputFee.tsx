@@ -13,16 +13,16 @@ import { Contracts } from "@/app/lib/profiles";
 import { InputFeeAdvanced } from "./blocks/InputFeeAdvanced";
 import { InputFeeSimple } from "./blocks/InputFeeSimple";
 import { Switch } from "@/app/components/Switch";
-import { formatUnits } from "@/app/lib/mainsail";
 import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
 import { useTranslation } from "react-i18next";
+import { UnitConverter } from "@arkecosystem/typescript-crypto";
 
 export const calculateGasFee = (gasPrice?: number, gasLimit?: number): number => {
 	if (!gasPrice || !gasLimit) {
 		return 0;
 	}
 
-	return formatUnits(BigNumber.make(gasLimit).times(gasPrice).toString(), "gwei").toNumber();
+	return UnitConverter.formatUnits(BigNumber.make(gasLimit).times(gasPrice).toString(), "gwei");
 };
 
 export const InputFee: React.FC<InputFeeProperties> = memo(

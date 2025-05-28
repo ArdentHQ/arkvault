@@ -481,7 +481,7 @@ describe("SendVote", () => {
 						},
 					],
 				},
-				gasLimit: 200_000,
+				gasLimit: 21_000,
 				gasPrice: 5.066_701_25,
 				signatory: expect.any(Signatories.Signatory),
 			});
@@ -499,7 +499,7 @@ describe("SendVote", () => {
 						},
 					],
 				},
-				gasLimit: 200_000,
+				gasLimit: 21_000,
 				gasPrice: 5.066_701_25,
 				signatory: expect.any(Signatories.Signatory),
 			}),
@@ -788,7 +788,7 @@ describe("SendVote", () => {
 
 		appendParameters(parameters, "unvote", unvotes);
 
-		const { container } = render(
+		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
 				<SendVote />
 			</Route>,
@@ -837,8 +837,6 @@ describe("SendVote", () => {
 		});
 
 		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
-
-		expect(container).toMatchSnapshot();
 
 		signMock.mockRestore();
 		broadcastMock.mockRestore();

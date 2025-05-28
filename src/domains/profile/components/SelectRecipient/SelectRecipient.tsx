@@ -67,7 +67,7 @@ const OptionLabel = ({
 	);
 
 	return (
-		<div className="flex items-center space-x-2 whitespace-nowrap leading-5">
+		<div className="flex items-center space-x-2 leading-5 whitespace-nowrap">
 			<Address
 				address={address}
 				walletName={alias}
@@ -216,7 +216,7 @@ export const SelectRecipient = React.forwardRef<HTMLInputElement, SelectRecipien
 											<div
 												data-testid="SelectRecipient__select-recipient"
 												className={cn("flex items-center", {
-													"cursor-pointer rounded bg-transparent p-1 text-theme-secondary-700 transition-colors hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white":
+													"text-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 cursor-pointer rounded bg-transparent p-1 transition-colors dark:hover:text-white":
 														!disabled,
 												})}
 												onClick={openRecipients}

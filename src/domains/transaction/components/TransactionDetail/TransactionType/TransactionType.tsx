@@ -42,7 +42,7 @@ export const TransactionType = ({
 							<div className="flex w-full justify-between sm:justify-start">
 								<DetailLabelText>{t("COMMON.USERNAME")}</DetailLabelText>
 
-								<div className="no-ligatures min-w-0 truncate font-semibold leading-5">
+								<div className="no-ligatures min-w-0 truncate leading-5 font-semibold">
 									{transaction.username()}
 								</div>
 							</div>
@@ -56,7 +56,7 @@ export const TransactionType = ({
 							<div className="flex w-full justify-between sm:justify-start">
 								<DetailLabelText>{t("COMMON.PUBLIC_KEY")}</DetailLabelText>
 
-								<div className="no-ligatures min-w-0 truncate font-semibold leading-5">
+								<div className="no-ligatures min-w-0 truncate leading-5 font-semibold">
 									{validatorPublickey(transaction)}
 								</div>
 							</div>

@@ -55,6 +55,14 @@ export const mainsailMainnetHandlers = [
 	http.post("https://wallets-evm.mainsailhq.com/evm/api", async ({ request }) => {
 		const body = await request.json();
 
+		if (body.method === "eth_estimateGas") {
+			return HttpResponse.json({
+				id: 1,
+				jsonrpc: "2.0",
+				result: "0x5208",
+			});
+		}
+
 		// if `to` is `username` abi
 		if (body.params[0].to === "0x2c1DE3b4Dbb4aDebEbB5dcECAe825bE2a9fc6eb6") {
 			return HttpResponse.json({

@@ -59,7 +59,7 @@ export function useStepHeaderConfig(step: ImportAddressStep, importOption?: Impo
 				titleIcon: (
 					<Icon
 						name="Completed"
-						className="hidden text-theme-success-100 dark:text-theme-success-900 md:block"
+						className="text-theme-success-100 dark:text-theme-success-900 hidden md:block"
 						dimensions={[24, 24]}
 						data-testid="icon-Completed"
 					/>
@@ -90,7 +90,7 @@ export function useLedgerStepHeaderConfig(step: LedgerTabStep, importOption?: Im
 				subtitle: t("WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.SUBTITLE"),
 				title: t("WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.TITLE"),
 				titleIcon: (
-					<Icon name="NoteCheck" dimensions={[22, 22]} className="hidden text-theme-primary-600 md:block" />
+					<Icon name="NoteCheck" dimensions={[22, 22]} className="text-theme-primary-600 hidden md:block" />
 				),
 			};
 		}
@@ -102,7 +102,7 @@ export function useLedgerStepHeaderConfig(step: LedgerTabStep, importOption?: Im
 				titleIcon: (
 					<Icon
 						name="DoubleCheckedCircle"
-						className="hidden text-theme-success-100 dark:text-theme-success-900 md:block"
+						className="text-theme-success-100 dark:text-theme-success-900 hidden md:block"
 						dimensions={[22, 22]}
 					/>
 				),
@@ -138,7 +138,7 @@ export const ImportActionToolbar = ({
 }) => {
 	const { t } = useTranslation();
 	return (
-		<div className="fixed inset-x-0 bottom-0 mr-[5px] flex w-full items-center justify-end bg-theme-background p-2 px-4 sm:justify-between sm:px-6 sm:py-6 md:px-8">
+		<div className="bg-theme-background fixed inset-x-0 bottom-0 mr-[5px] flex w-full items-center justify-end p-2 px-4 sm:justify-between sm:px-6 sm:py-6 md:px-8">
 			<div className="flex w-full gap-3 sm:justify-end [&>button]:flex-1 sm:[&>button]:flex-none">
 				{showButtons && (
 					<>

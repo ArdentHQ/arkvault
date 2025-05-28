@@ -139,13 +139,13 @@ const NodeStatusNode: React.VFC<{
 	return (
 		<div
 			data-testid="NodesStatus--node"
-			className="flex items-center space-x-3 rounded-lg border border-theme-secondary-300 px-4 py-3 leading-none text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200"
+			className="border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 flex items-center space-x-3 rounded-lg border px-4 py-3 leading-none"
 		>
 			<div className="flex shrink-0">
 				<NetworkIcon network={network} size="sm" className="" showTooltip={false} isCompact />
 			</div>
 
-			<div className="flex-grow font-semibold">{networkDisplayName(network)}</div>
+			<div className="grow font-semibold">{networkDisplayName(network)}</div>
 
 			<div className="cursor-pointer">
 				{results.every((r) => r === true) && (
@@ -176,7 +176,7 @@ const NodeStatusNode: React.VFC<{
 					type="button"
 					onClick={checkNetworkStatus}
 					disabled={results.includes(undefined)}
-					className="transition-colors hover:text-theme-primary-700 dark:hover:text-theme-dark-50"
+					className="dark:hover:text-theme-dark-50 hover:text-theme-primary-700 transition-colors"
 				>
 					<Icon name="ArrowRotateLeft" size="md" />
 				</button>

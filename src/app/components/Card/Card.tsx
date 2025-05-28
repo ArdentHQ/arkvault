@@ -26,9 +26,9 @@ const StyledButton = ({ variant, onClick, ...props }: StyledButtonProps) => (
 		{...props}
 		onClick={onClick}
 		className={twMerge(
-			"relative h-full w-full cursor-pointer rounded-lg border-2 border-theme-primary-100 bg-theme-background p-5 text-left outline-none transition-colors-shadow duration-200 focus-visible:border-theme-primary-400 focus-visible:outline-none dark:border-theme-secondary-800",
+			"border-theme-primary-100 bg-theme-background transition-colors-shadow focus-visible:border-theme-primary-400 dark:border-theme-secondary-800 relative h-full w-full cursor-pointer rounded-lg border-2 p-5 text-left outline-hidden duration-200 focus-visible:outline-hidden",
 			cn({
-				"hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:shadow-xl hover:dark:border-theme-secondary-800 hover:dark:bg-theme-secondary-800":
+				"hover:border-theme-primary-100 hover:bg-theme-primary-100 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 hover:shadow-xl":
 					typeof onClick === "function" && variant === "primary",
 				"hover:border-theme-primary-700 hover:bg-theme-primary-700 hover:text-white hover:shadow-xl":
 					typeof onClick === "function" && variant === "secondary",
@@ -48,7 +48,7 @@ export const Card = ({ variant, children, addonIcons, actions, onClick, onSelect
 			tabIndex={onClick ? undefined : -1}
 		>
 			{children}
-			<div className="absolute -right-1 -top-1 m-4 flex items-center space-x-1">
+			<div className="absolute -top-1 -right-1 m-4 flex items-center space-x-1">
 				{addonIcons}
 				{actions && actions.length > 0 && (
 					<Dropdown
@@ -59,7 +59,7 @@ export const Card = ({ variant, children, addonIcons, actions, onClick, onSelect
 							<div className="flex w-4 justify-center overflow-hidden">
 								<Icon
 									name="EllipsisVertical"
-									className="cursor-pointer p-1 text-theme-primary-300 transition-colors duration-200 hover:text-theme-primary-400 dark:text-theme-secondary-600 dark:hover:text-theme-secondary-200"
+									className="text-theme-primary-300 dark:text-theme-secondary-600 dark:hover:text-theme-secondary-200 hover:text-theme-primary-400 cursor-pointer p-1 transition-colors duration-200"
 									size="md"
 								/>
 							</div>

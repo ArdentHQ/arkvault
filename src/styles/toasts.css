@@ -1,4 +1,4 @@
-@import "react-toastify/dist/ReactToastify.css";
+@import 'react-toastify/dist/ReactToastify.css';
 
 @media (max-width: 768px) {
 	.Toastify__toast-container {

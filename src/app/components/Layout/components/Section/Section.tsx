@@ -20,10 +20,10 @@ const SectionWrapper = ({
 		{...props}
 		className={twMerge(
 			cn({
-				"!pb-8": !backgroundClassName && border,
-				"!pt-8": border && props.className?.includes("hasBorder"),
-				"!py-8": backgroundClassName,
 				"border-b": border,
+				"pb-8!": !backgroundClassName && border,
+				"pt-8!": border && props.className?.includes("hasBorder"),
+				"py-8!": backgroundClassName,
 			}),
 			props.className,
 		)}
@@ -47,6 +47,6 @@ export const Section = ({
 			className,
 		)}
 	>
-		<div className={twMerge("mx-auto px-6 lg:container md:px-10", innerClassName)}>{children}</div>
+		<div className={twMerge("mx-auto px-6 md:px-10 lg:container", innerClassName)}>{children}</div>
 	</SectionWrapper>
 );

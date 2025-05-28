@@ -1,5 +1,4 @@
 import { formatString } from "@/app/lib/helpers";
-import queryString from "query-string";
 import { ConfigRepository } from "@/app/lib/mainsail";
 import { IProfile } from "@/app/lib/profiles/profile.contract";
 import { randomHost } from "@/app/lib/mainsail/helpers/hosts";
@@ -39,9 +38,10 @@ export class LinkService {
 		);
 
 		const url = `${host.replace(/\/$/, "")}/${formatString(schema, id)}`;
+		const queryString = new URLSearchParams(query).toString();
 
 		if (query) {
-			return `${url}?${queryString.stringify(query)}`;
+			return `${url}?${queryString}`;
 		}
 
 		return url;

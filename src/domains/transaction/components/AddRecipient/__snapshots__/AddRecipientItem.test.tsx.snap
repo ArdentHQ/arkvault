@@ -3,28 +3,28 @@
 exports[`Add Recipient item > should render with exchange amount 1`] = `
 <DocumentFragment>
   <div
-    class="mb-3 overflow-hidden rounded border border-theme-secondary-300 bg-white last:mb-0 dark:border-theme-dark-700 dark:bg-theme-dark-900 sm:rounded-none sm:border-x-0 sm:border-b-0 sm:border-dashed sm:bg-transparent sm:pt-3 sm:dark:bg-transparent"
+    class="border-theme-secondary-300 dark:border-theme-dark-700 dark:bg-theme-dark-900 mb-3 overflow-hidden rounded border bg-white last:mb-0 sm:rounded-none sm:border-x-0 sm:border-b-0 sm:border-dashed sm:bg-transparent sm:pt-3 sm:dark:bg-transparent"
     data-testid="AddRecipientItem"
   >
     <div
-      class="flex flex-col items-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0"
+      class="flex flex-col items-center space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4"
     >
       <div
-        class="flex w-full min-w-0 flex-1 flex-col sm:w-auto sm:items-start sm:space-x-0 sm:space-y-1"
+        class="flex w-full min-w-0 flex-1 flex-col sm:w-auto sm:items-start sm:space-y-1 sm:space-x-0"
       >
         <div
-          class="flex w-full flex-1 flex-row items-center justify-between bg-theme-secondary-100 px-4 py-3 dark:bg-theme-dark-950 sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+          class="bg-theme-secondary-100 dark:bg-theme-dark-950 flex w-full flex-1 flex-row items-center justify-between px-4 py-3 sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
         >
           <div
             class="flex w-full items-center justify-between"
           >
             <div
-              class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500"
+              class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm leading-[17px] font-semibold whitespace-nowrap"
             >
               Recipient #2
             </div>
             <button
-              class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-theme-secondary-700 dark:text-theme-secondary-500 sm:hidden"
+              class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-500 p-0 sm:hidden"
               data-testid="AddRecipientItem--deleteButton_mobile"
               type="button"
             >
@@ -63,7 +63,7 @@ exports[`Add Recipient item > should render with exchange amount 1`] = `
           </div>
         </div>
         <div
-          class="px-4 pb-4 pt-3 sm:w-full sm:p-0"
+          class="px-4 pt-3 pb-4 sm:w-full sm:p-0"
         >
           <div>
             <div
@@ -96,7 +96,7 @@ exports[`Add Recipient item > should render with exchange amount 1`] = `
             >
               <div>
                 <div
-                  class="mb-2 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500"
+                  class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-2 text-sm leading-[17px] font-semibold"
                 >
                   Address
                 </div>
@@ -124,12 +124,12 @@ exports[`Add Recipient item > should render with exchange amount 1`] = `
               </div>
               <div>
                 <div
-                  class="mb-2 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500"
+                  class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-2 text-sm leading-[17px] font-semibold"
                 >
                   Value
                 </div>
                 <span
-                  class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-secondary-200"
+                  class="whitespace-nowrap text-theme-secondary-900 dark:text-theme-secondary-200 text-sm leading-[17px] font-semibold"
                   data-testid="Amount"
                 >
                   1 DARK
@@ -149,7 +149,7 @@ exports[`Add Recipient item > should render with exchange amount 1`] = `
             class="flex flex-col items-end space-y-2"
           >
             <div
-              class="whitespace-nowrap font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500"
+              class="text-theme-secondary-700 dark:text-theme-secondary-500 leading-[17px] font-semibold whitespace-nowrap"
             >
               <span
                 class="hidden sm:inline"
@@ -164,14 +164,14 @@ exports[`Add Recipient item > should render with exchange amount 1`] = `
               </span>
             </div>
             <span
-              class="whitespace-nowrap font-semibold leading-5 text-theme-secondary-900 dark:text-theme-secondary-200"
+              class="whitespace-nowrap text-theme-secondary-900 dark:text-theme-secondary-200 leading-5 font-semibold"
               data-testid="Amount"
             >
               1 DARK
             </span>
           </div>
           <button
-            class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 disabled:cursor-not-allowed bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-300 focus:ring-theme-danger-300 h-11 w-11 p-2.5"
+            class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 disabled:cursor-not-allowed bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-300 focus:ring-theme-danger-300 h-11 w-11 p-2.5"
             data-testid="AddRecipientItem--deleteButton"
             type="button"
           >
@@ -217,28 +217,28 @@ exports[`Add Recipient item > should render with exchange amount 1`] = `
 exports[`Add Recipient item > should render without exchange amount 1`] = `
 <DocumentFragment>
   <div
-    class="mb-3 overflow-hidden rounded border border-theme-secondary-300 bg-white last:mb-0 dark:border-theme-dark-700 dark:bg-theme-dark-900 sm:rounded-none sm:border-x-0 sm:border-b-0 sm:border-dashed sm:bg-transparent sm:pt-3 sm:dark:bg-transparent"
+    class="border-theme-secondary-300 dark:border-theme-dark-700 dark:bg-theme-dark-900 mb-3 overflow-hidden rounded border bg-white last:mb-0 sm:rounded-none sm:border-x-0 sm:border-b-0 sm:border-dashed sm:bg-transparent sm:pt-3 sm:dark:bg-transparent"
     data-testid="AddRecipientItem"
   >
     <div
-      class="flex flex-col items-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0"
+      class="flex flex-col items-center space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4"
     >
       <div
-        class="flex w-full min-w-0 flex-1 flex-col sm:w-auto sm:items-start sm:space-x-0 sm:space-y-1"
+        class="flex w-full min-w-0 flex-1 flex-col sm:w-auto sm:items-start sm:space-y-1 sm:space-x-0"
       >
         <div
-          class="flex w-full flex-1 flex-row items-center justify-between bg-theme-secondary-100 px-4 py-3 dark:bg-theme-dark-950 sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+          class="bg-theme-secondary-100 dark:bg-theme-dark-950 flex w-full flex-1 flex-row items-center justify-between px-4 py-3 sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
         >
           <div
             class="flex w-full items-center justify-between"
           >
             <div
-              class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500"
+              class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm leading-[17px] font-semibold whitespace-nowrap"
             >
               Recipient #2
             </div>
             <button
-              class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-theme-secondary-700 dark:text-theme-secondary-500 sm:hidden"
+              class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-500 p-0 sm:hidden"
               data-testid="AddRecipientItem--deleteButton_mobile"
               type="button"
             >
@@ -277,7 +277,7 @@ exports[`Add Recipient item > should render without exchange amount 1`] = `
           </div>
         </div>
         <div
-          class="px-4 pb-4 pt-3 sm:w-full sm:p-0"
+          class="px-4 pt-3 pb-4 sm:w-full sm:p-0"
         >
           <div>
             <div
@@ -310,7 +310,7 @@ exports[`Add Recipient item > should render without exchange amount 1`] = `
             >
               <div>
                 <div
-                  class="mb-2 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500"
+                  class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-2 text-sm leading-[17px] font-semibold"
                 >
                   Address
                 </div>
@@ -338,12 +338,12 @@ exports[`Add Recipient item > should render without exchange amount 1`] = `
               </div>
               <div>
                 <div
-                  class="mb-2 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500"
+                  class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-2 text-sm leading-[17px] font-semibold"
                 >
                   Value
                 </div>
                 <span
-                  class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-secondary-200"
+                  class="whitespace-nowrap text-theme-secondary-900 dark:text-theme-secondary-200 text-sm leading-[17px] font-semibold"
                   data-testid="Amount"
                 >
                   1 DARK
@@ -363,7 +363,7 @@ exports[`Add Recipient item > should render without exchange amount 1`] = `
             class="flex flex-col items-end space-y-2"
           >
             <div
-              class="whitespace-nowrap font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500"
+              class="text-theme-secondary-700 dark:text-theme-secondary-500 leading-[17px] font-semibold whitespace-nowrap"
             >
               <span
                 class="text-sm leading-[17px]"
@@ -372,14 +372,14 @@ exports[`Add Recipient item > should render without exchange amount 1`] = `
               </span>
             </div>
             <span
-              class="whitespace-nowrap font-semibold leading-5 text-theme-secondary-900 dark:text-theme-secondary-200"
+              class="whitespace-nowrap text-theme-secondary-900 dark:text-theme-secondary-200 leading-5 font-semibold"
               data-testid="Amount"
             >
               1 DARK
             </span>
           </div>
           <button
-            class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 disabled:cursor-not-allowed bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-300 focus:ring-theme-danger-300 h-11 w-11 p-2.5"
+            class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 disabled:cursor-not-allowed bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-300 focus:ring-theme-danger-300 h-11 w-11 p-2.5"
             data-testid="AddRecipientItem--deleteButton"
             type="button"
           >

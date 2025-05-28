@@ -147,7 +147,7 @@ export const Dashboard = ({
 				</Section>
 			)}
 
-			<Section className="flex-1 !pt-2">
+			<Section className="flex-1 pt-2!">
 				<div
 					className={cn({
 						"hidden md:block": mobileActiveTab !== "transactions",

@@ -94,7 +94,7 @@ export const ColumnSettings = ({ showFiatColumn }: { showFiatColumn: boolean }) 
 
 	return (
 		<>
-			<div className="mb-4 mt-8 text-lg font-semibold">{t("TRANSACTION.EXPORT.FORM.COLUMNS")}</div>
+			<div className="mt-8 mb-4 text-lg font-semibold">{t("TRANSACTION.EXPORT.FORM.COLUMNS")}</div>
 
 			<ListDivided items={columnToggles} />
 		</>

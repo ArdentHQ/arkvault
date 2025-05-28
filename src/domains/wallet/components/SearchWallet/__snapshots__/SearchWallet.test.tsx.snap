@@ -3,7 +3,7 @@
 exports[`SearchWallet uses fiat value = false > should render 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 backdrop-blur-xl dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 backdrop-blur-xl md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -11,14 +11,14 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8 pb-24"
+        class="bg-theme-background relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8 pb-24"
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-800 hover:text-white dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white md:mr-8 md:mt-8"
+          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -67,7 +67,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
             class="flex flex-1 flex-col"
           >
             <div
-              class="whitespace-pre-line pr-10 text-sm text-theme-secondary-text md:pr-0 md:text-base"
+              class="text-theme-secondary-text pr-10 text-sm whitespace-pre-line md:pr-0 md:text-base"
             >
               Locate and select the address for receiving funds.
             </div>
@@ -75,7 +75,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
               class="mt-4"
             >
               <div
-                class="rounded-xl pb-2 outline outline-1 outline-transparent md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 border-transparent md:border-b-[5px] md:border-b-theme-secondary-200"
+                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
                 data-testid="TableWrapper"
               >
                 <div
@@ -208,7 +208,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                                   class="group"
                                 >
                                   <button
-                                    class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:bg-theme-secondary-800 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
+                                    class="text-theme-secondary-700 disabled:text-theme-secondary-400 dark:text-theme-secondary-500 dark:disabled:text-theme-secondary-700 relative flex cursor-pointer items-center justify-center font-semibold transition-colors duration-200 focus:outline-hidden disabled:cursor-not-allowed hover:bg-theme-primary-100 dark:hover:bg-theme-secondary-800 dark:hover:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
                                     type="button"
                                   >
                                     <div
@@ -331,7 +331,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                           >
                             <div>
                               <button
-                                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-sm leading-[17px] text-theme-primary-600"
+                                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 -mr-3 text-sm leading-[17px]"
                                 data-testid="SearchWalletListItem__select-0"
                                 type="button"
                               >
@@ -396,7 +396,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                           >
                             <div>
                               <button
-                                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-sm leading-[17px] text-theme-primary-600"
+                                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 -mr-3 text-sm leading-[17px]"
                                 data-testid="SearchWalletListItem__select-1"
                                 type="button"
                               >
@@ -426,7 +426,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
 exports[`SearchWallet uses fiat value = false > should render compact on md screen 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 backdrop-blur-xl dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 backdrop-blur-xl md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -434,14 +434,14 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8 pb-24"
+        class="bg-theme-background relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8 pb-24"
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-800 hover:text-white dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white md:mr-8 md:mt-8"
+          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -490,7 +490,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
             class="flex flex-1 flex-col"
           >
             <div
-              class="whitespace-pre-line pr-10 text-sm text-theme-secondary-text md:pr-0 md:text-base"
+              class="text-theme-secondary-text pr-10 text-sm whitespace-pre-line md:pr-0 md:text-base"
             >
               Locate and select the address for receiving funds.
             </div>
@@ -498,7 +498,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
               class="mt-4"
             >
               <div
-                class="rounded-xl pb-2 outline outline-1 outline-transparent md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 border-transparent md:border-b-[5px] md:border-b-theme-secondary-200"
+                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
                 data-testid="TableWrapper"
               >
                 <div
@@ -631,7 +631,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                                   class="group"
                                 >
                                   <button
-                                    class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:bg-theme-secondary-800 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
+                                    class="text-theme-secondary-700 disabled:text-theme-secondary-400 dark:text-theme-secondary-500 dark:disabled:text-theme-secondary-700 relative flex cursor-pointer items-center justify-center font-semibold transition-colors duration-200 focus:outline-hidden disabled:cursor-not-allowed hover:bg-theme-primary-100 dark:hover:bg-theme-secondary-800 dark:hover:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
                                     type="button"
                                   >
                                     <div
@@ -754,7 +754,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                           >
                             <div>
                               <button
-                                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-sm leading-[17px] text-theme-primary-600"
+                                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 -mr-3 text-sm leading-[17px]"
                                 data-testid="SearchWalletListItem__select-0"
                                 type="button"
                               >
@@ -819,7 +819,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                           >
                             <div>
                               <button
-                                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-sm leading-[17px] text-theme-primary-600"
+                                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 -mr-3 text-sm leading-[17px]"
                                 data-testid="SearchWalletListItem__select-1"
                                 type="button"
                               >
@@ -849,7 +849,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
 exports[`SearchWallet uses fiat value = false > should render compact with selected address 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 backdrop-blur-xl dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 backdrop-blur-xl md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -857,14 +857,14 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8 pb-24"
+        class="bg-theme-background relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8 pb-24"
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-800 hover:text-white dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white md:mr-8 md:mt-8"
+          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -913,7 +913,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
             class="flex flex-1 flex-col"
           >
             <div
-              class="whitespace-pre-line pr-10 text-sm text-theme-secondary-text md:pr-0 md:text-base"
+              class="text-theme-secondary-text pr-10 text-sm whitespace-pre-line md:pr-0 md:text-base"
             >
               Locate and select the address for receiving funds.
             </div>
@@ -921,7 +921,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
               class="mt-4"
             >
               <div
-                class="rounded-xl pb-2 outline outline-1 outline-transparent md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 border-transparent md:border-b-[5px] md:border-b-theme-secondary-200"
+                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
                 data-testid="TableWrapper"
               >
                 <div
@@ -1054,7 +1054,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                                   class="group"
                                 >
                                   <button
-                                    class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:bg-theme-secondary-800 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
+                                    class="text-theme-secondary-700 disabled:text-theme-secondary-400 dark:text-theme-secondary-500 dark:disabled:text-theme-secondary-700 relative flex cursor-pointer items-center justify-center font-semibold transition-colors duration-200 focus:outline-hidden disabled:cursor-not-allowed hover:bg-theme-primary-100 dark:hover:bg-theme-secondary-800 dark:hover:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
                                     type="button"
                                   >
                                     <div
@@ -1176,7 +1176,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                             class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-3 mr-3 bg-theme-success-100 rounded-r dark:bg-transparent dark:border-y-2 dark:border-r-2 dark:border-theme-success-600 justify-end my-0.5"
                           >
                             <button
-                              class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 py-0 text-sm leading-[17px] text-theme-primary-reverse-600"
+                              class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-reverse-600 -mr-3 py-0 text-sm leading-[17px]"
                               data-testid="SearchWalletListItem__selected-0"
                               type="button"
                             >
@@ -1240,7 +1240,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                           >
                             <div>
                               <button
-                                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-sm leading-[17px] text-theme-primary-600"
+                                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 -mr-3 text-sm leading-[17px]"
                                 data-testid="SearchWalletListItem__select-1"
                                 type="button"
                               >
@@ -1270,7 +1270,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
 exports[`SearchWallet uses fiat value = false > should render responsive item 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 backdrop-blur-xl dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 backdrop-blur-xl md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -1278,14 +1278,14 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 1`
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8 pb-24"
+        class="bg-theme-background relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8 pb-24"
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-800 hover:text-white dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white md:mr-8 md:mt-8"
+          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -1334,7 +1334,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 1`
             class="flex flex-1 flex-col"
           >
             <div
-              class="whitespace-pre-line pr-10 text-sm text-theme-secondary-text md:pr-0 md:text-base"
+              class="text-theme-secondary-text pr-10 text-sm whitespace-pre-line md:pr-0 md:text-base"
             >
               Locate and select the address for receiving funds.
             </div>
@@ -1346,11 +1346,11 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 1`
                 data-testid="HeaderSearchInput"
               >
                 <div
-                  class="dark:border dark:border-theme-secondary-800 xs:[min-width:300px] sm:[min-width:448px] flex items-center overflow-hidden rounded-lg border border-theme-secondary-400 bg-theme-background px-4 text-base dark:border-theme-secondary-700"
+                  class="dark:border-theme-secondary-800 xs:[min-width:300px] sm:[min-width:448px] dark:border border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 flex items-center overflow-hidden rounded-lg border px-4 text-base"
                   data-testid="HeaderSearchInput__input"
                 >
                   <button
-                    class="transition-all duration-300 focus:outline-none"
+                    class="transition-all duration-300 focus:outline-hidden"
                     data-testid="HeaderSearchInput__input__reset"
                     type="button"
                   >
@@ -1388,14 +1388,14 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 1`
                     class="flex-1"
                   >
                     <div
-                      class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 -ml-4"
+                      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 -ml-4"
                     >
                       <div
                         class="relative flex h-full flex-1"
                       >
                         <input
                           autocomplete="off"
-                          class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
+                          class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
                           data-testid="HeaderSearchInput__input__input"
                           placeholder="Search..."
                           type="text"
@@ -1458,7 +1458,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 1`
                 </div>
               </div>
               <div
-                class="rounded-xl pb-2 outline outline-1 outline-transparent md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 border-transparent md:border-b-[5px] md:border-b-theme-secondary-200"
+                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
                 data-testid="TableWrapper"
               >
                 <div
@@ -1479,20 +1479,20 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 1`
                           class="pt-3"
                         >
                           <div
-                            class="flex h-[117px] w-full cursor-pointer flex-col gap-3 rounded-xl bg-theme-primary-100 p-2 ring-2 dark:bg-theme-background ring-theme-primary-100 dark:ring-theme-secondary-800"
+                            class="bg-theme-primary-100 dark:bg-theme-background flex h-[117px] w-full cursor-pointer flex-col gap-3 rounded-xl p-2 ring-2 ring-theme-primary-100 dark:ring-theme-secondary-800"
                             data-testid="ReceiverItemMobile"
                             tabindex="0"
                           >
                             <div
-                              class="flex flex-col gap-2 pl-2 pt-2"
+                              class="flex flex-col gap-2 pt-2 pl-2"
                             >
                               <span
-                                class="w-full max-w-48 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200 xs:max-w-80 sm:max-w-128"
+                                class="text-theme-secondary-900 xs:max-w-80 dark:text-theme-secondary-200 w-full max-w-48 truncate text-sm font-semibold sm:max-w-128"
                               >
                                 Sample Wallet
                               </span>
                               <span
-                                class="text-xs font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                                class="text-theme-secondary-700 dark:text-theme-secondary-500 text-xs font-semibold"
                               >
                                 <span
                                   class="no-ligatures min-w-0 overflow-hidden"
@@ -1503,7 +1503,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 1`
                               </span>
                             </div>
                             <div
-                              class="flex flex-row items-center justify-between overflow-hidden rounded-lg bg-theme-primary-500 text-sm font-semibold text-white"
+                              class="bg-theme-primary-500 flex flex-row items-center justify-between overflow-hidden rounded-lg text-sm font-semibold text-white"
                             >
                               <div
                                 class="pl-2"
@@ -1516,7 +1516,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 1`
                                 </span>
                               </div>
                               <button
-                                class="flex h-full items-center justify-center bg-theme-primary-600 px-5 py-3"
+                                class="bg-theme-primary-600 flex h-full items-center justify-center px-5 py-3"
                               >
                                 Select
                               </button>
@@ -1531,20 +1531,20 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 1`
                           class="pt-3"
                         >
                           <div
-                            class="flex h-[117px] w-full cursor-pointer flex-col gap-3 rounded-xl bg-theme-primary-100 p-2 ring-2 dark:bg-theme-background ring-theme-primary-100 dark:ring-theme-secondary-800"
+                            class="bg-theme-primary-100 dark:bg-theme-background flex h-[117px] w-full cursor-pointer flex-col gap-3 rounded-xl p-2 ring-2 ring-theme-primary-100 dark:ring-theme-secondary-800"
                             data-testid="ReceiverItemMobile"
                             tabindex="0"
                           >
                             <div
-                              class="flex flex-col gap-2 pl-2 pt-2"
+                              class="flex flex-col gap-2 pt-2 pl-2"
                             >
                               <span
-                                class="w-full max-w-48 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200 xs:max-w-80 sm:max-w-128"
+                                class="text-theme-secondary-900 xs:max-w-80 dark:text-theme-secondary-200 w-full max-w-48 truncate text-sm font-semibold sm:max-w-128"
                               >
                                 Mainsail Wallet 2
                               </span>
                               <span
-                                class="text-xs font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                                class="text-theme-secondary-700 dark:text-theme-secondary-500 text-xs font-semibold"
                               >
                                 <span
                                   class="no-ligatures min-w-0 overflow-hidden"
@@ -1555,7 +1555,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 1`
                               </span>
                             </div>
                             <div
-                              class="flex flex-row items-center justify-between overflow-hidden rounded-lg bg-theme-primary-500 text-sm font-semibold text-white"
+                              class="bg-theme-primary-500 flex flex-row items-center justify-between overflow-hidden rounded-lg text-sm font-semibold text-white"
                             >
                               <div
                                 class="pl-2"
@@ -1568,7 +1568,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 1`
                                 </span>
                               </div>
                               <button
-                                class="flex h-full items-center justify-center bg-theme-primary-600 px-5 py-3"
+                                class="bg-theme-primary-600 flex h-full items-center justify-center px-5 py-3"
                               >
                                 Select
                               </button>
@@ -1592,7 +1592,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 1`
 exports[`SearchWallet uses fiat value = false > should render responsive item 2`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 backdrop-blur-xl dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 backdrop-blur-xl md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -1600,14 +1600,14 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 2`
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8 pb-24"
+        class="bg-theme-background relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8 pb-24"
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-800 hover:text-white dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white md:mr-8 md:mt-8"
+          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -1656,7 +1656,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 2`
             class="flex flex-1 flex-col"
           >
             <div
-              class="whitespace-pre-line pr-10 text-sm text-theme-secondary-text md:pr-0 md:text-base"
+              class="text-theme-secondary-text pr-10 text-sm whitespace-pre-line md:pr-0 md:text-base"
             >
               Locate and select the address for receiving funds.
             </div>
@@ -1668,11 +1668,11 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 2`
                 data-testid="HeaderSearchInput"
               >
                 <div
-                  class="dark:border dark:border-theme-secondary-800 xs:[min-width:300px] sm:[min-width:448px] flex items-center overflow-hidden rounded-lg border border-theme-secondary-400 bg-theme-background px-4 text-base dark:border-theme-secondary-700"
+                  class="dark:border-theme-secondary-800 xs:[min-width:300px] sm:[min-width:448px] dark:border border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 flex items-center overflow-hidden rounded-lg border px-4 text-base"
                   data-testid="HeaderSearchInput__input"
                 >
                   <button
-                    class="transition-all duration-300 focus:outline-none"
+                    class="transition-all duration-300 focus:outline-hidden"
                     data-testid="HeaderSearchInput__input__reset"
                     type="button"
                   >
@@ -1710,14 +1710,14 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 2`
                     class="flex-1"
                   >
                     <div
-                      class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 -ml-4"
+                      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 -ml-4"
                     >
                       <div
                         class="relative flex h-full flex-1"
                       >
                         <input
                           autocomplete="off"
-                          class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
+                          class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
                           data-testid="HeaderSearchInput__input__input"
                           placeholder="Search..."
                           type="text"
@@ -1780,7 +1780,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 2`
                 </div>
               </div>
               <div
-                class="rounded-xl pb-2 outline outline-1 outline-transparent md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 border-transparent md:border-b-[5px] md:border-b-theme-secondary-200"
+                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
                 data-testid="TableWrapper"
               >
                 <div
@@ -1801,20 +1801,20 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 2`
                           class="pt-3"
                         >
                           <div
-                            class="flex h-[117px] w-full cursor-pointer flex-col gap-3 rounded-xl bg-theme-primary-100 p-2 ring-2 dark:bg-theme-background ring-theme-primary-100 dark:ring-theme-secondary-800"
+                            class="bg-theme-primary-100 dark:bg-theme-background flex h-[117px] w-full cursor-pointer flex-col gap-3 rounded-xl p-2 ring-2 ring-theme-primary-100 dark:ring-theme-secondary-800"
                             data-testid="ReceiverItemMobile"
                             tabindex="0"
                           >
                             <div
-                              class="flex flex-col gap-2 pl-2 pt-2"
+                              class="flex flex-col gap-2 pt-2 pl-2"
                             >
                               <span
-                                class="w-full max-w-48 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200 xs:max-w-80 sm:max-w-128"
+                                class="text-theme-secondary-900 xs:max-w-80 dark:text-theme-secondary-200 w-full max-w-48 truncate text-sm font-semibold sm:max-w-128"
                               >
                                 Sample Wallet
                               </span>
                               <span
-                                class="text-xs font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                                class="text-theme-secondary-700 dark:text-theme-secondary-500 text-xs font-semibold"
                               >
                                 <span
                                   class="no-ligatures min-w-0 overflow-hidden"
@@ -1825,7 +1825,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 2`
                               </span>
                             </div>
                             <div
-                              class="flex flex-row items-center justify-between overflow-hidden rounded-lg bg-theme-primary-500 text-sm font-semibold text-white"
+                              class="bg-theme-primary-500 flex flex-row items-center justify-between overflow-hidden rounded-lg text-sm font-semibold text-white"
                             >
                               <div
                                 class="pl-2"
@@ -1838,7 +1838,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 2`
                                 </span>
                               </div>
                               <button
-                                class="flex h-full items-center justify-center bg-theme-primary-600 px-5 py-3"
+                                class="bg-theme-primary-600 flex h-full items-center justify-center px-5 py-3"
                               >
                                 Select
                               </button>
@@ -1853,20 +1853,20 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 2`
                           class="pt-3"
                         >
                           <div
-                            class="flex h-[117px] w-full cursor-pointer flex-col gap-3 rounded-xl bg-theme-primary-100 p-2 ring-2 dark:bg-theme-background ring-theme-primary-100 dark:ring-theme-secondary-800"
+                            class="bg-theme-primary-100 dark:bg-theme-background flex h-[117px] w-full cursor-pointer flex-col gap-3 rounded-xl p-2 ring-2 ring-theme-primary-100 dark:ring-theme-secondary-800"
                             data-testid="ReceiverItemMobile"
                             tabindex="0"
                           >
                             <div
-                              class="flex flex-col gap-2 pl-2 pt-2"
+                              class="flex flex-col gap-2 pt-2 pl-2"
                             >
                               <span
-                                class="w-full max-w-48 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200 xs:max-w-80 sm:max-w-128"
+                                class="text-theme-secondary-900 xs:max-w-80 dark:text-theme-secondary-200 w-full max-w-48 truncate text-sm font-semibold sm:max-w-128"
                               >
                                 Mainsail Wallet 2
                               </span>
                               <span
-                                class="text-xs font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                                class="text-theme-secondary-700 dark:text-theme-secondary-500 text-xs font-semibold"
                               >
                                 <span
                                   class="no-ligatures min-w-0 overflow-hidden"
@@ -1877,7 +1877,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 2`
                               </span>
                             </div>
                             <div
-                              class="flex flex-row items-center justify-between overflow-hidden rounded-lg bg-theme-primary-500 text-sm font-semibold text-white"
+                              class="bg-theme-primary-500 flex flex-row items-center justify-between overflow-hidden rounded-lg text-sm font-semibold text-white"
                             >
                               <div
                                 class="pl-2"
@@ -1890,7 +1890,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 2`
                                 </span>
                               </div>
                               <button
-                                class="flex h-full items-center justify-center bg-theme-primary-600 px-5 py-3"
+                                class="bg-theme-primary-600 flex h-full items-center justify-center px-5 py-3"
                               >
                                 Select
                               </button>
@@ -1914,7 +1914,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 2`
 exports[`SearchWallet uses fiat value = false > should render responsive with selected address 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 backdrop-blur-xl dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 backdrop-blur-xl md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -1922,14 +1922,14 @@ exports[`SearchWallet uses fiat value = false > should render responsive with se
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8 pb-24"
+        class="bg-theme-background relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8 pb-24"
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-800 hover:text-white dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white md:mr-8 md:mt-8"
+          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -1978,7 +1978,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive with se
             class="flex flex-1 flex-col"
           >
             <div
-              class="whitespace-pre-line pr-10 text-sm text-theme-secondary-text md:pr-0 md:text-base"
+              class="text-theme-secondary-text pr-10 text-sm whitespace-pre-line md:pr-0 md:text-base"
             >
               Locate and select the address for receiving funds.
             </div>
@@ -1990,11 +1990,11 @@ exports[`SearchWallet uses fiat value = false > should render responsive with se
                 data-testid="HeaderSearchInput"
               >
                 <div
-                  class="dark:border dark:border-theme-secondary-800 xs:[min-width:300px] sm:[min-width:448px] flex items-center overflow-hidden rounded-lg border border-theme-secondary-400 bg-theme-background px-4 text-base dark:border-theme-secondary-700"
+                  class="dark:border-theme-secondary-800 xs:[min-width:300px] sm:[min-width:448px] dark:border border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 flex items-center overflow-hidden rounded-lg border px-4 text-base"
                   data-testid="HeaderSearchInput__input"
                 >
                   <button
-                    class="transition-all duration-300 focus:outline-none"
+                    class="transition-all duration-300 focus:outline-hidden"
                     data-testid="HeaderSearchInput__input__reset"
                     type="button"
                   >
@@ -2032,14 +2032,14 @@ exports[`SearchWallet uses fiat value = false > should render responsive with se
                     class="flex-1"
                   >
                     <div
-                      class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 -ml-4"
+                      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 -ml-4"
                     >
                       <div
                         class="relative flex h-full flex-1"
                       >
                         <input
                           autocomplete="off"
-                          class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
+                          class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
                           data-testid="HeaderSearchInput__input__input"
                           placeholder="Search..."
                           type="text"
@@ -2102,7 +2102,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive with se
                 </div>
               </div>
               <div
-                class="rounded-xl pb-2 outline outline-1 outline-transparent md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 border-transparent md:border-b-[5px] md:border-b-theme-secondary-200"
+                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
                 data-testid="TableWrapper"
               >
                 <div
@@ -2123,20 +2123,20 @@ exports[`SearchWallet uses fiat value = false > should render responsive with se
                           class="pt-3"
                         >
                           <div
-                            class="flex h-[117px] w-full cursor-pointer flex-col gap-3 rounded-xl bg-theme-primary-100 p-2 ring-2 dark:bg-theme-background ring-theme-primary-600 dark:ring-theme-primary-600"
+                            class="bg-theme-primary-100 dark:bg-theme-background flex h-[117px] w-full cursor-pointer flex-col gap-3 rounded-xl p-2 ring-2 ring-theme-primary-600 dark:ring-theme-primary-600"
                             data-testid="ReceiverItemMobile--selected"
                             tabindex="0"
                           >
                             <div
-                              class="flex flex-col gap-2 pl-2 pt-2"
+                              class="flex flex-col gap-2 pt-2 pl-2"
                             >
                               <span
-                                class="w-full max-w-48 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200 xs:max-w-80 sm:max-w-128"
+                                class="text-theme-secondary-900 xs:max-w-80 dark:text-theme-secondary-200 w-full max-w-48 truncate text-sm font-semibold sm:max-w-128"
                               >
                                 Sample Wallet
                               </span>
                               <span
-                                class="text-xs font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                                class="text-theme-secondary-700 dark:text-theme-secondary-500 text-xs font-semibold"
                               >
                                 <span
                                   class="no-ligatures min-w-0 overflow-hidden"
@@ -2147,7 +2147,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive with se
                               </span>
                             </div>
                             <div
-                              class="flex flex-row items-center justify-between overflow-hidden rounded-lg bg-theme-primary-500 text-sm font-semibold text-white"
+                              class="bg-theme-primary-500 flex flex-row items-center justify-between overflow-hidden rounded-lg text-sm font-semibold text-white"
                             >
                               <div
                                 class="pl-2"
@@ -2160,7 +2160,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive with se
                                 </span>
                               </div>
                               <button
-                                class="flex h-full items-center justify-center bg-theme-primary-600 px-5 py-3"
+                                class="bg-theme-primary-600 flex h-full items-center justify-center px-5 py-3"
                               >
                                 Select
                               </button>
@@ -2175,20 +2175,20 @@ exports[`SearchWallet uses fiat value = false > should render responsive with se
                           class="pt-3"
                         >
                           <div
-                            class="flex h-[117px] w-full cursor-pointer flex-col gap-3 rounded-xl bg-theme-primary-100 p-2 ring-2 dark:bg-theme-background ring-theme-primary-100 dark:ring-theme-secondary-800"
+                            class="bg-theme-primary-100 dark:bg-theme-background flex h-[117px] w-full cursor-pointer flex-col gap-3 rounded-xl p-2 ring-2 ring-theme-primary-100 dark:ring-theme-secondary-800"
                             data-testid="ReceiverItemMobile"
                             tabindex="0"
                           >
                             <div
-                              class="flex flex-col gap-2 pl-2 pt-2"
+                              class="flex flex-col gap-2 pt-2 pl-2"
                             >
                               <span
-                                class="w-full max-w-48 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200 xs:max-w-80 sm:max-w-128"
+                                class="text-theme-secondary-900 xs:max-w-80 dark:text-theme-secondary-200 w-full max-w-48 truncate text-sm font-semibold sm:max-w-128"
                               >
                                 Mainsail Wallet 2
                               </span>
                               <span
-                                class="text-xs font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                                class="text-theme-secondary-700 dark:text-theme-secondary-500 text-xs font-semibold"
                               >
                                 <span
                                   class="no-ligatures min-w-0 overflow-hidden"
@@ -2199,7 +2199,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive with se
                               </span>
                             </div>
                             <div
-                              class="flex flex-row items-center justify-between overflow-hidden rounded-lg bg-theme-primary-500 text-sm font-semibold text-white"
+                              class="bg-theme-primary-500 flex flex-row items-center justify-between overflow-hidden rounded-lg text-sm font-semibold text-white"
                             >
                               <div
                                 class="pl-2"
@@ -2212,7 +2212,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive with se
                                 </span>
                               </div>
                               <button
-                                class="flex h-full items-center justify-center bg-theme-primary-600 px-5 py-3"
+                                class="bg-theme-primary-600 flex h-full items-center justify-center px-5 py-3"
                               >
                                 Select
                               </button>
@@ -2236,7 +2236,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive with se
 exports[`SearchWallet uses fiat value = false > should render with incompatible ledger wallet 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 backdrop-blur-xl dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 backdrop-blur-xl md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -2244,14 +2244,14 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8 pb-24"
+        class="bg-theme-background relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8 pb-24"
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-800 hover:text-white dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white md:mr-8 md:mt-8"
+          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -2300,7 +2300,7 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
             class="flex flex-1 flex-col"
           >
             <div
-              class="whitespace-pre-line pr-10 text-sm text-theme-secondary-text md:pr-0 md:text-base"
+              class="text-theme-secondary-text pr-10 text-sm whitespace-pre-line md:pr-0 md:text-base"
             >
               Locate and select the address for receiving funds.
             </div>
@@ -2308,7 +2308,7 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
               class="mt-4"
             >
               <div
-                class="rounded-xl pb-2 outline outline-1 outline-transparent md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 border-transparent md:border-b-[5px] md:border-b-theme-secondary-200"
+                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
                 data-testid="TableWrapper"
               >
                 <div
@@ -2441,7 +2441,7 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
                                   class="group"
                                 >
                                   <button
-                                    class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:bg-theme-secondary-800 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
+                                    class="text-theme-secondary-700 disabled:text-theme-secondary-400 dark:text-theme-secondary-500 dark:disabled:text-theme-secondary-700 relative flex cursor-pointer items-center justify-center font-semibold transition-colors duration-200 focus:outline-hidden disabled:cursor-not-allowed hover:bg-theme-primary-100 dark:hover:bg-theme-secondary-800 dark:hover:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
                                     type="button"
                                   >
                                     <div
@@ -2553,7 +2553,7 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
                           >
                             <div>
                               <button
-                                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 -mr-3 text-sm leading-[17px] text-theme-primary-600"
+                                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-primary-600 -mr-3 text-sm leading-[17px]"
                                 data-testid="SearchWalletListItem__select-0"
                                 disabled=""
                                 type="button"
@@ -2584,7 +2584,7 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
 exports[`SearchWallet uses fiat value = false > should render with selected address 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 backdrop-blur-xl dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 backdrop-blur-xl md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -2592,14 +2592,14 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8 pb-24"
+        class="bg-theme-background relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8 pb-24"
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-800 hover:text-white dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white md:mr-8 md:mt-8"
+          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -2648,7 +2648,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
             class="flex flex-1 flex-col"
           >
             <div
-              class="whitespace-pre-line pr-10 text-sm text-theme-secondary-text md:pr-0 md:text-base"
+              class="text-theme-secondary-text pr-10 text-sm whitespace-pre-line md:pr-0 md:text-base"
             >
               Locate and select the address for receiving funds.
             </div>
@@ -2656,7 +2656,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
               class="mt-4"
             >
               <div
-                class="rounded-xl pb-2 outline outline-1 outline-transparent md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 border-transparent md:border-b-[5px] md:border-b-theme-secondary-200"
+                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
                 data-testid="TableWrapper"
               >
                 <div
@@ -2789,7 +2789,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                                   class="group"
                                 >
                                   <button
-                                    class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:bg-theme-secondary-800 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
+                                    class="text-theme-secondary-700 disabled:text-theme-secondary-400 dark:text-theme-secondary-500 dark:disabled:text-theme-secondary-700 relative flex cursor-pointer items-center justify-center font-semibold transition-colors duration-200 focus:outline-hidden disabled:cursor-not-allowed hover:bg-theme-primary-100 dark:hover:bg-theme-secondary-800 dark:hover:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
                                     type="button"
                                   >
                                     <div
@@ -2911,7 +2911,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                             class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-3 mr-3 bg-theme-success-100 rounded-r dark:bg-transparent dark:border-y-2 dark:border-r-2 dark:border-theme-success-600 justify-end my-0.5"
                           >
                             <button
-                              class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 py-0 text-sm leading-[17px] text-theme-primary-reverse-600"
+                              class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-reverse-600 -mr-3 py-0 text-sm leading-[17px]"
                               data-testid="SearchWalletListItem__selected-0"
                               type="button"
                             >
@@ -2975,7 +2975,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                           >
                             <div>
                               <button
-                                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-sm leading-[17px] text-theme-primary-600"
+                                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 -mr-3 text-sm leading-[17px]"
                                 data-testid="SearchWalletListItem__select-1"
                                 type="button"
                               >
@@ -3005,7 +3005,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
 exports[`SearchWallet uses fiat value = false > should render with the default exchange currency enabled from profile settings 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 backdrop-blur-xl dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 backdrop-blur-xl md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -3013,14 +3013,14 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8 pb-24"
+        class="bg-theme-background relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8 pb-24"
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-800 hover:text-white dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white md:mr-8 md:mt-8"
+          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -3069,7 +3069,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
             class="flex flex-1 flex-col"
           >
             <div
-              class="whitespace-pre-line pr-10 text-sm text-theme-secondary-text md:pr-0 md:text-base"
+              class="text-theme-secondary-text pr-10 text-sm whitespace-pre-line md:pr-0 md:text-base"
             >
               Locate and select the address for receiving funds.
             </div>
@@ -3077,7 +3077,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
               class="mt-4"
             >
               <div
-                class="rounded-xl pb-2 outline outline-1 outline-transparent md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 border-transparent md:border-b-[5px] md:border-b-theme-secondary-200"
+                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
                 data-testid="TableWrapper"
               >
                 <div
@@ -3210,7 +3210,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                                   class="group"
                                 >
                                   <button
-                                    class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:bg-theme-secondary-800 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
+                                    class="text-theme-secondary-700 disabled:text-theme-secondary-400 dark:text-theme-secondary-500 dark:disabled:text-theme-secondary-700 relative flex cursor-pointer items-center justify-center font-semibold transition-colors duration-200 focus:outline-hidden disabled:cursor-not-allowed hover:bg-theme-primary-100 dark:hover:bg-theme-secondary-800 dark:hover:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
                                     type="button"
                                   >
                                     <div
@@ -3333,7 +3333,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                           >
                             <div>
                               <button
-                                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-sm leading-[17px] text-theme-primary-600"
+                                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 -mr-3 text-sm leading-[17px]"
                                 data-testid="SearchWalletListItem__select-0"
                                 type="button"
                               >
@@ -3398,7 +3398,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                           >
                             <div>
                               <button
-                                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-sm leading-[17px] text-theme-primary-600"
+                                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 -mr-3 text-sm leading-[17px]"
                                 data-testid="SearchWalletListItem__select-1"
                                 type="button"
                               >
@@ -3428,7 +3428,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
 exports[`SearchWallet uses fiat value = true > should render 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 backdrop-blur-xl dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 backdrop-blur-xl md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -3436,14 +3436,14 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8 pb-24"
+        class="bg-theme-background relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8 pb-24"
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-800 hover:text-white dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white md:mr-8 md:mt-8"
+          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -3492,7 +3492,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
             class="flex flex-1 flex-col"
           >
             <div
-              class="whitespace-pre-line pr-10 text-sm text-theme-secondary-text md:pr-0 md:text-base"
+              class="text-theme-secondary-text pr-10 text-sm whitespace-pre-line md:pr-0 md:text-base"
             >
               Locate and select the address for receiving funds.
             </div>
@@ -3500,7 +3500,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
               class="mt-4"
             >
               <div
-                class="rounded-xl pb-2 outline outline-1 outline-transparent md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 border-transparent md:border-b-[5px] md:border-b-theme-secondary-200"
+                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
                 data-testid="TableWrapper"
               >
                 <div
@@ -3682,7 +3682,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                                   class="group"
                                 >
                                   <button
-                                    class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:bg-theme-secondary-800 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
+                                    class="text-theme-secondary-700 disabled:text-theme-secondary-400 dark:text-theme-secondary-500 dark:disabled:text-theme-secondary-700 relative flex cursor-pointer items-center justify-center font-semibold transition-colors duration-200 focus:outline-hidden disabled:cursor-not-allowed hover:bg-theme-primary-100 dark:hover:bg-theme-secondary-800 dark:hover:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
                                     type="button"
                                   >
                                     <div
@@ -3819,7 +3819,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                           >
                             <div>
                               <button
-                                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-sm leading-[17px] text-theme-primary-600"
+                                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 -mr-3 text-sm leading-[17px]"
                                 data-testid="SearchWalletListItem__select-0"
                                 type="button"
                               >
@@ -3898,7 +3898,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                           >
                             <div>
                               <button
-                                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-sm leading-[17px] text-theme-primary-600"
+                                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 -mr-3 text-sm leading-[17px]"
                                 data-testid="SearchWalletListItem__select-1"
                                 type="button"
                               >
@@ -3928,7 +3928,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
 exports[`SearchWallet uses fiat value = true > should render compact on md screen 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 backdrop-blur-xl dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 backdrop-blur-xl md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -3936,14 +3936,14 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8 pb-24"
+        class="bg-theme-background relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8 pb-24"
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-800 hover:text-white dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white md:mr-8 md:mt-8"
+          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -3992,7 +3992,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
             class="flex flex-1 flex-col"
           >
             <div
-              class="whitespace-pre-line pr-10 text-sm text-theme-secondary-text md:pr-0 md:text-base"
+              class="text-theme-secondary-text pr-10 text-sm whitespace-pre-line md:pr-0 md:text-base"
             >
               Locate and select the address for receiving funds.
             </div>
@@ -4000,7 +4000,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
               class="mt-4"
             >
               <div
-                class="rounded-xl pb-2 outline outline-1 outline-transparent md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 border-transparent md:border-b-[5px] md:border-b-theme-secondary-200"
+                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
                 data-testid="TableWrapper"
               >
                 <div
@@ -4182,7 +4182,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                                   class="group"
                                 >
                                   <button
-                                    class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:bg-theme-secondary-800 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
+                                    class="text-theme-secondary-700 disabled:text-theme-secondary-400 dark:text-theme-secondary-500 dark:disabled:text-theme-secondary-700 relative flex cursor-pointer items-center justify-center font-semibold transition-colors duration-200 focus:outline-hidden disabled:cursor-not-allowed hover:bg-theme-primary-100 dark:hover:bg-theme-secondary-800 dark:hover:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
                                     type="button"
                                   >
                                     <div
@@ -4319,7 +4319,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                           >
                             <div>
                               <button
-                                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-sm leading-[17px] text-theme-primary-600"
+                                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 -mr-3 text-sm leading-[17px]"
                                 data-testid="SearchWalletListItem__select-0"
                                 type="button"
                               >
@@ -4398,7 +4398,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                           >
                             <div>
                               <button
-                                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-sm leading-[17px] text-theme-primary-600"
+                                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 -mr-3 text-sm leading-[17px]"
                                 data-testid="SearchWalletListItem__select-1"
                                 type="button"
                               >
@@ -4428,7 +4428,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
 exports[`SearchWallet uses fiat value = true > should render compact with selected address 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 backdrop-blur-xl dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 backdrop-blur-xl md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -4436,14 +4436,14 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8 pb-24"
+        class="bg-theme-background relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8 pb-24"
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-800 hover:text-white dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white md:mr-8 md:mt-8"
+          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -4492,7 +4492,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
             class="flex flex-1 flex-col"
           >
             <div
-              class="whitespace-pre-line pr-10 text-sm text-theme-secondary-text md:pr-0 md:text-base"
+              class="text-theme-secondary-text pr-10 text-sm whitespace-pre-line md:pr-0 md:text-base"
             >
               Locate and select the address for receiving funds.
             </div>
@@ -4500,7 +4500,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
               class="mt-4"
             >
               <div
-                class="rounded-xl pb-2 outline outline-1 outline-transparent md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 border-transparent md:border-b-[5px] md:border-b-theme-secondary-200"
+                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
                 data-testid="TableWrapper"
               >
                 <div
@@ -4682,7 +4682,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                                   class="group"
                                 >
                                   <button
-                                    class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:bg-theme-secondary-800 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
+                                    class="text-theme-secondary-700 disabled:text-theme-secondary-400 dark:text-theme-secondary-500 dark:disabled:text-theme-secondary-700 relative flex cursor-pointer items-center justify-center font-semibold transition-colors duration-200 focus:outline-hidden disabled:cursor-not-allowed hover:bg-theme-primary-100 dark:hover:bg-theme-secondary-800 dark:hover:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
                                     type="button"
                                   >
                                     <div
@@ -4818,7 +4818,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                             class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-3 mr-3 bg-theme-success-100 rounded-r dark:bg-transparent dark:border-y-2 dark:border-r-2 dark:border-theme-success-600 justify-end my-0.5"
                           >
                             <button
-                              class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 py-0 text-sm leading-[17px] text-theme-primary-reverse-600"
+                              class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-reverse-600 -mr-3 py-0 text-sm leading-[17px]"
                               data-testid="SearchWalletListItem__selected-0"
                               type="button"
                             >
@@ -4896,7 +4896,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                           >
                             <div>
                               <button
-                                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-sm leading-[17px] text-theme-primary-600"
+                                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 -mr-3 text-sm leading-[17px]"
                                 data-testid="SearchWalletListItem__select-1"
                                 type="button"
                               >
@@ -4926,7 +4926,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
 exports[`SearchWallet uses fiat value = true > should render responsive item 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 backdrop-blur-xl dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 backdrop-blur-xl md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -4934,14 +4934,14 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 1`]
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8 pb-24"
+        class="bg-theme-background relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8 pb-24"
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-800 hover:text-white dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white md:mr-8 md:mt-8"
+          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -4990,7 +4990,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 1`]
             class="flex flex-1 flex-col"
           >
             <div
-              class="whitespace-pre-line pr-10 text-sm text-theme-secondary-text md:pr-0 md:text-base"
+              class="text-theme-secondary-text pr-10 text-sm whitespace-pre-line md:pr-0 md:text-base"
             >
               Locate and select the address for receiving funds.
             </div>
@@ -5002,11 +5002,11 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 1`]
                 data-testid="HeaderSearchInput"
               >
                 <div
-                  class="dark:border dark:border-theme-secondary-800 xs:[min-width:300px] sm:[min-width:448px] flex items-center overflow-hidden rounded-lg border border-theme-secondary-400 bg-theme-background px-4 text-base dark:border-theme-secondary-700"
+                  class="dark:border-theme-secondary-800 xs:[min-width:300px] sm:[min-width:448px] dark:border border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 flex items-center overflow-hidden rounded-lg border px-4 text-base"
                   data-testid="HeaderSearchInput__input"
                 >
                   <button
-                    class="transition-all duration-300 focus:outline-none"
+                    class="transition-all duration-300 focus:outline-hidden"
                     data-testid="HeaderSearchInput__input__reset"
                     type="button"
                   >
@@ -5044,14 +5044,14 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 1`]
                     class="flex-1"
                   >
                     <div
-                      class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 -ml-4"
+                      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 -ml-4"
                     >
                       <div
                         class="relative flex h-full flex-1"
                       >
                         <input
                           autocomplete="off"
-                          class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
+                          class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
                           data-testid="HeaderSearchInput__input__input"
                           placeholder="Search..."
                           type="text"
@@ -5114,7 +5114,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 1`]
                 </div>
               </div>
               <div
-                class="rounded-xl pb-2 outline outline-1 outline-transparent md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 border-transparent md:border-b-[5px] md:border-b-theme-secondary-200"
+                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
                 data-testid="TableWrapper"
               >
                 <div
@@ -5135,20 +5135,20 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 1`]
                           class="pt-3"
                         >
                           <div
-                            class="flex h-[117px] w-full cursor-pointer flex-col gap-3 rounded-xl bg-theme-primary-100 p-2 ring-2 dark:bg-theme-background ring-theme-primary-100 dark:ring-theme-secondary-800"
+                            class="bg-theme-primary-100 dark:bg-theme-background flex h-[117px] w-full cursor-pointer flex-col gap-3 rounded-xl p-2 ring-2 ring-theme-primary-100 dark:ring-theme-secondary-800"
                             data-testid="ReceiverItemMobile"
                             tabindex="0"
                           >
                             <div
-                              class="flex flex-col gap-2 pl-2 pt-2"
+                              class="flex flex-col gap-2 pt-2 pl-2"
                             >
                               <span
-                                class="w-full max-w-48 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200 xs:max-w-80 sm:max-w-128"
+                                class="text-theme-secondary-900 xs:max-w-80 dark:text-theme-secondary-200 w-full max-w-48 truncate text-sm font-semibold sm:max-w-128"
                               >
                                 Sample Wallet
                               </span>
                               <span
-                                class="text-xs font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                                class="text-theme-secondary-700 dark:text-theme-secondary-500 text-xs font-semibold"
                               >
                                 <span
                                   class="no-ligatures min-w-0 overflow-hidden"
@@ -5159,7 +5159,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 1`]
                               </span>
                             </div>
                             <div
-                              class="flex flex-row items-center justify-between overflow-hidden rounded-lg bg-theme-primary-500 text-sm font-semibold text-white"
+                              class="bg-theme-primary-500 flex flex-row items-center justify-between overflow-hidden rounded-lg text-sm font-semibold text-white"
                             >
                               <div
                                 class="pl-2"
@@ -5172,7 +5172,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 1`]
                                 </span>
                               </div>
                               <button
-                                class="flex h-full items-center justify-center bg-theme-primary-600 px-5 py-3"
+                                class="bg-theme-primary-600 flex h-full items-center justify-center px-5 py-3"
                               >
                                 Select
                               </button>
@@ -5187,20 +5187,20 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 1`]
                           class="pt-3"
                         >
                           <div
-                            class="flex h-[117px] w-full cursor-pointer flex-col gap-3 rounded-xl bg-theme-primary-100 p-2 ring-2 dark:bg-theme-background ring-theme-primary-100 dark:ring-theme-secondary-800"
+                            class="bg-theme-primary-100 dark:bg-theme-background flex h-[117px] w-full cursor-pointer flex-col gap-3 rounded-xl p-2 ring-2 ring-theme-primary-100 dark:ring-theme-secondary-800"
                             data-testid="ReceiverItemMobile"
                             tabindex="0"
                           >
                             <div
-                              class="flex flex-col gap-2 pl-2 pt-2"
+                              class="flex flex-col gap-2 pt-2 pl-2"
                             >
                               <span
-                                class="w-full max-w-48 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200 xs:max-w-80 sm:max-w-128"
+                                class="text-theme-secondary-900 xs:max-w-80 dark:text-theme-secondary-200 w-full max-w-48 truncate text-sm font-semibold sm:max-w-128"
                               >
                                 Mainsail Wallet 2
                               </span>
                               <span
-                                class="text-xs font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                                class="text-theme-secondary-700 dark:text-theme-secondary-500 text-xs font-semibold"
                               >
                                 <span
                                   class="no-ligatures min-w-0 overflow-hidden"
@@ -5211,7 +5211,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 1`]
                               </span>
                             </div>
                             <div
-                              class="flex flex-row items-center justify-between overflow-hidden rounded-lg bg-theme-primary-500 text-sm font-semibold text-white"
+                              class="bg-theme-primary-500 flex flex-row items-center justify-between overflow-hidden rounded-lg text-sm font-semibold text-white"
                             >
                               <div
                                 class="pl-2"
@@ -5224,7 +5224,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 1`]
                                 </span>
                               </div>
                               <button
-                                class="flex h-full items-center justify-center bg-theme-primary-600 px-5 py-3"
+                                class="bg-theme-primary-600 flex h-full items-center justify-center px-5 py-3"
                               >
                                 Select
                               </button>
@@ -5248,7 +5248,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 1`]
 exports[`SearchWallet uses fiat value = true > should render responsive item 2`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 backdrop-blur-xl dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 backdrop-blur-xl md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -5256,14 +5256,14 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 2`]
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8 pb-24"
+        class="bg-theme-background relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8 pb-24"
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-800 hover:text-white dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white md:mr-8 md:mt-8"
+          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -5312,7 +5312,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 2`]
             class="flex flex-1 flex-col"
           >
             <div
-              class="whitespace-pre-line pr-10 text-sm text-theme-secondary-text md:pr-0 md:text-base"
+              class="text-theme-secondary-text pr-10 text-sm whitespace-pre-line md:pr-0 md:text-base"
             >
               Locate and select the address for receiving funds.
             </div>
@@ -5324,11 +5324,11 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 2`]
                 data-testid="HeaderSearchInput"
               >
                 <div
-                  class="dark:border dark:border-theme-secondary-800 xs:[min-width:300px] sm:[min-width:448px] flex items-center overflow-hidden rounded-lg border border-theme-secondary-400 bg-theme-background px-4 text-base dark:border-theme-secondary-700"
+                  class="dark:border-theme-secondary-800 xs:[min-width:300px] sm:[min-width:448px] dark:border border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 flex items-center overflow-hidden rounded-lg border px-4 text-base"
                   data-testid="HeaderSearchInput__input"
                 >
                   <button
-                    class="transition-all duration-300 focus:outline-none"
+                    class="transition-all duration-300 focus:outline-hidden"
                     data-testid="HeaderSearchInput__input__reset"
                     type="button"
                   >
@@ -5366,14 +5366,14 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 2`]
                     class="flex-1"
                   >
                     <div
-                      class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 -ml-4"
+                      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 -ml-4"
                     >
                       <div
                         class="relative flex h-full flex-1"
                       >
                         <input
                           autocomplete="off"
-                          class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
+                          class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
                           data-testid="HeaderSearchInput__input__input"
                           placeholder="Search..."
                           type="text"
@@ -5436,7 +5436,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 2`]
                 </div>
               </div>
               <div
-                class="rounded-xl pb-2 outline outline-1 outline-transparent md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 border-transparent md:border-b-[5px] md:border-b-theme-secondary-200"
+                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
                 data-testid="TableWrapper"
               >
                 <div
@@ -5457,20 +5457,20 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 2`]
                           class="pt-3"
                         >
                           <div
-                            class="flex h-[117px] w-full cursor-pointer flex-col gap-3 rounded-xl bg-theme-primary-100 p-2 ring-2 dark:bg-theme-background ring-theme-primary-100 dark:ring-theme-secondary-800"
+                            class="bg-theme-primary-100 dark:bg-theme-background flex h-[117px] w-full cursor-pointer flex-col gap-3 rounded-xl p-2 ring-2 ring-theme-primary-100 dark:ring-theme-secondary-800"
                             data-testid="ReceiverItemMobile"
                             tabindex="0"
                           >
                             <div
-                              class="flex flex-col gap-2 pl-2 pt-2"
+                              class="flex flex-col gap-2 pt-2 pl-2"
                             >
                               <span
-                                class="w-full max-w-48 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200 xs:max-w-80 sm:max-w-128"
+                                class="text-theme-secondary-900 xs:max-w-80 dark:text-theme-secondary-200 w-full max-w-48 truncate text-sm font-semibold sm:max-w-128"
                               >
                                 Sample Wallet
                               </span>
                               <span
-                                class="text-xs font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                                class="text-theme-secondary-700 dark:text-theme-secondary-500 text-xs font-semibold"
                               >
                                 <span
                                   class="no-ligatures min-w-0 overflow-hidden"
@@ -5481,7 +5481,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 2`]
                               </span>
                             </div>
                             <div
-                              class="flex flex-row items-center justify-between overflow-hidden rounded-lg bg-theme-primary-500 text-sm font-semibold text-white"
+                              class="bg-theme-primary-500 flex flex-row items-center justify-between overflow-hidden rounded-lg text-sm font-semibold text-white"
                             >
                               <div
                                 class="pl-2"
@@ -5494,7 +5494,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 2`]
                                 </span>
                               </div>
                               <button
-                                class="flex h-full items-center justify-center bg-theme-primary-600 px-5 py-3"
+                                class="bg-theme-primary-600 flex h-full items-center justify-center px-5 py-3"
                               >
                                 Select
                               </button>
@@ -5509,20 +5509,20 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 2`]
                           class="pt-3"
                         >
                           <div
-                            class="flex h-[117px] w-full cursor-pointer flex-col gap-3 rounded-xl bg-theme-primary-100 p-2 ring-2 dark:bg-theme-background ring-theme-primary-100 dark:ring-theme-secondary-800"
+                            class="bg-theme-primary-100 dark:bg-theme-background flex h-[117px] w-full cursor-pointer flex-col gap-3 rounded-xl p-2 ring-2 ring-theme-primary-100 dark:ring-theme-secondary-800"
                             data-testid="ReceiverItemMobile"
                             tabindex="0"
                           >
                             <div
-                              class="flex flex-col gap-2 pl-2 pt-2"
+                              class="flex flex-col gap-2 pt-2 pl-2"
                             >
                               <span
-                                class="w-full max-w-48 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200 xs:max-w-80 sm:max-w-128"
+                                class="text-theme-secondary-900 xs:max-w-80 dark:text-theme-secondary-200 w-full max-w-48 truncate text-sm font-semibold sm:max-w-128"
                               >
                                 Mainsail Wallet 2
                               </span>
                               <span
-                                class="text-xs font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                                class="text-theme-secondary-700 dark:text-theme-secondary-500 text-xs font-semibold"
                               >
                                 <span
                                   class="no-ligatures min-w-0 overflow-hidden"
@@ -5533,7 +5533,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 2`]
                               </span>
                             </div>
                             <div
-                              class="flex flex-row items-center justify-between overflow-hidden rounded-lg bg-theme-primary-500 text-sm font-semibold text-white"
+                              class="bg-theme-primary-500 flex flex-row items-center justify-between overflow-hidden rounded-lg text-sm font-semibold text-white"
                             >
                               <div
                                 class="pl-2"
@@ -5546,7 +5546,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 2`]
                                 </span>
                               </div>
                               <button
-                                class="flex h-full items-center justify-center bg-theme-primary-600 px-5 py-3"
+                                class="bg-theme-primary-600 flex h-full items-center justify-center px-5 py-3"
                               >
                                 Select
                               </button>
@@ -5570,7 +5570,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 2`]
 exports[`SearchWallet uses fiat value = true > should render responsive with selected address 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 backdrop-blur-xl dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 backdrop-blur-xl md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -5578,14 +5578,14 @@ exports[`SearchWallet uses fiat value = true > should render responsive with sel
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8 pb-24"
+        class="bg-theme-background relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8 pb-24"
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-800 hover:text-white dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white md:mr-8 md:mt-8"
+          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -5634,7 +5634,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive with sel
             class="flex flex-1 flex-col"
           >
             <div
-              class="whitespace-pre-line pr-10 text-sm text-theme-secondary-text md:pr-0 md:text-base"
+              class="text-theme-secondary-text pr-10 text-sm whitespace-pre-line md:pr-0 md:text-base"
             >
               Locate and select the address for receiving funds.
             </div>
@@ -5646,11 +5646,11 @@ exports[`SearchWallet uses fiat value = true > should render responsive with sel
                 data-testid="HeaderSearchInput"
               >
                 <div
-                  class="dark:border dark:border-theme-secondary-800 xs:[min-width:300px] sm:[min-width:448px] flex items-center overflow-hidden rounded-lg border border-theme-secondary-400 bg-theme-background px-4 text-base dark:border-theme-secondary-700"
+                  class="dark:border-theme-secondary-800 xs:[min-width:300px] sm:[min-width:448px] dark:border border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 flex items-center overflow-hidden rounded-lg border px-4 text-base"
                   data-testid="HeaderSearchInput__input"
                 >
                   <button
-                    class="transition-all duration-300 focus:outline-none"
+                    class="transition-all duration-300 focus:outline-hidden"
                     data-testid="HeaderSearchInput__input__reset"
                     type="button"
                   >
@@ -5688,14 +5688,14 @@ exports[`SearchWallet uses fiat value = true > should render responsive with sel
                     class="flex-1"
                   >
                     <div
-                      class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 -ml-4"
+                      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 -ml-4"
                     >
                       <div
                         class="relative flex h-full flex-1"
                       >
                         <input
                           autocomplete="off"
-                          class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
+                          class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
                           data-testid="HeaderSearchInput__input__input"
                           placeholder="Search..."
                           type="text"
@@ -5758,7 +5758,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive with sel
                 </div>
               </div>
               <div
-                class="rounded-xl pb-2 outline outline-1 outline-transparent md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 border-transparent md:border-b-[5px] md:border-b-theme-secondary-200"
+                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
                 data-testid="TableWrapper"
               >
                 <div
@@ -5779,20 +5779,20 @@ exports[`SearchWallet uses fiat value = true > should render responsive with sel
                           class="pt-3"
                         >
                           <div
-                            class="flex h-[117px] w-full cursor-pointer flex-col gap-3 rounded-xl bg-theme-primary-100 p-2 ring-2 dark:bg-theme-background ring-theme-primary-600 dark:ring-theme-primary-600"
+                            class="bg-theme-primary-100 dark:bg-theme-background flex h-[117px] w-full cursor-pointer flex-col gap-3 rounded-xl p-2 ring-2 ring-theme-primary-600 dark:ring-theme-primary-600"
                             data-testid="ReceiverItemMobile--selected"
                             tabindex="0"
                           >
                             <div
-                              class="flex flex-col gap-2 pl-2 pt-2"
+                              class="flex flex-col gap-2 pt-2 pl-2"
                             >
                               <span
-                                class="w-full max-w-48 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200 xs:max-w-80 sm:max-w-128"
+                                class="text-theme-secondary-900 xs:max-w-80 dark:text-theme-secondary-200 w-full max-w-48 truncate text-sm font-semibold sm:max-w-128"
                               >
                                 Sample Wallet
                               </span>
                               <span
-                                class="text-xs font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                                class="text-theme-secondary-700 dark:text-theme-secondary-500 text-xs font-semibold"
                               >
                                 <span
                                   class="no-ligatures min-w-0 overflow-hidden"
@@ -5803,7 +5803,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive with sel
                               </span>
                             </div>
                             <div
-                              class="flex flex-row items-center justify-between overflow-hidden rounded-lg bg-theme-primary-500 text-sm font-semibold text-white"
+                              class="bg-theme-primary-500 flex flex-row items-center justify-between overflow-hidden rounded-lg text-sm font-semibold text-white"
                             >
                               <div
                                 class="pl-2"
@@ -5816,7 +5816,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive with sel
                                 </span>
                               </div>
                               <button
-                                class="flex h-full items-center justify-center bg-theme-primary-600 px-5 py-3"
+                                class="bg-theme-primary-600 flex h-full items-center justify-center px-5 py-3"
                               >
                                 Select
                               </button>
@@ -5831,20 +5831,20 @@ exports[`SearchWallet uses fiat value = true > should render responsive with sel
                           class="pt-3"
                         >
                           <div
-                            class="flex h-[117px] w-full cursor-pointer flex-col gap-3 rounded-xl bg-theme-primary-100 p-2 ring-2 dark:bg-theme-background ring-theme-primary-100 dark:ring-theme-secondary-800"
+                            class="bg-theme-primary-100 dark:bg-theme-background flex h-[117px] w-full cursor-pointer flex-col gap-3 rounded-xl p-2 ring-2 ring-theme-primary-100 dark:ring-theme-secondary-800"
                             data-testid="ReceiverItemMobile"
                             tabindex="0"
                           >
                             <div
-                              class="flex flex-col gap-2 pl-2 pt-2"
+                              class="flex flex-col gap-2 pt-2 pl-2"
                             >
                               <span
-                                class="w-full max-w-48 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200 xs:max-w-80 sm:max-w-128"
+                                class="text-theme-secondary-900 xs:max-w-80 dark:text-theme-secondary-200 w-full max-w-48 truncate text-sm font-semibold sm:max-w-128"
                               >
                                 Mainsail Wallet 2
                               </span>
                               <span
-                                class="text-xs font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                                class="text-theme-secondary-700 dark:text-theme-secondary-500 text-xs font-semibold"
                               >
                                 <span
                                   class="no-ligatures min-w-0 overflow-hidden"
@@ -5855,7 +5855,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive with sel
                               </span>
                             </div>
                             <div
-                              class="flex flex-row items-center justify-between overflow-hidden rounded-lg bg-theme-primary-500 text-sm font-semibold text-white"
+                              class="bg-theme-primary-500 flex flex-row items-center justify-between overflow-hidden rounded-lg text-sm font-semibold text-white"
                             >
                               <div
                                 class="pl-2"
@@ -5868,7 +5868,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive with sel
                                 </span>
                               </div>
                               <button
-                                class="flex h-full items-center justify-center bg-theme-primary-600 px-5 py-3"
+                                class="bg-theme-primary-600 flex h-full items-center justify-center px-5 py-3"
                               >
                                 Select
                               </button>
@@ -5892,7 +5892,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive with sel
 exports[`SearchWallet uses fiat value = true > should render with incompatible ledger wallet 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 backdrop-blur-xl dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 backdrop-blur-xl md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -5900,14 +5900,14 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8 pb-24"
+        class="bg-theme-background relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8 pb-24"
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-800 hover:text-white dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white md:mr-8 md:mt-8"
+          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -5956,7 +5956,7 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
             class="flex flex-1 flex-col"
           >
             <div
-              class="whitespace-pre-line pr-10 text-sm text-theme-secondary-text md:pr-0 md:text-base"
+              class="text-theme-secondary-text pr-10 text-sm whitespace-pre-line md:pr-0 md:text-base"
             >
               Locate and select the address for receiving funds.
             </div>
@@ -5964,7 +5964,7 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
               class="mt-4"
             >
               <div
-                class="rounded-xl pb-2 outline outline-1 outline-transparent md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 border-transparent md:border-b-[5px] md:border-b-theme-secondary-200"
+                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
                 data-testid="TableWrapper"
               >
                 <div
@@ -6146,7 +6146,7 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
                                   class="group"
                                 >
                                   <button
-                                    class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:bg-theme-secondary-800 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
+                                    class="text-theme-secondary-700 disabled:text-theme-secondary-400 dark:text-theme-secondary-500 dark:disabled:text-theme-secondary-700 relative flex cursor-pointer items-center justify-center font-semibold transition-colors duration-200 focus:outline-hidden disabled:cursor-not-allowed hover:bg-theme-primary-100 dark:hover:bg-theme-secondary-800 dark:hover:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
                                     type="button"
                                   >
                                     <div
@@ -6272,7 +6272,7 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
                           >
                             <div>
                               <button
-                                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 -mr-3 text-sm leading-[17px] text-theme-primary-600"
+                                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-primary-600 -mr-3 text-sm leading-[17px]"
                                 data-testid="SearchWalletListItem__select-0"
                                 disabled=""
                                 type="button"
@@ -6303,7 +6303,7 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
 exports[`SearchWallet uses fiat value = true > should render with selected address 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 backdrop-blur-xl dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 backdrop-blur-xl md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -6311,14 +6311,14 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8 pb-24"
+        class="bg-theme-background relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8 pb-24"
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-800 hover:text-white dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white md:mr-8 md:mt-8"
+          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -6367,7 +6367,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
             class="flex flex-1 flex-col"
           >
             <div
-              class="whitespace-pre-line pr-10 text-sm text-theme-secondary-text md:pr-0 md:text-base"
+              class="text-theme-secondary-text pr-10 text-sm whitespace-pre-line md:pr-0 md:text-base"
             >
               Locate and select the address for receiving funds.
             </div>
@@ -6375,7 +6375,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
               class="mt-4"
             >
               <div
-                class="rounded-xl pb-2 outline outline-1 outline-transparent md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 border-transparent md:border-b-[5px] md:border-b-theme-secondary-200"
+                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
                 data-testid="TableWrapper"
               >
                 <div
@@ -6557,7 +6557,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                                   class="group"
                                 >
                                   <button
-                                    class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:bg-theme-secondary-800 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
+                                    class="text-theme-secondary-700 disabled:text-theme-secondary-400 dark:text-theme-secondary-500 dark:disabled:text-theme-secondary-700 relative flex cursor-pointer items-center justify-center font-semibold transition-colors duration-200 focus:outline-hidden disabled:cursor-not-allowed hover:bg-theme-primary-100 dark:hover:bg-theme-secondary-800 dark:hover:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
                                     type="button"
                                   >
                                     <div
@@ -6693,7 +6693,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                             class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-3 mr-3 bg-theme-success-100 rounded-r dark:bg-transparent dark:border-y-2 dark:border-r-2 dark:border-theme-success-600 justify-end my-0.5"
                           >
                             <button
-                              class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 py-0 text-sm leading-[17px] text-theme-primary-reverse-600"
+                              class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-reverse-600 -mr-3 py-0 text-sm leading-[17px]"
                               data-testid="SearchWalletListItem__selected-0"
                               type="button"
                             >
@@ -6771,7 +6771,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                           >
                             <div>
                               <button
-                                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-sm leading-[17px] text-theme-primary-600"
+                                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 -mr-3 text-sm leading-[17px]"
                                 data-testid="SearchWalletListItem__select-1"
                                 type="button"
                               >
@@ -6801,7 +6801,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
 exports[`SearchWallet uses fiat value = true > should render with the default exchange currency enabled from profile settings 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 backdrop-blur-xl dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 backdrop-blur-xl md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -6809,14 +6809,14 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8 pb-24"
+        class="bg-theme-background relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8 pb-24"
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-800 hover:text-white dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white md:mr-8 md:mt-8"
+          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -6865,7 +6865,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
             class="flex flex-1 flex-col"
           >
             <div
-              class="whitespace-pre-line pr-10 text-sm text-theme-secondary-text md:pr-0 md:text-base"
+              class="text-theme-secondary-text pr-10 text-sm whitespace-pre-line md:pr-0 md:text-base"
             >
               Locate and select the address for receiving funds.
             </div>
@@ -6873,7 +6873,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
               class="mt-4"
             >
               <div
-                class="rounded-xl pb-2 outline outline-1 outline-transparent md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 border-transparent md:border-b-[5px] md:border-b-theme-secondary-200"
+                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
                 data-testid="TableWrapper"
               >
                 <div
@@ -7055,7 +7055,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                                   class="group"
                                 >
                                   <button
-                                    class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:bg-theme-secondary-800 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
+                                    class="text-theme-secondary-700 disabled:text-theme-secondary-400 dark:text-theme-secondary-500 dark:disabled:text-theme-secondary-700 relative flex cursor-pointer items-center justify-center font-semibold transition-colors duration-200 focus:outline-hidden disabled:cursor-not-allowed hover:bg-theme-primary-100 dark:hover:bg-theme-secondary-800 dark:hover:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
                                     type="button"
                                   >
                                     <div
@@ -7192,7 +7192,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                           >
                             <div>
                               <button
-                                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-sm leading-[17px] text-theme-primary-600"
+                                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 -mr-3 text-sm leading-[17px]"
                                 data-testid="SearchWalletListItem__select-0"
                                 type="button"
                               >
@@ -7271,7 +7271,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                           >
                             <div>
                               <button
-                                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-sm leading-[17px] text-theme-primary-600"
+                                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 -mr-3 text-sm leading-[17px]"
                                 data-testid="SearchWalletListItem__select-1"
                                 type="button"
                               >

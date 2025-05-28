@@ -148,7 +148,7 @@ const LedgerAuthentication = ({
 							<div className="inline-flex w-full items-center justify-center space-x-3">
 								<Spinner />
 								<span
-									className="animate-pulse font-semibold text-theme-secondary-text"
+									className="text-theme-secondary-text animate-pulse font-semibold"
 									data-testid="LedgerWaitingDevice-loading_message"
 								>
 									{t("WALLETS.MODAL_LEDGER_WALLET.WAITING_DEVICE")}
@@ -199,42 +199,12 @@ export const AuthenticationStep = ({
 	const title = t("TRANSACTION.AUTHENTICATION_STEP.TITLE");
 
 	const requireMnemonic = wallet.actsWithMnemonic() || wallet.actsWithAddress() || wallet.actsWithPublicKey();
-	const requireEncryptionPassword =
-		wallet.actsWithMnemonicWithEncryption() ||
-		wallet.actsWithWifWithEncryption() ||
-		wallet.actsWithSecretWithEncryption();
+	const requireEncryptionPassword = wallet.actsWithMnemonicWithEncryption() || wallet.actsWithSecretWithEncryption();
 
 	const isTransaction = subject === "transaction";
 
 	return (
 		<div data-testid="AuthenticationStep" className="space-y-4">
-			{wallet.actsWithWif() && (
-				<>
-					{!noHeading && (
-						<StepHeader
-							titleIcon={
-								<Icon
-									name="Mnemonic"
-									data-testid="icon-mnemonic"
-									className="text-theme-primary-600"
-									dimensions={[24, 24]}
-								/>
-							}
-							title={title}
-							subtitle={t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_WIF")}
-						/>
-					)}
-
-					<FormField name="wif">
-						<FormLabel>{t("COMMON.WIF")}</FormLabel>
-						<InputPassword
-							data-testid="AuthenticationStep__wif"
-							ref={register(authentication.wif(wallet))}
-						/>
-					</FormField>
-				</>
-			)}
-
 			{wallet.actsWithSecret() && (
 				<>
 					{!noHeading && (

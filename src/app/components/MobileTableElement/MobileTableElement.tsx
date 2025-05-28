@@ -30,7 +30,7 @@ export const MobileTableElementRow = ({
 	...properties
 }: MobileTableElementRowProperties) => (
 	<div className={twMerge("grid grid-cols-1 gap-2", className)} {...properties}>
-		<div className="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200">{title}</div>
+		<div className="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold">{title}</div>
 
 		<div className={bodyClassName}>{children}</div>
 	</div>
@@ -63,7 +63,7 @@ export const MobileTableElement = ({
 	>
 		<div
 			data-testid="mobile-table-element-header"
-			className={classNames("flex space-x-3 overflow-auto px-4 py-3 dark:bg-theme-dark-950", {
+			className={classNames("dark:bg-theme-dark-950 flex space-x-3 overflow-auto px-4 py-3", {
 				"bg-theme-danger-100 dark:bg-theme-dark-950": variant === MobileTableElementVariant.danger,
 				"bg-theme-primary-100 dark:bg-theme-dark-950": variant === MobileTableElementVariant.primary,
 				"bg-theme-secondary-100 dark:bg-black": !variant,
@@ -72,7 +72,7 @@ export const MobileTableElement = ({
 			})}
 			onClick={onHeaderClick}
 		>
-			<span className="flex-1 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-text">
+			<span className="text-theme-secondary-900 dark:text-theme-text flex-1 truncate text-sm font-semibold">
 				{title}
 			</span>
 

@@ -102,35 +102,6 @@ export interface IWalletRepository {
 	findByPublicKey(publicKey: string): IReadWriteWallet | undefined;
 
 	/**
-	 * Find many wallets by their coins.
-	 *
-	 * @param {string} coin
-	 * @returns {IReadWriteWallet[]}
-	 * @memberof IWalletRepository
-	 */
-	findByCoin(coin: string): IReadWriteWallet[];
-
-	/**
-	 * Find many wallets by their coin and network.
-	 *
-	 * @param {string} coin
-	 * @param {string} network
-	 * @returns {IReadWriteWallet[]}
-	 * @memberof IWalletRepository
-	 */
-	findByCoinWithNetwork(coin: string, network: string): IReadWriteWallet[];
-
-	/**
-	 * Find many wallets by their coin and network's nethash.
-	 *
-	 * @param {string} coin
-	 * @param {string} nethash
-	 * @returns {IReadWriteWallet[]}
-	 * @memberof IWalletRepository
-	 */
-	findByCoinWithNethash(coin: string, nethash: string): IReadWriteWallet[];
-
-	/**
 	 * Find a wallet by its alias.
 	 *
 	 * @param {string} alias
