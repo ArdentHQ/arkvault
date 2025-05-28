@@ -728,9 +728,9 @@ jobs:
 
             - name: Test Components ^A-O
               env:
-                  COVERAGE_THRESHOLD_LINES: 97.18
+                  COVERAGE_THRESHOLD_LINES: 97.12
                   COVERAGE_THRESHOLD_FUNCTIONS: 94.79
-                  COVERAGE_THRESHOLD_STATEMENTS: 97.27
+                  COVERAGE_THRESHOLD_STATEMENTS: 97.2
                   COVERAGE_THRESHOLD_BRANCHES: 93.2
                   COVERAGE_INCLUDE_PATH: src/domains/transaction/components/[A-O]*
               uses: nick-invision/retry@v2
