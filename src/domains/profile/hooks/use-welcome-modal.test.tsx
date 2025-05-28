@@ -5,7 +5,7 @@ import { act } from "react-test-renderer";
 
 import { useWelcomeModal } from "./use-welcome-modal";
 import { ConfigurationProvider } from "@/app/contexts/Configuration";
-import { env, getMainsailProfileId, waitFor } from "@/utils/testing-library";
+import { env, getMainsailProfileId, waitFor, act } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 
