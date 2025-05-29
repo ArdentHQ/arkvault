@@ -122,7 +122,6 @@ describe("SignMessage", () => {
 					"c7d8b526b6c0f3b17b045149424476802ff44d3636446c6394475fd2193f12a06f8b771387ab986c19c39ff42808be6b06cb871c6fbe17b50d1af194576ec9591b",
 			};
 
-
 			render(
 				<Route path="/profiles/:profileId/wallets/:walletId/sign-message">
 					<SignMessage />

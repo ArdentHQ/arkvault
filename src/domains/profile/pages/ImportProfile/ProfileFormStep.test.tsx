@@ -151,7 +151,7 @@ describe("Import Profile - Profile Form Step", () => {
 			</EnvironmentProvider>,
 		);
 
-		const user = userEvent.setup()
+		const user = userEvent.setup();
 
 		await user.clear(screen.getAllByTestId("Input")[0]);
 		await user.paste("asdasdas");

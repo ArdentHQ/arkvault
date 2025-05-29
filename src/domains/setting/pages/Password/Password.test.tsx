@@ -130,7 +130,7 @@ describe("Password Settings", () => {
 			expect(screen.getByTestId(currentPasswordInputID)).toHaveValue("wrong!");
 		});
 
-		const user = userEvent.setup()
+		const user = userEvent.setup();
 
 		await user.click(passwordInput());
 		await user.paste("AnotherS3cUrePa$swordNew");
@@ -186,7 +186,7 @@ describe("Password Settings", () => {
 			expect(screen.getByTestId(currentPasswordInputID)).toHaveValue(password);
 		});
 
-		const user = userEvent.setup()
+		const user = userEvent.setup();
 
 		await user.clear(passwordInput());
 		await user.paste(secondaryPassword);
@@ -254,7 +254,7 @@ describe("Password Settings", () => {
 
 		await waitFor(() => expect(screen.getByTestId(currentPasswordInputID)).toHaveValue(password));
 
-		const user = userEvent.setup()
+		const user = userEvent.setup();
 		await user.clear(passwordInput());
 		await user.paste(password);
 
@@ -380,15 +380,15 @@ describe("Password Settings", () => {
 			expect(screen.getByTestId("Password-settings__input--currentPassword")).toHaveValue(password);
 		});
 
-		const user = userEvent.setup()
-		await user.clear(passwordInput())
+		const user = userEvent.setup();
+		await user.clear(passwordInput());
 		await user.paste(secondaryPassword);
 
 		await waitFor(() => {
 			expect(passwordInput()).toHaveValue(secondaryPassword);
 		});
 
-		await user.clear(confirmPasswordInput())
+		await user.clear(confirmPasswordInput());
 		await user.paste(secondaryPassword);
 
 		await waitFor(() => {

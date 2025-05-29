@@ -169,7 +169,6 @@ describe("CreateProfile", () => {
 		await userEvent.clear(selectDropdown);
 		await waitFor(() => expect(selectDropdown).not.toHaveValue());
 
-
 		const user = userEvent.setup();
 		await user.clear(selectDropdown);
 		await user.paste("BTC");
@@ -201,7 +200,7 @@ describe("CreateProfile", () => {
 
 		render(<CreateProfile />, { history });
 
-		const user = userEvent.setup()
+		const user = userEvent.setup();
 		await user.clear(nameInput());
 		await user.paste("test profile 2");
 
@@ -280,7 +279,7 @@ describe("CreateProfile", () => {
 	it("should fail password confirmation", async () => {
 		await renderComponent();
 
-		const user = userEvent.setup()
+		const user = userEvent.setup();
 
 		await user.clear(nameInput());
 		await user.paste("asdasdas");

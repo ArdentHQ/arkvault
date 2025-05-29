@@ -116,7 +116,6 @@ describe("EncryptionPasswordStep", () => {
 		const passwordInput = screen.getByTestId("PasswordValidation__encryptionPassword");
 		const confirmPassword = screen.getByTestId("PasswordValidation__confirmEncryptionPassword");
 
-
 		await user.clear(passwordInput);
 		await user.paste(password);
 
