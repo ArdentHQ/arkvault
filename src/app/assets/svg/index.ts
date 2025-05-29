@@ -125,8 +125,8 @@ import SecretImportMethod from "./secret-import-method.svg?react";
 import AddressImportMethod from "./address-import-method.svg?react";
 import SettingsDark from "./settings-dark.svg?react";
 import SettingsLight from "./settings-light.svg?react";
-import CompletedLight from "./completed-light.svg?react";
-import CompletedDark from "./completed-dark.svg?react";
+import CompletedLight from "./transactions/completed-light.svg?react";
+import CompletedDark from "./transactions/completed-dark.svg?react";
 import LedgerDark from "./ledger-dark.svg?react";
 import LedgerLight from "./ledger-light.svg?react";
 
