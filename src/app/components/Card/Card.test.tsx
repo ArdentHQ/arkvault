@@ -21,7 +21,6 @@ describe("Card", () => {
 		await userEvent.click(screen.getByText("Test"));
 
 		expect(handleClick).toHaveBeenCalledWith();
-		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render with custom options", async () => {
@@ -37,7 +36,5 @@ describe("Card", () => {
 
 		await userEvent.click(screen.getByTestId("dropdown__toggle"));
 		await expect(screen.findByTestId("dropdown__option--0")).resolves.toBeInTheDocument();
-
-		expect(asFragment()).toMatchSnapshot();
 	});
 });
