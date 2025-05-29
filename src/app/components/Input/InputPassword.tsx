@@ -3,7 +3,10 @@ import React from "react";
 import { Input } from "./Input";
 import { Icon } from "@/app/components/Icon";
 
-type InputPasswordProperties = { isInvalid?: boolean } & React.InputHTMLAttributes<any>;
+type InputPasswordProperties = {
+	isInvalid?: boolean;
+	ref?: React.Ref<HTMLInputElement>;
+} & React.InputHTMLAttributes<any>;
 
 export const InputPassword = (properties: InputPasswordProperties) => {
 	const [show, setShow] = React.useState(false);

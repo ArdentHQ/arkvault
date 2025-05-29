@@ -28,7 +28,7 @@ export const ErrorStep = ({
 	errorMessage,
 }: Properties) => {
 	const { t } = useTranslation();
-	const errorMessageReference = useRef(undefined);
+	const errorMessageReference = useRef(null);
 
 	return (
 		<div data-testid="ErrorStep">

@@ -6,7 +6,11 @@ import { Icon } from "@/app/components/Icon";
 import { Input } from "@/app/components/Input";
 import { useDebounce } from "@/app/hooks";
 
-const SearchBarInputWrapper = (props: React.HTMLAttributes<HTMLDivElement>) => (
+const SearchBarInputWrapper = (
+	props: React.HTMLAttributes<HTMLDivElement> & {
+		ref?: React.Ref<HTMLDivElement>;
+	},
+) => (
 	<div
 		{...props}
 		className={cn(

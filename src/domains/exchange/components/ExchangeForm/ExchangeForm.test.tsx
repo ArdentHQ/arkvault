@@ -549,6 +549,7 @@ describe("ExchangeForm", () => {
 
 	it("should calculate amounts", async () => {
 		const onReady = vi.fn();
+		const user = userEvent.setup();
 
 		renderComponent(<ExchangeForm onReady={onReady} />);
 
@@ -581,8 +582,9 @@ describe("ExchangeForm", () => {
 
 		// update amount output
 		payoutInput.select();
-		await userEvent.clear(payoutInput);
-		await userEvent.type(payoutInput, "1");
+
+		await user.clear(payoutInput);
+		await user.type("1");
 
 		expect(payinInput).toHaveValue(payoutValue);
 

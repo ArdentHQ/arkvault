@@ -21,6 +21,7 @@ interface ModalContentProperties {
 
 interface ModalContainerProps extends React.HTMLAttributes<HTMLDivElement> {
 	size?: Size;
+	ref?: React.Ref<HTMLDivElement>;
 }
 
 const ModalContainer = ({ size, ...props }: ModalContainerProps) => (

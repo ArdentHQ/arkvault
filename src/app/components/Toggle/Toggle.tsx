@@ -27,9 +27,12 @@ const Wrapper = ({ disabled, small, ...properties }: WrapperProperties) => (
 	/>
 );
 
-const Input = (properties: HTMLAttributes<HTMLInputElement>) => (
-	<input {...properties} className={twMerge("toggle-input sr-only", properties.className)} />
-);
+const Input = (
+	properties: HTMLAttributes<HTMLInputElement> & {
+		ref?: React.Ref<HTMLInputElement>;
+		disabled?: boolean;
+	},
+) => <input {...properties} className={twMerge("toggle-input sr-only", properties.className)} />;
 
 Input.displayName = "Input";
 

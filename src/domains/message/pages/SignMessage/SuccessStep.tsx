@@ -51,7 +51,7 @@ export const SuccessStep = ({
 }) => {
 	const { t } = useTranslation();
 
-	const messageReference = useRef(undefined);
+	const messageReference = useRef<HTMLInputElement>(null);
 
 	return (
 		<section>
