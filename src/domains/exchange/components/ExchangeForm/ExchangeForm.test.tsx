@@ -589,7 +589,7 @@ describe("ExchangeForm", () => {
 
 		await waitFor(() => {
 			expect(payinInput).toHaveValue(payoutValue);
-		})
+		});
 
 		// remove from currency
 		await userEvent.clear(screen.getAllByTestId("SelectDropdown__input")[0]);
