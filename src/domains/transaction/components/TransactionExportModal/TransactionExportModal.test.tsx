@@ -92,7 +92,7 @@ describe("TransactionExportModal", () => {
 	});
 
 	it("should render progress status", async () => {
-		const { asFragment } = render(
+		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<TransactionExportModal isOpen wallets={[profile.wallets().first()]} onClose={vi.fn()} />
 			</Route>,
