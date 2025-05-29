@@ -1,5 +1,5 @@
 import cn from "classnames";
-import React, { ChangeEvent, FC, forwardRef, useCallback, useEffect, useRef, useState } from "react";
+import React, { ChangeEvent, FC, HTMLAttributes, useCallback, useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import { HeaderSearchBarProperties } from "./HeaderSearchBar.contracts";
@@ -9,18 +9,15 @@ import { Input } from "@/app/components/Input";
 import { clickOutsideHandler, useDebounce } from "@/app/hooks";
 import { twMerge } from "tailwind-merge";
 
-const SearchBarInputWrapper = forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>((props, ref) => (
+const SearchBarInputWrapper = (properties: HTMLAttributes<HTMLDivElement>) => (
 	<div
-		{...props}
-		ref={ref}
+		{...properties}
 		className={twMerge(
 			"dark:border-theme-secondary-800 xs:[min-width:300px] sm:[min-width:448px] dark:border",
-			props.className,
+			properties.className,
 		)}
 	/>
-));
-
-SearchBarInputWrapper.displayName = "SearchBarInputWrapper";
+);
 
 export const HeaderSearchBar: FC<HeaderSearchBarProperties> = ({
 	offsetClassName,

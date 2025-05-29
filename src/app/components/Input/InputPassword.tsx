@@ -5,14 +5,13 @@ import { Icon } from "@/app/components/Icon";
 
 type InputPasswordProperties = { isInvalid?: boolean } & React.InputHTMLAttributes<any>;
 
-export const InputPassword = React.forwardRef<HTMLInputElement, InputPasswordProperties>((properties, reference) => {
+export const InputPassword = (properties: InputPasswordProperties) => {
 	const [show, setShow] = React.useState(false);
 	const togglePasswordVisibility = () => setShow(!show);
 
 	return (
 		<Input
 			data-testid="InputPassword"
-			ref={reference}
 			type={show ? "text" : "password"}
 			autoComplete="new-password"
 			addons={{
@@ -37,6 +36,6 @@ export const InputPassword = React.forwardRef<HTMLInputElement, InputPasswordPro
 			{...properties}
 		/>
 	);
-});
+};
 
 InputPassword.displayName = "InputPassword";

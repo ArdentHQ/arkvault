@@ -14,7 +14,7 @@ describe("Card", () => {
 
 	it("should handle click", async () => {
 		const handleClick = vi.fn();
-		const { container, asFragment } = render(<Card onClick={() => handleClick()}>Test</Card>);
+		const { container } = render(<Card onClick={() => handleClick()}>Test</Card>);
 
 		expect(container).toBeInTheDocument();
 
@@ -25,7 +25,7 @@ describe("Card", () => {
 
 	it("should render with custom options", async () => {
 		const handleClick = vi.fn();
-		const { container, asFragment } = render(
+		const { container } = render(
 			<Card actions={[{ label: "Action 1", value: "1" }]} onClick={() => handleClick()}>
 				Test
 			</Card>,

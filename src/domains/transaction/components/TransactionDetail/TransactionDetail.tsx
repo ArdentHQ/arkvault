@@ -1,5 +1,5 @@
 import cn from "classnames";
-import React, { forwardRef } from "react";
+import React from "react";
 import { getStyles } from "./TransactionDetail.styles";
 import { SmAndBelow, MdAndAbove } from "@/app/components/Breakpoint";
 import { twMerge } from "tailwind-merge";
@@ -14,16 +14,23 @@ export type TransactionDetailProperties = {
 	paddingPosition?: "top" | "bottom" | "both" | "none";
 	className?: string;
 	useDesktop?: boolean;
+	ref?: React.Ref<HTMLDivElement>;
 } & React.HTMLAttributes<any>;
 
-const TransactionDetailStyled = forwardRef<HTMLDivElement, TransactionDetailProperties>(
-	({ border, borderPosition, padding, paddingPosition, className, ...properties }, ref) => (
-		<div
-			{...properties}
-			ref={ref}
-			className={twMerge(getStyles({ border, borderPosition, padding, paddingPosition }), className)}
-		/>
-	),
+const TransactionDetailStyled = ({
+	border,
+	borderPosition,
+	padding,
+	paddingPosition,
+	className,
+	ref,
+	...properties
+}) => (
+	<div
+		{...properties}
+		ref={ref}
+		className={twMerge(getStyles({ border, borderPosition, padding, paddingPosition }), className)}
+	/>
 );
 
 TransactionDetailStyled.displayName = "TransactionDetailStyled";
@@ -51,71 +58,64 @@ const TransactionDetailContainer: React.FC<{
 	);
 };
 
-export const TransactionDetail = React.forwardRef<HTMLDivElement, TransactionDetailProperties>(
-	(
-		{
-			border = true,
-			borderPosition = "top",
-			children,
-			className,
-			extra,
-			label,
-			padding = true,
-			paddingPosition,
-			useDesktop = false,
-			...properties
-		}: TransactionDetailProperties,
-		reference,
-	) => (
-		<TransactionDetailStyled
-			data-testid="TransactionDetail"
-			border={border}
-			borderPosition={borderPosition}
-			padding={padding}
-			paddingPosition={paddingPosition}
-			className={cn("no-ligatures", className)}
-			ref={reference}
-			{...properties}
-		>
-			<TransactionDetailContainer
-				useDesktop={useDesktop}
-				mobileContent={
-					<div
-						data-testid="TransactionDetail--mobile"
-						className="items-top flex w-full justify-between space-x-4 md:items-center"
-					>
-						{label && <RowLabel>{label}</RowLabel>}
+export const TransactionDetail = ({
+	border = true,
+	borderPosition = "top",
+	children,
+	className,
+	extra,
+	label,
+	padding = true,
+	paddingPosition,
+	useDesktop = false,
+	ref,
+	...properties
+}: TransactionDetailProperties) => (
+	<TransactionDetailStyled
+		data-testid="TransactionDetail"
+		border={border}
+		borderPosition={borderPosition}
+		padding={padding}
+		paddingPosition={paddingPosition}
+		className={cn("no-ligatures", className)}
+		ref={ref}
+		{...properties}
+	>
+		<TransactionDetailContainer
+			useDesktop={useDesktop}
+			mobileContent={
+				<div
+					data-testid="TransactionDetail--mobile"
+					className="items-top flex w-full justify-between space-x-4 md:items-center"
+				>
+					{label && <RowLabel>{label}</RowLabel>}
 
-						<div className="flex min-w-0 grow items-center justify-end space-x-4">
-							<div className="text-theme-secondary-700 md:theme-text dark:text-theme-secondary-500 flex w-full justify-end">
-								{children}
-							</div>
-
-							{extra || <></>}
-						</div>
-					</div>
-				}
-				desktopContent={
-					<>
-						<div
-							data-testid="TransactionDetail--desktop"
-							className="w-40 flex-1 space-y-2 whitespace-nowrap"
-						>
-							{label && (
-								<div className="no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold">
-									{label}
-								</div>
-							)}
-
-							<div className="flex items-center font-semibold">{children}</div>
+					<div className="flex min-w-0 grow items-center justify-end space-x-4">
+						<div className="text-theme-secondary-700 md:theme-text dark:text-theme-secondary-500 flex w-full justify-end">
+							{children}
 						</div>
 
 						{extra || <></>}
-					</>
-				}
-			/>
-		</TransactionDetailStyled>
-	),
+					</div>
+				</div>
+			}
+			desktopContent={
+				<>
+					<div data-testid="TransactionDetail--desktop" className="w-40 flex-1 space-y-2 whitespace-nowrap">
+						{label && (
+							<div className="no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold">
+								{label}
+							</div>
+						)}
+
+						<div className="flex items-center font-semibold">{children}</div>
+					</div>
+
+					{extra || <></>}
+				</>
+			}
+		/>
+	</TransactionDetailStyled>
 );
 
 TransactionDetail.displayName = "TransactionDetail";

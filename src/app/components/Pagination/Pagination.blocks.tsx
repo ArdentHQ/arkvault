@@ -1,39 +1,30 @@
-import React, { forwardRef } from "react";
+import React from "react";
 import { twMerge } from "tailwind-merge";
 
-export const PaginationSearchWrapper = forwardRef<HTMLSpanElement, React.HTMLAttributes<HTMLSpanElement>>(
-	(properties, ref) => (
-		<span {...properties} ref={ref} className={twMerge("pagination-search-wrapper", properties.className)} />
-	),
+export const PaginationSearchWrapper = (
+	properties: React.HTMLAttributes<HTMLSpanElement> & { ref?: React.Ref<HTMLSpanElement> },
+) => (
+	<span {...properties} ref={properties.ref} className={twMerge("pagination-search-wrapper", properties.className)} />
 );
 
-PaginationSearchWrapper.displayName = "PaginationSearchWrapper";
+export const SearchInput = (
+	properties: React.InputHTMLAttributes<HTMLInputElement> & { ref?: React.Ref<HTMLInputElement> },
+) => <input {...properties} ref={properties.ref} className={twMerge("search-input", properties.className)} />;
 
-export const SearchInput = forwardRef<HTMLInputElement, React.InputHTMLAttributes<HTMLInputElement>>(
-	(properties, ref) => <input {...properties} ref={ref} className={twMerge("search-input", properties.className)} />,
+export const PaginationSearchToggleButton = (
+	properties: React.ButtonHTMLAttributes<HTMLButtonElement> & { ref?: React.Ref<HTMLButtonElement> },
+) => (
+	<button
+		{...properties}
+		ref={properties.ref}
+		className={twMerge("pagination-search-toggle-button", properties.className)}
+	/>
 );
 
-SearchInput.displayName = "SearchInput";
+export const PaginationButton = (
+	properties: React.ButtonHTMLAttributes<HTMLButtonElement> & { ref?: React.Ref<HTMLButtonElement> },
+) => <button {...properties} ref={properties.ref} className={twMerge("pagination-button", properties.className)} />;
 
-export const PaginationSearchToggleButton = forwardRef<
-	HTMLButtonElement,
-	React.ButtonHTMLAttributes<HTMLButtonElement>
->((properties, ref) => (
-	<button {...properties} ref={ref} className={twMerge("pagination-search-toggle-button", properties.className)} />
-));
-
-PaginationSearchToggleButton.displayName = "PaginationSearchToggleButton";
-
-export const PaginationButton = forwardRef<HTMLButtonElement, React.ButtonHTMLAttributes<HTMLButtonElement>>(
-	(properties, ref) => (
-		<button {...properties} ref={ref} className={twMerge("pagination-button", properties.className)} />
-	),
-);
-
-PaginationButton.displayName = "PaginationButton";
-
-export const PaginationWrapper = forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLElement>>((properties, ref) => (
-	<nav {...properties} ref={ref} className={twMerge("pagination-wrapper", properties.className)} />
-));
-
-PaginationWrapper.displayName = "PaginationWrapper";
+export const PaginationWrapper = (
+	properties: React.HTMLAttributes<HTMLElement> & { ref?: React.Ref<HTMLDivElement> },
+) => <nav {...properties} ref={properties.ref} className={twMerge("pagination-wrapper", properties.className)} />;

@@ -8,9 +8,10 @@ type Properties = {
 	maxLength?: number;
 	maxLengthLabel?: string;
 	defaultValue?: string;
+	ref?: React.Ref<HTMLInputElement>;
 } & React.InputHTMLAttributes<any>;
 
-export const InputCounter = React.forwardRef<HTMLInputElement, Properties>((properties: Properties, reference) => {
+export const InputCounter = (properties: Properties) => {
 	const fieldContext = useFormField();
 	const [length, setLength] = useState(properties.defaultValue?.length || 0);
 
@@ -28,7 +29,6 @@ export const InputCounter = React.forwardRef<HTMLInputElement, Properties>((prop
 	return (
 		<Input
 			data-testid="InputCounter__input"
-			ref={reference}
 			{...properties}
 			onChange={handleChange}
 			addons={{
@@ -47,6 +47,6 @@ export const InputCounter = React.forwardRef<HTMLInputElement, Properties>((prop
 			}}
 		/>
 	);
-});
+};
 
 InputCounter.displayName = "InputCounter";

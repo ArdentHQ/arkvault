@@ -5,12 +5,11 @@ import { Input } from "@/app/components/Input";
 
 type InputDefaultProperties = {
 	className?: string;
+	ref?: React.Ref<HTMLInputElement>;
 } & React.InputHTMLAttributes<any>;
 
-export const InputDefault = React.forwardRef<HTMLInputElement, InputDefaultProperties>(
-	({ className, ...properties }: InputDefaultProperties, reference) => (
-		<Input className={cn(className)} ref={reference} {...properties} />
-	),
+export const InputDefault = ({ className, ...properties }: InputDefaultProperties) => (
+	<Input className={cn(className)} {...properties} />
 );
 
 InputDefault.displayName = "InputDefault";

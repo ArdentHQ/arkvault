@@ -1,5 +1,5 @@
 import cn from "classnames";
-import React, { forwardRef, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 
 import { InputSuggestion } from "./InputSuggestion";
 import { useFormField } from "@/app/components/Form/useFormField";
@@ -30,6 +30,7 @@ type InputProperties = {
 	noBorder?: boolean;
 	noShadow?: boolean;
 	suggestion?: string;
+	ref?: React.Ref<HTMLInputElement>;
 } & React.HTMLProps<any>;
 
 export const InputWrapperStyled = ({
@@ -77,170 +78,168 @@ export const InputWrapperStyled = ({
 interface InputStyledProps {
 	autocomplete?: string;
 	as?: React.ElementType;
+	ref?: React.Ref<HTMLInputElement>;
 }
 
-const InputStyled = forwardRef<HTMLInputElement, InputStyledProps & React.ComponentPropsWithRef<"input">>(
-	({ autocomplete = "off", as: Component = "input", ...props }, ref) => (
-		<Component
-			{...props}
-			ref={ref}
-			autoComplete={autocomplete}
-			className={twMerge(
-				"bg-transparent! p-0! focus:shadow-none focus:ring-0! focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none",
-				props.className,
-			)}
-		/>
-	),
+const InputStyled = ({
+	autocomplete = "off",
+	as: Component = "input",
+	...properties
+}: InputStyledProps & React.ComponentPropsWithRef<"input">) => (
+	<Component
+		{...properties}
+		autoComplete={autocomplete}
+		className={twMerge(
+			"bg-transparent! p-0! focus:shadow-none focus:ring-0! focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none",
+			properties.className,
+		)}
+	/>
 );
 
 InputStyled.displayName = "InputStyled";
 
 type InputElement = HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement;
 
-export const Input = React.forwardRef<InputElement, InputProperties>(
-	(
-		{
-			addons,
-			className,
-			disabled,
-			errorMessage,
-			hideInputValue,
-			ignoreContext,
-			innerClassName,
-			isFocused,
-			isInvalid,
-			isValid,
-			isTextArea,
-			isCompact,
-			noBorder,
-			noShadow,
-			style,
-			suggestion,
-			value,
-			readOnly,
-			...properties
-		}: InputProperties,
-		reference,
-	) => {
-		let fieldContext = useFormField();
+export const Input = ({
+	addons,
+	className,
+	disabled,
+	errorMessage,
+	hideInputValue,
+	ignoreContext,
+	innerClassName,
+	isFocused,
+	isInvalid,
+	isValid,
+	isTextArea,
+	isCompact,
+	noBorder,
+	noShadow,
+	style,
+	suggestion,
+	value,
+	readOnly,
+	ref,
+	...properties
+}: InputProperties) => {
+	let fieldContext = useFormField();
 
-		if (ignoreContext) {
-			fieldContext = undefined;
+	if (ignoreContext) {
+		fieldContext = undefined;
+	}
+
+	const isInvalidValue = fieldContext?.isInvalid || isInvalid;
+	const errorMessageValue = fieldContext?.errorMessage || errorMessage;
+
+	const focusReference = useRef<InputElement>(null);
+
+	const inputReference = isFocused ? focusReference : ref;
+
+	useEffect(() => {
+		if (isFocused && focusReference.current) {
+			focusReference.current.focus();
 		}
+	}, [focusReference, isFocused]);
 
-		const isInvalidValue = fieldContext?.isInvalid || isInvalid;
-		const errorMessageValue = fieldContext?.errorMessage || errorMessage;
+	const hiddenReference = useRef<HTMLDivElement>(null);
 
-		const focusReference = useRef<InputElement>(null);
+	return (
+		<>
+			{suggestion && (
+				<div ref={hiddenReference} className="invisible fixed w-auto whitespace-nowrap">
+					{value}…
+				</div>
+			)}
 
-		const inputReference = isFocused ? focusReference : reference;
+			<InputWrapperStyled
+				style={style}
+				className={className}
+				disabled={disabled}
+				invalid={isInvalidValue}
+				valid={isValid}
+				noBorder={noBorder}
+				noShadow={noShadow}
+				isTextArea={isTextArea}
+				isCompact={isCompact}
+			>
+				{addons?.start !== undefined && addons.start.content}
+				<div className={cn("relative flex h-full flex-1", { invisible: hideInputValue })}>
+					<InputStyled
+						data-testid="Input"
+						className={cn(
+							"no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!",
+							innerClassName,
+							{
+								"text-theme-secondary-text": disabled,
+							},
+						)}
+						name={fieldContext?.name}
+						aria-invalid={isInvalidValue}
+						disabled={disabled}
+						value={value}
+						type="text"
+						// @ts-ignore
+						ref={inputReference}
+						readOnly={readOnly}
+						{...properties}
+						autoComplete="off"
+					/>
 
-		useEffect(() => {
-			if (isFocused && focusReference.current) {
-				focusReference.current.focus();
-			}
-		}, [focusReference, isFocused]);
+					<InputSuggestion
+						suggestion={suggestion}
+						hiddenReference={hiddenReference}
+						innerClassName={innerClassName}
+					/>
+				</div>
 
-		const hiddenReference = useRef<HTMLDivElement>(null);
+				{(isInvalidValue || isValid || addons?.end) && (
+					<div
+						data-testid="Input__addon-end"
+						className={cn(
+							"divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x",
+							{
+								"absolute right-0 bottom-full mb-2": isTextArea,
+								"text-theme-danger-500": isInvalidValue,
+								"text-theme-primary-300 dark:text-theme-secondary-600": !isInvalidValue,
+							},
+							addons?.end?.wrapperClassName,
+						)}
+					>
+						{isInvalidValue && (
+							<Tooltip content={errorMessageValue} size="sm">
+								<span data-errortext={errorMessageValue} data-testid="Input__error">
+									<Icon
+										name="CircleExclamationMark"
+										className={cn("text-theme-danger-500", {
+											"pr-3": addons?.end,
+										})}
+										size="lg"
+									/>
+								</span>
+							</Tooltip>
+						)}
 
-		return (
-			<>
-				{suggestion && (
-					<div ref={hiddenReference} className="invisible fixed w-auto whitespace-nowrap">
-						{value}…
+						{isValid && (
+							<Icon
+								data-testid="Input__valid"
+								name="CircleCheckMark"
+								size="lg"
+								className={cn("text-theme-primary-600 pointer-events-none focus:outline-hidden", {
+									"pr-3": addons?.end,
+								})}
+							/>
+						)}
+
+						{addons?.end && (
+							<div className={cn({ "pl-3": isInvalidValue && !addons.end.wrapperClassName })}>
+								{addons.end.content}
+							</div>
+						)}
 					</div>
 				)}
-
-				<InputWrapperStyled
-					style={style}
-					className={className}
-					disabled={disabled}
-					invalid={isInvalidValue}
-					valid={isValid}
-					noBorder={noBorder}
-					noShadow={noShadow}
-					isTextArea={isTextArea}
-					isCompact={isCompact}
-				>
-					{addons?.start !== undefined && addons.start.content}
-					<div className={cn("relative flex h-full flex-1", { invisible: hideInputValue })}>
-						<InputStyled
-							data-testid="Input"
-							className={cn(
-								"no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!",
-								innerClassName,
-								{
-									"text-theme-secondary-text": disabled,
-								},
-							)}
-							name={fieldContext?.name}
-							aria-invalid={isInvalidValue}
-							disabled={disabled}
-							value={value}
-							type="text"
-							// @ts-ignore
-							ref={inputReference}
-							readOnly={readOnly}
-							{...properties}
-							autoComplete="off"
-						/>
-
-						<InputSuggestion
-							suggestion={suggestion}
-							hiddenReference={hiddenReference}
-							innerClassName={innerClassName}
-						/>
-					</div>
-
-					{(isInvalidValue || isValid || addons?.end) && (
-						<div
-							data-testid="Input__addon-end"
-							className={cn(
-								"divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x",
-								{
-									"absolute right-0 bottom-full mb-2": isTextArea,
-									"text-theme-danger-500": isInvalidValue,
-									"text-theme-primary-300 dark:text-theme-secondary-600": !isInvalidValue,
-								},
-								addons?.end?.wrapperClassName,
-							)}
-						>
-							{isInvalidValue && (
-								<Tooltip content={errorMessageValue} size="sm">
-									<span data-errortext={errorMessageValue} data-testid="Input__error">
-										<Icon
-											name="CircleExclamationMark"
-											className={cn("text-theme-danger-500", {
-												"pr-3": addons?.end,
-											})}
-											size="lg"
-										/>
-									</span>
-								</Tooltip>
-							)}
-
-							{isValid && (
-								<Icon
-									data-testid="Input__valid"
-									name="CircleCheckMark"
-									size="lg"
-									className={cn("text-theme-primary-600 pointer-events-none focus:outline-hidden", {
-										"pr-3": addons?.end,
-									})}
-								/>
-							)}
-
-							{addons?.end && (
-								<div className={cn({ "pl-3": isInvalidValue && !addons.end.wrapperClassName })}>
-									{addons.end.content}
-								</div>
-							)}
-						</div>
-					)}
-				</InputWrapperStyled>
-			</>
-		);
-	},
-);
+			</InputWrapperStyled>
+		</>
+	);
+};
 
 Input.displayName = "Input";
