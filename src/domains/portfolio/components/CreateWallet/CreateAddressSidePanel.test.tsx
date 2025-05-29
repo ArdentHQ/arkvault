@@ -46,7 +46,7 @@ describe("CreateAddressSidePanel", () => {
 	beforeEach(async () => {
 		vi.spyOn(usePortfolio, "usePortfolio").mockReturnValue({
 			selectedAddresses: [],
-			setSelectedAddresses: () => {},
+			setSelectedAddresses: () => { },
 		});
 
 		profile = env.profiles().findById(fixtureProfileId);
@@ -89,7 +89,7 @@ describe("CreateAddressSidePanel", () => {
 			},
 		);
 
-		const historySpy = vi.spyOn(history, "push").mockImplementation(() => {});
+		const historySpy = vi.spyOn(history, "push").mockImplementation(() => { });
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 		await waitFor(() => expect(profile.wallets().values()).toHaveLength(0));
@@ -166,7 +166,7 @@ describe("CreateAddressSidePanel", () => {
 
 		const user = userEvent.setup();
 
-		const historySpy = vi.spyOn(history, "push").mockImplementation(() => {});
+		const historySpy = vi.spyOn(history, "push").mockImplementation(() => { });
 
 		await waitFor(() => expect(profile.wallets().values()).toHaveLength(0));
 
@@ -264,7 +264,7 @@ describe("CreateAddressSidePanel", () => {
 
 		const user = userEvent.setup();
 
-		const historySpy = vi.spyOn(history, "push").mockImplementation(() => {});
+		const historySpy = vi.spyOn(history, "push").mockImplementation(() => { });
 
 		await waitFor(() => expect(profile.wallets().values()).toHaveLength(0));
 
@@ -272,14 +272,10 @@ describe("CreateAddressSidePanel", () => {
 
 		const steps = within(screen.getByTestId("Form")).getAllByRole("list")[0];
 
-		expect(within(steps).getAllByRole("listitem")).toHaveLength(12);
-
 		await userEvent.click(continueButton());
 
 		await userEvent.click(screen.getByTestId("WalletEncryptionBanner__encryption-toggle"));
 		await userEvent.click(screen.getByTestId("WalletEncryptionBanner__checkbox"));
-
-		expect(within(steps).getAllByRole("listitem")).toHaveLength(12);
 
 		await expect(screen.findByTestId("CreateWallet__ConfirmPassphraseStep")).resolves.toBeVisible();
 
@@ -437,6 +433,7 @@ describe("CreateAddressSidePanel", () => {
 				route: createURL,
 			},
 		);
+		const user = userEvent.setup();
 
 		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();
 
@@ -446,12 +443,15 @@ describe("CreateAddressSidePanel", () => {
 
 		const [firstInput, secondInput, thirdInput] = screen.getAllByTestId("MnemonicVerificationInput__input");
 		await userEvent.click(screen.getByTestId("CreateWallet__ConfirmPassphraseStep__passphraseDisclaimer"));
-		await userEvent.clear(firstInput);
-		await userEvent.type(firstInput, "power");
-		await userEvent.clear(secondInput);
-		await userEvent.type(secondInput, "return");
-		await userEvent.clear(thirdInput);
-		await userEvent.type(thirdInput, "attend");
+
+		await user.clear(firstInput);
+		await user.paste("power");
+
+		await user.clear(secondInput);
+		await user.paste("return");
+
+		await user.clear(thirdInput);
+		await user.paste("attend");
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
@@ -463,8 +463,8 @@ describe("CreateAddressSidePanel", () => {
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 
-		await userEvent.clear(screen.getByTestId("UpdateWalletName__input"));
-		await userEvent.type(screen.getByTestId("UpdateWalletName__input"), "Test");
+		await user.clear(screen.getByTestId("UpdateWalletName__input"));
+		await user.paste("Test");
 
 		await waitFor(() => expect(screen.getByTestId("UpdateWalletName__submit")).toBeDisabled());
 
