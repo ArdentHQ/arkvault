@@ -93,8 +93,8 @@ describe("Ledger Device Connection", () => {
 
 			await expect(
 				persistLedgerConnection({
-					ledgerService: wallet.ledger(),
 					hasRequestedAbort: () => false,
+					ledgerService: wallet.ledger(),
 					options: {},
 				}),
 			).resolves.not.toThrow();
@@ -116,8 +116,8 @@ describe("Ledger Device Connection", () => {
 
 			await expect(
 				persistLedgerConnection({
-					ledgerService: wallet.ledger(),
 					hasRequestedAbort: () => true,
+					ledgerService: wallet.ledger(),
 					options: { factor: 1, randomize: false, retries: 2 },
 				}),
 			).rejects.toThrow("CONNECTION_ERROR");
@@ -136,8 +136,8 @@ describe("Ledger Device Connection", () => {
 
 			await expect(
 				persistLedgerConnection({
-					ledgerService: wallet.ledger(),
 					hasRequestedAbort: () => false,
+					ledgerService: wallet.ledger(),
 					options: { factor: 1, randomize: false, retries: 2 },
 				}),
 			).rejects.toThrow("VERSION_ERROR");
@@ -159,8 +159,8 @@ describe("Ledger Device Connection", () => {
 
 			await expect(
 				persistLedgerConnection({
-					ledgerService: wallet.ledger(),
 					hasRequestedAbort: () => false,
+					ledgerService: wallet.ledger(),
 					options: { factor: 1, randomize: false, retries: 2 },
 				}),
 			).rejects.toThrow("Unknown Error");

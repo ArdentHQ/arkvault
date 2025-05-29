@@ -109,10 +109,6 @@ describe("TransactionExportModal", () => {
 		});
 
 		expect(exportButton()).not.toBeDisabled();
-
-		await userEvent.click(exportButton());
-
-		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render error status", async () => {

@@ -151,11 +151,9 @@ describe("Use Ledger Connection", () => {
 
 		const Component = ({
 			userProfile = profile,
-			userWallet = wallet,
 			retryOptions,
 		}: {
 			userProfile?: Contracts.IProfile;
-			userWallet?: Contracts.IReadWriteWallet;
 			retryOptions?: Options;
 		}) => {
 			const {

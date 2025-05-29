@@ -69,7 +69,7 @@ describe("Notifications", () => {
 	it("should open and close transaction details modal", async () => {
 		await profile.sync();
 
-		const { container } = render(
+		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<NotificationsDropdown profile={profile} />
 			</Route>,
