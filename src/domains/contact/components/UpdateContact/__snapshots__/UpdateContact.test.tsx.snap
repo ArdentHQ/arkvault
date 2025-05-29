@@ -77,7 +77,7 @@ exports[`UpdateContact > should render responsive 1`] = `
                   class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
                 >
                   <label
-                    class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex text-sm leading-[17px] font-semibold transition-colors duration-100"
+                    class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex leading-[17px] font-semibold transition-colors duration-100 text-sm"
                     data-testid="FormLabel"
                     for="name"
                   >
@@ -105,7 +105,7 @@ exports[`UpdateContact > should render responsive 1`] = `
                   data-testid="ContactForm__address"
                 >
                   <label
-                    class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex text-sm leading-[17px] font-semibold transition-colors duration-100"
+                    class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex leading-[17px] font-semibold transition-colors duration-100 text-sm"
                     data-testid="FormLabel"
                     for="address"
                   >
@@ -246,7 +246,7 @@ exports[`UpdateContact > should render responsive 2`] = `
                   class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
                 >
                   <label
-                    class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex text-sm leading-[17px] font-semibold transition-colors duration-100"
+                    class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex leading-[17px] font-semibold transition-colors duration-100 text-sm"
                     data-testid="FormLabel"
                     for="name"
                   >
@@ -274,7 +274,7 @@ exports[`UpdateContact > should render responsive 2`] = `
                   data-testid="ContactForm__address"
                 >
                   <label
-                    class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex text-sm leading-[17px] font-semibold transition-colors duration-100"
+                    class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex leading-[17px] font-semibold transition-colors duration-100 text-sm"
                     data-testid="FormLabel"
                     for="address"
                   >
@@ -460,7 +460,7 @@ exports[`UpdateContact > should render responsive 3`] = `
                   class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
                 >
                   <label
-                    class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex text-sm leading-[17px] font-semibold transition-colors duration-100"
+                    class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex leading-[17px] font-semibold transition-colors duration-100 text-sm"
                     data-testid="FormLabel"
                     for="name"
                   >
@@ -488,7 +488,7 @@ exports[`UpdateContact > should render responsive 3`] = `
                   data-testid="ContactForm__address"
                 >
                   <label
-                    class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex text-sm leading-[17px] font-semibold transition-colors duration-100"
+                    class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex leading-[17px] font-semibold transition-colors duration-100 text-sm"
                     data-testid="FormLabel"
                     for="address"
                   >
