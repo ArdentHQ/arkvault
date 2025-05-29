@@ -114,8 +114,6 @@ import ContactsLight from "./contacts-light.svg?react";
 import Completed from "./completed.svg?react";
 import YourPassphraseLight from "./your-passphrase-light.svg?react";
 import YourPassphraseDark from "./your-passphrase-dark.svg?react";
-import SignMessageLight from "./sign-message-light.svg?react";
-import SignMessageDark from "./sign-message-dark.svg?react";
 import ConfirmYourPassphrase from "./confirm-your-passphrase.svg?react";
 import PersonLight from "./person-light.svg?react";
 import PersonDark from "./person-dark.svg?react";
@@ -240,8 +238,6 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	SettingsDark,
 	SettingsLight,
 	ShieldCheckMark,
-	SignMessageDark,
-	SignMessageLight,
 	Sliders,
 	SlidersVertical,
 	Star,

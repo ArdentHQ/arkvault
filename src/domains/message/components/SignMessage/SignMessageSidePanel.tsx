@@ -211,7 +211,7 @@ export const SignMessageSidePanel = ({
 			return <ThemeIcon lightIcon="LedgerLight" darkIcon="LedgerDark" dimensions={[24, 24]} />;
 		}
 
-		return <ThemeIcon lightIcon="SignMessageLight" darkIcon="SignMessageDark" dimensions={[24, 24]} />;
+		return <ThemeIcon lightIcon="SendTransactionLight" darkIcon="SendTransactionDark" dimensions={[24, 24]} />;
 	};
 	return (
 		<SidePanel
