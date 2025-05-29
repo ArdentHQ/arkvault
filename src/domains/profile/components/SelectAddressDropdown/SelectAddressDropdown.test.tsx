@@ -9,6 +9,8 @@ let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
 let wallets: Contracts.IReadWriteWallet[];
 
+const firstOptionTestId = "SelectDropdown__option--0";
+
 describe("SelectAddressDropdown", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getMainsailProfileId());
@@ -68,27 +70,27 @@ describe("SelectAddressDropdown", () => {
 	it("should open and close wallets modal", async () => {
 		render(<SelectAddressDropdown wallets={wallets} wallet={wallet} profile={profile} />);
 
-		expect(screen.queryByTestId("SelectDropdown__option--0")).not.toBeInTheDocument();
+		expect(screen.queryByTestId(firstOptionTestId)).not.toBeInTheDocument();
 
 		await userEvent.click(screen.getByTestId("SelectDropdown__input"));
 
-		expect(screen.getByTestId("SelectDropdown__option--0")).toBeInTheDocument();
+		expect(screen.getByTestId(firstOptionTestId)).toBeInTheDocument();
 
 		await userEvent.keyboard("{Escape}");
 
 		await waitFor(() => {
-			expect(screen.queryByTestId("SelectDropdown__option--0")).not.toBeInTheDocument();
+			expect(screen.queryByTestId(firstOptionTestId)).not.toBeInTheDocument();
 		});
 	});
 
 	it("should not open if disabled", async () => {
 		render(<SelectAddressDropdown wallets={wallets} wallet={wallet} profile={profile} disabled={true} />);
 
-		expect(screen.queryByTestId("SelectDropdown__option--0")).not.toBeInTheDocument();
+		expect(screen.queryByTestId(firstOptionTestId)).not.toBeInTheDocument();
 
 		await userEvent.click(screen.getByTestId("SelectDropdown__input"));
 
-		expect(screen.queryByTestId("SelectDropdown__option--0")).not.toBeInTheDocument();
+		expect(screen.queryByTestId(firstOptionTestId)).not.toBeInTheDocument();
 	});
 
 	it("should call onChange prop if provided", async () => {
@@ -96,20 +98,20 @@ describe("SelectAddressDropdown", () => {
 
 		render(<SelectAddressDropdown wallets={wallets} onChange={onChange} wallet={wallet} profile={profile} />);
 
-		expect(screen.queryByTestId("SelectDropdown__option--0")).not.toBeInTheDocument();
+		expect(screen.queryByTestId(firstOptionTestId)).not.toBeInTheDocument();
 
 		await userEvent.click(screen.getByTestId("SelectDropdown__input"));
 
 		await waitFor(() => {
-			expect(screen.getByTestId("SelectDropdown__option--0")).toBeInTheDocument();
+			expect(screen.getByTestId(firstOptionTestId)).toBeInTheDocument();
 		});
 
-		const firstAddress = screen.getByTestId("SelectDropdown__option--0");
+		const firstAddress = screen.getByTestId(firstOptionTestId);
 
 		await userEvent.click(firstAddress);
 
 		await waitFor(() => {
-			expect(screen.queryByTestId("SelectDropdown__option--0")).not.toBeInTheDocument();
+			expect(screen.queryByTestId(firstOptionTestId)).not.toBeInTheDocument();
 		});
 
 		expect(onChange).toHaveBeenCalledWith(wallets[0]);
