@@ -2,7 +2,7 @@ import { BIP39 } from "@ardenthq/arkvault-crypto";
 import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
-import React from "react";
+import React, { useEffect } from "react";
 import { Route } from "react-router-dom";
 import * as randomWordPositionsMock from "@/domains/wallet/components/MnemonicVerification/utils/randomWordPositions";
 import { translations as walletTranslations } from "@/domains/wallet/i18n";
@@ -164,6 +164,8 @@ describe("CreateAddressSidePanel", () => {
 			},
 		);
 
+		const user = userEvent.setup();
+
 		const historySpy = vi.spyOn(history, "push").mockImplementation(() => {});
 
 		await waitFor(() => expect(profile.wallets().values()).toHaveLength(0));
@@ -195,12 +197,15 @@ describe("CreateAddressSidePanel", () => {
 
 		const [firstInput, secondInput, thirdInput] = screen.getAllByTestId("MnemonicVerificationInput__input");
 		await userEvent.click(screen.getByTestId("CreateWallet__ConfirmPassphraseStep__passphraseDisclaimer"));
-		await userEvent.clear(firstInput);
-		await userEvent.type(firstInput, "power");
-		await userEvent.clear(secondInput);
-		await userEvent.type(secondInput, "return");
-		await userEvent.clear(thirdInput);
-		await userEvent.type(thirdInput, "attend");
+
+		await user.clear(firstInput);
+		await user.paste("power");
+
+		await user.clear(secondInput);
+		await user.paste("return");
+
+		await user.clear(thirdInput);
+		await user.paste("attend");
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
@@ -208,10 +213,11 @@ describe("CreateAddressSidePanel", () => {
 
 		await expect(screen.findByTestId("EncryptPassword")).resolves.toBeVisible();
 
-		await userEvent.clear(screen.getByTestId("PasswordValidation__encryptionPassword"));
-		await userEvent.type(screen.getByTestId("PasswordValidation__encryptionPassword"), encryptionPassword);
-		await userEvent.clear(screen.getByTestId("PasswordValidation__confirmEncryptionPassword"));
-		await userEvent.type(screen.getByTestId("PasswordValidation__confirmEncryptionPassword"), encryptionPassword);
+		await user.clear(screen.getByTestId("PasswordValidation__encryptionPassword"));
+		await user.paste(encryptionPassword);
+
+		await user.clear(screen.getByTestId("PasswordValidation__confirmEncryptionPassword"));
+		await user.paste(encryptionPassword);
 
 		await expect(screen.findByTestId("PasswordValidation__encryptionPassword")).resolves.toHaveValue(
 			encryptionPassword,
@@ -256,6 +262,8 @@ describe("CreateAddressSidePanel", () => {
 			},
 		);
 
+		const user = userEvent.setup();
+
 		const historySpy = vi.spyOn(history, "push").mockImplementation(() => {});
 
 		await waitFor(() => expect(profile.wallets().values()).toHaveLength(0));
@@ -277,12 +285,14 @@ describe("CreateAddressSidePanel", () => {
 
 		const fillConfirmationInputs = async () => {
 			const [firstInput, secondInput, thirdInput] = screen.getAllByTestId("MnemonicVerificationInput__input");
-			await userEvent.clear(firstInput);
-			await userEvent.type(firstInput, "power");
-			await userEvent.clear(secondInput);
-			await userEvent.type(secondInput, "return");
-			await userEvent.clear(thirdInput);
-			await userEvent.type(thirdInput, "attend");
+			await user.clear(firstInput);
+			await user.paste("power");
+
+			await user.clear(secondInput);
+			await user.paste("return");
+
+			await user.clear(thirdInput);
+			await user.paste("attend");
 		};
 
 		await fillConfirmationInputs();
@@ -295,10 +305,11 @@ describe("CreateAddressSidePanel", () => {
 		await expect(screen.findByTestId("EncryptPassword")).resolves.toBeVisible();
 
 		const fillEncryptionPassword = async (password: string, confirmation: string) => {
-			await userEvent.clear(screen.getByTestId("PasswordValidation__encryptionPassword"));
-			await userEvent.type(screen.getByTestId("PasswordValidation__encryptionPassword"), password);
-			await userEvent.clear(screen.getByTestId("PasswordValidation__confirmEncryptionPassword"));
-			await userEvent.type(screen.getByTestId("PasswordValidation__confirmEncryptionPassword"), confirmation);
+			await user.clear(screen.getByTestId("PasswordValidation__encryptionPassword"));
+			await user.paste(password);
+
+			await user.clear(screen.getByTestId("PasswordValidation__confirmEncryptionPassword"));
+			await user.paste(confirmation);
 		};
 
 		await fillEncryptionPassword("hello123", "wrong-confirmation");
