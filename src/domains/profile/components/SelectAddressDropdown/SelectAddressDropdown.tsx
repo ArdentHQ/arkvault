@@ -1,0 +1,164 @@
+import { Networks } from "@/app/lib/mainsail";
+import { Contracts } from "@/app/lib/profiles";
+import cn from "classnames";
+import React, { useMemo, useRef } from "react";
+import { useTranslation } from "react-i18next";
+import { Address } from "@/app/components/Address";
+import { useFormField } from "@/app/components/Form/useFormField";
+import { Select } from "@/app/components/SelectDropdown";
+import { TruncateEnd } from "@/app/components/TruncateEnd";
+import { useWalletAlias } from "@/app/hooks/use-wallet-alias";
+
+type SelectAddressDropdownProperties = {
+	wallet?: Contracts.IReadWriteWallet;
+	wallets: Contracts.IReadWriteWallet[];
+	defaultNetwork?: Networks.Network;
+	profile: Contracts.IProfile;
+	disabled?: boolean;
+	isInvalid?: boolean;
+	placeholder?: string;
+	onChange?: (wallet?: Contracts.IReadWriteWallet) => void;
+} & Omit<React.InputHTMLAttributes<any>, "onChange">;
+
+const OptionLabel = ({
+	option,
+	network,
+	profile,
+}: {
+	option: any;
+	network?: Networks.Network;
+	profile: Contracts.IProfile;
+}) => {
+	const address = option.value;
+
+	const { getWalletAlias } = useWalletAlias();
+
+	const { alias } = useMemo(
+		() =>
+			getWalletAlias({
+				address,
+				network,
+				profile,
+			}),
+		[address, getWalletAlias, network, profile],
+	);
+
+	return (
+		<div className="flex items-center space-x-2 leading-5 whitespace-nowrap">
+			<Address
+				address={address}
+				walletName={alias}
+				truncateOnTable
+				addressClass={cn("leading-[17px] sm:leading-5 text-sm sm:text-base", {
+					"text-theme-primary-600": !alias && option.isSelected,
+					"text-theme-secondary-500 dark:text-theme-secondary-700": alias,
+					"text-theme-text": !alias,
+				})}
+				walletNameClass={cn("leading-[17px] sm:leading-5 text-theme-text text-sm sm:text-base", {
+					"text-theme-primary-600": option.isSelected,
+				})}
+			/>
+		</div>
+	);
+};
+
+export const SelectAddressDropdown = React.forwardRef<HTMLInputElement, SelectAddressDropdownProperties>(
+	(
+		{
+			wallet,
+			profile,
+			disabled,
+			isInvalid,
+			placeholder,
+			onChange,
+			wallets,
+			defaultNetwork,
+		}: SelectAddressDropdownProperties,
+		reference,
+	) => {
+		const { t } = useTranslation();
+
+		const { getWalletAlias } = useWalletAlias();
+
+		const selectRecipientReference = useRef<HTMLDivElement | null>(null);
+
+		const fieldContext = useFormField();
+
+		const isInvalidValue = isInvalid || fieldContext?.isInvalid;
+
+		const recipientOptions =
+			wallets?.map((wallet: Contracts.IReadWriteWallet) => ({
+				label: wallet.address(),
+				value: wallet.address(),
+			})) || [];
+
+		const changeHandler = (option: any) => {
+			const wallet = wallets.find((wallet: Contracts.IReadWriteWallet) => wallet.address() === option.value);
+
+			return onChange?.(wallet);
+		};
+
+		const selectedAddressAlias = useMemo(() => {
+			if (!wallet) {
+				return undefined;
+			}
+
+			return getWalletAlias({
+				address: wallet?.address() ?? "",
+				network: wallet?.network() ?? defaultNetwork,
+				profile,
+			});
+		}, [wallet, profile, defaultNetwork]);
+
+		return (
+			<div>
+				<div
+					ref={selectRecipientReference}
+					data-testid="SelectRecipient__wrapper"
+					className="relative flex w-full items-center text-left"
+				>
+					<Select
+						id="SelectRecipient__dropdown"
+						showCaret={false}
+						isInvalid={isInvalidValue}
+						disabled={disabled}
+						defaultValue={wallet?.address()}
+						placeholder={placeholder || t("COMMON.ADDRESS")}
+						ref={reference}
+						options={recipientOptions}
+						showOptions={true}
+						allowFreeInput={true}
+						onChange={changeHandler}
+						addons={{
+							end: undefined,
+							start: selectedAddressAlias?.alias
+								? {
+										content: (
+											<div className="flex items-center">
+												{selectedAddressAlias?.alias && (
+													<TruncateEnd
+														className="font-semibold"
+														text={selectedAddressAlias.alias}
+														showTooltip
+													/>
+												)}
+											</div>
+										),
+									}
+								: undefined,
+						}}
+						renderLabel={(option) => (
+							<OptionLabel
+								option={option}
+								network={wallet?.network() ?? defaultNetwork}
+								profile={profile}
+							/>
+						)}
+					/>
+				</div>
+			</div>
+		);
+	},
+);
+
+SelectAddressDropdown.displayName = "SelectAddressDropdown";

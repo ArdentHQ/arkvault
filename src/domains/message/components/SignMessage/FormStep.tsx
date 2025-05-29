@@ -5,7 +5,8 @@ import { useTranslation } from "react-i18next";
 
 import { FormField, FormLabel } from "@/app/components/Form";
 import { InputCounter } from "@/app/components/Input";
-import { SelectAddress } from "@/domains/profile/components/SelectAddress";
+import { SelectAddressDropdown } from "@/domains/profile/components/SelectAddressDropdown";
+import { useActiveNetwork } from "@/app/hooks/use-active-network";
 
 export const FormStep = ({
 	disabled,
@@ -33,28 +34,25 @@ export const FormStep = ({
 		unregister("mnemonic");
 	}, [unregister]);
 
+	const handleRecipientWalletChange = (wallet?: Contracts.IReadWriteWallet) => {
+		handleSelectAddress(wallet?.address() || "");
+	};
+
+	const { activeNetwork } = useActiveNetwork({ profile });
+
 	return (
 		<section className="space-y-4">
 			<FormField name="signatory-address">
-				<FormLabel label={t("COMMON.SIGNING_WALLET")} />
+				<FormLabel label={t("COMMON.SIGNING_ADDRESS")} />
 
-				<SelectAddress
-					showWalletAvatar={false}
-					title={t("MESSAGE.PAGE_SIGN_MESSAGE.FORM_STEP.SELECT_ADDRESS_TITLE")}
-					description={t("MESSAGE.PAGE_SIGN_MESSAGE.FORM_STEP.SELECT_ADDRESS_DESCRIPTION")}
-					wallet={
-						wallet
-							? {
-									address: wallet.address(),
-									network: wallet.network(),
-								}
-							: undefined
-					}
-					wallets={wallets}
-					profile={profile}
+				<SelectAddressDropdown
 					disabled={disabled}
-					disableAction={() => false}
-					onChange={handleSelectAddress}
+					profile={profile}
+					placeholder={t("EXCHANGE.EXCHANGE_FORM.RECIPIENT_PLACEHOLDER")}
+					onChange={handleRecipientWalletChange}
+					wallets={wallets}
+					wallet={wallet}
+					defaultNetwork={activeNetwork}
 				/>
 			</FormField>
 
