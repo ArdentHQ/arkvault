@@ -48,7 +48,6 @@ const OptionLabel = ({
 			<Address
 				address={address}
 				walletName={alias}
-				truncateOnTable
 				addressClass={cn("leading-[17px] sm:leading-5 text-sm sm:text-base", {
 					"text-theme-primary-600": !alias && option.isSelected,
 					"text-theme-secondary-500 dark:text-theme-secondary-700": alias,

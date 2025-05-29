@@ -48,7 +48,6 @@ export const FormStep = ({
 				<SelectAddressDropdown
 					disabled={disabled}
 					profile={profile}
-					placeholder={t("EXCHANGE.EXCHANGE_FORM.RECIPIENT_PLACEHOLDER")}
 					onChange={handleRecipientWalletChange}
 					wallets={wallets}
 					wallet={wallet}
