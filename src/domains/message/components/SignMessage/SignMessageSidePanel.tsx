@@ -8,7 +8,7 @@ import { FormStep } from "./FormStep";
 import { SigningMessageInfo, SuccessStep } from "./SuccessStep";
 import { Clipboard } from "@/app/components/Clipboard";
 import { Button } from "@/app/components/Button";
-import { Form, FormButtons } from "@/app/components/Form";
+import { Form } from "@/app/components/Form";
 import { Icon, ThemeIcon } from "@/app/components/Icon";
 import { Tabs, TabPanel } from "@/app/components/Tabs";
 import { StepsProvider, useLedgerContext } from "@/app/contexts";
@@ -19,7 +19,6 @@ import { useQueryParameters } from "@/app/hooks/use-query-parameters";
 import { AuthenticationStep, LedgerAuthentication } from "@/domains/transaction/components/AuthenticationStep";
 import { SidePanel } from "@/app/components/SidePanel/SidePanel";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
-import cn from "classnames";
 
 enum Step {
 	FormStep = 1,
@@ -58,7 +57,6 @@ export const SignMessageSidePanel = ({
 
 	const activeWallet = useMemo(() => walletFromPath || walletFromDeeplink, [walletFromPath, walletFromDeeplink]);
 	const profileWallets = useMemo(() => activeProfile.wallets().values(), [activeProfile]);
-	const isSingleWallet = profileWallets.length === 1;
 
 	const [selectedWallet, setSelectedWallet] = useState<Contracts.IReadWriteWallet | undefined>(activeWallet);
 

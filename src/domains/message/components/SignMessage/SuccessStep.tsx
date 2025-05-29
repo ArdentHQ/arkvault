@@ -1,3 +1,4 @@
+import React from "react";
 import { Services } from "@/app/lib/mainsail";
 import { Contracts as ProfileContracts } from "@/app/lib/profiles";
 import { useTranslation } from "react-i18next";
