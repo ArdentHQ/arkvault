@@ -47,7 +47,7 @@ describe("ImportAddress", () => {
 	beforeEach(async () => {
 		vi.spyOn(usePortfolio, "usePortfolio").mockReturnValue({
 			selectedAddresses: [],
-			setSelectedAddresses: () => {},
+			setSelectedAddresses: () => { },
 		});
 
 		profile = env.profiles().findById(fixtureProfileId);
@@ -77,6 +77,8 @@ describe("ImportAddress", () => {
 			},
 		);
 
+		const user = userEvent.setup();
+
 		expect(methodStep()).toBeInTheDocument();
 
 		await expect(screen.findByText(commonTranslations.MNEMONIC)).resolves.toBeVisible();
@@ -87,8 +89,8 @@ describe("ImportAddress", () => {
 
 		expect(mnemonicInput()).toBeInTheDocument();
 
-		await userEvent.clear(mnemonicInput());
-		await userEvent.type(mnemonicInput(), mnemonic);
+		await user.clear(mnemonicInput());
+		await user.paste(mnemonic);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 		await userEvent.keyboard("{Enter}");
@@ -101,8 +103,8 @@ describe("ImportAddress", () => {
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 
-		await userEvent.clear(screen.getByTestId("UpdateWalletName__input"));
-		await userEvent.type(screen.getByTestId("UpdateWalletName__input"), "test alias");
+		await user.clear(screen.getByTestId("UpdateWalletName__input"));
+		await user.paste("test alias");
 
 		await waitFor(() => expect(screen.getByTestId("UpdateWalletName__submit")).toBeEnabled());
 
@@ -128,6 +130,8 @@ describe("ImportAddress", () => {
 			},
 		);
 
+		const user = userEvent.setup();
+
 		expect(methodStep()).toBeInTheDocument();
 
 		await expect(screen.findByText(commonTranslations.MNEMONIC)).resolves.toBeVisible();
@@ -138,8 +142,8 @@ describe("ImportAddress", () => {
 
 		expect(mnemonicInput()).toBeInTheDocument();
 
-		await userEvent.clear(mnemonicInput());
-		await userEvent.type(mnemonicInput(), MAINSAIL_MNEMONICS[0]);
+		await user.clear(mnemonicInput());
+		await user.paste(MAINSAIL_MNEMONICS[0]);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
@@ -151,10 +155,13 @@ describe("ImportAddress", () => {
 			expect(screen.getByTestId("EncryptPassword")).toBeInTheDocument();
 		});
 
-		await userEvent.type(screen.getByTestId("PasswordValidation__encryptionPassword"), password);
+		await user.clear(screen.getByTestId("PasswordValidation__encryptionPassword"));
+		await user.paste(password);
 		await expect(screen.findByTestId("PasswordValidation__encryptionPassword")).resolves.toHaveValue(password);
 
-		await userEvent.type(screen.getByTestId("PasswordValidation__confirmEncryptionPassword"), password);
+		await user.clear(screen.getByTestId("PasswordValidation__confirmEncryptionPassword"));
+		await user.paste(password);
+
 		await expect(screen.findByTestId("PasswordValidation__confirmEncryptionPassword")).resolves.toHaveValue(
 			password,
 		);
