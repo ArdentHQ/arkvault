@@ -549,9 +549,10 @@ describe("ExchangeForm", () => {
 
 	it("should calculate amounts", async () => {
 		const onReady = vi.fn();
-		const user = userEvent.setup();
 
 		renderComponent(<ExchangeForm onReady={onReady} />);
+
+		const user = userEvent.setup();
 
 		await waitFor(() => {
 			expect(onReady).toHaveBeenCalledWith();
@@ -570,7 +571,8 @@ describe("ExchangeForm", () => {
 		const payoutInput: HTMLInputElement = screen.getAllByTestId("InputCurrency")[1] as HTMLInputElement;
 
 		// amount input
-		await userEvent.type(payinInput, "1");
+		await user.clear(payinInput);
+		await user.paste("1");
 
 		await waitFor(() => {
 			expect(payinInput).toHaveValue("1");
@@ -582,11 +584,12 @@ describe("ExchangeForm", () => {
 
 		// update amount output
 		payoutInput.select();
-
 		await user.clear(payoutInput);
-		await user.type("1");
+		await user.paste("1");
 
-		expect(payinInput).toHaveValue(payoutValue);
+		await waitFor(() => {
+			expect(payinInput).toHaveValue(payoutValue);
+		})
 
 		// remove from currency
 		await userEvent.clear(screen.getAllByTestId("SelectDropdown__input")[0]);
