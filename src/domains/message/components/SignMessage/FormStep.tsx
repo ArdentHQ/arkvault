@@ -43,7 +43,7 @@ export const FormStep = ({
 	return (
 		<section className="space-y-4">
 			<FormField name="signatory-address">
-				<FormLabel label={t("COMMON.SIGNING_ADDRESS")} />
+				<FormLabel textClassName="text-base" label={t("COMMON.SIGNING_ADDRESS")} />
 
 				<SelectAddressDropdown
 					disabled={disabled}
