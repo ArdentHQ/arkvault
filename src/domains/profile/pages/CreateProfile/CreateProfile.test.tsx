@@ -282,36 +282,36 @@ describe("CreateProfile", () => {
 
 		const user = userEvent.setup()
 
-		await userEvent.clear(nameInput());
-		await userEvent.paste("asdasdas");
+		await user.clear(nameInput());
+		await user.paste("asdasdas");
 
-		await userEvent.clear(passwordInput());
-		await userEvent.paste(testPassword);
+		await user.clear(passwordInput());
+		await user.paste(testPassword);
 
-		await userEvent.clear(passwordConfirmationInput());
-		await userEvent.paste(wrongPassword);
+		await user.clear(passwordConfirmationInput());
+		await user.paste(wrongPassword);
 
 		await waitFor(() => expect(submitButton()).toBeDisabled());
 
 		passwordInput().select();
-		await userEvent.clear(passwordInput());
-		await userEvent.paste(password);
+		await user.clear(passwordInput());
+		await user.paste(password);
 
 		await userEvent.click(screen.getByRole("checkbox"));
 
 		passwordConfirmationInput().select();
-		await userEvent.clear(passwordConfirmationInput());
-		await userEvent.paste(password);
+		await user.clear(passwordConfirmationInput());
+		await user.paste(password);
 
 		await waitFor(() => expect(submitButton()).toBeEnabled());
 
 		passwordConfirmationInput().select();
-		await userEvent.clear(passwordConfirmationInput());
-		await userEvent.paste(testPassword);
+		await user.clear(passwordConfirmationInput());
+		await user.paste(testPassword);
 
 		passwordInput().select();
-		await userEvent.clear(passwordInput());
-		await userEvent.paste(wrongPassword);
+		await user.clear(passwordInput());
+		await user.paste(wrongPassword);
 
 		await waitFor(() => expect(submitButton()).toBeDisabled());
 

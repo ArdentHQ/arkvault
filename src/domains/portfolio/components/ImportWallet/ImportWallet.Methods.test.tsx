@@ -236,8 +236,8 @@ describe("ImportAddress Methods", () => {
 
 		await expect(screen.findByTestId(secretInputID)).resolves.toBeVisible();
 
-		await userEvent.clear(screen.getByTestId(secretInputID));
-		await userEvent.paste("secret.222");
+		await user.clear(screen.getByTestId(secretInputID));
+		await user.paste("secret.222");
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 

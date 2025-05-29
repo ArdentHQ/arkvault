@@ -101,8 +101,8 @@ describe("Import Profile - Profile Form Step", () => {
 		inputElement.select();
 		const user = userEvent.setup();
 
-		await userEvent.clear(inputElement);
-		await userEvent.paste("test profile 1");
+		await user.clear(inputElement);
+		await user.paste("test profile 1");
 
 		await userEvent.click(screen.getByRole("checkbox"));
 
@@ -118,8 +118,8 @@ describe("Import Profile - Profile Form Step", () => {
 		expect(emptyProfile.usesPassword()).toBe(false);
 
 		inputElement.select();
-		await userEvent.clear(inputElement);
-		await userEvent.type(inputElement, "test profile 2");
+		await user.clear(inputElement);
+		await user.type(inputElement, "test profile 2");
 
 		await waitFor(() => {
 			expect(submitButton()).toBeEnabled();

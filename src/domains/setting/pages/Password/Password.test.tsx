@@ -2,7 +2,7 @@
 import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
-import React, { useRef } from "react";
+import React from "react";
 import { Route } from "react-router-dom";
 
 import { buildTranslations } from "@/app/i18n/helpers";

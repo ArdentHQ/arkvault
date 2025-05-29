@@ -2,7 +2,7 @@ import { BIP39 } from "@ardenthq/arkvault-crypto";
 import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
-import React, { useEffect } from "react";
+import React from "react";
 import { Route } from "react-router-dom";
 import * as randomWordPositionsMock from "@/domains/wallet/components/MnemonicVerification/utils/randomWordPositions";
 import { translations as walletTranslations } from "@/domains/wallet/i18n";
@@ -46,7 +46,7 @@ describe("CreateAddressSidePanel", () => {
 	beforeEach(async () => {
 		vi.spyOn(usePortfolio, "usePortfolio").mockReturnValue({
 			selectedAddresses: [],
-			setSelectedAddresses: () => { },
+			setSelectedAddresses: () => {},
 		});
 
 		profile = env.profiles().findById(fixtureProfileId);
@@ -89,7 +89,7 @@ describe("CreateAddressSidePanel", () => {
 			},
 		);
 
-		const historySpy = vi.spyOn(history, "push").mockImplementation(() => { });
+		const historySpy = vi.spyOn(history, "push").mockImplementation(() => {});
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 		await waitFor(() => expect(profile.wallets().values()).toHaveLength(0));
@@ -166,7 +166,7 @@ describe("CreateAddressSidePanel", () => {
 
 		const user = userEvent.setup();
 
-		const historySpy = vi.spyOn(history, "push").mockImplementation(() => { });
+		const historySpy = vi.spyOn(history, "push").mockImplementation(() => {});
 
 		await waitFor(() => expect(profile.wallets().values()).toHaveLength(0));
 
@@ -264,13 +264,11 @@ describe("CreateAddressSidePanel", () => {
 
 		const user = userEvent.setup();
 
-		const historySpy = vi.spyOn(history, "push").mockImplementation(() => { });
+		const historySpy = vi.spyOn(history, "push").mockImplementation(() => {});
 
 		await waitFor(() => expect(profile.wallets().values()).toHaveLength(0));
 
 		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();
-
-		const steps = within(screen.getByTestId("Form")).getAllByRole("list")[0];
 
 		await userEvent.click(continueButton());
 
