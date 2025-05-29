@@ -1,11 +1,8 @@
 import { Services } from "@/app/lib/mainsail";
 import { Contracts as ProfileContracts } from "@/app/lib/profiles";
-import React, { useRef } from "react";
 import { useTranslation } from "react-i18next";
-
 import { Address } from "@/app/components/Address";
 import { FormField } from "@/app/components/Form";
-import { TextArea } from "@/app/components/TextArea";
 import { DetailLabel, DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
 
 export const SigningMessageInfo = ({
@@ -49,8 +46,6 @@ export const SuccessStep = ({
 }) => {
 	const { t } = useTranslation();
 
-	const messageReference = useRef();
-
 	return (
 		<section>
 			<div className="space-y-4">
@@ -59,13 +54,9 @@ export const SuccessStep = ({
 				<div>
 					<FormField name="json-signature">
 						<DetailLabel>{t("MESSAGE.PAGE_SIGN_MESSAGE.FORM_STEP.SIGNATURE_JSON")}</DetailLabel>
-						<TextArea
-							className="mt-2 py-4"
-							wrap="hard"
-							ref={messageReference}
-							defaultValue={JSON.stringify(signedMessage)}
-							disabled
-						/>
+						<pre className="border-theme-secondary-300 dark:border-theme-dark-500 dark:text-theme-dark-50 text-theme-secondary-900 mt-2 rounded-sm border p-4 break-all whitespace-normal select-all">
+							{JSON.stringify(signedMessage, null, 2)}
+						</pre>
 					</FormField>
 				</div>
 			</div>
