@@ -147,7 +147,6 @@ exports[`SignIn > should render a modal 1`] = `
                       data-testid="SignIn__input--password"
                       name="password"
                       type="password"
-                      value=""
                     />
                   </div>
                   <div

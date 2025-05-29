@@ -712,13 +712,16 @@ exports[`Welcome > should change route to create profile 1`] = `
                       Exported a Profile before? 
                     </span>
                     <a
+                      href="#/profiles/import"
+                      title="Import Profile"
+                    />
+                    <a
                       class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
                       data-ring-focus-margin="-m-1"
                       data-testid="Link"
-                      href="#/profiles/import"
                     >
                       <span
-                        class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
+                        class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
                       >
                         Import it here.
                       </span>
@@ -1542,13 +1545,16 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                       Exported a Profile before? 
                     </span>
                     <a
+                      href="#/profiles/import"
+                      title="Import Profile"
+                    />
+                    <a
                       class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
                       data-ring-focus-margin="-m-1"
                       data-testid="Link"
-                      href="#/profiles/import"
                     >
                       <span
-                        class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
+                        class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
                       >
                         Import it here.
                       </span>
@@ -2372,13 +2378,16 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                       Exported a Profile before? 
                     </span>
                     <a
+                      href="#/profiles/import"
+                      title="Import Profile"
+                    />
+                    <a
                       class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
                       data-ring-focus-margin="-m-1"
                       data-testid="Link"
-                      href="#/profiles/import"
                     >
                       <span
-                        class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
+                        class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
                       >
                         Import it here.
                       </span>
@@ -3202,13 +3211,16 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                       Exported a Profile before? 
                     </span>
                     <a
+                      href="#/profiles/import"
+                      title="Import Profile"
+                    />
+                    <a
                       class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
                       data-ring-focus-margin="-m-1"
                       data-testid="Link"
-                      href="#/profiles/import"
                     >
                       <span
-                        class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
+                        class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
                       >
                         Import it here.
                       </span>
@@ -4032,13 +4044,16 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                       Exported a Profile before? 
                     </span>
                     <a
+                      href="#/profiles/import"
+                      title="Import Profile"
+                    />
+                    <a
                       class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
                       data-ring-focus-margin="-m-1"
                       data-testid="Link"
-                      href="#/profiles/import"
                     >
                       <span
-                        class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
+                        class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
                       >
                         Import it here.
                       </span>
@@ -4862,13 +4877,16 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                       Exported a Profile before? 
                     </span>
                     <a
+                      href="#/profiles/import"
+                      title="Import Profile"
+                    />
+                    <a
                       class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
                       data-ring-focus-margin="-m-1"
                       data-testid="Link"
-                      href="#/profiles/import"
                     >
                       <span
-                        class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
+                        class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
                       >
                         Import it here.
                       </span>
@@ -5597,13 +5615,16 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                       Exported a Profile before? 
                     </span>
                     <a
+                      href="#/profiles/import"
+                      title="Import Profile"
+                    />
+                    <a
                       class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
                       data-ring-focus-margin="-m-1"
                       data-testid="Link"
-                      href="#/profiles/import"
                     >
                       <span
-                        class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
+                        class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
                       >
                         Import it here.
                       </span>
@@ -6427,13 +6448,16 @@ exports[`Welcome > should render with profiles 1`] = `
                       Exported a Profile before? 
                     </span>
                     <a
+                      href="#/profiles/import"
+                      title="Import Profile"
+                    />
+                    <a
                       class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
                       data-ring-focus-margin="-m-1"
                       data-testid="Link"
-                      href="#/profiles/import"
                     >
                       <span
-                        class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
+                        class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
                       >
                         Import it here.
                       </span>
@@ -7036,13 +7060,16 @@ exports[`Welcome > should render without profiles 1`] = `
                       Exported a Profile before? 
                     </span>
                     <a
+                      href="#/profiles/import"
+                      title="Import Profile"
+                    />
+                    <a
                       class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
                       data-ring-focus-margin="-m-1"
                       data-testid="Link"
-                      href="#/profiles/import"
                     >
                       <span
-                        class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
+                        class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
                       >
                         Import it here.
                       </span>
