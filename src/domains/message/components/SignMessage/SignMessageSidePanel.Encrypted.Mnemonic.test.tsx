@@ -6,7 +6,6 @@ import { Route } from "react-router-dom";
 
 import { translations as messageTranslations } from "@/domains/message/i18n";
 import { env, render, screen, waitFor, triggerMessageSignOnce, MAINSAIL_MNEMONICS } from "@/utils/testing-library";
-import { selectFirstAddress } from "./SignMessageSidePanel.test";
 import { SignMessageSidePanel } from "./SignMessageSidePanel";
 
 const history = createHashHistory();
@@ -67,7 +66,7 @@ describe("SignMessage with encrypted mnemonic", () => {
 
 			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
 
-			await selectFirstAddress();
+			// The profile only have one address so we dont need to select any address
 
 			expect(
 				screen.getByText(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_ENCRYPTION_PASSWORD),

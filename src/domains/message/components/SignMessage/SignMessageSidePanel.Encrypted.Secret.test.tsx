@@ -7,7 +7,6 @@ import { Route } from "react-router-dom";
 import { translations as messageTranslations } from "@/domains/message/i18n";
 import { env, render, screen, waitFor, triggerMessageSignOnce } from "@/utils/testing-library";
 import { SignMessageSidePanel } from "./SignMessageSidePanel";
-import { selectFirstAddress } from "./SignMessageSidePanel.test";
 
 const history = createHashHistory();
 
@@ -72,7 +71,7 @@ describe("SignMessage with encrypted secret", () => {
 
 			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
 
-			await selectFirstAddress();
+			// The profile only have one address so we dont need to select any address
 
 			await userEvent.type(messageInput(), signMessage);
 

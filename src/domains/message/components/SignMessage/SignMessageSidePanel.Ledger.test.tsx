@@ -16,7 +16,6 @@ import {
 	MAINSAIL_MNEMONICS,
 } from "@/utils/testing-library";
 import { SignMessageSidePanel } from "./SignMessageSidePanel";
-import { selectFirstAddress } from "./SignMessageSidePanel.test";
 
 const history = createHashHistory();
 
@@ -87,7 +86,7 @@ describe("SignMessage with ledger", () => {
 
 		await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
 
-		await selectFirstAddress();
+		// The profile only have one address so we dont need to select any address
 
 		await userEvent.type(messageInput(), signMessage);
 
@@ -145,7 +144,7 @@ describe("SignMessage with ledger", () => {
 
 		await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
 
-		await selectFirstAddress();
+		// The profile only have one address so we dont need to select any address
 
 		expect(
 			screen.getByText(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_LEDGER),
