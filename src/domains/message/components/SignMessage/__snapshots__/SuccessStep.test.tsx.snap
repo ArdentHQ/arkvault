@@ -20,7 +20,7 @@ exports[`SignMessage success step > should render success step in lg 1`] = `
               class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24 font-semibold text-md leading-5"
               data-testid="DetailLabelText"
             >
-              Signing Wallet
+              Signing Address
             </div>
           </div>
           <div
@@ -150,33 +150,16 @@ exports[`SignMessage success step > should render success step in lg 1`] = `
               Signature (JSON)
             </div>
           </div>
-          <div
-            class="relative"
+          <pre
+            class="border-theme-secondary-300 dark:border-theme-dark-500 dark:text-theme-dark-50 text-theme-secondary-900 mt-2 rounded-sm border p-4 break-all whitespace-normal select-all"
           >
-            <div
-              class="border-t-theme-secondary-400 dark:border-t-theme-secondary-700 pointer-events-none absolute right-3 bottom-4 z-10 hidden h-0 w-0 -rotate-45 border-x-8 border-t-8 border-x-transparent md:block"
-            />
-            <div
-              class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 focus-within:ring-1 relative mt-2 py-4"
-            >
-              <div
-                class="relative flex h-full flex-1"
-              >
-                <textarea
-                  autocomplete="off"
-                  class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none sm:text-base! min-h-[8rem] md:min-h-auto md:resize-y resize-none text-theme-secondary-text"
-                  data-testid="TextArea"
-                  disabled=""
-                  name="json-signature"
-                  style="height: 4px;"
-                  type="text"
-                  wrap="hard"
-                >
-                  {"message":"Test Message","mnemonic":"1","signatory":"!","signature":"1"}
-                </textarea>
-              </div>
-            </div>
-          </div>
+            {
+  "message": "Test Message",
+  "mnemonic": "1",
+  "signatory": "!",
+  "signature": "1"
+}
+          </pre>
         </fieldset>
       </div>
     </div>
@@ -204,7 +187,7 @@ exports[`SignMessage success step > should render success step in xs 1`] = `
               class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24 font-semibold text-md leading-5"
               data-testid="DetailLabelText"
             >
-              Signing Wallet
+              Signing Address
             </div>
           </div>
           <div
@@ -334,33 +317,16 @@ exports[`SignMessage success step > should render success step in xs 1`] = `
               Signature (JSON)
             </div>
           </div>
-          <div
-            class="relative"
+          <pre
+            class="border-theme-secondary-300 dark:border-theme-dark-500 dark:text-theme-dark-50 text-theme-secondary-900 mt-2 rounded-sm border p-4 break-all whitespace-normal select-all"
           >
-            <div
-              class="border-t-theme-secondary-400 dark:border-t-theme-secondary-700 pointer-events-none absolute right-3 bottom-4 z-10 hidden h-0 w-0 -rotate-45 border-x-8 border-t-8 border-x-transparent md:block"
-            />
-            <div
-              class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 focus-within:ring-1 relative mt-2 py-4"
-            >
-              <div
-                class="relative flex h-full flex-1"
-              >
-                <textarea
-                  autocomplete="off"
-                  class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none sm:text-base! min-h-[8rem] md:min-h-auto md:resize-y resize-none text-theme-secondary-text"
-                  data-testid="TextArea"
-                  disabled=""
-                  name="json-signature"
-                  style="height: 4px;"
-                  type="text"
-                  wrap="hard"
-                >
-                  {"message":"Test Message","mnemonic":"1","signatory":"!","signature":"1"}
-                </textarea>
-              </div>
-            </div>
-          </div>
+            {
+  "message": "Test Message",
+  "mnemonic": "1",
+  "signatory": "!",
+  "signature": "1"
+}
+          </pre>
         </fieldset>
       </div>
     </div>

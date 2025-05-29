@@ -7,7 +7,7 @@ import { Route } from "react-router-dom";
 import { SignMessageSidePanel } from "./SignMessageSidePanel";
 import { translations as messageTranslations } from "@/domains/message/i18n";
 import { env, render, screen, waitFor, triggerMessageSignOnce, MAINSAIL_MNEMONICS } from "@/utils/testing-library";
-import { afterAll } from "vitest";
+import { afterAll, expect, vi } from "vitest";
 
 const history = createHashHistory();
 
@@ -30,15 +30,15 @@ const expectHeading = async (text: string) => {
 };
 
 export const selectNthAddress = async (index = 0) => {
-	await userEvent.click(screen.getByTestId("SelectAddress__wrapper"));
+	await userEvent.click(screen.getByTestId("SelectDropdown__input"));
+
+	const elementTestId = `SelectDropdown__option--${index}`;
 
 	await waitFor(() => {
-		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
+		expect(screen.getByTestId(elementTestId)).toBeInTheDocument();
 	});
 
-	const nthAddress = screen.getByTestId(`SearchWalletListItem__select-${index}`);
-
-	await userEvent.click(nthAddress);
+	await userEvent.click(screen.getByTestId(elementTestId));
 };
 
 export const selectFirstAddress = async () => {

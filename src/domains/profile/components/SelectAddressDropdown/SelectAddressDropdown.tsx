@@ -79,7 +79,7 @@ export const SelectAddressDropdown = React.forwardRef<HTMLInputElement, SelectAd
 
 		const { getWalletAlias } = useWalletAlias();
 
-		const selectRecipientReference = useRef<HTMLDivElement | null>(null);
+		const selectReference = useRef<HTMLDivElement | null>(null);
 
 		const fieldContext = useFormField();
 
@@ -112,12 +112,12 @@ export const SelectAddressDropdown = React.forwardRef<HTMLInputElement, SelectAd
 		return (
 			<div>
 				<div
-					ref={selectRecipientReference}
-					data-testid="SelectRecipient__wrapper"
+					ref={selectReference}
+					data-testid="SelectAddressDropdown__wrapper"
 					className="relative flex w-full items-center text-left"
 				>
 					<Select
-						id="SelectRecipient__dropdown"
+						id="SelectAddressDropdown__dropdown"
 						showCaret={false}
 						isInvalid={isInvalidValue}
 						disabled={disabled}
