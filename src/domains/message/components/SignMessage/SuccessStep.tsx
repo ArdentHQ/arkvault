@@ -15,7 +15,7 @@ export const SigningMessageInfo = ({
 	const { t } = useTranslation();
 	return (
 		<div className="space-y-4">
-			<DetailWrapper label={t("COMMON.SIGNING_WALLET")}>
+			<DetailWrapper label={t("COMMON.SIGNING_ADDRESS")}>
 				<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
 					<DetailTitle>{t("COMMON.ADDRESS")}</DetailTitle>
 					<Address

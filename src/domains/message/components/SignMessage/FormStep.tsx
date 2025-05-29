@@ -7,7 +7,8 @@ import { FormField, FormLabel } from "@/app/components/Form";
 import { InputCounter } from "@/app/components/Input";
 import { SelectAddressDropdown } from "@/domains/profile/components/SelectAddressDropdown";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
-
+import { DetailLabel, DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
+import { Address } from "@/app/components/Address";
 export const FormStep = ({
 	disabled,
 	wallet,
@@ -40,20 +41,38 @@ export const FormStep = ({
 
 	const { activeNetwork } = useActiveNetwork({ profile });
 
+	const isSingleWallet = wallets.length === 1;
+
 	return (
 		<section className="space-y-4">
-			<FormField name="signatory-address">
-				<FormLabel textClassName="text-base" label={t("COMMON.SIGNING_ADDRESS")} />
-
-				<SelectAddressDropdown
-					disabled={disabled}
-					profile={profile}
-					onChange={handleRecipientWalletChange}
-					wallets={wallets}
-					wallet={wallet}
-					defaultNetwork={activeNetwork}
-				/>
-			</FormField>
+			{isSingleWallet ? (
+				<DetailWrapper label={t("COMMON.SIGNING_ADDRESS")}>
+					<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
+						<DetailTitle>{t("COMMON.ADDRESS")}</DetailTitle>
+						<Address
+							truncateOnTable
+							address={wallet?.address()}
+							walletName={wallet?.alias()}
+							showCopyButton
+							walletNameClass="text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
+							addressClass="text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4"
+							wrapperClass="justify-end sm:justify-start"
+						/>
+					</div>
+				</DetailWrapper>
+			) : (
+				<FormField name="signatory-address">
+					<FormLabel textClassName="text-base" label={t("COMMON.SIGNING_ADDRESS")} />
+					<SelectAddressDropdown
+						disabled={disabled}
+						profile={profile}
+						onChange={handleRecipientWalletChange}
+						wallets={wallets}
+						wallet={wallet}
+						defaultNetwork={activeNetwork}
+					/>
+				</FormField>
+			)}
 
 			<FormField name="message">
 				<FormLabel label={t("COMMON.MESSAGE")} />

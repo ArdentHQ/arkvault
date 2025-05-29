@@ -57,6 +57,8 @@ export const SignMessageSidePanel = ({
 	}, [queryParameters]);
 
 	const activeWallet = useMemo(() => walletFromPath || walletFromDeeplink, [walletFromPath, walletFromDeeplink]);
+	const profileWallets = useMemo(() => activeProfile.wallets().values(), [activeProfile]);
+	const isSingleWallet = profileWallets.length === 1;
 
 	const [selectedWallet, setSelectedWallet] = useState<Contracts.IReadWriteWallet | undefined>(activeWallet);
 
@@ -154,6 +156,12 @@ export const SignMessageSidePanel = ({
 		[activeProfile, activeNetwork],
 	);
 
+	useEffect(() => {
+		if (profileWallets.length === 1) {
+			setSelectedWallet(profileWallets[0]);
+		}
+	}, [profileWallets]);
+
 	const getTitle = () => {
 		if (activeTab === Step.ErrorStep) {
 			return t("MESSAGE.PAGE_SIGN_MESSAGE.ERROR_STEP.TITLE");
@@ -243,7 +251,7 @@ export const SignMessageSidePanel = ({
 								<FormStep
 									disabled={false}
 									profile={activeProfile}
-									wallets={activeProfile.wallets().values()}
+									wallets={profileWallets}
 									disableMessageInput={false}
 									maxLength={signMessage.message().maxLength.value}
 									wallet={selectedWallet}
