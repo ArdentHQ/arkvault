@@ -100,7 +100,7 @@ export const SelectAddressDropdown = React.forwardRef<HTMLInputElement, SelectAd
 
 		const selectedAddressAlias = useMemo(() => {
 			if (!wallet) {
-				return undefined;
+				return;
 			}
 
 			return getWalletAlias({
