@@ -122,6 +122,7 @@ describe("SignMessage", () => {
 					"c7d8b526b6c0f3b17b045149424476802ff44d3636446c6394475fd2193f12a06f8b771387ab986c19c39ff42808be6b06cb871c6fbe17b50d1af194576ec9591b",
 			};
 
+
 			render(
 				<Route path="/profiles/:profileId/wallets/:walletId/sign-message">
 					<SignMessage />
@@ -138,17 +139,21 @@ describe("SignMessage", () => {
 				screen.getByText(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_MNEMONIC),
 			).toBeInTheDocument();
 
-			await userEvent.type(messageInput(), signMessage);
+			const user = userEvent.setup();
+
+			await user.clear(messageInput());
+			await user.paste(signMessage);
 
 			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
 
 			const mnemonicInput = screen.getByTestId("AuthenticationStep__mnemonic");
-			await userEvent.type(mnemonicInput, "wrong");
+			await user.clear(mnemonicInput);
+			await user.paste("wrong");
 
 			await waitFor(() => expect(continueButton()).toBeDisabled());
 
-			await userEvent.clear(mnemonicInput);
-			await userEvent.type(mnemonicInput, mnemonic);
+			await user.clear(mnemonicInput);
+			await user.paste(mnemonic);
 			await waitFor(() => expect(continueButton()).toBeEnabled());
 
 			await userEvent.click(continueButton());
@@ -156,10 +161,9 @@ describe("SignMessage", () => {
 			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.SUCCESS_STEP.TITLE);
 
 			const writeTextMock = vi.fn();
-			const clipboardOriginal = navigator.clipboard;
-
-			// @ts-ignore
-			navigator.clipboard = { writeText: writeTextMock };
+			vi.stubGlobal("navigator", {
+				clipboard: { writeText: writeTextMock },
+			});
 
 			await waitFor(() => {
 				expect(screen.getByTestId("SignMessage__copy-button")).toBeInTheDocument();
@@ -168,9 +172,6 @@ describe("SignMessage", () => {
 			await userEvent.click(screen.getByTestId("SignMessage__copy-button"));
 
 			await waitFor(() => expect(writeTextMock).toHaveBeenCalledWith(JSON.stringify(signedMessage)));
-
-			// @ts-ignore
-			navigator.clipboard = clipboardOriginal;
 		});
 
 		it("should sign message with secret", async () => {
