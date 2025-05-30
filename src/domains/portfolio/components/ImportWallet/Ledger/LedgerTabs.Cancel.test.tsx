@@ -78,16 +78,16 @@ describe("LedgerTabs - cancel flow", () => {
 			expect(screen.getByTestId("LedgerConnectionStep")).toBeInTheDocument();
 		});
 	});
-	
+
 	it("renders the scan step at index 3", async () => {
 		mockConnectedTransport();
 		const onCancel = vi.fn();
 		render(<TestWrapper step={3} onCancel={onCancel} />, {
-		route: `/profiles/${profile.id()}`,
+			route: `/profiles/${profile.id()}`,
 		});
 
 		await waitFor(() => {
-		expect(screen.getByTestId("LedgerScanStep")).toBeInTheDocument();
+			expect(screen.getByTestId("LedgerScanStep")).toBeInTheDocument();
 		});
-  });
+	});
 });
