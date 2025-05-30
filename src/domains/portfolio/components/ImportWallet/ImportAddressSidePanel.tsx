@@ -26,6 +26,7 @@ import {
 } from "./ImportAddressSidePanel.blocks";
 import { OptionsValue } from "@/domains/wallet/hooks";
 import { LedgerTabStep } from "./Ledger/LedgerTabs.contracts";
+import { setTime } from "react-datepicker/dist/date_utils";
 
 export const ImportAddressesSidePanel = ({
 	open,
@@ -110,6 +111,11 @@ export const ImportAddressesSidePanel = ({
 		if (!open && activeTab !== ImportAddressStep.SummaryStep && importedWallet) {
 			forgetImportedWallets(importedWallet);
 		}
+
+		if (!open) {
+			setActiveTab(ImportAddressStep.MethodStep)
+		}
+
 		onOpenChange(open);
 	};
 
