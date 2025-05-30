@@ -107,7 +107,7 @@ describe("SidePanel", () => {
 		expect(onOpenChangeMock).toHaveBeenCalledWith(false);
 	});
 
-	it("should detect scrollable content and apply footer shadow", async () => {
+	it("should detect scrollable content and apply footer shadow", () => {
 		let resizeObserverCallback: ResizeObserverCallback;
 
 		const observe = vi.fn();
@@ -138,7 +138,7 @@ describe("SidePanel", () => {
 		expect(screen.getByTestId("SidePanel__footer")).toHaveClass("shadow-footer-side-panel");
 	});
 
-	it("should not apply footer shadow when content is not scrollable", async () => {
+	it("should not apply footer shadow when content is not scrollable", () => {
 		let resizeObserverCallback: ResizeObserverCallback;
 
 		const observe = vi.fn();
