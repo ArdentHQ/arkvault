@@ -14,20 +14,13 @@ import {
 	screen,
 	waitFor,
 	mockNanoXTransport,
+	mockLedgerTransportError,
 	renderHook,
 } from "@/utils/testing-library";
 import { useTranslation } from "react-i18next";
+import { afterAll, afterEach, expect, vi } from "vitest";
 
-import { afterAll } from "vitest";
 const history = createHashHistory();
-
-vi.mock("@/app/contexts/Ledger/Ledger", async () => {
-	const actual = await vi.importActual("@/app/contexts/Ledger/Ledger");
-	return {
-		...actual,
-		useLedgerContext: vi.fn(),
-	};
-});
 
 const {
 	result: {
@@ -40,7 +33,6 @@ describe("LedgerConnectionStep", () => {
 	let wallet: Contracts.IReadWriteWallet;
 	let getVersionSpy: vi.SpyInstance;
 	let networkMock;
-	let connectFn: jest.Mock;
 
 	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
@@ -82,8 +74,6 @@ describe("LedgerConnectionStep", () => {
 		getVersionSpy = vi
 			.spyOn(wallet.coin().ledger(), "getVersion")
 			.mockResolvedValue(minVersionList[networkMock.coin()]);
-
-		connectFn = vi.fn();
 	});
 
 	afterAll(() => {
@@ -99,68 +89,33 @@ describe("LedgerConnectionStep", () => {
 	});
 
 	const Component = ({ onConnect = vi.fn(), onFailed = vi.fn(), cancelling = false }) => {
-		const { listenDevice } = useLedgerContext();
-
+		const { connect } = useLedgerContext();
 		const form = useForm({
 			defaultValues: {
 				network: wallet.network(),
 			},
 		});
-
+	
 		useEffect(() => {
-			listenDevice();
+			connect(profile);
 		}, []);
 
-		return (
+		return(
 			<FormProvider {...form}>
-				<LedgerConnectionStep
-					onConnect={onConnect}
-					onFailed={onFailed}
-					cancelling={cancelling}
-					network={wallet.network()}
-				/>
+				<LedgerConnectionStep onConnect={onConnect} network={wallet.network()} onFailed={onFailed} cancelling={cancelling} />
 			</FormProvider>
 		);
 	};
 
 	it("should emit event on connect", async () => {
-		connectFn = vi.fn().mockImplementation(() => {
-			setTimeout(() => {
-				vi.mocked(useLedgerContext).mockImplementation(() => ({
-					abortConnectionRetry: vi.fn(),
-					connect: connectFn,
-					connectAppIfNotConnected: vi.fn(),
-					connecting: false,
-					disconnect: vi.fn(),
-					error: null,
-					isConnected: true,
-					listenDevice: vi.fn(),
-				}));
-			}, 100);
-
-			return Promise.resolve();
-		});
-
-		vi.mocked(useLedgerContext).mockImplementation(() => ({
-			abortConnectionRetry: vi.fn(),
-			connect: connectFn,
-			connectAppIfNotConnected: vi.fn(),
-			connecting: true,
-			disconnect: vi.fn(),
-			error: null,
-			isConnected: false,
-			listenDevice: vi.fn(),
-		}));
-
+		const nanoXTransportMock = mockNanoXTransport();
 		const onConnect = vi.fn();
 
 		history.push(`/profiles/${profile.id()}`);
 
-		const ledgerTransportMock = mockNanoXTransport();
-
 		const { rerender } = render(
 			<Route path="/profiles/:profileId">
-				<Component onConnect={onConnect} />
+				<Component />
 			</Route>,
 			{
 				history,
@@ -178,26 +133,15 @@ describe("LedgerConnectionStep", () => {
 
 		await waitFor(() => expect(onConnect).toHaveBeenCalled(), { timeout: 2000 });
 
-		ledgerTransportMock.mockRestore();
+		nanoXTransportMock.mockRestore();
 	});
 
 	it("should emit event on connection fail", async () => {
-		vi.mocked(useLedgerContext).mockReturnValue({
-			abortConnectionRetry: vi.fn(),
-			connect: vi.fn().mockRejectedValue(new Error("Connection failed")),
-			connectAppIfNotConnected: vi.fn(),
-			connecting: false,
-			disconnect: vi.fn(),
-			error: "Unable to connect to Ledger device",
-			isConnected: false,
-			listenDevice: vi.fn(),
-		});
-
+		const ledgerTransportMock = mockNanoXTransport();
 		const onFailed = vi.fn();
 
 		history.push(`/profiles/${profile.id()}`);
 
-		const ledgerTransportMock = mockNanoXTransport();
 		render(
 			<Route path="/profiles/:profileId">
 				<Component onFailed={onFailed} />
@@ -214,23 +158,15 @@ describe("LedgerConnectionStep", () => {
 
 	it("should show update error if app version is less than minimum version", async () => {
 		const outdatedVersion = "1.0.1";
-
-		vi.mocked(useLedgerContext).mockReturnValue({
-			abortConnectionRetry: vi.fn(),
-			connect: vi.fn().mockRejectedValue(new Error("Update required")),
-			connectAppIfNotConnected: vi.fn(),
-			connecting: false,
-			disconnect: vi.fn(),
-			error: `The ARK app version is ${outdatedVersion}. Please update the ARK app via Ledger Live.`,
-			isConnected: false,
-			listenDevice: vi.fn(),
-		});
-
-		const onFailed = vi.fn();
-
-		history.push(`/profiles/${profile.id()}`);
-
+		
 		const ledgerTransportMock = mockNanoXTransport();
+		const errorMock = mockLedgerTransportError(`The ARK app version is ${outdatedVersion}. Please update the ARK app via Ledger Live.`);
+		
+		const onFailed = vi.fn();
+		
+		history.push(`/profiles/${profile.id()}`);
+		
+		
 		render(
 			<Route path="/profiles/:profileId">
 				<Component onFailed={onFailed} />
@@ -239,27 +175,18 @@ describe("LedgerConnectionStep", () => {
 				history,
 			},
 		);
-
+		
 		await waitFor(() => expect(onFailed).toHaveBeenCalled(), { timeout: 3000 });
-
+		expect(errorMock).toHaveBeenCalled();
+		
 		ledgerTransportMock.mockRestore();
+		errorMock.mockRestore();
 	});
 
 	it("should render cancel screen", async () => {
-		vi.mocked(useLedgerContext).mockReturnValue({
-			abortConnectionRetry: vi.fn(),
-			connect: vi.fn(),
-			connectAppIfNotConnected: vi.fn(),
-			connecting: false,
-			disconnect: vi.fn(),
-			error: null,
-			isConnected: false,
-			listenDevice: vi.fn(),
-		});
-
+		const ledgerTransportMock = mockNanoXTransport();
 		history.push(`/profiles/${profile.id()}`);
 
-		const ledgerTransportMock = mockNanoXTransport();
 		render(
 			<Route path="/profiles/:profileId">
 				<Component cancelling={true} />
