@@ -253,8 +253,8 @@ export const SignMessageSidePanel = ({
 								variant="button"
 								data={JSON.stringify(signedMessage)}
 								data-testid="SignMessage__copy-button"
-								wrapperClassName="flex-1 md:flex-none"
-								buttonClassName="bg-theme-primary-600 text-center text-base font-semibold text-white hover:bg-theme-primary-700"
+								wrapperClassName="flex-1 sm:flex-none"
+								buttonClassName="bg-theme-primary-600 text-center text-base font-semibold text-white hover:bg-theme-primary-700 flex-1 w-full"
 							>
 								<div
 									className="relative inline-flex items-center space-x-3 rounded"

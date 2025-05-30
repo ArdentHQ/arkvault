@@ -4,7 +4,7 @@ import { Contracts as ProfileContracts } from "@/app/lib/profiles";
 import { useTranslation } from "react-i18next";
 import { Address } from "@/app/components/Address";
 import { FormField } from "@/app/components/Form";
-import { DetailLabel, DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
+import { DetailLabel, DetailLabelText, DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
 
 export const SigningMessageInfo = ({
 	message,
@@ -52,9 +52,9 @@ export const SuccessStep = ({
 			<div className="space-y-4">
 				<SigningMessageInfo message={signedMessage.message} wallet={wallet} />
 
-				<div>
+				<div className="border-theme-secondary-300 dark:border-theme-dark-700 border-t px-3 py-6 sm:border-t-0 sm:p-0">
 					<FormField name="json-signature">
-						<DetailLabel>{t("MESSAGE.PAGE_SIGN_MESSAGE.FORM_STEP.SIGNATURE_JSON")}</DetailLabel>
+						<DetailLabelText>{t("MESSAGE.PAGE_SIGN_MESSAGE.FORM_STEP.SIGNATURE_JSON")}</DetailLabelText>
 						<pre className="border-theme-secondary-300 dark:border-theme-dark-500 dark:text-theme-dark-50 text-theme-secondary-900 mt-2 rounded-sm border p-4 break-all whitespace-normal select-all">
 							{JSON.stringify(signedMessage, null, 2)}
 						</pre>
