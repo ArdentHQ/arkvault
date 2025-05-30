@@ -160,12 +160,9 @@ describe("AddRecipient", () => {
 
 	it("should set amount", async () => {
 		const onChange = vi.fn();
-		const findDelegateSpy = vi.spyOn(profile, "usernames").mockImplementation(
-			() =>
-				({
-					username: () => "delegate username",
-				}) as any,
-		);
+		const findValidatorSpy = vi.spyOn(profile, "usernames").mockImplementation(() => ({
+			username: () => "validator username",
+		}));
 
 		const address = "0x125b484e51Ad990b5b3140931f3BD8eAee85Db23";
 		const amount = 1;
@@ -177,12 +174,12 @@ describe("AddRecipient", () => {
 		expect(onChange).toHaveBeenCalledWith([
 			{
 				address: address,
-				alias: "delegate username",
+				alias: "validator username",
 				amount: amount,
 			},
 		]);
 
-		findDelegateSpy.mockRestore();
+		findValidatorSpy.mockRestore();
 	});
 
 	it("should select recipient", async () => {

@@ -1,6 +1,7 @@
 import { Networks } from "@/app/lib/mainsail";
 import { TransactionFees } from "types";
 import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
+import { BigNumber } from "@/app/lib/helpers";
 
 export enum SendTransferStep {
 	NetworkStep,
@@ -14,8 +15,8 @@ export enum SendTransferStep {
 export interface SendTransferForm {
 	senderAddress: string;
 	fees: TransactionFees;
-	gasPrice: number;
-	gasLimit: number;
+	gasPrice: BigNumber;
+	gasLimit: BigNumber;
 	remainingBalance: number;
 	amount: string;
 	isSendAllSelected: string;

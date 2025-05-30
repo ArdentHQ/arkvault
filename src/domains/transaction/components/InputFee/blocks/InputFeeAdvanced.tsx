@@ -8,9 +8,11 @@ import { useStepMath } from "@/domains/transaction/components/InputFee/InputFee.
 import { FormField, FormLabel } from "@/app/components/Form";
 import { useTranslation } from "react-i18next";
 import { Amount } from "@/app/components/Amount";
-import { calculateGasFee } from "@/domains/transaction/components/InputFee/InputFee";
+import { calculateGasFee, getFeeMinMax } from "@/domains/transaction/components/InputFee/InputFee";
+import { BigNumber } from "@/app/lib/helpers";
 
 const GAS_LIMIT_STEP = 1000;
+const GAS_PRICE_STEP = 1;
 
 export const InputFeeAdvanced: React.FC<InputFeeAdvancedProperties> = ({
 	convert,
@@ -19,50 +21,66 @@ export const InputFeeAdvanced: React.FC<InputFeeAdvancedProperties> = ({
 	onChangeGasPrice,
 	onChangeGasLimit,
 	showConvertedValue,
-	defaultGasLimit,
-	minGasPrice,
-	gasPriceStep,
 	gasPrice,
 	gasLimit,
 	network,
 }: InputFeeAdvancedProperties) => {
 	const { t } = useTranslation();
 
-	const { decrement: decrementGasFee, increment: incrementGasFee } = useStepMath(gasPriceStep, gasPrice);
+	const { decrement: decrementGasFee, increment: incrementGasFee } = useStepMath(GAS_PRICE_STEP, gasPrice.toString());
 
-	const { decrement: decrementGasLimit, increment: incrementGasLimit } = useStepMath(GAS_LIMIT_STEP, gasLimit);
+	const { decrement: decrementGasLimit, increment: incrementGasLimit } = useStepMath(
+		GAS_LIMIT_STEP,
+		gasLimit.toString(),
+	);
+
+	const { minGasPrice, maxGasPrice, minGasLimit, maxGasLimit } = getFeeMinMax();
 
 	const formField = useFormField();
 	const hasError = formField?.isInvalid;
 
-	const handleGasPriceIncrement = () => {
-		onChangeGasPrice(Number(gasPrice) < minGasPrice ? minGasPrice : +incrementGasFee());
-	};
-
-	const handleGasPriceDecrement = () => {
-		const decrementedValue = decrementGasFee();
-
-		if (+decrementedValue <= minGasPrice) {
+	const handleGasPriceChange = (nextValue: BigNumber) => {
+		if (nextValue.isLessThan(minGasPrice)) {
 			onChangeGasPrice(minGasPrice);
 			return;
 		}
 
-		onChangeGasPrice(+decrementedValue);
-	};
-
-	const handleGasLimitIncrement = () => {
-		onChangeGasLimit(gasLimit < defaultGasLimit ? defaultGasLimit : +incrementGasLimit());
-	};
-
-	const handleGasLimitDecrement = () => {
-		const decrementedValue = decrementGasLimit();
-
-		if (+decrementedValue <= defaultGasLimit) {
-			onChangeGasLimit(defaultGasLimit);
+		if (nextValue.isGreaterThan(maxGasPrice)) {
+			onChangeGasPrice(maxGasPrice);
 			return;
 		}
 
-		onChangeGasLimit(+decrementedValue);
+		onChangeGasPrice(nextValue);
+	};
+
+	const handleGasPriceIncrement = () => {
+		handleGasPriceChange(BigNumber.make(incrementGasFee()));
+	};
+
+	const handleGasPriceDecrement = () => {
+		handleGasPriceChange(BigNumber.make(decrementGasFee()));
+	};
+
+	const handleGasLimitChange = (nextValue: BigNumber) => {
+		if (nextValue.isLessThan(minGasLimit)) {
+			onChangeGasLimit(minGasLimit);
+			return;
+		}
+
+		if (nextValue.isGreaterThan(maxGasLimit)) {
+			onChangeGasLimit(maxGasLimit);
+			return;
+		}
+
+		onChangeGasLimit(nextValue);
+	};
+
+	const handleGasLimitIncrement = () => {
+		handleGasLimitChange(BigNumber.make(incrementGasLimit()));
+	};
+
+	const handleGasLimitDecrement = () => {
+		handleGasLimitChange(BigNumber.make(decrementGasLimit()));
 	};
 
 	const gasFee = calculateGasFee(gasPrice, gasLimit);
@@ -90,10 +108,10 @@ export const InputFeeAdvanced: React.FC<InputFeeAdvancedProperties> = ({
 										convertedValue={convertedGasPrice}
 										disabled={!!disabled}
 										exchangeTicker={network.ticker()}
-										isDownDisabled={gasPrice <= minGasPrice}
+										isDownDisabled={gasPrice.isLessThanOrEqualTo(minGasPrice)}
 										onClickDown={handleGasPriceDecrement}
 										onClickUp={handleGasPriceIncrement}
-										showConvertedValue={showConvertedValue && gasPrice !== 0 && !hasError}
+										showConvertedValue={showConvertedValue && gasPrice.isZero() && !hasError}
 									/>
 								),
 								wrapperClassName: "divide-none",
@@ -101,7 +119,7 @@ export const InputFeeAdvanced: React.FC<InputFeeAdvancedProperties> = ({
 						}}
 						disabled={disabled}
 						onChange={onChangeGasPrice}
-						value={gasPrice}
+						value={gasPrice.toString()}
 					/>
 				</FormField>
 
@@ -120,7 +138,7 @@ export const InputFeeAdvanced: React.FC<InputFeeAdvancedProperties> = ({
 									<InputFeeAdvancedAddon
 										name="InputFeeAdvanced__gasLimit"
 										disabled={!!disabled}
-										isDownDisabled={gasLimit <= defaultGasLimit}
+										isDownDisabled={gasLimit.isLessThanOrEqualTo(minGasLimit)}
 										onClickDown={handleGasLimitDecrement}
 										onClickUp={handleGasLimitIncrement}
 										showConvertedValue={false}
@@ -133,7 +151,7 @@ export const InputFeeAdvanced: React.FC<InputFeeAdvancedProperties> = ({
 						}}
 						disabled={disabled}
 						onChange={onChangeGasLimit}
-						value={gasLimit}
+						value={gasLimit.toString()}
 					/>
 				</FormField>
 			</div>

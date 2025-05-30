@@ -153,7 +153,7 @@ describe("TransactionDetailModal", () => {
 					// @ts-ignore
 					new ReadOnlyWallet({
 						address: vote,
-						username: `delegate-${index}`,
+						username: `validator-${index}`,
 					}),
 			),
 		);
@@ -215,7 +215,7 @@ describe("TransactionDetailModal", () => {
 					// @ts-ignore
 					new ReadOnlyWallet({
 						address: vote,
-						username: `delegate-${index}`,
+						username: `validator-${index}`,
 					}),
 			),
 		);

@@ -125,7 +125,6 @@ export const SendVote = () => {
 	useToggleFeeFields({
 		activeTab,
 		form,
-		gasLimitType: "vote",
 		wallet,
 	});
 

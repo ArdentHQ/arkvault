@@ -1,6 +1,5 @@
 import { AddRecipientProperties, ToggleButtonProperties } from "./AddRecipient.contracts";
 import { FormField, FormLabel, SubForm } from "@/app/components/Form";
-import { GasLimit, MIN_GAS_PRICE } from "@/domains/transaction/components/FeeField/FeeField";
 import React, { VFC, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { WalletAliasResult, useValidation } from "@/app/hooks";
 
@@ -16,10 +15,11 @@ import { RecipientItem } from "@/domains/transaction/components/RecipientList/Re
 import { SelectRecipient } from "@/domains/profile/components/SelectRecipient";
 import { Switch } from "@/app/components/Switch";
 import { Tooltip } from "@/app/components/Tooltip";
-import { calculateGasFee } from "@/domains/transaction/components/InputFee/InputFee";
+import { calculateGasFee, getFeeMinMax } from "@/domains/transaction/components/InputFee/InputFee";
 import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
+import { GasLimit } from "@/domains/transaction/components/FeeField/FeeField";
 
 const TransferType = ({ isSingle, disableMultiple, onChange, maxRecipients }: ToggleButtonProperties) => {
 	const { t } = useTranslation();
@@ -79,11 +79,11 @@ export const AddRecipient: VFC<AddRecipientProperties> = ({
 		clearErrors,
 		formState: { errors },
 	} = useFormContext();
-	const { network, senderAddress, gasPrice, gasLimit, recipientAddress, amount, recipientAlias, isSendAllSelected } =
-		watch();
+	const { network, senderAddress, recipientAddress, amount, recipientAlias, isSendAllSelected } = watch();
 	const { sendTransfer } = useValidation();
 
-	const fee = calculateGasFee(gasPrice ?? MIN_GAS_PRICE, gasLimit ?? GasLimit["transfer"]);
+	const { minGasPrice } = getFeeMinMax();
+	const fee = calculateGasFee(minGasPrice, GasLimit["transfer"].times(Math.max(recipients.length, 1)));
 
 	const ticker = network?.ticker();
 	const exchangeTicker = profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency) as string;

@@ -40,7 +40,8 @@
 		"test:e2e:ci:firefox": "E2E_HOST='http://localhost:5001' gherkin-testcafe --config-file=.testcaferc.json firefox:headless -q attemptLimit=3,successThreshold=1",
 		"test:e2e:ci:edge": "E2E_HOST='http://localhost:5001' gherkin-testcafe --config-file=.testcaferc.json edge:headless -q attemptLimit=3,successThreshold=1",
 		"sdk:install-local": "node scripts/install-local-sdk.js",
-		"sdk:check-updates": "npx npm-check-updates \"/^@ardenthq.*$/\" -u"
+		"sdk:check-updates": "npx npm-check-updates \"/^@ardenthq.*$/\" -u",
+		"unused": "npx knip --config ./knip.json"
 	},
 	"dependencies": {
 		"@ardenthq/arkvault-crypto": "^0.0.7",

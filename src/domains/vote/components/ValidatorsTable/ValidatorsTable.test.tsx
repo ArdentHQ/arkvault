@@ -15,10 +15,10 @@ let wallet: Contracts.IReadWriteWallet;
 let validators: Contracts.IReadOnlyWallet[];
 let votes: Contracts.VoteRegistryItem[];
 
-const pressingContinueButton = async () => await userEvent.click(screen.getByTestId("DelegateTable__continue-button"));
-const firstValidatorVoteButton = () => screen.getByTestId("DelegateRow__toggle-0");
-const footerUnvotes = () => screen.getByTestId("DelegateTable__footer--unvotes");
-const footerVotes = () => screen.getByTestId("DelegateTable__footer--votes");
+const pressingContinueButton = async () => await userEvent.click(screen.getByTestId("ValidatorTable__continue-button"));
+const firstValidatorVoteButton = () => screen.getByTestId("ValidatorRow__toggle-0");
+const footerUnvotes = () => screen.getByTestId("ValidatorTable__footer--unvotes");
+const footerVotes = () => screen.getByTestId("ValidatorTable__footer--votes");
 
 describe("ValidatorsTable", () => {
 	beforeAll(() => {
@@ -81,7 +81,7 @@ describe("ValidatorsTable", () => {
 			"xs",
 		);
 
-		expect(screen.getAllByTestId("DelegateRowMobile")[0]).toBeInTheDocument();
+		expect(screen.getAllByTestId("ValidatorRowMobile")[0]).toBeInTheDocument();
 	});
 
 	it("should render vote amount column", () => {
@@ -177,7 +177,7 @@ describe("ValidatorsTable", () => {
 
 		await userEvent.click(firstValidatorVoteButton());
 
-		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
+		expect(screen.getByTestId("ValidatorTable__footer")).toBeInTheDocument();
 		expect(footerVotes()).toHaveTextContent("1");
 
 		await userEvent.click(firstValidatorVoteButton());
@@ -197,11 +197,11 @@ describe("ValidatorsTable", () => {
 				maxVotes={wallet.network().maximumVotesPerTransaction()}
 			/>,
 		);
-		const selectButton = screen.getByTestId("DelegateRow__toggle-1");
+		const selectButton = screen.getByTestId("ValidatorRow__toggle-1");
 
 		await userEvent.click(selectButton);
 
-		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
+		expect(screen.getByTestId("ValidatorTable__footer")).toBeInTheDocument();
 		expect(footerVotes()).toHaveTextContent("1");
 
 		await userEvent.click(selectButton);
@@ -224,7 +224,7 @@ describe("ValidatorsTable", () => {
 
 		await userEvent.click(firstValidatorVoteButton());
 
-		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
+		expect(screen.getByTestId("ValidatorTable__footer")).toBeInTheDocument();
 		expect(footerUnvotes()).toHaveTextContent("1");
 
 		await userEvent.click(firstValidatorVoteButton());
@@ -256,7 +256,7 @@ describe("ValidatorsTable", () => {
 
 		await userEvent.click(firstValidatorVoteButton());
 
-		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
+		expect(screen.getByTestId("ValidatorTable__footer")).toBeInTheDocument();
 		expect(footerUnvotes()).toHaveTextContent("1");
 
 		await userEvent.click(firstValidatorVoteButton());
@@ -295,7 +295,7 @@ describe("ValidatorsTable", () => {
 		await userEvent.clear(amountField);
 		await userEvent.type(amountField, "30");
 
-		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
+		expect(screen.getByTestId("ValidatorTable__footer")).toBeInTheDocument();
 
 		await waitFor(() => {
 			expect(footerVotes()).toHaveTextContent("1");
@@ -305,7 +305,7 @@ describe("ValidatorsTable", () => {
 
 		await userEvent.click(firstValidatorVoteButton());
 
-		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
+		expect(screen.getByTestId("ValidatorTable__footer")).toBeInTheDocument();
 		expect(footerUnvotes()).toHaveTextContent("1");
 
 		await userEvent.click(firstValidatorVoteButton());
@@ -326,7 +326,7 @@ describe("ValidatorsTable", () => {
 
 		await userEvent.click(firstValidatorVoteButton());
 
-		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
+		expect(screen.getByTestId("ValidatorTable__footer")).toBeInTheDocument();
 		expect(footerUnvotes()).toHaveTextContent("1");
 
 		await userEvent.click(firstValidatorVoteButton());
@@ -350,13 +350,13 @@ describe("ValidatorsTable", () => {
 				maxVotes={wallet.network().maximumVotesPerTransaction()}
 			/>,
 		);
-		const selectVoteButton = screen.getByTestId("DelegateRow__toggle-1");
+		const selectVoteButton = screen.getByTestId("ValidatorRow__toggle-1");
 
 		await userEvent.click(firstValidatorVoteButton());
 
 		await userEvent.click(selectVoteButton);
 
-		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
+		expect(screen.getByTestId("ValidatorTable__footer")).toBeInTheDocument();
 		expect(footerUnvotes()).toHaveTextContent("1");
 		expect(footerVotes()).toHaveTextContent("1");
 
@@ -378,12 +378,12 @@ describe("ValidatorsTable", () => {
 				maxVotes={wallet.network().maximumVotesPerTransaction()}
 			/>,
 		);
-		const selectVoteButton = screen.getByTestId("DelegateRow__toggle-1");
+		const selectVoteButton = screen.getByTestId("ValidatorRow__toggle-1");
 
 		await userEvent.click(firstValidatorVoteButton());
 		await userEvent.click(selectVoteButton);
 
-		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
+		expect(screen.getByTestId("ValidatorTable__footer")).toBeInTheDocument();
 		expect(footerUnvotes()).toHaveTextContent("1");
 		expect(footerVotes()).toHaveTextContent("1");
 
@@ -403,20 +403,20 @@ describe("ValidatorsTable", () => {
 				maxVotes={10}
 			/>,
 		);
-		const selectButtons = [0, 1, 2].map((index) => screen.getByTestId(`DelegateRow__toggle-${index}`));
+		const selectButtons = [0, 1, 2].map((index) => screen.getByTestId(`ValidatorRow__toggle-${index}`));
 
 		await userEvent.click(selectButtons[0]);
 		await userEvent.click(selectButtons[1]);
 		await userEvent.click(selectButtons[2]);
 
-		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
+		expect(screen.getByTestId("ValidatorTable__footer")).toBeInTheDocument();
 		expect(footerVotes()).toHaveTextContent("2");
 		expect(footerUnvotes()).toHaveTextContent("1");
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should emit action on continue button to vote", async () => {
-		const voteDelegates: VoteValidatorProperties[] = [
+		const voteValidators: VoteValidatorProperties[] = [
 			{
 				amount: 0,
 				validatorAddress: validators[0].address(),
@@ -438,23 +438,23 @@ describe("ValidatorsTable", () => {
 
 		await userEvent.click(firstValidatorVoteButton());
 
-		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
+		expect(screen.getByTestId("ValidatorTable__footer")).toBeInTheDocument();
 
 		await pressingContinueButton();
 
 		expect(container).toBeInTheDocument();
-		expect(onContinue).toHaveBeenCalledWith([], voteDelegates);
+		expect(onContinue).toHaveBeenCalledWith([], voteValidators);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should add resigned validator to the unvote list", () => {
-		const resignedDelegates: Contracts.VoteRegistryItem[] = [
+		const resignedValidators: Contracts.VoteRegistryItem[] = [
 			{
 				amount: 0,
 				wallet: validators[1],
 			},
 		];
-		const unvoteDelegates: VoteValidatorProperties[] = [
+		const unvoteValidators: VoteValidatorProperties[] = [
 			{
 				amount: 0,
 				validatorAddress: validators[1].address(),
@@ -466,25 +466,25 @@ describe("ValidatorsTable", () => {
 			<ValidatorsTable
 				validators={validators}
 				votes={[]}
-				resignedValidatorVotes={resignedDelegates}
+				resignedValidatorVotes={resignedValidators}
 				voteValidators={[]}
-				unvoteValidators={[]}
+				unvoteValidators={unvoteValidators}
 				onContinue={onContinue}
 				selectedWallet={wallet}
 				maxVotes={wallet.network().maximumVotesPerTransaction()}
 			/>,
 		);
 
-		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
+		expect(screen.getByTestId("ValidatorTable__footer")).toBeInTheDocument();
 		expect(footerUnvotes()).toHaveTextContent("1");
 
 		rerender(
 			<ValidatorsTable
 				validators={validators}
 				votes={[]}
-				resignedValidatorVotes={resignedDelegates}
+				resignedValidatorVotes={resignedValidators}
 				voteValidators={[]}
-				unvoteValidators={unvoteDelegates}
+				unvoteValidators={unvoteValidators}
 				onContinue={onContinue}
 				selectedWallet={wallet}
 				maxVotes={wallet.network().maximumVotesPerTransaction()}
@@ -496,7 +496,7 @@ describe("ValidatorsTable", () => {
 	});
 
 	it("should render with a validator to vote", async () => {
-		const voteDelegates: VoteValidatorProperties[] = [
+		const voteValidators: VoteValidatorProperties[] = [
 			{
 				amount: 0,
 				validatorAddress: validators[0].address(),
@@ -508,7 +508,7 @@ describe("ValidatorsTable", () => {
 			<ValidatorsTable
 				validators={validators}
 				votes={[]}
-				voteValidators={voteDelegates}
+				voteValidators={voteValidators}
 				unvoteValidators={[]}
 				onContinue={onContinue}
 				selectedWallet={wallet}
@@ -516,17 +516,17 @@ describe("ValidatorsTable", () => {
 			/>,
 		);
 
-		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
+		expect(screen.getByTestId("ValidatorTable__footer")).toBeInTheDocument();
 
 		await pressingContinueButton();
 
 		expect(container).toBeInTheDocument();
-		expect(onContinue).toHaveBeenCalledWith([], voteDelegates);
+		expect(onContinue).toHaveBeenCalledWith([], voteValidators);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render with a validator to unvote", async () => {
-		const unvoteDelegates: VoteValidatorProperties[] = [
+		const unvoteValidators: VoteValidatorProperties[] = [
 			{
 				amount: 0,
 				validatorAddress: validators[0].address(),
@@ -539,30 +539,30 @@ describe("ValidatorsTable", () => {
 				validators={validators}
 				voteValidators={[]}
 				votes={[]}
-				unvoteValidators={unvoteDelegates}
+				unvoteValidators={unvoteValidators}
 				onContinue={onContinue}
 				selectedWallet={wallet}
 				maxVotes={wallet.network().maximumVotesPerTransaction()}
 			/>,
 		);
 
-		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
+		expect(screen.getByTestId("ValidatorTable__footer")).toBeInTheDocument();
 
 		await pressingContinueButton();
 
 		expect(container).toBeInTheDocument();
-		expect(onContinue).toHaveBeenCalledWith(unvoteDelegates, []);
+		expect(onContinue).toHaveBeenCalledWith(unvoteValidators, []);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render with a validator to unvote/vote", async () => {
-		const unvoteDelegates: VoteValidatorProperties[] = [
+		const unvoteValidators: VoteValidatorProperties[] = [
 			{
 				amount: 0,
 				validatorAddress: validators[0].address(),
 			},
 		];
-		const voteDelegates: VoteValidatorProperties[] = [
+		const voteValidators: VoteValidatorProperties[] = [
 			{
 				amount: 0,
 				validatorAddress: validators[1].address(),
@@ -574,27 +574,27 @@ describe("ValidatorsTable", () => {
 			<ValidatorsTable
 				validators={validators}
 				votes={votes}
-				voteValidators={voteDelegates}
-				unvoteValidators={unvoteDelegates}
+				voteValidators={voteValidators}
+				unvoteValidators={unvoteValidators}
 				onContinue={onContinue}
 				selectedWallet={wallet}
 				maxVotes={wallet.network().maximumVotesPerTransaction()}
 			/>,
 		);
 
-		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
+		expect(screen.getByTestId("ValidatorTable__footer")).toBeInTheDocument();
 		expect(footerUnvotes()).toHaveTextContent("1");
 		expect(footerVotes()).toHaveTextContent("1");
 
 		await pressingContinueButton();
 
 		expect(container).toBeInTheDocument();
-		expect(onContinue).toHaveBeenCalledWith(unvoteDelegates, voteDelegates);
+		expect(onContinue).toHaveBeenCalledWith(unvoteValidators, voteValidators);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should emit action on continue button to unvote", async () => {
-		const voteDelegates: VoteValidatorProperties[] = [
+		const voteValidators: VoteValidatorProperties[] = [
 			{
 				amount: 0,
 				validatorAddress: votes[0].wallet!.address(),
@@ -616,21 +616,21 @@ describe("ValidatorsTable", () => {
 
 		await userEvent.click(firstValidatorVoteButton());
 
-		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
+		expect(screen.getByTestId("ValidatorTable__footer")).toBeInTheDocument();
 
 		await pressingContinueButton();
 
 		expect(container).toBeInTheDocument();
-		expect(onContinue).toHaveBeenCalledWith(voteDelegates, []);
+		expect(onContinue).toHaveBeenCalledWith(voteValidators, []);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should navigate to the next and previous pages according", async () => {
-		const delegatesList = Array.from({ length: 55 }).fill(validators[0]) as Contracts.IReadOnlyWallet[];
+		const validatorsList = Array.from({ length: 55 }).fill(validators[0]) as Contracts.IReadOnlyWallet[];
 
 		render(
 			<ValidatorsTable
-				validators={delegatesList}
+				validators={validatorsList}
 				votes={votes}
 				voteValidators={[]}
 				unvoteValidators={[]}
@@ -641,11 +641,11 @@ describe("ValidatorsTable", () => {
 
 		expect(firstValidatorVoteButton()).toBeInTheDocument();
 
-		expect(screen.queryByTestId("DelegateRow__toggle-54")).not.toBeInTheDocument();
+		expect(screen.queryByTestId("ValidatorRow__toggle-54")).not.toBeInTheDocument();
 
 		await userEvent.click(screen.getByTestId("Pagination__next"));
 
-		expect(screen.getByTestId("DelegateRow__toggle-54")).toBeInTheDocument();
+		expect(screen.getByTestId("ValidatorRow__toggle-54")).toBeInTheDocument();
 
 		await userEvent.click(screen.getByTestId("Pagination__previous"));
 
@@ -653,7 +653,7 @@ describe("ValidatorsTable", () => {
 	});
 
 	it("should change pagination size from network validator count", async () => {
-		const delegateCountSpy = vi.spyOn(wallet.network(), "validatorCount").mockReturnValue(10);
+		const validatorCountSpy = vi.spyOn(wallet.network(), "validatorCount").mockReturnValue(10);
 
 		const validatorsList = Array.from({ length: 12 }).fill(validators[0]) as Contracts.IReadOnlyWallet[];
 
@@ -670,17 +670,17 @@ describe("ValidatorsTable", () => {
 
 		expect(firstValidatorVoteButton()).toBeInTheDocument();
 
-		expect(screen.queryByTestId("DelegateRow__toggle-11")).not.toBeInTheDocument();
+		expect(screen.queryByTestId("ValidatorRow__toggle-11")).not.toBeInTheDocument();
 
 		await userEvent.click(screen.getByTestId("Pagination__next"));
 
-		expect(screen.getByTestId("DelegateRow__toggle-11")).toBeInTheDocument();
+		expect(screen.getByTestId("ValidatorRow__toggle-11")).toBeInTheDocument();
 
 		await userEvent.click(screen.getByTestId("Pagination__previous"));
 
 		expect(firstValidatorVoteButton()).toBeInTheDocument();
 
-		delegateCountSpy.mockRestore();
+		validatorCountSpy.mockRestore();
 	});
 
 	it("should not show pagination", () => {

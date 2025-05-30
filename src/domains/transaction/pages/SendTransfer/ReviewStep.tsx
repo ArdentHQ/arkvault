@@ -15,7 +15,6 @@ import { getFeeType } from "@/domains/transaction/pages/SendTransfer/utils";
 import { buildTransferData } from "@/domains/transaction/pages/SendTransfer/SendTransfer.helpers";
 import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
 import { Amount } from "@/app/components/Amount";
-import { GasLimit, MIN_GAS_PRICE } from "@/domains/transaction/components/FeeField/FeeField";
 
 interface ReviewStepProperties {
 	wallet: Contracts.IReadWriteWallet;
@@ -44,11 +43,8 @@ export const ReviewStep: React.VFC<ReviewStepProperties> = ({ wallet, network })
 	const walletBalance = wallet.balance();
 
 	useEffect(() => {
-		register("gasPrice", commonValidation.gasPrice(walletBalance, getValues, MIN_GAS_PRICE, wallet.network()));
-		register(
-			"gasLimit",
-			commonValidation.gasLimit(walletBalance, getValues, GasLimit["transfer"], wallet.network()),
-		);
+		register("gasPrice", commonValidation.gasPrice(walletBalance, getValues, wallet.network()));
+		register("gasLimit", commonValidation.gasLimit(walletBalance, getValues, wallet.network()));
 	}, [commonValidation, register, walletBalance]);
 
 	useEffect(() => {

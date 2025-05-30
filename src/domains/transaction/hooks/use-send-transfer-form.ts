@@ -14,7 +14,6 @@ import { getTransferType, handleBroadcastError } from "@/domains/transaction/uti
 import { precisionRound } from "@/utils/precision-round";
 import { useTransactionQueryParameters } from "@/domains/transaction/hooks/use-transaction-query-parameters";
 import { profileEnabledNetworkIds } from "@/utils/network-utils";
-import { GasLimit, MIN_GAS_PRICE } from "@/domains/transaction/components/FeeField/FeeField";
 import { calculateGasFee } from "@/domains/transaction/components/InputFee/InputFee";
 
 export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
@@ -54,6 +53,9 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 
 	const { senderAddress, fees, gasPrice, gasLimit, remainingBalance, amount, isSendAllSelected, network } = watch();
 	const { sendTransfer: sendTransferValidation, common: commonValidation } = useValidation();
+
+	const gasPriceStr = gasPrice?.toString();
+	const gasLimitStr = gasLimit?.toString();
 
 	const resetForm = useCallback(
 		(callback?: () => void) => {
@@ -122,7 +124,7 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 
 			return transaction;
 		},
-		[clearErrors, gasLimit, gasPrice, getValues, persist, transactionBuilder, wallet],
+		[clearErrors, gasLimitStr, gasPriceStr, getValues, persist, transactionBuilder, wallet],
 	);
 
 	const walletBalance = wallet?.balance();
@@ -132,11 +134,8 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 		register("recipients", sendTransferValidation.recipients());
 		register("senderAddress", sendTransferValidation.senderAddress());
 		register("fees");
-		register("gasPrice", commonValidation.gasPrice(walletBalance, getValues, MIN_GAS_PRICE, wallet?.network()));
-		register(
-			"gasLimit",
-			commonValidation.gasLimit(walletBalance, getValues, GasLimit["transfer"], wallet?.network()),
-		);
+		register("gasPrice", commonValidation.gasPrice(walletBalance, getValues, wallet?.network()));
+		register("gasLimit", commonValidation.gasLimit(walletBalance, getValues, wallet?.network()));
 		register("memo", sendTransferValidation.memo());
 
 		register("remainingBalance");
@@ -214,7 +213,7 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 		setValue("amount", precisionRound(remaining, 18));
 
 		void trigger(["gasPrice", "gasLimit", "amount"]);
-	}, [gasLimit, gasPrice]); // eslint-disable-line react-hooks/exhaustive-deps
+	}, [gasLimitStr, gasPriceStr]); // eslint-disable-line react-hooks/exhaustive-deps
 
 	return {
 		form,

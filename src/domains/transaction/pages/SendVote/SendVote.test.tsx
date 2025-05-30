@@ -32,6 +32,7 @@ import { toasts } from "@/app/services";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import userEvent from "@testing-library/user-event";
 import transactionFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/transfer.json";
+import { expect } from "vitest";
 
 const fixtureProfileId = getMainsailProfileId();
 
@@ -481,8 +482,8 @@ describe("SendVote", () => {
 						},
 					],
 				},
-				gasLimit: 21_000,
-				gasPrice: 5.066_701_25,
+				gasLimit: expect.any(BigNumber),
+				gasPrice: expect.any(BigNumber),
 				signatory: expect.any(Signatories.Signatory),
 			});
 		});
@@ -499,8 +500,8 @@ describe("SendVote", () => {
 						},
 					],
 				},
-				gasLimit: 21_000,
-				gasPrice: 5.066_701_25,
+				gasLimit: expect.any(BigNumber),
+				gasPrice: expect.any(BigNumber),
 				signatory: expect.any(Signatories.Signatory),
 			}),
 		);
