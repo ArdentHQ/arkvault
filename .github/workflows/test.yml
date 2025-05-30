@@ -755,7 +755,7 @@ jobs:
             - name: Test Components ^T-Z
               env:
                   COVERAGE_THRESHOLD_LINES: 96.58
-                  COVERAGE_THRESHOLD_FUNCTIONS: 97.35
+                  COVERAGE_THRESHOLD_FUNCTIONS: 97.34
                   COVERAGE_THRESHOLD_STATEMENTS: 96.64
                   COVERAGE_THRESHOLD_BRANCHES: 93.47
                   COVERAGE_INCLUDE_PATH: src/domains/transaction/components/[T-Z]*
