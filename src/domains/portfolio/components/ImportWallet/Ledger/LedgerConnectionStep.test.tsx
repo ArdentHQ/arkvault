@@ -95,14 +95,19 @@ describe("LedgerConnectionStep", () => {
 				network: wallet.network(),
 			},
 		});
-	
+
 		useEffect(() => {
 			connect(profile);
 		}, []);
 
-		return(
+		return (
 			<FormProvider {...form}>
-				<LedgerConnectionStep onConnect={onConnect} network={wallet.network()} onFailed={onFailed} cancelling={cancelling} />
+				<LedgerConnectionStep
+					onConnect={onConnect}
+					network={wallet.network()}
+					onFailed={onFailed}
+					cancelling={cancelling}
+				/>
 			</FormProvider>
 		);
 	};
@@ -158,15 +163,16 @@ describe("LedgerConnectionStep", () => {
 
 	it("should show update error if app version is less than minimum version", async () => {
 		const outdatedVersion = "1.0.1";
-		
+
 		const ledgerTransportMock = mockNanoXTransport();
-		const errorMock = mockLedgerTransportError(`The ARK app version is ${outdatedVersion}. Please update the ARK app via Ledger Live.`);
-		
+		const errorMock = mockLedgerTransportError(
+			`The ARK app version is ${outdatedVersion}. Please update the ARK app via Ledger Live.`,
+		);
+
 		const onFailed = vi.fn();
-		
+
 		history.push(`/profiles/${profile.id()}`);
-		
-		
+
 		render(
 			<Route path="/profiles/:profileId">
 				<Component onFailed={onFailed} />
@@ -175,10 +181,10 @@ describe("LedgerConnectionStep", () => {
 				history,
 			},
 		);
-		
+
 		await waitFor(() => expect(onFailed).toHaveBeenCalled(), { timeout: 3000 });
 		expect(errorMock).toHaveBeenCalled();
-		
+
 		ledgerTransportMock.mockRestore();
 		errorMock.mockRestore();
 	});
