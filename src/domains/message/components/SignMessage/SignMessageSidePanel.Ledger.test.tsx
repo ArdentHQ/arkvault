@@ -64,13 +64,13 @@ describe("SignMessage with ledger", () => {
 		const consoleErrorMock = vi.spyOn(console, "error").mockImplementation(() => void 0);
 
 		const ledgerSpy = vi.spyOn(profile, "ledger").mockReturnValue({
-			slip44: vi.fn().mockReturnValue(111),
+			connect: vi.fn().mockResolvedValue(void 0),
 			getPublicKey: vi.fn().mockResolvedValue(wallet.publicKey()!),
 			getVersion: vi.fn().mockResolvedValue("2.1.0"),
 			signMessage: vi.fn().mockImplementation(() => {
 				throw new Error("Condition of use not satisfied");
 			}),
-			connect: vi.fn().mockResolvedValue(void 0),
+			slip44: vi.fn().mockReturnValue(111),
 		});
 
 		const ledgerListenMock = mockNanoXTransport();
