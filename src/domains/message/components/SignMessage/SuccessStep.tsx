@@ -4,7 +4,7 @@ import { Contracts as ProfileContracts } from "@/app/lib/profiles";
 import { useTranslation } from "react-i18next";
 import { Address } from "@/app/components/Address";
 import { FormField } from "@/app/components/Form";
-import { DetailLabel, DetailLabelText, DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
+import { DetailLabelText, DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
 
 export const SigningMessageInfo = ({
 	message,

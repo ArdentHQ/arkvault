@@ -1,8 +1,9 @@
 import { act, renderHook } from "@testing-library/react";
-import React from "react";
 import { describe, it, expect, vi, beforeAll } from "vitest";
 
 import { useIsScrolled } from "./use-is-scrolled";
+
+let resizeCallback: () => void = () => {};
 
 describe("useIsScrolled", () => {
 	const mockObserve = vi.fn();
@@ -78,7 +79,6 @@ describe("useIsScrolled", () => {
 	});
 
 	it("should update isScrolled on resize", () => {
-		let resizeCallback: () => void = () => {};
 		window.ResizeObserver = vi.fn().mockImplementation((callback) => {
 			resizeCallback = callback;
 			return {
