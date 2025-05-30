@@ -17,7 +17,7 @@ import { useMessageSigner } from "@/domains/message/hooks/use-message-signer";
 import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
 import { useQueryParameters } from "@/app/hooks/use-query-parameters";
 import { AuthenticationStep, LedgerAuthentication } from "@/domains/transaction/components/AuthenticationStep";
-import { SidePanel } from "@/app/components/SidePanel/SidePanel";
+import { SidePanel, SidePanelButtons } from "@/app/components/SidePanel/SidePanel";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 
 enum Step {
@@ -223,6 +223,54 @@ export const SignMessageSidePanel = ({
 			hasSteps
 			totalSteps={selectedWallet?.isLedger() ? 3 : 2}
 			activeStep={activeTab}
+			footer={
+				<SidePanelButtons>
+					{activeTab === Step.FormStep && (
+						<>
+							<Button data-testid="SignMessage__back-button" variant="secondary" onClick={handleBack}>
+								{t("COMMON.BACK")}
+							</Button>
+
+							<Button
+								type="submit"
+								disabled={!isValid || !selectedWallet}
+								onClick={handleNext}
+								data-testid="SignMessage__continue-button"
+							>
+								{t("COMMON.SIGN")}
+							</Button>
+						</>
+					)}
+
+					{activeTab === Step.SuccessStep && (
+						<>
+							<Button data-testid="SignMessage__back-button" variant="secondary" onClick={handleBack}>
+								{t("COMMON.CLOSE")}
+							</Button>
+
+							<Clipboard
+								buttonVariant="primary"
+								variant="button"
+								data={JSON.stringify(signedMessage)}
+								data-testid="SignMessage__copy-button"
+								wrapperClassName="flex-1 md:flex-none"
+								buttonClassName="bg-theme-primary-600 text-center text-base font-semibold text-white hover:bg-theme-primary-700"
+							>
+								<div
+									className="relative inline-flex items-center space-x-3 rounded"
+									data-testid="SignMessage__back-to-wallet-button"
+								>
+									<Icon name="Copy" />
+									<div className="hidden whitespace-nowrap sm:block">
+										{t("COMMON.COPY_SIGNATURE")}
+									</div>
+									<div className="block whitespace-nowrap sm:hidden">{t("COMMON.COPY")}</div>
+								</div>
+							</Clipboard>
+						</>
+					)}
+				</SidePanelButtons>
+			}
 		>
 			<Form data-testid="SignMessage" context={form} onSubmit={submitForm}>
 				<Tabs activeId={activeTab}>
@@ -281,58 +329,6 @@ export const SignMessageSidePanel = ({
 								}}
 							/>
 						</TabPanel>
-
-						<div className="bg-theme-background border-theme-secondary-300 dark:border-theme-dark-700 fixed inset-x-0 bottom-0 flex w-full items-center justify-end gap-3 border-t px-6 py-4 [&>button]:flex-1 sm:[&>button]:flex-none">
-							{activeTab === Step.FormStep && (
-								<>
-									<Button
-										data-testid="SignMessage__back-button"
-										variant="secondary"
-										onClick={handleBack}
-									>
-										{t("COMMON.BACK")}
-									</Button>
-
-									<Button
-										type="submit"
-										disabled={!isValid || !selectedWallet}
-										onClick={handleNext}
-										data-testid="SignMessage__continue-button"
-									>
-										{t("COMMON.SIGN")}
-									</Button>
-								</>
-							)}
-
-							{activeTab === Step.SuccessStep && (
-								<>
-									<Button
-										data-testid="SignMessage__back-button"
-										variant="secondary"
-										onClick={handleBack}
-									>
-										{t("COMMON.CLOSE")}
-									</Button>
-
-									<Clipboard
-										buttonVariant="primary"
-										variant="button"
-										data={JSON.stringify(signedMessage)}
-										data-testid="SignMessage__copy-button"
-										wrapperClassName="flex-1 md:flex-none"
-										buttonClassName="bg-theme-primary-600 text-center text-base font-semibold text-white hover:bg-theme-primary-700"
-									>
-										<div
-											className="relative inline-flex items-center space-x-3 rounded"
-											data-testid="SignMessage__back-to-wallet-button"
-										>
-											<Icon name="Copy" />
-											<div className="whitespace-nowrap">{t("COMMON.COPY_SIGNATURE")}</div>
-										</div>
-									</Clipboard>
-								</>
-							)}
-						</div>
 					</StepsProvider>
 				</Tabs>
 			</Form>
