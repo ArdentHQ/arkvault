@@ -9,12 +9,13 @@ import {
 	useRole,
 	useTransitionStyles,
 } from "@floating-ui/react";
-import React, { useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";
 import cn from "classnames";
 import { isUnit } from "@/utils/test-helpers";
 import { SidePanelStyledStep } from "./SidePanelStyledStep";
+import { useIsScrolled } from "@/app/hooks/use-is-scrolled";
 
 interface SidePanelProps {
 	children: React.ReactNode;
@@ -72,6 +73,10 @@ export const SidePanel = ({
 		outsidePress: (event) => !(event.target as HTMLElement).closest(".Toastify"),
 		outsidePressEvent: "pointerdown",
 	});
+
+	const scrollContainerRef = useRef<HTMLDivElement | null>(null);
+
+	const isScrolled = useIsScrolled({ scrollContainerRef, active: open });
 
 	const { getFloatingProps } = useInteractions([click, role, dismiss]);
 
@@ -174,7 +179,10 @@ export const SidePanel = ({
 												</div>
 											</div>
 
-											<div className="flex flex-1 flex-col gap-4 overflow-y-auto px-6 py-4">
+											<div
+												ref={scrollContainerRef}
+												className="flex flex-1 flex-col gap-4 overflow-y-auto px-6 py-4"
+											>
 												{subtitle && (
 													<div className="text-theme-secondary-text text-sm leading-5 font-normal md:text-base">
 														{subtitle}
@@ -184,7 +192,12 @@ export const SidePanel = ({
 											</div>
 
 											{footer && (
-												<div className="bg-theme-background border-theme-secondary-300 dark:border-theme-dark-700 flex w-full flex-col border-t px-6 py-4">
+												<div
+													className={cn(
+														"bg-theme-background border-theme-secondary-300 dark:border-theme-dark-700 flex w-full flex-col border-t px-6 py-4",
+														{ "shadow-footer-side-panel": isScrolled },
+													)}
+												>
 													{footer}
 												</div>
 											)}

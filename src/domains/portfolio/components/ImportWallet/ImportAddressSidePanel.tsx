@@ -269,7 +269,7 @@ export const ImportAddressesSidePanel = ({
 		>
 			<Form context={form} data-testid="ImportWallet__form">
 				<>
-					<Tabs activeId={activeTab} className="pb-20">
+					<Tabs activeId={activeTab}>
 						<div>
 							<TabPanel tabId={ImportAddressStep.MethodStep}>
 								<MethodStep network={activeNetwork} onSelect={handleNext} />
