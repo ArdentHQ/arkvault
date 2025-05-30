@@ -34,17 +34,15 @@ interface SidePanelProps {
 	footer?: React.ReactNode;
 }
 
-export const SidePanelButtons = ({ className, ...properties }: React.HTMLAttributes<HTMLDivElement>): JSX.Element => {
-	return (
-		<div
-			className={cn(
-				"flex w-full items-center justify-end gap-3 [&>button]:flex-1 sm:[&>button]:flex-none",
-				className,
-			)}
-			{...properties}
-		/>
-	);
-};
+export const SidePanelButtons = ({ className, ...properties }: React.HTMLAttributes<HTMLDivElement>): JSX.Element => (
+	<div
+		className={cn(
+			"flex w-full items-center justify-end gap-3 [&>button]:flex-1 sm:[&>button]:flex-none",
+			className,
+		)}
+		{...properties}
+	/>
+);
 
 export const SidePanel = ({
 	children,
@@ -76,7 +74,7 @@ export const SidePanel = ({
 
 	const scrollContainerRef = useRef<HTMLDivElement | null>(null);
 
-	const isScrolled = useIsScrolled({ scrollContainerRef, active: open && !!footer });
+	const isScrolled = useIsScrolled({ active: open && !!footer, scrollContainerRef });
 
 	const { getFloatingProps } = useInteractions([click, role, dismiss]);
 
