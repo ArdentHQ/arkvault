@@ -26,7 +26,6 @@ import {
 } from "./ImportAddressSidePanel.blocks";
 import { OptionsValue } from "@/domains/wallet/hooks";
 import { LedgerTabStep } from "./Ledger/LedgerTabs.contracts";
-import { setTime } from "react-datepicker/dist/date_utils";
 
 export const ImportAddressesSidePanel = ({
 	open,
@@ -113,7 +112,7 @@ export const ImportAddressesSidePanel = ({
 		}
 
 		if (!open) {
-			setActiveTab(ImportAddressStep.MethodStep)
+			setActiveTab(ImportAddressStep.MethodStep);
 		}
 
 		onOpenChange(open);
@@ -154,6 +153,8 @@ export const ImportAddressesSidePanel = ({
 		})[activeTab as Exclude<ImportAddressStep, ImportAddressStep.SummaryStep>]();
 
 	const handleBack = () => {
+		console.log("handleback", activeTab);
+
 		if (activeTab === ImportAddressStep.MethodStep) {
 			return history.push(`/profiles/${activeProfile.id()}/dashboard`);
 		}
@@ -207,7 +208,7 @@ export const ImportAddressesSidePanel = ({
 	};
 
 	const handleFinish = () => {
-		onOpenChange(false);
+		handleOpenChange(false);
 	};
 
 	const isNextDisabled = useMemo(() => {

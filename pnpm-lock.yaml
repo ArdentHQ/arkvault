@@ -173,9 +173,6 @@ importers:
       react-toastify:
         specifier: ^10.0.5
         version: 10.0.5(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-      react-visibility-sensor:
-        specifier: ^5.1.1
-        version: 5.1.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       react-zendesk:
         specifier: ^0.1.13
         version: 0.1.13
@@ -5985,12 +5982,6 @@ packages:
     peerDependencies:
       react: '>=18'
       react-dom: '>=18'
-
-  react-visibility-sensor@5.1.1:
-    resolution: {integrity: sha512-cTUHqIK+zDYpeK19rzW6zF9YfT4486TIgizZW53wEZ+/GPBbK7cNS0EHyJVyHYacwFEvvHLEKfgJndbemWhB/w==}
-    peerDependencies:
-      react: '>=16.0.0'
-      react-dom: '>=16.0.0'
 
   react-zendesk@0.1.13:
     resolution: {integrity: sha512-9UNzzgdgC8nr2nZ13PNudspUClZZgsnS3FofnuGK1I7+yDPNAP8iDFD2WSQRJmYDAzH+mTlVB4K+G8lY1/0B+w==}
@@ -13880,12 +13871,6 @@ snapshots:
   react-toastify@10.0.5(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
     dependencies:
       clsx: 2.1.1
-      react: 19.1.0
-      react-dom: 19.1.0(react@19.1.0)
-
-  react-visibility-sensor@5.1.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
-    dependencies:
-      prop-types: 15.8.1
       react: 19.1.0
       react-dom: 19.1.0(react@19.1.0)
 

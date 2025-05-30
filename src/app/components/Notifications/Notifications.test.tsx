@@ -1,6 +1,6 @@
 import { Contracts, DTO } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
-import React, { useEffect } from "react";
+import React from "react";
 
 import { Notifications } from "./Notifications";
 import { env, getMainsailProfileId, render, screen, waitFor } from "@/utils/testing-library";
@@ -10,19 +10,6 @@ import { server, requestMock } from "@/tests/mocks/server";
 import NotificationTransactionsFixtures from "@/tests/fixtures/coins/mainsail/devnet/notification-transactions.json";
 
 let profile: Contracts.IProfile;
-
-vi.mock("react-visibility-sensor", () => ({
-	/* eslint-disable react-hooks/rules-of-hooks */
-	default: ({ children, onChange }) => {
-		useEffect(() => {
-			if (onChange) {
-				onChange(false);
-			}
-		}, [onChange]);
-
-		return <div>{children}</div>;
-	},
-}));
 
 describe("Notifications", () => {
 	beforeEach(async () => {
