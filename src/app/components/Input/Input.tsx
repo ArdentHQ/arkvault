@@ -207,15 +207,15 @@ export const Input = React.forwardRef<InputElement, InputProperties>(
 						>
 							{isInvalidValue && (
 								<div className={cn({ "pr-3": addons?.end })}>
-								<Tooltip content={errorMessageValue} size="sm">
-									<span data-errortext={errorMessageValue} data-testid="Input__error">
-										<Icon
-											name="CircleExclamationMark"
-											className={cn("text-theme-danger-500")}
-											size="lg"
-										/>
-									</span>
-								</Tooltip>
+									<Tooltip content={errorMessageValue} size="sm">
+										<span data-errortext={errorMessageValue} data-testid="Input__error">
+											<Icon
+												name="CircleExclamationMark"
+												className={cn("text-theme-danger-500")}
+												size="lg"
+											/>
+										</span>
+									</Tooltip>
 								</div>
 							)}
 
