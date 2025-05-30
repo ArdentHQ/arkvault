@@ -5,6 +5,7 @@ import { ImportOption } from "@/domains/wallet/hooks";
 import { Icon } from "@/app/components/Icon";
 import { ThemeIcon } from "@/app/components/Icon";
 import { LedgerTabStep } from "./Ledger/LedgerTabs.contracts";
+import { SidePanelButtons } from "@/app/components/SidePanel/SidePanel";
 
 export enum ImportAddressStep {
 	MethodStep = 1,
@@ -138,36 +139,34 @@ export const ImportActionToolbar = ({
 }) => {
 	const { t } = useTranslation();
 	return (
-		<div className="bg-theme-background fixed inset-x-0 bottom-0 mr-[5px] flex w-full items-center justify-end p-2 px-4 sm:justify-between sm:px-6 sm:py-6 md:px-8">
-			<div className="flex w-full gap-3 sm:justify-end [&>button]:flex-1 sm:[&>button]:flex-none">
-				{showButtons && (
-					<>
-						<Button
-							disabled={isBackDisabled}
-							variant="secondary"
-							onClick={onBack}
-							data-testid="ImportWallet__back-button"
-						>
-							{t("COMMON.BACK")}
-						</Button>
-
-						<Button
-							disabled={isContinueDisabled}
-							isLoading={isLoading}
-							onClick={onContinue}
-							data-testid="ImportWallet__continue-button"
-						>
-							{t("COMMON.CONTINUE")}
-						</Button>
-					</>
-				)}
-
-				{showPortfoliobutton && (
-					<Button disabled={isSubmitDisabled} data-testid="ImportWallet__finish-button" onClick={onSubmit}>
-						{t("COMMON.CLOSE")}
+		<SidePanelButtons>
+			{showButtons && (
+				<>
+					<Button
+						disabled={isBackDisabled}
+						variant="secondary"
+						onClick={onBack}
+						data-testid="ImportWallet__back-button"
+					>
+						{t("COMMON.BACK")}
 					</Button>
-				)}
-			</div>
-		</div>
+
+					<Button
+						disabled={isContinueDisabled}
+						isLoading={isLoading}
+						onClick={onContinue}
+						data-testid="ImportWallet__continue-button"
+					>
+						{t("COMMON.CONTINUE")}
+					</Button>
+				</>
+			)}
+
+			{showPortfoliobutton && (
+				<Button disabled={isSubmitDisabled} data-testid="ImportWallet__finish-button" onClick={onSubmit}>
+					{t("COMMON.CLOSE")}
+				</Button>
+			)}
+		</SidePanelButtons>
 	);
 };

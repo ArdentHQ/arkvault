@@ -266,64 +266,63 @@ export const ImportAddressesSidePanel = ({
 			hasSteps={!isMethodStep}
 			totalSteps={allSteps.length}
 			activeStep={getActiveStep()}
+			footer={
+				!isLedgerImport && (
+					<ImportActionToolbar
+						showButtons={!isMethodStep && activeTab <= ImportAddressStep.EncryptPasswordStep}
+						isBackDisabled={isImporting}
+						onBack={handleBack}
+						isContinueDisabled={isNextDisabled}
+						onContinue={handleNext}
+						isLoading={isEncrypting || isImporting}
+						isSubmitDisabled={isSubmitting}
+						showPortfoliobutton={activeTab === ImportAddressStep.SummaryStep}
+						onSubmit={handleFinish}
+					/>
+				)
+			}
 		>
 			<Form context={form} data-testid="ImportWallet__form">
-				<>
-					<Tabs activeId={activeTab}>
-						<div>
-							<TabPanel tabId={ImportAddressStep.MethodStep}>
-								<MethodStep network={activeNetwork} onSelect={handleNext} />
-							</TabPanel>
+				<Tabs activeId={activeTab}>
+					<div>
+						<TabPanel tabId={ImportAddressStep.MethodStep}>
+							<MethodStep network={activeNetwork} onSelect={handleNext} />
+						</TabPanel>
 
-							<TabPanel tabId={ImportAddressStep.ImportDetailStep}>
-								{isLedgerImport && (
-									<LedgerTabs
-										onClickEditWalletName={handleEditLedgerAlias}
-										onStepChange={setLedgerActiveTab}
-										onCancel={() => {
-											handleOpenChange(false);
-										}}
-										onSubmit={handleFinish}
-									/>
-								)}
-								{!isLedgerImport && importOption && (
-									<ImportDetailStep
-										profile={activeProfile}
-										network={activeNetwork}
-										importOption={importOption}
-									/>
-								)}
-							</TabPanel>
+						<TabPanel tabId={ImportAddressStep.ImportDetailStep}>
+							{isLedgerImport && (
+								<LedgerTabs
+									onClickEditWalletName={handleEditLedgerAlias}
+									onStepChange={setLedgerActiveTab}
+									onCancel={() => {
+										handleOpenChange(false);
+									}}
+									onSubmit={handleFinish}
+								/>
+							)}
+							{!isLedgerImport && importOption && (
+								<ImportDetailStep
+									profile={activeProfile}
+									network={activeNetwork}
+									importOption={importOption}
+								/>
+							)}
+						</TabPanel>
 
-							<TabPanel tabId={ImportAddressStep.EncryptPasswordStep}>
-								<EncryptPasswordStep importedWallet={importedWallet} />
-							</TabPanel>
+						<TabPanel tabId={ImportAddressStep.EncryptPasswordStep}>
+							<EncryptPasswordStep importedWallet={importedWallet} />
+						</TabPanel>
 
-							<TabPanel tabId={ImportAddressStep.SummaryStep}>
-								{importedWallet && (
-									<SuccessStep
-										importedWallet={importedWallet}
-										onClickEditAlias={() => setIsEditAliasModalOpen(true)}
-									/>
-								)}
-							</TabPanel>
-						</div>
-					</Tabs>
-
-					{!isLedgerImport && (
-						<ImportActionToolbar
-							showButtons={!isMethodStep && activeTab <= ImportAddressStep.EncryptPasswordStep}
-							isBackDisabled={isImporting}
-							onBack={handleBack}
-							isContinueDisabled={isNextDisabled}
-							onContinue={handleNext}
-							isLoading={isEncrypting || isImporting}
-							isSubmitDisabled={isSubmitting}
-							showPortfoliobutton={activeTab === ImportAddressStep.SummaryStep}
-							onSubmit={handleFinish}
-						/>
-					)}
-				</>
+						<TabPanel tabId={ImportAddressStep.SummaryStep}>
+							{importedWallet && (
+								<SuccessStep
+									importedWallet={importedWallet}
+									onClickEditAlias={() => setIsEditAliasModalOpen(true)}
+								/>
+							)}
+						</TabPanel>
+					</div>
+				</Tabs>
 			</Form>
 
 			{!!importedWallet && isEditAliasModalOpen && (
