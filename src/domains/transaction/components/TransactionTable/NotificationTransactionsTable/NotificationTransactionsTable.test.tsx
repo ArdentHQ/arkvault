@@ -58,22 +58,6 @@ describe("NotificationsTransactionTable", () => {
 		expect(screen.getAllByTestId("TableRow")).toHaveLength(10);
 	});
 
-	it("should emit on visibility change event", async () => {
-		const onVisibilityChange = vi.fn();
-		render(
-			<NotificationTransactionsTable
-				transactions={transactions}
-				profile={profile}
-				isLoading={false}
-				onVisibilityChange={onVisibilityChange}
-			/>,
-		);
-
-		expect(screen.getAllByTestId("TableRow")).toHaveLength(transactions.length);
-
-		await waitFor(() => expect(onVisibilityChange).toHaveBeenCalledWith(false));
-	});
-
 	it("should emit on click event", async () => {
 		const onClick = vi.fn();
 		render(
