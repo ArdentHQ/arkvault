@@ -282,14 +282,19 @@ export const CreateAddressesSidePanel = ({
 					)}
 
 					{activeTab === CreateStep.SuccessStep && (
-						<Button disabled={isSubmitting} type="submit" data-testid="CreateWallet__finish-button">
+						<Button
+							disabled={isSubmitting}
+							type="submit"
+							form="CreateWallet__form"
+							data-testid="CreateWallet__finish-button"
+						>
 							{t("COMMON.CLOSE")}
 						</Button>
 					)}
 				</SidePanelButtons>
 			}
 		>
-			<Form context={form} onSubmit={handleFinish} className="space-y-0">
+			<Form context={form} onSubmit={handleFinish} className="space-y-0" id="CreateWallet__form">
 				<Tabs activeId={activeTab}>
 					<div>
 						<TabPanel tabId={CreateStep.WalletOverviewStep}>
