@@ -63,13 +63,15 @@ describe("SignMessage with ledger", () => {
 
 		const consoleErrorMock = vi.spyOn(console, "error").mockImplementation(() => void 0);
 
-		const signMessageSpy = vi.spyOn(wallet.ledger(), "signMessage").mockImplementation(() => {
-			throw new Error("Condition of use not satisfied");
+		const ledgerSpy = vi.spyOn(profile, "ledger").mockReturnValue({
+			slip44: vi.fn().mockReturnValue(111),
+			getPublicKey: vi.fn().mockResolvedValue(wallet.publicKey()!),
+			getVersion: vi.fn().mockResolvedValue("2.1.0"),
+			signMessage: vi.fn().mockImplementation(() => {
+				throw new Error("Condition of use not satisfied");
+			}),
+			connect: vi.fn().mockResolvedValue(void 0),
 		});
-
-		const getVersionMock = vi.spyOn(wallet.ledger(), "getVersion").mockResolvedValue("2.1.0");
-
-		const getPublicKeySpy = vi.spyOn(wallet.ledger(), "getPublicKey").mockResolvedValue(wallet.publicKey()!);
 
 		const ledgerListenMock = mockNanoXTransport();
 
@@ -104,12 +106,10 @@ describe("SignMessage with ledger", () => {
 
 		expect(onOpenChangeMock).toHaveBeenCalledWith(false);
 
-		signMessageSpy.mockRestore();
+		ledgerSpy.mockRestore();
 		isLedgerMock.mockRestore();
-		ledgerListenMock.mockRestore();
-		getPublicKeySpy.mockRestore();
 		consoleErrorMock.mockRestore();
-		getVersionMock.mockRestore();
+		ledgerListenMock.mockRestore();
 	});
 
 	it.skip("should sign message with a ledger wallet", async () => {
@@ -135,7 +135,7 @@ describe("SignMessage with ledger", () => {
 
 		render(
 			<Route path="/profiles/:profileId/dashboard">
-				<SignMessageSidePanel open={true} onOpenChange={onOpenChangeMock} onMountChange={vi.fn()} />,
+				<SignMessageSidePanel open={true} onOpenChange={vi.fn()} onMountChange={vi.fn()} />,
 			</Route>,
 			{
 				history,
