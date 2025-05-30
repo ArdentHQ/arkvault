@@ -2,41 +2,10 @@ import { vi } from "vitest";
 import React from "react";
 import { Route } from "react-router-dom";
 import { useForm, FormProvider } from "react-hook-form";
-import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, screen, waitFor, mockConnectedTransport } from "@/utils/testing-library";
 import { server, requestMock, requestMockOnce } from "@/tests/mocks/server";
 import { minVersionList } from "@/app/contexts";
 import { LedgerTabs } from "./LedgerTabs";
-
-vi.mock("@/app/contexts/Ledger/ledger.transport.factory", () => ({
-	LedgerTransportFactory: class {
-		supportedTransport() {
-			return {
-				create: () => ({
-					close: vi.fn(),
-					exchange: vi.fn().mockResolvedValue(Buffer.from("mock")),
-					off: vi.fn(),
-					on: vi.fn(),
-					send: vi.fn(),
-				}),
-				listen: (observer: any) => {
-					setTimeout(() => observer.next({ descriptor: { id: "mock" }, type: "add" }), 100);
-					return { unsubscribe: vi.fn() };
-				},
-			};
-		}
-	},
-}));
-vi.mock("@/app/contexts/Ledger/transport", () => ({
-	closeDevices: vi.fn().mockResolvedValue(undefined),
-	supportedTransport: vi.fn().mockResolvedValue({ create: vi.fn().mockResolvedValue({ close: vi.fn() }) }),
-}));
-
-process.on("unhandledRejection", (reason) => {
-	if (reason instanceof Error && reason.message.includes("No transports appear to be supported.")) {
-		return;
-	}
-	throw reason;
-});
 
 describe("LedgerTabs - cancel flow", () => {
 	let profile: any, wallet: any;
@@ -95,6 +64,7 @@ describe("LedgerTabs - cancel flow", () => {
 	};
 
 	it("renders the ledger-auth (ListenLedger) step at index 1", async () => {
+		mockConnectedTransport();
 		render(<TestWrapper step={1} />, { route: `/profiles/${profile.id()}` });
 		await waitFor(() => {
 			expect(screen.getByTestId("LedgerAuthStep")).toBeInTheDocument();
@@ -102,21 +72,22 @@ describe("LedgerTabs - cancel flow", () => {
 	});
 
 	it("renders the connection step at index 2", async () => {
+		mockConnectedTransport();
 		render(<TestWrapper step={2} />, { route: `/profiles/${profile.id()}` });
 		await waitFor(() => {
 			expect(screen.getByTestId("LedgerConnectionStep")).toBeInTheDocument();
 		});
 	});
+	
+	it("renders the scan step at index 3", async () => {
+		mockConnectedTransport();
+		const onCancel = vi.fn();
+		render(<TestWrapper step={3} onCancel={onCancel} />, {
+		route: `/profiles/${profile.id()}`,
+		});
 
-	// TODO: Check unhandled error issue with transports supported for scan step
-	/* it("renders the scan step at index 3", async () => {
-    const onCancel = vi.fn();
-    render(<TestWrapper step={3} onCancel={onCancel} />, {
-      route: `/profiles/${profile.id()}`,
-    });
-
-    await waitFor(() => {
-      expect(screen.getByTestId("LedgerScanStep")).toBeInTheDocument();
-    });
-  }); */
+		await waitFor(() => {
+		expect(screen.getByTestId("LedgerScanStep")).toBeInTheDocument();
+		});
+  });
 });
