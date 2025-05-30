@@ -1,7 +1,7 @@
 import React from "react";
 import { SidePanel } from "./SidePanel";
 import userEvent from "@testing-library/user-event";
-import { render, screen } from "@testing-library/react";
+import { render, screen, act } from "@testing-library/react";
 import { Icon } from "@/app/components/Icon";
 
 describe("SidePanel", () => {
@@ -105,5 +105,67 @@ describe("SidePanel", () => {
 		await userEvent.click(screen.getByTestId("SidePanel__close-button"));
 
 		expect(onOpenChangeMock).toHaveBeenCalledWith(false);
+	});
+
+	it("should detect scrollable content and apply footer shadow", async () => {
+		let resizeObserverCallback: ResizeObserverCallback;
+
+		const observe = vi.fn();
+		const disconnect = vi.fn();
+
+		global.ResizeObserver = vi.fn((cb) => {
+			resizeObserverCallback = cb;
+			return { disconnect, observe };
+		}) as unknown as typeof ResizeObserver;
+
+		render(
+			<SidePanel open={true} title="" onOpenChange={vi.fn()} footer={<div>footer</div>}>
+				panel body
+			</SidePanel>,
+		);
+
+		expect(screen.getByText("panel body")).toBeInTheDocument();
+
+		const scrollableElement = screen.getByTestId("SidePanel__content");
+
+		Object.defineProperty(scrollableElement, "scrollHeight", { configurable: true, get: () => 1000 });
+		Object.defineProperty(scrollableElement, "clientHeight", { configurable: true, get: () => 500 });
+
+		act(() => {
+			resizeObserverCallback([{ target: scrollableElement } as ResizeObserverEntry], {} as ResizeObserver);
+		});
+
+		expect(screen.getByTestId("SidePanel__footer")).toHaveClass("shadow-footer-side-panel");
+	});
+
+	it("should not apply footer shadow when content is not scrollable", async () => {
+		let resizeObserverCallback: ResizeObserverCallback;
+
+		const observe = vi.fn();
+		const disconnect = vi.fn();
+
+		global.ResizeObserver = vi.fn((cb) => {
+			resizeObserverCallback = cb;
+			return { disconnect, observe };
+		}) as unknown as typeof ResizeObserver;
+
+		render(
+			<SidePanel open={true} title="" onOpenChange={vi.fn()} footer={<div>footer</div>}>
+				panel body
+			</SidePanel>,
+		);
+
+		expect(screen.getByText("panel body")).toBeInTheDocument();
+
+		const scrollableElement = screen.getByTestId("SidePanel__content");
+
+		Object.defineProperty(scrollableElement, "scrollHeight", { configurable: true, get: () => 500 });
+		Object.defineProperty(scrollableElement, "clientHeight", { configurable: true, get: () => 1000 });
+
+		act(() => {
+			resizeObserverCallback([{ target: scrollableElement }], {} as ResizeObserver);
+		});
+
+		expect(screen.getByTestId("SidePanel__footer")).not.toHaveClass("shadow-footer-side-panel");
 	});
 });

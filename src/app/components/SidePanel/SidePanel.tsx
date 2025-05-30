@@ -9,7 +9,7 @@ import {
 	useRole,
 	useTransitionStyles,
 } from "@floating-ui/react";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";
 import cn from "classnames";
@@ -76,7 +76,7 @@ export const SidePanel = ({
 
 	const scrollContainerRef = useRef<HTMLDivElement | null>(null);
 
-	const isScrolled = useIsScrolled({ scrollContainerRef, active: open });
+	const isScrolled = useIsScrolled({ scrollContainerRef, active: open && !!footer });
 
 	const { getFloatingProps } = useInteractions([click, role, dismiss]);
 
@@ -182,6 +182,7 @@ export const SidePanel = ({
 											<div
 												ref={scrollContainerRef}
 												className="flex flex-1 flex-col gap-4 overflow-y-auto px-6 py-4"
+												data-testid="SidePanel__content"
 											>
 												{subtitle && (
 													<div className="text-theme-secondary-text text-sm leading-5 font-normal md:text-base">
@@ -193,6 +194,7 @@ export const SidePanel = ({
 
 											{footer && (
 												<div
+													data-testid="SidePanel__footer"
 													className={cn(
 														"bg-theme-background border-theme-secondary-300 dark:border-theme-dark-700 flex w-full flex-col border-t px-6 py-4",
 														{ "shadow-footer-side-panel": isScrolled },
