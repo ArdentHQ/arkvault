@@ -55,7 +55,10 @@ export const SuccessStep = ({
 				<div className="border-theme-secondary-300 dark:border-theme-dark-700 border-t px-3 py-6 sm:border-t-0 sm:p-0">
 					<FormField name="json-signature">
 						<DetailLabelText>{t("MESSAGE.PAGE_SIGN_MESSAGE.FORM_STEP.SIGNATURE_JSON")}</DetailLabelText>
-						<pre className="border-theme-secondary-300 dark:border-theme-dark-500 dark:text-theme-dark-50 text-theme-secondary-900 mt-2 rounded-sm border p-4 break-all whitespace-normal select-text">
+						<pre
+							data-testid="SignMessage__signature-json"
+							className="border-theme-secondary-300 dark:border-theme-dark-500 dark:text-theme-dark-50 text-theme-secondary-900 mt-2 rounded-sm border p-4 break-all whitespace-normal select-text"
+						>
 							{JSON.stringify(signedMessage, null, 2)}
 						</pre>
 					</FormField>

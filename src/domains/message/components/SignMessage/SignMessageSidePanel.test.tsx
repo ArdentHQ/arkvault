@@ -149,6 +149,8 @@ describe("SignMessageSidePanel", () => {
 
 			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.SUCCESS_STEP.TITLE);
 
+			expect(screen.getByTestId("SignMessage__signature-json")).toBeInTheDocument();
+
 			const writeTextMock = vi.fn();
 			const clipboardOriginal = navigator.clipboard;
 
