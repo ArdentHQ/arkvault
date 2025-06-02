@@ -148,7 +148,7 @@ exports[`SignMessage success step > should render success step in lg 1`] = `
             Signature (JSON)
           </div>
           <pre
-            class="border-theme-secondary-300 dark:border-theme-dark-500 dark:text-theme-dark-50 text-theme-secondary-900 mt-2 rounded-sm border p-4 break-all whitespace-normal select-all"
+            class="border-theme-secondary-300 dark:border-theme-dark-500 dark:text-theme-dark-50 text-theme-secondary-900 mt-2 rounded-sm border p-4 break-all whitespace-normal select-text"
           >
             {
   "message": "Test Message",
@@ -312,7 +312,7 @@ exports[`SignMessage success step > should render success step in xs 1`] = `
             Signature (JSON)
           </div>
           <pre
-            class="border-theme-secondary-300 dark:border-theme-dark-500 dark:text-theme-dark-50 text-theme-secondary-900 mt-2 rounded-sm border p-4 break-all whitespace-normal select-all"
+            class="border-theme-secondary-300 dark:border-theme-dark-500 dark:text-theme-dark-50 text-theme-secondary-900 mt-2 rounded-sm border p-4 break-all whitespace-normal select-text"
           >
             {
   "message": "Test Message",
