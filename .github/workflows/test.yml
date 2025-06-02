@@ -10,6 +10,47 @@ on:
             - synchronize
             - opened
 jobs:
+    libs:
+        runs-on: ubuntu-latest
+        env:
+            COVERAGE_INCLUDE_PATH: src/app/lib
+            COVERAGE_THRESHOLD_LINES: 100
+            COVERAGE_THRESHOLD_BRANCHES: 100
+            COVERAGE_THRESHOLD_FUNCTIONS: 100
+            COVERAGE_THRESHOLD_STATEMENTS: 100
+        strategy:
+            matrix:
+                node-version:
+                    - 22
+        concurrency:
+            group: ${{ github.head_ref }}-test-libs
+            cancel-in-progress: true
+        steps:
+            - uses: actions/checkout@v4
+              with:
+                  ref: ${{ github.head_ref }}
+            - uses: pnpm/action-setup@v4
+              with:
+                  version: 10
+            - uses: actions/setup-node@v4
+              with:
+                  node-version: ${{ matrix.node-version }}
+                  cache: pnpm
+            - name: Update System
+              run: sudo apt-get update
+            - name: Install (Ledger Requirements)
+              run: sudo apt-get install libudev-dev libusb-1.0-0-dev
+            - name: Install (pnpm)
+              run: pnpm install --frozen-lockfile
+            - name: Rebuild
+              run: pnpm rebuild
+            - name: Test
+              uses: nick-invision/retry@v2
+              with:
+                  timeout_minutes: 10
+                  max_attempts: 1
+                  command: pnpm test:coverage src/app/lib
+
     application:
         runs-on: ubuntu-latest
         env:
