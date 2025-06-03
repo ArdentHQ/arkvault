@@ -9,12 +9,13 @@ import {
 	useRole,
 	useTransitionStyles,
 } from "@floating-ui/react";
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";
 import cn from "classnames";
 import { isUnit } from "@/utils/test-helpers";
 import { SidePanelStyledStep } from "./SidePanelStyledStep";
+import { useIsScrolled } from "@/app/hooks/use-is-scrolled";
 
 interface SidePanelProps {
 	children: React.ReactNode;
@@ -30,7 +31,18 @@ interface SidePanelProps {
 	hasSteps?: boolean;
 	totalSteps?: number;
 	activeStep?: number;
+	footer?: React.ReactNode;
 }
+
+export const SidePanelButtons = ({ className, ...properties }: React.HTMLAttributes<HTMLDivElement>): JSX.Element => (
+	<div
+		className={cn(
+			"flex w-full items-center justify-end gap-3 [&>button]:flex-1 sm:[&>button]:flex-none",
+			className,
+		)}
+		{...properties}
+	/>
+);
 
 export const SidePanel = ({
 	children,
@@ -46,6 +58,7 @@ export const SidePanel = ({
 	hasSteps = false,
 	totalSteps = 0,
 	activeStep = 0,
+	footer,
 }: SidePanelProps): JSX.Element => {
 	const { refs, context } = useFloating({
 		onOpenChange,
@@ -58,6 +71,10 @@ export const SidePanel = ({
 		outsidePress: (event) => !(event.target as HTMLElement).closest(".Toastify"),
 		outsidePressEvent: "pointerdown",
 	});
+
+	const scrollContainerRef = useRef<HTMLDivElement | null>(null);
+
+	const isScrolled = useIsScrolled({ active: open && !!footer, scrollContainerRef });
 
 	const { getFloatingProps } = useInteractions([click, role, dismiss]);
 
@@ -104,11 +121,11 @@ export const SidePanel = ({
 									>
 										<div
 											data-testid="SidePanel__scrollable-content"
-											className="navy-scroll bg-theme-background text-theme-text h-dvh w-full overflow-y-scroll pt-14 shadow-[0_15px_35px_0px_rgba(33,34,37,0.08)]"
+											className="navy-scroll bg-theme-background text-theme-text flex h-dvh w-full flex-col shadow-[0_15px_35px_0px_rgba(33,34,37,0.08)]"
 											ref={scrollRef}
 										>
 											<div className="relative">
-												<div className="bg-theme-background fixed top-0 right-0 left-0 z-10 w-full">
+												<div className="bg-theme-background">
 													<div className="relative flex flex-col">
 														<div
 															className={cn(
@@ -121,11 +138,14 @@ export const SidePanel = ({
 														>
 															<div className="flex items-center gap-2">
 																{titleIcon && (
-																	<div className="text-theme-primary-600 dark:text-theme-navy-500 shrink-0">
+																	<div className="text-theme-primary-600 dark:text-theme-navy-500 hidden shrink-0 sm:block">
 																		{titleIcon}
 																	</div>
 																)}
-																<h2 className="mb-0 text-lg leading-[21px] font-semibold md:pt-0">
+																<h2
+																	data-testid="SidePanel__title"
+																	className="mb-0 text-lg leading-[21px] font-semibold md:pt-0"
+																>
 																	{title}
 																</h2>
 															</div>
@@ -157,7 +177,11 @@ export const SidePanel = ({
 												</div>
 											</div>
 
-											<div className="flex flex-col gap-4 px-6 py-4">
+											<div
+												ref={scrollContainerRef}
+												className="flex flex-1 flex-col gap-4 overflow-y-auto px-6 py-4"
+												data-testid="SidePanel__content"
+											>
 												{subtitle && (
 													<div className="text-theme-secondary-text text-sm leading-5 font-normal md:text-base">
 														{subtitle}
@@ -165,6 +189,18 @@ export const SidePanel = ({
 												)}
 												<div className="flex flex-col">{children}</div>
 											</div>
+
+											{footer && (
+												<div
+													data-testid="SidePanel__footer"
+													className={cn(
+														"bg-theme-background border-theme-secondary-300 dark:border-theme-dark-700 flex w-full flex-col border-t px-6 py-4",
+														{ "shadow-footer-side-panel": isScrolled },
+													)}
+												>
+													{footer}
+												</div>
+											)}
 										</div>
 									</div>
 								</div>

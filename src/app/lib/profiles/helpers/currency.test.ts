@@ -1,55 +1,46 @@
-import { describe } from "@ardenthq/sdk-test";
-
+import { describe, it, expect } from "vitest";
 import { Currency } from "./currency.js";
 
-describe("Helpers.Currency", ({ assert, each, it }) => {
+describe("Helpers.Currency", () => {
 	it("should format fiat", () => {
-		assert.is(Currency.format(10, "USD"), "$10.00");
+		expect(Currency.format(10, "USD")).toBe("$10.00");
 	});
 
 	it("should round and format fiat", () => {
-		assert.is(Currency.format(0.116, "USD"), "$0.12");
+		expect(Currency.format(0.116, "USD")).toBe("$0.12");
 	});
 
 	it("should format fiat without decimals", () => {
-		assert.is(Currency.format(10, "KRW"), "₩10.00");
+		expect(Currency.format(10, "KRW")).toBe("₩10.00");
 	});
 
-	each(
-		"should format crypto (%s)",
-		({ dataset }) => {
-			assert.is(Currency.format(10, dataset), `10 ${dataset}`);
-		},
-		["BTC", "ETH", "ARK", "DARK", "LSK", "BIND", "SOL"],
-	);
+	it.each(["BTC", "ETH", "ARK", "DARK", "LSK", "BIND", "SOL"])("should format crypto (%s)", (currency) => {
+		expect(Currency.format(10, currency)).toBe(`10 ${currency}`);
+	});
 
-	each(
-		"should allow to hide ticker (%s)",
-		({ dataset }) => {
-			assert.is(Currency.format(10, dataset, { withTicker: false }), "10.00");
-		},
-		[
-			"AUD",
-			"BRL",
-			"CAD",
-			"CHF",
-			"CNY",
-			"DKK",
-			"EUR",
-			"GBP",
-			"HKD",
-			"IDR",
-			"INR",
-			"MXN",
-			"NOK",
-			"RUB",
-			"SEK",
-			"USD",
-		],
-	);
+	it.each([
+		"AUD",
+		"BRL",
+		"CAD",
+		"CHF",
+		"CNY",
+		"DKK",
+		"EUR",
+		"GBP",
+		"HKD",
+		"IDR",
+		"INR",
+		"MXN",
+		"NOK",
+		"RUB",
+		"SEK",
+		"USD",
+	])("should allow to hide ticker (%s)", (currency) => {
+		expect(Currency.format(10, currency, { withTicker: false })).toBe("10.00");
+	});
 
 	it("should allow to pass locale", () => {
-		assert.is(Currency.format(1, "BTC", { locale: "en-US" }), "1 BTC");
-		assert.is(Currency.format(1, "USD", { locale: "en-US" }), "$1.00");
+		expect(Currency.format(1, "BTC", { locale: "en-US" })).toBe("1 BTC");
+		expect(Currency.format(1, "USD", { locale: "en-US" })).toBe("$1.00");
 	});
 });

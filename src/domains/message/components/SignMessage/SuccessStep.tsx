@@ -1,14 +1,10 @@
+import React from "react";
 import { Services } from "@/app/lib/mainsail";
 import { Contracts as ProfileContracts } from "@/app/lib/profiles";
-import React, { useRef } from "react";
 import { useTranslation } from "react-i18next";
-
 import { Address } from "@/app/components/Address";
 import { FormField } from "@/app/components/Form";
-import { StepHeader } from "@/app/components/StepHeader";
-import { TextArea } from "@/app/components/TextArea";
-import { DetailLabel, DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
-import { Icon } from "@/app/components/Icon";
+import { DetailLabelText, DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
 
 export const SigningMessageInfo = ({
 	message,
@@ -20,7 +16,7 @@ export const SigningMessageInfo = ({
 	const { t } = useTranslation();
 	return (
 		<div className="space-y-4">
-			<DetailWrapper label={t("COMMON.SIGNING_WALLET")}>
+			<DetailWrapper label={t("COMMON.SIGNING_ADDRESS")}>
 				<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
 					<DetailTitle>{t("COMMON.ADDRESS")}</DetailTitle>
 					<Address
@@ -51,35 +47,20 @@ export const SuccessStep = ({
 }) => {
 	const { t } = useTranslation();
 
-	const messageReference = useRef<HTMLInputElement>(null);
-
 	return (
 		<section>
-			<StepHeader
-				title={t("MESSAGE.PAGE_SIGN_MESSAGE.SUCCESS_STEP.TITLE")}
-				titleIcon={
-					<Icon
-						className="text-theme-success-100 dark:text-theme-success-900"
-						dimensions={[24, 24]}
-						name="Completed"
-						data-testid="icon-Completed"
-					/>
-				}
-			/>
-
 			<div className="space-y-4">
 				<SigningMessageInfo message={signedMessage.message} wallet={wallet} />
 
-				<div>
+				<div className="border-theme-secondary-300 dark:border-theme-dark-700 border-t px-3 py-6 sm:border-t-0 sm:p-0">
 					<FormField name="json-signature">
-						<DetailLabel>{t("MESSAGE.PAGE_SIGN_MESSAGE.FORM_STEP.SIGNATURE_JSON")}</DetailLabel>
-						<TextArea
-							className="mt-2 py-4"
-							wrap="hard"
-							ref={messageReference}
-							defaultValue={JSON.stringify(signedMessage)}
-							disabled
-						/>
+						<DetailLabelText>{t("MESSAGE.PAGE_SIGN_MESSAGE.FORM_STEP.SIGNATURE_JSON")}</DetailLabelText>
+						<pre
+							data-testid="SignMessage__signature-json"
+							className="border-theme-secondary-300 dark:border-theme-dark-500 dark:text-theme-dark-50 text-theme-secondary-900 mt-2 rounded-sm border p-4 break-all whitespace-normal select-text"
+						>
+							{JSON.stringify(signedMessage, null, 2)}
+						</pre>
 					</FormField>
 				</div>
 			</div>

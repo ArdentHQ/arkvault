@@ -17,6 +17,7 @@ import { StepHeader } from "@/app/components/StepHeader";
 import { Spinner } from "@/app/components/Spinner";
 import { Image } from "@/app/components/Image";
 import { Icon } from "@/app/components/Icon";
+import { Loader } from "@/app/components/Loader";
 export interface LedgerStates {
 	ledgerIsAwaitingDevice?: boolean;
 	ledgerIsAwaitingApp?: boolean;
@@ -41,6 +42,7 @@ const LedgerStateWrapper = ({
 	children,
 	ledgerSupportedModels = [Contracts.WalletLedgerModel.NanoS, Contracts.WalletLedgerModel.NanoX],
 	noHeading,
+	subject,
 }: AuthenticationStepProperties & { children: React.ReactNode }) => {
 	const { t } = useTranslation();
 
@@ -68,22 +70,30 @@ const LedgerStateWrapper = ({
 				connectedModel={ledgerConnectedModel}
 				supportedModel={ledgerSupportedModels[0]}
 				noHeading={noHeading}
+				subject={subject}
 			/>
 		);
 	}
 
 	if (ledgerIsAwaitingDevice) {
-		return <LedgerWaitingDeviceContent subtitle={subtitle} noHeading={noHeading} />;
+		return <LedgerWaitingDeviceContent subtitle={subtitle} noHeading={noHeading} subject={subject} />;
 	}
 
 	if (ledgerIsAwaitingApp) {
-		return <LedgerWaitingAppContent coinName={wallet.network().coin()} subtitle={subtitle} noHeading={noHeading} />;
+		return (
+			<LedgerWaitingAppContent
+				coinName={wallet.network().coin()}
+				subtitle={subtitle}
+				noHeading={noHeading}
+				subject={subject}
+			/>
+		);
 	}
 
 	return <>{children}</>;
 };
 
-const LedgerAuthentication = ({
+export const LedgerAuthentication = ({
 	wallet,
 	subject,
 	ledgerDetails,
@@ -106,6 +116,7 @@ const LedgerAuthentication = ({
 				onDeviceAvailable={() => setReadyToConfirm(true)}
 				onDeviceNotAvailable={onDeviceNotAvailable || (() => history.go(-1))}
 				noHeading={noHeading}
+				subject={subject}
 			/>
 		);
 	}
@@ -119,6 +130,7 @@ const LedgerAuthentication = ({
 				ledgerConnectedModel={ledgerConnectedModel}
 				wallet={wallet}
 				noHeading={noHeading}
+				subject={subject}
 			>
 				<>
 					{!noHeading && (
@@ -141,7 +153,14 @@ const LedgerAuthentication = ({
 
 					{requireLedgerConfirmation && <LedgerConfirmation noHeading>{ledgerDetails}</LedgerConfirmation>}
 
-					{!requireLedgerConfirmation && (
+					{!requireLedgerConfirmation && subject === "message" && (
+						<Loader
+							text={t("WALLETS.MODAL_LEDGER_WALLET.WAITING_DEVICE")}
+							data-testid="LedgerWaitingDevice-loading_message"
+						/>
+					)}
+
+					{!requireLedgerConfirmation && subject !== "message" && (
 						<div className="space-y-8">
 							<Image name="WaitingLedgerDevice" domain="wallet" className="mx-auto max-w-full" />
 

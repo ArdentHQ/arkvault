@@ -13,7 +13,6 @@ exports[`InputCounter > should render 1`] = `
         class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
         data-testid="InputCounter__input"
         maxlength="10"
-        maxlengthlabel="10"
         type="text"
       />
     </div>
@@ -50,7 +49,6 @@ exports[`InputCounter > should render with invalid state 1`] = `
         class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
         data-testid="InputCounter__input"
         maxlength="10"
-        maxlengthlabel="10"
         name="vendorField"
         type="text"
       />

@@ -17,7 +17,7 @@ export class Cache {
 		// 1. Check if we still have a matching item for the key.
 		const cacheItem = this.store[key];
 
-		if (cacheItem && DateTime.make().isBefore(cacheItem.expires_at)) {
+		if (cacheItem && DateTime.make().isBefore(DateTime.fromUnix(cacheItem.expires_at))) {
 			return cacheItem.value;
 		}
 

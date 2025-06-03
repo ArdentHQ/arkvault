@@ -79,7 +79,7 @@ exports[`UpdateWalletName > should render 1`] = `
                 class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
               >
                 <label
-                  class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex text-sm leading-[17px] font-semibold transition-colors duration-100"
+                  class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex leading-[17px] font-semibold transition-colors duration-100 text-sm"
                   data-testid="FormLabel"
                   for="name"
                 >
@@ -221,7 +221,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 1`] 
                 class="[&:focus-within_.FormLabel]:text-theme-danger-500 [&>.FormLabel]:text-theme-danger-500 flex min-w-0 flex-col"
               >
                 <label
-                  class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex text-sm leading-[17px] font-semibold transition-colors duration-100"
+                  class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex leading-[17px] font-semibold transition-colors duration-100 text-sm"
                   data-testid="FormLabel"
                   for="name"
                 >
@@ -417,7 +417,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 2`] 
                 class="[&:focus-within_.FormLabel]:text-theme-danger-500 [&>.FormLabel]:text-theme-danger-500 flex min-w-0 flex-col"
               >
                 <label
-                  class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex text-sm leading-[17px] font-semibold transition-colors duration-100"
+                  class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex leading-[17px] font-semibold transition-colors duration-100 text-sm"
                   data-testid="FormLabel"
                   for="name"
                 >
@@ -613,7 +613,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 3`] 
                 class="[&:focus-within_.FormLabel]:text-theme-danger-500 [&>.FormLabel]:text-theme-danger-500 flex min-w-0 flex-col"
               >
                 <label
-                  class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex text-sm leading-[17px] font-semibold transition-colors duration-100"
+                  class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex leading-[17px] font-semibold transition-colors duration-100 text-sm"
                   data-testid="FormLabel"
                   for="name"
                 >
@@ -809,7 +809,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 4`] 
                 class="[&:focus-within_.FormLabel]:text-theme-danger-500 [&>.FormLabel]:text-theme-danger-500 flex min-w-0 flex-col"
               >
                 <label
-                  class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex text-sm leading-[17px] font-semibold transition-colors duration-100"
+                  class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex leading-[17px] font-semibold transition-colors duration-100 text-sm"
                   data-testid="FormLabel"
                   for="name"
                 >
@@ -1005,7 +1005,7 @@ exports[`UpdateWalletName > should show error message when name consists only of
                 class="[&:focus-within_.FormLabel]:text-theme-danger-500 [&>.FormLabel]:text-theme-danger-500 flex min-w-0 flex-col"
               >
                 <label
-                  class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex text-sm leading-[17px] font-semibold transition-colors duration-100"
+                  class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex leading-[17px] font-semibold transition-colors duration-100 text-sm"
                   data-testid="FormLabel"
                   for="name"
                 >
@@ -1201,7 +1201,7 @@ exports[`UpdateWalletName > should show error message when name exceeds 42 chara
                 class="[&:focus-within_.FormLabel]:text-theme-danger-500 [&>.FormLabel]:text-theme-danger-500 flex min-w-0 flex-col"
               >
                 <label
-                  class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex text-sm leading-[17px] font-semibold transition-colors duration-100"
+                  class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex leading-[17px] font-semibold transition-colors duration-100 text-sm"
                   data-testid="FormLabel"
                   for="name"
                 >

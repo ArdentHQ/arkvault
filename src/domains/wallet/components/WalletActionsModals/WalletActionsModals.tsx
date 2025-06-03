@@ -16,7 +16,7 @@ export const WalletActionsModals = ({
 }: WalletActionsProperties) => {
 	const profile = useActiveProfile();
 	const { getWalletAlias } = useWalletAlias();
-	const { handleDelete } = useWalletActions(...wallets);
+	const { handleDelete } = useWalletActions({ wallets });
 
 	const hideActiveModal = useCallback(
 		(event?: React.MouseEvent<HTMLElement>) => {
