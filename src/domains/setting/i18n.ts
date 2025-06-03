@@ -11,8 +11,8 @@ export const translations = {
 				TITLE: "Viewing Mode",
 				VIEWING_MODES: {
 					DARK: "Dark",
-					LIGHT: "Light",
 					DIM: "Dim",
+					LIGHT: "Light",
 				},
 			},
 		},
@@ -75,8 +75,8 @@ export const translations = {
 				TITLE: "Viewing Mode",
 				VIEWING_MODES: {
 					DARK: "Dark",
-					LIGHT: "Light",
 					DIM: "Dim",
+					LIGHT: "Light",
 				},
 			},
 		},
