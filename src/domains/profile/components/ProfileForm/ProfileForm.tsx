@@ -142,7 +142,7 @@ export const ProfileForm = ({ defaultValues, onBack, onSubmit, shouldValidate, s
 									allowOverflow
 									className="sm:hidden"
 								/>
-								<ButtonGroup className="space-x-2 hidden sm:flex">
+								<ButtonGroup className="hidden space-x-2 sm:flex">
 									{viewingModes.map(({ icon, label, value }) => (
 										<ButtonGroupOption
 											key={value}

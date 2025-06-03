@@ -204,7 +204,9 @@ describe("Import Profile - Profile Form Step", () => {
 					shouldValidate={false}
 					onBack={vi.fn()}
 				/>
-			</EnvironmentProvider>, "xs");
+			</EnvironmentProvider>,
+			"xs",
+		);
 
 		await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__caret")[1]).toBeInTheDocument());
 		expect(screen.queryByTestId("ButtonGroup__option--0")).not.toBeInTheDocument();
