@@ -1,7 +1,7 @@
 import { Contracts } from "@/app/lib/profiles";
 import React, { FC, useCallback, useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Column } from "react-table";
 import { useFilteredContacts } from "./Contacts.helpers";
 import { ContactsHeader } from "./Contacts.blocks";
@@ -19,7 +19,7 @@ import { Button } from "@/app/components/Button";
 export const Contacts: FC = () => {
 	const { state } = useEnvironmentContext();
 
-	const history = useHistory();
+	const history = useNavigate();
 
 	const { isMdAndAbove } = useBreakpoint();
 

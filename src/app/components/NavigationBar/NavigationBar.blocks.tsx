@@ -1,7 +1,7 @@
 import { Contracts } from "@/app/lib/profiles";
 import React, { useCallback, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { generatePath, NavLink, useHistory } from "react-router-dom";
+import { generatePath, NavLink, useNavigate } from "react-router-dom";
 import cn from "classnames";
 import { NavigationBarFullProperties, NavigationBarLogoOnlyProperties } from "./NavigationBar.contracts";
 import { Button } from "@/app/components/Button";
@@ -58,7 +58,7 @@ const NavigationBarLogo: React.FC<NavigationBarLogoOnlyProperties> = ({
 	onClick,
 	variant = "default",
 }: NavigationBarLogoOnlyProperties) => {
-	const history = useHistory();
+	const history = useNavigate();
 	const { isXs } = useBreakpoint();
 
 	const defaultHandler = useCallback(() => {
@@ -200,7 +200,7 @@ const NavigationBarMobile = ({
 export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 	isBackDisabled,
 }: NavigationBarFullProperties) => {
-	const history = useHistory();
+	const history = useNavigate();
 	const profile = useActiveProfile();
 	const { t } = useTranslation();
 	const { openExternal } = useLink();

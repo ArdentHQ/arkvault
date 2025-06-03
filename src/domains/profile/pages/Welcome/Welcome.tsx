@@ -1,7 +1,7 @@
 import { Contracts } from "@/app/lib/profiles";
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
-import { matchPath, useHistory } from "react-router-dom";
+import { matchPath, useNavigate } from "react-router-dom";
 import { LocationState } from "router/router.types";
 import cn from "classnames";
 import { DropdownOption } from "@/app/components/Dropdown";
@@ -19,7 +19,7 @@ import { Button } from "@/app/components/Button";
 
 export const Welcome = () => {
 	const context = useEnvironmentContext();
-	const history = useHistory<LocationState>();
+	const history = useNavigate<LocationState>();
 	const [isThemeLoaded, setThemeLoaded] = useState(false);
 	const isProfileCardClickedOnce = useRef(false);
 

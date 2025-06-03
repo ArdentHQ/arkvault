@@ -3,7 +3,7 @@ import { Contracts, DTO } from "@/app/lib/profiles";
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import { FormStep } from "./FormStep";
 import { VoteLedgerReview } from "./LedgerReview";
@@ -43,7 +43,7 @@ enum Step {
 
 export const SendVote = () => {
 	const { env, persist } = useEnvironmentContext();
-	const history = useHistory();
+	const history = useNavigate();
 	const { t } = useTranslation();
 
 	const activeProfile = useActiveProfile();

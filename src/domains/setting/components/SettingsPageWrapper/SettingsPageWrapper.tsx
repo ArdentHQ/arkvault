@@ -1,6 +1,6 @@
 import { Contracts } from "@/app/lib/profiles";
 import React from "react";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import { useTranslation } from "react-i18next";
 import { Page, Section } from "@/app/components/Layout";
@@ -21,7 +21,7 @@ export const SettingsWrapper = ({
 	activeSettings: ActiveSettings;
 }) => {
 	const { menuItems } = useSettingsMenu();
-	const history = useHistory();
+	const history = useNavigate();
 	const { t } = useTranslation();
 
 	return (

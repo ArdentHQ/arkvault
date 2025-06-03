@@ -1,5 +1,5 @@
 import React, { useCallback, useLayoutEffect, useRef, useState } from "react";
-import { HashRouter, useHistory } from "react-router-dom";
+import { HashRouter, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useErrorBoundary } from "react-error-boundary";
 import { ToastContainer } from "react-toastify";
@@ -49,7 +49,7 @@ const AppRouter = ({ children }: { children: React.ReactNode }) => {
 const Main = () => {
 	const { env, persist, isEnvironmentBooted, setIsEnvironmentBooted } = useEnvironmentContext();
 	const isOnline = useNetworkStatus();
-	const history = useHistory();
+	const history = useNavigate();
 	const syncingMessageToastId = useRef<number | string>(undefined);
 
 	const { resetTheme } = useTheme();

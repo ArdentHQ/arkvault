@@ -1,4 +1,4 @@
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import { Contracts } from "@/app/lib/profiles";
 import { useCallback } from "react";
@@ -9,7 +9,7 @@ import { useSearchParametersValidation } from "@/app/hooks/use-search-parameters
 export const useDeeplink = () => {
 	const { env } = useEnvironmentContext();
 
-	const history = useHistory();
+	const history = useNavigate();
 	const queryParameters = useQueryParameters();
 	const { methods, buildSearchParametersError, validateSearchParameters } = useSearchParametersValidation();
 

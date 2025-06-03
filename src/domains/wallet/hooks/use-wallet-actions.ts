@@ -1,7 +1,7 @@
 /* eslint-disable sonarjs/cognitive-complexity */
 import { Contracts } from "@/app/lib/profiles";
 import React, { useCallback, useState } from "react";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { generatePath } from "react-router";
 import { DropdownOption } from "@/app/components/Dropdown";
 import { useEnvironmentContext } from "@/app/contexts";
@@ -20,7 +20,7 @@ export const useWalletActions = ({
 }) => {
 	const { persist } = useEnvironmentContext();
 	const profile = useActiveProfile();
-	const history = useHistory();
+	const history = useNavigate();
 	const { openExternal } = useLink();
 
 	const { removeSelectedAddresses } = usePortfolio({ profile });

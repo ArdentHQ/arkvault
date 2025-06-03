@@ -2,7 +2,7 @@ import { Contracts } from "@/app/lib/profiles";
 import cn from "classnames";
 import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import { Page, Section } from "@/app/components/Layout";
 import { useConfiguration, useEnvironmentContext } from "@/app/contexts";
@@ -29,7 +29,7 @@ export const Dashboard = ({
 	const [isUpdatingWallet, setIsUpdatingWallet] = useState(false);
 	const [showSignMessagePanel, setShowSignMessagePanel] = useState(false);
 
-	const history = useHistory();
+	const history = useNavigate();
 	const { t } = useTranslation();
 
 	const { env } = useEnvironmentContext();

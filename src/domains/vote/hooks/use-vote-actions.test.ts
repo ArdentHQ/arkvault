@@ -5,7 +5,7 @@ import { env, getMainsailProfileId } from "@/utils/testing-library";
 
 vi.mock("react-router-dom", async () => ({
 	...(await vi.importActual("react-router-dom")),
-	useHistory: () => ({
+	useNavigate: () => ({
 		push: vi.fn(),
 	}),
 }));

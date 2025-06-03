@@ -1,7 +1,7 @@
 import { Contracts } from "@/app/lib/profiles";
 import React, { useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import { Page, Section } from "@/app/components/Layout";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
@@ -21,7 +21,7 @@ enum Step {
 export const ImportProfile = () => {
 	const { env, persist } = useEnvironmentContext();
 	const { t } = useTranslation();
-	const history = useHistory();
+	const history = useNavigate();
 
 	const [activeTab, setActiveTab] = useState<Step>(Step.SelectFileStep);
 	const [fileFormat, setFileFormat] = useState(".wwe");

@@ -9,7 +9,7 @@ import { EncryptPasswordStep } from "@/domains/wallet/components/EncryptPassword
 import { SuccessStep } from "@/domains/portfolio/components/CreateWallet/SuccessStep";
 import { Button } from "@/app/components/Button";
 import { useEnvironmentContext } from "@/app/contexts";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useActiveProfile } from "@/app/hooks";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
@@ -32,7 +32,7 @@ export const CreateAddressesSidePanel = ({
 	onMountChange?: (mounted: boolean) => void;
 }): JSX.Element => {
 	const { persist } = useEnvironmentContext();
-	const history = useHistory();
+	const history = useNavigate();
 	const { t } = useTranslation();
 	const activeProfile = useActiveProfile();
 	const [activeTab, setActiveTab] = useState<CreateStep>(CreateStep.WalletOverviewStep);

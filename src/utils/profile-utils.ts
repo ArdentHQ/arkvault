@@ -21,9 +21,9 @@ export const getProfileById = (env: Environment, id: string) => {
 };
 
 export const getProfileFromUrl = (env: Environment, url: string) => {
-	const urlMatch = matchPath(url, { path: "/profiles/:profileId" });
-	const urlProfileId = (urlMatch?.params as any)?.profileId;
-	return getProfileById(env, urlProfileId);
+	const urlMatch = matchPath({ path: "/profiles/:profileId", end: true }, url);
+	const urlProfileId = urlMatch?.params?.profileId;
+	return getProfileById(env, urlProfileId!);
 };
 
 export const getProfileStoredPassword = (profile: Contracts.IProfile) => {

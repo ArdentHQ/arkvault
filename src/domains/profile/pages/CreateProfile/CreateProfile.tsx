@@ -1,7 +1,7 @@
 import { Contracts } from "@/app/lib/profiles";
 import React, { useLayoutEffect } from "react";
 import { Trans, useTranslation } from "react-i18next";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import { Header } from "@/app/components/Header";
 import { Page } from "@/app/components/Layout";
@@ -16,7 +16,7 @@ import { ProfilePaths } from "@/router/paths";
 export const CreateProfile = () => {
 	const { env, persist } = useEnvironmentContext();
 	const { t } = useTranslation();
-	const history = useHistory();
+	const history = useNavigate();
 
 	const { theme, resetTheme } = useTheme();
 	const { defaultCurrency } = useLocaleCurrency();

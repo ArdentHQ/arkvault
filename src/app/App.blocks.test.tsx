@@ -2,7 +2,7 @@
 import { createHashHistory } from "history";
 import React from "react";
 import userEvent from "@testing-library/user-event";
-import { Route, useHistory, Prompt } from "react-router-dom";
+import { Route, useNavigate, Prompt } from "react-router-dom";
 import { ErrorBoundary } from "react-error-boundary";
 import { AppRouter, Main } from "./App.blocks";
 import { env, getMainsailProfileId, render, screen, waitFor, act } from "@/utils/testing-library";
@@ -48,7 +48,7 @@ describe("App Router", () => {
 
 	it("should handle user confirmation modal", async () => {
 		const PromptComponent = () => {
-			const history = useHistory();
+			const history = useNavigate();
 			const goToRoot = () => history.push("/");
 
 			return (

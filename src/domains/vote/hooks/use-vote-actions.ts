@@ -1,5 +1,5 @@
 import { Contracts } from "@/app/lib/profiles";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import { generatePath } from "react-router";
 import { VoteValidatorProperties } from "@/domains/vote/components/ValidatorsTable/ValidatorsTable.contracts";
@@ -22,7 +22,7 @@ export const useVoteActions = ({
 	selectedNetwork,
 	hasWalletId,
 }: VoteActionsProperties) => {
-	const history = useHistory();
+	const history = useNavigate();
 
 	const navigateToSendVote = (unvotes: VoteValidatorProperties[], votes: VoteValidatorProperties[]) => {
 		const walletId = hasWalletId

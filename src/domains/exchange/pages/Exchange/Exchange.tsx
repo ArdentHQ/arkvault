@@ -17,7 +17,7 @@ import { toasts } from "@/app/services";
 import { upperFirst } from "@/app/lib/helpers";
 import { useActiveProfile } from "@/app/hooks";
 import { useExchangeContext } from "@/domains/exchange/contexts/Exchange";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useOrderStatus } from "@/domains/exchange/hooks/use-order-status";
 
 enum ExchangeView {
@@ -29,7 +29,7 @@ export const Exchange = () => {
 	const { t } = useTranslation();
 
 	const activeProfile = useActiveProfile();
-	const history = useHistory();
+	const history = useNavigate();
 
 	const [currentView, setCurrentView] = useState<ExchangeView>(ExchangeView.Exchanges);
 

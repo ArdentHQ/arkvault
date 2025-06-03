@@ -2,7 +2,7 @@ import { Contracts } from "@/app/lib/profiles";
 import React, { useMemo, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { ListenLedger } from "./Ledger/ListenLedger";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { InputPassword } from "@/app/components/Input";
@@ -108,7 +108,7 @@ export const LedgerAuthentication = ({
 	const { t } = useTranslation();
 
 	const [readyToConfirm, setReadyToConfirm] = useState(false);
-	const history = useHistory();
+	const history = useNavigate();
 
 	if (!readyToConfirm) {
 		return (

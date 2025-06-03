@@ -2,7 +2,7 @@ import { Services } from "@/app/lib/mainsail";
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useForm } from "react-hook-form";
-import { useHistory, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { FormStep } from "./FormStep";
 import { SuccessStep } from "./SuccessStep";
 import { Page, Section } from "@/app/components/Layout";
@@ -44,7 +44,7 @@ export const VerifyMessage = () => {
 	const activeProfile = useActiveProfile();
 	const activeWallet = useActiveWalletWhenNeeded(!!walletId);
 
-	const history = useHistory();
+	const history = useNavigate();
 
 	const initialState: Services.SignedMessage = {
 		message: queryParameters.get("message") || "",

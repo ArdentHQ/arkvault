@@ -37,7 +37,7 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 		wallet = profile.wallets().first();
 		goMock = vi.fn();
 
-		vi.spyOn(reactRouterDomMock, "useHistory").mockReturnValue({ go: goMock });
+		vi.spyOn(reactRouterDomMock, "useNavigate").mockReturnValue({ go: goMock });
 	});
 
 	it("should validate if mnemonic match the wallet address", async () => {

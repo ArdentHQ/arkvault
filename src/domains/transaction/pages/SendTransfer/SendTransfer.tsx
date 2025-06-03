@@ -1,7 +1,7 @@
 import { Contracts, DTO } from "@/app/lib/profiles";
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import { URLBuilder } from "@ardenthq/arkvault-url";
 import { FormStep } from "./FormStep";
@@ -39,7 +39,7 @@ import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
 const MAX_TABS = 5;
 
 export const SendTransfer = () => {
-	const history = useHistory();
+	const history = useNavigate();
 	const { t } = useTranslation();
 
 	const { env } = useEnvironmentContext();

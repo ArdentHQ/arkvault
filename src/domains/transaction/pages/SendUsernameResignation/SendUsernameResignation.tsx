@@ -1,7 +1,7 @@
 import { DTO } from "@/app/lib/profiles";
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import { useTranslation } from "react-i18next";
 import { FormStep } from "./FormStep";
@@ -31,7 +31,7 @@ enum Step {
 }
 
 export const SendUsernameResignation = () => {
-	const history = useHistory();
+	const history = useNavigate();
 	const { t } = useTranslation();
 
 	const form = useForm({ mode: "onChange" });

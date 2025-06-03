@@ -1,12 +1,12 @@
 import { Contracts } from "@/app/lib/profiles";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import { useEnvironmentContext } from "@/app/contexts";
 import { getProfileFromUrl } from "@/utils/profile-utils";
 
 export const useTimeFormat = () => {
 	const { env } = useEnvironmentContext();
-	const history = useHistory();
+	const history = useNavigate();
 
 	const defaultFormat = "DD.MM.YYYY h:mm A";
 

@@ -5,7 +5,7 @@ import {
 	getProfileStoredPassword,
 	hasIncompatibleLedgerWallets,
 } from "@/utils/profile-utils";
-import { matchPath, useHistory, useLocation } from "react-router-dom";
+import { matchPath, useNavigate, useLocation } from "react-router-dom";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useConfiguration, useEnvironmentContext } from "@/app/contexts";
 
@@ -214,7 +214,7 @@ export const useProfileSyncStatus = (profileId: string) => {
 export const useProfileRestore = (profileId: string) => {
 	const { shouldRestore, markAsRestored, setStatus } = useProfileSyncStatus(profileId);
 	const { persist, env } = useEnvironmentContext();
-	const history = useHistory();
+	const history = useNavigate();
 
 	const restoreProfile = async (profile: Contracts.IProfile, passwordInput?: string) => {
 		if (!shouldRestore(profile)) {
@@ -338,7 +338,7 @@ export const useProfileSynchronizer = ({
 	const [activeProfileId, setActiveProfileId] = useState<string | undefined>();
 	const lastPathname = useRef<string>(undefined);
 
-	const history = useHistory();
+	const history = useNavigate();
 
 	useProfileStatusWatcher({
 		onProfileSyncComplete,

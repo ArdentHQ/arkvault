@@ -1,7 +1,7 @@
 import { Contracts, DTO } from "@/app/lib/profiles";
 import React, { useEffect, useLayoutEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
-import { useHistory, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 import { useTranslation } from "react-i18next";
 import { SendRegistrationForm } from "./SendRegistration.contracts";
@@ -28,7 +28,7 @@ import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { useToggleFeeFields } from "@/domains/transaction/hooks/useToggleFeeFields";
 
 export const SendRegistration = () => {
-	const history = useHistory();
+	const history = useNavigate();
 	const { t } = useTranslation();
 
 	const [activeTab, setActiveTab] = useState(1);
