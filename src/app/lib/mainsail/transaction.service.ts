@@ -16,7 +16,6 @@ import { applyCryptoConfiguration } from "./config.js";
 import { AddressService } from "./address.service.js";
 import { SignedTransactionData } from "./signed-transaction.dto";
 import { ClientService } from "./client.service.js";
-import { LedgerService } from "./ledger.service.js";
 import { ConfigRepository } from "@/app/lib/mainsail";
 import { IProfile } from "@/app/lib/profiles/profile.contract.js";
 import { NetworkConfig } from "./contracts.js";

@@ -1,4 +1,5 @@
 /* eslint-disable unicorn/no-null */
+import { beforeAll } from "vitest";
 import { Networks } from "@/app/lib/mainsail";
 import { Profile } from "@/app/lib/profiles/profile";
 import { Wallet } from "@/app/lib/profiles/wallet";
@@ -14,20 +15,21 @@ import {
 	assertWallet,
 } from "./assertions";
 
+let profile: Profile;
+
 describe("#assertProfile", () => {
+	beforeAll(() => {
+		profile = new Profile(
+			{
+				data: "{}",
+				id: "id",
+				name: "John Doe",
+			},
+			env,
+		);
+	});
 	it("should pass with a profile instance", () => {
-		expect(() =>
-			assertProfile(
-				new Profile(
-					{
-						data: "{}",
-						id: "id",
-						name: "John Doe",
-					},
-					env,
-				),
-			),
-		).not.toThrow();
+		expect(() => assertProfile(profile)).not.toThrow();
 	});
 
 	it("should fail without a profile instance", () => {
@@ -50,7 +52,7 @@ describe("#assertProfile", () => {
 describe("#assertWallet", () => {
 	it("should pass with a wallet instance", () => {
 		// @ts-ignore
-		expect(() => assertWallet(new Wallet())).not.toThrow();
+		expect(() => assertWallet(new Wallet("id", {}, profile))).not.toThrow();
 	});
 
 	it("should fail without a profile instance", () => {
