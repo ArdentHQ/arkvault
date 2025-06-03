@@ -125,6 +125,10 @@ import SecretImportMethod from "./secret-import-method.svg?react";
 import AddressImportMethod from "./address-import-method.svg?react";
 import SettingsDark from "./settings-dark.svg?react";
 import SettingsLight from "./settings-light.svg?react";
+import CompletedLight from "./transactions/completed-light.svg?react";
+import CompletedDark from "./transactions/completed-dark.svg?react";
+import LedgerDark from "./ledger-dark.svg?react";
+import LedgerLight from "./ledger-light.svg?react";
 
 export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	...ArrowIcons,
@@ -156,6 +160,8 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	Cloud,
 	Code,
 	Completed,
+	CompletedDark,
+	CompletedLight,
 	ConfirmYourPassphrase,
 	ContactsDark,
 	ContactsLight,
@@ -197,8 +203,10 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	ImportWalletLight,
 	Ledger,
 	LedgerAlt,
+	LedgerDark,
 	LedgerImport,
 	LedgerImportMethod,
+	LedgerLight,
 	List,
 	LoaderLogo,
 	Lock,

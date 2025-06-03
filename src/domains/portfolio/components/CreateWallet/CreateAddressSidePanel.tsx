@@ -1,6 +1,6 @@
 import { DefaultTReturn, TOptions } from "i18next";
-import React, { useEffect, useMemo, useRef, useState } from "react";
-import { SidePanel } from "@/app/components/SidePanel/SidePanel";
+import React, { useEffect, useMemo, useState } from "react";
+import { SidePanel, SidePanelButtons } from "@/app/components/SidePanel/SidePanel";
 import { Form } from "@/app/components/Form";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { WalletOverviewStep } from "@/domains/portfolio/components/CreateWallet/WalletOverviewStep";
@@ -20,7 +20,6 @@ import { assertNetwork, assertString, assertWallet } from "@/utils/assertions";
 import { getDefaultAlias } from "@/domains/wallet/utils/get-default-alias";
 import { UpdateWalletName } from "@/domains/wallet/components/UpdateWalletName";
 import { Contracts } from "@/app/lib/profiles";
-import classNames from "classnames";
 import { CreateStep, useCreateStepHeaderConfig } from "./CreateAddressSidePanel.blocks";
 
 export const CreateAddressesSidePanel = ({
@@ -59,31 +58,8 @@ export const CreateAddressesSidePanel = ({
 	const [isGeneratingWallet, setIsGeneratingWallet] = useState(true);
 	const [_, setGenerationError] = useState<string | DefaultTReturn<TOptions>>("");
 	const [isEditAliasModalOpen, setIsEditAliasModalOpen] = useState(false);
-	const scrollContainerRef = useRef<HTMLDivElement | null>(null);
-	const [isScrollable, setIsScrollable] = useState(false);
+
 	const { title, subtitle, titleIcon } = useCreateStepHeaderConfig(activeTab);
-
-	useEffect(() => {
-		if (!open) {
-			return;
-		}
-
-		const checkScrollable = () => {
-			const el = scrollContainerRef.current;
-			if (el) {
-				setIsScrollable(el.scrollHeight > el.clientHeight);
-			}
-		};
-
-		checkScrollable();
-
-		const resizeObserver = new ResizeObserver(() => checkScrollable());
-		if (scrollContainerRef.current) {
-			resizeObserver.observe(scrollContainerRef.current);
-		}
-
-		return () => resizeObserver.disconnect();
-	}, [open]);
 
 	useEffect(() => {
 		register("network", { required: true });
@@ -257,14 +233,69 @@ export const CreateAddressesSidePanel = ({
 			open={open}
 			onOpenChange={onOpenChange}
 			dataTestId="CreateAddressSidePanel"
-			scrollRef={scrollContainerRef}
 			onMountChange={onMountChange}
 			hasSteps
 			totalSteps={allSteps.length}
 			activeStep={activeTab}
+			footer={
+				<SidePanelButtons data-testid="CreateAddressSidePanel__footer">
+					{activeTab <= CreateStep.EncryptPasswordStep && (
+						<>
+							{activeTab < CreateStep.SuccessStep && activeTab !== CreateStep.WalletOverviewStep && (
+								<Button
+									data-testid="CreateWallet__back-button"
+									disabled={isGeneratingWallet}
+									variant="secondary"
+									onClick={handleBack}
+								>
+									{t("COMMON.BACK")}
+								</Button>
+							)}
+
+							{activeTab < CreateStep.EncryptPasswordStep && (
+								<Button
+									data-testid="CreateWallet__continue-button"
+									disabled={isDirty ? !isValid || isGeneratingWallet || isNextDisabled : true}
+									isLoading={isGeneratingWallet}
+									onClick={() => handleNext()}
+								>
+									{t("COMMON.CONTINUE")}
+								</Button>
+							)}
+
+							{activeTab === CreateStep.EncryptPasswordStep && (
+								<Button
+									data-testid="CreateWallet__continue-encryption-button"
+									disabled={
+										!isValid ||
+										isGeneratingWallet ||
+										!encryptionPassword ||
+										!confirmEncryptionPassword
+									}
+									isLoading={isGeneratingWallet}
+									onClick={handlePasswordSubmit}
+								>
+									{t("COMMON.CONTINUE")}
+								</Button>
+							)}
+						</>
+					)}
+
+					{activeTab === CreateStep.SuccessStep && (
+						<Button
+							disabled={isSubmitting}
+							type="submit"
+							form="CreateWallet__form"
+							data-testid="CreateWallet__finish-button"
+						>
+							{t("COMMON.CLOSE")}
+						</Button>
+					)}
+				</SidePanelButtons>
+			}
 		>
-			<Form context={form} onSubmit={handleFinish} className="space-y-0">
-				<Tabs activeId={activeTab} className="pb-20">
+			<Form context={form} onSubmit={handleFinish} className="space-y-0" id="CreateWallet__form">
+				<Tabs activeId={activeTab}>
 					<div>
 						<TabPanel tabId={CreateStep.WalletOverviewStep}>
 							<WalletOverviewStep isGeneratingWallet={isGeneratingWallet} />
@@ -283,64 +314,6 @@ export const CreateAddressesSidePanel = ({
 						</TabPanel>
 					</div>
 				</Tabs>
-
-				<div
-					data-testid="CreateAddressSidePanel__footer"
-					className={classNames(
-						"bg-theme-background fixed inset-x-0 bottom-0 mr-[5px] flex w-full items-center justify-end p-2 px-4 sm:justify-between sm:px-6 sm:py-6 md:px-8",
-						{ "shadow-footer-side-panel": isScrollable },
-					)}
-				>
-					<div className="flex w-full gap-3 sm:justify-end [&>button]:flex-1 sm:[&>button]:flex-none">
-						{activeTab <= CreateStep.EncryptPasswordStep && (
-							<>
-								{activeTab < CreateStep.SuccessStep && activeTab !== CreateStep.WalletOverviewStep && (
-									<Button
-										data-testid="CreateWallet__back-button"
-										disabled={isGeneratingWallet}
-										variant="secondary"
-										onClick={handleBack}
-									>
-										{t("COMMON.BACK")}
-									</Button>
-								)}
-
-								{activeTab < CreateStep.EncryptPasswordStep && (
-									<Button
-										data-testid="CreateWallet__continue-button"
-										disabled={isDirty ? !isValid || isGeneratingWallet || isNextDisabled : true}
-										isLoading={isGeneratingWallet}
-										onClick={() => handleNext()}
-									>
-										{t("COMMON.CONTINUE")}
-									</Button>
-								)}
-
-								{activeTab === CreateStep.EncryptPasswordStep && (
-									<Button
-										data-testid="CreateWallet__continue-encryption-button"
-										disabled={
-											!isValid ||
-											isGeneratingWallet ||
-											!encryptionPassword ||
-											!confirmEncryptionPassword
-										}
-										isLoading={isGeneratingWallet}
-										onClick={handlePasswordSubmit}
-									>
-										{t("COMMON.CONTINUE")}
-									</Button>
-								)}
-							</>
-						)}
-
-						{activeTab === CreateStep.SuccessStep && (
-							<Button disabled={isSubmitting} type="submit" data-testid="CreateWallet__finish-button">
-								{t("COMMON.CLOSE")}
-							</Button>
-						)}
-					</div>
-				</div>
 			</Form>
 
 			{renderUpdateWalletNameModal()}

@@ -36,6 +36,7 @@ export const PortfolioHeader = ({
 	onUpdate,
 	onCreateAddress,
 	onImportAddress,
+	onSignMessage,
 	hasFocus,
 }: {
 	profile: Contracts.IProfile;
@@ -46,6 +47,7 @@ export const PortfolioHeader = ({
 	onUpdate?: (status: boolean) => void;
 	onCreateAddress?: (open: boolean) => void;
 	onImportAddress?: (open: boolean) => void;
+	onSignMessage?: (open: boolean) => void;
 	hasFocus?: boolean;
 }) => {
 	const [showAddressesPanel, setShowAddressesPanel] = useState(false);
@@ -66,7 +68,15 @@ export const PortfolioHeader = ({
 	assertWallet(wallet);
 
 	const isRestored = wallet.hasBeenFullyRestored();
-	const { activeModal, setActiveModal, handleSelectOption, handleSend } = useWalletActions(...selectedWallets);
+	const handleSignMessage = () => {
+		onSignMessage?.(true);
+	};
+
+	const { activeModal, setActiveModal, handleSelectOption, handleSend } = useWalletActions({
+		handleSignMessage,
+		wallets: selectedWallets,
+	});
+
 	const { primaryOptions, secondaryOptions, additionalOptions, registrationOptions } =
 		useWalletOptions(selectedWallets);
 

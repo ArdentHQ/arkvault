@@ -14,7 +14,6 @@ import {
 	within,
 	mockProfileWithPublicAndTestNetworks,
 	getMainsailProfileId,
-	act,
 } from "@/utils/testing-library";
 import * as usePortfolio from "@/domains/portfolio/hooks/use-portfolio";
 import { CreateAddressesSidePanel } from "./CreateAddressSidePanel";
@@ -460,87 +459,5 @@ describe("CreateAddressSidePanel", () => {
 		await userEvent.click(screen.getByTestId("UpdateWalletName__cancel"));
 
 		await waitFor(() => expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument());
-	});
-
-	it("should detect scrollable content and apply footer shadow", async () => {
-		let resizeObserverCallback: ResizeObserverCallback;
-
-		const observe = vi.fn();
-		const disconnect = vi.fn();
-
-		global.ResizeObserver = vi.fn((cb) => {
-			resizeObserverCallback = cb;
-			return { disconnect, observe };
-		}) as unknown as typeof ResizeObserver;
-
-		const history = createHashHistory();
-		const createURL = `/profiles/${fixtureProfileId}/dashboard`;
-		history.push(createURL);
-
-		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<CreateAddressesSidePanel open={true} onOpenChange={vi.fn()} />
-			</Route>,
-			{
-				history,
-				route: createURL,
-			},
-		);
-
-		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeInTheDocument();
-
-		const scrollableElement = screen.getByTestId("SidePanel__scrollable-content");
-
-		Object.defineProperty(scrollableElement, "scrollHeight", { configurable: true, get: () => 1000 });
-		Object.defineProperty(scrollableElement, "clientHeight", { configurable: true, get: () => 500 });
-
-		act(() => {
-			resizeObserverCallback([{ target: scrollableElement } as ResizeObserverEntry], {} as ResizeObserver);
-		});
-
-		expect(screen.getByTestId("CreateAddressSidePanel__footer")).toBeInTheDocument();
-
-		expect(screen.getByTestId("CreateAddressSidePanel__footer")).toHaveClass("shadow-footer-side-panel");
-	});
-
-	it("should not apply footer shadow when content is not scrollable", async () => {
-		let resizeObserverCallback: ResizeObserverCallback;
-
-		const observe = vi.fn();
-		const disconnect = vi.fn();
-
-		global.ResizeObserver = vi.fn((cb) => {
-			resizeObserverCallback = cb;
-			return { disconnect, observe };
-		}) as unknown as typeof ResizeObserver;
-
-		const history = createHashHistory();
-		const createURL = `/profiles/${fixtureProfileId}/dashboard`;
-		history.push(createURL);
-
-		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<CreateAddressesSidePanel open={true} onOpenChange={vi.fn()} />
-			</Route>,
-			{
-				history,
-				route: createURL,
-			},
-		);
-
-		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeInTheDocument();
-
-		const scrollableElement = screen.getByTestId("SidePanel__scrollable-content");
-
-		Object.defineProperty(scrollableElement, "scrollHeight", { configurable: true, get: () => 500 });
-		Object.defineProperty(scrollableElement, "clientHeight", { configurable: true, get: () => 1000 });
-
-		act(() => {
-			resizeObserverCallback([{ target: scrollableElement }], {} as ResizeObserver);
-		});
-
-		expect(screen.getByTestId("CreateAddressSidePanel__footer")).toBeInTheDocument();
-
-		expect(screen.getByTestId("CreateAddressSidePanel__footer")).not.toHaveClass("shadow-footer-side-panel");
 	});
 });

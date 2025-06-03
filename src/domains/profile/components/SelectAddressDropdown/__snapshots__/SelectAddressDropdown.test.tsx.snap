@@ -1,0 +1,446 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`SelectAddressDropdown > should render disabled 1`] = `
+<div>
+  <div>
+    <div
+      class="relative flex w-full items-center text-left"
+      data-testid="SelectAddressDropdown__wrapper"
+    >
+      <div
+        class="relative w-full"
+        data-testid="SelectDropdown"
+      >
+        <div
+          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+        >
+          <div
+            class="relative flex h-full flex-1"
+          >
+            <input
+              autocomplete="off"
+              class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
+              data-testid="select-list__input"
+              readonly=""
+              tabindex="-1"
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+        <div
+          class="w-full"
+        >
+          <div
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            aria-owns="SelectAddressDropdown__dropdown-menu"
+            role="combobox"
+          >
+            <div>
+              <label
+                for="SelectAddressDropdown__dropdown-input"
+                id="SelectAddressDropdown__dropdown-label"
+              />
+              <div
+                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+              >
+                <div
+                  class="relative flex h-full flex-1"
+                >
+                  <input
+                    aria-autocomplete="list"
+                    aria-controls="SelectAddressDropdown__dropdown-menu"
+                    aria-labelledby="SelectAddressDropdown__dropdown-label"
+                    autocomplete="off"
+                    class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none sm:text-base! cursor-default text-theme-secondary-text"
+                    data-testid="SelectDropdown__input"
+                    disabled=""
+                    id="SelectAddressDropdown__dropdown-input"
+                    placeholder="Address"
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              aria-labelledby="SelectAddressDropdown__dropdown-label"
+              id="SelectAddressDropdown__dropdown-menu"
+              role="listbox"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`SelectAddressDropdown > should render empty 1`] = `
+<div>
+  <div>
+    <div
+      class="relative flex w-full items-center text-left"
+      data-testid="SelectAddressDropdown__wrapper"
+    >
+      <div
+        class="relative w-full"
+        data-testid="SelectDropdown"
+      >
+        <div
+          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+        >
+          <div
+            class="relative flex h-full flex-1"
+          >
+            <input
+              autocomplete="off"
+              class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
+              data-testid="select-list__input"
+              readonly=""
+              tabindex="-1"
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+        <div
+          class="w-full"
+        >
+          <div
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            aria-owns="SelectAddressDropdown__dropdown-menu"
+            role="combobox"
+          >
+            <div>
+              <label
+                for="SelectAddressDropdown__dropdown-input"
+                id="SelectAddressDropdown__dropdown-label"
+              />
+              <div
+                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+              >
+                <div
+                  class="relative flex h-full flex-1"
+                >
+                  <input
+                    aria-autocomplete="list"
+                    aria-controls="SelectAddressDropdown__dropdown-menu"
+                    aria-labelledby="SelectAddressDropdown__dropdown-label"
+                    autocomplete="off"
+                    class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base! cursor-default"
+                    data-testid="SelectDropdown__input"
+                    id="SelectAddressDropdown__dropdown-input"
+                    placeholder="Address"
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              aria-labelledby="SelectAddressDropdown__dropdown-label"
+              id="SelectAddressDropdown__dropdown-menu"
+              role="listbox"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`SelectAddressDropdown > should render invalid 1`] = `
+<div>
+  <div>
+    <div
+      class="relative flex w-full items-center text-left"
+      data-testid="SelectAddressDropdown__wrapper"
+    >
+      <div
+        class="relative w-full"
+        data-testid="SelectDropdown"
+      >
+        <div
+          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+        >
+          <div
+            class="relative flex h-full flex-1"
+          >
+            <input
+              aria-invalid="true"
+              autocomplete="off"
+              class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
+              data-testid="select-list__input"
+              readonly=""
+              tabindex="-1"
+              type="text"
+              value="0x659A76be283644AEc2003aa8ba26485047fd1BFB"
+            />
+          </div>
+          <div
+            class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-danger-500"
+            data-testid="Input__addon-end"
+          >
+            <div
+              class=""
+            >
+              <span
+                data-testid="Input__error"
+              >
+                <div
+                  class="text-theme-danger-500"
+                >
+                  <div
+                    style="height: 20px; width: 20px;"
+                  >
+                    <svg
+                      id="circle-exclamation-mark"
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <circle
+                          cx="10"
+                          cy="10"
+                          r="9"
+                          stroke-miterlimit="10"
+                        />
+                        <path
+                          d="M10 10.5v-5"
+                          stroke-linecap="round"
+                          stroke-miterlimit="10"
+                        />
+                        <path
+                          d="M10 14h0"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </div>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="w-full"
+        >
+          <div
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            aria-owns="SelectAddressDropdown__dropdown-menu"
+            role="combobox"
+          >
+            <div>
+              <label
+                for="SelectAddressDropdown__dropdown-input"
+                id="SelectAddressDropdown__dropdown-label"
+              />
+              <div
+                class="invisible fixed w-auto whitespace-nowrap"
+              >
+                0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                …
+              </div>
+              <div
+                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+              >
+                <div
+                  class="relative flex h-full flex-1"
+                >
+                  <input
+                    aria-autocomplete="list"
+                    aria-controls="SelectAddressDropdown__dropdown-menu"
+                    aria-invalid="true"
+                    aria-labelledby="SelectAddressDropdown__dropdown-label"
+                    autocomplete="off"
+                    class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
+                    data-testid="SelectDropdown__input"
+                    id="SelectAddressDropdown__dropdown-input"
+                    placeholder="Address"
+                    type="text"
+                    value="0x659A76be283644AEc2003aa8ba26485047fd1BFB"
+                  />
+                  <span
+                    class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
+                    data-testid="Input__suggestion"
+                  >
+                    <span
+                      class="truncate"
+                    >
+                      0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                    </span>
+                  </span>
+                </div>
+                <div
+                  class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-danger-500"
+                  data-testid="Input__addon-end"
+                >
+                  <div
+                    class=""
+                  >
+                    <span
+                      data-testid="Input__error"
+                    >
+                      <div
+                        class="text-theme-danger-500"
+                      >
+                        <div
+                          style="height: 20px; width: 20px;"
+                        >
+                          <svg
+                            id="circle-exclamation-mark"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                            >
+                              <circle
+                                cx="10"
+                                cy="10"
+                                r="9"
+                                stroke-miterlimit="10"
+                              />
+                              <path
+                                d="M10 10.5v-5"
+                                stroke-linecap="round"
+                                stroke-miterlimit="10"
+                              />
+                              <path
+                                d="M10 14h0"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </g>
+                          </svg>
+                        </div>
+                      </div>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              aria-labelledby="SelectAddressDropdown__dropdown-label"
+              id="SelectAddressDropdown__dropdown-menu"
+              role="listbox"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`SelectAddressDropdown > should render with preselected address 1`] = `
+<div>
+  <div>
+    <div
+      class="relative flex w-full items-center text-left"
+      data-testid="SelectAddressDropdown__wrapper"
+    >
+      <div
+        class="relative w-full"
+        data-testid="SelectDropdown"
+      >
+        <div
+          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+        >
+          <div
+            class="relative flex h-full flex-1"
+          >
+            <input
+              autocomplete="off"
+              class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
+              data-testid="select-list__input"
+              readonly=""
+              tabindex="-1"
+              type="text"
+              value="0x659A76be283644AEc2003aa8ba26485047fd1BFB"
+            />
+          </div>
+        </div>
+        <div
+          class="w-full"
+        >
+          <div
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            aria-owns="SelectAddressDropdown__dropdown-menu"
+            role="combobox"
+          >
+            <div>
+              <label
+                for="SelectAddressDropdown__dropdown-input"
+                id="SelectAddressDropdown__dropdown-label"
+              />
+              <div
+                class="invisible fixed w-auto whitespace-nowrap"
+              >
+                0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                …
+              </div>
+              <div
+                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+              >
+                <div
+                  class="relative flex h-full flex-1"
+                >
+                  <input
+                    aria-autocomplete="list"
+                    aria-controls="SelectAddressDropdown__dropdown-menu"
+                    aria-labelledby="SelectAddressDropdown__dropdown-label"
+                    autocomplete="off"
+                    class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
+                    data-testid="SelectDropdown__input"
+                    id="SelectAddressDropdown__dropdown-input"
+                    placeholder="Address"
+                    type="text"
+                    value="0x659A76be283644AEc2003aa8ba26485047fd1BFB"
+                  />
+                  <span
+                    class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
+                    data-testid="Input__suggestion"
+                  >
+                    <span
+                      class="truncate"
+                    >
+                      0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                    </span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div
+              aria-labelledby="SelectAddressDropdown__dropdown-label"
+              id="SelectAddressDropdown__dropdown-menu"
+              role="listbox"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

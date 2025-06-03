@@ -5,11 +5,9 @@ import { createHashHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
 
-import { SignMessage } from "./SignMessage";
 import { translations as messageTranslations } from "@/domains/message/i18n";
 import {
 	env,
-	getMainsailProfileId,
 	render,
 	screen,
 	waitFor,
@@ -17,10 +15,9 @@ import {
 	triggerMessageSignOnce,
 	MAINSAIL_MNEMONICS,
 } from "@/utils/testing-library";
+import { SignMessageSidePanel } from "./SignMessageSidePanel";
 
 const history = createHashHistory();
-
-const walletUrl = (walletId: string) => `/profiles/${getMainsailProfileId()}/wallets/${walletId}/sign-message`;
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
@@ -34,13 +31,13 @@ const signMessage = "Hello World";
 
 const expectHeading = async (text: string) => {
 	await waitFor(() => {
-		expect(screen.findByRole("heading", { name: text })).toBeDefined();
+		expect(screen.getByTestId("SidePanel__title")).toHaveTextContent(text);
 	});
 };
 
 describe("SignMessage with ledger", () => {
 	beforeAll(async () => {
-		profile = env.profiles().findById(getMainsailProfileId());
+		profile = await env.profiles().create("Test");
 
 		wallet = await profile.walletFactory().fromMnemonicWithBIP39({
 			mnemonic,
@@ -51,8 +48,14 @@ describe("SignMessage with ledger", () => {
 		await triggerMessageSignOnce(wallet);
 	});
 
+	afterAll(() => {
+		env.profiles().forget(profile.id());
+	});
+
 	beforeEach(() => {
-		history.push(walletUrl(wallet.id()));
+		const dashboardUrl = `/profiles/${profile.id()}/dashboard`;
+
+		history.push(dashboardUrl);
 	});
 
 	it("should display error step if user rejects", async () => {
@@ -60,27 +63,32 @@ describe("SignMessage with ledger", () => {
 
 		const consoleErrorMock = vi.spyOn(console, "error").mockImplementation(() => void 0);
 
-		const signMessageSpy = vi.spyOn(wallet.ledger(), "signMessage").mockImplementation(() => {
-			throw new Error("Condition of use not satisfied");
+		const ledgerSpy = vi.spyOn(profile, "ledger").mockReturnValue({
+			connect: vi.fn().mockResolvedValue(void 0),
+			getPublicKey: vi.fn().mockResolvedValue(wallet.publicKey()!),
+			getVersion: vi.fn().mockResolvedValue("2.1.0"),
+			signMessage: vi.fn().mockImplementation(() => {
+				throw new Error("Condition of use not satisfied");
+			}),
+			slip44: vi.fn().mockReturnValue(111),
 		});
-
-		const getVersionMock = vi.spyOn(wallet.ledger(), "getVersion").mockResolvedValue("2.1.0");
-
-		const getPublicKeySpy = vi.spyOn(wallet.ledger(), "getPublicKey").mockResolvedValue(wallet.publicKey()!);
 
 		const ledgerListenMock = mockNanoXTransport();
 
+		const onOpenChangeMock = vi.fn();
+
 		render(
-			<Route path="/profiles/:profileId/wallets/:walletId/sign-message">
-				<SignMessage />
+			<Route path="/profiles/:profileId/dashboard">
+				<SignMessageSidePanel open={true} onOpenChange={onOpenChangeMock} onMountChange={vi.fn()} />,
 			</Route>,
 			{
 				history,
-				route: walletUrl(wallet.id()),
 			},
 		);
 
 		await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
+
+		// The profile only have one address so we dont need to select any address
 
 		await userEvent.type(messageInput(), signMessage);
 
@@ -90,24 +98,18 @@ describe("SignMessage with ledger", () => {
 
 		await waitFor(() => expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.ERROR_STEP.TITLE));
 
-		const historySpy = vi.spyOn(history, "push");
-
 		await waitFor(() => {
 			expect(screen.getByTestId("ErrorStep__close-button")).toBeInTheDocument();
 		});
 
 		await userEvent.click(screen.getByTestId("ErrorStep__close-button"));
 
-		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/dashboard`);
+		expect(onOpenChangeMock).toHaveBeenCalledWith(false);
 
-		historySpy.mockRestore();
-
-		signMessageSpy.mockRestore();
+		ledgerSpy.mockRestore();
 		isLedgerMock.mockRestore();
-		ledgerListenMock.mockRestore();
-		getPublicKeySpy.mockRestore();
 		consoleErrorMock.mockRestore();
-		getVersionMock.mockRestore();
+		ledgerListenMock.mockRestore();
 	});
 
 	it.skip("should sign message with a ledger wallet", async () => {
@@ -132,16 +134,17 @@ describe("SignMessage with ledger", () => {
 		const ledgerListenMock = mockNanoXTransport();
 
 		render(
-			<Route path="/profiles/:profileId/wallets/:walletId/sign-message">
-				<SignMessage />
+			<Route path="/profiles/:profileId/dashboard">
+				<SignMessageSidePanel open={true} onOpenChange={vi.fn()} onMountChange={vi.fn()} />,
 			</Route>,
 			{
 				history,
-				route: walletUrl(wallet.id()),
 			},
 		);
 
 		await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
+
+		// The profile only have one address so we dont need to select any address
 
 		expect(
 			screen.getByText(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_LEDGER),
