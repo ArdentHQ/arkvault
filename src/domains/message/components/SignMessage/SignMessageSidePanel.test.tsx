@@ -8,7 +8,6 @@ import { SignMessageSidePanel } from "./SignMessageSidePanel";
 import { translations as messageTranslations } from "@/domains/message/i18n";
 import { env, render, screen, waitFor, triggerMessageSignOnce, MAINSAIL_MNEMONICS } from "@/utils/testing-library";
 import { afterAll, expect, vi } from "vitest";
-import { wait } from "@testing-library/user-event/dist/cjs/utils/index.js";
 
 const history = createHashHistory();
 
