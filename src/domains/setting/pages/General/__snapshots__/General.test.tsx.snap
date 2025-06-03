@@ -2187,7 +2187,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                 class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-medium"
                                 data-testid="list-divided-item__label--description"
                               >
-                                Choose a light or dark viewing mode.
+                                Choose a light / dark / dim viewing mode.
                               </span>
                             </div>
                             <div
@@ -2288,6 +2288,62 @@ exports[`General Settings > should disable submit button when profile is not res
                                         class="ml-2 hidden sm:inline"
                                       >
                                         Dark
+                                      </span>
+                                    </div>
+                                  </button>
+                                  <button
+                                    aria-checked="false"
+                                    aria-label="dim"
+                                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
+                                    data-testid="ButtonGroupOption"
+                                    role="radio"
+                                    type="button"
+                                  >
+                                    <div
+                                      class="flex items-center px-2"
+                                    >
+                                      <div>
+                                        <div
+                                          style="height: 20px; width: 20px;"
+                                        >
+                                          <svg
+                                            fill="none"
+                                            style="height: 100%; width: 100%;"
+                                            viewBox="0 0 21 20"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                          >
+                                            <path
+                                              clip-rule="evenodd"
+                                              d="M16.0397 7.23438C16.0314 9.40822 17.092 10.6442 19.5012 10.6959C17.2646 10.6876 16.1532 11.8876 16.0397 14.1574C16.0203 12.0159 15.0612 10.6931 12.5781 10.6959C14.8 10.6645 16.0314 9.59284 16.0397 7.23438Z"
+                                              fill-rule="evenodd"
+                                              stroke="currentColor"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              stroke-width="1.6"
+                                            />
+                                            <path
+                                              clip-rule="evenodd"
+                                              d="M8.45474 1C8.44274 4.06277 9.93627 5.8 13.3304 5.87661C10.18 5.86461 8.61443 7.55477 8.45474 10.7523C8.42797 7.73569 7.07566 5.872 3.57812 5.87661C6.70735 5.83231 8.44274 4.32215 8.45474 1Z"
+                                              fill-rule="evenodd"
+                                              stroke="currentColor"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              stroke-width="1.6"
+                                            />
+                                            <path
+                                              d="M13.3615 16.3343C11.6807 18.6036 8.73895 19.5466 6.05212 18.6774C3.3653 17.8082 1.53322 15.3208 1.50001 12.4971C1.49744 11.2122 1.88006 9.95595 2.59847 8.89062"
+                                              stroke="currentColor"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              stroke-width="1.6"
+                                            />
+                                          </svg>
+                                        </div>
+                                      </div>
+                                      <span
+                                        class="ml-2 hidden sm:inline"
+                                      >
+                                        Dim
                                       </span>
                                     </div>
                                   </button>
@@ -4757,7 +4813,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                 class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-medium"
                                 data-testid="list-divided-item__label--description"
                               >
-                                Choose a light or dark viewing mode.
+                                Choose a light / dark / dim viewing mode.
                               </span>
                             </div>
                             <div
@@ -4858,6 +4914,62 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                         class="ml-2 hidden sm:inline"
                                       >
                                         Dark
+                                      </span>
+                                    </div>
+                                  </button>
+                                  <button
+                                    aria-checked="false"
+                                    aria-label="dim"
+                                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
+                                    data-testid="ButtonGroupOption"
+                                    role="radio"
+                                    type="button"
+                                  >
+                                    <div
+                                      class="flex items-center px-2"
+                                    >
+                                      <div>
+                                        <div
+                                          style="height: 20px; width: 20px;"
+                                        >
+                                          <svg
+                                            fill="none"
+                                            style="height: 100%; width: 100%;"
+                                            viewBox="0 0 21 20"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                          >
+                                            <path
+                                              clip-rule="evenodd"
+                                              d="M16.0397 7.23438C16.0314 9.40822 17.092 10.6442 19.5012 10.6959C17.2646 10.6876 16.1532 11.8876 16.0397 14.1574C16.0203 12.0159 15.0612 10.6931 12.5781 10.6959C14.8 10.6645 16.0314 9.59284 16.0397 7.23438Z"
+                                              fill-rule="evenodd"
+                                              stroke="currentColor"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              stroke-width="1.6"
+                                            />
+                                            <path
+                                              clip-rule="evenodd"
+                                              d="M8.45474 1C8.44274 4.06277 9.93627 5.8 13.3304 5.87661C10.18 5.86461 8.61443 7.55477 8.45474 10.7523C8.42797 7.73569 7.07566 5.872 3.57812 5.87661C6.70735 5.83231 8.44274 4.32215 8.45474 1Z"
+                                              fill-rule="evenodd"
+                                              stroke="currentColor"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              stroke-width="1.6"
+                                            />
+                                            <path
+                                              d="M13.3615 16.3343C11.6807 18.6036 8.73895 19.5466 6.05212 18.6774C3.3653 17.8082 1.53322 15.3208 1.50001 12.4971C1.49744 11.2122 1.88006 9.95595 2.59847 8.89062"
+                                              stroke="currentColor"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              stroke-width="1.6"
+                                            />
+                                          </svg>
+                                        </div>
+                                      </div>
+                                      <span
+                                        class="ml-2 hidden sm:inline"
+                                      >
+                                        Dim
                                       </span>
                                     </div>
                                   </button>
@@ -7281,7 +7393,7 @@ exports[`General Settings > should render 1`] = `
                                 class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-medium"
                                 data-testid="list-divided-item__label--description"
                               >
-                                Choose a light or dark viewing mode.
+                                Choose a light / dark / dim viewing mode.
                               </span>
                             </div>
                             <div
@@ -7382,6 +7494,62 @@ exports[`General Settings > should render 1`] = `
                                         class="ml-2 hidden sm:inline"
                                       >
                                         Dark
+                                      </span>
+                                    </div>
+                                  </button>
+                                  <button
+                                    aria-checked="false"
+                                    aria-label="dim"
+                                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
+                                    data-testid="ButtonGroupOption"
+                                    role="radio"
+                                    type="button"
+                                  >
+                                    <div
+                                      class="flex items-center px-2"
+                                    >
+                                      <div>
+                                        <div
+                                          style="height: 20px; width: 20px;"
+                                        >
+                                          <svg
+                                            fill="none"
+                                            style="height: 100%; width: 100%;"
+                                            viewBox="0 0 21 20"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                          >
+                                            <path
+                                              clip-rule="evenodd"
+                                              d="M16.0397 7.23438C16.0314 9.40822 17.092 10.6442 19.5012 10.6959C17.2646 10.6876 16.1532 11.8876 16.0397 14.1574C16.0203 12.0159 15.0612 10.6931 12.5781 10.6959C14.8 10.6645 16.0314 9.59284 16.0397 7.23438Z"
+                                              fill-rule="evenodd"
+                                              stroke="currentColor"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              stroke-width="1.6"
+                                            />
+                                            <path
+                                              clip-rule="evenodd"
+                                              d="M8.45474 1C8.44274 4.06277 9.93627 5.8 13.3304 5.87661C10.18 5.86461 8.61443 7.55477 8.45474 10.7523C8.42797 7.73569 7.07566 5.872 3.57812 5.87661C6.70735 5.83231 8.44274 4.32215 8.45474 1Z"
+                                              fill-rule="evenodd"
+                                              stroke="currentColor"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              stroke-width="1.6"
+                                            />
+                                            <path
+                                              d="M13.3615 16.3343C11.6807 18.6036 8.73895 19.5466 6.05212 18.6774C3.3653 17.8082 1.53322 15.3208 1.50001 12.4971C1.49744 11.2122 1.88006 9.95595 2.59847 8.89062"
+                                              stroke="currentColor"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              stroke-width="1.6"
+                                            />
+                                          </svg>
+                                        </div>
+                                      </div>
+                                      <span
+                                        class="ml-2 hidden sm:inline"
+                                      >
+                                        Dim
                                       </span>
                                     </div>
                                   </button>
@@ -9806,7 +9974,7 @@ exports[`General Settings > should update profile 1`] = `
                                 class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-medium"
                                 data-testid="list-divided-item__label--description"
                               >
-                                Choose a light or dark viewing mode.
+                                Choose a light / dark / dim viewing mode.
                               </span>
                             </div>
                             <div
@@ -9907,6 +10075,62 @@ exports[`General Settings > should update profile 1`] = `
                                         class="ml-2 hidden sm:inline"
                                       >
                                         Dark
+                                      </span>
+                                    </div>
+                                  </button>
+                                  <button
+                                    aria-checked="false"
+                                    aria-label="dim"
+                                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
+                                    data-testid="ButtonGroupOption"
+                                    role="radio"
+                                    type="button"
+                                  >
+                                    <div
+                                      class="flex items-center px-2"
+                                    >
+                                      <div>
+                                        <div
+                                          style="height: 20px; width: 20px;"
+                                        >
+                                          <svg
+                                            fill="none"
+                                            style="height: 100%; width: 100%;"
+                                            viewBox="0 0 21 20"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                          >
+                                            <path
+                                              clip-rule="evenodd"
+                                              d="M16.0397 7.23438C16.0314 9.40822 17.092 10.6442 19.5012 10.6959C17.2646 10.6876 16.1532 11.8876 16.0397 14.1574C16.0203 12.0159 15.0612 10.6931 12.5781 10.6959C14.8 10.6645 16.0314 9.59284 16.0397 7.23438Z"
+                                              fill-rule="evenodd"
+                                              stroke="currentColor"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              stroke-width="1.6"
+                                            />
+                                            <path
+                                              clip-rule="evenodd"
+                                              d="M8.45474 1C8.44274 4.06277 9.93627 5.8 13.3304 5.87661C10.18 5.86461 8.61443 7.55477 8.45474 10.7523C8.42797 7.73569 7.07566 5.872 3.57812 5.87661C6.70735 5.83231 8.44274 4.32215 8.45474 1Z"
+                                              fill-rule="evenodd"
+                                              stroke="currentColor"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              stroke-width="1.6"
+                                            />
+                                            <path
+                                              d="M13.3615 16.3343C11.6807 18.6036 8.73895 19.5466 6.05212 18.6774C3.3653 17.8082 1.53322 15.3208 1.50001 12.4971C1.49744 11.2122 1.88006 9.95595 2.59847 8.89062"
+                                              stroke="currentColor"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              stroke-width="1.6"
+                                            />
+                                          </svg>
+                                        </div>
+                                      </div>
+                                      <span
+                                        class="ml-2 hidden sm:inline"
+                                      >
+                                        Dim
                                       </span>
                                     </div>
                                   </button>
@@ -12331,7 +12555,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                 class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-medium"
                                 data-testid="list-divided-item__label--description"
                               >
-                                Choose a light or dark viewing mode.
+                                Choose a light / dark / dim viewing mode.
                               </span>
                             </div>
                             <div
@@ -12432,6 +12656,62 @@ exports[`General Settings > should update the avatar when removing focus from na
                                         class="ml-2 hidden sm:inline"
                                       >
                                         Dark
+                                      </span>
+                                    </div>
+                                  </button>
+                                  <button
+                                    aria-checked="false"
+                                    aria-label="dim"
+                                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
+                                    data-testid="ButtonGroupOption"
+                                    role="radio"
+                                    type="button"
+                                  >
+                                    <div
+                                      class="flex items-center px-2"
+                                    >
+                                      <div>
+                                        <div
+                                          style="height: 20px; width: 20px;"
+                                        >
+                                          <svg
+                                            fill="none"
+                                            style="height: 100%; width: 100%;"
+                                            viewBox="0 0 21 20"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                          >
+                                            <path
+                                              clip-rule="evenodd"
+                                              d="M16.0397 7.23438C16.0314 9.40822 17.092 10.6442 19.5012 10.6959C17.2646 10.6876 16.1532 11.8876 16.0397 14.1574C16.0203 12.0159 15.0612 10.6931 12.5781 10.6959C14.8 10.6645 16.0314 9.59284 16.0397 7.23438Z"
+                                              fill-rule="evenodd"
+                                              stroke="currentColor"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              stroke-width="1.6"
+                                            />
+                                            <path
+                                              clip-rule="evenodd"
+                                              d="M8.45474 1C8.44274 4.06277 9.93627 5.8 13.3304 5.87661C10.18 5.86461 8.61443 7.55477 8.45474 10.7523C8.42797 7.73569 7.07566 5.872 3.57812 5.87661C6.70735 5.83231 8.44274 4.32215 8.45474 1Z"
+                                              fill-rule="evenodd"
+                                              stroke="currentColor"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              stroke-width="1.6"
+                                            />
+                                            <path
+                                              d="M13.3615 16.3343C11.6807 18.6036 8.73895 19.5466 6.05212 18.6774C3.3653 17.8082 1.53322 15.3208 1.50001 12.4971C1.49744 11.2122 1.88006 9.95595 2.59847 8.89062"
+                                              stroke="currentColor"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              stroke-width="1.6"
+                                            />
+                                          </svg>
+                                        </div>
+                                      </div>
+                                      <span
+                                        class="ml-2 hidden sm:inline"
+                                      >
+                                        Dim
                                       </span>
                                     </div>
                                   </button>
@@ -14954,7 +15234,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                 class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-medium"
                                 data-testid="list-divided-item__label--description"
                               >
-                                Choose a light or dark viewing mode.
+                                Choose a light / dark / dim viewing mode.
                               </span>
                             </div>
                             <div
@@ -15055,6 +15335,62 @@ exports[`General Settings > should update the avatar when removing focus from na
                                         class="ml-2 hidden sm:inline"
                                       >
                                         Dark
+                                      </span>
+                                    </div>
+                                  </button>
+                                  <button
+                                    aria-checked="false"
+                                    aria-label="dim"
+                                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
+                                    data-testid="ButtonGroupOption"
+                                    role="radio"
+                                    type="button"
+                                  >
+                                    <div
+                                      class="flex items-center px-2"
+                                    >
+                                      <div>
+                                        <div
+                                          style="height: 20px; width: 20px;"
+                                        >
+                                          <svg
+                                            fill="none"
+                                            style="height: 100%; width: 100%;"
+                                            viewBox="0 0 21 20"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                          >
+                                            <path
+                                              clip-rule="evenodd"
+                                              d="M16.0397 7.23438C16.0314 9.40822 17.092 10.6442 19.5012 10.6959C17.2646 10.6876 16.1532 11.8876 16.0397 14.1574C16.0203 12.0159 15.0612 10.6931 12.5781 10.6959C14.8 10.6645 16.0314 9.59284 16.0397 7.23438Z"
+                                              fill-rule="evenodd"
+                                              stroke="currentColor"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              stroke-width="1.6"
+                                            />
+                                            <path
+                                              clip-rule="evenodd"
+                                              d="M8.45474 1C8.44274 4.06277 9.93627 5.8 13.3304 5.87661C10.18 5.86461 8.61443 7.55477 8.45474 10.7523C8.42797 7.73569 7.07566 5.872 3.57812 5.87661C6.70735 5.83231 8.44274 4.32215 8.45474 1Z"
+                                              fill-rule="evenodd"
+                                              stroke="currentColor"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              stroke-width="1.6"
+                                            />
+                                            <path
+                                              d="M13.3615 16.3343C11.6807 18.6036 8.73895 19.5466 6.05212 18.6774C3.3653 17.8082 1.53322 15.3208 1.50001 12.4971C1.49744 11.2122 1.88006 9.95595 2.59847 8.89062"
+                                              stroke="currentColor"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              stroke-width="1.6"
+                                            />
+                                          </svg>
+                                        </div>
+                                      </div>
+                                      <span
+                                        class="ml-2 hidden sm:inline"
+                                      >
+                                        Dim
                                       </span>
                                     </div>
                                   </button>
