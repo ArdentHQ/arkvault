@@ -21,7 +21,7 @@ interface UpdateWalletNameState {
 	name: string;
 }
 
-export const UpdateWalletName: React.VFC<UpdateWalletNameProperties> = ({ onAfterSave, onCancel, profile, wallet }) => {
+export const UpdateWalletName = ({ onAfterSave, onCancel, profile, wallet }: UpdateWalletNameProperties) => {
 	const getDefaultValues = (): UpdateWalletNameState => ({
 		name: wallet.alias() as string,
 	});

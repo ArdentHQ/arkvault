@@ -14,7 +14,7 @@ interface CreateContactProperties {
 	onSave: (contactId: string) => void;
 }
 
-export const CreateContact: React.VFC<CreateContactProperties> = ({ profile, onClose, onCancel, onSave }) => {
+export const CreateContact = ({ profile, onClose, onCancel, onSave }: CreateContactProperties) => {
 	const { t } = useTranslation();
 
 	const [errors, setErrors] = useState<Partial<Record<keyof ContactFormState, string>>>({});

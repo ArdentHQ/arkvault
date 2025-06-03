@@ -10,7 +10,7 @@ import { Icon } from "@/app/components/Icon";
 import { Tooltip } from "@/app/components/Tooltip";
 import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
 
-export const RecipientListItem: React.VFC<RecipientListItemProperties> = ({
+export const RecipientListItem = ({
 	disableButton,
 	exchangeTicker,
 	isEditable,
@@ -24,7 +24,7 @@ export const RecipientListItem: React.VFC<RecipientListItemProperties> = ({
 	tooltipDisabled,
 	variant,
 	profile,
-}) => {
+}: RecipientListItemProperties) => {
 	const { t } = useTranslation();
 
 	const { convert } = useExchangeRate({ exchangeTicker, profile, ticker });

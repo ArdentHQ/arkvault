@@ -491,18 +491,18 @@ describe("LedgerTabs", () => {
 		} catch (error) {
 			console.error("Failed to access coin in test:", error);
 			coinAccessor = {
-				ledger: () => ({ 
+				ledger: () => ({
 					getPublicKey: vi.fn().mockResolvedValue(""),
 					scan: vi.fn().mockImplementation(({ onProgress }) => {
 						onProgress && onProgress(wallet);
 						return { "m/44'/1'/0'/0/0": wallet.toData() };
-					}) 
+					})
 				})
 			};
 		}
-		
+
 		const ledgerObj = coinAccessor.ledger();
-		
+
 		let getPublicKeySpy;
 		if (typeof ledgerObj.getPublicKey === 'function') {
 			getPublicKeySpy = vi.spyOn(ledgerObj, "getPublicKey")
@@ -536,7 +536,7 @@ describe("LedgerTabs", () => {
 			const editAliasButtons = screen.queryAllByTestId("LedgerImportStep__edit-alias");
 			if (editAliasButtons && editAliasButtons.length > 0) {
 				await userEvent.click(editAliasButtons[0]);
-				
+
 				await waitFor(() => {
 					expect(onClickEditWalletName).toHaveBeenCalled();
 				});
@@ -545,13 +545,13 @@ describe("LedgerTabs", () => {
 			const finishButton = finishSelector() || screen.queryByTestId("ImportWallet__finish-button");
 			if (finishButton) {
 				const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
-				
+
 				await userEvent.click(finishButton);
-				
+
 				await waitFor(() => {
 					expect(historySpy).toHaveBeenCalled();
 				});
-				
+
 				historySpy.mockRestore();
 			}
 		} catch (error) {

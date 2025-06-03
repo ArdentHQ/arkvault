@@ -1,4 +1,4 @@
-import React, { forwardRef } from "react";
+import React, { HTMLAttributes } from "react";
 import { twMerge } from "tailwind-merge";
 import cn from "classnames";
 
@@ -27,9 +27,12 @@ const Wrapper = ({ disabled, small, ...properties }: WrapperProperties) => (
 	/>
 );
 
-const Input = forwardRef<HTMLInputElement, React.InputHTMLAttributes<HTMLInputElement>>((props, ref) => (
-	<input {...props} ref={ref} className={twMerge("toggle-input sr-only", props.className)} />
-));
+const Input = (
+	properties: HTMLAttributes<HTMLInputElement> & {
+		ref?: React.Ref<HTMLInputElement>;
+		disabled?: boolean;
+	},
+) => <input {...properties} className={twMerge("toggle-input sr-only", properties.className)} />;
 
 Input.displayName = "Input";
 
@@ -60,17 +63,20 @@ const HandleInner = ({ alwaysOn, disabled, small, ...properties }: HandleInnerPr
 	/>
 );
 
-type ToggleProperties = { alwaysOn?: boolean; disabled?: boolean; small?: boolean } & React.InputHTMLAttributes<any>;
+type ToggleProperties = {
+	ref?: React.Ref<HTMLInputElement>;
+	alwaysOn?: boolean;
+	disabled?: boolean;
+	small?: boolean;
+} & React.InputHTMLAttributes<any>;
 
-export const Toggle = React.forwardRef<HTMLInputElement, ToggleProperties>(
-	({ alwaysOn, disabled, small, onClick, ...properties }: ToggleProperties, reference) => (
-		<Wrapper disabled={disabled} small={small} onClick={onClick}>
-			<Input type="checkbox" disabled={disabled} ref={reference} {...properties} />
-			<Handle small={small}>
-				<HandleInner alwaysOn={alwaysOn} disabled={disabled} small={small} />
-			</Handle>
-		</Wrapper>
-	),
+export const Toggle = ({ alwaysOn, disabled, small, onClick, ref, ...properties }: ToggleProperties) => (
+	<Wrapper disabled={disabled} small={small} onClick={onClick}>
+		<Input type="checkbox" disabled={disabled} ref={ref} {...properties} />
+		<Handle small={small}>
+			<HandleInner alwaysOn={alwaysOn} disabled={disabled} small={small} />
+		</Handle>
+	</Wrapper>
 );
 
 Toggle.displayName = "Toggle";

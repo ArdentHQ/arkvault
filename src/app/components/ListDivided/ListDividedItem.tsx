@@ -2,7 +2,7 @@ import React from "react";
 import cn from "classnames";
 import { ListDividedItemProperties } from "./ListDivided.contracts";
 
-export const ListDividedItem: React.VFC<ListDividedItemProperties> = ({
+export const ListDividedItem = ({
 	isFloatingLabel,
 	label,
 	labelWrapperClass,
@@ -15,7 +15,7 @@ export const ListDividedItem: React.VFC<ListDividedItemProperties> = ({
 	content,
 	contentClass,
 	wrapperClass,
-}) => (
+}: ListDividedItemProperties) => (
 	<li className={cn("flex w-full flex-col", wrapperClass)} data-testid="list-divided-item__wrapper">
 		{label && (
 			<div

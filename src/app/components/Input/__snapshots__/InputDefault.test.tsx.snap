@@ -13,7 +13,6 @@ exports[`InputDefault > should render a default input 1`] = `
         class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
         data-testid="Input"
         type="text"
-        value=""
       />
     </div>
   </div>

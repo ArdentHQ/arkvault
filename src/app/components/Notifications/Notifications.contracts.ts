@@ -14,15 +14,12 @@ export interface NotificationItemProperties {
 	image?: string;
 	onAction?: (id: string) => void;
 	onVisibilityChange?: (isVisible: boolean) => void;
-	containmentRef?: any;
 	meta?: Record<string, any>;
 }
 
 export interface NotificationTransactionItemProperties {
 	transaction: DTO.ExtendedConfirmedTransactionData;
 	profile: Contracts.IProfile;
-	containmentRef?: any;
-	onVisibilityChange?: (isVisible: boolean) => void;
 	onTransactionClick?: (item?: DTO.ExtendedConfirmedTransactionData) => void;
 }
 

@@ -89,6 +89,8 @@ const mockOrderStatus = (orderId: string, status: string) =>
 	requestMock(`${exchangeBaseURL}/api/changenow/orders/${orderId}`, { data: { id: orderId, status } });
 
 const selectCurrencies = async ({ from, to }: { from?: Record<string, string>; to?: Record<string, string> }) => {
+	const user = userEvent.setup();
+
 	// from currency
 	if (from) {
 		await waitFor(() => {
@@ -96,7 +98,9 @@ const selectCurrencies = async ({ from, to }: { from?: Record<string, string>; t
 		});
 
 		await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__input")[0]).toBeInTheDocument());
-		await userEvent.type(screen.getAllByTestId("SelectDropdown__input")[0], from.ticker);
+
+		await user.clear(screen.getAllByTestId("SelectDropdown__input")[0]);
+		await user.paste(from.ticker);
 
 		await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__option--0")[0]).toBeInTheDocument());
 		await userEvent.click(screen.getAllByTestId("SelectDropdown__option--0")[0]);
@@ -116,7 +120,8 @@ const selectCurrencies = async ({ from, to }: { from?: Record<string, string>; t
 		});
 
 		await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__input")[1]).toBeInTheDocument());
-		await userEvent.type(screen.getAllByTestId("SelectDropdown__input")[1], to.ticker);
+		await user.clear(screen.getAllByTestId("SelectDropdown__input")[1]);
+		await user.paste(to.ticker);
 
 		await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__option--0")[0]).toBeInTheDocument());
 		await userEvent.click(screen.getAllByTestId("SelectDropdown__option--0")[0]);
@@ -416,6 +421,8 @@ describe("ExchangeForm", () => {
 	it("should show external id input if supported", async () => {
 		const currency = cloneDeep(currencyEth);
 
+		const user = userEvent.setup();
+
 		currency.data.externalIdName = "external id";
 		currency.data.hasExternalId = true;
 
@@ -443,8 +450,9 @@ describe("ExchangeForm", () => {
 		});
 
 		const externalInput = within(screen.getByTestId("ExchangeForm__external-id")).getByRole("textbox");
-		await userEvent.clear(externalInput);
-		await userEvent.type(externalInput, "external-id");
+
+		await user.clear(externalInput);
+		await user.paste("external-id");
 
 		await waitFor(() => {
 			expect(externalInput).toHaveValue("external-id");
@@ -453,6 +461,7 @@ describe("ExchangeForm", () => {
 
 	it("should show external id input for refund if supported", async () => {
 		const currency = cloneDeep(currencyEth);
+		const user = userEvent.setup();
 
 		currency.data.externalIdName = "external id";
 		currency.data.hasExternalId = true;
@@ -486,7 +495,8 @@ describe("ExchangeForm", () => {
 
 		const refundDropdown = screen.getAllByTestId("SelectDropdown__input")[3];
 
-		await userEvent.type(refundDropdown, "payoutAddress");
+		await user.clear(refundDropdown);
+		await user.paste("payoutAddress");
 
 		await waitFor(() => {
 			expect(refundDropdown).toHaveValue("payoutAddress");
@@ -495,7 +505,9 @@ describe("ExchangeForm", () => {
 		expect(screen.getByTestId("ExchangeForm__refund-external-id")).toBeInTheDocument();
 
 		const refundExternalInput = within(screen.getByTestId("ExchangeForm__refund-external-id")).getByRole("textbox");
-		await userEvent.type(refundExternalInput, "refund-external-id");
+
+		await user.clear(refundExternalInput);
+		await user.paste("refund-external-id");
 
 		await waitFor(() => {
 			expect(refundExternalInput).toHaveValue("refund-external-id");
@@ -540,6 +552,8 @@ describe("ExchangeForm", () => {
 
 		renderComponent(<ExchangeForm onReady={onReady} />);
 
+		const user = userEvent.setup();
+
 		await waitFor(() => {
 			expect(onReady).toHaveBeenCalledWith();
 		});
@@ -557,7 +571,8 @@ describe("ExchangeForm", () => {
 		const payoutInput: HTMLInputElement = screen.getAllByTestId("InputCurrency")[1] as HTMLInputElement;
 
 		// amount input
-		await userEvent.type(payinInput, "1");
+		await user.clear(payinInput);
+		await user.paste("1");
 
 		await waitFor(() => {
 			expect(payinInput).toHaveValue("1");
@@ -569,10 +584,12 @@ describe("ExchangeForm", () => {
 
 		// update amount output
 		payoutInput.select();
-		await userEvent.clear(payoutInput);
-		await userEvent.type(payoutInput, "1");
+		await user.clear(payoutInput);
+		await user.paste("1");
 
-		expect(payinInput).toHaveValue(payoutValue);
+		await waitFor(() => {
+			expect(payinInput).toHaveValue(payoutValue);
+		});
 
 		// remove from currency
 		await userEvent.clear(screen.getAllByTestId("SelectDropdown__input")[0]);

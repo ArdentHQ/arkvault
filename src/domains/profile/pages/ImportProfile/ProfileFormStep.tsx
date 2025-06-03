@@ -19,7 +19,7 @@ interface ImportProfileFormProperties {
 	onBack: () => void;
 }
 
-export const ImportProfileForm: React.VFC<ImportProfileFormProperties> = ({
+export const ImportProfileForm = ({
 	profile,
 	env,
 	onSubmit,
@@ -27,7 +27,7 @@ export const ImportProfileForm: React.VFC<ImportProfileFormProperties> = ({
 	file,
 	password,
 	shouldValidate,
-}) => {
+}: ImportProfileFormProperties) => {
 	const { t } = useTranslation();
 
 	const handleSubmit = async ({

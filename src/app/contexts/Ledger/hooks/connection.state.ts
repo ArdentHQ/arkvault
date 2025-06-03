@@ -23,7 +23,13 @@ type Action =
 	| { type: "disconnected" }
 	| { type: "failed"; message: string };
 
-export const defaultConnectionState = { isBusy: false, isConnected: false, isWaiting: false };
+export const defaultConnectionState = {
+	device: undefined,
+	error: undefined,
+	isBusy: false,
+	isConnected: false,
+	isWaiting: false,
+};
 
 export const connectionReducer = (state: LedgerConnectionState, action: Action): LedgerConnectionState => {
 	const handlers: Handlers<OfUnion<Action>, LedgerConnectionState> = {

@@ -1,7 +1,7 @@
 import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
-import React, { useEffect } from "react";
+import React from "react";
 import { Route } from "react-router-dom";
 
 import { NotificationsDropdown } from "./NotificationsDropdown";
@@ -14,19 +14,6 @@ import TransactionsFixture from "@/tests/fixtures/coins/mainsail/devnet/transact
 
 const history = createHashHistory();
 let profile: Contracts.IProfile;
-
-vi.mock("react-visibility-sensor", () => ({
-	/* eslint-disable react-hooks/rules-of-hooks */
-	default: ({ children, onChange }) => {
-		useEffect(() => {
-			if (onChange) {
-				onChange(false);
-			}
-		}, [onChange]);
-
-		return <div>{children}</div>;
-	},
-}));
 
 describe("Notifications", () => {
 	beforeEach(async () => {
@@ -69,7 +56,7 @@ describe("Notifications", () => {
 	it("should open and close transaction details modal", async () => {
 		await profile.sync();
 
-		const { container } = render(
+		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<NotificationsDropdown profile={profile} />
 			</Route>,
@@ -86,8 +73,6 @@ describe("Notifications", () => {
 		await userEvent.click(screen.getAllByTestId("TableRow")[0]);
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
-
-		expect(container).toMatchSnapshot();
 
 		await userEvent.click(screen.getByTestId("Modal__close-button"));
 

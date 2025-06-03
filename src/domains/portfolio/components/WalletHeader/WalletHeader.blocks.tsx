@@ -1,4 +1,4 @@
-import React, { useEffect, useState, VFC } from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import cn from "classnames";
 import { WalletActionsProperties } from "./WalletHeader.contracts";
@@ -9,7 +9,7 @@ import { useWalletSync } from "@/domains/wallet/hooks";
 import { usePrevious } from "@/app/hooks";
 import { Button } from "@/app/components/Button";
 
-export const WalletActions: VFC<WalletActionsProperties> = ({ profile, wallet, isUpdatingTransactions, onUpdate }) => {
+export const WalletActions = ({ profile, wallet, isUpdatingTransactions, onUpdate }: WalletActionsProperties) => {
 	const { env } = useEnvironmentContext();
 	const { syncAll } = useWalletSync({ env, profile });
 	const [isSyncing, setIsSyncing] = useState(false);

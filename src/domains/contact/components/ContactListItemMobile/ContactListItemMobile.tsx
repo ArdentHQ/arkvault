@@ -19,14 +19,7 @@ interface Properties {
 	hasBalance: boolean;
 }
 
-export const ContactListItemMobile: React.VFC<Properties> = ({
-	contact,
-	onSend,
-	options,
-	onAction,
-	hasBalance,
-	profile,
-}) => {
+export const ContactListItemMobile = ({ contact, onSend, options, onAction, hasBalance, profile }: Properties) => {
 	const { t } = useTranslation();
 
 	const profileAvailableNetworks = useNetworks({ profile });

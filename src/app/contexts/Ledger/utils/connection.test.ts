@@ -36,25 +36,25 @@ describe("Ledger Device Connection", () => {
 
 	describe("Access Ledger Device", () => {
 		it("should connect to ledger device", async () => {
-			await expect(accessLedgerDevice(wallet.coin())).resolves.not.toThrow();
+			await expect(accessLedgerDevice(wallet.ledger())).resolves.not.toThrow();
 		});
 
 		it("should connect if device is already open", async () => {
-			const connectSpy = vi.spyOn(wallet.coin().ledger(), "connect").mockImplementation(() => {
+			const connectSpy = vi.spyOn(wallet.ledger(), "connect").mockImplementation(() => {
 				throw new Error("The device is already open.");
 			});
 
-			await expect(accessLedgerDevice(wallet.coin())).resolves.not.toThrow();
+			await expect(accessLedgerDevice(wallet.ledger())).resolves.not.toThrow();
 
 			connectSpy.mockRestore();
 		});
 
 		it("should throw on unknown connection error", async () => {
-			const connectSpy = vi.spyOn(wallet.coin().ledger(), "connect").mockImplementation(() => {
+			const connectSpy = vi.spyOn(wallet.ledger(), "connect").mockImplementation(() => {
 				throw new Error("Connection error");
 			});
 
-			await expect(accessLedgerDevice(wallet.coin())).rejects.toThrow("Connection error");
+			await expect(accessLedgerDevice(wallet.ledger())).rejects.toThrow("Connection error");
 
 			connectSpy.mockRestore();
 		});
@@ -63,21 +63,21 @@ describe("Ledger Device Connection", () => {
 	describe("Access Ledger App", () => {
 		it("should connect to ledger app", async () => {
 			const publicKeySpy = vi
-				.spyOn(wallet.coin().ledger(), "getPublicKey")
+				.spyOn(wallet.ledger(), "getPublicKey")
 				.mockResolvedValue(publicKeyPaths.values().next().value);
 
-			const versionSpy = vi.spyOn(wallet.coin().ledger(), "getVersion").mockResolvedValue("2.3.0");
+			const versionSpy = vi.spyOn(wallet.ledger(), "getVersion").mockResolvedValue("2.3.0");
 
-			await expect(accessLedgerApp({ coin: wallet.coin() })).resolves.not.toThrow();
+			await expect(accessLedgerApp({ ledgerService: wallet.ledger() })).resolves.not.toThrow();
 
 			versionSpy.mockRestore();
 			publicKeySpy.mockRestore();
 		});
 
 		it("should throw version error", async () => {
-			const versionSpy = vi.spyOn(wallet.coin().ledger(), "getVersion").mockResolvedValue("1.3.0");
+			const versionSpy = vi.spyOn(wallet.ledger(), "getVersion").mockResolvedValue("1.3.0");
 
-			await expect(accessLedgerApp({ coin: wallet.coin() })).rejects.toThrow("VERSION_ERROR");
+			await expect(accessLedgerApp({ ledgerService: wallet.ledger() })).rejects.toThrow("VERSION_ERROR");
 
 			versionSpy.mockRestore();
 		});
@@ -86,15 +86,15 @@ describe("Ledger Device Connection", () => {
 	describe("Persist Ledger Connection", () => {
 		it("should connect to ledger app without retries", async () => {
 			const publicKeySpy = vi
-				.spyOn(wallet.coin().ledger(), "getPublicKey")
+				.spyOn(wallet.ledger(), "getPublicKey")
 				.mockResolvedValue(publicKeyPaths.values().next().value);
 
-			const versionSpy = vi.spyOn(wallet.coin().ledger(), "getVersion").mockResolvedValue("2.3.0");
+			const versionSpy = vi.spyOn(wallet.ledger(), "getVersion").mockResolvedValue("2.3.0");
 
 			await expect(
 				persistLedgerConnection({
-					coin: wallet.coin(),
 					hasRequestedAbort: () => false,
+					ledgerService: wallet.ledger(),
 					options: {},
 				}),
 			).resolves.not.toThrow();
@@ -104,20 +104,20 @@ describe("Ledger Device Connection", () => {
 		});
 
 		it("should bail if requested abort", async () => {
-			const connectSpy = vi.spyOn(wallet.coin().ledger(), "connect").mockImplementation(() => {
+			const connectSpy = vi.spyOn(wallet.ledger(), "connect").mockImplementation(() => {
 				throw new Error("Unknown Error");
 			});
 
 			const publicKeySpy = vi
-				.spyOn(wallet.coin().ledger(), "getPublicKey")
+				.spyOn(wallet.ledger(), "getPublicKey")
 				.mockResolvedValue(publicKeyPaths.values().next().value);
 
-			const versionSpy = vi.spyOn(wallet.coin().ledger(), "getVersion").mockResolvedValue("2.3.0");
+			const versionSpy = vi.spyOn(wallet.ledger(), "getVersion").mockResolvedValue("2.3.0");
 
 			await expect(
 				persistLedgerConnection({
-					coin: wallet.coin(),
 					hasRequestedAbort: () => true,
+					ledgerService: wallet.ledger(),
 					options: { factor: 1, randomize: false, retries: 2 },
 				}),
 			).rejects.toThrow("CONNECTION_ERROR");
@@ -129,15 +129,15 @@ describe("Ledger Device Connection", () => {
 
 		it("should abort retries if version error", async () => {
 			const publicKeySpy = vi
-				.spyOn(wallet.coin().ledger(), "getPublicKey")
+				.spyOn(wallet.ledger(), "getPublicKey")
 				.mockResolvedValue(publicKeyPaths.values().next().value);
 
-			const versionSpy = vi.spyOn(wallet.coin().ledger(), "getVersion").mockResolvedValue("1.3.0");
+			const versionSpy = vi.spyOn(wallet.ledger(), "getVersion").mockResolvedValue("1.3.0");
 
 			await expect(
 				persistLedgerConnection({
-					coin: wallet.coin(),
 					hasRequestedAbort: () => false,
+					ledgerService: wallet.ledger(),
 					options: { factor: 1, randomize: false, retries: 2 },
 				}),
 			).rejects.toThrow("VERSION_ERROR");
@@ -147,20 +147,20 @@ describe("Ledger Device Connection", () => {
 		});
 
 		it("should abort after reaching max retries", async () => {
-			const connectSpy = vi.spyOn(wallet.coin().ledger(), "connect").mockImplementation(() => {
+			const connectSpy = vi.spyOn(wallet.ledger(), "connect").mockImplementation(() => {
 				throw new Error("Unknown Error");
 			});
 
 			const publicKeySpy = vi
-				.spyOn(wallet.coin().ledger(), "getPublicKey")
+				.spyOn(wallet.ledger(), "getPublicKey")
 				.mockResolvedValue(publicKeyPaths.values().next().value);
 
-			const versionSpy = vi.spyOn(wallet.coin().ledger(), "getVersion").mockResolvedValue("2.3.0");
+			const versionSpy = vi.spyOn(wallet.ledger(), "getVersion").mockResolvedValue("2.3.0");
 
 			await expect(
 				persistLedgerConnection({
-					coin: wallet.coin(),
 					hasRequestedAbort: () => false,
+					ledgerService: wallet.ledger(),
 					options: { factor: 1, randomize: false, retries: 2 },
 				}),
 			).rejects.toThrow("Unknown Error");

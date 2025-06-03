@@ -1,5 +1,5 @@
 import cn from "classnames";
-import React, { forwardRef } from "react";
+import React from "react";
 import { DefaultTReturn, TOptions } from "i18next";
 import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";
@@ -21,12 +21,12 @@ interface ModalContentProperties {
 
 interface ModalContainerProps extends React.HTMLAttributes<HTMLDivElement> {
 	size?: Size;
+	ref?: React.Ref<HTMLDivElement>;
 }
 
-const ModalContainer = forwardRef<HTMLDivElement, ModalContainerProps>(({ size, ...props }, ref) => (
+const ModalContainer = ({ size, ...props }: ModalContainerProps) => (
 	<div
 		{...props}
-		ref={ref}
 		className={twMerge(
 			"max-w-full flex-1 md:m-auto md:max-w-2xl md:px-10",
 			cn({
@@ -41,7 +41,7 @@ const ModalContainer = forwardRef<HTMLDivElement, ModalContainerProps>(({ size, 
 			props.className,
 		)}
 	/>
-));
+);
 
 ModalContainer.displayName = "ModalContainer";
 

@@ -595,7 +595,7 @@ exports[`InputDate > should render 1`] = `
           width="18"
         >
           <path
-            clip-path="url(#:r1:)"
+            clip-path="url(#«r1»)"
             d="M0,0 H16 L8,8 Q8,8 8,8 Z"
             fill="none"
             stroke-width="3"
@@ -605,7 +605,7 @@ exports[`InputDate > should render 1`] = `
             stroke="currentColor"
           />
           <clippath
-            id=":r1:"
+            id="«r1»"
           >
             <rect
               height="16"

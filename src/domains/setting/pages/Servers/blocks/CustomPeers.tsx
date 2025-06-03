@@ -203,7 +203,14 @@ const CustomPeerStatusIcon = ({ status }: { status?: boolean }) => {
 	);
 };
 
-const CustomPeersPeer: React.VFC<{
+const CustomPeersPeer = ({
+	index,
+	normalizedNetwork,
+	onDelete,
+	onUpdate,
+	onToggle,
+	profile,
+}: {
 	index: number;
 	profile: Contracts.IProfile;
 	normalizedNetwork: NormalizedNetwork;
@@ -211,7 +218,7 @@ const CustomPeersPeer: React.VFC<{
 	onUpdate: (network: NormalizedNetwork) => void;
 	onToggle: (isEnabled: boolean) => void;
 	// TODO: break it down into smaller components.
-}> = ({ index, normalizedNetwork, onDelete, onUpdate, onToggle, profile }) => {
+}) => {
 	const { persist } = useEnvironmentContext();
 	const { name, publicApiEndpoint, transactionApiEndpoint, evmApiEndpoint, height, enabled, network } =
 		normalizedNetwork;
@@ -462,14 +469,21 @@ const CustomPeersTableFooter = ({
 	);
 };
 
-const CustomPeers: React.VFC<{
+const CustomPeers = ({
+	addNewServerHandler,
+	networks,
+	onDelete,
+	onUpdate,
+	profile,
+	onToggle,
+}: {
 	addNewServerHandler: () => void;
 	networks: NormalizedNetwork[];
 	onDelete: (network: NormalizedNetwork) => void;
 	onUpdate: (network: NormalizedNetwork) => void;
 	onToggle: (isEnabled: boolean, network: NormalizedNetwork) => void;
 	profile: Contracts.IProfile;
-}> = ({ addNewServerHandler, networks, onDelete, onUpdate, profile, onToggle }) => {
+}) => {
 	const { t } = useTranslation();
 
 	const { isXs, isSm } = useBreakpoint();

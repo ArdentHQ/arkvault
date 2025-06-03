@@ -22,258 +22,250 @@ exports[`Notifications > should emit transactionClick event 1`] = `
       <div
         class="relative h-full"
       >
-        <div>
-          <div
-            class="table-wrapper with-x-padding"
-            role="table"
+        <div
+          class="table-wrapper with-x-padding"
+          role="table"
+        >
+          <table
+            cellpadding="0"
+            class="w-full table-auto"
           >
-            <table
-              cellpadding="0"
-              class="w-full table-auto"
+            <tbody
+              role="rowgroup"
             >
-              <tbody
-                role="rowgroup"
+              <tr
+                class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
+                data-testid="TableRow"
               >
-                <div>
-                  <tr
-                    class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
-                    data-testid="TableRow"
+                <td
+                  class="w-2/5"
+                >
+                  <div
+                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 pl-6 static mx-0"
                   >
-                    <td
-                      class="w-2/5"
+                    <div
+                      class="w-20 flex-1"
                     >
                       <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 pl-6 static mx-0"
-                      >
-                        <div
-                          class="w-20 flex-1"
-                        >
-                          <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                          >
-                            <span
-                              class="font-semibold text-base text-theme-text"
-                              data-testid="Address__alias"
-                            >
-                              <span
-                                class="no-ligatures transition-colors duration-200"
-                                data-testid="TruncateEnd"
-                              >
-                                Mainsail Wallet …
-                              </span>
-                            </span>
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                              data-testid="Address__address"
-                            >
-                              0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                    <td>
-                      <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold justify-end whitespace-nowrap"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <span
-                          data-testid="TimeAgo"
+                          class="font-semibold text-base text-theme-text"
+                          data-testid="Address__alias"
                         >
-                          A few seconds ago
+                          <span
+                            class="no-ligatures transition-colors duration-200"
+                            data-testid="TruncateEnd"
+                          >
+                            Mainsail Wallet …
+                          </span>
+                        </span>
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                          data-testid="Address__address"
+                        >
+                          0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                         </span>
                       </div>
-                    </td>
-                    <td>
-                      <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end pr-6 static"
-                      >
-                        <div
-                          class="h-5"
-                        >
-                          <div
-                            class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full w-fit items-center justify-center rounded px-1.5"
-                            data-testid="AmountLabel__wrapper"
-                          >
-                            <div
-                              class="flex h-full items-center space-x-1"
-                            >
-                              <span
-                                class="whitespace-nowrap text-sm"
-                                data-testid="Amount"
-                              >
-                                + 1 ARK
-                              </span>
-                            </div>
-                          </div>
-                          <div
-                            class="dark:bg-theme-secondary-900 absolute right-0 -bottom-px h-px w-8 bg-white"
-                          />
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                </div>
-                <div>
-                  <tr
-                    class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
-                    data-testid="TableRow"
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div
+                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold justify-end whitespace-nowrap"
                   >
-                    <td
-                      class="w-2/5"
+                    <span
+                      data-testid="TimeAgo"
+                    >
+                      A few seconds ago
+                    </span>
+                  </div>
+                </td>
+                <td>
+                  <div
+                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end pr-6 static"
+                  >
+                    <div
+                      class="h-5"
                     >
                       <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 pl-6 static mx-0"
+                        class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full w-fit items-center justify-center rounded px-1.5"
+                        data-testid="AmountLabel__wrapper"
                       >
                         <div
-                          class="w-20 flex-1"
+                          class="flex h-full items-center space-x-1"
                         >
-                          <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          <span
+                            class="whitespace-nowrap text-sm"
+                            data-testid="Amount"
                           >
-                            <span
-                              class="font-semibold text-base text-theme-text"
-                              data-testid="Address__alias"
-                            >
-                              <span
-                                class="no-ligatures transition-colors duration-200"
-                                data-testid="TruncateEnd"
-                              >
-                                Mainsail Wallet …
-                              </span>
-                            </span>
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                              data-testid="Address__address"
-                            >
-                              0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                            </span>
-                          </div>
+                            + 1 ARK
+                          </span>
                         </div>
                       </div>
-                    </td>
-                    <td>
                       <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold justify-end whitespace-nowrap"
-                      >
-                        <span
-                          data-testid="TimeAgo"
-                        >
-                          A few seconds ago
-                        </span>
-                      </div>
-                    </td>
-                    <td>
-                      <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end pr-6 static"
-                      >
-                        <div
-                          class="h-5"
-                        >
-                          <div
-                            class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full w-fit items-center justify-center rounded px-1.5"
-                            data-testid="AmountLabel__wrapper"
-                          >
-                            <div
-                              class="flex h-full items-center space-x-1"
-                            >
-                              <span
-                                class="whitespace-nowrap text-sm"
-                                data-testid="Amount"
-                              >
-                                + 500 ARK
-                              </span>
-                            </div>
-                          </div>
-                          <div
-                            class="dark:bg-theme-secondary-900 absolute right-0 -bottom-px h-px w-8 bg-white"
-                          />
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                </div>
-                <div>
-                  <tr
-                    class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
-                    data-testid="TableRow"
+                        class="dark:bg-theme-secondary-900 absolute right-0 -bottom-px h-px w-8 bg-white"
+                      />
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr
+                class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
+                data-testid="TableRow"
+              >
+                <td
+                  class="w-2/5"
+                >
+                  <div
+                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 pl-6 static mx-0"
                   >
-                    <td
-                      class="w-2/5"
+                    <div
+                      class="w-20 flex-1"
                     >
                       <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 pl-6 static mx-0"
-                      >
-                        <div
-                          class="w-20 flex-1"
-                        >
-                          <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                          >
-                            <span
-                              class="font-semibold text-base text-theme-text"
-                              data-testid="Address__alias"
-                            >
-                              <span
-                                class="no-ligatures transition-colors duration-200"
-                                data-testid="TruncateEnd"
-                              >
-                                Mainsail Wallet …
-                              </span>
-                            </span>
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                              data-testid="Address__address"
-                            >
-                              0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                    <td>
-                      <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold justify-end whitespace-nowrap"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <span
-                          data-testid="TimeAgo"
+                          class="font-semibold text-base text-theme-text"
+                          data-testid="Address__alias"
                         >
-                          A few seconds ago
+                          <span
+                            class="no-ligatures transition-colors duration-200"
+                            data-testid="TruncateEnd"
+                          >
+                            Mainsail Wallet …
+                          </span>
+                        </span>
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                          data-testid="Address__address"
+                        >
+                          0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                         </span>
                       </div>
-                    </td>
-                    <td>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div
+                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold justify-end whitespace-nowrap"
+                  >
+                    <span
+                      data-testid="TimeAgo"
+                    >
+                      A few seconds ago
+                    </span>
+                  </div>
+                </td>
+                <td>
+                  <div
+                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end pr-6 static"
+                  >
+                    <div
+                      class="h-5"
+                    >
                       <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end pr-6 static"
+                        class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full w-fit items-center justify-center rounded px-1.5"
+                        data-testid="AmountLabel__wrapper"
                       >
                         <div
-                          class="h-5"
+                          class="flex h-full items-center space-x-1"
                         >
-                          <div
-                            class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full w-fit items-center justify-center rounded px-1.5"
-                            data-testid="AmountLabel__wrapper"
+                          <span
+                            class="whitespace-nowrap text-sm"
+                            data-testid="Amount"
                           >
-                            <div
-                              class="flex h-full items-center space-x-1"
-                            >
-                              <span
-                                class="whitespace-nowrap text-sm"
-                                data-testid="Amount"
-                              >
-                                + 2 ARK
-                              </span>
-                            </div>
-                          </div>
-                          <div
-                            class="dark:bg-theme-secondary-900 absolute right-0 -bottom-px h-px w-8 bg-white"
-                          />
+                            + 500 ARK
+                          </span>
                         </div>
                       </div>
-                    </td>
-                  </tr>
-                </div>
-              </tbody>
-            </table>
-          </div>
+                      <div
+                        class="dark:bg-theme-secondary-900 absolute right-0 -bottom-px h-px w-8 bg-white"
+                      />
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr
+                class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
+                data-testid="TableRow"
+              >
+                <td
+                  class="w-2/5"
+                >
+                  <div
+                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 pl-6 static mx-0"
+                  >
+                    <div
+                      class="w-20 flex-1"
+                    >
+                      <div
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                      >
+                        <span
+                          class="font-semibold text-base text-theme-text"
+                          data-testid="Address__alias"
+                        >
+                          <span
+                            class="no-ligatures transition-colors duration-200"
+                            data-testid="TruncateEnd"
+                          >
+                            Mainsail Wallet …
+                          </span>
+                        </span>
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                          data-testid="Address__address"
+                        >
+                          0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div
+                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold justify-end whitespace-nowrap"
+                  >
+                    <span
+                      data-testid="TimeAgo"
+                    >
+                      A few seconds ago
+                    </span>
+                  </div>
+                </td>
+                <td>
+                  <div
+                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end pr-6 static"
+                  >
+                    <div
+                      class="h-5"
+                    >
+                      <div
+                        class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full w-fit items-center justify-center rounded px-1.5"
+                        data-testid="AmountLabel__wrapper"
+                      >
+                        <div
+                          class="flex h-full items-center space-x-1"
+                        >
+                          <span
+                            class="whitespace-nowrap text-sm"
+                            data-testid="Amount"
+                          >
+                            + 2 ARK
+                          </span>
+                        </div>
+                      </div>
+                      <div
+                        class="dark:bg-theme-secondary-900 absolute right-0 -bottom-px h-px w-8 bg-white"
+                      />
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
@@ -399,258 +391,250 @@ exports[`Notifications > should render with transactions 1`] = `
       <div
         class="relative h-full"
       >
-        <div>
-          <div
-            class="table-wrapper with-x-padding"
-            role="table"
+        <div
+          class="table-wrapper with-x-padding"
+          role="table"
+        >
+          <table
+            cellpadding="0"
+            class="w-full table-auto"
           >
-            <table
-              cellpadding="0"
-              class="w-full table-auto"
+            <tbody
+              role="rowgroup"
             >
-              <tbody
-                role="rowgroup"
+              <tr
+                class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
+                data-testid="TableRow"
               >
-                <div>
-                  <tr
-                    class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
-                    data-testid="TableRow"
+                <td
+                  class="w-2/5"
+                >
+                  <div
+                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 pl-6 static mx-0"
                   >
-                    <td
-                      class="w-2/5"
+                    <div
+                      class="w-20 flex-1"
                     >
                       <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 pl-6 static mx-0"
-                      >
-                        <div
-                          class="w-20 flex-1"
-                        >
-                          <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                          >
-                            <span
-                              class="font-semibold text-base text-theme-text"
-                              data-testid="Address__alias"
-                            >
-                              <span
-                                class="no-ligatures transition-colors duration-200"
-                                data-testid="TruncateEnd"
-                              >
-                                Mainsail Wallet …
-                              </span>
-                            </span>
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                              data-testid="Address__address"
-                            >
-                              0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                    <td>
-                      <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold justify-end whitespace-nowrap"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <span
-                          data-testid="TimeAgo"
+                          class="font-semibold text-base text-theme-text"
+                          data-testid="Address__alias"
                         >
-                          A few seconds ago
+                          <span
+                            class="no-ligatures transition-colors duration-200"
+                            data-testid="TruncateEnd"
+                          >
+                            Mainsail Wallet …
+                          </span>
+                        </span>
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                          data-testid="Address__address"
+                        >
+                          0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                         </span>
                       </div>
-                    </td>
-                    <td>
-                      <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end pr-6 static"
-                      >
-                        <div
-                          class="h-5"
-                        >
-                          <div
-                            class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full w-fit items-center justify-center rounded px-1.5"
-                            data-testid="AmountLabel__wrapper"
-                          >
-                            <div
-                              class="flex h-full items-center space-x-1"
-                            >
-                              <span
-                                class="whitespace-nowrap text-sm"
-                                data-testid="Amount"
-                              >
-                                + 1 ARK
-                              </span>
-                            </div>
-                          </div>
-                          <div
-                            class="dark:bg-theme-secondary-900 absolute right-0 -bottom-px h-px w-8 bg-white"
-                          />
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                </div>
-                <div>
-                  <tr
-                    class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
-                    data-testid="TableRow"
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div
+                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold justify-end whitespace-nowrap"
                   >
-                    <td
-                      class="w-2/5"
+                    <span
+                      data-testid="TimeAgo"
+                    >
+                      A few seconds ago
+                    </span>
+                  </div>
+                </td>
+                <td>
+                  <div
+                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end pr-6 static"
+                  >
+                    <div
+                      class="h-5"
                     >
                       <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 pl-6 static mx-0"
+                        class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full w-fit items-center justify-center rounded px-1.5"
+                        data-testid="AmountLabel__wrapper"
                       >
                         <div
-                          class="w-20 flex-1"
+                          class="flex h-full items-center space-x-1"
                         >
-                          <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          <span
+                            class="whitespace-nowrap text-sm"
+                            data-testid="Amount"
                           >
-                            <span
-                              class="font-semibold text-base text-theme-text"
-                              data-testid="Address__alias"
-                            >
-                              <span
-                                class="no-ligatures transition-colors duration-200"
-                                data-testid="TruncateEnd"
-                              >
-                                Mainsail Wallet …
-                              </span>
-                            </span>
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                              data-testid="Address__address"
-                            >
-                              0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                            </span>
-                          </div>
+                            + 1 ARK
+                          </span>
                         </div>
                       </div>
-                    </td>
-                    <td>
                       <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold justify-end whitespace-nowrap"
-                      >
-                        <span
-                          data-testid="TimeAgo"
-                        >
-                          A few seconds ago
-                        </span>
-                      </div>
-                    </td>
-                    <td>
-                      <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end pr-6 static"
-                      >
-                        <div
-                          class="h-5"
-                        >
-                          <div
-                            class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full w-fit items-center justify-center rounded px-1.5"
-                            data-testid="AmountLabel__wrapper"
-                          >
-                            <div
-                              class="flex h-full items-center space-x-1"
-                            >
-                              <span
-                                class="whitespace-nowrap text-sm"
-                                data-testid="Amount"
-                              >
-                                + 500 ARK
-                              </span>
-                            </div>
-                          </div>
-                          <div
-                            class="dark:bg-theme-secondary-900 absolute right-0 -bottom-px h-px w-8 bg-white"
-                          />
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                </div>
-                <div>
-                  <tr
-                    class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
-                    data-testid="TableRow"
+                        class="dark:bg-theme-secondary-900 absolute right-0 -bottom-px h-px w-8 bg-white"
+                      />
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr
+                class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
+                data-testid="TableRow"
+              >
+                <td
+                  class="w-2/5"
+                >
+                  <div
+                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 pl-6 static mx-0"
                   >
-                    <td
-                      class="w-2/5"
+                    <div
+                      class="w-20 flex-1"
                     >
                       <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 pl-6 static mx-0"
-                      >
-                        <div
-                          class="w-20 flex-1"
-                        >
-                          <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                          >
-                            <span
-                              class="font-semibold text-base text-theme-text"
-                              data-testid="Address__alias"
-                            >
-                              <span
-                                class="no-ligatures transition-colors duration-200"
-                                data-testid="TruncateEnd"
-                              >
-                                Mainsail Wallet …
-                              </span>
-                            </span>
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                              data-testid="Address__address"
-                            >
-                              0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                    <td>
-                      <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold justify-end whitespace-nowrap"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <span
-                          data-testid="TimeAgo"
+                          class="font-semibold text-base text-theme-text"
+                          data-testid="Address__alias"
                         >
-                          A few seconds ago
+                          <span
+                            class="no-ligatures transition-colors duration-200"
+                            data-testid="TruncateEnd"
+                          >
+                            Mainsail Wallet …
+                          </span>
+                        </span>
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                          data-testid="Address__address"
+                        >
+                          0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                         </span>
                       </div>
-                    </td>
-                    <td>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div
+                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold justify-end whitespace-nowrap"
+                  >
+                    <span
+                      data-testid="TimeAgo"
+                    >
+                      A few seconds ago
+                    </span>
+                  </div>
+                </td>
+                <td>
+                  <div
+                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end pr-6 static"
+                  >
+                    <div
+                      class="h-5"
+                    >
                       <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end pr-6 static"
+                        class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full w-fit items-center justify-center rounded px-1.5"
+                        data-testid="AmountLabel__wrapper"
                       >
                         <div
-                          class="h-5"
+                          class="flex h-full items-center space-x-1"
                         >
-                          <div
-                            class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full w-fit items-center justify-center rounded px-1.5"
-                            data-testid="AmountLabel__wrapper"
+                          <span
+                            class="whitespace-nowrap text-sm"
+                            data-testid="Amount"
                           >
-                            <div
-                              class="flex h-full items-center space-x-1"
-                            >
-                              <span
-                                class="whitespace-nowrap text-sm"
-                                data-testid="Amount"
-                              >
-                                + 2 ARK
-                              </span>
-                            </div>
-                          </div>
-                          <div
-                            class="dark:bg-theme-secondary-900 absolute right-0 -bottom-px h-px w-8 bg-white"
-                          />
+                            + 500 ARK
+                          </span>
                         </div>
                       </div>
-                    </td>
-                  </tr>
-                </div>
-              </tbody>
-            </table>
-          </div>
+                      <div
+                        class="dark:bg-theme-secondary-900 absolute right-0 -bottom-px h-px w-8 bg-white"
+                      />
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr
+                class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
+                data-testid="TableRow"
+              >
+                <td
+                  class="w-2/5"
+                >
+                  <div
+                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 pl-6 static mx-0"
+                  >
+                    <div
+                      class="w-20 flex-1"
+                    >
+                      <div
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                      >
+                        <span
+                          class="font-semibold text-base text-theme-text"
+                          data-testid="Address__alias"
+                        >
+                          <span
+                            class="no-ligatures transition-colors duration-200"
+                            data-testid="TruncateEnd"
+                          >
+                            Mainsail Wallet …
+                          </span>
+                        </span>
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                          data-testid="Address__address"
+                        >
+                          0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div
+                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold justify-end whitespace-nowrap"
+                  >
+                    <span
+                      data-testid="TimeAgo"
+                    >
+                      A few seconds ago
+                    </span>
+                  </div>
+                </td>
+                <td>
+                  <div
+                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end pr-6 static"
+                  >
+                    <div
+                      class="h-5"
+                    >
+                      <div
+                        class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full w-fit items-center justify-center rounded px-1.5"
+                        data-testid="AmountLabel__wrapper"
+                      >
+                        <div
+                          class="flex h-full items-center space-x-1"
+                        >
+                          <span
+                            class="whitespace-nowrap text-sm"
+                            data-testid="Amount"
+                          >
+                            + 2 ARK
+                          </span>
+                        </div>
+                      </div>
+                      <div
+                        class="dark:bg-theme-secondary-900 absolute right-0 -bottom-px h-px w-8 bg-white"
+                      />
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>

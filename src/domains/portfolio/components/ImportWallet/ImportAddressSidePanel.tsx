@@ -110,6 +110,11 @@ export const ImportAddressesSidePanel = ({
 		if (!open && activeTab !== ImportAddressStep.SummaryStep && importedWallet) {
 			forgetImportedWallets(importedWallet);
 		}
+
+		if (!open) {
+			setActiveTab(ImportAddressStep.MethodStep);
+		}
+
 		onOpenChange(open);
 	};
 
@@ -148,6 +153,8 @@ export const ImportAddressesSidePanel = ({
 		})[activeTab as Exclude<ImportAddressStep, ImportAddressStep.SummaryStep>]();
 
 	const handleBack = () => {
+		console.log("handleback", activeTab);
+
 		if (activeTab === ImportAddressStep.MethodStep) {
 			return history.push(`/profiles/${activeProfile.id()}/dashboard`);
 		}
@@ -201,7 +208,7 @@ export const ImportAddressesSidePanel = ({
 	};
 
 	const handleFinish = () => {
-		onOpenChange(false);
+		handleOpenChange(false);
 	};
 
 	const isNextDisabled = useMemo(() => {

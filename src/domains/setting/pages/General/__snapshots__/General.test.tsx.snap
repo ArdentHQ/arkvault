@@ -8882,7 +8882,7 @@ exports[`General Settings > should update profile 1`] = `
                                   data-testid="General-settings__input--name"
                                   name="name"
                                   type="text"
-                                  value="Foo Bar"
+                                  value="test profile 2"
                                 />
                               </div>
                             </div>
@@ -13864,7 +13864,6 @@ exports[`General Settings > should update the avatar when removing focus from na
                                   alt="Avatar"
                                   class="min-h-full object-cover"
                                   data-testid="SelectProfileImage__avatar-image"
-                                  src=""
                                 />
                                 <button
                                   class="absolute z-10 h-full w-full overflow-hidden p-1 opacity-0 transition-opacity duration-200 focus:outline-hidden"

@@ -99,8 +99,10 @@ describe("Import Profile - Profile Form Step", () => {
 		const inputElement: HTMLInputElement = screen.getAllByTestId("Input")[0];
 
 		inputElement.select();
-		await userEvent.clear(inputElement);
-		await userEvent.type(inputElement, "test profile 1");
+		const user = userEvent.setup();
+
+		await user.clear(inputElement);
+		await user.paste("test profile 1");
 
 		await userEvent.click(screen.getByRole("checkbox"));
 
@@ -116,8 +118,8 @@ describe("Import Profile - Profile Form Step", () => {
 		expect(emptyProfile.usesPassword()).toBe(false);
 
 		inputElement.select();
-		await userEvent.clear(inputElement);
-		await userEvent.type(inputElement, "test profile 2");
+		await user.clear(inputElement);
+		await user.type(inputElement, "test profile 2");
 
 		await waitFor(() => {
 			expect(submitButton()).toBeEnabled();
@@ -149,34 +151,41 @@ describe("Import Profile - Profile Form Step", () => {
 			</EnvironmentProvider>,
 		);
 
-		await userEvent.type(screen.getAllByTestId("Input")[0], "asdasdas");
+		const user = userEvent.setup();
+
+		await user.clear(screen.getAllByTestId("Input")[0]);
+		await user.paste("asdasdas");
 
 		await userEvent.click(screen.getByTestId("SelectDropdown__caret"));
 		await userEvent.click(screen.getByTestId("SelectDropdown__option--0"));
 		await userEvent.click(screen.getByRole("checkbox"));
 
-		await userEvent.type(passwordInput(), "S3cUrePa$sword.test");
-		await userEvent.type(passwordConfirmationInput(), "S3cUrePa$sword.wrong");
+		await user.clear(passwordInput());
+		await user.paste("S3cUrePa$sword.test");
+
+		await user.clear(passwordConfirmationInput());
+		await user.paste("S3cUrePa$sword.wrong");
 
 		await waitFor(() => expect(submitButton()).toBeDisabled());
 
 		passwordInput().select();
-		await userEvent.clear(passwordInput());
-		await userEvent.type(passwordInput(), "S3cUrePa$sword");
+
+		await user.clear(passwordInput());
+		await user.paste("S3cUrePa$sword");
 
 		passwordConfirmationInput().select();
-		await userEvent.clear(passwordConfirmationInput());
-		await userEvent.type(passwordConfirmationInput(), "S3cUrePa$sword");
+		await user.clear(passwordConfirmationInput());
+		await user.paste("S3cUrePa$sword");
 
 		await waitFor(() => expect(submitButton()).toBeEnabled());
 
 		passwordConfirmationInput().select();
-		await userEvent.clear(passwordConfirmationInput());
-		await userEvent.type(passwordConfirmationInput(), "S3cUrePa$sword.test");
+		await user.clear(passwordConfirmationInput());
+		await user.paste("S3cUrePa$sword.test");
 
 		passwordInput().select();
-		await userEvent.clear(passwordInput());
-		await userEvent.type(passwordInput(), "S3cUrePa$sword.wrong");
+		await user.clear(passwordInput());
+		await user.paste("S3cUrePa$sword.wrong");
 
 		await waitFor(() => expect(submitButton()).toBeDisabled());
 

@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React, { RefObject, useMemo } from "react";
 import Tippy from "@tippyjs/react";
 
 import { SelectDropdownDropdownProperties } from "./SelectDropdown.contracts";
@@ -67,7 +67,7 @@ export const SelectDropdownDropdown = ({
 			appendTo={(element) => element.nextElementSibling!}
 			interactive
 			offset={[0, 5]}
-			reference={reference}
+			reference={reference as RefObject<Element>}
 			placement="bottom-start"
 			render={renderDropdownContent}
 			popperOptions={{ modifiers }}

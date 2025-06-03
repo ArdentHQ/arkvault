@@ -14,14 +14,21 @@ import { networkDisplayName, profileAllEnabledNetworkIds } from "@/utils/network
 import { Alert } from "@/app/components/Alert";
 import { Icon } from "@/app/components/Icon";
 
-const ServerFormModal: React.VFC<{
+const ServerFormModal = ({
+	onClose,
+	onCreate,
+	onUpdate,
+	networks,
+	networkToUpdate,
+	customNetworks,
+}: {
 	onClose: () => void;
 	onCreate: (network: NormalizedNetwork) => void;
 	onUpdate: (network: NormalizedNetwork) => void;
 	networks: Networks.Network[];
 	customNetworks: NormalizedNetwork[];
 	networkToUpdate: NormalizedNetwork | undefined;
-}> = ({ onClose, onCreate, onUpdate, networks, networkToUpdate, customNetworks }) => {
+}) => {
 	const profile = useActiveProfile();
 	const { networkById } = useNetworkOptions({ profile });
 	const { server } = useValidation();

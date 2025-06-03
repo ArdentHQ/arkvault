@@ -49,7 +49,7 @@ export type SelectDropdownProperties = {
 } & React.InputHTMLAttributes<any>;
 
 export interface SelectDropdownDropdownProperties {
-	reference: React.RefObject<HTMLDivElement>;
+	reference: React.RefObject<HTMLDivElement | null> | null;
 	data: OptionProperties[] | OptionGroupProperties[];
 	getItemProps: (options: UseComboboxGetItemPropsOptions<OptionProperties | null>) => any;
 	highlightedIndex: number;
@@ -73,4 +73,5 @@ export type SelectProperties = {
 	renderLabel?: (option: OptionProperties) => JSX.Element;
 	allowOverflow?: boolean;
 	wrapperClassName?: string;
+	ref?: React.Ref<HTMLInputElement>;
 } & Omit<React.InputHTMLAttributes<any>, "onChange">;

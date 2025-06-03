@@ -101,7 +101,6 @@ exports[`UpdateWalletName > should render 1`] = `
                         data-testid="UpdateWalletName__input"
                         name="name"
                         type="text"
-                        value=""
                       />
                     </div>
                   </div>
@@ -244,7 +243,6 @@ exports[`UpdateWalletName > should show an error message for duplicate name 1`] 
                         data-testid="UpdateWalletName__input"
                         name="name"
                         type="text"
-                        value=""
                       />
                     </div>
                     <div
@@ -441,7 +439,6 @@ exports[`UpdateWalletName > should show an error message for duplicate name 2`] 
                         data-testid="UpdateWalletName__input"
                         name="name"
                         type="text"
-                        value=""
                       />
                     </div>
                     <div
@@ -638,7 +635,6 @@ exports[`UpdateWalletName > should show an error message for duplicate name 3`] 
                         data-testid="UpdateWalletName__input"
                         name="name"
                         type="text"
-                        value=""
                       />
                     </div>
                     <div
@@ -835,7 +831,6 @@ exports[`UpdateWalletName > should show an error message for duplicate name 4`] 
                         data-testid="UpdateWalletName__input"
                         name="name"
                         type="text"
-                        value=""
                       />
                     </div>
                     <div
@@ -1032,7 +1027,6 @@ exports[`UpdateWalletName > should show error message when name consists only of
                         data-testid="UpdateWalletName__input"
                         name="name"
                         type="text"
-                        value=""
                       />
                     </div>
                     <div
@@ -1229,7 +1223,6 @@ exports[`UpdateWalletName > should show error message when name exceeds 42 chara
                         data-testid="UpdateWalletName__input"
                         name="name"
                         type="text"
-                        value=""
                       />
                     </div>
                     <div

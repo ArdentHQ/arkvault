@@ -43,13 +43,13 @@ const AccordionToggleWrapper = ({ ...props }: AccordionToggleWrapperProps) => (
 	/>
 );
 
-export const AccordionHeader: React.VFC<AccordionHeaderProperties> = ({
+export const AccordionHeader = ({
 	onClick,
 	isExpanded,
 	children,
 	className,
 	...properties
-}) => {
+}: AccordionHeaderProperties) => {
 	const { isDarkMode } = useTheme();
 
 	const wrapperClassName = twMerge(
@@ -97,7 +97,7 @@ export const AccordionHeader: React.VFC<AccordionHeaderProperties> = ({
 	);
 };
 
-export const AccordionContent: React.VFC<AccordionContentProperties> = ({ children, className, ...properties }) => (
+export const AccordionContent = ({ children, className, ...properties }: AccordionContentProperties) => (
 	<div
 		data-testid="AccordionContent"
 		className={twMerge("px-8 pb-6 md:px-4 md:pt-6 md:pb-0", className)}
@@ -107,10 +107,10 @@ export const AccordionContent: React.VFC<AccordionContentProperties> = ({ childr
 	</div>
 );
 
-export const AccordionHeaderSkeletonWrapper: React.VFC<AccordionHeaderSkeletonWrapperProperties> = ({
+export const AccordionHeaderSkeletonWrapper = ({
 	children,
 	...properties
-}) => (
+}: AccordionHeaderSkeletonWrapperProperties) => (
 	<div
 		data-testid="AccordionHeaderSkeletonWrapper"
 		className="flex h-20 items-center px-8 py-4 md:px-4"

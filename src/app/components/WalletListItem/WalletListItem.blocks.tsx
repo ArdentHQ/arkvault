@@ -13,7 +13,7 @@ import { useBreakpoint } from "@/app/hooks";
 import { Skeleton } from "@/app/components/Skeleton";
 import { TruncateEnd } from "@/app/components/TruncateEnd";
 
-export const Balance: React.VFC<BalanceProperties> = ({ wallet, isSynced, isLargeScreen = true, className }) => {
+export const Balance = ({ wallet, isSynced, isLargeScreen = true, className }: BalanceProperties) => {
 	const renderAmount = () => {
 		if (isSynced) {
 			return (
@@ -38,13 +38,13 @@ export const Balance: React.VFC<BalanceProperties> = ({ wallet, isSynced, isLarg
 	return <TableCell innerClassName="font-semibold justify-end">{renderAmount()}</TableCell>;
 };
 
-export const RecipientItemMobile: React.FC<RecipientItemMobileProperties> = ({
+export const RecipientItemMobile = ({
 	onClick,
 	selected = false,
 	type,
 	address,
 	name,
-}) => {
+}: RecipientItemMobileProperties) => {
 	const { isSmAndAbove } = useBreakpoint();
 	const maxCharacters = isSmAndAbove ? 20 : 10;
 

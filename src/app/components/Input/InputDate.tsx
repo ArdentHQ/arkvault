@@ -15,65 +15,71 @@ type InputDateProperties = {
 	selectsStart?: boolean;
 	selectsEnd?: boolean;
 	isInvalid?: boolean;
+	ref?: React.Ref<HTMLInputElement>;
 } & React.InputHTMLAttributes<any>;
 
-export const InputDate = React.forwardRef<HTMLInputElement, InputDateProperties>(
-	(
-		{ minDate, startDate, endDate, placement = "bottom-start", selectsStart, selectsEnd, rules, ...properties },
-		reference,
-	) => {
-		const { control } = useFormContext();
+export const InputDate = ({
+	minDate,
+	startDate,
+	endDate,
+	placement = "bottom-start",
+	selectsStart,
+	selectsEnd,
+	rules,
+	ref,
+	...properties
+}: InputDateProperties) => {
+	const { control } = useFormContext();
 
-		const fieldContext = useFormField();
+	const fieldContext = useFormField();
 
-		const calenderReference = useRef(null);
+	const calenderReference = useRef(null);
 
-		return (
-			<Controller
-				name={fieldContext!.name}
-				control={control}
-				rules={rules}
-				render={(field, { invalid }) => (
-					<DatePicker
-						ref={calenderReference}
-						selected={field.value}
-						calendarClassName="bg-theme-background"
-						popperPlacement={placement as any}
-						selectsStart={selectsStart}
-						selectsEnd={selectsEnd}
-						minDate={minDate}
-						maxDate={new Date()}
-						startDate={startDate}
-						endDate={endDate}
-						onChange={field.onChange}
-						customInput={
-							<Input
-								data-testid="InputDate"
-								ref={reference}
-								addons={{
-									end: {
-										content: (
-											<button
-												data-testid="InputDate__calendar"
-												type="button"
-												onClick={() => (calenderReference.current as any)?.setOpen(true)}
-												className="ring-focus text-theme-secondary-700 dark:text-theme-secondary-200 relative flex h-full w-full items-center justify-center text-2xl focus:outline-hidden"
-												data-ring-focus-margin="-m-1"
-											>
-												<Icon name="Calendar" size="lg" />
-											</button>
-										),
-									},
-								}}
-								isInvalid={invalid}
-								{...properties}
-							/>
-						}
-					/>
-				)}
-			/>
-		);
-	},
-);
+	return (
+		<Controller
+			name={fieldContext!.name}
+			control={control}
+			rules={rules}
+			render={(field, { invalid }) => (
+				<DatePicker
+					ref={calenderReference}
+					selected={field.value}
+					calendarClassName="bg-theme-background"
+					popperPlacement={placement as any}
+					selectsStart={selectsStart}
+					selectsEnd={selectsEnd}
+					minDate={minDate}
+					maxDate={new Date()}
+					startDate={startDate}
+					endDate={endDate}
+					onChange={field.onChange}
+					customInput={
+						<Input
+							data-testid="InputDate"
+							ref={ref}
+							addons={{
+								end: {
+									content: (
+										<button
+											data-testid="InputDate__calendar"
+											type="button"
+											onClick={() => (calenderReference.current as any)?.setOpen(true)}
+											className="ring-focus text-theme-secondary-700 dark:text-theme-secondary-200 relative flex h-full w-full items-center justify-center text-2xl focus:outline-hidden"
+											data-ring-focus-margin="-m-1"
+										>
+											<Icon name="Calendar" size="lg" />
+										</button>
+									),
+								},
+							}}
+							isInvalid={invalid}
+							{...properties}
+						/>
+					}
+				/>
+			)}
+		/>
+	);
+};
 
 InputDate.displayName = "InputDate";

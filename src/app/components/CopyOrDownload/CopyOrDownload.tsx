@@ -13,7 +13,7 @@ interface Properties {
 	onClickDownload: () => void;
 }
 
-export const CopyOrDownload: React.VFC<Properties> = ({ title, description, copyData, onClickDownload, disabled }) => {
+export const CopyOrDownload = ({ title, description, copyData, onClickDownload, disabled }: Properties) => {
 	const { t } = useTranslation();
 
 	return (

@@ -89,7 +89,6 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
                     data-testid="Input"
                     placeholder="Enter the validator’s name or address"
                     type="text"
-                    value=""
                   />
                 </div>
               </div>
@@ -6158,7 +6157,6 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
                     data-testid="Input"
                     placeholder="Enter the validator’s name or address"
                     type="text"
-                    value=""
                   />
                 </div>
               </div>
@@ -13413,7 +13411,6 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
                     data-testid="Input"
                     placeholder="Enter the validator’s name or address"
                     type="text"
-                    value=""
                   />
                 </div>
               </div>
@@ -14229,7 +14226,6 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
                     data-testid="Input"
                     placeholder="Enter the validator’s name or address"
                     type="text"
-                    value=""
                   />
                 </div>
               </div>
@@ -15045,7 +15041,6 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
                     data-testid="Input"
                     placeholder="Enter the validator’s name or address"
                     type="text"
-                    value=""
                   />
                 </div>
               </div>
@@ -15861,7 +15856,6 @@ exports[`ValidatorsTable > should render 1`] = `
                     data-testid="Input"
                     placeholder="Enter the validator’s name or address"
                     type="text"
-                    value=""
                   />
                 </div>
               </div>
@@ -16678,7 +16672,6 @@ exports[`ValidatorsTable > should render vote amount column 1`] = `
                     data-testid="Input"
                     placeholder="Enter the validator’s name or address"
                     type="text"
-                    value=""
                   />
                 </div>
               </div>
@@ -17706,7 +17699,6 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
                     data-testid="Input"
                     placeholder="Enter the validator’s name or address"
                     type="text"
-                    value=""
                   />
                 </div>
               </div>
@@ -18522,7 +18514,6 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
                     data-testid="Input"
                     placeholder="Enter the validator’s name or address"
                     type="text"
-                    value=""
                   />
                 </div>
               </div>
@@ -19343,7 +19334,6 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
                     data-testid="Input"
                     placeholder="Enter the validator’s name or address"
                     type="text"
-                    value=""
                   />
                 </div>
               </div>
@@ -20159,7 +20149,6 @@ exports[`ValidatorsTable > should render with empty list 1`] = `
                     data-testid="Input"
                     placeholder="Enter the validator’s name or address"
                     type="text"
-                    value=""
                   />
                 </div>
               </div>
@@ -20638,7 +20627,6 @@ exports[`ValidatorsTable > should render with subtitle 1`] = `
                     data-testid="Input"
                     placeholder="Enter the validator’s name or address"
                     type="text"
-                    value=""
                   />
                 </div>
               </div>
@@ -21455,7 +21443,6 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
                     data-testid="Input"
                     placeholder="Enter the validator’s name or address"
                     type="text"
-                    value=""
                   />
                 </div>
               </div>
@@ -22482,7 +22469,6 @@ exports[`ValidatorsTable > should select a validator to unvote 1`] = `
                     data-testid="Input"
                     placeholder="Enter the validator’s name or address"
                     type="text"
-                    value=""
                   />
                 </div>
               </div>
@@ -23299,7 +23285,6 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
                     data-testid="Input"
                     placeholder="Enter the validator’s name or address"
                     type="text"
-                    value=""
                   />
                 </div>
               </div>
@@ -24120,7 +24105,6 @@ exports[`ValidatorsTable > should select a validator to vote 1`] = `
                     data-testid="Input"
                     placeholder="Enter the validator’s name or address"
                     type="text"
-                    value=""
                   />
                 </div>
               </div>
@@ -24937,7 +24921,6 @@ exports[`ValidatorsTable > should select a validator with vote amount and make i
                     data-testid="Input"
                     placeholder="Enter the validator’s name or address"
                     type="text"
-                    value=""
                   />
                 </div>
               </div>
@@ -25964,7 +25947,6 @@ exports[`ValidatorsTable > should select multiple validators to unvote/vote 1`] 
                     data-testid="Input"
                     placeholder="Enter the validator’s name or address"
                     type="text"
-                    value=""
                   />
                 </div>
               </div>
@@ -26780,7 +26762,6 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
                     data-testid="Input"
                     placeholder="Enter the validator’s name or address"
                     type="text"
-                    value=""
                   />
                 </div>
               </div>
@@ -27597,7 +27578,6 @@ exports[`ValidatorsTable > should unselect a validator to vote 1`] = `
                     data-testid="Input"
                     placeholder="Enter the validator’s name or address"
                     type="text"
-                    value=""
                   />
                 </div>
               </div>

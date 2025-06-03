@@ -1,5 +1,5 @@
 import cn from "classnames";
-import React, { forwardRef } from "react";
+import React from "react";
 import { useTranslation } from "react-i18next";
 import { Link as RouterLink, LinkProps } from "react-router-dom";
 
@@ -12,12 +12,12 @@ import { twMerge } from "tailwind-merge";
 
 interface AnchorStyledProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
 	isDisabled?: boolean;
+	ref?: React.Ref<HTMLAnchorElement>;
 }
 
-const AnchorStyled = forwardRef<HTMLAnchorElement, AnchorStyledProps>(({ isDisabled, ...props }, ref) => (
+const AnchorStyled = ({ isDisabled, ...properties }: AnchorStyledProps) => (
 	<a
-		{...props}
-		ref={ref}
+		{...properties}
 		className={twMerge(
 			"relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden",
 			cn({
@@ -25,10 +25,10 @@ const AnchorStyled = forwardRef<HTMLAnchorElement, AnchorStyledProps>(({ isDisab
 					!isDisabled,
 				"text-theme-secondary-text cursor-not-allowed": isDisabled,
 			}),
-			props.className,
+			properties.className,
 		)}
 	/>
-));
+);
 
 AnchorStyled.displayName = "AnchorStyled";
 
@@ -54,36 +54,42 @@ type AnchorProperties = {
 	isDisabled?: boolean;
 	isExternal?: boolean;
 	showExternalIcon?: boolean;
+	ref?: React.Ref<HTMLAnchorElement>;
 } & React.AnchorHTMLAttributes<any>;
 
-const Anchor = React.forwardRef<HTMLAnchorElement, AnchorProperties>(
-	(
-		{ isDisabled, isExternal, showExternalIcon, onClick, href, children, rel, className }: AnchorProperties,
-		reference,
-	) => (
-		<AnchorStyled
-			className={cn("ring-focus group/inner inline-block", className)}
-			data-testid="Link"
-			rel={isExternal ? "noopener noreferrer" : rel}
-			ref={reference}
-			onClick={onClick}
-			href={href}
-			data-ring-focus-margin="-m-1"
-			isDisabled={isDisabled}
-		>
-			<Content isDisabled={isDisabled} showExternalIcon={showExternalIcon}>
-				{children}
-			</Content>
-			{isExternal && showExternalIcon && (
-				<Icon
-					data-testid="Link__external"
-					name="ArrowExternal"
-					dimensions={[12, 12]}
-					className={cn("mb-[3px] shrink-0 align-middle duration-200", { "inline-block text-sm": children })}
-				/>
-			)}
-		</AnchorStyled>
-	),
+const Anchor = ({
+	isDisabled,
+	isExternal,
+	showExternalIcon,
+	onClick,
+	href,
+	children,
+	rel,
+	ref,
+	className,
+}: AnchorProperties) => (
+	<AnchorStyled
+		className={cn("ring-focus group/inner inline-block", className)}
+		data-testid="Link"
+		rel={isExternal ? "noopener noreferrer" : rel}
+		ref={ref}
+		onClick={onClick}
+		href={href}
+		data-ring-focus-margin="-m-1"
+		isDisabled={isDisabled}
+	>
+		<Content isDisabled={isDisabled} showExternalIcon={showExternalIcon}>
+			{children}
+		</Content>
+		{isExternal && showExternalIcon && (
+			<Icon
+				data-testid="Link__external"
+				name="ArrowExternal"
+				dimensions={[12, 12]}
+				className={cn("mb-[3px] shrink-0 align-middle duration-200", { "inline-block text-sm": children })}
+			/>
+		)}
+	</AnchorStyled>
 );
 
 Anchor.displayName = "Anchor";
@@ -133,7 +139,11 @@ export const Link = ({
 					{properties.children}
 				</Anchor>
 			) : (
-				<RouterLink component={Anchor} {...properties} />
+				<RouterLink {...properties}>
+					<Anchor className={className} isDisabled={isDisabled} showExternalIcon={showExternalIcon}>
+						{properties.children}
+					</Anchor>
+				</RouterLink>
 			)}
 		</Tooltip>
 	);

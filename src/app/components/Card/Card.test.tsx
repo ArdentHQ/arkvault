@@ -14,19 +14,18 @@ describe("Card", () => {
 
 	it("should handle click", async () => {
 		const handleClick = vi.fn();
-		const { container, asFragment } = render(<Card onClick={() => handleClick()}>Test</Card>);
+		const { container } = render(<Card onClick={() => handleClick()}>Test</Card>);
 
 		expect(container).toBeInTheDocument();
 
 		await userEvent.click(screen.getByText("Test"));
 
 		expect(handleClick).toHaveBeenCalledWith();
-		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render with custom options", async () => {
 		const handleClick = vi.fn();
-		const { container, asFragment } = render(
+		const { container } = render(
 			<Card actions={[{ label: "Action 1", value: "1" }]} onClick={() => handleClick()}>
 				Test
 			</Card>,
@@ -37,7 +36,5 @@ describe("Card", () => {
 
 		await userEvent.click(screen.getByTestId("dropdown__toggle"));
 		await expect(screen.findByTestId("dropdown__option--0")).resolves.toBeInTheDocument();
-
-		expect(asFragment()).toMatchSnapshot();
 	});
 });

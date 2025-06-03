@@ -37,7 +37,7 @@ const Modal = ({
 	contentClassName,
 	...attributes
 }: ModalProperties) => {
-	const referenceShouldClose = useRef<boolean>();
+	const referenceShouldClose = useRef<boolean>(undefined);
 	const { setShowMobileNavigation } = useNavigationContext();
 	const modalContainerReference = useRef<HTMLDivElement>(null);
 

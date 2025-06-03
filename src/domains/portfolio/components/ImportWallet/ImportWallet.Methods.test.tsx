@@ -222,6 +222,8 @@ describe("ImportAddress Methods", () => {
 			},
 		);
 
+		const user = userEvent.setup();
+
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
 		expect(methodStep()).toBeInTheDocument();
@@ -234,8 +236,8 @@ describe("ImportAddress Methods", () => {
 
 		await expect(screen.findByTestId(secretInputID)).resolves.toBeVisible();
 
-		await userEvent.clear(screen.getByTestId(secretInputID));
-		await userEvent.type(screen.getByTestId(secretInputID), "secret.222");
+		await user.clear(screen.getByTestId(secretInputID));
+		await user.paste("secret.222");
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
@@ -252,14 +254,14 @@ describe("ImportAddress Methods", () => {
 			expect(screen.getByTestId("EncryptPassword")).toBeInTheDocument();
 		});
 		await userEvent.clear(screen.getByTestId("PasswordValidation__encryptionPassword"));
-		await userEvent.type(screen.getByTestId("PasswordValidation__encryptionPassword"), password);
+		await userEvent.paste(password);
 
 		await waitFor(() => {
 			expect(screen.getByTestId("PasswordValidation__encryptionPassword")).toHaveValue(password);
 		});
 
 		await userEvent.clear(screen.getByTestId("PasswordValidation__confirmEncryptionPassword"));
-		await userEvent.type(screen.getByTestId("PasswordValidation__confirmEncryptionPassword"), password);
+		await userEvent.paste(password);
 
 		await waitFor(() => {
 			expect(screen.getByTestId("PasswordValidation__confirmEncryptionPassword")).toHaveValue(password);

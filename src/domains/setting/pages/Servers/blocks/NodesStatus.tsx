@@ -12,10 +12,7 @@ import { useActiveProfile } from "@/app/hooks";
 import { NetworkIcon } from "@/app/components/NetworkIcon";
 import { pingEvmApi, pingTransactionApi } from "@/domains/setting/hooks/use-handle-servers";
 
-const NodeStatusNode: React.VFC<{
-	network: Networks.Network;
-	hosts: HostGroup;
-}> = ({ network, hosts }) => {
+const NodeStatusNode = ({ network, hosts }: { network: Networks.Network; hosts: HostGroup }) => {
 	const { t } = useTranslation();
 
 	const profile = useActiveProfile();
@@ -187,7 +184,7 @@ const NodeStatusNode: React.VFC<{
 
 type HostGroup = [Networks.NetworkHost, Networks.NetworkHost, Networks.NetworkHost];
 
-const NodesStatus: React.VFC<{ networks: Networks.Network[] }> = ({ networks }) => {
+const NodesStatus = ({ networks }: { networks: Networks.Network[] }) => {
 	const hostGroups: Record<string, { network: Networks.Network; hosts: HostGroup }> = {};
 
 	for (const network of networks) {

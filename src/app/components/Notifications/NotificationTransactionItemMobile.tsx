@@ -1,5 +1,4 @@
 import React, { useMemo } from "react";
-import VisibilitySensor from "react-visibility-sensor";
 
 import { useTranslation } from "react-i18next";
 import { NotificationTransactionItemProperties } from "./Notifications.contracts";
@@ -12,7 +11,6 @@ import { Address } from "@/app/components/Address";
 export const NotificationTransactionItemMobile = ({
 	transaction,
 	profile,
-	containmentRef,
 	onTransactionClick,
 }: NotificationTransactionItemProperties) => {
 	const { t } = useTranslation();
@@ -29,26 +27,24 @@ export const NotificationTransactionItemMobile = ({
 	);
 
 	return (
-		<VisibilitySensor scrollCheck delayedCall containment={containmentRef?.current}>
-			<TableRow onClick={() => onTransactionClick?.(transaction)}>
-				<td className="flex-col space-y-4 px-6 py-4" data-testid="NotificationTransactionItemMobile">
-					<RowWrapper>
-						<RowLabel>{t("COMMON.ADDRESS")}</RowLabel>
-						<div className="xs:w-50 w-40 min-[480px]:w-2/3">
-							<Address address={transaction.from()} walletName={alias} />
-						</div>
-					</RowWrapper>
+		<TableRow onClick={() => onTransactionClick?.(transaction)}>
+			<td className="flex-col space-y-4 px-6 py-4" data-testid="NotificationTransactionItemMobile">
+				<RowWrapper>
+					<RowLabel>{t("COMMON.ADDRESS")}</RowLabel>
+					<div className="xs:w-50 w-40 min-[480px]:w-2/3">
+						<Address address={transaction.from()} walletName={alias} />
+					</div>
+				</RowWrapper>
 
-					<RowWrapper>
-						<RowLabel>{t("COMMON.AMOUNT")}</RowLabel>
-						<AmountLabel
-							value={transaction.value()}
-							isNegative={transaction.isSent()}
-							ticker={transaction.wallet().currency()}
-						/>
-					</RowWrapper>
-				</td>
-			</TableRow>
-		</VisibilitySensor>
+				<RowWrapper>
+					<RowLabel>{t("COMMON.AMOUNT")}</RowLabel>
+					<AmountLabel
+						value={transaction.value()}
+						isNegative={transaction.isSent()}
+						ticker={transaction.wallet().currency()}
+					/>
+				</RowWrapper>
+			</td>
+		</TableRow>
 	);
 };
