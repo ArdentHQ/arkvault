@@ -322,7 +322,7 @@ describe("Votes", () => {
 		const walletRestoreMock = vi.spyOn(profile.wallets().first(), "hasSyncedWithNetwork").mockReturnValue(false);
 
 		const history = createHashHistory();
-		history.push(route);
+		navigate(route);
 
 		const onProfileSyncError = vi.fn();
 		const Component = () => {

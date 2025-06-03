@@ -24,7 +24,7 @@ vi.mock("@/utils/delay", () => ({
 
 describe("useProfileSyncStatus", () => {
 	it("should sync profile and handle resync with errored networks", async () => {
-		history.push(dashboardURL);
+		navigate(dashboardURL);
 
 		let configuration: any;
 		let profileErroredNetworks: string[] = [];
@@ -84,7 +84,7 @@ describe("useProfileSyncStatus", () => {
 
 	it("should sync profile and handle resync with sync error", async () => {
 		vi.useFakeTimers({ shouldAdvanceTime: true });
-		history.push(dashboardURL);
+		navigate(dashboardURL);
 		let configuration: any;
 
 		const onProfileSyncError = vi.fn().mockImplementation((erroredNetworks: string[], retrySync) => {
@@ -146,7 +146,7 @@ describe("useProfileSyncStatus", () => {
 
 		const profileStatusMock = vi.spyOn(profile.status(), "isRestored").mockReturnValue(false);
 
-		history.push(`/profiles/${profile.id()}/dashboard`);
+		navigate(`/profiles/${profile.id()}/dashboard`);
 
 		render(
 			<Route path="/profiles/:profileId/dashboard">

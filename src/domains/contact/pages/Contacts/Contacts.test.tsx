@@ -26,7 +26,7 @@ const contactAddress = "0x811b4bD8133c348a1c9F290F79046d1587AEf30F";
 
 const renderComponent = (profileId = profile.id()) => {
 	const contactsURL = `/profiles/${profileId}/contacts`;
-	history.push(contactsURL);
+	navigate(contactsURL);
 
 	return render(
 		<Route path="/profiles/:profileId/contacts">
@@ -41,7 +41,7 @@ const renderComponent = (profileId = profile.id()) => {
 
 const renderResponsiveComponent = (breakpoint: keyof typeof breakpoints, profileId = profile.id()) => {
 	const contactsURL = `/profiles/${profileId}/contacts`;
-	history.push(contactsURL);
+	navigate(contactsURL);
 
 	return renderResponsiveWithRoute(
 		<Route path="/profiles/:profileId/contacts">

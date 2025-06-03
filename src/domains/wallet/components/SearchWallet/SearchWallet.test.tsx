@@ -30,7 +30,7 @@ const walletAlias = "Sample Wallet";
 describe.each([true, false])("SearchWallet uses fiat value = %s", (showConvertedValue) => {
 	beforeAll(() => {
 		// mockProfileWithPublicAndTestNetworks(profile);
-		history.push(dashboardURL);
+		navigate(dashboardURL);
 	});
 
 	beforeEach(() => {

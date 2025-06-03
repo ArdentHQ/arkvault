@@ -49,7 +49,7 @@ const AppRouter = ({ children }: { children: React.ReactNode }) => {
 const Main = () => {
 	const { env, persist, isEnvironmentBooted, setIsEnvironmentBooted } = useEnvironmentContext();
 	const isOnline = useNetworkStatus();
-	const history = useNavigate();
+	const navigate = useNavigate();
 	const syncingMessageToastId = useRef<number | string>(undefined);
 
 	const { resetTheme } = useTheme();
@@ -63,7 +63,7 @@ const Main = () => {
 			toasts.warning(t("COMMON.LEDGER_COMPATIBILITY_ERROR_LONG"), { autoClose: false });
 		},
 		onProfileRestoreError: () => {
-			history.push({
+			navigate({
 				pathname: "/",
 				state: {
 					from: history.location.pathname + history.location.search,
@@ -88,7 +88,7 @@ const Main = () => {
 			syncingMessageToastId.current = toasts.warning(t("COMMON.PROFILE_SYNC_STARTED"), { autoClose: false });
 		},
 		onProfileUpdated: () => {
-			history.replace("/");
+			navigate("/");
 		},
 	});
 

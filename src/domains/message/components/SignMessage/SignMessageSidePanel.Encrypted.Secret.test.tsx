@@ -38,7 +38,7 @@ describe("SignMessage with encrypted secret", () => {
 	beforeEach(() => {
 		const dashboardUrl = `/profiles/${profile.id()}/dashboard`;
 
-		history.push(dashboardUrl);
+		navigate(dashboardUrl);
 	});
 
 	it(

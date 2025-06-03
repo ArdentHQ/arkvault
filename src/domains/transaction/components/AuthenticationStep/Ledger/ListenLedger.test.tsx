@@ -57,7 +57,7 @@ describe("ListenLedger", () => {
 	it("should emit event on device available", async () => {
 		const onDeviceAvailable = vi.fn();
 
-		history.push(`/profiles/${profile.id()}/wallets/import/ledger`);
+		navigate(`/profiles/${profile.id()}/wallets/import/ledger`);
 
 		const { container } = render(
 			<Route path="/profiles/:profileId/wallets/import/ledger">
@@ -74,7 +74,7 @@ describe("ListenLedger", () => {
 	it("should emit event on device not available", async () => {
 		const onDeviceNotAvailable = vi.fn();
 
-		history.push(`/profiles/${profile.id()}/wallets/import/ledger`);
+		navigate(`/profiles/${profile.id()}/wallets/import/ledger`);
 
 		const { container } = render(
 			<Route path="/profiles/:profileId/wallets/import/ledger">

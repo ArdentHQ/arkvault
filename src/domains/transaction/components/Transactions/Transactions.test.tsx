@@ -41,7 +41,7 @@ describe("Transactions", () => {
 
 	beforeEach(async () => {
 		dashboardURL = `/profiles/${fixtureProfileId}/dashboard`;
-		history.push(dashboardURL);
+		navigate(dashboardURL);
 	});
 
 	it("should render", async () => {
@@ -530,7 +530,7 @@ describe("Transactions", () => {
 		const emptyProfile = await env.profiles().create("test-empty");
 		const emptyProfileURL = `/profiles/${emptyProfile.id()}/dashboard`;
 
-		history.push(emptyProfileURL);
+		navigate(emptyProfileURL);
 
 		render(
 			<Route path="/profiles/:profileId/dashboard">

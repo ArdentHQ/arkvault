@@ -352,7 +352,7 @@ describe("AddressRow", () => {
 		const history = createHashHistory();
 
 		const historySpy = vi.spyOn(history, "push");
-		history.push(route);
+		navigate(route);
 
 		render(
 			<AddressWrapper>

@@ -19,7 +19,7 @@ const wrapper = ({ children }: any) => (
 
 describe("useTimeFormat", () => {
 	beforeAll(() => {
-		history.push(dashboardURL);
+		navigate(dashboardURL);
 		profile = env.profiles().findById(getMainsailProfileId());
 	});
 

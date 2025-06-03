@@ -9,7 +9,7 @@ import { useSearchParametersValidation } from "@/app/hooks/use-search-parameters
 export const useDeeplink = () => {
 	const { env } = useEnvironmentContext();
 
-	const history = useNavigate();
+	const navigate = useNavigate();
 	const queryParameters = useQueryParameters();
 	const { methods, buildSearchParametersError, validateSearchParameters } = useSearchParametersValidation();
 
@@ -17,7 +17,7 @@ export const useDeeplink = () => {
 
 	const handleDeepLink = (profile: Contracts.IProfile) => {
 		const method = methods[queryParameters.get("method") as string];
-		return history.push(method.path({ env, profile, searchParameters: queryParameters }));
+		return navigate(method.path({ env, profile, searchParameters: queryParameters }));
 	};
 
 	const validateDeeplink = async (profile: Contracts.IProfile) => {

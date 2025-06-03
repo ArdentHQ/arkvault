@@ -42,7 +42,7 @@ const path = "/profiles/:profileId/wallets/:walletId/send-registration/:registra
 const renderPage = async (wallet: Contracts.IReadWriteWallet, type = "validatorRegistration") => {
 	const registrationURL = `/profiles/${profile.id()}/wallets/${wallet.id()}/send-registration/${type}`;
 
-	history.push(registrationURL);
+	navigate(registrationURL);
 
 	const utils = render(
 		<Route path={path}>
@@ -222,7 +222,7 @@ describe("Registration", () => {
 		const label = "Register Validator";
 
 		const registrationPath = `/profiles/${profile.id()}/wallets/${secondWallet.id()}/send-registration/${type}`;
-		history.push(registrationPath);
+		navigate(registrationPath);
 
 		render(
 			<Route path={path}>

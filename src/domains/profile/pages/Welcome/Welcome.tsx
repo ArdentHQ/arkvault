@@ -19,7 +19,7 @@ import { Button } from "@/app/components/Button";
 
 export const Welcome = () => {
 	const context = useEnvironmentContext();
-	const history = useNavigate<LocationState>();
+	const navigate = useNavigate<LocationState>();
 	const [isThemeLoaded, setThemeLoaded] = useState(false);
 	const isProfileCardClickedOnce = useRef(false);
 
@@ -85,7 +85,7 @@ export const Welcome = () => {
 					toasts.update(validatingToastId, "error", error);
 					isProfileCardClickedOnce.current = false;
 
-					history.push("/");
+					navigate("/");
 					return;
 				}
 
@@ -97,7 +97,7 @@ export const Welcome = () => {
 
 			setProfileTheme(profile);
 
-			history.push(`/profiles/${profile.id()}/${subPath}`);
+			navigate(`/profiles/${profile.id()}/${subPath}`);
 		},
 		[history, isDeeplink],
 	);
@@ -105,7 +105,7 @@ export const Welcome = () => {
 	const navigateToPreviousPage = useCallback(
 		(profile: Contracts.IProfile) => {
 			setProfileTheme(profile);
-			history.push(history.location.state!.from!);
+			navigate(history.location.state!.from!);
 		},
 		[history],
 	);
@@ -271,7 +271,7 @@ export const Welcome = () => {
 											data-testid="CreateProfile"
 											variant="primary"
 											className={cn({ "mt-3": profiles.length })}
-											onClick={() => history.push("/profiles/create")}
+											onClick={() => navigate("/profiles/create")}
 										>
 											<Icon name="Plus" />
 											<span className="pl-2"> {t("COMMON.CREATE")} </span>

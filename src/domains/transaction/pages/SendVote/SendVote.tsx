@@ -43,7 +43,7 @@ enum Step {
 
 export const SendVote = () => {
 	const { env, persist } = useEnvironmentContext();
-	const history = useNavigate();
+	const navigate = useNavigate();
 	const { t } = useTranslation();
 
 	const activeProfile = useActiveProfile();
@@ -185,13 +185,13 @@ export const SendVote = () => {
 			const parameters = new URLSearchParams();
 
 			if (!wallet) {
-				return history.push(`/profiles/${activeProfile.id()}/dashboard`);
+				return navigate(`/profiles/${activeProfile.id()}/dashboard`);
 			}
 
 			appendParameters(parameters, "unvote", unvoteValidators);
 			appendParameters(parameters, "vote", voteValidators);
 
-			return history.push({
+			return navigate({
 				pathname: `/profiles/${activeProfile.id()}/wallets/${wallet.id()}/votes`,
 				search: `?${parameters}`,
 			});
@@ -487,7 +487,7 @@ export const SendVote = () => {
 
 							<TabPanel tabId={Step.ErrorStep}>
 								<ErrorStep
-									onClose={() => history.push(`/profiles/${activeProfile.id()}/dashboard`)}
+									onClose={() => navigate(`/profiles/${activeProfile.id()}/dashboard`)}
 									isBackDisabled={isSubmitting}
 									onBack={() => {
 										setActiveTab(Step.FormStep);
@@ -500,7 +500,7 @@ export const SendVote = () => {
 								<StepNavigation
 									onBackClick={handleBack}
 									onBackToWalletClick={() =>
-										history.push(`/profiles/${activeProfile.id()}/dashboard`)
+										navigate(`/profiles/${activeProfile.id()}/dashboard`)
 									}
 									onContinueClick={() => handleNext()}
 									isLoading={isSubmitting}

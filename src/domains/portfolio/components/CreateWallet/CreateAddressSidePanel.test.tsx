@@ -76,7 +76,7 @@ describe("CreateAddressSidePanel", () => {
 	it("should create a wallet", async () => {
 		const history = createHashHistory();
 		const createURL = `/profiles/${fixtureProfileId}/dashboard`;
-		history.push(createURL);
+		navigate(createURL);
 
 		render(
 			<Route path="/profiles/:profileId/dashboard">
@@ -151,7 +151,7 @@ describe("CreateAddressSidePanel", () => {
 	it("should create a wallet with encryption", async () => {
 		const history = createHashHistory();
 		const createURL = `/profiles/${fixtureProfileId}/dashboard`;
-		history.push(createURL);
+		navigate(createURL);
 
 		render(
 			<Route path="/profiles/:profileId/dashboard">
@@ -249,7 +249,7 @@ describe("CreateAddressSidePanel", () => {
 	it("should handle invalid encryption password", async () => {
 		const history = createHashHistory();
 		const createURL = `/profiles/${fixtureProfileId}/dashboard`;
-		history.push(createURL);
+		navigate(createURL);
 
 		render(
 			<Route path="/profiles/:profileId/dashboard">
@@ -340,7 +340,7 @@ describe("CreateAddressSidePanel", () => {
 	it("should not have a pending wallet if leaving on step 1", async () => {
 		const history = createHashHistory();
 		const createURL = `/profiles/${fixtureProfileId}/dashboard`;
-		history.push(createURL);
+		navigate(createURL);
 
 		render(
 			<Route path="/profiles/:profileId/dashboard">
@@ -360,7 +360,7 @@ describe("CreateAddressSidePanel", () => {
 	it("should remove pending wallet if not submitted", async () => {
 		const history = createHashHistory();
 		const createURL = `/profiles/${fixtureProfileId}/dashboard`;
-		history.push(createURL);
+		navigate(createURL);
 
 		render(
 			<Route path="/profiles/:profileId/dashboard">
@@ -388,7 +388,7 @@ describe("CreateAddressSidePanel", () => {
 		const history = createHashHistory();
 		const createURL = `/profiles/${fixtureProfileId}/dashboard`;
 
-		history.push(createURL);
+		navigate(createURL);
 
 		render(
 			<Route path="/profiles/:profileId/dashboard">
@@ -419,7 +419,7 @@ describe("CreateAddressSidePanel", () => {
 
 		const history = createHashHistory();
 		const createURL = `/profiles/${fixtureProfileId}/dashboard`;
-		history.push(createURL);
+		navigate(createURL);
 
 		render(
 			<Route path="/profiles/:profileId/dashboard">

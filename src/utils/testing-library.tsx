@@ -134,10 +134,10 @@ const renderWithRouter = (
 ) => {
 	if (!history) {
 		history = createHashHistory();
-		history.replace("/");
+		navigate("/");
 	}
 	if (route) {
-		history.replace(route, state ?? {});
+		navigate(route, state ?? {});
 	}
 
 	const ProfileSynchronizerWrapper = ({ children }: { children: React.ReactNode }) =>

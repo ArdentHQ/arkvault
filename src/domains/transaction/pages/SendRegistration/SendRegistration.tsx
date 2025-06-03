@@ -28,7 +28,7 @@ import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { useToggleFeeFields } from "@/domains/transaction/hooks/useToggleFeeFields";
 
 export const SendRegistration = () => {
-	const history = useNavigate();
+	const navigate = useNavigate();
 	const { t } = useTranslation();
 
 	const [activeTab, setActiveTab] = useState(1);
@@ -180,7 +180,7 @@ export const SendRegistration = () => {
 
 	const handleBack = () => {
 		if (activeTab === 1) {
-			return history.push(`/profiles/${activeProfile.id()}/dashboard`);
+			return navigate(`/profiles/${activeProfile.id()}/dashboard`);
 		}
 
 		setActiveTab(activeTab - 1);
@@ -202,12 +202,17 @@ export const SendRegistration = () => {
 
 	const isNextDisabled = isDirty ? !isValid || !!isLoading : true;
 
-	const getPageTitle = () =>
-		({
+	const getPageTitle = () => {
+		if (!registrationType) {
+			return undefined
+		}
+
+		return {
 			default: t("TRANSACTION.TRANSACTION_TYPES.VALIDATOR_REGISTRATION"),
 			multiSignature: t("TRANSACTION.TRANSACTION_TYPES.MULTI_SIGNATURE"),
 			usernameRegistration: t("TRANSACTION.TRANSACTION_TYPES.USERNAME_REGISTRATION"),
-		})[registrationType];
+		}[registrationType];
+	}
 
 	return (
 		<Page pageTitle={getPageTitle()}>
@@ -222,7 +227,7 @@ export const SendRegistration = () => {
 						<Tabs activeId={activeTab}>
 							<TabPanel tabId={10}>
 								<ErrorStep
-									onClose={() => history.push(`/profiles/${activeProfile.id()}/dashboard`)}
+									onClose={() => navigate(`/profiles/${activeProfile.id()}/dashboard`)}
 									isBackDisabled={isSubmitting}
 									onBack={() => {
 										setActiveTab(1);
@@ -259,7 +264,7 @@ export const SendRegistration = () => {
 								<StepNavigation
 									onBackClick={handleBack}
 									onBackToWalletClick={() =>
-										history.push(`/profiles/${activeProfile.id()}/dashboard`)
+										navigate(`/profiles/${activeProfile.id()}/dashboard`)
 									}
 									onContinueClick={() => handleNext()}
 									isLoading={isSubmitting || isLoading}

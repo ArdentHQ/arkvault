@@ -34,7 +34,7 @@ vi.mock("@/domains/profile/routing", async () => {
 describe("App Router", () => {
 	beforeEach(() => {
 		process.env.REACT_APP_IS_UNIT = undefined;
-		history.push("/");
+		navigate("/");
 	});
 
 	it("should render app router", async () => {
@@ -48,8 +48,8 @@ describe("App Router", () => {
 
 	it("should handle user confirmation modal", async () => {
 		const PromptComponent = () => {
-			const history = useNavigate();
-			const goToRoot = () => history.push("/");
+			const navigate = useNavigate();
+			const goToRoot = () => navigate("/");
 
 			return (
 				<>
@@ -76,7 +76,7 @@ describe("App Router", () => {
 		});
 
 		act(() => {
-			history.push(`/profiles/${getMainsailProfileId()}/prompt`);
+			navigate(`/profiles/${getMainsailProfileId()}/prompt`);
 		});
 
 		await userEvent.click(screen.getByTestId("prompt_action"));
@@ -115,7 +115,7 @@ const renderComponent = (path = "/", options = {}) => {
 
 describe("App Main", () => {
 	beforeEach(() => {
-		history.push("/");
+		navigate("/");
 		// Mock synchronizer to avoid running any jobs in these tests.
 		process.env.MOCK_SYNCHRONIZER = "TRUE";
 	});
@@ -150,7 +150,7 @@ describe("App Main", () => {
 		const warningToastSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
 
 		const profileUrl = `/profiles/${getMainsailProfileId()}/exchange`;
-		history.push(profileUrl);
+		navigate(profileUrl);
 
 		renderComponent("/profiles/:profileId/exchange", { route: profileUrl });
 
@@ -174,7 +174,7 @@ describe("App Main", () => {
 
 		const profileUrl = `/profiles/${getMainsailProfileId()}/exchange`;
 
-		history.push(profileUrl);
+		navigate(profileUrl);
 
 		renderComponent(profileUrl, { route: profileUrl });
 

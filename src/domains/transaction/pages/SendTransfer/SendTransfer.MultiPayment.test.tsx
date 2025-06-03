@@ -47,7 +47,7 @@ describe("SendTransfer MultiPayment", () => {
 	it("should select two recipients", async () => {
 		const transferURL = `/profiles/${getDefaultProfileId()}/wallets/${wallet.id()}/send-transfer`;
 
-		history.push(transferURL);
+		navigate(transferURL);
 
 		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">

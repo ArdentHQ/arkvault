@@ -37,7 +37,7 @@ describe("TransactionExportModal", () => {
 		);
 
 		dashboardURL = `/profiles/${fixtureProfileId}/dashboard`;
-		history.push(dashboardURL);
+		navigate(dashboardURL);
 		profile = env.profiles().findById(getDefaultProfileId());
 
 		await syncValidators(profile);

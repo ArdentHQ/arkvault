@@ -108,13 +108,13 @@ export const LedgerAuthentication = ({
 	const { t } = useTranslation();
 
 	const [readyToConfirm, setReadyToConfirm] = useState(false);
-	const history = useNavigate();
+	const navigate = useNavigate();
 
 	if (!readyToConfirm) {
 		return (
 			<ListenLedger
 				onDeviceAvailable={() => setReadyToConfirm(true)}
-				onDeviceNotAvailable={onDeviceNotAvailable || (() => history.go(-1))}
+				onDeviceNotAvailable={onDeviceNotAvailable || (() => navigate(-1))}
 				noHeading={noHeading}
 				subject={subject}
 			/>

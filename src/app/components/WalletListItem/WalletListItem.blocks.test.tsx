@@ -13,7 +13,7 @@ describe("WalletListItem.blocks", () => {
 	let wallet: Contracts.IReadWriteWallet;
 
 	beforeAll(() => {
-		history.push(dashboardURL);
+		navigate(dashboardURL);
 	});
 
 	beforeEach(async () => {

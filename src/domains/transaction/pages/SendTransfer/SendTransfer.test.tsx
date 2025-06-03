@@ -260,7 +260,7 @@ describe("SendTransfer", () => {
 	it("should render form step with deeplink values and use them", async () => {
 		const transferURL = `/profiles/${fixtureProfileId}/send-transfer`;
 
-		history.push(transferURL);
+		navigate(transferURL);
 
 		const deeplinkProperties: any = {
 			amount: "1.2",
@@ -291,7 +291,7 @@ describe("SendTransfer", () => {
 
 		const walletNetworkSpy = vi.spyOn(wallet.network(), "ticker");
 
-		history.push(transferURL);
+		navigate(transferURL);
 
 		const deeplinkProperties: any = {
 			amount: "1.2",
@@ -324,7 +324,7 @@ describe("SendTransfer", () => {
 	it("should render review step", () => {
 		const transferURL = `/profiles/${fixtureProfileId}/send-transfer`;
 
-		history.push(transferURL);
+		navigate(transferURL);
 
 		const defaultValues = {
 			gasLimit: "1",
@@ -360,7 +360,7 @@ describe("SendTransfer", () => {
 	it("should render review step with multiple recipients (%s)", (_, memo) => {
 		const transferURL = `/profiles/${fixtureProfileId}/send-transfer`;
 
-		history.push(transferURL);
+		navigate(transferURL);
 
 		const defaultValues = {
 			gasLimit: "1",
@@ -405,7 +405,7 @@ describe("SendTransfer", () => {
 
 		const transferURL = `/profiles/${fixtureProfileId}/wallets/${fixtureWalletId}/send-transfer`;
 
-		history.push(transferURL);
+		navigate(transferURL);
 
 		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
@@ -426,7 +426,7 @@ describe("SendTransfer", () => {
 
 	it("should render form and use location state with network parameter", async () => {
 		const transferURL = `/profiles/${fixtureProfileId}/wallets/${fixtureWalletId}/send-transfer?recipient=DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9&memo=ARK&coin=ark&network=mainsail.devnet&amount=0`;
-		history.push(transferURL);
+		navigate(transferURL);
 
 		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
@@ -443,7 +443,7 @@ describe("SendTransfer", () => {
 
 	it("should render form and use location state with nethash parameter", async () => {
 		const transferURL = `/profiles/${fixtureProfileId}/wallets/${fixtureWalletId}/send-transfer?recipient=DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9&memo=ARK&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&amount=0`;
-		history.push(transferURL);
+		navigate(transferURL);
 
 		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
@@ -460,7 +460,7 @@ describe("SendTransfer", () => {
 
 	it("should render form and use location state without memo", async () => {
 		const transferURL = `/profiles/${fixtureProfileId}/wallets/${fixtureWalletId}/send-transfer?coin=ark&network=mainsail.devnet`;
-		history.push(transferURL);
+		navigate(transferURL);
 
 		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
@@ -478,7 +478,7 @@ describe("SendTransfer", () => {
 	it.each(["with keyboard", "without keyboard"])("should send a single transfer %s", async (inputMethod) => {
 		const transferURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-transfer`;
 
-		history.push(transferURL);
+		navigate(transferURL);
 
 		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
@@ -590,7 +590,7 @@ describe("SendTransfer", () => {
 	it("should fail sending a single transfer", async () => {
 		const transferURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-transfer`;
 
-		history.push(transferURL);
+		navigate(transferURL);
 
 		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
@@ -692,7 +692,7 @@ describe("SendTransfer", () => {
 	it("should send a single transfer and handle undefined expiration", async () => {
 		const transferURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-transfer`;
 
-		history.push(transferURL);
+		navigate(transferURL);
 
 		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
@@ -822,7 +822,7 @@ describe("SendTransfer", () => {
 
 		const transferURL = `/profiles/${fixtureProfileId}/transactions/${wallet.id()}/transfer`;
 
-		history.push(transferURL);
+		navigate(transferURL);
 
 		mockNanoXTransport();
 
@@ -878,7 +878,7 @@ describe("SendTransfer", () => {
 		const transferURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-transfer`;
 		const mnemonicMock = vi.spyOn(wallet, "actsWithMnemonic").mockReturnValue(true);
 
-		history.push(transferURL);
+		navigate(transferURL);
 
 		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
@@ -961,7 +961,7 @@ describe("SendTransfer", () => {
 	it("should show error step and go back", async () => {
 		const transferURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-transfer`;
 
-		history.push(transferURL);
+		navigate(transferURL);
 
 		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
@@ -1043,7 +1043,7 @@ describe("SendTransfer", () => {
 	it("should require amount if not set", async () => {
 		const transferURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-transfer`;
 
-		history.push(transferURL);
+		navigate(transferURL);
 
 		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
@@ -1098,7 +1098,7 @@ describe("SendTransfer", () => {
 
 		const transferURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-transfer`;
 
-		history.push(transferURL);
+		navigate(transferURL);
 
 		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
@@ -1225,7 +1225,7 @@ describe("SendTransfer", () => {
 
 		const transferURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-transfer`;
 
-		history.push(transferURL);
+		navigate(transferURL);
 
 		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
@@ -1300,7 +1300,7 @@ describe("SendTransfer", () => {
 		const actsWithEncryptionMock = vi.spyOn(wallet, "actsWithMnemonicWithEncryption").mockReturnValue(true);
 		const passphraseGetMock = vi.spyOn(wallet.signingKey(), "get").mockReturnValue(passphrase);
 
-		history.push(transferURL);
+		navigate(transferURL);
 
 		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">

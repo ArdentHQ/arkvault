@@ -55,7 +55,7 @@ describe("SignMessage with ledger", () => {
 	beforeEach(() => {
 		const dashboardUrl = `/profiles/${profile.id()}/dashboard`;
 
-		history.push(dashboardUrl);
+		navigate(dashboardUrl);
 	});
 
 	it("should display error step if user rejects", async () => {

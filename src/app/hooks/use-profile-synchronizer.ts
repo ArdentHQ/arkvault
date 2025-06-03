@@ -214,7 +214,7 @@ export const useProfileSyncStatus = (profileId: string) => {
 export const useProfileRestore = (profileId: string) => {
 	const { shouldRestore, markAsRestored, setStatus } = useProfileSyncStatus(profileId);
 	const { persist, env } = useEnvironmentContext();
-	const history = useNavigate();
+	const navigate = useNavigate();
 
 	const restoreProfile = async (profile: Contracts.IProfile, passwordInput?: string) => {
 		if (!shouldRestore(profile)) {
@@ -338,7 +338,7 @@ export const useProfileSynchronizer = ({
 	const [activeProfileId, setActiveProfileId] = useState<string | undefined>();
 	const lastPathname = useRef<string>(undefined);
 
-	const history = useNavigate();
+	const navigate = useNavigate();
 
 	useProfileStatusWatcher({
 		onProfileSyncComplete,

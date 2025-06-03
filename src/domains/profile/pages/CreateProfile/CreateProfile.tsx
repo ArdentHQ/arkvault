@@ -16,7 +16,7 @@ import { ProfilePaths } from "@/router/paths";
 export const CreateProfile = () => {
 	const { env, persist } = useEnvironmentContext();
 	const { t } = useTranslation();
-	const history = useNavigate();
+	const navigate = useNavigate();
 
 	const { theme, resetTheme } = useTheme();
 	const { defaultCurrency } = useLocaleCurrency();
@@ -42,7 +42,7 @@ export const CreateProfile = () => {
 
 		setProfileTheme(profile);
 
-		history.push(generatePath(ProfilePaths.Dashboard, { profileId: profile.id() }));
+		navigate(generatePath(ProfilePaths.Dashboard, { profileId: profile.id() }));
 	};
 
 	return (
@@ -68,7 +68,7 @@ export const CreateProfile = () => {
 								currency: defaultCurrency,
 								viewingMode: theme,
 							}}
-							onBack={() => history.push("/")}
+							onBack={() => navigate("/")}
 							onSubmit={handleSubmit}
 							shouldValidate={false}
 							showPasswordFields={true}

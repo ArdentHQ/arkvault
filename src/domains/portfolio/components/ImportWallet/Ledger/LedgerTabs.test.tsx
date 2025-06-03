@@ -792,7 +792,7 @@ describe("LedgerTabs", () => {
 		}
 
 		await act(() => {
-			history.push(`/profiles/${profile.id()}/dashboard`);
+			navigate(`/profiles/${profile.id()}/dashboard`);
 		});
 
 		await waitFor(

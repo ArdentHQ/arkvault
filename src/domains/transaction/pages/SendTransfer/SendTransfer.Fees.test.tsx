@@ -109,7 +109,7 @@ describe("SendTransfer Fee Handling", () => {
 
 	it("should update available amount after sender address changed", async () => {
 		const transferURL = `/profiles/${getDefaultProfileId()}/send-transfer`;
-		history.push(transferURL);
+		navigate(transferURL);
 
 		render(
 			<Route path="/profiles/:profileId/send-transfer">
@@ -152,7 +152,7 @@ describe("SendTransfer Fee Handling", () => {
 
 	it("should recalculate amount when fee changes and send all is selected", async () => {
 		const transferURL = `/profiles/${getDefaultProfileId()}/wallets/${wallet.id()}/send-transfer`;
-		history.push(transferURL);
+		navigate(transferURL);
 
 		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
@@ -207,7 +207,7 @@ describe("SendTransfer Fee Handling", () => {
 	it("should keep the selected fee when user steps back", async () => {
 		const transferURL = `/profiles/${getDefaultProfileId()}/wallets/${wallet.id()}/send-transfer`;
 
-		history.push(transferURL);
+		navigate(transferURL);
 
 		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
@@ -269,7 +269,7 @@ describe("SendTransfer Fee Handling", () => {
 	it("should handle fee change", async () => {
 		const transferURL = `/profiles/${getDefaultProfileId()}/wallets/${wallet.id()}/send-transfer`;
 
-		history.push(transferURL);
+		navigate(transferURL);
 
 		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
@@ -350,7 +350,7 @@ describe("SendTransfer Fee Handling", () => {
 
 		const transferURL = `/profiles/${getDefaultProfileId()}/wallets/${arkWallet.id()}/send-transfer`;
 
-		history.push(transferURL);
+		navigate(transferURL);
 
 		const useFeesMock = vi.spyOn(useFeesHook, "useFees").mockReturnValue({
 			calculate: () =>
@@ -415,7 +415,7 @@ describe("SendTransfer Fee Handling", () => {
 	it.skip("should return to form step by cancelling fee warning", async () => {
 		const transferURL = `/profiles/${getDefaultProfileId()}/wallets/${wallet.id()}/send-transfer`;
 
-		history.push(transferURL);
+		navigate(transferURL);
 
 		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
@@ -486,7 +486,7 @@ describe("SendTransfer Fee Handling", () => {
 		"should update the profile settings when dismissing the fee warning (%s)",
 		async (action) => {
 			const transferURL = `/profiles/${getDefaultProfileId()}/wallets/${wallet.id()}/send-transfer`;
-			history.push(transferURL);
+			navigate(transferURL);
 
 			render(
 				<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
@@ -569,7 +569,7 @@ describe("SendTransfer Fee Handling", () => {
 	])("should send a single transfer with a %s fee by confirming the fee warning", async (_, fee) => {
 		const transferURL = `/profiles/${getDefaultProfileId()}/wallets/${wallet.id()}/send-transfer`;
 
-		history.push(transferURL);
+		navigate(transferURL);
 
 		const { container } = render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">

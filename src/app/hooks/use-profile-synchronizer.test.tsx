@@ -192,7 +192,7 @@ describe("useProfileSynchronizer", () => {
 	});
 
 	it("should clear last profile sync jobs", async () => {
-		history.push(dashboardURL);
+		navigate(dashboardURL);
 
 		render(
 			<Route path="/profiles/:profileId/dashboard">
@@ -208,7 +208,7 @@ describe("useProfileSynchronizer", () => {
 		await expect(screen.findByTestId("ProfileSynced")).resolves.toBeVisible();
 
 		renderAct(() => {
-			history.push("/");
+			navigate("/");
 		});
 
 		await waitFor(() => expect(history.location.pathname).toBe("/"));
@@ -216,7 +216,7 @@ describe("useProfileSynchronizer", () => {
 	});
 
 	it("should not sync if not in profile's url", async () => {
-		history.push("/");
+		navigate("/");
 
 		vi.useFakeTimers({ shouldAdvanceTime: true });
 		render(
@@ -236,7 +236,7 @@ describe("useProfileSynchronizer", () => {
 	});
 
 	it("should sync only valid profiles from url", async () => {
-		history.push("/profiles/invalidId/dashboard");
+		navigate("/profiles/invalidId/dashboard");
 
 		render(
 			<Route path="/">
@@ -256,7 +256,7 @@ describe("useProfileSynchronizer", () => {
 		process.env.TEST_PROFILES_RESTORE_STATUS = undefined;
 		process.env.REACT_APP_IS_E2E = undefined;
 
-		history.push(dashboardURL);
+		navigate(dashboardURL);
 
 		render(
 			<Route path="/profiles/:profileId/dashboard">
@@ -278,7 +278,7 @@ describe("useProfileSynchronizer", () => {
 		process.env.TEST_PROFILES_RESTORE_STATUS = undefined;
 
 		const passwordProtectedUrl = "/profiles/cba050f1-880f-45f0-9af9-cfe48f406052/dashboard";
-		history.push(passwordProtectedUrl);
+		navigate(passwordProtectedUrl);
 
 		const profile = env.profiles().findById("cba050f1-880f-45f0-9af9-cfe48f406052");
 		profile.wallets().flush();
@@ -307,7 +307,7 @@ describe("useProfileSynchronizer", () => {
 		process.env.TEST_PROFILES_RESTORE_STATUS = undefined;
 		process.env.REACT_APP_IS_E2E = "1";
 
-		history.push(dashboardURL);
+		navigate(dashboardURL);
 
 		render(
 			<Route path="/profiles/:profileId/dashboard">
@@ -332,7 +332,7 @@ describe("useProfileSynchronizer", () => {
 		const emptyProfile = await env.profiles().create("empty profile");
 
 		const dashboardURL = `/profiles/${emptyProfile.id()}/dashboard`;
-		history.push(dashboardURL);
+		navigate(dashboardURL);
 
 		const Component = () => {
 			configuration = useConfiguration();
@@ -366,7 +366,7 @@ describe("useProfileSynchronizer", () => {
 	});
 
 	it("should reset sync profile wallets", async () => {
-		history.push(dashboardURL);
+		navigate(dashboardURL);
 
 		const profile = env.profiles().findById(getMainsailProfileId());
 		let configuration: any;
@@ -402,7 +402,7 @@ describe("useProfileSynchronizer", () => {
 
 	it("should sync profile", async () => {
 		process.env.MOCK_SYNCHRONIZER = "TRUE";
-		history.push(dashboardURL);
+		navigate(dashboardURL);
 
 		render(
 			<Route path="/profiles/:profileId/dashboard">
@@ -433,7 +433,7 @@ describe("useProfileSynchronizer", () => {
 			return <button data-testid="SyncProfile" onClick={() => syncProfileWallets()} />;
 		};
 
-		history.push(dashboardURL);
+		navigate(dashboardURL);
 
 		render(
 			<Route path="/profiles/:profileId/dashboard">
@@ -471,10 +471,10 @@ describe("useProfileSynchronizer", () => {
 		const profile2 = await env.profiles().create("new profile 2");
 
 		const dashboardURL = `/profiles/${profile.id()}/dashboard`;
-		history.push(dashboardURL);
+		navigate(dashboardURL);
 
 		const changeUrl = () => {
-			history.push(`/profiles/${profile2.id()}/dashboard`);
+			navigate(`/profiles/${profile2.id()}/dashboard`);
 		};
 
 		render(
@@ -509,10 +509,10 @@ describe("useProfileSynchronizer", () => {
 		const profile = env.profiles().findById(getMainsailProfileId());
 
 		const dashboardURL = `/profiles/${profile.id()}/dashboard`;
-		history.push("/");
+		navigate("/");
 
 		const changeUrl = () => {
-			history.push(dashboardURL);
+			navigate(dashboardURL);
 		};
 
 		render(
@@ -699,7 +699,7 @@ describe("useProfileRestore", () => {
 
 	it("should sync profile and handle sync error", async () => {
 		const dismissToastSpy = vi.spyOn(toasts, "dismiss").mockImplementation(vi.fn());
-		history.push(dashboardURL);
+		navigate(dashboardURL);
 
 		const profile = env.profiles().findById(getMainsailProfileId());
 		await env.profiles().restore(profile);
@@ -948,7 +948,7 @@ describe("useProfileStatusWatcher", () => {
 
 		profile.wallets().push(ledgerWallet);
 
-		history.push(dashboardURL);
+		navigate(dashboardURL);
 
 		const onLedgerCompatibilityError = vi.fn();
 

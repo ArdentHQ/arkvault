@@ -63,7 +63,7 @@ describe("useDeeplink hook", () => {
 	};
 
 	it("should use the method parameter to detect deeplink", () => {
-		history.push(
+		navigate(
 			"/?network=mainsail.devnet&recipient=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6&amount=1.2&memo=ARK",
 		);
 
@@ -80,7 +80,7 @@ describe("useDeeplink hook", () => {
 	});
 
 	it("should validate url with errors", async () => {
-		history.push("/?method=teeeest&network=mainsail.devnet");
+		navigate("/?method=teeeest&network=mainsail.devnet");
 
 		render(
 			<Route>
@@ -101,7 +101,7 @@ describe("useDeeplink hook", () => {
 	});
 
 	it("should validate url without errors", async () => {
-		history.push("/?method=transfer&network=mainsail.devnet");
+		navigate("/?method=transfer&network=mainsail.devnet");
 
 		render(
 			<Route>
@@ -120,7 +120,7 @@ describe("useDeeplink hook", () => {
 	});
 
 	it("should handle url", async () => {
-		history.push(url);
+		navigate(url);
 
 		const historySpy = vi.spyOn(history, "push");
 

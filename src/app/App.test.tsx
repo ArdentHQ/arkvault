@@ -68,7 +68,7 @@ describe("App", () => {
 	});
 
 	beforeEach(() => {
-		history.replace("/");
+		navigate("/");
 		env.reset();
 	});
 

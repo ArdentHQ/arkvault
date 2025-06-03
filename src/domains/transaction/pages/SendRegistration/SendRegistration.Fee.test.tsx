@@ -37,7 +37,7 @@ const path = "/profiles/:profileId/wallets/:walletId/send-registration/:registra
 const renderPage = async (wallet: Contracts.IReadWriteWallet, type = "validatorRegistration") => {
 	const registrationURL = `/profiles/${profile.id()}/wallets/${wallet.id()}/send-registration/${type}`;
 
-	history.push(registrationURL);
+	navigate(registrationURL);
 
 	const SendRegistrationWrapper = () => {
 		const { listenDevice } = useLedgerContext();

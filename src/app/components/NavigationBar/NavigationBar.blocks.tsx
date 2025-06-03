@@ -58,11 +58,11 @@ const NavigationBarLogo: React.FC<NavigationBarLogoOnlyProperties> = ({
 	onClick,
 	variant = "default",
 }: NavigationBarLogoOnlyProperties) => {
-	const history = useNavigate();
+	const navigate = useNavigate();
 	const { isXs } = useBreakpoint();
 
 	const defaultHandler = useCallback(() => {
-		history.push("/");
+		navigate("/");
 	}, [history]);
 
 	const getLogoHeight = () => {
@@ -200,7 +200,7 @@ const NavigationBarMobile = ({
 export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 	isBackDisabled,
 }: NavigationBarFullProperties) => {
-	const history = useNavigate();
+	const navigate = useNavigate();
 	const profile = useActiveProfile();
 	const { t } = useTranslation();
 	const { openExternal } = useLink();
@@ -242,7 +242,7 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 	const navigationMenu = useMemo(() => getNavigationMenu(t), [t]);
 	const handleSelectMenuItem = useCallback(
 		({ value }: DropdownOption) => {
-			history.push(String(value));
+			navigate(String(value));
 		},
 		[history],
 	);
@@ -316,7 +316,7 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 		// add query param reset = 1 if already on send transfer page
 		/* istanbul ignore next: tested in e2e -- @preserve */
 		const reset = history.location.pathname === sendTransferPath ? 1 : 0;
-		history.push(`${sendTransferPath}?reset=${reset}`);
+		navigate(`${sendTransferPath}?reset=${reset}`);
 	}, [history]);
 
 	const receiveButtonClickHandler = useCallback(() => {
@@ -326,7 +326,7 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 	const homeButtonHandler = useCallback(() => {
 		const dashboardPath = generatePath(ProfilePaths.Dashboard, { profileId: profile.id() });
 
-		history.push(dashboardPath);
+		navigate(dashboardPath);
 	}, [history]);
 
 	const transactButtonsDisabled = useMemo(() => wallets.length === 0, [wallets]);
@@ -427,7 +427,7 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 											return openExternal(action.mountPath());
 										}
 
-										return history.push(action.mountPath(profile.id()));
+										return navigate(action.mountPath(profile.id()));
 									}}
 								/>
 							</div>

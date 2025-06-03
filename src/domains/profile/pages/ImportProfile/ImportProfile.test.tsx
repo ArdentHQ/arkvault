@@ -30,7 +30,7 @@ const createBlob = (fileContents: string | Buffer, fileName?: string) =>
 
 describe("ImportProfile", () => {
 	beforeEach(() => {
-		history.push(importProfileURL);
+		navigate(importProfileURL);
 	});
 
 	it("should render first step", () => {

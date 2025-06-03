@@ -27,7 +27,7 @@ describe("UrlValidationMiddleware", () => {
 		const parameters = { env, history: { replace: vi.fn() }, location, redirect };
 
 		expect(subject.handler(parameters)).toBe(false);
-		expect(parameters.history.replace).toHaveBeenCalledWith("/");
+		expect(parameters.navigate).toHaveBeenCalledWith("/");
 	});
 
 	it("should validate profile in url", () => {
@@ -48,6 +48,6 @@ describe("UrlValidationMiddleware", () => {
 		const parameters = { env, history: { replace: vi.fn() }, location, redirect };
 
 		expect(subject.handler(parameters)).toBe(false);
-		expect(parameters.history.replace).toHaveBeenCalledWith("/");
+		expect(parameters.navigate).toHaveBeenCalledWith("/");
 	});
 });

@@ -29,7 +29,7 @@ export const Dashboard = ({
 	const [isUpdatingWallet, setIsUpdatingWallet] = useState(false);
 	const [showSignMessagePanel, setShowSignMessagePanel] = useState(false);
 
-	const history = useNavigate();
+	const navigate = useNavigate();
 	const { t } = useTranslation();
 
 	const { env } = useEnvironmentContext();
@@ -40,7 +40,7 @@ export const Dashboard = ({
 
 	const handleVoteButton = () => {
 		if (selectedWallets.length > 1) {
-			history.push({
+			navigate({
 				pathname: `/profiles/${activeProfile.id()}/votes`,
 			});
 
@@ -49,7 +49,7 @@ export const Dashboard = ({
 
 		const wallet = selectedWallets.at(0);
 
-		history.push(`/profiles/${activeProfile.id()}/wallets/${wallet?.id()}/votes`);
+		navigate(`/profiles/${activeProfile.id()}/wallets/${wallet?.id()}/votes`);
 	};
 
 	const [mobileActiveTab, setMobileActiveTab] = useState<TabId>("transactions");

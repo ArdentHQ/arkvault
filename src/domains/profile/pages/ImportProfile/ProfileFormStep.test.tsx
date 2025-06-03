@@ -37,7 +37,7 @@ describe("Import Profile - Profile Form Step", () => {
 
 	it("should render profile form", async () => {
 		const history = createHashHistory();
-		history.push("/profiles/import");
+		navigate("/profiles/import");
 
 		render(
 			<EnvironmentProvider env={env}>
@@ -60,7 +60,7 @@ describe("Import Profile - Profile Form Step", () => {
 	it("should render profile form with empty profile", async () => {
 		const history = createHashHistory();
 		const emptyProfile = await env.profiles().create("test2");
-		history.push("/profiles/import");
+		navigate("/profiles/import");
 
 		render(
 			<EnvironmentProvider env={env}>

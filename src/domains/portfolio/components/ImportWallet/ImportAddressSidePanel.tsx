@@ -36,7 +36,7 @@ export const ImportAddressesSidePanel = ({
 	onOpenChange: (open: boolean) => void;
 	onMountChange?: (mounted: boolean) => void;
 }): JSX.Element => {
-	const history = useNavigate();
+	const navigate = useNavigate();
 	const activeProfile = useActiveProfile();
 	const { persist } = useEnvironmentContext();
 	const [activeTab, setActiveTab] = useState<ImportAddressStep>(ImportAddressStep.MethodStep);
@@ -156,7 +156,7 @@ export const ImportAddressesSidePanel = ({
 		console.log("handleback", activeTab);
 
 		if (activeTab === ImportAddressStep.MethodStep) {
-			return history.push(`/profiles/${activeProfile.id()}/dashboard`);
+			return navigate(`/profiles/${activeProfile.id()}/dashboard`);
 		}
 
 		if (activeTab === ImportAddressStep.EncryptPasswordStep && importedWallet) {

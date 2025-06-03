@@ -54,7 +54,7 @@ describe("useWalletFromQueryParameters hook", () => {
 	};
 
 	it("should not find vote & unvote validators from url", async () => {
-		history.push("/");
+		navigate("/");
 
 		render(<TestComponent />, { history, withProviders: false });
 
@@ -65,7 +65,7 @@ describe("useWalletFromQueryParameters hook", () => {
 	});
 
 	it("should find vote validator from url", () => {
-		history.push(`/?vote=${validatorAddresses[0]},2&nethash=${nethash}`);
+		navigate(`/?vote=${validatorAddresses[0]},2&nethash=${nethash}`);
 
 		render(<TestComponent />, { history, withProviders: false });
 
@@ -74,7 +74,7 @@ describe("useWalletFromQueryParameters hook", () => {
 	});
 
 	it("should find unvote validator from url", () => {
-		history.push(`/?unvote=${validatorAddresses[0]},2&nethash=${nethash}`);
+		navigate(`/?unvote=${validatorAddresses[0]},2&nethash=${nethash}`);
 
 		render(<TestComponent />, { history, withProviders: false });
 

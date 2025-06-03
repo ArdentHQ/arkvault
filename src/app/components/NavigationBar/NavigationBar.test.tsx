@@ -64,7 +64,7 @@ describe("NavigationBar", () => {
 		process.env.MOCK_AVAILABLE_NETWORKS = "false";
 		profile = mockedTestEnvironment.profiles().findById(getMainsailProfileId());
 
-		history.push(dashboardURL);
+		navigate(dashboardURL);
 	});
 
 	beforeEach(() => {

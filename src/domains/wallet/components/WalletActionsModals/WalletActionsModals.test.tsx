@@ -26,7 +26,7 @@ describe("WalletActionsModals", () => {
 	});
 
 	beforeEach(() => {
-		history.push(dashboardURL);
+		navigate(dashboardURL);
 	});
 
 	it("should render `receive-funds` modal", async () => {

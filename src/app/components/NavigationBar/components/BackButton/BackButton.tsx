@@ -30,14 +30,14 @@ const StyledBackButton = ({
 );
 
 export const BackButton = ({ backToUrl, disabled }: BackButtonProperties) => {
-	const history = useNavigate();
+	const navigate = useNavigate();
 
 	const handleOnClick = () => {
 		if (backToUrl) {
-			return history.push(backToUrl);
+			return navigate(backToUrl);
 		}
 
-		history.go(-1);
+		navigate(-1);
 	};
 
 	return (

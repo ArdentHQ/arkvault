@@ -22,7 +22,7 @@ export const useVoteActions = ({
 	selectedNetwork,
 	hasWalletId,
 }: VoteActionsProperties) => {
-	const history = useNavigate();
+	const navigate = useNavigate();
 
 	const navigateToSendVote = (unvotes: VoteValidatorProperties[], votes: VoteValidatorProperties[]) => {
 		const walletId = hasWalletId
@@ -41,7 +41,7 @@ export const useVoteActions = ({
 
 		appendParameters(parameters, "vote", votes);
 
-		history?.push({
+		navigate({
 			pathname: generatePath(ProfilePaths.SendVoteWallet, { profileId: profile.id(), walletId }),
 			search: `?${parameters}`,
 		});

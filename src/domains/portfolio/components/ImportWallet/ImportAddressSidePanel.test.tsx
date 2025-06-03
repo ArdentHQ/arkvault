@@ -66,7 +66,7 @@ describe("ImportSidePanel", () => {
 	});
 
 	it("should render method step", async () => {
-		history.push(`/profiles/${profile.id()}`);
+		navigate(`/profiles/${profile.id()}`);
 		render(
 			<Route path="/profiles/:profileId">
 				<Component />
@@ -123,7 +123,7 @@ describe("ImportSidePanel", () => {
 			);
 		};
 
-		history.push(`/profiles/${profile.id()}`);
+		navigate(`/profiles/${profile.id()}`);
 		render(
 			<Route path="/profiles/:profileId">
 				<ImportAddressesSidePanelComponent />
@@ -217,7 +217,7 @@ describe("ImportSidePanel", () => {
 		await emptyProfile.sync();
 
 		const history = createHashHistory();
-		history.push(route);
+		navigate(route);
 		const randomNewAddress = "0x125b484e51Ad990b5b3140931f3BD8eAee85Db23";
 
 		const onOpenChangeMock = vi.fn();

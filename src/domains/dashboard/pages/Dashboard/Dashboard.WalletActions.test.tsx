@@ -39,7 +39,7 @@ describe("Dashboard", () => {
 
 	beforeEach(() => {
 		dashboardURL = `/profiles/${fixtureProfileId}/dashboard`;
-		history.push(dashboardURL);
+		navigate(dashboardURL);
 
 		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 	});

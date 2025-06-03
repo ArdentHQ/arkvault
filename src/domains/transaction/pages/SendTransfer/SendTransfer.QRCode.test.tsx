@@ -87,7 +87,7 @@ describe("SendTransfer QRModal", () => {
 		const toastSpy = vi.spyOn(toasts, "success");
 
 		const transferURL = `/profiles/${fixtureProfileId}/wallets/${fixtureWalletId}/send-transfer?recipient=0x93485b57ff3DeD81430D08579142fAe8234c6A17&memo=ARK&coin=mainsail&network=mainsail.devnet`;
-		history.push(transferURL);
+		navigate(transferURL);
 
 		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
@@ -120,7 +120,7 @@ describe("SendTransfer QRModal", () => {
 		const toastSpy = vi.spyOn(toasts, "success");
 
 		const transferURL = `/profiles/${fixtureProfileId}/wallets/${fixtureWalletId}/send-transfer?recipient=0x93485b57ff3DeD81430D08579142fAe8234c6A17&memo=ARK&coin=mainsail&network=mainsail.devnet`;
-		history.push(transferURL);
+		navigate(transferURL);
 
 		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
@@ -153,7 +153,7 @@ describe("SendTransfer QRModal", () => {
 		const toastSpy = vi.spyOn(toasts, "error");
 
 		const transferURL = `/profiles/${fixtureProfileId}/wallets/${fixtureWalletId}/send-transfer?recipient=0x93485b57ff3DeD81430D08579142fAe8234c6A17&memo=ARK&coin=mainsail&network=mainsail.devnet`;
-		history.push(transferURL);
+		navigate(transferURL);
 
 		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
@@ -191,7 +191,7 @@ describe("SendTransfer QRModal", () => {
 		const { result } = renderHook(() => useSearchParametersValidation());
 
 		const transferURL = `/profiles/${fixtureProfileId}/wallets/${fixtureWalletId}/send-transfer`;
-		history.push(transferURL);
+		navigate(transferURL);
 
 		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
@@ -218,7 +218,7 @@ describe("SendTransfer QRModal", () => {
 
 	it("should open QR Code Modal and cancel", async () => {
 		const transferURL = `/profiles/${fixtureProfileId}/wallets/${fixtureWalletId}/send-transfer?recipient=0x93485b57ff3DeD81430D08579142fAe8234c6A17&memo=ARK&coin=mainsail&network=mainsail.devnet`;
-		history.push(transferURL);
+		navigate(transferURL);
 
 		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
@@ -245,7 +245,7 @@ describe("SendTransfer QRModal", () => {
 		const toastSpy = vi.spyOn(toasts, "success");
 
 		const transferURL = `/profiles/${fixtureProfileId}/wallets/${fixtureWalletId}/send-transfer`;
-		history.push(transferURL);
+		navigate(transferURL);
 
 		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
@@ -316,7 +316,7 @@ describe("SendTransfer QRModal", () => {
 		const toastSpy = vi.spyOn(toasts, "success");
 
 		const transferURL = `/profiles/${fixtureProfileId}/wallets/${fixtureWalletId}/send-transfer`;
-		history.push(transferURL);
+		navigate(transferURL);
 
 		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
@@ -382,7 +382,7 @@ describe("SendTransfer QRModal", () => {
 		const toastSpy = vi.spyOn(toasts, "success");
 
 		const transferURL = `/profiles/${fixtureProfileId}/wallets/${fixtureWalletId}/send-transfer`;
-		history.push(transferURL);
+		navigate(transferURL);
 
 		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
@@ -424,7 +424,7 @@ describe("SendTransfer QRModal", () => {
 		const mockProfileWithOnlyPublicNetworksReset = mockProfileWithPublicAndTestNetworks(profile);
 
 		const transferURL = `/profiles/${fixtureProfileId}/wallets/${fixtureWalletId}/send-transfer`;
-		history.push(transferURL);
+		navigate(transferURL);
 
 		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">

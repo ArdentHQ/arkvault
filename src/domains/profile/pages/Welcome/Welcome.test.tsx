@@ -471,7 +471,7 @@ describe("Welcome with deeplink", () => {
 		});
 
 		act(() => {
-			history.push(path);
+			navigate(path);
 		});
 
 		await waitFor(() => expect(toastWarningSpy).toHaveBeenCalledTimes(1));
@@ -656,7 +656,7 @@ describe("Welcome", () => {
 		const profile = env.profiles().findById(getPasswordProtectedProfileId());
 		const history = createHashHistory();
 
-		history.replace("/", {
+		navigate("/", {
 			from: `/profiles/${profile.id()}/exchange`,
 		});
 
@@ -769,7 +769,7 @@ describe("Welcome", () => {
 
 	it("should not select profile on wrong last location", () => {
 		const history = createHashHistory();
-		history.replace("/", {
+		navigate("/", {
 			from: `/wronguri/exchange`,
 		});
 		const { asFragment, container } = render(<Welcome />, { history });

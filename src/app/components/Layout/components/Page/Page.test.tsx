@@ -43,7 +43,7 @@ const TestComponent = ({
 describe("Page", () => {
 	beforeAll(() => {
 		profile = env.profiles().findById(getMainsailProfileId());
-		history.push(dashboardURL);
+		navigate(dashboardURL);
 	});
 
 	it.each([true, false])("should render with sidebar = %s", (sidebar) => {

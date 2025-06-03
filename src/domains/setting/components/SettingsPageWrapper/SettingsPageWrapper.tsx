@@ -21,7 +21,7 @@ export const SettingsWrapper = ({
 	activeSettings: ActiveSettings;
 }) => {
 	const { menuItems } = useSettingsMenu();
-	const history = useNavigate();
+	const navigate = useNavigate();
 	const { t } = useTranslation();
 
 	return (
@@ -41,7 +41,7 @@ export const SettingsWrapper = ({
 								items={menuItems}
 								activeItem={activeSettings}
 								handleActiveItem={(activeSetting: string) => {
-									history.push(`/profiles/${profile.id()}/settings/${activeSetting}`);
+									navigate(`/profiles/${profile.id()}/settings/${activeSetting}`);
 								}}
 							/>
 						</div>

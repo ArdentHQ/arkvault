@@ -163,7 +163,7 @@ describe("SendValidatorResignation", () => {
 	describe("Validator Resignation", () => {
 		beforeEach(() => {
 			resignationUrl = `/profiles/${profile.id()}/wallets/${wallet.id()}/send-validator-resignation`;
-			history.push(resignationUrl);
+			navigate(resignationUrl);
 
 			mnemonicMock = vi
 				.spyOn(AddressService.prototype, "fromMnemonic")
@@ -526,7 +526,7 @@ describe("SendValidatorResignation", () => {
 			const transactionMock = createTransactionMock(wallet);
 
 			const resignationEncryptedUrl = `/profiles/${profile.id()}/wallets/${wallet.id()}/send-validator-resignation`;
-			history.push(resignationEncryptedUrl);
+			navigate(resignationEncryptedUrl);
 
 			render(
 				<Route path="/profiles/:profileId/wallets/:walletId/send-validator-resignation">

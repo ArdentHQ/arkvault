@@ -12,7 +12,7 @@ const dashboardURL = `/profiles/${getMainsailProfileId()}/dashboard`;
 
 describe("useServerHealthStatus", () => {
 	beforeAll(() => {
-		history.push(dashboardURL);
+		navigate(dashboardURL);
 	});
 
 	const Component = ({ serverStatus }: { serverStatus: ServerHealthStatus }) => {

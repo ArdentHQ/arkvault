@@ -56,7 +56,7 @@ describe("General Settings", () => {
 	it("should render with prompt paths", async () => {
 		const history = createHashHistory();
 
-		history.push(`/profiles/${profile.id()}/settings`);
+		navigate(`/profiles/${profile.id()}/settings`);
 
 		render(
 			<Route path="/profiles/:profileId/settings">
@@ -69,17 +69,17 @@ describe("General Settings", () => {
 		);
 
 		// Idle
-		history.push(`/profiles/${profile.id()}/dashboard`);
+		navigate(`/profiles/${profile.id()}/dashboard`);
 
 		await userEvent.type(nameInput(), "My Profile");
 
 		await waitFor(() => expect(submitButton()).toBeEnabled());
 
 		// Dirty
-		history.replace(`/profiles/${profile.id()}/dashboard`);
+		navigate(`/profiles/${profile.id()}/dashboard`);
 
 		// Reload
-		history.replace(`/profiles/${profile.id()}/settings`);
+		navigate(`/profiles/${profile.id()}/settings`);
 	});
 
 	it("should render", async () => {
@@ -647,7 +647,7 @@ describe("General Settings", () => {
 		profile.flushSettings();
 
 		const history = createHashHistory();
-		history.push(settingsURL);
+		navigate(settingsURL);
 
 		render(
 			<Route path="/profiles/:profileId/settings">
@@ -675,7 +675,7 @@ describe("General Settings", () => {
 		expect(within(autoSignout()).getByTestId("select-list__input")).toHaveValue("1");
 
 		// change navigation
-		history.push(`/profiles/${profile.id()}/dashboard`);
+		navigate(`/profiles/${profile.id()}/dashboard`);
 
 		await waitFor(() => expect(history.location.pathname).toBe(settingsURL));
 	});

@@ -32,7 +32,7 @@ export const CreateAddressesSidePanel = ({
 	onMountChange?: (mounted: boolean) => void;
 }): JSX.Element => {
 	const { persist } = useEnvironmentContext();
-	const history = useNavigate();
+	const navigate = useNavigate();
 	const { t } = useTranslation();
 	const activeProfile = useActiveProfile();
 	const [activeTab, setActiveTab] = useState<CreateStep>(CreateStep.WalletOverviewStep);
@@ -116,7 +116,7 @@ export const CreateAddressesSidePanel = ({
 
 	const handleBack = () => {
 		if (activeTab === CreateStep.WalletOverviewStep) {
-			return history.push(`/profiles/${activeProfile.id()}/dashboard`);
+			return navigate(`/profiles/${activeProfile.id()}/dashboard`);
 		}
 
 		setActiveTab(activeTab - 1);

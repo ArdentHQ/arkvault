@@ -31,7 +31,7 @@ enum Step {
 }
 
 export const SendValidatorResignation = () => {
-	const history = useNavigate();
+	const navigate = useNavigate();
 	const { t } = useTranslation();
 
 	const form = useForm({ mode: "onChange" });
@@ -100,7 +100,7 @@ export const SendValidatorResignation = () => {
 
 	const handleBack = () => {
 		if (activeTab === Step.FormStep) {
-			return history.push(`/profiles/${activeProfile.id()}/dashboard`);
+			return navigate(`/profiles/${activeProfile.id()}/dashboard`);
 		}
 
 		setActiveTab(activeTab - 1);
@@ -179,7 +179,7 @@ export const SendValidatorResignation = () => {
 
 							<TabPanel tabId={Step.ErrorStep}>
 								<ErrorStep
-									onClose={() => history.push(`/profiles/${activeProfile.id()}/dashboard`)}
+									onClose={() => navigate(`/profiles/${activeProfile.id()}/dashboard`)}
 									isBackDisabled={isSubmitting || !isValid}
 									onBack={() => {
 										setActiveTab(Step.FormStep);
@@ -192,7 +192,7 @@ export const SendValidatorResignation = () => {
 								<StepNavigation
 									onBackClick={handleBack}
 									onBackToWalletClick={() =>
-										history.push(`/profiles/${activeProfile.id()}/dashboard`)
+										navigate(`/profiles/${activeProfile.id()}/dashboard`)
 									}
 									onContinueClick={() => handleNext()}
 									isLoading={isSubmitting}

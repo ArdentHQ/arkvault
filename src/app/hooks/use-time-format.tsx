@@ -6,7 +6,7 @@ import { getProfileFromUrl } from "@/utils/profile-utils";
 
 export const useTimeFormat = () => {
 	const { env } = useEnvironmentContext();
-	const history = useNavigate();
+	const navigate = useNavigate();
 
 	const defaultFormat = "DD.MM.YYYY h:mm A";
 

@@ -81,7 +81,7 @@ describe("SignMessageSidePanel", () => {
 		beforeEach(() => {
 			const dashboardUrl = `/profiles/${profile.id()}/dashboard`;
 
-			history.push(dashboardUrl);
+			navigate(dashboardUrl);
 		});
 
 		it("should render", async () => {

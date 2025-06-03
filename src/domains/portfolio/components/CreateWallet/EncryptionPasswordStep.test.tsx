@@ -54,7 +54,7 @@ describe("EncryptionPasswordStep", () => {
 	it("should create a wallet and use encryption password", async () => {
 		const history = createHashHistory();
 		const createURL = `/profiles/${fixtureProfileId}`;
-		history.push(createURL);
+		navigate(createURL);
 
 		const onOpenChangeMock = vi.fn();
 		const user = userEvent.setup();
@@ -148,7 +148,7 @@ describe("EncryptionPasswordStep", () => {
 	it("should fail creating a wallet with encryption password", async () => {
 		const history = createHashHistory();
 		const createURL = `/profiles/${fixtureProfileId}`;
-		history.push(createURL);
+		navigate(createURL);
 
 		render(
 			<Route path="/profiles/:profileId">

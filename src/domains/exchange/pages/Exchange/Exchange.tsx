@@ -29,7 +29,7 @@ export const Exchange = () => {
 	const { t } = useTranslation();
 
 	const activeProfile = useActiveProfile();
-	const history = useNavigate();
+	const navigate = useNavigate();
 
 	const [currentView, setCurrentView] = useState<ExchangeView>(ExchangeView.Exchanges);
 
@@ -82,7 +82,7 @@ export const Exchange = () => {
 	}, [exchangeProviders, fetchProviders]);
 
 	const handleLaunchExchange = (exchangeId: string) => {
-		history.push(`/profiles/${activeProfile.id()}/exchange/view?exchangeId=${exchangeId}`);
+		navigate(`/profiles/${activeProfile.id()}/exchange/view?exchangeId=${exchangeId}`);
 	};
 
 	const handleViewChange = (view?: string | number) => {
@@ -121,7 +121,7 @@ export const Exchange = () => {
 				<ExchangeTransactionsTable
 					exchangeTransactions={activeProfile.exchangeTransactions().values()}
 					onClick={(providerId: string, orderId: string) => {
-						history.push(
+						navigate(
 							`/profiles/${activeProfile.id()}/exchange/view?exchangeId=${providerId}&orderId=${orderId}`,
 						);
 					}}

@@ -88,7 +88,7 @@ describe("Environment Context", () => {
 	it("should save profile before persist", async () => {
 		const profile = await env.profiles().create("foo");
 		const history = createHashHistory();
-		history.push(`/profiles/${profile.id()}`);
+		navigate(`/profiles/${profile.id()}`);
 
 		const ProfilePage = () => {
 			const { persist } = useEnvironmentContext();

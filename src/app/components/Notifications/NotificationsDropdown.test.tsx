@@ -18,7 +18,7 @@ let profile: Contracts.IProfile;
 describe("Notifications", () => {
 	beforeEach(async () => {
 		const dashboardURL = `/profiles/${getMainsailProfileId()}/dashboard`;
-		history.push(dashboardURL);
+		navigate(dashboardURL);
 
 		server.use(
 			requestMock("https://dwallets-evm.mainsailhq.com/api/transactions", {

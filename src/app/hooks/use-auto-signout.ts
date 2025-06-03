@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useCallback } from "react";
 
 export const useAutoSignOut = (profile?: Contracts.IProfile) => {
-	const history = useNavigate();
+	const navigate = useNavigate();
 
 	const timeout = 1000 * 60 * (profile?.settings().get(Contracts.ProfileSetting.AutomaticSignOutPeriod, 15) ?? 1);
 
@@ -13,7 +13,7 @@ export const useAutoSignOut = (profile?: Contracts.IProfile) => {
 			return;
 		}
 
-		history.push("/");
+		navigate("/");
 	}, [history]);
 
 	const { start, pause } = useIdleTimer({

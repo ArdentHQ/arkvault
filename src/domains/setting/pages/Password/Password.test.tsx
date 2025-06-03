@@ -34,7 +34,7 @@ describe("Password Settings", () => {
 
 		await profile.sync();
 
-		history.push(`/profiles/${profile.id()}/settings/password`);
+		navigate(`/profiles/${profile.id()}/settings/password`);
 	});
 
 	it("should render password settings", async () => {

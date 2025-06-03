@@ -79,7 +79,7 @@ describe("Exchange", () => {
 	});
 
 	beforeEach(() => {
-		history.push(exchangeURL);
+		navigate(exchangeURL);
 	});
 
 	afterEach(() => {

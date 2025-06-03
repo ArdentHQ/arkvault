@@ -116,7 +116,7 @@ describe("LedgerConnectionStep", () => {
 		const nanoXTransportMock = mockNanoXTransport();
 		const onConnect = vi.fn();
 
-		history.push(`/profiles/${profile.id()}`);
+		navigate(`/profiles/${profile.id()}`);
 
 		const { rerender } = render(
 			<Route path="/profiles/:profileId">
@@ -145,7 +145,7 @@ describe("LedgerConnectionStep", () => {
 		const ledgerTransportMock = mockNanoXTransport();
 		const onFailed = vi.fn();
 
-		history.push(`/profiles/${profile.id()}`);
+		navigate(`/profiles/${profile.id()}`);
 
 		render(
 			<Route path="/profiles/:profileId">
@@ -171,7 +171,7 @@ describe("LedgerConnectionStep", () => {
 
 		const onFailed = vi.fn();
 
-		history.push(`/profiles/${profile.id()}`);
+		navigate(`/profiles/${profile.id()}`);
 
 		render(
 			<Route path="/profiles/:profileId">
@@ -191,7 +191,7 @@ describe("LedgerConnectionStep", () => {
 
 	it("should render cancel screen", async () => {
 		const ledgerTransportMock = mockNanoXTransport();
-		history.push(`/profiles/${profile.id()}`);
+		navigate(`/profiles/${profile.id()}`);
 
 		render(
 			<Route path="/profiles/:profileId">

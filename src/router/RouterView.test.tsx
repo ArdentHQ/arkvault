@@ -29,7 +29,7 @@ describe("RouterView", () => {
 		const history = createHashHistory();
 
 		act(() => {
-			history.push("/test");
+			navigate("/test");
 		});
 
 		render(
@@ -44,11 +44,11 @@ describe("RouterView", () => {
 		);
 
 		act(() => {
-			history.push("/test2");
+			navigate("/test2");
 		});
 
 		act(() => {
-			history.replace("/test");
+			navigate("/test");
 		});
 
 		expect(windowSpy).toHaveBeenCalledTimes(2);
@@ -59,7 +59,7 @@ describe("RouterView", () => {
 
 		const history = createHashHistory();
 		act(() => {
-			history.push("/test");
+			navigate("/test");
 		});
 
 		render(
@@ -69,11 +69,11 @@ describe("RouterView", () => {
 		);
 
 		act(() => {
-			history.push("/test");
+			navigate("/test");
 		});
 
 		act(() => {
-			history.replace("/test");
+			navigate("/test");
 		});
 
 		expect(windowSpy).toHaveBeenCalledTimes(1);
@@ -86,7 +86,7 @@ describe("RouterView", () => {
 		const history = createHashHistory();
 
 		act(() => {
-			history.replace("/test");
+			navigate("/test");
 		});
 
 		render(
@@ -119,7 +119,7 @@ describe("RouterView", () => {
 
 		const history = createHashHistory();
 		act(() => {
-			history.push("/test");
+			navigate("/test");
 		});
 
 		render(

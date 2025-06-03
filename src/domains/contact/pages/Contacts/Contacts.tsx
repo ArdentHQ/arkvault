@@ -19,7 +19,7 @@ import { Button } from "@/app/components/Button";
 export const Contacts: FC = () => {
 	const { state } = useEnvironmentContext();
 
-	const history = useNavigate();
+	const navigate = useNavigate();
 
 	const { isMdAndAbove } = useBreakpoint();
 
@@ -87,7 +87,7 @@ export const Contacts: FC = () => {
 			const queryParameters = new URLSearchParams(schema).toString();
 			const url = `/profiles/${activeProfile.id()}/send-transfer?${queryParameters}`;
 
-			history.push(url);
+			navigate(url);
 		},
 		[history, activeProfile],
 	);

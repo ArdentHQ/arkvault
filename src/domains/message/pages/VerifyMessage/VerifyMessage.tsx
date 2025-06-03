@@ -44,7 +44,7 @@ export const VerifyMessage = () => {
 	const activeProfile = useActiveProfile();
 	const activeWallet = useActiveWalletWhenNeeded(!!walletId);
 
-	const history = useNavigate();
+	const navigate = useNavigate();
 
 	const initialState: Services.SignedMessage = {
 		message: queryParameters.get("message") || "",
@@ -107,10 +107,10 @@ export const VerifyMessage = () => {
 
 	const handleBack = () => {
 		if (activeWallet) {
-			return history.push(`/profiles/${activeProfile.id()}/dashboard`);
+			return navigate(`/profiles/${activeProfile.id()}/dashboard`);
 		}
 
-		return history.push(ProfilePaths.Welcome);
+		return navigate(ProfilePaths.Welcome);
 	};
 
 	const submitForm = async () => {

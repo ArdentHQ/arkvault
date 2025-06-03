@@ -25,7 +25,7 @@ describe("useAutoSignOut", () => {
 		vi.useFakeTimers({ shouldAdvanceTime: true });
 
 		const dashboardURL = `/profiles/${getMainsailProfileId()}/dashboard`;
-		history.push(dashboardURL);
+		navigate(dashboardURL);
 
 		const profile = env.profiles().findById(getMainsailProfileId());
 

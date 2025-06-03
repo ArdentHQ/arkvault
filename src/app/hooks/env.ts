@@ -5,7 +5,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { useEnvironmentContext } from "@/app/contexts/Environment";
 
 export const useActiveProfile = (): Contracts.IProfile => {
-	const history = useNavigate();
+	const navigate = useNavigate();
 
 	const context = useEnvironmentContext();
 	const { profileId } = useParams<{ profileId: string }>();

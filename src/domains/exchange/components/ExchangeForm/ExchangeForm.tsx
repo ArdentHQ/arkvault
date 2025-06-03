@@ -55,7 +55,7 @@ const ExchangeForm = ({
 	const { persist } = useEnvironmentContext();
 	const { exchangeService, provider } = useExchangeContext();
 	const { exchangeOrder } = useValidation();
-	const history = useNavigate();
+	const navigate = useNavigate();
 
 	assertExchangeService(exchangeService);
 
@@ -242,7 +242,7 @@ const ExchangeForm = ({
 
 	const handleBack = () => {
 		if (activeTab === Step.FormStep) {
-			history.push(`/profiles/${activeProfile.id()}/exchange`);
+			navigate(`/profiles/${activeProfile.id()}/exchange`);
 		}
 
 		setActiveTab((previous) => previous - 1);
@@ -394,7 +394,7 @@ const ExchangeForm = ({
 											<Button
 												data-testid="ExchangeForm__finish-button"
 												onClick={() =>
-													history.push(`/profiles/${activeProfile.id()}/dashboard`)
+													navigate(`/profiles/${activeProfile.id()}/dashboard`)
 												}
 											>
 												{t("COMMON.GO_TO_PORTFOLIO")}

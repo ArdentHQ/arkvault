@@ -73,7 +73,7 @@ describe("useNetworkFromQueryParameters hook", () => {
 	};
 
 	it("should find network from query parameters using network id", () => {
-		history.push("/?network=mainsail.devnet");
+		navigate("/?network=mainsail.devnet");
 
 		render(<TestComponent />, { history, withProviders: false });
 
@@ -81,7 +81,7 @@ describe("useNetworkFromQueryParameters hook", () => {
 	});
 
 	it("should find network from query parameters using nethash", () => {
-		history.push(`/?nethash=${nethash}`);
+		navigate(`/?nethash=${nethash}`);
 
 		render(<TestComponent />, { history, withProviders: false });
 
@@ -89,7 +89,7 @@ describe("useNetworkFromQueryParameters hook", () => {
 	});
 
 	it("should fail to find network from query parameters using nethash", () => {
-		history.push(`/?nethash=1`);
+		navigate(`/?nethash=1`);
 
 		render(<TestComponent />, { history, withProviders: false });
 

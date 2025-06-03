@@ -166,7 +166,7 @@ describe("ExchangeForm", () => {
 			.mockReturnValue(exchangeTransaction);
 
 		history = createHashHistory();
-		history.push(exchangeURL);
+		navigate(exchangeURL);
 	});
 
 	afterEach(() => {
