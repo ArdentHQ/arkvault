@@ -67,13 +67,18 @@ export const ProfileForm = ({ defaultValues, onBack, onSubmit, shouldValidate, s
 	const viewingModes: any[] = [
 		{
 			icon: "UnderlineSun",
-			name: t("SETTINGS.APPEARANCE.OPTIONS.VIEWING_MODE.VIEWING_MODES.LIGHT"),
+			label: t("SETTINGS.APPEARANCE.OPTIONS.VIEWING_MODE.VIEWING_MODES.LIGHT"),
 			value: "light",
 		},
 		{
 			icon: "UnderlineMoon",
-			name: t("SETTINGS.APPEARANCE.OPTIONS.VIEWING_MODE.VIEWING_MODES.DARK"),
+			label: t("SETTINGS.APPEARANCE.OPTIONS.VIEWING_MODE.VIEWING_MODES.DARK"),
 			value: "dark",
+		},
+		{
+			icon: "Dim",
+			label: t("SETTINGS.APPEARANCE.OPTIONS.VIEWING_MODE.VIEWING_MODES.DIM"),
+			value: "dim",
 		},
 	];
 
@@ -121,8 +126,24 @@ export const ProfileForm = ({ defaultValues, onBack, onSubmit, shouldValidate, s
 						<div className="border-theme-secondary-300 dark:border-theme-secondary-800 mt-4 sm:mt-0 sm:ml-4 sm:border-l sm:pl-4">
 							<FormField name="viewingMode">
 								<FormLabel label={t("SETTINGS.APPEARANCE.OPTIONS.VIEWING_MODE.TITLE")} />
-								<ButtonGroup className="space-x-2">
-									{viewingModes.map(({ icon, name, value }) => (
+								<Select
+									id="ProfileForm__viewingMode_select"
+									defaultValue={viewingMode}
+									placeholder={t("COMMON.SELECT_OPTION", {
+										option: t("SETTINGS.APPEARANCE.OPTIONS.VIEWING_MODE.TITLE"),
+									})}
+									options={viewingModes}
+									onChange={(viewingMode: any) =>
+										setValue("viewingMode", viewingMode?.value, {
+											shouldDirty: true,
+											shouldValidate: true,
+										})
+									}
+									allowOverflow
+									className="sm:hidden"
+								/>
+								<ButtonGroup className="space-x-2 hidden sm:flex">
+									{viewingModes.map(({ icon, label, value }) => (
 										<ButtonGroupOption
 											key={value}
 											isSelected={() => viewingMode === value}
@@ -133,11 +154,11 @@ export const ProfileForm = ({ defaultValues, onBack, onSubmit, shouldValidate, s
 												})
 											}
 											value={value}
-											variant="modern"
+											className="h-14"
 										>
 											<div className="flex items-center space-x-2 px-1.5 sm:px-0.5">
 												<Icon size="lg" name={icon} className="dark:text-theme-secondary-600" />
-												<span className="hidden sm:inline-block">{name}</span>
+												<span className="hidden sm:inline-block">{label}</span>
 											</div>
 										</ButtonGroupOption>
 									))}
