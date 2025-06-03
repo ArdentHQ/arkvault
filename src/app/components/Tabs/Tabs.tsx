@@ -1,4 +1,4 @@
-import React, { forwardRef } from "react";
+import React from "react";
 import { TabContext, TabId, useTab } from "./useTab";
 import { twMerge } from "tailwind-merge";
 import cn from "classnames";
@@ -10,6 +10,11 @@ interface TabsProperties {
 	className?: string;
 	onChange?: (id: TabId) => void;
 	disabled?: boolean;
+	ref?: React.Ref<HTMLButtonElement>;
+}
+
+export interface TabButtonProps extends React.HTMLProps<HTMLButtonElement> {
+	ref?: React.Ref<HTMLButtonElement>;
 }
 
 export function Tabs({ children, activeId, className, onChange, id, disabled }: TabsProperties) {
@@ -40,16 +45,17 @@ export function Tabs({ children, activeId, className, onChange, id, disabled }: 
 	);
 }
 
-interface TabProperties {
+interface TabProperties extends React.HTMLProps<HTMLElement> {
 	children: React.ReactNode;
 	tabId: string | number;
 	count?: number;
 	className?: string;
+	ref?: React.Ref<HTMLButtonElement>;
 }
 
-const TabButton = forwardRef<HTMLButtonElement, React.HTMLProps<HTMLButtonElement>>((properties, ref) => (
-	<button {...properties} ref={ref} type="button" className={twMerge("tab-button", properties.className)} />
-));
+export const TabButton = ({ ref, className, ...props }: TabButtonProps) => (
+	<button {...props} ref={ref} type="button" className={twMerge("tab-button", className)} />
+);
 
 TabButton.displayName = "TabButton";
 
@@ -97,7 +103,7 @@ export const TabScroll = ({ children }) => (
 	</div>
 );
 
-export const Tab = React.forwardRef<HTMLButtonElement, TabProperties>((properties: TabProperties, reference) => {
+export const Tab = ({ ref, className, ...properties }: TabProperties) => {
 	const context = React.useContext(TabContext);
 	const isActive = context?.isIdActive(properties.tabId);
 
@@ -108,9 +114,9 @@ export const Tab = React.forwardRef<HTMLButtonElement, TabProperties>((propertie
 			type="button"
 			className={twMerge(
 				"rounded px-3 py-1.5 text-base leading-5 font-semibold transition-all md:rounded-lg",
-				properties.className,
+				className,
 			)}
-			ref={reference}
+			ref={ref}
 			aria-selected={isActive}
 			tabIndex={isActive ? 0 : -1}
 			data-ring-focus-margin="-mx-3"
@@ -139,7 +145,7 @@ export const Tab = React.forwardRef<HTMLButtonElement, TabProperties>((propertie
 			)}
 		</TabButton>
 	);
-});
+};
 
 Tab.displayName = "Tab";
 
@@ -163,23 +169,22 @@ export const TabList = ({
 type TabPanelProperties = {
 	children: React.ReactNode;
 	tabId: string | number;
+	ref?: React.Ref<HTMLElement>;
 } & React.HTMLProps<any>;
 
-export const TabPanel = React.forwardRef<HTMLDivElement, TabProperties>(
-	({ tabId, children, ...properties }: TabPanelProperties, reference) => {
-		const context = React.useContext(TabContext);
-		const isActive = context?.isIdActive(tabId);
+export const TabPanel = ({ tabId, children, ref, ...properties }: TabPanelProperties) => {
+	const context = React.useContext(TabContext);
+	const isActive = context?.isIdActive(tabId);
 
-		if (!isActive) {
-			return <></>;
-		}
+	if (!isActive) {
+		return <></>;
+	}
 
-		return (
-			<div data-testid="tab-pabel__active-panel" ref={reference} {...properties}>
-				{children}
-			</div>
-		);
-	},
-);
+	return (
+		<div data-testid="tab-pabel__active-panel" ref={ref} {...properties}>
+			{children}
+		</div>
+	);
+};
 
 TabPanel.displayName = "TabPanel";

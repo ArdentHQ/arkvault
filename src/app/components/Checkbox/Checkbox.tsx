@@ -1,14 +1,15 @@
-import React, { forwardRef } from "react";
+import React from "react";
 import { Color } from "@/types";
 import { twMerge } from "tailwind-merge";
 import cn from "classnames";
 
 type CheckboxProperties = {
 	color?: Color;
+	ref?: React.Ref<HTMLDivElement>;
 } & React.InputHTMLAttributes<HTMLInputElement> &
 	React.RefAttributes<HTMLInputElement>;
 
-export const Checkbox = forwardRef<HTMLInputElement, CheckboxProperties>(({ color = "success", ...props }, ref) => {
+export const Checkbox = ({ color = "success", ref, ...props }: CheckboxProperties) => {
 	const { className, disabled, ...otherProps } = props;
 	return (
 		<input
@@ -37,6 +38,6 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProperties>(({ colo
 			{...otherProps}
 		/>
 	);
-});
+};
 
 Checkbox.displayName = "Checkbox";

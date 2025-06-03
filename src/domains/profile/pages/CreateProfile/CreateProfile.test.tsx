@@ -139,10 +139,18 @@ describe("CreateProfile", () => {
 	it("should store profile with password", async () => {
 		await renderComponent();
 
-		await userEvent.type(nameInput(), "test profile 3");
-		await userEvent.type(passwordInput(), testPassword);
-		await userEvent.type(passwordConfirmationInput(), testPassword);
-		await userEvent.click(screen.getByRole("checkbox"));
+		const user = userEvent.setup();
+
+		await user.clear(nameInput());
+		await user.paste("test profile 3");
+
+		await user.clear(passwordInput());
+		await user.paste(testPassword);
+
+		await user.clear(passwordConfirmationInput());
+		await user.paste(testPassword);
+
+		await user.click(screen.getByRole("checkbox"));
 
 		await waitFor(() => expect(submitButton()).toBeEnabled());
 
@@ -161,7 +169,10 @@ describe("CreateProfile", () => {
 		await userEvent.clear(selectDropdown);
 		await waitFor(() => expect(selectDropdown).not.toHaveValue());
 
-		await userEvent.type(selectDropdown, "BTC");
+		const user = userEvent.setup();
+		await user.clear(selectDropdown);
+		await user.paste("BTC");
+
 		await waitFor(() => expect(selectDropdown).toHaveValue("BTC"));
 
 		await userEvent.click(screen.getByTestId("SelectDropdown__option--0"));
@@ -189,7 +200,9 @@ describe("CreateProfile", () => {
 
 		render(<CreateProfile />, { history });
 
-		await userEvent.type(nameInput(), "test profile 2");
+		const user = userEvent.setup();
+		await user.clear(nameInput());
+		await user.paste("test profile 2");
 
 		await userEvent.click(screen.getByRole("checkbox"));
 
@@ -212,6 +225,7 @@ describe("CreateProfile", () => {
 		await renderComponent();
 
 		nameInput().select();
+
 		await userEvent.type(nameInput(), "t");
 		await userEvent.click(screen.getByRole("checkbox"));
 
@@ -265,32 +279,38 @@ describe("CreateProfile", () => {
 	it("should fail password confirmation", async () => {
 		await renderComponent();
 
-		await userEvent.type(nameInput(), "asdasdas");
+		const user = userEvent.setup();
 
-		await userEvent.type(passwordInput(), testPassword);
-		await userEvent.type(passwordConfirmationInput(), wrongPassword);
+		await user.clear(nameInput());
+		await user.paste("asdasdas");
+
+		await user.clear(passwordInput());
+		await user.paste(testPassword);
+
+		await user.clear(passwordConfirmationInput());
+		await user.paste(wrongPassword);
 
 		await waitFor(() => expect(submitButton()).toBeDisabled());
 
 		passwordInput().select();
-		await userEvent.clear(passwordInput());
-		await userEvent.type(passwordInput(), password);
+		await user.clear(passwordInput());
+		await user.paste(password);
 
 		await userEvent.click(screen.getByRole("checkbox"));
 
 		passwordConfirmationInput().select();
-		await userEvent.clear(passwordConfirmationInput());
-		await userEvent.type(passwordConfirmationInput(), password);
+		await user.clear(passwordConfirmationInput());
+		await user.paste(password);
 
 		await waitFor(() => expect(submitButton()).toBeEnabled());
 
 		passwordConfirmationInput().select();
-		await userEvent.clear(passwordConfirmationInput());
-		await userEvent.type(passwordConfirmationInput(), testPassword);
+		await user.clear(passwordConfirmationInput());
+		await user.paste(testPassword);
 
 		passwordInput().select();
-		await userEvent.clear(passwordInput());
-		await userEvent.type(passwordInput(), wrongPassword);
+		await user.clear(passwordInput());
+		await user.paste(wrongPassword);
 
 		await waitFor(() => expect(submitButton()).toBeDisabled());
 

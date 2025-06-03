@@ -15,7 +15,6 @@ exports[`InputAddress > should not use default validation 1`] = `
         name="address"
         profile="[object Object]"
         type="text"
-        value=""
       />
     </div>
   </div>

@@ -1,6 +1,6 @@
 import { AddRecipientProperties, ToggleButtonProperties } from "./AddRecipient.contracts";
 import { FormField, FormLabel, SubForm } from "@/app/components/Form";
-import React, { VFC, useCallback, useEffect, useMemo, useRef, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { WalletAliasResult, useValidation } from "@/app/hooks";
 
 import { AddRecipientItem } from "./AddRecipientItem";
@@ -57,14 +57,14 @@ const TransferType = ({ isSingle, disableMultiple, onChange, maxRecipients }: To
 	);
 };
 
-export const AddRecipient: VFC<AddRecipientProperties> = ({
+export const AddRecipient = ({
 	disableMultiPaymentOption,
 	onChange,
 	profile,
 	recipients = [],
 	showMultiPaymentOption = true,
 	wallet,
-}) => {
+}: AddRecipientProperties) => {
 	const { t } = useTranslation();
 	const [addedRecipients, setAddedRecipients] = useState<RecipientItem[]>([]);
 	const [isSingle, setIsSingle] = useState(recipients.length <= 1);
@@ -86,7 +86,7 @@ export const AddRecipient: VFC<AddRecipientProperties> = ({
 	const fee = calculateGasFee(minGasPrice, GasLimit["transfer"].times(Math.max(recipients.length, 1)));
 
 	const ticker = network?.ticker();
-	const exchangeTicker = profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency) as string;
+	const exchangeTicker = profile.settings().get(Contracts.ProfileSetting.ExchangeCurrency) as string;
 	const { convert } = useExchangeRate({ exchangeTicker, profile, ticker });
 
 	const maxRecipients = network?.multiPaymentRecipients() ?? 0;

@@ -12,24 +12,30 @@ interface SelectNetworkDropdownProperties {
 	profile: Contracts.IProfile;
 	onChange?: (network?: Networks.Network) => void;
 	isDisabled?: boolean;
+	ref?: React.Ref<HTMLInputElement>;
 }
 
-export const SelectNetworkDropdown = React.forwardRef<HTMLInputElement, SelectNetworkDropdownProperties>(
-	({ networks, selectedNetwork, placeholder, isDisabled, onChange }: SelectNetworkDropdownProperties, reference) => {
-		const findById = (networkId?: string | number) => networks?.find((network) => network.id() === networkId);
+export const SelectNetworkDropdown = ({
+	networks,
+	selectedNetwork,
+	placeholder,
+	isDisabled,
+	onChange,
+	ref,
+}: SelectNetworkDropdownProperties) => {
+	const findById = (networkId?: string | number) => networks?.find((network) => network.id() === networkId);
 
-		return (
-			<Select
-				disabled={isDisabled}
-				defaultValue={selectedNetwork?.id()}
-				options={networksAsOptions(networks)}
-				placeholder={placeholder}
-				renderLabel={(properties) => <NetworkOptionLabel network={findById(properties.value)} />}
-				onChange={(option?: OptionProperties) => onChange?.(findById(option?.value))}
-				ref={reference}
-			/>
-		);
-	},
-);
+	return (
+		<Select
+			disabled={isDisabled}
+			defaultValue={selectedNetwork?.id()}
+			options={networksAsOptions(networks)}
+			placeholder={placeholder}
+			renderLabel={(properties) => <NetworkOptionLabel network={findById(properties.value)} />}
+			onChange={(option?: OptionProperties) => onChange?.(findById(option?.value))}
+			ref={ref}
+		/>
+	);
+};
 
 SelectNetworkDropdown.displayName = "SelectNetworkDropdown";

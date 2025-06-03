@@ -15,7 +15,7 @@ interface StepNavigationProperties {
 	size: number;
 }
 
-export const StepNavigation: React.VFC<StepNavigationProperties> = ({
+export const StepNavigation = ({
 	onBackClick,
 	onBackToWalletClick,
 	onContinueClick,
@@ -24,7 +24,7 @@ export const StepNavigation: React.VFC<StepNavigationProperties> = ({
 	activeIndex,
 	onSend,
 	size,
-}) => {
+}: StepNavigationProperties) => {
 	const { t } = useTranslation();
 
 	const showBack = activeIndex < size;

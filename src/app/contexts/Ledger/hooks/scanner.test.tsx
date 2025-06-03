@@ -63,7 +63,7 @@ describe("Use Ledger Scanner", () => {
 		await env.profiles().restore(profile);
 		await profile.sync();
 		await wallet.synchroniser().coin();
-		await wallet.coin().ledger().connect();
+		await wallet.ledger().connect();
 
 		legacyPublicKeyPaths = new Map([
 			["m/44'/1'/0'/0/0", "027716e659220085e41389efc7cf6a05f7f7c659cf3db9126caabce6cda9156582"],
@@ -85,11 +85,11 @@ describe("Use Ledger Scanner", () => {
 		]);
 
 		getPublicKeySpy = vi
-			.spyOn(wallet.coin().ledger(), "getPublicKey")
+			.spyOn(wallet.ledger(), "getPublicKey")
 			.mockImplementation((path) => Promise.resolve(legacyPublicKeyPaths.get(path)!));
 
 		getExtendedPublicKeySpy = vi
-			.spyOn(wallet.coin().ledger(), "getExtendedPublicKey")
+			.spyOn(wallet.ledger(), "getExtendedPublicKey")
 			.mockResolvedValue(wallet.publicKey()!);
 	});
 
@@ -194,7 +194,7 @@ describe("Use Ledger Scanner", () => {
 		["m/44'/1'/0'/0/3", "m/44'/1'/0'/0/1"],
 		["m/44'/1'/0'/0/2", "m/44'/1'/0'/0/3"],
 	])("should load with last import path", async (path1, path2) => {
-		const ledgerScanSpy = vi.spyOn(wallet.coin().ledger(), "scan");
+		const ledgerScanSpy = vi.spyOn(wallet.ledger(), "scan");
 
 		const profileWallets = profile.wallets().values();
 		const walletSpy1 = vi.spyOn(profileWallets[0].data(), "get").mockImplementation(() => path1);
@@ -254,7 +254,7 @@ describe("Use Ledger Scanner", () => {
 
 		expect(screen.getByTestId("scanMore")).toBeInTheDocument();
 
-		const ledgerScanSpy = vi.spyOn(wallet.coin().ledger(), "scan");
+		const ledgerScanSpy = vi.spyOn(wallet.ledger(), "scan");
 
 		await userEvent.click(screen.getByTestId("scanMore"));
 
@@ -268,7 +268,7 @@ describe("Use Ledger Scanner", () => {
 	it("should dispatch failed", async () => {
 		getExtendedPublicKeySpy.mockRestore();
 		getExtendedPublicKeySpy = vi
-			.spyOn(wallet.coin().ledger(), "getExtendedPublicKey")
+			.spyOn(wallet.ledger(), "getExtendedPublicKey")
 			.mockRejectedValue(new Error("Failed"));
 
 		const Component = () => {

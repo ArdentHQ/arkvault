@@ -1,10 +1,10 @@
-import React from "react";
+import React, { RefObject } from "react";
 import { OnRefChangeType } from "react-resize-detector/build/types/types";
 
 export type TruncateMiddleDynamicProperties = {
 	value: string;
 	offset?: number;
-	parentRef?: React.RefObject<HTMLElement> | OnRefChangeType<HTMLElement>;
+	parentRef?: RefObject<HTMLElement> | OnRefChangeType<HTMLElement> | RefObject<null>;
 	tooltipDarkTheme?: boolean;
 	availableWidth?: number;
 } & React.HTMLProps<any>;

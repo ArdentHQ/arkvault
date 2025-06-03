@@ -21,8 +21,9 @@ describe("EncryptPasswordStep", () => {
 
 		const passwordInput = screen.getByTestId("PasswordValidation__encryptionPassword");
 
-		await userEvent.clear(passwordInput);
-		await userEvent.type(passwordInput, passwordValue);
+		const user = userEvent.setup();
+		await user.clear(passwordInput);
+		await user.paste(passwordValue);
 
 		await waitFor(() => expect(passwordInput).toHaveValue(passwordValue));
 

@@ -1,5 +1,4 @@
 import React, { useMemo } from "react";
-import VisibilitySensor from "react-visibility-sensor";
 
 import { NotificationTransactionItemProperties } from "./Notifications.contracts";
 import { NotificationTransactionItemMobile } from "./NotificationTransactionItemMobile";
@@ -13,8 +12,6 @@ import { useNotifications } from "./hooks/use-notifications";
 export const NotificationTransactionItem = ({
 	transaction,
 	profile,
-	onVisibilityChange,
-	containmentRef,
 	onTransactionClick,
 }: NotificationTransactionItemProperties) => {
 	const { getWalletAlias } = useWalletAlias();
@@ -36,7 +33,6 @@ export const NotificationTransactionItem = ({
 			<NotificationTransactionItemMobile
 				transaction={transaction}
 				profile={profile}
-				containmentRef={containmentRef?.current}
 				onTransactionClick={() => onTransactionClick?.(transaction)}
 			/>
 		);
@@ -44,34 +40,32 @@ export const NotificationTransactionItem = ({
 	const timestamp = transaction.timestamp();
 
 	return (
-		<VisibilitySensor onChange={onVisibilityChange} scrollCheck delayedCall containment={containmentRef?.current}>
-			<TableRow onClick={() => onTransactionClick?.(transaction)} className="relative">
-				<TableCell variant="start" className="w-2/5" innerClassName="pl-6 static mx-0">
-					{isNotificationUnread(transaction) && (
-						<div className="absolute top-0 bottom-0 left-2 flex items-center">
-							<div className="bg-theme-danger-400 h-2 w-2 rounded-full" />
-						</div>
-					)}
-					<div className="w-20 flex-1">
-						<TransactionRowRecipientLabel transaction={transaction} walletName={alias} />
+		<TableRow onClick={() => onTransactionClick?.(transaction)} className="relative">
+			<TableCell variant="start" className="w-2/5" innerClassName="pl-6 static mx-0">
+				{isNotificationUnread(transaction) && (
+					<div className="absolute top-0 bottom-0 left-2 flex items-center">
+						<div className="bg-theme-danger-400 h-2 w-2 rounded-full" />
 					</div>
-				</TableCell>
+				)}
+				<div className="w-20 flex-1">
+					<TransactionRowRecipientLabel transaction={transaction} walletName={alias} />
+				</div>
+			</TableCell>
 
-				<TableCell innerClassName="text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold justify-end whitespace-nowrap">
-					{timestamp && <TimeAgo date={timestamp.toISOString()} />}
-				</TableCell>
+			<TableCell innerClassName="text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold justify-end whitespace-nowrap">
+				{timestamp && <TimeAgo date={timestamp.toISOString()} />}
+			</TableCell>
 
-				<TableCell innerClassName="justify-end pr-6 static">
-					<div className="h-5">
-						<AmountLabel
-							value={transaction.value()}
-							isNegative={transaction.isSent()}
-							ticker={transaction.wallet().currency()}
-						/>
-						<div className="dark:bg-theme-secondary-900 absolute right-0 -bottom-px h-px w-8 bg-white" />
-					</div>
-				</TableCell>
-			</TableRow>
-		</VisibilitySensor>
+			<TableCell innerClassName="justify-end pr-6 static">
+				<div className="h-5">
+					<AmountLabel
+						value={transaction.value()}
+						isNegative={transaction.isSent()}
+						ticker={transaction.wallet().currency()}
+					/>
+					<div className="dark:bg-theme-secondary-900 absolute right-0 -bottom-px h-px w-8 bg-white" />
+				</div>
+			</TableCell>
+		</TableRow>
 	);
 };

@@ -45,7 +45,7 @@ export const LedgerTabs = ({
 
 	const [_, setShowRetry] = useState(false);
 	const [cancelling, setCancelling] = useState(false);
-	const retryFunctionReference = useRef<() => void>();
+	const retryFunctionReference = useRef<() => void>(undefined);
 
 	const importWallets = useCallback(
 		async ({ wallets }: any) => {

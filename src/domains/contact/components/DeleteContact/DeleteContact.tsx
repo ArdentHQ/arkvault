@@ -13,13 +13,7 @@ interface DeleteContactProperties {
 	onDelete: (contactId: string) => void;
 }
 
-export const DeleteContact: React.VFC<DeleteContactProperties> = ({
-	contact,
-	profile,
-	onCancel,
-	onClose,
-	onDelete,
-}) => {
+export const DeleteContact = ({ contact, profile, onCancel, onClose, onDelete }: DeleteContactProperties) => {
 	const { t } = useTranslation();
 
 	const { persist } = useEnvironmentContext();

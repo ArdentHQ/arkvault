@@ -130,7 +130,10 @@ describe("Password Settings", () => {
 			expect(screen.getByTestId(currentPasswordInputID)).toHaveValue("wrong!");
 		});
 
-		await userEvent.type(passwordInput(), "AnotherS3cUrePa$swordNew");
+		const user = userEvent.setup();
+
+		await user.click(passwordInput());
+		await user.paste("AnotherS3cUrePa$swordNew");
 
 		await waitFor(() => {
 			expect(passwordInput()).toHaveValue("AnotherS3cUrePa$swordNew");
@@ -183,12 +186,15 @@ describe("Password Settings", () => {
 			expect(screen.getByTestId(currentPasswordInputID)).toHaveValue(password);
 		});
 
-		await userEvent.clear(passwordInput());
-		await userEvent.type(passwordInput(), secondaryPassword);
+		const user = userEvent.setup();
+
+		await user.clear(passwordInput());
+		await user.paste(secondaryPassword);
 
 		await waitFor(() => expect(passwordInput()).toHaveValue(secondaryPassword));
 
-		await userEvent.type(confirmPasswordInput(), "S3cUrePa$sword2different1");
+		await user.clear(confirmPasswordInput());
+		await user.paste("S3cUrePa$sword2different1");
 
 		await waitFor(() => expect(confirmPasswordInput()).toHaveValue("S3cUrePa$sword2different1"));
 
@@ -248,7 +254,9 @@ describe("Password Settings", () => {
 
 		await waitFor(() => expect(screen.getByTestId(currentPasswordInputID)).toHaveValue(password));
 
-		await userEvent.type(passwordInput(), password);
+		const user = userEvent.setup();
+		await user.clear(passwordInput());
+		await user.paste(password);
 
 		await waitFor(() => expect(passwordInput()).toHaveValue(password));
 
@@ -372,13 +380,16 @@ describe("Password Settings", () => {
 			expect(screen.getByTestId("Password-settings__input--currentPassword")).toHaveValue(password);
 		});
 
-		await userEvent.type(passwordInput(), secondaryPassword);
+		const user = userEvent.setup();
+		await user.clear(passwordInput());
+		await user.paste(secondaryPassword);
 
 		await waitFor(() => {
 			expect(passwordInput()).toHaveValue(secondaryPassword);
 		});
 
-		await userEvent.type(confirmPasswordInput(), secondaryPassword);
+		await user.clear(confirmPasswordInput());
+		await user.paste(secondaryPassword);
 
 		await waitFor(() => {
 			expect(confirmPasswordInput()).toHaveValue(secondaryPassword);

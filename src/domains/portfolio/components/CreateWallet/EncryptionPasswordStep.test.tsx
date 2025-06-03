@@ -57,6 +57,7 @@ describe("EncryptionPasswordStep", () => {
 		history.push(createURL);
 
 		const onOpenChangeMock = vi.fn();
+		const user = userEvent.setup();
 
 		render(
 			<Route path="/profiles/:profileId">
@@ -85,12 +86,16 @@ describe("EncryptionPasswordStep", () => {
 
 		const [firstInput, secondInput, thirdInput] = screen.getAllByTestId("MnemonicVerificationInput__input");
 		await userEvent.click(screen.getByTestId("CreateWallet__ConfirmPassphraseStep__passphraseDisclaimer"));
-		await userEvent.clear(firstInput);
-		await userEvent.type(firstInput, "power");
-		await userEvent.clear(secondInput);
-		await userEvent.type(secondInput, "return");
-		await userEvent.clear(thirdInput);
-		await userEvent.type(thirdInput, "attend");
+
+		await user.clear(firstInput);
+		await user.paste("power");
+
+		await user.clear(secondInput);
+		await user.paste("return");
+
+		await user.clear(thirdInput);
+		await user.paste("attend");
+
 		await waitFor(() => expect(continueButton).toBeEnabled());
 
 		await userEvent.click(continueButton);
@@ -111,13 +116,13 @@ describe("EncryptionPasswordStep", () => {
 		const passwordInput = screen.getByTestId("PasswordValidation__encryptionPassword");
 		const confirmPassword = screen.getByTestId("PasswordValidation__confirmEncryptionPassword");
 
-		await userEvent.clear(passwordInput);
-		await userEvent.type(passwordInput, password);
+		await user.clear(passwordInput);
+		await user.paste(password);
 
 		await waitFor(() => expect(passwordInput).toHaveValue(password));
 
-		await userEvent.clear(confirmPassword);
-		await userEvent.type(confirmPassword, password);
+		await user.clear(confirmPassword);
+		await user.paste(password);
 
 		await waitFor(() => expect(confirmPassword).toHaveValue(password));
 
@@ -154,6 +159,7 @@ describe("EncryptionPasswordStep", () => {
 				route: createURL,
 			},
 		);
+		const user = userEvent.setup();
 
 		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();
 
@@ -168,12 +174,15 @@ describe("EncryptionPasswordStep", () => {
 
 		const [firstInput, secondInput, thirdInput] = screen.getAllByTestId("MnemonicVerificationInput__input");
 		await userEvent.click(screen.getByTestId("CreateWallet__ConfirmPassphraseStep__passphraseDisclaimer"));
-		await userEvent.clear(firstInput);
-		await userEvent.type(firstInput, "power");
-		await userEvent.clear(secondInput);
-		await userEvent.type(secondInput, "return");
-		await userEvent.clear(thirdInput);
-		await userEvent.type(thirdInput, "attend");
+
+		await user.clear(firstInput);
+		await user.paste("power");
+
+		await user.clear(secondInput);
+		await user.paste("return");
+
+		await user.clear(thirdInput);
+		await user.paste("attend");
 
 		await waitFor(() => expect(continueButton).toBeEnabled());
 
@@ -185,12 +194,12 @@ describe("EncryptionPasswordStep", () => {
 		const confirmPassword = screen.getByTestId("PasswordValidation__confirmEncryptionPassword");
 
 		await userEvent.clear(passwordInput);
-		await userEvent.type(passwordInput, password);
+		await userEvent.paste(password);
 
 		await waitFor(() => expect(passwordInput).toHaveValue(password));
 
 		await userEvent.clear(confirmPassword);
-		await userEvent.type(confirmPassword, password);
+		await userEvent.paste(password);
 
 		await waitFor(() => expect(confirmPassword).toHaveValue(password));
 

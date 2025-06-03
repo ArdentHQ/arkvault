@@ -1,6 +1,6 @@
 import { Contracts, DTO } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
-import React, { useEffect } from "react";
+import React from "react";
 
 import { NotificationTransactionsTable } from "./NotificationTransactionsTable";
 import * as useRandomNumberHook from "@/app/hooks/use-random-number";
@@ -13,19 +13,6 @@ import {
 	waitFor,
 	renderResponsive,
 } from "@/utils/testing-library";
-
-vi.mock("react-visibility-sensor", () => ({
-	/* eslint-disable react-hooks/rules-of-hooks */
-	default: ({ children, onChange }) => {
-		useEffect(() => {
-			if (onChange) {
-				onChange(false);
-			}
-		}, [onChange]);
-
-		return <div>{children}</div>;
-	},
-}));
 
 describe("NotificationsTransactionTable", () => {
 	let profile: Contracts.IProfile;
@@ -69,22 +56,6 @@ describe("NotificationsTransactionTable", () => {
 		render(<NotificationTransactionsTable transactions={transactions} profile={profile} />);
 
 		expect(screen.getAllByTestId("TableRow")).toHaveLength(10);
-	});
-
-	it("should emit on visibility change event", async () => {
-		const onVisibilityChange = vi.fn();
-		render(
-			<NotificationTransactionsTable
-				transactions={transactions}
-				profile={profile}
-				isLoading={false}
-				onVisibilityChange={onVisibilityChange}
-			/>,
-		);
-
-		expect(screen.getAllByTestId("TableRow")).toHaveLength(transactions.length);
-
-		await waitFor(() => expect(onVisibilityChange).toHaveBeenCalledWith(false));
 	});
 
 	it("should emit on click event", async () => {

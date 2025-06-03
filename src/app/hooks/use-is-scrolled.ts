@@ -4,7 +4,7 @@ export const useIsScrolled = <T extends HTMLElement>({
 	scrollContainerRef,
 	active,
 }: {
-	scrollContainerRef: React.RefObject<T>;
+	scrollContainerRef: React.RefObject<T | null>;
 	active: boolean;
 }) => {
 	const [isScrolled, setIsScrolled] = useState(false);

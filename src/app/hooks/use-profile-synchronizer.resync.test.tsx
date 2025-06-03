@@ -56,6 +56,10 @@ describe("useProfileSyncStatus", () => {
 
 		const mockWalletSyncStatus = vi.spyOn(profile.wallets().first(), "hasBeenFullyRestored").mockReturnValue(false);
 
+		await waitFor(() =>
+			expect(configuration.getProfileConfiguration(profile.id()).profileIsSyncingWallets).toBe(false),
+		);
+
 		await renderAct(() => {
 			configuration.setConfiguration(profile.id(), { profileIsSyncingWallets: true });
 		});
@@ -110,13 +114,17 @@ describe("useProfileSyncStatus", () => {
 
 		const mockWalletSyncStatus = vi.spyOn(profile.wallets().first(), "hasBeenFullyRestored").mockReturnValue(false);
 
-		await renderAct(() => {
-			configuration.setConfiguration(profile.id(), { profileIsSyncingWallets: true });
+		await waitFor(() => {
+			expect(configuration.getProfileConfiguration(profile.id()).profileIsSyncingWallets).toBe(false);
 		});
 
-		await waitFor(() =>
-			expect(configuration.getProfileConfiguration(profile.id()).profileIsSyncingWallets).toBe(true),
-		);
+		await renderAct(async () => {
+			await configuration.setConfiguration(profile.id(), { profileIsSyncingWallets: true });
+		});
+
+		await waitFor(() => {
+			expect(configuration.getProfileConfiguration(profile.id()).profileIsSyncingWallets).toBe(true);
+		});
 
 		mockWalletSyncStatus.mockRestore();
 		profileSyncSpy.mockRestore();

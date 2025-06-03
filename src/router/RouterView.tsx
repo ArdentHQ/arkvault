@@ -11,7 +11,7 @@ interface Properties {
 	middlewares?: Middleware[];
 }
 
-export const RouterView: React.VFC<Properties> = ({ routes, middlewares = [] }) => {
+export const RouterView = ({ routes, middlewares = [] }: Properties) => {
 	const location = useLocation();
 	const history = useHistory();
 	const { env } = useEnvironmentContext();

@@ -11,7 +11,7 @@ import { useBreakpoint } from "@/app/hooks";
 import { contactForm } from "@/domains/contact/validations/ContactForm";
 import { AddressService } from "@/app/lib/mainsail/address.service";
 
-export const ContactForm: React.VFC<ContactFormProperties> = ({
+export const ContactForm = ({
 	profile,
 	contact,
 	onChange,
@@ -19,7 +19,7 @@ export const ContactForm: React.VFC<ContactFormProperties> = ({
 	onDelete,
 	onSave,
 	errors,
-}) => {
+}: ContactFormProperties) => {
 	const { t } = useTranslation();
 	const { isXs } = useBreakpoint();
 

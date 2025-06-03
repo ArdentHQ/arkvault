@@ -5,7 +5,7 @@ interface MnemonicListProperties {
 	mnemonic: string;
 }
 
-export const MnemonicList: React.VFC<MnemonicListProperties> = ({ mnemonic }) => {
+export const MnemonicList = ({ mnemonic }: MnemonicListProperties) => {
 	let mnemonicWords: string[];
 
 	// Check for Japanese "space"
@@ -29,7 +29,7 @@ export const MnemonicList: React.VFC<MnemonicListProperties> = ({ mnemonic }) =>
 	);
 };
 
-export const MnemonicListSkeleton: React.VFC = () => {
+export const MnemonicListSkeleton = () => {
 	const skeletons = useMemo(
 		() =>
 			Array.from({ length: 24 }).map(() => {

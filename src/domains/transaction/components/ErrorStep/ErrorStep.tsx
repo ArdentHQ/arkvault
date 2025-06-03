@@ -30,7 +30,7 @@ export const ErrorStep = ({
 	hideHeader = false,
 }: Properties) => {
 	const { t } = useTranslation();
-	const errorMessageReference = useRef();
+	const errorMessageReference = useRef(null);
 
 	return (
 		<div data-testid="ErrorStep">

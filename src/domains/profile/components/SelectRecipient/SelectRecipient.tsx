@@ -27,6 +27,7 @@ type SelectRecipientProperties = {
 	contactSearchDescription?: string;
 	placeholder?: string;
 	exceptMultiSignature?: boolean;
+	ref?: React.Ref<HTMLInputElement>;
 	onChange?: (address: string | undefined, alias: WalletAliasResult) => void;
 } & Omit<React.InputHTMLAttributes<any>, "onChange">;
 
@@ -85,184 +86,176 @@ const OptionLabel = ({
 	);
 };
 
-export const SelectRecipient = React.forwardRef<HTMLInputElement, SelectRecipientProperties>(
-	(
-		{
-			address,
-			profile,
-			disabled,
-			isInvalid,
-			showOptions = true,
-			showWalletAvatar = true,
-			network,
-			placeholder,
-			exceptMultiSignature,
-			onChange,
-			contactSearchTitle,
-			contactSearchDescription,
-		}: SelectRecipientProperties,
-		reference,
-	) => {
-		const { t } = useTranslation();
+export const SelectRecipient = ({
+	address,
+	profile,
+	disabled,
+	isInvalid,
+	showOptions = true,
+	showWalletAvatar = true,
+	network,
+	placeholder,
+	exceptMultiSignature,
+	onChange,
+	contactSearchTitle,
+	contactSearchDescription,
+	ref,
+}: SelectRecipientProperties) => {
+	const { t } = useTranslation();
 
-		const { getWalletAlias } = useWalletAlias();
+	const { getWalletAlias } = useWalletAlias();
 
-		const [isRecipientSearchOpen, setIsRecipientSearchOpen] = useState(false);
+	const [isRecipientSearchOpen, setIsRecipientSearchOpen] = useState(false);
 
-		const selectRecipientReference = useRef<HTMLDivElement | null>(null);
+	const selectRecipientReference = useRef<HTMLDivElement | null>(null);
 
-		/*
-		 * Initial value for selected address is set in useEffect below via onChangeAddress.
-		 * This is made to also retrieve alias information of the selected address.
-		 */
-		const [selectedAddress, setSelectedAddress] = useState<string | undefined>();
-		const [selectedAddressAlias, setSelectedAddressAlias] = useState<WalletAliasResult | undefined>();
+	/*
+	 * Initial value for selected address is set in useEffect below via onChangeAddress.
+	 * This is made to also retrieve alias information of the selected address.
+	 */
+	const [selectedAddress, setSelectedAddress] = useState<string | undefined>();
+	const [selectedAddressAlias, setSelectedAddressAlias] = useState<WalletAliasResult | undefined>();
 
-		const fieldContext = useFormField();
+	const fieldContext = useFormField();
 
-		const onChangeAddress = useCallback(
-			(addressValue: string | undefined, emitOnChange = true) => {
-				if (addressValue === selectedAddress) {
-					return;
-				}
-
-				const alias = getWalletAlias({
-					address: addressValue ?? "",
-					network,
-					profile,
-				});
-
-				setSelectedAddress(addressValue);
-				setSelectedAddressAlias(alias);
-
-				if (emitOnChange) {
-					onChange?.(addressValue, alias);
-				}
-			},
-			[getWalletAlias, network, onChange, profile, selectedAddress],
-		);
-
-		const isInvalidValue = isInvalid || fieldContext?.isInvalid;
-
-		// Modify the address from parent component
-		useEffect(() => {
-			onChangeAddress(address, false);
-		}, [address]); // eslint-disable-line react-hooks/exhaustive-deps
-
-		useEffect(() => {
-			if (!selectedAddress) {
-				setSelectedAddressAlias(undefined);
-			}
-		}, [selectedAddress]);
-
-		const { allAddresses } = useProfileAddresses({ network, profile }, exceptMultiSignature);
-
-		const recipientOptions = allAddresses.map(({ address }: AddressProperties) => ({
-			label: address,
-			value: address,
-		}));
-
-		const openRecipients = useCallback(() => {
-			if (disabled) {
+	const onChangeAddress = useCallback(
+		(addressValue: string | undefined, emitOnChange = true) => {
+			if (addressValue === selectedAddress) {
 				return;
 			}
 
-			const dropdownWrapper = selectRecipientReference.current!.querySelector(
-				"[role=combobox]",
-			) as HTMLDivElement;
-			// Necessary to ensure the select dropdown is hidden
-			if (dropdownWrapper.getAttribute("aria-expanded") === "true") {
-				const input = selectRecipientReference.current!.querySelector(
-					"input#SelectRecipient__dropdown-input",
-				) as HTMLInputElement;
-				input.focus();
-				input.blur();
+			const alias = getWalletAlias({
+				address: addressValue ?? "",
+				network,
+				profile,
+			});
+
+			setSelectedAddress(addressValue);
+			setSelectedAddressAlias(alias);
+
+			if (emitOnChange) {
+				onChange?.(addressValue, alias);
 			}
+		},
+		[getWalletAlias, network, onChange, profile, selectedAddress],
+	);
 
-			setIsRecipientSearchOpen(true);
-		}, [disabled, selectRecipientReference]);
+	const isInvalidValue = isInvalid || fieldContext?.isInvalid;
 
-		const onAction = useCallback(
-			(changedAddress: string) => {
-				onChangeAddress(changedAddress);
-				setIsRecipientSearchOpen(false);
-			},
-			[onChangeAddress, setIsRecipientSearchOpen],
-		);
+	// Modify the address from parent component
+	useEffect(() => {
+		onChangeAddress(address, false);
+	}, [address]); // eslint-disable-line react-hooks/exhaustive-deps
 
-		return (
-			<div>
-				<div
-					ref={selectRecipientReference}
-					data-testid="SelectRecipient__wrapper"
-					className="relative flex w-full items-center text-left"
-				>
-					<Select
-						id="SelectRecipient__dropdown"
-						showCaret={false}
-						isInvalid={isInvalidValue}
-						disabled={disabled}
-						defaultValue={selectedAddress}
-						placeholder={placeholder || t("COMMON.ADDRESS")}
-						ref={reference}
-						options={showOptions ? recipientOptions : []}
-						showOptions={showOptions}
-						allowFreeInput={true}
-						onChange={(option: any) => onChangeAddress(option.value)}
-						addons={{
-							end: showOptions
+	useEffect(() => {
+		if (!selectedAddress) {
+			setSelectedAddressAlias(undefined);
+		}
+	}, [selectedAddress]);
+
+	const { allAddresses } = useProfileAddresses({ network, profile }, exceptMultiSignature);
+
+	const recipientOptions = allAddresses.map(({ address }: AddressProperties) => ({
+		label: address,
+		value: address,
+	}));
+
+	const openRecipients = useCallback(() => {
+		if (disabled) {
+			return;
+		}
+
+		const dropdownWrapper = selectRecipientReference.current!.querySelector("[role=combobox]") as HTMLDivElement;
+		// Necessary to ensure the select dropdown is hidden
+		if (dropdownWrapper.getAttribute("aria-expanded") === "true") {
+			const input = selectRecipientReference.current!.querySelector(
+				"input#SelectRecipient__dropdown-input",
+			) as HTMLInputElement;
+			input.focus();
+			input.blur();
+		}
+
+		setIsRecipientSearchOpen(true);
+	}, [disabled, selectRecipientReference]);
+
+	const onAction = useCallback(
+		(changedAddress: string) => {
+			onChangeAddress(changedAddress);
+			setIsRecipientSearchOpen(false);
+		},
+		[onChangeAddress, setIsRecipientSearchOpen],
+	);
+
+	return (
+		<div>
+			<div
+				ref={selectRecipientReference}
+				data-testid="SelectRecipient__wrapper"
+				className="relative flex w-full items-center text-left"
+			>
+				<Select
+					id="SelectRecipient__dropdown"
+					showCaret={false}
+					isInvalid={isInvalidValue}
+					disabled={disabled}
+					defaultValue={selectedAddress}
+					placeholder={placeholder || t("COMMON.ADDRESS")}
+					ref={ref}
+					options={showOptions ? recipientOptions : []}
+					showOptions={showOptions}
+					allowFreeInput={true}
+					onChange={(option: any) => onChangeAddress(option.value)}
+					addons={{
+						end: showOptions
+							? {
+									content: (
+										<div
+											data-testid="SelectRecipient__select-recipient"
+											className={cn("flex items-center", {
+												"text-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 cursor-pointer rounded bg-transparent p-1 transition-colors dark:hover:text-white":
+													!disabled,
+											})}
+											onClick={openRecipients}
+										>
+											<Icon name="User" size="lg" />
+										</div>
+									),
+								}
+							: undefined,
+						start:
+							selectedAddressAlias?.alias || showWalletAvatar
 								? {
 										content: (
-											<div
-												data-testid="SelectRecipient__select-recipient"
-												className={cn("flex items-center", {
-													"text-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 cursor-pointer rounded bg-transparent p-1 transition-colors dark:hover:text-white":
-														!disabled,
-												})}
-												onClick={openRecipients}
-											>
-												<Icon name="User" size="lg" />
+											<div className="flex items-center">
+												{showWalletAvatar && <ProfileAvatar address={selectedAddress} />}
+												{selectedAddressAlias?.alias && (
+													<TruncateEnd
+														className={cn("font-semibold", {
+															"ml-2": showWalletAvatar,
+														})}
+														text={selectedAddressAlias.alias}
+														showTooltip
+													/>
+												)}
 											</div>
 										),
 									}
 								: undefined,
-							start:
-								selectedAddressAlias?.alias || showWalletAvatar
-									? {
-											content: (
-												<div className="flex items-center">
-													{showWalletAvatar && <ProfileAvatar address={selectedAddress} />}
-													{selectedAddressAlias?.alias && (
-														<TruncateEnd
-															className={cn("font-semibold", {
-																"ml-2": showWalletAvatar,
-															})}
-															text={selectedAddressAlias.alias}
-															showTooltip
-														/>
-													)}
-												</div>
-											),
-										}
-									: undefined,
-						}}
-						renderLabel={(option) => <OptionLabel option={option} network={network} profile={profile} />}
-					/>
-				</div>
-
-				<SearchRecipient
-					title={contactSearchTitle}
-					description={contactSearchDescription}
-					isOpen={isRecipientSearchOpen}
-					recipients={allAddresses}
-					onAction={onAction}
-					onClose={() => setIsRecipientSearchOpen(false)}
-					selectedAddress={selectedAddress}
-					profile={profile}
+					}}
+					renderLabel={(option) => <OptionLabel option={option} network={network} profile={profile} />}
 				/>
 			</div>
-		);
-	},
-);
 
-SelectRecipient.displayName = "SelectRecipient";
+			<SearchRecipient
+				title={contactSearchTitle}
+				description={contactSearchDescription}
+				isOpen={isRecipientSearchOpen}
+				recipients={allAddresses}
+				onAction={onAction}
+				onClose={() => setIsRecipientSearchOpen(false)}
+				selectedAddress={selectedAddress}
+				profile={profile}
+			/>
+		</div>
+	);
+};

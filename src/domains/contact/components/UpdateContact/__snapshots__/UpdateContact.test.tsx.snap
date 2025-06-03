@@ -124,7 +124,6 @@ exports[`UpdateContact > should render responsive 1`] = `
                         name="address"
                         profile="[object Object]"
                         type="text"
-                        value=""
                       />
                     </div>
                   </div>
@@ -293,7 +292,6 @@ exports[`UpdateContact > should render responsive 2`] = `
                         name="address"
                         profile="[object Object]"
                         type="text"
-                        value=""
                       />
                     </div>
                   </div>
@@ -507,7 +505,6 @@ exports[`UpdateContact > should render responsive 3`] = `
                         name="address"
                         profile="[object Object]"
                         type="text"
-                        value=""
                       />
                     </div>
                   </div>

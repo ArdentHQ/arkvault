@@ -9,33 +9,31 @@ type TruncateMiddleProperties = {
 	showTooltip?: boolean;
 } & React.HTMLProps<any>;
 
-export const TruncateMiddle = React.forwardRef<HTMLElement, TruncateMiddleProperties>(
-	({ className, text, maxChars = 16, showTooltip = true, ...properties }: TruncateMiddleProperties, reference) => {
-		const result = React.useMemo(() => {
-			if (!maxChars || text.length <= maxChars) {
-				return text;
-			}
+export const TruncateMiddle = ({
+	className,
+	text,
+	maxChars = 16,
+	showTooltip = true,
+	ref,
+	...properties
+}: TruncateMiddleProperties) => {
+	const result = React.useMemo(() => {
+		if (!maxChars || text.length <= maxChars) {
+			return text;
+		}
 
-			const midPos = Math.floor(maxChars / 2) - 2;
-			const start = text.slice(0, Math.max(0, midPos));
-			const end = text.slice(text.length - midPos, text.length);
+		const midPos = Math.floor(maxChars / 2) - 2;
+		const start = text.slice(0, Math.max(0, midPos));
+		const end = text.slice(text.length - midPos, text.length);
 
-			return `${start}…${end}`;
-		}, [maxChars, text]);
+		return `${start}…${end}`;
+	}, [maxChars, text]);
 
-		return (
-			<Tooltip content={text} disabled={!showTooltip}>
-				<span
-					ref={reference}
-					data-testid="TruncateMiddle"
-					className={cn("no-ligatures", className)}
-					{...properties}
-				>
-					{result}
-				</span>
-			</Tooltip>
-		);
-	},
-);
-
-TruncateMiddle.displayName = "TruncateMiddle";
+	return (
+		<Tooltip content={text} disabled={!showTooltip}>
+			<span ref={ref} data-testid="TruncateMiddle" className={cn("no-ligatures", className)} {...properties}>
+				{result}
+			</span>
+		</Tooltip>
+	);
+};

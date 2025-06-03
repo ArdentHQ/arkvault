@@ -157,7 +157,6 @@ exports[`ValidatorRegistrationForm > should render form step 1`] = `
                   data-testid="Input__validator_public_key"
                   name="validatorPublicKey"
                   type="text"
-                  value=""
                 />
               </div>
             </div>

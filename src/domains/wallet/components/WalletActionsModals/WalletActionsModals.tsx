@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo, VFC } from "react";
+import React, { useCallback, useMemo } from "react";
 import { useActiveProfile, useWalletAlias } from "@/app/hooks";
 import { DeleteWallet } from "@/domains/wallet/components/DeleteWallet";
 import { ReceiveFunds } from "@/domains/wallet/components/ReceiveFunds";
@@ -8,12 +8,12 @@ import { useWalletActions } from "@/domains/wallet/hooks/use-wallet-actions";
 import { TransactionExportModal } from "@/domains/transaction/components/TransactionExportModal";
 import { Contracts } from "@/app/lib/profiles";
 
-export const WalletActionsModals: VFC<WalletActionsProperties> = ({
+export const WalletActionsModals = ({
 	wallets,
 	activeModal,
 	setActiveModal,
 	onUpdateWallet,
-}) => {
+}: WalletActionsProperties) => {
 	const profile = useActiveProfile();
 	const { getWalletAlias } = useWalletAlias();
 	const { handleDelete } = useWalletActions({ wallets });

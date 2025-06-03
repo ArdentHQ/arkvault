@@ -249,80 +249,76 @@ const SelectDropdown = ({
 	);
 };
 
-export const Select = React.forwardRef<HTMLInputElement, SelectProperties>(
-	(
-		{
-			addons,
-			options,
-			defaultValue = "",
-			placeholder = "Select option",
-			className,
-			innerClassName,
-			allowFreeInput,
-			showCaret,
-			showOptions,
-			isInvalid,
-			disabled = false,
-			onChange,
-			renderLabel,
-			id,
-			readOnly = false,
-			allowOverflow,
-			wrapperClassName = "relative w-full",
-		}: SelectProperties,
-		reference,
-	) => {
-		const mainOptions = useMemo(() => getMainOptions(options), [options]);
+export const Select = ({
+	addons,
+	options,
+	defaultValue = "",
+	placeholder = "Select option",
+	className,
+	innerClassName,
+	allowFreeInput,
+	showCaret,
+	showOptions,
+	isInvalid,
+	disabled = false,
+	onChange,
+	renderLabel,
+	id,
+	readOnly = false,
+	allowOverflow,
+	wrapperClassName = "relative w-full",
+	ref,
+}: SelectProperties) => {
+	const mainOptions = useMemo(() => getMainOptions(options), [options]);
 
-		const defaultSelectedItem = useMemo(
-			() =>
-				allowFreeInput
-					? ({ label: defaultValue, value: defaultValue } as OptionProperties)
-					: mainOptions.find((option: OptionProperties) => option.value === defaultValue),
-			[defaultValue, allowFreeInput, mainOptions],
-		);
+	const defaultSelectedItem = useMemo(
+		() =>
+			allowFreeInput
+				? ({ label: defaultValue, value: defaultValue } as OptionProperties)
+				: mainOptions.find((option: OptionProperties) => option.value === defaultValue),
+		[defaultValue, allowFreeInput, mainOptions],
+	);
 
-		const [selected, setSelected] = useState(defaultSelectedItem);
+	const [selected, setSelected] = useState(defaultSelectedItem);
 
-		const fieldContext = useFormField();
-		const isInvalidField = fieldContext?.isInvalid || isInvalid;
+	const fieldContext = useFormField();
+	const isInvalidField = fieldContext?.isInvalid || isInvalid;
 
-		return (
-			<div data-testid="SelectDropdown" className={wrapperClassName}>
-				<Input
-					data-testid="select-list__input"
-					ref={reference}
-					value={selected?.value || ""}
-					className="sr-only"
-					isInvalid={isInvalidField}
-					readOnly
-					tabIndex={-1}
-				/>
-				<SelectDropdown
-					id={id}
-					allowFreeInput={allowFreeInput}
-					showCaret={showCaret}
-					showOptions={showOptions}
-					className={className}
-					innerClassName={innerClassName}
-					options={options}
-					mainOptions={mainOptions}
-					defaultSelectedItem={defaultSelectedItem}
-					placeholder={placeholder}
-					disabled={disabled}
-					isInvalid={isInvalidField}
-					addons={addons}
-					onSelectedItemChange={({ selected }: { selected: OptionProperties }) => {
-						setSelected(selected);
-						onChange?.(selected);
-					}}
-					renderLabel={renderLabel}
-					readOnly={readOnly}
-					allowOverflow={allowOverflow}
-				/>
-			</div>
-		);
-	},
-);
+	return (
+		<div data-testid="SelectDropdown" className={wrapperClassName}>
+			<Input
+				data-testid="select-list__input"
+				ref={ref}
+				value={selected?.value || ""}
+				className="sr-only"
+				isInvalid={isInvalidField}
+				readOnly
+				tabIndex={-1}
+			/>
+			<SelectDropdown
+				id={id}
+				allowFreeInput={allowFreeInput}
+				showCaret={showCaret}
+				showOptions={showOptions}
+				className={className}
+				innerClassName={innerClassName}
+				options={options}
+				mainOptions={mainOptions}
+				defaultSelectedItem={defaultSelectedItem}
+				placeholder={placeholder}
+				disabled={disabled}
+				isInvalid={isInvalidField}
+				addons={addons}
+				onSelectedItemChange={({ selected }: { selected: OptionProperties }) => {
+					setSelected(selected);
+					onChange?.(selected);
+				}}
+				renderLabel={renderLabel}
+				readOnly={readOnly}
+				allowOverflow={allowOverflow}
+			/>
+		</div>
+	);
+};
 
 Select.displayName = "Select";

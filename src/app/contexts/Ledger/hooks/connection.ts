@@ -22,7 +22,7 @@ export const useLedgerConnection = () => {
 	const { device, isBusy, isConnected, isWaiting, error } = state;
 
 	const { importLedgerWallets } = useLedgerImport({ device, env });
-	const connectedToast = useRef<Id>();
+	const connectedToast = useRef<Id>(undefined);
 
 	useEffect(() => {
 		if (deviceName) {
