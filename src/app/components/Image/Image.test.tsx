@@ -18,6 +18,14 @@ describe("Image", () => {
 		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
+	
+	it("should render in dim mode", () => {
+		const useThemeMock = vi.spyOn(theme, "shouldUseDimColors").mockReturnValue(true);
+		const { container } = renderWithoutRouter(<Image name="GenericError" domain="error" />);
+
+		expect(container).toBeInTheDocument();
+		useThemeMock.mockRestore();
+	});
 
 	it("should render in dark mode", () => {
 		const useThemeMock = vi.spyOn(theme, "shouldUseDarkColors").mockReturnValue(true);
