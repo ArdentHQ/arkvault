@@ -42,7 +42,7 @@ export class TransactionService {
 	#configCrypto!: { crypto: NetworkConfig; height: number };
 
 	public constructor({ config, profile }: { config: ConfigRepository; profile: IProfile }) {
-		this.#ledgerService = new LedgerService({ config });
+		this.#ledgerService = profile.ledger();
 		this.#addressService = new AddressService();
 		this.#clientService = new ClientService({ config, profile });
 
