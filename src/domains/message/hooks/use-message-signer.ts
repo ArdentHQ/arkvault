@@ -6,15 +6,11 @@ const signWithLedger = async (message: string, wallet: ProfileContracts.IReadWri
 
 	let signatory = wallet.publicKey();
 
-	const ledger = wallet.profile().ledger();
-
-	await ledger.connect();
-
 	if (!signatory) {
-		signatory = await ledger.getPublicKey(path!);
+		signatory = await wallet.ledger().getPublicKey(path!);
 	}
 
-	const signature = await ledger.signMessage(path!, message);
+	const signature = await wallet.ledger().signMessage(path!, message);
 
 	return {
 		message,
