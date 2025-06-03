@@ -8,6 +8,7 @@ import { SignMessageSidePanel } from "./SignMessageSidePanel";
 import { translations as messageTranslations } from "@/domains/message/i18n";
 import { env, render, screen, waitFor, triggerMessageSignOnce, MAINSAIL_MNEMONICS } from "@/utils/testing-library";
 import { afterAll, expect, vi } from "vitest";
+import { wait } from "@testing-library/user-event/dist/cjs/utils/index.js";
 
 const history = createHashHistory();
 
@@ -238,6 +239,8 @@ describe("SignMessageSidePanel", () => {
 
 			await waitFor(() => expect(continueButton()).toBeEnabled());
 			await userEvent.click(continueButton());
+
+			await expect(screen.findByTestId("ErrorStep__back-button")).resolves.toBeVisible();
 
 			await userEvent.click(screen.getByTestId("ErrorStep__back-button"));
 			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
