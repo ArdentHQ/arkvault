@@ -1,7 +1,7 @@
 import { Contracts } from "@/app/lib/profiles";
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
-import { matchPath, useNavigate } from "react-router-dom";
+import { matchPath, useLocation, useNavigate } from "react-router-dom";
 import { LocationState } from "router/router.types";
 import cn from "classnames";
 import { DropdownOption } from "@/app/components/Dropdown";
@@ -19,7 +19,9 @@ import { Button } from "@/app/components/Button";
 
 export const Welcome = () => {
 	const context = useEnvironmentContext();
-	const navigate = useNavigate<LocationState>();
+	const navigate = useNavigate();
+	const location = useLocation();
+
 	const [isThemeLoaded, setThemeLoaded] = useState(false);
 	const isProfileCardClickedOnce = useRef(false);
 
@@ -38,20 +40,23 @@ export const Welcome = () => {
 
 	const [deletingProfileId, setDeletingProfileId] = useState<string | undefined>();
 	const [selectedProfile, setSelectedProfile] = useState<Contracts.IProfile | undefined>(() => {
-		if (!history.location.state?.from) {
+		const location = useLocation();
+		const from = location.state?.from as string | undefined;
+
+		if (!from) {
 			return;
 		}
 
-		const match = matchPath<{ profileId: string }>(history.location.state.from, {
-			path: "/profiles/:profileId",
-		});
+		const match = matchPath(
+			{ path: "/profiles/:profileId", end: true },
+			from
+		);
 
-		if (!match) {
+		if (!match || !match.params.profileId) {
 			return;
 		}
 
-		const { profileId } = match.params;
-		return context.env.profiles().findById(profileId);
+		return context.env.profiles().findById(match.params.profileId);
 	});
 
 	const [requestedAction, setRequestedAction] = useState<DropdownOption | undefined>(
@@ -99,15 +104,15 @@ export const Welcome = () => {
 
 			navigate(`/profiles/${profile.id()}/${subPath}`);
 		},
-		[history, isDeeplink],
+		[location, isDeeplink],
 	);
 
 	const navigateToPreviousPage = useCallback(
 		(profile: Contracts.IProfile) => {
 			setProfileTheme(profile);
-			navigate(history.location.state!.from!);
+			navigate(location.state!.from);
 		},
-		[history],
+		[location],
 	);
 
 	const closeDeleteProfileModal = useCallback(() => {

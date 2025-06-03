@@ -31,8 +31,7 @@ enum Intervals {
 const useProfileWatcher = () => {
 	const location = useLocation();
 	const { env } = useEnvironmentContext();
-	const pathname = (location as any).location?.pathname || location.pathname;
-	const match = useMemo(() => matchPath(pathname, { path: "/profiles/:profileId" }), [pathname]);
+	const match = useMemo(() => matchPath({ path: "/profiles/:profileId", end: true }, location.pathname), [location.pathname]);
 	const profileId = (match?.params as any)?.profileId;
 	const allProfilesCount = env.profiles().count();
 
@@ -214,7 +213,7 @@ export const useProfileSyncStatus = (profileId: string) => {
 export const useProfileRestore = (profileId: string) => {
 	const { shouldRestore, markAsRestored, setStatus } = useProfileSyncStatus(profileId);
 	const { persist, env } = useEnvironmentContext();
-	const navigate = useNavigate();
+	const location = useLocation();
 
 	const restoreProfile = async (profile: Contracts.IProfile, passwordInput?: string) => {
 		if (!shouldRestore(profile)) {
@@ -227,7 +226,7 @@ export const useProfileRestore = (profileId: string) => {
 		await env.profiles().restore(profile, password);
 		markAsRestored();
 
-		const activeProfile = getProfileFromUrl(env, history.location.pathname);
+		const activeProfile = getProfileFromUrl(env, location.pathname);
 		if (activeProfile?.id() !== profile.id()) {
 			return;
 		}
@@ -485,7 +484,6 @@ export const useProfileSynchronizer = ({
 		onProfileSyncStart,
 		onProfileSyncComplete,
 		resetStatuses,
-		history,
 		onProfileSignOut,
 		getErroredNetworks,
 		syncProfileWallets,

@@ -1,10 +1,9 @@
 import React, { useCallback, useLayoutEffect, useRef, useState } from "react";
-import { HashRouter, useNavigate } from "react-router-dom";
+import { createHashRouter, RouterProvider, useNavigate, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useErrorBoundary } from "react-error-boundary";
 import { ToastContainer } from "react-toastify";
 
-import { ConfirmationModal } from "@/app/components/ConfirmationModal";
 import { useConfiguration, useEnvironmentContext, useNavigationContext } from "@/app/contexts";
 import { useNetworkStatus, useProfileSynchronizer, useTheme } from "@/app/hooks";
 import { toasts } from "@/app/services";
@@ -15,41 +14,37 @@ import { middlewares, RouterView, routes } from "@/router";
 import { PageSkeleton } from "@/app/components/PageSkeleton";
 import { ProfilePageSkeleton } from "@/app/components/PageSkeleton/ProfilePageSkeleton";
 import { InstallPWA } from "@/domains/dashboard/components/InstallPWA";
+import { NavigationBlocker, NavigationBlockingProvider } from "./contexts/Navigation/NavigationBlocking";
 
-const AppRouter = ({ children }: { children: React.ReactNode }) => {
-	const [isOpen, setIsOpen] = useState(false);
-
-	const confirmationFunctionReference = useRef<(allowNavigate: boolean) => void>(undefined);
-
-	const onCancel = () => {
-		confirmationFunctionReference.current?.(false);
-		setIsOpen(false);
-	};
-
-	const onConfirm = () => {
-		confirmationFunctionReference.current?.(true);
-		setIsOpen(false);
-	};
-
-	const getUserConfirmation = useCallback((_, callback) => {
-		confirmationFunctionReference.current = callback;
-		setIsOpen(true);
-	}, []);
-
+// Root layout component that wraps all routes
+const RootLayout = () => {
 	return (
-		<React.Suspense fallback={<PageSkeleton />}>
-			<HashRouter getUserConfirmation={getUserConfirmation}>
-				<>{children}</>
-				<ConfirmationModal isOpen={isOpen} onCancel={onCancel} onConfirm={onConfirm} />
-			</HashRouter>
-		</React.Suspense>
+		<NavigationBlockingProvider>
+			<NavigationBlocker />
+			<Main />
+		</NavigationBlockingProvider>
 	);
 };
+
+// Create the hash router
+const router = createHashRouter([
+	{
+		path: "/*",
+		element: <RootLayout />,
+	},
+]);
+
+const AppRouter = ({ children }: { children: React.ReactNode }) => (
+	<React.Suspense fallback={<PageSkeleton />}>
+		<RouterProvider router={router} />
+	</React.Suspense>
+);
 
 const Main = () => {
 	const { env, persist, isEnvironmentBooted, setIsEnvironmentBooted } = useEnvironmentContext();
 	const isOnline = useNetworkStatus();
 	const navigate = useNavigate();
+	const location = useLocation();
 	const syncingMessageToastId = useRef<number | string>(undefined);
 
 	const { resetTheme } = useTheme();
@@ -63,10 +58,9 @@ const Main = () => {
 			toasts.warning(t("COMMON.LEDGER_COMPATIBILITY_ERROR_LONG"), { autoClose: false });
 		},
 		onProfileRestoreError: () => {
-			navigate({
-				pathname: "/",
+			navigate("/", {
 				state: {
-					from: history.location.pathname + history.location.search,
+					from: location.pathname + location.search,
 				},
 			});
 		},
@@ -123,7 +117,7 @@ const Main = () => {
 		boot();
 	}, [env, showBoundary]);
 
-	const Skeleton = history.location.pathname.startsWith("/profiles") ? ProfilePageSkeleton : PageSkeleton;
+	const Skeleton = location.pathname.startsWith("/profiles") ? ProfilePageSkeleton : PageSkeleton;
 
 	const renderContent = () => {
 		if (!isOnline) {

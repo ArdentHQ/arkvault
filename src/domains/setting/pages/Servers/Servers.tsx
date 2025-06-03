@@ -61,7 +61,6 @@ export const ServersSettings = () => {
 
 	const { customNetworks } = watch();
 
-	const { getPromptMessage } = useSettingsPrompt({ dirtyFields, isDirty });
 	const isProfileRestored = useMemo(() => profile.status().isRestored(), [profile]);
 
 	const isSaveButtonDisabled = useMemo(
@@ -221,8 +220,6 @@ export const ServersSettings = () => {
 					onDelete={() => deleteNetworkHandler(networkToDelete)}
 				/>
 			)}
-
-			<Prompt message={getPromptMessage} />
 		</SettingsWrapper>
 	);
 };
