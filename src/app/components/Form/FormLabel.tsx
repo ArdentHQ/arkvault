@@ -3,13 +3,15 @@ import { useTranslation } from "react-i18next";
 
 import { useFormField } from "./useFormField";
 import { Tooltip } from "@/app/components/Tooltip";
+import cn from "classnames";
 
 type FormLabelProperties = {
 	label?: string;
 	optional?: boolean;
+	textClassName?: string;
 } & React.LabelHTMLAttributes<any>;
 
-export function FormLabel(properties: FormLabelProperties) {
+export function FormLabel({ textClassName = "text-sm", ...properties }: FormLabelProperties) {
 	const fieldContext = useFormField();
 
 	const labelProperties = { ...properties };
@@ -24,7 +26,10 @@ export function FormLabel(properties: FormLabelProperties) {
 	return (
 		<label
 			data-testid="FormLabel"
-			className="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex text-sm leading-[17px] font-semibold transition-colors duration-100"
+			className={cn(
+				"FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex leading-[17px] font-semibold transition-colors duration-100",
+				textClassName,
+			)}
 			htmlFor={fieldContext?.name}
 			{...labelProperties}
 		>

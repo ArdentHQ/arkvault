@@ -13,6 +13,8 @@ import { TabId } from "@/app/components/Tabs/useTab";
 import { WalletVote } from "@/domains/wallet/pages/WalletDetails/components";
 import { PortfolioHeader } from "@/domains/portfolio/components/PortfolioHeader";
 import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
+import { ResetWhenUnmounted } from "@/app/components/SidePanel/ResetWhenUnmounted";
+import { SignMessageSidePanel } from "@/domains/message/components/SignMessage/SignMessageSidePanel";
 
 export const Dashboard = ({
 	onCreateAddress,
@@ -25,6 +27,7 @@ export const Dashboard = ({
 }) => {
 	const [isUpdatingTransactions, setIsUpdatingTransactions] = useState(false);
 	const [isUpdatingWallet, setIsUpdatingWallet] = useState(false);
+	const [showSignMessagePanel, setShowSignMessagePanel] = useState(false);
 
 	const history = useHistory();
 	const { t } = useTranslation();
@@ -109,6 +112,7 @@ export const Dashboard = ({
 						onUpdate={setIsUpdatingWallet}
 						onCreateAddress={onCreateAddress}
 						onImportAddress={onImportAddress}
+						onSignMessage={setShowSignMessagePanel}
 					/>
 				)}
 			</Section>
@@ -163,6 +167,10 @@ export const Dashboard = ({
 					/>
 				</div>
 			</Section>
+
+			<ResetWhenUnmounted>
+				<SignMessageSidePanel open={showSignMessagePanel} onOpenChange={setShowSignMessagePanel} />
+			</ResetWhenUnmounted>
 		</Page>
 	);
 };

@@ -5,20 +5,29 @@ import { Header } from "@/app/components/Header";
 import { Image } from "@/app/components/Image";
 import { Modal } from "@/app/components/Modal";
 import { Spinner } from "@/app/components/Spinner";
+import { Loader } from "@/app/components/Loader";
+import cn from "classnames";
 
 export const LedgerWaitingAppContent = ({
 	coinName,
 	subtitle,
 	noHeading,
+	subject,
 }: {
 	coinName: string;
 	subtitle?: string;
 	noHeading?: boolean;
+	subject?: "transaction" | "message";
 }) => {
 	const { t } = useTranslation();
 
 	return (
-		<div data-testid="LedgerWaitingAppContent" className="mt-8 space-y-8">
+		<div
+			data-testid="LedgerWaitingAppContent"
+			className={cn("space-y-8", {
+				"mt-8": subject !== "message",
+			})}
+		>
 			{!noHeading && (
 				<Header
 					title={t("WALLETS.MODAL_LEDGER_WALLET.TITLE")}
@@ -26,17 +35,28 @@ export const LedgerWaitingAppContent = ({
 				/>
 			)}
 
-			<Image name="WaitingLedgerDevice" domain="wallet" className="mx-auto max-w-full" />
-
-			<div className="inline-flex w-full items-center justify-center space-x-3">
-				<Spinner />
-				<span
-					className="text-theme-secondary-text animate-pulse font-semibold"
+			{subject === "message" && (
+				<Loader
 					data-testid="LedgerWaitingApp-loading_message"
-				>
-					{t("WALLETS.MODAL_LEDGER_WALLET.OPEN_APP", { coin: coinName })}
-				</span>
-			</div>
+					text={t("WALLETS.MODAL_LEDGER_WALLET.OPEN_APP", { coin: coinName })}
+				/>
+			)}
+
+			{subject !== "message" && (
+				<>
+					<Image name="WaitingLedgerDevice" domain="wallet" className="mx-auto max-w-full" />
+
+					<div className="inline-flex w-full items-center justify-center space-x-3">
+						<Spinner />
+						<span
+							className="text-theme-secondary-text animate-pulse font-semibold"
+							data-testid="LedgerWaitingApp-loading_message"
+						>
+							{t("WALLETS.MODAL_LEDGER_WALLET.OPEN_APP", { coin: coinName })}
+						</span>
+					</div>
+				</>
+			)}
 		</div>
 	);
 };

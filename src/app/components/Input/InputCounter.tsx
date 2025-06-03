@@ -10,43 +10,45 @@ type Properties = {
 	defaultValue?: string;
 } & React.InputHTMLAttributes<any>;
 
-export const InputCounter = React.forwardRef<HTMLInputElement, Properties>((properties: Properties, reference) => {
-	const fieldContext = useFormField();
-	const [length, setLength] = useState(properties.defaultValue?.length || 0);
+export const InputCounter = React.forwardRef<HTMLInputElement, Properties>(
+	({ maxLengthLabel, ...properties }: Properties, reference) => {
+		const fieldContext = useFormField();
+		const [length, setLength] = useState(properties.defaultValue?.length || 0);
 
-	const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-		setLength(event.target.value.length);
-		properties.onChange?.(event);
-	};
+		const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+			setLength(event.target.value.length);
+			properties.onChange?.(event);
+		};
 
-	useEffect(() => {
-		if (!!properties.value && properties.value !== properties.defaultValue) {
-			setLength(String(properties.value).length);
-		}
-	}, [properties.value]);
+		useEffect(() => {
+			if (!!properties.value && properties.value !== properties.defaultValue) {
+				setLength(String(properties.value).length);
+			}
+		}, [properties.value]);
 
-	return (
-		<Input
-			data-testid="InputCounter__input"
-			ref={reference}
-			{...properties}
-			onChange={handleChange}
-			addons={{
-				end: {
-					content: (
-						<span
-							data-testid="InputCounter__counter"
-							className={cn("text-sm font-semibold", {
-								"text-theme-secondary-500 dark:text-theme-secondary-700": !fieldContext?.isInvalid,
-							})}
-						>
-							{length}/{properties.maxLengthLabel}
-						</span>
-					),
-				},
-			}}
-		/>
-	);
-});
+		return (
+			<Input
+				data-testid="InputCounter__input"
+				ref={reference}
+				{...properties}
+				onChange={handleChange}
+				addons={{
+					end: {
+						content: (
+							<span
+								data-testid="InputCounter__counter"
+								className={cn("text-sm font-semibold", {
+									"text-theme-secondary-500 dark:text-theme-secondary-700": !fieldContext?.isInvalid,
+								})}
+							>
+								{length}/{maxLengthLabel}
+							</span>
+						),
+					},
+				}}
+			/>
+		);
+	},
+);
 
 InputCounter.displayName = "InputCounter";
