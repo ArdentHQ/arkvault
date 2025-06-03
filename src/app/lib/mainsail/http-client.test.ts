@@ -1,4 +1,4 @@
-import { HttpClient } from "./HttpClient";
+import { HttpClient } from "./http-client";
 
 import { server, requestMock } from "@/tests/mocks/server";
 
