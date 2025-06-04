@@ -10,16 +10,16 @@ interface SlideProperties {
 }
 
 const Slide = ({ title, subtitle, imageName, imageNameSm }: SlideProperties) => (
-	<div className="flex flex-row w-full md:w-auto lg:flex-col">
+	<div className="flex w-full flex-row md:w-auto lg:flex-col">
 		<div className="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]">
 			<h3 className="xs:leading-5 dim:text-theme-dim-50 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]">
 				{title}
 			</h3>
-			<p className="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 md:mb-4 lg:text-base lg:leading-7">
+			<p className="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7">
 				{subtitle}
 			</p>
 		</div>
-		<div className="justify-end flex-1 hidden overflow-hidden rounded-ee-xl md:flex">
+		<div className="hidden flex-1 justify-end overflow-hidden rounded-ee-xl md:flex">
 			<div className="hidden aspect-[1.097] h-full w-full lg:block">
 				<Image name={imageName} alt={title} domain="profile" />
 			</div>
@@ -44,7 +44,7 @@ export const WelcomeSlider = (): JSX.Element => {
 		autoplay: true,
 		autoplaySpeed: 5000,
 		customPaging: () => (
-			<button className="w-3 h-3 border-2 rounded-full border-theme-navy-200 dark:border-theme-secondary-600 dark:hover:bg-theme-secondary-600 hover:bg-theme-navy-700 hover:border-transparent dark:hover:border-transparent" />
+			<button className="border-theme-navy-200 dark:border-theme-secondary-600 dark:hover:bg-theme-secondary-600 hover:bg-theme-navy-700 h-3 w-3 rounded-full border-2 hover:border-transparent dark:hover:border-transparent" />
 		),
 		dots: true,
 		dotsClass: "welcome-slider-dots absolute top-4 left-4 sm:top-6 sm:left-6",
