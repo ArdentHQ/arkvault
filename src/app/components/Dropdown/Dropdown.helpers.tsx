@@ -43,12 +43,12 @@ const renderOptionGroup = ({
 		<div key={key}>
 			{hasDivider && (
 				<div>
-					<div className="bg-theme-secondary-300 dark:bg-theme-dark-700 h-px w-full" />
+					<div className="w-full h-px bg-theme-secondary-300 dark:bg-theme-dark-700 dim:bg-theme-dim-700" />
 				</div>
 			)}
 			<ul>
 				{title && (
-					<li className="bg-theme-primary-50 text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200 mx-1 my-1 block rounded-lg px-5 py-1 text-left text-xs font-semibold whitespace-nowrap">
+					<li className="block px-5 py-1 mx-1 my-1 text-xs font-semibold text-left rounded-lg bg-theme-primary-50 text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200 whitespace-nowrap">
 						{title}
 					</li>
 				)}
@@ -101,17 +101,17 @@ export const renderOptions = ({ options, key, onSelect, variant }: OptionsProper
 					}}
 				>
 					{option.iconPosition === "start" && renderIcon(option)}
-					<span className="flex w-full items-center justify-between">
+					<span className="flex items-center justify-between w-full">
 						{option.element}
 						<span>{option.label}</span>
 						{option.secondaryLabel && (
-							<span className="text-theme-secondary-500 dark:text-theme-secondary-600 ml-1 pr-4">
+							<span className="pr-4 ml-1 text-theme-secondary-500 dark:text-theme-secondary-600">
 								{renderSecondaryLabel(option.secondaryLabel, !!option.active)}
 							</span>
 						)}
 					</span>
 					{option.iconPosition !== "start" && renderIcon(option)}
-					<div className="h-4 w-4">
+					<div className="w-4 h-4">
 						{option.active && variant === "options" && (
 							<Icon
 								name={"CheckmarkDouble"}
