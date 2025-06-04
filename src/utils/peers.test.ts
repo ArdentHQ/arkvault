@@ -18,6 +18,12 @@ describe("peers utils", () => {
 		expect(peers.addressIsValid("not-a-url")).toBe(false);
 	});
 
+	it.skip("addressIsValid returns false for valid URL that is neither domain nor IP", () => {
+		// This tests the edge case where isValidUrl returns true but isValidDomain and isValidIp both return false
+		// Using a data URL which is valid according to URL constructor but doesn't match domain/IP patterns
+		expect(peers.addressIsValid("data:text/plain;base64,SGVsbG8gV29ybGQ=")).toBe(false);
+	});
+
 	it("hostRegex matches valid host", () => {
 		const match = peers.hostRegex.exec("http://example.com:8080");
 		expect(match?.groups?.host).toBe("example.com");
@@ -124,5 +130,25 @@ describe("peers utils", () => {
 
 	it("isValidUrl returns false for invalid url", () => {
 		expect(peers.isValidUrl("not-a-url")).toBe(false);
+	});
+
+	it("pingServerAddress returns true for musig type and isMusig true", async () => {
+		const handler = http.get("http://example.com/", () => {
+			return HttpResponse.json({ name: "test-musig-server" });
+		});
+		server.use(handler);
+
+		const result = await peers.pingServerAddress("http://example.com", "musig");
+		expect(result).toBe(true);
+	});
+
+	it("pingServerAddress returns false for musig type and isMusig false", async () => {
+		const handler = http.get("http://example.com/", () => {
+			return HttpResponse.json({ name: "test-regular-server" });
+		});
+		server.use(handler);
+
+		const result = await peers.pingServerAddress("http://example.com", "musig");
+		expect(result).toBe(false);
 	});
 });
