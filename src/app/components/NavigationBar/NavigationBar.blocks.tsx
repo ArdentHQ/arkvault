@@ -358,9 +358,9 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 
 						<div className="flex flex-row items-center justify-center gap-4 sm:gap-5">
 							<NotificationsDropdown profile={profile} />
-							<div className="border-theme-secondary-300 dark:border-theme-dark-700 h-6 border-r sm:h-12" />
+							<div className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 h-6 border-r sm:h-12" />
 							<ServerStatusIndicator profile={profile} />
-							<div className="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:flex sm:h-12" />
+							<div className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 hidden h-6 border-r sm:flex sm:h-12" />
 							<div className="hidden items-center sm:flex">
 								<Tooltip
 									content={wallets.length > 0 ? t("COMMON.RECEIVE") : t("COMMON.NOTICE_NO_WALLETS")}
@@ -381,7 +381,7 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 									</div>
 								</Tooltip>
 							</div>
-							<div className="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:flex sm:h-12" />
+							<div className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 hidden h-6 border-r sm:flex sm:h-12" />
 							<div className="hidden items-center sm:flex">
 								<Tooltip
 									content={wallets.length > 0 ? t("COMMON.SEND") : t("COMMON.NOTICE_NO_WALLETS")}
@@ -403,7 +403,7 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 								</Tooltip>
 							</div>
 
-							<div className="border-theme-secondary-300 dark:border-theme-dark-700 h-6 border-r sm:h-12" />
+							<div className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 h-6 border-r sm:h-12" />
 
 							{!!profile.settings().get(Contracts.ProfileSetting.UseTestNetworks) && (
 								<>
