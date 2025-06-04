@@ -372,7 +372,7 @@ exports[`Dashboard > should render 1`] = `
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="p-1 m-0"
+                        class="m-0 p-1"
                       >
                         <div
                           style="height: 20px; width: 20px;"
@@ -394,7 +394,7 @@ exports[`Dashboard > should render 1`] = `
                         </div>
                       </div>
                       <div
-                        class="absolute top-0 right-0 flex items-center justify-center p-1 transition-all duration-100 ease-linear rounded-full"
+                        class="absolute top-0 right-0 flex items-center justify-center rounded-full p-1 transition-all duration-100 ease-linear"
                       >
                         <div
                           class="h-1.5 w-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
