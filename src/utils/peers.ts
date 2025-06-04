@@ -23,13 +23,7 @@ const addressIsValid = (address: string) => {
 		return false;
 	}
 
-	if (isValidDomain(address) || isValidIp(address)) {
-		return true;
-	}
-
-	// Unreachable
-	/* istanbul ignore next -- @preserve */
-	return false;
+	return isValidDomain(address) || isValidIp(address);
 };
 
 const getBaseUrl = (address: string): string => {
