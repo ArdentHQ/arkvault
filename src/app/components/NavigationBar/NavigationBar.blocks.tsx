@@ -75,7 +75,7 @@ const NavigationBarLogo: React.FC<NavigationBarLogoOnlyProperties> = ({
 	};
 
 	return (
-		<div className="flex items-center h-12 my-auto">
+		<div className="my-auto flex h-12 items-center">
 			<button
 				data-testid="NavigationBarLogo--button"
 				type="button"
@@ -100,7 +100,7 @@ const NavigationBarLogo: React.FC<NavigationBarLogoOnlyProperties> = ({
 export const NavigationBarLogoOnly = ({ title }: NavigationBarLogoOnlyProperties) => (
 	<NavWrapper aria-labelledby="main menu" variant="logo-only">
 		<div className="relative flex">
-			<div className="flex flex-1 px-6 mt-6 md:px-10">
+			<div className="mt-6 flex flex-1 px-6 md:px-10">
 				<NavigationBarLogo title={title} variant="logo-only" />
 			</div>
 		</div>
@@ -147,11 +147,11 @@ const NavigationBarMobile = ({
 			{hasFixedFormButtons && (
 				<div
 					data-testid="NavigationBar__buttons-separator"
-					className="border-t border-theme-secondary-300 dark:border-theme-secondary-900"
+					className="border-theme-secondary-300 dark:border-theme-secondary-900 border-t"
 				/>
 			)}
 
-			<div className="flex items-center justify-center space-x-4 h-14">
+			<div className="flex h-14 items-center justify-center space-x-4">
 				<Button
 					data-testid="NavigationBar__buttons__mobile--receive"
 					disabled={disabled}
@@ -255,7 +255,7 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 
 	const renderNavigationMenu = () => (
 		<>
-			<ul className="items-center hidden h-12 xl:flex" data-testid="NavigationBar__menu">
+			<ul className="hidden h-12 items-center xl:flex" data-testid="NavigationBar__menu">
 				{navigationMenu.map((menuItem, index) => (
 					<li key={index} className="flex">
 						<NavLink
@@ -270,14 +270,14 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 			</ul>
 			<div
 				data-testid="NavigationBar__menu-toggle"
-				className="flex items-center content-center mr-auto xl:hidden"
+				className="mr-auto flex content-center items-center xl:hidden"
 			>
 				<Dropdown
 					variant="navbar"
 					toggleContent={(isOpen) => (
 						<button
 							type="button"
-							className="flex items-center rounded cursor-pointer text-theme-secondary-700 dark:text-theme-dark-200 focus:ring-theme-primary-400 h-7 focus:ring-2 focus:outline-hidden"
+							className="text-theme-secondary-700 dark:text-theme-dark-200 focus:ring-theme-primary-400 flex h-7 cursor-pointer items-center rounded focus:ring-2 focus:outline-hidden"
 						>
 							<Icon size="lg" name={isOpen ? "MenuOpen" : "Menu"} />
 						</button>
@@ -345,12 +345,12 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 			)}
 
 			<NavWrapper aria-labelledby="main menu">
-				<div className="relative flex flex-row h-12">
+				<div className="relative flex h-12 flex-row">
 					<div className="hidden w-9 sm:flex">
 						<BackButton disabled={isBackDisabled} />
 					</div>
 
-					<div className="flex items-center justify-between flex-1 px-6">
+					<div className="flex flex-1 items-center justify-between px-6">
 						<div className="flex flex-row items-center gap-6">
 							<NavigationBarLogo onClick={homeButtonHandler} />
 							{renderNavigationMenu()}
@@ -358,10 +358,10 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 
 						<div className="flex flex-row items-center justify-center gap-4 sm:gap-5">
 							<NotificationsDropdown profile={profile} />
-							<div className="h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:h-12" />
+							<div className="border-theme-secondary-300 dark:border-theme-dark-700 h-6 border-r sm:h-12" />
 							<ServerStatusIndicator profile={profile} />
-							<div className="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:flex sm:h-12" />
-							<div className="items-center hidden sm:flex">
+							<div className="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:flex sm:h-12" />
+							<div className="hidden items-center sm:flex">
 								<Tooltip
 									content={wallets.length > 0 ? t("COMMON.RECEIVE") : t("COMMON.NOTICE_NO_WALLETS")}
 								>
@@ -381,8 +381,8 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 									</div>
 								</Tooltip>
 							</div>
-							<div className="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:flex sm:h-12" />
-							<div className="items-center hidden sm:flex">
+							<div className="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:flex sm:h-12" />
+							<div className="hidden items-center sm:flex">
 								<Tooltip
 									content={wallets.length > 0 ? t("COMMON.SEND") : t("COMMON.NOTICE_NO_WALLETS")}
 								>
@@ -403,19 +403,19 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 								</Tooltip>
 							</div>
 
-							<div className="h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:h-12" />
+							<div className="border-theme-secondary-300 dark:border-theme-dark-700 h-6 border-r sm:h-12" />
 
 							{!!profile.settings().get(Contracts.ProfileSetting.UseTestNetworks) && (
 								<>
 									<div className="hidden sm:block">
 										<SelectNetwork profile={profile} />
 									</div>
-									<div className="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:block sm:h-12" />
+									<div className="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:block sm:h-12" />
 								</>
 							)}
 
 							<div className="flex items-center gap-5">
-								<HideBalance className="hidden md-lg:flex" profile={profile} />
+								<HideBalance className="md-lg:flex hidden" profile={profile} />
 								<UserMenu
 									userInitials={userInitials}
 									avatarImage={profile.avatar()}
