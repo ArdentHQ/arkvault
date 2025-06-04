@@ -4,6 +4,7 @@ import { server } from "@/tests/mocks/server";
 import * as peers from "./peers";
 
 const exampleUrl = "http://example.com";
+const exampleUrl2 = "http://example.com/";
 
 describe("peers utils", () => {
 	afterEach(() => {
@@ -54,7 +55,7 @@ describe("peers utils", () => {
 	});
 
 	it("endsWithSlash returns true if url ends with slash", () => {
-		expect(peers.endsWithSlash("http://example.com/")).toBe(true);
+		expect(peers.endsWithSlash(exampleUrl2)).toBe(true);
 	});
 
 	it("getBaseUrl returns protocol, host, and port", () => {
@@ -81,7 +82,7 @@ describe("peers utils", () => {
 	});
 
 	it("pingServerAddress returns true for full type and isPeer true", async () => {
-		const handler = http.get("http://example.com/", () => {
+		const handler = http.get(exampleUrl2, () => {
 			return HttpResponse.json({ data: "hello world!" });
 		});
 		server.use(handler);
@@ -91,7 +92,7 @@ describe("peers utils", () => {
 	});
 
 	it("pingServerAddress returns false on error", async () => {
-		const handler = http.get("http://example.com/", () => {
+		const handler = http.get(exampleUrl2, () => {
 			return HttpResponse.error();
 		});
 		server.use(handler);
@@ -129,7 +130,7 @@ describe("peers utils", () => {
 	});
 
 	it("pingServerAddress returns true for musig type and isMusig true", async () => {
-		const handler = http.get("http://example.com/", () => {
+		const handler = http.get(exampleUrl2, () => {
 			return HttpResponse.json({ name: "test-musig-server" });
 		});
 		server.use(handler);
@@ -139,7 +140,7 @@ describe("peers utils", () => {
 	});
 
 	it("pingServerAddress returns false for musig type and isMusig false", async () => {
-		const handler = http.get("http://example.com/", () => {
+		const handler = http.get(exampleUrl2, () => {
 			return HttpResponse.json({ name: "test-regular-server" });
 		});
 		server.use(handler);
