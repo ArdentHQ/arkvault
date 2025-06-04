@@ -22,7 +22,7 @@ export const NotificationsDropdown = ({ profile }: { profile: Contracts.IProfile
 	return (
 		<div>
 			<Dropdown
-				wrapperClass="mt-2"
+				wrapperClass="mt-2 dim:bg-theme-dim-950"
 				toggleContent={
 					<NavigationButtonWrapper className="group">
 						<Tooltip content={t("COMMON.NOTIFICATIONS.TITLE")}>
