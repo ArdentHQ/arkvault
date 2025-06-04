@@ -1,7 +1,9 @@
-import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
+import { describe, it, expect, vi, afterEach } from "vitest";
 import { http, HttpResponse } from "msw";
 import { server } from "@/tests/mocks/server";
 import * as peers from "./peers";
+
+const exampleUrl = "http://example.com";
 
 describe("peers utils", () => {
 	afterEach(() => {
@@ -10,7 +12,7 @@ describe("peers utils", () => {
 	});
 
 	it("addressIsValid returns true for valid domain and ip", () => {
-		expect(peers.addressIsValid("http://example.com")).toBe(true);
+		expect(peers.addressIsValid(exampleUrl)).toBe(true);
 		expect(peers.addressIsValid("http://127.0.0.1")).toBe(true);
 	});
 
@@ -84,7 +86,7 @@ describe("peers utils", () => {
 		});
 		server.use(handler);
 
-		const result = await peers.pingServerAddress("http://example.com", "full");
+		const result = await peers.pingServerAddress(exampleUrl, "full");
 		expect(result).toBe(true);
 	});
 
@@ -94,7 +96,7 @@ describe("peers utils", () => {
 		});
 		server.use(handler);
 
-		const result = await peers.pingServerAddress("http://example.com", "full");
+		const result = await peers.pingServerAddress(exampleUrl, "full");
 		expect(result).toBe(false);
 	});
 
@@ -104,7 +106,7 @@ describe("peers utils", () => {
 		});
 		server.use(handler);
 
-		const result = await peers.getServerHeight("http://example.com");
+		const result = await peers.getServerHeight(exampleUrl);
 		expect(result).toBe(100);
 	});
 
@@ -114,12 +116,12 @@ describe("peers utils", () => {
 		});
 		server.use(handler);
 
-		const result = await peers.getServerHeight("http://example.com");
+		const result = await peers.getServerHeight(exampleUrl);
 		expect(result).toBeUndefined();
 	});
 
 	it("isValidUrl returns true for valid url", () => {
-		expect(peers.isValidUrl("http://example.com")).toBe(true);
+		expect(peers.isValidUrl(exampleUrl)).toBe(true);
 	});
 
 	it("isValidUrl returns false for invalid url", () => {
@@ -132,7 +134,7 @@ describe("peers utils", () => {
 		});
 		server.use(handler);
 
-		const result = await peers.pingServerAddress("http://example.com", "musig");
+		const result = await peers.pingServerAddress(exampleUrl, "musig");
 		expect(result).toBe(true);
 	});
 
@@ -142,7 +144,7 @@ describe("peers utils", () => {
 		});
 		server.use(handler);
 
-		const result = await peers.pingServerAddress("http://example.com", "musig");
+		const result = await peers.pingServerAddress(exampleUrl, "musig");
 		expect(result).toBe(false);
 	});
 });
