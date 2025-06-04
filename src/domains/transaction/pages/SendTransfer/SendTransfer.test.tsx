@@ -869,7 +869,7 @@ describe("SendTransfer", () => {
 		await userEvent.click(continueButton());
 
 		// Auto broadcast
-		await expect(screen.findByText("Ledger Wallet")).resolves.toBeVisible();
+		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
 		vi.restoreAllMocks();
 	});
