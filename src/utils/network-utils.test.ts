@@ -49,7 +49,7 @@ describe("network-utils", () => {
 		expect(networkDisplayName(undefined)).toBe("");
 	});
 	it("networkDisplayName returns coinName for custom network", () => {
-		const network = { id: () => "foo.custom", coinName: () => "FOO" };
+		const network = { coinName: () => "FOO", id: () => "foo.custom" };
 		expect(networkDisplayName(network)).toBe("FOO");
 	});
 	it("networkDisplayName returns displayName for normal network", () => {
@@ -95,13 +95,13 @@ describe("network-utils", () => {
 	it("networksAsOptions adds name for test network", () => {
 		// This network is a test network but NOT custom.
 		const testNetworkNonCustom = {
-			id: () => "testnet.real",
-			coinName: () => "ARK",
-			isTest: () => true,
-			name: () => "TestnetReal",
-			displayName: () => "ARK Testnet Real",
-			meta: () => ({ nethash: "mocknethash", enabled: true }),
 			allows: () => false,
+			coinName: () => "ARK",
+			displayName: () => "ARK Testnet Real",
+			id: () => "testnet.real",
+			isTest: () => true,
+			meta: () => ({ enabled: true, nethash: "mocknethash" }),
+			name: () => "TestnetReal",
 		};
 		const options = networksAsOptions([testNetworkNonCustom]);
 		expect(options).toEqual([
@@ -116,13 +116,14 @@ describe("network-utils", () => {
 	it("networksAsOptions does not add name for custom test network", () => {
 		// This network is both a test network AND custom.
 		const testNetworkCustom = {
-			id: () => "testnet.custom", // Ensures isCustomNetwork(network) is true
-			coinName: () => "CUST",
-			isTest: () => true,
-			name: () => "MyCustomTest",
-			displayName: () => "Custom Testnet",
-			meta: () => ({ nethash: "mocknethashcustom", enabled: true }),
 			allows: () => false,
+			// Ensures isCustomNetwork(network) is true
+			coinName: () => "CUST",
+			displayName: () => "Custom Testnet",
+			id: () => "testnet.custom",
+			isTest: () => true,
+			meta: () => ({ enabled: true, nethash: "mocknethashcustom" }),
+			name: () => "MyCustomTest",
 		};
 		const options = networksAsOptions([testNetworkCustom]);
 		expect(options).toEqual([
@@ -134,21 +135,21 @@ describe("network-utils", () => {
 	it("findNetworkFromSearchParameters finds by nethash", () => {
 		const networks = profile.availableNetworks();
 		const nethash = networks[0].meta().nethash;
-		const params = new URLSearchParams({ nethash });
-		expect(findNetworkFromSearchParameters(profile, params)).toBe(networks[0]);
+		const parameters = new URLSearchParams({ nethash });
+		expect(findNetworkFromSearchParameters(profile, parameters)).toBe(networks[0]);
 	});
 	it("findNetworkFromSearchParameters finds by network id", () => {
 		const networks = profile.availableNetworks();
 		const id = networks[0].id();
-		const params = new URLSearchParams({ network: id });
-		expect(findNetworkFromSearchParameters(profile, params)).toBe(networks[0]);
+		const parameters = new URLSearchParams({ network: id });
+		expect(findNetworkFromSearchParameters(profile, parameters)).toBe(networks[0]);
 	});
 	it("findNetworkFromSearchParameters returns undefined if not found", () => {
-		const params = new URLSearchParams({ nethash: "zzz" });
-		expect(findNetworkFromSearchParameters(profile, params)).toBeUndefined();
+		const parameters = new URLSearchParams({ nethash: "zzz" });
+		expect(findNetworkFromSearchParameters(profile, parameters)).toBeUndefined();
 	});
 	it("findNetworkFromSearchParameters returns undefined if no params", () => {
-		const params = new URLSearchParams();
-		expect(findNetworkFromSearchParameters(profile, params)).toBeUndefined();
+		const parameters = new URLSearchParams();
+		expect(findNetworkFromSearchParameters(profile, parameters)).toBeUndefined();
 	});
 });
