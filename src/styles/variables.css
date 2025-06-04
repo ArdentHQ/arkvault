@@ -238,8 +238,8 @@
 	--theme-background-color: var(--theme-color-dim-900);
 	--theme-secondary-background-color: var(--theme-black);
 
-	--theme-text-color: var(--theme-color-secondary-200);
-	--theme-secondary-text-color: var(--theme-color-secondary-500);
+	--theme-text-color: var(--theme-color-dim-50);
+	--theme-secondary-text-color: var(--theme-color-dim-200);
 
 	--theme-scrollbar-color: var(--theme-color-secondary-700);
 	--theme-scrollbar-hover-color: var(--theme-color-secondary-700);
