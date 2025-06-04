@@ -50,7 +50,7 @@ exports[`ExchangeGrid > should render 1`] = `
 exports[`ExchangeGrid > should render empty 1`] = `
 <DocumentFragment>
   <div
-    class="border-theme-secondary-300 text-theme-secondary-text dark:border-theme-secondary-800 rounded-lg border-solid text-center leading-5 sm:border sm:p-6"
+    class="border-theme-secondary-300 text-theme-secondary-text dark:border-theme-secondary-800 dim:border-theme-dim-700 rounded-lg border-solid text-center leading-5 sm:border sm:p-6"
     data-testid="ExchangeGrid__empty-message"
   >
     <div>

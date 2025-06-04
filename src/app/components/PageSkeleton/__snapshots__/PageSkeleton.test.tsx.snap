@@ -11,7 +11,7 @@ exports[`PageSkeleton > should render without profile 1`] = `
     >
       <nav
         aria-labelledby="main menu"
-        class="custom-nav-wrapper dark:bg-theme-dark-900 sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 h-21"
+        class="custom-nav-wrapper dark:bg-theme-dark-900 dim:bg-theme-dim-900 sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 h-21"
       >
         <div
           class="relative flex"
