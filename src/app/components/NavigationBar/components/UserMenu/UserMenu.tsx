@@ -34,7 +34,7 @@ export const UserMenu: FC<UserMenuProperties> = ({ onUserAction, avatarImage, us
 		(isOpen: boolean) => (
 			<button className="group dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 flex items-center gap-6 rounded bg-transparent p-0 px-1 py-0.5">
 				<div
-					className="relative items-center justify-center align-middle rounded cursor-pointer"
+					className="relative cursor-pointer items-center justify-center rounded align-middle"
 					data-testid="UserMenu"
 				>
 					<Avatar size="avatarMobile" highlight={isOpen}>
@@ -44,14 +44,14 @@ export const UserMenu: FC<UserMenuProperties> = ({ onUserAction, avatarImage, us
 									alt="Profile Avatar"
 									src={`data:image/svg+xml;utf8,${encodeURIComponent(avatarImage)}`}
 								/>
-								<span className="absolute text-xs font-semibold text-theme-background dark:text-theme-text">
+								<span className="text-theme-background dark:text-theme-text absolute text-xs font-semibold">
 									{userInitials}
 								</span>
 							</>
 						) : (
 							<img
 								alt="Profile Avatar"
-								className="object-cover w-6 h-6 bg-center bg-no-repeat bg-cover rounded"
+								className="h-6 w-6 rounded bg-cover bg-center bg-no-repeat object-cover"
 								src={avatarImage}
 							/>
 						)}
