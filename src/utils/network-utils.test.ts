@@ -40,6 +40,7 @@ describe("network-utils", () => {
 		const network = { id: () => "mainnet" };
 		expect(isCustomNetwork(network)).toBe(false);
 	});
+
 	it("isCustomNetwork handles undefined", () => {
 		expect(isCustomNetwork(undefined)).toBe(false);
 	});
@@ -92,10 +93,41 @@ describe("network-utils", () => {
 		}
 	});
 	it("networksAsOptions adds name for test network", () => {
-		const testNet = profile.availableNetworks().find((n) => n.isTest());
-		if (!testNet) return; // Si no hay testnet, omite el test
-		expect(networksAsOptions([testNet])).toEqual([
-			{ isTestNetwork: true, label: `${testNet.coinName()} ${testNet.name()}`, value: testNet.id() },
+		// This network is a test network but NOT custom.
+		const testNetworkNonCustom = {
+			id: () => "testnet.real",
+			coinName: () => "ARK",
+			isTest: () => true,
+			name: () => "TestnetReal",
+			displayName: () => "ARK Testnet Real",
+			meta: () => ({ nethash: "mocknethash", enabled: true }),
+			allows: () => false,
+		};
+		const options = networksAsOptions([testNetworkNonCustom]);
+		expect(options).toEqual([
+			{
+				isTestNetwork: true,
+				label: `${testNetworkNonCustom.coinName()} ${testNetworkNonCustom.name()}`,
+				value: testNetworkNonCustom.id(),
+			},
+		]);
+	});
+
+	it("networksAsOptions does not add name for custom test network", () => {
+		// This network is both a test network AND custom.
+		const testNetworkCustom = {
+			id: () => "testnet.custom", // Ensures isCustomNetwork(network) is true
+			coinName: () => "CUST",
+			isTest: () => true,
+			name: () => "MyCustomTest",
+			displayName: () => "Custom Testnet",
+			meta: () => ({ nethash: "mocknethashcustom", enabled: true }),
+			allows: () => false,
+		};
+		const options = networksAsOptions([testNetworkCustom]);
+		expect(options).toEqual([
+			// Label should NOT include network.name() because it is custom.
+			{ isTestNetwork: true, label: testNetworkCustom.coinName(), value: testNetworkCustom.id() },
 		]);
 	});
 
