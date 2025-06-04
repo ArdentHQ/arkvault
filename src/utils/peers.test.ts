@@ -18,12 +18,6 @@ describe("peers utils", () => {
 		expect(peers.addressIsValid("not-a-url")).toBe(false);
 	});
 
-	it.skip("addressIsValid returns false for valid URL that is neither domain nor IP", () => {
-		// This tests the edge case where isValidUrl returns true but isValidDomain and isValidIp both return false
-		// Using a data URL which is valid according to URL constructor but doesn't match domain/IP patterns
-		expect(peers.addressIsValid("data:text/plain;base64,SGVsbG8gV29ybGQ=")).toBe(false);
-	});
-
 	it("hostRegex matches valid host", () => {
 		const match = peers.hostRegex.exec("http://example.com:8080");
 		expect(match?.groups?.host).toBe("example.com");

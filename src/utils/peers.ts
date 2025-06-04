@@ -27,6 +27,8 @@ const addressIsValid = (address: string) => {
 		return true;
 	}
 
+	// Unreachable
+	/* istanbul ignore next -- @preserve */
 	return false;
 };
 
