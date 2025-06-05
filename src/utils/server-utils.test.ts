@@ -15,27 +15,27 @@ beforeAll(() => {
 });
 
 const makeNormalizedNetwork = (data: Partial<NormalizedNetwork>): NormalizedNetwork => ({
-	publicApiEndpoint: "",
-	transactionApiEndpoint: "",
+	enabled: false,
 	evmApiEndpoint: "",
+	height: 0,
 	name: "",
 	network: network,
 	online: false,
-	enabled: false,
-	height: 0,
+	publicApiEndpoint: "",
+	transactionApiEndpoint: "",
 	...data,
 });
 
 describe("sortByName", () => {
 	it("sorts by name ascending", () => {
-		const arr = [
+		const array = [
 			makeNormalizedNetwork({ name: "Charlie" }),
 			makeNormalizedNetwork({ name: "Bravo" }),
 			makeNormalizedNetwork({ name: "Alpha" }),
 		];
 
-		sortByName(arr);
-		expect(arr.map((n: any) => n.name)).toEqual(["Alpha", "Bravo", "Charlie"]);
+		sortByName(array);
+		expect(array.map((n: any) => n.name)).toEqual(["Alpha", "Bravo", "Charlie"]);
 	});
 });
 
@@ -52,15 +52,15 @@ describe("customNetworks", () => {
 		const netKey = "devnet";
 		const hostName = "RealisticHost";
 		const fullHost: any = {
-			type: "full",
-			host: "https://dwallets-evm.mainsailhq.com/api",
 			enabled: true,
 			height: 123,
+			host: "https://dwallets-evm.mainsailhq.com/api",
+			type: "full",
 		};
-		const txHost: any = { type: "tx", host: "https://dwallets-evm.mainsailhq.com/tx/api" };
-		const musigHost: any = { type: "musig", host: "https://musig-demo.mainsailhq.com" };
-		const explorerHost: any = { type: "explorer", host: "https://explorer-evm-test.mainsailhq.com" };
-		const evmHost: any = { type: "evm", host: "https://dwallets-evm.mainsailhq.com/evm/api" };
+		const txHost: any = { host: "https://dwallets-evm.mainsailhq.com/tx/api", type: "tx" };
+		const musigHost: any = { host: "https://musig-demo.mainsailhq.com", type: "musig" };
+		const explorerHost: any = { host: "https://explorer-evm-test.mainsailhq.com", type: "explorer" };
+		const evmHost: any = { host: "https://dwallets-evm.mainsailhq.com/evm/api", type: "evm" };
 		const hostsAll = {
 			[coin]: {
 				[netKey]: [
@@ -81,13 +81,13 @@ describe("customNetworks", () => {
 
 		expect(result).toHaveLength(1);
 		expect(result[0]).toMatchObject({
+			enabled: true,
+			evmApiEndpoint: evmHost.host,
+			height: fullHost.height,
 			name: hostName,
+			network: fakeNetwork,
 			publicApiEndpoint: fullHost.host,
 			transactionApiEndpoint: txHost.host,
-			evmApiEndpoint: evmHost.host,
-			enabled: true,
-			height: fullHost.height,
-			network: fakeNetwork,
 		});
 		profileHostsSpy.mockRestore();
 		profileAvailableNetworksSpy.mockRestore();
@@ -96,11 +96,11 @@ describe("customNetworks", () => {
 
 describe("hasAvailableMusigServer", () => {
 	it("returns false if no profile", () => {
-		expect(hasAvailableMusigServer({ profile: undefined, network: {} as any })).toBe(false);
+		expect(hasAvailableMusigServer({ network: {} as any, profile: undefined })).toBe(false);
 	});
 
 	it("returns false if profile present but not implemented", () => {
 		const profile = {} as any;
-		expect(hasAvailableMusigServer({ profile, network: {} as any })).toBe(false);
+		expect(hasAvailableMusigServer({ network: {} as any, profile })).toBe(false);
 	});
 });
