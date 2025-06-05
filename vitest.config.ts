@@ -52,6 +52,7 @@ export default defineConfig(async (env) => {
 						"src/tailwind.config.js",
 						"src/tests/**/*",
 						"src/utils/e2e-utils.ts",
+						"src/utils/testing-library.tsx",
 						"**/*.test.{ts,tsx}",
 					],
 					provider: "istanbul",
