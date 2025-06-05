@@ -40,7 +40,6 @@ export const Welcome = () => {
 
 	const [deletingProfileId, setDeletingProfileId] = useState<string | undefined>();
 	const [selectedProfile, setSelectedProfile] = useState<Contracts.IProfile | undefined>(() => {
-		const location = useLocation();
 		const from = location.state?.from as string | undefined;
 
 		if (!from) {
