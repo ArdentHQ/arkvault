@@ -32,23 +32,23 @@ describe("ProfilePeers", () => {
 			mainsail: {
 				mainnet: [
 					{
-						host: { type: "full", host: "https://custom.example.com", enabled: true, height: 123 },
+						host: { enabled: true, height: 123, host: "https://custom.example.com", type: "full" },
 						name: "CustomNode",
 					},
 					{
-						host: { type: "tx", host: "https://custom.example.com/tx", enabled: true },
+						host: { enabled: true, host: "https://custom.example.com/tx", type: "tx" },
 						name: "CustomNode",
 					},
 					{
-						host: { type: "evm", host: "https://custom.example.com/evm", enabled: true },
+						host: { enabled: true, host: "https://custom.example.com/evm", type: "evm" },
 						name: "CustomNode",
 					},
 					{
-						host: { type: "musig", host: "https://custom.example.com/musig", enabled: true },
+						host: { enabled: true, host: "https://custom.example.com/musig", type: "musig" },
 						name: "CustomNode",
 					},
 					{
-						host: { type: "explorer", host: "https://custom.example.com/explorer", enabled: true },
+						host: { enabled: true, host: "https://custom.example.com/explorer", type: "explorer" },
 						name: "CustomNode",
 					},
 				],
@@ -57,9 +57,9 @@ describe("ProfilePeers", () => {
 
 		vi.spyOn(network, "toObject").mockReturnValue({
 			hosts: [
-				{ type: "full", host: "https://default.example.com" },
-				{ type: "evm", host: "https://evm.example.com" },
-				{ type: "tx", host: "https://tx.example.com" },
+				{ host: "https://default.example.com", type: "full" },
+				{ host: "https://evm.example.com", type: "evm" },
+				{ host: "https://tx.example.com", type: "tx" },
 			],
 		});
 

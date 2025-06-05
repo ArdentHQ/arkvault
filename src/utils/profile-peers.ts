@@ -45,13 +45,13 @@ const groupPeersByNetwork = (peers: IPeer[]) =>
 const customPeers = (profile: Contracts.IProfile) =>
 	customNetworks(profile)
 		.filter((network) => network.enabled)
-		.map((customNetwork: CustomNetwork) => {
-			return Peer({
+		.map((customNetwork: CustomNetwork) =>
+			Peer({
 				address: customNetwork.publicApiEndpoint,
 				network: customNetwork.network,
 				serverType: "full",
-			});
-		});
+			}),
+		);
 
 const defaultPeers = (profile: Contracts.IProfile) => {
 	const peers: IPeer[] = [];
