@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-import { Prompt } from "react-router-dom";
 
 import { PasswordSettingsState } from "./Password.contracts";
 import { Button } from "@/app/components/Button";
@@ -172,7 +171,9 @@ export const PasswordSettings = () => {
 					</SettingsButtonGroup>
 				</Form>
 
-				<Prompt message={getPromptMessage} />
+				{
+					// Handle navigation blocker prompt with  useNavigationBlocker instead of <Prompt message={getPromptMessage} />
+				}
 			</SettingsWrapper>
 
 			{isConfirmRemovalVisible && (

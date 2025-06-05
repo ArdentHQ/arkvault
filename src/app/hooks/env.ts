@@ -1,11 +1,12 @@
 import { Contracts } from "@/app/lib/profiles";
 import { useMemo } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 
 import { useEnvironmentContext } from "@/app/contexts/Environment";
 
 export const useActiveProfile = (): Contracts.IProfile => {
 	const navigate = useNavigate();
+	const location = useLocation();
 
 	const context = useEnvironmentContext();
 	const { profileId } = useParams<{ profileId: string }>();
@@ -13,19 +14,19 @@ export const useActiveProfile = (): Contracts.IProfile => {
 	return useMemo(() => {
 		if (!profileId) {
 			throw new Error(
-				`Parameter [profileId] must be available on the route where [useActiveProfile] is called. Current route is [${history.location.pathname}].`,
+				`Parameter [profileId] must be available on the route where [useActiveProfile] is called. Current route is [${location.pathname}].`,
 			);
 		}
 
 		return context.env.profiles().findById(profileId);
-	}, [context.env, history.location.pathname, profileId]);
+	}, [context.env, location.pathname, profileId]);
 };
 
 export const useActiveWallet = (): Contracts.IReadWriteWallet => {
 	const profile = useActiveProfile();
 	const { walletId } = useParams<{ walletId: string }>();
 
-	return useMemo(() => profile.wallets().findById(walletId), [profile, walletId]);
+	return useMemo(() => profile.wallets().findById(walletId!), [profile, walletId]);
 };
 
 export const useActiveWalletWhenNeeded = (isRequired: boolean) => {
@@ -34,7 +35,7 @@ export const useActiveWalletWhenNeeded = (isRequired: boolean) => {
 
 	return useMemo(() => {
 		try {
-			return profile.wallets().findById(walletId);
+			return profile.wallets().findById(walletId!);
 		} catch (error) {
 			if (isRequired) {
 				throw error;

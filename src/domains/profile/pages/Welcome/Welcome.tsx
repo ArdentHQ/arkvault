@@ -18,6 +18,7 @@ import { Profiles } from "@/domains/profile/components/Profiles/Profiles";
 import { Button } from "@/app/components/Button";
 
 export const Welcome = () => {
+	const { t } = useTranslation();
 	const context = useEnvironmentContext();
 	const navigate = useNavigate();
 	const location = useLocation();
@@ -25,7 +26,6 @@ export const Welcome = () => {
 	const [isThemeLoaded, setThemeLoaded] = useState(false);
 	const isProfileCardClickedOnce = useRef(false);
 
-	const { t } = useTranslation();
 	const { handleDeepLink, isDeeplink, validateDeeplink } = useDeeplink();
 
 	const profileCardActions = useMemo(
@@ -102,6 +102,7 @@ export const Welcome = () => {
 
 			setProfileTheme(profile);
 
+			console.log("navigating")
 			navigate(`/profiles/${profile.id()}/${subPath}`);
 		},
 		[location, isDeeplink],

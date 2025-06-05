@@ -1,9 +1,5 @@
-import { useCallback, useEffect } from "react"
+import { useCallback, useEffect, useState } from "react"
 import { useBlocker } from "react-router-dom"
-
-interface UseNavigationBlockerOptions {
-	when?: boolean | (() => boolean)
-}
 
 export const useNavigationBlocker = () => {
 	const [isOpen, setIsOpen] = useState(false);

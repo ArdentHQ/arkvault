@@ -1,6 +1,6 @@
 import cn from "classnames";
 import React from "react";
-import { RouteComponentProps, withRouter } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 interface Properties {
 	handleActiveItem: (key: string) => void;
@@ -10,11 +10,16 @@ interface Properties {
 	route: string;
 }
 
-export const SideBarItem = withRouter(
-	({ label, itemKey, isActive, handleActiveItem }: Properties & RouteComponentProps) => (
+export const SideBarItem = ({ label, itemKey, isActive, handleActiveItem, route }: Properties) => {
+	const navigate = useNavigate();
+
+	return (
 		<li
 			className={cn("relative", isActive ? "cursor-default" : "cursor-pointer")}
-			onClick={() => handleActiveItem(itemKey)}
+			onClick={() => {
+				handleActiveItem(itemKey);
+				navigate(route);
+			}}
 			data-testid={`side-menu__item--${itemKey}`}
 		>
 			<div
@@ -28,5 +33,5 @@ export const SideBarItem = withRouter(
 				<span className="font-semibold">{label}</span>
 			</div>
 		</li>
-	),
-);
+	);
+};
