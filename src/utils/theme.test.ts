@@ -7,14 +7,26 @@ describe("shouldUseDarkColors", () => {
 		env.reset();
 	});
 
+	afterEach(() => {
+		vi.clearAllMocks();
+	});
+
 	it("returns true if the html element has the dark class", () => {
-		document.querySelector("html")?.classList.add("dark");
+		vi.spyOn(document, "querySelector").mockReturnValue({
+			classList: {
+				contains: () => true,
+			},
+		} as any);
 
 		expect(shouldUseDarkColors()).toBe(true);
 	});
 
 	it("returns false if the html element does not have the dark class", () => {
-		document.querySelector("html")?.classList.remove("dark");
+		vi.spyOn(document, "querySelector").mockReturnValue({
+			classList: {
+				contains: () => false,
+			},
+		} as any);
 
 		expect(shouldUseDarkColors()).toBe(false);
 	});
