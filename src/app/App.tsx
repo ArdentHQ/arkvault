@@ -8,7 +8,7 @@ import { ConfigurationProvider, EnvironmentProvider, LedgerProvider, NavigationP
 import { i18n as index18n } from "./i18n";
 import { ZendeskProvider } from "./contexts/Zendesk";
 import { ExchangeProvider } from "@/domains/exchange/contexts/Exchange";
-import { AppRouter, Main } from "@/app/App.blocks";
+import { AppRouter } from "@/app/App.blocks";
 import { initializeEnvironment } from "@/utils/environment";
 import { ApplicationError } from "@/domains/error/pages";
 
