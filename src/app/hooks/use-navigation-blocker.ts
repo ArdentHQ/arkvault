@@ -4,9 +4,10 @@ import { useBlocker } from "react-router-dom"
 export const useNavigationBlocker = () => {
 	const [isOpen, setIsOpen] = useState(false);
 
-	const shouldBlock = () => {
-		return false; // Default to not blocking
-	};
+	// @TODO: implement
+	const shouldBlock = () =>
+		 false // Default to not blocking
+	;
 
 	const blocker = useBlocker(
 		({ currentLocation, nextLocation }) => shouldBlock() && currentLocation.pathname !== nextLocation.pathname

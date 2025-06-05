@@ -204,7 +204,7 @@ export const SendRegistration = () => {
 
 	const getPageTitle = () => {
 		if (!registrationType) {
-			return undefined
+			return
 		}
 
 		return {

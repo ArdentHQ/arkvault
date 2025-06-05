@@ -39,8 +39,8 @@ export const RouterView = ({ routes, middlewares = [] }: Properties) => {
 			middleware.handler({
 				env,
 				location,
-				redirect: setRedirectUrl,
 				navigate,
+				redirect: setRedirectUrl,
 			})
 		);
 		setCanActivate(result);

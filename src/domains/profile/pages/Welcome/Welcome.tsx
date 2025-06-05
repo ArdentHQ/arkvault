@@ -2,7 +2,6 @@ import { Contracts } from "@/app/lib/profiles";
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
 import { matchPath, useLocation, useNavigate } from "react-router-dom";
-import { LocationState } from "router/router.types";
 import cn from "classnames";
 import { DropdownOption } from "@/app/components/Dropdown";
 import { Icon, ThemeIcon } from "@/app/components/Icon";
@@ -47,7 +46,7 @@ export const Welcome = () => {
 		}
 
 		const match = matchPath(
-			{ path: "/profiles/:profileId", end: true },
+			{ end: true, path: "/profiles/:profileId" },
 			from
 		);
 

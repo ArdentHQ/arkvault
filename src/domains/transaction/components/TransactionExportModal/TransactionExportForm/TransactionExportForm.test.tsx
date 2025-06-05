@@ -1,5 +1,4 @@
 import { Contracts } from "@/app/lib/profiles";
-import { createHashHistory } from "history";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
@@ -13,8 +12,6 @@ import {
 	waitFor,
 	within,
 } from "@/utils/testing-library";
-
-const history = createHashHistory();
 
 const fixtureProfileId = getDefaultProfileId();
 let dashboardURL: string;

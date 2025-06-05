@@ -24,7 +24,7 @@ export const NavigationBlockingProvider = ({ children }: { children: React.React
 	const [blockingMessage, setBlockingMessage] = useState<string>();
 
 	return (
-		<NavigationBlockingContext.Provider value={{ shouldBlock, setShouldBlock, blockingMessage, setBlockingMessage }}>
+		<NavigationBlockingContext.Provider value={{ blockingMessage, setBlockingMessage, setShouldBlock, shouldBlock }}>
 			{children}
 		</NavigationBlockingContext.Provider>
 	);

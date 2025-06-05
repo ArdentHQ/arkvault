@@ -1,4 +1,4 @@
-import React, { useCallback, useLayoutEffect, useRef, useState } from "react";
+import React, { useLayoutEffect, useRef } from "react";
 import { createHashRouter, RouterProvider, useNavigate, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useErrorBoundary } from "react-error-boundary";
@@ -17,24 +17,22 @@ import { InstallPWA } from "@/domains/dashboard/components/InstallPWA";
 import { NavigationBlocker, NavigationBlockingProvider } from "./contexts/Navigation/NavigationBlocking";
 
 // Root layout component that wraps all routes
-const RootLayout = () => {
-	return (
-		<NavigationBlockingProvider>
-			<NavigationBlocker />
-			<Main />
-		</NavigationBlockingProvider>
-	);
-};
+const RootLayout = () => (
+	<NavigationBlockingProvider>
+		<NavigationBlocker />
+		<Main />
+	</NavigationBlockingProvider>
+);
 
 // Create the hash router
 const router = createHashRouter([
 	{
-		path: "/*",
 		element: <RootLayout />,
+		path: "/*",
 	},
 ]);
 
-const AppRouter = ({ children }: { children: React.ReactNode }) => (
+const AppRouter = () => (
 	<React.Suspense fallback={<PageSkeleton />}>
 		<RouterProvider router={router} />
 	</React.Suspense>

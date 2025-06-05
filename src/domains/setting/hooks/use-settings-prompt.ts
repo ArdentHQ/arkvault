@@ -17,9 +17,9 @@ export const useSettingsPrompt = <TFieldValues>({ isDirty, dirtyFields }: UseSet
 
 			const matchCurrent = matchPath(
 				{
-					path: ProfilePaths.Settings,
+					caseSensitive: true,
 					end: true,
-					caseSensitive: true
+					path: ProfilePaths.Settings
 				},
 				pathname
 			);

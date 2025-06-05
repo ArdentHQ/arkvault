@@ -1,11 +1,10 @@
 import { Contracts } from "@/app/lib/profiles";
 import { useMemo } from "react";
-import { useLocation, useNavigate, useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 
 import { useEnvironmentContext } from "@/app/contexts/Environment";
 
 export const useActiveProfile = (): Contracts.IProfile => {
-	const navigate = useNavigate();
 	const location = useLocation();
 
 	const context = useEnvironmentContext();

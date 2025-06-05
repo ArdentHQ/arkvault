@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
-import { createHashHistory } from "history";
 import React from "react";
 import * as browserAccess from "browser-fs-access";
 
@@ -36,7 +35,6 @@ describe("Import Profile - Profile Form Step", () => {
 	});
 
 	it("should render profile form", async () => {
-		const history = createHashHistory();
 		navigate("/profiles/import");
 
 		render(
@@ -58,7 +56,6 @@ describe("Import Profile - Profile Form Step", () => {
 	});
 
 	it("should render profile form with empty profile", async () => {
-		const history = createHashHistory();
 		const emptyProfile = await env.profiles().create("test2");
 		navigate("/profiles/import");
 

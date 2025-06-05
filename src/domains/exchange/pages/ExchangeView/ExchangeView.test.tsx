@@ -1,5 +1,4 @@
 /* eslint-disable testing-library/no-node-access */
-import { createHashHistory } from "history";
 import React, { useEffect } from "react";
 import { Route } from "react-router-dom";
 import "jest-styled-components";
@@ -9,8 +8,6 @@ import { getMainsailProfileId, render, screen, waitFor } from "@/utils/testing-l
 import * as themeUtils from "@/utils/theme";
 import * as ExchangeForm from "@/domains/exchange/components/ExchangeForm";
 import userEvent from "@testing-library/user-event";
-
-const history = createHashHistory();
 
 const Wrapper = ({ children }: { children: React.ReactNode }) => {
 	const { exchangeProviders, fetchProviders } = useExchangeContext();

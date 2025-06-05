@@ -4,7 +4,7 @@ import {
 	getProfileStoredPassword,
 	hasIncompatibleLedgerWallets,
 } from "@/utils/profile-utils";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useConfiguration, useEnvironmentContext } from "@/app/contexts";
 
@@ -332,8 +332,6 @@ export const useProfileSynchronizer = ({
 	const { startIdleTimer, resetIdleTimer } = useAutoSignOut(profile);
 	const [activeProfileId, setActiveProfileId] = useState<string | undefined>();
 	const lastPathname = useRef<string>(undefined);
-
-	const navigate = useNavigate();
 
 	useProfileStatusWatcher({
 		onProfileSyncComplete,
