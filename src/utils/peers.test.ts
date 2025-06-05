@@ -82,9 +82,7 @@ describe("peers utils", () => {
 	});
 
 	it("pingServerAddress returns true for full type and isPeer true", async () => {
-		const handler = http.get(exampleUrl2, () => {
-			return HttpResponse.json({ data: "hello world!" });
-		});
+		const handler = http.get(exampleUrl2, () => HttpResponse.json({ data: "hello world!" }));
 		server.use(handler);
 
 		const result = await peers.pingServerAddress(exampleUrl, "full");
@@ -92,9 +90,7 @@ describe("peers utils", () => {
 	});
 
 	it("pingServerAddress returns false on error", async () => {
-		const handler = http.get(exampleUrl2, () => {
-			return HttpResponse.error();
-		});
+		const handler = http.get(exampleUrl2, () => HttpResponse.error());
 		server.use(handler);
 
 		const result = await peers.pingServerAddress(exampleUrl, "full");
@@ -102,9 +98,9 @@ describe("peers utils", () => {
 	});
 
 	it("getServerHeight returns number on success", async () => {
-		const handler = http.get("http://example.com/api/blockchain", () => {
-			return HttpResponse.json({ data: { block: { number: 100 } } });
-		});
+		const handler = http.get("http://example.com/api/blockchain", () =>
+			HttpResponse.json({ data: { block: { number: 100 } } }),
+		);
 		server.use(handler);
 
 		const result = await peers.getServerHeight(exampleUrl);
@@ -112,9 +108,7 @@ describe("peers utils", () => {
 	});
 
 	it("getServerHeight returns undefined on error", async () => {
-		const handler = http.get("http://example.com/api/blockchain", () => {
-			return HttpResponse.error();
-		});
+		const handler = http.get("http://example.com/api/blockchain", () => HttpResponse.error());
 		server.use(handler);
 
 		const result = await peers.getServerHeight(exampleUrl);
@@ -130,9 +124,7 @@ describe("peers utils", () => {
 	});
 
 	it("pingServerAddress returns true for musig type and isMusig true", async () => {
-		const handler = http.get(exampleUrl2, () => {
-			return HttpResponse.json({ name: "test-musig-server" });
-		});
+		const handler = http.get(exampleUrl2, () => HttpResponse.json({ name: "test-musig-server" }));
 		server.use(handler);
 
 		const result = await peers.pingServerAddress(exampleUrl, "musig");
@@ -140,9 +132,7 @@ describe("peers utils", () => {
 	});
 
 	it("pingServerAddress returns false for musig type and isMusig false", async () => {
-		const handler = http.get(exampleUrl2, () => {
-			return HttpResponse.json({ name: "test-regular-server" });
-		});
+		const handler = http.get(exampleUrl2, () => HttpResponse.json({ name: "test-regular-server" }));
 		server.use(handler);
 
 		const result = await peers.pingServerAddress(exampleUrl, "musig");
