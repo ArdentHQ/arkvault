@@ -6,7 +6,7 @@ import { Host } from "@/app/lib/profiles/host.repository.contract";
 
 export const sortByName = (networks: NormalizedNetwork[]) => networks.sort((a, b) => a.name.localeCompare(b.name));
 
-export type CustomNetwork = {
+export interface CustomNetwork {
 	enabled: boolean;
 	evmApiEndpoint: string;
 	height?: number;
@@ -14,7 +14,7 @@ export type CustomNetwork = {
 	network: Networks.Network;
 	publicApiEndpoint: string;
 	transactionApiEndpoint: string;
-};
+}
 
 export const customNetworks = (profile: Contracts.IProfile): CustomNetwork[] => {
 	const networks = profile.hosts().all();
