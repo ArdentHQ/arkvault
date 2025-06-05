@@ -53,6 +53,7 @@ export default defineConfig(async (env) => {
 						"src/tests/**/*",
 						"src/utils/e2e-utils.ts",
 						"src/utils/testing-library.tsx",
+						"src/utils/ledger-test-helpers.ts",
 						"**/*.test.{ts,tsx}",
 					],
 					provider: "istanbul",
