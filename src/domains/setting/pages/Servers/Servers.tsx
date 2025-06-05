@@ -20,6 +20,7 @@ import { DeleteResource } from "@/app/components/DeleteResource";
 import { useSettingsPrompt } from "@/domains/setting/hooks/use-settings-prompt";
 import { networkDisplayName, profileAllEnabledNetworkIds } from "@/utils/network-utils";
 import { SettingsButtonGroup, SettingsGroup } from "@/domains/setting/pages/General/General.blocks";
+import { SettingsUnsavedChangesConfirmation } from "../../components/SettingsUnsavedChangesConfirmation";
 
 export const ServersSettings = () => {
 	const { t } = useTranslation();
@@ -220,9 +221,7 @@ export const ServersSettings = () => {
 					onDelete={() => deleteNetworkHandler(networkToDelete)}
 				/>
 			)}
-			{
-				// Handle navigation blocker prompt with  useNavigationBlocker instead of <Prompt message={getPromptMessage} />
-			}
+			<SettingsUnsavedChangesConfirmation isDirty={isDirty} dirtyFields={dirtyFields} />
 		</SettingsWrapper>
 	);
 };

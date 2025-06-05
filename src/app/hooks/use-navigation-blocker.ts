@@ -1,17 +1,10 @@
 import { useCallback, useEffect, useState } from "react"
-import { useBlocker } from "react-router-dom"
+import { BlockerFunction, useBlocker } from "react-router-dom"
 
-export const useNavigationBlocker = () => {
+export const useNavigationBlocker = ({ shouldBlock }: { shouldBlock: BlockerFunction }) => {
 	const [isOpen, setIsOpen] = useState(false);
 
-	// @TODO: implement
-	const shouldBlock = () =>
-		 false // Default to not blocking
-	;
-
-	const blocker = useBlocker(
-		({ currentLocation, nextLocation }) => shouldBlock() && currentLocation.pathname !== nextLocation.pathname
-	);
+	const blocker = useBlocker(shouldBlock);
 
 	// Handle blocker state changes
 	useEffect(() => {
@@ -26,13 +19,16 @@ export const useNavigationBlocker = () => {
 		if (blocker.state === "blocked") {
 			blocker.reset();
 		}
+
 		setIsOpen(false);
 	}, [blocker]);
 
 	const onConfirm = useCallback(() => {
+		console.log("onConfirm")
 		if (blocker.state === "blocked") {
 			blocker.proceed();
 		}
+
 		setIsOpen(false);
 	}, [blocker]);
 

@@ -17,6 +17,7 @@ import { PasswordValidation } from "@/app/components/PasswordValidation";
 import { SettingsButtonGroup, SettingsGroup } from "@/domains/setting/pages/General/General.blocks";
 import { ListDivided } from "@/app/components/ListDivided";
 import { Tooltip } from "@/app/components/Tooltip";
+import { SettingsUnsavedChangesConfirmation } from "../../components/SettingsUnsavedChangesConfirmation";
 
 export const PasswordSettings = () => {
 	const activeProfile = useActiveProfile();
@@ -171,9 +172,7 @@ export const PasswordSettings = () => {
 					</SettingsButtonGroup>
 				</Form>
 
-				{
-					// Handle navigation blocker prompt with  useNavigationBlocker instead of <Prompt message={getPromptMessage} />
-				}
+				<SettingsUnsavedChangesConfirmation isDirty={isDirty} dirtyFields={dirtyFields} />
 			</SettingsWrapper>
 
 			{isConfirmRemovalVisible && (

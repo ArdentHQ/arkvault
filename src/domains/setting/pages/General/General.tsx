@@ -19,12 +19,12 @@ import { toasts } from "@/app/services";
 import { PlatformSdkChoices } from "@/data";
 import { ResetProfile } from "@/domains/profile/components/ResetProfile";
 import { SettingsWrapper } from "@/domains/setting/components/SettingsPageWrapper";
-import { useSettingsPrompt } from "@/domains/setting/hooks/use-settings-prompt";
 import { SettingsButtonGroup, SettingsGroup, ViewingMode } from "@/domains/setting/pages/General/General.blocks";
 import { useZendesk } from "@/app/contexts/Zendesk";
 import { Toggle } from "@/app/components/Toggle";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { Image } from "@/app/components/Image";
+import { SettingsUnsavedChangesConfirmation } from "../../components/SettingsUnsavedChangesConfirmation";
 
 const requiredFieldMessage = "COMMON.VALIDATION.FIELD_REQUIRED";
 const selectOption = "COMMON.SELECT_OPTION";
@@ -111,8 +111,6 @@ export const GeneralSettings: React.FC = () => {
 	const hasDefaultAvatar = !!avatar.endsWith("</svg>");
 
 	const { settings: settingsValidation } = useValidation();
-	const { getPromptMessage } = useSettingsPrompt({ dirtyFields, isDirty });
-
 	const [isResetProfileOpen, setIsResetProfileOpen] = useState(false);
 
 	useEffect(() => {
@@ -542,9 +540,7 @@ export const GeneralSettings: React.FC = () => {
 				onClose={() => setIsResetProfileOpen(false)}
 				onReset={handleOnReset}
 			/>
-			{
-				// Handle navigation blocker prompt with  useNavigationBlocker instead of <Prompt message={getPromptMessage} />
-			}
+			<SettingsUnsavedChangesConfirmation isDirty={isDirty} dirtyFields={dirtyFields} />
 		</SettingsWrapper>
 	);
 };

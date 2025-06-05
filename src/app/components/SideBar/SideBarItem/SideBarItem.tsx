@@ -18,7 +18,6 @@ export const SideBarItem = ({ label, itemKey, isActive, handleActiveItem, route 
 			className={cn("relative", isActive ? "cursor-default" : "cursor-pointer")}
 			onClick={() => {
 				handleActiveItem(itemKey);
-				navigate(route);
 			}}
 			data-testid={`side-menu__item--${itemKey}`}
 		>
