@@ -55,6 +55,7 @@ export default defineConfig(async (env) => {
 						"src/utils/testing-library.tsx",
 						"src/utils/ledger-test-helpers.ts",
 						"src/utils/test-plugins.ts",
+						"src/utils/test-helpers.ts",
 						"**/*.test.{ts,tsx}",
 					],
 					provider: "istanbul",
