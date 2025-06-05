@@ -21,9 +21,14 @@ export const getProfileById = (env: Environment, id: string) => {
 };
 
 export const getProfileFromUrl = (env: Environment, url: string) => {
-	const urlMatch = matchPath({ path: "/profiles/:profileId", end: true }, url);
-	const urlProfileId = urlMatch?.params?.profileId;
-	return getProfileById(env, urlProfileId!);
+	const urlInstance = new URL(url, window.location.origin);
+	const pathParts = urlInstance.pathname.split('/').filter(Boolean);
+
+	if (pathParts[0] === 'profiles' && pathParts[1]) {
+		return getProfileById(env, pathParts[1]);
+	}
+
+	return undefined;
 };
 
 export const getProfileStoredPassword = (profile: Contracts.IProfile) => {

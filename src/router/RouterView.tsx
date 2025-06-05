@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useMemo, useRef } from "react";
+import React, { FC, useEffect, useRef, useState } from "react";
 import {
 	Navigate,
 	Route,
@@ -18,16 +18,13 @@ interface Properties {
 }
 
 export const RouterView = ({ routes, middlewares = [] }: Properties) => {
-	const navigate = useNavigate()
+	const navigate = useNavigate();
 	const location = useLocation();
 
 	const { env } = useEnvironmentContext();
-	const [redirectUrl, setRedirectUrl] = React.useState<string | undefined>(
-		undefined
-	);
+	const [redirectUrl, setRedirectUrl] = useState<string | undefined>(undefined);
+	const [canActivate, setCanActivate] = useState(true);
 
-	// Instead of history.listen, just scroll to top whenever the pathname changes.
-	// (React Router v6 no longer exposes history.listen on the returned navigate function.)
 	const previousPath = useRef<string>("");
 
 	useEffect(() => {
@@ -37,26 +34,21 @@ export const RouterView = ({ routes, middlewares = [] }: Properties) => {
 		}
 	}, [location.pathname]);
 
-	// Run all middlewares whenever location, env, or navigate changes.
-	// If any middleware sets redirect via setRedirectUrl, canActivate will be false.
-	const canActivate = useMemo(
-		() =>
-			middlewares.every((middleware) =>
-				// Each middleware.handler should return true/false and may call setRedirectUrl(…)
-				middleware.handler({
-					env,
-					location,
-					redirect: setRedirectUrl,
-					navigate,
-				})
-			),
-		[location, middlewares, env]
-	);
+	useEffect(() => {
+		const result = middlewares.every((middleware) =>
+			middleware.handler({
+				env,
+				location,
+				redirect: setRedirectUrl,
+				navigate,
+			})
+		);
+		setCanActivate(result);
+	}, [location, middlewares, env]);
 
 	return (
 		<Routes>
 			{routes.map((route, index) => {
-				// Determine what to render: either the wrapped component or a <Navigate>.
 				const elementToRender = canActivate ? (
 					<div data-testid="RouterView__wrapper">
 						{React.createElement(
@@ -67,7 +59,6 @@ export const RouterView = ({ routes, middlewares = [] }: Properties) => {
 					<Navigate to={redirectUrl ?? "/"} replace />
 				);
 
-				// Wrap it all in your <RouteSuspense> and pass that as element.
 				return (
 					<Route
 						key={index}
@@ -77,7 +68,6 @@ export const RouterView = ({ routes, middlewares = [] }: Properties) => {
 								{elementToRender}
 							</RouteSuspense>
 						}
-					// In v6+, the “exact” prop is removed; RRD v6 matches exactly by default unless you use wildcards.
 					/>
 				);
 			})}
