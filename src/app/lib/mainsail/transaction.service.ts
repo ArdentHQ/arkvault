@@ -16,7 +16,6 @@ import { applyCryptoConfiguration } from "./config.js";
 import { AddressService } from "./address.service.js";
 import { SignedTransactionData } from "./signed-transaction.dto";
 import { ClientService } from "./client.service.js";
-import { LedgerService } from "./ledger.service.js";
 import { ConfigRepository } from "@/app/lib/mainsail";
 import { IProfile } from "@/app/lib/profiles/profile.contract.js";
 import { NetworkConfig } from "./contracts.js";
@@ -42,7 +41,7 @@ export class TransactionService {
 	#configCrypto!: { crypto: NetworkConfig; height: number };
 
 	public constructor({ config, profile }: { config: ConfigRepository; profile: IProfile }) {
-		this.#ledgerService = new LedgerService({ config });
+		this.#ledgerService = profile.ledger();
 		this.#addressService = new AddressService();
 		this.#clientService = new ClientService({ config, profile });
 
@@ -323,8 +322,9 @@ export class TransactionService {
 		transaction.data = {
 			...transaction.data,
 			...signature,
-			id: transaction.getHash(),
 			v: Number.parseInt(signature.v) + 27, // TODO: remove +27 when updating mainsail packages https://app.clickup.com/t/86dwhby95
 		};
+
+		transaction.data.hash = transaction.hash();
 	}
 }
