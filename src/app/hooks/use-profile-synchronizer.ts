@@ -1,11 +1,10 @@
 import {
 	getErroredNetworks,
-	getProfileById,
 	getProfileFromUrl,
 	getProfileStoredPassword,
 	hasIncompatibleLedgerWallets,
 } from "@/utils/profile-utils";
-import { matchPath, useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useConfiguration, useEnvironmentContext } from "@/app/contexts";
 
@@ -31,11 +30,8 @@ enum Intervals {
 const useProfileWatcher = () => {
 	const location = useLocation();
 	const { env } = useEnvironmentContext();
-	const match = useMemo(() => matchPath({ path: "/profiles/:profileId", end: true }, location.pathname), [location.pathname]);
-	const profileId = (match?.params as any)?.profileId;
-	const allProfilesCount = env.profiles().count();
 
-	return useMemo(() => getProfileById(env, profileId), [profileId, env, allProfilesCount]);
+	return getProfileFromUrl(env, location.pathname)
 };
 
 export const useProfileJobs = (profile?: Contracts.IProfile): Record<string, any> => {
