@@ -191,9 +191,7 @@ export const SendUsernameResignation = () => {
 							{!hideStepNavigation && (
 								<StepNavigation
 									onBackClick={handleBack}
-									onBackToWalletClick={() =>
-										navigate(`/profiles/${activeProfile.id()}/dashboard`)
-									}
+									onBackToWalletClick={() => navigate(`/profiles/${activeProfile.id()}/dashboard`)}
 									onContinueClick={() => handleNext()}
 									isLoading={isSubmitting}
 									isNextDisabled={!isValid}

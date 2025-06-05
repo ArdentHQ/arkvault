@@ -1,11 +1,5 @@
 import React, { FC, useEffect, useRef, useState } from "react";
-import {
-	Navigate,
-	Route,
-	Routes,
-	useLocation,
-	useNavigate,
-} from "react-router-dom";
+import { Navigate, Route, Routes, useLocation, useNavigate } from "react-router-dom";
 
 import { useEnvironmentContext } from "@/app/contexts";
 import { RouteItem, Middleware } from "@/router/router.types";
@@ -41,7 +35,7 @@ export const RouterView = ({ routes, middlewares = [] }: Properties) => {
 				location,
 				navigate,
 				redirect: setRedirectUrl,
-			})
+			}),
 		);
 		setCanActivate(result);
 	}, [location, middlewares, env]);
@@ -51,9 +45,7 @@ export const RouterView = ({ routes, middlewares = [] }: Properties) => {
 			{routes.map((route, index) => {
 				const elementToRender = canActivate ? (
 					<div data-testid="RouterView__wrapper">
-						{React.createElement(
-							route.component as PreloadableComponent<FC<unknown>>
-						)}
+						{React.createElement(route.component as PreloadableComponent<FC<unknown>>)}
 					</div>
 				) : (
 					<Navigate to={redirectUrl ?? "/"} replace />

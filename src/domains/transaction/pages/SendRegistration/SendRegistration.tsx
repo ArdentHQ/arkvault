@@ -204,7 +204,7 @@ export const SendRegistration = () => {
 
 	const getPageTitle = () => {
 		if (!registrationType) {
-			return
+			return;
 		}
 
 		return {
@@ -212,7 +212,7 @@ export const SendRegistration = () => {
 			multiSignature: t("TRANSACTION.TRANSACTION_TYPES.MULTI_SIGNATURE"),
 			usernameRegistration: t("TRANSACTION.TRANSACTION_TYPES.USERNAME_REGISTRATION"),
 		}[registrationType];
-	}
+	};
 
 	return (
 		<Page pageTitle={getPageTitle()}>
@@ -263,9 +263,7 @@ export const SendRegistration = () => {
 							{!hideStepNavigation && (
 								<StepNavigation
 									onBackClick={handleBack}
-									onBackToWalletClick={() =>
-										navigate(`/profiles/${activeProfile.id()}/dashboard`)
-									}
+									onBackToWalletClick={() => navigate(`/profiles/${activeProfile.id()}/dashboard`)}
 									onContinueClick={() => handleNext()}
 									isLoading={isSubmitting || isLoading}
 									isNextDisabled={isNextDisabled}

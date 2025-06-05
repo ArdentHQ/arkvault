@@ -28,9 +28,7 @@ export const App = () => {
 							<ExchangeProvider>
 								<ErrorBoundary FallbackComponent={ApplicationError}>
 									<LedgerProvider>
-										<AppRouter>
-											<Main />
-										</AppRouter>
+										<AppRouter />
 									</LedgerProvider>
 								</ErrorBoundary>
 							</ExchangeProvider>

@@ -31,7 +31,7 @@ const useProfileWatcher = () => {
 	const location = useLocation();
 	const { env } = useEnvironmentContext();
 
-	return getProfileFromUrl(env, location.pathname)
+	return getProfileFromUrl(env, location.pathname);
 };
 
 export const useProfileJobs = (profile?: Contracts.IProfile): Record<string, any> => {

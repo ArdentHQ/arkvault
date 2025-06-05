@@ -393,9 +393,7 @@ const ExchangeForm = ({
 										<div className="flex w-full flex-col gap-3 sm:flex-row-reverse">
 											<Button
 												data-testid="ExchangeForm__finish-button"
-												onClick={() =>
-													navigate(`/profiles/${activeProfile.id()}/dashboard`)
-												}
+												onClick={() => navigate(`/profiles/${activeProfile.id()}/dashboard`)}
 											>
 												{t("COMMON.GO_TO_PORTFOLIO")}
 											</Button>

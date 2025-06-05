@@ -24,7 +24,7 @@ import { useZendesk } from "@/app/contexts/Zendesk";
 import { Toggle } from "@/app/components/Toggle";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { Image } from "@/app/components/Image";
-import { SettingsUnsavedChangesConfirmation } from "../../components/SettingsUnsavedChangesConfirmation";
+import { SettingsUnsavedChangesConfirmation } from "@/domains/setting/components/SettingsUnsavedChangesConfirmation";
 
 const requiredFieldMessage = "COMMON.VALIDATION.FIELD_REQUIRED";
 const selectOption = "COMMON.SELECT_OPTION";

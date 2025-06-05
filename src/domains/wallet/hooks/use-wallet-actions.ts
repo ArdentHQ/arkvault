@@ -59,9 +59,7 @@ export const useWalletActions = ({
 				return;
 			}
 
-			navigate(
-				generatePath(ProfilePaths.SendTransferWallet, { profileId: profile.id(), walletId: wallet.id() }),
-			);
+			navigate(generatePath(ProfilePaths.SendTransferWallet, { profileId: profile.id(), walletId: wallet.id() }));
 		},
 		[stopEventBubbling, hasMultipleWallets, history, profile, wallet],
 	);

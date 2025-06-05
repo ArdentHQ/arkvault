@@ -63,9 +63,7 @@ describe("useDeeplink hook", () => {
 	};
 
 	it("should use the method parameter to detect deeplink", () => {
-		navigate(
-			"/?network=mainsail.devnet&recipient=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6&amount=1.2&memo=ARK",
-		);
+		navigate("/?network=mainsail.devnet&recipient=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6&amount=1.2&memo=ARK");
 
 		render(
 			<Route>

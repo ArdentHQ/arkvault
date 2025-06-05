@@ -1,5 +1,5 @@
-import { useCallback, useEffect, useState } from "react"
-import { BlockerFunction, useBlocker } from "react-router-dom"
+import { useCallback, useEffect, useState } from "react";
+import { BlockerFunction, useBlocker } from "react-router-dom";
 
 export const useNavigationBlocker = ({ shouldBlock }: { shouldBlock: BlockerFunction }) => {
 	const [isOpen, setIsOpen] = useState(false);
@@ -24,7 +24,7 @@ export const useNavigationBlocker = ({ shouldBlock }: { shouldBlock: BlockerFunc
 	}, [blocker]);
 
 	const onConfirm = useCallback(() => {
-		console.log("onConfirm")
+		console.log("onConfirm");
 		if (blocker.state === "blocked") {
 			blocker.proceed();
 		}
@@ -36,5 +36,5 @@ export const useNavigationBlocker = ({ shouldBlock }: { shouldBlock: BlockerFunc
 		isOpen,
 		onCancel,
 		onConfirm,
-	}
-}
+	};
+};

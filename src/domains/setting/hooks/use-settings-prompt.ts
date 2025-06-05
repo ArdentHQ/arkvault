@@ -7,10 +7,7 @@ interface UseSettingsPromptInput {
 	dirtyFields: object;
 }
 
-export const useSettingsPrompt = ({
-	isDirty,
-	dirtyFields
-}: UseSettingsPromptInput) => {
+export const useSettingsPrompt = ({ isDirty, dirtyFields }: UseSettingsPromptInput) => {
 	const shouldBlockNavigation = useCallback(
 		(path: string) => {
 			console.log({ dirtyFields, isDirty });
@@ -20,9 +17,9 @@ export const useSettingsPrompt = ({
 				{
 					caseSensitive: true,
 					end: true,
-					path: ProfilePaths.Settings
+					path: ProfilePaths.Settings,
 				},
-				path
+				path,
 			);
 
 			console.log({ matchCurrent });

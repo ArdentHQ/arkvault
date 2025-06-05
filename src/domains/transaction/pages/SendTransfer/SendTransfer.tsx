@@ -40,7 +40,7 @@ const MAX_TABS = 5;
 
 export const SendTransfer = () => {
 	const navigate = useNavigate();
-	const location = useLocation()
+	const location = useLocation();
 	const { t } = useTranslation();
 
 	const { env } = useEnvironmentContext();

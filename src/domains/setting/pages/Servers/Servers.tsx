@@ -17,10 +17,9 @@ import ServerFormModal from "@/domains/setting/pages/Servers/blocks/ServerFormMo
 import { toasts } from "@/app/services";
 import { useEnvironmentContext } from "@/app/contexts";
 import { DeleteResource } from "@/app/components/DeleteResource";
-import { useSettingsPrompt } from "@/domains/setting/hooks/use-settings-prompt";
 import { networkDisplayName, profileAllEnabledNetworkIds } from "@/utils/network-utils";
 import { SettingsButtonGroup, SettingsGroup } from "@/domains/setting/pages/General/General.blocks";
-import { SettingsUnsavedChangesConfirmation } from "../../components/SettingsUnsavedChangesConfirmation";
+import { SettingsUnsavedChangesConfirmation } from "@/domains/setting/components/SettingsUnsavedChangesConfirmation";
 
 export const ServersSettings = () => {
 	const { t } = useTranslation();
@@ -61,7 +60,6 @@ export const ServersSettings = () => {
 
 	const { customNetworks } = watch();
 
-	const { getPromptMessage } = useSettingsPrompt({ dirtyFields, isDirty });
 	const isProfileRestored = useMemo(() => profile.status().isRestored(), [profile]);
 
 	const isSaveButtonDisabled = useMemo(

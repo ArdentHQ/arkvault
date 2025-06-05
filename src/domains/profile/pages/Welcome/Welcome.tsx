@@ -45,10 +45,7 @@ export const Welcome = () => {
 			return;
 		}
 
-		const match = matchPath(
-			{ end: true, path: "/profiles/:profileId" },
-			from
-		);
+		const match = matchPath({ end: true, path: "/profiles/:profileId" }, from);
 
 		if (!match || !match.params.profileId) {
 			return;
@@ -100,7 +97,7 @@ export const Welcome = () => {
 
 			setProfileTheme(profile);
 
-			console.log("navigating")
+			console.log("navigating");
 			navigate(`/profiles/${profile.id()}/${subPath}`);
 		},
 		[location, isDeeplink],

@@ -21,9 +21,9 @@ export const getProfileById = (env: Environment, id: string) => {
 
 export const getProfileFromUrl = (env: Environment, url: string) => {
 	const urlInstance = new URL(url, window.location.origin);
-	const pathParts = urlInstance.pathname.split('/').filter(Boolean);
+	const pathParts = urlInstance.pathname.split("/").filter(Boolean);
 
-	if (pathParts[0] === 'profiles' && pathParts[1]) {
+	if (pathParts[0] === "profiles" && pathParts[1]) {
 		return getProfileById(env, pathParts[1]);
 	}
 };

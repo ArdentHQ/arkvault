@@ -14,7 +14,7 @@ interface MiddlewareParameters {
 	location: Location;
 	env: Environment;
 	redirect: (url: string) => void;
-	navigate: NavigateFunction
+	navigate: NavigateFunction;
 }
 
 type LocationState = { from?: string } | undefined;
