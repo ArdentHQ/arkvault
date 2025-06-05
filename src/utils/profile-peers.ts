@@ -61,7 +61,7 @@ const defaultPeers = (profile: Contracts.IProfile) => {
 			if (host.type === "full") {
 				peers.push(
 					Peer({
-						address: host.host ?? "",
+						address: host.host,
 						network,
 						serverType: host.type as NetworkHostType,
 					}),

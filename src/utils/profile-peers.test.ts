@@ -27,7 +27,7 @@ describe("ProfilePeers", () => {
 		);
 	});
 
-	it.only("returns health status for all peers", async () => {
+	it("returns health status for all peers", async () => {
 		vi.spyOn(profile.hosts(), "all").mockReturnValue({
 			mainsail: {
 				mainnet: [
