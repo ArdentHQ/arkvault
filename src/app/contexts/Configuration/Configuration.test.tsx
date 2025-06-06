@@ -19,17 +19,15 @@ describe("Configuration Context", () => {
 	});
 
 	it("should throw without provider", () => {
-		const consoleSpy = vi.spyOn(console, "error").mockImplementation(() => { });
+		const consoleSpy = vi.spyOn(console, "error").mockImplementation(() => {});
 
 		let error;
 		try {
 			renderHook(() => useConfiguration());
-		} catch (e) {
-			error = e;
+		} catch (error_) {
+			error = error_;
 		}
-		expect(error).toEqual(
-			new Error("[useConfiguration] Component not wrapped within a Provider")
-		);
+		expect(error).toEqual(new Error("[useConfiguration] Component not wrapped within a Provider"));
 		expect(() => {
 			renderHook(() => useConfiguration());
 		}).toThrow("[useConfiguration] Component not wrapped within a Provider");
