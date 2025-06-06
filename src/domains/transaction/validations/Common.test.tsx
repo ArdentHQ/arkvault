@@ -1,25 +1,13 @@
 /* eslint-disable sonarjs/no-duplicate-string */
 import { Networks } from "@/app/lib/mainsail";
-import { renderHook } from "@testing-library/react";
-import { useTranslation } from "react-i18next";
 import { BigNumber } from "@/app/lib/helpers";
 import * as inputFee from "@/domains/transaction/components/InputFee/InputFee";
 
 import { common } from "./Common";
-import { env } from "@/utils/testing-library";
+import { env, t } from "@/utils/testing-library";
 
 let network: Networks.Network;
 let getValues: () => any;
-
-const t = (key: string, options?: any) => {
-	const {
-		result: {
-			current: { t },
-		},
-	} = renderHook(() => useTranslation());
-
-	return t(key, options);
-};
 
 describe("Common Validations", () => {
 	beforeAll(() => {

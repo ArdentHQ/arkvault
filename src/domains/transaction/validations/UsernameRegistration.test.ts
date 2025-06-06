@@ -2,16 +2,13 @@
 
 import { IProfile } from "@/app/lib/profiles/profile.contract";
 import { usernameRegistration } from "./UsernameRegistration";
-import { env, getMainsailProfileId } from "@/utils/testing-library";
+import { env, getMainsailProfileId, t } from "@/utils/testing-library";
 import { requestMock, server } from "@/tests/mocks/server";
 import { Networks } from "@/app/lib/mainsail";
 import { Environment } from "@/app/lib/profiles";
 import { http, HttpResponse } from "msw";
-import { renderHook } from "@testing-library/react";
-import { useTranslation } from "react-i18next";
 
 let profile: IProfile;
-let t: (key: string, options?: any) => string;
 let network: Networks.Network;
 let environment: Environment;
 let controller: any;
@@ -24,13 +21,6 @@ describe("Username Registration Validation", () => {
 
 		await env.profiles().restore(profile);
 		await profile.sync();
-
-		const {
-			result: {
-				current: { t: translationFunction },
-			},
-		} = renderHook(() => useTranslation());
-		t = translationFunction;
 	});
 
 	beforeEach(() => {
