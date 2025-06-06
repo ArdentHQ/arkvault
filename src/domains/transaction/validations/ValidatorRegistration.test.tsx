@@ -81,18 +81,21 @@ describe("Register validator validation", () => {
 
 	it("should pass if the server returns 404", async () => {
 		const { validate } = validatorRegistration(translationMock).validatorPublicKey(profile, network);
-
+		const publicKey = "any-non-existent-key";
 		server.use(
 			requestMock(
 				"https://dwallets-evm.mainsailhq.com/api",
 				{},
 				{
-					statusCode: 404,
+					query: {
+						"attributes.validatorPublicKey": publicKey,
+					},
+					status: 404,
 				},
 			),
 		);
 
-		await expect(validate.unique("anything")).resolves.toBeUndefined();
+		await expect(validate.unique(publicKey)).resolves.toBeFalsy();
 	});
 
 	it("should fail if public key has used", async () => {
