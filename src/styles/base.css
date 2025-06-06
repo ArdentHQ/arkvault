@@ -4,20 +4,20 @@ html {
 
 body {
 	-webkit-tap-highlight-color: transparent;
-	@apply flex min-h-screen flex-col font-sans text-base antialiased;
+	@apply flex flex-col min-h-screen font-sans text-base antialiased;
 	/* mobile viewport bug fix */
 	min-height: -webkit-fill-available;
 }
 
 #root {
-	@apply flex flex-1 flex-col;
+	@apply flex flex-col flex-1;
 }
 main {
 	@apply flex-1 bg-theme-background text-theme-text;
 }
 
 .link {
-	@apply cursor-pointer text-theme-primary-400 transition-colors duration-100 ease-linear dark:text-theme-secondary-600;
+	@apply transition-colors duration-100 ease-linear cursor-pointer text-theme-primary-400 dark:text-theme-secondary-600;
 }
 
 .link:hover {
@@ -78,7 +78,7 @@ main {
 }
 
 .custom-button-wrapper button {
-	@apply h-10 w-10 overflow-hidden rounded-sm text-theme-secondary-700 dark:text-theme-secondary-600 sm:h-11 sm:w-11 not-disabled:hover:bg-theme-primary-100 not-disabled:hover:text-theme-primary-600 dark:not-disabled:hover:bg-theme-secondary-800 dark:not-disabled:hover:text-theme-secondary-100;
+	@apply w-10 h-10 overflow-hidden rounded-sm text-theme-secondary-700 dark:text-theme-secondary-600 sm:h-11 sm:w-11 not-disabled:hover:bg-theme-primary-100 not-disabled:hover:text-theme-primary-600 dark:not-disabled:hover:bg-theme-secondary-800 dark:not-disabled:hover:text-theme-secondary-100;
 }
 
 .custom-button-nav-wrapper {
@@ -86,7 +86,7 @@ main {
 }
 
 .custom-button-nav-wrapper button {
-	@apply h-7 w-7 overflow-hidden rounded-sm p-0 text-theme-secondary-700 dark:text-theme-dark-200 not-disabled:hover:bg-theme-primary-200 not-disabled:hover:text-theme-primary-700 dark:not-disabled:hover:bg-theme-dark-700 dark:not-disabled:hover:text-theme-dark-50;
+	@apply p-0 overflow-hidden rounded-sm h-7 w-7 text-theme-secondary-700 dark:text-theme-dark-200 not-disabled:hover:bg-theme-primary-200 not-disabled:hover:text-theme-primary-700 dark:not-disabled:hover:bg-theme-dark-700 dark:not-disabled:hover:text-theme-dark-50 dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700;
 }
 
 @supports (padding-bottom: env(safe-area-inset-bottom)) {
@@ -96,7 +96,7 @@ main {
 }
 
 .table-wrapper table {
-	@apply m-0 w-full border-none p-0;
+	@apply w-full p-0 m-0 border-none;
 }
 
 .table-wrapper table thead th:not(:first-of-type)::after {
@@ -128,7 +128,7 @@ main {
 }
 
 .tooltip-wrapper {
-	@apply flex items-center rounded-sm bg-theme-secondary-900 px-3 py-2 dark:bg-theme-secondary-800;
+	@apply flex items-center px-3 py-2 rounded-sm bg-theme-secondary-900 dark:bg-theme-secondary-800;
 }
 
 .tooltip-wrapper::after {
@@ -136,7 +136,7 @@ main {
 }
 
 .tooltip-wrapper.left::after {
-	@apply left-5 right-auto;
+	@apply right-auto left-5;
 }
 
 .tooltip-wrapper.right::after {
@@ -148,7 +148,7 @@ main {
 }
 
 .upload-button-wrapper button {
-	@apply h-full w-full focus:ring-0;
+	@apply w-full h-full focus:ring-0;
 }
 
 .toggle-input:checked ~ .toggle-handle .handle-inner {
@@ -164,7 +164,7 @@ main {
 }
 
 .select-options-list {
-	@apply top-full max-h-64 space-y-1 overflow-y-auto rounded-sm bg-white p-1 shadow-xl outline-hidden dark:bg-theme-dark-900;
+	@apply p-1 space-y-1 overflow-y-auto bg-white rounded-sm shadow-xl top-full max-h-64 outline-hidden dark:bg-theme-dark-900;
 }
 
 .select-options-list .select-list-option-group:not(:last-child) {
@@ -173,11 +173,11 @@ main {
 
 .select-options-list .select-list-option-head,
 .select-options-list .select-list-option {
-	@apply relative rounded border-0 px-5 text-theme-secondary-700 dark:text-theme-dark-200;
+	@apply relative px-5 border-0 rounded text-theme-secondary-700 dark:text-theme-dark-200;
 }
 
 .select-options-list .select-list-option-head__label {
-	@apply select-none pb-1 text-xs font-bold uppercase text-theme-secondary-500 dark:text-theme-secondary-700;
+	@apply pb-1 text-xs font-bold uppercase select-none text-theme-secondary-500 dark:text-theme-secondary-700;
 }
 
 .select-options-list .select-list-option-head + .select-list-option .select-list-option__label {
@@ -185,7 +185,7 @@ main {
 }
 
 .select-options-list .select-list-option {
-	@apply cursor-pointer text-theme-secondary-900 transition-colors duration-200 dark:text-theme-secondary-200;
+	@apply transition-colors duration-200 cursor-pointer text-theme-secondary-900 dark:text-theme-secondary-200;
 }
 
 .select-options-list .select-list-option__label {
@@ -193,7 +193,7 @@ main {
 }
 
 .select-options-list .select-list-option:not(:first-child) .select-list-option__label {
-	@apply border-t border-theme-secondary-300 transition-colors duration-200 dark:border-theme-secondary-700;
+	@apply transition-colors duration-200 border-t border-theme-secondary-300 dark:border-theme-secondary-700;
 }
 
 .select-options-list .select-list-option.is-highlighted {
@@ -209,7 +209,7 @@ main {
 }
 
 .select-options-list .select-list-option.is-selected {
-	@apply z-20 bg-theme-secondary-200 font-semibold text-theme-primary-600 dark:bg-theme-dark-950 dark:text-theme-dark-50;
+	@apply z-20 font-semibold bg-theme-secondary-200 text-theme-primary-600 dark:bg-theme-dark-950 dark:text-theme-dark-50;
 }
 
 .select-options-list .select-list-option.is-selected .select-list-option__label {
@@ -234,11 +234,11 @@ main {
 }
 
 .add-recipient-wrapper .select-buttons div:first-of-type button {
-	@apply rounded-br-none rounded-tr-none;
+	@apply rounded-tr-none rounded-br-none;
 }
 
 .add-recipient-wrapper .select-buttons div:last-child button {
-	@apply rounded-bl-none rounded-tl-none;
+	@apply rounded-tl-none rounded-bl-none;
 }
 
 .add-recipient-wrapper .questionmark svg {
@@ -263,7 +263,7 @@ main {
 
 .search-input::-webkit-inner-spin-button,
 .search-input::-webkit-outer-spin-button {
-	@apply pointer-events-none hidden;
+	@apply hidden pointer-events-none;
 }
 
 .pagination-search-toggle-button {
@@ -271,7 +271,7 @@ main {
 }
 
 .pagination-button {
-	@apply inline-flex cursor-pointer items-center justify-center px-2 text-center text-base font-semibold text-theme-primary-600 transition-all duration-100 ease-linear dark:text-theme-secondary-200;
+	@apply inline-flex items-center justify-center px-2 text-base font-semibold text-center transition-all duration-100 ease-linear cursor-pointer text-theme-primary-600 dark:text-theme-secondary-200;
 }
 
 .pagination-button:not(:disabled):hover {
@@ -279,7 +279,7 @@ main {
 }
 
 .pagination-button.current-page {
-	@apply bg-theme-primary-500 text-white dark:bg-theme-secondary-600 dark:text-theme-secondary-200;
+	@apply text-white bg-theme-primary-500 dark:bg-theme-secondary-600 dark:text-theme-secondary-200;
 }
 
 .pagination-button:focus {

@@ -117,7 +117,7 @@ exports[`RecipientList > should conditionally disable remove button 1`] = `
                   </span>
                 </span>
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
                   data-testid="Address__address"
                 >
                   FJKDSALJFKASLJFKSDAJD333FKFKDSAJFKSAJFKLASJKDFJ
@@ -222,7 +222,7 @@ exports[`RecipientList > should conditionally disable remove button 1`] = `
                   </span>
                 </span>
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
                   data-testid="Address__address"
                 >
                   AhFJKDSALJFKASLJFKSDEAJ333FKFKDSAJFKSAJFKLASJKDFJ
@@ -326,7 +326,7 @@ exports[`RecipientList > should conditionally disable remove button 1`] = `
                   </span>
                 </span>
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
                   data-testid="Address__address"
                 >
                   FAhFJKDSALJFKASLJFKSFDAJ333FKFKDSAJFKSAJFKLASJKDFJ
@@ -596,7 +596,7 @@ exports[`RecipientList > should render condensed variant 1`] = `
                   </span>
                 </span>
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
                   data-testid="Address__address"
                 >
                   FJKDSALJFKASLJFKSDAJD333FKFKDSAJFKSAJFKLASJKDFJ
@@ -668,7 +668,7 @@ exports[`RecipientList > should render condensed variant 1`] = `
                   </span>
                 </span>
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
                   data-testid="Address__address"
                 >
                   AhFJKDSALJFKASLJFKSDEAJ333FKFKDSAJFKSAJFKLASJKDFJ
@@ -740,7 +740,7 @@ exports[`RecipientList > should render condensed variant 1`] = `
                   </span>
                 </span>
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
                   data-testid="Address__address"
                 >
                   FAhFJKDSALJFKASLJFKSFDAJ333FKFKDSAJFKSAJFKLASJKDFJ
@@ -954,7 +954,7 @@ exports[`RecipientList > should render editable 1`] = `
                   </span>
                 </span>
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
                   data-testid="Address__address"
                 >
                   FJKDSALJFKASLJFKSDAJD333FKFKDSAJFKSAJFKLASJKDFJ
@@ -1058,7 +1058,7 @@ exports[`RecipientList > should render editable 1`] = `
                   </span>
                 </span>
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
                   data-testid="Address__address"
                 >
                   AhFJKDSALJFKASLJFKSDEAJ333FKFKDSAJFKSAJFKLASJKDFJ
@@ -1162,7 +1162,7 @@ exports[`RecipientList > should render editable 1`] = `
                   </span>
                 </span>
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
                   data-testid="Address__address"
                 >
                   FAhFJKDSALJFKASLJFKSFDAJ333FKFKDSAJFKSAJFKLASJKDFJ
@@ -1420,7 +1420,7 @@ exports[`RecipientList > should render non-editable 1`] = `
                   </span>
                 </span>
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
                   data-testid="Address__address"
                 >
                   FJKDSALJFKASLJFKSDAJD333FKFKDSAJFKSAJFKLASJKDFJ
@@ -1475,7 +1475,7 @@ exports[`RecipientList > should render non-editable 1`] = `
                   </span>
                 </span>
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
                   data-testid="Address__address"
                 >
                   AhFJKDSALJFKASLJFKSDEAJ333FKFKDSAJFKSAJFKLASJKDFJ
@@ -1530,7 +1530,7 @@ exports[`RecipientList > should render non-editable 1`] = `
                   </span>
                 </span>
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
                   data-testid="Address__address"
                 >
                   FAhFJKDSALJFKASLJFKSFDAJ333FKFKDSAJFKSAJFKLASJKDFJ
@@ -1706,7 +1706,7 @@ exports[`RecipientList > should render without amount column 1`] = `
                   </span>
                 </span>
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
                   data-testid="Address__address"
                 >
                   FJKDSALJFKASLJFKSDAJD333FKFKDSAJFKSAJFKLASJKDFJ
@@ -1782,7 +1782,7 @@ exports[`RecipientList > should render without amount column 1`] = `
                   </span>
                 </span>
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
                   data-testid="Address__address"
                 >
                   AhFJKDSALJFKASLJFKSDEAJ333FKFKDSAJFKSAJFKLASJKDFJ
@@ -1858,7 +1858,7 @@ exports[`RecipientList > should render without amount column 1`] = `
                   </span>
                 </span>
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
                   data-testid="Address__address"
                 >
                   FAhFJKDSALJFKASLJFKSFDAJ333FKFKDSAJFKSAJFKLASJKDFJ

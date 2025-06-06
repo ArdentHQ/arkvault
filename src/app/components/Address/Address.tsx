@@ -137,7 +137,7 @@ export const Address = ({
 							className={cn(
 								addressClass ||
 									(walletName
-										? "text-theme-secondary-500 dark:text-theme-secondary-700"
+										? "text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200"
 										: "text-theme-text"),
 								getFontWeight(fontWeight),
 								getFontSize(size),

@@ -8,7 +8,7 @@ exports[`UserMenu > should render with regular image 1`] = `
     data-testid="dropdown__toggle"
   >
     <button
-      class="group dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 flex items-center gap-6 rounded bg-transparent p-0 px-1 py-0.5"
+      class="group dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 flex items-center gap-6 rounded bg-transparent p-0 px-1 py-0.5"
     >
       <div
         class="relative cursor-pointer items-center justify-center rounded align-middle"
@@ -42,7 +42,7 @@ exports[`UserMenu > should render with svg image 1`] = `
     data-testid="dropdown__toggle"
   >
     <button
-      class="group dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 flex items-center gap-6 rounded bg-transparent p-0 px-1 py-0.5"
+      class="group dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 flex items-center gap-6 rounded bg-transparent p-0 px-1 py-0.5"
     >
       <div
         class="relative cursor-pointer items-center justify-center rounded align-middle"

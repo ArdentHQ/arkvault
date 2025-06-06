@@ -21,7 +21,7 @@ const AnchorStyled = ({ isDisabled, ...properties }: AnchorStyledProps) => (
 		className={twMerge(
 			"relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden",
 			cn({
-				"text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500":
+				"text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700":
 					!isDisabled,
 				"text-theme-secondary-text cursor-not-allowed": isDisabled,
 			}),

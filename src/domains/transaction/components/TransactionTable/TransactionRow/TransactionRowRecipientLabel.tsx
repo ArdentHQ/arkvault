@@ -118,7 +118,7 @@ export const BaseTransactionRowRecipientLabel = ({
 		return (
 			<span>
 				<RecipientLabel type="multiPayment" />
-				<span className="text-theme-secondary-500 dark:text-theme-secondary-700 ml-1 font-semibold">
+				<span className="text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-50 ml-1 font-semibold">
 					{transaction.recipients().length}
 				</span>
 			</span>

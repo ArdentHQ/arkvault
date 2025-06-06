@@ -132,7 +132,7 @@ exports[`Servers Settings > should render servers settings 1`] = `
     </div>
     <nav
       aria-labelledby="main menu"
-      class="custom-nav-wrapper dark:bg-theme-dark-900 sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 border-b-theme-secondary-300 dark:border-b-theme-dark-700 h-12 border-b"
+      class="custom-nav-wrapper dark:bg-theme-dark-900 dim:bg-theme-dim-900 sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 border-b-theme-secondary-300 dark:border-b-theme-dark-700 dim:border-b-theme-dim-700 h-12 border-b"
     >
       <div
         class="relative flex h-12 flex-row"
@@ -141,7 +141,7 @@ exports[`Servers Settings > should render servers settings 1`] = `
           class="hidden w-9 sm:flex"
         >
           <button
-            class="border-b-theme-secondary-300 bg-theme-secondary-100 dark:border-b-theme-dark-700 dark:bg-theme-dark-950 flex w-9 items-center border-b transition-colors duration-200 text-theme-secondary-500 hover:bg-theme-primary-200 hover:text-theme-primary-700 focus:ring-theme-primary-400 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 focus:rounded focus:ring-2 focus:outline-hidden focus:ring-inset"
+            class="border-b-theme-secondary-300 bg-theme-secondary-100 dark:border-b-theme-dark-700 dark:bg-theme-dark-950 dim:bg-theme-dim-950 dim:border-b-theme-dim-700 flex w-9 items-center border-b transition-colors duration-200 text-theme-secondary-500 hover:bg-theme-primary-200 hover:text-theme-primary-700 focus:ring-theme-primary-400 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-500 cursor-pointer focus:rounded focus:ring-2 focus:outline-hidden focus:ring-inset"
           >
             <div
               class="mx-auto"
@@ -214,7 +214,7 @@ exports[`Servers Settings > should render servers settings 1`] = `
                 class="flex"
               >
                 <a
-                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
+                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/dashboard"
                   title="Portfolio"
                 >
@@ -225,7 +225,7 @@ exports[`Servers Settings > should render servers settings 1`] = `
                 class="flex"
               >
                 <a
-                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
+                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/exchange"
                   title="Exchange"
                 >
@@ -236,7 +236,7 @@ exports[`Servers Settings > should render servers settings 1`] = `
                 class="flex"
               >
                 <a
-                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
+                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/contacts"
                   title="Contacts"
                 >
@@ -247,7 +247,7 @@ exports[`Servers Settings > should render servers settings 1`] = `
                 class="flex"
               >
                 <a
-                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
+                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/votes"
                   title="Votes"
                 >
@@ -306,7 +306,7 @@ exports[`Servers Settings > should render servers settings 1`] = `
                   class="custom-button-nav-wrapper group"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50"
                     data-testid="NavigationBar__buttons--notifications"
                     type="button"
                   >
@@ -355,7 +355,7 @@ exports[`Servers Settings > should render servers settings 1`] = `
               </div>
             </div>
             <div
-              class="border-theme-secondary-300 dark:border-theme-dark-700 h-6 border-r sm:h-12"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 h-6 border-r sm:h-12"
             />
             <div>
               <div
@@ -409,7 +409,7 @@ exports[`Servers Settings > should render servers settings 1`] = `
               </div>
             </div>
             <div
-              class="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:flex sm:h-12"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 hidden h-6 border-r sm:flex sm:h-12"
             />
             <div
               class="hidden items-center sm:flex"
@@ -461,7 +461,7 @@ exports[`Servers Settings > should render servers settings 1`] = `
               </div>
             </div>
             <div
-              class="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:flex sm:h-12"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 hidden h-6 border-r sm:flex sm:h-12"
             />
             <div
               class="hidden items-center sm:flex"
@@ -510,7 +510,7 @@ exports[`Servers Settings > should render servers settings 1`] = `
               </div>
             </div>
             <div
-              class="border-theme-secondary-300 dark:border-theme-dark-700 h-6 border-r sm:h-12"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 h-6 border-r sm:h-12"
             />
             <div
               class="hidden sm:block"
@@ -608,7 +608,7 @@ exports[`Servers Settings > should render servers settings 1`] = `
                 class="m-0 items-center gap-2 space-x-0 md-lg:flex hidden"
               >
                 <button
-                  class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 flex flex-row items-center gap-2 rounded px-1 py-0.5"
+                  class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 flex flex-row items-center gap-2 rounded px-1 py-0.5"
                   data-testid="HideBalance-button"
                   type="button"
                 >
@@ -666,7 +666,7 @@ exports[`Servers Settings > should render servers settings 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <button
-                  class="group dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 flex items-center gap-6 rounded bg-transparent p-0 px-1 py-0.5"
+                  class="group dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 flex items-center gap-6 rounded bg-transparent p-0 px-1 py-0.5"
                 >
                   <div
                     class="relative cursor-pointer items-center justify-center rounded align-middle"
@@ -1257,7 +1257,7 @@ exports[`Servers Settings > should render servers settings 1`] = `
                                       class="border-theme-secondary-300 dark:border-theme-dark-700 hidden border-t px-6 pt-3 pb-2 md:block"
                                     >
                                       <button
-                                        class="px-5 py-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 w-full space-x-2"
+                                        class="px-5 py-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900 w-full space-x-2"
                                         data-testid="CustomPeers--addnew"
                                         type="button"
                                       >
@@ -1473,7 +1473,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
     </div>
     <nav
       aria-labelledby="main menu"
-      class="custom-nav-wrapper dark:bg-theme-dark-900 sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 border-b-theme-secondary-300 dark:border-b-theme-dark-700 h-12 border-b"
+      class="custom-nav-wrapper dark:bg-theme-dark-900 dim:bg-theme-dim-900 sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 border-b-theme-secondary-300 dark:border-b-theme-dark-700 dim:border-b-theme-dim-700 h-12 border-b"
     >
       <div
         class="relative flex h-12 flex-row"
@@ -1482,7 +1482,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
           class="hidden w-9 sm:flex"
         >
           <button
-            class="border-b-theme-secondary-300 bg-theme-secondary-100 dark:border-b-theme-dark-700 dark:bg-theme-dark-950 flex w-9 items-center border-b transition-colors duration-200 text-theme-secondary-500 hover:bg-theme-primary-200 hover:text-theme-primary-700 focus:ring-theme-primary-400 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 focus:rounded focus:ring-2 focus:outline-hidden focus:ring-inset"
+            class="border-b-theme-secondary-300 bg-theme-secondary-100 dark:border-b-theme-dark-700 dark:bg-theme-dark-950 dim:bg-theme-dim-950 dim:border-b-theme-dim-700 flex w-9 items-center border-b transition-colors duration-200 text-theme-secondary-500 hover:bg-theme-primary-200 hover:text-theme-primary-700 focus:ring-theme-primary-400 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-500 cursor-pointer focus:rounded focus:ring-2 focus:outline-hidden focus:ring-inset"
           >
             <div
               class="mx-auto"
@@ -1555,7 +1555,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                 class="flex"
               >
                 <a
-                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
+                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/dashboard"
                   title="Portfolio"
                 >
@@ -1566,7 +1566,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                 class="flex"
               >
                 <a
-                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
+                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/exchange"
                   title="Exchange"
                 >
@@ -1577,7 +1577,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                 class="flex"
               >
                 <a
-                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
+                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/contacts"
                   title="Contacts"
                 >
@@ -1588,7 +1588,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                 class="flex"
               >
                 <a
-                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
+                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/votes"
                   title="Votes"
                 >
@@ -1647,7 +1647,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                   class="custom-button-nav-wrapper group"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50"
                     data-testid="NavigationBar__buttons--notifications"
                     type="button"
                   >
@@ -1696,7 +1696,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
               </div>
             </div>
             <div
-              class="border-theme-secondary-300 dark:border-theme-dark-700 h-6 border-r sm:h-12"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 h-6 border-r sm:h-12"
             />
             <div>
               <div
@@ -1750,7 +1750,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
               </div>
             </div>
             <div
-              class="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:flex sm:h-12"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 hidden h-6 border-r sm:flex sm:h-12"
             />
             <div
               class="hidden items-center sm:flex"
@@ -1802,7 +1802,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
               </div>
             </div>
             <div
-              class="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:flex sm:h-12"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 hidden h-6 border-r sm:flex sm:h-12"
             />
             <div
               class="hidden items-center sm:flex"
@@ -1851,7 +1851,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
               </div>
             </div>
             <div
-              class="border-theme-secondary-300 dark:border-theme-dark-700 h-6 border-r sm:h-12"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 h-6 border-r sm:h-12"
             />
             <div
               class="hidden sm:block"
@@ -1949,7 +1949,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                 class="m-0 items-center gap-2 space-x-0 md-lg:flex hidden"
               >
                 <button
-                  class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 flex flex-row items-center gap-2 rounded px-1 py-0.5"
+                  class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 flex flex-row items-center gap-2 rounded px-1 py-0.5"
                   data-testid="HideBalance-button"
                   type="button"
                 >
@@ -2007,7 +2007,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                 data-testid="dropdown__toggle"
               >
                 <button
-                  class="group dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 flex items-center gap-6 rounded bg-transparent p-0 px-1 py-0.5"
+                  class="group dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 flex items-center gap-6 rounded bg-transparent p-0 px-1 py-0.5"
                 >
                   <div
                     class="relative cursor-pointer items-center justify-center rounded align-middle"
@@ -2613,12 +2613,12 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                 role="rowgroup"
                               >
                                 <tr
-                                  class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+                                  class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-dashed group"
                                   data-testid="CustomPeers-network-item"
                                 >
                                   <td>
                                     <div
-                                      class="px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]"
+                                      class="px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]"
                                     >
                                       <div
                                         class="md-lg:overflow-hidden relative flex h-20 w-full flex-col"
@@ -2642,7 +2642,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                   </td>
                                   <td>
                                     <div
-                                      class="px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]"
+                                      class="px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]"
                                     >
                                       <div
                                         class="h-20 space-y-3"
@@ -2694,7 +2694,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                   </td>
                                   <td>
                                     <div
-                                      class="px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]"
+                                      class="px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]"
                                     >
                                       <div
                                         class="flex h-20 w-full flex-col items-center space-y-2.5"
@@ -2833,7 +2833,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                   </td>
                                   <td>
                                     <div
-                                      class="px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]"
+                                      class="px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]"
                                     >
                                       <div
                                         class="text-theme-secondary-900 dark:text-theme-dark-50 flex h-20 items-start"
@@ -2848,7 +2848,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                   </td>
                                   <td>
                                     <div
-                                      class="px-3 transition-colors duration-100 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px] pr-0"
+                                      class="px-3 transition-colors duration-100 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px] pr-0"
                                     >
                                       <div
                                         class="flex h-20 items-start"
@@ -2938,7 +2938,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                       class="border-theme-secondary-300 dark:border-theme-dark-700 hidden border-t px-6 pt-3 pb-2 md:block"
                                     >
                                       <button
-                                        class="px-5 py-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 w-full space-x-2"
+                                        class="px-5 py-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900 w-full space-x-2"
                                         data-testid="CustomPeers--addnew"
                                         type="button"
                                       >
@@ -3154,7 +3154,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
     </div>
     <nav
       aria-labelledby="main menu"
-      class="custom-nav-wrapper dark:bg-theme-dark-900 sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 border-b-theme-secondary-300 dark:border-b-theme-dark-700 h-12 border-b"
+      class="custom-nav-wrapper dark:bg-theme-dark-900 dim:bg-theme-dim-900 sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 border-b-theme-secondary-300 dark:border-b-theme-dark-700 dim:border-b-theme-dim-700 h-12 border-b"
     >
       <div
         class="relative flex h-12 flex-row"
@@ -3163,7 +3163,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
           class="hidden w-9 sm:flex"
         >
           <button
-            class="border-b-theme-secondary-300 bg-theme-secondary-100 dark:border-b-theme-dark-700 dark:bg-theme-dark-950 flex w-9 items-center border-b transition-colors duration-200 text-theme-secondary-500 hover:bg-theme-primary-200 hover:text-theme-primary-700 focus:ring-theme-primary-400 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 focus:rounded focus:ring-2 focus:outline-hidden focus:ring-inset"
+            class="border-b-theme-secondary-300 bg-theme-secondary-100 dark:border-b-theme-dark-700 dark:bg-theme-dark-950 dim:bg-theme-dim-950 dim:border-b-theme-dim-700 flex w-9 items-center border-b transition-colors duration-200 text-theme-secondary-500 hover:bg-theme-primary-200 hover:text-theme-primary-700 focus:ring-theme-primary-400 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-500 cursor-pointer focus:rounded focus:ring-2 focus:outline-hidden focus:ring-inset"
           >
             <div
               class="mx-auto"
@@ -3236,7 +3236,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                 class="flex"
               >
                 <a
-                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
+                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/dashboard"
                   title="Portfolio"
                 >
@@ -3247,7 +3247,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                 class="flex"
               >
                 <a
-                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
+                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/exchange"
                   title="Exchange"
                 >
@@ -3258,7 +3258,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                 class="flex"
               >
                 <a
-                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
+                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/contacts"
                   title="Contacts"
                 >
@@ -3269,7 +3269,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                 class="flex"
               >
                 <a
-                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
+                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/votes"
                   title="Votes"
                 >
@@ -3328,7 +3328,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                   class="custom-button-nav-wrapper group"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50"
                     data-testid="NavigationBar__buttons--notifications"
                     type="button"
                   >
@@ -3377,7 +3377,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
               </div>
             </div>
             <div
-              class="border-theme-secondary-300 dark:border-theme-dark-700 h-6 border-r sm:h-12"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 h-6 border-r sm:h-12"
             />
             <div>
               <div
@@ -3431,7 +3431,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
               </div>
             </div>
             <div
-              class="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:flex sm:h-12"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 hidden h-6 border-r sm:flex sm:h-12"
             />
             <div
               class="hidden items-center sm:flex"
@@ -3483,7 +3483,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
               </div>
             </div>
             <div
-              class="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:flex sm:h-12"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 hidden h-6 border-r sm:flex sm:h-12"
             />
             <div
               class="hidden items-center sm:flex"
@@ -3532,7 +3532,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
               </div>
             </div>
             <div
-              class="border-theme-secondary-300 dark:border-theme-dark-700 h-6 border-r sm:h-12"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 h-6 border-r sm:h-12"
             />
             <div
               class="hidden sm:block"
@@ -3630,7 +3630,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                 class="m-0 items-center gap-2 space-x-0 md-lg:flex hidden"
               >
                 <button
-                  class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 flex flex-row items-center gap-2 rounded px-1 py-0.5"
+                  class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 flex flex-row items-center gap-2 rounded px-1 py-0.5"
                   data-testid="HideBalance-button"
                   type="button"
                 >
@@ -3688,7 +3688,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <button
-                  class="group dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 flex items-center gap-6 rounded bg-transparent p-0 px-1 py-0.5"
+                  class="group dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 flex items-center gap-6 rounded bg-transparent p-0 px-1 py-0.5"
                 >
                   <div
                     class="relative cursor-pointer items-center justify-center rounded align-middle"
@@ -4263,12 +4263,12 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                 role="rowgroup"
                               >
                                 <tr
-                                  class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+                                  class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-dashed group"
                                   data-testid="CustomPeers-network-item"
                                 >
                                   <td>
                                     <div
-                                      class="px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]"
+                                      class="px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]"
                                     >
                                       <div
                                         class="md-lg:overflow-hidden relative flex h-20 w-full flex-col"
@@ -4292,7 +4292,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                   </td>
                                   <td>
                                     <div
-                                      class="px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]"
+                                      class="px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]"
                                     >
                                       <div
                                         class="h-20 space-y-3"
@@ -4344,7 +4344,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                   </td>
                                   <td>
                                     <div
-                                      class="px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]"
+                                      class="px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]"
                                     >
                                       <div
                                         class="flex h-20 w-full flex-col items-center space-y-2.5"
@@ -4387,7 +4387,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                   </td>
                                   <td>
                                     <div
-                                      class="px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]"
+                                      class="px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]"
                                     >
                                       <div
                                         class="text-theme-secondary-900 dark:text-theme-dark-50 flex h-20 items-start"
@@ -4402,7 +4402,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                   </td>
                                   <td>
                                     <div
-                                      class="px-3 transition-colors duration-100 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px] pr-0"
+                                      class="px-3 transition-colors duration-100 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px] pr-0"
                                     >
                                       <div
                                         class="flex h-20 items-start"
@@ -4492,7 +4492,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                       class="border-theme-secondary-300 dark:border-theme-dark-700 hidden border-t px-6 pt-3 pb-2 md:block"
                                     >
                                       <button
-                                        class="px-5 py-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 w-full space-x-2"
+                                        class="px-5 py-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900 w-full space-x-2"
                                         data-testid="CustomPeers--addnew"
                                         type="button"
                                       >
@@ -4708,7 +4708,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
     </div>
     <nav
       aria-labelledby="main menu"
-      class="custom-nav-wrapper dark:bg-theme-dark-900 sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 border-b-theme-secondary-300 dark:border-b-theme-dark-700 h-12 border-b"
+      class="custom-nav-wrapper dark:bg-theme-dark-900 dim:bg-theme-dim-900 sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 border-b-theme-secondary-300 dark:border-b-theme-dark-700 dim:border-b-theme-dim-700 h-12 border-b"
     >
       <div
         class="relative flex h-12 flex-row"
@@ -4717,7 +4717,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
           class="hidden w-9 sm:flex"
         >
           <button
-            class="border-b-theme-secondary-300 bg-theme-secondary-100 dark:border-b-theme-dark-700 dark:bg-theme-dark-950 flex w-9 items-center border-b transition-colors duration-200 text-theme-secondary-500 hover:bg-theme-primary-200 hover:text-theme-primary-700 focus:ring-theme-primary-400 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 focus:rounded focus:ring-2 focus:outline-hidden focus:ring-inset"
+            class="border-b-theme-secondary-300 bg-theme-secondary-100 dark:border-b-theme-dark-700 dark:bg-theme-dark-950 dim:bg-theme-dim-950 dim:border-b-theme-dim-700 flex w-9 items-center border-b transition-colors duration-200 text-theme-secondary-500 hover:bg-theme-primary-200 hover:text-theme-primary-700 focus:ring-theme-primary-400 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-500 cursor-pointer focus:rounded focus:ring-2 focus:outline-hidden focus:ring-inset"
           >
             <div
               class="mx-auto"
@@ -4790,7 +4790,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                 class="flex"
               >
                 <a
-                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
+                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/dashboard"
                   title="Portfolio"
                 >
@@ -4801,7 +4801,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                 class="flex"
               >
                 <a
-                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
+                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/exchange"
                   title="Exchange"
                 >
@@ -4812,7 +4812,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                 class="flex"
               >
                 <a
-                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
+                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/contacts"
                   title="Contacts"
                 >
@@ -4823,7 +4823,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                 class="flex"
               >
                 <a
-                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
+                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/votes"
                   title="Votes"
                 >
@@ -4882,7 +4882,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                   class="custom-button-nav-wrapper group"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50"
                     data-testid="NavigationBar__buttons--notifications"
                     type="button"
                   >
@@ -4931,7 +4931,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
               </div>
             </div>
             <div
-              class="border-theme-secondary-300 dark:border-theme-dark-700 h-6 border-r sm:h-12"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 h-6 border-r sm:h-12"
             />
             <div>
               <div
@@ -4985,7 +4985,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
               </div>
             </div>
             <div
-              class="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:flex sm:h-12"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 hidden h-6 border-r sm:flex sm:h-12"
             />
             <div
               class="hidden items-center sm:flex"
@@ -5037,7 +5037,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
               </div>
             </div>
             <div
-              class="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:flex sm:h-12"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 hidden h-6 border-r sm:flex sm:h-12"
             />
             <div
               class="hidden items-center sm:flex"
@@ -5086,7 +5086,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
               </div>
             </div>
             <div
-              class="border-theme-secondary-300 dark:border-theme-dark-700 h-6 border-r sm:h-12"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 h-6 border-r sm:h-12"
             />
             <div
               class="hidden sm:block"
@@ -5184,7 +5184,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                 class="m-0 items-center gap-2 space-x-0 md-lg:flex hidden"
               >
                 <button
-                  class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 flex flex-row items-center gap-2 rounded px-1 py-0.5"
+                  class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 flex flex-row items-center gap-2 rounded px-1 py-0.5"
                   data-testid="HideBalance-button"
                   type="button"
                 >
@@ -5242,7 +5242,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                 data-testid="dropdown__toggle"
               >
                 <button
-                  class="group dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 flex items-center gap-6 rounded bg-transparent p-0 px-1 py-0.5"
+                  class="group dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 flex items-center gap-6 rounded bg-transparent p-0 px-1 py-0.5"
                 >
                   <div
                     class="relative cursor-pointer items-center justify-center rounded align-middle"
@@ -5931,7 +5931,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                                           class="border-theme-secondary-300 dark:border-theme-dark-700 grid grid-cols-3 gap-2 border-t border-dashed pt-4 sm:hidden"
                                         >
                                           <button
-                                            class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
+                                            class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900"
                                             data-testid="CustomPeers-network-item--mobile--edit"
                                             type="button"
                                           >
@@ -5965,7 +5965,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                                             </div>
                                           </button>
                                           <button
-                                            class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
+                                            class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900"
                                             data-testid="CustomPeers-network-item--mobile--refresh"
                                             type="button"
                                           >
@@ -6048,7 +6048,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                                       class="border-theme-secondary-300 dark:border-theme-dark-700 hidden border-t px-6 pt-3 pb-2 md:block"
                                     >
                                       <button
-                                        class="px-5 py-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 w-full space-x-2"
+                                        class="px-5 py-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900 w-full space-x-2"
                                         data-testid="CustomPeers--addnew"
                                         type="button"
                                       >
@@ -6264,7 +6264,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
     </div>
     <nav
       aria-labelledby="main menu"
-      class="custom-nav-wrapper dark:bg-theme-dark-900 sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 border-b-theme-secondary-300 dark:border-b-theme-dark-700 h-12 border-b"
+      class="custom-nav-wrapper dark:bg-theme-dark-900 dim:bg-theme-dim-900 sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 border-b-theme-secondary-300 dark:border-b-theme-dark-700 dim:border-b-theme-dim-700 h-12 border-b"
     >
       <div
         class="relative flex h-12 flex-row"
@@ -6273,7 +6273,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
           class="hidden w-9 sm:flex"
         >
           <button
-            class="border-b-theme-secondary-300 bg-theme-secondary-100 dark:border-b-theme-dark-700 dark:bg-theme-dark-950 flex w-9 items-center border-b transition-colors duration-200 text-theme-secondary-500 hover:bg-theme-primary-200 hover:text-theme-primary-700 focus:ring-theme-primary-400 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 focus:rounded focus:ring-2 focus:outline-hidden focus:ring-inset"
+            class="border-b-theme-secondary-300 bg-theme-secondary-100 dark:border-b-theme-dark-700 dark:bg-theme-dark-950 dim:bg-theme-dim-950 dim:border-b-theme-dim-700 flex w-9 items-center border-b transition-colors duration-200 text-theme-secondary-500 hover:bg-theme-primary-200 hover:text-theme-primary-700 focus:ring-theme-primary-400 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-500 cursor-pointer focus:rounded focus:ring-2 focus:outline-hidden focus:ring-inset"
           >
             <div
               class="mx-auto"
@@ -6346,7 +6346,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                 class="flex"
               >
                 <a
-                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
+                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/dashboard"
                   title="Portfolio"
                 >
@@ -6357,7 +6357,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                 class="flex"
               >
                 <a
-                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
+                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/exchange"
                   title="Exchange"
                 >
@@ -6368,7 +6368,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                 class="flex"
               >
                 <a
-                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
+                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/contacts"
                   title="Contacts"
                 >
@@ -6379,7 +6379,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                 class="flex"
               >
                 <a
-                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
+                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/votes"
                   title="Votes"
                 >
@@ -6438,7 +6438,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                   class="custom-button-nav-wrapper group"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50"
                     data-testid="NavigationBar__buttons--notifications"
                     type="button"
                   >
@@ -6487,7 +6487,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
               </div>
             </div>
             <div
-              class="border-theme-secondary-300 dark:border-theme-dark-700 h-6 border-r sm:h-12"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 h-6 border-r sm:h-12"
             />
             <div>
               <div
@@ -6541,7 +6541,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
               </div>
             </div>
             <div
-              class="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:flex sm:h-12"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 hidden h-6 border-r sm:flex sm:h-12"
             />
             <div
               class="hidden items-center sm:flex"
@@ -6593,7 +6593,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
               </div>
             </div>
             <div
-              class="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:flex sm:h-12"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 hidden h-6 border-r sm:flex sm:h-12"
             />
             <div
               class="hidden items-center sm:flex"
@@ -6642,7 +6642,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
               </div>
             </div>
             <div
-              class="border-theme-secondary-300 dark:border-theme-dark-700 h-6 border-r sm:h-12"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 h-6 border-r sm:h-12"
             />
             <div
               class="hidden sm:block"
@@ -6740,7 +6740,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                 class="m-0 items-center gap-2 space-x-0 md-lg:flex hidden"
               >
                 <button
-                  class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 flex flex-row items-center gap-2 rounded px-1 py-0.5"
+                  class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 flex flex-row items-center gap-2 rounded px-1 py-0.5"
                   data-testid="HideBalance-button"
                   type="button"
                 >
@@ -6798,7 +6798,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                 data-testid="dropdown__toggle"
               >
                 <button
-                  class="group dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 flex items-center gap-6 rounded bg-transparent p-0 px-1 py-0.5"
+                  class="group dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 flex items-center gap-6 rounded bg-transparent p-0 px-1 py-0.5"
                 >
                   <div
                     class="relative cursor-pointer items-center justify-center rounded align-middle"
@@ -7404,12 +7404,12 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                 role="rowgroup"
                               >
                                 <tr
-                                  class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+                                  class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-dashed group"
                                   data-testid="CustomPeers-network-item"
                                 >
                                   <td>
                                     <div
-                                      class="px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]"
+                                      class="px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]"
                                     >
                                       <div
                                         class="md-lg:overflow-hidden relative flex h-20 w-full flex-col"
@@ -7433,7 +7433,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                   </td>
                                   <td>
                                     <div
-                                      class="px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]"
+                                      class="px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]"
                                     >
                                       <div
                                         class="h-20 space-y-3"
@@ -7485,7 +7485,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                   </td>
                                   <td>
                                     <div
-                                      class="px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]"
+                                      class="px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]"
                                     >
                                       <div
                                         class="flex h-20 w-full flex-col items-center space-y-2.5"
@@ -7624,7 +7624,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                   </td>
                                   <td>
                                     <div
-                                      class="px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]"
+                                      class="px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]"
                                     >
                                       <div
                                         class="text-theme-secondary-900 dark:text-theme-dark-50 flex h-20 items-start"
@@ -7639,7 +7639,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                   </td>
                                   <td>
                                     <div
-                                      class="px-3 transition-colors duration-100 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px] pr-0"
+                                      class="px-3 transition-colors duration-100 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px] pr-0"
                                     >
                                       <div
                                         class="flex h-20 items-start"
@@ -7729,7 +7729,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                       class="border-theme-secondary-300 dark:border-theme-dark-700 hidden border-t px-6 pt-3 pb-2 md:block"
                                     >
                                       <button
-                                        class="px-5 py-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 w-full space-x-2"
+                                        class="px-5 py-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900 w-full space-x-2"
                                         data-testid="CustomPeers--addnew"
                                         type="button"
                                       >
@@ -7945,7 +7945,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
     </div>
     <nav
       aria-labelledby="main menu"
-      class="custom-nav-wrapper dark:bg-theme-dark-900 sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 border-b-theme-secondary-300 dark:border-b-theme-dark-700 h-12 border-b"
+      class="custom-nav-wrapper dark:bg-theme-dark-900 dim:bg-theme-dim-900 sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 border-b-theme-secondary-300 dark:border-b-theme-dark-700 dim:border-b-theme-dim-700 h-12 border-b"
     >
       <div
         class="relative flex h-12 flex-row"
@@ -7954,7 +7954,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
           class="hidden w-9 sm:flex"
         >
           <button
-            class="border-b-theme-secondary-300 bg-theme-secondary-100 dark:border-b-theme-dark-700 dark:bg-theme-dark-950 flex w-9 items-center border-b transition-colors duration-200 text-theme-secondary-500 hover:bg-theme-primary-200 hover:text-theme-primary-700 focus:ring-theme-primary-400 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 focus:rounded focus:ring-2 focus:outline-hidden focus:ring-inset"
+            class="border-b-theme-secondary-300 bg-theme-secondary-100 dark:border-b-theme-dark-700 dark:bg-theme-dark-950 dim:bg-theme-dim-950 dim:border-b-theme-dim-700 flex w-9 items-center border-b transition-colors duration-200 text-theme-secondary-500 hover:bg-theme-primary-200 hover:text-theme-primary-700 focus:ring-theme-primary-400 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-500 cursor-pointer focus:rounded focus:ring-2 focus:outline-hidden focus:ring-inset"
           >
             <div
               class="mx-auto"
@@ -8027,7 +8027,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                 class="flex"
               >
                 <a
-                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
+                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/dashboard"
                   title="Portfolio"
                 >
@@ -8038,7 +8038,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                 class="flex"
               >
                 <a
-                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
+                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/exchange"
                   title="Exchange"
                 >
@@ -8049,7 +8049,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                 class="flex"
               >
                 <a
-                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
+                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/contacts"
                   title="Contacts"
                 >
@@ -8060,7 +8060,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                 class="flex"
               >
                 <a
-                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
+                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/votes"
                   title="Votes"
                 >
@@ -8119,7 +8119,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                   class="custom-button-nav-wrapper group"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50"
                     data-testid="NavigationBar__buttons--notifications"
                     type="button"
                   >
@@ -8168,7 +8168,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
               </div>
             </div>
             <div
-              class="border-theme-secondary-300 dark:border-theme-dark-700 h-6 border-r sm:h-12"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 h-6 border-r sm:h-12"
             />
             <div>
               <div
@@ -8222,7 +8222,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
               </div>
             </div>
             <div
-              class="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:flex sm:h-12"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 hidden h-6 border-r sm:flex sm:h-12"
             />
             <div
               class="hidden items-center sm:flex"
@@ -8274,7 +8274,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
               </div>
             </div>
             <div
-              class="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:flex sm:h-12"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 hidden h-6 border-r sm:flex sm:h-12"
             />
             <div
               class="hidden items-center sm:flex"
@@ -8323,7 +8323,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
               </div>
             </div>
             <div
-              class="border-theme-secondary-300 dark:border-theme-dark-700 h-6 border-r sm:h-12"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 h-6 border-r sm:h-12"
             />
             <div
               class="hidden sm:block"
@@ -8421,7 +8421,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                 class="m-0 items-center gap-2 space-x-0 md-lg:flex hidden"
               >
                 <button
-                  class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 flex flex-row items-center gap-2 rounded px-1 py-0.5"
+                  class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 flex flex-row items-center gap-2 rounded px-1 py-0.5"
                   data-testid="HideBalance-button"
                   type="button"
                 >
@@ -8479,7 +8479,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                 data-testid="dropdown__toggle"
               >
                 <button
-                  class="group dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 flex items-center gap-6 rounded bg-transparent p-0 px-1 py-0.5"
+                  class="group dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 flex items-center gap-6 rounded bg-transparent p-0 px-1 py-0.5"
                 >
                   <div
                     class="relative cursor-pointer items-center justify-center rounded align-middle"
@@ -9295,7 +9295,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                           class="border-theme-secondary-300 dark:border-theme-dark-700 grid grid-cols-3 gap-2 border-t border-dashed pt-4 sm:hidden"
                                         >
                                           <button
-                                            class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
+                                            class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900"
                                             data-testid="CustomPeers-network-item--mobile--edit"
                                             type="button"
                                           >
@@ -9329,7 +9329,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                             </div>
                                           </button>
                                           <button
-                                            class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
+                                            class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900"
                                             data-testid="CustomPeers-network-item--mobile--refresh"
                                             type="button"
                                           >
@@ -9412,7 +9412,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                       class="border-theme-secondary-300 dark:border-theme-dark-700 hidden border-t px-6 pt-3 pb-2 md:block"
                                     >
                                       <button
-                                        class="px-5 py-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 w-full space-x-2"
+                                        class="px-5 py-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900 w-full space-x-2"
                                         data-testid="CustomPeers--addnew"
                                         type="button"
                                       >
@@ -9628,7 +9628,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
     </div>
     <nav
       aria-labelledby="main menu"
-      class="custom-nav-wrapper dark:bg-theme-dark-900 sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 border-b-theme-secondary-300 dark:border-b-theme-dark-700 h-12 border-b"
+      class="custom-nav-wrapper dark:bg-theme-dark-900 dim:bg-theme-dim-900 sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 border-b-theme-secondary-300 dark:border-b-theme-dark-700 dim:border-b-theme-dim-700 h-12 border-b"
     >
       <div
         class="relative flex h-12 flex-row"
@@ -9637,7 +9637,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
           class="hidden w-9 sm:flex"
         >
           <button
-            class="border-b-theme-secondary-300 bg-theme-secondary-100 dark:border-b-theme-dark-700 dark:bg-theme-dark-950 flex w-9 items-center border-b transition-colors duration-200 text-theme-secondary-500 hover:bg-theme-primary-200 hover:text-theme-primary-700 focus:ring-theme-primary-400 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 focus:rounded focus:ring-2 focus:outline-hidden focus:ring-inset"
+            class="border-b-theme-secondary-300 bg-theme-secondary-100 dark:border-b-theme-dark-700 dark:bg-theme-dark-950 dim:bg-theme-dim-950 dim:border-b-theme-dim-700 flex w-9 items-center border-b transition-colors duration-200 text-theme-secondary-500 hover:bg-theme-primary-200 hover:text-theme-primary-700 focus:ring-theme-primary-400 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-500 cursor-pointer focus:rounded focus:ring-2 focus:outline-hidden focus:ring-inset"
           >
             <div
               class="mx-auto"
@@ -9710,7 +9710,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                 class="flex"
               >
                 <a
-                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
+                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/dashboard"
                   title="Portfolio"
                 >
@@ -9721,7 +9721,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                 class="flex"
               >
                 <a
-                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
+                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/exchange"
                   title="Exchange"
                 >
@@ -9732,7 +9732,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                 class="flex"
               >
                 <a
-                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
+                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/contacts"
                   title="Contacts"
                 >
@@ -9743,7 +9743,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                 class="flex"
               >
                 <a
-                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
+                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/votes"
                   title="Votes"
                 >
@@ -9802,7 +9802,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                   class="custom-button-nav-wrapper group"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50"
                     data-testid="NavigationBar__buttons--notifications"
                     type="button"
                   >
@@ -9851,7 +9851,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
               </div>
             </div>
             <div
-              class="border-theme-secondary-300 dark:border-theme-dark-700 h-6 border-r sm:h-12"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 h-6 border-r sm:h-12"
             />
             <div>
               <div
@@ -9905,7 +9905,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
               </div>
             </div>
             <div
-              class="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:flex sm:h-12"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 hidden h-6 border-r sm:flex sm:h-12"
             />
             <div
               class="hidden items-center sm:flex"
@@ -9957,7 +9957,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
               </div>
             </div>
             <div
-              class="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:flex sm:h-12"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 hidden h-6 border-r sm:flex sm:h-12"
             />
             <div
               class="hidden items-center sm:flex"
@@ -10006,7 +10006,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
               </div>
             </div>
             <div
-              class="border-theme-secondary-300 dark:border-theme-dark-700 h-6 border-r sm:h-12"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 h-6 border-r sm:h-12"
             />
             <div
               class="hidden sm:block"
@@ -10104,7 +10104,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                 class="m-0 items-center gap-2 space-x-0 md-lg:flex hidden"
               >
                 <button
-                  class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 flex flex-row items-center gap-2 rounded px-1 py-0.5"
+                  class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 flex flex-row items-center gap-2 rounded px-1 py-0.5"
                   data-testid="HideBalance-button"
                   type="button"
                 >
@@ -10162,7 +10162,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                 data-testid="dropdown__toggle"
               >
                 <button
-                  class="group dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 flex items-center gap-6 rounded bg-transparent p-0 px-1 py-0.5"
+                  class="group dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 flex items-center gap-6 rounded bg-transparent p-0 px-1 py-0.5"
                 >
                   <div
                     class="relative cursor-pointer items-center justify-center rounded align-middle"
@@ -10978,7 +10978,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                           class="border-theme-secondary-300 dark:border-theme-dark-700 grid grid-cols-3 gap-2 border-t border-dashed pt-4 sm:hidden"
                                         >
                                           <button
-                                            class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
+                                            class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900"
                                             data-testid="CustomPeers-network-item--mobile--edit"
                                             type="button"
                                           >
@@ -11012,7 +11012,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                             </div>
                                           </button>
                                           <button
-                                            class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
+                                            class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900"
                                             data-testid="CustomPeers-network-item--mobile--refresh"
                                             type="button"
                                           >
@@ -11095,7 +11095,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                       class="border-theme-secondary-300 dark:border-theme-dark-700 hidden border-t px-6 pt-3 pb-2 md:block"
                                     >
                                       <button
-                                        class="px-5 py-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 w-full space-x-2"
+                                        class="px-5 py-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900 w-full space-x-2"
                                         data-testid="CustomPeers--addnew"
                                         type="button"
                                       >
@@ -11311,7 +11311,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
     </div>
     <nav
       aria-labelledby="main menu"
-      class="custom-nav-wrapper dark:bg-theme-dark-900 sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 border-b-theme-secondary-300 dark:border-b-theme-dark-700 h-12 border-b"
+      class="custom-nav-wrapper dark:bg-theme-dark-900 dim:bg-theme-dim-900 sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 border-b-theme-secondary-300 dark:border-b-theme-dark-700 dim:border-b-theme-dim-700 h-12 border-b"
     >
       <div
         class="relative flex h-12 flex-row"
@@ -11320,7 +11320,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
           class="hidden w-9 sm:flex"
         >
           <button
-            class="border-b-theme-secondary-300 bg-theme-secondary-100 dark:border-b-theme-dark-700 dark:bg-theme-dark-950 flex w-9 items-center border-b transition-colors duration-200 text-theme-secondary-500 hover:bg-theme-primary-200 hover:text-theme-primary-700 focus:ring-theme-primary-400 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 focus:rounded focus:ring-2 focus:outline-hidden focus:ring-inset"
+            class="border-b-theme-secondary-300 bg-theme-secondary-100 dark:border-b-theme-dark-700 dark:bg-theme-dark-950 dim:bg-theme-dim-950 dim:border-b-theme-dim-700 flex w-9 items-center border-b transition-colors duration-200 text-theme-secondary-500 hover:bg-theme-primary-200 hover:text-theme-primary-700 focus:ring-theme-primary-400 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-500 cursor-pointer focus:rounded focus:ring-2 focus:outline-hidden focus:ring-inset"
           >
             <div
               class="mx-auto"
@@ -11393,7 +11393,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                 class="flex"
               >
                 <a
-                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
+                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/dashboard"
                   title="Portfolio"
                 >
@@ -11404,7 +11404,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                 class="flex"
               >
                 <a
-                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
+                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/exchange"
                   title="Exchange"
                 >
@@ -11415,7 +11415,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                 class="flex"
               >
                 <a
-                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
+                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/contacts"
                   title="Contacts"
                 >
@@ -11426,7 +11426,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                 class="flex"
               >
                 <a
-                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
+                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/votes"
                   title="Votes"
                 >
@@ -11485,7 +11485,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                   class="custom-button-nav-wrapper group"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50"
                     data-testid="NavigationBar__buttons--notifications"
                     type="button"
                   >
@@ -11534,7 +11534,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
               </div>
             </div>
             <div
-              class="border-theme-secondary-300 dark:border-theme-dark-700 h-6 border-r sm:h-12"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 h-6 border-r sm:h-12"
             />
             <div>
               <div
@@ -11588,7 +11588,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
               </div>
             </div>
             <div
-              class="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:flex sm:h-12"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 hidden h-6 border-r sm:flex sm:h-12"
             />
             <div
               class="hidden items-center sm:flex"
@@ -11640,7 +11640,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
               </div>
             </div>
             <div
-              class="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:flex sm:h-12"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 hidden h-6 border-r sm:flex sm:h-12"
             />
             <div
               class="hidden items-center sm:flex"
@@ -11689,7 +11689,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
               </div>
             </div>
             <div
-              class="border-theme-secondary-300 dark:border-theme-dark-700 h-6 border-r sm:h-12"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 h-6 border-r sm:h-12"
             />
             <div
               class="hidden sm:block"
@@ -11787,7 +11787,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                 class="m-0 items-center gap-2 space-x-0 md-lg:flex hidden"
               >
                 <button
-                  class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 flex flex-row items-center gap-2 rounded px-1 py-0.5"
+                  class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 flex flex-row items-center gap-2 rounded px-1 py-0.5"
                   data-testid="HideBalance-button"
                   type="button"
                 >
@@ -11845,7 +11845,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                 data-testid="dropdown__toggle"
               >
                 <button
-                  class="group dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 flex items-center gap-6 rounded bg-transparent p-0 px-1 py-0.5"
+                  class="group dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 flex items-center gap-6 rounded bg-transparent p-0 px-1 py-0.5"
                 >
                   <div
                     class="relative cursor-pointer items-center justify-center rounded align-middle"
@@ -12448,12 +12448,12 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                 role="rowgroup"
                               >
                                 <tr
-                                  class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+                                  class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-dashed group"
                                   data-testid="CustomPeers-network-item"
                                 >
                                   <td>
                                     <div
-                                      class="px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]"
+                                      class="px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]"
                                     >
                                       <div
                                         class="md-lg:overflow-hidden relative flex h-20 w-full flex-col"
@@ -12477,7 +12477,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                   </td>
                                   <td>
                                     <div
-                                      class="px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]"
+                                      class="px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]"
                                     >
                                       <div
                                         class="h-20 space-y-3"
@@ -12529,7 +12529,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                   </td>
                                   <td>
                                     <div
-                                      class="px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]"
+                                      class="px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]"
                                     >
                                       <div
                                         class="flex h-20 w-full flex-col items-center space-y-2.5"
@@ -12665,7 +12665,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                   </td>
                                   <td>
                                     <div
-                                      class="px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]"
+                                      class="px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]"
                                     >
                                       <div
                                         class="text-theme-secondary-900 dark:text-theme-dark-50 flex h-20 items-start"
@@ -12680,7 +12680,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                   </td>
                                   <td>
                                     <div
-                                      class="px-3 transition-colors duration-100 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px] pr-0"
+                                      class="px-3 transition-colors duration-100 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px] pr-0"
                                     >
                                       <div
                                         class="flex h-20 items-start"
@@ -12770,7 +12770,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                       class="border-theme-secondary-300 dark:border-theme-dark-700 hidden border-t px-6 pt-3 pb-2 md:block"
                                     >
                                       <button
-                                        class="px-5 py-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 w-full space-x-2"
+                                        class="px-5 py-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900 w-full space-x-2"
                                         data-testid="CustomPeers--addnew"
                                         type="button"
                                       >
@@ -12986,7 +12986,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
     </div>
     <nav
       aria-labelledby="main menu"
-      class="custom-nav-wrapper dark:bg-theme-dark-900 sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 border-b-theme-secondary-300 dark:border-b-theme-dark-700 h-12 border-b"
+      class="custom-nav-wrapper dark:bg-theme-dark-900 dim:bg-theme-dim-900 sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 border-b-theme-secondary-300 dark:border-b-theme-dark-700 dim:border-b-theme-dim-700 h-12 border-b"
     >
       <div
         class="relative flex h-12 flex-row"
@@ -12995,7 +12995,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
           class="hidden w-9 sm:flex"
         >
           <button
-            class="border-b-theme-secondary-300 bg-theme-secondary-100 dark:border-b-theme-dark-700 dark:bg-theme-dark-950 flex w-9 items-center border-b transition-colors duration-200 text-theme-secondary-500 hover:bg-theme-primary-200 hover:text-theme-primary-700 focus:ring-theme-primary-400 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 focus:rounded focus:ring-2 focus:outline-hidden focus:ring-inset"
+            class="border-b-theme-secondary-300 bg-theme-secondary-100 dark:border-b-theme-dark-700 dark:bg-theme-dark-950 dim:bg-theme-dim-950 dim:border-b-theme-dim-700 flex w-9 items-center border-b transition-colors duration-200 text-theme-secondary-500 hover:bg-theme-primary-200 hover:text-theme-primary-700 focus:ring-theme-primary-400 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-500 cursor-pointer focus:rounded focus:ring-2 focus:outline-hidden focus:ring-inset"
           >
             <div
               class="mx-auto"
@@ -13068,7 +13068,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                 class="flex"
               >
                 <a
-                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
+                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/dashboard"
                   title="Portfolio"
                 >
@@ -13079,7 +13079,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                 class="flex"
               >
                 <a
-                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
+                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/exchange"
                   title="Exchange"
                 >
@@ -13090,7 +13090,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                 class="flex"
               >
                 <a
-                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
+                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/contacts"
                   title="Contacts"
                 >
@@ -13101,7 +13101,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                 class="flex"
               >
                 <a
-                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
+                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/votes"
                   title="Votes"
                 >
@@ -13160,7 +13160,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                   class="custom-button-nav-wrapper group"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50"
                     data-testid="NavigationBar__buttons--notifications"
                     type="button"
                   >
@@ -13209,7 +13209,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
               </div>
             </div>
             <div
-              class="border-theme-secondary-300 dark:border-theme-dark-700 h-6 border-r sm:h-12"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 h-6 border-r sm:h-12"
             />
             <div>
               <div
@@ -13263,7 +13263,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
               </div>
             </div>
             <div
-              class="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:flex sm:h-12"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 hidden h-6 border-r sm:flex sm:h-12"
             />
             <div
               class="hidden items-center sm:flex"
@@ -13315,7 +13315,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
               </div>
             </div>
             <div
-              class="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:flex sm:h-12"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 hidden h-6 border-r sm:flex sm:h-12"
             />
             <div
               class="hidden items-center sm:flex"
@@ -13364,7 +13364,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
               </div>
             </div>
             <div
-              class="border-theme-secondary-300 dark:border-theme-dark-700 h-6 border-r sm:h-12"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 h-6 border-r sm:h-12"
             />
             <div
               class="hidden sm:block"
@@ -13462,7 +13462,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                 class="m-0 items-center gap-2 space-x-0 md-lg:flex hidden"
               >
                 <button
-                  class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 flex flex-row items-center gap-2 rounded px-1 py-0.5"
+                  class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 flex flex-row items-center gap-2 rounded px-1 py-0.5"
                   data-testid="HideBalance-button"
                   type="button"
                 >
@@ -13520,7 +13520,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                 data-testid="dropdown__toggle"
               >
                 <button
-                  class="group dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 flex items-center gap-6 rounded bg-transparent p-0 px-1 py-0.5"
+                  class="group dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 flex items-center gap-6 rounded bg-transparent p-0 px-1 py-0.5"
                 >
                   <div
                     class="relative cursor-pointer items-center justify-center rounded align-middle"
@@ -14330,7 +14330,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                           class="border-theme-secondary-300 dark:border-theme-dark-700 grid grid-cols-3 gap-2 border-t border-dashed pt-4 sm:hidden"
                                         >
                                           <button
-                                            class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
+                                            class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900"
                                             data-testid="CustomPeers-network-item--mobile--edit"
                                             type="button"
                                           >
@@ -14364,7 +14364,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                             </div>
                                           </button>
                                           <button
-                                            class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
+                                            class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900"
                                             data-testid="CustomPeers-network-item--mobile--refresh"
                                             type="button"
                                           >
@@ -14447,7 +14447,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                       class="border-theme-secondary-300 dark:border-theme-dark-700 hidden border-t px-6 pt-3 pb-2 md:block"
                                     >
                                       <button
-                                        class="px-5 py-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 w-full space-x-2"
+                                        class="px-5 py-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900 w-full space-x-2"
                                         data-testid="CustomPeers--addnew"
                                         type="button"
                                       >

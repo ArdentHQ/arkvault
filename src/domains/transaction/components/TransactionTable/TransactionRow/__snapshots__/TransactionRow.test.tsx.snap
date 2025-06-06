@@ -5,12 +5,12 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
   <table>
     <tbody>
       <tr
-        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-dashed cursor-pointer table-row table-row-unselected group relative"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start pr-0 lg:pr-3 xl:min-h-11 xl:max-h-11 xl:pt-2.5 lg:min-w-36 min-h-[66px] py-1 my-0 md-lg:min-h-14"
+            class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 items-start pr-0 lg:pr-3 xl:min-h-11 xl:max-h-11 xl:pt-2.5 lg:min-w-36 min-h-[66px] py-1 my-0 md-lg:min-h-14"
           >
             <div
               class="flex flex-col gap-1 font-semibold"
@@ -19,7 +19,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
                 class="flex flex-col gap-1 font-semibold"
               >
                 <a
-                  class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
+                  class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
                   data-ring-focus-margin="-m-1"
                   data-testid="Link"
                   href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
@@ -58,7 +58,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
           data-testid="TransactionRow__timestamp"
         >
           <div
-            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 min-h-11 xl:max-h-11 xl:pt-3 xl:min-w-32"
+            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 min-h-11 xl:max-h-11 xl:pt-3 xl:min-w-32"
           >
             <span
               data-testid="TimeAgo"
@@ -69,7 +69,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
         </td>
         <td>
           <div
-            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start xl:min-h-11 xl:pt-3 min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2 lg:w-24 lg:min-w-24 xl:min-w-38 xl:w-auto"
+            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2 lg:w-24 lg:min-w-24 xl:min-w-38 xl:w-auto"
           >
             <div
               class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] max-w-40 truncate rounded px-1 py-[3px] whitespace-nowrap dark:border"
@@ -83,7 +83,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
           class=""
         >
           <div
-            class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-16 my-1 py-2"
+            class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-16 my-1 py-2"
           >
             <div
               class="flex grow flex-col gap-2"
@@ -247,7 +247,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
           class="md-lg:table-cell hidden"
         >
           <div
-            class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-16 my-1 py-2 lg:min-w-36"
+            class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-16 my-1 py-2 lg:min-w-36"
           >
             <div
               class="flex w-full flex-row gap-2"
@@ -329,7 +329,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
           class="hidden"
         >
           <div
-            class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-4 items-start my-1 px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-14 pt-2 mt-1 lg:min-w-36"
+            class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 space-x-4 items-start my-1 px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-14 pt-2 mt-1 lg:min-w-36"
           >
             <div
               class="flex w-full flex-row gap-2"
@@ -411,7 +411,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3 lg:w-34 xl:w-auto"
+            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3 lg:w-34 xl:w-auto"
           >
             <div
               class="flex flex-col items-end gap-1"
@@ -438,7 +438,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
         </td>
         <td>
           <div
-            class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-11 xl:my-0 xl:pt-3 min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2"
+            class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-11 xl:my-0 xl:pt-3 min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2"
           >
             <span
               class="whitespace-nowrap"
@@ -459,7 +459,7 @@ exports[`TransactionRow > should render responsive 1`] = `
   <table>
     <tbody>
       <tr
-        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group group border-b-0!"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-dashed cursor-pointer table-row table-row-unselected group group border-b-0!"
         data-testid="TableRow"
       >
         <td
@@ -478,7 +478,7 @@ exports[`TransactionRow > should render responsive 1`] = `
                   class="flex flex-col gap-1 font-semibold"
                 >
                   <a
-                    class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
+                    class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
@@ -737,7 +737,7 @@ exports[`TransactionRow > should render responsive 2`] = `
   <table>
     <tbody>
       <tr
-        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group group border-b-0!"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-dashed cursor-pointer table-row table-row-unselected group group border-b-0!"
         data-testid="TableRow"
       >
         <td
@@ -756,7 +756,7 @@ exports[`TransactionRow > should render responsive 2`] = `
                   class="flex flex-col gap-1 font-semibold"
                 >
                   <a
-                    class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
+                    class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
@@ -1015,12 +1015,12 @@ exports[`TransactionRow > should render with currency 1`] = `
   <table>
     <tbody>
       <tr
-        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-dashed cursor-pointer table-row table-row-unselected group relative"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start pr-0 lg:pr-3 xl:min-h-11 xl:max-h-11 xl:pt-2.5 lg:min-w-36 min-h-[66px] py-1 my-0 md-lg:min-h-14"
+            class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 items-start pr-0 lg:pr-3 xl:min-h-11 xl:max-h-11 xl:pt-2.5 lg:min-w-36 min-h-[66px] py-1 my-0 md-lg:min-h-14"
           >
             <div
               class="flex flex-col gap-1 font-semibold"
@@ -1029,7 +1029,7 @@ exports[`TransactionRow > should render with currency 1`] = `
                 class="flex flex-col gap-1 font-semibold"
               >
                 <a
-                  class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
+                  class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
                   data-ring-focus-margin="-m-1"
                   data-testid="Link"
                   href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
@@ -1068,7 +1068,7 @@ exports[`TransactionRow > should render with currency 1`] = `
           data-testid="TransactionRow__timestamp"
         >
           <div
-            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 min-h-11 xl:max-h-11 xl:pt-3 xl:min-w-32"
+            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 min-h-11 xl:max-h-11 xl:pt-3 xl:min-w-32"
           >
             <span
               data-testid="TimeAgo"
@@ -1079,7 +1079,7 @@ exports[`TransactionRow > should render with currency 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start xl:min-h-11 xl:pt-3 min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2 lg:w-24 lg:min-w-24 xl:min-w-38 xl:w-auto"
+            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2 lg:w-24 lg:min-w-24 xl:min-w-38 xl:w-auto"
           >
             <div
               class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] max-w-40 truncate rounded px-1 py-[3px] whitespace-nowrap dark:border"
@@ -1093,7 +1093,7 @@ exports[`TransactionRow > should render with currency 1`] = `
           class=""
         >
           <div
-            class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-16 my-1 py-2"
+            class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-16 my-1 py-2"
           >
             <div
               class="flex grow flex-col gap-2"
@@ -1257,7 +1257,7 @@ exports[`TransactionRow > should render with currency 1`] = `
           class="md-lg:table-cell hidden"
         >
           <div
-            class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-16 my-1 py-2 lg:min-w-36"
+            class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-16 my-1 py-2 lg:min-w-36"
           >
             <div
               class="flex w-full flex-row gap-2"
@@ -1339,7 +1339,7 @@ exports[`TransactionRow > should render with currency 1`] = `
           class="hidden"
         >
           <div
-            class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-4 items-start my-1 px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-14 pt-2 mt-1 lg:min-w-36"
+            class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 space-x-4 items-start my-1 px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-14 pt-2 mt-1 lg:min-w-36"
           >
             <div
               class="flex w-full flex-row gap-2"
@@ -1421,7 +1421,7 @@ exports[`TransactionRow > should render with currency 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3 lg:w-34 xl:w-auto"
+            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3 lg:w-34 xl:w-auto"
           >
             <div
               class="flex flex-col items-end gap-1"
@@ -1448,7 +1448,7 @@ exports[`TransactionRow > should render with currency 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-11 xl:my-0 xl:pt-3 min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2"
+            class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-11 xl:my-0 xl:pt-3 min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2"
           >
             <span
               class="whitespace-nowrap"

@@ -43,7 +43,7 @@ const renderOptionGroup = ({
 		<div key={key}>
 			{hasDivider && (
 				<div>
-					<div className="bg-theme-secondary-300 dark:bg-theme-dark-700 h-px w-full" />
+					<div className="bg-theme-secondary-300 dark:bg-theme-dark-700 dim:bg-theme-dim-700 h-px w-full" />
 				</div>
 			)}
 			<ul>
