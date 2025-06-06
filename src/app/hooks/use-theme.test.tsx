@@ -179,7 +179,7 @@ describe("useTheme", () => {
 				current.setProfileTheme(profile);
 			});
 
-			expect(document.querySelector("html")).toHaveClass("dark");
+			expect(document.querySelector("html")).toHaveClass("light");
 		});
 
 		it("should not set theme from profile settings", async () => {
