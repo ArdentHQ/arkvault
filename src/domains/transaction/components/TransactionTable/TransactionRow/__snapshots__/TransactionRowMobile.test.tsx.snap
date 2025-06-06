@@ -12,10 +12,10 @@ exports[`TransactionRowMobile > should render 1`] = `
           data-testid="TableRow__mobile"
         >
           <div
-            class="border-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-background w-full cursor-pointer overflow-hidden rounded border bg-white mb-3"
+            class="border-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-background dim:border-theme-dim-700 dim:bg-theme-background w-full cursor-pointer overflow-hidden rounded border bg-white mb-3"
           >
             <div
-              class="bg-theme-secondary-100 flex h-10 w-full items-center justify-between px-4 dark:bg-black"
+              class="bg-theme-secondary-100 dim:bg-theme-dim-950 flex h-10 w-full items-center justify-between px-4 dark:bg-black"
             >
               <div
                 class="max-w-32"
@@ -37,7 +37,7 @@ exports[`TransactionRowMobile > should render 1`] = `
                         class="text-sm"
                       >
                         <span
-                          class="no-ligatures text-theme-primary-600 cursor-pointer"
+                          class="no-ligatures text-theme-primary-600 dim:text-theme-dim-navy-600 cursor-pointer"
                           data-testid="TransactionRow__id"
                         >
                           ea63…c79b
@@ -51,7 +51,7 @@ exports[`TransactionRowMobile > should render 1`] = `
                 class="flex flex-row items-center"
               >
                 <span
-                  class="text-theme-secondary-700 text-sm font-semibold sm:block"
+                  class="text-theme-secondary-700 dim:text-theme-dim-200 text-sm font-semibold sm:block"
                   data-testid="TransactionRow__timestamp"
                 >
                   <span
@@ -70,12 +70,12 @@ exports[`TransactionRowMobile > should render 1`] = `
                 data-testid="TransactionRowMobile__label"
               >
                 <span
-                  class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
+                  class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-sm font-semibold"
                 >
                   Transfer
                 </span>
                 <div
-                  class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
+                  class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
                 >
                   <div
                     class="flex flex-col gap-2"
@@ -120,7 +120,7 @@ exports[`TransactionRowMobile > should render 1`] = `
                           type="button"
                         >
                           <div
-                            class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dark:hover:text-white"
+                            class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
                           >
                             <div
                               style="height: 16px; width: 16px;"
@@ -194,7 +194,7 @@ exports[`TransactionRowMobile > should render 1`] = `
                           type="button"
                         >
                           <div
-                            class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dark:hover:text-white"
+                            class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
                           >
                             <div
                               style="height: 16px; width: 16px;"
@@ -235,12 +235,12 @@ exports[`TransactionRowMobile > should render 1`] = `
                 class="flex flex-col gap-2 w-full"
               >
                 <span
-                  class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
+                  class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-sm font-semibold"
                 >
                   Amount (ARK)
                 </span>
                 <div
-                  class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
+                  class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
                 >
                   <span
                     class="whitespace-nowrap text-sm font-semibold"
@@ -254,12 +254,12 @@ exports[`TransactionRowMobile > should render 1`] = `
                 class="flex flex-col gap-2 w-full"
               >
                 <span
-                  class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
+                  class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-sm font-semibold"
                 >
                   Fiat Value
                 </span>
                 <div
-                  class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
+                  class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -290,10 +290,10 @@ exports[`TransactionRowMobile > should render 2`] = `
           data-testid="TableRow__mobile"
         >
           <div
-            class="border-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-background w-full cursor-pointer overflow-hidden rounded border bg-white mb-3"
+            class="border-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-background dim:border-theme-dim-700 dim:bg-theme-background w-full cursor-pointer overflow-hidden rounded border bg-white mb-3"
           >
             <div
-              class="bg-theme-secondary-100 flex h-10 w-full items-center justify-between px-4 dark:bg-black"
+              class="bg-theme-secondary-100 dim:bg-theme-dim-950 flex h-10 w-full items-center justify-between px-4 dark:bg-black"
             >
               <div
                 class="max-w-32"
@@ -315,7 +315,7 @@ exports[`TransactionRowMobile > should render 2`] = `
                         class="text-sm"
                       >
                         <span
-                          class="no-ligatures text-theme-primary-600 cursor-pointer"
+                          class="no-ligatures text-theme-primary-600 dim:text-theme-dim-navy-600 cursor-pointer"
                           data-testid="TransactionRow__id"
                         >
                           ea63…c79b
@@ -329,7 +329,7 @@ exports[`TransactionRowMobile > should render 2`] = `
                 class="flex flex-row items-center"
               >
                 <span
-                  class="text-theme-secondary-700 text-sm font-semibold sm:block"
+                  class="text-theme-secondary-700 dim:text-theme-dim-200 text-sm font-semibold sm:block"
                   data-testid="TransactionRow__timestamp"
                 >
                   <span
@@ -348,12 +348,12 @@ exports[`TransactionRowMobile > should render 2`] = `
                 data-testid="TransactionRowMobile__label"
               >
                 <span
-                  class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
+                  class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-sm font-semibold"
                 >
                   Transfer
                 </span>
                 <div
-                  class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
+                  class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
                 >
                   <div
                     class="flex flex-col gap-2"
@@ -398,7 +398,7 @@ exports[`TransactionRowMobile > should render 2`] = `
                           type="button"
                         >
                           <div
-                            class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dark:hover:text-white"
+                            class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
                           >
                             <div
                               style="height: 16px; width: 16px;"
@@ -472,7 +472,7 @@ exports[`TransactionRowMobile > should render 2`] = `
                           type="button"
                         >
                           <div
-                            class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dark:hover:text-white"
+                            class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
                           >
                             <div
                               style="height: 16px; width: 16px;"
@@ -513,12 +513,12 @@ exports[`TransactionRowMobile > should render 2`] = `
                 class="flex flex-col gap-2 w-full"
               >
                 <span
-                  class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
+                  class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-sm font-semibold"
                 >
                   Amount (ARK)
                 </span>
                 <div
-                  class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
+                  class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
                 >
                   <span
                     class="whitespace-nowrap text-sm font-semibold"
@@ -532,12 +532,12 @@ exports[`TransactionRowMobile > should render 2`] = `
                 class="flex flex-col gap-2 w-full"
               >
                 <span
-                  class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
+                  class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-sm font-semibold"
                 >
                   Fiat Value
                 </span>
                 <div
-                  class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
+                  class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -568,10 +568,10 @@ exports[`TransactionRowMobile > should render with currency 1`] = `
           data-testid="TableRow__mobile"
         >
           <div
-            class="border-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-background w-full cursor-pointer overflow-hidden rounded border bg-white mb-3"
+            class="border-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-background dim:border-theme-dim-700 dim:bg-theme-background w-full cursor-pointer overflow-hidden rounded border bg-white mb-3"
           >
             <div
-              class="bg-theme-secondary-100 flex h-10 w-full items-center justify-between px-4 dark:bg-black"
+              class="bg-theme-secondary-100 dim:bg-theme-dim-950 flex h-10 w-full items-center justify-between px-4 dark:bg-black"
             >
               <div
                 class="max-w-32"
@@ -593,7 +593,7 @@ exports[`TransactionRowMobile > should render with currency 1`] = `
                         class="text-sm"
                       >
                         <span
-                          class="no-ligatures text-theme-primary-600 cursor-pointer"
+                          class="no-ligatures text-theme-primary-600 dim:text-theme-dim-navy-600 cursor-pointer"
                           data-testid="TransactionRow__id"
                         >
                           ea63…c79b
@@ -607,7 +607,7 @@ exports[`TransactionRowMobile > should render with currency 1`] = `
                 class="flex flex-row items-center"
               >
                 <span
-                  class="text-theme-secondary-700 text-sm font-semibold sm:block"
+                  class="text-theme-secondary-700 dim:text-theme-dim-200 text-sm font-semibold sm:block"
                   data-testid="TransactionRow__timestamp"
                 >
                   <span
@@ -626,12 +626,12 @@ exports[`TransactionRowMobile > should render with currency 1`] = `
                 data-testid="TransactionRowMobile__label"
               >
                 <span
-                  class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
+                  class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-sm font-semibold"
                 >
                   Transfer
                 </span>
                 <div
-                  class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
+                  class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
                 >
                   <div
                     class="flex flex-col gap-2"
@@ -678,7 +678,7 @@ exports[`TransactionRowMobile > should render with currency 1`] = `
                           type="button"
                         >
                           <div
-                            class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dark:hover:text-white"
+                            class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
                           >
                             <div
                               style="height: 16px; width: 16px;"
@@ -752,7 +752,7 @@ exports[`TransactionRowMobile > should render with currency 1`] = `
                           type="button"
                         >
                           <div
-                            class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dark:hover:text-white"
+                            class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
                           >
                             <div
                               style="height: 16px; width: 16px;"
@@ -793,12 +793,12 @@ exports[`TransactionRowMobile > should render with currency 1`] = `
                 class="flex flex-col gap-2 w-full"
               >
                 <span
-                  class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
+                  class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-sm font-semibold"
                 >
                   Amount (DARK)
                 </span>
                 <div
-                  class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
+                  class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
                 >
                   <span
                     class="whitespace-nowrap text-sm font-semibold"
@@ -812,12 +812,12 @@ exports[`TransactionRowMobile > should render with currency 1`] = `
                 class="flex flex-col gap-2 w-full"
               >
                 <span
-                  class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
+                  class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-sm font-semibold"
                 >
                   Fiat Value
                 </span>
                 <div
-                  class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
+                  class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -848,10 +848,10 @@ exports[`TransactionRowMobile > should render with currency 2`] = `
           data-testid="TableRow__mobile"
         >
           <div
-            class="border-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-background w-full cursor-pointer overflow-hidden rounded border bg-white mb-3"
+            class="border-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-background dim:border-theme-dim-700 dim:bg-theme-background w-full cursor-pointer overflow-hidden rounded border bg-white mb-3"
           >
             <div
-              class="bg-theme-secondary-100 flex h-10 w-full items-center justify-between px-4 dark:bg-black"
+              class="bg-theme-secondary-100 dim:bg-theme-dim-950 flex h-10 w-full items-center justify-between px-4 dark:bg-black"
             >
               <div
                 class="max-w-32"
@@ -873,7 +873,7 @@ exports[`TransactionRowMobile > should render with currency 2`] = `
                         class="text-sm"
                       >
                         <span
-                          class="no-ligatures text-theme-primary-600 cursor-pointer"
+                          class="no-ligatures text-theme-primary-600 dim:text-theme-dim-navy-600 cursor-pointer"
                           data-testid="TransactionRow__id"
                         >
                           ea63…c79b
@@ -887,7 +887,7 @@ exports[`TransactionRowMobile > should render with currency 2`] = `
                 class="flex flex-row items-center"
               >
                 <span
-                  class="text-theme-secondary-700 text-sm font-semibold sm:block"
+                  class="text-theme-secondary-700 dim:text-theme-dim-200 text-sm font-semibold sm:block"
                   data-testid="TransactionRow__timestamp"
                 >
                   <span
@@ -906,12 +906,12 @@ exports[`TransactionRowMobile > should render with currency 2`] = `
                 data-testid="TransactionRowMobile__label"
               >
                 <span
-                  class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
+                  class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-sm font-semibold"
                 >
                   Transfer
                 </span>
                 <div
-                  class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
+                  class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
                 >
                   <div
                     class="flex flex-col gap-2"
@@ -958,7 +958,7 @@ exports[`TransactionRowMobile > should render with currency 2`] = `
                           type="button"
                         >
                           <div
-                            class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dark:hover:text-white"
+                            class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
                           >
                             <div
                               style="height: 16px; width: 16px;"
@@ -1032,7 +1032,7 @@ exports[`TransactionRowMobile > should render with currency 2`] = `
                           type="button"
                         >
                           <div
-                            class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dark:hover:text-white"
+                            class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
                           >
                             <div
                               style="height: 16px; width: 16px;"
@@ -1073,12 +1073,12 @@ exports[`TransactionRowMobile > should render with currency 2`] = `
                 class="flex flex-col gap-2 w-full"
               >
                 <span
-                  class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
+                  class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-sm font-semibold"
                 >
                   Amount (DARK)
                 </span>
                 <div
-                  class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
+                  class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
                 >
                   <span
                     class="whitespace-nowrap text-sm font-semibold"
@@ -1092,12 +1092,12 @@ exports[`TransactionRowMobile > should render with currency 2`] = `
                 class="flex flex-col gap-2 w-full"
               >
                 <span
-                  class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
+                  class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-sm font-semibold"
                 >
                   Fiat Value
                 </span>
                 <div
-                  class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
+                  class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
                 >
                   <span
                     class="whitespace-nowrap"
