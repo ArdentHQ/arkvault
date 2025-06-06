@@ -31,6 +31,7 @@ import CopyKey from "./copy-key.svg?react";
 import Contract from "./contract.svg?react";
 import CopySuccess from "./copy-success.svg?react";
 import Cross from "./cross.svg?react";
+import Dim from "./dim.svg?react";
 import Download from "./download.svg?react";
 import DoubleCheckedCircle from "./double-circle.svg?react";
 import CrossSmall from "./cross-small.svg?react";
@@ -173,6 +174,7 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	CrossSmall,
 	Dash,
 	Dashboard,
+	Dim,
 	DocumentView,
 	DoubleCheckedCircle,
 	Download,

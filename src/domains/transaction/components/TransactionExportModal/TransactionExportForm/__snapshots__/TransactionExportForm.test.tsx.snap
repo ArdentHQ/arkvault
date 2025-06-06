@@ -2799,7 +2799,7 @@ exports[`TransactionExportForm > should render in xs 1`] = `
         >
           <div>
             <div
-              class="inline-flex w-full items-center mt-4 flex flex-col space-y-2"
+              class="w-full items-center mt-4 flex flex-col space-y-2"
               data-testid="ButtonGroup"
               role="radiogroup"
             >

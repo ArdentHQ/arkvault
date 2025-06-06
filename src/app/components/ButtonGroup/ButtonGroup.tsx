@@ -4,7 +4,7 @@ import { Tooltip } from "@/app/components/Tooltip";
 import { twMerge } from "tailwind-merge";
 
 export const ButtonGroup = ({ children, className }: React.PropsWithChildren<{ className?: string }>) => (
-	<div data-testid="ButtonGroup" role="radiogroup" className={cn("inline-flex w-full items-center", className)}>
+	<div data-testid="ButtonGroup" role="radiogroup" className={twMerge("inline-flex w-full items-center", className)}>
 		{children}
 	</div>
 );
