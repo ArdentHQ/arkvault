@@ -35,8 +35,24 @@ describe("Common Validations", () => {
 	});
 
 	describe("fee", () => {
-		it("should return true", () => {
-			const feeValidation = common(t).fee(100, network);
+		// Fee method is hardcoded to return true for now
+		it("should temporarily return true on different inputs", () => {
+			const fees = {
+				min: BigNumber.make(10),
+				max: BigNumber.make(100),
+				avg: BigNumber.make(50),
+			};
+			let feeValidation;
+			feeValidation = common(t).fee(100, network, fees);
+			expect(feeValidation.validate()).toBe(true);
+
+			feeValidation = common(t).fee(undefined, network, fees);
+			expect(feeValidation.validate()).toBe(true);
+
+			feeValidation = common(t).fee(100, undefined, fees);
+			expect(feeValidation.validate()).toBe(true);
+
+			feeValidation = common(t).fee(100, network, undefined);
 			expect(feeValidation.validate()).toBe(true);
 		});
 	});
@@ -105,6 +121,16 @@ describe("Common Validations", () => {
 			expect(gasLimitValidation.validate.valid(BigNumber.make(100))).toBe(true);
 		});
 
+		it("should use 0 as default balance", () => {
+			const gasLimitValidation = common(t).gasLimit(undefined, getValues, network);
+			expect(gasLimitValidation.validate.valid(BigNumber.make(100))).toBe(
+				t("TRANSACTION.VALIDATION.LOW_BALANCE_AMOUNT", {
+					balance: 0,
+					coinId: network.coin(),
+				}),
+			);
+		});
+
 		it("should fail if fee is greater than balance", () => {
 			getValues = () => ({ gasPrice: BigNumber.make(10) });
 			const gasLimitValidation = common(t).gasLimit(50, getValues, network);
@@ -126,6 +152,16 @@ describe("Common Validations", () => {
 			vi.spyOn(inputFee, "calculateGasFee").mockReturnValue(BigNumber.make(50));
 
 			expect(gasLimitValidation.validate.valid(BigNumber.make(100))).toBe(true);
+		});
+
+		it("should use 0 as default balance for gasPrice", () => {
+			const gasLimitValidation = common(t).gasPrice(undefined, getValues, network);
+			expect(gasLimitValidation.validate.valid(BigNumber.make(100))).toBe(
+				t("TRANSACTION.VALIDATION.LOW_BALANCE_AMOUNT", {
+					balance: 0,
+					coinId: network.coin(),
+				}),
+			);
 		});
 	});
 
