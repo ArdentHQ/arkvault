@@ -23,11 +23,7 @@ const addressIsValid = (address: string) => {
 		return false;
 	}
 
-	if (isValidDomain(address) || isValidIp(address)) {
-		return true;
-	}
-
-	return false;
+	return isValidDomain(address) || isValidIp(address);
 };
 
 const getBaseUrl = (address: string): string => {

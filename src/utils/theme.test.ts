@@ -1,0 +1,33 @@
+import { describe, it, expect, beforeEach } from "vitest";
+import { env } from "@/utils/testing-library";
+import { shouldUseDarkColors } from "./theme";
+
+describe("shouldUseDarkColors", () => {
+	beforeEach(() => {
+		env.reset();
+	});
+
+	afterEach(() => {
+		vi.clearAllMocks();
+	});
+
+	it("returns true if the html element has the dark class", () => {
+		vi.spyOn(document, "querySelector").mockReturnValue({
+			classList: {
+				contains: () => true,
+			},
+		} as any);
+
+		expect(shouldUseDarkColors()).toBe(true);
+	});
+
+	it("returns false if the html element does not have the dark class", () => {
+		vi.spyOn(document, "querySelector").mockReturnValue({
+			classList: {
+				contains: () => false,
+			},
+		} as any);
+
+		expect(shouldUseDarkColors()).toBe(false);
+	});
+});
