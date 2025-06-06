@@ -24,7 +24,6 @@ export const useNavigationBlocker = ({ shouldBlock }: { shouldBlock: BlockerFunc
 	}, [blocker]);
 
 	const onConfirm = useCallback(() => {
-		console.log("onConfirm");
 		if (blocker.state === "blocked") {
 			blocker.proceed();
 		}
