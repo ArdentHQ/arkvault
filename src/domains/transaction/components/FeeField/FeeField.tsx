@@ -70,6 +70,8 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 		void estimate();
 	}, [estimateGas, getValues, setValue, type]);
 
+	const dataDep = JSON.stringify(data ?? []);
+
 	useEffect(() => {
 		const recalculateFee = async () => {
 			setIsLoadingFee(true);
@@ -90,7 +92,7 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 		};
 
 		void recalculateFee();
-	}, [calculate, data, getValues, network.id(), setValue, type]);
+	}, [calculate, dataDep, getValues, network.id(), setValue, type]);
 
 	return (
 		<InputFee

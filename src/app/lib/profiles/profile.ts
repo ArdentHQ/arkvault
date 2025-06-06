@@ -229,6 +229,14 @@ export class Profile implements IProfile {
 	readonly #exchangeRateService: ExchangeRateService;
 
 	/**
+	 * The ledger service.
+	 *
+	 * @type {LedgerService}
+	 * @memberof Profile
+	 */
+	readonly #ledgerService: LedgerService;
+
+	/**
 	 * The status service.
 	 *
 	 * @type {IProfileStatus}
@@ -259,6 +267,7 @@ export class Profile implements IProfile {
 		this.#knownWalletService = new KnownWalletService();
 		this.#usernameService = new UsernamesService({ config: this.activeNetwork().config(), profile: this });
 		this.#exchangeRateService = new ExchangeRateService({ storage: env.storage() });
+		this.#ledgerService = new LedgerService({ config: this.activeNetwork().config() });
 	}
 
 	/** {@inheritDoc IProfile.id} */
@@ -507,7 +516,7 @@ export class Profile implements IProfile {
 	}
 
 	public ledger(): LedgerService {
-		return new LedgerService({ config: this.activeNetwork().config() });
+		return this.#ledgerService;
 	}
 
 	public knownWallets(): KnownWalletService {
