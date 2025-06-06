@@ -1,3 +1,4 @@
+/* eslint-disable sonarjs/no-duplicate-string */
 import { Networks } from "@/app/lib/mainsail";
 import { renderHook } from "@testing-library/react";
 import { useTranslation } from "react-i18next";
@@ -10,17 +11,23 @@ import { env } from "@/utils/testing-library";
 let network: Networks.Network;
 let getValues: () => any;
 
-describe("Common Validations", () => {
-	let t: (key: string, options?: any) => string;
+const t = (key: string, options?: any) => {
+	const {
+		result: {
+			current: { t },
+		},
+	} = renderHook(() => useTranslation());
 
+	return t(key, options);
+};
+
+describe("Common Validations", () => {
 	beforeAll(() => {
 		network = env.profiles().first().wallets().first().network();
 	});
 
 	beforeEach(() => {
 		getValues = () => ({});
-		const { result } = renderHook(() => useTranslation());
-		t = result.current.t;
 
 		vi.spyOn(inputFee, "getFeeMinMax").mockReturnValue({
 			minGasLimit: BigNumber.make(10),
