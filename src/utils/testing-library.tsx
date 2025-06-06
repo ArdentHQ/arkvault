@@ -1,10 +1,9 @@
 import { ConfigurationProvider, EnvironmentProvider, LedgerProvider, NavigationProvider } from "@/app/contexts";
 import { Contracts, Environment } from "@/app/lib/profiles";
 import { FormProvider, UseFormMethods, useForm } from "react-hook-form";
-import { HashHistory, To, createHashHistory } from "history";
 import { RenderResult, render } from "@testing-library/react";
-
 /* eslint-disable testing-library/no-node-access */
+import { createMemoryRouter, RouterProvider } from "react-router-dom";
 import { BigNumber } from "@/app/lib/helpers";
 import { DTO } from "@/app/lib/profiles";
 import { DateTime } from "@/app/lib/intl";
@@ -14,7 +13,6 @@ import { Mainsail } from "@/app/lib/mainsail";
 import MainsailDefaultManifest from "@/tests/fixtures/coins/mainsail/manifest/default.json";
 import React from "react";
 import { Context as ResponsiveContext } from "react-responsive";
-import { Router } from "react-router-dom";
 import { StubStorage } from "@/tests/mocks";
 import TestingPasswords from "@/tests/fixtures/env/testing-passwords.json";
 import fixtureData from "@/tests/fixtures/env/storage.json";
@@ -113,9 +111,9 @@ export function renderWithForm(
 }
 
 interface RenderWithRouterOptions {
-	route?: To;
-	state?: Record<string, any>;
-	history?: HashHistory;
+	route?: string;
+	routes?: Array<{ path: string; element: React.ReactElement; }>;
+	initialEntries?: string[];
 	withProviders?: boolean;
 	withProfileSynchronizer?: boolean;
 	profileSynchronizerOptions?: Record<string, any>;
@@ -124,21 +122,28 @@ interface RenderWithRouterOptions {
 const renderWithRouter = (
 	component: React.ReactElement,
 	{
-		route,
-		state,
-		history,
+		route = "/",
 		withProviders = true,
 		withProfileSynchronizer = false,
 		profileSynchronizerOptions,
-	}: RenderWithRouterOptions = {},
+	}: {
+		route?: string;
+		withProviders?: boolean;
+		withProfileSynchronizer?: boolean;
+		profileSynchronizerOptions?: Record<string, any>;
+	} = {}
 ) => {
-	if (!history) {
-		history = createHashHistory();
-		navigate("/");
-	}
-	if (route) {
-		navigate(route, state ?? {});
-	}
+	const router = createMemoryRouter(
+		[
+			{
+				element: component,
+				path: "/*",
+			},
+		],
+		{
+			initialEntries: [route],
+		}
+	);
 
 	const ProfileSynchronizerWrapper = ({ children }: { children: React.ReactNode }) =>
 		withProfileSynchronizer ? (
@@ -147,22 +152,26 @@ const renderWithRouter = (
 			<>{children}</>
 		);
 
-	const RouterWrapper = ({ children }: { children: React.ReactNode }) =>
-		withProviders ? (
-			<WithProviders>
-				<Router history={history}>
-					<ProfileSynchronizerWrapper>{children}</ProfileSynchronizerWrapper>
-				</Router>
-			</WithProviders>
-		) : (
-			<Router history={history}>{children}</Router>
+	const Wrapper = ({ children }: { children: React.ReactNode }) => {
+		const content = (
+			<RouterProvider router={router}>
+				<ProfileSynchronizerWrapper>{children}</ProfileSynchronizerWrapper>
+			</RouterProvider>
 		);
 
+		return withProviders ? <WithProviders>{content}</WithProviders> : content;
+	};
+
 	return {
-		...customRender(component, { wrapper: RouterWrapper }),
-		history,
+		...render(<Wrapper>{component}</Wrapper>),
+		navigate: (to: string) => router.navigate(to),
+		router,
 	};
 };
+
+export const createTestRouter = (routes: Array<{ path: string; element: React.ReactElement; }>, initialEntries?: string[]) => createMemoryRouter(routes, {
+	initialEntries: initialEntries || ["/"],
+});
 
 export * from "@testing-library/react";
 
