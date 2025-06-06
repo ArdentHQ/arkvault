@@ -31,7 +31,7 @@ export const useSettingsPrompt = ({ isDirty, dirtyFields }: UseSettingsPromptInp
 			}
 
 			// Block navigation if there are unsaved changes
-			if (isDirty || Object.keys(dirtyFields).length > 0) {
+			if (isDirty && Object.keys(dirtyFields).length > 0) {
 				return true; // Block navigation
 			}
 
