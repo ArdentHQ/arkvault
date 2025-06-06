@@ -30,10 +30,10 @@ describe("Common Validations", () => {
 		getValues = () => ({});
 
 		vi.spyOn(inputFee, "getFeeMinMax").mockReturnValue({
-			minGasLimit: BigNumber.make(10),
 			maxGasLimit: BigNumber.make(1000),
-			minGasPrice: BigNumber.make(10),
 			maxGasPrice: BigNumber.make(1000),
+			minGasLimit: BigNumber.make(10),
+			minGasPrice: BigNumber.make(10),
 		});
 	});
 
@@ -45,9 +45,9 @@ describe("Common Validations", () => {
 		// Fee method is hardcoded to return true for now
 		it("should temporarily return true on different inputs", () => {
 			const fees = {
-				min: BigNumber.make(10),
-				max: BigNumber.make(100),
 				avg: BigNumber.make(50),
+				max: BigNumber.make(100),
+				min: BigNumber.make(10),
 			};
 			let feeValidation;
 			feeValidation = common(t).fee(100, network, fees);
