@@ -14,7 +14,9 @@ export const SettingsUnsavedChangesConfirmation: React.FC<SettingsUnsavedChanges
 }) => {
 	const { shouldBlockNavigation } = useSettingsPrompt({ dirtyFields, isDirty });
 
-	const { isOpen, onConfirm, onCancel } = useNavigationBlocker({ shouldBlock: ({ nextLocation }) => shouldBlockNavigation(nextLocation.pathname) });
+	const { isOpen, onConfirm, onCancel } = useNavigationBlocker({
+		shouldBlock: ({ nextLocation }) => shouldBlockNavigation(nextLocation.pathname),
+	});
 
 	return <ConfirmationModal isOpen={isOpen} onConfirm={onConfirm} onCancel={onCancel} />;
 };
