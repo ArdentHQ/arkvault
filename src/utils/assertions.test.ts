@@ -4,6 +4,7 @@ import { Networks } from "@/app/lib/mainsail";
 import { Profile } from "@/app/lib/profiles/profile";
 import { Wallet } from "@/app/lib/profiles/wallet";
 import { env } from "@/utils/testing-library";
+import { DTO } from "@/app/lib/profiles";
 
 import {
 	assertArray,
@@ -13,6 +14,8 @@ import {
 	assertReadOnlyWallet,
 	assertString,
 	assertWallet,
+	assertSignedTransaction,
+	assertConfirmedTransaction,
 } from "./assertions";
 
 let profile: Profile;
@@ -47,6 +50,11 @@ describe("#assertProfile", () => {
 		);
 		expect(() => assertProfile([])).toThrow("Expected 'profile' to be Contracts.IProfile, but received ");
 	});
+
+	it("should not throw for a valid Profile instance (explicit)", () => {
+		const anotherProfile = new Profile({ data: "{}", id: "another", name: "Another" }, env);
+		expect(() => assertProfile(anotherProfile)).not.toThrow();
+	});
 });
 
 describe("#assertWallet", () => {
@@ -79,7 +87,12 @@ describe("#assertWallet", () => {
 });
 
 describe("#assertReadOnlyWallet", () => {
-	it.todo("should pass with a ReadOnlyWallet instance");
+	it("should pass with a ReadOnlyWallet instance", () => {
+		const mockReadOnlyWallet = {
+			governanceIdentifier: () => "test",
+		};
+		expect(() => assertReadOnlyWallet(mockReadOnlyWallet)).not.toThrow();
+	});
 
 	it("should fail without a profile instance", () => {
 		expect(() => assertReadOnlyWallet(undefined)).toThrow(
@@ -189,6 +202,78 @@ describe("#assertNumber", () => {
 		expect(() => assertNumber(Number.NaN)).toThrow("Expected 'value' to be number, but received NaN");
 		expect(() => assertNumber(Number.MAX_SAFE_INTEGER + 1)).toThrow(
 			"Expected 'value' to be number, but received 9007199254740992",
+		);
+	});
+});
+
+describe("#assertSignedTransaction", () => {
+	it("should pass with a signed transaction instance", () => {
+		expect(() => assertSignedTransaction(new DTO.ExtendedSignedTransactionData())).not.toThrow();
+	});
+
+	it("should fail with invalid types", () => {
+		expect(() => assertSignedTransaction(undefined)).toThrow(
+			"Expected 'transaction' to be DTO.ExtendedSignedTransactionData, but received undefined",
+		);
+		expect(() => assertSignedTransaction(null)).toThrow(
+			"Expected 'transaction' to be DTO.ExtendedSignedTransactionData, but received null",
+		);
+		expect(() => assertSignedTransaction(true)).toThrow(
+			"Expected 'transaction' to be DTO.ExtendedSignedTransactionData, but received true",
+		);
+		expect(() => assertSignedTransaction(false)).toThrow(
+			"Expected 'transaction' to be DTO.ExtendedSignedTransactionData, but received false",
+		);
+		expect(() => assertSignedTransaction("")).toThrow(
+			"Expected 'transaction' to be DTO.ExtendedSignedTransactionData, but received ",
+		);
+		expect(() => assertSignedTransaction("a")).toThrow(
+			"Expected 'transaction' to be DTO.ExtendedSignedTransactionData, but received a",
+		);
+		expect(() => assertSignedTransaction(1)).toThrow(
+			"Expected 'transaction' to be DTO.ExtendedSignedTransactionData, but received 1",
+		);
+		expect(() => assertSignedTransaction({})).toThrow(
+			"Expected 'transaction' to be DTO.ExtendedSignedTransactionData, but received [object Object]",
+		);
+		expect(() => assertSignedTransaction([])).toThrow(
+			"Expected 'transaction' to be DTO.ExtendedSignedTransactionData, but received ",
+		);
+	});
+});
+
+describe("#assertConfirmedTransaction", () => {
+	it("should pass with a confirmed transaction instance", () => {
+		expect(() => assertConfirmedTransaction(new DTO.ExtendedConfirmedTransactionData())).not.toThrow();
+	});
+
+	it("should fail with invalid types", () => {
+		expect(() => assertConfirmedTransaction(undefined)).toThrow(
+			"Expected 'transaction' to be DTO.ExtendedConfirmedTransactionData, but received undefined",
+		);
+		expect(() => assertConfirmedTransaction(null)).toThrow(
+			"Expected 'transaction' to be DTO.ExtendedConfirmedTransactionData, but received null",
+		);
+		expect(() => assertConfirmedTransaction(true)).toThrow(
+			"Expected 'transaction' to be DTO.ExtendedConfirmedTransactionData, but received true",
+		);
+		expect(() => assertConfirmedTransaction(false)).toThrow(
+			"Expected 'transaction' to be DTO.ExtendedConfirmedTransactionData, but received false",
+		);
+		expect(() => assertConfirmedTransaction("")).toThrow(
+			"Expected 'transaction' to be DTO.ExtendedConfirmedTransactionData, but received ",
+		);
+		expect(() => assertConfirmedTransaction("a")).toThrow(
+			"Expected 'transaction' to be DTO.ExtendedConfirmedTransactionData, but received a",
+		);
+		expect(() => assertConfirmedTransaction(1)).toThrow(
+			"Expected 'transaction' to be DTO.ExtendedConfirmedTransactionData, but received 1",
+		);
+		expect(() => assertConfirmedTransaction({})).toThrow(
+			"Expected 'transaction' to be DTO.ExtendedConfirmedTransactionData, but received [object Object]",
+		);
+		expect(() => assertConfirmedTransaction([])).toThrow(
+			"Expected 'transaction' to be DTO.ExtendedConfirmedTransactionData, but received ",
 		);
 	});
 });
