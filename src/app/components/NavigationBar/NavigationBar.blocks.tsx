@@ -114,7 +114,7 @@ const NavigationBarMobileWrapper = ({
 	<div
 		{...props}
 		className={twMerge(
-			"fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black",
+			"dim:bg-theme-dim-950 fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black",
 			cn({
 				"shadow-footer-smooth dark:shadow-footer-smooth-dark": !hasFixedFormButtons,
 			}),
@@ -147,7 +147,7 @@ const NavigationBarMobile = ({
 			{hasFixedFormButtons && (
 				<div
 					data-testid="NavigationBar__buttons-separator"
-					className="border-theme-secondary-300 dark:border-theme-secondary-900 border-t"
+					className="border-theme-secondary-300 dark:border-theme-secondary-900 dim:border-theme-dim-950 border-t"
 				/>
 			)}
 
@@ -160,7 +160,7 @@ const NavigationBarMobile = ({
 					onClick={receiveButtonClickHandler}
 					className={cn({
 						"text-theme-secondary-500 cursor-not-allowed": disabled,
-						"text-theme-secondary-700 dark:text-theme-secondary-600": !disabled,
+						"text-theme-secondary-700 dark:text-theme-secondary-600 dim:text-theme-dim-200": !disabled,
 					})}
 				>
 					<Icon name="Received" size="lg" />
@@ -173,7 +173,7 @@ const NavigationBarMobile = ({
 					size="icon"
 					variant="transparent"
 					onClick={homeButtonHandler}
-					className="text-theme-secondary-700 dark:text-theme-secondary-600"
+					className="text-theme-secondary-700 dark:text-theme-secondary-600 dim:text-theme-dim-200"
 				>
 					<Icon name="Dashboard" size="lg" />
 				</Button>
@@ -188,7 +188,7 @@ const NavigationBarMobile = ({
 					onClick={sendButtonClickHandler}
 					className={cn({
 						"text-theme-secondary-500 cursor-not-allowed": disabled,
-						"text-theme-secondary-700 dark:text-theme-secondary-600": !disabled,
+						"text-theme-secondary-700 dark:text-theme-secondary-600 dim:text-theme-dim-200": !disabled,
 					})}
 				>
 					<Icon name="Sent" size="lg" />
