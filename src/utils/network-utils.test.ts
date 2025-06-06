@@ -1,41 +1,155 @@
-import { vi } from "vitest";
-import { env, getMainsailProfileId } from "@/utils/testing-library";
-import { hasNetworksWithLedgerSupport } from "./network-utils";
+import { vi, describe, it, expect, beforeAll } from "vitest";
+import {
+	hasNetworksWithLedgerSupport,
+	isCustomNetwork,
+	networkDisplayName,
+	profileAllEnabledNetworks,
+	profileAllEnabledNetworkIds,
+	profileEnabledNetworkIds,
+	networksAsOptions,
+	findNetworkFromSearchParameters,
+} from "./network-utils";
+import { env, getMainsailProfileId } from "./testing-library";
 
-describe("Network utils", () => {
+let profile;
+
+beforeAll(() => {
+	profile = env.profiles().findById(getMainsailProfileId());
+});
+
+describe("network-utils", () => {
 	it("should have available networks with ledger support", () => {
-		const profile = env.profiles().findById(getMainsailProfileId());
-
-		const networks = profile
-			.wallets()
-			.values()
-			.map((wallet) => wallet.network());
-
-		const networkSpy = vi.spyOn(profile, "availableNetworks").mockReturnValue(networks);
-		const ledgerSpy = vi.spyOn(networks.at(0), "allows").mockReturnValue(true);
-
-		const withLedgerSupport = hasNetworksWithLedgerSupport(profile);
-		expect(withLedgerSupport).toBe(true);
-
-		networkSpy.mockRestore();
+		const networks = profile.availableNetworks();
+		const ledgerSpy = vi.spyOn(networks[0], "allows").mockReturnValue(true);
+		expect(hasNetworksWithLedgerSupport(profile)).toBe(true);
 		ledgerSpy.mockRestore();
 	});
 
 	it("should not have available networks with ledger support", () => {
-		const profile = env.profiles().findById(getMainsailProfileId());
-
-		const networks = profile
-			.wallets()
-			.values()
-			.map((wallet) => wallet.network());
-
-		const networkSpy = vi.spyOn(profile, "availableNetworks").mockReturnValue(networks);
-		const ledgerSpy = vi.spyOn(networks.at(0), "allows").mockReturnValue(false);
-
-		const withLedgerSupport = hasNetworksWithLedgerSupport(profile);
-		expect(withLedgerSupport).toBe(false);
-
-		networkSpy.mockRestore();
+		const networks = profile.availableNetworks();
+		const ledgerSpy = vi.spyOn(networks[0], "allows").mockReturnValue(false);
+		expect(hasNetworksWithLedgerSupport(profile)).toBe(false);
 		ledgerSpy.mockRestore();
+	});
+
+	it("isCustomNetwork true when id ends with .custom", () => {
+		const network = { id: () => "foo.custom" };
+		expect(isCustomNetwork(network)).toBe(true);
+	});
+	it("isCustomNetwork false when id does not end with .custom", () => {
+		const network = { id: () => "mainnet" };
+		expect(isCustomNetwork(network)).toBe(false);
+	});
+
+	it("isCustomNetwork handles undefined", () => {
+		expect(isCustomNetwork(undefined)).toBe(false);
+	});
+
+	it("networkDisplayName returns '' for undefined", () => {
+		expect(networkDisplayName(undefined)).toBe("");
+	});
+	it("networkDisplayName returns coinName for custom network", () => {
+		const network = { coinName: () => "FOO", id: () => "foo.custom" };
+		expect(networkDisplayName(network)).toBe("FOO");
+	});
+	it("networkDisplayName returns displayName for normal network", () => {
+		const network = profile.availableNetworks()[0];
+		expect(networkDisplayName(network)).toBe(network.displayName());
+	});
+
+	it("profileAllEnabledNetworks filters by enabled for custom", () => {
+		const custom = { id: () => "foo.custom", meta: () => ({ enabled: false }) };
+		const fakeProfile = { availableNetworks: () => [custom] };
+		expect(profileAllEnabledNetworks(fakeProfile)).toEqual([]);
+	});
+	it("profileAllEnabledNetworks returns all for normal", () => {
+		const networks = profile.availableNetworks();
+		expect(profileAllEnabledNetworks(profile)).toEqual(networks);
+	});
+
+	it("profileAllEnabledNetworkIds returns ids", () => {
+		const networks = profile.availableNetworks();
+		expect(profileAllEnabledNetworkIds(profile)).toEqual(networks.map((n) => n.id()));
+	});
+
+	it("profileEnabledNetworkIds returns unique ids", () => {
+		const ids = profileEnabledNetworkIds(profile);
+		expect(Array.isArray(ids)).toBe(true);
+		// Should match availableNetworks ids
+		const expected = profile.availableNetworks().map((n) => n.id());
+		expect(ids).toEqual(expected);
+	});
+
+	it("networksAsOptions returns [] for undefined", () => {
+		expect(networksAsOptions(undefined)).toEqual([]);
+	});
+	it("networksAsOptions returns options for networks", () => {
+		const networks = profile.availableNetworks();
+		const options = networksAsOptions(networks);
+		expect(Array.isArray(options)).toBe(true);
+		if (options.length > 0) {
+			expect(options[0]).toHaveProperty("label");
+			expect(options[0]).toHaveProperty("value");
+		}
+	});
+	it("networksAsOptions adds name for test network", () => {
+		// This network is a test network but NOT custom.
+		const testNetworkNonCustom = {
+			allows: () => false,
+			coinName: () => "ARK",
+			displayName: () => "ARK Testnet Real",
+			id: () => "testnet.real",
+			isTest: () => true,
+			meta: () => ({ enabled: true, nethash: "mocknethash" }),
+			name: () => "TestnetReal",
+		};
+		const options = networksAsOptions([testNetworkNonCustom]);
+		expect(options).toEqual([
+			{
+				isTestNetwork: true,
+				label: `${testNetworkNonCustom.coinName()} ${testNetworkNonCustom.name()}`,
+				value: testNetworkNonCustom.id(),
+			},
+		]);
+	});
+
+	it("networksAsOptions does not add name for custom test network", () => {
+		// This network is both a test network AND custom.
+		const testNetworkCustom = {
+			allows: () => false,
+			// Ensures isCustomNetwork(network) is true
+			coinName: () => "CUST",
+			displayName: () => "Custom Testnet",
+			id: () => "testnet.custom",
+			isTest: () => true,
+			meta: () => ({ enabled: true, nethash: "mocknethashcustom" }),
+			name: () => "MyCustomTest",
+		};
+		const options = networksAsOptions([testNetworkCustom]);
+		expect(options).toEqual([
+			// Label should NOT include network.name() because it is custom.
+			{ isTestNetwork: true, label: testNetworkCustom.coinName(), value: testNetworkCustom.id() },
+		]);
+	});
+
+	it("findNetworkFromSearchParameters finds by nethash", () => {
+		const networks = profile.availableNetworks();
+		const nethash = networks[0].meta().nethash;
+		const parameters = new URLSearchParams({ nethash });
+		expect(findNetworkFromSearchParameters(profile, parameters)).toBe(networks[0]);
+	});
+	it("findNetworkFromSearchParameters finds by network id", () => {
+		const networks = profile.availableNetworks();
+		const id = networks[0].id();
+		const parameters = new URLSearchParams({ network: id });
+		expect(findNetworkFromSearchParameters(profile, parameters)).toBe(networks[0]);
+	});
+	it("findNetworkFromSearchParameters returns undefined if not found", () => {
+		const parameters = new URLSearchParams({ nethash: "zzz" });
+		expect(findNetworkFromSearchParameters(profile, parameters)).toBeUndefined();
+	});
+	it("findNetworkFromSearchParameters returns undefined if no params", () => {
+		const parameters = new URLSearchParams();
+		expect(findNetworkFromSearchParameters(profile, parameters)).toBeUndefined();
 	});
 });
