@@ -2,7 +2,7 @@ import { Contracts, Environment } from "@/app/lib/profiles";
 
 import { NetworkHostType } from "@/domains/setting/pages/Servers/Servers.contracts";
 import { Networks } from "@/app/lib/mainsail";
-import { customNetworks } from "@/utils/server-utils";
+import { CustomNetwork, customNetworks } from "@/utils/server-utils";
 import { groupBy } from "@/app/lib/helpers";
 import { pingServerAddress } from "@/utils/peers";
 import { profileAllEnabledNetworks } from "./network-utils";
@@ -45,7 +45,13 @@ const groupPeersByNetwork = (peers: IPeer[]) =>
 const customPeers = (profile: Contracts.IProfile) =>
 	customNetworks(profile)
 		.filter((network) => network.enabled)
-		.map(Peer);
+		.map((customNetwork: CustomNetwork) =>
+			Peer({
+				address: customNetwork.publicApiEndpoint,
+				network: customNetwork.network,
+				serverType: "full",
+			}),
+		);
 
 const defaultPeers = (profile: Contracts.IProfile) => {
 	const peers: IPeer[] = [];
@@ -55,7 +61,7 @@ const defaultPeers = (profile: Contracts.IProfile) => {
 			if (host.type === "full") {
 				peers.push(
 					Peer({
-						address: host.host ?? "",
+						address: host.host,
 						network,
 						serverType: host.type as NetworkHostType,
 					}),

@@ -1,7 +1,6 @@
 import { describe, it, expect, beforeEach, vi } from "vitest";
 import { env } from "@/utils/testing-library";
-import { shouldUseDarkColors } from "./theme";
-import { shouldUseDimColors } from '@/utils/theme';
+import { shouldUseDarkColors, shouldUseDimColors } from "./theme";
 
 describe("shouldUseDarkColors", () => {
 	beforeEach(() => {
@@ -32,7 +31,6 @@ describe("shouldUseDarkColors", () => {
 		expect(shouldUseDarkColors()).toBe(false);
 	});
 });
-
 
 describe("shouldUseDimColors", () => {
 	beforeEach(() => {

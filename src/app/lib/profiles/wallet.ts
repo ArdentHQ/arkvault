@@ -68,6 +68,7 @@ export class Wallet implements IReadWriteWallet {
 	readonly #confirmKey: IWalletImportFormat;
 	readonly #signatoryFactory: ISignatoryFactory;
 	readonly #messageService: MessageService;
+	readonly #ledgerService: LedgerService;
 
 	public constructor(id: string, initialState: any, profile: IProfile) {
 		this.#profile = profile;
@@ -89,6 +90,7 @@ export class Wallet implements IReadWriteWallet {
 		this.#confirmKey = new WalletImportFormat(this, WalletData.EncryptedConfirmKey);
 		this.#signatoryFactory = new SignatoryFactory(this);
 		this.#messageService = new MessageService();
+		this.#ledgerService = profile.ledger();
 
 		this.#restore();
 	}
@@ -395,9 +397,7 @@ export class Wallet implements IReadWriteWallet {
 
 	/** {@inheritDoc IReadWriteWallet.ledger} */
 	public ledger(): LedgerService {
-		return new LedgerService({
-			config: this.network().config(),
-		});
+		return this.#ledgerService;
 	}
 
 	/** {@inheritDoc IReadWriteWallet.link} */
