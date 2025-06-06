@@ -43,7 +43,7 @@ describe("Environment Context", () => {
 	});
 
 	it("throws if useConfiguration is called without the Provider", () => {
-		const consoleSpy = vi.spyOn(console, "error").mockImplementation(() => { });
+		const consoleSpy = vi.spyOn(console, "error").mockImplementation(() => {});
 
 		expect(() => {
 			renderHook(() => useEnvironmentContext());
@@ -103,7 +103,7 @@ describe("Environment Context", () => {
 
 		act(() => {
 			navigate(`/profiles/${profile.id()}`);
-		})
+		});
 
 		await userEvent.click(screen.getByRole("button"));
 

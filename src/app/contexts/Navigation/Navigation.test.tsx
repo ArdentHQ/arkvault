@@ -19,7 +19,7 @@ describe("Navigation Context", () => {
 	});
 
 	it("should throw without provider", () => {
-		const consoleSpy = vi.spyOn(console, "error").mockImplementation(() => { });
+		const consoleSpy = vi.spyOn(console, "error").mockImplementation(() => {});
 
 		expect(() => {
 			renderHook(() => useNavigationContext());
