@@ -77,6 +77,12 @@ main {
 	}
 }
 
+@media (prefers-color-scheme: dim) {
+	.custom-checkbox:checked:disabled {
+		background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='%23${var(--theme-color-dim-600)}' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");
+	}
+}
+
 .custom-button-wrapper button {
 	@apply w-10 h-10 overflow-hidden rounded-sm text-theme-secondary-700 dark:text-theme-secondary-600 sm:h-11 sm:w-11 not-disabled:hover:bg-theme-primary-100 not-disabled:hover:text-theme-primary-600 dark:not-disabled:hover:bg-theme-secondary-800 dark:not-disabled:hover:text-theme-secondary-100;
 }
@@ -108,7 +114,7 @@ main {
 }
 
 .table-row-selected:hover td {
-	@apply bg-theme-success-100 dark:bg-theme-success-900;
+	@apply bg-theme-success-100 dark:bg-theme-success-900 dim:bg-theme-dim-700;
 }
 
 .table-row:last-of-type td:first-child {
@@ -224,13 +230,16 @@ main {
 	@apply cursor-default;
 }
 
+.tab-list > .tab-button {
+	@apply cursor-pointer;
+}
 
 .tab-list > .tab-button[aria-selected="true"] {
-	@apply bg-white text-theme-secondary-900 dark:bg-theme-dark-800 dark:text-theme-dark-50 disabled:text-theme-secondary-500 dark:disabled:text-theme-secondary-700;
+	@apply bg-white text-theme-secondary-900 dark:bg-theme-dark-800 dark:text-theme-dark-50 disabled:text-theme-secondary-500 dark:disabled:text-theme-secondary-700 dim:text-theme-dim-50 dim:bg-theme-dim-800;
 }
 
 .tab-list > .tab-button[aria-selected="false"] {
-	@apply text-theme-secondary-700 hover:bg-theme-secondary-300 hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:hover:bg-theme-dark-900 dark:hover:text-theme-dark-50 disabled:text-theme-secondary-500 dark:disabled:text-theme-secondary-700;
+	@apply text-theme-secondary-700 hover:bg-theme-secondary-300 hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:hover:bg-theme-dark-900 dark:hover:text-theme-dark-50 disabled:text-theme-secondary-500 dark:disabled:text-theme-secondary-700 dim:text-theme-dim-200 dim-hover:bg-theme-dim-900 dim-hover:text-theme-dim-50;
 }
 
 .add-recipient-wrapper .select-buttons div:first-of-type button {
