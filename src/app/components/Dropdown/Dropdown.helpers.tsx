@@ -48,7 +48,7 @@ const renderOptionGroup = ({
 			)}
 			<ul>
 				{title && (
-					<li className="bg-theme-primary-50 text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200 mx-1 my-1 block rounded-lg px-5 py-1 text-left text-xs font-semibold whitespace-nowrap">
+					<li className="bg-theme-primary-50 text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200 dim:bg-theme-dim-navy-900 dim:text-theme-dim-200 mx-1 my-1 block rounded-lg px-5 py-1 text-left text-xs font-semibold whitespace-nowrap">
 						{title}
 					</li>
 				)}
