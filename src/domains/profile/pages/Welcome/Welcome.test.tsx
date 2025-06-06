@@ -121,7 +121,7 @@ describe("Welcome with deeplink", () => {
 			"?method=vote&coin=Mainsail&nethash=c481dea3dcc13708364e576dff94dd499692b56cbc646d5acd22a3902297dd51&validator=test&vote=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6";
 
 		const { router } = render(<Welcome />, {
-			route
+			route,
 		});
 
 		await waitFor(() => expect(screen.getAllByTestId("ProfileRow")).toHaveLength(2));
@@ -145,7 +145,8 @@ describe("Welcome with deeplink", () => {
 	it("should navigate to verify message page", async () => {
 		const toastWarningSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
 
-		const route = "?method=verify&coin=mainsail&network=mainsail.devnet&message=hello+world&signatory=signatory&signature=signature"
+		const route =
+			"?method=verify&coin=mainsail&network=mainsail.devnet&message=hello+world&signatory=signatory&signature=signature";
 		const { router } = render(<Welcome />, { route });
 
 		await waitFor(() => expect(screen.getAllByTestId("ProfileRow")).toHaveLength(2));
@@ -157,7 +158,9 @@ describe("Welcome with deeplink", () => {
 
 		await waitFor(() => expect(toastWarningSpy).toHaveBeenCalledWith(commonTranslations.VALIDATING_URI));
 
-		await waitFor(() => expect(router.state.location.pathname).toBe(`/profiles/${fixtureProfileId}/verify-message`));
+		await waitFor(() =>
+			expect(router.state.location.pathname).toBe(`/profiles/${fixtureProfileId}/verify-message`),
+		);
 		await waitFor(() => expect(router.state.location.search).toBe(route));
 
 		toastWarningSpy.mockRestore();
@@ -201,8 +204,7 @@ describe("Welcome with deeplink", () => {
 	}); */
 
 	it("should ignore multiple clicks", async () => {
-		const { container } = render(
-			<Welcome />, {
+		const { container } = render(<Welcome />, {
 			route: "/?method=transfer&coin=ark",
 		});
 
@@ -223,12 +225,9 @@ describe("Welcome with deeplink", () => {
 	});
 
 	it("should show a warning if the method is not supported", async () => {
-		const { container } = render(
-			<Welcome />,
-			{
-				route: "/?method=nuke&coin=mainsail&network=mainsail.mainnet",
-			},
-		);
+		const { container } = render(<Welcome />, {
+			route: "/?method=nuke&coin=mainsail&network=mainsail.mainnet",
+		});
 
 		const { result } = renderHook(() => useSearchParametersValidation());
 
@@ -240,12 +239,9 @@ describe("Welcome with deeplink", () => {
 	});
 
 	it("should show a warning if the network and nethash are both missing", async () => {
-		const { container } = render(
-			<Welcome />,
-			{
-				route: "/?method=transfer&coin=mainsail",
-			},
-		);
+		const { container } = render(<Welcome />, {
+			route: "/?method=transfer&coin=mainsail",
+		});
 
 		const { result } = renderHook(() => useSearchParametersValidation());
 
@@ -257,12 +253,9 @@ describe("Welcome with deeplink", () => {
 	});
 
 	it("should show a warning if the network parameter is invalid", async () => {
-		const { container } = render(
-			<Welcome />,
-			{
-				route: "/?method=transfer&coin=mainsail&network=custom",
-			},
-		);
+		const { container } = render(<Welcome />, {
+			route: "/?method=transfer&coin=mainsail&network=custom",
+		});
 
 		const { result } = renderHook(() => useSearchParametersValidation());
 
@@ -275,12 +268,9 @@ describe("Welcome with deeplink", () => {
 
 	it("should show a warning if there is no network for the given nethash", async () => {
 		const nethash = "6e84d08bd299ed97c212c886c98a57e36545c8f5d645ca7eeae63a8bd62d8987";
-		const { container } = render(
-			<Welcome />,
-			{
-				route: `/?method=transfer&coin=mainsail&nethash=${nethash}`,
-			},
-		);
+		const { container } = render(<Welcome />, {
+			route: `/?method=transfer&coin=mainsail&nethash=${nethash}`,
+		});
 
 		const { result } = renderHook(() => useSearchParametersValidation());
 
@@ -300,12 +290,9 @@ describe("Welcome with deeplink", () => {
 		const toastWarningSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
 		const route = "?method=transfer&coin=mainsail&network=mainsail.devnet";
 
-		const { router } = render(
-			<Welcome />,
-			{
-				route,
-			},
-		);
+		const { router } = render(<Welcome />, {
+			route,
+		});
 
 		await waitFor(() => expect(screen.getAllByTestId("ProfileRow")).toHaveLength(2));
 
@@ -326,12 +313,9 @@ describe("Welcome with deeplink", () => {
 		const route =
 			"?method=transfer&coin=mainsail&nethash=c481dea3dcc13708364e576dff94dd499692b56cbc646d5acd22a3902297dd51";
 
-		const { router } = render(
-			<Welcome />,
-			{
-				route,
-			},
-		);
+		const { router } = render(<Welcome />, {
+			route,
+		});
 
 		await waitFor(() => expect(screen.getAllByTestId("ProfileRow")).toHaveLength(2));
 
@@ -350,12 +334,9 @@ describe("Welcome with deeplink", () => {
 	it("should prompt the user to select a profile", async () => {
 		const toastWarningSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
 
-		render(
-			<Welcome />,
-			{
-				route: mainnetDeepLink,
-			},
-		);
+		render(<Welcome />, {
+			route: mainnetDeepLink,
+		});
 
 		await waitFor(() =>
 			expect(toastWarningSpy).toHaveBeenCalledWith(commonTranslations.SELECT_A_PROFILE, { delay: 500 }),
@@ -372,13 +353,10 @@ describe("Welcome with deeplink", () => {
 			values: () => [profile],
 		}));
 
-		const { router } = render(
-			<Welcome />,
-			{
-				// Using transfer page as an example
-				route: "/?method=transfer&coin=mainsail&nethash=c481dea3dcc13708364e576dff94dd499692b56cbc646d5acd22a3902297dd51",
-			},
-		);
+		const { router } = render(<Welcome />, {
+			// Using transfer page as an example
+			route: "/?method=transfer&coin=mainsail&nethash=c481dea3dcc13708364e576dff94dd499692b56cbc646d5acd22a3902297dd51",
+		});
 
 		await waitFor(() => expect(toastWarningSpy).toHaveBeenCalledWith(commonTranslations.VALIDATING_URI));
 
@@ -395,12 +373,9 @@ describe("Welcome with deeplink", () => {
 	])("should clear deeplink and do not show a warning toast in %s page", async (page, path) => {
 		const toastWarningSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
 
-		const { navigate } = render(
-			<Welcome />,
-			{
-				route: mainnetDeepLink,
-			},
-		);
+		const { navigate } = render(<Welcome />, {
+			route: mainnetDeepLink,
+		});
 
 		await waitFor(() => {
 			expect(toastWarningSpy).toHaveBeenCalledWith(commonTranslations.SELECT_A_PROFILE, { delay: 500 });
@@ -418,12 +393,9 @@ describe("Welcome with deeplink", () => {
 	it("should clear the profile validation timeout", () => {
 		const clearTimeoutSpy = vi.spyOn(window, "clearTimeout");
 
-		const { unmount } = render(
-			<Welcome />,
-			{
-				route: mainnetDeepLink,
-			},
-		);
+		const { unmount } = render(<Welcome />, {
+			route: mainnetDeepLink,
+		});
 
 		unmount();
 
@@ -437,12 +409,9 @@ describe("Welcome with deeplink", () => {
 		const route =
 			"?method=sign&coin=mainsail&nethash=c481dea3dcc13708364e576dff94dd499692b56cbc646d5acd22a3902297dd51&message=message+to+sign";
 
-		const { router } = render(
-			<Welcome />,
-			{
-				route,
-			},
-		);
+		const { router } = render(<Welcome />, {
+			route,
+		});
 
 		await waitFor(() => expect(screen.getAllByTestId("ProfileRow")).toHaveLength(2));
 
@@ -455,9 +424,7 @@ describe("Welcome with deeplink", () => {
 		await waitFor(() =>
 			expect(router.state.location.pathname).toHaveBeenCalledWith(`/profiles/${fixtureProfileId}/sign-message`),
 		);
-		await waitFor(() =>
-			expect(router.state.location.search).toHaveBeenCalledWith(route),
-		);
+		await waitFor(() => expect(router.state.location.search).toHaveBeenCalledWith(route));
 
 		toastWarningSpy.mockRestore();
 	});
@@ -469,12 +436,9 @@ describe("Welcome with deeplink", () => {
 		const mockProfiles = vi.spyOn(env.profiles(), "values").mockReturnValue([profile]);
 		const mockUsesPassword = vi.spyOn(profile, "usesPassword").mockReturnValue(true);
 
-		const { container, router } = render(
-			<Welcome />,
-			{
-				route: "/?method=vote&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&validator=test",
-			},
-		);
+		const { container, router } = render(<Welcome />, {
+			route: "/?method=vote&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&validator=test",
+		});
 
 		expect(container).toBeInTheDocument();
 
@@ -583,11 +547,11 @@ describe("Welcome", () => {
 	it("should navigate to previous page with correct password", async () => {
 		const profile = env.profiles().findById(getPasswordProtectedProfileId());
 
-		const initialRoute = `/profiles/${profile.id()}/dashboard`
+		const initialRoute = `/profiles/${profile.id()}/dashboard`;
 		const { asFragment, navigate, router } = render(<Welcome />, { route: initialRoute });
 
 		navigate("/", {
-			from: initialRoute
+			from: initialRoute,
 		});
 
 		await expect(screen.findAllByTestId("ProfileRow")).resolves.toHaveLength(2);
@@ -600,7 +564,7 @@ describe("Welcome", () => {
 
 		await waitFor(() => {
 			expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
-		})
+		});
 
 		await submitPassword();
 

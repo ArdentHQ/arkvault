@@ -112,7 +112,7 @@ export function renderWithForm(
 
 interface RenderWithRouterOptions {
 	route?: string;
-	routes?: Array<{ path: string; element: React.ReactElement; }>;
+	routes?: Array<{ path: string; element: React.ReactElement }>;
 	initialEntries?: string[];
 	withProviders?: boolean;
 	withProfileSynchronizer?: boolean;
@@ -131,7 +131,7 @@ const renderWithRouter = (
 		withProviders?: boolean;
 		withProfileSynchronizer?: boolean;
 		profileSynchronizerOptions?: Record<string, any>;
-	} = {}
+	} = {},
 ) => {
 	const router = createMemoryRouter(
 		[
@@ -142,7 +142,7 @@ const renderWithRouter = (
 		],
 		{
 			initialEntries: [route],
-		}
+		},
 	);
 
 	const ProfileSynchronizerWrapper = ({ children }: { children: React.ReactNode }) =>
@@ -169,9 +169,13 @@ const renderWithRouter = (
 	};
 };
 
-export const createTestRouter = (routes: Array<{ path: string; element: React.ReactElement; }>, initialEntries?: string[]) => createMemoryRouter(routes, {
-	initialEntries: initialEntries || ["/"],
-});
+export const createTestRouter = (
+	routes: Array<{ path: string; element: React.ReactElement }>,
+	initialEntries?: string[],
+) =>
+	createMemoryRouter(routes, {
+		initialEntries: initialEntries || ["/"],
+	});
 
 export * from "@testing-library/react";
 
