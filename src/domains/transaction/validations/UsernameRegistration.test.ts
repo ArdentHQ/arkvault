@@ -5,7 +5,6 @@ import { usernameRegistration } from "./UsernameRegistration";
 import { env, getMainsailProfileId } from "@/utils/testing-library";
 import { requestMock, server } from "@/tests/mocks/server";
 import { Networks } from "@/app/lib/mainsail";
-import { MutableRefObject } from "react";
 import { Environment } from "@/app/lib/profiles";
 import { http, HttpResponse } from "msw";
 import { renderHook } from "@testing-library/react";
@@ -15,7 +14,7 @@ let profile: IProfile;
 let t: (key: string, options?: any) => string;
 let network: Networks.Network;
 let environment: Environment;
-let controller: MutableRefObject<AbortController | undefined>;
+let controller: any;
 
 describe("Username Registration Validation", () => {
 	beforeAll(async () => {
