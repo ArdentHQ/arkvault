@@ -62,7 +62,7 @@ const getVariant = (variant?: ButtonVariant, theme?: Theme, disabled?: boolean, 
 		"primary-transparent": () => `
 			hover:text-theme-primary-700  dark:hover:text-theme-dark-50
 			hover:bg-theme-primary-200 dark:hover:bg-theme-dark-700
-			text-theme-secondary-700 dark:text-theme-dark-200
+			text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50
 		`,
 		reverse: () => `
 					bg-theme-primary-reverse-100 text-theme-primary-reverse-600
@@ -76,7 +76,7 @@ const getVariant = (variant?: ButtonVariant, theme?: Theme, disabled?: boolean, 
 					dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900
 				`,
 		"secondary-icon": () => `text-theme-secondary-700 bg-transparent
-		dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white`,
+		dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700`,
 		warning: () => `
 			bg-theme-warning-100 text-theme-warning-700
 			dark:bg-theme-warning-600 dark:text-white
