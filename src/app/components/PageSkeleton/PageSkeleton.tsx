@@ -27,6 +27,7 @@ export const PageSkeleton = () => {
 										<ThemeIcon
 											darkIcon="PersonDark"
 											lightIcon="PersonLight"
+											dimIcon="PersonDim"
 											dimensions={[24, 24]}
 										/>
 									</div>

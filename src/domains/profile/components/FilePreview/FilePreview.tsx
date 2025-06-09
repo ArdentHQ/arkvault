@@ -14,9 +14,9 @@ interface FilePreviewProperties {
 
 export const FilePreviewPlain = ({ file, variant }: { file: ReadableFile; variant?: FilePreviewVariant }) => {
 	const fileTypeIcon: Record<string, string[]> = {
-		csv: ["ExtensionCsv", "ExtensionCsv"],
-		json: ["ExtensionJson", "ExtensionJson"],
-		wwe: ["ExtensionWweDark", "ExtensionWweLight"],
+		csv: ["ExtensionCsv", "ExtensionCsv", "ExtensionCsv"],
+		json: ["ExtensionJson", "ExtensionJson", "ExtensionJson"],
+		wwe: ["ExtensionWweDark", "ExtensionWweLight", "ExtensionWweDim"],
 	};
 
 	const icons = file.extension in fileTypeIcon ? fileTypeIcon[file.extension] : undefined;
@@ -24,7 +24,12 @@ export const FilePreviewPlain = ({ file, variant }: { file: ReadableFile; varian
 	return (
 		<div className="flex items-center justify-between space-x-4" data-testid="FilePreviewPlain">
 			<div className="flex grow items-center space-x-2">
-				<ThemeIcon darkIcon={icons ? icons[0] : "File"} lightIcon={icons ? icons[1] : "File"} size="lg" />
+				<ThemeIcon
+					darkIcon={icons ? icons[0] : "File"}
+					lightIcon={icons ? icons[1] : "File"}
+					dimIcon={icons ? icons[2] : "File"}
+					size="lg"
+				/>
 				<div className="w-0 flex-1 truncate text-sm leading-[17px] font-semibold sm:text-lg sm:leading-[21px]">
 					{file.name}
 				</div>
