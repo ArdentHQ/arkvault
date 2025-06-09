@@ -72,38 +72,38 @@ describe("Transaction utils", () => {
 	describe("isContractDeployment", () => {
 		it("should return true for a contract deployment", () => {
 			const transaction = {
-				isValidatorRegistration: () => false,
-				isValidatorResignation: () => false,
-				isVote: () => false,
 				isUnvote: () => false,
 				isUsernameRegistration: () => false,
 				isUsernameResignation: () => false,
-				to: () => undefined,
+				isValidatorRegistration: () => false,
+				isValidatorResignation: () => false,
+				isVote: () => false,
+				to: () => {},
 			};
 			expect(isContractDeployment(transaction as any)).toBe(true);
 		});
 
 		it("should return false for a contract transaction", () => {
 			const transaction = {
-				isValidatorRegistration: () => true,
-				isValidatorResignation: () => false,
-				isVote: () => false,
 				isUnvote: () => false,
 				isUsernameRegistration: () => false,
 				isUsernameResignation: () => false,
-				to: () => undefined,
+				isValidatorRegistration: () => true,
+				isValidatorResignation: () => false,
+				isVote: () => false,
+				to: () => {},
 			};
 			expect(isContractDeployment(transaction as any)).toBe(false);
 		});
 
 		it("should return false for a transfer transaction", () => {
 			const transaction = {
-				isValidatorRegistration: () => false,
-				isValidatorResignation: () => false,
-				isVote: () => false,
 				isUnvote: () => false,
 				isUsernameRegistration: () => false,
 				isUsernameResignation: () => false,
+				isValidatorRegistration: () => false,
+				isValidatorResignation: () => false,
+				isVote: () => false,
 				to: () => "some-address",
 			};
 			expect(isContractDeployment(transaction as any)).toBe(false);
