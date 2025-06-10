@@ -196,7 +196,7 @@ export const Transactions = memo(function Transactions({
 								options={filterOptions}
 								onSelect={({ value }) => activeModeChangeHandler(value)}
 								toggleContent={(isOpen) => (
-									<div className="border-theme-secondary-300 text-theme-secondary-900 dark:border-theme-dark-700 dark:text-theme-dark-50 flex h-11 w-full cursor-pointer items-center justify-between space-x-4 overflow-hidden rounded border p-3 sm:px-4 sm:py-3">
+									<div className="border-theme-secondary-300 text-theme-secondary-900 dark:border-theme-dark-700 dark:text-theme-dark-50 dim:border-theme-dim-200 flex h-11 w-full cursor-pointer items-center justify-between space-x-4 overflow-hidden rounded border p-3 sm:px-4 sm:py-3">
 										<span className="text-base leading-tight font-semibold">
 											{selectedFilterLabel}
 										</span>
@@ -223,9 +223,9 @@ export const Transactions = memo(function Transactions({
 			)}
 
 			<TableWrapper className={cn({ "rounded-b-none! border-none": showMore })}>
-				<div className="border-b-theme-secondary-300 dark:border-b-theme-secondary-800 flex w-full flex-col items-start justify-between gap-3 border-b-0 pt-3 pb-4 sm:flex-row md:items-center md:border-b md:px-6 md:py-4">
+				<div className="border-b-theme-secondary-300 dark:border-b-theme-secondary-800 dim:border-b-theme-dim-700 flex w-full flex-col items-start justify-between gap-3 border-b-0 pt-3 pb-4 sm:flex-row md:items-center md:border-b md:px-6 md:py-4">
 					{!isLoadingTransactions && (
-						<span className="text-theme-secondary-700 dark:text-theme-secondary-500 text-base leading-5 font-semibold">
+						<span className="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-base leading-5 font-semibold">
 							{t("COMMON.SHOWING_RESULTS", {
 								count: selectedTransactionTypes?.length ? transactions.length : 0,
 							})}
@@ -234,11 +234,11 @@ export const Transactions = memo(function Transactions({
 
 					{isLoadingTransactions && (
 						<div className="flex items-center space-x-1.5">
-							<span className="text-theme-secondary-700 dark:text-theme-secondary-500 text-base leading-5 font-semibold">
+							<span className="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-base leading-5 font-semibold">
 								{t("COMMON.SHOWING")}
 							</span>
 							<Skeleton width={40} height={20} />
-							<span className="text-theme-secondary-700 dark:text-theme-secondary-500 text-base leading-5 font-semibold">
+							<span className="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-base leading-5 font-semibold">
 								{t("COMMON.RESULTS").toLowerCase()}
 							</span>
 						</div>
@@ -269,7 +269,7 @@ export const Transactions = memo(function Transactions({
 						{selectedTransactionTypes?.length ? (
 							<div
 								data-testid="Transactions__no-results"
-								className="text-theme-secondary-text dark:border-theme-secondary-800 mt-3 mb-1 px-6 text-center leading-5 md:px-6"
+								className="text-theme-secondary-text dark:border-theme-secondary-800 dim:text-theme-dim-200 mt-3 mb-1 px-6 text-center leading-5 md:px-6"
 							>
 								<Trans
 									i18nKey="DASHBOARD.LATEST_TRANSACTIONS.NO_RESULTS"
@@ -282,7 +282,7 @@ export const Transactions = memo(function Transactions({
 						) : (
 							<div
 								data-testid="Transactions__no-filters-selected"
-								className="text-theme-secondary-text dark:border-theme-secondary-800 mt-3 mb-1 px-6 text-center leading-5 md:px-6"
+								className="text-theme-secondary-text dark:border-theme-secondary-800 dim:text-theme-dim-200 mt-3 mb-1 px-6 text-center leading-5 md:px-6"
 							>
 								{emptyText || t("TRANSACTION.NO_FILTERS_SELECTED")}
 							</div>
