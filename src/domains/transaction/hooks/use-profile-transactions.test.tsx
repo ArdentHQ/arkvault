@@ -96,6 +96,31 @@ describe("useProfileTransactions", () => {
 		sentMock.mockRestore();
 	});
 
+	it("should update filters and fetch new data with received mode", async () => {
+		const { result } = renderHook(() => useProfileTransactions({ profile, wallets: profile.wallets().values() }), {
+			wrapper,
+		});
+
+		act(() => {
+			result.current.updateFilters({ activeMode: "all" });
+		});
+
+		await waitFor(() => expect(result.current.transactions).toHaveLength(10));
+
+		const receivedMock = vi.spyOn(profile.transactionAggregate(), "received").mockResolvedValue({
+			hasMorePages: () => false,
+			items: () => [],
+		});
+
+		act(() => {
+			result.current.updateFilters({ activeMode: "received" });
+		});
+
+		await waitFor(() => expect(result.current.transactions).toHaveLength(0));
+
+		receivedMock.mockRestore();
+	});
+
 	it("should hide unconfirmed transactions", async () => {
 		const transactions = await profile.transactionAggregate().all();
 		const items = transactions.items();
