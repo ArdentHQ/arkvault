@@ -366,14 +366,14 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 		activeTransactionType,
 		fetchMore,
 		hasEmptyResults,
-		hasFilter: (selectedTransactionTypes?.length ?? 0) < allTransactionTypes.length,
+		hasFilter: selectedTransactionTypes.length < allTransactionTypes.length,
 		hasMore,
 		isLoadingMore,
 		isLoadingTransactions,
 		selectedTransactionTypes,
 		setSortBy,
 		sortBy,
-		transactions: selectedTransactionTypes?.length ? transactions : [],
+		transactions: selectedTransactionTypes.length ? transactions : [],
 		updateFilters,
 	};
 };
