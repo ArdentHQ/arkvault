@@ -48,7 +48,7 @@ const ProfilesSlider = (properties: ProfilesSliderProperties) => {
 		arrows: false,
 		autoplay: false,
 		customPaging: () => (
-			<button className="border-theme-navy-200 dark:border-theme-secondary-600 dark:hover:bg-theme-secondary-600 hover:bg-theme-navy-700 mt-3 h-3 w-3 rounded-full border-2 hover:border-transparent dark:hover:border-transparent" />
+			<button className="border-theme-navy-200 dark:border-theme-secondary-600 dark:hover:bg-theme-secondary-600 hover:bg-theme-navy-700 dim:border-theme-dim-200 dim-hover:border-theme-dim-navy-600 dim-hover:bg-theme-dim-navy-600 mt-3 h-3 w-3 rounded-full border-2 hover:border-transparent dark:hover:border-transparent" />
 		),
 		dots: true,
 		dotsClass: "welcome-slider-dots",

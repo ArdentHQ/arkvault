@@ -33,6 +33,8 @@ import CreateAddressDark from "./create-address-dark.svg?react";
 import ImportAddressDark from "./import-address-dark.svg?react";
 import CreateAddressLight from "./create-address-light.svg?react";
 import ImportAddressLight from "./import-address-light.svg?react";
+import CreateAddressDim from "./create-address-dim.svg?react";
+import ImportAddressDim from "./import-address-dim.svg?react";
 import { wallet } from "@/domains/wallet/images";
 import { transaction } from "@/domains/transaction/images";
 import { profile } from "@/domains/profile/images";
@@ -47,6 +49,7 @@ export const images = {
 	common: {
 		ARKVaultLogo,
 		CreateAddressDark,
+		CreateAddressDim,
 		CreateAddressLight,
 		DeleteBannerDark,
 		DeleteBannerLight,
@@ -64,6 +67,7 @@ export const images = {
 		IOsInstructionsStep3Dark,
 		IOsInstructionsStep3Light,
 		ImportAddressDark,
+		ImportAddressDim,
 		ImportAddressLight,
 		InfoDark,
 		InfoLight,

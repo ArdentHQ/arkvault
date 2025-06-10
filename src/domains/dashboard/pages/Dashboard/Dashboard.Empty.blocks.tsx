@@ -8,10 +8,10 @@ export const Header = () => {
 	const { t } = useTranslation();
 	return (
 		<>
-			<h2 className="text-theme-secondary-900 dark:text-theme-dark-50 font-semibold sm:text-2xl md:text-4xl">
+			<h2 className="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 font-semibold sm:text-2xl md:text-4xl">
 				{t("DASHBOARD.WELCOME_TITLE")}
 			</h2>
-			<p className="text-theme-secondary-700 dark:text-theme-dark-200">
+			<p className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200">
 				{t("DASHBOARD.CREATE_OR_IMPORT_DESCRIPTION")}
 			</p>
 		</>
@@ -75,25 +75,25 @@ export const DashboardSetupAddressCard = ({
 }) => (
 	<button
 		className={cn(
-			"group border-theme-secondary-300 hover:border-theme-primary-50 hover:bg-theme-primary-50 dark:border-theme-dark-700 dark:bg-theme-dark-900 dark:hover:border-theme-dark-950 dark:hover:bg-theme-dark-950 rounded border bg-white p-4 transition-all md:rounded-xl md:p-8",
+			"group border-theme-secondary-300 hover:border-theme-primary-50 hover:bg-theme-primary-50 dark:border-theme-dark-700 dark:bg-theme-dark-900 dark:hover:border-theme-dark-950 dark:hover:bg-theme-dark-950 dim:border-theme-dim-700 dim:bg-theme-dim-900 dim-hover:bg-theme-dim-950 cursor-pointer rounded border bg-white p-4 transition-all md:rounded-xl md:p-8",
 		)}
 		type="button"
 		onClick={onClick}
 	>
 		<h3
 			className={cn(
-				"text-theme-secondary-900 group-hover:text-theme-primary-900 dark:text-theme-dark-50 dark:group-hover:text-theme-dark-50 mb-2 text-left text-lg leading-4 font-semibold md:text-2xl md:leading-7.5",
+				"text-theme-secondary-900 group-hover:text-theme-primary-900 dark:text-theme-dark-50 dark:group-hover:text-theme-dark-50 dim:text-theme-dim-50 mb-2 text-left text-lg leading-4 font-semibold md:text-2xl md:leading-7.5",
 			)}
 		>
 			{title}
 		</h3>
-		<p className="text-theme-secondary-700 dark:text-theme-dark-200 mb-6 text-left text-sm leading-5">
+		<p className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mb-6 text-left text-sm leading-5">
 			{description}
 		</p>
 		<div className="mx-auto my-6 flex max-w-56 justify-center md:max-w-full">
 			<Image name={image} />
 		</div>
-		<div className="bg-theme-primary-100 text-theme-primary-600 dark:border-theme-dark-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:group-hover:border-theme-dark-navy-700 dark:group-hover:bg-theme-dark-navy-700 group-hover:bg-theme-primary-800 w-full rounded py-3 text-base leading-5 font-semibold transition-all duration-100 ease-linear group-hover:text-white dark:border">
+		<div className="bg-theme-primary-100 text-theme-primary-600 dark:border-theme-dark-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:group-hover:border-theme-dark-navy-700 dark:group-hover:bg-theme-dark-navy-700 group-hover:bg-theme-primary-800 dim:bg-theme-dim-navy-900 dim:text-theme-dim-50 dim:group-hover:text-white dim:group-hover:bg-theme-dim-navy-700 dim:group-hover:border-theme-dim-navy-700 dim:border-theme-dim-navy-900 w-full rounded py-3 text-base leading-5 font-semibold transition-all duration-100 ease-linear group-hover:text-white dark:border">
 			{buttonText}
 		</div>
 	</button>
