@@ -43,15 +43,15 @@ describe("Authentication", () => {
 	});
 
 	it("should validate mnemonic", async () => {
-		const fromWifMock = vi
-			.spyOn(AddressService.prototype, "fromWIF")
+		const fromMnemonicMock = vi
+			.spyOn(AddressService.prototype, "fromMnemonic")
 			.mockReturnValue({ address: wallet.address(), type: "bip39" });
 
 		const mnemonic = authentication(translationMock).mnemonic(wallet);
 
 		await expect(mnemonic.validate.matchSenderAddress(MNEMONICS[0])).toBe(true);
 
-		fromWifMock.mockRestore();
+		fromMnemonicMock.mockRestore();
 	});
 
 	it("should fail mnemonic validation", async () => {
@@ -62,8 +62,22 @@ describe("Authentication", () => {
 		);
 	});
 
+	it("should fail mnemonic validation for invalid mnemonic", async () => {
+		const fromMnemonicMock = vi.spyOn(AddressService.prototype, "fromMnemonic").mockImplementation(() => {
+			throw new Error("invalid");
+		});
+
+		const mnemonic = authentication(translationMock).mnemonic(wallet);
+
+		await expect(mnemonic.validate.matchSenderAddress("invalid mnemonic")).toBe(
+			"COMMON.INPUT_PASSPHRASE.VALIDATION.MNEMONIC_NOT_MATCH_WALLET",
+		);
+
+		fromMnemonicMock.mockRestore();
+	});
+
 	it("should validate secret", async () => {
-		const fromWifMock = vi
+		const fromSecretMock = vi
 			.spyOn(AddressService.prototype, "fromSecret")
 			.mockReturnValue({ address: wallet.address(), type: "secret" });
 
@@ -71,7 +85,7 @@ describe("Authentication", () => {
 
 		await expect(secret.validate("secret")).toBe(true);
 
-		fromWifMock.mockRestore();
+		fromSecretMock.mockRestore();
 	});
 
 	it("should fail secret validation if the secret belongs to another address", async () => {
@@ -87,8 +101,8 @@ describe("Authentication", () => {
 	});
 
 	it("should validate encryption password with BIP39", async () => {
-		const fromWifMock = vi
-			.spyOn(AddressService.prototype, "fromWIF")
+		const fromMnemonicMock = vi
+			.spyOn(AddressService.prototype, "fromMnemonic")
 			.mockReturnValue({ address: walletWithPassword.address(), type: "bip39" });
 
 		const walletWifMock = vi.spyOn(walletWithPassword.signingKey(), "get").mockReturnValue(MNEMONICS[1]);
@@ -97,24 +111,24 @@ describe("Authentication", () => {
 
 		await expect(encryptionPassword.validate("password")).resolves.toBe(true);
 
-		fromWifMock.mockRestore();
+		fromMnemonicMock.mockRestore();
 		walletWifMock.mockRestore();
 	});
 
 	it("should validate encryption password with secret", async () => {
 		const BIP39Mock = vi.spyOn(BIP39, "validate").mockReturnValue(false);
 
-		const fromWifMock = vi
-			.spyOn(AddressService.prototype, "fromWIF")
-			.mockReturnValue({ address: wallet.address(), type: "bip39" });
+		const fromSecretMock = vi
+			.spyOn(AddressService.prototype, "fromSecret")
+			.mockReturnValue({ address: walletWithPassword.address(), type: "secret" });
 
-		const walletWifMock = vi.spyOn(walletWithPassword.signingKey(), "get").mockReturnValue(MNEMONICS[1]);
+		const walletWifMock = vi.spyOn(walletWithPassword.signingKey(), "get").mockReturnValue("not a mnemonic");
 
 		const encryptionPassword = authentication(translationMock).encryptionPassword(walletWithPassword);
 
 		await expect(encryptionPassword.validate("password")).resolves.toBe(true);
 
-		fromWifMock.mockRestore();
+		fromSecretMock.mockRestore();
 		walletWifMock.mockRestore();
 		BIP39Mock.mockRestore();
 	});
