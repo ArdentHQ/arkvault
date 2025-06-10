@@ -13,6 +13,30 @@ const users = [
 	{ name: "Alice", age: 25, score: 90 },
 ];
 
+const basicComparer = (a: number, b: number): number => {
+	if (a < b) {
+		return -1;
+	}
+	if (a > b) {
+		return 1;
+	}
+	return 0;
+};
+
+const lengthComparer = (a: string, b: string): number => {
+	const lenA = a?.length ?? 0;
+	const lenB = b?.length ?? 0;
+	if (lenA < lenB) {
+		return -1;
+	}
+	if (lenA > lenB) {
+		return 1;
+	}
+	return 0;
+};
+
+const localeComparer = (a: any, b: any): number => String(a).localeCompare(String(b));
+
 describe("sort", () => {
 	it("should not sort in place by default", () => {
 		const arr = [...unsorted];
@@ -74,6 +98,13 @@ describe("sort", () => {
 			const sortedArr = sort(arr).asc();
 			expect(sortedArr).toEqual([1, 2, 3, null, undefined]); // nulls are pushed to the end
 		});
+
+		it("should sort by multiple properties with a comparer", () => {
+			const sorted = sort(users).by([{ asc: "age" }, { desc: "score", comparer: basicComparer }]);
+			const johnIndex = sorted.findIndex((u) => u.name === "John");
+			const doeIndex = sorted.findIndex((u) => u.name === "Doe");
+			expect(johnIndex).toBeLessThan(doeIndex);
+		});
 	});
 
 	describe("desc", () => {
@@ -134,8 +165,7 @@ describe("sort", () => {
 		});
 
 		it("should sort by multiple properties with a comparer", () => {
-			const customComparer = (a, b) => (a < b ? -1 : a > b ? 1 : 0);
-			const sorted = sort(users).by([{ asc: "age" }, { desc: "score", comparer: customComparer }]);
+			const sorted = sort(users).by([{ asc: "age" }, { desc: "score", comparer: basicComparer }]);
 			const johnIndex = sorted.findIndex((u) => u.name === "John");
 			const doeIndex = sorted.findIndex((u) => u.name === "Doe");
 			expect(johnIndex).toBeLessThan(doeIndex);
@@ -166,15 +196,7 @@ describe("sort", () => {
 
 	describe("Custom Comparer", () => {
 		it("should use custom comparer with asc", () => {
-			const customComparer = (a, b) => {
-				const lenA = a ? a.length : 0;
-				const lenB = b ? b.length : 0;
-				if (lenA < lenB) return -1;
-				if (lenA > lenB) return 1;
-				return 0;
-			};
-
-			const sorter = createNewSortInstance({ comparer: customComparer });
+			const sorter = createNewSortInstance({ comparer: lengthComparer });
 			const strArr = ["apple", "banana", "kiwi", "pear"]; // 5, 6, 4, 4
 
 			const sortedAsc = sorter(strArr).asc();
@@ -182,9 +204,8 @@ describe("sort", () => {
 		});
 
 		it("should use custom comparer with object sorter", () => {
-			const customComparer = (a, b) => String(a).localeCompare(String(b));
 			const data = [{ val: "c" }, { val: "b" }, { val: "a" }];
-			const sortedData = sort(data).by({ asc: "val", comparer: customComparer });
+			const sortedData = sort(data).by({ asc: "val", comparer: localeComparer });
 			expect(sortedData.map((d) => d.val)).toEqual(["a", "b", "c"]);
 		});
 	});
