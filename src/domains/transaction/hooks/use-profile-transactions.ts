@@ -20,7 +20,7 @@ interface TransactionsState {
 interface TransactionFilters {
 	activeMode?: string;
 	activeTransactionType?: any;
-	selectedTransactionTypes: string[];
+	selectedTransactionTypes?: string[];
 	timestamp?: number;
 }
 
