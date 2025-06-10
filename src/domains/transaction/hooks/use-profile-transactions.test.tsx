@@ -5,6 +5,7 @@ import { useProfileTransactions } from "./use-profile-transactions";
 import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
 import { env, getDefaultProfileId, syncValidators } from "@/utils/testing-library";
 import * as hooksMock from "@/app/hooks";
+import { expect } from "vitest";
 
 const wrapper = ({ children }: any) => (
 	<EnvironmentProvider env={env}>
@@ -198,6 +199,37 @@ describe("useProfileTransactions", () => {
 
 		await waitFor(() => expect(result.current.isLoadingMore).toBe(false));
 		await waitFor(() => expect(result.current.transactions).toHaveLength(1));
+
+		useSynchronizerSpy.mockRestore();
+
+		allMock.mockRestore();
+	});
+
+	it("checks for new transactions and handles empty result", async () => {
+		const useSynchronizerSpy = vi.spyOn(hooksMock, "useSynchronizer").mockImplementation((jobs) => {
+			const start = async () => {
+				await jobs[0].callback();
+			};
+
+			return {
+				start: start,
+				stop: vi.fn(),
+			};
+		});
+
+		const transactions = await profile.transactionAggregate().all();
+
+		const allMock = vi.spyOn(profile.transactionAggregate(), "all").mockResolvedValue({
+			hasMorePages: () => false,
+			items: () => [],
+		});
+
+		const { result } = renderHook(() => useProfileTransactions({ profile, wallets: profile.wallets().values() }), {
+			wrapper,
+		});
+
+		await waitFor(() => expect(result.current.isLoadingMore).toBe(false));
+		await waitFor(() => expect(result.current.transactions).toHaveLength(0));
 
 		useSynchronizerSpy.mockRestore();
 
