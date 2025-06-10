@@ -48,7 +48,7 @@ main {
 }
 
 .welcome-slider-dots .slick-active > button {
-	@apply border-transparent bg-theme-navy-500 hover:bg-theme-navy-500;
+	@apply border-transparent bg-theme-navy-500 hover:bg-theme-navy-500 dim:bg-theme-dim-navy-600 dim:border-theme-dim-navy-600;
 }
 
 .with-x-padding > table > tbody > tr:not(:last-child) td:first-child::after {

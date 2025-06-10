@@ -13,20 +13,20 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
         class="mx-auto px-6 md:px-10 lg:container"
       >
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 md:overflow-hidden md:rounded-xl md:border"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 md:overflow-hidden md:rounded-xl md:border"
         >
           <div
             class="flex flex-col"
           >
             <div
-              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
               data-testid="SearchableTableWrapper__search-input"
             >
               <div
                 class="pointer-events-none absolute left-0 items-center pl-6"
               >
                 <div
-                  class="text-theme-secondary-500"
+                  class="text-theme-secondary-500 dim:text-theme-dim-500"
                 >
                   <div
                     style="height: 16px; width: 16px;"
@@ -107,7 +107,7 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
                       role="row"
                     >
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border w-1"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border w-1"
                         colspan="1"
                         data-testid="table__th--0"
                         role="columnheader"
@@ -132,7 +132,7 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
                             </span>
                           </div>
                           <div
-                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                           >
                             <div
                               class="transition-transform rotate-180"
@@ -165,7 +165,7 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black w-3/4 sm:w-auto, no-border first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 w-3/4 sm:w-auto, no-border first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--1"
                         role="columnheader"
@@ -181,7 +181,7 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
                             Validator
                           </div>
                           <div
-                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                           >
                             <div
                               class="transition-transform rotate-180"
@@ -214,7 +214,7 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--2"
                         role="columnheader"
@@ -230,7 +230,7 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--3"
                         role="columnheader"
@@ -246,7 +246,7 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border"
                         colspan="1"
                         data-testid="table__th--4"
                         role="columnheader"
@@ -6081,20 +6081,20 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
         class="mx-auto px-6 md:px-10 lg:container"
       >
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 md:overflow-hidden md:rounded-xl md:border"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 md:overflow-hidden md:rounded-xl md:border"
         >
           <div
             class="flex flex-col"
           >
             <div
-              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
               data-testid="SearchableTableWrapper__search-input"
             >
               <div
                 class="pointer-events-none absolute left-0 items-center pl-6"
               >
                 <div
-                  class="text-theme-secondary-500"
+                  class="text-theme-secondary-500 dim:text-theme-dim-500"
                 >
                   <div
                     style="height: 16px; width: 16px;"
@@ -6175,7 +6175,7 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
                       role="row"
                     >
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border w-1"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border w-1"
                         colspan="1"
                         data-testid="table__th--0"
                         role="columnheader"
@@ -6200,7 +6200,7 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
                             </span>
                           </div>
                           <div
-                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                           >
                             <div
                               class="transition-transform rotate-180"
@@ -6233,7 +6233,7 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black w-3/4 sm:w-auto, no-border first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 w-3/4 sm:w-auto, no-border first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--1"
                         role="columnheader"
@@ -6249,7 +6249,7 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
                             Validator
                           </div>
                           <div
-                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                           >
                             <div
                               class="transition-transform rotate-180"
@@ -6282,7 +6282,7 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--2"
                         role="columnheader"
@@ -6298,7 +6298,7 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--3"
                         role="columnheader"
@@ -6314,7 +6314,7 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--4"
                         role="columnheader"
@@ -6367,7 +6367,7 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border"
                         colspan="1"
                         data-testid="table__th--5"
                         role="columnheader"
@@ -13335,20 +13335,20 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
         class="mx-auto px-6 md:px-10 lg:container"
       >
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 md:overflow-hidden md:rounded-xl md:border"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 md:overflow-hidden md:rounded-xl md:border"
         >
           <div
             class="flex flex-col"
           >
             <div
-              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
               data-testid="SearchableTableWrapper__search-input"
             >
               <div
                 class="pointer-events-none absolute left-0 items-center pl-6"
               >
                 <div
-                  class="text-theme-secondary-500"
+                  class="text-theme-secondary-500 dim:text-theme-dim-500"
                 >
                   <div
                     style="height: 16px; width: 16px;"
@@ -13429,7 +13429,7 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
                       role="row"
                     >
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border w-1"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border w-1"
                         colspan="1"
                         data-testid="table__th--0"
                         role="columnheader"
@@ -13454,7 +13454,7 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
                             </span>
                           </div>
                           <div
-                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                           >
                             <div
                               class="transition-transform rotate-180"
@@ -13487,7 +13487,7 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black w-3/4 sm:w-auto, no-border first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 w-3/4 sm:w-auto, no-border first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--1"
                         role="columnheader"
@@ -13503,7 +13503,7 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
                             Validator
                           </div>
                           <div
-                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                           >
                             <div
                               class="transition-transform rotate-180"
@@ -13536,7 +13536,7 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--2"
                         role="columnheader"
@@ -13552,7 +13552,7 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--3"
                         role="columnheader"
@@ -13568,7 +13568,7 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border"
                         colspan="1"
                         data-testid="table__th--4"
                         role="columnheader"
@@ -14150,20 +14150,20 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
         class="mx-auto px-6 md:px-10 lg:container"
       >
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 md:overflow-hidden md:rounded-xl md:border"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 md:overflow-hidden md:rounded-xl md:border"
         >
           <div
             class="flex flex-col"
           >
             <div
-              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
               data-testid="SearchableTableWrapper__search-input"
             >
               <div
                 class="pointer-events-none absolute left-0 items-center pl-6"
               >
                 <div
-                  class="text-theme-secondary-500"
+                  class="text-theme-secondary-500 dim:text-theme-dim-500"
                 >
                   <div
                     style="height: 16px; width: 16px;"
@@ -14244,7 +14244,7 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
                       role="row"
                     >
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border w-1"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border w-1"
                         colspan="1"
                         data-testid="table__th--0"
                         role="columnheader"
@@ -14269,7 +14269,7 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
                             </span>
                           </div>
                           <div
-                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                           >
                             <div
                               class="transition-transform rotate-180"
@@ -14302,7 +14302,7 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black w-3/4 sm:w-auto, no-border first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 w-3/4 sm:w-auto, no-border first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--1"
                         role="columnheader"
@@ -14318,7 +14318,7 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
                             Validator
                           </div>
                           <div
-                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                           >
                             <div
                               class="transition-transform rotate-180"
@@ -14351,7 +14351,7 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--2"
                         role="columnheader"
@@ -14367,7 +14367,7 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--3"
                         role="columnheader"
@@ -14383,7 +14383,7 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border"
                         colspan="1"
                         data-testid="table__th--4"
                         role="columnheader"
@@ -14965,20 +14965,20 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
         class="mx-auto px-6 md:px-10 lg:container"
       >
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 md:overflow-hidden md:rounded-xl md:border"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 md:overflow-hidden md:rounded-xl md:border"
         >
           <div
             class="flex flex-col"
           >
             <div
-              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
               data-testid="SearchableTableWrapper__search-input"
             >
               <div
                 class="pointer-events-none absolute left-0 items-center pl-6"
               >
                 <div
-                  class="text-theme-secondary-500"
+                  class="text-theme-secondary-500 dim:text-theme-dim-500"
                 >
                   <div
                     style="height: 16px; width: 16px;"
@@ -15059,7 +15059,7 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
                       role="row"
                     >
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border w-1"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border w-1"
                         colspan="1"
                         data-testid="table__th--0"
                         role="columnheader"
@@ -15084,7 +15084,7 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
                             </span>
                           </div>
                           <div
-                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                           >
                             <div
                               class="transition-transform rotate-180"
@@ -15117,7 +15117,7 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black w-3/4 sm:w-auto, no-border first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 w-3/4 sm:w-auto, no-border first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--1"
                         role="columnheader"
@@ -15133,7 +15133,7 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
                             Validator
                           </div>
                           <div
-                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                           >
                             <div
                               class="transition-transform rotate-180"
@@ -15166,7 +15166,7 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--2"
                         role="columnheader"
@@ -15182,7 +15182,7 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--3"
                         role="columnheader"
@@ -15198,7 +15198,7 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border"
                         colspan="1"
                         data-testid="table__th--4"
                         role="columnheader"
@@ -15780,20 +15780,20 @@ exports[`ValidatorsTable > should render 1`] = `
         class="mx-auto px-6 md:px-10 lg:container"
       >
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 md:overflow-hidden md:rounded-xl md:border"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 md:overflow-hidden md:rounded-xl md:border"
         >
           <div
             class="flex flex-col"
           >
             <div
-              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
               data-testid="SearchableTableWrapper__search-input"
             >
               <div
                 class="pointer-events-none absolute left-0 items-center pl-6"
               >
                 <div
-                  class="text-theme-secondary-500"
+                  class="text-theme-secondary-500 dim:text-theme-dim-500"
                 >
                   <div
                     style="height: 16px; width: 16px;"
@@ -15874,7 +15874,7 @@ exports[`ValidatorsTable > should render 1`] = `
                       role="row"
                     >
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border w-1"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border w-1"
                         colspan="1"
                         data-testid="table__th--0"
                         role="columnheader"
@@ -15899,7 +15899,7 @@ exports[`ValidatorsTable > should render 1`] = `
                             </span>
                           </div>
                           <div
-                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                           >
                             <div
                               class="transition-transform rotate-180"
@@ -15932,7 +15932,7 @@ exports[`ValidatorsTable > should render 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black w-3/4 sm:w-auto, no-border first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 w-3/4 sm:w-auto, no-border first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--1"
                         role="columnheader"
@@ -15948,7 +15948,7 @@ exports[`ValidatorsTable > should render 1`] = `
                             Validator
                           </div>
                           <div
-                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                           >
                             <div
                               class="transition-transform rotate-180"
@@ -15981,7 +15981,7 @@ exports[`ValidatorsTable > should render 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--2"
                         role="columnheader"
@@ -15997,7 +15997,7 @@ exports[`ValidatorsTable > should render 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--3"
                         role="columnheader"
@@ -16013,7 +16013,7 @@ exports[`ValidatorsTable > should render 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border"
                         colspan="1"
                         data-testid="table__th--4"
                         role="columnheader"
@@ -16596,20 +16596,20 @@ exports[`ValidatorsTable > should render vote amount column 1`] = `
         class="mx-auto px-6 md:px-10 lg:container"
       >
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 md:overflow-hidden md:rounded-xl md:border"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 md:overflow-hidden md:rounded-xl md:border"
         >
           <div
             class="flex flex-col"
           >
             <div
-              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
               data-testid="SearchableTableWrapper__search-input"
             >
               <div
                 class="pointer-events-none absolute left-0 items-center pl-6"
               >
                 <div
-                  class="text-theme-secondary-500"
+                  class="text-theme-secondary-500 dim:text-theme-dim-500"
                 >
                   <div
                     style="height: 16px; width: 16px;"
@@ -16690,7 +16690,7 @@ exports[`ValidatorsTable > should render vote amount column 1`] = `
                       role="row"
                     >
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border w-1"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border w-1"
                         colspan="1"
                         data-testid="table__th--0"
                         role="columnheader"
@@ -16715,7 +16715,7 @@ exports[`ValidatorsTable > should render vote amount column 1`] = `
                             </span>
                           </div>
                           <div
-                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                           >
                             <div
                               class="transition-transform rotate-180"
@@ -16748,7 +16748,7 @@ exports[`ValidatorsTable > should render vote amount column 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black w-3/4 sm:w-auto, no-border first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 w-3/4 sm:w-auto, no-border first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--1"
                         role="columnheader"
@@ -16764,7 +16764,7 @@ exports[`ValidatorsTable > should render vote amount column 1`] = `
                             Validator
                           </div>
                           <div
-                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                           >
                             <div
                               class="transition-transform rotate-180"
@@ -16797,7 +16797,7 @@ exports[`ValidatorsTable > should render vote amount column 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--2"
                         role="columnheader"
@@ -16813,7 +16813,7 @@ exports[`ValidatorsTable > should render vote amount column 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--3"
                         role="columnheader"
@@ -16829,7 +16829,7 @@ exports[`ValidatorsTable > should render vote amount column 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--4"
                         role="columnheader"
@@ -16882,7 +16882,7 @@ exports[`ValidatorsTable > should render vote amount column 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border"
                         colspan="1"
                         data-testid="table__th--5"
                         role="columnheader"
@@ -17623,20 +17623,20 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
         class="mx-auto px-6 md:px-10 lg:container"
       >
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 md:overflow-hidden md:rounded-xl md:border"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 md:overflow-hidden md:rounded-xl md:border"
         >
           <div
             class="flex flex-col"
           >
             <div
-              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
               data-testid="SearchableTableWrapper__search-input"
             >
               <div
                 class="pointer-events-none absolute left-0 items-center pl-6"
               >
                 <div
-                  class="text-theme-secondary-500"
+                  class="text-theme-secondary-500 dim:text-theme-dim-500"
                 >
                   <div
                     style="height: 16px; width: 16px;"
@@ -17717,7 +17717,7 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
                       role="row"
                     >
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border w-1"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border w-1"
                         colspan="1"
                         data-testid="table__th--0"
                         role="columnheader"
@@ -17742,7 +17742,7 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
                             </span>
                           </div>
                           <div
-                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                           >
                             <div
                               class="transition-transform rotate-180"
@@ -17775,7 +17775,7 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black w-3/4 sm:w-auto, no-border first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 w-3/4 sm:w-auto, no-border first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--1"
                         role="columnheader"
@@ -17791,7 +17791,7 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
                             Validator
                           </div>
                           <div
-                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                           >
                             <div
                               class="transition-transform rotate-180"
@@ -17824,7 +17824,7 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--2"
                         role="columnheader"
@@ -17840,7 +17840,7 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--3"
                         role="columnheader"
@@ -17856,7 +17856,7 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border"
                         colspan="1"
                         data-testid="table__th--4"
                         role="columnheader"
@@ -18438,20 +18438,20 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
         class="mx-auto px-6 md:px-10 lg:container"
       >
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 md:overflow-hidden md:rounded-xl md:border"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 md:overflow-hidden md:rounded-xl md:border"
         >
           <div
             class="flex flex-col"
           >
             <div
-              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
               data-testid="SearchableTableWrapper__search-input"
             >
               <div
                 class="pointer-events-none absolute left-0 items-center pl-6"
               >
                 <div
-                  class="text-theme-secondary-500"
+                  class="text-theme-secondary-500 dim:text-theme-dim-500"
                 >
                   <div
                     style="height: 16px; width: 16px;"
@@ -18532,7 +18532,7 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
                       role="row"
                     >
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border w-1"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border w-1"
                         colspan="1"
                         data-testid="table__th--0"
                         role="columnheader"
@@ -18557,7 +18557,7 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
                             </span>
                           </div>
                           <div
-                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                           >
                             <div
                               class="transition-transform rotate-180"
@@ -18590,7 +18590,7 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black w-3/4 sm:w-auto, no-border first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 w-3/4 sm:w-auto, no-border first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--1"
                         role="columnheader"
@@ -18606,7 +18606,7 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
                             Validator
                           </div>
                           <div
-                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                           >
                             <div
                               class="transition-transform rotate-180"
@@ -18639,7 +18639,7 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--2"
                         role="columnheader"
@@ -18655,7 +18655,7 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--3"
                         role="columnheader"
@@ -18671,7 +18671,7 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border"
                         colspan="1"
                         data-testid="table__th--4"
                         role="columnheader"
@@ -19258,20 +19258,20 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
         class="mx-auto px-6 md:px-10 lg:container"
       >
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 md:overflow-hidden md:rounded-xl md:border"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 md:overflow-hidden md:rounded-xl md:border"
         >
           <div
             class="flex flex-col"
           >
             <div
-              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
               data-testid="SearchableTableWrapper__search-input"
             >
               <div
                 class="pointer-events-none absolute left-0 items-center pl-6"
               >
                 <div
-                  class="text-theme-secondary-500"
+                  class="text-theme-secondary-500 dim:text-theme-dim-500"
                 >
                   <div
                     style="height: 16px; width: 16px;"
@@ -19352,7 +19352,7 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
                       role="row"
                     >
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border w-1"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border w-1"
                         colspan="1"
                         data-testid="table__th--0"
                         role="columnheader"
@@ -19377,7 +19377,7 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
                             </span>
                           </div>
                           <div
-                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                           >
                             <div
                               class="transition-transform rotate-180"
@@ -19410,7 +19410,7 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black w-3/4 sm:w-auto, no-border first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 w-3/4 sm:w-auto, no-border first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--1"
                         role="columnheader"
@@ -19426,7 +19426,7 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
                             Validator
                           </div>
                           <div
-                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                           >
                             <div
                               class="transition-transform rotate-180"
@@ -19459,7 +19459,7 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--2"
                         role="columnheader"
@@ -19475,7 +19475,7 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--3"
                         role="columnheader"
@@ -19491,7 +19491,7 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border"
                         colspan="1"
                         data-testid="table__th--4"
                         role="columnheader"
@@ -20073,20 +20073,20 @@ exports[`ValidatorsTable > should render with empty list 1`] = `
         class="mx-auto px-6 md:px-10 lg:container"
       >
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 md:overflow-hidden md:rounded-xl md:border"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 md:overflow-hidden md:rounded-xl md:border"
         >
           <div
             class="flex flex-col"
           >
             <div
-              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
               data-testid="SearchableTableWrapper__search-input"
             >
               <div
                 class="pointer-events-none absolute left-0 items-center pl-6"
               >
                 <div
-                  class="text-theme-secondary-500"
+                  class="text-theme-secondary-500 dim:text-theme-dim-500"
                 >
                   <div
                     style="height: 16px; width: 16px;"
@@ -20167,7 +20167,7 @@ exports[`ValidatorsTable > should render with empty list 1`] = `
                       role="row"
                     >
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border w-1"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border w-1"
                         colspan="1"
                         data-testid="table__th--0"
                         role="columnheader"
@@ -20192,7 +20192,7 @@ exports[`ValidatorsTable > should render with empty list 1`] = `
                             </span>
                           </div>
                           <div
-                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                           >
                             <div
                               class="transition-transform rotate-180"
@@ -20225,7 +20225,7 @@ exports[`ValidatorsTable > should render with empty list 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black w-3/4 sm:w-auto, no-border first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 w-3/4 sm:w-auto, no-border first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--1"
                         role="columnheader"
@@ -20241,7 +20241,7 @@ exports[`ValidatorsTable > should render with empty list 1`] = `
                             Validator
                           </div>
                           <div
-                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                           >
                             <div
                               class="transition-transform rotate-180"
@@ -20274,7 +20274,7 @@ exports[`ValidatorsTable > should render with empty list 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--2"
                         role="columnheader"
@@ -20290,7 +20290,7 @@ exports[`ValidatorsTable > should render with empty list 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--3"
                         role="columnheader"
@@ -20306,7 +20306,7 @@ exports[`ValidatorsTable > should render with empty list 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border"
                         colspan="1"
                         data-testid="table__th--4"
                         role="columnheader"
@@ -20551,20 +20551,20 @@ exports[`ValidatorsTable > should render with subtitle 1`] = `
         class="mx-auto px-6 md:px-10 lg:container"
       >
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 md:overflow-hidden md:rounded-xl md:border"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 md:overflow-hidden md:rounded-xl md:border"
         >
           <div
             class="flex flex-col"
           >
             <div
-              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
               data-testid="SearchableTableWrapper__search-input"
             >
               <div
                 class="pointer-events-none absolute left-0 items-center pl-6"
               >
                 <div
-                  class="text-theme-secondary-500"
+                  class="text-theme-secondary-500 dim:text-theme-dim-500"
                 >
                   <div
                     style="height: 16px; width: 16px;"
@@ -20645,7 +20645,7 @@ exports[`ValidatorsTable > should render with subtitle 1`] = `
                       role="row"
                     >
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border w-1"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border w-1"
                         colspan="1"
                         data-testid="table__th--0"
                         role="columnheader"
@@ -20670,7 +20670,7 @@ exports[`ValidatorsTable > should render with subtitle 1`] = `
                             </span>
                           </div>
                           <div
-                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                           >
                             <div
                               class="transition-transform rotate-180"
@@ -20703,7 +20703,7 @@ exports[`ValidatorsTable > should render with subtitle 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black w-3/4 sm:w-auto, no-border first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 w-3/4 sm:w-auto, no-border first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--1"
                         role="columnheader"
@@ -20719,7 +20719,7 @@ exports[`ValidatorsTable > should render with subtitle 1`] = `
                             Validator
                           </div>
                           <div
-                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                           >
                             <div
                               class="transition-transform rotate-180"
@@ -20752,7 +20752,7 @@ exports[`ValidatorsTable > should render with subtitle 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--2"
                         role="columnheader"
@@ -20768,7 +20768,7 @@ exports[`ValidatorsTable > should render with subtitle 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--3"
                         role="columnheader"
@@ -20784,7 +20784,7 @@ exports[`ValidatorsTable > should render with subtitle 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border"
                         colspan="1"
                         data-testid="table__th--4"
                         role="columnheader"
@@ -21367,20 +21367,20 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
         class="mx-auto px-6 md:px-10 lg:container"
       >
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 md:overflow-hidden md:rounded-xl md:border"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 md:overflow-hidden md:rounded-xl md:border"
         >
           <div
             class="flex flex-col"
           >
             <div
-              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
               data-testid="SearchableTableWrapper__search-input"
             >
               <div
                 class="pointer-events-none absolute left-0 items-center pl-6"
               >
                 <div
-                  class="text-theme-secondary-500"
+                  class="text-theme-secondary-500 dim:text-theme-dim-500"
                 >
                   <div
                     style="height: 16px; width: 16px;"
@@ -21461,7 +21461,7 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
                       role="row"
                     >
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border w-1"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border w-1"
                         colspan="1"
                         data-testid="table__th--0"
                         role="columnheader"
@@ -21486,7 +21486,7 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
                             </span>
                           </div>
                           <div
-                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                           >
                             <div
                               class="transition-transform rotate-180"
@@ -21519,7 +21519,7 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black w-3/4 sm:w-auto, no-border first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 w-3/4 sm:w-auto, no-border first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--1"
                         role="columnheader"
@@ -21535,7 +21535,7 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
                             Validator
                           </div>
                           <div
-                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                           >
                             <div
                               class="transition-transform rotate-180"
@@ -21568,7 +21568,7 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--2"
                         role="columnheader"
@@ -21584,7 +21584,7 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--3"
                         role="columnheader"
@@ -21600,7 +21600,7 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--4"
                         role="columnheader"
@@ -21653,7 +21653,7 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border"
                         colspan="1"
                         data-testid="table__th--5"
                         role="columnheader"
@@ -22393,20 +22393,20 @@ exports[`ValidatorsTable > should select a validator to unvote 1`] = `
         class="mx-auto px-6 md:px-10 lg:container"
       >
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 md:overflow-hidden md:rounded-xl md:border"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 md:overflow-hidden md:rounded-xl md:border"
         >
           <div
             class="flex flex-col"
           >
             <div
-              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
               data-testid="SearchableTableWrapper__search-input"
             >
               <div
                 class="pointer-events-none absolute left-0 items-center pl-6"
               >
                 <div
-                  class="text-theme-secondary-500"
+                  class="text-theme-secondary-500 dim:text-theme-dim-500"
                 >
                   <div
                     style="height: 16px; width: 16px;"
@@ -22487,7 +22487,7 @@ exports[`ValidatorsTable > should select a validator to unvote 1`] = `
                       role="row"
                     >
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border w-1"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border w-1"
                         colspan="1"
                         data-testid="table__th--0"
                         role="columnheader"
@@ -22512,7 +22512,7 @@ exports[`ValidatorsTable > should select a validator to unvote 1`] = `
                             </span>
                           </div>
                           <div
-                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                           >
                             <div
                               class="transition-transform rotate-180"
@@ -22545,7 +22545,7 @@ exports[`ValidatorsTable > should select a validator to unvote 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black w-3/4 sm:w-auto, no-border first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 w-3/4 sm:w-auto, no-border first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--1"
                         role="columnheader"
@@ -22561,7 +22561,7 @@ exports[`ValidatorsTable > should select a validator to unvote 1`] = `
                             Validator
                           </div>
                           <div
-                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                           >
                             <div
                               class="transition-transform rotate-180"
@@ -22594,7 +22594,7 @@ exports[`ValidatorsTable > should select a validator to unvote 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--2"
                         role="columnheader"
@@ -22610,7 +22610,7 @@ exports[`ValidatorsTable > should select a validator to unvote 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--3"
                         role="columnheader"
@@ -22626,7 +22626,7 @@ exports[`ValidatorsTable > should select a validator to unvote 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border"
                         colspan="1"
                         data-testid="table__th--4"
                         role="columnheader"
@@ -23209,20 +23209,20 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
         class="mx-auto px-6 md:px-10 lg:container"
       >
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 md:overflow-hidden md:rounded-xl md:border"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 md:overflow-hidden md:rounded-xl md:border"
         >
           <div
             class="flex flex-col"
           >
             <div
-              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
               data-testid="SearchableTableWrapper__search-input"
             >
               <div
                 class="pointer-events-none absolute left-0 items-center pl-6"
               >
                 <div
-                  class="text-theme-secondary-500"
+                  class="text-theme-secondary-500 dim:text-theme-dim-500"
                 >
                   <div
                     style="height: 16px; width: 16px;"
@@ -23303,7 +23303,7 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
                       role="row"
                     >
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border w-1"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border w-1"
                         colspan="1"
                         data-testid="table__th--0"
                         role="columnheader"
@@ -23328,7 +23328,7 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
                             </span>
                           </div>
                           <div
-                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                           >
                             <div
                               class="transition-transform rotate-180"
@@ -23361,7 +23361,7 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black w-3/4 sm:w-auto, no-border first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 w-3/4 sm:w-auto, no-border first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--1"
                         role="columnheader"
@@ -23377,7 +23377,7 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
                             Validator
                           </div>
                           <div
-                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                           >
                             <div
                               class="transition-transform rotate-180"
@@ -23410,7 +23410,7 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--2"
                         role="columnheader"
@@ -23426,7 +23426,7 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--3"
                         role="columnheader"
@@ -23442,7 +23442,7 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border"
                         colspan="1"
                         data-testid="table__th--4"
                         role="columnheader"
@@ -24029,20 +24029,20 @@ exports[`ValidatorsTable > should select a validator to vote 1`] = `
         class="mx-auto px-6 md:px-10 lg:container"
       >
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 md:overflow-hidden md:rounded-xl md:border"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 md:overflow-hidden md:rounded-xl md:border"
         >
           <div
             class="flex flex-col"
           >
             <div
-              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
               data-testid="SearchableTableWrapper__search-input"
             >
               <div
                 class="pointer-events-none absolute left-0 items-center pl-6"
               >
                 <div
-                  class="text-theme-secondary-500"
+                  class="text-theme-secondary-500 dim:text-theme-dim-500"
                 >
                   <div
                     style="height: 16px; width: 16px;"
@@ -24123,7 +24123,7 @@ exports[`ValidatorsTable > should select a validator to vote 1`] = `
                       role="row"
                     >
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border w-1"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border w-1"
                         colspan="1"
                         data-testid="table__th--0"
                         role="columnheader"
@@ -24148,7 +24148,7 @@ exports[`ValidatorsTable > should select a validator to vote 1`] = `
                             </span>
                           </div>
                           <div
-                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                           >
                             <div
                               class="transition-transform rotate-180"
@@ -24181,7 +24181,7 @@ exports[`ValidatorsTable > should select a validator to vote 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black w-3/4 sm:w-auto, no-border first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 w-3/4 sm:w-auto, no-border first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--1"
                         role="columnheader"
@@ -24197,7 +24197,7 @@ exports[`ValidatorsTable > should select a validator to vote 1`] = `
                             Validator
                           </div>
                           <div
-                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                           >
                             <div
                               class="transition-transform rotate-180"
@@ -24230,7 +24230,7 @@ exports[`ValidatorsTable > should select a validator to vote 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--2"
                         role="columnheader"
@@ -24246,7 +24246,7 @@ exports[`ValidatorsTable > should select a validator to vote 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--3"
                         role="columnheader"
@@ -24262,7 +24262,7 @@ exports[`ValidatorsTable > should select a validator to vote 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border"
                         colspan="1"
                         data-testid="table__th--4"
                         role="columnheader"
@@ -24845,20 +24845,20 @@ exports[`ValidatorsTable > should select a validator with vote amount and make i
         class="mx-auto px-6 md:px-10 lg:container"
       >
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 md:overflow-hidden md:rounded-xl md:border"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 md:overflow-hidden md:rounded-xl md:border"
         >
           <div
             class="flex flex-col"
           >
             <div
-              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
               data-testid="SearchableTableWrapper__search-input"
             >
               <div
                 class="pointer-events-none absolute left-0 items-center pl-6"
               >
                 <div
-                  class="text-theme-secondary-500"
+                  class="text-theme-secondary-500 dim:text-theme-dim-500"
                 >
                   <div
                     style="height: 16px; width: 16px;"
@@ -24939,7 +24939,7 @@ exports[`ValidatorsTable > should select a validator with vote amount and make i
                       role="row"
                     >
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border w-1"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border w-1"
                         colspan="1"
                         data-testid="table__th--0"
                         role="columnheader"
@@ -24964,7 +24964,7 @@ exports[`ValidatorsTable > should select a validator with vote amount and make i
                             </span>
                           </div>
                           <div
-                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                           >
                             <div
                               class="transition-transform rotate-180"
@@ -24997,7 +24997,7 @@ exports[`ValidatorsTable > should select a validator with vote amount and make i
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black w-3/4 sm:w-auto, no-border first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 w-3/4 sm:w-auto, no-border first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--1"
                         role="columnheader"
@@ -25013,7 +25013,7 @@ exports[`ValidatorsTable > should select a validator with vote amount and make i
                             Validator
                           </div>
                           <div
-                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                           >
                             <div
                               class="transition-transform rotate-180"
@@ -25046,7 +25046,7 @@ exports[`ValidatorsTable > should select a validator with vote amount and make i
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--2"
                         role="columnheader"
@@ -25062,7 +25062,7 @@ exports[`ValidatorsTable > should select a validator with vote amount and make i
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--3"
                         role="columnheader"
@@ -25078,7 +25078,7 @@ exports[`ValidatorsTable > should select a validator with vote amount and make i
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--4"
                         role="columnheader"
@@ -25131,7 +25131,7 @@ exports[`ValidatorsTable > should select a validator with vote amount and make i
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border"
                         colspan="1"
                         data-testid="table__th--5"
                         role="columnheader"
@@ -25871,20 +25871,20 @@ exports[`ValidatorsTable > should select multiple validators to unvote/vote 1`] 
         class="mx-auto px-6 md:px-10 lg:container"
       >
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 md:overflow-hidden md:rounded-xl md:border"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 md:overflow-hidden md:rounded-xl md:border"
         >
           <div
             class="flex flex-col"
           >
             <div
-              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
               data-testid="SearchableTableWrapper__search-input"
             >
               <div
                 class="pointer-events-none absolute left-0 items-center pl-6"
               >
                 <div
-                  class="text-theme-secondary-500"
+                  class="text-theme-secondary-500 dim:text-theme-dim-500"
                 >
                   <div
                     style="height: 16px; width: 16px;"
@@ -25965,7 +25965,7 @@ exports[`ValidatorsTable > should select multiple validators to unvote/vote 1`] 
                       role="row"
                     >
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border w-1"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border w-1"
                         colspan="1"
                         data-testid="table__th--0"
                         role="columnheader"
@@ -25990,7 +25990,7 @@ exports[`ValidatorsTable > should select multiple validators to unvote/vote 1`] 
                             </span>
                           </div>
                           <div
-                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                           >
                             <div
                               class="transition-transform rotate-180"
@@ -26023,7 +26023,7 @@ exports[`ValidatorsTable > should select multiple validators to unvote/vote 1`] 
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black w-3/4 sm:w-auto, no-border first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 w-3/4 sm:w-auto, no-border first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--1"
                         role="columnheader"
@@ -26039,7 +26039,7 @@ exports[`ValidatorsTable > should select multiple validators to unvote/vote 1`] 
                             Validator
                           </div>
                           <div
-                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                           >
                             <div
                               class="transition-transform rotate-180"
@@ -26072,7 +26072,7 @@ exports[`ValidatorsTable > should select multiple validators to unvote/vote 1`] 
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--2"
                         role="columnheader"
@@ -26088,7 +26088,7 @@ exports[`ValidatorsTable > should select multiple validators to unvote/vote 1`] 
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--3"
                         role="columnheader"
@@ -26104,7 +26104,7 @@ exports[`ValidatorsTable > should select multiple validators to unvote/vote 1`] 
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border"
                         colspan="1"
                         data-testid="table__th--4"
                         role="columnheader"
@@ -26686,20 +26686,20 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
         class="mx-auto px-6 md:px-10 lg:container"
       >
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 md:overflow-hidden md:rounded-xl md:border"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 md:overflow-hidden md:rounded-xl md:border"
         >
           <div
             class="flex flex-col"
           >
             <div
-              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
               data-testid="SearchableTableWrapper__search-input"
             >
               <div
                 class="pointer-events-none absolute left-0 items-center pl-6"
               >
                 <div
-                  class="text-theme-secondary-500"
+                  class="text-theme-secondary-500 dim:text-theme-dim-500"
                 >
                   <div
                     style="height: 16px; width: 16px;"
@@ -26780,7 +26780,7 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
                       role="row"
                     >
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border w-1"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border w-1"
                         colspan="1"
                         data-testid="table__th--0"
                         role="columnheader"
@@ -26805,7 +26805,7 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
                             </span>
                           </div>
                           <div
-                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                           >
                             <div
                               class="transition-transform rotate-180"
@@ -26838,7 +26838,7 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black w-3/4 sm:w-auto, no-border first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 w-3/4 sm:w-auto, no-border first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--1"
                         role="columnheader"
@@ -26854,7 +26854,7 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
                             Validator
                           </div>
                           <div
-                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                           >
                             <div
                               class="transition-transform rotate-180"
@@ -26887,7 +26887,7 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--2"
                         role="columnheader"
@@ -26903,7 +26903,7 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--3"
                         role="columnheader"
@@ -26919,7 +26919,7 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border"
                         colspan="1"
                         data-testid="table__th--4"
                         role="columnheader"
@@ -27502,20 +27502,20 @@ exports[`ValidatorsTable > should unselect a validator to vote 1`] = `
         class="mx-auto px-6 md:px-10 lg:container"
       >
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 md:overflow-hidden md:rounded-xl md:border"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 md:overflow-hidden md:rounded-xl md:border"
         >
           <div
             class="flex flex-col"
           >
             <div
-              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
               data-testid="SearchableTableWrapper__search-input"
             >
               <div
                 class="pointer-events-none absolute left-0 items-center pl-6"
               >
                 <div
-                  class="text-theme-secondary-500"
+                  class="text-theme-secondary-500 dim:text-theme-dim-500"
                 >
                   <div
                     style="height: 16px; width: 16px;"
@@ -27596,7 +27596,7 @@ exports[`ValidatorsTable > should unselect a validator to vote 1`] = `
                       role="row"
                     >
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border w-1"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border w-1"
                         colspan="1"
                         data-testid="table__th--0"
                         role="columnheader"
@@ -27621,7 +27621,7 @@ exports[`ValidatorsTable > should unselect a validator to vote 1`] = `
                             </span>
                           </div>
                           <div
-                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                           >
                             <div
                               class="transition-transform rotate-180"
@@ -27654,7 +27654,7 @@ exports[`ValidatorsTable > should unselect a validator to vote 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black w-3/4 sm:w-auto, no-border first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 w-3/4 sm:w-auto, no-border first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--1"
                         role="columnheader"
@@ -27670,7 +27670,7 @@ exports[`ValidatorsTable > should unselect a validator to vote 1`] = `
                             Validator
                           </div>
                           <div
-                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                           >
                             <div
                               class="transition-transform rotate-180"
@@ -27703,7 +27703,7 @@ exports[`ValidatorsTable > should unselect a validator to vote 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--2"
                         role="columnheader"
@@ -27719,7 +27719,7 @@ exports[`ValidatorsTable > should unselect a validator to vote 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 hidden sm:table-cell no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--3"
                         role="columnheader"
@@ -27735,7 +27735,7 @@ exports[`ValidatorsTable > should unselect a validator to vote 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border"
                         colspan="1"
                         data-testid="table__th--4"
                         role="columnheader"

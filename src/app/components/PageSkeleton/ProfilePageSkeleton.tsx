@@ -11,7 +11,7 @@ const MenuItemSkeleton = ({ isCircle = false }: { isCircle?: boolean }) => (
 
 export const ProfilePageSkeleton: React.FC = () => (
 	<div className="relative flex min-h-screen flex-col" data-testid="ProfilePageSkeleton">
-		<div className="border-theme-secondary-300 dark:border-theme-secondary-800 sticky inset-x-0 top-0 border-b">
+		<div className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-b-theme-dim-700 sticky inset-x-0 top-0 border-b">
 			<div className="relative flex h-12 items-center">
 				<div className="flex flex-1 justify-between px-6 sm:ml-7 sm:px-8">
 					<div className="bg-theme-primary-600 my-auto flex h-6 w-6 items-center justify-center rounded-md text-white">
@@ -26,13 +26,13 @@ export const ProfilePageSkeleton: React.FC = () => (
 
 						<div className="my-auto ml-4 hidden items-center space-x-4 sm:flex">
 							<Skeleton height={28} width={28} className="hidden sm:flex" />
-							<div className="border-theme-secondary-300 dark:border-theme-secondary-800 hidden h-6 border-r sm:flex sm:h-12" />
+							<div className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-r-theme-dim-700 hidden h-6 border-r sm:flex sm:h-12" />
 							<Skeleton height={28} width={28} className="hidden sm:flex" />
-							<div className="border-theme-secondary-300 dark:border-theme-secondary-800 hidden h-6 border-r sm:flex sm:h-12" />
+							<div className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-r-theme-dim-700 hidden h-6 border-r sm:flex sm:h-12" />
 							<Skeleton height={28} width={28} className="hidden sm:flex" />
-							<div className="border-theme-secondary-300 dark:border-theme-secondary-800 hidden h-6 border-r sm:flex sm:h-12" />
+							<div className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-r-theme-dim-700 hidden h-6 border-r sm:flex sm:h-12" />
 							<Skeleton height={28} width={28} className="hidden sm:flex" />
-							<div className="border-theme-secondary-300 dark:border-theme-secondary-800 hidden h-6 border-r sm:flex sm:h-12" />
+							<div className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-r-theme-dim-700 hidden h-6 border-r sm:flex sm:h-12" />
 						</div>
 
 						<div className="my-auto ml-4 flex items-center">
