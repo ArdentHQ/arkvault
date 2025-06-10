@@ -75,7 +75,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
               class="mt-4"
             >
               <div
-                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
+                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 dim:md:border-theme-dim-700 dim:md:outline-theme-dim-700 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
                 data-testid="TableWrapper"
               >
                 <div
@@ -91,7 +91,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                         role="row"
                       >
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--0"
                           role="columnheader"
@@ -107,7 +107,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                               Address
                             </div>
                             <div
-                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                             >
                               <div
                                 class="transition-transform rotate-180"
@@ -140,7 +140,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--1"
                           role="columnheader"
@@ -156,7 +156,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                               Balance
                             </div>
                             <div
-                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
+                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                             >
                               <div
                                 class="transition-transform rotate-180"
@@ -189,7 +189,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--2"
                           role="columnheader"
@@ -498,7 +498,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
               class="mt-4"
             >
               <div
-                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
+                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 dim:md:border-theme-dim-700 dim:md:outline-theme-dim-700 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
                 data-testid="TableWrapper"
               >
                 <div
@@ -514,7 +514,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                         role="row"
                       >
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--0"
                           role="columnheader"
@@ -530,7 +530,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                               Address
                             </div>
                             <div
-                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                             >
                               <div
                                 class="transition-transform rotate-180"
@@ -563,7 +563,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--1"
                           role="columnheader"
@@ -579,7 +579,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                               Balance
                             </div>
                             <div
-                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
+                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                             >
                               <div
                                 class="transition-transform rotate-180"
@@ -612,7 +612,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--2"
                           role="columnheader"
@@ -921,7 +921,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
               class="mt-4"
             >
               <div
-                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
+                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 dim:md:border-theme-dim-700 dim:md:outline-theme-dim-700 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
                 data-testid="TableWrapper"
               >
                 <div
@@ -937,7 +937,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                         role="row"
                       >
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--0"
                           role="columnheader"
@@ -953,7 +953,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                               Address
                             </div>
                             <div
-                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                             >
                               <div
                                 class="transition-transform rotate-180"
@@ -986,7 +986,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--1"
                           role="columnheader"
@@ -1002,7 +1002,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                               Balance
                             </div>
                             <div
-                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
+                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                             >
                               <div
                                 class="transition-transform rotate-180"
@@ -1035,7 +1035,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--2"
                           role="columnheader"
@@ -1458,7 +1458,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 1`
                 </div>
               </div>
               <div
-                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
+                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 dim:md:border-theme-dim-700 dim:md:outline-theme-dim-700 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
                 data-testid="TableWrapper"
               >
                 <div
@@ -1780,7 +1780,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 2`
                 </div>
               </div>
               <div
-                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
+                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 dim:md:border-theme-dim-700 dim:md:outline-theme-dim-700 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
                 data-testid="TableWrapper"
               >
                 <div
@@ -2102,7 +2102,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive with se
                 </div>
               </div>
               <div
-                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
+                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 dim:md:border-theme-dim-700 dim:md:outline-theme-dim-700 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
                 data-testid="TableWrapper"
               >
                 <div
@@ -2308,7 +2308,7 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
               class="mt-4"
             >
               <div
-                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
+                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 dim:md:border-theme-dim-700 dim:md:outline-theme-dim-700 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
                 data-testid="TableWrapper"
               >
                 <div
@@ -2324,7 +2324,7 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
                         role="row"
                       >
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--0"
                           role="columnheader"
@@ -2340,7 +2340,7 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
                               Address
                             </div>
                             <div
-                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                             >
                               <div
                                 class="transition-transform rotate-180"
@@ -2373,7 +2373,7 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--1"
                           role="columnheader"
@@ -2389,7 +2389,7 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
                               Balance
                             </div>
                             <div
-                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
+                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                             >
                               <div
                                 class="transition-transform rotate-180"
@@ -2422,7 +2422,7 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--2"
                           role="columnheader"
@@ -2656,7 +2656,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
               class="mt-4"
             >
               <div
-                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
+                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 dim:md:border-theme-dim-700 dim:md:outline-theme-dim-700 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
                 data-testid="TableWrapper"
               >
                 <div
@@ -2672,7 +2672,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                         role="row"
                       >
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--0"
                           role="columnheader"
@@ -2688,7 +2688,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                               Address
                             </div>
                             <div
-                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                             >
                               <div
                                 class="transition-transform rotate-180"
@@ -2721,7 +2721,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--1"
                           role="columnheader"
@@ -2737,7 +2737,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                               Balance
                             </div>
                             <div
-                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
+                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                             >
                               <div
                                 class="transition-transform rotate-180"
@@ -2770,7 +2770,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--2"
                           role="columnheader"
@@ -3077,7 +3077,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
               class="mt-4"
             >
               <div
-                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
+                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 dim:md:border-theme-dim-700 dim:md:outline-theme-dim-700 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
                 data-testid="TableWrapper"
               >
                 <div
@@ -3093,7 +3093,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                         role="row"
                       >
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--0"
                           role="columnheader"
@@ -3109,7 +3109,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                               Address
                             </div>
                             <div
-                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                             >
                               <div
                                 class="transition-transform rotate-180"
@@ -3142,7 +3142,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--1"
                           role="columnheader"
@@ -3158,7 +3158,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                               Balance
                             </div>
                             <div
-                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
+                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                             >
                               <div
                                 class="transition-transform rotate-180"
@@ -3191,7 +3191,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--2"
                           role="columnheader"
@@ -3500,7 +3500,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
               class="mt-4"
             >
               <div
-                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
+                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 dim:md:border-theme-dim-700 dim:md:outline-theme-dim-700 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
                 data-testid="TableWrapper"
               >
                 <div
@@ -3516,7 +3516,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                         role="row"
                       >
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--0"
                           role="columnheader"
@@ -3532,7 +3532,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                               Address
                             </div>
                             <div
-                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                             >
                               <div
                                 class="transition-transform rotate-180"
@@ -3565,7 +3565,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--1"
                           role="columnheader"
@@ -3581,7 +3581,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                               Balance
                             </div>
                             <div
-                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
+                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                             >
                               <div
                                 class="transition-transform rotate-180"
@@ -3614,7 +3614,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black hidden xl:table-cell first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 hidden xl:table-cell first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--2"
                           role="columnheader"
@@ -3630,7 +3630,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                               Fiat Value
                             </div>
                             <div
-                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
+                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                             >
                               <div
                                 class="transition-transform rotate-180"
@@ -3663,7 +3663,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--3"
                           role="columnheader"
@@ -4000,7 +4000,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
               class="mt-4"
             >
               <div
-                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
+                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 dim:md:border-theme-dim-700 dim:md:outline-theme-dim-700 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
                 data-testid="TableWrapper"
               >
                 <div
@@ -4016,7 +4016,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                         role="row"
                       >
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--0"
                           role="columnheader"
@@ -4032,7 +4032,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                               Address
                             </div>
                             <div
-                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                             >
                               <div
                                 class="transition-transform rotate-180"
@@ -4065,7 +4065,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--1"
                           role="columnheader"
@@ -4081,7 +4081,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                               Balance
                             </div>
                             <div
-                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
+                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                             >
                               <div
                                 class="transition-transform rotate-180"
@@ -4114,7 +4114,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black hidden xl:table-cell first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 hidden xl:table-cell first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--2"
                           role="columnheader"
@@ -4130,7 +4130,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                               Fiat Value
                             </div>
                             <div
-                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
+                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                             >
                               <div
                                 class="transition-transform rotate-180"
@@ -4163,7 +4163,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--3"
                           role="columnheader"
@@ -4500,7 +4500,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
               class="mt-4"
             >
               <div
-                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
+                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 dim:md:border-theme-dim-700 dim:md:outline-theme-dim-700 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
                 data-testid="TableWrapper"
               >
                 <div
@@ -4516,7 +4516,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                         role="row"
                       >
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--0"
                           role="columnheader"
@@ -4532,7 +4532,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                               Address
                             </div>
                             <div
-                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                             >
                               <div
                                 class="transition-transform rotate-180"
@@ -4565,7 +4565,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--1"
                           role="columnheader"
@@ -4581,7 +4581,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                               Balance
                             </div>
                             <div
-                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
+                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                             >
                               <div
                                 class="transition-transform rotate-180"
@@ -4614,7 +4614,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black hidden xl:table-cell first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 hidden xl:table-cell first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--2"
                           role="columnheader"
@@ -4630,7 +4630,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                               Fiat Value
                             </div>
                             <div
-                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
+                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                             >
                               <div
                                 class="transition-transform rotate-180"
@@ -4663,7 +4663,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--3"
                           role="columnheader"
@@ -5114,7 +5114,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 1`]
                 </div>
               </div>
               <div
-                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
+                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 dim:md:border-theme-dim-700 dim:md:outline-theme-dim-700 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
                 data-testid="TableWrapper"
               >
                 <div
@@ -5436,7 +5436,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 2`]
                 </div>
               </div>
               <div
-                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
+                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 dim:md:border-theme-dim-700 dim:md:outline-theme-dim-700 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
                 data-testid="TableWrapper"
               >
                 <div
@@ -5758,7 +5758,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive with sel
                 </div>
               </div>
               <div
-                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
+                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 dim:md:border-theme-dim-700 dim:md:outline-theme-dim-700 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
                 data-testid="TableWrapper"
               >
                 <div
@@ -5964,7 +5964,7 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
               class="mt-4"
             >
               <div
-                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
+                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 dim:md:border-theme-dim-700 dim:md:outline-theme-dim-700 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
                 data-testid="TableWrapper"
               >
                 <div
@@ -5980,7 +5980,7 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
                         role="row"
                       >
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--0"
                           role="columnheader"
@@ -5996,7 +5996,7 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
                               Address
                             </div>
                             <div
-                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                             >
                               <div
                                 class="transition-transform rotate-180"
@@ -6029,7 +6029,7 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--1"
                           role="columnheader"
@@ -6045,7 +6045,7 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
                               Balance
                             </div>
                             <div
-                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
+                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                             >
                               <div
                                 class="transition-transform rotate-180"
@@ -6078,7 +6078,7 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black hidden xl:table-cell first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 hidden xl:table-cell first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--2"
                           role="columnheader"
@@ -6094,7 +6094,7 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
                               Fiat Value
                             </div>
                             <div
-                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
+                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                             >
                               <div
                                 class="transition-transform rotate-180"
@@ -6127,7 +6127,7 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--3"
                           role="columnheader"
@@ -6375,7 +6375,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
               class="mt-4"
             >
               <div
-                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
+                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 dim:md:border-theme-dim-700 dim:md:outline-theme-dim-700 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
                 data-testid="TableWrapper"
               >
                 <div
@@ -6391,7 +6391,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                         role="row"
                       >
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--0"
                           role="columnheader"
@@ -6407,7 +6407,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                               Address
                             </div>
                             <div
-                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                             >
                               <div
                                 class="transition-transform rotate-180"
@@ -6440,7 +6440,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--1"
                           role="columnheader"
@@ -6456,7 +6456,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                               Balance
                             </div>
                             <div
-                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
+                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                             >
                               <div
                                 class="transition-transform rotate-180"
@@ -6489,7 +6489,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black hidden xl:table-cell first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 hidden xl:table-cell first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--2"
                           role="columnheader"
@@ -6505,7 +6505,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                               Fiat Value
                             </div>
                             <div
-                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
+                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                             >
                               <div
                                 class="transition-transform rotate-180"
@@ -6538,7 +6538,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--3"
                           role="columnheader"
@@ -6873,7 +6873,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
               class="mt-4"
             >
               <div
-                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
+                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 dim:md:border-theme-dim-700 dim:md:outline-theme-dim-700 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
                 data-testid="TableWrapper"
               >
                 <div
@@ -6889,7 +6889,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                         role="row"
                       >
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--0"
                           role="columnheader"
@@ -6905,7 +6905,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                               Address
                             </div>
                             <div
-                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                             >
                               <div
                                 class="transition-transform rotate-180"
@@ -6938,7 +6938,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--1"
                           role="columnheader"
@@ -6954,7 +6954,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                               Balance
                             </div>
                             <div
-                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
+                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                             >
                               <div
                                 class="transition-transform rotate-180"
@@ -6987,7 +6987,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black hidden xl:table-cell first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 hidden xl:table-cell first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--2"
                           role="columnheader"
@@ -7003,7 +7003,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                               Fiat Value
                             </div>
                             <div
-                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
+                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                             >
                               <div
                                 class="transition-transform rotate-180"
@@ -7036,7 +7036,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--3"
                           role="columnheader"

@@ -699,114 +699,46 @@ exports[`AuthenticationStep (message) > should show only ledger confirmation 1`]
 
 exports[`AuthenticationStep (message) > should specify ledger supported model 1`] = `
 <DocumentFragment>
-  <div
-    class="space-y-6"
-    data-testid="AuthenticationStep"
+  <section
+    class="space-y-8"
+    data-testid="LedgerAuthStep"
   >
     <div
-      class="mt-8 space-y-8"
-      data-testid="LedgerDeviceError"
+      class="bg-theme-background flex items-end justify-between"
     >
       <div
-        class="bg-theme-background flex items-end justify-between"
+        class="space-y-2"
       >
         <div
-          class="space-y-2"
+          class="flex items-center gap-3"
         >
-          <div
-            class="flex items-center gap-3"
+          <h1
+            class="mb-0 text-2xl leading-[29px]"
+            data-testid="header__title"
           >
-            <h1
-              class="mb-0 text-2xl leading-[29px]"
-              data-testid="header__title"
-            >
-              Ledger Wallet
-            </h1>
-          </div>
-          <div
-            class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
-            data-testid="header__subtitle"
-          >
-            Connect your Ledger Nano X and confirm input.
-          </div>
+            Connect and Authorize Ledger Device
+          </h1>
         </div>
-      </div>
-      <div
-        class="flex flex-col overflow-hidden rounded-xl"
-      >
-        <div
-          class="flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-danger-100 text-theme-danger-700 dark:bg-theme-danger-500"
-        >
-          <div>
-            <div
-              style="height: 16px; width: 16px;"
-            >
-              <svg
-                id="circle-cross"
-                style="height: 100%; width: 100%;"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
-              >
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <circle
-                    cx="10"
-                    cy="10"
-                    r="9"
-                    stroke-miterlimit="10"
-                  />
-                  <path
-                    d="M7 13l6-6M13 13L7 7"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </g>
-              </svg>
-            </div>
-          </div>
-          <span>
-            Error
-          </span>
-        </div>
-        <div
-          class="dark:bg-theme-secondary-800 w-full p-4 text-left text-sm leading-relaxed break-words bg-theme-danger-50"
-        >
-          A 
-          <strong>
-            Ledger Nano S
-          </strong>
-           is connected, but his operation requires a 
-          <strong>
-            Ledger Nano X
-          </strong>
-          . Connect the appropriate device to continue.
-        </div>
-      </div>
-      <div
-        class="border-theme-warning-200 bg-theme-warning-50 dark:border-theme-warning-600 flex w-full flex-row items-center gap-3 rounded-xl border px-6 py-5 dark:bg-transparent"
-        data-testid="LedgerWaitingDevice-loading_message"
-      >
-        <div
-          class="animate-spin border-[5px] shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 border-l-theme-warning-900 dark:border-l-theme-warning-600 rounded-full"
-        />
-        <hr
-          class="bg-theme-warning-200 dark:bg-theme-secondary-800 h-5 w-px border-transparent"
-        />
-        <span
-          class="text-theme-secondary-700 dark:text-theme-warning-600 text-sm font-semibold md:text-base"
-          data-testid="Loader__text"
-        >
-          Waiting for Ledger ...
-        </span>
       </div>
     </div>
-  </div>
+    <div
+      class="border-theme-warning-200 bg-theme-warning-50 dark:border-theme-warning-600 flex w-full flex-row items-center gap-3 rounded-xl border px-6 py-5 dark:bg-transparent"
+      data-testid="LedgerWaitingDevice-loading_message"
+    >
+      <div
+        class="animate-spin border-[5px] shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 border-l-theme-warning-900 dark:border-l-theme-warning-600 rounded-full"
+      />
+      <hr
+        class="bg-theme-warning-200 dark:bg-theme-secondary-800 h-5 w-px border-transparent"
+      />
+      <span
+        class="text-theme-secondary-700 dark:text-theme-warning-600 text-sm font-semibold md:text-base"
+        data-testid="Loader__text"
+      >
+        Waiting for confirmation ...
+      </span>
+    </div>
+  </section>
 </DocumentFragment>
 `;
 

@@ -75,7 +75,7 @@ exports[`SearchRecipient > should call onAction when no address is selected 1`] 
               class="mt-4"
             >
               <div
-                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
+                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 dim:md:border-theme-dim-700 dim:md:outline-theme-dim-700 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
                 data-testid="TableWrapper"
               >
                 <div
@@ -91,7 +91,7 @@ exports[`SearchRecipient > should call onAction when no address is selected 1`] 
                         role="row"
                       >
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--0"
                           role="columnheader"
@@ -107,7 +107,7 @@ exports[`SearchRecipient > should call onAction when no address is selected 1`] 
                               Address
                             </div>
                             <div
-                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                             >
                               <div
                                 class="transition-transform rotate-180"
@@ -140,7 +140,7 @@ exports[`SearchRecipient > should call onAction when no address is selected 1`] 
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--1"
                           role="columnheader"
@@ -156,7 +156,7 @@ exports[`SearchRecipient > should call onAction when no address is selected 1`] 
                               Type
                             </div>
                             <div
-                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                             >
                               <div
                                 class="transition-transform rotate-180"
@@ -189,7 +189,7 @@ exports[`SearchRecipient > should call onAction when no address is selected 1`] 
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--2"
                           role="columnheader"
@@ -506,7 +506,7 @@ exports[`SearchRecipient > should render a modal 1`] = `
               class="mt-4"
             >
               <div
-                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
+                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 dim:md:border-theme-dim-700 dim:md:outline-theme-dim-700 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
                 data-testid="TableWrapper"
               >
                 <div
@@ -522,7 +522,7 @@ exports[`SearchRecipient > should render a modal 1`] = `
                         role="row"
                       >
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--0"
                           role="columnheader"
@@ -538,7 +538,7 @@ exports[`SearchRecipient > should render a modal 1`] = `
                               Address
                             </div>
                             <div
-                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                             >
                               <div
                                 class="transition-transform rotate-180"
@@ -571,7 +571,7 @@ exports[`SearchRecipient > should render a modal 1`] = `
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--1"
                           role="columnheader"
@@ -587,7 +587,7 @@ exports[`SearchRecipient > should render a modal 1`] = `
                               Type
                             </div>
                             <div
-                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                             >
                               <div
                                 class="transition-transform rotate-180"
@@ -620,7 +620,7 @@ exports[`SearchRecipient > should render a modal 1`] = `
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--2"
                           role="columnheader"
@@ -935,7 +935,7 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
               class="mt-4"
             >
               <div
-                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
+                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 dim:md:border-theme-dim-700 dim:md:outline-theme-dim-700 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
                 data-testid="TableWrapper"
               >
                 <div
@@ -951,7 +951,7 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
                         role="row"
                       >
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--0"
                           role="columnheader"
@@ -967,7 +967,7 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
                               Address
                             </div>
                             <div
-                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                             >
                               <div
                                 class="transition-transform rotate-180"
@@ -1000,7 +1000,7 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--1"
                           role="columnheader"
@@ -1016,7 +1016,7 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
                               Type
                             </div>
                             <div
-                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                             >
                               <div
                                 class="transition-transform rotate-180"
@@ -1049,7 +1049,7 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--2"
                           role="columnheader"
@@ -1364,7 +1364,7 @@ exports[`SearchRecipient > should render with contact on desktop 1`] = `
               class="mt-4"
             >
               <div
-                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
+                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 dim:md:border-theme-dim-700 dim:md:outline-theme-dim-700 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
                 data-testid="TableWrapper"
               >
                 <div
@@ -1380,7 +1380,7 @@ exports[`SearchRecipient > should render with contact on desktop 1`] = `
                         role="row"
                       >
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--0"
                           role="columnheader"
@@ -1396,7 +1396,7 @@ exports[`SearchRecipient > should render with contact on desktop 1`] = `
                               Address
                             </div>
                             <div
-                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                             >
                               <div
                                 class="transition-transform rotate-180"
@@ -1429,7 +1429,7 @@ exports[`SearchRecipient > should render with contact on desktop 1`] = `
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--1"
                           role="columnheader"
@@ -1445,7 +1445,7 @@ exports[`SearchRecipient > should render with contact on desktop 1`] = `
                               Type
                             </div>
                             <div
-                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                             >
                               <div
                                 class="transition-transform rotate-180"
@@ -1478,7 +1478,7 @@ exports[`SearchRecipient > should render with contact on desktop 1`] = `
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--2"
                           role="columnheader"
@@ -1841,7 +1841,7 @@ exports[`SearchRecipient > should render with contact on mobile 1`] = `
                 </div>
               </div>
               <div
-                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
+                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 dim:md:border-theme-dim-700 dim:md:outline-theme-dim-700 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
                 data-testid="TableWrapper"
               >
                 <div
@@ -2027,7 +2027,7 @@ exports[`SearchRecipient > should render with my wallet on desktop 1`] = `
               class="mt-4"
             >
               <div
-                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
+                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 dim:md:border-theme-dim-700 dim:md:outline-theme-dim-700 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
                 data-testid="TableWrapper"
               >
                 <div
@@ -2043,7 +2043,7 @@ exports[`SearchRecipient > should render with my wallet on desktop 1`] = `
                         role="row"
                       >
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--0"
                           role="columnheader"
@@ -2059,7 +2059,7 @@ exports[`SearchRecipient > should render with my wallet on desktop 1`] = `
                               Address
                             </div>
                             <div
-                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                             >
                               <div
                                 class="transition-transform rotate-180"
@@ -2092,7 +2092,7 @@ exports[`SearchRecipient > should render with my wallet on desktop 1`] = `
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--1"
                           role="columnheader"
@@ -2108,7 +2108,7 @@ exports[`SearchRecipient > should render with my wallet on desktop 1`] = `
                               Type
                             </div>
                             <div
-                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                             >
                               <div
                                 class="transition-transform rotate-180"
@@ -2141,7 +2141,7 @@ exports[`SearchRecipient > should render with my wallet on desktop 1`] = `
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--2"
                           role="columnheader"
@@ -2504,7 +2504,7 @@ exports[`SearchRecipient > should render with my wallet on mobile 1`] = `
                 </div>
               </div>
               <div
-                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
+                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 dim:md:border-theme-dim-700 dim:md:outline-theme-dim-700 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
                 data-testid="TableWrapper"
               >
                 <div
@@ -2690,7 +2690,7 @@ exports[`SearchRecipient > should render with no alias if the recipient address 
               class="mt-4"
             >
               <div
-                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
+                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 dim:md:border-theme-dim-700 dim:md:outline-theme-dim-700 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
                 data-testid="TableWrapper"
               >
                 <div
@@ -2706,7 +2706,7 @@ exports[`SearchRecipient > should render with no alias if the recipient address 
                         role="row"
                       >
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--0"
                           role="columnheader"
@@ -2722,7 +2722,7 @@ exports[`SearchRecipient > should render with no alias if the recipient address 
                               Address
                             </div>
                             <div
-                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                             >
                               <div
                                 class="transition-transform rotate-180"
@@ -2755,7 +2755,7 @@ exports[`SearchRecipient > should render with no alias if the recipient address 
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--1"
                           role="columnheader"
@@ -2771,7 +2771,7 @@ exports[`SearchRecipient > should render with no alias if the recipient address 
                               Type
                             </div>
                             <div
-                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                             >
                               <div
                                 class="transition-transform rotate-180"
@@ -2804,7 +2804,7 @@ exports[`SearchRecipient > should render with no alias if the recipient address 
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--2"
                           role="columnheader"
@@ -3040,7 +3040,7 @@ exports[`SearchRecipient > should render with selected address 1`] = `
               class="mt-4"
             >
               <div
-                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
+                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 dim:md:border-theme-dim-700 dim:md:outline-theme-dim-700 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
                 data-testid="TableWrapper"
               >
                 <div
@@ -3056,7 +3056,7 @@ exports[`SearchRecipient > should render with selected address 1`] = `
                         role="row"
                       >
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--0"
                           role="columnheader"
@@ -3072,7 +3072,7 @@ exports[`SearchRecipient > should render with selected address 1`] = `
                               Address
                             </div>
                             <div
-                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                             >
                               <div
                                 class="transition-transform rotate-180"
@@ -3105,7 +3105,7 @@ exports[`SearchRecipient > should render with selected address 1`] = `
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--1"
                           role="columnheader"
@@ -3121,7 +3121,7 @@ exports[`SearchRecipient > should render with selected address 1`] = `
                               Type
                             </div>
                             <div
-                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                             >
                               <div
                                 class="transition-transform rotate-180"
@@ -3154,7 +3154,7 @@ exports[`SearchRecipient > should render with selected address 1`] = `
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--2"
                           role="columnheader"
@@ -3469,7 +3469,7 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
               class="mt-4"
             >
               <div
-                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
+                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 dim:md:border-theme-dim-700 dim:md:outline-theme-dim-700 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
                 data-testid="TableWrapper"
               >
                 <div
@@ -3485,7 +3485,7 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
                         role="row"
                       >
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--0"
                           role="columnheader"
@@ -3501,7 +3501,7 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
                               Address
                             </div>
                             <div
-                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                             >
                               <div
                                 class="transition-transform rotate-180"
@@ -3534,7 +3534,7 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--1"
                           role="columnheader"
@@ -3550,7 +3550,7 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
                               Type
                             </div>
                             <div
-                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                             >
                               <div
                                 class="transition-transform rotate-180"
@@ -3583,7 +3583,7 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--2"
                           role="columnheader"
@@ -4014,7 +4014,7 @@ exports[`SearchRecipient > should render with selected address on mobile 1`] = `
                 </div>
               </div>
               <div
-                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
+                class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 dim:md:border-theme-dim-700 dim:md:outline-theme-dim-700 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
                 data-testid="TableWrapper"
               >
                 <div

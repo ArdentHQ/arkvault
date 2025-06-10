@@ -108,9 +108,8 @@ export const useTheme: () => {
 
 	const setProfileTheme = (profile: Contracts.IProfile) => {
 		const profileTheme = profile.appearance().get("theme") as Theme;
-		if (theme !== profileTheme) {
-			setTheme(profileTheme);
-		}
+
+		setTheme(profileTheme);
 	};
 
 	const resetProfileTheme = (profile: Contracts.IProfile) => {

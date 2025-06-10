@@ -90,7 +90,7 @@ exports[`ConfirmSendTransaction > should render modal 1`] = `
                       role="row"
                     >
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--0"
                         role="columnheader"
@@ -106,7 +106,7 @@ exports[`ConfirmSendTransaction > should render modal 1`] = `
                             Date
                           </div>
                           <div
-                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                           >
                             <div
                               class="transition-transform"
@@ -139,7 +139,7 @@ exports[`ConfirmSendTransaction > should render modal 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black first:rounded-tl-xl last:rounded-tr-xl w-96 min-w-96"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 first:rounded-tl-xl last:rounded-tr-xl w-96 min-w-96"
                         colspan="1"
                         data-testid="table__th--1"
                         role="columnheader"
@@ -155,7 +155,7 @@ exports[`ConfirmSendTransaction > should render modal 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--2"
                         role="columnheader"
@@ -171,7 +171,7 @@ exports[`ConfirmSendTransaction > should render modal 1`] = `
                             Amount
                           </div>
                           <div
-                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
+                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                           >
                             <div
                               class="transition-transform rotate-180"
