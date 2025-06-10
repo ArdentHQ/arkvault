@@ -378,7 +378,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 		selectedTransactionTypes,
 		setSortBy,
 		sortBy,
-		transactions: selectedTransactionTypes.length ? transactions : [],
+		transactions: selectedTransactionTypes.length > 0 ? transactions : [],
 		updateFilters,
 	};
 };

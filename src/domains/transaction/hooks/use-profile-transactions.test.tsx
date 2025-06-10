@@ -128,27 +128,29 @@ describe("useProfileTransactions", () => {
 			wrapper,
 		});
 
-		const allMock = vi.spyOn(profile.transactionAggregate(), "all").mockImplementation(() => {
-			return new Promise((resolve) => {
-				setTimeout(() => {
-					resolve({
-						hasMorePages: () => true,
-						items: () => [items[0]],
-					});
-				}, 100);
-			});
-		});
+		const allMock = vi.spyOn(profile.transactionAggregate(), "all").mockImplementation(
+			() =>
+				new Promise((resolve) => {
+					setTimeout(() => {
+						resolve({
+							hasMorePages: () => true,
+							items: () => [items[0]],
+						});
+					}, 100);
+				}),
+		);
 
-		const sentMock = vi.spyOn(profile.transactionAggregate(), "sent").mockImplementation(() => {
-			return new Promise((resolve) => {
-				setTimeout(() => {
-					resolve({
-						hasMorePages: () => true,
-						items: () => items,
-					});
-				}, 500);
-			});
-		});
+		const sentMock = vi.spyOn(profile.transactionAggregate(), "sent").mockImplementation(
+			() =>
+				new Promise((resolve) => {
+					setTimeout(() => {
+						resolve({
+							hasMorePages: () => true,
+							items: () => items,
+						});
+					}, 500);
+				}),
+		);
 
 		act(() => {
 			result.current.updateFilters({ activeMode: "all" });
