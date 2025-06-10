@@ -63,7 +63,7 @@ exports[`CopyOrDownload > should render 1`] = `
         </div>
       </button>
       <div
-        class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
+        class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
       />
       <button
         class="flex items-center space-x-2 rounded px-2 py-1 leading-5 font-semibold text-theme-primary-600 hover:bg-theme-navy-200 dark:text-theme-navy-400 dark:hover:bg-theme-secondary-800 cursor-pointer dark:hover:text-white"
