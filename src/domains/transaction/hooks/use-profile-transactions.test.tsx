@@ -172,7 +172,7 @@ describe("useProfileTransactions", () => {
 		transactionAggregateSpy.mockRestore();
 	});
 
-	it.only("name to define", async () => {
+	it("checks for new transactions", async () => {
 		const useSynchronizerSpy = vi.spyOn(hooksMock, "useSynchronizer").mockImplementation((jobs) => {
 			const start = async () => {
 				await jobs[0].callback();
@@ -184,10 +184,23 @@ describe("useProfileTransactions", () => {
 			};
 		});
 
+		const transactions = await profile.transactionAggregate().all();
+		const items = transactions.items();
+
+		const allMock = vi.spyOn(profile.transactionAggregate(), "all").mockResolvedValue({
+			hasMorePages: () => true,
+			items: () => [items[0]],
+		});
+
 		const { result } = renderHook(() => useProfileTransactions({ profile, wallets: profile.wallets().values() }), {
 			wrapper,
 		});
 
+		await waitFor(() => expect(result.current.isLoadingMore).toBe(false));
+		await waitFor(() => expect(result.current.transactions).toHaveLength(1));
+
 		useSynchronizerSpy.mockRestore();
+
+		allMock.mockRestore();
 	});
 });
