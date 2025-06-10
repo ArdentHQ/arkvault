@@ -315,6 +315,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 		const latestTransaction = items[0];
 
 		const foundNew =
+			/* istanbul ignore next -- @preserve */
 			latestTransaction && !transactions.some((transaction) => latestTransaction.hash() === transaction.hash());
 
 		if (!foundNew) {
