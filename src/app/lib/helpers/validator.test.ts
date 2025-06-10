@@ -5,13 +5,13 @@ import { Validator } from "./validator";
 
 describe("Validator", () => {
 	const schema = Joi.object({
-		name: Joi.string().required(),
 		age: Joi.number().required(),
+		name: Joi.string().required(),
 	});
 
 	it("should pass validation with correct data", () => {
 		const validator = new Validator();
-		const data = { name: "John Doe", age: 30 };
+		const data = { age: 30, name: "John Doe" };
 		const value = validator.validate(data, schema);
 
 		expect(validator.passes()).toBe(true);
@@ -50,7 +50,7 @@ describe("Validator", () => {
 
 		expect(validator.fails()).toBe(true);
 
-		const passingData = { name: "Jane Doe", age: 25 };
+		const passingData = { age: 25, name: "Jane Doe" };
 		validator.validate(passingData, schema);
 
 		expect(validator.passes()).toBe(true);
