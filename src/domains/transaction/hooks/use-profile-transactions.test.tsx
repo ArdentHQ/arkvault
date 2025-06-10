@@ -329,4 +329,20 @@ describe("useProfileTransactions", () => {
 
 		allMock.mockRestore();
 	});
+
+	it("should handle ascending sort order", async () => {
+		const { result } = renderHook(() => useProfileTransactions({ profile, wallets: profile.wallets().values() }), {
+			wrapper,
+		});
+
+		act(() => {
+			result.current.setSortBy({ column: "amount", desc: false });
+		});
+
+		act(() => {
+			result.current.updateFilters({ activeMode: "all" });
+		});
+
+		await waitFor(() => expect(result.current.sortBy).toEqual({ column: "amount", desc: false }));
+	});
 });
