@@ -5,7 +5,7 @@ import { useProfileTransactions } from "./use-profile-transactions";
 import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
 import { env, getDefaultProfileId, syncValidators } from "@/utils/testing-library";
 import * as hooksMock from "@/app/hooks";
-import { expect } from "vitest";
+import { expect, vi } from "vitest";
 
 const wrapper = ({ children }: any) => (
 	<EnvironmentProvider env={env}>
@@ -114,6 +114,53 @@ describe("useProfileTransactions", () => {
 		});
 
 		await waitFor(() => expect(result.current.transactions).toHaveLength(0));
+
+		sentMock.mockRestore();
+	});
+
+	it("should ignore when a new request is made", async () => {
+		vi.useRealTimers();
+
+		const transactions = await profile.transactionAggregate().all();
+		const items = transactions.items();
+
+		const { result } = renderHook(() => useProfileTransactions({ profile, wallets: profile.wallets().values() }), {
+			wrapper,
+		});
+
+		const allMock = vi.spyOn(profile.transactionAggregate(), "all").mockImplementation(() => {
+			return new Promise((resolve) => {
+				setTimeout(() => {
+					resolve({
+						hasMorePages: () => true,
+						items: () => [items[0]],
+					});
+				}, 100);
+			});
+		});
+
+		const sentMock = vi.spyOn(profile.transactionAggregate(), "sent").mockImplementation(() => {
+			return new Promise((resolve) => {
+				setTimeout(() => {
+					resolve({
+						hasMorePages: () => true,
+						items: () => items,
+					});
+				}, 500);
+			});
+		});
+
+		act(() => {
+			result.current.updateFilters({ activeMode: "all" });
+		});
+
+		act(() => {
+			result.current.updateFilters({ activeMode: "sent" });
+		});
+
+		await waitFor(() => expect(result.current.transactions).toHaveLength(10), { timeout: 1000 });
+
+		allMock.mockRestore();
 
 		sentMock.mockRestore();
 	});
