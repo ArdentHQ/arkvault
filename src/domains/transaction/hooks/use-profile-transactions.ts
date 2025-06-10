@@ -12,7 +12,7 @@ interface TransactionsState {
 	isLoadingMore: boolean;
 	activeMode?: string;
 	activeTransactionType?: any;
-	selectedTransactionTypes?: string[];
+	selectedTransactionTypes: string[];
 	hasMore?: boolean;
 	timestamp?: number;
 }
@@ -20,15 +20,15 @@ interface TransactionsState {
 interface TransactionFilters {
 	activeMode?: string;
 	activeTransactionType?: any;
-	selectedTransactionTypes?: string[];
+	selectedTransactionTypes: string[];
 	timestamp?: number;
 }
 
 interface FetchTransactionProperties {
-	flush?: boolean;
+	flush: boolean;
 	mode?: string;
 	transactionType?: any;
-	transactionTypes?: string[];
+	transactionTypes: string[];
 	wallets: ProfileContracts.IReadWriteWallet[];
 	cursor?: number;
 	orderBy?: string;
@@ -230,7 +230,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 	);
 
 	const fetchTransactions = useCallback(
-		async ({ flush = false, mode = "all", wallets = [], transactionTypes = [] }: FetchTransactionProperties) => {
+		async ({ flush, mode = "all", wallets, transactionTypes }: FetchTransactionProperties) => {
 			if (wallets.length === 0) {
 				return { hasMorePages: () => false, items: () => [] };
 			}
