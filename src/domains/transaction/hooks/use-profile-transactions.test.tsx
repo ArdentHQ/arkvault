@@ -4,6 +4,7 @@ import React from "react";
 import { useProfileTransactions } from "./use-profile-transactions";
 import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
 import { env, getDefaultProfileId, syncValidators } from "@/utils/testing-library";
+import * as hooksMock from "@/app/hooks";
 
 const wrapper = ({ children }: any) => (
 	<EnvironmentProvider env={env}>
@@ -169,5 +170,24 @@ describe("useProfileTransactions", () => {
 		);
 
 		transactionAggregateSpy.mockRestore();
+	});
+
+	it.only("name to define", async () => {
+		const useSynchronizerSpy = vi.spyOn(hooksMock, "useSynchronizer").mockImplementation((jobs) => {
+			const start = async () => {
+				await jobs[0].callback();
+			};
+
+			return {
+				start: start,
+				stop: vi.fn(),
+			};
+		});
+
+		const { result } = renderHook(() => useProfileTransactions({ profile, wallets: profile.wallets().values() }), {
+			wrapper,
+		});
+
+		useSynchronizerSpy.mockRestore();
 	});
 });
