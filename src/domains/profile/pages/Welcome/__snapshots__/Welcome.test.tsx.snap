@@ -69,7 +69,7 @@ exports[`Welcome > should change route to create profile 1`] = `
             class="flex flex-col gap-3 lg:flex-row"
           >
             <div
-              class="border-theme-navy-100 bg-theme-navy-50 dark:border-theme-secondary-800 dark:bg-theme-secondary-800 min-w-0 basis-1/2 rounded-xl border bg-[url('/welcome-bg-white.svg')] dark:bg-[url('/welcome-bg-dark.svg')] hidden sm:block"
+              class="border-theme-navy-100 bg-theme-navy-50 dark:border-theme-secondary-800 dark:bg-theme-secondary-800 dim:border-theme-dim-700 dim:bg-theme-dim-700 dim:bg-[url('/welcome-bg-dim.svg')] min-w-0 basis-1/2 rounded-xl border bg-[url('/welcome-bg-white.svg')] dark:bg-[url('/welcome-bg-dark.svg')] hidden sm:block"
             >
               <div
                 class="slick-slider slick-initialized"
@@ -97,12 +97,12 @@ exports[`Welcome > should change route to create profile 1`] = `
                             class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 dim:text-theme-dim-50 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Fully Customizable
                             </h3>
                             <p
-                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Tailor your experience by setting your local currency, adjusting timezones, and easily customizing themes and colors to your liking.
                             </p>
@@ -144,12 +144,12 @@ exports[`Welcome > should change route to create profile 1`] = `
                             class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 dim:text-theme-dim-50 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Easy Access to Your Digital Assets
                             </h3>
                             <p
-                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Access and manage your ARK assets with ease. Importing and viewing your addresses has never been simpler.
                             </p>
@@ -191,12 +191,12 @@ exports[`Welcome > should change route to create profile 1`] = `
                             class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 dim:text-theme-dim-50 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Integrated Exchanges
                             </h3>
                             <p
-                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Effortlessly swap your assets to and from ARK right within the wallet, with native support for Changelly and ChangeNow services.
                             </p>
@@ -238,12 +238,12 @@ exports[`Welcome > should change route to create profile 1`] = `
                             class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 dim:text-theme-dim-50 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Fully Customizable
                             </h3>
                             <p
-                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Tailor your experience by setting your local currency, adjusting timezones, and easily customizing themes and colors to your liking.
                             </p>
@@ -285,12 +285,12 @@ exports[`Welcome > should change route to create profile 1`] = `
                             class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 dim:text-theme-dim-50 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Easy Access to Your Digital Assets
                             </h3>
                             <p
-                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Access and manage your ARK assets with ease. Importing and viewing your addresses has never been simpler.
                             </p>
@@ -332,12 +332,12 @@ exports[`Welcome > should change route to create profile 1`] = `
                             class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 dim:text-theme-dim-50 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Integrated Exchanges
                             </h3>
                             <p
-                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Effortlessly swap your assets to and from ARK right within the wallet, with native support for Changelly and ChangeNow services.
                             </p>
@@ -379,12 +379,12 @@ exports[`Welcome > should change route to create profile 1`] = `
                             class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 dim:text-theme-dim-50 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Fully Customizable
                             </h3>
                             <p
-                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Tailor your experience by setting your local currency, adjusting timezones, and easily customizing themes and colors to your liking.
                             </p>
@@ -447,7 +447,7 @@ exports[`Welcome > should change route to create profile 1`] = `
               </div>
             </div>
             <div
-              class="border-theme-navy-100 dark:border-theme-secondary-800 min-w-0 basis-1/2 rounded-xl sm:border sm:p-6"
+              class="border-theme-navy-100 dark:border-theme-secondary-800 dim:border-theme-dim-700 min-w-0 basis-1/2 rounded-xl sm:border sm:p-6"
             >
               <div
                 class="mx-auto flex max-w-[400px] flex-col h-[calc(100vh_-_160px)] sm:h-full"
@@ -533,7 +533,7 @@ exports[`Welcome > should change route to create profile 1`] = `
                       data-testid="ProfileList"
                     >
                       <div
-                        class="border-theme-primary-200 transition-colors-shadow hover:border-theme-primary-100 hover:bg-theme-primary-100 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 flex cursor-pointer items-center rounded-lg border leading-tight duration-100 ease-linear"
+                        class="border-theme-primary-200 transition-colors-shadow hover:border-theme-primary-100 hover:bg-theme-primary-100 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dim:border-theme-dim-700 dim-hover:bg-theme-dim-700 flex cursor-pointer items-center rounded-lg border leading-tight duration-100 ease-linear"
                         data-testid="ProfileRow"
                       >
                         <a
@@ -574,7 +574,7 @@ exports[`Welcome > should change route to create profile 1`] = `
                               </span>
                             </div>
                             <div
-                              class="border-theme-secondary-300 text-theme-secondary-900 dark:border-theme-secondary-800 dark:text-theme-secondary-200 border-r pr-3"
+                              class="border-theme-secondary-300 text-theme-secondary-900 dark:border-theme-secondary-800 dark:text-theme-secondary-200 dim:text-theme-dim-200 dim:border-theme-dim-700 border-r pr-3"
                               data-testid="Icon__Lock"
                             >
                               <div
@@ -618,7 +618,7 @@ exports[`Welcome > should change route to create profile 1`] = `
                               tabindex="1"
                             >
                               <div
-                                class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 transition-colors duration-200"
+                                class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 transition-colors duration-200"
                               >
                                 <div
                                   style="height: 16px; width: 16px;"
@@ -807,7 +807,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
             class="flex flex-col gap-3 lg:flex-row"
           >
             <div
-              class="border-theme-navy-100 bg-theme-navy-50 dark:border-theme-secondary-800 dark:bg-theme-secondary-800 min-w-0 basis-1/2 rounded-xl border bg-[url('/welcome-bg-white.svg')] dark:bg-[url('/welcome-bg-dark.svg')] hidden sm:block"
+              class="border-theme-navy-100 bg-theme-navy-50 dark:border-theme-secondary-800 dark:bg-theme-secondary-800 dim:border-theme-dim-700 dim:bg-theme-dim-700 dim:bg-[url('/welcome-bg-dim.svg')] min-w-0 basis-1/2 rounded-xl border bg-[url('/welcome-bg-white.svg')] dark:bg-[url('/welcome-bg-dark.svg')] hidden sm:block"
             >
               <div
                 class="slick-slider slick-initialized"
@@ -835,12 +835,12 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                             class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 dim:text-theme-dim-50 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Fully Customizable
                             </h3>
                             <p
-                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Tailor your experience by setting your local currency, adjusting timezones, and easily customizing themes and colors to your liking.
                             </p>
@@ -882,12 +882,12 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                             class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 dim:text-theme-dim-50 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Easy Access to Your Digital Assets
                             </h3>
                             <p
-                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Access and manage your ARK assets with ease. Importing and viewing your addresses has never been simpler.
                             </p>
@@ -929,12 +929,12 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                             class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 dim:text-theme-dim-50 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Integrated Exchanges
                             </h3>
                             <p
-                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Effortlessly swap your assets to and from ARK right within the wallet, with native support for Changelly and ChangeNow services.
                             </p>
@@ -976,12 +976,12 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                             class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 dim:text-theme-dim-50 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Fully Customizable
                             </h3>
                             <p
-                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Tailor your experience by setting your local currency, adjusting timezones, and easily customizing themes and colors to your liking.
                             </p>
@@ -1023,12 +1023,12 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                             class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 dim:text-theme-dim-50 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Easy Access to Your Digital Assets
                             </h3>
                             <p
-                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Access and manage your ARK assets with ease. Importing and viewing your addresses has never been simpler.
                             </p>
@@ -1070,12 +1070,12 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                             class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 dim:text-theme-dim-50 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Integrated Exchanges
                             </h3>
                             <p
-                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Effortlessly swap your assets to and from ARK right within the wallet, with native support for Changelly and ChangeNow services.
                             </p>
@@ -1117,12 +1117,12 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                             class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 dim:text-theme-dim-50 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Fully Customizable
                             </h3>
                             <p
-                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Tailor your experience by setting your local currency, adjusting timezones, and easily customizing themes and colors to your liking.
                             </p>
@@ -1185,7 +1185,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
               </div>
             </div>
             <div
-              class="border-theme-navy-100 dark:border-theme-secondary-800 min-w-0 basis-1/2 rounded-xl sm:border sm:p-6"
+              class="border-theme-navy-100 dark:border-theme-secondary-800 dim:border-theme-dim-700 min-w-0 basis-1/2 rounded-xl sm:border sm:p-6"
             >
               <div
                 class="mx-auto flex max-w-[400px] flex-col h-[calc(100vh_-_160px)] sm:h-full"
@@ -1271,7 +1271,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                       data-testid="ProfileList"
                     >
                       <div
-                        class="border-theme-primary-200 transition-colors-shadow hover:border-theme-primary-100 hover:bg-theme-primary-100 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 flex cursor-pointer items-center rounded-lg border leading-tight duration-100 ease-linear"
+                        class="border-theme-primary-200 transition-colors-shadow hover:border-theme-primary-100 hover:bg-theme-primary-100 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dim:border-theme-dim-700 dim-hover:bg-theme-dim-700 flex cursor-pointer items-center rounded-lg border leading-tight duration-100 ease-linear"
                         data-testid="ProfileRow"
                       >
                         <a
@@ -1326,7 +1326,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                               tabindex="1"
                             >
                               <div
-                                class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 transition-colors duration-200"
+                                class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 transition-colors duration-200"
                               >
                                 <div
                                   style="height: 16px; width: 16px;"
@@ -1366,7 +1366,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                         </div>
                       </div>
                       <div
-                        class="border-theme-primary-200 transition-colors-shadow hover:border-theme-primary-100 hover:bg-theme-primary-100 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 flex cursor-pointer items-center rounded-lg border leading-tight duration-100 ease-linear"
+                        class="border-theme-primary-200 transition-colors-shadow hover:border-theme-primary-100 hover:bg-theme-primary-100 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dim:border-theme-dim-700 dim-hover:bg-theme-dim-700 flex cursor-pointer items-center rounded-lg border leading-tight duration-100 ease-linear"
                         data-testid="ProfileRow"
                       >
                         <a
@@ -1407,7 +1407,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                               </span>
                             </div>
                             <div
-                              class="border-theme-secondary-300 text-theme-secondary-900 dark:border-theme-secondary-800 dark:text-theme-secondary-200 border-r pr-3"
+                              class="border-theme-secondary-300 text-theme-secondary-900 dark:border-theme-secondary-800 dark:text-theme-secondary-200 dim:text-theme-dim-200 dim:border-theme-dim-700 border-r pr-3"
                               data-testid="Icon__Lock"
                             >
                               <div
@@ -1451,7 +1451,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                               tabindex="1"
                             >
                               <div
-                                class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 transition-colors duration-200"
+                                class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 transition-colors duration-200"
                               >
                                 <div
                                   style="height: 16px; width: 16px;"
@@ -1640,7 +1640,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
             class="flex flex-col gap-3 lg:flex-row"
           >
             <div
-              class="border-theme-navy-100 bg-theme-navy-50 dark:border-theme-secondary-800 dark:bg-theme-secondary-800 min-w-0 basis-1/2 rounded-xl border bg-[url('/welcome-bg-white.svg')] dark:bg-[url('/welcome-bg-dark.svg')] hidden sm:block"
+              class="border-theme-navy-100 bg-theme-navy-50 dark:border-theme-secondary-800 dark:bg-theme-secondary-800 dim:border-theme-dim-700 dim:bg-theme-dim-700 dim:bg-[url('/welcome-bg-dim.svg')] min-w-0 basis-1/2 rounded-xl border bg-[url('/welcome-bg-white.svg')] dark:bg-[url('/welcome-bg-dark.svg')] hidden sm:block"
             >
               <div
                 class="slick-slider slick-initialized"
@@ -1668,12 +1668,12 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                             class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 dim:text-theme-dim-50 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Fully Customizable
                             </h3>
                             <p
-                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Tailor your experience by setting your local currency, adjusting timezones, and easily customizing themes and colors to your liking.
                             </p>
@@ -1715,12 +1715,12 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                             class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 dim:text-theme-dim-50 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Easy Access to Your Digital Assets
                             </h3>
                             <p
-                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Access and manage your ARK assets with ease. Importing and viewing your addresses has never been simpler.
                             </p>
@@ -1762,12 +1762,12 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                             class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 dim:text-theme-dim-50 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Integrated Exchanges
                             </h3>
                             <p
-                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Effortlessly swap your assets to and from ARK right within the wallet, with native support for Changelly and ChangeNow services.
                             </p>
@@ -1809,12 +1809,12 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                             class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 dim:text-theme-dim-50 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Fully Customizable
                             </h3>
                             <p
-                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Tailor your experience by setting your local currency, adjusting timezones, and easily customizing themes and colors to your liking.
                             </p>
@@ -1856,12 +1856,12 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                             class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 dim:text-theme-dim-50 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Easy Access to Your Digital Assets
                             </h3>
                             <p
-                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Access and manage your ARK assets with ease. Importing and viewing your addresses has never been simpler.
                             </p>
@@ -1903,12 +1903,12 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                             class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 dim:text-theme-dim-50 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Integrated Exchanges
                             </h3>
                             <p
-                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Effortlessly swap your assets to and from ARK right within the wallet, with native support for Changelly and ChangeNow services.
                             </p>
@@ -1950,12 +1950,12 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                             class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 dim:text-theme-dim-50 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Fully Customizable
                             </h3>
                             <p
-                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Tailor your experience by setting your local currency, adjusting timezones, and easily customizing themes and colors to your liking.
                             </p>
@@ -2018,7 +2018,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
               </div>
             </div>
             <div
-              class="border-theme-navy-100 dark:border-theme-secondary-800 min-w-0 basis-1/2 rounded-xl sm:border sm:p-6"
+              class="border-theme-navy-100 dark:border-theme-secondary-800 dim:border-theme-dim-700 min-w-0 basis-1/2 rounded-xl sm:border sm:p-6"
             >
               <div
                 class="mx-auto flex max-w-[400px] flex-col h-[calc(100vh_-_160px)] sm:h-full"
@@ -2104,7 +2104,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                       data-testid="ProfileList"
                     >
                       <div
-                        class="border-theme-primary-200 transition-colors-shadow hover:border-theme-primary-100 hover:bg-theme-primary-100 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 flex cursor-pointer items-center rounded-lg border leading-tight duration-100 ease-linear"
+                        class="border-theme-primary-200 transition-colors-shadow hover:border-theme-primary-100 hover:bg-theme-primary-100 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dim:border-theme-dim-700 dim-hover:bg-theme-dim-700 flex cursor-pointer items-center rounded-lg border leading-tight duration-100 ease-linear"
                         data-testid="ProfileRow"
                       >
                         <a
@@ -2159,7 +2159,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                               tabindex="1"
                             >
                               <div
-                                class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 transition-colors duration-200"
+                                class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 transition-colors duration-200"
                               >
                                 <div
                                   style="height: 16px; width: 16px;"
@@ -2199,7 +2199,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                         </div>
                       </div>
                       <div
-                        class="border-theme-primary-200 transition-colors-shadow hover:border-theme-primary-100 hover:bg-theme-primary-100 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 flex cursor-pointer items-center rounded-lg border leading-tight duration-100 ease-linear"
+                        class="border-theme-primary-200 transition-colors-shadow hover:border-theme-primary-100 hover:bg-theme-primary-100 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dim:border-theme-dim-700 dim-hover:bg-theme-dim-700 flex cursor-pointer items-center rounded-lg border leading-tight duration-100 ease-linear"
                         data-testid="ProfileRow"
                       >
                         <a
@@ -2240,7 +2240,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                               </span>
                             </div>
                             <div
-                              class="border-theme-secondary-300 text-theme-secondary-900 dark:border-theme-secondary-800 dark:text-theme-secondary-200 border-r pr-3"
+                              class="border-theme-secondary-300 text-theme-secondary-900 dark:border-theme-secondary-800 dark:text-theme-secondary-200 dim:text-theme-dim-200 dim:border-theme-dim-700 border-r pr-3"
                               data-testid="Icon__Lock"
                             >
                               <div
@@ -2284,7 +2284,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                               tabindex="1"
                             >
                               <div
-                                class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 transition-colors duration-200"
+                                class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 transition-colors duration-200"
                               >
                                 <div
                                   style="height: 16px; width: 16px;"
@@ -2473,7 +2473,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
             class="flex flex-col gap-3 lg:flex-row"
           >
             <div
-              class="border-theme-navy-100 bg-theme-navy-50 dark:border-theme-secondary-800 dark:bg-theme-secondary-800 min-w-0 basis-1/2 rounded-xl border bg-[url('/welcome-bg-white.svg')] dark:bg-[url('/welcome-bg-dark.svg')] hidden sm:block"
+              class="border-theme-navy-100 bg-theme-navy-50 dark:border-theme-secondary-800 dark:bg-theme-secondary-800 dim:border-theme-dim-700 dim:bg-theme-dim-700 dim:bg-[url('/welcome-bg-dim.svg')] min-w-0 basis-1/2 rounded-xl border bg-[url('/welcome-bg-white.svg')] dark:bg-[url('/welcome-bg-dark.svg')] hidden sm:block"
             >
               <div
                 class="slick-slider slick-initialized"
@@ -2501,12 +2501,12 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                             class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 dim:text-theme-dim-50 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Fully Customizable
                             </h3>
                             <p
-                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Tailor your experience by setting your local currency, adjusting timezones, and easily customizing themes and colors to your liking.
                             </p>
@@ -2548,12 +2548,12 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                             class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 dim:text-theme-dim-50 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Easy Access to Your Digital Assets
                             </h3>
                             <p
-                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Access and manage your ARK assets with ease. Importing and viewing your addresses has never been simpler.
                             </p>
@@ -2595,12 +2595,12 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                             class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 dim:text-theme-dim-50 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Integrated Exchanges
                             </h3>
                             <p
-                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Effortlessly swap your assets to and from ARK right within the wallet, with native support for Changelly and ChangeNow services.
                             </p>
@@ -2642,12 +2642,12 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                             class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 dim:text-theme-dim-50 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Fully Customizable
                             </h3>
                             <p
-                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Tailor your experience by setting your local currency, adjusting timezones, and easily customizing themes and colors to your liking.
                             </p>
@@ -2689,12 +2689,12 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                             class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 dim:text-theme-dim-50 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Easy Access to Your Digital Assets
                             </h3>
                             <p
-                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Access and manage your ARK assets with ease. Importing and viewing your addresses has never been simpler.
                             </p>
@@ -2736,12 +2736,12 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                             class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 dim:text-theme-dim-50 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Integrated Exchanges
                             </h3>
                             <p
-                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Effortlessly swap your assets to and from ARK right within the wallet, with native support for Changelly and ChangeNow services.
                             </p>
@@ -2783,12 +2783,12 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                             class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 dim:text-theme-dim-50 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Fully Customizable
                             </h3>
                             <p
-                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Tailor your experience by setting your local currency, adjusting timezones, and easily customizing themes and colors to your liking.
                             </p>
@@ -2851,7 +2851,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
               </div>
             </div>
             <div
-              class="border-theme-navy-100 dark:border-theme-secondary-800 min-w-0 basis-1/2 rounded-xl sm:border sm:p-6"
+              class="border-theme-navy-100 dark:border-theme-secondary-800 dim:border-theme-dim-700 min-w-0 basis-1/2 rounded-xl sm:border sm:p-6"
             >
               <div
                 class="mx-auto flex max-w-[400px] flex-col h-[calc(100vh_-_160px)] sm:h-full"
@@ -2937,7 +2937,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                       data-testid="ProfileList"
                     >
                       <div
-                        class="border-theme-primary-200 transition-colors-shadow hover:border-theme-primary-100 hover:bg-theme-primary-100 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 flex cursor-pointer items-center rounded-lg border leading-tight duration-100 ease-linear"
+                        class="border-theme-primary-200 transition-colors-shadow hover:border-theme-primary-100 hover:bg-theme-primary-100 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dim:border-theme-dim-700 dim-hover:bg-theme-dim-700 flex cursor-pointer items-center rounded-lg border leading-tight duration-100 ease-linear"
                         data-testid="ProfileRow"
                       >
                         <a
@@ -2992,7 +2992,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                               tabindex="1"
                             >
                               <div
-                                class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 transition-colors duration-200"
+                                class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 transition-colors duration-200"
                               >
                                 <div
                                   style="height: 16px; width: 16px;"
@@ -3032,7 +3032,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                         </div>
                       </div>
                       <div
-                        class="border-theme-primary-200 transition-colors-shadow hover:border-theme-primary-100 hover:bg-theme-primary-100 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 flex cursor-pointer items-center rounded-lg border leading-tight duration-100 ease-linear"
+                        class="border-theme-primary-200 transition-colors-shadow hover:border-theme-primary-100 hover:bg-theme-primary-100 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dim:border-theme-dim-700 dim-hover:bg-theme-dim-700 flex cursor-pointer items-center rounded-lg border leading-tight duration-100 ease-linear"
                         data-testid="ProfileRow"
                       >
                         <a
@@ -3073,7 +3073,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                               </span>
                             </div>
                             <div
-                              class="border-theme-secondary-300 text-theme-secondary-900 dark:border-theme-secondary-800 dark:text-theme-secondary-200 border-r pr-3"
+                              class="border-theme-secondary-300 text-theme-secondary-900 dark:border-theme-secondary-800 dark:text-theme-secondary-200 dim:text-theme-dim-200 dim:border-theme-dim-700 border-r pr-3"
                               data-testid="Icon__Lock"
                             >
                               <div
@@ -3117,7 +3117,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                               tabindex="1"
                             >
                               <div
-                                class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 transition-colors duration-200"
+                                class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 transition-colors duration-200"
                               >
                                 <div
                                   style="height: 16px; width: 16px;"
@@ -3306,7 +3306,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
             class="flex flex-col gap-3 lg:flex-row"
           >
             <div
-              class="border-theme-navy-100 bg-theme-navy-50 dark:border-theme-secondary-800 dark:bg-theme-secondary-800 min-w-0 basis-1/2 rounded-xl border bg-[url('/welcome-bg-white.svg')] dark:bg-[url('/welcome-bg-dark.svg')] hidden sm:block"
+              class="border-theme-navy-100 bg-theme-navy-50 dark:border-theme-secondary-800 dark:bg-theme-secondary-800 dim:border-theme-dim-700 dim:bg-theme-dim-700 dim:bg-[url('/welcome-bg-dim.svg')] min-w-0 basis-1/2 rounded-xl border bg-[url('/welcome-bg-white.svg')] dark:bg-[url('/welcome-bg-dark.svg')] hidden sm:block"
             >
               <div
                 class="slick-slider slick-initialized"
@@ -3334,12 +3334,12 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                             class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 dim:text-theme-dim-50 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Fully Customizable
                             </h3>
                             <p
-                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Tailor your experience by setting your local currency, adjusting timezones, and easily customizing themes and colors to your liking.
                             </p>
@@ -3381,12 +3381,12 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                             class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 dim:text-theme-dim-50 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Easy Access to Your Digital Assets
                             </h3>
                             <p
-                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Access and manage your ARK assets with ease. Importing and viewing your addresses has never been simpler.
                             </p>
@@ -3428,12 +3428,12 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                             class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 dim:text-theme-dim-50 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Integrated Exchanges
                             </h3>
                             <p
-                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Effortlessly swap your assets to and from ARK right within the wallet, with native support for Changelly and ChangeNow services.
                             </p>
@@ -3475,12 +3475,12 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                             class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 dim:text-theme-dim-50 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Fully Customizable
                             </h3>
                             <p
-                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Tailor your experience by setting your local currency, adjusting timezones, and easily customizing themes and colors to your liking.
                             </p>
@@ -3522,12 +3522,12 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                             class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 dim:text-theme-dim-50 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Easy Access to Your Digital Assets
                             </h3>
                             <p
-                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Access and manage your ARK assets with ease. Importing and viewing your addresses has never been simpler.
                             </p>
@@ -3569,12 +3569,12 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                             class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 dim:text-theme-dim-50 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Integrated Exchanges
                             </h3>
                             <p
-                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Effortlessly swap your assets to and from ARK right within the wallet, with native support for Changelly and ChangeNow services.
                             </p>
@@ -3616,12 +3616,12 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                             class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 dim:text-theme-dim-50 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Fully Customizable
                             </h3>
                             <p
-                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Tailor your experience by setting your local currency, adjusting timezones, and easily customizing themes and colors to your liking.
                             </p>
@@ -3684,7 +3684,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
               </div>
             </div>
             <div
-              class="border-theme-navy-100 dark:border-theme-secondary-800 min-w-0 basis-1/2 rounded-xl sm:border sm:p-6"
+              class="border-theme-navy-100 dark:border-theme-secondary-800 dim:border-theme-dim-700 min-w-0 basis-1/2 rounded-xl sm:border sm:p-6"
             >
               <div
                 class="mx-auto flex max-w-[400px] flex-col h-[calc(100vh_-_160px)] sm:h-full"
@@ -3770,7 +3770,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                       data-testid="ProfileList"
                     >
                       <div
-                        class="border-theme-primary-200 transition-colors-shadow hover:border-theme-primary-100 hover:bg-theme-primary-100 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 flex cursor-pointer items-center rounded-lg border leading-tight duration-100 ease-linear"
+                        class="border-theme-primary-200 transition-colors-shadow hover:border-theme-primary-100 hover:bg-theme-primary-100 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dim:border-theme-dim-700 dim-hover:bg-theme-dim-700 flex cursor-pointer items-center rounded-lg border leading-tight duration-100 ease-linear"
                         data-testid="ProfileRow"
                       >
                         <a
@@ -3825,7 +3825,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                               tabindex="1"
                             >
                               <div
-                                class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 transition-colors duration-200"
+                                class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 transition-colors duration-200"
                               >
                                 <div
                                   style="height: 16px; width: 16px;"
@@ -3865,7 +3865,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                         </div>
                       </div>
                       <div
-                        class="border-theme-primary-200 transition-colors-shadow hover:border-theme-primary-100 hover:bg-theme-primary-100 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 flex cursor-pointer items-center rounded-lg border leading-tight duration-100 ease-linear"
+                        class="border-theme-primary-200 transition-colors-shadow hover:border-theme-primary-100 hover:bg-theme-primary-100 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dim:border-theme-dim-700 dim-hover:bg-theme-dim-700 flex cursor-pointer items-center rounded-lg border leading-tight duration-100 ease-linear"
                         data-testid="ProfileRow"
                       >
                         <a
@@ -3906,7 +3906,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                               </span>
                             </div>
                             <div
-                              class="border-theme-secondary-300 text-theme-secondary-900 dark:border-theme-secondary-800 dark:text-theme-secondary-200 border-r pr-3"
+                              class="border-theme-secondary-300 text-theme-secondary-900 dark:border-theme-secondary-800 dark:text-theme-secondary-200 dim:text-theme-dim-200 dim:border-theme-dim-700 border-r pr-3"
                               data-testid="Icon__Lock"
                             >
                               <div
@@ -3950,7 +3950,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                               tabindex="1"
                             >
                               <div
-                                class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 transition-colors duration-200"
+                                class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 transition-colors duration-200"
                               >
                                 <div
                                   style="height: 16px; width: 16px;"
@@ -4139,7 +4139,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
             class="flex flex-col gap-3 lg:flex-row"
           >
             <div
-              class="border-theme-navy-100 bg-theme-navy-50 dark:border-theme-secondary-800 dark:bg-theme-secondary-800 min-w-0 basis-1/2 rounded-xl border bg-[url('/welcome-bg-white.svg')] dark:bg-[url('/welcome-bg-dark.svg')] hidden sm:block"
+              class="border-theme-navy-100 bg-theme-navy-50 dark:border-theme-secondary-800 dark:bg-theme-secondary-800 dim:border-theme-dim-700 dim:bg-theme-dim-700 dim:bg-[url('/welcome-bg-dim.svg')] min-w-0 basis-1/2 rounded-xl border bg-[url('/welcome-bg-white.svg')] dark:bg-[url('/welcome-bg-dark.svg')] hidden sm:block"
             >
               <div
                 class="slick-slider slick-initialized"
@@ -4167,12 +4167,12 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                             class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 dim:text-theme-dim-50 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Fully Customizable
                             </h3>
                             <p
-                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Tailor your experience by setting your local currency, adjusting timezones, and easily customizing themes and colors to your liking.
                             </p>
@@ -4214,12 +4214,12 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                             class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 dim:text-theme-dim-50 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Easy Access to Your Digital Assets
                             </h3>
                             <p
-                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Access and manage your ARK assets with ease. Importing and viewing your addresses has never been simpler.
                             </p>
@@ -4261,12 +4261,12 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                             class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 dim:text-theme-dim-50 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Integrated Exchanges
                             </h3>
                             <p
-                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Effortlessly swap your assets to and from ARK right within the wallet, with native support for Changelly and ChangeNow services.
                             </p>
@@ -4308,12 +4308,12 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                             class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 dim:text-theme-dim-50 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Fully Customizable
                             </h3>
                             <p
-                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Tailor your experience by setting your local currency, adjusting timezones, and easily customizing themes and colors to your liking.
                             </p>
@@ -4355,12 +4355,12 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                             class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 dim:text-theme-dim-50 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Easy Access to Your Digital Assets
                             </h3>
                             <p
-                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Access and manage your ARK assets with ease. Importing and viewing your addresses has never been simpler.
                             </p>
@@ -4402,12 +4402,12 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                             class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 dim:text-theme-dim-50 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Integrated Exchanges
                             </h3>
                             <p
-                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Effortlessly swap your assets to and from ARK right within the wallet, with native support for Changelly and ChangeNow services.
                             </p>
@@ -4449,12 +4449,12 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                             class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 dim:text-theme-dim-50 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Fully Customizable
                             </h3>
                             <p
-                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Tailor your experience by setting your local currency, adjusting timezones, and easily customizing themes and colors to your liking.
                             </p>
@@ -4517,7 +4517,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
               </div>
             </div>
             <div
-              class="border-theme-navy-100 dark:border-theme-secondary-800 min-w-0 basis-1/2 rounded-xl sm:border sm:p-6"
+              class="border-theme-navy-100 dark:border-theme-secondary-800 dim:border-theme-dim-700 min-w-0 basis-1/2 rounded-xl sm:border sm:p-6"
             >
               <div
                 class="mx-auto flex max-w-[400px] flex-col h-[calc(100vh_-_160px)] sm:h-full"
@@ -4603,7 +4603,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                       data-testid="ProfileList"
                     >
                       <div
-                        class="border-theme-primary-200 transition-colors-shadow hover:border-theme-primary-100 hover:bg-theme-primary-100 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 flex cursor-pointer items-center rounded-lg border leading-tight duration-100 ease-linear"
+                        class="border-theme-primary-200 transition-colors-shadow hover:border-theme-primary-100 hover:bg-theme-primary-100 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dim:border-theme-dim-700 dim-hover:bg-theme-dim-700 flex cursor-pointer items-center rounded-lg border leading-tight duration-100 ease-linear"
                         data-testid="ProfileRow"
                       >
                         <a
@@ -4658,7 +4658,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                               tabindex="1"
                             >
                               <div
-                                class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 transition-colors duration-200"
+                                class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 transition-colors duration-200"
                               >
                                 <div
                                   style="height: 16px; width: 16px;"
@@ -4698,7 +4698,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                         </div>
                       </div>
                       <div
-                        class="border-theme-primary-200 transition-colors-shadow hover:border-theme-primary-100 hover:bg-theme-primary-100 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 flex cursor-pointer items-center rounded-lg border leading-tight duration-100 ease-linear"
+                        class="border-theme-primary-200 transition-colors-shadow hover:border-theme-primary-100 hover:bg-theme-primary-100 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dim:border-theme-dim-700 dim-hover:bg-theme-dim-700 flex cursor-pointer items-center rounded-lg border leading-tight duration-100 ease-linear"
                         data-testid="ProfileRow"
                       >
                         <a
@@ -4739,7 +4739,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                               </span>
                             </div>
                             <div
-                              class="border-theme-secondary-300 text-theme-secondary-900 dark:border-theme-secondary-800 dark:text-theme-secondary-200 border-r pr-3"
+                              class="border-theme-secondary-300 text-theme-secondary-900 dark:border-theme-secondary-800 dark:text-theme-secondary-200 dim:text-theme-dim-200 dim:border-theme-dim-700 border-r pr-3"
                               data-testid="Icon__Lock"
                             >
                               <div
@@ -4783,7 +4783,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                               tabindex="1"
                             >
                               <div
-                                class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 transition-colors duration-200"
+                                class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 transition-colors duration-200"
                               >
                                 <div
                                   style="height: 16px; width: 16px;"
@@ -4972,7 +4972,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
             class="flex flex-col gap-3 lg:flex-row"
           >
             <div
-              class="border-theme-navy-100 bg-theme-navy-50 dark:border-theme-secondary-800 dark:bg-theme-secondary-800 min-w-0 basis-1/2 rounded-xl border bg-[url('/welcome-bg-white.svg')] dark:bg-[url('/welcome-bg-dark.svg')] hidden sm:block"
+              class="border-theme-navy-100 bg-theme-navy-50 dark:border-theme-secondary-800 dark:bg-theme-secondary-800 dim:border-theme-dim-700 dim:bg-theme-dim-700 dim:bg-[url('/welcome-bg-dim.svg')] min-w-0 basis-1/2 rounded-xl border bg-[url('/welcome-bg-white.svg')] dark:bg-[url('/welcome-bg-dark.svg')] hidden sm:block"
             >
               <div
                 class="slick-slider slick-initialized"
@@ -5000,12 +5000,12 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                             class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 dim:text-theme-dim-50 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Fully Customizable
                             </h3>
                             <p
-                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Tailor your experience by setting your local currency, adjusting timezones, and easily customizing themes and colors to your liking.
                             </p>
@@ -5047,12 +5047,12 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                             class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 dim:text-theme-dim-50 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Easy Access to Your Digital Assets
                             </h3>
                             <p
-                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Access and manage your ARK assets with ease. Importing and viewing your addresses has never been simpler.
                             </p>
@@ -5094,12 +5094,12 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                             class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 dim:text-theme-dim-50 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Integrated Exchanges
                             </h3>
                             <p
-                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Effortlessly swap your assets to and from ARK right within the wallet, with native support for Changelly and ChangeNow services.
                             </p>
@@ -5141,12 +5141,12 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                             class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 dim:text-theme-dim-50 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Fully Customizable
                             </h3>
                             <p
-                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Tailor your experience by setting your local currency, adjusting timezones, and easily customizing themes and colors to your liking.
                             </p>
@@ -5188,12 +5188,12 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                             class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 dim:text-theme-dim-50 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Easy Access to Your Digital Assets
                             </h3>
                             <p
-                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Access and manage your ARK assets with ease. Importing and viewing your addresses has never been simpler.
                             </p>
@@ -5235,12 +5235,12 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                             class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 dim:text-theme-dim-50 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Integrated Exchanges
                             </h3>
                             <p
-                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Effortlessly swap your assets to and from ARK right within the wallet, with native support for Changelly and ChangeNow services.
                             </p>
@@ -5282,12 +5282,12 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                             class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 dim:text-theme-dim-50 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Fully Customizable
                             </h3>
                             <p
-                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Tailor your experience by setting your local currency, adjusting timezones, and easily customizing themes and colors to your liking.
                             </p>
@@ -5350,7 +5350,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
               </div>
             </div>
             <div
-              class="border-theme-navy-100 dark:border-theme-secondary-800 min-w-0 basis-1/2 rounded-xl sm:border sm:p-6"
+              class="border-theme-navy-100 dark:border-theme-secondary-800 dim:border-theme-dim-700 min-w-0 basis-1/2 rounded-xl sm:border sm:p-6"
             >
               <div
                 class="mx-auto flex max-w-[400px] flex-col h-[calc(100vh_-_160px)] sm:h-full"
@@ -5436,7 +5436,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                       data-testid="ProfileList"
                     >
                       <div
-                        class="border-theme-primary-200 transition-colors-shadow hover:border-theme-primary-100 hover:bg-theme-primary-100 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 flex cursor-pointer items-center rounded-lg border leading-tight duration-100 ease-linear"
+                        class="border-theme-primary-200 transition-colors-shadow hover:border-theme-primary-100 hover:bg-theme-primary-100 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dim:border-theme-dim-700 dim-hover:bg-theme-dim-700 flex cursor-pointer items-center rounded-lg border leading-tight duration-100 ease-linear"
                         data-testid="ProfileRow"
                       >
                         <a
@@ -5477,7 +5477,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                               </span>
                             </div>
                             <div
-                              class="border-theme-secondary-300 text-theme-secondary-900 dark:border-theme-secondary-800 dark:text-theme-secondary-200 border-r pr-3"
+                              class="border-theme-secondary-300 text-theme-secondary-900 dark:border-theme-secondary-800 dark:text-theme-secondary-200 dim:text-theme-dim-200 dim:border-theme-dim-700 border-r pr-3"
                               data-testid="Icon__Lock"
                             >
                               <div
@@ -5521,7 +5521,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                               tabindex="1"
                             >
                               <div
-                                class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 transition-colors duration-200"
+                                class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 transition-colors duration-200"
                               >
                                 <div
                                   style="height: 16px; width: 16px;"
@@ -5710,7 +5710,7 @@ exports[`Welcome > should render with profiles 1`] = `
             class="flex flex-col gap-3 lg:flex-row"
           >
             <div
-              class="border-theme-navy-100 bg-theme-navy-50 dark:border-theme-secondary-800 dark:bg-theme-secondary-800 min-w-0 basis-1/2 rounded-xl border bg-[url('/welcome-bg-white.svg')] dark:bg-[url('/welcome-bg-dark.svg')] hidden sm:block"
+              class="border-theme-navy-100 bg-theme-navy-50 dark:border-theme-secondary-800 dark:bg-theme-secondary-800 dim:border-theme-dim-700 dim:bg-theme-dim-700 dim:bg-[url('/welcome-bg-dim.svg')] min-w-0 basis-1/2 rounded-xl border bg-[url('/welcome-bg-white.svg')] dark:bg-[url('/welcome-bg-dark.svg')] hidden sm:block"
             >
               <div
                 class="slick-slider slick-initialized"
@@ -5738,12 +5738,12 @@ exports[`Welcome > should render with profiles 1`] = `
                             class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 dim:text-theme-dim-50 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Fully Customizable
                             </h3>
                             <p
-                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Tailor your experience by setting your local currency, adjusting timezones, and easily customizing themes and colors to your liking.
                             </p>
@@ -5785,12 +5785,12 @@ exports[`Welcome > should render with profiles 1`] = `
                             class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 dim:text-theme-dim-50 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Easy Access to Your Digital Assets
                             </h3>
                             <p
-                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Access and manage your ARK assets with ease. Importing and viewing your addresses has never been simpler.
                             </p>
@@ -5832,12 +5832,12 @@ exports[`Welcome > should render with profiles 1`] = `
                             class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 dim:text-theme-dim-50 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Integrated Exchanges
                             </h3>
                             <p
-                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Effortlessly swap your assets to and from ARK right within the wallet, with native support for Changelly and ChangeNow services.
                             </p>
@@ -5879,12 +5879,12 @@ exports[`Welcome > should render with profiles 1`] = `
                             class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 dim:text-theme-dim-50 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Fully Customizable
                             </h3>
                             <p
-                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Tailor your experience by setting your local currency, adjusting timezones, and easily customizing themes and colors to your liking.
                             </p>
@@ -5926,12 +5926,12 @@ exports[`Welcome > should render with profiles 1`] = `
                             class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 dim:text-theme-dim-50 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Easy Access to Your Digital Assets
                             </h3>
                             <p
-                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Access and manage your ARK assets with ease. Importing and viewing your addresses has never been simpler.
                             </p>
@@ -5973,12 +5973,12 @@ exports[`Welcome > should render with profiles 1`] = `
                             class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 dim:text-theme-dim-50 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Integrated Exchanges
                             </h3>
                             <p
-                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Effortlessly swap your assets to and from ARK right within the wallet, with native support for Changelly and ChangeNow services.
                             </p>
@@ -6020,12 +6020,12 @@ exports[`Welcome > should render with profiles 1`] = `
                             class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 dim:text-theme-dim-50 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Fully Customizable
                             </h3>
                             <p
-                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Tailor your experience by setting your local currency, adjusting timezones, and easily customizing themes and colors to your liking.
                             </p>
@@ -6088,7 +6088,7 @@ exports[`Welcome > should render with profiles 1`] = `
               </div>
             </div>
             <div
-              class="border-theme-navy-100 dark:border-theme-secondary-800 min-w-0 basis-1/2 rounded-xl sm:border sm:p-6"
+              class="border-theme-navy-100 dark:border-theme-secondary-800 dim:border-theme-dim-700 min-w-0 basis-1/2 rounded-xl sm:border sm:p-6"
             >
               <div
                 class="mx-auto flex max-w-[400px] flex-col h-[calc(100vh_-_160px)] sm:h-full"
@@ -6174,7 +6174,7 @@ exports[`Welcome > should render with profiles 1`] = `
                       data-testid="ProfileList"
                     >
                       <div
-                        class="border-theme-primary-200 transition-colors-shadow hover:border-theme-primary-100 hover:bg-theme-primary-100 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 flex cursor-pointer items-center rounded-lg border leading-tight duration-100 ease-linear"
+                        class="border-theme-primary-200 transition-colors-shadow hover:border-theme-primary-100 hover:bg-theme-primary-100 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dim:border-theme-dim-700 dim-hover:bg-theme-dim-700 flex cursor-pointer items-center rounded-lg border leading-tight duration-100 ease-linear"
                         data-testid="ProfileRow"
                       >
                         <a
@@ -6229,7 +6229,7 @@ exports[`Welcome > should render with profiles 1`] = `
                               tabindex="1"
                             >
                               <div
-                                class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 transition-colors duration-200"
+                                class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 transition-colors duration-200"
                               >
                                 <div
                                   style="height: 16px; width: 16px;"
@@ -6269,7 +6269,7 @@ exports[`Welcome > should render with profiles 1`] = `
                         </div>
                       </div>
                       <div
-                        class="border-theme-primary-200 transition-colors-shadow hover:border-theme-primary-100 hover:bg-theme-primary-100 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 flex cursor-pointer items-center rounded-lg border leading-tight duration-100 ease-linear"
+                        class="border-theme-primary-200 transition-colors-shadow hover:border-theme-primary-100 hover:bg-theme-primary-100 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dim:border-theme-dim-700 dim-hover:bg-theme-dim-700 flex cursor-pointer items-center rounded-lg border leading-tight duration-100 ease-linear"
                         data-testid="ProfileRow"
                       >
                         <a
@@ -6310,7 +6310,7 @@ exports[`Welcome > should render with profiles 1`] = `
                               </span>
                             </div>
                             <div
-                              class="border-theme-secondary-300 text-theme-secondary-900 dark:border-theme-secondary-800 dark:text-theme-secondary-200 border-r pr-3"
+                              class="border-theme-secondary-300 text-theme-secondary-900 dark:border-theme-secondary-800 dark:text-theme-secondary-200 dim:text-theme-dim-200 dim:border-theme-dim-700 border-r pr-3"
                               data-testid="Icon__Lock"
                             >
                               <div
@@ -6354,7 +6354,7 @@ exports[`Welcome > should render with profiles 1`] = `
                               tabindex="1"
                             >
                               <div
-                                class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 transition-colors duration-200"
+                                class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 transition-colors duration-200"
                               >
                                 <div
                                   style="height: 16px; width: 16px;"
@@ -6543,7 +6543,7 @@ exports[`Welcome > should render without profiles 1`] = `
             class="flex flex-col gap-3 lg:flex-row"
           >
             <div
-              class="border-theme-navy-100 bg-theme-navy-50 dark:border-theme-secondary-800 dark:bg-theme-secondary-800 min-w-0 basis-1/2 rounded-xl border bg-[url('/welcome-bg-white.svg')] dark:bg-[url('/welcome-bg-dark.svg')] mb-6 sm:mb-0"
+              class="border-theme-navy-100 bg-theme-navy-50 dark:border-theme-secondary-800 dark:bg-theme-secondary-800 dim:border-theme-dim-700 dim:bg-theme-dim-700 dim:bg-[url('/welcome-bg-dim.svg')] min-w-0 basis-1/2 rounded-xl border bg-[url('/welcome-bg-white.svg')] dark:bg-[url('/welcome-bg-dark.svg')] mb-6 sm:mb-0"
             >
               <div
                 class="slick-slider slick-initialized"
@@ -6571,12 +6571,12 @@ exports[`Welcome > should render without profiles 1`] = `
                             class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 dim:text-theme-dim-50 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Fully Customizable
                             </h3>
                             <p
-                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Tailor your experience by setting your local currency, adjusting timezones, and easily customizing themes and colors to your liking.
                             </p>
@@ -6618,12 +6618,12 @@ exports[`Welcome > should render without profiles 1`] = `
                             class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 dim:text-theme-dim-50 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Easy Access to Your Digital Assets
                             </h3>
                             <p
-                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Access and manage your ARK assets with ease. Importing and viewing your addresses has never been simpler.
                             </p>
@@ -6665,12 +6665,12 @@ exports[`Welcome > should render without profiles 1`] = `
                             class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 dim:text-theme-dim-50 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Integrated Exchanges
                             </h3>
                             <p
-                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Effortlessly swap your assets to and from ARK right within the wallet, with native support for Changelly and ChangeNow services.
                             </p>
@@ -6712,12 +6712,12 @@ exports[`Welcome > should render without profiles 1`] = `
                             class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 dim:text-theme-dim-50 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Fully Customizable
                             </h3>
                             <p
-                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Tailor your experience by setting your local currency, adjusting timezones, and easily customizing themes and colors to your liking.
                             </p>
@@ -6759,12 +6759,12 @@ exports[`Welcome > should render without profiles 1`] = `
                             class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 dim:text-theme-dim-50 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Easy Access to Your Digital Assets
                             </h3>
                             <p
-                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Access and manage your ARK assets with ease. Importing and viewing your addresses has never been simpler.
                             </p>
@@ -6806,12 +6806,12 @@ exports[`Welcome > should render without profiles 1`] = `
                             class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 dim:text-theme-dim-50 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Integrated Exchanges
                             </h3>
                             <p
-                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Effortlessly swap your assets to and from ARK right within the wallet, with native support for Changelly and ChangeNow services.
                             </p>
@@ -6853,12 +6853,12 @@ exports[`Welcome > should render without profiles 1`] = `
                             class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 dim:text-theme-dim-50 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Fully Customizable
                             </h3>
                             <p
-                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Tailor your experience by setting your local currency, adjusting timezones, and easily customizing themes and colors to your liking.
                             </p>
@@ -6921,7 +6921,7 @@ exports[`Welcome > should render without profiles 1`] = `
               </div>
             </div>
             <div
-              class="border-theme-navy-100 dark:border-theme-secondary-800 min-w-0 basis-1/2 rounded-xl sm:border sm:p-6"
+              class="border-theme-navy-100 dark:border-theme-secondary-800 dim:border-theme-dim-700 min-w-0 basis-1/2 rounded-xl sm:border sm:p-6"
             >
               <div
                 class="mx-auto flex max-w-[400px] flex-col h-full"

@@ -118,6 +118,7 @@ import YourPassphraseDark from "./your-passphrase-dark.svg?react";
 import ConfirmYourPassphrase from "./confirm-your-passphrase.svg?react";
 import PersonLight from "./person-light.svg?react";
 import PersonDark from "./person-dark.svg?react";
+import PersonDim from "./person-dim.svg?react";
 import CircleMinus from "./circle-minus.svg?react";
 import LedgerImportMethod from "./ledger-import-method.svg?react";
 import MnemonicImportMethod from "./mnemonic-import-method.svg?react";
@@ -225,6 +226,7 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	Pencil,
 	PencilRuler,
 	PersonDark,
+	PersonDim,
 	PersonLight,
 	Plus,
 	PublicKeyImportMethod,
