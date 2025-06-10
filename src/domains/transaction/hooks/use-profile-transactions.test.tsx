@@ -311,8 +311,6 @@ describe("useProfileTransactions", () => {
 			};
 		});
 
-		const transactions = await profile.transactionAggregate().all();
-
 		const allMock = vi.spyOn(profile.transactionAggregate(), "all").mockResolvedValue({
 			hasMorePages: () => false,
 			items: () => [],
