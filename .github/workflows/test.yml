@@ -715,10 +715,10 @@ jobs:
 
             - name: Test Utils
               env:
-                  COVERAGE_THRESHOLD_LINES: 71.87
-                  COVERAGE_THRESHOLD_FUNCTIONS: 60
-                  COVERAGE_THRESHOLD_STATEMENTS: 76.31
-                  COVERAGE_THRESHOLD_BRANCHES: 80
+                  COVERAGE_THRESHOLD_LINES: 100
+                  COVERAGE_THRESHOLD_FUNCTIONS: 100
+                  COVERAGE_THRESHOLD_STATEMENTS: 100
+                  COVERAGE_THRESHOLD_BRANCHES: 100
                   COVERAGE_INCLUDE_PATH: src/domains/transaction/utils.ts,src/domains/transaction/routing.ts
               uses: nick-invision/retry@v2
               with:
