@@ -2,8 +2,8 @@ import { describe, it, expect } from "vitest";
 import { HistoricalPriceTransformer } from "./historical-price-transformer";
 
 const fixture = [
-	{ time: 1616025600, close: 1.05 },
-	{ time: 1616112000, close: 1.15 },
+	{ close: 1.05, time: 1_616_025_600 },
+	{ close: 1.15, time: 1_616_112_000 },
 ];
 
 describe("HistoricalPriceTransformer", () => {

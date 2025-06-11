@@ -2,7 +2,7 @@ import { describe, it, expect } from "vitest";
 import { HistoricalPriceTransformer } from "./historical-price-transformer";
 
 const fixture = {
-	prices: Array.from({ length: 50 }, (_, i) => [i * 1000, i]),
+	prices: Array.from({ length: 50 }, (_, index) => [index * 1000, index]),
 };
 
 describe("HistoricalPriceTransformer", () => {

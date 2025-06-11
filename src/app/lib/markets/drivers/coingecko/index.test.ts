@@ -40,7 +40,7 @@ describe("CoinGecko", () => {
 
 		const tracker = new CoinGecko(new Http.HttpClient(0));
 		const result = await tracker.marketData("ARK");
-		expect(result.USD.price).toBe(0.389486);
+		expect(result.USD.price).toBe(0.389_486);
 	});
 
 	it("should get historical price data", async () => {
@@ -49,11 +49,11 @@ describe("CoinGecko", () => {
 
 		const tracker = new CoinGecko(new Http.HttpClient(0));
 		const result = await tracker.historicalPrice({
-			token: "ARK",
 			currency: "USD",
-			days: 1,
-			type: "day",
 			dateFormat: "YYYY-MM-DD",
+			days: 1,
+			token: "ARK",
+			type: "day",
 		});
 		expect(result.labels).toHaveLength(12);
 		expect(result.datasets).toHaveLength(12);
@@ -65,11 +65,11 @@ describe("CoinGecko", () => {
 
 		const tracker = new CoinGecko(new Http.HttpClient(0));
 		const result = await tracker.historicalVolume({
-			token: "ARK",
 			currency: "USD",
-			days: 1,
-			type: "day",
 			dateFormat: "YYYY-MM-DD",
+			days: 1,
+			token: "ARK",
+			type: "day",
 		});
 		expect(result.labels).toHaveLength(12);
 		expect(result.datasets).toHaveLength(12);
@@ -81,11 +81,11 @@ describe("CoinGecko", () => {
 
 		const tracker = new CoinGecko(new Http.HttpClient(0));
 		const result = await tracker.dailyAverage({
-			token: "ARK",
 			currency: "USD",
 			timestamp: Date.now(),
+			token: "ARK",
 		});
-		expect(result).toBe(0.3962144414066281);
+		expect(result).toBe(0.396_214_441_406_628_1);
 	});
 
 	it("should get current price", async () => {
@@ -93,7 +93,7 @@ describe("CoinGecko", () => {
 		server.use(requestMock("https://api.coingecko.com/api/v3/simple/price", { ark: { usd: 1.3 } }));
 
 		const tracker = new CoinGecko(new Http.HttpClient(0));
-		const result = await tracker.currentPrice({ token: "ARK", currency: "USD" });
+		const result = await tracker.currentPrice({ currency: "USD", token: "ARK" });
 		expect(result).toBe(1.3);
 	});
 });

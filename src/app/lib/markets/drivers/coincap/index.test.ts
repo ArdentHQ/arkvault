@@ -7,17 +7,17 @@ import { CoinCap } from "./index";
 
 const assetsFixture = {
 	data: [
-		{ id: "ark", symbol: "ARK", priceUsd: "1.00", marketCapUsd: "100000000" },
-		{ id: "bitcoin", symbol: "BTC", priceUsd: "50000.00" },
+		{ id: "ark", marketCapUsd: "100000000", priceUsd: "1.00", symbol: "ARK" },
+		{ id: "bitcoin", priceUsd: "50000.00", symbol: "BTC" },
 	],
 };
 const ratesFixture = {
-	data: [{ symbol: "USD", rateUsd: "1.00" }],
+	data: [{ rateUsd: "1.00", symbol: "USD" }],
 };
 const historyFixture = {
 	data: [
-		{ priceUsd: "1.00", time: 1593561600000 }, // 2020-07-01
-		{ priceUsd: "1.10", time: 1593648000000 }, // 2020-07-02
+		{ priceUsd: "1.00", time: 1_593_561_600_000 }, // 2020-07-01
+		{ priceUsd: "1.10", time: 1_593_648_000_000 }, // 2020-07-02
 	],
 };
 
@@ -54,7 +54,7 @@ describe("CoinCap", () => {
 		const result = await tracker.marketData("ARK");
 
 		expect(result.USD.price).toBe(1);
-		expect(result.USD.marketCap).toBe(100000000);
+		expect(result.USD.marketCap).toBe(100_000_000);
 	});
 
 	it("should get market data for a token without a market cap", async () => {
@@ -67,7 +67,7 @@ describe("CoinCap", () => {
 		const result = await tracker.marketData("ARK");
 
 		expect(result.USD.price).toBe(1);
-		expect(result.USD.marketCap).toBe(NaN); // divided by undefined
+		expect(result.USD.marketCap).toBe(Number.NaN); // divided by undefined
 	});
 
 	it("should throw for invalid market data token", async () => {
@@ -85,11 +85,11 @@ describe("CoinCap", () => {
 
 		const tracker = new CoinCap(new Http.HttpClient(0));
 		const result = await tracker.historicalPrice({
-			token: "ARK",
 			currency: "USD",
-			days: 1,
-			type: "day",
 			dateFormat: "YYYY-MM-DD",
+			days: 1,
+			token: "ARK",
+			type: "day",
 		});
 		expect(result.labels).toHaveLength(2);
 		expect(result.datasets).toHaveLength(2);
@@ -105,15 +105,15 @@ describe("CoinCap", () => {
 		server.use(requestMock("https://api.coincap.io/v2/assets/ark/history", historyFixture));
 		server.use(
 			requestMock("https://api.coincap.io/v2/rates", {
-				data: [{ symbol: "USD", rateUsd: "1" }],
+				data: [{ rateUsd: "1", symbol: "USD" }],
 			}),
 		);
 
 		const tracker = new CoinCap(new Http.HttpClient(0));
 		const result = await tracker.dailyAverage({
-			token: "ARK",
 			currency: "USD",
 			timestamp: Date.now(),
+			token: "ARK",
 		});
 		expect(result).toBe(1.05);
 	});
@@ -124,9 +124,9 @@ describe("CoinCap", () => {
 
 		const tracker = new CoinCap(new Http.HttpClient(0));
 		const result = await tracker.dailyAverage({
-			token: "ARK",
 			currency: "USD",
 			timestamp: Date.now(),
+			token: "ARK",
 		});
 		expect(result).toBe(0);
 	});
@@ -136,12 +136,12 @@ describe("CoinCap", () => {
 		server.use(requestMock("https://api.coincap.io/v2/assets/ark/history", historyFixture));
 		server.use(
 			requestMock("https://api.coincap.io/v2/rates", {
-				data: [{ symbol: "USD", rateUsd: "1" }],
+				data: [{ rateUsd: "1", symbol: "USD" }],
 			}),
 		);
 
 		const tracker = new CoinCap(new Http.HttpClient(0));
-		const result = await tracker.currentPrice({ token: "ARK", currency: "USD" });
+		const result = await tracker.currentPrice({ currency: "USD", token: "ARK" });
 		expect(result).toBe(1.05);
 	});
 });
