@@ -14,8 +14,8 @@ const ratesFixture = {
 };
 const historyFixture = {
 	data: [
-		{ priceUsd: "1.00", time: 1616025600000 },
-		{ priceUsd: "1.10", time: 1616112000000 },
+		{ priceUsd: "1.00", time: 1593561600000 }, // 2020-07-01
+		{ priceUsd: "1.10", time: 1593648000000 }, // 2020-07-02
 	],
 };
 
@@ -36,6 +36,7 @@ describe("CoinCap", () => {
 
 	it("should return false for a token that does not exist", async () => {
 		server.use(requestMock("https://api.coincap.io/v2/assets", { data: [] }));
+		server.use(requestMock("https://api.coincap.io/v2/assets/undefined", { data: [] }));
 
 		const tracker = new CoinCap(new Http.HttpClient(0));
 		const result = await tracker.verifyToken("invalid");
