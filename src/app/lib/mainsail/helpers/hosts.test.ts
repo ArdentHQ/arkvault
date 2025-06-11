@@ -5,9 +5,9 @@ import { HostSet } from "@/app/lib/profiles/host.repository.contract";
 import { NetworkHost } from "@/app/lib/mainsail/networks";
 
 const hosts: NetworkHost[] = [
-	{ type: "full", host: "https://full.ark.io" },
-	{ type: "musig", host: "https://musig.ark.io" },
-	{ type: "explorer", host: "https://explorer.ark.io" },
+	{ host: "https://full.ark.io", type: "full" },
+	{ host: "https://musig.ark.io", type: "musig" },
+	{ host: "https://explorer.ark.io", type: "explorer" },
 ];
 
 describe("filterHosts", () => {
@@ -28,9 +28,9 @@ describe("randomHost", () => {
 describe("groupCustomHosts", () => {
 	it("should group custom hosts by name", () => {
 		const customHosts: HostSet = [
-			{ name: "ark", host: "https://custom1.ark.io" },
-			{ name: "ark", host: "https://custom2.ark.io" },
-			{ name: "solar", host: "https://custom.solar.io" },
+			{ host: "https://custom1.ark.io", name: "ark" },
+			{ host: "https://custom2.ark.io", name: "ark" },
+			{ host: "https://custom.solar.io", name: "solar" },
 		];
 		const grouped = groupCustomHosts(customHosts);
 		expect(Object.keys(grouped)).toHaveLength(2);
