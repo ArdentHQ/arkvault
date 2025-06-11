@@ -35,7 +35,7 @@ describe("CryptoCompare", () => {
 
 		const tracker = new CryptoCompare(new Http.HttpClient(0));
 		const result = await tracker.marketData("ARK");
-		expect(result.USD.price).toBe(0.3902378775046271);
+		expect(result.USD.price).toBe(0.390_237_877_504_627_1);
 	});
 
 	it("should get market data with an empty response", async () => {
@@ -50,11 +50,11 @@ describe("CryptoCompare", () => {
 		server.use(requestMock("https://min-api.cryptocompare.com/data/v2/histoday", histodayFixture));
 		const tracker = new CryptoCompare(new Http.HttpClient(0));
 		const result = await tracker.historicalPrice({
-			token: "ARK",
 			currency: "USD",
-			days: 1,
-			type: "day",
 			dateFormat: "YYYY-MM-DD",
+			days: 1,
+			token: "ARK",
+			type: "day",
 		});
 		expect(result.labels).toHaveLength(11);
 		expect(result.datasets).toHaveLength(11);
@@ -64,11 +64,11 @@ describe("CryptoCompare", () => {
 		server.use(requestMock("https://min-api.cryptocompare.com/data/v2/histoday", histodayFixture));
 		const tracker = new CryptoCompare(new Http.HttpClient(0));
 		const result = await tracker.historicalVolume({
-			token: "ARK",
 			currency: "USD",
-			days: 1,
-			type: "day",
 			dateFormat: "YYYY-MM-DD",
+			days: 1,
+			token: "ARK",
+			type: "day",
 		});
 		expect(result.labels).toHaveLength(11);
 		expect(result.datasets).toHaveLength(11);
@@ -78,9 +78,9 @@ describe("CryptoCompare", () => {
 		server.use(requestMock("https://min-api.cryptocompare.com/data/dayAvg", priceFixture));
 		const tracker = new CryptoCompare(new Http.HttpClient(0));
 		const result = await tracker.dailyAverage({
-			token: "ARK",
 			currency: "USD",
 			timestamp: Date.now(),
+			token: "ARK",
 		});
 		expect(result).toBe(1.23);
 	});
@@ -88,7 +88,7 @@ describe("CryptoCompare", () => {
 	it("should get current price", async () => {
 		server.use(requestMock("https://min-api.cryptocompare.com/data/price", priceFixture));
 		const tracker = new CryptoCompare(new Http.HttpClient(0));
-		const result = await tracker.currentPrice({ token: "ARK", currency: "USD" });
+		const result = await tracker.currentPrice({ currency: "USD", token: "ARK" });
 		expect(result).toBe(1.23);
 	});
 });

@@ -2,7 +2,7 @@ import { describe, it, expect } from "vitest";
 import { HistoricalVolumeTransformer } from "./historical-volume-transformer";
 
 const fixture = {
-	total_volumes: Array.from({ length: 50 }, (_, i) => [i * 1000, i]),
+	total_volumes: Array.from({ length: 50 }, (_, index) => [index * 1000, index]),
 };
 
 describe("HistoricalVolumeTransformer", () => {

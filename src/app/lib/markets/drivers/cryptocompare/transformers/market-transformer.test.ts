@@ -2,21 +2,21 @@ import { describe, it, expect } from "vitest";
 import { MarketTransformer } from "./market-transformer";
 
 const fixture = {
-	USD: {
-		TOSYMBOL: "USD",
-		CHANGEPCT24HOUR: 1,
-		LASTUPDATE: 1616112000,
-		MKTCAP: 100000000,
-		PRICE: 1,
-		TOTALVOLUME24HTO: 1000000,
-	},
 	BTC: {
-		TOSYMBOL: "BTC",
 		CHANGEPCT24HOUR: 2,
-		LASTUPDATE: 1616112000,
+		LASTUPDATE: 1_616_112_000,
 		MKTCAP: 20,
-		PRICE: 0.00002,
+		PRICE: 0.000_02,
+		TOSYMBOL: "BTC",
 		TOTALVOLUME24HTO: 1,
+	},
+	USD: {
+		CHANGEPCT24HOUR: 1,
+		LASTUPDATE: 1_616_112_000,
+		MKTCAP: 100_000_000,
+		PRICE: 1,
+		TOSYMBOL: "USD",
+		TOTALVOLUME24HTO: 1_000_000,
 	},
 };
 
@@ -26,8 +26,8 @@ describe("MarketTransformer", () => {
 		const result = transformer.transform();
 
 		expect(result.USD.price).toBe(1);
-		expect(result.BTC.price).toBe(0.00002);
-		expect(result.USD.marketCap).toBe(100000000);
+		expect(result.BTC.price).toBe(0.000_02);
+		expect(result.USD.marketCap).toBe(100_000_000);
 		expect(result.BTC.marketCap).toBe(20);
 	});
 });

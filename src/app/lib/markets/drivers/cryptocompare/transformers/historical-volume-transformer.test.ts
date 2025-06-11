@@ -2,8 +2,8 @@ import { describe, it, expect } from "vitest";
 import { HistoricalVolumeTransformer } from "./historical-volume-transformer";
 
 const fixture = [
-	{ time: 1616025600, volumeto: 1000 },
-	{ time: 1616112000, volumeto: 2200 },
+	{ time: 1_616_025_600, volumeto: 1000 },
+	{ time: 1_616_112_000, volumeto: 2200 },
 ];
 
 describe("HistoricalVolumeTransformer", () => {
