@@ -40,7 +40,7 @@ describe("pqueueSettled", () => {
 
 		expect(results).toEqual([
 			{ status: "fulfilled", value: "first" },
-			{ status: "rejected", reason: "second" },
+			{ reason: "second", status: "rejected" },
 			{ status: "fulfilled", value: "third" },
 		]);
 	});
