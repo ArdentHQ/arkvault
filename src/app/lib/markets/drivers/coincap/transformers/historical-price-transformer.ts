@@ -44,7 +44,7 @@ export class HistoricalPriceTransformer implements HistoricalTransformer {
 
 		return {
 			datasets: datasetValues,
-			labels: Object.keys(datasets).map((time) => DateTime.make(time).format(options.dateFormat)),
+			labels: Object.keys(datasets).map((time) => DateTime.make(time).format(dateFormat)),
 			max: Math.max(...datasetValues),
 			min: Math.min(...datasetValues),
 		};
