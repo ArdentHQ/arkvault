@@ -17,7 +17,7 @@ const StepStyled = ({ isActive, ...props }: React.HTMLProps<HTMLLIElement> & { i
 		className={twMerge(
 			"h-1 flex-1 rounded-[4px] transition-colors duration-300",
 			cn({
-				"bg-theme-primary-100 dark:bg-theme-secondary-800": !isActive,
+				"bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700": !isActive,
 				"bg-theme-warning-300": isActive,
 			}),
 			props.className,
