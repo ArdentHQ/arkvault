@@ -63,7 +63,7 @@ export const InputWrapperStyled = ({
 					valid && !disabled && !invalid,
 				"border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800":
 					disabled && !invalid,
-				"border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700":
+				"border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500":
 					!valid && !invalid && !disabled,
 				"focus-within:ring-1": !noShadow,
 				"h-12 overflow-hidden sm:h-14": !isTextArea && !isCompact,
@@ -167,7 +167,7 @@ export const Input = ({
 					<InputStyled
 						data-testid="Input"
 						className={cn(
-							"no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!",
+							"no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!",
 							innerClassName,
 							{
 								"text-theme-secondary-text": disabled,
