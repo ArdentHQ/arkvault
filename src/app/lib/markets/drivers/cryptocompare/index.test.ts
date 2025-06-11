@@ -6,7 +6,6 @@ import { CryptoCompare } from "./index";
 import pricemultifullFixture from "@/app/lib/markets/fixtures/cryptocompare/pricemultifull.json";
 import priceFixture from "@/app/lib/markets/fixtures/cryptocompare/price.json";
 import histodayFixture from "@/app/lib/markets/fixtures/cryptocompare/histoday.json";
-import marketDataFixture from "@/app/lib/markets/fixtures/cryptocompare/pricemultifull.json";
 
 describe("CryptoCompare", () => {
 	afterEach(() => {
@@ -31,7 +30,7 @@ describe("CryptoCompare", () => {
 	});
 
 	it("should get market data", async () => {
-		server.use(requestMock("https://min-api.cryptocompare.com/data/pricemultifull", marketDataFixture));
+		server.use(requestMock("https://min-api.cryptocompare.com/data/pricemultifull", pricemultifullFixture));
 
 		const tracker = new CryptoCompare(new Http.HttpClient(0));
 		const result = await tracker.marketData("ARK");
