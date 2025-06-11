@@ -111,11 +111,11 @@ describe("CoinCap", () => {
 
 		const tracker = new CoinCap(new Http.HttpClient(0));
 		const result = await tracker.historicalPrice({
-			token: "ARK",
 			currency: "USD",
-			days: 7,
-			type: "day",
 			dateFormat: "YYYY-MM-DD",
+			days: 7,
+			token: "ARK",
+			type: "day",
 		});
 		expect(result.labels).toHaveLength(2);
 		expect(result.datasets).toHaveLength(2);
@@ -129,11 +129,11 @@ describe("CoinCap", () => {
 
 		const tracker = new CoinCap(new Http.HttpClient(0));
 		const result = await tracker.historicalPrice({
-			token: "ARK",
 			currency: "USD",
-			days: 24,
-			type: "day",
 			dateFormat: "YYYY-MM-DD",
+			days: 24,
+			token: "ARK",
+			type: "day",
 		});
 		expect(result.labels).toHaveLength(2);
 		expect(result.datasets).toHaveLength(2);
