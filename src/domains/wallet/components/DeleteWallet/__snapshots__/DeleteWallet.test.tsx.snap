@@ -117,7 +117,7 @@ exports[`DeleteWallet > should render a modal 1`] = `
               class="flex flex-col overflow-hidden rounded-xl"
             >
               <div
-                class="flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-warning-100 text-theme-warning-700 dark:bg-theme-warning-700"
+                class="dim:text-white flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-warning-100 text-theme-warning-700 dark:bg-theme-warning-700"
               >
                 <div>
                   <div
@@ -162,7 +162,7 @@ exports[`DeleteWallet > should render a modal 1`] = `
                 </span>
               </div>
               <div
-                class="dark:bg-theme-secondary-800 w-full p-4 text-left text-sm leading-relaxed break-words bg-theme-warning-50"
+                class="dark:bg-theme-secondary-800 dim:bg-theme-dim-800 dim:text-theme-dim-50 w-full p-4 text-left text-sm leading-relaxed break-words bg-theme-warning-50"
               >
                 Are you sure you wish to delete the selected wallet? Before deleting, make sure the mnemonic passphrase is secured safely.
               </div>
@@ -205,7 +205,7 @@ exports[`DeleteWallet > should render a modal 1`] = `
                   >
                     <input
                       autocomplete="off"
-                      class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none sm:text-base! text-theme-secondary-text"
+                      class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none sm:text-base! text-theme-secondary-text"
                       data-testid="SelectAddress__input"
                       disabled=""
                       name="wallet"

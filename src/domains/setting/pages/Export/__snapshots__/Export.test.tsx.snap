@@ -974,7 +974,7 @@ exports[`Export Settings > should render export settings 1`] = `
                                       type="checkbox"
                                     />
                                     <div
-                                      class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
+                                      class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                                     >
                                       <span
                                         class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
@@ -1023,7 +1023,7 @@ exports[`Export Settings > should render export settings 1`] = `
                                       type="checkbox"
                                     />
                                     <div
-                                      class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
+                                      class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                                     >
                                       <span
                                         class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
@@ -1049,7 +1049,7 @@ exports[`Export Settings > should render export settings 1`] = `
                           class="flex flex-col overflow-hidden rounded-xl"
                         >
                           <div
-                            class="flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-info-100 text-theme-info-700 dark:bg-theme-info-700"
+                            class="dim:text-white flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-info-100 text-theme-info-700 dark:bg-theme-info-700 dim:bg-theme-dim-navy-600"
                           >
                             <div>
                               <div
@@ -1094,7 +1094,7 @@ exports[`Export Settings > should render export settings 1`] = `
                             </span>
                           </div>
                           <div
-                            class="dark:bg-theme-secondary-800 w-full p-4 text-left text-sm leading-relaxed break-words bg-theme-info-50"
+                            class="dark:bg-theme-secondary-800 dim:bg-theme-dim-800 dim:text-theme-dim-50 w-full p-4 text-left text-sm leading-relaxed break-words bg-theme-info-50"
                           >
                             Your exported Profile will not contain your mnemonic passphrases, only addresses and respective names.
                           </div>
