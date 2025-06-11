@@ -1,0 +1,32 @@
+{
+	"Response": "Success",
+	"Type": 100,
+	"Aggregated": false,
+	"Data": [
+		{
+			"time": 1616025600,
+			"high": 1.1,
+			"low": 0.9,
+			"open": 1.0,
+			"volumefrom": 1000,
+			"volumeto": 1000,
+			"close": 1.05
+		},
+		{
+			"time": 1616112000,
+			"high": 1.2,
+			"low": 1.0,
+			"open": 1.1,
+			"volumefrom": 2000,
+			"volumeto": 2200,
+			"close": 1.15
+		}
+	],
+	"TimeTo": 1616112000,
+	"TimeFrom": 1616025600,
+	"FirstValueInArray": true,
+	"ConversionType": {
+		"type": "direct",
+		"conversionSymbol": ""
+	}
+}
