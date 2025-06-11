@@ -1,4 +1,4 @@
-import { describe, it, expect, vi } from "vitest";
+import { describe, it, expect } from "vitest";
 import { pqueue, pqueueSettled } from "./queue.js";
 
 const success = async (result: any, delay = 1) => new Promise((resolve) => setTimeout(() => resolve(result), delay));
