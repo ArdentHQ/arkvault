@@ -1,3 +1,5 @@
+/* eslint-disable sonarjs/no-duplicate-string */
+
 import { describe, it, expect, vi, afterEach } from "vitest";
 import { Http } from "@/app/lib/mainsail";
 import { server, requestMock } from "@/tests/mocks/server";
