@@ -196,7 +196,7 @@ export const Input = ({
 					<div
 						data-testid="Input__addon-end"
 						className={cn(
-							"divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x",
+							"divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x",
 							{
 								"absolute right-0 bottom-full mb-2": isTextArea,
 								"text-theme-danger-500": isInvalidValue,
