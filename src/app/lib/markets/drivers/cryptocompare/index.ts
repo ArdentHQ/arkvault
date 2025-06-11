@@ -124,11 +124,11 @@ export class CryptoCompare implements PriceTracker {
 	 *
 	 * @private
 	 * @param {string} path
-	 * @param {*} [query={}]
+	 * @param {object} query
 	 * @returns {Promise<any>}
 	 * @memberof PriceTracker
 	 */
-	async #get(path: string, query = {}): Promise<any> {
+	async #get(path: string, query: object): Promise<any> {
 		const response = await this.#httpClient.get(`${this.#host}/${path}`, query);
 
 		return response.json();
