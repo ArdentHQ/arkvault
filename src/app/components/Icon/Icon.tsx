@@ -65,8 +65,7 @@ export const Icon = ({ name, fallback, size, dimensions, ...properties }: IconPr
 type ThemeIconProperties = {
 	darkIcon: string;
 	lightIcon: string;
-	// TODO: Remove this once all icons have been updated in all the pages
-	dimIcon?: string;
+	dimIcon: string;
 } & Omit<IconProperties, "name">;
 
 export const ThemeIcon = ({ darkIcon, lightIcon, dimIcon, ...properties }: ThemeIconProperties): JSX.Element => {

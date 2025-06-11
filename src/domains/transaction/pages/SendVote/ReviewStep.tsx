@@ -42,7 +42,12 @@ export const ReviewStep = ({ unvotes, votes, wallet, profile }: SendVoteStepProp
 			<StepHeader
 				title={t("TRANSACTION.REVIEW_STEP.TITLE")}
 				titleIcon={
-					<ThemeIcon dimensions={[24, 24]} lightIcon="SendTransactionLight" darkIcon="SendTransactionDark" />
+					<ThemeIcon
+						dimensions={[24, 24]}
+						lightIcon="SendTransactionLight"
+						darkIcon="SendTransactionDark"
+						dimIcon="SendTransactionDim"
+					/>
 				}
 				subtitle={t("TRANSACTION.REVIEW_STEP.DESCRIPTION")}
 			/>
