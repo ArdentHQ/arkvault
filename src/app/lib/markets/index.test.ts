@@ -4,12 +4,12 @@ import { PriceTracker } from "./contracts";
 import { Http } from "@/app/lib/mainsail";
 
 const createMockAdapter = (): PriceTracker => ({
-	verifyToken: vi.fn(),
-	marketData: vi.fn(),
+	currentPrice: vi.fn(),
+	dailyAverage: vi.fn(),
 	historicalPrice: vi.fn(),
 	historicalVolume: vi.fn(),
-	dailyAverage: vi.fn(),
-	currentPrice: vi.fn(),
+	marketData: vi.fn(),
+	verifyToken: vi.fn(),
 });
 
 describe("MarketService", () => {
@@ -53,7 +53,7 @@ describe("MarketService", () => {
 	it("should get historical price", async () => {
 		const adapter = createMockAdapter();
 		const marketService = new MarketService(adapter);
-		const options = { token: "ark", currency: "usd", days: 1, type: "day" as const, dateFormat: "YYYY-MM-DD" };
+		const options = { currency: "usd", dateFormat: "YYYY-MM-DD", days: 1, token: "ark", type: "day" as const };
 		await marketService.historicalPrice(options);
 		expect(adapter.historicalPrice).toHaveBeenCalledWith(options);
 	});
@@ -131,7 +131,7 @@ describe("MarketService", () => {
 	it("should get historical volume", async () => {
 		const adapter = createMockAdapter();
 		const marketService = new MarketService(adapter);
-		const options = { token: "ark", currency: "usd", days: 1, type: "day" as const, dateFormat: "YYYY-MM-DD" };
+		const options = { currency: "usd", dateFormat: "YYYY-MM-DD", days: 1, token: "ark", type: "day" as const };
 		await marketService.historicalVolume(options);
 		expect(adapter.historicalVolume).toHaveBeenCalledWith(options);
 	});
@@ -211,6 +211,6 @@ describe("MarketService", () => {
 		const marketService = new MarketService(adapter);
 		const timestamp = Date.now();
 		await marketService.dailyAverage("ark", "usd", timestamp);
-		expect(adapter.dailyAverage).toHaveBeenCalledWith({ token: "ark", currency: "usd", timestamp });
+		expect(adapter.dailyAverage).toHaveBeenCalledWith({ currency: "usd", timestamp, token: "ark" });
 	});
 });
