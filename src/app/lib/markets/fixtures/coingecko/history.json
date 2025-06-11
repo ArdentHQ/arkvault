@@ -1,0 +1,10 @@
+{
+	"id": "ark",
+	"symbol": "ark",
+	"name": "Ark",
+	"market_data": {
+		"current_price": {
+			"usd": 1.23
+		}
+	}
+}
