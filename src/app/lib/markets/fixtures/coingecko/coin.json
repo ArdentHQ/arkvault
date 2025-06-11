@@ -1,0 +1,17 @@
+{
+	"id": "ark",
+	"symbol": "ark",
+	"name": "Ark",
+	"market_data": {
+		"current_price": {
+			"usd": 1.0
+		},
+		"market_cap": {
+			"usd": 100000000
+		},
+		"total_volume": {
+			"usd": 1000000
+		},
+		"price_change_percentage_24h": 1.0
+	}
+}
