@@ -3,39 +3,11 @@ import { Http } from "@/app/lib/mainsail";
 import { server, requestMock } from "@/tests/mocks/server";
 import { CoinGecko } from "./index";
 
-const coinsListFixture = [
-	{ id: "ark", symbol: "ark", name: "Ark" },
-	{ id: "bitcoin", symbol: "btc", name: "Bitcoin" },
-];
-
-const coinFixture = {
-	id: "ark",
-	symbol: "ark",
-	name: "Ark",
-	market_data: {
-		current_price: { usd: 1.0 },
-		market_cap: { usd: 100000000 },
-		total_volume: { usd: 1000000 },
-		price_change_percentage_24h: 1.0,
-		market_cap_change_percentage_24h_in_currency: { usd: 1.0 },
-		last_updated: "2021-01-01T00:00:00.000Z",
-	},
-};
-
-const marketChartFixture = {
-	prices: Array.from({ length: 50 }, (_, i) => [i * 1000, i]),
-	market_caps: Array.from({ length: 50 }, (_, i) => [i * 1000, i * 100]),
-	total_volumes: Array.from({ length: 50 }, (_, i) => [i * 1000, i * 10]),
-};
-
-const simplePriceFixture = { ark: { btc: 0.00002 } };
-
-const historyFixture = {
-	id: "ark",
-	symbol: "ark",
-	name: "Ark",
-	market_data: { current_price: { usd: 1.23 } },
-};
+import coinsListFixture from "@/app/lib/markets/fixtures/coingecko/coins-list.json";
+import simplePriceFixture from "@/app/lib/markets/fixtures/coingecko/simple-price.json";
+import coinFixture from "@/app/lib/markets/fixtures/coingecko/coin.json";
+import marketChartFixture from "@/app/lib/markets/fixtures/coingecko/market-chart.json";
+import historyFixture from "@/app/lib/markets/fixtures/coingecko/history.json";
 
 describe("CoinGecko", () => {
 	afterEach(() => {
@@ -48,7 +20,7 @@ describe("CoinGecko", () => {
 		server.use(requestMock("https://api.coingecko.com/api/v3/simple/price", simplePriceFixture));
 
 		const tracker = new CoinGecko(new Http.HttpClient(0));
-		const result = await tracker.verifyToken("ARK");
+		const result = await tracker.verifyToken("ark");
 		expect(result).toBe(true);
 	});
 
@@ -67,7 +39,7 @@ describe("CoinGecko", () => {
 
 		const tracker = new CoinGecko(new Http.HttpClient(0));
 		const result = await tracker.marketData("ARK");
-		expect(result.USD.price).toBe(1.0);
+		expect(result.USD.price).toBe(0.389486);
 	});
 
 	it("should get historical price data", async () => {
@@ -82,8 +54,8 @@ describe("CoinGecko", () => {
 			type: "day",
 			dateFormat: "YYYY-MM-DD",
 		});
-		expect(result.labels).toHaveLength(3);
-		expect(result.datasets).toHaveLength(3);
+		expect(result.labels).toHaveLength(12);
+		expect(result.datasets).toHaveLength(12);
 	});
 
 	it("should get historical volume data", async () => {
@@ -98,8 +70,8 @@ describe("CoinGecko", () => {
 			type: "day",
 			dateFormat: "YYYY-MM-DD",
 		});
-		expect(result.labels).toHaveLength(3);
-		expect(result.datasets).toHaveLength(3);
+		expect(result.labels).toHaveLength(12);
+		expect(result.datasets).toHaveLength(12);
 	});
 
 	it("should get daily average price", async () => {
@@ -112,7 +84,7 @@ describe("CoinGecko", () => {
 			currency: "USD",
 			timestamp: Date.now(),
 		});
-		expect(result).toBe(1.23);
+		expect(result).toBe(0.3962144414066281);
 	});
 
 	it("should get current price", async () => {
