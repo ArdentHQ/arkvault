@@ -3,25 +3,9 @@ import { Http } from "@/app/lib/mainsail";
 import { server, requestMock } from "@/tests/mocks/server";
 import { CryptoCompare } from "./index";
 
-const pricemultifullFixture = {
-	RAW: {
-		ARK: {
-			USD: {
-				PRICE: 1.0,
-				MKTCAP: 100000000,
-				TOTALVOLUME24H: 1000000,
-				CHANGEPCT24HOUR: 1.0,
-			},
-		},
-	},
-};
-const histodayFixture = {
-	Data: [
-		{ time: 1616025600, close: 1.05, volumeto: 1000 },
-		{ time: 1616112000, close: 1.15, volumeto: 2200 },
-	],
-};
-const priceFixture = { USD: 1.23, BTC: 0.000025 };
+import pricemultifullFixture from "@/app/lib/markets/fixtures/cryptocompare/pricemultifull.json";
+import priceFixture from "@/app/lib/markets/fixtures/cryptocompare/price.json";
+import histodayFixture from "@/app/lib/markets/fixtures/cryptocompare/histoday.json";
 
 describe("CryptoCompare", () => {
 	afterEach(() => {
@@ -47,11 +31,11 @@ describe("CryptoCompare", () => {
 		server.use(requestMock("https://min-api.cryptocompare.com/data/pricemultifull", pricemultifullFixture));
 		const tracker = new CryptoCompare(new Http.HttpClient(0));
 		const result = await tracker.marketData("ARK");
-		expect(result.USD.price).toBe(1.0);
+		expect(result.USD.price).toBe(0.3902378775046271);
 	});
 
 	it("should get historical price data", async () => {
-		server.use(requestMock("https://min-api.cryptocompare.com/data/histoday", histodayFixture));
+		server.use(requestMock("https://min-api.cryptocompare.com/data/v2/histoday", histodayFixture));
 		const tracker = new CryptoCompare(new Http.HttpClient(0));
 		const result = await tracker.historicalPrice({
 			token: "ARK",
@@ -60,12 +44,12 @@ describe("CryptoCompare", () => {
 			type: "day",
 			dateFormat: "YYYY-MM-DD",
 		});
-		expect(result.labels).toHaveLength(2);
-		expect(result.datasets).toHaveLength(2);
+		expect(result.labels).toHaveLength(11);
+		expect(result.datasets).toHaveLength(11);
 	});
 
 	it("should get historical volume data", async () => {
-		server.use(requestMock("https://min-api.cryptocompare.com/data/histoday", histodayFixture));
+		server.use(requestMock("https://min-api.cryptocompare.com/data/v2/histoday", histodayFixture));
 		const tracker = new CryptoCompare(new Http.HttpClient(0));
 		const result = await tracker.historicalVolume({
 			token: "ARK",
@@ -74,8 +58,8 @@ describe("CryptoCompare", () => {
 			type: "day",
 			dateFormat: "YYYY-MM-DD",
 		});
-		expect(result.labels).toHaveLength(2);
-		expect(result.datasets).toHaveLength(2);
+		expect(result.labels).toHaveLength(11);
+		expect(result.datasets).toHaveLength(11);
 	});
 
 	it("should get daily average price", async () => {
