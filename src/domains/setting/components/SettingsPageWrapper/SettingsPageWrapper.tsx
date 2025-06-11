@@ -30,7 +30,14 @@ export const SettingsWrapper = ({
 				className="lg:-mb-4"
 				title={t("SETTINGS.GENERAL.TITLE")}
 				subtitle={t("SETTINGS.GENERAL.SUBTITLE")}
-				titleIcon={<ThemeIcon dimensions={[54, 55]} lightIcon="SettingsLight" darkIcon="SettingsDark" />}
+				titleIcon={
+					<ThemeIcon
+						dimensions={[54, 55]}
+						lightIcon="SettingsLight"
+						darkIcon="SettingsDark"
+						dimIcon="SettingsDim"
+					/>
+				}
 			/>
 
 			<Section>
