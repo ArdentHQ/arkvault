@@ -36,6 +36,14 @@ describe("CoinCap", () => {
 		expect(result).toBe(true);
 	});
 
+	it("should fail to verify a token", async () => {
+		server.use(requestMock("https://api.coincap.io/v2/assets", assetsFixture, { status: 500 }));
+
+		const tracker = new CoinCap(new Http.HttpClient(0));
+		const result = await tracker.verifyToken("invalid");
+		expect(result).toBe(false);
+	});
+
 	it("should return false for a token that does not exist", async () => {
 		server.use(requestMock("https://api.coincap.io/v2/assets", { data: [] }));
 		server.use(requestMock("https://api.coincap.io/v2/assets/undefined", { data: [] }));
@@ -88,6 +96,42 @@ describe("CoinCap", () => {
 			token: "ARK",
 			currency: "USD",
 			days: 1,
+			type: "day",
+			dateFormat: "YYYY-MM-DD",
+		});
+		expect(result.labels).toHaveLength(2);
+		expect(result.datasets).toHaveLength(2);
+	});
+
+	it("should get historical price data for a week", async () => {
+		server.use(requestMock("https://api.coincap.io/v2/assets", assetsFixture));
+		server.use(requestMock("https://api.coincap.io/v2/assets/ark", { data: assetsFixture.data[0] }));
+		server.use(requestMock("https://api.coincap.io/v2/assets/ark/history", historyFixture));
+		server.use(requestMock("https://api.coincap.io/v2/rates", ratesFixture));
+
+		const tracker = new CoinCap(new Http.HttpClient(0));
+		const result = await tracker.historicalPrice({
+			token: "ARK",
+			currency: "USD",
+			days: 7,
+			type: "day",
+			dateFormat: "YYYY-MM-DD",
+		});
+		expect(result.labels).toHaveLength(2);
+		expect(result.datasets).toHaveLength(2);
+	});
+
+	it("should get historical price data for 24 days", async () => {
+		server.use(requestMock("https://api.coincap.io/v2/assets", assetsFixture));
+		server.use(requestMock("https://api.coincap.io/v2/assets/ark", { data: assetsFixture.data[0] }));
+		server.use(requestMock("https://api.coincap.io/v2/assets/ark/history", historyFixture));
+		server.use(requestMock("https://api.coincap.io/v2/rates", ratesFixture));
+
+		const tracker = new CoinCap(new Http.HttpClient(0));
+		const result = await tracker.historicalPrice({
+			token: "ARK",
+			currency: "USD",
+			days: 24,
 			type: "day",
 			dateFormat: "YYYY-MM-DD",
 		});

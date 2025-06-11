@@ -27,7 +27,7 @@ describe("CoinGecko", () => {
 
 	it("should fail to verify a token", async () => {
 		server.use(requestMock("https://api.coingecko.com/api/v3/coins/list", coinsListFixture));
-		server.use(requestMock("https://api.coingecko.com/api/v3/simple/price", {}));
+		server.use(requestMock("https://api.coingecko.com/api/v3/simple/price", {}, { status: 500 }));
 
 		const tracker = new CoinGecko(new Http.HttpClient(0));
 		const result = await tracker.verifyToken("invalid");
@@ -41,6 +41,9 @@ describe("CoinGecko", () => {
 		const tracker = new CoinGecko(new Http.HttpClient(0));
 		const result = await tracker.marketData("ARK");
 		expect(result.USD.price).toBe(0.389486);
+
+		// This will hit the cache
+		await tracker.marketData("ARK");
 	});
 
 	it("should get historical price data", async () => {

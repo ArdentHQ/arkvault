@@ -6,6 +6,7 @@ import { CryptoCompare } from "./index";
 import pricemultifullFixture from "@/app/lib/markets/fixtures/cryptocompare/pricemultifull.json";
 import priceFixture from "@/app/lib/markets/fixtures/cryptocompare/price.json";
 import histodayFixture from "@/app/lib/markets/fixtures/cryptocompare/histoday.json";
+import marketDataFixture from "@/app/lib/markets/fixtures/cryptocompare/pricemultifull.json";
 
 describe("CryptoCompare", () => {
 	afterEach(() => {
@@ -14,24 +15,35 @@ describe("CryptoCompare", () => {
 	});
 
 	it("should verify a token", async () => {
-		server.use(requestMock("https://min-api.cryptocompare.com/data/price", priceFixture));
+		server.use(requestMock("https://min-api.cryptocompare.com/data/price", { BTC: 1 }));
+
 		const tracker = new CryptoCompare(new Http.HttpClient(0));
 		const result = await tracker.verifyToken("ARK");
 		expect(result).toBe(true);
 	});
 
 	it("should fail to verify a token", async () => {
-		server.use(requestMock("https://min-api.cryptocompare.com/data/price", {}));
+		server.use(requestMock("https://min-api.cryptocompare.com/data/price", {}, { status: 500 }));
+
 		const tracker = new CryptoCompare(new Http.HttpClient(0));
 		const result = await tracker.verifyToken("invalid");
 		expect(result).toBe(false);
 	});
 
 	it("should get market data", async () => {
-		server.use(requestMock("https://min-api.cryptocompare.com/data/pricemultifull", pricemultifullFixture));
+		server.use(requestMock("https://min-api.cryptocompare.com/data/pricemultifull", marketDataFixture));
+
 		const tracker = new CryptoCompare(new Http.HttpClient(0));
 		const result = await tracker.marketData("ARK");
 		expect(result.USD.price).toBe(0.3902378775046271);
+	});
+
+	it("should get market data with an empty response", async () => {
+		server.use(requestMock("https://min-api.cryptocompare.com/data/pricemultifull", {}));
+
+		const tracker = new CryptoCompare(new Http.HttpClient(0));
+		const result = await tracker.marketData("ARK");
+		expect(result).toEqual({});
 	});
 
 	it("should get historical price data", async () => {
