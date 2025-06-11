@@ -91,8 +91,8 @@ export const SelectFile = ({ onSelect, fileFormat }: SelectFileProperties) => {
 	};
 
 	const fileFormatIcon: Record<string, string[]> = {
-		".json": ["ExtensionJsonDark", "ExtensionJsonLight"],
-		".wwe": ["ExtensionWweDark", "ExtensionWweLight"],
+		".json": ["ExtensionJsonDark", "ExtensionJsonLight", "ExtensionJson"],
+		".wwe": ["ExtensionWweDark", "ExtensionWweLight", "ExtensionWweDim"],
 	};
 
 	const renderError = () => (
@@ -113,6 +113,7 @@ export const SelectFile = ({ onSelect, fileFormat }: SelectFileProperties) => {
 				<ThemeIcon
 					darkIcon={fileFormatIcon[fileFormat][0]}
 					lightIcon={fileFormatIcon[fileFormat][1]}
+					dimIcon={fileFormatIcon[fileFormat][2]}
 					size="xl"
 				/>
 			)}

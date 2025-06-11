@@ -150,7 +150,14 @@ export const Exchange = () => {
 				<PageHeader
 					title={t("EXCHANGE.PAGE_EXCHANGES.TITLE")}
 					subtitle={t("EXCHANGE.PAGE_EXCHANGES.SUBTITLE")}
-					titleIcon={<ThemeIcon dimensions={[54, 55]} lightIcon="ExchangesLight" darkIcon="ExchangesDark" />}
+					titleIcon={
+						<ThemeIcon
+							dimensions={[54, 55]}
+							lightIcon="ExchangesLight"
+							darkIcon="ExchangesDark"
+							dimIcon="ExchangesDim"
+						/>
+					}
 				/>
 
 				<Section className="pt-0" innerClassName="px-6 lg:px-10">
