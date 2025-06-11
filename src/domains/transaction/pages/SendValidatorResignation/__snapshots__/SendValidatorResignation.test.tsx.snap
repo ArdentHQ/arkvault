@@ -617,10 +617,10 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                           class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-warning-300"
                         />
                         <li
-                          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
+                          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700"
                         />
                         <li
-                          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
+                          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700"
                         />
                       </ul>
                     </div>
@@ -721,18 +721,18 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                       data-testid="DetailWrapper"
                     >
                       <div
-                        class="border-x-theme-primary-400 bg-theme-secondary-100 border-l-2 px-3 py-2 sm:border-none sm:bg-transparent sm:p-0 dark:bg-black dark:sm:bg-transparent"
+                        class="border-x-theme-primary-400 dim:border-x-theme-dim-navy-400 bg-theme-secondary-100 dim:bg-theme-dim-950 dim:sm:bg-transparent border-l-2 px-3 py-2 sm:border-none sm:bg-transparent sm:p-0 dark:bg-black dark:sm:bg-transparent"
                         data-testid="DetailLabel"
                       >
                         <div
-                          class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24 font-semibold text-md leading-5"
+                          class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 min-w-24 font-semibold text-md leading-5"
                           data-testid="DetailLabelText"
                         >
                           Addressing
                         </div>
                       </div>
                       <div
-                        class="border-theme-secondary-300 dark:border-theme-dark-700 overflow-hidden rounded-xl sm:border flex flex-col gap-3 mt-0 sm:mt-2"
+                        class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 overflow-hidden rounded-xl sm:border flex flex-col gap-3 mt-0 sm:mt-2"
                       >
                         <div
                           class="w-full p-3 break-words sm:px-6 sm:py-5 sm:in-[.condensed]:py-4"
@@ -741,7 +741,7 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                             class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
                           >
                             <div
-                              class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-[178px]"
+                              class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-[178px]"
                             >
                               From
                             </div>
@@ -809,18 +809,18 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                       data-testid="DetailWrapper"
                     >
                       <div
-                        class="border-x-theme-primary-400 bg-theme-secondary-100 border-l-2 px-3 py-2 sm:border-none sm:bg-transparent sm:p-0 dark:bg-black dark:sm:bg-transparent"
+                        class="border-x-theme-primary-400 dim:border-x-theme-dim-navy-400 bg-theme-secondary-100 dim:bg-theme-dim-950 dim:sm:bg-transparent border-l-2 px-3 py-2 sm:border-none sm:bg-transparent sm:p-0 dark:bg-black dark:sm:bg-transparent"
                         data-testid="DetailLabel"
                       >
                         <div
-                          class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24 font-semibold text-md leading-5"
+                          class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 min-w-24 font-semibold text-md leading-5"
                           data-testid="DetailLabelText"
                         >
                           Transaction Type
                         </div>
                       </div>
                       <div
-                        class="border-theme-secondary-300 dark:border-theme-dark-700 overflow-hidden rounded-xl sm:border mt-0 sm:mt-2"
+                        class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 overflow-hidden rounded-xl sm:border mt-0 sm:mt-2"
                       >
                         <div
                           class="w-full p-3 break-words sm:px-6 sm:py-5 sm:in-[.condensed]:py-4"
@@ -832,7 +832,7 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                               class="flex w-full items-center justify-between gap-4 sm:justify-start"
                             >
                               <div
-                                class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-[162px]"
+                                class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-[162px]"
                               >
                                 Category
                               </div>
@@ -857,7 +857,7 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                               class="flex w-full items-center justify-between gap-4 sm:justify-start"
                             >
                               <div
-                                class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-[162px]"
+                                class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-[162px]"
                               >
                                 Validator Public Key
                               </div>
@@ -908,10 +908,10 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                                   type="checkbox"
                                 />
                                 <div
-                                  class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-6"
+                                  class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-6"
                                 >
                                   <span
-                                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 h-3 w-3 handle-inner"
+                                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 dim:bg-theme-dim-navy-600 h-3 w-3 handle-inner"
                                   />
                                 </div>
                               </label>
@@ -944,14 +944,14 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                                   class="relative"
                                 >
                                   <div
-                                    class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                                    class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                                   >
                                     <div
                                       class="relative flex h-full flex-1"
                                     >
                                       <input
                                         autocomplete="off"
-                                        class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
+                                        class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
                                         data-testid="Input_GasPrice"
                                         name="gasPrice"
                                         type="text"
@@ -959,7 +959,7 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                                       />
                                     </div>
                                     <div
-                                      class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600 divide-none"
+                                      class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600 divide-none"
                                       data-testid="Input__addon-end"
                                     >
                                       <div
@@ -1052,14 +1052,14 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                                   class="relative"
                                 >
                                   <div
-                                    class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                                    class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                                   >
                                     <div
                                       class="relative flex h-full flex-1"
                                     >
                                       <input
                                         autocomplete="off"
-                                        class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
+                                        class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
                                         data-testid="Input_GasLimit"
                                         name="gasLimit"
                                         type="text"
@@ -1067,7 +1067,7 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                                       />
                                     </div>
                                     <div
-                                      class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600 divide-none"
+                                      class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600 divide-none"
                                       data-testid="Input__addon-end"
                                     >
                                       <div
@@ -1951,13 +1951,13 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
                           class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-warning-300"
                         />
                         <li
-                          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
+                          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700"
                         />
                         <li
-                          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
+                          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700"
                         />
                         <li
-                          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
+                          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700"
                         />
                       </ul>
                     </div>
@@ -2055,7 +2055,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
                     class="flex flex-col overflow-hidden rounded-xl"
                   >
                     <div
-                      class="flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-warning-100 text-theme-warning-700 dark:bg-theme-warning-700"
+                      class="dim:text-white flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-warning-100 text-theme-warning-700 dark:bg-theme-warning-700"
                     >
                       <div>
                         <div
@@ -2100,7 +2100,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
                       </span>
                     </div>
                     <div
-                      class="dark:bg-theme-secondary-800 w-full p-4 text-left text-sm leading-relaxed break-words bg-theme-warning-50"
+                      class="dark:bg-theme-secondary-800 dim:bg-theme-dim-800 dim:text-theme-dim-50 w-full p-4 text-left text-sm leading-relaxed break-words bg-theme-warning-50"
                     >
                       This action is permanent and cannot be undone. It is registered on the network.
                     </div>
@@ -2131,14 +2131,14 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
                           </div>
                         </span>
                         <div
-                          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                         >
                           <div
                             class="relative flex h-full flex-1 invisible"
                           >
                             <input
                               autocomplete="off"
-                              class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
+                              class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
                               data-testid="SelectAddress__input"
                               name="senderAddress"
                               readonly=""
@@ -2147,7 +2147,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
                             />
                           </div>
                           <div
-                            class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                            class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
                             data-testid="Input__addon-end"
                           >
                             <div
@@ -2198,18 +2198,18 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
                       data-testid="DetailWrapper"
                     >
                       <div
-                        class="border-x-theme-primary-400 bg-theme-secondary-100 border-l-2 px-3 py-2 sm:border-none sm:bg-transparent sm:p-0 dark:bg-black dark:sm:bg-transparent"
+                        class="border-x-theme-primary-400 dim:border-x-theme-dim-navy-400 bg-theme-secondary-100 dim:bg-theme-dim-950 dim:sm:bg-transparent border-l-2 px-3 py-2 sm:border-none sm:bg-transparent sm:p-0 dark:bg-black dark:sm:bg-transparent"
                         data-testid="DetailLabel"
                       >
                         <div
-                          class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24 font-semibold text-md leading-5"
+                          class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 min-w-24 font-semibold text-md leading-5"
                           data-testid="DetailLabelText"
                         >
                           Transaction Type
                         </div>
                       </div>
                       <div
-                        class="border-theme-secondary-300 dark:border-theme-dark-700 overflow-hidden rounded-xl sm:border mt-0 sm:mt-2"
+                        class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 overflow-hidden rounded-xl sm:border mt-0 sm:mt-2"
                       >
                         <div
                           class="w-full p-3 break-words sm:px-6 sm:py-5 sm:in-[.condensed]:py-4"
@@ -2221,7 +2221,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
                               class="flex w-full items-center justify-between gap-4 sm:justify-start"
                             >
                               <div
-                                class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-[162px]"
+                                class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-[162px]"
                               >
                                 Category
                               </div>
@@ -2246,7 +2246,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
                               class="flex w-full items-center justify-between gap-4 sm:justify-start"
                             >
                               <div
-                                class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-[162px]"
+                                class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-[162px]"
                               >
                                 Validator Public Key
                               </div>
@@ -3039,10 +3039,10 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                           class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-warning-300"
                         />
                         <li
-                          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
+                          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700"
                         />
                         <li
-                          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
+                          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700"
                         />
                       </ul>
                     </div>
@@ -3143,18 +3143,18 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                       data-testid="DetailWrapper"
                     >
                       <div
-                        class="border-x-theme-primary-400 bg-theme-secondary-100 border-l-2 px-3 py-2 sm:border-none sm:bg-transparent sm:p-0 dark:bg-black dark:sm:bg-transparent"
+                        class="border-x-theme-primary-400 dim:border-x-theme-dim-navy-400 bg-theme-secondary-100 dim:bg-theme-dim-950 dim:sm:bg-transparent border-l-2 px-3 py-2 sm:border-none sm:bg-transparent sm:p-0 dark:bg-black dark:sm:bg-transparent"
                         data-testid="DetailLabel"
                       >
                         <div
-                          class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24 font-semibold text-md leading-5"
+                          class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 min-w-24 font-semibold text-md leading-5"
                           data-testid="DetailLabelText"
                         >
                           Addressing
                         </div>
                       </div>
                       <div
-                        class="border-theme-secondary-300 dark:border-theme-dark-700 overflow-hidden rounded-xl sm:border flex flex-col gap-3 mt-0 sm:mt-2"
+                        class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 overflow-hidden rounded-xl sm:border flex flex-col gap-3 mt-0 sm:mt-2"
                       >
                         <div
                           class="w-full p-3 break-words sm:px-6 sm:py-5 sm:in-[.condensed]:py-4"
@@ -3163,7 +3163,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                             class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
                           >
                             <div
-                              class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-[178px]"
+                              class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-[178px]"
                             >
                               From
                             </div>
@@ -3231,18 +3231,18 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                       data-testid="DetailWrapper"
                     >
                       <div
-                        class="border-x-theme-primary-400 bg-theme-secondary-100 border-l-2 px-3 py-2 sm:border-none sm:bg-transparent sm:p-0 dark:bg-black dark:sm:bg-transparent"
+                        class="border-x-theme-primary-400 dim:border-x-theme-dim-navy-400 bg-theme-secondary-100 dim:bg-theme-dim-950 dim:sm:bg-transparent border-l-2 px-3 py-2 sm:border-none sm:bg-transparent sm:p-0 dark:bg-black dark:sm:bg-transparent"
                         data-testid="DetailLabel"
                       >
                         <div
-                          class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24 font-semibold text-md leading-5"
+                          class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 min-w-24 font-semibold text-md leading-5"
                           data-testid="DetailLabelText"
                         >
                           Transaction Type
                         </div>
                       </div>
                       <div
-                        class="border-theme-secondary-300 dark:border-theme-dark-700 overflow-hidden rounded-xl sm:border mt-0 sm:mt-2"
+                        class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 overflow-hidden rounded-xl sm:border mt-0 sm:mt-2"
                       >
                         <div
                           class="w-full p-3 break-words sm:px-6 sm:py-5 sm:in-[.condensed]:py-4"
@@ -3254,7 +3254,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                               class="flex w-full items-center justify-between gap-4 sm:justify-start"
                             >
                               <div
-                                class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-[162px]"
+                                class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-[162px]"
                               >
                                 Category
                               </div>
@@ -3279,7 +3279,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                               class="flex w-full items-center justify-between gap-4 sm:justify-start"
                             >
                               <div
-                                class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-[162px]"
+                                class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-[162px]"
                               >
                                 Validator Public Key
                               </div>
@@ -3330,10 +3330,10 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                                   type="checkbox"
                                 />
                                 <div
-                                  class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-6"
+                                  class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-6"
                                 >
                                   <span
-                                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 h-3 w-3 handle-inner"
+                                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 dim:bg-theme-dim-navy-600 h-3 w-3 handle-inner"
                                   />
                                 </div>
                               </label>
@@ -4263,7 +4263,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 3rd st
                           class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-warning-300"
                         />
                         <li
-                          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
+                          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700"
                         />
                       </ul>
                     </div>
@@ -4383,21 +4383,21 @@ exports[`SendValidatorResignation > Validator Resignation > should render 3rd st
                       Mnemonic
                     </label>
                     <div
-                      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                     >
                       <div
                         class="relative flex h-full flex-1"
                       >
                         <input
                           autocomplete="off"
-                          class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
+                          class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
                           data-testid="AuthenticationStep__mnemonic"
                           name="mnemonic"
                           type="password"
                         />
                       </div>
                       <div
-                        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
                         data-testid="Input__addon-end"
                       >
                         <div
@@ -4410,7 +4410,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 3rd st
                             type="button"
                           >
                             <div
-                              class="text-theme-secondary-700 dark:text-theme-dark-200"
+                              class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200"
                             >
                               <div
                                 style="height: 20px; width: 20px;"
@@ -4463,7 +4463,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 3rd st
                   </div>
                 </button>
                 <button
-                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600"
                   data-testid="StepNavigation__send-button"
                   disabled=""
                   type="submit"
@@ -5328,7 +5328,7 @@ exports[`SendValidatorResignation > Validator Resignation > should show error st
                         class="flex flex-col overflow-hidden rounded-xl md:hidden"
                       >
                         <div
-                          class="flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-danger-100 text-theme-danger-700 dark:bg-theme-danger-500"
+                          class="dim:text-white flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-danger-100 text-theme-danger-700 dark:bg-theme-danger-500"
                         >
                           <div>
                             <div
@@ -5368,7 +5368,7 @@ exports[`SendValidatorResignation > Validator Resignation > should show error st
                           </span>
                         </div>
                         <div
-                          class="dark:bg-theme-secondary-800 w-full p-4 text-left text-sm leading-relaxed break-words bg-theme-danger-50"
+                          class="dark:bg-theme-secondary-800 dim:bg-theme-dim-800 dim:text-theme-dim-50 w-full p-4 text-left text-sm leading-relaxed break-words bg-theme-danger-50"
                         >
                           An error occurred while sending your transaction. Please go 'Back' and try again, or click 'Close' to return to the wallet.
                         </div>
@@ -5387,7 +5387,7 @@ exports[`SendValidatorResignation > Validator Resignation > should show error st
                           >
                             <textarea
                               autocomplete="off"
-                              class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none sm:text-base! min-h-[8rem] md:min-h-auto md:resize-y resize-none text-theme-secondary-text"
+                              class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none sm:text-base! min-h-[8rem] md:min-h-auto md:resize-y resize-none text-theme-secondary-text"
                               data-testid="ErrorStep__errorMessage"
                               disabled=""
                               style="height: 4px;"

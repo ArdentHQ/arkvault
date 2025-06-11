@@ -622,7 +622,7 @@ exports[`SendVote > should show error if wrong mnemonic 1`] = `
                           class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-warning-300"
                         />
                         <li
-                          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
+                          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700"
                         />
                       </ul>
                     </div>
@@ -750,14 +750,14 @@ exports[`SendVote > should show error if wrong mnemonic 1`] = `
                         <input
                           aria-invalid="true"
                           autocomplete="off"
-                          class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
+                          class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
                           data-testid="AuthenticationStep__mnemonic"
                           name="mnemonic"
                           type="password"
                         />
                       </div>
                       <div
-                        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-danger-500"
+                        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-danger-500"
                         data-testid="Input__addon-end"
                       >
                         <div
@@ -819,7 +819,7 @@ exports[`SendVote > should show error if wrong mnemonic 1`] = `
                             type="button"
                           >
                             <div
-                              class="text-theme-secondary-700 dark:text-theme-dark-200"
+                              class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200"
                             >
                               <div
                                 style="height: 20px; width: 20px;"
@@ -872,7 +872,7 @@ exports[`SendVote > should show error if wrong mnemonic 1`] = `
                   </div>
                 </button>
                 <button
-                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600"
                   data-testid="StepNavigation__send-button"
                   disabled=""
                   type="submit"
@@ -1734,7 +1734,7 @@ exports[`SendVote > should show error step and go back 1`] = `
                         class="flex flex-col overflow-hidden rounded-xl md:hidden"
                       >
                         <div
-                          class="flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-danger-100 text-theme-danger-700 dark:bg-theme-danger-500"
+                          class="dim:text-white flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-danger-100 text-theme-danger-700 dark:bg-theme-danger-500"
                         >
                           <div>
                             <div
@@ -1774,7 +1774,7 @@ exports[`SendVote > should show error step and go back 1`] = `
                           </span>
                         </div>
                         <div
-                          class="dark:bg-theme-secondary-800 w-full p-4 text-left text-sm leading-relaxed break-words bg-theme-danger-50"
+                          class="dark:bg-theme-secondary-800 dim:bg-theme-dim-800 dim:text-theme-dim-50 w-full p-4 text-left text-sm leading-relaxed break-words bg-theme-danger-50"
                         >
                           An error occurred while sending your transaction. Please go 'Back' and try again, or click 'Close' to return to the wallet.
                         </div>
@@ -1793,7 +1793,7 @@ exports[`SendVote > should show error step and go back 1`] = `
                           >
                             <textarea
                               autocomplete="off"
-                              class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none sm:text-base! min-h-[8rem] md:min-h-auto md:resize-y resize-none text-theme-secondary-text"
+                              class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none sm:text-base! min-h-[8rem] md:min-h-auto md:resize-y resize-none text-theme-secondary-text"
                               data-testid="ErrorStep__errorMessage"
                               disabled=""
                               style="height: 4px;"
