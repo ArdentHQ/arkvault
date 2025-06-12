@@ -132,6 +132,26 @@ describe("Currency", () => {
 		});
 	});
 
+	it("should cover fallback for default locale and decimal separator", () => {
+		const spy = vi.spyOn(Number.prototype, "toLocaleString");
+
+		// 1. Let the availability check pass, so we don't enter the if(localeNotAvailable) block
+		spy.mockReturnValueOnce("$1.20");
+		// 2. For the call inside getSeparators, return a value with no separators.
+		// This will be called with "en-US" because we don't pass a locale to fromString.
+		spy.mockReturnValueOnce("100002");
+
+		// This call triggers both fallbacks:
+		// - `locale` is undefined -> `|| "en-US"` is used.
+		// - `seperator.decimal` will be undefined -> `|| "."` is used.
+		expect(Currency.fromString("1.23", 2)).toEqual({
+			display: "1.23",
+			value: "123",
+		});
+
+		spy.mockRestore();
+	});
+
 	it("fromString should return value '0' if no digits are parsed", () => {
 		expect(Currency.fromString("abc")).toEqual({
 			display: "",
