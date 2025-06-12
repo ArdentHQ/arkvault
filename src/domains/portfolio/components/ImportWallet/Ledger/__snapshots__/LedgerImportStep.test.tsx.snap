@@ -24,7 +24,7 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
         class="flex flex-col gap-2"
       >
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-background w-full cursor-pointer overflow-hidden rounded border bg-white"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-background dim:border-theme-dim-700 dim:bg-theme-background w-full cursor-pointer overflow-hidden rounded border bg-white"
           data-testid="LedgerMobileItem__wrapper"
         >
           <div
@@ -80,12 +80,12 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
               class="flex w-36 flex-col gap-2"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
+                class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-sm font-semibold"
               >
                 Address
               </span>
               <div
-                class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
+                class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
               >
                 <div
                   class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -143,12 +143,12 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
               data-testid="LedgerMobileItem__network"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
+                class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-sm font-semibold"
               >
                 Value (ARK)
               </span>
               <div
-                class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
+                class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
               >
                 <div>
                   <span
@@ -163,7 +163,7 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
           </div>
         </div>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-background w-full cursor-pointer overflow-hidden rounded border bg-white"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-background dim:border-theme-dim-700 dim:bg-theme-background w-full cursor-pointer overflow-hidden rounded border bg-white"
           data-testid="LedgerMobileItem__wrapper"
         >
           <div
@@ -219,12 +219,12 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
               class="flex w-36 flex-col gap-2"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
+                class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-sm font-semibold"
               >
                 Address
               </span>
               <div
-                class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
+                class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
               >
                 <div
                   class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -282,12 +282,12 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
               data-testid="LedgerMobileItem__network"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
+                class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-sm font-semibold"
               >
                 Value (ARK)
               </span>
               <div
-                class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
+                class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
               >
                 <div>
                   <span

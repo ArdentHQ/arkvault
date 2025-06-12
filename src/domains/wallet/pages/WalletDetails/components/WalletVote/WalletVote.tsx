@@ -29,7 +29,7 @@ export const WalletVote = ({ wallet, onButtonClick, votes, isLoadingVotes, walle
 		if (wallets.length > 1) {
 			return (
 				<div className="w-full">
-					<p className="text-theme-secondary-700 dark:text-theme-dark-200 px-[22px] pb-4 text-center text-base font-semibold md:mt-0 md:px-0 md:pb-0 md:text-left">
+					<p className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 px-[22px] pb-4 text-center text-base font-semibold md:mt-0 md:px-0 md:pb-0 md:text-left">
 						{t("WALLETS.PAGE_WALLET_DETAILS.MANAGE_VOTES_FOR_YOUR_ADDRESSES")}
 					</p>
 				</div>
@@ -57,7 +57,7 @@ export const WalletVote = ({ wallet, onButtonClick, votes, isLoadingVotes, walle
 							<Button
 								data-testid="WalletMyVotes__button"
 								variant="secondary-icon"
-								className="text-theme-primary-600 dark:text-theme-dark-navy-400 mt-4 hidden w-full space-x-2 whitespace-nowrap disabled:bg-transparent md:mt-0 md:flex md:w-auto md:px-2 md:py-[3px] dark:disabled:bg-transparent"
+								className="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 dim:disabled:bg-transparent mt-4 hidden w-full space-x-2 whitespace-nowrap disabled:bg-transparent md:mt-0 md:flex md:w-auto md:px-2 md:py-[3px] dark:disabled:bg-transparent"
 								onClick={() => onButtonClick()}
 							>
 								<Icon name="Vote" />
@@ -67,7 +67,7 @@ export const WalletVote = ({ wallet, onButtonClick, votes, isLoadingVotes, walle
 							<Button
 								data-testid="WalletMyVotes__button_mobile"
 								variant="secondary"
-								className="text-theme-primary-600 w-full disabled:bg-transparent md:hidden dark:text-white dark:disabled:bg-transparent"
+								className="text-theme-primary-600 dim:text-theme-dim-navy-600 w-full disabled:bg-transparent md:hidden dark:text-white dark:disabled:bg-transparent"
 								onClick={() => onButtonClick()}
 							>
 								<Icon name="Vote" />
@@ -88,7 +88,7 @@ export const WalletVote = ({ wallet, onButtonClick, votes, isLoadingVotes, walle
 									!isLedgerWalletCompatible(wallet)
 								}
 								variant="secondary-icon"
-								className="text-theme-primary-600 dark:text-theme-dark-navy-400 mt-4 hidden w-full space-x-2 disabled:bg-transparent md:mt-0 md:flex md:w-auto md:px-2 md:py-[3px] dark:disabled:bg-transparent"
+								className="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 mt-4 hidden w-full space-x-2 disabled:bg-transparent md:mt-0 md:flex md:w-auto md:px-2 md:py-[3px] dark:disabled:bg-transparent"
 								onClick={() => onButtonClick()}
 							>
 								<Icon name="Vote" />
@@ -106,7 +106,7 @@ export const WalletVote = ({ wallet, onButtonClick, votes, isLoadingVotes, walle
 									!isLedgerWalletCompatible(wallet)
 								}
 								variant="secondary"
-								className="text-theme-primary-600 w-full disabled:bg-transparent md:hidden dark:text-white dark:disabled:bg-transparent"
+								className="text-theme-primary-600 dim:text-theme-dim-navy-600 w-full disabled:bg-transparent md:hidden dark:text-white dark:disabled:bg-transparent"
 								onClick={() => onButtonClick()}
 							>
 								<Icon name="Vote" />

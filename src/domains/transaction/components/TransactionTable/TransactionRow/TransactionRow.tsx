@@ -62,7 +62,7 @@ export const TransactionRow = memo(
 				>
 					<div className="flex flex-col gap-1 font-semibold">
 						<TransactionRowId transaction={transaction} />
-						<span className="text-theme-secondary-700 text-xs xl:hidden">
+						<span className="text-theme-secondary-700 dim:text-theme-dim-200 text-xs xl:hidden">
 							{timeStamp ? (
 								<TimeAgo date={DateTime.fromUnix(timeStamp.toUNIX()).toISOString()} />
 							) : (

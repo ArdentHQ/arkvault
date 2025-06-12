@@ -97,7 +97,7 @@ const TabScrollScroll = ({ ...properties }: React.HTMLProps<HTMLDivElement>) => 
 
 export const TabScroll = ({ children }) => (
 	<div data-testid="TabScroll" className="relative z-0">
-		<div className="bg-theme-secondary-200 dark:bg-theme-dark-950 px-5">
+		<div className="bg-theme-secondary-200 dark:bg-theme-dark-950 dim:bg-theme-dim-950 px-5">
 			<TabScrollScroll className="relative z-0 mx-auto overflow-x-auto">{children}</TabScrollScroll>
 		</div>
 	</div>
@@ -158,7 +158,7 @@ export const TabList = ({
 		className={twMerge(
 			"tab-list flex w-fit items-center gap-1 rounded-xl p-1",
 			cn({
-				"bg-theme-secondary-200 dark:bg-theme-dark-950": !noBackground,
+				"bg-theme-secondary-200 dark:bg-theme-dark-950 dim:bg-theme-dim-950": !noBackground,
 				"bg-transparent": noBackground,
 			}),
 			properties.className,

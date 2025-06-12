@@ -11,18 +11,18 @@ exports[`Votes > should filter current validators 1`] = `
     style="min-height: -webkit-fill-available;"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black"
+      class="dim:bg-theme-dim-950 fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black"
       data-testid="NavigationBarMobile"
     >
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-900 border-t"
+        class="border-theme-secondary-300 dark:border-theme-secondary-900 dim:border-theme-dim-950 border-t"
         data-testid="NavigationBar__buttons-separator"
       />
       <div
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600 dim:text-theme-dim-200"
           data-testid="NavigationBar__buttons__mobile--receive"
           type="button"
         >
@@ -59,10 +59,10 @@ exports[`Votes > should filter current validators 1`] = `
           </div>
         </button>
         <div
-          class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
         />
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600 dim:text-theme-dim-200"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -96,10 +96,10 @@ exports[`Votes > should filter current validators 1`] = `
           </div>
         </button>
         <div
-          class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
         />
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600 dim:text-theme-dim-200"
           data-testid="NavigationBar__buttons__mobile--send"
           type="button"
         >
@@ -1386,7 +1386,7 @@ exports[`Votes > should open the create wallet side panel 1`] = `
     style="min-height: -webkit-fill-available;"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black shadow-footer-smooth dark:shadow-footer-smooth-dark"
+      class="dim:bg-theme-dim-950 fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black shadow-footer-smooth dark:shadow-footer-smooth-dark"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -1431,10 +1431,10 @@ exports[`Votes > should open the create wallet side panel 1`] = `
           </div>
         </button>
         <div
-          class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
         />
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600 dim:text-theme-dim-200"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -1468,7 +1468,7 @@ exports[`Votes > should open the create wallet side panel 1`] = `
           </div>
         </button>
         <div
-          class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
         />
         <button
           class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-secondary-500 cursor-not-allowed"
@@ -2218,7 +2218,7 @@ exports[`Votes > should open the import wallet side panel 1`] = `
     style="min-height: -webkit-fill-available;"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black shadow-footer-smooth dark:shadow-footer-smooth-dark"
+      class="dim:bg-theme-dim-950 fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black shadow-footer-smooth dark:shadow-footer-smooth-dark"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -2263,10 +2263,10 @@ exports[`Votes > should open the import wallet side panel 1`] = `
           </div>
         </button>
         <div
-          class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
         />
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600 dim:text-theme-dim-200"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -2300,7 +2300,7 @@ exports[`Votes > should open the import wallet side panel 1`] = `
           </div>
         </button>
         <div
-          class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
         />
         <button
           class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-secondary-500 cursor-not-allowed"
@@ -3050,18 +3050,18 @@ exports[`Votes > should render 1`] = `
     style="min-height: -webkit-fill-available;"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black"
+      class="dim:bg-theme-dim-950 fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black"
       data-testid="NavigationBarMobile"
     >
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-900 border-t"
+        class="border-theme-secondary-300 dark:border-theme-secondary-900 dim:border-theme-dim-950 border-t"
         data-testid="NavigationBar__buttons-separator"
       />
       <div
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600 dim:text-theme-dim-200"
           data-testid="NavigationBar__buttons__mobile--receive"
           type="button"
         >
@@ -3098,10 +3098,10 @@ exports[`Votes > should render 1`] = `
           </div>
         </button>
         <div
-          class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
         />
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600 dim:text-theme-dim-200"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -3135,10 +3135,10 @@ exports[`Votes > should render 1`] = `
           </div>
         </button>
         <div
-          class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
         />
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600 dim:text-theme-dim-200"
           data-testid="NavigationBar__buttons__mobile--send"
           type="button"
         >
@@ -11028,18 +11028,18 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
     style="min-height: -webkit-fill-available;"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black"
+      class="dim:bg-theme-dim-950 fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black"
       data-testid="NavigationBarMobile"
     >
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-900 border-t"
+        class="border-theme-secondary-300 dark:border-theme-secondary-900 dim:border-theme-dim-950 border-t"
         data-testid="NavigationBar__buttons-separator"
       />
       <div
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600 dim:text-theme-dim-200"
           data-testid="NavigationBar__buttons__mobile--receive"
           type="button"
         >
@@ -11076,10 +11076,10 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
           </div>
         </button>
         <div
-          class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
         />
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600 dim:text-theme-dim-200"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -11113,10 +11113,10 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
           </div>
         </button>
         <div
-          class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
         />
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600 dim:text-theme-dim-200"
           data-testid="NavigationBar__buttons__mobile--send"
           type="button"
         >
@@ -19006,18 +19006,18 @@ exports[`Votes > should select a validator 1`] = `
     style="min-height: -webkit-fill-available;"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black"
+      class="dim:bg-theme-dim-950 fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black"
       data-testid="NavigationBarMobile"
     >
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-900 border-t"
+        class="border-theme-secondary-300 dark:border-theme-secondary-900 dim:border-theme-dim-950 border-t"
         data-testid="NavigationBar__buttons-separator"
       />
       <div
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600 dim:text-theme-dim-200"
           data-testid="NavigationBar__buttons__mobile--receive"
           type="button"
         >
@@ -19054,10 +19054,10 @@ exports[`Votes > should select a validator 1`] = `
           </div>
         </button>
         <div
-          class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
         />
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600 dim:text-theme-dim-200"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -19091,10 +19091,10 @@ exports[`Votes > should select a validator 1`] = `
           </div>
         </button>
         <div
-          class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
         />
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600 dim:text-theme-dim-200"
           data-testid="NavigationBar__buttons__mobile--send"
           type="button"
         >
@@ -27245,18 +27245,18 @@ exports[`Votes > should trigger network connection warning 1`] = `
     style="min-height: -webkit-fill-available;"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black"
+      class="dim:bg-theme-dim-950 fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black"
       data-testid="NavigationBarMobile"
     >
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-900 border-t"
+        class="border-theme-secondary-300 dark:border-theme-secondary-900 dim:border-theme-dim-950 border-t"
         data-testid="NavigationBar__buttons-separator"
       />
       <div
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600 dim:text-theme-dim-200"
           data-testid="NavigationBar__buttons__mobile--receive"
           type="button"
         >
@@ -27293,10 +27293,10 @@ exports[`Votes > should trigger network connection warning 1`] = `
           </div>
         </button>
         <div
-          class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
         />
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600 dim:text-theme-dim-200"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -27330,10 +27330,10 @@ exports[`Votes > should trigger network connection warning 1`] = `
           </div>
         </button>
         <div
-          class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
         />
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600 dim:text-theme-dim-200"
           data-testid="NavigationBar__buttons__mobile--send"
           type="button"
         >

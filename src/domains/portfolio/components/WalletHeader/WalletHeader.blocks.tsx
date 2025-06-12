@@ -37,7 +37,7 @@ export const WalletActions = ({ profile, wallet, isUpdatingTransactions, onUpdat
 	}, [isSyncing, previousIsUpdatingTransactions, isUpdatingTransactions, onUpdate]);
 
 	return (
-		<Tooltip content={isSyncing ? t("WALLETS.UPDATING_WALLET_DATA") : t("WALLETS.UPDATE_WALLET_DATA")} theme="dark">
+		<Tooltip content={isSyncing ? t("WALLETS.UPDATING_WALLET_DATA") : t("WALLETS.UPDATE_WALLET_DATA")}>
 			<Button
 				data-testid="WalletHeader__refresh"
 				onClick={syncWallet}
