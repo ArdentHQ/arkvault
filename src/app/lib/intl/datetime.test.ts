@@ -140,17 +140,23 @@ describe("DateTime", () => {
 			seconds: 56,
 			milliseconds: 789,
 		});
+
+		const dtWithTimezone = DateTime.make("2023-01-01T12:34:56.789Z", "en", "America/New_York");
+		expect(dtWithTimezone.format("YYYY-MM-DD HH:mm:ssZ")).not.toBe(dt.format("YYYY-MM-DD HH:mm:ssZ"));
 	});
 
 	it("should handle locale and timezone with various formats", () => {
 		const dt = DateTime.make("2023-01-01T00:00:00.000Z", "en", "America/New_York");
 		const dt2 = dt.setLocale("fr");
 		expect(dt2).toBeInstanceOf(DateTime);
-
 		// Test invalid locale
 		const dt3 = dt.setLocale("invalid-locale");
 		expect(dt3).toBeInstanceOf(DateTime);
 		expect(dt3.format("MMMM")).toBe(dt.format("MMMM")); // Should fallback to default locale
+		const dt4 = DateTime.make("2023-01-01T00:00:00.000Z");
+		const dt5 = DateTime.make("2023-01-01T00:00:00.000Z", "en", "America/New_York");
+		expect(dt4.isSame(dt5)).toBe(true);
+		expect(dt4.toISOString()).toBe("2023-01-01T00:00:00.000Z");
 	});
 
 	it("should support startOf and endOf for all units", () => {
