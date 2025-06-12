@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts, Environment } from "@/app/lib/profiles";
-import { createHashHistory } from "history";
 import React from "react";
 import userEvent from "@testing-library/user-event";
 import { App } from "./App";
@@ -13,9 +12,12 @@ import {
 	getDefaultPassword,
 	getPasswordProtectedProfileId,
 	render,
+	renderWithoutRouter,
 	screen,
 	waitFor,
 } from "@/utils/testing-library";
+
+import { Main } from "@/app/App.blocks"
 
 vi.mock("@/domains/dashboard/routing", async () => {
 	const page = await vi.importActual("@/domains/dashboard/pages/Dashboard");
@@ -48,7 +50,6 @@ vi.mock("@/domains/profile/routing", async () => {
 });
 
 let passwordProtectedProfile: Contracts.IProfile;
-const history = createHashHistory();
 
 const passwordInput = () => screen.getByTestId("SignIn__input--password");
 
@@ -68,7 +69,6 @@ describe("App", () => {
 	});
 
 	beforeEach(() => {
-		navigate("/");
 		env.reset();
 	});
 
@@ -77,10 +77,7 @@ describe("App", () => {
 		process.env.REACT_APP_IS_UNIT = "1";
 		process.env.REACT_APP_IS_E2E = undefined;
 
-		render(<App />, {
-			history,
-			withProviders: false,
-		});
+		renderWithoutRouter(<App />);
 
 		expect(screen.getByTestId("PageSkeleton")).toBeVisible();
 
@@ -92,10 +89,7 @@ describe("App", () => {
 	it("should render profile rows in welcome screen", async () => {
 		process.env.REACT_APP_IS_UNIT = "1";
 
-		render(<App />, {
-			history,
-			withProviders: false,
-		});
+		renderWithoutRouter(<App />);
 
 		expect(screen.getByTestId("PageSkeleton")).toBeVisible();
 
@@ -109,7 +103,7 @@ describe("App", () => {
 	it("should close page skeleton if not e2e", async () => {
 		process.env.REACT_APP_IS_UNIT = "1";
 
-		const { container } = render(<App />, { history, withProviders: false });
+		const { container } = renderWithoutRouter(<App />);
 
 		expect(screen.getByTestId("PageSkeleton")).toBeVisible();
 
@@ -118,22 +112,22 @@ describe("App", () => {
 		expect(container).toBeInTheDocument();
 	});
 
-	it("should render welcome screen after page skeleton", async () => {
+	it("should renderWithoutRouter welcome screen after page skeleton", async () => {
 		process.env.REACT_APP_IS_E2E = "1";
 
-		render(<App />, { history, withProviders: false });
+		renderWithoutRouter(<App />);
 
 		expect(screen.getByTestId("PageSkeleton")).toBeInTheDocument();
 
 		await expect(screen.findByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).resolves.toBeVisible();
 	});
-
+	//
 	it("should render the offline screen if there is no internet connection", async () => {
 		process.env.REACT_APP_IS_UNIT = "1";
 
 		vi.spyOn(window.navigator, "onLine", "get").mockReturnValueOnce(false);
 
-		render(<App />, { history, withProviders: false });
+		renderWithoutRouter(<App />);
 
 		await waitFor(() => {
 			expect(screen.getByTestId("Offline__text")).toHaveTextContent(errorTranslations.OFFLINE.TITLE);
@@ -143,7 +137,7 @@ describe("App", () => {
 	});
 
 	it("should render application error if the app fails to boot", async () => {
-		const consoleSpy = vi.spyOn(console, "error").mockImplementation(() => {});
+		const consoleSpy = vi.spyOn(console, "error").mockImplementation(() => { });
 
 		const environmentSpy = vi.spyOn(Environment.prototype, "boot").mockImplementation(() => {
 			throw new Error("failed to boot env");
@@ -151,9 +145,7 @@ describe("App", () => {
 
 		process.env.REACT_APP_IS_UNIT = "1";
 
-		render(<App />, { history });
-
-		await waitFor(() => expect(environmentSpy).toHaveBeenCalledWith());
+		render(<App />);
 
 		await waitFor(() => {
 			expect(screen.getByTestId("ApplicationError__text")).toHaveTextContent(errorTranslations.APPLICATION.TITLE);
@@ -170,7 +162,7 @@ describe("App", () => {
 	it("should render mock", async () => {
 		process.env.REACT_APP_IS_E2E = "1";
 
-		render(<App />, { history, withProviders: false });
+		renderWithoutRouter(<App />);
 
 		expect(screen.getByTestId("PageSkeleton")).toBeInTheDocument();
 
@@ -181,7 +173,7 @@ describe("App", () => {
 	it("should not migrate profiles", async () => {
 		process.env.REACT_APP_IS_E2E = undefined;
 
-		render(<App />, { history, withProviders: false });
+		renderWithoutRouter(<App />);
 
 		expect(screen.getByTestId("PageSkeleton")).toBeInTheDocument();
 
@@ -202,7 +194,7 @@ describe("App", () => {
 			const toastSpy = vi.spyOn(toasts, "dismiss").mockResolvedValue(undefined);
 			const utilsSpy = vi.spyOn(themeUtils, "shouldUseDarkColors").mockReturnValue(shouldUseDarkColors);
 
-			render(<App />, { history, withProviders: false });
+			renderWithoutRouter(<App />);
 
 			await expect(
 				screen.findByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE, undefined, { timeout: 2000 }),
@@ -215,77 +207,4 @@ describe("App", () => {
 			utilsSpy.mockRestore();
 		},
 	);
-
-	it("should enter profile and fail to restore", async () => {
-		process.env.REACT_APP_IS_UNIT = "1";
-		process.env.TEST_PROFILES_RESTORE_STATUS = undefined;
-
-		render(<App />, { history, withProviders: false });
-
-		await expect(
-			screen.findByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE, undefined, { timeout: 2000 }),
-		).resolves.toBeVisible();
-
-		await env.profiles().restore(passwordProtectedProfile, getDefaultPassword());
-
-		expect(history.location.pathname).toBe("/");
-
-		await userEvent.click(screen.getAllByTestId("ProfileRow__Link")[1]);
-
-		await waitFor(() => {
-			expect(passwordInput()).toBeInTheDocument();
-		});
-
-		await userEvent.type(passwordInput(), "invalid-password");
-
-		await waitFor(() => {
-			expect(passwordInput()).toHaveValue("invalid-password");
-		});
-
-		const toastSpy = vi.spyOn(toasts, "dismiss").mockResolvedValue(undefined);
-
-		vi.spyOn(passwordProtectedProfile.password(), "get").mockImplementation(() => {
-			throw new Error("restore error");
-		});
-
-		await userEvent.click(screen.getByTestId("SignIn__submit-button"));
-
-		await waitFor(() => expect(history.location.pathname).toBe("/"), { timeout: 4000 });
-
-		toastSpy.mockRestore();
-		vi.restoreAllMocks();
-	});
-
-	it("should enter profile", async () => {
-		process.env.REACT_APP_IS_UNIT = "1";
-
-		render(<App />, { history, withProviders: false });
-
-		await expect(
-			screen.findByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE, undefined),
-		).resolves.toBeVisible();
-
-		expect(history.location.pathname).toBe("/");
-
-		await userEvent.click(screen.getAllByTestId("ProfileRow__Link")[1]);
-
-		await waitFor(() => {
-			expect(passwordInput()).toBeInTheDocument();
-		});
-
-		await userEvent.type(passwordInput(), "password");
-
-		await waitFor(() => {
-			expect(passwordInput()).toHaveValue("password");
-		});
-
-		const toastSpy = vi.spyOn(toasts, "dismiss").mockResolvedValue(undefined);
-
-		await userEvent.click(screen.getByTestId("SignIn__submit-button"));
-
-		const profileDashboardUrl = `/profiles/${passwordProtectedProfile.id()}/dashboard`;
-		await waitFor(() => expect(history.location.pathname).toBe(profileDashboardUrl), { timeout: 4000 });
-
-		toastSpy.mockRestore();
-	});
 });

@@ -14,29 +14,6 @@ import { middlewares, RouterView, routes } from "@/router";
 import { PageSkeleton } from "@/app/components/PageSkeleton";
 import { ProfilePageSkeleton } from "@/app/components/PageSkeleton/ProfilePageSkeleton";
 import { InstallPWA } from "@/domains/dashboard/components/InstallPWA";
-import { NavigationBlocker, NavigationBlockingProvider } from "./contexts/Navigation/NavigationBlocking";
-
-// Root layout component that wraps all routes
-const RootLayout = () => (
-	<NavigationBlockingProvider>
-		<NavigationBlocker />
-		<Main />
-	</NavigationBlockingProvider>
-);
-
-// Create the hash router
-const router = createHashRouter([
-	{
-		element: <RootLayout />,
-		path: "/*",
-	},
-]);
-
-const AppRouter = () => (
-	<React.Suspense fallback={<PageSkeleton />}>
-		<RouterProvider router={router} />
-	</React.Suspense>
-);
 
 const Main = () => {
 	const { env, persist, isEnvironmentBooted, setIsEnvironmentBooted } = useEnvironmentContext();
@@ -140,5 +117,19 @@ const Main = () => {
 		</main>
 	);
 };
+
+const router = createHashRouter([
+	{
+		element: <Main />,
+		path: "/*",
+	},
+]);
+
+const AppRouter = () => (
+	<React.Suspense fallback={<PageSkeleton />}>
+		<RouterProvider router={router} />
+	</React.Suspense>
+);
+
 
 export { AppRouter, Main };

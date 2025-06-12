@@ -544,6 +544,39 @@ describe("Welcome", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
+	it("should fail to restore profile", async () => {
+		const { asFragment, container, router } = render(<Welcome />);
+
+		expect(container).toBeInTheDocument();
+
+		const profile = env.profiles().findById(getPasswordProtectedProfileId());
+		await env.profiles().restore(profile, getDefaultPassword());
+
+		expect(screen.getByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
+
+		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
+
+		await userEvent.click(screen.getByText(profile.name()));
+
+		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
+
+		await userEvent.type(screen.getByTestId(passwordTestID), "password2");
+
+		await waitFor(() => {
+			expect(screen.getByTestId(passwordTestID)).toHaveValue("password2");
+		});
+
+		await waitFor(() => {
+			expect(screen.getByTestId(submitTestID)).toBeEnabled();
+		});
+
+		await userEvent.click(screen.getByTestId(submitTestID));
+
+		await waitFor(() => {
+			expect(router.state.location.pathname).toBe(`/`);
+		});
+	});
+
 	it("should navigate to previous page with correct password", async () => {
 		const profile = env.profiles().findById(getPasswordProtectedProfileId());
 
