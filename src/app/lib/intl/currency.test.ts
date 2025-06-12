@@ -1,4 +1,4 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 
 import { Currency } from "./currency";
 
@@ -92,6 +92,18 @@ describe("Currency", () => {
 			display: "123.45",
 			value: "12345000000",
 		});
+	});
+
+	it("fromString should use fallback separators when locale is not available", () => {
+		const toLocaleStringSpy = vi.spyOn(Number.prototype, "toLocaleString").mockReturnValue("unexpected_format");
+
+		// Test with a locale from the static fallback list, e.g., 'es'
+		expect(Currency.fromString("123,45", 2, "es")).toEqual({
+			display: "123,45",
+			value: "12345",
+		});
+
+		toLocaleStringSpy.mockRestore();
 	});
 
 	it("fromString should return value '0' if no digits are parsed", () => {
