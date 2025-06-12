@@ -4,7 +4,7 @@ import userEvent from "@testing-library/user-event";
 import { Route, useNavigate, Prompt } from "react-router-dom";
 import { ErrorBoundary } from "react-error-boundary";
 import { AppRouter, Main } from "./App.blocks";
-import { env, getMainsailProfileId, render, screen, waitFor, act } from "@/utils/testing-library";
+import { env, getMainsailProfileId, render, screen, waitFor, act, renderWithoutRouter } from "@/utils/testing-library";
 import { toasts } from "@/app/services";
 import * as useProfileSynchronizerHook from "@/app/hooks/use-profile-synchronizer";
 import { ApplicationError } from "@/domains/error/pages";
@@ -47,9 +47,7 @@ const renderComponent = (path = "/", options = {}) => {
 	return render(
 		<ErrorBoundary FallbackComponent={ApplicationError}>
 			<ExchangeProvider>
-				<Route path={path}>
-					<Main />
-				</Route>
+				<Main />
 			</ExchangeProvider>
 		</ErrorBoundary>,
 		{
@@ -71,10 +69,9 @@ describe("App Main", () => {
 	});
 
 	it("should render", async () => {
-		renderComponent();
+		renderComponent()
 
 		expect(screen.getByTestId("PageSkeleton")).toBeVisible();
-
 		await waitFor(() => expect(screen.queryByTestId("PageSkeleton")).not.toBeInTheDocument());
 	});
 
@@ -126,6 +123,6 @@ describe("App Main", () => {
 			onProfileUpdated();
 		});
 
-		await waitFor(() => expect(route.state.location.pathname).toBe("/"));
+		await waitFor(() => expect(router.state.location.pathname).toBe("/"));
 	});
 });
