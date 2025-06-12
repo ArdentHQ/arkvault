@@ -119,7 +119,7 @@ exports[`SignIn > should render a modal 1`] = `
               </div>
             </div>
             <div
-              class="border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
+              class="border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
             />
             <form
               class="space-y-5"

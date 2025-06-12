@@ -68,7 +68,7 @@ const FormattedAddress = ({ alias, address }: { alias?: string; address: string 
 			<Clipboard variant="icon" data={address} tooltip={t("COMMON.COPY_ADDRESS")} tooltipDarkTheme={isDarkMode}>
 				<Icon
 					name="Copy"
-					className="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dark:hover:text-white"
+					className="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
 				/>
 			</Clipboard>
 		</div>
@@ -140,11 +140,11 @@ const MultiPaymentAddressing = ({
 				direction={direction}
 				style={isAdvanced && variant === "recipient" ? "return" : direction}
 			/>
-			<span className="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold">
+			<span className="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold">
 				{(direction === "return" || direction === "sent") && (
 					<>
 						{t("COMMON.MULTIPLE")}{" "}
-						<span className="text-theme-secondary-700 dark:text-theme-secondary-500">
+						<span className="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200">
 							({transaction.recipients().length})
 						</span>
 					</>
@@ -254,7 +254,7 @@ export const TransactionRowAddressing = ({
 						>
 							<Icon
 								name="Copy"
-								className="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-secondary-700 dark:hover:text-white"
+								className="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-secondary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
 							/>
 						</Clipboard>
 					</div>

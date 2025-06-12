@@ -63,7 +63,7 @@ export const TransactionRowSkeleton = ({ hideSender = false }: { hideSender?: bo
 			)}
 
 			<TableCell innerClassName="justify-end" className="table-cell sm:hidden lg:table-cell">
-				<div className="border-theme-secondary-300 dark:border-theme-secondary-800 rounded border p-1 px-2">
+				<div className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-800 rounded border p-1 px-2">
 					<Skeleton height={14} width={amountWidth} />
 				</div>
 			</TableCell>
@@ -74,7 +74,7 @@ export const TransactionRowSkeleton = ({ hideSender = false }: { hideSender?: bo
 				</div>
 
 				<div className="-mr-3 flex flex-col items-end pt-px lg:hidden">
-					<div className="border-theme-secondary-300 dark:border-theme-secondary-800 rounded border p-[2px]">
+					<div className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-800 rounded border p-[2px]">
 						<Skeleton height={15} width={amountWidth} />
 					</div>
 					<div className="mt-px">

@@ -381,7 +381,7 @@ export const AddressesSidePanel = ({
 										size="xs"
 										variant="transparent"
 										data-testid="HideManageHint"
-										className="bg-theme-primary-500 w-full px-4 py-1.5 sm:w-auto"
+										className="bg-theme-primary-500 dim:bg-theme-dim-navy-600 w-full px-4 py-1.5 sm:w-auto"
 										onClick={() => {
 											persistManageHint(true);
 											setShowManageHint(false);
