@@ -15,7 +15,7 @@ exports[`SearchRecipient > should call onAction when no address is selected 1`] 
         data-testid="Modal__inner"
       >
         <div
-          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:bg-transparent dim:text-theme-dim-200 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
+          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
         >
           <button
             class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
@@ -446,7 +446,7 @@ exports[`SearchRecipient > should render a modal 1`] = `
         data-testid="Modal__inner"
       >
         <div
-          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:bg-transparent dim:text-theme-dim-200 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
+          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
         >
           <button
             class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
@@ -875,7 +875,7 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
         data-testid="Modal__inner"
       >
         <div
-          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:bg-transparent dim:text-theme-dim-200 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
+          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
         >
           <button
             class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
@@ -1304,7 +1304,7 @@ exports[`SearchRecipient > should render with contact on desktop 1`] = `
         data-testid="Modal__inner"
       >
         <div
-          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:bg-transparent dim:text-theme-dim-200 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
+          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
         >
           <button
             class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
@@ -1665,7 +1665,7 @@ exports[`SearchRecipient > should render with contact on mobile 1`] = `
         data-testid="Modal__inner"
       >
         <div
-          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:bg-transparent dim:text-theme-dim-200 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
+          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
         >
           <button
             class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
@@ -1967,7 +1967,7 @@ exports[`SearchRecipient > should render with my wallet on desktop 1`] = `
         data-testid="Modal__inner"
       >
         <div
-          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:bg-transparent dim:text-theme-dim-200 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
+          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
         >
           <button
             class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
@@ -2328,7 +2328,7 @@ exports[`SearchRecipient > should render with my wallet on mobile 1`] = `
         data-testid="Modal__inner"
       >
         <div
-          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:bg-transparent dim:text-theme-dim-200 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
+          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
         >
           <button
             class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
@@ -2630,7 +2630,7 @@ exports[`SearchRecipient > should render with no alias if the recipient address 
         data-testid="Modal__inner"
       >
         <div
-          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:bg-transparent dim:text-theme-dim-200 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
+          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
         >
           <button
             class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
@@ -2980,7 +2980,7 @@ exports[`SearchRecipient > should render with selected address 1`] = `
         data-testid="Modal__inner"
       >
         <div
-          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:bg-transparent dim:text-theme-dim-200 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
+          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
         >
           <button
             class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
@@ -3409,7 +3409,7 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
         data-testid="Modal__inner"
       >
         <div
-          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:bg-transparent dim:text-theme-dim-200 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
+          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
         >
           <button
             class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
@@ -3838,7 +3838,7 @@ exports[`SearchRecipient > should render with selected address on mobile 1`] = `
         data-testid="Modal__inner"
       >
         <div
-          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:bg-transparent dim:text-theme-dim-200 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
+          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
         >
           <button
             class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
