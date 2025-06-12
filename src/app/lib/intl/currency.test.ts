@@ -93,4 +93,11 @@ describe("Currency", () => {
 			value: "12345000000",
 		});
 	});
+
+	it("fromString should return value '0' if no digits are parsed", () => {
+		expect(Currency.fromString("abc")).toEqual({
+			display: "",
+			value: "0",
+		});
+	});
 });
