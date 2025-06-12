@@ -49,7 +49,7 @@ export class Money {
 	 * @returns {Money}
 	 * @memberof Money
 	 */
-	public static make(amount: Dinero.Dinero, currency: string): Money {
+	public static make(amount: number | Dinero.Dinero, currency: string): Money {
 		return new Money({ amount, currency });
 	}
 
