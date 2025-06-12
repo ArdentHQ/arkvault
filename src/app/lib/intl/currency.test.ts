@@ -97,13 +97,39 @@ describe("Currency", () => {
 	it("fromString should use fallback separators when locale is not available", () => {
 		const toLocaleStringSpy = vi.spyOn(Number.prototype, "toLocaleString").mockReturnValue("unexpected_format");
 
-		// Test with a locale from the static fallback list, e.g., 'es'
+		// Test a specific locale from the fallback list ('es' uses ',')
 		expect(Currency.fromString("123,45", 2, "es")).toEqual({
 			display: "123,45",
 			value: "12345",
 		});
 
+		// Test a locale NOT in the fallback list, should default to 'en' (which uses '.')
+		// The input has a comma, but it should be converted to a dot.
+		expect(Currency.fromString("123,45", 2, "xx-XX")).toEqual({
+			display: "123.45",
+			value: "12345",
+		});
+
 		toLocaleStringSpy.mockRestore();
+	});
+
+	it("fromString should handle locales with no decimal separator", () => {
+		const toLocaleStringSpy = vi.spyOn(Number.prototype, "toLocaleString").mockReturnValue("100002"); // No separators
+
+		// `dot` should fall back to ".". It should parse "1.2" correctly.
+		expect(Currency.fromString("1.2", 2, "mock-locale")).toEqual({
+			display: "1.2",
+			value: "120",
+		});
+
+		toLocaleStringSpy.mockRestore();
+	});
+
+	it("fromString should handle multi-digit decimals after zero", () => {
+		expect(Currency.fromString("0.12", 2)).toEqual({
+			display: "0.12",
+			value: "12",
+		});
 	});
 
 	it("fromString should return value '0' if no digits are parsed", () => {
