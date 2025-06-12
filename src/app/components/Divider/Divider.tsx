@@ -14,7 +14,7 @@ interface DividerProperties {
 export type DividerStylesProperties = Omit<DividerProperties, "className">;
 
 export const Divider = ({
-	className = "border-theme-secondary-300 dark:border-theme-secondary-800",
+	className = "border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700",
 	type = "horizontal",
 	dashed,
 	size,

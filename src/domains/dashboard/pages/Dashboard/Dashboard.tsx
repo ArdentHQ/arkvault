@@ -134,8 +134,8 @@ export const Dashboard = ({
 
 			{networkAllowsVoting && (
 				<Section
-					borderClassName="border-transparent dark:border-transaparent md:border-theme-secondary-300 md:dark:border-transparent"
-					backgroundClassName="md:bg-theme-background md:dark:bg-theme-secondary-background"
+					borderClassName="border-transparent dark:border-transaparent md:border-theme-secondary-300 md:dark:border-transparent md:dim:border-transparent"
+					backgroundClassName="md:bg-theme-background md:dark:bg-theme-secondary-background md:dim:bg-theme-secondary-background"
 					innerClassName="md:-my-2 w-full"
 					border
 					className={cn("md:hidden", {

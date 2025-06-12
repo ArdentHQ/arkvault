@@ -6,7 +6,7 @@ exports[`Tabs > should react to use effect call 1`] = `
     class=""
   >
     <div
-      class="tab-list flex w-fit items-center gap-1 rounded-xl p-1 bg-theme-secondary-200 dark:bg-theme-dark-950"
+      class="tab-list flex w-fit items-center gap-1 rounded-xl p-1 bg-theme-secondary-200 dark:bg-theme-dark-950 dim:bg-theme-dim-950"
     >
       <button
         aria-selected="true"
@@ -50,7 +50,7 @@ exports[`Tabs > should render 1`] = `
     class=""
   >
     <div
-      class="tab-list flex w-fit items-center gap-1 rounded-xl p-1 bg-theme-secondary-200 dark:bg-theme-dark-950"
+      class="tab-list flex w-fit items-center gap-1 rounded-xl p-1 bg-theme-secondary-200 dark:bg-theme-dark-950 dim:bg-theme-dim-950"
     >
       <button
         aria-selected="false"
@@ -182,7 +182,7 @@ exports[`Tabs > should render with scroll 1`] = `
       data-testid="TabScroll"
     >
       <div
-        class="bg-theme-secondary-200 dark:bg-theme-dark-950 px-5"
+        class="bg-theme-secondary-200 dark:bg-theme-dark-950 dim:bg-theme-dim-950 px-5"
       >
         <div
           class="[&::-webkit-scrollbar]:hidden relative z-0 mx-auto overflow-x-auto"
@@ -247,7 +247,7 @@ exports[`Tabs > should render with scroll in dark mode 1`] = `
       data-testid="TabScroll"
     >
       <div
-        class="bg-theme-secondary-200 dark:bg-theme-dark-950 px-5"
+        class="bg-theme-secondary-200 dark:bg-theme-dark-950 dim:bg-theme-dim-950 px-5"
       >
         <div
           class="[&::-webkit-scrollbar]:hidden relative z-0 mx-auto overflow-x-auto"

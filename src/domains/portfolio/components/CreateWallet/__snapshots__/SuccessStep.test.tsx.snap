@@ -129,7 +129,7 @@ exports[`SuccessStep > should render (lg) 1`] = `
                   class="flex h-5 items-center sm:hidden"
                 >
                   <div
-                    class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
+                    class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
                   />
                 </div>
                 <button
@@ -310,7 +310,7 @@ exports[`SuccessStep > should render (xs) 1`] = `
                   class="flex h-5 items-center sm:hidden"
                 >
                   <div
-                    class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
+                    class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
                   />
                 </div>
                 <button
