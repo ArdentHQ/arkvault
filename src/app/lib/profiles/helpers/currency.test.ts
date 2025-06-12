@@ -12,6 +12,7 @@ describe("Helpers.Currency", () => {
 
 	it("should format fiat without decimals", () => {
 		expect(Currency.format(10, "KRW")).toBe("₩10.00");
+		expect(Currency.format(10, "JPY")).toBe("¥10.00");
 	});
 
 	it.each(["BTC", "ETH", "ARK", "DARK", "LSK", "BIND", "SOL"])("should format crypto (%s)", (currency) => {
@@ -37,6 +38,10 @@ describe("Helpers.Currency", () => {
 		"USD",
 	])("should allow to hide ticker (%s)", (currency) => {
 		expect(Currency.format(10, currency, { withTicker: false })).toBe("10.00");
+	});
+
+	it("should allow to hide ticker for crypto", () => {
+		expect(Currency.format(10, "BTC", { withTicker: false })).toBe("10");
 	});
 
 	it("should allow to pass locale", () => {

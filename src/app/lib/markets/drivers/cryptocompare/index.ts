@@ -76,26 +76,26 @@ export class CryptoCompare implements PriceTracker {
 
 	/** {@inheritDoc PriceTracker.historicalPrice} */
 	public async historicalPrice(options: HistoricalPriceOptions): Promise<HistoricalData> {
-		const body = await this.#get(`data/histo${options.type}`, {
+		const body = await this.#get(`data/v2/histo${options.type}`, {
 			fsym: options.token,
 			limit: options.days,
 			toTs: Math.round(Date.now() / 1000),
 			tsym: options.currency,
 		});
 
-		return new HistoricalPriceTransformer(body.Data).transform(options);
+		return new HistoricalPriceTransformer(body.Data.Data).transform(options);
 	}
 
 	/** {@inheritDoc PriceTracker.historicalVolume} */
 	public async historicalVolume(options: HistoricalVolumeOptions): Promise<HistoricalData> {
-		const body = await this.#get(`data/histo${options.type}`, {
+		const body = await this.#get(`data/v2/histo${options.type}`, {
 			fsym: options.token,
 			limit: options.days,
 			toTs: Math.round(Date.now() / 1000),
 			tsym: options.currency,
 		});
 
-		return new HistoricalVolumeTransformer(body.Data).transform(options);
+		return new HistoricalVolumeTransformer(body.Data.Data).transform(options);
 	}
 
 	/** {@inheritDoc PriceTracker.dailyAverage} */
@@ -124,11 +124,11 @@ export class CryptoCompare implements PriceTracker {
 	 *
 	 * @private
 	 * @param {string} path
-	 * @param {*} [query={}]
+	 * @param {object} query
 	 * @returns {Promise<any>}
 	 * @memberof PriceTracker
 	 */
-	async #get(path: string, query = {}): Promise<any> {
+	async #get(path: string, query: object): Promise<any> {
 		const response = await this.#httpClient.get(`${this.#host}/${path}`, query);
 
 		return response.json();

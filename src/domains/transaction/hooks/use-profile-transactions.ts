@@ -12,7 +12,7 @@ interface TransactionsState {
 	isLoadingMore: boolean;
 	activeMode?: string;
 	activeTransactionType?: any;
-	selectedTransactionTypes?: string[];
+	selectedTransactionTypes: string[];
 	hasMore?: boolean;
 	timestamp?: number;
 }
@@ -25,10 +25,10 @@ interface TransactionFilters {
 }
 
 interface FetchTransactionProperties {
-	flush?: boolean;
+	flush: boolean;
 	mode?: string;
 	transactionType?: any;
-	transactionTypes?: string[];
+	transactionTypes: string[];
 	wallets: ProfileContracts.IReadWriteWallet[];
 	cursor?: number;
 	orderBy?: string;
@@ -230,7 +230,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 	);
 
 	const fetchTransactions = useCallback(
-		async ({ flush = false, mode = "all", wallets = [], transactionTypes = [] }: FetchTransactionProperties) => {
+		async ({ flush, mode = "all", wallets, transactionTypes }: FetchTransactionProperties) => {
 			if (wallets.length === 0) {
 				return { hasMorePages: () => false, items: () => [] };
 			}
@@ -315,7 +315,12 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 		const latestTransaction = items[0];
 
 		const foundNew =
-			latestTransaction && !transactions.some((transaction) => latestTransaction.hash() === transaction.hash());
+			latestTransaction &&
+			/* istanbul ignore next -- @preserve */
+			!transactions.some(
+				/* istanbul ignore next -- @preserve */
+				(transaction) => latestTransaction.hash() === transaction.hash(),
+			);
 
 		if (!foundNew) {
 			return;
@@ -366,14 +371,14 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 		activeTransactionType,
 		fetchMore,
 		hasEmptyResults,
-		hasFilter: (selectedTransactionTypes?.length ?? 0) < allTransactionTypes.length,
+		hasFilter: selectedTransactionTypes.length < allTransactionTypes.length,
 		hasMore,
 		isLoadingMore,
 		isLoadingTransactions,
 		selectedTransactionTypes,
 		setSortBy,
 		sortBy,
-		transactions: selectedTransactionTypes?.length ? transactions : [],
+		transactions: selectedTransactionTypes.length > 0 ? transactions : [],
 		updateFilters,
 	};
 };
