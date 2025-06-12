@@ -49,6 +49,7 @@ export class Money {
 	 * @returns {Money}
 	 * @memberof Money
 	 */
+	/* eslint-disable @typescript-eslint/no-redundant-type-constituents */
 	public static make(amount: number | Dinero.Dinero, currency: string): Money {
 		return new Money({ amount, currency });
 	}

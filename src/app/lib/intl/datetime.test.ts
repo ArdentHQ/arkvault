@@ -1,3 +1,5 @@
+/* eslint-disable sonarjs/no-duplicate-string */
+
 import { describe, expect, it } from "vitest";
 import { DateTime } from "./datetime";
 
@@ -132,13 +134,13 @@ describe("DateTime", () => {
 
 		const obj = dt.toObject();
 		expect(obj).toEqual({
-			years: 2023,
-			months: 0,
 			date: 1,
 			hours: 12,
-			minutes: 34,
-			seconds: 56,
 			milliseconds: 789,
+			minutes: 34,
+			months: 0,
+			seconds: 56,
+			years: 2023,
 		});
 
 		const dtWithTimezone = DateTime.make("2023-01-01T12:34:56.789Z", "en", "America/New_York");
@@ -193,8 +195,8 @@ describe("DateTime", () => {
 		expect(dt1.diffInWeeks(dt2)).toBe(-58);
 		expect(dt1.diffInDays(dt2)).toBe(-410);
 		expect(dt1.diffInHours(dt2)).toBe(-9852);
-		expect(dt1.diffInMinutes(dt2)).toBe(-591150);
-		expect(dt1.diffInSeconds(dt2)).toBe(-35469045);
-		expect(dt1.diffInMilliseconds(dt2)).toBe(-35469045500);
+		expect(dt1.diffInMinutes(dt2)).toBe(-591_150);
+		expect(dt1.diffInSeconds(dt2)).toBe(-35_469_045);
+		expect(dt1.diffInMilliseconds(dt2)).toBe(-35_469_045_500);
 	});
 });

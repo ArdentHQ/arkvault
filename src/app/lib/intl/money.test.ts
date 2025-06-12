@@ -90,13 +90,13 @@ describe("Money", () => {
 	});
 
 	it("should format to string", () => {
-		const money = Money.make(Dinero({ amount: 123456, currency }), currency);
+		const money = Money.make(Dinero({ amount: 123_456, currency }), currency);
 		expect(money.format("$0,0.00")).toBe("$1,234.56");
 		expect(money.format()).toBe("$1,234.56");
 	});
 
 	it("should convert to unit", () => {
-		const money = Money.make(Dinero({ amount: 123456, currency }), currency);
+		const money = Money.make(Dinero({ amount: 123_456, currency }), currency);
 		expect(money.toUnit()).toBe(1234.56);
 	});
 });

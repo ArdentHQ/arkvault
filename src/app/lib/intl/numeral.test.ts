@@ -14,12 +14,12 @@ describe("Numeral", () => {
 
 	it("should format a number", () => {
 		const numeral = Numeral.make("en-US");
-		expect(numeral.format(1234567.89)).toBe("1,234,567.89");
+		expect(numeral.format(1_234_567.89)).toBe("1,234,567.89");
 	});
 
 	it("should format a number without a locale", () => {
 		const numeral = Numeral.make(undefined);
-		expect(numeral.format(1234567.89)).toBe("1,234,567.89");
+		expect(numeral.format(1_234_567.89)).toBe("1,234,567.89");
 	});
 
 	it("should format as currency", () => {

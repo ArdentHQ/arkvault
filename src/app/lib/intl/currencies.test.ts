@@ -30,25 +30,25 @@ describe("CURRENCIES", () => {
 	});
 
 	it("should have valid decimal values", () => {
-		Object.entries(CURRENCIES).forEach(([currency, data]) => {
+		for (const [_, data] of Object.entries(CURRENCIES)) {
 			expect(typeof data.decimals).toBe("number");
 			expect(data.decimals).toBeGreaterThanOrEqual(0);
 			expect(data.decimals).toBeLessThanOrEqual(8);
-		});
+		}
 	});
 
 	it("should have valid symbol values", () => {
-		Object.entries(CURRENCIES).forEach(([currency, data]) => {
+		for (const [_, data] of Object.entries(CURRENCIES)) {
 			expect(typeof data.symbol).toBe("string");
 			expect(data.symbol.length).toBeGreaterThan(0);
-		});
+		}
 	});
 
 	it("should have all required currencies", () => {
 		const requiredCurrencies = ["USD", "EUR", "GBP", "JPY", "BTC", "ETH", "LTC"];
 
-		requiredCurrencies.forEach((currency) => {
+		for (const currency of requiredCurrencies) {
 			expect(CURRENCIES).toHaveProperty(currency);
-		});
+		}
 	});
 });
