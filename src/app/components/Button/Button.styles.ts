@@ -24,7 +24,7 @@ const getVariant = (variant?: ButtonVariant, theme?: Theme, disabled?: boolean, 
 			return `disabled:bg-theme-secondary-800 disabled:text-theme-secondary-700`;
 		}
 
-		return `disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700`;
+		return `disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600`;
 	}
 
 	// The following methods optionally receive a breakpoint. We can use
@@ -76,7 +76,7 @@ const getVariant = (variant?: ButtonVariant, theme?: Theme, disabled?: boolean, 
 					dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900
 				`,
 		"secondary-icon": () => `text-theme-secondary-700 bg-transparent
-		dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim:bg-transparent`,
+		dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim:bg-transparent`,
 		warning: () => `
 			bg-theme-warning-100 text-theme-warning-700
 			dark:bg-theme-warning-600 dark:text-white
