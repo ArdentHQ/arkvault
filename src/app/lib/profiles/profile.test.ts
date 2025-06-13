@@ -31,10 +31,8 @@ describe("Profile", () => {
 
 	beforeEach(() => {
 		profile = env.profiles().findById(getMainsailProfileId());
-	});
 
-	afterEach(() => {
-		vi.clearAllMocks();
+		vi.restoreAllMocks();
 	});
 
 	it("should have an id", () => {
