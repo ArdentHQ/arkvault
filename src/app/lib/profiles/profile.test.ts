@@ -184,9 +184,16 @@ describe("Profile", () => {
 	});
 
 	it("should check if it has been partially restored", () => {
-		const spy = vi.spyOn(profile.wallets(), "values").mockReturnValue([]);
 		expect(profile.hasBeenPartiallyRestored()).toBe(false);
-		spy.mockRestore();
+	});
+
+	it("should return true if at least one wallet has been partially restored", () => {
+		const wallet = { hasBeenPartiallyRestored: () => true };
+		const walletsSpy = vi.spyOn(profile.wallets(), "values").mockReturnValue([wallet as any]);
+
+		expect(profile.hasBeenPartiallyRestored()).toBe(true);
+
+		walletsSpy.mockRestore();
 	});
 
 	it("should have attributes", () => {

@@ -8,7 +8,7 @@ import { ProfileSerialiser } from "./profile.serialiser.js";
 let subject: ProfileValidator;
 let validProfile: IProfileData;
 
-beforeEach(async () => {
+beforeEach(() => {
 	subject = new ProfileValidator();
 	const profile = env.profiles().findById(getMainsailProfileId());
 	validProfile = new ProfileSerialiser(profile).toJSON();
