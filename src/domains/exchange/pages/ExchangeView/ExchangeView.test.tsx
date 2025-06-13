@@ -1,6 +1,5 @@
 /* eslint-disable testing-library/no-node-access */
 import React, { useEffect } from "react";
-import { Route } from "react-router-dom";
 import "jest-styled-components";
 import { ExchangeView } from "./ExchangeView";
 import { ExchangeProvider, useExchangeContext } from "@/domains/exchange/contexts/Exchange";
@@ -27,16 +26,13 @@ describe("ExchangeView", () => {
 	it("should render", async () => {
 		const exchangeURL = `/profiles/${getMainsailProfileId()}/exchange/view?exchangeId=changenow`;
 
-		navigate(exchangeURL);
 
 		render(
-			<Route path="/profiles/:profileId/exchange/view">
-				<ExchangeProvider>
-					<Wrapper>
-						<ExchangeView />
-					</Wrapper>
-				</ExchangeProvider>
-			</Route>,
+			<ExchangeProvider>
+				<Wrapper>
+					<ExchangeView />
+				</Wrapper>
+			</ExchangeProvider>,
 			{
 				route: exchangeURL,
 			},
@@ -68,16 +64,12 @@ describe("ExchangeView", () => {
 
 		const exchangeURL = `/profiles/${getMainsailProfileId()}/exchange/view?exchangeId=changenow`;
 
-		navigate(exchangeURL);
-
 		render(
-			<Route path="/profiles/:profileId/exchange/view">
-				<ExchangeProvider>
-					<Wrapper>
-						<ExchangeView />
-					</Wrapper>
-				</ExchangeProvider>
-			</Route>,
+			<ExchangeProvider>
+				<Wrapper>
+					<ExchangeView />
+				</Wrapper>
+			</ExchangeProvider>,
 			{
 				route: exchangeURL,
 			},
@@ -93,16 +85,12 @@ describe("ExchangeView", () => {
 	it("should render warning without exchange", async () => {
 		const exchangeURL = `/profiles/${getMainsailProfileId()}/exchange/view?exchangeId=unknown`;
 
-		navigate(exchangeURL);
-
 		render(
-			<Route path="/profiles/:profileId/exchange/view">
-				<ExchangeProvider>
-					<Wrapper>
-						<ExchangeView />
-					</Wrapper>
-				</ExchangeProvider>
-			</Route>,
+			<ExchangeProvider>
+				<Wrapper>
+					<ExchangeView />
+				</Wrapper>
+			</ExchangeProvider>,
 			{
 				route: exchangeURL,
 			},
@@ -118,14 +106,10 @@ describe("ExchangeView", () => {
 	it("should fetch providers if not loaded yet", async () => {
 		const exchangeURL = `/profiles/${getMainsailProfileId()}/exchange/view?exchangeId=changenow`;
 
-		navigate(exchangeURL);
-
 		render(
-			<Route path="/profiles/:profileId/exchange/view">
-				<ExchangeProvider>
-					<ExchangeView />
-				</ExchangeProvider>
-			</Route>,
+			<ExchangeProvider>
+				<ExchangeView />
+			</ExchangeProvider>,
 			{
 				route: exchangeURL,
 			},
@@ -140,8 +124,6 @@ describe("ExchangeView", () => {
 
 	it("should re-render exchange form when `reset()` called ", async () => {
 		const exchangeURL = `/profiles/${getMainsailProfileId()}/exchange/view?exchangeId=changenow`;
-
-		navigate(exchangeURL);
 
 		let renderCount = 0;
 
@@ -161,13 +143,11 @@ describe("ExchangeView", () => {
 		});
 
 		render(
-			<Route path="/profiles/:profileId/exchange/view">
-				<ExchangeProvider>
-					<Wrapper>
-						<ExchangeView />
-					</Wrapper>
-				</ExchangeProvider>
-			</Route>,
+			<ExchangeProvider>
+				<Wrapper>
+					<ExchangeView />
+				</Wrapper>
+			</ExchangeProvider>,
 			{
 				route: exchangeURL,
 			},
@@ -184,8 +164,6 @@ describe("ExchangeView", () => {
 	it("should not pass down `orderId` when reset clicked", async () => {
 		const exchangeURL = `/profiles/${getMainsailProfileId()}/exchange/view?exchangeId=changenow&orderId=testOrderId`;
 
-		navigate(exchangeURL);
-
 		const exchangeFormMock = vi.spyOn(ExchangeForm, "ExchangeForm").mockImplementation(({ resetForm, orderId }) => (
 			<div>
 				Exchange Form rendered
@@ -197,13 +175,11 @@ describe("ExchangeView", () => {
 		));
 
 		render(
-			<Route path="/profiles/:profileId/exchange/view">
-				<ExchangeProvider>
-					<Wrapper>
-						<ExchangeView />
-					</Wrapper>
-				</ExchangeProvider>
-			</Route>,
+			<ExchangeProvider>
+				<Wrapper>
+					<ExchangeView />
+				</Wrapper>
+			</ExchangeProvider>,
 			{
 				route: exchangeURL,
 			},

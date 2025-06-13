@@ -5,7 +5,7 @@ import { vi } from "vitest";
 import { useExchangeContext } from "./Exchange";
 import { httpClient } from "@/app/services";
 import { ExchangeProvider } from "@/domains/exchange/contexts/Exchange";
-import { render, screen, waitFor } from "@/utils/testing-library";
+import { render, renderWithoutRouter, screen, waitFor } from "@/utils/testing-library";
 import { requestMock, server } from "@/tests/mocks/server";
 
 const Test = () => {
@@ -22,14 +22,16 @@ describe("Exchange Context", () => {
 	afterEach(() => httpClient.clearCache());
 
 	it("should throw without provider", () => {
-		const consoleSpy = vi.spyOn(console, "error").mockImplementation(() => {});
+		const consoleSpy = vi.spyOn(console, "error").mockImplementation(() => { });
 
 		const Test = () => {
 			const { exchangeProviders } = useExchangeContext();
 			return <span>provider counts: {exchangeProviders.length}</span>;
 		};
 
-		expect(() => render(<Test />)).toThrow("[useExchangeContext] Component not wrapped within a Provider");
+		expect(() => renderWithoutRouter(<Test />, {
+			withProviders: false,
+		})).toThrow("[useExchangeContext] Component not wrapped within a Provider");
 
 		consoleSpy.mockRestore();
 	});
