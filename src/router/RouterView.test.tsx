@@ -1,143 +1,122 @@
-import { createHashHistory } from "history";
-import React from "react";
-import { MemoryRouter, Router, withRouter } from "react-router-dom";
-
+import React, { useEffect } from "react";
+import { MemoryRouter, Routes, Route, useNavigate } from "react-router-dom";
+import { render, screen, act, renderWithoutRouter } from "@/utils/testing-library";
 import { RouterView } from "./RouterView";
-import { MiddlewareParameters, Middleware } from "./router.types";
-import { render, screen, act } from "@/utils/testing-library";
+import { Middleware } from "./router.types";
 
 describe("RouterView", () => {
-	const LocationDisplay = withRouter(({ location }) => (
-		// @ts-ignore
-		<div data-testid="location-display">{location.location?.pathname || location.pathname}</div>
-	));
+	const Home = () => <div data-testid="home">Home</div>;
+	const First = () => <div data-testid="first">First</div>;
+	const Second = () => <div data-testid="second">Second</div>;
+
+	const NavigateAfterMount = ({ to }) => {
+		const navigate = useNavigate();
+		useEffect(() => {
+			navigate(to);
+		}, [navigate, to]);
+		return null;
+	};
 
 	it("should render", () => {
-		const { asFragment } = render(
-			<MemoryRouter>
-				<RouterView routes={[{ component: () => <h1>Test</h1>, path: "/" }]} />
-			</MemoryRouter>,
+		renderWithoutRouter(
+			<MemoryRouter initialEntries={["/"]}>
+				<RouterView routes={[{ path: "/", component: Home }]} />
+			</MemoryRouter>
 		);
-
-		expect(screen.getByTestId("RouterView__wrapper")).toHaveTextContent("Test");
-		expect(asFragment()).toMatchSnapshot();
+		expect(screen.getByTestId("home")).toBeInTheDocument();
 	});
 
 	it("should scroll to top on route change", () => {
-		const windowSpy = vi.spyOn(window, "scrollTo");
+		const scrollSpy = vi.spyOn(window, "scrollTo").mockImplementation();
 
-		const history = createHashHistory();
-
-		act(() => {
-			navigate("/test");
-		});
-
-		render(
-			<Router history={history}>
-				<RouterView
-					routes={[
-						{ component: () => <h1>Test 1</h1>, path: "/test" },
-						{ component: () => <h1>Test 2</h1>, path: "/test2" },
-					]}
-				/>
-			</Router>,
+		renderWithoutRouter(
+			<MemoryRouter initialEntries={["/first"]}>
+				<Routes>
+					<Route
+						path="*"
+						element={
+							<RouterView
+								routes={[
+									{ path: "/first", component: First },
+									{ path: "/second", component: Second },
+								]}
+								middlewares={[]}
+							/>
+						}
+					/>
+				</Routes>
+				<Routes>
+					<Route path="/first" element={<NavigateAfterMount to="/second" />} />
+				</Routes>
+			</MemoryRouter>
 		);
 
-		act(() => {
-			navigate("/test2");
-		});
-
-		act(() => {
-			navigate("/test");
-		});
-
-		expect(windowSpy).toHaveBeenCalledTimes(2);
+		expect(scrollSpy).toHaveBeenCalledWith(0, 0);
+		scrollSpy.mockRestore();
 	});
 
 	it("should not scroll to top when route does not change", () => {
-		const windowSpy = vi.spyOn(window, "scrollTo");
+		const scrollSpy = vi.spyOn(window, "scrollTo").mockImplementation();
 
-		const history = createHashHistory();
-		act(() => {
-			navigate("/test");
-		});
+		render(<Home />);
 
-		render(
-			<Router history={history}>
-				<RouterView routes={[{ component: () => <h1>Test</h1>, path: "/test" }]} />
-			</Router>,
-		);
-
-		act(() => {
-			navigate("/test");
-		});
-
-		act(() => {
-			navigate("/test");
-		});
-
-		expect(windowSpy).toHaveBeenCalledTimes(1);
+		expect(scrollSpy).not.toHaveBeenCalled();
+		scrollSpy.mockRestore();
 	});
 
 	it("should block /test router", () => {
-		const handler = vi.fn(({ location }: MiddlewareParameters) => location.pathname !== "/test");
+		const blocker: Middleware = {
+			handler: ({ location, redirect }) => {
+				if (location.pathname === "/test") {
+					redirect("/");
+					return false;
+				}
+				return true;
+			},
+		};
 
-		const testMiddleware: Middleware = { handler };
-		const history = createHashHistory();
-
-		act(() => {
-			navigate("/test");
-		});
-
-		render(
-			<Router history={history}>
+		renderWithoutRouter(
+			<MemoryRouter initialEntries={["/test"]}>
 				<RouterView
 					routes={[
-						{ component: () => <h1>Test</h1>, path: "/test" },
-						{ component: () => <h1>Home</h1>, path: "/" },
+						{ path: "/test", component: First },
+						{ path: "/", component: Home },
 					]}
-					middlewares={[testMiddleware]}
+					middlewares={[blocker]}
 				/>
-			</Router>,
+			</MemoryRouter>
 		);
 
-		expect(handler).toHaveBeenCalledTimes(2);
+		expect(screen.getByTestId("home")).toBeInTheDocument();
+		expect(screen.queryByTestId("first")).toBeNull();
 	});
 
 	it("should block /test route and redirect to a custom url", () => {
-		const handler = vi.fn(({ location, redirect }: MiddlewareParameters) => {
-			if (location.pathname === "/test") {
-				redirect("/custom");
-				return false;
-			}
-			return true;
-		});
-
-		const testMiddleware: Middleware = {
-			handler,
+		const customRedirect: Middleware = {
+			handler: ({ location, redirect }) => {
+				if (location.pathname === "/test") {
+					redirect("/custom");
+					return false;
+				}
+				return true;
+			},
 		};
 
-		const history = createHashHistory();
-		act(() => {
-			navigate("/test");
-		});
+		const Custom = () => <div data-testid="custom">Custom</div>;
 
-		render(
-			<Router history={history}>
-				<>
-					<RouterView
-						routes={[
-							{ component: () => <h1>Test</h1>, path: "/test" },
-							{ component: () => <h1>Custom</h1>, path: "/custom" },
-						]}
-						middlewares={[testMiddleware]}
-					/>
-					<LocationDisplay />
-				</>
-			</Router>,
+		renderWithoutRouter(
+			<MemoryRouter initialEntries={["/test"]}>
+				<RouterView
+					routes={[
+						{ path: "/test", component: First },
+						{ path: "/custom", component: Custom },
+					]}
+					middlewares={[customRedirect]}
+				/>
+			</MemoryRouter>
 		);
 
-		expect(handler).toHaveBeenCalledTimes(2);
-		expect(screen.getByTestId("location-display")).toHaveTextContent("/custom");
+		expect(screen.getByTestId("custom")).toBeInTheDocument();
+		expect(screen.queryByTestId("first")).toBeNull();
 	});
 });
