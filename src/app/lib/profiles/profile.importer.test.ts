@@ -1,5 +1,4 @@
 import { describe, expect, it, vi } from "vitest";
-import { IProfile } from "./contracts";
 import { ProfileImporter } from "./profile.importer";
 import { env, getMainsailProfileId, getDefaultPassword } from "@/utils/testing-library";
 import { Migrator } from "./migrator";
