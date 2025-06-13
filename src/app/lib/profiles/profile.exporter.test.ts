@@ -2,7 +2,7 @@ import { describe, beforeEach, it, expect, vi } from "vitest";
 import { IProfile, IProfileExporter, IProfileExportOptions } from "./contracts";
 import { ProfileExporter } from "./profile.exporter";
 import { env, getMainsailProfileId } from "@/utils/testing-library";
-import { Base64, PBKDF2 } from "@ardenthq/arkvault-crypto";
+import { Base64 } from "@ardenthq/arkvault-crypto";
 import { ProfileEncrypter } from "./profile.encrypter";
 import { ProfileSerialiser } from "./profile.serialiser";
 
