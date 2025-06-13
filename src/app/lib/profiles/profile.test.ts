@@ -202,13 +202,31 @@ describe("Profile", () => {
 	});
 
 	it("should sync the profile", async () => {
-		const spyWallets = vi.spyOn(profile.wallets(), "restore").mockResolvedValue(undefined);
-		const spyNetwork = vi.spyOn(profile.activeNetwork(), "sync").mockResolvedValue(undefined);
+		const syncSpy = vi.spyOn(profile.wallets(), "restore").mockResolvedValue(undefined);
+		const activeNetworkSyncSpy = vi.spyOn(profile.activeNetwork(), "sync").mockResolvedValue(undefined);
+
 		await profile.sync();
-		expect(spyWallets).toHaveBeenCalled();
-		expect(spyNetwork).toHaveBeenCalled();
-		spyWallets.mockRestore();
-		spyNetwork.mockRestore();
+
+		expect(syncSpy).toHaveBeenCalled();
+		expect(activeNetworkSyncSpy).toHaveBeenCalled();
+
+		syncSpy.mockRestore();
+		activeNetworkSyncSpy.mockRestore();
+	});
+
+	it("should not sync active network if there are no wallets", async () => {
+		const walletCountSpy = vi.spyOn(profile.wallets(), "count").mockReturnValue(0);
+		const restoreSpy = vi.spyOn(profile.wallets(), "restore").mockResolvedValue(undefined);
+		const activeNetworkSyncSpy = vi.spyOn(profile.activeNetwork(), "sync").mockResolvedValue(undefined);
+
+		await profile.sync();
+
+		expect(restoreSpy).toHaveBeenCalled();
+		expect(activeNetworkSyncSpy).not.toHaveBeenCalled();
+
+		walletCountSpy.mockRestore();
+		restoreSpy.mockRestore();
+		activeNetworkSyncSpy.mockRestore();
 	});
 
 	it("should mark the introductory tutorial as complete", () => {
