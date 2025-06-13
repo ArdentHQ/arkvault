@@ -22,7 +22,7 @@ export const TextArea = ({ ref, initialHeight = 100, ...properties }: TextareaPr
 
 	return (
 		<div className="relative">
-			<div className="border-t-theme-secondary-400 dark:border-t-theme-secondary-700 pointer-events-none absolute right-3 bottom-4 z-10 hidden h-0 w-0 -rotate-45 border-x-8 border-t-8 border-x-transparent md:block" />
+			<div className="border-t-theme-secondary-400 dark:border-t-theme-secondary-700 dim:border-t-theme-dim-500 pointer-events-none absolute right-3 bottom-4 z-10 hidden h-0 w-0 -rotate-45 border-x-8 border-t-8 border-x-transparent md:block" />
 
 			<Input
 				data-testid="TextArea"
