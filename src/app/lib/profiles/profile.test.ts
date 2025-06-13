@@ -1,4 +1,4 @@
-import { describe, expect, it, beforeEach, vi, afterEach } from "vitest";
+import { describe, expect, it, beforeEach, vi } from "vitest";
 import { IProfile, ProfileData, ProfileSetting } from "./contracts";
 import { env, getMainsailProfileId } from "@/utils/testing-library";
 import { AppearanceService } from "./appearance.service";
