@@ -15,7 +15,7 @@ describe("ProfileRepository", () => {
 	it("should fill the repository", () => {
 		expect(subject.count()).toBe(0);
 
-		const profile = new Profile({ id: "uuid", name: "name", data: "" }, env);
+		const profile = new Profile({ data: "", id: "uuid", name: "name" }, env);
 		subject.fill({ [profile.id()]: profile.getAttributes().all() });
 
 		expect(subject.count()).toBe(1);
@@ -79,7 +79,7 @@ describe("ProfileRepository", () => {
 
 	describe("persist", () => {
 		it("should do nothing if not restored", async () => {
-			const profile = new Profile({ id: "uuid", name: "name", data: "" }, env);
+			const profile = new Profile({ data: "", id: "uuid", name: "name" }, env);
 			const spy = vi.spyOn(profile.status(), "isDirty");
 			await subject.persist(profile);
 			expect(spy).not.toHaveBeenCalled();
