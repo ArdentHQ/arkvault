@@ -39,7 +39,7 @@ describe("ProfileEncrypter", () => {
 
 	describe("decrypt", () => {
 		it("should decrypt the given value", async () => {
-			const profileData = { id: profile.id(), data: { wallets: {} } };
+			const profileData = { data: { wallets: {} }, id: profile.id() };
 			const encrypted = await PBKDF2.encrypt(JSON.stringify(profileData), password);
 			const base64 = Base64.encode(encrypted);
 
