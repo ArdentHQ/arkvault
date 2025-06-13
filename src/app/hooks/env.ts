@@ -1,14 +1,16 @@
 import { Contracts } from "@/app/lib/profiles";
 import { useMemo } from "react";
-import { useLocation, useParams } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 import { useEnvironmentContext } from "@/app/contexts/Environment";
+import { getUrlParameter } from "@/utils/paths";
 
 export const useActiveProfile = (): Contracts.IProfile => {
 	const location = useLocation();
 
 	const context = useEnvironmentContext();
-	const { profileId } = useParams<{ profileId: string }>();
+	// profiles/:profileId
+	const profileId = getUrlParameter(location.pathname, 1)
 
 	return useMemo(() => {
 		if (!profileId) {
@@ -22,15 +24,19 @@ export const useActiveProfile = (): Contracts.IProfile => {
 };
 
 export const useActiveWallet = (): Contracts.IReadWriteWallet => {
+	const location = useLocation();
 	const profile = useActiveProfile();
-	const { walletId } = useParams<{ walletId: string }>();
+	// profiles/:profileId/wallets/:walletId
+	const walletId = getUrlParameter(location.pathname, 3)
 
 	return useMemo(() => profile.wallets().findById(walletId!), [profile, walletId]);
 };
 
 export const useActiveWalletWhenNeeded = (isRequired: boolean) => {
+	const location = useLocation();
 	const profile = useActiveProfile();
-	const { walletId } = useParams<{ walletId: string }>();
+	// profiles/:profileId/wallets/:walletId
+	const walletId = getUrlParameter(location.pathname, 3)
 
 	return useMemo(() => {
 		try {
