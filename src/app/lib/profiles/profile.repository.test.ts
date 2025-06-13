@@ -1,5 +1,5 @@
 import { describe, expect, it, beforeEach, vi } from "vitest";
-import { IProfile, IProfileRepository, IProfileExportOptions, IProfileInput } from "./contracts";
+import { IProfileRepository, IProfileExportOptions, IProfileInput } from "./contracts";
 import { env, getDefaultPassword } from "@/utils/testing-library";
 import { Profile } from "./profile";
 import { ProfileExporter } from "./profile.exporter";
