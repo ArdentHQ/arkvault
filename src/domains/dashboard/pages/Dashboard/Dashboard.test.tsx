@@ -17,11 +17,9 @@ import { Contracts } from "@/app/lib/profiles";
 import { Dashboard } from "./Dashboard";
 import React from "react";
 import { Route } from "react-router-dom";
-import { createHashHistory } from "history";
 import { translations as profileTranslations } from "@/domains/profile/i18n";
 import userEvent from "@testing-library/user-event";
 
-const history = createHashHistory();
 let profile: Contracts.IProfile;
 let resetProfileNetworksMock: () => void;
 
@@ -58,8 +56,6 @@ describe("Dashboard", () => {
 
 	beforeEach(() => {
 		dashboardURL = `/profiles/${fixtureProfileId}/dashboard`;
-		navigate(dashboardURL);
-
 		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 	});
 
@@ -79,15 +75,12 @@ describe("Dashboard", () => {
 			},
 			selectedAddresses: [wallet.address()],
 			selectedWallets: [wallet],
-			setSelectedAddresses: () => {},
+			setSelectedAddresses: () => { },
 		});
 
 		const { asFragment } = render(
-			<Route path="/profiles/:profileId/dashboard">
-				<Dashboard />
-			</Route>,
+			<Dashboard />,
 			{
-				history,
 				route: dashboardURL,
 				withProfileSynchronizer: true,
 			},
@@ -125,15 +118,12 @@ describe("Dashboard", () => {
 			},
 			selectedAddresses: [wallet1.address(), wallet2.address()],
 			selectedWallets: [wallet1, wallet2],
-			setSelectedAddresses: () => {},
+			setSelectedAddresses: () => { },
 		});
 
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<Dashboard />
-			</Route>,
+			<Dashboard />,
 			{
-				history,
 				route: dashboardURL,
 				withProfileSynchronizer: true,
 			},
@@ -167,15 +157,12 @@ describe("Dashboard", () => {
 			},
 			selectedAddresses: [wallet1.address(), wallet2.address()],
 			selectedWallets: [wallet1, wallet2],
-			setSelectedAddresses: () => {},
+			setSelectedAddresses: () => { },
 		});
 
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<Dashboard />
-			</Route>,
+			<Dashboard />,
 			{
-				history,
 				route: dashboardURL,
 				withProfileSynchronizer: true,
 			},
@@ -194,11 +181,8 @@ describe("Dashboard", () => {
 		const mockHasCompletedTutorial = vi.spyOn(profile, "hasCompletedIntroductoryTutorial").mockReturnValue(false);
 
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<Dashboard />
-			</Route>,
+			<Dashboard />,
 			{
-				history,
 				route: dashboardURL,
 				withProfileSynchronizer: true,
 			},
@@ -221,17 +205,12 @@ describe("Dashboard", () => {
 			},
 			selectedAddresses: [wallet.address(), wallet2.address()],
 			selectedWallets: [wallet, wallet2],
-			setSelectedAddresses: () => {},
+			setSelectedAddresses: () => { },
 		});
 
-		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
-
-		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<Dashboard />
-			</Route>,
+		const { router } = render(
+			<Dashboard />,
 			{
-				history,
 				route: dashboardURL,
 				withProfileSynchronizer: true,
 			},
@@ -244,12 +223,10 @@ describe("Dashboard", () => {
 		await userEvent.click(screen.getByTestId("WalletMyVotes__button"));
 
 		await waitFor(() => {
-			expect(historySpy).toHaveBeenCalledWith({ pathname: `/profiles/${profile.id()}/votes` });
+			expect(router.state.location.pathname).toBe(`/profiles/${profile.id()}/votes`);
 		});
 
 		usePortfolioMock.mockRestore();
-
-		historySpy.mockRestore();
 	});
 
 	it("should navigate to wallet votes when one wallet is selected", async () => {
@@ -263,17 +240,12 @@ describe("Dashboard", () => {
 			},
 			selectedAddresses: [wallet.address()],
 			selectedWallets: [wallet],
-			setSelectedAddresses: () => {},
+			setSelectedAddresses: () => { },
 		});
 
-		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
-
-		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<Dashboard />
-			</Route>,
+		const { router } = render(
+			<Dashboard />,
 			{
-				history,
 				route: dashboardURL,
 				withProfileSynchronizer: true,
 			},
@@ -286,11 +258,9 @@ describe("Dashboard", () => {
 		await userEvent.click(screen.getByTestId("WalletVote__button"));
 
 		await waitFor(() => {
-			expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}/votes`);
+			expect(router.state.location.pathname).toBe(`/profiles/${profile.id()}/wallets/${wallet.id()}/votes`);
 		});
 
 		usePortfolioMock.mockRestore();
-
-		historySpy.mockRestore();
 	});
 });

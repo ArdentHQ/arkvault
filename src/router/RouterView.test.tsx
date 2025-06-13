@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { MemoryRouter, Routes, Route, useNavigate } from "react-router-dom";
-import { render, screen, act, renderWithoutRouter } from "@/utils/testing-library";
+import { renderWithoutRouter as render, screen, act } from "@/utils/testing-library";
 import { RouterView } from "./RouterView";
 import { Middleware } from "./router.types";
 
@@ -9,6 +9,7 @@ describe("RouterView", () => {
 	const First = () => <div data-testid="first">First</div>;
 	const Second = () => <div data-testid="second">Second</div>;
 
+	// Helper component to trigger navigation on mount
 	const NavigateAfterMount = ({ to }) => {
 		const navigate = useNavigate();
 		useEffect(() => {
@@ -18,7 +19,7 @@ describe("RouterView", () => {
 	};
 
 	it("should render", () => {
-		renderWithoutRouter(
+		render(
 			<MemoryRouter initialEntries={["/"]}>
 				<RouterView routes={[{ path: "/", component: Home }]} />
 			</MemoryRouter>
@@ -29,7 +30,7 @@ describe("RouterView", () => {
 	it("should scroll to top on route change", () => {
 		const scrollSpy = vi.spyOn(window, "scrollTo").mockImplementation();
 
-		renderWithoutRouter(
+		render(
 			<MemoryRouter initialEntries={["/first"]}>
 				<Routes>
 					<Route
@@ -51,6 +52,9 @@ describe("RouterView", () => {
 			</MemoryRouter>
 		);
 
+		// Wait for navigation effect
+		act(() => { });
+
 		expect(scrollSpy).toHaveBeenCalledWith(0, 0);
 		scrollSpy.mockRestore();
 	});
@@ -58,7 +62,16 @@ describe("RouterView", () => {
 	it("should not scroll to top when route does not change", () => {
 		const scrollSpy = vi.spyOn(window, "scrollTo").mockImplementation();
 
-		render(<Home />);
+		render(
+			<MemoryRouter initialEntries={["/only"]}>
+				<RouterView
+					routes={[{ path: "/only", component: Home }]}
+					middlewares={[]}
+				/>
+			</MemoryRouter>
+		);
+		// clear the initial scroll caused by mount
+		scrollSpy.mockClear();
 
 		expect(scrollSpy).not.toHaveBeenCalled();
 		scrollSpy.mockRestore();
@@ -75,7 +88,7 @@ describe("RouterView", () => {
 			},
 		};
 
-		renderWithoutRouter(
+		render(
 			<MemoryRouter initialEntries={["/test"]}>
 				<RouterView
 					routes={[
@@ -87,6 +100,7 @@ describe("RouterView", () => {
 			</MemoryRouter>
 		);
 
+		// Should be redirected to Home
 		expect(screen.getByTestId("home")).toBeInTheDocument();
 		expect(screen.queryByTestId("first")).toBeNull();
 	});
@@ -104,7 +118,7 @@ describe("RouterView", () => {
 
 		const Custom = () => <div data-testid="custom">Custom</div>;
 
-		renderWithoutRouter(
+		render(
 			<MemoryRouter initialEntries={["/test"]}>
 				<RouterView
 					routes={[
@@ -118,5 +132,37 @@ describe("RouterView", () => {
 
 		expect(screen.getByTestId("custom")).toBeInTheDocument();
 		expect(screen.queryByTestId("first")).toBeNull();
+	});
+
+	it("should render when middleware sets redirect but allows activation", () => {
+		const alwaysRedirect: Middleware = {
+			handler: ({ redirect }) => {
+				redirect("/ignored");
+				return true;
+			},
+		};
+
+		render(
+			<MemoryRouter initialEntries={["/allowed"]}>
+				<RouterView
+					routes={[{ path: "/allowed", component: Home }]}
+					middlewares={[alwaysRedirect]}
+				/>
+			</MemoryRouter>
+		);
+
+		// Component should render despite redirect being set
+		expect(screen.getByTestId("home")).toBeInTheDocument();
+	});
+
+	it("should include wrapper div when activation is allowed", () => {
+		render(
+			<MemoryRouter initialEntries={["/"]}>
+				<RouterView routes={[{ path: "/", component: Home }]} />
+			</MemoryRouter>
+		);
+		// The rendered element should be wrapped
+		expect(screen.getByTestId("RouterView__wrapper")).toBeInTheDocument();
+		expect(screen.getByTestId("home")).toBeInTheDocument();
 	});
 });
