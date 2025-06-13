@@ -1,8 +1,6 @@
 import { Contracts, ReadOnlyWallet } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
-import { createHashHistory } from "history";
 import React, { useEffect } from "react";
-import { Route } from "react-router-dom";
 
 import { Votes } from "./Votes";
 import { useProfileStatusWatcher } from "@/app/hooks";
@@ -18,8 +16,7 @@ import {
 } from "@/utils/testing-library";
 import { useConfiguration } from "@/app/contexts";
 import { expect } from "vitest";
-
-const history = createHashHistory();
+import { ProfileSetting } from "@/app/lib/profiles/profile.enum.contract";
 
 let emptyProfile: Contracts.IProfile;
 let profile: Contracts.IProfile;
@@ -40,18 +37,7 @@ const Wrapper = ({ children }) => {
 	return children;
 };
 
-const renderPage = (route: string, routePath = "/profiles/:profileId/wallets/:walletId/votes") =>
-	render(
-		<Route path={routePath}>
-			<Wrapper>
-				<Votes />
-			</Wrapper>
-		</Route>,
-		{
-			history,
-			route: route,
-		},
-	);
+const renderPage = (route: string) => render(<Wrapper> <Votes /> </Wrapper>, { route });
 
 const firstVoteButtonID = "ValidatorRow__toggle-0";
 
@@ -81,10 +67,11 @@ describe("Votes", () => {
 
 	it("should render", async () => {
 		const route = `/profiles/${profile.id()}/wallets/${wallet.id()}/votes`;
-		const { asFragment, container } = renderPage(route);
+		const { asFragment } = renderPage(route);
 
-		expect(container).toBeInTheDocument();
-		expect(screen.getByTestId("ValidatorsTable")).toBeInTheDocument();
+		await waitFor(() => {
+			expect(screen.getByTestId("ValidatorsTable")).toBeInTheDocument();
+		})
 
 		await expect(screen.findByTestId(firstVoteButtonID)).resolves.toBeVisible();
 
@@ -319,24 +306,25 @@ describe("Votes", () => {
 		const currentWallet = profile.wallets().findById(walletID);
 		const route = `/profiles/${profile.id()}/wallets/${currentWallet.id()}/votes`;
 
-		const walletRestoreMock = vi.spyOn(profile.wallets().first(), "hasSyncedWithNetwork").mockReturnValue(false);
-
-		const history = createHashHistory();
-		navigate(route);
+		const walletRestoreMock = vi.spyOn(currentWallet, "hasSyncedWithNetwork").mockReturnValue(false);
 
 		const onProfileSyncError = vi.fn();
+
 		const Component = () => {
-			useProfileStatusWatcher({ env, onProfileSyncError, profile });
-			return (
-				<Route path="/profiles/:profileId/wallets/:walletId/votes">
-					<Votes />
-				</Route>
-			);
+			const { setConfiguration } = useConfiguration()
+
+			useEffect(() => {
+				setConfiguration(profile.id(), { profileHasSyncedOnce: true, profileIsSyncing: false });
+			}, [profile])
+
+			useProfileStatusWatcher({ onProfileSyncError, profile });
+			return <Votes />;
 		};
+
 		const { asFragment } = render(<Component />, {
-			history,
-			route: route,
+			route,
 			withProfileSynchronizer: true,
+			withProviders: true
 		});
 
 		await expect(screen.findByTestId("ValidatorsTable")).resolves.toBeVisible();

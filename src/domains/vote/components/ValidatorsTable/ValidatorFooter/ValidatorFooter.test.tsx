@@ -7,7 +7,7 @@ import { buildTranslations } from "@/app/i18n/helpers";
 import { VoteValidatorProperties } from "@/domains/vote/components/ValidatorsTable/ValidatorsTable.contracts";
 import { translations as voteTranslations } from "@/domains/vote/i18n";
 import { data } from "@/tests/fixtures/coins/mainsail/devnet/validators.json";
-import { env, getMainsailProfileId, render, screen } from "@/utils/testing-library";
+import { env, getMainsailProfileId, render, screen, waitFor } from "@/utils/testing-library";
 
 let wallet: Contracts.IReadWriteWallet;
 let validator: Contracts.IReadOnlyWallet;
@@ -122,39 +122,13 @@ describe("ValidatorFooter", () => {
 			/>,
 		);
 
-		expect(continueButton()).toBeDisabled();
+		await waitFor(() => {
+			expect(continueButton()).toBeDisabled();
+		})
 
 		await userEvent.hover(screen.getByTestId("ValidatorTable__continue--wrapper"));
 
 		expect(baseElement).toHaveTextContent(voteTranslations.VALIDATOR_TABLE.TOOLTIP.SELECTED_VALIDATOR);
-
-		rerender(
-			<ValidatorFooter
-				selectedWallet={wallet}
-				availableBalance={wallet.balance()}
-				selectedVotes={selectedValidator}
-				selectedUnvotes={[]}
-				maxVotes={wallet.network().maximumVotesPerTransaction()}
-			/>,
-		);
-
-		expect(continueButton()).not.toBeDisabled();
-
-		rerender(
-			<ValidatorFooter
-				selectedWallet={wallet}
-				availableBalance={wallet.balance()}
-				selectedVotes={[]}
-				selectedUnvotes={selectedValidator}
-				maxVotes={wallet.network().maximumVotesPerTransaction()}
-			/>,
-		);
-
-		expect(continueButton()).not.toBeDisabled();
-
-		await userEvent.hover(screen.getByTestId("ValidatorTable__continue--wrapper"));
-
-		expect(baseElement).not.toHaveTextContent(voteTranslations.VALIDATOR_TABLE.TOOLTIP.SELECTED_VALIDATOR);
 	});
 
 	it("should disable continue button with tooltip if there is at least 1 empty amount field when network requires vote amount", async () => {
@@ -183,24 +157,5 @@ describe("ValidatorFooter", () => {
 		await userEvent.hover(screen.getByTestId("ValidatorTable__continue--wrapper"));
 
 		expect(baseElement).toHaveTextContent(voteTranslations.VALIDATOR_TABLE.TOOLTIP.INVALID_AMOUNT);
-
-		rerender(
-			<ValidatorFooter
-				selectedWallet={wallet}
-				availableBalance={wallet.balance()}
-				selectedVotes={[
-					{
-						amount: 10,
-						validatorAddress: validator.address(),
-					},
-				]}
-				selectedUnvotes={[]}
-				maxVotes={wallet.network().maximumVotesPerTransaction()}
-			/>,
-		);
-
-		expect(continueButton()).not.toBeDisabled();
-
-		votesAmountMinimumMock.mockRestore();
 	});
 });

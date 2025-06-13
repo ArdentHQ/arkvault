@@ -54,9 +54,7 @@ describe("useWalletFromQueryParameters hook", () => {
 	};
 
 	it("should not find vote & unvote validators from url", async () => {
-		navigate("/");
-
-		render(<TestComponent />, { history, withProviders: false });
+		render(<TestComponent />, { withProviders: false });
 
 		await expect(screen.findByTestId("isLoading-false")).resolves.toBeVisible();
 
@@ -65,18 +63,14 @@ describe("useWalletFromQueryParameters hook", () => {
 	});
 
 	it("should find vote validator from url", () => {
-		navigate(`/?vote=${validatorAddresses[0]},2&nethash=${nethash}`);
-
-		render(<TestComponent />, { history, withProviders: false });
+		render(<TestComponent />, { route: `/?vote=${validatorAddresses[0]},2&nethash=${nethash}`, withProviders: false });
 
 		expect(screen.getByTestId("votes-1")).toBeInTheDocument();
 		expect(screen.getByTestId("unvotes-0")).toBeInTheDocument();
 	});
 
 	it("should find unvote validator from url", () => {
-		navigate(`/?unvote=${validatorAddresses[0]},2&nethash=${nethash}`);
-
-		render(<TestComponent />, { history, withProviders: false });
+		render(<TestComponent />, { route: `/?unvote=${validatorAddresses[0]},2&nethash=${nethash}`, withProviders: false });
 
 		expect(screen.getByTestId("votes-0")).toBeInTheDocument();
 		expect(screen.getByTestId("unvotes-1")).toBeInTheDocument();

@@ -13,7 +13,7 @@ import { I18nextProvider, useTranslation } from "react-i18next";
 import { LayoutBreakpoint } from "@/types";
 import { Mainsail } from "@/app/lib/mainsail";
 import MainsailDefaultManifest from "@/tests/fixtures/coins/mainsail/manifest/default.json";
-import React from "react";
+import React, { ReactNode } from "react";
 import { Context as ResponsiveContext } from "react-responsive";
 import { StubStorage } from "@/tests/mocks";
 import TestingPasswords from "@/tests/fixtures/env/testing-passwords.json";
@@ -164,10 +164,20 @@ const renderWithRouter = (
 		return withProviders ? <WithProviders>{content}</WithProviders> : content;
 	};
 
+	const result = render(<Wrapper>{component}</Wrapper>)
+
 	return {
-		...render(<Wrapper>{component}</Wrapper>),
+		...result,
 		navigate: (to: string) => router.navigate(to),
 		router,
+		rerender: (children?: ReactNode) => {
+			if (withProviders) {
+				return result.rerender(<WithProviders><Wrapper>{children ?? component}</Wrapper></WithProviders>)
+			}
+
+			return result.rerender(<Wrapper>{children ?? component}</Wrapper>)
+
+		}
 	};
 };
 

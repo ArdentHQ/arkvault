@@ -3,7 +3,6 @@
 import { Contracts, ReadOnlyWallet } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
 import React, { useEffect } from "react";
-import { Route } from "react-router-dom";
 
 import { Context as ResponsiveContext } from "react-responsive";
 import {
@@ -35,11 +34,9 @@ const AddressWrapper = ({ children }) => {
 	}, []);
 
 	return (
-		<Route path="/profiles/:profileId/votes">
-			<table>
-				<tbody>{children}</tbody>
-			</table>
-		</Route>
+		<table>
+			<tbody>{children}</tbody>
+		</table>,
 	);
 };
 
@@ -310,24 +307,20 @@ describe("AddressRowMobile", () => {
 
 	// @TODO fix test when we are clear
 	it.skip("should redirect to wallet details page", async () => {
-		const history = createHashHistory();
 
-		render(
+		const { router } = render(
 			<AddressWrapper>
 				<AddressRowMobile index={0} maxVotes={1} wallet={wallet} onSelect={vi.fn()} />
 			</AddressWrapper>,
 			{
-				history,
 				route: `/profiles/${profile.id()}/votes`,
 			},
 		);
 
-		const historySpy = vi.spyOn(history, "push");
-
 		const containerDiv = within(screen.getByRole("row")).getByRole("cell").querySelector("div") as HTMLDivElement;
 
 		await userEvent.click(containerDiv);
-		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
+		expect(router.state.location.pathname).toBe(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
 	});
 
 	it("should render when the maximum votes is greater than 1", () => {
