@@ -75,7 +75,7 @@ exports[`Label > should render danger color 1`] = `
 exports[`Label > should render neutral color 1`] = `
 <div>
   <div
-    class="inline-block font-semibold overflow-hidden no-ligatures px-1 border-2 rounded text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:text-theme-secondary-500 dark:bg-transparent dark:border-theme-secondary-800 text-base"
+    class="inline-block font-semibold overflow-hidden no-ligatures px-1 border-2 rounded text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:text-theme-secondary-500 dark:bg-transparent dark:border-theme-secondary-800 dim:text-theme-dim-200 dim:bg-theme-dim-950 dim:border-theme-dim-950 text-base"
   />
 </div>
 `;
