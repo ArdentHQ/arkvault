@@ -36,6 +36,7 @@ const expectHeading = async (text: string) => {
 };
 
 describe("SignMessage with ledger", () => {
+	let dashboardRoute: string | undefined
 	beforeAll(async () => {
 		profile = await env.profiles().create("Test");
 
@@ -53,9 +54,7 @@ describe("SignMessage with ledger", () => {
 	});
 
 	beforeEach(() => {
-		const dashboardUrl = `/profiles/${profile.id()}/dashboard`;
-
-		navigate(dashboardUrl);
+		dashboardRoute = `/profiles/${profile.id()}/dashboard`;
 	});
 
 	it("should display error step if user rejects", async () => {
@@ -78,11 +77,9 @@ describe("SignMessage with ledger", () => {
 		const onOpenChangeMock = vi.fn();
 
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<SignMessageSidePanel open={true} onOpenChange={onOpenChangeMock} onMountChange={vi.fn()} />,
-			</Route>,
+			<SignMessageSidePanel open={true} onOpenChange={onOpenChangeMock} onMountChange={vi.fn()} />,
 			{
-				history,
+				route: dashboardRoute
 			},
 		);
 

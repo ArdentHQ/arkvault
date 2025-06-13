@@ -1,14 +1,11 @@
 import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
-import { createHashHistory } from "history";
 import React from "react";
-import { Route } from "react-router-dom";
 
 import { translations as messageTranslations } from "@/domains/message/i18n";
 import { env, render, screen, waitFor, triggerMessageSignOnce, MAINSAIL_MNEMONICS } from "@/utils/testing-library";
 import { SignMessageSidePanel } from "./SignMessageSidePanel";
-
-const history = createHashHistory();
+import { DashboardRoutes } from "@/domains/dashboard/routing";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
@@ -27,6 +24,7 @@ const expectHeading = async (text: string) => {
 };
 
 describe("SignMessage with encrypted mnemonic", () => {
+	let dashboardRoute: string | undefined
 	beforeAll(async () => {
 		profile = await env.profiles().create("Example");
 
@@ -38,9 +36,7 @@ describe("SignMessage with encrypted mnemonic", () => {
 	});
 
 	beforeEach(() => {
-		const dashboardUrl = `/profiles/${profile.id()}/dashboard`;
-
-		navigate(dashboardUrl);
+		dashboardRoute = `/profiles/${profile.id()}/dashboard`;
 	});
 
 	it(
@@ -56,11 +52,9 @@ describe("SignMessage with encrypted mnemonic", () => {
 			profile.wallets().push(encryptedWallet);
 
 			render(
-				<Route path="/profiles/:profileId/dashboard">
-					<SignMessageSidePanel open={true} onOpenChange={vi.fn()} onMountChange={vi.fn()} />,
-				</Route>,
+				<SignMessageSidePanel open={true} onOpenChange={vi.fn()} onMountChange={vi.fn()} />,
 				{
-					history,
+					route: dashboardRoute
 				},
 			);
 

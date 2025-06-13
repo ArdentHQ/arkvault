@@ -3,7 +3,7 @@ export function getUrlParameter(pathname: string, index: number): string {
 	const part = parts.at(index)
 	if (!part) {
 		throw new Error(
-			`Parameter is missing at ${index} in path "${pathname}".`
+			`Parameter at index ${index} doesn't exist in "${pathname}".`
 		);
 	}
 	return part;

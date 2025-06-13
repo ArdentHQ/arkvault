@@ -1,15 +1,11 @@
 import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
-import { createHashHistory } from "history";
 import React from "react";
-import { Route } from "react-router-dom";
 
 import { SignMessageSidePanel } from "./SignMessageSidePanel";
 import { translations as messageTranslations } from "@/domains/message/i18n";
 import { env, render, screen, waitFor, triggerMessageSignOnce, MAINSAIL_MNEMONICS } from "@/utils/testing-library";
 import { afterAll, expect, vi } from "vitest";
-
-const history = createHashHistory();
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
@@ -56,6 +52,8 @@ vi.stubGlobal(
 );
 
 describe("SignMessageSidePanel", () => {
+	let dashboardRoute: string | undefined;
+
 	beforeAll(async () => {
 		profile = await env.profiles().create("Example");
 
@@ -79,18 +77,15 @@ describe("SignMessageSidePanel", () => {
 
 	describe("Sign with Wallet", () => {
 		beforeEach(() => {
-			const dashboardUrl = `/profiles/${profile.id()}/dashboard`;
+			dashboardRoute = `/profiles/${profile.id()}/dashboard`;
 
-			navigate(dashboardUrl);
 		});
 
 		it("should render", async () => {
 			const { asFragment } = render(
-				<Route path="/profiles/:profileId/dashboard">
-					<SignMessageSidePanel open={true} onOpenChange={vi.fn()} onMountChange={vi.fn()} />,
-				</Route>,
+				<SignMessageSidePanel open={true} onOpenChange={vi.fn()} onMountChange={vi.fn()} />,
 				{
-					history,
+					route: dashboardRoute
 				},
 			);
 
@@ -112,11 +107,9 @@ describe("SignMessageSidePanel", () => {
 			};
 
 			render(
-				<Route path="/profiles/:profileId/dashboard">
-					<SignMessageSidePanel open={true} onOpenChange={vi.fn()} onMountChange={vi.fn()} />,
-				</Route>,
+				<SignMessageSidePanel open={true} onOpenChange={vi.fn()} onMountChange={vi.fn()} />,
 				{
-					history,
+					route: dashboardRoute
 				},
 			);
 
@@ -174,11 +167,9 @@ describe("SignMessageSidePanel", () => {
 			profile.wallets().push(walletWithSecret);
 
 			render(
-				<Route path="/profiles/:profileId/dashboard">
-					<SignMessageSidePanel open={true} onOpenChange={vi.fn()} onMountChange={vi.fn()} />,
-				</Route>,
+				<SignMessageSidePanel open={true} onOpenChange={vi.fn()} onMountChange={vi.fn()} />,
 				{
-					history,
+					route: dashboardRoute
 				},
 			);
 			await selectNthAddress(2);
@@ -209,11 +200,9 @@ describe("SignMessageSidePanel", () => {
 			profile.wallets().push(walletWithSecret);
 
 			render(
-				<Route path="/profiles/:profileId/dashboard">
-					<SignMessageSidePanel open={true} onOpenChange={vi.fn()} onMountChange={vi.fn()} />,
-				</Route>,
+				<SignMessageSidePanel open={true} onOpenChange={vi.fn()} onMountChange={vi.fn()} />,
 				{
-					history,
+					route: dashboardRoute
 				},
 			);
 
