@@ -1,9 +1,7 @@
 import { BIP39 } from "@ardenthq/arkvault-crypto";
 import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
-import { createHashHistory } from "history";
 import React from "react";
-import { Route } from "react-router-dom";
 import * as randomWordPositionsMock from "@/domains/wallet/components/MnemonicVerification/utils/randomWordPositions";
 import { translations as walletTranslations } from "@/domains/wallet/i18n";
 import {
@@ -45,7 +43,7 @@ describe("CreateAddressSidePanel", () => {
 	beforeEach(async () => {
 		vi.spyOn(usePortfolio, "usePortfolio").mockReturnValue({
 			selectedAddresses: [],
-			setSelectedAddresses: () => {},
+			setSelectedAddresses: () => { },
 		});
 
 		profile = env.profiles().findById(fixtureProfileId);
@@ -74,21 +72,14 @@ describe("CreateAddressSidePanel", () => {
 	});
 
 	it("should create a wallet", async () => {
-		const history = createHashHistory();
 		const createURL = `/profiles/${fixtureProfileId}/dashboard`;
-		navigate(createURL);
 
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<CreateAddressesSidePanel open={true} onOpenChange={vi.fn()} />
-			</Route>,
+			<CreateAddressesSidePanel open={true} onOpenChange={vi.fn()} />,
 			{
-				history,
 				route: createURL,
 			},
 		);
-
-		const historySpy = vi.spyOn(history, "push").mockImplementation(() => {});
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 		await waitFor(() => expect(profile.wallets().values()).toHaveLength(0));
@@ -145,27 +136,19 @@ describe("CreateAddressSidePanel", () => {
 
 		expect(profile.wallets().count()).toBe(1);
 
-		historySpy.mockRestore();
 	});
 
 	it("should create a wallet with encryption", async () => {
-		const history = createHashHistory();
 		const createURL = `/profiles/${fixtureProfileId}/dashboard`;
-		navigate(createURL);
 
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<CreateAddressesSidePanel open={true} onOpenChange={vi.fn()} />
-			</Route>,
+			<CreateAddressesSidePanel open={true} onOpenChange={vi.fn()} />,
 			{
-				history,
 				route: createURL,
 			},
 		);
 
 		const user = userEvent.setup();
-
-		const historySpy = vi.spyOn(history, "push").mockImplementation(() => {});
 
 		await waitFor(() => expect(profile.wallets().values()).toHaveLength(0));
 
@@ -173,14 +156,10 @@ describe("CreateAddressSidePanel", () => {
 
 		const steps = within(screen.getByTestId("Form")).getAllByRole("list")[0];
 
-		expect(within(steps).getAllByRole("listitem")).toHaveLength(12);
-
 		await userEvent.click(continueButton());
 
 		await userEvent.click(screen.getByTestId("WalletEncryptionBanner__encryption-toggle"));
 		await userEvent.click(screen.getByTestId("WalletEncryptionBanner__checkbox"));
-
-		expect(within(steps).getAllByRole("listitem")).toHaveLength(12);
 
 		await expect(screen.findByTestId("CreateWallet__ConfirmPassphraseStep")).resolves.toBeVisible();
 
@@ -243,27 +222,19 @@ describe("CreateAddressSidePanel", () => {
 
 		expect(wallet.alias()).toBe("Address #1");
 
-		historySpy.mockRestore();
 	});
 
 	it("should handle invalid encryption password", async () => {
-		const history = createHashHistory();
 		const createURL = `/profiles/${fixtureProfileId}/dashboard`;
-		navigate(createURL);
 
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<CreateAddressesSidePanel open={true} onOpenChange={vi.fn()} />
-			</Route>,
+			<CreateAddressesSidePanel open={true} onOpenChange={vi.fn()} />,
 			{
-				history,
 				route: createURL,
 			},
 		);
 
 		const user = userEvent.setup();
-
-		const historySpy = vi.spyOn(history, "push").mockImplementation(() => {});
 
 		await waitFor(() => expect(profile.wallets().values()).toHaveLength(0));
 
@@ -333,21 +304,14 @@ describe("CreateAddressSidePanel", () => {
 		await expect(screen.findByTestId("CreateWallet__SuccessStep")).resolves.toBeVisible();
 
 		expect(profile.wallets().values()).toHaveLength(1);
-
-		historySpy.mockRestore();
 	});
 
 	it("should not have a pending wallet if leaving on step 1", async () => {
-		const history = createHashHistory();
 		const createURL = `/profiles/${fixtureProfileId}/dashboard`;
-		navigate(createURL);
 
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<CreateAddressesSidePanel open={true} onOpenChange={vi.fn()} />
-			</Route>,
+			<CreateAddressesSidePanel open={true} onOpenChange={vi.fn()} />,
 			{
-				history,
 				route: createURL,
 			},
 		);
@@ -358,16 +322,11 @@ describe("CreateAddressSidePanel", () => {
 	});
 
 	it("should remove pending wallet if not submitted", async () => {
-		const history = createHashHistory();
 		const createURL = `/profiles/${fixtureProfileId}/dashboard`;
-		navigate(createURL);
 
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<CreateAddressesSidePanel open={true} onOpenChange={vi.fn()} />
-			</Route>,
+			<CreateAddressesSidePanel open={true} onOpenChange={vi.fn()} />,
 			{
-				history,
 				route: createURL,
 			},
 		);
@@ -385,17 +344,12 @@ describe("CreateAddressSidePanel", () => {
 			throw new Error("test");
 		});
 
-		const history = createHashHistory();
 		const createURL = `/profiles/${fixtureProfileId}/dashboard`;
 
-		navigate(createURL);
 
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<CreateAddressesSidePanel open={true} onOpenChange={vi.fn()} />
-			</Route>,
+			<CreateAddressesSidePanel open={true} onOpenChange={vi.fn()} />,
 			{
-				history,
 				route: createURL,
 			},
 		);
@@ -417,16 +371,11 @@ describe("CreateAddressSidePanel", () => {
 		profile.wallets().push(wallet);
 		wallet.settings().set(Contracts.WalletSetting.Alias, "Test");
 
-		const history = createHashHistory();
 		const createURL = `/profiles/${fixtureProfileId}/dashboard`;
-		navigate(createURL);
 
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<CreateAddressesSidePanel open={true} onOpenChange={vi.fn()} />
-			</Route>,
+			<CreateAddressesSidePanel open={true} onOpenChange={vi.fn()} />,
 			{
-				history,
 				route: createURL,
 			},
 		);

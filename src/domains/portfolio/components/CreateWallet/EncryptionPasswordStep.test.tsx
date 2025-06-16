@@ -1,7 +1,6 @@
 import { BIP39 } from "@ardenthq/arkvault-crypto";
 import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
-import { createHashHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
 
@@ -31,7 +30,7 @@ describe("EncryptionPasswordStep", () => {
 	beforeEach(() => {
 		vi.spyOn(usePortfolio, "usePortfolio").mockReturnValue({
 			selectedAddresses: [],
-			setSelectedAddresses: () => {},
+			setSelectedAddresses: () => { },
 		});
 		profile = env.profiles().findById(fixtureProfileId);
 
@@ -52,19 +51,14 @@ describe("EncryptionPasswordStep", () => {
 	});
 
 	it("should create a wallet and use encryption password", async () => {
-		const history = createHashHistory();
 		const createURL = `/profiles/${fixtureProfileId}`;
-		navigate(createURL);
 
 		const onOpenChangeMock = vi.fn();
 		const user = userEvent.setup();
 
 		render(
-			<Route path="/profiles/:profileId">
-				<CreateAddressesSidePanel open={true} onOpenChange={onOpenChangeMock} />
-			</Route>,
+			<CreateAddressesSidePanel open={true} onOpenChange={onOpenChangeMock} />,
 			{
-				history,
 				route: createURL,
 			},
 		);
@@ -146,16 +140,11 @@ describe("EncryptionPasswordStep", () => {
 	});
 
 	it("should fail creating a wallet with encryption password", async () => {
-		const history = createHashHistory();
 		const createURL = `/profiles/${fixtureProfileId}`;
-		navigate(createURL);
 
 		render(
-			<Route path="/profiles/:profileId">
-				<CreateAddressesSidePanel open={true} onOpenChange={vi.fn()} />
-			</Route>,
+			<CreateAddressesSidePanel open={true} onOpenChange={vi.fn()} />,
 			{
-				history,
 				route: createURL,
 			},
 		);

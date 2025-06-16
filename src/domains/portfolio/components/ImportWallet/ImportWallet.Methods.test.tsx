@@ -3,7 +3,6 @@
 import { Contracts, Wallet } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
-import { Route } from "react-router-dom";
 
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import {
@@ -49,7 +48,7 @@ describe("ImportAddress Methods", () => {
 	beforeEach(async () => {
 		vi.spyOn(usePortfolio, "usePortfolio").mockReturnValue({
 			selectedAddresses: [],
-			setSelectedAddresses: () => {},
+			setSelectedAddresses: () => { },
 		});
 
 		profile = env.profiles().findById(fixtureProfileId);
@@ -71,9 +70,7 @@ describe("ImportAddress Methods", () => {
 
 	it("should import by address", async () => {
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
-			</Route>,
+			<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />,
 			{
 				route: route,
 			},
@@ -108,9 +105,7 @@ describe("ImportAddress Methods", () => {
 
 	it("should import by public key", async () => {
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
-			</Route>,
+			<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />,
 			{
 				route: route,
 			},
@@ -147,9 +142,7 @@ describe("ImportAddress Methods", () => {
 
 	it("should not allow importing from an invalid public key", async () => {
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
-			</Route>,
+			<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />,
 			{
 				route: route,
 			},
@@ -175,9 +168,7 @@ describe("ImportAddress Methods", () => {
 
 	it("should import by secret", async () => {
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
-			</Route>,
+			<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />,
 			{
 				route: route,
 			},
@@ -214,9 +205,7 @@ describe("ImportAddress Methods", () => {
 
 	it("should import by secret with encryption", async () => {
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
-			</Route>,
+			<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />,
 			{
 				route: route,
 			},
@@ -283,9 +272,7 @@ describe("ImportAddress Methods", () => {
 	// @TODO enable it when we have 2nd signature implemented
 	// it("should import by secret with second signature and use password to encrypt both", async () => {
 	// 	render(
-	// 		<Route path="/profiles/:profileId/dashboard">
-	// 			<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
-	// 		</Route>,
+	// 			<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />,
 	// 		{
 	// 			route: route,
 	// 		},
@@ -343,9 +330,7 @@ describe("ImportAddress Methods", () => {
 
 	it("forgets the imported wallet if back from encrypted password step", async () => {
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
-			</Route>,
+			<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />,
 			{
 				route: route,
 			},
@@ -378,7 +363,7 @@ describe("ImportAddress Methods", () => {
 			expect(screen.getByTestId("EncryptPassword")).toBeInTheDocument();
 		});
 
-		const profileForgetWalletSpy = vi.spyOn(profile.wallets(), "forget").mockImplementation(() => {});
+		const profileForgetWalletSpy = vi.spyOn(profile.wallets(), "forget").mockImplementation(() => { });
 
 		await userEvent.click(backButton());
 
@@ -389,9 +374,7 @@ describe("ImportAddress Methods", () => {
 
 	it("should validate public key doesnt exist", async () => {
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
-			</Route>,
+			<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />,
 			{
 				route: route,
 			},

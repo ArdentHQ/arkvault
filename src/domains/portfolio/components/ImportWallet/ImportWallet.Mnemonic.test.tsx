@@ -3,7 +3,6 @@
 import { Contracts, Wallet } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
-import { Route } from "react-router-dom";
 
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import {
@@ -47,7 +46,7 @@ describe("ImportAddress", () => {
 	beforeEach(async () => {
 		vi.spyOn(usePortfolio, "usePortfolio").mockReturnValue({
 			selectedAddresses: [],
-			setSelectedAddresses: () => {},
+			setSelectedAddresses: () => { },
 		});
 
 		profile = env.profiles().findById(fixtureProfileId);
@@ -69,9 +68,7 @@ describe("ImportAddress", () => {
 
 	it("should import by mnemonic", async () => {
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
-			</Route>,
+			<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />,
 			{
 				route: route,
 			},
@@ -122,9 +119,7 @@ describe("ImportAddress", () => {
 
 	it("should import by mnemonic and use encryption password", async () => {
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
-			</Route>,
+			<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />,
 			{
 				route: route,
 			},
@@ -176,9 +171,7 @@ describe("ImportAddress", () => {
 
 	it("should disable the encryption option when selecting a methods without encryption", async () => {
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
-			</Route>,
+			<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />,
 			{
 				route: route,
 			},
@@ -222,9 +215,7 @@ describe("ImportAddress", () => {
 	// @TODO enable it when we have 2nd signature implemented
 	// it("should import by mnemonic with second signature and use password to encrypt both", async () => {
 	// 	render(
-	// 		<Route path="/profiles/:profileId/dashboard">
-	// 			<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
-	// 		</Route>,
+	// 			<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />,
 	// 		{
 	// 			route: route,
 	// 		},
@@ -280,9 +271,7 @@ describe("ImportAddress", () => {
 	// 	}
 	//
 	// 	render(
-	// 		<Route path="/profiles/:profileId/dashboard">
-	// 			<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
-	// 		</Route>,
+	// 			<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />,
 	// 		{
 	// 			route: route,
 	// 			withProviders: true,

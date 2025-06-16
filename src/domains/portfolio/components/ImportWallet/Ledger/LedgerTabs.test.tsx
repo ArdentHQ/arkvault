@@ -2,7 +2,6 @@ import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
 import React, { useEffect } from "react";
 import { FormProvider, useForm } from "react-hook-form";
-import { Route } from "react-router-dom";
 
 import { LedgerTabs } from "./LedgerTabs";
 import { minVersionList } from "@/app/contexts";
@@ -31,7 +30,7 @@ const nextSelector = () => screen.queryByTestId("ImportWallet__continue-button")
 const backSelector = () => screen.queryByTestId("ImportWallet__back-button");
 const accessorErrorMessage = "Invalid coin accessor structure";
 
-let resetProfileNetworksMock = () => {};
+let resetProfileNetworksMock = () => { };
 
 describe("LedgerTabs", () => {
 	let profile: Contracts.IProfile;
@@ -45,7 +44,6 @@ describe("LedgerTabs", () => {
 	const setupLedgerWallet = async () => {
 		ledgerWallet = await profile.walletFactory().fromAddressWithDerivationPath({
 			address: "DSxxu1wGEdUuyE5K9WuvVCEJp6zibBUoyt",
-			coin: "ARK",
 			network: "ark.devnet",
 			path: "m/44'/1'/0'/0/0",
 		});
@@ -162,11 +160,11 @@ describe("LedgerTabs", () => {
 			resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 			if (typeof resetProfileNetworksMock !== "function") {
 				console.warn("mockProfileWithPublicAndTestNetworks did not return a function");
-				resetProfileNetworksMock = () => {};
+				resetProfileNetworksMock = () => { };
 			}
 		} catch (error) {
 			console.error("Failed to set up resetProfileNetworksMock:", error);
-			resetProfileNetworksMock = () => {};
+			resetProfileNetworksMock = () => { };
 		}
 	});
 
@@ -202,9 +200,7 @@ describe("LedgerTabs", () => {
 	});
 
 	const BaseComponent = ({ activeIndex }: { activeIndex: number }) => (
-		<Route path="/profiles/:profileId">
-			<LedgerTabs activeIndex={activeIndex} onClickEditWalletName={onClickEditWalletName} />
-		</Route>
+		<LedgerTabs activeIndex={activeIndex} onClickEditWalletName={onClickEditWalletName} />
 	);
 
 	const Component = ({ activeIndex }: { activeIndex: number }) => {
@@ -263,7 +259,7 @@ describe("LedgerTabs", () => {
 
 		const ledgerTransportMock = mockNanoXTransport();
 
-		await mockLedgerObj.scan({ onProgress: () => {} });
+		await mockLedgerObj.scan({ onProgress: () => { } });
 
 		render(<Component activeIndex={2} />, {
 			route: `/profiles/${profile.id()}`,
@@ -414,7 +410,7 @@ describe("LedgerTabs", () => {
 		};
 
 		const ledgerTransportMock = mockNanoXTransport();
-		const { container, history } = render(<FormComponent />, {
+		const { container, router } = render(<FormComponent />, {
 			route: `/profiles/${profile.id()}`,
 		});
 
@@ -443,21 +439,18 @@ describe("LedgerTabs", () => {
 
 		expect(container).toMatchSnapshot();
 
-		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
 
 		try {
 			const backBtn = backSelector();
 			if (backBtn && !backBtn.disabled) {
 				await userEvent.click(backBtn);
 				await waitFor(() => {
-					expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/dashboard`);
+					expect(router.state.location.pathname).toBe(`/profiles/${profile.id()}/dashboard`);
 				});
 			}
 		} catch (error) {
 			console.error("Failed to interact with back button:", error);
 		}
-
-		historySpy.mockRestore();
 
 		const continueBtn = nextSelector();
 		if (continueBtn && !continueBtn.disabled) {
@@ -513,7 +506,7 @@ describe("LedgerTabs", () => {
 			getPublicKeySpy = vi.spyOn(ledgerObj, "getPublicKey");
 		}
 
-		const { history } = render(<Component activeIndex={3} />, {
+		const { router } = render(<Component activeIndex={3} />, {
 			route: `/profiles/${profile.id()}`,
 		});
 
@@ -544,15 +537,13 @@ describe("LedgerTabs", () => {
 
 			const finishButton = finishSelector() || screen.queryByTestId("ImportWallet__finish-button");
 			if (finishButton) {
-				const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
 
 				await userEvent.click(finishButton);
 
 				await waitFor(() => {
-					expect(historySpy).toHaveBeenCalled();
+					expect(router.state.location.pathname).toBe();
 				});
 
-				historySpy.mockRestore();
 			}
 		} catch (error) {
 			console.warn("LedgerImportStep not found or interaction failed:", error);
@@ -621,7 +612,7 @@ describe("LedgerTabs", () => {
 		);
 
 		try {
-			await mockLedgerObj.scan({ onProgress: () => {} });
+			await mockLedgerObj.scan({ onProgress: () => { } });
 		} catch {
 			console.log("Expected scan error triggered");
 		}
@@ -664,48 +655,16 @@ describe("LedgerTabs", () => {
 			resetProfileNetworksMock = mockProfileWithOnlyPublicNetworks(profile);
 			if (typeof resetProfileNetworksMock !== "function") {
 				console.warn("mockProfileWithOnlyPublicNetworks did not return a function");
-				resetProfileNetworksMock = () => {};
+				resetProfileNetworksMock = () => { };
 			}
 		} catch (error) {
 			console.error("Failed to set up mockProfileWithOnlyPublicNetworks:", error);
-			resetProfileNetworksMock = () => {};
-		}
-
-		let coinAccessor;
-		try {
-			coinAccessor = typeof wallet.coin === "function" ? wallet.coin() : wallet.coin;
-			if (!coinAccessor || !coinAccessor.ledger || typeof coinAccessor.ledger !== "function") {
-				throw new Error(accessorErrorMessage);
-			}
-		} catch {
-			coinAccessor = {
-				ledger: () => ({
-					getPublicKey: vi.fn().mockResolvedValue(""),
-					scan: vi.fn().mockImplementation(({ onProgress }) => {
-						onProgress && onProgress(wallet);
-						return { "m/44'/1'/0'/0/0": wallet.toData() };
-					}),
-				}),
-			};
-		}
-
-		const ledgerObj = coinAccessor.ledger();
-
-		let getPublicKeySpy;
-		if (typeof ledgerObj.getPublicKey === "function") {
-			getPublicKeySpy = vi
-				.spyOn(ledgerObj, "getPublicKey")
-				.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path) || ""));
-		} else {
-			ledgerObj.getPublicKey = vi
-				.fn()
-				.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path) || ""));
-			getPublicKeySpy = vi.spyOn(ledgerObj, "getPublicKey");
+			resetProfileNetworksMock = () => { };
 		}
 
 		const ledgerTransportMock = mockNanoXTransport();
 
-		const { history } = render(<Component activeIndex={1} />, {
+		const { router } = render(<Component activeIndex={1} />, {
 			route: `/profiles/${profile.id()}`,
 		});
 
@@ -716,15 +675,16 @@ describe("LedgerTabs", () => {
 		await waitFor(() => {
 			expect(
 				screen.getByTestId("LedgerConnectionStep") ||
-					history.location.pathname === `/profiles/${profile.id()}/dashboard`,
+				router.state.location.pathname === `/profiles/${profile.id()}/dashboard`,
 			).toBeInTheDocument();
 		});
 
-		getPublicKeySpy.mockRestore();
 		ledgerTransportMock.mockRestore();
 	});
 
 	it("should render finish step multiple", async () => {
+		mockNanoXTransport();
+
 		const mockWallets = [
 			{
 				address: "DQh2wmdM8GksEx48rFrXCtJKsXz3bM6L6o",
@@ -736,34 +696,6 @@ describe("LedgerTabs", () => {
 			},
 		];
 
-		const mockLedgerObj = {
-			getExtendedPublicKey: vi.fn().mockResolvedValue(wallet.publicKey()!),
-			getPublicKey: vi.fn().mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path) || "")),
-			scan: vi.fn().mockImplementation(({ onProgress }) => {
-				for (const _w of mockWallets) {
-					onProgress && onProgress(wallet);
-				}
-				return {
-					"m/44'/1'/0'/0/0": wallet.toData(),
-					"m/44'/1'/0'/0/1": wallet.toData(),
-				};
-			}),
-		};
-
-		const mockCoinAccessor = {
-			__construct: vi.fn(),
-			ledger: () => mockLedgerObj,
-		};
-
-		let originalCoin;
-		if (typeof wallet.coin === "function") {
-			originalCoin = wallet.coin;
-			wallet.coin = vi.fn().mockReturnValue(mockCoinAccessor);
-		} else {
-			originalCoin = wallet.coin;
-			wallet.coin = mockCoinAccessor;
-		}
-
 		const scannerMock = vi.spyOn(scanner, "scannerReducer").mockReturnValue({
 			selected: ["m/44'/1'/0'/0/0", "m/44'/1'/0'/0/1"],
 			wallets: mockWallets,
@@ -773,7 +705,7 @@ describe("LedgerTabs", () => {
 
 		const ledgerTransportMock = mockNanoXTransport();
 
-		const { history } = render(<Component activeIndex={3} />, {
+		const { router, navigate } = render(<Component activeIndex={3} />, {
 			route: `/profiles/${profile.id()}`,
 		});
 
@@ -783,8 +715,6 @@ describe("LedgerTabs", () => {
 			},
 			{ timeout: 3000 },
 		);
-
-		await mockLedgerObj.scan({ onProgress: () => {} });
 
 		const continueButton = nextSelector();
 		if (continueButton && !continueButton.disabled) {
@@ -799,7 +729,7 @@ describe("LedgerTabs", () => {
 			() => {
 				const condition =
 					screen.queryByTestId("LedgerImportStep") !== null ||
-					history.location.pathname.includes("/dashboard");
+					router.state.location.pathname.includes("/dashboard");
 				expect(condition).toBeTruthy();
 			},
 			{ timeout: 3000 },
@@ -807,31 +737,19 @@ describe("LedgerTabs", () => {
 
 		scannerMock.mockRestore();
 
-		if (originalCoin) {
-			wallet.coin = originalCoin;
-		}
-
 		ledgerTransportMock.mockRestore();
 	});
 
 	it("redirects user to dashboard if device not available", async () => {
-		let coinAccessor;
-		try {
-			coinAccessor = typeof wallet.coin === "function" ? wallet.coin() : wallet.coin;
-			if (!coinAccessor || !coinAccessor.ledger || typeof coinAccessor.ledger !== "function") {
-				throw new Error(accessorErrorMessage);
-			}
-		} catch {
-			coinAccessor = {
-				ledger: () => ({
-					getPublicKey: vi.fn().mockResolvedValue(""),
-					scan: vi.fn().mockImplementation(({ onProgress }) => {
-						onProgress && onProgress(wallet);
-						return { "m/44'/1'/0'/0/0": wallet.toData() };
-					}),
+		const coinAccessor = {
+			ledger: () => ({
+				getPublicKey: vi.fn().mockResolvedValue(""),
+				scan: vi.fn().mockImplementation(({ onProgress }) => {
+					onProgress && onProgress(wallet);
+					return { "m/44'/1'/0'/0/0": wallet.toData() };
 				}),
-			};
-		}
+			}),
+		};
 
 		const ledgerObj = coinAccessor.ledger();
 
@@ -847,12 +765,12 @@ describe("LedgerTabs", () => {
 
 		const ledgerTransportMock = mockLedgerTransportError("Access denied to use Ledger device");
 
-		const { history } = render(<Component activeIndex={1} />, {
+		const { router } = render(<Component activeIndex={1} />, {
 			route: `/profiles/${profile.id()}`,
 		});
 
 		await waitFor(() => {
-			expect(history.location.pathname).toBe(`/profiles/${profile.id()}/dashboard`);
+			expect(router.state.location.pathname).toBe(`/profiles/${profile.id()}/dashboard`);
 		});
 
 		getPublicKeySpy.mockRestore();
