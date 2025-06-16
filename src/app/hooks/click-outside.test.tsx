@@ -14,14 +14,14 @@ describe("ClickOutside Hook", () => {
 		expect(callback).not.toHaveBeenCalled();
 	});
 
-	it("should call callback if clicked outside target element", () => {
+	it("should call callback if clicked outside target element", async () => {
 		const div = document.createElement("div");
 		const reference = { current: div };
 
 		const callback = vi.fn();
 		clickOutsideHandler(reference, callback);
 
-		userEvent.click(document.body);
+		await userEvent.click(document.body);
 
 		expect(callback).toHaveBeenCalledWith();
 	});

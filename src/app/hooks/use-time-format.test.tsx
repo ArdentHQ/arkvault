@@ -4,7 +4,7 @@ import { createHashHistory } from "history";
 import React from "react";
 import { Router } from "react-router-dom";
 import { useTimeFormat } from "./use-time-format";
-import { env, getMainsailProfileId, WithProviders } from "@/utils/testing-library";
+import { env, getMainsailProfileId, Providers } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 
@@ -12,25 +12,25 @@ const history = createHashHistory();
 const dashboardURL = `/profiles/${getMainsailProfileId()}/dashboard`;
 
 const wrapper = ({ children }: any) => (
-	<WithProviders>
-		<Router history={history}>{children}</Router>
-	</WithProviders>
+	<Providers route={dashboardURL}>
+		{children}
+	</Providers>
 );
 
 describe("useTimeFormat", () => {
-	beforeAll(() => {
-		navigate(dashboardURL);
+	beforeAll(async () => {
 		profile = env.profiles().findById(getMainsailProfileId());
+		await env.profiles().restore(profile)
 	});
 
 	it("should return format without profile route", () => {
-		const localWrapper = ({ children }: any) => <WithProviders>{children}</WithProviders>;
-		const { result } = renderHook(() => useTimeFormat(), { wrapper: localWrapper });
+		const { result } = renderHook(() => useTimeFormat(), { wrapper });
 
 		expect(result.current).toBe("DD.MM.YYYY h:mm A");
 	});
 
-	it("should return format from profile", () => {
+	it("should return format from profile", async () => {
+		const settings = profile.settings()
 		const settingsSpy = vi.spyOn(profile.settings(), "get");
 		settingsSpy.mockReturnValueOnce("format");
 

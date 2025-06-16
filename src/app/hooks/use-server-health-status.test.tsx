@@ -9,10 +9,6 @@ import { Route } from "react-router-dom";
 const dashboardURL = `/profiles/${getMainsailProfileId()}/dashboard`;
 
 describe("useServerHealthStatus", () => {
-	beforeAll(() => {
-		navigate(dashboardURL);
-	});
-
 	const Component = ({ serverStatus }: { serverStatus: ServerHealthStatus }) => {
 		const { setConfiguration } = useConfiguration();
 		const { status } = useServerHealthStatus();
@@ -25,11 +21,9 @@ describe("useServerHealthStatus", () => {
 	};
 
 	const ServerHealthStatusWrapper = ({ status }: { status: ServerStatus }) => (
-		<Route path="/profiles/:profileId/votes">
-			<ConfigurationProvider>
-				<Component serverStatus={status} />
-			</ConfigurationProvider>
-		</Route>
+		<ConfigurationProvider>
+			<Component serverStatus={status} />
+		</ConfigurationProvider>
 	);
 
 	it("should render as healthy", async () => {

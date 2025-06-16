@@ -63,14 +63,12 @@ describe("useDeeplink hook", () => {
 	};
 
 	it("should use the method parameter to detect deeplink", () => {
-		navigate("/?network=mainsail.devnet&recipient=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6&amount=1.2&memo=ARK");
+		const route = "/?network=mainsail.devnet&recipient=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6&amount=1.2&memo=ARK"
 
 		render(
-			<Route>
-				<TestComponent />
-			</Route>,
+			<TestComponent />,
 			{
-				history,
+				route,
 			},
 		);
 
@@ -78,14 +76,12 @@ describe("useDeeplink hook", () => {
 	});
 
 	it("should validate url with errors", async () => {
-		navigate("/?method=teeeest&network=mainsail.devnet");
+		const route = "/?method=teeeest&network=mainsail.devnet"
 
 		render(
-			<Route>
-				<TestComponent />
-			</Route>,
+			<TestComponent />,
 			{
-				history,
+				route
 			},
 		);
 
@@ -99,14 +95,10 @@ describe("useDeeplink hook", () => {
 	});
 
 	it("should validate url without errors", async () => {
-		navigate("/?method=transfer&network=mainsail.devnet");
-
 		render(
-			<Route>
-				<TestComponent />
-			</Route>,
+			<TestComponent />,
 			{
-				history,
+				route: "/?method=transfer&network=mainsail.devnet",
 			},
 		);
 
@@ -118,16 +110,10 @@ describe("useDeeplink hook", () => {
 	});
 
 	it("should handle url", async () => {
-		navigate(url);
-
-		const historySpy = vi.spyOn(history, "push");
-
-		render(
-			<Route>
-				<TestComponent />
-			</Route>,
+		const { router } = render(
+			<TestComponent />,
 			{
-				history,
+				route: url,
 			},
 		);
 
@@ -135,10 +121,8 @@ describe("useDeeplink hook", () => {
 
 		await userEvent.click(screen.getByTestId("DeeplinkHandle"));
 
-		expect(historySpy).toHaveBeenCalledWith(
+		expect(router.state.location.pathname + router.state.location.search).toBe(
 			"/profiles/877b7695-8a55-4e16-a7ff-412113131856/send-transfer?method=transfer&network=mainsail.devnet&recipient=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6&amount=1.2&memo=ARK",
 		);
-
-		historySpy.mockRestore();
 	});
 });

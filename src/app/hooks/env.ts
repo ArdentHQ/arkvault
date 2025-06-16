@@ -13,9 +13,9 @@ export const useActiveProfile = (): Contracts.IProfile => {
 	const profileId = getUrlParameter(location.pathname, 1)
 
 	return useMemo(() => {
-		if (!profileId) {
+		if (!profileId || !context.env.profiles().has(profileId)) {
 			throw new Error(
-				`Parameter [profileId] must be available on the route where [useActiveProfile] is called. Current route is [${location.pathname}].`,
+				`No profile found for [${profileId}]`,
 			);
 		}
 
