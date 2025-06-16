@@ -307,6 +307,8 @@ export const translations = {
 	},
 	RETURN: "Return",
 	REVIEW_STEP: {
+		AMOUNT_UNLOCKED_TOOLTIP:
+			"Amount locked in the contract to register your validator. This amount is returned once you resign your validator.",
 		DESCRIPTION: "Review the transaction details below.",
 		TITLE: "Transaction Review",
 	},
