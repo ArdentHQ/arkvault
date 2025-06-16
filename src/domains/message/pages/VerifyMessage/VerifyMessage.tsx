@@ -2,7 +2,7 @@ import { Services } from "@/app/lib/mainsail";
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useForm } from "react-hook-form";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { FormStep } from "./FormStep";
 import { SuccessStep } from "./SuccessStep";
 import { Page, Section } from "@/app/components/Layout";
@@ -38,13 +38,10 @@ export type VerificationResult = { verified?: boolean } & Services.SignedMessage
 
 export const VerifyMessage = () => {
 	const { t } = useTranslation();
-	const location = useLocation();
-
-	const walletId = getUrlParameter(location.pathname, 3)
 	const queryParameters = useQueryParameters();
 
 	const activeProfile = useActiveProfile();
-	const activeWallet = useActiveWalletWhenNeeded(!!walletId);
+	const activeWallet = useActiveWalletWhenNeeded(false);
 
 	const navigate = useNavigate();
 

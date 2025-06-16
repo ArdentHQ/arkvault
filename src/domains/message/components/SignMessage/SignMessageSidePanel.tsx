@@ -39,13 +39,11 @@ export const SignMessageSidePanel = ({
 	const { t } = useTranslation();
 	const location = useLocation();
 
-	const walletId = getUrlParameter(location.pathname, 3)
-
 	const activeProfile = useActiveProfile();
 	const queryParameters = useQueryParameters();
 	const { activeNetwork } = useActiveNetwork({ profile: activeProfile });
 
-	const walletFromPath = useActiveWalletWhenNeeded(!!walletId);
+	const walletFromPath = useActiveWalletWhenNeeded(false);
 
 	const walletFromDeeplink = useMemo(() => {
 		const address = queryParameters.get("address");
