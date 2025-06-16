@@ -17,7 +17,7 @@ exports[`SignMessage success step > should render success step in lg 1`] = `
             data-testid="DetailLabel"
           >
             <div
-              class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 min-w-24 font-semibold text-md leading-5"
+              class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold text-md leading-5"
               data-testid="DetailLabelText"
             >
               Signing Address
@@ -71,7 +71,7 @@ exports[`SignMessage success step > should render success step in lg 1`] = `
                     type="button"
                   >
                     <div
-                      class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+                      class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
                     >
                       <div
                         style="height: 16px; width: 16px;"
@@ -116,7 +116,7 @@ exports[`SignMessage success step > should render success step in lg 1`] = `
             data-testid="DetailLabel"
           >
             <div
-              class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 min-w-24 font-semibold text-md leading-5"
+              class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold text-md leading-5"
               data-testid="DetailLabelText"
             >
               Message
@@ -142,7 +142,7 @@ exports[`SignMessage success step > should render success step in lg 1`] = `
           class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
         >
           <div
-            class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 min-w-24 font-semibold text-sm leading-[17px] sm:text-base sm:leading-5"
+            class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold text-sm leading-[17px] sm:text-base sm:leading-5"
             data-testid="DetailLabelText"
           >
             Signature (JSON)
@@ -182,7 +182,7 @@ exports[`SignMessage success step > should render success step in xs 1`] = `
             data-testid="DetailLabel"
           >
             <div
-              class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 min-w-24 font-semibold text-md leading-5"
+              class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold text-md leading-5"
               data-testid="DetailLabelText"
             >
               Signing Address
@@ -236,7 +236,7 @@ exports[`SignMessage success step > should render success step in xs 1`] = `
                     type="button"
                   >
                     <div
-                      class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+                      class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
                     >
                       <div
                         style="height: 16px; width: 16px;"
@@ -281,7 +281,7 @@ exports[`SignMessage success step > should render success step in xs 1`] = `
             data-testid="DetailLabel"
           >
             <div
-              class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 min-w-24 font-semibold text-md leading-5"
+              class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold text-md leading-5"
               data-testid="DetailLabelText"
             >
               Message
@@ -307,7 +307,7 @@ exports[`SignMessage success step > should render success step in xs 1`] = `
           class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
         >
           <div
-            class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 min-w-24 font-semibold text-sm leading-[17px] sm:text-base sm:leading-5"
+            class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold text-sm leading-[17px] sm:text-base sm:leading-5"
             data-testid="DetailLabelText"
           >
             Signature (JSON)

@@ -44,7 +44,7 @@ exports[`AddressRow > should emit action on select button 1`] = `
                   type="button"
                 >
                   <div
-                    class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+                    class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
                   >
                     <div
                       style="height: 16px; width: 16px;"
@@ -242,7 +242,7 @@ exports[`AddressRow > should render 1`] = `
                   type="button"
                 >
                   <div
-                    class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+                    class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
                   >
                     <div
                       style="height: 16px; width: 16px;"
@@ -440,7 +440,7 @@ exports[`AddressRow > should render tooltip wallet when ledger and incompatible 
                   type="button"
                 >
                   <div
-                    class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+                    class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
                   >
                     <div
                       style="height: 16px; width: 16px;"
@@ -639,7 +639,7 @@ exports[`AddressRow > should render when the maximum votes is greater than 1 1`]
                   type="button"
                 >
                   <div
-                    class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+                    class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
                   >
                     <div
                       style="height: 16px; width: 16px;"
@@ -787,7 +787,7 @@ exports[`AddressRow > should render when the wallet has exactly 4 votes 1`] = `
                   type="button"
                 >
                   <div
-                    class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+                    class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
                   >
                     <div
                       style="height: 16px; width: 16px;"
@@ -989,7 +989,7 @@ exports[`AddressRow > should render when the wallet has many votes 1`] = `
                   type="button"
                 >
                   <div
-                    class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+                    class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
                   >
                     <div
                       style="height: 16px; width: 16px;"
@@ -1191,7 +1191,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
                   type="button"
                 >
                   <div
-                    class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+                    class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
                   >
                     <div
                       style="height: 16px; width: 16px;"
@@ -1369,7 +1369,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
                   type="button"
                 >
                   <div
-                    class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+                    class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
                   >
                     <div
                       style="height: 16px; width: 16px;"
@@ -1512,7 +1512,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
                   type="button"
                 >
                   <div
-                    class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+                    class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
                   >
                     <div
                       style="height: 16px; width: 16px;"
@@ -1690,7 +1690,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
                   type="button"
                 >
                   <div
-                    class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+                    class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
                   >
                     <div
                       style="height: 16px; width: 16px;"
@@ -1833,7 +1833,7 @@ exports[`AddressRow > should render with active validator 1`] = `
                   type="button"
                 >
                   <div
-                    class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+                    class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
                   >
                     <div
                       style="height: 16px; width: 16px;"
@@ -2031,7 +2031,7 @@ exports[`AddressRow > should render with resigned validator 1`] = `
                   type="button"
                 >
                   <div
-                    class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+                    class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
                   >
                     <div
                       style="height: 16px; width: 16px;"
@@ -2231,7 +2231,7 @@ exports[`AddressRow > should render with standby validator 1`] = `
                   type="button"
                 >
                   <div
-                    class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+                    class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
                   >
                     <div
                       style="height: 16px; width: 16px;"

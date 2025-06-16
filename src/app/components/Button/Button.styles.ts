@@ -73,7 +73,7 @@ const getVariant = (variant?: ButtonVariant, theme?: Theme, disabled?: boolean, 
 		secondary: () => `dark:bg-theme-dark-800 dark:text-theme-dark-50
 					bg-theme-primary-100 text-theme-primary-600
 					hover:bg-theme-primary-800 hover:text-white
-					dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900
+					dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white
 				`,
 		"secondary-icon": () => `text-theme-secondary-700 bg-transparent
 		dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim:bg-transparent`,

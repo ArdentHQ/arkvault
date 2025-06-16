@@ -61,7 +61,7 @@ export const InputWrapperStyled = ({
 				"border-theme-danger-500 bg-theme-secondary-100 dark:bg-theme-secondary-800": disabled && invalid,
 				"border-theme-primary-600 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600":
 					valid && !disabled && !invalid,
-				"border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800":
+				"border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 dim:border-theme-dim-700 dim:bg-theme-dim-950":
 					disabled && !invalid,
 				"border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500":
 					!valid && !invalid && !disabled,

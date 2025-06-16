@@ -17014,7 +17014,7 @@ exports[`ValidatorsTable > should render vote amount column 1`] = `
                               class="relative"
                             >
                               <div
-                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 h-[34px] overflow-hidden"
+                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 dim:border-theme-dim-700 dim:bg-theme-dim-950 h-[34px] overflow-hidden"
                               >
                                 <div
                                   class="relative flex h-full flex-1"
@@ -17182,7 +17182,7 @@ exports[`ValidatorsTable > should render vote amount column 1`] = `
                               class="relative"
                             >
                               <div
-                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 h-[34px] overflow-hidden"
+                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 dim:border-theme-dim-700 dim:bg-theme-dim-950 h-[34px] overflow-hidden"
                               >
                                 <div
                                   class="relative flex h-full flex-1"
@@ -17350,7 +17350,7 @@ exports[`ValidatorsTable > should render vote amount column 1`] = `
                               class="relative"
                             >
                               <div
-                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 h-[34px] overflow-hidden"
+                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 dim:border-theme-dim-700 dim:bg-theme-dim-950 h-[34px] overflow-hidden"
                               >
                                 <div
                                   class="relative flex h-full flex-1"
@@ -21952,7 +21952,7 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
                               class="relative"
                             >
                               <div
-                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 h-[34px] overflow-hidden"
+                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 dim:border-theme-dim-700 dim:bg-theme-dim-950 h-[34px] overflow-hidden"
                               >
                                 <div
                                   class="relative flex h-full flex-1"
@@ -22120,7 +22120,7 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
                               class="relative"
                             >
                               <div
-                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 h-[34px] overflow-hidden"
+                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 dim:border-theme-dim-700 dim:bg-theme-dim-950 h-[34px] overflow-hidden"
                               >
                                 <div
                                   class="relative flex h-full flex-1"
@@ -25430,7 +25430,7 @@ exports[`ValidatorsTable > should select a validator with vote amount and make i
                               class="relative"
                             >
                               <div
-                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 h-[34px] overflow-hidden"
+                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 dim:border-theme-dim-700 dim:bg-theme-dim-950 h-[34px] overflow-hidden"
                               >
                                 <div
                                   class="relative flex h-full flex-1"
@@ -25598,7 +25598,7 @@ exports[`ValidatorsTable > should select a validator with vote amount and make i
                               class="relative"
                             >
                               <div
-                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 h-[34px] overflow-hidden"
+                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 dim:border-theme-dim-700 dim:bg-theme-dim-950 h-[34px] overflow-hidden"
                               >
                                 <div
                                   class="relative flex h-full flex-1"

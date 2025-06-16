@@ -15,7 +15,7 @@ export const DetailLabelText = ({
 	<div
 		data-testid="DetailLabelText"
 		className={twMerge(
-			"no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 min-w-24 font-semibold",
+			"no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold",
 			isHeader ? "text-md leading-5" : "text-sm leading-[17px] sm:text-base sm:leading-5",
 			className,
 		)}
@@ -99,8 +99,8 @@ export const DetailPadded = ({ children }: { children: React.ReactNode }) => (
 	<div className="group flex">
 		<div className="hidden sm:ml-3 sm:flex">
 			<div className="min-w-9 flex-row pr-3">
-				<div className="border-theme-secondary-300 dark:border-theme-secondary-800 -mt-2 h-6 w-full rounded-bl-xl border-b-2 border-l-2" />
-				<div className="border-theme-secondary-300 dark:border-theme-secondary-800 h-[105%] w-full border-l-2 group-last:hidden" />
+				<div className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 -mt-2 h-6 w-full rounded-bl-xl border-b-2 border-l-2" />
+				<div className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 h-[105%] w-full border-l-2 group-last:hidden" />
 			</div>
 		</div>
 		<div className="w-full min-w-0 sm:flex-row">{children}</div>
