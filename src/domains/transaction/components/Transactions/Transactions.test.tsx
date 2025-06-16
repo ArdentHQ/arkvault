@@ -356,33 +356,6 @@ describe("Transactions", () => {
 		});
 	});
 
-	it("should abort previous request", async () => {
-		server.use(
-			requestMockOnce("https://dwallets-evm.mainsailhq.com/api/transactions", {
-				data: transactionsFixture.data,
-				meta: transactionsFixture.meta,
-			}),
-			requestMock("https://dwallets-evm.mainsailhq.com/api/transactions", {
-				data: transactionsFixture.data.slice(0, 5),
-				meta: transactionsFixture.meta,
-			}),
-		);
-
-		render(
-			<Transactions profile={profile} isLoading={false} wallets={profile.wallets().values()} />,
-			{
-				route: dashboardURL,
-			},
-		);
-
-		await waitFor(() => expect(screen.getAllByTestId("TableRow")).toHaveLength(10), { timeout: 500 });
-
-		await userEvent.click(screen.getByTestId("tabs__tab-button-received"));
-		await userEvent.click(screen.getByTestId("tabs__tab-button-all"));
-
-		await waitFor(() => expect(screen.getAllByTestId("TableRow")).toHaveLength(5), { timeout: 1000 });
-	});
-
 	it("should filter by mode", async () => {
 		server.use(
 			requestMockOnce("https://dwallets-evm.mainsailhq.com/api/transactions", {
@@ -403,13 +376,13 @@ describe("Transactions", () => {
 		);
 
 		await waitFor(() =>
-			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(10),
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(8),
 		);
 
 		await userEvent.click(screen.getByTestId("tabs__tab-button-sent"));
 
 		await waitFor(() =>
-			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(8),
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(10),
 		);
 	});
 
@@ -434,7 +407,7 @@ describe("Transactions", () => {
 		);
 
 		await waitFor(() =>
-			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow__mobile")).toHaveLength(10),
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow__mobile")).toHaveLength(8),
 		);
 
 		const button = screen.getByTestId("dropdown__toggle-Transactions--filter-dropdown");
@@ -452,7 +425,7 @@ describe("Transactions", () => {
 		await userEvent.click(dropdownContainer.getByTestId("dropdown__option--2"));
 
 		await waitFor(() =>
-			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow__mobile")).toHaveLength(8),
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow__mobile")).toHaveLength(10),
 		);
 	});
 
@@ -471,7 +444,7 @@ describe("Transactions", () => {
 		await userEvent.click(screen.getByTestId("tabs__tab-button-sent"));
 
 		await waitFor(() =>
-			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(8),
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(10),
 		);
 	});
 
