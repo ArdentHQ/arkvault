@@ -5,7 +5,7 @@ import { HashHistory, To, createHashHistory } from "history";
 import { RenderResult, render, renderHook } from "@testing-library/react";
 
 /* eslint-disable testing-library/no-node-access */
-import { createMemoryRouter, RouterProvider } from "react-router-dom";
+import { createMemoryRouter, Location, RouterProvider, useLocation } from "react-router-dom";
 import { BigNumber } from "@/app/lib/helpers";
 import { DTO } from "@/app/lib/profiles";
 import { DateTime } from "@/app/lib/intl";
@@ -13,7 +13,7 @@ import { I18nextProvider, useTranslation } from "react-i18next";
 import { LayoutBreakpoint } from "@/types";
 import { Mainsail } from "@/app/lib/mainsail";
 import MainsailDefaultManifest from "@/tests/fixtures/coins/mainsail/manifest/default.json";
-import React, { ReactNode } from "react";
+import React, { ReactNode, useEffect } from "react";
 import { Context as ResponsiveContext } from "react-responsive";
 import { StubStorage } from "@/tests/mocks";
 import TestingPasswords from "@/tests/fixtures/env/testing-passwords.json";
@@ -119,6 +119,47 @@ interface RenderWithRouterOptions {
 	withProviders?: boolean;
 	withProfileSynchronizer?: boolean;
 	profileSynchronizerOptions?: Record<string, any>;
+}
+
+
+export const LocationTracker = ({ onLocationChange }: { onLocationChange?: (location: Location) => void }) => {
+	const location = useLocation();
+
+	useEffect(() => {
+		onLocationChange?.(location)
+	}, [location]);
+
+	return null;
+};
+
+export const Providers = ({
+	children,
+	route = "/",
+}: {
+	children: ReactNode,
+	route?: string,
+}) => {
+	const router = createMemoryRouter(
+		[
+			{
+				element: children,
+				path: "/*",
+			},
+		],
+		{
+			initialEntries: [route],
+		},
+	);
+
+	return (
+		<WithProviders>
+			<RouterProvider router={router}>
+				<ProfileSynchronizer>
+					{children}
+				</ProfileSynchronizer>
+			</RouterProvider>
+		</WithProviders>
+	)
 }
 
 const renderWithRouter = (

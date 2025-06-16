@@ -1,7 +1,7 @@
 import { Contracts, DTO } from "@/app/lib/profiles";
 import React, { useEffect, useLayoutEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
-import { useNavigate, useParams } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 import { useTranslation } from "react-i18next";
 import { SendRegistrationForm } from "./SendRegistration.contracts";
@@ -26,17 +26,19 @@ import {
 } from "@/domains/transaction/components/UsernameRegistrationForm";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { useToggleFeeFields } from "@/domains/transaction/hooks/useToggleFeeFields";
+import { getUrlParameter } from "@/utils/paths";
 
 export const SendRegistration = () => {
 	const navigate = useNavigate();
 	const { t } = useTranslation();
+	const location = useLocation()
 
 	const [activeTab, setActiveTab] = useState(1);
 	const [transaction, setTransaction] = useState(undefined as unknown as DTO.ExtendedSignedTransactionData);
 	const [registrationForm, setRegistrationForm] = useState<SendRegistrationForm>();
 	const [errorMessage, setErrorMessage] = useState<string | undefined>();
 
-	const { registrationType } = useParams<{ registrationType: string }>();
+	const registrationType = getUrlParameter(location.pathname, 3)
 
 	const { env } = useEnvironmentContext();
 	const activeProfile = useActiveProfile();

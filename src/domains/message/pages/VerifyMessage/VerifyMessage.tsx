@@ -2,7 +2,7 @@ import { Services } from "@/app/lib/mainsail";
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useForm } from "react-hook-form";
-import { useNavigate, useParams } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { FormStep } from "./FormStep";
 import { SuccessStep } from "./SuccessStep";
 import { Page, Section } from "@/app/components/Layout";
@@ -14,6 +14,7 @@ import { useActiveProfile, useActiveWalletWhenNeeded, useQueryParameters } from 
 import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
 import { ProfilePaths } from "@/router/paths";
 import { MessageService } from "@/app/lib/mainsail/message.service";
+import { getUrlParameter } from "@/utils/paths";
 
 enum Step {
 	FormStep = 1,
@@ -37,8 +38,9 @@ export type VerificationResult = { verified?: boolean } & Services.SignedMessage
 
 export const VerifyMessage = () => {
 	const { t } = useTranslation();
+	const location = useLocation();
 
-	const { walletId } = useParams<{ walletId: string }>();
+	const walletId = getUrlParameter(location.pathname, 3)
 	const queryParameters = useQueryParameters();
 
 	const activeProfile = useActiveProfile();
