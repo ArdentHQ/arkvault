@@ -115,6 +115,7 @@ export class TransactionService {
 			.nonce(nonce)
 			.gasPrice(UnitConverter.parseUnits(input.gasPrice.toString(), "gwei"))
 			.gas(input.gasLimit.toString())
+			.value(input.data.value)
 			.network(this.#configCrypto.crypto.network.chainId);
 
 		await this.#sign(input, builder);
