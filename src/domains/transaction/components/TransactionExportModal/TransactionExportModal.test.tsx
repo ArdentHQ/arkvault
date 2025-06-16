@@ -1,8 +1,6 @@
 import { Contracts } from "@/app/lib/profiles";
-import { createHashHistory } from "history";
 import React from "react";
 import userEvent from "@testing-library/user-event";
-import { Route } from "react-router-dom";
 import * as browserAccess from "browser-fs-access";
 import { TransactionExportModal } from ".";
 import { env, getDefaultProfileId, render, screen, syncValidators, waitFor, within } from "@/utils/testing-library";
@@ -10,7 +8,6 @@ import { requestMock, server } from "@/tests/mocks/server";
 
 import transactionsFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions.json";
 
-const history = createHashHistory();
 
 const fixtureProfileId = getDefaultProfileId();
 let dashboardURL: string;
@@ -37,7 +34,6 @@ describe("TransactionExportModal", () => {
 		);
 
 		dashboardURL = `/profiles/${fixtureProfileId}/dashboard`;
-		navigate(dashboardURL);
 		profile = env.profiles().findById(getDefaultProfileId());
 
 		await syncValidators(profile);
@@ -48,11 +44,8 @@ describe("TransactionExportModal", () => {
 
 	it("should render", async () => {
 		const { asFragment } = render(
-			<Route path="/profiles/:profileId/dashboard">
-				<TransactionExportModal isOpen wallets={[profile.wallets().first()]} onClose={vi.fn()} />
-			</Route>,
+			<TransactionExportModal isOpen wallets={[profile.wallets().first()]} onClose={vi.fn()} />,
 			{
-				history,
 				route: dashboardURL,
 			},
 		);
@@ -70,11 +63,8 @@ describe("TransactionExportModal", () => {
 		const walletSpy = vi.spyOn(profile.wallets().first().network(), "isLive").mockReturnValue(true);
 
 		const { asFragment } = render(
-			<Route path="/profiles/:profileId/dashboard">
-				<TransactionExportModal isOpen wallets={[profile.wallets().first()]} onClose={vi.fn()} />
-			</Route>,
+			<TransactionExportModal isOpen wallets={[profile.wallets().first()]} onClose={vi.fn()} />,
 			{
-				history,
 				route: dashboardURL,
 			},
 		);
@@ -93,11 +83,8 @@ describe("TransactionExportModal", () => {
 
 	it("should render progress status", async () => {
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<TransactionExportModal isOpen wallets={[profile.wallets().first()]} onClose={vi.fn()} />
-			</Route>,
+			<TransactionExportModal isOpen wallets={[profile.wallets().first()]} onClose={vi.fn()} />,
 			{
-				history,
 				route: dashboardURL,
 			},
 		);
@@ -117,11 +104,8 @@ describe("TransactionExportModal", () => {
 		});
 
 		const { asFragment } = render(
-			<Route path="/profiles/:profileId/dashboard">
-				<TransactionExportModal isOpen wallets={[profile.wallets().first()]} onClose={vi.fn()} />
-			</Route>,
+			<TransactionExportModal isOpen wallets={[profile.wallets().first()]} onClose={vi.fn()} />,
 			{
-				history,
 				route: dashboardURL,
 			},
 		);
@@ -151,11 +135,8 @@ describe("TransactionExportModal", () => {
 
 	it("should render success status", async () => {
 		const { asFragment } = render(
-			<Route path="/profiles/:profileId/dashboard">
-				<TransactionExportModal isOpen wallets={[profile.wallets().first()]} onClose={vi.fn()} />
-			</Route>,
+			<TransactionExportModal isOpen wallets={[profile.wallets().first()]} onClose={vi.fn()} />,
 			{
-				history,
 				route: dashboardURL,
 			},
 		);
@@ -188,11 +169,8 @@ describe("TransactionExportModal", () => {
 		const browserAccessMock = vi.spyOn(browserAccess, "fileSave").mockResolvedValue({ name: "test.csv" });
 
 		const { asFragment } = render(
-			<Route path="/profiles/:profileId/dashboard">
-				<TransactionExportModal isOpen wallets={[profile.wallets().first()]} onClose={onClose} />
-			</Route>,
+			<TransactionExportModal isOpen wallets={[profile.wallets().first()]} onClose={onClose} />,
 			{
-				history,
 				route: dashboardURL,
 			},
 		);
@@ -225,11 +203,8 @@ describe("TransactionExportModal", () => {
 		});
 
 		const { asFragment } = render(
-			<Route path="/profiles/:profileId/dashboard">
-				<TransactionExportModal isOpen wallets={[profile.wallets().first()]} onClose={onClose} />
-			</Route>,
+			<TransactionExportModal isOpen wallets={[profile.wallets().first()]} onClose={onClose} />,
 			{
-				history,
 				route: dashboardURL,
 			},
 		);
@@ -259,11 +234,8 @@ describe("TransactionExportModal", () => {
 		const onClose = vi.fn();
 
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<TransactionExportModal isOpen wallets={[profile.wallets().first()]} onClose={onClose} />
-			</Route>,
+			<TransactionExportModal isOpen wallets={[profile.wallets().first()]} onClose={onClose} />,
 			{
-				history,
 				route: dashboardURL,
 			},
 		);
@@ -285,11 +257,8 @@ describe("TransactionExportModal", () => {
 		const walletSpy = vi.spyOn(profile.wallets().first().network(), "isLive").mockReturnValue(true);
 
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<TransactionExportModal isOpen wallets={[profile.wallets().first()]} onClose={vi.fn()} />
-			</Route>,
+			<TransactionExportModal isOpen wallets={[profile.wallets().first()]} onClose={vi.fn()} />,
 			{
-				history,
 				route: dashboardURL,
 			},
 		);

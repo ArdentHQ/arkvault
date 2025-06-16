@@ -3,7 +3,6 @@
 
 import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
-import { createHashHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
 
@@ -23,7 +22,6 @@ import {
 import { server, requestMock, requestMockOnce } from "@/tests/mocks/server";
 import transactionsFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions.json";
 
-const history = createHashHistory();
 let profile: Contracts.IProfile;
 
 const fixtureProfileId = getDefaultProfileId();
@@ -41,16 +39,12 @@ describe("Transactions", () => {
 
 	beforeEach(async () => {
 		dashboardURL = `/profiles/${fixtureProfileId}/dashboard`;
-		navigate(dashboardURL);
 	});
 
 	it("should render", async () => {
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<Transactions profile={profile} wallets={profile.wallets().values()} />
-			</Route>,
+			<Transactions profile={profile} wallets={profile.wallets().values()} />,
 			{
-				history,
 				route: dashboardURL,
 			},
 		);
@@ -62,11 +56,8 @@ describe("Transactions", () => {
 
 	it("should render with custom title", async () => {
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<Transactions profile={profile} wallets={profile.wallets().values()} title={<span>Test</span>} />
-			</Route>,
+			<Transactions profile={profile} wallets={profile.wallets().values()} title={<span>Test</span>} />,
 			{
-				history,
 				route: dashboardURL,
 			},
 		);
@@ -78,11 +69,8 @@ describe("Transactions", () => {
 
 	it("should render hidden", async () => {
 		const { asFragment } = render(
-			<Route path="/profiles/:profileId/dashboard">
-				<Transactions profile={profile} wallets={profile.wallets().values()} isVisible={false} />
-			</Route>,
+			<Transactions profile={profile} wallets={profile.wallets().values()} isVisible={false} />,
 			{
-				history,
 				route: dashboardURL,
 			},
 		);
@@ -102,11 +90,8 @@ describe("Transactions", () => {
 		emptyProfile.wallets().push(wallet);
 
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<Transactions profile={profile} wallets={profile.wallets().values()} />
-			</Route>,
+			<Transactions profile={profile} wallets={profile.wallets().values()} />,
 			{
-				history,
 				route: dashboardURL,
 			},
 		);
@@ -139,11 +124,8 @@ describe("Transactions", () => {
 
 	it("should filter by type", async () => {
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<Transactions profile={profile} wallets={profile.wallets().values()} />
-			</Route>,
+			<Transactions profile={profile} wallets={profile.wallets().values()} />,
 			{
-				history,
 				route: dashboardURL,
 			},
 		);
@@ -171,12 +153,9 @@ describe("Transactions", () => {
 
 	it("should filter by type on mobile", async () => {
 		renderResponsiveWithRoute(
-			<Route path="/profiles/:profileId/dashboard">
-				<Transactions profile={profile} wallets={profile.wallets().values()} />
-			</Route>,
+			<Transactions profile={profile} wallets={profile.wallets().values()} />,
 			"xs",
 			{
-				history,
 				route: dashboardURL,
 			},
 		);
@@ -214,11 +193,8 @@ describe("Transactions", () => {
 		emptyProfile.wallets().push(wallet);
 
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<Transactions profile={emptyProfile} wallets={[wallet]} />
-			</Route>,
+			<Transactions profile={emptyProfile} wallets={[wallet]} />,
 			{
-				history,
 				route: dashboardURL,
 			},
 		);
@@ -231,11 +207,8 @@ describe("Transactions", () => {
 
 	it("should filter by type and see empty screen", async () => {
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<Transactions profile={profile} wallets={[profile.wallets().first()]} />
-			</Route>,
+			<Transactions profile={profile} wallets={[profile.wallets().first()]} />,
 			{
-				history,
 				route: dashboardURL,
 			},
 		);
@@ -274,11 +247,8 @@ describe("Transactions", () => {
 		await profile.sync();
 
 		const { asFragment } = render(
-			<Route path="/profiles/:profileId/dashboard">
-				<Transactions profile={profile} wallets={profile.wallets().values()} />
-			</Route>,
+			<Transactions profile={profile} wallets={profile.wallets().values()} />,
 			{
-				history,
 				route: dashboardURL,
 			},
 		);
@@ -322,11 +292,8 @@ describe("Transactions", () => {
 		);
 
 		const { asFragment } = render(
-			<Route path="/profiles/:profileId/dashboard">
-				<Transactions profile={profile} isLoading={false} wallets={profile.wallets().values()} />
-			</Route>,
+			<Transactions profile={profile} isLoading={false} wallets={profile.wallets().values()} />,
 			{
-				history,
 				route: dashboardURL,
 			},
 		);
@@ -356,11 +323,8 @@ describe("Transactions", () => {
 		await profile.sync();
 
 		const { asFragment } = render(
-			<Route path="/profiles/:profileId/dashboard">
-				<Transactions profile={profile} isLoading={false} wallets={profile.wallets().values()} />
-			</Route>,
+			<Transactions profile={profile} isLoading={false} wallets={profile.wallets().values()} />,
 			{
-				history,
 				route: dashboardURL,
 			},
 		);
@@ -381,11 +345,8 @@ describe("Transactions", () => {
 		await profile.sync();
 
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<Transactions isLoading profile={profile} wallets={profile.wallets().values()} />
-			</Route>,
+			<Transactions isLoading profile={profile} wallets={profile.wallets().values()} />,
 			{
-				history,
 				route: dashboardURL,
 			},
 		);
@@ -408,11 +369,8 @@ describe("Transactions", () => {
 		);
 
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<Transactions profile={profile} isLoading={false} wallets={profile.wallets().values()} />
-			</Route>,
+			<Transactions profile={profile} isLoading={false} wallets={profile.wallets().values()} />,
 			{
-				history,
 				route: dashboardURL,
 			},
 		);
@@ -438,11 +396,8 @@ describe("Transactions", () => {
 		);
 
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<Transactions profile={profile} wallets={profile.wallets().values()} />
-			</Route>,
+			<Transactions profile={profile} wallets={profile.wallets().values()} />,
 			{
-				history,
 				route: dashboardURL,
 			},
 		);
@@ -471,12 +426,9 @@ describe("Transactions", () => {
 		);
 
 		renderResponsiveWithRoute(
-			<Route path="/profiles/:profileId/dashboard">
-				<Transactions profile={profile} wallets={profile.wallets().values()} />
-			</Route>,
+			<Transactions profile={profile} wallets={profile.wallets().values()} />,
 			"xs",
 			{
-				history,
 				route: dashboardURL,
 			},
 		);
@@ -506,11 +458,8 @@ describe("Transactions", () => {
 
 	it("should ignore tab change on loading state", async () => {
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<Transactions profile={profile} wallets={profile.wallets().values()} isLoading={true} />
-			</Route>,
+			<Transactions profile={profile} wallets={profile.wallets().values()} isLoading={true} />,
 			{
-				history,
 				route: dashboardURL,
 			},
 		);
@@ -530,14 +479,9 @@ describe("Transactions", () => {
 		const emptyProfile = await env.profiles().create("test-empty");
 		const emptyProfileURL = `/profiles/${emptyProfile.id()}/dashboard`;
 
-		navigate(emptyProfileURL);
-
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<Transactions profile={emptyProfile} wallets={[]} />
-			</Route>,
+			<Transactions profile={emptyProfile} wallets={[]} />,
 			{
-				history,
 				route: emptyProfileURL,
 			},
 		);
@@ -547,11 +491,8 @@ describe("Transactions", () => {
 
 	it("should update wallet filters", async () => {
 		const { asFragment } = render(
-			<Route path="/profiles/:profileId/dashboard">
-				<Transactions isUpdatingWallet={true} profile={profile} wallets={[]} />
-			</Route>,
+			<Transactions isUpdatingWallet={true} profile={profile} wallets={[]} />,
 			{
-				history,
 				route: dashboardURL,
 			},
 		);

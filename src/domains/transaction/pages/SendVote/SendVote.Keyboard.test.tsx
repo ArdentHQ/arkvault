@@ -18,7 +18,6 @@ import { requestMock, server } from "@/tests/mocks/server";
 
 import { Contracts, DTO } from "@/app/lib/profiles";
 import React from "react";
-import { Route } from "react-router-dom";
 import { SendVote } from "./SendVote";
 import { VoteValidatorProperties } from "@/domains/vote/components/ValidatorsTable/ValidatorsTable.contracts";
 import { appendParameters } from "@/domains/vote/utils/url-parameters";
@@ -33,7 +32,7 @@ import { DateTime } from "@/app/lib/intl";
 const fixtureProfileId = getDefaultProfileId();
 
 const signedTransactionMock = {
-	blockHash: () => {},
+	blockHash: () => { },
 	confirmations: () => BigNumber.ZERO,
 	convertedAmount: () => +transactionFixture.data.value / 1e8,
 	convertedFee: () => {
@@ -43,7 +42,7 @@ const signedTransactionMock = {
 	convertedTotal: () => BigNumber.ZERO,
 	data: () => transactionFixture.data,
 	explorerLink: () => `https://test.arkscan.io/transaction/${transactionFixture.data.hash}`,
-	explorerLinkForBlock: () => {},
+	explorerLinkForBlock: () => { },
 	fee: () => BigNumber.make(transactionFixture.data.gasPrice).times(transactionFixture.data.gas),
 	from: () => transactionFixture.data.from,
 	hash: () => transactionFixture.data.hash,
@@ -187,11 +186,9 @@ describe("SendVote", () => {
 		);
 
 		render(
-			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
-				<FormProvider {...form.current}>
-					<SendVote />
-				</FormProvider>
-			</Route>,
+			<FormProvider {...form.current}>
+				<SendVote />
+			</FormProvider>,
 			{
 				route: {
 					pathname: voteURL,

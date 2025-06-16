@@ -1,8 +1,98 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`SendVote > should return to the select a validator page to unvote 1`] = `<div />`;
+exports[`SendVote > should return to the select a validator page to unvote 1`] = `
+<div>
+  <h2>
+    Unexpected Application Error!
+  </h2>
+  <h3
+    style="font-style: italic;"
+  >
+    Expected 'network' to be Networks.Network, but received undefined
+  </h3>
+  <pre
+    style="padding: 0.5rem; background-color: rgba(200, 200, 200, 0.5);"
+  >
+    AssertionError [ERR_ASSERTION]: Expected 'network' to be Networks.Network, but received undefined
+    at new AssertionError (/home/goga/dev/ardent/arkvault/node_modules/.pnpm/assert@2.1.0/node_modules/assert/build/internal/assert/assertion_error.js:417:13)
+    at assertNetwork (/home/goga/dev/ardent/arkvault/src/utils/assertions.ts:32:9)
+    at SendVote (/home/goga/dev/ardent/arkvault/src/domains/transaction/pages/SendVote/SendVote.tsx:53:2)
+    at Object.react-stack-bottom-frame (/home/goga/dev/ardent/arkvault/node_modules/.pnpm/react-dom@19.1.0_react@19.1.0/node_modules/react-dom/cjs/react-dom-client.development.js:23863:20)
+    at renderWithHooks (/home/goga/dev/ardent/arkvault/node_modules/.pnpm/react-dom@19.1.0_react@19.1.0/node_modules/react-dom/cjs/react-dom-client.development.js:5529:22)
+    at updateFunctionComponent (/home/goga/dev/ardent/arkvault/node_modules/.pnpm/react-dom@19.1.0_react@19.1.0/node_modules/react-dom/cjs/react-dom-client.development.js:8897:19)
+    at beginWork (/home/goga/dev/ardent/arkvault/node_modules/.pnpm/react-dom@19.1.0_react@19.1.0/node_modules/react-dom/cjs/react-dom-client.development.js:10522:18)
+    at runWithFiberInDEV (/home/goga/dev/ardent/arkvault/node_modules/.pnpm/react-dom@19.1.0_react@19.1.0/node_modules/react-dom/cjs/react-dom-client.development.js:1522:13)
+    at performUnitOfWork (/home/goga/dev/ardent/arkvault/node_modules/.pnpm/react-dom@19.1.0_react@19.1.0/node_modules/react-dom/cjs/react-dom-client.development.js:15140:22)
+    at workLoopSync (/home/goga/dev/ardent/arkvault/node_modules/.pnpm/react-dom@19.1.0_react@19.1.0/node_modules/react-dom/cjs/react-dom-client.development.js:14956:41)
+  </pre>
+  <p>
+    💿 Hey developer 👋
+  </p>
+  <p>
+    You can provide a way better UX than this when your app throws errors by providing your own 
+    <code
+      style="padding: 2px 4px; background-color: rgba(200, 200, 200, 0.5);"
+    >
+      ErrorBoundary
+    </code>
+     or
+     
+    <code
+      style="padding: 2px 4px; background-color: rgba(200, 200, 200, 0.5);"
+    >
+      errorElement
+    </code>
+     prop on your route.
+  </p>
+</div>
+`;
 
-exports[`SendVote > should return to the select a validator page to unvote/vote 1`] = `<div />`;
+exports[`SendVote > should return to the select a validator page to unvote/vote 1`] = `
+<div>
+  <h2>
+    Unexpected Application Error!
+  </h2>
+  <h3
+    style="font-style: italic;"
+  >
+    Expected 'network' to be Networks.Network, but received undefined
+  </h3>
+  <pre
+    style="padding: 0.5rem; background-color: rgba(200, 200, 200, 0.5);"
+  >
+    AssertionError [ERR_ASSERTION]: Expected 'network' to be Networks.Network, but received undefined
+    at new AssertionError (/home/goga/dev/ardent/arkvault/node_modules/.pnpm/assert@2.1.0/node_modules/assert/build/internal/assert/assertion_error.js:417:13)
+    at assertNetwork (/home/goga/dev/ardent/arkvault/src/utils/assertions.ts:32:9)
+    at SendVote (/home/goga/dev/ardent/arkvault/src/domains/transaction/pages/SendVote/SendVote.tsx:53:2)
+    at Object.react-stack-bottom-frame (/home/goga/dev/ardent/arkvault/node_modules/.pnpm/react-dom@19.1.0_react@19.1.0/node_modules/react-dom/cjs/react-dom-client.development.js:23863:20)
+    at renderWithHooks (/home/goga/dev/ardent/arkvault/node_modules/.pnpm/react-dom@19.1.0_react@19.1.0/node_modules/react-dom/cjs/react-dom-client.development.js:5529:22)
+    at updateFunctionComponent (/home/goga/dev/ardent/arkvault/node_modules/.pnpm/react-dom@19.1.0_react@19.1.0/node_modules/react-dom/cjs/react-dom-client.development.js:8897:19)
+    at beginWork (/home/goga/dev/ardent/arkvault/node_modules/.pnpm/react-dom@19.1.0_react@19.1.0/node_modules/react-dom/cjs/react-dom-client.development.js:10522:18)
+    at runWithFiberInDEV (/home/goga/dev/ardent/arkvault/node_modules/.pnpm/react-dom@19.1.0_react@19.1.0/node_modules/react-dom/cjs/react-dom-client.development.js:1522:13)
+    at performUnitOfWork (/home/goga/dev/ardent/arkvault/node_modules/.pnpm/react-dom@19.1.0_react@19.1.0/node_modules/react-dom/cjs/react-dom-client.development.js:15140:22)
+    at workLoopSync (/home/goga/dev/ardent/arkvault/node_modules/.pnpm/react-dom@19.1.0_react@19.1.0/node_modules/react-dom/cjs/react-dom-client.development.js:14956:41)
+  </pre>
+  <p>
+    💿 Hey developer 👋
+  </p>
+  <p>
+    You can provide a way better UX than this when your app throws errors by providing your own 
+    <code
+      style="padding: 2px 4px; background-color: rgba(200, 200, 200, 0.5);"
+    >
+      ErrorBoundary
+    </code>
+     or
+     
+    <code
+      style="padding: 2px 4px; background-color: rgba(200, 200, 200, 0.5);"
+    >
+      errorElement
+    </code>
+     prop on your route.
+  </p>
+</div>
+`;
 
 exports[`SendVote > should show error if wrong mnemonic 1`] = `
 <div>
@@ -95,7 +185,8 @@ exports[`SendVote > should show error if wrong mnemonic 1`] = `
               >
                 <a
                   class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
-                  href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/dashboard"
+                  data-discover="true"
+                  href="/profiles/877b7695-8a55-4e16-a7ff-412113131856/dashboard"
                   title="Portfolio"
                 >
                   Portfolio
@@ -106,7 +197,8 @@ exports[`SendVote > should show error if wrong mnemonic 1`] = `
               >
                 <a
                   class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
-                  href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/exchange"
+                  data-discover="true"
+                  href="/profiles/877b7695-8a55-4e16-a7ff-412113131856/exchange"
                   title="Exchange"
                 >
                   Exchange
@@ -117,7 +209,8 @@ exports[`SendVote > should show error if wrong mnemonic 1`] = `
               >
                 <a
                   class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
-                  href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/contacts"
+                  data-discover="true"
+                  href="/profiles/877b7695-8a55-4e16-a7ff-412113131856/contacts"
                   title="Contacts"
                 >
                   Contacts
@@ -128,7 +221,8 @@ exports[`SendVote > should show error if wrong mnemonic 1`] = `
               >
                 <a
                   class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
-                  href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/votes"
+                  data-discover="true"
+                  href="/profiles/877b7695-8a55-4e16-a7ff-412113131856/votes"
                   title="Votes"
                 >
                   Votes
@@ -1134,7 +1228,8 @@ exports[`SendVote > should show error step and go back 1`] = `
               >
                 <a
                   class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
-                  href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/dashboard"
+                  data-discover="true"
+                  href="/profiles/877b7695-8a55-4e16-a7ff-412113131856/dashboard"
                   title="Portfolio"
                 >
                   Portfolio
@@ -1145,7 +1240,8 @@ exports[`SendVote > should show error step and go back 1`] = `
               >
                 <a
                   class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
-                  href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/exchange"
+                  data-discover="true"
+                  href="/profiles/877b7695-8a55-4e16-a7ff-412113131856/exchange"
                   title="Exchange"
                 >
                   Exchange
@@ -1156,7 +1252,8 @@ exports[`SendVote > should show error step and go back 1`] = `
               >
                 <a
                   class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
-                  href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/contacts"
+                  data-discover="true"
+                  href="/profiles/877b7695-8a55-4e16-a7ff-412113131856/contacts"
                   title="Contacts"
                 >
                   Contacts
@@ -1167,7 +1264,8 @@ exports[`SendVote > should show error step and go back 1`] = `
               >
                 <a
                   class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
-                  href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/votes"
+                  data-discover="true"
+                  href="/profiles/877b7695-8a55-4e16-a7ff-412113131856/votes"
                   title="Votes"
                 >
                   Votes

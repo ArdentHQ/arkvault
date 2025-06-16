@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
-import { createHashHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
 import { AddressService } from "@/app/lib/mainsail/address.service";
@@ -22,7 +21,6 @@ let mockProfileNetworkReset: () => void;
 
 const formStepID = "SendTransfer__form-step";
 
-const history = createHashHistory();
 
 vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
@@ -47,14 +45,9 @@ describe("SendTransfer MultiPayment", () => {
 	it("should select two recipients", async () => {
 		const transferURL = `/profiles/${getDefaultProfileId()}/wallets/${wallet.id()}/send-transfer`;
 
-		navigate(transferURL);
-
 		render(
-			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
-				<SendTransfer />
-			</Route>,
+			<SendTransfer />,
 			{
-				history,
 				route: transferURL,
 			},
 		);

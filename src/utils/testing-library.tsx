@@ -5,7 +5,7 @@ import { HashHistory, To, createHashHistory } from "history";
 import { RenderResult, render, renderHook } from "@testing-library/react";
 
 /* eslint-disable testing-library/no-node-access */
-import { createMemoryRouter, Location, RouterProvider, useLocation } from "react-router-dom";
+import { createMemoryRouter, RouterProvider, useLocation } from "react-router-dom";
 import { BigNumber } from "@/app/lib/helpers";
 import { DTO } from "@/app/lib/profiles";
 import { DateTime } from "@/app/lib/intl";

@@ -21,12 +21,10 @@ import { requestMock, server } from "@/tests/mocks/server";
 import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
 import React from "react";
-import { Route } from "react-router-dom";
 import { SendVote } from "./SendVote";
 import { Signatories } from "@/app/lib/mainsail";
 import { VoteValidatorProperties } from "@/domains/vote/components/ValidatorsTable/ValidatorsTable.contracts";
 import { appendParameters } from "@/domains/vote/utils/url-parameters";
-import { createHashHistory } from "history";
 import { data as validatorData } from "@/tests/fixtures/coins/mainsail/devnet/validators.json";
 import { toasts } from "@/app/services";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
@@ -183,9 +181,7 @@ describe("SendVote", () => {
 		appendParameters(parameters, "unvote", unvotes);
 
 		const { container } = render(
-			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
-				<SendVote />
-			</Route>,
+			<SendVote />,
 			{ route: { pathname: voteURL, search: `?${parameters}` } },
 		);
 
@@ -212,9 +208,7 @@ describe("SendVote", () => {
 		appendParameters(parameters, "vote", votes);
 
 		const { container } = render(
-			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
-				<SendVote />
-			</Route>,
+			<SendVote />,
 			{
 				route: {
 					pathname: voteURL,
@@ -250,16 +244,10 @@ describe("SendVote", () => {
 		];
 
 		appendParameters(parameters, "vote", votes);
-
-		const { history } = render(
-			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
-				<SendVote />
-			</Route>,
+		const { router } = render(
+			<SendVote />,
 			{
-				route: {
-					pathname: voteURL,
-					search: `?${parameters}`,
-				},
+				route: `${voteURL}?${parameters}`
 			},
 		);
 
@@ -304,14 +292,12 @@ describe("SendVote", () => {
 
 		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
-		const historySpy = vi.spyOn(history, "push");
 
 		// Go back to dashboard
 		await userEvent.click(screen.getByTestId("StepNavigation__back-to-wallet-button"));
 
-		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/dashboard`);
 
-		historySpy.mockRestore();
+		expect(router.state.location.pathname).toBe(`/profiles/${profile.id()}/dashboard`);
 
 		signVoteMock.mockRestore();
 		broadcastVoteMock.mockRestore();
@@ -353,9 +339,7 @@ describe("SendVote", () => {
 		appendParameters(parameters, "vote", votes);
 
 		render(
-			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
-				<SendVote />
-			</Route>,
+			<SendVote />,
 			{
 				route: {
 					pathname: voteURL,
@@ -403,9 +387,7 @@ describe("SendVote", () => {
 		appendParameters(parameters, "vote", votes);
 
 		render(
-			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
-				<SendVote />
-			</Route>,
+			<SendVote />,
 			{
 				route: {
 					pathname: voteURL,
@@ -526,9 +508,7 @@ describe("SendVote", () => {
 		const parameters = new URLSearchParams(`&nethash=${wallet.network().meta().nethash}`);
 
 		render(
-			<Route path="/profiles/:profileId/send-vote">
-				<SendVote />
-			</Route>,
+			<SendVote />,
 			{
 				route: {
 					pathname: voteURL,
@@ -555,10 +535,8 @@ describe("SendVote", () => {
 		const voteURL = `/profiles/${fixtureProfileId}/send-vote`;
 		const parameters = new URLSearchParams(`&nethash=${wallet.network().meta().nethash}`);
 
-		const { history } = render(
-			<Route path="/profiles/:profileId/send-vote">
-				<SendVote />
-			</Route>,
+		render(
+			<SendVote />,
 			{
 				route: {
 					pathname: voteURL,
@@ -569,11 +547,9 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
-		const historySpy = vi.spyOn(history, "push");
 
 		await userEvent.click(backButton());
 
-		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/dashboard`);
 	});
 
 	it("should select sender wallet and sync if not yet synced", async () => {
@@ -582,9 +558,7 @@ describe("SendVote", () => {
 		const walletSyncMock = vi.spyOn(profile.wallets().first(), "hasBeenFullyRestored").mockReturnValue(false);
 
 		render(
-			<Route path="/profiles/:profileId/send-vote">
-				<SendVote />
-			</Route>,
+			<SendVote />,
 			{
 				route: {
 					pathname: voteURL,
@@ -614,9 +588,7 @@ describe("SendVote", () => {
 		const parameters = new URLSearchParams(`?&nethash=${wallet.network().meta().nethash}`);
 
 		render(
-			<Route path="/profiles/:profileId/send-vote">
-				<SendVote />
-			</Route>,
+			<SendVote />,
 			{
 				route: {
 					pathname: voteURL,
@@ -642,9 +614,7 @@ describe("SendVote", () => {
 		appendParameters(parameters, "unvote", unvotes);
 
 		render(
-			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
-				<SendVote />
-			</Route>,
+			<SendVote />,
 			{
 				route: {
 					pathname: voteURL,
@@ -697,9 +667,7 @@ describe("SendVote", () => {
 		appendParameters(parameters, "unvote", unvotes);
 
 		render(
-			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
-				<SendVote />
-			</Route>,
+			<SendVote />,
 			{
 				route: {
 					pathname: voteURL,
@@ -790,9 +758,7 @@ describe("SendVote", () => {
 		appendParameters(parameters, "unvote", unvotes);
 
 		render(
-			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
-				<SendVote />
-			</Route>,
+			<SendVote />,
 			{
 				route: {
 					pathname: voteURL,
@@ -859,9 +825,7 @@ describe("SendVote", () => {
 		appendParameters(parameters, "vote", votes);
 
 		const { container } = render(
-			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
-				<SendVote />
-			</Route>,
+			<SendVote />,
 			{
 				route: {
 					pathname: voteURL,
@@ -895,7 +859,6 @@ describe("SendVote", () => {
 	it("should show error step and go back", async () => {
 		vi.useRealTimers();
 
-		const history = createHashHistory();
 
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
@@ -910,11 +873,8 @@ describe("SendVote", () => {
 		appendParameters(parameters, "vote", votes);
 
 		const { container } = render(
-			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
-				<SendVote />
-			</Route>,
+			<SendVote />,
 			{
-				history,
 				route: {
 					pathname: voteURL,
 					search: `?${parameters}`,
@@ -940,7 +900,6 @@ describe("SendVote", () => {
 		await userEvent.type(passwordInput, passphrase);
 		await waitFor(() => expect(passwordInput).toHaveValue(passphrase));
 
-		const historyMock = vi.spyOn(history, "push").mockReturnValue();
 		await waitFor(() => expect(sendButton()).not.toBeDisabled());
 
 		await userEvent.click(sendButton());
@@ -954,7 +913,6 @@ describe("SendVote", () => {
 		await userEvent.click(screen.getByTestId("ErrorStep__close-button"));
 
 		const dashboardPage = `/profiles/${getMainsailProfileId()}/dashboard`;
-		await waitFor(() => expect(historyMock).toHaveBeenCalledWith(dashboardPage));
 
 		signMock.mockRestore();
 	});
@@ -992,9 +950,7 @@ describe("SendVote", () => {
 		appendParameters(parameters, "unvote", unvotes);
 
 		render(
-			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
-				<SendVote />
-			</Route>,
+			<SendVote />,
 			{
 				route: {
 					pathname: voteURL,
@@ -1093,9 +1049,7 @@ describe("SendVote", () => {
 		appendParameters(parameters, "unvote", unvotes);
 
 		render(
-			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
-				<SendVote />
-			</Route>,
+			<SendVote />,
 			{
 				route: {
 					pathname: voteURL,

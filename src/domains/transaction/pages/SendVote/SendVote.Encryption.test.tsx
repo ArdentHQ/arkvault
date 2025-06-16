@@ -17,7 +17,6 @@ import { requestMock, server } from "@/tests/mocks/server";
 
 import { Contracts } from "@/app/lib/profiles";
 import React from "react";
-import { Route } from "react-router-dom";
 import { SendVote } from "./SendVote";
 import { VoteValidatorProperties } from "@/domains/vote/components/ValidatorsTable/ValidatorsTable.contracts";
 import { appendParameters } from "@/domains/vote/utils/url-parameters";
@@ -45,7 +44,7 @@ vi.mock("@/utils/delay", () => ({
 
 vi.mock("@/utils/debounce", () => ({
 	debounceAsync: (callback: () => void) =>
-		async function (...arguments_: any) {
+		async function(...arguments_: any) {
 			return new Promise((resolve) => {
 				setTimeout(() => {
 					resolve(callback.apply(this, arguments_));
@@ -133,11 +132,9 @@ describe("SendVote", () => {
 		);
 
 		render(
-			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
-				<FormProvider {...form.current}>
-					<SendVote />
-				</FormProvider>
-			</Route>,
+			<FormProvider {...form.current}>
+				<SendVote />
+			</FormProvider>,
 			{
 				route: {
 					pathname: voteURL,

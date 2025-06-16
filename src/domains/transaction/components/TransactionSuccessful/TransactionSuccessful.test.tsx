@@ -1,6 +1,5 @@
 import { Contracts } from "@/app/lib/profiles";
 import React from "react";
-import { Route } from "react-router-dom";
 
 import { TransactionSuccessful } from "./TransactionSuccessful";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
@@ -60,9 +59,7 @@ describe("TransactionSuccessful", () => {
 		vi.spyOn(transaction, "usesMultiSignature").mockReturnValue(false);
 
 		render(
-			<Route path="/profiles/:profileId">
-				<TransactionSuccessful senderWallet={wallet} transaction={transaction} />
-			</Route>,
+			<TransactionSuccessful senderWallet={wallet} transaction={transaction} />,
 			{
 				route: `/profiles/${profile.id()}`,
 			},
@@ -89,9 +86,7 @@ describe("TransactionSuccessful", () => {
 		vi.spyOn(transaction, "usesMultiSignature").mockReturnValue(false);
 
 		render(
-			<Route path="/profiles/:profileId">
-				<TransactionSuccessful senderWallet={wallet} transaction={transaction} />
-			</Route>,
+			<TransactionSuccessful senderWallet={wallet} transaction={transaction} />,
 			{
 				route: `/profiles/${profile.id()}`,
 			},

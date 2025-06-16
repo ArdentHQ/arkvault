@@ -1,6 +1,5 @@
 import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
-import { createHashHistory } from "history";
 import React, { useEffect } from "react";
 import { Route } from "react-router-dom";
 import { PublicKeyService } from "@/app/lib/mainsail/public-key.service";
@@ -25,7 +24,6 @@ import walletFixture from "@/tests/fixtures/coins/mainsail/devnet/wallets/0x8A31
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
 let secondWallet: Contracts.IReadWriteWallet;
-const history = createHashHistory();
 let getVersionSpy: vi.SpyInstance;
 
 vi.mock("@/utils/delay", () => ({
@@ -37,8 +35,6 @@ const path = "/profiles/:profileId/wallets/:walletId/send-registration/:registra
 const renderPage = async (wallet: Contracts.IReadWriteWallet, type = "validatorRegistration") => {
 	const registrationURL = `/profiles/${profile.id()}/wallets/${wallet.id()}/send-registration/${type}`;
 
-	navigate(registrationURL);
-
 	const SendRegistrationWrapper = () => {
 		const { listenDevice } = useLedgerContext();
 
@@ -49,12 +45,9 @@ const renderPage = async (wallet: Contracts.IReadWriteWallet, type = "validatorR
 		return <SendRegistration />;
 	};
 
-	const utils = render(
-		<Route path={path}>
-			<SendRegistrationWrapper />
-		</Route>,
+	const result = render(
+		<SendRegistrationWrapper />,
 		{
-			history,
 			route: registrationURL,
 			withProviders: true,
 		},
@@ -62,10 +55,7 @@ const renderPage = async (wallet: Contracts.IReadWriteWallet, type = "validatorR
 
 	await expect(screen.findByTestId("Registration__form")).resolves.toBeVisible();
 
-	return {
-		...utils,
-		history,
-	};
+	return result;
 };
 
 const continueButton = () => screen.getByTestId("StepNavigation__continue-button");

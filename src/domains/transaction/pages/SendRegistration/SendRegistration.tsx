@@ -38,8 +38,6 @@ export const SendRegistration = () => {
 	const [registrationForm, setRegistrationForm] = useState<SendRegistrationForm>();
 	const [errorMessage, setErrorMessage] = useState<string | undefined>();
 
-	const registrationType = getUrlParameter(location.pathname, 3)
-
 	const { env } = useEnvironmentContext();
 	const activeProfile = useActiveProfile();
 	const { common } = useValidation();
@@ -63,6 +61,18 @@ export const SendRegistration = () => {
 	const isAuthenticationStep = activeTab === authenticationStep;
 
 	const activeWalletFromUrl = useActiveWalletWhenNeeded(false);
+
+	const registrationType = useMemo(() => {
+		try {
+			if (activeWalletFromUrl) {
+				return getUrlParameter(location.pathname, 5)
+			}
+
+			return getUrlParameter(location.pathname, 3)
+		} catch (error) {
+			return
+		}
+	}, [activeWalletFromUrl])
 
 	const { activeNetwork: network } = useActiveNetwork({ profile: activeProfile });
 

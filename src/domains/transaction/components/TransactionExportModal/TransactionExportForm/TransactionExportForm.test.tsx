@@ -26,7 +26,6 @@ describe("TransactionExportForm", () => {
 
 	beforeEach(async () => {
 		dashboardURL = `/profiles/${fixtureProfileId}/dashboard`;
-		navigate(dashboardURL);
 		profile = env.profiles().findById(getDefaultProfileId());
 
 		await syncValidators(profile);
