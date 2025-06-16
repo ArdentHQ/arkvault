@@ -63,7 +63,10 @@ export const ContactListItemMobile = ({ contact, onSend, options, onAction, hasB
 
 							<Dropdown
 								toggleContent={
-									<button type="button" className="text-theme-secondary-700 dim:text-theme-dim-200 flex">
+									<button
+										type="button"
+										className="text-theme-secondary-700 dim:text-theme-dim-200 flex"
+									>
 										<Icon name="EllipsisVerticalFilled" size="md" />
 									</button>
 								}
