@@ -13,18 +13,18 @@ exports[`SignMessage success step > should render success step in lg 1`] = `
           data-testid="DetailWrapper"
         >
           <div
-            class="border-x-theme-primary-400 bg-theme-secondary-100 border-l-2 px-3 py-2 sm:border-none sm:bg-transparent sm:p-0 dark:bg-black dark:sm:bg-transparent"
+            class="border-x-theme-primary-400 dim:border-x-theme-dim-navy-400 bg-theme-secondary-100 dim:bg-theme-dim-950 dim:sm:bg-transparent border-l-2 px-3 py-2 sm:border-none sm:bg-transparent sm:p-0 dark:bg-black dark:sm:bg-transparent"
             data-testid="DetailLabel"
           >
             <div
-              class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24 font-semibold text-md leading-5"
+              class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold text-md leading-5"
               data-testid="DetailLabelText"
             >
               Signing Address
             </div>
           </div>
           <div
-            class="border-theme-secondary-300 dark:border-theme-dark-700 overflow-hidden rounded-xl sm:border mt-0 sm:mt-2"
+            class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 overflow-hidden rounded-xl sm:border mt-0 sm:mt-2"
           >
             <div
               class="w-full p-3 break-words sm:px-6 sm:py-5 sm:in-[.condensed]:py-4"
@@ -33,7 +33,7 @@ exports[`SignMessage success step > should render success step in lg 1`] = `
                 class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
               >
                 <div
-                  class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 w-20 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
+                  class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 w-20 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
                 >
                   Address
                 </div>
@@ -71,7 +71,7 @@ exports[`SignMessage success step > should render success step in lg 1`] = `
                     type="button"
                   >
                     <div
-                      class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+                      class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
                     >
                       <div
                         style="height: 16px; width: 16px;"
@@ -112,18 +112,18 @@ exports[`SignMessage success step > should render success step in lg 1`] = `
           data-testid="DetailWrapper"
         >
           <div
-            class="border-x-theme-primary-400 bg-theme-secondary-100 border-l-2 px-3 py-2 sm:border-none sm:bg-transparent sm:p-0 dark:bg-black dark:sm:bg-transparent"
+            class="border-x-theme-primary-400 dim:border-x-theme-dim-navy-400 bg-theme-secondary-100 dim:bg-theme-dim-950 dim:sm:bg-transparent border-l-2 px-3 py-2 sm:border-none sm:bg-transparent sm:p-0 dark:bg-black dark:sm:bg-transparent"
             data-testid="DetailLabel"
           >
             <div
-              class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24 font-semibold text-md leading-5"
+              class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold text-md leading-5"
               data-testid="DetailLabelText"
             >
               Message
             </div>
           </div>
           <div
-            class="border-theme-secondary-300 dark:border-theme-dark-700 overflow-hidden rounded-xl sm:border mt-0 sm:mt-2"
+            class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 overflow-hidden rounded-xl sm:border mt-0 sm:mt-2"
           >
             <div
               class="w-full p-3 break-words sm:px-6 sm:py-5 sm:in-[.condensed]:py-4"
@@ -142,7 +142,7 @@ exports[`SignMessage success step > should render success step in lg 1`] = `
           class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
         >
           <div
-            class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24 font-semibold text-sm leading-[17px] sm:text-base sm:leading-5"
+            class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold text-sm leading-[17px] sm:text-base sm:leading-5"
             data-testid="DetailLabelText"
           >
             Signature (JSON)
@@ -178,18 +178,18 @@ exports[`SignMessage success step > should render success step in xs 1`] = `
           data-testid="DetailWrapper"
         >
           <div
-            class="border-x-theme-primary-400 bg-theme-secondary-100 border-l-2 px-3 py-2 sm:border-none sm:bg-transparent sm:p-0 dark:bg-black dark:sm:bg-transparent"
+            class="border-x-theme-primary-400 dim:border-x-theme-dim-navy-400 bg-theme-secondary-100 dim:bg-theme-dim-950 dim:sm:bg-transparent border-l-2 px-3 py-2 sm:border-none sm:bg-transparent sm:p-0 dark:bg-black dark:sm:bg-transparent"
             data-testid="DetailLabel"
           >
             <div
-              class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24 font-semibold text-md leading-5"
+              class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold text-md leading-5"
               data-testid="DetailLabelText"
             >
               Signing Address
             </div>
           </div>
           <div
-            class="border-theme-secondary-300 dark:border-theme-dark-700 overflow-hidden rounded-xl sm:border mt-0 sm:mt-2"
+            class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 overflow-hidden rounded-xl sm:border mt-0 sm:mt-2"
           >
             <div
               class="w-full p-3 break-words sm:px-6 sm:py-5 sm:in-[.condensed]:py-4"
@@ -198,7 +198,7 @@ exports[`SignMessage success step > should render success step in xs 1`] = `
                 class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
               >
                 <div
-                  class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 w-20 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
+                  class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 w-20 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
                 >
                   Address
                 </div>
@@ -236,7 +236,7 @@ exports[`SignMessage success step > should render success step in xs 1`] = `
                     type="button"
                   >
                     <div
-                      class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+                      class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
                     >
                       <div
                         style="height: 16px; width: 16px;"
@@ -277,18 +277,18 @@ exports[`SignMessage success step > should render success step in xs 1`] = `
           data-testid="DetailWrapper"
         >
           <div
-            class="border-x-theme-primary-400 bg-theme-secondary-100 border-l-2 px-3 py-2 sm:border-none sm:bg-transparent sm:p-0 dark:bg-black dark:sm:bg-transparent"
+            class="border-x-theme-primary-400 dim:border-x-theme-dim-navy-400 bg-theme-secondary-100 dim:bg-theme-dim-950 dim:sm:bg-transparent border-l-2 px-3 py-2 sm:border-none sm:bg-transparent sm:p-0 dark:bg-black dark:sm:bg-transparent"
             data-testid="DetailLabel"
           >
             <div
-              class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24 font-semibold text-md leading-5"
+              class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold text-md leading-5"
               data-testid="DetailLabelText"
             >
               Message
             </div>
           </div>
           <div
-            class="border-theme-secondary-300 dark:border-theme-dark-700 overflow-hidden rounded-xl sm:border mt-0 sm:mt-2"
+            class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 overflow-hidden rounded-xl sm:border mt-0 sm:mt-2"
           >
             <div
               class="w-full p-3 break-words sm:px-6 sm:py-5 sm:in-[.condensed]:py-4"
@@ -307,7 +307,7 @@ exports[`SignMessage success step > should render success step in xs 1`] = `
           class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
         >
           <div
-            class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24 font-semibold text-sm leading-[17px] sm:text-base sm:leading-5"
+            class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold text-sm leading-[17px] sm:text-base sm:leading-5"
             data-testid="DetailLabelText"
           >
             Signature (JSON)

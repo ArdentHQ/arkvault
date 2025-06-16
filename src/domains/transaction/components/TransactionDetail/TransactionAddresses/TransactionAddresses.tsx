@@ -49,7 +49,7 @@ export const TransactionAddresses = ({
 					walletNameClass="text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
 					wrapperClass="justify-end sm:justify-start"
 					addressClass={cn("text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4", {
-						"text-theme-secondary-500 dark:text-theme-secondary-700 ": !!alias,
+						"text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200": !!alias,
 					})}
 				/>
 			</div>
@@ -62,7 +62,7 @@ export const TransactionAddresses = ({
 						address={interactedWith}
 						showCopyButton
 						wrapperClass="justify-end sm:justify-start"
-						addressClass="text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4"
+						addressClass="text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 dim:text-theme-dim-200"
 					/>
 				</div>
 			)}
