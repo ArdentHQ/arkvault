@@ -170,7 +170,7 @@ export const Contacts: FC = () => {
 			searchPlaceholder={t("CONTACTS.CONTACTS_PAGE.SEARCH_PLACEHOLDER")}
 			extra={
 				<Button
-					className="text-theme-primary-600 dark:text-theme-primary-400 dark:hover:text-theme-primary-300 hover:text-theme-primary-700 mr-6 hidden h-8 py-0 leading-none sm:block"
+					className="text-theme-primary-600 dark:text-theme-primary-400 dark:hover:text-theme-primary-300 hover:text-theme-primary-700 mr-6 hidden h-8 py-0 leading-none sm:block dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700"
 					data-testid="contacts__add-contact-btn"
 					onClick={() => setCreateIsOpen(true)}
 					variant="primary-transparent"
@@ -203,9 +203,9 @@ export const Contacts: FC = () => {
 				<ContactsHeader />
 
 				<Section className="py-0">
-					<div className="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center rounded border sm:hidden">
+					<div className="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center rounded border sm:hidden dim:border-theme-dim-700">
 						<Button
-							className="text-theme-primary-600 dark:text-theme-primary-400 dark:hover:text-theme-primary-300 hover:text-theme-primary-700 h-12 w-full"
+							className="text-theme-primary-600 dark:text-theme-primary-400 dark:hover:text-theme-primary-300 hover:text-theme-primary-700 h-12 w-full dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700"
 							data-testid="contacts__add-contact-btn-mobile"
 							onClick={() => setCreateIsOpen(true)}
 							variant="primary-transparent"
