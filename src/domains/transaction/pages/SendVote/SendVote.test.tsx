@@ -180,7 +180,7 @@ describe("SendVote", () => {
 		const unvotes: VoteValidatorProperties[] = [{ amount: 10, validatorAddress: validatorData[1].address }];
 		appendParameters(parameters, "unvote", unvotes);
 
-		const { container } = render(
+		const { container, router } = render(
 			<SendVote />,
 			{ route: { pathname: voteURL, search: `?${parameters}` } },
 		);
@@ -194,7 +194,8 @@ describe("SendVote", () => {
 
 		await userEvent.click(backButton());
 
-		expect(container).toMatchSnapshot();
+		expect(router.state.location.pathname).toBe(`/profiles/${fixtureProfileId}/wallets/${wallet.id()}/votes`);
+
 	});
 
 	it("should return to the select a validator page to unvote/vote", async () => {
@@ -207,7 +208,7 @@ describe("SendVote", () => {
 		const votes: VoteValidatorProperties[] = [{ amount: 10, validatorAddress: validatorData[0].address }];
 		appendParameters(parameters, "vote", votes);
 
-		const { container } = render(
+		const { container, router } = render(
 			<SendVote />,
 			{
 				route: {
@@ -224,8 +225,7 @@ describe("SendVote", () => {
 		await waitFor(() => expect(backButton()).not.toBeDisabled());
 
 		await userEvent.click(backButton());
-
-		expect(container).toMatchSnapshot();
+		expect(router.state.location.pathname).toBe(`/profiles/${fixtureProfileId}/wallets/${wallet.id()}/votes`);
 	});
 
 	it("should send a vote transaction", async () => {
