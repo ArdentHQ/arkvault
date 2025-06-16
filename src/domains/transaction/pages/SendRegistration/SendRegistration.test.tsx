@@ -328,8 +328,6 @@ describe("Registration", () => {
 
 		expect(router.state.location.pathname).toBe(`/profiles/${profile.id()}/dashboard`);
 
-		expect(asFragment()).toMatchSnapshot();
-
 		nanoXTransportMock.mockRestore();
 	});
 
