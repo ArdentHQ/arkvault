@@ -49,9 +49,9 @@ export const TransactionDetailContent = ({
 	const { recipients } = useTransactionRecipients({ profile, transaction });
 
 	const labelClassName = cn({
-		"min-w-[138px]": transaction.isValidatorRegistration(),
 		"min-w-24": !transaction.isVoteCombination() && !transaction.isValidatorRegistration(),
 		"min-w-32": transaction.isVoteCombination() && !transaction.isValidatorRegistration(),
+		"min-w-[138px]": transaction.isValidatorRegistration(),
 	});
 
 	return (

@@ -28,8 +28,8 @@ export const TransactionType = ({
 	const isValidatorRegistrationTransaction = transaction.isValidatorRegistration();
 
 	const labelClassName = cn({
-		"min-w-[138px]": isValidatorRegistrationTransaction,
 		"min-w-24": !isValidatorRegistrationTransaction,
+		"min-w-[138px]": isValidatorRegistrationTransaction,
 	});
 
 	return (
