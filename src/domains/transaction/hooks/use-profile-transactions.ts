@@ -92,7 +92,6 @@ const getOrderByStr = ({ column, desc }: SortBy): string => {
 };
 
 export const useProfileTransactions = ({ profile, wallets, limit = 30 }: ProfileTransactionsProperties) => {
-	const lastQuery = useRef<string>(undefined);
 	const isMounted = useRef(true);
 	const cursor = useRef(1);
 	const LIMIT = limit;
@@ -138,56 +137,47 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 	const selectedWalletAddresses = wallets.map((wallet) => wallet.address()).join("-");
 	useEffect(() => {
 		const loadTransactions = async () => {
-			const response = await fetchTransactions({
-				flush: true,
-				mode: activeMode!,
-				transactionType: activeTransactionType,
-				transactionTypes: selectedTransactionTypes,
-				wallets,
-			});
+			try {
+				const response = await fetchTransactions({
+					flush: true,
+					mode: activeMode!,
+					transactionType: activeTransactionType,
+					transactionTypes: selectedTransactionTypes,
+					wallets,
+				});
 
-			const isAborted = () => {
-				const activeQuery = JSON.stringify({ activeMode, activeTransactionType });
-				return activeQuery !== lastQuery.current;
-			};
+				/* istanbul ignore next -- @preserve */
+				if (!isMounted.current) {
+					return;
+				}
 
-			if (isAborted()) {
-				return;
+				const addresses = response
+					.items()
+					.flatMap((transaction) => [
+						transaction.from(),
+						transaction.to(),
+						...transaction.recipients().map(({ address }) => address),
+					])
+					.filter(Boolean); // This is to filter out null values, for example a contract deployment recipient
+
+				const uniqueAddresses = [...new Set(addresses)] as string[];
+
+				const networks = wallets.map((wallet) => wallet.network());
+
+				await syncOnChainUsernames({ addresses: uniqueAddresses, networks, profile });
+
+				const items = filterTransactions({ transactions: response });
+
+				setState((state) => ({
+					...state,
+					hasMore: hasMorePages(items.length, response.hasMorePages()),
+					isLoadingTransactions: false,
+					transactions: items,
+				}));
+			} catch (error) {
+				console.log({ error })
 			}
-
-			/* istanbul ignore next -- @preserve */
-			if (!isMounted.current) {
-				return;
-			}
-
-			const addresses = response
-				.items()
-				.flatMap((transaction) => [
-					transaction.from(),
-					transaction.to(),
-					...transaction.recipients().map(({ address }) => address),
-				])
-				.filter(Boolean); // This is to filter out null values, for example a contract deployment recipient
-
-			const uniqueAddresses = [...new Set(addresses)] as string[];
-
-			const networks = wallets.map((wallet) => wallet.network());
-
-			await syncOnChainUsernames({ addresses: uniqueAddresses, networks, profile });
-
-			const items = filterTransactions({ transactions: response });
-
-			setState((state) => ({
-				...state,
-				hasMore: hasMorePages(items.length, response.hasMorePages()),
-				isLoadingTransactions: false,
-				transactions: items,
-			}));
 		};
-
-		if (!lastQuery.current) {
-			return;
-		}
 
 		delay(() => loadTransactions(), 0);
 
@@ -204,7 +194,6 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 			timestamp,
 			selectedTransactionTypes: newTransactionTypes,
 		}: TransactionFilters) => {
-			lastQuery.current = JSON.stringify({ activeMode, activeTransactionType });
 
 			const hasWallets = wallets.length > 0;
 			cursor.current = 1;

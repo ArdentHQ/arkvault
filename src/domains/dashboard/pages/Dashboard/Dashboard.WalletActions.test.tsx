@@ -1,9 +1,7 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
-import { createHashHistory } from "history";
 import React from "react";
-import { Route } from "react-router-dom";
 
 import { Dashboard } from "./Dashboard";
 import * as useRandomNumberHook from "@/app/hooks/use-random-number";
@@ -16,7 +14,6 @@ import {
 } from "@/utils/testing-library";
 import { expect } from "vitest";
 
-const history = createHashHistory();
 let profile: Contracts.IProfile;
 let resetProfileNetworksMock: () => void;
 
@@ -39,7 +36,6 @@ describe("Dashboard", () => {
 
 	beforeEach(() => {
 		dashboardURL = `/profiles/${fixtureProfileId}/dashboard`;
-		navigate(dashboardURL);
 
 		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 	});
@@ -51,11 +47,8 @@ describe("Dashboard", () => {
 	it("should show create address side panel", async () => {
 		const onCreateAddress = vi.fn();
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<Dashboard onCreateAddress={onCreateAddress} />
-			</Route>,
+			<Dashboard onCreateAddress={onCreateAddress} />,
 			{
-				history,
 				route: dashboardURL,
 			},
 		);
@@ -68,11 +61,8 @@ describe("Dashboard", () => {
 	it("should show import wallet panel", async () => {
 		const onImportAddress = vi.fn();
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<Dashboard onImportAddress={onImportAddress} />
-			</Route>,
+			<Dashboard onImportAddress={onImportAddress} />,
 			{
-				history,
 				route: dashboardURL,
 			},
 		);
