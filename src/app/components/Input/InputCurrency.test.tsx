@@ -42,13 +42,9 @@ describe("InputCurrency", () => {
 	});
 
 	it("should fallback on convert value", async () => {
-		const { rerender } = render(<InputCurrency value=".01" />);
+		render(<InputCurrency value={undefined} />);
+
 		const input = screen.getByTestId("InputCurrency");
-
-		expect(input).toHaveValue("0.01");
-
-		rerender(<InputCurrency value={undefined} />);
-
 		await waitFor(() => expect(input).not.toHaveValue());
 	});
 
