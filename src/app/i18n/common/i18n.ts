@@ -412,6 +412,7 @@ export const translations = {
 	TRANSACTION_HISTORY: "Transaction History",
 	TRANSACTION_SUMMARY: "Transaction Summary",
 	TRANSACTION_TYPE: "Transaction Type",
+	LOCKED_AMOUNT: "Locked Amount",
 	TRANSFER: "Transfer",
 	TRANSFERS: "Transfers",
 	TX_ID: "Tx ID",

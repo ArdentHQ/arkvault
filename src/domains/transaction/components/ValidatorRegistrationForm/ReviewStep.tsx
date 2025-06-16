@@ -10,7 +10,11 @@ import { ThemeIcon } from "@/app/components/Icon";
 import { TransactionAddresses } from "@/domains/transaction/components/TransactionDetail";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { FeeField } from "@/domains/transaction/components/FeeField";
-
+import { Amount } from "@/app/components/Amount";
+import { configManager } from "@/app/lib/mainsail";
+import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
+import { BigNumber } from "@/app/lib/helpers";
+import { UnitConverter } from "@arkecosystem/typescript-crypto";
 export const ReviewStep = ({
 	wallet,
 	profile,
@@ -25,6 +29,21 @@ export const ReviewStep = ({
 	const { validatorPublicKey } = getValues();
 
 	const feeTransactionData = useMemo(() => ({ validatorPublicKey }), [validatorPublicKey]);
+
+	const isTestnet = false;
+
+	const validatorRegistrationFee = BigNumber.make(
+		UnitConverter.formatUnits(
+			BigNumber.make(configManager.getMilestone()["validatorRegistrationFee"] ?? 0).toString(),
+			"ARK",
+		),
+	).toNumber();
+
+	const ticker = wallet.currency();
+	const exchangeTicker = profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency) as string;
+	const { convert } = useExchangeRate({ exchangeTicker, profile, ticker });
+
+	const convertedAmount = isTestnet ? 0 : convert(validatorRegistrationFee);
 
 	useEffect(() => {
 		unregister("mnemonic");
@@ -77,6 +96,35 @@ export const ReviewStep = ({
 						</div>
 					</div>
 				</DetailWrapper>
+
+				<div className="space-y-3 sm:space-y-2">
+					<div className="mx-3 sm:mx-0">
+						<DetailWrapper label={t("COMMON.TRANSACTION_SUMMARY")} className="rounded-xl">
+							<div className="flex flex-col gap-3">
+								<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
+									<DetailTitle className="w-auto sm:min-w-40">
+										{t("COMMON.LOCKED_AMOUNT")}
+									</DetailTitle>
+
+									<div className="flex flex-row items-center gap-2">
+										<Amount
+											ticker={ticker}
+											value={validatorRegistrationFee}
+											className="font-semibold"
+										/>
+
+										{!isTestnet && !!convertedAmount && !!exchangeTicker && (
+											<div className="text-theme-secondary-700 font-semibold">
+												(~
+												<Amount ticker={exchangeTicker} value={convertedAmount} />)
+											</div>
+										)}
+									</div>
+								</div>
+							</div>
+						</DetailWrapper>
+					</div>
+				</div>
 
 				<div data-testid="DetailWrapper">
 					<div className="mt-0 p-3 sm:p-0">
