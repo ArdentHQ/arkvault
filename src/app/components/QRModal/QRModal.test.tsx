@@ -106,6 +106,11 @@ describe("QRModal", () => {
 
 		QrReader.mockImplementation(({ onResult }: { onResult: (result: any, error?: Error | null) => void }) => {
 			if (onResult) {
+				// Trigger multiple times greater than ERROR_THRESHOLD to throw an error.
+				onResult(undefined, new Error("other error"));
+				onResult(undefined, new Error("other error"));
+				onResult(undefined, new Error("other error"));
+				onResult(undefined, new Error("other error"));
 				onResult(undefined, new Error("other error"));
 			}
 
@@ -114,9 +119,6 @@ describe("QRModal", () => {
 
 		const { rerender } = render(<QRModal isOpen={true} onCancel={vi.fn()} onRead={vi.fn()} />);
 
-		rerender(<QRModal isOpen={true} onCancel={vi.fn()} onRead={vi.fn()} />);
-		rerender(<QRModal isOpen={true} onCancel={vi.fn()} onRead={vi.fn()} />);
-		rerender(<QRModal isOpen={true} onCancel={vi.fn()} onRead={vi.fn()} />);
 		rerender(<QRModal isOpen={true} onCancel={vi.fn()} onRead={vi.fn()} />);
 
 		await waitFor(() => {
