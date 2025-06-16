@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 import { StepHeader } from "@/app/components/StepHeader";
 import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
 import { Divider } from "@/app/components/Divider";
-import { ThemeIcon } from "@/app/components/Icon";
+import { Icon, ThemeIcon } from "@/app/components/Icon";
 import { TransactionAddresses } from "@/domains/transaction/components/TransactionDetail";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { FeeField } from "@/domains/transaction/components/FeeField";
@@ -15,6 +15,7 @@ import { configManager } from "@/app/lib/mainsail";
 import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
 import { BigNumber } from "@/app/lib/helpers";
 import { UnitConverter } from "@arkecosystem/typescript-crypto";
+import { Tooltip } from "@/app/components/Tooltip";
 export const ReviewStep = ({
 	wallet,
 	profile,
@@ -119,6 +120,12 @@ export const ReviewStep = ({
 												<Amount ticker={exchangeTicker} value={convertedAmount} />)
 											</div>
 										)}
+
+										<Tooltip content={t("TRANSACTION.REVIEW_STEP.AMOUNT_LOCKED_TOOLTIP")}>
+											<div className="bg-theme-primary-100 dark:bg-theme-dark-800 dark:text-theme-dark-50 text-theme-primary-600 flex h-5 w-5 items-center justify-center rounded-full">
+												<Icon name="QuestionMarkSmall" size="sm" />
+											</div>
+										</Tooltip>
 									</div>
 								</div>
 							</div>
