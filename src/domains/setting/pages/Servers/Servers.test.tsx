@@ -1,7 +1,6 @@
 import { Networks } from "@/app/lib/mainsail";
 import { Contracts } from "@/app/lib/profiles";
 import React from "react";
-import { Route } from "react-router-dom";
 import userEvent from "@testing-library/user-event";
 import { expect, vi } from "vitest";
 import ServersSettings from "@/domains/setting/pages/Servers";
@@ -15,6 +14,8 @@ import {
 	within,
 	renderResponsiveWithRoute,
 	mockProfileWithPublicAndTestNetworks,
+	Providers,
+	renderWithoutRouter,
 } from "@/utils/testing-library";
 import { translations } from "@/app/i18n/common/i18n";
 import { server, requestMock } from "@/tests/mocks/server";
@@ -30,6 +31,11 @@ const txApiUrl = "https://dwallets-evm.mainsailhq.com/tx/api";
 const evmApiUrl = "https://dwallets-evm.mainsailhq.com/evm/api";
 
 const customServerName = 'Mainsail Devnet "Peer" #1';
+
+vi.mock("@/app/contexts/Navigation/NavigationBlocking", () => ({
+	NavigationBlocker: () => <div />,
+	NavigationBlockingProvider: ({ children }: { children: React.ReactNode }) => <>{children}</>,
+}));
 
 const networksStub: any = {
 	mainsail: {
@@ -204,9 +210,7 @@ describe("Servers Settings", () => {
 
 	it("should render servers settings", () => {
 		const { container, asFragment } = render(
-			<Route path="/profiles/:profileId/settings/servers">
-				<ServersSettings />
-			</Route>,
+			<ServersSettings />,
 			{
 				route: `/profiles/${profile.id()}/settings/servers`,
 			},
@@ -225,9 +229,7 @@ describe("Servers Settings", () => {
 		const settingsSetSpy = vi.spyOn(profile.settings(), "set");
 
 		const { container } = render(
-			<Route path="/profiles/:profileId/settings/servers">
-				<ServersSettings />
-			</Route>,
+			<ServersSettings />,
 			{
 				route: `/profiles/${profile.id()}/settings/servers`,
 			},
@@ -248,9 +250,7 @@ describe("Servers Settings", () => {
 
 	it("shows the modal for adding new server", async () => {
 		const { container } = render(
-			<Route path="/profiles/:profileId/settings/servers">
-				<ServersSettings />
-			</Route>,
+			<ServersSettings />,
 			{
 				route: `/profiles/${profile.id()}/settings/servers`,
 			},
@@ -266,9 +266,7 @@ describe("Servers Settings", () => {
 	describe("default peers", () => {
 		it("should render node statuses", () => {
 			const { container } = render(
-				<Route path="/profiles/:profileId/settings/servers">
-					<ServersSettings />
-				</Route>,
+				<ServersSettings />,
 				{
 					route: `/profiles/${profile.id()}/settings/servers`,
 				},
@@ -296,9 +294,7 @@ describe("Servers Settings", () => {
 				mockRequests();
 
 				const { container } = render(
-					<Route path="/profiles/:profileId/settings/servers">
-						<ServersSettings />
-					</Route>,
+					<ServersSettings />,
 					{
 						route: `/profiles/${profile.id()}/settings/servers`,
 					},
@@ -330,9 +326,7 @@ describe("Servers Settings", () => {
 					});
 
 				const { container } = render(
-					<Route path="/profiles/:profileId/settings/servers">
-						<ServersSettings />
-					</Route>,
+					<ServersSettings />,
 					{
 						route: `/profiles/${profile.id()}/settings/servers`,
 					},
@@ -369,9 +363,7 @@ describe("Servers Settings", () => {
 				server.use(requestMock(publicBaseUrl, undefined, { status: 404 }));
 
 				const { container } = render(
-					<Route path="/profiles/:profileId/settings/servers">
-						<ServersSettings />
-					</Route>,
+					<ServersSettings />,
 					{
 						route: `/profiles/${profile.id()}/settings/servers`,
 					},
@@ -403,9 +395,7 @@ describe("Servers Settings", () => {
 				server.use(requestMock(publicBaseUrl, undefined, { status: 404 }));
 
 				render(
-					<Route path="/profiles/:profileId/settings/servers">
-						<ServersSettings />
-					</Route>,
+					<ServersSettings />,
 					{
 						route: `/profiles/${profile.id()}/settings/servers`,
 					},
@@ -435,9 +425,7 @@ describe("Servers Settings", () => {
 				server.use(requestMock(evmApiUrl, undefined, { status: 404 }));
 
 				render(
-					<Route path="/profiles/:profileId/settings/servers">
-						<ServersSettings />
-					</Route>,
+					<ServersSettings />,
 					{
 						route: `/profiles/${profile.id()}/settings/servers`,
 					},
@@ -465,9 +453,7 @@ describe("Servers Settings", () => {
 				server.use(requestMock(publicBaseUrl, "invalid json"));
 
 				const { container } = render(
-					<Route path="/profiles/:profileId/settings/servers">
-						<ServersSettings />
-					</Route>,
+					<ServersSettings />,
 					{
 						route: `/profiles/${profile.id()}/settings/servers`,
 					},
@@ -509,9 +495,7 @@ describe("Servers Settings", () => {
 				const serverPushSpy = vi.spyOn(profile.hosts(), "push");
 
 				render(
-					<Route path="/profiles/:profileId/settings/servers">
-						<ServersSettings />
-					</Route>,
+					<ServersSettings />,
 					{
 						route: `/profiles/${profile.id()}/settings/servers`,
 					},
@@ -540,9 +524,7 @@ describe("Servers Settings", () => {
 				server.use(requestMock("https://127.0.0.1", peerResponse));
 
 				render(
-					<Route path="/profiles/:profileId/settings/servers">
-						<ServersSettings />
-					</Route>,
+					<ServersSettings />,
 					{
 						route: `/profiles/${profile.id()}/settings/servers`,
 					},
@@ -566,9 +548,7 @@ describe("Servers Settings", () => {
 				const hostsSpy = vi.spyOn(profile.hosts(), "all").mockReturnValue({ mainsail: [] });
 
 				render(
-					<Route path="/profiles/:profileId/settings/servers">
-						<ServersSettings />
-					</Route>,
+					<ServersSettings />,
 					{
 						route: `/profiles/${profile.id()}/settings/servers`,
 					},
@@ -617,9 +597,7 @@ describe("Servers Settings", () => {
 				server.use(requestMock(publicApiUrl, { foo: "bar" }));
 
 				render(
-					<Route path="/profiles/:profileId/settings/servers">
-						<ServersSettings />
-					</Route>,
+					<ServersSettings />,
 					{
 						route: `/profiles/${profile.id()}/settings/servers`,
 					},
@@ -642,9 +620,7 @@ describe("Servers Settings", () => {
 				const networkSpy = vi.spyOn(network, "evaluateUrl").mockReturnValue(false);
 
 				render(
-					<Route path="/profiles/:profileId/settings/servers">
-						<ServersSettings />
-					</Route>,
+					<ServersSettings />,
 					{
 						route: `/profiles/${profile.id()}/settings/servers`,
 					},
@@ -665,9 +641,7 @@ describe("Servers Settings", () => {
 				server.use(requestMock(publicApiUrl, "invalid response"));
 
 				render(
-					<Route path="/profiles/:profileId/settings/servers">
-						<ServersSettings />
-					</Route>,
+					<ServersSettings />,
 					{
 						route: `/profiles/${profile.id()}/settings/servers`,
 					},
@@ -686,9 +660,7 @@ describe("Servers Settings", () => {
 				server.use(requestMock(publicApiUrl, undefined, { status: 500 }));
 
 				render(
-					<Route path="/profiles/:profileId/settings/servers">
-						<ServersSettings />
-					</Route>,
+					<ServersSettings />,
 					{
 						route: `/profiles/${profile.id()}/settings/servers`,
 					},
@@ -709,9 +681,7 @@ describe("Servers Settings", () => {
 				"http://127.0.0.1/api/", // Valid IP URL but ends with a slash
 			])("invalidates the address field if invalid host passed", async (address) => {
 				render(
-					<Route path="/profiles/:profileId/settings/servers">
-						<ServersSettings />
-					</Route>,
+					<ServersSettings />,
 					{
 						route: `/profiles/${profile.id()}/settings/servers`,
 					},
@@ -748,9 +718,7 @@ describe("Servers Settings", () => {
 
 		it("should render custom servers", () => {
 			const { asFragment } = render(
-				<Route path="/profiles/:profileId/settings/servers">
-					<ServersSettings />
-				</Route>,
+				<ServersSettings />,
 				{
 					route: `/profiles/${profile.id()}/settings/servers`,
 				},
@@ -769,9 +737,7 @@ describe("Servers Settings", () => {
 
 		it("should show an error if the server host already exists", async () => {
 			render(
-				<Route path="/profiles/:profileId/settings/servers">
-					<ServersSettings />
-				</Route>,
+				<ServersSettings />,
 				{
 					route: `/profiles/${profile.id()}/settings/servers`,
 				},
@@ -794,9 +760,7 @@ describe("Servers Settings", () => {
 			profileHostsSpy = vi.spyOn(profile.hosts(), "all").mockReturnValue(networksStub);
 
 			render(
-				<Route path="/profiles/:profileId/settings/servers">
-					<ServersSettings />
-				</Route>,
+				<ServersSettings />,
 				{
 					route: `/profiles/${profile.id()}/settings/servers`,
 				},
@@ -827,9 +791,7 @@ describe("Servers Settings", () => {
 
 		it("should render customs servers in xs", () => {
 			const { asFragment } = renderResponsiveWithRoute(
-				<Route path="/profiles/:profileId/settings/servers">
-					<ServersSettings />
-				</Route>,
+				<ServersSettings />,
 				"xs",
 				{
 					route: `/profiles/${profile.id()}/settings/servers`,
@@ -849,9 +811,7 @@ describe("Servers Settings", () => {
 
 		it("can expand a custom servers accordion in xs", async () => {
 			renderResponsiveWithRoute(
-				<Route path="/profiles/:profileId/settings/servers">
-					<ServersSettings />
-				</Route>,
+				<ServersSettings />,
 				"xs",
 				{
 					route: `/profiles/${profile.id()}/settings/servers`,
@@ -867,9 +827,7 @@ describe("Servers Settings", () => {
 
 		it("can check servers accordion in mobile", async () => {
 			renderResponsiveWithRoute(
-				<Route path="/profiles/:profileId/settings/servers">
-					<ServersSettings />
-				</Route>,
+				<ServersSettings />,
 				"xs",
 				{
 					route: `/profiles/${profile.id()}/settings/servers`,
@@ -893,9 +851,7 @@ describe("Servers Settings", () => {
 
 		it("can edit servers in mobile", async () => {
 			renderResponsiveWithRoute(
-				<Route path="/profiles/:profileId/settings/servers">
-					<ServersSettings />
-				</Route>,
+				<ServersSettings />,
 				"xs",
 				{
 					route: `/profiles/${profile.id()}/settings/servers`,
@@ -913,9 +869,7 @@ describe("Servers Settings", () => {
 
 		it("can delete servers in mobile", async () => {
 			renderResponsiveWithRoute(
-				<Route path="/profiles/:profileId/settings/servers">
-					<ServersSettings />
-				</Route>,
+				<ServersSettings />,
 				"xs",
 				{
 					route: `/profiles/${profile.id()}/settings/servers`,
@@ -935,9 +889,7 @@ describe("Servers Settings", () => {
 			const refreshPersistMock = vi.spyOn(env, "persist").mockImplementation(vi.fn());
 
 			renderResponsiveWithRoute(
-				<Route path="/profiles/:profileId/settings/servers">
-					<ServersSettings />
-				</Route>,
+				<ServersSettings />,
 				"xs",
 				{
 					route: `/profiles/${profile.id()}/settings/servers`,
@@ -961,9 +913,7 @@ describe("Servers Settings", () => {
 
 		it("should show status ok after ping the servers", async () => {
 			const { asFragment } = render(
-				<Route path="/profiles/:profileId/settings/servers">
-					<ServersSettings />
-				</Route>,
+				<ServersSettings />,
 				{
 					route: `/profiles/${profile.id()}/settings/servers`,
 				},
@@ -980,9 +930,7 @@ describe("Servers Settings", () => {
 
 		it("can check an online server", async () => {
 			render(
-				<Route path="/profiles/:profileId/settings/servers">
-					<ServersSettings />
-				</Route>,
+				<ServersSettings />,
 				{
 					route: `/profiles/${profile.id()}/settings/servers`,
 				},
@@ -1001,9 +949,7 @@ describe("Servers Settings", () => {
 
 		it("should show status ok after ping the servers on mobile", async () => {
 			const { asFragment } = renderResponsiveWithRoute(
-				<Route path="/profiles/:profileId/settings/servers">
-					<ServersSettings />
-				</Route>,
+				<ServersSettings />,
 				"xs",
 				{
 					route: `/profiles/${profile.id()}/settings/servers`,
@@ -1021,9 +967,7 @@ describe("Servers Settings", () => {
 
 		it("should show status ok after ping the servers on mobile when expanded", async () => {
 			const { asFragment } = renderResponsiveWithRoute(
-				<Route path="/profiles/:profileId/settings/servers">
-					<ServersSettings />
-				</Route>,
+				<ServersSettings />,
 				"xs",
 				{
 					route: `/profiles/${profile.id()}/settings/servers`,
@@ -1051,9 +995,7 @@ describe("Servers Settings", () => {
 			});
 
 			const { asFragment } = render(
-				<Route path="/profiles/:profileId/settings/servers">
-					<ServersSettings />
-				</Route>,
+				<ServersSettings />,
 				{
 					route: `/profiles/${profile.id()}/settings/servers`,
 				},
@@ -1081,9 +1023,7 @@ describe("Servers Settings", () => {
 
 		it("can delete a server", async () => {
 			render(
-				<Route path="/profiles/:profileId/settings/servers">
-					<ServersSettings />
-				</Route>,
+				<ServersSettings />,
 				{
 					route: `/profiles/${profile.id()}/settings/servers`,
 				},
@@ -1109,9 +1049,7 @@ describe("Servers Settings", () => {
 
 		it("can cancel a server deletion", async () => {
 			render(
-				<Route path="/profiles/:profileId/settings/servers">
-					<ServersSettings />
-				</Route>,
+				<ServersSettings />,
 				{
 					route: `/profiles/${profile.id()}/settings/servers`,
 				},
@@ -1138,9 +1076,7 @@ describe("Servers Settings", () => {
 
 		it("can close a server deletion", async () => {
 			render(
-				<Route path="/profiles/:profileId/settings/servers">
-					<ServersSettings />
-				</Route>,
+				<ServersSettings />,
 				{
 					route: `/profiles/${profile.id()}/settings/servers`,
 				},
@@ -1167,9 +1103,7 @@ describe("Servers Settings", () => {
 
 		it("can update a server", async () => {
 			render(
-				<Route path="/profiles/:profileId/settings/servers">
-					<ServersSettings />
-				</Route>,
+				<ServersSettings />,
 				{
 					route: `/profiles/${profile.id()}/settings/servers`,
 				},
@@ -1208,9 +1142,7 @@ describe("Servers Settings", () => {
 
 		it("can refresh a server", async () => {
 			render(
-				<Route path="/profiles/:profileId/settings/servers">
-					<ServersSettings />
-				</Route>,
+				<ServersSettings />,
 				{
 					route: `/profiles/${profile.id()}/settings/servers`,
 				},
@@ -1239,9 +1171,7 @@ describe("Servers Settings", () => {
 			const serverPushSpy = vi.spyOn(profile.hosts(), "push");
 
 			render(
-				<Route path="/profiles/:profileId/settings/servers">
-					<ServersSettings />
-				</Route>,
+				<ServersSettings />,
 				{
 					route: `/profiles/${profile.id()}/settings/servers`,
 				},
@@ -1277,9 +1207,7 @@ describe("Servers Settings", () => {
 
 		it("should show status error if request fails", async () => {
 			const { asFragment } = render(
-				<Route path="/profiles/:profileId/settings/servers">
-					<ServersSettings />
-				</Route>,
+				<ServersSettings />,
 				{
 					route: `/profiles/${profile.id()}/settings/servers`,
 				},
@@ -1296,9 +1224,7 @@ describe("Servers Settings", () => {
 
 		it("can check an offline server", async () => {
 			render(
-				<Route path="/profiles/:profileId/settings/servers">
-					<ServersSettings />
-				</Route>,
+				<ServersSettings />,
 				{
 					route: `/profiles/${profile.id()}/settings/servers`,
 				},
@@ -1317,9 +1243,7 @@ describe("Servers Settings", () => {
 
 		it("should show status error if request fails on mobile", async () => {
 			const { asFragment } = renderResponsiveWithRoute(
-				<Route path="/profiles/:profileId/settings/servers">
-					<ServersSettings />
-				</Route>,
+				<ServersSettings />,
 				"xs",
 				{
 					route: `/profiles/${profile.id()}/settings/servers`,

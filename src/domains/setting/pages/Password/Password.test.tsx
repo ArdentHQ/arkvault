@@ -1,16 +1,13 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
-import { createHashHistory } from "history";
 import React from "react";
-import { Route } from "react-router-dom";
 
 import { buildTranslations } from "@/app/i18n/helpers";
 import { toasts } from "@/app/services";
 import PasswordSettings from "@/domains/setting/pages/Password";
 import { env, getMainsailProfileId, render, screen, waitFor } from "@/utils/testing-library";
 const translations = buildTranslations();
-const history = createHashHistory();
 
 let profile: Contracts.IProfile;
 
@@ -28,22 +25,23 @@ const menuItemID = "side-menu__item--password";
 const password = "S3cUrePa$sword";
 const secondaryPassword = "S3cUrePa$sword2different";
 
+vi.mock("@/app/contexts/Navigation/NavigationBlocking", () => ({
+	NavigationBlocker: () => <div />,
+	NavigationBlockingProvider: ({ children }: { children: React.ReactNode }) => <>{children}</>,
+}));
+
+
 describe("Password Settings", () => {
 	beforeEach(async () => {
 		profile = env.profiles().findById(getMainsailProfileId());
 
 		await profile.sync();
-
-		navigate(`/profiles/${profile.id()}/settings/password`);
 	});
 
 	it("should render password settings", async () => {
 		const { container, asFragment } = render(
-			<Route exact={false} path="/profiles/:profileId/settings/:activeSetting">
-				<PasswordSettings />
-			</Route>,
+			<PasswordSettings />,
 			{
-				history,
 				route: `/profiles/${profile.id()}/settings/password`,
 			},
 		);
@@ -56,11 +54,8 @@ describe("Password Settings", () => {
 
 	it("should set a password", async () => {
 		const { container } = render(
-			<Route path="/profiles/:profileId/settings/:activeSetting">
-				<PasswordSettings />
-			</Route>,
+			<PasswordSettings />,
 			{
-				history,
 				route: `/profiles/${profile.id()}/settings/password`,
 			},
 		);
@@ -107,11 +102,8 @@ describe("Password Settings", () => {
 		});
 
 		render(
-			<Route path="/profiles/:profileId/settings/:activeSetting">
-				<PasswordSettings />
-			</Route>,
+			<PasswordSettings />,
 			{
-				history,
 				route: `/profiles/${profile.id()}/settings/password`,
 			},
 		);
@@ -162,11 +154,8 @@ describe("Password Settings", () => {
 		profile.auth().setPassword(password);
 
 		const { asFragment } = render(
-			<Route path="/profiles/:profileId/settings/:activeSetting">
-				<PasswordSettings />
-			</Route>,
+			<PasswordSettings />,
 			{
-				history,
 				route: `/profiles/${profile.id()}/settings/password`,
 			},
 		);
@@ -210,11 +199,8 @@ describe("Password Settings", () => {
 
 	it("should disable submit button if no password", async () => {
 		render(
-			<Route path="/profiles/:profileId/settings/:activeSetting">
-				<PasswordSettings />
-			</Route>,
+			<PasswordSettings />,
 			{
-				history,
 				route: `/profiles/${profile.id()}/settings/password`,
 			},
 		);
@@ -234,9 +220,7 @@ describe("Password Settings", () => {
 		profile.auth().setPassword(password);
 
 		render(
-			<Route path="/profiles/:profileId/settings/:activeSetting">
-				<PasswordSettings />
-			</Route>,
+			<PasswordSettings />,
 			{
 				route: `/profiles/${profile.id()}/settings/password`,
 			},
@@ -272,9 +256,7 @@ describe("Password Settings", () => {
 		const forgetPasswordSpy = vi.spyOn(profile.auth(), "forgetPassword").mockImplementation(vi.fn());
 
 		render(
-			<Route path="/profiles/:profileId/settings/:activeSetting">
-				<PasswordSettings />
-			</Route>,
+			<PasswordSettings />,
 			{
 				route: `/profiles/${profile.id()}/settings/password`,
 			},
@@ -327,9 +309,7 @@ describe("Password Settings", () => {
 		});
 
 		render(
-			<Route path="/profiles/:profileId/settings/:activeSetting">
-				<PasswordSettings />
-			</Route>,
+			<PasswordSettings />,
 			{
 				route: `/profiles/${profile.id()}/settings/password`,
 			},
@@ -361,11 +341,8 @@ describe("Password Settings", () => {
 		profile.auth().setPassword(password);
 
 		render(
-			<Route path="/profiles/:profileId/settings/:activeSetting">
-				<PasswordSettings />
-			</Route>,
+			<PasswordSettings />,
 			{
-				history,
 				route: `/profiles/${profile.id()}/settings/password`,
 			},
 		);
