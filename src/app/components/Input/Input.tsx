@@ -167,7 +167,7 @@ export const Input = ({
 					<InputStyled
 						data-testid="Input"
 						className={cn(
-							"no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!",
+							"no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!",
 							innerClassName,
 							{
 								"text-theme-secondary-text": disabled,
