@@ -1073,7 +1073,7 @@ exports[`Servers Settings > should render servers settings 1`] = `
                                     data-testid="NodeStatus--statusloading"
                                   >
                                     <div
-                                      class="animate-spin rounded-full border-[5px] shrink-0 w-5 h-5 border-theme-secondary-200 dark:border-black border-l-theme-primary-600 dark:border-l-theme-primary-600"
+                                      class="animate-spin rounded-full border-[5px] shrink-0 w-5 h-5 border-theme-secondary-200 dark:border-black dim:border-theme-dim-700 border-l-theme-primary-600 dark:border-l-theme-primary-600 dim:border-l-theme-dim-navy-600"
                                     />
                                   </div>
                                 </div>
@@ -1316,7 +1316,7 @@ exports[`Servers Settings > should render servers settings 1`] = `
                         class="bg-theme-background shadow-footer-smooth dark:shadow-footer-smooth-dark fixed inset-x-0 bottom-0 flex gap-3 px-8 py-3 sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none dark:bg-black sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
                       >
                         <button
-                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
+                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600"
                           data-testid="Server-settings__submit-button"
                           disabled=""
                           type="submit"
@@ -2997,7 +2997,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                         class="bg-theme-background shadow-footer-smooth dark:shadow-footer-smooth-dark fixed inset-x-0 bottom-0 flex gap-3 px-8 py-3 sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none dark:bg-black sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
                       >
                         <button
-                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
+                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600"
                           data-testid="Server-settings__submit-button"
                           disabled=""
                           type="submit"
@@ -4094,7 +4094,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                     data-testid="NodeStatus--statusloading"
                                   >
                                     <div
-                                      class="animate-spin rounded-full border-[5px] shrink-0 w-5 h-5 border-theme-secondary-200 dark:border-black border-l-theme-primary-600 dark:border-l-theme-primary-600"
+                                      class="animate-spin rounded-full border-[5px] shrink-0 w-5 h-5 border-theme-secondary-200 dark:border-black dim:border-theme-dim-700 border-l-theme-primary-600 dark:border-l-theme-primary-600 dim:border-l-theme-dim-navy-600"
                                     />
                                   </div>
                                 </div>
@@ -4356,7 +4356,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                             data-testid="CustomPeersPeer--statusloading"
                                           >
                                             <div
-                                              class="animate-spin rounded-full border-[5px] shrink-0 w-5 h-5 border-theme-secondary-200 dark:border-black border-l-theme-primary-600 dark:border-l-theme-primary-600"
+                                              class="animate-spin rounded-full border-[5px] shrink-0 w-5 h-5 border-theme-secondary-200 dark:border-black dim:border-theme-dim-700 border-l-theme-primary-600 dark:border-l-theme-primary-600 dim:border-l-theme-dim-navy-600"
                                             />
                                           </div>
                                         </div>
@@ -4367,7 +4367,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                             data-testid="CustomPeersPeer--statusloading"
                                           >
                                             <div
-                                              class="animate-spin rounded-full border-[5px] shrink-0 w-5 h-5 border-theme-secondary-200 dark:border-black border-l-theme-primary-600 dark:border-l-theme-primary-600"
+                                              class="animate-spin rounded-full border-[5px] shrink-0 w-5 h-5 border-theme-secondary-200 dark:border-black dim:border-theme-dim-700 border-l-theme-primary-600 dark:border-l-theme-primary-600 dim:border-l-theme-dim-navy-600"
                                             />
                                           </div>
                                         </div>
@@ -4378,7 +4378,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                             data-testid="CustomPeersPeer--statusloading"
                                           >
                                             <div
-                                              class="animate-spin rounded-full border-[5px] shrink-0 w-5 h-5 border-theme-secondary-200 dark:border-black border-l-theme-primary-600 dark:border-l-theme-primary-600"
+                                              class="animate-spin rounded-full border-[5px] shrink-0 w-5 h-5 border-theme-secondary-200 dark:border-black dim:border-theme-dim-700 border-l-theme-primary-600 dark:border-l-theme-primary-600 dim:border-l-theme-dim-navy-600"
                                             />
                                           </div>
                                         </div>
@@ -4551,7 +4551,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                         class="bg-theme-background shadow-footer-smooth dark:shadow-footer-smooth-dark fixed inset-x-0 bottom-0 flex gap-3 px-8 py-3 sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none dark:bg-black sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
                       >
                         <button
-                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
+                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600"
                           data-testid="Server-settings__submit-button"
                           disabled=""
                           type="submit"
@@ -5581,7 +5581,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                                     data-testid="NodeStatus--statusloading"
                                   >
                                     <div
-                                      class="animate-spin rounded-full border-[5px] shrink-0 w-5 h-5 border-theme-secondary-200 dark:border-black border-l-theme-primary-600 dark:border-l-theme-primary-600"
+                                      class="animate-spin rounded-full border-[5px] shrink-0 w-5 h-5 border-theme-secondary-200 dark:border-black dim:border-theme-dim-700 border-l-theme-primary-600 dark:border-l-theme-primary-600 dim:border-l-theme-dim-navy-600"
                                     />
                                   </div>
                                 </div>
@@ -5829,7 +5829,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                                                     data-testid="CustomPeersPeer--statusloading"
                                                   >
                                                     <div
-                                                      class="animate-spin rounded-full border-[5px] shrink-0 w-5 h-5 border-theme-secondary-200 dark:border-black border-l-theme-primary-600 dark:border-l-theme-primary-600"
+                                                      class="animate-spin rounded-full border-[5px] shrink-0 w-5 h-5 border-theme-secondary-200 dark:border-black dim:border-theme-dim-700 border-l-theme-primary-600 dark:border-l-theme-primary-600 dim:border-l-theme-dim-navy-600"
                                                     />
                                                   </div>
                                                 </div>
@@ -5858,7 +5858,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                                                     data-testid="CustomPeersPeer--statusloading"
                                                   >
                                                     <div
-                                                      class="animate-spin rounded-full border-[5px] shrink-0 w-5 h-5 border-theme-secondary-200 dark:border-black border-l-theme-primary-600 dark:border-l-theme-primary-600"
+                                                      class="animate-spin rounded-full border-[5px] shrink-0 w-5 h-5 border-theme-secondary-200 dark:border-black dim:border-theme-dim-700 border-l-theme-primary-600 dark:border-l-theme-primary-600 dim:border-l-theme-dim-navy-600"
                                                     />
                                                   </div>
                                                 </div>
@@ -5887,7 +5887,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                                                     data-testid="CustomPeersPeer--statusloading"
                                                   >
                                                     <div
-                                                      class="animate-spin rounded-full border-[5px] shrink-0 w-5 h-5 border-theme-secondary-200 dark:border-black border-l-theme-primary-600 dark:border-l-theme-primary-600"
+                                                      class="animate-spin rounded-full border-[5px] shrink-0 w-5 h-5 border-theme-secondary-200 dark:border-black dim:border-theme-dim-700 border-l-theme-primary-600 dark:border-l-theme-primary-600 dim:border-l-theme-dim-navy-600"
                                                     />
                                                   </div>
                                                 </div>
@@ -6107,7 +6107,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                         class="bg-theme-background shadow-footer-smooth dark:shadow-footer-smooth-dark fixed inset-x-0 bottom-0 flex gap-3 px-8 py-3 sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none dark:bg-black sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
                       >
                         <button
-                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
+                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600"
                           data-testid="Server-settings__submit-button"
                           disabled=""
                           type="submit"
@@ -7788,7 +7788,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                         class="bg-theme-background shadow-footer-smooth dark:shadow-footer-smooth-dark fixed inset-x-0 bottom-0 flex gap-3 px-8 py-3 sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none dark:bg-black sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
                       >
                         <button
-                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
+                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600"
                           data-testid="Server-settings__submit-button"
                           disabled=""
                           type="submit"
@@ -9471,7 +9471,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                         class="bg-theme-background shadow-footer-smooth dark:shadow-footer-smooth-dark fixed inset-x-0 bottom-0 flex gap-3 px-8 py-3 sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none dark:bg-black sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
                       >
                         <button
-                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
+                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600"
                           data-testid="Server-settings__submit-button"
                           disabled=""
                           type="submit"
@@ -11154,7 +11154,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                         class="bg-theme-background shadow-footer-smooth dark:shadow-footer-smooth-dark fixed inset-x-0 bottom-0 flex gap-3 px-8 py-3 sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none dark:bg-black sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
                       >
                         <button
-                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
+                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600"
                           data-testid="Server-settings__submit-button"
                           disabled=""
                           type="submit"
@@ -12829,7 +12829,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                         class="bg-theme-background shadow-footer-smooth dark:shadow-footer-smooth-dark fixed inset-x-0 bottom-0 flex gap-3 px-8 py-3 sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none dark:bg-black sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
                       >
                         <button
-                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
+                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600"
                           data-testid="Server-settings__submit-button"
                           disabled=""
                           type="submit"
@@ -14506,7 +14506,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                         class="bg-theme-background shadow-footer-smooth dark:shadow-footer-smooth-dark fixed inset-x-0 bottom-0 flex gap-3 px-8 py-3 sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none dark:bg-black sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
                       >
                         <button
-                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
+                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600"
                           data-testid="Server-settings__submit-button"
                           disabled=""
                           type="submit"

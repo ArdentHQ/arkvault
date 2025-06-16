@@ -844,7 +844,7 @@ exports[`Pagination > should handle last page click in lg 1`] = `
     data-testid="Pagination"
   >
     <button
-      class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 px-4 py-1.5"
+      class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600 px-4 py-1.5"
       data-testid="Pagination__first"
       disabled=""
       type="button"
@@ -858,7 +858,7 @@ exports[`Pagination > should handle last page click in lg 1`] = `
       </div>
     </button>
     <button
-      class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 h-8 w-8 p-2.5"
+      class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600 h-8 w-8 p-2.5"
       data-testid="Pagination__previous"
       disabled=""
       type="button"
@@ -1001,7 +1001,7 @@ exports[`Pagination > should handle last page click in md 1`] = `
     data-testid="Pagination"
   >
     <button
-      class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 px-4 py-1.5"
+      class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600 px-4 py-1.5"
       data-testid="Pagination__first"
       disabled=""
       type="button"
@@ -1015,7 +1015,7 @@ exports[`Pagination > should handle last page click in md 1`] = `
       </div>
     </button>
     <button
-      class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 h-8 w-8 p-2.5"
+      class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600 h-8 w-8 p-2.5"
       data-testid="Pagination__previous"
       disabled=""
       type="button"
@@ -1158,7 +1158,7 @@ exports[`Pagination > should handle last page click in sm 1`] = `
     data-testid="Pagination"
   >
     <button
-      class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 px-4 py-1.5"
+      class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600 px-4 py-1.5"
       data-testid="Pagination__first"
       disabled=""
       type="button"
@@ -1172,7 +1172,7 @@ exports[`Pagination > should handle last page click in sm 1`] = `
       </div>
     </button>
     <button
-      class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 h-8 w-8 p-2.5"
+      class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600 h-8 w-8 p-2.5"
       data-testid="Pagination__previous"
       disabled=""
       type="button"
@@ -1315,7 +1315,7 @@ exports[`Pagination > should handle last page click in xl 1`] = `
     data-testid="Pagination"
   >
     <button
-      class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 px-4 py-1.5"
+      class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600 px-4 py-1.5"
       data-testid="Pagination__first"
       disabled=""
       type="button"
@@ -1329,7 +1329,7 @@ exports[`Pagination > should handle last page click in xl 1`] = `
       </div>
     </button>
     <button
-      class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 h-8 w-8 p-2.5"
+      class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600 h-8 w-8 p-2.5"
       data-testid="Pagination__previous"
       disabled=""
       type="button"
@@ -1526,7 +1526,7 @@ exports[`Pagination > should handle last page click in xs 1`] = `
       class="mt-2 flex space-x-2"
     >
       <button
-        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 flex-1"
+        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600 flex-1"
         data-testid="Pagination__first"
         disabled=""
         type="button"
@@ -1569,7 +1569,7 @@ exports[`Pagination > should handle last page click in xs 1`] = `
         </div>
       </button>
       <button
-        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 flex-1"
+        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600 flex-1"
         data-testid="Pagination__previous"
         disabled=""
         type="button"
@@ -5989,7 +5989,7 @@ exports[`Pagination > should render in lg 1`] = `
     data-testid="Pagination"
   >
     <button
-      class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 px-4 py-1.5"
+      class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600 px-4 py-1.5"
       data-testid="Pagination__first"
       disabled=""
       type="button"
@@ -6003,7 +6003,7 @@ exports[`Pagination > should render in lg 1`] = `
       </div>
     </button>
     <button
-      class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 h-8 w-8 p-2.5"
+      class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600 h-8 w-8 p-2.5"
       data-testid="Pagination__previous"
       disabled=""
       type="button"
@@ -6146,7 +6146,7 @@ exports[`Pagination > should render in md 1`] = `
     data-testid="Pagination"
   >
     <button
-      class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 px-4 py-1.5"
+      class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600 px-4 py-1.5"
       data-testid="Pagination__first"
       disabled=""
       type="button"
@@ -6160,7 +6160,7 @@ exports[`Pagination > should render in md 1`] = `
       </div>
     </button>
     <button
-      class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 h-8 w-8 p-2.5"
+      class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600 h-8 w-8 p-2.5"
       data-testid="Pagination__previous"
       disabled=""
       type="button"
@@ -6303,7 +6303,7 @@ exports[`Pagination > should render in sm 1`] = `
     data-testid="Pagination"
   >
     <button
-      class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 px-4 py-1.5"
+      class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600 px-4 py-1.5"
       data-testid="Pagination__first"
       disabled=""
       type="button"
@@ -6317,7 +6317,7 @@ exports[`Pagination > should render in sm 1`] = `
       </div>
     </button>
     <button
-      class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 h-8 w-8 p-2.5"
+      class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600 h-8 w-8 p-2.5"
       data-testid="Pagination__previous"
       disabled=""
       type="button"
@@ -6460,7 +6460,7 @@ exports[`Pagination > should render in xl 1`] = `
     data-testid="Pagination"
   >
     <button
-      class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 px-4 py-1.5"
+      class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600 px-4 py-1.5"
       data-testid="Pagination__first"
       disabled=""
       type="button"
@@ -6474,7 +6474,7 @@ exports[`Pagination > should render in xl 1`] = `
       </div>
     </button>
     <button
-      class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 h-8 w-8 p-2.5"
+      class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600 h-8 w-8 p-2.5"
       data-testid="Pagination__previous"
       disabled=""
       type="button"
@@ -6671,7 +6671,7 @@ exports[`Pagination > should render in xs 1`] = `
       class="mt-2 flex space-x-2"
     >
       <button
-        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 flex-1"
+        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600 flex-1"
         data-testid="Pagination__first"
         disabled=""
         type="button"
@@ -6714,7 +6714,7 @@ exports[`Pagination > should render in xs 1`] = `
         </div>
       </button>
       <button
-        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 flex-1"
+        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600 flex-1"
         data-testid="Pagination__previous"
         disabled=""
         type="button"

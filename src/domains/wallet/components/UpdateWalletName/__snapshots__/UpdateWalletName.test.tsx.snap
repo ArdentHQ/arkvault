@@ -121,7 +121,7 @@ exports[`UpdateWalletName > should render 1`] = `
                   </div>
                 </button>
                 <button
-                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600"
                   data-testid="UpdateWalletName__submit"
                   disabled=""
                   type="submit"
@@ -317,7 +317,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 1`] 
                   </div>
                 </button>
                 <button
-                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600"
                   data-testid="UpdateWalletName__submit"
                   disabled=""
                   type="submit"
@@ -513,7 +513,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 2`] 
                   </div>
                 </button>
                 <button
-                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600"
                   data-testid="UpdateWalletName__submit"
                   disabled=""
                   type="submit"
@@ -709,7 +709,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 3`] 
                   </div>
                 </button>
                 <button
-                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600"
                   data-testid="UpdateWalletName__submit"
                   disabled=""
                   type="submit"
@@ -905,7 +905,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 4`] 
                   </div>
                 </button>
                 <button
-                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600"
                   data-testid="UpdateWalletName__submit"
                   disabled=""
                   type="submit"
@@ -1101,7 +1101,7 @@ exports[`UpdateWalletName > should show error message when name consists only of
                   </div>
                 </button>
                 <button
-                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600"
                   data-testid="UpdateWalletName__submit"
                   disabled=""
                   type="submit"
@@ -1297,7 +1297,7 @@ exports[`UpdateWalletName > should show error message when name exceeds 42 chara
                   </div>
                 </button>
                 <button
-                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600"
                   data-testid="UpdateWalletName__submit"
                   disabled=""
                   type="submit"

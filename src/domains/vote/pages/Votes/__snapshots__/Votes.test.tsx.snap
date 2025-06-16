@@ -1350,7 +1350,7 @@ exports[`Votes > should filter current validators 1`] = `
                     data-testid="ValidatorTable__continue--wrapper"
                   >
                     <button
-                      class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 w-full sm:w-auto"
+                      class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600 w-full sm:w-auto"
                       data-testid="ValidatorTable__continue-button"
                       disabled=""
                       type="button"
@@ -10689,7 +10689,7 @@ exports[`Votes > should render 1`] = `
             data-testid="Pagination"
           >
             <button
-              class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 px-4 py-1.5"
+              class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600 px-4 py-1.5"
               data-testid="Pagination__first"
               disabled=""
               type="button"
@@ -10703,7 +10703,7 @@ exports[`Votes > should render 1`] = `
               </div>
             </button>
             <button
-              class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 h-8 w-8 p-2.5"
+              class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600 h-8 w-8 p-2.5"
               data-testid="Pagination__previous"
               disabled=""
               type="button"
@@ -10992,7 +10992,7 @@ exports[`Votes > should render 1`] = `
                     data-testid="ValidatorTable__continue--wrapper"
                   >
                     <button
-                      class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 w-full sm:w-auto"
+                      class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600 w-full sm:w-auto"
                       data-testid="ValidatorTable__continue-button"
                       disabled=""
                       type="button"
@@ -18667,7 +18667,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
             data-testid="Pagination"
           >
             <button
-              class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 px-4 py-1.5"
+              class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600 px-4 py-1.5"
               data-testid="Pagination__first"
               disabled=""
               type="button"
@@ -18681,7 +18681,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
               </div>
             </button>
             <button
-              class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 h-8 w-8 p-2.5"
+              class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600 h-8 w-8 p-2.5"
               data-testid="Pagination__previous"
               disabled=""
               type="button"
@@ -18970,7 +18970,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                     data-testid="ValidatorTable__continue--wrapper"
                   >
                     <button
-                      class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 w-full sm:w-auto"
+                      class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600 w-full sm:w-auto"
                       data-testid="ValidatorTable__continue-button"
                       disabled=""
                       type="button"
@@ -26905,7 +26905,7 @@ exports[`Votes > should select a validator 1`] = `
             data-testid="Pagination"
           >
             <button
-              class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 px-4 py-1.5"
+              class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600 px-4 py-1.5"
               data-testid="Pagination__first"
               disabled=""
               type="button"
@@ -26919,7 +26919,7 @@ exports[`Votes > should select a validator 1`] = `
               </div>
             </button>
             <button
-              class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 h-8 w-8 p-2.5"
+              class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600 h-8 w-8 p-2.5"
               data-testid="Pagination__previous"
               disabled=""
               type="button"
@@ -35201,7 +35201,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
             data-testid="Pagination"
           >
             <button
-              class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 px-4 py-1.5"
+              class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600 px-4 py-1.5"
               data-testid="Pagination__first"
               disabled=""
               type="button"
@@ -35215,7 +35215,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
               </div>
             </button>
             <button
-              class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 h-8 w-8 p-2.5"
+              class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600 h-8 w-8 p-2.5"
               data-testid="Pagination__previous"
               disabled=""
               type="button"
