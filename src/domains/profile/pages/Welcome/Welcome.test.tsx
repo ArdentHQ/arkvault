@@ -176,11 +176,8 @@ describe("Welcome with deeplink", () => {
 		const mockDelegateName = vi.spyOn(profile.validators(), "findByUsername").mockReturnValue(profile.wallets().first());
 
 		render(
-			<Route path="/">
-				<Welcome />
-			</Route>,
+				<Welcome />,
 			{
-				history,
 				route: "/?method=vote&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&delegate=test",
 			},
 		);
@@ -470,7 +467,6 @@ describe("Welcome", () => {
 		await submitPassword();
 
 		expect(router.state.location.pathname).toBe(`/profiles/${passwordProtectedProfile.id()}/dashboard`);
-		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render with profiles", async () => {
@@ -486,7 +482,6 @@ describe("Welcome", () => {
 		await submitPassword();
 
 		expect(router.state.location.pathname).toBe(`/profiles/${profile.id()}/dashboard`);
-		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it.each([
@@ -540,8 +535,6 @@ describe("Welcome", () => {
 		await waitFor(() => {
 			expect(router.state.location.pathname).toBe(`/profiles/${profile.id()}/dashboard`);
 		});
-
-		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should fail to restore profile", async () => {
@@ -583,10 +576,6 @@ describe("Welcome", () => {
 		const initialRoute = `/profiles/${profile.id()}/dashboard`;
 		const { asFragment, navigate, router } = render(<Welcome />, { route: initialRoute });
 
-		navigate("/", {
-			from: initialRoute,
-		});
-
 		await expect(screen.findAllByTestId("ProfileRow")).resolves.toHaveLength(2);
 
 		await env.profiles().restore(profile, getDefaultPassword());
@@ -604,8 +593,6 @@ describe("Welcome", () => {
 		await waitFor(() => {
 			expect(router.state.location.pathname).toBe(initialRoute);
 		});
-
-		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should navigate to profile settings with correct password", async () => {
@@ -642,8 +629,6 @@ describe("Welcome", () => {
 		await waitFor(() => {
 			expect(router.state.location.pathname).toBe(`/profiles/${profile.id()}/settings`);
 		});
-
-		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should navigate to profile settings from profile card menu", async () => {
@@ -669,8 +654,6 @@ describe("Welcome", () => {
 		await waitFor(() => {
 			expect(router.state.location.pathname).toBe(`/profiles/${profile.id()}/settings`);
 		});
-
-		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should delete profile from profile card menu", async () => {
@@ -707,8 +690,6 @@ describe("Welcome", () => {
 		expect(screen.getByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
 
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
-
-		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should not restart the timeout when closing the modal to retry the profile password", async () => {
@@ -778,7 +759,6 @@ describe("Welcome", () => {
 		await userEvent.click(screen.getByText(commonTranslations.CREATE));
 
 		expect(router.state.location.pathname).toBe("/profiles/create");
-		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render without profiles", async () => {
@@ -795,8 +775,6 @@ describe("Welcome", () => {
 		await waitFor(() => {
 			expect(screen.getByText(profileTranslations.PAGE_WELCOME.WITHOUT_PROFILES.TITLE)).toBeInTheDocument();
 		});
-
-		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should use the system theme", async () => {

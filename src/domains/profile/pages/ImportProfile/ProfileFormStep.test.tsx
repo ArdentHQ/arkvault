@@ -35,8 +35,6 @@ describe("Import Profile - Profile Form Step", () => {
 	});
 
 	it("should render profile form", async () => {
-		navigate("/profiles/import");
-
 		render(
 			<EnvironmentProvider env={env}>
 				<ImportProfileForm
@@ -47,6 +45,9 @@ describe("Import Profile - Profile Form Step", () => {
 					onBack={vi.fn()}
 				/>
 			</EnvironmentProvider>,
+			{
+				route: "/profiles/import"
+			}
 		);
 
 		await waitFor(() => expect(submitButton()).toBeDisabled());
@@ -57,8 +58,6 @@ describe("Import Profile - Profile Form Step", () => {
 
 	it("should render profile form with empty profile", async () => {
 		const emptyProfile = await env.profiles().create("test2");
-		navigate("/profiles/import");
-
 		render(
 			<EnvironmentProvider env={env}>
 				<ImportProfileForm
@@ -69,6 +68,9 @@ describe("Import Profile - Profile Form Step", () => {
 					onBack={vi.fn()}
 				/>
 			</EnvironmentProvider>,
+			{
+				route: "/profiles/import"
+			}
 		);
 
 		await waitFor(() => expect(submitButton()).toBeDisabled());
@@ -89,6 +91,9 @@ describe("Import Profile - Profile Form Step", () => {
 					onBack={vi.fn()}
 				/>
 			</EnvironmentProvider>,
+			{
+				route: "/profiles/import"
+			}
 		);
 
 		await waitFor(() => expect(submitButton()).toBeDisabled());
@@ -146,6 +151,9 @@ describe("Import Profile - Profile Form Step", () => {
 					onBack={vi.fn()}
 				/>
 			</EnvironmentProvider>,
+			{
+				route: "/profiles/import"
+			}
 		);
 
 		const user = userEvent.setup();
