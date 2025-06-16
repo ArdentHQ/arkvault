@@ -928,7 +928,7 @@ export class DateTime {
 	 * @memberof DateTime
 	 */
 	public toJSON(): string {
-		return this.#instance.toJSON();
+		return this.toISOString();
 	}
 
 	/**
@@ -938,7 +938,7 @@ export class DateTime {
 	 * @memberof DateTime
 	 */
 	public toISOString(): string {
-		return this.#timezone ? this.#instance.tz(this.#timezone).toISOString() : this.#instance.toISOString();
+		return this.#toTimezone().toISOString();
 	}
 
 	/**
@@ -948,7 +948,7 @@ export class DateTime {
 	 * @memberof DateTime
 	 */
 	public toString(): string {
-		return this.#instance.toString();
+		return this.#toTimezone().toString();
 	}
 
 	/**
@@ -958,7 +958,7 @@ export class DateTime {
 	 * @memberof DateTime
 	 */
 	public toUNIX(): number {
-		return this.#instance.unix();
+		return this.#toTimezone().unix();
 	}
 
 	/**
@@ -968,7 +968,7 @@ export class DateTime {
 	 * @memberof DateTime
 	 */
 	public toDate(): Date {
-		return this.#timezone ? this.#instance.tz(this.#timezone).toDate() : this.#instance.toDate();
+		return this.#toTimezone().toDate();
 	}
 
 	/**
@@ -978,7 +978,7 @@ export class DateTime {
 	 * @memberof DateTime
 	 */
 	public valueOf(): number {
-		return this.#instance.valueOf();
+		return this.#toTimezone().valueOf();
 	}
 
 	/**
@@ -988,7 +988,7 @@ export class DateTime {
 	 * @memberof DateTime
 	 */
 	public isValid(): boolean {
-		return this.#instance.isValid();
+		return this.#toTimezone().isValid();
 	}
 
 	/**
@@ -1001,9 +1001,24 @@ export class DateTime {
 	 */
 	#toUTC(value?: DateTimeLike): dayjs.Dayjs {
 		if (value instanceof DateTime) {
-			return this.#timezone ? dayjs.tz(value.valueOf(), this.#timezone) : dayjs.utc(value.valueOf());
+			return dayjs.utc(value.valueOf());
 		}
 
 		return dayjs.utc(value);
+	}
+
+	/**
+	 * Returns a day.js instance with the given timezone.
+	 *
+	 * @private
+	 * @returns {dayjs.Dayjs}
+	 * @memberof DateTime
+	 */
+	#toTimezone(): dayjs.Dayjs {
+		if (this.#timezone) {
+			return this.#instance.tz(this.#timezone);
+		}
+
+		return this.#instance;
 	}
 }
