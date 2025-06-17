@@ -24,7 +24,7 @@ describe("UrlValidationMiddleware", () => {
 			pathname: "/unknown",
 		};
 		const redirect = vi.fn();
-		const parameters = { env, navigate: vi.fn(), location, redirect };
+		const parameters = { env, location, navigate: vi.fn(), redirect };
 
 		expect(subject.handler(parameters)).toBe(false);
 		expect(parameters.navigate).toHaveBeenCalledWith("/");
@@ -35,7 +35,7 @@ describe("UrlValidationMiddleware", () => {
 			pathname: `/profiles/${getMainsailProfileId()}/dashboard`,
 		};
 		const redirect = vi.fn();
-		const parameters = { env, navigate: vi.fn(), location, redirect };
+		const parameters = { env, location, navigate: vi.fn(), redirect };
 
 		expect(subject.handler(parameters)).toBe(true);
 	});
@@ -45,7 +45,7 @@ describe("UrlValidationMiddleware", () => {
 			pathname: "/profiles/1/dashboard",
 		};
 		const redirect = vi.fn();
-		const parameters = { env, navigate: vi.fn(), location, redirect };
+		const parameters = { env, location, navigate: vi.fn(), redirect };
 
 		expect(subject.handler(parameters)).toBe(false);
 		expect(parameters.navigate).toHaveBeenCalledWith("/");

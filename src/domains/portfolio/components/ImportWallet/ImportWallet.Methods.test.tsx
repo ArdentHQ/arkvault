@@ -48,7 +48,7 @@ describe("ImportAddress Methods", () => {
 	beforeEach(async () => {
 		vi.spyOn(usePortfolio, "usePortfolio").mockReturnValue({
 			selectedAddresses: [],
-			setSelectedAddresses: () => { },
+			setSelectedAddresses: () => {},
 		});
 
 		profile = env.profiles().findById(fixtureProfileId);
@@ -363,7 +363,7 @@ describe("ImportAddress Methods", () => {
 			expect(screen.getByTestId("EncryptPassword")).toBeInTheDocument();
 		});
 
-		const profileForgetWalletSpy = vi.spyOn(profile.wallets(), "forget").mockImplementation(() => { });
+		const profileForgetWalletSpy = vi.spyOn(profile.wallets(), "forget").mockImplementation(() => {});
 
 		await userEvent.click(backButton());
 

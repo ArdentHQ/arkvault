@@ -53,7 +53,7 @@ const renderPage = async (wallet: Contracts.IReadWriteWallet, type = "validatorR
 };
 
 const signedTransactionMock = {
-	blockHash: () => { },
+	blockHash: () => {},
 	confirmations: () => Promise.resolve(BigNumber.make(154_178)),
 	convertedAmount: () => BigNumber.make(10),
 	convertedFee: () => {

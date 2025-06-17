@@ -21,7 +21,7 @@ describe("RouterView", () => {
 	it("should render", () => {
 		render(
 			<MemoryRouter initialEntries={["/"]}>
-				<RouterView routes={[{ path: "/", component: Home }]} />
+				<RouterView routes={[{ component: Home, path: "/" }]} />
 			</MemoryRouter>
 		);
 		expect(screen.getByTestId("home")).toBeInTheDocument();
@@ -38,8 +38,8 @@ describe("RouterView", () => {
 						element={
 							<RouterView
 								routes={[
-									{ path: "/first", component: First },
-									{ path: "/second", component: Second },
+									{ component: First, path: "/first" },
+									{ component: Second, path: "/second" },
 								]}
 								middlewares={[]}
 							/>
@@ -53,7 +53,7 @@ describe("RouterView", () => {
 		);
 
 		// Wait for navigation effect
-		act(() => { });
+		act(() => {});
 
 		expect(scrollSpy).toHaveBeenCalledWith(0, 0);
 		scrollSpy.mockRestore();
@@ -65,7 +65,7 @@ describe("RouterView", () => {
 		render(
 			<MemoryRouter initialEntries={["/only"]}>
 				<RouterView
-					routes={[{ path: "/only", component: Home }]}
+					routes={[{ component: Home, path: "/only" }]}
 					middlewares={[]}
 				/>
 			</MemoryRouter>
@@ -92,8 +92,8 @@ describe("RouterView", () => {
 			<MemoryRouter initialEntries={["/test"]}>
 				<RouterView
 					routes={[
-						{ path: "/test", component: First },
-						{ path: "/", component: Home },
+						{ component: First, path: "/test" },
+						{ component: Home, path: "/" },
 					]}
 					middlewares={[blocker]}
 				/>
@@ -122,8 +122,8 @@ describe("RouterView", () => {
 			<MemoryRouter initialEntries={["/test"]}>
 				<RouterView
 					routes={[
-						{ path: "/test", component: First },
-						{ path: "/custom", component: Custom },
+						{ component: First, path: "/test" },
+						{ component: Custom, path: "/custom" },
 					]}
 					middlewares={[customRedirect]}
 				/>
@@ -145,7 +145,7 @@ describe("RouterView", () => {
 		render(
 			<MemoryRouter initialEntries={["/allowed"]}>
 				<RouterView
-					routes={[{ path: "/allowed", component: Home }]}
+					routes={[{ component: Home, path: "/allowed" }]}
 					middlewares={[alwaysRedirect]}
 				/>
 			</MemoryRouter>
@@ -158,7 +158,7 @@ describe("RouterView", () => {
 	it("should include wrapper div when activation is allowed", () => {
 		render(
 			<MemoryRouter initialEntries={["/"]}>
-				<RouterView routes={[{ path: "/", component: Home }]} />
+				<RouterView routes={[{ component: Home, path: "/" }]} />
 			</MemoryRouter>
 		);
 		// The rendered element should be wrapped

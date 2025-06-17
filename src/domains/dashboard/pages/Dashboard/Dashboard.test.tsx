@@ -75,7 +75,7 @@ describe("Dashboard", () => {
 			},
 			selectedAddresses: [wallet.address()],
 			selectedWallets: [wallet],
-			setSelectedAddresses: () => { },
+			setSelectedAddresses: () => {},
 		});
 
 		const { asFragment } = render(
@@ -118,7 +118,7 @@ describe("Dashboard", () => {
 			},
 			selectedAddresses: [wallet1.address(), wallet2.address()],
 			selectedWallets: [wallet1, wallet2],
-			setSelectedAddresses: () => { },
+			setSelectedAddresses: () => {},
 		});
 
 		render(
@@ -157,7 +157,7 @@ describe("Dashboard", () => {
 			},
 			selectedAddresses: [wallet1.address(), wallet2.address()],
 			selectedWallets: [wallet1, wallet2],
-			setSelectedAddresses: () => { },
+			setSelectedAddresses: () => {},
 		});
 
 		render(
@@ -205,7 +205,7 @@ describe("Dashboard", () => {
 			},
 			selectedAddresses: [wallet.address(), wallet2.address()],
 			selectedWallets: [wallet, wallet2],
-			setSelectedAddresses: () => { },
+			setSelectedAddresses: () => {},
 		});
 
 		const { router } = render(
@@ -240,7 +240,7 @@ describe("Dashboard", () => {
 			},
 			selectedAddresses: [wallet.address()],
 			selectedWallets: [wallet],
-			setSelectedAddresses: () => { },
+			setSelectedAddresses: () => {},
 		});
 
 		const { router } = render(

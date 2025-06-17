@@ -15,7 +15,7 @@ vi.mock("react-hook-form", async () => ({
 	...(await vi.importActual("react-hook-form")),
 }));
 
-let resetProfileNetworksMock = () => { };
+let resetProfileNetworksMock = () => {};
 
 describe("LedgerTabs", () => {
 	let profile: Contracts.IProfile;

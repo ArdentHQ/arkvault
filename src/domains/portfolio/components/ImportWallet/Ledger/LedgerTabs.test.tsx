@@ -30,7 +30,7 @@ const nextSelector = () => screen.queryByTestId("ImportWallet__continue-button")
 const backSelector = () => screen.queryByTestId("ImportWallet__back-button");
 const accessorErrorMessage = "Invalid coin accessor structure";
 
-let resetProfileNetworksMock = () => { };
+let resetProfileNetworksMock = () => {};
 
 describe("LedgerTabs", () => {
 	let profile: Contracts.IProfile;
@@ -160,11 +160,11 @@ describe("LedgerTabs", () => {
 			resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 			if (typeof resetProfileNetworksMock !== "function") {
 				console.warn("mockProfileWithPublicAndTestNetworks did not return a function");
-				resetProfileNetworksMock = () => { };
+				resetProfileNetworksMock = () => {};
 			}
 		} catch (error) {
 			console.error("Failed to set up resetProfileNetworksMock:", error);
-			resetProfileNetworksMock = () => { };
+			resetProfileNetworksMock = () => {};
 		}
 	});
 
@@ -259,7 +259,7 @@ describe("LedgerTabs", () => {
 
 		const ledgerTransportMock = mockNanoXTransport();
 
-		await mockLedgerObj.scan({ onProgress: () => { } });
+		await mockLedgerObj.scan({ onProgress: () => {} });
 
 		render(<Component activeIndex={2} />, {
 			route: `/profiles/${profile.id()}`,
@@ -612,7 +612,7 @@ describe("LedgerTabs", () => {
 		);
 
 		try {
-			await mockLedgerObj.scan({ onProgress: () => { } });
+			await mockLedgerObj.scan({ onProgress: () => {} });
 		} catch {
 			console.log("Expected scan error triggered");
 		}
@@ -655,11 +655,11 @@ describe("LedgerTabs", () => {
 			resetProfileNetworksMock = mockProfileWithOnlyPublicNetworks(profile);
 			if (typeof resetProfileNetworksMock !== "function") {
 				console.warn("mockProfileWithOnlyPublicNetworks did not return a function");
-				resetProfileNetworksMock = () => { };
+				resetProfileNetworksMock = () => {};
 			}
 		} catch (error) {
 			console.error("Failed to set up mockProfileWithOnlyPublicNetworks:", error);
-			resetProfileNetworksMock = () => { };
+			resetProfileNetworksMock = () => {};
 		}
 
 		const ledgerTransportMock = mockNanoXTransport();

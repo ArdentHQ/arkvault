@@ -61,12 +61,10 @@ describe("Dashboard", () => {
 	});
 
 	it("should display empty block when there are no transactions", async () => {
-		const mockTransactionsAggregate = vi.spyOn(profile.transactionAggregate(), "all").mockImplementation(() => {
-			return {
+		const mockTransactionsAggregate = vi.spyOn(profile.transactionAggregate(), "all").mockImplementation(() => ({
 				hasMorePages: () => false,
 				items: () => [],
-			}
-		});
+			}));
 
 		render(
 			<Dashboard />,

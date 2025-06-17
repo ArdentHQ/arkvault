@@ -49,17 +49,17 @@ describe("LedgerConnectionStep", () => {
 
 		wallet = {
 			address: () => "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
+			data: vi.fn().mockReturnValue({
+				get: vi.fn(),
+				set: vi.fn(),
+			}),
+			id: () => "walletId",
 			ledger: vi.fn().mockReturnValue({
 				getPublicKey: vi
 					.fn()
 					.mockResolvedValue("027716e659220085e41389efc7cf6a05f7f7c659cf3db9126caabce6cda9156582"),
 				getVersion: vi.fn().mockResolvedValue(minVersionList[networkMock.coin()]),
 			}),
-			data: vi.fn().mockReturnValue({
-				get: vi.fn(),
-				set: vi.fn(),
-			}),
-			id: () => "walletId",
 			manifest: () => ({ data: {} }),
 			network: vi.fn().mockReturnValue(networkMock),
 			profile: vi.fn().mockReturnValue({

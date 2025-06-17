@@ -95,7 +95,7 @@ export const Votes: FC = () => {
 
 	useEffect(() => {
 		if (hasWalletId) {
-			fetchValidators(activeWallet!);
+			fetchValidators(activeWallet);
 		}
 	}, [activeWallet, fetchValidators, hasWalletId]);
 

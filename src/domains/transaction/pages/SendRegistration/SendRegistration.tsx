@@ -69,7 +69,7 @@ export const SendRegistration = () => {
 			}
 
 			return getUrlParameter(location.pathname, 3)
-		} catch (error) {
+		} catch {
 			return
 		}
 	}, [activeWalletFromUrl])

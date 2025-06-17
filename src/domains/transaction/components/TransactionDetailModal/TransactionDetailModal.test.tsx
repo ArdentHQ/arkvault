@@ -59,7 +59,7 @@ describe("TransactionDetailModal", () => {
 					...TransactionFixture,
 					blockHash: () => "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
 					isTransfer: () => true,
-					memo: () => { },
+					memo: () => {},
 					type: () => "transfer",
 					wallet: () => wallet,
 				}}

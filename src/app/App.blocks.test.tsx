@@ -1,10 +1,8 @@
 /* eslint-disable @typescript-eslint/require-await */
 import React from "react";
-import userEvent from "@testing-library/user-event";
-import { Route, useNavigate, Prompt } from "react-router-dom";
 import { ErrorBoundary } from "react-error-boundary";
-import { AppRouter, Main } from "./App.blocks";
-import { env, getMainsailProfileId, render, screen, waitFor, act, renderWithoutRouter } from "@/utils/testing-library";
+import { Main } from "./App.blocks";
+import { env, getMainsailProfileId, render, screen, waitFor, act } from "@/utils/testing-library";
 import { toasts } from "@/app/services";
 import * as useProfileSynchronizerHook from "@/app/hooks/use-profile-synchronizer";
 import { ApplicationError } from "@/domains/error/pages";
@@ -43,20 +41,18 @@ describe("App Router", () => {
 	});
 });
 
-const renderComponent = (path = "/", options = {}) => {
-	return render(
-		<ErrorBoundary FallbackComponent={ApplicationError}>
-			<ExchangeProvider>
-				<Main />
-			</ExchangeProvider>
-		</ErrorBoundary>,
-		{
-			route: "/",
-			withProviders: true,
-			...options,
-		},
-	);
-};
+const renderComponent = (path = "/", options = {}) => render(
+	<ErrorBoundary FallbackComponent={ApplicationError}>
+		<ExchangeProvider>
+			<Main />
+		</ExchangeProvider>
+	</ErrorBoundary>,
+	{
+		route: path ?? "/",
+		withProviders: true,
+		...options,
+	},
+);
 
 describe("App Main", () => {
 	beforeEach(() => {

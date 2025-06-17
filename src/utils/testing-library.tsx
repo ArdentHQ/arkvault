@@ -210,7 +210,6 @@ const renderWithRouter = (
 	return {
 		...result,
 		navigate: (to: string) => router.navigate(to),
-		router,
 		rerender: (children?: ReactNode) => {
 			if (withProviders) {
 				return result.rerender(<WithProviders><Wrapper>{children ?? component}</Wrapper></WithProviders>)
@@ -218,7 +217,8 @@ const renderWithRouter = (
 
 			return result.rerender(<Wrapper>{children ?? component}</Wrapper>)
 
-		}
+		},
+		router
 	};
 };
 

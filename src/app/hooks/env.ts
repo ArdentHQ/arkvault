@@ -29,7 +29,7 @@ export const useActiveWallet = (): Contracts.IReadWriteWallet => {
 	// profiles/:profileId/wallets/:walletId
 	const walletId = getUrlParameter(location.pathname, 3)
 
-	return useMemo(() => profile.wallets().findById(walletId!), [profile, walletId]);
+	return useMemo(() => profile.wallets().findById(walletId), [profile, walletId]);
 };
 
 export const useActiveWalletWhenNeeded = (isRequired: boolean) => {
@@ -40,7 +40,7 @@ export const useActiveWalletWhenNeeded = (isRequired: boolean) => {
 		try {
 			// profiles/:profileId/wallets/:walletId
 			const walletId = getUrlParameter(location.pathname, 3)
-			return profile.wallets().findById(walletId!);
+			return profile.wallets().findById(walletId);
 		} catch (error) {
 			if (isRequired) {
 				throw error;

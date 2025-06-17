@@ -274,7 +274,7 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 
 	it("should handle ledger error", async () => {
 		mockLedgerTransportError("Access denied to use Ledger device");
-		let location: Location | undefined = undefined
+		let location: Location | undefined
 
 		vi.spyOn(wallet, "isLedger").mockReturnValueOnce(true);
 

@@ -46,7 +46,7 @@ describe("ImportAddress", () => {
 	beforeEach(async () => {
 		vi.spyOn(usePortfolio, "usePortfolio").mockReturnValue({
 			selectedAddresses: [],
-			setSelectedAddresses: () => { },
+			setSelectedAddresses: () => {},
 		});
 
 		profile = env.profiles().findById(fixtureProfileId);

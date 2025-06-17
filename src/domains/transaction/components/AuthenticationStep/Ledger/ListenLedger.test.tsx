@@ -26,8 +26,7 @@ describe("ListenLedger", () => {
 		onDeviceNotAvailable = vi.fn(),
 		onDeviceAvailable = vi.fn(),
 		transport = mockNanoSTransport(),
-	}) => {
-		return (
+	}) => (
 			<LedgerProvider transport={transport}>
 				<ListenLedger
 					onDeviceNotAvailable={onDeviceNotAvailable}
@@ -35,7 +34,6 @@ describe("ListenLedger", () => {
 				/>
 			</LedgerProvider>
 		);
-	};
 
 	it("should emit event on device available", async () => {
 		const onDeviceAvailable = vi.fn();
