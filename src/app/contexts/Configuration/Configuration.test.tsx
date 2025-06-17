@@ -2,7 +2,7 @@ import userEvent from "@testing-library/user-event";
 import React from "react";
 
 import { ConfigurationProvider, useConfiguration } from "./Configuration";
-import { render, screen, waitFor, getMainsailProfileId } from "@/utils/testing-library";
+import { render, screen, waitFor, getMainsailProfileId, renderHook } from "@/utils/testing-library";
 
 describe("Configuration Context", () => {
 	it("should render the wrapper properly", () => {
@@ -21,14 +21,9 @@ describe("Configuration Context", () => {
 	it("should throw without provider", () => {
 		const consoleSpy = vi.spyOn(console, "error").mockImplementation(() => {});
 
-		const Test = () => {
-			useConfiguration();
-			return <p>Configuration content</p>;
-		};
-
-		expect(() => render(<Test />, { withProviders: false })).toThrow(
-			"[useConfiguration] Component not wrapped within a Provider",
-		);
+		expect(() => {
+			renderHook(() => useConfiguration());
+		}).toThrow("[useConfiguration] Component not wrapped within a Provider");
 
 		consoleSpy.mockRestore();
 	});

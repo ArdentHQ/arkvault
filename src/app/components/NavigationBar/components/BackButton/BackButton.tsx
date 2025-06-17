@@ -1,5 +1,5 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Icon } from "@/app/components/Icon";
 import { twMerge } from "tailwind-merge";
 import cn from "classnames";
@@ -30,14 +30,14 @@ const StyledBackButton = ({
 );
 
 export const BackButton = ({ backToUrl, disabled }: BackButtonProperties) => {
-	const history = useHistory();
+	const navigate = useNavigate();
 
 	const handleOnClick = () => {
 		if (backToUrl) {
-			return history.push(backToUrl);
+			return navigate(backToUrl);
 		}
 
-		history.go(-1);
+		navigate(-1);
 	};
 
 	return (

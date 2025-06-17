@@ -1,8 +1,6 @@
 import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
-import { createHashHistory } from "history";
 import React, { useEffect, useState } from "react";
-import { Route } from "react-router-dom";
 
 import { Page } from "./Page";
 import { env, getMainsailProfileId, render, screen } from "@/utils/testing-library";
@@ -10,7 +8,6 @@ import { useNavigationContext } from "@/app/contexts";
 let profile: Contracts.IProfile;
 
 const dashboardURL = `/profiles/${getMainsailProfileId()}/dashboard`;
-const history = createHashHistory();
 
 const TestComponent = ({
 	hasFixedFormButtons,
@@ -43,19 +40,12 @@ const TestComponent = ({
 describe("Page", () => {
 	beforeAll(() => {
 		profile = env.profiles().findById(getMainsailProfileId());
-		history.push(dashboardURL);
 	});
 
 	it.each([true, false])("should render with sidebar = %s", (sidebar) => {
-		const { container, asFragment } = render(
-			<Route path="/profiles/:profileId/dashboard">
-				<Page sidebar={sidebar}>{}</Page>
-			</Route>,
-			{
-				history,
-				route: dashboardURL,
-			},
-		);
+		const { container, asFragment } = render(<Page sidebar={sidebar}>{}</Page>, {
+			route: dashboardURL,
+		});
 
 		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
@@ -67,11 +57,8 @@ describe("Page", () => {
 		[false, false],
 	])("should render with navigation context", (showMobileNavigation, hasFixedFormButtons) => {
 		const { asFragment } = render(
-			<Route path="/profiles/:profileId/dashboard">
-				<TestComponent hasFixedFormButtons={hasFixedFormButtons} showMobileNavigation={showMobileNavigation} />
-			</Route>,
+			<TestComponent hasFixedFormButtons={hasFixedFormButtons} showMobileNavigation={showMobileNavigation} />,
 			{
-				history,
 				route: dashboardURL,
 			},
 		);
@@ -83,17 +70,10 @@ describe("Page", () => {
 
 	it.each(["Settings", "Docs"])("should handle '%s' click on user actions dropdown", async (label) => {
 		const windowSpy = vi.spyOn(window, "open").mockImplementation(vi.fn());
-		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
 
-		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<Page>{}</Page>
-			</Route>,
-			{
-				history,
-				route: dashboardURL,
-			},
-		);
+		const { router } = render(<Page>{}</Page>, {
+			route: dashboardURL,
+		});
 
 		await expect(screen.findByTestId("UserMenu")).resolves.toBeVisible();
 
@@ -108,25 +88,16 @@ describe("Page", () => {
 		if (label === "Docs") {
 			expect(windowSpy).toHaveBeenCalledWith("https://arkvault.io/docs", "_blank");
 		} else {
-			expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/${label.toLowerCase()}`);
+			expect(router.state.location.pathname).toBe(`/profiles/${profile.id()}/${label.toLowerCase()}`);
 		}
 
 		windowSpy.mockRestore();
-		historySpy.mockRestore();
 	});
 
 	it("should handle 'Sign Out' click on user actions dropdown", async () => {
-		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<Page>{}</Page>
-			</Route>,
-			{
-				history,
-				route: dashboardURL,
-			},
-		);
-
-		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
+		const { router } = render(<Page>{}</Page>, {
+			route: dashboardURL,
+		});
 
 		await expect(screen.findByTestId("UserMenu")).resolves.toBeVisible();
 
@@ -138,8 +109,6 @@ describe("Page", () => {
 
 		await userEvent.click(await screen.findByText("Sign Out"));
 
-		expect(historySpy).toHaveBeenCalledWith("/");
-
-		historySpy.mockRestore();
+		expect(router.state.location.pathname).toBe("/");
 	});
 });

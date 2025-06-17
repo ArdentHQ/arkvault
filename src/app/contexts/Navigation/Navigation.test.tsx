@@ -2,7 +2,7 @@ import userEvent from "@testing-library/user-event";
 import React from "react";
 
 import { NavigationProvider, useNavigationContext } from "./Navigation";
-import { render, screen, waitFor } from "@/utils/testing-library";
+import { render, screen, waitFor, renderHook } from "@/utils/testing-library";
 
 describe("Navigation Context", () => {
 	it("should render the wrapper properly", () => {
@@ -21,14 +21,9 @@ describe("Navigation Context", () => {
 	it("should throw without provider", () => {
 		const consoleSpy = vi.spyOn(console, "error").mockImplementation(() => {});
 
-		const Test = () => {
-			useNavigationContext();
-			return <p>Navigation content</p>;
-		};
-
-		expect(() => render(<Test />, { withProviders: false })).toThrow(
-			"[useNavigationContext] Component not wrapped within a Provider",
-		);
+		expect(() => {
+			renderHook(() => useNavigationContext());
+		}).toThrow("[useNavigationContext] Component not wrapped within a Provider");
 
 		consoleSpy.mockRestore();
 	});

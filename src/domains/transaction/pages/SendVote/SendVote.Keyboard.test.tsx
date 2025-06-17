@@ -18,7 +18,6 @@ import { requestMock, server } from "@/tests/mocks/server";
 
 import { Contracts, DTO } from "@/app/lib/profiles";
 import React from "react";
-import { Route } from "react-router-dom";
 import { SendVote } from "./SendVote";
 import { VoteValidatorProperties } from "@/domains/vote/components/ValidatorsTable/ValidatorsTable.contracts";
 import { appendParameters } from "@/domains/vote/utils/url-parameters";
@@ -187,11 +186,9 @@ describe("SendVote", () => {
 		);
 
 		render(
-			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
-				<FormProvider {...form.current}>
-					<SendVote />
-				</FormProvider>
-			</Route>,
+			<FormProvider {...form.current}>
+				<SendVote />
+			</FormProvider>,
 			{
 				route: {
 					pathname: voteURL,

@@ -2,7 +2,7 @@ import { Contracts } from "@/app/lib/profiles";
 import cn from "classnames";
 import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import { Page, Section } from "@/app/components/Layout";
 import { useConfiguration, useEnvironmentContext } from "@/app/contexts";
@@ -29,7 +29,7 @@ export const Dashboard = ({
 	const [isUpdatingWallet, setIsUpdatingWallet] = useState(false);
 	const [showSignMessagePanel, setShowSignMessagePanel] = useState(false);
 
-	const history = useHistory();
+	const navigate = useNavigate();
 	const { t } = useTranslation();
 
 	const { env } = useEnvironmentContext();
@@ -40,7 +40,7 @@ export const Dashboard = ({
 
 	const handleVoteButton = () => {
 		if (selectedWallets.length > 1) {
-			history.push({
+			navigate({
 				pathname: `/profiles/${activeProfile.id()}/votes`,
 			});
 
@@ -49,7 +49,7 @@ export const Dashboard = ({
 
 		const wallet = selectedWallets.at(0);
 
-		history.push(`/profiles/${activeProfile.id()}/wallets/${wallet?.id()}/votes`);
+		navigate(`/profiles/${activeProfile.id()}/wallets/${wallet?.id()}/votes`);
 	};
 
 	const [mobileActiveTab, setMobileActiveTab] = useState<TabId>("transactions");

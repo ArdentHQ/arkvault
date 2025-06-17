@@ -1,3 +1,7 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`App Router > should render app router 1`] = `<DocumentFragment />`;
+exports[`App Router > should render app router 1`] = `
+<DocumentFragment>
+  <div />
+</DocumentFragment>
+`;

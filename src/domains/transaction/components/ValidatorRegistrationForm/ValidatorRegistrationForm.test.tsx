@@ -3,7 +3,6 @@ import { Contracts as ProfilesContracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
 import React, { useEffect } from "react";
 import { FormProvider, useForm, UseFormMethods } from "react-hook-form";
-import { Route } from "react-router-dom";
 
 import { ValidatorRegistrationForm, signValidatorRegistration } from "./ValidatorRegistrationForm";
 import * as useFeesHook from "@/app/hooks/use-fees";
@@ -51,14 +50,9 @@ const renderComponent = (properties?: any) => {
 		);
 	};
 
-	const utils: RenderResult = render(
-		<Route path="/profiles/:profileId">
-			<Component />
-		</Route>,
-		{
-			route: `/profiles/${profile.id()}`,
-		},
-	);
+	const utils: RenderResult = render(<Component />, {
+		route: `/profiles/${profile.id()}`,
+	});
 
 	return { ...utils, form };
 };

@@ -215,7 +215,8 @@ exports[`VerifyMessage > should render (lg) 1`] = `
               >
                 <a
                   class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
-                  href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/dashboard"
+                  data-discover="true"
+                  href="/profiles/877b7695-8a55-4e16-a7ff-412113131856/dashboard"
                   title="Portfolio"
                 >
                   Portfolio
@@ -226,7 +227,8 @@ exports[`VerifyMessage > should render (lg) 1`] = `
               >
                 <a
                   class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
-                  href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/exchange"
+                  data-discover="true"
+                  href="/profiles/877b7695-8a55-4e16-a7ff-412113131856/exchange"
                   title="Exchange"
                 >
                   Exchange
@@ -237,7 +239,8 @@ exports[`VerifyMessage > should render (lg) 1`] = `
               >
                 <a
                   class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
-                  href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/contacts"
+                  data-discover="true"
+                  href="/profiles/877b7695-8a55-4e16-a7ff-412113131856/contacts"
                   title="Contacts"
                 >
                   Contacts
@@ -248,7 +251,8 @@ exports[`VerifyMessage > should render (lg) 1`] = `
               >
                 <a
                   class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
-                  href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/votes"
+                  data-discover="true"
+                  href="/profiles/877b7695-8a55-4e16-a7ff-412113131856/votes"
                   title="Votes"
                 >
                   Votes
@@ -1208,7 +1212,8 @@ exports[`VerifyMessage > should render (xs) 1`] = `
               >
                 <a
                   class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
-                  href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/dashboard"
+                  data-discover="true"
+                  href="/profiles/877b7695-8a55-4e16-a7ff-412113131856/dashboard"
                   title="Portfolio"
                 >
                   Portfolio
@@ -1219,7 +1224,8 @@ exports[`VerifyMessage > should render (xs) 1`] = `
               >
                 <a
                   class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
-                  href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/exchange"
+                  data-discover="true"
+                  href="/profiles/877b7695-8a55-4e16-a7ff-412113131856/exchange"
                   title="Exchange"
                 >
                   Exchange
@@ -1230,7 +1236,8 @@ exports[`VerifyMessage > should render (xs) 1`] = `
               >
                 <a
                   class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
-                  href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/contacts"
+                  data-discover="true"
+                  href="/profiles/877b7695-8a55-4e16-a7ff-412113131856/contacts"
                   title="Contacts"
                 >
                   Contacts
@@ -1241,7 +1248,8 @@ exports[`VerifyMessage > should render (xs) 1`] = `
               >
                 <a
                   class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
-                  href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/votes"
+                  data-discover="true"
+                  href="/profiles/877b7695-8a55-4e16-a7ff-412113131856/votes"
                   title="Votes"
                 >
                   Votes

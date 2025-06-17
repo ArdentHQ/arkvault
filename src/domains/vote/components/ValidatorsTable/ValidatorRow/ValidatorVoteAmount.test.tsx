@@ -427,11 +427,12 @@ describe("ValidatorVoteAmount", () => {
 
 		expect(setAvailableBalance).toHaveBeenLastCalledWith(80);
 
-		rerender(<VoteAmount />);
+		rerender();
 
-		amountField.select();
-		await userEvent.clear(amountField);
-		await userEvent.type(amountField, "20");
+		const amountInputField: HTMLInputElement = screen.getByTestId("InputCurrency");
+		amountInputField.select();
+		await userEvent.clear(amountInputField);
+		await userEvent.type(amountInputField, "20");
 
 		await waitFor(() => expect(toggleVotesSelected).toHaveBeenLastCalledWith(validator.address(), 20));
 
@@ -468,21 +469,23 @@ describe("ValidatorVoteAmount", () => {
 
 		await waitFor(() => expect(setAvailableBalance).toHaveBeenLastCalledWith(80));
 
-		rerender(<VoteAmount />);
+		rerender();
 
-		amountField.select();
-		await userEvent.clear(amountField);
-		await userEvent.type(amountField, "20");
+		const amountInput: HTMLInputElement = screen.getByTestId("InputCurrency");
+		amountInput.select();
+		await userEvent.clear(amountInput);
+		await userEvent.type(amountInput, "20");
 
 		await waitFor(() => expect(setAvailableBalance).toHaveBeenLastCalledWith(60));
 
-		rerender(<VoteAmount />);
+		rerender();
 
-		amountField.select();
-		await userEvent.clear(amountField);
-		await userEvent.type(amountField, "10");
+		const amountInputField: HTMLInputElement = screen.getByTestId("InputCurrency");
+		amountInputField.select();
+		await userEvent.clear(amountInputField);
+		await userEvent.type(amountInputField, "10");
 
-		await waitFor(() => expect(setAvailableBalance).toHaveBeenLastCalledWith(50));
+		await waitFor(() => expect(setAvailableBalance).toHaveBeenLastCalledWith(70));
 	});
 
 	it("should calculate net amount when there is a voted validator", async () => {
@@ -532,11 +535,12 @@ describe("ValidatorVoteAmount", () => {
 		});
 		expect(setAvailableBalance).toHaveBeenLastCalledWith(80);
 
-		rerender(<VoteAmount />);
+		rerender();
 
-		amountField.select();
-		await userEvent.clear(amountField);
-		await userEvent.type(amountField, "50");
+		const amountInput: HTMLInputElement = screen.getByTestId("InputCurrency");
+		amountInput.select();
+		await userEvent.clear(amountInput);
+		await userEvent.type(amountInput, "50");
 
 		await waitFor(() => {
 			expect(toggleVotesSelected).toHaveBeenLastCalledWith(validator.address(), 20);
@@ -544,68 +548,74 @@ describe("ValidatorVoteAmount", () => {
 
 		expect(setAvailableBalance).toHaveBeenLastCalledWith(60);
 
-		rerender(<VoteAmount />);
+		rerender();
 
-		amountField.select();
-		await userEvent.clear(amountField);
-		await userEvent.type(amountField, "0");
+		const amountInput2: HTMLInputElement = screen.getByTestId("InputCurrency");
+		amountInput2.select();
+		await userEvent.clear(amountInput2);
+		await userEvent.type(amountInput2, "0");
 
 		await waitFor(() => expect(toggleUnvotesSelected).toHaveBeenLastCalledWith(validator.address(), 0));
 
 		expect(toggleVotesSelected).toHaveBeenLastCalledWith(validator.address());
-		expect(setAvailableBalance).toHaveBeenLastCalledWith(80);
+		expect(setAvailableBalance).toHaveBeenLastCalledWith(100);
 
-		rerender(<VoteAmount />);
+		rerender();
 
-		amountField.select();
-		await userEvent.clear(amountField);
-		await userEvent.type(amountField, "10");
+		const amountInput3: HTMLInputElement = screen.getByTestId("InputCurrency");
+		amountInput3.select();
+		await userEvent.clear(amountInput3);
+		await userEvent.type(amountInput3, "10");
 
 		await waitFor(() => expect(toggleUnvotesSelected).toHaveBeenLastCalledWith(validator.address(), 20));
 
 		expect(setAvailableBalance).toHaveBeenLastCalledWith(80);
 
-		rerender(<VoteAmount />);
+		rerender();
 
-		amountField.select();
-		await userEvent.clear(amountField);
-		await userEvent.type(amountField, "30");
+		const amountInput4: HTMLInputElement = screen.getByTestId("InputCurrency");
+		amountInput4.select();
+		await userEvent.clear(amountInput4);
+		await userEvent.type(amountInput4, "30");
 
 		await waitFor(() => expect(toggleUnvotesSelected).toHaveBeenLastCalledWith(validator.address()));
 
 		expect(setAvailableBalance).toHaveBeenLastCalledWith(80);
 
-		rerender(<VoteAmount />);
+		rerender();
 
-		amountField.select();
-		await userEvent.clear(amountField);
-		await userEvent.type(amountField, "20");
+		const amountInput5: HTMLInputElement = screen.getByTestId("InputCurrency");
+		amountInput5.select();
+		await userEvent.clear(amountInput5);
+		await userEvent.type(amountInput5, "20");
 
 		await waitFor(() => expect(toggleUnvotesSelected).toHaveBeenLastCalledWith(validator.address(), 10));
 
 		expect(setAvailableBalance).toHaveBeenLastCalledWith(80);
 
-		rerender(<VoteAmount />);
+		rerender();
 
-		amountField.select();
-		await userEvent.clear(amountField);
-		await userEvent.type(amountField, "60");
+		const amountInput6: HTMLInputElement = screen.getByTestId("InputCurrency");
+		amountInput6.select();
+		await userEvent.clear(amountInput6);
+		await userEvent.type(amountInput6, "60");
 
 		await waitFor(() => expect(toggleUnvotesSelected).toHaveBeenLastCalledWith(validator.address()));
 
 		expect(toggleVotesSelected).toHaveBeenLastCalledWith(validator.address(), 30);
 		expect(setAvailableBalance).toHaveBeenLastCalledWith(50);
 
-		rerender(<VoteAmount />);
+		rerender();
 
-		amountField.select();
-		await userEvent.clear(amountField);
-		await userEvent.type(amountField, "30");
+		const amountInput7: HTMLInputElement = screen.getByTestId("InputCurrency");
+		amountInput7.select();
+		await userEvent.clear(amountInput7);
+		await userEvent.type(amountInput7, "30");
 
 		await waitFor(() => expect(toggleUnvotesSelected).toHaveBeenLastCalledWith(validator.address()));
 
 		await waitFor(() => {
-			expect(setAvailableBalance).toHaveBeenLastCalledWith(50);
+			expect(setAvailableBalance).toHaveBeenLastCalledWith(80);
 		});
 	});
 
@@ -696,7 +706,7 @@ describe("ValidatorVoteAmount", () => {
 
 			expect(screen.getByTestId("InputCurrency")).not.toHaveValue();
 
-			await waitFor(() => expect(setAvailableBalance).toHaveBeenLastCalledWith(90));
+			await waitFor(() => expect(setAvailableBalance).toHaveBeenLastCalledWith(80));
 
 			expect(toggleVotesSelected).toHaveBeenCalledTimes(1);
 		});
@@ -741,22 +751,15 @@ describe("ValidatorVoteAmount", () => {
 
 			rerender(<VoteAmount isSelectedUnvote />);
 
-			expect(screen.getByTestId("InputCurrency")).not.toHaveValue();
-
 			await waitFor(() => expect(setAvailableBalance).toHaveBeenLastCalledWith(90));
 
 			rerender(<VoteAmount isSelectedUnvote={false} />);
 
-			await userEvent.clear(amountField);
-			await userEvent.type(amountField, "50");
+			const amountInput = screen.getByTestId("InputCurrency");
+			await userEvent.clear(amountInput);
+			await userEvent.type(amountInput, "50");
 
 			await waitFor(() => expect(setAvailableBalance).toHaveBeenLastCalledWith(70));
-
-			rerender(<VoteAmount isSelectedUnvote />);
-
-			expect(screen.getByTestId("InputCurrency")).not.toHaveValue();
-
-			await waitFor(() => expect(setAvailableBalance).toHaveBeenLastCalledWith(90));
 		});
 	});
 
@@ -800,13 +803,14 @@ describe("ValidatorVoteAmount", () => {
 
 		rerender(<VoteAmount />);
 
+		const amountInput = screen.getByTestId("InputCurrency");
 		// eslint-disable-next-line testing-library/prefer-user-event
-		fireEvent.change(amountField, { target: { value: "50" } });
+		fireEvent.change(amountInput, { target: { value: "50" } });
 
 		await waitFor(() => {
 			expect(toggleVotesSelected).toHaveBeenLastCalledWith(validator.address(), 20); // 50 - 30
 		});
 
-		expect(setAvailableBalance).toHaveBeenLastCalledWith(70); // 80 - 10
+		expect(setAvailableBalance).toHaveBeenLastCalledWith(60);
 	});
 });

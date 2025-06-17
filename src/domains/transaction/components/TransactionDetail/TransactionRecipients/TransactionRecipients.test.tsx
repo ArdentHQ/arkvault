@@ -1,6 +1,5 @@
 import { Contracts } from "@/app/lib/profiles";
 import React from "react";
-import { Route } from "react-router-dom";
 
 import { TransactionRecipients } from "./TransactionRecipients";
 import { TransactionRecipientsMobile } from "./TransactionRecipientsMobile";
@@ -73,15 +72,13 @@ describe("TransactionRecipients", () => {
 
 	it.each(["xs", "sm", "md", "lg", "xl"])("should render multiple recipients in %s", (breakpoint) => {
 		const { container } = renderResponsiveWithRoute(
-			<Route path="/profiles/:profileId">
-				<TransactionRecipients
-					currency={currency}
-					recipients={[
-						{ address, amount: 1 },
-						{ address, amount: 1 },
-					]}
-				/>
-			</Route>,
+			<TransactionRecipients
+				currency={currency}
+				recipients={[
+					{ address, amount: 1 },
+					{ address, amount: 1 },
+				]}
+			/>,
 			breakpoint,
 			{
 				route: `/profiles/${profile.id()}`,
@@ -95,15 +92,13 @@ describe("TransactionRecipients", () => {
 
 	it.each(["xs", "sm", "md", "lg", "xl"])("should render recipients with validator icon in %s", (breakpoint) => {
 		const { container } = renderResponsiveWithRoute(
-			<Route path="/profiles/:profileId">
-				<TransactionRecipients
-					currency={currency}
-					recipients={[
-						{ address, amount: 1, isValidator: true },
-						{ address, amount: 1 },
-					]}
-				/>
-			</Route>,
+			<TransactionRecipients
+				currency={currency}
+				recipients={[
+					{ address, amount: 1, isValidator: true },
+					{ address, amount: 1 },
+				]}
+			/>,
 			breakpoint,
 			{
 				route: `/profiles/${profile.id()}`,

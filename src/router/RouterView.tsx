@@ -1,5 +1,5 @@
-import React, { createElement, FC, useEffect, useMemo, useRef } from "react";
-import { Redirect, Route, Switch, useHistory, useLocation } from "react-router-dom";
+import React, { FC, useEffect, useRef, useState } from "react";
+import { Navigate, Route, Routes, useLocation, useNavigate } from "react-router-dom";
 
 import { useEnvironmentContext } from "@/app/contexts";
 import { RouteItem, Middleware } from "@/router/router.types";
@@ -12,46 +12,57 @@ interface Properties {
 }
 
 export const RouterView = ({ routes, middlewares = [] }: Properties) => {
+	const navigate = useNavigate();
 	const location = useLocation();
-	const history = useHistory();
-	const { env } = useEnvironmentContext();
-	const [redirectUrl, setRedirectUrl] = React.useState<string | undefined>(undefined);
 
-	const previousPath = useRef("");
+	const { env } = useEnvironmentContext();
+	const [redirectUrl, setRedirectUrl] = useState<string | undefined>(undefined);
+	const [canActivate, setCanActivate] = useState(true);
+
+	const previousPath = useRef<string>("");
 
 	useEffect(() => {
-		history.listen((route) => {
-			// @ts-ignore
-			if (!previousPath.current || route.location?.pathname !== previousPath.current) {
-				// @ts-ignore
-				previousPath.current = route.location?.pathname;
-				window.scrollTo(0, 0);
-			}
-		});
-	}, [history]);
+		if (previousPath.current !== location.pathname) {
+			previousPath.current = location.pathname;
+			window.scrollTo(0, 0);
+		}
+	}, [location.pathname]);
 
-	const canActivate = useMemo(
-		() =>
-			// @ts-ignore
-			middlewares.every((middleware) => middleware.handler({ env, history, location, redirect: setRedirectUrl })),
-		[location, middlewares, env, history],
-	);
+	useEffect(() => {
+		const result = middlewares.every((middleware) =>
+			middleware.handler({
+				env,
+				location,
+				navigate,
+				redirect: setRedirectUrl,
+			}),
+		);
+		setCanActivate(result);
+	}, [location, middlewares, env]);
 
 	return (
-		<Switch>
-			{routes.map((route, index) => (
-				<Route key={index} path={route.path} exact={route.exact}>
-					<RouteSuspense skeleton={route.skeleton} path={route.path}>
-						{canActivate ? (
-							<div data-testid="RouterView__wrapper">
-								{createElement(route.component as PreloadableComponent<FC<unknown>>)}
-							</div>
-						) : (
-							<Redirect to={redirectUrl ?? "/"} />
-						)}
-					</RouteSuspense>
-				</Route>
-			))}
-		</Switch>
+		<Routes>
+			{routes.map((route, index) => {
+				const elementToRender = canActivate ? (
+					<div data-testid="RouterView__wrapper">
+						{React.createElement(route.component as PreloadableComponent<FC<unknown>>)}
+					</div>
+				) : (
+					<Navigate to={redirectUrl ?? "/"} replace />
+				);
+
+				return (
+					<Route
+						key={index}
+						path={route.path}
+						element={
+							<RouteSuspense skeleton={route.skeleton} path={route.path}>
+								{elementToRender}
+							</RouteSuspense>
+						}
+					/>
+				);
+			})}
+		</Routes>
 	);
 };

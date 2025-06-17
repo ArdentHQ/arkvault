@@ -1,4 +1,3 @@
-import { matchPath } from "react-router-dom";
 import { Contracts, Environment } from "@/app/lib/profiles";
 
 import { profileAllEnabledNetworkIds } from "./network-utils";
@@ -21,9 +20,12 @@ export const getProfileById = (env: Environment, id: string) => {
 };
 
 export const getProfileFromUrl = (env: Environment, url: string) => {
-	const urlMatch = matchPath(url, { path: "/profiles/:profileId" });
-	const urlProfileId = (urlMatch?.params as any)?.profileId;
-	return getProfileById(env, urlProfileId);
+	const urlInstance = new URL(url, window.location.origin);
+	const pathParts = urlInstance.pathname.split("/").filter(Boolean);
+
+	if (pathParts[0] === "profiles" && pathParts[1]) {
+		return getProfileById(env, pathParts[1]);
+	}
 };
 
 export const getProfileStoredPassword = (profile: Contracts.IProfile) => {

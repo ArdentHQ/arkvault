@@ -1,5 +1,5 @@
 import React from "react";
-import { screen, renderResponsive, render, env, getDefaultProfileId } from "@/utils/testing-library";
+import { screen, render, env, getDefaultProfileId, renderResponsiveWithRoute } from "@/utils/testing-library";
 import { TransactionDetails } from "./TransactionDetails";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
 import { Contracts } from "@/app/lib/profiles";
@@ -13,9 +13,12 @@ describe("TransactionDetails", () => {
 	});
 
 	it.each(["sm", "md", "lg"])("should render in %s", (breakpoint: string) => {
-		renderResponsive(
+		renderResponsiveWithRoute(
 			<TransactionDetails transaction={{ ...TransactionFixture, wallet: () => wallet }} />,
 			breakpoint,
+			{
+				route: "/",
+			},
 		);
 
 		expect(screen.getAllByTestId("DetailLabelText")).toHaveLength(4);

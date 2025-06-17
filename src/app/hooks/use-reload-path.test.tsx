@@ -1,6 +1,5 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
-import { Route } from "react-router-dom";
 
 import { useReloadPath } from "./use-reload-path";
 import { render, screen } from "@/utils/testing-library";
@@ -19,16 +18,12 @@ describe("useReloadPath hook", () => {
 		);
 	};
 
-	it("should render useReloadPath", () => {
-		render(
-			<Route pathname="/">
-				<TestComponent />
-			</Route>,
-		);
+	it("should render useReloadPath", async () => {
+		render(<TestComponent />);
 
 		expect(screen.getByTestId("header_test")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("header_test"));
+		await userEvent.click(screen.getByTestId("header_test"));
 
 		expect(screen.getByText("UseReloadPath Test Component")).toBeInTheDocument();
 	});
