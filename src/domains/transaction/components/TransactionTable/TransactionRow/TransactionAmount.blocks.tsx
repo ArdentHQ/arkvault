@@ -3,6 +3,9 @@ import React from "react";
 import { Contracts, DTO } from "@/app/lib/profiles";
 import { useTranslation } from "react-i18next";
 import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
+import { configManager } from "@/app/lib/mainsail";
+import { BigNumber } from "@/app/lib/helpers";
+import { UnitConverter } from "@arkecosystem/typescript-crypto";
 
 type ExtendedTransactionData = DTO.ExtendedConfirmedTransactionData | DTO.ExtendedSignedTransactionData;
 
@@ -72,13 +75,37 @@ export const TransactionTotalLabel = ({
 	const currency = transaction.wallet().currency();
 	const returnedAmount = calculateReturnedAmount(transaction);
 
+	const getTotal = () => {
+		if (transaction.isValidatorRegistration()) {
+			if ("isSuccess" in transaction && transaction.isSuccess()) {
+				return transaction.total();
+			}
+
+			return BigNumber.make(transaction.total())
+				.minus(UnitConverter.formatUnits(configManager.getMilestone()["validatorRegistrationFee"] ?? 0, "ARK"))
+				.toNumber();
+		}
+
+		if (transaction.isValidatorResignation()) {
+			if ("isSuccess" in transaction && transaction.isSuccess()) {
+				return transaction.total();
+			}
+
+			return BigNumber.make(transaction.total())
+				.plus(UnitConverter.formatUnits(configManager.getMilestone()["validatorRegistrationFee"] ?? 0, "ARK"))
+				.toNumber();
+		}
+
+		return transaction.total();
+	};
+
 	if (hideStyles) {
 		return (
 			<Amount
 				showSign={false}
 				showTicker={false}
 				ticker={currency}
-				value={transaction.total()}
+				value={getTotal()}
 				isNegative={transaction.isSent()}
 				className="text-sm font-semibold"
 				allowHideBalance
@@ -89,7 +116,7 @@ export const TransactionTotalLabel = ({
 
 	return (
 		<AmountLabel
-			value={transaction.total()}
+			value={getTotal()}
 			isNegative={transaction.isSent()}
 			ticker={currency}
 			hideSign={transaction.isReturn()}
