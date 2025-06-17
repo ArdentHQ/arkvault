@@ -23,7 +23,10 @@ export const TransactionSummary = ({
 
 	const showAmount = useMemo(() => {
 		if (transaction.isValidatorRegistration()) {
-			return !transaction.isConfirmed() || ("isSuccess" in transaction && !transaction.isSuccess());
+			return (
+				!transaction.isConfirmed() ||
+				(transaction.isConfirmed() && "isSuccess" in transaction && transaction.isSuccess())
+			);
 		}
 
 		return !BigNumber.make(transaction.value()).isZero();
