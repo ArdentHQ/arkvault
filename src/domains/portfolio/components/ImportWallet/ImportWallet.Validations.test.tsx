@@ -1,7 +1,6 @@
 import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
-import { Route } from "react-router-dom";
 
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import { translations as walletTranslations } from "@/domains/wallet/i18n";
@@ -71,14 +70,9 @@ describe("ImportAddress Validations", () => {
 			throw new Error("error");
 		});
 
-		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
-			</Route>,
-			{
-				route: route,
-			},
-		);
+		render(<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: route,
+		});
 
 		expect(methodStep()).toBeInTheDocument();
 
@@ -104,14 +98,9 @@ describe("ImportAddress Validations", () => {
 			throw new Error("error");
 		});
 
-		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
-			</Route>,
-			{
-				route: route,
-			},
-		);
+		render(<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: route,
+		});
 
 		expect(methodStep()).toBeInTheDocument();
 
@@ -151,9 +140,7 @@ describe("ImportAddress Validations", () => {
 	// 	});
 	//
 	// 	render(
-	// 		<Route path="/profiles/:profileId/dashboard">
-	// 			<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
-	// 		</Route>,
+	// 			<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />,
 	// 		{
 	// 			route: route,
 	// 		},
@@ -211,14 +198,9 @@ describe("ImportAddress Validations", () => {
 
 		profile.wallets().push(generated.wallet);
 
-		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
-			</Route>,
-			{
-				route: route,
-			},
-		);
+		render(<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: route,
+		});
 
 		expect(methodStep()).toBeInTheDocument();
 
@@ -247,14 +229,9 @@ describe("ImportAddress Validations", () => {
 	});
 
 	it("should show an error message for duplicate address when importing by address", async () => {
-		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
-			</Route>,
-			{
-				route: route,
-			},
-		);
+		render(<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: route,
+		});
 
 		expect(methodStep()).toBeInTheDocument();
 
@@ -283,14 +260,9 @@ describe("ImportAddress Validations", () => {
 	});
 
 	it("should show an error message for invalid address", async () => {
-		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
-			</Route>,
-			{
-				route: route,
-			},
-		);
+		render(<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: route,
+		});
 
 		expect(methodStep()).toBeInTheDocument();
 
@@ -333,14 +305,9 @@ describe("ImportAddress Validations", () => {
 
 		profile.wallets().push(wallet);
 
-		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
-			</Route>,
-			{
-				route: route,
-			},
-		);
+		render(<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: route,
+		});
 
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
 

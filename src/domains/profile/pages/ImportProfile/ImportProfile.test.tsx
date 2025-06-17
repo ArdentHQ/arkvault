@@ -1,11 +1,9 @@
 import fs from "fs";
 import userEvent from "@testing-library/user-event";
-import { createHashHistory } from "history";
 import React from "react";
 
-import { EnvironmentProvider } from "@/app/contexts";
 import { ImportProfile } from "@/domains/profile/pages/ImportProfile/ImportProfile";
-import { env, fireEvent, render, screen, waitFor } from "@/utils/testing-library";
+import { fireEvent, render, screen, waitFor } from "@/utils/testing-library";
 
 const passwordProtectedWwe = fs.readFileSync("src/tests/fixtures/profile/import/password-protected-profile.wwe");
 const withSelectedAddresses = fs.readFileSync("src/tests/fixtures/profile/import/profile-with-selected-addresses.wwe");
@@ -13,7 +11,6 @@ const corruptedWwe = fs.readFileSync("src/tests/fixtures/profile/import/corrupte
 const legacyJson = fs.readFileSync("src/tests/fixtures/profile/import/legacy-profile.json");
 const darkThemeWwe = fs.readFileSync("src/tests/fixtures/profile/import/profile-dark-theme.wwe");
 const lightThemeWwe = fs.readFileSync("src/tests/fixtures/profile/import/profile-light-theme.wwe");
-const history = createHashHistory();
 
 const importProfileURL = "/profiles/import";
 
@@ -29,46 +26,25 @@ const createBlob = (fileContents: string | Buffer, fileName?: string) =>
 	new File([new Blob([fileContents])], fileName || "fileName.wwe");
 
 describe("ImportProfile", () => {
-	beforeEach(() => {
-		history.push(importProfileURL);
-	});
-
 	it("should render first step", () => {
-		render(
-			<EnvironmentProvider env={env}>
-				<ImportProfile />
-			</EnvironmentProvider>,
-		);
+		render(<ImportProfile />);
 
 		expect(screen.getByTestId(changeFileID)).toBeInTheDocument();
 	});
 
 	it("should go back", async () => {
-		const historyMock = vi.spyOn(history, "push").mockReturnValue();
-
-		render(
-			<EnvironmentProvider env={env}>
-				<ImportProfile />
-			</EnvironmentProvider>,
-			{ history },
-		);
+		const { router } = render(<ImportProfile />, { router: importProfileURL });
 
 		expect(screen.getByTestId(changeFileID)).toBeInTheDocument();
 		expect(screen.getByTestId("SelectFileStep__back")).toBeInTheDocument();
 
 		await userEvent.click(screen.getByTestId("SelectFileStep__back"));
 
-		await waitFor(() => expect(historyMock).toHaveBeenCalledWith("/"));
-		historyMock.mockRestore();
+		await waitFor(() => expect(router.state.location.pathname).toBe("/"));
 	});
 
 	it("should change file format", async () => {
-		render(
-			<EnvironmentProvider env={env}>
-				<ImportProfile />
-			</EnvironmentProvider>,
-			{ history },
-		);
+		render(<ImportProfile />, { route: importProfileURL });
 
 		expect(screen.getByTestId(changeFileID)).toBeInTheDocument();
 
@@ -78,12 +54,7 @@ describe("ImportProfile", () => {
 	});
 
 	it("should select file and go to step 2", async () => {
-		render(
-			<EnvironmentProvider env={env}>
-				<ImportProfile />
-			</EnvironmentProvider>,
-			{ history },
-		);
+		render(<ImportProfile />, { route: importProfileURL });
 
 		expect(screen.getByTestId(changeFileID)).toBeInTheDocument();
 		expect(screen.getByTestId("SelectFileStep__back")).toBeInTheDocument();
@@ -97,14 +68,9 @@ describe("ImportProfile", () => {
 		await expect(screen.findByTestId("ProcessingImport")).resolves.toBeVisible();
 	});
 
-	// @TODO https://app.clickup.com/t/86dwq8wy3
+	//// @TODO https://app.clickup.com/t/86dwq8wy3
 	it.skip("should request and set password for importing password protected profile", async () => {
-		render(
-			<EnvironmentProvider env={env}>
-				<ImportProfile />
-			</EnvironmentProvider>,
-			{ history },
-		);
+		render(<ImportProfile />, { route: importProfileURL });
 
 		expect(screen.getByTestId(changeFileID)).toBeInTheDocument();
 		expect(screen.getByTestId("SelectFileStep__back")).toBeInTheDocument();
@@ -131,12 +97,7 @@ describe("ImportProfile", () => {
 	});
 
 	it("should close password modal and go back to select file", async () => {
-		render(
-			<EnvironmentProvider env={env}>
-				<ImportProfile />
-			</EnvironmentProvider>,
-			{ history },
-		);
+		render(<ImportProfile />, { route: importProfileURL });
 
 		expect(screen.getByTestId(changeFileID)).toBeInTheDocument();
 		expect(screen.getByTestId("SelectFileStep__back")).toBeInTheDocument();
@@ -157,14 +118,7 @@ describe("ImportProfile", () => {
 
 	// @TODO https://app.clickup.com/t/86dwq8wy3
 	it.skip("should successfully import profile and return to home screen", async () => {
-		const historyMock = vi.spyOn(history, "push").mockReturnValue();
-
-		render(
-			<EnvironmentProvider env={env}>
-				<ImportProfile />
-			</EnvironmentProvider>,
-			{ history },
-		);
+		const { router } = render(<ImportProfile />, { route: importProfileURL });
 
 		expect(screen.getByTestId(changeFileID)).toBeInTheDocument();
 		expect(screen.getByTestId("SelectFileStep__back")).toBeInTheDocument();
@@ -198,19 +152,12 @@ describe("ImportProfile", () => {
 
 		await userEvent.click(screen.getByTestId(profileSubmitButton));
 
-		await waitFor(() => expect(historyMock).toHaveBeenCalledWith("/"));
+		await waitFor(() => expect(router.state.location.pathname).toBe("/"));
 	});
 
 	// @TODO https://app.clickup.com/t/86dwq8wy3
 	it.skip("should not set selected addresses if profile has already", async () => {
-		const historyMock = vi.spyOn(history, "push").mockReturnValue();
-
-		render(
-			<EnvironmentProvider env={env}>
-				<ImportProfile />
-			</EnvironmentProvider>,
-			{ history },
-		);
+		const { router } = render(<ImportProfile />, { route: importProfileURL });
 
 		expect(screen.getByTestId(changeFileID)).toBeInTheDocument();
 		expect(screen.getByTestId("SelectFileStep__back")).toBeInTheDocument();
@@ -244,18 +191,11 @@ describe("ImportProfile", () => {
 
 		await userEvent.click(screen.getByTestId(profileSubmitButton));
 
-		await waitFor(() => expect(historyMock).toHaveBeenCalledWith("/"));
+		await waitFor(() => expect(router.state.location.pathname).toBe("/"));
 	});
 
 	it("should successfully import legacy profile and return to home screen", async () => {
-		const historyMock = vi.spyOn(history, "push").mockReturnValue();
-
-		render(
-			<EnvironmentProvider env={env}>
-				<ImportProfile />
-			</EnvironmentProvider>,
-			{ history },
-		);
+		const { router } = render(<ImportProfile />, { route: importProfileURL });
 
 		expect(screen.getByTestId(changeFileID)).toBeInTheDocument();
 		expect(screen.getByTestId("SelectFileStep__back")).toBeInTheDocument();
@@ -284,19 +224,14 @@ describe("ImportProfile", () => {
 
 		await userEvent.click(screen.getByTestId(profileSubmitButton));
 
-		await waitFor(() => expect(historyMock).toHaveBeenCalledWith("/"));
+		await waitFor(() => expect(router.state.location.pathname).toBe("/"));
 	});
 
 	it.each([
 		["dark", darkThemeWwe],
 		["light", lightThemeWwe],
 	])("should apply theme setting of imported profile regardless of OS preferences", async (theme, wweFile) => {
-		render(
-			<EnvironmentProvider env={env}>
-				<ImportProfile />
-			</EnvironmentProvider>,
-			{ history },
-		);
+		render(<ImportProfile />, { route: importProfileURL });
 
 		expect(screen.getByTestId(changeFileID)).toBeInTheDocument();
 		expect(screen.getByTestId("SelectFileStep__back")).toBeInTheDocument();
@@ -327,12 +262,7 @@ describe("ImportProfile", () => {
 
 	// @TODO https://app.clickup.com/t/86dwq8wy3
 	it.skip("should go to step 3 and back", async () => {
-		render(
-			<EnvironmentProvider env={env}>
-				<ImportProfile />
-			</EnvironmentProvider>,
-			{ history },
-		);
+		render(<ImportProfile />, { route: importProfileURL });
 
 		expect(screen.getByTestId(changeFileID)).toBeInTheDocument();
 		expect(screen.getByTestId("SelectFileStep__back")).toBeInTheDocument();
@@ -366,12 +296,7 @@ describe("ImportProfile", () => {
 
 	// @TODO https://app.clickup.com/t/86dwq8wy3
 	it.skip("should fail profile import and show error", async () => {
-		render(
-			<EnvironmentProvider env={env}>
-				<ImportProfile />
-			</EnvironmentProvider>,
-			{ history },
-		);
+		render(<ImportProfile />, { route: importProfileURL });
 
 		expect(screen.getByTestId(changeFileID)).toBeInTheDocument();
 		expect(screen.getByTestId("SelectFileStep__back")).toBeInTheDocument();
@@ -397,12 +322,7 @@ describe("ImportProfile", () => {
 	});
 
 	it("should fail profile import and retry", async () => {
-		render(
-			<EnvironmentProvider env={env}>
-				<ImportProfile />
-			</EnvironmentProvider>,
-			{ history },
-		);
+		render(<ImportProfile />, { route: importProfileURL });
 
 		expect(screen.getByTestId(changeFileID)).toBeInTheDocument();
 		expect(screen.getByTestId("SelectFileStep__back")).toBeInTheDocument();
@@ -432,14 +352,7 @@ describe("ImportProfile", () => {
 	});
 
 	it("should fail profile import and go back to home screen", async () => {
-		const historyMock = vi.spyOn(history, "push").mockReturnValue();
-
-		render(
-			<EnvironmentProvider env={env}>
-				<ImportProfile />
-			</EnvironmentProvider>,
-			{ history },
-		);
+		const { router } = render(<ImportProfile />, { route: importProfileURL });
 
 		expect(screen.getByTestId(changeFileID)).toBeInTheDocument();
 		expect(screen.getByTestId("SelectFileStep__back")).toBeInTheDocument();
@@ -467,8 +380,6 @@ describe("ImportProfile", () => {
 
 		await expect(screen.findByTestId("ImportError")).resolves.toBeVisible();
 
-		await waitFor(() => expect(historyMock).toHaveBeenCalledWith("/"));
-
-		historyMock.mockRestore();
+		await waitFor(() => expect(router.state.location.pathname).toBe("/"));
 	});
 });

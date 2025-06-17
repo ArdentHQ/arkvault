@@ -1,7 +1,7 @@
 import { Contracts } from "@/app/lib/profiles";
 import React, { useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import { Page, Section } from "@/app/components/Layout";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
@@ -21,7 +21,7 @@ enum Step {
 export const ImportProfile = () => {
 	const { env, persist } = useEnvironmentContext();
 	const { t } = useTranslation();
-	const history = useHistory();
+	const navigate = useNavigate();
 
 	const [activeTab, setActiveTab] = useState<Step>(Step.SelectFileStep);
 	const [fileFormat, setFileFormat] = useState(".wwe");
@@ -47,7 +47,7 @@ export const ImportProfile = () => {
 		}
 
 		await persist();
-		history.push("/");
+		navigate("/");
 	};
 
 	return (
@@ -64,7 +64,7 @@ export const ImportProfile = () => {
 								fileFormat={fileFormat}
 								onFileFormatChange={setFileFormat}
 								onSelect={handleSelectedFile}
-								onBack={() => history.push("/")}
+								onBack={() => navigate("/")}
 							/>
 						</TabPanel>
 
@@ -75,7 +75,7 @@ export const ImportProfile = () => {
 									password={password}
 									file={selectedFile}
 									onBack={() => setActiveTab(Step.SelectFileStep)}
-									onCancel={() => history.push("/")}
+									onCancel={() => navigate("/")}
 									onPasswordChange={setPassword}
 									onRetry={() => {
 										setSelectedFile({ ...selectedFile });

@@ -1,27 +1,16 @@
 import { Contracts } from "@/app/lib/profiles";
 import { renderHook } from "@testing-library/react";
-import { createHashHistory } from "history";
 import React from "react";
-import { Router } from "react-router-dom";
-import { env, act, getMainsailProfileId } from "@/utils/testing-library";
+import { env, act, getMainsailProfileId, Providers, LocationTracker } from "@/utils/testing-library";
 import { DropdownOption } from "@/app/components/Dropdown";
-import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
 import * as useActiveProfileModule from "@/app/hooks/env";
 import { useWalletActions } from "@/domains/wallet/hooks/use-wallet-actions";
 
 describe("useWalletActions", () => {
-	const history = createHashHistory();
-
 	let profile: Contracts.IProfile;
 	let wallet: Contracts.IReadWriteWallet;
 
-	const wrapper = ({ children }) => (
-		<Router history={history}>
-			<EnvironmentProvider env={env}>
-				<ConfigurationProvider>{children}</ConfigurationProvider>
-			</EnvironmentProvider>
-		</Router>
-	);
+	const wrapper = ({ children }) => <Providers>{children}</Providers>;
 
 	beforeAll(() => {
 		profile = env.profiles().findById(getMainsailProfileId());
@@ -64,40 +53,53 @@ describe("useWalletActions", () => {
 	});
 
 	it("should push right url to history if there are multiple wallets", () => {
+		let currentLocation = { pathname: "/" };
+
 		const {
 			result: { current },
 		} = renderHook(() => useWalletActions({ wallets: [wallet, profile.wallets().last()] }), {
-			wrapper,
+			wrapper: ({ children }) => (
+				<Providers>
+					<LocationTracker
+						onLocationChange={(location) => {
+							currentLocation = location;
+						}}
+					/>
+					{children}
+				</Providers>
+			),
 		});
+
+		expect(currentLocation.pathname).toBe("/");
 
 		act(() => {
 			current.handleSend();
 		});
 
-		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/send-transfer`);
+		expect(currentLocation.pathname).toBe(`/profiles/${profile.id()}/send-transfer`);
 
 		act(() => {
 			current.handleSelectOption({ value: "validator-registration" } as DropdownOption);
 		});
 
-		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/send-registration/validatorRegistration`);
+		expect(currentLocation.pathname).toBe(`/profiles/${profile.id()}/send-registration/validatorRegistration`);
 
 		act(() => {
 			current.handleSelectOption({ value: "validator-resignation" } as DropdownOption);
 		});
 
-		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/send-validator-resignation`);
+		expect(currentLocation.pathname).toBe(`/profiles/${profile.id()}/send-validator-resignation`);
 
 		act(() => {
 			current.handleSelectOption({ value: "username-registration" } as DropdownOption);
 		});
 
-		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/send-registration/usernameRegistration`);
+		expect(currentLocation.pathname).toBe(`/profiles/${profile.id()}/send-registration/usernameRegistration`);
 
 		act(() => {
 			current.handleSelectOption({ value: "username-resignation" } as DropdownOption);
 		});
 
-		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/send-username-resignation`);
+		expect(currentLocation.pathname).toBe(`/profiles/${profile.id()}/send-username-resignation`);
 	});
 });

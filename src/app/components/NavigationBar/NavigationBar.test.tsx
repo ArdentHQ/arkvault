@@ -1,9 +1,7 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
-import { createHashHistory } from "history";
 import React, { useEffect } from "react";
-import { Route } from "react-router-dom";
 
 import { NavigationBar } from "./NavigationBar";
 import * as navigation from "@/app/constants/navigation";
@@ -20,7 +18,6 @@ import {
 } from "@/utils/testing-library";
 
 const dashboardURL = `/profiles/${getMainsailProfileId()}/dashboard`;
-const history = createHashHistory();
 const webWidgetSelector = "#webWidget";
 const navigationBarLogoButtonSelector = "NavigationBarLogo--button";
 
@@ -63,8 +60,6 @@ describe("NavigationBar", () => {
 	beforeAll(async () => {
 		process.env.MOCK_AVAILABLE_NETWORKS = "false";
 		profile = mockedTestEnvironment.profiles().findById(getMainsailProfileId());
-
-		history.push(dashboardURL);
 	});
 
 	beforeEach(() => {
@@ -146,15 +141,11 @@ describe("NavigationBar", () => {
 	});
 
 	it("should handle logo click", async () => {
-		const { history } = render(<NavigationBar />);
-
-		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
+		const { router } = render(<NavigationBar />);
 
 		await userEvent.click(screen.getByTestId(navigationBarLogoButtonSelector));
 
-		expect(historySpy).toHaveBeenCalledWith(`/profiles/${getMainsailProfileId()}/dashboard`);
-
-		historySpy.mockRestore();
+		expect(router.state.location.pathname).toBe(`/profiles/${getMainsailProfileId()}/dashboard`);
 	});
 
 	it("should render logo with 16 pixels height on mobile", () => {
@@ -181,30 +172,26 @@ describe("NavigationBar", () => {
 	});
 
 	it("should redirect to home by default on logo click", async () => {
-		const { history } = render(<NavigationBar variant="logo-only" />);
-
-		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
+		const { router } = render(<NavigationBar variant="logo-only" />);
 
 		await userEvent.click(screen.getByTestId(navigationBarLogoButtonSelector));
 
-		expect(historySpy).toHaveBeenCalledWith("/");
-
-		historySpy.mockRestore();
+		expect(router.state.location.pathname).toBe("/");
 	});
 
 	it("should handle menu click", async () => {
-		const { history } = render(<NavigationBar />);
+		const { router } = render(<NavigationBar />);
 
 		await userEvent.click(screen.getByText("test"));
 
-		expect(history.location.pathname).toBe("/test");
+		expect(router.state.location.pathname).toBe("/test");
 	});
 
 	it("should handle menu click in small screen variant", async () => {
 		Object.defineProperty(window, "innerWidth", { configurable: true, value: 700, writable: true });
 		window.dispatchEvent(new Event("resize"));
 
-		const { history } = render(<NavigationBar />);
+		const { router } = render(<NavigationBar />);
 
 		await userEvent.click(screen.queryAllByTestId("dropdown__toggle")[0]);
 
@@ -212,7 +199,7 @@ describe("NavigationBar", () => {
 
 		await userEvent.click(screen.getByTestId("dropdown__option--1"));
 
-		expect(history.location.pathname).toBe("/test");
+		expect(router.state.location.pathname).toBe("/test");
 	});
 
 	it("should open user actions dropdown on click", async () => {
@@ -221,7 +208,7 @@ describe("NavigationBar", () => {
 			{ label: "Option 2", mountPath: () => "/test2", title: "test2", value: "/test2" },
 		]);
 
-		const { history } = render(<NavigationBar />);
+		const { router } = render(<NavigationBar />);
 		const toggle = screen.getByTestId("UserMenu");
 
 		await userEvent.click(toggle);
@@ -230,7 +217,7 @@ describe("NavigationBar", () => {
 
 		await userEvent.click(screen.getByText("Option 1"));
 
-		expect(history.location.pathname).toBe("/test");
+		expect(router.state.location.pathname).toBe("/test");
 
 		getUserMenuActionsMock.mockRestore();
 	});
@@ -259,7 +246,7 @@ describe("NavigationBar", () => {
 			.spyOn(navigation, "getUserMenuActions")
 			.mockReturnValue([{ label: "Option 1", mountPath: () => "/", title: "test2", value: "contact" }]);
 
-		const { history } = render(<NavigationBar />);
+		const { router } = render(<NavigationBar />);
 		const toggle = screen.getByTestId("UserMenu");
 
 		await userEvent.click(toggle);
@@ -268,7 +255,7 @@ describe("NavigationBar", () => {
 
 		await userEvent.click(screen.getByText("Option 1"));
 
-		expect(history.location.pathname).toBe("/");
+		expect(router.state.location.pathname).toBe("/");
 
 		await waitFor(() => expect(widgetMock).toHaveBeenCalledWith(webWidgetSelector));
 
@@ -279,36 +266,30 @@ describe("NavigationBar", () => {
 
 	it("should handle click to send button", async () => {
 		const mockProfile = environmentHooks.useActiveProfile();
-		const { history } = render(<NavigationBar />);
+		const { router } = render(<NavigationBar />);
 
 		const sendButton = screen.getByTestId("NavigationBar__buttons--send");
 
 		await userEvent.click(sendButton);
 
-		expect(history.location.pathname).toBe(`/profiles/${mockProfile.id()}/send-transfer`);
+		expect(router.state.location.pathname).toBe(`/profiles/${mockProfile.id()}/send-transfer`);
 	});
 
 	it("should handle click to send button from mobile menu", async () => {
 		const mockProfile = environmentHooks.useActiveProfile();
-		const { history } = renderResponsiveWithRoute(<NavigationBar />, "xs");
+		const { router } = renderResponsiveWithRoute(<NavigationBar />, "xs");
 
 		const sendButton = screen.getByTestId("NavigationBar__buttons__mobile--send");
 
 		await userEvent.click(sendButton);
 
-		expect(history.location.pathname).toBe(`/profiles/${mockProfile.id()}/send-transfer`);
+		expect(router.state.location.pathname).toBe(`/profiles/${mockProfile.id()}/send-transfer`);
 	});
 
 	it("should handle receive funds", async () => {
-		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<NavigationBar />
-			</Route>,
-			{
-				history,
-				route: dashboardURL,
-			},
-		);
+		render(<NavigationBar />, {
+			route: dashboardURL,
+		});
 
 		await userEvent.click(screen.getByTestId("NavigationBar__buttons--receive"));
 
@@ -326,16 +307,9 @@ describe("NavigationBar", () => {
 	});
 
 	it("should handle receive funds from mobile menu", async () => {
-		renderResponsiveWithRoute(
-			<Route path="/profiles/:profileId/dashboard">
-				<NavigationBar />
-			</Route>,
-			"xs",
-			{
-				history,
-				route: dashboardURL,
-			},
-		);
+		renderResponsiveWithRoute(<NavigationBar />, "xs", {
+			route: dashboardURL,
+		});
 
 		await userEvent.click(screen.getByTestId("NavigationBar__buttons__mobile--receive"));
 
@@ -355,14 +329,10 @@ describe("NavigationBar", () => {
 	it("should update the mobile menu when the has fixed form context is updated", async () => {
 		renderResponsiveWithRoute(
 			<ContainerWithFixedFormButtons>
-				<Route path="/profiles/:profileId/dashboard">
-					<NavigationBar />
-				</Route>
-				,
+				<NavigationBar />
 			</ContainerWithFixedFormButtons>,
 			"xs",
 			{
-				history,
 				route: dashboardURL,
 			},
 		);
@@ -371,16 +341,9 @@ describe("NavigationBar", () => {
 	});
 
 	it("should show the mobile menu on xs screen", async () => {
-		renderResponsiveWithRoute(
-			<Route path="/profiles/:profileId/dashboard">
-				<NavigationBar />
-			</Route>,
-			"xs",
-			{
-				history,
-				route: dashboardURL,
-			},
-		);
+		renderResponsiveWithRoute(<NavigationBar />, "xs", {
+			route: dashboardURL,
+		});
 
 		expect(screen.getByTestId("NavigationBarMobile")).toBeInTheDocument();
 	});
@@ -388,14 +351,10 @@ describe("NavigationBar", () => {
 	it("should hide the mobile menu when the show mobile navigation is set to `false`", async () => {
 		renderResponsiveWithRoute(
 			<ContainerWithHiddenNavigation>
-				<Route path="/profiles/:profileId/dashboard">
-					<NavigationBar />
-				</Route>
-				,
+				<NavigationBar />
 			</ContainerWithHiddenNavigation>,
 			"xs",
 			{
-				history,
 				route: dashboardURL,
 			},
 		);
@@ -404,32 +363,19 @@ describe("NavigationBar", () => {
 	});
 
 	it("should handle mobile menu home button", async () => {
-		const { history: renderHistory } = renderResponsiveWithRoute(
-			<Route path="/profiles/:profileId/send-transfer">
-				<NavigationBar />
-			</Route>,
-			"xs",
-			{
-				history,
-				route: "/profiles/:profileId/send-transfer",
-			},
-		);
+		const { router } = renderResponsiveWithRoute(<NavigationBar />, "xs", {
+			route: "/profiles/:profileId/send-transfer",
+		});
 
 		await userEvent.click(screen.getByTestId("NavigationBar__buttons__mobile--home"));
 
-		expect(renderHistory.location.pathname).toBe(dashboardURL);
+		expect(router.state.location.pathname).toBe(dashboardURL);
 	});
 
 	it("should close the search wallet modal", async () => {
-		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<NavigationBar />
-			</Route>,
-			{
-				history,
-				route: dashboardURL,
-			},
-		);
+		render(<NavigationBar />, {
+			route: dashboardURL,
+		});
 
 		const receiveFundsButton = screen.getByTestId("NavigationBar__buttons--receive");
 
@@ -467,15 +413,12 @@ describe("NavigationBar", () => {
 
 	it("should hide the mobile menu if an input is focused", async () => {
 		renderResponsiveWithRoute(
-			<Route path="/profiles/:profileId/dashboard">
-				<div>
-					<input data-testid="input" />
-					<NavigationBar />
-				</div>
-			</Route>,
+			<div>
+				<input data-testid="input" />
+				<NavigationBar />
+			</div>,
 			"xs",
 			{
-				history,
 				route: dashboardURL,
 			},
 		);

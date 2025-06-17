@@ -1,20 +1,11 @@
 import React, { useEffect } from "react";
-import { createHashHistory } from "history";
 import { useConfiguration, ConfigurationProvider } from "@/app/contexts";
 import { useServerHealthStatus } from "@/app/hooks";
 import { render, screen, getMainsailProfileId } from "@/utils/testing-library";
 import { ServerStatus } from "@/utils/peers";
 import { ServerHealthStatus } from "@/domains/setting/pages/Servers/Servers.contracts";
-import { Route } from "react-router-dom";
-
-const history = createHashHistory();
-const dashboardURL = `/profiles/${getMainsailProfileId()}/dashboard`;
 
 describe("useServerHealthStatus", () => {
-	beforeAll(() => {
-		history.push(dashboardURL);
-	});
-
 	const Component = ({ serverStatus }: { serverStatus: ServerHealthStatus }) => {
 		const { setConfiguration } = useConfiguration();
 		const { status } = useServerHealthStatus();
@@ -27,11 +18,9 @@ describe("useServerHealthStatus", () => {
 	};
 
 	const ServerHealthStatusWrapper = ({ status }: { status: ServerStatus }) => (
-		<Route path="/profiles/:profileId/votes">
-			<ConfigurationProvider>
-				<Component serverStatus={status} />
-			</ConfigurationProvider>
-		</Route>
+		<ConfigurationProvider>
+			<Component serverStatus={status} />
+		</ConfigurationProvider>
 	);
 
 	it("should render as healthy", async () => {

@@ -1,39 +1,43 @@
 import { Contracts } from "@/app/lib/profiles";
 import { useMemo } from "react";
-import { useHistory, useParams } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 import { useEnvironmentContext } from "@/app/contexts/Environment";
+import { getUrlParameter } from "@/utils/paths";
 
 export const useActiveProfile = (): Contracts.IProfile => {
-	const history = useHistory();
+	const location = useLocation();
 
 	const context = useEnvironmentContext();
-	const { profileId } = useParams<{ profileId: string }>();
+	// profiles/:profileId
+	const profileId = getUrlParameter(location.pathname, 1);
 
 	return useMemo(() => {
-		if (!profileId) {
-			throw new Error(
-				`Parameter [profileId] must be available on the route where [useActiveProfile] is called. Current route is [${history.location.pathname}].`,
-			);
+		if (!profileId || !context.env.profiles().has(profileId)) {
+			throw new Error(`No profile found for [${profileId}]`);
 		}
 
 		return context.env.profiles().findById(profileId);
-	}, [context.env, history.location.pathname, profileId]);
+	}, [context.env, location.pathname, profileId]);
 };
 
 export const useActiveWallet = (): Contracts.IReadWriteWallet => {
+	const location = useLocation();
 	const profile = useActiveProfile();
-	const { walletId } = useParams<{ walletId: string }>();
+	// profiles/:profileId/wallets/:walletId
+	const walletId = getUrlParameter(location.pathname, 3);
 
 	return useMemo(() => profile.wallets().findById(walletId), [profile, walletId]);
 };
 
 export const useActiveWalletWhenNeeded = (isRequired: boolean) => {
+	const location = useLocation();
 	const profile = useActiveProfile();
-	const { walletId } = useParams<{ walletId: string }>();
 
 	return useMemo(() => {
 		try {
+			// profiles/:profileId/wallets/:walletId
+			const walletId = getUrlParameter(location.pathname, 3);
 			return profile.wallets().findById(walletId);
 		} catch (error) {
 			if (isRequired) {
@@ -42,5 +46,5 @@ export const useActiveWalletWhenNeeded = (isRequired: boolean) => {
 
 			return;
 		}
-	}, [isRequired, profile, walletId]);
+	}, [isRequired, profile, location]);
 };

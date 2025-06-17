@@ -3,7 +3,6 @@
 import { Contracts, Wallet } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
-import { Route } from "react-router-dom";
 
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import {
@@ -70,14 +69,9 @@ describe("ImportAddress Methods", () => {
 	});
 
 	it("should import by address", async () => {
-		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
-			</Route>,
-			{
-				route: route,
-			},
-		);
+		render(<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: route,
+		});
 
 		expect(methodStep()).toBeInTheDocument();
 
@@ -107,14 +101,9 @@ describe("ImportAddress Methods", () => {
 	});
 
 	it("should import by public key", async () => {
-		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
-			</Route>,
-			{
-				route: route,
-			},
-		);
+		render(<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: route,
+		});
 
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
@@ -146,14 +135,9 @@ describe("ImportAddress Methods", () => {
 	});
 
 	it("should not allow importing from an invalid public key", async () => {
-		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
-			</Route>,
-			{
-				route: route,
-			},
-		);
+		render(<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: route,
+		});
 
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
@@ -174,14 +158,9 @@ describe("ImportAddress Methods", () => {
 	});
 
 	it("should import by secret", async () => {
-		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
-			</Route>,
-			{
-				route: route,
-			},
-		);
+		render(<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: route,
+		});
 
 		const countBefore = profile.wallets().count();
 
@@ -213,14 +192,9 @@ describe("ImportAddress Methods", () => {
 	});
 
 	it("should import by secret with encryption", async () => {
-		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
-			</Route>,
-			{
-				route: route,
-			},
-		);
+		render(<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: route,
+		});
 
 		const user = userEvent.setup();
 
@@ -283,9 +257,7 @@ describe("ImportAddress Methods", () => {
 	// @TODO enable it when we have 2nd signature implemented
 	// it("should import by secret with second signature and use password to encrypt both", async () => {
 	// 	render(
-	// 		<Route path="/profiles/:profileId/dashboard">
-	// 			<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
-	// 		</Route>,
+	// 			<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />,
 	// 		{
 	// 			route: route,
 	// 		},
@@ -342,14 +314,9 @@ describe("ImportAddress Methods", () => {
 	// });
 
 	it("forgets the imported wallet if back from encrypted password step", async () => {
-		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
-			</Route>,
-			{
-				route: route,
-			},
-		);
+		render(<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: route,
+		});
 
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
@@ -388,14 +355,9 @@ describe("ImportAddress Methods", () => {
 	});
 
 	it("should validate public key doesnt exist", async () => {
-		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
-			</Route>,
-			{
-				route: route,
-			},
-		);
+		render(<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: route,
+		});
 
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
 

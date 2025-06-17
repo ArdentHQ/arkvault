@@ -1,6 +1,5 @@
 import { Contracts } from "@/app/lib/profiles";
 import React from "react";
-import { Route } from "react-router-dom";
 
 import { TransactionSuccessful } from "./TransactionSuccessful";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
@@ -59,14 +58,9 @@ describe("TransactionSuccessful", () => {
 		vi.spyOn(transaction, "isMultiSignatureRegistration").mockReturnValue(false);
 		vi.spyOn(transaction, "usesMultiSignature").mockReturnValue(false);
 
-		render(
-			<Route path="/profiles/:profileId">
-				<TransactionSuccessful senderWallet={wallet} transaction={transaction} />
-			</Route>,
-			{
-				route: `/profiles/${profile.id()}`,
-			},
-		);
+		render(<TransactionSuccessful senderWallet={wallet} transaction={transaction} />, {
+			route: `/profiles/${profile.id()}`,
+		});
 
 		await waitFor(() => expect(screen.queryByTestId("PageSkeleton")).not.toBeInTheDocument());
 
@@ -88,14 +82,9 @@ describe("TransactionSuccessful", () => {
 		vi.spyOn(transaction, "isMultiSignatureRegistration").mockReturnValue(false);
 		vi.spyOn(transaction, "usesMultiSignature").mockReturnValue(false);
 
-		render(
-			<Route path="/profiles/:profileId">
-				<TransactionSuccessful senderWallet={wallet} transaction={transaction} />
-			</Route>,
-			{
-				route: `/profiles/${profile.id()}`,
-			},
-		);
+		render(<TransactionSuccessful senderWallet={wallet} transaction={transaction} />, {
+			route: `/profiles/${profile.id()}`,
+		});
 
 		expect(screen.getByTestId("TransactionPending")).toBeInTheDocument();
 

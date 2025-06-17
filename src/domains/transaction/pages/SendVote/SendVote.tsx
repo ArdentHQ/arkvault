@@ -3,7 +3,7 @@ import { Contracts, DTO } from "@/app/lib/profiles";
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import { FormStep } from "./FormStep";
 import { VoteLedgerReview } from "./LedgerReview";
@@ -43,7 +43,7 @@ enum Step {
 
 export const SendVote = () => {
 	const { env, persist } = useEnvironmentContext();
-	const history = useHistory();
+	const navigate = useNavigate();
 	const { t } = useTranslation();
 
 	const activeProfile = useActiveProfile();
@@ -185,13 +185,13 @@ export const SendVote = () => {
 			const parameters = new URLSearchParams();
 
 			if (!wallet) {
-				return history.push(`/profiles/${activeProfile.id()}/dashboard`);
+				return navigate(`/profiles/${activeProfile.id()}/dashboard`);
 			}
 
 			appendParameters(parameters, "unvote", unvoteValidators);
 			appendParameters(parameters, "vote", voteValidators);
 
-			return history.push({
+			return navigate({
 				pathname: `/profiles/${activeProfile.id()}/wallets/${wallet.id()}/votes`,
 				search: `?${parameters}`,
 			});
@@ -487,7 +487,7 @@ export const SendVote = () => {
 
 							<TabPanel tabId={Step.ErrorStep}>
 								<ErrorStep
-									onClose={() => history.push(`/profiles/${activeProfile.id()}/dashboard`)}
+									onClose={() => navigate(`/profiles/${activeProfile.id()}/dashboard`)}
 									isBackDisabled={isSubmitting}
 									onBack={() => {
 										setActiveTab(Step.FormStep);
@@ -499,9 +499,7 @@ export const SendVote = () => {
 							{!hideStepNavigation && (
 								<StepNavigation
 									onBackClick={handleBack}
-									onBackToWalletClick={() =>
-										history.push(`/profiles/${activeProfile.id()}/dashboard`)
-									}
+									onBackToWalletClick={() => navigate(`/profiles/${activeProfile.id()}/dashboard`)}
 									onContinueClick={() => handleNext()}
 									isLoading={isSubmitting}
 									isNextDisabled={isNextDisabled}

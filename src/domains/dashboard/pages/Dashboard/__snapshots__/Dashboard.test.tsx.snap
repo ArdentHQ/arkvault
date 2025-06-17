@@ -212,7 +212,8 @@ exports[`Dashboard > should render 1`] = `
                 <a
                   aria-current="page"
                   class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden active"
-                  href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/dashboard"
+                  data-discover="true"
+                  href="/profiles/877b7695-8a55-4e16-a7ff-412113131856/dashboard"
                   title="Portfolio"
                 >
                   Portfolio
@@ -223,7 +224,8 @@ exports[`Dashboard > should render 1`] = `
               >
                 <a
                   class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
-                  href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/exchange"
+                  data-discover="true"
+                  href="/profiles/877b7695-8a55-4e16-a7ff-412113131856/exchange"
                   title="Exchange"
                 >
                   Exchange
@@ -234,7 +236,8 @@ exports[`Dashboard > should render 1`] = `
               >
                 <a
                   class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
-                  href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/contacts"
+                  data-discover="true"
+                  href="/profiles/877b7695-8a55-4e16-a7ff-412113131856/contacts"
                   title="Contacts"
                 >
                   Contacts
@@ -245,7 +248,8 @@ exports[`Dashboard > should render 1`] = `
               >
                 <a
                   class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
-                  href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/votes"
+                  data-discover="true"
+                  href="/profiles/877b7695-8a55-4e16-a7ff-412113131856/votes"
                   title="Votes"
                 >
                   Votes
@@ -1370,12 +1374,12 @@ exports[`Dashboard > should render 1`] = `
                 class="tab-list flex w-fit items-center gap-1 rounded-xl p-1 bg-theme-secondary-200 dark:bg-theme-dark-950 h-10"
               >
                 <button
-                  aria-selected="true"
+                  aria-selected="false"
                   class="tab-button rounded px-3 py-1.5 text-base leading-5 font-semibold transition-all md:rounded-lg"
                   data-ring-focus-margin="-mx-3"
                   data-testid="tabs__tab-button-all"
                   role="tab"
-                  tabindex="0"
+                  tabindex="-1"
                   type="button"
                 >
                   <span>
@@ -1432,9 +1436,7 @@ exports[`Dashboard > should render 1`] = `
                   >
                     <span
                       class="text-base leading-tight font-semibold"
-                    >
-                      All Transactions
-                    </span>
+                    />
                     <div
                       class="text-theme-secondary-700 dark:text-theme-dark-200"
                     >

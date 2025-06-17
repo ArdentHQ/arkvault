@@ -4,9 +4,9 @@ import { Middleware, MiddlewareParameters } from "@/router/router.types";
 import { isAllowedUrl, isKnownPath } from "@/utils/url-validation";
 
 export class UrlValidationMiddleware implements Middleware {
-	handler({ history, env, location }: MiddlewareParameters): boolean {
+	handler({ navigate, env, location }: MiddlewareParameters): boolean {
 		if (!isKnownPath(location.pathname)) {
-			history.replace(ProfilePaths.Welcome);
+			navigate(ProfilePaths.Welcome);
 			return false;
 		}
 
@@ -15,7 +15,7 @@ export class UrlValidationMiddleware implements Middleware {
 		}
 
 		if (!isValidProfileUrl(env, location.pathname)) {
-			history.replace(ProfilePaths.Welcome);
+			navigate(ProfilePaths.Welcome);
 			return false;
 		}
 

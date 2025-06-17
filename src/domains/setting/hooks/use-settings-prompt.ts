@@ -1,40 +1,45 @@
 import { useCallback } from "react";
-import { FieldNamesMarkedBoolean } from "react-hook-form";
 import { matchPath } from "react-router-dom";
 import { ProfilePaths } from "@/router/paths";
 
-interface UseSettingsPromptInput<TFieldValues> {
+interface UseSettingsPromptInput {
 	isDirty: boolean;
-	// @ts-ignore
-	dirtyFields: FieldNamesMarkedBoolean<TFieldValues>;
+	dirtyFields: object;
 }
 
-export const useSettingsPrompt = <TFieldValues>({ isDirty, dirtyFields }: UseSettingsPromptInput<TFieldValues>) => {
-	const getPromptMessage = useCallback(
-		(location: any) => {
-			/* istanbul ignore next -- @preserve */
-			const pathname = location.pathname || location.location?.pathname;
+export const useSettingsPrompt = ({ isDirty, dirtyFields }: UseSettingsPromptInput) => {
+	const shouldBlockNavigation = useCallback(
+		(path: string) => {
+			console.log({ dirtyFields, isDirty });
 
-			const matchCurrent = matchPath(pathname, {
-				exact: true,
-				path: ProfilePaths.Settings,
-				strict: true,
-			});
+			// Check if user is navigating to the settings page
+			const matchCurrent = matchPath(
+				{
+					caseSensitive: true,
+					end: true,
+					path: ProfilePaths.Settings,
+				},
+				path,
+			);
 
-			const isReload = matchCurrent !== null;
+			console.log({ matchCurrent });
+			const isNavigatingToSettings = matchCurrent !== null;
 
-			if (isReload) {
-				return true;
+			// Don't block if navigating to the settings page.
+			if (isNavigatingToSettings) {
+				return false;
 			}
 
+			// Block navigation if there are unsaved changes
 			if (isDirty && Object.keys(dirtyFields).length > 0) {
-				return "block";
+				return true; // Block navigation
 			}
 
-			return true;
+			// Don't block if no unsaved changes.
+			return false;
 		},
 		[isDirty, dirtyFields],
 	);
 
-	return { getPromptMessage };
+	return { shouldBlockNavigation };
 };

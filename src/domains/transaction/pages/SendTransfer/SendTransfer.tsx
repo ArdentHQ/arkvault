@@ -1,7 +1,7 @@
 import { Contracts, DTO } from "@/app/lib/profiles";
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { useHistory } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 import { URLBuilder } from "@ardenthq/arkvault-url";
 import { FormStep } from "./FormStep";
@@ -39,7 +39,8 @@ import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
 const MAX_TABS = 5;
 
 export const SendTransfer = () => {
-	const history = useHistory();
+	const navigate = useNavigate();
+	const location = useLocation();
 	const { t } = useTranslation();
 
 	const { env } = useEnvironmentContext();
@@ -118,14 +119,14 @@ export const SendTransfer = () => {
 				setWallet(undefined);
 
 				// remove all query params
-				history.replace(history.location.pathname);
+				navigate(location.pathname);
 			}),
 		);
 
 		return () => {
 			window.clearTimeout(resetValues);
 		};
-	}, [firstTabIndex, history, resetForm, shouldResetForm]);
+	}, [firstTabIndex, location, resetForm, shouldResetForm]);
 
 	const [showOverwriteModal, setShowOverwriteModal] = useState(false);
 	const [overwriteData, setOverwriteData] = useState<TransferFormData>({} as TransferFormData);
@@ -163,7 +164,7 @@ export const SendTransfer = () => {
 		abortReference.current.abort();
 
 		if (activeTab === firstTabIndex) {
-			return history.go(-1);
+			return navigate(-1);
 		}
 
 		setActiveTab(activeTab - 1);
@@ -333,7 +334,7 @@ export const SendTransfer = () => {
 				<ErrorStep
 					onClose={() => {
 						assertWallet(wallet);
-						history.push(`/profiles/${activeProfile.id()}/dashboard`);
+						navigate(`/profiles/${activeProfile.id()}/dashboard`);
 					}}
 					isBackDisabled={isSubmitting}
 					onBack={() => {
@@ -348,7 +349,7 @@ export const SendTransfer = () => {
 					onBackClick={handleBack}
 					onBackToWalletClick={() => {
 						assertWallet(wallet);
-						history.push(`/profiles/${activeProfile.id()}/dashboard`);
+						navigate(`/profiles/${activeProfile.id()}/dashboard`);
 					}}
 					onContinueClick={async () => await handleNext()}
 					onSend={() => {

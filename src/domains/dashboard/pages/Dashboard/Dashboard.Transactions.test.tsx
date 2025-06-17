@@ -1,8 +1,6 @@
 import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
-import { createHashHistory } from "history";
 import React from "react";
-import { Route } from "react-router-dom";
 
 import { Dashboard } from "./Dashboard";
 import {
@@ -16,7 +14,6 @@ import {
 	getMainsailProfileId,
 } from "@/utils/testing-library";
 
-const history = createHashHistory();
 let profile: Contracts.IProfile;
 let resetProfileNetworksMock: () => void;
 
@@ -39,7 +36,6 @@ describe("Dashboard", () => {
 
 	beforeEach(() => {
 		dashboardURL = `/profiles/${fixtureProfileId}/dashboard`;
-		history.push(dashboardURL);
 
 		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 	});
@@ -49,37 +45,28 @@ describe("Dashboard", () => {
 	});
 
 	it("should render loading state when profile is syncing", async () => {
-		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<Dashboard />
-			</Route>,
-			{
-				history,
-				route: dashboardURL,
-			},
-		);
+		render(<Dashboard />, {
+			route: dashboardURL,
+		});
+
+		await userEvent.click(screen.getByTestId("tabs__tab-button-received"));
+		await userEvent.click(screen.getByTestId("tabs__tab-button-all"));
 
 		await waitFor(() =>
-			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(8),
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(10),
 		);
 	});
 
 	it("should display empty block when there are no transactions", async () => {
-		const mockTransactionsAggregate = vi.spyOn(profile.transactionAggregate(), "all").mockResolvedValue({
+		const mockTransactionsAggregate = vi.spyOn(profile.transactionAggregate(), "all").mockImplementation(() => ({
 			hasMorePages: () => false,
 			items: () => [],
-		} as any);
+		}));
 
-		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<Dashboard />
-			</Route>,
-			{
-				history,
-				route: dashboardURL,
-				withProfileSynchronizer: true,
-			},
-		);
+		render(<Dashboard />, {
+			route: dashboardURL,
+			withProfileSynchronizer: true,
+		});
 
 		await waitFor(() =>
 			expect(within(screen.getByTestId("TransactionTable")).getAllByRole("rowgroup")[0]).toBeVisible(),
@@ -98,16 +85,10 @@ describe("Dashboard", () => {
 			.spyOn(profile.transactionAggregate(), "all")
 			.mockImplementation(() => Promise.resolve({ hasMorePages: () => false, items: () => transactions } as any));
 
-		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<Dashboard />
-			</Route>,
-			{
-				history,
-				route: dashboardURL,
-				withProfileSynchronizer: true,
-			},
-		);
+		render(<Dashboard />, {
+			route: dashboardURL,
+			withProfileSynchronizer: true,
+		});
 
 		await waitFor(() =>
 			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(10),
