@@ -44,7 +44,7 @@ const SelectDropdown = ({
 		isOpen,
 		closeMenu,
 		openMenu,
-		getComboboxProps,
+		getToggleButtonProps,
 		getLabelProps,
 		getInputProps,
 		getItemProps,
@@ -221,7 +221,7 @@ const SelectDropdown = ({
 			)}
 
 			<div className="w-full">
-				<div {...getComboboxProps()}>
+				<div {...getToggleButtonProps()}>
 					<div ref={dropdownReference}>
 						<label {...getLabelProps()} />
 
