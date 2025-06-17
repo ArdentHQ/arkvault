@@ -140,7 +140,7 @@ describe("ValidatorFooter", () => {
 				availableBalance={wallet.balance()}
 				selectedVotes={selectedValidator}
 				selectedUnvotes={[]}
-				maxVotes={10}
+				maxVotes={wallet.network().maximumVotesPerTransaction()}
 				onContinue={vi.fn()}
 			/>,
 		);
