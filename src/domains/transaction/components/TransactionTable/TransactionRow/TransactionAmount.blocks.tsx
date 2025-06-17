@@ -86,17 +86,24 @@ export const TransactionTotalLabel = ({
 				.toNumber();
 		}
 
-		if (transaction.isValidatorResignation()) {
-			if ("isSuccess" in transaction && transaction.isSuccess()) {
-				return transaction.total();
-			}
-
-			return BigNumber.make(transaction.total())
-				.plus(UnitConverter.formatUnits(configManager.getMilestone()["validatorRegistrationFee"] ?? 0, "ARK"))
+		// For validator resignation, we need to manually add the fee to the total
+		if (transaction.isValidatorResignation() && "isSuccess" in transaction && transaction.isSuccess()) {
+			return BigNumber.make(
+				UnitConverter.formatUnits(configManager.getMilestone()["validatorRegistrationFee"] ?? 0, "ARK"),
+			)
+				.minus(transaction.total())
 				.toNumber();
 		}
 
 		return transaction.total();
+	};
+
+	const getIsNegative = () => {
+		if (transaction.isValidatorResignation() && "isSuccess" in transaction && transaction.isSuccess()) {
+			return getTotal() < 0;
+		}
+
+		return transaction.isSent();
 	};
 
 	if (hideStyles) {
@@ -106,7 +113,7 @@ export const TransactionTotalLabel = ({
 				showTicker={false}
 				ticker={currency}
 				value={getTotal()}
-				isNegative={transaction.isSent()}
+				isNegative={getIsNegative()}
 				className="text-sm font-semibold"
 				allowHideBalance
 				profile={profile}
@@ -117,7 +124,7 @@ export const TransactionTotalLabel = ({
 	return (
 		<AmountLabel
 			value={getTotal()}
-			isNegative={transaction.isSent()}
+			isNegative={getIsNegative()}
 			ticker={currency}
 			hideSign={transaction.isReturn()}
 			isCompact
