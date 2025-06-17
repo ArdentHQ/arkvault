@@ -10,13 +10,11 @@ export const useActiveProfile = (): Contracts.IProfile => {
 
 	const context = useEnvironmentContext();
 	// profiles/:profileId
-	const profileId = getUrlParameter(location.pathname, 1)
+	const profileId = getUrlParameter(location.pathname, 1);
 
 	return useMemo(() => {
 		if (!profileId || !context.env.profiles().has(profileId)) {
-			throw new Error(
-				`No profile found for [${profileId}]`,
-			);
+			throw new Error(`No profile found for [${profileId}]`);
 		}
 
 		return context.env.profiles().findById(profileId);
@@ -27,7 +25,7 @@ export const useActiveWallet = (): Contracts.IReadWriteWallet => {
 	const location = useLocation();
 	const profile = useActiveProfile();
 	// profiles/:profileId/wallets/:walletId
-	const walletId = getUrlParameter(location.pathname, 3)
+	const walletId = getUrlParameter(location.pathname, 3);
 
 	return useMemo(() => profile.wallets().findById(walletId), [profile, walletId]);
 };
@@ -39,7 +37,7 @@ export const useActiveWalletWhenNeeded = (isRequired: boolean) => {
 	return useMemo(() => {
 		try {
 			// profiles/:profileId/wallets/:walletId
-			const walletId = getUrlParameter(location.pathname, 3)
+			const walletId = getUrlParameter(location.pathname, 3);
 			return profile.wallets().findById(walletId);
 		} catch (error) {
 			if (isRequired) {

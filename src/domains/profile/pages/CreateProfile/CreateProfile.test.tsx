@@ -11,7 +11,6 @@ import { httpClient } from "@/app/services";
 import { StubStorage } from "@/tests/mocks";
 import * as themeUtils from "@/utils/theme";
 import { act, env, render, screen, waitFor } from "@/utils/testing-library";
-import { createHashHistory } from "history";
 
 const profileName = "test profile";
 
@@ -64,7 +63,6 @@ describe("CreateProfile", () => {
 	});
 
 	it("should navigate back", async () => {
-
 		const { router } = render(<CreateProfile />);
 
 		expect(screen.getByTestId("CreateProfile")).toBeInTheDocument();
@@ -191,7 +189,6 @@ describe("CreateProfile", () => {
 	});
 
 	it("should navigate to dashboard after creating profile", async () => {
-
 		const { router } = render(<CreateProfile />);
 
 		const user = userEvent.setup();

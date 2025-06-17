@@ -30,7 +30,6 @@ vi.mock("@/app/contexts/Navigation/NavigationBlocking", () => ({
 	NavigationBlockingProvider: ({ children }: { children: React.ReactNode }) => <>{children}</>,
 }));
 
-
 describe("Password Settings", () => {
 	beforeEach(async () => {
 		profile = env.profiles().findById(getMainsailProfileId());
@@ -39,12 +38,9 @@ describe("Password Settings", () => {
 	});
 
 	it("should render password settings", async () => {
-		const { container, asFragment } = render(
-			<PasswordSettings />,
-			{
-				route: `/profiles/${profile.id()}/settings/password`,
-			},
-		);
+		const { container, asFragment } = render(<PasswordSettings />, {
+			route: `/profiles/${profile.id()}/settings/password`,
+		});
 
 		await expect(screen.findByTestId(passwordInputID)).resolves.toBeVisible();
 
@@ -53,12 +49,9 @@ describe("Password Settings", () => {
 	});
 
 	it("should set a password", async () => {
-		const { container } = render(
-			<PasswordSettings />,
-			{
-				route: `/profiles/${profile.id()}/settings/password`,
-			},
-		);
+		const { container } = render(<PasswordSettings />, {
+			route: `/profiles/${profile.id()}/settings/password`,
+		});
 
 		expect(container).toBeInTheDocument();
 
@@ -101,12 +94,9 @@ describe("Password Settings", () => {
 			throw new Error("mismatch");
 		});
 
-		render(
-			<PasswordSettings />,
-			{
-				route: `/profiles/${profile.id()}/settings/password`,
-			},
-		);
+		render(<PasswordSettings />, {
+			route: `/profiles/${profile.id()}/settings/password`,
+		});
 
 		await waitFor(() => {
 			expect(screen.getByTestId(menuItemID)).toBeInTheDocument();
@@ -153,12 +143,9 @@ describe("Password Settings", () => {
 	it("should trigger password confirmation mismatch error", async () => {
 		profile.auth().setPassword(password);
 
-		const { asFragment } = render(
-			<PasswordSettings />,
-			{
-				route: `/profiles/${profile.id()}/settings/password`,
-			},
-		);
+		const { asFragment } = render(<PasswordSettings />, {
+			route: `/profiles/${profile.id()}/settings/password`,
+		});
 
 		await waitFor(() => {
 			expect(screen.getByTestId(menuItemID)).toBeInTheDocument();
@@ -198,12 +185,9 @@ describe("Password Settings", () => {
 	});
 
 	it("should disable submit button if no password", async () => {
-		render(
-			<PasswordSettings />,
-			{
-				route: `/profiles/${profile.id()}/settings/password`,
-			},
-		);
+		render(<PasswordSettings />, {
+			route: `/profiles/${profile.id()}/settings/password`,
+		});
 
 		await waitFor(() => {
 			expect(screen.getByTestId(menuItemID)).toBeInTheDocument();
@@ -219,12 +203,9 @@ describe("Password Settings", () => {
 	it("should not allow setting the current password as the new password", async () => {
 		profile.auth().setPassword(password);
 
-		render(
-			<PasswordSettings />,
-			{
-				route: `/profiles/${profile.id()}/settings/password`,
-			},
-		);
+		render(<PasswordSettings />, {
+			route: `/profiles/${profile.id()}/settings/password`,
+		});
 
 		await waitFor(() => {
 			expect(screen.getByTestId(menuItemID)).toBeInTheDocument();
@@ -255,12 +236,9 @@ describe("Password Settings", () => {
 		const toastSpy = vi.spyOn(toasts, "success");
 		const forgetPasswordSpy = vi.spyOn(profile.auth(), "forgetPassword").mockImplementation(vi.fn());
 
-		render(
-			<PasswordSettings />,
-			{
-				route: `/profiles/${profile.id()}/settings/password`,
-			},
-		);
+		render(<PasswordSettings />, {
+			route: `/profiles/${profile.id()}/settings/password`,
+		});
 
 		await userEvent.click(screen.getByTestId(menuItemID));
 
@@ -308,12 +286,9 @@ describe("Password Settings", () => {
 			throw new Error("password mismatch");
 		});
 
-		render(
-			<PasswordSettings />,
-			{
-				route: `/profiles/${profile.id()}/settings/password`,
-			},
-		);
+		render(<PasswordSettings />, {
+			route: `/profiles/${profile.id()}/settings/password`,
+		});
 
 		await userEvent.click(screen.getByTestId(menuItemID));
 
@@ -340,12 +315,9 @@ describe("Password Settings", () => {
 	it("should change a password", async () => {
 		profile.auth().setPassword(password);
 
-		render(
-			<PasswordSettings />,
-			{
-				route: `/profiles/${profile.id()}/settings/password`,
-			},
-		);
+		render(<PasswordSettings />, {
+			route: `/profiles/${profile.id()}/settings/password`,
+		});
 
 		await waitFor(() => {
 			expect(screen.getByTestId("side-menu__item--password")).toBeInTheDocument();

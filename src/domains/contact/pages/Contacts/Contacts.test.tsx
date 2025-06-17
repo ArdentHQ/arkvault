@@ -21,15 +21,13 @@ let profile: Contracts.IProfile;
 
 const contactAddress = "0x811b4bD8133c348a1c9F290F79046d1587AEf30F";
 
-const renderComponent = (profileId = profile.id()) => render(<Contacts />, { route: `/profiles/${profileId}/contacts`, withProviders: true });
+const renderComponent = (profileId = profile.id()) =>
+	render(<Contacts />, { route: `/profiles/${profileId}/contacts`, withProviders: true });
 
-const renderResponsiveComponent = (breakpoint: keyof typeof breakpoints, profileId = profile.id()) => renderResponsiveWithRoute(
-		<Contacts />,
-		breakpoint,
-		{
-			route: `/profiles/${profileId}/contacts`
-		},
-	);
+const renderResponsiveComponent = (breakpoint: keyof typeof breakpoints, profileId = profile.id()) =>
+	renderResponsiveWithRoute(<Contacts />, breakpoint, {
+		route: `/profiles/${profileId}/contacts`,
+	});
 
 const saveButton = () => screen.getByTestId("contact-form__save-btn");
 const sendButton = (index = 0) => screen.getAllByTestId("ContactListItem__send-button")[index];

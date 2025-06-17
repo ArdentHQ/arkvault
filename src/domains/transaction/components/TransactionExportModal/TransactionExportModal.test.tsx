@@ -8,7 +8,6 @@ import { requestMock, server } from "@/tests/mocks/server";
 
 import transactionsFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions.json";
 
-
 const fixtureProfileId = getDefaultProfileId();
 let dashboardURL: string;
 
@@ -82,12 +81,9 @@ describe("TransactionExportModal", () => {
 	});
 
 	it("should render progress status", async () => {
-		render(
-			<TransactionExportModal isOpen wallets={[profile.wallets().first()]} onClose={vi.fn()} />,
-			{
-				route: dashboardURL,
-			},
-		);
+		render(<TransactionExportModal isOpen wallets={[profile.wallets().first()]} onClose={vi.fn()} />, {
+			route: dashboardURL,
+		});
 
 		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
 
@@ -233,12 +229,9 @@ describe("TransactionExportModal", () => {
 	it("should emit onClose", async () => {
 		const onClose = vi.fn();
 
-		render(
-			<TransactionExportModal isOpen wallets={[profile.wallets().first()]} onClose={onClose} />,
-			{
-				route: dashboardURL,
-			},
-		);
+		render(<TransactionExportModal isOpen wallets={[profile.wallets().first()]} onClose={onClose} />, {
+			route: dashboardURL,
+		});
 
 		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
 
@@ -256,12 +249,9 @@ describe("TransactionExportModal", () => {
 	it("should disable export button if all column toggles are off", async () => {
 		const walletSpy = vi.spyOn(profile.wallets().first().network(), "isLive").mockReturnValue(true);
 
-		render(
-			<TransactionExportModal isOpen wallets={[profile.wallets().first()]} onClose={vi.fn()} />,
-			{
-				route: dashboardURL,
-			},
-		);
+		render(<TransactionExportModal isOpen wallets={[profile.wallets().first()]} onClose={vi.fn()} />, {
+			route: dashboardURL,
+		});
 
 		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
 

@@ -6,14 +6,11 @@ import { DropdownOption } from "@/app/components/Dropdown";
 import * as useActiveProfileModule from "@/app/hooks/env";
 import { useWalletActions } from "@/domains/wallet/hooks/use-wallet-actions";
 
-
 describe("useWalletActions", () => {
 	let profile: Contracts.IProfile;
 	let wallet: Contracts.IReadWriteWallet;
 
-	const wrapper = ({ children }) => (
-		<Providers>{children}</Providers>
-	);
+	const wrapper = ({ children }) => <Providers>{children}</Providers>;
 
 	beforeAll(() => {
 		profile = env.profiles().findById(getMainsailProfileId());
@@ -56,22 +53,22 @@ describe("useWalletActions", () => {
 	});
 
 	it("should push right url to history if there are multiple wallets", () => {
-
 		let currentLocation = { pathname: "/" };
 
 		const {
 			result: { current },
-		} = renderHook(() => useWalletActions({ wallets: [wallet, profile.wallets().last()] }),
-			{
-				wrapper: ({ children }) => (
-					<Providers>
-						<LocationTracker onLocationChange={(location) => {
-							currentLocation = location
-						}} />
-						{children}
-					</Providers>
-				),
-			});
+		} = renderHook(() => useWalletActions({ wallets: [wallet, profile.wallets().last()] }), {
+			wrapper: ({ children }) => (
+				<Providers>
+					<LocationTracker
+						onLocationChange={(location) => {
+							currentLocation = location;
+						}}
+					/>
+					{children}
+				</Providers>
+			),
+		});
 
 		expect(currentLocation.pathname).toBe("/");
 

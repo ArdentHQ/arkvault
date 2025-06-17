@@ -4,9 +4,7 @@ import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { renderHook } from "@testing-library/react";
 import { SuccessStep } from "./SuccessStep";
-import { EnvironmentProvider } from "@/app/contexts";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
-import { ApplicationError } from "@/domains/error/pages";
 
 import {
 	env,
@@ -44,9 +42,7 @@ describe("ImportSidePanel", () => {
 	let network;
 	let resetProfileNetworksMock: () => void;
 
-	const Component = () => (
-		<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
-	);
+	const Component = () => <ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />;
 
 	beforeEach(async () => {
 		profile = env.profiles().findById(fixtureProfileId);
@@ -107,14 +103,11 @@ describe("ImportSidePanel", () => {
 			return (
 				<FormProvider {...form}>
 					<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
-				</FormProvider>,
+				</FormProvider>
 			);
 		};
 
-		render(
-			<ImportAddressesSidePanelComponent />,
-			{ route }
-		);
+		render(<ImportAddressesSidePanelComponent />, { route });
 
 		expect(methodStep()).toBeInTheDocument();
 
@@ -142,7 +135,7 @@ describe("ImportSidePanel", () => {
 	it.each(["xs", "lg"])("should render success step (%s)", async (breakpoint) => {
 		vi.spyOn(usePortfolio, "usePortfolio").mockReturnValue({
 			selectedAddresses: [],
-			setSelectedAddresses: () => { },
+			setSelectedAddresses: () => {},
 		});
 
 		let form: ReturnType<typeof useForm>;
@@ -179,12 +172,9 @@ describe("ImportSidePanel", () => {
 	it.skip("should render as ledger import", async () => {
 		const nanoXMock = mockNanoXTransport();
 
-		render(
-			<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />,
-			{
-				route: routeLedger,
-			},
-		);
+		render(<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: routeLedger,
+		});
 
 		await expect(screen.findByTestId("LedgerTabs")).resolves.toBeVisible();
 
@@ -201,10 +191,7 @@ describe("ImportSidePanel", () => {
 
 		const onOpenChangeMock = vi.fn();
 
-		render(
-			<ImportAddressesSidePanel open={true} onOpenChange={onOpenChangeMock} />,
-			{ route }
-		);
+		render(<ImportAddressesSidePanel open={true} onOpenChange={onOpenChangeMock} />, { route });
 
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
 

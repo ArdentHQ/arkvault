@@ -1,12 +1,9 @@
 import { Contracts } from "@/app/lib/profiles";
 import { screen } from "@testing-library/react";
 import React from "react";
-import { Route } from "react-router-dom";
 import { WalletActionsModals } from "./WalletActionsModals";
 import * as envHooks from "@/app/hooks/env";
 import { env, getMainsailProfileId, render, syncValidators } from "@/utils/testing-library";
-
-const dashboardURL = `/profiles/${getMainsailProfileId()}/dashboard`;
 
 describe("WalletActionsModals", () => {
 	let profile: Contracts.IProfile;

@@ -1,7 +1,6 @@
 import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
 import React, { useEffect } from "react";
-import { Route } from "react-router-dom";
 import { PublicKeyService } from "@/app/lib/mainsail/public-key.service";
 import { SendRegistration } from "./SendRegistration";
 import { minVersionList, useLedgerContext } from "@/app/contexts";
@@ -30,8 +29,6 @@ vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
 }));
 
-const path = "/profiles/:profileId/wallets/:walletId/send-registration/:registrationType";
-
 const renderPage = async (wallet: Contracts.IReadWriteWallet, type = "validatorRegistration") => {
 	const registrationURL = `/profiles/${profile.id()}/wallets/${wallet.id()}/send-registration/${type}`;
 
@@ -45,17 +42,14 @@ const renderPage = async (wallet: Contracts.IReadWriteWallet, type = "validatorR
 		return <SendRegistration />;
 	};
 
-	const result = render(
-		<SendRegistrationWrapper />,
-		{
-			route: registrationURL,
-			withProviders: true,
-		},
-	);
+	const view = render(<SendRegistrationWrapper />, {
+		route: registrationURL,
+		withProviders: true,
+	});
 
 	await expect(screen.findByTestId("Registration__form")).resolves.toBeVisible();
 
-	return result;
+	return view;
 };
 
 const continueButton = () => screen.getByTestId("StepNavigation__continue-button");

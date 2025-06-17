@@ -14,8 +14,6 @@ let profile: Contracts.IProfile;
 
 describe("Notifications", () => {
 	beforeEach(async () => {
-		const dashboardURL = `/profiles/${getMainsailProfileId()}/dashboard`;
-
 		server.use(
 			requestMock("https://dwallets-evm.mainsailhq.com/api/transactions", {
 				data: NotificationTransactionsFixtures.data,
@@ -52,12 +50,9 @@ describe("Notifications", () => {
 	it("should open and close transaction details modal", async () => {
 		await profile.sync();
 
-		render(
-			<NotificationsDropdown profile={profile} />,
-			{
-				route: `/profiles/${getMainsailProfileId()}/dashboard`,
-			},
-		);
+		render(<NotificationsDropdown profile={profile} />, {
+			route: `/profiles/${getMainsailProfileId()}/dashboard`,
+		});
 
 		await userEvent.click(screen.getAllByRole("button")[0]);
 

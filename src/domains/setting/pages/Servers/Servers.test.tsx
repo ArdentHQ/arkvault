@@ -14,8 +14,6 @@ import {
 	within,
 	renderResponsiveWithRoute,
 	mockProfileWithPublicAndTestNetworks,
-	Providers,
-	renderWithoutRouter,
 } from "@/utils/testing-library";
 import { translations } from "@/app/i18n/common/i18n";
 import { server, requestMock } from "@/tests/mocks/server";
@@ -209,12 +207,9 @@ describe("Servers Settings", () => {
 	});
 
 	it("should render servers settings", () => {
-		const { container, asFragment } = render(
-			<ServersSettings />,
-			{
-				route: `/profiles/${profile.id()}/settings/servers`,
-			},
-		);
+		const { container, asFragment } = render(<ServersSettings />, {
+			route: `/profiles/${profile.id()}/settings/servers`,
+		});
 
 		expect(container).toBeInTheDocument();
 
@@ -228,12 +223,9 @@ describe("Servers Settings", () => {
 	it("should update profile fallback to default nodes setting", async () => {
 		const settingsSetSpy = vi.spyOn(profile.settings(), "set");
 
-		const { container } = render(
-			<ServersSettings />,
-			{
-				route: `/profiles/${profile.id()}/settings/servers`,
-			},
-		);
+		const { container } = render(<ServersSettings />, {
+			route: `/profiles/${profile.id()}/settings/servers`,
+		});
 
 		expect(container).toBeInTheDocument();
 
@@ -249,12 +241,9 @@ describe("Servers Settings", () => {
 	});
 
 	it("shows the modal for adding new server", async () => {
-		const { container } = render(
-			<ServersSettings />,
-			{
-				route: `/profiles/${profile.id()}/settings/servers`,
-			},
-		);
+		const { container } = render(<ServersSettings />, {
+			route: `/profiles/${profile.id()}/settings/servers`,
+		});
 
 		expect(container).toBeInTheDocument();
 
@@ -265,12 +254,9 @@ describe("Servers Settings", () => {
 
 	describe("default peers", () => {
 		it("should render node statuses", () => {
-			const { container } = render(
-				<ServersSettings />,
-				{
-					route: `/profiles/${profile.id()}/settings/servers`,
-				},
-			);
+			const { container } = render(<ServersSettings />, {
+				route: `/profiles/${profile.id()}/settings/servers`,
+			});
 
 			expect(container).toBeInTheDocument();
 
@@ -293,12 +279,9 @@ describe("Servers Settings", () => {
 			it("should load the node statuses", async () => {
 				mockRequests();
 
-				const { container } = render(
-					<ServersSettings />,
-					{
-						route: `/profiles/${profile.id()}/settings/servers`,
-					},
-				);
+				const { container } = render(<ServersSettings />, {
+					route: `/profiles/${profile.id()}/settings/servers`,
+				});
 
 				expect(container).toBeInTheDocument();
 
@@ -325,12 +308,9 @@ describe("Servers Settings", () => {
 						return originalSetInterval(intervalFunction, time);
 					});
 
-				const { container } = render(
-					<ServersSettings />,
-					{
-						route: `/profiles/${profile.id()}/settings/servers`,
-					},
-				);
+				const { container } = render(<ServersSettings />, {
+					route: `/profiles/${profile.id()}/settings/servers`,
+				});
 
 				expect(container).toBeInTheDocument();
 
@@ -362,12 +342,9 @@ describe("Servers Settings", () => {
 				mockEvmEndpoint();
 				server.use(requestMock(publicBaseUrl, undefined, { status: 404 }));
 
-				const { container } = render(
-					<ServersSettings />,
-					{
-						route: `/profiles/${profile.id()}/settings/servers`,
-					},
-				);
+				const { container } = render(<ServersSettings />, {
+					route: `/profiles/${profile.id()}/settings/servers`,
+				});
 
 				expect(container).toBeInTheDocument();
 
@@ -394,12 +371,9 @@ describe("Servers Settings", () => {
 				server.use(requestMock(evmApiUrl, undefined, { status: 404 }));
 				server.use(requestMock(publicBaseUrl, undefined, { status: 404 }));
 
-				render(
-					<ServersSettings />,
-					{
-						route: `/profiles/${profile.id()}/settings/servers`,
-					},
-				);
+				render(<ServersSettings />, {
+					route: `/profiles/${profile.id()}/settings/servers`,
+				});
 
 				expect(screen.getByTestId("NodesStatus")).toBeInTheDocument();
 
@@ -424,12 +398,9 @@ describe("Servers Settings", () => {
 				server.use(requestMock(txApiUrl, undefined, { status: 404 }));
 				server.use(requestMock(evmApiUrl, undefined, { status: 404 }));
 
-				render(
-					<ServersSettings />,
-					{
-						route: `/profiles/${profile.id()}/settings/servers`,
-					},
-				);
+				render(<ServersSettings />, {
+					route: `/profiles/${profile.id()}/settings/servers`,
+				});
 
 				expect(screen.getByTestId("NodesStatus")).toBeInTheDocument();
 
@@ -452,12 +423,9 @@ describe("Servers Settings", () => {
 			it("should load the node statuses with error if the response is invalid json", async () => {
 				server.use(requestMock(publicBaseUrl, "invalid json"));
 
-				const { container } = render(
-					<ServersSettings />,
-					{
-						route: `/profiles/${profile.id()}/settings/servers`,
-					},
-				);
+				const { container } = render(<ServersSettings />, {
+					route: `/profiles/${profile.id()}/settings/servers`,
+				});
 
 				expect(container).toBeInTheDocument();
 
@@ -494,12 +462,9 @@ describe("Servers Settings", () => {
 
 				const serverPushSpy = vi.spyOn(profile.hosts(), "push");
 
-				render(
-					<ServersSettings />,
-					{
-						route: `/profiles/${profile.id()}/settings/servers`,
-					},
-				);
+				render(<ServersSettings />, {
+					route: `/profiles/${profile.id()}/settings/servers`,
+				});
 
 				await userEvent.click(screen.getByTestId(addNewPeerButtonTestId));
 
@@ -523,12 +488,9 @@ describe("Servers Settings", () => {
 				mockRequests();
 				server.use(requestMock("https://127.0.0.1", peerResponse));
 
-				render(
-					<ServersSettings />,
-					{
-						route: `/profiles/${profile.id()}/settings/servers`,
-					},
-				);
+				render(<ServersSettings />, {
+					route: `/profiles/${profile.id()}/settings/servers`,
+				});
 
 				await userEvent.click(screen.getByTestId(addNewPeerButtonTestId));
 
@@ -547,12 +509,9 @@ describe("Servers Settings", () => {
 				const serverPushSpy = vi.spyOn(profile.hosts(), "push");
 				const hostsSpy = vi.spyOn(profile.hosts(), "all").mockReturnValue({ mainsail: [] });
 
-				render(
-					<ServersSettings />,
-					{
-						route: `/profiles/${profile.id()}/settings/servers`,
-					},
-				);
+				render(<ServersSettings />, {
+					route: `/profiles/${profile.id()}/settings/servers`,
+				});
 
 				await userEvent.click(screen.getByTestId(addNewPeerButtonTestId));
 
@@ -596,12 +555,9 @@ describe("Servers Settings", () => {
 
 				server.use(requestMock(publicApiUrl, { foo: "bar" }));
 
-				render(
-					<ServersSettings />,
-					{
-						route: `/profiles/${profile.id()}/settings/servers`,
-					},
-				);
+				render(<ServersSettings />, {
+					route: `/profiles/${profile.id()}/settings/servers`,
+				});
 
 				await userEvent.click(screen.getByTestId(addNewPeerButtonTestId));
 
@@ -619,12 +575,9 @@ describe("Servers Settings", () => {
 
 				const networkSpy = vi.spyOn(network, "evaluateUrl").mockReturnValue(false);
 
-				render(
-					<ServersSettings />,
-					{
-						route: `/profiles/${profile.id()}/settings/servers`,
-					},
-				);
+				render(<ServersSettings />, {
+					route: `/profiles/${profile.id()}/settings/servers`,
+				});
 
 				await userEvent.click(screen.getByTestId(addNewPeerButtonTestId));
 
@@ -640,12 +593,9 @@ describe("Servers Settings", () => {
 			it("shows an error if the server is reachable but invalid json response", async () => {
 				server.use(requestMock(publicApiUrl, "invalid response"));
 
-				render(
-					<ServersSettings />,
-					{
-						route: `/profiles/${profile.id()}/settings/servers`,
-					},
-				);
+				render(<ServersSettings />, {
+					route: `/profiles/${profile.id()}/settings/servers`,
+				});
 
 				await userEvent.click(screen.getByTestId(addNewPeerButtonTestId));
 
@@ -659,12 +609,9 @@ describe("Servers Settings", () => {
 			it("shows an error if the server is unreachable", async () => {
 				server.use(requestMock(publicApiUrl, undefined, { status: 500 }));
 
-				render(
-					<ServersSettings />,
-					{
-						route: `/profiles/${profile.id()}/settings/servers`,
-					},
-				);
+				render(<ServersSettings />, {
+					route: `/profiles/${profile.id()}/settings/servers`,
+				});
 
 				await userEvent.click(screen.getByTestId(addNewPeerButtonTestId));
 
@@ -680,12 +627,9 @@ describe("Servers Settings", () => {
 				"http://127.0.0.1", // Valid IP URL without /api path
 				"http://127.0.0.1/api/", // Valid IP URL but ends with a slash
 			])("invalidates the address field if invalid host passed", async (address) => {
-				render(
-					<ServersSettings />,
-					{
-						route: `/profiles/${profile.id()}/settings/servers`,
-					},
-				);
+				render(<ServersSettings />, {
+					route: `/profiles/${profile.id()}/settings/servers`,
+				});
 
 				await userEvent.click(screen.getByTestId(addNewPeerButtonTestId));
 
@@ -717,12 +661,9 @@ describe("Servers Settings", () => {
 		});
 
 		it("should render custom servers", () => {
-			const { asFragment } = render(
-				<ServersSettings />,
-				{
-					route: `/profiles/${profile.id()}/settings/servers`,
-				},
-			);
+			const { asFragment } = render(<ServersSettings />, {
+				route: `/profiles/${profile.id()}/settings/servers`,
+			});
 
 			const table = screen.getByTestId(customPeerListTestId);
 
@@ -736,12 +677,9 @@ describe("Servers Settings", () => {
 		});
 
 		it("should show an error if the server host already exists", async () => {
-			render(
-				<ServersSettings />,
-				{
-					route: `/profiles/${profile.id()}/settings/servers`,
-				},
-			);
+			render(<ServersSettings />, {
+				route: `/profiles/${profile.id()}/settings/servers`,
+			});
 
 			const table = screen.getByTestId(customPeerListTestId);
 
@@ -759,12 +697,9 @@ describe("Servers Settings", () => {
 		it("can fill the form and generate a name", async () => {
 			profileHostsSpy = vi.spyOn(profile.hosts(), "all").mockReturnValue(networksStub);
 
-			render(
-				<ServersSettings />,
-				{
-					route: `/profiles/${profile.id()}/settings/servers`,
-				},
-			);
+			render(<ServersSettings />, {
+				route: `/profiles/${profile.id()}/settings/servers`,
+			});
 
 			await userEvent.click(screen.getByTestId(addNewPeerButtonTestId));
 
@@ -790,13 +725,9 @@ describe("Servers Settings", () => {
 		});
 
 		it("should render customs servers in xs", () => {
-			const { asFragment } = renderResponsiveWithRoute(
-				<ServersSettings />,
-				"xs",
-				{
-					route: `/profiles/${profile.id()}/settings/servers`,
-				},
-			);
+			const { asFragment } = renderResponsiveWithRoute(<ServersSettings />, "xs", {
+				route: `/profiles/${profile.id()}/settings/servers`,
+			});
 
 			const table = screen.getByTestId(customPeerListTestId);
 
@@ -810,13 +741,9 @@ describe("Servers Settings", () => {
 		});
 
 		it("can expand a custom servers accordion in xs", async () => {
-			renderResponsiveWithRoute(
-				<ServersSettings />,
-				"xs",
-				{
-					route: `/profiles/${profile.id()}/settings/servers`,
-				},
-			);
+			renderResponsiveWithRoute(<ServersSettings />, "xs", {
+				route: `/profiles/${profile.id()}/settings/servers`,
+			});
 
 			const table = screen.getByTestId(customPeerListTestId);
 
@@ -826,13 +753,9 @@ describe("Servers Settings", () => {
 		});
 
 		it("can check servers accordion in mobile", async () => {
-			renderResponsiveWithRoute(
-				<ServersSettings />,
-				"xs",
-				{
-					route: `/profiles/${profile.id()}/settings/servers`,
-				},
-			);
+			renderResponsiveWithRoute(<ServersSettings />, "xs", {
+				route: `/profiles/${profile.id()}/settings/servers`,
+			});
 
 			const table = screen.getByTestId(customPeerListTestId);
 
@@ -850,13 +773,9 @@ describe("Servers Settings", () => {
 		});
 
 		it("can edit servers in mobile", async () => {
-			renderResponsiveWithRoute(
-				<ServersSettings />,
-				"xs",
-				{
-					route: `/profiles/${profile.id()}/settings/servers`,
-				},
-			);
+			renderResponsiveWithRoute(<ServersSettings />, "xs", {
+				route: `/profiles/${profile.id()}/settings/servers`,
+			});
 
 			const table = screen.getByTestId(customPeerListTestId);
 
@@ -868,13 +787,9 @@ describe("Servers Settings", () => {
 		});
 
 		it("can delete servers in mobile", async () => {
-			renderResponsiveWithRoute(
-				<ServersSettings />,
-				"xs",
-				{
-					route: `/profiles/${profile.id()}/settings/servers`,
-				},
-			);
+			renderResponsiveWithRoute(<ServersSettings />, "xs", {
+				route: `/profiles/${profile.id()}/settings/servers`,
+			});
 
 			const table = screen.getByTestId(customPeerListTestId);
 
@@ -888,13 +803,9 @@ describe("Servers Settings", () => {
 		it("can refresh servers in mobile", async () => {
 			const refreshPersistMock = vi.spyOn(env, "persist").mockImplementation(vi.fn());
 
-			renderResponsiveWithRoute(
-				<ServersSettings />,
-				"xs",
-				{
-					route: `/profiles/${profile.id()}/settings/servers`,
-				},
-			);
+			renderResponsiveWithRoute(<ServersSettings />, "xs", {
+				route: `/profiles/${profile.id()}/settings/servers`,
+			});
 
 			const table = screen.getByTestId(customPeerListTestId);
 
@@ -912,12 +823,9 @@ describe("Servers Settings", () => {
 		});
 
 		it("should show status ok after ping the servers", async () => {
-			const { asFragment } = render(
-				<ServersSettings />,
-				{
-					route: `/profiles/${profile.id()}/settings/servers`,
-				},
-			);
+			const { asFragment } = render(<ServersSettings />, {
+				route: `/profiles/${profile.id()}/settings/servers`,
+			});
 
 			// Is loading initially
 			expect(screen.getAllByTestId(peerStatusLoadingTestId)).toHaveLength(3);
@@ -929,12 +837,9 @@ describe("Servers Settings", () => {
 		});
 
 		it("can check an online server", async () => {
-			render(
-				<ServersSettings />,
-				{
-					route: `/profiles/${profile.id()}/settings/servers`,
-				},
-			);
+			render(<ServersSettings />, {
+				route: `/profiles/${profile.id()}/settings/servers`,
+			});
 
 			// Is loading initially
 			expect(screen.getAllByTestId(peerStatusLoadingTestId)).toHaveLength(3);
@@ -948,13 +853,9 @@ describe("Servers Settings", () => {
 		});
 
 		it("should show status ok after ping the servers on mobile", async () => {
-			const { asFragment } = renderResponsiveWithRoute(
-				<ServersSettings />,
-				"xs",
-				{
-					route: `/profiles/${profile.id()}/settings/servers`,
-				},
-			);
+			const { asFragment } = renderResponsiveWithRoute(<ServersSettings />, "xs", {
+				route: `/profiles/${profile.id()}/settings/servers`,
+			});
 
 			// Is loading initially
 			expect(screen.getAllByTestId(peerStatusLoadingTestId)).toHaveLength(3);
@@ -966,13 +867,9 @@ describe("Servers Settings", () => {
 		});
 
 		it("should show status ok after ping the servers on mobile when expanded", async () => {
-			const { asFragment } = renderResponsiveWithRoute(
-				<ServersSettings />,
-				"xs",
-				{
-					route: `/profiles/${profile.id()}/settings/servers`,
-				},
-			);
+			const { asFragment } = renderResponsiveWithRoute(<ServersSettings />, "xs", {
+				route: `/profiles/${profile.id()}/settings/servers`,
+			});
 
 			await userEvent.click(
 				within(screen.getByTestId(customPeerListTestId)).getAllByTestId(networkAccordionIconTestId)[0],
@@ -994,12 +891,9 @@ describe("Servers Settings", () => {
 				return originalSetInterval(intervalFunction, time);
 			});
 
-			const { asFragment } = render(
-				<ServersSettings />,
-				{
-					route: `/profiles/${profile.id()}/settings/servers`,
-				},
-			);
+			const { asFragment } = render(<ServersSettings />, {
+				route: `/profiles/${profile.id()}/settings/servers`,
+			});
 
 			// Is loading initially
 			expect(screen.getAllByTestId(peerStatusLoadingTestId)).toHaveLength(3);
@@ -1022,12 +916,9 @@ describe("Servers Settings", () => {
 		});
 
 		it("can delete a server", async () => {
-			render(
-				<ServersSettings />,
-				{
-					route: `/profiles/${profile.id()}/settings/servers`,
-				},
-			);
+			render(<ServersSettings />, {
+				route: `/profiles/${profile.id()}/settings/servers`,
+			});
 
 			const dropdown = screen.getAllByTestId("dropdown__toggle" + peerDropdownMenuTestId)[0];
 
@@ -1048,12 +939,9 @@ describe("Servers Settings", () => {
 		});
 
 		it("can cancel a server deletion", async () => {
-			render(
-				<ServersSettings />,
-				{
-					route: `/profiles/${profile.id()}/settings/servers`,
-				},
-			);
+			render(<ServersSettings />, {
+				route: `/profiles/${profile.id()}/settings/servers`,
+			});
 
 			const dropdown = screen.getAllByTestId("dropdown__toggle" + peerDropdownMenuTestId)[0];
 
@@ -1075,12 +963,9 @@ describe("Servers Settings", () => {
 		});
 
 		it("can close a server deletion", async () => {
-			render(
-				<ServersSettings />,
-				{
-					route: `/profiles/${profile.id()}/settings/servers`,
-				},
-			);
+			render(<ServersSettings />, {
+				route: `/profiles/${profile.id()}/settings/servers`,
+			});
 
 			const dropdown = screen.getAllByTestId("dropdown__toggle" + peerDropdownMenuTestId)[0];
 
@@ -1102,12 +987,9 @@ describe("Servers Settings", () => {
 		});
 
 		it("can update a server", async () => {
-			render(
-				<ServersSettings />,
-				{
-					route: `/profiles/${profile.id()}/settings/servers`,
-				},
-			);
+			render(<ServersSettings />, {
+				route: `/profiles/${profile.id()}/settings/servers`,
+			});
 
 			const dropdown = screen.getAllByTestId("dropdown__toggle" + peerDropdownMenuTestId)[0];
 
@@ -1141,12 +1023,9 @@ describe("Servers Settings", () => {
 		});
 
 		it("can refresh a server", async () => {
-			render(
-				<ServersSettings />,
-				{
-					route: `/profiles/${profile.id()}/settings/servers`,
-				},
-			);
+			render(<ServersSettings />, {
+				route: `/profiles/${profile.id()}/settings/servers`,
+			});
 
 			await waitFor(() => expect(screen.getAllByTestId(peerStatusOkTestId)).toHaveLength(3));
 
@@ -1170,12 +1049,9 @@ describe("Servers Settings", () => {
 		it("can check and uncheck a server", async () => {
 			const serverPushSpy = vi.spyOn(profile.hosts(), "push");
 
-			render(
-				<ServersSettings />,
-				{
-					route: `/profiles/${profile.id()}/settings/servers`,
-				},
-			);
+			render(<ServersSettings />, {
+				route: `/profiles/${profile.id()}/settings/servers`,
+			});
 
 			await userEvent.click(screen.getAllByTestId(customPeersToggleTestId)[0]);
 
@@ -1206,12 +1082,9 @@ describe("Servers Settings", () => {
 		});
 
 		it("should show status error if request fails", async () => {
-			const { asFragment } = render(
-				<ServersSettings />,
-				{
-					route: `/profiles/${profile.id()}/settings/servers`,
-				},
-			);
+			const { asFragment } = render(<ServersSettings />, {
+				route: `/profiles/${profile.id()}/settings/servers`,
+			});
 
 			// Is loading initially
 			expect(screen.getAllByTestId(peerStatusLoadingTestId)).toHaveLength(3);
@@ -1223,12 +1096,9 @@ describe("Servers Settings", () => {
 		});
 
 		it("can check an offline server", async () => {
-			render(
-				<ServersSettings />,
-				{
-					route: `/profiles/${profile.id()}/settings/servers`,
-				},
-			);
+			render(<ServersSettings />, {
+				route: `/profiles/${profile.id()}/settings/servers`,
+			});
 
 			// Is loading initially
 			expect(screen.getAllByTestId(peerStatusLoadingTestId)).toHaveLength(3);
@@ -1242,13 +1112,9 @@ describe("Servers Settings", () => {
 		});
 
 		it("should show status error if request fails on mobile", async () => {
-			const { asFragment } = renderResponsiveWithRoute(
-				<ServersSettings />,
-				"xs",
-				{
-					route: `/profiles/${profile.id()}/settings/servers`,
-				},
-			);
+			const { asFragment } = renderResponsiveWithRoute(<ServersSettings />, "xs", {
+				route: `/profiles/${profile.id()}/settings/servers`,
+			});
 
 			// Is loading initially
 			expect(screen.getAllByTestId(peerStatusLoadingTestId)).toHaveLength(3);

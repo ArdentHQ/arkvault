@@ -2,9 +2,8 @@ import fs from "fs";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { EnvironmentProvider } from "@/app/contexts";
 import { ImportProfile } from "@/domains/profile/pages/ImportProfile/ImportProfile";
-import { env, fireEvent, render, screen, waitFor } from "@/utils/testing-library";
+import { fireEvent, render, screen, waitFor } from "@/utils/testing-library";
 
 const passwordProtectedWwe = fs.readFileSync("src/tests/fixtures/profile/import/password-protected-profile.wwe");
 const withSelectedAddresses = fs.readFileSync("src/tests/fixtures/profile/import/profile-with-selected-addresses.wwe");
@@ -55,10 +54,7 @@ describe("ImportProfile", () => {
 	});
 
 	it("should select file and go to step 2", async () => {
-		render(
-			<ImportProfile />,
-			{ route: importProfileURL },
-		);
+		render(<ImportProfile />, { route: importProfileURL });
 
 		expect(screen.getByTestId(changeFileID)).toBeInTheDocument();
 		expect(screen.getByTestId("SelectFileStep__back")).toBeInTheDocument();
@@ -74,10 +70,7 @@ describe("ImportProfile", () => {
 
 	//// @TODO https://app.clickup.com/t/86dwq8wy3
 	it.skip("should request and set password for importing password protected profile", async () => {
-		render(
-			<ImportProfile />,
-			{ route: importProfileURL },
-		);
+		render(<ImportProfile />, { route: importProfileURL });
 
 		expect(screen.getByTestId(changeFileID)).toBeInTheDocument();
 		expect(screen.getByTestId("SelectFileStep__back")).toBeInTheDocument();
@@ -104,10 +97,7 @@ describe("ImportProfile", () => {
 	});
 
 	it("should close password modal and go back to select file", async () => {
-		render(
-			<ImportProfile />,
-			{ route: importProfileURL },
-		);
+		render(<ImportProfile />, { route: importProfileURL });
 
 		expect(screen.getByTestId(changeFileID)).toBeInTheDocument();
 		expect(screen.getByTestId("SelectFileStep__back")).toBeInTheDocument();
@@ -128,10 +118,7 @@ describe("ImportProfile", () => {
 
 	// @TODO https://app.clickup.com/t/86dwq8wy3
 	it.skip("should successfully import profile and return to home screen", async () => {
-		const { router } = render(
-			<ImportProfile />,
-			{ route: importProfileURL },
-		);
+		const { router } = render(<ImportProfile />, { route: importProfileURL });
 
 		expect(screen.getByTestId(changeFileID)).toBeInTheDocument();
 		expect(screen.getByTestId("SelectFileStep__back")).toBeInTheDocument();
@@ -170,10 +157,7 @@ describe("ImportProfile", () => {
 
 	// @TODO https://app.clickup.com/t/86dwq8wy3
 	it.skip("should not set selected addresses if profile has already", async () => {
-		const { router } = render(
-			<ImportProfile />,
-			{ route: importProfileURL },
-		);
+		const { router } = render(<ImportProfile />, { route: importProfileURL });
 
 		expect(screen.getByTestId(changeFileID)).toBeInTheDocument();
 		expect(screen.getByTestId("SelectFileStep__back")).toBeInTheDocument();
@@ -211,10 +195,7 @@ describe("ImportProfile", () => {
 	});
 
 	it("should successfully import legacy profile and return to home screen", async () => {
-		const { router } = render(
-			<ImportProfile />,
-			{ route: importProfileURL },
-		);
+		const { router } = render(<ImportProfile />, { route: importProfileURL });
 
 		expect(screen.getByTestId(changeFileID)).toBeInTheDocument();
 		expect(screen.getByTestId("SelectFileStep__back")).toBeInTheDocument();
@@ -250,10 +231,7 @@ describe("ImportProfile", () => {
 		["dark", darkThemeWwe],
 		["light", lightThemeWwe],
 	])("should apply theme setting of imported profile regardless of OS preferences", async (theme, wweFile) => {
-		render(
-			<ImportProfile />,
-			{ route: importProfileURL },
-		);
+		render(<ImportProfile />, { route: importProfileURL });
 
 		expect(screen.getByTestId(changeFileID)).toBeInTheDocument();
 		expect(screen.getByTestId("SelectFileStep__back")).toBeInTheDocument();
@@ -284,10 +262,7 @@ describe("ImportProfile", () => {
 
 	// @TODO https://app.clickup.com/t/86dwq8wy3
 	it.skip("should go to step 3 and back", async () => {
-		render(
-			<ImportProfile />,
-			{ route: importProfileURL },
-		);
+		render(<ImportProfile />, { route: importProfileURL });
 
 		expect(screen.getByTestId(changeFileID)).toBeInTheDocument();
 		expect(screen.getByTestId("SelectFileStep__back")).toBeInTheDocument();
@@ -321,10 +296,7 @@ describe("ImportProfile", () => {
 
 	// @TODO https://app.clickup.com/t/86dwq8wy3
 	it.skip("should fail profile import and show error", async () => {
-		render(
-			<ImportProfile />,
-			{ route: importProfileURL },
-		);
+		render(<ImportProfile />, { route: importProfileURL });
 
 		expect(screen.getByTestId(changeFileID)).toBeInTheDocument();
 		expect(screen.getByTestId("SelectFileStep__back")).toBeInTheDocument();
@@ -350,10 +322,7 @@ describe("ImportProfile", () => {
 	});
 
 	it("should fail profile import and retry", async () => {
-		render(
-			<ImportProfile />,
-			{ route: importProfileURL },
-		);
+		render(<ImportProfile />, { route: importProfileURL });
 
 		expect(screen.getByTestId(changeFileID)).toBeInTheDocument();
 		expect(screen.getByTestId("SelectFileStep__back")).toBeInTheDocument();
@@ -383,10 +352,7 @@ describe("ImportProfile", () => {
 	});
 
 	it("should fail profile import and go back to home screen", async () => {
-		const { router } = render(
-			<ImportProfile />,
-			{ route: importProfileURL },
-		);
+		const { router } = render(<ImportProfile />, { route: importProfileURL });
 
 		expect(screen.getByTestId(changeFileID)).toBeInTheDocument();
 		expect(screen.getByTestId("SelectFileStep__back")).toBeInTheDocument();

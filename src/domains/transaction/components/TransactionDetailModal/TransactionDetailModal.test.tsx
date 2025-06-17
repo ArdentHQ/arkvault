@@ -6,7 +6,6 @@ import { translations } from "@/domains/transaction/i18n";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
 import { env, getDefaultProfileId, render, screen, syncValidators, waitFor } from "@/utils/testing-library";
 
-
 const fixtureProfileId = getDefaultProfileId();
 let dashboardURL: string;
 

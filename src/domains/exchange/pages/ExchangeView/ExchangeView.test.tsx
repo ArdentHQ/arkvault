@@ -26,7 +26,6 @@ describe("ExchangeView", () => {
 	it("should render", async () => {
 		const exchangeURL = `/profiles/${getMainsailProfileId()}/exchange/view?exchangeId=changenow`;
 
-
 		render(
 			<ExchangeProvider>
 				<Wrapper>

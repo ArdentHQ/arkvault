@@ -7,7 +7,7 @@ import { VoteValidatorProperties } from "./ValidatorsTable.contracts";
 import * as useRandomNumberHook from "@/app/hooks/use-random-number";
 import { translations } from "@/app/i18n/common/i18n";
 import { data } from "@/tests/fixtures/coins/mainsail/devnet/validators.json";
-import { env, getMainsailProfileId, render, renderResponsive, screen, waitFor } from "@/utils/testing-library";
+import { env, getMainsailProfileId, render, screen, waitFor } from "@/utils/testing-library";
 
 let useRandomNumberSpy: vi.SpyInstance;
 

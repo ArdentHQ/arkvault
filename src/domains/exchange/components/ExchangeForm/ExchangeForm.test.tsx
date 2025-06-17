@@ -161,7 +161,6 @@ describe("ExchangeForm", () => {
 		findExchangeTransactionMock = vi
 			.spyOn(profile.exchangeTransactions(), "findById")
 			.mockReturnValue(exchangeTransaction);
-
 	});
 
 	afterEach(() => {
@@ -1326,7 +1325,6 @@ describe("ExchangeForm", () => {
 		await waitFor(() => {
 			expect(router.state.location.pathname).toBe(`/profiles/${getMainsailProfileId()}/dashboard`);
 		});
-
 	});
 
 	it("should render exchange form with id of finished order", async () => {

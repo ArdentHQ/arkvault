@@ -890,6 +890,7 @@ jobs:
         runs-on: ubuntu-latest
         env:
             COVERAGE_INCLUDE_PATH: src/router
+            COVERAGE_THRESHOLD_BRANCHES: 92.59
         strategy:
             matrix:
                 node-version:

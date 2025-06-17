@@ -2,7 +2,6 @@ import { BIP39 } from "@ardenthq/arkvault-crypto";
 import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
-import { Route } from "react-router-dom";
 
 import {
 	env,
@@ -56,12 +55,9 @@ describe("EncryptionPasswordStep", () => {
 		const onOpenChangeMock = vi.fn();
 		const user = userEvent.setup();
 
-		render(
-			<CreateAddressesSidePanel open={true} onOpenChange={onOpenChangeMock} />,
-			{
-				route: createURL,
-			},
-		);
+		render(<CreateAddressesSidePanel open={true} onOpenChange={onOpenChangeMock} />, {
+			route: createURL,
+		});
 
 		const continueButton = screen.getByTestId("CreateWallet__continue-button");
 
@@ -142,12 +138,9 @@ describe("EncryptionPasswordStep", () => {
 	it("should fail creating a wallet with encryption password", async () => {
 		const createURL = `/profiles/${fixtureProfileId}`;
 
-		render(
-			<CreateAddressesSidePanel open={true} onOpenChange={vi.fn()} />,
-			{
-				route: createURL,
-			},
-		);
+		render(<CreateAddressesSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: createURL,
+		});
 		const user = userEvent.setup();
 
 		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();

@@ -31,7 +31,7 @@ import { getUrlParameter } from "@/utils/paths";
 export const SendRegistration = () => {
 	const navigate = useNavigate();
 	const { t } = useTranslation();
-	const location = useLocation()
+	const location = useLocation();
 
 	const [activeTab, setActiveTab] = useState(1);
 	const [transaction, setTransaction] = useState(undefined as unknown as DTO.ExtendedSignedTransactionData);
@@ -65,14 +65,14 @@ export const SendRegistration = () => {
 	const registrationType = useMemo(() => {
 		try {
 			if (activeWalletFromUrl) {
-				return getUrlParameter(location.pathname, 5)
+				return getUrlParameter(location.pathname, 5);
 			}
 
-			return getUrlParameter(location.pathname, 3)
+			return getUrlParameter(location.pathname, 3);
 		} catch {
-			return
+			return;
 		}
-	}, [activeWalletFromUrl])
+	}, [activeWalletFromUrl]);
 
 	const { activeNetwork: network } = useActiveNetwork({ profile: activeProfile });
 

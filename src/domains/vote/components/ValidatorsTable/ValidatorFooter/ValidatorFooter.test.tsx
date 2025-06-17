@@ -104,14 +104,7 @@ describe("ValidatorFooter", () => {
 	});
 
 	it("should disable continue button with tooltip if user doesn't select a validator", async () => {
-		const selectedValidator: VoteValidatorProperties[] = [
-			{
-				amount: 0,
-				validatorAddress: validator.address(),
-			},
-		];
-
-		const { rerender, baseElement } = render(
+		const { baseElement } = render(
 			<ValidatorFooter
 				selectedWallet={wallet}
 				availableBalance={wallet.balance()}
@@ -124,7 +117,7 @@ describe("ValidatorFooter", () => {
 
 		await waitFor(() => {
 			expect(continueButton()).toBeDisabled();
-		})
+		});
 
 		await userEvent.hover(screen.getByTestId("ValidatorTable__continue--wrapper"));
 
@@ -132,8 +125,6 @@ describe("ValidatorFooter", () => {
 	});
 
 	it("should disable continue button with tooltip if there is at least 1 empty amount field when network requires vote amount", async () => {
-		const votesAmountMinimumMock = vi.spyOn(wallet.network(), "votesAmountMinimum").mockReturnValue(10);
-
 		const selectedValidator: VoteValidatorProperties[] = [
 			{
 				amount: 0,
@@ -141,7 +132,7 @@ describe("ValidatorFooter", () => {
 			},
 		];
 
-		const { rerender, baseElement } = render(
+		const { baseElement } = render(
 			<ValidatorFooter
 				selectedWallet={wallet}
 				availableBalance={wallet.balance()}

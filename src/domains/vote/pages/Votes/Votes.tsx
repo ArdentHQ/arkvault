@@ -35,7 +35,7 @@ export const Votes: FC = () => {
 
 	const activeProfile = useActiveProfile();
 	const activeWallet = useActiveWalletWhenNeeded(false);
-	const hasWalletId = activeWallet && activeWallet.address()
+	const hasWalletId = activeWallet && activeWallet.address();
 
 	const [selectedWallet, setSelectedWallet] = useState<Contracts.IReadWriteWallet | undefined>(activeWallet);
 

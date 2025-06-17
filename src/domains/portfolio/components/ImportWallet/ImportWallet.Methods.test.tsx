@@ -69,12 +69,9 @@ describe("ImportAddress Methods", () => {
 	});
 
 	it("should import by address", async () => {
-		render(
-			<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />,
-			{
-				route: route,
-			},
-		);
+		render(<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: route,
+		});
 
 		expect(methodStep()).toBeInTheDocument();
 
@@ -104,12 +101,9 @@ describe("ImportAddress Methods", () => {
 	});
 
 	it("should import by public key", async () => {
-		render(
-			<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />,
-			{
-				route: route,
-			},
-		);
+		render(<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: route,
+		});
 
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
@@ -141,12 +135,9 @@ describe("ImportAddress Methods", () => {
 	});
 
 	it("should not allow importing from an invalid public key", async () => {
-		render(
-			<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />,
-			{
-				route: route,
-			},
-		);
+		render(<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: route,
+		});
 
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
@@ -167,12 +158,9 @@ describe("ImportAddress Methods", () => {
 	});
 
 	it("should import by secret", async () => {
-		render(
-			<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />,
-			{
-				route: route,
-			},
-		);
+		render(<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: route,
+		});
 
 		const countBefore = profile.wallets().count();
 
@@ -204,12 +192,9 @@ describe("ImportAddress Methods", () => {
 	});
 
 	it("should import by secret with encryption", async () => {
-		render(
-			<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />,
-			{
-				route: route,
-			},
-		);
+		render(<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: route,
+		});
 
 		const user = userEvent.setup();
 
@@ -329,12 +314,9 @@ describe("ImportAddress Methods", () => {
 	// });
 
 	it("forgets the imported wallet if back from encrypted password step", async () => {
-		render(
-			<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />,
-			{
-				route: route,
-			},
-		);
+		render(<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: route,
+		});
 
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
@@ -373,12 +355,9 @@ describe("ImportAddress Methods", () => {
 	});
 
 	it("should validate public key doesnt exist", async () => {
-		render(
-			<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />,
-			{
-				route: route,
-			},
-		);
+		render(<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: route,
+		});
 
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
 

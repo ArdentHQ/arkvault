@@ -34,22 +34,17 @@ vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
 }));
 
-const path = "/profiles/:profileId/wallets/:walletId/send-registration/:registrationType";
-
 const renderPage = async (wallet: Contracts.IReadWriteWallet, type = "validatorRegistration") => {
 	const registrationURL = `/profiles/${profile.id()}/wallets/${wallet.id()}/send-registration/${type}`;
 
-	const result = render(
-		<SendRegistration />,
-		{
-			route: registrationURL,
-			withProviders: true,
-		},
-	);
+	const view = render(<SendRegistration />, {
+		route: registrationURL,
+		withProviders: true,
+	});
 
 	await expect(screen.findByTestId("Registration__form")).resolves.toBeVisible();
 
-	return result;
+	return view;
 };
 
 const signedTransactionMock = {
@@ -212,12 +207,9 @@ describe("Registration", () => {
 
 		const registrationPath = `/profiles/${profile.id()}/wallets/${secondWallet.id()}/send-registration/${type}`;
 
-		render(
-			<SendRegistration />,
-			{
-				route: registrationPath,
-			},
-		);
+		render(<SendRegistration />, {
+			route: registrationPath,
+		});
 
 		await expect(screen.findByTestId("Registration__form")).resolves.toBeVisible();
 
@@ -230,7 +222,7 @@ describe("Registration", () => {
 		}));
 
 		const nanoXTransportMock = mockNanoXTransport();
-		const { asFragment, router } = await renderPage(wallet);
+		const { router } = await renderPage(wallet);
 
 		// Step 1
 		await expect(formStep()).resolves.toBeVisible();

@@ -1,7 +1,6 @@
 import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
 import React, { useEffect, useState } from "react";
-import { Route } from "react-router-dom";
 
 import { Page } from "./Page";
 import { env, getMainsailProfileId, render, screen } from "@/utils/testing-library";
@@ -44,12 +43,9 @@ describe("Page", () => {
 	});
 
 	it.each([true, false])("should render with sidebar = %s", (sidebar) => {
-		const { container, asFragment } = render(
-			<Page sidebar={sidebar}>{}</Page>,
-			{
-				route: dashboardURL,
-			},
-		);
+		const { container, asFragment } = render(<Page sidebar={sidebar}>{}</Page>, {
+			route: dashboardURL,
+		});
 
 		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
@@ -75,12 +71,9 @@ describe("Page", () => {
 	it.each(["Settings", "Docs"])("should handle '%s' click on user actions dropdown", async (label) => {
 		const windowSpy = vi.spyOn(window, "open").mockImplementation(vi.fn());
 
-		const { router } = render(
-			<Page>{}</Page>,
-			{
-				route: dashboardURL,
-			},
-		);
+		const { router } = render(<Page>{}</Page>, {
+			route: dashboardURL,
+		});
 
 		await expect(screen.findByTestId("UserMenu")).resolves.toBeVisible();
 
@@ -102,13 +95,9 @@ describe("Page", () => {
 	});
 
 	it("should handle 'Sign Out' click on user actions dropdown", async () => {
-		const { router } = render(
-			<Page>{}</Page>,
-			{
-				route: dashboardURL,
-			},
-		);
-
+		const { router } = render(<Page>{}</Page>, {
+			route: dashboardURL,
+		});
 
 		await expect(screen.findByTestId("UserMenu")).resolves.toBeVisible();
 

@@ -21,7 +21,7 @@ const expectHeading = async (text: string) => {
 };
 
 describe("SignMessage with encrypted secret", () => {
-	let dashboardRoute: string | undefined
+	let dashboardRoute: string | undefined;
 	beforeAll(async () => {
 		profile = await env.profiles().create("Example");
 
@@ -55,12 +55,9 @@ describe("SignMessage with encrypted secret", () => {
 
 			profile.wallets().push(encryptedWallet);
 
-			render(
-				<SignMessageSidePanel open={true} onOpenChange={vi.fn()} onMountChange={vi.fn()} />,
-				{
-					route: dashboardRoute
-				},
-			);
+			render(<SignMessageSidePanel open={true} onOpenChange={vi.fn()} onMountChange={vi.fn()} />, {
+				route: dashboardRoute,
+			});
 
 			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
 

@@ -17,8 +17,8 @@ describe("TransactionDetails", () => {
 			<TransactionDetails transaction={{ ...TransactionFixture, wallet: () => wallet }} />,
 			breakpoint,
 			{
-				route: "/"
-			}
+				route: "/",
+			},
 		);
 
 		expect(screen.getAllByTestId("DetailLabelText")).toHaveLength(4);

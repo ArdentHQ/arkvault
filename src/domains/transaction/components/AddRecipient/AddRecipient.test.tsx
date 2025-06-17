@@ -31,12 +31,9 @@ const renderWithFormProvider = (children: any, defaultValues?: any) => {
 		return <FormProvider {...form}>{children}</FormProvider>;
 	};
 
-	return render(
-		<Wrapper />,
-		{
-			route: `/profiles/${profile.id()}`,
-		},
-	);
+	return render(<Wrapper />, {
+		route: `/profiles/${profile.id()}`,
+	});
 };
 
 const selectFirstRecipient = async () =>

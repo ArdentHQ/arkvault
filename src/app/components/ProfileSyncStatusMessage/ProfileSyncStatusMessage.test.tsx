@@ -8,12 +8,9 @@ describe("SyncErrorMessage", () => {
 	const failedNetworkNames = ["ARK Devnet", "ARK Mainnet", "Lisk Devnet"];
 
 	it("should render one failed network", async () => {
-		const { container } = render(
-			<SyncErrorMessage failedNetworkNames={[failedNetworkNames[0]]} />,
-			{
-				route: "/",
-			},
-		);
+		const { container } = render(<SyncErrorMessage failedNetworkNames={[failedNetworkNames[0]]} />, {
+			route: "/",
+		});
 
 		await expect(screen.findByText(failedNetworkNames[0])).resolves.toBeVisible();
 
@@ -35,12 +32,9 @@ describe("SyncErrorMessage", () => {
 	});
 
 	it("should render multiple failed networks", async () => {
-		const { container } = render(
-			<SyncErrorMessage failedNetworkNames={failedNetworkNames} />,
-			{
-				route: "/",
-			},
-		);
+		const { container } = render(<SyncErrorMessage failedNetworkNames={failedNetworkNames} />, {
+			route: "/",
+		});
 
 		await expect(screen.findByText(failedNetworkNames[0])).resolves.toBeVisible();
 		await expect(screen.findByText(failedNetworkNames[1])).resolves.toBeVisible();
@@ -50,12 +44,9 @@ describe("SyncErrorMessage", () => {
 
 	it("should handle retry", async () => {
 		const onRetry = vi.fn();
-		const { container } = render(
-			<SyncErrorMessage failedNetworkNames={failedNetworkNames} onRetry={onRetry} />,
-			{
-				route: "/",
-			},
-		);
+		const { container } = render(<SyncErrorMessage failedNetworkNames={failedNetworkNames} onRetry={onRetry} />, {
+			route: "/",
+		});
 
 		await expect(screen.findByText(failedNetworkNames[0])).resolves.toBeVisible();
 		await expect(screen.findByText(failedNetworkNames[1])).resolves.toBeVisible();

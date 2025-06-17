@@ -67,12 +67,9 @@ describe("ImportAddress", () => {
 	});
 
 	it("should import by mnemonic", async () => {
-		render(
-			<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />,
-			{
-				route: route,
-			},
-		);
+		render(<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: route,
+		});
 
 		const user = userEvent.setup();
 
@@ -118,12 +115,9 @@ describe("ImportAddress", () => {
 	});
 
 	it("should import by mnemonic and use encryption password", async () => {
-		render(
-			<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />,
-			{
-				route: route,
-			},
-		);
+		render(<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: route,
+		});
 
 		const user = userEvent.setup();
 
@@ -170,12 +164,9 @@ describe("ImportAddress", () => {
 	});
 
 	it("should disable the encryption option when selecting a methods without encryption", async () => {
-		render(
-			<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />,
-			{
-				route: route,
-			},
-		);
+		render(<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: route,
+		});
 
 		expect(methodStep()).toBeInTheDocument();
 

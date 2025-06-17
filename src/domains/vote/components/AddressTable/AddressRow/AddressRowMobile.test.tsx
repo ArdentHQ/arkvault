@@ -12,7 +12,6 @@ import {
 import { data } from "@/tests/fixtures/coins/mainsail/devnet/validators.json";
 import { env, getMainsailProfileId, MAINSAIL_MNEMONICS, render, screen, syncValidators } from "@/utils/testing-library";
 import { useConfiguration } from "@/app/contexts";
-import { createHashHistory } from "history";
 import { within } from "@testing-library/react";
 
 let profile: Contracts.IProfile;
@@ -36,7 +35,7 @@ const AddressWrapper = ({ children }) => {
 	return (
 		<table>
 			<tbody>{children}</tbody>
-		</table>,
+		</table>
 	);
 };
 
@@ -307,7 +306,6 @@ describe("AddressRowMobile", () => {
 
 	// @TODO fix test when we are clear
 	it.skip("should redirect to wallet details page", async () => {
-
 		const { router } = render(
 			<AddressWrapper>
 				<AddressRowMobile index={0} maxVotes={1} wallet={wallet} onSelect={vi.fn()} />

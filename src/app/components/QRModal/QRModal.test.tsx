@@ -106,12 +106,9 @@ describe("QRModal", () => {
 
 		QrReader.mockImplementation(({ onResult }: { onResult: (result: any, error?: Error | null) => void }) => {
 			if (onResult) {
-				// Trigger multiple times greater than ERROR_THRESHOLD to throw an error.
-				onResult(undefined, new Error("other error"));
-				onResult(undefined, new Error("other error"));
-				onResult(undefined, new Error("other error"));
-				onResult(undefined, new Error("other error"));
-				onResult(undefined, new Error("other error"));
+				for (let index = 0; index < 5; index++) {
+					onResult(undefined, new Error("other error"));
+				}
 			}
 
 			return null;

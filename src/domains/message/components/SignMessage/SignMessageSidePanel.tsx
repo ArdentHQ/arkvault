@@ -2,7 +2,6 @@ import { Services } from "@/app/lib/mainsail";
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-import { useLocation } from "react-router-dom";
 import { Contracts } from "@/app/lib/profiles";
 import { FormStep } from "./FormStep";
 import { SigningMessageInfo, SuccessStep } from "./SuccessStep";
@@ -19,7 +18,6 @@ import { useQueryParameters } from "@/app/hooks/use-query-parameters";
 import { AuthenticationStep, LedgerAuthentication } from "@/domains/transaction/components/AuthenticationStep";
 import { SidePanel, SidePanelButtons } from "@/app/components/SidePanel/SidePanel";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
-import { getUrlParameter } from "@/utils/paths";
 
 enum Step {
 	FormStep = 1,
@@ -37,7 +35,6 @@ export const SignMessageSidePanel = ({
 	onMountChange?: (mounted: boolean) => void;
 }): JSX.Element => {
 	const { t } = useTranslation();
-	const location = useLocation();
 
 	const activeProfile = useActiveProfile();
 	const queryParameters = useQueryParameters();

@@ -13,7 +13,6 @@ import {
 	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
 
-
 let profile: Contracts.IProfile;
 
 let nethash: string;
@@ -34,9 +33,7 @@ describe("useQueryParameters hook", () => {
 	};
 
 	it("should render useQueryParameters", () => {
-		render(
-			<TestComponent />
-		);
+		render(<TestComponent />);
 
 		expect(screen.getByTestId("header_test")).toBeInTheDocument();
 

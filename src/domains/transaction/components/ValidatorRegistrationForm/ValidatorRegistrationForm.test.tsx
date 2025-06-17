@@ -49,12 +49,9 @@ const renderComponent = (properties?: any) => {
 		);
 	};
 
-	const utils: RenderResult = render(
-		<Component />,
-		{
-			route: `/profiles/${profile.id()}`,
-		},
-	);
+	const utils: RenderResult = render(<Component />, {
+		route: `/profiles/${profile.id()}`,
+	});
 
 	return { ...utils, form };
 };

@@ -30,7 +30,7 @@ const AddressWrapper = ({ children }) => {
 	return (
 		<table>
 			<tbody>{children}</tbody>
-		</table>,
+		</table>
 	);
 };
 

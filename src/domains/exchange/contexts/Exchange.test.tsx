@@ -29,9 +29,11 @@ describe("Exchange Context", () => {
 			return <span>provider counts: {exchangeProviders.length}</span>;
 		};
 
-		expect(() => renderWithoutRouter(<Test />, {
-			withProviders: false,
-		})).toThrow("[useExchangeContext] Component not wrapped within a Provider");
+		expect(() =>
+			renderWithoutRouter(<Test />, {
+				withProviders: false,
+			}),
+		).toThrow("[useExchangeContext] Component not wrapped within a Provider");
 
 		consoleSpy.mockRestore();
 	});

@@ -131,5 +131,4 @@ const AppRouter = () => (
 	</React.Suspense>
 );
 
-
 export { AppRouter, Main };

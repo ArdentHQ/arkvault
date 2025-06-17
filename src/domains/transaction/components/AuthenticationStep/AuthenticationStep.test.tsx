@@ -19,9 +19,12 @@ import {
 
 const MainsailDevnet = "mainsail.devnet";
 
-vi.mock("react-rsrc/domains/transaction/components/AuthenticationStep/AuthenticationStep.test.tsxouter-dom", async () => ({
-	...(await vi.importActual("react-router-dom")),
-}));
+vi.mock(
+	"react-rsrc/domains/transaction/components/AuthenticationStep/AuthenticationStep.test.tsxouter-dom",
+	async () => ({
+		...(await vi.importActual("react-router-dom")),
+	}),
+);
 
 vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
@@ -30,14 +33,11 @@ vi.mock("@/utils/delay", () => ({
 describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) => {
 	let wallet: Contracts.IReadWriteWallet;
 	let profile: Contracts.IProfile;
-	let goMock: any;
 	const mnemonicMismatchError = "This mnemonic does not correspond to your wallet";
 
 	beforeEach(() => {
 		profile = env.profiles().findById(getDefaultProfileId());
 		wallet = profile.wallets().first();
-		goMock = vi.fn();
-
 	});
 
 	it("should validate if mnemonic match the wallet address", async () => {
@@ -274,17 +274,19 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 
 	it("should handle ledger error", async () => {
 		mockLedgerTransportError("Access denied to use Ledger device");
-		let location: Location | undefined
+		let location: Location | undefined;
 
 		vi.spyOn(wallet, "isLedger").mockReturnValueOnce(true);
 
 		renderWithForm(
 			<>
-				<LocationTracker onLocationChange={(currentLocation) => location = currentLocation} />
+				<LocationTracker onLocationChange={(currentLocation) => (location = currentLocation)} />
 				<AuthenticationStep subject={subject} wallet={wallet} />
-			</>, {
-			withProviders: true,
-		});
+			</>,
+			{
+				withProviders: true,
+			},
+		);
 
 		await waitFor(() => expect(location?.pathname).toBe("/"));
 

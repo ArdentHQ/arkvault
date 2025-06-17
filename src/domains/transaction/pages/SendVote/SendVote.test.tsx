@@ -180,10 +180,7 @@ describe("SendVote", () => {
 		const unvotes: VoteValidatorProperties[] = [{ amount: 10, validatorAddress: validatorData[1].address }];
 		appendParameters(parameters, "unvote", unvotes);
 
-		const { container, router } = render(
-			<SendVote />,
-			{ route: { pathname: voteURL, search: `?${parameters}` } },
-		);
+		const { router } = render(<SendVote />, { route: { pathname: voteURL, search: `?${parameters}` } });
 
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
@@ -195,7 +192,6 @@ describe("SendVote", () => {
 		await userEvent.click(backButton());
 
 		expect(router.state.location.pathname).toBe(`/profiles/${fixtureProfileId}/wallets/${wallet.id()}/votes`);
-
 	});
 
 	it("should return to the select a validator page to unvote/vote", async () => {
@@ -208,15 +204,12 @@ describe("SendVote", () => {
 		const votes: VoteValidatorProperties[] = [{ amount: 10, validatorAddress: validatorData[0].address }];
 		appendParameters(parameters, "vote", votes);
 
-		const { container, router } = render(
-			<SendVote />,
-			{
-				route: {
-					pathname: voteURL,
-					search: `?${parameters}`,
-				},
+		const { router } = render(<SendVote />, {
+			route: {
+				pathname: voteURL,
+				search: `?${parameters}`,
 			},
-		);
+		});
 
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 		await waitFor(() => expect(screen.getByTestId(reviewStepID)).toHaveTextContent(validatorData[0].address));
@@ -244,12 +237,9 @@ describe("SendVote", () => {
 		];
 
 		appendParameters(parameters, "vote", votes);
-		const { router } = render(
-			<SendVote />,
-			{
-				route: `${voteURL}?${parameters}`
-			},
-		);
+		const { router } = render(<SendVote />, {
+			route: `${voteURL}?${parameters}`,
+		});
 
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
@@ -292,10 +282,8 @@ describe("SendVote", () => {
 
 		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
-
 		// Go back to dashboard
 		await userEvent.click(screen.getByTestId("StepNavigation__back-to-wallet-button"));
-
 
 		expect(router.state.location.pathname).toBe(`/profiles/${profile.id()}/dashboard`);
 
@@ -338,15 +326,12 @@ describe("SendVote", () => {
 
 		appendParameters(parameters, "vote", votes);
 
-		render(
-			<SendVote />,
-			{
-				route: {
-					pathname: voteURL,
-					search: `?${parameters}`,
-				},
+		render(<SendVote />, {
+			route: {
+				pathname: voteURL,
+				search: `?${parameters}`,
 			},
-		);
+		});
 
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
@@ -386,15 +371,12 @@ describe("SendVote", () => {
 
 		appendParameters(parameters, "vote", votes);
 
-		render(
-			<SendVote />,
-			{
-				route: {
-					pathname: voteURL,
-					search: `?${parameters}`,
-				},
+		render(<SendVote />, {
+			route: {
+				pathname: voteURL,
+				search: `?${parameters}`,
 			},
-		);
+		});
 
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
@@ -507,15 +489,12 @@ describe("SendVote", () => {
 		const voteURL = `/profiles/${fixtureProfileId}/send-vote`;
 		const parameters = new URLSearchParams(`&nethash=${wallet.network().meta().nethash}`);
 
-		render(
-			<SendVote />,
-			{
-				route: {
-					pathname: voteURL,
-					search: `?${parameters}`,
-				},
+		render(<SendVote />, {
+			route: {
+				pathname: voteURL,
+				search: `?${parameters}`,
 			},
-		);
+		});
 
 		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
@@ -535,21 +514,16 @@ describe("SendVote", () => {
 		const voteURL = `/profiles/${fixtureProfileId}/send-vote`;
 		const parameters = new URLSearchParams(`&nethash=${wallet.network().meta().nethash}`);
 
-		render(
-			<SendVote />,
-			{
-				route: {
-					pathname: voteURL,
-					search: `?${parameters}`,
-				},
+		render(<SendVote />, {
+			route: {
+				pathname: voteURL,
+				search: `?${parameters}`,
 			},
-		);
+		});
 
 		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
-
 		await userEvent.click(backButton());
-
 	});
 
 	it("should select sender wallet and sync if not yet synced", async () => {
@@ -557,15 +531,12 @@ describe("SendVote", () => {
 		const parameters = new URLSearchParams(`&nethash=${wallet.network().meta().nethash}`);
 		const walletSyncMock = vi.spyOn(profile.wallets().first(), "hasBeenFullyRestored").mockReturnValue(false);
 
-		render(
-			<SendVote />,
-			{
-				route: {
-					pathname: voteURL,
-					search: `?${parameters}`,
-				},
+		render(<SendVote />, {
+			route: {
+				pathname: voteURL,
+				search: `?${parameters}`,
 			},
-		);
+		});
 
 		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
@@ -587,15 +558,12 @@ describe("SendVote", () => {
 		const voteURL = `/profiles/${fixtureProfileId}/send-vote`;
 		const parameters = new URLSearchParams(`?&nethash=${wallet.network().meta().nethash}`);
 
-		render(
-			<SendVote />,
-			{
-				route: {
-					pathname: voteURL,
-					search: `?${parameters}`,
-				},
+		render(<SendVote />, {
+			route: {
+				pathname: voteURL,
+				search: `?${parameters}`,
 			},
-		);
+		});
 
 		await expect(screen.findByTestId("SelectAddress__input")).resolves.toHaveValue("");
 	});
@@ -613,15 +581,12 @@ describe("SendVote", () => {
 
 		appendParameters(parameters, "unvote", unvotes);
 
-		render(
-			<SendVote />,
-			{
-				route: {
-					pathname: voteURL,
-					search: `?${parameters}`,
-				},
+		render(<SendVote />, {
+			route: {
+				pathname: voteURL,
+				search: `?${parameters}`,
 			},
-		);
+		});
 
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
@@ -666,15 +631,12 @@ describe("SendVote", () => {
 
 		appendParameters(parameters, "unvote", unvotes);
 
-		render(
-			<SendVote />,
-			{
-				route: {
-					pathname: voteURL,
-					search: `?${parameters}`,
-				},
+		render(<SendVote />, {
+			route: {
+				pathname: voteURL,
+				search: `?${parameters}`,
 			},
-		);
+		});
 
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
@@ -757,15 +719,12 @@ describe("SendVote", () => {
 
 		appendParameters(parameters, "unvote", unvotes);
 
-		render(
-			<SendVote />,
-			{
-				route: {
-					pathname: voteURL,
-					search: `?${parameters}`,
-				},
+		render(<SendVote />, {
+			route: {
+				pathname: voteURL,
+				search: `?${parameters}`,
 			},
-		);
+		});
 
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
@@ -824,15 +783,12 @@ describe("SendVote", () => {
 
 		appendParameters(parameters, "vote", votes);
 
-		const { container } = render(
-			<SendVote />,
-			{
-				route: {
-					pathname: voteURL,
-					search: `?${parameters}`,
-				},
+		const { container } = render(<SendVote />, {
+			route: {
+				pathname: voteURL,
+				search: `?${parameters}`,
 			},
-		);
+		});
 
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
@@ -859,7 +815,6 @@ describe("SendVote", () => {
 	it("should show error step and go back", async () => {
 		vi.useRealTimers();
 
-
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
@@ -872,15 +827,12 @@ describe("SendVote", () => {
 
 		appendParameters(parameters, "vote", votes);
 
-		const { container } = render(
-			<SendVote />,
-			{
-				route: {
-					pathname: voteURL,
-					search: `?${parameters}`,
-				},
+		const { container } = render(<SendVote />, {
+			route: {
+				pathname: voteURL,
+				search: `?${parameters}`,
 			},
-		);
+		});
 
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
@@ -911,8 +863,6 @@ describe("SendVote", () => {
 		expect(container).toMatchSnapshot();
 
 		await userEvent.click(screen.getByTestId("ErrorStep__close-button"));
-
-		const dashboardPage = `/profiles/${getMainsailProfileId()}/dashboard`;
 
 		signMock.mockRestore();
 	});
@@ -949,15 +899,12 @@ describe("SendVote", () => {
 
 		appendParameters(parameters, "unvote", unvotes);
 
-		render(
-			<SendVote />,
-			{
-				route: {
-					pathname: voteURL,
-					search: `?${parameters}`,
-				},
+		render(<SendVote />, {
+			route: {
+				pathname: voteURL,
+				search: `?${parameters}`,
 			},
-		);
+		});
 
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
@@ -1048,15 +995,12 @@ describe("SendVote", () => {
 
 		appendParameters(parameters, "unvote", unvotes);
 
-		render(
-			<SendVote />,
-			{
-				route: {
-					pathname: voteURL,
-					search: `?${parameters}`,
-				},
+		render(<SendVote />, {
+			route: {
+				pathname: voteURL,
+				search: `?${parameters}`,
 			},
-		);
+		});
 
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 

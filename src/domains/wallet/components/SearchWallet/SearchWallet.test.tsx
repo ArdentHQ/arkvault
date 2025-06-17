@@ -2,7 +2,6 @@
 import { Networks } from "@/app/lib/mainsail";
 import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
-import { createHashHistory } from "history";
 import React from "react";
 
 import { SearchWallet } from "./SearchWallet";
@@ -19,7 +18,6 @@ import {
 	getMainsailProfileId,
 } from "@/utils/testing-library";
 
-const history = createHashHistory();
 const dashboardURL = `/profiles/${getMainsailProfileId()}/dashboard`;
 let wallets: Contracts.IReadWriteWallet[];
 let profile: Contracts.IProfile;

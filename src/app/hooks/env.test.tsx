@@ -29,12 +29,9 @@ describe("useActiveProfile", () => {
 	};
 
 	it("should return profile", () => {
-		render(
-			<TestProfile />,
-			{
-				route: `/profiles/${profile.id()}`,
-			},
-		);
+		render(<TestProfile />, {
+			route: `/profiles/${profile.id()}`,
+		});
 
 		expect(screen.getByText(profile.name())).toBeInTheDocument();
 	});
@@ -42,12 +39,9 @@ describe("useActiveProfile", () => {
 	it("should throw error when profile is not found", () => {
 		const consoleErrorSpy = vi.spyOn(console, "error").mockImplementation(vi.fn());
 
-		render(
-			<TestProfile />,
-			{
-				route: `/profiles/any_undefined_profile`,
-			},
-		);
+		render(<TestProfile />, {
+			route: `/profiles/any_undefined_profile`,
+		});
 
 		expect(screen.getByText(`No profile found for [any_undefined_profile]`)).toBeInTheDocument();
 
@@ -57,26 +51,18 @@ describe("useActiveProfile", () => {
 	it("should throw error when useActiveProfile is called on a route where profile is not available", async () => {
 		const consoleErrorSpy = vi.spyOn(console, "error").mockImplementation(vi.fn());
 
-		render(
-			<TestProfile />,
-			{
-
-				route: "/route-without-profile",
-			},
-		);
+		render(<TestProfile />, {
+			route: "/route-without-profile",
+		});
 
 		await waitFor(() => expect(screen.queryByTestId("test-profile")).not.toBeInTheDocument());
 		consoleErrorSpy.mockRestore();
 	});
 
-
 	it("should return wallet", () => {
-		render(
-			<TestWallet />,
-			{
-				route: `/profiles/${profile.id()}/wallets/${wallet.id()}`,
-			},
-		);
+		render(<TestWallet />, {
+			route: `/profiles/${profile.id()}/wallets/${wallet.id()}`,
+		});
 
 		expect(screen.getByText(wallet.address())).toBeInTheDocument();
 	});
@@ -91,12 +77,9 @@ describe("useActiveProfile", () => {
 			return <TestWallet />;
 		};
 
-		render(
-			<TestActiveWallet />,
-			{
-				route: `/profiles/${profile.id()}/wallets/${wallet.id()}`,
-			},
-		);
+		render(<TestActiveWallet />, {
+			route: `/profiles/${profile.id()}/wallets/${wallet.id()}`,
+		});
 
 		expect(activeWalletId).toStrictEqual(wallet.id());
 		expect(screen.getByText(wallet.address())).toBeInTheDocument();
@@ -116,13 +99,10 @@ describe("useActiveProfile", () => {
 				return <TestWallet />;
 			};
 
-			render(
-				<TestActiveWallet />,
-				{
-					route: `/profiles/${profile.id()}/wallets/1`,
-					withProfileSynchronizer: false,
-				},
-			)
+			render(<TestActiveWallet />, {
+				route: `/profiles/${profile.id()}/wallets/1`,
+				withProfileSynchronizer: false,
+			});
 
 			expect(activeWallet).toBeUndefined();
 			expect(activeWalletId).toBeUndefined();

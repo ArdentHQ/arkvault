@@ -1,4 +1,3 @@
-import { createHashHistory } from "history";
 import React from "react";
 
 import { Contracts } from "@/app/lib/profiles";
@@ -11,8 +10,6 @@ import {
 	mockProfileWithPublicAndTestNetworks,
 	getMainsailProfileId,
 } from "@/utils/testing-library";
-
-const history = createHashHistory();
 
 let profile: Contracts.IProfile;
 
@@ -63,14 +60,20 @@ describe("useWalletFromQueryParameters hook", () => {
 	});
 
 	it("should find vote validator from url", () => {
-		render(<TestComponent />, { route: `/?vote=${validatorAddresses[0]},2&nethash=${nethash}`, withProviders: false });
+		render(<TestComponent />, {
+			route: `/?vote=${validatorAddresses[0]},2&nethash=${nethash}`,
+			withProviders: false,
+		});
 
 		expect(screen.getByTestId("votes-1")).toBeInTheDocument();
 		expect(screen.getByTestId("unvotes-0")).toBeInTheDocument();
 	});
 
 	it("should find unvote validator from url", () => {
-		render(<TestComponent />, { route: `/?unvote=${validatorAddresses[0]},2&nethash=${nethash}`, withProviders: false });
+		render(<TestComponent />, {
+			route: `/?unvote=${validatorAddresses[0]},2&nethash=${nethash}`,
+			withProviders: false,
+		});
 
 		expect(screen.getByTestId("votes-0")).toBeInTheDocument();
 		expect(screen.getByTestId("unvotes-1")).toBeInTheDocument();

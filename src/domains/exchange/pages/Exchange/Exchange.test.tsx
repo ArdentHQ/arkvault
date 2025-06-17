@@ -71,7 +71,6 @@ const mockExchangeTransaction = (profile: Contracts.IProfile) => {
 describe("Exchange", () => {
 	beforeAll(() => {
 		profile = env.profiles().findById(getMainsailProfileId());
-
 	});
 
 	afterEach(() => {

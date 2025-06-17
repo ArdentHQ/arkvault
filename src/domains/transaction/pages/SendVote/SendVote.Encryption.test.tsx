@@ -44,7 +44,7 @@ vi.mock("@/utils/delay", () => ({
 
 vi.mock("@/utils/debounce", () => ({
 	debounceAsync: (callback: () => void) =>
-		async function(...arguments_: any) {
+		async function (...arguments_: any) {
 			return new Promise((resolve) => {
 				setTimeout(() => {
 					resolve(callback.apply(this, arguments_));

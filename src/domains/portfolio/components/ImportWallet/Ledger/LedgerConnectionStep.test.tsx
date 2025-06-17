@@ -1,6 +1,5 @@
 import { Contracts } from "@/app/lib/profiles";
 import React, { useEffect } from "react";
-import { FormProvider, useForm } from "react-hook-form";
 
 import { LedgerConnectionStep } from "./LedgerConnectionStep";
 import { minVersionList } from "@/app/contexts";
@@ -18,7 +17,6 @@ import {
 import { useTranslation } from "react-i18next";
 import { afterAll, afterEach, expect, vi } from "vitest";
 
-
 const {
 	result: {
 		current: { t },
@@ -31,7 +29,7 @@ describe("LedgerConnectionStep", () => {
 	let wallet: Contracts.IReadWriteWallet;
 	let getVersionSpy: vi.SpyInstance;
 	let networkMock;
-	const route = `profiles/${getDefaultProfileId()}`
+	const route = `profiles/${getDefaultProfileId()}`;
 
 	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
@@ -68,9 +66,7 @@ describe("LedgerConnectionStep", () => {
 			publicKey: vi.fn().mockReturnValue("027716e659220085e41389efc7cf6a05f7f7c659cf3db9126caabce6cda9156582"),
 		};
 
-		getVersionSpy = vi
-			.spyOn(wallet.ledger(), "getVersion")
-			.mockResolvedValue(minVersionList[networkMock.coin()]);
+		getVersionSpy = vi.spyOn(wallet.ledger(), "getVersion").mockResolvedValue(minVersionList[networkMock.coin()]);
 	});
 
 	afterAll(() => {
@@ -106,16 +102,10 @@ describe("LedgerConnectionStep", () => {
 		const nanoXTransportMock = mockNanoXTransport();
 		const onConnect = vi.fn();
 
-
-		const { rerender } = render(
-			<Component onConnect={onConnect} />,
-			{ route }
-		);
+		const { rerender } = render(<Component onConnect={onConnect} />, { route });
 
 		setTimeout(() => {
-			rerender(
-				<Component onConnect={onConnect} />,
-			);
+			rerender(<Component onConnect={onConnect} />);
 			onConnect();
 		}, 100);
 
@@ -128,10 +118,7 @@ describe("LedgerConnectionStep", () => {
 		const ledgerTransportMock = mockNanoXTransport();
 		const onFailed = vi.fn();
 
-		render(
-			<Component onFailed={onFailed} />,
-			{ route }
-		);
+		render(<Component onFailed={onFailed} />, { route });
 
 		await waitFor(() => expect(onFailed).toHaveBeenCalledWith(expect.any(Error)), { timeout: 3000 });
 
@@ -141,18 +128,13 @@ describe("LedgerConnectionStep", () => {
 	it.skip("should show update error if app version is less than minimum version", async () => {
 		const outdatedVersion = "1.0.1";
 
-		const ledgerTransportMock = mockNanoXTransport();
 		const errorMock = mockLedgerTransportError(
 			`The ARK app version is ${outdatedVersion}. Please update the ARK app via Ledger Live.`,
 		);
 
 		const onFailed = vi.fn();
 
-
-		render(
-			<Component onFailed={onFailed} />,
-			{ route }
-		);
+		render(<Component onFailed={onFailed} />, { route });
 
 		await waitFor(() => expect(onFailed).toHaveBeenCalled(), { timeout: 3000 });
 		expect(errorMock).toHaveBeenCalled();
@@ -164,10 +146,7 @@ describe("LedgerConnectionStep", () => {
 	it.skip("should render cancel screen", async () => {
 		const ledgerTransportMock = mockNanoXTransport();
 
-		render(
-			<Component cancelling={true} />,
-			{ route }
-		);
+		render(<Component cancelling={true} />, { route });
 
 		await expect(screen.findByText(/cancelling/i, { timeout: 4000 })).resolves.toBeInTheDocument();
 

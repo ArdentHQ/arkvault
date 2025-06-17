@@ -14,7 +14,6 @@ import { useActiveProfile, useActiveWalletWhenNeeded, useQueryParameters } from 
 import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
 import { ProfilePaths } from "@/router/paths";
 import { MessageService } from "@/app/lib/mainsail/message.service";
-import { getUrlParameter } from "@/utils/paths";
 
 enum Step {
 	FormStep = 1,

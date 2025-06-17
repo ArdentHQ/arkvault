@@ -1,7 +1,6 @@
 import { ConfigurationProvider, EnvironmentProvider, LedgerProvider, NavigationProvider } from "@/app/contexts";
 import { Contracts, Environment } from "@/app/lib/profiles";
 import { FormProvider, UseFormMethods, useForm } from "react-hook-form";
-import { HashHistory, To, createHashHistory } from "history";
 import { RenderResult, render, renderHook } from "@testing-library/react";
 
 /* eslint-disable testing-library/no-node-access */
@@ -121,24 +120,17 @@ interface RenderWithRouterOptions {
 	profileSynchronizerOptions?: Record<string, any>;
 }
 
-
 export const LocationTracker = ({ onLocationChange }: { onLocationChange?: (location: Location) => void }) => {
 	const location = useLocation();
 
 	useEffect(() => {
-		onLocationChange?.(location)
+		onLocationChange?.(location);
 	}, [location]);
 
 	return null;
 };
 
-export const Providers = ({
-	children,
-	route = "/",
-}: {
-	children: ReactNode,
-	route?: string,
-}) => {
+export const Providers = ({ children, route = "/" }: { children: ReactNode; route?: string }) => {
 	const router = createMemoryRouter(
 		[
 			{
@@ -154,13 +146,11 @@ export const Providers = ({
 	return (
 		<WithProviders>
 			<RouterProvider router={router}>
-				<ProfileSynchronizer>
-					{children}
-				</ProfileSynchronizer>
+				<ProfileSynchronizer>{children}</ProfileSynchronizer>
 			</RouterProvider>
 		</WithProviders>
-	)
-}
+	);
+};
 
 const renderWithRouter = (
 	component: React.ReactElement,
@@ -205,20 +195,23 @@ const renderWithRouter = (
 		return withProviders ? <WithProviders>{content}</WithProviders> : content;
 	};
 
-	const result = render(<Wrapper>{component}</Wrapper>)
+	const view = render(<Wrapper>{component}</Wrapper>);
 
 	return {
-		...result,
+		...view,
 		navigate: (to: string) => router.navigate(to),
 		rerender: (children?: ReactNode) => {
 			if (withProviders) {
-				return result.rerender(<WithProviders><Wrapper>{children ?? component}</Wrapper></WithProviders>)
+				return view.rerender(
+					<WithProviders>
+						<Wrapper>{children ?? component}</Wrapper>
+					</WithProviders>,
+				);
 			}
 
-			return result.rerender(<Wrapper>{children ?? component}</Wrapper>)
-
+			return view.rerender(<Wrapper>{children ?? component}</Wrapper>);
 		},
-		router
+		router,
 	};
 };
 

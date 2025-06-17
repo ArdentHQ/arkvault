@@ -15,7 +15,6 @@ import { requestMock, server } from "@/tests/mocks/server";
 import { AddressService } from "@/app/lib/mainsail/address.service";
 import { Contracts } from "@/app/lib/profiles";
 import React from "react";
-import { Route } from "react-router-dom";
 import { SendValidatorResignation } from "./SendValidatorResignation";
 import { expect } from "vitest";
 import transactionFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/transfer.json";
@@ -36,16 +35,10 @@ vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
 }));
 
-const renderPage = () => {
-	const path = "/profiles/:profileId/wallets/:walletId/send-validator-resignation";
-
-	return render(
-		<SendValidatorResignation />,
-		{
-			route: resignationUrl,
-		},
-	);
-};
+const renderPage = () =>
+	render(<SendValidatorResignation />, {
+		route: resignationUrl,
+	});
 
 const signedTransactionMock = {
 	blockHash: () => {},
@@ -509,12 +502,9 @@ describe("SendValidatorResignation", () => {
 
 			const resignationEncryptedUrl = `/profiles/${profile.id()}/wallets/${wallet.id()}/send-validator-resignation`;
 
-			render(
-				<SendValidatorResignation />,
-				{
-					route: resignationEncryptedUrl,
-				},
-			);
+			render(<SendValidatorResignation />, {
+				route: resignationEncryptedUrl,
+			});
 
 			await expect(formStep()).resolves.toBeVisible();
 

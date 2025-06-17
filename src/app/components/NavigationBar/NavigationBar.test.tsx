@@ -2,7 +2,6 @@
 import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
 import React, { useEffect } from "react";
-import { Route } from "react-router-dom";
 
 import { NavigationBar } from "./NavigationBar";
 import * as navigation from "@/app/constants/navigation";
@@ -288,12 +287,9 @@ describe("NavigationBar", () => {
 	});
 
 	it("should handle receive funds", async () => {
-		render(
-			<NavigationBar />,
-			{
-				route: dashboardURL,
-			},
-		);
+		render(<NavigationBar />, {
+			route: dashboardURL,
+		});
 
 		await userEvent.click(screen.getByTestId("NavigationBar__buttons--receive"));
 
@@ -311,13 +307,9 @@ describe("NavigationBar", () => {
 	});
 
 	it("should handle receive funds from mobile menu", async () => {
-		renderResponsiveWithRoute(
-			<NavigationBar />,
-			"xs",
-			{
-				route: dashboardURL,
-			},
-		);
+		renderResponsiveWithRoute(<NavigationBar />, "xs", {
+			route: dashboardURL,
+		});
 
 		await userEvent.click(screen.getByTestId("NavigationBar__buttons__mobile--receive"));
 
@@ -349,13 +341,9 @@ describe("NavigationBar", () => {
 	});
 
 	it("should show the mobile menu on xs screen", async () => {
-		renderResponsiveWithRoute(
-			<NavigationBar />,
-			"xs",
-			{
-				route: dashboardURL,
-			},
-		);
+		renderResponsiveWithRoute(<NavigationBar />, "xs", {
+			route: dashboardURL,
+		});
 
 		expect(screen.getByTestId("NavigationBarMobile")).toBeInTheDocument();
 	});
@@ -375,13 +363,9 @@ describe("NavigationBar", () => {
 	});
 
 	it("should handle mobile menu home button", async () => {
-		const { router } = renderResponsiveWithRoute(
-			<NavigationBar />,
-			"xs",
-			{
-				route: "/profiles/:profileId/send-transfer",
-			},
-		);
+		const { router } = renderResponsiveWithRoute(<NavigationBar />, "xs", {
+			route: "/profiles/:profileId/send-transfer",
+		});
 
 		await userEvent.click(screen.getByTestId("NavigationBar__buttons__mobile--home"));
 
@@ -389,12 +373,9 @@ describe("NavigationBar", () => {
 	});
 
 	it("should close the search wallet modal", async () => {
-		render(
-			<NavigationBar />,
-			{
-				route: dashboardURL,
-			},
-		);
+		render(<NavigationBar />, {
+			route: dashboardURL,
+		});
 
 		const receiveFundsButton = screen.getByTestId("NavigationBar__buttons--receive");
 

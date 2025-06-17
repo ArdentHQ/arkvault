@@ -9,7 +9,6 @@ import {
 	render,
 	screen,
 	waitFor,
-	within,
 	mockProfileWithPublicAndTestNetworks,
 	getMainsailProfileId,
 } from "@/utils/testing-library";
@@ -74,12 +73,9 @@ describe("CreateAddressSidePanel", () => {
 	it("should create a wallet", async () => {
 		const createURL = `/profiles/${fixtureProfileId}/dashboard`;
 
-		render(
-			<CreateAddressesSidePanel open={true} onOpenChange={vi.fn()} />,
-			{
-				route: createURL,
-			},
-		);
+		render(<CreateAddressesSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: createURL,
+		});
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 		await waitFor(() => expect(profile.wallets().values()).toHaveLength(0));
@@ -135,26 +131,20 @@ describe("CreateAddressSidePanel", () => {
 		await userEvent.click(screen.getByTestId("CreateWallet__finish-button"));
 
 		expect(profile.wallets().count()).toBe(1);
-
 	});
 
 	it("should create a wallet with encryption", async () => {
 		const createURL = `/profiles/${fixtureProfileId}/dashboard`;
 
-		render(
-			<CreateAddressesSidePanel open={true} onOpenChange={vi.fn()} />,
-			{
-				route: createURL,
-			},
-		);
+		render(<CreateAddressesSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: createURL,
+		});
 
 		const user = userEvent.setup();
 
 		await waitFor(() => expect(profile.wallets().values()).toHaveLength(0));
 
 		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();
-
-		const steps = within(screen.getByTestId("Form")).getAllByRole("list")[0];
 
 		await userEvent.click(continueButton());
 
@@ -221,18 +211,14 @@ describe("CreateAddressSidePanel", () => {
 		const wallet = profile.wallets().first();
 
 		expect(wallet.alias()).toBe("Address #1");
-
 	});
 
 	it("should handle invalid encryption password", async () => {
 		const createURL = `/profiles/${fixtureProfileId}/dashboard`;
 
-		render(
-			<CreateAddressesSidePanel open={true} onOpenChange={vi.fn()} />,
-			{
-				route: createURL,
-			},
-		);
+		render(<CreateAddressesSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: createURL,
+		});
 
 		const user = userEvent.setup();
 
@@ -309,12 +295,9 @@ describe("CreateAddressSidePanel", () => {
 	it("should not have a pending wallet if leaving on step 1", async () => {
 		const createURL = `/profiles/${fixtureProfileId}/dashboard`;
 
-		render(
-			<CreateAddressesSidePanel open={true} onOpenChange={vi.fn()} />,
-			{
-				route: createURL,
-			},
-		);
+		render(<CreateAddressesSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: createURL,
+		});
 
 		await userEvent.click(screen.getByTestId("SidePanel__close-button"));
 
@@ -324,12 +307,9 @@ describe("CreateAddressSidePanel", () => {
 	it("should remove pending wallet if not submitted", async () => {
 		const createURL = `/profiles/${fixtureProfileId}/dashboard`;
 
-		render(
-			<CreateAddressesSidePanel open={true} onOpenChange={vi.fn()} />,
-			{
-				route: createURL,
-			},
-		);
+		render(<CreateAddressesSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: createURL,
+		});
 
 		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();
 
@@ -346,13 +326,9 @@ describe("CreateAddressSidePanel", () => {
 
 		const createURL = `/profiles/${fixtureProfileId}/dashboard`;
 
-
-		render(
-			<CreateAddressesSidePanel open={true} onOpenChange={vi.fn()} />,
-			{
-				route: createURL,
-			},
-		);
+		render(<CreateAddressesSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: createURL,
+		});
 
 		await expect(
 			screen.findByText(walletTranslations.PAGE_CREATE_WALLET.NETWORK_STEP.GENERATION_ERROR),
@@ -373,12 +349,9 @@ describe("CreateAddressSidePanel", () => {
 
 		const createURL = `/profiles/${fixtureProfileId}/dashboard`;
 
-		render(
-			<CreateAddressesSidePanel open={true} onOpenChange={vi.fn()} />,
-			{
-				route: createURL,
-			},
-		);
+		render(<CreateAddressesSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: createURL,
+		});
 		const user = userEvent.setup();
 
 		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();

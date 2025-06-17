@@ -4,9 +4,6 @@ import { useServerHealthStatus } from "@/app/hooks";
 import { render, screen, getMainsailProfileId } from "@/utils/testing-library";
 import { ServerStatus } from "@/utils/peers";
 import { ServerHealthStatus } from "@/domains/setting/pages/Servers/Servers.contracts";
-import { Route } from "react-router-dom";
-
-const dashboardURL = `/profiles/${getMainsailProfileId()}/dashboard`;
 
 describe("useServerHealthStatus", () => {
 	const Component = ({ serverStatus }: { serverStatus: ServerHealthStatus }) => {

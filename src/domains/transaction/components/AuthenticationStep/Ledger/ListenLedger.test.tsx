@@ -1,6 +1,5 @@
 import { Contracts } from "@/app/lib/profiles";
 import React from "react";
-import { Route } from "react-router-dom";
 import { ListenLedger } from "./ListenLedger";
 import { LedgerProvider } from "@/app/contexts/Ledger/Ledger";
 import {
@@ -19,7 +18,6 @@ describe("ListenLedger", () => {
 		profile = env.profiles().findById(getDefaultProfileId());
 		await env.profiles().restore(profile);
 		await profile.sync();
-
 	});
 
 	const Component = ({
@@ -27,20 +25,15 @@ describe("ListenLedger", () => {
 		onDeviceAvailable = vi.fn(),
 		transport = mockNanoSTransport(),
 	}) => (
-			<LedgerProvider transport={transport}>
-				<ListenLedger
-					onDeviceNotAvailable={onDeviceNotAvailable}
-					onDeviceAvailable={onDeviceAvailable}
-				/>
-			</LedgerProvider>
-		);
+		<LedgerProvider transport={transport}>
+			<ListenLedger onDeviceNotAvailable={onDeviceNotAvailable} onDeviceAvailable={onDeviceAvailable} />
+		</LedgerProvider>
+	);
 
 	it("should emit event on device available", async () => {
 		const onDeviceAvailable = vi.fn();
 
-		const { container } = render(
-			<Component onDeviceAvailable={onDeviceAvailable} />
-		);
+		const { container } = render(<Component onDeviceAvailable={onDeviceAvailable} />);
 
 		await waitFor(() => expect(onDeviceAvailable).toHaveBeenCalledWith());
 
@@ -54,7 +47,7 @@ describe("ListenLedger", () => {
 			<Component
 				onDeviceNotAvailable={onDeviceNotAvailable}
 				transport={mockLedgerTransportError("Access denied to use Ledger device")}
-			/>
+			/>,
 		);
 
 		await waitFor(() => expect(onDeviceNotAvailable).toHaveBeenCalledWith());

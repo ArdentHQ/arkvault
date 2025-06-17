@@ -45,15 +45,12 @@ describe("Dashboard", () => {
 	});
 
 	it("should render loading state when profile is syncing", async () => {
-		render(
-			<Dashboard />,
-			{
-				route: dashboardURL,
-			},
-		);
+		render(<Dashboard />, {
+			route: dashboardURL,
+		});
 
-		await userEvent.click(screen.getByTestId("tabs__tab-button-received"))
-		await userEvent.click(screen.getByTestId("tabs__tab-button-all"))
+		await userEvent.click(screen.getByTestId("tabs__tab-button-received"));
+		await userEvent.click(screen.getByTestId("tabs__tab-button-all"));
 
 		await waitFor(() =>
 			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(10),
@@ -62,17 +59,14 @@ describe("Dashboard", () => {
 
 	it("should display empty block when there are no transactions", async () => {
 		const mockTransactionsAggregate = vi.spyOn(profile.transactionAggregate(), "all").mockImplementation(() => ({
-				hasMorePages: () => false,
-				items: () => [],
-			}));
+			hasMorePages: () => false,
+			items: () => [],
+		}));
 
-		render(
-			<Dashboard />,
-			{
-				route: dashboardURL,
-				withProfileSynchronizer: true,
-			},
-		);
+		render(<Dashboard />, {
+			route: dashboardURL,
+			withProfileSynchronizer: true,
+		});
 
 		await waitFor(() =>
 			expect(within(screen.getByTestId("TransactionTable")).getAllByRole("rowgroup")[0]).toBeVisible(),
@@ -91,13 +85,10 @@ describe("Dashboard", () => {
 			.spyOn(profile.transactionAggregate(), "all")
 			.mockImplementation(() => Promise.resolve({ hasMorePages: () => false, items: () => transactions } as any));
 
-		render(
-			<Dashboard />,
-			{
-				route: dashboardURL,
-				withProfileSynchronizer: true,
-			},
-		);
+		render(<Dashboard />, {
+			route: dashboardURL,
+			withProfileSynchronizer: true,
+		});
 
 		await waitFor(() =>
 			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(10),

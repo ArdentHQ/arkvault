@@ -439,7 +439,6 @@ describe("LedgerTabs", () => {
 
 		expect(container).toMatchSnapshot();
 
-
 		try {
 			const backBtn = backSelector();
 			if (backBtn && !backBtn.disabled) {
@@ -675,7 +674,7 @@ describe("LedgerTabs", () => {
 		await waitFor(() => {
 			expect(
 				screen.getByTestId("LedgerConnectionStep") ||
-				router.state.location.pathname === `/profiles/${profile.id()}/dashboard`,
+					router.state.location.pathname === `/profiles/${profile.id()}/dashboard`,
 			).toBeInTheDocument();
 		});
 

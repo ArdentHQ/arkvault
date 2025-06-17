@@ -17,7 +17,6 @@ import { requestMock, server } from "@/tests/mocks/server";
 import { Contracts } from "@/app/lib/profiles";
 import React from "react";
 import { SendTransfer } from "./SendTransfer";
-import { createHashHistory } from "history";
 import transactionFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/transfer.json";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import transactionsFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions.json";
@@ -44,8 +43,6 @@ const reviewStepID = "SendTransfer__review-step";
 const formStepID = "SendTransfer__form-step";
 const authenticationStepID = "AuthenticationStep";
 const sendAllID = "AddRecipient__send-all";
-
-const history = createHashHistory();
 
 vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
@@ -109,12 +106,9 @@ describe("SendTransfer Fee Handling", () => {
 	it("should update available amount after sender address changed", async () => {
 		const transferURL = `/profiles/${getDefaultProfileId()}/send-transfer`;
 
-		render(
-			<SendTransfer />,
-			{
-				route: transferURL,
-			},
-		);
+		render(<SendTransfer />, {
+			route: transferURL,
+		});
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
@@ -148,12 +142,9 @@ describe("SendTransfer Fee Handling", () => {
 	it("should recalculate amount when fee changes and send all is selected", async () => {
 		const transferURL = `/profiles/${getDefaultProfileId()}/wallets/${wallet.id()}/send-transfer`;
 
-		render(
-			<SendTransfer />,
-			{
-				route: transferURL,
-			},
-		);
+		render(<SendTransfer />, {
+			route: transferURL,
+		});
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
@@ -198,12 +189,9 @@ describe("SendTransfer Fee Handling", () => {
 	it("should keep the selected fee when user steps back", async () => {
 		const transferURL = `/profiles/${getDefaultProfileId()}/wallets/${wallet.id()}/send-transfer`;
 
-		render(
-			<SendTransfer />,
-			{
-				route: transferURL,
-			},
-		);
+		render(<SendTransfer />, {
+			route: transferURL,
+		});
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
@@ -255,12 +243,9 @@ describe("SendTransfer Fee Handling", () => {
 	it("should handle fee change", async () => {
 		const transferURL = `/profiles/${getDefaultProfileId()}/wallets/${wallet.id()}/send-transfer`;
 
-		const { router } = render(
-			<SendTransfer />,
-			{
-				route: transferURL,
-			},
-		);
+		const { router } = render(<SendTransfer />, {
+			route: transferURL,
+		});
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
@@ -336,12 +321,9 @@ describe("SendTransfer Fee Handling", () => {
 				}),
 		});
 
-		const { router } = render(
-			<SendTransfer />,
-			{
-				route: transferURL,
-			},
-		);
+		const { router } = render(<SendTransfer />, {
+			route: transferURL,
+		});
 
 		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(arkWallet.address()));
 
@@ -384,12 +366,9 @@ describe("SendTransfer Fee Handling", () => {
 	it.skip("should return to form step by cancelling fee warning", async () => {
 		const transferURL = `/profiles/${getDefaultProfileId()}/wallets/${wallet.id()}/send-transfer`;
 
-		render(
-			<SendTransfer />,
-			{
-				route: transferURL,
-			},
-		);
+		render(<SendTransfer />, {
+			route: transferURL,
+		});
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
@@ -450,12 +429,9 @@ describe("SendTransfer Fee Handling", () => {
 		"should update the profile settings when dismissing the fee warning (%s)",
 		async (action) => {
 			const transferURL = `/profiles/${getDefaultProfileId()}/wallets/${wallet.id()}/send-transfer`;
-			render(
-				<SendTransfer />,
-				{
-					route: transferURL,
-				},
-			);
+			render(<SendTransfer />, {
+				route: transferURL,
+			});
 
 			await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
@@ -528,12 +504,9 @@ describe("SendTransfer Fee Handling", () => {
 	])("should send a single transfer with a %s fee by confirming the fee warning", async (_, fee) => {
 		const transferURL = `/profiles/${getDefaultProfileId()}/wallets/${wallet.id()}/send-transfer`;
 
-		const { container, router } = render(
-			<SendTransfer />,
-			{
-				route: transferURL,
-			},
-		);
+		const { container, router } = render(<SendTransfer />, {
+			route: transferURL,
+		});
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 

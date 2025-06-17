@@ -1,23 +1,12 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { Contracts, Environment } from "@/app/lib/profiles";
+import { Environment } from "@/app/lib/profiles";
 import React from "react";
-import userEvent from "@testing-library/user-event";
 import { App } from "./App";
 import { toasts } from "@/app/services";
 import { translations as errorTranslations } from "@/domains/error/i18n";
 import { translations as profileTranslations } from "@/domains/profile/i18n";
 import * as themeUtils from "@/utils/theme";
-import {
-	env,
-	getDefaultPassword,
-	getPasswordProtectedProfileId,
-	render,
-	renderWithoutRouter,
-	screen,
-	waitFor,
-} from "@/utils/testing-library";
-
-import { Main } from "@/app/App.blocks"
+import { env, render, renderWithoutRouter, screen, waitFor } from "@/utils/testing-library";
 
 vi.mock("@/domains/dashboard/routing", async () => {
 	const page = await vi.importActual("@/domains/dashboard/pages/Dashboard");
@@ -49,14 +38,8 @@ vi.mock("@/domains/profile/routing", async () => {
 	};
 });
 
-let passwordProtectedProfile: Contracts.IProfile;
-
-const passwordInput = () => screen.getByTestId("SignIn__input--password");
-
 describe("App", () => {
 	beforeAll(async () => {
-		passwordProtectedProfile = env.profiles().findById(getPasswordProtectedProfileId());
-
 		vi.spyOn(toasts, "dismiss").mockImplementation(vi.fn());
 
 		// Mock synchronizer to avoid running any jobs in these tests.

@@ -4,8 +4,7 @@ import userEvent from "@testing-library/user-event";
 import React from "react";
 import * as browserAccess from "browser-fs-access";
 
-import { renderHook } from "@testing-library/react";
-import { useTranslation, Trans } from "react-i18next";
+import { Trans } from "react-i18next";
 import ExportSettings from "@/domains/setting/pages/Export";
 import { env, getMainsailProfileId, render, screen, waitFor } from "@/utils/testing-library";
 import { toasts } from "@/app/services";
@@ -17,7 +16,6 @@ vi.mock("@/app/contexts/Navigation/NavigationBlocking", () => ({
 	NavigationBlockingProvider: ({ children }: { children: React.ReactNode }) => <>{children}</>,
 }));
 
-
 describe("Export Settings", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getMainsailProfileId());
@@ -26,12 +24,9 @@ describe("Export Settings", () => {
 	});
 
 	it("should render export settings", async () => {
-		const { container, asFragment } = render(
-			<ExportSettings />,
-			{
-				route: `/profiles/${profile.id()}/settings/export`,
-			},
-		);
+		const { container, asFragment } = render(<ExportSettings />, {
+			route: `/profiles/${profile.id()}/settings/export`,
+		});
 
 		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
@@ -43,12 +38,9 @@ describe("Export Settings", () => {
 			// @ts-ignore
 			.mockResolvedValue({ name: "test.wwe" });
 
-		const { container } = render(
-			<ExportSettings />,
-			{
-				route: `/profiles/${profile.id()}/settings/export`,
-			},
-		);
+		const { container } = render(<ExportSettings />, {
+			route: `/profiles/${profile.id()}/settings/export`,
+		});
 
 		expect(container).toBeInTheDocument();
 
@@ -75,12 +67,9 @@ describe("Export Settings", () => {
 			// @ts-ignore
 			.mockResolvedValue({ name: "test.wwe" });
 
-		const { container } = render(
-			<ExportSettings />,
-			{
-				route: `/profiles/${profile.id()}/settings/export`,
-			},
-		);
+		const { container } = render(<ExportSettings />, {
+			route: `/profiles/${profile.id()}/settings/export`,
+		});
 
 		expect(container).toBeInTheDocument();
 

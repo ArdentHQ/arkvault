@@ -46,8 +46,8 @@ describe("Import Profile - Profile Form Step", () => {
 				/>
 			</EnvironmentProvider>,
 			{
-				route: "/profiles/import"
-			}
+				route: "/profiles/import",
+			},
 		);
 
 		await waitFor(() => expect(submitButton()).toBeDisabled());
@@ -69,8 +69,8 @@ describe("Import Profile - Profile Form Step", () => {
 				/>
 			</EnvironmentProvider>,
 			{
-				route: "/profiles/import"
-			}
+				route: "/profiles/import",
+			},
 		);
 
 		await waitFor(() => expect(submitButton()).toBeDisabled());
@@ -92,8 +92,8 @@ describe("Import Profile - Profile Form Step", () => {
 				/>
 			</EnvironmentProvider>,
 			{
-				route: "/profiles/import"
-			}
+				route: "/profiles/import",
+			},
 		);
 
 		await waitFor(() => expect(submitButton()).toBeDisabled());
@@ -152,8 +152,8 @@ describe("Import Profile - Profile Form Step", () => {
 				/>
 			</EnvironmentProvider>,
 			{
-				route: "/profiles/import"
-			}
+				route: "/profiles/import",
+			},
 		);
 
 		const user = userEvent.setup();

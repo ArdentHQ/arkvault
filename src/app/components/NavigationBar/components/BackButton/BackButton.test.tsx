@@ -5,7 +5,6 @@ import React from "react";
 import { BackButton } from "./BackButton";
 import { render, screen } from "@/utils/testing-library";
 
-
 const leftIcon = "svg#chevron-left-small";
 
 describe("BackButton", () => {

@@ -183,15 +183,12 @@ describe("SendVote Combined", () => {
 
 		appendParameters(parameters, "vote", votes);
 
-		const { router } = render(
-			<SendVote />,
-			{
-				route: {
-					pathname: voteURL,
-					search: `?${parameters}`,
-				},
+		const { router } = render(<SendVote />, {
+			route: {
+				pathname: voteURL,
+				search: `?${parameters}`,
 			},
-		);
+		});
 
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
@@ -252,7 +249,6 @@ describe("SendVote Combined", () => {
 		});
 
 		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
-
 
 		// Go back to wallet
 		await userEvent.click(screen.getByTestId("StepNavigation__back-to-wallet-button"));

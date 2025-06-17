@@ -16,14 +16,11 @@ import {
 } from "@/utils/testing-library";
 import { useConfiguration } from "@/app/contexts";
 import { expect } from "vitest";
-import { ProfileSetting } from "@/app/lib/profiles/profile.enum.contract";
 
 let emptyProfile: Contracts.IProfile;
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
 let resetProfileNetworksMock: () => void;
-
-const routePath = "/profiles/:profileId/votes";
 
 const walletID = "ee02b13f-8dbf-4191-a9dc-08d2ab72ec28";
 
@@ -37,7 +34,14 @@ const Wrapper = ({ children }) => {
 	return children;
 };
 
-const renderPage = (route: string) => render(<Wrapper> <Votes /> </Wrapper>, { route });
+const renderPage = (route: string) =>
+	render(
+		<Wrapper>
+			{" "}
+			<Votes />{" "}
+		</Wrapper>,
+		{ route },
+	);
 
 const firstVoteButtonID = "ValidatorRow__toggle-0";
 
@@ -71,7 +75,7 @@ describe("Votes", () => {
 
 		await waitFor(() => {
 			expect(screen.getByTestId("ValidatorsTable")).toBeInTheDocument();
-		})
+		});
 
 		await expect(screen.findByTestId(firstVoteButtonID)).resolves.toBeVisible();
 
@@ -138,7 +142,7 @@ describe("Votes", () => {
 
 	it("should open the create wallet side panel", async () => {
 		const route = `/profiles/${emptyProfile.id()}/votes`;
-		const { asFragment } = renderPage(route, routePath);
+		const { asFragment } = renderPage(route);
 
 		expect(screen.getByTestId("EmptyBlock")).toBeInTheDocument();
 
@@ -151,7 +155,7 @@ describe("Votes", () => {
 
 	it("should open the import wallet side panel", async () => {
 		const route = `/profiles/${emptyProfile.id()}/votes`;
-		const { asFragment } = renderPage(route, routePath);
+		const { asFragment } = renderPage(route);
 
 		expect(screen.getByTestId("EmptyBlock")).toBeInTheDocument();
 
@@ -180,7 +184,7 @@ describe("Votes", () => {
 		]);
 
 		const route = `/profiles/${profile.id()}/votes`;
-		const { asFragment } = renderPage(route, routePath);
+		const { asFragment } = renderPage(route);
 
 		expect(screen.getByTestId("AddressTable")).toBeInTheDocument();
 
@@ -209,7 +213,7 @@ describe("Votes", () => {
 
 	it("should select an address without vote", async () => {
 		const route = `/profiles/${profile.id()}/votes`;
-		renderPage(route, routePath);
+		renderPage(route);
 
 		expect(screen.getByTestId("AddressTable")).toBeInTheDocument();
 
@@ -311,11 +315,11 @@ describe("Votes", () => {
 		const onProfileSyncError = vi.fn();
 
 		const Component = () => {
-			const { setConfiguration } = useConfiguration()
+			const { setConfiguration } = useConfiguration();
 
 			useEffect(() => {
 				setConfiguration(profile.id(), { profileHasSyncedOnce: true, profileIsSyncing: false });
-			}, [profile])
+			}, [profile]);
 
 			useProfileStatusWatcher({ onProfileSyncError, profile });
 			return <Votes />;
@@ -324,7 +328,7 @@ describe("Votes", () => {
 		const { asFragment } = render(<Component />, {
 			route,
 			withProfileSynchronizer: true,
-			withProviders: true
+			withProviders: true,
 		});
 
 		await expect(screen.findByTestId("ValidatorsTable")).resolves.toBeVisible();
@@ -372,7 +376,7 @@ describe("Votes", () => {
 
 	it("should emit action on continue button to unvote/vote", async () => {
 		const route = `/profiles/${profile.id()}/votes`;
-		const { asFragment } = renderPage(route, routePath);
+		const { asFragment } = renderPage(route);
 
 		expect(screen.getByTestId("AddressTable")).toBeInTheDocument();
 
@@ -409,7 +413,7 @@ describe("Votes", () => {
 
 	it("should filter wallets by address", async () => {
 		const route = `/profiles/${profile.id()}/votes`;
-		renderPage(route, routePath);
+		renderPage(route);
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(2));
 
@@ -426,7 +430,7 @@ describe("Votes", () => {
 
 	it("should filter wallets by alias", async () => {
 		const route = `/profiles/${profile.id()}/votes`;
-		renderPage(route, routePath);
+		renderPage(route);
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(2));
 

@@ -70,12 +70,9 @@ describe("ImportAddress Validations", () => {
 			throw new Error("error");
 		});
 
-		render(
-			<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />,
-			{
-				route: route,
-			},
-		);
+		render(<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: route,
+		});
 
 		expect(methodStep()).toBeInTheDocument();
 
@@ -101,12 +98,9 @@ describe("ImportAddress Validations", () => {
 			throw new Error("error");
 		});
 
-		render(
-			<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />,
-			{
-				route: route,
-			},
-		);
+		render(<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: route,
+		});
 
 		expect(methodStep()).toBeInTheDocument();
 
@@ -204,12 +198,9 @@ describe("ImportAddress Validations", () => {
 
 		profile.wallets().push(generated.wallet);
 
-		render(
-			<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />,
-			{
-				route: route,
-			},
-		);
+		render(<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: route,
+		});
 
 		expect(methodStep()).toBeInTheDocument();
 
@@ -238,12 +229,9 @@ describe("ImportAddress Validations", () => {
 	});
 
 	it("should show an error message for duplicate address when importing by address", async () => {
-		render(
-			<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />,
-			{
-				route: route,
-			},
-		);
+		render(<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: route,
+		});
 
 		expect(methodStep()).toBeInTheDocument();
 
@@ -272,12 +260,9 @@ describe("ImportAddress Validations", () => {
 	});
 
 	it("should show an error message for invalid address", async () => {
-		render(
-			<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />,
-			{
-				route: route,
-			},
-		);
+		render(<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: route,
+		});
 
 		expect(methodStep()).toBeInTheDocument();
 
@@ -320,12 +305,9 @@ describe("ImportAddress Validations", () => {
 
 		profile.wallets().push(wallet);
 
-		render(
-			<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />,
-			{
-				route: route,
-			},
-		);
+		render(<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: route,
+		});
 
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
 

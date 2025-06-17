@@ -1,6 +1,5 @@
 import { vi } from "vitest";
 import React from "react";
-import { Route } from "react-router-dom";
 import { useForm, FormProvider } from "react-hook-form";
 import { env, getDefaultProfileId, render, screen, waitFor, mockConnectedTransport } from "@/utils/testing-library";
 import { server, requestMock, requestMockOnce } from "@/tests/mocks/server";
@@ -56,7 +55,8 @@ describe("LedgerTabs - cancel flow", () => {
 					onStepChange={vi.fn()}
 					onSubmit={vi.fn()}
 					onClickEditWalletName={vi.fn()}
-				/>,
+				/>
+				,
 			</FormProvider>
 		);
 	};

@@ -13,9 +13,6 @@ import {
 	within,
 } from "@/utils/testing-library";
 
-const fixtureProfileId = getDefaultProfileId();
-let dashboardURL: string;
-
 const toggleTestId = "dropdown__toggle-TransactionExportForm--daterange-options";
 const dropdownContentTestId = "dropdown__content-TransactionExportForm--daterange-options";
 
@@ -25,7 +22,6 @@ describe("TransactionExportForm", () => {
 	let profile: Contracts.IProfile;
 
 	beforeEach(async () => {
-		dashboardURL = `/profiles/${fixtureProfileId}/dashboard`;
 		profile = env.profiles().findById(getDefaultProfileId());
 
 		await syncValidators(profile);

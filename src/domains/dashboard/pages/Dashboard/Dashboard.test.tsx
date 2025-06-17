@@ -16,7 +16,6 @@ import { BigNumber } from "@/app/lib/helpers";
 import { Contracts } from "@/app/lib/profiles";
 import { Dashboard } from "./Dashboard";
 import React from "react";
-import { Route } from "react-router-dom";
 import { translations as profileTranslations } from "@/domains/profile/i18n";
 import userEvent from "@testing-library/user-event";
 
@@ -78,13 +77,10 @@ describe("Dashboard", () => {
 			setSelectedAddresses: () => {},
 		});
 
-		const { asFragment } = render(
-			<Dashboard />,
-			{
-				route: dashboardURL,
-				withProfileSynchronizer: true,
-			},
-		);
+		const { asFragment } = render(<Dashboard />, {
+			route: dashboardURL,
+			withProfileSynchronizer: true,
+		});
 
 		await waitFor(() =>
 			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(8),
@@ -121,13 +117,10 @@ describe("Dashboard", () => {
 			setSelectedAddresses: () => {},
 		});
 
-		render(
-			<Dashboard />,
-			{
-				route: dashboardURL,
-				withProfileSynchronizer: true,
-			},
-		);
+		render(<Dashboard />, {
+			route: dashboardURL,
+			withProfileSynchronizer: true,
+		});
 
 		await waitFor(() => {
 			expect(screen.getByTestId("WalletMyVotes__button")).toBeVisible();
@@ -160,13 +153,10 @@ describe("Dashboard", () => {
 			setSelectedAddresses: () => {},
 		});
 
-		render(
-			<Dashboard />,
-			{
-				route: dashboardURL,
-				withProfileSynchronizer: true,
-			},
-		);
+		render(<Dashboard />, {
+			route: dashboardURL,
+			withProfileSynchronizer: true,
+		});
 
 		await waitFor(() => {
 			expect(screen.getByTestId("WalletMyVotes__button")).toBeVisible();
@@ -180,13 +170,10 @@ describe("Dashboard", () => {
 	it.skip("should show introductory tutorial", async () => {
 		const mockHasCompletedTutorial = vi.spyOn(profile, "hasCompletedIntroductoryTutorial").mockReturnValue(false);
 
-		render(
-			<Dashboard />,
-			{
-				route: dashboardURL,
-				withProfileSynchronizer: true,
-			},
-		);
+		render(<Dashboard />, {
+			route: dashboardURL,
+			withProfileSynchronizer: true,
+		});
 
 		await expect(screen.findByText(profileTranslations.MODAL_WELCOME.STEP_1.TITLE)).resolves.toBeVisible();
 
@@ -208,13 +195,10 @@ describe("Dashboard", () => {
 			setSelectedAddresses: () => {},
 		});
 
-		const { router } = render(
-			<Dashboard />,
-			{
-				route: dashboardURL,
-				withProfileSynchronizer: true,
-			},
-		);
+		const { router } = render(<Dashboard />, {
+			route: dashboardURL,
+			withProfileSynchronizer: true,
+		});
 
 		await waitFor(() => {
 			expect(screen.getByTestId("WalletMyVotes__button")).toBeInTheDocument();
@@ -243,13 +227,10 @@ describe("Dashboard", () => {
 			setSelectedAddresses: () => {},
 		});
 
-		const { router } = render(
-			<Dashboard />,
-			{
-				route: dashboardURL,
-				withProfileSynchronizer: true,
-			},
-		);
+		const { router } = render(<Dashboard />, {
+			route: dashboardURL,
+			withProfileSynchronizer: true,
+		});
 
 		await waitFor(() => {
 			expect(screen.getByTestId("WalletVote__button")).toBeInTheDocument();

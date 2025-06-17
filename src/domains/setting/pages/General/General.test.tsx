@@ -57,17 +57,14 @@ describe("General Settings", () => {
 	});
 
 	it("should render with prompt paths", async () => {
-		const { navigate } = render(
-			<GeneralSettings />,
-			{
-				route: `/profiles/${profile.id()}/settings`,
-			},
-		);
+		const { navigate } = render(<GeneralSettings />, {
+			route: `/profiles/${profile.id()}/settings`,
+		});
 
 		// Idle
 		act(() => {
 			navigate(`/profiles/${profile.id()}/dashboard`);
-		})
+		});
 
 		await userEvent.type(nameInput(), "My Profile");
 
@@ -76,22 +73,19 @@ describe("General Settings", () => {
 		// Dirty
 		act(() => {
 			navigate(`/profiles/${profile.id()}/dashboard`);
-		})
+		});
 
 		act(() => {
 			// Reload
 			navigate(`/profiles/${profile.id()}/settings`);
-		})
+		});
 		await waitFor(() => expect(submitButton()).toBeEnabled());
 	});
 
 	it("should render", async () => {
-		const { container, asFragment } = render(
-			<GeneralSettings />,
-			{
-				route: `/profiles/${profile.id()}/settings`,
-			},
-		);
+		const { container, asFragment } = render(<GeneralSettings />, {
+			route: `/profiles/${profile.id()}/settings`,
+		});
 
 		await waitFor(() => expect(nameInput()).toHaveValue(profile.name()));
 
@@ -102,12 +96,9 @@ describe("General Settings", () => {
 	it("should disable submit button when profile is not restored yet", async () => {
 		const isProfileRestoredMock = vi.spyOn(profile.status(), "isRestored").mockReturnValue(false);
 
-		const { asFragment } = render(
-			<GeneralSettings />,
-			{
-				route: `/profiles/${profile.id()}/settings`,
-			},
-		);
+		const { asFragment } = render(<GeneralSettings />, {
+			route: `/profiles/${profile.id()}/settings`,
+		});
 
 		await waitFor(() => expect(nameInput()).toHaveValue(profile.name()));
 
@@ -118,12 +109,9 @@ describe("General Settings", () => {
 	});
 
 	it("should update the avatar when removing focus from name input", async () => {
-		const { asFragment } = render(
-			<GeneralSettings />,
-			{
-				route: `/profiles/${profile.id()}/settings`,
-			},
-		);
+		const { asFragment } = render(<GeneralSettings />, {
+			route: `/profiles/${profile.id()}/settings`,
+		});
 
 		await waitFor(() => expect(nameInput()).toHaveValue(profile.name()));
 
@@ -159,12 +147,9 @@ describe("General Settings", () => {
 	});
 
 	it("should not update the uploaded avatar when removing focus from name input", async () => {
-		const { asFragment } = render(
-			<GeneralSettings />,
-			{
-				route: `/profiles/${profile.id()}/settings`,
-			},
-		);
+		const { asFragment } = render(<GeneralSettings />, {
+			route: `/profiles/${profile.id()}/settings`,
+		});
 
 		await waitFor(() => expect(nameInput()).toHaveValue(profile.name()));
 
@@ -206,12 +191,9 @@ describe("General Settings", () => {
 
 		const profilesCount = env.profiles().count();
 
-		const { asFragment } = render(
-			<GeneralSettings />,
-			{
-				route: `/profiles/${profile.id()}/settings`,
-			},
-		);
+		const { asFragment } = render(<GeneralSettings />, {
+			route: `/profiles/${profile.id()}/settings`,
+		});
 
 		await waitFor(() => expect(nameInput()).toHaveValue(profile.name()));
 
@@ -273,12 +255,9 @@ describe("General Settings", () => {
 	});
 
 	it("should not update profile if name consists only of whitespace", async () => {
-		render(
-			<GeneralSettings />,
-			{
-				route: `/profiles/${profile.id()}/settings`,
-			},
-		);
+		render(<GeneralSettings />, {
+			route: `/profiles/${profile.id()}/settings`,
+		});
 
 		await waitFor(() => expect(nameInput()).toHaveValue(profile.name()));
 
@@ -294,12 +273,9 @@ describe("General Settings", () => {
 	});
 
 	it("should not update profile if profile name exists", async () => {
-		render(
-			<GeneralSettings />,
-			{
-				route: `/profiles/${profile.id()}/settings`,
-			},
-		);
+		render(<GeneralSettings />, {
+			route: `/profiles/${profile.id()}/settings`,
+		});
 
 		await waitFor(() => expect(nameInput()).toHaveValue(profile.name()));
 
@@ -326,12 +302,9 @@ describe("General Settings", () => {
 	});
 
 	it("should not update profile if profile name exists (uppercase)", async () => {
-		render(
-			<GeneralSettings />,
-			{
-				route: `/profiles/${profile.id()}/settings`,
-			},
-		);
+		render(<GeneralSettings />, {
+			route: `/profiles/${profile.id()}/settings`,
+		});
 
 		await waitFor(() => expect(nameInput()).toHaveValue(profile.name()));
 		const otherProfile = env
@@ -353,12 +326,9 @@ describe("General Settings", () => {
 	});
 
 	it("should not update profile if profile name is too long", async () => {
-		render(
-			<GeneralSettings />,
-			{
-				route: `/profiles/${profile.id()}/settings`,
-			},
-		);
+		render(<GeneralSettings />, {
+			route: `/profiles/${profile.id()}/settings`,
+		});
 
 		await waitFor(() => expect(nameInput()).toHaveValue(profile.name()));
 
@@ -375,12 +345,9 @@ describe("General Settings", () => {
 	});
 
 	it("should not update profile if profile name exists (padded)", async () => {
-		render(
-			<GeneralSettings />,
-			{
-				route: `/profiles/${profile.id()}/settings`,
-			},
-		);
+		render(<GeneralSettings />, {
+			route: `/profiles/${profile.id()}/settings`,
+		});
 
 		await waitFor(() => expect(nameInput()).toHaveValue(profile.name()));
 		const otherProfile = env
@@ -406,12 +373,9 @@ describe("General Settings", () => {
 		["cancel", "ResetProfile__cancel-button"],
 		["reset", resetSubmitID],
 	])("should open & close reset profile modal (%s)", async (_, buttonId) => {
-		const { container } = render(
-			<GeneralSettings />,
-			{
-				route: `/profiles/${profile.id()}/settings`,
-			},
-		);
+		const { container } = render(<GeneralSettings />, {
+			route: `/profiles/${profile.id()}/settings`,
+		});
 
 		await waitFor(() => expect(nameInput()).toHaveValue(profile.name()));
 
@@ -440,12 +404,9 @@ describe("General Settings", () => {
 	it("should reset fields on reset", async () => {
 		const toastSpy = vi.spyOn(toasts, "success");
 
-		render(
-			<GeneralSettings />,
-			{
-				route: `/profiles/${profile.id()}/settings`,
-			},
-		);
+		render(<GeneralSettings />, {
+			route: `/profiles/${profile.id()}/settings`,
+		});
 
 		await waitFor(() => expect(nameInput()).toHaveValue(profile.name()));
 
@@ -509,12 +470,9 @@ describe("General Settings", () => {
 		// expect(document.body.classList.contains("dark")).toBe(true);
 		expect(document.querySelector("html").classList.contains("dark")).toBe(true);
 
-		render(
-			<GeneralSettings />,
-			{
-				route: `/profiles/${profile.id()}/settings`,
-			},
-		);
+		render(<GeneralSettings />, {
+			route: `/profiles/${profile.id()}/settings`,
+		});
 
 		const buttonRegex = new RegExp(commonTranslations.RESET);
 
@@ -551,12 +509,9 @@ describe("General Settings", () => {
 	it("should default to USD if market provider does not support the selected currency", async () => {
 		const toastSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
 
-		render(
-			<GeneralSettings />,
-			{
-				route: `/profiles/${profile.id()}/settings`,
-			},
-		);
+		render(<GeneralSettings />, {
+			route: `/profiles/${profile.id()}/settings`,
+		});
 
 		await waitFor(() => expect(nameInput()).toHaveValue(profile.name()));
 
@@ -621,12 +576,9 @@ describe("General Settings", () => {
 
 		profile.flushSettings();
 
-		const { router, navigate } = render(
-			<GeneralSettings />,
-			{
-				route: settingsURL,
-			},
-		);
+		const { router, navigate } = render(<GeneralSettings />, {
+			route: settingsURL,
+		});
 
 		await waitFor(() => expect(nameInput()).toHaveValue(profile.name()));
 
@@ -646,7 +598,7 @@ describe("General Settings", () => {
 		// change navigation
 		act(() => {
 			navigate(`/profiles/${profile.id()}/dashboard`);
-		})
+		});
 
 		await waitFor(() => expect(router.state.location.pathname).toBe(settingsURL));
 	});

@@ -175,7 +175,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 					transactions: items,
 				}));
 			} catch (error) {
-				console.log({ error })
+				console.log({ error });
 			}
 		};
 
@@ -194,7 +194,6 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 			timestamp,
 			selectedTransactionTypes: newTransactionTypes,
 		}: TransactionFilters) => {
-
 			const hasWallets = wallets.length > 0;
 			cursor.current = 1;
 

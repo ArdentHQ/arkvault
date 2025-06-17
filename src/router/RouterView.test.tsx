@@ -1,28 +1,29 @@
 import React, { useEffect } from "react";
 import { MemoryRouter, Routes, Route, useNavigate } from "react-router-dom";
-import { renderWithoutRouter as render, screen, act } from "@/utils/testing-library";
+import { renderWithoutRouter as render, screen } from "@/utils/testing-library";
 import { RouterView } from "./RouterView";
 import { Middleware } from "./router.types";
+
+const NavigateAfterMount = ({ to }) => {
+	const navigate = useNavigate();
+
+	useEffect(() => {
+		navigate(to);
+	}, [navigate, to]);
+
+	return null;
+};
 
 describe("RouterView", () => {
 	const Home = () => <div data-testid="home">Home</div>;
 	const First = () => <div data-testid="first">First</div>;
 	const Second = () => <div data-testid="second">Second</div>;
 
-	// Helper component to trigger navigation on mount
-	const NavigateAfterMount = ({ to }) => {
-		const navigate = useNavigate();
-		useEffect(() => {
-			navigate(to);
-		}, [navigate, to]);
-		return null;
-	};
-
 	it("should render", () => {
 		render(
 			<MemoryRouter initialEntries={["/"]}>
 				<RouterView routes={[{ component: Home, path: "/" }]} />
-			</MemoryRouter>
+			</MemoryRouter>,
 		);
 		expect(screen.getByTestId("home")).toBeInTheDocument();
 	});
@@ -49,11 +50,8 @@ describe("RouterView", () => {
 				<Routes>
 					<Route path="/first" element={<NavigateAfterMount to="/second" />} />
 				</Routes>
-			</MemoryRouter>
+			</MemoryRouter>,
 		);
-
-		// Wait for navigation effect
-		act(() => {});
 
 		expect(scrollSpy).toHaveBeenCalledWith(0, 0);
 		scrollSpy.mockRestore();
@@ -64,13 +62,10 @@ describe("RouterView", () => {
 
 		render(
 			<MemoryRouter initialEntries={["/only"]}>
-				<RouterView
-					routes={[{ component: Home, path: "/only" }]}
-					middlewares={[]}
-				/>
-			</MemoryRouter>
+				<RouterView routes={[{ component: Home, path: "/only" }]} middlewares={[]} />
+			</MemoryRouter>,
 		);
-		// clear the initial scroll caused by mount
+
 		scrollSpy.mockClear();
 
 		expect(scrollSpy).not.toHaveBeenCalled();
@@ -97,10 +92,9 @@ describe("RouterView", () => {
 					]}
 					middlewares={[blocker]}
 				/>
-			</MemoryRouter>
+			</MemoryRouter>,
 		);
 
-		// Should be redirected to Home
 		expect(screen.getByTestId("home")).toBeInTheDocument();
 		expect(screen.queryByTestId("first")).toBeNull();
 	});
@@ -127,7 +121,7 @@ describe("RouterView", () => {
 					]}
 					middlewares={[customRedirect]}
 				/>
-			</MemoryRouter>
+			</MemoryRouter>,
 		);
 
 		expect(screen.getByTestId("custom")).toBeInTheDocument();
@@ -144,14 +138,10 @@ describe("RouterView", () => {
 
 		render(
 			<MemoryRouter initialEntries={["/allowed"]}>
-				<RouterView
-					routes={[{ component: Home, path: "/allowed" }]}
-					middlewares={[alwaysRedirect]}
-				/>
-			</MemoryRouter>
+				<RouterView routes={[{ component: Home, path: "/allowed" }]} middlewares={[alwaysRedirect]} />
+			</MemoryRouter>,
 		);
 
-		// Component should render despite redirect being set
 		expect(screen.getByTestId("home")).toBeInTheDocument();
 	});
 
@@ -159,9 +149,9 @@ describe("RouterView", () => {
 		render(
 			<MemoryRouter initialEntries={["/"]}>
 				<RouterView routes={[{ component: Home, path: "/" }]} />
-			</MemoryRouter>
+			</MemoryRouter>,
 		);
-		// The rendered element should be wrapped
+
 		expect(screen.getByTestId("RouterView__wrapper")).toBeInTheDocument();
 		expect(screen.getByTestId("home")).toBeInTheDocument();
 	});

@@ -46,12 +46,9 @@ describe("Dashboard", () => {
 
 	it("should show create address side panel", async () => {
 		const onCreateAddress = vi.fn();
-		render(
-			<Dashboard onCreateAddress={onCreateAddress} />,
-			{
-				route: dashboardURL,
-			},
-		);
+		render(<Dashboard onCreateAddress={onCreateAddress} />, {
+			route: dashboardURL,
+		});
 
 		await userEvent.click(screen.getByText("Create"));
 
@@ -60,12 +57,9 @@ describe("Dashboard", () => {
 
 	it("should show import wallet panel", async () => {
 		const onImportAddress = vi.fn();
-		render(
-			<Dashboard onImportAddress={onImportAddress} />,
-			{
-				route: dashboardURL,
-			},
-		);
+		render(<Dashboard onImportAddress={onImportAddress} />, {
+			route: dashboardURL,
+		});
 
 		await userEvent.click(screen.getByText("Import"));
 

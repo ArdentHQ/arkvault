@@ -41,18 +41,19 @@ describe("App Router", () => {
 	});
 });
 
-const renderComponent = (path = "/", options = {}) => render(
-	<ErrorBoundary FallbackComponent={ApplicationError}>
-		<ExchangeProvider>
-			<Main />
-		</ExchangeProvider>
-	</ErrorBoundary>,
-	{
-		route: path ?? "/",
-		withProviders: true,
-		...options,
-	},
-);
+const renderComponent = (path = "/", options = {}) =>
+	render(
+		<ErrorBoundary FallbackComponent={ApplicationError}>
+			<ExchangeProvider>
+				<Main />
+			</ExchangeProvider>
+		</ErrorBoundary>,
+		{
+			route: path ?? "/",
+			withProviders: true,
+			...options,
+		},
+	);
 
 describe("App Main", () => {
 	beforeEach(() => {
@@ -65,7 +66,7 @@ describe("App Main", () => {
 	});
 
 	it("should render", async () => {
-		renderComponent()
+		renderComponent();
 
 		expect(screen.getByTestId("PageSkeleton")).toBeVisible();
 		await waitFor(() => expect(screen.queryByTestId("PageSkeleton")).not.toBeInTheDocument());

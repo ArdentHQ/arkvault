@@ -1,10 +1,8 @@
 /* eslint-disable @typescript-eslint/require-await */
 import userEvent from "@testing-library/user-event";
 import React from "react";
-import { Route } from "react-router-dom";
 import { useAutoSignOut } from "@/app/hooks/use-auto-signout";
 import { act, env, getMainsailProfileId, render, screen, waitFor } from "@/utils/testing-library";
-
 
 describe("useAutoSignOut", () => {
 	beforeEach(async () => {
@@ -32,12 +30,9 @@ describe("useAutoSignOut", () => {
 			return <div data-testid="StartIdleTimer" onClick={() => startIdleTimer()} />;
 		};
 
-		const { router } = render(
-			<Component />,
-			{
-				route: dashboardURL,
-			},
-		);
+		const { router } = render(<Component />, {
+			route: dashboardURL,
+		});
 
 		expect(router.state.location.pathname).toBe(`/profiles/${profile.id()}/dashboard`);
 
@@ -65,12 +60,9 @@ describe("useAutoSignOut", () => {
 			return <div data-testid="StartIdleTimer" onClick={() => startIdleTimer()} />;
 		};
 
-		const { router } = render(
-			<Component />,
-			{
-				route: "/",
-			},
-		);
+		const { router } = render(<Component />, {
+			route: "/",
+		});
 
 		expect(router.state.location.pathname).toBe("/");
 

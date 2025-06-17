@@ -1,7 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { createHashHistory } from "history";
 import React from "react";
-import { Route } from "react-router-dom";
 
 import { SuccessStep } from "./SuccessStep";
 import { env, getMainsailProfileId, renderResponsiveWithRoute, screen } from "@/utils/testing-library";

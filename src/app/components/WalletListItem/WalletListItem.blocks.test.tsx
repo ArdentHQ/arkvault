@@ -1,6 +1,5 @@
 import { Contracts } from "@/app/lib/profiles";
 import React from "react";
-import { Route } from "react-router-dom";
 import { env, getDefaultMainsailWalletId, getMainsailProfileId, render } from "@/utils/testing-library";
 import { Balance } from "@/app/components/WalletListItem/WalletListItem.blocks";
 
@@ -27,12 +26,7 @@ describe("WalletListItem.blocks", () => {
 				<tbody>
 					<tr>
 						<td>
-							<Balance
-								wallet={wallet}
-								onToggleStar={vi.fn()}
-								isCompact={true}
-								isLargeScreen={false}
-							/>
+							<Balance wallet={wallet} onToggleStar={vi.fn()} isCompact={true} isLargeScreen={false} />
 						</td>
 					</tr>
 				</tbody>

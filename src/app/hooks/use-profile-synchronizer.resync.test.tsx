@@ -37,12 +37,9 @@ describe("useProfileSyncStatus", () => {
 			return <div data-testid="ProfileSynced">test</div>;
 		};
 
-		render(
-			<Component />,
-			{
-				route: dashboardURL,
-			}
-		);
+		render(<Component />, {
+			route: dashboardURL,
+		});
 
 		await expect(screen.findByTestId("ProfileSynced")).resolves.toBeVisible();
 
@@ -97,12 +94,9 @@ describe("useProfileSyncStatus", () => {
 			return <div data-testid="ProfileSyncedWithError">test</div>;
 		};
 
-		render(
-			<Component />,
-			{
-				route: dashboardURL,
-			}
-		);
+		render(<Component />, {
+			route: dashboardURL,
+		});
 
 		await expect(screen.findByTestId("ProfileSyncedWithError")).resolves.toBeVisible();
 
@@ -140,9 +134,7 @@ describe("useProfileSyncStatus", () => {
 
 		const profileStatusMock = vi.spyOn(profile.status(), "isRestored").mockReturnValue(false);
 
-		render(
-			<div data-testid="ProfileRestored">test</div>,
-		);
+		render(<div data-testid="ProfileRestored">test</div>);
 
 		await expect(screen.findByTestId("ProfileRestored", undefined, { timeout: 4000 })).resolves.toBeVisible();
 

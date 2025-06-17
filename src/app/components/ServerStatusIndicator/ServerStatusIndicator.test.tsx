@@ -38,12 +38,9 @@ describe("Server Status Indicator", () => {
 	});
 
 	it("should render as healthy", async () => {
-		const { asFragment } = render(
-			<ServerHealthStatusWrapper status={{ "mainsail.devnet": { up: true } }} />,
-			{
-				route: dashboardURL,
-			},
-		);
+		const { asFragment } = render(<ServerHealthStatusWrapper status={{ "mainsail.devnet": { up: true } }} />, {
+			route: dashboardURL,
+		});
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -60,23 +57,17 @@ describe("Server Status Indicator", () => {
 	});
 
 	it("should render as unavailable", async () => {
-		const { asFragment } = render(
-			<ServerHealthStatusWrapper status={{ "mainsail.devnet": { down: false } }} />,
-			{
-				route: dashboardURL,
-			},
-		);
+		const { asFragment } = render(<ServerHealthStatusWrapper status={{ "mainsail.devnet": { down: false } }} />, {
+			route: dashboardURL,
+		});
 
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render default", async () => {
-		const { asFragment } = render(
-			<ServerHealthStatusWrapper status={{}} />,
-			{
-				route: dashboardURL,
-			},
-		);
+		const { asFragment } = render(<ServerHealthStatusWrapper status={{}} />, {
+			route: dashboardURL,
+		});
 
 		expect(asFragment()).toMatchSnapshot();
 	});

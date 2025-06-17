@@ -85,12 +85,9 @@ describe("SendTransfer QRModal", () => {
 
 		const transferURL = `/profiles/${fixtureProfileId}/wallets/${fixtureWalletId}/send-transfer?recipient=0x93485b57ff3DeD81430D08579142fAe8234c6A17&memo=ARK&coin=mainsail&network=mainsail.devnet`;
 
-		render(
-			<SendTransfer />,
-			{
-				route: transferURL,
-			},
-		);
+		render(<SendTransfer />, {
+			route: transferURL,
+		});
 
 		await userEvent.click(screen.getByTestId(QRCodeModalButton));
 
@@ -114,12 +111,9 @@ describe("SendTransfer QRModal", () => {
 
 		const transferURL = `/profiles/${fixtureProfileId}/wallets/${fixtureWalletId}/send-transfer?recipient=0x93485b57ff3DeD81430D08579142fAe8234c6A17&memo=ARK&coin=mainsail&network=mainsail.devnet`;
 
-		render(
-			<SendTransfer />,
-			{
-				route: transferURL,
-			},
-		);
+		render(<SendTransfer />, {
+			route: transferURL,
+		});
 
 		expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("");
 
@@ -143,12 +137,9 @@ describe("SendTransfer QRModal", () => {
 
 		const transferURL = `/profiles/${fixtureProfileId}/wallets/${fixtureWalletId}/send-transfer?recipient=0x93485b57ff3DeD81430D08579142fAe8234c6A17&memo=ARK&coin=mainsail&network=mainsail.devnet`;
 
-		render(
-			<SendTransfer />,
-			{
-				route: transferURL,
-			},
-		);
+		render(<SendTransfer />, {
+			route: transferURL,
+		});
 
 		await userEvent.click(screen.getByTestId(QRCodeModalButton));
 
@@ -177,12 +168,9 @@ describe("SendTransfer QRModal", () => {
 
 		const transferURL = `/profiles/${fixtureProfileId}/wallets/${fixtureWalletId}/send-transfer`;
 
-		render(
-			<SendTransfer />,
-			{
-				route: transferURL,
-			},
-		);
+		render(<SendTransfer />, {
+			route: transferURL,
+		});
 
 		await userEvent.click(screen.getByTestId(QRCodeModalButton));
 
@@ -200,12 +188,9 @@ describe("SendTransfer QRModal", () => {
 	it("should open QR Code Modal and cancel", async () => {
 		const transferURL = `/profiles/${fixtureProfileId}/wallets/${fixtureWalletId}/send-transfer?recipient=0x93485b57ff3DeD81430D08579142fAe8234c6A17&memo=ARK&coin=mainsail&network=mainsail.devnet`;
 
-		render(
-			<SendTransfer />,
-			{
-				route: transferURL,
-			},
-		);
+		render(<SendTransfer />, {
+			route: transferURL,
+		});
 
 		await userEvent.click(screen.getByTestId(QRCodeModalButton));
 
@@ -223,12 +208,9 @@ describe("SendTransfer QRModal", () => {
 
 		const transferURL = `/profiles/${fixtureProfileId}/wallets/${fixtureWalletId}/send-transfer`;
 
-		render(
-			<SendTransfer />,
-			{
-				route: transferURL,
-			},
-		);
+		render(<SendTransfer />, {
+			route: transferURL,
+		});
 
 		qrScannerMock = vi.spyOn(QRScanner, "scanImage").mockResolvedValue({
 			data: "http://localhost:3000/#/?amount=10&coin=mainsail&method=transfer&memo=test&network=mainsail.devnet&recipient=0x93485b57ff3DeD81430D08579142fAe8234c6A17",
@@ -290,12 +272,9 @@ describe("SendTransfer QRModal", () => {
 
 		const transferURL = `/profiles/${fixtureProfileId}/wallets/${fixtureWalletId}/send-transfer`;
 
-		render(
-			<SendTransfer />,
-			{
-				route: transferURL,
-			},
-		);
+		render(<SendTransfer />, {
+			route: transferURL,
+		});
 
 		qrScannerMock = vi.spyOn(QRScanner, "scanImage").mockResolvedValue({
 			data: "http://localhost:3000/#/?amount=10&coin=mainsail&method=transfer&memo=test&network=mainsail.devnet",
@@ -352,12 +331,9 @@ describe("SendTransfer QRModal", () => {
 
 		const transferURL = `/profiles/${fixtureProfileId}/wallets/${fixtureWalletId}/send-transfer`;
 
-		render(
-			<SendTransfer />,
-			{
-				route: transferURL,
-			},
-		);
+		render(<SendTransfer />, {
+			route: transferURL,
+		});
 
 		qrScannerMock = vi.spyOn(QRScanner, "scanImage").mockResolvedValue({
 			data: "http://localhost:3000/#/?amount=10&coin=mainsail&method=transfer&memo=test&network=mainsail.devnet",
@@ -390,12 +366,9 @@ describe("SendTransfer QRModal", () => {
 
 		const transferURL = `/profiles/${fixtureProfileId}/wallets/${fixtureWalletId}/send-transfer`;
 
-		render(
-			<SendTransfer />,
-			{
-				route: transferURL,
-			},
-		);
+		render(<SendTransfer />, {
+			route: transferURL,
+		});
 
 		qrScannerMock = vi.spyOn(QRScanner, "scanImage").mockResolvedValue({
 			data: "http://localhost:3000/#/?amount=10&coin=mainsail&method=transfer&memo=test&network=mainsail.devnet",

@@ -5,7 +5,6 @@ import React from "react";
 import { translations as messageTranslations } from "@/domains/message/i18n";
 import { env, render, screen, waitFor, triggerMessageSignOnce, MAINSAIL_MNEMONICS } from "@/utils/testing-library";
 import { SignMessageSidePanel } from "./SignMessageSidePanel";
-import { DashboardRoutes } from "@/domains/dashboard/routing";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
@@ -24,7 +23,7 @@ const expectHeading = async (text: string) => {
 };
 
 describe("SignMessage with encrypted mnemonic", () => {
-	let dashboardRoute: string | undefined
+	let dashboardRoute: string | undefined;
 	beforeAll(async () => {
 		profile = await env.profiles().create("Example");
 
@@ -51,12 +50,9 @@ describe("SignMessage with encrypted mnemonic", () => {
 
 			profile.wallets().push(encryptedWallet);
 
-			render(
-				<SignMessageSidePanel open={true} onOpenChange={vi.fn()} onMountChange={vi.fn()} />,
-				{
-					route: dashboardRoute
-				},
-			);
+			render(<SignMessageSidePanel open={true} onOpenChange={vi.fn()} onMountChange={vi.fn()} />, {
+				route: dashboardRoute,
+			});
 
 			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
 

@@ -58,12 +58,9 @@ describe("TransactionSuccessful", () => {
 		vi.spyOn(transaction, "isMultiSignatureRegistration").mockReturnValue(false);
 		vi.spyOn(transaction, "usesMultiSignature").mockReturnValue(false);
 
-		render(
-			<TransactionSuccessful senderWallet={wallet} transaction={transaction} />,
-			{
-				route: `/profiles/${profile.id()}`,
-			},
-		);
+		render(<TransactionSuccessful senderWallet={wallet} transaction={transaction} />, {
+			route: `/profiles/${profile.id()}`,
+		});
 
 		await waitFor(() => expect(screen.queryByTestId("PageSkeleton")).not.toBeInTheDocument());
 
@@ -85,12 +82,9 @@ describe("TransactionSuccessful", () => {
 		vi.spyOn(transaction, "isMultiSignatureRegistration").mockReturnValue(false);
 		vi.spyOn(transaction, "usesMultiSignature").mockReturnValue(false);
 
-		render(
-			<TransactionSuccessful senderWallet={wallet} transaction={transaction} />,
-			{
-				route: `/profiles/${profile.id()}`,
-			},
-		);
+		render(<TransactionSuccessful senderWallet={wallet} transaction={transaction} />, {
+			route: `/profiles/${profile.id()}`,
+		});
 
 		expect(screen.getByTestId("TransactionPending")).toBeInTheDocument();
 

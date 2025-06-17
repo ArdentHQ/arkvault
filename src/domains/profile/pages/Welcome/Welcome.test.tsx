@@ -450,7 +450,7 @@ describe("Welcome with deeplink", () => {
 
 describe("Welcome", () => {
 	it("should navigate to profile dashboard", async () => {
-		const { container, asFragment, router } = render(<Welcome />);
+		const { container, router } = render(<Welcome />);
 
 		const passwordProtectedProfile = env.profiles().findById(getPasswordProtectedProfileId());
 
@@ -470,7 +470,7 @@ describe("Welcome", () => {
 	});
 
 	it("should render with profiles", async () => {
-		const { container, asFragment, router } = render(<Welcome />);
+		const { container, router } = render(<Welcome />);
 		const profile = env.profiles().findById(mockedProfileId);
 
 		expect(screen.getByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
@@ -515,7 +515,7 @@ describe("Welcome", () => {
 	});
 
 	it("should navigate to profile dashboard with correct password", async () => {
-		const { asFragment, container, router } = render(<Welcome />);
+		const { container, router } = render(<Welcome />);
 
 		expect(container).toBeInTheDocument();
 
@@ -538,7 +538,7 @@ describe("Welcome", () => {
 	});
 
 	it("should fail to restore profile", async () => {
-		const { asFragment, container, router } = render(<Welcome />);
+		const { container, router } = render(<Welcome />);
 
 		expect(container).toBeInTheDocument();
 
@@ -574,7 +574,7 @@ describe("Welcome", () => {
 		const profile = env.profiles().findById(getPasswordProtectedProfileId());
 
 		const initialRoute = `/profiles/${profile.id()}/dashboard`;
-		const { asFragment, navigate, router } = render(<Welcome />, { route: initialRoute });
+		const { router } = render(<Welcome />, { route: initialRoute });
 
 		await expect(screen.findAllByTestId("ProfileRow")).resolves.toHaveLength(2);
 
@@ -596,7 +596,7 @@ describe("Welcome", () => {
 	});
 
 	it("should navigate to profile settings with correct password", async () => {
-		const { asFragment, container, router } = render(<Welcome />);
+		const { container, router } = render(<Welcome />);
 
 		expect(container).toBeInTheDocument();
 
@@ -632,7 +632,7 @@ describe("Welcome", () => {
 	});
 
 	it("should navigate to profile settings from profile card menu", async () => {
-		const { container, asFragment, router } = render(<Welcome />);
+		const { container, router } = render(<Welcome />);
 
 		expect(container).toBeInTheDocument();
 
@@ -679,11 +679,9 @@ describe("Welcome", () => {
 	});
 
 	it("should not select profile on wrong last location", () => {
-		const { asFragment, container, navigate } = render(<Welcome />, { router: "/" });
+		const { container, navigate } = render(<Welcome />);
 
-		navigate("/", {
-			from: `/wronguri/exchange`,
-		});
+		navigate("/");
 
 		expect(container).toBeInTheDocument();
 
@@ -748,7 +746,7 @@ describe("Welcome", () => {
 	});
 
 	it("should change route to create profile", async () => {
-		const { container, asFragment, router } = render(<Welcome />);
+		const { container, router } = render(<Welcome />);
 
 		expect(container).toBeInTheDocument();
 
@@ -762,9 +760,9 @@ describe("Welcome", () => {
 	});
 
 	it("should render without profiles", async () => {
-		env.reset({ coins: {}, httpClient, storage: new StubStorage() });
+		env.reset({ httpClient, storage: new StubStorage() });
 
-		const { container, asFragment } = render(
+		const { container } = render(
 			<EnvironmentProvider env={env}>
 				<Welcome />
 			</EnvironmentProvider>,
