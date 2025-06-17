@@ -12,12 +12,9 @@ import { SelectAddress } from "@/domains/profile/components/SelectAddress";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { WalletCapabilities } from "@/domains/portfolio/lib/wallet.capabilities";
 import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
-import { configManager } from "@/app/lib/mainsail";
-import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
-import { BigNumber } from "@/app/lib/helpers";
-import { UnitConverter } from "@arkecosystem/typescript-crypto";
 import { Tooltip } from "@/app/components/Tooltip";
 import { Amount } from "@/app/components/Amount";
+import { useValidatorRegistrationLockedFee } from "@/domains/transaction/components/ValidatorRegistrationForm/hooks/useValidatorRegistrationLockedFee";
 
 interface FormStepProperties {
 	senderWallet?: ProfilesContracts.IReadWriteWallet;
@@ -45,20 +42,15 @@ export const FormStep = ({ senderWallet, profile, onWalletChange }: FormStepProp
 		}
 	};
 
-	const isTestnet = false;
-
-	const validatorRegistrationFee = BigNumber.make(
-		UnitConverter.formatUnits(
-			BigNumber.make(configManager.getMilestone()["validatorRegistrationFee"] ?? 0).toString(),
-			"ARK",
-		),
-	).toNumber();
-
-	const ticker = senderWallet?.currency();
-	const exchangeTicker = profile.settings().get<string>(ProfilesContracts.ProfileSetting.ExchangeCurrency) as string;
-	const { convert } = useExchangeRate({ exchangeTicker, profile, ticker });
-
-	const convertedAmount = isTestnet ? 0 : convert(validatorRegistrationFee);
+	const {
+		validatorRegistrationFee,
+		validatorRegistrationFeeAsFiat,
+		validatorRegistrationFeeTicker,
+		validatorRegistrationFeeAsFiatTicker,
+	} = useValidatorRegistrationLockedFee({
+		profile,
+		wallet: senderWallet,
+	});
 
 	return (
 		<section data-testid="SendValidatorResignation__form-step" className="space-y-6 sm:space-y-4">
@@ -121,30 +113,36 @@ export const FormStep = ({ senderWallet, profile, onWalletChange }: FormStepProp
 					</div>
 				</DetailWrapper>
 
-				{senderWallet && ticker && (
-					<DetailWrapper label={t("TRANSACTION.SUMMARY")}>
-						<div className="flex w-full items-center justify-between gap-4 sm:justify-start">
-							<DetailTitle className="w-auto sm:min-w-[162px]">{t("COMMON.UNLOCKED_AMOUNT")}</DetailTitle>
+				<DetailWrapper label={t("TRANSACTION.SUMMARY")}>
+					<div className="flex w-full items-center justify-between gap-4 sm:justify-start">
+						<DetailTitle className="w-auto sm:min-w-[162px]">{t("COMMON.UNLOCKED_AMOUNT")}</DetailTitle>
 
-							<div className="flex flex-row items-center gap-2">
-								<Amount ticker={ticker} value={validatorRegistrationFee} className="font-semibold" />
+						<div className="flex flex-row items-center gap-2">
+							<Amount
+								ticker={validatorRegistrationFeeTicker}
+								value={validatorRegistrationFee}
+								className="font-semibold"
+							/>
 
-								{!isTestnet && !!convertedAmount && !!exchangeTicker && (
-									<div className="text-theme-secondary-700 font-semibold">
-										(~
-										<Amount ticker={exchangeTicker} value={convertedAmount} />)
-									</div>
-								)}
+							{validatorRegistrationFeeAsFiat !== null && (
+								<div className="text-theme-secondary-700 font-semibold">
+									(~
+									<Amount
+										ticker={validatorRegistrationFeeAsFiatTicker}
+										value={validatorRegistrationFeeAsFiat}
+									/>
+									)
+								</div>
+							)}
 
-								<Tooltip content={t("TRANSACTION.REVIEW_STEP.AMOUNT_UNLOCKED_TOOLTIP")}>
-									<div className="bg-theme-primary-100 dark:bg-theme-dark-800 dark:text-theme-dark-50 text-theme-primary-600 flex h-5 w-5 items-center justify-center rounded-full">
-										<Icon name="QuestionMarkSmall" size="sm" />
-									</div>
-								</Tooltip>
-							</div>
+							<Tooltip content={t("TRANSACTION.REVIEW_STEP.AMOUNT_UNLOCKED_TOOLTIP")}>
+								<div className="bg-theme-primary-100 dark:bg-theme-dark-800 dark:text-theme-dark-50 text-theme-primary-600 flex h-5 w-5 items-center justify-center rounded-full">
+									<Icon name="QuestionMarkSmall" size="sm" />
+								</div>
+							</Tooltip>
 						</div>
-					</DetailWrapper>
-				)}
+					</div>
+				</DetailWrapper>
 			</div>
 		</section>
 	);

@@ -4,11 +4,11 @@ import { configManager } from "@/app/lib/mainsail";
 import { Contracts } from "@/app/lib/profiles";
 import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
 
-const useValidatorRegistrationLockedFee = ({
+export const useValidatorRegistrationLockedFee = ({
 	wallet,
 	profile,
 }: {
-	wallet: Contracts.IReadWriteWallet;
+	wallet?: Contracts.IReadWriteWallet;
 	profile: Contracts.IProfile;
 }): {
 	validatorRegistrationFee: number;
@@ -16,7 +16,7 @@ const useValidatorRegistrationLockedFee = ({
 	validatorRegistrationFeeTicker: string;
 	validatorRegistrationFeeAsFiatTicker: string;
 } => {
-	const isTestnet = wallet.network().isTest();
+	const isTestnet = wallet?.network().isTest() === true;
 
 	const validatorRegistrationFee = BigNumber.make(
 		UnitConverter.formatUnits(
@@ -25,7 +25,7 @@ const useValidatorRegistrationLockedFee = ({
 		),
 	).toNumber();
 
-	const ticker = wallet.currency();
+	const ticker = wallet?.currency();
 	const exchangeTicker = profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency) as string;
 	const { convert } = useExchangeRate({ exchangeTicker, profile, ticker });
 
@@ -35,8 +35,6 @@ const useValidatorRegistrationLockedFee = ({
 		validatorRegistrationFee,
 		validatorRegistrationFeeAsFiat,
 		validatorRegistrationFeeAsFiatTicker: exchangeTicker,
-		validatorRegistrationFeeTicker: ticker,
+		validatorRegistrationFeeTicker: ticker ?? "ARK",
 	};
 };
-
-export default useValidatorRegistrationLockedFee;
