@@ -8,6 +8,7 @@ import { ValidatorRegistrationForm, signValidatorRegistration } from "./Validato
 import * as useFeesHook from "@/app/hooks/use-fees";
 import validatorRegistrationFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/validator-registration.json";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
+import { configManager } from "@/app/lib/mainsail";
 
 import {
 	env,
@@ -129,6 +130,10 @@ describe("ValidatorRegistrationForm", () => {
 	});
 
 	it("should sign transaction", async () => {
+		const getMilestoneMock = vi.spyOn(configManager, "getMilestone").mockReturnValue({
+			validatorRegistrationFee: 250_000_000_000_000_000_000,
+		});
+
 		const form = {
 			clearErrors: vi.fn(),
 			getValues: () => ({
@@ -159,7 +164,10 @@ describe("ValidatorRegistrationForm", () => {
 		});
 
 		expect(signMock).toHaveBeenCalledWith({
-			data: { validatorPublicKey: "02147bf63839be7abb44707619b012a8b59ad3eda90be1c6e04eb9c630232268de" },
+			data: {
+				validatorPublicKey: "02147bf63839be7abb44707619b012a8b59ad3eda90be1c6e04eb9c630232268de",
+				value: 250_000_000_000_000_000_000,
+			},
 			gasLimit: "1",
 			gasPrice: "1",
 			signatory: undefined,
@@ -170,6 +178,7 @@ describe("ValidatorRegistrationForm", () => {
 		signMock.mockRestore();
 		broadcastMock.mockRestore();
 		transactionMock.mockRestore();
+		getMilestoneMock.mockRestore();
 	});
 
 	it("should output transaction details", () => {
@@ -203,6 +212,10 @@ describe("ValidatorRegistrationForm", () => {
 		const walletUsesWIFMock = vi.spyOn(wallet.signingKey(), "exists").mockReturnValue(true);
 		const walletWifMock = vi.spyOn(wallet.signingKey(), "get").mockReturnValue(MNEMONICS[0]);
 
+		const getMilestoneMock = vi.spyOn(configManager, "getMilestone").mockReturnValue({
+			validatorRegistrationFee: 250_000_000_000_000_000_000,
+		});
+
 		const form = {
 			clearErrors: vi.fn(),
 			getValues: () => ({
@@ -234,7 +247,10 @@ describe("ValidatorRegistrationForm", () => {
 		});
 
 		expect(signMock).toHaveBeenCalledWith({
-			data: { validatorPublicKey: "02147bf63839be7abb44707619b012a8b59ad3eda90be1c6e04eb9c630232268de" },
+			data: {
+				validatorPublicKey: "02147bf63839be7abb44707619b012a8b59ad3eda90be1c6e04eb9c630232268de",
+				value: 250_000_000_000_000_000_000,
+			},
 			gasLimit: "1",
 			gasPrice: "1",
 			signatory: undefined,
@@ -247,5 +263,6 @@ describe("ValidatorRegistrationForm", () => {
 		transactionMock.mockRestore();
 		walletUsesWIFMock.mockRestore();
 		walletWifMock.mockRestore();
+		getMilestoneMock.mockRestore();
 	});
 });
