@@ -11,10 +11,6 @@ import { TransactionAddresses } from "@/domains/transaction/components/Transacti
 import { FormField, FormLabel } from "@/app/components/Form";
 import { FeeField } from "@/domains/transaction/components/FeeField";
 import { Amount } from "@/app/components/Amount";
-import { configManager } from "@/app/lib/mainsail";
-import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
-import { BigNumber } from "@/app/lib/helpers";
-import { UnitConverter } from "@arkecosystem/typescript-crypto";
 import { Tooltip } from "@/app/components/Tooltip";
 import useValidatorRegistrationLockedFee from "./hooks/useValidatorRegistrationLockedFee";
 export const ReviewStep = ({
@@ -41,21 +37,6 @@ export const ReviewStep = ({
 		profile,
 		wallet,
 	});
-
-	// const isTestnet = false;
-
-	// const validatorRegistrationFee = BigNumber.make(
-	// 	UnitConverter.formatUnits(
-	// 		BigNumber.make(configManager.getMilestone()["validatorRegistrationFee"] ?? 0).toString(),
-	// 		"ARK",
-	// 	),
-	// ).toNumber();
-
-	// const ticker = wallet.currency();
-	// const exchangeTicker = profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency) as string;
-	// const { convert } = useExchangeRate({ exchangeTicker, profile, ticker });
-
-	// const convertedAmount = isTestnet ? 0 : convert(validatorRegistrationFee);
 
 	useEffect(() => {
 		unregister("mnemonic");
