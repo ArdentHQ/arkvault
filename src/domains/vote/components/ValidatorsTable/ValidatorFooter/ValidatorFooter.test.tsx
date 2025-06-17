@@ -132,13 +132,15 @@ describe("ValidatorFooter", () => {
 			},
 		];
 
+		vi.spyOn(wallet.network(), "votesAmountMinimum").mockReturnValue(2);
+
 		const { baseElement } = render(
 			<ValidatorFooter
 				selectedWallet={wallet}
 				availableBalance={wallet.balance()}
 				selectedVotes={selectedValidator}
 				selectedUnvotes={[]}
-				maxVotes={wallet.network().maximumVotesPerTransaction()}
+				maxVotes={10}
 				onContinue={vi.fn()}
 			/>,
 		);
