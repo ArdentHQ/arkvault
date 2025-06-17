@@ -13,6 +13,7 @@ import { FeeField } from "@/domains/transaction/components/FeeField";
 import { Amount } from "@/app/components/Amount";
 import { Tooltip } from "@/app/components/Tooltip";
 import { useValidatorRegistrationLockedFee } from "./hooks/useValidatorRegistrationLockedFee";
+
 export const ReviewStep = ({
 	wallet,
 	profile,
