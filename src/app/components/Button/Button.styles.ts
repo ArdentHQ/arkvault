@@ -24,7 +24,7 @@ const getVariant = (variant?: ButtonVariant, theme?: Theme, disabled?: boolean, 
 			return `disabled:bg-theme-secondary-800 disabled:text-theme-secondary-700`;
 		}
 
-		return `disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700`;
+		return `disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600`;
 	}
 
 	// The following methods optionally receive a breakpoint. We can use
