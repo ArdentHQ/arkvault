@@ -5,11 +5,14 @@ import { useTranslation } from "react-i18next";
 
 import { TransactionAddresses } from "@/domains/transaction/components/TransactionDetail";
 import { StepHeader } from "@/app/components/StepHeader";
-import { ThemeIcon } from "@/app/components/Icon";
+import { Icon, ThemeIcon } from "@/app/components/Icon";
 import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
 import { Divider } from "@/app/components/Divider";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { FeeField } from "@/domains/transaction/components/FeeField";
+import { useValidatorRegistrationLockedFee } from "@/domains/transaction/components/ValidatorRegistrationForm/hooks/useValidatorRegistrationLockedFee";
+import { Amount } from "@/app/components/Amount";
+import { Tooltip } from "@/app/components/Tooltip";
 
 export const ReviewStep = ({
 	senderWallet,
@@ -25,6 +28,16 @@ export const ReviewStep = ({
 	useEffect(() => {
 		unregister("mnemonic");
 	}, [unregister]);
+
+	const {
+		validatorRegistrationFee,
+		validatorRegistrationFeeAsFiat,
+		validatorRegistrationFeeTicker,
+		validatorRegistrationFeeAsFiatTicker,
+	} = useValidatorRegistrationLockedFee({
+		profile,
+		wallet: senderWallet,
+	});
 
 	return (
 		<section data-testid="SendValidatorResignation__review-step">
@@ -70,6 +83,37 @@ export const ReviewStep = ({
 							<div className="no-ligatures text-theme-secondary-900 dark:text-theme-secondary-200 truncate text-sm leading-[17px] font-semibold sm:text-base sm:leading-5">
 								{senderWallet.validatorPublicKey()}
 							</div>
+						</div>
+					</div>
+				</DetailWrapper>
+
+				<DetailWrapper label={t("TRANSACTION.SUMMARY")}>
+					<div className="flex w-full items-center justify-between gap-4 sm:justify-start">
+						<DetailTitle className="w-auto sm:min-w-[162px]">{t("COMMON.UNLOCKED_AMOUNT")}</DetailTitle>
+
+						<div className="flex flex-row items-center gap-2">
+							<Amount
+								ticker={validatorRegistrationFeeTicker}
+								value={validatorRegistrationFee}
+								className="font-semibold"
+							/>
+
+							{validatorRegistrationFeeAsFiat !== null && (
+								<div className="text-theme-secondary-700 font-semibold">
+									(~
+									<Amount
+										ticker={validatorRegistrationFeeAsFiatTicker}
+										value={validatorRegistrationFeeAsFiat}
+									/>
+									)
+								</div>
+							)}
+
+							<Tooltip content={t("TRANSACTION.REVIEW_STEP.AMOUNT_UNLOCKED_TOOLTIP")}>
+								<div className="bg-theme-primary-100 dark:bg-theme-dark-800 dark:text-theme-dark-50 text-theme-primary-600 flex h-5 w-5 items-center justify-center rounded-full">
+									<Icon name="QuestionMarkSmall" size="sm" />
+								</div>
+							</Tooltip>
 						</div>
 					</div>
 				</DetailWrapper>
