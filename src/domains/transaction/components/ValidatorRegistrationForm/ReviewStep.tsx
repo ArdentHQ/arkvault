@@ -11,11 +11,9 @@ import { TransactionAddresses } from "@/domains/transaction/components/Transacti
 import { FormField, FormLabel } from "@/app/components/Form";
 import { FeeField } from "@/domains/transaction/components/FeeField";
 import { Amount } from "@/app/components/Amount";
-import { configManager } from "@/app/lib/mainsail";
-import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
-import { BigNumber } from "@/app/lib/helpers";
-import { UnitConverter } from "@arkecosystem/typescript-crypto";
 import { Tooltip } from "@/app/components/Tooltip";
+import { useValidatorRegistrationLockedFee } from "./hooks/useValidatorRegistrationLockedFee";
+
 export const ReviewStep = ({
 	wallet,
 	profile,
@@ -31,20 +29,15 @@ export const ReviewStep = ({
 
 	const feeTransactionData = useMemo(() => ({ validatorPublicKey }), [validatorPublicKey]);
 
-	const isTestnet = false;
-
-	const validatorRegistrationFee = BigNumber.make(
-		UnitConverter.formatUnits(
-			BigNumber.make(configManager.getMilestone()["validatorRegistrationFee"] ?? 0).toString(),
-			"ARK",
-		),
-	).toNumber();
-
-	const ticker = wallet.currency();
-	const exchangeTicker = profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency) as string;
-	const { convert } = useExchangeRate({ exchangeTicker, profile, ticker });
-
-	const convertedAmount = isTestnet ? 0 : convert(validatorRegistrationFee);
+	const {
+		validatorRegistrationFee,
+		validatorRegistrationFeeAsFiat,
+		validatorRegistrationFeeTicker,
+		validatorRegistrationFeeAsFiatTicker,
+	} = useValidatorRegistrationLockedFee({
+		profile,
+		wallet,
+	});
 
 	useEffect(() => {
 		unregister("mnemonic");
@@ -109,15 +102,19 @@ export const ReviewStep = ({
 
 									<div className="flex flex-row items-center gap-2">
 										<Amount
-											ticker={ticker}
+											ticker={validatorRegistrationFeeTicker}
 											value={validatorRegistrationFee}
 											className="font-semibold"
 										/>
 
-										{!isTestnet && !!convertedAmount && !!exchangeTicker && (
+										{validatorRegistrationFeeAsFiat !== null && (
 											<div className="text-theme-secondary-700 font-semibold">
 												(~
-												<Amount ticker={exchangeTicker} value={convertedAmount} />)
+												<Amount
+													ticker={validatorRegistrationFeeAsFiatTicker}
+													value={validatorRegistrationFeeAsFiat}
+												/>
+												)
 											</div>
 										)}
 
