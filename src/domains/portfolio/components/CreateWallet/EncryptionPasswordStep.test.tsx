@@ -1,9 +1,7 @@
 import { BIP39 } from "@ardenthq/arkvault-crypto";
 import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
-import { createHashHistory } from "history";
 import React from "react";
-import { Route } from "react-router-dom";
 
 import {
 	env,
@@ -52,22 +50,14 @@ describe("EncryptionPasswordStep", () => {
 	});
 
 	it("should create a wallet and use encryption password", async () => {
-		const history = createHashHistory();
 		const createURL = `/profiles/${fixtureProfileId}`;
-		history.push(createURL);
 
 		const onOpenChangeMock = vi.fn();
 		const user = userEvent.setup();
 
-		render(
-			<Route path="/profiles/:profileId">
-				<CreateAddressesSidePanel open={true} onOpenChange={onOpenChangeMock} />
-			</Route>,
-			{
-				history,
-				route: createURL,
-			},
-		);
+		render(<CreateAddressesSidePanel open={true} onOpenChange={onOpenChangeMock} />, {
+			route: createURL,
+		});
 
 		const continueButton = screen.getByTestId("CreateWallet__continue-button");
 
@@ -146,19 +136,11 @@ describe("EncryptionPasswordStep", () => {
 	});
 
 	it("should fail creating a wallet with encryption password", async () => {
-		const history = createHashHistory();
 		const createURL = `/profiles/${fixtureProfileId}`;
-		history.push(createURL);
 
-		render(
-			<Route path="/profiles/:profileId">
-				<CreateAddressesSidePanel open={true} onOpenChange={vi.fn()} />
-			</Route>,
-			{
-				history,
-				route: createURL,
-			},
-		);
+		render(<CreateAddressesSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: createURL,
+		});
 		const user = userEvent.setup();
 
 		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();

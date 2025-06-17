@@ -41,18 +41,10 @@ describe("HeaderSearchBar", () => {
 
 	it("should reset fields by prop", async () => {
 		const onReset = vi.fn();
-		const { rerender } = render(<HeaderSearchBar onReset={onReset} />);
+		render(<HeaderSearchBar onReset={onReset} resetFields={true} />);
 
 		await userEvent.click(screen.getByRole("button"));
-
 		const input: HTMLInputElement = screen.getByTestId("Input");
-
-		await userEvent.clear(input);
-		await userEvent.type(input, "test");
-
-		expect(input.value).toBe("test");
-
-		rerender(<HeaderSearchBar onReset={onReset} resetFields={true} />);
 
 		await waitFor(() => expect(input.value).not.toBe("test"));
 

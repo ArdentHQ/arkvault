@@ -2,9 +2,7 @@
 import { Networks } from "@/app/lib/mainsail";
 import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
-import { createHashHistory } from "history";
 import React from "react";
-import { Route } from "react-router-dom";
 
 import { SearchWallet } from "./SearchWallet";
 import { translations } from "@/domains/wallet/i18n";
@@ -20,7 +18,6 @@ import {
 	getMainsailProfileId,
 } from "@/utils/testing-library";
 
-const history = createHashHistory();
 const dashboardURL = `/profiles/${getMainsailProfileId()}/dashboard`;
 let wallets: Contracts.IReadWriteWallet[];
 let profile: Contracts.IProfile;
@@ -28,11 +25,6 @@ let profile: Contracts.IProfile;
 const walletAlias = "Sample Wallet";
 
 describe.each([true, false])("SearchWallet uses fiat value = %s", (showConvertedValue) => {
-	beforeAll(() => {
-		// mockProfileWithPublicAndTestNetworks(profile);
-		history.push(dashboardURL);
-	});
-
 	beforeEach(() => {
 		profile = env.profiles().findById(getMainsailProfileId());
 
@@ -44,20 +36,17 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 		const networkMocksRestore = mockProfileWithPublicAndTestNetworks(profile);
 
 		const { asFragment } = renderResponsiveWithRoute(
-			<Route path="/profiles/:profileId/dashboard">
-				<SearchWallet
-					profile={profile}
-					showConvertedValue={showConvertedValue}
-					isOpen={true}
-					title={translations.MODAL_SELECT_ACCOUNT.TITLE}
-					description={translations.MODAL_SELECT_ACCOUNT.DESCRIPTION}
-					wallets={wallets}
-					onSelectWallet={() => void 0}
-				/>
-			</Route>,
+			<SearchWallet
+				profile={profile}
+				showConvertedValue={showConvertedValue}
+				isOpen={true}
+				title={translations.MODAL_SELECT_ACCOUNT.TITLE}
+				description={translations.MODAL_SELECT_ACCOUNT.DESCRIPTION}
+				wallets={wallets}
+				onSelectWallet={() => void 0}
+			/>,
 			"md",
 			{
-				history,
 				route: dashboardURL,
 			},
 		);
@@ -89,20 +78,17 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 		profile.wallets().push(wallet);
 
 		const { asFragment } = renderResponsiveWithRoute(
-			<Route path="/profiles/:profileId/dashboard">
-				<SearchWallet
-					profile={profile}
-					showConvertedValue={showConvertedValue}
-					isOpen={true}
-					title={translations.MODAL_SELECT_ACCOUNT.TITLE}
-					description={translations.MODAL_SELECT_ACCOUNT.DESCRIPTION}
-					wallets={[wallet]}
-					onSelectWallet={() => void 0}
-				/>
-			</Route>,
+			<SearchWallet
+				profile={profile}
+				showConvertedValue={showConvertedValue}
+				isOpen={true}
+				title={translations.MODAL_SELECT_ACCOUNT.TITLE}
+				description={translations.MODAL_SELECT_ACCOUNT.DESCRIPTION}
+				wallets={[wallet]}
+				onSelectWallet={() => void 0}
+			/>,
 			"md",
 			{
-				history,
 				route: dashboardURL,
 			},
 		);
@@ -124,20 +110,17 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 
 	it("should render compact on md screen", async () => {
 		const { asFragment } = renderResponsiveWithRoute(
-			<Route path="/profiles/:profileId/dashboard">
-				<SearchWallet
-					profile={profile}
-					showConvertedValue={showConvertedValue}
-					isOpen={true}
-					title={translations.MODAL_SELECT_ACCOUNT.TITLE}
-					description={translations.MODAL_SELECT_ACCOUNT.DESCRIPTION}
-					wallets={wallets}
-					onSelectWallet={() => void 0}
-				/>
-			</Route>,
+			<SearchWallet
+				profile={profile}
+				showConvertedValue={showConvertedValue}
+				isOpen={true}
+				title={translations.MODAL_SELECT_ACCOUNT.TITLE}
+				description={translations.MODAL_SELECT_ACCOUNT.DESCRIPTION}
+				wallets={wallets}
+				onSelectWallet={() => void 0}
+			/>,
 			"md",
 			{
-				history,
 				route: dashboardURL,
 			},
 		);
@@ -147,20 +130,17 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 
 	it.each(["xs", "sm"])("has a search input on responsive screen", async (breakpoint) => {
 		renderResponsiveWithRoute(
-			<Route path="/profiles/:profileId/dashboard">
-				<SearchWallet
-					profile={profile}
-					showConvertedValue={showConvertedValue}
-					isOpen={true}
-					title={translations.MODAL_SELECT_ACCOUNT.TITLE}
-					description={translations.MODAL_SELECT_ACCOUNT.DESCRIPTION}
-					wallets={wallets}
-					onSelectWallet={() => void 0}
-				/>
-			</Route>,
+			<SearchWallet
+				profile={profile}
+				showConvertedValue={showConvertedValue}
+				isOpen={true}
+				title={translations.MODAL_SELECT_ACCOUNT.TITLE}
+				description={translations.MODAL_SELECT_ACCOUNT.DESCRIPTION}
+				wallets={wallets}
+				onSelectWallet={() => void 0}
+			/>,
 			breakpoint,
 			{
-				history,
 				route: dashboardURL,
 			},
 		);
@@ -186,20 +166,17 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 
 	it.each(["xs", "sm"])("should render responsive item", async (breakpoint) => {
 		const { asFragment } = renderResponsiveWithRoute(
-			<Route path="/profiles/:profileId/dashboard">
-				<SearchWallet
-					profile={profile}
-					showConvertedValue={showConvertedValue}
-					isOpen={true}
-					title={translations.MODAL_SELECT_ACCOUNT.TITLE}
-					description={translations.MODAL_SELECT_ACCOUNT.DESCRIPTION}
-					wallets={wallets}
-					onSelectWallet={() => void 0}
-				/>
-			</Route>,
+			<SearchWallet
+				profile={profile}
+				showConvertedValue={showConvertedValue}
+				isOpen={true}
+				title={translations.MODAL_SELECT_ACCOUNT.TITLE}
+				description={translations.MODAL_SELECT_ACCOUNT.DESCRIPTION}
+				wallets={wallets}
+				onSelectWallet={() => void 0}
+			/>,
 			breakpoint,
 			{
-				history,
 				route: dashboardURL,
 			},
 		);
@@ -213,20 +190,17 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 		const onSelectWalletMock = vi.fn();
 
 		renderResponsiveWithRoute(
-			<Route path="/profiles/:profileId/dashboard">
-				<SearchWallet
-					profile={profile}
-					showConvertedValue={showConvertedValue}
-					isOpen={true}
-					title={translations.MODAL_SELECT_ACCOUNT.TITLE}
-					description={translations.MODAL_SELECT_ACCOUNT.DESCRIPTION}
-					wallets={wallets}
-					onSelectWallet={onSelectWalletMock}
-				/>
-			</Route>,
+			<SearchWallet
+				profile={profile}
+				showConvertedValue={showConvertedValue}
+				isOpen={true}
+				title={translations.MODAL_SELECT_ACCOUNT.TITLE}
+				description={translations.MODAL_SELECT_ACCOUNT.DESCRIPTION}
+				wallets={wallets}
+				onSelectWallet={onSelectWalletMock}
+			/>,
 			breakpoint,
 			{
-				history,
 				route: dashboardURL,
 			},
 		);
@@ -247,19 +221,16 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 			.spyOn(wallets[0], "exchangeCurrency")
 			.mockReturnValue(undefined as any);
 		const { asFragment } = render(
-			<Route path="/profiles/:profileId/dashboard">
-				<SearchWallet
-					profile={profile}
-					showConvertedValue={showConvertedValue}
-					isOpen={true}
-					title={translations.MODAL_SELECT_ACCOUNT.TITLE}
-					description={translations.MODAL_SELECT_ACCOUNT.DESCRIPTION}
-					wallets={wallets}
-					onSelectWallet={() => void 0}
-				/>
-			</Route>,
+			<SearchWallet
+				profile={profile}
+				showConvertedValue={showConvertedValue}
+				isOpen={true}
+				title={translations.MODAL_SELECT_ACCOUNT.TITLE}
+				description={translations.MODAL_SELECT_ACCOUNT.DESCRIPTION}
+				wallets={wallets}
+				onSelectWallet={() => void 0}
+			/>,
 			{
-				history,
 				route: dashboardURL,
 			},
 		);
@@ -281,20 +252,17 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 		const onSelectWallet = vi.fn();
 
 		const { asFragment } = render(
-			<Route path="/profiles/:profileId/dashboard">
-				<SearchWallet
-					profile={profile}
-					showConvertedValue={showConvertedValue}
-					isOpen={true}
-					title={translations.MODAL_SELECT_ACCOUNT.TITLE}
-					description={translations.MODAL_SELECT_ACCOUNT.DESCRIPTION}
-					wallets={wallets}
-					onSelectWallet={onSelectWallet}
-					selectedAddress="0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6"
-				/>
-			</Route>,
+			<SearchWallet
+				profile={profile}
+				showConvertedValue={showConvertedValue}
+				isOpen={true}
+				title={translations.MODAL_SELECT_ACCOUNT.TITLE}
+				description={translations.MODAL_SELECT_ACCOUNT.DESCRIPTION}
+				wallets={wallets}
+				onSelectWallet={onSelectWallet}
+				selectedAddress="0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6"
+			/>,
 			{
-				history,
 				route: dashboardURL,
 			},
 		);
@@ -334,21 +302,18 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 		const onSelectWallet = vi.fn();
 
 		const { asFragment } = renderResponsiveWithRoute(
-			<Route path="/profiles/:profileId/dashboard">
-				<SearchWallet
-					profile={profile}
-					showConvertedValue={showConvertedValue}
-					isOpen={true}
-					title={translations.MODAL_SELECT_ACCOUNT.TITLE}
-					description={translations.MODAL_SELECT_ACCOUNT.DESCRIPTION}
-					wallets={wallets}
-					onSelectWallet={onSelectWallet}
-					selectedAddress="0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6"
-				/>
-			</Route>,
+			<SearchWallet
+				profile={profile}
+				showConvertedValue={showConvertedValue}
+				isOpen={true}
+				title={translations.MODAL_SELECT_ACCOUNT.TITLE}
+				description={translations.MODAL_SELECT_ACCOUNT.DESCRIPTION}
+				wallets={wallets}
+				onSelectWallet={onSelectWallet}
+				selectedAddress="0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6"
+			/>,
 			"md",
 			{
-				history,
 				route: dashboardURL,
 			},
 		);
@@ -388,21 +353,18 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 		const onSelectWallet = vi.fn();
 
 		const { asFragment } = renderResponsiveWithRoute(
-			<Route path="/profiles/:profileId/dashboard">
-				<SearchWallet
-					profile={profile}
-					showConvertedValue={showConvertedValue}
-					isOpen={true}
-					title={translations.MODAL_SELECT_ACCOUNT.TITLE}
-					description={translations.MODAL_SELECT_ACCOUNT.DESCRIPTION}
-					wallets={wallets}
-					onSelectWallet={onSelectWallet}
-					selectedAddress="0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6"
-				/>
-			</Route>,
+			<SearchWallet
+				profile={profile}
+				showConvertedValue={showConvertedValue}
+				isOpen={true}
+				title={translations.MODAL_SELECT_ACCOUNT.TITLE}
+				description={translations.MODAL_SELECT_ACCOUNT.DESCRIPTION}
+				wallets={wallets}
+				onSelectWallet={onSelectWallet}
+				selectedAddress="0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6"
+			/>,
 			"xs",
 			{
-				history,
 				route: dashboardURL,
 			},
 		);
@@ -416,19 +378,16 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 		const onClose = vi.fn();
 
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<SearchWallet
-					profile={profile}
-					isOpen={true}
-					onClose={onClose}
-					showConvertedValue={showConvertedValue}
-					wallets={[]}
-					title={"title"}
-					onSelectWallet={() => void 0}
-				/>
-			</Route>,
+			<SearchWallet
+				profile={profile}
+				isOpen={true}
+				onClose={onClose}
+				showConvertedValue={showConvertedValue}
+				wallets={[]}
+				title={"title"}
+				onSelectWallet={() => void 0}
+			/>,
 			{
-				history,
 				route: dashboardURL,
 			},
 		);
@@ -446,19 +405,16 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 		vi.useFakeTimers({ shouldAdvanceTime: true });
 
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<SearchWallet
-					profile={profile}
-					isOpen={true}
-					title={translations.MODAL_SELECT_ACCOUNT.TITLE}
-					description={translations.MODAL_SELECT_ACCOUNT.DESCRIPTION}
-					wallets={wallets}
-					showConvertedValue={showConvertedValue}
-					onSelectWallet={() => void 0}
-				/>
-			</Route>,
+			<SearchWallet
+				profile={profile}
+				isOpen={true}
+				title={translations.MODAL_SELECT_ACCOUNT.TITLE}
+				description={translations.MODAL_SELECT_ACCOUNT.DESCRIPTION}
+				wallets={wallets}
+				showConvertedValue={showConvertedValue}
+				onSelectWallet={() => void 0}
+			/>,
 			{
-				history,
 				route: dashboardURL,
 			},
 		);
@@ -494,19 +450,16 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 		vi.useFakeTimers({ shouldAdvanceTime: true });
 
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<SearchWallet
-					profile={profile}
-					isOpen={true}
-					title={translations.MODAL_SELECT_ACCOUNT.TITLE}
-					description={translations.MODAL_SELECT_ACCOUNT.DESCRIPTION}
-					wallets={wallets}
-					showConvertedValue={showConvertedValue}
-					onSelectWallet={() => void 0}
-				/>
-			</Route>,
+			<SearchWallet
+				profile={profile}
+				isOpen={true}
+				title={translations.MODAL_SELECT_ACCOUNT.TITLE}
+				description={translations.MODAL_SELECT_ACCOUNT.DESCRIPTION}
+				wallets={wallets}
+				showConvertedValue={showConvertedValue}
+				onSelectWallet={() => void 0}
+			/>,
 			{
-				history,
 				route: dashboardURL,
 			},
 		);
@@ -543,19 +496,16 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 		vi.useFakeTimers({ shouldAdvanceTime: true });
 
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<SearchWallet
-					profile={profile}
-					isOpen={true}
-					title={translations.MODAL_SELECT_ACCOUNT.TITLE}
-					description={translations.MODAL_SELECT_ACCOUNT.DESCRIPTION}
-					wallets={wallets}
-					showConvertedValue={showConvertedValue}
-					onSelectWallet={() => void 0}
-				/>
-			</Route>,
+			<SearchWallet
+				profile={profile}
+				isOpen={true}
+				title={translations.MODAL_SELECT_ACCOUNT.TITLE}
+				description={translations.MODAL_SELECT_ACCOUNT.DESCRIPTION}
+				wallets={wallets}
+				showConvertedValue={showConvertedValue}
+				onSelectWallet={() => void 0}
+			/>,
 			{
-				history,
 				route: dashboardURL,
 			},
 		);
@@ -599,19 +549,16 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 		vi.useFakeTimers({ shouldAdvanceTime: true });
 
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<SearchWallet
-					profile={profile}
-					isOpen={true}
-					title={translations.MODAL_SELECT_ACCOUNT.TITLE}
-					description={translations.MODAL_SELECT_ACCOUNT.DESCRIPTION}
-					wallets={wallets}
-					showConvertedValue={showConvertedValue}
-					onSelectWallet={() => void 0}
-				/>
-			</Route>,
+			<SearchWallet
+				profile={profile}
+				isOpen={true}
+				title={translations.MODAL_SELECT_ACCOUNT.TITLE}
+				description={translations.MODAL_SELECT_ACCOUNT.DESCRIPTION}
+				wallets={wallets}
+				showConvertedValue={showConvertedValue}
+				onSelectWallet={() => void 0}
+			/>,
 			{
-				history,
 				route: dashboardURL,
 			},
 		);

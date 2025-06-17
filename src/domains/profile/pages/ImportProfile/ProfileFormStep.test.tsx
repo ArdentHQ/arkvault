@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
-import { createHashHistory } from "history";
 import React from "react";
 import * as browserAccess from "browser-fs-access";
 
@@ -36,9 +35,6 @@ describe("Import Profile - Profile Form Step", () => {
 	});
 
 	it("should render profile form", async () => {
-		const history = createHashHistory();
-		history.push("/profiles/import");
-
 		render(
 			<EnvironmentProvider env={env}>
 				<ImportProfileForm
@@ -49,6 +45,9 @@ describe("Import Profile - Profile Form Step", () => {
 					onBack={vi.fn()}
 				/>
 			</EnvironmentProvider>,
+			{
+				route: "/profiles/import",
+			},
 		);
 
 		await waitFor(() => expect(submitButton()).toBeDisabled());
@@ -58,10 +57,7 @@ describe("Import Profile - Profile Form Step", () => {
 	});
 
 	it("should render profile form with empty profile", async () => {
-		const history = createHashHistory();
 		const emptyProfile = await env.profiles().create("test2");
-		history.push("/profiles/import");
-
 		render(
 			<EnvironmentProvider env={env}>
 				<ImportProfileForm
@@ -72,6 +68,9 @@ describe("Import Profile - Profile Form Step", () => {
 					onBack={vi.fn()}
 				/>
 			</EnvironmentProvider>,
+			{
+				route: "/profiles/import",
+			},
 		);
 
 		await waitFor(() => expect(submitButton()).toBeDisabled());
@@ -92,6 +91,9 @@ describe("Import Profile - Profile Form Step", () => {
 					onBack={vi.fn()}
 				/>
 			</EnvironmentProvider>,
+			{
+				route: "/profiles/import",
+			},
 		);
 
 		await waitFor(() => expect(submitButton()).toBeDisabled());
@@ -149,6 +151,9 @@ describe("Import Profile - Profile Form Step", () => {
 					onBack={vi.fn()}
 				/>
 			</EnvironmentProvider>,
+			{
+				route: "/profiles/import",
+			},
 		);
 
 		const user = userEvent.setup();

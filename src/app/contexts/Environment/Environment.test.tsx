@@ -1,13 +1,12 @@
 import * as Mainsail from "@/app/lib/mainsail";
 import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
-import { createHashHistory } from "history";
 import React from "react";
 
 import { EnvironmentProvider, useEnvironmentContext } from "./Environment";
 import { httpClient } from "@/app/services";
 import { StubStorage } from "@/tests/mocks";
-import { env, render, screen, waitFor } from "@/utils/testing-library";
+import { env, render, screen, waitFor, renderHook, act } from "@/utils/testing-library";
 
 const Create = () => {
 	const { env, persist } = useEnvironmentContext();
@@ -43,17 +42,12 @@ describe("Environment Context", () => {
 		database = new StubStorage();
 	});
 
-	it("should throw without provider", () => {
+	it("throws if useConfiguration is called without the Provider", () => {
 		const consoleSpy = vi.spyOn(console, "error").mockImplementation(() => {});
 
-		const Test = () => {
-			const { env } = useEnvironmentContext();
-			return <p>{env.profiles().count()}</p>;
-		};
-
-		expect(() => render(<Test />, { withProviders: false })).toThrow(
-			"[useEnvironment] Component not wrapped within a Provider",
-		);
+		expect(() => {
+			renderHook(() => useEnvironmentContext());
+		}).toThrow("[useEnvironment] Component not wrapped within a Provider");
 
 		consoleSpy.mockRestore();
 	});
@@ -87,8 +81,6 @@ describe("Environment Context", () => {
 
 	it("should save profile before persist", async () => {
 		const profile = await env.profiles().create("foo");
-		const history = createHashHistory();
-		history.push(`/profiles/${profile.id()}`);
 
 		const ProfilePage = () => {
 			const { persist } = useEnvironmentContext();
@@ -107,7 +99,11 @@ describe("Environment Context", () => {
 			</EnvironmentProvider>
 		);
 
-		render(<App />, { history });
+		const { navigate } = render(<App />);
+
+		act(() => {
+			navigate(`/profiles/${profile.id()}`);
+		});
 
 		await userEvent.click(screen.getByRole("button"));
 
