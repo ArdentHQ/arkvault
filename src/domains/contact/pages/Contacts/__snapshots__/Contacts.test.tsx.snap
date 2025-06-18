@@ -1235,7 +1235,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                                   data-testid="ContactListItem__send-button-wrapper"
                                 >
                                   <button
-                                    class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 text-sm hover:underline"
+                                    class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 text-sm hover:underline"
                                     data-testid="ContactListItem__send-button"
                                     type="button"
                                   >
@@ -1265,7 +1265,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                                         class="flex items-center space-x-2"
                                       >
                                         <div
-                                          class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 transition-colors duration-200"
+                                          class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50 transition-colors duration-200"
                                         >
                                           <div
                                             style="height: 16px; width: 16px;"
@@ -1421,7 +1421,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                                   data-testid="ContactListItem__send-button-wrapper"
                                 >
                                   <button
-                                    class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 text-sm hover:underline"
+                                    class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 text-sm hover:underline"
                                     data-testid="ContactListItem__send-button"
                                     type="button"
                                   >
@@ -1451,7 +1451,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                                         class="flex items-center space-x-2"
                                       >
                                         <div
-                                          class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 transition-colors duration-200"
+                                          class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50 transition-colors duration-200"
                                         >
                                           <div
                                             style="height: 16px; width: 16px;"
@@ -3988,7 +3988,7 @@ exports[`Contacts > should render with contacts 1`] = `
                                   data-testid="ContactListItem__send-button-wrapper"
                                 >
                                   <button
-                                    class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 text-sm hover:underline"
+                                    class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 text-sm hover:underline"
                                     data-testid="ContactListItem__send-button"
                                     type="button"
                                   >
@@ -4018,7 +4018,7 @@ exports[`Contacts > should render with contacts 1`] = `
                                         class="flex items-center space-x-2"
                                       >
                                         <div
-                                          class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 transition-colors duration-200"
+                                          class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50 transition-colors duration-200"
                                         >
                                           <div
                                             style="height: 16px; width: 16px;"
@@ -4174,7 +4174,7 @@ exports[`Contacts > should render with contacts 1`] = `
                                   data-testid="ContactListItem__send-button-wrapper"
                                 >
                                   <button
-                                    class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 text-sm hover:underline"
+                                    class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 text-sm hover:underline"
                                     data-testid="ContactListItem__send-button"
                                     type="button"
                                   >
@@ -4204,7 +4204,7 @@ exports[`Contacts > should render with contacts 1`] = `
                                         class="flex items-center space-x-2"
                                       >
                                         <div
-                                          class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 transition-colors duration-200"
+                                          class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50 transition-colors duration-200"
                                         >
                                           <div
                                             style="height: 16px; width: 16px;"
