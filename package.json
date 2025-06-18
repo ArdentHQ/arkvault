@@ -61,7 +61,7 @@
 		"ajv": "^8.17.1",
 		"assert": "^2.1.0",
 		"big.js": "^6.2.2",
-		"browser-fs-access": "^0.37.0",
+		"browser-fs-access": "^0.38.0",
 		"classnames": "^2.5.1",
 		"dayjs": "^1.11.13",
 		"deepmerge": "^4.3.1",
