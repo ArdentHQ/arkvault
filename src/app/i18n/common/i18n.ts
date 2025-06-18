@@ -230,6 +230,7 @@ export const translations = {
 	LOADING: "Loading ...",
 	LOADING_LEDGER: "Loading Ledger...",
 	LOAD_MORE: "Load More",
+	LOCKED_AMOUNT: "Locked Amount",
 	MANAGE: "Manage",
 	MANAGE_SERVERS: "Manage Servers",
 	MAX: "Max",

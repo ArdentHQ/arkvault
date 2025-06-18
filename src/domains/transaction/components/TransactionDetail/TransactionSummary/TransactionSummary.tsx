@@ -27,7 +27,9 @@ export const TransactionSummary = ({
 				{!BigNumber.make(transaction.value()).isZero() && (
 					<>
 						<div className="flex w-full justify-between sm:justify-start">
-							<DetailLabelText className={labelClassName}>{t("COMMON.AMOUNT")}</DetailLabelText>
+							<DetailLabelText className={labelClassName}>
+								{transaction.isValidatorRegistration() ? t("COMMON.LOCKED_AMOUNT") : t("COMMON.AMOUNT")}
+							</DetailLabelText>
 							<TransactionAmountLabel transaction={transaction} profile={profile} />
 						</div>
 
