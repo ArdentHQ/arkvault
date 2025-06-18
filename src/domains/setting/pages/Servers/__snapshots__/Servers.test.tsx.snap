@@ -5278,7 +5278,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
       class="flex flex-1 flex-col"
     >
       <section
-        class="bg-theme-secondary-100 flex w-full items-center justify-between px-8 py-6 md:h-13 dark:bg-black"
+        class="bg-theme-secondary-100 dim:bg-theme-dim-950 flex w-full items-center justify-between px-8 py-6 md:h-13 dark:bg-black"
       >
         <div
           class="flex flex-col gap-2"
@@ -5670,11 +5670,11 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                                     class=""
                                   >
                                     <div
-                                      class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+                                      class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
                                       data-testid="mobile-table-element"
                                     >
                                       <div
-                                        class="dark:bg-theme-dark-950 flex space-x-3 overflow-auto px-4 py-3 bg-theme-secondary-100 dark:bg-black"
+                                        class="dark:bg-theme-dark-950 flex space-x-3 overflow-auto px-4 py-3 bg-theme-secondary-100 dim:bg-theme-dim-950 dark:bg-black"
                                         data-testid="mobile-table-element-header"
                                       >
                                         <span
@@ -5797,7 +5797,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                                           class="grid grid-cols-1 gap-2"
                                         >
                                           <div
-                                            class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
+                                            class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-semibold"
                                           >
                                             Endpoints
                                           </div>
@@ -5899,7 +5899,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                                           class="grid grid-cols-1 gap-2 place-content-start"
                                         >
                                           <div
-                                            class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
+                                            class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-semibold"
                                           >
                                             Network
                                           </div>
@@ -5915,7 +5915,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                                           class="grid grid-cols-1 gap-2 place-content-start"
                                         >
                                           <div
-                                            class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
+                                            class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-semibold"
                                           >
                                             Height
                                           </div>
@@ -8515,7 +8515,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
       class="flex flex-1 flex-col"
     >
       <section
-        class="bg-theme-secondary-100 flex w-full items-center justify-between px-8 py-6 md:h-13 dark:bg-black"
+        class="bg-theme-secondary-100 dim:bg-theme-dim-950 flex w-full items-center justify-between px-8 py-6 md:h-13 dark:bg-black"
       >
         <div
           class="flex flex-col gap-2"
@@ -8938,11 +8938,11 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                     class=""
                                   >
                                     <div
-                                      class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+                                      class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
                                       data-testid="mobile-table-element"
                                     >
                                       <div
-                                        class="dark:bg-theme-dark-950 flex space-x-3 overflow-auto px-4 py-3 bg-theme-secondary-100 dark:bg-black"
+                                        class="dark:bg-theme-dark-950 flex space-x-3 overflow-auto px-4 py-3 bg-theme-secondary-100 dim:bg-theme-dim-950 dark:bg-black"
                                         data-testid="mobile-table-element-header"
                                       >
                                         <span
@@ -9065,7 +9065,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                           class="grid grid-cols-1 gap-2"
                                         >
                                           <div
-                                            class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
+                                            class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-semibold"
                                           >
                                             Endpoints
                                           </div>
@@ -9263,7 +9263,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                           class="grid grid-cols-1 gap-2 place-content-start"
                                         >
                                           <div
-                                            class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
+                                            class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-semibold"
                                           >
                                             Network
                                           </div>
@@ -9279,7 +9279,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                           class="grid grid-cols-1 gap-2 place-content-start"
                                         >
                                           <div
-                                            class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
+                                            class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-semibold"
                                           >
                                             Height
                                           </div>
@@ -10198,7 +10198,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
       class="flex flex-1 flex-col"
     >
       <section
-        class="bg-theme-secondary-100 flex w-full items-center justify-between px-8 py-6 md:h-13 dark:bg-black"
+        class="bg-theme-secondary-100 dim:bg-theme-dim-950 flex w-full items-center justify-between px-8 py-6 md:h-13 dark:bg-black"
       >
         <div
           class="flex flex-col gap-2"
@@ -10621,11 +10621,11 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                     class=""
                                   >
                                     <div
-                                      class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+                                      class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
                                       data-testid="mobile-table-element"
                                     >
                                       <div
-                                        class="dark:bg-theme-dark-950 flex space-x-3 overflow-auto px-4 py-3 bg-theme-secondary-100 dark:bg-black"
+                                        class="dark:bg-theme-dark-950 flex space-x-3 overflow-auto px-4 py-3 bg-theme-secondary-100 dim:bg-theme-dim-950 dark:bg-black"
                                         data-testid="mobile-table-element-header"
                                       >
                                         <span
@@ -10748,7 +10748,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                           class="grid grid-cols-1 gap-2"
                                         >
                                           <div
-                                            class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
+                                            class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-semibold"
                                           >
                                             Endpoints
                                           </div>
@@ -10946,7 +10946,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                           class="grid grid-cols-1 gap-2 place-content-start"
                                         >
                                           <div
-                                            class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
+                                            class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-semibold"
                                           >
                                             Network
                                           </div>
@@ -10962,7 +10962,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                           class="grid grid-cols-1 gap-2 place-content-start"
                                         >
                                           <div
-                                            class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
+                                            class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-semibold"
                                           >
                                             Height
                                           </div>
@@ -13556,7 +13556,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
       class="flex flex-1 flex-col"
     >
       <section
-        class="bg-theme-secondary-100 flex w-full items-center justify-between px-8 py-6 md:h-13 dark:bg-black"
+        class="bg-theme-secondary-100 dim:bg-theme-dim-950 flex w-full items-center justify-between px-8 py-6 md:h-13 dark:bg-black"
       >
         <div
           class="flex flex-col gap-2"
@@ -13976,11 +13976,11 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                     class=""
                                   >
                                     <div
-                                      class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+                                      class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
                                       data-testid="mobile-table-element"
                                     >
                                       <div
-                                        class="dark:bg-theme-dark-950 flex space-x-3 overflow-auto px-4 py-3 bg-theme-secondary-100 dark:bg-black"
+                                        class="dark:bg-theme-dark-950 flex space-x-3 overflow-auto px-4 py-3 bg-theme-secondary-100 dim:bg-theme-dim-950 dark:bg-black"
                                         data-testid="mobile-table-element-header"
                                       >
                                         <span
@@ -14103,7 +14103,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                           class="grid grid-cols-1 gap-2"
                                         >
                                           <div
-                                            class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
+                                            class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-semibold"
                                           >
                                             Endpoints
                                           </div>
@@ -14298,7 +14298,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                           class="grid grid-cols-1 gap-2 place-content-start"
                                         >
                                           <div
-                                            class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
+                                            class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-semibold"
                                           >
                                             Network
                                           </div>
@@ -14314,7 +14314,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                           class="grid grid-cols-1 gap-2 place-content-start"
                                         >
                                           <div
-                                            class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
+                                            class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-semibold"
                                           >
                                             Height
                                           </div>

@@ -11,11 +11,11 @@ exports[`AddressRowMobile > should emit action on select button 1`] = `
           class="pt-3"
         >
           <div
-            class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+            class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
             data-testid="mobile-table-element"
           >
             <div
-              class="dark:bg-theme-dark-950 flex space-x-3 overflow-auto px-4 py-3 bg-theme-secondary-100 dark:bg-black"
+              class="dark:bg-theme-dark-950 flex space-x-3 overflow-auto px-4 py-3 bg-theme-secondary-100 dim:bg-theme-dim-950 dark:bg-black"
               data-testid="mobile-table-element-header"
             >
               <span
@@ -56,7 +56,7 @@ exports[`AddressRowMobile > should emit action on select button 1`] = `
                 class="grid grid-cols-1 gap-2"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-semibold"
                 >
                   Address
                 </div>
@@ -77,7 +77,7 @@ exports[`AddressRowMobile > should emit action on select button 1`] = `
                 class="grid grid-cols-1 gap-2"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-semibold"
                 >
                   Voting for
                 </div>
@@ -145,7 +145,7 @@ exports[`AddressRowMobile > should emit action on select button 1`] = `
                 class="grid-cols-1 gap-2 hidden sm:grid"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-semibold"
                 >
                   Validator Status
                 </div>
@@ -180,11 +180,11 @@ exports[`AddressRowMobile > should render in 375 screen width 1`] = `
           class="pt-3"
         >
           <div
-            class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+            class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
             data-testid="mobile-table-element"
           >
             <div
-              class="dark:bg-theme-dark-950 flex space-x-3 overflow-auto px-4 py-3 bg-theme-secondary-100 dark:bg-black"
+              class="dark:bg-theme-dark-950 flex space-x-3 overflow-auto px-4 py-3 bg-theme-secondary-100 dim:bg-theme-dim-950 dark:bg-black"
               data-testid="mobile-table-element-header"
             >
               <span
@@ -225,7 +225,7 @@ exports[`AddressRowMobile > should render in 375 screen width 1`] = `
                 class="grid grid-cols-1 gap-2"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-semibold"
                 >
                   Address
                 </div>
@@ -246,7 +246,7 @@ exports[`AddressRowMobile > should render in 375 screen width 1`] = `
                 class="grid grid-cols-1 gap-2"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-semibold"
                 >
                   Voting for
                 </div>
@@ -314,7 +314,7 @@ exports[`AddressRowMobile > should render in 375 screen width 1`] = `
                 class="grid-cols-1 gap-2 hidden sm:grid"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-semibold"
                 >
                   Validator Status
                 </div>
@@ -348,11 +348,11 @@ exports[`AddressRowMobile > should render in 420 screen width 1`] = `
           class="pt-3"
         >
           <div
-            class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+            class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
             data-testid="mobile-table-element"
           >
             <div
-              class="dark:bg-theme-dark-950 flex space-x-3 overflow-auto px-4 py-3 bg-theme-secondary-100 dark:bg-black"
+              class="dark:bg-theme-dark-950 flex space-x-3 overflow-auto px-4 py-3 bg-theme-secondary-100 dim:bg-theme-dim-950 dark:bg-black"
               data-testid="mobile-table-element-header"
             >
               <span
@@ -393,7 +393,7 @@ exports[`AddressRowMobile > should render in 420 screen width 1`] = `
                 class="grid grid-cols-1 gap-2"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-semibold"
                 >
                   Address
                 </div>
@@ -414,7 +414,7 @@ exports[`AddressRowMobile > should render in 420 screen width 1`] = `
                 class="grid grid-cols-1 gap-2"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-semibold"
                 >
                   Voting for
                 </div>
@@ -482,7 +482,7 @@ exports[`AddressRowMobile > should render in 420 screen width 1`] = `
                 class="grid-cols-1 gap-2 hidden sm:grid"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-semibold"
                 >
                   Validator Status
                 </div>
@@ -516,11 +516,11 @@ exports[`AddressRowMobile > should render when the maximum votes is greater than
           class="pt-3"
         >
           <div
-            class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+            class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
             data-testid="mobile-table-element"
           >
             <div
-              class="dark:bg-theme-dark-950 flex space-x-3 overflow-auto px-4 py-3 bg-theme-secondary-100 dark:bg-black"
+              class="dark:bg-theme-dark-950 flex space-x-3 overflow-auto px-4 py-3 bg-theme-secondary-100 dim:bg-theme-dim-950 dark:bg-black"
               data-testid="mobile-table-element-header"
             >
               <span
@@ -561,7 +561,7 @@ exports[`AddressRowMobile > should render when the maximum votes is greater than
                 class="grid grid-cols-1 gap-2"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-semibold"
                 >
                   Address
                 </div>
@@ -582,7 +582,7 @@ exports[`AddressRowMobile > should render when the maximum votes is greater than
                 class="grid grid-cols-1 gap-2"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-semibold"
                 >
                   Voting for
                 </div>
@@ -650,7 +650,7 @@ exports[`AddressRowMobile > should render when the maximum votes is greater than
                 class="grid-cols-1 gap-2 hidden sm:grid"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-semibold"
                 >
                   Validator Status
                 </div>
@@ -683,11 +683,11 @@ exports[`AddressRowMobile > should render when the wallet has many votes 1`] = `
           class="pt-3"
         >
           <div
-            class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+            class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
             data-testid="mobile-table-element"
           >
             <div
-              class="dark:bg-theme-dark-950 flex space-x-3 overflow-auto px-4 py-3 bg-theme-secondary-100 dark:bg-black"
+              class="dark:bg-theme-dark-950 flex space-x-3 overflow-auto px-4 py-3 bg-theme-secondary-100 dim:bg-theme-dim-950 dark:bg-black"
               data-testid="mobile-table-element-header"
             >
               <span
@@ -728,7 +728,7 @@ exports[`AddressRowMobile > should render when the wallet has many votes 1`] = `
                 class="grid grid-cols-1 gap-2"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-semibold"
                 >
                   Address
                 </div>
@@ -749,7 +749,7 @@ exports[`AddressRowMobile > should render when the wallet has many votes 1`] = `
                 class="grid grid-cols-1 gap-2"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-semibold"
                 >
                   Voting for
                 </div>
@@ -817,7 +817,7 @@ exports[`AddressRowMobile > should render when the wallet has many votes 1`] = `
                 class="grid-cols-1 gap-2 hidden sm:grid"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-semibold"
                 >
                   Validator Status
                 </div>
@@ -850,11 +850,11 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
           class="pt-3"
         >
           <div
-            class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+            class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
             data-testid="mobile-table-element"
           >
             <div
-              class="dark:bg-theme-dark-950 flex space-x-3 overflow-auto px-4 py-3 bg-theme-secondary-100 dark:bg-black"
+              class="dark:bg-theme-dark-950 flex space-x-3 overflow-auto px-4 py-3 bg-theme-secondary-100 dim:bg-theme-dim-950 dark:bg-black"
               data-testid="mobile-table-element-header"
             >
               <span
@@ -895,7 +895,7 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                 class="grid grid-cols-1 gap-2"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-semibold"
                 >
                   Address
                 </div>
@@ -916,7 +916,7 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                 class="grid grid-cols-1 gap-2"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-semibold"
                 >
                   Voting for
                 </div>
@@ -984,7 +984,7 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                 class="grid-cols-1 gap-2 hidden sm:grid"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-semibold"
                 >
                   Validator Status
                 </div>
@@ -1008,11 +1008,11 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
           class="pt-3"
         >
           <div
-            class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+            class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
             data-testid="mobile-table-element"
           >
             <div
-              class="dark:bg-theme-dark-950 flex space-x-3 overflow-auto px-4 py-3 bg-theme-secondary-100 dark:bg-black"
+              class="dark:bg-theme-dark-950 flex space-x-3 overflow-auto px-4 py-3 bg-theme-secondary-100 dim:bg-theme-dim-950 dark:bg-black"
               data-testid="mobile-table-element-header"
             >
               <span
@@ -1043,7 +1043,7 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                 class="grid grid-cols-1 gap-2"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-semibold"
                 >
                   Address
                 </div>
@@ -1064,7 +1064,7 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                 class="grid grid-cols-1 gap-2"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-semibold"
                 >
                   Voting for
                 </div>
@@ -1080,7 +1080,7 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                 class="grid-cols-1 gap-2 hidden sm:grid"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-semibold"
                 >
                   Validator Status
                 </div>
@@ -1112,11 +1112,11 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
           class="pt-3"
         >
           <div
-            class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+            class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
             data-testid="mobile-table-element"
           >
             <div
-              class="dark:bg-theme-dark-950 flex space-x-3 overflow-auto px-4 py-3 bg-theme-secondary-100 dark:bg-black"
+              class="dark:bg-theme-dark-950 flex space-x-3 overflow-auto px-4 py-3 bg-theme-secondary-100 dim:bg-theme-dim-950 dark:bg-black"
               data-testid="mobile-table-element-header"
             >
               <span
@@ -1157,7 +1157,7 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                 class="grid grid-cols-1 gap-2"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-semibold"
                 >
                   Address
                 </div>
@@ -1178,7 +1178,7 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                 class="grid grid-cols-1 gap-2"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-semibold"
                 >
                   Voting for
                 </div>
@@ -1246,7 +1246,7 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                 class="grid-cols-1 gap-2 hidden sm:grid"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-semibold"
                 >
                   Validator Status
                 </div>
@@ -1270,11 +1270,11 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
           class="pt-3"
         >
           <div
-            class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+            class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
             data-testid="mobile-table-element"
           >
             <div
-              class="dark:bg-theme-dark-950 flex space-x-3 overflow-auto px-4 py-3 bg-theme-secondary-100 dark:bg-black"
+              class="dark:bg-theme-dark-950 flex space-x-3 overflow-auto px-4 py-3 bg-theme-secondary-100 dim:bg-theme-dim-950 dark:bg-black"
               data-testid="mobile-table-element-header"
             >
               <span
@@ -1305,7 +1305,7 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                 class="grid grid-cols-1 gap-2"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-semibold"
                 >
                   Address
                 </div>
@@ -1326,7 +1326,7 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                 class="grid grid-cols-1 gap-2"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-semibold"
                 >
                   Voting for
                 </div>
@@ -1342,7 +1342,7 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                 class="grid-cols-1 gap-2 hidden sm:grid"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-semibold"
                 >
                   Validator Status
                 </div>
@@ -1374,11 +1374,11 @@ exports[`AddressRowMobile > should render when wallet not loaded 1`] = `
           class="pt-3"
         >
           <div
-            class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+            class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
             data-testid="mobile-table-element"
           >
             <div
-              class="dark:bg-theme-dark-950 flex space-x-3 overflow-auto px-4 py-3 bg-theme-secondary-100 dark:bg-black"
+              class="dark:bg-theme-dark-950 flex space-x-3 overflow-auto px-4 py-3 bg-theme-secondary-100 dim:bg-theme-dim-950 dark:bg-black"
               data-testid="mobile-table-element-header"
             >
               <span
@@ -1410,7 +1410,7 @@ exports[`AddressRowMobile > should render when wallet not loaded 1`] = `
                 class="grid grid-cols-1 gap-2"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-semibold"
                 >
                   Address
                 </div>
@@ -1431,7 +1431,7 @@ exports[`AddressRowMobile > should render when wallet not loaded 1`] = `
                 class="grid grid-cols-1 gap-2"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-semibold"
                 >
                   Voting for
                 </div>
@@ -1448,7 +1448,7 @@ exports[`AddressRowMobile > should render when wallet not loaded 1`] = `
                 class="grid-cols-1 gap-2 hidden sm:grid"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-semibold"
                 >
                   Validator Status
                 </div>
@@ -1480,11 +1480,11 @@ exports[`AddressRowMobile > should render with active validator 1`] = `
           class="pt-3"
         >
           <div
-            class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+            class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
             data-testid="mobile-table-element"
           >
             <div
-              class="dark:bg-theme-dark-950 flex space-x-3 overflow-auto px-4 py-3 bg-theme-secondary-100 dark:bg-black"
+              class="dark:bg-theme-dark-950 flex space-x-3 overflow-auto px-4 py-3 bg-theme-secondary-100 dim:bg-theme-dim-950 dark:bg-black"
               data-testid="mobile-table-element-header"
             >
               <span
@@ -1525,7 +1525,7 @@ exports[`AddressRowMobile > should render with active validator 1`] = `
                 class="grid grid-cols-1 gap-2"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-semibold"
                 >
                   Address
                 </div>
@@ -1546,7 +1546,7 @@ exports[`AddressRowMobile > should render with active validator 1`] = `
                 class="grid grid-cols-1 gap-2"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-semibold"
                 >
                   Voting for
                 </div>
@@ -1614,7 +1614,7 @@ exports[`AddressRowMobile > should render with active validator 1`] = `
                 class="grid-cols-1 gap-2 hidden sm:grid"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-semibold"
                 >
                   Validator Status
                 </div>
@@ -1647,11 +1647,11 @@ exports[`AddressRowMobile > should render with resigned validator 1`] = `
           class="pt-3"
         >
           <div
-            class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+            class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
             data-testid="mobile-table-element"
           >
             <div
-              class="dark:bg-theme-dark-950 flex space-x-3 overflow-auto px-4 py-3 bg-theme-secondary-100 dark:bg-black"
+              class="dark:bg-theme-dark-950 flex space-x-3 overflow-auto px-4 py-3 bg-theme-secondary-100 dim:bg-theme-dim-950 dark:bg-black"
               data-testid="mobile-table-element-header"
             >
               <span
@@ -1692,7 +1692,7 @@ exports[`AddressRowMobile > should render with resigned validator 1`] = `
                 class="grid grid-cols-1 gap-2"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-semibold"
                 >
                   Address
                 </div>
@@ -1713,7 +1713,7 @@ exports[`AddressRowMobile > should render with resigned validator 1`] = `
                 class="grid grid-cols-1 gap-2"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-semibold"
                 >
                   Voting for
                 </div>
@@ -1781,7 +1781,7 @@ exports[`AddressRowMobile > should render with resigned validator 1`] = `
                 class="grid-cols-1 gap-2 hidden sm:grid"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-semibold"
                 >
                   Validator Status
                 </div>
@@ -1814,11 +1814,11 @@ exports[`AddressRowMobile > should render with standby validator 1`] = `
           class="pt-3"
         >
           <div
-            class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+            class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
             data-testid="mobile-table-element"
           >
             <div
-              class="dark:bg-theme-dark-950 flex space-x-3 overflow-auto px-4 py-3 bg-theme-secondary-100 dark:bg-black"
+              class="dark:bg-theme-dark-950 flex space-x-3 overflow-auto px-4 py-3 bg-theme-secondary-100 dim:bg-theme-dim-950 dark:bg-black"
               data-testid="mobile-table-element-header"
             >
               <span
@@ -1859,7 +1859,7 @@ exports[`AddressRowMobile > should render with standby validator 1`] = `
                 class="grid grid-cols-1 gap-2"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-semibold"
                 >
                   Address
                 </div>
@@ -1880,7 +1880,7 @@ exports[`AddressRowMobile > should render with standby validator 1`] = `
                 class="grid grid-cols-1 gap-2"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-semibold"
                 >
                   Voting for
                 </div>
@@ -1948,7 +1948,7 @@ exports[`AddressRowMobile > should render with standby validator 1`] = `
                 class="grid-cols-1 gap-2 hidden sm:grid"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-semibold"
                 >
                   Validator Status
                 </div>

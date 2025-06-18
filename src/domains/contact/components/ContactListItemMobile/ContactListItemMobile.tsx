@@ -52,18 +52,21 @@ export const ContactListItemMobile = ({ contact, onSend, options, onAction, hasB
 										e.stopPropagation();
 										onSend(contact.addresses().first());
 									}}
-									className="text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 p-0 text-sm hover:underline"
+									className="text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 p-0 text-sm hover:underline"
 									data-testid="ContactListItemMobileAddress__send-button"
 								>
 									{t("COMMON.SEND")}
 								</Button>
 							</Tooltip>
 
-							<span className="bg-theme-secondary-300 dark:bg-theme-secondary-800 block h-5 w-px" />
+							<span className="bg-theme-secondary-300 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 block h-5 w-px" />
 
 							<Dropdown
 								toggleContent={
-									<button type="button" className="text-theme-secondary-700 flex">
+									<button
+										type="button"
+										className="text-theme-secondary-700 dim:text-theme-dim-200 flex"
+									>
 										<Icon name="EllipsisVerticalFilled" size="md" />
 									</button>
 								}
