@@ -89,7 +89,7 @@ exports[`UpdateWalletName > should render 1`] = `
                   class="relative"
                 >
                   <div
-                    class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                    class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                   >
                     <div
                       class="relative flex h-full flex-1"
@@ -97,7 +97,7 @@ exports[`UpdateWalletName > should render 1`] = `
                       <input
                         aria-invalid="false"
                         autocomplete="off"
-                        class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
+                        class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
                         data-testid="UpdateWalletName__input"
                         name="name"
                         type="text"
@@ -239,14 +239,14 @@ exports[`UpdateWalletName > should show an error message for duplicate name 1`] 
                       <input
                         aria-invalid="true"
                         autocomplete="off"
-                        class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
+                        class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
                         data-testid="UpdateWalletName__input"
                         name="name"
                         type="text"
                       />
                     </div>
                     <div
-                      class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-danger-500"
+                      class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-danger-500"
                       data-testid="Input__addon-end"
                     >
                       <div
@@ -435,14 +435,14 @@ exports[`UpdateWalletName > should show an error message for duplicate name 2`] 
                       <input
                         aria-invalid="true"
                         autocomplete="off"
-                        class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
+                        class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
                         data-testid="UpdateWalletName__input"
                         name="name"
                         type="text"
                       />
                     </div>
                     <div
-                      class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-danger-500"
+                      class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-danger-500"
                       data-testid="Input__addon-end"
                     >
                       <div
@@ -631,14 +631,14 @@ exports[`UpdateWalletName > should show an error message for duplicate name 3`] 
                       <input
                         aria-invalid="true"
                         autocomplete="off"
-                        class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
+                        class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
                         data-testid="UpdateWalletName__input"
                         name="name"
                         type="text"
                       />
                     </div>
                     <div
-                      class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-danger-500"
+                      class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-danger-500"
                       data-testid="Input__addon-end"
                     >
                       <div
@@ -827,14 +827,14 @@ exports[`UpdateWalletName > should show an error message for duplicate name 4`] 
                       <input
                         aria-invalid="true"
                         autocomplete="off"
-                        class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
+                        class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
                         data-testid="UpdateWalletName__input"
                         name="name"
                         type="text"
                       />
                     </div>
                     <div
-                      class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-danger-500"
+                      class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-danger-500"
                       data-testid="Input__addon-end"
                     >
                       <div
@@ -1023,14 +1023,14 @@ exports[`UpdateWalletName > should show error message when name consists only of
                       <input
                         aria-invalid="true"
                         autocomplete="off"
-                        class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
+                        class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
                         data-testid="UpdateWalletName__input"
                         name="name"
                         type="text"
                       />
                     </div>
                     <div
-                      class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-danger-500"
+                      class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-danger-500"
                       data-testid="Input__addon-end"
                     >
                       <div
@@ -1219,14 +1219,14 @@ exports[`UpdateWalletName > should show error message when name exceeds 42 chara
                       <input
                         aria-invalid="true"
                         autocomplete="off"
-                        class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
+                        class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
                         data-testid="UpdateWalletName__input"
                         name="name"
                         type="text"
                       />
                     </div>
                     <div
-                      class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-danger-500"
+                      class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-danger-500"
                       data-testid="Input__addon-end"
                     >
                       <div

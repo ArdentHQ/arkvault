@@ -970,7 +970,7 @@ exports[`Servers Settings > should render servers settings 1`] = `
                                       type="checkbox"
                                     />
                                     <div
-                                      class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
+                                      class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                                     >
                                       <span
                                         class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
@@ -2310,7 +2310,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                       type="checkbox"
                                     />
                                     <div
-                                      class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
+                                      class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                                     >
                                       <span
                                         class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
@@ -2865,7 +2865,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                               type="checkbox"
                                             />
                                             <div
-                                              class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
+                                              class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                                             >
                                               <span
                                                 class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
@@ -3991,7 +3991,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                       type="checkbox"
                                     />
                                     <div
-                                      class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
+                                      class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                                     >
                                       <span
                                         class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
@@ -4419,7 +4419,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                               type="checkbox"
                                             />
                                             <div
-                                              class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
+                                              class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                                             >
                                               <span
                                                 class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
@@ -5478,7 +5478,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                                       type="checkbox"
                                     />
                                     <div
-                                      class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
+                                      class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                                     >
                                       <span
                                         class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
@@ -5694,7 +5694,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                                               type="checkbox"
                                             />
                                             <div
-                                              class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
+                                              class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                                             >
                                               <span
                                                 class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
@@ -7101,7 +7101,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                       type="checkbox"
                                     />
                                     <div
-                                      class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
+                                      class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                                     >
                                       <span
                                         class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
@@ -7656,7 +7656,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                               type="checkbox"
                                             />
                                             <div
-                                              class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
+                                              class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                                             >
                                               <span
                                                 class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
@@ -8715,7 +8715,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                       type="checkbox"
                                     />
                                     <div
-                                      class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
+                                      class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                                     >
                                       <span
                                         class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
@@ -8962,7 +8962,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                               type="checkbox"
                                             />
                                             <div
-                                              class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
+                                              class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                                             >
                                               <span
                                                 class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
@@ -10398,7 +10398,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                       type="checkbox"
                                     />
                                     <div
-                                      class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
+                                      class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                                     >
                                       <span
                                         class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
@@ -10645,7 +10645,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                               type="checkbox"
                                             />
                                             <div
-                                              class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
+                                              class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                                             >
                                               <span
                                                 class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
@@ -12148,7 +12148,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                       type="checkbox"
                                     />
                                     <div
-                                      class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
+                                      class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                                     >
                                       <span
                                         class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
@@ -12697,7 +12697,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                               type="checkbox"
                                             />
                                             <div
-                                              class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
+                                              class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                                             >
                                               <span
                                                 class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
@@ -13756,7 +13756,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                       type="checkbox"
                                     />
                                     <div
-                                      class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
+                                      class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                                     >
                                       <span
                                         class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
@@ -14000,7 +14000,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                               type="checkbox"
                                             />
                                             <div
-                                              class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
+                                              class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                                             >
                                               <span
                                                 class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"

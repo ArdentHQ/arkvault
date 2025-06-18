@@ -39,7 +39,7 @@ exports[`TransactionExportProgress > should render with progress count 1`] = `
       class="flex flex-col overflow-hidden rounded-xl mb-6"
     >
       <div
-        class="flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-info-100 text-theme-info-700 dark:bg-theme-info-700"
+        class="dim:text-white flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-info-100 text-theme-info-700 dark:bg-theme-info-700 dim:bg-theme-dim-navy-600"
       >
         <div>
           <div
@@ -84,7 +84,7 @@ exports[`TransactionExportProgress > should render with progress count 1`] = `
         </span>
       </div>
       <div
-        class="dark:bg-theme-secondary-800 w-full p-4 text-left text-sm leading-relaxed break-words bg-theme-info-50"
+        class="dark:bg-theme-secondary-800 dim:bg-theme-dim-800 dim:text-theme-dim-50 w-full p-4 text-left text-sm leading-relaxed break-words bg-theme-info-50"
       >
         10 transactions have been retrieved so far, please wait.
       </div>

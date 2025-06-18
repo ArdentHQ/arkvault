@@ -812,14 +812,14 @@ exports[`Votes > should filter current validators 1`] = `
                     </div>
                   </div>
                   <div
-                    class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 pl-12"
+                    class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 h-12 overflow-hidden sm:h-14 pl-12"
                   >
                     <div
                       class="relative flex h-full flex-1"
                     >
                       <input
                         autocomplete="off"
-                        class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
+                        class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
                         data-testid="Input"
                         placeholder="Enter the validator’s name or address"
                         type="text"
@@ -3851,14 +3851,14 @@ exports[`Votes > should render 1`] = `
                     </div>
                   </div>
                   <div
-                    class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 pl-12"
+                    class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 h-12 overflow-hidden sm:h-14 pl-12"
                   >
                     <div
                       class="relative flex h-full flex-1"
                     >
                       <input
                         autocomplete="off"
-                        class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
+                        class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
                         data-testid="Input"
                         placeholder="Enter the validator’s name or address"
                         type="text"
@@ -11829,14 +11829,14 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                     </div>
                   </div>
                   <div
-                    class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 pl-12"
+                    class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 h-12 overflow-hidden sm:h-14 pl-12"
                   >
                     <div
                       class="relative flex h-full flex-1"
                     >
                       <input
                         autocomplete="off"
-                        class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
+                        class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
                         data-testid="Input"
                         placeholder="Enter the validator’s name or address"
                         type="text"
@@ -19807,14 +19807,14 @@ exports[`Votes > should select a validator 1`] = `
                     </div>
                   </div>
                   <div
-                    class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 pl-12"
+                    class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 h-12 overflow-hidden sm:h-14 pl-12"
                   >
                     <div
                       class="relative flex h-full flex-1"
                     >
                       <input
                         autocomplete="off"
-                        class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
+                        class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
                         data-testid="Input"
                         placeholder="Enter the validator’s name or address"
                         type="text"
@@ -27978,7 +27978,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
           class="flex flex-col overflow-hidden rounded-xl mb-4"
         >
           <div
-            class="flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-warning-100 text-theme-warning-700 dark:bg-theme-warning-700"
+            class="dim:text-white flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-warning-100 text-theme-warning-700 dark:bg-theme-warning-700"
           >
             <div>
               <div
@@ -28023,7 +28023,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
             </span>
           </div>
           <div
-            class="dark:bg-theme-secondary-800 w-full p-4 text-left text-sm leading-relaxed break-words bg-theme-warning-50"
+            class="dark:bg-theme-secondary-800 dim:bg-theme-dim-800 dim:text-theme-dim-50 w-full p-4 text-left text-sm leading-relaxed break-words bg-theme-warning-50"
           >
             <div
               data-testid="Votes__resigned-vote"
@@ -28108,14 +28108,14 @@ exports[`Votes > should trigger network connection warning 1`] = `
                     </div>
                   </div>
                   <div
-                    class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 pl-12"
+                    class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 h-12 overflow-hidden sm:h-14 pl-12"
                   >
                     <div
                       class="relative flex h-full flex-1"
                     >
                       <input
                         autocomplete="off"
-                        class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
+                        class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
                         data-testid="Input"
                         placeholder="Enter the validator’s name or address"
                         type="text"
