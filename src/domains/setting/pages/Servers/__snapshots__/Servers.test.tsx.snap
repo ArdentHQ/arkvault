@@ -980,7 +980,7 @@ exports[`Servers Settings > should render servers settings 1`] = `
                                 </span>
                               </div>
                               <span
-                                class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-medium"
+                                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-medium"
                                 data-testid="list-divided-item__label--description"
                               >
                                 Only used when custom servers are selected. In case of issues, the wallet will fallback to using the default nodes to broadcast transactions.
@@ -1010,7 +1010,7 @@ exports[`Servers Settings > should render servers settings 1`] = `
                                 </span>
                               </div>
                               <span
-                                class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-medium"
+                                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-medium"
                                 data-testid="list-divided-item__label--description"
                               >
                                 Check health of default nodes for each enabled network.
@@ -2320,7 +2320,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                 </span>
                               </div>
                               <span
-                                class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-medium"
+                                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-medium"
                                 data-testid="list-divided-item__label--description"
                               >
                                 Only used when custom servers are selected. In case of issues, the wallet will fallback to using the default nodes to broadcast transactions.
@@ -2350,7 +2350,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                 </span>
                               </div>
                               <span
-                                class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-medium"
+                                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-medium"
                                 data-testid="list-divided-item__label--description"
                               >
                                 Check health of default nodes for each enabled network.
@@ -4001,7 +4001,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                 </span>
                               </div>
                               <span
-                                class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-medium"
+                                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-medium"
                                 data-testid="list-divided-item__label--description"
                               >
                                 Only used when custom servers are selected. In case of issues, the wallet will fallback to using the default nodes to broadcast transactions.
@@ -4031,7 +4031,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                 </span>
                               </div>
                               <span
-                                class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-medium"
+                                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-medium"
                                 data-testid="list-divided-item__label--description"
                               >
                                 Check health of default nodes for each enabled network.
@@ -5488,7 +5488,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                                 </span>
                               </div>
                               <span
-                                class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-medium"
+                                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-medium"
                                 data-testid="list-divided-item__label--description"
                               >
                                 Only used when custom servers are selected. In case of issues, the wallet will fallback to using the default nodes to broadcast transactions.
@@ -5518,7 +5518,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                                 </span>
                               </div>
                               <span
-                                class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-medium"
+                                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-medium"
                                 data-testid="list-divided-item__label--description"
                               >
                                 Check health of default nodes for each enabled network.
@@ -7111,7 +7111,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                 </span>
                               </div>
                               <span
-                                class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-medium"
+                                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-medium"
                                 data-testid="list-divided-item__label--description"
                               >
                                 Only used when custom servers are selected. In case of issues, the wallet will fallback to using the default nodes to broadcast transactions.
@@ -7141,7 +7141,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                 </span>
                               </div>
                               <span
-                                class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-medium"
+                                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-medium"
                                 data-testid="list-divided-item__label--description"
                               >
                                 Check health of default nodes for each enabled network.
@@ -8725,7 +8725,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                 </span>
                               </div>
                               <span
-                                class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-medium"
+                                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-medium"
                                 data-testid="list-divided-item__label--description"
                               >
                                 Only used when custom servers are selected. In case of issues, the wallet will fallback to using the default nodes to broadcast transactions.
@@ -8755,7 +8755,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                 </span>
                               </div>
                               <span
-                                class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-medium"
+                                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-medium"
                                 data-testid="list-divided-item__label--description"
                               >
                                 Check health of default nodes for each enabled network.
@@ -10408,7 +10408,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                 </span>
                               </div>
                               <span
-                                class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-medium"
+                                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-medium"
                                 data-testid="list-divided-item__label--description"
                               >
                                 Only used when custom servers are selected. In case of issues, the wallet will fallback to using the default nodes to broadcast transactions.
@@ -10438,7 +10438,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                 </span>
                               </div>
                               <span
-                                class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-medium"
+                                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-medium"
                                 data-testid="list-divided-item__label--description"
                               >
                                 Check health of default nodes for each enabled network.
@@ -12158,7 +12158,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                 </span>
                               </div>
                               <span
-                                class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-medium"
+                                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-medium"
                                 data-testid="list-divided-item__label--description"
                               >
                                 Only used when custom servers are selected. In case of issues, the wallet will fallback to using the default nodes to broadcast transactions.
@@ -12188,7 +12188,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                 </span>
                               </div>
                               <span
-                                class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-medium"
+                                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-medium"
                                 data-testid="list-divided-item__label--description"
                               >
                                 Check health of default nodes for each enabled network.
@@ -13766,7 +13766,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                 </span>
                               </div>
                               <span
-                                class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-medium"
+                                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-medium"
                                 data-testid="list-divided-item__label--description"
                               >
                                 Only used when custom servers are selected. In case of issues, the wallet will fallback to using the default nodes to broadcast transactions.
@@ -13796,7 +13796,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                 </span>
                               </div>
                               <span
-                                class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-medium"
+                                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-medium"
                                 data-testid="list-divided-item__label--description"
                               >
                                 Check health of default nodes for each enabled network.
