@@ -30,7 +30,7 @@ export const InputPassword = (properties: InputPasswordProperties) => {
 							<Icon
 								name={show ? "EyeSlash" : "Eye"}
 								size="lg"
-								className="text-theme-secondary-700 dark:text-theme-dark-200"
+								className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200"
 							/>
 						</button>
 					),

@@ -970,7 +970,7 @@ exports[`Servers Settings > should render servers settings 1`] = `
                                       type="checkbox"
                                     />
                                     <div
-                                      class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
+                                      class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                                     >
                                       <span
                                         class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
@@ -1316,7 +1316,7 @@ exports[`Servers Settings > should render servers settings 1`] = `
                         class="bg-theme-background shadow-footer-smooth dark:shadow-footer-smooth-dark fixed inset-x-0 bottom-0 flex gap-3 px-8 py-3 sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none dark:bg-black sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
                       >
                         <button
-                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
+                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600"
                           data-testid="Server-settings__submit-button"
                           disabled=""
                           type="submit"
@@ -2310,7 +2310,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                       type="checkbox"
                                     />
                                     <div
-                                      class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
+                                      class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                                     >
                                       <span
                                         class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
@@ -2865,7 +2865,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                               type="checkbox"
                                             />
                                             <div
-                                              class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
+                                              class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                                             >
                                               <span
                                                 class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
@@ -2997,7 +2997,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                         class="bg-theme-background shadow-footer-smooth dark:shadow-footer-smooth-dark fixed inset-x-0 bottom-0 flex gap-3 px-8 py-3 sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none dark:bg-black sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
                       >
                         <button
-                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
+                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600"
                           data-testid="Server-settings__submit-button"
                           disabled=""
                           type="submit"
@@ -3991,7 +3991,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                       type="checkbox"
                                     />
                                     <div
-                                      class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
+                                      class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                                     >
                                       <span
                                         class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
@@ -4419,7 +4419,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                               type="checkbox"
                                             />
                                             <div
-                                              class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
+                                              class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                                             >
                                               <span
                                                 class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
@@ -4551,7 +4551,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                         class="bg-theme-background shadow-footer-smooth dark:shadow-footer-smooth-dark fixed inset-x-0 bottom-0 flex gap-3 px-8 py-3 sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none dark:bg-black sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
                       >
                         <button
-                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
+                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600"
                           data-testid="Server-settings__submit-button"
                           disabled=""
                           type="submit"
@@ -5478,7 +5478,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                                       type="checkbox"
                                     />
                                     <div
-                                      class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
+                                      class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                                     >
                                       <span
                                         class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
@@ -5694,7 +5694,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                                               type="checkbox"
                                             />
                                             <div
-                                              class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
+                                              class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                                             >
                                               <span
                                                 class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
@@ -6107,7 +6107,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                         class="bg-theme-background shadow-footer-smooth dark:shadow-footer-smooth-dark fixed inset-x-0 bottom-0 flex gap-3 px-8 py-3 sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none dark:bg-black sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
                       >
                         <button
-                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
+                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600"
                           data-testid="Server-settings__submit-button"
                           disabled=""
                           type="submit"
@@ -7101,7 +7101,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                       type="checkbox"
                                     />
                                     <div
-                                      class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
+                                      class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                                     >
                                       <span
                                         class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
@@ -7656,7 +7656,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                               type="checkbox"
                                             />
                                             <div
-                                              class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
+                                              class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                                             >
                                               <span
                                                 class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
@@ -7788,7 +7788,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                         class="bg-theme-background shadow-footer-smooth dark:shadow-footer-smooth-dark fixed inset-x-0 bottom-0 flex gap-3 px-8 py-3 sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none dark:bg-black sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
                       >
                         <button
-                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
+                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600"
                           data-testid="Server-settings__submit-button"
                           disabled=""
                           type="submit"
@@ -8715,7 +8715,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                       type="checkbox"
                                     />
                                     <div
-                                      class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
+                                      class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                                     >
                                       <span
                                         class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
@@ -8962,7 +8962,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                               type="checkbox"
                                             />
                                             <div
-                                              class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
+                                              class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                                             >
                                               <span
                                                 class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
@@ -9471,7 +9471,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                         class="bg-theme-background shadow-footer-smooth dark:shadow-footer-smooth-dark fixed inset-x-0 bottom-0 flex gap-3 px-8 py-3 sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none dark:bg-black sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
                       >
                         <button
-                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
+                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600"
                           data-testid="Server-settings__submit-button"
                           disabled=""
                           type="submit"
@@ -10398,7 +10398,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                       type="checkbox"
                                     />
                                     <div
-                                      class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
+                                      class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                                     >
                                       <span
                                         class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
@@ -10645,7 +10645,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                               type="checkbox"
                                             />
                                             <div
-                                              class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
+                                              class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                                             >
                                               <span
                                                 class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
@@ -11154,7 +11154,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                         class="bg-theme-background shadow-footer-smooth dark:shadow-footer-smooth-dark fixed inset-x-0 bottom-0 flex gap-3 px-8 py-3 sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none dark:bg-black sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
                       >
                         <button
-                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
+                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600"
                           data-testid="Server-settings__submit-button"
                           disabled=""
                           type="submit"
@@ -12148,7 +12148,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                       type="checkbox"
                                     />
                                     <div
-                                      class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
+                                      class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                                     >
                                       <span
                                         class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
@@ -12697,7 +12697,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                               type="checkbox"
                                             />
                                             <div
-                                              class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
+                                              class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                                             >
                                               <span
                                                 class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
@@ -12829,7 +12829,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                         class="bg-theme-background shadow-footer-smooth dark:shadow-footer-smooth-dark fixed inset-x-0 bottom-0 flex gap-3 px-8 py-3 sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none dark:bg-black sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
                       >
                         <button
-                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
+                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600"
                           data-testid="Server-settings__submit-button"
                           disabled=""
                           type="submit"
@@ -13756,7 +13756,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                       type="checkbox"
                                     />
                                     <div
-                                      class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
+                                      class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                                     >
                                       <span
                                         class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
@@ -14000,7 +14000,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                               type="checkbox"
                                             />
                                             <div
-                                              class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
+                                              class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                                             >
                                               <span
                                                 class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
@@ -14506,7 +14506,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                         class="bg-theme-background shadow-footer-smooth dark:shadow-footer-smooth-dark fixed inset-x-0 bottom-0 flex gap-3 px-8 py-3 sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none dark:bg-black sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
                       >
                         <button
-                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
+                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600"
                           data-testid="Server-settings__submit-button"
                           disabled=""
                           type="submit"

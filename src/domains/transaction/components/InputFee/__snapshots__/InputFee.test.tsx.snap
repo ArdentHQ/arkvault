@@ -27,10 +27,10 @@ exports[`InputFee > advanced view type > should allow to input a value 1`] = `
             type="checkbox"
           />
           <div
-            class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-6"
+            class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-6"
           >
             <span
-              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 h-3 w-3 handle-inner"
+              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 dim:bg-theme-dim-navy-600 h-3 w-3 handle-inner"
             />
           </div>
         </label>
@@ -63,14 +63,14 @@ exports[`InputFee > advanced view type > should allow to input a value 1`] = `
             class="relative"
           >
             <div
-              class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+              class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
             >
               <div
                 class="relative flex h-full flex-1"
               >
                 <input
                   autocomplete="off"
-                  class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
+                  class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
                   data-testid="Input_GasPrice"
                   name="gasPrice"
                   type="text"
@@ -78,7 +78,7 @@ exports[`InputFee > advanced view type > should allow to input a value 1`] = `
                 />
               </div>
               <div
-                class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600 divide-none"
+                class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600 divide-none"
                 data-testid="Input__addon-end"
               >
                 <div
@@ -171,14 +171,14 @@ exports[`InputFee > advanced view type > should allow to input a value 1`] = `
             class="relative"
           >
             <div
-              class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+              class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
             >
               <div
                 class="relative flex h-full flex-1"
               >
                 <input
                   autocomplete="off"
-                  class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
+                  class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
                   data-testid="Input_GasLimit"
                   name="gasLimit"
                   type="text"
@@ -186,7 +186,7 @@ exports[`InputFee > advanced view type > should allow to input a value 1`] = `
                 />
               </div>
               <div
-                class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600 divide-none"
+                class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600 divide-none"
                 data-testid="Input__addon-end"
               >
                 <div
@@ -321,10 +321,10 @@ exports[`InputFee > advanced view type > should display converted value when on 
             type="checkbox"
           />
           <div
-            class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-6"
+            class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-6"
           >
             <span
-              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 h-3 w-3 handle-inner"
+              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 dim:bg-theme-dim-navy-600 h-3 w-3 handle-inner"
             />
           </div>
         </label>
@@ -357,14 +357,14 @@ exports[`InputFee > advanced view type > should display converted value when on 
             class="relative"
           >
             <div
-              class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+              class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
             >
               <div
                 class="relative flex h-full flex-1"
               >
                 <input
                   autocomplete="off"
-                  class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
+                  class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
                   data-testid="Input_GasPrice"
                   name="gasPrice"
                   type="text"
@@ -372,7 +372,7 @@ exports[`InputFee > advanced view type > should display converted value when on 
                 />
               </div>
               <div
-                class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600 divide-none"
+                class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600 divide-none"
                 data-testid="Input__addon-end"
               >
                 <div
@@ -465,14 +465,14 @@ exports[`InputFee > advanced view type > should display converted value when on 
             class="relative"
           >
             <div
-              class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+              class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
             >
               <div
                 class="relative flex h-full flex-1"
               >
                 <input
                   autocomplete="off"
-                  class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
+                  class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
                   data-testid="Input_GasLimit"
                   name="gasLimit"
                   type="text"
@@ -480,7 +480,7 @@ exports[`InputFee > advanced view type > should display converted value when on 
                 />
               </div>
               <div
-                class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600 divide-none"
+                class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600 divide-none"
                 data-testid="Input__addon-end"
               >
                 <div
@@ -630,7 +630,7 @@ exports[`InputFee > advanced view type > should render disabled 1`] = `
             >
               <input
                 autocomplete="off"
-                class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none sm:text-base! text-theme-secondary-text"
+                class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none sm:text-base! text-theme-secondary-text"
                 data-testid="Input_GasPrice"
                 disabled=""
                 name="gasPrice"
@@ -639,7 +639,7 @@ exports[`InputFee > advanced view type > should render disabled 1`] = `
               />
             </div>
             <div
-              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600 divide-none"
+              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600 divide-none"
               data-testid="Input__addon-end"
             >
               <div
@@ -741,7 +741,7 @@ exports[`InputFee > advanced view type > should render disabled 1`] = `
             >
               <input
                 autocomplete="off"
-                class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none sm:text-base! text-theme-secondary-text"
+                class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none sm:text-base! text-theme-secondary-text"
                 data-testid="Input_GasLimit"
                 disabled=""
                 name="gasLimit"
@@ -750,7 +750,7 @@ exports[`InputFee > advanced view type > should render disabled 1`] = `
               />
             </div>
             <div
-              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600 divide-none"
+              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600 divide-none"
               data-testid="Input__addon-end"
             >
               <div
@@ -885,10 +885,10 @@ exports[`InputFee > should keep different values for simple and advanced view ty
             type="checkbox"
           />
           <div
-            class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-6"
+            class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-6"
           >
             <span
-              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 h-3 w-3 handle-inner"
+              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 dim:bg-theme-dim-navy-600 h-3 w-3 handle-inner"
             />
           </div>
         </label>
@@ -921,14 +921,14 @@ exports[`InputFee > should keep different values for simple and advanced view ty
             class="relative"
           >
             <div
-              class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+              class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
             >
               <div
                 class="relative flex h-full flex-1"
               >
                 <input
                   autocomplete="off"
-                  class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
+                  class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
                   data-testid="Input_GasPrice"
                   name="gasPrice"
                   type="text"
@@ -936,7 +936,7 @@ exports[`InputFee > should keep different values for simple and advanced view ty
                 />
               </div>
               <div
-                class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600 divide-none"
+                class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600 divide-none"
                 data-testid="Input__addon-end"
               >
                 <div
@@ -1029,14 +1029,14 @@ exports[`InputFee > should keep different values for simple and advanced view ty
             class="relative"
           >
             <div
-              class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+              class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
             >
               <div
                 class="relative flex h-full flex-1"
               >
                 <input
                   autocomplete="off"
-                  class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
+                  class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
                   data-testid="Input_GasLimit"
                   name="gasLimit"
                   type="text"
@@ -1044,7 +1044,7 @@ exports[`InputFee > should keep different values for simple and advanced view ty
                 />
               </div>
               <div
-                class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600 divide-none"
+                class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600 divide-none"
                 data-testid="Input__addon-end"
               >
                 <div
@@ -1178,10 +1178,10 @@ exports[`InputFee > should keep different values for simple and advanced view ty
             type="checkbox"
           />
           <div
-            class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-6"
+            class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-6"
           >
             <span
-              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 h-3 w-3 handle-inner"
+              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 dim:bg-theme-dim-navy-600 h-3 w-3 handle-inner"
             />
           </div>
         </label>
@@ -1355,10 +1355,10 @@ exports[`InputFee > simple view type > should display converted values when on l
             type="checkbox"
           />
           <div
-            class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-6"
+            class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-6"
           >
             <span
-              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 h-3 w-3 handle-inner"
+              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 dim:bg-theme-dim-navy-600 h-3 w-3 handle-inner"
             />
           </div>
         </label>
@@ -1566,7 +1566,7 @@ exports[`InputFee > simple view type > should render loading state of simple vie
             type="checkbox"
           />
           <div
-            class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-6"
+            class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-6"
           >
             <span
               class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-100 dark:bg-theme-secondary-800 h-3 w-3"
@@ -1753,7 +1753,7 @@ exports[`InputFee > simple view type > should render loading state of simple vie
             type="checkbox"
           />
           <div
-            class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-6"
+            class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-6"
           >
             <span
               class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-100 dark:bg-theme-secondary-800 h-3 w-3"
@@ -1939,10 +1939,10 @@ exports[`InputFee > simple view type > should render simple view in lg 1`] = `
             type="checkbox"
           />
           <div
-            class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-6"
+            class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-6"
           >
             <span
-              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 h-3 w-3 handle-inner"
+              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 dim:bg-theme-dim-navy-600 h-3 w-3 handle-inner"
             />
           </div>
         </label>
@@ -2116,10 +2116,10 @@ exports[`InputFee > simple view type > should render simple view in md 1`] = `
             type="checkbox"
           />
           <div
-            class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-6"
+            class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-6"
           >
             <span
-              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 h-3 w-3 handle-inner"
+              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 dim:bg-theme-dim-navy-600 h-3 w-3 handle-inner"
             />
           </div>
         </label>
@@ -2293,10 +2293,10 @@ exports[`InputFee > simple view type > should render simple view in sm 1`] = `
             type="checkbox"
           />
           <div
-            class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-6"
+            class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-6"
           >
             <span
-              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 h-3 w-3 handle-inner"
+              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 dim:bg-theme-dim-navy-600 h-3 w-3 handle-inner"
             />
           </div>
         </label>
@@ -2470,10 +2470,10 @@ exports[`InputFee > simple view type > should render simple view in xl 1`] = `
             type="checkbox"
           />
           <div
-            class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-6"
+            class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-6"
           >
             <span
-              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 h-3 w-3 handle-inner"
+              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 dim:bg-theme-dim-navy-600 h-3 w-3 handle-inner"
             />
           </div>
         </label>
@@ -2647,10 +2647,10 @@ exports[`InputFee > simple view type > should render simple view in xs 1`] = `
             type="checkbox"
           />
           <div
-            class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-6"
+            class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-6"
           >
             <span
-              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 h-3 w-3 handle-inner"
+              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 dim:bg-theme-dim-navy-600 h-3 w-3 handle-inner"
             />
           </div>
         </label>
@@ -2824,10 +2824,10 @@ exports[`InputFee > simple view type > should render simple view with converted 
             type="checkbox"
           />
           <div
-            class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-6"
+            class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-6"
           >
             <span
-              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 h-3 w-3 handle-inner"
+              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 dim:bg-theme-dim-navy-600 h-3 w-3 handle-inner"
             />
           </div>
         </label>
@@ -3034,10 +3034,10 @@ exports[`InputFee > simple view type > should render simple view with converted 
             type="checkbox"
           />
           <div
-            class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-6"
+            class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-6"
           >
             <span
-              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 h-3 w-3 handle-inner"
+              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 dim:bg-theme-dim-navy-600 h-3 w-3 handle-inner"
             />
           </div>
         </label>
@@ -3244,10 +3244,10 @@ exports[`InputFee > simple view type > should render simple view with converted 
             type="checkbox"
           />
           <div
-            class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-6"
+            class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-6"
           >
             <span
-              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 h-3 w-3 handle-inner"
+              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 dim:bg-theme-dim-navy-600 h-3 w-3 handle-inner"
             />
           </div>
         </label>
@@ -3454,10 +3454,10 @@ exports[`InputFee > simple view type > should render simple view with converted 
             type="checkbox"
           />
           <div
-            class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-6"
+            class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-6"
           >
             <span
-              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 h-3 w-3 handle-inner"
+              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 dim:bg-theme-dim-navy-600 h-3 w-3 handle-inner"
             />
           </div>
         </label>
@@ -3664,10 +3664,10 @@ exports[`InputFee > simple view type > should render simple view with converted 
             type="checkbox"
           />
           <div
-            class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-6"
+            class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-6"
           >
             <span
-              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 h-3 w-3 handle-inner"
+              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 dim:bg-theme-dim-navy-600 h-3 w-3 handle-inner"
             />
           </div>
         </label>
@@ -3874,10 +3874,10 @@ exports[`InputFee > simple view type > should update value when clicking button 
             type="checkbox"
           />
           <div
-            class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-6"
+            class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-6"
           >
             <span
-              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 h-3 w-3 handle-inner"
+              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 dim:bg-theme-dim-navy-600 h-3 w-3 handle-inner"
             />
           </div>
         </label>
@@ -4051,10 +4051,10 @@ exports[`InputFee > simple view type > should update value when clicking button 
             type="checkbox"
           />
           <div
-            class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-6"
+            class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-6"
           >
             <span
-              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 h-3 w-3 handle-inner"
+              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 dim:bg-theme-dim-navy-600 h-3 w-3 handle-inner"
             />
           </div>
         </label>
@@ -4228,10 +4228,10 @@ exports[`InputFee > simple view type > should update value when clicking button 
             type="checkbox"
           />
           <div
-            class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-6"
+            class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-6"
           >
             <span
-              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 h-3 w-3 handle-inner"
+              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 dim:bg-theme-dim-navy-600 h-3 w-3 handle-inner"
             />
           </div>
         </label>

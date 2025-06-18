@@ -6,181 +6,181 @@ exports[`MnemonicList > should render 1`] = `
     class="grid grid-cols-1 gap-x-3 gap-y-2 sm:grid-cols-3 sm:gap-y-4"
   >
     <li
-      class="border-theme-secondary-400 dark:border-theme-dark-500 relative flex items-center rounded border p-[3px]"
+      class="border-theme-secondary-400 dark:border-theme-dark-500 dim:border-theme-dim-500 relative flex items-center rounded border p-[3px]"
       data-testid="MnemonicList__item"
     >
       <div
-        class="bg-theme-secondary-200 text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200 mr-2 w-8 rounded p-2 text-center text-sm leading-[17px] font-semibold"
+        class="bg-theme-secondary-200 text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200 dim:text-theme-dim-200 dim:bg-theme-dim-800 mr-2 w-8 rounded p-2 text-center text-sm leading-[17px] font-semibold"
       >
         1
       </div>
       <div
-        class="sm:text-md text-sm"
+        class="sm:text-md dim:text-theme-dim-50 text-sm"
       >
         stomach
       </div>
     </li>
     <li
-      class="border-theme-secondary-400 dark:border-theme-dark-500 relative flex items-center rounded border p-[3px]"
+      class="border-theme-secondary-400 dark:border-theme-dark-500 dim:border-theme-dim-500 relative flex items-center rounded border p-[3px]"
       data-testid="MnemonicList__item"
     >
       <div
-        class="bg-theme-secondary-200 text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200 mr-2 w-8 rounded p-2 text-center text-sm leading-[17px] font-semibold"
+        class="bg-theme-secondary-200 text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200 dim:text-theme-dim-200 dim:bg-theme-dim-800 mr-2 w-8 rounded p-2 text-center text-sm leading-[17px] font-semibold"
       >
         2
       </div>
       <div
-        class="sm:text-md text-sm"
+        class="sm:text-md dim:text-theme-dim-50 text-sm"
       >
         practice
       </div>
     </li>
     <li
-      class="border-theme-secondary-400 dark:border-theme-dark-500 relative flex items-center rounded border p-[3px]"
+      class="border-theme-secondary-400 dark:border-theme-dark-500 dim:border-theme-dim-500 relative flex items-center rounded border p-[3px]"
       data-testid="MnemonicList__item"
     >
       <div
-        class="bg-theme-secondary-200 text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200 mr-2 w-8 rounded p-2 text-center text-sm leading-[17px] font-semibold"
+        class="bg-theme-secondary-200 text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200 dim:text-theme-dim-200 dim:bg-theme-dim-800 mr-2 w-8 rounded p-2 text-center text-sm leading-[17px] font-semibold"
       >
         3
       </div>
       <div
-        class="sm:text-md text-sm"
+        class="sm:text-md dim:text-theme-dim-50 text-sm"
       >
         violin
       </div>
     </li>
     <li
-      class="border-theme-secondary-400 dark:border-theme-dark-500 relative flex items-center rounded border p-[3px]"
+      class="border-theme-secondary-400 dark:border-theme-dark-500 dim:border-theme-dim-500 relative flex items-center rounded border p-[3px]"
       data-testid="MnemonicList__item"
     >
       <div
-        class="bg-theme-secondary-200 text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200 mr-2 w-8 rounded p-2 text-center text-sm leading-[17px] font-semibold"
+        class="bg-theme-secondary-200 text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200 dim:text-theme-dim-200 dim:bg-theme-dim-800 mr-2 w-8 rounded p-2 text-center text-sm leading-[17px] font-semibold"
       >
         4
       </div>
       <div
-        class="sm:text-md text-sm"
+        class="sm:text-md dim:text-theme-dim-50 text-sm"
       >
         later
       </div>
     </li>
     <li
-      class="border-theme-secondary-400 dark:border-theme-dark-500 relative flex items-center rounded border p-[3px]"
+      class="border-theme-secondary-400 dark:border-theme-dark-500 dim:border-theme-dim-500 relative flex items-center rounded border p-[3px]"
       data-testid="MnemonicList__item"
     >
       <div
-        class="bg-theme-secondary-200 text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200 mr-2 w-8 rounded p-2 text-center text-sm leading-[17px] font-semibold"
+        class="bg-theme-secondary-200 text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200 dim:text-theme-dim-200 dim:bg-theme-dim-800 mr-2 w-8 rounded p-2 text-center text-sm leading-[17px] font-semibold"
       >
         5
       </div>
       <div
-        class="sm:text-md text-sm"
+        class="sm:text-md dim:text-theme-dim-50 text-sm"
       >
         term
       </div>
     </li>
     <li
-      class="border-theme-secondary-400 dark:border-theme-dark-500 relative flex items-center rounded border p-[3px]"
+      class="border-theme-secondary-400 dark:border-theme-dark-500 dim:border-theme-dim-500 relative flex items-center rounded border p-[3px]"
       data-testid="MnemonicList__item"
     >
       <div
-        class="bg-theme-secondary-200 text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200 mr-2 w-8 rounded p-2 text-center text-sm leading-[17px] font-semibold"
+        class="bg-theme-secondary-200 text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200 dim:text-theme-dim-200 dim:bg-theme-dim-800 mr-2 w-8 rounded p-2 text-center text-sm leading-[17px] font-semibold"
       >
         6
       </div>
       <div
-        class="sm:text-md text-sm"
+        class="sm:text-md dim:text-theme-dim-50 text-sm"
       >
         trend
       </div>
     </li>
     <li
-      class="border-theme-secondary-400 dark:border-theme-dark-500 relative flex items-center rounded border p-[3px]"
+      class="border-theme-secondary-400 dark:border-theme-dark-500 dim:border-theme-dim-500 relative flex items-center rounded border p-[3px]"
       data-testid="MnemonicList__item"
     >
       <div
-        class="bg-theme-secondary-200 text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200 mr-2 w-8 rounded p-2 text-center text-sm leading-[17px] font-semibold"
+        class="bg-theme-secondary-200 text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200 dim:text-theme-dim-200 dim:bg-theme-dim-800 mr-2 w-8 rounded p-2 text-center text-sm leading-[17px] font-semibold"
       >
         7
       </div>
       <div
-        class="sm:text-md text-sm"
+        class="sm:text-md dim:text-theme-dim-50 text-sm"
       >
         suit
       </div>
     </li>
     <li
-      class="border-theme-secondary-400 dark:border-theme-dark-500 relative flex items-center rounded border p-[3px]"
+      class="border-theme-secondary-400 dark:border-theme-dark-500 dim:border-theme-dim-500 relative flex items-center rounded border p-[3px]"
       data-testid="MnemonicList__item"
     >
       <div
-        class="bg-theme-secondary-200 text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200 mr-2 w-8 rounded p-2 text-center text-sm leading-[17px] font-semibold"
+        class="bg-theme-secondary-200 text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200 dim:text-theme-dim-200 dim:bg-theme-dim-800 mr-2 w-8 rounded p-2 text-center text-sm leading-[17px] font-semibold"
       >
         8
       </div>
       <div
-        class="sm:text-md text-sm"
+        class="sm:text-md dim:text-theme-dim-50 text-sm"
       >
         switch
       </div>
     </li>
     <li
-      class="border-theme-secondary-400 dark:border-theme-dark-500 relative flex items-center rounded border p-[3px]"
+      class="border-theme-secondary-400 dark:border-theme-dark-500 dim:border-theme-dim-500 relative flex items-center rounded border p-[3px]"
       data-testid="MnemonicList__item"
     >
       <div
-        class="bg-theme-secondary-200 text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200 mr-2 w-8 rounded p-2 text-center text-sm leading-[17px] font-semibold"
+        class="bg-theme-secondary-200 text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200 dim:text-theme-dim-200 dim:bg-theme-dim-800 mr-2 w-8 rounded p-2 text-center text-sm leading-[17px] font-semibold"
       >
         9
       </div>
       <div
-        class="sm:text-md text-sm"
+        class="sm:text-md dim:text-theme-dim-50 text-sm"
       >
         inch
       </div>
     </li>
     <li
-      class="border-theme-secondary-400 dark:border-theme-dark-500 relative flex items-center rounded border p-[3px]"
+      class="border-theme-secondary-400 dark:border-theme-dark-500 dim:border-theme-dim-500 relative flex items-center rounded border p-[3px]"
       data-testid="MnemonicList__item"
     >
       <div
-        class="bg-theme-secondary-200 text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200 mr-2 w-8 rounded p-2 text-center text-sm leading-[17px] font-semibold"
+        class="bg-theme-secondary-200 text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200 dim:text-theme-dim-200 dim:bg-theme-dim-800 mr-2 w-8 rounded p-2 text-center text-sm leading-[17px] font-semibold"
       >
         10
       </div>
       <div
-        class="sm:text-md text-sm"
+        class="sm:text-md dim:text-theme-dim-50 text-sm"
       >
         theory
       </div>
     </li>
     <li
-      class="border-theme-secondary-400 dark:border-theme-dark-500 relative flex items-center rounded border p-[3px]"
+      class="border-theme-secondary-400 dark:border-theme-dark-500 dim:border-theme-dim-500 relative flex items-center rounded border p-[3px]"
       data-testid="MnemonicList__item"
     >
       <div
-        class="bg-theme-secondary-200 text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200 mr-2 w-8 rounded p-2 text-center text-sm leading-[17px] font-semibold"
+        class="bg-theme-secondary-200 text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200 dim:text-theme-dim-200 dim:bg-theme-dim-800 mr-2 w-8 rounded p-2 text-center text-sm leading-[17px] font-semibold"
       >
         11
       </div>
       <div
-        class="sm:text-md text-sm"
+        class="sm:text-md dim:text-theme-dim-50 text-sm"
       >
         hundred
       </div>
     </li>
     <li
-      class="border-theme-secondary-400 dark:border-theme-dark-500 relative flex items-center rounded border p-[3px]"
+      class="border-theme-secondary-400 dark:border-theme-dark-500 dim:border-theme-dim-500 relative flex items-center rounded border p-[3px]"
       data-testid="MnemonicList__item"
     >
       <div
-        class="bg-theme-secondary-200 text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200 mr-2 w-8 rounded p-2 text-center text-sm leading-[17px] font-semibold"
+        class="bg-theme-secondary-200 text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200 dim:text-theme-dim-200 dim:bg-theme-dim-800 mr-2 w-8 rounded p-2 text-center text-sm leading-[17px] font-semibold"
       >
         12
       </div>
       <div
-        class="sm:text-md text-sm"
+        class="sm:text-md dim:text-theme-dim-50 text-sm"
       >
         system
       </div>
@@ -195,181 +195,181 @@ exports[`MnemonicList > should render with special delimiter 1`] = `
     class="grid grid-cols-1 gap-x-3 gap-y-2 sm:grid-cols-3 sm:gap-y-4"
   >
     <li
-      class="border-theme-secondary-400 dark:border-theme-dark-500 relative flex items-center rounded border p-[3px]"
+      class="border-theme-secondary-400 dark:border-theme-dark-500 dim:border-theme-dim-500 relative flex items-center rounded border p-[3px]"
       data-testid="MnemonicList__item"
     >
       <div
-        class="bg-theme-secondary-200 text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200 mr-2 w-8 rounded p-2 text-center text-sm leading-[17px] font-semibold"
+        class="bg-theme-secondary-200 text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200 dim:text-theme-dim-200 dim:bg-theme-dim-800 mr-2 w-8 rounded p-2 text-center text-sm leading-[17px] font-semibold"
       >
         1
       </div>
       <div
-        class="sm:text-md text-sm"
+        class="sm:text-md dim:text-theme-dim-50 text-sm"
       >
         あさい
       </div>
     </li>
     <li
-      class="border-theme-secondary-400 dark:border-theme-dark-500 relative flex items-center rounded border p-[3px]"
+      class="border-theme-secondary-400 dark:border-theme-dark-500 dim:border-theme-dim-500 relative flex items-center rounded border p-[3px]"
       data-testid="MnemonicList__item"
     >
       <div
-        class="bg-theme-secondary-200 text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200 mr-2 w-8 rounded p-2 text-center text-sm leading-[17px] font-semibold"
+        class="bg-theme-secondary-200 text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200 dim:text-theme-dim-200 dim:bg-theme-dim-800 mr-2 w-8 rounded p-2 text-center text-sm leading-[17px] font-semibold"
       >
         2
       </div>
       <div
-        class="sm:text-md text-sm"
+        class="sm:text-md dim:text-theme-dim-50 text-sm"
       >
         せつでん
       </div>
     </li>
     <li
-      class="border-theme-secondary-400 dark:border-theme-dark-500 relative flex items-center rounded border p-[3px]"
+      class="border-theme-secondary-400 dark:border-theme-dark-500 dim:border-theme-dim-500 relative flex items-center rounded border p-[3px]"
       data-testid="MnemonicList__item"
     >
       <div
-        class="bg-theme-secondary-200 text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200 mr-2 w-8 rounded p-2 text-center text-sm leading-[17px] font-semibold"
+        class="bg-theme-secondary-200 text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200 dim:text-theme-dim-200 dim:bg-theme-dim-800 mr-2 w-8 rounded p-2 text-center text-sm leading-[17px] font-semibold"
       >
         3
       </div>
       <div
-        class="sm:text-md text-sm"
+        class="sm:text-md dim:text-theme-dim-50 text-sm"
       >
         さいかい
       </div>
     </li>
     <li
-      class="border-theme-secondary-400 dark:border-theme-dark-500 relative flex items-center rounded border p-[3px]"
+      class="border-theme-secondary-400 dark:border-theme-dark-500 dim:border-theme-dim-500 relative flex items-center rounded border p-[3px]"
       data-testid="MnemonicList__item"
     >
       <div
-        class="bg-theme-secondary-200 text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200 mr-2 w-8 rounded p-2 text-center text-sm leading-[17px] font-semibold"
+        class="bg-theme-secondary-200 text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200 dim:text-theme-dim-200 dim:bg-theme-dim-800 mr-2 w-8 rounded p-2 text-center text-sm leading-[17px] font-semibold"
       >
         4
       </div>
       <div
-        class="sm:text-md text-sm"
+        class="sm:text-md dim:text-theme-dim-50 text-sm"
       >
         にんち
       </div>
     </li>
     <li
-      class="border-theme-secondary-400 dark:border-theme-dark-500 relative flex items-center rounded border p-[3px]"
+      class="border-theme-secondary-400 dark:border-theme-dark-500 dim:border-theme-dim-500 relative flex items-center rounded border p-[3px]"
       data-testid="MnemonicList__item"
     >
       <div
-        class="bg-theme-secondary-200 text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200 mr-2 w-8 rounded p-2 text-center text-sm leading-[17px] font-semibold"
+        class="bg-theme-secondary-200 text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200 dim:text-theme-dim-200 dim:bg-theme-dim-800 mr-2 w-8 rounded p-2 text-center text-sm leading-[17px] font-semibold"
       >
         5
       </div>
       <div
-        class="sm:text-md text-sm"
+        class="sm:text-md dim:text-theme-dim-50 text-sm"
       >
         たんけん
       </div>
     </li>
     <li
-      class="border-theme-secondary-400 dark:border-theme-dark-500 relative flex items-center rounded border p-[3px]"
+      class="border-theme-secondary-400 dark:border-theme-dark-500 dim:border-theme-dim-500 relative flex items-center rounded border p-[3px]"
       data-testid="MnemonicList__item"
     >
       <div
-        class="bg-theme-secondary-200 text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200 mr-2 w-8 rounded p-2 text-center text-sm leading-[17px] font-semibold"
+        class="bg-theme-secondary-200 text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200 dim:text-theme-dim-200 dim:bg-theme-dim-800 mr-2 w-8 rounded p-2 text-center text-sm leading-[17px] font-semibold"
       >
         6
       </div>
       <div
-        class="sm:text-md text-sm"
+        class="sm:text-md dim:text-theme-dim-50 text-sm"
       >
         ぬまえび
       </div>
     </li>
     <li
-      class="border-theme-secondary-400 dark:border-theme-dark-500 relative flex items-center rounded border p-[3px]"
+      class="border-theme-secondary-400 dark:border-theme-dark-500 dim:border-theme-dim-500 relative flex items-center rounded border p-[3px]"
       data-testid="MnemonicList__item"
     >
       <div
-        class="bg-theme-secondary-200 text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200 mr-2 w-8 rounded p-2 text-center text-sm leading-[17px] font-semibold"
+        class="bg-theme-secondary-200 text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200 dim:text-theme-dim-200 dim:bg-theme-dim-800 mr-2 w-8 rounded p-2 text-center text-sm leading-[17px] font-semibold"
       >
         7
       </div>
       <div
-        class="sm:text-md text-sm"
+        class="sm:text-md dim:text-theme-dim-50 text-sm"
       >
         こうじ
       </div>
     </li>
     <li
-      class="border-theme-secondary-400 dark:border-theme-dark-500 relative flex items-center rounded border p-[3px]"
+      class="border-theme-secondary-400 dark:border-theme-dark-500 dim:border-theme-dim-500 relative flex items-center rounded border p-[3px]"
       data-testid="MnemonicList__item"
     >
       <div
-        class="bg-theme-secondary-200 text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200 mr-2 w-8 rounded p-2 text-center text-sm leading-[17px] font-semibold"
+        class="bg-theme-secondary-200 text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200 dim:text-theme-dim-200 dim:bg-theme-dim-800 mr-2 w-8 rounded p-2 text-center text-sm leading-[17px] font-semibold"
       >
         8
       </div>
       <div
-        class="sm:text-md text-sm"
+        class="sm:text-md dim:text-theme-dim-50 text-sm"
       >
         こっか
       </div>
     </li>
     <li
-      class="border-theme-secondary-400 dark:border-theme-dark-500 relative flex items-center rounded border p-[3px]"
+      class="border-theme-secondary-400 dark:border-theme-dark-500 dim:border-theme-dim-500 relative flex items-center rounded border p-[3px]"
       data-testid="MnemonicList__item"
     >
       <div
-        class="bg-theme-secondary-200 text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200 mr-2 w-8 rounded p-2 text-center text-sm leading-[17px] font-semibold"
+        class="bg-theme-secondary-200 text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200 dim:text-theme-dim-200 dim:bg-theme-dim-800 mr-2 w-8 rounded p-2 text-center text-sm leading-[17px] font-semibold"
       >
         9
       </div>
       <div
-        class="sm:text-md text-sm"
+        class="sm:text-md dim:text-theme-dim-50 text-sm"
       >
         はあく
       </div>
     </li>
     <li
-      class="border-theme-secondary-400 dark:border-theme-dark-500 relative flex items-center rounded border p-[3px]"
+      class="border-theme-secondary-400 dark:border-theme-dark-500 dim:border-theme-dim-500 relative flex items-center rounded border p-[3px]"
       data-testid="MnemonicList__item"
     >
       <div
-        class="bg-theme-secondary-200 text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200 mr-2 w-8 rounded p-2 text-center text-sm leading-[17px] font-semibold"
+        class="bg-theme-secondary-200 text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200 dim:text-theme-dim-200 dim:bg-theme-dim-800 mr-2 w-8 rounded p-2 text-center text-sm leading-[17px] font-semibold"
       >
         10
       </div>
       <div
-        class="sm:text-md text-sm"
+        class="sm:text-md dim:text-theme-dim-50 text-sm"
       >
         げきか
       </div>
     </li>
     <li
-      class="border-theme-secondary-400 dark:border-theme-dark-500 relative flex items-center rounded border p-[3px]"
+      class="border-theme-secondary-400 dark:border-theme-dark-500 dim:border-theme-dim-500 relative flex items-center rounded border p-[3px]"
       data-testid="MnemonicList__item"
     >
       <div
-        class="bg-theme-secondary-200 text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200 mr-2 w-8 rounded p-2 text-center text-sm leading-[17px] font-semibold"
+        class="bg-theme-secondary-200 text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200 dim:text-theme-dim-200 dim:bg-theme-dim-800 mr-2 w-8 rounded p-2 text-center text-sm leading-[17px] font-semibold"
       >
         11
       </div>
       <div
-        class="sm:text-md text-sm"
+        class="sm:text-md dim:text-theme-dim-50 text-sm"
       >
         ふめつ
       </div>
     </li>
     <li
-      class="border-theme-secondary-400 dark:border-theme-dark-500 relative flex items-center rounded border p-[3px]"
+      class="border-theme-secondary-400 dark:border-theme-dark-500 dim:border-theme-dim-500 relative flex items-center rounded border p-[3px]"
       data-testid="MnemonicList__item"
     >
       <div
-        class="bg-theme-secondary-200 text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200 mr-2 w-8 rounded p-2 text-center text-sm leading-[17px] font-semibold"
+        class="bg-theme-secondary-200 text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200 dim:text-theme-dim-200 dim:bg-theme-dim-800 mr-2 w-8 rounded p-2 text-center text-sm leading-[17px] font-semibold"
       >
         12
       </div>
       <div
-        class="sm:text-md text-sm"
+        class="sm:text-md dim:text-theme-dim-50 text-sm"
       >
         ちらし
       </div>
