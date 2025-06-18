@@ -20,7 +20,7 @@
 }
 
 .Toastify__toast {
-	@apply cursor-default rounded-none shadow-none;
+	@apply cursor-default rounded-none shadow-none!;
 	background: unset !important;
 	color: unset;
 	min-width: 21rem;
