@@ -162,7 +162,6 @@ describe("Registration Fee", () => {
 
 		const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
 
-		inputElement.select();
 		await userEvent.clear(inputElement);
 		await userEvent.type(inputElement, "10");
 
@@ -204,7 +203,6 @@ describe("Registration Fee", () => {
 
 		const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
 
-		inputElement.select();
 		await userEvent.clear(inputElement);
 		await userEvent.type(inputElement, "10");
 

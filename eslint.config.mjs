@@ -61,7 +61,7 @@ export default [
 			...tseslint.configs.recommendedTypeChecked[0].rules,
 			"@typescript-eslint/no-duplicate-type-constituents": "off",
 			"@typescript-eslint/ban-ts-comment": "warn",
-			"@typescript-eslint/ban-types": "warn",
+			"@typescript-eslint/no-restricted-types": "warn",
 			"@typescript-eslint/consistent-type-definitions": ["error", "interface"],
 			"@typescript-eslint/explicit-module-boundary-types": "warn",
 			"@typescript-eslint/no-empty-function": ["warn", { allow: [] }],
