@@ -253,7 +253,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 							size="icon"
 							disabled={isButtonDisabled}
 							variant="transparent"
-							className="text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 -mr-3 text-sm hover:underline dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 dim:disabled:text-theme-dim-500 dim-hover:disabled:text-theme-dim-500"
+							className="text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 dim:disabled:text-theme-dim-500 dim-hover:disabled:text-theme-dim-500 -mr-3 text-sm hover:underline"
 							onClick={() => onSelect?.(wallet.address())}
 							data-testid={`AddressRow__select-${index}`}
 						>

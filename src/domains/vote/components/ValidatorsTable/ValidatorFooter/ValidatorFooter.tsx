@@ -100,7 +100,7 @@ export const ValidatorFooter = ({
 
 	return (
 		<div
-			className="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0 dim:border-theme-dim-700"
+			className="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 dim:border-theme-dim-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0"
 			data-testid="ValidatorTable__footer"
 		>
 			<div className="mx-auto px-8 md:px-10 lg:container">
