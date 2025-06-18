@@ -40,7 +40,7 @@ export const ToastMessage = ({
 						`bg-theme-${variant === "info" ? "primary" : variant}-100 hover:bg-theme-${
 							variant === "info" ? "primary" : variant
 						}-200`,
-						"dark:bg-theme-secondary-900 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400",
+						"dark:bg-theme-secondary-900 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 dim:bg-theme-dim-900 dim:text-theme-dim-200 dim-hover:bg-theme-dim-950 dim-hover:text-theme-dim-50",
 					)}
 				>
 					<Icon name="Cross" />
