@@ -1,6 +1,6 @@
 /* eslint-disable testing-library/no-unnecessary-act */ // @TODO remove and fix test
 
-import { Contracts, ReadOnlyWallet } from "@/app/lib/profiles";
+import { Contracts, DTO, ReadOnlyWallet } from "@/app/lib/profiles";
 import {
 	act,
 	env,
