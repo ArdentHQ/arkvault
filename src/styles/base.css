@@ -17,11 +17,11 @@ main {
 }
 
 .link {
-	@apply transition-colors duration-100 ease-linear cursor-pointer text-theme-primary-400 dark:text-theme-secondary-600;
+	@apply transition-colors duration-100 ease-linear cursor-pointer text-theme-primary-400 dark:text-theme-secondary-600 dim:text-theme-dim-50;
 }
 
 .link:hover {
-	@apply text-theme-primary-700 dark:text-white;
+	@apply text-theme-primary-700 dark:text-white dim:text-white;
 }
 
 .important\:bottom-8 {

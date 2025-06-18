@@ -56,19 +56,19 @@ export const StatusStep = ({ exchangeTransaction, onUpdate, transferTransactionI
 	return (
 		<div data-testid="ExchangeForm__status-step" className="flex flex-col">
 			<div className="flex items-center space-x-1">
-				<span className="text-theme-secondary-500 dark:text-theme-secondary-700 text-xs font-semibold">
+				<span className="text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 text-xs font-semibold">
 					{exchangeProvider?.name} {t("EXCHANGE.TRANSACTION_ID")}: {exchangeTransaction.orderId()}
 				</span>
-				<span className="text-theme-primary-300 dark:text-theme-secondary-600 flex">
+				<span className="text-theme-primary-300 dark:text-theme-secondary-600 dim:text-theme-dim-navy-600 flex">
 					<Clipboard variant="icon" data={exchangeTransaction.orderId()}>
 						<Icon name="Copy" />
 					</Clipboard>
 				</span>
 			</div>
 
-			<div className="border-theme-secondary-300 dark:border-theme-secondary-800 mt-3 flex flex-col rounded-xl border p-4 sm:p-6">
+			<div className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 mt-3 flex flex-col rounded-xl border p-4 sm:p-6">
 				<div className="flex flex-col space-y-2">
-					<span className="text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold">
+					<span className="text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 text-sm font-semibold">
 						{t("EXCHANGE.EXCHANGE_FORM.YOU_SEND")}
 					</span>
 					<Amount
@@ -78,13 +78,13 @@ export const StatusStep = ({ exchangeTransaction, onUpdate, transferTransactionI
 					/>
 				</div>
 
-				<div className="border-theme-secondary-300 dark:border-theme-secondary-800 mt-4 flex flex-col space-y-2 border-t pt-4">
-					<span className="text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold">
+				<div className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 mt-4 flex flex-col space-y-2 border-t pt-4">
+					<span className="text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 text-sm font-semibold">
 						{t("EXCHANGE.TO_ADDRESS")}
 					</span>
 					<div className="flex items-center space-x-2 text-sm font-semibold whitespace-nowrap sm:text-lg">
 						<TruncateMiddleDynamic value={exchangeTransaction.input().address} className="no-ligatures" />
-						<span className="text-theme-primary-300 dark:text-theme-secondary-600 flex">
+						<span className="text-theme-primary-300 dark:text-theme-secondary-600 dim:text-theme-dim-navy-600 flex">
 							<Clipboard variant="icon" data={exchangeTransaction.input().address}>
 								<Icon name="Copy" />
 							</Clipboard>
@@ -93,13 +93,13 @@ export const StatusStep = ({ exchangeTransaction, onUpdate, transferTransactionI
 				</div>
 
 				{transferTransactionId && (
-					<div className="border-theme-secondary-300 dark:border-theme-secondary-800 mt-4 flex flex-col space-y-2 border-t pt-4">
-						<span className="text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold">
+					<div className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 mt-4 flex flex-col space-y-2 border-t pt-4">
+						<span className="text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 text-sm font-semibold">
 							{t("EXCHANGE.ARK_TRANSACTION_ID")}
 						</span>
 						<div className="flex items-center space-x-2 text-sm font-semibold whitespace-nowrap sm:text-lg">
 							<TruncateMiddleDynamic value={transferTransactionId} className="no-ligatures" />
-							<span className="text-theme-primary-300 dark:text-theme-secondary-600 flex">
+							<span className="text-theme-primary-300 dark:text-theme-secondary-600 dim:text-theme-dim-navy-600 flex">
 								<Clipboard variant="icon" data={transferTransactionId}>
 									<Icon name="Copy" />
 								</Clipboard>
@@ -111,11 +111,11 @@ export const StatusStep = ({ exchangeTransaction, onUpdate, transferTransactionI
 
 			<ExchangeStatus exchangeTransaction={exchangeTransaction} />
 
-			<div className="border-theme-secondary-300 dark:border-theme-secondary-800 -mx-10 border-t border-dashed px-10 pt-6" />
+			<div className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 -mx-10 border-t border-dashed px-10 pt-6" />
 
 			<div className="flex flex-col space-y-4">
 				<div className="flex flex-col space-y-2">
-					<span className="text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold">
+					<span className="text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 text-sm font-semibold">
 						{t("EXCHANGE.EXCHANGE_FORM.YOU_GET")}
 					</span>
 					<span className="font-semibold">
@@ -129,7 +129,7 @@ export const StatusStep = ({ exchangeTransaction, onUpdate, transferTransactionI
 				</div>
 
 				<div className="flex flex-col space-y-2">
-					<span className="text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold">
+					<span className="text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 text-sm font-semibold">
 						{t("EXCHANGE.TO_ADDRESS")}
 					</span>
 					<div className="flex items-center space-x-2 font-semibold whitespace-nowrap">
@@ -137,7 +137,7 @@ export const StatusStep = ({ exchangeTransaction, onUpdate, transferTransactionI
 							value={exchangeTransaction.output().address}
 							className="no-ligatures text-sm sm:text-base"
 						/>
-						<span className="text-theme-primary-300 dark:text-theme-secondary-600 flex">
+						<span className="text-theme-primary-300 dark:text-theme-secondary-600 dim:text-theme-dim-navy-600 flex">
 							<Clipboard variant="icon" data={exchangeTransaction.output().address}>
 								<Icon name="Copy" />
 							</Clipboard>
@@ -146,7 +146,7 @@ export const StatusStep = ({ exchangeTransaction, onUpdate, transferTransactionI
 				</div>
 			</div>
 
-			<div className="bg-theme-secondary-100 dark:bg-theme-secondary-800 mt-6 rounded-lg px-6 py-3 text-xs">
+			<div className="bg-theme-secondary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-800 mt-6 rounded-lg px-6 py-3 text-xs">
 				<Trans
 					i18nKey="EXCHANGE.EXCHANGE_FORM.SUPPORT_INFO"
 					values={{

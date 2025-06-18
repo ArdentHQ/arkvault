@@ -17,7 +17,7 @@ const CurrencyIcon = ({ image, ticker }: CurrencyIconProperties) => {
 		return (
 			<Circle
 				size="sm"
-				className="border-theme-secondary-200 bg-theme-secondary-200 ring-theme-background dark:border-theme-secondary-700 dark:bg-theme-secondary-700"
+				className="border-theme-secondary-200 bg-theme-secondary-200 ring-theme-background dark:border-theme-secondary-700 dark:bg-theme-secondary-700 dim:bg-theme-dim-800 dim:border-theme-dim-800"
 				noShadow
 			/>
 		);
@@ -75,13 +75,13 @@ const FormDivider = ({
 
 	return (
 		<div className="flex space-x-4 sm:ml-8 sm:space-x-8">
-			<div className="border-theme-secondary-300 dark:border-theme-secondary-800 relative my-1 h-20 border-l">
-				<div className="border-theme-secondary-300 bg-theme-background dark:border-theme-secondary-800 absolute top-1/2 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full border" />
+			<div className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 relative my-1 h-20 border-l">
+				<div className="border-theme-secondary-300 bg-theme-background dark:border-theme-secondary-800 dim:border-theme-dim-700 absolute top-1/2 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full border" />
 			</div>
 
 			<div className="flex flex-1 items-center">
 				<div className="flex flex-col space-y-2 text-sm sm:flex-row sm:items-center sm:space-y-0 sm:space-x-2">
-					<span className="border-theme-primary-600 text-theme-primary-600 mt-px mr-auto border-b border-dashed font-semibold">
+					<span className="border-theme-primary-600 text-theme-primary-600 dim:text-theme-dim-navy-600 dim:border-theme-dim-navy-600 mt-px mr-auto border-b border-dashed font-semibold">
 						{t("EXCHANGE.EXCHANGE_FORM.ESTIMATED_RATE")}:
 					</span>
 					{renderExchangeRate()}
