@@ -1,27 +1,27 @@
-@import 'react-toastify/dist/ReactToastify.css';
+@import "react-toastify/dist/ReactToastify.css";
 
 @media (max-width: 768px) {
 	.Toastify__toast-container {
-		@apply w-full p-0 inset-x-0 bottom-0;
+		@apply inset-x-0 bottom-0 w-full! p-0;
 	}
 
 	.Toastify__toast {
-		@apply p-0 border-b border-theme-secondary-300 dark:border-theme-secondary-800 mb-0;
-		background: unset;
+		@apply border-theme-secondary-300 dark:border-theme-secondary-800 mb-0 border-b p-0;
+		background: unset !important;
 		color: unset;
 	}
 }
 
 @media (min-width: 769px) {
 	.Toastify__toast-container {
-		@apply max-w-128 w-auto p-0 mr-10 mb-10;
+		@apply mr-10 mb-10 w-auto max-w-128 p-0;
 		min-width: 20rem;
 	}
 }
 
 .Toastify__toast {
-	@apply rounded-none shadow-none cursor-default;
-	background: unset;
+	@apply min-w-full! cursor-default rounded-none shadow-none! md:min-w-[33rem]!;
+	background: unset !important;
 	color: unset;
 }
 
@@ -30,7 +30,7 @@
 }
 
 .Toastify__toast-body {
-	@apply p-0 overflow-hidden;
+	@apply overflow-hidden p-0;
 }
 
 .Toastify__toast-container--bottom-right {
