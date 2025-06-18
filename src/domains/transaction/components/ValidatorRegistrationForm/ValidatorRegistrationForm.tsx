@@ -8,6 +8,7 @@ import { TransactionDetail, TransactionFee } from "@/domains/transaction/compone
 import { SendRegistrationForm } from "@/domains/transaction/pages/SendRegistration/SendRegistration.contracts";
 import { handleBroadcastError } from "@/domains/transaction/utils";
 import { httpClient } from "@/app/services";
+import { configManager } from "@/app/lib/mainsail";
 
 const component = ({
 	activeTab,
@@ -68,6 +69,7 @@ export const signValidatorRegistration = async ({ env, form, profile, signatory 
 	const transactionId = await senderWallet.transaction().signValidatorRegistration({
 		data: {
 			validatorPublicKey,
+			value: configManager.getMilestone()["validatorRegistrationFee"] ?? 0,
 		},
 		gasLimit,
 		gasPrice,

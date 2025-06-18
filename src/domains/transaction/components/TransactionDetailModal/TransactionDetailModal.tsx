@@ -39,16 +39,21 @@ export const TransactionDetailContent = ({
 	const isVoteTransaction = [transaction.isVote(), transaction.isVoteCombination(), transaction.isUnvote()].some(
 		Boolean,
 	);
+
+	const isValidatorRegistrationTransaction = transaction.isValidatorRegistration();
+
 	const { votes, unvotes } = useTransactionVotingWallets({
 		network: transaction.wallet().network(),
 		profile,
 		transaction,
 	});
+
 	const { recipients } = useTransactionRecipients({ profile, transaction });
 
 	const labelClassName = cn({
-		"min-w-24": !transaction.isVoteCombination(),
-		"min-w-32": transaction.isVoteCombination(),
+		"min-w-24": !transaction.isVoteCombination() && !isValidatorRegistrationTransaction,
+		"min-w-32": transaction.isVoteCombination() && !isValidatorRegistrationTransaction,
+		"min-w-[138px]": isValidatorRegistrationTransaction,
 	});
 
 	return (

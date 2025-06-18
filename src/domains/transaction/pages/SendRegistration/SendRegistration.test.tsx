@@ -294,7 +294,7 @@ describe("Registration", () => {
 		await waitFor(() => {
 			expect(signMock).toHaveBeenCalledWith(
 				expect.objectContaining({
-					data: { validatorPublicKey: "validator-public-key" },
+					data: { validatorPublicKey: "validator-public-key", value: 0 },
 				}),
 			);
 		});
@@ -488,7 +488,7 @@ describe("Registration", () => {
 		await waitFor(() =>
 			expect(signMock).toHaveBeenCalledWith(
 				expect.objectContaining({
-					data: { validatorPublicKey: "validator-public-key" },
+					data: { validatorPublicKey: "validator-public-key", value: 0 },
 				}),
 			),
 		);
