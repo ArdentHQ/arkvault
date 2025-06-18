@@ -969,7 +969,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                                     aria-invalid="false"
                                     aria-labelledby="SelectRecipient__dropdown-label"
                                     autocomplete="off"
-                                    class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none sm:text-base! cursor-default text-theme-secondary-text"
+                                    class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base! cursor-default text-theme-secondary-text"
                                     data-testid="SelectDropdown__input"
                                     disabled=""
                                     id="SelectRecipient__dropdown-input"
@@ -1854,7 +1854,7 @@ exports[`ExchangeForm > should render exchange form with id of pending order 1`]
                   data-testid="StatusIcon__spinner"
                 >
                   <div
-                    class="animate-spin rounded-full border-[5px] shrink-0 w-8 h-8 dark:border-black dark:border-l-theme-primary-600 h-6! w-6! border-[3px]!"
+                    class="animate-spin rounded-full border-[5px] shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black border-l-theme-primary-600 dark:border-l-theme-primary-600 h-6! w-6! border-[3px]!"
                   />
                 </span>
                 <span
@@ -2119,7 +2119,7 @@ exports[`FormStep > should render 1`] = `
                         aria-controls="fromCurrency-menu"
                         aria-labelledby="fromCurrency-label"
                         autocomplete="off"
-                        class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none sm:text-base! cursor-default text-theme-secondary-text"
+                        class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base! cursor-default text-theme-secondary-text"
                         data-testid="SelectDropdown__input"
                         disabled=""
                         id="fromCurrency-input"
@@ -2361,7 +2361,7 @@ exports[`FormStep > should render 1`] = `
                           aria-controls="toCurrency-menu"
                           aria-labelledby="toCurrency-label"
                           autocomplete="off"
-                          class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none sm:text-base! cursor-default text-theme-secondary-text"
+                          class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base! cursor-default text-theme-secondary-text"
                           data-testid="SelectDropdown__input"
                           disabled=""
                           id="toCurrency-input"
@@ -2546,7 +2546,7 @@ exports[`FormStep > should render 1`] = `
                             aria-invalid="false"
                             aria-labelledby="SelectRecipient__dropdown-label"
                             autocomplete="off"
-                            class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none sm:text-base! cursor-default text-theme-secondary-text"
+                            class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base! cursor-default text-theme-secondary-text"
                             data-testid="SelectDropdown__input"
                             disabled=""
                             id="SelectRecipient__dropdown-input"
@@ -2944,7 +2944,7 @@ exports[`StatusStep > should render 1`] = `
           data-testid="StatusIcon__spinner"
         >
           <div
-            class="animate-spin rounded-full border-[5px] shrink-0 w-8 h-8 dark:border-black dark:border-l-theme-primary-600 h-6! w-6! border-[3px]!"
+            class="animate-spin rounded-full border-[5px] shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black border-l-theme-primary-600 dark:border-l-theme-primary-600 h-6! w-6! border-[3px]!"
           />
         </span>
         <span

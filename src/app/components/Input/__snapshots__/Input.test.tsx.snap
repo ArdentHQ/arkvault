@@ -48,7 +48,7 @@ exports[`Input > should render disabled 1`] = `
     >
       <input
         autocomplete="off"
-        class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none sm:text-base! text-theme-secondary-text"
+        class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base! text-theme-secondary-text"
         data-testid="Input"
         disabled=""
         type="text"
@@ -143,7 +143,7 @@ exports[`Input > should render invalid and disabled 1`] = `
       <input
         aria-invalid="true"
         autocomplete="off"
-        class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none sm:text-base! text-theme-secondary-text"
+        class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base! text-theme-secondary-text"
         data-testid="Input"
         disabled=""
         type="text"
