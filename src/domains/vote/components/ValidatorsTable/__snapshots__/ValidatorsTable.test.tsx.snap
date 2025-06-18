@@ -5893,7 +5893,7 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
       </div>
     </div>
     <div
-      class="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0 dim:border-theme-dim-700"
+      class="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 dim:border-theme-dim-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0"
       data-testid="ValidatorTable__footer"
     >
       <div
@@ -13127,7 +13127,7 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
       </div>
     </div>
     <div
-      class="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0 dim:border-theme-dim-700"
+      class="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 dim:border-theme-dim-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0"
       data-testid="ValidatorTable__footer"
     >
       <div
@@ -13963,7 +13963,7 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
       </div>
     </div>
     <div
-      class="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0 dim:border-theme-dim-700"
+      class="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 dim:border-theme-dim-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0"
       data-testid="ValidatorTable__footer"
     >
       <div
@@ -14778,7 +14778,7 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
       </div>
     </div>
     <div
-      class="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0 dim:border-theme-dim-700"
+      class="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 dim:border-theme-dim-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0"
       data-testid="ValidatorTable__footer"
     >
       <div
@@ -15593,7 +15593,7 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
       </div>
     </div>
     <div
-      class="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0 dim:border-theme-dim-700"
+      class="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 dim:border-theme-dim-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0"
       data-testid="ValidatorTable__footer"
     >
       <div
@@ -16408,7 +16408,7 @@ exports[`ValidatorsTable > should render 1`] = `
       </div>
     </div>
     <div
-      class="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0 dim:border-theme-dim-700"
+      class="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 dim:border-theme-dim-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0"
       data-testid="ValidatorTable__footer"
     >
       <div
@@ -17415,7 +17415,7 @@ exports[`ValidatorsTable > should render vote amount column 1`] = `
       </div>
     </div>
     <div
-      class="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0 dim:border-theme-dim-700"
+      class="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 dim:border-theme-dim-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0"
       data-testid="ValidatorTable__footer"
     >
       <div
@@ -18251,7 +18251,7 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
       </div>
     </div>
     <div
-      class="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0 dim:border-theme-dim-700"
+      class="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 dim:border-theme-dim-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0"
       data-testid="ValidatorTable__footer"
     >
       <div
@@ -19071,7 +19071,7 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
       </div>
     </div>
     <div
-      class="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0 dim:border-theme-dim-700"
+      class="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 dim:border-theme-dim-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0"
       data-testid="ValidatorTable__footer"
     >
       <div
@@ -19886,7 +19886,7 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
       </div>
     </div>
     <div
-      class="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0 dim:border-theme-dim-700"
+      class="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 dim:border-theme-dim-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0"
       data-testid="ValidatorTable__footer"
     >
       <div
@@ -20360,7 +20360,7 @@ exports[`ValidatorsTable > should render with empty list 1`] = `
       </div>
     </div>
     <div
-      class="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0 dim:border-theme-dim-700"
+      class="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 dim:border-theme-dim-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0"
       data-testid="ValidatorTable__footer"
     >
       <div
@@ -21179,7 +21179,7 @@ exports[`ValidatorsTable > should render with subtitle 1`] = `
       </div>
     </div>
     <div
-      class="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0 dim:border-theme-dim-700"
+      class="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 dim:border-theme-dim-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0"
       data-testid="ValidatorTable__footer"
     >
       <div
@@ -22185,7 +22185,7 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
       </div>
     </div>
     <div
-      class="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0 dim:border-theme-dim-700"
+      class="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 dim:border-theme-dim-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0"
       data-testid="ValidatorTable__footer"
     >
       <div
@@ -23021,7 +23021,7 @@ exports[`ValidatorsTable > should select a validator to unvote 1`] = `
       </div>
     </div>
     <div
-      class="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0 dim:border-theme-dim-700"
+      class="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 dim:border-theme-dim-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0"
       data-testid="ValidatorTable__footer"
     >
       <div
@@ -23842,7 +23842,7 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
       </div>
     </div>
     <div
-      class="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0 dim:border-theme-dim-700"
+      class="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 dim:border-theme-dim-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0"
       data-testid="ValidatorTable__footer"
     >
       <div
@@ -24657,7 +24657,7 @@ exports[`ValidatorsTable > should select a validator to vote 1`] = `
       </div>
     </div>
     <div
-      class="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0 dim:border-theme-dim-700"
+      class="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 dim:border-theme-dim-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0"
       data-testid="ValidatorTable__footer"
     >
       <div
@@ -25663,7 +25663,7 @@ exports[`ValidatorsTable > should select a validator with vote amount and make i
       </div>
     </div>
     <div
-      class="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0 dim:border-theme-dim-700"
+      class="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 dim:border-theme-dim-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0"
       data-testid="ValidatorTable__footer"
     >
       <div
@@ -26499,7 +26499,7 @@ exports[`ValidatorsTable > should select multiple validators to unvote/vote 1`] 
       </div>
     </div>
     <div
-      class="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0 dim:border-theme-dim-700"
+      class="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 dim:border-theme-dim-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0"
       data-testid="ValidatorTable__footer"
     >
       <div
@@ -27314,7 +27314,7 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
       </div>
     </div>
     <div
-      class="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0 dim:border-theme-dim-700"
+      class="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 dim:border-theme-dim-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0"
       data-testid="ValidatorTable__footer"
     >
       <div
@@ -28130,7 +28130,7 @@ exports[`ValidatorsTable > should unselect a validator to vote 1`] = `
       </div>
     </div>
     <div
-      class="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0 dim:border-theme-dim-700"
+      class="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 dim:border-theme-dim-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0"
       data-testid="ValidatorTable__footer"
     >
       <div

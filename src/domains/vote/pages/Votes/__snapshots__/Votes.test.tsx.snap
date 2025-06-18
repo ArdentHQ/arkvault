@@ -1196,7 +1196,7 @@ exports[`Votes > should filter current validators 1`] = `
           </div>
         </div>
         <div
-          class="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0 dim:border-theme-dim-700"
+          class="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 dim:border-theme-dim-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0"
           data-testid="ValidatorTable__footer"
         >
           <div
@@ -10838,7 +10838,7 @@ exports[`Votes > should render 1`] = `
           </nav>
         </div>
         <div
-          class="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0 dim:border-theme-dim-700"
+          class="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 dim:border-theme-dim-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0"
           data-testid="ValidatorTable__footer"
         >
           <div
@@ -18816,7 +18816,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
           </nav>
         </div>
         <div
-          class="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0 dim:border-theme-dim-700"
+          class="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 dim:border-theme-dim-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0"
           data-testid="ValidatorTable__footer"
         >
           <div
@@ -27054,7 +27054,7 @@ exports[`Votes > should select a validator 1`] = `
           </nav>
         </div>
         <div
-          class="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0 dim:border-theme-dim-700"
+          class="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 dim:border-theme-dim-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0"
           data-testid="ValidatorTable__footer"
         >
           <div
@@ -35350,7 +35350,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
           </nav>
         </div>
         <div
-          class="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0 dim:border-theme-dim-700"
+          class="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 dim:border-theme-dim-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0"
           data-testid="ValidatorTable__footer"
         >
           <div
