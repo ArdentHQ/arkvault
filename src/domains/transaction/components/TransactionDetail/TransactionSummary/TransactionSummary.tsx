@@ -6,7 +6,6 @@ import { Amount, AmountLabel } from "@/app/components/Amount";
 import { BigNumber } from "@/app/lib/helpers";
 import { TransactionAmountLabel } from "@/domains/transaction/components/TransactionTable/TransactionRow/TransactionAmount.blocks";
 import { useTranslation } from "react-i18next";
-import { configManager } from "@/app/lib/mainsail";
 import { UnitConverter } from "@arkecosystem/typescript-crypto";
 interface Properties {
 	transaction: DTO.ExtendedSignedTransactionData | DTO.ExtendedConfirmedTransactionData;
