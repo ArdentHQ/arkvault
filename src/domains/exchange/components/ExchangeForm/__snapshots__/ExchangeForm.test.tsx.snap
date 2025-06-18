@@ -516,8 +516,10 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                       class="w-full"
                     >
                       <div
-                        id="fromCurrency-toggle-button"
-                        tabindex="-1"
+                        aria-expanded="false"
+                        aria-haspopup="listbox"
+                        aria-owns="fromCurrency-menu"
+                        role="combobox"
                       >
                         <div>
                           <label
@@ -755,8 +757,10 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                         class="w-full"
                       >
                         <div
-                          id="toCurrency-toggle-button"
-                          tabindex="-1"
+                          aria-expanded="false"
+                          aria-haspopup="listbox"
+                          aria-owns="toCurrency-menu"
+                          role="combobox"
                         >
                           <div>
                             <label
@@ -943,8 +947,10 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                           class="w-full"
                         >
                           <div
-                            id="SelectRecipient__dropdown-toggle-button"
-                            tabindex="-1"
+                            aria-expanded="false"
+                            aria-haspopup="listbox"
+                            aria-owns="SelectRecipient__dropdown-menu"
+                            role="combobox"
                           >
                             <div>
                               <label
@@ -2085,8 +2091,10 @@ exports[`FormStep > should render 1`] = `
               class="w-full"
             >
               <div
-                id="fromCurrency-toggle-button"
-                tabindex="-1"
+                aria-expanded="false"
+                aria-haspopup="listbox"
+                aria-owns="fromCurrency-menu"
+                role="combobox"
               >
                 <div>
                   <label
@@ -2325,8 +2333,10 @@ exports[`FormStep > should render 1`] = `
                 class="w-full"
               >
                 <div
-                  id="toCurrency-toggle-button"
-                  tabindex="-1"
+                  aria-expanded="false"
+                  aria-haspopup="listbox"
+                  aria-owns="toCurrency-menu"
+                  role="combobox"
                 >
                   <div>
                     <label
@@ -2514,8 +2524,10 @@ exports[`FormStep > should render 1`] = `
                   class="w-full"
                 >
                   <div
-                    id="SelectRecipient__dropdown-toggle-button"
-                    tabindex="-1"
+                    aria-expanded="false"
+                    aria-haspopup="listbox"
+                    aria-owns="SelectRecipient__dropdown-menu"
+                    role="combobox"
                   >
                     <div>
                       <label
