@@ -188,7 +188,7 @@ main {
 }
 
 .select-options-list .select-list-option-head+.select-list-option .select-list-option__label {
-	@apply border-t border-transparent ! transition-colors duration-200;
+	@apply border-t border-transparent! transition-colors duration-200;
 }
 
 .select-options-list .select-list-option {
@@ -268,7 +268,7 @@ main {
 }
 
 .search-input {
-	@apply w-full appearance-none ! border-none bg-transparent ! p-2 leading-[17px] shadow-none ! dark:text-theme-secondary-200;
+	@apply w-full appearance-none! border-none bg-transparent! p-2 leading-[17px] shadow-none! dark:text-theme-secondary-200;
 }
 
 .search-input::-webkit-inner-spin-button,
