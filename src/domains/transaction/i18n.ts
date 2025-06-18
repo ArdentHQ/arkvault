@@ -95,6 +95,7 @@ export const translations = {
 	},
 	INVALID_MNEMONIC: "Invalid Mnemonic",
 	INVALID_URL: "Invalid URL",
+	LEARN_MORE_ABOUT_BLS_KEYS: "Learn more about BLS keys",
 	LEDGER_CONFIRMATION: {
 		DESCRIPTION:
 			"Please review and verify the information on your Ledger device. Choose Accept to complete your transaction.",
@@ -348,6 +349,7 @@ export const translations = {
 	TRANSACTION_REMOVED: "Transaction successfully removed.",
 	TRANSACTION_SIGNED: "Transaction Signed",
 	TRANSACTION_TYPE: "Transaction Type",
+
 	TRANSACTION_TYPES: {
 		CONTRACT_DEPLOYMENT: "Contract Deployment",
 		HTLC_CLAIM: "Timelock Claim",
@@ -364,10 +366,9 @@ export const translations = {
 		VOTE: "Vote",
 		VOTE_COMBINATION: "Vote Swap",
 	},
-
 	TRANSACTION_TYPE_NOT_AVAILABLE: "Transaction type not available for this address.",
-	TYPE: "Type",
 
+	TYPE: "Type",
 	UNVOTES: "Unvotes",
 	UNVOTES_COUNT: "Unvotes ({{count}})",
 	UNVOTES_COUNT_one: "Unvote",

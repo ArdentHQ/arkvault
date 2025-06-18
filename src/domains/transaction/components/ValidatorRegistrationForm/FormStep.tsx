@@ -7,12 +7,13 @@ import { InputDefault } from "@/app/components/Input";
 import { useValidation } from "@/app/hooks";
 import { FormStepProperties } from "@/domains/transaction/pages/SendRegistration/SendRegistration.contracts";
 import { StepHeader } from "@/app/components/StepHeader";
-import { ThemeIcon } from "@/app/components/Icon";
+import { Icon, ThemeIcon } from "@/app/components/Icon";
 import { SelectAddress } from "@/domains/profile/components/SelectAddress";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { WalletCapabilities } from "@/domains/portfolio/lib/wallet.capabilities";
 import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
 import { useEnvironmentContext } from "@/app/contexts";
+import { Link } from "@/app/components/Link";
 
 export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: FormStepProperties) => {
 	const { t } = useTranslation();
@@ -73,7 +74,24 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 
 			<div className="mt-3 space-y-4 sm:mt-4">
 				<FormField name="validatorPublicKey">
-					<FormLabel label={t("TRANSACTION.VALIDATOR_PUBLIC_KEY")} />
+					<FormLabel>
+						<div className="flex flex-1 flex-row justify-between">
+							<span>{t("TRANSACTION.VALIDATOR_PUBLIC_KEY")}</span>
+
+							<Link isExternal to="https://ark.dev" showExternalIcon={false}>
+								<span className="flex flex-row items-center gap-2">
+									<span>{t("TRANSACTION.LEARN_MORE_ABOUT_BLS_KEYS")}</span>
+
+									<Icon
+										data-testid="Link__external"
+										name="ArrowExternal"
+										dimensions={[12, 12]}
+										className="text-theme-secondary-500 dark:text-theme-dark-500 shrink-0 align-middle duration-200"
+									/>
+								</span>
+							</Link>
+						</div>
+					</FormLabel>
 					<InputDefault
 						data-testid="Input__validator_public_key"
 						defaultValue={validatorPublicKey}
