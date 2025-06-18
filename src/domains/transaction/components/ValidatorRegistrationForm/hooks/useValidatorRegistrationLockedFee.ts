@@ -8,7 +8,7 @@ export const useValidatorRegistrationLockedFee = ({
 	wallet,
 	profile,
 }: {
-	wallet?: Contracts.IReadWriteWallet;
+	wallet: Contracts.IReadWriteWallet;
 	profile: Contracts.IProfile;
 }): {
 	validatorRegistrationFee: number;
@@ -16,7 +16,7 @@ export const useValidatorRegistrationLockedFee = ({
 	validatorRegistrationFeeTicker: string;
 	validatorRegistrationFeeAsFiatTicker: string;
 } => {
-	const isTestnet = wallet?.network().isTest() === true;
+	const isTestnet = wallet.network().isTest();
 
 	const validatorRegistrationFee = BigNumber.make(
 		UnitConverter.formatUnits(
@@ -25,7 +25,7 @@ export const useValidatorRegistrationLockedFee = ({
 		),
 	).toNumber();
 
-	const ticker = wallet?.currency();
+	const ticker = wallet.currency();
 	const exchangeTicker = profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency) as string;
 	const { convert } = useExchangeRate({ exchangeTicker, profile, ticker });
 

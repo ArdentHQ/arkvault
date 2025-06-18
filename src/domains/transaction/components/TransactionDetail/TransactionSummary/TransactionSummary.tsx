@@ -38,16 +38,14 @@ export const TransactionSummary = ({
 					</>
 				)}
 
-				{transaction.isValidatorResignation() && (
+				{transaction.isValidatorResignation() && (senderWallet.validatorFee() ?? 0) > 0 && (
 					<>
 						<div className="flex w-full justify-between gap-2 sm:justify-start">
 							<DetailLabelText className={labelClassName}>{t("COMMON.UNLOCKED_AMOUNT")}</DetailLabelText>
 
 							<AmountLabel
 								value={UnitConverter.formatUnits(
-									BigNumber.make(
-										configManager.getMilestone()["validatorRegistrationFee"] ?? 0,
-									).toString(),
+									BigNumber.make(senderWallet.validatorFee() ?? 0).toString(),
 									"ARK",
 								)}
 								isNegative={false}
