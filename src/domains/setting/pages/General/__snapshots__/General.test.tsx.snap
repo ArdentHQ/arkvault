@@ -1309,10 +1309,8 @@ exports[`General Settings > should disable submit button when profile is not res
                                 class="w-full"
                               >
                                 <div
-                                  aria-expanded="false"
-                                  aria-haspopup="listbox"
-                                  aria-owns="select-passphrase-language-menu"
-                                  role="combobox"
+                                  id="select-passphrase-language-toggle-button"
+                                  tabindex="-1"
                                 >
                                   <div>
                                     <label
@@ -1448,10 +1446,8 @@ exports[`General Settings > should disable submit button when profile is not res
                                 class="w-full"
                               >
                                 <div
-                                  aria-expanded="false"
-                                  aria-haspopup="listbox"
-                                  aria-owns="select-currency-menu"
-                                  role="combobox"
+                                  id="select-currency-toggle-button"
+                                  tabindex="-1"
                                 >
                                   <div>
                                     <label
@@ -1591,10 +1587,8 @@ exports[`General Settings > should disable submit button when profile is not res
                                 class="w-full"
                               >
                                 <div
-                                  aria-expanded="false"
-                                  aria-haspopup="listbox"
-                                  aria-owns="select-language-menu"
-                                  role="combobox"
+                                  id="select-language-toggle-button"
+                                  tabindex="-1"
                                 >
                                   <div>
                                     <label
@@ -1730,10 +1724,8 @@ exports[`General Settings > should disable submit button when profile is not res
                                 class="w-full"
                               >
                                 <div
-                                  aria-expanded="false"
-                                  aria-haspopup="listbox"
-                                  aria-owns="select-market-provider-menu"
-                                  role="combobox"
+                                  id="select-market-provider-toggle-button"
+                                  tabindex="-1"
                                 >
                                   <div>
                                     <label
@@ -1869,10 +1861,8 @@ exports[`General Settings > should disable submit button when profile is not res
                                 class="w-full"
                               >
                                 <div
-                                  aria-expanded="false"
-                                  aria-haspopup="listbox"
-                                  aria-owns="select-time-format-menu"
-                                  role="combobox"
+                                  id="select-time-format-toggle-button"
+                                  tabindex="-1"
                                 >
                                   <div>
                                     <label
@@ -2040,10 +2030,8 @@ exports[`General Settings > should disable submit button when profile is not res
                                   class="w-full"
                                 >
                                   <div
-                                    aria-expanded="false"
-                                    aria-haspopup="listbox"
-                                    aria-owns="select-auto-signout-menu"
-                                    role="combobox"
+                                    id="select-auto-signout-toggle-button"
+                                    tabindex="-1"
                                   >
                                     <div>
                                       <label
@@ -3884,10 +3872,8 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                 class="w-full"
                               >
                                 <div
-                                  aria-expanded="false"
-                                  aria-haspopup="listbox"
-                                  aria-owns="select-passphrase-language-menu"
-                                  role="combobox"
+                                  id="select-passphrase-language-toggle-button"
+                                  tabindex="-1"
                                 >
                                   <div>
                                     <label
@@ -4023,10 +4009,8 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                 class="w-full"
                               >
                                 <div
-                                  aria-expanded="false"
-                                  aria-haspopup="listbox"
-                                  aria-owns="select-currency-menu"
-                                  role="combobox"
+                                  id="select-currency-toggle-button"
+                                  tabindex="-1"
                                 >
                                   <div>
                                     <label
@@ -4166,10 +4150,8 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                 class="w-full"
                               >
                                 <div
-                                  aria-expanded="false"
-                                  aria-haspopup="listbox"
-                                  aria-owns="select-language-menu"
-                                  role="combobox"
+                                  id="select-language-toggle-button"
+                                  tabindex="-1"
                                 >
                                   <div>
                                     <label
@@ -4305,10 +4287,8 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                 class="w-full"
                               >
                                 <div
-                                  aria-expanded="false"
-                                  aria-haspopup="listbox"
-                                  aria-owns="select-market-provider-menu"
-                                  role="combobox"
+                                  id="select-market-provider-toggle-button"
+                                  tabindex="-1"
                                 >
                                   <div>
                                     <label
@@ -4444,10 +4424,8 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                 class="w-full"
                               >
                                 <div
-                                  aria-expanded="false"
-                                  aria-haspopup="listbox"
-                                  aria-owns="select-time-format-menu"
-                                  role="combobox"
+                                  id="select-time-format-toggle-button"
+                                  tabindex="-1"
                                 >
                                   <div>
                                     <label
@@ -4615,10 +4593,8 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                   class="w-full"
                                 >
                                   <div
-                                    aria-expanded="false"
-                                    aria-haspopup="listbox"
-                                    aria-owns="select-auto-signout-menu"
-                                    role="combobox"
+                                    id="select-auto-signout-toggle-button"
+                                    tabindex="-1"
                                   >
                                     <div>
                                       <label
@@ -6413,10 +6389,8 @@ exports[`General Settings > should render 1`] = `
                                 class="w-full"
                               >
                                 <div
-                                  aria-expanded="false"
-                                  aria-haspopup="listbox"
-                                  aria-owns="select-passphrase-language-menu"
-                                  role="combobox"
+                                  id="select-passphrase-language-toggle-button"
+                                  tabindex="-1"
                                 >
                                   <div>
                                     <label
@@ -6552,10 +6526,8 @@ exports[`General Settings > should render 1`] = `
                                 class="w-full"
                               >
                                 <div
-                                  aria-expanded="false"
-                                  aria-haspopup="listbox"
-                                  aria-owns="select-currency-menu"
-                                  role="combobox"
+                                  id="select-currency-toggle-button"
+                                  tabindex="-1"
                                 >
                                   <div>
                                     <label
@@ -6695,10 +6667,8 @@ exports[`General Settings > should render 1`] = `
                                 class="w-full"
                               >
                                 <div
-                                  aria-expanded="false"
-                                  aria-haspopup="listbox"
-                                  aria-owns="select-language-menu"
-                                  role="combobox"
+                                  id="select-language-toggle-button"
+                                  tabindex="-1"
                                 >
                                   <div>
                                     <label
@@ -6834,10 +6804,8 @@ exports[`General Settings > should render 1`] = `
                                 class="w-full"
                               >
                                 <div
-                                  aria-expanded="false"
-                                  aria-haspopup="listbox"
-                                  aria-owns="select-market-provider-menu"
-                                  role="combobox"
+                                  id="select-market-provider-toggle-button"
+                                  tabindex="-1"
                                 >
                                   <div>
                                     <label
@@ -6973,10 +6941,8 @@ exports[`General Settings > should render 1`] = `
                                 class="w-full"
                               >
                                 <div
-                                  aria-expanded="false"
-                                  aria-haspopup="listbox"
-                                  aria-owns="select-time-format-menu"
-                                  role="combobox"
+                                  id="select-time-format-toggle-button"
+                                  tabindex="-1"
                                 >
                                   <div>
                                     <label
@@ -7144,10 +7110,8 @@ exports[`General Settings > should render 1`] = `
                                   class="w-full"
                                 >
                                   <div
-                                    aria-expanded="false"
-                                    aria-haspopup="listbox"
-                                    aria-owns="select-auto-signout-menu"
-                                    role="combobox"
+                                    id="select-auto-signout-toggle-button"
+                                    tabindex="-1"
                                   >
                                     <div>
                                       <label
@@ -8943,10 +8907,8 @@ exports[`General Settings > should update profile 1`] = `
                                 class="w-full"
                               >
                                 <div
-                                  aria-expanded="false"
-                                  aria-haspopup="listbox"
-                                  aria-owns="select-passphrase-language-menu"
-                                  role="combobox"
+                                  id="select-passphrase-language-toggle-button"
+                                  tabindex="-1"
                                 >
                                   <div>
                                     <label
@@ -9082,10 +9044,8 @@ exports[`General Settings > should update profile 1`] = `
                                 class="w-full"
                               >
                                 <div
-                                  aria-expanded="false"
-                                  aria-haspopup="listbox"
-                                  aria-owns="select-currency-menu"
-                                  role="combobox"
+                                  id="select-currency-toggle-button"
+                                  tabindex="-1"
                                 >
                                   <div>
                                     <label
@@ -9225,10 +9185,8 @@ exports[`General Settings > should update profile 1`] = `
                                 class="w-full"
                               >
                                 <div
-                                  aria-expanded="false"
-                                  aria-haspopup="listbox"
-                                  aria-owns="select-language-menu"
-                                  role="combobox"
+                                  id="select-language-toggle-button"
+                                  tabindex="-1"
                                 >
                                   <div>
                                     <label
@@ -9364,10 +9322,8 @@ exports[`General Settings > should update profile 1`] = `
                                 class="w-full"
                               >
                                 <div
-                                  aria-expanded="false"
-                                  aria-haspopup="listbox"
-                                  aria-owns="select-market-provider-menu"
-                                  role="combobox"
+                                  id="select-market-provider-toggle-button"
+                                  tabindex="-1"
                                 >
                                   <div>
                                     <label
@@ -9503,10 +9459,8 @@ exports[`General Settings > should update profile 1`] = `
                                 class="w-full"
                               >
                                 <div
-                                  aria-expanded="false"
-                                  aria-haspopup="listbox"
-                                  aria-owns="select-time-format-menu"
-                                  role="combobox"
+                                  id="select-time-format-toggle-button"
+                                  tabindex="-1"
                                 >
                                   <div>
                                     <label
@@ -9674,10 +9628,8 @@ exports[`General Settings > should update profile 1`] = `
                                   class="w-full"
                                 >
                                   <div
-                                    aria-expanded="false"
-                                    aria-haspopup="listbox"
-                                    aria-owns="select-auto-signout-menu"
-                                    role="combobox"
+                                    id="select-auto-signout-toggle-button"
+                                    tabindex="-1"
                                   >
                                     <div>
                                       <label
@@ -11473,10 +11425,8 @@ exports[`General Settings > should update the avatar when removing focus from na
                                 class="w-full"
                               >
                                 <div
-                                  aria-expanded="false"
-                                  aria-haspopup="listbox"
-                                  aria-owns="select-passphrase-language-menu"
-                                  role="combobox"
+                                  id="select-passphrase-language-toggle-button"
+                                  tabindex="-1"
                                 >
                                   <div>
                                     <label
@@ -11612,10 +11562,8 @@ exports[`General Settings > should update the avatar when removing focus from na
                                 class="w-full"
                               >
                                 <div
-                                  aria-expanded="false"
-                                  aria-haspopup="listbox"
-                                  aria-owns="select-currency-menu"
-                                  role="combobox"
+                                  id="select-currency-toggle-button"
+                                  tabindex="-1"
                                 >
                                   <div>
                                     <label
@@ -11755,10 +11703,8 @@ exports[`General Settings > should update the avatar when removing focus from na
                                 class="w-full"
                               >
                                 <div
-                                  aria-expanded="false"
-                                  aria-haspopup="listbox"
-                                  aria-owns="select-language-menu"
-                                  role="combobox"
+                                  id="select-language-toggle-button"
+                                  tabindex="-1"
                                 >
                                   <div>
                                     <label
@@ -11894,10 +11840,8 @@ exports[`General Settings > should update the avatar when removing focus from na
                                 class="w-full"
                               >
                                 <div
-                                  aria-expanded="false"
-                                  aria-haspopup="listbox"
-                                  aria-owns="select-market-provider-menu"
-                                  role="combobox"
+                                  id="select-market-provider-toggle-button"
+                                  tabindex="-1"
                                 >
                                   <div>
                                     <label
@@ -12033,10 +11977,8 @@ exports[`General Settings > should update the avatar when removing focus from na
                                 class="w-full"
                               >
                                 <div
-                                  aria-expanded="false"
-                                  aria-haspopup="listbox"
-                                  aria-owns="select-time-format-menu"
-                                  role="combobox"
+                                  id="select-time-format-toggle-button"
+                                  tabindex="-1"
                                 >
                                   <div>
                                     <label
@@ -12204,10 +12146,8 @@ exports[`General Settings > should update the avatar when removing focus from na
                                   class="w-full"
                                 >
                                   <div
-                                    aria-expanded="false"
-                                    aria-haspopup="listbox"
-                                    aria-owns="select-auto-signout-menu"
-                                    role="combobox"
+                                    id="select-auto-signout-toggle-button"
+                                    tabindex="-1"
                                   >
                                     <div>
                                       <label
@@ -14101,10 +14041,8 @@ exports[`General Settings > should update the avatar when removing focus from na
                                 class="w-full"
                               >
                                 <div
-                                  aria-expanded="false"
-                                  aria-haspopup="listbox"
-                                  aria-owns="select-passphrase-language-menu"
-                                  role="combobox"
+                                  id="select-passphrase-language-toggle-button"
+                                  tabindex="-1"
                                 >
                                   <div>
                                     <label
@@ -14240,10 +14178,8 @@ exports[`General Settings > should update the avatar when removing focus from na
                                 class="w-full"
                               >
                                 <div
-                                  aria-expanded="false"
-                                  aria-haspopup="listbox"
-                                  aria-owns="select-currency-menu"
-                                  role="combobox"
+                                  id="select-currency-toggle-button"
+                                  tabindex="-1"
                                 >
                                   <div>
                                     <label
@@ -14383,10 +14319,8 @@ exports[`General Settings > should update the avatar when removing focus from na
                                 class="w-full"
                               >
                                 <div
-                                  aria-expanded="false"
-                                  aria-haspopup="listbox"
-                                  aria-owns="select-language-menu"
-                                  role="combobox"
+                                  id="select-language-toggle-button"
+                                  tabindex="-1"
                                 >
                                   <div>
                                     <label
@@ -14522,10 +14456,8 @@ exports[`General Settings > should update the avatar when removing focus from na
                                 class="w-full"
                               >
                                 <div
-                                  aria-expanded="false"
-                                  aria-haspopup="listbox"
-                                  aria-owns="select-market-provider-menu"
-                                  role="combobox"
+                                  id="select-market-provider-toggle-button"
+                                  tabindex="-1"
                                 >
                                   <div>
                                     <label
@@ -14661,10 +14593,8 @@ exports[`General Settings > should update the avatar when removing focus from na
                                 class="w-full"
                               >
                                 <div
-                                  aria-expanded="false"
-                                  aria-haspopup="listbox"
-                                  aria-owns="select-time-format-menu"
-                                  role="combobox"
+                                  id="select-time-format-toggle-button"
+                                  tabindex="-1"
                                 >
                                   <div>
                                     <label
@@ -14832,10 +14762,8 @@ exports[`General Settings > should update the avatar when removing focus from na
                                   class="w-full"
                                 >
                                   <div
-                                    aria-expanded="false"
-                                    aria-haspopup="listbox"
-                                    aria-owns="select-auto-signout-menu"
-                                    role="combobox"
+                                    id="select-auto-signout-toggle-button"
+                                    tabindex="-1"
                                   >
                                     <div>
                                       <label
