@@ -44,7 +44,7 @@ const SelectDropdown = ({
 		isOpen,
 		closeMenu,
 		openMenu,
-		getToggleButtonProps,
+		getComboboxProps,
 		getLabelProps,
 		getInputProps,
 		getItemProps,
@@ -67,7 +67,7 @@ const SelectDropdown = ({
 			}
 
 			if (allowFreeInput) {
-				const selected = { label: inputValue, value: inputValue };
+				const selected = { label: inputValue as string, value: inputValue as string };
 
 				selectItem(selected);
 				onSelectedItemChange({ selected });
@@ -221,7 +221,7 @@ const SelectDropdown = ({
 			)}
 
 			<div className="w-full">
-				<div {...getToggleButtonProps()}>
+				<div {...getComboboxProps()}>
 					<div ref={dropdownReference}>
 						<label {...getLabelProps()} />
 
