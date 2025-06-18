@@ -312,7 +312,7 @@ export const FormStep = ({ profile }: FormStepProperties) => {
 			<button
 				data-testid="ExchangeForm__add-refund-address"
 				type="button"
-				className="link text-sm font-semibold"
+				className="link dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-500 text-sm font-semibold"
 				onClick={() => setShowRefundInput(true)}
 			>
 				+{t("EXCHANGE.REFUND_WALLET.ADD")}
