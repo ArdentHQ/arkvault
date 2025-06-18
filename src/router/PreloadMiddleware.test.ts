@@ -46,16 +46,6 @@ vi.mock("@/domains/message/routing", () => ({
 		],
 	}));
 
-// Now import the middleware and mocked routes
-import { PreloadMiddleware } from "./PreloadMiddleware";
-import { DashboardRoutes } from "@/domains/dashboard/routing";
-import { ProfileRoutes } from "@/domains/profile/routing";
-import { SettingRoutes } from "@/domains/setting/routing";
-import { ContactRoutes } from "@/domains/contact/routing";
-import { ExchangeRoutes } from "@/domains/exchange/routing";
-import { MessageRoutes } from "@/domains/message/routing";
-import { VoteRoutes } from "@/domains/vote/routing";
-import { TransactionRoutes } from "@/domains/transaction/routing";
 import { PreloadMiddleware } from "./PreloadMiddleware";
 import { DashboardRoutes } from "@/domains/dashboard/routing";
 import { ProfileRoutes } from "@/domains/profile/routing";
