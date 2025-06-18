@@ -2,7 +2,7 @@
 
 @media (max-width: 768px) {
 	.Toastify__toast-container {
-		@apply inset-x-0 bottom-0 w-full p-0;
+		@apply inset-x-0 bottom-0 w-full! p-0;
 	}
 
 	.Toastify__toast {
@@ -20,10 +20,9 @@
 }
 
 .Toastify__toast {
-	@apply cursor-default rounded-none shadow-none!;
+	@apply min-w-full! cursor-default rounded-none shadow-none! md:min-w-[33rem]!;
 	background: unset !important;
 	color: unset;
-	min-width: 21rem;
 }
 
 .Toastify__toast:last-child {
