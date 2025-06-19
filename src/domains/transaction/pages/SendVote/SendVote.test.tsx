@@ -596,7 +596,6 @@ describe("SendVote", () => {
 
 		const inputElement: HTMLInputElement = screen.getByTestId("Input_GasPrice");
 
-		inputElement.select();
 		await userEvent.clear(inputElement);
 		await userEvent.type(inputElement, "20");
 
@@ -646,7 +645,6 @@ describe("SendVote", () => {
 
 		const inputElement: HTMLInputElement = screen.getByTestId("Input_GasPrice");
 
-		inputElement.select();
 		await userEvent.clear(inputElement);
 		await userEvent.type(inputElement, "20");
 

@@ -100,9 +100,7 @@ describe("Import Profile - Profile Form Step", () => {
 
 		const inputElement: HTMLInputElement = screen.getAllByTestId("Input")[0];
 
-		inputElement.select();
 		const user = userEvent.setup();
-
 		await user.clear(inputElement);
 		await user.paste("test profile 1");
 
@@ -119,7 +117,6 @@ describe("Import Profile - Profile Form Step", () => {
 
 		expect(emptyProfile.usesPassword()).toBe(false);
 
-		inputElement.select();
 		await user.clear(inputElement);
 		await user.type(inputElement, "test profile 2");
 
@@ -173,22 +170,17 @@ describe("Import Profile - Profile Form Step", () => {
 
 		await waitFor(() => expect(submitButton()).toBeDisabled());
 
-		passwordInput().select();
-
 		await user.clear(passwordInput());
 		await user.paste("S3cUrePa$sword");
 
-		passwordConfirmationInput().select();
 		await user.clear(passwordConfirmationInput());
 		await user.paste("S3cUrePa$sword");
 
 		await waitFor(() => expect(submitButton()).toBeEnabled());
 
-		passwordConfirmationInput().select();
 		await user.clear(passwordConfirmationInput());
 		await user.paste("S3cUrePa$sword.test");
 
-		passwordInput().select();
 		await user.clear(passwordInput());
 		await user.paste("S3cUrePa$sword.wrong");
 

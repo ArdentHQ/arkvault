@@ -219,7 +219,6 @@ describe("ValidatorVoteAmount", () => {
 
 		await waitFor(() => expect(screen.getByTestId("Input__error")).toBeVisible());
 
-		amountField.select();
 		await userEvent.clear(amountField);
 		await userEvent.type(amountField, "10");
 
@@ -430,7 +429,6 @@ describe("ValidatorVoteAmount", () => {
 		rerender();
 
 		const amountInputField: HTMLInputElement = screen.getByTestId("InputCurrency");
-		amountInputField.select();
 		await userEvent.clear(amountInputField);
 		await userEvent.type(amountInputField, "20");
 
@@ -472,7 +470,6 @@ describe("ValidatorVoteAmount", () => {
 		rerender();
 
 		const amountInput: HTMLInputElement = screen.getByTestId("InputCurrency");
-		amountInput.select();
 		await userEvent.clear(amountInput);
 		await userEvent.type(amountInput, "20");
 
@@ -481,7 +478,6 @@ describe("ValidatorVoteAmount", () => {
 		rerender();
 
 		const amountInputField: HTMLInputElement = screen.getByTestId("InputCurrency");
-		amountInputField.select();
 		await userEvent.clear(amountInputField);
 		await userEvent.type(amountInputField, "10");
 
@@ -526,7 +522,6 @@ describe("ValidatorVoteAmount", () => {
 
 		await waitFor(() => expect(toggleUnvotesSelected).not.toHaveBeenCalled());
 
-		amountField.select();
 		await userEvent.clear(amountField);
 		await userEvent.type(amountField, "40");
 
@@ -538,7 +533,6 @@ describe("ValidatorVoteAmount", () => {
 		rerender();
 
 		const amountInput: HTMLInputElement = screen.getByTestId("InputCurrency");
-		amountInput.select();
 		await userEvent.clear(amountInput);
 		await userEvent.type(amountInput, "50");
 
@@ -551,7 +545,6 @@ describe("ValidatorVoteAmount", () => {
 		rerender();
 
 		const amountInput2: HTMLInputElement = screen.getByTestId("InputCurrency");
-		amountInput2.select();
 		await userEvent.clear(amountInput2);
 		await userEvent.type(amountInput2, "0");
 
@@ -563,7 +556,6 @@ describe("ValidatorVoteAmount", () => {
 		rerender();
 
 		const amountInput3: HTMLInputElement = screen.getByTestId("InputCurrency");
-		amountInput3.select();
 		await userEvent.clear(amountInput3);
 		await userEvent.type(amountInput3, "10");
 
@@ -574,7 +566,6 @@ describe("ValidatorVoteAmount", () => {
 		rerender();
 
 		const amountInput4: HTMLInputElement = screen.getByTestId("InputCurrency");
-		amountInput4.select();
 		await userEvent.clear(amountInput4);
 		await userEvent.type(amountInput4, "30");
 
@@ -585,7 +576,6 @@ describe("ValidatorVoteAmount", () => {
 		rerender();
 
 		const amountInput5: HTMLInputElement = screen.getByTestId("InputCurrency");
-		amountInput5.select();
 		await userEvent.clear(amountInput5);
 		await userEvent.type(amountInput5, "20");
 
@@ -596,7 +586,6 @@ describe("ValidatorVoteAmount", () => {
 		rerender();
 
 		const amountInput6: HTMLInputElement = screen.getByTestId("InputCurrency");
-		amountInput6.select();
 		await userEvent.clear(amountInput6);
 		await userEvent.type(amountInput6, "60");
 
@@ -608,7 +597,6 @@ describe("ValidatorVoteAmount", () => {
 		rerender();
 
 		const amountInput7: HTMLInputElement = screen.getByTestId("InputCurrency");
-		amountInput7.select();
 		await userEvent.clear(amountInput7);
 		await userEvent.type(amountInput7, "30");
 
@@ -743,7 +731,6 @@ describe("ValidatorVoteAmount", () => {
 
 			expect(amountField).toHaveValue("30");
 
-			amountField.select();
 			await userEvent.clear(amountField);
 			await userEvent.type(amountField, "20");
 

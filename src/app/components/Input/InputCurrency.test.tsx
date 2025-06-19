@@ -60,7 +60,6 @@ describe("InputCurrency", () => {
 
 		expect(input).toHaveValue("0.04");
 
-		input.select();
 		await userEvent.clear(input);
 		await userEvent.type(input, "1.23");
 
