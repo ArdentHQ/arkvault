@@ -74,24 +74,29 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 
 			<div className="mt-3 space-y-4 sm:mt-4">
 				<FormField name="validatorPublicKey">
-					<FormLabel>
-						<div className="flex flex-1 flex-row justify-between">
-							<span>{t("TRANSACTION.VALIDATOR_PUBLIC_KEY")}</span>
+					<div className="flex flex-1 flex-row justify-between">
+						<FormLabel label={t("TRANSACTION.VALIDATOR_PUBLIC_KEY")}></FormLabel>
 
-							<Link isExternal to="https://ark.dev" showExternalIcon={false}>
-								<span className="flex flex-row items-center gap-2">
-									<span>{t("TRANSACTION.LEARN_MORE_ABOUT_BLS_KEYS")}</span>
-
-									<Icon
-										data-testid="Link__external"
-										name="ArrowExternal"
-										dimensions={[12, 12]}
-										className="text-theme-secondary-500 dark:text-theme-dark-500 shrink-0 align-middle duration-200"
-									/>
+						<Link isExternal to="https://ark.dev" showExternalIcon={false} className="text-sm">
+							<span className="flex flex-row items-center gap-2">
+								<span>
+									<span className="hidden sm:inline">
+										{t("TRANSACTION.LEARN_MORE_ABOUT_BLS_KEYS")}
+									</span>
+									<span className="inline sm:hidden">
+										{t("TRANSACTION.LEARN_MORE_ABOUT_BLS_KEYS_SHORT")}
+									</span>
 								</span>
-							</Link>
-						</div>
-					</FormLabel>
+
+								<Icon
+									data-testid="Link__external"
+									name="ArrowExternal"
+									dimensions={[12, 12]}
+									className="text-theme-secondary-500 dark:text-theme-dark-500 shrink-0 align-middle duration-200"
+								/>
+							</span>
+						</Link>
+					</div>
 					<InputDefault
 						data-testid="Input__validator_public_key"
 						defaultValue={validatorPublicKey}

@@ -96,6 +96,7 @@ export const translations = {
 	INVALID_MNEMONIC: "Invalid Mnemonic",
 	INVALID_URL: "Invalid URL",
 	LEARN_MORE_ABOUT_BLS_KEYS: "Learn more about BLS keys",
+	LEARN_MORE_ABOUT_BLS_KEYS_SHORT: "About BLS keys",
 	LEDGER_CONFIRMATION: {
 		DESCRIPTION:
 			"Please review and verify the information on your Ledger device. Choose Accept to complete your transaction.",
