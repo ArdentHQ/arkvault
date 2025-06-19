@@ -1,7 +1,6 @@
 import React from "react";
 
 import { TransactionFixture } from "@/tests/fixtures/transactions";
-import { env, render, screen } from "@/utils/testing-library";
 import { renderHook } from "@testing-library/react";
 import { useTranslation } from "react-i18next";
 import userEvent from "@testing-library/user-event";

@@ -25,6 +25,7 @@ import ValidatorRegistrationFixture from "@/tests/fixtures/coins/mainsail/devnet
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import userEvent from "@testing-library/user-event";
 import { PublicKeyService } from "@/app/lib/mainsail/public-key.service";
+import { LedgerTransportFactory } from "@/app/contexts";
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
 let secondWallet: Contracts.IReadWriteWallet;
@@ -327,7 +328,8 @@ describe("Registration", () => {
 		const unsubscribe = vi.fn();
 		let observer: Observer<any>;
 
-		const listenSpy = vi.spyOn(ledgerTransport, "listen").mockImplementationOnce((obv) => {
+		const transport = new LedgerTransportFactory();
+		const listenSpy = vi.spyOn(transport, "listen").mockImplementationOnce((obv) => {
 			observer = obv;
 			return { unsubscribe };
 		});
