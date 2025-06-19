@@ -75,7 +75,7 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 			<div className="mt-3 space-y-4 sm:mt-4">
 				<FormField name="validatorPublicKey">
 					<div className="flex flex-1 flex-row justify-between">
-						<FormLabel label={t("TRANSACTION.VALIDATOR_PUBLIC_KEY")}></FormLabel>
+						<FormLabel label={t("TRANSACTION.VALIDATOR_PUBLIC_KEY")} />
 
 						<Link isExternal to="https://ark.dev" showExternalIcon={false} className="text-sm">
 							<span className="flex flex-row items-center gap-2">
