@@ -8,12 +8,12 @@ exports[`EmptyResults > should render with custom title and subtitle 1`] = `
   >
     <div>
       <div
-        class="mb-4 text-lg font-bold"
+        class="dim:text-theme-dim-200 mb-4 text-lg font-bold"
       >
         No results
       </div>
       <div
-        class="text-md mb-8"
+        class="text-md dim:text-theme-dim-500 mb-8"
       >
         No results found. Refine your search and try again.
       </div>

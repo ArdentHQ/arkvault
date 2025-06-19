@@ -7,7 +7,7 @@ exports[`HeaderSearchInput > should render 1`] = `
     data-testid="HeaderSearchInput"
   >
     <div
-      class="dark:border-theme-secondary-800 xs:[min-width:300px] sm:[min-width:448px] dark:border border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 flex items-center overflow-hidden rounded-lg border px-4 text-base"
+      class="dark:border-theme-secondary-800 xs:[min-width:300px] sm:[min-width:448px] dark:border border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 dim:border-theme-dim-700 flex items-center overflow-hidden rounded-lg border px-4 text-base"
       data-testid="HeaderSearchInput__input"
     >
       <button
@@ -66,7 +66,7 @@ exports[`HeaderSearchInput > should render 1`] = `
         </div>
       </div>
       <div
-        class="text-theme-secondary-700 dark:text-theme-secondary-600"
+        class="text-theme-secondary-700 dark:text-theme-secondary-600 dim:text-theme-dim-500"
       >
         <div
           style="height: 20px; width: 20px;"
