@@ -28,9 +28,9 @@ describe("randomHost", () => {
 describe("groupCustomHosts", () => {
 	it("should group custom hosts by name", () => {
 		const customHosts: HostSet = [
-			{ host: { host: 'https://custom1.ark.io', type: 'full' }, name: 'ark' },
-			{ host: { host: 'https://custom2.ark.io', type: 'full' }, name: 'ark' },
-			{ host: { host: 'https://custom.solar.io', type: 'full' }, name: 'solar' },
+			{ host: { host: "https://custom1.ark.io", type: "full" }, name: "ark" },
+			{ host: { host: "https://custom2.ark.io", type: "full" }, name: "ark" },
+			{ host: { host: "https://custom.solar.io", type: "full" }, name: "solar" },
 		];
 		const grouped = groupCustomHosts(customHosts);
 		expect(Object.keys(grouped)).toHaveLength(2);
