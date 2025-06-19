@@ -17,7 +17,7 @@ const SearchBarInputWrapper = (properties: SearchBarInputWrapperProperties) => (
 	<div
 		{...properties}
 		className={twMerge(
-			"dark:border-theme-secondary-800 xs:[min-width:300px] sm:[min-width:448px] dark:border",
+			"dark:border-theme-secondary-800 xs:[min-width:300px] dim:border-theme-dim-700 sm:[min-width:448px] dark:border",
 			properties.className,
 		)}
 	/>
@@ -89,7 +89,7 @@ export const HeaderSearchBar: FC<HeaderSearchBarProperties> = ({
 					{extra && (
 						<div className="flex items-center">
 							<div>{extra}</div>
-							<div className="border-theme-secondary-300 dark:border-theme-secondary-800 mr-8 h-10 border-l" />
+							<div className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 mr-8 h-10 border-l" />
 						</div>
 					)}
 
@@ -103,7 +103,7 @@ export const HeaderSearchBar: FC<HeaderSearchBarProperties> = ({
 					>
 						<Icon
 							className={cn(
-								"text-theme-text transition-all duration-300",
+								"text-theme-text dim:text-theme-dim-50 transition-all duration-300",
 								{ "w-0": query === "" && !alwaysDisplayClearButton },
 								{ "w-4": query !== "" || alwaysDisplayClearButton },
 							)}
@@ -129,7 +129,7 @@ export const HeaderSearchBar: FC<HeaderSearchBarProperties> = ({
 					</div>
 
 					<Icon
-						className="text-theme-primary-300 dark:text-theme-secondary-600"
+						className="text-theme-primary-300 dark:text-theme-secondary-600 dim:text-theme-dim-500"
 						name="MagnifyingGlass"
 						size="lg"
 					/>
