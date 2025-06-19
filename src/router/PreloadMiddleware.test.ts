@@ -1,3 +1,35 @@
+vi.mock("@/domains/dashboard/routing", () => ({
+	DashboardRoutes: [{ component: { preload: vi.fn() } }],
+}));
+
+vi.mock("@/domains/profile/routing", () => ({
+	ProfileRoutes: [{ component: { preload: vi.fn() } }],
+}));
+
+vi.mock("@/domains/setting/routing", () => ({
+	SettingRoutes: [{ component: { preload: vi.fn() } }],
+}));
+
+vi.mock("@/domains/contact/routing", () => ({
+	ContactRoutes: [{ component: { preload: vi.fn() } }],
+}));
+
+vi.mock("@/domains/exchange/routing", () => ({
+	ExchangeRoutes: [{ component: { preload: vi.fn() } }],
+}));
+
+vi.mock("@/domains/vote/routing", () => ({
+	VoteRoutes: [{ component: { preload: vi.fn() } }],
+}));
+
+vi.mock("@/domains/transaction/routing", () => ({
+	TransactionRoutes: [{ component: { preload: vi.fn() } }],
+}));
+
+vi.mock("@/domains/message/routing", () => ({
+	MessageRoutes: [{ component: { preload: vi.fn() } }],
+}));
+
 import { PreloadMiddleware } from "./PreloadMiddleware";
 import { DashboardRoutes } from "@/domains/dashboard/routing";
 import { ProfileRoutes } from "@/domains/profile/routing";

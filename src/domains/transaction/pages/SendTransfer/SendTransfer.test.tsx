@@ -829,8 +829,6 @@ describe("SendTransfer", () => {
 
 		expect(inputElement).toHaveValue(passphrase);
 
-		await inputElement.select();
-
 		await userEvent.clear(inputElement);
 		await userEvent.type(inputElement, "test");
 
