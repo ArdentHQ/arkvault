@@ -9,43 +9,60 @@ interface AmountProperties {
 	showSign?: boolean;
 	showTicker?: boolean;
 	isNegative?: boolean;
-	className?: string;
 	allowHideBalance?: boolean;
 	profile?: Contracts.IProfile;
 }
 
-const Amount = ({
+const useFormatAmount = ({
 	value,
 	ticker,
 	showTicker = true,
-	isNegative,
-	showSign,
-	className,
+	showSign = false,
+	isNegative = false,
 	allowHideBalance = false,
 	profile,
-}: AmountProperties) => {
+}: AmountProperties): string => {
 	let formattedAmount = Helpers.Currency.format(value, ticker, { withTicker: showTicker });
 
 	const { hideBalance } = useBalanceVisibility({ profile });
 
 	if (hideBalance && allowHideBalance) {
-		formattedAmount = formattedAmount.replaceAll(/[\d,.]+/g, "****");
-		return (
-			<span data-testid="Amount" className={cn("whitespace-nowrap", className)}>
-				{formattedAmount}
-			</span>
-		);
+		return formattedAmount.replaceAll(/[\d,.]+/g, "****");
 	}
 
 	if (showSign) {
-		formattedAmount = `${isNegative ? "-" : "+"} ${formattedAmount}`;
+		return `${isNegative ? "-" : "+"} ${formattedAmount}`;
 	}
 
+	return formattedAmount;
+};
+
+const Amount = ({
+	className,
+	value,
+	ticker,
+	showTicker = true,
+	showSign = false,
+	isNegative = false,
+	allowHideBalance = false,
+	profile,
+	...properties
+}: AmountProperties & React.HTMLAttributes<HTMLSpanElement>) => {
+	const formattedAmount = useFormatAmount({
+		value,
+		ticker,
+		showTicker,
+		showSign,
+		isNegative,
+		allowHideBalance,
+		profile,
+	});
+
 	return (
-		<span data-testid="Amount" className={cn("whitespace-nowrap", className)}>
+		<span data-testid="Amount" className={cn("whitespace-nowrap", className)} {...properties}>
 			{formattedAmount}
 		</span>
 	);
 };
 
-export { Amount };
+export { Amount, useFormatAmount };

@@ -13,6 +13,9 @@ import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { WalletCapabilities } from "@/domains/portfolio/lib/wallet.capabilities";
 import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
 import { useEnvironmentContext } from "@/app/contexts";
+import { Alert } from "@/app/components/Alert";
+import { useValidatorRegistrationLockedFee } from "./hooks/useValidatorRegistrationLockedFee";
+import { useFormatAmount } from "@/app/components/Amount/Amount";
 
 export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: FormStepProperties) => {
 	const { t } = useTranslation();
@@ -42,6 +45,16 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 		}
 	};
 
+	const { validatorRegistrationFee, validatorRegistrationFeeTicker } = useValidatorRegistrationLockedFee({
+		wallet,
+		profile,
+	});
+
+	const formattedFee = useFormatAmount({
+		value: validatorRegistrationFee,
+		ticker: validatorRegistrationFeeTicker,
+	});
+
 	return (
 		<section data-testid="ValidatorRegistrationForm_form-step">
 			<StepHeader
@@ -51,6 +64,13 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 					<ThemeIcon dimensions={[24, 24]} lightIcon="SendTransactionLight" darkIcon="SendTransactionDark" />
 				}
 			/>
+
+			<Alert className="mt-4">
+				{t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.INSUFFICIENT_BALANCE_FOR_LOCKED_FEE", {
+					lockedFee: formattedFee,
+					balance: 0.001,
+				})}
+			</Alert>
 
 			<FormField name="senderAddress" className="-mx-3 mt-6 sm:mx-0 sm:mt-4">
 				<SelectAddress

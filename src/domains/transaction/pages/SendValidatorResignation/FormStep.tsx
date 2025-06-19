@@ -1,6 +1,6 @@
 import { Contracts as ProfilesContracts } from "@/app/lib/profiles";
 import React from "react";
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 
 import { Alert } from "@/app/components/Alert";
 import { FormField } from "@/app/components/Form";
@@ -48,8 +48,6 @@ export const FormStep = ({ senderWallet, profile, onWalletChange }: FormStepProp
 				}
 				subtitle={t("TRANSACTION.PAGE_VALIDATOR_RESIGNATION.FORM_STEP.DESCRIPTION")}
 			/>
-
-			<Alert>{t("TRANSACTION.PAGE_VALIDATOR_RESIGNATION.FORM_STEP.WARNING")}</Alert>
 
 			<div className="space-y-3 sm:space-y-4">
 				<FormField name="senderAddress">
