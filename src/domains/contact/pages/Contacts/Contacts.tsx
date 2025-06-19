@@ -150,10 +150,10 @@ export const Contacts: FC = () => {
 			>
 				<td colSpan={listColumns.length} className="pt-[11px] pb-4">
 					<div className="flex flex-col items-center justify-center">
-						<h3 className="text-theme-secondary-900 dark:text-theme-secondary-200 mb-2 text-base font-semibold">
+						<h3 className="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-200 mb-2 text-base font-semibold">
 							{t("COMMON.EMPTY_RESULTS.TITLE")}
 						</h3>
-						<p className="text-theme-secondary-700 dark:text-theme-secondary-600 text-sm">
+						<p className="text-theme-secondary-700 dark:text-theme-secondary-600 dim:text-theme-dim-500 text-sm">
 							{t("COMMON.EMPTY_RESULTS.SUBTITLE")}
 						</p>
 					</div>
