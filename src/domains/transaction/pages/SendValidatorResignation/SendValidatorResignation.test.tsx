@@ -13,14 +13,12 @@ import {
 import { Contracts, DTO } from "@/app/lib/profiles";
 import { requestMock, server } from "@/tests/mocks/server";
 import { AddressService } from "@/app/lib/mainsail/address.service";
-import { Contracts } from "@/app/lib/profiles";
 import React from "react";
 import { SendValidatorResignation } from "./SendValidatorResignation";
 import { expect } from "vitest";
 import transactionFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/transfer.json";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import userEvent from "@testing-library/user-event";
-import { signedTransactionMock } from "@/domains/transaction/pages/SendTransfer/SendTransfer.test";
 import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
 

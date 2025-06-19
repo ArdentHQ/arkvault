@@ -1,7 +1,6 @@
 import { Contracts } from "@/app/lib/profiles";
 import { renderHook } from "@testing-library/react";
 import React from "react";
-import { act } from "react-test-renderer";
 
 import { useWelcomeModal } from "./use-welcome-modal";
 import { ConfigurationProvider } from "@/app/contexts/Configuration";
