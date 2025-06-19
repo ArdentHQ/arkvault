@@ -88,8 +88,8 @@ export const SendRegistration = () => {
 	}, [activeProfile, activeWalletFromUrl, network, senderAddress]);
 
 	const { validatorRegistrationFee } = useValidatorRegistrationLockedFee({
-		wallet: activeWallet,
 		profile: activeProfile,
+		wallet: activeWallet,
 	});
 
 	useEffect(() => {
