@@ -11,6 +11,11 @@ let translationMock: any;
 let network: Networks.Network;
 let wallet: Contracts.IReadWriteWallet;
 
+const getValues = () => ({
+	gasLimit: BigNumber.make(10),
+	gasPrice: BigNumber.make(10),
+});
+
 describe("Register validator validation", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getMainsailProfileId());
@@ -175,11 +180,6 @@ describe("lockedFee", () => {
 	});
 
 	it("should return an error for insufficient balance for fee and locked fee", () => {
-		const getValues = () => ({
-			gasLimit: BigNumber.make(10),
-			gasPrice: BigNumber.make(10),
-		});
-
 		const { validate } = validatorRegistration(translationMock).lockedFee(wallet, getValues);
 
 		const walletBalance = 0;
@@ -194,11 +194,6 @@ describe("lockedFee", () => {
 	});
 
 	it("should return true if the balance is sufficient", () => {
-		const getValues = () => ({
-			gasLimit: BigNumber.make(10),
-			gasPrice: BigNumber.make(10),
-		});
-
 		const { validate } = validatorRegistration(translationMock).lockedFee(wallet, getValues);
 		const walletBalance = 10_000_000_000;
 		vi.spyOn(wallet, "balance").mockReturnValue(walletBalance);
@@ -217,10 +212,6 @@ describe("lockedFee", () => {
 	});
 
 	it("should handle undefined wallet gracefully with fees", () => {
-		const getValues = () => ({
-			gasLimit: BigNumber.make(10),
-			gasPrice: BigNumber.make(10),
-		});
 		const { validate } = validatorRegistration(translationMock).lockedFee(undefined, getValues);
 		const lockedFee = 100;
 		const result = validate.insufficientBalance(lockedFee);
