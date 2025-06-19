@@ -1,8 +1,6 @@
 import { Contracts as ProfilesContracts } from "@/app/lib/profiles";
 import React from "react";
-import { Trans, useTranslation } from "react-i18next";
-
-import { Alert } from "@/app/components/Alert";
+import { useTranslation } from "react-i18next";
 import { FormField } from "@/app/components/Form";
 import { StepHeader } from "@/app/components/StepHeader";
 import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
