@@ -35,14 +35,14 @@ export const AddRecipientItem: React.FC<{
 			dataTestId="AddRecipientItem"
 			titleSlot={
 				<div className="flex w-full items-center justify-between">
-					<div className="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm leading-[17px] font-semibold whitespace-nowrap">
+					<div className="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 text-sm leading-[17px] font-semibold whitespace-nowrap">
 						{t("COMMON.RECIPIENT_#", { count: index + 1 })}
 					</div>
 					<Button
 						onClick={() => onDelete(index)}
 						data-testid="AddRecipientItem--deleteButton_mobile"
 						size="icon"
-						className="text-theme-secondary-700 dark:text-theme-secondary-500 p-0 sm:hidden"
+						className="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-50 p-0 sm:hidden"
 						variant="transparent"
 					>
 						<Icon name="Trash" size="lg" />
@@ -55,7 +55,7 @@ export const AddRecipientItem: React.FC<{
 						<Address
 							address={address}
 							walletName={alias}
-							addressClass="leading-5 text-theme-secondary-500 dark:text-theme-secondary-700"
+							addressClass="leading-5 text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200"
 							walletNameClass="leading-5"
 						/>
 					</div>
@@ -67,7 +67,7 @@ export const AddRecipientItem: React.FC<{
 									address={address}
 									walletName={alias}
 									walletNameClass="leading-[17px] text-sm"
-									addressClass="leading-[17px] text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+									addressClass="leading-[17px] text-sm text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200"
 								/>
 							}
 						/>
@@ -77,7 +77,7 @@ export const AddRecipientItem: React.FC<{
 								<Amount
 									ticker={ticker}
 									value={amount!}
-									className="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm leading-[17px] font-semibold"
+									className="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm leading-[17px] font-semibold"
 								/>
 							}
 						/>
@@ -87,7 +87,7 @@ export const AddRecipientItem: React.FC<{
 			rightSlot={
 				<div className="flex items-center gap-3">
 					<div className="flex flex-col items-end space-y-2">
-						<div className="text-theme-secondary-700 dark:text-theme-secondary-500 leading-[17px] font-semibold whitespace-nowrap">
+						<div className="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 leading-[17px] font-semibold whitespace-nowrap">
 							{showExchangeAmount ? (
 								<span data-testid="AddRecipientItem--exchangeAmount" className="hidden sm:inline">
 									<Amount
@@ -103,7 +103,7 @@ export const AddRecipientItem: React.FC<{
 						<Amount
 							ticker={ticker}
 							value={amount!}
-							className="text-theme-secondary-900 dark:text-theme-secondary-200 leading-5 font-semibold"
+							className="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 leading-5 font-semibold"
 						/>
 					</div>
 					<Button

@@ -49,7 +49,7 @@ const TransferType = ({ isSingle, disableMultiple, onChange, maxRecipients }: To
 			</Tooltip>
 
 			<Tooltip content={t("TRANSACTION.RECIPIENTS_HELPTEXT", { count: maxRecipients })}>
-				<div className="questionmark bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:bg-theme-primary-700 flex h-5 w-5 cursor-pointer items-center justify-center rounded-full hover:text-white">
+				<div className="questionmark bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:bg-theme-primary-700 dim:bg-theme-dim-700 dim:text-theme-dim-50 flex h-5 w-5 cursor-pointer items-center justify-center rounded-full hover:text-white">
 					<Icon name="QuestionMarkSmall" size="sm" />
 				</div>
 			</Tooltip>
@@ -295,7 +295,7 @@ export const AddRecipient = ({
 
 	return (
 		<AddRecipientWrapper>
-			<div className="text-theme-secondary-text hover:text-theme-primary-600 mb-2 flex items-center justify-between">
+			<div className="text-theme-secondary-text hover:text-theme-primary-600 dim:text-theme-dim-200 mb-2 flex items-center justify-between">
 				<div className="text-sm font-semibold transition-colors duration-100">{t("TRANSACTION.RECIPIENT")}</div>
 
 				{showMultiPaymentOption && (
@@ -345,7 +345,7 @@ export const AddRecipient = ({
 							<span className="items-centers flex w-full justify-between">
 								<div className="flex flex-row items-center gap-1.5">
 									<span>{t("COMMON.AMOUNT")}</span>
-									<span className="text-theme-secondary-700 dark:text-theme-dark-200 text-sm sm:hidden">
+									<span className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm sm:hidden">
 										(<Amount value={+remainingBalance} ticker={ticker} showTicker={false} />)
 									</span>
 								</div>
@@ -353,7 +353,7 @@ export const AddRecipient = ({
 									{isSenderFilled && !!remainingBalance && (
 										<div
 											data-testid="AddRecipient__available"
-											className="text-theme-secondary-700 dark:text-theme-dark-200 hidden sm:flex"
+											className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 hidden sm:flex"
 										>
 											<span className="hidden pr-1 sm:inline">{t("COMMON.BALANCE")}:</span>
 											<Amount value={+remainingBalance} ticker={ticker} showTicker={true} />
@@ -361,7 +361,7 @@ export const AddRecipient = ({
 									)}
 									{isSenderFilled && !!remainingBalance && isSingle && (
 										<div
-											className="bg-theme-secondary-300 dark:bg-theme-dark-700 hidden h-3 w-px sm:flex"
+											className="bg-theme-secondary-300 dark:bg-theme-dark-700 dim:bg-theme-dim-700 hidden h-3 w-px sm:flex"
 											data-testid="AddRecipient__divider"
 										/>
 									)}
@@ -371,7 +371,7 @@ export const AddRecipient = ({
 												type="button"
 												variant="transparent"
 												disabled={!isSenderFilled}
-												className="text-theme-navy-600 p-0 text-sm"
+												className="text-theme-navy-600 dim:text-theme-dim-navy-600 p-0 text-sm"
 												onClick={() => {
 													setValue("isSendAllSelected", !getValues("isSendAllSelected"));
 												}}
