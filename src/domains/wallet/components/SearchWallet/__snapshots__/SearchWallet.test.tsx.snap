@@ -208,7 +208,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                                   class="group"
                                 >
                                   <button
-                                    class="text-theme-secondary-700 disabled:text-theme-secondary-400 dark:text-theme-secondary-500 dark:disabled:text-theme-secondary-700 relative flex cursor-pointer items-center justify-center font-semibold transition-colors duration-200 focus:outline-hidden disabled:cursor-not-allowed hover:bg-theme-primary-100 dark:hover:bg-theme-secondary-800 dark:hover:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
+                                    class="text-theme-secondary-700 disabled:text-theme-secondary-400 dark:text-theme-secondary-500 dark:disabled:text-theme-secondary-700 dim:text-theme-dim-500 dim:disabled:text-theme-secondary-600 relative flex cursor-pointer items-center justify-center font-semibold transition-colors duration-200 focus:outline-hidden disabled:cursor-not-allowed hover:bg-theme-primary-100 dark:hover:bg-theme-secondary-800 dim-hover:bg-theme-dim-700 dark:hover:text-white hover:text-theme-primary-400 dim-hover:text-theme-dim-navy-600 rounded px-2 py-1.5 ring-focus"
                                     type="button"
                                   >
                                     <div
@@ -305,7 +305,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                                 </span>
                               </span>
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
@@ -331,7 +331,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                           >
                             <div>
                               <button
-                                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 -mr-3 text-sm leading-[17px]"
+                                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dim:text-theme-dim-navy-600 -mr-3 text-sm leading-[17px]"
                                 data-testid="SearchWalletListItem__select-0"
                                 type="button"
                               >
@@ -370,7 +370,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                                 </span>
                               </span>
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54
@@ -396,7 +396,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                           >
                             <div>
                               <button
-                                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 -mr-3 text-sm leading-[17px]"
+                                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dim:text-theme-dim-navy-600 -mr-3 text-sm leading-[17px]"
                                 data-testid="SearchWalletListItem__select-1"
                                 type="button"
                               >
@@ -631,7 +631,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                                   class="group"
                                 >
                                   <button
-                                    class="text-theme-secondary-700 disabled:text-theme-secondary-400 dark:text-theme-secondary-500 dark:disabled:text-theme-secondary-700 relative flex cursor-pointer items-center justify-center font-semibold transition-colors duration-200 focus:outline-hidden disabled:cursor-not-allowed hover:bg-theme-primary-100 dark:hover:bg-theme-secondary-800 dark:hover:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
+                                    class="text-theme-secondary-700 disabled:text-theme-secondary-400 dark:text-theme-secondary-500 dark:disabled:text-theme-secondary-700 dim:text-theme-dim-500 dim:disabled:text-theme-secondary-600 relative flex cursor-pointer items-center justify-center font-semibold transition-colors duration-200 focus:outline-hidden disabled:cursor-not-allowed hover:bg-theme-primary-100 dark:hover:bg-theme-secondary-800 dim-hover:bg-theme-dim-700 dark:hover:text-white hover:text-theme-primary-400 dim-hover:text-theme-dim-navy-600 rounded px-2 py-1.5 ring-focus"
                                     type="button"
                                   >
                                     <div
@@ -728,7 +728,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                                 </span>
                               </span>
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
@@ -754,7 +754,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                           >
                             <div>
                               <button
-                                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 -mr-3 text-sm leading-[17px]"
+                                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dim:text-theme-dim-navy-600 -mr-3 text-sm leading-[17px]"
                                 data-testid="SearchWalletListItem__select-0"
                                 type="button"
                               >
@@ -793,7 +793,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                                 </span>
                               </span>
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54
@@ -819,7 +819,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                           >
                             <div>
                               <button
-                                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 -mr-3 text-sm leading-[17px]"
+                                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dim:text-theme-dim-navy-600 -mr-3 text-sm leading-[17px]"
                                 data-testid="SearchWalletListItem__select-1"
                                 type="button"
                               >
@@ -1054,7 +1054,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                                   class="group"
                                 >
                                   <button
-                                    class="text-theme-secondary-700 disabled:text-theme-secondary-400 dark:text-theme-secondary-500 dark:disabled:text-theme-secondary-700 relative flex cursor-pointer items-center justify-center font-semibold transition-colors duration-200 focus:outline-hidden disabled:cursor-not-allowed hover:bg-theme-primary-100 dark:hover:bg-theme-secondary-800 dark:hover:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
+                                    class="text-theme-secondary-700 disabled:text-theme-secondary-400 dark:text-theme-secondary-500 dark:disabled:text-theme-secondary-700 dim:text-theme-dim-500 dim:disabled:text-theme-secondary-600 relative flex cursor-pointer items-center justify-center font-semibold transition-colors duration-200 focus:outline-hidden disabled:cursor-not-allowed hover:bg-theme-primary-100 dark:hover:bg-theme-secondary-800 dim-hover:bg-theme-dim-700 dark:hover:text-white hover:text-theme-primary-400 dim-hover:text-theme-dim-navy-600 rounded px-2 py-1.5 ring-focus"
                                     type="button"
                                   >
                                     <div
@@ -1151,7 +1151,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                                 </span>
                               </span>
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
@@ -1176,7 +1176,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                             class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-3 mr-3 bg-theme-success-100 rounded-r dark:bg-transparent dark:border-y-2 dark:border-r-2 dark:border-theme-success-600 justify-end my-0.5"
                           >
                             <button
-                              class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-reverse-600 -mr-3 py-0 text-sm leading-[17px]"
+                              class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-reverse-600 dim:text-theme-dim-navy-700 -mr-3 py-0 text-sm leading-[17px]"
                               data-testid="SearchWalletListItem__selected-0"
                               type="button"
                             >
@@ -1214,7 +1214,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                                 </span>
                               </span>
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54
@@ -1240,7 +1240,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                           >
                             <div>
                               <button
-                                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 -mr-3 text-sm leading-[17px]"
+                                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dim:text-theme-dim-navy-600 -mr-3 text-sm leading-[17px]"
                                 data-testid="SearchWalletListItem__select-1"
                                 type="button"
                               >
@@ -1346,7 +1346,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 1`
                 data-testid="HeaderSearchInput"
               >
                 <div
-                  class="dark:border-theme-secondary-800 xs:[min-width:300px] sm:[min-width:448px] dark:border border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 flex items-center overflow-hidden rounded-lg border px-4 text-base"
+                  class="dark:border-theme-secondary-800 xs:[min-width:300px] sm:[min-width:448px] dark:border border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 dim:border-theme-dim-700 flex items-center overflow-hidden rounded-lg border px-4 text-base"
                   data-testid="HeaderSearchInput__input"
                 >
                   <button
@@ -1405,7 +1405,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 1`
                     </div>
                   </div>
                   <div
-                    class="text-theme-secondary-700 dark:text-theme-secondary-600"
+                    class="text-theme-secondary-700 dark:text-theme-secondary-600 dim:text-theme-dim-500"
                   >
                     <div
                       style="height: 20px; width: 20px;"
@@ -1479,7 +1479,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 1`
                           class="pt-3"
                         >
                           <div
-                            class="bg-theme-primary-100 dark:bg-theme-background flex h-[117px] w-full cursor-pointer flex-col gap-3 rounded-xl p-2 ring-2 ring-theme-primary-100 dark:ring-theme-secondary-800"
+                            class="bg-theme-primary-100 dark:bg-theme-background flex h-[117px] w-full cursor-pointer flex-col gap-3 rounded-xl p-2 ring-2 ring-theme-primary-100 dark:ring-theme-secondary-800 dim:ring-theme-dim-700"
                             data-testid="ReceiverItemMobile"
                             tabindex="0"
                           >
@@ -1487,12 +1487,12 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 1`
                               class="flex flex-col gap-2 pt-2 pl-2"
                             >
                               <span
-                                class="text-theme-secondary-900 xs:max-w-80 dark:text-theme-secondary-200 w-full max-w-48 truncate text-sm font-semibold sm:max-w-128"
+                                class="text-theme-secondary-900 xs:max-w-80 dark:text-theme-secondary-200 dim:text-theme-dim-200 w-full max-w-48 truncate text-sm font-semibold sm:max-w-128"
                               >
                                 Sample Wallet
                               </span>
                               <span
-                                class="text-theme-secondary-700 dark:text-theme-secondary-500 text-xs font-semibold"
+                                class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 text-xs font-semibold"
                               >
                                 <span
                                   class="no-ligatures min-w-0 overflow-hidden"
@@ -1503,20 +1503,20 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 1`
                               </span>
                             </div>
                             <div
-                              class="bg-theme-primary-500 flex flex-row items-center justify-between overflow-hidden rounded-lg text-sm font-semibold text-white"
+                              class="bg-theme-primary-500 dim:bg-theme-dim-navy-600 dim:text-theme-dim-50 flex flex-row items-center justify-between overflow-hidden rounded-lg text-sm font-semibold text-white"
                             >
                               <div
                                 class="pl-2"
                               >
                                 <span
-                                  class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 text-sm text-white"
+                                  class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 dim:text-theme-dim-50 text-sm text-white"
                                   data-testid="Amount"
                                 >
                                   95.27653252 ARK
                                 </span>
                               </div>
                               <button
-                                class="bg-theme-primary-600 flex h-full items-center justify-center px-5 py-3"
+                                class="bg-theme-primary-600 dim:bg-theme-dim-navy-600 flex h-full items-center justify-center px-5 py-3"
                               >
                                 Select
                               </button>
@@ -1531,7 +1531,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 1`
                           class="pt-3"
                         >
                           <div
-                            class="bg-theme-primary-100 dark:bg-theme-background flex h-[117px] w-full cursor-pointer flex-col gap-3 rounded-xl p-2 ring-2 ring-theme-primary-100 dark:ring-theme-secondary-800"
+                            class="bg-theme-primary-100 dark:bg-theme-background flex h-[117px] w-full cursor-pointer flex-col gap-3 rounded-xl p-2 ring-2 ring-theme-primary-100 dark:ring-theme-secondary-800 dim:ring-theme-dim-700"
                             data-testid="ReceiverItemMobile"
                             tabindex="0"
                           >
@@ -1539,12 +1539,12 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 1`
                               class="flex flex-col gap-2 pt-2 pl-2"
                             >
                               <span
-                                class="text-theme-secondary-900 xs:max-w-80 dark:text-theme-secondary-200 w-full max-w-48 truncate text-sm font-semibold sm:max-w-128"
+                                class="text-theme-secondary-900 xs:max-w-80 dark:text-theme-secondary-200 dim:text-theme-dim-200 w-full max-w-48 truncate text-sm font-semibold sm:max-w-128"
                               >
                                 Mainsail Wallet 2
                               </span>
                               <span
-                                class="text-theme-secondary-700 dark:text-theme-secondary-500 text-xs font-semibold"
+                                class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 text-xs font-semibold"
                               >
                                 <span
                                   class="no-ligatures min-w-0 overflow-hidden"
@@ -1555,20 +1555,20 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 1`
                               </span>
                             </div>
                             <div
-                              class="bg-theme-primary-500 flex flex-row items-center justify-between overflow-hidden rounded-lg text-sm font-semibold text-white"
+                              class="bg-theme-primary-500 dim:bg-theme-dim-navy-600 dim:text-theme-dim-50 flex flex-row items-center justify-between overflow-hidden rounded-lg text-sm font-semibold text-white"
                             >
                               <div
                                 class="pl-2"
                               >
                                 <span
-                                  class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 text-sm text-white"
+                                  class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 dim:text-theme-dim-50 text-sm text-white"
                                   data-testid="Amount"
                                 >
                                   0.01989216 ARK
                                 </span>
                               </div>
                               <button
-                                class="bg-theme-primary-600 flex h-full items-center justify-center px-5 py-3"
+                                class="bg-theme-primary-600 dim:bg-theme-dim-navy-600 flex h-full items-center justify-center px-5 py-3"
                               >
                                 Select
                               </button>
@@ -1668,7 +1668,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 2`
                 data-testid="HeaderSearchInput"
               >
                 <div
-                  class="dark:border-theme-secondary-800 xs:[min-width:300px] sm:[min-width:448px] dark:border border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 flex items-center overflow-hidden rounded-lg border px-4 text-base"
+                  class="dark:border-theme-secondary-800 xs:[min-width:300px] sm:[min-width:448px] dark:border border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 dim:border-theme-dim-700 flex items-center overflow-hidden rounded-lg border px-4 text-base"
                   data-testid="HeaderSearchInput__input"
                 >
                   <button
@@ -1727,7 +1727,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 2`
                     </div>
                   </div>
                   <div
-                    class="text-theme-secondary-700 dark:text-theme-secondary-600"
+                    class="text-theme-secondary-700 dark:text-theme-secondary-600 dim:text-theme-dim-500"
                   >
                     <div
                       style="height: 20px; width: 20px;"
@@ -1801,7 +1801,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 2`
                           class="pt-3"
                         >
                           <div
-                            class="bg-theme-primary-100 dark:bg-theme-background flex h-[117px] w-full cursor-pointer flex-col gap-3 rounded-xl p-2 ring-2 ring-theme-primary-100 dark:ring-theme-secondary-800"
+                            class="bg-theme-primary-100 dark:bg-theme-background flex h-[117px] w-full cursor-pointer flex-col gap-3 rounded-xl p-2 ring-2 ring-theme-primary-100 dark:ring-theme-secondary-800 dim:ring-theme-dim-700"
                             data-testid="ReceiverItemMobile"
                             tabindex="0"
                           >
@@ -1809,12 +1809,12 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 2`
                               class="flex flex-col gap-2 pt-2 pl-2"
                             >
                               <span
-                                class="text-theme-secondary-900 xs:max-w-80 dark:text-theme-secondary-200 w-full max-w-48 truncate text-sm font-semibold sm:max-w-128"
+                                class="text-theme-secondary-900 xs:max-w-80 dark:text-theme-secondary-200 dim:text-theme-dim-200 w-full max-w-48 truncate text-sm font-semibold sm:max-w-128"
                               >
                                 Sample Wallet
                               </span>
                               <span
-                                class="text-theme-secondary-700 dark:text-theme-secondary-500 text-xs font-semibold"
+                                class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 text-xs font-semibold"
                               >
                                 <span
                                   class="no-ligatures min-w-0 overflow-hidden"
@@ -1825,20 +1825,20 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 2`
                               </span>
                             </div>
                             <div
-                              class="bg-theme-primary-500 flex flex-row items-center justify-between overflow-hidden rounded-lg text-sm font-semibold text-white"
+                              class="bg-theme-primary-500 dim:bg-theme-dim-navy-600 dim:text-theme-dim-50 flex flex-row items-center justify-between overflow-hidden rounded-lg text-sm font-semibold text-white"
                             >
                               <div
                                 class="pl-2"
                               >
                                 <span
-                                  class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 text-sm text-white"
+                                  class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 dim:text-theme-dim-50 text-sm text-white"
                                   data-testid="Amount"
                                 >
                                   95.27653252 ARK
                                 </span>
                               </div>
                               <button
-                                class="bg-theme-primary-600 flex h-full items-center justify-center px-5 py-3"
+                                class="bg-theme-primary-600 dim:bg-theme-dim-navy-600 flex h-full items-center justify-center px-5 py-3"
                               >
                                 Select
                               </button>
@@ -1853,7 +1853,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 2`
                           class="pt-3"
                         >
                           <div
-                            class="bg-theme-primary-100 dark:bg-theme-background flex h-[117px] w-full cursor-pointer flex-col gap-3 rounded-xl p-2 ring-2 ring-theme-primary-100 dark:ring-theme-secondary-800"
+                            class="bg-theme-primary-100 dark:bg-theme-background flex h-[117px] w-full cursor-pointer flex-col gap-3 rounded-xl p-2 ring-2 ring-theme-primary-100 dark:ring-theme-secondary-800 dim:ring-theme-dim-700"
                             data-testid="ReceiverItemMobile"
                             tabindex="0"
                           >
@@ -1861,12 +1861,12 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 2`
                               class="flex flex-col gap-2 pt-2 pl-2"
                             >
                               <span
-                                class="text-theme-secondary-900 xs:max-w-80 dark:text-theme-secondary-200 w-full max-w-48 truncate text-sm font-semibold sm:max-w-128"
+                                class="text-theme-secondary-900 xs:max-w-80 dark:text-theme-secondary-200 dim:text-theme-dim-200 w-full max-w-48 truncate text-sm font-semibold sm:max-w-128"
                               >
                                 Mainsail Wallet 2
                               </span>
                               <span
-                                class="text-theme-secondary-700 dark:text-theme-secondary-500 text-xs font-semibold"
+                                class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 text-xs font-semibold"
                               >
                                 <span
                                   class="no-ligatures min-w-0 overflow-hidden"
@@ -1877,20 +1877,20 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 2`
                               </span>
                             </div>
                             <div
-                              class="bg-theme-primary-500 flex flex-row items-center justify-between overflow-hidden rounded-lg text-sm font-semibold text-white"
+                              class="bg-theme-primary-500 dim:bg-theme-dim-navy-600 dim:text-theme-dim-50 flex flex-row items-center justify-between overflow-hidden rounded-lg text-sm font-semibold text-white"
                             >
                               <div
                                 class="pl-2"
                               >
                                 <span
-                                  class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 text-sm text-white"
+                                  class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 dim:text-theme-dim-50 text-sm text-white"
                                   data-testid="Amount"
                                 >
                                   0.01989216 ARK
                                 </span>
                               </div>
                               <button
-                                class="bg-theme-primary-600 flex h-full items-center justify-center px-5 py-3"
+                                class="bg-theme-primary-600 dim:bg-theme-dim-navy-600 flex h-full items-center justify-center px-5 py-3"
                               >
                                 Select
                               </button>
@@ -1990,7 +1990,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive with se
                 data-testid="HeaderSearchInput"
               >
                 <div
-                  class="dark:border-theme-secondary-800 xs:[min-width:300px] sm:[min-width:448px] dark:border border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 flex items-center overflow-hidden rounded-lg border px-4 text-base"
+                  class="dark:border-theme-secondary-800 xs:[min-width:300px] sm:[min-width:448px] dark:border border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 dim:border-theme-dim-700 flex items-center overflow-hidden rounded-lg border px-4 text-base"
                   data-testid="HeaderSearchInput__input"
                 >
                   <button
@@ -2049,7 +2049,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive with se
                     </div>
                   </div>
                   <div
-                    class="text-theme-secondary-700 dark:text-theme-secondary-600"
+                    class="text-theme-secondary-700 dark:text-theme-secondary-600 dim:text-theme-dim-500"
                   >
                     <div
                       style="height: 20px; width: 20px;"
@@ -2123,7 +2123,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive with se
                           class="pt-3"
                         >
                           <div
-                            class="bg-theme-primary-100 dark:bg-theme-background flex h-[117px] w-full cursor-pointer flex-col gap-3 rounded-xl p-2 ring-2 ring-theme-primary-600 dark:ring-theme-primary-600"
+                            class="bg-theme-primary-100 dark:bg-theme-background flex h-[117px] w-full cursor-pointer flex-col gap-3 rounded-xl p-2 ring-2 ring-theme-primary-600 dark:ring-theme-primary-600 dim:ring-theme-dim-navy-600"
                             data-testid="ReceiverItemMobile--selected"
                             tabindex="0"
                           >
@@ -2131,12 +2131,12 @@ exports[`SearchWallet uses fiat value = false > should render responsive with se
                               class="flex flex-col gap-2 pt-2 pl-2"
                             >
                               <span
-                                class="text-theme-secondary-900 xs:max-w-80 dark:text-theme-secondary-200 w-full max-w-48 truncate text-sm font-semibold sm:max-w-128"
+                                class="text-theme-secondary-900 xs:max-w-80 dark:text-theme-secondary-200 dim:text-theme-dim-200 w-full max-w-48 truncate text-sm font-semibold sm:max-w-128"
                               >
                                 Sample Wallet
                               </span>
                               <span
-                                class="text-theme-secondary-700 dark:text-theme-secondary-500 text-xs font-semibold"
+                                class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 text-xs font-semibold"
                               >
                                 <span
                                   class="no-ligatures min-w-0 overflow-hidden"
@@ -2147,20 +2147,20 @@ exports[`SearchWallet uses fiat value = false > should render responsive with se
                               </span>
                             </div>
                             <div
-                              class="bg-theme-primary-500 flex flex-row items-center justify-between overflow-hidden rounded-lg text-sm font-semibold text-white"
+                              class="bg-theme-primary-500 dim:bg-theme-dim-navy-600 dim:text-theme-dim-50 flex flex-row items-center justify-between overflow-hidden rounded-lg text-sm font-semibold text-white"
                             >
                               <div
                                 class="pl-2"
                               >
                                 <span
-                                  class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 text-sm text-white"
+                                  class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 dim:text-theme-dim-50 text-sm text-white"
                                   data-testid="Amount"
                                 >
                                   95.27653252 ARK
                                 </span>
                               </div>
                               <button
-                                class="bg-theme-primary-600 flex h-full items-center justify-center px-5 py-3"
+                                class="bg-theme-primary-600 dim:bg-theme-dim-navy-600 flex h-full items-center justify-center px-5 py-3"
                               >
                                 Select
                               </button>
@@ -2175,7 +2175,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive with se
                           class="pt-3"
                         >
                           <div
-                            class="bg-theme-primary-100 dark:bg-theme-background flex h-[117px] w-full cursor-pointer flex-col gap-3 rounded-xl p-2 ring-2 ring-theme-primary-100 dark:ring-theme-secondary-800"
+                            class="bg-theme-primary-100 dark:bg-theme-background flex h-[117px] w-full cursor-pointer flex-col gap-3 rounded-xl p-2 ring-2 ring-theme-primary-100 dark:ring-theme-secondary-800 dim:ring-theme-dim-700"
                             data-testid="ReceiverItemMobile"
                             tabindex="0"
                           >
@@ -2183,12 +2183,12 @@ exports[`SearchWallet uses fiat value = false > should render responsive with se
                               class="flex flex-col gap-2 pt-2 pl-2"
                             >
                               <span
-                                class="text-theme-secondary-900 xs:max-w-80 dark:text-theme-secondary-200 w-full max-w-48 truncate text-sm font-semibold sm:max-w-128"
+                                class="text-theme-secondary-900 xs:max-w-80 dark:text-theme-secondary-200 dim:text-theme-dim-200 w-full max-w-48 truncate text-sm font-semibold sm:max-w-128"
                               >
                                 Mainsail Wallet 2
                               </span>
                               <span
-                                class="text-theme-secondary-700 dark:text-theme-secondary-500 text-xs font-semibold"
+                                class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 text-xs font-semibold"
                               >
                                 <span
                                   class="no-ligatures min-w-0 overflow-hidden"
@@ -2199,20 +2199,20 @@ exports[`SearchWallet uses fiat value = false > should render responsive with se
                               </span>
                             </div>
                             <div
-                              class="bg-theme-primary-500 flex flex-row items-center justify-between overflow-hidden rounded-lg text-sm font-semibold text-white"
+                              class="bg-theme-primary-500 dim:bg-theme-dim-navy-600 dim:text-theme-dim-50 flex flex-row items-center justify-between overflow-hidden rounded-lg text-sm font-semibold text-white"
                             >
                               <div
                                 class="pl-2"
                               >
                                 <span
-                                  class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 text-sm text-white"
+                                  class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 dim:text-theme-dim-50 text-sm text-white"
                                   data-testid="Amount"
                                 >
                                   0.01989216 ARK
                                 </span>
                               </div>
                               <button
-                                class="bg-theme-primary-600 flex h-full items-center justify-center px-5 py-3"
+                                class="bg-theme-primary-600 dim:bg-theme-dim-navy-600 flex h-full items-center justify-center px-5 py-3"
                               >
                                 Select
                               </button>
@@ -2441,7 +2441,7 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
                                   class="group"
                                 >
                                   <button
-                                    class="text-theme-secondary-700 disabled:text-theme-secondary-400 dark:text-theme-secondary-500 dark:disabled:text-theme-secondary-700 relative flex cursor-pointer items-center justify-center font-semibold transition-colors duration-200 focus:outline-hidden disabled:cursor-not-allowed hover:bg-theme-primary-100 dark:hover:bg-theme-secondary-800 dark:hover:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
+                                    class="text-theme-secondary-700 disabled:text-theme-secondary-400 dark:text-theme-secondary-500 dark:disabled:text-theme-secondary-700 dim:text-theme-dim-500 dim:disabled:text-theme-secondary-600 relative flex cursor-pointer items-center justify-center font-semibold transition-colors duration-200 focus:outline-hidden disabled:cursor-not-allowed hover:bg-theme-primary-100 dark:hover:bg-theme-secondary-800 dim-hover:bg-theme-dim-700 dark:hover:text-white hover:text-theme-primary-400 dim-hover:text-theme-dim-navy-600 rounded px-2 py-1.5 ring-focus"
                                     type="button"
                                   >
                                     <div
@@ -2527,7 +2527,7 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 0x125b484e51Ad990b5b3140931f3BD8eAee85Db23
@@ -2553,7 +2553,7 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
                           >
                             <div>
                               <button
-                                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-primary-600 -mr-3 text-sm leading-[17px]"
+                                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-primary-600 dim:text-theme-dim-navy-600 -mr-3 text-sm leading-[17px]"
                                 data-testid="SearchWalletListItem__select-0"
                                 disabled=""
                                 type="button"
@@ -2789,7 +2789,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                                   class="group"
                                 >
                                   <button
-                                    class="text-theme-secondary-700 disabled:text-theme-secondary-400 dark:text-theme-secondary-500 dark:disabled:text-theme-secondary-700 relative flex cursor-pointer items-center justify-center font-semibold transition-colors duration-200 focus:outline-hidden disabled:cursor-not-allowed hover:bg-theme-primary-100 dark:hover:bg-theme-secondary-800 dark:hover:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
+                                    class="text-theme-secondary-700 disabled:text-theme-secondary-400 dark:text-theme-secondary-500 dark:disabled:text-theme-secondary-700 dim:text-theme-dim-500 dim:disabled:text-theme-secondary-600 relative flex cursor-pointer items-center justify-center font-semibold transition-colors duration-200 focus:outline-hidden disabled:cursor-not-allowed hover:bg-theme-primary-100 dark:hover:bg-theme-secondary-800 dim-hover:bg-theme-dim-700 dark:hover:text-white hover:text-theme-primary-400 dim-hover:text-theme-dim-navy-600 rounded px-2 py-1.5 ring-focus"
                                     type="button"
                                   >
                                     <div
@@ -2886,7 +2886,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                                 </span>
                               </span>
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
@@ -2911,7 +2911,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                             class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-3 mr-3 bg-theme-success-100 rounded-r dark:bg-transparent dark:border-y-2 dark:border-r-2 dark:border-theme-success-600 justify-end my-0.5"
                           >
                             <button
-                              class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-reverse-600 -mr-3 py-0 text-sm leading-[17px]"
+                              class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-reverse-600 dim:text-theme-dim-navy-700 -mr-3 py-0 text-sm leading-[17px]"
                               data-testid="SearchWalletListItem__selected-0"
                               type="button"
                             >
@@ -2949,7 +2949,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                                 </span>
                               </span>
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54
@@ -2975,7 +2975,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                           >
                             <div>
                               <button
-                                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 -mr-3 text-sm leading-[17px]"
+                                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dim:text-theme-dim-navy-600 -mr-3 text-sm leading-[17px]"
                                 data-testid="SearchWalletListItem__select-1"
                                 type="button"
                               >
@@ -3210,7 +3210,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                                   class="group"
                                 >
                                   <button
-                                    class="text-theme-secondary-700 disabled:text-theme-secondary-400 dark:text-theme-secondary-500 dark:disabled:text-theme-secondary-700 relative flex cursor-pointer items-center justify-center font-semibold transition-colors duration-200 focus:outline-hidden disabled:cursor-not-allowed hover:bg-theme-primary-100 dark:hover:bg-theme-secondary-800 dark:hover:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
+                                    class="text-theme-secondary-700 disabled:text-theme-secondary-400 dark:text-theme-secondary-500 dark:disabled:text-theme-secondary-700 dim:text-theme-dim-500 dim:disabled:text-theme-secondary-600 relative flex cursor-pointer items-center justify-center font-semibold transition-colors duration-200 focus:outline-hidden disabled:cursor-not-allowed hover:bg-theme-primary-100 dark:hover:bg-theme-secondary-800 dim-hover:bg-theme-dim-700 dark:hover:text-white hover:text-theme-primary-400 dim-hover:text-theme-dim-navy-600 rounded px-2 py-1.5 ring-focus"
                                     type="button"
                                   >
                                     <div
@@ -3307,7 +3307,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                                 </span>
                               </span>
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
@@ -3333,7 +3333,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                           >
                             <div>
                               <button
-                                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 -mr-3 text-sm leading-[17px]"
+                                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dim:text-theme-dim-navy-600 -mr-3 text-sm leading-[17px]"
                                 data-testid="SearchWalletListItem__select-0"
                                 type="button"
                               >
@@ -3372,7 +3372,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                                 </span>
                               </span>
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54
@@ -3398,7 +3398,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                           >
                             <div>
                               <button
-                                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 -mr-3 text-sm leading-[17px]"
+                                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dim:text-theme-dim-navy-600 -mr-3 text-sm leading-[17px]"
                                 data-testid="SearchWalletListItem__select-1"
                                 type="button"
                               >
@@ -3682,7 +3682,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                                   class="group"
                                 >
                                   <button
-                                    class="text-theme-secondary-700 disabled:text-theme-secondary-400 dark:text-theme-secondary-500 dark:disabled:text-theme-secondary-700 relative flex cursor-pointer items-center justify-center font-semibold transition-colors duration-200 focus:outline-hidden disabled:cursor-not-allowed hover:bg-theme-primary-100 dark:hover:bg-theme-secondary-800 dark:hover:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
+                                    class="text-theme-secondary-700 disabled:text-theme-secondary-400 dark:text-theme-secondary-500 dark:disabled:text-theme-secondary-700 dim:text-theme-dim-500 dim:disabled:text-theme-secondary-600 relative flex cursor-pointer items-center justify-center font-semibold transition-colors duration-200 focus:outline-hidden disabled:cursor-not-allowed hover:bg-theme-primary-100 dark:hover:bg-theme-secondary-800 dim-hover:bg-theme-dim-700 dark:hover:text-white hover:text-theme-primary-400 dim-hover:text-theme-dim-navy-600 rounded px-2 py-1.5 ring-focus"
                                     type="button"
                                   >
                                     <div
@@ -3779,7 +3779,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                                 </span>
                               </span>
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
@@ -3803,7 +3803,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                           class="hidden xl:table-cell"
                         >
                           <div
-                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-theme-secondary-text justify-end"
+                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-theme-secondary-text justify-end dim:text-theme-dim-50"
                           >
                             <span
                               class="whitespace-nowrap text-sm leading-[17px]"
@@ -3819,7 +3819,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                           >
                             <div>
                               <button
-                                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 -mr-3 text-sm leading-[17px]"
+                                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dim:text-theme-dim-navy-600 -mr-3 text-sm leading-[17px]"
                                 data-testid="SearchWalletListItem__select-0"
                                 type="button"
                               >
@@ -3858,7 +3858,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                                 </span>
                               </span>
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54
@@ -3882,7 +3882,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                           class="hidden xl:table-cell"
                         >
                           <div
-                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-theme-secondary-text justify-end"
+                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-theme-secondary-text justify-end dim:text-theme-dim-50"
                           >
                             <span
                               class="whitespace-nowrap text-sm leading-[17px]"
@@ -3898,7 +3898,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                           >
                             <div>
                               <button
-                                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 -mr-3 text-sm leading-[17px]"
+                                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dim:text-theme-dim-navy-600 -mr-3 text-sm leading-[17px]"
                                 data-testid="SearchWalletListItem__select-1"
                                 type="button"
                               >
@@ -4182,7 +4182,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                                   class="group"
                                 >
                                   <button
-                                    class="text-theme-secondary-700 disabled:text-theme-secondary-400 dark:text-theme-secondary-500 dark:disabled:text-theme-secondary-700 relative flex cursor-pointer items-center justify-center font-semibold transition-colors duration-200 focus:outline-hidden disabled:cursor-not-allowed hover:bg-theme-primary-100 dark:hover:bg-theme-secondary-800 dark:hover:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
+                                    class="text-theme-secondary-700 disabled:text-theme-secondary-400 dark:text-theme-secondary-500 dark:disabled:text-theme-secondary-700 dim:text-theme-dim-500 dim:disabled:text-theme-secondary-600 relative flex cursor-pointer items-center justify-center font-semibold transition-colors duration-200 focus:outline-hidden disabled:cursor-not-allowed hover:bg-theme-primary-100 dark:hover:bg-theme-secondary-800 dim-hover:bg-theme-dim-700 dark:hover:text-white hover:text-theme-primary-400 dim-hover:text-theme-dim-navy-600 rounded px-2 py-1.5 ring-focus"
                                     type="button"
                                   >
                                     <div
@@ -4279,7 +4279,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                                 </span>
                               </span>
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
@@ -4303,7 +4303,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                           class="hidden xl:table-cell"
                         >
                           <div
-                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-theme-secondary-text justify-end"
+                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-theme-secondary-text justify-end dim:text-theme-dim-50"
                           >
                             <span
                               class="whitespace-nowrap text-sm leading-[17px]"
@@ -4319,7 +4319,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                           >
                             <div>
                               <button
-                                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 -mr-3 text-sm leading-[17px]"
+                                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dim:text-theme-dim-navy-600 -mr-3 text-sm leading-[17px]"
                                 data-testid="SearchWalletListItem__select-0"
                                 type="button"
                               >
@@ -4358,7 +4358,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                                 </span>
                               </span>
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54
@@ -4382,7 +4382,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                           class="hidden xl:table-cell"
                         >
                           <div
-                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-theme-secondary-text justify-end"
+                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-theme-secondary-text justify-end dim:text-theme-dim-50"
                           >
                             <span
                               class="whitespace-nowrap text-sm leading-[17px]"
@@ -4398,7 +4398,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                           >
                             <div>
                               <button
-                                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 -mr-3 text-sm leading-[17px]"
+                                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dim:text-theme-dim-navy-600 -mr-3 text-sm leading-[17px]"
                                 data-testid="SearchWalletListItem__select-1"
                                 type="button"
                               >
@@ -4682,7 +4682,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                                   class="group"
                                 >
                                   <button
-                                    class="text-theme-secondary-700 disabled:text-theme-secondary-400 dark:text-theme-secondary-500 dark:disabled:text-theme-secondary-700 relative flex cursor-pointer items-center justify-center font-semibold transition-colors duration-200 focus:outline-hidden disabled:cursor-not-allowed hover:bg-theme-primary-100 dark:hover:bg-theme-secondary-800 dark:hover:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
+                                    class="text-theme-secondary-700 disabled:text-theme-secondary-400 dark:text-theme-secondary-500 dark:disabled:text-theme-secondary-700 dim:text-theme-dim-500 dim:disabled:text-theme-secondary-600 relative flex cursor-pointer items-center justify-center font-semibold transition-colors duration-200 focus:outline-hidden disabled:cursor-not-allowed hover:bg-theme-primary-100 dark:hover:bg-theme-secondary-800 dim-hover:bg-theme-dim-700 dark:hover:text-white hover:text-theme-primary-400 dim-hover:text-theme-dim-navy-600 rounded px-2 py-1.5 ring-focus"
                                     type="button"
                                   >
                                     <div
@@ -4779,7 +4779,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                                 </span>
                               </span>
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
@@ -4803,7 +4803,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                           class="hidden xl:table-cell"
                         >
                           <div
-                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 bg-theme-success-100 dark:bg-transparent dark:border-y-2 dark:border-theme-success-600 text-theme-secondary-text justify-end"
+                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 bg-theme-success-100 dark:bg-transparent dark:border-y-2 dark:border-theme-success-600 text-theme-secondary-text justify-end dim:text-theme-dim-50"
                           >
                             <span
                               class="whitespace-nowrap text-sm leading-[17px]"
@@ -4818,7 +4818,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                             class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-3 mr-3 bg-theme-success-100 rounded-r dark:bg-transparent dark:border-y-2 dark:border-r-2 dark:border-theme-success-600 justify-end my-0.5"
                           >
                             <button
-                              class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-reverse-600 -mr-3 py-0 text-sm leading-[17px]"
+                              class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-reverse-600 dim:text-theme-dim-navy-700 -mr-3 py-0 text-sm leading-[17px]"
                               data-testid="SearchWalletListItem__selected-0"
                               type="button"
                             >
@@ -4856,7 +4856,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                                 </span>
                               </span>
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54
@@ -4880,7 +4880,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                           class="hidden xl:table-cell"
                         >
                           <div
-                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-theme-secondary-text justify-end"
+                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-theme-secondary-text justify-end dim:text-theme-dim-50"
                           >
                             <span
                               class="whitespace-nowrap text-sm leading-[17px]"
@@ -4896,7 +4896,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                           >
                             <div>
                               <button
-                                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 -mr-3 text-sm leading-[17px]"
+                                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dim:text-theme-dim-navy-600 -mr-3 text-sm leading-[17px]"
                                 data-testid="SearchWalletListItem__select-1"
                                 type="button"
                               >
@@ -5002,7 +5002,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 1`]
                 data-testid="HeaderSearchInput"
               >
                 <div
-                  class="dark:border-theme-secondary-800 xs:[min-width:300px] sm:[min-width:448px] dark:border border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 flex items-center overflow-hidden rounded-lg border px-4 text-base"
+                  class="dark:border-theme-secondary-800 xs:[min-width:300px] sm:[min-width:448px] dark:border border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 dim:border-theme-dim-700 flex items-center overflow-hidden rounded-lg border px-4 text-base"
                   data-testid="HeaderSearchInput__input"
                 >
                   <button
@@ -5061,7 +5061,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 1`]
                     </div>
                   </div>
                   <div
-                    class="text-theme-secondary-700 dark:text-theme-secondary-600"
+                    class="text-theme-secondary-700 dark:text-theme-secondary-600 dim:text-theme-dim-500"
                   >
                     <div
                       style="height: 20px; width: 20px;"
@@ -5135,7 +5135,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 1`]
                           class="pt-3"
                         >
                           <div
-                            class="bg-theme-primary-100 dark:bg-theme-background flex h-[117px] w-full cursor-pointer flex-col gap-3 rounded-xl p-2 ring-2 ring-theme-primary-100 dark:ring-theme-secondary-800"
+                            class="bg-theme-primary-100 dark:bg-theme-background flex h-[117px] w-full cursor-pointer flex-col gap-3 rounded-xl p-2 ring-2 ring-theme-primary-100 dark:ring-theme-secondary-800 dim:ring-theme-dim-700"
                             data-testid="ReceiverItemMobile"
                             tabindex="0"
                           >
@@ -5143,12 +5143,12 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 1`]
                               class="flex flex-col gap-2 pt-2 pl-2"
                             >
                               <span
-                                class="text-theme-secondary-900 xs:max-w-80 dark:text-theme-secondary-200 w-full max-w-48 truncate text-sm font-semibold sm:max-w-128"
+                                class="text-theme-secondary-900 xs:max-w-80 dark:text-theme-secondary-200 dim:text-theme-dim-200 w-full max-w-48 truncate text-sm font-semibold sm:max-w-128"
                               >
                                 Sample Wallet
                               </span>
                               <span
-                                class="text-theme-secondary-700 dark:text-theme-secondary-500 text-xs font-semibold"
+                                class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 text-xs font-semibold"
                               >
                                 <span
                                   class="no-ligatures min-w-0 overflow-hidden"
@@ -5159,20 +5159,20 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 1`]
                               </span>
                             </div>
                             <div
-                              class="bg-theme-primary-500 flex flex-row items-center justify-between overflow-hidden rounded-lg text-sm font-semibold text-white"
+                              class="bg-theme-primary-500 dim:bg-theme-dim-navy-600 dim:text-theme-dim-50 flex flex-row items-center justify-between overflow-hidden rounded-lg text-sm font-semibold text-white"
                             >
                               <div
                                 class="pl-2"
                               >
                                 <span
-                                  class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 text-sm text-white"
+                                  class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 dim:text-theme-dim-50 text-sm text-white"
                                   data-testid="Amount"
                                 >
                                   95.27653252 ARK
                                 </span>
                               </div>
                               <button
-                                class="bg-theme-primary-600 flex h-full items-center justify-center px-5 py-3"
+                                class="bg-theme-primary-600 dim:bg-theme-dim-navy-600 flex h-full items-center justify-center px-5 py-3"
                               >
                                 Select
                               </button>
@@ -5187,7 +5187,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 1`]
                           class="pt-3"
                         >
                           <div
-                            class="bg-theme-primary-100 dark:bg-theme-background flex h-[117px] w-full cursor-pointer flex-col gap-3 rounded-xl p-2 ring-2 ring-theme-primary-100 dark:ring-theme-secondary-800"
+                            class="bg-theme-primary-100 dark:bg-theme-background flex h-[117px] w-full cursor-pointer flex-col gap-3 rounded-xl p-2 ring-2 ring-theme-primary-100 dark:ring-theme-secondary-800 dim:ring-theme-dim-700"
                             data-testid="ReceiverItemMobile"
                             tabindex="0"
                           >
@@ -5195,12 +5195,12 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 1`]
                               class="flex flex-col gap-2 pt-2 pl-2"
                             >
                               <span
-                                class="text-theme-secondary-900 xs:max-w-80 dark:text-theme-secondary-200 w-full max-w-48 truncate text-sm font-semibold sm:max-w-128"
+                                class="text-theme-secondary-900 xs:max-w-80 dark:text-theme-secondary-200 dim:text-theme-dim-200 w-full max-w-48 truncate text-sm font-semibold sm:max-w-128"
                               >
                                 Mainsail Wallet 2
                               </span>
                               <span
-                                class="text-theme-secondary-700 dark:text-theme-secondary-500 text-xs font-semibold"
+                                class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 text-xs font-semibold"
                               >
                                 <span
                                   class="no-ligatures min-w-0 overflow-hidden"
@@ -5211,20 +5211,20 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 1`]
                               </span>
                             </div>
                             <div
-                              class="bg-theme-primary-500 flex flex-row items-center justify-between overflow-hidden rounded-lg text-sm font-semibold text-white"
+                              class="bg-theme-primary-500 dim:bg-theme-dim-navy-600 dim:text-theme-dim-50 flex flex-row items-center justify-between overflow-hidden rounded-lg text-sm font-semibold text-white"
                             >
                               <div
                                 class="pl-2"
                               >
                                 <span
-                                  class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 text-sm text-white"
+                                  class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 dim:text-theme-dim-50 text-sm text-white"
                                   data-testid="Amount"
                                 >
                                   0.01989216 ARK
                                 </span>
                               </div>
                               <button
-                                class="bg-theme-primary-600 flex h-full items-center justify-center px-5 py-3"
+                                class="bg-theme-primary-600 dim:bg-theme-dim-navy-600 flex h-full items-center justify-center px-5 py-3"
                               >
                                 Select
                               </button>
@@ -5324,7 +5324,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 2`]
                 data-testid="HeaderSearchInput"
               >
                 <div
-                  class="dark:border-theme-secondary-800 xs:[min-width:300px] sm:[min-width:448px] dark:border border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 flex items-center overflow-hidden rounded-lg border px-4 text-base"
+                  class="dark:border-theme-secondary-800 xs:[min-width:300px] sm:[min-width:448px] dark:border border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 dim:border-theme-dim-700 flex items-center overflow-hidden rounded-lg border px-4 text-base"
                   data-testid="HeaderSearchInput__input"
                 >
                   <button
@@ -5383,7 +5383,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 2`]
                     </div>
                   </div>
                   <div
-                    class="text-theme-secondary-700 dark:text-theme-secondary-600"
+                    class="text-theme-secondary-700 dark:text-theme-secondary-600 dim:text-theme-dim-500"
                   >
                     <div
                       style="height: 20px; width: 20px;"
@@ -5457,7 +5457,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 2`]
                           class="pt-3"
                         >
                           <div
-                            class="bg-theme-primary-100 dark:bg-theme-background flex h-[117px] w-full cursor-pointer flex-col gap-3 rounded-xl p-2 ring-2 ring-theme-primary-100 dark:ring-theme-secondary-800"
+                            class="bg-theme-primary-100 dark:bg-theme-background flex h-[117px] w-full cursor-pointer flex-col gap-3 rounded-xl p-2 ring-2 ring-theme-primary-100 dark:ring-theme-secondary-800 dim:ring-theme-dim-700"
                             data-testid="ReceiverItemMobile"
                             tabindex="0"
                           >
@@ -5465,12 +5465,12 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 2`]
                               class="flex flex-col gap-2 pt-2 pl-2"
                             >
                               <span
-                                class="text-theme-secondary-900 xs:max-w-80 dark:text-theme-secondary-200 w-full max-w-48 truncate text-sm font-semibold sm:max-w-128"
+                                class="text-theme-secondary-900 xs:max-w-80 dark:text-theme-secondary-200 dim:text-theme-dim-200 w-full max-w-48 truncate text-sm font-semibold sm:max-w-128"
                               >
                                 Sample Wallet
                               </span>
                               <span
-                                class="text-theme-secondary-700 dark:text-theme-secondary-500 text-xs font-semibold"
+                                class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 text-xs font-semibold"
                               >
                                 <span
                                   class="no-ligatures min-w-0 overflow-hidden"
@@ -5481,20 +5481,20 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 2`]
                               </span>
                             </div>
                             <div
-                              class="bg-theme-primary-500 flex flex-row items-center justify-between overflow-hidden rounded-lg text-sm font-semibold text-white"
+                              class="bg-theme-primary-500 dim:bg-theme-dim-navy-600 dim:text-theme-dim-50 flex flex-row items-center justify-between overflow-hidden rounded-lg text-sm font-semibold text-white"
                             >
                               <div
                                 class="pl-2"
                               >
                                 <span
-                                  class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 text-sm text-white"
+                                  class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 dim:text-theme-dim-50 text-sm text-white"
                                   data-testid="Amount"
                                 >
                                   95.27653252 ARK
                                 </span>
                               </div>
                               <button
-                                class="bg-theme-primary-600 flex h-full items-center justify-center px-5 py-3"
+                                class="bg-theme-primary-600 dim:bg-theme-dim-navy-600 flex h-full items-center justify-center px-5 py-3"
                               >
                                 Select
                               </button>
@@ -5509,7 +5509,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 2`]
                           class="pt-3"
                         >
                           <div
-                            class="bg-theme-primary-100 dark:bg-theme-background flex h-[117px] w-full cursor-pointer flex-col gap-3 rounded-xl p-2 ring-2 ring-theme-primary-100 dark:ring-theme-secondary-800"
+                            class="bg-theme-primary-100 dark:bg-theme-background flex h-[117px] w-full cursor-pointer flex-col gap-3 rounded-xl p-2 ring-2 ring-theme-primary-100 dark:ring-theme-secondary-800 dim:ring-theme-dim-700"
                             data-testid="ReceiverItemMobile"
                             tabindex="0"
                           >
@@ -5517,12 +5517,12 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 2`]
                               class="flex flex-col gap-2 pt-2 pl-2"
                             >
                               <span
-                                class="text-theme-secondary-900 xs:max-w-80 dark:text-theme-secondary-200 w-full max-w-48 truncate text-sm font-semibold sm:max-w-128"
+                                class="text-theme-secondary-900 xs:max-w-80 dark:text-theme-secondary-200 dim:text-theme-dim-200 w-full max-w-48 truncate text-sm font-semibold sm:max-w-128"
                               >
                                 Mainsail Wallet 2
                               </span>
                               <span
-                                class="text-theme-secondary-700 dark:text-theme-secondary-500 text-xs font-semibold"
+                                class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 text-xs font-semibold"
                               >
                                 <span
                                   class="no-ligatures min-w-0 overflow-hidden"
@@ -5533,20 +5533,20 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 2`]
                               </span>
                             </div>
                             <div
-                              class="bg-theme-primary-500 flex flex-row items-center justify-between overflow-hidden rounded-lg text-sm font-semibold text-white"
+                              class="bg-theme-primary-500 dim:bg-theme-dim-navy-600 dim:text-theme-dim-50 flex flex-row items-center justify-between overflow-hidden rounded-lg text-sm font-semibold text-white"
                             >
                               <div
                                 class="pl-2"
                               >
                                 <span
-                                  class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 text-sm text-white"
+                                  class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 dim:text-theme-dim-50 text-sm text-white"
                                   data-testid="Amount"
                                 >
                                   0.01989216 ARK
                                 </span>
                               </div>
                               <button
-                                class="bg-theme-primary-600 flex h-full items-center justify-center px-5 py-3"
+                                class="bg-theme-primary-600 dim:bg-theme-dim-navy-600 flex h-full items-center justify-center px-5 py-3"
                               >
                                 Select
                               </button>
@@ -5646,7 +5646,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive with sel
                 data-testid="HeaderSearchInput"
               >
                 <div
-                  class="dark:border-theme-secondary-800 xs:[min-width:300px] sm:[min-width:448px] dark:border border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 flex items-center overflow-hidden rounded-lg border px-4 text-base"
+                  class="dark:border-theme-secondary-800 xs:[min-width:300px] sm:[min-width:448px] dark:border border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 dim:border-theme-dim-700 flex items-center overflow-hidden rounded-lg border px-4 text-base"
                   data-testid="HeaderSearchInput__input"
                 >
                   <button
@@ -5705,7 +5705,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive with sel
                     </div>
                   </div>
                   <div
-                    class="text-theme-secondary-700 dark:text-theme-secondary-600"
+                    class="text-theme-secondary-700 dark:text-theme-secondary-600 dim:text-theme-dim-500"
                   >
                     <div
                       style="height: 20px; width: 20px;"
@@ -5779,7 +5779,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive with sel
                           class="pt-3"
                         >
                           <div
-                            class="bg-theme-primary-100 dark:bg-theme-background flex h-[117px] w-full cursor-pointer flex-col gap-3 rounded-xl p-2 ring-2 ring-theme-primary-600 dark:ring-theme-primary-600"
+                            class="bg-theme-primary-100 dark:bg-theme-background flex h-[117px] w-full cursor-pointer flex-col gap-3 rounded-xl p-2 ring-2 ring-theme-primary-600 dark:ring-theme-primary-600 dim:ring-theme-dim-navy-600"
                             data-testid="ReceiverItemMobile--selected"
                             tabindex="0"
                           >
@@ -5787,12 +5787,12 @@ exports[`SearchWallet uses fiat value = true > should render responsive with sel
                               class="flex flex-col gap-2 pt-2 pl-2"
                             >
                               <span
-                                class="text-theme-secondary-900 xs:max-w-80 dark:text-theme-secondary-200 w-full max-w-48 truncate text-sm font-semibold sm:max-w-128"
+                                class="text-theme-secondary-900 xs:max-w-80 dark:text-theme-secondary-200 dim:text-theme-dim-200 w-full max-w-48 truncate text-sm font-semibold sm:max-w-128"
                               >
                                 Sample Wallet
                               </span>
                               <span
-                                class="text-theme-secondary-700 dark:text-theme-secondary-500 text-xs font-semibold"
+                                class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 text-xs font-semibold"
                               >
                                 <span
                                   class="no-ligatures min-w-0 overflow-hidden"
@@ -5803,20 +5803,20 @@ exports[`SearchWallet uses fiat value = true > should render responsive with sel
                               </span>
                             </div>
                             <div
-                              class="bg-theme-primary-500 flex flex-row items-center justify-between overflow-hidden rounded-lg text-sm font-semibold text-white"
+                              class="bg-theme-primary-500 dim:bg-theme-dim-navy-600 dim:text-theme-dim-50 flex flex-row items-center justify-between overflow-hidden rounded-lg text-sm font-semibold text-white"
                             >
                               <div
                                 class="pl-2"
                               >
                                 <span
-                                  class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 text-sm text-white"
+                                  class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 dim:text-theme-dim-50 text-sm text-white"
                                   data-testid="Amount"
                                 >
                                   95.27653252 ARK
                                 </span>
                               </div>
                               <button
-                                class="bg-theme-primary-600 flex h-full items-center justify-center px-5 py-3"
+                                class="bg-theme-primary-600 dim:bg-theme-dim-navy-600 flex h-full items-center justify-center px-5 py-3"
                               >
                                 Select
                               </button>
@@ -5831,7 +5831,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive with sel
                           class="pt-3"
                         >
                           <div
-                            class="bg-theme-primary-100 dark:bg-theme-background flex h-[117px] w-full cursor-pointer flex-col gap-3 rounded-xl p-2 ring-2 ring-theme-primary-100 dark:ring-theme-secondary-800"
+                            class="bg-theme-primary-100 dark:bg-theme-background flex h-[117px] w-full cursor-pointer flex-col gap-3 rounded-xl p-2 ring-2 ring-theme-primary-100 dark:ring-theme-secondary-800 dim:ring-theme-dim-700"
                             data-testid="ReceiverItemMobile"
                             tabindex="0"
                           >
@@ -5839,12 +5839,12 @@ exports[`SearchWallet uses fiat value = true > should render responsive with sel
                               class="flex flex-col gap-2 pt-2 pl-2"
                             >
                               <span
-                                class="text-theme-secondary-900 xs:max-w-80 dark:text-theme-secondary-200 w-full max-w-48 truncate text-sm font-semibold sm:max-w-128"
+                                class="text-theme-secondary-900 xs:max-w-80 dark:text-theme-secondary-200 dim:text-theme-dim-200 w-full max-w-48 truncate text-sm font-semibold sm:max-w-128"
                               >
                                 Mainsail Wallet 2
                               </span>
                               <span
-                                class="text-theme-secondary-700 dark:text-theme-secondary-500 text-xs font-semibold"
+                                class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 text-xs font-semibold"
                               >
                                 <span
                                   class="no-ligatures min-w-0 overflow-hidden"
@@ -5855,20 +5855,20 @@ exports[`SearchWallet uses fiat value = true > should render responsive with sel
                               </span>
                             </div>
                             <div
-                              class="bg-theme-primary-500 flex flex-row items-center justify-between overflow-hidden rounded-lg text-sm font-semibold text-white"
+                              class="bg-theme-primary-500 dim:bg-theme-dim-navy-600 dim:text-theme-dim-50 flex flex-row items-center justify-between overflow-hidden rounded-lg text-sm font-semibold text-white"
                             >
                               <div
                                 class="pl-2"
                               >
                                 <span
-                                  class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 text-sm text-white"
+                                  class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 dim:text-theme-dim-50 text-sm text-white"
                                   data-testid="Amount"
                                 >
                                   0.01989216 ARK
                                 </span>
                               </div>
                               <button
-                                class="bg-theme-primary-600 flex h-full items-center justify-center px-5 py-3"
+                                class="bg-theme-primary-600 dim:bg-theme-dim-navy-600 flex h-full items-center justify-center px-5 py-3"
                               >
                                 Select
                               </button>
@@ -6146,7 +6146,7 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
                                   class="group"
                                 >
                                   <button
-                                    class="text-theme-secondary-700 disabled:text-theme-secondary-400 dark:text-theme-secondary-500 dark:disabled:text-theme-secondary-700 relative flex cursor-pointer items-center justify-center font-semibold transition-colors duration-200 focus:outline-hidden disabled:cursor-not-allowed hover:bg-theme-primary-100 dark:hover:bg-theme-secondary-800 dark:hover:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
+                                    class="text-theme-secondary-700 disabled:text-theme-secondary-400 dark:text-theme-secondary-500 dark:disabled:text-theme-secondary-700 dim:text-theme-dim-500 dim:disabled:text-theme-secondary-600 relative flex cursor-pointer items-center justify-center font-semibold transition-colors duration-200 focus:outline-hidden disabled:cursor-not-allowed hover:bg-theme-primary-100 dark:hover:bg-theme-secondary-800 dim-hover:bg-theme-dim-700 dark:hover:text-white hover:text-theme-primary-400 dim-hover:text-theme-dim-navy-600 rounded px-2 py-1.5 ring-focus"
                                     type="button"
                                   >
                                     <div
@@ -6232,7 +6232,7 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 0x125b484e51Ad990b5b3140931f3BD8eAee85Db23
@@ -6256,7 +6256,7 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
                           class="hidden xl:table-cell"
                         >
                           <div
-                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-theme-secondary-text justify-end"
+                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-theme-secondary-text justify-end dim:text-theme-dim-50"
                           >
                             <span
                               class="whitespace-nowrap text-sm leading-[17px]"
@@ -6272,7 +6272,7 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
                           >
                             <div>
                               <button
-                                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-primary-600 -mr-3 text-sm leading-[17px]"
+                                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-primary-600 dim:text-theme-dim-navy-600 -mr-3 text-sm leading-[17px]"
                                 data-testid="SearchWalletListItem__select-0"
                                 disabled=""
                                 type="button"
@@ -6557,7 +6557,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                                   class="group"
                                 >
                                   <button
-                                    class="text-theme-secondary-700 disabled:text-theme-secondary-400 dark:text-theme-secondary-500 dark:disabled:text-theme-secondary-700 relative flex cursor-pointer items-center justify-center font-semibold transition-colors duration-200 focus:outline-hidden disabled:cursor-not-allowed hover:bg-theme-primary-100 dark:hover:bg-theme-secondary-800 dark:hover:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
+                                    class="text-theme-secondary-700 disabled:text-theme-secondary-400 dark:text-theme-secondary-500 dark:disabled:text-theme-secondary-700 dim:text-theme-dim-500 dim:disabled:text-theme-secondary-600 relative flex cursor-pointer items-center justify-center font-semibold transition-colors duration-200 focus:outline-hidden disabled:cursor-not-allowed hover:bg-theme-primary-100 dark:hover:bg-theme-secondary-800 dim-hover:bg-theme-dim-700 dark:hover:text-white hover:text-theme-primary-400 dim-hover:text-theme-dim-navy-600 rounded px-2 py-1.5 ring-focus"
                                     type="button"
                                   >
                                     <div
@@ -6654,7 +6654,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                                 </span>
                               </span>
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
@@ -6678,7 +6678,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                           class="hidden xl:table-cell"
                         >
                           <div
-                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 bg-theme-success-100 dark:bg-transparent dark:border-y-2 dark:border-theme-success-600 text-theme-secondary-text justify-end"
+                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 bg-theme-success-100 dark:bg-transparent dark:border-y-2 dark:border-theme-success-600 text-theme-secondary-text justify-end dim:text-theme-dim-50"
                           >
                             <span
                               class="whitespace-nowrap text-sm leading-[17px]"
@@ -6693,7 +6693,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                             class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-3 mr-3 bg-theme-success-100 rounded-r dark:bg-transparent dark:border-y-2 dark:border-r-2 dark:border-theme-success-600 justify-end my-0.5"
                           >
                             <button
-                              class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-reverse-600 -mr-3 py-0 text-sm leading-[17px]"
+                              class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-reverse-600 dim:text-theme-dim-navy-700 -mr-3 py-0 text-sm leading-[17px]"
                               data-testid="SearchWalletListItem__selected-0"
                               type="button"
                             >
@@ -6731,7 +6731,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                                 </span>
                               </span>
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54
@@ -6755,7 +6755,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                           class="hidden xl:table-cell"
                         >
                           <div
-                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-theme-secondary-text justify-end"
+                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-theme-secondary-text justify-end dim:text-theme-dim-50"
                           >
                             <span
                               class="whitespace-nowrap text-sm leading-[17px]"
@@ -6771,7 +6771,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                           >
                             <div>
                               <button
-                                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 -mr-3 text-sm leading-[17px]"
+                                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dim:text-theme-dim-navy-600 -mr-3 text-sm leading-[17px]"
                                 data-testid="SearchWalletListItem__select-1"
                                 type="button"
                               >
@@ -7055,7 +7055,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                                   class="group"
                                 >
                                   <button
-                                    class="text-theme-secondary-700 disabled:text-theme-secondary-400 dark:text-theme-secondary-500 dark:disabled:text-theme-secondary-700 relative flex cursor-pointer items-center justify-center font-semibold transition-colors duration-200 focus:outline-hidden disabled:cursor-not-allowed hover:bg-theme-primary-100 dark:hover:bg-theme-secondary-800 dark:hover:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
+                                    class="text-theme-secondary-700 disabled:text-theme-secondary-400 dark:text-theme-secondary-500 dark:disabled:text-theme-secondary-700 dim:text-theme-dim-500 dim:disabled:text-theme-secondary-600 relative flex cursor-pointer items-center justify-center font-semibold transition-colors duration-200 focus:outline-hidden disabled:cursor-not-allowed hover:bg-theme-primary-100 dark:hover:bg-theme-secondary-800 dim-hover:bg-theme-dim-700 dark:hover:text-white hover:text-theme-primary-400 dim-hover:text-theme-dim-navy-600 rounded px-2 py-1.5 ring-focus"
                                     type="button"
                                   >
                                     <div
@@ -7152,7 +7152,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                                 </span>
                               </span>
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
@@ -7176,7 +7176,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                           class="hidden xl:table-cell"
                         >
                           <div
-                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-theme-secondary-text justify-end"
+                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-theme-secondary-text justify-end dim:text-theme-dim-50"
                           >
                             <span
                               class="whitespace-nowrap text-sm leading-[17px]"
@@ -7192,7 +7192,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                           >
                             <div>
                               <button
-                                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 -mr-3 text-sm leading-[17px]"
+                                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dim:text-theme-dim-navy-600 -mr-3 text-sm leading-[17px]"
                                 data-testid="SearchWalletListItem__select-0"
                                 type="button"
                               >
@@ -7231,7 +7231,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                                 </span>
                               </span>
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54
@@ -7255,7 +7255,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                           class="hidden xl:table-cell"
                         >
                           <div
-                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-theme-secondary-text justify-end"
+                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-theme-secondary-text justify-end dim:text-theme-dim-50"
                           >
                             <span
                               class="whitespace-nowrap text-sm leading-[17px]"
@@ -7271,7 +7271,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                           >
                             <div>
                               <button
-                                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 -mr-3 text-sm leading-[17px]"
+                                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dim:text-theme-dim-navy-600 -mr-3 text-sm leading-[17px]"
                                 data-testid="SearchWalletListItem__select-1"
                                 type="button"
                               >
