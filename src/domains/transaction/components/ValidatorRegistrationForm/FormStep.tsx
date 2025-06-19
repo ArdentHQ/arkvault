@@ -14,7 +14,6 @@ import { WalletCapabilities } from "@/domains/portfolio/lib/wallet.capabilities"
 import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
 import { useEnvironmentContext } from "@/app/contexts";
 import { Alert } from "@/app/components/Alert";
-import { useValidatorRegistrationLockedFee } from "./hooks/useValidatorRegistrationLockedFee";
 
 export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: FormStepProperties) => {
 	const { t } = useTranslation();
@@ -28,15 +27,8 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 	const { allWallets } = usePortfolio({ profile });
 	const { env } = useEnvironmentContext();
 
-	const { validatorRegistrationFee } = useValidatorRegistrationLockedFee({
-		wallet,
-		profile,
-	});
-
 	useEffect(() => {
 		register("validatorPublicKey", validatorRegistration.validatorPublicKey(profile, network));
-
-		register("lockedFee", validatorRegistration.lockedFee(wallet));
 	}, [register, validatorRegistration, profile, network.id(), env]);
 
 	const handleSelectSender = (address: any) => {
@@ -50,10 +42,6 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 			newSenderWallet?.synchroniser().identity();
 		}
 	};
-
-	useEffect(() => {
-		setValue("lockedFee", validatorRegistrationFee, { shouldDirty: true, shouldValidate: true });
-	}, [validatorRegistrationFee]);
 
 	return (
 		<section data-testid="ValidatorRegistrationForm_form-step">

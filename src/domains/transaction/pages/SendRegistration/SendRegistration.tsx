@@ -27,6 +27,7 @@ import {
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { useToggleFeeFields } from "@/domains/transaction/hooks/useToggleFeeFields";
 import { getUrlParameter } from "@/utils/paths";
+import { useValidatorRegistrationLockedFee } from "@/domains/transaction/components/ValidatorRegistrationForm/hooks/useValidatorRegistrationLockedFee";
 
 export const SendRegistration = () => {
 	const navigate = useNavigate();
@@ -40,7 +41,7 @@ export const SendRegistration = () => {
 
 	const { env } = useEnvironmentContext();
 	const activeProfile = useActiveProfile();
-	const { common } = useValidation();
+	const { common, validatorRegistration } = useValidation();
 
 	const { hasDeviceAvailable, isConnected, connect, ledgerDevice } = useLedgerContext();
 
@@ -52,7 +53,7 @@ export const SendRegistration = () => {
 	const form = useForm({ mode: "onChange" });
 
 	const { formState, register, setValue, watch, getValues } = form;
-	const { isDirty, isSubmitting, isValid } = formState;
+	const { isDirty, isSubmitting, isValid, errors } = formState;
 
 	const { fees, isLoading, senderAddress } = watch();
 
@@ -86,6 +87,11 @@ export const SendRegistration = () => {
 		}
 	}, [activeProfile, activeWalletFromUrl, network, senderAddress]);
 
+	const { validatorRegistrationFee } = useValidatorRegistrationLockedFee({
+		wallet: activeWallet,
+		profile: activeProfile,
+	});
+
 	useEffect(() => {
 		register("fees");
 
@@ -96,7 +102,9 @@ export const SendRegistration = () => {
 
 		register("suppressWarning");
 		register("isLoading");
-	}, [register, activeWallet, common, fees]);
+
+		register("lockedFee", validatorRegistration.lockedFee(activeWallet));
+	}, [register, activeWallet, common, fees, validatorRegistrationFee]);
 
 	useToggleFeeFields({
 		activeTab,
@@ -113,6 +121,10 @@ export const SendRegistration = () => {
 
 		setValue("network", activeProfile.activeNetwork(), { shouldDirty: true, shouldValidate: true });
 	}, [activeWallet, env, setValue]);
+
+	useEffect(() => {
+		setValue("lockedFee", validatorRegistrationFee, { shouldDirty: true, shouldValidate: true });
+	}, [validatorRegistrationFee]);
 
 	useLayoutEffect(() => {
 		const registrations = {

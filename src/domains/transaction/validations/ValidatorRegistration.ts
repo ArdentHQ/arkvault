@@ -44,7 +44,6 @@ export const validatorRegistration = (t: any) => ({
 		validate: {
 			insufficientBalance: (lockedFee: number) => {
 				if (lockedFee > (wallet?.balance() ?? 0)) {
-					console.log("insufficient balance");
 					return t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.INSUFFICIENT_BALANCE_FOR_LOCKED_FEE", {
 						lockedFee: Helpers.Currency.format(lockedFee, wallet?.currency() ?? "ARK", {
 							withTicker: true,
