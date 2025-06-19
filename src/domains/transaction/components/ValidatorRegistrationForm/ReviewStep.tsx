@@ -2,7 +2,6 @@ import { Contracts } from "@/app/lib/profiles";
 import React, { useEffect, useMemo } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-
 import { StepHeader } from "@/app/components/StepHeader";
 import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
 import { Divider } from "@/app/components/Divider";
@@ -14,7 +13,6 @@ import { Amount } from "@/app/components/Amount";
 import { Tooltip } from "@/app/components/Tooltip";
 import { useValidatorRegistrationLockedFee } from "./hooks/useValidatorRegistrationLockedFee";
 import { Alert } from "@/app/components/Alert";
-import { useValidation } from "@/app/hooks";
 import { BigNumber } from "@/app/lib/helpers";
 
 export const ReviewStep = ({
@@ -26,9 +24,7 @@ export const ReviewStep = ({
 }) => {
 	const { t } = useTranslation();
 
-	const { common: commonValidation, validatorRegistration } = useValidation();
-
-	const { getValues, unregister, errors, register, trigger } = useFormContext();
+	const { getValues, unregister, errors, trigger } = useFormContext();
 
 	const { validatorPublicKey } = getValues();
 
