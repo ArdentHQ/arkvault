@@ -32,7 +32,9 @@ exports[`SelectNetworkDropdown > should change network 1`] = `
         aria-owns="downshift-4-menu"
         role="combobox"
       >
-        <div>
+        <div
+          aria-expanded="false"
+        >
           <label
             for="downshift-4-input"
             id="downshift-4-label"

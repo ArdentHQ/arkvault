@@ -568,7 +568,6 @@ describe("ExchangeForm", () => {
 		});
 
 		// update amount output
-		payoutInput.select();
 		await user.clear(payoutInput);
 		await user.paste("1");
 
