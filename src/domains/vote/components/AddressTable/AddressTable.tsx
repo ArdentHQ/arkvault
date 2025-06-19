@@ -120,7 +120,7 @@ export const AddressTable: FC<AddressTableProperties> = ({ wallets, onSelect, sh
 		return (
 			<tr
 				data-testid="EmptyResults"
-				className="border-theme-secondary-200 dark:border-theme-secondary-800 border-solid md:border-b-4"
+				className="border-theme-secondary-200 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-solid md:border-b-4"
 			>
 				<td colSpan={columns.length} className="pt-[11px] pb-4">
 					<div className="flex flex-col items-center justify-center">

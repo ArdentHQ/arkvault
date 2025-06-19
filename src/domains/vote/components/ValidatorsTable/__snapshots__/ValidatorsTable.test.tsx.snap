@@ -20328,7 +20328,7 @@ exports[`ValidatorsTable > should render with empty list 1`] = `
                   />
                   <tfoot>
                     <tr
-                      class="border-theme-secondary-200 dark:border-theme-secondary-800 border-solid md:border-b-4"
+                      class="border-theme-secondary-200 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-solid md:border-b-4"
                       data-testid="EmptyResults"
                     >
                       <td
