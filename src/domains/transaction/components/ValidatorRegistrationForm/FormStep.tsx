@@ -45,14 +45,19 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 		}
 	};
 
-	const { validatorRegistrationFee, validatorRegistrationFeeTicker } = useValidatorRegistrationLockedFee({
-		wallet,
-		profile,
-	});
+	const { validatorRegistrationFee, validatorRegistrationFeeTicker, hasEnoughBalance } =
+		useValidatorRegistrationLockedFee({
+			wallet,
+			profile,
+		});
 
 	const formattedFee = useFormatAmount({
 		value: validatorRegistrationFee,
 		ticker: validatorRegistrationFeeTicker,
+	});
+	const formattedBalance = useFormatAmount({
+		value: wallet?.balance() ?? 0,
+		ticker: wallet?.currency() ?? "ARK",
 	});
 
 	return (
@@ -65,12 +70,14 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 				}
 			/>
 
-			<Alert className="mt-4">
-				{t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.INSUFFICIENT_BALANCE_FOR_LOCKED_FEE", {
-					lockedFee: formattedFee,
-					balance: 0.001,
-				})}
-			</Alert>
+			{!hasEnoughBalance && (
+				<Alert className="mt-4">
+					{t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.INSUFFICIENT_BALANCE_FOR_LOCKED_FEE", {
+						lockedFee: formattedFee,
+						balance: formattedBalance,
+					})}
+				</Alert>
+			)}
 
 			<FormField name="senderAddress" className="-mx-3 mt-6 sm:mx-0 sm:mt-4">
 				<SelectAddress

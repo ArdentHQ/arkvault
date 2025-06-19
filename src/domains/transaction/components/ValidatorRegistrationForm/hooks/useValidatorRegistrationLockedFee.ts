@@ -11,6 +11,7 @@ export const useValidatorRegistrationLockedFee = ({
 	wallet?: Contracts.IReadWriteWallet;
 	profile: Contracts.IProfile;
 }): {
+	hasEnoughBalance: boolean;
 	validatorRegistrationFee: number;
 	validatorRegistrationFeeAsFiat: number | null;
 	validatorRegistrationFeeTicker: string;
@@ -31,7 +32,12 @@ export const useValidatorRegistrationLockedFee = ({
 
 	const validatorRegistrationFeeAsFiat = isTestnet ? null : convert(validatorRegistrationFee);
 
+	const hasEnoughBalance = (wallet?.balance() ?? 0) >= validatorRegistrationFee;
+
+	console.log(hasEnoughBalance, wallet?.balance(), validatorRegistrationFee);
+
 	return {
+		hasEnoughBalance,
 		validatorRegistrationFee,
 		validatorRegistrationFeeAsFiat,
 		validatorRegistrationFeeAsFiatTicker: exchangeTicker,
