@@ -70,7 +70,6 @@ export class ToastService {
 			...this.options(),
 			...options,
 			className: () => "pt-px sm:p-[0.875rem] z-0 w-full md:w-auto md:max-w-[37rem] self-start",
-
 		});
 	}
 
