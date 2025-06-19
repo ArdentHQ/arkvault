@@ -69,7 +69,7 @@ export class ToastService {
 		return toast((properties: ToastContentProps<any>) => this.renderContent(type, content, properties), {
 			...this.options(),
 			...options,
-			className: () => "pt-px md:p-4 z-0 w-auto w-full md:w-auto md:max-w-[35rem] self-start",
+			className: () => "p-[0.875rem] z-0 w-auto w-full md:w-auto md:max-w-[35rem] self-start",
 
 		});
 	}
