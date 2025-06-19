@@ -10738,7 +10738,7 @@ exports[`Votes > should render 1`] = `
               </div>
             </button>
             <div
-              class="bg-theme-primary-100 dark:bg-theme-secondary-800 flex rounded"
+              class="bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-800 flex rounded"
             >
               <button
                 class="pagination-search-toggle-button group"
@@ -18716,7 +18716,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
               </div>
             </button>
             <div
-              class="bg-theme-primary-100 dark:bg-theme-secondary-800 flex rounded"
+              class="bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-800 flex rounded"
             >
               <button
                 class="pagination-search-toggle-button group"
@@ -26954,7 +26954,7 @@ exports[`Votes > should select a validator 1`] = `
               </div>
             </button>
             <div
-              class="bg-theme-primary-100 dark:bg-theme-secondary-800 flex rounded"
+              class="bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-800 flex rounded"
             >
               <button
                 class="pagination-search-toggle-button group"
@@ -35250,7 +35250,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
               </div>
             </button>
             <div
-              class="bg-theme-primary-100 dark:bg-theme-secondary-800 flex rounded"
+              class="bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-800 flex rounded"
             >
               <button
                 class="pagination-search-toggle-button group"
