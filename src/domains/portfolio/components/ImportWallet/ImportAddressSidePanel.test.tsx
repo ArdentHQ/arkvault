@@ -21,6 +21,7 @@ import { ImportAddressesSidePanel } from "./ImportAddressSidePanel";
 import { expect } from "vitest";
 import { ImportAddressStep, useLedgerStepHeaderConfig, useStepHeaderConfig } from "./ImportAddressSidePanel.blocks";
 import { LedgerTabStep } from "./Ledger/LedgerTabs.contracts";
+import { ImportOption } from "@/domains/wallet/hooks";
 
 let profile: Contracts.IProfile;
 const fixtureProfileId = getMainsailProfileId();
@@ -173,7 +174,7 @@ describe("ImportSidePanel", () => {
 		const nanoXMock = mockNanoXTransport();
 
 		render(<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />, {
-			route: routeLedger,
+			route,
 		});
 
 		await expect(screen.findByTestId("LedgerTabs")).resolves.toBeVisible();

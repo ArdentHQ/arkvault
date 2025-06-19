@@ -293,7 +293,6 @@ describe("SendTransfer Fee Handling", () => {
 
 		const inputElement: HTMLInputElement = screen.getByTestId("Input_GasPrice");
 
-		inputElement.select();
 		await userEvent.clear(inputElement);
 		await userEvent.type(inputElement, "1000000000");
 
@@ -404,7 +403,6 @@ describe("SendTransfer Fee Handling", () => {
 
 		const inputElement: HTMLInputElement = screen.getByTestId("Input_GasPrice");
 
-		inputElement.select();
 		await userEvent.type(inputElement, "6");
 
 		await waitFor(() => expect(inputElement).toHaveValue("6"));
@@ -463,7 +461,6 @@ describe("SendTransfer Fee Handling", () => {
 
 			const inputElement: HTMLInputElement = screen.getByTestId("Input_GasPrice");
 
-			inputElement.select();
 			await userEvent.clear(inputElement);
 			await userEvent.type(inputElement, "1");
 
@@ -536,7 +533,6 @@ describe("SendTransfer Fee Handling", () => {
 
 		const inputElement: HTMLInputElement = screen.getByTestId("Input_GasPrice");
 
-		inputElement.select();
 		await userEvent.clear(inputElement);
 		await userEvent.type(inputElement, fee);
 

@@ -179,10 +179,6 @@ interface IFastSort<T> {
 	by(sortBy: ISortByObjectSorter<T> | ISortByObjectSorter<T>[]): T[];
 }
 
-export function createNewSortInstance(
-	opts: ISortInstanceOptions & { inPlaceSorting?: false },
-): <T>(_ctx: readonly T[]) => IFastSort<T>;
-export function createNewSortInstance(opts: ISortInstanceOptions): <T>(_ctx: T[]) => IFastSort<T>;
 export function createNewSortInstance(opts: ISortInstanceOptions): <T>(_ctx: T[]) => IFastSort<T> {
 	const comparer = castComparer(opts.comparer!);
 

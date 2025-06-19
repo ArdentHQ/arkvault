@@ -327,7 +327,6 @@ describe("Contacts", () => {
 
 		expect(nameInput).toHaveValue("Mock Contact");
 
-		(nameInput as HTMLInputElement).select();
 		await userEvent.clear(nameInput);
 		await userEvent.type(nameInput, newName);
 

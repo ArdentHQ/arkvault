@@ -812,59 +812,6 @@ exports[`SelectDropdown > should render option base with custom label 1`] = `
       </div>
     </div>
     <div
-      class="absolute z-10 w-full"
-    >
-      <ul
-        class="select-options-list"
-      >
-        <li
-          aria-selected="false"
-          class="select-list-option"
-          data-testid="SelectDropdown__option--0"
-          id="downshift-6-item-0"
-          role="option"
-        >
-          <div
-            class="select-list-option__label"
-          >
-            <span>
-              Label Option 1
-            </span>
-          </div>
-        </li>
-        <li
-          aria-selected="false"
-          class="select-list-option"
-          data-testid="SelectDropdown__option--1"
-          id="downshift-6-item-1"
-          role="option"
-        >
-          <div
-            class="select-list-option__label"
-          >
-            <span>
-              Label Option 2
-            </span>
-          </div>
-        </li>
-        <li
-          aria-selected="false"
-          class="select-list-option"
-          data-testid="SelectDropdown__option--2"
-          id="downshift-6-item-2"
-          role="option"
-        >
-          <div
-            class="select-list-option__label"
-          >
-            <span>
-              Label Option 3
-            </span>
-          </div>
-        </li>
-      </ul>
-    </div>
-    <div
       class="w-full"
     >
       <div
@@ -873,7 +820,9 @@ exports[`SelectDropdown > should render option base with custom label 1`] = `
         aria-owns="downshift-6-menu"
         role="combobox"
       >
-        <div>
+        <div
+          aria-expanded="true"
+        >
           <label
             for="downshift-6-input"
             id="downshift-6-label"
@@ -966,7 +915,69 @@ exports[`SelectDropdown > should render option base with custom label 1`] = `
           aria-labelledby="downshift-6-label"
           id="downshift-6-menu"
           role="listbox"
-        />
+        >
+          <div
+            data-tippy-root=""
+            id="tippy-1"
+            style="z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; right: auto; bottom: auto; transform: translate(0px, 5px); min-width: 100%; max-width: 100%;"
+          >
+            <div
+              data-escaped=""
+              data-placement="bottom-start"
+              data-reference-hidden=""
+            >
+              <ul
+                class="select-options-list"
+              >
+                <li
+                  aria-selected="false"
+                  class="select-list-option"
+                  data-testid="SelectDropdown__option--0"
+                  id="downshift-6-item-0"
+                  role="option"
+                >
+                  <div
+                    class="select-list-option__label"
+                  >
+                    <span>
+                      Label Option 1
+                    </span>
+                  </div>
+                </li>
+                <li
+                  aria-selected="false"
+                  class="select-list-option"
+                  data-testid="SelectDropdown__option--1"
+                  id="downshift-6-item-1"
+                  role="option"
+                >
+                  <div
+                    class="select-list-option__label"
+                  >
+                    <span>
+                      Label Option 2
+                    </span>
+                  </div>
+                </li>
+                <li
+                  aria-selected="false"
+                  class="select-list-option"
+                  data-testid="SelectDropdown__option--2"
+                  id="downshift-6-item-2"
+                  role="option"
+                >
+                  <div
+                    class="select-list-option__label"
+                  >
+                    <span>
+                      Label Option 3
+                    </span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -997,59 +1008,6 @@ exports[`SelectDropdown > should render option base with custom label and allowe
       </div>
     </div>
     <div
-      class="absolute z-10 w-full"
-    >
-      <ul
-        class="select-options-list"
-      >
-        <li
-          aria-selected="false"
-          class="select-list-option"
-          data-testid="SelectDropdown__option--0"
-          id="downshift-26-item-0"
-          role="option"
-        >
-          <div
-            class="select-list-option__label"
-          >
-            <span>
-              Label Option 1
-            </span>
-          </div>
-        </li>
-        <li
-          aria-selected="false"
-          class="select-list-option"
-          data-testid="SelectDropdown__option--1"
-          id="downshift-26-item-1"
-          role="option"
-        >
-          <div
-            class="select-list-option__label"
-          >
-            <span>
-              Label Option 2
-            </span>
-          </div>
-        </li>
-        <li
-          aria-selected="false"
-          class="select-list-option"
-          data-testid="SelectDropdown__option--2"
-          id="downshift-26-item-2"
-          role="option"
-        >
-          <div
-            class="select-list-option__label"
-          >
-            <span>
-              Label Option 3
-            </span>
-          </div>
-        </li>
-      </ul>
-    </div>
-    <div
       class="w-full"
     >
       <div
@@ -1058,7 +1016,9 @@ exports[`SelectDropdown > should render option base with custom label and allowe
         aria-owns="downshift-26-menu"
         role="combobox"
       >
-        <div>
+        <div
+          aria-expanded="true"
+        >
           <label
             for="downshift-26-input"
             id="downshift-26-label"
@@ -1151,7 +1111,69 @@ exports[`SelectDropdown > should render option base with custom label and allowe
           aria-labelledby="downshift-26-label"
           id="downshift-26-menu"
           role="listbox"
-        />
+        >
+          <div
+            data-tippy-root=""
+            id="tippy-3"
+            style="z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; right: auto; bottom: auto; transform: translate(0px, 5px); min-width: 100%;"
+          >
+            <div
+              data-escaped=""
+              data-placement="bottom-start"
+              data-reference-hidden=""
+            >
+              <ul
+                class="select-options-list"
+              >
+                <li
+                  aria-selected="false"
+                  class="select-list-option"
+                  data-testid="SelectDropdown__option--0"
+                  id="downshift-26-item-0"
+                  role="option"
+                >
+                  <div
+                    class="select-list-option__label"
+                  >
+                    <span>
+                      Label Option 1
+                    </span>
+                  </div>
+                </li>
+                <li
+                  aria-selected="false"
+                  class="select-list-option"
+                  data-testid="SelectDropdown__option--1"
+                  id="downshift-26-item-1"
+                  role="option"
+                >
+                  <div
+                    class="select-list-option__label"
+                  >
+                    <span>
+                      Label Option 2
+                    </span>
+                  </div>
+                </li>
+                <li
+                  aria-selected="false"
+                  class="select-list-option"
+                  data-testid="SelectDropdown__option--2"
+                  id="downshift-26-item-2"
+                  role="option"
+                >
+                  <div
+                    class="select-list-option__label"
+                  >
+                    <span>
+                      Label Option 3
+                    </span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -1731,58 +1753,6 @@ exports[`SelectDropdown > should render option group with custom label 1`] = `
       </div>
     </div>
     <div
-      class="absolute z-10 w-full"
-    >
-      <ul
-        class="select-options-list"
-      >
-        <ul
-          class="select-list-option-group"
-          data-testid="SelectDropdown__option-group--0"
-        >
-          <li
-            class="select-list-option-head"
-          >
-            <div
-              class="select-list-option-head__label"
-            >
-              Group1
-            </div>
-          </li>
-          <li
-            aria-selected="false"
-            class="select-list-option"
-            data-testid="SelectDropdown__option--0"
-            id="downshift-16-item-0"
-            role="option"
-          >
-            <div
-              class="select-list-option__label"
-            >
-              <span>
-                Label Option 1
-              </span>
-            </div>
-          </li>
-          <li
-            aria-selected="false"
-            class="select-list-option"
-            data-testid="SelectDropdown__option--1"
-            id="downshift-16-item-1"
-            role="option"
-          >
-            <div
-              class="select-list-option__label"
-            >
-              <span>
-                Label Option 2
-              </span>
-            </div>
-          </li>
-        </ul>
-      </ul>
-    </div>
-    <div
       class="w-full"
     >
       <div
@@ -1791,7 +1761,9 @@ exports[`SelectDropdown > should render option group with custom label 1`] = `
         aria-owns="downshift-16-menu"
         role="combobox"
       >
-        <div>
+        <div
+          aria-expanded="true"
+        >
           <label
             for="downshift-16-input"
             id="downshift-16-label"
@@ -1884,7 +1856,68 @@ exports[`SelectDropdown > should render option group with custom label 1`] = `
           aria-labelledby="downshift-16-label"
           id="downshift-16-menu"
           role="listbox"
-        />
+        >
+          <div
+            data-tippy-root=""
+            id="tippy-2"
+            style="z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; right: auto; bottom: auto; transform: translate(0px, 5px); min-width: 100%; max-width: 100%;"
+          >
+            <div
+              data-escaped=""
+              data-placement="bottom-start"
+              data-reference-hidden=""
+            >
+              <ul
+                class="select-options-list"
+              >
+                <ul
+                  class="select-list-option-group"
+                  data-testid="SelectDropdown__option-group--0"
+                >
+                  <li
+                    class="select-list-option-head"
+                  >
+                    <div
+                      class="select-list-option-head__label"
+                    >
+                      Group1
+                    </div>
+                  </li>
+                  <li
+                    aria-selected="false"
+                    class="select-list-option"
+                    data-testid="SelectDropdown__option--0"
+                    id="downshift-16-item-0"
+                    role="option"
+                  >
+                    <div
+                      class="select-list-option__label"
+                    >
+                      <span>
+                        Label Option 1
+                      </span>
+                    </div>
+                  </li>
+                  <li
+                    aria-selected="false"
+                    class="select-list-option"
+                    data-testid="SelectDropdown__option--1"
+                    id="downshift-16-item-1"
+                    role="option"
+                  >
+                    <div
+                      class="select-list-option__label"
+                    >
+                      <span>
+                        Label Option 2
+                      </span>
+                    </div>
+                  </li>
+                </ul>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -1915,58 +1948,6 @@ exports[`SelectDropdown > should render option group with custom label and allow
       </div>
     </div>
     <div
-      class="absolute z-10 w-full"
-    >
-      <ul
-        class="select-options-list"
-      >
-        <ul
-          class="select-list-option-group"
-          data-testid="SelectDropdown__option-group--0"
-        >
-          <li
-            class="select-list-option-head"
-          >
-            <div
-              class="select-list-option-head__label"
-            >
-              Group1
-            </div>
-          </li>
-          <li
-            aria-selected="false"
-            class="select-list-option"
-            data-testid="SelectDropdown__option--0"
-            id="downshift-36-item-0"
-            role="option"
-          >
-            <div
-              class="select-list-option__label"
-            >
-              <span>
-                Label Option 1
-              </span>
-            </div>
-          </li>
-          <li
-            aria-selected="false"
-            class="select-list-option"
-            data-testid="SelectDropdown__option--1"
-            id="downshift-36-item-1"
-            role="option"
-          >
-            <div
-              class="select-list-option__label"
-            >
-              <span>
-                Label Option 2
-              </span>
-            </div>
-          </li>
-        </ul>
-      </ul>
-    </div>
-    <div
       class="w-full"
     >
       <div
@@ -1975,7 +1956,9 @@ exports[`SelectDropdown > should render option group with custom label and allow
         aria-owns="downshift-36-menu"
         role="combobox"
       >
-        <div>
+        <div
+          aria-expanded="true"
+        >
           <label
             for="downshift-36-input"
             id="downshift-36-label"
@@ -2068,7 +2051,68 @@ exports[`SelectDropdown > should render option group with custom label and allow
           aria-labelledby="downshift-36-label"
           id="downshift-36-menu"
           role="listbox"
-        />
+        >
+          <div
+            data-tippy-root=""
+            id="tippy-4"
+            style="z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; right: auto; bottom: auto; transform: translate(0px, 5px); min-width: 100%;"
+          >
+            <div
+              data-escaped=""
+              data-placement="bottom-start"
+              data-reference-hidden=""
+            >
+              <ul
+                class="select-options-list"
+              >
+                <ul
+                  class="select-list-option-group"
+                  data-testid="SelectDropdown__option-group--0"
+                >
+                  <li
+                    class="select-list-option-head"
+                  >
+                    <div
+                      class="select-list-option-head__label"
+                    >
+                      Group1
+                    </div>
+                  </li>
+                  <li
+                    aria-selected="false"
+                    class="select-list-option"
+                    data-testid="SelectDropdown__option--0"
+                    id="downshift-36-item-0"
+                    role="option"
+                  >
+                    <div
+                      class="select-list-option__label"
+                    >
+                      <span>
+                        Label Option 1
+                      </span>
+                    </div>
+                  </li>
+                  <li
+                    aria-selected="false"
+                    class="select-list-option"
+                    data-testid="SelectDropdown__option--1"
+                    id="downshift-36-item-1"
+                    role="option"
+                  >
+                    <div
+                      class="select-list-option__label"
+                    >
+                      <span>
+                        Label Option 2
+                      </span>
+                    </div>
+                  </li>
+                </ul>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
