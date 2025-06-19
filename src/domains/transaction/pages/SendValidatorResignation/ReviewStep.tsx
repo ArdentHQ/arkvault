@@ -110,7 +110,7 @@ export const ReviewStep = ({
 									</div>
 								)}
 
-								<Tooltip content={t("TRANSACTION.REVIEW_STEP.AMOUNT_UNLOCKED_TOOLTIP")}>
+								<Tooltip content={t("TRANSACTION.REVIEW_STEP.AMOUNT_UNLOCKED_TOOLTIP")} maxWidth={418}>
 									<div className="bg-theme-primary-100 dark:bg-theme-dark-800 dark:text-theme-dark-50 text-theme-primary-600 flex h-5 w-5 items-center justify-center rounded-full">
 										<Icon name="QuestionMarkSmall" size="sm" />
 									</div>
