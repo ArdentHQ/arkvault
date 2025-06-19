@@ -10,9 +10,9 @@ import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
 import { Divider } from "@/app/components/Divider";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { FeeField } from "@/domains/transaction/components/FeeField";
-import { useValidatorRegistrationLockedFee } from "@/domains/transaction/components/ValidatorRegistrationForm/hooks/useValidatorRegistrationLockedFee";
 import { Amount } from "@/app/components/Amount";
 import { Tooltip } from "@/app/components/Tooltip";
+import { useValidatorResignationLockedFee } from "./hooks/useValidatorResignationLockedFee";
 
 export const ReviewStep = ({
 	senderWallet,
@@ -30,11 +30,11 @@ export const ReviewStep = ({
 	}, [unregister]);
 
 	const {
-		validatorRegistrationFee,
-		validatorRegistrationFeeAsFiat,
-		validatorRegistrationFeeTicker,
-		validatorRegistrationFeeAsFiatTicker,
-	} = useValidatorRegistrationLockedFee({
+		validatoResigationFee,
+		validatoResigationFeeAsFiat,
+		validatoResigationFeeTicker,
+		validatoResigationFeeAsFiatTicker,
+	} = useValidatorResignationLockedFee({
 		profile,
 		wallet: senderWallet,
 	});
@@ -87,36 +87,38 @@ export const ReviewStep = ({
 					</div>
 				</DetailWrapper>
 
-				<DetailWrapper label={t("TRANSACTION.SUMMARY")}>
-					<div className="flex w-full items-center justify-between gap-4 sm:justify-start">
-						<DetailTitle className="w-auto sm:min-w-[162px]">{t("COMMON.UNLOCKED_AMOUNT")}</DetailTitle>
+				{validatoResigationFee > 0 && (
+					<DetailWrapper label={t("TRANSACTION.SUMMARY")}>
+						<div className="flex w-full items-center justify-between gap-4 sm:justify-start">
+							<DetailTitle className="w-auto sm:min-w-[162px]">{t("COMMON.UNLOCKED_AMOUNT")}</DetailTitle>
 
-						<div className="flex flex-row items-center gap-2">
-							<Amount
-								ticker={validatorRegistrationFeeTicker}
-								value={validatorRegistrationFee}
-								className="font-semibold"
-							/>
+							<div className="flex flex-row items-center gap-2">
+								<Amount
+									ticker={validatoResigationFeeTicker}
+									value={validatoResigationFee}
+									className="font-semibold"
+								/>
 
-							{validatorRegistrationFeeAsFiat !== null && (
-								<div className="text-theme-secondary-700 font-semibold">
-									(~
-									<Amount
-										ticker={validatorRegistrationFeeAsFiatTicker}
-										value={validatorRegistrationFeeAsFiat}
-									/>
-									)
-								</div>
-							)}
+								{validatoResigationFeeAsFiat !== null && (
+									<div className="text-theme-secondary-700 font-semibold">
+										(~
+										<Amount
+											ticker={validatoResigationFeeAsFiatTicker}
+											value={validatoResigationFeeAsFiat}
+										/>
+										)
+									</div>
+								)}
 
-							<Tooltip content={t("TRANSACTION.REVIEW_STEP.AMOUNT_UNLOCKED_TOOLTIP")}>
-								<div className="bg-theme-primary-100 dark:bg-theme-dark-800 dark:text-theme-dark-50 text-theme-primary-600 flex h-5 w-5 items-center justify-center rounded-full">
-									<Icon name="QuestionMarkSmall" size="sm" />
-								</div>
-							</Tooltip>
+								<Tooltip content={t("TRANSACTION.REVIEW_STEP.AMOUNT_UNLOCKED_TOOLTIP")} maxWidth={418}>
+									<div className="bg-theme-primary-100 dark:bg-theme-dark-800 dark:text-theme-dark-50 text-theme-primary-600 flex h-5 w-5 items-center justify-center rounded-full">
+										<Icon name="QuestionMarkSmall" size="sm" />
+									</div>
+								</Tooltip>
+							</div>
 						</div>
-					</div>
-				</DetailWrapper>
+					</DetailWrapper>
+				)}
 
 				<div className="mx-3 mt-2 sm:mx-0">
 					<FormField name="fee">
