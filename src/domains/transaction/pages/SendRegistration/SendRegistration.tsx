@@ -53,7 +53,7 @@ export const SendRegistration = () => {
 	const form = useForm({ mode: "onChange" });
 
 	const { formState, register, setValue, watch, getValues } = form;
-	const { isDirty, isSubmitting, isValid, errors } = formState;
+	const { isDirty, isSubmitting, isValid } = formState;
 
 	const { fees, isLoading, senderAddress } = watch();
 
@@ -103,8 +103,8 @@ export const SendRegistration = () => {
 		register("suppressWarning");
 		register("isLoading");
 
-		register("lockedFee", validatorRegistration.lockedFee(activeWallet));
-	}, [register, activeWallet, common, fees, validatorRegistrationFee]);
+		register("lockedFee", validatorRegistration.lockedFee(activeWallet, getValues));
+	}, [register, activeWallet, common, fees, validatorRegistrationFee, validatorRegistration]);
 
 	useToggleFeeFields({
 		activeTab,

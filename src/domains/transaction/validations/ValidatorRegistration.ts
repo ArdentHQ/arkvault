@@ -4,7 +4,8 @@ import { Networks } from "@/app/lib/mainsail";
 import { debounceAsync } from "@/utils/debounce";
 import { ValidateResult } from "react-hook-form";
 import { Contracts, Helpers } from "@/app/lib/profiles";
-
+import { BigNumber } from "@/app/lib/helpers";
+import { UnitConverter } from "@arkecosystem/typescript-crypto";
 export const validatorRegistration = (t: any) => ({
 	validatorPublicKey: (profile: IProfile, network: Networks.Network) => ({
 		maxLength: {
@@ -37,21 +38,48 @@ export const validatorRegistration = (t: any) => ({
 			}, 300) as () => Promise<ValidateResult>,
 		},
 	}),
-	lockedFee: (wallet: Contracts.IReadWriteWallet | undefined) => ({
+	lockedFee: (wallet: Contracts.IReadWriteWallet | undefined, getValues: () => object) => ({
 		required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
 			field: t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.LOCKED_FEE"),
 		}),
 		validate: {
 			insufficientBalance: (lockedFee: number) => {
-				if (lockedFee > (wallet?.balance() ?? 0)) {
-					return t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.INSUFFICIENT_BALANCE_FOR_LOCKED_FEE", {
-						lockedFee: Helpers.Currency.format(lockedFee, wallet?.currency() ?? "ARK", {
-							withTicker: true,
-						}),
-						balance: Helpers.Currency.format(wallet?.balance() ?? 0, wallet?.currency() ?? "ARK", {
-							withTicker: true,
-						}),
-					});
+				const { gasPrice, gasLimit } = getValues() as {
+					gasPrice: BigNumber | undefined;
+					gasLimit: BigNumber | undefined;
+				};
+
+				const fees = UnitConverter.formatUnits(
+					(gasPrice ?? BigNumber.ZERO).times(gasLimit ?? BigNumber.ZERO).toString(),
+					"gwei",
+				);
+
+				if (lockedFee + fees > (wallet?.balance() ?? 0)) {
+					if (fees === 0) {
+						return t(
+							"TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.INSUFFICIENT_BALANCE_FOR_LOCKED_FEE",
+							{
+								lockedFee: Helpers.Currency.format(lockedFee, wallet?.currency() ?? "ARK", {
+									withTicker: true,
+								}),
+								balance: Helpers.Currency.format(wallet?.balance() ?? 0, wallet?.currency() ?? "ARK", {
+									withTicker: true,
+								}),
+							},
+						);
+					}
+
+					return t(
+						"TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.INSUFFICIENT_BALANCE_FOR_FEE_AND_LOCKED_FEE",
+						{
+							lockedFee: Helpers.Currency.format(lockedFee, wallet?.currency() ?? "ARK", {
+								withTicker: true,
+							}),
+							fee: Helpers.Currency.format(fees, wallet?.currency() ?? "ARK", {
+								withTicker: true,
+							}),
+						},
+					);
 				}
 
 				return true;

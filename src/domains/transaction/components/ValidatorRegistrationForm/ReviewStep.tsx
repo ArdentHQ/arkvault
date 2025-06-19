@@ -13,6 +13,9 @@ import { FeeField } from "@/domains/transaction/components/FeeField";
 import { Amount } from "@/app/components/Amount";
 import { Tooltip } from "@/app/components/Tooltip";
 import { useValidatorRegistrationLockedFee } from "./hooks/useValidatorRegistrationLockedFee";
+import { Alert } from "@/app/components/Alert";
+import { useValidation } from "@/app/hooks";
+import { BigNumber } from "@/app/lib/helpers";
 
 export const ReviewStep = ({
 	wallet,
@@ -23,7 +26,9 @@ export const ReviewStep = ({
 }) => {
 	const { t } = useTranslation();
 
-	const { getValues, unregister } = useFormContext();
+	const { common: commonValidation, validatorRegistration } = useValidation();
+
+	const { getValues, unregister, errors, register, trigger } = useFormContext();
 
 	const { validatorPublicKey } = getValues();
 
@@ -39,9 +44,16 @@ export const ReviewStep = ({
 		wallet,
 	});
 
+	const gasPrice = BigNumber.make(getValues("gasPrice") ?? 0);
+	const gasLimit = BigNumber.make(getValues("gasLimit") ?? 0);
+
 	useEffect(() => {
 		unregister("mnemonic");
 	}, [unregister]);
+
+	useEffect(() => {
+		trigger("lockedFee");
+	}, [gasPrice, gasLimit]);
 
 	return (
 		<section data-testid="ValidatorRegistrationForm__review-step">
@@ -52,6 +64,8 @@ export const ReviewStep = ({
 					<ThemeIcon dimensions={[24, 24]} lightIcon="SendTransactionLight" darkIcon="SendTransactionDark" />
 				}
 			/>
+
+			{errors.lockedFee && <Alert className="mt-4">{errors.lockedFee.message}</Alert>}
 
 			<div className="-mx-3 mt-6 space-y-3 sm:mx-0 sm:mt-4 sm:space-y-4">
 				<TransactionAddresses
