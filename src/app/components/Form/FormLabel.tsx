@@ -40,7 +40,7 @@ export function FormLabel({ textClassName = "text-sm", ...properties }: FormLabe
 					<Tooltip content={t("COMMON.VALIDATION.OPTIONAL")}>
 						<span
 							data-testid="FormLabel__optional"
-							className="text-theme-secondary-500 dark:text-theme-secondary-700 ml-1"
+							className="text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-500 ml-1"
 						>
 							{t("COMMON.OPTIONAL")}
 						</span>
