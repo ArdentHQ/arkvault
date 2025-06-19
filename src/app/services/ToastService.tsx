@@ -69,11 +69,8 @@ export class ToastService {
 		return toast((properties: ToastContentProps<any>) => this.renderContent(type, content, properties), {
 			...this.options(),
 			...options,
-			className: (context?: { defaultClassName?: string; }) => {
-				// Remove default color classes.
-				delete context?.defaultClassName
-				return "bg-transparent min-w-full md:min-w-[33rem]"
-			},
+			className: () => "pt-px md:p-4 z-0 w-auto w-full md:w-auto md:max-w-[35rem] self-start",
+
 		});
 	}
 
