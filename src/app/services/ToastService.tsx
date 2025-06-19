@@ -1,6 +1,6 @@
 import cn from "classnames";
 import React from "react";
-import { Id as ToastId, toast, ToastContent, ToastContentProps, ToastOptions, TypeOptions } from "react-toastify";
+import { Id as ToastId, toast, ToastContent, ToastContentProps, ToastOptions, TypeOptions, ToastClassName, ToastPosition } from "react-toastify";
 
 import { Color } from "@/types";
 import { Toast } from "@/app/components/Toast";
@@ -69,6 +69,11 @@ export class ToastService {
 		return toast((properties: ToastContentProps<any>) => this.renderContent(type, content, properties), {
 			...this.options(),
 			...options,
+			className: (context?: { defaultClassName?: string; }) => {
+				// Remove default color classes.
+				delete context?.defaultClassName
+				return "bg-transparent min-w-full md:min-w-[33rem]"
+			},
 		});
 	}
 
