@@ -22,15 +22,22 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 
 	const { validatorRegistration } = useValidation();
 
-	const { getValues, register, setValue } = useFormContext();
+	const { getValues, register, setValue, errors } = useFormContext();
 	const validatorPublicKey = getValues("validatorPublicKey");
 
 	const { activeNetwork: network } = useActiveNetwork({ profile });
 	const { allWallets } = usePortfolio({ profile });
 	const { env } = useEnvironmentContext();
 
+	const { validatorRegistrationFee } = useValidatorRegistrationLockedFee({
+		wallet,
+		profile,
+	});
+
 	useEffect(() => {
 		register("validatorPublicKey", validatorRegistration.validatorPublicKey(profile, network));
+
+		register("lockedFee", validatorRegistration.lockedFee(wallet));
 	}, [register, validatorRegistration, profile, network.id(), env]);
 
 	const handleSelectSender = (address: any) => {
@@ -45,20 +52,9 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 		}
 	};
 
-	const { validatorRegistrationFee, validatorRegistrationFeeTicker, hasEnoughBalance } =
-		useValidatorRegistrationLockedFee({
-			wallet,
-			profile,
-		});
-
-	const formattedFee = useFormatAmount({
-		value: validatorRegistrationFee,
-		ticker: validatorRegistrationFeeTicker,
-	});
-	const formattedBalance = useFormatAmount({
-		value: wallet?.balance() ?? 0,
-		ticker: wallet?.currency() ?? "ARK",
-	});
+	useEffect(() => {
+		setValue("lockedFee", validatorRegistrationFee, { shouldDirty: true, shouldValidate: true });
+	}, [validatorRegistrationFee]);
 
 	return (
 		<section data-testid="ValidatorRegistrationForm_form-step">
@@ -70,14 +66,7 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 				}
 			/>
 
-			{!hasEnoughBalance && (
-				<Alert className="mt-4">
-					{t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.INSUFFICIENT_BALANCE_FOR_LOCKED_FEE", {
-						lockedFee: formattedFee,
-						balance: formattedBalance,
-					})}
-				</Alert>
-			)}
+			{errors.lockedFee && <Alert className="mt-4">{errors.lockedFee.message}</Alert>}
 
 			<FormField name="senderAddress" className="-mx-3 mt-6 sm:mx-0 sm:mt-4">
 				<SelectAddress

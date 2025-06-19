@@ -3,6 +3,7 @@ import { IProfile } from "@/app/lib/profiles/profile.contract";
 import { Networks } from "@/app/lib/mainsail";
 import { debounceAsync } from "@/utils/debounce";
 import { ValidateResult } from "react-hook-form";
+import { Contracts, Helpers } from "@/app/lib/profiles";
 
 export const validatorRegistration = (t: any) => ({
 	validatorPublicKey: (profile: IProfile, network: Networks.Network) => ({
@@ -34,6 +35,28 @@ export const validatorRegistration = (t: any) => ({
 					return t("COMMON.INPUT_PUBLIC_KEY.VALIDATION.PUBLIC_KEY_ALREADY_EXISTS", { publicKey });
 				}
 			}, 300) as () => Promise<ValidateResult>,
+		},
+	}),
+	lockedFee: (wallet: Contracts.IReadWriteWallet | undefined) => ({
+		required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
+			field: t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.LOCKED_FEE"),
+		}),
+		validate: {
+			insufficientBalance: (lockedFee: number) => {
+				if (lockedFee > (wallet?.balance() ?? 0)) {
+					console.log("insufficient balance");
+					return t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.INSUFFICIENT_BALANCE_FOR_LOCKED_FEE", {
+						lockedFee: Helpers.Currency.format(lockedFee, wallet?.currency() ?? "ARK", {
+							withTicker: true,
+						}),
+						balance: Helpers.Currency.format(wallet?.balance() ?? 0, wallet?.currency() ?? "ARK", {
+							withTicker: true,
+						}),
+					});
+				}
+
+				return true;
+			},
 		},
 	}),
 });
