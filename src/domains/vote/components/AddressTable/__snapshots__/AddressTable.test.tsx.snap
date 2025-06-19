@@ -998,12 +998,12 @@ exports[`AddressTable > should render with empty results 1`] = `
                 class="flex flex-col items-center justify-center"
               >
                 <h3
-                  class="text-theme-secondary-900 dark:text-theme-secondary-200 mb-2 text-base font-semibold"
+                  class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-200 mb-2 text-base font-semibold"
                 >
                   No Results
                 </h3>
                 <p
-                  class="text-theme-secondary-700 dark:text-theme-secondary-600 text-sm"
+                  class="text-theme-secondary-700 dark:text-theme-secondary-600 dim:text-theme-dim-500 text-sm"
                 >
                   No results found. Refine your search and try again.
                 </p>
