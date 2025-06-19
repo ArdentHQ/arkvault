@@ -43,7 +43,7 @@ const SearchWalletListItem = ({
 					size="icon"
 					variant="transparent"
 					onClick={() => onAction({ address: wallet.address(), name: alias, network: wallet.network() })}
-					className="text-theme-primary-reverse-600 -mr-3 py-0 text-sm leading-[17px]"
+					className="text-theme-primary-reverse-600 dim:text-theme-dim-navy-700 -mr-3 py-0 text-sm leading-[17px]"
 				>
 					{t("COMMON.SELECTED")}
 				</Button>
@@ -58,7 +58,7 @@ const SearchWalletListItem = ({
 						disabled={disabled || !isLedgerWalletCompatible(wallet)}
 						size="icon"
 						variant="transparent"
-						className="text-theme-primary-600 -mr-3 text-sm leading-[17px]"
+						className="text-theme-primary-600 dim:text-theme-dim-navy-600 -mr-3 text-sm leading-[17px]"
 						onClick={() => onAction({ address: wallet.address(), name: alias, network: wallet.network() })}
 					>
 						{t("COMMON.SELECT")}
@@ -80,7 +80,7 @@ const SearchWalletListItem = ({
 					walletName={alias}
 					address={wallet.address()}
 					walletNameClass="text-sm leading-[17px]"
-					addressClass="leading-[17px] text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+					addressClass="leading-[17px] text-sm text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200"
 				/>
 			</TableCell>
 
@@ -90,7 +90,7 @@ const SearchWalletListItem = ({
 
 			{showConvertedValue && (
 				<TableCell
-					innerClassName="text-theme-secondary-text justify-end"
+					innerClassName="text-theme-secondary-text justify-end dim:text-theme-dim-50"
 					className="hidden xl:table-cell"
 					isSelected={isSelected}
 				>
