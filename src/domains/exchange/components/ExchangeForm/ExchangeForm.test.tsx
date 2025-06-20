@@ -819,7 +819,7 @@ describe("ExchangeForm", () => {
 			from: { name: "Bitcoin", ticker: "BTC" },
 			to: { name: "Ethereum", ticker: "ETH" },
 		});
-		const user = userEvent.setup()
+		const user = userEvent.setup();
 
 		const recipientDropdown = screen.getAllByTestId("SelectDropdown__input")[2];
 
