@@ -76,7 +76,7 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 				<FormField name="validatorPublicKey">
 					<div className="flex flex-1 flex-row justify-between">
 						<FormLabel label={t("TRANSACTION.VALIDATOR_PUBLIC_KEY")} />
-
+						// TODO: update as part of https://app.clickup.com/t/86dx2r53v
 						<Link isExternal to="https://ark.dev" showExternalIcon={false} className="text-sm">
 							<span className="flex flex-row items-center gap-2">
 								<span>
