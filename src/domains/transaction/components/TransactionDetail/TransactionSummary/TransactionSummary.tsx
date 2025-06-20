@@ -2,11 +2,12 @@ import { Contracts, DTO } from "@/app/lib/profiles";
 import { DetailDivider, DetailLabelText, DetailWrapper } from "@/app/components/DetailWrapper";
 import React, { ReactElement } from "react";
 
-import { Amount } from "@/app/components/Amount";
+import { Amount, AmountLabel } from "@/app/components/Amount";
 import { BigNumber } from "@/app/lib/helpers";
 import { TransactionAmountLabel } from "@/domains/transaction/components/TransactionTable/TransactionRow/TransactionAmount.blocks";
 import { useTranslation } from "react-i18next";
-
+import { configManager } from "@/app/lib/mainsail";
+import { UnitConverter } from "@arkecosystem/typescript-crypto";
 interface Properties {
 	transaction: DTO.ExtendedSignedTransactionData | DTO.ExtendedConfirmedTransactionData;
 	senderWallet: Contracts.IReadWriteWallet;
@@ -26,7 +27,7 @@ export const TransactionSummary = ({
 			<div className="space-y-3 sm:space-y-0">
 				{!BigNumber.make(transaction.value()).isZero() && (
 					<>
-						<div className="flex w-full justify-between sm:justify-start">
+						<div className="flex w-full justify-between gap-2 sm:justify-start">
 							<DetailLabelText className={labelClassName}>
 								{transaction.isValidatorRegistration() ? t("COMMON.LOCKED_AMOUNT") : t("COMMON.AMOUNT")}
 							</DetailLabelText>
@@ -37,7 +38,33 @@ export const TransactionSummary = ({
 					</>
 				)}
 
-				<div className="flex w-full justify-between sm:justify-start">
+				{transaction.isValidatorResignation() && (
+					<>
+						<div className="flex w-full justify-between gap-2 sm:justify-start">
+							<DetailLabelText className={labelClassName}>{t("COMMON.UNLOCKED_AMOUNT")}</DetailLabelText>
+
+							<AmountLabel
+								value={UnitConverter.formatUnits(
+									BigNumber.make(
+										configManager.getMilestone()["validatorRegistrationFee"] ?? 0,
+									).toString(),
+									"ARK",
+								)}
+								isNegative={false}
+								ticker={transaction.wallet().currency()}
+								hideSign={false}
+								isCompact
+								className="h-[21px] rounded dark:border"
+								allowHideBalance
+								profile={profile}
+							/>
+						</div>
+
+						<DetailDivider />
+					</>
+				)}
+
+				<div className="flex w-full justify-between gap-2 sm:justify-start">
 					<DetailLabelText className={labelClassName}>{t("COMMON.FEE")}</DetailLabelText>
 					<Amount
 						ticker={senderWallet.currency()}
@@ -50,7 +77,7 @@ export const TransactionSummary = ({
 
 				<DetailDivider />
 
-				<div className="flex w-full justify-between sm:justify-start">
+				<div className="flex w-full justify-between gap-2 sm:justify-start">
 					<DetailLabelText className={labelClassName}>{t("COMMON.VALUE")}</DetailLabelText>
 					<Amount
 						ticker={senderWallet.exchangeCurrency()}
