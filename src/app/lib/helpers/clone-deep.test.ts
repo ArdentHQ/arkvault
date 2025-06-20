@@ -9,6 +9,8 @@ describe("cloneDeep", () => {
 
 	it("should work with class instances", () => {
 		class Wallet {
+			public address: string;
+
 			constructor(address) {
 				this.address = address;
 			}
