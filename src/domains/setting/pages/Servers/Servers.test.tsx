@@ -404,7 +404,7 @@ describe("Servers Settings", () => {
 					route: `/profiles/${profile.id()}/settings/servers`,
 				});
 
-				const user = userEvent.setup()
+				const user = userEvent.setup();
 
 				expect(screen.getByTestId("NodesStatus")).toBeInTheDocument();
 
