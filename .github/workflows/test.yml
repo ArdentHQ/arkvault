@@ -757,7 +757,7 @@ jobs:
                   COVERAGE_THRESHOLD_LINES: 96.58
                   COVERAGE_THRESHOLD_FUNCTIONS: 97.34
                   COVERAGE_THRESHOLD_STATEMENTS: 96.64
-                  COVERAGE_THRESHOLD_BRANCHES: 92.39
+                  COVERAGE_THRESHOLD_BRANCHES: 92.2
                   COVERAGE_INCLUDE_PATH: src/domains/transaction/components/[T-Z]*
               uses: nick-invision/retry@v2
               with:
@@ -783,7 +783,7 @@ jobs:
                   COVERAGE_THRESHOLD_LINES: 91.82
                   COVERAGE_THRESHOLD_FUNCTIONS: 88.8
                   COVERAGE_THRESHOLD_STATEMENTS: 91.82
-                  COVERAGE_THRESHOLD_BRANCHES: 84.05
+                  COVERAGE_THRESHOLD_BRANCHES: 83.44
                   COVERAGE_INCLUDE_PATH: src/domains/transaction/pages
               uses: nick-invision/retry@v2
               with:

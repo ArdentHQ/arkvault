@@ -40,7 +40,8 @@ export const TransactionDetailContent = ({
 		Boolean,
 	);
 
-	const isValidatorRegistrationTransaction = transaction.isValidatorRegistration();
+	const isValidatorRegistrationOrResignation =
+		transaction.isValidatorRegistration() || transaction.isValidatorResignation();
 
 	const { votes, unvotes } = useTransactionVotingWallets({
 		network: transaction.wallet().network(),
@@ -51,9 +52,9 @@ export const TransactionDetailContent = ({
 	const { recipients } = useTransactionRecipients({ profile, transaction });
 
 	const labelClassName = cn({
-		"min-w-24": !transaction.isVoteCombination() && !isValidatorRegistrationTransaction,
-		"min-w-32": transaction.isVoteCombination() && !isValidatorRegistrationTransaction,
-		"min-w-[138px]": isValidatorRegistrationTransaction,
+		"min-w-24": !transaction.isVoteCombination() && !isValidatorRegistrationOrResignation,
+		"min-w-32": transaction.isVoteCombination() && !isValidatorRegistrationOrResignation,
+		"min-w-[138px]": isValidatorRegistrationOrResignation,
 	});
 
 	return (
