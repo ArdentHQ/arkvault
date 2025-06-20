@@ -2184,7 +2184,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                 </span>
                               </div>
                               <span
-                                class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-medium"
+                                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-medium"
                                 data-testid="list-divided-item__label--description"
                               >
                                 Choose a light / dark / dim viewing mode.
@@ -2393,7 +2393,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                 </span>
                               </div>
                               <span
-                                class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-medium"
+                                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-medium"
                                 data-testid="list-divided-item__label--description"
                               >
                                 Prioritize showing network provided names over wallet names.
@@ -2465,7 +2465,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                 </span>
                               </div>
                               <span
-                                class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-medium"
+                                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-medium"
                                 data-testid="list-divided-item__label--description"
                               >
                                 Display an option to switch to the development network in the navigation menu.
@@ -2495,7 +2495,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                 </span>
                               </div>
                               <span
-                                class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-medium"
+                                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-medium"
                                 data-testid="list-divided-item__label--description"
                               >
                                 Restore Profile settings to the default.
@@ -4810,7 +4810,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                 </span>
                               </div>
                               <span
-                                class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-medium"
+                                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-medium"
                                 data-testid="list-divided-item__label--description"
                               >
                                 Choose a light / dark / dim viewing mode.
@@ -5019,7 +5019,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                 </span>
                               </div>
                               <span
-                                class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-medium"
+                                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-medium"
                                 data-testid="list-divided-item__label--description"
                               >
                                 Prioritize showing network provided names over wallet names.
@@ -5091,7 +5091,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                 </span>
                               </div>
                               <span
-                                class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-medium"
+                                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-medium"
                                 data-testid="list-divided-item__label--description"
                               >
                                 Display an option to switch to the development network in the navigation menu.
@@ -5121,7 +5121,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                 </span>
                               </div>
                               <span
-                                class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-medium"
+                                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-medium"
                                 data-testid="list-divided-item__label--description"
                               >
                                 Restore Profile settings to the default.
@@ -7390,7 +7390,7 @@ exports[`General Settings > should render 1`] = `
                                 </span>
                               </div>
                               <span
-                                class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-medium"
+                                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-medium"
                                 data-testid="list-divided-item__label--description"
                               >
                                 Choose a light / dark / dim viewing mode.
@@ -7599,7 +7599,7 @@ exports[`General Settings > should render 1`] = `
                                 </span>
                               </div>
                               <span
-                                class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-medium"
+                                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-medium"
                                 data-testid="list-divided-item__label--description"
                               >
                                 Prioritize showing network provided names over wallet names.
@@ -7671,7 +7671,7 @@ exports[`General Settings > should render 1`] = `
                                 </span>
                               </div>
                               <span
-                                class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-medium"
+                                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-medium"
                                 data-testid="list-divided-item__label--description"
                               >
                                 Display an option to switch to the development network in the navigation menu.
@@ -7701,7 +7701,7 @@ exports[`General Settings > should render 1`] = `
                                 </span>
                               </div>
                               <span
-                                class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-medium"
+                                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-medium"
                                 data-testid="list-divided-item__label--description"
                               >
                                 Restore Profile settings to the default.
@@ -9971,7 +9971,7 @@ exports[`General Settings > should update profile 1`] = `
                                 </span>
                               </div>
                               <span
-                                class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-medium"
+                                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-medium"
                                 data-testid="list-divided-item__label--description"
                               >
                                 Choose a light / dark / dim viewing mode.
@@ -10180,7 +10180,7 @@ exports[`General Settings > should update profile 1`] = `
                                 </span>
                               </div>
                               <span
-                                class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-medium"
+                                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-medium"
                                 data-testid="list-divided-item__label--description"
                               >
                                 Prioritize showing network provided names over wallet names.
@@ -10252,7 +10252,7 @@ exports[`General Settings > should update profile 1`] = `
                                 </span>
                               </div>
                               <span
-                                class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-medium"
+                                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-medium"
                                 data-testid="list-divided-item__label--description"
                               >
                                 Display an option to switch to the development network in the navigation menu.
@@ -10282,7 +10282,7 @@ exports[`General Settings > should update profile 1`] = `
                                 </span>
                               </div>
                               <span
-                                class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-medium"
+                                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-medium"
                                 data-testid="list-divided-item__label--description"
                               >
                                 Restore Profile settings to the default.
@@ -12552,7 +12552,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                 </span>
                               </div>
                               <span
-                                class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-medium"
+                                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-medium"
                                 data-testid="list-divided-item__label--description"
                               >
                                 Choose a light / dark / dim viewing mode.
@@ -12761,7 +12761,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                 </span>
                               </div>
                               <span
-                                class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-medium"
+                                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-medium"
                                 data-testid="list-divided-item__label--description"
                               >
                                 Prioritize showing network provided names over wallet names.
@@ -12833,7 +12833,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                 </span>
                               </div>
                               <span
-                                class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-medium"
+                                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-medium"
                                 data-testid="list-divided-item__label--description"
                               >
                                 Display an option to switch to the development network in the navigation menu.
@@ -12863,7 +12863,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                 </span>
                               </div>
                               <span
-                                class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-medium"
+                                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-medium"
                                 data-testid="list-divided-item__label--description"
                               >
                                 Restore Profile settings to the default.
@@ -15231,7 +15231,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                 </span>
                               </div>
                               <span
-                                class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-medium"
+                                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-medium"
                                 data-testid="list-divided-item__label--description"
                               >
                                 Choose a light / dark / dim viewing mode.
@@ -15440,7 +15440,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                 </span>
                               </div>
                               <span
-                                class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-medium"
+                                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-medium"
                                 data-testid="list-divided-item__label--description"
                               >
                                 Prioritize showing network provided names over wallet names.
@@ -15512,7 +15512,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                 </span>
                               </div>
                               <span
-                                class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-medium"
+                                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-medium"
                                 data-testid="list-divided-item__label--description"
                               >
                                 Display an option to switch to the development network in the navigation menu.
@@ -15542,7 +15542,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                 </span>
                               </div>
                               <span
-                                class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-medium"
+                                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-medium"
                                 data-testid="list-divided-item__label--description"
                               >
                                 Restore Profile settings to the default.

@@ -984,7 +984,7 @@ exports[`Export Settings > should render export settings 1`] = `
                                 </span>
                               </div>
                               <span
-                                class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-medium"
+                                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-medium"
                                 data-testid="list-divided-item__label--description"
                               >
                                 Wallets with a balance of 0 will not be exported.
@@ -1033,7 +1033,7 @@ exports[`Export Settings > should render export settings 1`] = `
                                 </span>
                               </div>
                               <span
-                                class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-medium"
+                                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-medium"
                                 data-testid="list-divided-item__label--description"
                               >
                                 Ledger hardware addresses will not be exported.

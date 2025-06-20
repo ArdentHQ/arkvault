@@ -218,7 +218,7 @@ exports[`AddressTable > should render 1`] = `
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight text-sm"
+                      class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight text-sm dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700"
                       data-testid="Address__alias"
                     >
                       <span
@@ -300,7 +300,7 @@ exports[`AddressTable > should render 1`] = `
                   data-testid="AddressRow__wallet-vote"
                 >
                   <a
-                    class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500 w-24 truncate md:w-auto"
+                    class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500 dim:[&_svg]:text-theme-dim-500 w-24 truncate md:w-auto"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://explorer-evm-test.mainsailhq.com/addresses/0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2"
@@ -371,7 +371,7 @@ exports[`AddressTable > should render 1`] = `
               >
                 <div>
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 -mr-3 text-sm hover:underline"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 dim:disabled:text-theme-dim-500 dim-hover:disabled:text-theme-dim-500 -mr-3 text-sm hover:underline"
                     data-testid="AddressRow__select-0"
                     type="button"
                   >
@@ -610,7 +610,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight text-sm"
+                      class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight text-sm dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700"
                       data-testid="Address__alias"
                     >
                       <span
@@ -692,7 +692,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
                   data-testid="AddressRow__wallet-vote"
                 >
                   <a
-                    class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500 w-24 truncate md:w-auto"
+                    class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500 dim:[&_svg]:text-theme-dim-500 w-24 truncate md:w-auto"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://explorer-evm-test.mainsailhq.com/addresses/0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2"
@@ -763,7 +763,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
               >
                 <div>
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 -mr-3 text-sm hover:underline"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 dim:disabled:text-theme-dim-500 dim-hover:disabled:text-theme-dim-500 -mr-3 text-sm hover:underline"
                     data-testid="AddressRow__select-0"
                     type="button"
                   >
@@ -987,7 +987,7 @@ exports[`AddressTable > should render with empty results 1`] = `
         />
         <tfoot>
           <tr
-            class="border-theme-secondary-200 dark:border-theme-secondary-800 border-solid md:border-b-4"
+            class="border-theme-secondary-200 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-solid md:border-b-4"
             data-testid="EmptyResults"
           >
             <td
@@ -998,12 +998,12 @@ exports[`AddressTable > should render with empty results 1`] = `
                 class="flex flex-col items-center justify-center"
               >
                 <h3
-                  class="text-theme-secondary-900 dark:text-theme-secondary-200 mb-2 text-base font-semibold"
+                  class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-200 mb-2 text-base font-semibold"
                 >
                   No Results
                 </h3>
                 <p
-                  class="text-theme-secondary-700 dark:text-theme-secondary-600 text-sm"
+                  class="text-theme-secondary-700 dark:text-theme-secondary-600 dim:text-theme-dim-500 text-sm"
                 >
                   No results found. Refine your search and try again.
                 </p>
@@ -1235,7 +1235,7 @@ exports[`AddressTable > should render with voting validators and handle exceptio
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight text-sm"
+                      class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight text-sm dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700"
                       data-testid="Address__alias"
                     >
                       <span
@@ -1313,7 +1313,7 @@ exports[`AddressTable > should render with voting validators and handle exceptio
                 class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm font-semibold space-x-3"
               >
                 <span
-                  class="text-theme-secondary-400"
+                  class="text-theme-secondary-400 dim:text-theme-dim-500"
                 >
                   N/A
                 </span>
@@ -1343,7 +1343,7 @@ exports[`AddressTable > should render with voting validators and handle exceptio
               >
                 <div>
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 -mr-3 text-sm hover:underline"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 dim:disabled:text-theme-dim-500 dim-hover:disabled:text-theme-dim-500 -mr-3 text-sm hover:underline"
                     data-testid="AddressRow__select-0"
                     type="button"
                   >

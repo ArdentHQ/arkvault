@@ -131,7 +131,7 @@ export const AddressRowMobile = ({ index, wallet, onSelect }: AddressRowMobilePr
 							/>
 
 							{votes[0]?.wallet && (
-								<span className="bg-theme-secondary-300 dark:bg-theme-secondary-800 block h-5 w-px sm:hidden" />
+								<span className="bg-theme-secondary-300 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 block h-5 w-px sm:hidden" />
 							)}
 
 							<Button

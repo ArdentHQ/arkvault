@@ -41,7 +41,7 @@ export const ListDividedItem = ({
 						<span
 							className={
 								labelDescriptionClass ||
-								"text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-medium"
+								"text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-medium"
 							}
 							data-testid="list-divided-item__label--description"
 						>
