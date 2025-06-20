@@ -52,7 +52,6 @@ describe("ValidatorVoteAmount", () => {
 			},
 		];
 
-
 		Component = () => (
 			<Wrapper>
 				<ValidatorVoteAmount

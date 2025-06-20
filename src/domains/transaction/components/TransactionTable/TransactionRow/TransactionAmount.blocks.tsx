@@ -6,7 +6,7 @@ import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
 
 type ExtendedTransactionData = DTO.ExtendedConfirmedTransactionData | DTO.ExtendedSignedTransactionData;
 
-const calculateReturnedAmount = function(transaction: ExtendedTransactionData): number {
+const calculateReturnedAmount = function (transaction: ExtendedTransactionData): number {
 	let returnedAmount = 0;
 
 	if (!transaction.isMultiPayment()) {
