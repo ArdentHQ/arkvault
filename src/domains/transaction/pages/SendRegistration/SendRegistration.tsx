@@ -52,7 +52,7 @@ export const SendRegistration = () => {
 
 	const form = useForm({ mode: "onChange" });
 
-	const { formState, register, setValue, watch, getValues } = form;
+	const { formState, register, setValue, watch, getValues, trigger } = form;
 	const { isDirty, isSubmitting, isValid } = formState;
 
 	const { fees, isLoading, senderAddress } = watch();
@@ -106,6 +106,10 @@ export const SendRegistration = () => {
 		register("lockedFee", validatorRegistration.lockedFee(activeWallet, getValues));
 	}, [register, activeWallet, common, fees, validatorRegistrationFee, validatorRegistration]);
 
+	useEffect(() => {
+		trigger("lockedFee");
+	}, [senderAddress]);
+
 	useToggleFeeFields({
 		activeTab,
 		form,
@@ -145,7 +149,7 @@ export const SendRegistration = () => {
 		if (isAuthenticationStep && activeWallet?.isLedger() && isLedgerModelSupported) {
 			handleSubmit();
 		}
-	}, [ledgerDevice]); // eslint-disable-line react-hooks/exhaustive-deps
+	}, [ledgerDevice]);
 
 	useKeydown("Enter", () => {
 		const isButton = (document.activeElement as any)?.type === "button";
