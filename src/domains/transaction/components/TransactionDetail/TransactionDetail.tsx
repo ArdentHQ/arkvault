@@ -1,5 +1,5 @@
 import cn from "classnames";
-import React from "react";
+import React, { JSX } from "react";
 import { getStyles } from "./TransactionDetail.styles";
 import { SmAndBelow, MdAndAbove } from "@/app/components/Breakpoint";
 import { twMerge } from "tailwind-merge";

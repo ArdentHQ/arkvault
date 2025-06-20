@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React, { ReactNode, JSX } from "react";
 import cn from "classnames";
 import { twMerge } from "tailwind-merge";
 

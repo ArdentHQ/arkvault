@@ -3,7 +3,7 @@ import cn from "classnames";
 import { Checkbox } from "@/app/components/Checkbox";
 import { Address } from "@/app/components/Address";
 import { Amount } from "@/app/components/Amount";
-import React from "react";
+import React, { JSX } from "react";
 import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";
 import { InfoDetail, MultiEntryItem } from "@/app/components/MultiEntryItem/MultiEntryItem";

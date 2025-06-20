@@ -1,4 +1,4 @@
-import React from "react";
+import React, { JSX } from "react";
 import { Image } from "@/app/components/Image";
 import Slider, { Settings } from "react-slick";
 

@@ -1,5 +1,5 @@
 import { Dropdown, DropdownOption, DropdownOptionGroup } from "@/app/components/Dropdown";
-import React, { memo } from "react";
+import React, { memo, JSX } from "react";
 
 import { Button } from "@/app/components/Button";
 import { Checkbox } from "@/app/components/Checkbox";

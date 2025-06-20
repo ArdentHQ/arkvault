@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, JSX } from "react";
 
 import { DefaultTReturn, TOptions } from "i18next";
 import { useModal } from "./hooks";

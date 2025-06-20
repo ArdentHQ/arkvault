@@ -1,4 +1,4 @@
-import React from "react";
+import React, { JSX } from "react";
 import { useTranslation } from "react-i18next";
 
 import { Alert } from "@/app/components/Alert";

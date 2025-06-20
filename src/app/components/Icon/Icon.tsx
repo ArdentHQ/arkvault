@@ -1,5 +1,5 @@
 // Assets
-import React from "react";
+import React, { JSX } from "react";
 import { SvgCollection } from "@/app/assets/svg";
 import { Size } from "@/types";
 import { useTheme } from "@/app/hooks/use-theme";
@@ -23,11 +23,11 @@ const Wrapper = ({ width, height, children, ...props }: WrapperProperties & Reac
 			{
 				React.isValidElement(children)
 					? React.cloneElement(children as React.ReactElement<React.SVGProps<SVGSVGElement>>, {
-							style: {
-								height: "100%",
-								width: "100%",
-							},
-						})
+						style: {
+							height: "100%",
+							width: "100%",
+						},
+					})
 					: children // Render directly if it's not a valid React element
 			}
 		</div>

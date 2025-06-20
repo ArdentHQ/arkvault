@@ -1,5 +1,5 @@
 import cn from "classnames";
-import React from "react";
+import React, { JSX } from "react";
 import { DefaultTReturn, TOptions } from "i18next";
 import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";

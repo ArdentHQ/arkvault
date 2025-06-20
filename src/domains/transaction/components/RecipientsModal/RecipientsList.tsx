@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import { InfoDetail, MultiEntryItem } from "@/app/components/MultiEntryItem/MultiEntryItem";
 import { Address } from "@/app/components/Address";
 import { Amount } from "@/app/components/Amount";
-import React from "react";
+import React, { JSX } from "react";
 import { RecipientsProperties } from "@/domains/transaction/components/RecipientsModal/RecipientsModal.contracts";
 
 export const RecipientsList = ({ recipients, ticker }: RecipientsProperties): JSX.Element => {

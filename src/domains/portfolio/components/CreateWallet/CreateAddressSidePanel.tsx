@@ -1,5 +1,5 @@
 import { DefaultTReturn, TOptions } from "i18next";
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState, JSX } from "react";
 import { SidePanel, SidePanelButtons } from "@/app/components/SidePanel/SidePanel";
 import { Form } from "@/app/components/Form";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
