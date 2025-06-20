@@ -1,4 +1,4 @@
-import dot from "dot-prop";
+import { getProperty } from "dot-prop";
 import { isObject } from "./is-object.js";
 import { isString } from "./is-string.js";
 
@@ -7,5 +7,5 @@ export const get = <T, V>(object: T, path: string | string[], defaultValue?: V):
 		return defaultValue as V;
 	}
 
-	return dot.get(object, path, defaultValue) as V;
+	return getProperty(object, path, defaultValue) as V;
 };
