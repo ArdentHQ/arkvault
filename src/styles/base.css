@@ -12,6 +12,7 @@ body {
 #root {
 	@apply flex flex-col flex-1;
 }
+
 main {
 	@apply flex-1 bg-theme-background text-theme-text;
 }
@@ -47,23 +48,23 @@ main {
 		"calt" off;
 }
 
-.welcome-slider-dots .slick-active > button {
+.welcome-slider-dots .slick-active>button {
 	@apply border-transparent bg-theme-navy-500 hover:bg-theme-navy-500 dim:bg-theme-dim-navy-600 dim:border-theme-dim-navy-600;
 }
 
-.with-x-padding > table > tbody > tr:not(:last-child) td:first-child::after {
+.with-x-padding>table>tbody>tr:not(:last-child) td:first-child::after {
 	@apply absolute left-0 block h-[5px] w-6 bg-theme-background content-[''];
 }
 
-.with-x-padding > table > tbody > tr:not(:last-child) td:last-child::after {
+.with-x-padding>table>tbody>tr:not(:last-child) td:last-child::after {
 	@apply absolute right-0 block h-[5px] w-6 bg-theme-background content-[''];
 }
 
-.with-x-padding > table > tbody > tr:not(:last-child):hover td:first-child::after {
+.with-x-padding>table>tbody>tr:not(:last-child):hover td:first-child::after {
 	@apply absolute -bottom-[4px] left-0 block h-[5px] w-6 bg-theme-background content-[''];
 }
 
-.with-x-padding > table > tbody > tr:not(:last-child):hover td:last-child::after {
+.with-x-padding>table>tbody>tr:not(:last-child):hover td:last-child::after {
 	@apply absolute -bottom-[4px] right-0 block h-[5px] w-6 bg-theme-background content-[''];
 }
 
@@ -157,15 +158,15 @@ main {
 	@apply w-full h-full focus:ring-0;
 }
 
-.toggle-input:checked ~ .toggle-handle .handle-inner {
+.toggle-input:checked~.toggle-handle .handle-inner {
 	@apply translate-x-full bg-theme-primary-600;
 }
 
-.toggle-input:hover ~ .toggle-handle .handle-inner {
+.toggle-input:hover~.toggle-handle .handle-inner {
 	@apply shadow-outline;
 }
 
-.toggle-input:focus ~ .toggle-handle .handle-inner {
+.toggle-input:focus~.toggle-handle .handle-inner {
 	@apply shadow-outline;
 }
 
@@ -186,7 +187,7 @@ main {
 	@apply pb-1 text-xs font-bold uppercase select-none text-theme-secondary-500 dark:text-theme-secondary-700;
 }
 
-.select-options-list .select-list-option-head + .select-list-option .select-list-option__label {
+.select-options-list .select-list-option-head+.select-list-option .select-list-option__label {
 	@apply border-t border-transparent! transition-colors duration-200;
 }
 
@@ -210,7 +211,7 @@ main {
 	@apply border-theme-secondary-100 dark:border-theme-secondary-900;
 }
 
-.select-options-list .select-list-option.is-highlighted + .select-list-option .select-list-option__label {
+.select-options-list .select-list-option.is-highlighted+.select-list-option .select-list-option__label {
 	@apply border-transparent;
 }
 
@@ -222,7 +223,7 @@ main {
 	@apply border-theme-primary-50 dark:border-black;
 }
 
-.select-options-list .select-list-option.is-selected + .select-list-option .select-list-option__label {
+.select-options-list .select-list-option.is-selected+.select-list-option .select-list-option__label {
 	@apply border-transparent;
 }
 
@@ -230,15 +231,15 @@ main {
 	@apply cursor-default;
 }
 
-.tab-list > .tab-button {
+.tab-list>.tab-button {
 	@apply cursor-pointer;
 }
 
-.tab-list > .tab-button[aria-selected="true"] {
+.tab-list>.tab-button[aria-selected="true"] {
 	@apply bg-white text-theme-secondary-900 dark:bg-theme-dark-800 dark:text-theme-dark-50 disabled:text-theme-secondary-500 dark:disabled:text-theme-secondary-700 dim:text-theme-dim-50 dim:bg-theme-dim-800;
 }
 
-.tab-list > .tab-button[aria-selected="false"] {
+.tab-list>.tab-button[aria-selected="false"] {
 	@apply text-theme-secondary-700 hover:bg-theme-secondary-300 hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:hover:bg-theme-dark-900 dark:hover:text-theme-dark-50 disabled:text-theme-secondary-500 dark:disabled:text-theme-secondary-700 dim:text-theme-dim-200 dim-hover:bg-theme-dim-900 dim-hover:text-theme-dim-50;
 }
 
@@ -276,7 +277,7 @@ main {
 }
 
 .pagination-search-toggle-button {
-	@apply relative flex w-full cursor-pointer flex-nowrap items-center justify-center p-1.5 px-4 text-theme-primary-600 focus:rounded-sm focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 dark:text-theme-secondary-200 sm:hover:rounded-sm sm:hover:bg-theme-primary-600 sm:hover:text-white;
+	@apply relative flex w-full cursor-pointer flex-nowrap items-center justify-center p-1.5 px-4 text-theme-primary-600 focus:rounded-sm focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 dark:text-theme-secondary-200 dim:text-theme-dim-200 sm:hover:rounded-sm sm:hover:bg-theme-primary-600 sm:hover:text-white sm:dim-hover:bg-theme-dim-navy-700 sm:dim-hover:text-theme-dim-50;
 }
 
 .pagination-button {

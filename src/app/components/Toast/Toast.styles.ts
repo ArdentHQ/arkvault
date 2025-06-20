@@ -1,16 +1,16 @@
 import { Color } from "@/types";
 
-const iconBaseStyle = "flex items-center px-4 justify-center dark:text-white";
+const iconBaseStyle = "flex items-center px-4 justify-center dark:text-white dim:text-theme-dim-50";
 const bodyBaseStyle =
-	"w-full py-3 px-4 text-sm leading-relaxed break-words overflow-hidden text-left dark:bg-theme-secondary-800";
+	"w-full py-3 px-4 text-sm leading-relaxed break-words overflow-hidden text-left dark:bg-theme-secondary-800 dim:bg-theme-dim-800";
 
 const getIconVariant = (variant?: Color) => {
 	const variants = {
-		danger: () => "text-theme-danger-700 bg-theme-danger-100 dark:bg-theme-danger-500",
-		hint: () => "text-theme-hint-700 bg-theme-hint-100 dark:bg-theme-hint-700",
-		info: () => "text-theme-info-700 bg-theme-info-100 dark:bg-theme-info-700",
-		success: () => "text-theme-success-700 bg-theme-success-100 dark:bg-theme-success-700",
-		warning: () => "text-theme-warning-700 bg-theme-warning-100 dark:bg-theme-warning-700",
+		danger: () => "text-theme-danger-700 bg-theme-danger-100 dark:bg-theme-danger-500 dim:bg-theme-danger-700",
+		hint: () => "text-theme-hint-700 bg-theme-hint-100 dark:bg-theme-hint-700 dim:bg-theme-hint-700",
+		info: () => "text-theme-info-700 bg-theme-info-100 dark:bg-theme-info-700 dim:bg-theme-info-700",
+		success: () => "text-theme-success-700 bg-theme-success-100 dark:bg-theme-success-700 dim:bg-theme-success-700",
+		warning: () => "text-theme-warning-700 bg-theme-warning-100 dark:bg-theme-warning-700 dim:bg-theme-warning-700",
 	};
 
 	// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition

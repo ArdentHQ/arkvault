@@ -24,6 +24,7 @@ import IOsInstructionsStep3Dark from "./ios-instructions-step-3-dark.svg?react";
 import IOsInstructionsStep3Light from "./ios-instructions-step-3-light.svg?react";
 import TrashLight from "./trash-light.svg?react";
 import TrashDark from "./trash-dark.svg?react";
+import TrashDim from "./trash-dim.svg?react";
 import InfoLight from "./info-light.svg?react";
 import InfoDark from "./info-dark.svg?react";
 import WarningLight from "./warning-light.svg?react";
@@ -80,6 +81,7 @@ export const images = {
 		SuccessDark,
 		SuccessLight,
 		TrashDark,
+		TrashDim,
 		TrashLight,
 		WarningDark,
 		WarningLight,
