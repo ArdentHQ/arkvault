@@ -1,7 +1,9 @@
-@import 'tippy.js/dist/tippy.css';
+@import "tippy.js/dist/tippy.css";
 
 .tippy-box {
-	font-feature-settings: "liga" off, "calt" off;
+	font-feature-settings:
+		"liga" off,
+		"calt" off;
 	max-width: 96%;
 	max-width: calc(100% - 20px);
 	@apply font-semibold;
@@ -10,7 +12,7 @@
 @media (min-width: 1024px) {
 	.tippy-box {
 		max-width: 600px;
-		@apply break-all;
+		@apply break-words;
 	}
 }
 

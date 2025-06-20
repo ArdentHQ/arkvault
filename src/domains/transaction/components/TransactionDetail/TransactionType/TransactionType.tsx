@@ -25,11 +25,12 @@ export const TransactionType = ({
 
 	const { getLabel } = useTransactionTypes();
 
-	const isValidatorRegistrationTransaction = transaction.isValidatorRegistration();
+	const isValidatorRegistrationOrResignation =
+		transaction.isValidatorRegistration() || transaction.isValidatorResignation();
 
 	const labelClassName = cn({
-		"min-w-24": !isValidatorRegistrationTransaction,
-		"min-w-[138px]": isValidatorRegistrationTransaction,
+		"min-w-24": !isValidatorRegistrationOrResignation,
+		"min-w-[138px]": isValidatorRegistrationOrResignation,
 	});
 
 	return (

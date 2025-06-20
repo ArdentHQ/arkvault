@@ -2213,7 +2213,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
                           class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24 font-semibold text-md leading-5"
                           data-testid="DetailLabelText"
                         >
-                          Transaction Type
+                          Action
                         </div>
                       </div>
                       <div
