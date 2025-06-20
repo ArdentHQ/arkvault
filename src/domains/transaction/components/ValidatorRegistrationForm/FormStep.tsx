@@ -92,7 +92,7 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 									data-testid="Link__external"
 									name="ArrowExternal"
 									dimensions={[12, 12]}
-									className="shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-dark-500"
+									className="text-theme-secondary-500 dark:text-theme-dark-500 shrink-0 align-middle duration-200"
 								/>
 							</span>
 						</Link>
