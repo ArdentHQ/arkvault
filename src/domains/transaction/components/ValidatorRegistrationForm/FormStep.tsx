@@ -1,19 +1,19 @@
-import React, { ChangeEvent, useEffect } from "react";
-import { useFormContext } from "react-hook-form";
-import { useTranslation } from "react-i18next";
-
 import { FormField, FormLabel } from "@/app/components/Form";
-import { InputDefault } from "@/app/components/Input";
-import { useValidation } from "@/app/hooks";
-import { FormStepProperties } from "@/domains/transaction/pages/SendRegistration/SendRegistration.contracts";
-import { StepHeader } from "@/app/components/StepHeader";
 import { Icon, ThemeIcon } from "@/app/components/Icon";
-import { SelectAddress } from "@/domains/profile/components/SelectAddress";
-import { useActiveNetwork } from "@/app/hooks/use-active-network";
-import { WalletCapabilities } from "@/domains/portfolio/lib/wallet.capabilities";
-import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
-import { useEnvironmentContext } from "@/app/contexts";
+import React, { ChangeEvent, useEffect } from "react";
+
+import { FormStepProperties } from "@/domains/transaction/pages/SendRegistration/SendRegistration.contracts";
+import { InputDefault } from "@/app/components/Input";
 import { Link } from "@/app/components/Link";
+import { SelectAddress } from "@/domains/profile/components/SelectAddress";
+import { StepHeader } from "@/app/components/StepHeader";
+import { WalletCapabilities } from "@/domains/portfolio/lib/wallet.capabilities";
+import { useActiveNetwork } from "@/app/hooks/use-active-network";
+import { useEnvironmentContext } from "@/app/contexts";
+import { useFormContext } from "react-hook-form";
+import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
+import { useTranslation } from "react-i18next";
+import { useValidation } from "@/app/hooks";
 
 export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: FormStepProperties) => {
 	const { t } = useTranslation();
@@ -76,7 +76,7 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 				<FormField name="validatorPublicKey">
 					<div className="flex flex-1 flex-row justify-between">
 						<FormLabel label={t("TRANSACTION.VALIDATOR_PUBLIC_KEY")} />
-						// TODO: update as part of https://app.clickup.com/t/86dx2r53v
+						{/* TODO: update as part of https://app.clickup.com/t/86dx2r53v */}
 						<Link isExternal to="https://ark.dev" showExternalIcon={false} className="text-sm">
 							<span className="flex flex-row items-center gap-2">
 								<span>
@@ -92,7 +92,7 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 									data-testid="Link__external"
 									name="ArrowExternal"
 									dimensions={[12, 12]}
-									className="text-theme-secondary-500 dark:text-theme-dark-500 shrink-0 align-middle duration-200"
+									className="shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-dark-500"
 								/>
 							</span>
 						</Link>
