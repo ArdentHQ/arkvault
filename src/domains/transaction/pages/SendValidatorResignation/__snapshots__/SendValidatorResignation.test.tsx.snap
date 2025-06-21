@@ -924,7 +924,7 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                             </div>
                           </div>
                           <div
-                            class="border-theme-secondary-300 dark:border-theme-secondary-700 -mx-4 overflow-hidden rounded-xl border"
+                            class="border-theme-secondary-300 dark:border-theme-secondary-700 dim:border-theme-dim-700 -mx-4 overflow-hidden rounded-xl border"
                           >
                             <div
                               class="space-y-4 p-4"
@@ -933,7 +933,7 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                                 class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
                               >
                                 <label
-                                  class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex text-sm leading-[17px] font-semibold transition-colors duration-100"
+                                  class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! dim:text-theme-dim-200 dim-hover:text-theme-dim-navy-600! mb-2 flex text-sm leading-[17px] font-semibold transition-colors duration-100"
                                   data-testid="FormLabel"
                                   for="gasPrice"
                                   id="fee"
@@ -969,10 +969,10 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                                           class="flex items-center"
                                         >
                                           <div
-                                            class="text-theme-secondary-700 dark:border-theme-secondary-700 dark:text-theme-dark-200 -mr-4 flex h-14 w-22 flex-row justify-between border-l sm:w-10 sm:flex-col border-theme-secondary-400"
+                                            class="text-theme-secondary-700 dark:border-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 -mr-4 flex h-14 w-22 flex-row justify-between border-l sm:w-10 sm:flex-col border-theme-secondary-400 dim:border-theme-dim-700"
                                           >
                                             <button
-                                              class="hover:bg-theme-primary-100 hover:text-theme-primary-600 active:bg-theme-primary-700 disabled:border-theme-secondary-300 disabled:bg-theme-secondary-100 disabled:text-theme-secondary-400 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-primary-200 dark:disabled:border-theme-secondary-700 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-600 flex flex-1 items-center justify-center active:text-white disabled:cursor-default border-theme-secondary-400 dark:border-theme-secondary-700 border-b border-r sm:border-r-0"
+                                              class="hover:bg-theme-primary-100 hover:text-theme-primary-600 active:bg-theme-primary-700 disabled:border-theme-secondary-300 disabled:bg-theme-secondary-100 disabled:text-theme-secondary-400 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-primary-200 dark:disabled:border-theme-secondary-700 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-600 dim:hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:disabled:border-theme-dim-800 dim:disabled:bg-theme-dim-800 dim:disabled:text-theme-dim-600 dim-hover:disabled:text-theme-dim-600 flex flex-1 cursor-pointer items-center justify-center active:text-white disabled:cursor-default border-theme-secondary-400 dark:border-theme-secondary-700 dim:border-theme-dim-700 border-b border-r sm:border-r-0"
                                               data-testid="InputFeeAdvanced__up"
                                               type="button"
                                             >
@@ -1002,7 +1002,7 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                                               </div>
                                             </button>
                                             <button
-                                              class="hover:bg-theme-primary-100 hover:text-theme-primary-600 active:bg-theme-primary-700 disabled:border-theme-secondary-300 disabled:bg-theme-secondary-100 disabled:text-theme-secondary-400 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-primary-200 dark:disabled:border-theme-secondary-700 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-600 flex flex-1 items-center justify-center active:text-white disabled:cursor-default"
+                                              class="hover:bg-theme-primary-100 hover:text-theme-primary-600 active:bg-theme-primary-700 disabled:border-theme-secondary-300 disabled:bg-theme-secondary-100 disabled:text-theme-secondary-400 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-primary-200 dark:disabled:border-theme-secondary-700 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-600 dim:hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:disabled:border-theme-dim-800 dim:disabled:bg-theme-dim-800 dim:disabled:text-theme-dim-600 dim-hover:disabled:text-theme-dim-600 flex flex-1 cursor-pointer items-center justify-center active:text-white disabled:cursor-default"
                                               data-testid="InputFeeAdvanced__down"
                                               type="button"
                                             >
@@ -1042,7 +1042,7 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                                 class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
                               >
                                 <label
-                                  class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex text-sm leading-[17px] font-semibold transition-colors duration-100"
+                                  class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! dim:text-theme-dim-200 dim-hover:text-theme-dim-navy-600! mb-2 flex text-sm leading-[17px] font-semibold transition-colors duration-100"
                                   data-testid="FormLabel"
                                   for="gasLimit"
                                 >
@@ -1077,10 +1077,10 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                                           class="flex items-center"
                                         >
                                           <div
-                                            class="text-theme-secondary-700 dark:border-theme-secondary-700 dark:text-theme-dark-200 -mr-4 flex h-14 w-22 flex-row justify-between border-l sm:w-10 sm:flex-col border-theme-secondary-400"
+                                            class="text-theme-secondary-700 dark:border-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 -mr-4 flex h-14 w-22 flex-row justify-between border-l sm:w-10 sm:flex-col border-theme-secondary-400 dim:border-theme-dim-700"
                                           >
                                             <button
-                                              class="hover:bg-theme-primary-100 hover:text-theme-primary-600 active:bg-theme-primary-700 disabled:border-theme-secondary-300 disabled:bg-theme-secondary-100 disabled:text-theme-secondary-400 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-primary-200 dark:disabled:border-theme-secondary-700 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-600 flex flex-1 items-center justify-center active:text-white disabled:cursor-default border-theme-secondary-400 dark:border-theme-secondary-700 border-b border-r sm:border-r-0"
+                                              class="hover:bg-theme-primary-100 hover:text-theme-primary-600 active:bg-theme-primary-700 disabled:border-theme-secondary-300 disabled:bg-theme-secondary-100 disabled:text-theme-secondary-400 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-primary-200 dark:disabled:border-theme-secondary-700 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-600 dim:hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:disabled:border-theme-dim-800 dim:disabled:bg-theme-dim-800 dim:disabled:text-theme-dim-600 dim-hover:disabled:text-theme-dim-600 flex flex-1 cursor-pointer items-center justify-center active:text-white disabled:cursor-default border-theme-secondary-400 dark:border-theme-secondary-700 dim:border-theme-dim-700 border-b border-r sm:border-r-0"
                                               data-testid="InputFeeAdvanced__gasLimit__up"
                                               type="button"
                                             >
@@ -1110,7 +1110,7 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                                               </div>
                                             </button>
                                             <button
-                                              class="hover:bg-theme-primary-100 hover:text-theme-primary-600 active:bg-theme-primary-700 disabled:border-theme-secondary-300 disabled:bg-theme-secondary-100 disabled:text-theme-secondary-400 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-primary-200 dark:disabled:border-theme-secondary-700 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-600 flex flex-1 items-center justify-center active:text-white disabled:cursor-default"
+                                              class="hover:bg-theme-primary-100 hover:text-theme-primary-600 active:bg-theme-primary-700 disabled:border-theme-secondary-300 disabled:bg-theme-secondary-100 disabled:text-theme-secondary-400 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-primary-200 dark:disabled:border-theme-secondary-700 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-600 dim:hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:disabled:border-theme-dim-800 dim:disabled:bg-theme-dim-800 dim:disabled:text-theme-dim-600 dim-hover:disabled:text-theme-dim-600 flex flex-1 cursor-pointer items-center justify-center active:text-white disabled:cursor-default"
                                               data-testid="InputFeeAdvanced__gasLimit__down"
                                               type="button"
                                             >
@@ -1148,7 +1148,7 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                               </fieldset>
                             </div>
                             <div
-                              class="bg-theme-secondary-200 text-theme-secondary-700 dark:bg-theme-dark-700 dark:text-theme-dark-200 flex flex-col space-y-2 px-4 py-3 text-xs leading-[15px] font-semibold sm:flex-row sm:items-center sm:justify-between sm:space-y-0 sm:py-2"
+                              class="bg-theme-secondary-200 text-theme-secondary-700 dark:bg-theme-dark-700 dark:text-theme-dark-200 dim:bg-theme-dim-950 dim:text-theme-dim-200 flex flex-col space-y-2 px-4 py-3 text-xs leading-[15px] font-semibold sm:flex-row sm:items-center sm:justify-between sm:space-y-0 sm:py-2"
                             >
                               <div>
                                 <span>
