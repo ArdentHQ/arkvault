@@ -30,7 +30,7 @@ export const ListDividedItem = ({
 				<div className="flex w-full flex-col space-y-2">
 					<div className="flex items-center justify-between space-x-5">
 						<span
-							className={labelClass || "text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"}
+							className={labelClass || "text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"}
 							data-testid="list-divided-item__label"
 						>
 							{label}
