@@ -53,7 +53,7 @@ export const SettingsWrapper = ({
 							/>
 						</div>
 
-						<div className="border-theme-secondary-300 dark:border-theme-dark-700 flex-1 sm:overflow-hidden sm:rounded-xl sm:border">
+						<div className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 flex-1 sm:overflow-hidden sm:rounded-xl sm:border">
 							{children}
 						</div>
 					</div>
