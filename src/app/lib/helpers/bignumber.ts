@@ -306,7 +306,6 @@ export class BigNumber {
 			return this.#value.toFixed(decimals);
 		}
 
-
 		return this.#value.toFixed();
 	}
 
