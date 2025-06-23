@@ -819,10 +819,12 @@ describe("ExchangeForm", () => {
 			from: { name: "Bitcoin", ticker: "BTC" },
 			to: { name: "Ethereum", ticker: "ETH" },
 		});
+		const user = userEvent.setup();
 
 		const recipientDropdown = screen.getAllByTestId("SelectDropdown__input")[2];
 
-		await userEvent.type(recipientDropdown, "payoutAddress");
+		await user.clear(recipientDropdown);
+		await user.type(recipientDropdown, "payoutAddress");
 
 		await waitFor(() => {
 			expect(recipientDropdown).toHaveValue("payoutAddress");

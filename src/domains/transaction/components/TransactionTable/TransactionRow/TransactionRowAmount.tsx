@@ -1,7 +1,7 @@
 import { Amount, AmountLabel } from "@/app/components/Amount";
 import { Contracts, DTO, Helpers } from "@/app/lib/profiles";
 
-import React from "react";
+import React, { JSX } from "react";
 import { Tooltip } from "@/app/components/Tooltip";
 import { isNil } from "@/app/lib/helpers";
 import { useTranslation } from "react-i18next";

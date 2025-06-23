@@ -1,5 +1,5 @@
 import { Amount, AmountLabel } from "@/app/components/Amount";
-import React from "react";
+import React, { JSX } from "react";
 import { Contracts, DTO } from "@/app/lib/profiles";
 import { useTranslation } from "react-i18next";
 import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
