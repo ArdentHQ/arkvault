@@ -138,13 +138,72 @@ exports[`ValidatorRegistrationForm > should render form step 1`] = `
           <fieldset
             class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
           >
-            <label
-              class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex leading-[17px] font-semibold transition-colors duration-100 text-sm"
-              data-testid="FormLabel"
-              for="validatorPublicKey"
+            <div
+              class="flex flex-1 flex-row justify-between"
             >
-              Validator Public Key
-            </label>
+              <label
+                class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex leading-[17px] font-semibold transition-colors duration-100 text-sm"
+                data-testid="FormLabel"
+                for="validatorPublicKey"
+              >
+                Validator Public Key
+              </label>
+              <a
+                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block text-sm"
+                data-ring-focus-margin="-m-1"
+                data-testid="Link"
+                href="https://ark.dev"
+                rel="noopener noreferrer"
+              >
+                <span
+                  class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
+                >
+                  <span
+                    class="flex flex-row items-center gap-2"
+                  >
+                    <span>
+                      <span
+                        class="hidden sm:inline"
+                      >
+                        Learn more about BLS keys
+                      </span>
+                      <span
+                        class="inline sm:hidden"
+                      >
+                        About BLS keys
+                      </span>
+                    </span>
+                    <div
+                      class="text-theme-secondary-500 dark:text-theme-dark-500 shrink-0 align-middle duration-200"
+                      data-testid="Link__external"
+                    >
+                      <div
+                        style="height: 12px; width: 12px;"
+                      >
+                        <svg
+                          id="arrow-external"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </span>
+                </span>
+              </a>
+            </div>
             <div
               class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
             >

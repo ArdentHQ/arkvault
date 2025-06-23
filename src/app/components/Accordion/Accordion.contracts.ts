@@ -1,4 +1,4 @@
-import React from "react";
+import React, { JSX } from "react";
 export interface AccordionHeaderProperties extends JSX.IntrinsicAttributes {
 	isExpanded: boolean;
 	children: React.ReactNode;

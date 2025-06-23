@@ -1,5 +1,5 @@
 import { AddressViewSelection, AddressViewType, useAddressesPanel } from "@/domains/portfolio/hooks/use-address-panel";
-import React, { ChangeEvent, useCallback, useEffect, useState } from "react";
+import React, { ChangeEvent, useCallback, useEffect, useState, JSX } from "react";
 import { Tab, TabList, Tabs } from "@/app/components/Tabs";
 import { useBreakpoint, useWalletAlias } from "@/app/hooks";
 

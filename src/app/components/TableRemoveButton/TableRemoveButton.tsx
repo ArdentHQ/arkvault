@@ -1,4 +1,4 @@
-import React, { MouseEvent } from "react";
+import React, { MouseEvent, JSX } from "react";
 
 import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";

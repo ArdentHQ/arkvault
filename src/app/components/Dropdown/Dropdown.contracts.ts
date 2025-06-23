@@ -1,4 +1,4 @@
-import React, { ReactElement } from "react";
+import React, { ReactElement, JSX } from "react";
 
 import { DefaultTReturn, TOptions } from "i18next";
 import { Size } from "@/types";

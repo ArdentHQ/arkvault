@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useMemo, useState, JSX } from "react";
 import { useTranslation } from "react-i18next";
 
 import { getOrdinalIndicator } from "./utils/evaluateOrdinalIndicator";
