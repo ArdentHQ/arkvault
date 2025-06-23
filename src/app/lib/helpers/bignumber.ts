@@ -1,15 +1,12 @@
 /* eslint-disable unicorn/no-array-reduce */
 
-import Big, { BigSource } from "big.js";
+import BigNumberJs from "bignumber.js";
 
-export type NumberLike = string | number | bigint | Big | BigNumber;
+export type NumberLike = string | number | bigint | BigNumber | BigNumberJs;
 
 /**
- * An immutable BigNumber implementation wth some nice-to-have functionality
- * for working with crypto currencies throughout our products and use the SDK.
- *
- * This implementation is significantly slower than the native BigInt but for
- * applications that use the Platform SDK this performance loss is acceptable.
+ * An immutable BigNumber implementation with additional utilities
+ * for working with crypto currencies.
  *
  * @export
  * @class BigNumber
@@ -34,12 +31,12 @@ export class BigNumber {
 	public static readonly ONE: BigNumber = new BigNumber(1);
 
 	/**
-	 * The current value as a Big.js instance.
+	 * The current value as a BigNumber.js instance.
 	 *
-	 * @type {Big}
+	 * @type {BigNumberJs}
 	 * @memberof BigNumber
 	 */
-	readonly #value: Big;
+	readonly #value: BigNumberJs;
 
 	/**
 	 * The number of decimals
@@ -57,15 +54,17 @@ export class BigNumber {
 	 * @memberof BigNumber
 	 */
 	private constructor(value: NumberLike, decimals?: number) {
-		Big.RM = Big.roundDown;
-		Big.DP = 30;
-		Big.PE = 35;
+		BigNumberJs.config({
+			DECIMAL_PLACES: 30,
+			EXPONENTIAL_AT: 35,
+			ROUNDING_MODE: BigNumberJs.ROUND_DOWN,
+		});
 
 		this.#value = this.#toBigNumber(value);
 
 		if (decimals !== undefined) {
 			this.#decimals = decimals;
-			this.#value = this.#value.round(this.#decimals);
+			this.#value = this.#value.decimalPlaces(this.#decimals);
 		}
 	}
 
@@ -123,7 +122,7 @@ export class BigNumber {
 	 * @memberof BigNumber
 	 */
 	public divide(value: NumberLike): BigNumber {
-		return BigNumber.make(this.#value.div(this.#toBigNumber(value)), this.#decimals);
+		return BigNumber.make(this.#value.dividedBy(this.#toBigNumber(value)), this.#decimals);
 	}
 
 	/**
@@ -134,7 +133,7 @@ export class BigNumber {
 	 * @memberof BigNumber
 	 */
 	public times(value: NumberLike): BigNumber {
-		return BigNumber.make(this.#value.times(this.#toBigNumber(value)), this.#decimals);
+		return BigNumber.make(this.#value.multipliedBy(this.#toBigNumber(value)), this.#decimals);
 	}
 
 	/**
@@ -170,7 +169,7 @@ export class BigNumber {
 	 * @memberof BigNumber
 	 */
 	public isPositive(): boolean {
-		return this.#value.gt(0);
+		return this.#value.isGreaterThan(0);
 	}
 
 	/**
@@ -180,7 +179,7 @@ export class BigNumber {
 	 * @memberof BigNumber
 	 */
 	public isNegative(): boolean {
-		return this.#value.lt(0);
+		return this.#value.isLessThan(0);
 	}
 
 	/**
@@ -190,7 +189,7 @@ export class BigNumber {
 	 * @memberof BigNumber
 	 */
 	public isZero(): boolean {
-		return this.#value.eq(0);
+		return this.#value.isZero();
 	}
 
 	/**
@@ -202,7 +201,7 @@ export class BigNumber {
 	 * @memberof BigNumber
 	 */
 	public comparedTo(value: NumberLike): number {
-		return this.#value.cmp(this.#toBigNumber(value));
+		return this.#value.comparedTo(this.#toBigNumber(value)) as number;
 	}
 
 	/**
@@ -213,7 +212,7 @@ export class BigNumber {
 	 * @memberof BigNumber
 	 */
 	public isEqualTo(value: NumberLike): boolean {
-		return this.#value.eq(this.#toBigNumber(value));
+		return this.#value.isEqualTo(this.#toBigNumber(value));
 	}
 
 	/**
@@ -224,7 +223,7 @@ export class BigNumber {
 	 * @memberof BigNumber
 	 */
 	public isGreaterThan(value: NumberLike): boolean {
-		return this.#value.gt(this.#toBigNumber(value));
+		return this.#value.isGreaterThan(this.#toBigNumber(value));
 	}
 
 	/**
@@ -235,7 +234,7 @@ export class BigNumber {
 	 * @memberof BigNumber
 	 */
 	public isGreaterThanOrEqualTo(value: NumberLike): boolean {
-		return this.#value.gte(this.#toBigNumber(value));
+		return this.#value.isGreaterThanOrEqualTo(this.#toBigNumber(value));
 	}
 
 	/**
@@ -246,7 +245,7 @@ export class BigNumber {
 	 * @memberof BigNumber
 	 */
 	public isLessThan(value: NumberLike): boolean {
-		return this.#value.lt(this.#toBigNumber(value));
+		return this.#value.isLessThan(this.#toBigNumber(value));
 	}
 
 	/**
@@ -257,14 +256,14 @@ export class BigNumber {
 	 * @memberof BigNumber
 	 */
 	public isLessThanOrEqualTo(value: NumberLike): boolean {
-		return this.#value.lte(this.#toBigNumber(value));
+		return this.#value.isLessThanOrEqualTo(this.#toBigNumber(value));
 	}
 
 	/**
 	 * Returns a BigNumber as expressed naturally in the given amount of decimals.
 	 *
 	 * @param {number} [decimals]
-	 * @returns {string}
+	 * @returns {BigNumber}
 	 * @memberof BigNumber
 	 */
 	public denominated(decimals?: number): BigNumber {
@@ -273,10 +272,10 @@ export class BigNumber {
 	}
 
 	/**
-	 * Returns a BigNumber expressed in the smallest unit
+	 * Returns a BigNumber expressed in the smallest unit.
 	 *
 	 * @param {number} [decimals]
-	 * @returns {string}
+	 * @returns {BigNumber}
 	 * @memberof BigNumber
 	 */
 	public toSatoshi(decimals?: number): BigNumber {
@@ -307,7 +306,7 @@ export class BigNumber {
 			return this.#value.toFixed(decimals);
 		}
 
-		// eslint-disable-next-line unicorn/require-number-to-fixed-digits-argument
+
 		return this.#value.toFixed();
 	}
 
@@ -332,7 +331,7 @@ export class BigNumber {
 	}
 
 	/**
-	 * Returns the current value as primitive string.
+	 * Returns the current value as a primitive string.
 	 *
 	 * @returns {string}
 	 * @memberof BigNumber
@@ -356,14 +355,14 @@ export class BigNumber {
 	 *
 	 * @private
 	 * @param {NumberLike} value
-	 * @returns {Big}
+	 * @returns {BigNumberJs}
 	 * @memberof BigNumber
 	 */
-	#toBigNumber(value: NumberLike): Big {
+	#toBigNumber(value: NumberLike): BigNumberJs {
 		if (value instanceof BigNumber) {
-			return new Big(value.valueOf());
+			return new BigNumberJs(value.valueOf());
 		}
 
-		return new Big(value as BigSource);
+		return new BigNumberJs(value as any);
 	}
 }
