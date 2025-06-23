@@ -115,6 +115,10 @@ export class ProfileRepository implements IProfileRepository {
 	public async restore(profile: IProfile, password?: string): Promise<void> {
 		await new ProfileImporter(profile, this.#env).import(password);
 
+		if (profile.wallets().selected().length === 0) {
+			profile.wallets().selectOne(profile.wallets().first())
+		}
+
 		profile.status().markAsRestored();
 	}
 
