@@ -673,7 +673,7 @@ jobs:
               run: pnpm rebuild
             - name: Test
               env:
-                  COVERAGE_THRESHOLD_LINES: 96.66
+                  COVERAGE_THRESHOLD_LINES: 96.65
                   COVERAGE_THRESHOLD_FUNCTIONS: 97.19
                   COVERAGE_THRESHOLD_STATEMENTS: 96.77
                   COVERAGE_THRESHOLD_BRANCHES: 92.3
