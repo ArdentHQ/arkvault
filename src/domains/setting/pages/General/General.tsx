@@ -106,8 +106,6 @@ export const GeneralSettings: React.FC = () => {
 	}, [register]);
 
 	const formattedName = name.trim();
-
-	const { isDarkMode } = useTheme();
 	const hasDefaultAvatar = !!avatar.endsWith("</svg>");
 
 	const { settings: settingsValidation } = useValidation();
