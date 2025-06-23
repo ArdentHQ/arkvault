@@ -531,7 +531,7 @@ export class Profile implements IProfile {
 	}
 
 	public walletSelectionMode(): "single" | "multiple" {
-		return this.settings().get(ProfileSetting.WalletSelectionMode) ?? "single"
+		return this.settings().get(ProfileSetting.WalletSelectionMode) ?? "single";
 	}
 
 	public totalBalance(): BigNumber {

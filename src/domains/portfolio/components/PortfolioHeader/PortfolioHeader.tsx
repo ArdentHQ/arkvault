@@ -54,8 +54,8 @@ export const PortfolioHeader = ({
 
 	const allWallets = profile.wallets().values();
 
-	const selectedWallets = profile.wallets().selected() ?? [profile.wallets().first()]
-	const wallet = selectedWallets.at(0)
+	const selectedWallets = profile.wallets().selected() ?? [profile.wallets().first()];
+	const wallet = selectedWallets.at(0);
 	assertWallet(wallet);
 
 	const isRestored = wallet.hasBeenFullyRestored();
@@ -79,7 +79,12 @@ export const PortfolioHeader = ({
 	useEffect(() => {
 		let id: NodeJS.Timeout;
 
-		if (hasFocus && hintHasShown === undefined && allWallets.length > 1 && profile.walletSelectionMode() === "single") {
+		if (
+			hasFocus &&
+			hintHasShown === undefined &&
+			allWallets.length > 1 &&
+			profile.walletSelectionMode() === "single"
+		) {
 			id = setTimeout(() => {
 				setShowHint(true);
 			}, 1000);
@@ -395,7 +400,6 @@ export const PortfolioHeader = ({
 						.map((wallet) => wallet.address())}
 					defaultSelectedWallet={wallet}
 					onClose={async (addresses, newMode: AddressViewType) => {
-
 						for (const wallet of profile.wallets().values()) {
 							if (addresses.includes(wallet.address())) {
 								wallet.mutator().isSelected(true);
@@ -404,8 +408,8 @@ export const PortfolioHeader = ({
 							wallet.mutator().isSelected(false);
 						}
 
-						profile.settings().set(ProfileSetting.WalletSelectionMode, newMode)
-						await persist()
+						profile.settings().set(ProfileSetting.WalletSelectionMode, newMode);
+						await persist();
 					}}
 					open={showAddressesPanel}
 					onOpenChange={setShowAddressesPanel}

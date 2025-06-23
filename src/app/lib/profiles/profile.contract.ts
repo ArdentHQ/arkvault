@@ -414,7 +414,7 @@ export interface IProfile {
 	 * @return {BigNumber}
 	 * @memberof IProfile
 	 */
-	totalBalanceConverted(): BigNumber
+	totalBalanceConverted(): BigNumber;
 
 	/**
 	 * Get the profile's total balance.
@@ -422,6 +422,5 @@ export interface IProfile {
 	 * @return {BigNumber}
 	 * @memberof IProfile
 	 */
-	totalBalance(): BigNumber
-
+	totalBalance(): BigNumber;
 }
