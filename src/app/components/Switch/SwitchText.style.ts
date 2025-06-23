@@ -1,10 +1,11 @@
 import { Size } from "@/types";
 
-const baseStyle = "font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700";
+const baseStyle =
+	"font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-500";
 
 const getSelected = (selected: boolean) => {
 	if (selected) {
-		return "text-theme-secondary-700 dark:text-theme-secondary-200";
+		return "text-theme-secondary-700 dark:text-theme-secondary-200 dim:text-theme-dim-200";
 	}
 };
 

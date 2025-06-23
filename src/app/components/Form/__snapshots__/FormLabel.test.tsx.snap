@@ -9,7 +9,7 @@ exports[`FormLabel > should render & hover if optional 1`] = `
     Test
     <span
       aria-describedby="tippy-1"
-      class="text-theme-secondary-500 dark:text-theme-secondary-700 ml-1"
+      class="text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-500 ml-1"
       data-testid="FormLabel__optional"
     >
       optional

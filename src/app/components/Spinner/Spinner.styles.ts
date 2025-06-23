@@ -14,7 +14,7 @@ const getColor = (color: Color | "warning-alt", theme?: Theme) => {
 
 	let styles =
 		color === "warning-alt"
-			? [`border-theme-warning-200 dark:border-theme-secondary-800`]
+			? [`border-theme-warning-200 dark:border-theme-secondary-800 dim:border-theme-dim-700`]
 			: [`border-theme-secondary-200 dark:border-black dim:border-theme-dim-700`];
 
 	if (theme === "dark") {
@@ -22,7 +22,7 @@ const getColor = (color: Color | "warning-alt", theme?: Theme) => {
 	}
 
 	if (theme === "system") {
-		styles = [`border-theme-primary-100 dark:border-theme-secondary-800`];
+		styles = [`border-theme-primary-100 dark:border-theme-secondary-800 dim:border-theme-dim-700`];
 	}
 
 	return [...styles, baseColors[color]].join(" ");

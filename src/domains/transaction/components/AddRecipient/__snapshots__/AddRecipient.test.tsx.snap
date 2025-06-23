@@ -6,7 +6,7 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
     class="add-recipient-wrapper"
   >
     <div
-      class="text-theme-secondary-text hover:text-theme-primary-600 mb-2 flex items-center justify-between"
+      class="text-theme-secondary-text hover:text-theme-primary-600 dim:text-theme-dim-200 mb-2 flex items-center justify-between"
     >
       <div
         class="text-sm font-semibold transition-colors duration-100"
@@ -21,7 +21,7 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
             class="flex items-center"
           >
             <button
-              class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200"
+              class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200 dim:text-theme-dim-200"
               type="button"
             >
               Single
@@ -42,7 +42,7 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
               </div>
             </label>
             <button
-              class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 text-sm first:mr-2 last:ml-2"
+              class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-500 text-sm first:mr-2 last:ml-2"
               type="button"
             >
               Multiple
@@ -50,7 +50,7 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
           </div>
         </span>
         <div
-          class="questionmark bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:bg-theme-primary-700 flex h-5 w-5 cursor-pointer items-center justify-center rounded-full hover:text-white"
+          class="questionmark bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:bg-theme-primary-700 dim:bg-theme-dim-700 dim:text-theme-dim-50 flex h-5 w-5 cursor-pointer items-center justify-center rounded-full hover:text-white"
         >
           <div>
             <div
@@ -162,7 +162,7 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
                             class=""
                           >
                             <div
-                              class="flex items-center text-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 cursor-pointer rounded bg-transparent p-1 transition-colors dark:hover:text-white"
+                              class="flex items-center text-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 cursor-pointer rounded bg-transparent p-1 transition-colors dark:hover:text-white"
                               data-testid="SelectRecipient__select-recipient"
                             >
                               <div>
@@ -231,7 +231,7 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
                   Amount
                 </span>
                 <span
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm sm:hidden"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm sm:hidden"
                 >
                   (
                   <span
@@ -247,7 +247,7 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
                 class="flex flex-row items-center gap-2"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 hidden sm:flex"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 hidden sm:flex"
                   data-testid="AddRecipient__available"
                 >
                   <span
@@ -264,14 +264,14 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
                   </span>
                 </div>
                 <div
-                  class="bg-theme-secondary-300 dark:bg-theme-dark-700 hidden h-3 w-px sm:flex"
+                  class="bg-theme-secondary-300 dark:bg-theme-dark-700 dim:bg-theme-dim-700 hidden h-3 w-px sm:flex"
                   data-testid="AddRecipient__divider"
                 />
                 <span
                   class="inline-flex"
                 >
                   <button
-                    class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-navy-600 p-0 text-sm"
+                    class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-navy-600 dim:text-theme-dim-navy-600 p-0 text-sm"
                     data-testid="AddRecipient__send-all"
                     type="button"
                   >
@@ -342,7 +342,7 @@ exports[`AddRecipient > should render 1`] = `
     class="add-recipient-wrapper"
   >
     <div
-      class="text-theme-secondary-text hover:text-theme-primary-600 mb-2 flex items-center justify-between"
+      class="text-theme-secondary-text hover:text-theme-primary-600 dim:text-theme-dim-200 mb-2 flex items-center justify-between"
     >
       <div
         class="text-sm font-semibold transition-colors duration-100"
@@ -357,7 +357,7 @@ exports[`AddRecipient > should render 1`] = `
             class="flex items-center"
           >
             <button
-              class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200"
+              class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200 dim:text-theme-dim-200"
               type="button"
             >
               Single
@@ -378,7 +378,7 @@ exports[`AddRecipient > should render 1`] = `
               </div>
             </label>
             <button
-              class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 text-sm first:mr-2 last:ml-2"
+              class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-500 text-sm first:mr-2 last:ml-2"
               type="button"
             >
               Multiple
@@ -386,7 +386,7 @@ exports[`AddRecipient > should render 1`] = `
           </div>
         </span>
         <div
-          class="questionmark bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:bg-theme-primary-700 flex h-5 w-5 cursor-pointer items-center justify-center rounded-full hover:text-white"
+          class="questionmark bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:bg-theme-primary-700 dim:bg-theme-dim-700 dim:text-theme-dim-50 flex h-5 w-5 cursor-pointer items-center justify-center rounded-full hover:text-white"
         >
           <div>
             <div
@@ -498,7 +498,7 @@ exports[`AddRecipient > should render 1`] = `
                             class=""
                           >
                             <div
-                              class="flex items-center text-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 cursor-pointer rounded bg-transparent p-1 transition-colors dark:hover:text-white"
+                              class="flex items-center text-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 cursor-pointer rounded bg-transparent p-1 transition-colors dark:hover:text-white"
                               data-testid="SelectRecipient__select-recipient"
                             >
                               <div>
@@ -567,7 +567,7 @@ exports[`AddRecipient > should render 1`] = `
                   Amount
                 </span>
                 <span
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm sm:hidden"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm sm:hidden"
                 >
                   (
                   <span
@@ -583,7 +583,7 @@ exports[`AddRecipient > should render 1`] = `
                 class="flex flex-row items-center gap-2"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 hidden sm:flex"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 hidden sm:flex"
                   data-testid="AddRecipient__available"
                 >
                   <span
@@ -600,14 +600,14 @@ exports[`AddRecipient > should render 1`] = `
                   </span>
                 </div>
                 <div
-                  class="bg-theme-secondary-300 dark:bg-theme-dark-700 hidden h-3 w-px sm:flex"
+                  class="bg-theme-secondary-300 dark:bg-theme-dark-700 dim:bg-theme-dim-700 hidden h-3 w-px sm:flex"
                   data-testid="AddRecipient__divider"
                 />
                 <span
                   class="inline-flex"
                 >
                   <button
-                    class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-navy-600 p-0 text-sm"
+                    class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-navy-600 dim:text-theme-dim-navy-600 p-0 text-sm"
                     data-testid="AddRecipient__send-all"
                     type="button"
                   >
@@ -663,7 +663,7 @@ exports[`AddRecipient > should render with empty array of recipients as default 
     class="add-recipient-wrapper"
   >
     <div
-      class="text-theme-secondary-text hover:text-theme-primary-600 mb-2 flex items-center justify-between"
+      class="text-theme-secondary-text hover:text-theme-primary-600 dim:text-theme-dim-200 mb-2 flex items-center justify-between"
     >
       <div
         class="text-sm font-semibold transition-colors duration-100"
@@ -678,7 +678,7 @@ exports[`AddRecipient > should render with empty array of recipients as default 
             class="flex items-center"
           >
             <button
-              class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200"
+              class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200 dim:text-theme-dim-200"
               type="button"
             >
               Single
@@ -699,7 +699,7 @@ exports[`AddRecipient > should render with empty array of recipients as default 
               </div>
             </label>
             <button
-              class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 text-sm first:mr-2 last:ml-2"
+              class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-500 text-sm first:mr-2 last:ml-2"
               type="button"
             >
               Multiple
@@ -707,7 +707,7 @@ exports[`AddRecipient > should render with empty array of recipients as default 
           </div>
         </span>
         <div
-          class="questionmark bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:bg-theme-primary-700 flex h-5 w-5 cursor-pointer items-center justify-center rounded-full hover:text-white"
+          class="questionmark bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:bg-theme-primary-700 dim:bg-theme-dim-700 dim:text-theme-dim-50 flex h-5 w-5 cursor-pointer items-center justify-center rounded-full hover:text-white"
         >
           <div>
             <div
@@ -819,7 +819,7 @@ exports[`AddRecipient > should render with empty array of recipients as default 
                             class=""
                           >
                             <div
-                              class="flex items-center text-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 cursor-pointer rounded bg-transparent p-1 transition-colors dark:hover:text-white"
+                              class="flex items-center text-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 cursor-pointer rounded bg-transparent p-1 transition-colors dark:hover:text-white"
                               data-testid="SelectRecipient__select-recipient"
                             >
                               <div>
@@ -888,7 +888,7 @@ exports[`AddRecipient > should render with empty array of recipients as default 
                   Amount
                 </span>
                 <span
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm sm:hidden"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm sm:hidden"
                 >
                   (
                   <span
@@ -904,7 +904,7 @@ exports[`AddRecipient > should render with empty array of recipients as default 
                 class="flex flex-row items-center gap-2"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 hidden sm:flex"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 hidden sm:flex"
                   data-testid="AddRecipient__available"
                 >
                   <span
@@ -921,14 +921,14 @@ exports[`AddRecipient > should render with empty array of recipients as default 
                   </span>
                 </div>
                 <div
-                  class="bg-theme-secondary-300 dark:bg-theme-dark-700 hidden h-3 w-px sm:flex"
+                  class="bg-theme-secondary-300 dark:bg-theme-dark-700 dim:bg-theme-dim-700 hidden h-3 w-px sm:flex"
                   data-testid="AddRecipient__divider"
                 />
                 <span
                   class="inline-flex"
                 >
                   <button
-                    class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-navy-600 p-0 text-sm"
+                    class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-navy-600 dim:text-theme-dim-navy-600 p-0 text-sm"
                     data-testid="AddRecipient__send-all"
                     type="button"
                   >
@@ -984,7 +984,7 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
     class="add-recipient-wrapper"
   >
     <div
-      class="text-theme-secondary-text hover:text-theme-primary-600 mb-2 flex items-center justify-between"
+      class="text-theme-secondary-text hover:text-theme-primary-600 dim:text-theme-dim-200 mb-2 flex items-center justify-between"
     >
       <div
         class="text-sm font-semibold transition-colors duration-100"
@@ -999,7 +999,7 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
             class="flex items-center"
           >
             <button
-              class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200"
+              class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200 dim:text-theme-dim-200"
               type="button"
             >
               Single
@@ -1020,7 +1020,7 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
               </div>
             </label>
             <button
-              class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 text-sm first:mr-2 last:ml-2"
+              class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-500 text-sm first:mr-2 last:ml-2"
               type="button"
             >
               Multiple
@@ -1028,7 +1028,7 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
           </div>
         </span>
         <div
-          class="questionmark bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:bg-theme-primary-700 flex h-5 w-5 cursor-pointer items-center justify-center rounded-full hover:text-white"
+          class="questionmark bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:bg-theme-primary-700 dim:bg-theme-dim-700 dim:text-theme-dim-50 flex h-5 w-5 cursor-pointer items-center justify-center rounded-full hover:text-white"
         >
           <div>
             <div
@@ -1140,7 +1140,7 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
                             class=""
                           >
                             <div
-                              class="flex items-center text-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 cursor-pointer rounded bg-transparent p-1 transition-colors dark:hover:text-white"
+                              class="flex items-center text-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 cursor-pointer rounded bg-transparent p-1 transition-colors dark:hover:text-white"
                               data-testid="SelectRecipient__select-recipient"
                             >
                               <div>
@@ -1209,7 +1209,7 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
                   Amount
                 </span>
                 <span
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm sm:hidden"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm sm:hidden"
                 >
                   (
                   <span
@@ -1225,7 +1225,7 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
                 class="flex flex-row items-center gap-2"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 hidden sm:flex"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 hidden sm:flex"
                   data-testid="AddRecipient__available"
                 >
                   <span
@@ -1242,14 +1242,14 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
                   </span>
                 </div>
                 <div
-                  class="bg-theme-secondary-300 dark:bg-theme-dark-700 hidden h-3 w-px sm:flex"
+                  class="bg-theme-secondary-300 dark:bg-theme-dark-700 dim:bg-theme-dim-700 hidden h-3 w-px sm:flex"
                   data-testid="AddRecipient__divider"
                 />
                 <span
                   class="inline-flex"
                 >
                   <button
-                    class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-navy-600 p-0 text-sm"
+                    class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-navy-600 dim:text-theme-dim-navy-600 p-0 text-sm"
                     data-testid="AddRecipient__send-all"
                     type="button"
                   >
@@ -1305,7 +1305,7 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
     class="add-recipient-wrapper"
   >
     <div
-      class="text-theme-secondary-text hover:text-theme-primary-600 mb-2 flex items-center justify-between"
+      class="text-theme-secondary-text hover:text-theme-primary-600 dim:text-theme-dim-200 mb-2 flex items-center justify-between"
     >
       <div
         class="text-sm font-semibold transition-colors duration-100"
@@ -1320,7 +1320,7 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
             class="flex items-center"
           >
             <button
-              class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200"
+              class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200 dim:text-theme-dim-200"
               type="button"
             >
               Single
@@ -1341,7 +1341,7 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
               </div>
             </label>
             <button
-              class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 text-sm first:mr-2 last:ml-2"
+              class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-500 text-sm first:mr-2 last:ml-2"
               type="button"
             >
               Multiple
@@ -1349,7 +1349,7 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
           </div>
         </span>
         <div
-          class="questionmark bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:bg-theme-primary-700 flex h-5 w-5 cursor-pointer items-center justify-center rounded-full hover:text-white"
+          class="questionmark bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:bg-theme-primary-700 dim:bg-theme-dim-700 dim:text-theme-dim-50 flex h-5 w-5 cursor-pointer items-center justify-center rounded-full hover:text-white"
         >
           <div>
             <div
@@ -1477,7 +1477,7 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
                             class=""
                           >
                             <div
-                              class="flex items-center text-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 cursor-pointer rounded bg-transparent p-1 transition-colors dark:hover:text-white"
+                              class="flex items-center text-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 cursor-pointer rounded bg-transparent p-1 transition-colors dark:hover:text-white"
                               data-testid="SelectRecipient__select-recipient"
                             >
                               <div>
@@ -1546,7 +1546,7 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
                   Amount
                 </span>
                 <span
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm sm:hidden"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm sm:hidden"
                 >
                   (
                   <span
@@ -1562,7 +1562,7 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
                 class="flex flex-row items-center gap-2"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 hidden sm:flex"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 hidden sm:flex"
                   data-testid="AddRecipient__available"
                 >
                   <span
@@ -1579,14 +1579,14 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
                   </span>
                 </div>
                 <div
-                  class="bg-theme-secondary-300 dark:bg-theme-dark-700 hidden h-3 w-px sm:flex"
+                  class="bg-theme-secondary-300 dark:bg-theme-dark-700 dim:bg-theme-dim-700 hidden h-3 w-px sm:flex"
                   data-testid="AddRecipient__divider"
                 />
                 <span
                   class="inline-flex"
                 >
                   <button
-                    class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-navy-600 p-0 text-sm"
+                    class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-navy-600 dim:text-theme-dim-navy-600 p-0 text-sm"
                     data-testid="AddRecipient__send-all"
                     type="button"
                   >
@@ -1642,7 +1642,7 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
     class="add-recipient-wrapper"
   >
     <div
-      class="text-theme-secondary-text hover:text-theme-primary-600 mb-2 flex items-center justify-between"
+      class="text-theme-secondary-text hover:text-theme-primary-600 dim:text-theme-dim-200 mb-2 flex items-center justify-between"
     >
       <div
         class="text-sm font-semibold transition-colors duration-100"
@@ -1730,7 +1730,7 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
                             class=""
                           >
                             <div
-                              class="flex items-center text-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 cursor-pointer rounded bg-transparent p-1 transition-colors dark:hover:text-white"
+                              class="flex items-center text-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 cursor-pointer rounded bg-transparent p-1 transition-colors dark:hover:text-white"
                               data-testid="SelectRecipient__select-recipient"
                             >
                               <div>
@@ -1799,7 +1799,7 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
                   Amount
                 </span>
                 <span
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm sm:hidden"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm sm:hidden"
                 >
                   (
                   <span
@@ -1815,7 +1815,7 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
                 class="flex flex-row items-center gap-2"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 hidden sm:flex"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 hidden sm:flex"
                   data-testid="AddRecipient__available"
                 >
                   <span
@@ -1832,14 +1832,14 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
                   </span>
                 </div>
                 <div
-                  class="bg-theme-secondary-300 dark:bg-theme-dark-700 hidden h-3 w-px sm:flex"
+                  class="bg-theme-secondary-300 dark:bg-theme-dark-700 dim:bg-theme-dim-700 hidden h-3 w-px sm:flex"
                   data-testid="AddRecipient__divider"
                 />
                 <span
                   class="inline-flex"
                 >
                   <button
-                    class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-navy-600 p-0 text-sm"
+                    class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-navy-600 dim:text-theme-dim-navy-600 p-0 text-sm"
                     data-testid="AddRecipient__send-all"
                     type="button"
                   >
@@ -1895,7 +1895,7 @@ exports[`AddRecipient > should set available amount 1`] = `
     class="add-recipient-wrapper"
   >
     <div
-      class="text-theme-secondary-text hover:text-theme-primary-600 mb-2 flex items-center justify-between"
+      class="text-theme-secondary-text hover:text-theme-primary-600 dim:text-theme-dim-200 mb-2 flex items-center justify-between"
     >
       <div
         class="text-sm font-semibold transition-colors duration-100"
@@ -1910,7 +1910,7 @@ exports[`AddRecipient > should set available amount 1`] = `
             class="flex items-center"
           >
             <button
-              class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200"
+              class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200 dim:text-theme-dim-200"
               type="button"
             >
               Single
@@ -1931,7 +1931,7 @@ exports[`AddRecipient > should set available amount 1`] = `
               </div>
             </label>
             <button
-              class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 text-sm first:mr-2 last:ml-2"
+              class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-500 text-sm first:mr-2 last:ml-2"
               type="button"
             >
               Multiple
@@ -1939,7 +1939,7 @@ exports[`AddRecipient > should set available amount 1`] = `
           </div>
         </span>
         <div
-          class="questionmark bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:bg-theme-primary-700 flex h-5 w-5 cursor-pointer items-center justify-center rounded-full hover:text-white"
+          class="questionmark bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:bg-theme-primary-700 dim:bg-theme-dim-700 dim:text-theme-dim-50 flex h-5 w-5 cursor-pointer items-center justify-center rounded-full hover:text-white"
         >
           <div>
             <div
@@ -2051,7 +2051,7 @@ exports[`AddRecipient > should set available amount 1`] = `
                             class=""
                           >
                             <div
-                              class="flex items-center text-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 cursor-pointer rounded bg-transparent p-1 transition-colors dark:hover:text-white"
+                              class="flex items-center text-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 cursor-pointer rounded bg-transparent p-1 transition-colors dark:hover:text-white"
                               data-testid="SelectRecipient__select-recipient"
                             >
                               <div>
@@ -2120,7 +2120,7 @@ exports[`AddRecipient > should set available amount 1`] = `
                   Amount
                 </span>
                 <span
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm sm:hidden"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm sm:hidden"
                 >
                   (
                   <span
@@ -2136,7 +2136,7 @@ exports[`AddRecipient > should set available amount 1`] = `
                 class="flex flex-row items-center gap-2"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 hidden sm:flex"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 hidden sm:flex"
                   data-testid="AddRecipient__available"
                 >
                   <span
@@ -2153,14 +2153,14 @@ exports[`AddRecipient > should set available amount 1`] = `
                   </span>
                 </div>
                 <div
-                  class="bg-theme-secondary-300 dark:bg-theme-dark-700 hidden h-3 w-px sm:flex"
+                  class="bg-theme-secondary-300 dark:bg-theme-dark-700 dim:bg-theme-dim-700 hidden h-3 w-px sm:flex"
                   data-testid="AddRecipient__divider"
                 />
                 <span
                   class="inline-flex"
                 >
                   <button
-                    class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-navy-600 p-0 text-sm"
+                    class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-navy-600 dim:text-theme-dim-navy-600 p-0 text-sm"
                     data-testid="AddRecipient__send-all"
                     type="button"
                   >
@@ -2216,7 +2216,7 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
     class="add-recipient-wrapper"
   >
     <div
-      class="text-theme-secondary-text hover:text-theme-primary-600 mb-2 flex items-center justify-between"
+      class="text-theme-secondary-text hover:text-theme-primary-600 dim:text-theme-dim-200 mb-2 flex items-center justify-between"
     >
       <div
         class="text-sm font-semibold transition-colors duration-100"
@@ -2231,7 +2231,7 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
             class="flex items-center"
           >
             <button
-              class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200"
+              class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200 dim:text-theme-dim-200"
               type="button"
             >
               Single
@@ -2252,7 +2252,7 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
               </div>
             </label>
             <button
-              class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 text-sm first:mr-2 last:ml-2"
+              class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-500 text-sm first:mr-2 last:ml-2"
               type="button"
             >
               Multiple
@@ -2260,7 +2260,7 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
           </div>
         </span>
         <div
-          class="questionmark bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:bg-theme-primary-700 flex h-5 w-5 cursor-pointer items-center justify-center rounded-full hover:text-white"
+          class="questionmark bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:bg-theme-primary-700 dim:bg-theme-dim-700 dim:text-theme-dim-50 flex h-5 w-5 cursor-pointer items-center justify-center rounded-full hover:text-white"
         >
           <div>
             <div
@@ -2372,7 +2372,7 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
                             class=""
                           >
                             <div
-                              class="flex items-center text-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 cursor-pointer rounded bg-transparent p-1 transition-colors dark:hover:text-white"
+                              class="flex items-center text-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 cursor-pointer rounded bg-transparent p-1 transition-colors dark:hover:text-white"
                               data-testid="SelectRecipient__select-recipient"
                             >
                               <div>
@@ -2441,7 +2441,7 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
                   Amount
                 </span>
                 <span
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm sm:hidden"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm sm:hidden"
                 >
                   (
                   <span
@@ -2460,7 +2460,7 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
                   class="inline-flex"
                 >
                   <button
-                    class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-navy-600 p-0 text-sm"
+                    class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-navy-600 dim:text-theme-dim-navy-600 p-0 text-sm"
                     data-testid="AddRecipient__send-all"
                     type="button"
                   >

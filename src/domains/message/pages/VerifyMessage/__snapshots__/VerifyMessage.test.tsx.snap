@@ -844,7 +844,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                     class="flex items-center sm:mt-4"
                   >
                     <button
-                      class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 text-lg first:mr-4 last:ml-4"
+                      class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-500 text-lg first:mr-4 last:ml-4"
                       type="button"
                     >
                       JSON
@@ -866,7 +866,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                       </div>
                     </label>
                     <button
-                      class="font-semibold select-none text-lg first:mr-4 last:ml-4 text-theme-secondary-700 dark:text-theme-secondary-200"
+                      class="font-semibold select-none text-lg first:mr-4 last:ml-4 text-theme-secondary-700 dark:text-theme-secondary-200 dim:text-theme-dim-200"
                       type="button"
                     >
                       Manual
@@ -1837,7 +1837,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                     class="flex items-center sm:mt-4"
                   >
                     <button
-                      class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 text-lg first:mr-4 last:ml-4"
+                      class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-500 text-lg first:mr-4 last:ml-4"
                       type="button"
                     >
                       JSON
@@ -1859,7 +1859,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                       </div>
                     </label>
                     <button
-                      class="font-semibold select-none text-lg first:mr-4 last:ml-4 text-theme-secondary-700 dark:text-theme-secondary-200"
+                      class="font-semibold select-none text-lg first:mr-4 last:ml-4 text-theme-secondary-700 dark:text-theme-secondary-200 dim:text-theme-dim-200"
                       type="button"
                     >
                       Manual
