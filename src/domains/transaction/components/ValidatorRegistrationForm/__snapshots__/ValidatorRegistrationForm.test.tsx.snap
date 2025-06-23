@@ -61,7 +61,7 @@ exports[`ValidatorRegistrationForm > should render form step 1`] = `
                   </span>
                 </span>
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden text-sm sm:text-base text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden text-sm sm:text-base text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
                   data-testid="Address__address"
                 >
                   0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
@@ -92,7 +92,7 @@ exports[`ValidatorRegistrationForm > should render form step 1`] = `
                   class=""
                 >
                   <div
-                    class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 flex items-center space-x-3 rounded bg-transparent p-1 transition-colors dark:hover:text-white"
+                    class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:text-theme-dim-200 flex items-center space-x-3 rounded bg-transparent p-1 transition-colors dark:hover:text-white"
                   >
                     <div>
                       <div
@@ -396,7 +396,7 @@ exports[`ValidatorRegistrationForm > should render review step 1`] = `
                       class="flex items-center"
                     >
                       <button
-                        class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200"
+                        class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200 dim:text-theme-dim-200"
                         type="button"
                       >
                         Simple
@@ -417,7 +417,7 @@ exports[`ValidatorRegistrationForm > should render review step 1`] = `
                         </div>
                       </label>
                       <button
-                        class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 text-sm first:mr-2 last:ml-2"
+                        class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-500 text-sm first:mr-2 last:ml-2"
                         type="button"
                       >
                         Advanced
@@ -432,13 +432,13 @@ exports[`ValidatorRegistrationForm > should render review step 1`] = `
                     <button
                       aria-checked="false"
                       aria-label="0"
-                      class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 p-0"
+                      class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 dim:text-theme-secondary-200 dim-hover:border-theme-dim-700 dim:aria-checked:bg-theme-dim-700 dim:aria-checked:text-theme-dim-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dim:border-theme-dim-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 p-0"
                       data-testid="ButtonGroupOption"
                       role="radio"
                       type="button"
                     >
                       <div
-                        class="text-theme-secondary-700 dark:text-theme-dark-200 flex w-full flex-col transition-all dark:group-hover:text-theme-dark-50"
+                        class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex w-full flex-col transition-all dark:group-hover:text-theme-dark-50 dim:text-theme-dim-50"
                       >
                         <div
                           class="flex items-center justify-between p-3 sm:flex-col sm:items-start sm:justify-start sm:space-y-2"
@@ -452,7 +452,7 @@ exports[`ValidatorRegistrationForm > should render review step 1`] = `
                             class="flex justify-between sm:w-full"
                           >
                             <span
-                              class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500"
+                              class="whitespace-nowrap sm:text-theme-secondary-500 dim:sm:text-theme-dim-200 hidden text-xs leading-[15px] transition-all sm:block dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500 dim:sm:dark:text-theme-dim-50"
                               data-testid="Amount"
                             >
                               0 ARK
@@ -460,7 +460,7 @@ exports[`ValidatorRegistrationForm > should render review step 1`] = `
                           </div>
                         </div>
                         <div
-                          class="text-theme-secondary-700 dark:text-theme-dark-200 flex w-full justify-between px-3 py-2 text-xs leading-[15px] font-semibold transition-all bg-theme-navy-50 dark:bg-theme-dark-800 dark:group-hover:bg-theme-dark-600 dark:group-hover:text-theme-dark-50"
+                          class="text-theme-secondary-700 dark:text-theme-dark-200 flex w-full justify-between px-3 py-2 text-xs leading-[15px] font-semibold transition-all bg-theme-navy-50 dark:bg-theme-dark-800 dark:group-hover:bg-theme-dark-600 dark:group-hover:text-theme-dark-50 dim:bg-theme-dim-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50"
                         >
                           <span>
                             Confirmation Time
@@ -474,19 +474,19 @@ exports[`ValidatorRegistrationForm > should render review step 1`] = `
                     <button
                       aria-checked="true"
                       aria-label="0"
-                      class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 p-0"
+                      class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 dim:text-theme-secondary-200 dim-hover:border-theme-dim-700 dim:aria-checked:bg-theme-dim-700 dim:aria-checked:text-theme-dim-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dim:border-theme-dim-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 p-0"
                       data-testid="ButtonGroupOption"
                       role="radio"
                       type="button"
                     >
                       <div
-                        class="text-theme-secondary-700 dark:text-theme-dark-200 flex w-full flex-col transition-all"
+                        class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex w-full flex-col transition-all"
                       >
                         <div
                           class="flex items-center justify-between p-3 sm:flex-col sm:items-start sm:justify-start sm:space-y-2"
                         >
                           <div
-                            class="text-sm leading-[17px] sm:leading-5 text-theme-navy-700 dark:text-theme-dark-50"
+                            class="text-sm leading-[17px] sm:leading-5 text-theme-navy-700 dark:text-theme-dark-50 dim:text-theme-dim-50"
                           >
                             Average
                           </div>
@@ -494,7 +494,7 @@ exports[`ValidatorRegistrationForm > should render review step 1`] = `
                             class="flex justify-between sm:w-full"
                           >
                             <span
-                              class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block"
+                              class="whitespace-nowrap sm:text-theme-secondary-500 dim:sm:text-theme-dim-200 hidden text-xs leading-[15px] transition-all sm:block"
                               data-testid="Amount"
                             >
                               0 ARK
@@ -502,7 +502,7 @@ exports[`ValidatorRegistrationForm > should render review step 1`] = `
                           </div>
                         </div>
                         <div
-                          class="text-theme-secondary-700 dark:text-theme-dark-200 flex w-full justify-between px-3 py-2 text-xs leading-[15px] font-semibold transition-all bg-theme-navy-100 dark:bg-theme-dark-500"
+                          class="text-theme-secondary-700 dark:text-theme-dark-200 flex w-full justify-between px-3 py-2 text-xs leading-[15px] font-semibold transition-all bg-theme-navy-100 dark:bg-theme-dark-500 dim:bg-theme-dim-950"
                         >
                           <span>
                             Confirmation Time
@@ -516,13 +516,13 @@ exports[`ValidatorRegistrationForm > should render review step 1`] = `
                     <button
                       aria-checked="false"
                       aria-label="0"
-                      class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 p-0"
+                      class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 dim:text-theme-secondary-200 dim-hover:border-theme-dim-700 dim:aria-checked:bg-theme-dim-700 dim:aria-checked:text-theme-dim-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dim:border-theme-dim-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 p-0"
                       data-testid="ButtonGroupOption"
                       role="radio"
                       type="button"
                     >
                       <div
-                        class="text-theme-secondary-700 dark:text-theme-dark-200 flex w-full flex-col transition-all dark:group-hover:text-theme-dark-50"
+                        class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex w-full flex-col transition-all dark:group-hover:text-theme-dark-50 dim:text-theme-dim-50"
                       >
                         <div
                           class="flex items-center justify-between p-3 sm:flex-col sm:items-start sm:justify-start sm:space-y-2"
@@ -536,7 +536,7 @@ exports[`ValidatorRegistrationForm > should render review step 1`] = `
                             class="flex justify-between sm:w-full"
                           >
                             <span
-                              class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500"
+                              class="whitespace-nowrap sm:text-theme-secondary-500 dim:sm:text-theme-dim-200 hidden text-xs leading-[15px] transition-all sm:block dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500 dim:sm:dark:text-theme-dim-50"
                               data-testid="Amount"
                             >
                               0 ARK
@@ -544,7 +544,7 @@ exports[`ValidatorRegistrationForm > should render review step 1`] = `
                           </div>
                         </div>
                         <div
-                          class="text-theme-secondary-700 dark:text-theme-dark-200 flex w-full justify-between px-3 py-2 text-xs leading-[15px] font-semibold transition-all bg-theme-navy-50 dark:bg-theme-dark-800 dark:group-hover:bg-theme-dark-600 dark:group-hover:text-theme-dark-50"
+                          class="text-theme-secondary-700 dark:text-theme-dark-200 flex w-full justify-between px-3 py-2 text-xs leading-[15px] font-semibold transition-all bg-theme-navy-50 dark:bg-theme-dark-800 dark:group-hover:bg-theme-dark-600 dark:group-hover:text-theme-dark-50 dim:bg-theme-dim-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50"
                         >
                           <span>
                             Confirmation Time

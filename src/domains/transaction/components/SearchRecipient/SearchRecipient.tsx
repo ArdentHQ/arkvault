@@ -38,7 +38,7 @@ const SearchRecipientListItem: FC<SearchRecipientListItemProperties> = ({
 					size="icon"
 					variant="transparent"
 					onClick={() => onAction(recipient.address)}
-					className="text-theme-primary-reverse-600 -mr-3 py-0 text-sm leading-[17px] font-semibold"
+					className="text-theme-primary-reverse-600 dim:text-theme-dim-navy-700 -mr-3 py-0 text-sm leading-[17px] font-semibold"
 				>
 					{t("COMMON.SELECTED")}
 				</Button>
@@ -51,7 +51,7 @@ const SearchRecipientListItem: FC<SearchRecipientListItemProperties> = ({
 				size="icon"
 				variant="transparent"
 				onClick={() => onAction(recipient.address)}
-				className="text-theme-primary-600 -mr-3 text-sm leading-[17px] font-semibold"
+				className="text-theme-primary-600 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 -mr-3 text-sm leading-[17px] font-semibold"
 			>
 				{t("COMMON.SELECT")}
 			</Button>
@@ -65,15 +65,15 @@ const SearchRecipientListItem: FC<SearchRecipientListItemProperties> = ({
 					walletName={recipient.alias}
 					address={recipient.address}
 					truncateOnTable
-					walletNameClass="text-sm text-theme-secondary-900 dark:text-theme-secondary-200 leading-[17px]"
-					addressClass="text-sm text-theme-secondary-700 dark:text-theme-secondary-500 leading-[17px] flex items-center h-5"
+					walletNameClass="text-sm text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-200 leading-[17px]"
+					addressClass="text-sm text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 leading-[17px] flex items-center h-5"
 				/>
 			</TableCell>
 
 			<TableCell isSelected={isSelected} innerClassName="my-0.5">
 				<span
 					data-testid="RecipientListItem__type"
-					className="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm leading-[17px] font-semibold whitespace-nowrap"
+					className="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-sm leading-[17px] font-semibold whitespace-nowrap"
 				>
 					{recipient.type === "wallet" ? t("COMMON.MY_WALLET") : t("COMMON.CONTACT")}
 				</span>
@@ -107,7 +107,7 @@ const SearchRecipientListItemResponsive: FC<SearchRecipientListItemResponsivePro
 							data-testid="Address__address_condensed"
 							value={recipient.address}
 							availableWidth={isSmAndAbove ? undefined : 100}
-							className="text-theme-secondary-700 dark:text-theme-secondary-500 text-xs font-semibold"
+							className="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 text-xs font-semibold"
 						/>
 					}
 					type={recipient.type === "wallet" ? t("COMMON.MY_WALLET") : t("COMMON.CONTACT")}

@@ -28,7 +28,7 @@ exports[`LedgerTabs > should render connection step 1`] = `
                 data-testid="Loader__wrapper"
               >
                 <div
-                  class="animate-spin border-[5px] shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 border-l-theme-warning-900 dark:border-l-theme-warning-600 dim:border-l-theme-warning-600 rounded-full"
+                  class="animate-spin border-[5px] shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-l-theme-warning-900 dark:border-l-theme-warning-600 dim:border-l-theme-warning-600 rounded-full"
                 />
                 <hr
                   class="bg-theme-warning-200 dark:bg-theme-secondary-800 h-5 w-px border-transparent"

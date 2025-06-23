@@ -67,7 +67,7 @@ exports[`Spinner > should render a warning color 1`] = `
 exports[`Spinner > should render a warning-alt color 1`] = `
 <div>
   <div
-    class="animate-spin rounded-full border-[5px] shrink-0 w-8 h-8 border-theme-warning-200 dark:border-theme-secondary-800 border-l-theme-warning-900 dark:border-l-theme-warning-600 dim:border-l-theme-warning-600"
+    class="animate-spin rounded-full border-[5px] shrink-0 w-8 h-8 border-theme-warning-200 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-l-theme-warning-900 dark:border-l-theme-warning-600 dim:border-l-theme-warning-600"
   />
 </div>
 `;
