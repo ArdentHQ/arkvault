@@ -116,7 +116,7 @@ export class ProfileRepository implements IProfileRepository {
 		await new ProfileImporter(profile, this.#env).import(password);
 
 		if (profile.wallets().selected().length === 0) {
-			profile.wallets().selectOne(profile.wallets().first())
+			profile.wallets().selectOne(profile.wallets().first());
 		}
 
 		profile.status().markAsRestored();
