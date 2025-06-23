@@ -51,7 +51,10 @@ export const TransactionSummary = ({
 
 				{transaction.isValidatorResignation() && (senderWallet.validatorFee() ?? 0) > 0 && (
 					<>
-						<div className="flex w-full justify-between gap-2 sm:justify-start">
+						<div
+							data-testid="TransactionSummary__ValidatorFee"
+							className="flex w-full justify-between gap-2 sm:justify-start"
+						>
 							<DetailLabelText className={labelClassName}>{t("COMMON.UNLOCKED_AMOUNT")}</DetailLabelText>
 
 							<AmountLabel

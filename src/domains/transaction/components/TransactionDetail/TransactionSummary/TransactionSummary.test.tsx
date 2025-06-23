@@ -1,44 +1,48 @@
 import React from "react";
 import { Contracts } from "@/app/lib/profiles";
 import { RecipientProperties } from "./SearchRecipient.contracts";
-import { env, getDefaultProfileId, screen, renderResponsive } from "@/utils/testing-library";
-import { translations } from "@/app/i18n/common/i18n";
-import { TransactionAddresses } from "@/domains/transaction/components/TransactionDetail";
+import { env, getDefaultProfileId, screen, render } from "@/utils/testing-library";
+import { TransactionSummary } from "./TransactionSummary";
+import { TransactionFixture } from "@/tests/fixtures/transactions";
 
-describe("TransactionAddresses", () => {
+describe("TransactionSummary", () => {
 	let profile: Contracts.IProfile;
-	let recipients: RecipientProperties[];
 
 	beforeAll(() => {
 		profile = env.profiles().findById(getDefaultProfileId());
-		const wallets: Contracts.IReadWriteWallet[] = profile.wallets().values();
-
-		recipients = wallets.map((wallet) => ({
-			address: wallet.address(),
-			alias: wallet.alias(),
-			avatar: wallet.avatar(),
-			id: wallet.id(),
-			network: wallet.networkId(),
-			type: "wallet",
-		}));
 	});
 
-	it.each(["sm", "md", "lg"])("should render in %s", (breakpoint: string) => {
+	it("shows the validator fee if the transaction is a validator resignation and it has a validator fee", () => {
 		const wallet = profile.wallets().first();
 
-		renderResponsive(
-			<TransactionAddresses
-				senderAddress={wallet.address()}
-				network={wallet.network()}
-				recipients={[recipients[1]]}
-				profile={profile}
-			/>,
-			breakpoint,
-		);
+		const validatorFeeMock = vi.spyOn(wallet, "validatorFee").mockReturnValue(100);
 
-		expect(screen.getByTestId("DetailWrapper")).toBeInTheDocument();
-		expect(screen.getByText(translations.FROM)).toBeInTheDocument();
-		expect(screen.getByText(translations.TO)).toBeInTheDocument();
-		expect(screen.getByText(recipients[1].address)).toBeInTheDocument();
+		const transaction = {
+			...TransactionFixture,
+			isValidatorResignation: () => true,
+		} as Contracts.SignedTransactionData;
+
+		render(<TransactionSummary transaction={transaction} senderWallet={wallet} profile={profile} />);
+
+		expect(screen.getByTestId("TransactionSummary__ValidatorFee")).toBeInTheDocument();
+
+		validatorFeeMock.mockRestore();
+	});
+
+	it("does not shows the validator fee if the transaction is not a validator resignation", () => {
+		const wallet = profile.wallets().first();
+
+		const validatorFeeMock = vi.spyOn(wallet, "validatorFee").mockReturnValue(100);
+
+		const transaction = {
+			...TransactionFixture,
+			isValidatorResignation: () => false,
+		} as Contracts.SignedTransactionData;
+
+		render(<TransactionSummary transaction={transaction} senderWallet={wallet} profile={profile} />);
+
+		expect(screen.queryByTestId("TransactionSummary__ValidatorFee")).not.toBeInTheDocument();
+
+		validatorFeeMock.mockRestore();
 	});
 });
