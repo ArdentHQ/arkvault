@@ -27,14 +27,14 @@ importers:
         specifier: ^0.27.12
         version: 0.27.12(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@ledgerhq/hw-app-eth':
-        specifier: ^6.45.4
-        version: 6.45.7
+        specifier: ^6.45.8
+        version: 6.45.8
       '@ledgerhq/hw-transport-webhid':
-        specifier: ^6.30.0
-        version: 6.30.2
+        specifier: ^6.30.3
+        version: 6.30.3
       '@ledgerhq/hw-transport-webusb':
-        specifier: ^6.29.4
-        version: 6.29.6
+        specifier: ^6.29.7
+        version: 6.29.7
       '@mainsail/evm-contracts':
         specifier: 0.0.1-evm.18
         version: 0.0.1-evm.18
@@ -201,8 +201,8 @@ importers:
         specifier: ^3.1.1
         version: 3.1.1(react@19.1.0)
       viem:
-        specifier: ^2.30.1
-        version: 2.31.3(typescript@5.8.3)
+        specifier: ^2.31.4
+        version: 2.31.4(typescript@5.8.3)
       yup:
         specifier: ^1.6.1
         version: 1.6.1
@@ -214,8 +214,8 @@ importers:
         specifier: ^9.27.0
         version: 9.29.0
       '@ledgerhq/hw-transport-mocker':
-        specifier: ^6.29.4
-        version: 6.29.6
+        specifier: ^6.29.7
+        version: 6.29.7
       '@testing-library/dom':
         specifier: ^10.4.0
         version: 10.4.0
@@ -262,8 +262,8 @@ importers:
         specifier: ^8.34.1
         version: 8.34.1(eslint@9.29.0(jiti@2.4.2))(typescript@5.8.3)
       '@vitejs/plugin-react':
-        specifier: ^4.5.0
-        version: 4.5.2(vite@6.3.5(@types/node@22.15.32)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.43.0)(yaml@2.8.0))
+        specifier: ^4.6.0
+        version: 4.6.0(vite@6.3.5(@types/node@22.15.32)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.43.0)(yaml@2.8.0))
       '@vitest/coverage-istanbul':
         specifier: 3.2.4
         version: 3.2.4(vitest@3.2.4(@types/node@22.15.32)(jiti@2.4.2)(jsdom@26.1.0)(lightningcss@1.30.1)(msw@2.10.2(@types/node@22.15.32)(typescript@5.8.3))(terser@5.43.0)(yaml@2.8.0))
@@ -287,7 +287,7 @@ importers:
         version: 1.2.0
       eslint-plugin-prettier:
         specifier: ^5.5.0
-        version: 5.5.0(eslint-config-prettier@10.1.5(eslint@9.29.0(jiti@2.4.2)))(eslint@9.29.0(jiti@2.4.2))(prettier@3.5.3)
+        version: 5.5.0(eslint-config-prettier@10.1.5(eslint@9.29.0(jiti@2.4.2)))(eslint@9.29.0(jiti@2.4.2))(prettier@3.6.0)
       eslint-plugin-promise:
         specifier: ^7.2.1
         version: 7.2.1(eslint@9.29.0(jiti@2.4.2))
@@ -352,11 +352,11 @@ importers:
         specifier: ^8.5.3
         version: 8.5.6
       prettier:
-        specifier: ^3.5.3
-        version: 3.5.3
+        specifier: ^3.6.0
+        version: 3.6.0
       prettier-plugin-tailwindcss:
         specifier: ^0.6.13
-        version: 0.6.13(prettier@3.5.3)
+        version: 0.6.13(prettier@3.6.0)
       react-router-config:
         specifier: ^5.1.1
         version: 5.1.1(react-router@7.6.2(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react@19.1.0)
@@ -1524,32 +1524,32 @@ packages:
   '@ledgerhq/cryptoassets-evm-signatures@13.5.8':
     resolution: {integrity: sha512-l/p2zbkOcFGy0LiS0ArCjen8cGl8L5c8OXwlStI4LdaJejU1Ob4hbTRHYbVaZiVBCgDlafKGEqz69jW6iTQjNQ==}
 
-  '@ledgerhq/devices@8.4.6':
-    resolution: {integrity: sha512-EMWhCOC+Ww14i2Dl8Txc0AAw8oToCxt1hOKmE7+yE38SkzfRWS0Je3P+o9/EgkaopI8Y0N8lWOJzy1CiulP3Lg==}
+  '@ledgerhq/devices@8.4.7':
+    resolution: {integrity: sha512-CljHIaPmtv93H2If1Zs1xW0pgg+M37bAoJkm6+V6Yw5S0MgFWFpLnTTNgCvHXyD8pG0+uq8TuOXUiG1oAV5AyA==}
 
-  '@ledgerhq/domain-service@1.2.32':
-    resolution: {integrity: sha512-rprK/Aig+QbjFPqtsuH3pe4eS/34yIv4f/U0msEcvtaGKv4UVdHW0oQih7kDQiUDIKcwU0X3ZoDsEEKwvMcwMA==}
+  '@ledgerhq/domain-service@1.2.33':
+    resolution: {integrity: sha512-de/R+2leeLECJJtGbieb1XrwnQClPbSKRTqVNyXAhWXBqrxsYFTrTggN86OF32X4QKOlKq6CxijCSQHmm67JCQ==}
 
-  '@ledgerhq/errors@6.21.0':
-    resolution: {integrity: sha512-2k5veG9eu+1X5oBVhKSWzA6RE+TWOTSJnytjEhPBTZB6h2ixMrCUMWF5+OAWXiI1EiSNsvGGk19XO87qpZiVTw==}
+  '@ledgerhq/errors@6.22.0':
+    resolution: {integrity: sha512-rXtpIOfHL62jWB7o77PNFD4EDYdcqyMeVgt7TZcmTkWT78cK+YYSUTMrNuGLhnZZZTMLWH023Wgt65OfKIdGBQ==}
 
   '@ledgerhq/evm-tools@1.6.4':
     resolution: {integrity: sha512-AtL7hOtUDRv/PTqNBGqNIOofScJNkMtR793KuTbPfe6Aq3dgmgBEwC1rP24/E88dWZpYHG3Y5k3eGtIRfFwrdg==}
 
-  '@ledgerhq/hw-app-eth@6.45.7':
-    resolution: {integrity: sha512-0Sqp+HaMWuraAdg2dmcihVgPIKmZDy1H/n7Hr+fPyuXBTbNoQDMBJEBdumzSNBcmeig569LmZIt2Hh0kCj/HHA==}
+  '@ledgerhq/hw-app-eth@6.45.8':
+    resolution: {integrity: sha512-+QDG/zhHIqs0J/b2G05fVLKEYIwJmIUofNOwzhfBS39qQJO6WFwrahfuurPGEkLA7nXL4kVqEk7nqBugUhgi/A==}
 
-  '@ledgerhq/hw-transport-mocker@6.29.6':
-    resolution: {integrity: sha512-uU3gjnp8nsTFA8oCwOaX8V6NQNISlOPmJz5pBzPd21K6fuMNEWB84TOg3/kSd2cmOyRa+SSysm4aFgkSFhLh7g==}
+  '@ledgerhq/hw-transport-mocker@6.29.7':
+    resolution: {integrity: sha512-0FEEbS9XRH/Fu8G4xIZq+QbRDnsy0tO3xf2H1wDkhVv0AGHvDHSp1l7fAQZz6Q1sBmLgqjXhKvZRKzNOX4tnfQ==}
 
-  '@ledgerhq/hw-transport-webhid@6.30.2':
-    resolution: {integrity: sha512-HZqGyHSl9Dg1AhULyCElKNWFDlIjO5+YzQ+CDqOwhVKCVCVKCVev5N1Kh20BD8AyBdnUcfgfKhdQMMkgGmVmeA==}
+  '@ledgerhq/hw-transport-webhid@6.30.3':
+    resolution: {integrity: sha512-DV2QL4gZ3XvB5i271np5DHROu3Ry6Pjvhd65mu6JLpasAQr0VeW0L8KZ+JK9VryARC1soU1ZEPkL2uVw8MRmvg==}
 
-  '@ledgerhq/hw-transport-webusb@6.29.6':
-    resolution: {integrity: sha512-40g7pyjvWMGrP4PuqKulvP7qn7rQLTZ/0BJxv7G5boUP4f8a2sJ8aLKmkle1gZrmEzuiulfxuxyZgUsDDTOGQw==}
+  '@ledgerhq/hw-transport-webusb@6.29.7':
+    resolution: {integrity: sha512-6BJkgvC+8yXssD6JN5QgSKxTSLucb2Cf+dg0EJAoqNXqz84Yse3W9Z+AJVSLH6XwxH69tWtHP5VtQgltWZJA6g==}
 
-  '@ledgerhq/hw-transport@6.31.6':
-    resolution: {integrity: sha512-wXycgy21wdwdr9s2fz7K96aDqnsPXPT15E6GlNrYJ0C36tAQcHOtI+XWZ1A8J4cMlRRh6siGWsEymziOdFBPCQ==}
+  '@ledgerhq/hw-transport@6.31.7':
+    resolution: {integrity: sha512-R+QMlqoLJDPeCiqwWv85PbZ3m0hel5PwQzWwSIbyEwialqjXnG7LFQgytkgXlgMcayT0chvvLeYjuY5ZfMPY7w==}
 
   '@ledgerhq/live-env@2.10.0':
     resolution: {integrity: sha512-Px3gAR7UXg70FRkiLVDGRrv9221Ts768sMxnNfTe07V95edObfAMTcgp3H4wdL4Kc5x/aGUHi125n3vSVglq1g==}
@@ -1557,8 +1557,8 @@ packages:
   '@ledgerhq/logs@6.13.0':
     resolution: {integrity: sha512-4+qRW2Pc8V+btL0QEmdB2X+uyx0kOWMWE1/LWsq5sZy3Q5tpi4eItJS6mB0XL3wGW59RQ+8bchNQQ1OW/va8Og==}
 
-  '@ledgerhq/types-live@6.73.0':
-    resolution: {integrity: sha512-Cf71D8YDZD8qaRDJQm0yDPB9O0s8Fx43r3v89gn9wkvd/dENfLpk3hZ+R3wrOt5gYPoFvU3ktK0ToYS92zFMCw==}
+  '@ledgerhq/types-live@6.74.0':
+    resolution: {integrity: sha512-kaMhBstVrTkajHuVgrJoFfzusWq8LCWdoLf3nWz71SHR4HXoVKjS1z8MMXcCT/O9GbmWDAqYBLu8jjTO7a69rg==}
 
   '@mainsail/evm-contracts@0.0.1-evm.18':
     resolution: {integrity: sha512-WrNJc0SwZYhOSYGkFCP10GmSorKDNPpZMCYbI+iRT/20uZjbJ6YYmuRHHUEqIBB4Kpc0T7feZ4O0oOnAefm7hQ==}
@@ -1622,8 +1622,8 @@ packages:
   '@popperjs/core@2.11.8':
     resolution: {integrity: sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==}
 
-  '@rolldown/pluginutils@1.0.0-beta.11':
-    resolution: {integrity: sha512-L/gAA/hyCSuzTF1ftlzUSI/IKr2POHsv1Dd78GfqkR83KMNuswWD61JxGV2L7nRwBBBSDr6R1gCkdTmoN7W4ag==}
+  '@rolldown/pluginutils@1.0.0-beta.19':
+    resolution: {integrity: sha512-3FL3mnMbPu0muGOCaKAhhFEYmqv9eTfPSJRJmANrCwtgK8VuxpsZDGK+m0LYAGoyO8+0j5uRe4PeyPDK1yA/hA==}
 
   '@rollup/plugin-babel@5.3.1':
     resolution: {integrity: sha512-WFfdLWU/xVWKeRQnKmIAQULUI7Il0gZnBIH/ZFO069wYIfPu+8zrfp/KMW0atmELoRDq8FbiP3VCss9MhCut7Q==}
@@ -2187,8 +2187,8 @@ packages:
     resolution: {integrity: sha512-xoh5rJ+tgsRKoXnkBPFRLZ7rjKM0AfVbC68UZ/ECXoDbfggb9RbEySN359acY1vS3qZ0jVTVWzbtfapwm5ztxw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@vitejs/plugin-react@4.5.2':
-    resolution: {integrity: sha512-QNVT3/Lxx99nMQWJWF7K4N6apUEuT0KlZA3mx/mVaoGj3smm/8rc8ezz15J1pcbcjDK0V15rpHetVfya08r76Q==}
+  '@vitejs/plugin-react@4.6.0':
+    resolution: {integrity: sha512-5Kgff+m8e2PB+9j51eGHEpn5kUzRKH2Ry0qGoe8ItJg7pqnkPrYPkDQZGgGmTa0EGarHrkjLvOdU3b1fzI8otQ==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
       vite: ^4.2.0 || ^5.0.0 || ^6.0.0 || ^7.0.0-beta.0
@@ -4876,8 +4876,8 @@ packages:
       prettier-plugin-svelte:
         optional: true
 
-  prettier@3.5.3:
-    resolution: {integrity: sha512-QQtaxnoDJeAkDvDKWCLiwIXkTgRhwYDEQCghU9Z6q03iyek/rxRh/2lC3HB7P8sWT2xC/y5JDctPLBIGzHKbhw==}
+  prettier@3.6.0:
+    resolution: {integrity: sha512-ujSB9uXHJKzM/2GBuE0hBOUgC77CN3Bnpqa+g80bkv3T3A93wL/xlzDATHhnhkzifz/UE2SNOvmbTz5hSkDlHw==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -5998,8 +5998,8 @@ packages:
   validate-npm-package-license@3.0.4:
     resolution: {integrity: sha512-DpKm2Ui/xN7/HQKCtpZxoRWBhZ9Z0kqtygG8XCgNQ8ZlDnxuQmWhj566j8fN4Cu3/JmbhsDo7fcAJq4s9h27Ew==}
 
-  viem@2.31.3:
-    resolution: {integrity: sha512-q3JGI5QFB4LEiLfg9f2ZwjUygAn2W0wMLtj++7E/L2i8Y7zKAkR4TEEOhwBn7gyYXpuc7f1vfd26PJbkEKuj5w==}
+  viem@2.31.4:
+    resolution: {integrity: sha512-0UZ/asvzl6p44CIBRDbwEcn3HXIQQurBZcMo5qmLhQ8s27Ockk+RYohgTLlpLvkYs8/t4UUEREAbHLuek1kXcw==}
     peerDependencies:
       typescript: '>=5.0.4'
     peerDependenciesMeta:
@@ -7741,18 +7741,18 @@ snapshots:
     transitivePeerDependencies:
       - debug
 
-  '@ledgerhq/devices@8.4.6':
+  '@ledgerhq/devices@8.4.7':
     dependencies:
-      '@ledgerhq/errors': 6.21.0
+      '@ledgerhq/errors': 6.22.0
       '@ledgerhq/logs': 6.13.0
       rxjs: 7.8.2
       semver: 7.7.2
 
-  '@ledgerhq/domain-service@1.2.32':
+  '@ledgerhq/domain-service@1.2.33':
     dependencies:
-      '@ledgerhq/errors': 6.21.0
+      '@ledgerhq/errors': 6.22.0
       '@ledgerhq/logs': 6.13.0
-      '@ledgerhq/types-live': 6.73.0
+      '@ledgerhq/types-live': 6.74.0
       axios: 1.7.7
       eip55: 2.1.1
       react: 18.3.1
@@ -7760,7 +7760,7 @@ snapshots:
     transitivePeerDependencies:
       - debug
 
-  '@ledgerhq/errors@6.21.0': {}
+  '@ledgerhq/errors@6.22.0': {}
 
   '@ledgerhq/evm-tools@1.6.4':
     dependencies:
@@ -7773,49 +7773,49 @@ snapshots:
     transitivePeerDependencies:
       - debug
 
-  '@ledgerhq/hw-app-eth@6.45.7':
+  '@ledgerhq/hw-app-eth@6.45.8':
     dependencies:
       '@ethersproject/abi': 5.8.0
       '@ethersproject/rlp': 5.8.0
       '@ethersproject/transactions': 5.8.0
       '@ledgerhq/cryptoassets-evm-signatures': 13.5.8
-      '@ledgerhq/domain-service': 1.2.32
-      '@ledgerhq/errors': 6.21.0
+      '@ledgerhq/domain-service': 1.2.33
+      '@ledgerhq/errors': 6.22.0
       '@ledgerhq/evm-tools': 1.6.4
-      '@ledgerhq/hw-transport': 6.31.6
-      '@ledgerhq/hw-transport-mocker': 6.29.6
+      '@ledgerhq/hw-transport': 6.31.7
+      '@ledgerhq/hw-transport-mocker': 6.29.7
       '@ledgerhq/logs': 6.13.0
-      '@ledgerhq/types-live': 6.73.0
+      '@ledgerhq/types-live': 6.74.0
       axios: 1.7.7
       bignumber.js: 9.3.0
       semver: 7.7.2
     transitivePeerDependencies:
       - debug
 
-  '@ledgerhq/hw-transport-mocker@6.29.6':
+  '@ledgerhq/hw-transport-mocker@6.29.7':
     dependencies:
-      '@ledgerhq/hw-transport': 6.31.6
+      '@ledgerhq/hw-transport': 6.31.7
       '@ledgerhq/logs': 6.13.0
       rxjs: 7.8.2
 
-  '@ledgerhq/hw-transport-webhid@6.30.2':
+  '@ledgerhq/hw-transport-webhid@6.30.3':
     dependencies:
-      '@ledgerhq/devices': 8.4.6
-      '@ledgerhq/errors': 6.21.0
-      '@ledgerhq/hw-transport': 6.31.6
+      '@ledgerhq/devices': 8.4.7
+      '@ledgerhq/errors': 6.22.0
+      '@ledgerhq/hw-transport': 6.31.7
       '@ledgerhq/logs': 6.13.0
 
-  '@ledgerhq/hw-transport-webusb@6.29.6':
+  '@ledgerhq/hw-transport-webusb@6.29.7':
     dependencies:
-      '@ledgerhq/devices': 8.4.6
-      '@ledgerhq/errors': 6.21.0
-      '@ledgerhq/hw-transport': 6.31.6
+      '@ledgerhq/devices': 8.4.7
+      '@ledgerhq/errors': 6.22.0
+      '@ledgerhq/hw-transport': 6.31.7
       '@ledgerhq/logs': 6.13.0
 
-  '@ledgerhq/hw-transport@6.31.6':
+  '@ledgerhq/hw-transport@6.31.7':
     dependencies:
-      '@ledgerhq/devices': 8.4.6
-      '@ledgerhq/errors': 6.21.0
+      '@ledgerhq/devices': 8.4.7
+      '@ledgerhq/errors': 6.22.0
       '@ledgerhq/logs': 6.13.0
       events: 3.3.0
 
@@ -7826,7 +7826,7 @@ snapshots:
 
   '@ledgerhq/logs@6.13.0': {}
 
-  '@ledgerhq/types-live@6.73.0':
+  '@ledgerhq/types-live@6.74.0':
     dependencies:
       bignumber.js: 9.3.0
       rxjs: 7.8.2
@@ -7886,7 +7886,7 @@ snapshots:
 
   '@popperjs/core@2.11.8': {}
 
-  '@rolldown/pluginutils@1.0.0-beta.11': {}
+  '@rolldown/pluginutils@1.0.0-beta.19': {}
 
   '@rollup/plugin-babel@5.3.1(@babel/core@7.27.4)(@types/babel__core@7.20.5)(rollup@2.79.2)':
     dependencies:
@@ -8446,12 +8446,12 @@ snapshots:
       '@typescript-eslint/types': 8.34.1
       eslint-visitor-keys: 4.2.1
 
-  '@vitejs/plugin-react@4.5.2(vite@6.3.5(@types/node@22.15.32)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.43.0)(yaml@2.8.0))':
+  '@vitejs/plugin-react@4.6.0(vite@6.3.5(@types/node@22.15.32)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.43.0)(yaml@2.8.0))':
     dependencies:
       '@babel/core': 7.27.4
       '@babel/plugin-transform-react-jsx-self': 7.27.1(@babel/core@7.27.4)
       '@babel/plugin-transform-react-jsx-source': 7.27.1(@babel/core@7.27.4)
-      '@rolldown/pluginutils': 1.0.0-beta.11
+      '@rolldown/pluginutils': 1.0.0-beta.19
       '@types/babel__core': 7.20.5
       react-refresh: 0.17.0
       vite: 6.3.5(@types/node@22.15.32)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.43.0)(yaml@2.8.0)
@@ -9554,10 +9554,10 @@ snapshots:
 
   eslint-plugin-import-alias@1.2.0: {}
 
-  eslint-plugin-prettier@5.5.0(eslint-config-prettier@10.1.5(eslint@9.29.0(jiti@2.4.2)))(eslint@9.29.0(jiti@2.4.2))(prettier@3.5.3):
+  eslint-plugin-prettier@5.5.0(eslint-config-prettier@10.1.5(eslint@9.29.0(jiti@2.4.2)))(eslint@9.29.0(jiti@2.4.2))(prettier@3.6.0):
     dependencies:
       eslint: 9.29.0(jiti@2.4.2)
-      prettier: 3.5.3
+      prettier: 3.6.0
       prettier-linter-helpers: 1.0.0
       synckit: 0.11.8
     optionalDependencies:
@@ -11298,11 +11298,11 @@ snapshots:
     dependencies:
       fast-diff: 1.3.0
 
-  prettier-plugin-tailwindcss@0.6.13(prettier@3.5.3):
+  prettier-plugin-tailwindcss@0.6.13(prettier@3.6.0):
     dependencies:
-      prettier: 3.5.3
+      prettier: 3.6.0
 
-  prettier@3.5.3: {}
+  prettier@3.6.0: {}
 
   pretty-bytes@5.6.0: {}
 
@@ -12611,7 +12611,7 @@ snapshots:
       spdx-correct: 3.2.0
       spdx-expression-parse: 3.0.1
 
-  viem@2.31.3(typescript@5.8.3):
+  viem@2.31.4(typescript@5.8.3):
     dependencies:
       '@noble/curves': 1.9.2
       '@noble/hashes': 1.8.0
