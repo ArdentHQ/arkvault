@@ -122,7 +122,7 @@ const Votes = ({ votes, activeValidators }: VotesProperties) => {
 				<p className="text-theme-secondary-700 dark:text-theme-dark-200 text-sm md:text-base md:leading-5">
 					{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.VOTING_FOR")}
 				</p>
-				<div className="xs:max-w-32 max-w-28 truncate sm:max-w-40 md:max-w-48">
+				<div className="xs:max-w-32 max-w-28 truncate sm:max-w-40 md:max-w-60">
 					<ValidatorName
 						validatorName={validator.username() || validator.address()}
 						className="dark:text-theme-dark-50 text-sm md:text-base md:leading-5"
