@@ -142,7 +142,7 @@ const NodeStatusNode = ({ network, hosts }: { network: Networks.Network; hosts: 
 				<NetworkIcon network={network} size="sm" className="" showTooltip={false} isCompact />
 			</div>
 
-			<div className="grow font-semibold dim:text-theme-dim-200">{networkDisplayName(network)}</div>
+			<div className="dim:text-theme-dim-200 grow font-semibold">{networkDisplayName(network)}</div>
 
 			<div className="cursor-pointer">
 				{results.every((r) => r === true) && (

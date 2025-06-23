@@ -34,7 +34,7 @@ export const SideBar: React.FC<Properties> = ({ activeItem, handleActiveItem, it
 
 	return (
 		<>
-			<div className="border-theme-secondary-300 bg-theme-secondary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 relative -mx-6 -mt-4 border-t px-6 py-2 md:m-0 md:border-t-0 md:bg-transparent md:p-0 lg:hidden dark:bg-black dark:md:bg-transparent dim:bg-theme-dim-950 dim:md:bg-transparent">
+			<div className="border-theme-secondary-300 bg-theme-secondary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 dim:bg-theme-dim-950 dim:md:bg-transparent relative -mx-6 -mt-4 border-t px-6 py-2 md:m-0 md:border-t-0 md:bg-transparent md:p-0 lg:hidden dark:bg-black dark:md:bg-transparent">
 				<Dropdown
 					placement="bottom-start"
 					wrapperClass="sm:w-full px-6 sm:px-6 md:px-10 -mt-2"
