@@ -3,6 +3,9 @@ import React, { JSX } from "react";
 import { Contracts, DTO } from "@/app/lib/profiles";
 import { useTranslation } from "react-i18next";
 import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
+import { configManager } from "@/app/lib/mainsail";
+import { BigNumber } from "@/app/lib/helpers";
+import { UnitConverter } from "@arkecosystem/typescript-crypto";
 
 type ExtendedTransactionData = DTO.ExtendedConfirmedTransactionData | DTO.ExtendedSignedTransactionData;
 
@@ -72,14 +75,45 @@ export const TransactionTotalLabel = ({
 	const currency = transaction.wallet().currency();
 	const returnedAmount = calculateReturnedAmount(transaction);
 
+	const getTotal = () => {
+		if (transaction.isValidatorRegistration()) {
+			if ("isSuccess" in transaction && transaction.isSuccess()) {
+				return transaction.total();
+			}
+
+			return BigNumber.make(transaction.total())
+				.minus(UnitConverter.formatUnits(configManager.getMilestone()["validatorRegistrationFee"] ?? 0, "ARK"))
+				.toNumber();
+		}
+
+		// For validator resignation, we need to manually add the fee to the total
+		if (transaction.isValidatorResignation() && "isSuccess" in transaction && transaction.isSuccess()) {
+			return BigNumber.make(
+				UnitConverter.formatUnits(configManager.getMilestone()["validatorRegistrationFee"] ?? 0, "ARK"),
+			)
+				.minus(transaction.total())
+				.toNumber();
+		}
+
+		return transaction.total();
+	};
+
+	const getIsNegative = () => {
+		if (transaction.isValidatorResignation() && "isSuccess" in transaction && transaction.isSuccess()) {
+			return getTotal() < 0;
+		}
+
+		return transaction.isSent();
+	};
+
 	if (hideStyles) {
 		return (
 			<Amount
 				showSign={false}
 				showTicker={false}
 				ticker={currency}
-				value={transaction.total()}
-				isNegative={transaction.isSent()}
+				value={getTotal()}
+				isNegative={getIsNegative()}
 				className="text-sm font-semibold"
 				allowHideBalance
 				profile={profile}
@@ -89,8 +123,8 @@ export const TransactionTotalLabel = ({
 
 	return (
 		<AmountLabel
-			value={transaction.total()}
-			isNegative={transaction.isSent()}
+			value={getTotal()}
+			isNegative={getIsNegative()}
 			ticker={currency}
 			hideSign={transaction.isReturn()}
 			isCompact
