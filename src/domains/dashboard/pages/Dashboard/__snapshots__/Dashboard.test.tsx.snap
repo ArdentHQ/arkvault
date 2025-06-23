@@ -1178,7 +1178,7 @@ exports[`Dashboard > should render 1`] = `
                           Voting for
                         </p>
                         <div
-                          class="xs:max-w-32 max-w-28 truncate sm:max-w-40 md:max-w-48"
+                          class="xs:max-w-32 max-w-28 truncate sm:max-w-40 md:max-w-60"
                         >
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
