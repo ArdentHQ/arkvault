@@ -802,7 +802,7 @@ exports[`Servers Settings > should render servers settings 1`] = `
                 class="mb-4 md:-mt-4 lg:my-0"
               >
                 <div
-                  class="border-theme-secondary-300 bg-theme-secondary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 relative -mx-6 -mt-4 border-t px-6 py-2 md:m-0 md:border-t-0 md:bg-transparent md:p-0 lg:hidden dark:bg-black dark:md:bg-transparent dim:bg-theme-dim-950 dim:md:bg-transparent"
+                  class="border-theme-secondary-300 bg-theme-secondary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 dim:bg-theme-dim-950 dim:md:bg-transparent relative -mx-6 -mt-4 border-t px-6 py-2 md:m-0 md:border-t-0 md:bg-transparent md:p-0 lg:hidden dark:bg-black dark:md:bg-transparent"
                 >
                   <div
                     aria-expanded="false"
@@ -923,7 +923,7 @@ exports[`Servers Settings > should render servers settings 1`] = `
                     class="relative flex flex-col"
                   >
                     <div
-                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-700 sm:border-theme-secondary-300 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6 dim:border-theme-dim-700 dim:bg-theme-dim-950"
+                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-700 sm:border-theme-secondary-300 dim:border-theme-dim-700 dim:bg-theme-dim-950 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6"
                     >
                       <h2
                         class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mb-0 text-base font-semibold"
@@ -935,7 +935,7 @@ exports[`Servers Settings > should render servers settings 1`] = `
                       class="pt-4 pb-6 sm:px-6"
                     >
                       <ul
-                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed dim:[&>li]:border-theme-dim-700 [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
                         data-testid="list-divided__items"
                       >
                         <li
@@ -1062,7 +1062,7 @@ exports[`Servers Settings > should render servers settings 1`] = `
                                   </div>
                                 </div>
                                 <div
-                                  class="grow font-semibold dim:text-theme-dim-200"
+                                  class="dim:text-theme-dim-200 grow font-semibold"
                                 >
                                   Mainsail Devnet
                                 </div>
@@ -1121,7 +1121,7 @@ exports[`Servers Settings > should render servers settings 1`] = `
                     class="relative flex flex-col"
                   >
                     <div
-                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-700 sm:border-theme-secondary-300 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6 dim:border-theme-dim-700 dim:bg-theme-dim-950"
+                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-700 sm:border-theme-secondary-300 dim:border-theme-dim-700 dim:bg-theme-dim-950 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6"
                     >
                       <h2
                         class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mb-0 text-base font-semibold"
@@ -2143,7 +2143,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                 class="mb-4 md:-mt-4 lg:my-0"
               >
                 <div
-                  class="border-theme-secondary-300 bg-theme-secondary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 relative -mx-6 -mt-4 border-t px-6 py-2 md:m-0 md:border-t-0 md:bg-transparent md:p-0 lg:hidden dark:bg-black dark:md:bg-transparent dim:bg-theme-dim-950 dim:md:bg-transparent"
+                  class="border-theme-secondary-300 bg-theme-secondary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 dim:bg-theme-dim-950 dim:md:bg-transparent relative -mx-6 -mt-4 border-t px-6 py-2 md:m-0 md:border-t-0 md:bg-transparent md:p-0 lg:hidden dark:bg-black dark:md:bg-transparent"
                 >
                   <div
                     aria-expanded="false"
@@ -2264,7 +2264,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                     class="relative flex flex-col"
                   >
                     <div
-                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-700 sm:border-theme-secondary-300 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6 dim:border-theme-dim-700 dim:bg-theme-dim-950"
+                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-700 sm:border-theme-secondary-300 dim:border-theme-dim-700 dim:bg-theme-dim-950 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6"
                     >
                       <h2
                         class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mb-0 text-base font-semibold"
@@ -2276,7 +2276,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                       class="pt-4 pb-6 sm:px-6"
                     >
                       <ul
-                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed dim:[&>li]:border-theme-dim-700 [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
                         data-testid="list-divided__items"
                       >
                         <li
@@ -2402,7 +2402,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                   </div>
                                 </div>
                                 <div
-                                  class="grow font-semibold dim:text-theme-dim-200"
+                                  class="dim:text-theme-dim-200 grow font-semibold"
                                 >
                                   Mainsail Devnet
                                 </div>
@@ -2492,7 +2492,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                     class="relative flex flex-col"
                   >
                     <div
-                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-700 sm:border-theme-secondary-300 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6 dim:border-theme-dim-700 dim:bg-theme-dim-950"
+                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-700 sm:border-theme-secondary-300 dim:border-theme-dim-700 dim:bg-theme-dim-950 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6"
                     >
                       <h2
                         class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mb-0 text-base font-semibold"
@@ -3824,7 +3824,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                 class="mb-4 md:-mt-4 lg:my-0"
               >
                 <div
-                  class="border-theme-secondary-300 bg-theme-secondary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 relative -mx-6 -mt-4 border-t px-6 py-2 md:m-0 md:border-t-0 md:bg-transparent md:p-0 lg:hidden dark:bg-black dark:md:bg-transparent dim:bg-theme-dim-950 dim:md:bg-transparent"
+                  class="border-theme-secondary-300 bg-theme-secondary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 dim:bg-theme-dim-950 dim:md:bg-transparent relative -mx-6 -mt-4 border-t px-6 py-2 md:m-0 md:border-t-0 md:bg-transparent md:p-0 lg:hidden dark:bg-black dark:md:bg-transparent"
                 >
                   <div
                     aria-expanded="false"
@@ -3945,7 +3945,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                     class="relative flex flex-col"
                   >
                     <div
-                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-700 sm:border-theme-secondary-300 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6 dim:border-theme-dim-700 dim:bg-theme-dim-950"
+                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-700 sm:border-theme-secondary-300 dim:border-theme-dim-700 dim:bg-theme-dim-950 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6"
                     >
                       <h2
                         class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mb-0 text-base font-semibold"
@@ -3957,7 +3957,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                       class="pt-4 pb-6 sm:px-6"
                     >
                       <ul
-                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed dim:[&>li]:border-theme-dim-700 [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
                         data-testid="list-divided__items"
                       >
                         <li
@@ -4083,7 +4083,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                   </div>
                                 </div>
                                 <div
-                                  class="grow font-semibold dim:text-theme-dim-200"
+                                  class="dim:text-theme-dim-200 grow font-semibold"
                                 >
                                   Mainsail Devnet
                                 </div>
@@ -4142,7 +4142,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                     class="relative flex flex-col"
                   >
                     <div
-                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-700 sm:border-theme-secondary-300 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6 dim:border-theme-dim-700 dim:bg-theme-dim-950"
+                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-700 sm:border-theme-secondary-300 dim:border-theme-dim-700 dim:bg-theme-dim-950 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6"
                     >
                       <h2
                         class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mb-0 text-base font-semibold"
@@ -5311,7 +5311,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                 class="mb-4 md:-mt-4 lg:my-0"
               >
                 <div
-                  class="border-theme-secondary-300 bg-theme-secondary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 relative -mx-6 -mt-4 border-t px-6 py-2 md:m-0 md:border-t-0 md:bg-transparent md:p-0 lg:hidden dark:bg-black dark:md:bg-transparent dim:bg-theme-dim-950 dim:md:bg-transparent"
+                  class="border-theme-secondary-300 bg-theme-secondary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 dim:bg-theme-dim-950 dim:md:bg-transparent relative -mx-6 -mt-4 border-t px-6 py-2 md:m-0 md:border-t-0 md:bg-transparent md:p-0 lg:hidden dark:bg-black dark:md:bg-transparent"
                 >
                   <div
                     aria-expanded="false"
@@ -5432,7 +5432,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                     class="relative flex flex-col"
                   >
                     <div
-                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-700 sm:border-theme-secondary-300 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6 dim:border-theme-dim-700 dim:bg-theme-dim-950"
+                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-700 sm:border-theme-secondary-300 dim:border-theme-dim-700 dim:bg-theme-dim-950 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6"
                     >
                       <h2
                         class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mb-0 text-base font-semibold"
@@ -5444,7 +5444,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                       class="pt-4 pb-6 sm:px-6"
                     >
                       <ul
-                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed dim:[&>li]:border-theme-dim-700 [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
                         data-testid="list-divided__items"
                       >
                         <li
@@ -5570,7 +5570,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                                   </div>
                                 </div>
                                 <div
-                                  class="grow font-semibold dim:text-theme-dim-200"
+                                  class="dim:text-theme-dim-200 grow font-semibold"
                                 >
                                   Mainsail Devnet
                                 </div>
@@ -5629,7 +5629,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                     class="relative flex flex-col"
                   >
                     <div
-                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-700 sm:border-theme-secondary-300 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6 dim:border-theme-dim-700 dim:bg-theme-dim-950"
+                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-700 sm:border-theme-secondary-300 dim:border-theme-dim-700 dim:bg-theme-dim-950 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6"
                     >
                       <h2
                         class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mb-0 text-base font-semibold"
@@ -6934,7 +6934,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                 class="mb-4 md:-mt-4 lg:my-0"
               >
                 <div
-                  class="border-theme-secondary-300 bg-theme-secondary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 relative -mx-6 -mt-4 border-t px-6 py-2 md:m-0 md:border-t-0 md:bg-transparent md:p-0 lg:hidden dark:bg-black dark:md:bg-transparent dim:bg-theme-dim-950 dim:md:bg-transparent"
+                  class="border-theme-secondary-300 bg-theme-secondary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 dim:bg-theme-dim-950 dim:md:bg-transparent relative -mx-6 -mt-4 border-t px-6 py-2 md:m-0 md:border-t-0 md:bg-transparent md:p-0 lg:hidden dark:bg-black dark:md:bg-transparent"
                 >
                   <div
                     aria-expanded="false"
@@ -7055,7 +7055,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                     class="relative flex flex-col"
                   >
                     <div
-                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-700 sm:border-theme-secondary-300 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6 dim:border-theme-dim-700 dim:bg-theme-dim-950"
+                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-700 sm:border-theme-secondary-300 dim:border-theme-dim-700 dim:bg-theme-dim-950 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6"
                     >
                       <h2
                         class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mb-0 text-base font-semibold"
@@ -7067,7 +7067,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                       class="pt-4 pb-6 sm:px-6"
                     >
                       <ul
-                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed dim:[&>li]:border-theme-dim-700 [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
                         data-testid="list-divided__items"
                       >
                         <li
@@ -7193,7 +7193,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                   </div>
                                 </div>
                                 <div
-                                  class="grow font-semibold dim:text-theme-dim-200"
+                                  class="dim:text-theme-dim-200 grow font-semibold"
                                 >
                                   Mainsail Devnet
                                 </div>
@@ -7283,7 +7283,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                     class="relative flex flex-col"
                   >
                     <div
-                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-700 sm:border-theme-secondary-300 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6 dim:border-theme-dim-700 dim:bg-theme-dim-950"
+                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-700 sm:border-theme-secondary-300 dim:border-theme-dim-700 dim:bg-theme-dim-950 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6"
                     >
                       <h2
                         class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mb-0 text-base font-semibold"
@@ -8548,7 +8548,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                 class="mb-4 md:-mt-4 lg:my-0"
               >
                 <div
-                  class="border-theme-secondary-300 bg-theme-secondary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 relative -mx-6 -mt-4 border-t px-6 py-2 md:m-0 md:border-t-0 md:bg-transparent md:p-0 lg:hidden dark:bg-black dark:md:bg-transparent dim:bg-theme-dim-950 dim:md:bg-transparent"
+                  class="border-theme-secondary-300 bg-theme-secondary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 dim:bg-theme-dim-950 dim:md:bg-transparent relative -mx-6 -mt-4 border-t px-6 py-2 md:m-0 md:border-t-0 md:bg-transparent md:p-0 lg:hidden dark:bg-black dark:md:bg-transparent"
                 >
                   <div
                     aria-expanded="false"
@@ -8669,7 +8669,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                     class="relative flex flex-col"
                   >
                     <div
-                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-700 sm:border-theme-secondary-300 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6 dim:border-theme-dim-700 dim:bg-theme-dim-950"
+                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-700 sm:border-theme-secondary-300 dim:border-theme-dim-700 dim:bg-theme-dim-950 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6"
                     >
                       <h2
                         class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mb-0 text-base font-semibold"
@@ -8681,7 +8681,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                       class="pt-4 pb-6 sm:px-6"
                     >
                       <ul
-                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed dim:[&>li]:border-theme-dim-700 [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
                         data-testid="list-divided__items"
                       >
                         <li
@@ -8807,7 +8807,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                   </div>
                                 </div>
                                 <div
-                                  class="grow font-semibold dim:text-theme-dim-200"
+                                  class="dim:text-theme-dim-200 grow font-semibold"
                                 >
                                   Mainsail Devnet
                                 </div>
@@ -8897,7 +8897,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                     class="relative flex flex-col"
                   >
                     <div
-                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-700 sm:border-theme-secondary-300 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6 dim:border-theme-dim-700 dim:bg-theme-dim-950"
+                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-700 sm:border-theme-secondary-300 dim:border-theme-dim-700 dim:bg-theme-dim-950 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6"
                     >
                       <h2
                         class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mb-0 text-base font-semibold"
@@ -10231,7 +10231,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                 class="mb-4 md:-mt-4 lg:my-0"
               >
                 <div
-                  class="border-theme-secondary-300 bg-theme-secondary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 relative -mx-6 -mt-4 border-t px-6 py-2 md:m-0 md:border-t-0 md:bg-transparent md:p-0 lg:hidden dark:bg-black dark:md:bg-transparent dim:bg-theme-dim-950 dim:md:bg-transparent"
+                  class="border-theme-secondary-300 bg-theme-secondary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 dim:bg-theme-dim-950 dim:md:bg-transparent relative -mx-6 -mt-4 border-t px-6 py-2 md:m-0 md:border-t-0 md:bg-transparent md:p-0 lg:hidden dark:bg-black dark:md:bg-transparent"
                 >
                   <div
                     aria-expanded="false"
@@ -10352,7 +10352,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                     class="relative flex flex-col"
                   >
                     <div
-                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-700 sm:border-theme-secondary-300 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6 dim:border-theme-dim-700 dim:bg-theme-dim-950"
+                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-700 sm:border-theme-secondary-300 dim:border-theme-dim-700 dim:bg-theme-dim-950 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6"
                     >
                       <h2
                         class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mb-0 text-base font-semibold"
@@ -10364,7 +10364,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                       class="pt-4 pb-6 sm:px-6"
                     >
                       <ul
-                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed dim:[&>li]:border-theme-dim-700 [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
                         data-testid="list-divided__items"
                       >
                         <li
@@ -10490,7 +10490,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                   </div>
                                 </div>
                                 <div
-                                  class="grow font-semibold dim:text-theme-dim-200"
+                                  class="dim:text-theme-dim-200 grow font-semibold"
                                 >
                                   Mainsail Devnet
                                 </div>
@@ -10580,7 +10580,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                     class="relative flex flex-col"
                   >
                     <div
-                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-700 sm:border-theme-secondary-300 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6 dim:border-theme-dim-700 dim:bg-theme-dim-950"
+                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-700 sm:border-theme-secondary-300 dim:border-theme-dim-700 dim:bg-theme-dim-950 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6"
                     >
                       <h2
                         class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mb-0 text-base font-semibold"
@@ -11981,7 +11981,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                 class="mb-4 md:-mt-4 lg:my-0"
               >
                 <div
-                  class="border-theme-secondary-300 bg-theme-secondary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 relative -mx-6 -mt-4 border-t px-6 py-2 md:m-0 md:border-t-0 md:bg-transparent md:p-0 lg:hidden dark:bg-black dark:md:bg-transparent dim:bg-theme-dim-950 dim:md:bg-transparent"
+                  class="border-theme-secondary-300 bg-theme-secondary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 dim:bg-theme-dim-950 dim:md:bg-transparent relative -mx-6 -mt-4 border-t px-6 py-2 md:m-0 md:border-t-0 md:bg-transparent md:p-0 lg:hidden dark:bg-black dark:md:bg-transparent"
                 >
                   <div
                     aria-expanded="false"
@@ -12102,7 +12102,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                     class="relative flex flex-col"
                   >
                     <div
-                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-700 sm:border-theme-secondary-300 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6 dim:border-theme-dim-700 dim:bg-theme-dim-950"
+                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-700 sm:border-theme-secondary-300 dim:border-theme-dim-700 dim:bg-theme-dim-950 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6"
                     >
                       <h2
                         class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mb-0 text-base font-semibold"
@@ -12114,7 +12114,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                       class="pt-4 pb-6 sm:px-6"
                     >
                       <ul
-                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed dim:[&>li]:border-theme-dim-700 [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
                         data-testid="list-divided__items"
                       >
                         <li
@@ -12240,7 +12240,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                   </div>
                                 </div>
                                 <div
-                                  class="grow font-semibold dim:text-theme-dim-200"
+                                  class="dim:text-theme-dim-200 grow font-semibold"
                                 >
                                   Mainsail Devnet
                                 </div>
@@ -12327,7 +12327,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                     class="relative flex flex-col"
                   >
                     <div
-                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-700 sm:border-theme-secondary-300 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6 dim:border-theme-dim-700 dim:bg-theme-dim-950"
+                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-700 sm:border-theme-secondary-300 dim:border-theme-dim-700 dim:bg-theme-dim-950 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6"
                     >
                       <h2
                         class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mb-0 text-base font-semibold"
@@ -13589,7 +13589,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                 class="mb-4 md:-mt-4 lg:my-0"
               >
                 <div
-                  class="border-theme-secondary-300 bg-theme-secondary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 relative -mx-6 -mt-4 border-t px-6 py-2 md:m-0 md:border-t-0 md:bg-transparent md:p-0 lg:hidden dark:bg-black dark:md:bg-transparent dim:bg-theme-dim-950 dim:md:bg-transparent"
+                  class="border-theme-secondary-300 bg-theme-secondary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 dim:bg-theme-dim-950 dim:md:bg-transparent relative -mx-6 -mt-4 border-t px-6 py-2 md:m-0 md:border-t-0 md:bg-transparent md:p-0 lg:hidden dark:bg-black dark:md:bg-transparent"
                 >
                   <div
                     aria-expanded="false"
@@ -13710,7 +13710,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                     class="relative flex flex-col"
                   >
                     <div
-                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-700 sm:border-theme-secondary-300 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6 dim:border-theme-dim-700 dim:bg-theme-dim-950"
+                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-700 sm:border-theme-secondary-300 dim:border-theme-dim-700 dim:bg-theme-dim-950 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6"
                     >
                       <h2
                         class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mb-0 text-base font-semibold"
@@ -13722,7 +13722,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                       class="pt-4 pb-6 sm:px-6"
                     >
                       <ul
-                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed dim:[&>li]:border-theme-dim-700 [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
                         data-testid="list-divided__items"
                       >
                         <li
@@ -13848,7 +13848,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                   </div>
                                 </div>
                                 <div
-                                  class="grow font-semibold dim:text-theme-dim-200"
+                                  class="dim:text-theme-dim-200 grow font-semibold"
                                 >
                                   Mainsail Devnet
                                 </div>
@@ -13935,7 +13935,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                     class="relative flex flex-col"
                   >
                     <div
-                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-700 sm:border-theme-secondary-300 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6 dim:border-theme-dim-700 dim:bg-theme-dim-950"
+                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-700 sm:border-theme-secondary-300 dim:border-theme-dim-700 dim:bg-theme-dim-950 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6"
                     >
                       <h2
                         class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mb-0 text-base font-semibold"

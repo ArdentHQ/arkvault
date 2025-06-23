@@ -3,7 +3,7 @@
 exports[`SideBar > should render 1`] = `
 <DocumentFragment>
   <div
-    class="border-theme-secondary-300 bg-theme-secondary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 relative -mx-6 -mt-4 border-t px-6 py-2 md:m-0 md:border-t-0 md:bg-transparent md:p-0 lg:hidden dark:bg-black dark:md:bg-transparent dim:bg-theme-dim-950 dim:md:bg-transparent"
+    class="border-theme-secondary-300 bg-theme-secondary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 dim:bg-theme-dim-950 dim:md:bg-transparent relative -mx-6 -mt-4 border-t px-6 py-2 md:m-0 md:border-t-0 md:bg-transparent md:p-0 lg:hidden dark:bg-black dark:md:bg-transparent"
   >
     <div
       aria-expanded="false"
@@ -103,7 +103,7 @@ exports[`SideBar > should render 1`] = `
 exports[`SideBar > should render responsive dropdown 1`] = `
 <DocumentFragment>
   <div
-    class="border-theme-secondary-300 bg-theme-secondary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 relative -mx-6 -mt-4 border-t px-6 py-2 md:m-0 md:border-t-0 md:bg-transparent md:p-0 lg:hidden dark:bg-black dark:md:bg-transparent dim:bg-theme-dim-950 dim:md:bg-transparent"
+    class="border-theme-secondary-300 bg-theme-secondary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 dim:bg-theme-dim-950 dim:md:bg-transparent relative -mx-6 -mt-4 border-t px-6 py-2 md:m-0 md:border-t-0 md:bg-transparent md:p-0 lg:hidden dark:bg-black dark:md:bg-transparent"
   >
     <div
       aria-controls="«r2»"
@@ -204,7 +204,7 @@ exports[`SideBar > should render responsive dropdown 1`] = `
 exports[`SideBar > should render responsive dropdown 2`] = `
 <DocumentFragment>
   <div
-    class="border-theme-secondary-300 bg-theme-secondary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 relative -mx-6 -mt-4 border-t px-6 py-2 md:m-0 md:border-t-0 md:bg-transparent md:p-0 lg:hidden dark:bg-black dark:md:bg-transparent dim:bg-theme-dim-950 dim:md:bg-transparent"
+    class="border-theme-secondary-300 bg-theme-secondary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 dim:bg-theme-dim-950 dim:md:bg-transparent relative -mx-6 -mt-4 border-t px-6 py-2 md:m-0 md:border-t-0 md:bg-transparent md:p-0 lg:hidden dark:bg-black dark:md:bg-transparent"
   >
     <div
       aria-controls="«r5»"
@@ -305,7 +305,7 @@ exports[`SideBar > should render responsive dropdown 2`] = `
 exports[`SideBar > should render responsive dropdown 3`] = `
 <DocumentFragment>
   <div
-    class="border-theme-secondary-300 bg-theme-secondary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 relative -mx-6 -mt-4 border-t px-6 py-2 md:m-0 md:border-t-0 md:bg-transparent md:p-0 lg:hidden dark:bg-black dark:md:bg-transparent dim:bg-theme-dim-950 dim:md:bg-transparent"
+    class="border-theme-secondary-300 bg-theme-secondary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 dim:bg-theme-dim-950 dim:md:bg-transparent relative -mx-6 -mt-4 border-t px-6 py-2 md:m-0 md:border-t-0 md:bg-transparent md:p-0 lg:hidden dark:bg-black dark:md:bg-transparent"
   >
     <div
       aria-controls="«r8»"
