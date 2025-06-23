@@ -67,6 +67,8 @@ export interface WalletData {
 	hasPassed(): boolean;
 
 	hasFailed(): boolean;
+
+	isSelected(): boolean;
 }
 
 type LedgerTransport = any;

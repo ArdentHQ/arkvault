@@ -11,7 +11,6 @@ import { WalletCapabilities } from "@/domains/portfolio/lib/wallet.capabilities"
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { useEnvironmentContext } from "@/app/contexts";
 import { useFormContext } from "react-hook-form";
-import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
 import { useTranslation } from "react-i18next";
 import { useValidation } from "@/app/hooks";
 
@@ -24,7 +23,6 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 	const validatorPublicKey = getValues("validatorPublicKey");
 
 	const { activeNetwork: network } = useActiveNetwork({ profile });
-	const { allWallets } = usePortfolio({ profile });
 	const { env } = useEnvironmentContext();
 
 	useEffect(() => {
@@ -64,9 +62,9 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 								}
 							: undefined
 					}
-					wallets={allWallets}
+					wallets={profile.wallets().values()}
 					profile={profile}
-					disabled={allWallets.length === 0}
+					disabled={profile.wallets().count() === 0}
 					onChange={handleSelectSender}
 					disableAction={(wallet) => !WalletCapabilities(wallet).canSendValidatorRegistration()}
 				/>

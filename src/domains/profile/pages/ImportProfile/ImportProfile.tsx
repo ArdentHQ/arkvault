@@ -10,7 +10,6 @@ import { ReadableFile } from "@/app/hooks/use-files";
 import { ProcessingImport } from "@/domains/profile/pages/ImportProfile/ProcessingImportStep";
 import { ImportProfileForm } from "@/domains/profile/pages/ImportProfile/ProfileFormStep";
 import { SelectFileStep } from "@/domains/profile/pages/ImportProfile/SelectFileStep";
-import { SelectedAddresses } from "@/domains/portfolio/hooks/use-portfolio";
 
 enum Step {
 	SelectFileStep = 1,
@@ -35,15 +34,11 @@ export const ImportProfile = () => {
 	};
 
 	const handleProfileSave = async (submittedProfile) => {
-		const selectedAddresses = SelectedAddresses({ profile: submittedProfile });
 		// If imported profile doesn't have selected addresses, mark them all as selected.
-		if (!selectedAddresses.hasSelected()) {
-			await selectedAddresses.set(
-				submittedProfile
-					.wallets()
-					.values()
-					.map((wallet) => wallet.address()),
-			);
+		if (submittedProfile.wallets().selected().length === 0) {
+			for (const wallet of submittedProfile.wallets().values()) {
+				wallet.mutator().isSelected(true)
+			}
 		}
 
 		await persist();

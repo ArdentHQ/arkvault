@@ -703,4 +703,12 @@ export interface IReadWriteWallet {
 	 * @memberof IReadWriteWallet
 	 */
 	signatoryFactory(): ISignatoryFactory;
+
+	/**
+	 * Returns whether wallet has selected flag on
+	 *
+	 * @return {boolean}
+	 * @memberof IReadWriteWallet
+	 */
+	isSelected(): boolean;
 }
