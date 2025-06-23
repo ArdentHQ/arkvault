@@ -32,7 +32,6 @@ export default [
 				...globals.browser,
 				...globals.node,
 				...globals.vitest,
-				JSX: true,
 				React: true,
 				NodeJS: true,
 			},

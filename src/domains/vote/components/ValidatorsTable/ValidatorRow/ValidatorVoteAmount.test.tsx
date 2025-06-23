@@ -1,7 +1,7 @@
 import { Contracts, ReadOnlyWallet } from "@/app/lib/profiles";
 import { renderHook } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import React from "react";
+import React, { JSX } from "react";
 import { useTranslation } from "react-i18next";
 
 import { ValidatorVoteAmount } from "./ValidatorVoteAmount";
@@ -52,7 +52,6 @@ describe("ValidatorVoteAmount", () => {
 			},
 		];
 
-		// eslint-disable-next-line react/display-name
 		Component = () => (
 			<Wrapper>
 				<ValidatorVoteAmount

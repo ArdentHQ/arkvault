@@ -26,6 +26,7 @@ const publicBaseUrl = "https://dwallets-evm.mainsailhq.com";
 
 const publicApiUrl = publicBaseUrl + "/api";
 const txApiUrl = "https://dwallets-evm.mainsailhq.com/tx/api";
+const txApiUrlConfiguration = "https://dwallets-evm.mainsailhq.com/tx/api/configuration";
 const evmApiUrl = "https://dwallets-evm.mainsailhq.com/evm/api";
 
 const customServerName = 'Mainsail Devnet "Peer" #1';
@@ -396,11 +397,14 @@ describe("Servers Settings", () => {
 			it("should display error message when all hosts are failing", async () => {
 				server.use(requestMock(publicBaseUrl, undefined, { status: 404 }));
 				server.use(requestMock(txApiUrl, undefined, { status: 404 }));
+				server.use(requestMock(txApiUrlConfiguration, undefined, { status: 404 }));
 				server.use(requestMock(evmApiUrl, undefined, { status: 404 }));
 
 				render(<ServersSettings />, {
 					route: `/profiles/${profile.id()}/settings/servers`,
 				});
+
+				const user = userEvent.setup();
 
 				expect(screen.getByTestId("NodesStatus")).toBeInTheDocument();
 
@@ -411,7 +415,7 @@ describe("Servers Settings", () => {
 
 				await waitFor(() => expect(screen.getAllByTestId(nodeStatusErrorTestId)).toHaveLength(1));
 
-				await userEvent.hover(screen.getByTestId(nodeStatusErrorTestId));
+				await user.hover(screen.getByTestId(nodeStatusErrorTestId));
 
 				expect(
 					screen.getByText(

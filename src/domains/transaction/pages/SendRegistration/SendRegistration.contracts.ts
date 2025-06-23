@@ -1,3 +1,4 @@
+import { JSX } from "react";
 import { Signatories } from "@/app/lib/mainsail";
 import { Contracts, DTO, Environment } from "@/app/lib/profiles";
 import { TFunction } from "i18next";
