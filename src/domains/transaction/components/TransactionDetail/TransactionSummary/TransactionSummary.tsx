@@ -32,12 +32,17 @@ export const TransactionSummary = ({
 		return !BigNumber.make(transaction.value()).isZero();
 	}, [transaction]);
 
+	const validatorFee = senderWallet.validatorFee() ?? 0;
+
 	return (
 		<DetailWrapper label={t("TRANSACTION.SUMMARY")}>
 			<div className="space-y-3 sm:space-y-0">
 				{showAmount && (
 					<>
-						<div className="flex w-full justify-between gap-2 sm:justify-start">
+						<div
+							data-testid="TransactionSummary__Amount"
+							className="flex w-full justify-between gap-2 sm:justify-start"
+						>
 							<DetailLabelText className={labelClassName}>
 								{transaction.isValidatorRegistration() ? t("COMMON.LOCKED_AMOUNT") : t("COMMON.AMOUNT")}
 							</DetailLabelText>
@@ -49,7 +54,7 @@ export const TransactionSummary = ({
 					</>
 				)}
 
-				{transaction.isValidatorResignation() && (senderWallet.validatorFee() ?? 0) > 0 && (
+				{transaction.isValidatorResignation() && validatorFee > 0 && (
 					<>
 						<div
 							data-testid="TransactionSummary__ValidatorFee"
@@ -58,10 +63,7 @@ export const TransactionSummary = ({
 							<DetailLabelText className={labelClassName}>{t("COMMON.UNLOCKED_AMOUNT")}</DetailLabelText>
 
 							<AmountLabel
-								value={UnitConverter.formatUnits(
-									BigNumber.make(senderWallet.validatorFee() ?? 0).toString(),
-									"ARK",
-								)}
+								value={UnitConverter.formatUnits(BigNumber.make(validatorFee).toString(), "ARK")}
 								isNegative={false}
 								ticker={transaction.wallet().currency()}
 								hideSign={false}
