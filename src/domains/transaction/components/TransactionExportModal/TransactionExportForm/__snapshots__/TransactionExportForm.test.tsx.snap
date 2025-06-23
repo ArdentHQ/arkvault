@@ -6,7 +6,7 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
     data-testid="TransactionExportForm"
   >
     <ul
-      class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+      class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed dim:[&>li]:border-theme-dim-700 [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
       data-testid="list-divided__items"
     >
       <li
@@ -24,7 +24,7 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
               class="flex items-center justify-between space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
                 data-testid="list-divided-item__label"
               >
                 Transactions
@@ -44,7 +44,7 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
                   <button
                     aria-checked="false"
                     aria-label="Incoming"
-                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
+                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 dim:text-theme-secondary-200 dim:border-theme-dim-700 dim-hover:border-theme-dim-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:aria-checked:bg-theme-dim-navy-950 dim:aria-checked:border-theme-navy-800 dim:aria-checked:text-theme-dim-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
                     data-testid="ButtonGroupOption"
                     role="radio"
                     type="button"
@@ -58,7 +58,7 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
                   <button
                     aria-checked="false"
                     aria-label="Outgoing"
-                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
+                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 dim:text-theme-secondary-200 dim:border-theme-dim-700 dim-hover:border-theme-dim-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:aria-checked:bg-theme-dim-navy-950 dim:aria-checked:border-theme-navy-800 dim:aria-checked:text-theme-dim-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
                     data-testid="ButtonGroupOption"
                     role="radio"
                     type="button"
@@ -72,7 +72,7 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
                   <button
                     aria-checked="false"
                     aria-label="All"
-                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
+                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 dim:text-theme-secondary-200 dim:border-theme-dim-700 dim-hover:border-theme-dim-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:aria-checked:bg-theme-dim-navy-950 dim:aria-checked:border-theme-navy-800 dim:aria-checked:text-theme-dim-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
                     data-testid="ButtonGroupOption"
                     role="radio"
                     type="button"
@@ -104,7 +104,7 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
               class="flex items-center justify-between space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
                 data-testid="list-divided-item__label"
               >
                 Date Range
@@ -179,7 +179,7 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
       CSV Settings
     </div>
     <ul
-      class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+      class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed dim:[&>li]:border-theme-dim-700 [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
       data-testid="list-divided__items"
     >
       <li
@@ -197,7 +197,7 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
               class="flex items-center justify-between space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
                 data-testid="list-divided-item__label"
               >
                 Include Header Row
@@ -220,7 +220,7 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
                   class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                 >
                   <span
-                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 dim:bg-theme-dim-500 h-4 w-4 handle-inner"
                   />
                 </div>
               </label>
@@ -243,7 +243,7 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
               class="flex items-center justify-between space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
                 data-testid="list-divided-item__label"
               >
                 Delimiter
@@ -325,7 +325,7 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
       Columns
     </div>
     <ul
-      class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+      class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed dim:[&>li]:border-theme-dim-700 [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
       data-testid="list-divided__items"
     >
       <li
@@ -343,7 +343,7 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
               class="flex items-center justify-between space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
                 data-testid="list-divided-item__label"
               >
                 Transaction ID
@@ -366,7 +366,7 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
                   class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                 >
                   <span
-                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 dim:bg-theme-dim-500 h-4 w-4 handle-inner"
                   />
                 </div>
               </label>
@@ -389,7 +389,7 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
               class="flex items-center justify-between space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
                 data-testid="list-divided-item__label"
               >
                 Transaction Date
@@ -412,7 +412,7 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
                   class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                 >
                   <span
-                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 dim:bg-theme-dim-500 h-4 w-4 handle-inner"
                   />
                 </div>
               </label>
@@ -435,7 +435,7 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
               class="flex items-center justify-between space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
                 data-testid="list-divided-item__label"
               >
                 Sender / Recipient
@@ -458,7 +458,7 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
                   class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                 >
                   <span
-                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 dim:bg-theme-dim-500 h-4 w-4 handle-inner"
                   />
                 </div>
               </label>
@@ -481,7 +481,7 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
               class="flex items-center justify-between space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
                 data-testid="list-divided-item__label"
               >
                 Crypto Amount
@@ -504,7 +504,7 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
                   class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                 >
                   <span
-                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 dim:bg-theme-dim-500 h-4 w-4 handle-inner"
                   />
                 </div>
               </label>
@@ -527,7 +527,7 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
               class="flex items-center justify-between space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
                 data-testid="list-divided-item__label"
               >
                 Fiat Amount
@@ -550,7 +550,7 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
                   class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                 >
                   <span
-                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 dim:bg-theme-dim-500 h-4 w-4 handle-inner"
                   />
                 </div>
               </label>
@@ -595,7 +595,7 @@ exports[`TransactionExportForm > should render in lg 1`] = `
     data-testid="TransactionExportForm"
   >
     <ul
-      class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+      class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed dim:[&>li]:border-theme-dim-700 [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
       data-testid="list-divided__items"
     >
       <li
@@ -613,7 +613,7 @@ exports[`TransactionExportForm > should render in lg 1`] = `
               class="flex items-center justify-between space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
                 data-testid="list-divided-item__label"
               >
                 Transactions
@@ -633,7 +633,7 @@ exports[`TransactionExportForm > should render in lg 1`] = `
                   <button
                     aria-checked="false"
                     aria-label="Incoming"
-                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
+                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 dim:text-theme-secondary-200 dim:border-theme-dim-700 dim-hover:border-theme-dim-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:aria-checked:bg-theme-dim-navy-950 dim:aria-checked:border-theme-navy-800 dim:aria-checked:text-theme-dim-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
                     data-testid="ButtonGroupOption"
                     role="radio"
                     type="button"
@@ -647,7 +647,7 @@ exports[`TransactionExportForm > should render in lg 1`] = `
                   <button
                     aria-checked="false"
                     aria-label="Outgoing"
-                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
+                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 dim:text-theme-secondary-200 dim:border-theme-dim-700 dim-hover:border-theme-dim-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:aria-checked:bg-theme-dim-navy-950 dim:aria-checked:border-theme-navy-800 dim:aria-checked:text-theme-dim-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
                     data-testid="ButtonGroupOption"
                     role="radio"
                     type="button"
@@ -661,7 +661,7 @@ exports[`TransactionExportForm > should render in lg 1`] = `
                   <button
                     aria-checked="false"
                     aria-label="All"
-                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
+                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 dim:text-theme-secondary-200 dim:border-theme-dim-700 dim-hover:border-theme-dim-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:aria-checked:bg-theme-dim-navy-950 dim:aria-checked:border-theme-navy-800 dim:aria-checked:text-theme-dim-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
                     data-testid="ButtonGroupOption"
                     role="radio"
                     type="button"
@@ -693,7 +693,7 @@ exports[`TransactionExportForm > should render in lg 1`] = `
               class="flex items-center justify-between space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
                 data-testid="list-divided-item__label"
               >
                 Date Range
@@ -768,7 +768,7 @@ exports[`TransactionExportForm > should render in lg 1`] = `
       CSV Settings
     </div>
     <ul
-      class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+      class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed dim:[&>li]:border-theme-dim-700 [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
       data-testid="list-divided__items"
     >
       <li
@@ -786,7 +786,7 @@ exports[`TransactionExportForm > should render in lg 1`] = `
               class="flex items-center justify-between space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
                 data-testid="list-divided-item__label"
               >
                 Include Header Row
@@ -809,7 +809,7 @@ exports[`TransactionExportForm > should render in lg 1`] = `
                   class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                 >
                   <span
-                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 dim:bg-theme-dim-500 h-4 w-4 handle-inner"
                   />
                 </div>
               </label>
@@ -832,7 +832,7 @@ exports[`TransactionExportForm > should render in lg 1`] = `
               class="flex items-center justify-between space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
                 data-testid="list-divided-item__label"
               >
                 Delimiter
@@ -914,7 +914,7 @@ exports[`TransactionExportForm > should render in lg 1`] = `
       Columns
     </div>
     <ul
-      class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+      class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed dim:[&>li]:border-theme-dim-700 [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
       data-testid="list-divided__items"
     >
       <li
@@ -932,7 +932,7 @@ exports[`TransactionExportForm > should render in lg 1`] = `
               class="flex items-center justify-between space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
                 data-testid="list-divided-item__label"
               >
                 Transaction ID
@@ -955,7 +955,7 @@ exports[`TransactionExportForm > should render in lg 1`] = `
                   class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                 >
                   <span
-                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 dim:bg-theme-dim-500 h-4 w-4 handle-inner"
                   />
                 </div>
               </label>
@@ -978,7 +978,7 @@ exports[`TransactionExportForm > should render in lg 1`] = `
               class="flex items-center justify-between space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
                 data-testid="list-divided-item__label"
               >
                 Transaction Date
@@ -1001,7 +1001,7 @@ exports[`TransactionExportForm > should render in lg 1`] = `
                   class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                 >
                   <span
-                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 dim:bg-theme-dim-500 h-4 w-4 handle-inner"
                   />
                 </div>
               </label>
@@ -1024,7 +1024,7 @@ exports[`TransactionExportForm > should render in lg 1`] = `
               class="flex items-center justify-between space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
                 data-testid="list-divided-item__label"
               >
                 Sender / Recipient
@@ -1047,7 +1047,7 @@ exports[`TransactionExportForm > should render in lg 1`] = `
                   class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                 >
                   <span
-                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 dim:bg-theme-dim-500 h-4 w-4 handle-inner"
                   />
                 </div>
               </label>
@@ -1070,7 +1070,7 @@ exports[`TransactionExportForm > should render in lg 1`] = `
               class="flex items-center justify-between space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
                 data-testid="list-divided-item__label"
               >
                 Crypto Amount
@@ -1093,7 +1093,7 @@ exports[`TransactionExportForm > should render in lg 1`] = `
                   class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                 >
                   <span
-                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 dim:bg-theme-dim-500 h-4 w-4 handle-inner"
                   />
                 </div>
               </label>
@@ -1138,7 +1138,7 @@ exports[`TransactionExportForm > should render in md 1`] = `
     data-testid="TransactionExportForm"
   >
     <ul
-      class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+      class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed dim:[&>li]:border-theme-dim-700 [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
       data-testid="list-divided__items"
     >
       <li
@@ -1156,7 +1156,7 @@ exports[`TransactionExportForm > should render in md 1`] = `
               class="flex items-center justify-between space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
                 data-testid="list-divided-item__label"
               >
                 Transactions
@@ -1176,7 +1176,7 @@ exports[`TransactionExportForm > should render in md 1`] = `
                   <button
                     aria-checked="false"
                     aria-label="Incoming"
-                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
+                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 dim:text-theme-secondary-200 dim:border-theme-dim-700 dim-hover:border-theme-dim-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:aria-checked:bg-theme-dim-navy-950 dim:aria-checked:border-theme-navy-800 dim:aria-checked:text-theme-dim-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
                     data-testid="ButtonGroupOption"
                     role="radio"
                     type="button"
@@ -1190,7 +1190,7 @@ exports[`TransactionExportForm > should render in md 1`] = `
                   <button
                     aria-checked="false"
                     aria-label="Outgoing"
-                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
+                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 dim:text-theme-secondary-200 dim:border-theme-dim-700 dim-hover:border-theme-dim-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:aria-checked:bg-theme-dim-navy-950 dim:aria-checked:border-theme-navy-800 dim:aria-checked:text-theme-dim-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
                     data-testid="ButtonGroupOption"
                     role="radio"
                     type="button"
@@ -1204,7 +1204,7 @@ exports[`TransactionExportForm > should render in md 1`] = `
                   <button
                     aria-checked="false"
                     aria-label="All"
-                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
+                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 dim:text-theme-secondary-200 dim:border-theme-dim-700 dim-hover:border-theme-dim-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:aria-checked:bg-theme-dim-navy-950 dim:aria-checked:border-theme-navy-800 dim:aria-checked:text-theme-dim-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
                     data-testid="ButtonGroupOption"
                     role="radio"
                     type="button"
@@ -1236,7 +1236,7 @@ exports[`TransactionExportForm > should render in md 1`] = `
               class="flex items-center justify-between space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
                 data-testid="list-divided-item__label"
               >
                 Date Range
@@ -1311,7 +1311,7 @@ exports[`TransactionExportForm > should render in md 1`] = `
       CSV Settings
     </div>
     <ul
-      class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+      class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed dim:[&>li]:border-theme-dim-700 [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
       data-testid="list-divided__items"
     >
       <li
@@ -1329,7 +1329,7 @@ exports[`TransactionExportForm > should render in md 1`] = `
               class="flex items-center justify-between space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
                 data-testid="list-divided-item__label"
               >
                 Include Header Row
@@ -1352,7 +1352,7 @@ exports[`TransactionExportForm > should render in md 1`] = `
                   class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                 >
                   <span
-                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 dim:bg-theme-dim-500 h-4 w-4 handle-inner"
                   />
                 </div>
               </label>
@@ -1375,7 +1375,7 @@ exports[`TransactionExportForm > should render in md 1`] = `
               class="flex items-center justify-between space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
                 data-testid="list-divided-item__label"
               >
                 Delimiter
@@ -1457,7 +1457,7 @@ exports[`TransactionExportForm > should render in md 1`] = `
       Columns
     </div>
     <ul
-      class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+      class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed dim:[&>li]:border-theme-dim-700 [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
       data-testid="list-divided__items"
     >
       <li
@@ -1475,7 +1475,7 @@ exports[`TransactionExportForm > should render in md 1`] = `
               class="flex items-center justify-between space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
                 data-testid="list-divided-item__label"
               >
                 Transaction ID
@@ -1498,7 +1498,7 @@ exports[`TransactionExportForm > should render in md 1`] = `
                   class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                 >
                   <span
-                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 dim:bg-theme-dim-500 h-4 w-4 handle-inner"
                   />
                 </div>
               </label>
@@ -1521,7 +1521,7 @@ exports[`TransactionExportForm > should render in md 1`] = `
               class="flex items-center justify-between space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
                 data-testid="list-divided-item__label"
               >
                 Transaction Date
@@ -1544,7 +1544,7 @@ exports[`TransactionExportForm > should render in md 1`] = `
                   class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                 >
                   <span
-                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 dim:bg-theme-dim-500 h-4 w-4 handle-inner"
                   />
                 </div>
               </label>
@@ -1567,7 +1567,7 @@ exports[`TransactionExportForm > should render in md 1`] = `
               class="flex items-center justify-between space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
                 data-testid="list-divided-item__label"
               >
                 Sender / Recipient
@@ -1590,7 +1590,7 @@ exports[`TransactionExportForm > should render in md 1`] = `
                   class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                 >
                   <span
-                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 dim:bg-theme-dim-500 h-4 w-4 handle-inner"
                   />
                 </div>
               </label>
@@ -1613,7 +1613,7 @@ exports[`TransactionExportForm > should render in md 1`] = `
               class="flex items-center justify-between space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
                 data-testid="list-divided-item__label"
               >
                 Crypto Amount
@@ -1636,7 +1636,7 @@ exports[`TransactionExportForm > should render in md 1`] = `
                   class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                 >
                   <span
-                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 dim:bg-theme-dim-500 h-4 w-4 handle-inner"
                   />
                 </div>
               </label>
@@ -1681,7 +1681,7 @@ exports[`TransactionExportForm > should render in sm 1`] = `
     data-testid="TransactionExportForm"
   >
     <ul
-      class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+      class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed dim:[&>li]:border-theme-dim-700 [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
       data-testid="list-divided__items"
     >
       <li
@@ -1699,7 +1699,7 @@ exports[`TransactionExportForm > should render in sm 1`] = `
               class="flex items-center justify-between space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
                 data-testid="list-divided-item__label"
               >
                 Transactions
@@ -1719,7 +1719,7 @@ exports[`TransactionExportForm > should render in sm 1`] = `
                   <button
                     aria-checked="false"
                     aria-label="Incoming"
-                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
+                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 dim:text-theme-secondary-200 dim:border-theme-dim-700 dim-hover:border-theme-dim-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:aria-checked:bg-theme-dim-navy-950 dim:aria-checked:border-theme-navy-800 dim:aria-checked:text-theme-dim-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
                     data-testid="ButtonGroupOption"
                     role="radio"
                     type="button"
@@ -1733,7 +1733,7 @@ exports[`TransactionExportForm > should render in sm 1`] = `
                   <button
                     aria-checked="false"
                     aria-label="Outgoing"
-                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
+                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 dim:text-theme-secondary-200 dim:border-theme-dim-700 dim-hover:border-theme-dim-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:aria-checked:bg-theme-dim-navy-950 dim:aria-checked:border-theme-navy-800 dim:aria-checked:text-theme-dim-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
                     data-testid="ButtonGroupOption"
                     role="radio"
                     type="button"
@@ -1747,7 +1747,7 @@ exports[`TransactionExportForm > should render in sm 1`] = `
                   <button
                     aria-checked="false"
                     aria-label="All"
-                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
+                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 dim:text-theme-secondary-200 dim:border-theme-dim-700 dim-hover:border-theme-dim-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:aria-checked:bg-theme-dim-navy-950 dim:aria-checked:border-theme-navy-800 dim:aria-checked:text-theme-dim-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
                     data-testid="ButtonGroupOption"
                     role="radio"
                     type="button"
@@ -1779,7 +1779,7 @@ exports[`TransactionExportForm > should render in sm 1`] = `
               class="flex items-center justify-between space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
                 data-testid="list-divided-item__label"
               >
                 Date Range
@@ -1854,7 +1854,7 @@ exports[`TransactionExportForm > should render in sm 1`] = `
       CSV Settings
     </div>
     <ul
-      class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+      class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed dim:[&>li]:border-theme-dim-700 [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
       data-testid="list-divided__items"
     >
       <li
@@ -1872,7 +1872,7 @@ exports[`TransactionExportForm > should render in sm 1`] = `
               class="flex items-center justify-between space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
                 data-testid="list-divided-item__label"
               >
                 Include Header Row
@@ -1895,7 +1895,7 @@ exports[`TransactionExportForm > should render in sm 1`] = `
                   class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                 >
                   <span
-                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 dim:bg-theme-dim-500 h-4 w-4 handle-inner"
                   />
                 </div>
               </label>
@@ -1918,7 +1918,7 @@ exports[`TransactionExportForm > should render in sm 1`] = `
               class="flex items-center justify-between space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
                 data-testid="list-divided-item__label"
               >
                 Delimiter
@@ -2000,7 +2000,7 @@ exports[`TransactionExportForm > should render in sm 1`] = `
       Columns
     </div>
     <ul
-      class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+      class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed dim:[&>li]:border-theme-dim-700 [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
       data-testid="list-divided__items"
     >
       <li
@@ -2018,7 +2018,7 @@ exports[`TransactionExportForm > should render in sm 1`] = `
               class="flex items-center justify-between space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
                 data-testid="list-divided-item__label"
               >
                 Transaction ID
@@ -2041,7 +2041,7 @@ exports[`TransactionExportForm > should render in sm 1`] = `
                   class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                 >
                   <span
-                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 dim:bg-theme-dim-500 h-4 w-4 handle-inner"
                   />
                 </div>
               </label>
@@ -2064,7 +2064,7 @@ exports[`TransactionExportForm > should render in sm 1`] = `
               class="flex items-center justify-between space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
                 data-testid="list-divided-item__label"
               >
                 Transaction Date
@@ -2087,7 +2087,7 @@ exports[`TransactionExportForm > should render in sm 1`] = `
                   class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                 >
                   <span
-                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 dim:bg-theme-dim-500 h-4 w-4 handle-inner"
                   />
                 </div>
               </label>
@@ -2110,7 +2110,7 @@ exports[`TransactionExportForm > should render in sm 1`] = `
               class="flex items-center justify-between space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
                 data-testid="list-divided-item__label"
               >
                 Sender / Recipient
@@ -2133,7 +2133,7 @@ exports[`TransactionExportForm > should render in sm 1`] = `
                   class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                 >
                   <span
-                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 dim:bg-theme-dim-500 h-4 w-4 handle-inner"
                   />
                 </div>
               </label>
@@ -2156,7 +2156,7 @@ exports[`TransactionExportForm > should render in sm 1`] = `
               class="flex items-center justify-between space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
                 data-testid="list-divided-item__label"
               >
                 Crypto Amount
@@ -2179,7 +2179,7 @@ exports[`TransactionExportForm > should render in sm 1`] = `
                   class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                 >
                   <span
-                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 dim:bg-theme-dim-500 h-4 w-4 handle-inner"
                   />
                 </div>
               </label>
@@ -2224,7 +2224,7 @@ exports[`TransactionExportForm > should render in xl 1`] = `
     data-testid="TransactionExportForm"
   >
     <ul
-      class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+      class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed dim:[&>li]:border-theme-dim-700 [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
       data-testid="list-divided__items"
     >
       <li
@@ -2242,7 +2242,7 @@ exports[`TransactionExportForm > should render in xl 1`] = `
               class="flex items-center justify-between space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
                 data-testid="list-divided-item__label"
               >
                 Transactions
@@ -2262,7 +2262,7 @@ exports[`TransactionExportForm > should render in xl 1`] = `
                   <button
                     aria-checked="false"
                     aria-label="Incoming"
-                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
+                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 dim:text-theme-secondary-200 dim:border-theme-dim-700 dim-hover:border-theme-dim-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:aria-checked:bg-theme-dim-navy-950 dim:aria-checked:border-theme-navy-800 dim:aria-checked:text-theme-dim-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
                     data-testid="ButtonGroupOption"
                     role="radio"
                     type="button"
@@ -2276,7 +2276,7 @@ exports[`TransactionExportForm > should render in xl 1`] = `
                   <button
                     aria-checked="false"
                     aria-label="Outgoing"
-                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
+                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 dim:text-theme-secondary-200 dim:border-theme-dim-700 dim-hover:border-theme-dim-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:aria-checked:bg-theme-dim-navy-950 dim:aria-checked:border-theme-navy-800 dim:aria-checked:text-theme-dim-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
                     data-testid="ButtonGroupOption"
                     role="radio"
                     type="button"
@@ -2290,7 +2290,7 @@ exports[`TransactionExportForm > should render in xl 1`] = `
                   <button
                     aria-checked="false"
                     aria-label="All"
-                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
+                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 dim:text-theme-secondary-200 dim:border-theme-dim-700 dim-hover:border-theme-dim-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:aria-checked:bg-theme-dim-navy-950 dim:aria-checked:border-theme-navy-800 dim:aria-checked:text-theme-dim-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
                     data-testid="ButtonGroupOption"
                     role="radio"
                     type="button"
@@ -2322,7 +2322,7 @@ exports[`TransactionExportForm > should render in xl 1`] = `
               class="flex items-center justify-between space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
                 data-testid="list-divided-item__label"
               >
                 Date Range
@@ -2397,7 +2397,7 @@ exports[`TransactionExportForm > should render in xl 1`] = `
       CSV Settings
     </div>
     <ul
-      class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+      class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed dim:[&>li]:border-theme-dim-700 [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
       data-testid="list-divided__items"
     >
       <li
@@ -2415,7 +2415,7 @@ exports[`TransactionExportForm > should render in xl 1`] = `
               class="flex items-center justify-between space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
                 data-testid="list-divided-item__label"
               >
                 Include Header Row
@@ -2438,7 +2438,7 @@ exports[`TransactionExportForm > should render in xl 1`] = `
                   class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                 >
                   <span
-                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 dim:bg-theme-dim-500 h-4 w-4 handle-inner"
                   />
                 </div>
               </label>
@@ -2461,7 +2461,7 @@ exports[`TransactionExportForm > should render in xl 1`] = `
               class="flex items-center justify-between space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
                 data-testid="list-divided-item__label"
               >
                 Delimiter
@@ -2543,7 +2543,7 @@ exports[`TransactionExportForm > should render in xl 1`] = `
       Columns
     </div>
     <ul
-      class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+      class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed dim:[&>li]:border-theme-dim-700 [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
       data-testid="list-divided__items"
     >
       <li
@@ -2561,7 +2561,7 @@ exports[`TransactionExportForm > should render in xl 1`] = `
               class="flex items-center justify-between space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
                 data-testid="list-divided-item__label"
               >
                 Transaction ID
@@ -2584,7 +2584,7 @@ exports[`TransactionExportForm > should render in xl 1`] = `
                   class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                 >
                   <span
-                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 dim:bg-theme-dim-500 h-4 w-4 handle-inner"
                   />
                 </div>
               </label>
@@ -2607,7 +2607,7 @@ exports[`TransactionExportForm > should render in xl 1`] = `
               class="flex items-center justify-between space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
                 data-testid="list-divided-item__label"
               >
                 Transaction Date
@@ -2630,7 +2630,7 @@ exports[`TransactionExportForm > should render in xl 1`] = `
                   class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                 >
                   <span
-                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 dim:bg-theme-dim-500 h-4 w-4 handle-inner"
                   />
                 </div>
               </label>
@@ -2653,7 +2653,7 @@ exports[`TransactionExportForm > should render in xl 1`] = `
               class="flex items-center justify-between space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
                 data-testid="list-divided-item__label"
               >
                 Sender / Recipient
@@ -2676,7 +2676,7 @@ exports[`TransactionExportForm > should render in xl 1`] = `
                   class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                 >
                   <span
-                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 dim:bg-theme-dim-500 h-4 w-4 handle-inner"
                   />
                 </div>
               </label>
@@ -2699,7 +2699,7 @@ exports[`TransactionExportForm > should render in xl 1`] = `
               class="flex items-center justify-between space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
                 data-testid="list-divided-item__label"
               >
                 Crypto Amount
@@ -2722,7 +2722,7 @@ exports[`TransactionExportForm > should render in xl 1`] = `
                   class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                 >
                   <span
-                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 dim:bg-theme-dim-500 h-4 w-4 handle-inner"
                   />
                 </div>
               </label>
@@ -2767,7 +2767,7 @@ exports[`TransactionExportForm > should render in xs 1`] = `
     data-testid="TransactionExportForm"
   >
     <ul
-      class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+      class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed dim:[&>li]:border-theme-dim-700 [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
       data-testid="list-divided__items"
     >
       <li
@@ -2785,7 +2785,7 @@ exports[`TransactionExportForm > should render in xs 1`] = `
               class="flex items-center justify-between space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
                 data-testid="list-divided-item__label"
               >
                 Transactions
@@ -2806,7 +2806,7 @@ exports[`TransactionExportForm > should render in xs 1`] = `
               <button
                 aria-checked="false"
                 aria-label="Incoming"
-                class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
+                class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 dim:text-theme-secondary-200 dim:border-theme-dim-700 dim-hover:border-theme-dim-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:aria-checked:bg-theme-dim-navy-950 dim:aria-checked:border-theme-navy-800 dim:aria-checked:text-theme-dim-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
                 data-testid="ButtonGroupOption"
                 role="radio"
                 type="button"
@@ -2820,7 +2820,7 @@ exports[`TransactionExportForm > should render in xs 1`] = `
               <button
                 aria-checked="false"
                 aria-label="Outgoing"
-                class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
+                class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 dim:text-theme-secondary-200 dim:border-theme-dim-700 dim-hover:border-theme-dim-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:aria-checked:bg-theme-dim-navy-950 dim:aria-checked:border-theme-navy-800 dim:aria-checked:text-theme-dim-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
                 data-testid="ButtonGroupOption"
                 role="radio"
                 type="button"
@@ -2834,7 +2834,7 @@ exports[`TransactionExportForm > should render in xs 1`] = `
               <button
                 aria-checked="false"
                 aria-label="All"
-                class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
+                class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 dim:text-theme-secondary-200 dim:border-theme-dim-700 dim-hover:border-theme-dim-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:aria-checked:bg-theme-dim-navy-950 dim:aria-checked:border-theme-navy-800 dim:aria-checked:text-theme-dim-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
                 data-testid="ButtonGroupOption"
                 role="radio"
                 type="button"
@@ -2864,7 +2864,7 @@ exports[`TransactionExportForm > should render in xs 1`] = `
               class="flex items-center justify-between space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
                 data-testid="list-divided-item__label"
               >
                 Date Range
@@ -2939,7 +2939,7 @@ exports[`TransactionExportForm > should render in xs 1`] = `
       CSV Settings
     </div>
     <ul
-      class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+      class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed dim:[&>li]:border-theme-dim-700 [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
       data-testid="list-divided__items"
     >
       <li
@@ -2957,7 +2957,7 @@ exports[`TransactionExportForm > should render in xs 1`] = `
               class="flex items-center justify-between space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
                 data-testid="list-divided-item__label"
               >
                 Include Header Row
@@ -2980,7 +2980,7 @@ exports[`TransactionExportForm > should render in xs 1`] = `
                   class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                 >
                   <span
-                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 dim:bg-theme-dim-500 h-4 w-4 handle-inner"
                   />
                 </div>
               </label>
@@ -3003,7 +3003,7 @@ exports[`TransactionExportForm > should render in xs 1`] = `
               class="flex items-center justify-between space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
                 data-testid="list-divided-item__label"
               >
                 Delimiter
@@ -3085,7 +3085,7 @@ exports[`TransactionExportForm > should render in xs 1`] = `
       Columns
     </div>
     <ul
-      class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+      class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed dim:[&>li]:border-theme-dim-700 [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
       data-testid="list-divided__items"
     >
       <li
@@ -3103,7 +3103,7 @@ exports[`TransactionExportForm > should render in xs 1`] = `
               class="flex items-center justify-between space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
                 data-testid="list-divided-item__label"
               >
                 Transaction ID
@@ -3126,7 +3126,7 @@ exports[`TransactionExportForm > should render in xs 1`] = `
                   class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                 >
                   <span
-                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 dim:bg-theme-dim-500 h-4 w-4 handle-inner"
                   />
                 </div>
               </label>
@@ -3149,7 +3149,7 @@ exports[`TransactionExportForm > should render in xs 1`] = `
               class="flex items-center justify-between space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
                 data-testid="list-divided-item__label"
               >
                 Transaction Date
@@ -3172,7 +3172,7 @@ exports[`TransactionExportForm > should render in xs 1`] = `
                   class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                 >
                   <span
-                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 dim:bg-theme-dim-500 h-4 w-4 handle-inner"
                   />
                 </div>
               </label>
@@ -3195,7 +3195,7 @@ exports[`TransactionExportForm > should render in xs 1`] = `
               class="flex items-center justify-between space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
                 data-testid="list-divided-item__label"
               >
                 Sender / Recipient
@@ -3218,7 +3218,7 @@ exports[`TransactionExportForm > should render in xs 1`] = `
                   class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                 >
                   <span
-                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 dim:bg-theme-dim-500 h-4 w-4 handle-inner"
                   />
                 </div>
               </label>
@@ -3241,7 +3241,7 @@ exports[`TransactionExportForm > should render in xs 1`] = `
               class="flex items-center justify-between space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
                 data-testid="list-divided-item__label"
               >
                 Crypto Amount
@@ -3264,7 +3264,7 @@ exports[`TransactionExportForm > should render in xs 1`] = `
                   class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                 >
                   <span
-                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 dim:bg-theme-dim-500 h-4 w-4 handle-inner"
                   />
                 </div>
               </label>
