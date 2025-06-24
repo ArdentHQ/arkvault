@@ -819,12 +819,12 @@ describe("ExchangeForm", () => {
 			from: { name: "Bitcoin", ticker: "BTC" },
 			to: { name: "Ethereum", ticker: "ETH" },
 		});
-		const user = userEvent.setup();
 
 		const recipientDropdown = screen.getAllByTestId("SelectDropdown__input")[2];
 
+		const user = userEvent.setup();
 		await user.clear(recipientDropdown);
-		await user.type(recipientDropdown, "payoutAddress");
+		await user.paste("payoutAddress");
 
 		await waitFor(() => {
 			expect(recipientDropdown).toHaveValue("payoutAddress");
@@ -878,7 +878,9 @@ describe("ExchangeForm", () => {
 
 		const refundDropdown = screen.getAllByTestId("SelectDropdown__input")[3];
 
-		await userEvent.type(refundDropdown, "refundAddress");
+		const user = userEvent.setup();
+		await user.clear(refundDropdown);
+		await user.paste("refundAddress");
 
 		await waitFor(() => {
 			expect(refundDropdown).toHaveValue("refundAddress");
@@ -925,7 +927,9 @@ describe("ExchangeForm", () => {
 
 		expect(recipientDropdown).not.toBeDisabled();
 
-		await userEvent.type(recipientDropdown, "payoutAddress");
+		const user = userEvent.setup();
+		await user.clear(recipientDropdown);
+		await user.paste("payoutAddress");
 
 		await waitFor(() => {
 			expect(recipientDropdown).toHaveValue("payoutAddress");
@@ -1025,7 +1029,9 @@ describe("ExchangeForm", () => {
 
 		expect(recipientDropdown).not.toBeDisabled();
 
-		await userEvent.type(recipientDropdown, "payoutAddress");
+		const user = userEvent.setup();
+		await user.clear(recipientDropdown);
+		await user.paste("payoutAddress");
 
 		const payinInput = screen.getAllByTestId("InputCurrency")[0];
 		const payoutInput = screen.getAllByTestId("InputCurrency")[1];
