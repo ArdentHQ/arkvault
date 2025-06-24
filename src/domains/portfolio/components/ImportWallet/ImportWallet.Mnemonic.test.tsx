@@ -15,7 +15,6 @@ import {
 	MAINSAIL_MNEMONICS,
 	getMainsailProfileId,
 } from "@/utils/testing-library";
-import * as usePortfolio from "@/domains/portfolio/hooks/use-portfolio";
 import { ImportAddressesSidePanel } from "./ImportAddressSidePanel";
 
 let profile: Contracts.IProfile;
@@ -44,11 +43,6 @@ describe("ImportAddress", () => {
 	let resetProfileNetworksMock: () => void;
 
 	beforeEach(async () => {
-		vi.spyOn(usePortfolio, "usePortfolio").mockReturnValue({
-			selectedAddresses: [],
-			setSelectedAddresses: () => {},
-		});
-
 		profile = env.profiles().findById(fixtureProfileId);
 
 		await env.profiles().restore(profile);

@@ -16,7 +16,6 @@ import { Tooltip } from "@/app/components/Tooltip";
 import cn from "classnames";
 import { t } from "i18next";
 import { useLocalStorage } from "usehooks-ts";
-import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
 import { EmptyBlock } from "@/app/components/EmptyBlock";
 
 export const AddressesSidePanel = ({
@@ -49,7 +48,10 @@ export const AddressesSidePanel = ({
 		setMultiSelectedAddresses,
 	} = useAddressesPanel({ profile });
 
-	const { selectedAddresses: selectedAddressesFromPortfolio } = usePortfolio({ profile });
+	const selectedAddressesFromPortfolio = profile
+		.wallets()
+		.selected()
+		.map((wallet) => wallet.address());
 
 	const [isAnimating, setIsAnimating] = useState(false);
 	const [isDeleteMode, setDeleteMode] = useState<boolean>(false);

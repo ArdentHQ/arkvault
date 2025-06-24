@@ -27,6 +27,7 @@ import { LedgerService } from "@/app/lib/mainsail/ledger.service.js";
 import { ValidatorService } from "./validator.service.js";
 import { KnownWalletService } from "./known-wallet.service.js";
 import { ExchangeRateService } from "./exchange-rate.service.js";
+import { BigNumber } from "@/app/lib/helpers/bignumber.js";
 
 /**
  *
@@ -398,4 +399,28 @@ export interface IProfile {
 	 * @memberof IProfile
 	 */
 	knownWallets(): KnownWalletService;
+
+	/**
+	 * Get the profile wallet selection mode.
+	 *
+	 * @return {"single" | "multiple"}
+	 * @memberof IProfile
+	 */
+	walletSelectionMode(): "single" | "multiple";
+
+	/**
+	 * Get the profile's total converted balance.
+	 *
+	 * @return {BigNumber}
+	 * @memberof IProfile
+	 */
+	totalBalanceConverted(): BigNumber;
+
+	/**
+	 * Get the profile's total balance.
+	 *
+	 * @return {BigNumber}
+	 * @memberof IProfile
+	 */
+	totalBalance(): BigNumber;
 }

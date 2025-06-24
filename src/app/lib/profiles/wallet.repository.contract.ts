@@ -48,6 +48,23 @@ export interface IWalletRepository {
 	values(): IReadWriteWallet[];
 
 	/**
+	 * Get all selected wallets.
+	 *
+	 * @returns {IReadWriteWallet[]}
+	 * @memberof IWalletRepository
+	 */
+	selected(): IReadWriteWallet[];
+
+	/**
+	 * Marks given wallet as selected, and deselects others.
+	 *
+	 * @param {IReadWriteWallet} selected
+	 * @returns {void}
+	 * @memberof IWalletRepository
+	 */
+	selectOne(selected: IReadWriteWallet): void;
+
+	/**
 	 * Fill the storage with wallet data.
 	 *
 	 * @param {Record<string, IWalletData>} struct

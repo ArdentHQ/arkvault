@@ -6,7 +6,6 @@ import { useEnvironmentContext } from "@/app/contexts";
 
 import { OptionsValue } from "./use-import-options";
 import { assertString, assertWallet } from "@/utils/assertions";
-import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { useAddressesPanel } from "@/domains/portfolio/hooks/use-address-panel";
 import { AddressViewSelection } from "@/domains/portfolio/components/AddressesSidePanel";
@@ -27,7 +26,6 @@ type ImportOptionsType = {
 export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) => {
 	const { env, persist } = useEnvironmentContext();
 	const { syncAll } = useWalletSync({ env, profile });
-	const { setSelectedAddresses, selectedAddresses } = usePortfolio({ profile });
 	const { activeNetwork } = useActiveNetwork({ profile });
 	const { addressViewPreference } = useAddressesPanel({ profile });
 
@@ -160,6 +158,7 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 			: getDefaultAlias({ network, profile });
 
 		wallet.mutator().alias(alias);
+		wallet.mutator().isSelected(true);
 
 		return wallet;
 	};
@@ -187,9 +186,9 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 		wallets.push(wallet);
 
 		if (addressViewPreference === AddressViewSelection.single) {
-			await setSelectedAddresses([wallet.address()]);
+			profile.wallets().selectOne(wallet);
 		} else {
-			await setSelectedAddresses([...selectedAddresses, wallet.address()]);
+			wallet.mutator().isSelected(true);
 		}
 
 		await persist();
