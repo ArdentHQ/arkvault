@@ -10,6 +10,7 @@ import { StepHeader } from "@/app/components/StepHeader";
 import { WalletCapabilities } from "@/domains/portfolio/lib/wallet.capabilities";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { useEnvironmentContext } from "@/app/contexts";
+import { Alert } from "@/app/components/Alert";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { useValidation } from "@/app/hooks";
@@ -19,7 +20,7 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 
 	const { validatorRegistration } = useValidation();
 
-	const { getValues, register, setValue } = useFormContext();
+	const { getValues, register, setValue, errors } = useFormContext();
 	const validatorPublicKey = getValues("validatorPublicKey");
 
 	const { activeNetwork: network } = useActiveNetwork({ profile });
@@ -50,6 +51,8 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 					<ThemeIcon dimensions={[24, 24]} lightIcon="SendTransactionLight" darkIcon="SendTransactionDark" />
 				}
 			/>
+
+			{errors.lockedFee && <Alert className="mt-4">{errors.lockedFee.message}</Alert>}
 
 			<FormField name="senderAddress" className="-mx-3 mt-6 sm:mx-0 sm:mt-4">
 				<SelectAddress
