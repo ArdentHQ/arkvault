@@ -11,7 +11,12 @@ export const useBlockHeight = ({
 }): { blockHeight?: string; isLoading: boolean } => {
 	const [blockHeight, setBlockHeight] = useState<string>();
 	const [isLoading, setIsLoading] = useState(false);
+
 	useEffect(() => {
+		if (blockHeight) {
+			return;
+		}
+
 		const client = new Http.HttpClient(0);
 
 		// @TODO: Fetch block info/height from sdk (not yet supported).
@@ -36,7 +41,7 @@ export const useBlockHeight = ({
 		if (blockHash) {
 			fetchBlockHeight();
 		}
-	}, [blockHash, network]);
+	}, [blockHash, network, blockHeight]);
 
 	return {
 		blockHeight,
