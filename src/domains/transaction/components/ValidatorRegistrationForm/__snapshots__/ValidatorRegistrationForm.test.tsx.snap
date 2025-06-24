@@ -149,7 +149,7 @@ exports[`ValidatorRegistrationForm > should render form step 1`] = `
                 Validator Public Key
               </label>
               <a
-                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block text-sm"
+                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block text-sm"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href="https://ark.dev"
@@ -438,18 +438,18 @@ exports[`ValidatorRegistrationForm > should render review step 1`] = `
                 data-testid="DetailWrapper"
               >
                 <div
-                  class="border-x-theme-primary-400 bg-theme-secondary-100 border-l-2 px-3 py-2 sm:border-none sm:bg-transparent sm:p-0 dark:bg-black dark:sm:bg-transparent"
+                  class="border-x-theme-primary-400 dim:border-x-theme-dim-navy-400 bg-theme-secondary-100 dim:bg-theme-dim-950 dim:sm:bg-transparent border-l-2 px-3 py-2 sm:border-none sm:bg-transparent sm:p-0 dark:bg-black dark:sm:bg-transparent"
                   data-testid="DetailLabel"
                 >
                   <div
-                    class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24 font-semibold text-md leading-5"
+                    class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold text-md leading-5"
                     data-testid="DetailLabelText"
                   >
                     Transaction Summary
                   </div>
                 </div>
                 <div
-                  class="border-theme-secondary-300 dark:border-theme-dark-700 overflow-hidden rounded-xl sm:border rounded-xl mt-0 sm:mt-2"
+                  class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 overflow-hidden rounded-xl sm:border rounded-xl mt-0 sm:mt-2"
                 >
                   <div
                     class="w-full p-3 break-words sm:px-6 sm:py-5 sm:in-[.condensed]:py-4"
@@ -461,7 +461,7 @@ exports[`ValidatorRegistrationForm > should render review step 1`] = `
                         class="flex items-center justify-between gap-4 space-x-2 sm:justify-start sm:space-x-0"
                       >
                         <div
-                          class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-40"
+                          class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-40"
                         >
                           Locked Amount
                         </div>

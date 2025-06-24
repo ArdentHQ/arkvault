@@ -58,7 +58,7 @@ exports[`SideBar > should render 1`] = `
         data-testid="side-menu__item--general"
       >
         <div
-          class="group relative flex h-12 items-center rounded-lg px-5 transition-all bg-theme-secondary-200 text-theme-primary-600 dark:bg-theme-dark-950 dark:text-theme-dark-50 dim:bg-theme-dim-950 dim:text-theme-dim-50"
+          class="group relative flex h-12 items-center rounded-lg px-5 transition-all bg-theme-secondary-200 text-theme-primary-600 dim:bg-theme-dim-950 dim:text-theme-dim-50 dark:bg-theme-dark-950 dark:text-theme-dark-50"
         >
           <span
             class="font-semibold"
@@ -72,7 +72,7 @@ exports[`SideBar > should render 1`] = `
         data-testid="side-menu__item--password"
       >
         <div
-          class="group relative flex h-12 items-center rounded-lg px-5 transition-all hover:bg-theme-secondary-200 hover:text-theme-secondary-800 dark:hover:bg-theme-dark-950 dark:hover:text-theme-dark-50 dim-hover:bg-theme-dim-950 dim-hover:text-theme-dim-50"
+          class="group relative flex h-12 items-center rounded-lg px-5 transition-all hover:bg-theme-secondary-200 hover:text-theme-secondary-800 dim-hover:bg-theme-dim-950 dim-hover:text-theme-dim-50 dark:hover:bg-theme-dark-950 dark:hover:text-theme-dark-50"
         >
           <span
             class="font-semibold"
@@ -86,7 +86,7 @@ exports[`SideBar > should render 1`] = `
         data-testid="side-menu__item--export"
       >
         <div
-          class="group relative flex h-12 items-center rounded-lg px-5 transition-all hover:bg-theme-secondary-200 hover:text-theme-secondary-800 dark:hover:bg-theme-dark-950 dark:hover:text-theme-dark-50 dim-hover:bg-theme-dim-950 dim-hover:text-theme-dim-50"
+          class="group relative flex h-12 items-center rounded-lg px-5 transition-all hover:bg-theme-secondary-200 hover:text-theme-secondary-800 dim-hover:bg-theme-dim-950 dim-hover:text-theme-dim-50 dark:hover:bg-theme-dark-950 dark:hover:text-theme-dark-50"
         >
           <span
             class="font-semibold"
@@ -159,7 +159,7 @@ exports[`SideBar > should render responsive dropdown 1`] = `
         data-testid="side-menu__item--general"
       >
         <div
-          class="group relative flex h-12 items-center rounded-lg px-5 transition-all bg-theme-secondary-200 text-theme-primary-600 dark:bg-theme-dark-950 dark:text-theme-dark-50 dim:bg-theme-dim-950 dim:text-theme-dim-50"
+          class="group relative flex h-12 items-center rounded-lg px-5 transition-all bg-theme-secondary-200 text-theme-primary-600 dim:bg-theme-dim-950 dim:text-theme-dim-50 dark:bg-theme-dark-950 dark:text-theme-dark-50"
         >
           <span
             class="font-semibold"
@@ -173,7 +173,7 @@ exports[`SideBar > should render responsive dropdown 1`] = `
         data-testid="side-menu__item--password"
       >
         <div
-          class="group relative flex h-12 items-center rounded-lg px-5 transition-all hover:bg-theme-secondary-200 hover:text-theme-secondary-800 dark:hover:bg-theme-dark-950 dark:hover:text-theme-dark-50 dim-hover:bg-theme-dim-950 dim-hover:text-theme-dim-50"
+          class="group relative flex h-12 items-center rounded-lg px-5 transition-all hover:bg-theme-secondary-200 hover:text-theme-secondary-800 dim-hover:bg-theme-dim-950 dim-hover:text-theme-dim-50 dark:hover:bg-theme-dark-950 dark:hover:text-theme-dark-50"
         >
           <span
             class="font-semibold"
@@ -187,7 +187,7 @@ exports[`SideBar > should render responsive dropdown 1`] = `
         data-testid="side-menu__item--export"
       >
         <div
-          class="group relative flex h-12 items-center rounded-lg px-5 transition-all hover:bg-theme-secondary-200 hover:text-theme-secondary-800 dark:hover:bg-theme-dark-950 dark:hover:text-theme-dark-50 dim-hover:bg-theme-dim-950 dim-hover:text-theme-dim-50"
+          class="group relative flex h-12 items-center rounded-lg px-5 transition-all hover:bg-theme-secondary-200 hover:text-theme-secondary-800 dim-hover:bg-theme-dim-950 dim-hover:text-theme-dim-50 dark:hover:bg-theme-dark-950 dark:hover:text-theme-dark-50"
         >
           <span
             class="font-semibold"
@@ -260,7 +260,7 @@ exports[`SideBar > should render responsive dropdown 2`] = `
         data-testid="side-menu__item--general"
       >
         <div
-          class="group relative flex h-12 items-center rounded-lg px-5 transition-all bg-theme-secondary-200 text-theme-primary-600 dark:bg-theme-dark-950 dark:text-theme-dark-50 dim:bg-theme-dim-950 dim:text-theme-dim-50"
+          class="group relative flex h-12 items-center rounded-lg px-5 transition-all bg-theme-secondary-200 text-theme-primary-600 dim:bg-theme-dim-950 dim:text-theme-dim-50 dark:bg-theme-dark-950 dark:text-theme-dark-50"
         >
           <span
             class="font-semibold"
@@ -274,7 +274,7 @@ exports[`SideBar > should render responsive dropdown 2`] = `
         data-testid="side-menu__item--password"
       >
         <div
-          class="group relative flex h-12 items-center rounded-lg px-5 transition-all hover:bg-theme-secondary-200 hover:text-theme-secondary-800 dark:hover:bg-theme-dark-950 dark:hover:text-theme-dark-50 dim-hover:bg-theme-dim-950 dim-hover:text-theme-dim-50"
+          class="group relative flex h-12 items-center rounded-lg px-5 transition-all hover:bg-theme-secondary-200 hover:text-theme-secondary-800 dim-hover:bg-theme-dim-950 dim-hover:text-theme-dim-50 dark:hover:bg-theme-dark-950 dark:hover:text-theme-dark-50"
         >
           <span
             class="font-semibold"
@@ -288,7 +288,7 @@ exports[`SideBar > should render responsive dropdown 2`] = `
         data-testid="side-menu__item--export"
       >
         <div
-          class="group relative flex h-12 items-center rounded-lg px-5 transition-all hover:bg-theme-secondary-200 hover:text-theme-secondary-800 dark:hover:bg-theme-dark-950 dark:hover:text-theme-dark-50 dim-hover:bg-theme-dim-950 dim-hover:text-theme-dim-50"
+          class="group relative flex h-12 items-center rounded-lg px-5 transition-all hover:bg-theme-secondary-200 hover:text-theme-secondary-800 dim-hover:bg-theme-dim-950 dim-hover:text-theme-dim-50 dark:hover:bg-theme-dark-950 dark:hover:text-theme-dark-50"
         >
           <span
             class="font-semibold"
@@ -361,7 +361,7 @@ exports[`SideBar > should render responsive dropdown 3`] = `
         data-testid="side-menu__item--general"
       >
         <div
-          class="group relative flex h-12 items-center rounded-lg px-5 transition-all bg-theme-secondary-200 text-theme-primary-600 dark:bg-theme-dark-950 dark:text-theme-dark-50 dim:bg-theme-dim-950 dim:text-theme-dim-50"
+          class="group relative flex h-12 items-center rounded-lg px-5 transition-all bg-theme-secondary-200 text-theme-primary-600 dim:bg-theme-dim-950 dim:text-theme-dim-50 dark:bg-theme-dark-950 dark:text-theme-dark-50"
         >
           <span
             class="font-semibold"
@@ -375,7 +375,7 @@ exports[`SideBar > should render responsive dropdown 3`] = `
         data-testid="side-menu__item--password"
       >
         <div
-          class="group relative flex h-12 items-center rounded-lg px-5 transition-all hover:bg-theme-secondary-200 hover:text-theme-secondary-800 dark:hover:bg-theme-dark-950 dark:hover:text-theme-dark-50 dim-hover:bg-theme-dim-950 dim-hover:text-theme-dim-50"
+          class="group relative flex h-12 items-center rounded-lg px-5 transition-all hover:bg-theme-secondary-200 hover:text-theme-secondary-800 dim-hover:bg-theme-dim-950 dim-hover:text-theme-dim-50 dark:hover:bg-theme-dark-950 dark:hover:text-theme-dark-50"
         >
           <span
             class="font-semibold"
@@ -389,7 +389,7 @@ exports[`SideBar > should render responsive dropdown 3`] = `
         data-testid="side-menu__item--export"
       >
         <div
-          class="group relative flex h-12 items-center rounded-lg px-5 transition-all hover:bg-theme-secondary-200 hover:text-theme-secondary-800 dark:hover:bg-theme-dark-950 dark:hover:text-theme-dark-50 dim-hover:bg-theme-dim-950 dim-hover:text-theme-dim-50"
+          class="group relative flex h-12 items-center rounded-lg px-5 transition-all hover:bg-theme-secondary-200 hover:text-theme-secondary-800 dim-hover:bg-theme-dim-950 dim-hover:text-theme-dim-50 dark:hover:bg-theme-dark-950 dark:hover:text-theme-dark-50"
         >
           <span
             class="font-semibold"
