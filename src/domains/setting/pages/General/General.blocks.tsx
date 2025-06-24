@@ -37,7 +37,10 @@ export const SettingsButtonGroup = ({
 	title?: string;
 }) => (
 	<div
-		className={cn("border-theme-secondary-300 dark:border-theme-dark-700 sm:border-t sm:p-6", className)}
+		className={cn(
+			"border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 sm:border-t sm:p-6",
+			className,
+		)}
 		{...properties}
 	>
 		<div className="sm:-mt-6">{children}</div>
@@ -54,14 +57,20 @@ const SettingsGroupHeader = ({
 }) => (
 	<div
 		className={cn(
-			"border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-700 sm:border-theme-secondary-300 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6",
+			"border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-700 sm:border-theme-secondary-300 dim:border-theme-dim-700 dim:bg-theme-dim-950 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6",
 			className,
 		)}
 		{...properties}
 	>
-		<h2 className="text-theme-secondary-700 dark:text-theme-dark-200 mb-0 text-base font-semibold">{children}</h2>
+		<h2 className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mb-0 text-base font-semibold">
+			{children}
+		</h2>
 
-		{description && <p className="text-theme-secondary-700 dark:text-theme-dark-200 mt-1 text-sm">{description}</p>}
+		{description && (
+			<p className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mt-1 text-sm">
+				{description}
+			</p>
+		)}
 	</div>
 );
 

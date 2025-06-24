@@ -26,7 +26,7 @@ exports[`ListDividedItem > should render as floating label 1`] = `
           class="flex items-center justify-between space-x-5"
         >
           <span
-            class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+            class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
             data-testid="list-divided-item__label"
           >
             Label
@@ -71,7 +71,7 @@ exports[`ListDividedItem > should render the label 1`] = `
           class="flex items-center justify-between space-x-5"
         >
           <span
-            class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+            class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
             data-testid="list-divided-item__label"
           >
             Label
@@ -100,7 +100,7 @@ exports[`ListDividedItem > should render the labelDescription 1`] = `
           class="flex items-center justify-between space-x-5"
         >
           <span
-            class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+            class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
             data-testid="list-divided-item__label"
           >
             Label
@@ -135,7 +135,7 @@ exports[`ListDividedItem > should render the value 1`] = `
           class="flex items-center justify-between space-x-5"
         >
           <span
-            class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+            class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
             data-testid="list-divided-item__label"
           >
             Label
@@ -171,7 +171,7 @@ exports[`ListDividedItem > should render with labelAddon 1`] = `
           class="flex items-center justify-between space-x-5"
         >
           <span
-            class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+            class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
             data-testid="list-divided-item__label"
           >
             Label

@@ -86,13 +86,14 @@ export const SelectProfileImage = ({ value, onSelect }: SelectProfileImageProper
 		}
 
 		return (
-			<div className="border-theme-secondary-300 dark:border-theme-dark-700 focus-within:border-theme-primary-400 h-[92px] w-[92px] rounded-lg border p-1.5 focus-within:border-solid">
+			<div className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 focus-within:border-theme-primary-400 h-[92px] w-[92px] rounded-lg border p-1.5 focus-within:border-solid">
 				<div className="h-full overflow-hidden rounded">
 					<UploadButtonWrapper>
 						<Button
 							variant="secondary"
 							onClick={handleOpenFile}
 							data-testid="SelectProfileImage__upload-button"
+							className="dim:bg-theme-dim-800 dim:text-theme-dim-50"
 						>
 							<Icon name="ArrowUpBracket" size="lg" />
 						</Button>

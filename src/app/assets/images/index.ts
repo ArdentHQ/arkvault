@@ -43,8 +43,10 @@ import { exchange } from "@/domains/exchange/images";
 import { error } from "@/domains/error/images";
 import ProfileImageExampleLight from "./profile-image-example-light.svg?react";
 import ProfileImageExampleDark from "./profile-image-example-dark.svg?react";
+import ProfileImageExampleDim from "./profile-image-example-dim.svg?react";
 import ProfileImageExampleResponsiveLight from "./profile-image-example-responsive-light.svg?react";
 import ProfileImageExampleResponsiveDark from "./profile-image-example-responsive-dark.svg?react";
+import ProfileImageExampleResponsiveDim from "./profile-image-example-responsive-dim.svg?react";
 
 export const images = {
 	common: {
@@ -75,8 +77,10 @@ export const images = {
 		NoResultsDark,
 		NoResultsLight,
 		ProfileImageExampleDark,
+		ProfileImageExampleDim,
 		ProfileImageExampleLight,
 		ProfileImageExampleResponsiveDark,
+		ProfileImageExampleResponsiveDim,
 		ProfileImageExampleResponsiveLight,
 		SuccessDark,
 		SuccessLight,

@@ -802,7 +802,7 @@ exports[`Export Settings > should render export settings 1`] = `
                 class="mb-4 md:-mt-4 lg:my-0"
               >
                 <div
-                  class="border-theme-secondary-300 bg-theme-secondary-200 dark:border-theme-dark-700 relative -mx-6 -mt-4 border-t px-6 py-2 md:m-0 md:border-t-0 md:bg-transparent md:p-0 lg:hidden dark:bg-black dark:md:bg-transparent"
+                  class="border-theme-secondary-300 bg-theme-secondary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 dim:bg-theme-dim-950 dim:md:bg-transparent relative -mx-6 -mt-4 border-t px-6 py-2 md:m-0 md:border-t-0 md:bg-transparent md:p-0 lg:hidden dark:bg-black dark:md:bg-transparent"
                 >
                   <div
                     aria-expanded="false"
@@ -810,7 +810,7 @@ exports[`Export Settings > should render export settings 1`] = `
                     data-testid="dropdown__toggle"
                   >
                     <div
-                      class="md:border-theme-secondary-300 dark:border-theme-dark-700 dark:bg-theme-dark-900 flex cursor-pointer items-center space-x-4 overflow-hidden rounded border border-transparent bg-white px-4 py-3 dark:border"
+                      class="md:border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 dark:bg-theme-dark-900 dim:bg-theme-dim-900 dim:border flex cursor-pointer items-center space-x-4 overflow-hidden rounded border border-transparent bg-white px-4 py-3 dark:border"
                     >
                       <span
                         class="flex-1 leading-tight font-semibold"
@@ -847,7 +847,7 @@ exports[`Export Settings > should render export settings 1`] = `
                   </div>
                 </div>
                 <div
-                  class="border-theme-secondary-300 dark:border-theme-dark-700 hidden w-[200px] rounded-xl border p-1 lg:block"
+                  class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 hidden w-[200px] rounded-xl border p-1 lg:block"
                 >
                   <ul
                     class="space-y-1"
@@ -857,7 +857,7 @@ exports[`Export Settings > should render export settings 1`] = `
                       data-testid="side-menu__item--general"
                     >
                       <div
-                        class="group relative flex h-12 items-center rounded-lg px-5 transition-all hover:bg-theme-secondary-200 hover:text-theme-secondary-800 dark:hover:bg-theme-dark-950 dark:hover:text-theme-dark-50"
+                        class="group relative flex h-12 items-center rounded-lg px-5 transition-all hover:bg-theme-secondary-200 hover:text-theme-secondary-800 dark:hover:bg-theme-dark-950 dark:hover:text-theme-dark-50 dim-hover:bg-theme-dim-950 dim-hover:text-theme-dim-50"
                       >
                         <span
                           class="font-semibold"
@@ -871,7 +871,7 @@ exports[`Export Settings > should render export settings 1`] = `
                       data-testid="side-menu__item--password"
                     >
                       <div
-                        class="group relative flex h-12 items-center rounded-lg px-5 transition-all hover:bg-theme-secondary-200 hover:text-theme-secondary-800 dark:hover:bg-theme-dark-950 dark:hover:text-theme-dark-50"
+                        class="group relative flex h-12 items-center rounded-lg px-5 transition-all hover:bg-theme-secondary-200 hover:text-theme-secondary-800 dark:hover:bg-theme-dark-950 dark:hover:text-theme-dark-50 dim-hover:bg-theme-dim-950 dim-hover:text-theme-dim-50"
                       >
                         <span
                           class="font-semibold"
@@ -885,7 +885,7 @@ exports[`Export Settings > should render export settings 1`] = `
                       data-testid="side-menu__item--servers"
                     >
                       <div
-                        class="group relative flex h-12 items-center rounded-lg px-5 transition-all hover:bg-theme-secondary-200 hover:text-theme-secondary-800 dark:hover:bg-theme-dark-950 dark:hover:text-theme-dark-50"
+                        class="group relative flex h-12 items-center rounded-lg px-5 transition-all hover:bg-theme-secondary-200 hover:text-theme-secondary-800 dark:hover:bg-theme-dark-950 dark:hover:text-theme-dark-50 dim-hover:bg-theme-dim-950 dim-hover:text-theme-dim-50"
                       >
                         <span
                           class="font-semibold"
@@ -899,7 +899,7 @@ exports[`Export Settings > should render export settings 1`] = `
                       data-testid="side-menu__item--export"
                     >
                       <div
-                        class="group relative flex h-12 items-center rounded-lg px-5 transition-all bg-theme-secondary-200 text-theme-primary-600 dark:bg-theme-dark-950 dark:text-theme-dark-50"
+                        class="group relative flex h-12 items-center rounded-lg px-5 transition-all bg-theme-secondary-200 text-theme-primary-600 dark:bg-theme-dark-950 dark:text-theme-dark-50 dim:bg-theme-dim-950 dim:text-theme-dim-50"
                       >
                         <span
                           class="font-semibold"
@@ -912,7 +912,7 @@ exports[`Export Settings > should render export settings 1`] = `
                 </div>
               </div>
               <div
-                class="border-theme-secondary-300 dark:border-theme-dark-700 flex-1 sm:overflow-hidden sm:rounded-xl sm:border"
+                class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 flex-1 sm:overflow-hidden sm:rounded-xl sm:border"
               >
                 <form
                   class="space-y-0"
@@ -923,15 +923,15 @@ exports[`Export Settings > should render export settings 1`] = `
                     class="relative flex flex-col"
                   >
                     <div
-                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-700 sm:border-theme-secondary-300 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6"
+                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-700 sm:border-theme-secondary-300 dim:border-theme-dim-700 dim:bg-theme-dim-950 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6"
                     >
                       <h2
-                        class="text-theme-secondary-700 dark:text-theme-dark-200 mb-0 text-base font-semibold"
+                        class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mb-0 text-base font-semibold"
                       >
                         Export Profile
                       </h2>
                       <p
-                        class="text-theme-secondary-700 dark:text-theme-dark-200 mt-1 text-sm"
+                        class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mt-1 text-sm"
                       >
                         Your exported Profile will not contain your mnemonic passphrases, only addresses and respective names.
                       </p>
@@ -940,7 +940,7 @@ exports[`Export Settings > should render export settings 1`] = `
                       class="pt-4 pb-6 sm:px-6"
                     >
                       <ul
-                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
                         data-testid="list-divided__items"
                       >
                         <li
@@ -958,7 +958,7 @@ exports[`Export Settings > should render export settings 1`] = `
                                 class="flex items-center justify-between space-x-5"
                               >
                                 <span
-                                  class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
                                   data-testid="list-divided-item__label"
                                 >
                                   Exclude Empty Wallets
@@ -977,7 +977,7 @@ exports[`Export Settings > should render export settings 1`] = `
                                       class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                                     >
                                       <span
-                                        class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                                        class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 dim:bg-theme-dim-500 h-4 w-4 handle-inner"
                                       />
                                     </div>
                                   </label>
@@ -1007,7 +1007,7 @@ exports[`Export Settings > should render export settings 1`] = `
                                 class="flex items-center justify-between space-x-5"
                               >
                                 <span
-                                  class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
                                   data-testid="list-divided-item__label"
                                 >
                                   Exclude Ledger Wallets
@@ -1026,7 +1026,7 @@ exports[`Export Settings > should render export settings 1`] = `
                                       class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                                     >
                                       <span
-                                        class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                                        class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 dim:bg-theme-dim-500 h-4 w-4 handle-inner"
                                       />
                                     </div>
                                   </label>
@@ -1043,7 +1043,7 @@ exports[`Export Settings > should render export settings 1`] = `
                         </li>
                       </ul>
                       <div
-                        class="border-theme-secondary-300 dark:border-theme-secondary-800 mt-6 space-y-5 border-t border-dashed pt-6 pb-6"
+                        class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 mt-6 space-y-5 border-t border-dashed pt-6 pb-6"
                       >
                         <div
                           class="flex flex-col overflow-hidden rounded-xl"
@@ -1103,7 +1103,7 @@ exports[`Export Settings > should render export settings 1`] = `
                     </div>
                   </div>
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-dark-700 sm:border-t sm:p-6"
+                    class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 sm:border-t sm:p-6"
                   >
                     <div
                       class="sm:-mt-6"
