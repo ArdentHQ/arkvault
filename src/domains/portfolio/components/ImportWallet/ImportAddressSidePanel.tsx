@@ -103,11 +103,20 @@ export const ImportAddressesSidePanel = ({
 				activeProfile.wallets().forget(profileWallet.id());
 			}
 		}
+
+		if (activeProfile.wallets().selected().length === 0) {
+			activeProfile.wallets().selectOne(activeProfile.wallets().first());
+		}
 	};
 
 	const handleOpenChange = (open: boolean) => {
 		// remove added wallets if side panel is closed early
-		if (!open && activeTab !== ImportAddressStep.SummaryStep && importedWallet) {
+		if (
+			!open &&
+			activeTab !== ImportAddressStep.SummaryStep &&
+			activeTab !== ImportAddressStep.MethodStep &&
+			importedWallet
+		) {
 			forgetImportedWallets(importedWallet);
 		}
 
@@ -120,7 +129,6 @@ export const ImportAddressesSidePanel = ({
 
 	const handleNext = () =>
 		({
-			// eslint-disable-next-line @typescript-eslint/require-await
 			[ImportAddressStep.MethodStep]: async () => {
 				setActiveTab(ImportAddressStep.ImportDetailStep);
 			},
