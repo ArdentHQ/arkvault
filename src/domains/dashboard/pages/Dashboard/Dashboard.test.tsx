@@ -90,7 +90,7 @@ describe("Dashboard", () => {
 			.spyOn(wallet2.synchroniser(), "votes")
 			.mockImplementation(() => Promise.resolve([]));
 
-		const selectedWalletsMock = vi.spyOn(profile.wallets(), "selected").mockReturnValue([wallet1, wallet2])
+		const selectedWalletsMock = vi.spyOn(profile.wallets(), "selected").mockReturnValue([wallet1, wallet2]);
 
 		render(<Dashboard />, {
 			route: dashboardURL,
@@ -103,7 +103,7 @@ describe("Dashboard", () => {
 
 		wallet1SynchroniserMock.mockRestore();
 		wallet2SynchroniserMock.mockRestore();
-		selectedWalletsMock.mockRestore()
+		selectedWalletsMock.mockRestore();
 	});
 
 	it("should render with two wallets and handle exceptions", async () => {
@@ -117,7 +117,7 @@ describe("Dashboard", () => {
 			.spyOn(wallet2.synchroniser(), "votes")
 			.mockImplementation(() => Promise.resolve([]));
 
-		const selectedWalletsMock = vi.spyOn(profile.wallets(), "selected").mockReturnValue([wallet1, wallet2])
+		const selectedWalletsMock = vi.spyOn(profile.wallets(), "selected").mockReturnValue([wallet1, wallet2]);
 
 		render(<Dashboard />, {
 			route: dashboardURL,
@@ -150,7 +150,7 @@ describe("Dashboard", () => {
 		const wallet = profile.wallets().first();
 		const wallet2 = profile.wallets().last();
 
-		const selectedWalletsMock = vi.spyOn(profile.wallets(), "selected").mockReturnValue([wallet, wallet2])
+		const selectedWalletsMock = vi.spyOn(profile.wallets(), "selected").mockReturnValue([wallet, wallet2]);
 
 		const { router } = render(<Dashboard />, {
 			route: dashboardURL,
@@ -173,7 +173,7 @@ describe("Dashboard", () => {
 	it("should navigate to wallet votes when one wallet is selected", async () => {
 		const wallet = profile.wallets().first();
 
-		const selectedWalletsMock = vi.spyOn(profile.wallets(), "selected").mockReturnValue([wallet])
+		const selectedWalletsMock = vi.spyOn(profile.wallets(), "selected").mockReturnValue([wallet]);
 
 		const { router } = render(<Dashboard />, {
 			route: dashboardURL,
