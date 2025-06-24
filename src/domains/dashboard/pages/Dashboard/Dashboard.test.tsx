@@ -1,4 +1,3 @@
-import * as usePortfolio from "@/domains/portfolio/hooks/use-portfolio";
 import * as useRandomNumberHook from "@/app/hooks/use-random-number";
 
 import {
@@ -64,19 +63,6 @@ describe("Dashboard", () => {
 	});
 
 	it("should render", async () => {
-		const wallet = profile.wallets().first();
-
-		const usePortfolioMock = vi.spyOn(usePortfolio, "usePortfolio").mockReturnValue({
-			allWallets: [wallet],
-			balance: {
-				total: () => BigNumber.make("25"),
-				totalConverted: () => BigNumber.make("45"),
-			},
-			selectedAddresses: [wallet.address()],
-			selectedWallets: [wallet],
-			setSelectedAddresses: () => {},
-		});
-
 		const { asFragment } = render(<Dashboard />, {
 			route: dashboardURL,
 			withProfileSynchronizer: true,
@@ -91,8 +77,6 @@ describe("Dashboard", () => {
 		});
 
 		expect(asFragment()).toMatchSnapshot();
-
-		usePortfolioMock.mockRestore();
 	});
 
 	it("should render with two wallets", async () => {
@@ -102,20 +86,12 @@ describe("Dashboard", () => {
 		const wallet1SynchroniserMock = vi
 			.spyOn(wallet1.synchroniser(), "votes")
 			.mockImplementation(() => Promise.resolve([]));
+
 		const wallet2SynchroniserMock = vi
 			.spyOn(wallet2.synchroniser(), "votes")
 			.mockImplementation(() => Promise.resolve([]));
 
-		const usePortfolioMock = vi.spyOn(usePortfolio, "usePortfolio").mockReturnValue({
-			allWallets: [wallet1, wallet2],
-			balance: {
-				total: () => BigNumber.make("25"),
-				totalConverted: () => BigNumber.make("45"),
-			},
-			selectedAddresses: [wallet1.address(), wallet2.address()],
-			selectedWallets: [wallet1, wallet2],
-			setSelectedAddresses: () => {},
-		});
+		const selectedWalletsMock = vi.spyOn(profile.wallets(), "selected").mockReturnValue([wallet1, wallet2])
 
 		render(<Dashboard />, {
 			route: dashboardURL,
@@ -126,9 +102,9 @@ describe("Dashboard", () => {
 			expect(screen.getByTestId("WalletMyVotes__button")).toBeVisible();
 		});
 
-		usePortfolioMock.mockRestore();
 		wallet1SynchroniserMock.mockRestore();
 		wallet2SynchroniserMock.mockRestore();
+		selectedWalletsMock.mockRestore()
 	});
 
 	it("should render with two wallets and handle exceptions", async () => {
@@ -142,16 +118,7 @@ describe("Dashboard", () => {
 			.spyOn(wallet2.synchroniser(), "votes")
 			.mockImplementation(() => Promise.resolve([]));
 
-		const usePortfolioMock = vi.spyOn(usePortfolio, "usePortfolio").mockReturnValue({
-			allWallets: [wallet1, wallet2],
-			balance: {
-				total: () => BigNumber.make("25"),
-				totalConverted: () => BigNumber.make("45"),
-			},
-			selectedAddresses: [wallet1.address(), wallet2.address()],
-			selectedWallets: [wallet1, wallet2],
-			setSelectedAddresses: () => {},
-		});
+		const selectedWalletsMock = vi.spyOn(profile.wallets(), "selected").mockReturnValue([wallet1, wallet2])
 
 		render(<Dashboard />, {
 			route: dashboardURL,
@@ -162,7 +129,7 @@ describe("Dashboard", () => {
 			expect(screen.getByTestId("WalletMyVotes__button")).toBeVisible();
 		});
 
-		usePortfolioMock.mockRestore();
+		selectedWalletsMock.mockRestore();
 		wallet1SynchroniserMock.mockRestore();
 		wallet2SynchroniserMock.mockRestore();
 	});
@@ -184,16 +151,7 @@ describe("Dashboard", () => {
 		const wallet = profile.wallets().first();
 		const wallet2 = profile.wallets().last();
 
-		const usePortfolioMock = vi.spyOn(usePortfolio, "usePortfolio").mockReturnValue({
-			allWallets: [wallet, wallet2],
-			balance: {
-				total: () => BigNumber.make("25"),
-				totalConverted: () => BigNumber.make("45"),
-			},
-			selectedAddresses: [wallet.address(), wallet2.address()],
-			selectedWallets: [wallet, wallet2],
-			setSelectedAddresses: () => {},
-		});
+		const selectedWalletsMock = vi.spyOn(profile.wallets(), "selected").mockReturnValue([wallet, wallet2])
 
 		const { router } = render(<Dashboard />, {
 			route: dashboardURL,
@@ -210,22 +168,13 @@ describe("Dashboard", () => {
 			expect(router.state.location.pathname).toBe(`/profiles/${profile.id()}/votes`);
 		});
 
-		usePortfolioMock.mockRestore();
+		selectedWalletsMock.mockRestore();
 	});
 
 	it("should navigate to wallet votes when one wallet is selected", async () => {
 		const wallet = profile.wallets().first();
 
-		const usePortfolioMock = vi.spyOn(usePortfolio, "usePortfolio").mockReturnValue({
-			allWallets: [wallet],
-			balance: {
-				total: () => BigNumber.make("25"),
-				totalConverted: () => BigNumber.make("45"),
-			},
-			selectedAddresses: [wallet.address()],
-			selectedWallets: [wallet],
-			setSelectedAddresses: () => {},
-		});
+		const selectedWalletsMock = vi.spyOn(profile.wallets(), "selected").mockReturnValue([wallet])
 
 		const { router } = render(<Dashboard />, {
 			route: dashboardURL,
@@ -242,6 +191,6 @@ describe("Dashboard", () => {
 			expect(router.state.location.pathname).toBe(`/profiles/${profile.id()}/wallets/${wallet.id()}/votes`);
 		});
 
-		usePortfolioMock.mockRestore();
+		selectedWalletsMock.mockRestore();
 	});
 });
