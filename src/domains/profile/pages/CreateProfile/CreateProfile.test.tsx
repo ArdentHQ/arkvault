@@ -27,6 +27,7 @@ const baseSettings = {
 	TIME_FORMAT: "h:mm A",
 	USE_NETWORK_WALLET_NAMES: false,
 	USE_TEST_NETWORKS: false,
+	WALLET_SELECTION_MODE: "single",
 };
 
 const BASE64_REGEX = /(?:[\d+/A-Za-z]{4})*(?:[\d+/A-Za-z]{2}==|[\d+/A-Za-z]{3}=)?/g;
