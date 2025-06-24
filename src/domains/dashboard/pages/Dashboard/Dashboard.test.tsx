@@ -11,7 +11,6 @@ import {
 	within,
 } from "@/utils/testing-library";
 
-import { BigNumber } from "@/app/lib/helpers";
 import { Contracts } from "@/app/lib/profiles";
 import { Dashboard } from "./Dashboard";
 import React from "react";
