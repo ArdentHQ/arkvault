@@ -9,7 +9,6 @@ import { useActiveProfile } from "@/app/hooks";
 import { WalletActionsModalType } from "@/domains/wallet/components/WalletActionsModals/WalletActionsModals.contracts";
 import { ProfilePaths } from "@/router/paths";
 import { useLink } from "@/app/hooks/use-link";
-import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
 
 export const useWalletActions = ({
 	handleSignMessage,
@@ -22,8 +21,6 @@ export const useWalletActions = ({
 	const profile = useActiveProfile();
 	const navigate = useNavigate();
 	const { openExternal } = useLink();
-
-	const { removeSelectedAddresses } = usePortfolio({ profile });
 
 	const [activeModal, setActiveModal] = useState<WalletActionsModalType | undefined>(undefined);
 
@@ -88,7 +85,6 @@ export const useWalletActions = ({
 				if (profileWallet.address() === wallet.address()) {
 					profile.wallets().forget(profileWallet.id());
 					profile.notifications().transactions().forgetByRecipient(wallet.address());
-					await removeSelectedAddresses([wallet.address()]);
 				}
 			}
 

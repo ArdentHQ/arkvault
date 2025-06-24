@@ -50,6 +50,7 @@ import { LedgerService } from "@/app/lib/mainsail/ledger.service.js";
 import { ValidatorService } from "./validator.service.js";
 import { KnownWalletService } from "./known-wallet.service.js";
 import { ExchangeRateService } from "./exchange-rate.service.js";
+import { BigNumber } from "@/app/lib/helpers/bignumber.js";
 
 export class Profile implements IProfile {
 	/**
@@ -527,5 +528,29 @@ export class Profile implements IProfile {
 
 	public exchangeRates(): ExchangeRateService {
 		return this.#exchangeRateService;
+	}
+
+	public walletSelectionMode(): "single" | "multiple" {
+		return this.settings().get(ProfileSetting.WalletSelectionMode) ?? "single";
+	}
+
+	public totalBalance(): BigNumber {
+		let balance = BigNumber.make(0);
+
+		for (const wallet of this.wallets().values()) {
+			balance = balance.plus(wallet.balance());
+		}
+
+		return balance;
+	}
+
+	public totalBalanceConverted(): BigNumber {
+		let balance = BigNumber.make(0);
+
+		for (const wallet of this.wallets().values()) {
+			balance = balance.plus(wallet.convertedBalance());
+		}
+
+		return balance;
 	}
 }

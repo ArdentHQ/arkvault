@@ -11,7 +11,6 @@ import { Icon, ThemeIcon } from "@/app/components/Icon";
 import { SelectAddress } from "@/domains/profile/components/SelectAddress";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { WalletCapabilities } from "@/domains/portfolio/lib/wallet.capabilities";
-import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
 import { Tooltip } from "@/app/components/Tooltip";
 import { Amount } from "@/app/components/Amount";
 import { useValidatorResignationLockedFee } from "./hooks/useValidatorResignationLockedFee";
@@ -24,9 +23,7 @@ interface FormStepProperties {
 
 export const FormStep = ({ senderWallet, profile, onWalletChange }: FormStepProperties) => {
 	const { t } = useTranslation();
-
 	const { activeNetwork: network } = useActiveNetwork({ profile });
-	const { allWallets } = usePortfolio({ profile });
 
 	const handleSelectSender = (address: any) => {
 		const newSenderWallet = profile.wallets().findByAddressWithNetwork(address, network.id());
@@ -76,9 +73,9 @@ export const FormStep = ({ senderWallet, profile, onWalletChange }: FormStepProp
 									}
 								: undefined
 						}
-						wallets={allWallets}
+						wallets={profile.wallets().values()}
 						profile={profile}
-						disabled={allWallets.length === 0}
+						disabled={profile.wallets().count() === 0}
 						onChange={handleSelectSender}
 						disableAction={(wallet) => !WalletCapabilities(wallet).canSendValidatorResignation()}
 					/>

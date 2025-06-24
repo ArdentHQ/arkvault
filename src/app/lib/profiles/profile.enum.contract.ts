@@ -23,6 +23,7 @@ export enum ProfileSetting {
 	UseTestNetworks = "USE_TEST_NETWORKS",
 	LastVisitedPage = "LAST_VISITED_PAGE",
 	Sessions = "SESSIONS",
+	WalletSelectionMode = "WALLET_SELECTION_MODE",
 }
 
 /**

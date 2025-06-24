@@ -10,7 +10,6 @@ import { ThemeIcon } from "@/app/components/Icon";
 import { SelectAddress } from "@/domains/profile/components/SelectAddress";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { WalletCapabilities } from "@/domains/portfolio/lib/wallet.capabilities";
-import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
 
 interface FormStepProperties {
 	senderWallet?: ProfilesContracts.IReadWriteWallet;
@@ -22,7 +21,6 @@ export const FormStep = ({ senderWallet, profile, onWalletChange }: FormStepProp
 	const { t } = useTranslation();
 
 	const { activeNetwork: network } = useActiveNetwork({ profile });
-	const { allWallets } = usePortfolio({ profile });
 
 	const handleSelectSender = (address: any) => {
 		const newSenderWallet = profile.wallets().findByAddressWithNetwork(address, network.id());
@@ -60,9 +58,9 @@ export const FormStep = ({ senderWallet, profile, onWalletChange }: FormStepProp
 									}
 								: undefined
 						}
-						wallets={allWallets}
+						wallets={profile.wallets().values()}
 						profile={profile}
-						disabled={allWallets.length === 0}
+						disabled={profile.wallets().count() === 0}
 						onChange={handleSelectSender}
 						disableAction={(wallet) => !WalletCapabilities(wallet).canSendUsernameResignation()}
 					/>

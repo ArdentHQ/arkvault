@@ -12,7 +12,6 @@ import { Tab, TabList, Tabs, TabScroll } from "@/app/components/Tabs";
 import { TabId } from "@/app/components/Tabs/useTab";
 import { WalletVote } from "@/domains/wallet/pages/WalletDetails/components";
 import { PortfolioHeader } from "@/domains/portfolio/components/PortfolioHeader";
-import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
 import { ResetWhenUnmounted } from "@/app/components/SidePanel/ResetWhenUnmounted";
 import { SignMessageSidePanel } from "@/domains/message/components/SignMessage/SignMessageSidePanel";
 
@@ -36,7 +35,8 @@ export const Dashboard = ({
 	const activeProfile = useActiveProfile();
 	const { profileIsSyncing } = useConfiguration().getProfileConfiguration(activeProfile.id());
 
-	const { selectedWallets, selectedWallet } = usePortfolio({ profile: activeProfile });
+	const selectedWallets = activeProfile.wallets().selected();
+	const selectedWallet = selectedWallets.at(0);
 
 	const handleVoteButton = () => {
 		if (selectedWallets.length > 1) {

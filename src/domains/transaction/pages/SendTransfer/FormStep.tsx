@@ -14,7 +14,6 @@ import { ThemeIcon, Icon } from "@/app/components/Icon";
 import { Button } from "@/app/components/Button";
 import { twMerge } from "tailwind-merge";
 import { WalletCapabilities } from "@/domains/portfolio/lib/wallet.capabilities";
-import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
 
 const QRCodeButton = ({ ...props }: React.ButtonHTMLAttributes<HTMLButtonElement>) => (
 	<button
@@ -52,8 +51,6 @@ export const FormStep = ({
 	}, [unregister]);
 
 	const { recipients } = getValues();
-
-	const { allWallets } = usePortfolio({ profile });
 
 	const getRecipients = (): RecipientItem[] => {
 		if (deeplinkProps.recipient && deeplinkProps.amount) {
@@ -139,9 +136,9 @@ export const FormStep = ({
 										}
 									: undefined
 							}
-							wallets={allWallets}
+							wallets={profile.wallets().values()}
 							profile={profile}
-							disabled={allWallets.length === 0}
+							disabled={profile.wallets().count() === 0}
 							onChange={handleSelectSender}
 							disableAction={(wallet) => !WalletCapabilities(wallet).canSendTransfer()}
 						/>

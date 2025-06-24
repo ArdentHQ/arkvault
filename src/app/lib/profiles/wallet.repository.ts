@@ -48,6 +48,22 @@ export class WalletRepository implements IWalletRepository {
 		return this.#data.values();
 	}
 
+	/** {@inheritDoc IWalletRepository.selected} */
+	public selected(): IReadWriteWallet[] {
+		return this.values().filter((wallet: IReadWriteWallet) => wallet.isSelected());
+	}
+
+	/** {@inheritDoc IWalletRepository.selectOne} */
+	public selectOne(selected: IReadWriteWallet): void {
+		for (const wallet of this.values()) {
+			if (wallet.id() === selected.id()) {
+				wallet.mutator().isSelected(true);
+				continue;
+			}
+			wallet.mutator().isSelected(false);
+		}
+	}
+
 	/** {@inheritDoc IWalletRepository.findById} */
 	public findById(id: string): IReadWriteWallet {
 		const wallet: IReadWriteWallet | undefined = this.#data.get(id);

@@ -4,7 +4,6 @@ import { DashboardEmpty } from "@/domains/dashboard/pages/Dashboard/Dashboard.Em
 import { useActiveProfile } from "@/app/hooks/env";
 import { useTranslation } from "react-i18next";
 import { Dashboard } from "@/domains/dashboard/pages/Dashboard/Dashboard";
-import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
 import { CreateAddressesSidePanel } from "@/domains/portfolio/components/CreateWallet/CreateAddressSidePanel";
 import { ImportAddressesSidePanel } from "@/domains/portfolio/components/ImportWallet";
 import { ResetWhenUnmounted } from "@/app/components/SidePanel/ResetWhenUnmounted";
@@ -13,13 +12,12 @@ export const Portfolio = () => {
 	const profile = useActiveProfile();
 	const { t } = useTranslation();
 
-	const { selectedWallets } = usePortfolio({ profile });
 	const [showCreateAddressPanel, setShowCreateAddressPanel] = useState(false);
 	const [showImportAddressPanel, setShowImportAddressPanel] = useState(false);
 
 	return (
 		<>
-			{selectedWallets.length > 0 && (
+			{profile.wallets().selected().length > 0 && (
 				<Dashboard
 					hasFocus={!showCreateAddressPanel && !showImportAddressPanel}
 					onImportAddress={setShowImportAddressPanel}
@@ -27,7 +25,7 @@ export const Portfolio = () => {
 				/>
 			)}
 
-			{selectedWallets.length === 0 && profile.status().isRestored() && (
+			{profile.wallets().selected().length === 0 && profile.status().isRestored() && (
 				<Page pageTitle={t("COMMON.WELCOME")}>
 					<DashboardEmpty
 						onImportAddress={setShowImportAddressPanel}
