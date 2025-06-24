@@ -118,11 +118,11 @@ const Votes = ({ votes, activeValidators }: VotesProperties) => {
 
 	return (
 		<div className="border-theme-secondary-300 dark:border-theme-dark-700 mb-3 flex w-full flex-col items-start justify-between gap-0 overflow-hidden rounded border md:mb-0 md:flex-row md:items-center md:gap-2 md:rounded-none md:border-none">
-			<div className="bg-theme-secondary-100 dark:bg-theme-dark-950 flex w-full flex-row items-center gap-2 p-3 text-sm leading-[17px] font-semibold md:w-auto md:bg-transparent md:p-0 md:text-base md:leading-5 md:dark:bg-transparent">
+			<div className="bg-theme-secondary-100 dark:bg-theme-dark-950 flex w-full flex-1 flex-row items-center gap-2 p-3 text-sm leading-[17px] font-semibold md:w-auto md:bg-transparent md:p-0 md:text-base md:leading-5 md:dark:bg-transparent">
 				<p className="text-theme-secondary-700 dark:text-theme-dark-200 text-sm md:text-base md:leading-5">
 					{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.VOTING_FOR")}
 				</p>
-				<div className="xs:max-w-32 max-w-28 truncate sm:max-w-40 md:max-w-60">
+				<div className="xs:max-w-32 max-w-28 flex-1 truncate sm:max-w-40 md:max-w-60">
 					<ValidatorName
 						validatorName={validator.username() || validator.address()}
 						className="dark:text-theme-dark-50 text-sm md:text-base md:leading-5"
