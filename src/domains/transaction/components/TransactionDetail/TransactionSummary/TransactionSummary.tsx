@@ -32,7 +32,7 @@ export const TransactionSummary = ({
 		return !BigNumber.make(transaction.value()).isZero();
 	}, [transaction]);
 
-	const validatorFee = senderWallet.validatorFee() ?? 0;
+	const validatorFee = senderWallet.validatorFee();
 
 	return (
 		<DetailWrapper label={t("TRANSACTION.SUMMARY")}>
@@ -54,7 +54,7 @@ export const TransactionSummary = ({
 					</>
 				)}
 
-				{transaction.isValidatorResignation() && validatorFee > 0 && (
+				{transaction.isValidatorResignation() && validatorFee !== undefined && (
 					<>
 						<div
 							data-testid="TransactionSummary__ValidatorFee"

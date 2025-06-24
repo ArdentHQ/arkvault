@@ -103,6 +103,22 @@ describe("TransactionSummary", () => {
 
 		validatorFeeMock.mockRestore();
 	});
+	it("shows the validator fee if the transaction is a validator resignation and it has a validator fee of 0", () => {
+		const wallet = profile.wallets().first();
+
+		const validatorFeeMock = vi.spyOn(wallet, "validatorFee").mockReturnValue(0);
+
+		const transaction = {
+			...TransactionFixture,
+			isValidatorResignation: () => true,
+		} as Contracts.SignedTransactionData;
+
+		render(<TransactionSummary transaction={transaction} senderWallet={wallet} profile={profile} />);
+
+		expect(screen.getByTestId("TransactionSummary__ValidatorFee")).toBeInTheDocument();
+
+		validatorFeeMock.mockRestore();
+	});
 
 	it("does not shows the validator fee if the transaction is not a validator resignation", () => {
 		const wallet = profile.wallets().first();
@@ -125,23 +141,6 @@ describe("TransactionSummary", () => {
 		const wallet = profile.wallets().first();
 
 		const validatorFeeMock = vi.spyOn(wallet, "validatorFee").mockReturnValue(undefined);
-
-		const transaction = {
-			...TransactionFixture,
-			isValidatorResignation: () => true,
-		} as Contracts.SignedTransactionData;
-
-		render(<TransactionSummary transaction={transaction} senderWallet={wallet} profile={profile} />);
-
-		expect(screen.queryByTestId("TransactionSummary__ValidatorFee")).not.toBeInTheDocument();
-
-		validatorFeeMock.mockRestore();
-	});
-
-	it("does not shows the validator fee if the validator fee is null", () => {
-		const wallet = profile.wallets().first();
-
-		const validatorFeeMock = vi.spyOn(wallet, "validatorFee").mockReturnValue(null);
 
 		const transaction = {
 			...TransactionFixture,
