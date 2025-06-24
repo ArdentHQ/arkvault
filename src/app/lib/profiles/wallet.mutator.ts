@@ -76,6 +76,11 @@ export class WalletMutator implements IWalletMutator {
 		this.#wallet.settings().set(WalletSetting.Alias, alias);
 	}
 
+	/** {@inheritDoc IWalletMutator.selected} */
+	public isSelected(isSelected: boolean) {
+		this.#wallet.settings().set(WalletSetting.IsSelected, isSelected);
+	}
+
 	public async removeEncryption(password: string): Promise<void> {
 		const importMethod = this.#wallet.importMethod();
 

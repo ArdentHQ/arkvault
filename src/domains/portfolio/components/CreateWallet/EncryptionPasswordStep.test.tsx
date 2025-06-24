@@ -13,7 +13,6 @@ import {
 	MAINSAIL_MNEMONICS,
 } from "@/utils/testing-library";
 import * as randomWordPositionsMock from "@/domains/wallet/components/MnemonicVerification/utils/randomWordPositions";
-import * as usePortfolio from "@/domains/portfolio/hooks/use-portfolio";
 import { CreateAddressesSidePanel } from "./CreateAddressSidePanel";
 import { expect } from "vitest";
 
@@ -27,10 +26,6 @@ let resetProfileNetworksMock: () => void;
 
 describe("EncryptionPasswordStep", () => {
 	beforeEach(() => {
-		vi.spyOn(usePortfolio, "usePortfolio").mockReturnValue({
-			selectedAddresses: [],
-			setSelectedAddresses: () => {},
-		});
 		profile = env.profiles().findById(fixtureProfileId);
 
 		for (const wallet of profile.wallets().values()) {

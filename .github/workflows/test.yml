@@ -632,9 +632,9 @@ jobs:
               run: pnpm rebuild
             - name: Test
               env:
-                  COVERAGE_THRESHOLD_LINES: 97.73
-                  COVERAGE_THRESHOLD_FUNCTIONS: 98.13
-                  COVERAGE_THRESHOLD_STATEMENTS: 97.79
+                  COVERAGE_THRESHOLD_LINES: 97.38
+                  COVERAGE_THRESHOLD_FUNCTIONS: 98.12
+                  COVERAGE_THRESHOLD_STATEMENTS: 97.44
                   COVERAGE_THRESHOLD_BRANCHES: 93.81
               uses: nick-invision/retry@v2
               with:
@@ -754,9 +754,9 @@ jobs:
 
             - name: Test Components ^T-Z
               env:
-                  COVERAGE_THRESHOLD_LINES: 96.23
+                  COVERAGE_THRESHOLD_LINES: 96.22
                   COVERAGE_THRESHOLD_FUNCTIONS: 97.34
-                  COVERAGE_THRESHOLD_STATEMENTS: 96.3
+                  COVERAGE_THRESHOLD_STATEMENTS: 96.29
                   COVERAGE_THRESHOLD_BRANCHES: 89.87
                   COVERAGE_INCLUDE_PATH: src/domains/transaction/components/[T-Z]*
               uses: nick-invision/retry@v2

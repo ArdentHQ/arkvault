@@ -12,7 +12,6 @@ import {
 	mockProfileWithPublicAndTestNetworks,
 	getMainsailProfileId,
 } from "@/utils/testing-library";
-import * as usePortfolio from "@/domains/portfolio/hooks/use-portfolio";
 import { CreateAddressesSidePanel } from "./CreateAddressSidePanel";
 import { expect } from "vitest";
 
@@ -40,11 +39,6 @@ describe("CreateAddressSidePanel", () => {
 	});
 
 	beforeEach(async () => {
-		vi.spyOn(usePortfolio, "usePortfolio").mockReturnValue({
-			selectedAddresses: [],
-			setSelectedAddresses: () => {},
-		});
-
 		profile = env.profiles().findById(fixtureProfileId);
 
 		for (const wallet of profile.wallets().values()) {
