@@ -60,6 +60,10 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 
 			try {
 				gasLimit = await estimateGas({ data: { ...getValues(), ...data }, type });
+
+				if (gasLimit.isZero()) {
+					gasLimit = fallbackGasLimit;
+				}
 			} catch (error) {
 				console.warn(error);
 			}
