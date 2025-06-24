@@ -2,7 +2,6 @@ import { Contracts } from "@/app/lib/profiles";
 import React, { useEffect, useMemo } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-
 import { StepHeader } from "@/app/components/StepHeader";
 import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
 import { Divider } from "@/app/components/Divider";
@@ -13,6 +12,8 @@ import { FeeField } from "@/domains/transaction/components/FeeField";
 import { Amount } from "@/app/components/Amount";
 import { Tooltip } from "@/app/components/Tooltip";
 import { useValidatorRegistrationLockedFee } from "./hooks/useValidatorRegistrationLockedFee";
+import { Alert } from "@/app/components/Alert";
+import { BigNumber } from "@/app/lib/helpers";
 
 export const ReviewStep = ({
 	wallet,
@@ -23,7 +24,7 @@ export const ReviewStep = ({
 }) => {
 	const { t } = useTranslation();
 
-	const { getValues, unregister } = useFormContext();
+	const { getValues, unregister, errors, trigger } = useFormContext();
 
 	const { validatorPublicKey } = getValues();
 
@@ -39,9 +40,16 @@ export const ReviewStep = ({
 		wallet,
 	});
 
+	const gasPrice = BigNumber.make(getValues("gasPrice") ?? 0);
+	const gasLimit = BigNumber.make(getValues("gasLimit") ?? 0);
+
 	useEffect(() => {
 		unregister("mnemonic");
 	}, [unregister]);
+
+	useEffect(() => {
+		trigger("lockedFee");
+	}, [gasPrice, gasLimit]);
 
 	return (
 		<section data-testid="ValidatorRegistrationForm__review-step">
@@ -52,6 +60,8 @@ export const ReviewStep = ({
 					<ThemeIcon dimensions={[24, 24]} lightIcon="SendTransactionLight" darkIcon="SendTransactionDark" />
 				}
 			/>
+
+			{errors.lockedFee && <Alert className="mt-4">{errors.lockedFee.message}</Alert>}
 
 			<div className="-mx-3 mt-6 space-y-3 sm:mx-0 sm:mt-4 sm:space-y-4">
 				<TransactionAddresses

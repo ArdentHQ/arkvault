@@ -27,6 +27,7 @@ import {
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { useToggleFeeFields } from "@/domains/transaction/hooks/useToggleFeeFields";
 import { getUrlParameter } from "@/utils/paths";
+import { useValidatorRegistrationLockedFee } from "@/domains/transaction/components/ValidatorRegistrationForm/hooks/useValidatorRegistrationLockedFee";
 
 export const SendRegistration = () => {
 	const navigate = useNavigate();
@@ -40,7 +41,7 @@ export const SendRegistration = () => {
 
 	const { env } = useEnvironmentContext();
 	const activeProfile = useActiveProfile();
-	const { common } = useValidation();
+	const { common, validatorRegistration } = useValidation();
 
 	const { hasDeviceAvailable, isConnected, connect, ledgerDevice } = useLedgerContext();
 
@@ -51,7 +52,7 @@ export const SendRegistration = () => {
 
 	const form = useForm({ mode: "onChange" });
 
-	const { formState, register, setValue, watch, getValues } = form;
+	const { formState, register, setValue, watch, getValues, trigger } = form;
 	const { isDirty, isSubmitting, isValid } = formState;
 
 	const { fees, isLoading, senderAddress } = watch();
@@ -86,6 +87,11 @@ export const SendRegistration = () => {
 		}
 	}, [activeProfile, activeWalletFromUrl, network, senderAddress]);
 
+	const { validatorRegistrationFee } = useValidatorRegistrationLockedFee({
+		profile: activeProfile,
+		wallet: activeWallet,
+	});
+
 	useEffect(() => {
 		register("fees");
 
@@ -96,7 +102,13 @@ export const SendRegistration = () => {
 
 		register("suppressWarning");
 		register("isLoading");
-	}, [register, activeWallet, common, fees]);
+
+		register("lockedFee", validatorRegistration.lockedFee(activeWallet, getValues));
+	}, [register, activeWallet, common, fees, validatorRegistrationFee, validatorRegistration]);
+
+	useEffect(() => {
+		trigger("lockedFee");
+	}, [senderAddress]);
 
 	useToggleFeeFields({
 		activeTab,
@@ -113,6 +125,10 @@ export const SendRegistration = () => {
 
 		setValue("network", activeProfile.activeNetwork(), { shouldDirty: true, shouldValidate: true });
 	}, [activeWallet, env, setValue]);
+
+	useEffect(() => {
+		setValue("lockedFee", validatorRegistrationFee, { shouldDirty: true, shouldValidate: true });
+	}, [validatorRegistrationFee]);
 
 	useLayoutEffect(() => {
 		const registrations = {
@@ -133,7 +149,7 @@ export const SendRegistration = () => {
 		if (isAuthenticationStep && activeWallet?.isLedger() && isLedgerModelSupported) {
 			handleSubmit();
 		}
-	}, [ledgerDevice]); // eslint-disable-line react-hooks/exhaustive-deps
+	}, [ledgerDevice]);
 
 	useKeydown("Enter", () => {
 		const isButton = (document.activeElement as any)?.type === "button";

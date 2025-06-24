@@ -267,6 +267,10 @@ export const translations = {
 	PAGE_VALIDATOR_REGISTRATION: {
 		FORM_STEP: {
 			DESCRIPTION: "Register a new Validator address on the network below.",
+			INSUFFICIENT_BALANCE_FOR_FEE_AND_LOCKED_FEE:
+				"Registering a validator requires locking {{lockedFee}}. Your current balance is insufficient with the fee you set ({{fee}}).",
+			INSUFFICIENT_BALANCE_FOR_LOCKED_FEE:
+				"Registering a validator requires locking {{lockedFee}}. Your current balance ({{balance}}) is insufficient.",
 			TITLE: "Register Validator",
 			WARNING: "The Validator name is permanent and cannot be modified later. It is registered on the network.",
 		},
