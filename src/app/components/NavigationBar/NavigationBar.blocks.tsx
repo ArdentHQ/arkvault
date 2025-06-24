@@ -1,7 +1,7 @@
 import { Contracts } from "@/app/lib/profiles";
 import React, { useCallback, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { generatePath, NavLink, useHistory } from "react-router-dom";
+import { generatePath, NavLink, useLocation, useNavigate } from "react-router-dom";
 import cn from "classnames";
 import { NavigationBarFullProperties, NavigationBarLogoOnlyProperties } from "./NavigationBar.contracts";
 import { Button } from "@/app/components/Button";
@@ -59,12 +59,8 @@ const NavigationBarLogo: React.FC<NavigationBarLogoOnlyProperties> = ({
 	onClick,
 	variant = "default",
 }: NavigationBarLogoOnlyProperties) => {
-	const history = useHistory();
+	const navigate = useNavigate();
 	const { isXs } = useBreakpoint();
-
-	const defaultHandler = useCallback(() => {
-		history.push("/");
-	}, [history]);
 
 	const getLogoHeight = () => {
 		if (variant === "default") {
@@ -87,7 +83,7 @@ const NavigationBarLogo: React.FC<NavigationBarLogoOnlyProperties> = ({
 						"h-8 w-8 rounded": variant === "logo-only" && isXs,
 					},
 				)}
-				onClick={() => (onClick ? onClick() : defaultHandler())}
+				onClick={() => (onClick ? onClick() : navigate("/"))}
 			>
 				<Logo height={getLogoHeight()} />
 			</button>
@@ -201,7 +197,8 @@ const NavigationBarMobile = ({
 export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 	isBackDisabled,
 }: NavigationBarFullProperties) => {
-	const history = useHistory();
+	const navigate = useNavigate();
+	const location = useLocation();
 	const profile = useActiveProfile();
 	const { t } = useTranslation();
 	const { openExternal } = useLink();
@@ -243,9 +240,9 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 	const navigationMenu = useMemo(() => getNavigationMenu(t), [t]);
 	const handleSelectMenuItem = useCallback(
 		({ value }: DropdownOption) => {
-			history.push(String(value));
+			navigate(String(value));
 		},
-		[history],
+		[navigate],
 	);
 
 	const network = useMemo(
@@ -316,19 +313,19 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 
 		// add query param reset = 1 if already on send transfer page
 		/* istanbul ignore next: tested in e2e -- @preserve */
-		const reset = history.location.pathname === sendTransferPath ? 1 : 0;
-		history.push(`${sendTransferPath}?reset=${reset}`);
-	}, [history]);
+		const reset = location.pathname === sendTransferPath ? 1 : 0;
+		navigate(`${sendTransferPath}?reset=${reset}`);
+	}, [location]);
 
 	const receiveButtonClickHandler = useCallback(() => {
 		setSearchWalletIsOpen(true);
-	}, [history]);
+	}, [location]);
 
 	const homeButtonHandler = useCallback(() => {
 		const dashboardPath = generatePath(ProfilePaths.Dashboard, { profileId: profile.id() });
 
-		history.push(dashboardPath);
-	}, [history]);
+		navigate(dashboardPath);
+	}, [location]);
 
 	const transactButtonsDisabled = useMemo(() => wallets.length === 0, [wallets]);
 
@@ -428,7 +425,7 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 											return openExternal(action.mountPath());
 										}
 
-										return history.push(action.mountPath(profile.id()));
+										return navigate(action.mountPath(profile.id()));
 									}}
 								/>
 							</div>

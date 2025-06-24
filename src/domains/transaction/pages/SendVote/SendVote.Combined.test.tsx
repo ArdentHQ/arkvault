@@ -1,6 +1,6 @@
 /* eslint-disable testing-library/no-unnecessary-act */ // @TODO remove and fix test
 
-import { Contracts, ReadOnlyWallet } from "@/app/lib/profiles";
+import { Contracts, DTO, ReadOnlyWallet } from "@/app/lib/profiles";
 import {
 	act,
 	env,
@@ -16,7 +16,6 @@ import {
 import { requestMock, server } from "@/tests/mocks/server";
 import { AddressService } from "@/app/lib/mainsail/address.service";
 import React from "react";
-import { Route } from "react-router-dom";
 import { SendVote } from "./SendVote";
 import { VoteValidatorProperties } from "@/domains/vote/components/ValidatorsTable/ValidatorsTable.contracts";
 import { appendParameters } from "@/domains/vote/utils/url-parameters";
@@ -30,10 +29,10 @@ const fixtureProfileId = getDefaultProfileId();
 
 const signedTransactionMock = {
 	blockHash: () => {},
-	confirmations: () => Bignu.ZERO,
+	confirmations: () => BigNumber.ZERO,
 	convertedAmount: () => +transactionFixture.data.value / 1e8,
 	convertedFee: () => {
-		const fee = BigNumber.make(transactionFixture.data.gasPrice).times(transactionFixture.data.gas).dividedBy(1e8);
+		const fee = BigNumber.make(transactionFixture.data.gasPrice).times(transactionFixture.data.gas).divide(1e8);
 		return fee.toNumber();
 	},
 	convertedTotal: () => BigNumber.ZERO,
@@ -184,17 +183,12 @@ describe("SendVote Combined", () => {
 
 		appendParameters(parameters, "vote", votes);
 
-		const { history } = render(
-			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
-				<SendVote />
-			</Route>,
-			{
-				route: {
-					pathname: voteURL,
-					search: `?${parameters}`,
-				},
+		const { router } = render(<SendVote />, {
+			route: {
+				pathname: voteURL,
+				search: `?${parameters}`,
 			},
-		);
+		});
 
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
@@ -256,14 +250,10 @@ describe("SendVote Combined", () => {
 
 		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
-		const historySpy = vi.spyOn(history, "push");
-
 		// Go back to wallet
 		await userEvent.click(screen.getByTestId("StepNavigation__back-to-wallet-button"));
 
-		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/dashboard`);
-
-		historySpy.mockRestore();
+		expect(router.state.location.pathname).toBe(`/profiles/${profile.id()}/dashboard`);
 
 		signUnvoteMock.mockRestore();
 		broadcastUnvoteMock.mockRestore();

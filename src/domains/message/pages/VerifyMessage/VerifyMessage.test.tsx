@@ -1,9 +1,7 @@
 import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
-import { Route } from "react-router-dom";
 
-import { createHashHistory } from "history";
 import { VerifyMessage } from "./VerifyMessage";
 import { translations as messageTranslations } from "@/domains/message/i18n";
 import {
@@ -17,8 +15,6 @@ import {
 	triggerMessageSignOnce,
 	getDefaultMainsailWalletMnemonic,
 } from "@/utils/testing-library";
-
-const history = createHashHistory();
 
 let wallet: Contracts.IReadWriteWallet;
 let profile: Contracts.IProfile;
@@ -85,21 +81,10 @@ describe("VerifyMessage", () => {
 		});
 	});
 
-	beforeEach(() => {
-		history.push(walletUrl);
-	});
-
 	it.each(["xs", "lg"])("should render (%s)", async (breakpoint) => {
-		const { asFragment } = renderResponsiveWithRoute(
-			<Route path="/profiles/:profileId/wallets/:walletId/verify-message">
-				<VerifyMessage />
-			</Route>,
-			breakpoint,
-			{
-				history,
-				route: walletUrl,
-			},
-		);
+		const { asFragment } = renderResponsiveWithRoute(<VerifyMessage />, breakpoint, {
+			route: walletUrl,
+		});
 
 		await waitFor(() => {
 			expect(verifyButton()).toBeDisabled();
@@ -109,15 +94,9 @@ describe("VerifyMessage", () => {
 	});
 
 	it("should switch between manual and json input", async () => {
-		render(
-			<Route path="/profiles/:profileId/wallets/:walletId/verify-message">
-				<VerifyMessage />
-			</Route>,
-			{
-				history,
-				route: walletUrl,
-			},
-		);
+		render(<VerifyMessage />, {
+			route: walletUrl,
+		});
 
 		await userEvent.type(signatoryInput(), signedMessage.signatory);
 
@@ -176,15 +155,9 @@ describe("VerifyMessage", () => {
 	});
 
 	it("should verify message", async () => {
-		render(
-			<Route path="/profiles/:profileId/wallets/:walletId/verify-message">
-				<VerifyMessage />
-			</Route>,
-			{
-				history,
-				route: walletUrl,
-			},
-		);
+		render(<VerifyMessage />, {
+			route: walletUrl,
+		});
 
 		await userEvent.type(signatoryInput(), signedMessage.signatory);
 
@@ -210,15 +183,9 @@ describe("VerifyMessage", () => {
 	});
 
 	it("should verify message using json", async () => {
-		render(
-			<Route path="/profiles/:profileId/wallets/:walletId/verify-message">
-				<VerifyMessage />
-			</Route>,
-			{
-				history,
-				route: walletUrl,
-			},
-		);
+		render(<VerifyMessage />, {
+			route: walletUrl,
+		});
 
 		await userEvent.type(signatoryInput(), signedMessage.signatory);
 		await waitFor(() => {
@@ -253,15 +220,9 @@ describe("VerifyMessage", () => {
 	});
 
 	it("should not paste json values if all fields are empty", async () => {
-		render(
-			<Route path="/profiles/:profileId/wallets/:walletId/verify-message">
-				<VerifyMessage />
-			</Route>,
-			{
-				history,
-				route: walletUrl,
-			},
-		);
+		render(<VerifyMessage />, {
+			route: walletUrl,
+		});
 
 		await userEvent.clear(messageInput());
 		await userEvent.clear(signatureInput());
@@ -283,19 +244,9 @@ describe("VerifyMessage", () => {
 	});
 
 	it("should render with deeplink values and use them", async () => {
-		const url = `/profiles/${profile.id()}/verify-message?message=hello+world&method=verify&signatory=025f81956d5826bad7d30daed2b5c8c98e72046c1ec8323da336445476183fb7ca&signature=22f8ef55e8120fbf51e2407c808a1cc98d7ef961646226a3d3fad606437f8ba49ab68dc33c6d4a478f954c72e9bac2b4a4fe48baa70121a311a875dba1527d9d&coin=Mainsail&network=mainsail.mainnet`;
-
-		history.push(url);
-
-		render(
-			<Route path="/profiles/:profileId/verify-message">
-				<VerifyMessage />
-			</Route>,
-			{
-				history,
-				route: url,
-			},
-		);
+		render(<VerifyMessage />, {
+			route: `/profiles/${profile.id()}/verify-message?message=hello+world&method=verify&signatory=025f81956d5826bad7d30daed2b5c8c98e72046c1ec8323da336445476183fb7ca&signature=22f8ef55e8120fbf51e2407c808a1cc98d7ef961646226a3d3fad606437f8ba49ab68dc33c6d4a478f954c72e9bac2b4a4fe48baa70121a311a875dba1527d9d&coin=Mainsail&network=mainsail.mainnet`,
+		});
 
 		expect(signatoryInput()).toHaveValue("025f81956d5826bad7d30daed2b5c8c98e72046c1ec8323da336445476183fb7ca");
 		expect(messageInput()).toHaveValue("hello world");
@@ -313,39 +264,21 @@ describe("VerifyMessage", () => {
 	});
 
 	it("should return to dashboard when accessed through deeplink", async () => {
-		const url = `/profiles/${profile.id()}/verify-message?message=hello+world&method=verify&signatory=025f81956d5826bad7d30daed2b5c8c98e72046c1ec8323da336445476183fb7ca&signature=22f8ef55e8120fbf51e2407c808a1cc98d7ef961646226a3d3fad606437f8ba49ab68dc33c6d4a478f954c72e9bac2b4a4fe48baa70121a311a875dba1527d9d&coin=ARK&network=ark.mainnet`;
-
-		history.push(url);
-
-		render(
-			<Route path="/profiles/:profileId/verify-message">
-				<VerifyMessage />
-			</Route>,
-			{
-				history,
-				route: url,
-			},
-		);
+		const { router } = render(<VerifyMessage />, {
+			route: `/profiles/${profile.id()}/verify-message?message=hello+world&method=verify&signatory=025f81956d5826bad7d30daed2b5c8c98e72046c1ec8323da336445476183fb7ca&signature=22f8ef55e8120fbf51e2407c808a1cc98d7ef961646226a3d3fad606437f8ba49ab68dc33c6d4a478f954c72e9bac2b4a4fe48baa70121a311a875dba1527d9d&coin=ARK&network=ark.mainnet`,
+		});
 
 		await expectHeading(messageTranslations.PAGE_VERIFY_MESSAGE.FORM_STEP.TITLE);
 
-		const historySpy = vi.spyOn(history, "push");
-
 		await userEvent.click(screen.getByTestId("VerifyMessage__back-button"));
 
-		expect(historySpy).toHaveBeenCalledWith("/");
+		expect(router.state.location.pathname).toBe("/");
 	});
 
 	it("should fail to verify with invalid signature", async () => {
-		render(
-			<Route path="/profiles/:profileId/wallets/:walletId/verify-message">
-				<VerifyMessage />
-			</Route>,
-			{
-				history,
-				route: walletUrl,
-			},
-		);
+		render(<VerifyMessage />, {
+			route: walletUrl,
+		});
 
 		await expectHeading(messageTranslations.PAGE_VERIFY_MESSAGE.FORM_STEP.TITLE);
 
@@ -380,15 +313,9 @@ describe("VerifyMessage", () => {
 	});
 
 	it("should fail to verify using invalid data", async () => {
-		render(
-			<Route path="/profiles/:profileId/wallets/:walletId/verify-message">
-				<VerifyMessage />
-			</Route>,
-			{
-				history,
-				route: walletUrl,
-			},
-		);
+		render(<VerifyMessage />, {
+			route: walletUrl,
+		});
 
 		const messageSpy = vi.spyOn(wallet.message(), "verify").mockResolvedValue(false);
 
@@ -427,15 +354,9 @@ describe("VerifyMessage", () => {
 	});
 
 	it("should render error step if validation throws an error", async () => {
-		render(
-			<Route path="/profiles/:profileId/wallets/:walletId/verify-message">
-				<VerifyMessage />
-			</Route>,
-			{
-				history,
-				route: walletUrl,
-			},
-		);
+		const { router } = render(<VerifyMessage />, {
+			route: walletUrl,
+		});
 
 		await expectHeading(messageTranslations.PAGE_VERIFY_MESSAGE.FORM_STEP.TITLE);
 
@@ -464,13 +385,10 @@ describe("VerifyMessage", () => {
 
 		await expectHeading(messageTranslations.PAGE_VERIFY_MESSAGE.ERROR_STEP.TITLE);
 
-		const historySpy = vi.spyOn(history, "push");
-
 		await userEvent.click(screen.getByTestId("ErrorStep__close-button"));
 
-		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/dashboard`);
+		expect(router.state.location.pathname).toBe(`/profiles/${profile.id()}/dashboard`);
 
-		historySpy.mockRestore();
 		messageSpy.mockRestore();
 	});
 });

@@ -1,6 +1,4 @@
-import { createHashHistory } from "history";
 import React from "react";
-import { Route } from "react-router-dom";
 
 import { Contracts } from "@/app/lib/profiles";
 import { useProfileSynchronizer } from "./use-profile-synchronizer";
@@ -15,7 +13,6 @@ import {
 	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
 
-const history = createHashHistory();
 const dashboardURL = `/profiles/${getMainsailProfileId()}/dashboard`;
 
 vi.mock("@/utils/delay", () => ({
@@ -24,8 +21,6 @@ vi.mock("@/utils/delay", () => ({
 
 describe("useProfileSyncStatus", () => {
 	it("should sync profile and handle resync with errored networks", async () => {
-		history.push(dashboardURL);
-
 		let configuration: any;
 		let profileErroredNetworks: string[] = [];
 
@@ -42,12 +37,9 @@ describe("useProfileSyncStatus", () => {
 			return <div data-testid="ProfileSynced">test</div>;
 		};
 
-		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<Component />
-			</Route>,
-			{ history, route: dashboardURL },
-		);
+		render(<Component />, {
+			route: dashboardURL,
+		});
 
 		await expect(screen.findByTestId("ProfileSynced")).resolves.toBeVisible();
 
@@ -84,7 +76,6 @@ describe("useProfileSyncStatus", () => {
 
 	it("should sync profile and handle resync with sync error", async () => {
 		vi.useFakeTimers({ shouldAdvanceTime: true });
-		history.push(dashboardURL);
 		let configuration: any;
 
 		const onProfileSyncError = vi.fn().mockImplementation((erroredNetworks: string[], retrySync) => {
@@ -103,12 +94,9 @@ describe("useProfileSyncStatus", () => {
 			return <div data-testid="ProfileSyncedWithError">test</div>;
 		};
 
-		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<Component />
-			</Route>,
-			{ history, route: dashboardURL },
-		);
+		render(<Component />, {
+			route: dashboardURL,
+		});
 
 		await expect(screen.findByTestId("ProfileSyncedWithError")).resolves.toBeVisible();
 
@@ -146,23 +134,13 @@ describe("useProfileSyncStatus", () => {
 
 		const profileStatusMock = vi.spyOn(profile.status(), "isRestored").mockReturnValue(false);
 
-		history.push(`/profiles/${profile.id()}/dashboard`);
-
-		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<div data-testid="ProfileRestored">test</div>
-			</Route>,
-			{ history, route: `/profiles/${profile.id()}/dashboard`, withProfileSynchronizer: true },
-		);
-
-		const historyMock = vi.spyOn(history, "push").mockReturnValue();
+		render(<div data-testid="ProfileRestored">test</div>);
 
 		await expect(screen.findByTestId("ProfileRestored", undefined, { timeout: 4000 })).resolves.toBeVisible();
 
 		process.env.TEST_PROFILES_RESTORE_STATUS = "restored";
 
 		profileStatusMock.mockRestore();
-		historyMock.mockRestore();
 		resetProfileNetworksMock();
 		vi.clearAllTimers();
 	});

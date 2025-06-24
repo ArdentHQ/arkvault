@@ -1,7 +1,7 @@
 import { Contracts, DTO } from "@/app/lib/profiles";
 import React, { useEffect, useLayoutEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
-import { useHistory, useParams } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 import { useTranslation } from "react-i18next";
 import { SendRegistrationForm } from "./SendRegistration.contracts";
@@ -26,17 +26,17 @@ import {
 } from "@/domains/transaction/components/UsernameRegistrationForm";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { useToggleFeeFields } from "@/domains/transaction/hooks/useToggleFeeFields";
+import { getUrlParameter } from "@/utils/paths";
 
 export const SendRegistration = () => {
-	const history = useHistory();
+	const navigate = useNavigate();
 	const { t } = useTranslation();
+	const location = useLocation();
 
 	const [activeTab, setActiveTab] = useState(1);
 	const [transaction, setTransaction] = useState(undefined as unknown as DTO.ExtendedSignedTransactionData);
 	const [registrationForm, setRegistrationForm] = useState<SendRegistrationForm>();
 	const [errorMessage, setErrorMessage] = useState<string | undefined>();
-
-	const { registrationType } = useParams<{ registrationType: string }>();
 
 	const { env } = useEnvironmentContext();
 	const activeProfile = useActiveProfile();
@@ -61,6 +61,18 @@ export const SendRegistration = () => {
 	const isAuthenticationStep = activeTab === authenticationStep;
 
 	const activeWalletFromUrl = useActiveWalletWhenNeeded(false);
+
+	const registrationType = useMemo(() => {
+		try {
+			if (activeWalletFromUrl) {
+				return getUrlParameter(location.pathname, 5);
+			}
+
+			return getUrlParameter(location.pathname, 3);
+		} catch {
+			return;
+		}
+	}, [activeWalletFromUrl]);
 
 	const { activeNetwork: network } = useActiveNetwork({ profile: activeProfile });
 
@@ -180,7 +192,7 @@ export const SendRegistration = () => {
 
 	const handleBack = () => {
 		if (activeTab === 1) {
-			return history.push(`/profiles/${activeProfile.id()}/dashboard`);
+			return navigate(`/profiles/${activeProfile.id()}/dashboard`);
 		}
 
 		setActiveTab(activeTab - 1);
@@ -202,12 +214,17 @@ export const SendRegistration = () => {
 
 	const isNextDisabled = isDirty ? !isValid || !!isLoading : true;
 
-	const getPageTitle = () =>
-		({
+	const getPageTitle = () => {
+		if (!registrationType) {
+			return;
+		}
+
+		return {
 			default: t("TRANSACTION.TRANSACTION_TYPES.VALIDATOR_REGISTRATION"),
 			multiSignature: t("TRANSACTION.TRANSACTION_TYPES.MULTI_SIGNATURE"),
 			usernameRegistration: t("TRANSACTION.TRANSACTION_TYPES.USERNAME_REGISTRATION"),
-		})[registrationType];
+		}[registrationType];
+	};
 
 	return (
 		<Page pageTitle={getPageTitle()}>
@@ -222,7 +239,7 @@ export const SendRegistration = () => {
 						<Tabs activeId={activeTab}>
 							<TabPanel tabId={10}>
 								<ErrorStep
-									onClose={() => history.push(`/profiles/${activeProfile.id()}/dashboard`)}
+									onClose={() => navigate(`/profiles/${activeProfile.id()}/dashboard`)}
 									isBackDisabled={isSubmitting}
 									onBack={() => {
 										setActiveTab(1);
@@ -258,9 +275,7 @@ export const SendRegistration = () => {
 							{!hideStepNavigation && (
 								<StepNavigation
 									onBackClick={handleBack}
-									onBackToWalletClick={() =>
-										history.push(`/profiles/${activeProfile.id()}/dashboard`)
-									}
+									onBackToWalletClick={() => navigate(`/profiles/${activeProfile.id()}/dashboard`)}
 									onContinueClick={() => handleNext()}
 									isLoading={isSubmitting || isLoading}
 									isNextDisabled={isNextDisabled}

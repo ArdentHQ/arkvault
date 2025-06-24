@@ -106,7 +106,9 @@ describe("QRModal", () => {
 
 		QrReader.mockImplementation(({ onResult }: { onResult: (result: any, error?: Error | null) => void }) => {
 			if (onResult) {
-				onResult(undefined, new Error("other error"));
+				for (let index = 0; index < 5; index++) {
+					onResult(undefined, new Error("other error"));
+				}
 			}
 
 			return null;
@@ -114,9 +116,6 @@ describe("QRModal", () => {
 
 		const { rerender } = render(<QRModal isOpen={true} onCancel={vi.fn()} onRead={vi.fn()} />);
 
-		rerender(<QRModal isOpen={true} onCancel={vi.fn()} onRead={vi.fn()} />);
-		rerender(<QRModal isOpen={true} onCancel={vi.fn()} onRead={vi.fn()} />);
-		rerender(<QRModal isOpen={true} onCancel={vi.fn()} onRead={vi.fn()} />);
 		rerender(<QRModal isOpen={true} onCancel={vi.fn()} onRead={vi.fn()} />);
 
 		await waitFor(() => {

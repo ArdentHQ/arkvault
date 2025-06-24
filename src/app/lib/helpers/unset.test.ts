@@ -10,7 +10,12 @@ describe("unset", () => {
 		expect(unset([], "a.b.c")).toBe(false);
 	});
 
-	it("should work with a string or array as path", () => {
+	it("should return false if the path is not a string", () => {
+		// @ts-expect-error
+		expect(unset({}, 123)).toBe(false);
+	});
+
+	it("should work with a string path", () => {
 		const object = { a: { b: { c: 7 } } };
 
 		unset(object, "a.b.c");

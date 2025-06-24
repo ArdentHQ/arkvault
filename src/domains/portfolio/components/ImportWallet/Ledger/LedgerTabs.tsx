@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useFormContext } from "react-hook-form";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import { generatePath } from "react-router";
 import { LedgerConnectionStep } from "./LedgerConnectionStep";
@@ -30,7 +30,7 @@ export const LedgerTabs = ({
 	const { activeNetwork } = useActiveNetwork({ profile: activeProfile });
 	const { importWallet } = useWalletImport({ profile: activeProfile });
 
-	const history = useHistory();
+	const navigate = useNavigate();
 	const { isBusy, disconnect, isAwaitingConnection, isAwaitingDeviceConfirmation, isConnected, listenDevice } =
 		useLedgerContext();
 
@@ -124,11 +124,11 @@ export const LedgerTabs = ({
 	);
 
 	const handleFinish = useCallback(() => {
-		history.push(`/profiles/${activeProfile.id()}/dashboard`);
+		navigate(`/profiles/${activeProfile.id()}/dashboard`);
 	}, [isMultiple, history, activeProfile, activeNetwork, importedWallets]);
 
 	const handleDeviceNotAvailable = useCallback(() => {
-		history.replace(generatePath(ProfilePaths.Dashboard, { profileId: activeProfile.id() }));
+		navigate(generatePath(ProfilePaths.Dashboard, { profileId: activeProfile.id() }));
 	}, [history, activeProfile]);
 
 	const handleBack = useCallback(() => {

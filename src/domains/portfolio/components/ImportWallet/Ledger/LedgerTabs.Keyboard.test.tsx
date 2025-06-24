@@ -2,7 +2,6 @@ import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
 import React, { useEffect } from "react";
 import { FormProvider, useForm } from "react-hook-form";
-import { Route } from "react-router-dom";
 
 import * as reactHookForm from "react-hook-form";
 import { LedgerTabs } from "./LedgerTabs";
@@ -122,9 +121,7 @@ describe("LedgerTabs", () => {
 	});
 
 	const BaseComponent = ({ activeIndex }: { activeIndex: number }) => (
-		<Route path="/profiles/:profileId">
-			<LedgerTabs activeIndex={activeIndex} onClickEditWalletName={onClickEditWalletName} />
-		</Route>
+		<LedgerTabs activeIndex={activeIndex} onClickEditWalletName={onClickEditWalletName} />
 	);
 
 	const Component = ({ activeIndex }: { activeIndex: number }) => {

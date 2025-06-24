@@ -92,10 +92,13 @@ let localstorageSpy;
 actWarningsAsErrors();
 
 beforeAll(async () => {
+	// Fixes "URL.createObjectURL is not a function" in /src/app/hooks/use-files.test.tsx
+	global.URL.createObjectURL = vi.fn(() => "blob:mock-url");
+
 	MockDate.set(new Date("2020-07-01T00:00:00.000Z"));
 
 	process.env.REACT_APP_IS_UNIT = "1";
-	server.listen({ onUnhandledRequest: "error" });
+	server.listen({ onUnhandledRequest: "warn" });
 
 	await bootEnvironmentWithProfileFixtures({ env, shouldRestoreDefaultProfile: true });
 

@@ -5,11 +5,14 @@ import { useTranslation } from "react-i18next";
 
 import { TransactionAddresses } from "@/domains/transaction/components/TransactionDetail";
 import { StepHeader } from "@/app/components/StepHeader";
-import { ThemeIcon } from "@/app/components/Icon";
+import { Icon, ThemeIcon } from "@/app/components/Icon";
 import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
 import { Divider } from "@/app/components/Divider";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { FeeField } from "@/domains/transaction/components/FeeField";
+import { Amount } from "@/app/components/Amount";
+import { Tooltip } from "@/app/components/Tooltip";
+import { useValidatorResignationLockedFee } from "./hooks/useValidatorResignationLockedFee";
 
 export const ReviewStep = ({
 	senderWallet,
@@ -25,6 +28,16 @@ export const ReviewStep = ({
 	useEffect(() => {
 		unregister("mnemonic");
 	}, [unregister]);
+
+	const {
+		validatoResigationFee,
+		validatoResigationFeeAsFiat,
+		validatoResigationFeeTicker,
+		validatoResigationFeeAsFiatTicker,
+	} = useValidatorResignationLockedFee({
+		profile,
+		wallet: senderWallet,
+	});
 
 	return (
 		<section data-testid="SendValidatorResignation__review-step">
@@ -78,6 +91,39 @@ export const ReviewStep = ({
 						</div>
 					</div>
 				</DetailWrapper>
+
+				{validatoResigationFee > 0 && (
+					<DetailWrapper label={t("TRANSACTION.SUMMARY")}>
+						<div className="flex w-full items-center justify-between gap-4 sm:justify-start">
+							<DetailTitle className="w-auto sm:min-w-[162px]">{t("COMMON.UNLOCKED_AMOUNT")}</DetailTitle>
+
+							<div className="flex flex-row items-center gap-2">
+								<Amount
+									ticker={validatoResigationFeeTicker}
+									value={validatoResigationFee}
+									className="font-semibold"
+								/>
+
+								{validatoResigationFeeAsFiat !== null && (
+									<div className="text-theme-secondary-700 font-semibold">
+										(~
+										<Amount
+											ticker={validatoResigationFeeAsFiatTicker}
+											value={validatoResigationFeeAsFiat}
+										/>
+										)
+									</div>
+								)}
+
+								<Tooltip content={t("TRANSACTION.REVIEW_STEP.AMOUNT_UNLOCKED_TOOLTIP")} maxWidth={418}>
+									<div className="bg-theme-primary-100 dark:bg-theme-dark-800 dark:text-theme-dark-50 text-theme-primary-600 flex h-5 w-5 items-center justify-center rounded-full">
+										<Icon name="QuestionMarkSmall" size="sm" />
+									</div>
+								</Tooltip>
+							</div>
+						</div>
+					</DetailWrapper>
+				)}
 
 				<div className="mx-3 mt-2 sm:mx-0">
 					<FormField name="fee">

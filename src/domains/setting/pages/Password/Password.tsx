@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-import { Prompt } from "react-router-dom";
 
 import { PasswordSettingsState } from "./Password.contracts";
 import { Button } from "@/app/components/Button";
@@ -13,11 +12,11 @@ import { useActiveProfile, useBreakpoint } from "@/app/hooks";
 import { toasts } from "@/app/services";
 import { PasswordRemovalConfirmModal } from "@/domains/setting/components/PasswordRemovalConfirmModal";
 import { SettingsWrapper } from "@/domains/setting/components/SettingsPageWrapper";
-import { useSettingsPrompt } from "@/domains/setting/hooks/use-settings-prompt";
 import { PasswordValidation } from "@/app/components/PasswordValidation";
 import { SettingsButtonGroup, SettingsGroup } from "@/domains/setting/pages/General/General.blocks";
 import { ListDivided } from "@/app/components/ListDivided";
 import { Tooltip } from "@/app/components/Tooltip";
+import { SettingsUnsavedChangesConfirmation } from "@/domains/setting/components/SettingsUnsavedChangesConfirmation";
 
 export const PasswordSettings = () => {
 	const activeProfile = useActiveProfile();
@@ -43,7 +42,6 @@ export const PasswordSettings = () => {
 	const { confirmPassword, password } = watch();
 
 	const { errors, isDirty, dirtyFields, isSubmitting, isValid } = formState;
-	const { getPromptMessage } = useSettingsPrompt({ dirtyFields, isDirty });
 
 	const handleSubmit: SubmitHandler<PasswordSettingsState> = async ({ currentPassword, password }) => {
 		try {
@@ -172,7 +170,7 @@ export const PasswordSettings = () => {
 					</SettingsButtonGroup>
 				</Form>
 
-				<Prompt message={getPromptMessage} />
+				<SettingsUnsavedChangesConfirmation isDirty={isDirty} dirtyFields={dirtyFields} />
 			</SettingsWrapper>
 
 			{isConfirmRemovalVisible && (

@@ -13,16 +13,12 @@ import {
 import { Contracts, DTO } from "@/app/lib/profiles";
 import { requestMock, server } from "@/tests/mocks/server";
 import { AddressService } from "@/app/lib/mainsail/address.service";
-import { Contracts } from "@/app/lib/profiles";
 import React from "react";
-import { Route } from "react-router-dom";
 import { SendValidatorResignation } from "./SendValidatorResignation";
-import { createHashHistory } from "history";
 import { expect } from "vitest";
 import transactionFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/transfer.json";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import userEvent from "@testing-library/user-event";
-import { signedTransactionMock } from "@/domains/transaction/pages/SendTransfer/SendTransfer.test";
 import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
 
@@ -32,25 +28,15 @@ let profile: Contracts.IProfile;
 let resignationUrl: string;
 
 const passphrase = MAINSAIL_MNEMONICS[0];
-const history = createHashHistory();
 
 vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
 }));
 
-const renderPage = () => {
-	const path = "/profiles/:profileId/wallets/:walletId/send-validator-resignation";
-
-	return render(
-		<Route path={path}>
-			<SendValidatorResignation />
-		</Route>,
-		{
-			history,
-			route: resignationUrl,
-		},
-	);
-};
+const renderPage = () =>
+	render(<SendValidatorResignation />, {
+		route: resignationUrl,
+	});
 
 const signedTransactionMock = {
 	blockHash: () => {},
@@ -163,7 +149,6 @@ describe("SendValidatorResignation", () => {
 	describe("Validator Resignation", () => {
 		beforeEach(() => {
 			resignationUrl = `/profiles/${profile.id()}/wallets/${wallet.id()}/send-validator-resignation`;
-			history.push(resignationUrl);
 
 			mnemonicMock = vi
 				.spyOn(AddressService.prototype, "fromMnemonic")
@@ -263,17 +248,13 @@ describe("SendValidatorResignation", () => {
 		});
 
 		it("should go back to dashboard", async () => {
-			const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
-
-			renderPage();
+			const { router } = renderPage();
 
 			await expect(formStep()).resolves.toBeVisible();
 
 			await userEvent.click(screen.getByTestId("StepNavigation__back-button"));
 
-			expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/dashboard`);
-
-			historySpy.mockRestore();
+			expect(router.state.location.pathname).toBe(`/profiles/${profile.id()}/dashboard`);
 		});
 
 		it("should navigate between 1st and 2nd step", async () => {
@@ -315,7 +296,7 @@ describe("SendValidatorResignation", () => {
 				throw new Error("broadcast error");
 			});
 
-			const { asFragment } = renderPage();
+			const { asFragment, router } = renderPage();
 
 			await expect(formStep()).resolves.toBeVisible();
 
@@ -344,14 +325,10 @@ describe("SendValidatorResignation", () => {
 			expect(screen.getByTestId("ErrorStep__errorMessage")).toHaveTextContent("broadcast error");
 			expect(asFragment()).toMatchSnapshot();
 
-			const historyMock = vi.spyOn(history, "push").mockReturnValue();
-
 			await userEvent.click(screen.getByTestId("ErrorStep__close-button"));
 
 			const dashboardPage = `/profiles/${profile.id()}/dashboard`;
-			await waitFor(() => expect(historyMock).toHaveBeenCalledWith(dashboardPage));
-
-			historyMock.mockRestore();
+			await waitFor(() => expect(router.state.location.pathname).toBe(dashboardPage));
 
 			signMock.mockRestore();
 			broadcastMock.mockRestore();
@@ -460,7 +437,7 @@ describe("SendValidatorResignation", () => {
 
 			const transactionMock = createTransactionMock(wallet);
 
-			renderPage();
+			const { router } = renderPage();
 
 			await expect(formStep()).resolves.toBeVisible();
 
@@ -491,14 +468,10 @@ describe("SendValidatorResignation", () => {
 
 			await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
-			const historyMock = vi.spyOn(history, "push").mockReturnValue();
-
 			await userEvent.click(screen.getByTestId("StepNavigation__back-to-wallet-button"));
 
 			const dashboardPage = `/profiles/${profile.id()}/dashboard`;
-			await waitFor(() => expect(historyMock).toHaveBeenCalledWith(dashboardPage));
-
-			historyMock.mockRestore();
+			await waitFor(() => expect(router.state.location.pathname).toBe(dashboardPage));
 
 			signMock.mockRestore();
 			broadcastMock.mockRestore();
@@ -526,17 +499,10 @@ describe("SendValidatorResignation", () => {
 			const transactionMock = createTransactionMock(wallet);
 
 			const resignationEncryptedUrl = `/profiles/${profile.id()}/wallets/${wallet.id()}/send-validator-resignation`;
-			history.push(resignationEncryptedUrl);
 
-			render(
-				<Route path="/profiles/:profileId/wallets/:walletId/send-validator-resignation">
-					<SendValidatorResignation />
-				</Route>,
-				{
-					history,
-					route: resignationEncryptedUrl,
-				},
-			);
+			render(<SendValidatorResignation />, {
+				route: resignationEncryptedUrl,
+			});
 
 			await expect(formStep()).resolves.toBeVisible();
 

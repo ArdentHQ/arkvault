@@ -32,7 +32,7 @@ export class HistoricalPriceTransformer implements HistoricalTransformer {
 		const datasets = {};
 
 		for (const value of Object.values(this.data)) {
-			datasets[DateTime.make(value.date).format(dateFormat)] = convertToCurrency(value.priceUsd, {
+			datasets[DateTime.make(value.time).format(dateFormat)] = convertToCurrency(value.priceUsd, {
 				base: tokenId,
 				from: currency,
 				rates,
@@ -44,7 +44,7 @@ export class HistoricalPriceTransformer implements HistoricalTransformer {
 
 		return {
 			datasets: datasetValues,
-			labels: Object.keys(datasets),
+			labels: Object.keys(datasets).map((time) => DateTime.make(time).format(dateFormat)),
 			max: Math.max(...datasetValues),
 			min: Math.min(...datasetValues),
 		};

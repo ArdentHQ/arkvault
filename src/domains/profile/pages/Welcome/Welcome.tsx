@@ -1,8 +1,7 @@
 import { Contracts } from "@/app/lib/profiles";
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
-import { matchPath, useHistory } from "react-router-dom";
-import { LocationState } from "router/router.types";
+import { matchPath, useLocation, useNavigate } from "react-router-dom";
 import cn from "classnames";
 import { DropdownOption } from "@/app/components/Dropdown";
 import { Icon, ThemeIcon } from "@/app/components/Icon";
@@ -18,12 +17,14 @@ import { Profiles } from "@/domains/profile/components/Profiles/Profiles";
 import { Button } from "@/app/components/Button";
 
 export const Welcome = () => {
+	const { t } = useTranslation();
 	const context = useEnvironmentContext();
-	const history = useHistory<LocationState>();
+	const navigate = useNavigate();
+	const location = useLocation();
+
 	const [isThemeLoaded, setThemeLoaded] = useState(false);
 	const isProfileCardClickedOnce = useRef(false);
 
-	const { t } = useTranslation();
 	const { handleDeepLink, isDeeplink, validateDeeplink } = useDeeplink();
 
 	const profileCardActions = useMemo(
@@ -38,20 +39,19 @@ export const Welcome = () => {
 
 	const [deletingProfileId, setDeletingProfileId] = useState<string | undefined>();
 	const [selectedProfile, setSelectedProfile] = useState<Contracts.IProfile | undefined>(() => {
-		if (!history.location.state?.from) {
+		const from = location.state?.from as string | undefined;
+
+		if (!from) {
 			return;
 		}
 
-		const match = matchPath<{ profileId: string }>(history.location.state.from, {
-			path: "/profiles/:profileId",
-		});
+		const match = matchPath({ end: true, path: "/profiles/:profileId" }, from);
 
-		if (!match) {
+		if (!match || !match.params.profileId) {
 			return;
 		}
 
-		const { profileId } = match.params;
-		return context.env.profiles().findById(profileId);
+		return context.env.profiles().findById(match.params.profileId);
 	});
 
 	const [requestedAction, setRequestedAction] = useState<DropdownOption | undefined>(
@@ -85,7 +85,7 @@ export const Welcome = () => {
 					toasts.update(validatingToastId, "error", error);
 					isProfileCardClickedOnce.current = false;
 
-					history.push("/");
+					navigate("/");
 					return;
 				}
 
@@ -97,17 +97,18 @@ export const Welcome = () => {
 
 			setProfileTheme(profile);
 
-			history.push(`/profiles/${profile.id()}/${subPath}`);
+			console.log("navigating");
+			navigate(`/profiles/${profile.id()}/${subPath}`);
 		},
-		[history, isDeeplink],
+		[location, isDeeplink],
 	);
 
 	const navigateToPreviousPage = useCallback(
 		(profile: Contracts.IProfile) => {
 			setProfileTheme(profile);
-			history.push(history.location.state!.from!);
+			navigate(location.state!.from);
 		},
-		[history],
+		[location],
 	);
 
 	const closeDeleteProfileModal = useCallback(() => {
@@ -272,7 +273,7 @@ export const Welcome = () => {
 											data-testid="CreateProfile"
 											variant="primary"
 											className={cn({ "mt-3": profiles.length })}
-											onClick={() => history.push("/profiles/create")}
+											onClick={() => navigate("/profiles/create")}
 										>
 											<Icon name="Plus" />
 											<span className="pl-2"> {t("COMMON.CREATE")} </span>

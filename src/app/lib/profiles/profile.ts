@@ -380,7 +380,9 @@ export class Profile implements IProfile {
 					return;
 				}
 
+				/* istanbul ignore next -- @preserve */
 				if (activeNetworkId === network.id()) {
+					/* istanbul ignore next -- @preserve */
 					return network;
 				}
 

@@ -1,10 +1,7 @@
 import { Contracts } from "@/app/lib/profiles";
-import { createHashHistory } from "history";
 import React from "react";
-import { Route } from "react-router-dom";
-
 import { useActiveProfile, useActiveWallet, useActiveWalletWhenNeeded } from "./env";
-import { env, getMainsailProfileId, render, screen } from "@/utils/testing-library";
+import { env, getMainsailProfileId, render, screen, waitFor } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
@@ -18,7 +15,7 @@ describe("useActiveProfile", () => {
 	const TestProfile: React.FC = () => {
 		const profile = useActiveProfile();
 
-		return <h1>{profile.name()}</h1>;
+		return <h1 data-testid="test-profile">{profile.name()}</h1>;
 	};
 
 	const TestWallet: React.FC = () => {
@@ -28,18 +25,13 @@ describe("useActiveProfile", () => {
 			return <h1>{wallet}</h1>;
 		}
 
-		return <h1>{wallet.address()}</h1>;
+		return <h1 data-testid="test-wallet">{wallet.address()}</h1>;
 	};
 
 	it("should return profile", () => {
-		render(
-			<Route path="/profiles/:profileId">
-				<TestProfile />
-			</Route>,
-			{
-				route: `/profiles/${profile.id()}`,
-			},
-		);
+		render(<TestProfile />, {
+			route: `/profiles/${profile.id()}`,
+		});
 
 		expect(screen.getByText(profile.name())).toBeInTheDocument();
 	});
@@ -47,45 +39,30 @@ describe("useActiveProfile", () => {
 	it("should throw error when profile is not found", () => {
 		const consoleErrorSpy = vi.spyOn(console, "error").mockImplementation(vi.fn());
 
-		expect(() => {
-			render(
-				<Route path="/profiles/:profileId">
-					<TestProfile />
-				</Route>,
-				{
-					route: `/profiles/any_undefined_profile`,
-				},
-			);
-		}).toThrow("No profile found for [any_undefined_profile]");
+		render(<TestProfile />, {
+			route: `/profiles/any_undefined_profile`,
+		});
+
+		expect(screen.getByText(`No profile found for [any_undefined_profile]`)).toBeInTheDocument();
 
 		consoleErrorSpy.mockRestore();
 	});
 
-	it("should throw error when useActiveProfile is called on a route where profile is not available", () => {
+	it("should throw error when useActiveProfile is called on a route where profile is not available", async () => {
 		const consoleErrorSpy = vi.spyOn(console, "error").mockImplementation(vi.fn());
-		const history = createHashHistory();
 
-		expect(() => {
-			render(<TestProfile />, {
-				history,
-				route: "/route-without-profile",
-			});
-		}).toThrow(
-			"Parameter [profileId] must be available on the route where [useActiveProfile] is called. Current route is [/route-without-profile].",
-		);
+		render(<TestProfile />, {
+			route: "/route-without-profile",
+		});
 
+		await waitFor(() => expect(screen.queryByTestId("test-profile")).not.toBeInTheDocument());
 		consoleErrorSpy.mockRestore();
 	});
 
 	it("should return wallet", () => {
-		render(
-			<Route path="/profiles/:profileId/wallets/:walletId">
-				<TestWallet />
-			</Route>,
-			{
-				route: `/profiles/${profile.id()}/wallets/${wallet.id()}`,
-			},
-		);
+		render(<TestWallet />, {
+			route: `/profiles/${profile.id()}/wallets/${wallet.id()}`,
+		});
 
 		expect(screen.getByText(wallet.address())).toBeInTheDocument();
 	});
@@ -100,14 +77,9 @@ describe("useActiveProfile", () => {
 			return <TestWallet />;
 		};
 
-		render(
-			<Route path="/profiles/:profileId/wallets/:walletId">
-				<TestActiveWallet />
-			</Route>,
-			{
-				route: `/profiles/${profile.id()}/wallets/${wallet.id()}`,
-			},
-		);
+		render(<TestActiveWallet />, {
+			route: `/profiles/${profile.id()}/wallets/${wallet.id()}`,
+		});
 
 		expect(activeWalletId).toStrictEqual(wallet.id());
 		expect(screen.getByText(wallet.address())).toBeInTheDocument();
@@ -127,17 +99,10 @@ describe("useActiveProfile", () => {
 				return <TestWallet />;
 			};
 
-			expect(() =>
-				render(
-					<Route path="/profiles/:profileId/wallets/:walletId">
-						<TestActiveWallet />
-					</Route>,
-					{
-						route: `/profiles/${profile.id()}/wallets/1`,
-						withProfileSynchronizer: false,
-					},
-				),
-			).toThrow("Failed to find a wallet for [1].");
+			render(<TestActiveWallet />, {
+				route: `/profiles/${profile.id()}/wallets/1`,
+				withProfileSynchronizer: false,
+			});
 
 			expect(activeWallet).toBeUndefined();
 			expect(activeWalletId).toBeUndefined();

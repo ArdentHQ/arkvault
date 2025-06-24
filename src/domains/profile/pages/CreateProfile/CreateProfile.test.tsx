@@ -11,7 +11,6 @@ import { httpClient } from "@/app/services";
 import { StubStorage } from "@/tests/mocks";
 import * as themeUtils from "@/utils/theme";
 import { act, env, render, screen, waitFor } from "@/utils/testing-library";
-import { createHashHistory } from "history";
 
 const profileName = "test profile";
 
@@ -64,19 +63,13 @@ describe("CreateProfile", () => {
 	});
 
 	it("should navigate back", async () => {
-		const history = createHashHistory();
-
-		render(<CreateProfile />, { history });
+		const { router } = render(<CreateProfile />);
 
 		expect(screen.getByTestId("CreateProfile")).toBeInTheDocument();
 
-		const historySpy = vi.spyOn(history, "push");
-
 		await userEvent.click(screen.getByText("Back"));
 
-		expect(historySpy).toHaveBeenCalledWith(`/`);
-
-		historySpy.mockRestore();
+		expect(router.state.location.pathname).toBe(`/`);
 	});
 
 	it("should select currency based on locale", async () => {
@@ -196,9 +189,7 @@ describe("CreateProfile", () => {
 	});
 
 	it("should navigate to dashboard after creating profile", async () => {
-		const history = createHashHistory();
-
-		render(<CreateProfile />, { history });
+		const { router } = render(<CreateProfile />);
 
 		const user = userEvent.setup();
 		await user.clear(nameInput());
@@ -208,15 +199,11 @@ describe("CreateProfile", () => {
 
 		await waitFor(() => expect(submitButton()).toBeEnabled());
 
-		const historySpy = vi.spyOn(history, "push");
-
 		await userEvent.click(submitButton());
 
 		const profile = env.profiles().last();
 
-		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/dashboard`);
-
-		historySpy.mockRestore();
+		expect(router.state.location.pathname).toBe(`/profiles/${profile.id()}/dashboard`);
 	});
 
 	it("should not be able to create new profile if name already exists", async () => {

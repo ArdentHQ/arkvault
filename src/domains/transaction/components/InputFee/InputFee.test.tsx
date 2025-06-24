@@ -227,7 +227,6 @@ describe("InputFee", () => {
 
 			expect(inputElement).toBeInTheDocument();
 
-			inputElement.select();
 			await userEvent.clear(inputElement);
 			await userEvent.type(inputElement, "8.447");
 
@@ -306,7 +305,6 @@ describe("InputFee", () => {
 
 			const inputElement: HTMLInputElement = screen.getByTestId("Input_GasPrice");
 
-			inputElement.select();
 			await userEvent.clear(inputElement);
 			await userEvent.type(inputElement, "-1.4");
 
@@ -320,7 +318,6 @@ describe("InputFee", () => {
 
 			const inputElement: HTMLInputElement = screen.getByTestId("Input_GasLimit");
 
-			inputElement.select();
 			await userEvent.clear(inputElement);
 			await userEvent.type(inputElement, " ");
 
@@ -348,7 +345,6 @@ describe("InputFee", () => {
 
 			const inputElement: HTMLInputElement = screen.getByTestId("Input_GasPrice");
 
-			inputElement.select();
 			await userEvent.clear(inputElement);
 
 			expect(inputElement).toHaveValue("");

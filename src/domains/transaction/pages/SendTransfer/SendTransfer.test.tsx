@@ -25,15 +25,13 @@ import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
 import { FormStep } from "./FormStep";
 import { ReviewStep } from "./ReviewStep";
-import { Route } from "react-router-dom";
 import { SendTransfer } from "./SendTransfer";
-import { buildTransferData } from "@/domains/transaction/pages/SendTransfer/SendTransfer.helpers";
-import { createHashHistory } from "history";
 import nodeFeesFixture from "@/tests/fixtures/coins/mainsail/devnet/node-fees.json";
 import transactionFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/transfer.json";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import transactionsFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions.json";
 import userEvent from "@testing-library/user-event";
+import { buildTransferData } from "./SendTransfer.helpers";
 
 const passphrase = getDefaultWalletMnemonic();
 const fixtureProfileId = getDefaultProfileId();
@@ -159,8 +157,6 @@ const formStepID = "SendTransfer__form-step";
 const sendAllID = "AddRecipient__send-all";
 const ariaInvalid = "aria-invalid";
 
-const history = createHashHistory();
-
 describe("SendTransfer", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getMainsailProfileId());
@@ -260,8 +256,6 @@ describe("SendTransfer", () => {
 	it("should render form step with deeplink values and use them", async () => {
 		const transferURL = `/profiles/${fixtureProfileId}/send-transfer`;
 
-		history.push(transferURL);
-
 		const deeplinkProperties: any = {
 			amount: "1.2",
 			coin: "Mainsail",
@@ -271,14 +265,10 @@ describe("SendTransfer", () => {
 		};
 
 		render(
-			<Route path="/profiles/:profileId/send-transfer">
-				<StepsProvider activeStep={1} steps={4}>
-					<FormStepComponent deeplinkProperties={deeplinkProperties} />
-				</StepsProvider>
-				,
-			</Route>,
+			<StepsProvider activeStep={1} steps={4}>
+				<FormStepComponent deeplinkProperties={deeplinkProperties} />
+			</StepsProvider>,
 			{
-				history,
 				route: transferURL,
 			},
 		);
@@ -291,8 +281,6 @@ describe("SendTransfer", () => {
 
 		const walletNetworkSpy = vi.spyOn(wallet.network(), "ticker");
 
-		history.push(transferURL);
-
 		const deeplinkProperties: any = {
 			amount: "1.2",
 			coin: "Mainsail",
@@ -302,14 +290,10 @@ describe("SendTransfer", () => {
 		};
 
 		render(
-			<Route path="/profiles/:profileId/send-transfer">
-				<StepsProvider activeStep={1} steps={4}>
-					<FormStepComponent deeplinkProperties={deeplinkProperties} />
-				</StepsProvider>
-				,
-			</Route>,
+			<StepsProvider activeStep={1} steps={4}>
+				<FormStepComponent deeplinkProperties={deeplinkProperties} />
+			</StepsProvider>,
 			{
-				history,
 				route: transferURL,
 			},
 		);
@@ -323,8 +307,6 @@ describe("SendTransfer", () => {
 
 	it("should render review step", () => {
 		const transferURL = `/profiles/${fixtureProfileId}/send-transfer`;
-
-		history.push(transferURL);
 
 		const defaultValues = {
 			gasLimit: "1",
@@ -341,13 +323,10 @@ describe("SendTransfer", () => {
 		};
 
 		const { container } = render(
-			<Route path="/profiles/:profileId/send-transfer">
-				<ComponentWrapper defaultValues={defaultValues} activeStep={1}>
-					<ReviewStep wallet={wallet} network={wallet.network()} />
-				</ComponentWrapper>
-			</Route>,
+			<ComponentWrapper defaultValues={defaultValues} activeStep={1}>
+				<ReviewStep wallet={wallet} network={wallet.network()} />
+			</ComponentWrapper>,
 			{
-				history,
 				route: transferURL,
 			},
 		);
@@ -359,8 +338,6 @@ describe("SendTransfer", () => {
 
 	it("should render review step with multiple recipients (%s)", (_, memo) => {
 		const transferURL = `/profiles/${fixtureProfileId}/send-transfer`;
-
-		history.push(transferURL);
 
 		const defaultValues = {
 			gasLimit: "1",
@@ -380,13 +357,10 @@ describe("SendTransfer", () => {
 		};
 
 		const { container } = render(
-			<Route path="/profiles/:profileId/send-transfer">
-				<ComponentWrapper defaultValues={defaultValues} activeStep={1}>
-					<ReviewStep wallet={wallet} network={wallet.network()} />
-				</ComponentWrapper>
-			</Route>,
+			<ComponentWrapper defaultValues={defaultValues} activeStep={1}>
+				<ReviewStep wallet={wallet} network={wallet.network()} />
+			</ComponentWrapper>,
 			{
-				history,
 				route: transferURL,
 			},
 		);
@@ -405,17 +379,9 @@ describe("SendTransfer", () => {
 
 		const transferURL = `/profiles/${fixtureProfileId}/wallets/${fixtureWalletId}/send-transfer`;
 
-		history.push(transferURL);
-
-		render(
-			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
-				<SendTransfer />
-			</Route>,
-			{
-				history,
-				route: transferURL,
-			},
-		);
+		render(<SendTransfer />, {
+			route: transferURL,
+		});
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
@@ -426,51 +392,30 @@ describe("SendTransfer", () => {
 
 	it("should render form and use location state with network parameter", async () => {
 		const transferURL = `/profiles/${fixtureProfileId}/wallets/${fixtureWalletId}/send-transfer?recipient=DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9&memo=ARK&coin=ark&network=mainsail.devnet&amount=0`;
-		history.push(transferURL);
 
-		render(
-			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
-				<SendTransfer />
-			</Route>,
-			{
-				history,
-				route: transferURL,
-			},
-		);
+		render(<SendTransfer />, {
+			route: transferURL,
+		});
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 	});
 
 	it("should render form and use location state with nethash parameter", async () => {
 		const transferURL = `/profiles/${fixtureProfileId}/wallets/${fixtureWalletId}/send-transfer?recipient=DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9&memo=ARK&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&amount=0`;
-		history.push(transferURL);
 
-		render(
-			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
-				<SendTransfer />
-			</Route>,
-			{
-				history,
-				route: transferURL,
-			},
-		);
+		render(<SendTransfer />, {
+			route: transferURL,
+		});
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 	});
 
 	it("should render form and use location state without memo", async () => {
 		const transferURL = `/profiles/${fixtureProfileId}/wallets/${fixtureWalletId}/send-transfer?coin=ark&network=mainsail.devnet`;
-		history.push(transferURL);
 
-		render(
-			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
-				<SendTransfer />
-			</Route>,
-			{
-				history,
-				route: transferURL,
-			},
-		);
+		render(<SendTransfer />, {
+			route: transferURL,
+		});
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 	});
@@ -478,17 +423,9 @@ describe("SendTransfer", () => {
 	it.each(["with keyboard", "without keyboard"])("should send a single transfer %s", async (inputMethod) => {
 		const transferURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-transfer`;
 
-		history.push(transferURL);
-
-		render(
-			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
-				<SendTransfer />
-			</Route>,
-			{
-				history,
-				route: transferURL,
-			},
-		);
+		const { router } = render(<SendTransfer />, {
+			route: transferURL,
+		});
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
@@ -496,13 +433,11 @@ describe("SendTransfer", () => {
 
 		expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address());
 
-		const goSpy = vi.spyOn(history, "go").mockImplementation(vi.fn());
-
 		expect(backButton()).not.toHaveAttribute("disabled");
 
 		await userEvent.click(backButton());
 
-		expect(goSpy).toHaveBeenCalledWith(-1);
+		expect(router.state.location.pathname).toBe(`/profiles/${profile.id()}/wallets/${wallet.id()}/send-transfer`);
 
 		await selectRecipient();
 
@@ -578,41 +513,27 @@ describe("SendTransfer", () => {
 		transactionMock.mockRestore();
 
 		// Go back to wallet
-		const pushSpy = vi.spyOn(history, "push");
 		await userEvent.click(backToWalletButton());
 
-		expect(pushSpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/dashboard`);
-
-		goSpy.mockRestore();
-		pushSpy.mockRestore();
+		expect(router.state.location.pathname).toBe(`/profiles/${profile.id()}/dashboard`);
 	});
 
 	it("should fail sending a single transfer", async () => {
 		const transferURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-transfer`;
 
-		history.push(transferURL);
-
-		render(
-			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
-				<SendTransfer />
-			</Route>,
-			{
-				history,
-				route: transferURL,
-			},
-		);
+		const { router } = render(<SendTransfer />, {
+			route: transferURL,
+		});
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
 		expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address());
 
-		const goSpy = vi.spyOn(history, "go").mockImplementation(vi.fn());
-
 		expect(backButton()).not.toHaveAttribute("disabled");
 
 		await userEvent.click(backButton());
 
-		expect(goSpy).toHaveBeenCalledWith(-1);
+		expect(router.state.location.pathname).toBe(`/profiles/${profile.id()}/wallets/${wallet.id()}/send-transfer`);
 
 		await selectRecipient();
 
@@ -692,29 +613,19 @@ describe("SendTransfer", () => {
 	it("should send a single transfer and handle undefined expiration", async () => {
 		const transferURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-transfer`;
 
-		history.push(transferURL);
-
-		render(
-			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
-				<SendTransfer />
-			</Route>,
-			{
-				history,
-				route: transferURL,
-			},
-		);
+		const { router } = render(<SendTransfer />, {
+			route: transferURL,
+		});
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
 		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
 
-		const goSpy = vi.spyOn(history, "go").mockImplementation(vi.fn());
-
 		expect(backButton()).not.toHaveAttribute("disabled");
 
 		await userEvent.click(backButton());
 
-		expect(goSpy).toHaveBeenCalledWith(-1);
+		expect(router.state.location.pathname).toBe(transferURL);
 
 		await selectRecipient();
 
@@ -773,13 +684,8 @@ describe("SendTransfer", () => {
 		transactionMock.mockRestore();
 
 		// Go back to wallet
-		const pushSpy = vi.spyOn(history, "push");
 		await userEvent.click(backToWalletButton());
-
-		expect(pushSpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/dashboard`);
-
-		goSpy.mockRestore();
-		pushSpy.mockRestore();
+		expect(router.state.location.pathname).toBe(`/profiles/${profile.id()}/dashboard`);
 	});
 
 	it("should send a single transfer with a ledger wallet", async () => {
@@ -822,19 +728,11 @@ describe("SendTransfer", () => {
 
 		const transferURL = `/profiles/${fixtureProfileId}/transactions/${wallet.id()}/transfer`;
 
-		history.push(transferURL);
-
 		mockNanoXTransport();
 
-		render(
-			<Route path="/profiles/:profileId/transactions/:walletId/transfer">
-				<SendTransfer />
-			</Route>,
-			{
-				history,
-				route: transferURL,
-			},
-		);
+		render(<SendTransfer />, {
+			route: transferURL,
+		});
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
@@ -878,17 +776,9 @@ describe("SendTransfer", () => {
 		const transferURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-transfer`;
 		const mnemonicMock = vi.spyOn(wallet, "actsWithMnemonic").mockReturnValue(true);
 
-		history.push(transferURL);
-
-		render(
-			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
-				<SendTransfer />
-			</Route>,
-			{
-				history,
-				route: transferURL,
-			},
-		);
+		render(<SendTransfer />, {
+			route: transferURL,
+		});
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
@@ -939,8 +829,6 @@ describe("SendTransfer", () => {
 
 		expect(inputElement).toHaveValue(passphrase);
 
-		await inputElement.select();
-
 		await userEvent.clear(inputElement);
 		await userEvent.type(inputElement, "test");
 
@@ -961,17 +849,9 @@ describe("SendTransfer", () => {
 	it("should show error step and go back", async () => {
 		const transferURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-transfer`;
 
-		history.push(transferURL);
-
-		render(
-			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
-				<SendTransfer />
-			</Route>,
-			{
-				history,
-				route: transferURL,
-			},
-		);
+		const { router } = render(<SendTransfer />, {
+			route: transferURL,
+		});
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
@@ -1018,8 +898,6 @@ describe("SendTransfer", () => {
 			throw new Error("broadcast error");
 		});
 
-		const historyMock = vi.spyOn(history, "push").mockReturnValue();
-
 		await waitFor(() => {
 			expect(sendButton()).toBeEnabled();
 		});
@@ -1035,7 +913,7 @@ describe("SendTransfer", () => {
 		await userEvent.click(screen.getByTestId("ErrorStep__close-button"));
 
 		const walletDetailPage = `/profiles/${getDefaultProfileId()}/dashboard`;
-		await waitFor(() => expect(historyMock).toHaveBeenCalledWith(walletDetailPage));
+		await waitFor(() => expect(router.state.location.pathname).toBe(walletDetailPage));
 
 		signMock.mockRestore();
 	});
@@ -1043,17 +921,9 @@ describe("SendTransfer", () => {
 	it("should require amount if not set", async () => {
 		const transferURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-transfer`;
 
-		history.push(transferURL);
-
-		render(
-			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
-				<SendTransfer />
-			</Route>,
-			{
-				history,
-				route: transferURL,
-			},
-		);
+		render(<SendTransfer />, {
+			route: transferURL,
+		});
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
@@ -1098,29 +968,19 @@ describe("SendTransfer", () => {
 
 		const transferURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-transfer`;
 
-		history.push(transferURL);
-
-		render(
-			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
-				<SendTransfer />
-			</Route>,
-			{
-				history,
-				route: transferURL,
-			},
-		);
+		const { router } = render(<SendTransfer />, {
+			route: transferURL,
+		});
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
 		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
 
-		const goSpy = vi.spyOn(history, "go").mockImplementation(vi.fn());
-
 		expect(backButton()).not.toHaveAttribute("disabled");
 
 		await userEvent.click(backButton());
 
-		expect(goSpy).toHaveBeenCalledWith(-1);
+		expect(router.state.location.pathname).toBe(transferURL);
 
 		await selectRecipient();
 
@@ -1190,13 +1050,10 @@ describe("SendTransfer", () => {
 		transactionMock.mockRestore();
 
 		// Go back to wallet
-		const pushSpy = vi.spyOn(history, "push");
 		await userEvent.click(backToWalletButton());
 
-		expect(pushSpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/dashboard`);
+		expect(router.state.location.pathname).toBe(`/profiles/${profile.id()}/dashboard`);
 
-		goSpy.mockRestore();
-		pushSpy.mockRestore();
 		sentTransactionsMock.mockRestore();
 	});
 
@@ -1225,17 +1082,9 @@ describe("SendTransfer", () => {
 
 		const transferURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-transfer`;
 
-		history.push(transferURL);
-
-		render(
-			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
-				<SendTransfer />
-			</Route>,
-			{
-				history,
-				route: transferURL,
-			},
-		);
+		render(<SendTransfer />, {
+			route: transferURL,
+		});
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
@@ -1300,29 +1149,17 @@ describe("SendTransfer", () => {
 		const actsWithEncryptionMock = vi.spyOn(wallet, "actsWithMnemonicWithEncryption").mockReturnValue(true);
 		const passphraseGetMock = vi.spyOn(wallet.signingKey(), "get").mockReturnValue(passphrase);
 
-		history.push(transferURL);
-
-		render(
-			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
-				<SendTransfer />
-			</Route>,
-			{
-				history,
-				route: transferURL,
-			},
-		);
+		render(<SendTransfer />, {
+			route: transferURL,
+		});
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
 		expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address());
 
-		const goSpy = vi.spyOn(history, "go").mockImplementation(vi.fn());
-
 		expect(backButton()).not.toHaveAttribute("disabled");
 
 		await userEvent.click(backButton());
-
-		expect(goSpy).toHaveBeenCalledWith(-1);
 
 		await selectRecipient();
 

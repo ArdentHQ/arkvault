@@ -3,7 +3,7 @@ import Slider, { Settings } from "react-slick";
 
 import { Contracts } from "@/app/lib/profiles";
 import { DropdownOption } from "@/app/components/Dropdown";
-import React from "react";
+import React, { JSX } from "react";
 import { chunk } from "@/app/lib/helpers";
 
 interface ProfilesSliderProperties {

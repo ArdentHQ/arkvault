@@ -1,9 +1,7 @@
 import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
-import { createHashHistory, HashHistory } from "history";
 import React, { useEffect } from "react";
 import { Trans } from "react-i18next";
-import { Route } from "react-router-dom";
 
 import { Exchange } from "./Exchange";
 import { httpClient, toasts } from "@/app/services";
@@ -12,7 +10,6 @@ import { translations } from "@/domains/exchange/i18n";
 import { env, getMainsailProfileId, render, screen, waitFor, within } from "@/utils/testing-library";
 import { requestMock, server } from "@/tests/mocks/server";
 
-let history: HashHistory;
 let profile: Contracts.IProfile;
 
 const exchangeBaseURL = "https://exchanges.arkvault.io/api";
@@ -74,12 +71,6 @@ const mockExchangeTransaction = (profile: Contracts.IProfile) => {
 describe("Exchange", () => {
 	beforeAll(() => {
 		profile = env.profiles().findById(getMainsailProfileId());
-
-		history = createHashHistory();
-	});
-
-	beforeEach(() => {
-		history.push(exchangeURL);
 	});
 
 	afterEach(() => {
@@ -99,13 +90,10 @@ describe("Exchange", () => {
 			});
 
 		render(
-			<Route path="/profiles/:profileId/exchange">
-				<ExchangeProvider>
-					<Exchange />
-				</ExchangeProvider>
-			</Route>,
+			<ExchangeProvider>
+				<Exchange />
+			</ExchangeProvider>,
 			{
-				history,
 				route: exchangeURL,
 			},
 		);
@@ -127,13 +115,10 @@ describe("Exchange", () => {
 		server.use(requestMock(exchangeBaseURL, { data: [] }));
 
 		const { container } = render(
-			<Route path="/profiles/:profileId/exchange">
-				<ExchangeProvider>
-					<Exchange />
-				</ExchangeProvider>
-			</Route>,
+			<ExchangeProvider>
+				<Exchange />
+			</ExchangeProvider>,
 			{
-				history,
 				route: exchangeURL,
 			},
 		);
@@ -153,13 +138,10 @@ describe("Exchange", () => {
 
 	it("should render with exchanges", async () => {
 		const { container } = render(
-			<Route path="/profiles/:profileId/exchange">
-				<ExchangeProvider>
-					<Exchange />
-				</ExchangeProvider>
-			</Route>,
+			<ExchangeProvider>
+				<Exchange />
+			</ExchangeProvider>,
 			{
-				history,
 				route: exchangeURL,
 			},
 		);
@@ -181,14 +163,11 @@ describe("Exchange", () => {
 	});
 
 	it("should navigate to exchange", async () => {
-		render(
-			<Route path="/profiles/:profileId/exchange">
-				<ExchangeProvider>
-					<Exchange />
-				</ExchangeProvider>
-			</Route>,
+		const { router } = render(
+			<ExchangeProvider>
+				<Exchange />
+			</ExchangeProvider>,
 			{
-				history,
 				route: exchangeURL,
 			},
 		);
@@ -203,26 +182,19 @@ describe("Exchange", () => {
 			expect(screen.getAllByTestId("Card")).toHaveLength(2);
 		});
 
-		const historyMock = vi.spyOn(history, "push").mockImplementation(vi.fn());
-
 		await userEvent.click(screen.getByText("ChangeNOW"));
 
 		await waitFor(() => {
-			expect(historyMock).toHaveBeenCalledWith(expect.stringContaining("exchange/view"));
+			expect(router.state.location.pathname).toBe(`/profiles/${getMainsailProfileId()}/exchange/view`);
 		});
-
-		historyMock.mockRestore();
 	});
 
 	it("should navigate to history tab", async () => {
 		render(
-			<Route path="/profiles/:profileId/exchange">
-				<ExchangeProvider>
-					<Exchange />
-				</ExchangeProvider>
-			</Route>,
+			<ExchangeProvider>
+				<Exchange />
+			</ExchangeProvider>,
 			{
-				history,
 				route: exchangeURL,
 			},
 		);
@@ -248,16 +220,13 @@ describe("Exchange", () => {
 			.exchangeTransactions()
 			.update(exchangeTransaction.id(), { status: Contracts.ExchangeTransactionStatus.Finished });
 
-		render(
-			<Route path="/profiles/:profileId/exchange">
-				<ExchangeProvider>
-					<Wrapper>
-						<Exchange />
-					</Wrapper>
-				</ExchangeProvider>
-			</Route>,
+		const { router } = render(
+			<ExchangeProvider>
+				<Wrapper>
+					<Exchange />
+				</Wrapper>
+			</ExchangeProvider>,
 			{
-				history,
 				route: exchangeURL,
 			},
 		);
@@ -273,15 +242,11 @@ describe("Exchange", () => {
 		expect(screen.getByTestId("ExchangeTransactionsTable")).toBeInTheDocument();
 		expect(screen.getAllByTestId("TableRow")).toHaveLength(profile.exchangeTransactions().count());
 
-		const historyMock = vi.spyOn(history, "push").mockImplementation(vi.fn());
-
 		await userEvent.click(within(screen.getAllByTestId("TableRow")[0]).getAllByRole("button")[0]);
 
 		await waitFor(() => {
-			expect(historyMock).toHaveBeenCalledWith(expect.stringContaining("exchange/view"));
+			expect(router.state.location.pathname).toBe(`/profiles/${getMainsailProfileId()}/exchange/view`);
 		});
-
-		historyMock.mockRestore();
 	});
 
 	it("should delete exchange transaction", async () => {
@@ -293,15 +258,12 @@ describe("Exchange", () => {
 			.update(exchangeTransaction.id(), { status: Contracts.ExchangeTransactionStatus.Finished });
 
 		render(
-			<Route path="/profiles/:profileId/exchange">
-				<ExchangeProvider>
-					<Wrapper>
-						<Exchange />
-					</Wrapper>
-				</ExchangeProvider>
-			</Route>,
+			<ExchangeProvider>
+				<Wrapper>
+					<Exchange />
+				</Wrapper>
+			</ExchangeProvider>,
 			{
-				history,
 				route: exchangeURL,
 			},
 		);
@@ -352,13 +314,10 @@ describe("Exchange", () => {
 			.update(exchangeTransaction.id(), { status: Contracts.ExchangeTransactionStatus.Finished });
 
 		render(
-			<Route path="/profiles/:profileId/exchange">
-				<ExchangeProvider>
-					<Exchange />
-				</ExchangeProvider>
-			</Route>,
+			<ExchangeProvider>
+				<Exchange />
+			</ExchangeProvider>,
 			{
-				history,
 				route: exchangeURL,
 			},
 		);
@@ -395,15 +354,12 @@ describe("Exchange", () => {
 		mockExchangeTransaction(profile);
 
 		render(
-			<Route path="/profiles/:profileId/exchange">
-				<ExchangeProvider>
-					<Wrapper>
-						<Exchange />
-					</Wrapper>
-				</ExchangeProvider>
-			</Route>,
+			<ExchangeProvider>
+				<Wrapper>
+					<Exchange />
+				</Wrapper>
+			</ExchangeProvider>,
 			{
-				history,
 				route: exchangeURL,
 			},
 		);
@@ -433,15 +389,12 @@ describe("Exchange", () => {
 		);
 
 		render(
-			<Route path="/profiles/:profileId/exchange">
-				<ExchangeProvider>
-					<Wrapper>
-						<Exchange />
-					</Wrapper>
-				</ExchangeProvider>
-			</Route>,
+			<ExchangeProvider>
+				<Wrapper>
+					<Exchange />
+				</Wrapper>
+			</ExchangeProvider>,
 			{
-				history,
 				route: exchangeURL,
 			},
 		);

@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-import { Route } from "react-router-dom";
 import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
-import { createHashHistory } from "history";
 import { useDeeplink } from "./use-deeplink";
 import {
 	env,
@@ -12,8 +10,6 @@ import {
 	screen,
 	waitFor,
 } from "@/utils/testing-library";
-
-const history = createHashHistory();
 
 const url =
 	"/?method=transfer&network=mainsail.devnet&recipient=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6&amount=1.2&memo=ARK";
@@ -63,33 +59,22 @@ describe("useDeeplink hook", () => {
 	};
 
 	it("should use the method parameter to detect deeplink", () => {
-		history.push(
-			"/?network=mainsail.devnet&recipient=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6&amount=1.2&memo=ARK",
-		);
+		const route =
+			"/?network=mainsail.devnet&recipient=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6&amount=1.2&memo=ARK";
 
-		render(
-			<Route>
-				<TestComponent />
-			</Route>,
-			{
-				history,
-			},
-		);
+		render(<TestComponent />, {
+			route,
+		});
 
 		expect(screen.getByTestId("NoDeeplink")).toBeInTheDocument();
 	});
 
 	it("should validate url with errors", async () => {
-		history.push("/?method=teeeest&network=mainsail.devnet");
+		const route = "/?method=teeeest&network=mainsail.devnet";
 
-		render(
-			<Route>
-				<TestComponent />
-			</Route>,
-			{
-				history,
-			},
-		);
+		render(<TestComponent />, {
+			route,
+		});
 
 		expect(screen.getByTestId("DeeplinkValidate")).toBeInTheDocument();
 
@@ -101,16 +86,9 @@ describe("useDeeplink hook", () => {
 	});
 
 	it("should validate url without errors", async () => {
-		history.push("/?method=transfer&network=mainsail.devnet");
-
-		render(
-			<Route>
-				<TestComponent />
-			</Route>,
-			{
-				history,
-			},
-		);
+		render(<TestComponent />, {
+			route: "/?method=transfer&network=mainsail.devnet",
+		});
 
 		expect(screen.getByTestId("DeeplinkValidate")).toBeInTheDocument();
 
@@ -120,27 +98,16 @@ describe("useDeeplink hook", () => {
 	});
 
 	it("should handle url", async () => {
-		history.push(url);
-
-		const historySpy = vi.spyOn(history, "push");
-
-		render(
-			<Route>
-				<TestComponent />
-			</Route>,
-			{
-				history,
-			},
-		);
+		const { router } = render(<TestComponent />, {
+			route: url,
+		});
 
 		expect(screen.getByTestId("DeeplinkHandle")).toBeInTheDocument();
 
 		await userEvent.click(screen.getByTestId("DeeplinkHandle"));
 
-		expect(historySpy).toHaveBeenCalledWith(
+		expect(router.state.location.pathname + router.state.location.search).toBe(
 			"/profiles/877b7695-8a55-4e16-a7ff-412113131856/send-transfer?method=transfer&network=mainsail.devnet&recipient=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6&amount=1.2&memo=ARK",
 		);
-
-		historySpy.mockRestore();
 	});
 });

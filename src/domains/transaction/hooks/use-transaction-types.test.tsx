@@ -7,15 +7,10 @@ describe("useTransactionTypes", () => {
 		const { result } = renderHook(() => useTransactionTypes());
 
 		expect(result.current.getLabel("transfer")).toBe("Transfer");
+		expect(result.current.getLabel("unknown-type")).toBe("Contract Deployment");
 	});
 
-	it("should have core types", () => {
-		const { result } = renderHook(() => useTransactionTypes());
-
-		expect(Object.keys(result.current.types)).toStrictEqual(["core"]);
-	});
-
-	it("should filter only supported transaction types from wallets without magistrate", () => {
+	it("should return the supported transaction types", () => {
 		const profile = env.profiles().first();
 		const { result } = renderHook(() => useTransactionTypes({ wallets: [profile.wallets().first()] }));
 
@@ -28,5 +23,10 @@ describe("useTransactionTypes", () => {
 			"transfer",
 			"vote",
 		]);
+	});
+
+	it("should return empty array if no wallets are provided", () => {
+		const { result } = renderHook(() => useTransactionTypes());
+		expect(result.current.types.core).toStrictEqual([]);
 	});
 });

@@ -3,7 +3,7 @@ import userEvent from "@testing-library/user-event";
 import React from "react";
 import { usePwa } from "./use-pwa";
 
-import { act, render, screen, waitFor } from "@/utils/testing-library";
+import { act, render, renderWithoutRouter, screen, waitFor } from "@/utils/testing-library";
 
 const TestComponent: React.FC = () => {
 	const { installPrompt, showInstallBanner, hideInstallBanner, showIOSInstructions } = usePwa();
@@ -69,7 +69,7 @@ describe("usePwa", () => {
 
 		const localstorageSpy = vi.spyOn(Storage.prototype, "setItem");
 
-		render(<TestComponent />);
+		renderWithoutRouter(<TestComponent />);
 
 		const promptFunction = vi.fn().mockResolvedValue({});
 
@@ -104,7 +104,7 @@ describe("usePwa", () => {
 
 		const localstorageSpy = vi.spyOn(Storage.prototype, "setItem");
 
-		render(<TestComponent />);
+		renderWithoutRouter(<TestComponent />);
 
 		await userEvent.click(screen.getByTestId("TestComponent__install"));
 

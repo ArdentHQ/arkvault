@@ -1,11 +1,13 @@
-import { env, getDefaultProfileId } from "@/utils/testing-library";
+/* eslint-disable sonarjs/no-duplicate-string */
 
-import { BigNumber } from "@/app/lib/helpers";
+import { env, getDefaultProfileId, t } from "@/utils/testing-library";
+
 import { Contracts } from "@/app/lib/profiles";
 import { sendTransfer } from "./SendTransfer";
+import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
+import { AddressService } from "@/app/lib/mainsail/address.service";
 
 let profile: Contracts.IProfile;
-let translationMock: any;
 let network: any;
 
 describe("Send transfer validations", () => {
@@ -13,48 +15,118 @@ describe("Send transfer validations", () => {
 		profile = env.profiles().findById(getDefaultProfileId());
 		await env.profiles().restore(profile);
 		await profile.sync();
-
-		translationMock = vi.fn((index18nString: string) => index18nString);
 		network = env.profiles().first().wallets().first().network();
 	});
 
-	it("recipientAddress", async () => {
-		const withoutNetwork = sendTransfer(translationMock).recipientAddress(profile, undefined, [], false);
+	describe("Amount", () => {
+		afterEach(() => {
+			vi.restoreAllMocks();
+		});
 
-		await expect(withoutNetwork.validate.valid("")).toBe(false);
+		it("should pass", () => {
+			const { validate } = sendTransfer(t).amount(network, "10", [], true);
+			expect(validate.valid("5")).toBe(true);
+		});
 
-		const noAddressWithRecipients = sendTransfer(translationMock).recipientAddress(profile, network, [{}], false);
+		it("should pass if not required", () => {
+			const { validate } = sendTransfer(t).amount(network, "10", [{} as RecipientItem], false);
+			expect(validate.valid("")).toBe(true);
+		});
 
-		await expect(noAddressWithRecipients.validate.valid("")).toBe(true);
+		it("should fail with insufficient balance", () => {
+			const { validate } = sendTransfer(t).amount(network, "5", [], true);
+			expect(validate.valid("10")).toBe(
+				t("TRANSACTION.VALIDATION.LOW_BALANCE", { balance: "5", coinId: network.coin() }),
+			);
+		});
 
-		const noAddressWithoutRecipients = sendTransfer(translationMock).recipientAddress(profile, network, [], false);
+		it("should fail with undefined balance", () => {
+			const { validate } = sendTransfer(t).amount(network, undefined, [], true);
+			expect(validate.valid("10")).toBe(t("TRANSACTION.VALIDATION.LOW_BALANCE", { coinId: network.coin() }));
+		});
 
-		await expect(noAddressWithoutRecipients.validate.valid("")).toBe("COMMON.VALIDATION.FIELD_REQUIRED");
+		it("should fail if required but empty", () => {
+			const { validate } = sendTransfer(t).amount(network, "10", [], true);
+			expect(validate.valid("")).toBe(t("COMMON.VALIDATION.FIELD_REQUIRED", { field: t("COMMON.AMOUNT") }));
+		});
+
+		it("should fail with zero amount", () => {
+			const { validate } = sendTransfer(t).amount(network, "10", [], true);
+			expect(validate.valid("0")).toBe(
+				t("TRANSACTION.VALIDATION.AMOUNT_BELOW_MINIMUM", { coinId: network.coin(), min: "0.00000001" }),
+			);
+		});
 	});
 
-	it("recipientAddres - invalid", async () => {
-		const invalidAddress = sendTransfer(translationMock).recipientAddress(profile, network, [], false);
-
-		await expect(invalidAddress.validate.valid("invalid")).toBe("COMMON.VALIDATION.RECIPIENT_INVALID");
+	describe("Memo", () => {
+		it("should return max length validation", () => {
+			const { maxLength } = sendTransfer(t).memo();
+			expect(maxLength.value).toBe(255);
+			expect(maxLength.message).toBe(
+				t("COMMON.VALIDATION.MAX_LENGTH", { field: t("COMMON.MEMO"), maxLength: 255 }),
+			);
+		});
 	});
 
-	it("amount", () => {
-		const noBalance = sendTransfer(translationMock).amount(network, BigNumber.ZERO, [], false);
-
-		expect(noBalance.validate.valid("1")).toBe("TRANSACTION.VALIDATION.LOW_BALANCE");
-
-		const noAmount = sendTransfer(translationMock).amount(network, BigNumber.ONE, [], false);
-
-		expect(noAmount.validate.valid("")).toBe("COMMON.VALIDATION.FIELD_REQUIRED");
-
-		const amountTooSmall = sendTransfer(translationMock).amount(network, BigNumber.ONE, [], false);
-
-		expect(amountTooSmall.validate.valid(0)).toBe("TRANSACTION.VALIDATION.AMOUNT_BELOW_MINIMUM");
+	describe("Network", () => {
+		it("should return required validation", () => {
+			const { required } = sendTransfer(t).network();
+			expect(required).toBe(t("COMMON.VALIDATION.FIELD_REQUIRED", { field: t("COMMON.CRYPTOASSET") }));
+		});
 	});
-	it("memo", () => {
-		const memo = sendTransfer(translationMock).memo();
 
-		expect(memo.maxLength.value).toBe(255);
-		expect(memo.maxLength.message).toBe("COMMON.VALIDATION.MAX_LENGTH");
+	describe("Recipient Address", () => {
+		afterEach(() => {
+			vi.restoreAllMocks();
+		});
+
+		it("should pass with a valid address", () => {
+			vi.spyOn(AddressService.prototype, "validate").mockReturnValue(true);
+
+			const { validate } = sendTransfer(t).recipientAddress(profile, network, [], true);
+			expect(validate.valid("D8rr7B1d63MScbDEkMyk5q4eC2ahK1Y71p")).toBe(true);
+		});
+
+		it("should pass if not single recipient and has recipients", () => {
+			const recipients = [{} as RecipientItem];
+			const { validate } = sendTransfer(t).recipientAddress(profile, network, recipients, false);
+			expect(validate.valid(undefined)).toBe(true);
+		});
+
+		it("should fail without a network", () => {
+			const { validate } = sendTransfer(t).recipientAddress(profile, undefined, [], true);
+			expect(validate.valid("anything")).toBe(false);
+		});
+
+		it("should fail if required but empty", () => {
+			const { validate } = sendTransfer(t).recipientAddress(profile, network, [], true);
+			expect(validate.valid("")).toBe(t("COMMON.VALIDATION.FIELD_REQUIRED", { field: t("COMMON.RECIPIENT") }));
+		});
+
+		it("should fail with an invalid address", () => {
+			vi.spyOn(AddressService.prototype, "validate").mockReturnValue(false);
+
+			const { validate } = sendTransfer(t).recipientAddress(profile, network, [], true);
+			expect(validate.valid("invalid-address")).toBe(t("COMMON.VALIDATION.RECIPIENT_INVALID"));
+		});
+	});
+
+	describe("Recipients", () => {
+		it("should fail with an empty array", () => {
+			const { validate } = sendTransfer(t).recipients();
+			expect(validate.valid([])).toBe(false);
+		});
+
+		it("should pass with items in array", () => {
+			const { validate } = sendTransfer(t).recipients();
+			expect(validate.valid([{} as RecipientItem])).toBe(true);
+		});
+	});
+
+	describe("Sender Address", () => {
+		it("should return required validation", () => {
+			const { required } = sendTransfer(t).senderAddress();
+			expect(required).toBe(t("COMMON.VALIDATION.FIELD_REQUIRED", { field: t("COMMON.SENDER_ADDRESS") }));
+		});
 	});
 });

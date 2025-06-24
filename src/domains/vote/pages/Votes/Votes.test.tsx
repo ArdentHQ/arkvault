@@ -1,8 +1,6 @@
 import { Contracts, ReadOnlyWallet } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
-import { createHashHistory } from "history";
 import React, { useEffect } from "react";
-import { Route } from "react-router-dom";
 
 import { Votes } from "./Votes";
 import { useProfileStatusWatcher } from "@/app/hooks";
@@ -19,14 +17,10 @@ import {
 import { useConfiguration } from "@/app/contexts";
 import { expect } from "vitest";
 
-const history = createHashHistory();
-
 let emptyProfile: Contracts.IProfile;
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
 let resetProfileNetworksMock: () => void;
-
-const routePath = "/profiles/:profileId/votes";
 
 const walletID = "ee02b13f-8dbf-4191-a9dc-08d2ab72ec28";
 
@@ -40,17 +34,13 @@ const Wrapper = ({ children }) => {
 	return children;
 };
 
-const renderPage = (route: string, routePath = "/profiles/:profileId/wallets/:walletId/votes") =>
+const renderPage = (route: string) =>
 	render(
-		<Route path={routePath}>
-			<Wrapper>
-				<Votes />
-			</Wrapper>
-		</Route>,
-		{
-			history,
-			route: route,
-		},
+		<Wrapper>
+			{" "}
+			<Votes />{" "}
+		</Wrapper>,
+		{ route },
 	);
 
 const firstVoteButtonID = "ValidatorRow__toggle-0";
@@ -81,10 +71,11 @@ describe("Votes", () => {
 
 	it("should render", async () => {
 		const route = `/profiles/${profile.id()}/wallets/${wallet.id()}/votes`;
-		const { asFragment, container } = renderPage(route);
+		const { asFragment } = renderPage(route);
 
-		expect(container).toBeInTheDocument();
-		expect(screen.getByTestId("ValidatorsTable")).toBeInTheDocument();
+		await waitFor(() => {
+			expect(screen.getByTestId("ValidatorsTable")).toBeInTheDocument();
+		});
 
 		await expect(screen.findByTestId(firstVoteButtonID)).resolves.toBeVisible();
 
@@ -151,7 +142,7 @@ describe("Votes", () => {
 
 	it("should open the create wallet side panel", async () => {
 		const route = `/profiles/${emptyProfile.id()}/votes`;
-		const { asFragment } = renderPage(route, routePath);
+		const { asFragment } = renderPage(route);
 
 		expect(screen.getByTestId("EmptyBlock")).toBeInTheDocument();
 
@@ -164,7 +155,7 @@ describe("Votes", () => {
 
 	it("should open the import wallet side panel", async () => {
 		const route = `/profiles/${emptyProfile.id()}/votes`;
-		const { asFragment } = renderPage(route, routePath);
+		const { asFragment } = renderPage(route);
 
 		expect(screen.getByTestId("EmptyBlock")).toBeInTheDocument();
 
@@ -193,7 +184,7 @@ describe("Votes", () => {
 		]);
 
 		const route = `/profiles/${profile.id()}/votes`;
-		const { asFragment } = renderPage(route, routePath);
+		const { asFragment } = renderPage(route);
 
 		expect(screen.getByTestId("AddressTable")).toBeInTheDocument();
 
@@ -222,7 +213,7 @@ describe("Votes", () => {
 
 	it("should select an address without vote", async () => {
 		const route = `/profiles/${profile.id()}/votes`;
-		renderPage(route, routePath);
+		renderPage(route);
 
 		expect(screen.getByTestId("AddressTable")).toBeInTheDocument();
 
@@ -319,24 +310,25 @@ describe("Votes", () => {
 		const currentWallet = profile.wallets().findById(walletID);
 		const route = `/profiles/${profile.id()}/wallets/${currentWallet.id()}/votes`;
 
-		const walletRestoreMock = vi.spyOn(profile.wallets().first(), "hasSyncedWithNetwork").mockReturnValue(false);
-
-		const history = createHashHistory();
-		history.push(route);
+		const walletRestoreMock = vi.spyOn(currentWallet, "hasSyncedWithNetwork").mockReturnValue(false);
 
 		const onProfileSyncError = vi.fn();
+
 		const Component = () => {
-			useProfileStatusWatcher({ env, onProfileSyncError, profile });
-			return (
-				<Route path="/profiles/:profileId/wallets/:walletId/votes">
-					<Votes />
-				</Route>
-			);
+			const { setConfiguration } = useConfiguration();
+
+			useEffect(() => {
+				setConfiguration(profile.id(), { profileHasSyncedOnce: true, profileIsSyncing: false });
+			}, [profile]);
+
+			useProfileStatusWatcher({ onProfileSyncError, profile });
+			return <Votes />;
 		};
+
 		const { asFragment } = render(<Component />, {
-			history,
-			route: route,
+			route,
 			withProfileSynchronizer: true,
+			withProviders: true,
 		});
 
 		await expect(screen.findByTestId("ValidatorsTable")).resolves.toBeVisible();
@@ -384,7 +376,7 @@ describe("Votes", () => {
 
 	it("should emit action on continue button to unvote/vote", async () => {
 		const route = `/profiles/${profile.id()}/votes`;
-		const { asFragment } = renderPage(route, routePath);
+		const { asFragment } = renderPage(route);
 
 		expect(screen.getByTestId("AddressTable")).toBeInTheDocument();
 
@@ -421,7 +413,7 @@ describe("Votes", () => {
 
 	it("should filter wallets by address", async () => {
 		const route = `/profiles/${profile.id()}/votes`;
-		renderPage(route, routePath);
+		renderPage(route);
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(2));
 
@@ -438,7 +430,7 @@ describe("Votes", () => {
 
 	it("should filter wallets by alias", async () => {
 		const route = `/profiles/${profile.id()}/votes`;
-		renderPage(route, routePath);
+		renderPage(route);
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(2));
 

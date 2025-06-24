@@ -1,8 +1,6 @@
 import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
-import { createHashHistory } from "history";
 import React from "react";
-import { Route } from "react-router-dom";
 
 import { Contacts } from "./Contacts";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
@@ -21,39 +19,15 @@ import {
 
 let profile: Contracts.IProfile;
 
-const history = createHashHistory();
 const contactAddress = "0x811b4bD8133c348a1c9F290F79046d1587AEf30F";
 
-const renderComponent = (profileId = profile.id()) => {
-	const contactsURL = `/profiles/${profileId}/contacts`;
-	history.push(contactsURL);
+const renderComponent = (profileId = profile.id()) =>
+	render(<Contacts />, { route: `/profiles/${profileId}/contacts`, withProviders: true });
 
-	return render(
-		<Route path="/profiles/:profileId/contacts">
-			<Contacts />
-		</Route>,
-		{
-			history,
-			route: contactsURL,
-		},
-	);
-};
-
-const renderResponsiveComponent = (breakpoint: keyof typeof breakpoints, profileId = profile.id()) => {
-	const contactsURL = `/profiles/${profileId}/contacts`;
-	history.push(contactsURL);
-
-	return renderResponsiveWithRoute(
-		<Route path="/profiles/:profileId/contacts">
-			<Contacts />
-		</Route>,
-		breakpoint,
-		{
-			history,
-			route: contactsURL,
-		},
-	);
-};
+const renderResponsiveComponent = (breakpoint: keyof typeof breakpoints, profileId = profile.id()) =>
+	renderResponsiveWithRoute(<Contacts />, breakpoint, {
+		route: `/profiles/${profileId}/contacts`,
+	});
 
 const saveButton = () => screen.getByTestId("contact-form__save-btn");
 const sendButton = (index = 0) => screen.getAllByTestId("ContactListItem__send-button")[index];
@@ -353,7 +327,6 @@ describe("Contacts", () => {
 
 		expect(nameInput).toHaveValue("Mock Contact");
 
-		(nameInput as HTMLInputElement).select();
 		await userEvent.clear(nameInput);
 		await userEvent.type(nameInput, newName);
 
@@ -424,7 +397,7 @@ describe("Contacts", () => {
 			.spyOn(profile.contacts(), "values")
 			.mockReturnValue([profile.contacts().findById(mockContact.id())]);
 
-		renderComponent();
+		const { router } = renderComponent();
 
 		await waitFor(() => {
 			expect(screen.getAllByTestId("ContactListItem")).toHaveLength(1);
@@ -432,8 +405,8 @@ describe("Contacts", () => {
 
 		await userEvent.click(sendButton());
 
-		expect(history.location.pathname).toBe("/profiles/877b7695-8a55-4e16-a7ff-412113131856/send-transfer");
-		expect(history.location.search).toBe("?recipient=0x0000000000000000000000000000000000000000");
+		expect(router.state.location.pathname).toBe("/profiles/877b7695-8a55-4e16-a7ff-412113131856/send-transfer");
+		expect(router.state.location.search).toBe("?recipient=0x0000000000000000000000000000000000000000");
 
 		contactsSpy.mockRestore();
 	});

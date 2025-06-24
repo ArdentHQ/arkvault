@@ -94,12 +94,7 @@ describe("TruncateMiddleDynamic", () => {
 		useResizeDetectorSpy.mockReturnValue({ ref: parentElementReference, width: 100 });
 		getBoundingClientRectSpy.mockReturnValue({ width: 50 } as DOMRect);
 
-		const { asFragment, rerender } = render(<Component value={valueToTruncate} />);
-
-		expect(screen.getByText(valueToTruncate)).toBeInTheDocument();
-		expect(asFragment()).toMatchSnapshot();
-
-		rerender(<Component value={valueToTruncate} />);
+		render(<Component value={valueToTruncate} />);
 
 		expect(screen.getByText(valueToTruncate)).toBeInTheDocument();
 	});
@@ -118,11 +113,7 @@ describe("TruncateMiddleDynamic", () => {
 			.mockReturnValueOnce({ width: 30 } as DOMRect)
 			.mockReturnValueOnce({ width: 20 } as DOMRect);
 
-		const { rerender } = render(<Component value={valueToTruncate} />);
-
-		expect(screen.getByText(valueToTruncate)).toBeInTheDocument();
-
-		rerender(<Component value={valueToTruncate} availableWidth={20} />);
+		render(<Component value={valueToTruncate} availableWidth={20} />);
 
 		expect(screen.getByText("Lorem ipsum dolor sit …etur adipisicing elit.")).toBeInTheDocument();
 	});
@@ -165,12 +156,7 @@ describe("TruncateMiddleDynamic", () => {
 		useResizeDetectorSpy.mockReturnValue({ ref: parentElementReference, width: 100 });
 		getBoundingClientRectSpy.mockReturnValue({ width: 0 } as DOMRect);
 
-		const { asFragment, rerender } = render(<Component value={valueToTruncate} availableWidth={20} />);
-
-		expect(screen.getByText(valueToTruncate)).toBeInTheDocument();
-		expect(asFragment()).toMatchSnapshot();
-
-		rerender(<Component value={valueToTruncate} />);
+		render(<Component value={valueToTruncate} availableWidth={20} />);
 
 		expect(screen.getByText(valueToTruncate)).toBeInTheDocument();
 	});

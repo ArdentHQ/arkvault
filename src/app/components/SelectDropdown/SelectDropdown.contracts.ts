@@ -1,5 +1,5 @@
 import { UseComboboxGetItemPropsOptions } from "downshift";
-import React from "react";
+import React, { JSX } from "react";
 
 export interface OptionProperties {
 	label: string;

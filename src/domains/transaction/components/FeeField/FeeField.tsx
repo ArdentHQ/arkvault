@@ -5,6 +5,7 @@ import { useFormContext } from "react-hook-form";
 
 import { useDebounce, useFees } from "@/app/hooks";
 import { InputFee } from "@/domains/transaction/components/InputFee";
+import { InputFeeViewType } from "@/domains/transaction/components/InputFee/InputFee.contracts";
 import { BigNumber } from "@/app/lib/helpers";
 
 interface Properties {
@@ -29,7 +30,7 @@ export const GasLimit: Record<Properties["type"], BigNumber> = {
 	transfer: gasLimit21k,
 	usernameRegistration: BigNumber.make(200_000),
 	usernameResignation: BigNumber.make(200_000),
-	validatorRegistration: BigNumber.make(500_000),
+	validatorRegistration: BigNumber.make(400_000),
 	validatorResignation: BigNumber.make(150_000),
 	vote: BigNumber.make(200_000),
 };
@@ -118,6 +119,10 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 					{ ...inputFeeSettings, viewType },
 					{ shouldDirty: true, shouldValidate: true },
 				);
+
+				if (viewType === InputFeeViewType.Advanced) {
+					setValue("gasLimit", GasLimit[type], { shouldDirty: true, shouldValidate: true });
+				}
 			}}
 			selectedFeeOption={inputFeeSettings.selectedFeeOption}
 			onChangeFeeOption={(option) => {

@@ -1,9 +1,7 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
-import { createHashHistory } from "history";
 import React from "react";
-import { Route } from "react-router-dom";
 
 import { translations as messageTranslations } from "@/domains/message/i18n";
 import {
@@ -16,8 +14,6 @@ import {
 	MAINSAIL_MNEMONICS,
 } from "@/utils/testing-library";
 import { SignMessageSidePanel } from "./SignMessageSidePanel";
-
-const history = createHashHistory();
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
@@ -36,6 +32,7 @@ const expectHeading = async (text: string) => {
 };
 
 describe("SignMessage with ledger", () => {
+	let dashboardRoute: string | undefined;
 	beforeAll(async () => {
 		profile = await env.profiles().create("Test");
 
@@ -53,9 +50,7 @@ describe("SignMessage with ledger", () => {
 	});
 
 	beforeEach(() => {
-		const dashboardUrl = `/profiles/${profile.id()}/dashboard`;
-
-		history.push(dashboardUrl);
+		dashboardRoute = `/profiles/${profile.id()}/dashboard`;
 	});
 
 	it("should display error step if user rejects", async () => {
@@ -77,14 +72,9 @@ describe("SignMessage with ledger", () => {
 
 		const onOpenChangeMock = vi.fn();
 
-		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<SignMessageSidePanel open={true} onOpenChange={onOpenChangeMock} onMountChange={vi.fn()} />,
-			</Route>,
-			{
-				history,
-			},
-		);
+		render(<SignMessageSidePanel open={true} onOpenChange={onOpenChangeMock} onMountChange={vi.fn()} />, {
+			route: dashboardRoute,
+		});
 
 		await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
 
@@ -133,14 +123,9 @@ describe("SignMessage with ledger", () => {
 
 		const ledgerListenMock = mockNanoXTransport();
 
-		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<SignMessageSidePanel open={true} onOpenChange={vi.fn()} onMountChange={vi.fn()} />,
-			</Route>,
-			{
-				history,
-			},
-		);
+		render(<SignMessageSidePanel open={true} onOpenChange={vi.fn()} onMountChange={vi.fn()} />, {
+			route: dashboardRoute,
+		});
 
 		await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
 

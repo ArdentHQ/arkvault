@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import { Networks } from "@/app/lib/mainsail";
 import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
@@ -17,7 +17,7 @@ export enum OptionsValue {
 
 export interface ImportOption {
 	label: string;
-	icon?: JSX.Element;
+	icon?: ReactElement;
 	header?: string;
 	description?: string;
 	value: string;

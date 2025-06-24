@@ -4,7 +4,6 @@ import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
 import React, { useEffect } from "react";
 import { FormProvider, useForm } from "react-hook-form";
-import { Route } from "react-router-dom";
 import { BigNumber } from "@/app/lib/helpers";
 import { AddRecipient } from "./AddRecipient";
 import { buildTranslations } from "@/app/i18n/helpers";
@@ -32,14 +31,9 @@ const renderWithFormProvider = (children: any, defaultValues?: any) => {
 		return <FormProvider {...form}>{children}</FormProvider>;
 	};
 
-	return render(
-		<Route path="/profiles/:profileId">
-			<Wrapper />
-		</Route>,
-		{
-			route: `/profiles/${profile.id()}`,
-		},
-	);
+	return render(<Wrapper />, {
+		route: `/profiles/${profile.id()}`,
+	});
 };
 
 const selectFirstRecipient = async () =>
@@ -85,11 +79,9 @@ describe("AddRecipient", () => {
 		}, []);
 
 		return (
-			<Route path="/profiles/:profileId">
-				<FormProvider {...form}>
-					<AddRecipient profile={profile} wallet={wallet} onChange={vi.fn()} recipients={[]} />
-				</FormProvider>
-			</Route>
+			<FormProvider {...form}>
+				<AddRecipient profile={profile} wallet={wallet} onChange={vi.fn()} recipients={[]} />
+			</FormProvider>
 		);
 	};
 
@@ -300,25 +292,23 @@ describe("AddRecipient", () => {
 			}, []);
 
 			return (
-				<Route path="/profiles/:profileId">
-					<FormProvider {...form}>
-						<AddRecipient
-							profile={profile}
-							wallet={wallet}
-							onChange={onChange}
-							recipients={[
-								{
-									address: "0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54",
-									amount: 1,
-								},
-								{
-									address: "D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ay",
-									amount: 1,
-								},
-							]}
-						/>
-					</FormProvider>
-				</Route>
+				<FormProvider {...form}>
+					<AddRecipient
+						profile={profile}
+						wallet={wallet}
+						onChange={onChange}
+						recipients={[
+							{
+								address: "0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54",
+								amount: 1,
+							},
+							{
+								address: "D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ay",
+								amount: 1,
+							},
+						]}
+					/>
+				</FormProvider>
 			);
 		};
 
@@ -399,29 +389,27 @@ describe("AddRecipient", () => {
 			}, []);
 
 			return (
-				<Route path="/profiles/:profileId">
-					<FormProvider {...form}>
-						<AddRecipient
-							profile={profile}
-							wallet={wallet}
-							onChange={vi.fn()}
-							recipients={[
-								{
-									address: "0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54",
-									amount: undefined,
-								},
-								{
-									address: "0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54",
-									amount: 1,
-								},
-								{
-									address: "0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af58",
-									amount: 1,
-								},
-							]}
-						/>
-					</FormProvider>
-				</Route>
+				<FormProvider {...form}>
+					<AddRecipient
+						profile={profile}
+						wallet={wallet}
+						onChange={vi.fn()}
+						recipients={[
+							{
+								address: "0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54",
+								amount: undefined,
+							},
+							{
+								address: "0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54",
+								amount: 1,
+							},
+							{
+								address: "0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af58",
+								amount: 1,
+							},
+						]}
+					/>
+				</FormProvider>
 			);
 		};
 
@@ -614,25 +602,23 @@ describe("AddRecipient", () => {
 			}, []);
 
 			return (
-				<Route path="/profiles/:profileId">
-					<FormProvider {...form}>
-						<AddRecipient
-							profile={profile}
-							wallet={wallet}
-							onChange={vi.fn()}
-							recipients={[
-								{
-									address: "0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54",
-									amount: 1,
-								},
-								{
-									address: "D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ay",
-									amount: 1,
-								},
-							]}
-						/>
-					</FormProvider>
-				</Route>
+				<FormProvider {...form}>
+					<AddRecipient
+						profile={profile}
+						wallet={wallet}
+						onChange={vi.fn()}
+						recipients={[
+							{
+								address: "0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54",
+								amount: 1,
+							},
+							{
+								address: "D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ay",
+								amount: 1,
+							},
+						]}
+					/>
+				</FormProvider>
 			);
 		};
 

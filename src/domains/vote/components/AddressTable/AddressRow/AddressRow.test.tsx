@@ -2,8 +2,6 @@
 import { Contracts, ReadOnlyWallet } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
 import React, { useEffect } from "react";
-import { Route } from "react-router-dom";
-import { createHashHistory } from "history";
 
 import { AddressRow, WalletAvatar } from "@/domains/vote/components/AddressTable/AddressRow/AddressRow";
 import { data } from "@/tests/fixtures/coins/mainsail/devnet/validators.json";
@@ -30,11 +28,9 @@ const AddressWrapper = ({ children }) => {
 	}, []);
 
 	return (
-		<Route path="/profiles/:profileId/votes">
-			<table>
-				<tbody>{children}</tbody>
-			</table>
-		</Route>
+		<table>
+			<tbody>{children}</tbody>
+		</table>
 	);
 };
 
@@ -105,13 +101,11 @@ describe("AddressRow", () => {
 		const votesMock = vi.spyOn(wallet.voting(), "current").mockReturnValue(votingMockReturnValue([0, 1, 2, 3]));
 
 		const { asFragment, container } = render(
-			<Route path="/profiles/:profileId/votes">
-				<table>
-					<tbody>
-						<AddressRow index={0} maxVotes={10} wallet={wallet} />
-					</tbody>
-				</table>
-			</Route>,
+			<table>
+				<tbody>
+					<AddressRow index={0} maxVotes={10} wallet={wallet} />
+				</tbody>
+			</table>,
 			{
 				route: `/profiles/${profile.id()}/votes`,
 			},
@@ -349,17 +343,12 @@ describe("AddressRow", () => {
 	// @TODO fix test when we are clear
 	it.skip("should redirect to wallet details page", async () => {
 		const route = `/profiles/${profile.id()}/votes`;
-		const history = createHashHistory();
 
-		const historySpy = vi.spyOn(history, "push");
-		history.push(route);
-
-		render(
+		const { router } = render(
 			<AddressWrapper>
 				<AddressRow index={0} maxVotes={1} wallet={wallet} />
 			</AddressWrapper>,
 			{
-				history,
 				route,
 			},
 		);
@@ -367,7 +356,7 @@ describe("AddressRow", () => {
 		await expect(screen.findByTestId("AddressRow__wallet")).resolves.toBeVisible();
 
 		await userEvent.click(screen.getByTestId("AddressRow__wallet"));
-		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
+		expect(router.state.location.pathname).toBe(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
 	});
 
 	it("should render wallet avatar", async () => {

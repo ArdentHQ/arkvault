@@ -285,6 +285,14 @@ export interface IReadWriteWallet {
 	isValidator(): boolean;
 
 	/**
+	 * Get the validator fee.
+	 *
+	 * @return {number | undefined}
+	 * @memberof IReadWriteWallet
+	 */
+	validatorFee(): number | undefined;
+
+	/**
 	 * Determine if the wallet is a resigned validator.
 	 *
 	 * @return {boolean}

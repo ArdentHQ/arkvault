@@ -2,7 +2,6 @@
 import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
-import { Route } from "react-router-dom";
 
 import { RecipientList } from "./RecipientList";
 import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
@@ -39,15 +38,13 @@ describe("RecipientList", () => {
 
 	it("should render editable", () => {
 		const { container } = render(
-			<Route path="/profiles/:profileId">
-				<RecipientList
-					isEditable={true}
-					recipients={recipients}
-					showAmount={false}
-					showExchangeAmount={false}
-					ticker="ARK"
-				/>
-			</Route>,
+			<RecipientList
+				isEditable={true}
+				recipients={recipients}
+				showAmount={false}
+				showExchangeAmount={false}
+				ticker="ARK"
+			/>,
 			{
 				route: `/profiles/${profile.id()}`,
 			},
@@ -58,16 +55,14 @@ describe("RecipientList", () => {
 
 	it("should render condensed variant", () => {
 		const { container } = render(
-			<Route path="/profiles/:profileId">
-				<RecipientList
-					isEditable={true}
-					recipients={recipients}
-					showAmount={false}
-					showExchangeAmount={false}
-					ticker="ARK"
-					variant="condensed"
-				/>
-			</Route>,
+			<RecipientList
+				isEditable={true}
+				recipients={recipients}
+				showAmount={false}
+				showExchangeAmount={false}
+				ticker="ARK"
+				variant="condensed"
+			/>,
 			{
 				route: `/profiles/${profile.id()}`,
 			},
@@ -77,15 +72,13 @@ describe("RecipientList", () => {
 
 	it("should render non-editable", () => {
 		const { container } = render(
-			<Route path="/profiles/:profileId">
-				<RecipientList
-					isEditable={false}
-					recipients={recipients}
-					showAmount={false}
-					showExchangeAmount={false}
-					ticker="ARK"
-				/>
-			</Route>,
+			<RecipientList
+				isEditable={false}
+				recipients={recipients}
+				showAmount={false}
+				showExchangeAmount={false}
+				ticker="ARK"
+			/>,
 			{
 				route: `/profiles/${profile.id()}`,
 			},
@@ -96,15 +89,13 @@ describe("RecipientList", () => {
 
 	it("should render without amount column", () => {
 		const { container } = render(
-			<Route path="/profiles/:profileId">
-				<RecipientList
-					isEditable={false}
-					recipients={recipients}
-					showAmount={true}
-					showExchangeAmount={false}
-					ticker="ARK"
-				/>
-			</Route>,
+			<RecipientList
+				isEditable={false}
+				recipients={recipients}
+				showAmount={true}
+				showExchangeAmount={false}
+				ticker="ARK"
+			/>,
 			{
 				route: `/profiles/${profile.id()}`,
 			},
@@ -115,16 +106,14 @@ describe("RecipientList", () => {
 
 	it("should conditionally disable remove button", () => {
 		const { container } = render(
-			<Route path="/profiles/:profileId">
-				<RecipientList
-					disableButton={(address: string) => address === recipients[0].address}
-					isEditable={true}
-					recipients={recipients}
-					showAmount={false}
-					showExchangeAmount={false}
-					ticker="ARK"
-				/>
-			</Route>,
+			<RecipientList
+				disableButton={(address: string) => address === recipients[0].address}
+				isEditable={true}
+				recipients={recipients}
+				showAmount={false}
+				showExchangeAmount={false}
+				ticker="ARK"
+			/>,
 			{
 				route: `/profiles/${profile.id()}`,
 			},
@@ -147,16 +136,14 @@ describe("RecipientList", () => {
 		const onRemove = vi.fn();
 
 		render(
-			<Route path="/profiles/:profileId">
-				<RecipientList
-					onRemove={onRemove}
-					recipients={recipients}
-					isEditable={true}
-					ticker="ARK"
-					showAmount={false}
-					showExchangeAmount={false}
-				/>
-			</Route>,
+			<RecipientList
+				onRemove={onRemove}
+				recipients={recipients}
+				isEditable={true}
+				ticker="ARK"
+				showAmount={false}
+				showExchangeAmount={false}
+			/>,
 			{
 				route: `/profiles/${profile.id()}`,
 			},
@@ -175,15 +162,13 @@ describe("RecipientList", () => {
 		const onRemove = vi.fn();
 
 		render(
-			<Route path="/profiles/:profileId">
-				<RecipientList
-					recipients={recipients}
-					isEditable={true}
-					ticker="ARK"
-					showAmount={false}
-					showExchangeAmount={false}
-				/>
-			</Route>,
+			<RecipientList
+				recipients={recipients}
+				isEditable={true}
+				ticker="ARK"
+				showAmount={false}
+				showExchangeAmount={false}
+			/>,
 			{
 				route: `/profiles/${profile.id()}`,
 			},
@@ -211,15 +196,13 @@ describe("RecipientList", () => {
 		];
 
 		render(
-			<Route path="/profiles/:profileId">
-				<RecipientList
-					recipients={recipients}
-					showAmount={true}
-					isEditable={true}
-					ticker="ARK"
-					showExchangeAmount={true}
-				/>
-			</Route>,
+			<RecipientList
+				recipients={recipients}
+				showAmount={true}
+				isEditable={true}
+				ticker="ARK"
+				showExchangeAmount={true}
+			/>,
 			{
 				route: `/profiles/${profile.id()}`,
 				withProviders: true,

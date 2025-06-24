@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
-import { createHashHistory } from "history";
 import React from "react";
 import * as browserAccess from "browser-fs-access";
 
@@ -36,9 +35,6 @@ describe("Import Profile - Profile Form Step", () => {
 	});
 
 	it("should render profile form", async () => {
-		const history = createHashHistory();
-		history.push("/profiles/import");
-
 		render(
 			<EnvironmentProvider env={env}>
 				<ImportProfileForm
@@ -49,6 +45,9 @@ describe("Import Profile - Profile Form Step", () => {
 					onBack={vi.fn()}
 				/>
 			</EnvironmentProvider>,
+			{
+				route: "/profiles/import",
+			},
 		);
 
 		await waitFor(() => expect(submitButton()).toBeDisabled());
@@ -58,10 +57,7 @@ describe("Import Profile - Profile Form Step", () => {
 	});
 
 	it("should render profile form with empty profile", async () => {
-		const history = createHashHistory();
 		const emptyProfile = await env.profiles().create("test2");
-		history.push("/profiles/import");
-
 		render(
 			<EnvironmentProvider env={env}>
 				<ImportProfileForm
@@ -72,6 +68,9 @@ describe("Import Profile - Profile Form Step", () => {
 					onBack={vi.fn()}
 				/>
 			</EnvironmentProvider>,
+			{
+				route: "/profiles/import",
+			},
 		);
 
 		await waitFor(() => expect(submitButton()).toBeDisabled());
@@ -92,15 +91,16 @@ describe("Import Profile - Profile Form Step", () => {
 					onBack={vi.fn()}
 				/>
 			</EnvironmentProvider>,
+			{
+				route: "/profiles/import",
+			},
 		);
 
 		await waitFor(() => expect(submitButton()).toBeDisabled());
 
 		const inputElement: HTMLInputElement = screen.getAllByTestId("Input")[0];
 
-		inputElement.select();
 		const user = userEvent.setup();
-
 		await user.clear(inputElement);
 		await user.paste("test profile 1");
 
@@ -117,7 +117,6 @@ describe("Import Profile - Profile Form Step", () => {
 
 		expect(emptyProfile.usesPassword()).toBe(false);
 
-		inputElement.select();
 		await user.clear(inputElement);
 		await user.type(inputElement, "test profile 2");
 
@@ -149,6 +148,9 @@ describe("Import Profile - Profile Form Step", () => {
 					onBack={vi.fn()}
 				/>
 			</EnvironmentProvider>,
+			{
+				route: "/profiles/import",
+			},
 		);
 
 		const user = userEvent.setup();
@@ -168,22 +170,17 @@ describe("Import Profile - Profile Form Step", () => {
 
 		await waitFor(() => expect(submitButton()).toBeDisabled());
 
-		passwordInput().select();
-
 		await user.clear(passwordInput());
 		await user.paste("S3cUrePa$sword");
 
-		passwordConfirmationInput().select();
 		await user.clear(passwordConfirmationInput());
 		await user.paste("S3cUrePa$sword");
 
 		await waitFor(() => expect(submitButton()).toBeEnabled());
 
-		passwordConfirmationInput().select();
 		await user.clear(passwordConfirmationInput());
 		await user.paste("S3cUrePa$sword.test");
 
-		passwordInput().select();
 		await user.clear(passwordInput());
 		await user.paste("S3cUrePa$sword.wrong");
 

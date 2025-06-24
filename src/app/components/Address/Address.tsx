@@ -1,5 +1,5 @@
 import cn from "classnames";
-import React, { useMemo, useRef, useState, useLayoutEffect } from "react";
+import React, { useMemo, useRef, useState, useLayoutEffect, JSX } from "react";
 
 import { useResizeDetector } from "react-resize-detector";
 import { TruncateEnd } from "@/app/components/TruncateEnd";

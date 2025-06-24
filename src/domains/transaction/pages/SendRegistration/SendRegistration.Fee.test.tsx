@@ -1,8 +1,6 @@
 import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
-import { createHashHistory } from "history";
 import React, { useEffect } from "react";
-import { Route } from "react-router-dom";
 import { PublicKeyService } from "@/app/lib/mainsail/public-key.service";
 import { SendRegistration } from "./SendRegistration";
 import { minVersionList, useLedgerContext } from "@/app/contexts";
@@ -25,19 +23,14 @@ import walletFixture from "@/tests/fixtures/coins/mainsail/devnet/wallets/0x8A31
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
 let secondWallet: Contracts.IReadWriteWallet;
-const history = createHashHistory();
 let getVersionSpy: vi.SpyInstance;
 
 vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
 }));
 
-const path = "/profiles/:profileId/wallets/:walletId/send-registration/:registrationType";
-
 const renderPage = async (wallet: Contracts.IReadWriteWallet, type = "validatorRegistration") => {
 	const registrationURL = `/profiles/${profile.id()}/wallets/${wallet.id()}/send-registration/${type}`;
-
-	history.push(registrationURL);
 
 	const SendRegistrationWrapper = () => {
 		const { listenDevice } = useLedgerContext();
@@ -49,23 +42,14 @@ const renderPage = async (wallet: Contracts.IReadWriteWallet, type = "validatorR
 		return <SendRegistration />;
 	};
 
-	const utils = render(
-		<Route path={path}>
-			<SendRegistrationWrapper />
-		</Route>,
-		{
-			history,
-			route: registrationURL,
-			withProviders: true,
-		},
-	);
+	const view = render(<SendRegistrationWrapper />, {
+		route: registrationURL,
+		withProviders: true,
+	});
 
 	await expect(screen.findByTestId("Registration__form")).resolves.toBeVisible();
 
-	return {
-		...utils,
-		history,
-	};
+	return view;
 };
 
 const continueButton = () => screen.getByTestId("StepNavigation__continue-button");
@@ -149,7 +133,7 @@ describe("Registration Fee", () => {
 			within(screen.getByTestId("InputFee")).getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED),
 		);
 		await waitFor(() => expect(screen.getByTestId("Input_GasPrice")).toHaveValue("5.06670125"));
-		await waitFor(() => expect(screen.getByTestId("Input_GasLimit")).toHaveValue("21000"));
+		await waitFor(() => expect(screen.getByTestId("Input_GasLimit")).toHaveValue("400000"));
 
 		await userEvent.click(
 			within(screen.getByTestId("InputFee")).getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.SIMPLE),
@@ -178,7 +162,6 @@ describe("Registration Fee", () => {
 
 		const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
 
-		inputElement.select();
 		await userEvent.clear(inputElement);
 		await userEvent.type(inputElement, "10");
 
@@ -220,7 +203,6 @@ describe("Registration Fee", () => {
 
 		const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
 
-		inputElement.select();
 		await userEvent.clear(inputElement);
 		await userEvent.type(inputElement, "10");
 

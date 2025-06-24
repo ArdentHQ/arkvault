@@ -1,20 +1,13 @@
 import { Contracts } from "@/app/lib/profiles";
-import { createHashHistory } from "history";
 import React from "react";
-import { Route } from "react-router-dom";
 import { env, getDefaultMainsailWalletId, getMainsailProfileId, render } from "@/utils/testing-library";
 import { Balance } from "@/app/components/WalletListItem/WalletListItem.blocks";
 
 const dashboardURL = `/profiles/${getMainsailProfileId()}/dashboard`;
-const history = createHashHistory();
 
 describe("WalletListItem.blocks", () => {
 	let profile: Contracts.IProfile;
 	let wallet: Contracts.IReadWriteWallet;
-
-	beforeAll(() => {
-		history.push(dashboardURL);
-	});
 
 	beforeEach(async () => {
 		profile = env.profiles().findById(getMainsailProfileId());
@@ -29,24 +22,16 @@ describe("WalletListItem.blocks", () => {
 		const walletSpy = vi.spyOn(wallet, "isStarred").mockReturnValue(false);
 
 		const { asFragment } = render(
-			<Route path="/profiles/:profileId/dashboard">
-				<table>
-					<tbody>
-						<tr>
-							<td>
-								<Balance
-									wallet={wallet}
-									onToggleStar={vi.fn()}
-									isCompact={true}
-									isLargeScreen={false}
-								/>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</Route>,
+			<table>
+				<tbody>
+					<tr>
+						<td>
+							<Balance wallet={wallet} onToggleStar={vi.fn()} isCompact={true} isLargeScreen={false} />
+						</td>
+					</tr>
+				</tbody>
+			</table>,
 			{
-				history,
 				route: dashboardURL,
 			},
 		);

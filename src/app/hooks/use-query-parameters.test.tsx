@@ -1,7 +1,5 @@
 import userEvent from "@testing-library/user-event";
-import { createHashHistory } from "history";
 import React from "react";
-import { Route } from "react-router-dom";
 
 import { Contracts } from "@/app/lib/profiles";
 
@@ -14,8 +12,6 @@ import {
 	getMainsailProfileId,
 	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
-
-const history = createHashHistory();
 
 let profile: Contracts.IProfile;
 
@@ -37,11 +33,7 @@ describe("useQueryParameters hook", () => {
 	};
 
 	it("should render useQueryParameters", () => {
-		render(
-			<Route pathname="/">
-				<TestComponent />
-			</Route>,
-		);
+		render(<TestComponent />);
 
 		expect(screen.getByTestId("header_test")).toBeInTheDocument();
 
@@ -73,25 +65,19 @@ describe("useNetworkFromQueryParameters hook", () => {
 	};
 
 	it("should find network from query parameters using network id", () => {
-		history.push("/?network=mainsail.devnet");
-
-		render(<TestComponent />, { history, withProviders: false });
+		render(<TestComponent />, { route: "/?network=mainsail.devnet", withProviders: false });
 
 		expect(screen.getByTestId(nethash)).toBeInTheDocument();
 	});
 
 	it("should find network from query parameters using nethash", () => {
-		history.push(`/?nethash=${nethash}`);
-
-		render(<TestComponent />, { history, withProviders: false });
+		render(<TestComponent />, { route: `/?nethash=${nethash}`, withProviders: false });
 
 		expect(screen.getByTestId(nethash)).toBeInTheDocument();
 	});
 
 	it("should fail to find network from query parameters using nethash", () => {
-		history.push(`/?nethash=1`);
-
-		render(<TestComponent />, { history, withProviders: false });
+		render(<TestComponent />, { router: "/?nethash=1", withProviders: false });
 
 		expect(() => screen.getByTestId(nethash)).toThrow(/Unable to find/);
 	});

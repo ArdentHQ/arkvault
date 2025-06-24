@@ -2,7 +2,6 @@ import { Contracts } from "@/app/lib/profiles";
 import { PBKDF2 } from "@ardenthq/arkvault-crypto";
 import userEvent from "@testing-library/user-event";
 import React from "react";
-import * as reactRouterDomMock from "react-router-dom";
 import { AuthenticationStep } from "./AuthenticationStep";
 import {
 	env,
@@ -15,12 +14,17 @@ import {
 	mockNanoSTransport,
 	mockLedgerTransportError,
 	getDefaultWalletMnemonic,
+	LocationTracker,
 } from "@/utils/testing-library";
+
 const MainsailDevnet = "mainsail.devnet";
 
-vi.mock("react-router-dom", async () => ({
-	...(await vi.importActual("react-router-dom")),
-}));
+vi.mock(
+	"react-rsrc/domains/transaction/components/AuthenticationStep/AuthenticationStep.test.tsxouter-dom",
+	async () => ({
+		...(await vi.importActual("react-router-dom")),
+	}),
+);
 
 vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
@@ -29,15 +33,11 @@ vi.mock("@/utils/delay", () => ({
 describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) => {
 	let wallet: Contracts.IReadWriteWallet;
 	let profile: Contracts.IProfile;
-	let goMock: any;
 	const mnemonicMismatchError = "This mnemonic does not correspond to your wallet";
 
 	beforeEach(() => {
 		profile = env.profiles().findById(getDefaultProfileId());
 		wallet = profile.wallets().first();
-		goMock = vi.fn();
-
-		vi.spyOn(reactRouterDomMock, "useHistory").mockReturnValue({ go: goMock });
 	});
 
 	it("should validate if mnemonic match the wallet address", async () => {
@@ -158,6 +158,8 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 
 		await waitFor(() => expect(screen.queryByTestId("AuthenticationStep__mnemonic")).toBeNull());
 
+		await waitFor(() => expect(screen.queryByTestId("header__title")).toHaveTextContent(/Ledger Wallet/));
+
 		expect(asFragment()).toMatchSnapshot();
 
 		vi.clearAllMocks();
@@ -274,14 +276,21 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 
 	it("should handle ledger error", async () => {
 		mockLedgerTransportError("Access denied to use Ledger device");
+		let location: Location | undefined;
 
 		vi.spyOn(wallet, "isLedger").mockReturnValueOnce(true);
 
-		renderWithForm(<AuthenticationStep subject={subject} wallet={wallet} />, {
-			withProviders: true,
-		});
+		renderWithForm(
+			<>
+				<LocationTracker onLocationChange={(currentLocation) => (location = currentLocation)} />
+				<AuthenticationStep subject={subject} wallet={wallet} />
+			</>,
+			{
+				withProviders: true,
+			},
+		);
 
-		await waitFor(() => expect(goMock).toHaveBeenCalledWith(-1));
+		await waitFor(() => expect(location?.pathname).toBe("/"));
 
 		vi.clearAllMocks();
 	});

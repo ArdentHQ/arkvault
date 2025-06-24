@@ -1,6 +1,5 @@
 import { Contracts } from "@/app/lib/profiles";
 import React, { useEffect } from "react";
-import { Route } from "react-router-dom";
 
 import { AddressTable } from "@/domains/vote/components/AddressTable";
 import {
@@ -26,7 +25,7 @@ const Wrapper = ({ children }) => {
 		setConfiguration(profile.id(), { profileHasSyncedOnce: true, profileIsSyncingWallets: false });
 	}, []);
 
-	return <Route path="/profiles/:profileId">{children}</Route>;
+	return <>{children}</>;
 };
 
 describe("AddressTable", () => {

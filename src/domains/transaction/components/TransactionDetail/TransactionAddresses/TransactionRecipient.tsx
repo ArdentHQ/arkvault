@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, JSX } from "react";
 import { Address } from "@/app/components/Address";
 import { DetailTitle } from "@/app/components/DetailWrapper";
 import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";

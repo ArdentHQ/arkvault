@@ -20,47 +20,32 @@ import { DateTime } from "@/app/lib/intl";
 import MultisignatureRegistrationFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/multisignature-registration.json";
 import { Observer } from "@ledgerhq/hw-transport";
 import React from "react";
-import { Route } from "react-router-dom";
 import { SendRegistration } from "./SendRegistration";
 import ValidatorRegistrationFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/validator-registration.json";
-import { createHashHistory } from "history";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import userEvent from "@testing-library/user-event";
 import { PublicKeyService } from "@/app/lib/mainsail/public-key.service";
+import { LedgerTransportFactory } from "@/app/contexts";
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
 let secondWallet: Contracts.IReadWriteWallet;
-const history = createHashHistory();
 const passphrase = getDefaultMainsailWalletMnemonic();
 
 vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
 }));
 
-const path = "/profiles/:profileId/wallets/:walletId/send-registration/:registrationType";
-
 const renderPage = async (wallet: Contracts.IReadWriteWallet, type = "validatorRegistration") => {
 	const registrationURL = `/profiles/${profile.id()}/wallets/${wallet.id()}/send-registration/${type}`;
 
-	history.push(registrationURL);
-
-	const utils = render(
-		<Route path={path}>
-			<SendRegistration />
-		</Route>,
-		{
-			history,
-			route: registrationURL,
-			withProviders: true,
-		},
-	);
+	const view = render(<SendRegistration />, {
+		route: registrationURL,
+		withProviders: true,
+	});
 
 	await expect(screen.findByTestId("Registration__form")).resolves.toBeVisible();
 
-	return {
-		...utils,
-		history,
-	};
+	return view;
 };
 
 const signedTransactionMock = {
@@ -222,17 +207,10 @@ describe("Registration", () => {
 		const label = "Register Validator";
 
 		const registrationPath = `/profiles/${profile.id()}/wallets/${secondWallet.id()}/send-registration/${type}`;
-		history.push(registrationPath);
 
-		render(
-			<Route path={path}>
-				<SendRegistration />
-			</Route>,
-			{
-				history,
-				route: registrationPath,
-			},
-		);
+		render(<SendRegistration />, {
+			route: registrationPath,
+		});
 
 		await expect(screen.findByTestId("Registration__form")).resolves.toBeVisible();
 
@@ -245,7 +223,7 @@ describe("Registration", () => {
 		}));
 
 		const nanoXTransportMock = mockNanoXTransport();
-		const { asFragment, history } = await renderPage(wallet);
+		const { router } = await renderPage(wallet);
 
 		// Step 1
 		await expect(formStep()).resolves.toBeVisible();
@@ -317,7 +295,7 @@ describe("Registration", () => {
 		await waitFor(() => {
 			expect(signMock).toHaveBeenCalledWith(
 				expect.objectContaining({
-					data: { validatorPublicKey: "validator-public-key" },
+					data: { validatorPublicKey: "validator-public-key", value: 0 },
 				}),
 			);
 		});
@@ -339,14 +317,9 @@ describe("Registration", () => {
 		);
 
 		// Go back to wallet
-		const historySpy = vi.spyOn(history, "push");
 		await userEvent.click(screen.getByTestId("StepNavigation__back-to-wallet-button"));
 
-		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/dashboard`);
-
-		historySpy.mockRestore();
-
-		expect(asFragment()).toMatchSnapshot();
+		expect(router.state.location.pathname).toBe(`/profiles/${profile.id()}/dashboard`);
 
 		nanoXTransportMock.mockRestore();
 	});
@@ -355,7 +328,8 @@ describe("Registration", () => {
 		const unsubscribe = vi.fn();
 		let observer: Observer<any>;
 
-		const listenSpy = vi.spyOn(ledgerTransport, "listen").mockImplementationOnce((obv) => {
+		const transport = new LedgerTransportFactory();
+		const listenSpy = vi.spyOn(transport, "listen").mockImplementationOnce((obv) => {
 			observer = obv;
 			return { unsubscribe };
 		});
@@ -516,7 +490,7 @@ describe("Registration", () => {
 		await waitFor(() =>
 			expect(signMock).toHaveBeenCalledWith(
 				expect.objectContaining({
-					data: { validatorPublicKey: "validator-public-key" },
+					data: { validatorPublicKey: "validator-public-key", value: 0 },
 				}),
 			),
 		);
@@ -547,23 +521,20 @@ describe("Registration", () => {
 
 	it("should go back to wallet details", async () => {
 		const nanoXTransportMock = mockNanoXTransport();
-		await renderPage(wallet);
-
-		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
+		const { router } = await renderPage(wallet);
 
 		await expect(formStep()).resolves.toBeVisible();
 
 		await userEvent.click(screen.getByTestId("StepNavigation__back-button"));
 
-		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/dashboard`);
+		expect(router.state.location.pathname).toBe(`/profiles/${profile.id()}/dashboard`);
 
-		historySpy.mockRestore();
 		nanoXTransportMock.mockRestore();
 	});
 
 	it("should show error step and go back", async () => {
 		const nanoXTransportMock = mockNanoXTransport();
-		await renderPage(secondWallet);
+		const { router } = await renderPage(secondWallet);
 
 		const actsWithMnemonicMock = vi.spyOn(secondWallet, "actsWithMnemonic").mockReturnValue(true);
 
@@ -600,8 +571,6 @@ describe("Registration", () => {
 			throw new Error("broadcast error");
 		});
 
-		const historyMock = vi.spyOn(history, "push").mockReturnValue();
-
 		await waitFor(() => expect(sendButton()).toBeEnabled());
 		await userEvent.click(sendButton());
 
@@ -612,9 +581,8 @@ describe("Registration", () => {
 		await userEvent.click(screen.getByTestId("ErrorStep__close-button"));
 
 		const walletDetailPage = `/profiles/${profile.id()}/dashboard`;
-		await waitFor(() => expect(historyMock).toHaveBeenCalledWith(walletDetailPage));
+		await waitFor(() => expect(router.state.location.pathname).toBe(walletDetailPage));
 
-		historyMock.mockRestore();
 		signMock.mockRestore();
 		broadcastMock.mockRestore();
 		actsWithMnemonicMock.mockRestore();

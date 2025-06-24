@@ -1,8 +1,7 @@
 import { Services } from "@/app/lib/mainsail";
-import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useRef, useState, JSX } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-import { useParams } from "react-router-dom";
 import { Contracts } from "@/app/lib/profiles";
 import { FormStep } from "./FormStep";
 import { SigningMessageInfo, SuccessStep } from "./SuccessStep";
@@ -37,13 +36,11 @@ export const SignMessageSidePanel = ({
 }): JSX.Element => {
 	const { t } = useTranslation();
 
-	const { walletId } = useParams<{ walletId: string }>();
-
 	const activeProfile = useActiveProfile();
 	const queryParameters = useQueryParameters();
 	const { activeNetwork } = useActiveNetwork({ profile: activeProfile });
 
-	const walletFromPath = useActiveWalletWhenNeeded(!!walletId);
+	const walletFromPath = useActiveWalletWhenNeeded(false);
 
 	const walletFromDeeplink = useMemo(() => {
 		const address = queryParameters.get("address");

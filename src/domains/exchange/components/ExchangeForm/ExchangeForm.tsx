@@ -2,7 +2,7 @@ import { Contracts } from "@/app/lib/profiles";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import { ConfirmationStep } from "./ConfirmationStep";
 import { FormStep } from "./FormStep";
@@ -55,7 +55,7 @@ const ExchangeForm = ({
 	const { persist } = useEnvironmentContext();
 	const { exchangeService, provider } = useExchangeContext();
 	const { exchangeOrder } = useValidation();
-	const history = useHistory();
+	const navigate = useNavigate();
 
 	assertExchangeService(exchangeService);
 
@@ -242,7 +242,7 @@ const ExchangeForm = ({
 
 	const handleBack = () => {
 		if (activeTab === Step.FormStep) {
-			history.push(`/profiles/${activeProfile.id()}/exchange`);
+			navigate(`/profiles/${activeProfile.id()}/exchange`);
 		}
 
 		setActiveTab((previous) => previous - 1);
@@ -393,9 +393,7 @@ const ExchangeForm = ({
 										<div className="flex w-full flex-col gap-3 sm:flex-row-reverse">
 											<Button
 												data-testid="ExchangeForm__finish-button"
-												onClick={() =>
-													history.push(`/profiles/${activeProfile.id()}/dashboard`)
-												}
+												onClick={() => navigate(`/profiles/${activeProfile.id()}/dashboard`)}
 											>
 												{t("COMMON.GO_TO_PORTFOLIO")}
 											</Button>

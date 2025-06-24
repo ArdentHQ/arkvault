@@ -77,10 +77,6 @@ const usernameExists = async (
 	username: string,
 	controller: MutableRefObject<AbortController | undefined>,
 ) => {
-	if (username.length === 0) {
-		return;
-	}
-
 	const publicApiEndpoint = network.config().host("full", profile);
 	const response = await fetch(`${publicApiEndpoint}/wallets/${username}`, { signal: controller.current?.signal });
 

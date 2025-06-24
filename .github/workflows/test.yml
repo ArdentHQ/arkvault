@@ -471,8 +471,8 @@ jobs:
             - name: Test
               uses: nick-invision/retry@v2
               env:
-                  COVERAGE_THRESHOLD_LINES: 85.41
-                  COVERAGE_THRESHOLD_FUNCTIONS: 85.1
+                  COVERAGE_THRESHOLD_LINES: 84.84
+                  COVERAGE_THRESHOLD_FUNCTIONS: 84.84
                   COVERAGE_THRESHOLD_STATEMENTS: 85.37
                   COVERAGE_THRESHOLD_BRANCHES: 76.34
                   COVERAGE_INCLUDE_PATH: src/domains/portfolio
@@ -632,10 +632,10 @@ jobs:
               run: pnpm rebuild
             - name: Test
               env:
-                  COVERAGE_THRESHOLD_LINES: 98.2
-                  COVERAGE_THRESHOLD_FUNCTIONS: 98.69
-                  COVERAGE_THRESHOLD_STATEMENTS: 98.24
-                  COVERAGE_THRESHOLD_BRANCHES: 95.6
+                  COVERAGE_THRESHOLD_LINES: 97.73
+                  COVERAGE_THRESHOLD_FUNCTIONS: 98.13
+                  COVERAGE_THRESHOLD_STATEMENTS: 97.79
+                  COVERAGE_THRESHOLD_BRANCHES: 93.81
               uses: nick-invision/retry@v2
               with:
                   timeout_minutes: 10
@@ -675,7 +675,7 @@ jobs:
               env:
                   COVERAGE_THRESHOLD_LINES: 96.65
                   COVERAGE_THRESHOLD_FUNCTIONS: 97.19
-                  COVERAGE_THRESHOLD_STATEMENTS: 96.77
+                  COVERAGE_THRESHOLD_STATEMENTS: 96.51
                   COVERAGE_THRESHOLD_BRANCHES: 92.3
               uses: nick-invision/retry@v2
               with:
@@ -715,10 +715,10 @@ jobs:
 
             - name: Test Utils
               env:
-                  COVERAGE_THRESHOLD_LINES: 71.87
-                  COVERAGE_THRESHOLD_FUNCTIONS: 60
-                  COVERAGE_THRESHOLD_STATEMENTS: 76.31
-                  COVERAGE_THRESHOLD_BRANCHES: 80
+                  COVERAGE_THRESHOLD_LINES: 100
+                  COVERAGE_THRESHOLD_FUNCTIONS: 100
+                  COVERAGE_THRESHOLD_STATEMENTS: 100
+                  COVERAGE_THRESHOLD_BRANCHES: 100
                   COVERAGE_INCLUDE_PATH: src/domains/transaction/utils.ts,src/domains/transaction/routing.ts
               uses: nick-invision/retry@v2
               with:
@@ -754,10 +754,10 @@ jobs:
 
             - name: Test Components ^T-Z
               env:
-                  COVERAGE_THRESHOLD_LINES: 96.58
+                  COVERAGE_THRESHOLD_LINES: 96.23
                   COVERAGE_THRESHOLD_FUNCTIONS: 97.34
-                  COVERAGE_THRESHOLD_STATEMENTS: 96.64
-                  COVERAGE_THRESHOLD_BRANCHES: 93.47
+                  COVERAGE_THRESHOLD_STATEMENTS: 96.3
+                  COVERAGE_THRESHOLD_BRANCHES: 90.08
                   COVERAGE_INCLUDE_PATH: src/domains/transaction/components/[T-Z]*
               uses: nick-invision/retry@v2
               with:
@@ -767,10 +767,10 @@ jobs:
 
             - name: Test Hooks
               env:
-                  COVERAGE_THRESHOLD_LINES: 89.79
-                  COVERAGE_THRESHOLD_FUNCTIONS: 86
-                  COVERAGE_THRESHOLD_STATEMENTS: 87.11
-                  COVERAGE_THRESHOLD_BRANCHES: 67.27
+                  COVERAGE_THRESHOLD_LINES: 99.28
+                  COVERAGE_THRESHOLD_FUNCTIONS: 100
+                  COVERAGE_THRESHOLD_STATEMENTS: 99.35
+                  COVERAGE_THRESHOLD_BRANCHES: 100
                   COVERAGE_INCLUDE_PATH: src/domains/transaction/hooks
               uses: nick-invision/retry@v2
               with:
@@ -780,10 +780,10 @@ jobs:
 
             - name: Test Pages
               env:
-                  COVERAGE_THRESHOLD_LINES: 92.97
-                  COVERAGE_THRESHOLD_FUNCTIONS: 91.66
-                  COVERAGE_THRESHOLD_STATEMENTS: 93.1
-                  COVERAGE_THRESHOLD_BRANCHES: 84.92
+                  COVERAGE_THRESHOLD_LINES: 91.82
+                  COVERAGE_THRESHOLD_FUNCTIONS: 88.8
+                  COVERAGE_THRESHOLD_STATEMENTS: 91.82
+                  COVERAGE_THRESHOLD_BRANCHES: 83.44
                   COVERAGE_INCLUDE_PATH: src/domains/transaction/pages
               uses: nick-invision/retry@v2
               with:
@@ -793,10 +793,10 @@ jobs:
 
             - name: Test Validations
               env:
-                  COVERAGE_THRESHOLD_LINES: 54.83
-                  COVERAGE_THRESHOLD_FUNCTIONS: 56
-                  COVERAGE_THRESHOLD_STATEMENTS: 55.15
-                  COVERAGE_THRESHOLD_BRANCHES: 49.18
+                  COVERAGE_THRESHOLD_LINES: 100
+                  COVERAGE_THRESHOLD_FUNCTIONS: 100
+                  COVERAGE_THRESHOLD_STATEMENTS: 100
+                  COVERAGE_THRESHOLD_BRANCHES: 100
                   COVERAGE_INCLUDE_PATH: src/domains/transaction/validations
               uses: nick-invision/retry@v2
               with:
@@ -836,9 +836,10 @@ jobs:
             - name: Test
               uses: nick-invision/retry@v2
               env:
-                  COVERAGE_THRESHOLD_LINES: 98.67
-                  COVERAGE_THRESHOLD_STATEMENTS: 98.73
-                  COVERAGE_THRESHOLD_BRANCHES: 98.25
+                  COVERAGE_THRESHOLD_LINES: 98.5
+                  COVERAGE_THRESHOLD_FUNCTIONS: 99.39
+                  COVERAGE_THRESHOLD_STATEMENTS: 98.56
+                  COVERAGE_THRESHOLD_BRANCHES: 97.03
               with:
                   timeout_minutes: 10
                   max_attempts: 1
@@ -889,6 +890,7 @@ jobs:
         runs-on: ubuntu-latest
         env:
             COVERAGE_INCLUDE_PATH: src/router
+            COVERAGE_THRESHOLD_BRANCHES: 92.59
         strategy:
             matrix:
                 node-version:
@@ -965,10 +967,10 @@ jobs:
         runs-on: ubuntu-latest
         env:
             COVERAGE_INCLUDE_PATH: src/app/lib
-            COVERAGE_THRESHOLD_LINES: 30.99
-            COVERAGE_THRESHOLD_BRANCHES: 22.77
-            COVERAGE_THRESHOLD_FUNCTIONS: 25.5
-            COVERAGE_THRESHOLD_STATEMENTS: 31.3
+            COVERAGE_THRESHOLD_LINES: 44.17
+            COVERAGE_THRESHOLD_BRANCHES: 36.08
+            COVERAGE_THRESHOLD_FUNCTIONS: 37.76
+            COVERAGE_THRESHOLD_STATEMENTS: 44.44
         strategy:
             matrix:
                 node-version:

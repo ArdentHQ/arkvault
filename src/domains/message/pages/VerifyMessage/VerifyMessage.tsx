@@ -2,7 +2,7 @@ import { Services } from "@/app/lib/mainsail";
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useForm } from "react-hook-form";
-import { useHistory, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { FormStep } from "./FormStep";
 import { SuccessStep } from "./SuccessStep";
 import { Page, Section } from "@/app/components/Layout";
@@ -37,14 +37,12 @@ export type VerificationResult = { verified?: boolean } & Services.SignedMessage
 
 export const VerifyMessage = () => {
 	const { t } = useTranslation();
-
-	const { walletId } = useParams<{ walletId: string }>();
 	const queryParameters = useQueryParameters();
 
 	const activeProfile = useActiveProfile();
-	const activeWallet = useActiveWalletWhenNeeded(!!walletId);
+	const activeWallet = useActiveWalletWhenNeeded(false);
 
-	const history = useHistory();
+	const navigate = useNavigate();
 
 	const initialState: Services.SignedMessage = {
 		message: queryParameters.get("message") || "",
@@ -107,10 +105,10 @@ export const VerifyMessage = () => {
 
 	const handleBack = () => {
 		if (activeWallet) {
-			return history.push(`/profiles/${activeProfile.id()}/dashboard`);
+			return navigate(`/profiles/${activeProfile.id()}/dashboard`);
 		}
 
-		return history.push(ProfilePaths.Welcome);
+		return navigate(ProfilePaths.Welcome);
 	};
 
 	const submitForm = async () => {

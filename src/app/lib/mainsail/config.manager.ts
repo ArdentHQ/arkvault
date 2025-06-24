@@ -1,7 +1,6 @@
 import deepmerge from "deepmerge";
-
-import { assocPath, path } from "rambda";
 import { NetworkConfig, IMilestone } from "./contracts";
+import { get, set } from "@/app/lib/helpers";
 
 export interface MilestoneSearchResult {
 	found: boolean;
@@ -34,13 +33,11 @@ export class ConfigManager {
 			throw new Error("Config not found.");
 		}
 
-		const path = key.split(".");
-		this.config = assocPath(path, value, this.config);
+		set(this.config, key, value);
 	}
 
 	public get<T = any>(key: string): T {
-		const pathArray = key.split(".");
-		return path(pathArray, this.config) as T;
+		return get(this.config ?? {}, key) as T;
 	}
 
 	public setHeight(value: number): void {

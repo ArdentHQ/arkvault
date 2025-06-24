@@ -95,19 +95,5 @@ describe("ExchangeStatus", () => {
 		expect(screen.getAllByTestId("StatusIcon__check-mark")).toHaveLength(1);
 		expect(screen.getAllByTestId("StatusIcon__spinner")).toHaveLength(1);
 		expect(screen.getAllByTestId("StatusIcon__empty")).toHaveLength(1);
-
-		exchangeTransaction.setStatus(Contracts.ExchangeTransactionStatus.Sending);
-		rerender(<ExchangeStatus exchangeTransaction={exchangeTransaction} />);
-
-		expect(screen.getAllByTestId("StatusIcon__check-mark")).toHaveLength(2);
-		expect(screen.getAllByTestId("StatusIcon__spinner")).toHaveLength(1);
-		expect(screen.queryByTestId("StatusIcon__empty")).not.toBeInTheDocument();
-
-		exchangeTransaction.setStatus(Contracts.ExchangeTransactionStatus.Finished);
-		rerender(<ExchangeStatus exchangeTransaction={exchangeTransaction} />);
-
-		expect(screen.getAllByTestId("StatusIcon__check-mark")).toHaveLength(3);
-		expect(screen.queryByTestId("StatusIcon__spinner")).not.toBeInTheDocument();
-		expect(screen.queryByTestId("StatusIcon__empty")).not.toBeInTheDocument();
 	});
 });

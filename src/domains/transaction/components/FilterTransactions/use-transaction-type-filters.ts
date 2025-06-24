@@ -1,3 +1,4 @@
+import { JSX } from "react";
 import { Contracts } from "@/app/lib/profiles";
 import { uniq } from "@/app/lib/helpers";
 import { useTransactionTypes } from "@/domains/transaction/hooks/use-transaction-types";

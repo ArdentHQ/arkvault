@@ -7,11 +7,14 @@ import { FormField } from "@/app/components/Form";
 import { StepHeader } from "@/app/components/StepHeader";
 import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
 import { Divider } from "@/app/components/Divider";
-import { ThemeIcon } from "@/app/components/Icon";
+import { Icon, ThemeIcon } from "@/app/components/Icon";
 import { SelectAddress } from "@/domains/profile/components/SelectAddress";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { WalletCapabilities } from "@/domains/portfolio/lib/wallet.capabilities";
 import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
+import { Tooltip } from "@/app/components/Tooltip";
+import { Amount } from "@/app/components/Amount";
+import { useValidatorResignationLockedFee } from "./hooks/useValidatorResignationLockedFee";
 
 interface FormStepProperties {
 	senderWallet?: ProfilesContracts.IReadWriteWallet;
@@ -38,6 +41,16 @@ export const FormStep = ({ senderWallet, profile, onWalletChange }: FormStepProp
 			onWalletChange(newSenderWallet);
 		}
 	};
+
+	const {
+		validatoResigationFee,
+		validatoResigationFeeAsFiat,
+		validatoResigationFeeTicker,
+		validatoResigationFeeAsFiatTicker,
+	} = useValidatorResignationLockedFee({
+		profile,
+		wallet: senderWallet,
+	});
 
 	return (
 		<section data-testid="SendValidatorResignation__form-step" className="space-y-6 sm:space-y-4">
@@ -76,7 +89,7 @@ export const FormStep = ({ senderWallet, profile, onWalletChange }: FormStepProp
 					/>
 				</FormField>
 
-				<DetailWrapper label={t("TRANSACTION.TRANSACTION_TYPE")}>
+				<DetailWrapper label={t("COMMON.ACTION")}>
 					<div className="space-y-3 sm:space-y-0">
 						<div className="flex w-full items-center justify-between gap-4 sm:justify-start">
 							<DetailTitle className="w-auto sm:min-w-[162px]">{t("COMMON.CATEGORY")}</DetailTitle>
@@ -104,6 +117,39 @@ export const FormStep = ({ senderWallet, profile, onWalletChange }: FormStepProp
 						</div>
 					</div>
 				</DetailWrapper>
+
+				{validatoResigationFee > 0 && (
+					<DetailWrapper label={t("TRANSACTION.SUMMARY")}>
+						<div className="flex w-full items-center justify-between gap-4 sm:justify-start">
+							<DetailTitle className="w-auto sm:min-w-[162px]">{t("COMMON.UNLOCKED_AMOUNT")}</DetailTitle>
+
+							<div className="flex flex-row items-center gap-2">
+								<Amount
+									ticker={validatoResigationFeeTicker}
+									value={validatoResigationFee}
+									className="font-semibold"
+								/>
+
+								{validatoResigationFeeAsFiat !== null && (
+									<div className="text-theme-secondary-700 font-semibold">
+										(~
+										<Amount
+											ticker={validatoResigationFeeAsFiatTicker}
+											value={validatoResigationFeeAsFiat}
+										/>
+										)
+									</div>
+								)}
+
+								<Tooltip content={t("TRANSACTION.REVIEW_STEP.AMOUNT_UNLOCKED_TOOLTIP")} maxWidth={418}>
+									<div className="bg-theme-primary-100 dark:bg-theme-dark-800 dark:text-theme-dark-50 text-theme-primary-600 flex h-5 w-5 items-center justify-center rounded-full">
+										<Icon name="QuestionMarkSmall" size="sm" />
+									</div>
+								</Tooltip>
+							</div>
+						</div>
+					</DetailWrapper>
+				)}
 			</div>
 		</section>
 	);

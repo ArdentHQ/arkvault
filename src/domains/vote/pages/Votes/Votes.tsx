@@ -16,7 +16,6 @@ import { assertWallet } from "@/utils/assertions";
 import { getErroredNetworks } from "@/utils/profile-utils";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { useEnvironmentContext } from "@/app/contexts";
-import { useParams } from "react-router-dom";
 import { useValidators } from "@/domains/vote/hooks/use-validators";
 import { useVoteActions } from "@/domains/vote/hooks/use-vote-actions";
 import { useVoteFilters } from "@/domains/vote/hooks/use-vote-filters";
@@ -32,11 +31,12 @@ export const Votes: FC = () => {
 	// @TODO: the hasWalletId alias is misleading because it indicates that it
 	// is a boolean but it's just a string or undefined and you still need to
 	// do an assertion or casting to ensure it has a value other than undefined
-	const { walletId: hasWalletId } = useParams<{ walletId: string }>();
 	const { env } = useEnvironmentContext();
 
 	const activeProfile = useActiveProfile();
-	const activeWallet = useActiveWalletWhenNeeded(!!hasWalletId);
+	const activeWallet = useActiveWalletWhenNeeded(false);
+	const hasWalletId = activeWallet && activeWallet.address();
+
 	const [selectedWallet, setSelectedWallet] = useState<Contracts.IReadWriteWallet | undefined>(activeWallet);
 
 	const { syncProfileWallets } = useProfileJobs(activeProfile);
@@ -95,7 +95,7 @@ export const Votes: FC = () => {
 
 	useEffect(() => {
 		if (hasWalletId) {
-			fetchValidators(activeWallet!);
+			fetchValidators(activeWallet);
 		}
 	}, [activeWallet, fetchValidators, hasWalletId]);
 

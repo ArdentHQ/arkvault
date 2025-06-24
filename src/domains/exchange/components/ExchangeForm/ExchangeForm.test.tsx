@@ -3,7 +3,6 @@ import * as useQueryParameters from "@/app/hooks/use-query-parameters";
 
 import { ExchangeProvider, useExchangeContext } from "@/domains/exchange/contexts/Exchange";
 import { FormProvider, useForm } from "react-hook-form";
-import { HashHistory, createHashHistory } from "history";
 import React, { useEffect } from "react";
 import {
 	env,
@@ -24,7 +23,6 @@ import { Contracts } from "@/app/lib/profiles";
 import { ExchangeForm } from "./ExchangeForm";
 import { FormStep } from "./FormStep";
 import { ReviewStep } from "./ReviewStep";
-import { Route } from "react-router-dom";
 import { StatusStep } from "./StatusStep";
 import { cloneDeep } from "@/app/lib/helpers";
 import currencyEth from "@/tests/fixtures/exchange/changenow/currency-eth.json";
@@ -38,7 +36,6 @@ let profile: Contracts.IProfile;
 const exchangeBaseURL = "https://exchanges.arkvault.io";
 const exchangeURL = `/profiles/${getMainsailProfileId()}/exchange/view`;
 const exchangeETHURL = "/api/changenow/currencies/eth";
-let history: HashHistory;
 
 const transactionStub = {
 	input: {
@@ -164,9 +161,6 @@ describe("ExchangeForm", () => {
 		findExchangeTransactionMock = vi
 			.spyOn(profile.exchangeTransactions(), "findById")
 			.mockReturnValue(exchangeTransaction);
-
-		history = createHashHistory();
-		history.push(exchangeURL);
 	});
 
 	afterEach(() => {
@@ -178,13 +172,10 @@ describe("ExchangeForm", () => {
 
 	const renderComponent = (component: React.ReactNode) =>
 		render(
-			<Route path="/profiles/:profileId/exchange/view">
-				<ExchangeProvider>
-					<Wrapper>{component}</Wrapper>
-				</ExchangeProvider>
-			</Route>,
+			<ExchangeProvider>
+				<Wrapper>{component}</Wrapper>
+			</ExchangeProvider>,
 			{
-				history,
 				route: exchangeURL,
 			},
 		);
@@ -193,16 +184,13 @@ describe("ExchangeForm", () => {
 		const onReady = vi.fn();
 
 		renderResponsiveWithRoute(
-			<Route path="/profiles/:profileId/exchange/view">
-				<ExchangeProvider>
-					<Wrapper>
-						<ExchangeForm onReady={onReady} />
-					</Wrapper>
-				</ExchangeProvider>
-			</Route>,
+			<ExchangeProvider>
+				<Wrapper>
+					<ExchangeForm onReady={onReady} />
+				</Wrapper>
+			</ExchangeProvider>,
 			breakpoint,
 			{
-				history,
 				route: exchangeURL,
 			},
 		);
@@ -297,7 +285,7 @@ describe("ExchangeForm", () => {
 	it("should go back to exchange page", async () => {
 		const onReady = vi.fn();
 
-		renderComponent(<ExchangeForm onReady={onReady} />);
+		const { router } = renderComponent(<ExchangeForm onReady={onReady} />);
 
 		await waitFor(() => {
 			expect(onReady).toHaveBeenCalledWith();
@@ -319,14 +307,11 @@ describe("ExchangeForm", () => {
 			expect(toCurrencyDropdown).not.toBeDisabled();
 		});
 
-		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
 		await userEvent.click(screen.getByTestId("ExchangeForm__back-button"));
 
 		await waitFor(() => {
-			expect(historySpy).toHaveBeenCalledWith(`/profiles/${getMainsailProfileId()}/exchange`);
+			expect(router.state.location.pathname).toBe(`/profiles/${getMainsailProfileId()}/exchange`);
 		});
-
-		historySpy.mockRestore();
 	});
 
 	it("should show an error alert if the selected pair is unavailable", async () => {
@@ -583,7 +568,6 @@ describe("ExchangeForm", () => {
 		});
 
 		// update amount output
-		payoutInput.select();
 		await user.clear(payoutInput);
 		await user.paste("1");
 
@@ -835,10 +819,12 @@ describe("ExchangeForm", () => {
 			from: { name: "Bitcoin", ticker: "BTC" },
 			to: { name: "Ethereum", ticker: "ETH" },
 		});
+		const user = userEvent.setup();
 
 		const recipientDropdown = screen.getAllByTestId("SelectDropdown__input")[2];
 
-		await userEvent.type(recipientDropdown, "payoutAddress");
+		await user.clear(recipientDropdown);
+		await user.type(recipientDropdown, "payoutAddress");
 
 		await waitFor(() => {
 			expect(recipientDropdown).toHaveValue("payoutAddress");
@@ -1220,7 +1206,7 @@ describe("ExchangeForm", () => {
 
 		const onReady = vi.fn();
 
-		renderComponent(<ExchangeForm onReady={onReady} />);
+		const { router } = renderComponent(<ExchangeForm onReady={onReady} />);
 
 		await waitFor(() => {
 			expect(onReady).toHaveBeenCalledWith();
@@ -1331,8 +1317,6 @@ describe("ExchangeForm", () => {
 			expect(confirmationStep()).toBeInTheDocument();
 		});
 
-		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
-
 		await expect(
 			screen.findByTestId("ExchangeForm__finish-button", undefined, { timeout: 4000 }),
 		).resolves.toBeVisible();
@@ -1340,10 +1324,8 @@ describe("ExchangeForm", () => {
 		await userEvent.click(screen.getByTestId("ExchangeForm__finish-button"));
 
 		await waitFor(() => {
-			expect(historySpy).toHaveBeenCalledWith(`/profiles/${getMainsailProfileId()}/dashboard`);
+			expect(router.state.location.pathname).toBe(`/profiles/${getMainsailProfileId()}/dashboard`);
 		});
-
-		historySpy.mockRestore();
 	});
 
 	it("should render exchange form with id of finished order", async () => {
@@ -1661,16 +1643,13 @@ describe("ExchangeForm", () => {
 		}));
 
 		renderResponsiveWithRoute(
-			<Route path="/profiles/:profileId/exchange/view">
-				<ExchangeProvider>
-					<Wrapper>
-						<ExchangeForm onReady={onReady} />
-					</Wrapper>
-				</ExchangeProvider>
-			</Route>,
+			<ExchangeProvider>
+				<Wrapper>
+					<ExchangeForm onReady={onReady} />
+				</Wrapper>
+			</ExchangeProvider>,
 			breakpoint,
 			{
-				history,
 				route: exchangeURL,
 			},
 		);

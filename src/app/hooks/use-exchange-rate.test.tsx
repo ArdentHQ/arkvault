@@ -3,6 +3,7 @@ import React from "react";
 
 import { useExchangeRate } from "./use-exchange-rate";
 import { env, WithProviders, getDefaultProfileId } from "@/utils/testing-library";
+import { IProfile } from "@/app/lib/profiles/contracts";
 
 describe("useExchangeRate", () => {
 	const wrapper = ({ children }: React.PropsWithChildren<{}>) => <WithProviders>{children}</WithProviders>;

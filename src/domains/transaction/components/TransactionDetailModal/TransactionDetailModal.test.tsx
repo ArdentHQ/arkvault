@@ -1,14 +1,10 @@
 import { Contracts, ReadOnlyWallet } from "@/app/lib/profiles";
-import { createHashHistory } from "history";
 import React from "react";
-import { Route } from "react-router-dom";
 import { requestMock, server } from "@/tests/mocks/server";
 import { TransactionDetailModal } from "./TransactionDetailModal";
 import { translations } from "@/domains/transaction/i18n";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
 import { env, getDefaultProfileId, render, screen, syncValidators, waitFor } from "@/utils/testing-library";
-
-const history = createHashHistory();
 
 const fixtureProfileId = getDefaultProfileId();
 let dashboardURL: string;
@@ -19,7 +15,6 @@ describe("TransactionDetailModal", () => {
 
 	beforeEach(async () => {
 		dashboardURL = `/profiles/${fixtureProfileId}/dashboard`;
-		history.push(dashboardURL);
 		profile = env.profiles().findById(getDefaultProfileId());
 
 		await syncValidators(profile);
@@ -39,22 +34,16 @@ describe("TransactionDetailModal", () => {
 
 	it("should not render if not open", () => {
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<TransactionDetailModal
-					profile={profile}
-					isOpen={false}
-					transactionItem={{
-						...TransactionFixture,
-						blockHash: () => "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
-						type: () => "transfer",
-						wallet: () => wallet,
-					}}
-				/>
-			</Route>,
-			{
-				history,
-				route: dashboardURL,
-			},
+			<TransactionDetailModal
+				profile={profile}
+				isOpen={false}
+				transactionItem={{
+					...TransactionFixture,
+					blockHash: () => "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
+					type: () => "transfer",
+					wallet: () => wallet,
+				}}
+			/>,
 		);
 
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
@@ -62,22 +51,19 @@ describe("TransactionDetailModal", () => {
 
 	it("should render a transfer modal", () => {
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<TransactionDetailModal
-					profile={profile}
-					isOpen={true}
-					transactionItem={{
-						...TransactionFixture,
-						blockHash: () => "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
-						isTransfer: () => true,
-						memo: () => {},
-						type: () => "transfer",
-						wallet: () => wallet,
-					}}
-				/>
-			</Route>,
+			<TransactionDetailModal
+				profile={profile}
+				isOpen={true}
+				transactionItem={{
+					...TransactionFixture,
+					blockHash: () => "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
+					isTransfer: () => true,
+					memo: () => {},
+					type: () => "transfer",
+					wallet: () => wallet,
+				}}
+			/>,
 			{
-				history,
 				route: dashboardURL,
 			},
 		);
@@ -89,23 +75,20 @@ describe("TransactionDetailModal", () => {
 		await profile.wallets().restore();
 
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<TransactionDetailModal
-					profile={profile}
-					isOpen={true}
-					transactionItem={{
-						...TransactionFixture,
-						blockHash: () => "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
-						isMultiSignatureRegistration: () => true,
-						min: () => 2,
-						publicKeys: () => [wallet.publicKey(), profile.wallets().last().publicKey()],
-						type: () => "multiSignature",
-						wallet: () => wallet,
-					}}
-				/>
-			</Route>,
+			<TransactionDetailModal
+				profile={profile}
+				isOpen={true}
+				transactionItem={{
+					...TransactionFixture,
+					blockHash: () => "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
+					isMultiSignatureRegistration: () => true,
+					min: () => 2,
+					publicKeys: () => [wallet.publicKey(), profile.wallets().last().publicKey()],
+					type: () => "multiSignature",
+					wallet: () => wallet,
+				}}
+			/>,
 			{
-				history,
 				route: dashboardURL,
 			},
 		);
@@ -119,26 +102,23 @@ describe("TransactionDetailModal", () => {
 
 	it("should render a multi payment modal", () => {
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<TransactionDetailModal
-					profile={profile}
-					isOpen={true}
-					transactionItem={{
-						...TransactionFixture,
-						blockHash: () => "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
-						isMultiPayment: () => true,
-						isTransfer: () => false,
-						recipients: () => [
-							{ address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD", amount: 1 },
-							{ address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD", amount: 1 },
-						],
-						type: () => "multiPayment",
-						wallet: () => wallet,
-					}}
-				/>
-			</Route>,
+			<TransactionDetailModal
+				profile={profile}
+				isOpen={true}
+				transactionItem={{
+					...TransactionFixture,
+					blockHash: () => "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
+					isMultiPayment: () => true,
+					isTransfer: () => false,
+					recipients: () => [
+						{ address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD", amount: 1 },
+						{ address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD", amount: 1 },
+					],
+					type: () => "multiPayment",
+					wallet: () => wallet,
+				}}
+			/>,
 			{
-				history,
 				route: dashboardURL,
 			},
 		);
@@ -159,42 +139,39 @@ describe("TransactionDetailModal", () => {
 		);
 
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<TransactionDetailModal
-					profile={profile}
-					isOpen={true}
-					transactionItem={{
-						...TransactionFixture,
-						blockHash: () => "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
-						data: () => ({
-							data: {
-								asset: {},
-								blockHash: "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
-							},
-						}),
-						isConfirmed: () => true,
-						isUnvote: () => transactionType === "unvote",
-						isVote: () => transactionType === "vote",
-						isVoteCombination: () => transactionType === "voteCombination",
-						type: () => transactionType,
-						unvotes: () => {
-							if (transactionType !== "vote") {
-								return TransactionFixture.unvotes();
-							}
-							return [];
+			<TransactionDetailModal
+				profile={profile}
+				isOpen={true}
+				transactionItem={{
+					...TransactionFixture,
+					blockHash: () => "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
+					data: () => ({
+						data: {
+							asset: {},
+							blockHash: "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
 						},
-						votes: () => {
-							if (transactionType !== "unvote") {
-								return TransactionFixture.votes();
-							}
-							return [];
-						},
-						wallet: () => wallet,
-					}}
-				/>
-			</Route>,
+					}),
+					isConfirmed: () => true,
+					isUnvote: () => transactionType === "unvote",
+					isVote: () => transactionType === "vote",
+					isVoteCombination: () => transactionType === "voteCombination",
+					type: () => transactionType,
+					unvotes: () => {
+						if (transactionType !== "vote") {
+							return TransactionFixture.unvotes();
+						}
+						return [];
+					},
+					votes: () => {
+						if (transactionType !== "unvote") {
+							return TransactionFixture.votes();
+						}
+						return [];
+					},
+					wallet: () => wallet,
+				}}
+			/>,
 			{
-				history,
 				route: dashboardURL,
 			},
 		);
@@ -221,34 +198,31 @@ describe("TransactionDetailModal", () => {
 		);
 
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<TransactionDetailModal
-					profile={profile}
-					isOpen={true}
-					transactionItem={{
-						...TransactionFixture,
-						blockHash: () => "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
+			<TransactionDetailModal
+				profile={profile}
+				isOpen={true}
+				transactionItem={{
+					...TransactionFixture,
+					blockHash: () => "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
+					data: () => ({
 						data: () => ({
-							data: () => ({
-								asset: {
-									votes: ["+" + TransactionFixture.votes()[0], "-" + TransactionFixture.unvotes()[0]],
-								},
-								blockHash: "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
-							}),
+							asset: {
+								votes: ["+" + TransactionFixture.votes()[0], "-" + TransactionFixture.unvotes()[0]],
+							},
+							blockHash: "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
 						}),
-						isConfirmed: () => false,
-						isUnvote: () => false,
-						isVote: () => false,
-						isVoteCombination: () => true,
-						type: () => "swap",
-						unvotes: () => TransactionFixture.unvotes(),
-						votes: () => TransactionFixture.votes(),
-						wallet: () => wallet,
-					}}
-				/>
-			</Route>,
+					}),
+					isConfirmed: () => false,
+					isUnvote: () => false,
+					isVote: () => false,
+					isVoteCombination: () => true,
+					type: () => "swap",
+					unvotes: () => TransactionFixture.unvotes(),
+					votes: () => TransactionFixture.votes(),
+					wallet: () => wallet,
+				}}
+			/>,
 			{
-				history,
 				route: dashboardURL,
 			},
 		);
@@ -258,21 +232,18 @@ describe("TransactionDetailModal", () => {
 
 	it("should render a validator registration modal", () => {
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<TransactionDetailModal
-					profile={profile}
-					isOpen={true}
-					transactionItem={{
-						...TransactionFixture,
-						blockHash: () => "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
-						type: () => "validatorRegistration",
-						username: () => "ARK Wallet",
-						wallet: () => wallet,
-					}}
-				/>
-			</Route>,
+			<TransactionDetailModal
+				profile={profile}
+				isOpen={true}
+				transactionItem={{
+					...TransactionFixture,
+					blockHash: () => "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
+					type: () => "validatorRegistration",
+					username: () => "ARK Wallet",
+					wallet: () => wallet,
+				}}
+			/>,
 			{
-				history,
 				route: dashboardURL,
 			},
 		);
@@ -282,20 +253,17 @@ describe("TransactionDetailModal", () => {
 
 	it("should render a validator resignation modal", () => {
 		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<TransactionDetailModal
-					profile={profile}
-					isOpen={true}
-					transactionItem={{
-						...TransactionFixture,
-						blockHash: () => "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
-						type: () => "validatorResignation",
-						wallet: () => wallet,
-					}}
-				/>
-			</Route>,
+			<TransactionDetailModal
+				profile={profile}
+				isOpen={true}
+				transactionItem={{
+					...TransactionFixture,
+					blockHash: () => "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
+					type: () => "validatorResignation",
+					wallet: () => wallet,
+				}}
+			/>,
 			{
-				history,
 				route: dashboardURL,
 			},
 		);

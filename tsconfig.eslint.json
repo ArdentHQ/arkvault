@@ -1,5 +1,5 @@
 {
-	"exclude": ["**/tests/**", "dist/**/*", "**/e2e/**", "**/cucumber/**"],
+	"exclude": ["**/tests/**", "dist/**/*", "**/e2e/**", "**/cucumber/**", "**/utils/e2e-*.ts"],
 	"include": ["src", "public", "custom.d.ts", "global.d.ts"],
 	"extends": "./tsconfig.json"
 }

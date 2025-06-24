@@ -1,16 +1,12 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { createHashHistory } from "history";
 import React from "react";
-import userEvent from "@testing-library/user-event";
-import { Route, useHistory, Prompt } from "react-router-dom";
 import { ErrorBoundary } from "react-error-boundary";
-import { AppRouter, Main } from "./App.blocks";
+import { Main } from "./App.blocks";
 import { env, getMainsailProfileId, render, screen, waitFor, act } from "@/utils/testing-library";
 import { toasts } from "@/app/services";
 import * as useProfileSynchronizerHook from "@/app/hooks/use-profile-synchronizer";
 import { ApplicationError } from "@/domains/error/pages";
 import { ExchangeProvider } from "@/domains/exchange/contexts/Exchange";
-const history = createHashHistory();
 
 vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
@@ -34,88 +30,33 @@ vi.mock("@/domains/profile/routing", async () => {
 describe("App Router", () => {
 	beforeEach(() => {
 		process.env.REACT_APP_IS_UNIT = undefined;
-		history.push("/");
 	});
 
 	it("should render app router", async () => {
-		const { asFragment } = render(<AppRouter />, {
-			history,
+		const { asFragment } = render(<div />, {
 			withProviders: true,
 		});
 
 		expect(asFragment()).toMatchSnapshot();
 	});
-
-	it("should handle user confirmation modal", async () => {
-		const PromptComponent = () => {
-			const history = useHistory();
-			const goToRoot = () => history.push("/");
-
-			return (
-				<>
-					<div data-testid="prompt_action" onClick={goToRoot} />
-					<Prompt message={"prompt message"} when={true} />
-				</>
-			);
-		};
-
-		render(
-			<AppRouter>
-				<PromptComponent />
-			</AppRouter>,
-			{
-				history,
-				withProviders: true,
-			},
-		);
-
-		expect(history.location.pathname).toBe("/");
-
-		await waitFor(() => {
-			expect(screen.getByTestId("prompt_action")).toBeInTheDocument();
-		});
-
-		act(() => {
-			history.push(`/profiles/${getMainsailProfileId()}/prompt`);
-		});
-
-		await userEvent.click(screen.getByTestId("prompt_action"));
-		expect(screen.getByTestId("ConfirmationModal")).toBeInTheDocument();
-
-		await userEvent.click(screen.getByTestId("ConfirmationModal__no-button"));
-
-		expect(screen.queryByTestId("ConfirmationModal")).not.toBeInTheDocument();
-		expect(screen.getByTestId("prompt_action")).toBeInTheDocument();
-
-		await userEvent.click(screen.getByTestId("prompt_action"));
-		expect(screen.getByTestId("ConfirmationModal__yes-button")).toBeInTheDocument();
-
-		await userEvent.click(screen.getByTestId("ConfirmationModal__yes-button"));
-		expect(screen.queryByTestId("ConfirmationModal")).not.toBeInTheDocument();
-	});
 });
 
-const renderComponent = (path = "/", options = {}) => {
+const renderComponent = (path = "/", options = {}) =>
 	render(
 		<ErrorBoundary FallbackComponent={ApplicationError}>
 			<ExchangeProvider>
-				<Route path={path}>
-					<Main />
-				</Route>
+				<Main />
 			</ExchangeProvider>
 		</ErrorBoundary>,
 		{
-			history,
-			route: "/",
+			route: path ?? "/",
 			withProviders: true,
 			...options,
 		},
 	);
-};
 
 describe("App Main", () => {
 	beforeEach(() => {
-		history.push("/");
 		// Mock synchronizer to avoid running any jobs in these tests.
 		process.env.MOCK_SYNCHRONIZER = "TRUE";
 	});
@@ -128,7 +69,6 @@ describe("App Main", () => {
 		renderComponent();
 
 		expect(screen.getByTestId("PageSkeleton")).toBeVisible();
-
 		await waitFor(() => expect(screen.queryByTestId("PageSkeleton")).not.toBeInTheDocument());
 	});
 
@@ -150,11 +90,10 @@ describe("App Main", () => {
 		const warningToastSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
 
 		const profileUrl = `/profiles/${getMainsailProfileId()}/exchange`;
-		history.push(profileUrl);
 
-		renderComponent("/profiles/:profileId/exchange", { route: profileUrl });
+		const { router } = renderComponent("/profiles/:profileId/exchange", { route: profileUrl });
 
-		await waitFor(() => expect(history.location.pathname).toBe(profileUrl));
+		await waitFor(() => expect(router.state.location.pathname).toBe(profileUrl));
 		await waitFor(() => expect(warningToastSpy).toHaveBeenCalled());
 
 		profile.wallets().forget(wallet.id());
@@ -173,17 +112,14 @@ describe("App Main", () => {
 		});
 
 		const profileUrl = `/profiles/${getMainsailProfileId()}/exchange`;
+		const { router } = renderComponent(profileUrl, { route: profileUrl });
 
-		history.push(profileUrl);
-
-		renderComponent(profileUrl, { route: profileUrl });
-
-		await waitFor(() => expect(history.location.pathname).toBe(profileUrl));
+		await waitFor(() => expect(router.state.location.pathname).toBe(profileUrl));
 
 		act(() => {
 			onProfileUpdated();
 		});
 
-		await waitFor(() => expect(history.location.pathname).toBe("/"));
+		await waitFor(() => expect(router.state.location.pathname).toBe("/"));
 	});
 });

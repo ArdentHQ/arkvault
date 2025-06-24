@@ -26,6 +26,10 @@ describe("Profile utils", () => {
 		expect(getProfileFromUrl(env, `/profiles/${profile.id()}`)).toStrictEqual(profile);
 	});
 
+	it("#getProfileFromUrl - return undefined for missing id", () => {
+		expect(getProfileFromUrl(env, "/profiles/")).toBeUndefined();
+	});
+
 	it("#getProfileStoredPassword", async () => {
 		const profile = env.profiles().findById("cba050f1-880f-45f0-9af9-cfe48f406052");
 		const passwordLessProfile = env.profiles().findById(getMainsailProfileId());

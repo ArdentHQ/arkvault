@@ -1,7 +1,7 @@
 import React from "react";
 import userEvent from "@testing-library/user-event";
 import { InstallPWA } from "./InstallPWA";
-import { render, screen, act } from "@/utils/testing-library";
+import { render, screen, act, renderWithoutRouter } from "@/utils/testing-library";
 
 let navigatorSpy: vi.SpyInstance;
 
@@ -58,7 +58,7 @@ describe("InstallPWA IOS", () => {
 
 		const localstorageSpy = vi.spyOn(Storage.prototype, "setItem");
 
-		render(<InstallPWA />);
+		renderWithoutRouter(<InstallPWA />);
 
 		const promptFunction = vi.fn().mockResolvedValue({});
 

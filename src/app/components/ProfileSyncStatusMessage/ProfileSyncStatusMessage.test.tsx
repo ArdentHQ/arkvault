@@ -1,6 +1,5 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
-import { Route } from "react-router-dom";
 
 import { SyncErrorMessage } from "./ProfileSyncStatusMessage";
 import { render, screen, waitFor, within } from "@/utils/testing-library";
@@ -9,14 +8,9 @@ describe("SyncErrorMessage", () => {
 	const failedNetworkNames = ["ARK Devnet", "ARK Mainnet", "Lisk Devnet"];
 
 	it("should render one failed network", async () => {
-		const { container } = render(
-			<Route path="/">
-				<SyncErrorMessage failedNetworkNames={[failedNetworkNames[0]]} />
-			</Route>,
-			{
-				route: "/",
-			},
-		);
+		const { container } = render(<SyncErrorMessage failedNetworkNames={[failedNetworkNames[0]]} />, {
+			route: "/",
+		});
 
 		await expect(screen.findByText(failedNetworkNames[0])).resolves.toBeVisible();
 
@@ -25,9 +19,7 @@ describe("SyncErrorMessage", () => {
 
 	it("should render two failed networks", async () => {
 		const { container } = render(
-			<Route path="/">
-				<SyncErrorMessage failedNetworkNames={[failedNetworkNames[0], failedNetworkNames[1]]} />
-			</Route>,
+			<SyncErrorMessage failedNetworkNames={[failedNetworkNames[0], failedNetworkNames[1]]} />,
 			{
 				route: "/",
 			},
@@ -40,14 +32,9 @@ describe("SyncErrorMessage", () => {
 	});
 
 	it("should render multiple failed networks", async () => {
-		const { container } = render(
-			<Route path="/">
-				<SyncErrorMessage failedNetworkNames={failedNetworkNames} />
-			</Route>,
-			{
-				route: "/",
-			},
-		);
+		const { container } = render(<SyncErrorMessage failedNetworkNames={failedNetworkNames} />, {
+			route: "/",
+		});
 
 		await expect(screen.findByText(failedNetworkNames[0])).resolves.toBeVisible();
 		await expect(screen.findByText(failedNetworkNames[1])).resolves.toBeVisible();
@@ -57,14 +44,9 @@ describe("SyncErrorMessage", () => {
 
 	it("should handle retry", async () => {
 		const onRetry = vi.fn();
-		const { container } = render(
-			<Route path="/">
-				<SyncErrorMessage failedNetworkNames={failedNetworkNames} onRetry={onRetry} />
-			</Route>,
-			{
-				route: "/",
-			},
-		);
+		const { container } = render(<SyncErrorMessage failedNetworkNames={failedNetworkNames} onRetry={onRetry} />, {
+			route: "/",
+		});
 
 		await expect(screen.findByText(failedNetworkNames[0])).resolves.toBeVisible();
 		await expect(screen.findByText(failedNetworkNames[1])).resolves.toBeVisible();

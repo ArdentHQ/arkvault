@@ -1,4 +1,3 @@
-import { path } from "rambda";
 import { Services } from "@/app/lib/mainsail";
 import {
 	MultipaymentBuilder,
@@ -20,7 +19,7 @@ import { ConfigRepository } from "@/app/lib/mainsail";
 import { IProfile } from "@/app/lib/profiles/profile.contract.js";
 import { NetworkConfig } from "./contracts.js";
 import { configManager } from "./config.manager.js";
-import { BigNumber } from "@/app/lib/helpers";
+import { BigNumber, get } from "@/app/lib/helpers";
 
 interface ValidatedTransferInput extends Services.TransferInput {
 	gasPrice: BigNumber;
@@ -115,6 +114,7 @@ export class TransactionService {
 			.nonce(nonce)
 			.gasPrice(UnitConverter.parseUnits(input.gasPrice.toString(), "gwei"))
 			.gas(input.gasLimit.toString())
+			.value(input.data.value)
 			.network(this.#configCrypto.crypto.network.chainId);
 
 		await this.#sign(input, builder);
@@ -132,8 +132,8 @@ export class TransactionService {
 		applyCryptoConfiguration(this.#configCrypto);
 		this.#assertGasFee(input);
 
-		const vote: { id: string } | undefined = path(["data", "votes", 0], input);
-		const unvote: { id: string } | undefined = path(["data", "unvotes", 0], input);
+		const vote: { id: string } | undefined = get(input, "data.votes.0");
+		const unvote: { id: string } | undefined = get(input, "data.unvotes.0");
 		const nonce = await this.#generateNonce(input);
 
 		if (unvote) {
@@ -154,7 +154,7 @@ export class TransactionService {
 		}
 
 		const builder = await VoteBuilder.new()
-			.vote(vote.id)
+			.vote(vote?.id)
 			.nonce(nonce)
 			.gasPrice(UnitConverter.parseUnits(input.gasPrice.toString(), "gwei"))
 			.gas(input.gasLimit.toString())

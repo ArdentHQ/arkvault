@@ -1,5 +1,5 @@
 import cn from "classnames";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, JSX } from "react";
 
 import { InputSuggestion } from "./InputSuggestion";
 import { useFormField } from "@/app/components/Form/useFormField";
@@ -90,7 +90,7 @@ const InputStyled = ({
 		{...properties}
 		autoComplete={autocomplete}
 		className={twMerge(
-			"bg-transparent! p-0! focus:shadow-none focus:ring-0! focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none",
+			"bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none",
 			properties.className,
 		)}
 	/>

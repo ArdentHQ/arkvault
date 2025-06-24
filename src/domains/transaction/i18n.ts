@@ -95,6 +95,8 @@ export const translations = {
 	},
 	INVALID_MNEMONIC: "Invalid Mnemonic",
 	INVALID_URL: "Invalid URL",
+	LEARN_MORE_ABOUT_BLS_KEYS: "Learn more about BLS keys",
+	LEARN_MORE_ABOUT_BLS_KEYS_SHORT: "About BLS keys",
 	LEDGER_CONFIRMATION: {
 		DESCRIPTION:
 			"Please review and verify the information on your Ledger device. Choose Accept to complete your transaction.",
@@ -307,6 +309,10 @@ export const translations = {
 	},
 	RETURN: "Return",
 	REVIEW_STEP: {
+		AMOUNT_LOCKED_TOOLTIP:
+			"Amount locked in the contract to register your validator. This amount is returned once you resign your validator.",
+		AMOUNT_UNLOCKED_TOOLTIP:
+			"Once the validator resignation is confirmed, the unlocked amount will be returned to your address.",
 		DESCRIPTION: "Review the transaction details below.",
 		TITLE: "Transaction Review",
 	},
@@ -346,6 +352,7 @@ export const translations = {
 	TRANSACTION_REMOVED: "Transaction successfully removed.",
 	TRANSACTION_SIGNED: "Transaction Signed",
 	TRANSACTION_TYPE: "Transaction Type",
+
 	TRANSACTION_TYPES: {
 		CONTRACT_DEPLOYMENT: "Contract Deployment",
 		HTLC_CLAIM: "Timelock Claim",
@@ -362,10 +369,9 @@ export const translations = {
 		VOTE: "Vote",
 		VOTE_COMBINATION: "Vote Swap",
 	},
-
 	TRANSACTION_TYPE_NOT_AVAILABLE: "Transaction type not available for this address.",
-	TYPE: "Type",
 
+	TYPE: "Type",
 	UNVOTES: "Unvotes",
 	UNVOTES_COUNT: "Unvotes ({{count}})",
 	UNVOTES_COUNT_one: "Unvote",

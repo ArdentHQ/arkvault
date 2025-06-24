@@ -1,8 +1,8 @@
 import { Contracts } from "@/app/lib/profiles";
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState, JSX } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { LedgerTabs } from "./Ledger/LedgerTabs";
 import { ImportDetailStep } from "./ImportDetailStep";
 import { SuccessStep } from "./SuccessStep";
@@ -36,7 +36,7 @@ export const ImportAddressesSidePanel = ({
 	onOpenChange: (open: boolean) => void;
 	onMountChange?: (mounted: boolean) => void;
 }): JSX.Element => {
-	const history = useHistory();
+	const navigate = useNavigate();
 	const activeProfile = useActiveProfile();
 	const { persist } = useEnvironmentContext();
 	const [activeTab, setActiveTab] = useState<ImportAddressStep>(ImportAddressStep.MethodStep);
@@ -156,7 +156,7 @@ export const ImportAddressesSidePanel = ({
 		console.log("handleback", activeTab);
 
 		if (activeTab === ImportAddressStep.MethodStep) {
-			return history.push(`/profiles/${activeProfile.id()}/dashboard`);
+			return navigate(`/profiles/${activeProfile.id()}/dashboard`);
 		}
 
 		if (activeTab === ImportAddressStep.EncryptPasswordStep && importedWallet) {

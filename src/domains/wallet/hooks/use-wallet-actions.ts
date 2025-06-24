@@ -1,7 +1,7 @@
 /* eslint-disable sonarjs/cognitive-complexity */
 import { Contracts } from "@/app/lib/profiles";
 import React, { useCallback, useState } from "react";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { generatePath } from "react-router";
 import { DropdownOption } from "@/app/components/Dropdown";
 import { useEnvironmentContext } from "@/app/contexts";
@@ -20,7 +20,7 @@ export const useWalletActions = ({
 }) => {
 	const { persist } = useEnvironmentContext();
 	const profile = useActiveProfile();
-	const history = useHistory();
+	const navigate = useNavigate();
 	const { openExternal } = useLink();
 
 	const { removeSelectedAddresses } = usePortfolio({ profile });
@@ -42,9 +42,8 @@ export const useWalletActions = ({
 				return;
 			}
 			stopEventBubbling(event);
-			// history.push(generatePath(ProfilePaths.WalletDetails, { profileId: profile.id(), walletId: wallet.id() }));
 		},
-		[history, profile, wallet, stopEventBubbling],
+		[navigate, profile, wallet, stopEventBubbling],
 	);
 
 	const handleSend = useCallback(
@@ -56,13 +55,11 @@ export const useWalletActions = ({
 			stopEventBubbling(event);
 
 			if (hasMultipleWallets) {
-				history.push(generatePath(ProfilePaths.SendTransfer, { profileId: profile.id() }));
+				navigate(generatePath(ProfilePaths.SendTransfer, { profileId: profile.id() }));
 				return;
 			}
 
-			history.push(
-				generatePath(ProfilePaths.SendTransferWallet, { profileId: profile.id(), walletId: wallet.id() }),
-			);
+			navigate(generatePath(ProfilePaths.SendTransferWallet, { profileId: profile.id(), walletId: wallet.id() }));
 		},
 		[stopEventBubbling, hasMultipleWallets, history, profile, wallet],
 	);
@@ -113,13 +110,13 @@ export const useWalletActions = ({
 			}
 
 			if (option.value === "verify-message") {
-				history.push(
+				navigate(
 					generatePath(ProfilePaths.VerifyMessageWallet, { profileId: profile.id(), walletId: wallet.id() }),
 				);
 			}
 
 			if (option.value === "multi-signature") {
-				history.push(
+				navigate(
 					generatePath(ProfilePaths.SendMultiSignature, { profileId: profile.id(), walletId: wallet.id() }),
 				);
 			}
@@ -137,7 +134,7 @@ export const useWalletActions = ({
 					});
 				}
 
-				history.push(url);
+				navigate(url);
 			}
 
 			if (option.value === "validator-resignation") {
@@ -152,7 +149,7 @@ export const useWalletActions = ({
 					});
 				}
 
-				history.push(url);
+				navigate(url);
 			}
 
 			if (option.value === "username-registration") {
@@ -168,7 +165,7 @@ export const useWalletActions = ({
 					});
 				}
 
-				history.push(url);
+				navigate(url);
 			}
 
 			if (option.value === "username-resignation") {
@@ -183,7 +180,7 @@ export const useWalletActions = ({
 					});
 				}
 
-				history.push(url);
+				navigate(url);
 			}
 
 			if (option.value === "open-explorer") {

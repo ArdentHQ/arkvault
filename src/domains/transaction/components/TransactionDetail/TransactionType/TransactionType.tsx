@@ -5,6 +5,7 @@ import { useTransactionTypes } from "@/domains/transaction/hooks/use-transaction
 import { DetailDivider, DetailLabelText, DetailWrapper } from "@/app/components/DetailWrapper";
 import { Label } from "@/app/components/Label";
 import { DTO } from "@/app/lib/profiles";
+import cn from "classnames";
 
 const validatorPublickey = (transaction: DTO.ExtendedSignedTransactionData | DTO.ExtendedConfirmedTransactionData) => {
 	try {
@@ -24,12 +25,20 @@ export const TransactionType = ({
 
 	const { getLabel } = useTransactionTypes();
 
+	const isValidatorRegistrationOrResignation =
+		transaction.isValidatorRegistration() || transaction.isValidatorResignation();
+
+	const labelClassName = cn({
+		"min-w-24": !isValidatorRegistrationOrResignation,
+		"min-w-[138px]": isValidatorRegistrationOrResignation,
+	});
+
 	return (
 		<div data-testid="TransactionType">
 			<DetailWrapper label={t("COMMON.ACTION")}>
 				<div className="space-y-3 sm:space-y-0">
 					<div className="flex w-full justify-between sm:justify-start">
-						<DetailLabelText>{t("COMMON.METHOD")}</DetailLabelText>
+						<DetailLabelText className={labelClassName}>{t("COMMON.METHOD")}</DetailLabelText>
 						<Label color="neutral" size="xs">
 							{getLabel(transaction.type())}
 						</Label>
@@ -54,7 +63,7 @@ export const TransactionType = ({
 							<DetailDivider />
 
 							<div className="flex w-full justify-between sm:justify-start">
-								<DetailLabelText>{t("COMMON.PUBLIC_KEY")}</DetailLabelText>
+								<DetailLabelText className={labelClassName}>{t("COMMON.PUBLIC_KEY")}</DetailLabelText>
 
 								<div className="no-ligatures min-w-0 truncate leading-5 font-semibold">
 									{validatorPublickey(transaction)}

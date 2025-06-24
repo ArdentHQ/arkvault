@@ -1,11 +1,10 @@
 import {
 	getErroredNetworks,
-	getProfileById,
 	getProfileFromUrl,
 	getProfileStoredPassword,
 	hasIncompatibleLedgerWallets,
 } from "@/utils/profile-utils";
-import { matchPath, useHistory, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useConfiguration, useEnvironmentContext } from "@/app/contexts";
 
@@ -31,12 +30,8 @@ enum Intervals {
 const useProfileWatcher = () => {
 	const location = useLocation();
 	const { env } = useEnvironmentContext();
-	const pathname = (location as any).location?.pathname || location.pathname;
-	const match = useMemo(() => matchPath(pathname, { path: "/profiles/:profileId" }), [pathname]);
-	const profileId = (match?.params as any)?.profileId;
-	const allProfilesCount = env.profiles().count();
 
-	return useMemo(() => getProfileById(env, profileId), [profileId, env, allProfilesCount]);
+	return getProfileFromUrl(env, location.pathname);
 };
 
 export const useProfileJobs = (profile?: Contracts.IProfile): Record<string, any> => {
@@ -214,7 +209,7 @@ export const useProfileSyncStatus = (profileId: string) => {
 export const useProfileRestore = (profileId: string) => {
 	const { shouldRestore, markAsRestored, setStatus } = useProfileSyncStatus(profileId);
 	const { persist, env } = useEnvironmentContext();
-	const history = useHistory();
+	const location = useLocation();
 
 	const restoreProfile = async (profile: Contracts.IProfile, passwordInput?: string) => {
 		if (!shouldRestore(profile)) {
@@ -227,7 +222,7 @@ export const useProfileRestore = (profileId: string) => {
 		await env.profiles().restore(profile, password);
 		markAsRestored();
 
-		const activeProfile = getProfileFromUrl(env, history.location.pathname);
+		const activeProfile = getProfileFromUrl(env, location.pathname);
 		if (activeProfile?.id() !== profile.id()) {
 			return;
 		}
@@ -337,8 +332,6 @@ export const useProfileSynchronizer = ({
 	const { startIdleTimer, resetIdleTimer } = useAutoSignOut(profile);
 	const [activeProfileId, setActiveProfileId] = useState<string | undefined>();
 	const lastPathname = useRef<string>(undefined);
-
-	const history = useHistory();
 
 	useProfileStatusWatcher({
 		onProfileSyncComplete,
@@ -485,7 +478,6 @@ export const useProfileSynchronizer = ({
 		onProfileSyncStart,
 		onProfileSyncComplete,
 		resetStatuses,
-		history,
 		onProfileSignOut,
 		getErroredNetworks,
 		syncProfileWallets,

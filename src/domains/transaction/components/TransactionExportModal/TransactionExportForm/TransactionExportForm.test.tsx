@@ -1,5 +1,4 @@
 import { Contracts } from "@/app/lib/profiles";
-import { createHashHistory } from "history";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
@@ -14,11 +13,6 @@ import {
 	within,
 } from "@/utils/testing-library";
 
-const history = createHashHistory();
-
-const fixtureProfileId = getDefaultProfileId();
-let dashboardURL: string;
-
 const toggleTestId = "dropdown__toggle-TransactionExportForm--daterange-options";
 const dropdownContentTestId = "dropdown__content-TransactionExportForm--daterange-options";
 
@@ -28,8 +22,6 @@ describe("TransactionExportForm", () => {
 	let profile: Contracts.IProfile;
 
 	beforeEach(async () => {
-		dashboardURL = `/profiles/${fixtureProfileId}/dashboard`;
-		history.push(dashboardURL);
 		profile = env.profiles().findById(getDefaultProfileId());
 
 		await syncValidators(profile);

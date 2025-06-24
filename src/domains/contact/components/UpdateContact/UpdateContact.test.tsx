@@ -105,8 +105,6 @@ describe("UpdateContact", () => {
 			expect(nameInput()).toHaveValue(contact.name());
 		});
 
-		(nameInput() as HTMLInputElement).select();
-
 		await userEvent.clear(nameInput());
 		await userEvent.type(nameInput(), newName);
 		await new Promise((resolve) => setTimeout(resolve, 1000));

@@ -79,6 +79,10 @@ export class WalletData {
 		return !!this.#getProperty(["attributes.validatorPublicKey"]);
 	}
 
+	public validatorFee(): number | undefined {
+		return this.#getProperty(["attributes.validatorFee"]);
+	}
+
 	public isResignedValidator(): boolean {
 		return !!this.#getProperty(["attributes.validatorResigned"]);
 	}

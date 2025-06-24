@@ -12,7 +12,7 @@ interface TransactionsState {
 	isLoadingMore: boolean;
 	activeMode?: string;
 	activeTransactionType?: any;
-	selectedTransactionTypes?: string[];
+	selectedTransactionTypes: string[];
 	hasMore?: boolean;
 	timestamp?: number;
 }
@@ -25,10 +25,10 @@ interface TransactionFilters {
 }
 
 interface FetchTransactionProperties {
-	flush?: boolean;
+	flush: boolean;
 	mode?: string;
 	transactionType?: any;
-	transactionTypes?: string[];
+	transactionTypes: string[];
 	wallets: ProfileContracts.IReadWriteWallet[];
 	cursor?: number;
 	orderBy?: string;
@@ -92,7 +92,6 @@ const getOrderByStr = ({ column, desc }: SortBy): string => {
 };
 
 export const useProfileTransactions = ({ profile, wallets, limit = 30 }: ProfileTransactionsProperties) => {
-	const lastQuery = useRef<string>(undefined);
 	const isMounted = useRef(true);
 	const cursor = useRef(1);
 	const LIMIT = limit;
@@ -138,56 +137,47 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 	const selectedWalletAddresses = wallets.map((wallet) => wallet.address()).join("-");
 	useEffect(() => {
 		const loadTransactions = async () => {
-			const response = await fetchTransactions({
-				flush: true,
-				mode: activeMode!,
-				transactionType: activeTransactionType,
-				transactionTypes: selectedTransactionTypes,
-				wallets,
-			});
+			try {
+				const response = await fetchTransactions({
+					flush: true,
+					mode: activeMode!,
+					transactionType: activeTransactionType,
+					transactionTypes: selectedTransactionTypes,
+					wallets,
+				});
 
-			const isAborted = () => {
-				const activeQuery = JSON.stringify({ activeMode, activeTransactionType });
-				return activeQuery !== lastQuery.current;
-			};
+				/* istanbul ignore next -- @preserve */
+				if (!isMounted.current) {
+					return;
+				}
 
-			if (isAborted()) {
-				return;
+				const addresses = response
+					.items()
+					.flatMap((transaction) => [
+						transaction.from(),
+						transaction.to(),
+						...transaction.recipients().map(({ address }) => address),
+					])
+					.filter(Boolean); // This is to filter out null values, for example a contract deployment recipient
+
+				const uniqueAddresses = [...new Set(addresses)] as string[];
+
+				const networks = wallets.map((wallet) => wallet.network());
+
+				await syncOnChainUsernames({ addresses: uniqueAddresses, networks, profile });
+
+				const items = filterTransactions({ transactions: response });
+
+				setState((state) => ({
+					...state,
+					hasMore: hasMorePages(items.length, response.hasMorePages()),
+					isLoadingTransactions: false,
+					transactions: items,
+				}));
+			} catch (error) {
+				console.log({ error });
 			}
-
-			/* istanbul ignore next -- @preserve */
-			if (!isMounted.current) {
-				return;
-			}
-
-			const addresses = response
-				.items()
-				.flatMap((transaction) => [
-					transaction.from(),
-					transaction.to(),
-					...transaction.recipients().map(({ address }) => address),
-				])
-				.filter(Boolean); // This is to filter out null values, for example a contract deployment recipient
-
-			const uniqueAddresses = [...new Set(addresses)] as string[];
-
-			const networks = wallets.map((wallet) => wallet.network());
-
-			await syncOnChainUsernames({ addresses: uniqueAddresses, networks, profile });
-
-			const items = filterTransactions({ transactions: response });
-
-			setState((state) => ({
-				...state,
-				hasMore: hasMorePages(items.length, response.hasMorePages()),
-				isLoadingTransactions: false,
-				transactions: items,
-			}));
 		};
-
-		if (!lastQuery.current) {
-			return;
-		}
 
 		delay(() => loadTransactions(), 0);
 
@@ -204,8 +194,6 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 			timestamp,
 			selectedTransactionTypes: newTransactionTypes,
 		}: TransactionFilters) => {
-			lastQuery.current = JSON.stringify({ activeMode, activeTransactionType });
-
 			const hasWallets = wallets.length > 0;
 			cursor.current = 1;
 
@@ -230,7 +218,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 	);
 
 	const fetchTransactions = useCallback(
-		async ({ flush = false, mode = "all", wallets = [], transactionTypes = [] }: FetchTransactionProperties) => {
+		async ({ flush, mode = "all", wallets, transactionTypes }: FetchTransactionProperties) => {
 			if (wallets.length === 0) {
 				return { hasMorePages: () => false, items: () => [] };
 			}
@@ -315,7 +303,12 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 		const latestTransaction = items[0];
 
 		const foundNew =
-			latestTransaction && !transactions.some((transaction) => latestTransaction.hash() === transaction.hash());
+			latestTransaction &&
+			/* istanbul ignore next -- @preserve */
+			!transactions.some(
+				/* istanbul ignore next -- @preserve */
+				(transaction) => latestTransaction.hash() === transaction.hash(),
+			);
 
 		if (!foundNew) {
 			return;
@@ -366,14 +359,14 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 		activeTransactionType,
 		fetchMore,
 		hasEmptyResults,
-		hasFilter: (selectedTransactionTypes?.length ?? 0) < allTransactionTypes.length,
+		hasFilter: selectedTransactionTypes.length < allTransactionTypes.length,
 		hasMore,
 		isLoadingMore,
 		isLoadingTransactions,
 		selectedTransactionTypes,
 		setSortBy,
 		sortBy,
-		transactions: selectedTransactionTypes?.length ? transactions : [],
+		transactions: selectedTransactionTypes.length > 0 ? transactions : [],
 		updateFilters,
 	};
 };

@@ -3,7 +3,7 @@ import { Label } from "@/app/components/Label";
 import { useTheme, useWalletAlias } from "@/app/hooks";
 import { Contracts } from "@/app/lib/profiles";
 import { DTO } from "@/app/lib/mainsail";
-import React, { useMemo } from "react";
+import React, { useMemo, JSX } from "react";
 import { useTranslation } from "react-i18next";
 import cn from "classnames";
 import { ColorType } from "@/app/components/Label/Label.styles";

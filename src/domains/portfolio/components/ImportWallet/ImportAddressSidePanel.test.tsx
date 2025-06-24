@@ -1,29 +1,27 @@
 import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
-import { createHashHistory } from "history";
 import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
-import { Route } from "react-router-dom";
 import { renderHook } from "@testing-library/react";
 import { SuccessStep } from "./SuccessStep";
-import { EnvironmentProvider } from "@/app/contexts";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 
 import {
 	env,
 	render,
-	renderResponsive,
 	screen,
 	waitFor,
 	mockNanoXTransport,
 	mockProfileWithPublicAndTestNetworks,
 	getMainsailProfileId,
+	renderResponsiveWithRoute,
 } from "@/utils/testing-library";
 import * as usePortfolio from "@/domains/portfolio/hooks/use-portfolio";
 import { ImportAddressesSidePanel } from "./ImportAddressSidePanel";
 import { expect } from "vitest";
 import { ImportAddressStep, useLedgerStepHeaderConfig, useStepHeaderConfig } from "./ImportAddressSidePanel.blocks";
 import { LedgerTabStep } from "./Ledger/LedgerTabs.contracts";
+import { ImportOption } from "@/domains/wallet/hooks";
 
 let profile: Contracts.IProfile;
 const fixtureProfileId = getMainsailProfileId();
@@ -32,7 +30,6 @@ const mnemonic =
 	"skin fortune security mom coin hurdle click emotion heart brisk exact rather code feature era leopard grocery tide gift power lawsuit sight vehicle coin";
 
 const route = `/profiles/${fixtureProfileId}/dashboard`;
-const history = createHashHistory();
 
 const continueButton = () => screen.getByTestId("ImportWallet__continue-button");
 const mnemonicInput = () => screen.getByTestId("ImportWallet__mnemonic-input");
@@ -46,11 +43,7 @@ describe("ImportSidePanel", () => {
 	let network;
 	let resetProfileNetworksMock: () => void;
 
-	const Component = () => (
-		<EnvironmentProvider env={env}>
-			<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
-		</EnvironmentProvider>
-	);
+	const Component = () => <ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />;
 
 	beforeEach(async () => {
 		profile = env.profiles().findById(fixtureProfileId);
@@ -66,13 +59,7 @@ describe("ImportSidePanel", () => {
 	});
 
 	it("should render method step", async () => {
-		history.push(`/profiles/${profile.id()}`);
-		render(
-			<Route path="/profiles/:profileId">
-				<Component />
-			</Route>,
-			{ history, withProviders: false },
-		);
+		render(<Component />, { route });
 
 		expect(methodStep()).toBeInTheDocument();
 
@@ -115,21 +102,13 @@ describe("ImportSidePanel", () => {
 			form.register("network");
 
 			return (
-				<EnvironmentProvider env={env}>
-					<FormProvider {...form}>
-						<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
-					</FormProvider>
-				</EnvironmentProvider>
+				<FormProvider {...form}>
+					<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
+				</FormProvider>
 			);
 		};
 
-		history.push(`/profiles/${profile.id()}`);
-		render(
-			<Route path="/profiles/:profileId">
-				<ImportAddressesSidePanelComponent />
-			</Route>,
-			{ history, withProviders: false },
-		);
+		render(<ImportAddressesSidePanelComponent />, { route });
 
 		expect(methodStep()).toBeInTheDocument();
 
@@ -178,7 +157,7 @@ describe("ImportSidePanel", () => {
 			);
 		};
 
-		renderResponsive(<Component />, breakpoint);
+		renderResponsiveWithRoute(<Component />, breakpoint, { route });
 
 		expect(successStep()).toBeInTheDocument();
 
@@ -194,16 +173,9 @@ describe("ImportSidePanel", () => {
 	it.skip("should render as ledger import", async () => {
 		const nanoXMock = mockNanoXTransport();
 
-		render(
-			<Route path="/profiles/:profileId/wallets/import/ledger">
-				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
-			</Route>,
-			{
-				route: {
-					pathname: routeLedger,
-				},
-			},
-		);
+		render(<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route,
+		});
 
 		await expect(screen.findByTestId("LedgerTabs")).resolves.toBeVisible();
 
@@ -216,22 +188,11 @@ describe("ImportSidePanel", () => {
 		await env.profiles().restore(emptyProfile);
 		await emptyProfile.sync();
 
-		const history = createHashHistory();
-		history.push(route);
 		const randomNewAddress = "0x125b484e51Ad990b5b3140931f3BD8eAee85Db23";
 
 		const onOpenChangeMock = vi.fn();
 
-		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<ImportAddressesSidePanel open={true} onOpenChange={onOpenChangeMock} />
-			</Route>,
-			{
-				history,
-			},
-		);
-
-		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
+		render(<ImportAddressesSidePanel open={true} onOpenChange={onOpenChangeMock} />, { route });
 
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
@@ -256,8 +217,6 @@ describe("ImportSidePanel", () => {
 		await userEvent.click(finishButton());
 
 		expect(onOpenChangeMock).toHaveBeenCalledWith(false);
-
-		historySpy.mockRestore();
 	});
 });
 

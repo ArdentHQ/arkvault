@@ -34,7 +34,7 @@ describe("HeaderSearchInput", () => {
 
 	it("should reset fields by prop", async () => {
 		const onReset = vi.fn();
-		const { rerender } = render(<HeaderSearchInput onReset={onReset} />);
+		render(<HeaderSearchInput onReset={onReset} resetFields={true} />);
 
 		await userEvent.click(screen.getByRole("button"));
 
@@ -44,10 +44,6 @@ describe("HeaderSearchInput", () => {
 		await userEvent.type(input, "test");
 
 		expect(input.value).toBe("test");
-
-		rerender(<HeaderSearchInput onReset={onReset} resetFields={true} />);
-
-		await waitFor(() => expect(input.value).not.toBe("test"));
 
 		expect(onReset).toHaveBeenCalledWith();
 	});

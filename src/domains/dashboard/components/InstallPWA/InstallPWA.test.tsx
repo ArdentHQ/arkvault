@@ -1,7 +1,7 @@
 import React from "react";
 import userEvent from "@testing-library/user-event";
 import { InstallPWA } from "./InstallPWA";
-import { render, screen, act, waitFor } from "@/utils/testing-library";
+import { render, screen, act, waitFor, renderWithoutRouter } from "@/utils/testing-library";
 
 describe("InstallPWA", () => {
 	it("should not render anything by default", () => {
@@ -44,7 +44,7 @@ describe("InstallPWA", () => {
 
 		const localstorageSpy = vi.spyOn(Storage.prototype, "setItem");
 
-		render(<InstallPWA />);
+		renderWithoutRouter(<InstallPWA />);
 
 		const promptFunction = vi.fn().mockResolvedValue({});
 

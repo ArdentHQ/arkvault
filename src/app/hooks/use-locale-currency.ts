@@ -13,7 +13,7 @@ export const useLocaleCurrency = () => {
 			locale = navigator.language;
 		}
 
-		let currency = LocaleCurrency.getCurrency(locale) as string | null;
+		let currency = LocaleCurrency.getCurrency(locale);
 
 		if (!currency) {
 			currency = "USD";

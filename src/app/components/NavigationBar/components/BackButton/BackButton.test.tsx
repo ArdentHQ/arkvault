@@ -1,87 +1,66 @@
 /* eslint-disable testing-library/no-node-access */
 import userEvent from "@testing-library/user-event";
-import { createHashHistory } from "history";
 import React from "react";
 
 import { BackButton } from "./BackButton";
 import { render, screen } from "@/utils/testing-library";
 
-const history = createHashHistory();
-
 const leftIcon = "svg#chevron-left-small";
 
 describe("BackButton", () => {
 	it("should render", () => {
-		const { container } = render(<BackButton />, { history });
+		const { container } = render(<BackButton />);
 
 		expect(document.querySelector(leftIcon)).toBeInTheDocument();
 		expect(container).toMatchSnapshot();
 	});
 
 	it("should render when disabled", () => {
-		const { container } = render(<BackButton disabled />, { history });
+		const { container } = render(<BackButton disabled />);
 
 		expect(document.querySelector(leftIcon)).toBeInTheDocument();
 		expect(container).toMatchSnapshot();
 	});
 
 	it("should redirect to previous page", async () => {
-		const historySpy = vi.spyOn(history, "go").mockImplementation(vi.fn());
-
-		const { container } = render(<BackButton />, { history });
+		const { container, router } = render(<BackButton />);
 
 		await userEvent.click(screen.getByRole("button"));
 
-		expect(historySpy).toHaveBeenCalledWith(-1);
+		expect(router.state.location.pathname).toBe("/");
 
 		expect(document.querySelector(leftIcon)).toBeInTheDocument();
 		expect(container).toMatchSnapshot();
-
-		historySpy.mockRestore();
 	});
 
 	it("should redirect to given url", async () => {
-		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
-
-		const { container } = render(<BackButton backToUrl="new-url" />, { history });
+		const { container, router } = render(<BackButton backToUrl="new-url" />);
 
 		await userEvent.click(screen.getByRole("button"));
 
-		expect(historySpy).toHaveBeenCalledWith("new-url");
+		expect(router.state.location.pathname).toBe("/new-url");
 
 		expect(document.querySelector(leftIcon)).toBeInTheDocument();
 		expect(container).toMatchSnapshot();
-
-		historySpy.mockRestore();
 	});
 
 	it("should not redirect to previous page when disabled", async () => {
-		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
-
-		const { container } = render(<BackButton disabled />, { history });
+		const { container } = render(<BackButton disabled />);
 
 		await userEvent.click(screen.getByRole("button"));
 
-		expect(historySpy).not.toHaveBeenCalled();
-
 		expect(document.querySelector(leftIcon)).toBeInTheDocument();
 		expect(container).toMatchSnapshot();
-
-		historySpy.mockRestore();
 	});
 
 	it("should not redirect to given url when disabled", async () => {
-		const historySpy = vi.spyOn(history, "go").mockImplementation(vi.fn());
-
-		const { container } = render(<BackButton backToUrl="new-url" disabled />, { history });
+		const { container, router } = render(<BackButton backToUrl="new-url" disabled />);
 
 		await userEvent.click(screen.getByRole("button"));
 
-		expect(historySpy).not.toHaveBeenCalled();
+		expect(router.state.location.pathname).toBe("/new-url");
 
 		expect(document.querySelector(leftIcon)).toBeInTheDocument();
 		expect(container).toMatchSnapshot();
-
-		historySpy.mockRestore();
 	});
 });
