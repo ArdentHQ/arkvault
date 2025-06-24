@@ -110,11 +110,10 @@ export const ImportAddressesSidePanel = ({
 	};
 
 	const handleOpenChange = (open: boolean) => {
-		// remove added wallets if side panel is closed early
+		// Remove the imported wallet, only if the user exits in encryption password step.
 		if (
 			!open &&
-			activeTab !== ImportAddressStep.SummaryStep &&
-			activeTab !== ImportAddressStep.MethodStep &&
+			activeTab === ImportAddressStep.EncryptPasswordStep &&
 			importedWallet
 		) {
 			forgetImportedWallets(importedWallet);
@@ -161,7 +160,6 @@ export const ImportAddressesSidePanel = ({
 		})[activeTab as Exclude<ImportAddressStep, ImportAddressStep.SummaryStep>]();
 
 	const handleBack = () => {
-		console.log("handleback", activeTab);
 
 		if (activeTab === ImportAddressStep.MethodStep) {
 			return navigate(`/profiles/${activeProfile.id()}/dashboard`);
