@@ -101,6 +101,8 @@ describe("TransactionSummary", () => {
 
 		expect(screen.getByTestId("TransactionSummary__ValidatorFee")).toBeInTheDocument();
 
+		expect(screen.queryByTestId("TransactionSummary__ValidatorFee__Tooltip")).not.toBeInTheDocument();
+
 		validatorFeeMock.mockRestore();
 	});
 	it("shows the validator fee if the transaction is a validator resignation and it has a validator fee of 0", () => {
@@ -116,6 +118,8 @@ describe("TransactionSummary", () => {
 		render(<TransactionSummary transaction={transaction} senderWallet={wallet} profile={profile} />);
 
 		expect(screen.getByTestId("TransactionSummary__ValidatorFee")).toBeInTheDocument();
+
+		expect(screen.getByTestId("TransactionSummary__ValidatorFee__Tooltip")).toBeInTheDocument();
 
 		validatorFeeMock.mockRestore();
 	});

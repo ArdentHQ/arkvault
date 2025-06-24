@@ -7,6 +7,8 @@ import { BigNumber } from "@/app/lib/helpers";
 import { TransactionAmountLabel } from "@/domains/transaction/components/TransactionTable/TransactionRow/TransactionAmount.blocks";
 import { useTranslation } from "react-i18next";
 import { UnitConverter } from "@arkecosystem/typescript-crypto";
+import { Tooltip } from "@/app/components/Tooltip";
+import { Icon } from "@/app/components/Icon";
 interface Properties {
 	transaction: DTO.ExtendedSignedTransactionData | DTO.ExtendedConfirmedTransactionData;
 	senderWallet: Contracts.IReadWriteWallet;
@@ -72,6 +74,17 @@ export const TransactionSummary = ({
 								allowHideBalance
 								profile={profile}
 							/>
+
+							{BigNumber.make(validatorFee).isZero() && (
+								<Tooltip content={t("TRANSACTION.VALIDATOR_REGISTERED_WITHOUT_FEE")}>
+									<div
+										data-testid="TransactionSummary__ValidatorFee__Tooltip"
+										className="bg-theme-primary-100 dark:bg-theme-dark-800 dark:text-theme-dark-50 text-theme-primary-600 flex h-5 w-5 items-center justify-center rounded-full"
+									>
+										<Icon name="QuestionMarkSmall" size="sm" />
+									</div>
+								</Tooltip>
+							)}
 						</div>
 
 						<DetailDivider />
