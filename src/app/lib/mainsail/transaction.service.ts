@@ -134,8 +134,6 @@ export class TransactionService {
 
 		const vote: { id: string } | undefined = get(input, "data.votes[0]");
 		const unvote: { id: string } | undefined = get(input, "data.unvotes[0]");
-		console.log(`[TransactionService#vote] input: ${JSON.stringify(input)}`);
-		console.log(`[TransactionService#vote] vote: ${JSON.stringify(vote)}, unvote: ${JSON.stringify(unvote)}`);
 		const nonce = await this.#generateNonce(input);
 
 		if (unvote) {
