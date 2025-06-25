@@ -65,6 +65,18 @@ export function getEstimateGasParams(formData: Record<string, any>, type: string
 			return { data, to: ContractAddresses.MULTIPAYMENT, value };
 		},
 		transfer: () => ({ to: recipientAddress as string }),
+		updateValidator: () => {
+			const data = encodeFunctionData({
+				abi: ConsensusAbi.abi,
+				args: [`0x${validatorPublicKey}`],
+				functionName: "updateValidator",
+			});
+
+			return {
+				data,
+				to: ContractAddresses.CONSENSUS,
+			};
+		},
 		usernameRegistration: () => {
 			const data = encodeFunctionData({
 				abi: UsernamesAbi.abi,
