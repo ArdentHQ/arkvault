@@ -288,7 +288,7 @@ export class ClientService {
 
 			const addresses = identifiers.map(({ value }) => value).join(",");
 			if (addresses.length > 0) {
-				result.searchParams.address = addresses
+				result.searchParams.address = addresses;
 			}
 
 			// @ts-ignore
