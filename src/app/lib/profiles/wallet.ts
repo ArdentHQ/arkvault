@@ -297,6 +297,15 @@ export class Wallet implements IReadWriteWallet {
 		return this.#attributes.get<Contracts.WalletData>("wallet").isValidator();
 	}
 
+	/** {@inheritDoc IReadWriteWallet.isLegacyValidator} */
+	public isLegacyValidator(): boolean {
+		if (!this.#attributes.get<Contracts.WalletData>("wallet")) {
+			throw new Error(ERR_NOT_SYNCED);
+		}
+
+		return this.#attributes.get<Contracts.WalletData>("wallet").isLegacyValidator();
+	}
+
 	/** {@inheritDoc IReadWriteWallet.validatorFee} */
 	public validatorFee(): number | undefined {
 		if (!this.#attributes.get<Contracts.WalletData>("wallet")) {

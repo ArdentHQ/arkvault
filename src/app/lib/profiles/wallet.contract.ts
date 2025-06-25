@@ -285,6 +285,14 @@ export interface IReadWriteWallet {
 	isValidator(): boolean;
 
 	/**
+	 * Determine if the wallet is a legacy validator.
+	 *
+	 * @return {boolean}
+	 * @memberof IReadWriteWallet
+	 */
+	isLegacyValidator(): boolean;
+
+	/**
 	 * Get the validator fee.
 	 *
 	 * @return {number | undefined}
