@@ -101,45 +101,46 @@ export const ReviewStep = ({
 					</div>
 				</DetailWrapper>
 
-				<div className="space-y-3 sm:space-y-2">
-					<div className="mx-3 sm:mx-0">
-						<DetailWrapper label={t("COMMON.TRANSACTION_SUMMARY")} className="rounded-xl">
-							<div className="flex flex-col gap-3">
-								<div className="flex items-center justify-between gap-4 space-x-2 sm:justify-start sm:space-x-0">
-									<DetailTitle className="w-auto sm:min-w-40">
-										{t("COMMON.LOCKED_AMOUNT")}
-									</DetailTitle>
+				{!wallet?.isLegacyValidator() && (
+					<div className="space-y-3 sm:space-y-2">
+						<div className="mx-3 sm:mx-0">
+							<DetailWrapper label={t("COMMON.TRANSACTION_SUMMARY")} className="rounded-xl">
+								<div className="flex flex-col gap-3">
+									<div className="flex items-center justify-between gap-4 space-x-2 sm:justify-start sm:space-x-0">
+										<DetailTitle className="w-auto sm:min-w-40">
+											{t("COMMON.LOCKED_AMOUNT")}
+										</DetailTitle>
 
-									<div className="flex flex-row items-center gap-2">
-										<Amount
-											ticker={validatorRegistrationFeeTicker}
-											value={validatorRegistrationFee}
-											className="font-semibold"
-										/>
+										<div className="flex flex-row items-center gap-2">
+											<Amount
+												ticker={validatorRegistrationFeeTicker}
+												value={validatorRegistrationFee}
+												className="font-semibold"
+											/>
 
-										{validatorRegistrationFeeAsFiat !== null && (
-											<div className="text-theme-secondary-700 font-semibold">
-												(~
-												<Amount
-													ticker={validatorRegistrationFeeAsFiatTicker}
-													value={validatorRegistrationFeeAsFiat}
-												/>
-												)
-											</div>
-										)}
+											{validatorRegistrationFeeAsFiat !== null && (
+												<div className="text-theme-secondary-700 font-semibold">
+													(~
+													<Amount
+														ticker={validatorRegistrationFeeAsFiatTicker}
+														value={validatorRegistrationFeeAsFiat}
+													/>
+													)
+												</div>
+											)}
 
-										<Tooltip content={t("TRANSACTION.REVIEW_STEP.AMOUNT_LOCKED_TOOLTIP")}>
-											<div className="bg-theme-primary-100 dark:bg-theme-dark-800 dark:text-theme-dark-50 text-theme-primary-600 flex h-5 w-5 items-center justify-center rounded-full">
-												<Icon name="QuestionMarkSmall" size="sm" />
-											</div>
-										</Tooltip>
+											<Tooltip content={t("TRANSACTION.REVIEW_STEP.AMOUNT_LOCKED_TOOLTIP")}>
+												<div className="bg-theme-primary-100 dark:bg-theme-dark-800 dark:text-theme-dark-50 text-theme-primary-600 flex h-5 w-5 items-center justify-center rounded-full">
+													<Icon name="QuestionMarkSmall" size="sm" />
+												</div>
+											</Tooltip>
+										</div>
 									</div>
 								</div>
-							</div>
-						</DetailWrapper>
+							</DetailWrapper>
+						</div>
 					</div>
-				</div>
-
+				)}
 				<div data-testid="DetailWrapper">
 					<div className="mt-0 p-3 sm:p-0">
 						<FormField name="fee">
