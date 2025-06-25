@@ -16,6 +16,7 @@ export const useTransactionVotingWallets = ({ transaction, network, profile }: P
 	useEffect(() => {
 		const updateValidators = async () => {
 			setIsLoading(true);
+			const network = profile.activeNetwork()
 
 			try {
 				profile.validators().all(network.id());
@@ -44,7 +45,7 @@ export const useTransactionVotingWallets = ({ transaction, network, profile }: P
 		};
 
 		updateValidators();
-	}, [transaction, profile, network]);
+	}, [profile, transaction]);
 
 	return {
 		isLoading,
