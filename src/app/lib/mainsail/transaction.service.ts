@@ -1,25 +1,25 @@
-import { Services } from "@/app/lib/mainsail";
+import { BigNumber, get } from "@/app/lib/helpers";
 import {
 	MultipaymentBuilder,
+	TransferBuilder,
+	UnitConverter,
 	UnvoteBuilder,
 	UsernameRegistrationBuilder,
 	UsernameResignationBuilder,
-	TransferBuilder,
 	ValidatorRegistrationBuilder,
 	ValidatorResignationBuilder,
 	VoteBuilder,
-	UnitConverter,
 } from "@arkecosystem/typescript-crypto";
 
-import { applyCryptoConfiguration } from "./config.js";
 import { AddressService } from "./address.service.js";
-import { SignedTransactionData } from "./signed-transaction.dto";
 import { ClientService } from "./client.service.js";
 import { ConfigRepository } from "@/app/lib/mainsail";
 import { IProfile } from "@/app/lib/profiles/profile.contract.js";
 import { NetworkConfig } from "./contracts.js";
+import { Services } from "@/app/lib/mainsail";
+import { SignedTransactionData } from "./signed-transaction.dto";
+import { applyCryptoConfiguration } from "./config.js";
 import { configManager } from "./config.manager.js";
-import { BigNumber, get } from "@/app/lib/helpers";
 
 interface ValidatedTransferInput extends Services.TransferInput {
 	gasPrice: BigNumber;
@@ -132,8 +132,10 @@ export class TransactionService {
 		applyCryptoConfiguration(this.#configCrypto);
 		this.#assertGasFee(input);
 
-		const vote: { id: string } | undefined = get(input, "data.votes.0");
-		const unvote: { id: string } | undefined = get(input, "data.unvotes.0");
+		const vote: { id: string } | undefined = get(input, "data.votes[0]");
+		const unvote: { id: string } | undefined = get(input, "data.unvotes[0]");
+		console.log(`[TransactionService#vote] input: ${JSON.stringify(input)}`);
+		console.log(`[TransactionService#vote] vote: ${JSON.stringify(vote)}, unvote: ${JSON.stringify(unvote)}`);
 		const nonce = await this.#generateNonce(input);
 
 		if (unvote) {
