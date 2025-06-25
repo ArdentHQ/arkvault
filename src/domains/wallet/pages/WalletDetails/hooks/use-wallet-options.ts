@@ -85,6 +85,21 @@ const getRegistrationOptions = (wallets: Contracts.IReadWriteWallet[], t: TFunct
 		if (
 			walletsWithValidatorActions.some(
 				(w) =>
+					w.network().allows(Enums.FeatureFlag.TransactionValidatorRegistration) &&
+					w.isValidator() &&
+					!w.isResignedValidator() &&
+					w.isLegacyValidator(),
+			)
+		) {
+			registrationOptions.options.push({
+				label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.UPDATE_VALIDATOR"),
+				value: "validator-registration",
+			});
+		}
+
+		if (
+			walletsWithValidatorActions.some(
+				(w) =>
 					w.network().allows(Enums.FeatureFlag.TransactionValidatorResignation) &&
 					w.isValidator() &&
 					!w.isResignedValidator(),
@@ -225,6 +240,6 @@ export const useWalletOptions = (wallets: Contracts.IReadWriteWallet[], profile?
 			registrationOptions: getRegistrationOptions(wallets, t, profile),
 			secondaryOptions,
 		}),
-		[t, wallets, areWalletsRestoredAndSynced], // eslint-disable-line react-hooks/exhaustive-deps
+		[t, wallets, areWalletsRestoredAndSynced],
 	);
 };
