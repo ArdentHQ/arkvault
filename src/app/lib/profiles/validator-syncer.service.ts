@@ -4,7 +4,7 @@ import { pqueueSettled } from "./helpers/queue.js";
 import { ClientService } from "@/app/lib/mainsail/client.service.js";
 
 export interface IValidatorSyncer {
-	sync(): Promise<Contracts.WalletData[]>;
+	sync(query?: Contracts.KeyValuePair): Promise<Contracts.WalletData[]>;
 }
 
 export class ParallelValidatorSyncer implements IValidatorSyncer {
@@ -14,9 +14,9 @@ export class ParallelValidatorSyncer implements IValidatorSyncer {
 		this.#clientService = clientService;
 	}
 
-	async sync(): Promise<Contracts.WalletData[]> {
+	async sync(query?: Contracts.KeyValuePair): Promise<Contracts.WalletData[]> {
 		const result: Contracts.WalletData[] = [];
-		const lastResponse = await this.#clientService.validators();
+		const lastResponse = await this.#clientService.validators(query);
 		for (const item of lastResponse.items()) {
 			result.push(item);
 		}
@@ -53,18 +53,23 @@ export class SerialValidatorSyncer implements IValidatorSyncer {
 		this.#client = client;
 	}
 
-	public async sync(): Promise<Contracts.WalletData[]> {
+	public async sync(query?: Contracts.KeyValuePair): Promise<Contracts.WalletData[]> {
 		const result: Contracts.WalletData[] = [];
-		let options: Services.ClientPagination = {};
 
+		const baseOptions: Services.ClientPagination = { ...(query ?? {}) };
+		let options: Services.ClientPagination = { ...baseOptions };
 		let lastResponse;
+
 		do {
 			lastResponse = await this.#client.validators(options);
+
 			for (const item of lastResponse.items()) {
 				result.push(item);
 			}
-			options = { cursor: lastResponse.nextPage() };
+
+			options = { ...baseOptions, cursor: lastResponse.nextPage() };
 		} while (lastResponse.hasMorePages());
+
 		return result;
 	}
 }
