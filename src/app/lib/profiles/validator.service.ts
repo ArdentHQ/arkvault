@@ -46,7 +46,7 @@ export class ValidatorService implements IValidatorService {
 			? new ParallelValidatorSyncer(clientService)
 			: new SerialValidatorSyncer(clientService);
 
-		const result: Contracts.WalletData[] = await syncer.sync();
+		const result: Contracts.WalletData[] = await syncer.sync({ limit: 100 });
 
 		this.#dataRepository.set(
 			`${network}.validators`,
