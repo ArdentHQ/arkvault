@@ -267,6 +267,8 @@ export const translations = {
 	PAGE_VALIDATOR_REGISTRATION: {
 		FORM_STEP: {
 			DESCRIPTION: "Register a new Validator address on the network below.",
+			DESCRIPTION_LEGACY:
+				"The address was a delegate on ARK Core and can be upgraded to a Validator by registering a BLS Public Key.",
 			INSUFFICIENT_BALANCE_FOR_FEE_AND_LOCKED_FEE:
 				"Registering a validator requires locking {{lockedFee}}. Your current balance is insufficient with the fee you set ({{fee}}).",
 			INSUFFICIENT_BALANCE_FOR_LOCKED_FEE:
