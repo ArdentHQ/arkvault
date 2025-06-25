@@ -131,7 +131,7 @@ const Votes = ({ votes, activeValidators }: VotesProperties) => {
 				</div>
 			</div>
 
-			<div className="flex flex-col gap-2 px-4 py-3 text-base leading-5 font-semibold md:flex-row md:px-0 md:py-0">
+			<div className="flex flex-col gap-2 px-4 py-3 text-base leading-5 font-semibold md:flex-row md:px-0 md:py-0 md:items-center">
 				<p className="text-theme-secondary-700 dark:text-theme-dark-200 text-sm md:text-base md:leading-5">
 					{t("COMMON.RANK")}
 				</p>
