@@ -66,15 +66,28 @@ export const signValidatorRegistration = async ({ env, form, profile, signatory 
 
 	httpClient.forgetWalletCache(senderWallet);
 
-	const transactionId = await senderWallet.transaction().signValidatorRegistration({
-		data: {
-			validatorPublicKey,
-			value: configManager.getMilestone()["validatorRegistrationFee"] ?? 0,
-		},
-		gasLimit,
-		gasPrice,
-		signatory,
-	});
+	let transactionId;
+
+	if (senderWallet.isLegacyValidator()) {
+		transactionId = await senderWallet.transaction().signUpdateValidator({
+			data: {
+				validatorPublicKey,
+			},
+			gasLimit,
+			gasPrice,
+			signatory,
+		});
+	} else {
+		transactionId = await senderWallet.transaction().signValidatorRegistration({
+			data: {
+				validatorPublicKey,
+				value: configManager.getMilestone()["validatorRegistrationFee"] ?? 0,
+			},
+			gasLimit,
+			gasPrice,
+			signatory,
+		});
+	}
 
 	const response = await senderWallet.transaction().broadcast(transactionId);
 
