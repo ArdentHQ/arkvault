@@ -3,12 +3,11 @@ import { Contracts } from "@/app/lib/profiles";
 import { useEffect, useState } from "react";
 
 interface Properties {
-	network: Networks.Network;
 	transaction: DTO.RawTransactionData;
 	profile: Contracts.IProfile;
 }
 
-export const useTransactionVotingWallets = ({ transaction, network, profile }: Properties) => {
+export const useTransactionVotingWallets = ({ transaction, profile }: Properties) => {
 	const [isLoading, setIsLoading] = useState(false);
 	const [votes, setVotes] = useState<Contracts.VoteRegistryItem[]>([]);
 	const [unvotes, setUnvotes] = useState<Contracts.VoteRegistryItem[]>([]);
