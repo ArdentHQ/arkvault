@@ -1,4 +1,4 @@
-import { Networks, DTO } from "@/app/lib/mainsail";
+import { DTO } from "@/app/lib/mainsail";
 import { Contracts } from "@/app/lib/profiles";
 import { useEffect, useState } from "react";
 
