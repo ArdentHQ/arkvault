@@ -7,9 +7,11 @@ import { pqueueSettled } from "./helpers/queue.js";
 import { ReadOnlyWallet } from "./read-only-wallet.js";
 import { ClientService } from "@/app/lib/mainsail/client.service.js";
 import { LinkService } from "@/app/lib/mainsail/link.service.js";
+import { Cache } from "@/app/lib/mainsail/cache.js";
 
 export class ValidatorService implements IValidatorService {
 	readonly #dataRepository: IDataRepository = new DataRepository();
+	readonly #cache = new Cache(300); // 5-minute TTL in seconds
 
 	/** {@inheritDoc IValidatorService.all} */
 	public all(network: string): IReadOnlyWallet[] {
@@ -40,24 +42,31 @@ export class ValidatorService implements IValidatorService {
 	}
 
 	/** {@inheritDoc IValidatorService.sync} */
-	public async sync(profile: IProfile, network: string): Promise<void> {
-		const clientService = new ClientService({ config: profile.activeNetwork().config(), profile });
-		const syncer: IValidatorSyncer = profile.activeNetwork().meta().fastValidatorSync
-			? new ParallelValidatorSyncer(clientService)
-			: new SerialValidatorSyncer(clientService);
+	public async sync(profile: IProfile, network: string, options?: { force?: boolean }): Promise<void> {
+		const cacheKey = `${network}.validators`;
 
-		const result: Contracts.WalletData[] = await syncer.sync();
+		if (options?.force) {
+			this.#cache.forget(cacheKey);
+		}
 
-		this.#dataRepository.set(
-			`${network}.validators`,
-			result.map((validator: Contracts.WalletData) => ({
+		const cached = await this.#cache.remember(cacheKey, async () => {
+			const clientService = new ClientService({ config: profile.activeNetwork().config(), profile });
+			const syncer: IValidatorSyncer = profile.activeNetwork().meta().fastValidatorSync
+				? new ParallelValidatorSyncer(clientService)
+				: new SerialValidatorSyncer(clientService);
+
+			const result: Contracts.WalletData[] = await syncer.sync({ limit: 100 });
+
+			return result.map((validator: Contracts.WalletData) => ({
 				...validator.toObject(),
 				explorerLink: new LinkService({ config: profile.activeNetwork().config(), profile }).wallet(
 					validator.address(),
 				),
 				governanceIdentifier: profile.activeNetwork().validatorIdentifier(),
-			})),
-		);
+			}));
+		});
+
+		this.#dataRepository.set(cacheKey, cached);
 	}
 
 	/** {@inheritDoc IValidatorService.syncAll} */

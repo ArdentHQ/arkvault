@@ -1,14 +1,13 @@
-import { Networks, DTO } from "@/app/lib/mainsail";
+import { DTO } from "@/app/lib/mainsail";
 import { Contracts } from "@/app/lib/profiles";
 import { useEffect, useState } from "react";
 
 interface Properties {
-	network: Networks.Network;
 	transaction: DTO.RawTransactionData;
 	profile: Contracts.IProfile;
 }
 
-export const useTransactionVotingWallets = ({ transaction, network, profile }: Properties) => {
+export const useTransactionVotingWallets = ({ transaction, profile }: Properties) => {
 	const [isLoading, setIsLoading] = useState(false);
 	const [votes, setVotes] = useState<Contracts.VoteRegistryItem[]>([]);
 	const [unvotes, setUnvotes] = useState<Contracts.VoteRegistryItem[]>([]);
@@ -16,6 +15,7 @@ export const useTransactionVotingWallets = ({ transaction, network, profile }: P
 	useEffect(() => {
 		const updateValidators = async () => {
 			setIsLoading(true);
+			const network = profile.activeNetwork();
 
 			try {
 				profile.validators().all(network.id());
@@ -44,7 +44,7 @@ export const useTransactionVotingWallets = ({ transaction, network, profile }: P
 		};
 
 		updateValidators();
-	}, [transaction, profile, network]);
+	}, [profile, transaction]);
 
 	return {
 		isLoading,
