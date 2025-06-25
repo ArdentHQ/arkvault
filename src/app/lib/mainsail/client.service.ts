@@ -286,7 +286,10 @@ export class ClientService {
 		if (body.identifiers) {
 			const identifiers: Services.WalletIdentifier[] = body.identifiers;
 
-			result.searchParams.address = identifiers.map(({ value }) => value).join(",");
+			const addresses = identifiers.map(({ value }) => value).join(",");
+			if (addresses.length > 0) {
+				result.searchParams.address = addresses
+			}
 
 			// @ts-ignore
 			delete body.identifiers;
