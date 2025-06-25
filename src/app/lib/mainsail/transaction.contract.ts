@@ -52,6 +52,9 @@ export declare type UsernameResignationInput = TransactionInput;
 export interface ValidatorRegistrationInput extends TransactionInput {
 	data: { validatorPublicKey: string; value: number };
 }
+export interface UpdateValidatorInput extends TransactionInput {
+	data: { validatorPublicKey: string };
+}
 
 export interface VoteInput extends TransactionInput {
 	data: {
@@ -68,8 +71,6 @@ export interface MultiPaymentInput extends TransactionInput {
 }
 
 export type ValidatorResignationInput = TransactionInput;
-
-export type UpdateValidatorInput = TransactionInput;
 
 export type TransactionInputs = Record<string, any> & {
 	signatory: Signatory;
