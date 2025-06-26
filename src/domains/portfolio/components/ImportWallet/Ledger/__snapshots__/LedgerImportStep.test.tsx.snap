@@ -10,11 +10,11 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
         class="mb-3 sm:hidden"
       >
         <div
-          class="border-l-theme-primary-400 bg-theme-primary-100 dark:border-l-theme-primary-300 dark:bg-theme-secondary-800 flex h-9 w-full flex-row items-center justify-between border-l-2 px-3"
+          class="border-l-theme-primary-400 bg-theme-primary-100 dark:border-l-theme-primary-300 dark:bg-theme-secondary-800 dim:border-l-theme-dim-navy-400 dim:bg-theme-dim-950 flex h-9 w-full flex-row items-center justify-between border-l-2 px-3"
           data-testid="SectionHeaderMobile__wrapper"
         >
           <span
-            class="text-theme-secondary-700 dark:text-theme-secondary-500 text-base font-semibold"
+            class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 text-base font-semibold"
           >
             Addresses
           </span>
@@ -28,15 +28,15 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
           data-testid="LedgerMobileItem__wrapper"
         >
           <div
-            class="bg-theme-secondary-100 flex h-11 w-full items-center justify-between px-4 dark:bg-black"
+            class="bg-theme-secondary-100 dim:bg-theme-dim-950 flex h-11 w-full items-center justify-between px-4 dark:bg-black"
           >
             <span
-              class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
+              class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 text-sm font-semibold"
             >
               Address #1
             </span>
             <button
-              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:text-theme-secondary-500 p-0!"
+              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:text-theme-secondary-500 dim:text-theme-dim-500 p-0!"
               data-testid="LedgerImportStep__edit-alias"
               type="button"
             >
@@ -91,7 +91,7 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
                   class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                 >
                   <span
-                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-900 text-sm font-semibold dark:text-theme-secondary-200 font-semibold text-base"
+                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-900 text-sm font-semibold dark:text-theme-secondary-200 dim:text-theme-dim-50 font-semibold text-base"
                     data-testid="Address__address"
                   >
                     DJpFwW39QnQvQRQJF2MCfAoKvsX4DJ28jq
@@ -167,15 +167,15 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
           data-testid="LedgerMobileItem__wrapper"
         >
           <div
-            class="bg-theme-secondary-100 flex h-11 w-full items-center justify-between px-4 dark:bg-black"
+            class="bg-theme-secondary-100 dim:bg-theme-dim-950 flex h-11 w-full items-center justify-between px-4 dark:bg-black"
           >
             <span
-              class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
+              class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 text-sm font-semibold"
             >
               Address #1
             </span>
             <button
-              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:text-theme-secondary-500 p-0!"
+              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:text-theme-secondary-500 dim:text-theme-dim-500 p-0!"
               data-testid="LedgerImportStep__edit-alias"
               type="button"
             >
@@ -230,7 +230,7 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
                   class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                 >
                   <span
-                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-900 text-sm font-semibold dark:text-theme-secondary-200 font-semibold text-base"
+                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-900 text-sm font-semibold dark:text-theme-secondary-200 dim:text-theme-dim-50 font-semibold text-base"
                     data-testid="Address__address"
                   >
                     DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
@@ -317,11 +317,11 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
         class="mb-3 sm:hidden"
       >
         <div
-          class="border-l-theme-primary-400 bg-theme-primary-100 dark:border-l-theme-primary-300 dark:bg-theme-secondary-800 flex h-9 w-full flex-row items-center justify-between border-l-2 px-3"
+          class="border-l-theme-primary-400 bg-theme-primary-100 dark:border-l-theme-primary-300 dark:bg-theme-secondary-800 dim:border-l-theme-dim-navy-400 dim:bg-theme-dim-950 flex h-9 w-full flex-row items-center justify-between border-l-2 px-3"
           data-testid="SectionHeaderMobile__wrapper"
         >
           <span
-            class="text-theme-secondary-700 dark:text-theme-secondary-500 text-base font-semibold"
+            class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 text-base font-semibold"
           >
             Addresses
           </span>
@@ -526,7 +526,7 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                       </div>
                       <div>
                         <span
-                          class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
+                          class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 text-sm font-semibold"
                           data-testid="Amount"
                         >
                           0 ARK
@@ -656,7 +656,7 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                       </div>
                       <div>
                         <span
-                          class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
+                          class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 text-sm font-semibold"
                           data-testid="Amount"
                         >
                           0 ARK
@@ -736,19 +736,19 @@ exports[`LedgerImportStep > should render with single import (lg) 1`] = `
             Imported
           </span>
           <div
-            class="border-theme-secondary-300 dark:border-theme-secondary-800 flex flex-col gap-4 rounded-xl border px-6 py-5"
+            class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 flex flex-col gap-4 rounded-xl border px-6 py-5"
           >
             <div
               class="flex w-full flex-row items-center justify-between text-sm font-semibold sm:justify-start sm:gap-3 sm:text-base"
               data-testid="SectionBodyItem__wrapper"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-secondary-500 sm:w-[90px]"
+                class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 sm:w-[90px]"
               >
                 Address
               </span>
               <div
-                class="text-theme-secondary-900 dark:text-theme-secondary-200 sm:w-full"
+                class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-200 sm:w-full"
               >
                 <div
                   class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -809,19 +809,19 @@ exports[`LedgerImportStep > should render with single import (lg) 1`] = `
               </div>
             </div>
             <hr
-              class="border-theme-secondary-300 dark:border-theme-secondary-800 w-full border border-dashed"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 w-full border border-dashed"
             />
             <div
               class="flex w-full flex-row items-center justify-between text-sm font-semibold sm:justify-start sm:gap-3 sm:text-base"
               data-testid="SectionBodyItem__wrapper"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-secondary-500 sm:w-[90px]"
+                class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 sm:w-[90px]"
               >
                 Balance
               </span>
               <div
-                class="text-theme-secondary-900 dark:text-theme-secondary-200 sm:w-full"
+                class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-200 sm:w-full"
               >
                 <span
                   class="whitespace-nowrap"
@@ -847,19 +847,19 @@ exports[`LedgerImportStep > should render with single import (lg) 1`] = `
             Address Name
           </span>
           <div
-            class="border-theme-secondary-300 dark:border-theme-secondary-800 flex flex-col gap-4 rounded-xl border px-6 py-5"
+            class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 flex flex-col gap-4 rounded-xl border px-6 py-5"
           >
             <div
               class="flex w-full flex-row items-center justify-between text-sm font-semibold sm:justify-start sm:gap-3 sm:text-base"
               data-testid="SectionBodyItem__wrapper"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-secondary-500 sm:w-[90px]"
+                class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 sm:w-[90px]"
               >
                 Name
               </span>
               <div
-                class="text-theme-secondary-900 dark:text-theme-secondary-200 sm:w-full"
+                class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-200 sm:w-full"
               >
                 <div
                   class="flex w-full flex-row items-center justify-between"
@@ -868,7 +868,7 @@ exports[`LedgerImportStep > should render with single import (lg) 1`] = `
                     Address #1
                   </span>
                   <button
-                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:text-theme-secondary-500 p-0!"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:text-theme-secondary-500 dim:text-theme-dim-500 p-0!"
                     data-testid="LedgerImportStep__edit-alias"
                     type="button"
                   >
@@ -926,11 +926,11 @@ exports[`LedgerImportStep > should render with single import (xs) 1`] = `
     >
       <div>
         <div
-          class="border-l-theme-primary-400 bg-theme-primary-100 dark:border-l-theme-primary-300 dark:bg-theme-secondary-800 flex h-9 w-full flex-row items-center justify-between border-l-2 px-3"
+          class="border-l-theme-primary-400 bg-theme-primary-100 dark:border-l-theme-primary-300 dark:bg-theme-secondary-800 dim:border-l-theme-dim-navy-400 dim:bg-theme-dim-950 flex h-9 w-full flex-row items-center justify-between border-l-2 px-3"
           data-testid="SectionHeaderMobile__wrapper"
         >
           <span
-            class="text-theme-secondary-700 dark:text-theme-secondary-500 text-base font-semibold"
+            class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 text-base font-semibold"
           >
             Imported
           </span>
@@ -943,12 +943,12 @@ exports[`LedgerImportStep > should render with single import (xs) 1`] = `
             data-testid="SectionBodyItem__wrapper"
           >
             <span
-              class="text-theme-secondary-700 dark:text-theme-secondary-500 sm:w-[90px]"
+              class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 sm:w-[90px]"
             >
               Address
             </span>
             <div
-              class="text-theme-secondary-900 dark:text-theme-secondary-200 sm:w-full"
+              class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-200 sm:w-full"
             >
               <div
                 class="w-32"
@@ -1010,12 +1010,12 @@ exports[`LedgerImportStep > should render with single import (xs) 1`] = `
             data-testid="SectionBodyItem__wrapper"
           >
             <span
-              class="text-theme-secondary-700 dark:text-theme-secondary-500 sm:w-[90px]"
+              class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 sm:w-[90px]"
             >
               Balance
             </span>
             <div
-              class="text-theme-secondary-900 dark:text-theme-secondary-200 sm:w-full"
+              class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-200 sm:w-full"
             >
               <span
                 class="whitespace-nowrap"
@@ -1029,11 +1029,11 @@ exports[`LedgerImportStep > should render with single import (xs) 1`] = `
       </div>
       <div>
         <div
-          class="border-l-theme-primary-400 bg-theme-primary-100 dark:border-l-theme-primary-300 dark:bg-theme-secondary-800 flex h-9 w-full flex-row items-center justify-between border-l-2 px-3"
+          class="border-l-theme-primary-400 bg-theme-primary-100 dark:border-l-theme-primary-300 dark:bg-theme-secondary-800 dim:border-l-theme-dim-navy-400 dim:bg-theme-dim-950 flex h-9 w-full flex-row items-center justify-between border-l-2 px-3"
           data-testid="SectionHeaderMobile__wrapper"
         >
           <span
-            class="text-theme-secondary-700 dark:text-theme-secondary-500 text-base font-semibold"
+            class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 text-base font-semibold"
           >
             Address Name
           </span>
@@ -1046,22 +1046,22 @@ exports[`LedgerImportStep > should render with single import (xs) 1`] = `
             data-testid="SectionBodyItem__wrapper"
           >
             <span
-              class="text-theme-secondary-700 dark:text-theme-secondary-500 sm:w-[90px]"
+              class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 sm:w-[90px]"
             >
               Name
             </span>
             <div
-              class="text-theme-secondary-900 dark:text-theme-secondary-200 sm:w-full"
+              class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-200 sm:w-full"
             >
               <div
                 class="flex flex-row items-center gap-2"
               >
                 Address #1
                 <hr
-                  class="bg-theme-secondary-300 dark:bg-theme-secondary-800 h-5 w-px border-transparent"
+                  class="bg-theme-secondary-300 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 h-5 w-px border-transparent"
                 />
                 <button
-                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:text-theme-secondary-500 p-0!"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:text-theme-secondary-500 dim:text-theme-dim-500 p-0!"
                   data-testid="LedgerImportStep__edit-alias"
                   type="button"
                 >
