@@ -3,7 +3,6 @@ import React, { JSX } from "react";
 import { Contracts, DTO } from "@/app/lib/profiles";
 import { useTranslation } from "react-i18next";
 import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
-import { configManager } from "@/app/lib/mainsail";
 import { BigNumber } from "@/app/lib/helpers";
 import { UnitConverter } from "@arkecosystem/typescript-crypto";
 
@@ -82,14 +81,14 @@ export const TransactionTotalLabel = ({
 			}
 
 			return BigNumber.make(transaction.total())
-				.minus(UnitConverter.formatUnits(configManager.getMilestone()["validatorRegistrationFee"] ?? 0, "ARK"))
+				.minus(UnitConverter.formatUnits(transaction.wallet().validatorFee()?.toString() ?? "0", "ARK"))
 				.toNumber();
 		}
 
 		// For validator resignation, we need to manually add the fee to the total
 		if (transaction.isValidatorResignation() && "isSuccess" in transaction && transaction.isSuccess()) {
 			return BigNumber.make(
-				UnitConverter.formatUnits(configManager.getMilestone()["validatorRegistrationFee"] ?? 0, "ARK"),
+				UnitConverter.formatUnits(transaction.wallet().validatorFee()?.toString() ?? "0", "ARK"),
 			)
 				.minus(transaction.total())
 				.toNumber();
