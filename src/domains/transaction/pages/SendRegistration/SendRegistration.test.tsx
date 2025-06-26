@@ -168,6 +168,9 @@ describe("Registration", () => {
 
 		vi.spyOn(secondWallet, "balance").mockReturnValue(1200);
 
+		vi.spyOn(wallet, "isValidator").mockImplementation(() => true);
+		vi.spyOn(secondWallet, "isValidator").mockImplementation(() => false);
+
 		vi.spyOn(PublicKeyService.prototype, "verifyPublicKeyWithBLS").mockReturnValue(true);
 
 		await wallet.synchroniser().identity();
