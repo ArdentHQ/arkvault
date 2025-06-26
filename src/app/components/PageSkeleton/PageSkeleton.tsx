@@ -22,7 +22,7 @@ export const PageSkeleton = () => {
 				>
 					<div className="flex flex-col gap-3 lg:flex-row">
 						<div
-							className={cn("hidden min-w-0 basis-1/2 rounded-xl sm:block", {
+							className={cn("hidden min-w-0 basis-1/2 rounded-xl sm:block sm:border border-theme-navy-100 dark:border-theme-secondary-800", {
 								"bg-theme-navy-50 bg-[url(/welcome-bg-white.svg)]": !isDarkMode,
 								"bg-theme-secondary-800 bg-[url(/welcome-bg-dark.svg)]": isDarkMode,
 							})}
