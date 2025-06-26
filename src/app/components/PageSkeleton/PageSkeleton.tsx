@@ -6,7 +6,7 @@ import { WelcomeSlider } from "@/domains/profile/components/WelcomeSlider/Welcom
 import { ProfileRowSkeleton } from "@/domains/profile/components/ProfileRow/ProfileRow";
 import { Skeleton } from "@/app/components/Skeleton";
 import { useTheme } from "@/app/hooks";
-import cn from 'classnames';
+import cn from "classnames";
 
 export const PageSkeleton = () => {
 	const { t } = useTranslation();
@@ -21,13 +21,12 @@ export const PageSkeleton = () => {
 					data-testid="PageSkeleton"
 				>
 					<div className="flex flex-col gap-3 lg:flex-row">
-						<div className={cn(
-							'hidden min-w-0 basis-1/2 rounded-xl border sm:block',
-							{
-								'bg-theme-navy-50 bg-[url(/welcome-bg-white.svg)]': !isDarkMode,
-								'bg-theme-secondary-800 bg-[url(/welcome-bg-dark.svg)]': isDarkMode,
-							}
-						)}>
+						<div
+							className={cn("hidden min-w-0 basis-1/2 rounded-xl border sm:block", {
+								"bg-theme-navy-50 bg-[url(/welcome-bg-white.svg)]": !isDarkMode,
+								"bg-theme-secondary-800 bg-[url(/welcome-bg-dark.svg)]": isDarkMode,
+							})}
+						>
 							<WelcomeSlider />
 						</div>
 
