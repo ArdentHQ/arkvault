@@ -269,11 +269,13 @@ export const translations = {
 			DESCRIPTION: "Register a new Validator address on the network below.",
 			DESCRIPTION_LEGACY:
 				"The address was a delegate on ARK Core and can be upgraded to a Validator by registering a BLS Public Key.",
+			DESCRIPTION_UPDATE: "Update your Validator address on the network below.",
 			INSUFFICIENT_BALANCE_FOR_FEE_AND_LOCKED_FEE:
 				"Registering a validator requires locking {{lockedFee}}. Your current balance is insufficient with the fee you set ({{fee}}).",
 			INSUFFICIENT_BALANCE_FOR_LOCKED_FEE:
 				"Registering a validator requires locking {{lockedFee}}. Your current balance ({{balance}}) is insufficient.",
 			TITLE: "Register Validator",
+			TITLE_UPDATE: "Update Validator",
 			WARNING: "The Validator name is permanent and cannot be modified later. It is registered on the network.",
 		},
 	},

@@ -42,15 +42,28 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 		}
 	};
 
+	const getTitle = () => {
+		if (wallet?.isValidator()) {
+			return t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.TITLE_UPDATE");
+		}
+		return t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.TITLE");
+	};
+
+	const getSubtitle = () => {
+		if (wallet?.isLegacyValidator()) {
+			return t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.DESCRIPTION_LEGACY");
+		}
+		if (wallet?.isValidator()) {
+			return t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.DESCRIPTION_UPDATE");
+		}
+		return t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.DESCRIPTION");
+	};
+
 	return (
 		<section data-testid="ValidatorRegistrationForm_form-step">
 			<StepHeader
-				title={t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.TITLE")}
-				subtitle={
-					wallet?.isLegacyValidator()
-						? t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.DESCRIPTION_LEGACY")
-						: t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.DESCRIPTION")
-				}
+				title={getTitle()}
+				subtitle={getSubtitle()}
 				titleIcon={
 					<ThemeIcon dimensions={[24, 24]} lightIcon="SendTransactionLight" darkIcon="SendTransactionDark" />
 				}
