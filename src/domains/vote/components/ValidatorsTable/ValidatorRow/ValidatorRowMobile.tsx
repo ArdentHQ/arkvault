@@ -62,7 +62,11 @@ export const ValidatorRowMobile = (properties: ValidatorRowProperties) => {
 					bodyClassName="sm:grid-cols-3"
 				>
 					<MobileTableElementRow title={t("COMMON.VALIDATOR")}>
-						<Address address={validator.username() ? undefined : validator.address()} walletName={validator.username()} size="sm" />
+						<Address
+							address={validator.username() ? undefined : validator.address()}
+							walletName={validator.username()}
+							size="sm"
+						/>
 					</MobileTableElementRow>
 
 					<MobileTableElementRow title={t("COMMON.STATUS")} className="hidden sm:grid">

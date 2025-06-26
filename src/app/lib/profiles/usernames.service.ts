@@ -23,9 +23,9 @@ export class UsernamesService implements IUsernamesService {
 	}
 
 	public async syncUsernames(addresses: string[]): Promise<void> {
-		const cacheKey = addresses.join("-")
+		const cacheKey = addresses.join("-");
 
-		const collection = await this.#cache.remember(cacheKey, async () => await this.#client.usernames(addresses))
+		const collection = await this.#cache.remember(cacheKey, async () => await this.#client.usernames(addresses));
 
 		if (this.#registry[this.#network.id()]) {
 			const existingCollection = this.#registry[this.#network.id()];
