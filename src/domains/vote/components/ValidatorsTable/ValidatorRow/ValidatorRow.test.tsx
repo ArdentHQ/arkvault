@@ -118,7 +118,7 @@ describe("ValidatorRow", () => {
 			isResignedValidator: false,
 			isValidator: true,
 			publicKey: data[1].publicKey,
-			username: data[1].username,
+			username: "testusernaame",
 		});
 
 		const thirdValidator = new ReadOnlyWallet({
