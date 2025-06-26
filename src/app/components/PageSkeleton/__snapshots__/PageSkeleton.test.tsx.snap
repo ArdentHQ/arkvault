@@ -72,7 +72,7 @@ exports[`PageSkeleton > should render without profile 1`] = `
               class="flex flex-col gap-3 lg:flex-row"
             >
               <div
-                class="border-theme-navy-100 bg-theme-navy-50 bg-[url( dark:border-theme-secondary-800 dark:bg-theme-secondary-800'/welcome-bg-white.svg')] hidden min-w-0 basis-1/2 rounded-xl border sm:block dark:bg-[url('/welcome-bg-dark.svg')]"
+                class="hidden min-w-0 basis-1/2 rounded-xl border sm:block bg-theme-navy-50 bg-[url(/welcome-bg-white.svg)]"
               >
                 <div
                   class="slick-slider slick-initialized"
@@ -450,7 +450,7 @@ exports[`PageSkeleton > should render without profile 1`] = `
                 </div>
               </div>
               <div
-                class="border-theme-navy-100 dark:border-theme-secondary-800 min-w-0 basis-1/2 rounded-xl sm:border sm:p-6"
+                class="min-w-0 basis-1/2 rounded-xl sm:border sm:p-6"
               >
                 <div
                   class="mx-auto flex h-[calc(100vh_-_160px)] max-w-[400px] flex-col sm:h-full"
