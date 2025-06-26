@@ -84,11 +84,7 @@ const getRegistrationOptions = (wallets: Contracts.IReadWriteWallet[], t: TFunct
 
 		if (
 			walletsWithValidatorActions.some(
-				(w) =>
-					w.network().allows(Enums.FeatureFlag.TransactionValidatorRegistration) &&
-					w.isValidator() &&
-					!w.isResignedValidator() &&
-					w.isLegacyValidator(),
+				(w) => w.network().allows(Enums.FeatureFlag.TransactionValidatorRegistration) && w.isValidator(),
 			)
 		) {
 			registrationOptions.options.push({
