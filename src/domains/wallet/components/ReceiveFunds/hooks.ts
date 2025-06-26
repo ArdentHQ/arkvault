@@ -30,13 +30,13 @@ export const useQRCode = ({ amount, address, nethash }: QRCodeProperties) => {
 	useEffect(() => {
 		const color = shouldUseDarkColors()
 			? {
-				dark: "#212225",
-				light: "#eef3f5",
-			}
+					dark: "#212225",
+					light: "#eef3f5",
+				}
 			: {
-				dark: "#212225",
-				light: "#fff",
-			};
+					dark: "#212225",
+					light: "#fff",
+				};
 
 		const generateQRCode = async () => {
 			const uri = address ? formatQR({ address, amount, nethash }) : undefined;
