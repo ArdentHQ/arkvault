@@ -146,7 +146,7 @@ export const ReviewStep = ({
 						<FormField name="fee">
 							<FormLabel label={t("TRANSACTION.TRANSACTION_FEE")} />
 							<FeeField
-								type="validatorRegistration"
+								type={wallet.isLegacyValidator() ? "updateValidator" : "validatorRegistration"}
 								data={feeTransactionData}
 								network={wallet.network()}
 								profile={profile}
