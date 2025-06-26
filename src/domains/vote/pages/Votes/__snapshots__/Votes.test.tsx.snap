@@ -17367,19 +17367,17 @@ exports[`Votes > should filter current validators 1`] = `
                               <div
                                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
                               >
-                                <div
-                                  class="relative grow leading-[17px] sm:leading-5 text-left"
+                                <span
+                                  class="font-semibold text-base text-theme-text"
+                                  data-testid="Address__alias"
                                 >
                                   <span
-                                    class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
-                                    data-testid="Address__address"
+                                    class="no-ligatures transition-colors duration-200"
+                                    data-testid="TruncateEnd"
                                   >
-                                    0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
+                                    arkx
                                   </span>
-                                  <span>
-                                     
-                                  </span>
-                                </div>
+                                </span>
                               </div>
                             </div>
                           </td>
