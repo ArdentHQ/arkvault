@@ -6,22 +6,20 @@ import { shouldUseDarkColors } from "@/utils/theme";
 
 interface QRCodeProperties {
 	nethash: string;
-	coin: string;
 	amount: string;
 	address: string;
 	method?: string;
 }
 
-export const useQRCode = ({ amount, address, coin, nethash }: QRCodeProperties) => {
+export const useQRCode = ({ amount, address, nethash }: QRCodeProperties) => {
 	const [data, setData] = useState<{ uri?: string; image?: string }>({
 		image: undefined,
 		uri: undefined,
 	});
 
-	const formatQR = useCallback(({ amount, address, coin, nethash }: QRCodeProperties) => {
+	const formatQR = useCallback(({ amount, address, nethash }: QRCodeProperties) => {
 		const urlBuilder = new URLBuilder(`${window.location.origin}/#/`);
 
-		urlBuilder.setCoin(coin);
 		urlBuilder.setNethash(nethash);
 
 		return urlBuilder.generateTransfer(address, {
@@ -32,16 +30,16 @@ export const useQRCode = ({ amount, address, coin, nethash }: QRCodeProperties) 
 	useEffect(() => {
 		const color = shouldUseDarkColors()
 			? {
-					dark: "#212225",
-					light: "#eef3f5",
-				}
+				dark: "#212225",
+				light: "#eef3f5",
+			}
 			: {
-					dark: "#212225",
-					light: "#fff",
-				};
+				dark: "#212225",
+				light: "#fff",
+			};
 
 		const generateQRCode = async () => {
-			const uri = address ? formatQR({ address, amount, coin, nethash }) : undefined;
+			const uri = address ? formatQR({ address, amount, nethash }) : undefined;
 
 			let image: string | undefined;
 
@@ -58,7 +56,7 @@ export const useQRCode = ({ amount, address, coin, nethash }: QRCodeProperties) 
 		};
 
 		generateQRCode();
-	}, [amount, nethash, address, formatQR, coin]);
+	}, [amount, nethash, address, formatQR]);
 
 	return data;
 };
