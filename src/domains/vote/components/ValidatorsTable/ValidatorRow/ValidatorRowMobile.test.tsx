@@ -2,7 +2,7 @@ import { Contracts, ReadOnlyWallet } from "@/app/lib/profiles";
 import React from "react";
 import { VoteValidatorProperties } from "@/domains/vote/components/ValidatorsTable/ValidatorsTable.contracts";
 import { data } from "@/tests/fixtures/coins/mainsail/devnet/validators.json";
-import { env, getMainsailProfileId, render, screen } from "@/utils/testing-library";
+import { env, getMainsailProfileId, render, screen, waitFor } from "@/utils/testing-library";
 import { ValidatorRowMobile } from "./ValidatorRowMobile";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 
@@ -67,6 +67,35 @@ describe("ValidatorRowMobile", () => {
 			</table>,
 		);
 		expect(screen.getAllByTestId("ValidatorRowMobileSkeleton")[0]).toBeInTheDocument();
+	});
+
+	it("should render username if available", async () => {
+		const usernameMock = vi.spyOn(validator, "username").mockReturnValue("123")
+
+		render(
+			<table>
+				<tbody>
+					<ValidatorRowMobile
+						index={0}
+						validator={validator}
+						selectedVotes={[]}
+						selectedUnvotes={[]}
+						isLoading={false}
+						availableBalance={wallet.balance()}
+						setAvailableBalance={vi.fn()}
+						toggleUnvotesSelected={vi.fn()}
+						toggleVotesSelected={vi.fn()}
+						selectedWallet={wallet}
+					/>
+				</tbody>
+			</table>,
+		);
+
+		await waitFor(() => {
+			expect(screen.getByText("123")).toBeInTheDocument();
+		})
+
+		usernameMock.mockRestore();
 	});
 
 	it("should render the unselected vote", () => {
