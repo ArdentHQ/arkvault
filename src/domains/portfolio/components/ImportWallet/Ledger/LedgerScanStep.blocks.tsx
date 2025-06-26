@@ -50,10 +50,10 @@ export const LedgerMobileItem = ({
 		return (
 			<div className="relative">
 				<div
-					className="border-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-secondary-900 w-full overflow-hidden rounded border bg-white"
+					className="border-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-secondary-900 dim:border-theme-dim-700 dim:bg-theme-dim-900 w-full overflow-hidden rounded border bg-white"
 					data-testid="LedgerMobileItem__skeleton"
 				>
-					<div className="bg-theme-secondary-100 h-11 w-full pt-3 pl-4 dark:bg-black">
+					<div className="bg-theme-secondary-100 dim:bg-theme-dim-950 h-11 w-full pt-3 pl-4 dark:bg-black">
 						<Skeleton width={20} height={20} />
 					</div>
 
@@ -85,7 +85,7 @@ export const LedgerMobileItem = ({
 
 	return (
 		<MobileCard data-testid="LedgerMobileItem__wrapper">
-			<div className="bg-theme-secondary-100 h-11 w-full pt-3 pl-4 dark:bg-black">
+			<div className="bg-theme-secondary-100 dim:bg-transparent h-11 w-full pt-3 pl-4 dark:bg-black">
 				<Checkbox checked={isSelected} onChange={handleClick} data-testid="LedgerMobileItem__checkbox" />
 			</div>
 
@@ -94,7 +94,7 @@ export const LedgerMobileItem = ({
 					<Address
 						address={address}
 						showCopyButton
-						addressClass="text-theme-secondary-900 text-sm font-semibold dark:text-theme-secondary-200"
+						addressClass="text-theme-secondary-900 text-sm font-semibold dark:text-theme-secondary-200 dim:text-theme-dim-200"
 					/>
 				</MobileSection>
 				<MobileSection title={`${t("COMMON.VALUE")} (${coin})`} data-testid="LedgerMobileItem__network">
@@ -111,11 +111,11 @@ export const LedgerLoaderOverlay = ({ children, className }: { className?: strin
 	<div>
 		<div
 			className={twMerge(
-				"border-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-background absolute inset-0 -m-px rounded border bg-white opacity-75",
+				"border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 dark:bg-theme-background dim:bg-theme-background absolute inset-0 -m-px rounded border bg-white opacity-75",
 				className,
 			)}
 		/>
-		<div className="text-theme-secondary-700 absolute inset-0 flex h-full w-full items-center justify-center space-x-3 dark:text-white">
+		<div className="text-theme-secondary-700 dim:text-theme-dim-50 absolute inset-0 flex h-full w-full items-center justify-center space-x-3 dark:text-white">
 			{children && (
 				<div>
 					<Spinner size="sm" width={3} />
