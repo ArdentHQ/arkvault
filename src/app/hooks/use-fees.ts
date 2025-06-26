@@ -201,8 +201,11 @@ export const useFees = (profile: Contracts.IProfile) => {
 	);
 
 	const calculate = useCallback(
-		async ({ network, type, data }: CalculateProperties): Promise<TransactionFees> => {
+		async ({ network, type: typeFromForm, data }: CalculateProperties): Promise<TransactionFees> => {
 			await env.fees().sync(profile);
+
+			const type = typeFromForm === "updateValidator" ? "evmCall" : typeFromForm;
+
 			const transactionFees = env.fees().findByType(network, type);
 
 			if (!!data && type === "multiSignature") {

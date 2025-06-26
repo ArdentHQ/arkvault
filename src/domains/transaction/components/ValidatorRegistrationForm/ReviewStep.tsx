@@ -101,7 +101,7 @@ export const ReviewStep = ({
 					</div>
 				</DetailWrapper>
 
-				{!wallet?.isLegacyValidator() && (
+				{!wallet?.isValidator() && (
 					<div className="space-y-3 sm:space-y-2">
 						<div className="mx-3 sm:mx-0">
 							<DetailWrapper label={t("COMMON.TRANSACTION_SUMMARY")} className="rounded-xl">
@@ -146,7 +146,7 @@ export const ReviewStep = ({
 						<FormField name="fee">
 							<FormLabel label={t("TRANSACTION.TRANSACTION_FEE")} />
 							<FeeField
-								type={wallet.isLegacyValidator() ? "updateValidator" : "validatorRegistration"}
+								type={wallet.isValidator() ? "updateValidator" : "validatorRegistration"}
 								data={feeTransactionData}
 								network={wallet.network()}
 								profile={profile}

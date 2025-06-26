@@ -68,7 +68,7 @@ export const signValidatorRegistration = async ({ env, form, profile, signatory 
 
 	let transactionId;
 
-	if (senderWallet.isLegacyValidator()) {
+	if (senderWallet.isValidator()) {
 		transactionId = await senderWallet.transaction().signUpdateValidator({
 			data: {
 				validatorPublicKey,
