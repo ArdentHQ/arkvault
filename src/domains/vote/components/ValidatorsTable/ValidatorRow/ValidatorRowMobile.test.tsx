@@ -70,7 +70,7 @@ describe("ValidatorRowMobile", () => {
 	});
 
 	it("should render username if available", async () => {
-		const usernameMock = vi.spyOn(validator, "username").mockReturnValue("123")
+		const usernameMock = vi.spyOn(validator, "username").mockReturnValue("123");
 
 		render(
 			<table>
@@ -93,7 +93,7 @@ describe("ValidatorRowMobile", () => {
 
 		await waitFor(() => {
 			expect(screen.getByText("123")).toBeInTheDocument();
-		})
+		});
 
 		usernameMock.mockRestore();
 	});
