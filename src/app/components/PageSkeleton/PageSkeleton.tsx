@@ -22,7 +22,7 @@ export const PageSkeleton = () => {
 				>
 					<div className="flex flex-col gap-3 lg:flex-row">
 						<div
-							className={cn("hidden min-w-0 basis-1/2 rounded-xl border sm:block", {
+							className={cn("hidden min-w-0 basis-1/2 rounded-xl sm:block", {
 								"bg-theme-navy-50 bg-[url(/welcome-bg-white.svg)]": !isDarkMode,
 								"bg-theme-secondary-800 bg-[url(/welcome-bg-dark.svg)]": isDarkMode,
 							})}
@@ -30,7 +30,7 @@ export const PageSkeleton = () => {
 							<WelcomeSlider />
 						</div>
 
-						<div className="min-w-0 basis-1/2 rounded-xl sm:border sm:p-6">
+						<div className="min-w-0 basis-1/2 rounded-xl sm:border border-theme-navy-100 dark:border-theme-secondary-800 sm:p-6">
 							<div className="mx-auto flex h-[calc(100vh_-_160px)] max-w-[400px] flex-col sm:h-full">
 								<div className="flex flex-1 flex-col items-center justify-center">
 									<div className="flex flex-col items-center space-y-2 text-center sm:px-4">
