@@ -14,7 +14,7 @@ const renderIcon = (option: DropdownOption) => {
 	const className = {};
 
 	if (!iconClassName) {
-		className["dark:text-theme-secondary-600"] = true;
+		className["dark:text-theme-secondary-600 dim:text-theme-dim-200"] = true;
 	} else if (typeof iconClassName === "function") {
 		className[iconClassName(option)] = true;
 	} else {
