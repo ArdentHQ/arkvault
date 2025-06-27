@@ -840,7 +840,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                     Verification Method
                   </span>
                   <span
-                    class="text-theme-secondary-500 dark:text-theme-secondary-700 hidden text-sm font-medium sm:block"
+                    class="text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-700 hidden text-sm font-medium sm:block"
                   >
                     Input fields manually or provide a JSON string.
                   </span>
@@ -1837,7 +1837,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                     Verification Method
                   </span>
                   <span
-                    class="text-theme-secondary-500 dark:text-theme-secondary-700 hidden text-sm font-medium sm:block"
+                    class="text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-700 hidden text-sm font-medium sm:block"
                   >
                     Input fields manually or provide a JSON string.
                   </span>

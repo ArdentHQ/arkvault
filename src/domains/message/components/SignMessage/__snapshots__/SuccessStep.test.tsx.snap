@@ -55,7 +55,7 @@ exports[`SignMessage success step > should render success step in lg 1`] = `
                     class="relative grow leading-[17px] sm:leading-5 text-left"
                   >
                     <span
-                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 font-semibold text-base absolute w-full"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-700 text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 font-semibold text-base absolute w-full"
                       data-testid="Address__address"
                     >
                       0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
@@ -136,7 +136,7 @@ exports[`SignMessage success step > should render success step in lg 1`] = `
         </div>
       </div>
       <div
-        class="border-theme-secondary-300 dark:border-theme-dark-700 border-t px-3 py-6 sm:border-t-0 sm:p-0"
+        class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 border-t px-3 py-6 sm:border-t-0 sm:p-0"
       >
         <fieldset
           class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
@@ -148,7 +148,7 @@ exports[`SignMessage success step > should render success step in lg 1`] = `
             Signature (JSON)
           </div>
           <pre
-            class="border-theme-secondary-300 dark:border-theme-dark-500 dark:text-theme-dark-50 text-theme-secondary-900 mt-2 rounded-sm border p-4 break-all whitespace-normal select-text"
+            class="border-theme-secondary-300 dark:border-theme-dark-500 dim:border-theme-dim-700 dark:text-theme-dark-50 dim:text-theme-dim-50 text-theme-secondary-900 mt-2 rounded-sm border p-4 break-all whitespace-normal select-text"
             data-testid="SignMessage__signature-json"
           >
             {
@@ -220,7 +220,7 @@ exports[`SignMessage success step > should render success step in xs 1`] = `
                     class="relative grow leading-[17px] sm:leading-5 text-left"
                   >
                     <span
-                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 font-semibold text-base absolute w-full"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-700 text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 font-semibold text-base absolute w-full"
                       data-testid="Address__address"
                     >
                       0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
@@ -301,7 +301,7 @@ exports[`SignMessage success step > should render success step in xs 1`] = `
         </div>
       </div>
       <div
-        class="border-theme-secondary-300 dark:border-theme-dark-700 border-t px-3 py-6 sm:border-t-0 sm:p-0"
+        class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 border-t px-3 py-6 sm:border-t-0 sm:p-0"
       >
         <fieldset
           class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
@@ -313,7 +313,7 @@ exports[`SignMessage success step > should render success step in xs 1`] = `
             Signature (JSON)
           </div>
           <pre
-            class="border-theme-secondary-300 dark:border-theme-dark-500 dark:text-theme-dark-50 text-theme-secondary-900 mt-2 rounded-sm border p-4 break-all whitespace-normal select-text"
+            class="border-theme-secondary-300 dark:border-theme-dark-500 dim:border-theme-dim-700 dark:text-theme-dark-50 dim:text-theme-dim-50 text-theme-secondary-900 mt-2 rounded-sm border p-4 break-all whitespace-normal select-text"
             data-testid="SignMessage__signature-json"
           >
             {
