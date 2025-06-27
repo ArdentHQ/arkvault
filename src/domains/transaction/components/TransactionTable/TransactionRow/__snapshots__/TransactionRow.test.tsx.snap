@@ -408,7 +408,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
           </div>
         </td>
         <td
-          class="hidden lg:table-cell"
+          class="hidden xl:table-cell"
         >
           <div
             class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3 lg:w-34 xl:w-auto"
@@ -1418,7 +1418,7 @@ exports[`TransactionRow > should render with currency 1`] = `
           </div>
         </td>
         <td
-          class="hidden lg:table-cell"
+          class="hidden xl:table-cell"
         >
           <div
             class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3 lg:w-34 xl:w-auto"

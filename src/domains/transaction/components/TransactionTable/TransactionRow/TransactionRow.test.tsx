@@ -30,7 +30,7 @@ describe("TransactionRow", () => {
 	});
 
 	it("should render", () => {
-		render(
+		renderResponsive(
 			<table>
 				<tbody>
 					<TransactionRow
@@ -41,6 +41,7 @@ describe("TransactionRow", () => {
 					/>
 				</tbody>
 			</table>,
+			"xl"
 		);
 
 		expect(screen.getAllByRole("cell")).toHaveLength(8);
@@ -107,7 +108,7 @@ describe("TransactionRow", () => {
 	});
 
 	it("should render with currency", () => {
-		const { asFragment } = render(
+		const { asFragment } = renderResponsive(
 			<table>
 				<tbody>
 					<TransactionRow
@@ -130,6 +131,7 @@ describe("TransactionRow", () => {
 					/>
 				</tbody>
 			</table>,
+			"xl"
 		);
 
 		expect(asFragment()).toMatchSnapshot();
@@ -138,7 +140,7 @@ describe("TransactionRow", () => {
 	});
 
 	it("should omit the currency for transactions from test networks", () => {
-		const { asFragment } = render(
+		const { asFragment } = renderResponsive(
 			<table>
 				<tbody>
 					<TransactionRow
@@ -161,6 +163,7 @@ describe("TransactionRow", () => {
 					/>
 				</tbody>
 			</table>,
+			"xl"
 		);
 
 		expect(asFragment()).toMatchSnapshot();
@@ -200,12 +203,13 @@ describe("TransactionRow", () => {
 	});
 
 	it("should send default exchange currency if not provided", () => {
-		render(
+		renderResponsive(
 			<table>
 				<tbody>
 					<TransactionRow transaction={fixture} profile={profile} onClick={() => {}} />
 				</tbody>
 			</table>,
+			"xl"
 		);
 
 		expect(screen.getByTestId("TransactionRow__exchange-currency")).toHaveTextContent("0");

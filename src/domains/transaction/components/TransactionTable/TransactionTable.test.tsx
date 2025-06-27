@@ -47,13 +47,14 @@ describe("TransactionTable", () => {
 	});
 
 	it("should render with currency", () => {
-		render(
+		renderResponsive(
 			<TransactionTable
 				transactions={transactions}
 				exchangeCurrency="BTC"
 				profile={profile}
 				sortBy={{ column: "timestamp", desc: true }}
 			/>,
+			"xl"
 		);
 
 		expect(screen.getAllByTestId("TransactionRow__exchange-currency")).toHaveLength(transactions.length);
