@@ -12,23 +12,21 @@ export const TransactionRowId = ({ transaction }: { transaction: DTO.ExtendedCon
 
 	const maxCharacters = () => {
 		if (isXl) {
-			return 14
+			return 14;
 		}
 
 		if (isLgAndAbove) {
-			return 10
+			return 10;
 		}
 
 		if (isMdAndAbove) {
-			return 8
-
+			return 8;
 		}
 
 		if (isXs || isSmAndAbove) {
-			return 14
-
+			return 14;
 		}
-	}
+	};
 
 	return (
 		<div className="flex flex-col gap-1 font-semibold">
