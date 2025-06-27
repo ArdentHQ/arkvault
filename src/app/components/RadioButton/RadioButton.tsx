@@ -16,6 +16,7 @@ export const RadioButton = ({
 		type="radio"
 		className={twMerge(
 			"border-theme-secondary-300 h-4 w-4 cursor-pointer transition duration-150 ease-in-out focus:ring-offset-0",
+			"dark:not-checked:border-theme-dark-500 dark:not-checked:bg-theme-dark-900 dark:checked:border-none",
 			cn({
 				"text-theme-danger-400": color === "danger",
 				"text-theme-hint-500": color === "hint",
