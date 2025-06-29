@@ -29,34 +29,31 @@ describe("TransactionRow", () => {
 		};
 	});
 
-	it("should render", () => {
-		renderResponsive(
+	it.each(["xs", "sm", "md", "lg", "xl"])("should render responsive (%s)", (breakpoint) => {
+		const { asFragment } = renderResponsive(
 			<table>
 				<tbody>
 					<TransactionRow
 						transaction={fixture}
 						profile={profile}
 						exchangeCurrency={"USD"}
-						onClick={() => {}}
+						onClick={() => { }}
 					/>
 				</tbody>
 			</table>,
-			"xl"
+			breakpoint
 		);
 
-		expect(screen.getAllByRole("cell")).toHaveLength(8);
 		expect(screen.getByTestId("TransactionRow__id")).toBeInTheDocument();
 		expect(screen.getByTestId("TransactionRow__timestamp")).toBeInTheDocument();
-		expect(screen.getByTestId("TransactionRow__type")).toBeInTheDocument();
-		expect(screen.getAllByTestId("Address__alias")).toHaveLength(4);
-		expect(screen.getAllByTestId("Amount")).toHaveLength(3);
+		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it.each(["xs", "sm"])("should render responsive", (breakpoint) => {
 		const { asFragment } = renderResponsive(
 			<table>
 				<tbody>
-					<TransactionRow transaction={fixture} profile={profile} exchangeCurrency="USD" onClick={() => {}} />
+					<TransactionRow transaction={fixture} profile={profile} exchangeCurrency="USD" onClick={() => { }} />
 				</tbody>
 			</table>,
 			breakpoint,
@@ -127,7 +124,7 @@ describe("TransactionRow", () => {
 						}}
 						exchangeCurrency="ARK"
 						profile={profile}
-						onClick={() => {}}
+						onClick={() => { }}
 					/>
 				</tbody>
 			</table>,
@@ -159,7 +156,7 @@ describe("TransactionRow", () => {
 						}}
 						exchangeCurrency="ARK"
 						profile={profile}
-						onClick={() => {}}
+						onClick={() => { }}
 					/>
 				</tbody>
 			</table>,
@@ -175,7 +172,7 @@ describe("TransactionRow", () => {
 		render(
 			<table>
 				<tbody>
-					<TransactionRow transaction={fixture} profile={profile} exchangeCurrency="USD" onClick={() => {}} />
+					<TransactionRow transaction={fixture} profile={profile} exchangeCurrency="USD" onClick={() => { }} />
 				</tbody>
 			</table>,
 		);
@@ -189,10 +186,10 @@ describe("TransactionRow", () => {
 			<table>
 				<tbody>
 					<TransactionRow
-						transaction={{ ...fixture, timestamp: () => {} }}
+						transaction={{ ...fixture, timestamp: () => { } }}
 						profile={profile}
 						exchangeCurrency="USD"
-						onClick={() => {}}
+						onClick={() => { }}
 					/>
 				</tbody>
 			</table>,
@@ -206,7 +203,7 @@ describe("TransactionRow", () => {
 		renderResponsive(
 			<table>
 				<tbody>
-					<TransactionRow transaction={fixture} profile={profile} onClick={() => {}} />
+					<TransactionRow transaction={fixture} profile={profile} onClick={() => { }} />
 				</tbody>
 			</table>,
 			"xl"
