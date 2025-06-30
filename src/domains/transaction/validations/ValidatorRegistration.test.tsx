@@ -169,10 +169,14 @@ describe("lockedFee", () => {
 	});
 
 	it("should return an error for insufficient balance for locked fee", () => {
-		const { validate } = validatorRegistration(translationMock).lockedFee(wallet, () => ({}));
+		vi.spyOn(wallet, "isValidator").mockReturnValue(false);
+
 		const walletBalance = 0;
 		vi.spyOn(wallet, "balance").mockReturnValue(walletBalance);
+
 		const lockedFee = 100;
+
+		const { validate } = validatorRegistration(translationMock).lockedFee(wallet, () => ({}));
 
 		const result = validate.insufficientBalance(lockedFee);
 
@@ -180,6 +184,7 @@ describe("lockedFee", () => {
 	});
 
 	it("should return an error for insufficient balance for fee and locked fee", () => {
+		vi.spyOn(wallet, "isValidator").mockReturnValue(false);
 		const { validate } = validatorRegistration(translationMock).lockedFee(wallet, getValues);
 
 		const walletBalance = 0;
