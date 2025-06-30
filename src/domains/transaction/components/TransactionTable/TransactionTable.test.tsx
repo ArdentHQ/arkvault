@@ -54,7 +54,7 @@ describe("TransactionTable", () => {
 				profile={profile}
 				sortBy={{ column: "timestamp", desc: true }}
 			/>,
-			"xl"
+			"xl",
 		);
 
 		expect(screen.getAllByTestId("TransactionRow__exchange-currency")).toHaveLength(transactions.length);

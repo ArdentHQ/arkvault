@@ -37,11 +37,11 @@ describe("TransactionRow", () => {
 						transaction={fixture}
 						profile={profile}
 						exchangeCurrency={"USD"}
-						onClick={() => { }}
+						onClick={() => {}}
 					/>
 				</tbody>
 			</table>,
-			breakpoint
+			breakpoint,
 		);
 
 		expect(screen.getByTestId("TransactionRow__id")).toBeInTheDocument();
@@ -53,7 +53,7 @@ describe("TransactionRow", () => {
 		const { asFragment } = renderResponsive(
 			<table>
 				<tbody>
-					<TransactionRow transaction={fixture} profile={profile} exchangeCurrency="USD" onClick={() => { }} />
+					<TransactionRow transaction={fixture} profile={profile} exchangeCurrency="USD" onClick={() => {}} />
 				</tbody>
 			</table>,
 			breakpoint,
@@ -124,11 +124,11 @@ describe("TransactionRow", () => {
 						}}
 						exchangeCurrency="ARK"
 						profile={profile}
-						onClick={() => { }}
+						onClick={() => {}}
 					/>
 				</tbody>
 			</table>,
-			"xl"
+			"xl",
 		);
 
 		expect(asFragment()).toMatchSnapshot();
@@ -156,11 +156,11 @@ describe("TransactionRow", () => {
 						}}
 						exchangeCurrency="ARK"
 						profile={profile}
-						onClick={() => { }}
+						onClick={() => {}}
 					/>
 				</tbody>
 			</table>,
-			"xl"
+			"xl",
 		);
 
 		expect(asFragment()).toMatchSnapshot();
@@ -172,7 +172,7 @@ describe("TransactionRow", () => {
 		render(
 			<table>
 				<tbody>
-					<TransactionRow transaction={fixture} profile={profile} exchangeCurrency="USD" onClick={() => { }} />
+					<TransactionRow transaction={fixture} profile={profile} exchangeCurrency="USD" onClick={() => {}} />
 				</tbody>
 			</table>,
 		);
@@ -186,10 +186,10 @@ describe("TransactionRow", () => {
 			<table>
 				<tbody>
 					<TransactionRow
-						transaction={{ ...fixture, timestamp: () => { } }}
+						transaction={{ ...fixture, timestamp: () => {} }}
 						profile={profile}
 						exchangeCurrency="USD"
-						onClick={() => { }}
+						onClick={() => {}}
 					/>
 				</tbody>
 			</table>,
@@ -203,10 +203,10 @@ describe("TransactionRow", () => {
 		renderResponsive(
 			<table>
 				<tbody>
-					<TransactionRow transaction={fixture} profile={profile} onClick={() => { }} />
+					<TransactionRow transaction={fixture} profile={profile} onClick={() => {}} />
 				</tbody>
 			</table>,
-			"xl"
+			"xl",
 		);
 
 		expect(screen.getByTestId("TransactionRow__exchange-currency")).toHaveTextContent("0");
