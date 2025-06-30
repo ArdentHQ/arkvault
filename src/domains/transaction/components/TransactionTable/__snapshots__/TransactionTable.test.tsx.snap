@@ -148,7 +148,7 @@ exports[`TransactionTable > loading state > should render 1`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border whitespace-nowrap hidden lg:table-cell pl-0! xl:min-w-28"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border whitespace-nowrap hidden xl:table-cell pl-0! xl:min-w-28"
               colspan="1"
               data-testid="table__th--6"
               role="columnheader"
@@ -1843,7 +1843,7 @@ exports[`TransactionTable > loading state > should render with currency column 1
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border whitespace-nowrap hidden lg:table-cell pl-0! xl:min-w-28"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border whitespace-nowrap hidden xl:table-cell pl-0! xl:min-w-28"
               colspan="1"
               data-testid="table__th--6"
               role="columnheader"
@@ -3443,7 +3443,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                               class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 cursor-pointer border-b border-b-transparent leading-[17px]"
                               data-testid="TransactionRow__id"
                             >
-                              2dc4…cb5f
+                              2dc48…5cb5f
                             </span>
                             <div
                               class="text-theme-danger-700 dark:text-theme-danger-info-border"
@@ -3744,7 +3744,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                               class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 cursor-pointer border-b border-b-transparent leading-[17px]"
                               data-testid="TransactionRow__id"
                             >
-                              2c0e…4364
+                              2c0e9…d4364
                             </span>
                             <div
                               class="text-theme-danger-700 dark:text-theme-danger-info-border"
@@ -4036,7 +4036,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                               class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 cursor-pointer border-b border-b-transparent leading-[17px]"
                               data-testid="TransactionRow__id"
                             >
-                              1170…2e22
+                              11701…d2e22
                             </span>
                             <div
                               class="text-theme-danger-700 dark:text-theme-danger-info-border"
@@ -4328,7 +4328,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                               class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 cursor-pointer border-b border-b-transparent leading-[17px]"
                               data-testid="TransactionRow__id"
                             >
-                              1e68…4b30
+                              1e686…c4b30
                             </span>
                             <div
                               class="text-theme-danger-700 dark:text-theme-danger-info-border"
@@ -4620,7 +4620,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                               class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 cursor-pointer border-b border-b-transparent leading-[17px]"
                               data-testid="TransactionRow__id"
                             >
-                              e9ba…1e2e
+                              e9ba7…01e2e
                             </span>
                             <div
                               class="text-theme-danger-700 dark:text-theme-danger-info-border"
@@ -4912,7 +4912,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                               class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 cursor-pointer border-b border-b-transparent leading-[17px]"
                               data-testid="TransactionRow__id"
                             >
-                              f40a…8fb2
+                              f40aa…68fb2
                             </span>
                             <div
                               class="text-theme-danger-700 dark:text-theme-danger-info-border"
@@ -5204,7 +5204,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                               class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 cursor-pointer border-b border-b-transparent leading-[17px]"
                               data-testid="TransactionRow__id"
                             >
-                              4511…880e
+                              45117…f880e
                             </span>
                             <div
                               class="text-theme-danger-700 dark:text-theme-danger-info-border"
@@ -5496,7 +5496,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                               class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 cursor-pointer border-b border-b-transparent leading-[17px]"
                               data-testid="TransactionRow__id"
                             >
-                              d1dc…50c5
+                              d1dc3…450c5
                             </span>
                             <div
                               class="text-theme-danger-700 dark:text-theme-danger-info-border"
@@ -5797,7 +5797,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                               class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 cursor-pointer border-b border-b-transparent leading-[17px]"
                               data-testid="TransactionRow__id"
                             >
-                              8f26…cacc
+                              8f26a…5cacc
                             </span>
                             <div
                               class="text-theme-danger-700 dark:text-theme-danger-info-border"
@@ -6043,7 +6043,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                               class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 cursor-pointer border-b border-b-transparent leading-[17px]"
                               data-testid="TransactionRow__id"
                             >
-                              1105…28f8
+                              11051…628f8
                             </span>
                             <div
                               class="text-theme-danger-700 dark:text-theme-danger-info-border"
@@ -6368,7 +6368,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                               class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 cursor-pointer border-b border-b-transparent leading-[17px]"
                               data-testid="TransactionRow__id"
                             >
-                              2dc4…cb5f
+                              2dc48…5cb5f
                             </span>
                             <div
                               class="text-theme-danger-700 dark:text-theme-danger-info-border"
@@ -6669,7 +6669,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                               class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 cursor-pointer border-b border-b-transparent leading-[17px]"
                               data-testid="TransactionRow__id"
                             >
-                              2c0e…4364
+                              2c0e9…d4364
                             </span>
                             <div
                               class="text-theme-danger-700 dark:text-theme-danger-info-border"
@@ -6961,7 +6961,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                               class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 cursor-pointer border-b border-b-transparent leading-[17px]"
                               data-testid="TransactionRow__id"
                             >
-                              1170…2e22
+                              11701…d2e22
                             </span>
                             <div
                               class="text-theme-danger-700 dark:text-theme-danger-info-border"
@@ -7253,7 +7253,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                               class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 cursor-pointer border-b border-b-transparent leading-[17px]"
                               data-testid="TransactionRow__id"
                             >
-                              1e68…4b30
+                              1e686…c4b30
                             </span>
                             <div
                               class="text-theme-danger-700 dark:text-theme-danger-info-border"
@@ -7545,7 +7545,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                               class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 cursor-pointer border-b border-b-transparent leading-[17px]"
                               data-testid="TransactionRow__id"
                             >
-                              e9ba…1e2e
+                              e9ba7…01e2e
                             </span>
                             <div
                               class="text-theme-danger-700 dark:text-theme-danger-info-border"
@@ -7837,7 +7837,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                               class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 cursor-pointer border-b border-b-transparent leading-[17px]"
                               data-testid="TransactionRow__id"
                             >
-                              f40a…8fb2
+                              f40aa…68fb2
                             </span>
                             <div
                               class="text-theme-danger-700 dark:text-theme-danger-info-border"
@@ -8129,7 +8129,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                               class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 cursor-pointer border-b border-b-transparent leading-[17px]"
                               data-testid="TransactionRow__id"
                             >
-                              4511…880e
+                              45117…f880e
                             </span>
                             <div
                               class="text-theme-danger-700 dark:text-theme-danger-info-border"
@@ -8421,7 +8421,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                               class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 cursor-pointer border-b border-b-transparent leading-[17px]"
                               data-testid="TransactionRow__id"
                             >
-                              d1dc…50c5
+                              d1dc3…450c5
                             </span>
                             <div
                               class="text-theme-danger-700 dark:text-theme-danger-info-border"
@@ -8722,7 +8722,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                               class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 cursor-pointer border-b border-b-transparent leading-[17px]"
                               data-testid="TransactionRow__id"
                             >
-                              8f26…cacc
+                              8f26a…5cacc
                             </span>
                             <div
                               class="text-theme-danger-700 dark:text-theme-danger-info-border"
@@ -8968,7 +8968,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                               class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 cursor-pointer border-b border-b-transparent leading-[17px]"
                               data-testid="TransactionRow__id"
                             >
-                              1105…28f8
+                              11051…628f8
                             </span>
                             <div
                               class="text-theme-danger-700 dark:text-theme-danger-info-border"
@@ -9388,7 +9388,7 @@ exports[`TransactionTable > should render responsive 3`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border whitespace-nowrap hidden lg:table-cell pl-0! xl:min-w-28"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border whitespace-nowrap hidden xl:table-cell pl-0! xl:min-w-28"
               colspan="1"
               data-testid="table__th--6"
               role="columnheader"
@@ -9439,7 +9439,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                             class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 cursor-pointer border-b border-b-transparent leading-[17px]"
                             data-testid="TransactionRow__id"
                           >
-                            2dc4…cb5f
+                            2d…5f
                           </span>
                           <div
                             class="text-theme-danger-700 dark:text-theme-danger-info-border"
@@ -9846,7 +9846,7 @@ exports[`TransactionTable > should render responsive 3`] = `
               </div>
             </td>
             <td
-              class="hidden lg:table-cell"
+              class="hidden xl:table-cell"
             >
               <div
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3 lg:w-34 xl:w-auto"
@@ -9888,7 +9888,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                     2
                   </span>
                   <span
-                    class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
+                    class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
                     data-testid="TransactionRow__exchange-currency"
                   >
                     <span
@@ -9933,7 +9933,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                             class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 cursor-pointer border-b border-b-transparent leading-[17px]"
                             data-testid="TransactionRow__id"
                           >
-                            2c0e…4364
+                            2c…64
                           </span>
                           <div
                             class="text-theme-danger-700 dark:text-theme-danger-info-border"
@@ -10315,7 +10315,7 @@ exports[`TransactionTable > should render responsive 3`] = `
               </div>
             </td>
             <td
-              class="hidden lg:table-cell"
+              class="hidden xl:table-cell"
             >
               <div
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3 lg:w-34 xl:w-auto"
@@ -10357,7 +10357,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                     0.00254046
                   </span>
                   <span
-                    class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
+                    class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
                     data-testid="TransactionRow__exchange-currency"
                   >
                     <span
@@ -10402,7 +10402,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                             class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 cursor-pointer border-b border-b-transparent leading-[17px]"
                             data-testid="TransactionRow__id"
                           >
-                            1170…2e22
+                            11…22
                           </span>
                           <div
                             class="text-theme-danger-700 dark:text-theme-danger-info-border"
@@ -10784,7 +10784,7 @@ exports[`TransactionTable > should render responsive 3`] = `
               </div>
             </td>
             <td
-              class="hidden lg:table-cell"
+              class="hidden xl:table-cell"
             >
               <div
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3 lg:w-34 xl:w-auto"
@@ -10826,7 +10826,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                     0.001
                   </span>
                   <span
-                    class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
+                    class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
                     data-testid="TransactionRow__exchange-currency"
                   >
                     <span
@@ -10871,7 +10871,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                             class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 cursor-pointer border-b border-b-transparent leading-[17px]"
                             data-testid="TransactionRow__id"
                           >
-                            1e68…4b30
+                            1e…30
                           </span>
                           <div
                             class="text-theme-danger-700 dark:text-theme-danger-info-border"
@@ -11253,7 +11253,7 @@ exports[`TransactionTable > should render responsive 3`] = `
               </div>
             </td>
             <td
-              class="hidden lg:table-cell"
+              class="hidden xl:table-cell"
             >
               <div
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3 lg:w-34 xl:w-auto"
@@ -11295,7 +11295,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                     0.001
                   </span>
                   <span
-                    class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
+                    class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
                     data-testid="TransactionRow__exchange-currency"
                   >
                     <span
@@ -11340,7 +11340,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                             class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 cursor-pointer border-b border-b-transparent leading-[17px]"
                             data-testid="TransactionRow__id"
                           >
-                            e9ba…1e2e
+                            e9…2e
                           </span>
                           <div
                             class="text-theme-danger-700 dark:text-theme-danger-info-border"
@@ -11722,7 +11722,7 @@ exports[`TransactionTable > should render responsive 3`] = `
               </div>
             </td>
             <td
-              class="hidden lg:table-cell"
+              class="hidden xl:table-cell"
             >
               <div
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3 lg:w-34 xl:w-auto"
@@ -11764,7 +11764,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                     0.001
                   </span>
                   <span
-                    class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
+                    class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
                     data-testid="TransactionRow__exchange-currency"
                   >
                     <span
@@ -11809,7 +11809,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                             class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 cursor-pointer border-b border-b-transparent leading-[17px]"
                             data-testid="TransactionRow__id"
                           >
-                            f40a…8fb2
+                            f4…b2
                           </span>
                           <div
                             class="text-theme-danger-700 dark:text-theme-danger-info-border"
@@ -12191,7 +12191,7 @@ exports[`TransactionTable > should render responsive 3`] = `
               </div>
             </td>
             <td
-              class="hidden lg:table-cell"
+              class="hidden xl:table-cell"
             >
               <div
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3 lg:w-34 xl:w-auto"
@@ -12233,7 +12233,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                     0.001
                   </span>
                   <span
-                    class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
+                    class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
                     data-testid="TransactionRow__exchange-currency"
                   >
                     <span
@@ -12278,7 +12278,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                             class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 cursor-pointer border-b border-b-transparent leading-[17px]"
                             data-testid="TransactionRow__id"
                           >
-                            4511…880e
+                            45…0e
                           </span>
                           <div
                             class="text-theme-danger-700 dark:text-theme-danger-info-border"
@@ -12660,7 +12660,7 @@ exports[`TransactionTable > should render responsive 3`] = `
               </div>
             </td>
             <td
-              class="hidden lg:table-cell"
+              class="hidden xl:table-cell"
             >
               <div
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3 lg:w-34 xl:w-auto"
@@ -12702,7 +12702,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                     0.001
                   </span>
                   <span
-                    class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
+                    class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
                     data-testid="TransactionRow__exchange-currency"
                   >
                     <span
@@ -12747,7 +12747,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                             class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 cursor-pointer border-b border-b-transparent leading-[17px]"
                             data-testid="TransactionRow__id"
                           >
-                            d1dc…50c5
+                            d1…c5
                           </span>
                           <div
                             class="text-theme-danger-700 dark:text-theme-danger-info-border"
@@ -13156,7 +13156,7 @@ exports[`TransactionTable > should render responsive 3`] = `
               </div>
             </td>
             <td
-              class="hidden lg:table-cell"
+              class="hidden xl:table-cell"
             >
               <div
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3 lg:w-34 xl:w-auto"
@@ -13198,7 +13198,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                     0.200105
                   </span>
                   <span
-                    class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
+                    class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
                     data-testid="TransactionRow__exchange-currency"
                   >
                     <span
@@ -13243,7 +13243,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                             class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 cursor-pointer border-b border-b-transparent leading-[17px]"
                             data-testid="TransactionRow__id"
                           >
-                            8f26…cacc
+                            8f…cc
                           </span>
                           <div
                             class="text-theme-danger-700 dark:text-theme-danger-info-border"
@@ -13487,7 +13487,7 @@ exports[`TransactionTable > should render responsive 3`] = `
               </div>
             </td>
             <td
-              class="hidden lg:table-cell"
+              class="hidden xl:table-cell"
             >
               <div
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3 lg:w-34 xl:w-auto"
@@ -13529,7 +13529,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                     1.50102853
                   </span>
                   <span
-                    class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
+                    class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
                     data-testid="TransactionRow__exchange-currency"
                   >
                     <span
@@ -13574,7 +13574,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                             class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 cursor-pointer border-b border-b-transparent leading-[17px]"
                             data-testid="TransactionRow__id"
                           >
-                            1105…28f8
+                            11…f8
                           </span>
                           <div
                             class="text-theme-danger-700 dark:text-theme-danger-info-border"
@@ -13981,7 +13981,7 @@ exports[`TransactionTable > should render responsive 3`] = `
               </div>
             </td>
             <td
-              class="hidden lg:table-cell"
+              class="hidden xl:table-cell"
             >
               <div
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3 lg:w-34 xl:w-auto"
@@ -14023,7 +14023,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                     4.98
                   </span>
                   <span
-                    class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
+                    class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
                     data-testid="TransactionRow__exchange-currency"
                   >
                     <span
@@ -14192,7 +14192,7 @@ exports[`TransactionTable > should render responsive 4`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border whitespace-nowrap hidden lg:table-cell pl-0! xl:min-w-28"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border whitespace-nowrap hidden xl:table-cell pl-0! xl:min-w-28"
               colspan="1"
               data-testid="table__th--6"
               role="columnheader"
@@ -14243,7 +14243,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                             class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 cursor-pointer border-b border-b-transparent leading-[17px]"
                             data-testid="TransactionRow__id"
                           >
-                            2dc48…5cb5f
+                            2dc…b5f
                           </span>
                           <div
                             class="text-theme-danger-700 dark:text-theme-danger-info-border"
@@ -14650,7 +14650,7 @@ exports[`TransactionTable > should render responsive 4`] = `
               </div>
             </td>
             <td
-              class="hidden lg:table-cell"
+              class="hidden xl:table-cell"
             >
               <div
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3 lg:w-34 xl:w-auto"
@@ -14682,12 +14682,27 @@ exports[`TransactionTable > should render responsive 4`] = `
               <div
                 class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-11 xl:my-0 xl:pt-3 min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2"
               >
-                <span
-                  class="whitespace-nowrap"
-                  data-testid="Amount"
+                <div
+                  class="flex w-40 flex-col items-end gap-1"
                 >
-                  0
-                </span>
+                  <span
+                    class="whitespace-nowrap text-sm font-semibold"
+                    data-testid="Amount"
+                  >
+                    2
+                  </span>
+                  <span
+                    class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
+                    data-testid="TransactionRow__exchange-currency"
+                  >
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      0
+                    </span>
+                  </span>
+                </div>
               </div>
             </td>
           </tr>
@@ -14722,7 +14737,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                             class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 cursor-pointer border-b border-b-transparent leading-[17px]"
                             data-testid="TransactionRow__id"
                           >
-                            2c0e9…d4364
+                            2c0…364
                           </span>
                           <div
                             class="text-theme-danger-700 dark:text-theme-danger-info-border"
@@ -15104,7 +15119,7 @@ exports[`TransactionTable > should render responsive 4`] = `
               </div>
             </td>
             <td
-              class="hidden lg:table-cell"
+              class="hidden xl:table-cell"
             >
               <div
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3 lg:w-34 xl:w-auto"
@@ -15136,12 +15151,27 @@ exports[`TransactionTable > should render responsive 4`] = `
               <div
                 class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-11 xl:my-0 xl:pt-3 min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2"
               >
-                <span
-                  class="whitespace-nowrap"
-                  data-testid="Amount"
+                <div
+                  class="flex w-40 flex-col items-end gap-1"
                 >
-                  0
-                </span>
+                  <span
+                    class="whitespace-nowrap text-sm font-semibold"
+                    data-testid="Amount"
+                  >
+                    0.00254046
+                  </span>
+                  <span
+                    class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
+                    data-testid="TransactionRow__exchange-currency"
+                  >
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      0
+                    </span>
+                  </span>
+                </div>
               </div>
             </td>
           </tr>
@@ -15176,7 +15206,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                             class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 cursor-pointer border-b border-b-transparent leading-[17px]"
                             data-testid="TransactionRow__id"
                           >
-                            11701…d2e22
+                            117…e22
                           </span>
                           <div
                             class="text-theme-danger-700 dark:text-theme-danger-info-border"
@@ -15558,7 +15588,7 @@ exports[`TransactionTable > should render responsive 4`] = `
               </div>
             </td>
             <td
-              class="hidden lg:table-cell"
+              class="hidden xl:table-cell"
             >
               <div
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3 lg:w-34 xl:w-auto"
@@ -15590,12 +15620,27 @@ exports[`TransactionTable > should render responsive 4`] = `
               <div
                 class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-11 xl:my-0 xl:pt-3 min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2"
               >
-                <span
-                  class="whitespace-nowrap"
-                  data-testid="Amount"
+                <div
+                  class="flex w-40 flex-col items-end gap-1"
                 >
-                  0
-                </span>
+                  <span
+                    class="whitespace-nowrap text-sm font-semibold"
+                    data-testid="Amount"
+                  >
+                    0.001
+                  </span>
+                  <span
+                    class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
+                    data-testid="TransactionRow__exchange-currency"
+                  >
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      0
+                    </span>
+                  </span>
+                </div>
               </div>
             </td>
           </tr>
@@ -15630,7 +15675,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                             class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 cursor-pointer border-b border-b-transparent leading-[17px]"
                             data-testid="TransactionRow__id"
                           >
-                            1e686…c4b30
+                            1e6…b30
                           </span>
                           <div
                             class="text-theme-danger-700 dark:text-theme-danger-info-border"
@@ -16012,7 +16057,7 @@ exports[`TransactionTable > should render responsive 4`] = `
               </div>
             </td>
             <td
-              class="hidden lg:table-cell"
+              class="hidden xl:table-cell"
             >
               <div
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3 lg:w-34 xl:w-auto"
@@ -16044,12 +16089,27 @@ exports[`TransactionTable > should render responsive 4`] = `
               <div
                 class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-11 xl:my-0 xl:pt-3 min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2"
               >
-                <span
-                  class="whitespace-nowrap"
-                  data-testid="Amount"
+                <div
+                  class="flex w-40 flex-col items-end gap-1"
                 >
-                  0
-                </span>
+                  <span
+                    class="whitespace-nowrap text-sm font-semibold"
+                    data-testid="Amount"
+                  >
+                    0.001
+                  </span>
+                  <span
+                    class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
+                    data-testid="TransactionRow__exchange-currency"
+                  >
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      0
+                    </span>
+                  </span>
+                </div>
               </div>
             </td>
           </tr>
@@ -16084,7 +16144,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                             class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 cursor-pointer border-b border-b-transparent leading-[17px]"
                             data-testid="TransactionRow__id"
                           >
-                            e9ba7…01e2e
+                            e9b…e2e
                           </span>
                           <div
                             class="text-theme-danger-700 dark:text-theme-danger-info-border"
@@ -16466,7 +16526,7 @@ exports[`TransactionTable > should render responsive 4`] = `
               </div>
             </td>
             <td
-              class="hidden lg:table-cell"
+              class="hidden xl:table-cell"
             >
               <div
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3 lg:w-34 xl:w-auto"
@@ -16498,12 +16558,27 @@ exports[`TransactionTable > should render responsive 4`] = `
               <div
                 class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-11 xl:my-0 xl:pt-3 min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2"
               >
-                <span
-                  class="whitespace-nowrap"
-                  data-testid="Amount"
+                <div
+                  class="flex w-40 flex-col items-end gap-1"
                 >
-                  0
-                </span>
+                  <span
+                    class="whitespace-nowrap text-sm font-semibold"
+                    data-testid="Amount"
+                  >
+                    0.001
+                  </span>
+                  <span
+                    class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
+                    data-testid="TransactionRow__exchange-currency"
+                  >
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      0
+                    </span>
+                  </span>
+                </div>
               </div>
             </td>
           </tr>
@@ -16538,7 +16613,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                             class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 cursor-pointer border-b border-b-transparent leading-[17px]"
                             data-testid="TransactionRow__id"
                           >
-                            f40aa…68fb2
+                            f40…fb2
                           </span>
                           <div
                             class="text-theme-danger-700 dark:text-theme-danger-info-border"
@@ -16920,7 +16995,7 @@ exports[`TransactionTable > should render responsive 4`] = `
               </div>
             </td>
             <td
-              class="hidden lg:table-cell"
+              class="hidden xl:table-cell"
             >
               <div
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3 lg:w-34 xl:w-auto"
@@ -16952,12 +17027,27 @@ exports[`TransactionTable > should render responsive 4`] = `
               <div
                 class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-11 xl:my-0 xl:pt-3 min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2"
               >
-                <span
-                  class="whitespace-nowrap"
-                  data-testid="Amount"
+                <div
+                  class="flex w-40 flex-col items-end gap-1"
                 >
-                  0
-                </span>
+                  <span
+                    class="whitespace-nowrap text-sm font-semibold"
+                    data-testid="Amount"
+                  >
+                    0.001
+                  </span>
+                  <span
+                    class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
+                    data-testid="TransactionRow__exchange-currency"
+                  >
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      0
+                    </span>
+                  </span>
+                </div>
               </div>
             </td>
           </tr>
@@ -16992,7 +17082,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                             class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 cursor-pointer border-b border-b-transparent leading-[17px]"
                             data-testid="TransactionRow__id"
                           >
-                            45117…f880e
+                            451…80e
                           </span>
                           <div
                             class="text-theme-danger-700 dark:text-theme-danger-info-border"
@@ -17374,7 +17464,7 @@ exports[`TransactionTable > should render responsive 4`] = `
               </div>
             </td>
             <td
-              class="hidden lg:table-cell"
+              class="hidden xl:table-cell"
             >
               <div
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3 lg:w-34 xl:w-auto"
@@ -17406,12 +17496,27 @@ exports[`TransactionTable > should render responsive 4`] = `
               <div
                 class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-11 xl:my-0 xl:pt-3 min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2"
               >
-                <span
-                  class="whitespace-nowrap"
-                  data-testid="Amount"
+                <div
+                  class="flex w-40 flex-col items-end gap-1"
                 >
-                  0
-                </span>
+                  <span
+                    class="whitespace-nowrap text-sm font-semibold"
+                    data-testid="Amount"
+                  >
+                    0.001
+                  </span>
+                  <span
+                    class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
+                    data-testid="TransactionRow__exchange-currency"
+                  >
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      0
+                    </span>
+                  </span>
+                </div>
               </div>
             </td>
           </tr>
@@ -17446,7 +17551,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                             class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 cursor-pointer border-b border-b-transparent leading-[17px]"
                             data-testid="TransactionRow__id"
                           >
-                            d1dc3…450c5
+                            d1d…0c5
                           </span>
                           <div
                             class="text-theme-danger-700 dark:text-theme-danger-info-border"
@@ -17855,7 +17960,7 @@ exports[`TransactionTable > should render responsive 4`] = `
               </div>
             </td>
             <td
-              class="hidden lg:table-cell"
+              class="hidden xl:table-cell"
             >
               <div
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3 lg:w-34 xl:w-auto"
@@ -17887,12 +17992,27 @@ exports[`TransactionTable > should render responsive 4`] = `
               <div
                 class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-11 xl:my-0 xl:pt-3 min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2"
               >
-                <span
-                  class="whitespace-nowrap"
-                  data-testid="Amount"
+                <div
+                  class="flex w-40 flex-col items-end gap-1"
                 >
-                  0
-                </span>
+                  <span
+                    class="whitespace-nowrap text-sm font-semibold"
+                    data-testid="Amount"
+                  >
+                    0.200105
+                  </span>
+                  <span
+                    class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
+                    data-testid="TransactionRow__exchange-currency"
+                  >
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      0
+                    </span>
+                  </span>
+                </div>
               </div>
             </td>
           </tr>
@@ -17927,7 +18047,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                             class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 cursor-pointer border-b border-b-transparent leading-[17px]"
                             data-testid="TransactionRow__id"
                           >
-                            8f26a…5cacc
+                            8f2…acc
                           </span>
                           <div
                             class="text-theme-danger-700 dark:text-theme-danger-info-border"
@@ -18171,7 +18291,7 @@ exports[`TransactionTable > should render responsive 4`] = `
               </div>
             </td>
             <td
-              class="hidden lg:table-cell"
+              class="hidden xl:table-cell"
             >
               <div
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3 lg:w-34 xl:w-auto"
@@ -18203,12 +18323,27 @@ exports[`TransactionTable > should render responsive 4`] = `
               <div
                 class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-11 xl:my-0 xl:pt-3 min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2"
               >
-                <span
-                  class="whitespace-nowrap"
-                  data-testid="Amount"
+                <div
+                  class="flex w-40 flex-col items-end gap-1"
                 >
-                  0
-                </span>
+                  <span
+                    class="whitespace-nowrap text-sm font-semibold"
+                    data-testid="Amount"
+                  >
+                    1.50102853
+                  </span>
+                  <span
+                    class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
+                    data-testid="TransactionRow__exchange-currency"
+                  >
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      0
+                    </span>
+                  </span>
+                </div>
               </div>
             </td>
           </tr>
@@ -18243,7 +18378,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                             class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 cursor-pointer border-b border-b-transparent leading-[17px]"
                             data-testid="TransactionRow__id"
                           >
-                            11051…628f8
+                            110…8f8
                           </span>
                           <div
                             class="text-theme-danger-700 dark:text-theme-danger-info-border"
@@ -18650,7 +18785,7 @@ exports[`TransactionTable > should render responsive 4`] = `
               </div>
             </td>
             <td
-              class="hidden lg:table-cell"
+              class="hidden xl:table-cell"
             >
               <div
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3 lg:w-34 xl:w-auto"
@@ -18682,12 +18817,27 @@ exports[`TransactionTable > should render responsive 4`] = `
               <div
                 class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-11 xl:my-0 xl:pt-3 min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2"
               >
-                <span
-                  class="whitespace-nowrap"
-                  data-testid="Amount"
+                <div
+                  class="flex w-40 flex-col items-end gap-1"
                 >
-                  0
-                </span>
+                  <span
+                    class="whitespace-nowrap text-sm font-semibold"
+                    data-testid="Amount"
+                  >
+                    4.98
+                  </span>
+                  <span
+                    class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
+                    data-testid="TransactionRow__exchange-currency"
+                  >
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      0
+                    </span>
+                  </span>
+                </div>
               </div>
             </td>
           </tr>
@@ -18846,7 +18996,7 @@ exports[`TransactionTable > should render responsive 5`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border whitespace-nowrap hidden lg:table-cell pl-0! xl:min-w-28"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border whitespace-nowrap hidden xl:table-cell pl-0! xl:min-w-28"
               colspan="1"
               data-testid="table__th--6"
               role="columnheader"
@@ -19304,7 +19454,7 @@ exports[`TransactionTable > should render responsive 5`] = `
               </div>
             </td>
             <td
-              class="hidden lg:table-cell"
+              class="hidden xl:table-cell"
             >
               <div
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3 lg:w-34 xl:w-auto"
@@ -19758,7 +19908,7 @@ exports[`TransactionTable > should render responsive 5`] = `
               </div>
             </td>
             <td
-              class="hidden lg:table-cell"
+              class="hidden xl:table-cell"
             >
               <div
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3 lg:w-34 xl:w-auto"
@@ -20212,7 +20362,7 @@ exports[`TransactionTable > should render responsive 5`] = `
               </div>
             </td>
             <td
-              class="hidden lg:table-cell"
+              class="hidden xl:table-cell"
             >
               <div
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3 lg:w-34 xl:w-auto"
@@ -20666,7 +20816,7 @@ exports[`TransactionTable > should render responsive 5`] = `
               </div>
             </td>
             <td
-              class="hidden lg:table-cell"
+              class="hidden xl:table-cell"
             >
               <div
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3 lg:w-34 xl:w-auto"
@@ -21120,7 +21270,7 @@ exports[`TransactionTable > should render responsive 5`] = `
               </div>
             </td>
             <td
-              class="hidden lg:table-cell"
+              class="hidden xl:table-cell"
             >
               <div
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3 lg:w-34 xl:w-auto"
@@ -21574,7 +21724,7 @@ exports[`TransactionTable > should render responsive 5`] = `
               </div>
             </td>
             <td
-              class="hidden lg:table-cell"
+              class="hidden xl:table-cell"
             >
               <div
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3 lg:w-34 xl:w-auto"
@@ -22028,7 +22178,7 @@ exports[`TransactionTable > should render responsive 5`] = `
               </div>
             </td>
             <td
-              class="hidden lg:table-cell"
+              class="hidden xl:table-cell"
             >
               <div
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3 lg:w-34 xl:w-auto"
@@ -22509,7 +22659,7 @@ exports[`TransactionTable > should render responsive 5`] = `
               </div>
             </td>
             <td
-              class="hidden lg:table-cell"
+              class="hidden xl:table-cell"
             >
               <div
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3 lg:w-34 xl:w-auto"
@@ -22825,7 +22975,7 @@ exports[`TransactionTable > should render responsive 5`] = `
               </div>
             </td>
             <td
-              class="hidden lg:table-cell"
+              class="hidden xl:table-cell"
             >
               <div
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3 lg:w-34 xl:w-auto"
@@ -23304,7 +23454,7 @@ exports[`TransactionTable > should render responsive 5`] = `
               </div>
             </td>
             <td
-              class="hidden lg:table-cell"
+              class="hidden xl:table-cell"
             >
               <div
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3 lg:w-34 xl:w-auto"
