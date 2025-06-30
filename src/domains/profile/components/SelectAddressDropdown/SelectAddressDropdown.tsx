@@ -21,7 +21,7 @@ type SelectAddressDropdownProperties = {
 	onChange?: (wallet?: Contracts.IReadWriteWallet) => void;
 } & Omit<React.InputHTMLAttributes<any>, "onChange">;
 
-const OptionLabel = ({
+export const OptionLabel = ({
 	option,
 	network,
 	profile,
