@@ -91,7 +91,7 @@ export const FilterTransactions = memo(
 									onChange={() => onToggleAll(!isAllSelected)}
 								/>
 
-								<hr className="border-theme-secondary-300 dark:border-theme-secondary-600 -mx-7 mt-3.5 -mb-4 border-t border-b-0" />
+								<hr className="border-theme-secondary-300 dark:border-theme-secondary-600 -mx-7 mt-3.5 -mb-3.5 border-t border-b-0" />
 							</div>
 						),
 						label: "",
