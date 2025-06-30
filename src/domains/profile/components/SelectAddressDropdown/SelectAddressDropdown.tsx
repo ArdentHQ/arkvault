@@ -139,6 +139,7 @@ export const SelectAddressDropdown = React.forwardRef<HTMLInputElement, SelectAd
 						options={recipientOptions}
 						showOptions={true}
 						allowFreeInput={true}
+						innerClassName="text-theme-secondary-500 dark:text-theme-secondary-700"
 						onChange={changeHandler}
 						addons={{
 							end: undefined,
@@ -147,11 +148,7 @@ export const SelectAddressDropdown = React.forwardRef<HTMLInputElement, SelectAd
 										content: (
 											<div className="flex items-center">
 												{selectedAddressAlias?.alias && (
-													<TruncateEnd
-														className="font-semibold"
-														text={selectedAddressAlias.alias}
-														showTooltip
-													/>
+													<TruncateEnd text={selectedAddressAlias.alias} showTooltip />
 												)}
 											</div>
 										),
