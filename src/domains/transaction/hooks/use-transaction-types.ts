@@ -32,6 +32,9 @@ export const useTransactionTypes = ({ wallets = [] }: TransactionTypeProperties 
 		unvote: {
 			label: t("TRANSACTION.TRANSACTION_TYPES.UNVOTE"),
 		},
+		updateValidator: {
+			label: t("TRANSACTION.TRANSACTION_TYPES.UPDATE_VALIDATOR"),
+		},
 		usernameRegistration: {
 			label: t("TRANSACTION.TRANSACTION_TYPES.USERNAME_REGISTRATION"),
 		},

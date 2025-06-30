@@ -73,4 +73,8 @@ export class TransactionTypeService {
 		// @TODO: Revisit these checks. See relevant issue https://app.clickup.com/t/86dvawadc
 		return data.data.includes(TransactionTypes.ResignValidator.slice(2)); // remove `0x` prefix from api response
 	}
+
+	public static isUpdateValidator(data: TransactionData): boolean {
+		return data.data.includes(TransactionTypes.UpdateValidator.slice(2));
+	}
 }

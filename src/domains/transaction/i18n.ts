@@ -370,6 +370,7 @@ export const translations = {
 		MULTI_SIGNATURE: "Multisignature",
 		TRANSFER: "Transfer",
 		UNVOTE: "Unvote",
+		UPDATE_VALIDATOR: "Update Validator",
 		USERNAME_REGISTRATION: "Username Registration",
 		USERNAME_RESIGNATION: "Username Resignation",
 		VALIDATOR_REGISTRATION: "Registration",
