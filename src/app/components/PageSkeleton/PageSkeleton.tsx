@@ -5,9 +5,13 @@ import { Page, Section } from "@/app/components/Layout";
 import { WelcomeSlider } from "@/domains/profile/components/WelcomeSlider/WelcomeSlider";
 import { ProfileRowSkeleton } from "@/domains/profile/components/ProfileRow/ProfileRow";
 import { Skeleton } from "@/app/components/Skeleton";
+import { useTheme } from "@/app/hooks";
+import cn from "classnames";
 
 export const PageSkeleton = () => {
 	const { t } = useTranslation();
+	const { isDarkMode } = useTheme();
+
 	return (
 		<div data-testid="PageSkeleton">
 			<Page navbarVariant="logo-only" pageTitle={t("COMMON.WELCOME")} title={<Trans i18nKey="COMMON.APP_NAME" />}>
@@ -17,9 +21,18 @@ export const PageSkeleton = () => {
 					data-testid="PageSkeleton"
 				>
 					<div className="flex flex-col gap-3 lg:flex-row">
-						<div className="border-theme-navy-100 bg-theme-navy-50 bg-[url( dark:border-theme-secondary-800 dark:bg-theme-secondary-800'/welcome-bg-white.svg')] hidden min-w-0 basis-1/2 rounded-xl border sm:block dark:bg-[url('/welcome-bg-dark.svg')]">
+						<div
+							className={cn(
+								"border-theme-navy-100 dark:border-theme-secondary-800 hidden min-w-0 basis-1/2 rounded-xl sm:block sm:border",
+								{
+									"bg-theme-navy-50 bg-[url(/welcome-bg-white.svg)]": !isDarkMode,
+									"bg-theme-secondary-800 bg-[url(/welcome-bg-dark.svg)]": isDarkMode,
+								},
+							)}
+						>
 							<WelcomeSlider />
 						</div>
+
 						<div className="border-theme-navy-100 dark:border-theme-secondary-800 min-w-0 basis-1/2 rounded-xl sm:border sm:p-6">
 							<div className="mx-auto flex h-[calc(100vh_-_160px)] max-w-[400px] flex-col sm:h-full">
 								<div className="flex flex-1 flex-col items-center justify-center">
