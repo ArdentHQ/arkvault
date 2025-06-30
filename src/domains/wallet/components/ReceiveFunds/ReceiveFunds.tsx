@@ -30,7 +30,6 @@ export const ReceiveFunds = ({ address, name, network, onClose }: ReceiveFundsPr
 	const { uri, image } = useQRCode({
 		address,
 		amount,
-		coin: network.coin(),
 		nethash: network.meta().nethash,
 	});
 
