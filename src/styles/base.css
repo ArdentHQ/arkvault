@@ -164,7 +164,7 @@ main {
 }
 
 .select-options-list {
-	@apply dark:bg-theme-dark-900 top-full max-h-64 space-y-1 overflow-y-auto rounded-sm bg-white p-1 shadow-xl outline-hidden;
+	@apply dark:bg-theme-dark-900 top-full max-h-64 space-y-1 overflow-y-auto rounded-xl bg-white p-1 shadow-xl outline-hidden;
 }
 
 .select-options-list .select-list-option-group:not(:last-child) {
