@@ -53,7 +53,7 @@ exports[`SelectAddressDropdown > should render disabled 1`] = `
                     aria-controls="SelectAddressDropdown__dropdown-menu"
                     aria-labelledby="SelectAddressDropdown__dropdown-label"
                     autocomplete="off"
-                    class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base! cursor-default text-theme-secondary-text"
+                    class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base! cursor-default dark:text-theme-secondary-700 text-theme-secondary-text"
                     data-testid="SelectDropdown__input"
                     disabled=""
                     id="SelectAddressDropdown__dropdown-input"
@@ -130,7 +130,7 @@ exports[`SelectAddressDropdown > should render empty 1`] = `
                     aria-controls="SelectAddressDropdown__dropdown-menu"
                     aria-labelledby="SelectAddressDropdown__dropdown-label"
                     autocomplete="off"
-                    class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base! cursor-default"
+                    class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base! cursor-default text-theme-secondary-500 dark:text-theme-secondary-700"
                     data-testid="SelectDropdown__input"
                     id="SelectAddressDropdown__dropdown-input"
                     placeholder="Address"
@@ -267,7 +267,7 @@ exports[`SelectAddressDropdown > should render invalid 1`] = `
                     aria-invalid="true"
                     aria-labelledby="SelectAddressDropdown__dropdown-label"
                     autocomplete="off"
-                    class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
+                    class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base! text-theme-secondary-500 dark:text-theme-secondary-700"
                     data-testid="SelectDropdown__input"
                     id="SelectAddressDropdown__dropdown-input"
                     placeholder="Address"
@@ -275,7 +275,7 @@ exports[`SelectAddressDropdown > should render invalid 1`] = `
                     value="0x659A76be283644AEc2003aa8ba26485047fd1BFB"
                   />
                   <span
-                    class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
+                    class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base text-theme-secondary-500 dark:text-theme-secondary-700"
                     data-testid="Input__suggestion"
                   >
                     <span
@@ -412,7 +412,7 @@ exports[`SelectAddressDropdown > should render with preselected address 1`] = `
                     aria-controls="SelectAddressDropdown__dropdown-menu"
                     aria-labelledby="SelectAddressDropdown__dropdown-label"
                     autocomplete="off"
-                    class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
+                    class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base! text-theme-secondary-500 dark:text-theme-secondary-700"
                     data-testid="SelectDropdown__input"
                     id="SelectAddressDropdown__dropdown-input"
                     placeholder="Address"
@@ -420,7 +420,7 @@ exports[`SelectAddressDropdown > should render with preselected address 1`] = `
                     value="0x659A76be283644AEc2003aa8ba26485047fd1BFB"
                   />
                   <span
-                    class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
+                    class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base text-theme-secondary-500 dark:text-theme-secondary-700"
                     data-testid="Input__suggestion"
                   >
                     <span
