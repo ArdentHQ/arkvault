@@ -72,7 +72,7 @@ exports[`PageSkeleton > should render without profile 1`] = `
               class="flex flex-col gap-3 lg:flex-row"
             >
               <div
-                class="border-theme-navy-100 bg-theme-navy-50 bg-[url( dark:border-theme-secondary-800 dark:bg-theme-secondary-800'/welcome-bg-white.svg')] hidden min-w-0 basis-1/2 rounded-xl border sm:block dark:bg-[url('/welcome-bg-dark.svg')]"
+                class="border-theme-navy-100 dark:border-theme-secondary-800 hidden min-w-0 basis-1/2 rounded-xl sm:block sm:border bg-theme-navy-50 bg-[url(/welcome-bg-white.svg)]"
               >
                 <div
                   class="slick-slider slick-initialized"
