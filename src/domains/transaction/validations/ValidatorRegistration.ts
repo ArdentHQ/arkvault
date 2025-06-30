@@ -16,7 +16,6 @@ export const validatorRegistration = (t: any) => ({
 				// If the wallet is a validator, we can only update the public key
 				// that does not require a fee.
 				if (wallet?.isValidator()) {
-					console.log("wallet is validator");
 					return true;
 				}
 
