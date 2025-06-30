@@ -161,6 +161,7 @@ export const FilterTransactions = memo(
 					placement="bottom-end"
 					wrapperClass="sm:max-w-56"
 					options={options}
+					variant="options"
 					disableToggle={isDisabled}
 					closeOnSelect={false}
 					toggleContent={
