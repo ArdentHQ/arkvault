@@ -29,8 +29,8 @@ describe("TransactionRow", () => {
 		};
 	});
 
-	it("should render", () => {
-		render(
+	it.each(["xs", "sm", "md", "lg", "xl"])("should render responsive (%s)", (breakpoint) => {
+		const { asFragment } = renderResponsive(
 			<table>
 				<tbody>
 					<TransactionRow
@@ -41,14 +41,12 @@ describe("TransactionRow", () => {
 					/>
 				</tbody>
 			</table>,
+			breakpoint,
 		);
 
-		expect(screen.getAllByRole("cell")).toHaveLength(8);
 		expect(screen.getByTestId("TransactionRow__id")).toBeInTheDocument();
 		expect(screen.getByTestId("TransactionRow__timestamp")).toBeInTheDocument();
-		expect(screen.getByTestId("TransactionRow__type")).toBeInTheDocument();
-		expect(screen.getAllByTestId("Address__alias")).toHaveLength(4);
-		expect(screen.getAllByTestId("Amount")).toHaveLength(3);
+		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it.each(["xs", "sm"])("should render responsive", (breakpoint) => {
@@ -107,7 +105,7 @@ describe("TransactionRow", () => {
 	});
 
 	it("should render with currency", () => {
-		const { asFragment } = render(
+		const { asFragment } = renderResponsive(
 			<table>
 				<tbody>
 					<TransactionRow
@@ -130,6 +128,7 @@ describe("TransactionRow", () => {
 					/>
 				</tbody>
 			</table>,
+			"xl",
 		);
 
 		expect(asFragment()).toMatchSnapshot();
@@ -138,7 +137,7 @@ describe("TransactionRow", () => {
 	});
 
 	it("should omit the currency for transactions from test networks", () => {
-		const { asFragment } = render(
+		const { asFragment } = renderResponsive(
 			<table>
 				<tbody>
 					<TransactionRow
@@ -161,6 +160,7 @@ describe("TransactionRow", () => {
 					/>
 				</tbody>
 			</table>,
+			"xl",
 		);
 
 		expect(asFragment()).toMatchSnapshot();
@@ -200,12 +200,13 @@ describe("TransactionRow", () => {
 	});
 
 	it("should send default exchange currency if not provided", () => {
-		render(
+		renderResponsive(
 			<table>
 				<tbody>
 					<TransactionRow transaction={fixture} profile={profile} onClick={() => {}} />
 				</tbody>
 			</table>,
+			"xl",
 		);
 
 		expect(screen.getByTestId("TransactionRow__exchange-currency")).toHaveTextContent("0");

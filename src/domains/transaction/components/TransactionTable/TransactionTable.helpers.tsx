@@ -56,7 +56,7 @@ export const useTransactionTableColumns = ({ coin, hideSender }: { coin?: string
 				accessor: () => "fiatValue",
 				className: "justify-end",
 				disableSortBy: true,
-				headerClassName: `no-border whitespace-nowrap hidden lg:table-cell ${hideSender ? "" : "pl-0! xl:min-w-28"}`,
+				headerClassName: `no-border whitespace-nowrap hidden xl:table-cell ${hideSender ? "" : "pl-0! xl:min-w-28"}`,
 				noRoundedBorders: true,
 			},
 		];
