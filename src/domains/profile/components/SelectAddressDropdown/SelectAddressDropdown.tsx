@@ -8,6 +8,7 @@ import { useFormField } from "@/app/components/Form/useFormField";
 import { Select } from "@/app/components/SelectDropdown";
 import { TruncateEnd } from "@/app/components/TruncateEnd";
 import { useWalletAlias } from "@/app/hooks/use-wallet-alias";
+import { Icon } from "@/app/components/Icon";
 
 type SelectAddressDropdownProperties = {
 	wallet?: Contracts.IReadWriteWallet;
@@ -53,10 +54,21 @@ const OptionLabel = ({
 					"text-theme-secondary-500 dark:text-theme-secondary-700": alias,
 					"text-theme-text": !alias,
 				})}
-				walletNameClass={cn("leading-[17px] sm:leading-5 text-theme-text text-sm sm:text-base", {
+				walletNameClass={cn("leading-[17px] sm:leading-5  text-sm sm:text-base", {
 					"text-theme-primary-600": option.isSelected,
+					"text-theme-secondary-700 dark:text-theme-secondary-600": !option.isSelected,
 				})}
 			/>
+
+			<div className="h-4 w-4">
+				{option.isSelected && (
+					<Icon
+						name="CheckmarkDouble"
+						size="md"
+						className="text-theme-primary-600 dark:text-theme-secondary-200"
+					/>
+				)}
+			</div>
 		</div>
 	);
 };
