@@ -78,7 +78,9 @@ export const ReviewStep = ({
 							<DetailTitle className="w-auto sm:min-w-40">{t("COMMON.CATEGORY")}</DetailTitle>
 							<div className="bg-theme-secondary-200 dark:border-theme-secondary-800 flex items-center rounded px-1 py-[3px] dark:border dark:bg-transparent">
 								<span className="text-theme-secondary-700 dark:text-theme-secondary-500 text-[12px] leading-[15px] font-semibold">
-									{t("TRANSACTION.TRANSACTION_TYPES.VALIDATOR_REGISTRATION")}
+									{wallet.isValidator()
+										? t("TRANSACTION.TRANSACTION_TYPES.UPDATE_VALIDATOR")
+										: t("TRANSACTION.TRANSACTION_TYPES.VALIDATOR_REGISTRATION")}
 								</span>
 							</div>
 						</div>
