@@ -1,24 +1,20 @@
 import { IProfile } from "./contracts.js";
-import { WalletReleaseNotificationService } from "./notification.releases.service.js";
 import { NotificationRepository } from "./notification.repository";
 import {
 	INotificationRepository,
 	INotificationType,
 	IProfileNotificationService,
 	IProfileTransactionNotificationService,
-	IWalletReleaseNotificationService,
 } from "./notification.repository.contract.js";
 import { ProfileTransactionNotificationService } from "./notification.transactions.service.js";
 
 export class ProfileNotificationService implements IProfileNotificationService {
 	readonly #transactions: IProfileTransactionNotificationService;
-	readonly #releases: IWalletReleaseNotificationService;
 	readonly #notificationRepository: INotificationRepository;
 
 	public constructor(profile: IProfile) {
 		this.#notificationRepository = new NotificationRepository(profile);
 		this.#transactions = new ProfileTransactionNotificationService(profile, this.#notificationRepository);
-		this.#releases = new WalletReleaseNotificationService(this.#notificationRepository);
 	}
 
 	/** {@inheritDoc IProfileNotificationService.all} */
@@ -61,10 +57,6 @@ export class ProfileNotificationService implements IProfileNotificationService {
 		return this.#transactions;
 	}
 
-	/** {@inheritDoc IProfileNotificationService.releases} */
-	public releases(): IWalletReleaseNotificationService {
-		return this.#releases;
-	}
 
 	/** {@inheritDoc IProfileNotificationService.filterByType} */
 	public filterByType(type: INotificationType) {

@@ -497,6 +497,7 @@ export const t = (key: string, options?: any) => {
 export const test = baseTest.extend<{
 	env: Environment;
 	profile: Contracts.IProfile;
+	passwordProtectedProfile: Contracts.IProfile;
 }>({
 	env: [async ({ }, use) => {
 		const environment = environmentWithMocks()
