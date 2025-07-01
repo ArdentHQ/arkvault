@@ -728,7 +728,7 @@ exports[`Dashboard > should render 1`] = `
                     Viewing:
                   </p>
                   <div
-                    class="rounded-r"
+                    class="rounded-r cursor-pointer"
                     data-testid="ShowAddressesPanel"
                     tabindex="0"
                   >
@@ -736,10 +736,56 @@ exports[`Dashboard > should render 1`] = `
                       class="flex items-center gap-1"
                     >
                       <div
-                        class="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 min-w-0"
                       >
-                        Multiple addresses (1)
+                        <span
+                          class="font-semibold text-base text-sm leading-[17px] sm:text-base sm:leading-5 text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
+                          data-testid="Address__alias"
+                        >
+                          <span
+                            class="no-ligatures transition-colors duration-200"
+                            data-testid="TruncateEnd"
+                          >
+                            Mainsail Wallet 1
+                          </span>
+                        </span>
                       </div>
+                      <button
+                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed hover:text-theme-primary-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 dark:hover:bg-theme-dark-700 text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 h-6 w-6"
+                        type="button"
+                      >
+                        <div
+                          class="flex items-center space-x-2"
+                        >
+                          <div>
+                            <div
+                              style="height: 26px; width: 26px;"
+                            >
+                              <svg
+                                fill="none"
+                                style="height: 100%; width: 100%;"
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M14.4016 14.3984L12.1146 16.7502C12.0998 16.7655 12.0822 16.7776 12.0628 16.7859C12.0434 16.7942 12.0226 16.7984 12.0016 16.7984C11.9806 16.7984 11.9598 16.7942 11.9404 16.7859C11.921 16.7776 11.9033 16.7655 11.8885 16.7502L9.60156 14.3984"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="1.6"
+                                />
+                                <path
+                                  d="M9.60234 9.60156L11.8893 7.24978C11.9041 7.23449 11.9217 7.22237 11.9411 7.21409C11.9605 7.20582 11.9813 7.20156 12.0023 7.20156C12.0233 7.20156 12.0441 7.20582 12.0635 7.21409C12.0829 7.22237 12.1006 7.23449 12.1154 7.24978L14.4023 9.60156"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="1.6"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -1084,7 +1130,7 @@ exports[`Dashboard > should render 1`] = `
                           class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-dark-200 md-lg:block dim:text-theme-dim-200 hidden"
                           data-testid="Amount"
                         >
-                          45 BTC
+                          0 BTC
                         </span>
                       </div>
                     </div>
@@ -1170,7 +1216,7 @@ exports[`Dashboard > should render 1`] = `
                       class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 mb-3 flex w-full flex-col items-start justify-between gap-0 overflow-hidden rounded border md:mb-0 md:flex-row md:items-center md:gap-2 md:rounded-none md:border-none"
                     >
                       <div
-                        class="bg-theme-secondary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 md:dim:bg-transparent flex w-full flex-row items-center gap-2 p-3 text-sm leading-[17px] font-semibold md:w-auto md:bg-transparent md:p-0 md:text-base md:leading-5 md:dark:bg-transparent"
+                        class="bg-theme-secondary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 md:dim:bg-transparent flex w-full flex-1 flex-row items-center gap-2 p-3 text-sm leading-[17px] font-semibold md:w-auto md:bg-transparent md:p-0 md:text-base md:leading-5 md:dark:bg-transparent"
                       >
                         <p
                           class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm md:text-base md:leading-5"
@@ -1178,7 +1224,7 @@ exports[`Dashboard > should render 1`] = `
                           Voting for
                         </p>
                         <div
-                          class="xs:max-w-32 max-w-28 truncate sm:max-w-40 md:max-w-48"
+                          class="xs:max-w-32 max-w-28 flex-1 truncate sm:max-w-40 md:max-w-60"
                         >
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -1193,7 +1239,7 @@ exports[`Dashboard > should render 1`] = `
                         </div>
                       </div>
                       <div
-                        class="flex flex-col gap-2 px-4 py-3 text-base leading-5 font-semibold md:flex-row md:px-0 md:py-0"
+                        class="flex flex-col gap-2 px-4 py-3 text-base leading-5 font-semibold md:flex-row md:items-center md:px-0 md:py-0"
                       >
                         <p
                           class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm md:text-base md:leading-5"
@@ -1353,8 +1399,95 @@ exports[`Dashboard > should render 1`] = `
                     </span>
                   </span>
                 </button>
+                <button
+                  aria-selected="false"
+                  class="tab-button rounded px-3 py-1.5 text-base leading-5 font-semibold transition-all md:rounded-lg"
+                  data-ring-focus-margin="-mx-3"
+                  data-testid="tabs__tab-button-votes"
+                  role="tab"
+                  tabindex="-1"
+                  type="button"
+                >
+                  <span>
+                    <span
+                      class="whitespace-nowrap"
+                    >
+                      Voting
+                    </span>
+                  </span>
+                </button>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="border-b py-8! w-full py-4 first:pt-8 last:pb-8 md:bg-theme-background md:dark:bg-theme-secondary-background md:dim:bg-theme-secondary-background border-transparent dark:border-transaparent md:border-theme-secondary-300 md:dark:border-transparent md:dim:border-transparent hasBorder md:hidden hidden"
+      >
+        <div
+          class="mx-auto px-6 md:px-10 lg:container md:-my-2 w-full"
+        >
+          <div
+            class="-mt-4 flex w-full flex-col items-center md:mt-0 md:flex-row md:items-center"
+            data-testid="WalletVote"
+          >
+            <div
+              class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 mb-3 flex w-full flex-col items-start justify-between gap-0 overflow-hidden rounded border md:mb-0 md:flex-row md:items-center md:gap-2 md:rounded-none md:border-none"
+            >
+              <div
+                class="bg-theme-secondary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 md:dim:bg-transparent flex w-full flex-1 flex-row items-center gap-2 p-3 text-sm leading-[17px] font-semibold md:w-auto md:bg-transparent md:p-0 md:text-base md:leading-5 md:dark:bg-transparent"
+              >
+                <p
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm md:text-base md:leading-5"
+                >
+                  Voting for
+                </p>
+                <div
+                  class="xs:max-w-32 max-w-28 flex-1 truncate sm:max-w-40 md:max-w-60"
+                >
+                  <div
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                  >
+                    <span
+                      class="no-ligatures min-w-0 overflow-hidden dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm md:text-base md:leading-5 font-semibold text-base"
+                      data-testid="Address__address"
+                    >
+                      0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex flex-col gap-2 px-4 py-3 text-base leading-5 font-semibold md:flex-row md:items-center md:px-0 md:py-0"
+              >
+                <p
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm md:text-base md:leading-5"
+                >
+                  Rank
+                </p>
+                <p
+                  class="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 mb-2 text-sm font-semibold md:mb-0 md:text-base md:leading-5"
+                >
+                  #21
+                </p>
+                <p
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm md:hidden"
+                >
+                  Validator Status
+                </p>
+                <div
+                  class="font-semibold overflow-hidden no-ligatures px-1 border-2 rounded bg-theme-success-100 text-theme-success-700 dark:border dark:bg-transparent dark:text-theme-success-500 dim:text-theme-success-500 dark:border-theme-success-800 dim:border-theme-success-800 flex h-fit w-fit items-center justify-center border-none py-0.5 text-xs dark:border-solid"
+                >
+                  Active
+                </div>
+                <div
+                  class="relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-s-theme-dark-700 dim:border-s-theme-dim-700 mr-3 ml-1 hidden h-5 p-0 md:flex"
+                />
+              </div>
+            </div>
+            <div
+              class="w-full md:w-auto md:max-md:self-end"
+            />
           </div>
         </div>
       </div>
@@ -1735,7 +1868,7 @@ exports[`Dashboard > should render 1`] = `
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border whitespace-nowrap hidden lg:table-cell"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border whitespace-nowrap hidden xl:table-cell"
                           colspan="1"
                           data-testid="table__th--5"
                           role="columnheader"
@@ -1786,7 +1919,7 @@ exports[`Dashboard > should render 1`] = `
                                         class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
                                         data-testid="TransactionRow__id"
                                       >
-                                        2dc48…5cb5f
+                                        2dc…b5f
                                       </span>
                                       <div
                                         class="text-theme-danger-700 dark:text-theme-danger-info-border dim:text-theme-danger-info-border"
@@ -2189,7 +2322,7 @@ exports[`Dashboard > should render 1`] = `
                           </div>
                         </td>
                         <td
-                          class="hidden lg:table-cell"
+                          class="hidden xl:table-cell"
                         >
                           <div
                             class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3"
@@ -2230,12 +2363,36 @@ exports[`Dashboard > should render 1`] = `
                           <div
                             class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-11 xl:my-0 xl:pt-3 min-h-14 my-1 pt-2"
                           >
-                            <span
-                              class="whitespace-nowrap"
-                              data-testid="Amount"
+                            <div
+                              class="flex w-40 flex-col items-end gap-1"
                             >
-                              0 BTC
-                            </span>
+                              <div
+                                class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-base flex w-fit items-center justify-center px-1.5 h-[21px] rounded dark:border"
+                                data-testid="AmountLabel__wrapper"
+                              >
+                                <div
+                                  class="flex h-full items-center space-x-1"
+                                >
+                                  <span
+                                    class="whitespace-nowrap text-sm"
+                                    data-testid="Amount"
+                                  >
+                                    + 2 ARK
+                                  </span>
+                                </div>
+                              </div>
+                              <span
+                                class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
+                                data-testid="TransactionRow__exchange-currency"
+                              >
+                                <span
+                                  class="whitespace-nowrap"
+                                  data-testid="Amount"
+                                >
+                                  0 BTC
+                                </span>
+                              </span>
+                            </div>
                           </div>
                         </td>
                       </tr>
@@ -2270,7 +2427,7 @@ exports[`Dashboard > should render 1`] = `
                                         class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
                                         data-testid="TransactionRow__id"
                                       >
-                                        2c0e9…d4364
+                                        2c0…364
                                       </span>
                                       <div
                                         class="text-theme-danger-700 dark:text-theme-danger-info-border dim:text-theme-danger-info-border"
@@ -2652,7 +2809,7 @@ exports[`Dashboard > should render 1`] = `
                           </div>
                         </td>
                         <td
-                          class="hidden lg:table-cell"
+                          class="hidden xl:table-cell"
                         >
                           <div
                             class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3"
@@ -2693,12 +2850,36 @@ exports[`Dashboard > should render 1`] = `
                           <div
                             class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-11 xl:my-0 xl:pt-3 min-h-14 my-1 pt-2"
                           >
-                            <span
-                              class="whitespace-nowrap"
-                              data-testid="Amount"
+                            <div
+                              class="flex w-40 flex-col items-end gap-1"
                             >
-                              0 BTC
-                            </span>
+                              <div
+                                class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-base flex w-fit items-center justify-center px-1.5 h-[21px] rounded dark:border"
+                                data-testid="AmountLabel__wrapper"
+                              >
+                                <div
+                                  class="flex h-full items-center space-x-1"
+                                >
+                                  <span
+                                    class="whitespace-nowrap text-sm"
+                                    data-testid="Amount"
+                                  >
+                                    - 0.00254046 ARK
+                                  </span>
+                                </div>
+                              </div>
+                              <span
+                                class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
+                                data-testid="TransactionRow__exchange-currency"
+                              >
+                                <span
+                                  class="whitespace-nowrap"
+                                  data-testid="Amount"
+                                >
+                                  0 BTC
+                                </span>
+                              </span>
+                            </div>
                           </div>
                         </td>
                       </tr>
@@ -2733,7 +2914,7 @@ exports[`Dashboard > should render 1`] = `
                                         class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
                                         data-testid="TransactionRow__id"
                                       >
-                                        11701…d2e22
+                                        117…e22
                                       </span>
                                       <div
                                         class="text-theme-danger-700 dark:text-theme-danger-info-border dim:text-theme-danger-info-border"
@@ -3115,7 +3296,7 @@ exports[`Dashboard > should render 1`] = `
                           </div>
                         </td>
                         <td
-                          class="hidden lg:table-cell"
+                          class="hidden xl:table-cell"
                         >
                           <div
                             class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3"
@@ -3156,12 +3337,36 @@ exports[`Dashboard > should render 1`] = `
                           <div
                             class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-11 xl:my-0 xl:pt-3 min-h-14 my-1 pt-2"
                           >
-                            <span
-                              class="whitespace-nowrap"
-                              data-testid="Amount"
+                            <div
+                              class="flex w-40 flex-col items-end gap-1"
                             >
-                              0 BTC
-                            </span>
+                              <div
+                                class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-base flex w-fit items-center justify-center px-1.5 h-[21px] rounded dark:border"
+                                data-testid="AmountLabel__wrapper"
+                              >
+                                <div
+                                  class="flex h-full items-center space-x-1"
+                                >
+                                  <span
+                                    class="whitespace-nowrap text-sm"
+                                    data-testid="Amount"
+                                  >
+                                    - 0.001 ARK
+                                  </span>
+                                </div>
+                              </div>
+                              <span
+                                class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
+                                data-testid="TransactionRow__exchange-currency"
+                              >
+                                <span
+                                  class="whitespace-nowrap"
+                                  data-testid="Amount"
+                                >
+                                  0 BTC
+                                </span>
+                              </span>
+                            </div>
                           </div>
                         </td>
                       </tr>
@@ -3196,7 +3401,7 @@ exports[`Dashboard > should render 1`] = `
                                         class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
                                         data-testid="TransactionRow__id"
                                       >
-                                        1e686…c4b30
+                                        1e6…b30
                                       </span>
                                       <div
                                         class="text-theme-danger-700 dark:text-theme-danger-info-border dim:text-theme-danger-info-border"
@@ -3578,7 +3783,7 @@ exports[`Dashboard > should render 1`] = `
                           </div>
                         </td>
                         <td
-                          class="hidden lg:table-cell"
+                          class="hidden xl:table-cell"
                         >
                           <div
                             class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3"
@@ -3619,12 +3824,36 @@ exports[`Dashboard > should render 1`] = `
                           <div
                             class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-11 xl:my-0 xl:pt-3 min-h-14 my-1 pt-2"
                           >
-                            <span
-                              class="whitespace-nowrap"
-                              data-testid="Amount"
+                            <div
+                              class="flex w-40 flex-col items-end gap-1"
                             >
-                              0 BTC
-                            </span>
+                              <div
+                                class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-base flex w-fit items-center justify-center px-1.5 h-[21px] rounded dark:border"
+                                data-testid="AmountLabel__wrapper"
+                              >
+                                <div
+                                  class="flex h-full items-center space-x-1"
+                                >
+                                  <span
+                                    class="whitespace-nowrap text-sm"
+                                    data-testid="Amount"
+                                  >
+                                    - 0.001 ARK
+                                  </span>
+                                </div>
+                              </div>
+                              <span
+                                class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
+                                data-testid="TransactionRow__exchange-currency"
+                              >
+                                <span
+                                  class="whitespace-nowrap"
+                                  data-testid="Amount"
+                                >
+                                  0 BTC
+                                </span>
+                              </span>
+                            </div>
                           </div>
                         </td>
                       </tr>
@@ -3659,7 +3888,7 @@ exports[`Dashboard > should render 1`] = `
                                         class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
                                         data-testid="TransactionRow__id"
                                       >
-                                        e9ba7…01e2e
+                                        e9b…e2e
                                       </span>
                                       <div
                                         class="text-theme-danger-700 dark:text-theme-danger-info-border dim:text-theme-danger-info-border"
@@ -4041,7 +4270,7 @@ exports[`Dashboard > should render 1`] = `
                           </div>
                         </td>
                         <td
-                          class="hidden lg:table-cell"
+                          class="hidden xl:table-cell"
                         >
                           <div
                             class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3"
@@ -4082,12 +4311,36 @@ exports[`Dashboard > should render 1`] = `
                           <div
                             class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-11 xl:my-0 xl:pt-3 min-h-14 my-1 pt-2"
                           >
-                            <span
-                              class="whitespace-nowrap"
-                              data-testid="Amount"
+                            <div
+                              class="flex w-40 flex-col items-end gap-1"
                             >
-                              0 BTC
-                            </span>
+                              <div
+                                class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-base flex w-fit items-center justify-center px-1.5 h-[21px] rounded dark:border"
+                                data-testid="AmountLabel__wrapper"
+                              >
+                                <div
+                                  class="flex h-full items-center space-x-1"
+                                >
+                                  <span
+                                    class="whitespace-nowrap text-sm"
+                                    data-testid="Amount"
+                                  >
+                                    - 0.001 ARK
+                                  </span>
+                                </div>
+                              </div>
+                              <span
+                                class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
+                                data-testid="TransactionRow__exchange-currency"
+                              >
+                                <span
+                                  class="whitespace-nowrap"
+                                  data-testid="Amount"
+                                >
+                                  0 BTC
+                                </span>
+                              </span>
+                            </div>
                           </div>
                         </td>
                       </tr>
@@ -4122,7 +4375,7 @@ exports[`Dashboard > should render 1`] = `
                                         class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
                                         data-testid="TransactionRow__id"
                                       >
-                                        f40aa…68fb2
+                                        f40…fb2
                                       </span>
                                       <div
                                         class="text-theme-danger-700 dark:text-theme-danger-info-border dim:text-theme-danger-info-border"
@@ -4504,7 +4757,7 @@ exports[`Dashboard > should render 1`] = `
                           </div>
                         </td>
                         <td
-                          class="hidden lg:table-cell"
+                          class="hidden xl:table-cell"
                         >
                           <div
                             class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3"
@@ -4545,12 +4798,36 @@ exports[`Dashboard > should render 1`] = `
                           <div
                             class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-11 xl:my-0 xl:pt-3 min-h-14 my-1 pt-2"
                           >
-                            <span
-                              class="whitespace-nowrap"
-                              data-testid="Amount"
+                            <div
+                              class="flex w-40 flex-col items-end gap-1"
                             >
-                              0 BTC
-                            </span>
+                              <div
+                                class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-base flex w-fit items-center justify-center px-1.5 h-[21px] rounded dark:border"
+                                data-testid="AmountLabel__wrapper"
+                              >
+                                <div
+                                  class="flex h-full items-center space-x-1"
+                                >
+                                  <span
+                                    class="whitespace-nowrap text-sm"
+                                    data-testid="Amount"
+                                  >
+                                    - 0.001 ARK
+                                  </span>
+                                </div>
+                              </div>
+                              <span
+                                class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
+                                data-testid="TransactionRow__exchange-currency"
+                              >
+                                <span
+                                  class="whitespace-nowrap"
+                                  data-testid="Amount"
+                                >
+                                  0 BTC
+                                </span>
+                              </span>
+                            </div>
                           </div>
                         </td>
                       </tr>
@@ -4585,7 +4862,7 @@ exports[`Dashboard > should render 1`] = `
                                         class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
                                         data-testid="TransactionRow__id"
                                       >
-                                        45117…f880e
+                                        451…80e
                                       </span>
                                       <div
                                         class="text-theme-danger-700 dark:text-theme-danger-info-border dim:text-theme-danger-info-border"
@@ -4967,7 +5244,7 @@ exports[`Dashboard > should render 1`] = `
                           </div>
                         </td>
                         <td
-                          class="hidden lg:table-cell"
+                          class="hidden xl:table-cell"
                         >
                           <div
                             class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3"
@@ -5008,12 +5285,36 @@ exports[`Dashboard > should render 1`] = `
                           <div
                             class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-11 xl:my-0 xl:pt-3 min-h-14 my-1 pt-2"
                           >
-                            <span
-                              class="whitespace-nowrap"
-                              data-testid="Amount"
+                            <div
+                              class="flex w-40 flex-col items-end gap-1"
                             >
-                              0 BTC
-                            </span>
+                              <div
+                                class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-base flex w-fit items-center justify-center px-1.5 h-[21px] rounded dark:border"
+                                data-testid="AmountLabel__wrapper"
+                              >
+                                <div
+                                  class="flex h-full items-center space-x-1"
+                                >
+                                  <span
+                                    class="whitespace-nowrap text-sm"
+                                    data-testid="Amount"
+                                  >
+                                    - 0.001 ARK
+                                  </span>
+                                </div>
+                              </div>
+                              <span
+                                class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
+                                data-testid="TransactionRow__exchange-currency"
+                              >
+                                <span
+                                  class="whitespace-nowrap"
+                                  data-testid="Amount"
+                                >
+                                  0 BTC
+                                </span>
+                              </span>
+                            </div>
                           </div>
                         </td>
                       </tr>
@@ -5048,7 +5349,7 @@ exports[`Dashboard > should render 1`] = `
                                         class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
                                         data-testid="TransactionRow__id"
                                       >
-                                        d1dc3…450c5
+                                        d1d…0c5
                                       </span>
                                       <div
                                         class="text-theme-danger-700 dark:text-theme-danger-info-border dim:text-theme-danger-info-border"
@@ -5451,7 +5752,7 @@ exports[`Dashboard > should render 1`] = `
                           </div>
                         </td>
                         <td
-                          class="hidden lg:table-cell"
+                          class="hidden xl:table-cell"
                         >
                           <div
                             class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3"
@@ -5492,12 +5793,36 @@ exports[`Dashboard > should render 1`] = `
                           <div
                             class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-11 xl:my-0 xl:pt-3 min-h-14 my-1 pt-2"
                           >
-                            <span
-                              class="whitespace-nowrap"
-                              data-testid="Amount"
+                            <div
+                              class="flex w-40 flex-col items-end gap-1"
                             >
-                              0 BTC
-                            </span>
+                              <div
+                                class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-base flex w-fit items-center justify-center px-1.5 h-[21px] rounded dark:border"
+                                data-testid="AmountLabel__wrapper"
+                              >
+                                <div
+                                  class="flex h-full items-center space-x-1"
+                                >
+                                  <span
+                                    class="whitespace-nowrap text-sm"
+                                    data-testid="Amount"
+                                  >
+                                    - 0.200105 ARK
+                                  </span>
+                                </div>
+                              </div>
+                              <span
+                                class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
+                                data-testid="TransactionRow__exchange-currency"
+                              >
+                                <span
+                                  class="whitespace-nowrap"
+                                  data-testid="Amount"
+                                >
+                                  0 BTC
+                                </span>
+                              </span>
+                            </div>
                           </div>
                         </td>
                       </tr>
@@ -5532,7 +5857,7 @@ exports[`Dashboard > should render 1`] = `
                                         class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
                                         data-testid="TransactionRow__id"
                                       >
-                                        8f26a…5cacc
+                                        8f2…acc
                                       </span>
                                       <div
                                         class="text-theme-danger-700 dark:text-theme-danger-info-border dim:text-theme-danger-info-border"
@@ -5776,7 +6101,7 @@ exports[`Dashboard > should render 1`] = `
                           </div>
                         </td>
                         <td
-                          class="hidden lg:table-cell"
+                          class="hidden xl:table-cell"
                         >
                           <div
                             class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3"
@@ -5817,12 +6142,36 @@ exports[`Dashboard > should render 1`] = `
                           <div
                             class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-11 xl:my-0 xl:pt-3 min-h-14 my-1 pt-2"
                           >
-                            <span
-                              class="whitespace-nowrap"
-                              data-testid="Amount"
+                            <div
+                              class="flex w-40 flex-col items-end gap-1"
                             >
-                              0 BTC
-                            </span>
+                              <div
+                                class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-base flex w-fit items-center justify-center px-1.5 h-[21px] rounded dark:border"
+                                data-testid="AmountLabel__wrapper"
+                              >
+                                <div
+                                  class="flex h-full items-center space-x-1"
+                                >
+                                  <span
+                                    class="whitespace-nowrap text-sm"
+                                    data-testid="Amount"
+                                  >
+                                    - 1.50102853 ARK
+                                  </span>
+                                </div>
+                              </div>
+                              <span
+                                class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
+                                data-testid="TransactionRow__exchange-currency"
+                              >
+                                <span
+                                  class="whitespace-nowrap"
+                                  data-testid="Amount"
+                                >
+                                  0 BTC
+                                </span>
+                              </span>
+                            </div>
                           </div>
                         </td>
                       </tr>
@@ -5857,7 +6206,7 @@ exports[`Dashboard > should render 1`] = `
                                         class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
                                         data-testid="TransactionRow__id"
                                       >
-                                        11051…628f8
+                                        110…8f8
                                       </span>
                                       <div
                                         class="text-theme-danger-700 dark:text-theme-danger-info-border dim:text-theme-danger-info-border"
@@ -6264,7 +6613,7 @@ exports[`Dashboard > should render 1`] = `
                           </div>
                         </td>
                         <td
-                          class="hidden lg:table-cell"
+                          class="hidden xl:table-cell"
                         >
                           <div
                             class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3"
@@ -6305,12 +6654,36 @@ exports[`Dashboard > should render 1`] = `
                           <div
                             class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-11 xl:my-0 xl:pt-3 min-h-14 my-1 pt-2"
                           >
-                            <span
-                              class="whitespace-nowrap"
-                              data-testid="Amount"
+                            <div
+                              class="flex w-40 flex-col items-end gap-1"
                             >
-                              0 BTC
-                            </span>
+                              <div
+                                class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-base flex w-fit items-center justify-center px-1.5 h-[21px] rounded dark:border"
+                                data-testid="AmountLabel__wrapper"
+                              >
+                                <div
+                                  class="flex h-full items-center space-x-1"
+                                >
+                                  <span
+                                    class="whitespace-nowrap text-sm"
+                                    data-testid="Amount"
+                                  >
+                                    + 4.98 ARK
+                                  </span>
+                                </div>
+                              </div>
+                              <span
+                                class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
+                                data-testid="TransactionRow__exchange-currency"
+                              >
+                                <span
+                                  class="whitespace-nowrap"
+                                  data-testid="Amount"
+                                >
+                                  0 BTC
+                                </span>
+                              </span>
+                            </div>
                           </div>
                         </td>
                       </tr>

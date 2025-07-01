@@ -331,8 +331,9 @@ export const ValidatorRow = ({
 				)}
 			>
 				<Address
+					walletName={validator.username()}
 					truncateOnTable
-					address={validator.address()}
+					address={validator.username() ? undefined : validator.address()}
 					wrapperClass="justify-start"
 					addressClass="leading-[17px] text-sm w-full"
 				/>

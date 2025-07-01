@@ -3,8 +3,58 @@ import { IProfile } from "@/app/lib/profiles/profile.contract";
 import { Networks } from "@/app/lib/mainsail";
 import { debounceAsync } from "@/utils/debounce";
 import { ValidateResult } from "react-hook-form";
-
+import { Contracts, Helpers } from "@/app/lib/profiles";
+import { BigNumber } from "@/app/lib/helpers";
+import { UnitConverter } from "@arkecosystem/typescript-crypto";
 export const validatorRegistration = (t: any) => ({
+	lockedFee: (wallet: Contracts.IReadWriteWallet | undefined, getValues: () => object) => ({
+		required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
+			field: t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.LOCKED_FEE"),
+		}),
+		validate: {
+			insufficientBalance: (lockedFee: number) => {
+				const { gasPrice, gasLimit } = getValues() as {
+					gasPrice: BigNumber | undefined;
+					gasLimit: BigNumber | undefined;
+				};
+
+				const fees = UnitConverter.formatUnits(
+					(gasPrice ?? BigNumber.ZERO).times(gasLimit ?? BigNumber.ZERO).toString(),
+					"gwei",
+				);
+
+				if (lockedFee + fees > (wallet?.balance() ?? 0)) {
+					if (fees === 0) {
+						return t(
+							"TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.INSUFFICIENT_BALANCE_FOR_LOCKED_FEE",
+							{
+								balance: Helpers.Currency.format(wallet?.balance() ?? 0, wallet?.currency() ?? "ARK", {
+									withTicker: true,
+								}),
+								lockedFee: Helpers.Currency.format(lockedFee, wallet?.currency() ?? "ARK", {
+									withTicker: true,
+								}),
+							},
+						);
+					}
+
+					return t(
+						"TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.INSUFFICIENT_BALANCE_FOR_FEE_AND_LOCKED_FEE",
+						{
+							fee: Helpers.Currency.format(fees, wallet?.currency() ?? "ARK", {
+								withTicker: true,
+							}),
+							lockedFee: Helpers.Currency.format(lockedFee, wallet?.currency() ?? "ARK", {
+								withTicker: true,
+							}),
+						},
+					);
+				}
+
+				return true;
+			},
+		},
+	}),
 	validatorPublicKey: (profile: IProfile, network: Networks.Network) => ({
 		maxLength: {
 			message: t("COMMON.VALIDATION.MAX_LENGTH", {

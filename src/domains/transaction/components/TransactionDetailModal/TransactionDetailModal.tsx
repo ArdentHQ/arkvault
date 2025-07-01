@@ -44,7 +44,6 @@ export const TransactionDetailContent = ({
 		transaction.isValidatorRegistration() || transaction.isValidatorResignation();
 
 	const { votes, unvotes } = useTransactionVotingWallets({
-		network: transaction.wallet().network(),
 		profile,
 		transaction,
 	});

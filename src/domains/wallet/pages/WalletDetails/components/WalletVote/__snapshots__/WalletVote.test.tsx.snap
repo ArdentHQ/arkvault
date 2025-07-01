@@ -233,7 +233,7 @@ exports[`WalletVote > should render as all resigned 1`] = `
       class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 mb-3 flex w-full flex-col items-start justify-between gap-0 overflow-hidden rounded border md:mb-0 md:flex-row md:items-center md:gap-2 md:rounded-none md:border-none"
     >
       <div
-        class="bg-theme-secondary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 md:dim:bg-transparent flex w-full flex-row items-center gap-2 p-3 text-sm leading-[17px] font-semibold md:w-auto md:bg-transparent md:p-0 md:text-base md:leading-5 md:dark:bg-transparent"
+        class="bg-theme-secondary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 md:dim:bg-transparent flex w-full flex-1 flex-row items-center gap-2 p-3 text-sm leading-[17px] font-semibold md:w-auto md:bg-transparent md:p-0 md:text-base md:leading-5 md:dark:bg-transparent"
       >
         <p
           class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm md:text-base md:leading-5"
@@ -241,7 +241,7 @@ exports[`WalletVote > should render as all resigned 1`] = `
           Voting for
         </p>
         <div
-          class="xs:max-w-32 max-w-28 truncate sm:max-w-40 md:max-w-48"
+          class="xs:max-w-32 max-w-28 flex-1 truncate sm:max-w-40 md:max-w-60"
         >
           <div
             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -256,7 +256,7 @@ exports[`WalletVote > should render as all resigned 1`] = `
         </div>
       </div>
       <div
-        class="flex flex-col gap-2 px-4 py-3 text-base leading-5 font-semibold md:flex-row md:px-0 md:py-0"
+        class="flex flex-col gap-2 px-4 py-3 text-base leading-5 font-semibold md:flex-row md:items-center md:px-0 md:py-0"
       >
         <p
           class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm md:text-base md:leading-5"
@@ -986,7 +986,7 @@ exports[`WalletVote > single vote networks > should render a vote for a standby 
       class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 mb-3 flex w-full flex-col items-start justify-between gap-0 overflow-hidden rounded border md:mb-0 md:flex-row md:items-center md:gap-2 md:rounded-none md:border-none"
     >
       <div
-        class="bg-theme-secondary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 md:dim:bg-transparent flex w-full flex-row items-center gap-2 p-3 text-sm leading-[17px] font-semibold md:w-auto md:bg-transparent md:p-0 md:text-base md:leading-5 md:dark:bg-transparent"
+        class="bg-theme-secondary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 md:dim:bg-transparent flex w-full flex-1 flex-row items-center gap-2 p-3 text-sm leading-[17px] font-semibold md:w-auto md:bg-transparent md:p-0 md:text-base md:leading-5 md:dark:bg-transparent"
       >
         <p
           class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm md:text-base md:leading-5"
@@ -994,7 +994,7 @@ exports[`WalletVote > single vote networks > should render a vote for a standby 
           Voting for
         </p>
         <div
-          class="xs:max-w-32 max-w-28 truncate sm:max-w-40 md:max-w-48"
+          class="xs:max-w-32 max-w-28 flex-1 truncate sm:max-w-40 md:max-w-60"
         >
           <div
             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -1009,7 +1009,7 @@ exports[`WalletVote > single vote networks > should render a vote for a standby 
         </div>
       </div>
       <div
-        class="flex flex-col gap-2 px-4 py-3 text-base leading-5 font-semibold md:flex-row md:px-0 md:py-0"
+        class="flex flex-col gap-2 px-4 py-3 text-base leading-5 font-semibold md:flex-row md:items-center md:px-0 md:py-0"
       >
         <p
           class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm md:text-base md:leading-5"
@@ -1053,7 +1053,7 @@ exports[`WalletVote > single vote networks > should render a vote for a validato
       class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 mb-3 flex w-full flex-col items-start justify-between gap-0 overflow-hidden rounded border md:mb-0 md:flex-row md:items-center md:gap-2 md:rounded-none md:border-none"
     >
       <div
-        class="bg-theme-secondary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 md:dim:bg-transparent flex w-full flex-row items-center gap-2 p-3 text-sm leading-[17px] font-semibold md:w-auto md:bg-transparent md:p-0 md:text-base md:leading-5 md:dark:bg-transparent"
+        class="bg-theme-secondary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 md:dim:bg-transparent flex w-full flex-1 flex-row items-center gap-2 p-3 text-sm leading-[17px] font-semibold md:w-auto md:bg-transparent md:p-0 md:text-base md:leading-5 md:dark:bg-transparent"
       >
         <p
           class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm md:text-base md:leading-5"
@@ -1061,7 +1061,7 @@ exports[`WalletVote > single vote networks > should render a vote for a validato
           Voting for
         </p>
         <div
-          class="xs:max-w-32 max-w-28 truncate sm:max-w-40 md:max-w-48"
+          class="xs:max-w-32 max-w-28 flex-1 truncate sm:max-w-40 md:max-w-60"
         >
           <div
             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -1076,7 +1076,7 @@ exports[`WalletVote > single vote networks > should render a vote for a validato
         </div>
       </div>
       <div
-        class="flex flex-col gap-2 px-4 py-3 text-base leading-5 font-semibold md:flex-row md:px-0 md:py-0"
+        class="flex flex-col gap-2 px-4 py-3 text-base leading-5 font-semibold md:flex-row md:items-center md:px-0 md:py-0"
       >
         <p
           class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm md:text-base md:leading-5"
@@ -1207,7 +1207,7 @@ exports[`WalletVote > single vote networks > should render a vote for an active 
       class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 mb-3 flex w-full flex-col items-start justify-between gap-0 overflow-hidden rounded border md:mb-0 md:flex-row md:items-center md:gap-2 md:rounded-none md:border-none"
     >
       <div
-        class="bg-theme-secondary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 md:dim:bg-transparent flex w-full flex-row items-center gap-2 p-3 text-sm leading-[17px] font-semibold md:w-auto md:bg-transparent md:p-0 md:text-base md:leading-5 md:dark:bg-transparent"
+        class="bg-theme-secondary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 md:dim:bg-transparent flex w-full flex-1 flex-row items-center gap-2 p-3 text-sm leading-[17px] font-semibold md:w-auto md:bg-transparent md:p-0 md:text-base md:leading-5 md:dark:bg-transparent"
       >
         <p
           class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm md:text-base md:leading-5"
@@ -1215,7 +1215,7 @@ exports[`WalletVote > single vote networks > should render a vote for an active 
           Voting for
         </p>
         <div
-          class="xs:max-w-32 max-w-28 truncate sm:max-w-40 md:max-w-48"
+          class="xs:max-w-32 max-w-28 flex-1 truncate sm:max-w-40 md:max-w-60"
         >
           <div
             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -1230,7 +1230,7 @@ exports[`WalletVote > single vote networks > should render a vote for an active 
         </div>
       </div>
       <div
-        class="flex flex-col gap-2 px-4 py-3 text-base leading-5 font-semibold md:flex-row md:px-0 md:py-0"
+        class="flex flex-col gap-2 px-4 py-3 text-base leading-5 font-semibold md:flex-row md:items-center md:px-0 md:py-0"
       >
         <p
           class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm md:text-base md:leading-5"

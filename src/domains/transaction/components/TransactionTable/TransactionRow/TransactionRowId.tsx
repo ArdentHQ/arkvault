@@ -8,7 +8,25 @@ import { Icon } from "@/app/components/Icon";
 import { Tooltip } from "@/app/components/Tooltip";
 
 export const TransactionRowId = ({ transaction }: { transaction: DTO.ExtendedConfirmedTransactionData }) => {
-	const { isLgAndAbove } = useBreakpoint();
+	const { isLgAndAbove, isMdAndAbove, isXs, isXl, isSmAndAbove } = useBreakpoint();
+
+	const maxCharacters = () => {
+		if (isXl) {
+			return 14;
+		}
+
+		if (isLgAndAbove) {
+			return 10;
+		}
+
+		if (isMdAndAbove) {
+			return 8;
+		}
+
+		if (isXs || isSmAndAbove) {
+			return 14;
+		}
+	};
 
 	return (
 		<div className="flex flex-col gap-1 font-semibold">
@@ -31,7 +49,7 @@ export const TransactionRowId = ({ transaction }: { transaction: DTO.ExtendedCon
 							<TruncateMiddle
 								className="text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
 								text={transaction.hash()}
-								maxChars={isLgAndAbove ? 14 : 12}
+								maxChars={maxCharacters()}
 								data-testid="TransactionRow__id"
 							/>
 

@@ -25,6 +25,10 @@ export class WalletData {
 		return this.data.address;
 	}
 
+	public isSelected(): boolean {
+		return this.data.isSelected === true;
+	}
+
 	public publicKey(): string | undefined {
 		return this.data.publicKey;
 	}
@@ -76,7 +80,7 @@ export class WalletData {
 			return false;
 		}
 
-		return !!this.#getProperty(["attributes.validatorPublicKey"]);
+		return this.#getProperty(["attributes.validatorPublicKey"]) !== undefined;
 	}
 
 	public validatorFee(): number | undefined {
@@ -108,6 +112,7 @@ export class WalletData {
 			isResignedDelegate: this.isResignedDelegate(),
 			isResignedValidator: this.isResignedValidator(),
 			isSecondSignature: this.isSecondSignature(),
+			isSelected: this.isSelected(),
 			isValidator: this.isValidator(),
 			nonce: this.nonce(),
 			publicKey: this.publicKey(),

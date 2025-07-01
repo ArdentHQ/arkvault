@@ -17,7 +17,6 @@ import { ProfilePaths } from "@/router/paths";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { ImportActionToolbar } from "@/domains/portfolio/components/ImportWallet/ImportAddressSidePanel.blocks";
 import { OptionsValue, useWalletImport } from "@/domains/wallet/hooks";
-import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
 
 export const LedgerTabs = ({
 	activeIndex = LedgerTabStep.ListenLedgerStep,
@@ -36,7 +35,6 @@ export const LedgerTabs = ({
 
 	const { formState, handleSubmit } = useFormContext();
 	const { isValid, isSubmitting } = formState;
-	const { setSelectedAddresses, selectedAddresses } = usePortfolio({ profile: activeProfile });
 
 	const [importedWallets, setImportedWallets] = useState<LedgerData[]>([]);
 	const [activeTab, setActiveTab] = useState<number>(activeIndex);
@@ -56,7 +54,7 @@ export const LedgerTabs = ({
 			setImportedWallets(wallets);
 
 			for (const network of activeProfile.availableNetworks()) {
-				const importedWallets = await Promise.all(
+				await Promise.all(
 					wallets.map(({ path, address }) =>
 						importWallet({
 							ledgerOptions: {
@@ -69,14 +67,9 @@ export const LedgerTabs = ({
 						}),
 					),
 				);
-
-				await setSelectedAddresses([
-					...selectedAddresses,
-					...importedWallets.map((wallet) => wallet.address()),
-				]);
 			}
 		},
-		[activeProfile, activeNetwork, selectedAddresses, listenDevice],
+		[activeProfile, activeNetwork, listenDevice],
 	);
 
 	const isNextDisabled = useMemo(() => isBusy || !isValid, [isBusy, isValid]);

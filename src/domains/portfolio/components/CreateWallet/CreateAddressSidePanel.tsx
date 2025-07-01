@@ -14,7 +14,6 @@ import { useTranslation } from "react-i18next";
 import { useActiveProfile } from "@/app/hooks";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { useWalletImport } from "@/domains/wallet/hooks";
-import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
 import { useForm } from "react-hook-form";
 import { assertNetwork, assertString, assertWallet } from "@/utils/assertions";
 import { getDefaultAlias } from "@/domains/wallet/utils/get-default-alias";
@@ -38,8 +37,6 @@ export const CreateAddressesSidePanel = ({
 	const [activeTab, setActiveTab] = useState<CreateStep>(CreateStep.WalletOverviewStep);
 	const { activeNetwork } = useActiveNetwork({ profile: activeProfile });
 	const { importWallets } = useWalletImport({ profile: activeProfile });
-
-	const { setSelectedAddresses, selectedAddresses } = usePortfolio({ profile: activeProfile });
 
 	const form = useForm<any>({
 		defaultValues: {
@@ -105,7 +102,8 @@ export const CreateAddressesSidePanel = ({
 
 		try {
 			const { mnemonic, wallet } = await generateWallet();
-			setSelectedAddresses([...selectedAddresses, wallet.address()]);
+			wallet.mutator().isSelected(true);
+
 			setValue("wallet", wallet, { shouldDirty: true, shouldValidate: true });
 			setValue("mnemonic", mnemonic, { shouldDirty: true, shouldValidate: true });
 			setActiveTab(CreateStep.WalletOverviewStep);

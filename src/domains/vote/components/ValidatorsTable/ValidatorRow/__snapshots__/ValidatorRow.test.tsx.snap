@@ -713,19 +713,17 @@ exports[`ValidatorRow > should render the selected vote 1`] = `
             <div
               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
             >
-              <div
-                class="relative grow leading-[17px] sm:leading-5 text-left"
+              <span
+                class="font-semibold text-base text-theme-text"
+                data-testid="Address__alias"
               >
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
-                  data-testid="Address__address"
+                  class="no-ligatures transition-colors duration-200"
+                  data-testid="TruncateEnd"
                 >
-                  0x03BC306C369A55c0336EB003bB07F29E5c150F36
+                  testusernaame
                 </span>
-                <span>
-                   
-                </span>
-              </div>
+              </span>
             </div>
           </div>
         </td>

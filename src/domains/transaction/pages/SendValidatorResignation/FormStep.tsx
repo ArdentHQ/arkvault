@@ -11,10 +11,10 @@ import { Icon, ThemeIcon } from "@/app/components/Icon";
 import { SelectAddress } from "@/domains/profile/components/SelectAddress";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { WalletCapabilities } from "@/domains/portfolio/lib/wallet.capabilities";
-import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
 import { Tooltip } from "@/app/components/Tooltip";
 import { Amount } from "@/app/components/Amount";
 import { useValidatorResignationLockedFee } from "./hooks/useValidatorResignationLockedFee";
+import { BigNumber } from "@/app/lib/helpers";
 
 interface FormStepProperties {
 	senderWallet?: ProfilesContracts.IReadWriteWallet;
@@ -24,9 +24,7 @@ interface FormStepProperties {
 
 export const FormStep = ({ senderWallet, profile, onWalletChange }: FormStepProperties) => {
 	const { t } = useTranslation();
-
 	const { activeNetwork: network } = useActiveNetwork({ profile });
-	const { allWallets } = usePortfolio({ profile });
 
 	const handleSelectSender = (address: any) => {
 		const newSenderWallet = profile.wallets().findByAddressWithNetwork(address, network.id());
@@ -81,9 +79,9 @@ export const FormStep = ({ senderWallet, profile, onWalletChange }: FormStepProp
 									}
 								: undefined
 						}
-						wallets={allWallets}
+						wallets={profile.wallets().values()}
 						profile={profile}
-						disabled={allWallets.length === 0}
+						disabled={profile.wallets().count() === 0}
 						onChange={handleSelectSender}
 						disableAction={(wallet) => !WalletCapabilities(wallet).canSendValidatorResignation()}
 					/>
@@ -118,38 +116,43 @@ export const FormStep = ({ senderWallet, profile, onWalletChange }: FormStepProp
 					</div>
 				</DetailWrapper>
 
-				{validatoResigationFee > 0 && (
-					<DetailWrapper label={t("TRANSACTION.SUMMARY")}>
-						<div className="flex w-full items-center justify-between gap-4 sm:justify-start">
-							<DetailTitle className="w-auto sm:min-w-[162px]">{t("COMMON.UNLOCKED_AMOUNT")}</DetailTitle>
+				<DetailWrapper label={t("TRANSACTION.SUMMARY")}>
+					<div className="flex w-full items-center justify-between gap-4 sm:justify-start">
+						<DetailTitle className="w-auto sm:min-w-[162px]">{t("COMMON.UNLOCKED_AMOUNT")}</DetailTitle>
 
-							<div className="flex flex-row items-center gap-2">
-								<Amount
-									ticker={validatoResigationFeeTicker}
-									value={validatoResigationFee}
-									className="font-semibold"
-								/>
+						<div className="flex flex-row items-center gap-2">
+							<Amount
+								ticker={validatoResigationFeeTicker}
+								value={validatoResigationFee}
+								className="font-semibold"
+							/>
 
-								{validatoResigationFeeAsFiat !== null && (
-									<div className="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 font-semibold">
-										(~
-										<Amount
-											ticker={validatoResigationFeeAsFiatTicker}
-											value={validatoResigationFeeAsFiat}
-										/>
-										)
-									</div>
-								)}
+							{validatoResigationFeeAsFiat !== null && (
+								<div className="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 font-semibold">
+									(~
+									<Amount
+										ticker={validatoResigationFeeAsFiatTicker}
+										value={validatoResigationFeeAsFiat}
+									/>
+									)
+								</div>
+							)}
 
-								<Tooltip content={t("TRANSACTION.REVIEW_STEP.AMOUNT_UNLOCKED_TOOLTIP")} maxWidth={418}>
-									<div className="bg-theme-primary-100 dark:bg-theme-dark-800 dark:text-theme-dark-50 dim:bg-theme-dim-800 dim:text-theme-dim-50 text-theme-primary-600 flex h-5 w-5 items-center justify-center rounded-full">
-										<Icon name="QuestionMarkSmall" size="sm" />
-									</div>
-								</Tooltip>
-							</div>
+							<Tooltip
+								content={
+									BigNumber.make(validatoResigationFee).isZero()
+										? t("TRANSACTION.VALIDATOR_REGISTERED_WITHOUT_FEE")
+										: t("TRANSACTION.REVIEW_STEP.AMOUNT_UNLOCKED_TOOLTIP")
+								}
+								maxWidth={418}
+							>
+								<div className="bg-theme-primary-100 dark:bg-theme-dark-800 dark:text-theme-dark-50 dim:bg-theme-dim-800 dim:text-theme-dim-50 text-theme-primary-600 flex h-5 w-5 items-center justify-center rounded-full">
+									<Icon name="QuestionMarkSmall" size="sm" />
+								</div>
+							</Tooltip>
 						</div>
-					</DetailWrapper>
-				)}
+					</div>
+				</DetailWrapper>
 			</div>
 		</section>
 	);
