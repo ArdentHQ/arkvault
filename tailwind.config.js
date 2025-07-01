@@ -1,5 +1,4 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
-const plugin = require("tailwindcss/plugin");
 
 module.exports = {
 	content: ["./dist/index.html", "./src/**/*.{js,ts,jsx,tsx}"],
@@ -386,9 +385,9 @@ module.exports = {
 	},
 	plugins: [
 		require("@tailwindcss/forms"),
-		plugin(function ({ addVariant }) {
+		function ({ addVariant }) {
 			addVariant("dim", ":is(.dark.dim &)");
 			addVariant("dim-hover", ":is(.dark.dim &:hover)");
-		}),
+		},
 	],
 };
