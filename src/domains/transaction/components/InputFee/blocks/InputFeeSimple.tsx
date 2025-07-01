@@ -36,14 +36,14 @@ export const InputFeeSimple: React.FC<InputFeeSimpleProperties> = ({
 						key={optionValue}
 						value={displayValue}
 						isSelected={() => optionValue === selectedOption}
-						className="group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dim:border-theme-dim-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:aria-checked:border-theme-dim-navy-800 dim:aria-checked:bg-theme-dim-950 dim:aria-checked:text-theme-dim-50 p-0"
+						className="group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dim:border-theme-dim-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:aria-checked:border-theme-dim-navy-800 dim:aria-checked:bg-theme-dim-navy-950 dim:aria-checked:text-theme-dim-navy-50 p-0"
 						setSelectedValue={() => onChange(optionValue as InputFeeOption)}
 					>
 						<div
 							className={cn(
-								"text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex w-full flex-col transition-all",
+								"text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 group-hover:dim:text-theme-dim-50 flex w-full flex-col transition-all",
 								{
-									"dark:group-hover:text-theme-dark-50 dim:text-theme-dim-50": !isSelected,
+									"dark:group-hover:text-theme-dark-50 dim:text-theme-dim-navy-50": !isSelected,
 								},
 							)}
 						>
@@ -72,7 +72,7 @@ export const InputFeeSimple: React.FC<InputFeeSimpleProperties> = ({
 											className={cn(
 												"sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block",
 												{
-													"dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500 dim:sm:text-theme-dim-200":
+													"dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500 dim:sm:text-theme-dim-200 group-hover:dim:text-theme-dim-50":
 														!isSelected,
 													"dim:sm:text-theme-dim-navy-600": isSelected,
 												},
@@ -87,7 +87,7 @@ export const InputFeeSimple: React.FC<InputFeeSimpleProperties> = ({
 									{
 										"bg-theme-navy-100 dark:bg-theme-dark-500 dim:bg-theme-dim-navy-900 dim:text-theme-dim-navy-600":
 											isSelected,
-										"bg-theme-navy-50 dark:bg-theme-dark-800 dark:group-hover:bg-theme-dark-600 dark:group-hover:text-theme-dark-50 dim:bg-theme-dim-800 dim:text-theme-dim-200 dim-hover:bg-theme-dim-600 dim-hover:text-theme-dim-50":
+										"bg-theme-navy-50 dark:bg-theme-dark-800 dark:group-hover:bg-theme-dark-600 dark:group-hover:text-theme-dark-50 dim:bg-theme-dim-800 dim:text-theme-dim-200 group-hover:dim:bg-theme-dim-600 group-hover:dim:text-theme-dim-50":
 											!isSelected,
 									},
 								)}
