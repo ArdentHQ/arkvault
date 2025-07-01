@@ -3,7 +3,7 @@ import { Paginator } from "./paginator";
 import { MetaPagination } from "./client.contract";
 
 describe("Paginator", () => {
-	const newPaginator = (data: T[], pagination: MetaPagination) => new (class extends Paginator { })(data, pagination)
+	const newPaginator = (data: number | number[], pagination: MetaPagination) => new (class extends Paginator { })(data, pagination)
 
 	it("should return correct items", () => {
 		const data = [1, 2, 3];
