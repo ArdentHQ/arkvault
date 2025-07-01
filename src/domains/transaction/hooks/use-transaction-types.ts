@@ -57,6 +57,7 @@ export const useTransactionTypes = ({ wallets = [] }: TransactionTypeProperties 
 
 	return {
 		getLabel: (type: string) => {
+			console.log("type", type);
 			if (transactionTypes[type]) {
 				return transactionTypes[type].label;
 			}
