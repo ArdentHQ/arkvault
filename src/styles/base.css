@@ -171,7 +171,7 @@ main {
 }
 
 .select-options-list {
-	@apply p-1 space-y-1 overflow-y-auto bg-white rounded-sm shadow-xl top-full max-h-64 outline-hidden dark:bg-theme-dark-900;
+	@apply p-1 space-y-1 overflow-y-auto bg-white rounded-sm shadow-xl top-full max-h-64 outline-hidden dark:bg-theme-dark-900 dim:bg-theme-dim-900;
 }
 
 .select-options-list .select-list-option-group:not(:last-child) {
@@ -180,11 +180,11 @@ main {
 
 .select-options-list .select-list-option-head,
 .select-options-list .select-list-option {
-	@apply relative px-5 border-0 rounded text-theme-secondary-700 dark:text-theme-dark-200;
+	@apply relative px-5 border-0 rounded text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200;
 }
 
 .select-options-list .select-list-option-head__label {
-	@apply pb-1 text-xs font-bold uppercase select-none text-theme-secondary-500 dark:text-theme-secondary-700;
+	@apply pb-1 text-xs font-bold uppercase select-none text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-500;
 }
 
 .select-options-list .select-list-option-head+.select-list-option .select-list-option__label {
@@ -192,7 +192,7 @@ main {
 }
 
 .select-options-list .select-list-option {
-	@apply transition-colors duration-200 cursor-pointer text-theme-secondary-900 dark:text-theme-secondary-200;
+	@apply transition-colors duration-200 cursor-pointer text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-200;
 }
 
 .select-options-list .select-list-option__label {
@@ -200,15 +200,15 @@ main {
 }
 
 .select-options-list .select-list-option:not(:first-child) .select-list-option__label {
-	@apply transition-colors duration-200 border-t border-theme-secondary-300 dark:border-theme-secondary-700;
+	@apply transition-colors duration-200 border-t border-theme-secondary-300 dark:border-theme-secondary-700 dim:border-theme-dim-500;
 }
 
 .select-options-list .select-list-option.is-highlighted {
-	@apply z-10 bg-theme-secondary-100 dark:bg-theme-secondary-900;
+	@apply z-10 bg-theme-secondary-100 dark:bg-theme-secondary-900 dim:bg-theme-dim-700;
 }
 
 .select-options-list .select-list-option.is-highlighted .select-list-option__label {
-	@apply border-theme-secondary-100 dark:border-theme-secondary-900;
+	@apply border-theme-secondary-100 dark:border-theme-secondary-900 dim:border-theme-dim-700 dim:text-theme-dim-50;
 }
 
 .select-options-list .select-list-option.is-highlighted+.select-list-option .select-list-option__label {
@@ -216,11 +216,11 @@ main {
 }
 
 .select-options-list .select-list-option.is-selected {
-	@apply z-20 font-semibold bg-theme-secondary-200 text-theme-primary-600 dark:bg-theme-dark-950 dark:text-theme-dark-50;
+	@apply z-20 font-semibold bg-theme-secondary-200 text-theme-primary-600 dark:bg-theme-dark-950 dark:text-theme-dark-50 dim:bg-theme-dim-950 dim:text-theme-dim-50;
 }
 
 .select-options-list .select-list-option.is-selected .select-list-option__label {
-	@apply border-theme-primary-50 dark:border-black;
+	@apply border-theme-primary-50 dark:border-black dim:border-theme-dim-50 dim:border-theme-dim-50;
 }
 
 .select-options-list .select-list-option.is-selected+.select-list-option .select-list-option__label {
