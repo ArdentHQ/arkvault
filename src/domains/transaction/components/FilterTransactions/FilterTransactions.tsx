@@ -30,7 +30,7 @@ const FilterOption = ({
 }) => (
 	<span
 		data-testid="FilterOption"
-		className={classNames("group -my-4 -mr-8 -ml-9 flex w-screen items-center space-x-2 px-4 py-3 transition-all", {
+		className={classNames("group -my-1 flex w-screen items-center space-x-2 transition-all", {
 			"border-theme-secondary-300 dark:border-theme-secondary-600 border-b": hasDivider,
 			"hover:text-theme-navy-600 font-semibold": isChecked,
 			"hover:text-theme-secondary-900 dark:hover:text-theme-secondary-200 font-normal": !isChecked,
@@ -79,16 +79,20 @@ export const FilterTransactions = memo(
 		const options: DropdownOptionGroup[] = [
 			{
 				key: "all",
+
 				options: [
 					{
 						disableFocus: true,
 						element: (
-							<FilterOption
-								label={t("COMMON.SELECT_ALL")}
-								isChecked={isAllSelected}
-								onChange={() => onToggleAll(!isAllSelected)}
-								hasDivider
-							/>
+							<div className="flex w-full flex-col">
+								<FilterOption
+									label={t("COMMON.SELECT_ALL")}
+									isChecked={isAllSelected}
+									onChange={() => onToggleAll(!isAllSelected)}
+								/>
+
+								<hr className="border-theme-secondary-300 dark:border-theme-secondary-600 -mx-7 mt-3.5 -mb-3.5 border-t border-b-0" />
+							</div>
 						),
 						label: "",
 						value: "all",
@@ -147,6 +151,7 @@ export const FilterTransactions = memo(
 						value: "transfer",
 					},
 				],
+				title: t("COMMON.TYPES"),
 			},
 		];
 
@@ -156,6 +161,7 @@ export const FilterTransactions = memo(
 					placement="bottom-end"
 					wrapperClass="sm:max-w-56"
 					options={options}
+					variant="options"
 					disableToggle={isDisabled}
 					closeOnSelect={false}
 					toggleContent={
