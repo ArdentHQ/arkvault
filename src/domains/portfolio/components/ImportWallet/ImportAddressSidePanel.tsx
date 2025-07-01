@@ -98,11 +98,7 @@ export const ImportAddressesSidePanel = ({
 	const forgetImportedWallets = (importedWallet?: Contracts.IReadWriteWallet) => {
 		assertWallet(importedWallet);
 
-		for (const profileWallet of activeProfile.wallets().values()) {
-			if (profileWallet.address() === importedWallet.address()) {
-				activeProfile.wallets().forget(profileWallet.id());
-			}
-		}
+		activeProfile.wallets().forget(importedWallet.id());
 
 		if (activeProfile.wallets().selected().length === 0) {
 			activeProfile.wallets().selectOne(activeProfile.wallets().first());
