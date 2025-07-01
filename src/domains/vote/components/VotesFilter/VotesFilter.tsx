@@ -28,7 +28,7 @@ export const VotesFilter = ({
 					</Button>
 				}
 			>
-				<div className="text-theme-secondary-700 dark:text-theme-secondary-200 flex w-56 flex-col items-start space-y-5 px-10 py-7">
+				<div className="text-theme-secondary-700 dark:text-theme-secondary-200 dim:text-theme-dim-200 flex w-56 flex-col items-start space-y-5 px-10 py-7">
 					<label
 						className="flex h-5 cursor-pointer items-center space-x-3 rounded-md"
 						data-testid="VotesFilter__option--all"
@@ -51,7 +51,8 @@ export const VotesFilter = ({
 						<label
 							className={cn("flex h-5 items-center space-x-3 rounded-md", {
 								"cursor-pointer": totalCurrentVotes,
-								"text-theme-secondary-500 dark:text-theme-secondary-700": !totalCurrentVotes,
+								"text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-700":
+									!totalCurrentVotes,
 							})}
 							data-testid="VotesFilter__option--current"
 						>

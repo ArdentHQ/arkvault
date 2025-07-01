@@ -49,7 +49,7 @@ export const ValidatorStatus = ({ votes, activeValidators }: ValidatorStatusProp
 		return (
 			<Label
 				color="warning"
-				className="flex h-fit w-fit items-center justify-center border-none py-0.5 text-xs dark:border-solid"
+				className="dim:border-solid flex h-fit w-fit items-center justify-center border-none py-0.5 text-xs dark:border-solid"
 			>
 				{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.STANDBY", { count: standbyCount })}
 			</Label>
@@ -60,7 +60,7 @@ export const ValidatorStatus = ({ votes, activeValidators }: ValidatorStatusProp
 		return (
 			<Label
 				color="danger"
-				className="flex h-fit w-fit items-center justify-center border-none py-0.5 text-xs dark:border-solid"
+				className="dim:border-solid flex h-fit w-fit items-center justify-center border-none py-0.5 text-xs dark:border-solid"
 				variant="solid"
 			>
 				{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.RESIGNED", { count: resignedCount })}
@@ -78,14 +78,14 @@ export const ValidatorStatus = ({ votes, activeValidators }: ValidatorStatusProp
 					{activeCount > 0 && t("WALLETS.PAGE_WALLET_DETAILS.VOTES.ACTIVE_COUNT", { count: activeCount })}
 
 					{standbyCount > 0 && (
-						<span className="text-theme-secondary-500 dark:text-theme-secondary-700">
+						<span className="text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-700">
 							{activeCount > 0 && " / "}
 							{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.STANDBY_COUNT", { count: standbyCount })}
 						</span>
 					)}
 
 					{resignedCount > 0 && (
-						<span className="text-theme-secondary-500 dark:text-theme-secondary-700">
+						<span className="text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-700">
 							{activeCount > 0 && standbyCount > 0 ? " & " : " / "}
 							{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.RESIGNED_COUNT", { count: resignedCount })}
 						</span>
