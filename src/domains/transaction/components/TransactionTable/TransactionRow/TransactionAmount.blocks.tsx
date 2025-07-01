@@ -1,34 +1,9 @@
 import { Amount, AmountLabel } from "@/app/components/Amount";
 import React, { JSX } from "react";
-import { Contracts, DTO } from "@/app/lib/profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { useTranslation } from "react-i18next";
 import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
-import { configManager } from "@/app/lib/mainsail";
-import { BigNumber } from "@/app/lib/helpers";
-import { UnitConverter } from "@arkecosystem/typescript-crypto";
-
-type ExtendedTransactionData = DTO.ExtendedConfirmedTransactionData | DTO.ExtendedSignedTransactionData;
-
-const calculateReturnedAmount = function (transaction: ExtendedTransactionData): number {
-	let returnedAmount = 0;
-
-	if (!transaction.isMultiPayment()) {
-		return returnedAmount;
-	}
-
-	// should return 0 as we don't want to show a hint
-	if (transaction.isReturn()) {
-		return returnedAmount;
-	}
-
-	for (const recipient of transaction.recipients().values()) {
-		if (transaction.isSent() && transaction.from() === recipient.address) {
-			returnedAmount += recipient.amount;
-		}
-	}
-
-	return returnedAmount;
-};
+import { ExtendedTransactionData, useTransactionTotal } from "@/domains/transaction/hooks/use-transaction-total";
 
 export const TransactionAmountLabel = ({
 	transaction,
@@ -40,7 +15,8 @@ export const TransactionAmountLabel = ({
 	const { t } = useTranslation();
 
 	const currency = transaction.wallet().currency();
-	const returnedAmount = calculateReturnedAmount(transaction);
+
+	const { returnedAmount } = useTransactionTotal(transaction);
 
 	return (
 		<AmountLabel
@@ -73,34 +49,12 @@ export const TransactionTotalLabel = ({
 	const { t } = useTranslation();
 
 	const currency = transaction.wallet().currency();
-	const returnedAmount = calculateReturnedAmount(transaction);
 
-	const getTotal = () => {
-		if (transaction.isValidatorRegistration()) {
-			if ("isSuccess" in transaction && transaction.isSuccess()) {
-				return transaction.total();
-			}
-
-			return BigNumber.make(transaction.total())
-				.minus(UnitConverter.formatUnits(configManager.getMilestone()["validatorRegistrationFee"] ?? 0, "ARK"))
-				.toNumber();
-		}
-
-		// For validator resignation, we need to manually add the fee to the total
-		if (transaction.isValidatorResignation() && "isSuccess" in transaction && transaction.isSuccess()) {
-			return BigNumber.make(
-				UnitConverter.formatUnits(configManager.getMilestone()["validatorRegistrationFee"] ?? 0, "ARK"),
-			)
-				.minus(transaction.total())
-				.toNumber();
-		}
-
-		return transaction.total();
-	};
+	const { returnedAmount, total } = useTransactionTotal(transaction);
 
 	const getIsNegative = () => {
 		if (transaction.isValidatorResignation() && "isSuccess" in transaction && transaction.isSuccess()) {
-			return getTotal() < 0;
+			return total < 0;
 		}
 
 		return transaction.isSent();
@@ -112,7 +66,7 @@ export const TransactionTotalLabel = ({
 				showSign={false}
 				showTicker={false}
 				ticker={currency}
-				value={getTotal()}
+				value={total}
 				isNegative={getIsNegative()}
 				className="text-sm font-semibold"
 				allowHideBalance
@@ -123,7 +77,7 @@ export const TransactionTotalLabel = ({
 
 	return (
 		<AmountLabel
-			value={getTotal()}
+			value={total}
 			isNegative={getIsNegative()}
 			ticker={currency}
 			hideSign={transaction.isReturn()}
@@ -155,8 +109,10 @@ export const TransactionFiatAmount = ({
 		profile: transaction.wallet().profile(),
 		ticker: currency,
 	});
-	const returnedAmount = calculateReturnedAmount(transaction);
-	const amount = transaction.total() - returnedAmount;
+
+	const { returnedAmount, total } = useTransactionTotal(transaction);
+
+	const amount = total - returnedAmount;
 
 	return <Amount value={convert(amount)} ticker={exchangeCurrency || ""} allowHideBalance profile={profile} />;
 };
