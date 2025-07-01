@@ -46,6 +46,7 @@ export function useStepHeaderConfig(step: ImportAddressStep, importOption?: Impo
 					<ThemeIcon
 						lightIcon="WalletEncryptionLight"
 						darkIcon="WalletEncryptionDark"
+						dimIcon="WalletEncryptionDim"
 						className="hidden md:block"
 						dimensions={[24, 24]}
 					/>

@@ -73,7 +73,7 @@ export const Table = <RowDataType extends Record<never, unknown>>({
 
 	const renderColumn = (column: HeaderGroup<RowDataType>, thIndex: number) => {
 		const thElementClassName = twMerge(
-			"group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black ",
+			"group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700",
 			column.headerClassName,
 			column.minimumWidth && "w-1",
 			!column.noRoundedBorders && "first:rounded-tl-xl last:rounded-tr-xl",
@@ -83,7 +83,7 @@ export const Table = <RowDataType extends Record<never, unknown>>({
 			"flex-row-reverse": column.className?.includes("justify-end") && !column.disableSortBy,
 		});
 		const iconDivClassName = cn(
-			"flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity",
+			"flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 transition-opacity",
 			{ "opacity-0 group-hover:opacity-100": !column.isSorted },
 			{
 				"ml-2": !column.className?.includes("justify-end"),

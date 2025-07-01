@@ -30,6 +30,18 @@
 	--theme-color-dark-900: #23272d;
 	--theme-color-dark-950: #191d22;
 
+	--theme-color-dim-50: #E8EBF6;
+	--theme-color-dim-100: #CBD6EC;
+	--theme-color-dim-200: #9EB3DB;
+	--theme-color-dim-300: #6A8CC6;
+	--theme-color-dim-400: #476DB0;
+	--theme-color-dim-500: #355594;
+	--theme-color-dim-600: #2C4478;
+	--theme-color-dim-700: #283C64;
+	--theme-color-dim-800: #253355;
+	--theme-color-dim-900: #171F34;
+	--theme-color-dim-950: #101627;
+
 	--theme-color-dark-navy-50: #eff6ff;
 	--theme-color-dark-navy-100: #dceafd;
 	--theme-color-dark-navy-200: #c1dbfc;
@@ -41,6 +53,18 @@
 	--theme-color-dark-navy-800: #2242ab;
 	--theme-color-dark-navy-900: #213b87;
 	--theme-color-dark-navy-950: #192652;
+
+	--theme-color-dim-navy-50: #EFF8FF;
+	--theme-color-dim-navy-100: #DAEEFF;
+	--theme-color-dim-navy-200: #BEE3FF;
+	--theme-color-dim-navy-300: #91D2FF;
+	--theme-color-dim-navy-400: #5EB8FC;
+	--theme-color-dim-navy-500: #3898F9;
+	--theme-color-dim-navy-600: #2079EE;
+	--theme-color-dim-navy-700: #1A64DB;
+	--theme-color-dim-navy-800: #1C51B1;
+	--theme-color-dim-navy-900: #1C468C;
+	--theme-color-dim-navy-950: #162B55;
 
 	--theme-color-success-rgb: 40, 149, 72;
 	--theme-color-success-50: #f0fdf4;
@@ -174,6 +198,48 @@
 
 	--theme-text-color: var(--theme-color-secondary-200);
 	--theme-secondary-text-color: var(--theme-color-secondary-500);
+
+	--theme-scrollbar-color: var(--theme-color-secondary-700);
+	--theme-scrollbar-hover-color: var(--theme-color-secondary-700);
+
+	--theme-shadow-color: 18, 18, 19;
+
+	--theme-danger-info-text: #CAA0A0;
+	--theme-danger-info-border: #AB8282;
+
+	--theme-shadow-opacity-xs: 0.6;
+	--theme-shadow-opacity-sm: 0.6;
+	--theme-shadow-opacity-base-primary: 0.6;
+	--theme-shadow-opacity-base-secondary: 0.6;
+	--theme-shadow-opacity-md-primary: 0.6;
+	--theme-shadow-opacity-md-secondary: 0.6;
+	--theme-shadow-opacity-lg-primary: 0.6;
+	--theme-shadow-opacity-lg-secondary: 0.6;
+	--theme-shadow-opacity-xl-primary: 0.6;
+	--theme-shadow-opacity-xl-secondary: 0.6;
+	--theme-shadow-opacity-2xl: 0.6;
+	--theme-shadow-opacity-inner: 0.6;
+
+	--theme-color-navy-rgb: 35, 145, 231;
+	--theme-color-navy-50: #e0f1ff;
+	--theme-color-navy-100: #c5e5ff;
+	--theme-color-navy-200: #9bd0fb;
+	--theme-color-navy-300: #72bffb;
+	--theme-color-navy-400: #45a2eb;
+	--theme-color-navy-500: #2391e7;
+	--theme-color-navy-600: #0d7ed6;
+	--theme-color-navy-700: #0e6cb5;
+	--theme-color-navy-800: #0e5790;
+	--theme-color-navy-900: #1a486b;
+}
+
+
+.dark.dim {
+	--theme-background-color: var(--theme-color-dim-900);
+	--theme-secondary-background-color: var(--theme-black);
+
+	--theme-text-color: var(--theme-color-dim-50);
+	--theme-secondary-text-color: var(--theme-color-dim-200);
 
 	--theme-scrollbar-color: var(--theme-color-secondary-700);
 	--theme-scrollbar-hover-color: var(--theme-color-secondary-700);

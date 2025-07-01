@@ -31,7 +31,7 @@ const FilterOption = ({
 	<span
 		data-testid="FilterOption"
 		className={classNames("group -my-1 flex w-screen items-center space-x-2 transition-all", {
-			"border-theme-secondary-300 dark:border-theme-secondary-600 border-b": hasDivider,
+			"border-theme-secondary-300 dark:border-theme-secondary-600 dim:border-theme-dim-600 border-b": hasDivider,
 			"hover:text-theme-navy-600 font-semibold": isChecked,
 			"hover:text-theme-secondary-900 dark:hover:text-theme-secondary-200 font-normal": !isChecked,
 		})}
