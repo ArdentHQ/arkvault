@@ -23,6 +23,8 @@ import { connectedTransport as ledgerTransportFactory } from "@/app/contexts/Led
 import mainsailTransactionFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/transfer.json";
 import transactionFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/transfer.json";
 import { useProfileSynchronizer } from "@/app/hooks/use-profile-synchronizer";
+import { test as baseTest } from "vitest"
+import { bootEnvironmentWithProfileFixtures } from "./test-helpers";
 
 export {
 	mockNanoSTransport,
@@ -490,3 +492,25 @@ export const t = (key: string, options?: any) => {
 
 	return t(key, options);
 };
+
+
+export const test = baseTest.extend<{
+	env: Environment;
+	profile: Contracts.IProfile;
+}>({
+	env: [async ({ }, use) => {
+		const environment = environmentWithMocks()
+		await bootEnvironmentWithProfileFixtures({ env: environment })
+		await use(environment);
+	}, { scope: 'worker' }],
+	passwordProtectedProfile: async ({ env }, vitestUse) => {
+		const profileInstance = env.profiles().findById(getDefaultProfileId());
+		await env.profiles().restore(profileInstance)
+		await vitestUse(profileInstance);
+	},
+	profile: async ({ env }, vitestUse) => {
+		const profileInstance = env.profiles().findById(getDefaultProfileId());
+		await env.profiles().restore(profileInstance)
+		await vitestUse(profileInstance);
+	},
+});
