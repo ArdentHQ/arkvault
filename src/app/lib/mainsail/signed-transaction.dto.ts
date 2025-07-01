@@ -136,6 +136,10 @@ export class SignedTransactionData {
 		return TransactionTypeService.isValidatorRegistration(this.signedData);
 	}
 
+	public isUpdateValidator(): boolean {
+		return TransactionTypeService.isUpdateValidator(this.signedData);
+	}
+
 	public isVoteCombination(): boolean {
 		return TransactionTypeService.isVoteCombination(this.signedData);
 	}
