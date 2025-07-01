@@ -1,7 +1,7 @@
 import { BigNumber } from "@/app/lib/helpers";
+import { Contracts } from "@/app/lib/profiles";
 import { UnitConverter } from "@arkecosystem/typescript-crypto";
 import { configManager } from "@/app/lib/mainsail";
-import { Contracts } from "@/app/lib/profiles";
 import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
 
 export const useValidatorRegistrationLockedFee = ({

@@ -592,6 +592,11 @@ export class Wallet implements IReadWriteWallet {
 		return this.data().get(WalletData.ImportMethod) === WalletImportMethod.WIF;
 	}
 
+	/** {@inheritDoc IReadWriteWallet.isSelected} */
+	public isSelected(): boolean {
+		return this.settings().get(WalletSetting.IsSelected) === true;
+	}
+
 	/** {@inheritDoc IReadWriteWallet.actsWithWifWithEncryption} */
 	public actsWithWifWithEncryption(): boolean {
 		return this.data().get(WalletData.ImportMethod) === WalletImportMethod.WIFWithEncryption;

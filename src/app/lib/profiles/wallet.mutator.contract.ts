@@ -44,6 +44,15 @@ export interface IWalletMutator {
 	alias(alias: string): void;
 
 	/**
+	 * Set the selected flag.
+	 *
+	 * @param {boolean} isSelected
+	 * @return {void}
+	 * @memberof IWalletMutator
+	 */
+	isSelected(isSelected: boolean): void;
+
+	/**
 	 * Removes the encryption password.
 	 *
 	 * @param {string} password

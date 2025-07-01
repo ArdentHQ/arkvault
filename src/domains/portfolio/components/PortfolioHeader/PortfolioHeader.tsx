@@ -16,7 +16,6 @@ import { WalletActions } from "@/domains/portfolio/components/WalletHeader/Walle
 import { Skeleton } from "@/app/components/Skeleton";
 import { ViewingAddressInfo } from "./PortfolioHeader.blocks";
 import { assertWallet } from "@/utils/assertions";
-import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
 import { useEnvironmentContext } from "@/app/contexts";
 import { WalletActionsModals } from "@/domains/wallet/components/WalletActionsModals/WalletActionsModals";
 import { AddressesSidePanel } from "@/domains/portfolio/components/AddressesSidePanel";
@@ -26,6 +25,7 @@ import cn from "classnames";
 import { Trans } from "react-i18next";
 import { ResetWhenUnmounted } from "@/app/components/SidePanel/ResetWhenUnmounted";
 import { AddressViewType } from "@/domains/portfolio/hooks/use-address-panel";
+import { ProfileSetting } from "@/app/lib/profiles/profile.enum.contract";
 
 export const PortfolioHeader = ({
 	profile,
@@ -52,18 +52,9 @@ export const PortfolioHeader = ({
 }) => {
 	const [showAddressesPanel, setShowAddressesPanel] = useState(false);
 
-	const {
-		balance,
-		setSelectedAddresses,
-		selectedAddresses,
-		selectedWallets,
-		allWallets,
-		removeSelectedAddresses,
-		selectedWallet,
-		mode,
-		setMode,
-	} = usePortfolio({ profile });
+	const allWallets = profile.wallets().values();
 
+	const selectedWallets = profile.wallets().selected() ?? [profile.wallets().first()];
 	const wallet = selectedWallets.at(0);
 	assertWallet(wallet);
 
@@ -88,7 +79,12 @@ export const PortfolioHeader = ({
 	useEffect(() => {
 		let id: NodeJS.Timeout;
 
-		if (hasFocus && hintHasShown === undefined && allWallets.length > 1 && mode === "single") {
+		if (
+			hasFocus &&
+			hintHasShown === undefined &&
+			allWallets.length > 1 &&
+			profile.walletSelectionMode() === "single"
+		) {
 			id = setTimeout(() => {
 				setShowHint(true);
 			}, 1000);
@@ -97,13 +93,13 @@ export const PortfolioHeader = ({
 		return () => {
 			clearTimeout(id);
 		};
-	}, [hasFocus, hintHasShown, mode, allWallets.length]);
+	}, [hasFocus, hintHasShown, profile.walletSelectionMode(), profile.wallets().count()]);
 
 	const onDeleteAddress = async (address: string) => {
 		for (const wallet of profile.wallets().values()) {
 			if (address === wallet.address()) {
 				profile.wallets().forget(wallet.id());
-				await removeSelectedAddresses([wallet.address()]);
+				//await removeSelectedAddresses([wallet.address()]);
 				profile.notifications().transactions().forgetByRecipient(wallet.address());
 			}
 		}
@@ -169,7 +165,7 @@ export const PortfolioHeader = ({
 										availableWallets={allWallets.length}
 										wallets={selectedWallets}
 										profile={profile}
-										mode={mode}
+										mode={profile.walletSelectionMode()}
 									/>
 									{allWallets.length > 1 && (
 										<Button variant="primary-transparent" size="icon" className="h-6 w-6">
@@ -241,7 +237,7 @@ export const PortfolioHeader = ({
 									</p>
 									<div>
 										<Amount
-											value={balance.total().toNumber()}
+											value={profile.totalBalance().toNumber()}
 											ticker={wallet.currency()}
 											className="text-theme-primary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm leading-[17px] font-semibold md:text-base md:leading-5"
 											allowHideBalance
@@ -320,7 +316,7 @@ export const PortfolioHeader = ({
 									)}
 									{isRestored && (
 										<Amount
-											value={balance.totalConverted().toNumber()}
+											value={profile.totalBalanceConverted().toNumber()}
 											ticker={wallet.exchangeCurrency()}
 											className={cn({
 												"text-theme-primary-900 dark:text-theme-dark-50 dim:text-theme-dim-50":
@@ -357,7 +353,7 @@ export const PortfolioHeader = ({
 									<Button
 										data-testid="WalletHeader__send-button"
 										className="dark:bg-theme-dark-navy-500 dark:hover:bg-theme-dark-navy-700 dim:bg-theme-dim-navy-600 dim-hover:bg-theme-dim-navy-700 dim:disabled:text-theme-dim-navy-700 dim:disabled:bg-theme-dim-navy-900 dim-hover:disabled:bg-theme-dim-navy-900 dim-hover:disabled:text-theme-dim-navy-700 my-auto flex-1 px-8"
-										disabled={balance.total().isZero()}
+										disabled={profile.totalBalance().isZero()}
 										variant="primary"
 										onClick={handleSend}
 									>
@@ -405,11 +401,22 @@ export const PortfolioHeader = ({
 				<AddressesSidePanel
 					profile={profile}
 					wallets={allWallets}
-					defaultSelectedAddresses={selectedAddresses}
-					defaultSelectedWallet={selectedWallet}
-					onClose={(addresses, newMode: AddressViewType) => {
-						setSelectedAddresses(addresses);
-						setMode(newMode);
+					defaultSelectedAddresses={profile
+						.wallets()
+						.selected()
+						.map((wallet) => wallet.address())}
+					defaultSelectedWallet={wallet}
+					onClose={async (addresses, newMode: AddressViewType) => {
+						for (const wallet of profile.wallets().values()) {
+							if (addresses.includes(wallet.address())) {
+								wallet.mutator().isSelected(true);
+								continue;
+							}
+							wallet.mutator().isSelected(false);
+						}
+
+						profile.settings().set(ProfileSetting.WalletSelectionMode, newMode);
+						await persist();
 					}}
 					open={showAddressesPanel}
 					onOpenChange={setShowAddressesPanel}

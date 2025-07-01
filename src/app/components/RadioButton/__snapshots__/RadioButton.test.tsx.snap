@@ -3,7 +3,7 @@
 exports[`RadioButton > should render 1`] = `
 <div>
   <input
-    class="border-theme-secondary-300 dim:border-theme-dim-500 h-4 w-4 cursor-pointer transition duration-150 ease-in-out focus:ring-offset-0 text-theme-success-600"
+    class="border-theme-secondary-300 dim:border-theme-dim-500 h-4 w-4 cursor-pointer transition duration-150 ease-in-out focus:ring-offset-0 dark:not-checked:border-theme-dark-500 dark:not-checked:bg-theme-dark-900 dark:checked:border-none text-theme-success-600"
     type="radio"
   />
 </div>
@@ -12,7 +12,7 @@ exports[`RadioButton > should render 1`] = `
 exports[`RadioButton > should render a danger color 1`] = `
 <div>
   <input
-    class="border-theme-secondary-300 dim:border-theme-dim-500 h-4 w-4 cursor-pointer transition duration-150 ease-in-out focus:ring-offset-0 text-theme-danger-400"
+    class="border-theme-secondary-300 dim:border-theme-dim-500 h-4 w-4 cursor-pointer transition duration-150 ease-in-out focus:ring-offset-0 dark:not-checked:border-theme-dark-500 dark:not-checked:bg-theme-dark-900 dark:checked:border-none text-theme-danger-400"
     type="radio"
   />
 </div>
@@ -21,7 +21,7 @@ exports[`RadioButton > should render a danger color 1`] = `
 exports[`RadioButton > should render a hint color 1`] = `
 <div>
   <input
-    class="border-theme-secondary-300 dim:border-theme-dim-500 h-4 w-4 cursor-pointer transition duration-150 ease-in-out focus:ring-offset-0 text-theme-hint-500"
+    class="border-theme-secondary-300 dim:border-theme-dim-500 h-4 w-4 cursor-pointer transition duration-150 ease-in-out focus:ring-offset-0 dark:not-checked:border-theme-dark-500 dark:not-checked:bg-theme-dark-900 dark:checked:border-none text-theme-hint-500"
     type="radio"
   />
 </div>
@@ -30,7 +30,7 @@ exports[`RadioButton > should render a hint color 1`] = `
 exports[`RadioButton > should render a info color 1`] = `
 <div>
   <input
-    class="border-theme-secondary-300 dim:border-theme-dim-500 h-4 w-4 cursor-pointer transition duration-150 ease-in-out focus:ring-offset-0 text-theme-primary-600 dim:checked:text-theme-dim-navy-600 dim:not-checked:bg-transparent"
+    class="border-theme-secondary-300 dim:border-theme-dim-500 h-4 w-4 cursor-pointer transition duration-150 ease-in-out focus:ring-offset-0 dark:not-checked:border-theme-dark-500 dark:not-checked:bg-theme-dark-900 dark:checked:border-none text-theme-primary-600 dim:checked:text-theme-dim-navy-600 dim:not-checked:bg-transparent"
     type="radio"
   />
 </div>
@@ -39,7 +39,7 @@ exports[`RadioButton > should render a info color 1`] = `
 exports[`RadioButton > should render a success color 1`] = `
 <div>
   <input
-    class="border-theme-secondary-300 dim:border-theme-dim-500 h-4 w-4 cursor-pointer transition duration-150 ease-in-out focus:ring-offset-0 text-theme-success-600"
+    class="border-theme-secondary-300 dim:border-theme-dim-500 h-4 w-4 cursor-pointer transition duration-150 ease-in-out focus:ring-offset-0 dark:not-checked:border-theme-dark-500 dark:not-checked:bg-theme-dark-900 dark:checked:border-none text-theme-success-600"
     type="radio"
   />
 </div>
@@ -48,7 +48,7 @@ exports[`RadioButton > should render a success color 1`] = `
 exports[`RadioButton > should render a warning color 1`] = `
 <div>
   <input
-    class="border-theme-secondary-300 dim:border-theme-dim-500 h-4 w-4 cursor-pointer transition duration-150 ease-in-out focus:ring-offset-0 text-theme-warning-600"
+    class="border-theme-secondary-300 dim:border-theme-dim-500 h-4 w-4 cursor-pointer transition duration-150 ease-in-out focus:ring-offset-0 dark:not-checked:border-theme-dark-500 dark:not-checked:bg-theme-dark-900 dark:checked:border-none text-theme-warning-600"
     type="radio"
   />
 </div>

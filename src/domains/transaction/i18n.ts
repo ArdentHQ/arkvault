@@ -267,6 +267,10 @@ export const translations = {
 	PAGE_VALIDATOR_REGISTRATION: {
 		FORM_STEP: {
 			DESCRIPTION: "Register a new Validator address on the network below.",
+			INSUFFICIENT_BALANCE_FOR_FEE_AND_LOCKED_FEE:
+				"Registering a validator requires locking {{lockedFee}}. Your current balance is insufficient with the fee you set ({{fee}}).",
+			INSUFFICIENT_BALANCE_FOR_LOCKED_FEE:
+				"Registering a validator requires locking {{lockedFee}}. Your current balance ({{balance}}) is insufficient.",
 			TITLE: "Register Validator",
 			WARNING: "The Validator name is permanent and cannot be modified later. It is registered on the network.",
 		},
@@ -352,7 +356,6 @@ export const translations = {
 	TRANSACTION_REMOVED: "Transaction successfully removed.",
 	TRANSACTION_SIGNED: "Transaction Signed",
 	TRANSACTION_TYPE: "Transaction Type",
-
 	TRANSACTION_TYPES: {
 		CONTRACT_DEPLOYMENT: "Contract Deployment",
 		HTLC_CLAIM: "Timelock Claim",
@@ -370,7 +373,6 @@ export const translations = {
 		VOTE_COMBINATION: "Vote Swap",
 	},
 	TRANSACTION_TYPE_NOT_AVAILABLE: "Transaction type not available for this address.",
-
 	TYPE: "Type",
 	UNVOTES: "Unvotes",
 	UNVOTES_COUNT: "Unvotes ({{count}})",
@@ -409,6 +411,7 @@ export const translations = {
 	VALIDATOR: "Validator",
 	VALIDATOR_NAME: "Validator Name",
 	VALIDATOR_PUBLIC_KEY: "Validator Public Key",
+	VALIDATOR_REGISTERED_WITHOUT_FEE: "This validator was registered without locking any funds.",
 	VIEW_RECIPIENTS_LIST: "View Full List",
 	VOTER: "Voter",
 	VOTES: "Votes",

@@ -12,16 +12,6 @@ let profile: Contracts.IProfile;
 let network: Networks.Network;
 let wallet: Contracts.IReadWriteWallet;
 
-const setSelectedAddressesMock = vi.fn();
-const selectedAddressesMock: string[] = [];
-
-vi.mock("@/domains/portfolio/hooks/use-portfolio", () => ({
-	usePortfolio: () => ({
-		selectedAddresses: selectedAddressesMock,
-		setSelectedAddresses: setSelectedAddressesMock,
-	}),
-}));
-
 describe("useWalletImport", () => {
 	const wrapper = ({ children }: any) => (
 		<EnvironmentProvider env={env}>
@@ -144,7 +134,7 @@ describe("useWalletImport", () => {
 		expect(importedWallet).toBeInstanceOf(Wallet);
 		expect(importedWallet.address()).toBeDefined();
 
-		expect(setSelectedAddressesMock).toHaveBeenCalledWith([importedWallet.address()]);
+		expect(importedWallet.isSelected()).toBe(true);
 	});
 
 	it("should append imported wallet to the selected addresses when view preference is set to multiple", async () => {
@@ -165,6 +155,6 @@ describe("useWalletImport", () => {
 		expect(importedWallet).toBeInstanceOf(Wallet);
 		expect(importedWallet.address()).toBeDefined();
 
-		expect(setSelectedAddressesMock).toHaveBeenCalledWith([importedWallet.address()]);
+		expect(importedWallet.isSelected()).toBe(true);
 	});
 });
