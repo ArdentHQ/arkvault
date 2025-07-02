@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/require-await */
-
 import { Contracts, Services } from "@/app/lib/mainsail";
 import { BIP44, HDKey } from "@ardenthq/arkvault-crypto";
 import { connectedTransport as ledgerTransportFactory } from "@/app/contexts/Ledger/transport";
@@ -124,7 +122,6 @@ export class LedgerService {
 		}
 
 		const ledgerWallets: Services.LedgerWalletList = {};
-
 		for (const addressIndexIterator of createRange(page, options?.pageSize ?? pageSize)) {
 			const addressIndex = initialAddressIndex + addressIndexIterator;
 			const { extendedPublicKey, publicKey } = await this.#getPublicKeys(`${path}/0/${addressIndex}`);

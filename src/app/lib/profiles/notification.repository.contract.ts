@@ -9,11 +9,10 @@ import { ExtendedConfirmedTransactionData } from "./transaction.dto.js";
  */
 export enum INotificationTypes {
 	Transaction = "transaction",
-	Release = "release",
 	Plugin = "plugin",
 }
 
-export type INotificationType = INotificationTypes.Transaction | INotificationTypes.Release | INotificationTypes.Plugin;
+export type INotificationType = INotificationTypes.Transaction | INotificationTypes.Plugin;
 
 /**
  * Defines the structure that represents a notification.
@@ -193,14 +192,6 @@ export interface INotificationRepository {
 	 * @memberof INotificationRepository
 	 */
 	findByTransactionId(transactionId: string): INotification | undefined;
-
-	/**
-	 * Get notification by version
-	 *
-	 * @param {string} transactionId
-	 * @memberof INotificationRepository
-	 */
-	findByVersion(version: string): INotification | undefined;
 }
 
 /**
@@ -368,13 +359,6 @@ export interface IProfileNotificationService {
 	 * @memberof IProfileNotificationService
 	 */
 	transactions(): IProfileTransactionNotificationService;
-
-	/**
-	 * Get the wallet releases notification service
-	 *
-	 * @memberof IProfileNotificationService
-	 */
-	releases(): IWalletReleaseNotificationService;
 
 	/**
 	 * Mark the given notification as read.

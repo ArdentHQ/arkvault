@@ -16630,13 +16630,6 @@ exports[`Votes > should filter current validators 1`] = `
                           </svg>
                         </div>
                       </div>
-                      <div
-                        class="bg-theme-background group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800 absolute top-0 right-0 flex items-center justify-center rounded-full p-0.5 transition-all duration-100 ease-linear"
-                      >
-                        <div
-                          class="bg-theme-danger-500 h-1.5 w-1.5 rounded-full"
-                        />
-                      </div>
                     </div>
                   </button>
                 </div>
@@ -19684,13 +19677,6 @@ exports[`Votes > should render 1`] = `
                             </g>
                           </svg>
                         </div>
-                      </div>
-                      <div
-                        class="bg-theme-background group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800 absolute top-0 right-0 flex items-center justify-center rounded-full p-0.5 transition-all duration-100 ease-linear"
-                      >
-                        <div
-                          class="bg-theme-danger-500 h-1.5 w-1.5 rounded-full"
-                        />
                       </div>
                     </div>
                   </button>
@@ -27669,13 +27655,6 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                           </svg>
                         </div>
                       </div>
-                      <div
-                        class="bg-theme-background group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800 absolute top-0 right-0 flex items-center justify-center rounded-full p-0.5 transition-all duration-100 ease-linear"
-                      >
-                        <div
-                          class="bg-theme-danger-500 h-1.5 w-1.5 rounded-full"
-                        />
-                      </div>
                     </div>
                   </button>
                 </div>
@@ -35652,13 +35631,6 @@ exports[`Votes > should select a validator 1`] = `
                             </g>
                           </svg>
                         </div>
-                      </div>
-                      <div
-                        class="bg-theme-background group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800 absolute top-0 right-0 flex items-center justify-center rounded-full p-0.5 transition-all duration-100 ease-linear"
-                      >
-                        <div
-                          class="bg-theme-danger-500 h-1.5 w-1.5 rounded-full"
-                        />
                       </div>
                     </div>
                   </button>
@@ -43896,13 +43868,6 @@ exports[`Votes > should select an address and validator 1`] = `
                           </svg>
                         </div>
                       </div>
-                      <div
-                        class="bg-theme-background group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800 absolute top-0 right-0 flex items-center justify-center rounded-full p-0.5 transition-all duration-100 ease-linear"
-                      >
-                        <div
-                          class="bg-theme-danger-500 h-1.5 w-1.5 rounded-full"
-                        />
-                      </div>
                     </div>
                   </button>
                 </div>
@@ -51877,13 +51842,6 @@ exports[`Votes > should trigger network connection warning 1`] = `
                             </g>
                           </svg>
                         </div>
-                      </div>
-                      <div
-                        class="bg-theme-background group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800 absolute top-0 right-0 flex items-center justify-center rounded-full p-0.5 transition-all duration-100 ease-linear"
-                      >
-                        <div
-                          class="bg-theme-danger-500 h-1.5 w-1.5 rounded-full"
-                        />
                       </div>
                     </div>
                   </button>
