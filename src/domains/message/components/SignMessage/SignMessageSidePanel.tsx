@@ -223,7 +223,7 @@ export const SignMessageSidePanel = ({
 			footer={
 				<SidePanelButtons>
 					{activeTab === Step.FormStep && (
-						<>
+						<div className="grid grid-cols-2 sm:flex gap-3 w-full">
 							<Button data-testid="SignMessage__back-button" variant="secondary" onClick={handleBack}>
 								{t("COMMON.BACK")}
 							</Button>
@@ -236,12 +236,12 @@ export const SignMessageSidePanel = ({
 							>
 								{t("COMMON.SIGN")}
 							</Button>
-						</>
+						</div>
 					)}
 
 					{activeTab === Step.SuccessStep && (
-						<>
-							<Button data-testid="SignMessage__back-button" variant="secondary" onClick={handleBack}>
+						<div className="grid grid-cols-2 sm:flex gap-3 w-full">
+							<Button data-testid="SignMessage__back-button" variant="secondary" className="text-sm sm:text-base" onClick={handleBack}>
 								{t("COMMON.CLOSE")}
 							</Button>
 
@@ -251,7 +251,7 @@ export const SignMessageSidePanel = ({
 								data={JSON.stringify(signedMessage)}
 								data-testid="SignMessage__copy-button"
 								wrapperClassName="flex-1 sm:flex-none"
-								buttonClassName="bg-theme-primary-600 text-center text-base font-semibold text-white hover:bg-theme-primary-700 flex-1 w-full"
+								buttonClassName="bg-theme-primary-600 text-center font-semibold text-white hover:bg-theme-primary-700 flex-1 w-full text-sm sm:text-base"
 							>
 								<div
 									className="relative inline-flex items-center space-x-3 rounded"
@@ -264,7 +264,7 @@ export const SignMessageSidePanel = ({
 									<div className="block whitespace-nowrap sm:hidden">{t("COMMON.COPY")}</div>
 								</div>
 							</Clipboard>
-						</>
+						</div>
 					)}
 				</SidePanelButtons>
 			}
