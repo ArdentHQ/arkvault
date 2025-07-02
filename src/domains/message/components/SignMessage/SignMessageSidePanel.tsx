@@ -223,7 +223,7 @@ export const SignMessageSidePanel = ({
 			footer={
 				<SidePanelButtons>
 					{activeTab === Step.FormStep && (
-						<div className="grid grid-cols-2 sm:flex gap-3 w-full">
+						<div className="grid w-full grid-cols-2 justify-end gap-3 sm:flex">
 							<Button data-testid="SignMessage__back-button" variant="secondary" onClick={handleBack}>
 								{t("COMMON.BACK")}
 							</Button>
@@ -240,8 +240,13 @@ export const SignMessageSidePanel = ({
 					)}
 
 					{activeTab === Step.SuccessStep && (
-						<div className="grid grid-cols-2 sm:flex gap-3 w-full">
-							<Button data-testid="SignMessage__back-button" variant="secondary" className="text-sm sm:text-base" onClick={handleBack}>
+						<div className="grid w-full grid-cols-2 justify-end gap-3 sm:flex">
+							<Button
+								data-testid="SignMessage__back-button"
+								variant="secondary"
+								className="text-sm sm:text-base"
+								onClick={handleBack}
+							>
 								{t("COMMON.CLOSE")}
 							</Button>
 
@@ -251,7 +256,7 @@ export const SignMessageSidePanel = ({
 								data={JSON.stringify(signedMessage)}
 								data-testid="SignMessage__copy-button"
 								wrapperClassName="flex-1 sm:flex-none"
-								buttonClassName="bg-theme-primary-600 text-center font-semibold text-white hover:bg-theme-primary-700 flex-1 w-full text-sm sm:text-base"
+								buttonClassName="bg-theme-primary-600 text-center font-semibold text-white hover:bg-theme-primary-700 flex-1 w-full text-base h-12"
 							>
 								<div
 									className="relative inline-flex items-center space-x-3 rounded"
