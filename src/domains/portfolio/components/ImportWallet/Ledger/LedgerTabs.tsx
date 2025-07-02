@@ -181,7 +181,7 @@ export const LedgerTabs = ({
 			</div>
 
 			{showFooter && (
-				<div className="absolute bottom-0 left-0 right-0 bg-theme-background border-theme-secondary-300 dark:border-theme-dark-700 flex w-full flex-col border-t px-6 py-4">
+				<div className="bg-theme-background border-theme-secondary-300 dark:border-theme-dark-700 absolute right-0 bottom-0 left-0 flex w-full flex-col border-t px-6 py-4">
 					<ImportActionToolbar
 						showButtons={activeTab !== LedgerTabStep.LedgerImportStep}
 						onBack={handleBack}
