@@ -102,7 +102,7 @@ export const ReviewStep = ({
 				</DetailWrapper>
 
 				<div className="space-y-3 sm:space-y-2">
-					<div className="mx-3 sm:mx-0">
+					<div className="mx-0">
 						<DetailWrapper label={t("COMMON.TRANSACTION_SUMMARY")} className="rounded-xl">
 							<div className="flex flex-col gap-3">
 								<div className="flex items-center justify-between gap-4 space-x-2 sm:justify-start sm:space-x-0">
