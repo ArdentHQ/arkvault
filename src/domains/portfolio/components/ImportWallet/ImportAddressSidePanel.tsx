@@ -47,6 +47,7 @@ export const ImportAddressesSidePanel = ({
 	const [isImporting, setIsImporting] = useState(false);
 	const [isEncrypting, setIsEncrypting] = useState(false);
 	const [isEditAliasModalOpen, setIsEditAliasModalOpen] = useState(false);
+	const [isNavigatingBack, setIsNavigatingBack] = useState(false);
 
 	const activeNetwork = activeProfile.activeNetwork();
 
@@ -76,6 +77,26 @@ export const ImportAddressesSidePanel = ({
 	const config = isLedgerImport && activeTab === ImportAddressStep.ImportDetailStep ? ledgerConfig : stepConfig;
 
 	useEffect(() => {
+		if (!open) return;
+
+		const handlePopState = (event) => {
+			setIsNavigatingBack(true);
+			onOpenChange(false);
+			setTimeout(() => setIsNavigatingBack(false), 100);
+		};
+
+		window.history.pushState({ sidePanelOpen: true }, '');
+		window.addEventListener('popstate', handlePopState);
+
+		return () => {
+			window.removeEventListener('popstate', handlePopState);
+			if (window.history.state?.sidePanelOpen) {
+				window.history.back();
+			}
+		};
+	}, [open, onOpenChange]);
+
+	useEffect(() => {
 		register({ name: "importOption", type: "custom" });
 		register({ name: "useEncryption", type: "boolean", value: false });
 		register({ name: "acceptResponsibility", type: "boolean", value: false });
@@ -88,6 +109,8 @@ export const ImportAddressesSidePanel = ({
 	}, [value, setWalletGenerationInput]);
 
 	useKeydown("Enter", () => {
+		if (isNavigatingBack) return;
+		
 		const isButton = (document.activeElement as any)?.type === "button";
 
 		if (!isLedgerImport && !isButton && !isNextDisabled && activeTab <= ImportAddressStep.EncryptPasswordStep) {
