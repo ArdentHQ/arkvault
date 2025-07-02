@@ -6,6 +6,7 @@ import { Link } from "@/app/components/Link";
 import { Address, AddressLabel } from "@/app/components/Address";
 import { Label } from "@/app/components/Label";
 import { Divider } from "@/app/components/Divider";
+import { Contracts } from "@/app/lib/profiles";
 
 const votesHelpLink = "https://arkvault.io/docs/transactions/vote";
 
@@ -97,24 +98,29 @@ export const ValidatorStatus = ({ votes, activeValidators }: ValidatorStatusProp
 };
 
 export const ValidatorName = ({
-	validatorName,
-	isUsername,
+	validator,
 	className,
 }: {
-	validatorName: string;
-	isUsername: boolean;
+	validator?: Contracts.IReadOnlyWallet,
 	className?: string;
 }) => {
-	if (!isUsername) {
-		return <Address address={validatorName} addressClass={className} showCopyButton={false} />;
+	const { t } = useTranslation();
+
+	if (!validator) {
+		return <>{t("COMMON.NOT_AVAILABLE")}</>
 	}
-	return <AddressLabel className={className}>{validatorName}</AddressLabel>;
+
+	if (!validator.username()) {
+		return <Address address={validator.address()} addressClass={className} showCopyButton={false} />;
+	}
+
+	return <AddressLabel className={className}>{validator.username() as string}</AddressLabel>;
 };
 
 const Votes = ({ votes, activeValidators }: VotesProperties) => {
 	const { t } = useTranslation();
 
-	const validator = votes[0].wallet!;
+	const validator = votes[0].wallet;
 
 	return (
 		<div className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 mb-3 flex w-full flex-col items-start justify-between gap-0 overflow-hidden rounded border md:mb-0 md:flex-row md:items-center md:gap-2 md:rounded-none md:border-none">
@@ -124,9 +130,8 @@ const Votes = ({ votes, activeValidators }: VotesProperties) => {
 				</p>
 				<div className="xs:max-w-32 max-w-28 flex-1 truncate sm:max-w-40 md:max-w-60">
 					<ValidatorName
-						validatorName={validator.username() || validator.address()}
+						validator={validator}
 						className="dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm md:text-base md:leading-5"
-						isUsername={validator.username() !== undefined}
 					/>
 				</div>
 			</div>
@@ -136,7 +141,7 @@ const Votes = ({ votes, activeValidators }: VotesProperties) => {
 					{t("COMMON.RANK")}
 				</p>
 				<p className="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 mb-2 text-sm font-semibold md:mb-0 md:text-base md:leading-5">
-					{validator.rank() ? `#${validator.rank()}` : t("COMMON.NOT_AVAILABLE")}
+					{validator && validator.rank() ? `#${validator.rank()}` : t("COMMON.NOT_AVAILABLE")}
 				</p>
 				<p className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm md:hidden">
 					{t("COMMON.VALIDATOR_STATUS")}
