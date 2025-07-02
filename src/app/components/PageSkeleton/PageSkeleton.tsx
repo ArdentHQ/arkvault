@@ -6,9 +6,11 @@ import { WelcomeSlider } from "@/domains/profile/components/WelcomeSlider/Welcom
 import { ProfileRowSkeleton } from "@/domains/profile/components/ProfileRow/ProfileRow";
 import { Skeleton } from "@/app/components/Skeleton";
 import cn from "classnames";
+import { useTheme } from "@/app/hooks";
 
 export const PageSkeleton = () => {
 	const { t } = useTranslation();
+	const { isDarkMode } = useTheme();
 
 	return (
 		<div data-testid="PageSkeleton">
@@ -24,7 +26,17 @@ export const PageSkeleton = () => {
 								"border-theme-navy-100 dark:border-theme-secondary-800 dim:border-theme-dim-700 bg-theme-navy-50 dark:bg-theme-secondary-800 dim:bg-theme-dim-950 dim:bg-[url(/welcome-bg-dim.svg)] hidden min-w-0 basis-1/2 rounded-xl bg-[url(/welcome-bg-white.svg)] sm:block sm:border dark:bg-[url(/welcome-bg-dark.svg)]",
 							)}
 						>
-							<WelcomeSlider />
+							<div
+								className={cn(
+									"border-theme-navy-100 dark:border-theme-secondary-800 hidden min-w-0 basis-1/2 rounded-xl sm:block sm:border",
+									{
+										"bg-theme-navy-50 bg-[url(/welcome-bg-white.svg)]": !isDarkMode,
+										"bg-theme-secondary-800 bg-[url(/welcome-bg-dark.svg)]": isDarkMode,
+									},
+								)}
+							>
+								<WelcomeSlider />
+							</div>
 						</div>
 
 						<div className="border-theme-navy-100 dark:border-theme-secondary-800 dim:border-theme-dim-700 min-w-0 basis-1/2 rounded-xl sm:border sm:p-6">
