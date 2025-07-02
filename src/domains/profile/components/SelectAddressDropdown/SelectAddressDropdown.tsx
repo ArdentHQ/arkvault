@@ -65,7 +65,7 @@ export const OptionLabel = ({
 					<Icon
 						name="CheckmarkDouble"
 						size="md"
-						className="text-theme-primary-600 dark:text-theme-secondary-200"
+						className="text-theme-primary-600 dark:text-theme-secondary-200 dim:text-theme-dim-700"
 					/>
 				)}
 			</div>
