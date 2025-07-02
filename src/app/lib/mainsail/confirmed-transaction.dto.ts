@@ -70,6 +70,12 @@ export class ConfirmedTransactionData {
 			}
 		}
 
+		const identifierName = TransactionTypeService.getIdentifierName(this.data);
+
+		if (identifierName !== null) {
+			return identifierName;
+		}
+
 		return this.methodHash();
 	}
 

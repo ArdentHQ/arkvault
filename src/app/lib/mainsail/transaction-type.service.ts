@@ -14,7 +14,6 @@ export const TransactionTypes = {
 	...FunctionSigs.ConsensusV1,
 } as const;
 
-
 export const trimHexPrefix = (type: string): string => type.replace(/^0x/, "");
 
 const getFunctionIdentifiers = (contract: {
@@ -83,17 +82,34 @@ export class TransactionTypeService {
 		return TransactionTypeService.#checkFunctionIdentifier("resignValidator", data);
 	}
 
-	static #checkFunctionIdentifier(identifierName: string, data: TransactionData): boolean {
-		// get function itentiferes and store them in a static variable
+	public static getIdentifierName(data: TransactionData): string | null {
+		const functionIdentifiers = TransactionTypeService.#getFunctionIdentifiers();
+
+		for (const [key, value] of Object.entries(functionIdentifiers)) {
+			if (data.data.startsWith(`0x${value}`)) {
+				return key;
+			}
+		}
+
+		return null;
+	}
+
+	static #getFunctionIdentifiers(): Record<string, string> {
 		if (!TransactionTypeService.#functionIdentifiers) {
 			TransactionTypeService.#functionIdentifiers = {
 				...getFunctionIdentifiers(UsernamesContract),
 				...getFunctionIdentifiers(ConsensusContract),
 				...getFunctionIdentifiers(MultipaymentContract),
 			};
-		} 
+		}
 
-		const identifier = TransactionTypeService.#functionIdentifiers[identifierName];
+		return TransactionTypeService.#functionIdentifiers;
+	}
+
+	static #checkFunctionIdentifier(identifierName: string, data: TransactionData): boolean {
+		const functionIdentifiers = TransactionTypeService.#getFunctionIdentifiers();
+
+		const identifier = functionIdentifiers[identifierName];
 
 		if (!identifier) {
 			return false;
