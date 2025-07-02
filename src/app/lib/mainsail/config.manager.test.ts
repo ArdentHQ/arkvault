@@ -1,6 +1,6 @@
 import { NetworkConfig } from "./contracts";
 import { ConfigManager } from "./config.manager";
-import { data as config } from "@/tests/fixtures/coins/mainsail/devnet/cryptoConfiguration.json"
+import { data as config } from "@/tests/fixtures/coins/mainsail/devnet/cryptoConfiguration.json";
 
 describe("ConfigManager", () => {
 	let configManager: ConfigManager;
@@ -11,9 +11,11 @@ describe("ConfigManager", () => {
 
 	it("should set the config and build constants", () => {
 		configManager.setConfig(config);
-		expect(configManager.all()).toEqual(expect.objectContaining({
-			network: config.network,
-		}));
+		expect(configManager.all()).toEqual(
+			expect.objectContaining({
+				network: config.network,
+			}),
+		);
 		expect(configManager.getMilestones().length).toBe(config.milestones.length);
 	});
 
@@ -34,9 +36,11 @@ describe("ConfigManager", () => {
 		expect(configManager.all()).toBeUndefined();
 		configManager.setConfig(config);
 
-		expect(configManager.all()).toEqual(expect.objectContaining({
-			network: config.network,
-		}));
+		expect(configManager.all()).toEqual(
+			expect.objectContaining({
+				network: config.network,
+			}),
+		);
 	});
 
 	it("should set a value", () => {

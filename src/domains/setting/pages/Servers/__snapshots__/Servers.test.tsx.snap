@@ -347,13 +347,6 @@ exports[`Servers Settings > should render servers settings 1`] = `
                           </svg>
                         </div>
                       </div>
-                      <div
-                        class="bg-theme-background group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800 absolute top-0 right-0 flex items-center justify-center rounded-full p-0.5 transition-all duration-100 ease-linear"
-                      >
-                        <div
-                          class="bg-theme-danger-500 h-1.5 w-1.5 rounded-full"
-                        />
-                      </div>
                     </div>
                   </button>
                 </div>
@@ -1692,13 +1685,6 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                             </g>
                           </svg>
                         </div>
-                      </div>
-                      <div
-                        class="bg-theme-background group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800 absolute top-0 right-0 flex items-center justify-center rounded-full p-0.5 transition-all duration-100 ease-linear"
-                      >
-                        <div
-                          class="bg-theme-danger-500 h-1.5 w-1.5 rounded-full"
-                        />
                       </div>
                     </div>
                   </button>
@@ -3379,13 +3365,6 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                           </svg>
                         </div>
                       </div>
-                      <div
-                        class="bg-theme-background group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800 absolute top-0 right-0 flex items-center justify-center rounded-full p-0.5 transition-all duration-100 ease-linear"
-                      >
-                        <div
-                          class="bg-theme-danger-500 h-1.5 w-1.5 rounded-full"
-                        />
-                      </div>
                     </div>
                   </button>
                 </div>
@@ -4937,13 +4916,6 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                             </g>
                           </svg>
                         </div>
-                      </div>
-                      <div
-                        class="bg-theme-background group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800 absolute top-0 right-0 flex items-center justify-center rounded-full p-0.5 transition-all duration-100 ease-linear"
-                      >
-                        <div
-                          class="bg-theme-danger-500 h-1.5 w-1.5 rounded-full"
-                        />
                       </div>
                     </div>
                   </button>
@@ -6498,13 +6470,6 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                             </g>
                           </svg>
                         </div>
-                      </div>
-                      <div
-                        class="bg-theme-background group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800 absolute top-0 right-0 flex items-center justify-center rounded-full p-0.5 transition-all duration-100 ease-linear"
-                      >
-                        <div
-                          class="bg-theme-danger-500 h-1.5 w-1.5 rounded-full"
-                        />
                       </div>
                     </div>
                   </button>
@@ -8184,13 +8149,6 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                             </g>
                           </svg>
                         </div>
-                      </div>
-                      <div
-                        class="bg-theme-background group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800 absolute top-0 right-0 flex items-center justify-center rounded-full p-0.5 transition-all duration-100 ease-linear"
-                      >
-                        <div
-                          class="bg-theme-danger-500 h-1.5 w-1.5 rounded-full"
-                        />
                       </div>
                     </div>
                   </button>
@@ -9873,13 +9831,6 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                           </svg>
                         </div>
                       </div>
-                      <div
-                        class="bg-theme-background group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800 absolute top-0 right-0 flex items-center justify-center rounded-full p-0.5 transition-all duration-100 ease-linear"
-                      >
-                        <div
-                          class="bg-theme-danger-500 h-1.5 w-1.5 rounded-full"
-                        />
-                      </div>
                     </div>
                   </button>
                 </div>
@@ -11561,13 +11512,6 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                           </svg>
                         </div>
                       </div>
-                      <div
-                        class="bg-theme-background group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800 absolute top-0 right-0 flex items-center justify-center rounded-full p-0.5 transition-all duration-100 ease-linear"
-                      >
-                        <div
-                          class="bg-theme-danger-500 h-1.5 w-1.5 rounded-full"
-                        />
-                      </div>
                     </div>
                   </button>
                 </div>
@@ -13240,13 +13184,6 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                             </g>
                           </svg>
                         </div>
-                      </div>
-                      <div
-                        class="bg-theme-background group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800 absolute top-0 right-0 flex items-center justify-center rounded-full p-0.5 transition-all duration-100 ease-linear"
-                      >
-                        <div
-                          class="bg-theme-danger-500 h-1.5 w-1.5 rounded-full"
-                        />
                       </div>
                     </div>
                   </button>

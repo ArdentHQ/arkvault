@@ -9,7 +9,7 @@ describe("AbstractDoubleSignatory", () => {
 		const signingKeyMock = "signingKey123";
 		const confirmKeyMock = "confirmKey123";
 
-		const instance = new (class extends AbstractSignatory { })({
+		const instance = new (class extends AbstractSignatory {})({
 			address: addressMock,
 			confirmKey: confirmKeyMock,
 			publicKey: publicKeyMock,
@@ -25,7 +25,7 @@ describe("AbstractDoubleSignatory", () => {
 		const accentedSigningKey = "ãtest";
 		const accentedConfirmKey = "tést";
 
-		const instance = new (class extends AbstractSignatory { })({
+		const instance = new (class extends AbstractSignatory {})({
 			address: addressMock,
 			confirmKey: accentedConfirmKey,
 			publicKey: publicKeyMock,

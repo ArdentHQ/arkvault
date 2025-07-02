@@ -5,7 +5,8 @@ import { MAINSAIL_MNEMONICS } from "@/utils/testing-library";
 
 describe("PublicKeyService", () => {
 	it("should return public key from a valid BIP39 mnemonic", () => {
-		const mnemonic = "abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon about";
+		const mnemonic =
+			"abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon about";
 		const service = new PublicKeyService();
 		const result = service.fromMnemonic(mnemonic);
 		expect(typeof result.publicKey).toBe("string");
@@ -28,7 +29,9 @@ describe("PublicKeyService", () => {
 
 	it("should throw an error if fromSecret receives a BIP39 compliant string", () => {
 		const service = new PublicKeyService();
-		expect(() => service.fromSecret(MAINSAIL_MNEMONICS[0])).toThrow("The given value is BIP39 compliant. Please use [fromMnemonic] instead.");
+		expect(() => service.fromSecret(MAINSAIL_MNEMONICS[0])).toThrow(
+			"The given value is BIP39 compliant. Please use [fromMnemonic] instead.",
+		);
 	});
 
 	it("should throw NotImplemented exception for fromWIF", async () => {

@@ -57,7 +57,6 @@ export class ProfileNotificationService implements IProfileNotificationService {
 		return this.#transactions;
 	}
 
-
 	/** {@inheritDoc IProfileNotificationService.filterByType} */
 	public filterByType(type: INotificationType) {
 		return this.#notificationRepository.filterByType(type);

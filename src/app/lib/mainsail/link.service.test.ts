@@ -3,11 +3,11 @@ import { LinkService } from "./link.service";
 
 class ConfigRepository {
 	host(): string {
-		return "http://explorer.example.com"
+		return "http://explorer.example.com";
 	}
 }
 
-interface IProfile { }
+interface IProfile {}
 const mockProfile: IProfile = {};
 
 describe("LinkService", () => {

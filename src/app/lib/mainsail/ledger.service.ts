@@ -1,5 +1,3 @@
-
-
 import { Contracts, Services } from "@/app/lib/mainsail";
 import { BIP44, HDKey } from "@ardenthq/arkvault-crypto";
 import { connectedTransport as ledgerTransportFactory } from "@/app/contexts/Ledger/transport";

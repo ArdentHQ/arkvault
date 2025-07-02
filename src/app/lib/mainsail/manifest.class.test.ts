@@ -20,6 +20,8 @@ describe("Manifest", () => {
 		const manifestData = { key1: "value1" };
 		const manifest = new Manifest(manifestData);
 
-		expect(() => manifest.get("nonExistentKey")).toThrow("The [nonExistentKey] key does not exist in the manifest.");
+		expect(() => manifest.get("nonExistentKey")).toThrow(
+			"The [nonExistentKey] key does not exist in the manifest.",
+		);
 	});
 });

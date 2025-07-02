@@ -2,9 +2,9 @@ import { describe, it, expect } from "vitest";
 import { Paginator } from "./paginator";
 import { MetaPagination } from "./client.contract";
 
+const newPaginator = (data: number | number[], pagination: MetaPagination) =>
+	new (class extends Paginator {})(data, pagination);
 describe("Paginator", () => {
-	const newPaginator = (data: number | number[], pagination: MetaPagination) => new (class extends Paginator { })(data, pagination)
-
 	it("should return correct items", () => {
 		const data = [1, 2, 3];
 		const pagination = { last: 3, next: 2, prev: undefined, self: 1 };

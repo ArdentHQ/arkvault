@@ -1,4 +1,3 @@
-
 import { Contracts } from "@/app/lib/profiles";
 import { renderHook } from "@testing-library/react";
 
@@ -37,7 +36,7 @@ describe("useNotifications", () => {
 
 	it("#markAsRead", async () => {
 		const { result } = renderHook(() => useNotifications({ profile }));
-		const notification = result.current.transactions[0]
+		const notification = result.current.transactions[0];
 
 		result.current.markAsRead(true, notification.id);
 
@@ -46,7 +45,7 @@ describe("useNotifications", () => {
 
 	it("should not mark as read if not visible", async () => {
 		const { result } = renderHook(() => useNotifications({ profile }));
-		const notification = result.current.transactions[1]
+		const notification = result.current.transactions[1];
 
 		result.current.markAsRead(false, notification.id);
 
