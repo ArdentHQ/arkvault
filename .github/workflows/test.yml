@@ -106,19 +106,6 @@ jobs:
                   max_attempts: 2
                   command: pnpm test:coverage src/app/contexts/Navigation/*test*
 
-            - name: Test Helpers (Lib)
-              env:
-                  COVERAGE_THRESHOLD_LINES: 100
-                  COVERAGE_THRESHOLD_FUNCTIONS: 100
-                  COVERAGE_THRESHOLD_STATEMENTS: 100
-                  COVERAGE_THRESHOLD_BRANCHES: 100
-                  COVERAGE_INCLUDE_PATH: src/app/lib/helpers/*test*
-              uses: nick-invision/retry@v2
-              with:
-                  timeout_minutes: 10
-                  max_attempts: 1
-                  command: pnpm test:coverage src/app/lib/helpers/*test*
-
             - name: Test App
               env:
                   COVERAGE_THRESHOLD_LINES: 100
@@ -967,10 +954,10 @@ jobs:
         runs-on: ubuntu-latest
         env:
             COVERAGE_INCLUDE_PATH: src/app/lib
-            COVERAGE_THRESHOLD_LINES: 44.17
-            COVERAGE_THRESHOLD_BRANCHES: 36.08
-            COVERAGE_THRESHOLD_FUNCTIONS: 37.76
-            COVERAGE_THRESHOLD_STATEMENTS: 44.44
+            COVERAGE_THRESHOLD_LINES: 53.27
+            COVERAGE_THRESHOLD_BRANCHES:  43.87
+            COVERAGE_THRESHOLD_FUNCTIONS: 52.24
+            COVERAGE_THRESHOLD_STATEMENTS: 53.49
         strategy:
             matrix:
                 node-version:
