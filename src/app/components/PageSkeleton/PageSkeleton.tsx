@@ -23,9 +23,10 @@ export const PageSkeleton = () => {
 					<div className="flex flex-col gap-3 lg:flex-row">
 						<div
 							className={cn(
-								"border-theme-navy-100 dark:border-theme-secondary-800 hidden min-w-0 basis-1/2 rounded-xl sm:block sm:border border-theme-navy-100 dark:border-theme-secondary-800 dim:border-theme-dim-700 bg-theme-navy-50 dark:bg-theme-secondary-800 dim:bg-theme-dim-950",
+								"border-theme-navy-100 dark:border-theme-secondary-800 border-theme-navy-100 dark:border-theme-secondary-800 dim:border-theme-dim-700 bg-theme-navy-50 dark:bg-theme-secondary-800 dim:bg-theme-dim-950 hidden min-w-0 basis-1/2 rounded-xl sm:block sm:border",
 								{
-									"bg-theme-navy-50 bg-[url(/welcome-bg-white.svg)] dim:bg-[url(/welcome-bg-dim.svg)]": !isDarkMode,
+									"bg-theme-navy-50 dim:bg-[url(/welcome-bg-dim.svg)] bg-[url(/welcome-bg-white.svg)]":
+										!isDarkMode,
 									"bg-theme-secondary-800 bg-[url(/welcome-bg-dark.svg)]": isDarkMode,
 								},
 							)}
