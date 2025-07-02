@@ -101,6 +101,25 @@ export const SidePanel = ({
 		onMountChange?.(isMounted);
 	}, [isMounted]);
 
+	useEffect(() => {
+		if (!open) return;
+	  
+		const handlePopState = (event) => {
+		  event.preventDefault();
+		  onOpenChange(false);
+		};
+	  
+		window.history.pushState({ sidePanelOpen: true }, '');
+		window.addEventListener('popstate', handlePopState);
+	  
+		return () => {
+		  window.removeEventListener('popstate', handlePopState);
+		  if (window.history.state?.sidePanelOpen) {
+			window.history.back();
+		  }
+		};
+	  }, [open, onOpenChange]);
+
 	return (
 		<>
 			<FloatingPortal>
