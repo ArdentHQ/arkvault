@@ -65,7 +65,12 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 				title={getTitle()}
 				subtitle={getSubtitle()}
 				titleIcon={
-					<ThemeIcon dimensions={[24, 24]} lightIcon="SendTransactionLight" darkIcon="SendTransactionDark" />
+					<ThemeIcon
+						dimensions={[24, 24]}
+						lightIcon="SendTransactionLight"
+						darkIcon="SendTransactionDark"
+						dimIcon="SendTransactionDim"
+					/>
 				}
 			/>
 

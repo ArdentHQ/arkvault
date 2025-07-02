@@ -1,7 +1,7 @@
 import { IReadOnlyWallet } from "./contracts.js";
 import { Avatar } from "./helpers/avatar.js";
 
-interface ROWallet {
+export interface ROWallet {
 	address: string;
 	publicKey?: string;
 	username?: string;

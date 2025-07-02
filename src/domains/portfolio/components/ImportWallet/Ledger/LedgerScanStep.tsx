@@ -135,7 +135,7 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 
 	return (
 		<div>
-			<div className="md:border-theme-secondary-300 dark:md:border-theme-secondary-800 relative hidden rounded-xl border border-transparent sm:block">
+			<div className="md:border-theme-secondary-300 dark:md:border-theme-secondary-800 dim:md:border-theme-dim-700 relative hidden rounded-xl border border-transparent sm:block">
 				<div>
 					<Table columns={columns} data={showAll ? data : data.slice(0, 6)} className="with-x-padding">
 						{renderTableRow}
@@ -188,14 +188,15 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 			</div>
 
 			<div className="sm:hidden">
-				<div className="border-l-theme-primary-400 bg-theme-primary-100 dark:border-l-theme-primary-300 dark:bg-theme-secondary-800 mb-3 flex h-9 w-full flex-row items-center justify-between border-l-2 px-3">
-					<span className="text-theme-secondary-700 dark:text-theme-secondary-500 text-base font-semibold">
+				<div className="border-l-theme-primary-400 bg-theme-primary-100 dark:border-l-theme-primary-300 dark:bg-theme-secondary-800 dim:border-l-theme-dim-navy-400 dim:bg-theme-dim-950 mb-3 flex h-9 w-full flex-row items-center justify-between border-l-2 px-3">
+					<span className="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-base font-semibold">
 						{t("COMMON.ADDRESS")}
 					</span>
 					<label
 						className={cn("flex flex-row items-center gap-2", {
-							"text-theme-secondary-500 dark:text-theme-secondary-700": isScanning,
-							"text-theme-secondary-700 dark:text-theme-secondary-500": !isScanning,
+							"text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-700": isScanning,
+							"text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500":
+								!isScanning,
 						})}
 					>
 						<Checkbox

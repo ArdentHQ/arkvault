@@ -115,7 +115,7 @@ export const PortfolioHeader = ({
 
 	return (
 		<header data-testid="WalletHeader" className="md:px-10 md:pt-8 lg:container">
-			<div className="bg-theme-primary-100 dark:bg-theme-dark-950 flex flex-col gap-3 px-2 pt-3 pb-2 sm:gap-2 md:rounded-xl">
+			<div className="bg-theme-primary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 flex flex-col gap-3 px-2 pt-3 pb-2 sm:gap-2 md:rounded-xl">
 				<div className="z-30 flex w-full flex-row items-center justify-between px-4">
 					<Tooltip
 						visible={showHint}
@@ -129,7 +129,7 @@ export const PortfolioHeader = ({
 									size="xs"
 									variant="transparent"
 									data-testid="HideManageHint"
-									className="bg-theme-primary-500 h-8 w-full px-4 py-1.5 sm:w-auto"
+									className="bg-theme-primary-500 dim:bg-theme-dim-navy-600 h-8 w-full px-4 py-1.5 sm:w-auto"
 									onClick={(e) => {
 										e.stopPropagation();
 										persistHintShown(true);
@@ -148,7 +148,7 @@ export const PortfolioHeader = ({
 									showHint,
 							})}
 						>
-							<p className="text-theme-secondary-900 dark:text-theme-dark-50 hidden rounded-l text-base leading-5 font-semibold sm:block">
+							<p className="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 hidden rounded-l text-base leading-5 font-semibold sm:block">
 								{t("COMMON.VIEWING")}:
 							</p>
 							<div
@@ -179,30 +179,37 @@ export const PortfolioHeader = ({
 					<div className="flex flex-row items-center gap-1">
 						<Button
 							variant="secondary"
-							className="dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700 flex h-6 w-6 items-center justify-center p-0 sm:h-8 sm:w-auto sm:px-2 dark:bg-transparent"
+							className="dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 flex h-6 w-6 items-center justify-center p-0 sm:h-8 sm:w-auto sm:px-2 dark:bg-transparent"
 							onClick={() => onImportAddress?.(true)}
 						>
 							<Icon name="ArrowTurnDownBracket" size="md" />
-							<p className="hidden text-base leading-5 font-semibold sm:block">{t("COMMON.IMPORT")}</p>
+							<p className="dim:text-theme-dim-50 hidden text-base leading-5 font-semibold sm:block">
+								{t("COMMON.IMPORT")}
+							</p>
 						</Button>
-						<Divider type="vertical" className="border-theme-primary-300 dark:border-theme-dark-700 h-4" />
+						<Divider
+							type="vertical"
+							className="border-theme-primary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 h-4"
+						/>
 						<Button
 							variant="secondary"
-							className="dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700 flex h-6 w-6 items-center justify-center p-0 sm:h-8 sm:w-auto sm:px-2 dark:bg-transparent"
+							className="dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 flex h-6 w-6 items-center justify-center p-0 sm:h-8 sm:w-auto sm:px-2 dark:bg-transparent"
 							onClick={() => onCreateAddress?.(true)}
 						>
 							<Icon name="Plus" size="md" />
-							<p className="hidden text-base leading-5 font-semibold sm:block">{t("COMMON.CREATE")}</p>
+							<p className="dim:text-theme-dim-50 hidden text-base leading-5 font-semibold sm:block">
+								{t("COMMON.CREATE")}
+							</p>
 						</Button>
 					</div>
 				</div>
 
 				<div className="flex flex-col gap-0.5">
-					<div className="dark:bg-theme-dark-900 flex w-full flex-col gap-3 rounded bg-white p-4 md:rounded-t-lg md:rounded-b-sm">
+					<div className="dark:bg-theme-dark-900 dim:bg-theme-dim-900 flex w-full flex-col gap-3 rounded bg-white p-4 md:rounded-t-lg md:rounded-b-sm">
 						<div className="flex w-full flex-row items-center justify-between">
 							{selectedWallets.length === 1 && (
 								<div className="flex flex-row items-center gap-1.5">
-									<p className="text-theme-secondary-700 dark:text-theme-dark-200 hidden text-sm leading-[17px] font-semibold sm:block md:text-base md:leading-5">
+									<p className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 hidden text-sm leading-[17px] font-semibold sm:block md:text-base md:leading-5">
 										{t("COMMON.ADDRESS")}
 									</p>
 									<div className="h-[17px] w-32 md:h-5 md:w-60 lg:w-[410px]">
@@ -210,14 +217,14 @@ export const PortfolioHeader = ({
 											alignment="center"
 											address={wallet.address()}
 											truncateOnTable
-											addressClass="text-theme-primary-900 text-sm font-semibold leading-[17px] md:text-base md:leading-5 dark:text-theme-dark-50"
+											addressClass="text-theme-primary-900 text-sm font-semibold leading-[17px] md:text-base md:leading-5 dark:text-theme-dark-50 dim:text-theme-dim-50"
 										/>
 									</div>
 									<div className="flex items-center gap-3 leading-[17px] sm:ml-1.5">
 										<WalletIcons
 											wallet={wallet}
 											exclude={["isKnown", "isStarred", "isTestNetwork"]}
-											iconColor="text-theme-secondary-500 dark:text-theme-dark-500 hover:text-theme-secondary-900 dark:hover:text-theme-secondary-200 p-0!"
+											iconColor="text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500 hover:text-theme-secondary-900 dark:hover:text-theme-secondary-200 p-0!"
 										/>
 									</div>
 								</div>
@@ -225,14 +232,14 @@ export const PortfolioHeader = ({
 
 							{selectedWallets.length > 1 && (
 								<div className="flex flex-row items-center gap-1.5">
-									<p className="text-theme-secondary-700 dark:text-theme-dark-200 hidden text-sm leading-[17px] font-semibold sm:block md:text-base md:leading-5">
+									<p className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 hidden text-sm leading-[17px] font-semibold sm:block md:text-base md:leading-5">
 										{wallet.currency()} {t("COMMON.BALANCE")}
 									</p>
 									<div>
 										<Amount
 											value={profile.totalBalance().toNumber()}
 											ticker={wallet.currency()}
-											className="text-theme-primary-900 dark:text-theme-dark-50 text-sm leading-[17px] font-semibold md:text-base md:leading-5"
+											className="text-theme-primary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm leading-[17px] font-semibold md:text-base md:leading-5"
 											allowHideBalance
 											profile={profile}
 										/>
@@ -263,7 +270,7 @@ export const PortfolioHeader = ({
 
 										<Divider
 											type="vertical"
-											className="border-theme-secondary-300 dark:border-theme-dark-700 mx-0 hidden h-[17px] p-0 sm:block"
+											className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 mx-0 hidden h-[17px] p-0 sm:block"
 										/>
 									</>
 								)}
@@ -280,20 +287,20 @@ export const PortfolioHeader = ({
 						</div>
 						<Divider
 							type="horizontal"
-							className="border-theme-secondary-300 dark:border-theme-dark-700 my-0 h-px border-dashed"
+							className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 my-0 h-px border-dashed"
 						/>
 						<div className="flex flex-col gap-3 sm:w-full sm:flex-row sm:items-center sm:justify-between sm:gap-0">
 							<div className="flex flex-col gap-2" data-testid="WalletHeader__balance">
-								<p className="text-theme-secondary-700 dark:text-theme-dark-200 text-sm leading-[17px] font-semibold">
+								<p className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm leading-[17px] font-semibold">
 									{t("COMMON.TOTAL_BALANCE")}
 								</p>
 
-								<div className="text-theme-secondary-900 flex flex-row items-center text-lg leading-[21px] font-semibold md:text-2xl md:leading-[29px]">
+								<div className="text-theme-secondary-900 dim:text-theme-dim-50 flex flex-row items-center text-lg leading-[21px] font-semibold md:text-2xl md:leading-[29px]">
 									{isRestored && selectedWallets.length === 1 && (
 										<Amount
 											value={wallet.balance()}
 											ticker={wallet.currency()}
-											className="dark:text-theme-dark-50"
+											className="dark:text-theme-dark-50 dim:text-theme-dim-50"
 											allowHideBalance
 											profile={profile}
 										/>
@@ -304,7 +311,7 @@ export const PortfolioHeader = ({
 									{selectedWallets.length === 1 && (
 										<Divider
 											type="vertical"
-											className="border-theme-secondary-300 md-lg:block dark:border-theme-dark-700 hidden h-6"
+											className="border-theme-secondary-300 md-lg:block dark:border-theme-dark-700 dim:border-theme-dim-700 hidden h-6"
 										/>
 									)}
 									{isRestored && (
@@ -312,9 +319,9 @@ export const PortfolioHeader = ({
 											value={profile.totalBalanceConverted().toNumber()}
 											ticker={wallet.exchangeCurrency()}
 											className={cn({
-												"text-theme-primary-900 dark:text-theme-dark-50":
+												"text-theme-primary-900 dark:text-theme-dark-50 dim:text-theme-dim-50":
 													selectedWallets.length !== 1,
-												"text-theme-secondary-700 dark:text-theme-dark-200 md-lg:block hidden":
+												"text-theme-secondary-700 dark:text-theme-dark-200 md-lg:block dim:text-theme-dim-200 hidden":
 													selectedWallets.length === 1,
 											})}
 											allowHideBalance
@@ -329,7 +336,7 @@ export const PortfolioHeader = ({
 								{selectedWallets.length === 1 && (
 									<Button
 										data-testid="WalletHeader__send-button"
-										className="dark:bg-theme-dark-navy-500 dark:hover:bg-theme-dark-navy-700 my-auto flex-1 px-8"
+										className="dark:bg-theme-dark-navy-500 dark:hover:bg-theme-dark-navy-700 dim:bg-theme-dim-navy-700 dim:disabled:text-theme-dim-navy-700 dim:disabled:bg-theme-dim-navy-900 dim-hover:disabled:bg-theme-dim-navy-900 dim-hover:disabled:text-theme-dim-navy-700 my-auto flex-1 px-8"
 										disabled={
 											wallet.balance() === 0 ||
 											!wallet.hasBeenFullyRestored() ||
@@ -345,7 +352,7 @@ export const PortfolioHeader = ({
 								{selectedWallets.length > 1 && (
 									<Button
 										data-testid="WalletHeader__send-button"
-										className="dark:bg-theme-dark-navy-500 dark:hover:bg-theme-dark-navy-700 my-auto flex-1 px-8"
+										className="dark:bg-theme-dark-navy-500 dark:hover:bg-theme-dark-navy-700 dim:bg-theme-dim-navy-600 dim-hover:bg-theme-dim-navy-700 dim:disabled:text-theme-dim-navy-700 dim:disabled:bg-theme-dim-navy-900 dim-hover:disabled:bg-theme-dim-navy-900 dim-hover:disabled:text-theme-dim-navy-700 my-auto flex-1 px-8"
 										disabled={profile.totalBalance().isZero()}
 										variant="primary"
 										onClick={handleSend}
@@ -366,7 +373,7 @@ export const PortfolioHeader = ({
 											<Button
 												variant="secondary"
 												size="icon"
-												className="text-theme-primary-600 dark:hover:bg-theme-dark-navy-700"
+												className="text-theme-primary-600 dark:hover:bg-theme-dark-navy-700 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim:text-theme-dim-50"
 											>
 												<Icon name="EllipsisVerticalFilled" size="lg" />
 											</Button>
@@ -378,7 +385,7 @@ export const PortfolioHeader = ({
 						</div>
 					</div>
 
-					<div className="dark:bg-theme-dark-900 hidden w-full rounded-t-sm rounded-b-lg bg-white p-4 md:block">
+					<div className="dark:bg-theme-dark-900 dim:bg-theme-dim-900 hidden w-full rounded-t-sm rounded-b-lg bg-white p-4 md:block">
 						<WalletVote
 							wallet={wallet}
 							onButtonClick={handleVotesButtonClick}

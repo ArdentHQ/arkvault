@@ -40,7 +40,7 @@ const Handle = ({ small, ...properties }: HandleProperties) => (
 	<div
 		{...properties}
 		className={twMerge(
-			"toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full",
+			"toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full",
 			cn({ "w-6": small, "w-[30px]": !small }),
 		)}
 	/>
@@ -52,9 +52,9 @@ const HandleInner = ({ alwaysOn, disabled, small, ...properties }: HandleInnerPr
 		className={twMerge(
 			"absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out",
 			cn({
-				"bg-theme-primary-100 dark:bg-theme-secondary-800": disabled,
-				"bg-theme-primary-600": !disabled && alwaysOn,
-				"bg-theme-secondary-400 dark:bg-theme-secondary-600": !disabled && !alwaysOn,
+				"bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-800": disabled,
+				"bg-theme-primary-600 dim:bg-theme-dim-navy-600": !disabled && alwaysOn,
+				"bg-theme-secondary-400 dark:bg-theme-secondary-600 dim:bg-theme-dim-500": !disabled && !alwaysOn,
 				"h-3 w-3": small,
 				"h-4 w-4": !small,
 				"handle-inner": !disabled,

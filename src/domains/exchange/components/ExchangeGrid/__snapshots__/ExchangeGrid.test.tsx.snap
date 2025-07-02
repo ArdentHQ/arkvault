@@ -11,7 +11,7 @@ exports[`ExchangeGrid > should render 1`] = `
     >
       <div>
         <button
-          class="border-theme-primary-100 bg-theme-background transition-colors-shadow focus-visible:border-theme-primary-400 dark:border-theme-secondary-800 relative h-full w-full cursor-pointer rounded-lg border-2 p-5 text-left outline-hidden duration-200 focus-visible:outline-hidden"
+          class="border-theme-primary-100 bg-theme-background transition-colors-shadow focus-visible:border-theme-primary-400 dark:border-theme-secondary-800 dim:border-theme-dim-700 dim:focus-visible:border-theme-dim-navy-600 relative h-full w-full cursor-pointer rounded-lg border-2 p-5 text-left outline-hidden duration-200 focus-visible:outline-hidden"
           data-testid="Card"
           type="button"
         >
@@ -50,7 +50,7 @@ exports[`ExchangeGrid > should render 1`] = `
 exports[`ExchangeGrid > should render empty 1`] = `
 <DocumentFragment>
   <div
-    class="border-theme-secondary-300 text-theme-secondary-text dark:border-theme-secondary-800 rounded-lg border-solid text-center leading-5 sm:border sm:p-6"
+    class="border-theme-secondary-300 text-theme-secondary-text dark:border-theme-secondary-800 dim:border-theme-dim-700 rounded-lg border-solid text-center leading-5 sm:border sm:p-6"
     data-testid="ExchangeGrid__empty-message"
   >
     <div>

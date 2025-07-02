@@ -52,7 +52,7 @@ export const NotificationTransactionItem = ({
 				</div>
 			</TableCell>
 
-			<TableCell innerClassName="text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold justify-end whitespace-nowrap">
+			<TableCell innerClassName="text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold justify-end whitespace-nowrap dim:text-theme-dim-200">
 				{timestamp && <TimeAgo date={timestamp.toISOString()} />}
 			</TableCell>
 

@@ -54,7 +54,7 @@ describe("useTheme", () => {
 	});
 
 	describe("setTheme", () => {
-		it.each(["light", "dark"])("should set %s theme", (theme) => {
+		it.each(["light", "dark", "dim"])("should set %s theme", (theme) => {
 			const {
 				result: { current },
 			} = renderHook(() => useTheme());
@@ -69,7 +69,11 @@ describe("useTheme", () => {
 				current.setTheme(theme as ViewingModeType);
 			});
 
-			expect(document.querySelector("html")).toHaveClass(theme);
+			if (theme === "dim") {
+				expect(document.querySelector("html")).toHaveClass("dark", "dim");
+			} else {
+				expect(document.querySelector("html")).toHaveClass(theme);
+			}
 		});
 
 		it("should set system theme", () => {
@@ -158,6 +162,18 @@ describe("useTheme", () => {
 			});
 
 			expect(document.querySelector("html")).toHaveClass("dark");
+
+			act(() => {
+				current.setTheme("light");
+			});
+
+			expect(document.querySelector("html")).toHaveClass("light");
+
+			act(() => {
+				current.setTheme("dim");
+			});
+
+			expect(document.querySelector("html")).toHaveClass("dark", "dim");
 
 			act(() => {
 				current.setProfileTheme(profile);

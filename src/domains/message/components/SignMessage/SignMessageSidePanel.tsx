@@ -199,14 +199,30 @@ export const SignMessageSidePanel = ({
 
 	const getTitleIcon = () => {
 		if (activeTab === Step.SuccessStep) {
-			return <ThemeIcon lightIcon="CompletedLight" darkIcon="CompletedDark" dimensions={[24, 24]} />;
+			return (
+				<ThemeIcon
+					lightIcon="CompletedLight"
+					darkIcon="CompletedDark"
+					dimIcon="CompletedDim"
+					dimensions={[24, 24]}
+				/>
+			);
 		}
 
 		if (authenticateLedger) {
-			return <ThemeIcon lightIcon="LedgerLight" darkIcon="LedgerDark" dimensions={[24, 24]} />;
+			return (
+				<ThemeIcon lightIcon="LedgerLight" darkIcon="LedgerDark" dimIcon="LedgerDim" dimensions={[24, 24]} />
+			);
 		}
 
-		return <ThemeIcon lightIcon="SendTransactionLight" darkIcon="SendTransactionDark" dimensions={[24, 24]} />;
+		return (
+			<ThemeIcon
+				lightIcon="SendTransactionLight"
+				darkIcon="SendTransactionDark"
+				dimIcon="SendTransactionDim"
+				dimensions={[24, 24]}
+			/>
+		);
 	};
 	return (
 		<SidePanel
@@ -223,7 +239,7 @@ export const SignMessageSidePanel = ({
 			footer={
 				<SidePanelButtons>
 					{activeTab === Step.FormStep && (
-						<>
+						<div className="grid w-full grid-cols-2 justify-end gap-3 sm:flex">
 							<Button data-testid="SignMessage__back-button" variant="secondary" onClick={handleBack}>
 								{t("COMMON.BACK")}
 							</Button>
@@ -236,12 +252,17 @@ export const SignMessageSidePanel = ({
 							>
 								{t("COMMON.SIGN")}
 							</Button>
-						</>
+						</div>
 					)}
 
 					{activeTab === Step.SuccessStep && (
-						<>
-							<Button data-testid="SignMessage__back-button" variant="secondary" onClick={handleBack}>
+						<div className="grid w-full grid-cols-2 justify-end gap-3 sm:flex">
+							<Button
+								data-testid="SignMessage__back-button"
+								variant="secondary"
+								className="text-sm sm:text-base"
+								onClick={handleBack}
+							>
 								{t("COMMON.CLOSE")}
 							</Button>
 
@@ -251,7 +272,7 @@ export const SignMessageSidePanel = ({
 								data={JSON.stringify(signedMessage)}
 								data-testid="SignMessage__copy-button"
 								wrapperClassName="flex-1 sm:flex-none"
-								buttonClassName="bg-theme-primary-600 text-center text-base font-semibold text-white hover:bg-theme-primary-700 flex-1 w-full"
+								buttonClassName="bg-theme-primary-600 text-center font-semibold text-white hover:bg-theme-primary-700 flex-1 w-full text-base h-12"
 							>
 								<div
 									className="relative inline-flex items-center space-x-3 rounded"
@@ -264,7 +285,7 @@ export const SignMessageSidePanel = ({
 									<div className="block whitespace-nowrap sm:hidden">{t("COMMON.COPY")}</div>
 								</div>
 							</Clipboard>
-						</>
+						</div>
 					)}
 				</SidePanelButtons>
 			}

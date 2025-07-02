@@ -22,6 +22,12 @@ import WelcomeSlide2Dark from "./welcome-slide-2-dark.png";
 import WelcomeSlide2SmDark from "./welcome-slide-2-sm-dark.png";
 import WelcomeSlide3Dark from "./welcome-slide-3-dark.png";
 import WelcomeSlide3SmDark from "./welcome-slide-3-sm-dark.png";
+import WelcomeSlide1Dim from "./welcome-slide-1-dim.png";
+import WelcomeSlide1SmDim from "./welcome-slide-1-sm-dim.png";
+import WelcomeSlide2Dim from "./welcome-slide-2-dim.png";
+import WelcomeSlide2SmDim from "./welcome-slide-2-sm-dim.png";
+import WelcomeSlide3Dim from "./welcome-slide-3-dim.png";
+import WelcomeSlide3SmDim from "./welcome-slide-3-sm-dim.png";
 
 export const profile = {
 	WelcomeModalBannerDark,
@@ -35,15 +41,21 @@ export const profile = {
 	WelcomeModalStep4Dark,
 	WelcomeModalStep4Light,
 	WelcomeSlide1Dark,
+	WelcomeSlide1Dim,
 	WelcomeSlide1Light,
 	WelcomeSlide1SmDark,
+	WelcomeSlide1SmDim,
 	WelcomeSlide1SmLight,
 	WelcomeSlide2Dark,
+	WelcomeSlide2Dim,
 	WelcomeSlide2Light,
 	WelcomeSlide2SmDark,
+	WelcomeSlide2SmDim,
 	WelcomeSlide2SmLight,
 	WelcomeSlide3Dark,
+	WelcomeSlide3Dim,
 	WelcomeSlide3Light,
 	WelcomeSlide3SmDark,
+	WelcomeSlide3SmDim,
 	WelcomeSlide3SmLight,
 };

@@ -44,13 +44,13 @@ export const ConfirmPassphraseStep = () => {
 
 	return (
 		<section data-testid="CreateWallet__ConfirmPassphraseStep" className="space-y-4">
-			<div className="border-theme-secondary-300 dark:border-theme-dark-700 rounded-lg border transition-all">
+			<div className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 rounded-lg border transition-all">
 				<div className="flex flex-1 items-center justify-between space-x-5 px-4 py-4 sm:px-6">
 					<MnemonicVerification mnemonic={mnemonic} handleComplete={handleComplete} />
 				</div>
 
-				<div className="bg-theme-secondary-100 dark:bg-theme-dark-950 rounded-b-lg p-4 sm:p-6">
-					<label className="text-theme-secondary-900 dark:text-theme-dark-100 inline-flex cursor-pointer items-start space-x-3 text-sm leading-[17px]">
+				<div className="bg-theme-secondary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 rounded-b-lg p-4 sm:p-6">
+					<label className="text-theme-secondary-900 dark:text-theme-dark-100 dim:text-theme-dim-50 inline-flex cursor-pointer items-start space-x-3 text-sm leading-[17px]">
 						<Checkbox
 							data-testid="CreateWallet__ConfirmPassphraseStep__passphraseDisclaimer"
 							checked={passphraseDisclaimer}

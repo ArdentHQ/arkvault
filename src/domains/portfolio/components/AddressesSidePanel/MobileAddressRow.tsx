@@ -36,14 +36,16 @@ export const MobileAddressRow = ({
 	return (
 		<div className="space-y-2">
 			<MultiEntryItem
-				className={cn({ "border-theme-danger-400 dark:border-theme-danger-400": isError })}
+				className={cn({
+					"border-theme-danger-400 dark:border-theme-danger-400 dim:border-theme-danger-400": isError,
+				})}
 				dataTestId="MobileAddressRow"
 				titleSlot={
 					<div
 						data-testid="MobileAddressRowHeader"
 						onClick={() => toggleAddress(wallet.address())}
 						tabIndex={0}
-						className={cn("flex w-full items-center space-x-3", { "justify-between": usesDeleteMode })}
+						className={cn("flex w-full items-center gap-3", { "justify-between": usesDeleteMode })}
 					>
 						{!usesDeleteMode && (
 							<Checkbox
@@ -57,8 +59,10 @@ export const MobileAddressRow = ({
 
 						<div
 							className={cn("truncate text-sm leading-[17px] font-semibold", {
-								"group-hover:text-theme-primary-900 dark:group-hover:text-theme-dark-200": !isSelected,
-								"text-theme-secondary-900 dark:text-theme-dark-50": isSelected && !usesDeleteMode,
+								"group-hover:text-theme-primary-900 dark:group-hover:text-theme-dark-200 dim:text-theme-dim-200 dim:group-hover:text-theme-dim-50":
+									!isSelected,
+								"text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50":
+									isSelected && !usesDeleteMode,
 							})}
 						>
 							{alias}
@@ -69,7 +73,7 @@ export const MobileAddressRow = ({
 								onClick={() => onDelete(wallet.address())}
 								data-testid={`AddressRow--delete-${wallet.address()}`}
 								size="icon"
-								className="text-theme-secondary-700 dark:text-theme-secondary-500 hover:bg-theme-danger-400 p-1 hover:text-white dark:hover:text-white"
+								className="text-theme-secondary-700 dark:text-theme-secondary-500 hover:bg-theme-danger-400 dim:text-theme-dim-500 dim-hover:text-white p-1 hover:text-white dark:hover:text-white"
 								variant="transparent"
 							>
 								<Icon name="Trash" dimensions={[16, 16]} />
@@ -81,7 +85,7 @@ export const MobileAddressRow = ({
 								data-testid="icon-MarkedTrash"
 								name="MarkedTrash"
 								dimensions={[16, 16]}
-								className="text-theme-secondary-500 dark:text-theme-dark-500 p-1"
+								className="text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500 p-1"
 							/>
 						)}
 					</div>
@@ -95,7 +99,7 @@ export const MobileAddressRow = ({
 								<Address
 									truncateOnTable
 									address={wallet.address()}
-									addressClass="leading-[17px] text-sm text-theme-secondary-900 dark:text-theme-dark-50"
+									addressClass="leading-[17px] text-sm text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50"
 								/>
 							}
 						/>
@@ -105,21 +109,21 @@ export const MobileAddressRow = ({
 								<Amount
 									ticker={wallet.network().ticker()}
 									value={wallet.balance()}
-									className="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm leading-[17px] font-semibold"
+									className="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm leading-[17px] font-semibold"
 								/>
 							}
 						/>
 					</div>
 					{!!errorMessage && (
-						<div className="bg-theme-danger-50 dark:bg-theme-dark-800 flex space-x-4 rounded-b-sm px-4 py-3">
+						<div className="bg-theme-danger-50 dark:bg-theme-dark-800 dim:bg-theme-dim-800 flex space-x-4 rounded-b-sm px-4 py-3">
 							<div className="mx-[2px] mt-1 flex w-5 justify-center">
 								<Icon
 									name="CircleCross"
-									className="text-theme-danger-700 dark:text-theme-danger-400"
+									className="text-theme-danger-700 dark:text-theme-danger-400 dim:text-theme-danger-400"
 									size="md"
 								/>
 							</div>
-							<p className="text-theme-secondary-700 dark:text-theme-dark-50 max-w-60 text-sm">
+							<p className="text-theme-secondary-700 dark:text-theme-dark-50 dim:text-theme-dim-50 max-w-60 text-sm">
 								{errorMessage}
 							</p>
 						</div>

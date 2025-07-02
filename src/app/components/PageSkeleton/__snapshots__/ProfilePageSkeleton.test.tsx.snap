@@ -7,7 +7,7 @@ exports[`ProfilePageSkeleton > should render without profile 1`] = `
     data-testid="ProfilePageSkeleton"
   >
     <div
-      class="border-theme-secondary-300 dark:border-theme-secondary-800 sticky inset-x-0 top-0 border-b"
+      class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-b-theme-dim-700 sticky inset-x-0 top-0 border-b"
     >
       <div
         class="relative flex h-12 items-center"
@@ -80,7 +80,7 @@ exports[`ProfilePageSkeleton > should render without profile 1`] = `
                 <br />
               </span>
               <div
-                class="border-theme-secondary-300 dark:border-theme-secondary-800 hidden h-6 border-r sm:flex sm:h-12"
+                class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-r-theme-dim-700 hidden h-6 border-r sm:flex sm:h-12"
               />
               <span
                 aria-busy="true"
@@ -96,7 +96,7 @@ exports[`ProfilePageSkeleton > should render without profile 1`] = `
                 <br />
               </span>
               <div
-                class="border-theme-secondary-300 dark:border-theme-secondary-800 hidden h-6 border-r sm:flex sm:h-12"
+                class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-r-theme-dim-700 hidden h-6 border-r sm:flex sm:h-12"
               />
               <span
                 aria-busy="true"
@@ -112,7 +112,7 @@ exports[`ProfilePageSkeleton > should render without profile 1`] = `
                 <br />
               </span>
               <div
-                class="border-theme-secondary-300 dark:border-theme-secondary-800 hidden h-6 border-r sm:flex sm:h-12"
+                class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-r-theme-dim-700 hidden h-6 border-r sm:flex sm:h-12"
               />
               <span
                 aria-busy="true"
@@ -128,7 +128,7 @@ exports[`ProfilePageSkeleton > should render without profile 1`] = `
                 <br />
               </span>
               <div
-                class="border-theme-secondary-300 dark:border-theme-secondary-800 hidden h-6 border-r sm:flex sm:h-12"
+                class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-r-theme-dim-700 hidden h-6 border-r sm:flex sm:h-12"
               />
             </div>
             <div

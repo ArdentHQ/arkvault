@@ -46,10 +46,10 @@ exports[`StepIndicator > should render 1`] = `
         class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-warning-300"
       />
       <li
-        class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
+        class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700"
       />
       <li
-        class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
+        class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700"
       />
     </ul>
   </div>
@@ -76,7 +76,7 @@ exports[`StepIndicator > should render witth active index defined 1`] = `
         class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-warning-300"
       />
       <li
-        class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
+        class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700"
       />
     </ul>
   </div>

@@ -56,13 +56,13 @@ export const ReceiveFunds = ({ address, name, network, onClose }: ReceiveFundsPr
 			onClose={onClose}
 		>
 			<div
-				className="border-theme-secondary-300 dark:border-theme-secondary-800 rounded-xl border px-6 py-4"
+				className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 rounded-xl border px-6 py-4"
 				data-testid="ReceiveFunds__Name_Address"
 			>
 				<Address
 					address={address}
 					walletName={name}
-					addressClass="text-theme-secondary-500 dark:text-theme-secondary-700 leading-5"
+					addressClass="text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 leading-5"
 					walletNameClass="leading-5"
 					showCopyButton
 				/>
@@ -114,24 +114,26 @@ export const ReceiveFunds = ({ address, name, network, onClose }: ReceiveFundsPr
 
 			{isFormOpen && (
 				<>
-					<div className="text-theme-secondary-600 mx-auto mt-4 max-w-sm text-center">
+					<div className="text-theme-secondary-600 dim:text-theme-dim-200 mx-auto mt-4 max-w-sm text-center">
 						{t("COMMON.QR_CODE_HELP_TEXT")}
 					</div>
 
 					<div className="relative mt-4 h-14 border border-transparent">
 						<div
-							className="border-theme-secondary-300 dark:border-theme-secondary-800 absolute flex max-w-full overflow-auto rounded-lg border font-medium"
+							className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 absolute flex max-w-full overflow-auto rounded-lg border font-medium"
 							data-testid="ReceiveFundsForm__uri"
 						>
-							<div className="bg-theme-secondary-200 dark:bg-theme-secondary-800 px-4 py-4.5 leading-5">
-								<span className="text-theme-secondary-text">{t("COMMON.QR_SHORT")}</span>
+							<div className="bg-theme-secondary-200 dark:bg-theme-secondary-800 dim:bg-theme-dim-950 px-4 py-4.5 leading-5">
+								<span className="text-theme-secondary-text dim:text-theme-dim-50">
+									{t("COMMON.QR_SHORT")}
+								</span>
 							</div>
 
 							<div className="bg-theme-secondary-100 dark:bg-theme-background flex grow items-center justify-between space-x-4 overflow-auto pr-5 pl-6">
 								{!!uri && (
 									<>
 										<span className="truncate leading-5">{uri}</span>
-										<span className="text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-primary-700 flex">
+										<span className="text-theme-primary-300 dark:text-theme-secondary-600 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 hover:text-theme-primary-700 flex">
 											<Clipboard variant="icon" data={uri}>
 												<Icon name="Copy" className="p-1" />
 											</Clipboard>

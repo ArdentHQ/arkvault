@@ -19,7 +19,7 @@ export const ProfileRow = ({ actions, className, profile, onClick, onSelect }: P
 	<div
 		data-testid="ProfileRow"
 		className={cn(
-			"border-theme-primary-200 transition-colors-shadow hover:border-theme-primary-100 hover:bg-theme-primary-100 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 flex cursor-pointer items-center rounded-lg border leading-tight duration-100 ease-linear",
+			"border-theme-primary-200 transition-colors-shadow hover:border-theme-primary-100 hover:bg-theme-primary-100 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dim:border-theme-dim-700 dim-hover:bg-theme-dim-700 flex cursor-pointer items-center rounded-lg border leading-tight duration-100 ease-linear",
 			className,
 		)}
 	>
@@ -42,7 +42,7 @@ export const ProfileRow = ({ actions, className, profile, onClick, onSelect }: P
 					<Icon
 						data-testid="Icon__Lock"
 						name="Lock"
-						className="border-theme-secondary-300 text-theme-secondary-900 dark:border-theme-secondary-800 dark:text-theme-secondary-200 border-r pr-3"
+						className="border-theme-secondary-300 text-theme-secondary-900 dark:border-theme-secondary-800 dark:text-theme-secondary-200 dim:text-theme-dim-200 dim:border-theme-dim-700 border-r pr-3"
 						size="lg"
 					/>
 				)}
@@ -61,7 +61,7 @@ export const ProfileRow = ({ actions, className, profile, onClick, onSelect }: P
 					>
 						<Icon
 							name="EllipsisVerticalFilled"
-							className="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 transition-colors duration-200"
+							className="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 transition-colors duration-200"
 							size="md"
 						/>
 					</div>
@@ -74,12 +74,12 @@ export const ProfileRow = ({ actions, className, profile, onClick, onSelect }: P
 export const ProfileRowSkeleton = () => (
 	<div
 		data-testid="ProfileRowSkeleton"
-		className="border-theme-secondary-200 dark:border-theme-secondary-800 flex items-center justify-between rounded-lg border p-1"
+		className="border-theme-secondary-200 dark:border-theme-secondary-800 dim:border-theme-dim-700 flex items-center justify-between rounded-lg border p-1"
 	>
-		<div className="bg-theme-secondary-100 dark:bg-theme-secondary-800 h-10 w-10" />
+		<div className="bg-theme-secondary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-800 h-10 w-10 rounded" />
 		<Icon
 			name="EllipsisVerticalFilled"
-			className="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 mr-1.5 pr-1.5 transition-colors duration-200"
+			className="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 mr-1.5 pr-1.5 transition-colors duration-200"
 			size="md"
 		/>
 	</div>

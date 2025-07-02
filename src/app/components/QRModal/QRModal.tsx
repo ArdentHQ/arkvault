@@ -31,13 +31,13 @@ const AccessDeniedErrors = [
 const ViewFinder = ({ error, isLoading }: { error?: QRError; isLoading: boolean }) => (
 	<div
 		data-testid="ViewFinder"
-		className="border-theme-secondary-500 relative z-10 flex h-[300px] w-[300px] flex-col items-center justify-center border-2"
+		className="border-theme-secondary-500 dim:border-theme-dim-500 relative z-10 flex h-[300px] w-[300px] flex-col items-center justify-center border-2"
 		style={{ boxShadow: "0px 0px 0px 9999px rgba(0, 0, 0, 0.75)" }}
 	>
-		<div className="bg-theme-secondary-800 absolute -top-[2px] right-8 left-8 h-0.5" />
-		<div className="bg-theme-secondary-800 absolute right-8 -bottom-[2px] left-8 h-0.5" />
-		<div className="bg-theme-secondary-800 absolute top-8 bottom-8 -left-[2px] w-0.5" />
-		<div className="bg-theme-secondary-800 absolute top-8 -right-[2px] bottom-8 w-0.5" />
+		<div className="bg-theme-secondary-800 dim:bg-theme-dim-700 absolute -top-[2px] right-8 left-8 h-0.5" />
+		<div className="bg-theme-secondary-800 dim:bg-theme-dim-700 absolute right-8 -bottom-[2px] left-8 h-0.5" />
+		<div className="bg-theme-secondary-800 dim:bg-theme-dim-700 absolute top-8 bottom-8 -left-[2px] w-0.5" />
+		<div className="bg-theme-secondary-800 dim:bg-theme-dim-700 absolute top-8 -right-[2px] bottom-8 w-0.5" />
 
 		{(error || isLoading) && (
 			<>

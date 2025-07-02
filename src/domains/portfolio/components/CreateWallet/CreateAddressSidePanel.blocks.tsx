@@ -23,7 +23,12 @@ export const useCreateStepHeaderConfig = (step: CreateStep): StepHeaderConfig =>
 			return {
 				title: t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_STEP.TITLE"),
 				titleIcon: (
-					<ThemeIcon lightIcon="YourPassphraseLight" darkIcon="YourPassphraseDark" dimensions={[24, 24]} />
+					<ThemeIcon
+						lightIcon="YourPassphraseLight"
+						darkIcon="YourPassphraseDark"
+						dimIcon="YourPassphraseDim"
+						dimensions={[24, 24]}
+					/>
 				),
 			};
 		}
@@ -43,6 +48,7 @@ export const useCreateStepHeaderConfig = (step: CreateStep): StepHeaderConfig =>
 					<ThemeIcon
 						lightIcon="WalletEncryptionLight"
 						darkIcon="WalletEncryptionDark"
+						dimIcon="WalletEncryptionDim"
 						dimensions={[24, 24]}
 					/>
 				),

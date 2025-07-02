@@ -25,7 +25,7 @@ export const MultiEntryItem = ({
 		data-testid={dataTestId}
 		className={twMerge(
 			cn(
-				"border-theme-secondary-300 dark:border-theme-dark-700 dark:bg-theme-dark-900 mb-3 overflow-hidden rounded border bg-white last:mb-0",
+				"border-theme-secondary-300 dark:border-theme-dark-700 dark:bg-theme-dark-900 dim:border-theme-dim-700 dim:bg-transparent mb-3 overflow-hidden rounded border bg-white last:mb-0",
 				{
 					"md:rounded-none md:border-x-0 md:border-b-0 md:border-dashed md:bg-transparent md:pt-3 md:dark:bg-transparent":
 						size === "md",
@@ -50,10 +50,10 @@ export const MultiEntryItem = ({
 			>
 				<div
 					className={cn(
-						"bg-theme-secondary-100 dark:bg-theme-dark-950 flex w-full flex-1 flex-row items-center justify-between px-4 py-3",
+						"bg-theme-secondary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 flex w-full flex-1 flex-row items-center justify-between px-4 py-3",
 						{
-							"md:bg-transparent md:p-0 dark:md:bg-transparent": size === "md",
-							"sm:bg-transparent sm:p-0 dark:sm:bg-transparent": size === "sm",
+							"dim:md:bg-transparent md:bg-transparent md:p-0 dark:md:bg-transparent": size === "md",
+							"dim:sm:bg-transparent sm:bg-transparent sm:p-0 dark:sm:bg-transparent": size === "sm",
 						},
 					)}
 				>
@@ -79,7 +79,7 @@ export const MultiEntryItem = ({
 
 export const InfoDetail = ({ label, body }: { label: ReactNode; body: ReactNode }): JSX.Element => (
 	<div>
-		<div className="text-theme-secondary-700 dark:text-theme-secondary-500 mb-2 text-sm leading-[17px] font-semibold">
+		<div className="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-2 text-sm leading-[17px] font-semibold">
 			{label}
 		</div>
 		{body}
