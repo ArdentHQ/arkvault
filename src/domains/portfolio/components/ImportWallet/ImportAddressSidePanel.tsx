@@ -79,7 +79,7 @@ export const ImportAddressesSidePanel = ({
 	useEffect(() => {
 		if (!open) return;
 
-		const handlePopState = (event) => {
+		const handlePopState = () => {
 			setIsNavigatingBack(true);
 			onOpenChange(false);
 			setTimeout(() => setIsNavigatingBack(false), 100);
