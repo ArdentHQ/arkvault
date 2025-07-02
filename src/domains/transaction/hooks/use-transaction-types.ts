@@ -31,7 +31,7 @@ export const useTransactionTypes = ({ wallets = [] }: TransactionTypeProperties 
 				return t(translationKey);
 			}
 
-			return type;
+			return t("TRANSACTION.TRANSACTION_TYPES.CONTRACT_DEPLOYMENT");
 		},
 		types: {
 			core: useMemo(() => {
