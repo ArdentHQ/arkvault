@@ -14,20 +14,6 @@ describe("Notifications", () => {
 		expect(profile.notifications().count()).toBe(0);
 	});
 
-	test("should return first", ({ profile }) => {
-		const notification = {
-			body: "test",
-			icon: undefined,
-			id: "1",
-			name: "test",
-			read_at: new Date().getTime(),
-			type: "transaction",
-		};
-
-		profile.notifications().fill({
-			a: notification,
-		});
-	});
 	test("should return by id", ({ profile }) => {
 		const notification = {
 			body: "test",
