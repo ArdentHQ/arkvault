@@ -96,7 +96,7 @@ exports[`AddressRow > should emit action on select button 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm font-semibold space-x-3"
+            class="px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm font-semibold space-x-3 flex justify-end"
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
@@ -294,7 +294,7 @@ exports[`AddressRow > should render 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm font-semibold space-x-3"
+            class="px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm font-semibold space-x-3 flex justify-end"
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
@@ -492,7 +492,7 @@ exports[`AddressRow > should render tooltip wallet when ledger and incompatible 
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm font-semibold space-x-3"
+            class="px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm font-semibold space-x-3 flex justify-end"
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
@@ -691,7 +691,7 @@ exports[`AddressRow > should render when the maximum votes is greater than 1 1`]
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm font-semibold space-x-3"
+            class="px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm font-semibold space-x-3 flex justify-end"
           >
             <span
               class="text-theme-secondary-400 dim:text-theme-dim-500"
@@ -839,7 +839,7 @@ exports[`AddressRow > should render when the wallet has exactly 4 votes 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm font-semibold space-x-3"
+            class="px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm font-semibold space-x-3 flex justify-end"
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
@@ -1041,7 +1041,7 @@ exports[`AddressRow > should render when the wallet has many votes 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm font-semibold space-x-3"
+            class="px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm font-semibold space-x-3 flex justify-end"
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
@@ -1243,7 +1243,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm font-semibold space-x-3"
+            class="px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm font-semibold space-x-3 flex justify-end"
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
@@ -1421,7 +1421,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm font-semibold space-x-3"
+            class="px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm font-semibold space-x-3 flex justify-end"
           >
             <span
               class="text-theme-secondary-400 dim:text-theme-dim-500"
@@ -1564,7 +1564,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm font-semibold space-x-3"
+            class="px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm font-semibold space-x-3 flex justify-end"
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
@@ -1742,7 +1742,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm font-semibold space-x-3"
+            class="px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm font-semibold space-x-3 flex justify-end"
           >
             <span
               class="text-theme-secondary-400 dim:text-theme-dim-500"
@@ -1885,7 +1885,7 @@ exports[`AddressRow > should render with active validator 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm font-semibold space-x-3"
+            class="px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm font-semibold space-x-3 flex justify-end"
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
@@ -2083,7 +2083,7 @@ exports[`AddressRow > should render with resigned validator 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm font-semibold space-x-3"
+            class="px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm font-semibold space-x-3 flex justify-end"
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
@@ -2283,7 +2283,7 @@ exports[`AddressRow > should render with standby validator 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm font-semibold space-x-3"
+            class="px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm font-semibold space-x-3 flex justify-end"
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
