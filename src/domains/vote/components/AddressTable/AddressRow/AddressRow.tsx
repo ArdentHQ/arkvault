@@ -222,7 +222,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 				<Amount value={wallet.balance()} ticker={wallet.network().ticker()} />
 			</TableCell>
 
-			<TableCell innerClassName="text-sm font-semibold space-x-3">{renderWalletVotes()}</TableCell>
+			<TableCell innerClassName="text-sm font-semibold space-x-3 flex justify-end">{renderWalletVotes()}</TableCell>
 
 			{maxVotes === 1 ? (
 				<>

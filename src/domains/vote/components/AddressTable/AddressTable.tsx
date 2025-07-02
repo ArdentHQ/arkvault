@@ -46,7 +46,7 @@ export const AddressTable: FC<AddressTableProperties> = ({ wallets, onSelect, sh
 					return first?.wallet?.username();
 				},
 				cellWidth: "w-60",
-				className: maxVotes === 1 ? "ml-15" : "",
+				className: maxVotes === 1 ? "ml-15 justify-end" : "justify-end",
 				headerClassName: "no-border",
 			},
 		];
