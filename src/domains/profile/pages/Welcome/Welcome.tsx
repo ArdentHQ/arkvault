@@ -223,7 +223,7 @@ export const Welcome = () => {
 					<div className="flex flex-col gap-3 lg:flex-row">
 						<div
 							className={cn(
-								"border-theme-navy-100 bg-theme-navy-50 dark:border-theme-secondary-800 dark:bg-theme-secondary-800 min-w-0 basis-1/2 rounded-xl border bg-[url('/welcome-bg-white.svg')] dark:bg-[url('/welcome-bg-dark.svg')]",
+								"border-theme-navy-100 bg-theme-navy-50 dark:border-theme-secondary-800 dark:bg-theme-secondary-800 dim:border-theme-dim-700 dim:bg-theme-dim-700 dim:bg-[url('/welcome-bg-dim.svg')] min-w-0 basis-1/2 rounded-xl border bg-[url('/welcome-bg-white.svg')] dark:bg-[url('/welcome-bg-dark.svg')]",
 								{
 									"hidden sm:block": hasProfiles,
 									"mb-6 sm:mb-0": !hasProfiles,
@@ -232,7 +232,7 @@ export const Welcome = () => {
 						>
 							<WelcomeSlider />
 						</div>
-						<div className="border-theme-navy-100 dark:border-theme-secondary-800 min-w-0 basis-1/2 rounded-xl sm:border sm:p-6">
+						<div className="border-theme-navy-100 dark:border-theme-secondary-800 dim:border-theme-dim-700 min-w-0 basis-1/2 rounded-xl sm:border sm:p-6">
 							<div
 								className={cn("mx-auto flex max-w-[400px] flex-col", {
 									"h-[calc(100vh_-_160px)] sm:h-full": hasProfiles,
@@ -244,6 +244,7 @@ export const Welcome = () => {
 										<ThemeIcon
 											darkIcon="PersonDark"
 											lightIcon="PersonLight"
+											dimIcon="PersonDim"
 											dimensions={[24, 24]}
 										/>
 

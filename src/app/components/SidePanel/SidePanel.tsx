@@ -127,7 +127,7 @@ export const SidePanel = ({
 			<FloatingPortal>
 				{isMounted && (
 					<>
-						<div className="fixed inset-0 z-40 bg-[#212225]/10 backdrop-blur-xl dark:bg-[#191d22]/90 dark:backdrop-blur-none" />
+						<div className="dim:bg-[#101627CC]/90 dim:backdrop-blur-sm fixed inset-0 z-40 bg-[#212225]/10 backdrop-blur-xl dark:bg-[#191d22]/90 dark:backdrop-blur-none" />
 						<FloatingOverlay className="z-50 transition-opacity duration-300" lockScroll>
 							<FloatingFocusManager context={context} disabled={isUnit()}>
 								<div
@@ -152,7 +152,7 @@ export const SidePanel = ({
 															className={cn(
 																"flex items-start justify-between px-6 py-4",
 																{
-																	"border-b-theme-secondary-300 dark:border-b-theme-secondary-800 border-b":
+																	"border-b-theme-secondary-300 dark:border-b-theme-secondary-800 dim:border-b-theme-dim-700 border-b":
 																		!hasSteps,
 																},
 															)}
@@ -171,7 +171,7 @@ export const SidePanel = ({
 																</h2>
 															</div>
 
-															<div className="text-theme-secondary-700 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 h-6 w-6 rounded bg-transparent transition-all duration-100 ease-linear hover:text-white dark:bg-transparent dark:hover:text-white">
+															<div className="text-theme-secondary-700 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:text-theme-dim-200 dim:bg-transparent dim-hover:bg-theme-dim-navy-500 dim-hover:text-white h-6 w-6 rounded bg-transparent transition-all duration-100 ease-linear hover:text-white dark:bg-transparent dark:hover:text-white">
 																<Button
 																	data-testid="SidePanel__close-button"
 																	variant="transparent"
@@ -215,7 +215,7 @@ export const SidePanel = ({
 												<div
 													data-testid="SidePanel__footer"
 													className={cn(
-														"bg-theme-background border-theme-secondary-300 dark:border-theme-dark-700 flex w-full flex-col border-t px-6 py-4",
+														"bg-theme-background border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 flex w-full flex-col border-t px-6 py-4",
 														{ "shadow-footer-side-panel": isScrolled },
 													)}
 												>

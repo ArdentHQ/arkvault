@@ -3,14 +3,14 @@
 exports[`Notifications > should emit transactionClick event 1`] = `
 <div>
   <div
-    class="dark:bg-theme-dark-900 w-full sm:w-[35rem]"
+    class="dark:bg-theme-dark-900 dim:bg-transparent w-full sm:w-[35rem]"
     data-testid="NotificationsWrapper"
   >
     <div
-      class="bg-theme-secondary-100 flex items-center justify-between rounded-t-xl px-6 py-4 dark:bg-black"
+      class="bg-theme-secondary-100 dim:bg-theme-dim-950 flex items-center justify-between rounded-t-xl px-6 py-4 dark:bg-black"
     >
       <div
-        class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm leading-[17px] font-semibold"
+        class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm leading-[17px] font-semibold"
       >
         Notification
       </div>
@@ -34,14 +34,14 @@ exports[`Notifications > should emit transactionClick event 1`] = `
               role="rowgroup"
             >
               <tr
-                class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
+                class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-dashed cursor-pointer table-row table-row-unselected group relative"
                 data-testid="TableRow"
               >
                 <td
                   class="w-2/5"
                 >
                   <div
-                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 pl-6 static mx-0"
+                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 pl-6 static mx-0"
                   >
                     <div
                       class="w-20 flex-1"
@@ -61,7 +61,7 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                           </span>
                         </span>
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
                           data-testid="Address__address"
                         >
                           0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
@@ -72,7 +72,7 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                 </td>
                 <td>
                   <div
-                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold justify-end whitespace-nowrap"
+                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold justify-end whitespace-nowrap dim:text-theme-dim-200"
                   >
                     <span
                       data-testid="TimeAgo"
@@ -83,13 +83,13 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                 </td>
                 <td>
                   <div
-                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end pr-6 static"
+                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end pr-6 static"
                   >
                     <div
                       class="h-5"
                     >
                       <div
-                        class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full w-fit items-center justify-center rounded px-1.5"
+                        class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-base flex h-full w-fit items-center justify-center rounded px-1.5"
                         data-testid="AmountLabel__wrapper"
                       >
                         <div
@@ -111,14 +111,14 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                 </td>
               </tr>
               <tr
-                class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
+                class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-dashed cursor-pointer table-row table-row-unselected group relative"
                 data-testid="TableRow"
               >
                 <td
                   class="w-2/5"
                 >
                   <div
-                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 pl-6 static mx-0"
+                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 pl-6 static mx-0"
                   >
                     <div
                       class="w-20 flex-1"
@@ -138,7 +138,7 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                           </span>
                         </span>
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
                           data-testid="Address__address"
                         >
                           0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
@@ -149,7 +149,7 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                 </td>
                 <td>
                   <div
-                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold justify-end whitespace-nowrap"
+                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold justify-end whitespace-nowrap dim:text-theme-dim-200"
                   >
                     <span
                       data-testid="TimeAgo"
@@ -160,13 +160,13 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                 </td>
                 <td>
                   <div
-                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end pr-6 static"
+                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end pr-6 static"
                   >
                     <div
                       class="h-5"
                     >
                       <div
-                        class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full w-fit items-center justify-center rounded px-1.5"
+                        class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-base flex h-full w-fit items-center justify-center rounded px-1.5"
                         data-testid="AmountLabel__wrapper"
                       >
                         <div
@@ -188,14 +188,14 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                 </td>
               </tr>
               <tr
-                class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
+                class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-dashed cursor-pointer table-row table-row-unselected group relative"
                 data-testid="TableRow"
               >
                 <td
                   class="w-2/5"
                 >
                   <div
-                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 pl-6 static mx-0"
+                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 pl-6 static mx-0"
                   >
                     <div
                       class="w-20 flex-1"
@@ -215,7 +215,7 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                           </span>
                         </span>
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
                           data-testid="Address__address"
                         >
                           0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
@@ -226,7 +226,7 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                 </td>
                 <td>
                   <div
-                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold justify-end whitespace-nowrap"
+                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold justify-end whitespace-nowrap dim:text-theme-dim-200"
                   >
                     <span
                       data-testid="TimeAgo"
@@ -237,13 +237,13 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                 </td>
                 <td>
                   <div
-                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end pr-6 static"
+                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end pr-6 static"
                   >
                     <div
                       class="h-5"
                     >
                       <div
-                        class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full w-fit items-center justify-center rounded px-1.5"
+                        class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-base flex h-full w-fit items-center justify-center rounded px-1.5"
                         data-testid="AmountLabel__wrapper"
                       >
                         <div
@@ -276,14 +276,14 @@ exports[`Notifications > should emit transactionClick event 1`] = `
 exports[`Notifications > should render with empty notifications 1`] = `
 <div>
   <div
-    class="dark:bg-theme-dark-900 w-full sm:w-[35rem]"
+    class="dark:bg-theme-dark-900 dim:bg-transparent w-full sm:w-[35rem]"
     data-testid="NotificationsWrapper"
   >
     <div
-      class="bg-theme-secondary-100 flex items-center justify-between rounded-t-xl px-6 py-4 dark:bg-black"
+      class="bg-theme-secondary-100 dim:bg-theme-dim-950 flex items-center justify-between rounded-t-xl px-6 py-4 dark:bg-black"
     >
       <div
-        class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm leading-[17px] font-semibold"
+        class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm leading-[17px] font-semibold"
       >
         Notification
       </div>
@@ -292,7 +292,7 @@ exports[`Notifications > should render with empty notifications 1`] = `
       class="px-6 pt-4 pb-8"
     >
       <div
-        class="border-theme-secondary-300 text-theme-secondary-text dark:border-theme-secondary-800 rounded-lg border-solid text-center leading-5 sm:border sm:p-6 py-4"
+        class="border-theme-secondary-300 text-theme-secondary-text dark:border-theme-secondary-800 dim:border-theme-dim-700 rounded-lg border-solid text-center leading-5 sm:border sm:p-6 py-4"
         data-testid="EmptyBlock"
       >
         <div>
@@ -372,14 +372,14 @@ exports[`Notifications > should render with empty notifications 1`] = `
 exports[`Notifications > should render with transactions 1`] = `
 <div>
   <div
-    class="dark:bg-theme-dark-900 w-full sm:w-[35rem]"
+    class="dark:bg-theme-dark-900 dim:bg-transparent w-full sm:w-[35rem]"
     data-testid="NotificationsWrapper"
   >
     <div
-      class="bg-theme-secondary-100 flex items-center justify-between rounded-t-xl px-6 py-4 dark:bg-black"
+      class="bg-theme-secondary-100 dim:bg-theme-dim-950 flex items-center justify-between rounded-t-xl px-6 py-4 dark:bg-black"
     >
       <div
-        class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm leading-[17px] font-semibold"
+        class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm leading-[17px] font-semibold"
       >
         Notification
       </div>
@@ -403,14 +403,14 @@ exports[`Notifications > should render with transactions 1`] = `
               role="rowgroup"
             >
               <tr
-                class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
+                class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-dashed cursor-pointer table-row table-row-unselected group relative"
                 data-testid="TableRow"
               >
                 <td
                   class="w-2/5"
                 >
                   <div
-                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 pl-6 static mx-0"
+                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 pl-6 static mx-0"
                   >
                     <div
                       class="w-20 flex-1"
@@ -430,7 +430,7 @@ exports[`Notifications > should render with transactions 1`] = `
                           </span>
                         </span>
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
                           data-testid="Address__address"
                         >
                           0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
@@ -441,7 +441,7 @@ exports[`Notifications > should render with transactions 1`] = `
                 </td>
                 <td>
                   <div
-                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold justify-end whitespace-nowrap"
+                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold justify-end whitespace-nowrap dim:text-theme-dim-200"
                   >
                     <span
                       data-testid="TimeAgo"
@@ -452,13 +452,13 @@ exports[`Notifications > should render with transactions 1`] = `
                 </td>
                 <td>
                   <div
-                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end pr-6 static"
+                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end pr-6 static"
                   >
                     <div
                       class="h-5"
                     >
                       <div
-                        class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full w-fit items-center justify-center rounded px-1.5"
+                        class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-base flex h-full w-fit items-center justify-center rounded px-1.5"
                         data-testid="AmountLabel__wrapper"
                       >
                         <div
@@ -480,14 +480,14 @@ exports[`Notifications > should render with transactions 1`] = `
                 </td>
               </tr>
               <tr
-                class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
+                class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-dashed cursor-pointer table-row table-row-unselected group relative"
                 data-testid="TableRow"
               >
                 <td
                   class="w-2/5"
                 >
                   <div
-                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 pl-6 static mx-0"
+                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 pl-6 static mx-0"
                   >
                     <div
                       class="w-20 flex-1"
@@ -507,7 +507,7 @@ exports[`Notifications > should render with transactions 1`] = `
                           </span>
                         </span>
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
                           data-testid="Address__address"
                         >
                           0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
@@ -518,7 +518,7 @@ exports[`Notifications > should render with transactions 1`] = `
                 </td>
                 <td>
                   <div
-                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold justify-end whitespace-nowrap"
+                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold justify-end whitespace-nowrap dim:text-theme-dim-200"
                   >
                     <span
                       data-testid="TimeAgo"
@@ -529,13 +529,13 @@ exports[`Notifications > should render with transactions 1`] = `
                 </td>
                 <td>
                   <div
-                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end pr-6 static"
+                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end pr-6 static"
                   >
                     <div
                       class="h-5"
                     >
                       <div
-                        class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full w-fit items-center justify-center rounded px-1.5"
+                        class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-base flex h-full w-fit items-center justify-center rounded px-1.5"
                         data-testid="AmountLabel__wrapper"
                       >
                         <div
@@ -557,14 +557,14 @@ exports[`Notifications > should render with transactions 1`] = `
                 </td>
               </tr>
               <tr
-                class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
+                class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-dashed cursor-pointer table-row table-row-unselected group relative"
                 data-testid="TableRow"
               >
                 <td
                   class="w-2/5"
                 >
                   <div
-                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 pl-6 static mx-0"
+                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 pl-6 static mx-0"
                   >
                     <div
                       class="w-20 flex-1"
@@ -584,7 +584,7 @@ exports[`Notifications > should render with transactions 1`] = `
                           </span>
                         </span>
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
                           data-testid="Address__address"
                         >
                           0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
@@ -595,7 +595,7 @@ exports[`Notifications > should render with transactions 1`] = `
                 </td>
                 <td>
                   <div
-                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold justify-end whitespace-nowrap"
+                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold justify-end whitespace-nowrap dim:text-theme-dim-200"
                   >
                     <span
                       data-testid="TimeAgo"
@@ -606,13 +606,13 @@ exports[`Notifications > should render with transactions 1`] = `
                 </td>
                 <td>
                   <div
-                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end pr-6 static"
+                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end pr-6 static"
                   >
                     <div
                       class="h-5"
                     >
                       <div
-                        class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full w-fit items-center justify-center rounded px-1.5"
+                        class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-base flex h-full w-fit items-center justify-center rounded px-1.5"
                         data-testid="AmountLabel__wrapper"
                       >
                         <div

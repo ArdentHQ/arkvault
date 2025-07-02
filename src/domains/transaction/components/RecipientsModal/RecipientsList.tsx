@@ -32,7 +32,7 @@ export const RecipientsList = ({ recipients, ticker }: RecipientsProperties): JS
 										walletName={recipient.alias}
 										showCopyButton
 										walletNameClass="leading-[17px] text-sm"
-										addressClass="leading-[17px] text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+										addressClass="leading-[17px] text-sm text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-700"
 									/>
 								}
 							/>

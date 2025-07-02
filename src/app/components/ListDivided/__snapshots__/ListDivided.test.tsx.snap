@@ -13,7 +13,7 @@ exports[`ListDivided > should render an empty list divided 1`] = `
 exports[`ListDivided > should render an list divided with lastBorder = false 1`] = `
 <DocumentFragment>
   <ul
-    class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6"
+    class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6"
     data-testid="list-divided__items"
   >
     <li
@@ -31,14 +31,14 @@ exports[`ListDivided > should render an list divided with lastBorder = false 1`]
             class="flex items-center justify-between space-x-5"
           >
             <span
-              class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+              class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
               data-testid="list-divided-item__label"
             >
               New Profile
             </span>
           </div>
           <span
-            class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-medium"
+            class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-medium"
             data-testid="list-divided-item__label--description"
           >
             Select Profile Image
@@ -74,7 +74,7 @@ exports[`ListDivided > should render an list divided with lastBorder = false 1`]
 exports[`ListDivided > should render an list divided with lastBorder = true 1`] = `
 <DocumentFragment>
   <ul
-    class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+    class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
     data-testid="list-divided__items"
   >
     <li
@@ -92,14 +92,14 @@ exports[`ListDivided > should render an list divided with lastBorder = true 1`] 
             class="flex items-center justify-between space-x-5"
           >
             <span
-              class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+              class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
               data-testid="list-divided-item__label"
             >
               New Profile
             </span>
           </div>
           <span
-            class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-medium"
+            class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-medium"
             data-testid="list-divided-item__label--description"
           >
             Select Profile Image

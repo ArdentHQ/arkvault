@@ -48,7 +48,7 @@ exports[`Link > should do nothing on click when disabled 1`] = `
 exports[`Link > should open an external link 1`] = `
 <DocumentFragment>
   <a
-    class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
+    class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
     data-ring-focus-margin="-m-1"
     data-testid="Link"
     href="https://app.arkvault.io/"
@@ -95,7 +95,7 @@ exports[`Link > should render 1`] = `
     href="/test"
   />
   <a
-    class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
+    class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
     data-ring-focus-margin="-m-1"
     data-testid="Link"
   >
@@ -111,7 +111,7 @@ exports[`Link > should render 1`] = `
 exports[`Link > should render external without children 1`] = `
 <DocumentFragment>
   <a
-    class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
+    class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
     data-ring-focus-margin="-m-1"
     data-testid="Link"
     href="https://app.arkvault.io"
@@ -158,7 +158,7 @@ exports[`Link > should render with tooltip 1`] = `
     href="/test"
   />
   <a
-    class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
+    class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
     data-ring-focus-margin="-m-1"
     data-testid="Link"
   >
@@ -174,7 +174,7 @@ exports[`Link > should render with tooltip 1`] = `
 exports[`Link > should show a toast when trying to open an invalid external link 1`] = `
 <DocumentFragment>
   <a
-    class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
+    class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
     data-ring-focus-margin="-m-1"
     data-testid="Link"
     href="invalid-url"

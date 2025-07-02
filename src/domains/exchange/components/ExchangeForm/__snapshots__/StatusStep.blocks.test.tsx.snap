@@ -6,7 +6,7 @@ exports[`ExchangeStatus > should show expired status 1`] = `
     class="flex flex-col overflow-hidden rounded-xl my-6"
   >
     <div
-      class="flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-danger-100 text-theme-danger-700 dark:bg-theme-danger-500"
+      class="dim:text-white flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-danger-100 text-theme-danger-700 dark:bg-theme-danger-500"
     >
       <div>
         <div
@@ -46,7 +46,7 @@ exports[`ExchangeStatus > should show expired status 1`] = `
       </span>
     </div>
     <div
-      class="dark:bg-theme-secondary-800 w-full p-4 text-left text-sm leading-relaxed break-words bg-theme-danger-50"
+      class="dark:bg-theme-secondary-800 dim:bg-theme-dim-800 dim:text-theme-dim-50 w-full p-4 text-left text-sm leading-relaxed break-words bg-theme-danger-50"
     >
       This transaction has expired.
     </div>
@@ -60,7 +60,7 @@ exports[`ExchangeStatus > should show failed status 1`] = `
     class="flex flex-col overflow-hidden rounded-xl my-6"
   >
     <div
-      class="flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-danger-100 text-theme-danger-700 dark:bg-theme-danger-500"
+      class="dim:text-white flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-danger-100 text-theme-danger-700 dark:bg-theme-danger-500"
     >
       <div>
         <div
@@ -100,7 +100,7 @@ exports[`ExchangeStatus > should show failed status 1`] = `
       </span>
     </div>
     <div
-      class="dark:bg-theme-secondary-800 w-full p-4 text-left text-sm leading-relaxed break-words bg-theme-danger-50"
+      class="dark:bg-theme-secondary-800 dim:bg-theme-dim-800 dim:text-theme-dim-50 w-full p-4 text-left text-sm leading-relaxed break-words bg-theme-danger-50"
     >
       This transaction has failed.
     </div>
@@ -114,7 +114,7 @@ exports[`ExchangeStatus > should show refunded status 1`] = `
     class="flex flex-col overflow-hidden rounded-xl my-6"
   >
     <div
-      class="flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-warning-100 text-theme-warning-700 dark:bg-theme-warning-700"
+      class="dim:text-white flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-warning-100 text-theme-warning-700 dark:bg-theme-warning-700"
     >
       <div>
         <div
@@ -159,7 +159,7 @@ exports[`ExchangeStatus > should show refunded status 1`] = `
       </span>
     </div>
     <div
-      class="dark:bg-theme-secondary-800 w-full p-4 text-left text-sm leading-relaxed break-words bg-theme-warning-50"
+      class="dark:bg-theme-secondary-800 dim:bg-theme-dim-800 dim:text-theme-dim-50 w-full p-4 text-left text-sm leading-relaxed break-words bg-theme-warning-50"
     >
       This transaction has been refunded.
     </div>
@@ -173,7 +173,7 @@ exports[`ExchangeStatus > should show verifying status 1`] = `
     class="flex flex-col overflow-hidden rounded-xl my-6"
   >
     <div
-      class="flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-warning-100 text-theme-warning-700 dark:bg-theme-warning-700"
+      class="dim:text-white flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-warning-100 text-theme-warning-700 dark:bg-theme-warning-700"
     >
       <div>
         <div
@@ -218,7 +218,7 @@ exports[`ExchangeStatus > should show verifying status 1`] = `
       </span>
     </div>
     <div
-      class="dark:bg-theme-secondary-800 w-full p-4 text-left text-sm leading-relaxed break-words bg-theme-warning-50"
+      class="dark:bg-theme-secondary-800 dim:bg-theme-dim-800 dim:text-theme-dim-50 w-full p-4 text-left text-sm leading-relaxed break-words bg-theme-warning-50"
     >
       This transaction is being verified by the provider.
     </div>

@@ -1,6 +1,6 @@
-import { describe, it, expect, beforeEach } from "vitest";
+import { describe, it, expect, beforeEach, vi } from "vitest";
 import { env } from "@/utils/testing-library";
-import { shouldUseDarkColors } from "./theme";
+import { shouldUseDarkColors, shouldUseDimColors } from "./theme";
 
 describe("shouldUseDarkColors", () => {
 	beforeEach(() => {
@@ -29,5 +29,31 @@ describe("shouldUseDarkColors", () => {
 		} as any);
 
 		expect(shouldUseDarkColors()).toBe(false);
+	});
+});
+
+describe("shouldUseDimColors", () => {
+	beforeEach(() => {
+		env.reset();
+	});
+
+	it("returns true if the html element has the dim class", () => {
+		vi.spyOn(document, "querySelector").mockReturnValue({
+			classList: {
+				contains: () => true,
+			},
+		} as any);
+
+		expect(shouldUseDimColors()).toBe(true);
+	});
+
+	it("returns false if the html element does not have the dim class", () => {
+		vi.spyOn(document, "querySelector").mockReturnValue({
+			classList: {
+				contains: () => false,
+			},
+		} as any);
+
+		expect(shouldUseDimColors()).toBe(false);
 	});
 });

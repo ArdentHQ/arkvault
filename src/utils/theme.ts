@@ -1,3 +1,5 @@
 const shouldUseDarkColors = () => document.querySelector("html")?.classList.contains("dark");
 
-export { shouldUseDarkColors };
+const shouldUseDimColors = () => document.querySelector("html")?.classList.contains("dim");
+
+export { shouldUseDarkColors, shouldUseDimColors };

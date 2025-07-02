@@ -67,7 +67,7 @@ const MultipleImport = ({
 								<Amount
 									value={wallet.balance ?? 0}
 									ticker={network.ticker()}
-									className="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
+									className="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 text-sm font-semibold"
 								/>
 							</AmountWrapper>
 						</div>

@@ -29,7 +29,9 @@ export const SelectNetworkMobile = ({ profile }: { profile: Contracts.IProfile }
 
 	return (
 		<div className="bg-theme-secondary-100 text-theme-text dark:bg-theme-dark-950 flex w-full items-center justify-between px-6 py-4">
-			<span className="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold">Network</span>
+			<span className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 font-semibold">
+				Network
+			</span>
 			<Dropdown
 				placement="bottom-end"
 				wrapperClass="w-68"

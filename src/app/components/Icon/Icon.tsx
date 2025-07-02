@@ -65,11 +65,21 @@ export const Icon = ({ name, fallback, size, dimensions, ...properties }: IconPr
 type ThemeIconProperties = {
 	darkIcon: string;
 	lightIcon: string;
+	dimIcon: string;
 } & Omit<IconProperties, "name">;
 
-export const ThemeIcon = ({ darkIcon, lightIcon, ...properties }: ThemeIconProperties): JSX.Element => {
-	const { isDarkMode } = useTheme();
-	const icon = isDarkMode ? darkIcon : lightIcon;
+export const ThemeIcon = ({ darkIcon, lightIcon, dimIcon, ...properties }: ThemeIconProperties): JSX.Element => {
+	const { isDarkMode, isDimMode } = useTheme();
+
+	let icon: string;
+
+	if (isDarkMode) {
+		icon = darkIcon;
+	} else if (isDimMode) {
+		icon = dimIcon || darkIcon;
+	} else {
+		icon = lightIcon;
+	}
 
 	return <Icon name={icon} data-testid={`icon-${icon}`} {...properties} />;
 };

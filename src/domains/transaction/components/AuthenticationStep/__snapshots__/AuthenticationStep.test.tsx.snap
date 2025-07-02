@@ -49,14 +49,14 @@ exports[`AuthenticationStep (message) > should request mnemonic if wallet was im
           <input
             aria-invalid="true"
             autocomplete="off"
-            class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
+            class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
             data-testid="AuthenticationStep__mnemonic"
             name="mnemonic"
             type="password"
           />
         </div>
         <div
-          class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-danger-500"
+          class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-danger-500"
           data-testid="Input__addon-end"
         >
           <div
@@ -118,7 +118,7 @@ exports[`AuthenticationStep (message) > should request mnemonic if wallet was im
               type="button"
             >
               <div
-                class="text-theme-secondary-700 dark:text-theme-dark-200"
+                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200"
               >
                 <div
                   style="height: 20px; width: 20px;"
@@ -207,14 +207,14 @@ exports[`AuthenticationStep (message) > should request mnemonic if wallet was im
           <input
             aria-invalid="true"
             autocomplete="off"
-            class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
+            class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
             data-testid="AuthenticationStep__mnemonic"
             name="mnemonic"
             type="password"
           />
         </div>
         <div
-          class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-danger-500"
+          class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-danger-500"
           data-testid="Input__addon-end"
         >
           <div
@@ -276,7 +276,7 @@ exports[`AuthenticationStep (message) > should request mnemonic if wallet was im
               type="button"
             >
               <div
-                class="text-theme-secondary-700 dark:text-theme-dark-200"
+                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200"
               >
                 <div
                   style="height: 20px; width: 20px;"
@@ -357,21 +357,21 @@ exports[`AuthenticationStep (message) > should request secret if wallet was impo
         Secret
       </label>
       <div
-        class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+        class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
       >
         <div
           class="relative flex h-full flex-1"
         >
           <input
             autocomplete="off"
-            class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
+            class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
             data-testid="AuthenticationStep__secret"
             name="secret"
             type="password"
           />
         </div>
         <div
-          class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+          class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
           data-testid="Input__addon-end"
         >
           <div
@@ -384,7 +384,7 @@ exports[`AuthenticationStep (message) > should request secret if wallet was impo
               type="button"
             >
               <div
-                class="text-theme-secondary-700 dark:text-theme-dark-200"
+                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200"
               >
                 <div
                   style="height: 20px; width: 20px;"
@@ -463,7 +463,7 @@ exports[`AuthenticationStep (message) > should show ledger waiting app screen 1`
         data-testid="LedgerWaitingApp-loading_message"
       >
         <div
-          class="animate-spin border-[5px] shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 border-l-theme-warning-900 dark:border-l-theme-warning-600 rounded-full"
+          class="animate-spin border-[5px] shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-l-theme-warning-900 dark:border-l-theme-warning-600 dim:border-l-theme-warning-600 rounded-full"
         />
         <hr
           class="bg-theme-warning-200 dark:bg-theme-secondary-800 h-5 w-px border-transparent"
@@ -518,7 +518,7 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
         data-testid="LedgerWaitingDevice-loading_message"
       >
         <div
-          class="animate-spin border-[5px] shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 border-l-theme-warning-900 dark:border-l-theme-warning-600 rounded-full"
+          class="animate-spin border-[5px] shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-l-theme-warning-900 dark:border-l-theme-warning-600 dim:border-l-theme-warning-600 rounded-full"
         />
         <hr
           class="bg-theme-warning-200 dark:bg-theme-secondary-800 h-5 w-px border-transparent"
@@ -573,7 +573,7 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
         data-testid="LedgerConfirmation-loading_message"
       >
         <div
-          class="animate-spin rounded-full border-[5px] shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 border-l-theme-warning-900 dark:border-l-theme-warning-600"
+          class="animate-spin rounded-full border-[5px] shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-l-theme-warning-900 dark:border-l-theme-warning-600 dim:border-l-theme-warning-600"
         />
         <div
           class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle text-theme-warning-200 dark:text-theme-secondary-800"
@@ -627,7 +627,7 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
         data-testid="LedgerConfirmation-loading_message"
       >
         <div
-          class="animate-spin rounded-full border-[5px] shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 border-l-theme-warning-900 dark:border-l-theme-warning-600"
+          class="animate-spin rounded-full border-[5px] shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-l-theme-warning-900 dark:border-l-theme-warning-600 dim:border-l-theme-warning-600"
         />
         <div
           class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle text-theme-warning-200 dark:text-theme-secondary-800"
@@ -681,7 +681,7 @@ exports[`AuthenticationStep (message) > should show only ledger confirmation 1`]
         data-testid="LedgerConfirmation-loading_message"
       >
         <div
-          class="animate-spin rounded-full border-[5px] shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 border-l-theme-warning-900 dark:border-l-theme-warning-600"
+          class="animate-spin rounded-full border-[5px] shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-l-theme-warning-900 dark:border-l-theme-warning-600 dim:border-l-theme-warning-600"
         />
         <div
           class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle text-theme-warning-200 dark:text-theme-secondary-800"
@@ -735,7 +735,7 @@ exports[`AuthenticationStep (message) > should specify ledger supported model 1`
         class="flex flex-col overflow-hidden rounded-xl"
       >
         <div
-          class="flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-danger-100 text-theme-danger-700 dark:bg-theme-danger-500"
+          class="dim:text-white flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-danger-100 text-theme-danger-700 dark:bg-theme-danger-500"
         >
           <div>
             <div
@@ -775,7 +775,7 @@ exports[`AuthenticationStep (message) > should specify ledger supported model 1`
           </span>
         </div>
         <div
-          class="dark:bg-theme-secondary-800 w-full p-4 text-left text-sm leading-relaxed break-words bg-theme-danger-50"
+          class="dark:bg-theme-secondary-800 dim:bg-theme-dim-800 dim:text-theme-dim-50 w-full p-4 text-left text-sm leading-relaxed break-words bg-theme-danger-50"
         >
           A 
           <strong>
@@ -793,7 +793,7 @@ exports[`AuthenticationStep (message) > should specify ledger supported model 1`
         data-testid="LedgerWaitingDevice-loading_message"
       >
         <div
-          class="animate-spin border-[5px] shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 border-l-theme-warning-900 dark:border-l-theme-warning-600 rounded-full"
+          class="animate-spin border-[5px] shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-l-theme-warning-900 dark:border-l-theme-warning-600 dim:border-l-theme-warning-600 rounded-full"
         />
         <hr
           class="bg-theme-warning-200 dark:bg-theme-secondary-800 h-5 w-px border-transparent"
@@ -859,14 +859,14 @@ exports[`AuthenticationStep (transaction) > should request mnemonic if wallet wa
           <input
             aria-invalid="true"
             autocomplete="off"
-            class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
+            class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
             data-testid="AuthenticationStep__mnemonic"
             name="mnemonic"
             type="password"
           />
         </div>
         <div
-          class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-danger-500"
+          class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-danger-500"
           data-testid="Input__addon-end"
         >
           <div
@@ -928,7 +928,7 @@ exports[`AuthenticationStep (transaction) > should request mnemonic if wallet wa
               type="button"
             >
               <div
-                class="text-theme-secondary-700 dark:text-theme-dark-200"
+                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200"
               >
                 <div
                   style="height: 20px; width: 20px;"
@@ -1017,14 +1017,14 @@ exports[`AuthenticationStep (transaction) > should request mnemonic if wallet wa
           <input
             aria-invalid="true"
             autocomplete="off"
-            class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
+            class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
             data-testid="AuthenticationStep__mnemonic"
             name="mnemonic"
             type="password"
           />
         </div>
         <div
-          class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-danger-500"
+          class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-danger-500"
           data-testid="Input__addon-end"
         >
           <div
@@ -1086,7 +1086,7 @@ exports[`AuthenticationStep (transaction) > should request mnemonic if wallet wa
               type="button"
             >
               <div
-                class="text-theme-secondary-700 dark:text-theme-dark-200"
+                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200"
               >
                 <div
                   style="height: 20px; width: 20px;"
@@ -1167,21 +1167,21 @@ exports[`AuthenticationStep (transaction) > should request secret if wallet was 
         Secret
       </label>
       <div
-        class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+        class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
       >
         <div
           class="relative flex h-full flex-1"
         >
           <input
             autocomplete="off"
-            class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
+            class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
             data-testid="AuthenticationStep__secret"
             name="secret"
             type="password"
           />
         </div>
         <div
-          class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+          class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
           data-testid="Input__addon-end"
         >
           <div
@@ -1194,7 +1194,7 @@ exports[`AuthenticationStep (transaction) > should request secret if wallet was 
               type="button"
             >
               <div
-                class="text-theme-secondary-700 dark:text-theme-dark-200"
+                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200"
               >
                 <div
                   style="height: 20px; width: 20px;"
@@ -1378,7 +1378,7 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting app scree
         class="inline-flex w-full items-center justify-center space-x-3"
       >
         <div
-          class="animate-spin rounded-full border-[5px] shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black border-l-theme-primary-600 dark:border-l-theme-primary-600"
+          class="animate-spin rounded-full border-[5px] shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black dim:border-theme-dim-700 border-l-theme-primary-600 dark:border-l-theme-primary-600 dim:border-l-theme-dim-navy-600"
         />
         <span
           class="text-theme-secondary-text animate-pulse font-semibold"
@@ -1535,7 +1535,7 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
         class="inline-flex w-full items-center justify-center space-x-3"
       >
         <div
-          class="animate-spin rounded-full border-[5px] shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black border-l-theme-primary-600 dark:border-l-theme-primary-600"
+          class="animate-spin rounded-full border-[5px] shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black dim:border-theme-dim-700 border-l-theme-primary-600 dark:border-l-theme-primary-600 dim:border-l-theme-dim-navy-600"
         />
         <span
           class="text-theme-secondary-text animate-pulse font-semibold"
@@ -1587,7 +1587,7 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
         data-testid="LedgerConfirmation-loading_message"
       >
         <div
-          class="animate-spin rounded-full border-[5px] shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 border-l-theme-warning-900 dark:border-l-theme-warning-600"
+          class="animate-spin rounded-full border-[5px] shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-l-theme-warning-900 dark:border-l-theme-warning-600 dim:border-l-theme-warning-600"
         />
         <div
           class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle text-theme-warning-200 dark:text-theme-secondary-800"
@@ -1641,7 +1641,7 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
         data-testid="LedgerConfirmation-loading_message"
       >
         <div
-          class="animate-spin rounded-full border-[5px] shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 border-l-theme-warning-900 dark:border-l-theme-warning-600"
+          class="animate-spin rounded-full border-[5px] shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-l-theme-warning-900 dark:border-l-theme-warning-600 dim:border-l-theme-warning-600"
         />
         <div
           class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle text-theme-warning-200 dark:text-theme-secondary-800"
@@ -1695,7 +1695,7 @@ exports[`AuthenticationStep (transaction) > should show only ledger confirmation
         data-testid="LedgerConfirmation-loading_message"
       >
         <div
-          class="animate-spin rounded-full border-[5px] shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 border-l-theme-warning-900 dark:border-l-theme-warning-600"
+          class="animate-spin rounded-full border-[5px] shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-l-theme-warning-900 dark:border-l-theme-warning-600 dim:border-l-theme-warning-600"
         />
         <div
           class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle text-theme-warning-200 dark:text-theme-secondary-800"
@@ -1846,7 +1846,7 @@ exports[`AuthenticationStep (transaction) > should specify ledger supported mode
         class="flex flex-col overflow-hidden rounded-xl"
       >
         <div
-          class="flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-danger-100 text-theme-danger-700 dark:bg-theme-danger-500"
+          class="dim:text-white flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-danger-100 text-theme-danger-700 dark:bg-theme-danger-500"
         >
           <div>
             <div
@@ -1886,7 +1886,7 @@ exports[`AuthenticationStep (transaction) > should specify ledger supported mode
           </span>
         </div>
         <div
-          class="dark:bg-theme-secondary-800 w-full p-4 text-left text-sm leading-relaxed break-words bg-theme-danger-50"
+          class="dark:bg-theme-secondary-800 dim:bg-theme-dim-800 dim:text-theme-dim-50 w-full p-4 text-left text-sm leading-relaxed break-words bg-theme-danger-50"
         >
           A 
           <strong>
@@ -1903,7 +1903,7 @@ exports[`AuthenticationStep (transaction) > should specify ledger supported mode
         class="inline-flex w-full items-center justify-center space-x-3"
       >
         <div
-          class="animate-spin rounded-full border-[5px] shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black border-l-theme-primary-600 dark:border-l-theme-primary-600"
+          class="animate-spin rounded-full border-[5px] shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black dim:border-theme-dim-700 border-l-theme-primary-600 dark:border-l-theme-primary-600 dim:border-l-theme-dim-navy-600"
         />
         <span
           class="text-theme-secondary-text animate-pulse font-semibold"

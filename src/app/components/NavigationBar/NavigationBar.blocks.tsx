@@ -38,9 +38,10 @@ const NavWrapper = ({
 		{...props}
 		className={twMerge(
 			cn(
-				"custom-nav-wrapper dark:bg-theme-dark-900 sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200",
+				"custom-nav-wrapper dark:bg-theme-dark-900 dim:bg-theme-dim-900 sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200",
 				{
-					"border-b-theme-secondary-300 dark:border-b-theme-dark-700 h-12 border-b": variant === "default",
+					"border-b-theme-secondary-300 dark:border-b-theme-dark-700 dim:border-b-theme-dim-700 h-12 border-b":
+						variant === "default",
 					"h-21": variant === "logo-only",
 				},
 			),
@@ -109,7 +110,7 @@ const NavigationBarMobileWrapper = ({
 	<div
 		{...props}
 		className={twMerge(
-			"fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black",
+			"dim:bg-theme-dim-950 fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black",
 			cn({
 				"shadow-footer-smooth dark:shadow-footer-smooth-dark": !hasFixedFormButtons,
 			}),
@@ -142,7 +143,7 @@ const NavigationBarMobile = ({
 			{hasFixedFormButtons && (
 				<div
 					data-testid="NavigationBar__buttons-separator"
-					className="border-theme-secondary-300 dark:border-theme-secondary-900 border-t"
+					className="border-theme-secondary-300 dark:border-theme-secondary-900 dim:border-theme-dim-950 border-t"
 				/>
 			)}
 
@@ -155,7 +156,7 @@ const NavigationBarMobile = ({
 					onClick={receiveButtonClickHandler}
 					className={cn({
 						"text-theme-secondary-500 cursor-not-allowed": disabled,
-						"text-theme-secondary-700 dark:text-theme-secondary-600": !disabled,
+						"text-theme-secondary-700 dark:text-theme-secondary-600 dim:text-theme-dim-200": !disabled,
 					})}
 				>
 					<Icon name="Received" size="lg" />
@@ -168,7 +169,7 @@ const NavigationBarMobile = ({
 					size="icon"
 					variant="transparent"
 					onClick={homeButtonHandler}
-					className="text-theme-secondary-700 dark:text-theme-secondary-600"
+					className="text-theme-secondary-700 dark:text-theme-secondary-600 dim:text-theme-dim-200"
 				>
 					<Icon name="Dashboard" size="lg" />
 				</Button>
@@ -183,7 +184,7 @@ const NavigationBarMobile = ({
 					onClick={sendButtonClickHandler}
 					className={cn({
 						"text-theme-secondary-500 cursor-not-allowed": disabled,
-						"text-theme-secondary-700 dark:text-theme-secondary-600": !disabled,
+						"text-theme-secondary-700 dark:text-theme-secondary-600 dim:text-theme-dim-200": !disabled,
 					})}
 				>
 					<Icon name="Sent" size="lg" />
@@ -257,7 +258,7 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 						<NavLink
 							to={menuItem.mountPath(profile.id())}
 							title={menuItem.title}
-							className="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
+							className="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
 						>
 							{menuItem.title}
 						</NavLink>
@@ -354,9 +355,9 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 
 						<div className="flex flex-row items-center justify-center gap-4 sm:gap-5">
 							<NotificationsDropdown profile={profile} />
-							<div className="border-theme-secondary-300 dark:border-theme-dark-700 h-6 border-r sm:h-12" />
+							<div className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 h-6 border-r sm:h-12" />
 							<ServerStatusIndicator profile={profile} />
-							<div className="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:flex sm:h-12" />
+							<div className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 hidden h-6 border-r sm:flex sm:h-12" />
 							<div className="hidden items-center sm:flex">
 								<Tooltip
 									content={wallets.length > 0 ? t("COMMON.RECEIVE") : t("COMMON.NOTICE_NO_WALLETS")}
@@ -377,7 +378,7 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 									</div>
 								</Tooltip>
 							</div>
-							<div className="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:flex sm:h-12" />
+							<div className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 hidden h-6 border-r sm:flex sm:h-12" />
 							<div className="hidden items-center sm:flex">
 								<Tooltip
 									content={wallets.length > 0 ? t("COMMON.SEND") : t("COMMON.NOTICE_NO_WALLETS")}
@@ -399,7 +400,7 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 								</Tooltip>
 							</div>
 
-							<div className="border-theme-secondary-300 dark:border-theme-dark-700 h-6 border-r sm:h-12" />
+							<div className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 h-6 border-r sm:h-12" />
 
 							{!!profile.settings().get(Contracts.ProfileSetting.UseTestNetworks) && (
 								<>

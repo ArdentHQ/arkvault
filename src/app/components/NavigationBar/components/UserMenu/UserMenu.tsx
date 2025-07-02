@@ -32,7 +32,7 @@ export const UserMenu: FC<UserMenuProperties> = ({ onUserAction, avatarImage, us
 
 	const renderAvatarSection = useCallback(
 		(isOpen: boolean) => (
-			<button className="group dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 flex items-center gap-6 rounded bg-transparent p-0 px-1 py-0.5">
+			<button className="group dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 flex items-center gap-6 rounded bg-transparent p-0 px-1 py-0.5">
 				<div
 					className="relative cursor-pointer items-center justify-center rounded align-middle"
 					data-testid="UserMenu"

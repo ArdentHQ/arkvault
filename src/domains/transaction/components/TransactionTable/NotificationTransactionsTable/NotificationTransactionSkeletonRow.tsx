@@ -20,12 +20,12 @@ export const NotificationTransactionSkeletonRow = () => {
 				<Skeleton height={16} width={recipientWidth} />
 			</TableCell>
 
-			<TableCell innerClassName="text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold justify-end whitespace-nowrap">
+			<TableCell innerClassName="text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold justify-end whitespace-nowrap dim:text-theme-dim-200">
 				<Skeleton height={16} width={40} />
 			</TableCell>
 
 			<TableCell innerClassName="justify-end pr-8 static">
-				<span className="border-theme-secondary-300 dark:border-theme-secondary-800 flex h-7 items-center space-x-1 rounded border px-2">
+				<span className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 flex h-7 items-center space-x-1 rounded border px-2">
 					<Skeleton height={16} width={amountWidth} />
 					<Skeleton height={16} width={35} />
 				</span>

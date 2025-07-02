@@ -18,7 +18,7 @@ exports[`ReceiveFundsForm > should emit amount onChange event 1`] = `
         >
           Amount
           <span
-            class="text-theme-secondary-500 dark:text-theme-secondary-700 ml-1"
+            class="text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-500 ml-1"
             data-testid="FormLabel__optional"
           >
             optional
@@ -28,14 +28,14 @@ exports[`ReceiveFundsForm > should emit amount onChange event 1`] = `
           class="relative"
         >
           <div
-            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 pr-20"
+            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 pr-20"
           >
             <div
               class="relative flex h-full flex-1"
             >
               <input
                 autocomplete="off"
-                class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
+                class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
                 data-testid="ReceiveFundsForm__amount"
                 name="amount"
                 placeholder="Amount"
@@ -69,7 +69,7 @@ exports[`ReceiveFundsForm > should render 1`] = `
         >
           Amount
           <span
-            class="text-theme-secondary-500 dark:text-theme-secondary-700 ml-1"
+            class="text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-500 ml-1"
             data-testid="FormLabel__optional"
           >
             optional
@@ -79,14 +79,14 @@ exports[`ReceiveFundsForm > should render 1`] = `
           class="relative"
         >
           <div
-            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 pr-20"
+            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 pr-20"
           >
             <div
               class="relative flex h-full flex-1"
             >
               <input
                 autocomplete="off"
-                class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
+                class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
                 data-testid="ReceiveFundsForm__amount"
                 name="amount"
                 placeholder="Amount"
