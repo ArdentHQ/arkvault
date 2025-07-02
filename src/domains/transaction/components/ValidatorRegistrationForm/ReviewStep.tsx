@@ -136,11 +136,12 @@ export const ReviewStep = ({
 												</div>
 											)}
 
-										<Tooltip content={t("TRANSACTION.REVIEW_STEP.AMOUNT_LOCKED_TOOLTIP")}>
-											<div className="bg-theme-primary-100 dark:bg-theme-dark-800 dark:text-theme-dark-50 dim:bg-theme-dim-800 dim:text-theme-dim-50 text-theme-primary-600 flex h-5 w-5 items-center justify-center rounded-full">
-												<Icon name="QuestionMarkSmall" size="sm" />
-											</div>
-										</Tooltip>
+											<Tooltip content={t("TRANSACTION.REVIEW_STEP.AMOUNT_LOCKED_TOOLTIP")}>
+												<div className="bg-theme-primary-100 dark:bg-theme-dark-800 dark:text-theme-dark-50 dim:bg-theme-dim-800 dim:text-theme-dim-50 text-theme-primary-600 flex h-5 w-5 items-center justify-center rounded-full">
+													<Icon name="QuestionMarkSmall" size="sm" />
+												</div>
+											</Tooltip>
+										</div>
 									</div>
 								</div>
 							</DetailWrapper>
