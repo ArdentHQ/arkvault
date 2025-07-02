@@ -37,13 +37,13 @@ export const TransactionRowMobile = memo(
 			<TableRow onClick={onClick} className={cn("group border-b-0!", className)} {...properties}>
 				<td data-testid="TableRow__mobile">
 					<MobileCard className="mb-3">
-						<div className="bg-theme-secondary-100 flex h-10 w-full items-center justify-between px-4 dark:bg-black">
+						<div className="bg-theme-secondary-100 dim:bg-theme-dim-950 flex h-10 w-full items-center justify-between px-4 dark:bg-black">
 							<div className="max-w-32">
 								<TransactionRowId transaction={transaction} />
 							</div>
 							<div className="flex flex-row items-center">
 								<span
-									className="text-theme-secondary-700 text-sm font-semibold sm:block"
+									className="text-theme-secondary-700 dim:text-theme-dim-200 text-sm font-semibold sm:block"
 									data-testid="TransactionRow__timestamp"
 								>
 									{timeStamp ? (

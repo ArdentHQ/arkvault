@@ -33,3 +33,12 @@
 .tippy-box[data-theme~="dark"] .tippy-arrow {
 	color: var(--theme-color-secondary-700);
 }
+
+.tippy-box[data-theme~="dim"] {
+	background-color: var(--theme-color-dim-700);
+	color: var(--theme-color-dim-50);
+}
+
+.tippy-box[data-theme~="dim"] .tippy-arrow {
+	color: var(--theme-color-dim-700);
+}

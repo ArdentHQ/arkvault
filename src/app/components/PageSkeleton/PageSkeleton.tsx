@@ -5,9 +5,11 @@ import { Page, Section } from "@/app/components/Layout";
 import { WelcomeSlider } from "@/domains/profile/components/WelcomeSlider/WelcomeSlider";
 import { ProfileRowSkeleton } from "@/domains/profile/components/ProfileRow/ProfileRow";
 import { Skeleton } from "@/app/components/Skeleton";
+import cn from "classnames";
 
 export const PageSkeleton = () => {
 	const { t } = useTranslation();
+
 	return (
 		<div data-testid="PageSkeleton">
 			<Page navbarVariant="logo-only" pageTitle={t("COMMON.WELCOME")} title={<Trans i18nKey="COMMON.APP_NAME" />}>
@@ -17,16 +19,22 @@ export const PageSkeleton = () => {
 					data-testid="PageSkeleton"
 				>
 					<div className="flex flex-col gap-3 lg:flex-row">
-						<div className="border-theme-navy-100 bg-theme-navy-50 bg-[url( dark:border-theme-secondary-800 dark:bg-theme-secondary-800'/welcome-bg-white.svg')] hidden min-w-0 basis-1/2 rounded-xl border sm:block dark:bg-[url('/welcome-bg-dark.svg')]">
+						<div
+							className={cn(
+								"border-theme-navy-100 dark:border-theme-secondary-800 dim:border-theme-dim-700 bg-theme-navy-50 dark:bg-theme-secondary-800 dim:bg-theme-dim-950 dim:bg-[url(/welcome-bg-dim.svg)] hidden min-w-0 basis-1/2 rounded-xl bg-[url(/welcome-bg-white.svg)] sm:block sm:border dark:bg-[url(/welcome-bg-dark.svg)]",
+							)}
+						>
 							<WelcomeSlider />
 						</div>
-						<div className="border-theme-navy-100 dark:border-theme-secondary-800 min-w-0 basis-1/2 rounded-xl sm:border sm:p-6">
+
+						<div className="border-theme-navy-100 dark:border-theme-secondary-800 dim:border-theme-dim-700 min-w-0 basis-1/2 rounded-xl sm:border sm:p-6">
 							<div className="mx-auto flex h-[calc(100vh_-_160px)] max-w-[400px] flex-col sm:h-full">
 								<div className="flex flex-1 flex-col items-center justify-center">
 									<div className="flex flex-col items-center space-y-2 text-center sm:px-4">
 										<ThemeIcon
 											darkIcon="PersonDark"
 											lightIcon="PersonLight"
+											dimIcon="PersonDim"
 											dimensions={[24, 24]}
 										/>
 									</div>

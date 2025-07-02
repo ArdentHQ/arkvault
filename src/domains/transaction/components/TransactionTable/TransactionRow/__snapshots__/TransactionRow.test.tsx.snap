@@ -5,12 +5,12 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
   <table>
     <tbody>
       <tr
-        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-dashed cursor-pointer table-row table-row-unselected group relative"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start pr-0 lg:pr-3 xl:min-h-11 xl:max-h-11 xl:pt-2.5 lg:min-w-36 min-h-[66px] py-1 my-0 md-lg:min-h-14"
+            class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 items-start pr-0 lg:pr-3 xl:min-h-11 xl:max-h-11 xl:pt-2.5 lg:min-w-36 min-h-[66px] py-1 my-0 md-lg:min-h-14"
           >
             <div
               class="flex flex-col gap-1 font-semibold"
@@ -19,7 +19,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
                 class="flex flex-col gap-1 font-semibold"
               >
                 <a
-                  class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
+                  class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
                   data-ring-focus-margin="-m-1"
                   data-testid="Link"
                   href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
@@ -32,7 +32,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
                       class="text-sm"
                     >
                       <span
-                        class="no-ligatures text-theme-primary-600 cursor-pointer"
+                        class="no-ligatures text-theme-primary-600 dim:text-theme-dim-navy-600 cursor-pointer"
                         data-testid="TransactionRow__id"
                       >
                         ea63b…5c79b
@@ -42,7 +42,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
                 </a>
               </div>
               <span
-                class="text-theme-secondary-700 text-xs xl:hidden"
+                class="text-theme-secondary-700 dim:text-theme-dim-200 text-xs xl:hidden"
               >
                 <span
                   data-testid="TimeAgo"
@@ -58,7 +58,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
           data-testid="TransactionRow__timestamp"
         >
           <div
-            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 min-h-11 xl:max-h-11 xl:pt-3 xl:min-w-32"
+            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 min-h-11 xl:max-h-11 xl:pt-3 xl:min-w-32"
           >
             <span
               data-testid="TimeAgo"
@@ -69,10 +69,10 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
         </td>
         <td>
           <div
-            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start xl:min-h-11 xl:pt-3 min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2 lg:w-24 lg:min-w-24 xl:min-w-38 xl:w-auto"
+            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2 lg:w-24 lg:min-w-24 xl:min-w-38 xl:w-auto"
           >
             <div
-              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] max-w-40 truncate rounded px-1 py-[3px] whitespace-nowrap dark:border"
+              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-40 truncate rounded px-1 py-[3px] whitespace-nowrap dark:border"
               data-testid="TransactionRow__type"
             >
               Transfer
@@ -83,7 +83,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
           class=""
         >
           <div
-            class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-16 my-1 py-2"
+            class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-16 my-1 py-2"
           >
             <div
               class="flex grow flex-col gap-2"
@@ -93,7 +93,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
                 data-testid="TransactionRowAddressing__container_advanced_sender"
               >
                 <div
-                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                   data-testid="TransactionRowAddressing__label"
                 >
                   From
@@ -128,7 +128,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
                     type="button"
                   >
                     <div
-                      class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dark:hover:text-white"
+                      class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
                     >
                       <div
                         style="height: 16px; width: 16px;"
@@ -170,7 +170,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
                   data-testid="TransactionRowAddressing__container_advanced_recipient"
                 >
                   <div
-                    class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                    class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                     data-testid="TransactionRowAddressing__label"
                   >
                     To
@@ -205,7 +205,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
                       type="button"
                     >
                       <div
-                        class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dark:hover:text-white"
+                        class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
                       >
                         <div
                           style="height: 16px; width: 16px;"
@@ -247,14 +247,14 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
           class="md-lg:table-cell hidden"
         >
           <div
-            class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-16 my-1 py-2 lg:min-w-36"
+            class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-16 my-1 py-2 lg:min-w-36"
           >
             <div
               class="flex w-full flex-row gap-2"
               data-testid="TransactionRowAddressing__container_advanced_recipient"
             >
               <div
-                class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                 data-testid="TransactionRowAddressing__label"
               >
                 To
@@ -289,7 +289,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
                   type="button"
                 >
                   <div
-                    class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dark:hover:text-white"
+                    class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
                   >
                     <div
                       style="height: 16px; width: 16px;"
@@ -329,14 +329,14 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
           class="hidden"
         >
           <div
-            class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-4 items-start my-1 px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-14 pt-2 mt-1 lg:min-w-36"
+            class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 space-x-4 items-start my-1 px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-14 pt-2 mt-1 lg:min-w-36"
           >
             <div
               class="flex w-full flex-row gap-2"
               data-testid="TransactionRowAddressing__container"
             >
               <div
-                class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                 data-testid="TransactionRowAddressing__label"
               >
                 To
@@ -371,7 +371,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
                   type="button"
                 >
                   <div
-                    class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dark:hover:text-white"
+                    class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
                   >
                     <div
                       style="height: 16px; width: 16px;"
@@ -408,10 +408,10 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
           </div>
         </td>
         <td
-          class="hidden lg:table-cell"
+          class="hidden xl:table-cell"
         >
           <div
-            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3 lg:w-34 xl:w-auto"
+            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3 lg:w-34 xl:w-auto"
           >
             <div
               class="flex flex-col items-end gap-1"
@@ -438,7 +438,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
         </td>
         <td>
           <div
-            class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-11 xl:my-0 xl:pt-3 min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2"
+            class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-11 xl:my-0 xl:pt-3 min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2"
           >
             <span
               class="whitespace-nowrap"
@@ -454,22 +454,960 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
 </DocumentFragment>
 `;
 
-exports[`TransactionRow > should render responsive 1`] = `
+exports[`TransactionRow > should render responsive (lg) 1`] = `
 <DocumentFragment>
   <table>
     <tbody>
       <tr
-        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group group border-b-0!"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-dashed cursor-pointer table-row table-row-unselected group relative"
+        data-testid="TableRow"
+      >
+        <td>
+          <div
+            class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 items-start pr-0 lg:pr-3 xl:min-h-11 xl:max-h-11 xl:pt-2.5 lg:min-w-36 min-h-[66px] py-1 my-0 md-lg:min-h-14"
+          >
+            <div
+              class="flex flex-col gap-1 font-semibold"
+            >
+              <div
+                class="flex flex-col gap-1 font-semibold"
+              >
+                <a
+                  class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
+                  data-ring-focus-margin="-m-1"
+                  data-testid="Link"
+                  href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+                  rel="noopener noreferrer"
+                >
+                  <span
+                    class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
+                  >
+                    <span
+                      class="text-sm"
+                    >
+                      <span
+                        class="no-ligatures text-theme-primary-600 dim:text-theme-dim-navy-600 cursor-pointer"
+                        data-testid="TransactionRow__id"
+                      >
+                        ea63b…5c79b
+                      </span>
+                    </span>
+                  </span>
+                </a>
+              </div>
+              <span
+                class="text-theme-secondary-700 dim:text-theme-dim-200 text-xs xl:hidden"
+              >
+                <span
+                  data-testid="TimeAgo"
+                >
+                  A few seconds ago
+                </span>
+              </span>
+            </div>
+          </div>
+        </td>
+        <td
+          class="hidden xl:table-cell"
+          data-testid="TransactionRow__timestamp"
+        >
+          <div
+            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 min-h-11 xl:max-h-11 xl:pt-3 xl:min-w-32"
+          >
+            <span
+              data-testid="TimeAgo"
+            >
+              A few seconds ago
+            </span>
+          </div>
+        </td>
+        <td>
+          <div
+            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2 lg:w-24 lg:min-w-24 xl:min-w-38 xl:w-auto"
+          >
+            <div
+              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-40 truncate rounded px-1 py-[3px] whitespace-nowrap dark:border"
+              data-testid="TransactionRow__type"
+            >
+              Transfer
+            </div>
+          </div>
+        </td>
+        <td
+          class=""
+        >
+          <div
+            class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-16 my-1 py-2"
+          >
+            <div
+              class="flex grow flex-col gap-2"
+            >
+              <div
+                class="flex w-full flex-row gap-2"
+                data-testid="TransactionRowAddressing__container_advanced_sender"
+              >
+                <div
+                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                  data-testid="TransactionRowAddressing__label"
+                >
+                  From
+                </div>
+                <div
+                  class="flex min-w-36 grow items-center justify-between space-x-4"
+                >
+                  <div
+                    class="grow"
+                    data-testid="TransactionRowAddressing__address-container"
+                  >
+                    <div
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    >
+                      <span
+                        class="font-semibold text-sm text-theme-text"
+                        data-testid="Address__alias"
+                      >
+                        <span
+                          class="no-ligatures transition-colors duration-200"
+                          data-testid="TruncateEnd"
+                        >
+                          Mainsail Wallet …
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                  <button
+                    class="ring-focus relative cursor-pointer focus:outline-hidden"
+                    data-ring-focus-margin="-m-1"
+                    data-testid="clipboard-icon__wrapper"
+                    type="button"
+                  >
+                    <div
+                      class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
+                    >
+                      <div
+                        style="height: 16px; width: 16px;"
+                      >
+                        <svg
+                          id="copy"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                            />
+                            <path
+                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                            />
+                          </g>
+                        </svg>
+                      </div>
+                    </div>
+                  </button>
+                </div>
+              </div>
+              <div
+                class="md-lg:hidden"
+              >
+                <div
+                  class="flex w-full flex-row gap-2"
+                  data-testid="TransactionRowAddressing__container_advanced_recipient"
+                >
+                  <div
+                    class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                    data-testid="TransactionRowAddressing__label"
+                  >
+                    To
+                  </div>
+                  <div
+                    class="flex min-w-36 grow items-center justify-between space-x-4"
+                  >
+                    <div
+                      class="grow"
+                      data-testid="TransactionRowAddressing__address-container"
+                    >
+                      <div
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                      >
+                        <span
+                          class="font-semibold text-sm text-theme-text"
+                          data-testid="Address__alias"
+                        >
+                          <span
+                            class="no-ligatures transition-colors duration-200"
+                            data-testid="TruncateEnd"
+                          >
+                            Mainsail Wallet …
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+                    <button
+                      class="ring-focus relative cursor-pointer focus:outline-hidden"
+                      data-ring-focus-margin="-m-1"
+                      data-testid="clipboard-icon__wrapper"
+                      type="button"
+                    >
+                      <div
+                        class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
+                      >
+                        <div
+                          style="height: 16px; width: 16px;"
+                        >
+                          <svg
+                            id="copy"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                              />
+                              <path
+                                d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                              />
+                            </g>
+                          </svg>
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
+          class="md-lg:table-cell hidden"
+        >
+          <div
+            class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-16 my-1 py-2 lg:min-w-36"
+          >
+            <div
+              class="flex w-full flex-row gap-2"
+              data-testid="TransactionRowAddressing__container_advanced_recipient"
+            >
+              <div
+                class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                data-testid="TransactionRowAddressing__label"
+              >
+                To
+              </div>
+              <div
+                class="flex min-w-36 grow items-center justify-between space-x-4"
+              >
+                <div
+                  class="grow"
+                  data-testid="TransactionRowAddressing__address-container"
+                >
+                  <div
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                  >
+                    <span
+                      class="font-semibold text-sm text-theme-text"
+                      data-testid="Address__alias"
+                    >
+                      <span
+                        class="no-ligatures transition-colors duration-200"
+                        data-testid="TruncateEnd"
+                      >
+                        Mainsail Wallet …
+                      </span>
+                    </span>
+                  </div>
+                </div>
+                <button
+                  class="ring-focus relative cursor-pointer focus:outline-hidden"
+                  data-ring-focus-margin="-m-1"
+                  data-testid="clipboard-icon__wrapper"
+                  type="button"
+                >
+                  <div
+                    class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
+                  >
+                    <div
+                      style="height: 16px; width: 16px;"
+                    >
+                      <svg
+                        id="copy"
+                        style="height: 100%; width: 100%;"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                          />
+                          <path
+                            d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                          />
+                        </g>
+                      </svg>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
+          class="hidden"
+        >
+          <div
+            class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 space-x-4 items-start my-1 px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-14 pt-2 mt-1 lg:min-w-36"
+          >
+            <div
+              class="flex w-full flex-row gap-2"
+              data-testid="TransactionRowAddressing__container"
+            >
+              <div
+                class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                data-testid="TransactionRowAddressing__label"
+              >
+                To
+              </div>
+              <div
+                class="flex min-w-36 grow items-center justify-between space-x-4"
+              >
+                <div
+                  class="grow"
+                  data-testid="TransactionRowAddressing__address-container"
+                >
+                  <div
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                  >
+                    <span
+                      class="font-semibold text-sm text-theme-text"
+                      data-testid="Address__alias"
+                    >
+                      <span
+                        class="no-ligatures transition-colors duration-200"
+                        data-testid="TruncateEnd"
+                      >
+                        Mainsail Wallet …
+                      </span>
+                    </span>
+                  </div>
+                </div>
+                <button
+                  class="ring-focus relative cursor-pointer focus:outline-hidden"
+                  data-ring-focus-margin="-m-1"
+                  data-testid="clipboard-icon__wrapper"
+                  type="button"
+                >
+                  <div
+                    class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
+                  >
+                    <div
+                      style="height: 16px; width: 16px;"
+                    >
+                      <svg
+                        id="copy"
+                        style="height: 100%; width: 100%;"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                          />
+                          <path
+                            d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                          />
+                        </g>
+                      </svg>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
+          class="hidden xl:table-cell"
+        >
+          <div
+            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3 lg:w-34 xl:w-auto"
+          >
+            <div
+              class="flex flex-col items-end gap-1"
+            >
+              <span
+                class="whitespace-nowrap text-sm font-semibold"
+                data-testid="Amount"
+              >
+                121
+              </span>
+              <span
+                class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
+                data-testid="TransactionRow__exchange-currency"
+              >
+                <span
+                  class="whitespace-nowrap"
+                  data-testid="Amount"
+                >
+                  $0.00
+                </span>
+              </span>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-11 xl:my-0 xl:pt-3 min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2"
+          >
+            <div
+              class="flex w-40 flex-col items-end gap-1"
+            >
+              <span
+                class="whitespace-nowrap text-sm font-semibold"
+                data-testid="Amount"
+              >
+                121
+              </span>
+              <span
+                class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
+                data-testid="TransactionRow__exchange-currency"
+              >
+                <span
+                  class="whitespace-nowrap"
+                  data-testid="Amount"
+                >
+                  $0.00
+                </span>
+              </span>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
+`;
+
+exports[`TransactionRow > should render responsive (md) 1`] = `
+<DocumentFragment>
+  <table>
+    <tbody>
+      <tr
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-dashed cursor-pointer table-row table-row-unselected group relative"
+        data-testid="TableRow"
+      >
+        <td>
+          <div
+            class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 items-start pr-0 lg:pr-3 xl:min-h-11 xl:max-h-11 xl:pt-2.5 lg:min-w-36 min-h-[66px] py-1 my-0 md-lg:min-h-14"
+          >
+            <div
+              class="flex flex-col gap-1 font-semibold"
+            >
+              <div
+                class="flex flex-col gap-1 font-semibold"
+              >
+                <a
+                  class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
+                  data-ring-focus-margin="-m-1"
+                  data-testid="Link"
+                  href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+                  rel="noopener noreferrer"
+                >
+                  <span
+                    class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
+                  >
+                    <span
+                      class="text-sm"
+                    >
+                      <span
+                        class="no-ligatures text-theme-primary-600 dim:text-theme-dim-navy-600 cursor-pointer"
+                        data-testid="TransactionRow__id"
+                      >
+                        ea63…c79b
+                      </span>
+                    </span>
+                  </span>
+                </a>
+              </div>
+              <span
+                class="text-theme-secondary-700 dim:text-theme-dim-200 text-xs xl:hidden"
+              >
+                <span
+                  data-testid="TimeAgo"
+                >
+                  A few seconds ago
+                </span>
+              </span>
+            </div>
+          </div>
+        </td>
+        <td
+          class="hidden xl:table-cell"
+          data-testid="TransactionRow__timestamp"
+        >
+          <div
+            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 min-h-11 xl:max-h-11 xl:pt-3 xl:min-w-32"
+          >
+            <span
+              data-testid="TimeAgo"
+            >
+              A few seconds ago
+            </span>
+          </div>
+        </td>
+        <td>
+          <div
+            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2 lg:w-24 lg:min-w-24 xl:min-w-38 xl:w-auto"
+          >
+            <div
+              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-40 truncate rounded px-1 py-[3px] whitespace-nowrap dark:border"
+              data-testid="TransactionRow__type"
+            >
+              Transfer
+            </div>
+          </div>
+        </td>
+        <td
+          class=""
+        >
+          <div
+            class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-16 my-1 py-2"
+          >
+            <div
+              class="flex grow flex-col gap-2"
+            >
+              <div
+                class="flex w-full flex-row gap-2"
+                data-testid="TransactionRowAddressing__container_advanced_sender"
+              >
+                <div
+                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                  data-testid="TransactionRowAddressing__label"
+                >
+                  From
+                </div>
+                <div
+                  class="flex min-w-36 grow items-center justify-between space-x-4"
+                >
+                  <div
+                    class="grow"
+                    data-testid="TransactionRowAddressing__address-container"
+                  >
+                    <div
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    >
+                      <span
+                        class="font-semibold text-sm text-theme-text"
+                        data-testid="Address__alias"
+                      >
+                        <span
+                          class="no-ligatures transition-colors duration-200"
+                          data-testid="TruncateEnd"
+                        >
+                          Mainsail Wallet …
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                  <button
+                    class="ring-focus relative cursor-pointer focus:outline-hidden"
+                    data-ring-focus-margin="-m-1"
+                    data-testid="clipboard-icon__wrapper"
+                    type="button"
+                  >
+                    <div
+                      class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
+                    >
+                      <div
+                        style="height: 16px; width: 16px;"
+                      >
+                        <svg
+                          id="copy"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                            />
+                            <path
+                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                            />
+                          </g>
+                        </svg>
+                      </div>
+                    </div>
+                  </button>
+                </div>
+              </div>
+              <div
+                class="md-lg:hidden"
+              >
+                <div
+                  class="flex w-full flex-row gap-2"
+                  data-testid="TransactionRowAddressing__container_advanced_recipient"
+                >
+                  <div
+                    class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                    data-testid="TransactionRowAddressing__label"
+                  >
+                    To
+                  </div>
+                  <div
+                    class="flex min-w-36 grow items-center justify-between space-x-4"
+                  >
+                    <div
+                      class="grow"
+                      data-testid="TransactionRowAddressing__address-container"
+                    >
+                      <div
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                      >
+                        <span
+                          class="font-semibold text-sm text-theme-text"
+                          data-testid="Address__alias"
+                        >
+                          <span
+                            class="no-ligatures transition-colors duration-200"
+                            data-testid="TruncateEnd"
+                          >
+                            Mainsail Wallet …
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+                    <button
+                      class="ring-focus relative cursor-pointer focus:outline-hidden"
+                      data-ring-focus-margin="-m-1"
+                      data-testid="clipboard-icon__wrapper"
+                      type="button"
+                    >
+                      <div
+                        class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
+                      >
+                        <div
+                          style="height: 16px; width: 16px;"
+                        >
+                          <svg
+                            id="copy"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                              />
+                              <path
+                                d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                              />
+                            </g>
+                          </svg>
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
+          class="md-lg:table-cell hidden"
+        >
+          <div
+            class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-16 my-1 py-2 lg:min-w-36"
+          >
+            <div
+              class="flex w-full flex-row gap-2"
+              data-testid="TransactionRowAddressing__container_advanced_recipient"
+            >
+              <div
+                class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                data-testid="TransactionRowAddressing__label"
+              >
+                To
+              </div>
+              <div
+                class="flex min-w-36 grow items-center justify-between space-x-4"
+              >
+                <div
+                  class="grow"
+                  data-testid="TransactionRowAddressing__address-container"
+                >
+                  <div
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                  >
+                    <span
+                      class="font-semibold text-sm text-theme-text"
+                      data-testid="Address__alias"
+                    >
+                      <span
+                        class="no-ligatures transition-colors duration-200"
+                        data-testid="TruncateEnd"
+                      >
+                        Mainsail Wallet …
+                      </span>
+                    </span>
+                  </div>
+                </div>
+                <button
+                  class="ring-focus relative cursor-pointer focus:outline-hidden"
+                  data-ring-focus-margin="-m-1"
+                  data-testid="clipboard-icon__wrapper"
+                  type="button"
+                >
+                  <div
+                    class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
+                  >
+                    <div
+                      style="height: 16px; width: 16px;"
+                    >
+                      <svg
+                        id="copy"
+                        style="height: 100%; width: 100%;"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                          />
+                          <path
+                            d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                          />
+                        </g>
+                      </svg>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
+          class="hidden"
+        >
+          <div
+            class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 space-x-4 items-start my-1 px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-14 pt-2 mt-1 lg:min-w-36"
+          >
+            <div
+              class="flex w-full flex-row gap-2"
+              data-testid="TransactionRowAddressing__container"
+            >
+              <div
+                class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                data-testid="TransactionRowAddressing__label"
+              >
+                To
+              </div>
+              <div
+                class="flex min-w-36 grow items-center justify-between space-x-4"
+              >
+                <div
+                  class="grow"
+                  data-testid="TransactionRowAddressing__address-container"
+                >
+                  <div
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                  >
+                    <span
+                      class="font-semibold text-sm text-theme-text"
+                      data-testid="Address__alias"
+                    >
+                      <span
+                        class="no-ligatures transition-colors duration-200"
+                        data-testid="TruncateEnd"
+                      >
+                        Mainsail Wallet …
+                      </span>
+                    </span>
+                  </div>
+                </div>
+                <button
+                  class="ring-focus relative cursor-pointer focus:outline-hidden"
+                  data-ring-focus-margin="-m-1"
+                  data-testid="clipboard-icon__wrapper"
+                  type="button"
+                >
+                  <div
+                    class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
+                  >
+                    <div
+                      style="height: 16px; width: 16px;"
+                    >
+                      <svg
+                        id="copy"
+                        style="height: 100%; width: 100%;"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                          />
+                          <path
+                            d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                          />
+                        </g>
+                      </svg>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
+          class="hidden xl:table-cell"
+        >
+          <div
+            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3 lg:w-34 xl:w-auto"
+          >
+            <div
+              class="flex flex-col items-end gap-1"
+            >
+              <span
+                class="whitespace-nowrap text-sm font-semibold"
+                data-testid="Amount"
+              >
+                121
+              </span>
+              <span
+                class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
+                data-testid="TransactionRow__exchange-currency"
+              >
+                <span
+                  class="whitespace-nowrap"
+                  data-testid="Amount"
+                >
+                  $0.00
+                </span>
+              </span>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-11 xl:my-0 xl:pt-3 min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2"
+          >
+            <div
+              class="flex w-40 flex-col items-end gap-1"
+            >
+              <span
+                class="whitespace-nowrap text-sm font-semibold"
+                data-testid="Amount"
+              >
+                121
+              </span>
+              <span
+                class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
+                data-testid="TransactionRow__exchange-currency"
+              >
+                <span
+                  class="whitespace-nowrap"
+                  data-testid="Amount"
+                >
+                  $0.00
+                </span>
+              </span>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
+`;
+
+exports[`TransactionRow > should render responsive (sm) 1`] = `
+<DocumentFragment>
+  <table>
+    <tbody>
+      <tr
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-dashed cursor-pointer table-row table-row-unselected group group border-b-0!"
         data-testid="TableRow"
       >
         <td
           data-testid="TableRow__mobile"
         >
           <div
-            class="border-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-background w-full cursor-pointer overflow-hidden rounded border bg-white mb-3"
+            class="border-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-background dim:border-theme-dim-700 dim:bg-theme-background w-full cursor-pointer overflow-hidden rounded border bg-white mb-3"
           >
             <div
-              class="bg-theme-secondary-100 flex h-10 w-full items-center justify-between px-4 dark:bg-black"
+              class="bg-theme-secondary-100 dim:bg-theme-dim-950 flex h-10 w-full items-center justify-between px-4 dark:bg-black"
             >
               <div
                 class="max-w-32"
@@ -478,7 +1416,7 @@ exports[`TransactionRow > should render responsive 1`] = `
                   class="flex flex-col gap-1 font-semibold"
                 >
                   <a
-                    class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
+                    class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
@@ -491,7 +1429,7 @@ exports[`TransactionRow > should render responsive 1`] = `
                         class="text-sm"
                       >
                         <span
-                          class="no-ligatures text-theme-primary-600 cursor-pointer"
+                          class="no-ligatures text-theme-primary-600 dim:text-theme-dim-navy-600 cursor-pointer"
                           data-testid="TransactionRow__id"
                         >
                           ea63…c79b
@@ -505,7 +1443,7 @@ exports[`TransactionRow > should render responsive 1`] = `
                 class="flex flex-row items-center"
               >
                 <span
-                  class="text-theme-secondary-700 text-sm font-semibold sm:block"
+                  class="text-theme-secondary-700 dim:text-theme-dim-200 text-sm font-semibold sm:block"
                   data-testid="TransactionRow__timestamp"
                 >
                   <span
@@ -524,12 +1462,12 @@ exports[`TransactionRow > should render responsive 1`] = `
                 data-testid="TransactionRowMobile__label"
               >
                 <span
-                  class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
+                  class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-sm font-semibold"
                 >
                   Transfer
                 </span>
                 <div
-                  class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
+                  class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
                 >
                   <div
                     class="flex flex-col gap-2"
@@ -539,7 +1477,7 @@ exports[`TransactionRow > should render responsive 1`] = `
                       data-testid="TransactionRowAddressing__container_advanced_sender"
                     >
                       <div
-                        class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                        class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                         data-testid="TransactionRowAddressing__label"
                       >
                         From
@@ -574,7 +1512,7 @@ exports[`TransactionRow > should render responsive 1`] = `
                           type="button"
                         >
                           <div
-                            class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dark:hover:text-white"
+                            class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
                           >
                             <div
                               style="height: 16px; width: 16px;"
@@ -613,7 +1551,7 @@ exports[`TransactionRow > should render responsive 1`] = `
                       data-testid="TransactionRowAddressing__container_advanced_recipient"
                     >
                       <div
-                        class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                        class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                         data-testid="TransactionRowAddressing__label"
                       >
                         To
@@ -648,7 +1586,7 @@ exports[`TransactionRow > should render responsive 1`] = `
                           type="button"
                         >
                           <div
-                            class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dark:hover:text-white"
+                            class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
                           >
                             <div
                               style="height: 16px; width: 16px;"
@@ -689,12 +1627,12 @@ exports[`TransactionRow > should render responsive 1`] = `
                 class="flex flex-col gap-2 w-full"
               >
                 <span
-                  class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
+                  class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-sm font-semibold"
                 >
                   Amount (ARK)
                 </span>
                 <div
-                  class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
+                  class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
                 >
                   <span
                     class="whitespace-nowrap text-sm font-semibold"
@@ -708,12 +1646,1022 @@ exports[`TransactionRow > should render responsive 1`] = `
                 class="flex flex-col gap-2 w-full"
               >
                 <span
-                  class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
+                  class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-sm font-semibold"
                 >
                   Fiat Value
                 </span>
                 <div
-                  class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
+                  class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
+                >
+                  <span
+                    class="whitespace-nowrap"
+                    data-testid="Amount"
+                  >
+                    $0.00
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
+`;
+
+exports[`TransactionRow > should render responsive (xl) 1`] = `
+<DocumentFragment>
+  <table>
+    <tbody>
+      <tr
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-dashed cursor-pointer table-row table-row-unselected group relative"
+        data-testid="TableRow"
+      >
+        <td>
+          <div
+            class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 items-start pr-0 lg:pr-3 xl:min-h-11 xl:max-h-11 xl:pt-2.5 lg:min-w-36 min-h-[66px] py-1 my-0 md-lg:min-h-14"
+          >
+            <div
+              class="flex flex-col gap-1 font-semibold"
+            >
+              <div
+                class="flex flex-col gap-1 font-semibold"
+              >
+                <a
+                  class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
+                  data-ring-focus-margin="-m-1"
+                  data-testid="Link"
+                  href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+                  rel="noopener noreferrer"
+                >
+                  <span
+                    class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
+                  >
+                    <span
+                      class="text-sm"
+                    >
+                      <span
+                        class="no-ligatures text-theme-primary-600 dim:text-theme-dim-navy-600 cursor-pointer"
+                        data-testid="TransactionRow__id"
+                      >
+                        ea63b…5c79b
+                      </span>
+                    </span>
+                  </span>
+                </a>
+              </div>
+              <span
+                class="text-theme-secondary-700 dim:text-theme-dim-200 text-xs xl:hidden"
+              >
+                <span
+                  data-testid="TimeAgo"
+                >
+                  A few seconds ago
+                </span>
+              </span>
+            </div>
+          </div>
+        </td>
+        <td
+          class="hidden xl:table-cell"
+          data-testid="TransactionRow__timestamp"
+        >
+          <div
+            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 min-h-11 xl:max-h-11 xl:pt-3 xl:min-w-32"
+          >
+            <span
+              data-testid="TimeAgo"
+            >
+              A few seconds ago
+            </span>
+          </div>
+        </td>
+        <td>
+          <div
+            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2 lg:w-24 lg:min-w-24 xl:min-w-38 xl:w-auto"
+          >
+            <div
+              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-40 truncate rounded px-1 py-[3px] whitespace-nowrap dark:border"
+              data-testid="TransactionRow__type"
+            >
+              Transfer
+            </div>
+          </div>
+        </td>
+        <td
+          class=""
+        >
+          <div
+            class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-16 my-1 py-2"
+          >
+            <div
+              class="flex grow flex-col gap-2"
+            >
+              <div
+                class="flex w-full flex-row gap-2"
+                data-testid="TransactionRowAddressing__container_advanced_sender"
+              >
+                <div
+                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                  data-testid="TransactionRowAddressing__label"
+                >
+                  From
+                </div>
+                <div
+                  class="flex min-w-36 grow items-center justify-between space-x-4"
+                >
+                  <div
+                    class="grow"
+                    data-testid="TransactionRowAddressing__address-container"
+                  >
+                    <div
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    >
+                      <span
+                        class="font-semibold text-sm text-theme-text"
+                        data-testid="Address__alias"
+                      >
+                        <span
+                          class="no-ligatures transition-colors duration-200"
+                          data-testid="TruncateEnd"
+                        >
+                          Mainsail Wallet …
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                  <button
+                    class="ring-focus relative cursor-pointer focus:outline-hidden"
+                    data-ring-focus-margin="-m-1"
+                    data-testid="clipboard-icon__wrapper"
+                    type="button"
+                  >
+                    <div
+                      class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
+                    >
+                      <div
+                        style="height: 16px; width: 16px;"
+                      >
+                        <svg
+                          id="copy"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                            />
+                            <path
+                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                            />
+                          </g>
+                        </svg>
+                      </div>
+                    </div>
+                  </button>
+                </div>
+              </div>
+              <div
+                class="md-lg:hidden"
+              >
+                <div
+                  class="flex w-full flex-row gap-2"
+                  data-testid="TransactionRowAddressing__container_advanced_recipient"
+                >
+                  <div
+                    class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                    data-testid="TransactionRowAddressing__label"
+                  >
+                    To
+                  </div>
+                  <div
+                    class="flex min-w-36 grow items-center justify-between space-x-4"
+                  >
+                    <div
+                      class="grow"
+                      data-testid="TransactionRowAddressing__address-container"
+                    >
+                      <div
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                      >
+                        <span
+                          class="font-semibold text-sm text-theme-text"
+                          data-testid="Address__alias"
+                        >
+                          <span
+                            class="no-ligatures transition-colors duration-200"
+                            data-testid="TruncateEnd"
+                          >
+                            Mainsail Wallet …
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+                    <button
+                      class="ring-focus relative cursor-pointer focus:outline-hidden"
+                      data-ring-focus-margin="-m-1"
+                      data-testid="clipboard-icon__wrapper"
+                      type="button"
+                    >
+                      <div
+                        class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
+                      >
+                        <div
+                          style="height: 16px; width: 16px;"
+                        >
+                          <svg
+                            id="copy"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                              />
+                              <path
+                                d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                              />
+                            </g>
+                          </svg>
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
+          class="md-lg:table-cell hidden"
+        >
+          <div
+            class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-16 my-1 py-2 lg:min-w-36"
+          >
+            <div
+              class="flex w-full flex-row gap-2"
+              data-testid="TransactionRowAddressing__container_advanced_recipient"
+            >
+              <div
+                class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                data-testid="TransactionRowAddressing__label"
+              >
+                To
+              </div>
+              <div
+                class="flex min-w-36 grow items-center justify-between space-x-4"
+              >
+                <div
+                  class="grow"
+                  data-testid="TransactionRowAddressing__address-container"
+                >
+                  <div
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                  >
+                    <span
+                      class="font-semibold text-sm text-theme-text"
+                      data-testid="Address__alias"
+                    >
+                      <span
+                        class="no-ligatures transition-colors duration-200"
+                        data-testid="TruncateEnd"
+                      >
+                        Mainsail Wallet …
+                      </span>
+                    </span>
+                  </div>
+                </div>
+                <button
+                  class="ring-focus relative cursor-pointer focus:outline-hidden"
+                  data-ring-focus-margin="-m-1"
+                  data-testid="clipboard-icon__wrapper"
+                  type="button"
+                >
+                  <div
+                    class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
+                  >
+                    <div
+                      style="height: 16px; width: 16px;"
+                    >
+                      <svg
+                        id="copy"
+                        style="height: 100%; width: 100%;"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                          />
+                          <path
+                            d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                          />
+                        </g>
+                      </svg>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
+          class="hidden"
+        >
+          <div
+            class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 space-x-4 items-start my-1 px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-14 pt-2 mt-1 lg:min-w-36"
+          >
+            <div
+              class="flex w-full flex-row gap-2"
+              data-testid="TransactionRowAddressing__container"
+            >
+              <div
+                class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                data-testid="TransactionRowAddressing__label"
+              >
+                To
+              </div>
+              <div
+                class="flex min-w-36 grow items-center justify-between space-x-4"
+              >
+                <div
+                  class="grow"
+                  data-testid="TransactionRowAddressing__address-container"
+                >
+                  <div
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                  >
+                    <span
+                      class="font-semibold text-sm text-theme-text"
+                      data-testid="Address__alias"
+                    >
+                      <span
+                        class="no-ligatures transition-colors duration-200"
+                        data-testid="TruncateEnd"
+                      >
+                        Mainsail Wallet …
+                      </span>
+                    </span>
+                  </div>
+                </div>
+                <button
+                  class="ring-focus relative cursor-pointer focus:outline-hidden"
+                  data-ring-focus-margin="-m-1"
+                  data-testid="clipboard-icon__wrapper"
+                  type="button"
+                >
+                  <div
+                    class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
+                  >
+                    <div
+                      style="height: 16px; width: 16px;"
+                    >
+                      <svg
+                        id="copy"
+                        style="height: 100%; width: 100%;"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                          />
+                          <path
+                            d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                          />
+                        </g>
+                      </svg>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
+          class="hidden xl:table-cell"
+        >
+          <div
+            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3 lg:w-34 xl:w-auto"
+          >
+            <div
+              class="flex flex-col items-end gap-1"
+            >
+              <span
+                class="whitespace-nowrap text-sm font-semibold"
+                data-testid="Amount"
+              >
+                121
+              </span>
+              <span
+                class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
+                data-testid="TransactionRow__exchange-currency"
+              >
+                <span
+                  class="whitespace-nowrap"
+                  data-testid="Amount"
+                >
+                  $0.00
+                </span>
+              </span>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-11 xl:my-0 xl:pt-3 min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2"
+          >
+            <span
+              class="whitespace-nowrap"
+              data-testid="Amount"
+            >
+              $0.00
+            </span>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
+`;
+
+exports[`TransactionRow > should render responsive (xs) 1`] = `
+<DocumentFragment>
+  <table>
+    <tbody>
+      <tr
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-dashed cursor-pointer table-row table-row-unselected group group border-b-0!"
+        data-testid="TableRow"
+      >
+        <td
+          data-testid="TableRow__mobile"
+        >
+          <div
+            class="border-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-background dim:border-theme-dim-700 dim:bg-theme-background w-full cursor-pointer overflow-hidden rounded border bg-white mb-3"
+          >
+            <div
+              class="bg-theme-secondary-100 dim:bg-theme-dim-950 flex h-10 w-full items-center justify-between px-4 dark:bg-black"
+            >
+              <div
+                class="max-w-32"
+              >
+                <div
+                  class="flex flex-col gap-1 font-semibold"
+                >
+                  <a
+                    class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
+                    data-ring-focus-margin="-m-1"
+                    data-testid="Link"
+                    href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+                    rel="noopener noreferrer"
+                  >
+                    <span
+                      class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
+                    >
+                      <span
+                        class="text-sm"
+                      >
+                        <span
+                          class="no-ligatures text-theme-primary-600 dim:text-theme-dim-navy-600 cursor-pointer"
+                          data-testid="TransactionRow__id"
+                        >
+                          ea63…c79b
+                        </span>
+                      </span>
+                    </span>
+                  </a>
+                </div>
+              </div>
+              <div
+                class="flex flex-row items-center"
+              >
+                <span
+                  class="text-theme-secondary-700 dim:text-theme-dim-200 text-sm font-semibold sm:block"
+                  data-testid="TransactionRow__timestamp"
+                >
+                  <span
+                    data-testid="TimeAgo"
+                  >
+                    A few seconds ago
+                  </span>
+                </span>
+              </div>
+            </div>
+            <div
+              class="flex w-full flex-col gap-4 px-4 pt-3 pb-4 sm:grid sm:grid-cols-[200px_auto_130px] sm:pb-4"
+            >
+              <div
+                class="flex flex-col gap-2 w-full"
+                data-testid="TransactionRowMobile__label"
+              >
+                <span
+                  class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-sm font-semibold"
+                >
+                  Transfer
+                </span>
+                <div
+                  class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
+                >
+                  <div
+                    class="flex flex-col gap-2"
+                  >
+                    <div
+                      class="flex w-full flex-row gap-2"
+                      data-testid="TransactionRowAddressing__container_advanced_sender"
+                    >
+                      <div
+                        class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                        data-testid="TransactionRowAddressing__label"
+                      >
+                        From
+                      </div>
+                      <div
+                        class="flex min-w-36 grow items-center justify-between space-x-4"
+                      >
+                        <div
+                          class="grow"
+                          data-testid="TransactionRowAddressing__address-container"
+                        >
+                          <div
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          >
+                            <span
+                              class="font-semibold text-sm text-theme-text"
+                              data-testid="Address__alias"
+                            >
+                              <span
+                                class="no-ligatures transition-colors duration-200"
+                                data-testid="TruncateEnd"
+                              >
+                                Mainsail Wallet …
+                              </span>
+                            </span>
+                          </div>
+                        </div>
+                        <button
+                          class="ring-focus relative cursor-pointer focus:outline-hidden"
+                          data-ring-focus-margin="-m-1"
+                          data-testid="clipboard-icon__wrapper"
+                          type="button"
+                        >
+                          <div
+                            class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
+                          >
+                            <div
+                              style="height: 16px; width: 16px;"
+                            >
+                              <svg
+                                id="copy"
+                                style="height: 100%; width: 100%;"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <g
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                >
+                                  <path
+                                    d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                  />
+                                  <path
+                                    d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                  />
+                                </g>
+                              </svg>
+                            </div>
+                          </div>
+                        </button>
+                      </div>
+                    </div>
+                    <div
+                      class="flex w-full flex-row gap-2"
+                      data-testid="TransactionRowAddressing__container_advanced_recipient"
+                    >
+                      <div
+                        class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                        data-testid="TransactionRowAddressing__label"
+                      >
+                        To
+                      </div>
+                      <div
+                        class="flex min-w-36 grow items-center justify-between space-x-4"
+                      >
+                        <div
+                          class="grow"
+                          data-testid="TransactionRowAddressing__address-container"
+                        >
+                          <div
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          >
+                            <span
+                              class="font-semibold text-sm text-theme-text"
+                              data-testid="Address__alias"
+                            >
+                              <span
+                                class="no-ligatures transition-colors duration-200"
+                                data-testid="TruncateEnd"
+                              >
+                                Mainsail Wallet …
+                              </span>
+                            </span>
+                          </div>
+                        </div>
+                        <button
+                          class="ring-focus relative cursor-pointer focus:outline-hidden"
+                          data-ring-focus-margin="-m-1"
+                          data-testid="clipboard-icon__wrapper"
+                          type="button"
+                        >
+                          <div
+                            class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
+                          >
+                            <div
+                              style="height: 16px; width: 16px;"
+                            >
+                              <svg
+                                id="copy"
+                                style="height: 100%; width: 100%;"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <g
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                >
+                                  <path
+                                    d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                  />
+                                  <path
+                                    d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                  />
+                                </g>
+                              </svg>
+                            </div>
+                          </div>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex flex-col gap-2 w-full"
+              >
+                <span
+                  class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-sm font-semibold"
+                >
+                  Amount (ARK)
+                </span>
+                <div
+                  class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
+                >
+                  <span
+                    class="whitespace-nowrap text-sm font-semibold"
+                    data-testid="Amount"
+                  >
+                    121
+                  </span>
+                </div>
+              </div>
+              <div
+                class="flex flex-col gap-2 w-full"
+              >
+                <span
+                  class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-sm font-semibold"
+                >
+                  Fiat Value
+                </span>
+                <div
+                  class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
+                >
+                  <span
+                    class="whitespace-nowrap"
+                    data-testid="Amount"
+                  >
+                    $0.00
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
+`;
+
+exports[`TransactionRow > should render responsive 1`] = `
+<DocumentFragment>
+  <table>
+    <tbody>
+      <tr
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-dashed cursor-pointer table-row table-row-unselected group group border-b-0!"
+        data-testid="TableRow"
+      >
+        <td
+          data-testid="TableRow__mobile"
+        >
+          <div
+            class="border-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-background dim:border-theme-dim-700 dim:bg-theme-background w-full cursor-pointer overflow-hidden rounded border bg-white mb-3"
+          >
+            <div
+              class="bg-theme-secondary-100 dim:bg-theme-dim-950 flex h-10 w-full items-center justify-between px-4 dark:bg-black"
+            >
+              <div
+                class="max-w-32"
+              >
+                <div
+                  class="flex flex-col gap-1 font-semibold"
+                >
+                  <a
+                    class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
+                    data-ring-focus-margin="-m-1"
+                    data-testid="Link"
+                    href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+                    rel="noopener noreferrer"
+                  >
+                    <span
+                      class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
+                    >
+                      <span
+                        class="text-sm"
+                      >
+                        <span
+                          class="no-ligatures text-theme-primary-600 dim:text-theme-dim-navy-600 cursor-pointer"
+                          data-testid="TransactionRow__id"
+                        >
+                          ea63…c79b
+                        </span>
+                      </span>
+                    </span>
+                  </a>
+                </div>
+              </div>
+              <div
+                class="flex flex-row items-center"
+              >
+                <span
+                  class="text-theme-secondary-700 dim:text-theme-dim-200 text-sm font-semibold sm:block"
+                  data-testid="TransactionRow__timestamp"
+                >
+                  <span
+                    data-testid="TimeAgo"
+                  >
+                    A few seconds ago
+                  </span>
+                </span>
+              </div>
+            </div>
+            <div
+              class="flex w-full flex-col gap-4 px-4 pt-3 pb-4 sm:grid sm:grid-cols-[200px_auto_130px] sm:pb-4"
+            >
+              <div
+                class="flex flex-col gap-2 w-full"
+                data-testid="TransactionRowMobile__label"
+              >
+                <span
+                  class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-sm font-semibold"
+                >
+                  Transfer
+                </span>
+                <div
+                  class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
+                >
+                  <div
+                    class="flex flex-col gap-2"
+                  >
+                    <div
+                      class="flex w-full flex-row gap-2"
+                      data-testid="TransactionRowAddressing__container_advanced_sender"
+                    >
+                      <div
+                        class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                        data-testid="TransactionRowAddressing__label"
+                      >
+                        From
+                      </div>
+                      <div
+                        class="flex min-w-36 grow items-center justify-between space-x-4"
+                      >
+                        <div
+                          class="grow"
+                          data-testid="TransactionRowAddressing__address-container"
+                        >
+                          <div
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          >
+                            <span
+                              class="font-semibold text-sm text-theme-text"
+                              data-testid="Address__alias"
+                            >
+                              <span
+                                class="no-ligatures transition-colors duration-200"
+                                data-testid="TruncateEnd"
+                              >
+                                Mainsail Wallet …
+                              </span>
+                            </span>
+                          </div>
+                        </div>
+                        <button
+                          class="ring-focus relative cursor-pointer focus:outline-hidden"
+                          data-ring-focus-margin="-m-1"
+                          data-testid="clipboard-icon__wrapper"
+                          type="button"
+                        >
+                          <div
+                            class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
+                          >
+                            <div
+                              style="height: 16px; width: 16px;"
+                            >
+                              <svg
+                                id="copy"
+                                style="height: 100%; width: 100%;"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <g
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                >
+                                  <path
+                                    d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                  />
+                                  <path
+                                    d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                  />
+                                </g>
+                              </svg>
+                            </div>
+                          </div>
+                        </button>
+                      </div>
+                    </div>
+                    <div
+                      class="flex w-full flex-row gap-2"
+                      data-testid="TransactionRowAddressing__container_advanced_recipient"
+                    >
+                      <div
+                        class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                        data-testid="TransactionRowAddressing__label"
+                      >
+                        To
+                      </div>
+                      <div
+                        class="flex min-w-36 grow items-center justify-between space-x-4"
+                      >
+                        <div
+                          class="grow"
+                          data-testid="TransactionRowAddressing__address-container"
+                        >
+                          <div
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          >
+                            <span
+                              class="font-semibold text-sm text-theme-text"
+                              data-testid="Address__alias"
+                            >
+                              <span
+                                class="no-ligatures transition-colors duration-200"
+                                data-testid="TruncateEnd"
+                              >
+                                Mainsail Wallet …
+                              </span>
+                            </span>
+                          </div>
+                        </div>
+                        <button
+                          class="ring-focus relative cursor-pointer focus:outline-hidden"
+                          data-ring-focus-margin="-m-1"
+                          data-testid="clipboard-icon__wrapper"
+                          type="button"
+                        >
+                          <div
+                            class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
+                          >
+                            <div
+                              style="height: 16px; width: 16px;"
+                            >
+                              <svg
+                                id="copy"
+                                style="height: 100%; width: 100%;"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <g
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                >
+                                  <path
+                                    d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                  />
+                                  <path
+                                    d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                  />
+                                </g>
+                              </svg>
+                            </div>
+                          </div>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex flex-col gap-2 w-full"
+              >
+                <span
+                  class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-sm font-semibold"
+                >
+                  Amount (ARK)
+                </span>
+                <div
+                  class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
+                >
+                  <span
+                    class="whitespace-nowrap text-sm font-semibold"
+                    data-testid="Amount"
+                  >
+                    121
+                  </span>
+                </div>
+              </div>
+              <div
+                class="flex flex-col gap-2 w-full"
+              >
+                <span
+                  class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-sm font-semibold"
+                >
+                  Fiat Value
+                </span>
+                <div
+                  class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -737,17 +2685,17 @@ exports[`TransactionRow > should render responsive 2`] = `
   <table>
     <tbody>
       <tr
-        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group group border-b-0!"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-dashed cursor-pointer table-row table-row-unselected group group border-b-0!"
         data-testid="TableRow"
       >
         <td
           data-testid="TableRow__mobile"
         >
           <div
-            class="border-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-background w-full cursor-pointer overflow-hidden rounded border bg-white mb-3"
+            class="border-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-background dim:border-theme-dim-700 dim:bg-theme-background w-full cursor-pointer overflow-hidden rounded border bg-white mb-3"
           >
             <div
-              class="bg-theme-secondary-100 flex h-10 w-full items-center justify-between px-4 dark:bg-black"
+              class="bg-theme-secondary-100 dim:bg-theme-dim-950 flex h-10 w-full items-center justify-between px-4 dark:bg-black"
             >
               <div
                 class="max-w-32"
@@ -756,7 +2704,7 @@ exports[`TransactionRow > should render responsive 2`] = `
                   class="flex flex-col gap-1 font-semibold"
                 >
                   <a
-                    class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
+                    class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
@@ -769,7 +2717,7 @@ exports[`TransactionRow > should render responsive 2`] = `
                         class="text-sm"
                       >
                         <span
-                          class="no-ligatures text-theme-primary-600 cursor-pointer"
+                          class="no-ligatures text-theme-primary-600 dim:text-theme-dim-navy-600 cursor-pointer"
                           data-testid="TransactionRow__id"
                         >
                           ea63…c79b
@@ -783,7 +2731,7 @@ exports[`TransactionRow > should render responsive 2`] = `
                 class="flex flex-row items-center"
               >
                 <span
-                  class="text-theme-secondary-700 text-sm font-semibold sm:block"
+                  class="text-theme-secondary-700 dim:text-theme-dim-200 text-sm font-semibold sm:block"
                   data-testid="TransactionRow__timestamp"
                 >
                   <span
@@ -802,12 +2750,12 @@ exports[`TransactionRow > should render responsive 2`] = `
                 data-testid="TransactionRowMobile__label"
               >
                 <span
-                  class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
+                  class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-sm font-semibold"
                 >
                   Transfer
                 </span>
                 <div
-                  class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
+                  class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
                 >
                   <div
                     class="flex flex-col gap-2"
@@ -817,7 +2765,7 @@ exports[`TransactionRow > should render responsive 2`] = `
                       data-testid="TransactionRowAddressing__container_advanced_sender"
                     >
                       <div
-                        class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                        class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                         data-testid="TransactionRowAddressing__label"
                       >
                         From
@@ -852,7 +2800,7 @@ exports[`TransactionRow > should render responsive 2`] = `
                           type="button"
                         >
                           <div
-                            class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dark:hover:text-white"
+                            class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
                           >
                             <div
                               style="height: 16px; width: 16px;"
@@ -891,7 +2839,7 @@ exports[`TransactionRow > should render responsive 2`] = `
                       data-testid="TransactionRowAddressing__container_advanced_recipient"
                     >
                       <div
-                        class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                        class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                         data-testid="TransactionRowAddressing__label"
                       >
                         To
@@ -926,7 +2874,7 @@ exports[`TransactionRow > should render responsive 2`] = `
                           type="button"
                         >
                           <div
-                            class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dark:hover:text-white"
+                            class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
                           >
                             <div
                               style="height: 16px; width: 16px;"
@@ -967,12 +2915,12 @@ exports[`TransactionRow > should render responsive 2`] = `
                 class="flex flex-col gap-2 w-full"
               >
                 <span
-                  class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
+                  class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-sm font-semibold"
                 >
                   Amount (ARK)
                 </span>
                 <div
-                  class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
+                  class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
                 >
                   <span
                     class="whitespace-nowrap text-sm font-semibold"
@@ -986,12 +2934,12 @@ exports[`TransactionRow > should render responsive 2`] = `
                 class="flex flex-col gap-2 w-full"
               >
                 <span
-                  class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
+                  class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-sm font-semibold"
                 >
                   Fiat Value
                 </span>
                 <div
-                  class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
+                  class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -1015,12 +2963,12 @@ exports[`TransactionRow > should render with currency 1`] = `
   <table>
     <tbody>
       <tr
-        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-dashed cursor-pointer table-row table-row-unselected group relative"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start pr-0 lg:pr-3 xl:min-h-11 xl:max-h-11 xl:pt-2.5 lg:min-w-36 min-h-[66px] py-1 my-0 md-lg:min-h-14"
+            class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 items-start pr-0 lg:pr-3 xl:min-h-11 xl:max-h-11 xl:pt-2.5 lg:min-w-36 min-h-[66px] py-1 my-0 md-lg:min-h-14"
           >
             <div
               class="flex flex-col gap-1 font-semibold"
@@ -1029,7 +2977,7 @@ exports[`TransactionRow > should render with currency 1`] = `
                 class="flex flex-col gap-1 font-semibold"
               >
                 <a
-                  class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
+                  class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
                   data-ring-focus-margin="-m-1"
                   data-testid="Link"
                   href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
@@ -1042,7 +2990,7 @@ exports[`TransactionRow > should render with currency 1`] = `
                       class="text-sm"
                     >
                       <span
-                        class="no-ligatures text-theme-primary-600 cursor-pointer"
+                        class="no-ligatures text-theme-primary-600 dim:text-theme-dim-navy-600 cursor-pointer"
                         data-testid="TransactionRow__id"
                       >
                         ea63b…5c79b
@@ -1052,7 +3000,7 @@ exports[`TransactionRow > should render with currency 1`] = `
                 </a>
               </div>
               <span
-                class="text-theme-secondary-700 text-xs xl:hidden"
+                class="text-theme-secondary-700 dim:text-theme-dim-200 text-xs xl:hidden"
               >
                 <span
                   data-testid="TimeAgo"
@@ -1068,7 +3016,7 @@ exports[`TransactionRow > should render with currency 1`] = `
           data-testid="TransactionRow__timestamp"
         >
           <div
-            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 min-h-11 xl:max-h-11 xl:pt-3 xl:min-w-32"
+            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 min-h-11 xl:max-h-11 xl:pt-3 xl:min-w-32"
           >
             <span
               data-testid="TimeAgo"
@@ -1079,10 +3027,10 @@ exports[`TransactionRow > should render with currency 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start xl:min-h-11 xl:pt-3 min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2 lg:w-24 lg:min-w-24 xl:min-w-38 xl:w-auto"
+            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2 lg:w-24 lg:min-w-24 xl:min-w-38 xl:w-auto"
           >
             <div
-              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] max-w-40 truncate rounded px-1 py-[3px] whitespace-nowrap dark:border"
+              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-40 truncate rounded px-1 py-[3px] whitespace-nowrap dark:border"
               data-testid="TransactionRow__type"
             >
               Transfer
@@ -1093,7 +3041,7 @@ exports[`TransactionRow > should render with currency 1`] = `
           class=""
         >
           <div
-            class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-16 my-1 py-2"
+            class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-16 my-1 py-2"
           >
             <div
               class="flex grow flex-col gap-2"
@@ -1103,7 +3051,7 @@ exports[`TransactionRow > should render with currency 1`] = `
                 data-testid="TransactionRowAddressing__container_advanced_sender"
               >
                 <div
-                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                   data-testid="TransactionRowAddressing__label"
                 >
                   From
@@ -1138,7 +3086,7 @@ exports[`TransactionRow > should render with currency 1`] = `
                     type="button"
                   >
                     <div
-                      class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dark:hover:text-white"
+                      class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
                     >
                       <div
                         style="height: 16px; width: 16px;"
@@ -1180,7 +3128,7 @@ exports[`TransactionRow > should render with currency 1`] = `
                   data-testid="TransactionRowAddressing__container_advanced_recipient"
                 >
                   <div
-                    class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                    class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                     data-testid="TransactionRowAddressing__label"
                   >
                     To
@@ -1215,7 +3163,7 @@ exports[`TransactionRow > should render with currency 1`] = `
                       type="button"
                     >
                       <div
-                        class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dark:hover:text-white"
+                        class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
                       >
                         <div
                           style="height: 16px; width: 16px;"
@@ -1257,14 +3205,14 @@ exports[`TransactionRow > should render with currency 1`] = `
           class="md-lg:table-cell hidden"
         >
           <div
-            class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-16 my-1 py-2 lg:min-w-36"
+            class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-16 my-1 py-2 lg:min-w-36"
           >
             <div
               class="flex w-full flex-row gap-2"
               data-testid="TransactionRowAddressing__container_advanced_recipient"
             >
               <div
-                class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                 data-testid="TransactionRowAddressing__label"
               >
                 To
@@ -1299,7 +3247,7 @@ exports[`TransactionRow > should render with currency 1`] = `
                   type="button"
                 >
                   <div
-                    class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dark:hover:text-white"
+                    class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
                   >
                     <div
                       style="height: 16px; width: 16px;"
@@ -1339,14 +3287,14 @@ exports[`TransactionRow > should render with currency 1`] = `
           class="hidden"
         >
           <div
-            class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-4 items-start my-1 px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-14 pt-2 mt-1 lg:min-w-36"
+            class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 space-x-4 items-start my-1 px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-14 pt-2 mt-1 lg:min-w-36"
           >
             <div
               class="flex w-full flex-row gap-2"
               data-testid="TransactionRowAddressing__container"
             >
               <div
-                class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                 data-testid="TransactionRowAddressing__label"
               >
                 To
@@ -1381,7 +3329,7 @@ exports[`TransactionRow > should render with currency 1`] = `
                   type="button"
                 >
                   <div
-                    class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dark:hover:text-white"
+                    class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
                   >
                     <div
                       style="height: 16px; width: 16px;"
@@ -1418,10 +3366,10 @@ exports[`TransactionRow > should render with currency 1`] = `
           </div>
         </td>
         <td
-          class="hidden lg:table-cell"
+          class="hidden xl:table-cell"
         >
           <div
-            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3 lg:w-34 xl:w-auto"
+            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3 lg:w-34 xl:w-auto"
           >
             <div
               class="flex flex-col items-end gap-1"
@@ -1448,7 +3396,7 @@ exports[`TransactionRow > should render with currency 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-11 xl:my-0 xl:pt-3 min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2"
+            class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-11 xl:my-0 xl:pt-3 min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2"
           >
             <span
               class="whitespace-nowrap"

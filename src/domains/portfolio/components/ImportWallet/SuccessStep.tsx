@@ -67,7 +67,7 @@ export const SuccessStep = ({
 								data-testid="ImportWallet__edit-alias"
 								type="button"
 								variant="transparent"
-								className="text-theme-primary-600 dark:hover:bg-theme-secondary-800 hover:bg-theme-primary-100 space-x-0 rounded px-2 py-1 dark:text-white"
+								className="text-theme-primary-600 dark:hover:bg-theme-secondary-800 dim-hover:bg-theme-dim-700 hover:bg-theme-primary-100 dim:text-theme-dim-200 dim-hover:text-white space-x-0 rounded px-2 py-1 dark:text-white"
 								onClick={onClickEditAlias}
 							>
 								<Icon name="Pencil" size="md" />

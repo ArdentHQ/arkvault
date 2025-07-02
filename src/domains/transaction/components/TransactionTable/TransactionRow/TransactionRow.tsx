@@ -29,7 +29,7 @@ export const TransactionRow = memo(
 		...properties
 	}: TransactionRowProperties) => {
 		const { getLabel } = useTransactionTypes();
-		const { isXs, isSm, isLgAndAbove } = useBreakpoint();
+		const { isXs, isSm, isXl } = useBreakpoint();
 		const { t } = useTranslation();
 
 		if (isXs || isSm) {
@@ -62,7 +62,7 @@ export const TransactionRow = memo(
 				>
 					<div className="flex flex-col gap-1 font-semibold">
 						<TransactionRowId transaction={transaction} />
-						<span className="text-theme-secondary-700 text-xs xl:hidden">
+						<span className="text-theme-secondary-700 dim:text-theme-dim-200 text-xs xl:hidden">
 							{timeStamp ? (
 								<TimeAgo date={DateTime.fromUnix(timeStamp.toUNIX()).toISOString()} />
 							) : (
@@ -161,7 +161,7 @@ export const TransactionRow = memo(
 				</TableCell>
 
 				<TableCell
-					className="hidden lg:table-cell"
+					className="hidden xl:table-cell"
 					innerClassName={cn("justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3", {
 						"lg:w-34 xl:w-auto": !hideSender,
 					})}
@@ -191,7 +191,7 @@ export const TransactionRow = memo(
 						},
 					)}
 				>
-					{isLgAndAbove ? (
+					{isXl ? (
 						<Amount
 							value={transaction.convertedTotal()}
 							ticker={exchangeCurrency || ""}
@@ -206,7 +206,7 @@ export const TransactionRow = memo(
 								profile={profile}
 							/>
 							<span
-								className="text-theme-secondary-700 text-xs font-semibold lg:hidden"
+								className="text-theme-secondary-700 text-xs font-semibold xl:hidden"
 								data-testid="TransactionRow__exchange-currency"
 							>
 								<TransactionFiatAmount

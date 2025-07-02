@@ -7,10 +7,11 @@ export const translations = {
 				TITLE: "Address Naming",
 			},
 			VIEWING_MODE: {
-				DESCRIPTION: "Choose a light or dark viewing mode.",
+				DESCRIPTION: "Choose a light / dark / dim viewing mode.",
 				TITLE: "Viewing Mode",
 				VIEWING_MODES: {
 					DARK: "Dark",
+					DIM: "Dim",
 					LIGHT: "Light",
 				},
 			},
@@ -70,10 +71,11 @@ export const translations = {
 			},
 			TITLE: "Other",
 			VIEWING_MODE: {
-				DESCRIPTION: "Choose a light or dark viewing mode.",
+				DESCRIPTION: "Choose a light / dark / dim viewing mode.",
 				TITLE: "Viewing Mode",
 				VIEWING_MODES: {
 					DARK: "Dark",
+					DIM: "Dim",
 					LIGHT: "Light",
 				},
 			},

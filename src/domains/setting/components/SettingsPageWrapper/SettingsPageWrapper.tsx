@@ -1,14 +1,14 @@
-import { Contracts } from "@/app/lib/profiles";
-import React from "react";
-import { useNavigate } from "react-router-dom";
-
-import { useTranslation } from "react-i18next";
-import { Page, Section } from "@/app/components/Layout";
-import { SideBar } from "@/app/components/SideBar";
-import { useSettingsMenu } from "@/domains/setting/hooks/use-settings-menu";
-import { PageHeader } from "@/app/components/Header";
-import { ThemeIcon } from "@/app/components/Icon";
 import { NavigationBlocker, NavigationBlockingProvider } from "@/app/contexts/Navigation/NavigationBlocking";
+import { Page, Section } from "@/app/components/Layout";
+
+import { Contracts } from "@/app/lib/profiles";
+import { PageHeader } from "@/app/components/Header";
+import React from "react";
+import { SideBar } from "@/app/components/SideBar";
+import { ThemeIcon } from "@/app/components/Icon";
+import { useNavigate } from "react-router-dom";
+import { useSettingsMenu } from "@/domains/setting/hooks/use-settings-menu";
+import { useTranslation } from "react-i18next";
 
 type ActiveSettings = "general" | "export" | "password" | "appearance" | "servers" | "networks";
 
@@ -33,7 +33,14 @@ export const SettingsWrapper = ({
 					className="lg:-mb-4"
 					title={t("SETTINGS.GENERAL.TITLE")}
 					subtitle={t("SETTINGS.GENERAL.SUBTITLE")}
-					titleIcon={<ThemeIcon dimensions={[54, 55]} lightIcon="SettingsLight" darkIcon="SettingsDark" />}
+					titleIcon={
+						<ThemeIcon
+							dimensions={[54, 55]}
+							lightIcon="SettingsLight"
+							darkIcon="SettingsDark"
+							dimIcon="SettingsDim"
+						/>
+					}
 				/>
 
 				<Section>
@@ -49,7 +56,7 @@ export const SettingsWrapper = ({
 								/>
 							</div>
 
-							<div className="border-theme-secondary-300 dark:border-theme-dark-700 flex-1 sm:overflow-hidden sm:rounded-xl sm:border">
+							<div className="border-theme-secondary-300 dim:border-theme-dim-700 dark:border-theme-dark-700 flex-1 sm:overflow-hidden sm:rounded-xl sm:border">
 								{children}
 							</div>
 						</div>

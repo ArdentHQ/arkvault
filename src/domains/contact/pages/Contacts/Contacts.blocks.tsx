@@ -11,7 +11,14 @@ const ContactsHeader = () => {
 			<PageHeader
 				title={t("CONTACTS.CONTACTS_PAGE.TITLE")}
 				subtitle={t("CONTACTS.CONTACTS_PAGE.SUBTITLE")}
-				titleIcon={<ThemeIcon dimensions={[54, 55]} lightIcon="ContactsLight" darkIcon="ContactsDark" />}
+				titleIcon={
+					<ThemeIcon
+						dimensions={[54, 55]}
+						lightIcon="ContactsLight"
+						darkIcon="ContactsDark"
+						dimIcon="ContactsDim"
+					/>
+				}
 			/>
 		</div>
 	);

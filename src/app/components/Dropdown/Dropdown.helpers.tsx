@@ -14,7 +14,7 @@ const renderIcon = (option: DropdownOption) => {
 	const className = {};
 
 	if (!iconClassName) {
-		className["dark:text-theme-secondary-600"] = true;
+		className["dark:text-theme-secondary-600 dim:text-theme-dim-200"] = true;
 	} else if (typeof iconClassName === "function") {
 		className[iconClassName(option)] = true;
 	} else {
@@ -43,12 +43,12 @@ const renderOptionGroup = ({
 		<div key={key}>
 			{hasDivider && (
 				<div>
-					<div className="bg-theme-secondary-300 dark:bg-theme-dark-700 h-px w-full" />
+					<div className="bg-theme-secondary-300 dark:bg-theme-dark-700 dim:bg-theme-dim-700 h-px w-full" />
 				</div>
 			)}
 			<ul>
 				{title && (
-					<li className="bg-theme-primary-50 text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200 mx-1 my-1 block rounded-lg px-5 py-1 text-left text-xs font-semibold whitespace-nowrap">
+					<li className="bg-theme-primary-50 text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200 dim:bg-theme-dim-navy-900 dim:text-theme-dim-200 mx-1 my-1 block rounded-lg px-5 py-1 text-left text-xs font-semibold whitespace-nowrap">
 						{title}
 					</li>
 				)}

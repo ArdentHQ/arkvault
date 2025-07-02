@@ -1,42 +1,66 @@
 import { Contracts } from "@/app/lib/profiles";
 
 import { Theme } from "@/types";
-import { shouldUseDarkColors } from "@/utils/theme";
+import { shouldUseDarkColors, shouldUseDimColors } from "@/utils/theme";
 import { browser } from "@/utils/platform";
 import { useCallback, useEffect, useState } from "react";
 
-export type ViewingModeType = "light" | "dark";
+export type ViewingModeType = "light" | "dark" | "dim";
 
 const setTheme = (theme: Theme) => {
 	// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 	const htmlElement = document.querySelector("html")!;
 
 	if (theme === "system") {
-		const theme: ViewingModeType = window.matchMedia("(prefers-color-scheme: dark)")?.matches ? "dark" : "light";
+		const systemTheme: ViewingModeType = window.matchMedia("(prefers-color-scheme: dark)")?.matches
+			? "dark"
+			: "light";
 
-		htmlElement.classList.remove("dark");
-		htmlElement.classList.remove("light");
-		htmlElement.classList.add(theme);
+		htmlElement.classList.remove("dark", "light", "dim");
+		htmlElement.classList.add(systemTheme);
 
 		if (!browser.supportsOverflowOverlay()) {
-			document.documentElement.classList.remove("firefox-scrollbar-dark");
-			document.documentElement.classList.remove("firefox-scrollbar-light");
-			document.documentElement.classList.add(`firefox-scrollbar-${theme}`);
+			document.documentElement.classList.remove(
+				"firefox-scrollbar-dark",
+				"firefox-scrollbar-light",
+				"firefox-scrollbar-dim",
+			);
+			document.documentElement.classList.add(`firefox-scrollbar-${systemTheme}`);
 		}
 
-		htmlElement.dispatchEvent(new CustomEvent("themeChanged", { detail: theme }));
+		htmlElement.dispatchEvent(new CustomEvent("themeChanged", { detail: systemTheme }));
 
 		return;
 	}
 
-	htmlElement.classList.remove(theme === "dark" ? "light" : "dark");
-	htmlElement.classList.add(theme);
+	switch (theme) {
+		case "dim": {
+			htmlElement.classList.remove("light");
+			htmlElement.classList.add("dark", "dim");
+
+			break;
+		}
+		case "dark": {
+			htmlElement.classList.remove("light", "dim");
+			htmlElement.classList.add("dark");
+
+			break;
+		}
+		case "light": {
+			htmlElement.classList.remove("dark", "dim");
+			htmlElement.classList.add("light");
+
+			break;
+		}
+	}
 
 	htmlElement.dispatchEvent(new CustomEvent("themeChanged", { detail: theme }));
 
 	if (!browser.supportsOverflowOverlay()) {
 		document.documentElement.classList.remove(
-			theme === "dark" ? "firefox-scrollbar-light" : "firefox-scrollbar-dark",
+			"firefox-scrollbar-dark",
+			"firefox-scrollbar-light",
+			"firefox-scrollbar-dim",
 		);
 		document.documentElement.classList.add(`firefox-scrollbar-${theme}`);
 	}
@@ -48,20 +72,29 @@ export const useTheme: () => {
 	resetProfileTheme: (profile: Contracts.IProfile) => void;
 	setTheme: (theme: Theme) => void;
 	isDarkMode: boolean;
+	isDimMode: boolean;
 	resetTheme: () => void;
-	theme: "light" | "dark";
+	theme: ViewingModeType;
 	setProfileTheme: (profile: Contracts.IProfile) => void;
 } = () => {
-	const [theme, setCurrentTheme] = useState<ViewingModeType>(shouldUseDarkColors() ? "dark" : "light");
+	const getInitialTheme = (): ViewingModeType => {
+		if (shouldUseDimColors()) {
+			return "dim";
+		}
+		if (shouldUseDarkColors()) {
+			return "dark";
+		}
+		return "light";
+	};
+
+	const [theme, setCurrentTheme] = useState<ViewingModeType>(getInitialTheme());
 
 	const isDarkMode = theme === "dark";
+	const isDimMode = theme === "dim";
 
-	const onThemeChange = useCallback(
-		(data: CustomEvent) => {
-			setCurrentTheme(data.detail as ViewingModeType);
-		},
-		[setCurrentTheme],
-	);
+	const onThemeChange = useCallback((data: CustomEvent) => {
+		setCurrentTheme(data.detail as ViewingModeType);
+	}, []);
 
 	useEffect(() => {
 		const htmlElement = document.querySelector("html");
@@ -74,14 +107,9 @@ export const useTheme: () => {
 	}, [onThemeChange]);
 
 	const setProfileTheme = (profile: Contracts.IProfile) => {
-		const profileTheme = profile.appearance().get("theme");
-		const hasDifferentTheme = shouldUseDarkColors() !== (profileTheme === "dark");
+		const profileTheme = profile.appearance().get("theme") as Theme;
 
-		/* istanbul ignore else -- @preserve */
-		// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-		if (hasDifferentTheme || !document.querySelector("html")!.classList.contains(theme)) {
-			setTheme(profileTheme as Theme);
-		}
+		setTheme(profileTheme);
 	};
 
 	const resetProfileTheme = (profile: Contracts.IProfile) => {
@@ -90,5 +118,5 @@ export const useTheme: () => {
 		profile.settings().set(Contracts.ProfileSetting.Theme, shouldUseDarkColors() ? "dark" : "light");
 	};
 
-	return { isDarkMode, resetProfileTheme, resetTheme, setProfileTheme, setTheme, theme };
+	return { isDarkMode, isDimMode, resetProfileTheme, resetTheme, setProfileTheme, setTheme, theme };
 };

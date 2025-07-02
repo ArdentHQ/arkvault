@@ -1,5 +1,4 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
-const plugin = require("tailwindcss/plugin");
 
 module.exports = {
 	content: ["./dist/index.html", "./src/**/*.{js,ts,jsx,tsx}"],
@@ -164,6 +163,30 @@ module.exports = {
 			"theme-dark-navy-700": "var(--theme-color-dark-navy-700)",
 			"theme-dark-navy-800": "var(--theme-color-dark-navy-800)",
 			"theme-dark-navy-900": "var(--theme-color-dark-navy-900)",
+
+			"theme-dim-50": "var(--theme-color-dim-50)",
+			"theme-dim-100": "var(--theme-color-dim-100)",
+			"theme-dim-200": "var(--theme-color-dim-200)",
+			"theme-dim-300": "var(--theme-color-dim-300)",
+			"theme-dim-400": "var(--theme-color-dim-400)",
+			"theme-dim-500": "var(--theme-color-dim-500)",
+			"theme-dim-600": "var(--theme-color-dim-600)",
+			"theme-dim-700": "var(--theme-color-dim-700)",
+			"theme-dim-800": "var(--theme-color-dim-800)",
+			"theme-dim-900": "var(--theme-color-dim-900)",
+			"theme-dim-950": "var(--theme-color-dim-950)",
+
+			"theme-dim-navy-50": "var(--theme-color-dim-navy-50)",
+			"theme-dim-navy-100": "var(--theme-color-dim-navy-100)",
+			"theme-dim-navy-200": "var(--theme-color-dim-navy-200)",
+			"theme-dim-navy-300": "var(--theme-color-dim-navy-300)",
+			"theme-dim-navy-400": "var(--theme-color-dim-navy-400)",
+			"theme-dim-navy-500": "var(--theme-color-dim-navy-500)",
+			"theme-dim-navy-600": "var(--theme-color-dim-navy-600)",
+			"theme-dim-navy-700": "var(--theme-color-dim-navy-700)",
+			"theme-dim-navy-800": "var(--theme-color-dim-navy-800)",
+			"theme-dim-navy-900": "var(--theme-color-dim-navy-900)",
+			"theme-dim-navy-950": "var(--theme-color-dim-navy-950)",
 
 			"theme-danger-info-text": "var(--theme-danger-info-text)",
 			"theme-danger-info-background": "var(--theme-danger-info-background)",
@@ -360,5 +383,11 @@ module.exports = {
 			borderColor: ["navy", "green"],
 		},
 	},
-	plugins: [require("@tailwindcss/forms")],
+	plugins: [
+		require("@tailwindcss/forms"),
+		function ({ addVariant }) {
+			addVariant("dim", ":is(.dark.dim &)");
+			addVariant("dim-hover", ":is(.dark.dim &:hover)");
+		},
+	],
 };

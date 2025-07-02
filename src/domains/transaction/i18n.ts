@@ -356,7 +356,6 @@ export const translations = {
 	TRANSACTION_REMOVED: "Transaction successfully removed.",
 	TRANSACTION_SIGNED: "Transaction Signed",
 	TRANSACTION_TYPE: "Transaction Type",
-
 	TRANSACTION_TYPES: {
 		CONTRACT_DEPLOYMENT: "Contract Deployment",
 		HTLC_CLAIM: "Timelock Claim",
@@ -374,7 +373,6 @@ export const translations = {
 		VOTE_COMBINATION: "Vote Swap",
 	},
 	TRANSACTION_TYPE_NOT_AVAILABLE: "Transaction type not available for this address.",
-
 	TYPE: "Type",
 	UNVOTES: "Unvotes",
 	UNVOTES_COUNT: "Unvotes ({{count}})",
@@ -413,6 +411,7 @@ export const translations = {
 	VALIDATOR: "Validator",
 	VALIDATOR_NAME: "Validator Name",
 	VALIDATOR_PUBLIC_KEY: "Validator Public Key",
+	VALIDATOR_REGISTERED_WITHOUT_FEE: "This validator was registered without locking any funds.",
 	VIEW_RECIPIENTS_LIST: "View Full List",
 	VOTER: "Voter",
 	VOTES: "Votes",

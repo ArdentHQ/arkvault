@@ -59,7 +59,7 @@ const ModalContent = ({
 }: ModalContentProperties) => (
 	<div
 		className={twMerge(
-			"bg-theme-background relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl",
+			"bg-theme-background dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl",
 			"px-6 pt-4 md:p-8",
 			noButtons && "pb-24",
 			className,
@@ -67,7 +67,7 @@ const ModalContent = ({
 		data-testid="Modal__inner"
 	>
 		{!hideCloseButton && (
-			<div className="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white">
+			<div className="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white">
 				<Button
 					data-testid="Modal__close-button"
 					variant="transparent"
