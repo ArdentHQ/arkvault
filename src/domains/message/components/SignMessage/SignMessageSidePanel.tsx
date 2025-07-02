@@ -223,7 +223,7 @@ export const SignMessageSidePanel = ({
 			footer={
 				<SidePanelButtons>
 					{activeTab === Step.FormStep && (
-						<div className="grid grid-cols-2 sm:flex gap-3 w-full">
+						<div className="grid w-full grid-cols-2 gap-3 sm:flex">
 							<Button data-testid="SignMessage__back-button" variant="secondary" onClick={handleBack}>
 								{t("COMMON.BACK")}
 							</Button>
@@ -240,8 +240,13 @@ export const SignMessageSidePanel = ({
 					)}
 
 					{activeTab === Step.SuccessStep && (
-						<div className="grid grid-cols-2 sm:flex gap-3 w-full">
-							<Button data-testid="SignMessage__back-button" variant="secondary" className="text-sm sm:text-base" onClick={handleBack}>
+						<div className="grid w-full grid-cols-2 gap-3 sm:flex">
+							<Button
+								data-testid="SignMessage__back-button"
+								variant="secondary"
+								className="text-sm sm:text-base"
+								onClick={handleBack}
+							>
 								{t("COMMON.CLOSE")}
 							</Button>
 
