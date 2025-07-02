@@ -42,7 +42,7 @@ const VoteCombinationLabel = ({
 				<span className="inline-flex max-w-72">
 					<RecipientLabel type="vote" />
 					{votes.length > 1 && (
-						<span className="text-theme-secondary-500 dark:text-theme-secondary-700 ml-1 font-semibold">
+						<span className="text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-500 ml-1 font-semibold">
 							{votes.length}
 						</span>
 					)}
@@ -53,7 +53,7 @@ const VoteCombinationLabel = ({
 				<span>
 					<RecipientLabel type="unvote" />
 					{unvotes.length > 1 && (
-						<span className="text-theme-secondary-500 dark:text-theme-secondary-700 ml-1 font-semibold">
+						<span className="text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-500 ml-1 font-semibold">
 							{unvotes.length}
 						</span>
 					)}
@@ -118,7 +118,7 @@ export const BaseTransactionRowRecipientLabel = ({
 		return (
 			<span>
 				<RecipientLabel type="multiPayment" />
-				<span className="text-theme-secondary-500 dark:text-theme-secondary-700 ml-1 font-semibold">
+				<span className="text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-50 ml-1 font-semibold">
 					{transaction.recipients().length}
 				</span>
 			</span>

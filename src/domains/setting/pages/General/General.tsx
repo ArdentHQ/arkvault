@@ -106,8 +106,6 @@ export const GeneralSettings: React.FC = () => {
 	}, [register]);
 
 	const formattedName = name.trim();
-
-	const { isDarkMode } = useTheme();
 	const hasDefaultAvatar = !!avatar.endsWith("</svg>");
 
 	const { settings: settingsValidation } = useValidation();
@@ -301,19 +299,9 @@ export const GeneralSettings: React.FC = () => {
 						</span>
 
 						<div className="relative flex flex-row sm:space-x-3">
-							<div className="bg-theme-primary-50 dark:bg-theme-dark-950 hidden h-[92px] min-w-[226px] items-center justify-center rounded-lg px-4 sm:flex">
-								<Image
-									className="hidden lg:block"
-									name={isDarkMode ? "ProfileImageExampleDark" : "ProfileImageExampleLight"}
-								/>
-								<Image
-									className="lg:hidden"
-									name={
-										isDarkMode
-											? "ProfileImageExampleResponsiveDark"
-											: "ProfileImageExampleResponsiveLight"
-									}
-								/>
+							<div className="bg-theme-primary-50 dark:bg-theme-dark-950 dim:bg-theme-dim-950 hidden h-[92px] min-w-[226px] items-center justify-center rounded-lg px-4 sm:flex">
+								<Image className="hidden lg:block" name="ProfileImageExample" />
+								<Image className="lg:hidden" name="ProfileImageExampleResponsive" />
 							</div>
 
 							<SelectProfileImage

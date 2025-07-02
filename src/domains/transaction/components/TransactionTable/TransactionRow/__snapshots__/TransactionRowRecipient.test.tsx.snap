@@ -20,7 +20,7 @@ exports[`TransactionRowRecipient > should render 1`] = `
         </span>
       </span>
       <span
-        class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+        class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
         data-testid="Address__address"
       >
         0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6

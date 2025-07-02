@@ -39,7 +39,7 @@ export const WalletOverviewStep = ({ isGeneratingWallet }: { isGeneratingWallet:
 		<section data-testid="CreateWallet__WalletOverviewStep">
 			<Alert>{t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_STEP.WARNING")}</Alert>
 
-			<div className="border-theme-secondary-300 dark:border-theme-dark-700 mt-4 space-y-4 rounded-lg border p-4 pb-0 sm:space-y-6 sm:p-6 sm:pb-0">
+			<div className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 mt-4 space-y-4 rounded-lg border p-4 pb-0 sm:space-y-6 sm:p-6 sm:pb-0">
 				{isGeneratingWallet ? <MnemonicListSkeleton /> : <MnemonicList mnemonic={mnemonic} />}
 
 				<CopyOrDownload

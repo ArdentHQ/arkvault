@@ -3,7 +3,7 @@ import React from "react";
 
 import { images } from "@/app/assets/images";
 import { useActiveProfile } from "@/app/hooks";
-import { shouldUseDarkColors } from "@/utils/theme";
+import { shouldUseDarkColors, shouldUseDimColors } from "@/utils/theme";
 
 type ImageProperties = {
 	name: string;
@@ -26,7 +26,9 @@ export const Image = ({ name, domain = "common", loading = "lazy", ...properties
 	React.useLayoutEffect(() => {
 		let imageName: string = name;
 
-		if (shouldUseDarkColors()) {
+		if (shouldUseDimColors()) {
+			imageName = `${imageName}Dim`;
+		} else if (shouldUseDarkColors()) {
 			imageName = `${imageName}Dark`;
 		} else {
 			imageName = `${imageName}Light`;

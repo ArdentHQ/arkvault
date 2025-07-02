@@ -326,11 +326,18 @@ export const AddressesSidePanel = ({
 				onChange={(event: ChangeEvent<HTMLInputElement>) => setSearchQuery(event.target.value)}
 				noShadow
 				addons={{
-					start: { content: <Icon name="MagnifyingGlassAlt" className="text-theme-secondary-500" /> },
+					start: {
+						content: (
+							<Icon
+								name="MagnifyingGlassAlt"
+								className="text-theme-secondary-500 dim:text-theme-dim-500"
+							/>
+						),
+					},
 				}}
 			/>
 
-			<div className="border-theme-info-400 bg-theme-secondary-100 dark:bg-theme-dark-950 -mx-3 my-3 rounded-r-sm border-l-2 px-3 py-2.5 sm:mx-0 sm:border-none sm:bg-transparent sm:p-0 sm:dark:bg-transparent">
+			<div className="border-theme-info-400 bg-theme-secondary-100 dark:bg-theme-dark-950 dim:border-theme-dim-navy-400 dim:bg-theme-dim-950 dim:sm:bg-transparent -mx-3 my-3 rounded-r-sm border-l-2 px-3 py-2.5 sm:mx-0 sm:border-none sm:bg-transparent sm:p-0 sm:dark:bg-transparent">
 				<div
 					className={cn("flex sm:px-4", {
 						"justify-between": activeMode === AddressViewSelection.multiple,
@@ -343,8 +350,9 @@ export const AddressesSidePanel = ({
 							"flex cursor-pointer items-center space-x-3 text-sm leading-[17px] sm:text-base sm:leading-5",
 							{
 								hidden: activeMode === AddressViewSelection.single,
-								"text-theme-secondary-500 dark:text-theme-dark-500": isSelectAllDisabled,
-								"text-theme-secondary-700 hover:text-theme-primary-600 dark:text-theme-dark-200 dark:hover:text-theme-primary-500":
+								"text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500":
+									isSelectAllDisabled,
+								"text-theme-secondary-700 hover:text-theme-primary-600 dark:text-theme-dark-200 dark:hover:text-theme-primary-500 dim:text-theme-dim-200 dim-hover:text-theme-dim-50":
 									!isSelectAllDisabled,
 							},
 						)}
@@ -383,7 +391,7 @@ export const AddressesSidePanel = ({
 										size="xs"
 										variant="transparent"
 										data-testid="HideManageHint"
-										className="bg-theme-primary-500 w-full px-4 py-1.5 sm:w-auto"
+										className="bg-theme-primary-500 dim:bg-theme-dim-navy-600 w-full px-4 py-1.5 sm:w-auto"
 										onClick={() => {
 											persistManageHint(true);
 											setShowManageHint(false);
@@ -401,9 +409,9 @@ export const AddressesSidePanel = ({
 								variant="primary-transparent"
 								onClick={() => setDeleteMode(true)}
 								className={cn(
-									"text-theme-primary-600 dark:text-theme-primary-400 p-2 py-[3px] text-sm leading-[18px] sm:text-base sm:leading-5",
+									"text-theme-primary-600 dark:text-theme-primary-400 dim:text-theme-dim-navy-600 p-2 py-[3px] text-sm leading-[18px] sm:text-base sm:leading-5",
 									{
-										"ring-theme-primary-400 ring-offset-theme-secondary-100 dark:ring-theme-primary-800 dark:ring-offset-theme-dark-950 ring-3 ring-offset-4 sm:ring-offset-transparent dark:sm:ring-offset-transparent":
+										"ring-theme-primary-400 ring-offset-theme-secondary-100 dark:ring-theme-primary-800 dark:ring-offset-theme-dark-950 dim:ring-offset-theme-dim-navy-800 ring-3 ring-offset-4 sm:ring-offset-transparent dark:sm:ring-offset-transparent":
 											showManageHint,
 									},
 								)}
@@ -421,7 +429,7 @@ export const AddressesSidePanel = ({
 								size="icon"
 								variant="primary-transparent"
 								onClick={resetDeleteState}
-								className="text-theme-primary-600 dark:text-theme-primary-400 p-2 py-[3px] text-sm leading-[18px] sm:text-base sm:leading-5"
+								className="text-theme-primary-600 dark:text-theme-primary-400 dim:text-theme-dim-navy-600 p-2 py-[3px] text-sm leading-[18px] sm:text-base sm:leading-5"
 							>
 								<Icon name="Back" dimensions={[16, 16]} />
 								<span>{t("COMMON.BACK")}</span>
@@ -432,14 +440,18 @@ export const AddressesSidePanel = ({
 			</div>
 
 			{isDeleteMode && (
-				<div className="bg-theme-info-50 dark:bg-theme-dark-800 my-2 flex flex-col overflow-hidden rounded sm:my-3 sm:flex-row sm:items-center sm:rounded-xl">
-					<div className="bg-theme-info-100 dark:bg-theme-info-600 flex w-full items-center space-x-2 px-4 py-2 sm:w-auto sm:space-x-0 sm:py-4.5">
-						<Icon name="CircleInfo" className="text-theme-info-700 dark:text-white" dimensions={[16, 16]} />
-						<span className="text-theme-info-700 text-sm leading-[17px] font-semibold sm:hidden dark:text-white">
+				<div className="bg-theme-info-50 dark:bg-theme-dark-800 dim:bg-theme-dim-800 my-2 flex flex-col overflow-hidden rounded sm:my-3 sm:flex-row sm:items-center sm:rounded-xl">
+					<div className="bg-theme-info-100 dark:bg-theme-info-600 dim:bg-theme-dim-navy-600 flex w-full items-center space-x-2 px-4 py-2 sm:w-auto sm:space-x-0 sm:py-4.5">
+						<Icon
+							name="CircleInfo"
+							className="text-theme-info-700 dim:text-white dark:text-white"
+							dimensions={[16, 16]}
+						/>
+						<span className="text-theme-info-700 dim:text-white text-sm leading-[17px] font-semibold sm:hidden dark:text-white">
 							{t("COMMON.INFORMATION")}
 						</span>
 					</div>
-					<div className="text-theme-secondary-900 dark:text-theme-dark-50 p-4 text-sm">
+					<div className="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 p-4 text-sm">
 						{t("WALLETS.ADDRESSES_SIDE_PANEL.DELETE_INFO")}
 					</div>
 				</div>

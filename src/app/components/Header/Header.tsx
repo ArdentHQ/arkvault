@@ -82,7 +82,7 @@ export const PageHeader = ({
 	}
 
 	return (
-		<section className="bg-theme-secondary-100 flex w-full items-center justify-between px-8 py-6 md:h-13 dark:bg-black">
+		<section className="bg-theme-secondary-100 dim:bg-theme-dim-950 flex w-full items-center justify-between px-8 py-6 md:h-13 dark:bg-black">
 			<div className="flex flex-col gap-2">
 				<h1 className="mb-0 text-lg font-semibold">{title}</h1>
 				{subtitle && (

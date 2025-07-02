@@ -22,7 +22,7 @@ export const NotificationsDropdown = ({ profile }: { profile: Contracts.IProfile
 	return (
 		<div>
 			<Dropdown
-				wrapperClass="mt-2"
+				wrapperClass="mt-2 dim:bg-theme-dim-950"
 				toggleContent={
 					<NavigationButtonWrapper className="group">
 						<Tooltip content={t("COMMON.NOTIFICATIONS.TITLE")}>
@@ -30,7 +30,7 @@ export const NotificationsDropdown = ({ profile }: { profile: Contracts.IProfile
 								variant="transparent"
 								size="icon"
 								data-testid="NavigationBar__buttons--notifications"
-								className="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+								className="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50"
 							>
 								<Icon name="Bell" size="lg" className="m-0 p-1" />
 								{hasUnread && <Dot />}

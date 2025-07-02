@@ -15,12 +15,13 @@ export const RadioButton = ({
 		{...props}
 		type="radio"
 		className={twMerge(
-			"border-theme-secondary-300 h-4 w-4 cursor-pointer transition duration-150 ease-in-out focus:ring-offset-0",
+			"border-theme-secondary-300 dim:border-theme-dim-500 h-4 w-4 cursor-pointer transition duration-150 ease-in-out focus:ring-offset-0",
 			"dark:not-checked:border-theme-dark-500 dark:not-checked:bg-theme-dark-900 dark:checked:border-none",
 			cn({
 				"text-theme-danger-400": color === "danger",
 				"text-theme-hint-500": color === "hint",
-				"text-theme-primary-600": color === "info",
+				"text-theme-primary-600 dim:checked:text-theme-dim-navy-600 dim:not-checked:bg-transparent":
+					color === "info",
 				"text-theme-success-600": color === "success",
 				"text-theme-warning-600": color === "warning",
 			}),

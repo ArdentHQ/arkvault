@@ -34,7 +34,7 @@ export const TransactionRowId = ({ transaction }: { transaction: DTO.ExtendedCon
 				<Link to={transaction.explorerLink()} showExternalIcon={false} isExternal>
 					<span className="text-sm">
 						<TruncateMiddle
-							className="text-theme-primary-600 cursor-pointer"
+							className="text-theme-primary-600 dim:text-theme-dim-navy-600 cursor-pointer"
 							text={transaction.hash()}
 							maxChars={isLgAndAbove ? 14 : 12}
 							data-testid="TransactionRow__id"
@@ -45,9 +45,9 @@ export const TransactionRowId = ({ transaction }: { transaction: DTO.ExtendedCon
 			{!transaction.isSuccess() && (
 				<Link to={transaction.explorerLink()} showExternalIcon={false} isExternal>
 					<Tooltip content={transaction.hash()}>
-						<span className="bg-theme-danger-50 dark:border-theme-danger-info-border flex h-[21px] items-center space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent">
+						<span className="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent">
 							<TruncateMiddle
-								className="text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 cursor-pointer border-b border-b-transparent leading-[17px]"
+								className="text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
 								text={transaction.hash()}
 								maxChars={maxCharacters()}
 								data-testid="TransactionRow__id"
@@ -55,7 +55,7 @@ export const TransactionRowId = ({ transaction }: { transaction: DTO.ExtendedCon
 
 							<Icon
 								name="CircleMinus"
-								className="text-theme-danger-700 dark:text-theme-danger-info-border"
+								className="text-theme-danger-700 dark:text-theme-danger-info-border dim:text-theme-danger-info-border"
 								width={12}
 								height={12}
 							/>

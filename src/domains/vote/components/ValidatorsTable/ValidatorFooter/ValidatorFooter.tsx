@@ -100,12 +100,12 @@ export const ValidatorFooter = ({
 
 	return (
 		<div
-			className="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0"
+			className="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 dim:border-theme-dim-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0"
 			data-testid="ValidatorTable__footer"
 		>
 			<div className="mx-auto px-8 md:px-10 lg:container">
 				<div className="flex flex-col font-semibold sm:flex-row sm:space-x-3">
-					<div className="divide-theme-secondary-300 dark:divide-theme-secondary-800 hidden grow overflow-x-auto sm:mr-auto sm:divide-x md:flex">
+					<div className="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 hidden grow overflow-x-auto sm:mr-auto sm:divide-x md:flex">
 						<div className={cn("flex grow overflow-x-auto", { "pr-5": requiresStakeAmount })}>
 							<div
 								className={cn("flex h-full flex-1 grow flex-row items-center overflow-x-auto", {
@@ -121,7 +121,7 @@ export const ValidatorFooter = ({
 										<Address
 											address={selectedWallet.address()}
 											walletName={selectedWallet.alias()}
-											addressClass="text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-700 dark:text-theme-dark-200"
+											addressClass="text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200"
 											walletNameClass="text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-text"
 										/>
 									</div>
@@ -154,7 +154,7 @@ export const ValidatorFooter = ({
 								value={selectedVotes.length}
 							/>
 
-							<span className="bg-theme-secondary-300 dark:bg-theme-secondary-800 block h-5 w-px" />
+							<span className="bg-theme-secondary-300 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 block h-5 w-px" />
 
 							<FooterContent
 								disabled={selectedUnvotes.length === 0}
@@ -162,7 +162,7 @@ export const ValidatorFooter = ({
 								value={selectedUnvotes.length}
 							/>
 
-							<span className="bg-theme-secondary-300 dark:bg-theme-secondary-800 block h-5 w-px md:hidden lg:block" />
+							<span className="bg-theme-secondary-300 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 block h-5 w-px md:hidden lg:block" />
 
 							<FooterContent
 								className="flex md:hidden lg:flex"
@@ -172,7 +172,7 @@ export const ValidatorFooter = ({
 						</div>
 
 						<div className="w-full pt-3 sm:flex sm:w-auto sm:items-center sm:pt-0">
-							<span className="bg-theme-secondary-300 dark:bg-theme-secondary-800 hidden h-5 w-px md:block" />
+							<span className="bg-theme-secondary-300 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 hidden h-5 w-px md:block" />
 
 							<Tooltip content={tooltipContent} disabled={!isContinueDisabled}>
 								<span data-testid="ValidatorTable__continue--wrapper" className="sm:ml-auto sm:pl-6">

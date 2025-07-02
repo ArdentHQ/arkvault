@@ -1,9 +1,10 @@
+/* eslint-disable no-empty-pattern */
+/* eslint-disable testing-library/no-node-access */
 import { ConfigurationProvider, EnvironmentProvider, LedgerProvider, NavigationProvider } from "@/app/contexts";
 import { Contracts, Environment } from "@/app/lib/profiles";
 import { FormProvider, UseFormMethods, useForm } from "react-hook-form";
 import { RenderResult, render, renderHook } from "@testing-library/react";
 
-/* eslint-disable testing-library/no-node-access */
 import { createMemoryRouter, RouterProvider, useLocation } from "react-router-dom";
 import { BigNumber } from "@/app/lib/helpers";
 import { DTO } from "@/app/lib/profiles";
@@ -23,6 +24,8 @@ import { connectedTransport as ledgerTransportFactory } from "@/app/contexts/Led
 import mainsailTransactionFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/transfer.json";
 import transactionFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/transfer.json";
 import { useProfileSynchronizer } from "@/app/hooks/use-profile-synchronizer";
+import { test as baseTest } from "vitest";
+import { bootEnvironmentWithProfileFixtures } from "./test-helpers";
 
 export {
 	mockNanoSTransport,
@@ -490,3 +493,28 @@ export const t = (key: string, options?: any) => {
 
 	return t(key, options);
 };
+
+export const test = baseTest.extend<{
+	env: Environment;
+	profile: Contracts.IProfile;
+	passwordProtectedProfile: Contracts.IProfile;
+}>({
+	env: [
+		async ({}, use) => {
+			const environment = environmentWithMocks();
+			await bootEnvironmentWithProfileFixtures({ env: environment });
+			await use(environment);
+		},
+		{ scope: "worker" },
+	],
+	passwordProtectedProfile: async ({ env }, vitestUse) => {
+		const profileInstance = env.profiles().findById(getDefaultProfileId());
+		await env.profiles().restore(profileInstance);
+		await vitestUse(profileInstance);
+	},
+	profile: async ({ env }, vitestUse) => {
+		const profileInstance = env.profiles().findById(getDefaultProfileId());
+		await env.profiles().restore(profileInstance);
+		await vitestUse(profileInstance);
+	},
+});

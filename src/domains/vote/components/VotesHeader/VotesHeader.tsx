@@ -28,7 +28,7 @@ export const VotesHeader = ({ isSelectValidatorStep }: VotesHeaderProperties) =>
 			subtitle={isSelectValidatorStep ? undefined : t("VOTE.VOTES_PAGE.SUBTITLE")}
 			titleIcon={
 				isSelectValidatorStep ? undefined : (
-					<ThemeIcon dimensions={[54, 55]} lightIcon="VotesLight" darkIcon="VotesDark" />
+					<ThemeIcon dimensions={[54, 55]} lightIcon="VotesLight" darkIcon="VotesDark" dimIcon="VotesDim" />
 				)
 			}
 		/>

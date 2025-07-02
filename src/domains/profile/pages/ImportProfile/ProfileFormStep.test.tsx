@@ -6,7 +6,7 @@ import * as browserAccess from "browser-fs-access";
 
 import { EnvironmentProvider } from "@/app/contexts";
 import { ImportProfileForm } from "@/domains/profile/pages/ImportProfile/ProfileFormStep";
-import { env, render, screen, waitFor } from "@/utils/testing-library";
+import { env, render, renderResponsive, screen, waitFor } from "@/utils/testing-library";
 import { renderHook } from "@testing-library/react";
 import { useTranslation } from "react-i18next";
 let profile: Contracts.IProfile;
@@ -106,8 +106,8 @@ describe("Import Profile - Profile Form Step", () => {
 
 		await userEvent.click(screen.getByRole("checkbox"));
 
-		await userEvent.click(screen.getByTestId("SelectDropdown__caret"));
-		await userEvent.click(screen.getByTestId("SelectDropdown__option--0"));
+		await userEvent.click(screen.getAllByTestId("SelectDropdown__caret")[0]);
+		await userEvent.click(screen.getAllByTestId("SelectDropdown__option--0")[0]);
 
 		await waitFor(() => {
 			expect(submitButton()).toBeEnabled();
@@ -158,8 +158,8 @@ describe("Import Profile - Profile Form Step", () => {
 		await user.clear(screen.getAllByTestId("Input")[0]);
 		await user.paste("asdasdas");
 
-		await userEvent.click(screen.getByTestId("SelectDropdown__caret"));
-		await userEvent.click(screen.getByTestId("SelectDropdown__option--0"));
+		await userEvent.click(screen.getAllByTestId("SelectDropdown__caret")[0]);
+		await userEvent.click(screen.getAllByTestId("SelectDropdown__option--0")[0]);
 		await userEvent.click(screen.getByRole("checkbox"));
 
 		await user.clear(passwordInput());
@@ -188,5 +188,24 @@ describe("Import Profile - Profile Form Step", () => {
 
 		expect(screen.getByTestId("Input__error")).toBeVisible();
 		expect(screen.getByTestId("Input__error").dataset.errortext).toBe(t("COMMON.VALIDATION.PASSWORD_MISMATCH"));
+	});
+
+	it("should render viewing mode select in mobile", async () => {
+		const emptyProfile = await env.profiles().create("test5");
+		renderResponsive(
+			<EnvironmentProvider env={env}>
+				<ImportProfileForm
+					env={env}
+					profile={emptyProfile}
+					onSubmit={vi.fn()}
+					shouldValidate={false}
+					onBack={vi.fn()}
+				/>
+			</EnvironmentProvider>,
+			"xs",
+		);
+
+		await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__caret")[1]).toBeInTheDocument());
+		expect(screen.queryByTestId("ButtonGroup__option--0")).not.toBeInTheDocument();
 	});
 });

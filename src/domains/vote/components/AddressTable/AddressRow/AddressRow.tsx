@@ -170,12 +170,12 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 			return <span>#{wallet.rank()}</span>;
 		}
 
-		return <span className="text-theme-secondary-400">{t("COMMON.NOT_AVAILABLE")}</span>;
+		return <span className="text-theme-secondary-400 dim:text-theme-dim-500">{t("COMMON.NOT_AVAILABLE")}</span>;
 	};
 
 	const renderWalletVotes = () => {
 		if (!hasVotes) {
-			return <span className="text-theme-secondary-400">{t("COMMON.NOT_AVAILABLE")}</span>;
+			return <span className="text-theme-secondary-400 dim:text-theme-dim-500">{t("COMMON.NOT_AVAILABLE")}</span>;
 		}
 
 		// @TODO handle multiple validators
@@ -185,7 +185,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 				<Link
 					to={votes[0].wallet?.explorerLink() as string}
 					isExternal
-					className="[&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500 w-24 truncate md:w-auto"
+					className="[&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500 dim:[&_svg]:text-theme-dim-500 w-24 truncate md:w-auto"
 				>
 					{votes[0].wallet?.username() ?? (
 						<TruncateMiddle text={votes[0].wallet?.address() ?? ""} maxChars={14} />
@@ -210,7 +210,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 						walletName={alias}
 						showCopyButton
 						addressClass="text-sm"
-						walletNameClass="text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight text-sm"
+						walletNameClass="text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight text-sm dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700"
 					/>
 				</div>
 			</TableCell>
@@ -222,7 +222,9 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 				<Amount value={wallet.balance()} ticker={wallet.network().ticker()} />
 			</TableCell>
 
-			<TableCell innerClassName="text-sm font-semibold space-x-3">{renderWalletVotes()}</TableCell>
+			<TableCell innerClassName="text-sm font-semibold space-x-3 flex justify-end">
+				{renderWalletVotes()}
+			</TableCell>
 
 			{maxVotes === 1 ? (
 				<>
@@ -253,7 +255,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 							size="icon"
 							disabled={isButtonDisabled}
 							variant="transparent"
-							className="text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 -mr-3 text-sm hover:underline"
+							className="text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 dim:disabled:text-theme-dim-500 dim-hover:disabled:text-theme-dim-500 -mr-3 text-sm hover:underline"
 							onClick={() => onSelect?.(wallet.address())}
 							data-testid={`AddressRow__select-${index}`}
 						>
