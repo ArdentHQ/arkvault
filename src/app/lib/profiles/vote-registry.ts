@@ -20,10 +20,12 @@ export class VoteRegistry implements IVoteRegistry {
 			);
 		}
 
-		return votes.map(({ amount, id }) => ({
-			amount,
-			wallet: this.#wallet.validators().mapByIdentifier(this.#wallet, id),
-		})).filter(({ wallet }) => !!wallet);
+		return votes
+			.map(({ amount, id }) => ({
+				amount,
+				wallet: this.#wallet.validators().mapByIdentifier(this.#wallet, id),
+			}))
+			.filter(({ wallet }) => !!wallet);
 	}
 
 	/** {@inheritDoc IVoteRegistry.available} */
