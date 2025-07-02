@@ -3,7 +3,7 @@
 exports[`VotesHeader > should render a different title if on select validator step 1`] = `
 <DocumentFragment>
   <section
-    class="bg-theme-secondary-100 flex w-full items-center justify-between px-8 py-6 md:h-13 dark:bg-black"
+    class="bg-theme-secondary-100 dim:bg-theme-dim-950 flex w-full items-center justify-between px-8 py-6 md:h-13 dark:bg-black"
   >
     <div
       class="flex flex-col gap-2"
@@ -118,7 +118,7 @@ exports[`VotesHeader > should render responsive (md) 1`] = `
 exports[`VotesHeader > should render responsive (xs) 1`] = `
 <DocumentFragment>
   <section
-    class="bg-theme-secondary-100 flex w-full items-center justify-between px-8 py-6 md:h-13 dark:bg-black"
+    class="bg-theme-secondary-100 dim:bg-theme-dim-950 flex w-full items-center justify-between px-8 py-6 md:h-13 dark:bg-black"
   >
     <div
       class="flex flex-col gap-2"

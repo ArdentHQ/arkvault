@@ -112,19 +112,19 @@ export const useValidatorRow = ({
 
 	const rowColor = useMemo(() => {
 		if (status === ValidatorStatusEnum.Changed) {
-			return "bg-theme-warning-50 dark:bg-theme-background dark:border-theme-warning-600";
+			return "bg-theme-warning-50 dark:bg-theme-background dark:border-theme-warning-600 dim:border-theme-warning-600";
 		}
 
 		if (status === ValidatorStatusEnum.Selected) {
-			return "bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600";
+			return "bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600 dim:border-theme-success-600";
 		}
 
 		if (status === ValidatorStatusEnum.Unvoted) {
-			return "bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400";
+			return "bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 dim:border-theme-danger-400";
 		}
 
 		if (status === ValidatorStatusEnum.Voted) {
-			return "bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600";
+			return "bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 dim:border-theme-dim-navy-600";
 		}
 	}, [status]);
 
@@ -212,6 +212,7 @@ export const useValidatorRow = ({
 						dark:bg-theme-secondary-800 dark:bg-transparent
 						text-black
 						dark:text-theme-secondary-800 dark:text-theme-black
+						dim:text-theme-dim-500
 					`}
 				>
 					{t("COMMON.SELECT")}
@@ -228,6 +229,7 @@ export const useValidatorRow = ({
 					dark:bg-theme-secondary-800 dark:bg-transparent
 					text-theme-primary-600 hover:text-theme-primary-700
 					dark:text-theme-secondary-200 dark:text-theme-primary-600 dark:hover:text-theme-primary-700
+					dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700
 				`}
 				onClick={() => toggleVotesSelected?.(validator.address())}
 			>
@@ -263,7 +265,7 @@ export const ValidatorStatus = ({ isActive, className }: { isActive: boolean; cl
 			<div
 				data-testid={testId}
 				className={twMerge(
-					"bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 group-hover:bg-theme-secondary-300 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent dark:group-hover:bg-transparent",
+					"bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 group-hover:bg-theme-secondary-300 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent dark:group-hover:bg-transparent",
 					className,
 				)}
 			>
@@ -310,7 +312,7 @@ export const ValidatorRow = ({
 	return (
 		<TableRow
 			key={validator.address()}
-			className="last:border-theme-secondary-200 dark:last:border-theme-secondary-800 relative last:border-b-4! last:border-solid"
+			className="last:border-theme-secondary-200 dark:last:border-theme-secondary-800 dim:last:border-theme-dim-700 relative last:border-b-4! last:border-solid"
 		>
 			<TableCell
 				variant="start"
@@ -358,7 +360,7 @@ export const ValidatorRow = ({
 					to={validator.explorerLink()}
 					tooltip={t("COMMON.OPEN_IN_EXPLORER")}
 					isExternal
-					className="[&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 w-24 md:w-auto"
+					className="[&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 dim:[&_svg]:text-theme-dim-500 w-24 md:w-auto"
 				>
 					<span>{t("COMMON.VIEW")}</span>
 				</Link>

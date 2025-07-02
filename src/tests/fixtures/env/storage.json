@@ -73,19 +73,7 @@
 					]
 				}
 			},
-			"notifications": {
-				"7e72ea8c-a190-4c88-8c10-efae894b589a": {
-					"id": "7e72ea8c-a190-4c88-8c10-efae894b589a",
-					"icon": "ArkLogo",
-					"name": "ARK Vault",
-					"type": "release",
-					"body": "- update v2.5.6",
-					"action": "update",
-					"meta": {
-						"version": "2.5.6"
-					}
-				}
-			},
+			"notifications": {},
 			"exchangeTransactions": {},
 			"peers": {},
 			"plugins": {},

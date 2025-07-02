@@ -25,7 +25,7 @@ export const SigningMessageInfo = ({
 						walletName={wallet.alias()}
 						showCopyButton
 						walletNameClass="text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
-						addressClass="text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4"
+						addressClass="text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-700 text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4"
 						wrapperClass="justify-end sm:justify-start"
 					/>
 				</div>
@@ -52,12 +52,12 @@ export const SuccessStep = ({
 			<div className="space-y-4">
 				<SigningMessageInfo message={signedMessage.message} wallet={wallet} />
 
-				<div className="border-theme-secondary-300 dark:border-theme-dark-700 border-t px-3 py-6 sm:border-t-0 sm:p-0">
+				<div className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 border-t px-3 py-6 sm:border-t-0 sm:p-0">
 					<FormField name="json-signature">
 						<DetailLabelText>{t("MESSAGE.PAGE_SIGN_MESSAGE.FORM_STEP.SIGNATURE_JSON")}</DetailLabelText>
 						<pre
 							data-testid="SignMessage__signature-json"
-							className="border-theme-secondary-300 dark:border-theme-dark-500 dark:text-theme-dark-50 text-theme-secondary-900 mt-2 rounded-sm border p-4 break-all whitespace-normal select-text"
+							className="border-theme-secondary-300 dark:border-theme-dark-500 dim:border-theme-dim-700 dark:text-theme-dark-50 dim:text-theme-dim-50 text-theme-secondary-900 mt-2 rounded-sm border p-4 break-all whitespace-normal select-text"
 						>
 							{JSON.stringify(signedMessage, null, 2)}
 						</pre>

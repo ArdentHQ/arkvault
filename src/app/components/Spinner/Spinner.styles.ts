@@ -4,25 +4,25 @@ const baseStyle = `animate-spin rounded-full border-[5px] shrink-0`;
 
 const getColor = (color: Color | "warning-alt", theme?: Theme) => {
 	const baseColors: Record<Color | "warning-alt", string> = {
-		danger: `border-l-theme-danger-400 dark:border-l-theme-danger-400`,
-		hint: `border-l-theme-hint-500 dark:border-l-theme-hint-500`,
-		info: `border-l-theme-primary-600 dark:border-l-theme-primary-600`,
-		success: `border-l-theme-success-600 dark:border-l-theme-success-600`,
-		warning: `border-l-theme-warning-600 dark:border-l-theme-warning-600`,
-		"warning-alt": `border-l-theme-warning-900 dark:border-l-theme-warning-600`,
+		danger: `border-l-theme-danger-400 dark:border-l-theme-danger-400 dim:border-l-theme-danger-400`,
+		hint: `border-l-theme-hint-500 dark:border-l-theme-hint-500 dim:border-l-theme-dim-navy-600`,
+		info: `border-l-theme-primary-600 dark:border-l-theme-primary-600 dim:border-l-theme-dim-navy-600`,
+		success: `border-l-theme-success-600 dark:border-l-theme-success-600 dim:border-l-theme-success-600`,
+		warning: `border-l-theme-warning-600 dark:border-l-theme-warning-600 dim:border-l-theme-warning-600`,
+		"warning-alt": `border-l-theme-warning-900 dark:border-l-theme-warning-600 dim:border-l-theme-warning-600`,
 	};
 
 	let styles =
 		color === "warning-alt"
-			? [`border-theme-warning-200 dark:border-theme-secondary-800`]
-			: [`border-theme-secondary-200 dark:border-black`];
+			? [`border-theme-warning-200 dark:border-theme-secondary-800 dim:border-theme-dim-700`]
+			: [`border-theme-secondary-200 dark:border-black dim:border-theme-dim-700`];
 
 	if (theme === "dark") {
 		styles = [`border-black`];
 	}
 
 	if (theme === "system") {
-		styles = [`border-theme-primary-100 dark:border-theme-secondary-800`];
+		styles = [`border-theme-primary-100 dark:border-theme-secondary-800 dim:border-theme-dim-700`];
 	}
 
 	return [...styles, baseColors[color]].join(" ");

@@ -3,7 +3,7 @@
 exports[`QRModal > should render 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 backdrop-blur-xl md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 dim:bg-theme-dim-950/40 backdrop-blur-xl md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -11,11 +11,11 @@ exports[`QRModal > should render 1`] = `
       tabindex="-1"
     >
       <div
-        class="bg-theme-background relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl md:p-8 pb-24 px-4 pt-4 md:pt-8 md:px-8"
+        class="bg-theme-background dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl md:p-8 pb-24 px-4 pt-4 md:pt-8 md:px-8"
         data-testid="Modal__inner"
       >
         <div
-          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
+          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
         >
           <button
             class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
@@ -81,21 +81,21 @@ exports[`QRModal > should render 1`] = `
                 class="flex h-full flex-col items-center justify-center py-8"
               >
                 <div
-                  class="border-theme-secondary-500 relative z-10 flex h-[300px] w-[300px] flex-col items-center justify-center border-2"
+                  class="border-theme-secondary-500 dim:border-theme-dim-500 relative z-10 flex h-[300px] w-[300px] flex-col items-center justify-center border-2"
                   data-testid="ViewFinder"
                   style="box-shadow: 0px 0px 0px 9999px rgba(0, 0, 0, 0.75);"
                 >
                   <div
-                    class="bg-theme-secondary-800 absolute -top-[2px] right-8 left-8 h-0.5"
+                    class="bg-theme-secondary-800 dim:bg-theme-dim-700 absolute -top-[2px] right-8 left-8 h-0.5"
                   />
                   <div
-                    class="bg-theme-secondary-800 absolute right-8 -bottom-[2px] left-8 h-0.5"
+                    class="bg-theme-secondary-800 dim:bg-theme-dim-700 absolute right-8 -bottom-[2px] left-8 h-0.5"
                   />
                   <div
-                    class="bg-theme-secondary-800 absolute top-8 bottom-8 -left-[2px] w-0.5"
+                    class="bg-theme-secondary-800 dim:bg-theme-dim-700 absolute top-8 bottom-8 -left-[2px] w-0.5"
                   />
                   <div
-                    class="bg-theme-secondary-800 absolute top-8 -right-[2px] bottom-8 w-0.5"
+                    class="bg-theme-secondary-800 dim:bg-theme-dim-700 absolute top-8 -right-[2px] bottom-8 w-0.5"
                   />
                 </div>
                 <div
@@ -105,7 +105,7 @@ exports[`QRModal > should render 1`] = `
                     class="bg-theme-background shadow-footer-smooth dark:shadow-footer-smooth-dark fixed inset-x-0 bottom-0 flex gap-3 px-8 py-3 sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none dark:bg-black sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none pb-3 sm:pb-0"
                   >
                     <button
-                      class="px-5 py-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 sm:bg-theme-secondary-800 sm:text-theme-secondary-200 z-20 space-x-2"
+                      class="px-5 py-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white sm:bg-theme-secondary-800 sm:text-theme-secondary-200 z-20 space-x-2"
                       data-testid="QRFileUpload__upload"
                       type="button"
                     >

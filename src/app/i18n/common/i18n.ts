@@ -417,6 +417,7 @@ export const translations = {
 	TRANSFERS: "Transfers",
 	TX_ID: "Tx ID",
 	TYPE: "Type",
+	TYPES: "Types",
 	UNLOCKED_AMOUNT: "Unlocked Amount",
 	UNSELECT: "Unselect",
 	UNSELECTED: "Unselected",

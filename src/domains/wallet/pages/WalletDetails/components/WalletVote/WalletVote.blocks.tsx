@@ -16,7 +16,7 @@ const EmptyVotes = () => {
 			className="xs:justify-center flex w-full flex-row items-center justify-start md:justify-start"
 			data-testid="EmptyVotes"
 		>
-			<div className="text-theme-secondary-700 dark:text-theme-dark-200 px-[22px] pb-4 text-center text-base font-semibold md:mt-0 md:px-0 md:pb-0 md:text-left">
+			<div className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 px-[22px] pb-4 text-center text-base font-semibold md:mt-0 md:px-0 md:pb-0 md:text-left">
 				{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.EMPTY_DESCRIPTION")}{" "}
 				<Link to={votesHelpLink} isExternal className="inline-flex items-center">
 					<span className="text-base leading-5">{t("COMMON.LEARN_MORE")}</span>
@@ -38,7 +38,7 @@ export const ValidatorStatus = ({ votes, activeValidators }: ValidatorStatusProp
 		return (
 			<Label
 				color="success-bg"
-				className="dark:border-theme-success-800 flex h-fit w-fit items-center justify-center border-none py-0.5 text-xs dark:border-solid"
+				className="dark:border-theme-success-800 dim:border-theme-success-800 flex h-fit w-fit items-center justify-center border-none py-0.5 text-xs dark:border-solid"
 			>
 				{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.ACTIVE", { count: activeCount })}
 			</Label>
@@ -49,7 +49,7 @@ export const ValidatorStatus = ({ votes, activeValidators }: ValidatorStatusProp
 		return (
 			<Label
 				color="warning"
-				className="flex h-fit w-fit items-center justify-center border-none py-0.5 text-xs dark:border-solid"
+				className="dim:border-solid flex h-fit w-fit items-center justify-center border-none py-0.5 text-xs dark:border-solid"
 			>
 				{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.STANDBY", { count: standbyCount })}
 			</Label>
@@ -60,7 +60,7 @@ export const ValidatorStatus = ({ votes, activeValidators }: ValidatorStatusProp
 		return (
 			<Label
 				color="danger"
-				className="flex h-fit w-fit items-center justify-center border-none py-0.5 text-xs dark:border-solid"
+				className="dim:border-solid flex h-fit w-fit items-center justify-center border-none py-0.5 text-xs dark:border-solid"
 				variant="solid"
 			>
 				{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.RESIGNED", { count: resignedCount })}
@@ -78,14 +78,14 @@ export const ValidatorStatus = ({ votes, activeValidators }: ValidatorStatusProp
 					{activeCount > 0 && t("WALLETS.PAGE_WALLET_DETAILS.VOTES.ACTIVE_COUNT", { count: activeCount })}
 
 					{standbyCount > 0 && (
-						<span className="text-theme-secondary-500 dark:text-theme-secondary-700">
+						<span className="text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-700">
 							{activeCount > 0 && " / "}
 							{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.STANDBY_COUNT", { count: standbyCount })}
 						</span>
 					)}
 
 					{resignedCount > 0 && (
-						<span className="text-theme-secondary-500 dark:text-theme-secondary-700">
+						<span className="text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-700">
 							{activeCount > 0 && standbyCount > 0 ? " & " : " / "}
 							{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.RESIGNED_COUNT", { count: resignedCount })}
 						</span>
@@ -117,34 +117,34 @@ const Votes = ({ votes, activeValidators }: VotesProperties) => {
 	const validator = votes[0].wallet!;
 
 	return (
-		<div className="border-theme-secondary-300 dark:border-theme-dark-700 mb-3 flex w-full flex-col items-start justify-between gap-0 overflow-hidden rounded border md:mb-0 md:flex-row md:items-center md:gap-2 md:rounded-none md:border-none">
-			<div className="bg-theme-secondary-100 dark:bg-theme-dark-950 flex w-full flex-1 flex-row items-center gap-2 p-3 text-sm leading-[17px] font-semibold md:w-auto md:bg-transparent md:p-0 md:text-base md:leading-5 md:dark:bg-transparent">
-				<p className="text-theme-secondary-700 dark:text-theme-dark-200 text-sm md:text-base md:leading-5">
+		<div className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 mb-3 flex w-full flex-col items-start justify-between gap-0 overflow-hidden rounded border md:mb-0 md:flex-row md:items-center md:gap-2 md:rounded-none md:border-none">
+			<div className="bg-theme-secondary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 md:dim:bg-transparent flex w-full flex-1 flex-row items-center gap-2 p-3 text-sm leading-[17px] font-semibold md:w-auto md:bg-transparent md:p-0 md:text-base md:leading-5 md:dark:bg-transparent">
+				<p className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm md:text-base md:leading-5">
 					{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.VOTING_FOR")}
 				</p>
 				<div className="xs:max-w-32 max-w-28 flex-1 truncate sm:max-w-40 md:max-w-60">
 					<ValidatorName
 						validatorName={validator.username() || validator.address()}
-						className="dark:text-theme-dark-50 text-sm md:text-base md:leading-5"
+						className="dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm md:text-base md:leading-5"
 						isUsername={validator.username() !== undefined}
 					/>
 				</div>
 			</div>
 
 			<div className="flex flex-col gap-2 px-4 py-3 text-base leading-5 font-semibold md:flex-row md:items-center md:px-0 md:py-0">
-				<p className="text-theme-secondary-700 dark:text-theme-dark-200 text-sm md:text-base md:leading-5">
+				<p className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm md:text-base md:leading-5">
 					{t("COMMON.RANK")}
 				</p>
-				<p className="text-theme-secondary-900 dark:text-theme-dark-50 mb-2 text-sm font-semibold md:mb-0 md:text-base md:leading-5">
+				<p className="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 mb-2 text-sm font-semibold md:mb-0 md:text-base md:leading-5">
 					{validator.rank() ? `#${validator.rank()}` : t("COMMON.NOT_AVAILABLE")}
 				</p>
-				<p className="text-theme-secondary-700 dark:text-theme-dark-200 text-sm md:hidden">
+				<p className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm md:hidden">
 					{t("COMMON.VALIDATOR_STATUS")}
 				</p>
 				<ValidatorStatus votes={votes} activeValidators={activeValidators} />
 				<Divider
 					type="vertical"
-					className="border-theme-secondary-300 dark:border-s-theme-dark-700 mr-3 ml-1 hidden h-5 p-0 md:flex"
+					className="border-theme-secondary-300 dark:border-s-theme-dark-700 dim:border-s-theme-dim-700 mr-3 ml-1 hidden h-5 p-0 md:flex"
 				/>
 			</div>
 		</div>

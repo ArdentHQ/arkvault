@@ -36,14 +36,15 @@ export const ViewingAddressInfo = ({
 				truncateOnTable
 				maxNameChars={20}
 				walletNameClass={cn("text-sm leading-[17px] sm:text-base sm:leading-5", {
-					"text-theme-primary-600 dark:text-theme-dark-navy-400": availableWallets > 1,
+					"text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600":
+						availableWallets > 1,
 				})}
 			/>
 		);
 	}
 
 	return (
-		<div className="text-theme-primary-600 dark:textdark-theme-dark-navy-400 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5">
+		<div className="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5">
 			{t("COMMON.MULTIPLE_ADDRESSES", {
 				count: wallets.length,
 			})}

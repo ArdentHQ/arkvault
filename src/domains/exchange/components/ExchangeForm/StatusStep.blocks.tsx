@@ -19,7 +19,7 @@ const StatusIcon = ({ label, isDone, isLoading }: StatusIconProperties) => {
 			return (
 				<div
 					data-testid="StatusIcon__check-mark"
-					className="bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 flex h-6 w-6 items-center justify-center rounded-full"
+					className="bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dim:bg-theme-dim-800 dim:text-theme-dim-200 flex h-6 w-6 items-center justify-center rounded-full"
 				>
 					<Icon name="CheckmarkSmall" size="sm" />
 				</div>
@@ -37,7 +37,7 @@ const StatusIcon = ({ label, isDone, isLoading }: StatusIconProperties) => {
 		return (
 			<div
 				data-testid="StatusIcon__empty"
-				className="border-theme-secondary-300 dark:border-theme-secondary-800 h-6 w-6 rounded-full border-2"
+				className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 h-6 w-6 rounded-full border-2"
 			/>
 		);
 	};
@@ -49,8 +49,8 @@ const StatusIcon = ({ label, isDone, isLoading }: StatusIconProperties) => {
 				className={cn(
 					"text-xs font-semibold whitespace-nowrap sm:text-sm",
 					isDone
-						? "text-theme-secondary-700 dark:text-theme-secondary-600"
-						: "text-theme-secondary-500 dark:text-theme-secondary-700",
+						? "text-theme-secondary-700 dark:text-theme-secondary-600 dim:text-theme-dim-200"
+						: "text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200",
 				)}
 			>
 				{label}
@@ -64,7 +64,9 @@ const StatusSpacer = ({ isActive }: { isActive: boolean }) => (
 		<div
 			className={cn(
 				"h-0.5 w-full rounded-l rounded-r",
-				isActive ? "bg-theme-primary-600" : "bg-theme-secondary-300 dark:bg-theme-secondary-800",
+				isActive
+					? "bg-theme-primary-600"
+					: "bg-theme-secondary-300 dark:bg-theme-secondary-800 dim:bg-theme-dim-700",
 			)}
 		/>
 	</div>
