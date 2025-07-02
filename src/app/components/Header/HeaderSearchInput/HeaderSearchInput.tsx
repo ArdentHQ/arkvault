@@ -54,7 +54,7 @@ export const HeaderSearchInput: FC<HeaderSearchInputProperties> = ({
 			<SearchBarInputWrapper
 				data-testid="HeaderSearchInput__input"
 				ref={reference}
-				className="border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 flex items-center overflow-hidden rounded-lg border px-4 text-base"
+				className="border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 dim:border-theme-dim-700 flex items-center overflow-hidden rounded-lg border px-4 text-base"
 			>
 				<button
 					data-testid="HeaderSearchInput__input__reset"
@@ -89,7 +89,7 @@ export const HeaderSearchInput: FC<HeaderSearchInputProperties> = ({
 				</div>
 
 				<Icon
-					className="text-theme-secondary-700 dark:text-theme-secondary-600"
+					className="text-theme-secondary-700 dark:text-theme-secondary-600 dim:text-theme-dim-500"
 					name="MagnifyingGlassAlt"
 					size="lg"
 				/>

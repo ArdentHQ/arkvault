@@ -199,14 +199,30 @@ export const SignMessageSidePanel = ({
 
 	const getTitleIcon = () => {
 		if (activeTab === Step.SuccessStep) {
-			return <ThemeIcon lightIcon="CompletedLight" darkIcon="CompletedDark" dimensions={[24, 24]} />;
+			return (
+				<ThemeIcon
+					lightIcon="CompletedLight"
+					darkIcon="CompletedDark"
+					dimIcon="CompletedDim"
+					dimensions={[24, 24]}
+				/>
+			);
 		}
 
 		if (authenticateLedger) {
-			return <ThemeIcon lightIcon="LedgerLight" darkIcon="LedgerDark" dimensions={[24, 24]} />;
+			return (
+				<ThemeIcon lightIcon="LedgerLight" darkIcon="LedgerDark" dimIcon="LedgerDim" dimensions={[24, 24]} />
+			);
 		}
 
-		return <ThemeIcon lightIcon="SendTransactionLight" darkIcon="SendTransactionDark" dimensions={[24, 24]} />;
+		return (
+			<ThemeIcon
+				lightIcon="SendTransactionLight"
+				darkIcon="SendTransactionDark"
+				dimIcon="SendTransactionDim"
+				dimensions={[24, 24]}
+			/>
+		);
 	};
 	return (
 		<SidePanel

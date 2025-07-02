@@ -3,11 +3,11 @@
 exports[`ContactListItemMobile > should render 1`] = `
 <DocumentFragment>
   <div
-    class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+    class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
     data-testid="mobile-table-element"
   >
     <div
-      class="dark:bg-theme-dark-950 flex space-x-3 overflow-auto px-4 py-3 bg-theme-secondary-100 dark:bg-black"
+      class="dark:bg-theme-dark-950 flex space-x-3 overflow-auto px-4 py-3 bg-theme-secondary-100 dim:bg-theme-dim-950 dark:bg-black"
       data-testid="mobile-table-element-header"
     >
       <span
@@ -19,7 +19,7 @@ exports[`ContactListItemMobile > should render 1`] = `
         class="flex items-center gap-3"
       >
         <button
-          class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 p-0 text-sm hover:underline"
+          class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 p-0 text-sm hover:underline"
           data-testid="ContactListItemMobileAddress__send-button"
           type="button"
         >
@@ -30,7 +30,7 @@ exports[`ContactListItemMobile > should render 1`] = `
           </div>
         </button>
         <span
-          class="bg-theme-secondary-300 dark:bg-theme-secondary-800 block h-5 w-px"
+          class="bg-theme-secondary-300 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 block h-5 w-px"
         />
         <div
           aria-expanded="false"
@@ -38,7 +38,7 @@ exports[`ContactListItemMobile > should render 1`] = `
           data-testid="dropdown__toggle"
         >
           <button
-            class="text-theme-secondary-700 flex"
+            class="text-theme-secondary-700 dim:text-theme-dim-200 flex"
             type="button"
           >
             <div>
@@ -87,7 +87,7 @@ exports[`ContactListItemMobile > should render 1`] = `
         class="grid grid-cols-1 gap-2"
       >
         <div
-          class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
+          class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-semibold"
         >
           Address
         </div>
@@ -112,7 +112,7 @@ exports[`ContactListItemMobile > should render 1`] = `
                 type="button"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
                 >
                   <div
                     style="height: 16px; width: 16px;"
@@ -156,11 +156,11 @@ exports[`ContactListItemMobile > should render 1`] = `
 exports[`ContactListItemMobile > should render addresses 1`] = `
 <DocumentFragment>
   <div
-    class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+    class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
     data-testid="mobile-table-element"
   >
     <div
-      class="dark:bg-theme-dark-950 flex space-x-3 overflow-auto px-4 py-3 bg-theme-secondary-100 dark:bg-black"
+      class="dark:bg-theme-dark-950 flex space-x-3 overflow-auto px-4 py-3 bg-theme-secondary-100 dim:bg-theme-dim-950 dark:bg-black"
       data-testid="mobile-table-element-header"
     >
       <span
@@ -172,7 +172,7 @@ exports[`ContactListItemMobile > should render addresses 1`] = `
         class="flex items-center gap-3"
       >
         <button
-          class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 p-0 text-sm hover:underline"
+          class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 p-0 text-sm hover:underline"
           data-testid="ContactListItemMobileAddress__send-button"
           type="button"
         >
@@ -183,7 +183,7 @@ exports[`ContactListItemMobile > should render addresses 1`] = `
           </div>
         </button>
         <span
-          class="bg-theme-secondary-300 dark:bg-theme-secondary-800 block h-5 w-px"
+          class="bg-theme-secondary-300 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 block h-5 w-px"
         />
         <div
           aria-expanded="false"
@@ -191,7 +191,7 @@ exports[`ContactListItemMobile > should render addresses 1`] = `
           data-testid="dropdown__toggle"
         >
           <button
-            class="text-theme-secondary-700 flex"
+            class="text-theme-secondary-700 dim:text-theme-dim-200 flex"
             type="button"
           >
             <div>
@@ -240,7 +240,7 @@ exports[`ContactListItemMobile > should render addresses 1`] = `
         class="grid grid-cols-1 gap-2"
       >
         <div
-          class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
+          class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-semibold"
         >
           Address
         </div>
@@ -265,7 +265,7 @@ exports[`ContactListItemMobile > should render addresses 1`] = `
                 type="button"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
                 >
                   <div
                     style="height: 16px; width: 16px;"

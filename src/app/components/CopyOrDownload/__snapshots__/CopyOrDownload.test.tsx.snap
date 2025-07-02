@@ -3,15 +3,15 @@
 exports[`CopyOrDownload > should render 1`] = `
 <DocumentFragment>
   <div
-    class="bg-theme-secondary-100 dark:bg-theme-dark-950 -mx-4 rounded-b-lg p-4 text-center sm:-mx-6 sm:p-6 sm:text-left"
+    class="bg-theme-secondary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 -mx-4 rounded-b-lg p-4 text-center sm:-mx-6 sm:p-6 sm:text-left"
   >
     <span
-      class="text-theme-secondary-900 dark:text-theme-dark-50 text-base leading-[21px] font-semibold sm:text-lg"
+      class="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 text-base leading-[21px] font-semibold sm:text-lg"
     >
       title
     </span>
     <p
-      class="text-theme-secondary-700 dark:text-theme-dark-200 mt-2 mb-3 text-sm"
+      class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mt-2 mb-3 text-sm"
     >
       description
     </p>
@@ -25,7 +25,7 @@ exports[`CopyOrDownload > should render 1`] = `
         type="button"
       >
         <div
-          class="flex items-center space-x-2 rounded px-2 py-1 leading-5 font-semibold text-theme-primary-600 hover:bg-theme-navy-200 dark:text-theme-navy-400 dark:hover:bg-theme-secondary-800 cursor-pointer dark:hover:text-white"
+          class="flex items-center space-x-2 rounded px-2 py-1 leading-5 font-semibold text-theme-primary-600 hover:bg-theme-navy-200 dark:text-theme-navy-400 dark:hover:bg-theme-secondary-800 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 cursor-pointer dark:hover:text-white"
         >
           <div>
             <div
@@ -63,10 +63,10 @@ exports[`CopyOrDownload > should render 1`] = `
         </div>
       </button>
       <div
-        class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
+        class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
       />
       <button
-        class="flex items-center space-x-2 rounded px-2 py-1 leading-5 font-semibold text-theme-primary-600 hover:bg-theme-navy-200 dark:text-theme-navy-400 dark:hover:bg-theme-secondary-800 cursor-pointer dark:hover:text-white"
+        class="flex items-center space-x-2 rounded px-2 py-1 leading-5 font-semibold text-theme-primary-600 hover:bg-theme-navy-200 dark:text-theme-navy-400 dark:hover:bg-theme-secondary-800 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 cursor-pointer dark:hover:text-white"
         data-testid="CopyOrDownload__download"
         type="button"
       >

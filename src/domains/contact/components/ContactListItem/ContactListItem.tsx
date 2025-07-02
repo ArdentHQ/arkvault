@@ -73,7 +73,7 @@ const ContactListItemAddress: FC<ContactListItemAddressProperties> = ({
 
 			<TableCell className={borderClasses()} innerClassName="space-x-4 justify-center">
 				<Clipboard variant="icon" data={address.address()}>
-					<div className="text-theme-secondary-700 dark:text-theme-dark-200">
+					<div className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 dim-hover:text-theme-dim-50">
 						<Icon name="Copy" />
 					</div>
 				</Clipboard>
@@ -86,7 +86,7 @@ const ContactListItemAddress: FC<ContactListItemAddressProperties> = ({
 							<Button
 								size="icon"
 								variant="transparent"
-								className="text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 text-sm hover:underline"
+								className="text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 text-sm hover:underline"
 								data-testid="ContactListItem__send-button"
 								onClick={() => onSend(address)}
 								disabled={sendIsDisabled}
@@ -99,7 +99,7 @@ const ContactListItemAddress: FC<ContactListItemAddressProperties> = ({
 					{index === 0 && (
 						<Divider
 							type="vertical"
-							className="height-[17px] border-theme-secondary-300 dark:border-theme-secondary-800 m-0!"
+							className="height-[17px] border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 m-0!"
 						/>
 					)}
 
@@ -110,12 +110,12 @@ const ContactListItemAddress: FC<ContactListItemAddressProperties> = ({
 								<Button
 									size="icon"
 									variant="transparent"
-									className="dark:hover:bg-theme-secondary-700 hover:bg-theme-navy-200 mr-3 p-1"
+									className="dark:hover:bg-theme-secondary-700 hover:bg-theme-navy-200 dim-hover:bg-theme-dim-800 mr-3 p-1"
 								>
 									<Icon
 										name="EllipsisVerticalFilled"
 										size="md"
-										className="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 transition-colors duration-200"
+										className="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50 transition-colors duration-200"
 									/>
 								</Button>
 							}

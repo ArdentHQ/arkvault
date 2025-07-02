@@ -6,7 +6,7 @@ exports[`Alert > should render 1`] = `
     class="flex flex-col overflow-hidden rounded-xl"
   >
     <div
-      class="flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-warning-100 text-theme-warning-700 dark:bg-theme-warning-700"
+      class="dim:text-white flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-warning-100 text-theme-warning-700 dark:bg-theme-warning-700"
     >
       <div>
         <div
@@ -51,7 +51,7 @@ exports[`Alert > should render 1`] = `
       </span>
     </div>
     <div
-      class="dark:bg-theme-secondary-800 w-full p-4 text-left text-sm leading-relaxed break-words bg-theme-warning-50"
+      class="dark:bg-theme-secondary-800 dim:bg-theme-dim-800 dim:text-theme-dim-50 w-full p-4 text-left text-sm leading-relaxed break-words bg-theme-warning-50"
     >
       <span>
         Hello World!
@@ -67,7 +67,7 @@ exports[`Alert > should render as collapsible 1`] = `
     class="flex flex-col overflow-hidden rounded-xl"
   >
     <div
-      class="flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-warning-100 text-theme-warning-700 dark:bg-theme-warning-700 cursor-pointer"
+      class="dim:text-white flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-warning-100 text-theme-warning-700 dark:bg-theme-warning-700 cursor-pointer"
     >
       <div>
         <div
@@ -152,7 +152,7 @@ exports[`Alert > should render as danger alert 1`] = `
     class="flex flex-col overflow-hidden rounded-xl"
   >
     <div
-      class="flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-danger-100 text-theme-danger-700 dark:bg-theme-danger-500"
+      class="dim:text-white flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-danger-100 text-theme-danger-700 dark:bg-theme-danger-500"
     >
       <div>
         <div
@@ -192,7 +192,7 @@ exports[`Alert > should render as danger alert 1`] = `
       </span>
     </div>
     <div
-      class="dark:bg-theme-secondary-800 w-full p-4 text-left text-sm leading-relaxed break-words bg-theme-danger-50"
+      class="dark:bg-theme-secondary-800 dim:bg-theme-dim-800 dim:text-theme-dim-50 w-full p-4 text-left text-sm leading-relaxed break-words bg-theme-danger-50"
     >
       <span>
         Hello World!
@@ -208,7 +208,7 @@ exports[`Alert > should render as hint alert 1`] = `
     class="flex flex-col overflow-hidden rounded-xl"
   >
     <div
-      class="flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-hint-100 text-theme-hint-700 dark:bg-theme-hint-700"
+      class="dim:text-white flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-hint-100 text-theme-hint-700 dark:bg-theme-hint-700"
     >
       <div>
         <div
@@ -247,7 +247,7 @@ exports[`Alert > should render as hint alert 1`] = `
       </span>
     </div>
     <div
-      class="dark:bg-theme-secondary-800 w-full p-4 text-left text-sm leading-relaxed break-words bg-theme-hint-50"
+      class="dark:bg-theme-secondary-800 dim:bg-theme-dim-800 dim:text-theme-dim-50 w-full p-4 text-left text-sm leading-relaxed break-words bg-theme-hint-50"
     >
       <span>
         Hello World!
@@ -263,7 +263,7 @@ exports[`Alert > should render as info alert 1`] = `
     class="flex flex-col overflow-hidden rounded-xl"
   >
     <div
-      class="flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-info-100 text-theme-info-700 dark:bg-theme-info-700"
+      class="dim:text-white flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-info-100 text-theme-info-700 dark:bg-theme-info-700 dim:bg-theme-dim-navy-600"
     >
       <div>
         <div
@@ -308,7 +308,7 @@ exports[`Alert > should render as info alert 1`] = `
       </span>
     </div>
     <div
-      class="dark:bg-theme-secondary-800 w-full p-4 text-left text-sm leading-relaxed break-words bg-theme-info-50"
+      class="dark:bg-theme-secondary-800 dim:bg-theme-dim-800 dim:text-theme-dim-50 w-full p-4 text-left text-sm leading-relaxed break-words bg-theme-info-50"
     >
       <span>
         Hello World!
@@ -324,7 +324,7 @@ exports[`Alert > should render as success alert 1`] = `
     class="flex flex-col overflow-hidden rounded-xl"
   >
     <div
-      class="flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-success-100 text-theme-success-700 dark:bg-theme-success-700"
+      class="dim:text-white flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-success-100 text-theme-success-700 dark:bg-theme-success-700"
     >
       <div>
         <div
@@ -364,7 +364,7 @@ exports[`Alert > should render as success alert 1`] = `
       </span>
     </div>
     <div
-      class="dark:bg-theme-secondary-800 w-full p-4 text-left text-sm leading-relaxed break-words bg-theme-success-50"
+      class="dark:bg-theme-secondary-800 dim:bg-theme-dim-800 dim:text-theme-dim-50 w-full p-4 text-left text-sm leading-relaxed break-words bg-theme-success-50"
     >
       <span>
         Hello World!
@@ -380,7 +380,7 @@ exports[`Alert > should render as warning alert 1`] = `
     class="flex flex-col overflow-hidden rounded-xl"
   >
     <div
-      class="flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-warning-100 text-theme-warning-700 dark:bg-theme-warning-700"
+      class="dim:text-white flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-warning-100 text-theme-warning-700 dark:bg-theme-warning-700"
     >
       <div>
         <div
@@ -425,7 +425,7 @@ exports[`Alert > should render as warning alert 1`] = `
       </span>
     </div>
     <div
-      class="dark:bg-theme-secondary-800 w-full p-4 text-left text-sm leading-relaxed break-words bg-theme-warning-50"
+      class="dark:bg-theme-secondary-800 dim:bg-theme-dim-800 dim:text-theme-dim-50 w-full p-4 text-left text-sm leading-relaxed break-words bg-theme-warning-50"
     >
       <span>
         Hello World!
@@ -441,7 +441,7 @@ exports[`Alert > should render as warning-dark alert 1`] = `
     class="flex flex-col overflow-hidden rounded-xl"
   >
     <div
-      class="flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white"
+      class="dim:text-white flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white"
     >
       <div>
         <div
@@ -453,7 +453,7 @@ exports[`Alert > should render as warning-dark alert 1`] = `
       </span>
     </div>
     <div
-      class="dark:bg-theme-secondary-800 w-full p-4 text-left text-sm leading-relaxed break-words"
+      class="dark:bg-theme-secondary-800 dim:bg-theme-dim-800 dim:text-theme-dim-50 w-full p-4 text-left text-sm leading-relaxed break-words"
     >
       <span>
         Hello World!

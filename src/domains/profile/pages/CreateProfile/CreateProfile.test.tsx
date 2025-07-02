@@ -80,7 +80,7 @@ describe("CreateProfile", () => {
 
 		await renderComponent();
 
-		expect(screen.getByTestId("SelectDropdown__input")).toHaveValue("EUR (€)");
+		expect(screen.getAllByTestId("SelectDropdown__input")[0]).toHaveValue("EUR (€)");
 
 		intlMock.mockRestore();
 	});
@@ -94,7 +94,7 @@ describe("CreateProfile", () => {
 
 		await renderComponent();
 
-		expect(screen.getByTestId("SelectDropdown__input")).toHaveValue("GBP (£)");
+		expect(screen.getAllByTestId("SelectDropdown__input")[0]).toHaveValue("GBP (£)");
 
 		intlMock.mockRestore();
 		languageMock.mockRestore();
@@ -109,7 +109,7 @@ describe("CreateProfile", () => {
 
 		await renderComponent();
 
-		expect(screen.getByTestId("SelectDropdown__input")).toHaveValue("USD ($)");
+		expect(screen.getAllByTestId("SelectDropdown__input")[0]).toHaveValue("USD ($)");
 
 		intlMock.mockRestore();
 		languageMock.mockRestore();
@@ -158,7 +158,7 @@ describe("CreateProfile", () => {
 
 		await userEvent.type(nameInput(), "test profile 1");
 
-		const selectDropdown = screen.getByTestId("SelectDropdown__input");
+		const selectDropdown = screen.getAllByTestId("SelectDropdown__input")[0];
 
 		await userEvent.clear(selectDropdown);
 		await waitFor(() => expect(selectDropdown).not.toHaveValue());
@@ -333,15 +333,24 @@ describe("CreateProfile", () => {
 
 		const lightButton = screen.getAllByRole("radio")[0];
 		const darkButton = screen.getAllByRole("radio")[1];
+		const dimButton = screen.getAllByRole("radio")[2];
 
 		expect(document.querySelector("html")).toHaveClass("dark");
 		expect(darkButton).toBeChecked();
 		expect(lightButton).not.toBeChecked();
+		expect(dimButton).not.toBeChecked();
 
 		await userEvent.click(lightButton);
 
 		expect(document.querySelector("html")).toHaveClass("light");
 		expect(lightButton).toBeChecked();
+		expect(darkButton).not.toBeChecked();
+		expect(dimButton).not.toBeChecked();
+
+		await userEvent.click(dimButton);
+		expect(document.querySelector("html")).toHaveClass("dim");
+		expect(dimButton).toBeChecked();
+		expect(lightButton).not.toBeChecked();
 		expect(darkButton).not.toBeChecked();
 
 		shouldUseDarkColorsSpy.mockRestore();

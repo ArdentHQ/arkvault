@@ -91,7 +91,7 @@ exports[`ConfirmationStep > should render 1`] = `
                   data-testid="ExplorerLink"
                 >
                   <a
-                    class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
+                    class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://blockchair.com/bitcoin/transaction/payinHash"
@@ -194,7 +194,7 @@ exports[`ConfirmationStep > should render 1`] = `
                   data-testid="ExplorerLink"
                 >
                   <a
-                    class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
+                    class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://blockchair.com/bitcoin/address/payinAddress"
@@ -414,7 +414,7 @@ exports[`ConfirmationStep > should render 1`] = `
                 Amount Received
               </span>
               <div
-                class="inline-block font-semibold overflow-hidden no-ligatures px-1 border-2 rounded text-theme-success-600 border-theme-success-200 dark:border-theme-success-600 text-base mr-auto whitespace-nowrap"
+                class="inline-block font-semibold overflow-hidden no-ligatures px-1 border-2 rounded text-theme-success-600 border-theme-success-200 dark:border-theme-success-600 dim:border-theme-success-700 dim:text-theme-success-500 text-base mr-auto whitespace-nowrap"
               >
                 <span
                   class="whitespace-nowrap leading-5 font-semibold"
@@ -454,13 +454,13 @@ exports[`ExchangeForm > should render exchange form 1`] = `
             class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-warning-300"
           />
           <li
-            class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
+            class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700"
           />
           <li
-            class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
+            class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700"
           />
           <li
-            class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
+            class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700"
           />
         </ul>
       </div>
@@ -495,14 +495,14 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                     data-testid="SelectDropdown"
                   >
                     <div
-                      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+                      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
                     >
                       <div
                         class="relative flex h-full flex-1"
                       >
                         <input
                           autocomplete="off"
-                          class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
+                          class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
                           data-testid="select-list__input"
                           name="fromCurrency"
                           readonly=""
@@ -527,13 +527,13 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                             id="fromCurrency-label"
                           />
                           <div
-                            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                           >
                             <div
                               class="hidden sm:block"
                             >
                               <div
-                                class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-8 w-8 px-2 py-1 text-sm ring-0 border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100"
+                                class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-8 w-8 px-2 py-1 text-sm ring-0 border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 dim:bg-theme-dim-800 dim:border-theme-dim-800 ring-theme-background duration-100"
                               />
                             </div>
                             <div
@@ -544,7 +544,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                                 aria-controls="fromCurrency-menu"
                                 aria-labelledby="fromCurrency-label"
                                 autocomplete="off"
-                                class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base! cursor-default"
+                                class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! cursor-default"
                                 data-testid="SelectDropdown__input"
                                 id="fromCurrency-input"
                                 name="fromCurrency"
@@ -554,7 +554,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                               />
                             </div>
                             <div
-                              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
                               data-testid="Input__addon-end"
                             >
                               <div
@@ -629,14 +629,14 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                     class="relative"
                   >
                     <div
-                      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                     >
                       <div
                         class="relative flex h-full flex-1"
                       >
                         <input
                           autocomplete="off"
-                          class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
+                          class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
                           data-testid="InputCurrency"
                           name="payinAmount"
                           placeholder="Enter an amount"
@@ -653,10 +653,10 @@ exports[`ExchangeForm > should render exchange form 1`] = `
               class="flex space-x-4 sm:ml-8 sm:space-x-8"
             >
               <div
-                class="border-theme-secondary-300 dark:border-theme-secondary-800 relative my-1 h-20 border-l"
+                class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 relative my-1 h-20 border-l"
               >
                 <div
-                  class="border-theme-secondary-300 bg-theme-background dark:border-theme-secondary-800 absolute top-1/2 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full border"
+                  class="border-theme-secondary-300 bg-theme-background dark:border-theme-secondary-800 dim:border-theme-dim-700 absolute top-1/2 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full border"
                 />
               </div>
               <div
@@ -666,7 +666,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                   class="flex flex-col space-y-2 text-sm sm:flex-row sm:items-center sm:space-y-0 sm:space-x-2"
                 >
                   <span
-                    class="border-theme-primary-600 text-theme-primary-600 mt-px mr-auto border-b border-dashed font-semibold"
+                    class="border-theme-primary-600 text-theme-primary-600 dim:text-theme-dim-navy-600 dim:border-theme-dim-navy-600 mt-px mr-auto border-b border-dashed font-semibold"
                   >
                     Estimated Rate
                     :
@@ -676,7 +676,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                   </span>
                 </div>
                 <button
-                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 ml-auto"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600 ml-auto"
                   data-testid="ExchangeForm__swap-button"
                   disabled=""
                   type="button"
@@ -736,14 +736,14 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                       data-testid="SelectDropdown"
                     >
                       <div
-                        class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+                        class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
                       >
                         <div
                           class="relative flex h-full flex-1"
                         >
                           <input
                             autocomplete="off"
-                            class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
+                            class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
                             data-testid="select-list__input"
                             name="toCurrency"
                             readonly=""
@@ -768,13 +768,13 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                               id="toCurrency-label"
                             />
                             <div
-                              class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                              class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                             >
                               <div
                                 class="hidden sm:block"
                               >
                                 <div
-                                  class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-8 w-8 px-2 py-1 text-sm ring-0 border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100"
+                                  class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-8 w-8 px-2 py-1 text-sm ring-0 border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 dim:bg-theme-dim-800 dim:border-theme-dim-800 ring-theme-background duration-100"
                                 />
                               </div>
                               <div
@@ -785,7 +785,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                                   aria-controls="toCurrency-menu"
                                   aria-labelledby="toCurrency-label"
                                   autocomplete="off"
-                                  class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base! cursor-default"
+                                  class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! cursor-default"
                                   data-testid="SelectDropdown__input"
                                   id="toCurrency-input"
                                   name="toCurrency"
@@ -795,7 +795,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                                 />
                               </div>
                               <div
-                                class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                                class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
                                 data-testid="Input__addon-end"
                               >
                                 <div
@@ -870,14 +870,14 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                       class="relative"
                     >
                       <div
-                        class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                        class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                       >
                         <div
                           class="relative flex h-full flex-1"
                         >
                           <input
                             autocomplete="off"
-                            class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
+                            class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
                             data-testid="InputCurrency"
                             name="payoutAmount"
                             placeholder="Enter an amount"
@@ -906,7 +906,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                     >
                       Recipient Wallet
                       <button
-                        class="link text-sm font-semibold"
+                        class="link dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-500 text-sm font-semibold"
                         data-testid="ExchangeForm__add-refund-address"
                         type="button"
                       >
@@ -925,7 +925,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                         data-testid="SelectDropdown"
                       >
                         <div
-                          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+                          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
                         >
                           <div
                             class="relative flex h-full flex-1"
@@ -933,7 +933,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                             <input
                               aria-invalid="false"
                               autocomplete="off"
-                              class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
+                              class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
                               data-testid="select-list__input"
                               name="recipientWallet"
                               readonly=""
@@ -958,7 +958,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                                 id="SelectRecipient__dropdown-label"
                               />
                               <div
-                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 dim:border-theme-dim-700 dim:bg-theme-dim-950 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                               >
                                 <div
                                   class="relative flex h-full flex-1"
@@ -969,7 +969,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                                     aria-invalid="false"
                                     aria-labelledby="SelectRecipient__dropdown-label"
                                     autocomplete="off"
-                                    class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base! cursor-default text-theme-secondary-text"
+                                    class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! cursor-default text-theme-secondary-text"
                                     data-testid="SelectDropdown__input"
                                     disabled=""
                                     id="SelectRecipient__dropdown-input"
@@ -1003,7 +1003,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
             class="bg-theme-background shadow-footer-smooth dark:shadow-footer-smooth-dark fixed inset-x-0 bottom-0 flex gap-3 px-8 py-3 sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none dark:bg-black sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
           >
             <button
-              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
+              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white"
               data-testid="ExchangeForm__back-button"
               type="button"
             >
@@ -1014,7 +1014,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
               </div>
             </button>
             <button
-              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
+              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600"
               data-testid="ExchangeForm__continue-button"
               disabled=""
               type="button"
@@ -1158,7 +1158,7 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                           data-testid="ExplorerLink"
                         >
                           <a
-                            class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
+                            class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
                             data-ring-focus-margin="-m-1"
                             data-testid="Link"
                             href="https://blockchair.com/bitcoin/transaction/payinHash?from=changenow"
@@ -1261,7 +1261,7 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                           data-testid="ExplorerLink"
                         >
                           <a
-                            class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
+                            class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
                             data-ring-focus-margin="-m-1"
                             data-testid="Link"
                             href="https://blockchair.com/bitcoin/address/payinAddress?from=changenow"
@@ -1415,7 +1415,7 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                           data-testid="ExplorerLink"
                         >
                           <a
-                            class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
+                            class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
                             data-ring-focus-margin="-m-1"
                             data-testid="Link"
                             href="https://live.arkscan.io/transaction/payoutHash"
@@ -1518,7 +1518,7 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                           data-testid="ExplorerLink"
                         >
                           <a
-                            class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
+                            class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
                             data-ring-focus-margin="-m-1"
                             data-testid="Link"
                             href="https://live.arkscan.io/wallets/payoutAddress"
@@ -1614,7 +1614,7 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                         Amount Received
                       </span>
                       <div
-                        class="inline-block font-semibold overflow-hidden no-ligatures px-1 border-2 rounded text-theme-success-600 border-theme-success-200 dark:border-theme-success-600 text-base mr-auto whitespace-nowrap"
+                        class="inline-block font-semibold overflow-hidden no-ligatures px-1 border-2 rounded text-theme-success-600 border-theme-success-200 dark:border-theme-success-600 dim:border-theme-success-700 dim:text-theme-success-500 text-base mr-auto whitespace-nowrap"
                       >
                         <span
                           class="whitespace-nowrap leading-5 font-semibold"
@@ -1640,7 +1640,7 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
               class="flex w-full flex-col gap-3 sm:flex-row-reverse"
             >
               <button
-                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500"
+                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-600"
                 data-testid="ExchangeForm__finish-button"
                 type="button"
               >
@@ -1651,7 +1651,7 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                 </div>
               </button>
               <button
-                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
+                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white"
                 data-testid="ExchangeForm__new-exchange"
                 type="button"
               >
@@ -1698,7 +1698,7 @@ exports[`ExchangeForm > should render exchange form with id of pending order 1`]
             class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-warning-300"
           />
           <li
-            class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
+            class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700"
           />
         </ul>
       </div>
@@ -1716,7 +1716,7 @@ exports[`ExchangeForm > should render exchange form with id of pending order 1`]
               class="flex items-center space-x-1"
             >
               <span
-                class="text-theme-secondary-500 dark:text-theme-secondary-700 text-xs font-semibold"
+                class="text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 text-xs font-semibold"
               >
                 ChangeNOW
                  
@@ -1725,7 +1725,7 @@ exports[`ExchangeForm > should render exchange form with id of pending order 1`]
                 id
               </span>
               <span
-                class="text-theme-primary-300 dark:text-theme-secondary-600 flex"
+                class="text-theme-primary-300 dark:text-theme-secondary-600 dim:text-theme-dim-navy-600 flex"
               >
                 <button
                   class="ring-focus relative cursor-pointer focus:outline-hidden"
@@ -1767,13 +1767,13 @@ exports[`ExchangeForm > should render exchange form with id of pending order 1`]
               </span>
             </div>
             <div
-              class="border-theme-secondary-300 dark:border-theme-secondary-800 mt-3 flex flex-col rounded-xl border p-4 sm:p-6"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 mt-3 flex flex-col rounded-xl border p-4 sm:p-6"
             >
               <div
                 class="flex flex-col space-y-2"
               >
                 <span
-                  class="text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold"
+                  class="text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 text-sm font-semibold"
                 >
                   You Send
                 </span>
@@ -1785,10 +1785,10 @@ exports[`ExchangeForm > should render exchange form with id of pending order 1`]
                 </span>
               </div>
               <div
-                class="border-theme-secondary-300 dark:border-theme-secondary-800 mt-4 flex flex-col space-y-2 border-t pt-4"
+                class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 mt-4 flex flex-col space-y-2 border-t pt-4"
               >
                 <span
-                  class="text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold"
+                  class="text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 text-sm font-semibold"
                 >
                   To Address
                 </span>
@@ -1801,7 +1801,7 @@ exports[`ExchangeForm > should render exchange form with id of pending order 1`]
                     payinAddress
                   </span>
                   <span
-                    class="text-theme-primary-300 dark:text-theme-secondary-600 flex"
+                    class="text-theme-primary-300 dark:text-theme-secondary-600 dim:text-theme-dim-navy-600 flex"
                   >
                     <button
                       class="ring-focus relative cursor-pointer focus:outline-hidden"
@@ -1854,11 +1854,11 @@ exports[`ExchangeForm > should render exchange form with id of pending order 1`]
                   data-testid="StatusIcon__spinner"
                 >
                   <div
-                    class="animate-spin rounded-full border-[5px] shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black border-l-theme-primary-600 dark:border-l-theme-primary-600 h-6! w-6! border-[3px]!"
+                    class="animate-spin rounded-full border-[5px] shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black dim:border-theme-dim-700 border-l-theme-primary-600 dark:border-l-theme-primary-600 dim:border-l-theme-dim-navy-600 h-6! w-6! border-[3px]!"
                   />
                 </span>
                 <span
-                  class="text-xs font-semibold whitespace-nowrap sm:text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+                  class="text-xs font-semibold whitespace-nowrap sm:text-sm text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200"
                 >
                   Awaiting Deposit
                 </span>
@@ -1867,18 +1867,18 @@ exports[`ExchangeForm > should render exchange form with id of pending order 1`]
                 class="flex h-6 flex-1 items-center px-2"
               >
                 <div
-                  class="h-0.5 w-full rounded-l rounded-r bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                  class="h-0.5 w-full rounded-l rounded-r bg-theme-secondary-300 dark:bg-theme-secondary-800 dim:bg-theme-dim-700"
                 />
               </div>
               <div
                 class="flex w-6 flex-col items-center space-y-2"
               >
                 <div
-                  class="border-theme-secondary-300 dark:border-theme-secondary-800 h-6 w-6 rounded-full border-2"
+                  class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 h-6 w-6 rounded-full border-2"
                   data-testid="StatusIcon__empty"
                 />
                 <span
-                  class="text-xs font-semibold whitespace-nowrap sm:text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+                  class="text-xs font-semibold whitespace-nowrap sm:text-sm text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200"
                 >
                   Exchanging
                 </span>
@@ -1887,25 +1887,25 @@ exports[`ExchangeForm > should render exchange form with id of pending order 1`]
                 class="flex h-6 flex-1 items-center px-2"
               >
                 <div
-                  class="h-0.5 w-full rounded-l rounded-r bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                  class="h-0.5 w-full rounded-l rounded-r bg-theme-secondary-300 dark:bg-theme-secondary-800 dim:bg-theme-dim-700"
                 />
               </div>
               <div
                 class="flex w-6 flex-col items-center space-y-2"
               >
                 <div
-                  class="border-theme-secondary-300 dark:border-theme-secondary-800 h-6 w-6 rounded-full border-2"
+                  class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 h-6 w-6 rounded-full border-2"
                   data-testid="StatusIcon__empty"
                 />
                 <span
-                  class="text-xs font-semibold whitespace-nowrap sm:text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+                  class="text-xs font-semibold whitespace-nowrap sm:text-sm text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200"
                 >
                   Sending to you
                 </span>
               </div>
             </div>
             <div
-              class="border-theme-secondary-300 dark:border-theme-secondary-800 -mx-10 border-t border-dashed px-10 pt-6"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 -mx-10 border-t border-dashed px-10 pt-6"
             />
             <div
               class="flex flex-col space-y-4"
@@ -1914,7 +1914,7 @@ exports[`ExchangeForm > should render exchange form with id of pending order 1`]
                 class="flex flex-col space-y-2"
               >
                 <span
-                  class="text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold"
+                  class="text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 text-sm font-semibold"
                 >
                   You Get
                 </span>
@@ -1934,7 +1934,7 @@ exports[`ExchangeForm > should render exchange form with id of pending order 1`]
                 class="flex flex-col space-y-2"
               >
                 <span
-                  class="text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold"
+                  class="text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 text-sm font-semibold"
                 >
                   To Address
                 </span>
@@ -1947,7 +1947,7 @@ exports[`ExchangeForm > should render exchange form with id of pending order 1`]
                     payoutAddress
                   </span>
                   <span
-                    class="text-theme-primary-300 dark:text-theme-secondary-600 flex"
+                    class="text-theme-primary-300 dark:text-theme-secondary-600 dim:text-theme-dim-navy-600 flex"
                   >
                     <button
                       class="ring-focus relative cursor-pointer focus:outline-hidden"
@@ -1991,11 +1991,11 @@ exports[`ExchangeForm > should render exchange form with id of pending order 1`]
               </div>
             </div>
             <div
-              class="bg-theme-secondary-100 dark:bg-theme-secondary-800 mt-6 rounded-lg px-6 py-3 text-xs"
+              class="bg-theme-secondary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-800 mt-6 rounded-lg px-6 py-3 text-xs"
             >
               If you have any question about your exchange, please contact ChangeNOW support team via email at 
               <a
-                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
+                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href="mailto:support@changenow.io"
@@ -2070,14 +2070,14 @@ exports[`FormStep > should render 1`] = `
             data-testid="SelectDropdown"
           >
             <div
-              class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+              class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
             >
               <div
                 class="relative flex h-full flex-1"
               >
                 <input
                   autocomplete="off"
-                  class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
+                  class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
                   data-testid="select-list__input"
                   name="fromCurrency"
                   readonly=""
@@ -2102,13 +2102,13 @@ exports[`FormStep > should render 1`] = `
                     id="fromCurrency-label"
                   />
                   <div
-                    class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                    class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 dim:border-theme-dim-700 dim:bg-theme-dim-950 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                   >
                     <div
                       class="hidden sm:block"
                     >
                       <div
-                        class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-8 w-8 px-2 py-1 text-sm ring-0 border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100"
+                        class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-8 w-8 px-2 py-1 text-sm ring-0 border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 dim:bg-theme-dim-800 dim:border-theme-dim-800 ring-theme-background duration-100"
                       />
                     </div>
                     <div
@@ -2119,7 +2119,7 @@ exports[`FormStep > should render 1`] = `
                         aria-controls="fromCurrency-menu"
                         aria-labelledby="fromCurrency-label"
                         autocomplete="off"
-                        class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base! cursor-default text-theme-secondary-text"
+                        class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! cursor-default text-theme-secondary-text"
                         data-testid="SelectDropdown__input"
                         disabled=""
                         id="fromCurrency-input"
@@ -2130,7 +2130,7 @@ exports[`FormStep > should render 1`] = `
                       />
                     </div>
                     <div
-                      class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                      class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
                       data-testid="Input__addon-end"
                     >
                       <div
@@ -2205,14 +2205,14 @@ exports[`FormStep > should render 1`] = `
             class="relative"
           >
             <div
-              class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+              class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
             >
               <div
                 class="relative flex h-full flex-1"
               >
                 <input
                   autocomplete="off"
-                  class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
+                  class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
                   data-testid="InputCurrency"
                   name="payinAmount"
                   placeholder="Enter an amount"
@@ -2229,10 +2229,10 @@ exports[`FormStep > should render 1`] = `
       class="flex space-x-4 sm:ml-8 sm:space-x-8"
     >
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 relative my-1 h-20 border-l"
+        class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 relative my-1 h-20 border-l"
       >
         <div
-          class="border-theme-secondary-300 bg-theme-background dark:border-theme-secondary-800 absolute top-1/2 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full border"
+          class="border-theme-secondary-300 bg-theme-background dark:border-theme-secondary-800 dim:border-theme-dim-700 absolute top-1/2 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full border"
         />
       </div>
       <div
@@ -2242,7 +2242,7 @@ exports[`FormStep > should render 1`] = `
           class="flex flex-col space-y-2 text-sm sm:flex-row sm:items-center sm:space-y-0 sm:space-x-2"
         >
           <span
-            class="border-theme-primary-600 text-theme-primary-600 mt-px mr-auto border-b border-dashed font-semibold"
+            class="border-theme-primary-600 text-theme-primary-600 dim:text-theme-dim-navy-600 dim:border-theme-dim-navy-600 mt-px mr-auto border-b border-dashed font-semibold"
           >
             Estimated Rate
             :
@@ -2252,7 +2252,7 @@ exports[`FormStep > should render 1`] = `
           </span>
         </div>
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 ml-auto"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600 ml-auto"
           data-testid="ExchangeForm__swap-button"
           disabled=""
           type="button"
@@ -2312,14 +2312,14 @@ exports[`FormStep > should render 1`] = `
               data-testid="SelectDropdown"
             >
               <div
-                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
               >
                 <div
                   class="relative flex h-full flex-1"
                 >
                   <input
                     autocomplete="off"
-                    class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
+                    class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
                     data-testid="select-list__input"
                     name="toCurrency"
                     readonly=""
@@ -2344,13 +2344,13 @@ exports[`FormStep > should render 1`] = `
                       id="toCurrency-label"
                     />
                     <div
-                      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 dim:border-theme-dim-700 dim:bg-theme-dim-950 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                     >
                       <div
                         class="hidden sm:block"
                       >
                         <div
-                          class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-8 w-8 px-2 py-1 text-sm ring-0 border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100"
+                          class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-8 w-8 px-2 py-1 text-sm ring-0 border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 dim:bg-theme-dim-800 dim:border-theme-dim-800 ring-theme-background duration-100"
                         />
                       </div>
                       <div
@@ -2361,7 +2361,7 @@ exports[`FormStep > should render 1`] = `
                           aria-controls="toCurrency-menu"
                           aria-labelledby="toCurrency-label"
                           autocomplete="off"
-                          class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base! cursor-default text-theme-secondary-text"
+                          class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! cursor-default text-theme-secondary-text"
                           data-testid="SelectDropdown__input"
                           disabled=""
                           id="toCurrency-input"
@@ -2372,7 +2372,7 @@ exports[`FormStep > should render 1`] = `
                         />
                       </div>
                       <div
-                        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
                         data-testid="Input__addon-end"
                       >
                         <div
@@ -2447,14 +2447,14 @@ exports[`FormStep > should render 1`] = `
               class="relative"
             >
               <div
-                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
               >
                 <div
                   class="relative flex h-full flex-1"
                 >
                   <input
                     autocomplete="off"
-                    class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
+                    class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
                     data-testid="InputCurrency"
                     name="payoutAmount"
                     placeholder="Enter an amount"
@@ -2483,7 +2483,7 @@ exports[`FormStep > should render 1`] = `
             >
               Recipient Wallet
               <button
-                class="link text-sm font-semibold"
+                class="link dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-500 text-sm font-semibold"
                 data-testid="ExchangeForm__add-refund-address"
                 type="button"
               >
@@ -2502,7 +2502,7 @@ exports[`FormStep > should render 1`] = `
                 data-testid="SelectDropdown"
               >
                 <div
-                  class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+                  class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -2510,7 +2510,7 @@ exports[`FormStep > should render 1`] = `
                     <input
                       aria-invalid="false"
                       autocomplete="off"
-                      class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
+                      class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
                       data-testid="select-list__input"
                       name="recipientWallet"
                       readonly=""
@@ -2535,7 +2535,7 @@ exports[`FormStep > should render 1`] = `
                         id="SelectRecipient__dropdown-label"
                       />
                       <div
-                        class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                        class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 dim:border-theme-dim-700 dim:bg-theme-dim-950 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                       >
                         <div
                           class="relative flex h-full flex-1"
@@ -2546,7 +2546,7 @@ exports[`FormStep > should render 1`] = `
                             aria-invalid="false"
                             aria-labelledby="SelectRecipient__dropdown-label"
                             autocomplete="off"
-                            class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base! cursor-default text-theme-secondary-text"
+                            class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! cursor-default text-theme-secondary-text"
                             data-testid="SelectDropdown__input"
                             disabled=""
                             id="SelectRecipient__dropdown-input"
@@ -2582,13 +2582,13 @@ exports[`ReviewStep > should render 1`] = `
     data-testid="ExchangeForm__review-step"
   >
     <div
-      class="border-theme-secondary-300 dark:border-theme-secondary-800 flex flex-col rounded-xl border"
+      class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 flex flex-col rounded-xl border"
     >
       <div
         class="flex flex-col gap-2 px-6 py-5"
       >
         <span
-          class="text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold"
+          class="text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 text-sm font-semibold"
         >
           You Send
         </span>
@@ -2613,10 +2613,10 @@ exports[`ReviewStep > should render 1`] = `
         </span>
       </div>
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 relative border-t"
+        class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 relative border-t"
       >
         <div
-          class="border-theme-secondary-300 bg-theme-background dark:border-theme-secondary-800 absolute top-1/2 right-6 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border"
+          class="border-theme-secondary-300 bg-theme-background dark:border-theme-secondary-800 dim:border-theme-dim-700 absolute top-1/2 right-6 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border"
         >
           <div
             class="text-theme-secondary-900 dark:text-white"
@@ -2669,7 +2669,7 @@ exports[`ReviewStep > should render 1`] = `
         class="flex flex-col gap-2 px-6 py-5"
       >
         <span
-          class="text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold"
+          class="text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 text-sm font-semibold"
         >
           You Get
         </span>
@@ -2699,7 +2699,7 @@ exports[`ReviewStep > should render 1`] = `
           class="flex cursor-pointer items-center space-x-3"
         >
           <input
-            class="custom-checkbox focus:ring-theme-primary-400! h-5! w-5! cursor-pointer rounded! border-2! transition duration-150 ease-in-out focus:ring-offset-0! not-checked:border-theme-secondary-300 not-checked:bg-white! dark:not-checked:border-theme-dark-500 dark:not-checked:bg-theme-dark-900! disabled:border-theme-secondary-300 disabled:bg-theme-secondary-200 disabled:checked:border-theme-secondary-300 disabled:checked:bg-theme-secondary-200 disabled:checked:text-theme-secondary-300 dark:disabled:border-theme-dark-600 dark:disabled:bg-theme-dark-800 dark:disabled:checked:border-theme-dark-600 dark:disabled:checked:bg-theme-dark-800 dark:disabled:checked:text-theme-dark-600 disabled:cursor-not-allowed checked:text-theme-primary-600 checked:hover:text-theme-primary-700 dark:checked:checked:text-theme-dark-navy-500 dark:checked:hover:text-theme-dark-navy-600 not-checked:hover:border-theme-primary-600 dark:not-checked:hover:border-theme-dark-navy-500"
+            class="custom-checkbox focus:ring-theme-primary-400! h-5! w-5! cursor-pointer rounded! border-2! transition duration-150 ease-in-out focus:ring-offset-0! not-checked:border-theme-secondary-300 not-checked:bg-white! dark:not-checked:border-theme-dark-500 dark:not-checked:bg-theme-dark-900! dim:not-checked:border-theme-dim-500 dim:not-checked:bg-theme-dim-900! disabled:border-theme-secondary-300 disabled:bg-theme-secondary-200 disabled:checked:border-theme-secondary-300 disabled:checked:bg-theme-secondary-200 disabled:checked:text-theme-secondary-300 dark:disabled:border-theme-dark-600 dark:disabled:bg-theme-dark-800 dark:disabled:checked:border-theme-dark-600 dark:disabled:checked:bg-theme-dark-800 dark:disabled:checked:text-theme-dark-600 dim:disabled:border-theme-dim-600 dim:disabled:bg-theme-dim-800 dim:disabled:checked:border-theme-dim-600 dim:disabled:checked:bg-theme-dim-800 dim:disabled:checked:text-theme-dim-600 disabled:cursor-not-allowed checked:text-theme-primary-600 checked:hover:text-theme-primary-700 dark:checked:checked:text-theme-dark-navy-500 dark:checked:hover:text-theme-dark-navy-600 not-checked:hover:border-theme-primary-600 dark:not-checked:hover:border-theme-dark-navy-500 dim:checked:text-theme-dim-navy-600 dim-hover:checked:text-theme-dim-navy-700 dim-hover:not-checked:border-theme-dim-navy-600"
             name="hasAgreedToTerms"
             type="checkbox"
           />
@@ -2708,7 +2708,7 @@ exports[`ReviewStep > should render 1`] = `
           >
             I've read and agree to the ChangeNOW 
             <a
-              class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
+              class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
               data-ring-focus-margin="-m-1"
               data-testid="Link"
               href="https://changenow.io/terms-of-use"
@@ -2749,7 +2749,7 @@ exports[`ReviewStep > should render 1`] = `
             </a>
              and 
             <a
-              class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
+              class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
               data-ring-focus-margin="-m-1"
               data-testid="Link"
               href="https://changenow.io/privacy-policy"
@@ -2806,7 +2806,7 @@ exports[`StatusStep > should render 1`] = `
       class="flex items-center space-x-1"
     >
       <span
-        class="text-theme-secondary-500 dark:text-theme-secondary-700 text-xs font-semibold"
+        class="text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 text-xs font-semibold"
       >
         ChangeNOW
          
@@ -2815,7 +2815,7 @@ exports[`StatusStep > should render 1`] = `
         id
       </span>
       <span
-        class="text-theme-primary-300 dark:text-theme-secondary-600 flex"
+        class="text-theme-primary-300 dark:text-theme-secondary-600 dim:text-theme-dim-navy-600 flex"
       >
         <button
           class="ring-focus relative cursor-pointer focus:outline-hidden"
@@ -2857,13 +2857,13 @@ exports[`StatusStep > should render 1`] = `
       </span>
     </div>
     <div
-      class="border-theme-secondary-300 dark:border-theme-secondary-800 mt-3 flex flex-col rounded-xl border p-4 sm:p-6"
+      class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 mt-3 flex flex-col rounded-xl border p-4 sm:p-6"
     >
       <div
         class="flex flex-col space-y-2"
       >
         <span
-          class="text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold"
+          class="text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 text-sm font-semibold"
         >
           You Send
         </span>
@@ -2875,10 +2875,10 @@ exports[`StatusStep > should render 1`] = `
         </span>
       </div>
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 mt-4 flex flex-col space-y-2 border-t pt-4"
+        class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 mt-4 flex flex-col space-y-2 border-t pt-4"
       >
         <span
-          class="text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold"
+          class="text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 text-sm font-semibold"
         >
           To Address
         </span>
@@ -2891,7 +2891,7 @@ exports[`StatusStep > should render 1`] = `
             payinAddress
           </span>
           <span
-            class="text-theme-primary-300 dark:text-theme-secondary-600 flex"
+            class="text-theme-primary-300 dark:text-theme-secondary-600 dim:text-theme-dim-navy-600 flex"
           >
             <button
               class="ring-focus relative cursor-pointer focus:outline-hidden"
@@ -2944,11 +2944,11 @@ exports[`StatusStep > should render 1`] = `
           data-testid="StatusIcon__spinner"
         >
           <div
-            class="animate-spin rounded-full border-[5px] shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black border-l-theme-primary-600 dark:border-l-theme-primary-600 h-6! w-6! border-[3px]!"
+            class="animate-spin rounded-full border-[5px] shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black dim:border-theme-dim-700 border-l-theme-primary-600 dark:border-l-theme-primary-600 dim:border-l-theme-dim-navy-600 h-6! w-6! border-[3px]!"
           />
         </span>
         <span
-          class="text-xs font-semibold whitespace-nowrap sm:text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+          class="text-xs font-semibold whitespace-nowrap sm:text-sm text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200"
         >
           Awaiting Deposit
         </span>
@@ -2957,18 +2957,18 @@ exports[`StatusStep > should render 1`] = `
         class="flex h-6 flex-1 items-center px-2"
       >
         <div
-          class="h-0.5 w-full rounded-l rounded-r bg-theme-secondary-300 dark:bg-theme-secondary-800"
+          class="h-0.5 w-full rounded-l rounded-r bg-theme-secondary-300 dark:bg-theme-secondary-800 dim:bg-theme-dim-700"
         />
       </div>
       <div
         class="flex w-6 flex-col items-center space-y-2"
       >
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 h-6 w-6 rounded-full border-2"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 h-6 w-6 rounded-full border-2"
           data-testid="StatusIcon__empty"
         />
         <span
-          class="text-xs font-semibold whitespace-nowrap sm:text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+          class="text-xs font-semibold whitespace-nowrap sm:text-sm text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200"
         >
           Exchanging
         </span>
@@ -2977,25 +2977,25 @@ exports[`StatusStep > should render 1`] = `
         class="flex h-6 flex-1 items-center px-2"
       >
         <div
-          class="h-0.5 w-full rounded-l rounded-r bg-theme-secondary-300 dark:bg-theme-secondary-800"
+          class="h-0.5 w-full rounded-l rounded-r bg-theme-secondary-300 dark:bg-theme-secondary-800 dim:bg-theme-dim-700"
         />
       </div>
       <div
         class="flex w-6 flex-col items-center space-y-2"
       >
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 h-6 w-6 rounded-full border-2"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 h-6 w-6 rounded-full border-2"
           data-testid="StatusIcon__empty"
         />
         <span
-          class="text-xs font-semibold whitespace-nowrap sm:text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+          class="text-xs font-semibold whitespace-nowrap sm:text-sm text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200"
         >
           Sending to you
         </span>
       </div>
     </div>
     <div
-      class="border-theme-secondary-300 dark:border-theme-secondary-800 -mx-10 border-t border-dashed px-10 pt-6"
+      class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 -mx-10 border-t border-dashed px-10 pt-6"
     />
     <div
       class="flex flex-col space-y-4"
@@ -3004,7 +3004,7 @@ exports[`StatusStep > should render 1`] = `
         class="flex flex-col space-y-2"
       >
         <span
-          class="text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold"
+          class="text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 text-sm font-semibold"
         >
           You Get
         </span>
@@ -3024,7 +3024,7 @@ exports[`StatusStep > should render 1`] = `
         class="flex flex-col space-y-2"
       >
         <span
-          class="text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold"
+          class="text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 text-sm font-semibold"
         >
           To Address
         </span>
@@ -3037,7 +3037,7 @@ exports[`StatusStep > should render 1`] = `
             payoutAddress
           </span>
           <span
-            class="text-theme-primary-300 dark:text-theme-secondary-600 flex"
+            class="text-theme-primary-300 dark:text-theme-secondary-600 dim:text-theme-dim-navy-600 flex"
           >
             <button
               class="ring-focus relative cursor-pointer focus:outline-hidden"
@@ -3081,11 +3081,11 @@ exports[`StatusStep > should render 1`] = `
       </div>
     </div>
     <div
-      class="bg-theme-secondary-100 dark:bg-theme-secondary-800 mt-6 rounded-lg px-6 py-3 text-xs"
+      class="bg-theme-secondary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-800 mt-6 rounded-lg px-6 py-3 text-xs"
     >
       If you have any question about your exchange, please contact ChangeNOW support team via email at 
       <a
-        class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
+        class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
         data-ring-focus-margin="-m-1"
         data-testid="Link"
         href="mailto:support@changenow.io"

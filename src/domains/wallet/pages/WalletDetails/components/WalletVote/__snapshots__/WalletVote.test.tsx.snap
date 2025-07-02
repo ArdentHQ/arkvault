@@ -11,11 +11,11 @@ exports[`WalletVote > should disable vote button when balance is less than votes
       data-testid="EmptyVotes"
     >
       <div
-        class="text-theme-secondary-700 dark:text-theme-dark-200 px-[22px] pb-4 text-center text-base font-semibold md:mt-0 md:px-0 md:pb-0 md:text-left"
+        class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 px-[22px] pb-4 text-center text-base font-semibold md:mt-0 md:px-0 md:pb-0 md:text-left"
       >
         You have not voted for a Validator yet. 
         <a
-          class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-flex items-center"
+          class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-flex items-center"
           data-ring-focus-margin="-m-1"
           data-testid="Link"
           href="https://arkvault.io/docs/transactions/vote"
@@ -64,7 +64,7 @@ exports[`WalletVote > should disable vote button when balance is less than votes
       class="w-full md:w-auto md:max-md:self-end"
     >
       <button
-        class="px-5 py-3 text-base relative items-center justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-primary-600 dark:text-theme-dark-navy-400 mt-4 hidden w-full space-x-2 disabled:bg-transparent md:mt-0 md:flex md:w-auto md:px-2 md:py-[3px] dark:disabled:bg-transparent"
+        class="px-5 py-3 text-base relative items-center justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600 text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 mt-4 hidden w-full space-x-2 disabled:bg-transparent md:mt-0 md:flex md:w-auto md:px-2 md:py-[3px] dark:disabled:bg-transparent"
         data-testid="WalletVote__button"
         disabled=""
         type="button"
@@ -108,7 +108,7 @@ exports[`WalletVote > should disable vote button when balance is less than votes
         </div>
       </button>
       <button
-        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-primary-600 w-full disabled:bg-transparent md:hidden dark:text-white dark:disabled:bg-transparent"
+        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600 text-theme-primary-600 dim:text-theme-dim-navy-600 w-full disabled:bg-transparent md:hidden dark:text-white dark:disabled:bg-transparent"
         data-testid="WalletVote__button_mobile"
         disabled=""
         type="button"
@@ -167,11 +167,11 @@ exports[`WalletVote > should render 1`] = `
       data-testid="EmptyVotes"
     >
       <div
-        class="text-theme-secondary-700 dark:text-theme-dark-200 px-[22px] pb-4 text-center text-base font-semibold md:mt-0 md:px-0 md:pb-0 md:text-left"
+        class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 px-[22px] pb-4 text-center text-base font-semibold md:mt-0 md:px-0 md:pb-0 md:text-left"
       >
         You have not voted for a Validator yet. 
         <a
-          class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-flex items-center"
+          class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-flex items-center"
           data-ring-focus-margin="-m-1"
           data-testid="Link"
           href="https://arkvault.io/docs/transactions/vote"
@@ -230,13 +230,13 @@ exports[`WalletVote > should render as all resigned 1`] = `
     data-testid="WalletVote"
   >
     <div
-      class="border-theme-secondary-300 dark:border-theme-dark-700 mb-3 flex w-full flex-col items-start justify-between gap-0 overflow-hidden rounded border md:mb-0 md:flex-row md:items-center md:gap-2 md:rounded-none md:border-none"
+      class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 mb-3 flex w-full flex-col items-start justify-between gap-0 overflow-hidden rounded border md:mb-0 md:flex-row md:items-center md:gap-2 md:rounded-none md:border-none"
     >
       <div
-        class="bg-theme-secondary-100 dark:bg-theme-dark-950 flex w-full flex-1 flex-row items-center gap-2 p-3 text-sm leading-[17px] font-semibold md:w-auto md:bg-transparent md:p-0 md:text-base md:leading-5 md:dark:bg-transparent"
+        class="bg-theme-secondary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 md:dim:bg-transparent flex w-full flex-1 flex-row items-center gap-2 p-3 text-sm leading-[17px] font-semibold md:w-auto md:bg-transparent md:p-0 md:text-base md:leading-5 md:dark:bg-transparent"
       >
         <p
-          class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm md:text-base md:leading-5"
+          class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm md:text-base md:leading-5"
         >
           Voting for
         </p>
@@ -247,7 +247,7 @@ exports[`WalletVote > should render as all resigned 1`] = `
             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
           >
             <span
-              class="no-ligatures min-w-0 overflow-hidden dark:text-theme-dark-50 text-sm md:text-base md:leading-5 font-semibold text-base"
+              class="no-ligatures min-w-0 overflow-hidden dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm md:text-base md:leading-5 font-semibold text-base"
               data-testid="Address__address"
             >
               0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
@@ -259,27 +259,27 @@ exports[`WalletVote > should render as all resigned 1`] = `
         class="flex flex-col gap-2 px-4 py-3 text-base leading-5 font-semibold md:flex-row md:items-center md:px-0 md:py-0"
       >
         <p
-          class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm md:text-base md:leading-5"
+          class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm md:text-base md:leading-5"
         >
           Rank
         </p>
         <p
-          class="text-theme-secondary-900 dark:text-theme-dark-50 mb-2 text-sm font-semibold md:mb-0 md:text-base md:leading-5"
+          class="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 mb-2 text-sm font-semibold md:mb-0 md:text-base md:leading-5"
         >
           N/A
         </p>
         <p
-          class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm md:hidden"
+          class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm md:hidden"
         >
           Validator Status
         </p>
         <div
-          class="font-semibold overflow-hidden no-ligatures px-1 border-2 rounded text-theme-danger-500 border-theme-danger-100 bg-theme-danger-100 flex h-fit w-fit items-center justify-center border-none py-0.5 text-xs dark:border-solid"
+          class="font-semibold overflow-hidden no-ligatures px-1 border-2 rounded text-theme-danger-500 border-theme-danger-100 bg-theme-danger-100 dim:border-solid flex h-fit w-fit items-center justify-center border-none py-0.5 text-xs dark:border-solid"
         >
           All Resigned
         </div>
         <div
-          class="relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-s-theme-dark-700 mr-3 ml-1 hidden h-5 p-0 md:flex"
+          class="relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-s-theme-dark-700 dim:border-s-theme-dim-700 mr-3 ml-1 hidden h-5 p-0 md:flex"
         />
       </div>
     </div>
@@ -287,7 +287,7 @@ exports[`WalletVote > should render as all resigned 1`] = `
       class="w-full md:w-auto md:max-md:self-end"
     >
       <button
-        class="px-5 py-3 text-base relative items-center justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-transparent dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white text-theme-primary-600 dark:text-theme-dark-navy-400 mt-4 hidden w-full space-x-2 disabled:bg-transparent md:mt-0 md:flex md:w-auto md:px-2 md:py-[3px] dark:disabled:bg-transparent"
+        class="px-5 py-3 text-base relative items-center justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-transparent dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim:bg-transparent text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 mt-4 hidden w-full space-x-2 disabled:bg-transparent md:mt-0 md:flex md:w-auto md:px-2 md:py-[3px] dark:disabled:bg-transparent"
         data-testid="WalletVote__button"
         type="button"
       >
@@ -330,7 +330,7 @@ exports[`WalletVote > should render as all resigned 1`] = `
         </div>
       </button>
       <button
-        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 bg-theme-primary-100 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 text-theme-primary-600 w-full disabled:bg-transparent md:hidden dark:text-white dark:disabled:bg-transparent"
+        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 bg-theme-primary-100 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white text-theme-primary-600 dim:text-theme-dim-navy-600 w-full disabled:bg-transparent md:hidden dark:text-white dark:disabled:bg-transparent"
         data-testid="WalletVote__button_mobile"
         type="button"
       >
@@ -388,11 +388,11 @@ exports[`WalletVote > should render disabled vote button 1`] = `
       data-testid="EmptyVotes"
     >
       <div
-        class="text-theme-secondary-700 dark:text-theme-dark-200 px-[22px] pb-4 text-center text-base font-semibold md:mt-0 md:px-0 md:pb-0 md:text-left"
+        class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 px-[22px] pb-4 text-center text-base font-semibold md:mt-0 md:px-0 md:pb-0 md:text-left"
       >
         You have not voted for a Validator yet. 
         <a
-          class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-flex items-center"
+          class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-flex items-center"
           data-ring-focus-margin="-m-1"
           data-testid="Link"
           href="https://arkvault.io/docs/transactions/vote"
@@ -441,7 +441,7 @@ exports[`WalletVote > should render disabled vote button 1`] = `
       class="w-full md:w-auto md:max-md:self-end"
     >
       <button
-        class="px-5 py-3 text-base relative items-center justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-primary-600 dark:text-theme-dark-navy-400 mt-4 hidden w-full space-x-2 disabled:bg-transparent md:mt-0 md:flex md:w-auto md:px-2 md:py-[3px] dark:disabled:bg-transparent"
+        class="px-5 py-3 text-base relative items-center justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600 text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 mt-4 hidden w-full space-x-2 disabled:bg-transparent md:mt-0 md:flex md:w-auto md:px-2 md:py-[3px] dark:disabled:bg-transparent"
         data-testid="WalletVote__button"
         disabled=""
         type="button"
@@ -485,7 +485,7 @@ exports[`WalletVote > should render disabled vote button 1`] = `
         </div>
       </button>
       <button
-        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-primary-600 w-full disabled:bg-transparent md:hidden dark:text-white dark:disabled:bg-transparent"
+        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600 text-theme-primary-600 dim:text-theme-dim-navy-600 w-full disabled:bg-transparent md:hidden dark:text-white dark:disabled:bg-transparent"
         data-testid="WalletVote__button_mobile"
         disabled=""
         type="button"
@@ -544,11 +544,11 @@ exports[`WalletVote > should render ledger for incompatible ledger wallet 1`] = 
       data-testid="EmptyVotes"
     >
       <div
-        class="text-theme-secondary-700 dark:text-theme-dark-200 px-[22px] pb-4 text-center text-base font-semibold md:mt-0 md:px-0 md:pb-0 md:text-left"
+        class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 px-[22px] pb-4 text-center text-base font-semibold md:mt-0 md:px-0 md:pb-0 md:text-left"
       >
         You have not voted for a Validator yet. 
         <a
-          class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-flex items-center"
+          class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-flex items-center"
           data-ring-focus-margin="-m-1"
           data-testid="Link"
           href="https://arkvault.io/docs/transactions/vote"
@@ -669,10 +669,10 @@ exports[`WalletVote > should render skeleton if loading 1`] = `
             <br />
           </span>
           <div
-            class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
+            class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
           />
           <button
-            class="px-5 py-3 text-base relative items-center justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-primary-600 dark:text-theme-dark-navy-400 mt-4 hidden w-full space-x-2 disabled:bg-transparent md:mt-0 md:flex md:w-auto md:px-2 md:py-[3px] dark:disabled:bg-transparent"
+            class="px-5 py-3 text-base relative items-center justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600 text-theme-primary-600 dark:text-theme-dark-navy-400 mt-4 hidden w-full space-x-2 disabled:bg-transparent md:mt-0 md:flex md:w-auto md:px-2 md:py-[3px] dark:disabled:bg-transparent"
             disabled=""
             type="button"
           >
@@ -766,11 +766,11 @@ exports[`WalletVote > should render the maximum votes 1`] = `
       data-testid="EmptyVotes"
     >
       <div
-        class="text-theme-secondary-700 dark:text-theme-dark-200 px-[22px] pb-4 text-center text-base font-semibold md:mt-0 md:px-0 md:pb-0 md:text-left"
+        class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 px-[22px] pb-4 text-center text-base font-semibold md:mt-0 md:px-0 md:pb-0 md:text-left"
       >
         You have not voted for a Validator yet. 
         <a
-          class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-flex items-center"
+          class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-flex items-center"
           data-ring-focus-margin="-m-1"
           data-testid="Link"
           href="https://arkvault.io/docs/transactions/vote"
@@ -819,7 +819,7 @@ exports[`WalletVote > should render the maximum votes 1`] = `
       class="w-full md:w-auto md:max-md:self-end"
     >
       <button
-        class="px-5 py-3 text-base relative items-center justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-transparent dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white text-theme-primary-600 dark:text-theme-dark-navy-400 mt-4 hidden w-full space-x-2 disabled:bg-transparent md:mt-0 md:flex md:w-auto md:px-2 md:py-[3px] dark:disabled:bg-transparent"
+        class="px-5 py-3 text-base relative items-center justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-transparent dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim:bg-transparent text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 mt-4 hidden w-full space-x-2 disabled:bg-transparent md:mt-0 md:flex md:w-auto md:px-2 md:py-[3px] dark:disabled:bg-transparent"
         data-testid="WalletVote__button"
         type="button"
       >
@@ -862,7 +862,7 @@ exports[`WalletVote > should render the maximum votes 1`] = `
         </div>
       </button>
       <button
-        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 bg-theme-primary-100 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 text-theme-primary-600 w-full disabled:bg-transparent md:hidden dark:text-white dark:disabled:bg-transparent"
+        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 bg-theme-primary-100 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white text-theme-primary-600 dim:text-theme-dim-navy-600 w-full disabled:bg-transparent md:hidden dark:text-white dark:disabled:bg-transparent"
         data-testid="WalletVote__button_mobile"
         type="button"
       >
@@ -920,11 +920,11 @@ exports[`WalletVote > should render without votes 1`] = `
       data-testid="EmptyVotes"
     >
       <div
-        class="text-theme-secondary-700 dark:text-theme-dark-200 px-[22px] pb-4 text-center text-base font-semibold md:mt-0 md:px-0 md:pb-0 md:text-left"
+        class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 px-[22px] pb-4 text-center text-base font-semibold md:mt-0 md:px-0 md:pb-0 md:text-left"
       >
         You have not voted for a Validator yet. 
         <a
-          class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-flex items-center"
+          class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-flex items-center"
           data-ring-focus-margin="-m-1"
           data-testid="Link"
           href="https://arkvault.io/docs/transactions/vote"
@@ -983,13 +983,13 @@ exports[`WalletVote > single vote networks > should render a vote for a standby 
     data-testid="WalletVote"
   >
     <div
-      class="border-theme-secondary-300 dark:border-theme-dark-700 mb-3 flex w-full flex-col items-start justify-between gap-0 overflow-hidden rounded border md:mb-0 md:flex-row md:items-center md:gap-2 md:rounded-none md:border-none"
+      class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 mb-3 flex w-full flex-col items-start justify-between gap-0 overflow-hidden rounded border md:mb-0 md:flex-row md:items-center md:gap-2 md:rounded-none md:border-none"
     >
       <div
-        class="bg-theme-secondary-100 dark:bg-theme-dark-950 flex w-full flex-1 flex-row items-center gap-2 p-3 text-sm leading-[17px] font-semibold md:w-auto md:bg-transparent md:p-0 md:text-base md:leading-5 md:dark:bg-transparent"
+        class="bg-theme-secondary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 md:dim:bg-transparent flex w-full flex-1 flex-row items-center gap-2 p-3 text-sm leading-[17px] font-semibold md:w-auto md:bg-transparent md:p-0 md:text-base md:leading-5 md:dark:bg-transparent"
       >
         <p
-          class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm md:text-base md:leading-5"
+          class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm md:text-base md:leading-5"
         >
           Voting for
         </p>
@@ -1000,7 +1000,7 @@ exports[`WalletVote > single vote networks > should render a vote for a standby 
             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
           >
             <span
-              class="no-ligatures min-w-0 overflow-hidden dark:text-theme-dark-50 text-sm md:text-base md:leading-5 font-semibold text-base"
+              class="no-ligatures min-w-0 overflow-hidden dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm md:text-base md:leading-5 font-semibold text-base"
               data-testid="Address__address"
             >
               0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
@@ -1012,27 +1012,27 @@ exports[`WalletVote > single vote networks > should render a vote for a standby 
         class="flex flex-col gap-2 px-4 py-3 text-base leading-5 font-semibold md:flex-row md:items-center md:px-0 md:py-0"
       >
         <p
-          class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm md:text-base md:leading-5"
+          class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm md:text-base md:leading-5"
         >
           Rank
         </p>
         <p
-          class="text-theme-secondary-900 dark:text-theme-dark-50 mb-2 text-sm font-semibold md:mb-0 md:text-base md:leading-5"
+          class="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 mb-2 text-sm font-semibold md:mb-0 md:text-base md:leading-5"
         >
           #54
         </p>
         <p
-          class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm md:hidden"
+          class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm md:hidden"
         >
           Validator Status
         </p>
         <div
-          class="font-semibold overflow-hidden no-ligatures px-1 border-2 rounded text-theme-warning-700 border-theme-danger-100 dark:border-theme-warning-700 flex h-fit w-fit items-center justify-center border-none py-0.5 text-xs dark:border-solid"
+          class="font-semibold overflow-hidden no-ligatures px-1 border-2 rounded text-theme-warning-700 border-theme-danger-100 dark:border-theme-warning-700 dim:border-solid flex h-fit w-fit items-center justify-center border-none py-0.5 text-xs dark:border-solid"
         >
           Standby
         </div>
         <div
-          class="relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-s-theme-dark-700 mr-3 ml-1 hidden h-5 p-0 md:flex"
+          class="relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-s-theme-dark-700 dim:border-s-theme-dim-700 mr-3 ml-1 hidden h-5 p-0 md:flex"
         />
       </div>
     </div>
@@ -1050,13 +1050,13 @@ exports[`WalletVote > single vote networks > should render a vote for a validato
     data-testid="WalletVote"
   >
     <div
-      class="border-theme-secondary-300 dark:border-theme-dark-700 mb-3 flex w-full flex-col items-start justify-between gap-0 overflow-hidden rounded border md:mb-0 md:flex-row md:items-center md:gap-2 md:rounded-none md:border-none"
+      class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 mb-3 flex w-full flex-col items-start justify-between gap-0 overflow-hidden rounded border md:mb-0 md:flex-row md:items-center md:gap-2 md:rounded-none md:border-none"
     >
       <div
-        class="bg-theme-secondary-100 dark:bg-theme-dark-950 flex w-full flex-1 flex-row items-center gap-2 p-3 text-sm leading-[17px] font-semibold md:w-auto md:bg-transparent md:p-0 md:text-base md:leading-5 md:dark:bg-transparent"
+        class="bg-theme-secondary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 md:dim:bg-transparent flex w-full flex-1 flex-row items-center gap-2 p-3 text-sm leading-[17px] font-semibold md:w-auto md:bg-transparent md:p-0 md:text-base md:leading-5 md:dark:bg-transparent"
       >
         <p
-          class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm md:text-base md:leading-5"
+          class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm md:text-base md:leading-5"
         >
           Voting for
         </p>
@@ -1067,7 +1067,7 @@ exports[`WalletVote > single vote networks > should render a vote for a validato
             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
           >
             <span
-              class="no-ligatures min-w-0 overflow-hidden dark:text-theme-dark-50 text-sm md:text-base md:leading-5 font-semibold text-base"
+              class="no-ligatures min-w-0 overflow-hidden dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm md:text-base md:leading-5 font-semibold text-base"
               data-testid="Address__address"
             >
               0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
@@ -1079,27 +1079,27 @@ exports[`WalletVote > single vote networks > should render a vote for a validato
         class="flex flex-col gap-2 px-4 py-3 text-base leading-5 font-semibold md:flex-row md:items-center md:px-0 md:py-0"
       >
         <p
-          class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm md:text-base md:leading-5"
+          class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm md:text-base md:leading-5"
         >
           Rank
         </p>
         <p
-          class="text-theme-secondary-900 dark:text-theme-dark-50 mb-2 text-sm font-semibold md:mb-0 md:text-base md:leading-5"
+          class="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 mb-2 text-sm font-semibold md:mb-0 md:text-base md:leading-5"
         >
           N/A
         </p>
         <p
-          class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm md:hidden"
+          class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm md:hidden"
         >
           Validator Status
         </p>
         <div
-          class="font-semibold overflow-hidden no-ligatures px-1 border-2 rounded text-theme-warning-700 border-theme-danger-100 dark:border-theme-warning-700 flex h-fit w-fit items-center justify-center border-none py-0.5 text-xs dark:border-solid"
+          class="font-semibold overflow-hidden no-ligatures px-1 border-2 rounded text-theme-warning-700 border-theme-danger-100 dark:border-theme-warning-700 dim:border-solid flex h-fit w-fit items-center justify-center border-none py-0.5 text-xs dark:border-solid"
         >
           Standby
         </div>
         <div
-          class="relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-s-theme-dark-700 mr-3 ml-1 hidden h-5 p-0 md:flex"
+          class="relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-s-theme-dark-700 dim:border-s-theme-dim-700 mr-3 ml-1 hidden h-5 p-0 md:flex"
         />
       </div>
     </div>
@@ -1107,7 +1107,7 @@ exports[`WalletVote > single vote networks > should render a vote for a validato
       class="w-full md:w-auto md:max-md:self-end"
     >
       <button
-        class="px-5 py-3 text-base relative items-center justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-transparent dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white text-theme-primary-600 dark:text-theme-dark-navy-400 mt-4 hidden w-full space-x-2 disabled:bg-transparent md:mt-0 md:flex md:w-auto md:px-2 md:py-[3px] dark:disabled:bg-transparent"
+        class="px-5 py-3 text-base relative items-center justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-transparent dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim:bg-transparent text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 mt-4 hidden w-full space-x-2 disabled:bg-transparent md:mt-0 md:flex md:w-auto md:px-2 md:py-[3px] dark:disabled:bg-transparent"
         data-testid="WalletVote__button"
         type="button"
       >
@@ -1150,7 +1150,7 @@ exports[`WalletVote > single vote networks > should render a vote for a validato
         </div>
       </button>
       <button
-        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 bg-theme-primary-100 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 text-theme-primary-600 w-full disabled:bg-transparent md:hidden dark:text-white dark:disabled:bg-transparent"
+        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 bg-theme-primary-100 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white text-theme-primary-600 dim:text-theme-dim-navy-600 w-full disabled:bg-transparent md:hidden dark:text-white dark:disabled:bg-transparent"
         data-testid="WalletVote__button_mobile"
         type="button"
       >
@@ -1204,13 +1204,13 @@ exports[`WalletVote > single vote networks > should render a vote for an active 
     data-testid="WalletVote"
   >
     <div
-      class="border-theme-secondary-300 dark:border-theme-dark-700 mb-3 flex w-full flex-col items-start justify-between gap-0 overflow-hidden rounded border md:mb-0 md:flex-row md:items-center md:gap-2 md:rounded-none md:border-none"
+      class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 mb-3 flex w-full flex-col items-start justify-between gap-0 overflow-hidden rounded border md:mb-0 md:flex-row md:items-center md:gap-2 md:rounded-none md:border-none"
     >
       <div
-        class="bg-theme-secondary-100 dark:bg-theme-dark-950 flex w-full flex-1 flex-row items-center gap-2 p-3 text-sm leading-[17px] font-semibold md:w-auto md:bg-transparent md:p-0 md:text-base md:leading-5 md:dark:bg-transparent"
+        class="bg-theme-secondary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 md:dim:bg-transparent flex w-full flex-1 flex-row items-center gap-2 p-3 text-sm leading-[17px] font-semibold md:w-auto md:bg-transparent md:p-0 md:text-base md:leading-5 md:dark:bg-transparent"
       >
         <p
-          class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm md:text-base md:leading-5"
+          class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm md:text-base md:leading-5"
         >
           Voting for
         </p>
@@ -1221,7 +1221,7 @@ exports[`WalletVote > single vote networks > should render a vote for an active 
             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
           >
             <span
-              class="no-ligatures min-w-0 overflow-hidden dark:text-theme-dark-50 text-sm md:text-base md:leading-5 font-semibold text-base"
+              class="no-ligatures min-w-0 overflow-hidden dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm md:text-base md:leading-5 font-semibold text-base"
               data-testid="Address__address"
             >
               0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
@@ -1233,27 +1233,27 @@ exports[`WalletVote > single vote networks > should render a vote for an active 
         class="flex flex-col gap-2 px-4 py-3 text-base leading-5 font-semibold md:flex-row md:items-center md:px-0 md:py-0"
       >
         <p
-          class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm md:text-base md:leading-5"
+          class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm md:text-base md:leading-5"
         >
           Rank
         </p>
         <p
-          class="text-theme-secondary-900 dark:text-theme-dark-50 mb-2 text-sm font-semibold md:mb-0 md:text-base md:leading-5"
+          class="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 mb-2 text-sm font-semibold md:mb-0 md:text-base md:leading-5"
         >
           #10
         </p>
         <p
-          class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm md:hidden"
+          class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm md:hidden"
         >
           Validator Status
         </p>
         <div
-          class="font-semibold overflow-hidden no-ligatures px-1 border-2 rounded bg-theme-success-100 text-theme-success-700 dark:border dark:bg-transparent dark:text-theme-success-500 dark:border-theme-success-800 flex h-fit w-fit items-center justify-center border-none py-0.5 text-xs dark:border-solid"
+          class="font-semibold overflow-hidden no-ligatures px-1 border-2 rounded bg-theme-success-100 text-theme-success-700 dark:border dark:bg-transparent dark:text-theme-success-500 dim:text-theme-success-500 dark:border-theme-success-800 dim:border-theme-success-800 flex h-fit w-fit items-center justify-center border-none py-0.5 text-xs dark:border-solid"
         >
           Active
         </div>
         <div
-          class="relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-s-theme-dark-700 mr-3 ml-1 hidden h-5 p-0 md:flex"
+          class="relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-s-theme-dark-700 dim:border-s-theme-dim-700 mr-3 ml-1 hidden h-5 p-0 md:flex"
         />
       </div>
     </div>
@@ -1261,7 +1261,7 @@ exports[`WalletVote > single vote networks > should render a vote for an active 
       class="w-full md:w-auto md:max-md:self-end"
     >
       <button
-        class="px-5 py-3 text-base relative items-center justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-transparent dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white text-theme-primary-600 dark:text-theme-dark-navy-400 mt-4 hidden w-full space-x-2 disabled:bg-transparent md:mt-0 md:flex md:w-auto md:px-2 md:py-[3px] dark:disabled:bg-transparent"
+        class="px-5 py-3 text-base relative items-center justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-transparent dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim:bg-transparent text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 mt-4 hidden w-full space-x-2 disabled:bg-transparent md:mt-0 md:flex md:w-auto md:px-2 md:py-[3px] dark:disabled:bg-transparent"
         data-testid="WalletVote__button"
         type="button"
       >
@@ -1304,7 +1304,7 @@ exports[`WalletVote > single vote networks > should render a vote for an active 
         </div>
       </button>
       <button
-        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 bg-theme-primary-100 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 text-theme-primary-600 w-full disabled:bg-transparent md:hidden dark:text-white dark:disabled:bg-transparent"
+        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 bg-theme-primary-100 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white text-theme-primary-600 dim:text-theme-dim-navy-600 w-full disabled:bg-transparent md:hidden dark:text-white dark:disabled:bg-transparent"
         data-testid="WalletVote__button_mobile"
         type="button"
       >

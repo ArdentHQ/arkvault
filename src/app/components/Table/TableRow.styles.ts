@@ -12,7 +12,7 @@ const getBorderStyles = (border?: boolean, dotted?: boolean) => {
 	}
 
 	return [
-		`border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800`,
+		`border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700`,
 		dotted ? `border-dotted` : `border-dashed`,
 	].join(" ");
 };
