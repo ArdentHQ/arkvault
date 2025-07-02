@@ -79,7 +79,12 @@ export const FormStep = ({
 				title={t("MESSAGE.PAGE_VERIFY_MESSAGE.FORM_STEP.TITLE")}
 				subtitle={t("MESSAGE.PAGE_VERIFY_MESSAGE.FORM_STEP.DESCRIPTION")}
 				titleIcon={
-					<ThemeIcon dimensions={[24, 24]} lightIcon="SendTransactionLight" darkIcon="SendTransactionDark" />
+					<ThemeIcon
+						dimensions={[24, 24]}
+						lightIcon="SendTransactionLight"
+						darkIcon="SendTransactionDark"
+						dimIcon="SendTransactionDim"
+					/>
 				}
 			/>
 
@@ -87,7 +92,7 @@ export const FormStep = ({
 				{t("MESSAGE.PAGE_VERIFY_MESSAGE.FORM_STEP.VERIFICATION_METHOD.TITLE")}
 			</span>
 
-			<span className="text-theme-secondary-500 dark:text-theme-secondary-700 hidden text-sm font-medium sm:block">
+			<span className="text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-700 hidden text-sm font-medium sm:block">
 				{t("MESSAGE.PAGE_VERIFY_MESSAGE.FORM_STEP.VERIFICATION_METHOD.DESCRIPTION")}
 			</span>
 

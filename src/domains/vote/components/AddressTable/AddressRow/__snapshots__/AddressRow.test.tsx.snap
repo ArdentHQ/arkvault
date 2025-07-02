@@ -5,14 +5,14 @@ exports[`AddressRow > should emit action on select button 1`] = `
   <table>
     <tbody>
       <tr
-        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group last:border-theme-secondary-200 dark:last:border-theme-secondary-800 relative last:border-b-4! last:border-solid"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-dashed group last:border-theme-secondary-200 dark:last:border-theme-secondary-800 relative last:border-b-4! last:border-solid"
         data-testid="TableRow"
       >
         <td
           data-testid="AddressRow__wallet"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 cursor-pointer group space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 cursor-pointer group space-x-3"
           >
             <div
               class="w-40 flex-1"
@@ -21,7 +21,7 @@ exports[`AddressRow > should emit action on select button 1`] = `
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight text-sm"
+                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight text-sm dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700"
                   data-testid="Address__alias"
                 >
                   <span
@@ -44,7 +44,7 @@ exports[`AddressRow > should emit action on select button 1`] = `
                   type="button"
                 >
                   <div
-                    class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+                    class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
                   >
                     <div
                       style="height: 16px; width: 16px;"
@@ -84,7 +84,7 @@ exports[`AddressRow > should emit action on select button 1`] = `
           class="hidden xl:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               class="whitespace-nowrap"
@@ -96,14 +96,14 @@ exports[`AddressRow > should emit action on select button 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm font-semibold space-x-3"
+            class="px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm font-semibold space-x-3 flex justify-end"
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
               data-testid="AddressRow__wallet-vote"
             >
               <a
-                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500 w-24 truncate md:w-auto"
+                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500 dim:[&_svg]:text-theme-dim-500 w-24 truncate md:w-auto"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href="https://explorer-evm-test.mainsailhq.com/addresses/0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2"
@@ -154,7 +154,7 @@ exports[`AddressRow > should emit action on select button 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center font-semibold text-theme-secondary-text"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm justify-center font-semibold text-theme-secondary-text"
           >
             <span>
               #21
@@ -163,7 +163,7 @@ exports[`AddressRow > should emit action on select button 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm justify-center"
           >
             <div
               class="bg-theme-success-100 text-theme-success-700 dark:border-theme-success-800 dark:text-theme-success-500 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
@@ -175,11 +175,11 @@ exports[`AddressRow > should emit action on select button 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end"
           >
             <div>
               <button
-                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 -mr-3 text-sm hover:underline"
+                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 dim:disabled:text-theme-dim-500 dim-hover:disabled:text-theme-dim-500 -mr-3 text-sm hover:underline"
                 data-testid="AddressRow__select-0"
                 type="button"
               >
@@ -203,14 +203,14 @@ exports[`AddressRow > should render 1`] = `
   <table>
     <tbody>
       <tr
-        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group last:border-theme-secondary-200 dark:last:border-theme-secondary-800 relative last:border-b-4! last:border-solid"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-dashed group last:border-theme-secondary-200 dark:last:border-theme-secondary-800 relative last:border-b-4! last:border-solid"
         data-testid="TableRow"
       >
         <td
           data-testid="AddressRow__wallet"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 cursor-pointer group space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 cursor-pointer group space-x-3"
           >
             <div
               class="w-40 flex-1"
@@ -219,7 +219,7 @@ exports[`AddressRow > should render 1`] = `
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight text-sm"
+                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight text-sm dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700"
                   data-testid="Address__alias"
                 >
                   <span
@@ -242,7 +242,7 @@ exports[`AddressRow > should render 1`] = `
                   type="button"
                 >
                   <div
-                    class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+                    class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
                   >
                     <div
                       style="height: 16px; width: 16px;"
@@ -282,7 +282,7 @@ exports[`AddressRow > should render 1`] = `
           class="hidden xl:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               class="whitespace-nowrap"
@@ -294,14 +294,14 @@ exports[`AddressRow > should render 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm font-semibold space-x-3"
+            class="px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm font-semibold space-x-3 flex justify-end"
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
               data-testid="AddressRow__wallet-vote"
             >
               <a
-                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500 w-24 truncate md:w-auto"
+                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500 dim:[&_svg]:text-theme-dim-500 w-24 truncate md:w-auto"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href="https://explorer-evm-test.mainsailhq.com/addresses/0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2"
@@ -352,7 +352,7 @@ exports[`AddressRow > should render 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center font-semibold text-theme-secondary-text"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm justify-center font-semibold text-theme-secondary-text"
           >
             <span>
               #21
@@ -361,7 +361,7 @@ exports[`AddressRow > should render 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm justify-center"
           >
             <div
               class="bg-theme-success-100 text-theme-success-700 dark:border-theme-success-800 dark:text-theme-success-500 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
@@ -373,11 +373,11 @@ exports[`AddressRow > should render 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end"
           >
             <div>
               <button
-                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 -mr-3 text-sm hover:underline"
+                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 dim:disabled:text-theme-dim-500 dim-hover:disabled:text-theme-dim-500 -mr-3 text-sm hover:underline"
                 data-testid="AddressRow__select-0"
                 type="button"
               >
@@ -401,14 +401,14 @@ exports[`AddressRow > should render tooltip wallet when ledger and incompatible 
   <table>
     <tbody>
       <tr
-        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group last:border-theme-secondary-200 dark:last:border-theme-secondary-800 relative last:border-b-4! last:border-solid"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-dashed group last:border-theme-secondary-200 dark:last:border-theme-secondary-800 relative last:border-b-4! last:border-solid"
         data-testid="TableRow"
       >
         <td
           data-testid="AddressRow__wallet"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 cursor-pointer group space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 cursor-pointer group space-x-3"
           >
             <div
               class="w-40 flex-1"
@@ -417,7 +417,7 @@ exports[`AddressRow > should render tooltip wallet when ledger and incompatible 
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight text-sm"
+                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight text-sm dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700"
                   data-testid="Address__alias"
                 >
                   <span
@@ -440,7 +440,7 @@ exports[`AddressRow > should render tooltip wallet when ledger and incompatible 
                   type="button"
                 >
                   <div
-                    class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+                    class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
                   >
                     <div
                       style="height: 16px; width: 16px;"
@@ -480,7 +480,7 @@ exports[`AddressRow > should render tooltip wallet when ledger and incompatible 
           class="hidden xl:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               class="whitespace-nowrap"
@@ -492,14 +492,14 @@ exports[`AddressRow > should render tooltip wallet when ledger and incompatible 
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm font-semibold space-x-3"
+            class="px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm font-semibold space-x-3 flex justify-end"
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
               data-testid="AddressRow__wallet-vote"
             >
               <a
-                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500 w-24 truncate md:w-auto"
+                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500 dim:[&_svg]:text-theme-dim-500 w-24 truncate md:w-auto"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href="https://explorer-evm-test.mainsailhq.com/addresses/0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2"
@@ -550,7 +550,7 @@ exports[`AddressRow > should render tooltip wallet when ledger and incompatible 
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center font-semibold text-theme-secondary-text"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm justify-center font-semibold text-theme-secondary-text"
           >
             <span>
               #21
@@ -559,7 +559,7 @@ exports[`AddressRow > should render tooltip wallet when ledger and incompatible 
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm justify-center"
           >
             <div
               class="bg-theme-success-100 text-theme-success-700 dark:border-theme-success-800 dark:text-theme-success-500 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
@@ -571,11 +571,11 @@ exports[`AddressRow > should render tooltip wallet when ledger and incompatible 
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end"
           >
             <div>
               <button
-                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 -mr-3 text-sm hover:underline"
+                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 dim:disabled:text-theme-dim-500 dim-hover:disabled:text-theme-dim-500 -mr-3 text-sm hover:underline"
                 data-testid="AddressRow__select-0"
                 disabled=""
                 type="button"
@@ -600,14 +600,14 @@ exports[`AddressRow > should render when the maximum votes is greater than 1 1`]
   <table>
     <tbody>
       <tr
-        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group last:border-theme-secondary-200 dark:last:border-theme-secondary-800 relative last:border-b-4! last:border-solid"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-dashed group last:border-theme-secondary-200 dark:last:border-theme-secondary-800 relative last:border-b-4! last:border-solid"
         data-testid="TableRow"
       >
         <td
           data-testid="AddressRow__wallet"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 cursor-pointer group space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 cursor-pointer group space-x-3"
           >
             <div
               class="w-40 flex-1"
@@ -616,7 +616,7 @@ exports[`AddressRow > should render when the maximum votes is greater than 1 1`]
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight text-sm"
+                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight text-sm dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700"
                   data-testid="Address__alias"
                 >
                   <span
@@ -639,7 +639,7 @@ exports[`AddressRow > should render when the maximum votes is greater than 1 1`]
                   type="button"
                 >
                   <div
-                    class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+                    class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
                   >
                     <div
                       style="height: 16px; width: 16px;"
@@ -679,7 +679,7 @@ exports[`AddressRow > should render when the maximum votes is greater than 1 1`]
           class="hidden xl:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               class="whitespace-nowrap"
@@ -691,10 +691,10 @@ exports[`AddressRow > should render when the maximum votes is greater than 1 1`]
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm font-semibold space-x-3"
+            class="px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm font-semibold space-x-3 flex justify-end"
           >
             <span
-              class="text-theme-secondary-400"
+              class="text-theme-secondary-400 dim:text-theme-dim-500"
             >
               N/A
             </span>
@@ -702,7 +702,7 @@ exports[`AddressRow > should render when the maximum votes is greater than 1 1`]
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm justify-center"
           >
             <div
               class="text-theme-secondary-400 font-semibold"
@@ -720,11 +720,11 @@ exports[`AddressRow > should render when the maximum votes is greater than 1 1`]
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end"
           >
             <div>
               <button
-                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 -mr-3 text-sm hover:underline"
+                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 dim:disabled:text-theme-dim-500 dim-hover:disabled:text-theme-dim-500 -mr-3 text-sm hover:underline"
                 data-testid="AddressRow__select-0"
                 type="button"
               >
@@ -748,14 +748,14 @@ exports[`AddressRow > should render when the wallet has exactly 4 votes 1`] = `
   <table>
     <tbody>
       <tr
-        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group last:border-theme-secondary-200 dark:last:border-theme-secondary-800 relative last:border-b-4! last:border-solid"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-dashed group last:border-theme-secondary-200 dark:last:border-theme-secondary-800 relative last:border-b-4! last:border-solid"
         data-testid="TableRow"
       >
         <td
           data-testid="AddressRow__wallet"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 cursor-pointer group space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 cursor-pointer group space-x-3"
           >
             <div
               class="w-40 flex-1"
@@ -764,7 +764,7 @@ exports[`AddressRow > should render when the wallet has exactly 4 votes 1`] = `
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight text-sm"
+                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight text-sm dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700"
                   data-testid="Address__alias"
                 >
                   <span
@@ -787,7 +787,7 @@ exports[`AddressRow > should render when the wallet has exactly 4 votes 1`] = `
                   type="button"
                 >
                   <div
-                    class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+                    class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
                   >
                     <div
                       style="height: 16px; width: 16px;"
@@ -827,7 +827,7 @@ exports[`AddressRow > should render when the wallet has exactly 4 votes 1`] = `
           class="hidden xl:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               class="whitespace-nowrap"
@@ -839,7 +839,7 @@ exports[`AddressRow > should render when the wallet has exactly 4 votes 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm font-semibold space-x-3"
+            class="px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm font-semibold space-x-3 flex justify-end"
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
@@ -855,7 +855,7 @@ exports[`AddressRow > should render when the wallet has exactly 4 votes 1`] = `
                 </span>
               </div>
               <a
-                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500 w-24 truncate md:w-auto"
+                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500 dim:[&_svg]:text-theme-dim-500 w-24 truncate md:w-auto"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href="https://test.arkscan.io/wallets/0xB8Be76b31E402a2D89294Aa107056484Bef94362"
@@ -904,7 +904,7 @@ exports[`AddressRow > should render when the wallet has exactly 4 votes 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm justify-center"
           >
             <div
               class="text-theme-secondary-400 font-semibold"
@@ -922,11 +922,11 @@ exports[`AddressRow > should render when the wallet has exactly 4 votes 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end"
           >
             <div>
               <button
-                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 -mr-3 text-sm hover:underline"
+                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 dim:disabled:text-theme-dim-500 dim-hover:disabled:text-theme-dim-500 -mr-3 text-sm hover:underline"
                 data-testid="AddressRow__select-0"
                 type="button"
               >
@@ -950,14 +950,14 @@ exports[`AddressRow > should render when the wallet has many votes 1`] = `
   <table>
     <tbody>
       <tr
-        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group last:border-theme-secondary-200 dark:last:border-theme-secondary-800 relative last:border-b-4! last:border-solid"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-dashed group last:border-theme-secondary-200 dark:last:border-theme-secondary-800 relative last:border-b-4! last:border-solid"
         data-testid="TableRow"
       >
         <td
           data-testid="AddressRow__wallet"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 cursor-pointer group space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 cursor-pointer group space-x-3"
           >
             <div
               class="w-40 flex-1"
@@ -966,7 +966,7 @@ exports[`AddressRow > should render when the wallet has many votes 1`] = `
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight text-sm"
+                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight text-sm dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700"
                   data-testid="Address__alias"
                 >
                   <span
@@ -989,7 +989,7 @@ exports[`AddressRow > should render when the wallet has many votes 1`] = `
                   type="button"
                 >
                   <div
-                    class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+                    class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
                   >
                     <div
                       style="height: 16px; width: 16px;"
@@ -1029,7 +1029,7 @@ exports[`AddressRow > should render when the wallet has many votes 1`] = `
           class="hidden xl:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               class="whitespace-nowrap"
@@ -1041,7 +1041,7 @@ exports[`AddressRow > should render when the wallet has many votes 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm font-semibold space-x-3"
+            class="px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm font-semibold space-x-3 flex justify-end"
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
@@ -1057,7 +1057,7 @@ exports[`AddressRow > should render when the wallet has many votes 1`] = `
                 </span>
               </div>
               <a
-                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500 w-24 truncate md:w-auto"
+                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500 dim:[&_svg]:text-theme-dim-500 w-24 truncate md:w-auto"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href="https://test.arkscan.io/wallets/0xB8Be76b31E402a2D89294Aa107056484Bef94362"
@@ -1106,7 +1106,7 @@ exports[`AddressRow > should render when the wallet has many votes 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm justify-center"
           >
             <div
               class="text-theme-secondary-400 font-semibold"
@@ -1124,11 +1124,11 @@ exports[`AddressRow > should render when the wallet has many votes 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end"
           >
             <div>
               <button
-                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 -mr-3 text-sm hover:underline"
+                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 dim:disabled:text-theme-dim-500 dim-hover:disabled:text-theme-dim-500 -mr-3 text-sm hover:underline"
                 data-testid="AddressRow__select-0"
                 type="button"
               >
@@ -1152,14 +1152,14 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
   <table>
     <tbody>
       <tr
-        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group last:border-theme-secondary-200 dark:last:border-theme-secondary-800 relative last:border-b-4! last:border-solid"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-dashed group last:border-theme-secondary-200 dark:last:border-theme-secondary-800 relative last:border-b-4! last:border-solid"
         data-testid="TableRow"
       >
         <td
           data-testid="AddressRow__wallet"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 cursor-pointer group space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 cursor-pointer group space-x-3"
           >
             <div
               class="w-40 flex-1"
@@ -1168,7 +1168,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight text-sm"
+                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight text-sm dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700"
                   data-testid="Address__alias"
                 >
                   <span
@@ -1191,7 +1191,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
                   type="button"
                 >
                   <div
-                    class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+                    class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
                   >
                     <div
                       style="height: 16px; width: 16px;"
@@ -1231,7 +1231,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
           class="hidden xl:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               class="whitespace-nowrap"
@@ -1243,14 +1243,14 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm font-semibold space-x-3"
+            class="px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm font-semibold space-x-3 flex justify-end"
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
               data-testid="AddressRow__wallet-vote"
             >
               <a
-                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500 w-24 truncate md:w-auto"
+                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500 dim:[&_svg]:text-theme-dim-500 w-24 truncate md:w-auto"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href="https://explorer-evm-test.mainsailhq.com/addresses/0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2"
@@ -1301,7 +1301,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center font-semibold text-theme-secondary-text"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm justify-center font-semibold text-theme-secondary-text"
           >
             <span>
               #21
@@ -1310,7 +1310,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm justify-center"
           >
             <div
               class="bg-theme-success-100 text-theme-success-700 dark:border-theme-success-800 dark:text-theme-success-500 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
@@ -1322,11 +1322,11 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end"
           >
             <div>
               <button
-                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 -mr-3 text-sm hover:underline"
+                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 dim:disabled:text-theme-dim-500 dim-hover:disabled:text-theme-dim-500 -mr-3 text-sm hover:underline"
                 data-testid="AddressRow__select-0"
                 type="button"
               >
@@ -1341,14 +1341,14 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
         </td>
       </tr>
       <tr
-        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group last:border-theme-secondary-200 dark:last:border-theme-secondary-800 relative last:border-b-4! last:border-solid"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-dashed group last:border-theme-secondary-200 dark:last:border-theme-secondary-800 relative last:border-b-4! last:border-solid"
         data-testid="TableRow"
       >
         <td
           data-testid="AddressRow__wallet"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 cursor-pointer group space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 cursor-pointer group space-x-3"
           >
             <div
               class="w-40 flex-1"
@@ -1369,7 +1369,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
                   type="button"
                 >
                   <div
-                    class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+                    class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
                   >
                     <div
                       style="height: 16px; width: 16px;"
@@ -1409,7 +1409,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
           class="hidden xl:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               class="whitespace-nowrap"
@@ -1421,10 +1421,10 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm font-semibold space-x-3"
+            class="px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm font-semibold space-x-3 flex justify-end"
           >
             <span
-              class="text-theme-secondary-400"
+              class="text-theme-secondary-400 dim:text-theme-dim-500"
             >
               N/A
             </span>
@@ -1434,21 +1434,21 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center font-semibold text-theme-secondary-text"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm justify-center font-semibold text-theme-secondary-text"
           />
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm justify-center"
           />
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end"
           >
             <div>
               <button
-                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 -mr-3 text-sm hover:underline"
+                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 dim:disabled:text-theme-dim-500 dim-hover:disabled:text-theme-dim-500 -mr-3 text-sm hover:underline"
                 data-testid="AddressRow__select-1"
                 disabled=""
                 type="button"
@@ -1473,14 +1473,14 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
   <table>
     <tbody>
       <tr
-        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group last:border-theme-secondary-200 dark:last:border-theme-secondary-800 relative last:border-b-4! last:border-solid"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-dashed group last:border-theme-secondary-200 dark:last:border-theme-secondary-800 relative last:border-b-4! last:border-solid"
         data-testid="TableRow"
       >
         <td
           data-testid="AddressRow__wallet"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 cursor-pointer group space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 cursor-pointer group space-x-3"
           >
             <div
               class="w-40 flex-1"
@@ -1489,7 +1489,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight text-sm"
+                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight text-sm dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700"
                   data-testid="Address__alias"
                 >
                   <span
@@ -1512,7 +1512,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
                   type="button"
                 >
                   <div
-                    class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+                    class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
                   >
                     <div
                       style="height: 16px; width: 16px;"
@@ -1552,7 +1552,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
           class="hidden xl:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               class="whitespace-nowrap"
@@ -1564,14 +1564,14 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm font-semibold space-x-3"
+            class="px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm font-semibold space-x-3 flex justify-end"
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
               data-testid="AddressRow__wallet-vote"
             >
               <a
-                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500 w-24 truncate md:w-auto"
+                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500 dim:[&_svg]:text-theme-dim-500 w-24 truncate md:w-auto"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href="https://explorer-evm-test.mainsailhq.com/addresses/0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2"
@@ -1622,7 +1622,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center font-semibold text-theme-secondary-text"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm justify-center font-semibold text-theme-secondary-text"
           >
             <span>
               #21
@@ -1631,7 +1631,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm justify-center"
           >
             <div
               class="bg-theme-success-100 text-theme-success-700 dark:border-theme-success-800 dark:text-theme-success-500 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
@@ -1643,11 +1643,11 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end"
           >
             <div>
               <button
-                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 -mr-3 text-sm hover:underline"
+                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 dim:disabled:text-theme-dim-500 dim-hover:disabled:text-theme-dim-500 -mr-3 text-sm hover:underline"
                 data-testid="AddressRow__select-0"
                 type="button"
               >
@@ -1662,14 +1662,14 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
         </td>
       </tr>
       <tr
-        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group last:border-theme-secondary-200 dark:last:border-theme-secondary-800 relative last:border-b-4! last:border-solid"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-dashed group last:border-theme-secondary-200 dark:last:border-theme-secondary-800 relative last:border-b-4! last:border-solid"
         data-testid="TableRow"
       >
         <td
           data-testid="AddressRow__wallet"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 cursor-pointer group space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 cursor-pointer group space-x-3"
           >
             <div
               class="w-40 flex-1"
@@ -1690,7 +1690,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
                   type="button"
                 >
                   <div
-                    class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+                    class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
                   >
                     <div
                       style="height: 16px; width: 16px;"
@@ -1730,7 +1730,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
           class="hidden xl:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               class="whitespace-nowrap"
@@ -1742,10 +1742,10 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm font-semibold space-x-3"
+            class="px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm font-semibold space-x-3 flex justify-end"
           >
             <span
-              class="text-theme-secondary-400"
+              class="text-theme-secondary-400 dim:text-theme-dim-500"
             >
               N/A
             </span>
@@ -1755,21 +1755,21 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center font-semibold text-theme-secondary-text"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm justify-center font-semibold text-theme-secondary-text"
           />
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm justify-center"
           />
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end"
           >
             <div>
               <button
-                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 -mr-3 text-sm hover:underline"
+                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 dim:disabled:text-theme-dim-500 dim-hover:disabled:text-theme-dim-500 -mr-3 text-sm hover:underline"
                 data-testid="AddressRow__select-1"
                 disabled=""
                 type="button"
@@ -1794,14 +1794,14 @@ exports[`AddressRow > should render with active validator 1`] = `
   <table>
     <tbody>
       <tr
-        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group last:border-theme-secondary-200 dark:last:border-theme-secondary-800 relative last:border-b-4! last:border-solid"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-dashed group last:border-theme-secondary-200 dark:last:border-theme-secondary-800 relative last:border-b-4! last:border-solid"
         data-testid="TableRow"
       >
         <td
           data-testid="AddressRow__wallet"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 cursor-pointer group space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 cursor-pointer group space-x-3"
           >
             <div
               class="w-40 flex-1"
@@ -1810,7 +1810,7 @@ exports[`AddressRow > should render with active validator 1`] = `
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight text-sm"
+                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight text-sm dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700"
                   data-testid="Address__alias"
                 >
                   <span
@@ -1833,7 +1833,7 @@ exports[`AddressRow > should render with active validator 1`] = `
                   type="button"
                 >
                   <div
-                    class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+                    class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
                   >
                     <div
                       style="height: 16px; width: 16px;"
@@ -1873,7 +1873,7 @@ exports[`AddressRow > should render with active validator 1`] = `
           class="hidden xl:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               class="whitespace-nowrap"
@@ -1885,14 +1885,14 @@ exports[`AddressRow > should render with active validator 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm font-semibold space-x-3"
+            class="px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm font-semibold space-x-3 flex justify-end"
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
               data-testid="AddressRow__wallet-vote"
             >
               <a
-                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500 w-24 truncate md:w-auto"
+                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500 dim:[&_svg]:text-theme-dim-500 w-24 truncate md:w-auto"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href=""
@@ -1943,7 +1943,7 @@ exports[`AddressRow > should render with active validator 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center font-semibold text-theme-secondary-text"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm justify-center font-semibold text-theme-secondary-text"
           >
             <span>
               #1
@@ -1952,7 +1952,7 @@ exports[`AddressRow > should render with active validator 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm justify-center"
           >
             <div
               class="bg-theme-success-100 text-theme-success-700 dark:border-theme-success-800 dark:text-theme-success-500 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
@@ -1964,11 +1964,11 @@ exports[`AddressRow > should render with active validator 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end"
           >
             <div>
               <button
-                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 -mr-3 text-sm hover:underline"
+                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 dim:disabled:text-theme-dim-500 dim-hover:disabled:text-theme-dim-500 -mr-3 text-sm hover:underline"
                 data-testid="AddressRow__select-0"
                 type="button"
               >
@@ -1992,14 +1992,14 @@ exports[`AddressRow > should render with resigned validator 1`] = `
   <table>
     <tbody>
       <tr
-        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group last:border-theme-secondary-200 dark:last:border-theme-secondary-800 relative last:border-b-4! last:border-solid"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-dashed group last:border-theme-secondary-200 dark:last:border-theme-secondary-800 relative last:border-b-4! last:border-solid"
         data-testid="TableRow"
       >
         <td
           data-testid="AddressRow__wallet"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 cursor-pointer group space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 cursor-pointer group space-x-3"
           >
             <div
               class="w-40 flex-1"
@@ -2008,7 +2008,7 @@ exports[`AddressRow > should render with resigned validator 1`] = `
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight text-sm"
+                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight text-sm dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700"
                   data-testid="Address__alias"
                 >
                   <span
@@ -2031,7 +2031,7 @@ exports[`AddressRow > should render with resigned validator 1`] = `
                   type="button"
                 >
                   <div
-                    class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+                    class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
                   >
                     <div
                       style="height: 16px; width: 16px;"
@@ -2071,7 +2071,7 @@ exports[`AddressRow > should render with resigned validator 1`] = `
           class="hidden xl:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               class="whitespace-nowrap"
@@ -2083,14 +2083,14 @@ exports[`AddressRow > should render with resigned validator 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm font-semibold space-x-3"
+            class="px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm font-semibold space-x-3 flex justify-end"
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
               data-testid="AddressRow__wallet-vote"
             >
               <a
-                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500 w-24 truncate md:w-auto"
+                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500 dim:[&_svg]:text-theme-dim-500 w-24 truncate md:w-auto"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href=""
@@ -2141,10 +2141,10 @@ exports[`AddressRow > should render with resigned validator 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center font-semibold text-theme-secondary-text"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm justify-center font-semibold text-theme-secondary-text"
           >
             <span
-              class="text-theme-secondary-400"
+              class="text-theme-secondary-400 dim:text-theme-dim-500"
             >
               N/A
             </span>
@@ -2152,7 +2152,7 @@ exports[`AddressRow > should render with resigned validator 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm justify-center"
           >
             <div
               class="bg-theme-warning-100 text-theme-warning-900 dark:border-theme-danger-info-border dark:text-theme-danger-info-text inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
@@ -2164,11 +2164,11 @@ exports[`AddressRow > should render with resigned validator 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end"
           >
             <div>
               <button
-                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 -mr-3 text-sm hover:underline"
+                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 dim:disabled:text-theme-dim-500 dim-hover:disabled:text-theme-dim-500 -mr-3 text-sm hover:underline"
                 data-testid="AddressRow__select-0"
                 type="button"
               >
@@ -2192,14 +2192,14 @@ exports[`AddressRow > should render with standby validator 1`] = `
   <table>
     <tbody>
       <tr
-        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group last:border-theme-secondary-200 dark:last:border-theme-secondary-800 relative last:border-b-4! last:border-solid"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-dashed group last:border-theme-secondary-200 dark:last:border-theme-secondary-800 relative last:border-b-4! last:border-solid"
         data-testid="TableRow"
       >
         <td
           data-testid="AddressRow__wallet"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 cursor-pointer group space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 cursor-pointer group space-x-3"
           >
             <div
               class="w-40 flex-1"
@@ -2208,7 +2208,7 @@ exports[`AddressRow > should render with standby validator 1`] = `
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight text-sm"
+                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight text-sm dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700"
                   data-testid="Address__alias"
                 >
                   <span
@@ -2231,7 +2231,7 @@ exports[`AddressRow > should render with standby validator 1`] = `
                   type="button"
                 >
                   <div
-                    class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+                    class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
                   >
                     <div
                       style="height: 16px; width: 16px;"
@@ -2271,7 +2271,7 @@ exports[`AddressRow > should render with standby validator 1`] = `
           class="hidden xl:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               class="whitespace-nowrap"
@@ -2283,14 +2283,14 @@ exports[`AddressRow > should render with standby validator 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm font-semibold space-x-3"
+            class="px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm font-semibold space-x-3 flex justify-end"
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
               data-testid="AddressRow__wallet-vote"
             >
               <a
-                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500 w-24 truncate md:w-auto"
+                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500 dim:[&_svg]:text-theme-dim-500 w-24 truncate md:w-auto"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href=""
@@ -2341,7 +2341,7 @@ exports[`AddressRow > should render with standby validator 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center font-semibold text-theme-secondary-text"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm justify-center font-semibold text-theme-secondary-text"
           >
             <span>
               #100
@@ -2350,7 +2350,7 @@ exports[`AddressRow > should render with standby validator 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm justify-center"
           >
             <div
               class="bg-theme-warning-100 text-theme-warning-900 dark:border-theme-danger-info-border dark:text-theme-danger-info-text inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
@@ -2362,11 +2362,11 @@ exports[`AddressRow > should render with standby validator 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end"
           >
             <div>
               <button
-                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 -mr-3 text-sm hover:underline"
+                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 dim:disabled:text-theme-dim-500 dim-hover:disabled:text-theme-dim-500 -mr-3 text-sm hover:underline"
                 data-testid="AddressRow__select-0"
                 type="button"
               >

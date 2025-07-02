@@ -6,7 +6,7 @@ exports[`Switch > should render 1`] = `
     class="flex items-center"
   >
     <button
-      class="font-semibold select-none text-base first:mr-3 last:ml-3 text-theme-secondary-700 dark:text-theme-secondary-200"
+      class="font-semibold select-none text-base first:mr-3 last:ml-3 text-theme-secondary-700 dark:text-theme-secondary-200 dim:text-theme-dim-200"
       type="button"
     >
       Option A
@@ -19,15 +19,15 @@ exports[`Switch > should render 1`] = `
         type="checkbox"
       />
       <div
-        class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
+        class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
       >
         <span
-          class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 h-4 w-4 handle-inner"
+          class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 dim:bg-theme-dim-navy-600 h-4 w-4 handle-inner"
         />
       </div>
     </label>
     <button
-      class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 text-base first:mr-3 last:ml-3"
+      class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-500 text-base first:mr-3 last:ml-3"
       type="button"
     >
       Option B
@@ -42,7 +42,7 @@ exports[`Switch > should render disabled 1`] = `
     class="flex items-center"
   >
     <button
-      class="font-semibold select-none text-base first:mr-3 last:ml-3 text-theme-secondary-700 dark:text-theme-secondary-200 cursor-default"
+      class="font-semibold select-none text-base first:mr-3 last:ml-3 text-theme-secondary-700 dark:text-theme-secondary-200 dim:text-theme-dim-200 cursor-default"
       type="button"
     >
       Option A
@@ -56,15 +56,15 @@ exports[`Switch > should render disabled 1`] = `
         type="checkbox"
       />
       <div
-        class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
+        class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
       >
         <span
-          class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-100 dark:bg-theme-secondary-800 h-4 w-4"
+          class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-800 h-4 w-4"
         />
       </div>
     </label>
     <button
-      class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 text-base first:mr-3 last:ml-3 cursor-default"
+      class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-500 text-base first:mr-3 last:ml-3 cursor-default"
       type="button"
     >
       Option B
@@ -79,7 +79,7 @@ exports[`Switch > should render large labels 1`] = `
     class="flex items-center"
   >
     <button
-      class="font-semibold select-none text-lg first:mr-4 last:ml-4 text-theme-secondary-700 dark:text-theme-secondary-200"
+      class="font-semibold select-none text-lg first:mr-4 last:ml-4 text-theme-secondary-700 dark:text-theme-secondary-200 dim:text-theme-dim-200"
       type="button"
     >
       Option A
@@ -92,15 +92,15 @@ exports[`Switch > should render large labels 1`] = `
         type="checkbox"
       />
       <div
-        class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
+        class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
       >
         <span
-          class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 h-4 w-4 handle-inner"
+          class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 dim:bg-theme-dim-navy-600 h-4 w-4 handle-inner"
         />
       </div>
     </label>
     <button
-      class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 text-lg first:mr-4 last:ml-4"
+      class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-500 text-lg first:mr-4 last:ml-4"
       type="button"
     >
       Option B
@@ -115,7 +115,7 @@ exports[`Switch > should render small labels 1`] = `
     class="flex items-center"
   >
     <button
-      class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200"
+      class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200 dim:text-theme-dim-200"
       type="button"
     >
       Option A
@@ -128,15 +128,15 @@ exports[`Switch > should render small labels 1`] = `
         type="checkbox"
       />
       <div
-        class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-6"
+        class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-6"
       >
         <span
-          class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 h-3 w-3 handle-inner"
+          class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 dim:bg-theme-dim-navy-600 h-3 w-3 handle-inner"
         />
       </div>
     </label>
     <button
-      class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 text-sm first:mr-2 last:ml-2"
+      class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-500 text-sm first:mr-2 last:ml-2"
       type="button"
     >
       Option B

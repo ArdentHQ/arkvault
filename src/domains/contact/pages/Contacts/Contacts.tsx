@@ -146,14 +146,14 @@ export const Contacts: FC = () => {
 		return (
 			<tr
 				data-testid="EmptyResults"
-				className="border-theme-secondary-200 dark:border-theme-secondary-800 border-solid md:border-b-4"
+				className="border-theme-secondary-200 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-solid md:border-b-4"
 			>
 				<td colSpan={listColumns.length} className="pt-[11px] pb-4">
 					<div className="flex flex-col items-center justify-center">
-						<h3 className="text-theme-secondary-900 dark:text-theme-secondary-200 mb-2 text-base font-semibold">
+						<h3 className="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-200 mb-2 text-base font-semibold">
 							{t("COMMON.EMPTY_RESULTS.TITLE")}
 						</h3>
-						<p className="text-theme-secondary-700 dark:text-theme-secondary-600 text-sm">
+						<p className="text-theme-secondary-700 dark:text-theme-secondary-600 dim:text-theme-dim-500 text-sm">
 							{t("COMMON.EMPTY_RESULTS.SUBTITLE")}
 						</p>
 					</div>
@@ -170,7 +170,7 @@ export const Contacts: FC = () => {
 			searchPlaceholder={t("CONTACTS.CONTACTS_PAGE.SEARCH_PLACEHOLDER")}
 			extra={
 				<Button
-					className="text-theme-primary-600 dark:text-theme-primary-400 dark:hover:text-theme-primary-300 hover:text-theme-primary-700 mr-6 hidden h-8 py-0 leading-none sm:block"
+					className="text-theme-primary-600 dark:text-theme-primary-400 dark:hover:text-theme-primary-300 hover:text-theme-primary-700 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-50 mr-6 hidden h-8 py-0 leading-none sm:block"
 					data-testid="contacts__add-contact-btn"
 					onClick={() => setCreateIsOpen(true)}
 					variant="primary-transparent"
@@ -203,9 +203,9 @@ export const Contacts: FC = () => {
 				<ContactsHeader />
 
 				<Section className="py-0">
-					<div className="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center rounded border sm:hidden">
+					<div className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 flex items-center rounded border sm:hidden">
 						<Button
-							className="text-theme-primary-600 dark:text-theme-primary-400 dark:hover:text-theme-primary-300 hover:text-theme-primary-700 h-12 w-full"
+							className="text-theme-primary-600 dark:text-theme-primary-400 dark:hover:text-theme-primary-300 hover:text-theme-primary-700 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-50 h-12 w-full"
 							data-testid="contacts__add-contact-btn-mobile"
 							onClick={() => setCreateIsOpen(true)}
 							variant="primary-transparent"

@@ -123,11 +123,4 @@ export class NotificationRepository implements INotificationRepository {
 			(notification: INotification) => notification.meta.transactionId === transactionId,
 		);
 	}
-
-	/** {@inheritDoc INotificationRepository.findByTransactionId} */
-	public findByVersion(version: string): INotification | undefined {
-		return this.filterByType(INotificationTypes.Release).find(
-			(notification: INotification) => notification.meta.version === version,
-		);
-	}
 }

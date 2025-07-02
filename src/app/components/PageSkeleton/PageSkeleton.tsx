@@ -5,8 +5,8 @@ import { Page, Section } from "@/app/components/Layout";
 import { WelcomeSlider } from "@/domains/profile/components/WelcomeSlider/WelcomeSlider";
 import { ProfileRowSkeleton } from "@/domains/profile/components/ProfileRow/ProfileRow";
 import { Skeleton } from "@/app/components/Skeleton";
-import { useTheme } from "@/app/hooks";
 import cn from "classnames";
+import { useTheme } from "@/app/hooks";
 
 export const PageSkeleton = () => {
 	const { t } = useTranslation();
@@ -23,9 +23,10 @@ export const PageSkeleton = () => {
 					<div className="flex flex-col gap-3 lg:flex-row">
 						<div
 							className={cn(
-								"border-theme-navy-100 dark:border-theme-secondary-800 hidden min-w-0 basis-1/2 rounded-xl sm:block sm:border",
+								"border-theme-navy-100 dark:border-theme-secondary-800 border-theme-navy-100 dark:border-theme-secondary-800 dim:border-theme-dim-700 bg-theme-navy-50 dark:bg-theme-secondary-800 dim:bg-theme-dim-950 hidden min-w-0 basis-1/2 rounded-xl sm:block sm:border",
 								{
-									"bg-theme-navy-50 bg-[url(/welcome-bg-white.svg)]": !isDarkMode,
+									"bg-theme-navy-50 dim:bg-[url(/welcome-bg-dim.svg)] bg-[url(/welcome-bg-white.svg)]":
+										!isDarkMode,
 									"bg-theme-secondary-800 bg-[url(/welcome-bg-dark.svg)]": isDarkMode,
 								},
 							)}
@@ -33,13 +34,14 @@ export const PageSkeleton = () => {
 							<WelcomeSlider />
 						</div>
 
-						<div className="border-theme-navy-100 dark:border-theme-secondary-800 min-w-0 basis-1/2 rounded-xl sm:border sm:p-6">
+						<div className="border-theme-navy-100 dark:border-theme-secondary-800 dim:border-theme-dim-700 min-w-0 basis-1/2 rounded-xl sm:border sm:p-6">
 							<div className="mx-auto flex h-[calc(100vh_-_160px)] max-w-[400px] flex-col sm:h-full">
 								<div className="flex flex-1 flex-col items-center justify-center">
 									<div className="flex flex-col items-center space-y-2 text-center sm:px-4">
 										<ThemeIcon
 											darkIcon="PersonDark"
 											lightIcon="PersonLight"
+											dimIcon="PersonDim"
 											dimensions={[24, 24]}
 										/>
 									</div>

@@ -7,14 +7,14 @@ exports[`ProfileSliderSkeleton > should render 1`] = `
       class="space-y-3"
     >
       <div
-        class="border-theme-secondary-200 dark:border-theme-secondary-800 flex items-center justify-between rounded-lg border p-1"
+        class="border-theme-secondary-200 dark:border-theme-secondary-800 dim:border-theme-dim-700 flex items-center justify-between rounded-lg border p-1"
         data-testid="ProfileRowSkeleton"
       >
         <div
-          class="bg-theme-secondary-100 dark:bg-theme-secondary-800 h-10 w-10"
+          class="bg-theme-secondary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-800 h-10 w-10 rounded"
         />
         <div
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 mr-1.5 pr-1.5 transition-colors duration-200"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 mr-1.5 pr-1.5 transition-colors duration-200"
         >
           <div
             style="height: 16px; width: 16px;"
@@ -51,14 +51,14 @@ exports[`ProfileSliderSkeleton > should render 1`] = `
         </div>
       </div>
       <div
-        class="border-theme-secondary-200 dark:border-theme-secondary-800 flex items-center justify-between rounded-lg border p-1"
+        class="border-theme-secondary-200 dark:border-theme-secondary-800 dim:border-theme-dim-700 flex items-center justify-between rounded-lg border p-1"
         data-testid="ProfileRowSkeleton"
       >
         <div
-          class="bg-theme-secondary-100 dark:bg-theme-secondary-800 h-10 w-10"
+          class="bg-theme-secondary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-800 h-10 w-10 rounded"
         />
         <div
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 mr-1.5 pr-1.5 transition-colors duration-200"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 mr-1.5 pr-1.5 transition-colors duration-200"
         >
           <div
             style="height: 16px; width: 16px;"
@@ -95,14 +95,14 @@ exports[`ProfileSliderSkeleton > should render 1`] = `
         </div>
       </div>
       <div
-        class="border-theme-secondary-200 dark:border-theme-secondary-800 flex items-center justify-between rounded-lg border p-1"
+        class="border-theme-secondary-200 dark:border-theme-secondary-800 dim:border-theme-dim-700 flex items-center justify-between rounded-lg border p-1"
         data-testid="ProfileRowSkeleton"
       >
         <div
-          class="bg-theme-secondary-100 dark:bg-theme-secondary-800 h-10 w-10"
+          class="bg-theme-secondary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-800 h-10 w-10 rounded"
         />
         <div
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 mr-1.5 pr-1.5 transition-colors duration-200"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 mr-1.5 pr-1.5 transition-colors duration-200"
         >
           <div
             style="height: 16px; width: 16px;"
@@ -139,14 +139,14 @@ exports[`ProfileSliderSkeleton > should render 1`] = `
         </div>
       </div>
       <div
-        class="border-theme-secondary-200 dark:border-theme-secondary-800 flex items-center justify-between rounded-lg border p-1"
+        class="border-theme-secondary-200 dark:border-theme-secondary-800 dim:border-theme-dim-700 flex items-center justify-between rounded-lg border p-1"
         data-testid="ProfileRowSkeleton"
       >
         <div
-          class="bg-theme-secondary-100 dark:bg-theme-secondary-800 h-10 w-10"
+          class="bg-theme-secondary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-800 h-10 w-10 rounded"
         />
         <div
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 mr-1.5 pr-1.5 transition-colors duration-200"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 mr-1.5 pr-1.5 transition-colors duration-200"
         >
           <div
             style="height: 16px; width: 16px;"
@@ -183,14 +183,14 @@ exports[`ProfileSliderSkeleton > should render 1`] = `
         </div>
       </div>
       <div
-        class="border-theme-secondary-200 dark:border-theme-secondary-800 flex items-center justify-between rounded-lg border p-1"
+        class="border-theme-secondary-200 dark:border-theme-secondary-800 dim:border-theme-dim-700 flex items-center justify-between rounded-lg border p-1"
         data-testid="ProfileRowSkeleton"
       >
         <div
-          class="bg-theme-secondary-100 dark:bg-theme-secondary-800 h-10 w-10"
+          class="bg-theme-secondary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-800 h-10 w-10 rounded"
         />
         <div
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 mr-1.5 pr-1.5 transition-colors duration-200"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 mr-1.5 pr-1.5 transition-colors duration-200"
         >
           <div
             style="height: 16px; width: 16px;"
@@ -238,14 +238,14 @@ exports[`ProfileSliderSkeleton > should render with dots 1`] = `
       class="space-y-3"
     >
       <div
-        class="border-theme-secondary-200 dark:border-theme-secondary-800 flex items-center justify-between rounded-lg border p-1"
+        class="border-theme-secondary-200 dark:border-theme-secondary-800 dim:border-theme-dim-700 flex items-center justify-between rounded-lg border p-1"
         data-testid="ProfileRowSkeleton"
       >
         <div
-          class="bg-theme-secondary-100 dark:bg-theme-secondary-800 h-10 w-10"
+          class="bg-theme-secondary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-800 h-10 w-10 rounded"
         />
         <div
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 mr-1.5 pr-1.5 transition-colors duration-200"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 mr-1.5 pr-1.5 transition-colors duration-200"
         >
           <div
             style="height: 16px; width: 16px;"
@@ -282,14 +282,14 @@ exports[`ProfileSliderSkeleton > should render with dots 1`] = `
         </div>
       </div>
       <div
-        class="border-theme-secondary-200 dark:border-theme-secondary-800 flex items-center justify-between rounded-lg border p-1"
+        class="border-theme-secondary-200 dark:border-theme-secondary-800 dim:border-theme-dim-700 flex items-center justify-between rounded-lg border p-1"
         data-testid="ProfileRowSkeleton"
       >
         <div
-          class="bg-theme-secondary-100 dark:bg-theme-secondary-800 h-10 w-10"
+          class="bg-theme-secondary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-800 h-10 w-10 rounded"
         />
         <div
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 mr-1.5 pr-1.5 transition-colors duration-200"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 mr-1.5 pr-1.5 transition-colors duration-200"
         >
           <div
             style="height: 16px; width: 16px;"
@@ -326,14 +326,14 @@ exports[`ProfileSliderSkeleton > should render with dots 1`] = `
         </div>
       </div>
       <div
-        class="border-theme-secondary-200 dark:border-theme-secondary-800 flex items-center justify-between rounded-lg border p-1"
+        class="border-theme-secondary-200 dark:border-theme-secondary-800 dim:border-theme-dim-700 flex items-center justify-between rounded-lg border p-1"
         data-testid="ProfileRowSkeleton"
       >
         <div
-          class="bg-theme-secondary-100 dark:bg-theme-secondary-800 h-10 w-10"
+          class="bg-theme-secondary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-800 h-10 w-10 rounded"
         />
         <div
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 mr-1.5 pr-1.5 transition-colors duration-200"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 mr-1.5 pr-1.5 transition-colors duration-200"
         >
           <div
             style="height: 16px; width: 16px;"
@@ -370,14 +370,14 @@ exports[`ProfileSliderSkeleton > should render with dots 1`] = `
         </div>
       </div>
       <div
-        class="border-theme-secondary-200 dark:border-theme-secondary-800 flex items-center justify-between rounded-lg border p-1"
+        class="border-theme-secondary-200 dark:border-theme-secondary-800 dim:border-theme-dim-700 flex items-center justify-between rounded-lg border p-1"
         data-testid="ProfileRowSkeleton"
       >
         <div
-          class="bg-theme-secondary-100 dark:bg-theme-secondary-800 h-10 w-10"
+          class="bg-theme-secondary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-800 h-10 w-10 rounded"
         />
         <div
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 mr-1.5 pr-1.5 transition-colors duration-200"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 mr-1.5 pr-1.5 transition-colors duration-200"
         >
           <div
             style="height: 16px; width: 16px;"
@@ -414,14 +414,14 @@ exports[`ProfileSliderSkeleton > should render with dots 1`] = `
         </div>
       </div>
       <div
-        class="border-theme-secondary-200 dark:border-theme-secondary-800 flex items-center justify-between rounded-lg border p-1"
+        class="border-theme-secondary-200 dark:border-theme-secondary-800 dim:border-theme-dim-700 flex items-center justify-between rounded-lg border p-1"
         data-testid="ProfileRowSkeleton"
       >
         <div
-          class="bg-theme-secondary-100 dark:bg-theme-secondary-800 h-10 w-10"
+          class="bg-theme-secondary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-800 h-10 w-10 rounded"
         />
         <div
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 mr-1.5 pr-1.5 transition-colors duration-200"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 mr-1.5 pr-1.5 transition-colors duration-200"
         >
           <div
             style="height: 16px; width: 16px;"
@@ -497,14 +497,14 @@ exports[`ProfileSliderSkeleton > should render with length 1`] = `
       class="space-y-3"
     >
       <div
-        class="border-theme-secondary-200 dark:border-theme-secondary-800 flex items-center justify-between rounded-lg border p-1"
+        class="border-theme-secondary-200 dark:border-theme-secondary-800 dim:border-theme-dim-700 flex items-center justify-between rounded-lg border p-1"
         data-testid="ProfileRowSkeleton"
       >
         <div
-          class="bg-theme-secondary-100 dark:bg-theme-secondary-800 h-10 w-10"
+          class="bg-theme-secondary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-800 h-10 w-10 rounded"
         />
         <div
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 mr-1.5 pr-1.5 transition-colors duration-200"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 mr-1.5 pr-1.5 transition-colors duration-200"
         >
           <div
             style="height: 16px; width: 16px;"
@@ -541,14 +541,14 @@ exports[`ProfileSliderSkeleton > should render with length 1`] = `
         </div>
       </div>
       <div
-        class="border-theme-secondary-200 dark:border-theme-secondary-800 flex items-center justify-between rounded-lg border p-1"
+        class="border-theme-secondary-200 dark:border-theme-secondary-800 dim:border-theme-dim-700 flex items-center justify-between rounded-lg border p-1"
         data-testid="ProfileRowSkeleton"
       >
         <div
-          class="bg-theme-secondary-100 dark:bg-theme-secondary-800 h-10 w-10"
+          class="bg-theme-secondary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-800 h-10 w-10 rounded"
         />
         <div
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 mr-1.5 pr-1.5 transition-colors duration-200"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 mr-1.5 pr-1.5 transition-colors duration-200"
         >
           <div
             style="height: 16px; width: 16px;"

@@ -23,22 +23,25 @@ export const TransactionConfirmations = ({
 		return (
 			<div
 				data-testid="TransactionFailedAlert"
-				className="border-theme-danger-200 bg-theme-danger-50 dark:border-theme-danger-info-border rounded-xl border py-2 max-sm:text-sm sm:py-4 sm:leading-5 dark:bg-transparent"
+				className="border-theme-danger-200 bg-theme-danger-50 dark:border-theme-danger-info-border dim:border-theme-success-500 dim:bg-theme-success-900 rounded-xl border py-2 max-sm:text-sm sm:py-4 sm:leading-5 dark:bg-transparent"
 			>
 				<div className="mb-2 flex items-center space-x-3 px-3 sm:mb-4 sm:px-6">
-					<div className="text-theme-danger-700 dark:text-theme-danger-info-border flex items-center space-x-2">
+					<div className="text-theme-danger-700 dark:text-theme-danger-info-border dim:text-theme-danger-info-border flex items-center space-x-2">
 						<Icon name="CircleMinus" size="lg" className="h-5" />
 						<p className="font-semibold">{t("COMMON.ALERT.FAILED")}</p>
 					</div>
 
-					<Divider type="vertical" className="text-theme-danger-200 dark:text-theme-secondary-800 h-5" />
+					<Divider
+						type="vertical"
+						className="text-theme-danger-200 dark:text-theme-secondary-800 dim:text-theme-secondary-800 h-5"
+					/>
 
-					<p className="text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold">
+					<p className="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-secondary-500 font-semibold">
 						<span>{t("TRANSACTION.CONFIRMATIONS_COUNT", { count: confirmations })} </span>
 					</p>
 				</div>
 
-				<p className="border-theme-danger-200 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 border-t px-3 pt-2 font-semibold sm:px-6 sm:pt-4">
+				<p className="border-theme-danger-200 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dim:text-theme-secondary-500 dim:border-theme-secondary-800 border-t px-3 pt-2 font-semibold sm:px-6 sm:pt-4">
 					{t("TRANSACTION.TRANSACTION_EXECUTION_ERROR")}
 				</p>
 			</div>
@@ -50,11 +53,14 @@ export const TransactionConfirmations = ({
 			{!isConfirmed && (
 				<div
 					data-testid="PendingConfirmationAlert"
-					className="border-theme-warning-200 bg-theme-warning-50 dark:border-theme-warning-600 flex items-center space-x-3 rounded-xl border px-3 py-2 max-sm:text-sm sm:px-6 sm:py-4 sm:leading-5 dark:bg-transparent"
+					className="border-theme-warning-200 bg-theme-warning-50 dark:border-theme-warning-600 dim:border-theme-warning-600 dim:bg-transparent flex items-center space-x-3 rounded-xl border px-3 py-2 max-sm:text-sm sm:px-6 sm:py-4 sm:leading-5 dark:bg-transparent"
 				>
 					<Spinner color="warning-alt" size="sm" width={3} />
-					<Divider type="vertical" className="text-theme-warning-200 dark:text-theme-secondary-800 h-5" />
-					<p className="text-theme-secondary-700 dark:text-theme-warning-600 font-semibold">
+					<Divider
+						type="vertical"
+						className="text-theme-warning-200 dark:text-theme-secondary-800 dim:text-theme-secondary-800 h-5"
+					/>
+					<p className="text-theme-secondary-700 dark:text-theme-warning-600 dim:text-theme-warning-600 font-semibold">
 						{status.value === "isBroadcasted" ? t("TRANSACTION.PENDING.STATUS_TEXT") : status.label}
 					</p>
 				</div>
@@ -63,16 +69,19 @@ export const TransactionConfirmations = ({
 			{isConfirmed && (
 				<div
 					data-testid="TransactionSuccessAlert"
-					className="border-theme-success-200 bg-theme-success-50 dark:border-theme-success-600 flex items-center space-x-3 rounded-xl border px-3 py-2 max-sm:text-sm sm:px-6 sm:py-4 sm:leading-5 dark:bg-transparent"
+					className="border-theme-success-200 bg-theme-success-50 dark:border-theme-success-600 dim:border-theme-success-500 dim:bg-theme-success-900 flex items-center space-x-3 rounded-xl border px-3 py-2 max-sm:text-sm sm:px-6 sm:py-4 sm:leading-5 dark:bg-transparent"
 				>
-					<div className="text-theme-success-700 flex items-center space-x-2">
+					<div className="text-theme-success-700 dim:text-theme-success-500 flex items-center space-x-2">
 						<Icon name="CheckmarkDouble" size="lg" className="h-5" />
 						<p className="text-sm font-semibold sm:text-base">{t("COMMON.ALERT.SUCCESS")}</p>
 					</div>
 
-					<Divider type="vertical" className="text-theme-success-200 dark:text-theme-secondary-800 h-5" />
+					<Divider
+						type="vertical"
+						className="text-theme-success-200 dark:text-theme-secondary-800 dim:text-theme-success-800 h-5"
+					/>
 
-					<p className="text-theme-secondary-700 dark:text-theme-success-600 text-sm font-semibold sm:text-base">
+					<p className="text-theme-secondary-700 dark:text-theme-success-600 dim:text-theme-dim-50 text-sm font-semibold sm:text-base">
 						<span>{t("TRANSACTION.CONFIRMATIONS_COUNT", { count: confirmations })} </span>
 					</p>
 				</div>

@@ -26,7 +26,12 @@ export const FormStep = ({ unvotes, votes, wallet, profile, isWalletFieldDisable
 			<StepHeader
 				title={t("TRANSACTION.PAGE_VOTE.FORM_STEP.TITLE")}
 				titleIcon={
-					<ThemeIcon dimensions={[24, 24]} lightIcon="SendTransactionLight" darkIcon="SendTransactionDark" />
+					<ThemeIcon
+						dimensions={[24, 24]}
+						lightIcon="SendTransactionLight"
+						darkIcon="SendTransactionDark"
+						dimIcon="SendTransactionDim"
+					/>
 				}
 				subtitle={t("TRANSACTION.PAGE_VOTE.FORM_STEP.DESCRIPTION")}
 			/>

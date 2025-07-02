@@ -230,9 +230,12 @@ const ServerFormModal = ({
 				<FormField name="result">
 					{fetchingDetails && (
 						<div data-testid="Servertype-fetching" className="flex items-center space-x-2">
-							<Icon className="text-theme-secondary-300 dark:text-theme-secondary-800" name="Clock" />
+							<Icon
+								className="text-theme-secondary-300 dark:text-theme-secondary-800 dim:text-theme-dim-800"
+								name="Clock"
+							/>
 
-							<span className="text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold">
+							<span className="text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-700 font-semibold">
 								{t("SETTINGS.SERVERS.ADD_NEW_SERVER.FETCHING_DETAILS")}
 							</span>
 						</div>

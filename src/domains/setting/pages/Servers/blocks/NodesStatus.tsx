@@ -136,13 +136,13 @@ const NodeStatusNode = ({ network, hosts }: { network: Networks.Network; hosts: 
 	return (
 		<div
 			data-testid="NodesStatus--node"
-			className="border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 flex items-center space-x-3 rounded-lg border px-4 py-3 leading-none"
+			className="border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 flex items-center space-x-3 rounded-lg border px-4 py-3 leading-none"
 		>
 			<div className="flex shrink-0">
 				<NetworkIcon network={network} size="sm" className="" showTooltip={false} isCompact />
 			</div>
 
-			<div className="grow font-semibold">{networkDisplayName(network)}</div>
+			<div className="dim:text-theme-dim-200 grow font-semibold">{networkDisplayName(network)}</div>
 
 			<div className="cursor-pointer">
 				{results.every((r) => r === true) && (
@@ -150,7 +150,7 @@ const NodeStatusNode = ({ network, hosts }: { network: Networks.Network; hosts: 
 						<div data-testid="NodeStatus--statusok">
 							<Icon
 								name="StatusOk"
-								className="text-theme-success-600 dark:text-theme-success-500"
+								className="text-theme-success-600 dark:text-theme-success-500 dim:text-theme-success-500"
 								size="lg"
 							/>
 						</div>
@@ -173,7 +173,7 @@ const NodeStatusNode = ({ network, hosts }: { network: Networks.Network; hosts: 
 					type="button"
 					onClick={checkNetworkStatus}
 					disabled={results.includes(undefined)}
-					className="dark:hover:text-theme-dark-50 hover:text-theme-primary-700 transition-colors"
+					className="dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:hover:text-theme-dim-50 transition-colors"
 				>
 					<Icon name="ArrowRotateLeft" size="md" />
 				</button>

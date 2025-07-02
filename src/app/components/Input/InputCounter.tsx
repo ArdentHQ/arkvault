@@ -37,7 +37,8 @@ export const InputCounter = (properties: Properties) => {
 						<span
 							data-testid="InputCounter__counter"
 							className={cn("text-sm font-semibold", {
-								"text-theme-secondary-500 dark:text-theme-secondary-700": !fieldContext?.isInvalid,
+								"text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-700":
+									!fieldContext?.isInvalid,
 							})}
 						>
 							{length}/{properties.maxLengthLabel}

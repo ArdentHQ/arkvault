@@ -9,7 +9,7 @@ export const TableWrapper = ({ className, children, noBorder = false, ...propert
 	<div
 		data-testid="TableWrapper"
 		className={cn(
-			"md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 rounded-xl pb-2 outline outline-1 outline-transparent",
+			"md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 dim:md:border-theme-dim-700 dim:md:outline-theme-dim-700 rounded-xl pb-2 outline outline-1 outline-transparent",
 			{
 				"border-b-none": noBorder,
 				"md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]": !noBorder,

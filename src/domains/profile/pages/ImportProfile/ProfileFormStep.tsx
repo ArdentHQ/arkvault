@@ -60,7 +60,12 @@ export const ImportProfileForm = ({
 		<div className="mx-auto max-w-172" data-testid="ProfileFormStep">
 			<StepHeader
 				titleIcon={
-					<ThemeIcon darkIcon="ImportProfileDark" lightIcon="ImportProfileLight" dimensions={[24, 24]} />
+					<ThemeIcon
+						darkIcon="ImportProfileDark"
+						lightIcon="ImportProfileLight"
+						dimIcon="ImportProfileDim"
+						dimensions={[24, 24]}
+					/>
 				}
 				title={t("PROFILE.IMPORT.TITLE")}
 				subtitle={t("PROFILE.IMPORT.FORM_STEP.DESCRIPTION")}

@@ -19,7 +19,7 @@ const QRCodeButton = ({ ...props }: React.ButtonHTMLAttributes<HTMLButtonElement
 	<button
 		{...props}
 		className={twMerge(
-			"border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-600 focus:ring-theme-primary-400 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 mt-auto flex w-full items-center space-x-2 rounded border-2 px-5 py-3 transition-colors duration-300 focus:ring-2 focus:outline-hidden sm:w-auto sm:py-5 dark:hover:text-white",
+			"border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-600 focus:ring-theme-primary-400 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dim:text-theme-secondary-200 dim:border-theme-dim-700 dim-hover:border-theme-dim-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 mt-auto flex w-full cursor-pointer items-center space-x-2 rounded border-2 px-5 py-3 transition-colors duration-300 focus:ring-2 focus:outline-hidden sm:w-auto sm:py-5 dark:hover:text-white",
 			props.className,
 		)}
 	/>
@@ -86,7 +86,12 @@ export const FormStep = ({
 			<StepHeader
 				title={t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.TITLE", { ticker: network.ticker() })}
 				titleIcon={
-					<ThemeIcon dimensions={[24, 24]} lightIcon="SendTransactionLight" darkIcon="SendTransactionDark" />
+					<ThemeIcon
+						dimensions={[24, 24]}
+						lightIcon="SendTransactionLight"
+						darkIcon="SendTransactionDark"
+						dimIcon="SendTransactionDim"
+					/>
 				}
 				subtitle={t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.DESCRIPTION")}
 				extra={
