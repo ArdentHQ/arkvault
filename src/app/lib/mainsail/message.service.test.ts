@@ -12,7 +12,6 @@ describe("MessageService", () => {
 			},
 		};
 		const signed = await service.sign(input);
-		console.log({ signed });
 
 		expect(signed.message).toBe("test");
 		expect(signed.signatory).toBeDefined();
