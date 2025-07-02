@@ -98,8 +98,17 @@ export const PortfolioHeader = ({
 	const onDeleteAddress = async (address: string) => {
 		for (const wallet of profile.wallets().values()) {
 			if (address === wallet.address()) {
+
+				// The wallet to be deleted is a selected wallet.
+				// Change the selection to the first.
+				if (profile.walletSelectionMode() === "single" && wallet.isSelected()) {
+					const firstAvailable = profile.wallets().values().find(profileWallet => profileWallet.address() !== address)
+					if (firstAvailable) {
+						profile.wallets().selectOne(firstAvailable)
+					}
+				}
+
 				profile.wallets().forget(wallet.id());
-				//await removeSelectedAddresses([wallet.address()]);
 				profile.notifications().transactions().forgetByRecipient(wallet.address());
 			}
 		}
