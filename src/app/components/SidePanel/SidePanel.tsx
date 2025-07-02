@@ -102,23 +102,25 @@ export const SidePanel = ({
 	}, [isMounted]);
 
 	useEffect(() => {
-		if (!open) return;
-	  
+		if (!open) {
+			return;
+		}
+
 		const handlePopState = (event) => {
-		  event.preventDefault();
-		  onOpenChange(false);
+			event.preventDefault();
+			onOpenChange(false);
 		};
-	  
-		window.history.pushState({ sidePanelOpen: true }, '');
-		window.addEventListener('popstate', handlePopState);
-	  
+
+		window.history.pushState({ sidePanelOpen: true }, "");
+		window.addEventListener("popstate", handlePopState);
+
 		return () => {
-		  window.removeEventListener('popstate', handlePopState);
-		  if (window.history.state?.sidePanelOpen) {
-			window.history.back();
-		  }
+			window.removeEventListener("popstate", handlePopState);
+			if (window.history.state?.sidePanelOpen) {
+				window.history.back();
+			}
 		};
-	  }, [open, onOpenChange]);
+	}, [open, onOpenChange]);
 
 	return (
 		<>
