@@ -51,12 +51,12 @@ export const OptionLabel = ({
 				walletName={alias}
 				addressClass={cn("leading-[17px] sm:leading-5 text-sm sm:text-base", {
 					"text-theme-primary-600": !alias && option.isSelected,
-					"text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-700": alias,
+					"text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200": alias,
 					"text-theme-text": !alias,
 				})}
 				walletNameClass={cn("leading-[17px] sm:leading-5  text-sm sm:text-base", {
 					"text-theme-primary-600": option.isSelected,
-					"text-theme-secondary-700 dark:text-theme-secondary-600": !option.isSelected,
+					"text-theme-text": !option.isSelected,
 				})}
 			/>
 
@@ -65,7 +65,7 @@ export const OptionLabel = ({
 					<Icon
 						name="CheckmarkDouble"
 						size="md"
-						className="text-theme-primary-600 dark:text-theme-secondary-200 dim:text-theme-dim-700"
+						className="text-theme-primary-600 dark:text-theme-secondary-200 dim:text-theme-dim-200"
 					/>
 				)}
 			</div>
@@ -139,7 +139,7 @@ export const SelectAddressDropdown = React.forwardRef<HTMLInputElement, SelectAd
 						options={recipientOptions}
 						showOptions={true}
 						allowFreeInput={true}
-						innerClassName="text-theme-secondary-500 dark:text-theme-secondary-700"
+						innerClassName="text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200"
 						onChange={changeHandler}
 						addons={{
 							end: undefined,

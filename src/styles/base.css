@@ -180,7 +180,7 @@ main {
 
 .select-options-list .select-list-option-head,
 .select-options-list .select-list-option {
-	@apply text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 relative rounded border-0 px-5;
+	@apply text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 relative rounded-lg border-0 px-5;
 }
 
 .select-options-list .select-list-option-head__label {
@@ -197,10 +197,6 @@ main {
 
 .select-options-list .select-list-option__label {
 	@apply py-4;
-}
-
-.select-options-list .select-list-option:not(:first-child) .select-list-option__label {
-	@apply border-theme-secondary-300 dark:border-theme-secondary-700 dim:border-theme-dim-500 border-t transition-colors duration-200;
 }
 
 .select-options-list .select-list-option.is-highlighted {
