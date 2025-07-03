@@ -43,7 +43,7 @@ export const SuccessStep = ({
 
 					<div className="flex w-full items-center justify-between leading-[17px] sm:justify-start sm:leading-5">
 						<DetailTitle> {t("COMMON.BALANCE")}</DetailTitle>
-						<div className="font-semibold text-sm sm:text-base">
+						<div className="text-sm font-semibold sm:text-base">
 							<Amount value={importedWallet.balance()} ticker={network.ticker()} />
 						</div>
 					</div>
@@ -53,7 +53,7 @@ export const SuccessStep = ({
 					<div className="flex w-full items-center justify-between sm:justify-start">
 						<DetailTitle> {t("COMMON.NAME")}</DetailTitle>
 						<div className="flex w-full min-w-0 items-center justify-end pr-4 leading-[17px] font-semibold sm:justify-between sm:leading-5">
-							<div className="max-w-[calc(100%_-_80px)] shrink-0 truncate sm:max-w-none text-sm sm:text-base">
+							<div className="max-w-[calc(100%_-_80px)] shrink-0 truncate text-sm sm:max-w-none sm:text-base">
 								{" "}
 								{importedWallet.alias()}{" "}
 							</div>
@@ -71,7 +71,9 @@ export const SuccessStep = ({
 								onClick={onClickEditAlias}
 							>
 								<Icon name="Pencil" size="md" />
-								<span className="leading-[17px] sm:leading-5 text-sm sm:text-base">{t("COMMON.EDIT")}</span>
+								<span className="text-sm leading-[17px] sm:text-base sm:leading-5">
+									{t("COMMON.EDIT")}
+								</span>
 							</Button>
 						</div>
 					</div>
