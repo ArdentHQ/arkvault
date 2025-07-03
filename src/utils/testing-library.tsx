@@ -498,7 +498,11 @@ export const test = baseTest.extend<{
 	env: Environment;
 	profile: Contracts.IProfile;
 	passwordProtectedProfile: Contracts.IProfile;
+	defaultWallet: Contracts.IReadWriteWallet;
 }>({
+	defaultWallet: async ({ profile }, vitestUse) => {
+		await vitestUse(profile.wallets().first());
+	},
 	env: [
 		async ({}, use) => {
 			const environment = environmentWithMocks();

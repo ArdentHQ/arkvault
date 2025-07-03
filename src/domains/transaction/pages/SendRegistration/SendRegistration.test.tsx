@@ -75,6 +75,7 @@ const signedTransactionMock = {
 	isSuccess: () => true,
 	isTransfer: () => false,
 	isUnvote: () => false,
+	isUpdateValidator: () => false,
 	isUsernameRegistration: () => false,
 	isUsernameResignation: () => false,
 	isValidatorRegistration: () => false,
@@ -167,6 +168,9 @@ describe("Registration", () => {
 		);
 
 		vi.spyOn(secondWallet, "balance").mockReturnValue(1200);
+
+		vi.spyOn(wallet, "isValidator").mockImplementation(() => false);
+		vi.spyOn(secondWallet, "isValidator").mockImplementation(() => false);
 
 		vi.spyOn(PublicKeyService.prototype, "verifyPublicKeyWithBLS").mockReturnValue(true);
 

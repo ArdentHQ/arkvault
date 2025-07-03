@@ -24,6 +24,7 @@ export class SignedTransactionData {
 		{ method: "isValidatorResignation", type: "validatorResignation" },
 		{ method: "isVote", type: "vote" },
 		{ method: "isVoteCombination", type: "voteCombination" },
+		{ method: "isUpdateValidator", type: "updateValidator" },
 	];
 
 	public configure(signedData: RawTransactionData, serialized: string) {
@@ -133,6 +134,10 @@ export class SignedTransactionData {
 
 	public isValidatorRegistration(): boolean {
 		return TransactionTypeService.isValidatorRegistration(this.signedData);
+	}
+
+	public isUpdateValidator(): boolean {
+		return TransactionTypeService.isUpdateValidator(this.signedData);
 	}
 
 	public isVoteCombination(): boolean {

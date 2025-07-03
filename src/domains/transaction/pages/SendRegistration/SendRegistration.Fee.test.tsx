@@ -133,7 +133,7 @@ describe("Registration Fee", () => {
 			within(screen.getByTestId("InputFee")).getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED),
 		);
 		await waitFor(() => expect(screen.getByTestId("Input_GasPrice")).toHaveValue("5.06670125"));
-		await waitFor(() => expect(screen.getByTestId("Input_GasLimit")).toHaveValue("400000"));
+		await waitFor(() => expect(screen.getByTestId("Input_GasLimit")).toHaveValue("200000"));
 
 		await userEvent.click(
 			within(screen.getByTestId("InputFee")).getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.SIMPLE),

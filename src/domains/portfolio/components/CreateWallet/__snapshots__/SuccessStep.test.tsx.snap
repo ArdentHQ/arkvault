@@ -37,10 +37,10 @@ exports[`SuccessStep > should render (lg) 1`] = `
                  Address 
               </div>
               <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full w-max! sm:w-full!"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full w-max! sm:w-full! text-sm sm:text-base"
               >
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 text-sm sm:text-base font-semibold text-base"
                   data-testid="Address__address"
                 >
                   0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
@@ -121,7 +121,7 @@ exports[`SuccessStep > should render (lg) 1`] = `
                 class="flex w-full min-w-0 items-center justify-end leading-[17px] font-semibold sm:justify-between sm:leading-5"
               >
                 <div
-                  class="max-w-[calc(100%_-_80px)] shrink-0 truncate sm:max-w-none"
+                  class="max-w-[calc(100%_-_80px)] shrink-0 truncate text-sm sm:max-w-none sm:text-base"
                 >
                    Mainsail Wallet 1 
                 </div>
@@ -165,7 +165,7 @@ exports[`SuccessStep > should render (lg) 1`] = `
                       </div>
                     </div>
                     <span
-                      class="leading-[17px] sm:leading-5"
+                      class="text-sm leading-[17px] sm:text-base sm:leading-5"
                     >
                       Edit
                     </span>
@@ -218,10 +218,10 @@ exports[`SuccessStep > should render (xs) 1`] = `
                  Address 
               </div>
               <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full w-max! sm:w-full!"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full w-max! sm:w-full! text-sm sm:text-base"
               >
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 text-sm sm:text-base font-semibold text-base"
                   data-testid="Address__address"
                 >
                   0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
@@ -302,7 +302,7 @@ exports[`SuccessStep > should render (xs) 1`] = `
                 class="flex w-full min-w-0 items-center justify-end leading-[17px] font-semibold sm:justify-between sm:leading-5"
               >
                 <div
-                  class="max-w-[calc(100%_-_80px)] shrink-0 truncate sm:max-w-none"
+                  class="max-w-[calc(100%_-_80px)] shrink-0 truncate text-sm sm:max-w-none sm:text-base"
                 >
                    Mainsail Wallet 1 
                 </div>
@@ -346,7 +346,7 @@ exports[`SuccessStep > should render (xs) 1`] = `
                       </div>
                     </div>
                     <span
-                      class="leading-[17px] sm:leading-5"
+                      class="text-sm leading-[17px] sm:text-base sm:leading-5"
                     >
                       Edit
                     </span>
