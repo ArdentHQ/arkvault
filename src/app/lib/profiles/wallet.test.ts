@@ -883,4 +883,32 @@ describe("Wallet", () => {
 		const result = newWallet.balance();
 		expect(typeof result).toBe("number");
 	});
+
+	it("should test all displayName branches", () => {
+		const newWallet = new Wallet("test-id", {}, profile);
+
+		// Test 1: alias() returns a value (first branch)
+		vi.spyOn(newWallet, "alias").mockReturnValue("wallet-alias");
+		vi.spyOn(newWallet, "username").mockReturnValue("wallet-username");
+		vi.spyOn(newWallet, "knownName").mockReturnValue("wallet-known");
+		expect(newWallet.displayName()).toBe("wallet-alias");
+
+		// Test 2: alias() returns undefined, username() returns a value (second branch)
+		vi.spyOn(newWallet, "alias").mockReturnValue(undefined);
+		vi.spyOn(newWallet, "username").mockReturnValue("wallet-username");
+		vi.spyOn(newWallet, "knownName").mockReturnValue("wallet-known");
+		expect(newWallet.displayName()).toBe("wallet-username");
+
+		// Test 3: alias() and username() return undefined, knownName() returns a value (third branch)
+		vi.spyOn(newWallet, "alias").mockReturnValue(undefined);
+		vi.spyOn(newWallet, "username").mockReturnValue(undefined);
+		vi.spyOn(newWallet, "knownName").mockReturnValue("wallet-known");
+		expect(newWallet.displayName()).toBe("wallet-known");
+
+		// Test 4: all return undefined (covers all branches)
+		vi.spyOn(newWallet, "alias").mockReturnValue(undefined);
+		vi.spyOn(newWallet, "username").mockReturnValue(undefined);
+		vi.spyOn(newWallet, "knownName").mockReturnValue(undefined);
+		expect(newWallet.displayName()).toBeUndefined();
+	});
 });
