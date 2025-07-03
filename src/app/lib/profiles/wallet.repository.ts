@@ -151,6 +151,20 @@ export class WalletRepository implements IWalletRepository {
 
 	/** {@inheritDoc IWalletRepository.forget} */
 	public forget(id: string): void {
+		// If the wallet to be deleted is a selected wallet,
+		// change the selection to the first available wallet before deleting.
+		const walletToBeDeleted = this.findById(id);
+		if (this.#profile.walletSelectionMode() === "single" && walletToBeDeleted.isSelected()) {
+			const firstAvailable = this.#profile
+				.wallets()
+				.values()
+				.find((wallet) => wallet.address() !== walletToBeDeleted.address());
+
+			if (firstAvailable) {
+				this.#profile.wallets().selectOne(firstAvailable);
+			}
+		}
+
 		this.#data.forget(id);
 
 		this.#profile.status().markAsDirty();
