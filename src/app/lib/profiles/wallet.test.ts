@@ -132,6 +132,11 @@ describe("Wallet", () => {
 		expect(typeof fees).toBe("number");
 	});
 
+	it("should return 0 for balance when undefined", () => {
+		vi.spyOn(wallet.data(), "get").mockReturnValue(undefined);
+		expect(wallet.balance()).toBe(0);
+	});
+
 	it("should have a converted balance", () => {
 		const result = wallet.convertedBalance();
 		expect(typeof result).toBe("number");
@@ -784,7 +789,7 @@ describe("Wallet", () => {
 			if (key === WalletSetting.Avatar) {
 				return "custom-avatar";
 			}
-			return undefined;
+			return;
 		});
 
 		const result = newWallet.avatar();
@@ -800,7 +805,7 @@ describe("Wallet", () => {
 			if (key === WalletData.Balance) {
 				return mockBalance;
 			}
-			return undefined;
+			return;
 		});
 
 		// Mock manifest to throw error
@@ -871,7 +876,7 @@ describe("Wallet", () => {
 			if (key === WalletData.Balance) {
 				return mockBalance;
 			}
-			return undefined;
+			return;
 		});
 
 		// This should use default decimals (18) when manifest access fails
