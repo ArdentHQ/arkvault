@@ -79,7 +79,7 @@ exports[`Switch > should render large labels 1`] = `
     class="flex items-center"
   >
     <button
-      class="font-semibold select-none text-lg first:mr-4 last:ml-4 text-theme-secondary-700 dark:text-theme-secondary-200 dim:text-theme-dim-200"
+      class="font-semibold select-none text-sm sm:text-lg first:mr-4 last:ml-4 text-theme-secondary-700 dark:text-theme-secondary-200 dim:text-theme-dim-200"
       type="button"
     >
       Option A
@@ -100,7 +100,7 @@ exports[`Switch > should render large labels 1`] = `
       </div>
     </label>
     <button
-      class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-500 text-lg first:mr-4 last:ml-4"
+      class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-500 text-sm sm:text-lg first:mr-4 last:ml-4"
       type="button"
     >
       Option B
