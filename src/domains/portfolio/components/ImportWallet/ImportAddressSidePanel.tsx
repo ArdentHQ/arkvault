@@ -47,7 +47,6 @@ export const ImportAddressesSidePanel = ({
 	const [isImporting, setIsImporting] = useState(false);
 	const [isEncrypting, setIsEncrypting] = useState(false);
 	const [isEditAliasModalOpen, setIsEditAliasModalOpen] = useState(false);
-	const [isNavigatingBack, setIsNavigatingBack] = useState(false);
 
 	const activeNetwork = activeProfile.activeNetwork();
 
@@ -89,9 +88,6 @@ export const ImportAddressesSidePanel = ({
 	}, [value, setWalletGenerationInput]);
 
 	useKeydown("Enter", () => {
-		// Don't handle Enter during back navigation to prevent conflicts
-		if (isNavigatingBack) return;
-		
 		const isButton = (document.activeElement as any)?.type === "button";
 
 		if (!isLedgerImport && !isButton && !isNextDisabled && activeTab <= ImportAddressStep.EncryptPasswordStep) {
