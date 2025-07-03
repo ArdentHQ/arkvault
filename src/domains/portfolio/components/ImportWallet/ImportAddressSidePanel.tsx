@@ -111,7 +111,7 @@ export const ImportAddressesSidePanel = ({
 			if (activeTab === ImportAddressStep.EncryptPasswordStep && importedWallet) {
 				forgetImportedWallets(importedWallet);
 			}
-			
+
 			setActiveTab(ImportAddressStep.MethodStep);
 		}
 		prevOpenRef.current = open;
