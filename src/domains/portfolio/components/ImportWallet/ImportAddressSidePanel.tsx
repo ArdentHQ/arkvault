@@ -1,5 +1,5 @@
 import { Contracts } from "@/app/lib/profiles";
-import React, { useEffect, useMemo, useState, JSX } from "react";
+import React, { useEffect, useMemo, useState, JSX, useRef } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
@@ -47,6 +47,7 @@ export const ImportAddressesSidePanel = ({
 	const [isImporting, setIsImporting] = useState(false);
 	const [isEncrypting, setIsEncrypting] = useState(false);
 	const [isEditAliasModalOpen, setIsEditAliasModalOpen] = useState(false);
+	const [isNavigatingBack, setIsNavigatingBack] = useState(false);
 
 	const activeNetwork = activeProfile.activeNetwork();
 
@@ -88,6 +89,9 @@ export const ImportAddressesSidePanel = ({
 	}, [value, setWalletGenerationInput]);
 
 	useKeydown("Enter", () => {
+		// Don't handle Enter during back navigation to prevent conflicts
+		if (isNavigatingBack) return;
+		
 		const isButton = (document.activeElement as any)?.type === "button";
 
 		if (!isLedgerImport && !isButton && !isNextDisabled && activeTab <= ImportAddressStep.EncryptPasswordStep) {
@@ -105,18 +109,17 @@ export const ImportAddressesSidePanel = ({
 		}
 	};
 
-	const handleOpenChange = (open: boolean) => {
-		// Remove the imported wallet, only if the user exits in encryption password step.
-		if (!open && activeTab === ImportAddressStep.EncryptPasswordStep && importedWallet) {
-			forgetImportedWallets(importedWallet);
-		}
-
-		if (!open) {
+	const prevOpenRef = useRef(open);
+	useEffect(() => {
+		if (prevOpenRef.current && !open) {
+			if (activeTab === ImportAddressStep.EncryptPasswordStep && importedWallet) {
+				forgetImportedWallets(importedWallet);
+			}
+			
 			setActiveTab(ImportAddressStep.MethodStep);
 		}
-
-		onOpenChange(open);
-	};
+		prevOpenRef.current = open;
+	}, [open, activeTab, importedWallet]);
 
 	const handleNext = () =>
 		({
@@ -205,7 +208,7 @@ export const ImportAddressesSidePanel = ({
 	};
 
 	const handleFinish = () => {
-		handleOpenChange(false);
+		onOpenChange(false);
 	};
 
 	const isNextDisabled = useMemo(() => {
@@ -264,7 +267,7 @@ export const ImportAddressesSidePanel = ({
 			subtitle={config.subtitle}
 			titleIcon={config.titleIcon}
 			open={open}
-			onOpenChange={handleOpenChange}
+			onOpenChange={onOpenChange}
 			dataTestId="ImportAddressSidePanel"
 			onMountChange={onMountChange}
 			hasSteps={!isMethodStep}
@@ -299,7 +302,7 @@ export const ImportAddressesSidePanel = ({
 									onClickEditWalletName={handleEditLedgerAlias}
 									onStepChange={setLedgerActiveTab}
 									onCancel={() => {
-										handleOpenChange(false);
+										onOpenChange(false);
 									}}
 									onSubmit={handleFinish}
 								/>
