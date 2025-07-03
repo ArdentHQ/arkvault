@@ -13,6 +13,12 @@ export const validatorRegistration = (t: any) => ({
 		}),
 		validate: {
 			insufficientBalance: (lockedFee: number) => {
+				// If the wallet is a validator, we can only update the public key
+				// that does not require a fee.
+				if (wallet?.isValidator()) {
+					return true;
+				}
+
 				const { gasPrice, gasLimit } = getValues() as {
 					gasPrice: BigNumber | undefined;
 					gasLimit: BigNumber | undefined;
