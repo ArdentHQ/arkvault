@@ -1,3 +1,5 @@
+/* eslint-disable sonarjs/no-duplicate-string */
+
 import { describe, expect, it, beforeEach, vi } from "vitest";
 import { IProfile, IReadWriteWallet, WalletData, WalletFlag, WalletSetting, WalletImportMethod } from "./contracts";
 import { env, getMainsailProfileId, getDefaultMainsailWalletId } from "@/utils/testing-library";
