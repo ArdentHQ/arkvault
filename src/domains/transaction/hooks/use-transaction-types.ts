@@ -54,6 +54,10 @@ export const useTransactionTypes = ({ wallets = [] }: TransactionTypeProperties 
 
 	return {
 		getLabel: (type: string) => {
+			if (type.startsWith("0x")) {
+				return type;
+			}
+
 			if (transactionTypes[type]) {
 				return transactionTypes[type].label;
 			}
