@@ -32,8 +32,8 @@ export const SuccessStep = ({ onClickEditAlias }: { onClickEditAlias: () => void
 						<DetailTitle> {t("COMMON.ADDRESS")} </DetailTitle>
 						<Address
 							address={wallet.address()}
-							addressClass="leading-[17px] sm:leading-5"
-							wrapperClass="w-max! sm:w-full!"
+							addressClass="leading-[17px] sm:leading-5 text-sm sm:text-base"
+							wrapperClass="w-max! sm:w-full! text-sm sm:text-base"
 							showCopyButton
 						/>
 					</div>
@@ -43,7 +43,7 @@ export const SuccessStep = ({ onClickEditAlias }: { onClickEditAlias: () => void
 					<div className="flex w-full items-center justify-between sm:justify-start">
 						<DetailTitle> {t("COMMON.NAME")}</DetailTitle>
 						<div className="flex w-full min-w-0 items-center justify-end leading-[17px] font-semibold sm:justify-between sm:leading-5">
-							<div className="max-w-[calc(100%_-_80px)] shrink-0 truncate sm:max-w-none">
+							<div className="max-w-[calc(100%_-_80px)] shrink-0 truncate sm:max-w-none text-sm sm:text-base">
 								{" "}
 								{wallet.alias()}{" "}
 							</div>
@@ -61,7 +61,7 @@ export const SuccessStep = ({ onClickEditAlias }: { onClickEditAlias: () => void
 								onClick={onClickEditAlias}
 							>
 								<Icon name="Pencil" />
-								<span className="leading-[17px] sm:leading-5">{t("COMMON.EDIT")}</span>
+								<span className="leading-[17px] sm:leading-5 text-sm sm:text-base">{t("COMMON.EDIT")}</span>
 							</Button>
 						</div>
 					</div>
