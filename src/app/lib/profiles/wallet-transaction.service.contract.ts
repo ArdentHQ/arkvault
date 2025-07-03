@@ -83,6 +83,15 @@ export interface ITransactionService {
 	signValidatorRegistration(input: Services.ValidatorRegistrationInput): Promise<string>;
 
 	/**
+	 * Sign a Update Validator transaction.
+	 *
+	 * @param {Services.UpdateValidatorInput} input
+	 * @return {Promise<string>}
+	 * @memberof ITransactionService
+	 */
+	signUpdateValidator(input: Services.UpdateValidatorInput): Promise<string>;
+
+	/**
 	 * Sign a Username Registration transaction.
 	 *
 	 * @param {Services.UsernameRegistrationInput} input

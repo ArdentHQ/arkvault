@@ -65,6 +65,18 @@ export function getEstimateGasParams(formData: Record<string, any>, type: string
 			return { data, to: ContractAddresses.MULTIPAYMENT, value };
 		},
 		transfer: () => ({ to: recipientAddress as string }),
+		updateValidator: () => {
+			const data = encodeFunctionData({
+				abi: ConsensusAbi.abi,
+				args: [`0x${validatorPublicKey}`],
+				functionName: "updateValidator",
+			});
+
+			return {
+				data,
+				to: ContractAddresses.CONSENSUS,
+			};
+		},
 		usernameRegistration: () => {
 			const data = encodeFunctionData({
 				abi: UsernamesAbi.abi,
@@ -189,8 +201,11 @@ export const useFees = (profile: Contracts.IProfile) => {
 	);
 
 	const calculate = useCallback(
-		async ({ network, type, data }: CalculateProperties): Promise<TransactionFees> => {
+		async ({ network, type: typeFromForm, data }: CalculateProperties): Promise<TransactionFees> => {
 			await env.fees().sync(profile);
+
+			const type = typeFromForm === "updateValidator" ? "evmCall" : typeFromForm;
+
 			const transactionFees = env.fees().findByType(network, type);
 
 			if (!!data && type === "multiSignature") {

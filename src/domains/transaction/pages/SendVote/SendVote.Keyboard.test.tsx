@@ -55,6 +55,7 @@ const signedTransactionMock = {
 	isSuccess: () => true,
 	isTransfer: () => true,
 	isUnvote: () => false,
+	isUpdateValidator: () => false,
 	isUsernameRegistration: () => false,
 	isUsernameResignation: () => false,
 	isValidatorRegistration: () => false,

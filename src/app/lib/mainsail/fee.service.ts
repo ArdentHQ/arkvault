@@ -28,9 +28,11 @@ export class FeeService {
 
 	public async all(): Promise<Services.TransactionFees> {
 		const node = await this.#client.node().fees();
+
 		const fees = this.#transform(node.data.evmCall);
 
 		return {
+			evmCall: fees,
 			validatorRegistration: fees,
 			validatorResignation: fees,
 			multiPayment: fees,
