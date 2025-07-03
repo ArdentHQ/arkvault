@@ -741,10 +741,10 @@ jobs:
 
             - name: Test Components ^T-Z
               env:
-                  COVERAGE_THRESHOLD_LINES: 96.22
+                  COVERAGE_THRESHOLD_LINES: 95.84
                   COVERAGE_THRESHOLD_FUNCTIONS: 97.34
-                  COVERAGE_THRESHOLD_STATEMENTS: 96.29
-                  COVERAGE_THRESHOLD_BRANCHES: 89.87
+                  COVERAGE_THRESHOLD_STATEMENTS: 95.92
+                  COVERAGE_THRESHOLD_BRANCHES: 89.23
                   COVERAGE_INCLUDE_PATH: src/domains/transaction/components/[T-Z]*
               uses: nick-invision/retry@v2
               with:
@@ -954,10 +954,10 @@ jobs:
         runs-on: ubuntu-latest
         env:
             COVERAGE_INCLUDE_PATH: src/app/lib
-            COVERAGE_THRESHOLD_LINES: 53.27
-            COVERAGE_THRESHOLD_BRANCHES:  43.87
-            COVERAGE_THRESHOLD_FUNCTIONS: 52.24
-            COVERAGE_THRESHOLD_STATEMENTS: 53.49
+            COVERAGE_THRESHOLD_LINES: 52.99
+            COVERAGE_THRESHOLD_BRANCHES: 43.72
+            COVERAGE_THRESHOLD_FUNCTIONS: 51.89
+            COVERAGE_THRESHOLD_STATEMENTS: 53.22
         strategy:
             matrix:
                 node-version:

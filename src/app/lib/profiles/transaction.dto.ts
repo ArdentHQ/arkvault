@@ -139,6 +139,10 @@ export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTran
 		return this.#data.isValidatorResignation();
 	}
 
+	public isUpdateValidator(): boolean {
+		return this.#data.isUpdateValidator();
+	}
+
 	public username(): string {
 		return this.data<Contracts.ConfirmedTransactionData>().username();
 	}

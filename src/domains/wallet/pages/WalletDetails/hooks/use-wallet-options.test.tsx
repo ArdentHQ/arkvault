@@ -25,6 +25,7 @@ describe("Wallet Options Hook", () => {
 		expect(result.current.registrationOptions).toStrictEqual({
 			key: "registrations",
 			options: [
+				{ label: "Update Validator", value: "validator-registration" },
 				{ label: "Resign Validator", value: "validator-resignation" },
 				{ label: "Username", value: "username-registration" },
 				{ label: "Resign Username", value: "username-resignation" },
@@ -43,6 +44,7 @@ describe("Wallet Options Hook", () => {
 		expect(result.current.registrationOptions).toStrictEqual({
 			key: "registrations",
 			options: [
+				{ label: "Update Validator", value: "validator-registration" },
 				{ label: "Resign Validator", value: "validator-resignation" },
 				{ label: "Username", value: "username-registration" },
 				{ label: "Resign Username", value: "username-resignation" },
@@ -64,6 +66,7 @@ describe("Wallet Options Hook", () => {
 		expect(result.current.registrationOptions).toStrictEqual({
 			key: "registrations",
 			options: [
+				{ label: "Update Validator", value: "validator-registration" },
 				{ label: "Resign Validator", value: "validator-resignation" },
 				{ label: "Username", value: "username-registration" },
 				{ label: "Resign Username", value: "username-resignation" },
@@ -96,6 +99,7 @@ describe("Wallet Options Hook", () => {
 		expect(result.current.registrationOptions).toStrictEqual({
 			key: "registrations",
 			options: [
+				{ label: "Update Validator", value: "validator-registration" },
 				{ label: "Resign Validator", value: "validator-resignation" },
 				{ label: "Username", value: "username-registration" },
 				{ label: "Resign Username", value: "username-resignation" },
@@ -115,6 +119,7 @@ describe("Wallet Options Hook", () => {
 		expect(result.current.registrationOptions).toStrictEqual({
 			key: "registrations",
 			options: [
+				{ label: "Update Validator", value: "validator-registration" },
 				{ label: "Resign Validator", value: "validator-resignation" },
 				{ label: "Username", value: "username-registration" },
 				{ label: "Resign Username", value: "username-resignation" },
@@ -134,6 +139,10 @@ describe("Wallet Options Hook", () => {
 			{
 			  "key": "registrations",
 			  "options": [
+			    {
+			      "label": "Update Validator",
+			      "value": "validator-registration",
+			    },
 			    {
 			      "label": "Resign Validator",
 			      "value": "validator-resignation",

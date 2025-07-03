@@ -84,7 +84,7 @@ export class Wallet implements IReadWriteWallet {
 		this.#walletGate = new WalletGate(this);
 		this.#walletSynchroniser = new WalletSynchroniser(this);
 		this.#walletMutator = new WalletMutator(this);
-		this.#voteRegistry = new VoteRegistry(this);
+		this.#voteRegistry = new VoteRegistry(this, this.#attributes);
 		this.#transactionIndex = new TransactionIndex(this);
 		this.#signingKey = new WalletImportFormat(this, WalletData.EncryptedSigningKey);
 		this.#confirmKey = new WalletImportFormat(this, WalletData.EncryptedConfirmKey);
@@ -295,6 +295,15 @@ export class Wallet implements IReadWriteWallet {
 		}
 
 		return this.#attributes.get<Contracts.WalletData>("wallet").isValidator();
+	}
+
+	/** {@inheritDoc IReadWriteWallet.isLegacyValidator} */
+	public isLegacyValidator(): boolean {
+		if (!this.#attributes.get<Contracts.WalletData>("wallet")) {
+			throw new Error(ERR_NOT_SYNCED);
+		}
+
+		return this.#attributes.get<Contracts.WalletData>("wallet").isLegacyValidator();
 	}
 
 	/** {@inheritDoc IReadWriteWallet.validatorFee} */

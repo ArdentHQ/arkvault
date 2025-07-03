@@ -17,7 +17,8 @@ interface Properties {
 		| "validatorResignation"
 		| "multiSignature"
 		| "usernameRegistration"
-		| "usernameResignation";
+		| "usernameResignation"
+		| "updateValidator";
 	data: Record<string, any> | undefined;
 	network: Networks.Network;
 	profile: Contracts.IProfile;
@@ -28,6 +29,8 @@ export const GasLimit: Record<Properties["type"], BigNumber> = {
 	multiPayment: gasLimit21k,
 	multiSignature: gasLimit21k,
 	transfer: gasLimit21k,
+	// updateValidator uses `evmCall`
+	updateValidator: BigNumber.make(200_000),
 	usernameRegistration: BigNumber.make(200_000),
 	usernameResignation: BigNumber.make(200_000),
 	validatorRegistration: BigNumber.make(400_000),

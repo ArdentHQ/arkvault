@@ -26,6 +26,7 @@ export interface TransactionFees {
 	vote: TransactionFee;
 	multiPayment: TransactionFee;
 	validatorResignation: TransactionFee;
+	evmCall: TransactionFee;
 }
 
 export interface FeeService {

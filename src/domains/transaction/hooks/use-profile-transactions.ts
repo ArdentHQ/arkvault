@@ -185,7 +185,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 		return () => {
 			isMounted.current = false;
 		};
-	}, [selectedWalletAddresses, activeMode, activeTransactionType, timestamp, selectedTransactionTypes, orderBy]); // eslint-disable-line react-hooks/exhaustive-deps
+	}, [selectedWalletAddresses, activeMode, activeTransactionType, timestamp, selectedTransactionTypes, orderBy]);
 
 	const updateFilters = useCallback(
 		({
@@ -282,7 +282,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 			isLoadingMore: false,
 			transactions: [...state.transactions, ...items],
 		}));
-	}, [activeMode, activeTransactionType, wallets.length, selectedTransactionTypes, orderBy]); // eslint-disable-line react-hooks/exhaustive-deps
+	}, [activeMode, activeTransactionType, wallets.length, selectedTransactionTypes, orderBy]);
 
 	/**
 	 * Run periodically every 30 seconds to check for new transactions
@@ -344,7 +344,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 				interval: 15_000,
 			},
 		],
-		[addresses, activeMode, transactionTypes, activeTransactionType],
+		[addresses, activeMode, transactionTypes, activeTransactionType, transactions],
 	);
 
 	const { start, stop } = useSynchronizer(jobs);
