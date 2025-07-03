@@ -44,7 +44,7 @@ export const useWalletSync = ({ profile, env }: WalletImportTypes) => {
 			syncRates(profile, wallet),
 			syncFees(wallet),
 			syncBalance(wallet),
-			wallet.network().sync()
+			wallet.network().sync(),
 		]);
 
 	return { syncAll };
