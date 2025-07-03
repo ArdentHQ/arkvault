@@ -75,7 +75,7 @@ export const ValidatorRowMobile = (properties: ValidatorRowProperties) => {
 
 					<MobileTableElementRow title={t("COMMON.EXPLORER")}>
 						<Link to={validator.explorerLink()} tooltip={t("COMMON.OPEN_IN_EXPLORER")} isExternal>
-							<span className="pr-2">{t("COMMON.VIEW")}</span>
+							<span className="pr-2 text-sm sm:text-base">{t("COMMON.VIEW")}</span>
 						</Link>
 					</MobileTableElementRow>
 				</MobileTableElement>
