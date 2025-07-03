@@ -1,6 +1,6 @@
 import { describe, expect, it, beforeEach, vi } from "vitest";
 import { IProfile, IReadWriteWallet, WalletData, WalletFlag, WalletSetting, WalletImportMethod } from "./contracts";
-import { env, getMainsailProfileId, getDefaultMainsailWalletId, MAINSAIL_MNEMONICS } from "@/utils/testing-library";
+import { env, getMainsailProfileId, getDefaultMainsailWalletId } from "@/utils/testing-library";
 import { DataRepository } from "./data.repository";
 import { SettingRepository } from "./setting.repository";
 import { WalletGate } from "./wallet.gate";
@@ -25,7 +25,6 @@ import { ExchangeRateService } from "./exchange-rate.service";
 import { WalletLedgerModel } from "./wallet.enum";
 import { BigNumber } from "@/app/lib/helpers/bignumber";
 import { Wallet } from "./wallet";
-import { WalletSerialiser } from "./serialiser";
 
 describe("Wallet", () => {
 	let profile: IProfile;
