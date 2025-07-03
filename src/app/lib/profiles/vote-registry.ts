@@ -44,6 +44,7 @@ export class VoteRegistry implements IVoteRegistry {
 						address: votingAddress,
 						explorerLink: this.#wallet.explorerLink(),
 						governanceIdentifier: "address",
+						isLegacyValidator: false,
 						isResignedValidator: false,
 						isValidator: true,
 					}),

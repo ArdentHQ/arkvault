@@ -102,6 +102,10 @@ export class ExtendedSignedTransactionData {
 		return this.#data.isValidatorRegistration();
 	}
 
+	public isUpdateValidator(): boolean {
+		return this.#data.isUpdateValidator();
+	}
+
 	public isUsernameRegistration(): boolean {
 		return this.#data.isUsernameRegistration();
 	}

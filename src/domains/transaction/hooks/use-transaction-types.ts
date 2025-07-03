@@ -32,6 +32,9 @@ export const useTransactionTypes = ({ wallets = [] }: TransactionTypeProperties 
 		unvote: {
 			label: t("TRANSACTION.TRANSACTION_TYPES.UNVOTE"),
 		},
+		updateValidator: {
+			label: t("TRANSACTION.TRANSACTION_TYPES.UPDATE_VALIDATOR"),
+		},
 		usernameRegistration: {
 			label: t("TRANSACTION.TRANSACTION_TYPES.USERNAME_REGISTRATION"),
 		},
@@ -54,6 +57,10 @@ export const useTransactionTypes = ({ wallets = [] }: TransactionTypeProperties 
 
 	return {
 		getLabel: (type: string) => {
+			if (type.startsWith("0x")) {
+				return type;
+			}
+
 			if (transactionTypes[type]) {
 				return transactionTypes[type].label;
 			}

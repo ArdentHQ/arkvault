@@ -9,6 +9,7 @@ export interface ROWallet {
 	explorerLink: string;
 	isValidator: boolean;
 	isResignedValidator: boolean;
+	isLegacyValidator: boolean;
 	governanceIdentifier: string;
 }
 
@@ -52,6 +53,11 @@ export class ReadOnlyWallet implements IReadOnlyWallet {
 	/** {@inheritDoc IReadOnlyWallet.isValidator} */
 	public isValidator(): boolean {
 		return this.#wallet.isValidator;
+	}
+
+	/** {@inheritDoc IReadOnlyWallet.isLegacyValidator} */
+	public isLegacyValidator(): boolean {
+		return this.#wallet.isLegacyValidator;
 	}
 
 	/** {@inheritDoc IReadOnlyWallet.isResignedDelegate} */
