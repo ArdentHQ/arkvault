@@ -54,6 +54,8 @@ export interface WalletData {
 	// Flags
 	isValidator(): boolean;
 
+	isLegacyValidator(): boolean;
+
 	isResignedDelegate(): boolean;
 
 	isValidator(): boolean;

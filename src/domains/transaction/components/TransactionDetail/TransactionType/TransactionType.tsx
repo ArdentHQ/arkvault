@@ -58,7 +58,7 @@ export const TransactionType = ({
 						</>
 					)}
 
-					{transaction.isValidatorRegistration() && (
+					{(transaction.isValidatorRegistration() || transaction.isUpdateValidator()) && (
 						<>
 							<DetailDivider />
 

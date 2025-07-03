@@ -9,6 +9,9 @@ import {
 	ValidatorRegistrationBuilder,
 	ValidatorResignationBuilder,
 	VoteBuilder,
+	EvmCallBuilder,
+	ContractAddresses,
+	AbiEncoder,
 } from "@arkecosystem/typescript-crypto";
 
 import { AddressService } from "./address.service.js";
@@ -115,6 +118,39 @@ export class TransactionService {
 			.gasPrice(UnitConverter.parseUnits(input.gasPrice.toString(), "gwei"))
 			.gas(input.gasLimit.toString())
 			.value(input.data.value)
+			.network(this.#configCrypto.crypto.network.chainId);
+
+		await this.#sign(input, builder);
+
+		return new SignedTransactionData().configure(
+			builder.transaction.data,
+			builder.transaction.serialize().toString("hex"),
+		);
+	}
+
+	public async updateValidator(input: Services.UpdateValidatorInput): Promise<SignedTransactionData> {
+		applyCryptoConfiguration(this.#configCrypto);
+		this.#assertGasFee(input);
+
+		if (!input.data.validatorPublicKey) {
+			throw new Error(
+				`[TransactionService#updateValidator] Expected validatorPublicKey to be defined but received ${typeof input
+					.data.validatorPublicKey}`,
+			);
+		}
+
+		const nonce = await this.#generateNonce(input);
+
+		const builder = await EvmCallBuilder.new({
+			senderPublicKey: "",
+			value: "0",
+		})
+
+			.to(ContractAddresses.CONSENSUS)
+			.payload(new AbiEncoder().encodeFunctionCall("updateValidator", [`0x${input.data.validatorPublicKey}`]))
+			.nonce(nonce)
+			.gasPrice(UnitConverter.parseUnits(input.gasPrice.toString(), "gwei"))
+			.gas(input.gasLimit.toString())
 			.network(this.#configCrypto.crypto.network.chainId);
 
 		await this.#sign(input, builder);

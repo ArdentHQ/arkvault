@@ -232,6 +232,7 @@ export const translations = {
 			SIGN_MESSAGE: "Sign Message",
 			STORE_HASH: "Store Hash",
 			TRANSACTION_HISTORY: "Transaction History",
+			UPDATE_VALIDATOR: "Update Validator",
 			VERIFY_MESSAGE: "Verify Message",
 		},
 

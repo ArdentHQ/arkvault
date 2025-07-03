@@ -20,10 +20,11 @@ import {
 	syncValidators,
 	waitFor,
 } from "@/utils/testing-library";
+import { vi } from "vitest";
 
 let profile: ProfilesContracts.IProfile;
 let wallet: ProfilesContracts.IReadWriteWallet;
-
+let isValidatorMock: vi.Mock;
 const fees = { avg: 1.354, max: 10, min: 0 };
 
 const renderComponent = (properties?: any) => {
@@ -80,11 +81,18 @@ describe("ValidatorRegistrationForm", () => {
 
 		wallet = profile.wallets().first();
 
+		isValidatorMock = vi.spyOn(wallet, "isValidator").mockReturnValue(false);
+
+		// not validator yet
 		await syncValidators(profile);
 
 		vi.spyOn(useFeesHook, "useFees").mockReturnValue({
 			calculate: () => Promise.resolve(fees),
 		});
+	});
+
+	afterAll(() => {
+		isValidatorMock.mockRestore();
 	});
 
 	it("should render form step", async () => {
@@ -155,6 +163,7 @@ describe("ValidatorRegistrationForm", () => {
 			errors: {},
 			rejected: [],
 		});
+
 		const transactionMock = createTransactionMock(wallet);
 
 		await signValidatorRegistration({

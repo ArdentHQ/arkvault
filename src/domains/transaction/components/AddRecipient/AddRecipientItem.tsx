@@ -9,6 +9,7 @@ import { Amount } from "@/app/components/Amount";
 import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
 import { MultiEntryItem, InfoDetail } from "@/app/components/MultiEntryItem/MultiEntryItem";
 import { IProfile } from "@/app/lib/profiles/contracts";
+import { useBreakpoint } from "@/app/hooks";
 
 export const AddRecipientItem: React.FC<{
 	index: number;
@@ -28,6 +29,7 @@ export const AddRecipientItem: React.FC<{
 	profile,
 }) => {
 	const { t } = useTranslation();
+	const { isSmAndAbove } = useBreakpoint();
 	const { convert } = useExchangeRate({ exchangeTicker, profile, ticker });
 
 	return (
@@ -45,7 +47,7 @@ export const AddRecipientItem: React.FC<{
 						className="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-50 p-0 sm:hidden"
 						variant="transparent"
 					>
-						<Icon name="Trash" size="lg" />
+						<Icon name="Trash" size={isSmAndAbove ? "lg" : "md"} />
 					</Button>
 				</div>
 			}

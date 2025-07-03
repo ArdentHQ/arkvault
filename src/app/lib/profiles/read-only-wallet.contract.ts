@@ -62,6 +62,14 @@ export interface IReadOnlyWallet {
 	isValidator(): boolean;
 
 	/**
+	 * Determine if the wallet is a legacy validator.
+	 *
+	 * @returns {boolean}
+	 * @memberof IReadOnlyWallet
+	 */
+	isLegacyValidator(): boolean;
+
+	/**
 	 * Determine if the wallet is a resigned validator.
 	 *
 	 * @returns {boolean}
