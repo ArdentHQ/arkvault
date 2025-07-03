@@ -141,6 +141,18 @@ describe("Wallet", () => {
 		expect(typeof result).toBe("number");
 	});
 
+	it("should fallback to 18 decimals when manifest currency decimals is undefined", () => {
+		vi.spyOn(wallet, "manifest").mockImplementation(() => ({
+			get: () => ({
+				[wallet.networkId()]: {
+					currency: { decimals: undefined },
+				},
+			}),
+		}));
+		const result = wallet.balance();
+		expect(typeof result).toBe("number");
+	});
+
 	it("should return 0 for converted balance on test network", () => {
 		vi.spyOn(wallet.network(), "isTest").mockReturnValue(true);
 		expect(wallet.convertedBalance()).toBe(0);
