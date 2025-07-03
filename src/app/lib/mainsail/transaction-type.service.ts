@@ -117,4 +117,8 @@ export class TransactionTypeService {
 
 		return data.data.includes(identifier);
 	}
+
+	public static isUpdateValidator(data: TransactionData): boolean {
+		return data.data.includes(TransactionTypes.UpdateValidator.slice(2));
+	}
 }

@@ -33,6 +33,7 @@ export class ConfirmedTransactionData {
 		{ method: "isValidatorResignation", type: "validatorResignation" },
 		{ method: "isVote", type: "vote" },
 		{ method: "isVoteCombination", type: "voteCombination" },
+		{ method: "isUpdateValidator", type: "updateValidator" },
 	];
 
 	protected decimals?: number;
@@ -231,6 +232,10 @@ export class ConfirmedTransactionData {
 
 	public isValidatorRegistration(): boolean {
 		return TransactionTypeService.isValidatorRegistration(this.data);
+	}
+
+	public isUpdateValidator(): boolean {
+		return TransactionTypeService.isUpdateValidator(this.data);
 	}
 
 	public isVoteCombination(): boolean {

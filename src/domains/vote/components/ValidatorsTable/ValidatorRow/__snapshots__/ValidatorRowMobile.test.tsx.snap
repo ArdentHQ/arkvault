@@ -108,7 +108,7 @@ exports[`ValidatorRowMobile > should render the selected vote 1`] = `
                       class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
                     >
                       <span
-                        class="pr-2"
+                        class="pr-2 text-sm sm:text-base"
                       >
                         View
                       </span>
@@ -251,7 +251,7 @@ exports[`ValidatorRowMobile > should render the selected vote 1`] = `
                       class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
                     >
                       <span
-                        class="pr-2"
+                        class="pr-2 text-sm sm:text-base"
                       >
                         View
                       </span>
@@ -399,7 +399,7 @@ exports[`ValidatorRowMobile > should render the selected vote 1`] = `
                       class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
                     >
                       <span
-                        class="pr-2"
+                        class="pr-2 text-sm sm:text-base"
                       >
                         View
                       </span>
