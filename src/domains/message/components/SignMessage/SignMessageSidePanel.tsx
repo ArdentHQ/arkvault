@@ -260,7 +260,7 @@ export const SignMessageSidePanel = ({
 							<Button
 								data-testid="SignMessage__back-button"
 								variant="secondary"
-								className="text-sm sm:text-base"
+								className="text-base"
 								onClick={handleBack}
 							>
 								{t("COMMON.CLOSE")}

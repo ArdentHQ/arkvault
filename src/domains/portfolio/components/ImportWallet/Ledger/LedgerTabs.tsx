@@ -128,50 +128,60 @@ export const LedgerTabs = ({
 		onCancel?.();
 	}, [activeTab, history, listenDevice]);
 
+	const showFooter = [LedgerTabStep.LedgerScanStep, LedgerTabStep.LedgerImportStep].includes(activeTab);
+
 	return (
-		<Tabs id="ledgerTabs" activeId={activeTab}>
-			<div data-testid="LedgerTabs" className="mt-4">
-				<TabPanel tabId={LedgerTabStep.ListenLedgerStep}>
-					<ListenLedger
-						noHeading
-						onDeviceAvailable={() => {
-							setActiveTab(LedgerTabStep.LedgerConnectionStep);
-							onStepChange?.(LedgerTabStep.LedgerConnectionStep);
-						}}
-						onDeviceNotAvailable={handleDeviceNotAvailable}
-					/>
-				</TabPanel>
+		<>
+			<div className={showFooter ? "h-full pb-20" : "h-full"}>
+				<Tabs id="ledgerTabs" activeId={activeTab}>
+					<div data-testid="LedgerTabs" className="h-full">
+						<div className="h-full overflow-y-auto">
+							<TabPanel tabId={LedgerTabStep.ListenLedgerStep}>
+								<ListenLedger
+									noHeading
+									onDeviceAvailable={() => {
+										setActiveTab(LedgerTabStep.LedgerConnectionStep);
+										onStepChange?.(LedgerTabStep.LedgerConnectionStep);
+									}}
+									onDeviceNotAvailable={handleDeviceNotAvailable}
+								/>
+							</TabPanel>
 
-				<TabPanel tabId={LedgerTabStep.LedgerConnectionStep}>
-					<LedgerConnectionStep
-						cancelling={cancelling}
-						onConnect={() => {
-							setActiveTab(LedgerTabStep.LedgerScanStep);
-							onStepChange?.(LedgerTabStep.LedgerScanStep);
-						}}
-						network={activeNetwork}
-					/>
-				</TabPanel>
+							<TabPanel tabId={LedgerTabStep.LedgerConnectionStep}>
+								<LedgerConnectionStep
+									cancelling={cancelling}
+									onConnect={() => {
+										setActiveTab(LedgerTabStep.LedgerScanStep);
+										onStepChange?.(LedgerTabStep.LedgerScanStep);
+									}}
+									network={activeNetwork}
+								/>
+							</TabPanel>
 
-				<TabPanel tabId={LedgerTabStep.LedgerScanStep}>
-					<LedgerScanStep
-						cancelling={cancelling}
-						profile={activeProfile}
-						setRetryFn={handleRetry}
-						network={activeNetwork}
-					/>
-				</TabPanel>
+							<TabPanel tabId={LedgerTabStep.LedgerScanStep}>
+								<LedgerScanStep
+									cancelling={cancelling}
+									profile={activeProfile}
+									setRetryFn={handleRetry}
+									network={activeNetwork}
+								/>
+							</TabPanel>
 
-				<TabPanel tabId={LedgerTabStep.LedgerImportStep}>
-					<LedgerImportStep
-						network={activeNetwork}
-						wallets={importedWallets}
-						profile={activeProfile}
-						onClickEditWalletName={onClickEditWalletName}
-					/>
-				</TabPanel>
+							<TabPanel tabId={LedgerTabStep.LedgerImportStep}>
+								<LedgerImportStep
+									network={activeNetwork}
+									wallets={importedWallets}
+									profile={activeProfile}
+									onClickEditWalletName={onClickEditWalletName}
+								/>
+							</TabPanel>
+						</div>
+					</div>
+				</Tabs>
+			</div>
 
-				{[LedgerTabStep.LedgerScanStep, LedgerTabStep.LedgerImportStep].includes(activeTab) && (
+			{showFooter && (
+				<div className="bg-theme-background border-theme-secondary-300 dark:border-theme-dark-700 absolute right-0 bottom-0 left-0 flex w-full flex-col border-t px-6 py-4">
 					<ImportActionToolbar
 						showButtons={activeTab !== LedgerTabStep.LedgerImportStep}
 						onBack={handleBack}
@@ -182,8 +192,8 @@ export const LedgerTabs = ({
 						showPortfoliobutton={activeTab === LedgerTabStep.LedgerImportStep}
 						onSubmit={onSubmit}
 					/>
-				)}
-			</div>
-		</Tabs>
+				</div>
+			)}
+		</>
 	);
 };
