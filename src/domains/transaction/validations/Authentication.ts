@@ -103,18 +103,17 @@ export const authentication = (t: any) => {
 			}),
 			validate: {
 				matchSenderPublicKey: (secret: string) => {
-					return true
-					//try {
-					//	const { publicKey } = wallet.publicKeyService().fromSecret(secret);
-					//
-					//	if (publicKey === wallet.secondPublicKey()) {
-					//		return true;
-					//	}
-					//
-					//	return t("COMMON.INPUT_PASSPHRASE.VALIDATION.SECRET_NOT_MATCH_WALLET");
-					//} catch {
-					//	return t("COMMON.INPUT_PASSPHRASE.VALIDATION.SECRET_NOT_MATCH_WALLET");
-					//}
+					try {
+						const { publicKey } = wallet.publicKeyService().fromSecret(secret);
+
+						if (publicKey === wallet.secondPublicKey()) {
+							return true;
+						}
+
+						return t("COMMON.INPUT_PASSPHRASE.VALIDATION.SECRET_NOT_MATCH_WALLET");
+					} catch {
+						return t("COMMON.INPUT_PASSPHRASE.VALIDATION.SECRET_NOT_MATCH_WALLET");
+					}
 				},
 			},
 		}),
