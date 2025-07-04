@@ -12,6 +12,7 @@ import {
 	EvmCallBuilder,
 	ContractAddresses,
 	AbiEncoder,
+	PrivateKey,
 } from "@arkecosystem/typescript-crypto";
 
 import { AddressService } from "./address.service.js";
@@ -344,6 +345,10 @@ export class TransactionService {
 
 		if (input.signatory.actsWithLedger()) {
 			return this.#signWithLedger(input, builder.transaction);
+		}
+
+		if (input.signatory.actsWithConfirmationMnemonic() || input.signatory.actsWithConfirmationSecret()) {
+			return await builder.legacySecondSign(input.signatory.signingKey(), input.signatory.confirmKey());
 		}
 
 		await builder.sign(input.signatory.signingKey());
