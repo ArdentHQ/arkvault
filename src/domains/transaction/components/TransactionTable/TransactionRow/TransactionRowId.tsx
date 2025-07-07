@@ -27,7 +27,7 @@ export const TransactionRowId = ({ transaction }: { transaction: DTO.ExtendedCon
 			return 14;
 		}
 
-		return 10
+		return 10;
 	};
 
 	return (
