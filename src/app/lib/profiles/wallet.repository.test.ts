@@ -233,11 +233,7 @@ describe("WalletRepository", () => {
 	});
 
 	it("should convert wallets to object using default options", () => {
-		const wallets = subject.toObject({
-			addNetworkInformation: true,
-			excludeEmptyWallets: false,
-			excludeLedgerWallets: false,
-		});
+		const wallets = subject.toObject();
 		expect(wallets).toBeTypeOf("object");
 	});
 

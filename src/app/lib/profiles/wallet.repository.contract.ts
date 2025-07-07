@@ -182,11 +182,11 @@ export interface IWalletRepository {
 	/**
 	 * Turn the wallets into a normalised object.
 	 *
-	 * @param {IWalletExportOptions} options
+	 * @param {IWalletExportOptions|undefined} options
 	 * @returns {Record<string, IWalletData>}
 	 * @memberof IWalletRepository
 	 */
-	toObject(options: IWalletExportOptions): Record<string, IWalletData>;
+	toObject(options?: IWalletExportOptions): Record<string, IWalletData>;
 
 	/**
 	 * Get all wallets sorted by the given column.
