@@ -371,4 +371,13 @@ describe("WalletRepository", () => {
 		expect(pqueueSpy.mock.calls[0][0]).toHaveLength(1);
 		expect(pqueueSpy.mock.calls[1][0]).toHaveLength(0);
 	});
+
+	it("should handle forgetting the last selected wallet", () => {
+		vi.spyOn(profile, "walletSelectionMode").mockReturnValue("single");
+		wallet.mutator().isSelected(true);
+
+		subject.forget(wallet.id());
+
+		expect(subject.count()).toBe(0);
+	});
 });
