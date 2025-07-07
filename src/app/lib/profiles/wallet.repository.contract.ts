@@ -197,4 +197,13 @@ export interface IWalletRepository {
 	 * @memberof IWalletRepository
 	 */
 	sortBy(column: string, direction: "asc" | "desc"): IReadWriteWallet[];
+
+	/**
+	 * Find wallets by coin.
+	 *
+	 * @param {string} coin
+	 * @returns {IReadWriteWallet[]}
+	 * @memberof IWalletRepository
+	 */
+	findByCoin(coin: string): IReadWriteWallet[];
 }

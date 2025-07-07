@@ -1,15 +1,15 @@
 import { describe, expect, it, beforeEach, afterEach, vi } from "vitest";
-import { IProfile, IReadWriteWallet } from "./contracts";
-import { WalletRepository } from "./wallet.repository";
+import { IProfile, IReadWriteWallet, IWalletRepository } from "./contracts";
 import { env, MAINSAIL_MNEMONICS } from "@/utils/testing-library";
 
 let profile: IProfile;
 let wallet: IReadWriteWallet;
-let subject: WalletRepository;
+let subject: IWalletRepository;
 
 beforeEach(async () => {
 	profile = await env.profiles().create("test profile");
-	subject = new WalletRepository(profile);
+
+	subject = profile.wallets();
 
 	wallet = await profile.walletFactory().fromMnemonicWithBIP39({
 		mnemonic: MAINSAIL_MNEMONICS[0],
@@ -176,7 +176,7 @@ describe("WalletRepository", () => {
 	});
 
 	it("should sort wallets by coin", () => {
-		const wallets = subject.sortBy("coin");
+		const wallets = subject.sortBy("coin", "asc");
 		expect(wallets).toBeInstanceOf(Array);
 	});
 
@@ -206,8 +206,13 @@ describe("WalletRepository", () => {
 			}),
 		).toThrow("This is not implemented yet");
 	});
+
 	it("should convert wallets to object using default options", () => {
-		const wallets = subject.toObject();
+		const wallets = subject.toObject({
+			addNetworkInformation: true,
+			excludeEmptyWallets: false,
+			excludeLedgerWallets: false,
+		});
 		expect(wallets).toBeTypeOf("object");
 	});
 
@@ -231,12 +236,18 @@ describe("WalletRepository", () => {
 		const anotherWallet = await profile.walletFactory().fromMnemonicWithBIP39({
 			mnemonic: MAINSAIL_MNEMONICS[2],
 		});
-
 		subject.push(anotherWallet);
 
+		vi.spyOn(profile, "walletSelectionMode").mockReturnValue("single");
 		wallet.mutator().isSelected(true);
+
+		const anotherWalletId = anotherWallet.id();
 		subject.forget(wallet.id());
+
 		expect(subject.has(wallet.id())).toBe(false);
+
+		const updatedAnotherWallet = profile.wallets().findById(anotherWalletId);
+		expect(updatedAnotherWallet.isSelected()).toBe(true);
 	});
 
 	it("should not find a wallet by a wrong alias", () => {
@@ -244,7 +255,7 @@ describe("WalletRepository", () => {
 	});
 
 	it("should sort wallets by address", () => {
-		const wallets = subject.sortBy("address");
+		const wallets = subject.sortBy("address", "asc");
 		expect(wallets).toBeInstanceOf(Array);
 	});
 
