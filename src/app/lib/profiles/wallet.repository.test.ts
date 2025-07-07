@@ -1,5 +1,5 @@
 import { describe, expect, it, beforeEach, afterEach, vi } from "vitest";
-import { IProfile, IReadWriteWallet, IWalletRepository } from "./contracts";
+import { IProfile, IReadWriteWallet, IWalletRepository, WalletData } from "./contracts";
 import { env, MAINSAIL_MNEMONICS } from "@/utils/testing-library";
 
 let profile: IProfile;
@@ -314,5 +314,37 @@ describe("WalletRepository", () => {
 
 	it("should not find wallets by coin", () => {
 		expect(subject.findByCoin("invalid")).toHaveLength(0);
+	});
+
+	it("should not restore wallets from a different network", async () => {
+		const pqueueSpy = vi.spyOn(await import("./helpers/queue"), "pqueue").mockResolvedValue([]);
+
+		const wallet1Data = wallet.toObject();
+
+		const { DataRepository } = await import("./data.repository");
+		const wallet2DataRepo = new DataRepository();
+		const wallet2RawData = { ...wallet.data().all() };
+		wallet2RawData[WalletData.Network] = "another.network";
+		wallet2DataRepo.fill(wallet2RawData);
+
+		const wallet2Data = {
+			...wallet1Data,
+			data: wallet2DataRepo,
+			id: "wallet-2",
+		};
+
+		const walletsToFill = {
+			[wallet.id()]: wallet1Data,
+			"wallet-2": wallet2Data,
+		};
+
+		subject.flush();
+		subject.fill(walletsToFill);
+
+		await subject.restore({ networkId: wallet.networkId() });
+
+		expect(pqueueSpy).toHaveBeenCalledTimes(2);
+		expect(pqueueSpy.mock.calls[0][0]).toHaveLength(1);
+		expect(pqueueSpy.mock.calls[1][0]).toHaveLength(0);
 	});
 });
