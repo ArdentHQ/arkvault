@@ -1,9 +1,7 @@
 import { describe, expect, it, beforeEach, afterEach, vi } from "vitest";
-import { IProfile, IReadWriteWallet, IWalletData, WalletData } from "./contracts";
+import { IProfile, IReadWriteWallet } from "./contracts";
 import { WalletRepository } from "./wallet.repository";
 import { env, MAINSAIL_MNEMONICS } from "@/utils/testing-library";
-import { Wallet } from "./wallet";
-import { UUID } from "@ardenthq/arkvault-crypto";
 
 let profile: IProfile;
 let wallet: IReadWriteWallet;
@@ -25,8 +23,12 @@ afterEach(() => {
 });
 
 describe("WalletRepository", () => {
-	it("should return all wallets", () => {
-		expect(subject.values()).toHaveLength(1);
+	it("should return all", () => {
+		expect(subject.all()).toEqual({ [wallet.id()]: wallet });
+	});
+
+	it("should return values", () => {
+		expect(subject.values()).toEqual([wallet]);
 	});
 
 	it("should return the first wallet", () => {
