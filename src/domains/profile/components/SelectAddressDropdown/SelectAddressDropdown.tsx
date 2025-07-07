@@ -51,12 +51,12 @@ export const OptionLabel = ({
 				walletName={alias}
 				addressClass={cn("leading-[17px] sm:leading-5 text-sm sm:text-base", {
 					"text-theme-primary-600": !alias && option.isSelected,
-					"text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200": alias,
+					"text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500": alias,
 					"text-theme-text": !alias,
 				})}
-				walletNameClass={cn("leading-[17px] sm:leading-5  text-sm sm:text-base", {
+				walletNameClass={cn("leading-[17px] sm:leading-5 text-sm sm:text-base", {
 					"text-theme-primary-600": option.isSelected,
-					"text-theme-text": !option.isSelected,
+					"text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200": !option.isSelected,
 				})}
 			/>
 
