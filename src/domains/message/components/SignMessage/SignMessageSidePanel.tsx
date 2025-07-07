@@ -28,11 +28,9 @@ enum Step {
 export const SignMessageSidePanel = ({
 	open,
 	onOpenChange,
-	onMountChange,
 }: {
 	open: boolean;
 	onOpenChange: (open: boolean) => void;
-	onMountChange?: (mounted: boolean) => void;
 }): JSX.Element => {
 	const { t } = useTranslation();
 
@@ -53,7 +51,7 @@ export const SignMessageSidePanel = ({
 	}, [queryParameters]);
 
 	const activeWallet = useMemo(() => walletFromPath || walletFromDeeplink, [walletFromPath, walletFromDeeplink]);
-	const profileWallets = useMemo(() => activeProfile.wallets().values(), [activeProfile]);
+	const profileWallets = activeProfile.wallets().values();
 
 	const [selectedWallet, setSelectedWallet] = useState<Contracts.IReadWriteWallet | undefined>(activeWallet);
 
@@ -79,7 +77,7 @@ export const SignMessageSidePanel = ({
 		mode: "onChange",
 	});
 
-	const { formState, getValues, handleSubmit, register, trigger } = form;
+	const { formState, getValues, handleSubmit, register, trigger, reset } = form;
 	const { isValid } = formState;
 
 	const { signMessage } = useValidation();
@@ -93,6 +91,14 @@ export const SignMessageSidePanel = ({
 			trigger("message");
 		}
 	}, [trigger]);
+
+	const onMountChange = () => {
+		reset();
+
+		setSelectedWallet(undefined);
+
+		setSignedMessage(initialState);
+	};
 
 	const { hasDeviceAvailable, isConnected, connect } = useLedgerContext();
 
@@ -224,6 +230,7 @@ export const SignMessageSidePanel = ({
 			/>
 		);
 	};
+
 	return (
 		<SidePanel
 			title={getTitle()}
