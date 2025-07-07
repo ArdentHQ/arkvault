@@ -1,6 +1,8 @@
 import { describe, expect, it, beforeEach, afterEach, vi } from "vitest";
 import { IProfile, IReadWriteWallet, IWalletRepository, WalletData } from "./contracts";
 import { env, MAINSAIL_MNEMONICS } from "@/utils/testing-library";
+import * as queue from "./helpers/queue";
+import { DataRepository } from "./data.repository";
 
 let profile: IProfile;
 let wallet: IReadWriteWallet;
@@ -317,11 +319,10 @@ describe("WalletRepository", () => {
 	});
 
 	it("should not restore wallets from a different network", async () => {
-		const pqueueSpy = vi.spyOn(await import("./helpers/queue"), "pqueue").mockResolvedValue([]);
+		const pqueueSpy = vi.spyOn(queue, "pqueue").mockResolvedValue([]);
 
 		const wallet1Data = wallet.toObject();
 
-		const { DataRepository } = await import("./data.repository");
 		const wallet2DataRepo = new DataRepository();
 		const wallet2RawData = { ...wallet.data().all() };
 		wallet2RawData[WalletData.Network] = "another.network";
