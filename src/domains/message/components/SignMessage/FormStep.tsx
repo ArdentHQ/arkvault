@@ -7,7 +7,7 @@ import { FormField, FormLabel } from "@/app/components/Form";
 import { InputCounter } from "@/app/components/Input";
 import { SelectAddressDropdown } from "@/domains/profile/components/SelectAddressDropdown";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
-import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
+import { DetailWrapper } from "@/app/components/DetailWrapper";
 import { Address } from "@/app/components/Address";
 export const FormStep = ({
 	disabled,
