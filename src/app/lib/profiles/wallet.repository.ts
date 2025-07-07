@@ -183,8 +183,12 @@ export class WalletRepository implements IWalletRepository {
 	}
 
 	/** {@inheritDoc IWalletRepository.toObject} */
-	public toObject(options: IWalletExportOptions): Record<string, IWalletData> {
-		const { addNetworkInformation = true, excludeEmptyWallets = false, excludeLedgerWallets = false } = options;
+	public toObject(options?: IWalletExportOptions): Record<string, IWalletData> {
+		const {
+			addNetworkInformation = true,
+			excludeEmptyWallets = false,
+			excludeLedgerWallets = false,
+		} = options ?? {};
 
 		if (!addNetworkInformation) {
 			throw new Error("This is not implemented yet");

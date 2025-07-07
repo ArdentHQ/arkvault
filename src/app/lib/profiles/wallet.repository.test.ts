@@ -206,6 +206,10 @@ describe("WalletRepository", () => {
 			}),
 		).toThrow("This is not implemented yet");
 	});
+	it("should convert wallets to object using default options", () => {
+		const wallets = subject.toObject();
+		expect(wallets).toBeTypeOf("object");
+	});
 
 	it("should fill wallets", () => {
 		const wallets = subject.toObject({
