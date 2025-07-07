@@ -56,22 +56,14 @@ export const SignMessageSidePanel = ({
 	const walletSelectionMode = activeProfile.walletSelectionMode();
 
 	const [selectedWallet, setSelectedWallet] = useState<Contracts.IReadWriteWallet | undefined>(undefined);
-	const [allowChangeWallet, setAllowChangeWallet] = useState<boolean>(true);
 
-	useEffect(() => {
-		if (!open) {
-			return;
-		}
-
+	const selectableWallets = useMemo(() => {
 		if (walletSelectionMode === AddressViewSelection.single) {
-			setSelectedWallet(selectedWallets[0]);
-			setAllowChangeWallet(false);
-			return;
+			return [selectedWallets[0]];
 		}
 
-		setSelectedWallet(walletFromPath || walletFromDeeplink);
-		setAllowChangeWallet(true);
-	}, [walletFromPath, walletFromDeeplink, selectedWallets, walletSelectionMode, open]);
+		return profileWallets;
+	}, [walletSelectionMode, selectedWallets, profileWallets]);
 
 	const [activeTab, setActiveTab] = useState<Step>(Step.FormStep);
 	const [authenticateLedger, setAuthenticateLedger] = useState<boolean>(false);
@@ -100,6 +92,36 @@ export const SignMessageSidePanel = ({
 
 	const { signMessage } = useValidation();
 
+	const selectWallet = useCallback(() => {
+		if (selectableWallets.length === 1) {
+			setSelectedWallet(selectableWallets[0]);
+			return;
+		}
+
+		setSelectedWallet(walletFromPath || walletFromDeeplink);
+	}, [selectableWallets, walletFromPath, walletFromDeeplink]);
+
+	const resetState = useCallback(() => {
+		reset();
+		setSelectedWallet(undefined);
+		setSignedMessage(initialState);
+		setActiveTab(Step.FormStep);
+		setAuthenticateLedger(false);
+		setErrorMessage(undefined);
+	}, [reset]);
+
+	const onMountChange = useCallback(
+		(mounted: boolean) => {
+			if (!mounted) {
+				resetState();
+				return;
+			}
+
+			selectWallet();
+		},
+		[selectWallet, resetState],
+	);
+
 	useEffect(() => {
 		register("message", signMessage.message(selectedWallet?.isLedger()));
 	}, [selectedWallet, register, signMessage]);
@@ -109,16 +131,6 @@ export const SignMessageSidePanel = ({
 			trigger("message");
 		}
 	}, [trigger]);
-
-	const onMountChange = () => {
-		reset();
-
-		setSelectedWallet(undefined);
-
-		setAllowChangeWallet(true);
-
-		setSignedMessage(initialState);
-	};
 
 	const { hasDeviceAvailable, isConnected, connect } = useLedgerContext();
 
@@ -176,12 +188,6 @@ export const SignMessageSidePanel = ({
 		},
 		[activeProfile, activeNetwork],
 	);
-
-	useEffect(() => {
-		if (profileWallets.length === 1) {
-			setSelectedWallet(profileWallets[0]);
-		}
-	}, [profileWallets]);
 
 	const getTitle = () => {
 		if (activeTab === Step.ErrorStep) {
@@ -342,12 +348,11 @@ export const SignMessageSidePanel = ({
 								<FormStep
 									disabled={false}
 									profile={activeProfile}
-									wallets={profileWallets}
+									wallets={selectableWallets}
 									disableMessageInput={false}
 									maxLength={signMessage.message().maxLength.value}
 									wallet={selectedWallet}
 									handleSelectAddress={handleSelectAddress}
-									allowChangeWallet={allowChangeWallet}
 								/>
 
 								{selectedWallet && !selectedWallet.isLedger() && (

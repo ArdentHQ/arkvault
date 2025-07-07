@@ -9,6 +9,7 @@ import { SelectAddressDropdown } from "@/domains/profile/components/SelectAddres
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { DetailWrapper } from "@/app/components/DetailWrapper";
 import { Address } from "@/app/components/Address";
+import { useWalletAlias } from "@/app/hooks";
 export const FormStep = ({
 	disabled,
 	wallet,
@@ -17,7 +18,6 @@ export const FormStep = ({
 	maxLength,
 	profile,
 	handleSelectAddress,
-	allowChangeWallet,
 }: {
 	profile: Contracts.IProfile;
 	disabled: boolean;
@@ -26,7 +26,6 @@ export const FormStep = ({
 	disableMessageInput?: boolean;
 	maxLength: number;
 	handleSelectAddress: ((address: string) => void) & React.ChangeEventHandler<any>;
-	allowChangeWallet: boolean;
 }) => {
 	const { t } = useTranslation();
 
@@ -43,9 +42,11 @@ export const FormStep = ({
 
 	const { activeNetwork } = useActiveNetwork({ profile });
 
+	const { getWalletAlias } = useWalletAlias();
+
 	return (
 		<section className="space-y-4">
-			{allowChangeWallet ? (
+			{wallets.length > 1 ? (
 				<FormField name="signatory-address">
 					<FormLabel textClassName="text-base" label={t("COMMON.SIGNING_ADDRESS")} />
 					<SelectAddressDropdown
@@ -63,7 +64,13 @@ export const FormStep = ({
 						<Address
 							truncateOnTable
 							address={wallet?.address()}
-							walletName={wallet?.alias()}
+							walletName={
+								getWalletAlias({
+									address: wallet?.address() ?? "",
+									network: wallet?.network() ?? activeNetwork,
+									profile,
+								}).alias
+							}
 							showCopyButton
 							walletNameClass="text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
 							addressClass="text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-700 text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4"
