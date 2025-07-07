@@ -175,19 +175,42 @@ describe("WalletRepository", () => {
 		manifestSpy.mockRestore();
 	});
 
-	it("should sort wallets by coin", () => {
+	it("should sort wallets by coin", async () => {
+		const wallet2 = await profile.walletFactory().fromMnemonicWithBIP39({ mnemonic: MAINSAIL_MNEMONICS[1] });
+
+		vi.spyOn(wallet, "currency").mockReturnValue("B");
+		vi.spyOn(wallet2, "currency").mockReturnValue("A");
+
+		subject.push(wallet2);
+
 		const wallets = subject.sortBy("coin", "asc");
-		expect(wallets).toBeInstanceOf(Array);
+		expect(wallets[0].id()).toBe(wallet2.id());
+		expect(wallets[1].id()).toBe(wallet.id());
 	});
 
-	it("should sort wallets by balance", () => {
+	it("should sort wallets by balance", async () => {
+		const wallet2 = await profile.walletFactory().fromMnemonicWithBIP39({ mnemonic: MAINSAIL_MNEMONICS[1] });
+
+		vi.spyOn(wallet, "balance").mockReturnValue(200);
+		vi.spyOn(wallet2, "balance").mockReturnValue(100);
+
+		subject.push(wallet2);
+
 		const wallets = subject.sortBy("balance", "desc");
-		expect(wallets).toBeInstanceOf(Array);
+		expect(wallets[0].id()).toBe(wallet.id());
+		expect(wallets[1].id()).toBe(wallet2.id());
 	});
 
-	it("should sort wallets by type", () => {
-		const wallets = subject.sortBy("type", "desc");
-		expect(wallets).toBeInstanceOf(Array);
+	it("should sort wallets by type", async () => {
+		const wallet2 = await profile.walletFactory().fromMnemonicWithBIP39({ mnemonic: MAINSAIL_MNEMONICS[1] });
+
+		wallet.toggleStarred();
+
+		subject.push(wallet2); // wallet2 is not starred
+
+		const wallets = subject.sortBy("type", "desc"); // starred first
+		expect(wallets[0].id()).toBe(wallet.id());
+		expect(wallets[1].id()).toBe(wallet2.id());
 	});
 
 	it("should convert wallets to object", () => {
@@ -254,9 +277,13 @@ describe("WalletRepository", () => {
 		expect(subject.findByAlias("Wrong Alias")).toBeUndefined();
 	});
 
-	it("should sort wallets by address", () => {
+	it("should sort wallets by address", async () => {
+		const wallet2 = await profile.walletFactory().fromMnemonicWithBIP39({ mnemonic: MAINSAIL_MNEMONICS[1] });
+		subject.push(wallet2);
+
 		const wallets = subject.sortBy("address", "asc");
 		expect(wallets).toBeInstanceOf(Array);
+		expect(wallets.length).toBe(2);
 	});
 
 	it("should not find a wallet by a wrong public key", () => {
