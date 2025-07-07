@@ -373,7 +373,6 @@ describe("WalletRepository", () => {
 	});
 
 	it("should handle forgetting the last selected wallet", () => {
-		vi.spyOn(profile, "walletSelectionMode").mockReturnValue("single");
 		wallet.mutator().isSelected(true);
 
 		subject.forget(wallet.id());
