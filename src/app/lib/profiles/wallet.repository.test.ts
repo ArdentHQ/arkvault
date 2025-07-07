@@ -101,6 +101,20 @@ describe("WalletRepository", () => {
 		);
 	});
 
+	it("should throw when pushing a wallet with an existing alias", async () => {
+		const anotherWallet = await profile.walletFactory().fromMnemonicWithBIP39({
+			mnemonic: MAINSAIL_MNEMONICS[2],
+		});
+
+		vi.spyOn(anotherWallet, "alias").mockReturnValue(wallet.alias());
+
+		subject.push(anotherWallet);
+
+		expect(() => subject.push(anotherWallet)).toThrow(
+			`The wallet [${anotherWallet.address()}] with network [mainsail.devnet] already exists.`,
+		);
+	});
+
 	it("should check if a wallet exists", () => {
 		expect(subject.has(wallet.id())).toBe(true);
 		expect(subject.has("invalid")).toBe(false);
