@@ -194,9 +194,8 @@ describe("Dashboard", () => {
 	});
 
 	it("should render and handle sign message deeplink", async () => {
-		const signMessageUrl = `/profiles/${fixtureProfileId}/dashboard?method=sign`;
-		const { asFragment } = render(<Dashboard />, {
-			route: signMessageUrl,
+		render(<Dashboard />, {
+			route: `/profiles/${fixtureProfileId}/dashboard?method=sign`,
 			withProfileSynchronizer: true,
 		});
 
@@ -207,6 +206,5 @@ describe("Dashboard", () => {
 		await waitFor(() => {
 			expect(screen.getByTestId("SignMessageSidePanel")).toBeVisible();
 		});
-
 	});
 });
