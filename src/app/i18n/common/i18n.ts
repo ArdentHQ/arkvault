@@ -43,7 +43,6 @@ export const translations = {
 	BRIDGECHAIN: "Bridgechain",
 	BUSINESS: "Business",
 	CANCEL: "Cancel",
-	CATEGORY: "Category",
 	CHANGE: "Change",
 	CHANGED: "Changed",
 	CHOOSE: "Choose",
