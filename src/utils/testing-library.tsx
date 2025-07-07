@@ -501,11 +501,11 @@ export const test = baseTest.extend<{
 	defaultWallet: Contracts.IReadWriteWallet;
 }>({
 	defaultWallet: async ({ profile }, vitestUse) => {
-		const defaultWallet = profile.wallets().findById(getDefaultWalletId())
+		const defaultWallet = profile.wallets().findById(getDefaultWalletId());
 		await vitestUse(defaultWallet);
 	},
 	env: [
-		async ({ }, use) => {
+		async ({}, use) => {
 			const environment = environmentWithMocks();
 			await bootEnvironmentWithProfileFixtures({ env: environment });
 			await use(environment);
