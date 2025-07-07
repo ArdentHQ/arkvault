@@ -108,6 +108,15 @@ describe("WalletRepository", () => {
 		);
 	});
 
+	it("should not throw when updating an alias and other wallets have different aliases", async () => {
+		const secondWallet = await profile.walletFactory().fromMnemonicWithBIP39({ mnemonic: MAINSAIL_MNEMONICS[1] });
+		secondWallet.mutator().alias("Second Wallet");
+		subject.push(secondWallet);
+
+		expect(() => subject.update(wallet.id(), { alias: "New Alias" })).not.toThrow();
+		expect(wallet.alias()).toBe("New Alias");
+	});
+
 	it("should throw when pushing a wallet with an existing alias", async () => {
 		const anotherWallet = await profile.walletFactory().fromMnemonicWithBIP39({
 			mnemonic: MAINSAIL_MNEMONICS[2],
