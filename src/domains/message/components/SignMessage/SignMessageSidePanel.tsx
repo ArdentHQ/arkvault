@@ -18,6 +18,7 @@ import { useQueryParameters } from "@/app/hooks/use-query-parameters";
 import { AuthenticationStep, LedgerAuthentication } from "@/domains/transaction/components/AuthenticationStep";
 import { SidePanel, SidePanelButtons } from "@/app/components/SidePanel/SidePanel";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
+import { AddressViewSelection } from "@/domains/portfolio/hooks/use-address-panel";
 
 enum Step {
 	FormStep = 1,
@@ -50,10 +51,27 @@ export const SignMessageSidePanel = ({
 		return activeProfile.wallets().findByAddressWithNetwork(address, activeNetwork.id());
 	}, [queryParameters]);
 
-	const activeWallet = useMemo(() => walletFromPath || walletFromDeeplink, [walletFromPath, walletFromDeeplink]);
 	const profileWallets = activeProfile.wallets().values();
+	const selectedWallets = activeProfile.wallets().selected();
+	const walletSelectionMode = activeProfile.walletSelectionMode();
 
-	const [selectedWallet, setSelectedWallet] = useState<Contracts.IReadWriteWallet | undefined>(activeWallet);
+	const [selectedWallet, setSelectedWallet] = useState<Contracts.IReadWriteWallet | undefined>(undefined);
+	const [allowChangeWallet, setAllowChangeWallet] = useState<boolean>(true);
+
+	useEffect(() => {
+		if (!open) {
+			return;
+		}
+
+		if (walletSelectionMode === AddressViewSelection.single) {
+			setSelectedWallet(selectedWallets[0]);
+			setAllowChangeWallet(false);
+			return;
+		}
+
+		setSelectedWallet(walletFromPath || walletFromDeeplink);
+		setAllowChangeWallet(true);
+	}, [walletFromPath, walletFromDeeplink, selectedWallets, walletSelectionMode, open]);
 
 	const [activeTab, setActiveTab] = useState<Step>(Step.FormStep);
 	const [authenticateLedger, setAuthenticateLedger] = useState<boolean>(false);
@@ -96,6 +114,8 @@ export const SignMessageSidePanel = ({
 		reset();
 
 		setSelectedWallet(undefined);
+
+		setAllowChangeWallet(true);
 
 		setSignedMessage(initialState);
 	};
@@ -327,6 +347,7 @@ export const SignMessageSidePanel = ({
 									maxLength={signMessage.message().maxLength.value}
 									wallet={selectedWallet}
 									handleSelectAddress={handleSelectAddress}
+									allowChangeWallet={allowChangeWallet}
 								/>
 
 								{selectedWallet && !selectedWallet.isLedger() && (

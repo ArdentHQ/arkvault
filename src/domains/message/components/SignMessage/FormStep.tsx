@@ -17,6 +17,7 @@ export const FormStep = ({
 	maxLength,
 	profile,
 	handleSelectAddress,
+	allowChangeWallet,
 }: {
 	profile: Contracts.IProfile;
 	disabled: boolean;
@@ -25,6 +26,7 @@ export const FormStep = ({
 	disableMessageInput?: boolean;
 	maxLength: number;
 	handleSelectAddress: ((address: string) => void) & React.ChangeEventHandler<any>;
+	allowChangeWallet: boolean;
 }) => {
 	const { t } = useTranslation();
 
@@ -41,11 +43,21 @@ export const FormStep = ({
 
 	const { activeNetwork } = useActiveNetwork({ profile });
 
-	const isSingleWallet = wallets.length === 1;
-
 	return (
 		<section className="space-y-4">
-			{isSingleWallet ? (
+			{allowChangeWallet ? (
+				<FormField name="signatory-address">
+					<FormLabel textClassName="text-base" label={t("COMMON.SIGNING_ADDRESS")} />
+					<SelectAddressDropdown
+						disabled={disabled}
+						profile={profile}
+						onChange={handleRecipientWalletChange}
+						wallets={wallets}
+						wallet={wallet}
+						defaultNetwork={activeNetwork}
+					/>
+				</FormField>
+			) : (
 				<DetailWrapper label={t("COMMON.SIGNING_ADDRESS")}>
 					<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
 						<Address
@@ -59,18 +71,6 @@ export const FormStep = ({
 						/>
 					</div>
 				</DetailWrapper>
-			) : (
-				<FormField name="signatory-address">
-					<FormLabel textClassName="text-base" label={t("COMMON.SIGNING_ADDRESS")} />
-					<SelectAddressDropdown
-						disabled={disabled}
-						profile={profile}
-						onChange={handleRecipientWalletChange}
-						wallets={wallets}
-						wallet={wallet}
-						defaultNetwork={activeNetwork}
-					/>
-				</FormField>
 			)}
 
 			<FormField name="message">
