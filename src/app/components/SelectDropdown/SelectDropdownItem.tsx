@@ -18,7 +18,7 @@ export const SelectDropdownItem = memo(
 			data-testid={`SelectDropdown__option--${index}`}
 			{...getItemProps({
 				className: cn(
-					"select-list-option group",
+					"select-list-option",
 					{ "is-highlighted": highlightedIndex === index },
 					{ "is-selected": item.label === inputValue },
 				),
@@ -31,6 +31,7 @@ export const SelectDropdownItem = memo(
 				{renderLabel
 					? renderLabel({
 							...item,
+							isHighlighted: highlightedIndex === index,
 							isSelected: item.label === inputValue,
 						})
 					: item.label}

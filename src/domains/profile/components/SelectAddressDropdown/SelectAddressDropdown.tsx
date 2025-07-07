@@ -50,14 +50,16 @@ export const OptionLabel = ({
 				address={address}
 				walletName={alias}
 				addressClass={cn("leading-[17px] sm:leading-5 text-sm sm:text-base text-theme-secondary-500", {
-					"dark:text-theme-dark-500 dim:text-theme-dim-500 group-hover:text-theme-secondary-900 dark:group-hover:text-theme-dark-200 dim:group-hover:text-theme-dim-200":
-						!option.isSelected,
-					"dark:text-theme-dark-500 dim:text-theme-dim-500 text-theme-secondary-500": option.isSelected,
+					"dark:text-theme-dark-200 dim:text-theme-dim-200": !option.isSelected && option.isHighlighted,
+					"dark:text-theme-dark-500 dim:text-theme-dim-500":
+						option.isSelected || (!option.isSelected && !option.isHighlighted),
 				})}
 				walletNameClass={cn("leading-[17px] sm:leading-5 text-sm sm:text-base ", {
 					"text-theme-primary-600 dark:text-theme-secondary-50 dim:text-theme-dim-50": option.isSelected,
-					"text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 group-hover:text-theme-secondary-900 dark:group-hover:text-theme-dark-50 dim:group-hover:text-theme-dim-50":
-						!option.isSelected,
+					"text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200":
+						!option.isSelected && !option.isHighlighted,
+					"text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50":
+						!option.isSelected && option.isHighlighted,
 				})}
 			/>
 
