@@ -325,11 +325,12 @@ export class WalletRepository implements IWalletRepository {
 				await wallet.synchroniser().identity(options);
 			},
 			{
-				onFailedAttempt: (error) =>
-					/* istanbul ignore next */
+				onFailedAttempt: (error) => {
+					/* istanbul ignore next -- @preserve */
 					console.log(
 						`Attempt #${error.attemptNumber} to restore [${address}] failed. There are ${error.retriesLeft} retries left.`,
-					),
+					);
+				},
 				retries: 3,
 			},
 		);
