@@ -36,13 +36,13 @@ const Option = ({ option, onSelect }: { option: ImportOption; onSelect: (option:
 		onClick={() => onSelect(option)}
 		className="group border-theme-primary-200 dark:border-theme-dark-700 dark:hover:bg-theme-dark-700 hover:bg-theme-primary-200 focus:ring-theme-primary-400 dim:border-theme-dim-700 dim-hover:bg-theme-dim-700 flex w-full cursor-pointer flex-col items-start space-y-2 rounded-lg border p-4 focus:ring-2 focus:outline-hidden focus:ring-inset sm:p-6"
 	>
-		<div className="flex items-center space-x-2">
+		<div className="m-0 flex items-center space-x-3 sm:mb-2">
 			{option.icon && (
 				<div className="text-theme-primary-600 dark:text-theme-dark-200 group-hover:text-theme-primary-700 dim:text-theme-dim-200 dim:group-hover:text-white">
 					{option.icon}
 				</div>
 			)}
-			<div className="text-theme-primary-600 dark:text-theme-dark-50 group-hover:text-theme-primary-700 dim:text-theme-dim-50 dim:group-hover:text-white leading-5 font-semibold dark:group-hover:text-white">
+			<div className="text-theme-primary-600 dark:text-theme-dark-50 group-hover:text-theme-primary-700 dim:text-theme-dim-50 dim:group-hover:text-white text-sm leading-5 font-semibold sm:text-base dark:group-hover:text-white">
 				{option.label}
 			</div>
 		</div>
