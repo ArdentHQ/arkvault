@@ -8,7 +8,7 @@ import { Icon } from "@/app/components/Icon";
 import { Tooltip } from "@/app/components/Tooltip";
 
 export const TransactionRowId = ({ transaction }: { transaction: DTO.ExtendedConfirmedTransactionData }) => {
-	const { isLgAndAbove, isMdAndAbove, isXs, isXl, isSmAndAbove } = useBreakpoint();
+	const { isLgAndAbove, isMdAndAbove, isXl, isSmAndAbove } = useBreakpoint();
 
 	const maxCharacters = () => {
 		if (isXl) {
@@ -23,9 +23,11 @@ export const TransactionRowId = ({ transaction }: { transaction: DTO.ExtendedCon
 			return 8;
 		}
 
-		if (isXs || isSmAndAbove) {
+		if (isSmAndAbove) {
 			return 14;
 		}
+
+		return 10;
 	};
 
 	return (
