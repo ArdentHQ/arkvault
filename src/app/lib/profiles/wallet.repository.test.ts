@@ -379,4 +379,18 @@ describe("WalletRepository", () => {
 
 		expect(subject.count()).toBe(0);
 	});
+
+	it("should not restore a wallet that has not been partially restored", async () => {
+		const pqueueSpy = vi.spyOn(queue, "pqueue").mockResolvedValue([]);
+
+		subject.fill({ [wallet.id()]: wallet.toObject() });
+		vi.spyOn(subject.findById(wallet.id()), "hasBeenPartiallyRestored").mockReturnValue(false);
+
+		await subject.restore();
+
+		const restoreFn = pqueueSpy.mock.calls[0][0][0];
+		await restoreFn();
+
+		pqueueSpy.mockRestore();
+	});
 });
