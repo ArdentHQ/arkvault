@@ -144,6 +144,23 @@ const validateTransfer = ({ parameters }: ValidateParameters) => {
 	}
 };
 
+const validateSign = ({ parameters }: ValidateParameters) => {
+	const message = parameters.get("message");
+	const address = parameters.get("address");
+
+	if (!message) {
+		return { error: { type: SearchParametersError.MessageMissing } };
+	}
+
+	if (address) {
+		const isValid = new AddressService().validate(address);
+
+		if (!isValid) {
+			return { error: { type: SearchParametersError.InvalidAddress } };
+		}
+	}
+};
+
 /* istanbul ignore next -- @preserve */
 const WrapperQR = ({ children }) => {
 	const { t } = useTranslation();
@@ -168,6 +185,13 @@ const WrapperURI = ({ children }: { children?: React.ReactNode }) => {
 
 export const useSearchParametersValidation = () => {
 	const methods = {
+		sign: {
+			path: ({ profile, searchParameters }: PathProperties) =>
+				`${generatePath(ProfilePaths.SignMessage, {
+					profileId: profile.id(),
+				})}?${searchParameters.toString()}`,
+			validate: validateSign,
+		},
 		transfer: {
 			path: ({ profile, searchParameters }: PathProperties) =>
 				`${generatePath(ProfilePaths.SendTransfer, {

@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 
 import { Contracts } from "@/app/lib/profiles";
-import { useCallback } from "react";
+import { useCallback, useEffect } from "react";
 import { useEnvironmentContext } from "@/app/contexts";
 import { useQueryParameters } from "@/app/hooks/use-query-parameters";
 import { useSearchParametersValidation } from "@/app/hooks/use-search-parameters-validation";
@@ -35,4 +35,12 @@ export const useDeeplink = () => {
 	};
 };
 
-export default useDeeplink;
+export const useDeeplinkActionHandler = ({ onSignMessage }: { onSignMessage?: () => void }): void => {
+	const queryParameters = useQueryParameters();
+
+	useEffect(() => {
+		if (queryParameters.get("method") === "sign") {
+			onSignMessage?.();
+		}
+	}, [queryParameters]);
+};
