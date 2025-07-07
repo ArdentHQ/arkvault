@@ -200,7 +200,7 @@ main {
 }
 
 .select-options-list .select-list-option.is-highlighted {
-	@apply bg-theme-secondary-100 dark:bg-theme-secondary-900 dim:bg-theme-dim-700 z-10;
+	@apply bg-theme-secondary-200 dark:bg-theme-dark-700 dim:bg-theme-dim-700 z-10;
 }
 
 .select-options-list .select-list-option.is-highlighted .select-list-option__label {
