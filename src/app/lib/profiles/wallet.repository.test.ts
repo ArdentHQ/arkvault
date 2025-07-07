@@ -190,6 +190,19 @@ describe("WalletRepository", () => {
 		expect(wallets[1].id()).toBe(wallet.id());
 	});
 
+	it("should sort asc bu default", async () => {
+		const wallet2 = await profile.walletFactory().fromMnemonicWithBIP39({ mnemonic: MAINSAIL_MNEMONICS[1] });
+
+		vi.spyOn(wallet, "currency").mockReturnValue("B");
+		vi.spyOn(wallet2, "currency").mockReturnValue("A");
+
+		subject.push(wallet2);
+
+		const wallets = subject.sortBy("coin");
+		expect(wallets[0].id()).toBe(wallet2.id());
+		expect(wallets[1].id()).toBe(wallet.id());
+	});
+
 	it("should sort wallets by balance", async () => {
 		const wallet2 = await profile.walletFactory().fromMnemonicWithBIP39({ mnemonic: MAINSAIL_MNEMONICS[1] });
 
