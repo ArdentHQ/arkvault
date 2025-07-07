@@ -89,6 +89,11 @@ describe("WalletRepository", () => {
 		expect(wallet.alias()).toBe("New Alias");
 	});
 
+	it("should update a wallet's alias with empty string", () => {
+		subject.update(wallet.id(), { alias: "" });
+		expect(wallet.alias()).toBe(undefined);
+	});
+
 	it("should throw when updating a wallet with an existing alias", async () => {
 		const anotherWallet = await profile.walletFactory().fromMnemonicWithBIP39({
 			mnemonic: MAINSAIL_MNEMONICS[2],
