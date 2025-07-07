@@ -286,7 +286,8 @@ export class TransactionService implements ITransactionService {
 			}
 
 			return transaction.isConfirmed();
-		} catch {
+		} catch (error) {
+			console.log("error", error);
 			return false;
 		}
 	}
