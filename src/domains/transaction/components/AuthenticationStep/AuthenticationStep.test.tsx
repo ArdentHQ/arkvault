@@ -15,9 +15,8 @@ import {
 	mockLedgerTransportError,
 	getDefaultWalletMnemonic,
 	LocationTracker,
+	test,
 } from "@/utils/testing-library";
-
-const MainsailDevnet = "mainsail.devnet";
 
 vi.mock(
 	"react-rsrc/domains/transaction/components/AuthenticationStep/AuthenticationStep.test.tsxouter-dom",
@@ -31,17 +30,19 @@ vi.mock("@/utils/delay", () => ({
 }));
 
 describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) => {
-	let wallet: Contracts.IReadWriteWallet;
 	let profile: Contracts.IProfile;
 	const mnemonicMismatchError = "This mnemonic does not correspond to your wallet";
 
 	beforeEach(() => {
 		profile = env.profiles().findById(getDefaultProfileId());
-		wallet = profile.wallets().first();
+	});
+
+	afterEach(() => {
+		vi.restoreAllMocks();
 	});
 
 	it("should validate if mnemonic match the wallet address", async () => {
-		wallet = await profile.walletFactory().fromMnemonicWithBIP39({ mnemonic: MAINSAIL_MNEMONICS[0] });
+		const wallet = await profile.walletFactory().fromMnemonicWithBIP39({ mnemonic: MAINSAIL_MNEMONICS[0] });
 
 		const walletExists = profile.wallets().findByAddressWithNetwork(wallet.address(), wallet.networkId());
 
@@ -70,7 +71,8 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 	});
 
 	it("should request mnemonic if wallet was imported using mnemonic", async () => {
-		wallet = await profile.walletFactory().fromMnemonicWithBIP39({ mnemonic: MAINSAIL_MNEMONICS[2] });
+		const wallet = await profile.walletFactory().fromMnemonicWithBIP39({ mnemonic: MAINSAIL_MNEMONICS[0] });
+		await wallet.synchroniser().identity();
 
 		const { form, asFragment } = renderWithForm(<AuthenticationStep subject={subject} wallet={wallet} />, {
 			withProviders: true,
@@ -86,7 +88,9 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 	});
 
 	it("should request secret if wallet was imported using secret", async () => {
-		wallet = await profile.walletFactory().fromSecret({ secret: "secret" });
+		const wallet = profile.wallets().first();
+		vi.spyOn(wallet, "actsWithSecret").mockReturnValue(true);
+		vi.spyOn(wallet, "actsWithMnemonic").mockReturnValue(false);
 
 		const { form, asFragment } = renderWithForm(<AuthenticationStep subject={subject} wallet={wallet} />, {
 			withProviders: true,
@@ -101,12 +105,10 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should request mnemonic if wallet was imported using address", async () => {
-		wallet = await profile.walletFactory().fromAddress({
-			address: "DJpFwW39QnQvQRQJF2MCfAoKvsX4DJ28jq",
-			coin: "Mainsail",
-			network: MainsailDevnet,
-		});
+	test("should request mnemonic if wallet was imported using address", async () => {
+		const wallet = profile.wallets().first();
+		vi.spyOn(wallet, "actsWithAddress").mockReturnValue(true);
+		vi.spyOn(wallet, "actsWithMnemonic").mockReturnValue(false);
 
 		const { form, asFragment } = renderWithForm(<AuthenticationStep subject={subject} wallet={wallet} />, {
 			withProviders: true,
@@ -121,11 +123,11 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should show only ledger confirmation", async () => {
+	test("should show only ledger confirmation", async ({ defaultWallet }) => {
 		mockNanoXTransport();
-		vi.spyOn(wallet, "isLedger").mockReturnValueOnce(true);
+		vi.spyOn(defaultWallet, "isLedger").mockReturnValueOnce(true);
 
-		const { asFragment } = renderWithForm(<AuthenticationStep subject={subject} wallet={wallet} />, {
+		const { asFragment } = renderWithForm(<AuthenticationStep subject={subject} wallet={defaultWallet} />, {
 			withProviders: true,
 		});
 
@@ -138,9 +140,9 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 		vi.clearAllMocks();
 	});
 
-	it("should specify ledger supported model", async () => {
+	test("should specify ledger supported model", async ({ defaultWallet }) => {
 		mockNanoXTransport();
-		vi.spyOn(wallet, "isLedger").mockReturnValueOnce(true);
+		vi.spyOn(defaultWallet, "isLedger").mockReturnValueOnce(true);
 
 		const { asFragment } = renderWithForm(
 			<AuthenticationStep
@@ -149,7 +151,7 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 				ledgerIsAwaitingDevice={true}
 				ledgerConnectedModel={Contracts.WalletLedgerModel.NanoS}
 				ledgerSupportedModels={[Contracts.WalletLedgerModel.NanoX]}
-				wallet={wallet}
+				wallet={defaultWallet}
 			/>,
 			{
 				withProviders: true,
@@ -165,12 +167,12 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 		vi.clearAllMocks();
 	});
 
-	it("should show ledger waiting device screen", async () => {
+	test("should show ledger waiting device screen", async ({ defaultWallet }) => {
 		mockNanoXTransport();
-		vi.spyOn(wallet, "isLedger").mockReturnValueOnce(true);
+		vi.spyOn(defaultWallet, "isLedger").mockReturnValueOnce(true);
 
 		const { asFragment } = renderWithForm(
-			<AuthenticationStep subject={subject} wallet={wallet} ledgerIsAwaitingDevice={true} />,
+			<AuthenticationStep subject={subject} wallet={defaultWallet} ledgerIsAwaitingDevice={true} />,
 			{
 				withProviders: true,
 			},
@@ -184,13 +186,16 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 		vi.restoreAllMocks();
 	});
 
-	it("should not show ledger confirmation", async () => {
+	test("should not show ledger confirmation", async ({ defaultWallet }) => {
 		mockNanoXTransport();
-		vi.spyOn(wallet, "isLedger").mockReturnValueOnce(true);
+		vi.spyOn(defaultWallet, "isLedger").mockReturnValueOnce(true);
 
-		renderWithForm(<AuthenticationStep subject={subject} wallet={wallet} requireLedgerConfirmation={false} />, {
-			withProviders: true,
-		});
+		renderWithForm(
+			<AuthenticationStep subject={subject} wallet={defaultWallet} requireLedgerConfirmation={false} />,
+			{
+				withProviders: true,
+			},
+		);
 
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
@@ -201,9 +206,9 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 		vi.restoreAllMocks();
 	});
 
-	it("should show ledger waiting device screen for Nano X", async () => {
+	test("should show ledger waiting device screen for Nano X", async ({ defaultWallet }) => {
 		mockNanoXTransport();
-		vi.spyOn(wallet, "isLedger").mockReturnValueOnce(true);
+		vi.spyOn(defaultWallet, "isLedger").mockReturnValueOnce(true);
 
 		const { asFragment } = renderWithForm(
 			<AuthenticationStep
@@ -211,7 +216,7 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 				ledgerIsAwaitingDevice={false}
 				ledgerIsAwaitingApp={false}
 				ledgerSupportedModels={[Contracts.WalletLedgerModel.NanoX]}
-				wallet={wallet}
+				wallet={defaultWallet}
 			/>,
 			{
 				withProviders: true,
@@ -225,9 +230,9 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 		vi.restoreAllMocks();
 	});
 
-	it("should show ledger waiting device screen for Nano S", async () => {
+	test("should show ledger waiting device screen for Nano S", async ({ defaultWallet }) => {
 		mockNanoSTransport();
-		vi.spyOn(wallet, "isLedger").mockReturnValueOnce(true);
+		vi.spyOn(defaultWallet, "isLedger").mockReturnValueOnce(true);
 
 		const { asFragment } = renderWithForm(
 			<AuthenticationStep
@@ -235,7 +240,7 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 				ledgerIsAwaitingDevice={false}
 				ledgerIsAwaitingApp={false}
 				ledgerSupportedModels={[Contracts.WalletLedgerModel.NanoS]}
-				wallet={wallet}
+				wallet={defaultWallet}
 			/>,
 			{
 				withProviders: true,
@@ -249,9 +254,9 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 		vi.restoreAllMocks();
 	});
 
-	it("should show ledger waiting app screen", async () => {
+	test("should show ledger waiting app screen", async ({ defaultWallet }) => {
 		mockNanoXTransport();
-		vi.spyOn(wallet, "isLedger").mockReturnValueOnce(true);
+		vi.spyOn(defaultWallet, "isLedger").mockReturnValueOnce(true);
 
 		const { asFragment } = renderWithForm(
 			<AuthenticationStep
@@ -259,7 +264,7 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 				ledgerIsAwaitingDevice={false}
 				ledgerIsAwaitingApp={true}
 				ledgerSupportedModels={[Contracts.WalletLedgerModel.NanoX]}
-				wallet={wallet}
+				wallet={defaultWallet}
 			/>,
 			{
 				withProviders: true,
@@ -274,16 +279,16 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 		vi.clearAllMocks();
 	});
 
-	it("should handle ledger error", async () => {
-		mockLedgerTransportError("Access denied to use Ledger device");
+	test("should handle ledger error", async ({ defaultWallet }) => {
 		let location: Location | undefined;
 
-		vi.spyOn(wallet, "isLedger").mockReturnValueOnce(true);
+		vi.spyOn(defaultWallet, "isLedger").mockReturnValueOnce(true);
+		mockLedgerTransportError("No transports appear to be supported.");
 
 		renderWithForm(
 			<>
 				<LocationTracker onLocationChange={(currentLocation) => (location = currentLocation)} />
-				<AuthenticationStep subject={subject} wallet={wallet} />
+				<AuthenticationStep subject={subject} wallet={defaultWallet} />
 			</>,
 			{
 				withProviders: true,
@@ -295,7 +300,8 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 		vi.clearAllMocks();
 	});
 
-	it("should render with encryption password input", async () => {
+	test("should render with encryption password input", async () => {
+		const wallet = profile.wallets().first();
 		mockNanoXTransport();
 
 		vi.spyOn(wallet, "actsWithMnemonic").mockReturnValue(false);

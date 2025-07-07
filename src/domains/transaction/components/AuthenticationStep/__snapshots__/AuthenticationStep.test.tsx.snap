@@ -189,7 +189,7 @@ exports[`AuthenticationStep (message) > should request mnemonic if wallet was im
       </div>
     </div>
     <fieldset
-      class="[&:focus-within_.FormLabel]:text-theme-danger-500 [&>.FormLabel]:text-theme-danger-500 flex min-w-0 flex-col"
+      class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
     >
       <label
         class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex leading-[17px] font-semibold transition-colors duration-100 text-sm"
@@ -199,13 +199,12 @@ exports[`AuthenticationStep (message) > should request mnemonic if wallet was im
         Mnemonic
       </label>
       <div
-        class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+        class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
       >
         <div
           class="relative flex h-full flex-1"
         >
           <input
-            aria-invalid="true"
             autocomplete="off"
             class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
             data-testid="AuthenticationStep__mnemonic"
@@ -214,60 +213,11 @@ exports[`AuthenticationStep (message) > should request mnemonic if wallet was im
           />
         </div>
         <div
-          class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-danger-500"
+          class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
           data-testid="Input__addon-end"
         >
           <div
-            class="pr-3"
-          >
-            <span
-              data-errortext="This mnemonic does not correspond to your wallet"
-              data-testid="Input__error"
-            >
-              <div
-                class="text-theme-danger-500"
-              >
-                <div
-                  style="height: 20px; width: 20px;"
-                >
-                  <svg
-                    id="circle-exclamation-mark"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    >
-                      <circle
-                        cx="10"
-                        cy="10"
-                        r="9"
-                        stroke-miterlimit="10"
-                      />
-                      <path
-                        d="M10 10.5v-5"
-                        stroke-linecap="round"
-                        stroke-miterlimit="10"
-                      />
-                      <path
-                        d="M10 14h0"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </g>
-                  </svg>
-                </div>
-              </div>
-            </span>
-          </div>
-          <div
-            class="pl-3"
+            class=""
           >
             <button
               class="ring-focus relative flex h-full w-full items-center justify-center text-2xl focus:outline-hidden"
@@ -347,7 +297,7 @@ exports[`AuthenticationStep (message) > should request secret if wallet was impo
       </div>
     </div>
     <fieldset
-      class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
+      class="[&:focus-within_.FormLabel]:text-theme-danger-500 [&>.FormLabel]:text-theme-danger-500 flex min-w-0 flex-col"
     >
       <label
         class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex leading-[17px] font-semibold transition-colors duration-100 text-sm"
@@ -357,12 +307,13 @@ exports[`AuthenticationStep (message) > should request secret if wallet was impo
         Secret
       </label>
       <div
-        class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+        class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
       >
         <div
           class="relative flex h-full flex-1"
         >
           <input
+            aria-invalid="true"
             autocomplete="off"
             class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
             data-testid="AuthenticationStep__secret"
@@ -371,11 +322,60 @@ exports[`AuthenticationStep (message) > should request secret if wallet was impo
           />
         </div>
         <div
-          class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+          class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-danger-500"
           data-testid="Input__addon-end"
         >
           <div
-            class=""
+            class="pr-3"
+          >
+            <span
+              data-errortext="This secret does not correspond to your wallet"
+              data-testid="Input__error"
+            >
+              <div
+                class="text-theme-danger-500"
+              >
+                <div
+                  style="height: 20px; width: 20px;"
+                >
+                  <svg
+                    id="circle-exclamation-mark"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <circle
+                        cx="10"
+                        cy="10"
+                        r="9"
+                        stroke-miterlimit="10"
+                      />
+                      <path
+                        d="M10 10.5v-5"
+                        stroke-linecap="round"
+                        stroke-miterlimit="10"
+                      />
+                      <path
+                        d="M10 14h0"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </g>
+                  </svg>
+                </div>
+              </div>
+            </span>
+          </div>
+          <div
+            class="pl-3"
           >
             <button
               class="ring-focus relative flex h-full w-full items-center justify-center text-2xl focus:outline-hidden"
@@ -999,7 +999,7 @@ exports[`AuthenticationStep (transaction) > should request mnemonic if wallet wa
       </div>
     </div>
     <fieldset
-      class="[&:focus-within_.FormLabel]:text-theme-danger-500 [&>.FormLabel]:text-theme-danger-500 flex min-w-0 flex-col"
+      class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
     >
       <label
         class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex leading-[17px] font-semibold transition-colors duration-100 text-sm"
@@ -1009,13 +1009,12 @@ exports[`AuthenticationStep (transaction) > should request mnemonic if wallet wa
         Mnemonic
       </label>
       <div
-        class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+        class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
       >
         <div
           class="relative flex h-full flex-1"
         >
           <input
-            aria-invalid="true"
             autocomplete="off"
             class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
             data-testid="AuthenticationStep__mnemonic"
@@ -1024,60 +1023,11 @@ exports[`AuthenticationStep (transaction) > should request mnemonic if wallet wa
           />
         </div>
         <div
-          class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-danger-500"
+          class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
           data-testid="Input__addon-end"
         >
           <div
-            class="pr-3"
-          >
-            <span
-              data-errortext="This mnemonic does not correspond to your wallet"
-              data-testid="Input__error"
-            >
-              <div
-                class="text-theme-danger-500"
-              >
-                <div
-                  style="height: 20px; width: 20px;"
-                >
-                  <svg
-                    id="circle-exclamation-mark"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    >
-                      <circle
-                        cx="10"
-                        cy="10"
-                        r="9"
-                        stroke-miterlimit="10"
-                      />
-                      <path
-                        d="M10 10.5v-5"
-                        stroke-linecap="round"
-                        stroke-miterlimit="10"
-                      />
-                      <path
-                        d="M10 14h0"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </g>
-                  </svg>
-                </div>
-              </div>
-            </span>
-          </div>
-          <div
-            class="pl-3"
+            class=""
           >
             <button
               class="ring-focus relative flex h-full w-full items-center justify-center text-2xl focus:outline-hidden"
@@ -1157,7 +1107,7 @@ exports[`AuthenticationStep (transaction) > should request secret if wallet was 
       </div>
     </div>
     <fieldset
-      class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
+      class="[&:focus-within_.FormLabel]:text-theme-danger-500 [&>.FormLabel]:text-theme-danger-500 flex min-w-0 flex-col"
     >
       <label
         class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex leading-[17px] font-semibold transition-colors duration-100 text-sm"
@@ -1167,12 +1117,13 @@ exports[`AuthenticationStep (transaction) > should request secret if wallet was 
         Secret
       </label>
       <div
-        class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+        class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
       >
         <div
           class="relative flex h-full flex-1"
         >
           <input
+            aria-invalid="true"
             autocomplete="off"
             class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
             data-testid="AuthenticationStep__secret"
@@ -1181,11 +1132,60 @@ exports[`AuthenticationStep (transaction) > should request secret if wallet was 
           />
         </div>
         <div
-          class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+          class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-danger-500"
           data-testid="Input__addon-end"
         >
           <div
-            class=""
+            class="pr-3"
+          >
+            <span
+              data-errortext="This secret does not correspond to your wallet"
+              data-testid="Input__error"
+            >
+              <div
+                class="text-theme-danger-500"
+              >
+                <div
+                  style="height: 20px; width: 20px;"
+                >
+                  <svg
+                    id="circle-exclamation-mark"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <circle
+                        cx="10"
+                        cy="10"
+                        r="9"
+                        stroke-miterlimit="10"
+                      />
+                      <path
+                        d="M10 10.5v-5"
+                        stroke-linecap="round"
+                        stroke-miterlimit="10"
+                      />
+                      <path
+                        d="M10 14h0"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </g>
+                  </svg>
+                </div>
+              </div>
+            </span>
+          </div>
+          <div
+            class="pl-3"
           >
             <button
               class="ring-focus relative flex h-full w-full items-center justify-center text-2xl focus:outline-hidden"

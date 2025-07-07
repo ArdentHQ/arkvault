@@ -225,7 +225,6 @@ export const AuthenticationStep = ({
 	const requireSecondMnemonic = isTransaction && wallet.isSecondSignature() && requireMnemonic;
 	const requireSecondSecret = isTransaction && wallet.isSecondSignature() && wallet.actsWithSecret();
 
-
 	return (
 		<div data-testid="AuthenticationStep" className="space-y-4">
 			{wallet.actsWithSecret() && (

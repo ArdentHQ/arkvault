@@ -12,7 +12,6 @@ import {
 	EvmCallBuilder,
 	ContractAddresses,
 	AbiEncoder,
-	PrivateKey,
 } from "@arkecosystem/typescript-crypto";
 
 import { AddressService } from "./address.service.js";
