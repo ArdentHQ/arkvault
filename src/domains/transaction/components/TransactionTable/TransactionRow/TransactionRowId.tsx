@@ -23,9 +23,11 @@ export const TransactionRowId = ({ transaction }: { transaction: DTO.ExtendedCon
 			return 8;
 		}
 
-		if (isXs || isSmAndAbove) {
+		if (isSmAndAbove) {
 			return 14;
 		}
+
+		return 10
 	};
 
 	return (
