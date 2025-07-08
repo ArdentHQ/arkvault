@@ -37,7 +37,7 @@ export const scrollToElement = async (selector: Selector, scrollable?: Selector)
 
 export const BASEURL = "https://dwallets-evm.mainsailhq.com/api/";
 
-const PING_RESPONSE_PATH = "coins/mainsail/mainnet/ping";
+const PING_RESPONSE_PATH = "coins/mainsail/devnet/ping";
 
 const pingServerUrls = new Set([
 	"https://ark-live.arkvault.io/",
@@ -264,7 +264,7 @@ export const requestMocks = {
 	],
 	other: [
 		mockRequest(
-			"https://raw.githubusercontent.com/ArkEcosystem/common/master/devnet/known-wallets-extended.json",
+			"https://raw.githubusercontent.com/ArkEcosystem/common/master/mainsail/devnet/known-wallets-extended.json",
 			knownWallets,
 		),
 	],
@@ -389,14 +389,15 @@ export const requestMocks = {
 	validators: [
 		// devnet
 		mockRequest("https://dwallets-evm.mainsailhq.com/api/validators", validatorsFixture),
-		mockRequest("https://dwallets-evm.mainsailhq.com/api/validators?page=1", validatorsFixture),
-		mockRequest("https://dwallets-evm.mainsailhq.com/api/validators?page=2", validatorsFixture),
-		mockRequest("https://dwallets-evm.mainsailhq.com/api/validators?page=3", validatorsFixture),
-		mockRequest("https://dwallets-evm.mainsailhq.com/api/validators?page=4", validatorsFixture),
-		mockRequest("https://dwallets-evm.mainsailhq.com/api/validators?page=5", validatorsFixture),
+		mockRequest("https://dwallets-evm.mainsailhq.com/api/validators?page=1&limit=10", validatorsFixture),
+		mockRequest("https://dwallets-evm.mainsailhq.com/api/validators?page=2&limit=10", validatorsFixture),
+		mockRequest("https://dwallets-evm.mainsailhq.com/api/validators?page=3&limit=10", validatorsFixture),
+		mockRequest("https://dwallets-evm.mainsailhq.com/api/validators?page=4&limit=10", validatorsFixture),
+		mockRequest("https://dwallets-evm.mainsailhq.com/api/validators?page=5&limit=10", validatorsFixture),
 
 		// mainnet
-		mockRequest("https://wallets-evm.mainsailhq.com/api/validators", "coins/mainsail/mainnet/validators"),
+		// @TODO use mainnet mock when possible
+		mockRequest("https://wallets-evm.mainsailhq.com/api/validators", "coins/mainsail/devnet/validators"),
 	],
 	wallets: [
 		mockRequest("https://wallets-evm.mainsailhq.com/api/wallets?limit=1&nonce=0", {}),
