@@ -14,6 +14,7 @@ import { WalletVote } from "@/domains/wallet/pages/WalletDetails/components";
 import { PortfolioHeader } from "@/domains/portfolio/components/PortfolioHeader";
 import { ResetWhenUnmounted } from "@/app/components/SidePanel/ResetWhenUnmounted";
 import { SignMessageSidePanel } from "@/domains/message/components/SignMessage/SignMessageSidePanel";
+import { useDeeplinkActionHandler } from "@/app/hooks";
 
 export const Dashboard = ({
 	onCreateAddress,
@@ -27,6 +28,12 @@ export const Dashboard = ({
 	const [isUpdatingTransactions, setIsUpdatingTransactions] = useState(false);
 	const [isUpdatingWallet, setIsUpdatingWallet] = useState(false);
 	const [showSignMessagePanel, setShowSignMessagePanel] = useState(false);
+
+	useDeeplinkActionHandler({
+		onSignMessage: () => {
+			setShowSignMessagePanel(true);
+		},
+	});
 
 	const navigate = useNavigate();
 	const { t } = useTranslation();
