@@ -230,7 +230,7 @@ export const Contacts: FC = () => {
 				{isXs && (
 					<>
 						{contacts.length === 0 && (
-							<p className="text-theme-secondary-700 dark:text-theme-secondary-600 dim:text-theme-dim-500 p-4 px-6 text-center text-sm">
+							<p data-testid="NoResultsMessage" className="text-theme-secondary-700 dark:text-theme-secondary-600 dim:text-theme-dim-500 p-4 px-6 text-center text-sm">
 								{t("CONTACTS.CONTACTS_PAGE.EMPTY_MESSAGE")}
 							</p>
 						)}
