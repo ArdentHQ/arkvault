@@ -289,6 +289,22 @@ describe("useSearchParametersValidation", () => {
 		mockFindDelegateByName.mockRestore();
 	});
 
+	it("should validate vote using legacy delegate key", async () => {
+		const mockFindDelegateByName = vi
+			.spyOn(profile.validators(), "findByUsername")
+			.mockReturnValue(profile.wallets().first());
+
+		const parameters = new URLSearchParams(
+			"method=vote&delegate=03a461f557c88612328c8e6d69991eaa7916359dfd2c6a65fd988b672a8bb780c4&nethash=c481dea3dcc13708364e576dff94dd499692b56cbc646d5acd22a3902297dd51",
+		);
+
+		const { result } = renderHook(() => useSearchParametersValidation());
+
+		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.toBeUndefined();
+
+		mockFindDelegateByName.mockRestore();
+	});
+
 	it("should find delegate by public key", async () => {
 		const mockFindDelegateByPublicKey = vi
 			.spyOn(profile.validators(), "findByPublicKey")
