@@ -79,7 +79,10 @@ const walletMocks = () => {
 	const publicKeys = ["034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192"];
 
 	const devnetMocks = [...addresses, ...publicKeys].map((identifier: string) =>
-		mockRequest(`https://dwallets-evm.mainsailhq.com/api/wallets/${identifier}`, `coins/mainsail/devnet/wallets/${identifier}`),
+		mockRequest(
+			`https://dwallets-evm.mainsailhq.com/api/wallets/${identifier}`,
+			`coins/mainsail/devnet/wallets/${identifier}`,
+		),
 	);
 
 	const mainnetMocks = ["0xb0E6c955a0Df13220C36Ea9c95bE471249247E57"].map((identifier: string) =>
@@ -200,7 +203,10 @@ export const requestMocks = {
 	configuration: [
 		// devnet
 		mockRequest("https://dwallets-evm.mainsailhq.com/api/blockchain", "coins/mainsail/devnet/blockchain"),
-		mockRequest("https://dwallets-evm.mainsailhq.com/api/node/configuration", "coins/mainsail/devnet/configuration"),
+		mockRequest(
+			"https://dwallets-evm.mainsailhq.com/api/node/configuration",
+			"coins/mainsail/devnet/configuration",
+		),
 		mockRequest(
 			"https://dwallets-evm.mainsailhq.com/api/node/configuration/crypto",
 			"coins/mainsail/devnet/cryptoConfiguration",
@@ -219,7 +225,10 @@ export const requestMocks = {
 
 		// Compendia
 		mockRequest("https://apis.compendia.org/api/node/configuration", "coins/mainsail/devnet/configuration"),
-		mockRequest("https://apis.compendia.org/api/node/configuration/crypto", "coins/mainsail/devnet/cryptoConfiguration"),
+		mockRequest(
+			"https://apis.compendia.org/api/node/configuration/crypto",
+			"coins/mainsail/devnet/cryptoConfiguration",
+		),
 		mockRequest("https://apis.compendia.org/api/node/syncing", "coins/mainsail/devnet/syncing"),
 		mockRequest("https://apis-testnet.compendia.org/api/node/configuration", "coins/mainsail/devnet/configuration"),
 		mockRequest(
@@ -229,7 +238,10 @@ export const requestMocks = {
 		mockRequest("https://apis-testnet.compendia.org/api/node/syncing", "coins/mainsail/devnet/syncing"),
 
 		// Blockpool
-		mockRequest("https://explorer.blockpool.io:19031/api/node/configuration", "coins/mainsail/devnet/configuration"),
+		mockRequest(
+			"https://explorer.blockpool.io:19031/api/node/configuration",
+			"coins/mainsail/devnet/configuration",
+		),
 		mockRequest(
 			"https://explorer.blockpool.io:19031/api/node/configuration/crypto",
 			"coins/mainsail/devnet/cryptoConfiguration",
@@ -280,7 +292,10 @@ export const requestMocks = {
 	],
 	transactions: [
 		// devnet
-		mockRequest("https://dwallets-evm.mainsailhq.com/api/transactions/fees", "coins/mainsail/devnet/transaction-fees"),
+		mockRequest(
+			"https://dwallets-evm.mainsailhq.com/api/transactions/fees",
+			"coins/mainsail/devnet/transaction-fees",
+		),
 		mockRequest("https://dwallets-evm.mainsailhq.com/api/transactions?limit=10", transactionsFixture),
 		mockRequest("https://dwallets-evm.mainsailhq.com/api/transactions?limit=20", transactionsFixture),
 		mockRequest(
@@ -382,7 +397,10 @@ export const requestMocks = {
 		),
 
 		// mainnet
-		mockRequest("https://wallets-evm.mainsailhq.com/api/transactions/fees", "coins/mainsail/mainnet/transaction-fees"),
+		mockRequest(
+			"https://wallets-evm.mainsailhq.com/api/transactions/fees",
+			"coins/mainsail/mainnet/transaction-fees",
+		),
 
 		...searchAddressesMocks(),
 	],
@@ -477,7 +495,7 @@ export const MNEMONICS = [
 	// 0xB64b3619cEF2642E36B6093da95BA2D14Fa9b52f.json - cold wallet
 	"trust anchor salmon annual control split globe conduct myself van ice resist blast hybrid track echo impose virus filter mystery harsh galaxy desk pitch",
 	// 0xb0E6c955a0Df13220C36Ea9c95bE471249247E57
-	"satoshi weather local seek gravity mountain cycle stem next three arch canal fitness crisp approve cute census hint casual agree pencil sleep best observe"
+	"satoshi weather local seek gravity mountain cycle stem next three arch canal fitness crisp approve cute census hint casual agree pencil sleep best observe",
 ];
 
 // https://cucumber.io/docs/gherkin/reference/
