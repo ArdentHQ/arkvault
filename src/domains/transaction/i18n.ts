@@ -384,7 +384,7 @@ export const translations = {
 		PAY: "Multipayment",
 		PROXIABLE_UUID: "Proxiable UUID",
 		REGISTERED_VALIDATORS_COUNT: "Registered Validators Count",
-		REGISTER_USERNAME: "Register Username",
+		REGISTER_USERNAME: "Username Registration",
 		REGISTER_VALIDATOR: "Registration",
 		RENOUNCE_OWNERSHIP: "Renounce Ownership",
 		RESIGNED_VALIDATORS_COUNT: "Resigned Validators Count",
