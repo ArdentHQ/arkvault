@@ -82,7 +82,7 @@ const walletMocks = () => {
 		mockRequest(`https://dwallets-evm.mainsailhq.com/api/wallets/${identifier}`, `coins/mainsail/devnet/wallets/${identifier}`),
 	);
 
-	const mainnetMocks = ["AThxYTVgpzZfW7K6UxyB8vBZVMoPAwQS3D"].map((identifier: string) =>
+	const mainnetMocks = ["0xb0E6c955a0Df13220C36Ea9c95bE471249247E57"].map((identifier: string) =>
 		mockRequest(
 			`https://wallets-evm.mainsailhq.com/api/wallets/${identifier}`,
 			`coins/mainsail/mainnet/wallets/${identifier}`,
@@ -93,8 +93,8 @@ const walletMocks = () => {
 	// any pre-defined behaviours like delegation, voting and whatever else exists
 	devnetMocks.push(
 		mockRequest(
-			"https://dwallets-evm.mainsailhq.com/api/wallets/DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
-			"coins/mainsail/devnet/wallets/DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr-basic",
+			"https://dwallets-evm.mainsailhq.com/api/wallets/0x659A76be283644AEc2003aa8ba26485047fd1BFB",
+			"coins/mainsail/devnet/wallets/0x659A76be283644AEc2003aa8ba26485047fd1BFB-basic",
 		),
 	);
 
@@ -103,7 +103,7 @@ const walletMocks = () => {
 
 const searchAddressesMocks = () => {
 	const addresses = {
-		AThxYTVgpzZfW7K6UxyB8vBZVMoPAwQS3D: [
+		"0xb0E6c955a0Df13220C36Ea9c95bE471249247E57": [
 			{ limit: 10, page: 1 },
 			{ limit: 15, page: 1 },
 			{ limit: 30, page: 1 },
@@ -119,7 +119,7 @@ const searchAddressesMocks = () => {
 			{ limit: 15, page: 2 },
 			{ limit: 30, page: 1 },
 		],
-		DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr: [
+		"0x659A76be283644AEc2003aa8ba26485047fd1BFB": [
 			{ limit: 10, page: 1 },
 			{ limit: 15, page: 1 },
 			{ limit: 15, page: 2 },
@@ -300,7 +300,7 @@ export const requestMocks = {
 			transactionsFixture,
 		),
 		mockRequest(
-			"https://dwallets-evm.mainsailhq.com/api/transactions?page=2&limit=30&address=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
+			"https://dwallets-evm.mainsailhq.com/api/transactions?page=2&limit=30&address=0x659A76be283644AEc2003aa8ba26485047fd1BFB",
 			transactionsFixture,
 		),
 		mockRequest(
@@ -314,7 +314,7 @@ export const requestMocks = {
 		),
 
 		mockRequest(
-			"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=10&recipientId=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
+			"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=10&recipientId=0x659A76be283644AEc2003aa8ba26485047fd1BFB",
 			transactionsFixture,
 		),
 
@@ -329,15 +329,15 @@ export const requestMocks = {
 		),
 
 		mockRequest(
-			"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=20&senderId=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
+			"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=20&senderId=0x659A76be283644AEc2003aa8ba26485047fd1BFB",
 			transactionsFixture,
 		),
 		mockRequest(
-			"https://dwallets-evm.mainsailhq.com/api/transactions?limit=30&address=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
+			"https://dwallets-evm.mainsailhq.com/api/transactions?limit=30&address=0x659A76be283644AEc2003aa8ba26485047fd1BFB%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
 			transactionsFixture,
 		),
 		mockRequest(
-			"https://dwallets-evm.mainsailhq.com/api/transactions?limit=30&address=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb%2CDH4Xyyt5zPqM9KwUkevUZPbzM3KjjW8fp5",
+			"https://dwallets-evm.mainsailhq.com/api/transactions?limit=30&address=0x659A76be283644AEc2003aa8ba26485047fd1BFB%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb%2CDH4Xyyt5zPqM9KwUkevUZPbzM3KjjW8fp5",
 			transactionsFixture,
 		),
 		// unconfirmed transactions list before sending single or multiPayment transaction
@@ -367,7 +367,7 @@ export const requestMocks = {
 		),
 
 		mockRequest(
-			"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=10&orderBy=timestamp&address=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
+			"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=10&orderBy=timestamp&address=0x659A76be283644AEc2003aa8ba26485047fd1BFB",
 			transactionsFixture,
 		),
 
@@ -377,7 +377,7 @@ export const requestMocks = {
 		),
 
 		mockRequest(
-			"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=10&orderBy=timestamp&address=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
+			"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=10&orderBy=timestamp&address=0x659A76be283644AEc2003aa8ba26485047fd1BFB%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
 			{ data: [], meta: {} },
 		),
 
@@ -444,16 +444,25 @@ export const createFixture = (name: string, preHooks: RequestMock[] = [], postHo
 		.requestHooks(...combineRequestMocks(preHooks, postHooks));
 
 // export const MNEMONICS = [
-// 	DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr
+// 	shahinDABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr
 // 	"skin fortune security mom coin hurdle click emotion heart brisk exact rather code feature era leopard grocery tide gift power lawsuit sight vehicle coin",
+// shahinDCX2kvwgL2mrd9GjyYAbfXLGGXWwgN3Px7
 // 	"audit theory scheme profit away wing rescue cloth fit spell atom rely enter upon man clutch divide buddy office tuition input bundle silk scheme",
+// shahinDDHk393YcsxTPN1H5SWTcbjfnCRmF1iBR8
 // 	"uphold egg salon police home famous focus fade skin virus fence surprise hidden skate word famous movie grant ghost save fly assume motion case",
+// shahinD6zDN9rmDThCdYA7y1EjGPmgmuKknWTbMn
 // 	"dress assault rich club glass fancy hood glance install buzz blur attack room outdoor chapter melody tide blur trend into have accuse very little",
+// shahinDQBUSBDkqAZg5etdiPm4uKbUeLNR49fXzp
 // 	"already device awful potato face kingdom coral biology badge donkey ranch random when dove solve system tonight purchase foot way deliver grow raccoon blame",
+// shahinDS1TkHjVPLCRAjEekYJgybvnZyWCytstUe
 // 	"garden neglect enable bone inform deal shallow smart train enrich cloud police pave ignore assault wrong chef harbor river brain way essay zero mouse",
+// shahinDJQnKKbvVzQxNKNuJJHWB5Ddm4dYjDRvBy
 // 	"analyst rifle dose thank unfair remain claim exile math foster clarify unfair gauge wasp notice crash sustain session lunch verify gasp try divorce slender",
+// shahinDB8PEaewudtSM9LHPE2GSdwHjarjHU1A2B
 // 	"tray analyst bulk topple night swing list execute walk bronze invite title silent loud cash apology sibling wheel thumb dragon black soccer mixed curious",
+// shahinDJVWkM8oeyiGF19YfQnXtT5YUuFCF3hSZx
 // 	"cool path congress harbor position ready embody hunt face field boil brown rubber toss arrange later convince anxiety foam urban monster endless essay melt",
+// shahinDD9BS5gKPypDj9uRTFLQPgbMebPSULCSpd
 // 	"subway cradle salad cake toddler sausage neglect eight cruel fault mammal cannon south interest theory sadness pass move outside segment curtain toddler save banner",
 // ];
 
@@ -466,6 +475,8 @@ export const MNEMONICS = [
 	"fade object horse net sleep diagram will casino firm scorpion deal visit this much yard apology guess habit gold crack great old media fury",
 	// 0xB64b3619cEF2642E36B6093da95BA2D14Fa9b52f.json - cold wallet
 	"trust anchor salmon annual control split globe conduct myself van ice resist blast hybrid track echo impose virus filter mystery harsh galaxy desk pitch",
+	// 0xb0E6c955a0Df13220C36Ea9c95bE471249247E57
+	"satoshi weather local seek gravity mountain cycle stem next three arch canal fitness crisp approve cute census hint casual agree pencil sleep best observe"
 ];
 
 // https://cucumber.io/docs/gherkin/reference/
