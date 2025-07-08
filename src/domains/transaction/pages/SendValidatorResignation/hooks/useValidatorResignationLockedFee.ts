@@ -28,7 +28,7 @@ export const useValidatorResignationLockedFee = ({
 	const validatoResigationFeeAsFiat = isTestnet ? null : convert(validatoResigationFee);
 
 	return {
-		validatoResigationFee,
+		validatoResigationFee: 0,
 		validatoResigationFeeAsFiat,
 		validatoResigationFeeAsFiatTicker: exchangeTicker,
 		validatoResigationFeeTicker: ticker ?? "ARK",
