@@ -66,18 +66,40 @@ export const InputFeeSimple: React.FC<InputFeeSimpleProperties> = ({
 												<Amount ticker={exchangeTicker} value={displayValueConverted} />
 											</span>
 										)}
+										<span
+											className={cn("text-theme-secondary-500 ml-1 text-xs leading-[15px] transition-all sm:hidden", {
+												"dark:text-theme-dark-500 dim:text-theme-dim-200": !isSelected,
+												"dim:text-theme-dim-navy-600": isSelected,
+												"hidden": !showConvertedValues,
+											})}
+										>
+											(
+										</span>
 										<Amount
 											ticker={ticker}
 											value={displayValue}
 											className={cn(
-												"sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block",
+												"text-xs leading-[15px] transition-all",
 												{
-													"dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500 dim:sm:text-theme-dim-200 group-hover:dim:text-theme-dim-50":
+													"dark:group-hover:text-theme-dark-200 dark:text-theme-dark-500 dim:text-theme-dim-200 group-hover:dim:text-theme-dim-50":
 														!isSelected,
-													"dim:sm:text-theme-dim-navy-600": isSelected,
+													"dim:text-theme-dim-navy-600": isSelected,
+													"text-theme-secondary-500": showConvertedValues,
 												},
 											)}
 										/>
+										<span
+											className={cn(
+												"text-theme-secondary-500 text-xs leading-[15px] transition-all sm:hidden",
+												{
+													"dark:text-theme-dark-500 dim:text-theme-dim-200": !isSelected,
+													"dim:text-theme-dim-navy-600": isSelected,
+													"hidden": !showConvertedValues,
+												},
+											)}
+										>
+											)
+										</span>
 									</div>
 								)}
 							</div>
