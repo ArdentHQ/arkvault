@@ -5380,20 +5380,11 @@ exports[`Contacts > should render without contacts 1`] = `
                             class="pt-[11px] pb-4"
                             colspan="4"
                           >
-                            <div
-                              class="flex flex-col items-center justify-center"
+                            <p
+                              class="text-theme-secondary-700 dark:text-theme-secondary-600 dim:text-theme-dim-500 px-6 py-4 text-center text-sm sm:py-0"
                             >
-                              <h3
-                                class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-200 mb-2 text-base font-semibold"
-                              >
-                                No Results
-                              </h3>
-                              <p
-                                class="text-theme-secondary-700 dark:text-theme-secondary-600 dim:text-theme-dim-500 text-sm"
-                              >
-                                No results found. Refine your search and try again.
-                              </p>
-                            </div>
+                              It looks like you don't have any Contacts yet. After adding new Contacts, they can be viewed here.
+                            </p>
                           </td>
                         </tr>
                       </tfoot>
