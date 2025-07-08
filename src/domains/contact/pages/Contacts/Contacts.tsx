@@ -30,7 +30,6 @@ export const Contacts: FC = () => {
 	const contacts: Contracts.IContact[] = useMemo(() => activeProfile.contacts().values(), [activeProfile, state]);
 
 	const { filteredContacts } = useFilteredContacts({ contacts, profile: activeProfile, query });
-	console.log({ contacts, filteredContacts });
 
 	const [createIsOpen, setCreateIsOpen] = useState(false);
 
