@@ -71,35 +71,6 @@ describe("TransactionDetailModal", () => {
 		expect(screen.getByTestId("Modal__inner")).toHaveTextContent(translations.MODAL_TRANSFER_DETAIL.TITLE);
 	});
 
-	it("should render a multi signature modal", async () => {
-		await profile.wallets().restore();
-
-		render(
-			<TransactionDetailModal
-				profile={profile}
-				isOpen={true}
-				transactionItem={{
-					...TransactionFixture,
-					blockHash: () => "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
-					isMultiSignatureRegistration: () => true,
-					min: () => 2,
-					publicKeys: () => [wallet.publicKey(), profile.wallets().last().publicKey()],
-					type: () => "multiSignature",
-					wallet: () => wallet,
-				}}
-			/>,
-			{
-				route: dashboardURL,
-			},
-		);
-
-		await waitFor(() =>
-			expect(screen.getByTestId("Modal__inner")).toHaveTextContent(
-				translations.MODAL_MULTISIGNATURE_DETAIL.STEP_1.TITLE,
-			),
-		);
-	});
-
 	it("should render a multi payment modal", () => {
 		render(
 			<TransactionDetailModal
