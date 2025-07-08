@@ -27,9 +27,10 @@ export const Contacts: FC = () => {
 
 	const [query, setQuery] = useState("");
 
-	const contacts: Contracts.IContact[] = useMemo(() => activeProfile.contacts().values(), [activeProfile, state]); // eslint-disable-line react-hooks/exhaustive-deps
+	const contacts: Contracts.IContact[] = useMemo(() => activeProfile.contacts().values(), [activeProfile, state]);
 
 	const { filteredContacts } = useFilteredContacts({ contacts, profile: activeProfile, query });
+	console.log({ contacts, filteredContacts })
 
 	const [createIsOpen, setCreateIsOpen] = useState(false);
 
@@ -219,7 +220,12 @@ export const Contacts: FC = () => {
 					</div>
 				</Section>
 
-				{renderContacts()}
+				{contacts.length === 0 &&
+					<p className="text-theme-secondary-700 dark:text-theme-secondary-600 dim:text-theme-dim-500 text-sm p-4 px-6 text-center">
+						{t("CONTACTS.CONTACTS_PAGE.EMPTY_MESSAGE")}
+					</p>
+				}
+				{contacts.length > 0 && renderContacts()}
 			</Page>
 
 			{createIsOpen && (
