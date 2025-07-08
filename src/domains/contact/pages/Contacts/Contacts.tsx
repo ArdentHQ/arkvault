@@ -21,7 +21,7 @@ export const Contacts: FC = () => {
 
 	const navigate = useNavigate();
 
-	const { isMdAndAbove } = useBreakpoint();
+	const { isMdAndAbove, isXs, isSmAndAbove } = useBreakpoint();
 
 	const activeProfile = useActiveProfile();
 
@@ -30,7 +30,7 @@ export const Contacts: FC = () => {
 	const contacts: Contracts.IContact[] = useMemo(() => activeProfile.contacts().values(), [activeProfile, state]);
 
 	const { filteredContacts } = useFilteredContacts({ contacts, profile: activeProfile, query });
-	console.log({ contacts, filteredContacts })
+	console.log({ contacts, filteredContacts });
 
 	const [createIsOpen, setCreateIsOpen] = useState(false);
 
@@ -150,14 +150,22 @@ export const Contacts: FC = () => {
 				className="border-theme-secondary-200 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-solid md:border-b-4"
 			>
 				<td colSpan={listColumns.length} className="pt-[11px] pb-4">
-					<div className="flex flex-col items-center justify-center">
-						<h3 className="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-200 mb-2 text-base font-semibold">
-							{t("COMMON.EMPTY_RESULTS.TITLE")}
-						</h3>
-						<p className="text-theme-secondary-700 dark:text-theme-secondary-600 dim:text-theme-dim-500 text-sm">
-							{t("COMMON.EMPTY_RESULTS.SUBTITLE")}
+					{contacts.length > 0 && (
+						<div className="flex flex-col items-center justify-center">
+							<h3 className="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-200 mb-2 text-base font-semibold">
+								{t("COMMON.EMPTY_RESULTS.TITLE")}
+							</h3>
+							<p className="text-theme-secondary-700 dark:text-theme-secondary-600 dim:text-theme-dim-500 text-sm">
+								{t("COMMON.EMPTY_RESULTS.SUBTITLE")}
+							</p>
+						</div>
+					)}
+
+					{contacts.length === 0 && (
+						<p className="text-theme-secondary-700 dark:text-theme-secondary-600 dim:text-theme-dim-500 px-6 py-4 text-center text-sm sm:py-0">
+							{t("CONTACTS.CONTACTS_PAGE.EMPTY_MESSAGE")}
 						</p>
-					</div>
+					)}
 				</td>
 			</tr>
 		);
@@ -220,12 +228,19 @@ export const Contacts: FC = () => {
 					</div>
 				</Section>
 
-				{contacts.length === 0 &&
-					<p className="text-theme-secondary-700 dark:text-theme-secondary-600 dim:text-theme-dim-500 text-sm p-4 px-6 text-center">
-						{t("CONTACTS.CONTACTS_PAGE.EMPTY_MESSAGE")}
-					</p>
-				}
-				{contacts.length > 0 && renderContacts()}
+				{isXs && (
+					<>
+						{contacts.length === 0 && (
+							<p className="text-theme-secondary-700 dark:text-theme-secondary-600 dim:text-theme-dim-500 p-4 px-6 text-center text-sm">
+								{t("CONTACTS.CONTACTS_PAGE.EMPTY_MESSAGE")}
+							</p>
+						)}
+
+						{contacts.length > 0 && renderContacts()}
+					</>
+				)}
+
+				{isSmAndAbove && renderContacts()}
 			</Page>
 
 			{createIsOpen && (
