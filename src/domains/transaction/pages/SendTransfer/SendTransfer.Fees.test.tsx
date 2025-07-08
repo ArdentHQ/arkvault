@@ -318,9 +318,7 @@ describe("SendTransfer Fee Handling", () => {
 					max: BigNumber.make(3),
 					min: BigNumber.make(1),
 				}),
-			estimateGas: () => {
-				return Promise.resolve(BigNumber.make(21_000));
-			}
+			estimateGas: () => Promise.resolve(BigNumber.make(21_000)),
 		});
 
 		const { router } = render(<SendTransfer />, {
@@ -354,7 +352,9 @@ describe("SendTransfer Fee Handling", () => {
 		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
 
 		// Assert that fee initial value is 0 and then it changes to 0.1 when loaded
-		await waitFor(() => expect(screen.getAllByRole("radio")[1]).toHaveTextContent("Average(0.000042 ARK)Confirmation Time~5s"));
+		await waitFor(() =>
+			expect(screen.getAllByRole("radio")[1]).toHaveTextContent("Average(0.000042 ARK)Confirmation Time~5s"),
+		);
 
 		expect(within(screen.getByTestId(reviewStepID)).getAllByTestId("Amount")[0]).toHaveTextContent("1 ARK");
 		expect(within(screen.getByTestId(reviewStepID)).getAllByTestId("Amount")[1]).toHaveTextContent("0.000021 ARK");
