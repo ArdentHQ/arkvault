@@ -218,7 +218,7 @@ describe("useSearchParametersValidation", () => {
 		});
 	});
 
-	it.skip("should throw if sign and no message", async () => {
+	it("should throw if sign and no message", async () => {
 		const parameters = new URLSearchParams(
 			"coin=Mainsail&nethash=c481dea3dcc13708364e576dff94dd499692b56cbc646d5acd22a3902297dd51&method=sign",
 		);
@@ -230,7 +230,7 @@ describe("useSearchParametersValidation", () => {
 		});
 	});
 
-	it.skip("should validate sign", async () => {
+	it("should validate sign", async () => {
 		const parameters = new URLSearchParams(
 			"coin=ARK&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&method=sign&message=test",
 		);
@@ -240,7 +240,7 @@ describe("useSearchParametersValidation", () => {
 		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.not.toThrow();
 	});
 
-	it.skip("should generate sign message path", () => {
+	it("should generate sign message path", () => {
 		const parameters = new URLSearchParams(
 			"coin=Mainsail&nethash=c481dea3dcc13708364e576dff94dd499692b56cbc646d5acd22a3902297dd51&method=sign&message=test",
 		);
@@ -255,13 +255,13 @@ describe("useSearchParametersValidation", () => {
 				searchParameters: parameters,
 			}),
 		).toBe(
-			`/profiles/${profile.id()}/sign-message?coin=Mainsail&nethash=${
+			`/profiles/${profile.id()}/dashboard?coin=Mainsail&nethash=${
 				profile.wallets().first().network().meta().nethash
 			}&method=sign&message=test`,
 		);
 	});
 
-	it.skip("should throw for invalid address if sign with invalid address", async () => {
+	it("should throw for invalid address if sign with invalid address", async () => {
 		const parameters = new URLSearchParams(
 			"coin=mainsail&nethash=c481dea3dcc13708364e576dff94dd499692b56cbc646d5acd22a3902297dd51&method=sign&message=hello&address=1",
 		);
