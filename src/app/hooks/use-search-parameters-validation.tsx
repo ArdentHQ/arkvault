@@ -101,7 +101,7 @@ const validateVerify = ({ parameters }: ValidateParameters) => {
 };
 
 const validateVote = async ({ parameters, profile, network, env }: ValidateParameters) => {
-	const validatorName = parameters.get("validator") ?? parameters.get("delegate")
+	const validatorName = parameters.get("validator") ?? parameters.get("delegate");
 	const publicKey = parameters.get("publicKey");
 
 	if (!validatorName && !publicKey) {
