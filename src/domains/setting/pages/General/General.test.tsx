@@ -608,7 +608,7 @@ describe("General Settings", () => {
 			route: `/profiles/${profile.id()}/settings`,
 		});
 
-		await screen.findByTestId("ButtonGroup");
+		await waitFor(() => expect(screen.queryByTestId("ButtonGroup")).toBeInTheDocument());
 	});
 
 	it("should render viewing mode as select on mobile", async () => {
