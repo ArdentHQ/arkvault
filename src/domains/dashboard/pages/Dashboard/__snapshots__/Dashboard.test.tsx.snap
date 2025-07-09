@@ -885,7 +885,7 @@ exports[`Dashboard > should render 1`] = `
                     class="flex w-full flex-row items-center justify-between"
                   >
                     <div
-                      class="flex flex-row items-center gap-1.5"
+                      class="flex grow flex-row items-center gap-1.5"
                     >
                       <p
                         class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 hidden text-sm leading-[17px] font-semibold sm:block md:text-base md:leading-5"
@@ -893,7 +893,7 @@ exports[`Dashboard > should render 1`] = `
                         Address
                       </p>
                       <div
-                        class="h-[17px] w-32 md:h-5 md:w-60 lg:w-[410px]"
+                        class="h-[17px] w-full md:h-5"
                       >
                         <div
                           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 min-w-0"
