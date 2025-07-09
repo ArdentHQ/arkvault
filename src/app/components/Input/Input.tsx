@@ -114,7 +114,7 @@ export const Input = ({
 
 	const focusReference = useRef<InputElement>(null);
 
-	const inputReference = isFocused ? focusReference : ref || useRef<InputElement>(null);
+	const inputReference = isFocused ? focusReference : ref;
 
 	const fakePasswordReference = useRef<HTMLInputElement>(null);
 
