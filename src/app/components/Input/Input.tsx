@@ -76,19 +76,18 @@ export const InputWrapperStyled = ({
 );
 
 interface InputStyledProps {
-	autocomplete?: string;
 	as?: React.ElementType;
 	ref?: React.Ref<HTMLInputElement>;
 }
 
 const InputStyled = ({
-	autocomplete = "off",
+	autoComplete = "off",
 	as: Component = "input",
 	...properties
 }: InputStyledProps & React.ComponentPropsWithRef<"input">) => (
 	<Component
 		{...properties}
-		autoComplete={autocomplete}
+		autoComplete={autoComplete}
 		className={twMerge(
 			"bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none",
 			properties.className,
@@ -182,7 +181,6 @@ export const Input = ({
 						ref={inputReference}
 						readOnly={readOnly}
 						{...properties}
-						autoComplete="off"
 					/>
 
 					<InputSuggestion
