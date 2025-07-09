@@ -105,24 +105,24 @@ export const SidePanel = ({
 
 	useEffect(() => {
 		if (!open || disableBackButton) {
-		  return;
+			return;
 		}
-	
+
 		const handlePopState = (event) => {
-		  event.preventDefault();
-		  onOpenChange(false);
+			event.preventDefault();
+			onOpenChange(false);
 		};
-	
+
 		window.history.pushState({ sidePanelOpen: true }, "");
 		window.addEventListener("popstate", handlePopState);
-	
+
 		return () => {
-		  window.removeEventListener("popstate", handlePopState);
-		  if (window.history.state?.sidePanelOpen) {
-			window.history.back();
-		  }
+			window.removeEventListener("popstate", handlePopState);
+			if (window.history.state?.sidePanelOpen) {
+				window.history.back();
+			}
 		};
-	  }, [open, onOpenChange, disableBackButton]); 
+	}, [open, onOpenChange, disableBackButton]);
 
 	return (
 		<>

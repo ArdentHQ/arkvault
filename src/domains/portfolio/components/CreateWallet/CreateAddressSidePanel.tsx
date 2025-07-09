@@ -67,7 +67,9 @@ export const CreateAddressesSidePanel = ({
 	}, [open]);
 
 	useEffect(() => {
-		if (!open) return;
+		if (!open) {
+			return;
+		}
 
 		let historyPushed = false;
 
@@ -75,20 +77,20 @@ export const CreateAddressesSidePanel = ({
 			if (activeTab > CreateStep.WalletOverviewStep) {
 				event.preventDefault();
 				event.stopImmediatePropagation();
-				
+
 				handleBack();
 			}
 		};
 
 		if (!historyPushed) {
-			window.history.pushState({ createPanelStep: activeTab }, '');
+			window.history.pushState({ createPanelStep: activeTab }, "");
 			historyPushed = true;
 		}
 
-		window.addEventListener('popstate', handlePopState, true);
+		window.addEventListener("popstate", handlePopState, true);
 
 		return () => {
-			window.removeEventListener('popstate', handlePopState, true);
+			window.removeEventListener("popstate", handlePopState, true);
 		};
 	}, [open, activeTab]);
 

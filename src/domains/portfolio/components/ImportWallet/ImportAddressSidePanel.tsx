@@ -111,7 +111,7 @@ export const ImportAddressesSidePanel = ({
 			if (activeTab === ImportAddressStep.EncryptPasswordStep && importedWallet) {
 				forgetImportedWallets(importedWallet);
 			}
-			
+
 			setActiveTab(ImportAddressStep.MethodStep);
 		}
 		prevOpenRef.current = open;
@@ -121,44 +121,48 @@ export const ImportAddressesSidePanel = ({
 	const isHandlingBackRef = useRef(false);
 
 	useEffect(() => {
-		if (!open) return;
+		if (!open) {
+			return;
+		}
 
 		const handlePopState = (event) => {
-			if (isHandlingBackRef.current) return;
+			if (isHandlingBackRef.current) {
+				return;
+			}
 
 			if (stepHistoryRef.current.length > 0) {
 				event.preventDefault();
 				isHandlingBackRef.current = true;
-				
+
 				const previousStep = stepHistoryRef.current.pop()!;
 				setActiveTab(previousStep);
-				
+
 				setTimeout(() => {
 					isHandlingBackRef.current = false;
 				}, 50);
 			}
 		};
 
-		window.addEventListener('popstate', handlePopState);
+		window.addEventListener("popstate", handlePopState);
 
 		return () => {
-			window.removeEventListener('popstate', handlePopState);
+			window.removeEventListener("popstate", handlePopState);
 		};
 	}, [open]);
 
 	const prevActiveTabRef = useRef(activeTab);
 	useEffect(() => {
 		const prevTab = prevActiveTabRef.current;
-		
+
 		if (open && activeTab > prevTab && !isHandlingBackRef.current) {
 			stepHistoryRef.current.push(prevTab);
-			window.history.pushState({ sidePanelStep: activeTab }, '');
+			window.history.pushState({ sidePanelStep: activeTab }, "");
 		}
-		
+
 		if (!open) {
 			stepHistoryRef.current = [];
 		}
-		
+
 		prevActiveTabRef.current = activeTab;
 	}, [activeTab, open]);
 
