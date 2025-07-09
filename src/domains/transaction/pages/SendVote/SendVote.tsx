@@ -120,8 +120,11 @@ export const SendVote = () => {
 
 	useEffect(() => {
 		if (!senderAddress && activeProfile.wallets().count() === 1) {
-			setValue("senderAddress", activeProfile.wallets().first().address(), { shouldDirty: true, shouldValidate: false });
-			return
+			setValue("senderAddress", activeProfile.wallets().first().address(), {
+				shouldDirty: true,
+				shouldValidate: false,
+			});
+			return;
 		}
 
 		setValue("senderAddress", wallet?.address(), { shouldDirty: true, shouldValidate: false });
