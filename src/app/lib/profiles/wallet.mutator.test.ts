@@ -94,6 +94,27 @@ describe("WalletMutator", () => {
 
 			fromMnemonicSpy.mockRestore();
 		});
+
+		it("should not set derivation properties if not provided", async () => {
+			const mnemonic = MAINSAIL_MNEMONICS[1];
+			const mockData = {
+				address: "mock-address-no-type-or-path",
+				path: undefined,
+				type: undefined,
+			};
+			const fromMnemonicSpy = vi.spyOn(AddressService.prototype, "fromMnemonic").mockReturnValue(mockData);
+
+			const originalDerivationType = wallet.data().get(WalletData.DerivationType);
+			const originalDerivationPath = wallet.data().get(WalletData.DerivationPath);
+
+			await subject.identity(mnemonic);
+
+			expect(wallet.address()).toBe(mockData.address);
+			expect(wallet.data().get(WalletData.DerivationType)).toBe(originalDerivationType);
+			expect(wallet.data().get(WalletData.DerivationPath)).toBe(originalDerivationPath);
+
+			fromMnemonicSpy.mockRestore();
+		});
 	});
 
 	describe("address", () => {
