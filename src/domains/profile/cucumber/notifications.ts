@@ -11,20 +11,17 @@ const preSteps = {
 		await goToProfile(t);
 	},
 };
-cucumber(
-	"@notifications-openNotifications",
-	{
-		...preSteps,
-		"When she opens her notifications": async (t: TestController) => {
-			await t.expect(notifications.exists).ok();
-			await t.click(notifications);
-		},
-		"Then the notification list is displayed": async (t: TestController) => {
-			await t.expect(Selector("[data-testid=NotificationsWrapper]").exists).ok();
-			await t.expect(Selector("[data-testid=NotificationsWrapper] [data-testid=TableRow]").count).gt(0);
-		},
+cucumber("@notifications-openNotifications", {
+	...preSteps,
+	"When she opens her notifications": async (t: TestController) => {
+		await t.expect(notifications.exists).ok();
+		await t.click(notifications);
 	},
-);
+	"Then the notification list is displayed": async (t: TestController) => {
+		await t.expect(Selector("[data-testid=NotificationsWrapper]").exists).ok();
+		await t.expect(Selector("[data-testid=NotificationsWrapper] [data-testid=TableRow]").count).gt(0);
+	},
+});
 cucumber(
 	"@notifications-transactionDetail",
 	{
@@ -79,41 +76,33 @@ cucumber(
 		),
 	],
 );
-cucumber(
-	"@notifications-redDotUnread",
-	{
-		"Given Alice signs into a profile with unread notifications": async (t: TestController) => {
-			await visitWelcomeScreen(t);
-			await goToProfile(t);
-		},
-		"Then a red dot should be present on the notifications icon": async (t: TestController) => {
-			await t.expect(Selector("[data-testid=NavigationBar__buttons--notifications] .rounded-full").exists).ok();
-		},
-	}
-);
+cucumber("@notifications-redDotUnread", {
+	"Given Alice signs into a profile with unread notifications": async (t: TestController) => {
+		await visitWelcomeScreen(t);
+		await goToProfile(t);
+	},
+	"Then a red dot should be present on the notifications icon": async (t: TestController) => {
+		await t.expect(Selector("[data-testid=NavigationBar__buttons--notifications] .rounded-full").exists).ok();
+	},
+});
 
-cucumber(
-	"@notifications-markAsRead",
-	{
-		"Given Alice signs into a profile with unread notifications": async (t: TestController) => {
-			await visitWelcomeScreen(t);
-			await goToProfile(t);
-		},
-		"Then a red dot should be present on the notifications icon": async (t: TestController) => {
-			await t.expect(Selector("[data-testid=NavigationBar__buttons--notifications] .rounded-full").exists).ok();
-		},
-		"When she opens her notifications": async (t: TestController) => {
-			await t.expect(notifications.exists).ok();
-			await t.click(notifications);
-		},
-		"Then the notifications are marked as read": async (t: TestController) => {
-			await t.expect(Selector("[data-testid=NotificationsWrapper] [data-testid=TableRow]").count).eql(2);
-		},
-		"And the red dot is hidden": async (t: TestController) => {
-			await t.hover(Selector("[data-testid=TableRow]"));
-			await t
-				.expect(Selector("[data-testid=NavigationBar__buttons--notifications] .rounded-full").exists)
-				.notOk();
-		},
-	}
-);
+cucumber("@notifications-markAsRead", {
+	"Given Alice signs into a profile with unread notifications": async (t: TestController) => {
+		await visitWelcomeScreen(t);
+		await goToProfile(t);
+	},
+	"Then a red dot should be present on the notifications icon": async (t: TestController) => {
+		await t.expect(Selector("[data-testid=NavigationBar__buttons--notifications] .rounded-full").exists).ok();
+	},
+	"When she opens her notifications": async (t: TestController) => {
+		await t.expect(notifications.exists).ok();
+		await t.click(notifications);
+	},
+	"Then the notifications are marked as read": async (t: TestController) => {
+		await t.expect(Selector("[data-testid=NotificationsWrapper] [data-testid=TableRow]").count).eql(2);
+	},
+	"And the red dot is hidden": async (t: TestController) => {
+		await t.hover(Selector("[data-testid=TableRow]"));
+		await t.expect(Selector("[data-testid=NavigationBar__buttons--notifications] .rounded-full").exists).notOk();
+	},
+});
