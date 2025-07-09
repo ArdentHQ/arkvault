@@ -58,530 +58,530 @@ jobs:
                   name: dist
                   path: ${{ github.workspace }}/dist
 
-    e2e-vote:
-        needs: build-and-upload
-
-        runs-on: ubuntu-latest
-
-        strategy:
-            matrix:
-                node-version: [22]
-
-        concurrency:
-            group: ${{ github.head_ref }}-e2e-vote
-            cancel-in-progress: true
-
-        steps:
-            - uses: actions/checkout@v4
-              with:
-                  ref: ${{ github.head_ref }}
-
-            - uses: pnpm/action-setup@v4
-              with:
-                  version: 10
-
-            - uses: actions/setup-node@v4
-              with:
-                  node-version: ${{ matrix.node-version }}
-                  cache: pnpm
-
-            - name: Update System
-              run: sudo apt-get update
-
-            - name: Install (Ledger Requirements)
-              run: sudo apt-get install libudev-dev libusb-1.0-0-dev
-
-            - name: Install (pnpm)
-              run: pnpm install --frozen-lockfile
-
-            - name: Set up Microsoft Edge
-              run: |
-                  curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
-                  sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
-                  sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main" > /etc/apt/sources.list.d/microsoft-edge-dev.list'
-                  sudo apt update
-                  sudo apt install microsoft-edge-beta
-
-            - name: Download Build Artifact
-              uses: actions/download-artifact@v4
-              with:
-                  name: dist
-                  path: ${{ github.workspace }}/dist
-
-            - name: Chromium
-              run: pnpm test:e2e:ci src/domains/vote/cucumber
-
-            - name: Firefox
-              run: pnpm test:e2e:ci:firefox src/domains/vote/cucumber
-
-            - name: Edge
-              run: pnpm test:e2e:ci:edge src/domains/vote/cucumber
-
-            - name: Upload Screenshots
-              if: ${{ failure() }}
-              uses: actions/upload-artifact@v4
-              with:
-                  name: ${{ github.job }}-screenshots
-                  path: ${{ github.workspace }}/screenshots/**/*
-
-    e2e-transaction:
-        needs: e2e-vote
-
-        runs-on: ubuntu-latest
-
-        strategy:
-            matrix:
-                node-version: [22]
-
-        concurrency:
-            group: ${{ github.head_ref }}-e2e-transaction
-            cancel-in-progress: true
-
-        steps:
-            - uses: actions/checkout@v4
-              with:
-                  ref: ${{ github.head_ref }}
-
-            - uses: pnpm/action-setup@v4
-              with:
-                  version: 10
-
-            - uses: actions/setup-node@v4
-              with:
-                  node-version: ${{ matrix.node-version }}
-                  cache: pnpm
-
-            - name: Update System
-              run: sudo apt-get update
-
-            - name: Install (Ledger Requirements)
-              run: sudo apt-get install libudev-dev libusb-1.0-0-dev
-
-            - name: Install (pnpm)
-              run: pnpm install --frozen-lockfile
-
-            - name: Set up Microsoft Edge
-              run: |
-                  curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
-                  sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
-                  sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main" > /etc/apt/sources.list.d/microsoft-edge-dev.list'
-                  sudo apt update
-                  sudo apt install microsoft-edge-beta
-
-            - name: Download Build Artifact
-              uses: actions/download-artifact@v4
-              with:
-                  name: dist
-                  path: ${{ github.workspace }}/dist
-
-            - name: Chromium
-              run: pnpm test:e2e:ci src/domains/transaction/cucumber
-
-            - name: Firefox
-              run: pnpm test:e2e:ci:firefox src/domains/transaction/cucumber
-
-            - name: Edge
-              run: pnpm test:e2e:ci:edge src/domains/transaction/cucumber
-
-            - name: Upload Screenshots
-              if: ${{ failure() }}
-              uses: actions/upload-artifact@v4
-              with:
-                  name: ${{ github.job }}-screenshots
-                  path: ${{ github.workspace }}/screenshots/**/*
-
-    e2e-contact:
-        needs: e2e-transaction
-
-        runs-on: ubuntu-latest
-
-        strategy:
-            matrix:
-                node-version: [22]
-
-        concurrency:
-            group: ${{ github.head_ref }}-e2e-contact
-            cancel-in-progress: true
-
-        steps:
-            - uses: actions/checkout@v4
-              with:
-                  ref: ${{ github.head_ref }}
-
-            - uses: pnpm/action-setup@v4
-              with:
-                  version: 10
-
-            - uses: actions/setup-node@v4
-              with:
-                  node-version: ${{ matrix.node-version }}
-                  cache: pnpm
-
-            - name: Update System
-              run: sudo apt-get update
-
-            - name: Install (Ledger Requirements)
-              run: sudo apt-get install libudev-dev libusb-1.0-0-dev
-
-            - name: Install (pnpm)
-              run: pnpm install --frozen-lockfile
-
-            - name: Set up Microsoft Edge
-              run: |
-                  curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
-                  sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
-                  sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main" > /etc/apt/sources.list.d/microsoft-edge-dev.list'
-                  sudo apt update
-                  sudo apt install microsoft-edge-beta
-
-            - name: Download Build Artifact
-              uses: actions/download-artifact@v4
-              with:
-                  name: dist
-                  path: ${{ github.workspace }}/dist
-
-            - name: Chromium
-              run: pnpm test:e2e:ci src/domains/contact/cucumber
-
-            - name: Firefox
-              run: pnpm test:e2e:ci:firefox src/domains/contact/cucumber
-
-            - name: Edge
-              run: pnpm test:e2e:ci:edge src/domains/contact/cucumber
-
-            - name: Upload Screenshots
-              if: ${{ failure() }}
-              uses: actions/upload-artifact@v4
-              with:
-                  name: ${{ github.job }}-screenshots
-                  path: ${{ github.workspace }}/screenshots/**/*
-
-    e2e-dashboard:
-        needs: e2e-contact
-
-        runs-on: ubuntu-latest
-
-        strategy:
-            matrix:
-                node-version: [22]
-
-        concurrency:
-            group: ${{ github.head_ref }}-e2e-dashboard
-            cancel-in-progress: true
-
-        steps:
-            - uses: actions/checkout@v4
-              with:
-                  ref: ${{ github.head_ref }}
-
-            - uses: pnpm/action-setup@v4
-              with:
-                  version: 10
-
-            - uses: actions/setup-node@v4
-              with:
-                  node-version: ${{ matrix.node-version }}
-                  cache: pnpm
-
-            - name: Update System
-              run: sudo apt-get update
-
-            - name: Install (Ledger Requirements)
-              run: sudo apt-get install libudev-dev libusb-1.0-0-dev
-
-            - name: Install (pnpm)
-              run: pnpm install --frozen-lockfile
-
-            - name: Set up Microsoft Edge
-              run: |
-                  curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
-                  sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
-                  sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main" > /etc/apt/sources.list.d/microsoft-edge-dev.list'
-                  sudo apt update
-                  sudo apt install microsoft-edge-beta
-
-            - name: Download Build Artifact
-              uses: actions/download-artifact@v4
-              with:
-                  name: dist
-                  path: ${{ github.workspace }}/dist
-
-            - name: Chromium
-              run: pnpm test:e2e:ci src/domains/dashboard/cucumber
-
-            - name: Firefox
-              run: pnpm test:e2e:ci:firefox src/domains/dashboard/cucumber
-
-            - name: Edge
-              run: pnpm test:e2e:ci:edge src/domains/dashboard/cucumber
-
-            - name: Upload Screenshots
-              if: ${{ failure() }}
-              uses: actions/upload-artifact@v4
-              with:
-                  name: ${{ github.job }}-screenshots
-                  path: ${{ github.workspace }}/screenshots/**/*
-
-    e2e-profile:
-        needs: e2e-dashboard
-
-        runs-on: ubuntu-latest
-
-        strategy:
-            matrix:
-                node-version: [22]
-
-        concurrency:
-            group: ${{ github.head_ref }}-e2e-profile
-            cancel-in-progress: true
-
-        steps:
-            - uses: actions/checkout@v4
-              with:
-                  ref: ${{ github.head_ref }}
-
-            - uses: pnpm/action-setup@v4
-              with:
-                  version: 10
-
-            - uses: actions/setup-node@v4
-              with:
-                  node-version: ${{ matrix.node-version }}
-                  cache: pnpm
-
-            - name: Update System
-              run: sudo apt-get update
-
-            - name: Install (Ledger Requirements)
-              run: sudo apt-get install libudev-dev libusb-1.0-0-dev
-
-            - name: Install (pnpm)
-              run: pnpm install --frozen-lockfile
-
-            - name: Set up Microsoft Edge
-              run: |
-                  curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
-                  sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
-                  sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main" > /etc/apt/sources.list.d/microsoft-edge-dev.list'
-                  sudo apt update
-                  sudo apt install microsoft-edge-beta
-
-            - name: Download Build Artifact
-              uses: actions/download-artifact@v4
-              with:
-                  name: dist
-                  path: ${{ github.workspace }}/dist
-
-            - name: Chromium
-              run: pnpm test:e2e:ci src/domains/profile/cucumber
-
-            - name: Firefox
-              run: pnpm test:e2e:ci:firefox src/domains/profile/cucumber
-
-            - name: Edge
-              run: pnpm test:e2e:ci:edge src/domains/profile/cucumber
-
-            - name: Upload Screenshots
-              if: ${{ failure() }}
-              uses: actions/upload-artifact@v4
-              with:
-                  name: ${{ github.job }}-screenshots
-                  path: ${{ github.workspace }}/screenshots/**/*
-
-    e2e-message:
-        needs: e2e-profile
-
-        runs-on: ubuntu-latest
-
-        strategy:
-            matrix:
-                node-version: [22]
-
-        concurrency:
-            group: ${{ github.head_ref }}-e2e-message
-            cancel-in-progress: true
-
-        steps:
-            - uses: actions/checkout@v4
-              with:
-                  ref: ${{ github.head_ref }}
-
-            - uses: pnpm/action-setup@v4
-              with:
-                  version: 10
-
-            - uses: actions/setup-node@v4
-              with:
-                  node-version: ${{ matrix.node-version }}
-                  cache: pnpm
-
-            - name: Update System
-              run: sudo apt-get update
-
-            - name: Install (Ledger Requirements)
-              run: sudo apt-get install libudev-dev libusb-1.0-0-dev
-
-            - name: Install (pnpm)
-              run: pnpm install --frozen-lockfile
-
-            - name: Set up Microsoft Edge
-              run: |
-                  curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
-                  sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
-                  sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main" > /etc/apt/sources.list.d/microsoft-edge-dev.list'
-                  sudo apt update
-                  sudo apt install microsoft-edge-beta
-
-            - name: Download Build Artifact
-              uses: actions/download-artifact@v4
-              with:
-                  name: dist
-                  path: ${{ github.workspace }}/dist
-
-            - name: Chromium
-              run: pnpm test:e2e:ci src/domains/message/cucumber
-
-            - name: Firefox
-              run: pnpm test:e2e:ci:firefox src/domains/message/cucumber
-
-            - name: Edge
-              run: pnpm test:e2e:ci:edge src/domains/message/cucumber
-
-            - name: Upload Screenshots
-              if: ${{ failure() }}
-              uses: actions/upload-artifact@v4
-              with:
-                  name: ${{ github.job }}-screenshots
-                  path: ${{ github.workspace }}/screenshots/**/*
-
-    e2e-wallet:
-        needs: e2e-message
-
-        runs-on: ubuntu-latest
-
-        strategy:
-            matrix:
-                node-version: [22]
-
-        concurrency:
-            group: ${{ github.head_ref }}-e2e-wallet
-            cancel-in-progress: true
-
-        steps:
-            - uses: actions/checkout@v4
-              with:
-                  ref: ${{ github.head_ref }}
-
-            - uses: pnpm/action-setup@v4
-              with:
-                  version: 10
-
-            - uses: actions/setup-node@v4
-              with:
-                  node-version: ${{ matrix.node-version }}
-                  cache: pnpm
-
-            - name: Update System
-              run: sudo apt-get update
-
-            - name: Install (Ledger Requirements)
-              run: sudo apt-get install libudev-dev libusb-1.0-0-dev
-
-            - name: Install (pnpm)
-              run: pnpm install --frozen-lockfile
-
-            - name: Set up Microsoft Edge
-              run: |
-                  curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
-                  sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
-                  sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main" > /etc/apt/sources.list.d/microsoft-edge-dev.list'
-                  sudo apt update
-                  sudo apt install microsoft-edge-beta
-
-            - name: Download Build Artifact
-              uses: actions/download-artifact@v4
-              with:
-                  name: dist
-                  path: ${{ github.workspace }}/dist
-
-            - name: Chromium
-              run: pnpm test:e2e:ci src/domains/wallet/cucumber
-
-            - name: Firefox
-              run: pnpm test:e2e:ci:firefox src/domains/wallet/cucumber
-
-            - name: Edge
-              run: pnpm test:e2e:ci:edge src/domains/wallet/cucumber
-
-            - name: Upload Screenshots
-              if: ${{ failure() }}
-              uses: actions/upload-artifact@v4
-              with:
-                  name: ${{ github.job }}-screenshots
-                  path: ${{ github.workspace }}/screenshots/**/*
-
-    e2e-settings:
-        needs: e2e-wallet
-
-        runs-on: ubuntu-latest
-
-        strategy:
-            matrix:
-                node-version: [22]
-
-        concurrency:
-            group: ${{ github.head_ref }}-e2e-settings
-            cancel-in-progress: true
-
-        steps:
-            - uses: actions/checkout@v4
-              with:
-                  ref: ${{ github.head_ref }}
-
-            - uses: pnpm/action-setup@v4
-              with:
-                  version: 10
-
-            - uses: actions/setup-node@v4
-              with:
-                  node-version: ${{ matrix.node-version }}
-                  cache: pnpm
-
-            - name: Update System
-              run: sudo apt-get update
-
-            - name: Install (Ledger Requirements)
-              run: sudo apt-get install libudev-dev libusb-1.0-0-dev
-
-            - name: Install (pnpm)
-              run: pnpm install --frozen-lockfile
-
-            - name: Set up Microsoft Edge
-              run: |
-                  curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
-                  sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
-                  sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main" > /etc/apt/sources.list.d/microsoft-edge-dev.list'
-                  sudo apt update
-                  sudo apt install microsoft-edge-beta
-
-            - name: Download Build Artifact
-              uses: actions/download-artifact@v4
-              with:
-                  name: dist
-                  path: ${{ github.workspace }}/dist
-
-            - name: Chromium
-              run: pnpm test:e2e:ci src/domains/setting/cucumber
-
-            - name: Firefox
-              run: pnpm test:e2e:ci:firefox src/domains/setting/cucumber
-
-            - name: Edge
-              run: pnpm test:e2e:ci:edge src/domains/setting/cucumber
-
-            - name: Upload Screenshots
-              if: ${{ failure() }}
-              uses: actions/upload-artifact@v4
-              with:
-                  name: ${{ github.job }}-screenshots
-                  path: ${{ github.workspace }}/screenshots/**/*
+#    e2e-vote:
+#        needs: build-and-upload
+#
+#        runs-on: ubuntu-latest
+#
+#        strategy:
+#            matrix:
+#                node-version: [22]
+#
+#        concurrency:
+#            group: ${{ github.head_ref }}-e2e-vote
+#            cancel-in-progress: true
+#
+#        steps:
+#            - uses: actions/checkout@v4
+#              with:
+#                  ref: ${{ github.head_ref }}
+#
+#            - uses: pnpm/action-setup@v4
+#              with:
+#                  version: 10
+#
+#            - uses: actions/setup-node@v4
+#              with:
+#                  node-version: ${{ matrix.node-version }}
+#                  cache: pnpm
+#
+#            - name: Update System
+#              run: sudo apt-get update
+#
+#            - name: Install (Ledger Requirements)
+#              run: sudo apt-get install libudev-dev libusb-1.0-0-dev
+#
+#            - name: Install (pnpm)
+#              run: pnpm install --frozen-lockfile
+#
+#            - name: Set up Microsoft Edge
+#              run: |
+#                  curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+#                  sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
+#                  sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main" > /etc/apt/sources.list.d/microsoft-edge-dev.list'
+#                  sudo apt update
+#                  sudo apt install microsoft-edge-beta
+#
+#            - name: Download Build Artifact
+#              uses: actions/download-artifact@v4
+#              with:
+#                  name: dist
+#                  path: ${{ github.workspace }}/dist
+#
+#            - name: Chromium
+#              run: pnpm test:e2e:ci src/domains/vote/cucumber
+#
+#            - name: Firefox
+#              run: pnpm test:e2e:ci:firefox src/domains/vote/cucumber
+#
+#            - name: Edge
+#              run: pnpm test:e2e:ci:edge src/domains/vote/cucumber
+#
+#            - name: Upload Screenshots
+#              if: ${{ failure() }}
+#              uses: actions/upload-artifact@v4
+#              with:
+#                  name: ${{ github.job }}-screenshots
+#                  path: ${{ github.workspace }}/screenshots/**/*
+#
+#    e2e-transaction:
+#        needs: e2e-vote
+#
+#        runs-on: ubuntu-latest
+#
+#        strategy:
+#            matrix:
+#                node-version: [22]
+#
+#        concurrency:
+#            group: ${{ github.head_ref }}-e2e-transaction
+#            cancel-in-progress: true
+#
+#        steps:
+#            - uses: actions/checkout@v4
+#              with:
+#                  ref: ${{ github.head_ref }}
+#
+#            - uses: pnpm/action-setup@v4
+#              with:
+#                  version: 10
+#
+#            - uses: actions/setup-node@v4
+#              with:
+#                  node-version: ${{ matrix.node-version }}
+#                  cache: pnpm
+#
+#            - name: Update System
+#              run: sudo apt-get update
+#
+#            - name: Install (Ledger Requirements)
+#              run: sudo apt-get install libudev-dev libusb-1.0-0-dev
+#
+#            - name: Install (pnpm)
+#              run: pnpm install --frozen-lockfile
+#
+#            - name: Set up Microsoft Edge
+#              run: |
+#                  curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+#                  sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
+#                  sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main" > /etc/apt/sources.list.d/microsoft-edge-dev.list'
+#                  sudo apt update
+#                  sudo apt install microsoft-edge-beta
+#
+#            - name: Download Build Artifact
+#              uses: actions/download-artifact@v4
+#              with:
+#                  name: dist
+#                  path: ${{ github.workspace }}/dist
+#
+#            - name: Chromium
+#              run: pnpm test:e2e:ci src/domains/transaction/cucumber
+#
+#            - name: Firefox
+#              run: pnpm test:e2e:ci:firefox src/domains/transaction/cucumber
+#
+#            - name: Edge
+#              run: pnpm test:e2e:ci:edge src/domains/transaction/cucumber
+#
+#            - name: Upload Screenshots
+#              if: ${{ failure() }}
+#              uses: actions/upload-artifact@v4
+#              with:
+#                  name: ${{ github.job }}-screenshots
+#                  path: ${{ github.workspace }}/screenshots/**/*
+#
+#    e2e-contact:
+#        needs: e2e-transaction
+#
+#        runs-on: ubuntu-latest
+#
+#        strategy:
+#            matrix:
+#                node-version: [22]
+#
+#        concurrency:
+#            group: ${{ github.head_ref }}-e2e-contact
+#            cancel-in-progress: true
+#
+#        steps:
+#            - uses: actions/checkout@v4
+#              with:
+#                  ref: ${{ github.head_ref }}
+#
+#            - uses: pnpm/action-setup@v4
+#              with:
+#                  version: 10
+#
+#            - uses: actions/setup-node@v4
+#              with:
+#                  node-version: ${{ matrix.node-version }}
+#                  cache: pnpm
+#
+#            - name: Update System
+#              run: sudo apt-get update
+#
+#            - name: Install (Ledger Requirements)
+#              run: sudo apt-get install libudev-dev libusb-1.0-0-dev
+#
+#            - name: Install (pnpm)
+#              run: pnpm install --frozen-lockfile
+#
+#            - name: Set up Microsoft Edge
+#              run: |
+#                  curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+#                  sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
+#                  sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main" > /etc/apt/sources.list.d/microsoft-edge-dev.list'
+#                  sudo apt update
+#                  sudo apt install microsoft-edge-beta
+#
+#            - name: Download Build Artifact
+#              uses: actions/download-artifact@v4
+#              with:
+#                  name: dist
+#                  path: ${{ github.workspace }}/dist
+#
+#            - name: Chromium
+#              run: pnpm test:e2e:ci src/domains/contact/cucumber
+#
+#            - name: Firefox
+#              run: pnpm test:e2e:ci:firefox src/domains/contact/cucumber
+#
+#            - name: Edge
+#              run: pnpm test:e2e:ci:edge src/domains/contact/cucumber
+#
+#            - name: Upload Screenshots
+#              if: ${{ failure() }}
+#              uses: actions/upload-artifact@v4
+#              with:
+#                  name: ${{ github.job }}-screenshots
+#                  path: ${{ github.workspace }}/screenshots/**/*
+#
+#    e2e-dashboard:
+#        needs: e2e-contact
+#
+#        runs-on: ubuntu-latest
+#
+#        strategy:
+#            matrix:
+#                node-version: [22]
+#
+#        concurrency:
+#            group: ${{ github.head_ref }}-e2e-dashboard
+#            cancel-in-progress: true
+#
+#        steps:
+#            - uses: actions/checkout@v4
+#              with:
+#                  ref: ${{ github.head_ref }}
+#
+#            - uses: pnpm/action-setup@v4
+#              with:
+#                  version: 10
+#
+#            - uses: actions/setup-node@v4
+#              with:
+#                  node-version: ${{ matrix.node-version }}
+#                  cache: pnpm
+#
+#            - name: Update System
+#              run: sudo apt-get update
+#
+#            - name: Install (Ledger Requirements)
+#              run: sudo apt-get install libudev-dev libusb-1.0-0-dev
+#
+#            - name: Install (pnpm)
+#              run: pnpm install --frozen-lockfile
+#
+#            - name: Set up Microsoft Edge
+#              run: |
+#                  curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+#                  sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
+#                  sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main" > /etc/apt/sources.list.d/microsoft-edge-dev.list'
+#                  sudo apt update
+#                  sudo apt install microsoft-edge-beta
+#
+#            - name: Download Build Artifact
+#              uses: actions/download-artifact@v4
+#              with:
+#                  name: dist
+#                  path: ${{ github.workspace }}/dist
+#
+#            - name: Chromium
+#              run: pnpm test:e2e:ci src/domains/dashboard/cucumber
+#
+#            - name: Firefox
+#              run: pnpm test:e2e:ci:firefox src/domains/dashboard/cucumber
+#
+#            - name: Edge
+#              run: pnpm test:e2e:ci:edge src/domains/dashboard/cucumber
+#
+#            - name: Upload Screenshots
+#              if: ${{ failure() }}
+#              uses: actions/upload-artifact@v4
+#              with:
+#                  name: ${{ github.job }}-screenshots
+#                  path: ${{ github.workspace }}/screenshots/**/*
+
+#    e2e-profile:
+##        needs: e2e-dashboard
+#
+#        runs-on: ubuntu-latest
+#
+#        strategy:
+#            matrix:
+#                node-version: [22]
+#
+#        concurrency:
+#            group: ${{ github.head_ref }}-e2e-profile
+#            cancel-in-progress: true
+#
+#        steps:
+#            - uses: actions/checkout@v4
+#              with:
+#                  ref: ${{ github.head_ref }}
+#
+#            - uses: pnpm/action-setup@v4
+#              with:
+#                  version: 10
+#
+#            - uses: actions/setup-node@v4
+#              with:
+#                  node-version: ${{ matrix.node-version }}
+#                  cache: pnpm
+#
+#            - name: Update System
+#              run: sudo apt-get update
+#
+#            - name: Install (Ledger Requirements)
+#              run: sudo apt-get install libudev-dev libusb-1.0-0-dev
+#
+#            - name: Install (pnpm)
+#              run: pnpm install --frozen-lockfile
+#
+#            - name: Set up Microsoft Edge
+#              run: |
+#                  curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+#                  sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
+#                  sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main" > /etc/apt/sources.list.d/microsoft-edge-dev.list'
+#                  sudo apt update
+#                  sudo apt install microsoft-edge-beta
+#
+#            - name: Download Build Artifact
+#              uses: actions/download-artifact@v4
+#              with:
+#                  name: dist
+#                  path: ${{ github.workspace }}/dist
+#
+#            - name: Chromium
+#              run: pnpm test:e2e:ci src/domains/profile/cucumber
+#
+#            - name: Firefox
+#              run: pnpm test:e2e:ci:firefox src/domains/profile/cucumber
+#
+#            - name: Edge
+#              run: pnpm test:e2e:ci:edge src/domains/profile/cucumber
+#
+#            - name: Upload Screenshots
+#              if: ${{ failure() }}
+#              uses: actions/upload-artifact@v4
+#              with:
+#                  name: ${{ github.job }}-screenshots
+#                  path: ${{ github.workspace }}/screenshots/**/*
+#
+#    e2e-message:
+#        needs: e2e-profile
+#
+#        runs-on: ubuntu-latest
+#
+#        strategy:
+#            matrix:
+#                node-version: [22]
+#
+#        concurrency:
+#            group: ${{ github.head_ref }}-e2e-message
+#            cancel-in-progress: true
+#
+#        steps:
+#            - uses: actions/checkout@v4
+#              with:
+#                  ref: ${{ github.head_ref }}
+#
+#            - uses: pnpm/action-setup@v4
+#              with:
+#                  version: 10
+#
+#            - uses: actions/setup-node@v4
+#              with:
+#                  node-version: ${{ matrix.node-version }}
+#                  cache: pnpm
+#
+#            - name: Update System
+#              run: sudo apt-get update
+#
+#            - name: Install (Ledger Requirements)
+#              run: sudo apt-get install libudev-dev libusb-1.0-0-dev
+#
+#            - name: Install (pnpm)
+#              run: pnpm install --frozen-lockfile
+#
+#            - name: Set up Microsoft Edge
+#              run: |
+#                  curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+#                  sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
+#                  sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main" > /etc/apt/sources.list.d/microsoft-edge-dev.list'
+#                  sudo apt update
+#                  sudo apt install microsoft-edge-beta
+#
+#            - name: Download Build Artifact
+#              uses: actions/download-artifact@v4
+#              with:
+#                  name: dist
+#                  path: ${{ github.workspace }}/dist
+#
+#            - name: Chromium
+#              run: pnpm test:e2e:ci src/domains/message/cucumber
+#
+#            - name: Firefox
+#              run: pnpm test:e2e:ci:firefox src/domains/message/cucumber
+#
+#            - name: Edge
+#              run: pnpm test:e2e:ci:edge src/domains/message/cucumber
+#
+#            - name: Upload Screenshots
+#              if: ${{ failure() }}
+#              uses: actions/upload-artifact@v4
+#              with:
+#                  name: ${{ github.job }}-screenshots
+#                  path: ${{ github.workspace }}/screenshots/**/*
+#
+#    e2e-wallet:
+#        needs: e2e-message
+#
+#        runs-on: ubuntu-latest
+#
+#        strategy:
+#            matrix:
+#                node-version: [22]
+#
+#        concurrency:
+#            group: ${{ github.head_ref }}-e2e-wallet
+#            cancel-in-progress: true
+#
+#        steps:
+#            - uses: actions/checkout@v4
+#              with:
+#                  ref: ${{ github.head_ref }}
+#
+#            - uses: pnpm/action-setup@v4
+#              with:
+#                  version: 10
+#
+#            - uses: actions/setup-node@v4
+#              with:
+#                  node-version: ${{ matrix.node-version }}
+#                  cache: pnpm
+#
+#            - name: Update System
+#              run: sudo apt-get update
+#
+#            - name: Install (Ledger Requirements)
+#              run: sudo apt-get install libudev-dev libusb-1.0-0-dev
+#
+#            - name: Install (pnpm)
+#              run: pnpm install --frozen-lockfile
+#
+#            - name: Set up Microsoft Edge
+#              run: |
+#                  curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+#                  sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
+#                  sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main" > /etc/apt/sources.list.d/microsoft-edge-dev.list'
+#                  sudo apt update
+#                  sudo apt install microsoft-edge-beta
+#
+#            - name: Download Build Artifact
+#              uses: actions/download-artifact@v4
+#              with:
+#                  name: dist
+#                  path: ${{ github.workspace }}/dist
+#
+#            - name: Chromium
+#              run: pnpm test:e2e:ci src/domains/wallet/cucumber
+#
+#            - name: Firefox
+#              run: pnpm test:e2e:ci:firefox src/domains/wallet/cucumber
+#
+#            - name: Edge
+#              run: pnpm test:e2e:ci:edge src/domains/wallet/cucumber
+#
+#            - name: Upload Screenshots
+#              if: ${{ failure() }}
+#              uses: actions/upload-artifact@v4
+#              with:
+#                  name: ${{ github.job }}-screenshots
+#                  path: ${{ github.workspace }}/screenshots/**/*
+#
+#    e2e-settings:
+#        needs: e2e-wallet
+#
+#        runs-on: ubuntu-latest
+#
+#        strategy:
+#            matrix:
+#                node-version: [22]
+#
+#        concurrency:
+#            group: ${{ github.head_ref }}-e2e-settings
+#            cancel-in-progress: true
+#
+#        steps:
+#            - uses: actions/checkout@v4
+#              with:
+#                  ref: ${{ github.head_ref }}
+#
+#            - uses: pnpm/action-setup@v4
+#              with:
+#                  version: 10
+#
+#            - uses: actions/setup-node@v4
+#              with:
+#                  node-version: ${{ matrix.node-version }}
+#                  cache: pnpm
+#
+#            - name: Update System
+#              run: sudo apt-get update
+#
+#            - name: Install (Ledger Requirements)
+#              run: sudo apt-get install libudev-dev libusb-1.0-0-dev
+#
+#            - name: Install (pnpm)
+#              run: pnpm install --frozen-lockfile
+#
+#            - name: Set up Microsoft Edge
+#              run: |
+#                  curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+#                  sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
+#                  sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main" > /etc/apt/sources.list.d/microsoft-edge-dev.list'
+#                  sudo apt update
+#                  sudo apt install microsoft-edge-beta
+#
+#            - name: Download Build Artifact
+#              uses: actions/download-artifact@v4
+#              with:
+#                  name: dist
+#                  path: ${{ github.workspace }}/dist
+#
+#            - name: Chromium
+#              run: pnpm test:e2e:ci src/domains/setting/cucumber
+#
+#            - name: Firefox
+#              run: pnpm test:e2e:ci:firefox src/domains/setting/cucumber
+#
+#            - name: Edge
+#              run: pnpm test:e2e:ci:edge src/domains/setting/cucumber
+#
+#            - name: Upload Screenshots
+#              if: ${{ failure() }}
+#              uses: actions/upload-artifact@v4
+#              with:
+#                  name: ${{ github.job }}-screenshots
+#                  path: ${{ github.workspace }}/screenshots/**/*
