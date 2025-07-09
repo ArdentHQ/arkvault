@@ -9,7 +9,6 @@ import {
 } from "./contracts.js";
 import { env, MAINSAIL_MNEMONICS } from "@/utils/testing-library";
 import { AddressService } from "@/app/lib/mainsail/address.service.js";
-import { BIP39 } from "@ardenthq/arkvault-crypto";
 
 let profile: IProfile;
 let wallet: IReadWriteWallet;
