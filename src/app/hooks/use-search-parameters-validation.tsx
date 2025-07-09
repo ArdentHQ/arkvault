@@ -62,7 +62,7 @@ const defaultNetworks = {
 };
 
 const validatorFromSearchParameters = ({ profile, network, searchParameters }: PathProperties) => {
-	const validatorName = searchParameters.get("validator");
+	const validatorName = searchParameters.get("validator") ?? searchParameters.get("delegate");
 	const validatorPublicKey = searchParameters.get("publicKey");
 
 	if (validatorName) {
@@ -101,7 +101,7 @@ const validateVerify = ({ parameters }: ValidateParameters) => {
 };
 
 const validateVote = async ({ parameters, profile, network, env }: ValidateParameters) => {
-	const validatorName = parameters.get("validator");
+	const validatorName = parameters.get("validator") ?? parameters.get("delegate");
 	const publicKey = parameters.get("publicKey");
 
 	if (!validatorName && !publicKey) {

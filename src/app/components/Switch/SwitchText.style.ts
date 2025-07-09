@@ -17,7 +17,7 @@ const getVariant = (disabled: boolean) => {
 
 const getSize = (size?: Size) => {
 	const sizes = {
-		default: () => "text-base first:mr-3 last:ml-3",
+		default: () => "text-sm sm:text-base first:mr-3 last:ml-3",
 		lg: () => "text-sm sm:text-lg first:mr-4 last:ml-4",
 		sm: () => "text-sm first:mr-2 last:ml-2",
 	};
