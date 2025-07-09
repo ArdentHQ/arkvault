@@ -69,7 +69,7 @@ export const TotalAmountBox = ({
 						<div className="flex flex-row items-center gap-2">
 							<Amount ticker={ticker} value={amount} className="font-semibold" />
 							{convertValues && !!convertedAmount && !!exchangeTicker && (
-								<div className="text-theme-secondary-700 font-semibold">
+								<div className="text-theme-secondary-700 text-sm font-semibold sm:text-base">
 									(~
 									<Amount ticker={exchangeTicker} value={convertedAmount} />)
 								</div>
