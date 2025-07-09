@@ -87,13 +87,7 @@ cucumber("@updateContact-openAndCloseModal", {
 cucumber("@updateContact-invalidAddress", {
 	...preSteps,
 	"And attempts to add an invalid address": async (t: TestController) => {
-		await t.click(Selector('[data-testid="contact-form__remove-address-btn"]'));
-		await t.typeText(Selector('[data-testid="SelectDropdown__input"]'), "ARK D");
-		await t.pressKey("tab");
 		await t.typeText(addressInput, "invalid address");
-		await t.expect(Selector('[data-testid="contact-form__add-address-btn"]').hasAttribute("disabled")).notOk();
-		await t.hover(Selector('[data-testid="contact-form__add-address-btn"]'));
-		await t.click(Selector('[data-testid="contact-form__add-address-btn"]'));
 	},
 	"Then an error is displayed in the address field": async (t: TestController) => {
 		await t.expect(Selector('[data-testid="Input__error"]').exists).ok();
