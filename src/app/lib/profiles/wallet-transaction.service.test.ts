@@ -72,6 +72,11 @@ describe("TransactionService", () => {
 		env.profiles().forget(profile.id());
 
 		vi.clearAllMocks();
+
+		// Restore the original mock after each test
+		mockClient.broadcast = vi
+			.fn()
+			.mockResolvedValue({ accepted: [TransactionFixture.hash()], errors: {}, rejected: [] });
 	});
 
 	it("should sign a transfer", async () => {
@@ -190,6 +195,45 @@ describe("TransactionService", () => {
 		const id = await subject.signTransfer(DUMMY_TRANSFER_INPUT);
 		await subject.broadcast(id);
 		expect(mockClient.broadcast).toHaveBeenCalled();
+	});
+
+	it("should not be marked as broadcasted if the client rejects it", async () => {
+		const id = await subject.signTransfer(DUMMY_TRANSFER_INPUT);
+
+		// Mock the client to return a rejection for this specific test
+		mockClient.broadcast = vi.fn().mockResolvedValue({
+			accepted: [],
+			errors: { [id]: "Some error" },
+			rejected: [id],
+		});
+
+		const result = await subject.broadcast(id);
+
+		expect(mockClient.broadcast).toHaveBeenCalled();
+		expect(subject.hasBeenBroadcasted(id)).toBe(false);
+		expect(result).toEqual({
+			accepted: [],
+			errors: { [id]: "Some error" },
+			rejected: [id],
+		});
+	});
+
+	it("should not broadcast a transaction that cannot be broadcasted", async () => {
+		const id = await subject.signTransfer(DUMMY_TRANSFER_INPUT);
+		await subject.broadcast(id);
+		await subject.confirm(id);
+
+		const broadcastSpy = vi.spyOn(mockClient, "broadcast");
+		const result = await subject.broadcast(id);
+
+		expect(broadcastSpy).not.toHaveBeenCalled();
+		expect(result).toEqual({
+			accepted: [],
+			errors: {},
+			rejected: [],
+		});
+
+		broadcastSpy.mockRestore();
 	});
 
 	it("should confirm a transaction", async () => {
