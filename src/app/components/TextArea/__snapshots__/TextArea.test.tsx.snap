@@ -19,6 +19,7 @@ exports[`TextArea > should render 1`] = `
           class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! resize-none min-h-[8rem] md:min-h-auto md:resize-y"
           data-testid="TextArea"
           style="height: 4px;"
+          type="text"
         />
       </div>
     </div>
@@ -45,6 +46,7 @@ exports[`TextArea > should render as disabled 1`] = `
           class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! text-theme-secondary-text min-h-[8rem] md:min-h-auto md:resize-y resize-none"
           data-testid="TextArea"
           disabled=""
+          type="text"
         />
       </div>
     </div>
@@ -71,6 +73,7 @@ exports[`TextArea > should render as invalid 1`] = `
           autocomplete="off"
           class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! resize-none min-h-[8rem] md:min-h-auto md:resize-y"
           data-testid="TextArea"
+          type="text"
         />
       </div>
       <div
