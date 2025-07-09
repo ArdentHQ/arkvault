@@ -59,7 +59,7 @@ exports[`AuthenticationStep (message) > should request mnemonic if wallet was im
             class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! caret-theme-text no-selection-style text-transparent"
             data-testid="AuthenticationStep__mnemonic"
             name="mnemonic"
-            type="text"
+            type="password"
           />
         </div>
         <div
@@ -224,7 +224,7 @@ exports[`AuthenticationStep (message) > should request mnemonic if wallet was im
             class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! caret-theme-text no-selection-style text-transparent"
             data-testid="AuthenticationStep__mnemonic"
             name="mnemonic"
-            type="text"
+            type="password"
           />
         </div>
         <div
@@ -388,7 +388,7 @@ exports[`AuthenticationStep (message) > should request secret if wallet was impo
             class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! caret-theme-text no-selection-style text-transparent"
             data-testid="AuthenticationStep__secret"
             name="secret"
-            type="text"
+            type="password"
           />
         </div>
         <div
@@ -890,7 +890,7 @@ exports[`AuthenticationStep (transaction) > should request mnemonic if wallet wa
             class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! caret-theme-text no-selection-style text-transparent"
             data-testid="AuthenticationStep__mnemonic"
             name="mnemonic"
-            type="text"
+            type="password"
           />
         </div>
         <div
@@ -1055,7 +1055,7 @@ exports[`AuthenticationStep (transaction) > should request mnemonic if wallet wa
             class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! caret-theme-text no-selection-style text-transparent"
             data-testid="AuthenticationStep__mnemonic"
             name="mnemonic"
-            type="text"
+            type="password"
           />
         </div>
         <div
@@ -1219,7 +1219,7 @@ exports[`AuthenticationStep (transaction) > should request secret if wallet was 
             class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! caret-theme-text no-selection-style text-transparent"
             data-testid="AuthenticationStep__secret"
             name="secret"
-            type="text"
+            type="password"
           />
         </div>
         <div

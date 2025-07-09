@@ -76,6 +76,29 @@ export const InputWrapperStyled = ({
 	/>
 );
 
+interface InputStyledProps {
+	autocomplete?: string;
+	as?: React.ElementType;
+	ref?: React.Ref<HTMLInputElement>;
+}
+
+const InputStyled = ({
+	autocomplete = "off",
+	as: Component = "input",
+	...properties
+}: InputStyledProps & React.ComponentPropsWithRef<"input">) => (
+	<Component
+		{...properties}
+		autoComplete={autocomplete}
+		className={twMerge(
+			"bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none",
+			properties.className,
+		)}
+	/>
+);
+
+InputStyled.displayName = "InputStyled";
+
 type InputElement = HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement;
 
 export const Input = ({
@@ -179,16 +202,15 @@ export const Input = ({
 						/>
 					)}
 
-					<input
+					<InputStyled
 						data-testid="Input"
 						className={cn(
-							"bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none",
 							"no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!",
-							innerClassName,
 							{
 								"caret-theme-text no-selection-style text-transparent": preventAutofill,
 								"text-theme-secondary-text": disabled,
 							},
+							innerClassName,
 						)}
 						name={fieldContext?.name}
 						aria-invalid={isInvalidValue}
