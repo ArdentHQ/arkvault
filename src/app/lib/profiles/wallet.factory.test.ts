@@ -1,7 +1,7 @@
 import { describe, vi, expect, beforeEach, it, afterEach } from "vitest";
 import { IProfile, IWalletFactory } from "./contracts.js";
 import { Wallet } from "./wallet.js";
-import { env } from "@/app/lib/mainsail/env.js";
+import { env } from "@/utils/testing-library";
 
 let profile: IProfile;
 let subject: IWalletFactory;
