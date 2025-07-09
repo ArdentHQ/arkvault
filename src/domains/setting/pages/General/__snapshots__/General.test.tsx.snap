@@ -2165,7 +2165,7 @@ exports[`General Settings > should disable submit button when profile is not res
                           data-testid="list-divided-item__wrapper"
                         >
                           <div
-                            class="flex-col sm:flex-row"
+                            class="flex flex-col sm:flex-row"
                             data-testid="list-divided-item__inner-wrapper"
                           >
                             <div
@@ -4789,7 +4789,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                           data-testid="list-divided-item__wrapper"
                         >
                           <div
-                            class="flex-col sm:flex-row"
+                            class="flex flex-col sm:flex-row"
                             data-testid="list-divided-item__inner-wrapper"
                           >
                             <div
@@ -7367,7 +7367,7 @@ exports[`General Settings > should render 1`] = `
                           data-testid="list-divided-item__wrapper"
                         >
                           <div
-                            class="flex-col sm:flex-row"
+                            class="flex flex-col sm:flex-row"
                             data-testid="list-divided-item__inner-wrapper"
                           >
                             <div
@@ -9946,7 +9946,7 @@ exports[`General Settings > should update profile 1`] = `
                           data-testid="list-divided-item__wrapper"
                         >
                           <div
-                            class="flex-col sm:flex-row"
+                            class="flex flex-col sm:flex-row"
                             data-testid="list-divided-item__inner-wrapper"
                           >
                             <div
@@ -12525,7 +12525,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                           data-testid="list-divided-item__wrapper"
                         >
                           <div
-                            class="flex-col sm:flex-row"
+                            class="flex flex-col sm:flex-row"
                             data-testid="list-divided-item__inner-wrapper"
                           >
                             <div
@@ -15202,7 +15202,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                           data-testid="list-divided-item__wrapper"
                         >
                           <div
-                            class="flex-col sm:flex-row"
+                            class="flex flex-col sm:flex-row"
                             data-testid="list-divided-item__inner-wrapper"
                           >
                             <div
