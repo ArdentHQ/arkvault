@@ -1,5 +1,5 @@
 import cn from "classnames";
-import React, { useEffect, useRef, JSX } from "react";
+import React, { useEffect, useRef, JSX, useMemo, useState } from "react";
 
 import { InputSuggestion } from "./InputSuggestion";
 import { useFormField } from "@/app/components/Form/useFormField";
@@ -31,6 +31,7 @@ type InputProperties = {
 	noShadow?: boolean;
 	suggestion?: string;
 	ref?: React.Ref<HTMLInputElement>;
+	preventAutofill?: boolean;
 } & React.HTMLProps<any>;
 
 export const InputWrapperStyled = ({
@@ -75,28 +76,6 @@ export const InputWrapperStyled = ({
 	/>
 );
 
-interface InputStyledProps {
-	as?: React.ElementType;
-	ref?: React.Ref<HTMLInputElement>;
-}
-
-const InputStyled = ({
-	autoComplete = "off",
-	as: Component = "input",
-	...properties
-}: InputStyledProps & React.ComponentPropsWithRef<"input">) => (
-	<Component
-		{...properties}
-		autoComplete={autoComplete}
-		className={twMerge(
-			"bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none",
-			properties.className,
-		)}
-	/>
-);
-
-InputStyled.displayName = "InputStyled";
-
 type InputElement = HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement;
 
 export const Input = ({
@@ -118,7 +97,10 @@ export const Input = ({
 	suggestion,
 	value,
 	readOnly,
+	preventAutofill,
+	autoComplete = "off",
 	ref,
+	type,
 	...properties
 }: InputProperties) => {
 	let fieldContext = useFormField();
@@ -132,7 +114,9 @@ export const Input = ({
 
 	const focusReference = useRef<InputElement>(null);
 
-	const inputReference = isFocused ? focusReference : ref;
+	const inputReference = isFocused ? focusReference : ref || useRef<InputElement>(null);
+
+	const fakePasswordReference = useRef<HTMLInputElement>(null);
 
 	useEffect(() => {
 		if (isFocused && focusReference.current) {
@@ -141,6 +125,18 @@ export const Input = ({
 	}, [focusReference, isFocused]);
 
 	const hiddenReference = useRef<HTMLDivElement>(null);
+
+	const changeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+		properties.onChange?.(e);
+
+		if (!preventAutofill || type !== "password") {
+			return;
+		}
+
+		if (fakePasswordReference.current) {
+			fakePasswordReference.current.value = e.target.value;
+		}
+	};
 
 	return (
 		<>
@@ -163,12 +159,34 @@ export const Input = ({
 			>
 				{addons?.start !== undefined && addons.start.content}
 				<div className={cn("relative flex h-full flex-1", { invisible: hideInputValue })}>
-					<InputStyled
+					{preventAutofill && (
+						<input
+							aria-hidden="true"
+							autoComplete="off"
+							type="password"
+							value={value}
+							ref={fakePasswordReference}
+							placeholder={properties.placeholder}
+							className={cn(
+								"pointer-events-none absolute inset-0 border-0 bg-transparent p-0! ring-0 outline-none",
+								"no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 text-sm! sm:text-base!",
+								innerClassName,
+								{
+									"text-theme-secondary-text": disabled,
+								},
+							)}
+							tabIndex={-1}
+						/>
+					)}
+
+					<input
 						data-testid="Input"
 						className={cn(
+							"bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none",
 							"no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!",
 							innerClassName,
 							{
+								"caret-theme-text text-transparent": preventAutofill,
 								"text-theme-secondary-text": disabled,
 							},
 						)}
@@ -176,10 +194,12 @@ export const Input = ({
 						aria-invalid={isInvalidValue}
 						disabled={disabled}
 						value={value}
-						type="text"
+						type={type === "password" && preventAutofill ? "text" : (type ?? "text")}
 						// @ts-ignore
 						ref={inputReference}
 						readOnly={readOnly}
+						onChange={changeHandler}
+						autoComplete={preventAutofill ? "off" : autoComplete}
 						{...properties}
 					/>
 
