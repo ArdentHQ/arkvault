@@ -24,16 +24,6 @@ cucumber(
 			await t.expect(Selector("[data-testid=NotificationsWrapper] [data-testid=TableRow]").count).gt(0);
 		},
 	},
-	[
-		// mockRequest(
-		// 	"https://ark-test.arkvault.io/api/transactions?page=1&limit=12&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
-		// 	"coins/ark/devnet/transactions/byAddress/D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD-1-10",
-		// ),
-		// mockRequest(
-		// 	"https://ark-test.arkvault.io/api/transactions?page=1&limit=12&address=D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
-		// 	"coins/ark/devnet/transactions/byAddress/D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb-1-10",
-		// ),
-	],
 );
 cucumber(
 	"@notifications-transactionDetail",
@@ -87,14 +77,6 @@ cucumber(
 				},
 			},
 		),
-		// mockRequest(
-		// 	"https://ark-test.arkvault.io/api/transactions?page=1&limit=12&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
-		// 	"coins/ark/devnet/transactions/byAddress/D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD-1-10",
-		// ),
-		// mockRequest(
-		// 	"https://ark-test.arkvault.io/api/transactions?page=1&limit=12&address=D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
-		// 	"coins/ark/devnet/transactions/byAddress/D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb-1-10",
-		// ),
 	],
 );
 cucumber(
@@ -107,17 +89,7 @@ cucumber(
 		"Then a red dot should be present on the notifications icon": async (t: TestController) => {
 			await t.expect(Selector("[data-testid=NavigationBar__buttons--notifications] .rounded-full").exists).ok();
 		},
-	},
-	[
-		// mockRequest(
-		// 	"https://ark-test.arkvault.io/api/transactions?page=1&limit=12&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
-		// 	"coins/ark/devnet/transactions/byAddress/D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD-1-10",
-		// ),
-		// mockRequest(
-		// 	"https://ark-test.arkvault.io/api/transactions?page=1&limit=12&address=D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
-		// 	"coins/ark/devnet/transactions/byAddress/D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb-1-10",
-		// ),
-	],
+	}
 );
 
 cucumber(
@@ -143,15 +115,5 @@ cucumber(
 				.expect(Selector("[data-testid=NavigationBar__buttons--notifications] .rounded-full").exists)
 				.notOk();
 		},
-	},
-	[
-		// mockRequest(
-		// 	"https://ark-test.arkvault.io/api/transactions?page=1&limit=12&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
-		// 	"coins/ark/devnet/transactions/byAddress/D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD-1-10",
-		// ),
-		// mockRequest(
-		// 	"https://ark-test.arkvault.io/api/transactions?page=1&limit=12&address=D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
-		// 	"coins/ark/devnet/transactions/byAddress/D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb-1-10",
-		// ),
-	],
+	}
 );
