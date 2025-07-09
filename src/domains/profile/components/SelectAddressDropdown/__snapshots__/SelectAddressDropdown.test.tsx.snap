@@ -23,6 +23,7 @@ exports[`SelectAddressDropdown > should render disabled 1`] = `
               data-testid="select-list__input"
               readonly=""
               tabindex="-1"
+              type="text"
               value=""
             />
           </div>
@@ -57,6 +58,7 @@ exports[`SelectAddressDropdown > should render disabled 1`] = `
                     disabled=""
                     id="SelectAddressDropdown__dropdown-input"
                     placeholder="Address"
+                    type="text"
                     value=""
                   />
                 </div>
@@ -98,6 +100,7 @@ exports[`SelectAddressDropdown > should render empty 1`] = `
               data-testid="select-list__input"
               readonly=""
               tabindex="-1"
+              type="text"
               value=""
             />
           </div>
@@ -131,6 +134,7 @@ exports[`SelectAddressDropdown > should render empty 1`] = `
                     data-testid="SelectDropdown__input"
                     id="SelectAddressDropdown__dropdown-input"
                     placeholder="Address"
+                    type="text"
                     value=""
                   />
                 </div>
@@ -173,6 +177,7 @@ exports[`SelectAddressDropdown > should render invalid 1`] = `
               data-testid="select-list__input"
               readonly=""
               tabindex="-1"
+              type="text"
               value="0x659A76be283644AEc2003aa8ba26485047fd1BFB"
             />
           </div>
@@ -266,6 +271,7 @@ exports[`SelectAddressDropdown > should render invalid 1`] = `
                     data-testid="SelectDropdown__input"
                     id="SelectAddressDropdown__dropdown-input"
                     placeholder="Address"
+                    type="text"
                     value="0x659A76be283644AEc2003aa8ba26485047fd1BFB"
                   />
                   <span
@@ -370,6 +376,7 @@ exports[`SelectAddressDropdown > should render with preselected address 1`] = `
               data-testid="select-list__input"
               readonly=""
               tabindex="-1"
+              type="text"
               value="0x659A76be283644AEc2003aa8ba26485047fd1BFB"
             />
           </div>
@@ -409,6 +416,7 @@ exports[`SelectAddressDropdown > should render with preselected address 1`] = `
                     data-testid="SelectDropdown__input"
                     id="SelectAddressDropdown__dropdown-input"
                     placeholder="Address"
+                    type="text"
                     value="0x659A76be283644AEc2003aa8ba26485047fd1BFB"
                   />
                   <span
