@@ -70,7 +70,10 @@ const walletMocks = () => {
 	const publicKeys = ["034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192"];
 
 	const devnetMocks = [...addresses, ...publicKeys].map((identifier: string) =>
-		mockRequest(`https://dwallets-evm.mainsailhq.com/api/wallets/${identifier}`, `coins/mainsail/devnet/wallets/${identifier}`),
+		mockRequest(
+			`https://dwallets-evm.mainsailhq.com/api/wallets/${identifier}`,
+			`coins/mainsail/devnet/wallets/${identifier}`,
+		),
 	);
 
 	const mainnetMocks = ["0xb0E6c955a0Df13220C36Ea9c95bE471249247E57"].map((identifier: string) =>
@@ -82,12 +85,13 @@ const walletMocks = () => {
 
 	// We want to use a clean version of this wallet in E2E tests so we don't have
 	// any pre-defined behaviours like delegation, voting and whatever else exists
-	devnetMocks.push(
+	devnetMocks
+		.push
 		// mockRequest(
 		// 	"https://dwallets-evm.mainsailhq.com/api/wallets/0x659A76be283644AEc2003aa8ba26485047fd1BFB",
 		// 	"coins/mainsail/devnet/wallets/0x659A76be283644AEc2003aa8ba26485047fd1BFB-basic",
 		// ),
-	);
+		();
 
 	return [...devnetMocks, ...mainnetMocks];
 };
@@ -191,7 +195,10 @@ export const requestMocks = {
 	configuration: [
 		// devnet
 		mockRequest("https://dwallets-evm.mainsailhq.com/api/blockchain", "coins/mainsail/devnet/blockchain"),
-		mockRequest("https://dwallets-evm.mainsailhq.com/api/node/configuration", "coins/mainsail/devnet/configuration"),
+		mockRequest(
+			"https://dwallets-evm.mainsailhq.com/api/node/configuration",
+			"coins/mainsail/devnet/configuration",
+		),
 		mockRequest(
 			"https://dwallets-evm.mainsailhq.com/api/node/configuration/crypto",
 			"coins/mainsail/devnet/cryptoConfiguration",
@@ -210,7 +217,10 @@ export const requestMocks = {
 
 		// Compendia
 		mockRequest("https://apis.compendia.org/api/node/configuration", "coins/mainsail/devnet/configuration"),
-		mockRequest("https://apis.compendia.org/api/node/configuration/crypto", "coins/mainsail/devnet/cryptoConfiguration"),
+		mockRequest(
+			"https://apis.compendia.org/api/node/configuration/crypto",
+			"coins/mainsail/devnet/cryptoConfiguration",
+		),
 		mockRequest("https://apis.compendia.org/api/node/syncing", "coins/mainsail/devnet/syncing"),
 		mockRequest("https://apis-testnet.compendia.org/api/node/configuration", "coins/mainsail/devnet/configuration"),
 		mockRequest(
@@ -220,7 +230,10 @@ export const requestMocks = {
 		mockRequest("https://apis-testnet.compendia.org/api/node/syncing", "coins/mainsail/devnet/syncing"),
 
 		// Blockpool
-		mockRequest("https://explorer.blockpool.io:19031/api/node/configuration", "coins/mainsail/devnet/configuration"),
+		mockRequest(
+			"https://explorer.blockpool.io:19031/api/node/configuration",
+			"coins/mainsail/devnet/configuration",
+		),
 		mockRequest(
 			"https://explorer.blockpool.io:19031/api/node/configuration/crypto",
 			"coins/mainsail/devnet/cryptoConfiguration",
@@ -278,13 +291,13 @@ export const requestMocks = {
 		// wallet transactions
 		mockRequest(
 			"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=30&orderBy=timestamp:desc&address=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
-			transactionsFixture
+			transactionsFixture,
 		),
 
 		// for notifications
 		mockRequest(
 			"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=10&to=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6&address=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6,0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54",
-			transactionsFixture
+			transactionsFixture,
 		),
 
 		// mockRequest(
@@ -418,12 +431,10 @@ export const requestMocks = {
 
 		...walletMocks(),
 	],
-	evm: [
-		mockRequest("https://dwallets-evm.mainsailhq.com/evm/api/", {}),
-	],
+	evm: [mockRequest("https://dwallets-evm.mainsailhq.com/evm/api/", {})],
 	blocks: [
 		// mockRequest("https://dwallets-evm.mainsailhq.com/api/blocks/1e6789dd661ea8cd38ded6fe818eba181589497a2cc3179c42bb5695c33bcf50", {}),
-	]
+	],
 };
 
 const combineRequestMocks = (preHooks: RequestMock[] = [], postHooks: RequestMock[] = []): RequestMock[] => [
@@ -494,7 +505,7 @@ export const MNEMONICS = [
 	// 0xB64b3619cEF2642E36B6093da95BA2D14Fa9b52f.json - cold wallet
 	"trust anchor salmon annual control split globe conduct myself van ice resist blast hybrid track echo impose virus filter mystery harsh galaxy desk pitch",
 	// 0xb0E6c955a0Df13220C36Ea9c95bE471249247E57
-	"satoshi weather local seek gravity mountain cycle stem next three arch canal fitness crisp approve cute census hint casual agree pencil sleep best observe"
+	"satoshi weather local seek gravity mountain cycle stem next three arch canal fitness crisp approve cute census hint casual agree pencil sleep best observe",
 ];
 
 // https://cucumber.io/docs/gherkin/reference/
