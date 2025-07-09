@@ -11,7 +11,6 @@ const wallet = {
 	isResignedValidator: () => false,
 	transaction: () => ({
 		canBeSigned: () => false,
-		isAwaitingOurSignature: () => false,
 	}),
 	network: () => ({
 		id: () => "mainsail.devnet",

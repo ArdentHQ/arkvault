@@ -242,30 +242,6 @@ describe("TransactionService", () => {
 		expect(() => subject.addSignature()).toThrow("Method TransactionService#addSignature is not implemented.");
 	});
 
-	it("should return an empty object for #waitingForOurSignature", () => {
-		expect(subject.waitingForOurSignature()).toEqual({});
-	});
-
-	it("should return an empty object for #waitingForOtherSignatures", () => {
-		expect(subject.waitingForOtherSignatures()).toEqual({});
-	});
-
-	it("should return false for #isAwaitingOurSignature", () => {
-		expect(subject.isAwaitingOurSignature("id")).toBe(false);
-	});
-
-	it("should return false for #isAwaitingOtherSignatures", () => {
-		expect(subject.isAwaitingOtherSignatures("id")).toBe(false);
-	});
-
-	it("should return false for #isAwaitingSignatureByPublicKey", () => {
-		expect(subject.isAwaitingSignatureByPublicKey("id")).toBe(false);
-	});
-
-	it("should return false for #isAwaitingFinalSignature", () => {
-		expect(subject.isAwaitingFinalSignature()).toBe(false);
-	});
-
 	it("should return false for #canBeSigned", () => {
 		expect(subject.canBeSigned()).toBe(false);
 	});

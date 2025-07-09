@@ -147,32 +147,6 @@ export class TransactionService implements ITransactionService {
 		return this.#broadcasted;
 	}
 
-	/** {@inheritDoc ITransactionService.waitingForOurSignature} */
-	public waitingForOurSignature(): SignedTransactionDataDictionary {
-		const transactions: SignedTransactionDataDictionary = {};
-
-		for (const [id, transaction] of Object.entries(this.#pending)) {
-			if (this.isAwaitingOurSignature(id)) {
-				transactions[id] = transaction;
-			}
-		}
-
-		return transactions;
-	}
-
-	/** {@inheritDoc ITransactionService.waitingForOtherSignatures} */
-	public waitingForOtherSignatures(): SignedTransactionDataDictionary {
-		const transactions: SignedTransactionDataDictionary = {};
-
-		for (const [id, transaction] of Object.entries(this.#pending)) {
-			if (this.isAwaitingOtherSignatures(id)) {
-				transactions[id] = transaction;
-			}
-		}
-
-		return transactions;
-	}
-
 	/** {@inheritDoc ITransactionService.hasBeenSigned} */
 	public hasBeenSigned(id: string): boolean {
 		this.#assertHasValidIdentifier(id);
@@ -197,28 +171,6 @@ export class TransactionService implements ITransactionService {
 	/** {@inheritDoc ITransactionService.isAwaitingConfirmation} */
 	public isAwaitingConfirmation(id: string): boolean {
 		return this.hasBeenBroadcasted(id);
-	}
-
-	/** {@inheritDoc ITransactionService.isAwaitingOurSignature} */
-	public isAwaitingOurSignature(id: string): boolean {
-		return this.isAwaitingSignatureByPublicKey(id);
-	}
-
-	/** {@inheritDoc ITransactionService.isAwaitingOtherSignatures} */
-	public isAwaitingOtherSignatures(id: string): boolean {
-		this.#assertHasValidIdentifier(id);
-
-		return false;
-	}
-
-	/** {@inheritDoc ITransactionService.isAwaitingSignatureByPublicKey} */
-	public isAwaitingSignatureByPublicKey(id: string): boolean {
-		return this.isAwaitingOtherSignatures(id);
-	}
-
-	/** {@inheritDoc ITransactionService.isAwaitingFinalSignature} */
-	public isAwaitingFinalSignature(): boolean {
-		return false;
 	}
 
 	/** {@inheritDoc ITransactionService.canBeSigned} */
