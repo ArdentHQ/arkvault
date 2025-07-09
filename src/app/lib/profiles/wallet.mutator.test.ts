@@ -8,6 +8,7 @@ import {
 	WalletSetting,
 } from "./contracts.js";
 import { env, MAINSAIL_MNEMONICS } from "@/utils/testing-library";
+import { AddressService } from "@/app/lib/mainsail/address.service.js";
 
 let profile: IProfile;
 let wallet: IReadWriteWallet;
@@ -37,6 +38,60 @@ describe("WalletMutator", () => {
 			expect(wallet.address()).not.toBe(originalAddress);
 			expect(wallet.data().get(WalletData.DerivationType)).toBe("bip39");
 			expect(wallet.data().get(WalletData.ImportMethod)).toBe(WalletImportMethod.BIP39.MNEMONIC);
+		});
+
+		it("should set BIP44 data when type is 'bip44'", async () => {
+			const mnemonic = MAINSAIL_MNEMONICS[1];
+			const mockData = {
+				address: "mock-address-bip44",
+				path: "m/44'/0'/0'/0/0",
+				type: "bip44",
+			};
+			const fromMnemonicSpy = vi.spyOn(AddressService.prototype, "fromMnemonic").mockReturnValue(mockData);
+
+			await subject.identity(mnemonic);
+
+			expect(wallet.address()).toBe(mockData.address);
+			expect(wallet.data().get(WalletData.DerivationPath)).toBe(mockData.path);
+			expect(wallet.data().get(WalletData.ImportMethod)).toBe(WalletImportMethod.BIP44.MNEMONIC);
+
+			fromMnemonicSpy.mockRestore();
+		});
+
+		it("should set BIP49 data when type is 'bip49'", async () => {
+			const mnemonic = MAINSAIL_MNEMONICS[1];
+			const mockData = {
+				address: "mock-address-bip49",
+				path: "m/49'/0'/0'/0/0",
+				type: "bip49",
+			};
+			const fromMnemonicSpy = vi.spyOn(AddressService.prototype, "fromMnemonic").mockReturnValue(mockData);
+
+			await subject.identity(mnemonic);
+
+			expect(wallet.address()).toBe(mockData.address);
+			expect(wallet.data().get(WalletData.DerivationPath)).toBe(mockData.path);
+			expect(wallet.data().get(WalletData.ImportMethod)).toBe(WalletImportMethod.BIP49.MNEMONIC);
+
+			fromMnemonicSpy.mockRestore();
+		});
+
+		it("should set BIP84 data when type is 'bip84'", async () => {
+			const mnemonic = MAINSAIL_MNEMONICS[1];
+			const mockData = {
+				address: "mock-address-bip84",
+				path: "m/84'/0'/0'/0/0",
+				type: "bip84",
+			};
+			const fromMnemonicSpy = vi.spyOn(AddressService.prototype, "fromMnemonic").mockReturnValue(mockData);
+
+			await subject.identity(mnemonic);
+
+			expect(wallet.address()).toBe(mockData.address);
+			expect(wallet.data().get(WalletData.DerivationPath)).toBe(mockData.path);
+			expect(wallet.data().get(WalletData.ImportMethod)).toBe(WalletImportMethod.BIP84.MNEMONIC);
+
+			fromMnemonicSpy.mockRestore();
 		});
 	});
 
