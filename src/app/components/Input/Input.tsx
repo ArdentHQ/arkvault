@@ -1,5 +1,5 @@
 import cn from "classnames";
-import React, { useEffect, useRef, JSX, forwardRef } from "react";
+import React, { useEffect, useRef, JSX } from "react";
 
 import { InputSuggestion } from "./InputSuggestion";
 import { useFormField } from "@/app/components/Form/useFormField";
