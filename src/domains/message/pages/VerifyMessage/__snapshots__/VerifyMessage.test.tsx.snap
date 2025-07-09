@@ -828,18 +828,18 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                     </div>
                   </div>
                   <div
-                    class="mt-6 flex flex-col border border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 rounded-sm sm:rounded-xl overflow-hidden"
+                    class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 mt-6 flex flex-col overflow-hidden rounded-sm border sm:rounded-xl"
                   >
                     <div
-                      class="p-4 flex flex-row justify-between"
+                      class="flex flex-row justify-between p-4"
                     >
                       <span
-                        class="text-sm text-theme-secondary-700 dark:text-theme-secondary-700 dim:text-theme-dim-700 font-semibold sm:hidden"
+                        class="text-theme-secondary-700 dark:text-theme-secondary-700 dim:text-theme-dim-700 text-sm font-semibold sm:hidden"
                       >
                         Method:
                       </span>
                       <span
-                        class="text-base text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 font-semibold hidden sm:block"
+                        class="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 hidden text-base font-semibold sm:block"
                       >
                         Verification Method
                       </span>
@@ -877,7 +877,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                       </div>
                     </div>
                     <div
-                      class="bg-theme-secondary-100 dim:bg-theme-dim-950 dark:bg-black hidden sm:block pt-3 px-4 pb-3"
+                      class="bg-theme-secondary-100 dim:bg-theme-dim-950 hidden px-4 pt-3 pb-3 sm:block dark:bg-black"
                     >
                       <span
                         class="text-theme-secondary-text dim:text-theme-dim-200 text-sm font-normal"
@@ -1835,18 +1835,18 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                     </div>
                   </div>
                   <div
-                    class="mt-6 flex flex-col border border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 rounded-sm sm:rounded-xl overflow-hidden"
+                    class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 mt-6 flex flex-col overflow-hidden rounded-sm border sm:rounded-xl"
                   >
                     <div
-                      class="p-4 flex flex-row justify-between"
+                      class="flex flex-row justify-between p-4"
                     >
                       <span
-                        class="text-sm text-theme-secondary-700 dark:text-theme-secondary-700 dim:text-theme-dim-700 font-semibold sm:hidden"
+                        class="text-theme-secondary-700 dark:text-theme-secondary-700 dim:text-theme-dim-700 text-sm font-semibold sm:hidden"
                       >
                         Method:
                       </span>
                       <span
-                        class="text-base text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 font-semibold hidden sm:block"
+                        class="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 hidden text-base font-semibold sm:block"
                       >
                         Verification Method
                       </span>
@@ -1884,7 +1884,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                       </div>
                     </div>
                     <div
-                      class="bg-theme-secondary-100 dim:bg-theme-dim-950 dark:bg-black hidden sm:block pt-3 px-4 pb-3"
+                      class="bg-theme-secondary-100 dim:bg-theme-dim-950 hidden px-4 pt-3 pb-3 sm:block dark:bg-black"
                     >
                       <span
                         class="text-theme-secondary-text dim:text-theme-dim-200 text-sm font-normal"
