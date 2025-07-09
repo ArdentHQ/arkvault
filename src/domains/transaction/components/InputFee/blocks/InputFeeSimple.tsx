@@ -66,6 +66,7 @@ export const InputFeeSimple: React.FC<InputFeeSimpleProperties> = ({
 												<Amount ticker={exchangeTicker} value={displayValueConverted} />
 											</span>
 										)}
+
 										<span
 											className={cn(
 												"text-theme-secondary-500 ml-1 text-xs leading-[15px] transition-all sm:hidden",
