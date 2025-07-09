@@ -181,6 +181,11 @@ describe("TransactionService", () => {
 		expect(() => subject.transaction("unknown-id")).toThrow("Transaction [unknown-id] could not be found.");
 	});
 
+	it("should throw for a malformed ID", () => {
+		// @ts-expect-error - We are intentionally passing an invalid type.
+		expect(() => subject.transaction(undefined)).toThrow("Encountered a malformed ID. This looks like a bug.");
+	});
+
 	it("should broadcast a transaction", async () => {
 		const id = await subject.signTransfer(DUMMY_TRANSFER_INPUT);
 		await subject.broadcast(id);
