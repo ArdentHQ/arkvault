@@ -177,6 +177,10 @@ describe("TransactionService", () => {
 		expect(result.hash()).toBe(id);
 	});
 
+	it("should throw when failing to find a transaction by its ID", () => {
+		expect(() => subject.transaction("unknown-id")).toThrow("Transaction [unknown-id] could not be found.");
+	});
+
 	it("should broadcast a transaction", async () => {
 		const id = await subject.signTransfer(DUMMY_TRANSFER_INPUT);
 		await subject.broadcast(id);
