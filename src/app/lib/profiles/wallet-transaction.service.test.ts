@@ -1,4 +1,4 @@
-import { describe, vi, expect, beforeEach, afterEach } from "vitest";
+import { describe, vi, expect, beforeEach, afterEach, it } from "vitest";
 import { BigNumber } from "@/app/lib/helpers";
 import { IReadWriteWallet } from "@/app/lib/profiles";
 import { Services } from "@/app/lib/mainsail";
@@ -7,7 +7,7 @@ import { TransactionService } from "./wallet-transaction.service";
 import { IProfile } from "./profile.contract";
 import { env, MAINSAIL_MNEMONICS } from "@/utils/testing-library";
 
-const mockTransactionMethod = vi.fn().mockResolvedValue({ ...TransactionFixture });
+const mockTransactionMethod = vi.fn().mockResolvedValue(TransactionFixture);
 
 const mockMainsailTransactionService = {
 	delegateRegistration: mockTransactionMethod,
@@ -190,6 +190,17 @@ describe("TransactionService", () => {
 		expect(response).toBe(true);
 	});
 
+	it("should throw when trying to confirm a transaction that is not awaiting confirmation", async () => {
+		const id = await subject.signTransfer(DUMMY_TRANSFER_INPUT);
+		await subject.broadcast(id);
+
+		// Confirm it once, which should succeed.
+		await subject.confirm(id);
+
+		// Now that it is confirmed, it is no longer awaiting confirmation.
+		await expect(subject.confirm(id)).rejects.toThrow(`Transaction [${id}] is not awaiting confirmation.`);
+	});
+
 	it("should return all pending transactions", async () => {
 		expect(subject.pending()).toEqual({});
 		const id = await subject.signTransfer(DUMMY_TRANSFER_INPUT);
@@ -218,6 +229,10 @@ describe("TransactionService", () => {
 		expect(subject.hasBeenSigned(TransactionFixture.hash())).toBe(false);
 		const id = await subject.signTransfer(DUMMY_TRANSFER_INPUT);
 		expect(subject.hasBeenSigned(id)).toBe(true);
+	});
+
+	it("should check if a transaction has been confirmed", () => {
+		expect(subject.hasBeenConfirmed(TransactionFixture.hash())).toBe(false);
 	});
 
 	it("should check if a transaction has been broadcasted", () => {
