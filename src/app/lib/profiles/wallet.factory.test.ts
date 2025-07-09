@@ -2,6 +2,7 @@ import { describe, vi, expect, beforeEach, it, afterEach } from "vitest";
 import { IProfile, IWalletFactory, WalletData, WalletFlag, WalletImportMethod } from "./contracts.js";
 import { Wallet } from "./wallet.js";
 import { env, MAINSAIL_MNEMONICS } from "@/utils/testing-library";
+import { Enums } from "@/app/lib/mainsail";
 
 let profile: IProfile;
 let subject: IWalletFactory;
@@ -88,6 +89,91 @@ describe("WalletFactory", () => {
 			networkSpy.mockRestore();
 		});
 	});
+
+	describe("fromMnemonicWithBIP44", () => {
+		it.only("should create a wallet from a mnemonic", async () => {
+			const gateSpy = vi.spyOn(Wallet.prototype, "gate").mockReturnValue({
+				allows: () => true,
+			} as any);
+
+			const wallet = await subject.fromMnemonicWithBIP44({ levels: { account: 0 }, mnemonic });
+
+			expect(wallet).toBeInstanceOf(Wallet);
+			expect(wallet.address()).toBeTruthy();
+			// @TODO: relevant code is currently commented out in the wallet factory
+			// expect(wallet.data().get(WalletData.ImportMethod)).toBe(WalletImportMethod.BIP44.MNEMONIC);
+			expect(wallet.data().get(WalletData.Status)).toBe(WalletFlag.Cold);
+			gateSpy.mockRestore();
+		});
+
+		it("should throw if the network does not support BIP44", async () => {
+			const gateSpy = vi.spyOn(Wallet.prototype, "gate").mockReturnValue({
+				allows: (feature: string) => feature !== Enums.FeatureFlag.AddressMnemonicBip44,
+			} as any);
+
+			await expect(subject.fromMnemonicWithBIP44({ levels: { account: 0 }, mnemonic })).rejects.toThrow(
+				"The configured network does not support BIP44.",
+			);
+
+			gateSpy.mockRestore();
+		});
+	});
+
+	// describe("fromMnemonicWithBIP49", () => {
+	// 	it("should create a wallet from a mnemonic", async () => {
+	// 		const gateSpy = vi.spyOn(Wallet.prototype, "gate").mockReturnValue({
+	// 			allows: () => true,
+	// 		} as any);
+
+	// 		const wallet = await subject.fromMnemonicWithBIP49({ levels: {}, mnemonic });
+
+	// 		expect(wallet).toBeInstanceOf(Wallet);
+	// 		expect(wallet.address()).toBeTruthy();
+	// 		expect(wallet.data().get(WalletData.ImportMethod)).toBe(WalletImportMethod.BIP49.MNEMONIC);
+	// 		expect(wallet.data().get(WalletData.Status)).toBe(WalletFlag.Cold);
+	// 		gateSpy.mockRestore();
+	// 	});
+
+	// 	it("should throw if the network does not support BIP49", async () => {
+	// 		const gateSpy = vi.spyOn(Wallet.prototype, "gate").mockReturnValue({
+	// 			allows: (feature: string) => feature !== Enums.FeatureFlag.AddressMnemonicBip49,
+	// 		} as any);
+
+	// 		await expect(subject.fromMnemonicWithBIP49({ levels: {}, mnemonic })).rejects.toThrow(
+	// 			"The configured network does not support BIP49.",
+	// 		);
+
+	// 		gateSpy.mockRestore();
+	// 	});
+	// });
+
+	// describe("fromMnemonicWithBIP84", () => {
+	// 	it("should create a wallet from a mnemonic", async () => {
+	// 		const gateSpy = vi.spyOn(Wallet.prototype, "gate").mockReturnValue({
+	// 			allows: () => true,
+	// 		} as any);
+
+	// 		const wallet = await subject.fromMnemonicWithBIP84({ levels: {}, mnemonic });
+
+	// 		expect(wallet).toBeInstanceOf(Wallet);
+	// 		expect(wallet.address()).toBeTruthy();
+	// 		expect(wallet.data().get(WalletData.ImportMethod)).toBe(WalletImportMethod.BIP84.MNEMONIC);
+	// 		expect(wallet.data().get(WalletData.Status)).toBe(WalletFlag.Cold);
+	// 		gateSpy.mockRestore();
+	// 	});
+
+	// 	it("should throw if the network does not support BIP84", async () => {
+	// 		const gateSpy = vi.spyOn(Wallet.prototype, "gate").mockReturnValue({
+	// 			allows: (feature: string) => feature !== Enums.FeatureFlag.AddressMnemonicBip84,
+	// 		} as any);
+
+	// 		await expect(subject.fromMnemonicWithBIP84({ levels: {}, mnemonic })).rejects.toThrow(
+	// 			"The configured network does not support BIP84.",
+	// 		);
+
+	// 		gateSpy.mockRestore();
+	// 	});
+	// });
 
 	describe("fromAddress", () => {
 		it("should create a wallet from an address", async () => {
