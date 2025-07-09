@@ -596,10 +596,20 @@ exports[`ValidatorRegistrationForm > should render review step 1`] = `
                             class="flex justify-between sm:w-full"
                           >
                             <span
-                              class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500 dim:sm:text-theme-dim-200 group-hover:dim:text-theme-dim-50"
+                              class="text-theme-secondary-500 ml-1 text-xs leading-[15px] transition-all sm:hidden dark:text-theme-dark-500 dim:text-theme-dim-200 hidden"
+                            >
+                              (
+                            </span>
+                            <span
+                              class="whitespace-nowrap text-xs leading-[15px] transition-all dark:group-hover:text-theme-dark-200 dark:text-theme-dark-500 dim:text-theme-dim-200 group-hover:dim:text-theme-dim-50"
                               data-testid="Amount"
                             >
                               0 ARK
+                            </span>
+                            <span
+                              class="text-theme-secondary-500 text-xs leading-[15px] transition-all sm:hidden dark:text-theme-dark-500 dim:text-theme-dim-200 hidden"
+                            >
+                              )
                             </span>
                           </div>
                         </div>
@@ -638,10 +648,20 @@ exports[`ValidatorRegistrationForm > should render review step 1`] = `
                             class="flex justify-between sm:w-full"
                           >
                             <span
-                              class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dim:sm:text-theme-dim-navy-600"
+                              class="text-theme-secondary-500 ml-1 text-xs leading-[15px] transition-all sm:hidden dim:text-theme-dim-navy-600 hidden"
+                            >
+                              (
+                            </span>
+                            <span
+                              class="whitespace-nowrap text-xs leading-[15px] transition-all dim:text-theme-dim-navy-600"
                               data-testid="Amount"
                             >
                               0 ARK
+                            </span>
+                            <span
+                              class="text-theme-secondary-500 text-xs leading-[15px] transition-all sm:hidden dim:text-theme-dim-navy-600 hidden"
+                            >
+                              )
                             </span>
                           </div>
                         </div>
@@ -680,10 +700,20 @@ exports[`ValidatorRegistrationForm > should render review step 1`] = `
                             class="flex justify-between sm:w-full"
                           >
                             <span
-                              class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500 dim:sm:text-theme-dim-200 group-hover:dim:text-theme-dim-50"
+                              class="text-theme-secondary-500 ml-1 text-xs leading-[15px] transition-all sm:hidden dark:text-theme-dark-500 dim:text-theme-dim-200 hidden"
+                            >
+                              (
+                            </span>
+                            <span
+                              class="whitespace-nowrap text-xs leading-[15px] transition-all dark:group-hover:text-theme-dark-200 dark:text-theme-dark-500 dim:text-theme-dim-200 group-hover:dim:text-theme-dim-50"
                               data-testid="Amount"
                             >
                               0 ARK
+                            </span>
+                            <span
+                              class="text-theme-secondary-500 text-xs leading-[15px] transition-all sm:hidden dark:text-theme-dark-500 dim:text-theme-dim-200 hidden"
+                            >
+                              )
                             </span>
                           </div>
                         </div>

@@ -3,8 +3,10 @@ import { useTranslation } from "react-i18next";
 
 import { ButtonGroup, ButtonGroupOption } from "@/app/components/ButtonGroup";
 import { Icon } from "@/app/components/Icon";
-import { ViewingModeType } from "@/app/hooks";
+import { useBreakpoint, ViewingModeType } from "@/app/hooks";
 import cn from "classnames";
+import { Select } from "@/app/components/SelectDropdown";
+import { SettingsOption } from "./General.contracts";
 
 interface ViewingModeItem {
 	icon: string;
@@ -82,6 +84,7 @@ export const ViewingMode = ({
 	onChange?: (mode: ViewingModeType) => void;
 }) => {
 	const { t } = useTranslation();
+	const { isSmAndAbove } = useBreakpoint();
 
 	const viewingModes: ViewingModeItem[] = [
 		{
@@ -101,23 +104,42 @@ export const ViewingMode = ({
 		},
 	];
 
+	if (isSmAndAbove) {
+		return (
+			<ButtonGroup className="space-x-3">
+				{viewingModes.map(({ icon, name, value }) => (
+					<ButtonGroupOption
+						key={value}
+						isSelected={() => viewingMode === value}
+						setSelectedValue={() => onChange?.(value as ViewingModeType)}
+						value={value}
+						variant="modern"
+						className="h-11 rounded"
+					>
+						<div className="flex items-center px-2">
+							<Icon size="lg" name={icon} />
+							<span className="ml-2 hidden sm:inline">{name}</span>
+						</div>
+					</ButtonGroupOption>
+				))}
+			</ButtonGroup>
+		);
+	}
+
 	return (
-		<ButtonGroup className="space-x-3">
-			{viewingModes.map(({ icon, name, value }) => (
-				<ButtonGroupOption
-					key={value}
-					isSelected={() => viewingMode === value}
-					setSelectedValue={() => onChange?.(value as ViewingModeType)}
-					value={value}
-					variant="modern"
-					className="h-11 rounded"
-				>
-					<div className="flex items-center px-2">
-						<Icon size="lg" name={icon} />
-						<span className="ml-2 hidden sm:inline">{name}</span>
-					</div>
-				</ButtonGroupOption>
-			))}
-		</ButtonGroup>
+		<Select
+			id="select-viewing-mode"
+			placeholder={t("SETTINGS.APPEARANCE.OPTIONS.VIEWING_MODE.TITLE")}
+			options={viewingModes.map(({ name, value }) => ({
+				label: name,
+				value,
+			}))}
+			defaultValue={viewingMode}
+			onChange={(option: SettingsOption) => {
+				if (option) {
+					onChange?.(option.value as ViewingModeType);
+				}
+			}}
+		/>
 	);
 };

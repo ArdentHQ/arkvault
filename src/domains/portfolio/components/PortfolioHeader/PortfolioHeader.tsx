@@ -207,11 +207,11 @@ export const PortfolioHeader = ({
 					<div className="dark:bg-theme-dark-900 dim:bg-theme-dim-900 flex w-full flex-col gap-3 rounded bg-white p-4 md:rounded-t-lg md:rounded-b-sm">
 						<div className="flex w-full flex-row items-center justify-between">
 							{selectedWallets.length === 1 && (
-								<div className="flex flex-row items-center gap-1.5">
+								<div className="flex grow flex-row items-center gap-1.5">
 									<p className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 hidden text-sm leading-[17px] font-semibold sm:block md:text-base md:leading-5">
 										{t("COMMON.ADDRESS")}
 									</p>
-									<div className="h-[17px] w-32 md:h-5 md:w-60 lg:w-[410px]">
+									<div className="h-[17px] w-full md:h-5">
 										<Address
 											alignment="center"
 											address={wallet.address()}
