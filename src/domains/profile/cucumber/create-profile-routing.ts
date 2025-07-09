@@ -22,7 +22,7 @@ cucumber("@createProfileRouting", {
 		const closeButton = Selector('[data-testid="InstallPWA__close"]');
 
 		// Ensure the close button exists and is visible before clicking
-		if (await closeButton.exists && await closeButton.visible) {
+		if ((await closeButton.exists) && (await closeButton.visible)) {
 			await t.click(closeButton);
 		}
 
