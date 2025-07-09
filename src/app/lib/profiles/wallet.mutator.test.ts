@@ -9,6 +9,7 @@ import {
 } from "./contracts.js";
 import { env, MAINSAIL_MNEMONICS } from "@/utils/testing-library";
 import { AddressService } from "@/app/lib/mainsail/address.service.js";
+import { BIP39 } from "@ardenthq/arkvault-crypto";
 
 let profile: IProfile;
 let wallet: IReadWriteWallet;
@@ -191,6 +192,19 @@ describe("WalletMutator", () => {
 			await subject.removeEncryption(password);
 
 			expect(forgetSpy).toHaveBeenCalledWith(password);
+		});
+
+		it("should remove encryption from a wallet imported with a secret", async () => {
+			const secret = "a secret";
+			const password = "password";
+
+			const fromSecretWallet = await profile.walletFactory().fromSecret({ password, secret });
+			const fromSecretSubject = fromSecretWallet.mutator();
+			vi.spyOn(fromSecretWallet, "isSecondSignature").mockReturnValue(false);
+
+			expect(fromSecretWallet.importMethod()).toBe(WalletImportMethod.SECRET_WITH_ENCRYPTION);
+			await fromSecretSubject.removeEncryption(password);
+			expect(fromSecretWallet.importMethod()).toBe(WalletImportMethod.SECRET);
 		});
 	});
 });
