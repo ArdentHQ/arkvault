@@ -77,4 +77,29 @@ describe("WalletIdentifierFactory", () => {
 		vi.spyOn(wallet, "importMethod").mockReturnValue("unsupported.method");
 		expect(() => WalletIdentifierFactory.make(wallet)).toThrow("Unsupported import method unsupported.method");
 	});
+
+	it.each([
+		"actsWithMnemonic",
+		"actsWithPublicKey",
+		"actsWithMnemonicWithEncryption",
+		"actsWithSecret",
+		"actsWithSecretWithEncryption",
+	] as const)("should make a wallet with address for %s", (method: keyof IReadWriteWallet) => {
+		for (const m of [
+			"actsWithMnemonic",
+			"actsWithPublicKey",
+			"actsWithMnemonicWithEncryption",
+			"actsWithSecret",
+			"actsWithSecretWithEncryption",
+		].filter((m) => m !== method)) {
+			vi.spyOn(wallet, m as keyof IReadWriteWallet).mockReturnValue(false);
+		}
+
+		vi.spyOn(wallet, method).mockReturnValue(true);
+
+		expect(WalletIdentifierFactory.make(wallet)).toMatchObject({
+			type: "address",
+			value: "0x659A76be283644AEc2003aa8ba26485047fd1BFB",
+		});
+	});
 });
