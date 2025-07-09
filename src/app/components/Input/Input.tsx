@@ -1,5 +1,5 @@
 import cn from "classnames";
-import React, { useEffect, useRef, JSX } from "react";
+import React, { useEffect, useRef, JSX, forwardRef } from "react";
 
 import { InputSuggestion } from "./InputSuggestion";
 import { useFormField } from "@/app/components/Form/useFormField";
@@ -77,19 +77,16 @@ export const InputWrapperStyled = ({
 );
 
 interface InputStyledProps {
-	autocomplete?: string;
 	as?: React.ElementType;
 	ref?: React.Ref<HTMLInputElement>;
 }
 
 const InputStyled = ({
-	autocomplete = "off",
 	as: Component = "input",
 	...properties
 }: InputStyledProps & React.ComponentPropsWithRef<"input">) => (
 	<Component
 		{...properties}
-		autoComplete={autocomplete}
 		className={twMerge(
 			"bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none",
 			properties.className,
@@ -152,7 +149,7 @@ export const Input = ({
 	const changeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
 		properties.onChange?.(e);
 
-		if (!preventAutofill || type !== "password") {
+		if (!showFakePasswordField) {
 			return;
 		}
 
@@ -160,6 +157,19 @@ export const Input = ({
 			fakePasswordReference.current.value = e.target.value;
 		}
 	};
+
+	// We need to show a fake password field as a workaround for the browser's autofill feature.
+	const showFakePasswordField = preventAutofill && type === "password";
+
+	useEffect(() => {
+		if (showFakePasswordField && fakePasswordReference.current) {
+			const nextInput = fakePasswordReference.current?.nextElementSibling as HTMLInputElement;
+
+			if (nextInput) {
+				fakePasswordReference.current.value = nextInput.value;
+			}
+		}
+	}, [showFakePasswordField, fakePasswordReference.current]);
 
 	return (
 		<>
@@ -182,7 +192,7 @@ export const Input = ({
 			>
 				{addons?.start !== undefined && addons.start.content}
 				<div className={cn("relative flex h-full flex-1", { invisible: hideInputValue })}>
-					{preventAutofill && (
+					{showFakePasswordField && (
 						<input
 							aria-hidden="true"
 							autoComplete="off"
@@ -207,7 +217,7 @@ export const Input = ({
 						className={cn(
 							"no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!",
 							{
-								"caret-theme-text no-selection-style font-mono text-transparent": preventAutofill,
+								"caret-theme-text no-selection-style font-mono text-transparent": showFakePasswordField,
 								"text-theme-secondary-text": disabled,
 							},
 							innerClassName,
@@ -216,12 +226,12 @@ export const Input = ({
 						aria-invalid={isInvalidValue}
 						disabled={disabled}
 						value={value}
-						type={type === "password" && preventAutofill ? "text" : (type ?? "text")}
+						type={showFakePasswordField ? "text" : (type ?? "text")}
 						// @ts-ignore
 						ref={inputReference}
 						readOnly={readOnly}
 						onChange={changeHandler}
-						autoComplete={preventAutofill ? "off" : autoComplete}
+						autoComplete={showFakePasswordField ? "off" : autoComplete}
 						{...properties}
 					/>
 
@@ -281,5 +291,3 @@ export const Input = ({
 		</>
 	);
 };
-
-Input.displayName = "Input";
