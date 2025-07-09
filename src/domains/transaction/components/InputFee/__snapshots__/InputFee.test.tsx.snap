@@ -1221,10 +1221,20 @@ exports[`InputFee > should keep different values for simple and advanced view ty
               class="flex justify-between sm:w-full"
             >
               <span
-                class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500 dim:sm:text-theme-dim-200 group-hover:dim:text-theme-dim-50"
+                class="text-theme-secondary-500 ml-1 text-xs leading-[15px] transition-all sm:hidden dark:text-theme-dark-500 dim:text-theme-dim-200 hidden"
+              >
+                (
+              </span>
+              <span
+                class="whitespace-nowrap text-xs leading-[15px] transition-all dark:group-hover:text-theme-dark-200 dark:text-theme-dark-500 dim:text-theme-dim-200 group-hover:dim:text-theme-dim-50"
                 data-testid="Amount"
               >
                 0.0005006 ARK
+              </span>
+              <span
+                class="text-theme-secondary-500 text-xs leading-[15px] transition-all sm:hidden dark:text-theme-dark-500 dim:text-theme-dim-200 hidden"
+              >
+                )
               </span>
             </div>
           </div>
@@ -1263,10 +1273,20 @@ exports[`InputFee > should keep different values for simple and advanced view ty
               class="flex justify-between sm:w-full"
             >
               <span
-                class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dim:sm:text-theme-dim-navy-600"
+                class="text-theme-secondary-500 ml-1 text-xs leading-[15px] transition-all sm:hidden dim:text-theme-dim-navy-600 hidden"
+              >
+                (
+              </span>
+              <span
+                class="whitespace-nowrap text-xs leading-[15px] transition-all dim:text-theme-dim-navy-600"
                 data-testid="Amount"
               >
                 0.0007456 ARK
+              </span>
+              <span
+                class="text-theme-secondary-500 text-xs leading-[15px] transition-all sm:hidden dim:text-theme-dim-navy-600 hidden"
+              >
+                )
               </span>
             </div>
           </div>
@@ -1305,10 +1325,20 @@ exports[`InputFee > should keep different values for simple and advanced view ty
               class="flex justify-between sm:w-full"
             >
               <span
-                class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500 dim:sm:text-theme-dim-200 group-hover:dim:text-theme-dim-50"
+                class="text-theme-secondary-500 ml-1 text-xs leading-[15px] transition-all sm:hidden dark:text-theme-dark-500 dim:text-theme-dim-200 hidden"
+              >
+                (
+              </span>
+              <span
+                class="whitespace-nowrap text-xs leading-[15px] transition-all dark:group-hover:text-theme-dark-200 dark:text-theme-dark-500 dim:text-theme-dim-200 group-hover:dim:text-theme-dim-50"
                 data-testid="Amount"
               >
                 0.00085 ARK
+              </span>
+              <span
+                class="text-theme-secondary-500 text-xs leading-[15px] transition-all sm:hidden dark:text-theme-dark-500 dim:text-theme-dim-200 hidden"
+              >
+                )
               </span>
             </div>
           </div>
@@ -1409,10 +1439,20 @@ exports[`InputFee > simple view type > should display converted values when on l
                 </span>
               </span>
               <span
-                class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500 dim:sm:text-theme-dim-200 group-hover:dim:text-theme-dim-50"
+                class="text-theme-secondary-500 ml-1 text-xs leading-[15px] transition-all sm:hidden dark:text-theme-dark-500 dim:text-theme-dim-200"
+              >
+                (
+              </span>
+              <span
+                class="whitespace-nowrap text-xs leading-[15px] transition-all dark:group-hover:text-theme-dark-200 dark:text-theme-dark-500 dim:text-theme-dim-200 group-hover:dim:text-theme-dim-50 text-theme-secondary-500"
                 data-testid="Amount"
               >
                 0.0005006 ARK
+              </span>
+              <span
+                class="text-theme-secondary-500 text-xs leading-[15px] transition-all sm:hidden dark:text-theme-dark-500 dim:text-theme-dim-200"
+              >
+                )
               </span>
             </div>
           </div>
@@ -1462,10 +1502,20 @@ exports[`InputFee > simple view type > should display converted values when on l
                 </span>
               </span>
               <span
-                class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dim:sm:text-theme-dim-navy-600"
+                class="text-theme-secondary-500 ml-1 text-xs leading-[15px] transition-all sm:hidden dim:text-theme-dim-navy-600"
+              >
+                (
+              </span>
+              <span
+                class="whitespace-nowrap text-xs leading-[15px] transition-all dim:text-theme-dim-navy-600 text-theme-secondary-500"
                 data-testid="Amount"
               >
                 0.0007456 ARK
+              </span>
+              <span
+                class="text-theme-secondary-500 text-xs leading-[15px] transition-all sm:hidden dim:text-theme-dim-navy-600"
+              >
+                )
               </span>
             </div>
           </div>
@@ -1515,10 +1565,20 @@ exports[`InputFee > simple view type > should display converted values when on l
                 </span>
               </span>
               <span
-                class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500 dim:sm:text-theme-dim-200 group-hover:dim:text-theme-dim-50"
+                class="text-theme-secondary-500 ml-1 text-xs leading-[15px] transition-all sm:hidden dark:text-theme-dark-500 dim:text-theme-dim-200"
+              >
+                (
+              </span>
+              <span
+                class="whitespace-nowrap text-xs leading-[15px] transition-all dark:group-hover:text-theme-dark-200 dark:text-theme-dark-500 dim:text-theme-dim-200 group-hover:dim:text-theme-dim-50 text-theme-secondary-500"
                 data-testid="Amount"
               >
                 0.00085 ARK
+              </span>
+              <span
+                class="text-theme-secondary-500 text-xs leading-[15px] transition-all sm:hidden dark:text-theme-dark-500 dim:text-theme-dim-200"
+              >
+                )
               </span>
             </div>
           </div>
@@ -1982,10 +2042,20 @@ exports[`InputFee > simple view type > should render simple view in lg 1`] = `
               class="flex justify-between sm:w-full"
             >
               <span
-                class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500 dim:sm:text-theme-dim-200 group-hover:dim:text-theme-dim-50"
+                class="text-theme-secondary-500 ml-1 text-xs leading-[15px] transition-all sm:hidden dark:text-theme-dark-500 dim:text-theme-dim-200 hidden"
+              >
+                (
+              </span>
+              <span
+                class="whitespace-nowrap text-xs leading-[15px] transition-all dark:group-hover:text-theme-dark-200 dark:text-theme-dark-500 dim:text-theme-dim-200 group-hover:dim:text-theme-dim-50"
                 data-testid="Amount"
               >
                 0.0005006 ARK
+              </span>
+              <span
+                class="text-theme-secondary-500 text-xs leading-[15px] transition-all sm:hidden dark:text-theme-dark-500 dim:text-theme-dim-200 hidden"
+              >
+                )
               </span>
             </div>
           </div>
@@ -2024,10 +2094,20 @@ exports[`InputFee > simple view type > should render simple view in lg 1`] = `
               class="flex justify-between sm:w-full"
             >
               <span
-                class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dim:sm:text-theme-dim-navy-600"
+                class="text-theme-secondary-500 ml-1 text-xs leading-[15px] transition-all sm:hidden dim:text-theme-dim-navy-600 hidden"
+              >
+                (
+              </span>
+              <span
+                class="whitespace-nowrap text-xs leading-[15px] transition-all dim:text-theme-dim-navy-600"
                 data-testid="Amount"
               >
                 0.0007456 ARK
+              </span>
+              <span
+                class="text-theme-secondary-500 text-xs leading-[15px] transition-all sm:hidden dim:text-theme-dim-navy-600 hidden"
+              >
+                )
               </span>
             </div>
           </div>
@@ -2066,10 +2146,20 @@ exports[`InputFee > simple view type > should render simple view in lg 1`] = `
               class="flex justify-between sm:w-full"
             >
               <span
-                class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500 dim:sm:text-theme-dim-200 group-hover:dim:text-theme-dim-50"
+                class="text-theme-secondary-500 ml-1 text-xs leading-[15px] transition-all sm:hidden dark:text-theme-dark-500 dim:text-theme-dim-200 hidden"
+              >
+                (
+              </span>
+              <span
+                class="whitespace-nowrap text-xs leading-[15px] transition-all dark:group-hover:text-theme-dark-200 dark:text-theme-dark-500 dim:text-theme-dim-200 group-hover:dim:text-theme-dim-50"
                 data-testid="Amount"
               >
                 0.00085 ARK
+              </span>
+              <span
+                class="text-theme-secondary-500 text-xs leading-[15px] transition-all sm:hidden dark:text-theme-dark-500 dim:text-theme-dim-200 hidden"
+              >
+                )
               </span>
             </div>
           </div>
@@ -2159,10 +2249,20 @@ exports[`InputFee > simple view type > should render simple view in md 1`] = `
               class="flex justify-between sm:w-full"
             >
               <span
-                class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500 dim:sm:text-theme-dim-200 group-hover:dim:text-theme-dim-50"
+                class="text-theme-secondary-500 ml-1 text-xs leading-[15px] transition-all sm:hidden dark:text-theme-dark-500 dim:text-theme-dim-200 hidden"
+              >
+                (
+              </span>
+              <span
+                class="whitespace-nowrap text-xs leading-[15px] transition-all dark:group-hover:text-theme-dark-200 dark:text-theme-dark-500 dim:text-theme-dim-200 group-hover:dim:text-theme-dim-50"
                 data-testid="Amount"
               >
                 0.0005006 ARK
+              </span>
+              <span
+                class="text-theme-secondary-500 text-xs leading-[15px] transition-all sm:hidden dark:text-theme-dark-500 dim:text-theme-dim-200 hidden"
+              >
+                )
               </span>
             </div>
           </div>
@@ -2201,10 +2301,20 @@ exports[`InputFee > simple view type > should render simple view in md 1`] = `
               class="flex justify-between sm:w-full"
             >
               <span
-                class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dim:sm:text-theme-dim-navy-600"
+                class="text-theme-secondary-500 ml-1 text-xs leading-[15px] transition-all sm:hidden dim:text-theme-dim-navy-600 hidden"
+              >
+                (
+              </span>
+              <span
+                class="whitespace-nowrap text-xs leading-[15px] transition-all dim:text-theme-dim-navy-600"
                 data-testid="Amount"
               >
                 0.0007456 ARK
+              </span>
+              <span
+                class="text-theme-secondary-500 text-xs leading-[15px] transition-all sm:hidden dim:text-theme-dim-navy-600 hidden"
+              >
+                )
               </span>
             </div>
           </div>
@@ -2243,10 +2353,20 @@ exports[`InputFee > simple view type > should render simple view in md 1`] = `
               class="flex justify-between sm:w-full"
             >
               <span
-                class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500 dim:sm:text-theme-dim-200 group-hover:dim:text-theme-dim-50"
+                class="text-theme-secondary-500 ml-1 text-xs leading-[15px] transition-all sm:hidden dark:text-theme-dark-500 dim:text-theme-dim-200 hidden"
+              >
+                (
+              </span>
+              <span
+                class="whitespace-nowrap text-xs leading-[15px] transition-all dark:group-hover:text-theme-dark-200 dark:text-theme-dark-500 dim:text-theme-dim-200 group-hover:dim:text-theme-dim-50"
                 data-testid="Amount"
               >
                 0.00085 ARK
+              </span>
+              <span
+                class="text-theme-secondary-500 text-xs leading-[15px] transition-all sm:hidden dark:text-theme-dark-500 dim:text-theme-dim-200 hidden"
+              >
+                )
               </span>
             </div>
           </div>
@@ -2336,10 +2456,20 @@ exports[`InputFee > simple view type > should render simple view in sm 1`] = `
               class="flex justify-between sm:w-full"
             >
               <span
-                class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500 dim:sm:text-theme-dim-200 group-hover:dim:text-theme-dim-50"
+                class="text-theme-secondary-500 ml-1 text-xs leading-[15px] transition-all sm:hidden dark:text-theme-dark-500 dim:text-theme-dim-200 hidden"
+              >
+                (
+              </span>
+              <span
+                class="whitespace-nowrap text-xs leading-[15px] transition-all dark:group-hover:text-theme-dark-200 dark:text-theme-dark-500 dim:text-theme-dim-200 group-hover:dim:text-theme-dim-50"
                 data-testid="Amount"
               >
                 0.0005006 ARK
+              </span>
+              <span
+                class="text-theme-secondary-500 text-xs leading-[15px] transition-all sm:hidden dark:text-theme-dark-500 dim:text-theme-dim-200 hidden"
+              >
+                )
               </span>
             </div>
           </div>
@@ -2378,10 +2508,20 @@ exports[`InputFee > simple view type > should render simple view in sm 1`] = `
               class="flex justify-between sm:w-full"
             >
               <span
-                class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dim:sm:text-theme-dim-navy-600"
+                class="text-theme-secondary-500 ml-1 text-xs leading-[15px] transition-all sm:hidden dim:text-theme-dim-navy-600 hidden"
+              >
+                (
+              </span>
+              <span
+                class="whitespace-nowrap text-xs leading-[15px] transition-all dim:text-theme-dim-navy-600"
                 data-testid="Amount"
               >
                 0.0007456 ARK
+              </span>
+              <span
+                class="text-theme-secondary-500 text-xs leading-[15px] transition-all sm:hidden dim:text-theme-dim-navy-600 hidden"
+              >
+                )
               </span>
             </div>
           </div>
@@ -2420,10 +2560,20 @@ exports[`InputFee > simple view type > should render simple view in sm 1`] = `
               class="flex justify-between sm:w-full"
             >
               <span
-                class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500 dim:sm:text-theme-dim-200 group-hover:dim:text-theme-dim-50"
+                class="text-theme-secondary-500 ml-1 text-xs leading-[15px] transition-all sm:hidden dark:text-theme-dark-500 dim:text-theme-dim-200 hidden"
+              >
+                (
+              </span>
+              <span
+                class="whitespace-nowrap text-xs leading-[15px] transition-all dark:group-hover:text-theme-dark-200 dark:text-theme-dark-500 dim:text-theme-dim-200 group-hover:dim:text-theme-dim-50"
                 data-testid="Amount"
               >
                 0.00085 ARK
+              </span>
+              <span
+                class="text-theme-secondary-500 text-xs leading-[15px] transition-all sm:hidden dark:text-theme-dark-500 dim:text-theme-dim-200 hidden"
+              >
+                )
               </span>
             </div>
           </div>
@@ -2513,10 +2663,20 @@ exports[`InputFee > simple view type > should render simple view in xl 1`] = `
               class="flex justify-between sm:w-full"
             >
               <span
-                class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500 dim:sm:text-theme-dim-200 group-hover:dim:text-theme-dim-50"
+                class="text-theme-secondary-500 ml-1 text-xs leading-[15px] transition-all sm:hidden dark:text-theme-dark-500 dim:text-theme-dim-200 hidden"
+              >
+                (
+              </span>
+              <span
+                class="whitespace-nowrap text-xs leading-[15px] transition-all dark:group-hover:text-theme-dark-200 dark:text-theme-dark-500 dim:text-theme-dim-200 group-hover:dim:text-theme-dim-50"
                 data-testid="Amount"
               >
                 0.0005006 ARK
+              </span>
+              <span
+                class="text-theme-secondary-500 text-xs leading-[15px] transition-all sm:hidden dark:text-theme-dark-500 dim:text-theme-dim-200 hidden"
+              >
+                )
               </span>
             </div>
           </div>
@@ -2555,10 +2715,20 @@ exports[`InputFee > simple view type > should render simple view in xl 1`] = `
               class="flex justify-between sm:w-full"
             >
               <span
-                class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dim:sm:text-theme-dim-navy-600"
+                class="text-theme-secondary-500 ml-1 text-xs leading-[15px] transition-all sm:hidden dim:text-theme-dim-navy-600 hidden"
+              >
+                (
+              </span>
+              <span
+                class="whitespace-nowrap text-xs leading-[15px] transition-all dim:text-theme-dim-navy-600"
                 data-testid="Amount"
               >
                 0.0007456 ARK
+              </span>
+              <span
+                class="text-theme-secondary-500 text-xs leading-[15px] transition-all sm:hidden dim:text-theme-dim-navy-600 hidden"
+              >
+                )
               </span>
             </div>
           </div>
@@ -2597,10 +2767,20 @@ exports[`InputFee > simple view type > should render simple view in xl 1`] = `
               class="flex justify-between sm:w-full"
             >
               <span
-                class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500 dim:sm:text-theme-dim-200 group-hover:dim:text-theme-dim-50"
+                class="text-theme-secondary-500 ml-1 text-xs leading-[15px] transition-all sm:hidden dark:text-theme-dark-500 dim:text-theme-dim-200 hidden"
+              >
+                (
+              </span>
+              <span
+                class="whitespace-nowrap text-xs leading-[15px] transition-all dark:group-hover:text-theme-dark-200 dark:text-theme-dark-500 dim:text-theme-dim-200 group-hover:dim:text-theme-dim-50"
                 data-testid="Amount"
               >
                 0.00085 ARK
+              </span>
+              <span
+                class="text-theme-secondary-500 text-xs leading-[15px] transition-all sm:hidden dark:text-theme-dark-500 dim:text-theme-dim-200 hidden"
+              >
+                )
               </span>
             </div>
           </div>
@@ -2690,10 +2870,20 @@ exports[`InputFee > simple view type > should render simple view in xs 1`] = `
               class="flex justify-between sm:w-full"
             >
               <span
-                class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500 dim:sm:text-theme-dim-200 group-hover:dim:text-theme-dim-50"
+                class="text-theme-secondary-500 ml-1 text-xs leading-[15px] transition-all sm:hidden dark:text-theme-dark-500 dim:text-theme-dim-200 hidden"
+              >
+                (
+              </span>
+              <span
+                class="whitespace-nowrap text-xs leading-[15px] transition-all dark:group-hover:text-theme-dark-200 dark:text-theme-dark-500 dim:text-theme-dim-200 group-hover:dim:text-theme-dim-50"
                 data-testid="Amount"
               >
                 0.0005006 ARK
+              </span>
+              <span
+                class="text-theme-secondary-500 text-xs leading-[15px] transition-all sm:hidden dark:text-theme-dark-500 dim:text-theme-dim-200 hidden"
+              >
+                )
               </span>
             </div>
           </div>
@@ -2732,10 +2922,20 @@ exports[`InputFee > simple view type > should render simple view in xs 1`] = `
               class="flex justify-between sm:w-full"
             >
               <span
-                class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dim:sm:text-theme-dim-navy-600"
+                class="text-theme-secondary-500 ml-1 text-xs leading-[15px] transition-all sm:hidden dim:text-theme-dim-navy-600 hidden"
+              >
+                (
+              </span>
+              <span
+                class="whitespace-nowrap text-xs leading-[15px] transition-all dim:text-theme-dim-navy-600"
                 data-testid="Amount"
               >
                 0.0007456 ARK
+              </span>
+              <span
+                class="text-theme-secondary-500 text-xs leading-[15px] transition-all sm:hidden dim:text-theme-dim-navy-600 hidden"
+              >
+                )
               </span>
             </div>
           </div>
@@ -2774,10 +2974,20 @@ exports[`InputFee > simple view type > should render simple view in xs 1`] = `
               class="flex justify-between sm:w-full"
             >
               <span
-                class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500 dim:sm:text-theme-dim-200 group-hover:dim:text-theme-dim-50"
+                class="text-theme-secondary-500 ml-1 text-xs leading-[15px] transition-all sm:hidden dark:text-theme-dark-500 dim:text-theme-dim-200 hidden"
+              >
+                (
+              </span>
+              <span
+                class="whitespace-nowrap text-xs leading-[15px] transition-all dark:group-hover:text-theme-dark-200 dark:text-theme-dark-500 dim:text-theme-dim-200 group-hover:dim:text-theme-dim-50"
                 data-testid="Amount"
               >
                 0.00085 ARK
+              </span>
+              <span
+                class="text-theme-secondary-500 text-xs leading-[15px] transition-all sm:hidden dark:text-theme-dark-500 dim:text-theme-dim-200 hidden"
+              >
+                )
               </span>
             </div>
           </div>
@@ -2878,10 +3088,20 @@ exports[`InputFee > simple view type > should render simple view with converted 
                 </span>
               </span>
               <span
-                class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500 dim:sm:text-theme-dim-200 group-hover:dim:text-theme-dim-50"
+                class="text-theme-secondary-500 ml-1 text-xs leading-[15px] transition-all sm:hidden dark:text-theme-dark-500 dim:text-theme-dim-200"
+              >
+                (
+              </span>
+              <span
+                class="whitespace-nowrap text-xs leading-[15px] transition-all dark:group-hover:text-theme-dark-200 dark:text-theme-dark-500 dim:text-theme-dim-200 group-hover:dim:text-theme-dim-50 text-theme-secondary-500"
                 data-testid="Amount"
               >
                 0.0005006 ARK
+              </span>
+              <span
+                class="text-theme-secondary-500 text-xs leading-[15px] transition-all sm:hidden dark:text-theme-dark-500 dim:text-theme-dim-200"
+              >
+                )
               </span>
             </div>
           </div>
@@ -2931,10 +3151,20 @@ exports[`InputFee > simple view type > should render simple view with converted 
                 </span>
               </span>
               <span
-                class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dim:sm:text-theme-dim-navy-600"
+                class="text-theme-secondary-500 ml-1 text-xs leading-[15px] transition-all sm:hidden dim:text-theme-dim-navy-600"
+              >
+                (
+              </span>
+              <span
+                class="whitespace-nowrap text-xs leading-[15px] transition-all dim:text-theme-dim-navy-600 text-theme-secondary-500"
                 data-testid="Amount"
               >
                 0.0007456 ARK
+              </span>
+              <span
+                class="text-theme-secondary-500 text-xs leading-[15px] transition-all sm:hidden dim:text-theme-dim-navy-600"
+              >
+                )
               </span>
             </div>
           </div>
@@ -2984,10 +3214,20 @@ exports[`InputFee > simple view type > should render simple view with converted 
                 </span>
               </span>
               <span
-                class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500 dim:sm:text-theme-dim-200 group-hover:dim:text-theme-dim-50"
+                class="text-theme-secondary-500 ml-1 text-xs leading-[15px] transition-all sm:hidden dark:text-theme-dark-500 dim:text-theme-dim-200"
+              >
+                (
+              </span>
+              <span
+                class="whitespace-nowrap text-xs leading-[15px] transition-all dark:group-hover:text-theme-dark-200 dark:text-theme-dark-500 dim:text-theme-dim-200 group-hover:dim:text-theme-dim-50 text-theme-secondary-500"
                 data-testid="Amount"
               >
                 0.00085 ARK
+              </span>
+              <span
+                class="text-theme-secondary-500 text-xs leading-[15px] transition-all sm:hidden dark:text-theme-dark-500 dim:text-theme-dim-200"
+              >
+                )
               </span>
             </div>
           </div>
@@ -3088,10 +3328,20 @@ exports[`InputFee > simple view type > should render simple view with converted 
                 </span>
               </span>
               <span
-                class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500 dim:sm:text-theme-dim-200 group-hover:dim:text-theme-dim-50"
+                class="text-theme-secondary-500 ml-1 text-xs leading-[15px] transition-all sm:hidden dark:text-theme-dark-500 dim:text-theme-dim-200"
+              >
+                (
+              </span>
+              <span
+                class="whitespace-nowrap text-xs leading-[15px] transition-all dark:group-hover:text-theme-dark-200 dark:text-theme-dark-500 dim:text-theme-dim-200 group-hover:dim:text-theme-dim-50 text-theme-secondary-500"
                 data-testid="Amount"
               >
                 0.0005006 ARK
+              </span>
+              <span
+                class="text-theme-secondary-500 text-xs leading-[15px] transition-all sm:hidden dark:text-theme-dark-500 dim:text-theme-dim-200"
+              >
+                )
               </span>
             </div>
           </div>
@@ -3141,10 +3391,20 @@ exports[`InputFee > simple view type > should render simple view with converted 
                 </span>
               </span>
               <span
-                class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dim:sm:text-theme-dim-navy-600"
+                class="text-theme-secondary-500 ml-1 text-xs leading-[15px] transition-all sm:hidden dim:text-theme-dim-navy-600"
+              >
+                (
+              </span>
+              <span
+                class="whitespace-nowrap text-xs leading-[15px] transition-all dim:text-theme-dim-navy-600 text-theme-secondary-500"
                 data-testid="Amount"
               >
                 0.0007456 ARK
+              </span>
+              <span
+                class="text-theme-secondary-500 text-xs leading-[15px] transition-all sm:hidden dim:text-theme-dim-navy-600"
+              >
+                )
               </span>
             </div>
           </div>
@@ -3194,10 +3454,20 @@ exports[`InputFee > simple view type > should render simple view with converted 
                 </span>
               </span>
               <span
-                class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500 dim:sm:text-theme-dim-200 group-hover:dim:text-theme-dim-50"
+                class="text-theme-secondary-500 ml-1 text-xs leading-[15px] transition-all sm:hidden dark:text-theme-dark-500 dim:text-theme-dim-200"
+              >
+                (
+              </span>
+              <span
+                class="whitespace-nowrap text-xs leading-[15px] transition-all dark:group-hover:text-theme-dark-200 dark:text-theme-dark-500 dim:text-theme-dim-200 group-hover:dim:text-theme-dim-50 text-theme-secondary-500"
                 data-testid="Amount"
               >
                 0.00085 ARK
+              </span>
+              <span
+                class="text-theme-secondary-500 text-xs leading-[15px] transition-all sm:hidden dark:text-theme-dark-500 dim:text-theme-dim-200"
+              >
+                )
               </span>
             </div>
           </div>
@@ -3298,10 +3568,20 @@ exports[`InputFee > simple view type > should render simple view with converted 
                 </span>
               </span>
               <span
-                class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500 dim:sm:text-theme-dim-200 group-hover:dim:text-theme-dim-50"
+                class="text-theme-secondary-500 ml-1 text-xs leading-[15px] transition-all sm:hidden dark:text-theme-dark-500 dim:text-theme-dim-200"
+              >
+                (
+              </span>
+              <span
+                class="whitespace-nowrap text-xs leading-[15px] transition-all dark:group-hover:text-theme-dark-200 dark:text-theme-dark-500 dim:text-theme-dim-200 group-hover:dim:text-theme-dim-50 text-theme-secondary-500"
                 data-testid="Amount"
               >
                 0.0005006 ARK
+              </span>
+              <span
+                class="text-theme-secondary-500 text-xs leading-[15px] transition-all sm:hidden dark:text-theme-dark-500 dim:text-theme-dim-200"
+              >
+                )
               </span>
             </div>
           </div>
@@ -3351,10 +3631,20 @@ exports[`InputFee > simple view type > should render simple view with converted 
                 </span>
               </span>
               <span
-                class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dim:sm:text-theme-dim-navy-600"
+                class="text-theme-secondary-500 ml-1 text-xs leading-[15px] transition-all sm:hidden dim:text-theme-dim-navy-600"
+              >
+                (
+              </span>
+              <span
+                class="whitespace-nowrap text-xs leading-[15px] transition-all dim:text-theme-dim-navy-600 text-theme-secondary-500"
                 data-testid="Amount"
               >
                 0.0007456 ARK
+              </span>
+              <span
+                class="text-theme-secondary-500 text-xs leading-[15px] transition-all sm:hidden dim:text-theme-dim-navy-600"
+              >
+                )
               </span>
             </div>
           </div>
@@ -3404,10 +3694,20 @@ exports[`InputFee > simple view type > should render simple view with converted 
                 </span>
               </span>
               <span
-                class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500 dim:sm:text-theme-dim-200 group-hover:dim:text-theme-dim-50"
+                class="text-theme-secondary-500 ml-1 text-xs leading-[15px] transition-all sm:hidden dark:text-theme-dark-500 dim:text-theme-dim-200"
+              >
+                (
+              </span>
+              <span
+                class="whitespace-nowrap text-xs leading-[15px] transition-all dark:group-hover:text-theme-dark-200 dark:text-theme-dark-500 dim:text-theme-dim-200 group-hover:dim:text-theme-dim-50 text-theme-secondary-500"
                 data-testid="Amount"
               >
                 0.00085 ARK
+              </span>
+              <span
+                class="text-theme-secondary-500 text-xs leading-[15px] transition-all sm:hidden dark:text-theme-dark-500 dim:text-theme-dim-200"
+              >
+                )
               </span>
             </div>
           </div>
@@ -3508,10 +3808,20 @@ exports[`InputFee > simple view type > should render simple view with converted 
                 </span>
               </span>
               <span
-                class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500 dim:sm:text-theme-dim-200 group-hover:dim:text-theme-dim-50"
+                class="text-theme-secondary-500 ml-1 text-xs leading-[15px] transition-all sm:hidden dark:text-theme-dark-500 dim:text-theme-dim-200"
+              >
+                (
+              </span>
+              <span
+                class="whitespace-nowrap text-xs leading-[15px] transition-all dark:group-hover:text-theme-dark-200 dark:text-theme-dark-500 dim:text-theme-dim-200 group-hover:dim:text-theme-dim-50 text-theme-secondary-500"
                 data-testid="Amount"
               >
                 0.0005006 ARK
+              </span>
+              <span
+                class="text-theme-secondary-500 text-xs leading-[15px] transition-all sm:hidden dark:text-theme-dark-500 dim:text-theme-dim-200"
+              >
+                )
               </span>
             </div>
           </div>
@@ -3561,10 +3871,20 @@ exports[`InputFee > simple view type > should render simple view with converted 
                 </span>
               </span>
               <span
-                class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dim:sm:text-theme-dim-navy-600"
+                class="text-theme-secondary-500 ml-1 text-xs leading-[15px] transition-all sm:hidden dim:text-theme-dim-navy-600"
+              >
+                (
+              </span>
+              <span
+                class="whitespace-nowrap text-xs leading-[15px] transition-all dim:text-theme-dim-navy-600 text-theme-secondary-500"
                 data-testid="Amount"
               >
                 0.0007456 ARK
+              </span>
+              <span
+                class="text-theme-secondary-500 text-xs leading-[15px] transition-all sm:hidden dim:text-theme-dim-navy-600"
+              >
+                )
               </span>
             </div>
           </div>
@@ -3614,10 +3934,20 @@ exports[`InputFee > simple view type > should render simple view with converted 
                 </span>
               </span>
               <span
-                class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500 dim:sm:text-theme-dim-200 group-hover:dim:text-theme-dim-50"
+                class="text-theme-secondary-500 ml-1 text-xs leading-[15px] transition-all sm:hidden dark:text-theme-dark-500 dim:text-theme-dim-200"
+              >
+                (
+              </span>
+              <span
+                class="whitespace-nowrap text-xs leading-[15px] transition-all dark:group-hover:text-theme-dark-200 dark:text-theme-dark-500 dim:text-theme-dim-200 group-hover:dim:text-theme-dim-50 text-theme-secondary-500"
                 data-testid="Amount"
               >
                 0.00085 ARK
+              </span>
+              <span
+                class="text-theme-secondary-500 text-xs leading-[15px] transition-all sm:hidden dark:text-theme-dark-500 dim:text-theme-dim-200"
+              >
+                )
               </span>
             </div>
           </div>
@@ -3718,10 +4048,20 @@ exports[`InputFee > simple view type > should render simple view with converted 
                 </span>
               </span>
               <span
-                class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500 dim:sm:text-theme-dim-200 group-hover:dim:text-theme-dim-50"
+                class="text-theme-secondary-500 ml-1 text-xs leading-[15px] transition-all sm:hidden dark:text-theme-dark-500 dim:text-theme-dim-200"
+              >
+                (
+              </span>
+              <span
+                class="whitespace-nowrap text-xs leading-[15px] transition-all dark:group-hover:text-theme-dark-200 dark:text-theme-dark-500 dim:text-theme-dim-200 group-hover:dim:text-theme-dim-50 text-theme-secondary-500"
                 data-testid="Amount"
               >
                 0.0005006 ARK
+              </span>
+              <span
+                class="text-theme-secondary-500 text-xs leading-[15px] transition-all sm:hidden dark:text-theme-dark-500 dim:text-theme-dim-200"
+              >
+                )
               </span>
             </div>
           </div>
@@ -3771,10 +4111,20 @@ exports[`InputFee > simple view type > should render simple view with converted 
                 </span>
               </span>
               <span
-                class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dim:sm:text-theme-dim-navy-600"
+                class="text-theme-secondary-500 ml-1 text-xs leading-[15px] transition-all sm:hidden dim:text-theme-dim-navy-600"
+              >
+                (
+              </span>
+              <span
+                class="whitespace-nowrap text-xs leading-[15px] transition-all dim:text-theme-dim-navy-600 text-theme-secondary-500"
                 data-testid="Amount"
               >
                 0.0007456 ARK
+              </span>
+              <span
+                class="text-theme-secondary-500 text-xs leading-[15px] transition-all sm:hidden dim:text-theme-dim-navy-600"
+              >
+                )
               </span>
             </div>
           </div>
@@ -3824,10 +4174,20 @@ exports[`InputFee > simple view type > should render simple view with converted 
                 </span>
               </span>
               <span
-                class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500 dim:sm:text-theme-dim-200 group-hover:dim:text-theme-dim-50"
+                class="text-theme-secondary-500 ml-1 text-xs leading-[15px] transition-all sm:hidden dark:text-theme-dark-500 dim:text-theme-dim-200"
+              >
+                (
+              </span>
+              <span
+                class="whitespace-nowrap text-xs leading-[15px] transition-all dark:group-hover:text-theme-dark-200 dark:text-theme-dark-500 dim:text-theme-dim-200 group-hover:dim:text-theme-dim-50 text-theme-secondary-500"
                 data-testid="Amount"
               >
                 0.00085 ARK
+              </span>
+              <span
+                class="text-theme-secondary-500 text-xs leading-[15px] transition-all sm:hidden dark:text-theme-dark-500 dim:text-theme-dim-200"
+              >
+                )
               </span>
             </div>
           </div>
@@ -3917,10 +4277,20 @@ exports[`InputFee > simple view type > should update value when clicking button 
               class="flex justify-between sm:w-full"
             >
               <span
-                class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500 dim:sm:text-theme-dim-200 group-hover:dim:text-theme-dim-50"
+                class="text-theme-secondary-500 ml-1 text-xs leading-[15px] transition-all sm:hidden dark:text-theme-dark-500 dim:text-theme-dim-200 hidden"
+              >
+                (
+              </span>
+              <span
+                class="whitespace-nowrap text-xs leading-[15px] transition-all dark:group-hover:text-theme-dark-200 dark:text-theme-dark-500 dim:text-theme-dim-200 group-hover:dim:text-theme-dim-50"
                 data-testid="Amount"
               >
                 0.0005006 ARK
+              </span>
+              <span
+                class="text-theme-secondary-500 text-xs leading-[15px] transition-all sm:hidden dark:text-theme-dark-500 dim:text-theme-dim-200 hidden"
+              >
+                )
               </span>
             </div>
           </div>
@@ -3959,10 +4329,20 @@ exports[`InputFee > simple view type > should update value when clicking button 
               class="flex justify-between sm:w-full"
             >
               <span
-                class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dim:sm:text-theme-dim-navy-600"
+                class="text-theme-secondary-500 ml-1 text-xs leading-[15px] transition-all sm:hidden dim:text-theme-dim-navy-600 hidden"
+              >
+                (
+              </span>
+              <span
+                class="whitespace-nowrap text-xs leading-[15px] transition-all dim:text-theme-dim-navy-600"
                 data-testid="Amount"
               >
                 0.0007456 ARK
+              </span>
+              <span
+                class="text-theme-secondary-500 text-xs leading-[15px] transition-all sm:hidden dim:text-theme-dim-navy-600 hidden"
+              >
+                )
               </span>
             </div>
           </div>
@@ -4001,10 +4381,20 @@ exports[`InputFee > simple view type > should update value when clicking button 
               class="flex justify-between sm:w-full"
             >
               <span
-                class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500 dim:sm:text-theme-dim-200 group-hover:dim:text-theme-dim-50"
+                class="text-theme-secondary-500 ml-1 text-xs leading-[15px] transition-all sm:hidden dark:text-theme-dark-500 dim:text-theme-dim-200 hidden"
+              >
+                (
+              </span>
+              <span
+                class="whitespace-nowrap text-xs leading-[15px] transition-all dark:group-hover:text-theme-dark-200 dark:text-theme-dark-500 dim:text-theme-dim-200 group-hover:dim:text-theme-dim-50"
                 data-testid="Amount"
               >
                 0.00085 ARK
+              </span>
+              <span
+                class="text-theme-secondary-500 text-xs leading-[15px] transition-all sm:hidden dark:text-theme-dark-500 dim:text-theme-dim-200 hidden"
+              >
+                )
               </span>
             </div>
           </div>
@@ -4094,10 +4484,20 @@ exports[`InputFee > simple view type > should update value when clicking button 
               class="flex justify-between sm:w-full"
             >
               <span
-                class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500 dim:sm:text-theme-dim-200 group-hover:dim:text-theme-dim-50"
+                class="text-theme-secondary-500 ml-1 text-xs leading-[15px] transition-all sm:hidden dark:text-theme-dark-500 dim:text-theme-dim-200 hidden"
+              >
+                (
+              </span>
+              <span
+                class="whitespace-nowrap text-xs leading-[15px] transition-all dark:group-hover:text-theme-dark-200 dark:text-theme-dark-500 dim:text-theme-dim-200 group-hover:dim:text-theme-dim-50"
                 data-testid="Amount"
               >
                 0.0005006 ARK
+              </span>
+              <span
+                class="text-theme-secondary-500 text-xs leading-[15px] transition-all sm:hidden dark:text-theme-dark-500 dim:text-theme-dim-200 hidden"
+              >
+                )
               </span>
             </div>
           </div>
@@ -4136,10 +4536,20 @@ exports[`InputFee > simple view type > should update value when clicking button 
               class="flex justify-between sm:w-full"
             >
               <span
-                class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500 dim:sm:text-theme-dim-200 group-hover:dim:text-theme-dim-50"
+                class="text-theme-secondary-500 ml-1 text-xs leading-[15px] transition-all sm:hidden dark:text-theme-dark-500 dim:text-theme-dim-200 hidden"
+              >
+                (
+              </span>
+              <span
+                class="whitespace-nowrap text-xs leading-[15px] transition-all dark:group-hover:text-theme-dark-200 dark:text-theme-dark-500 dim:text-theme-dim-200 group-hover:dim:text-theme-dim-50"
                 data-testid="Amount"
               >
                 0.0007456 ARK
+              </span>
+              <span
+                class="text-theme-secondary-500 text-xs leading-[15px] transition-all sm:hidden dark:text-theme-dark-500 dim:text-theme-dim-200 hidden"
+              >
+                )
               </span>
             </div>
           </div>
@@ -4178,10 +4588,20 @@ exports[`InputFee > simple view type > should update value when clicking button 
               class="flex justify-between sm:w-full"
             >
               <span
-                class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dim:sm:text-theme-dim-navy-600"
+                class="text-theme-secondary-500 ml-1 text-xs leading-[15px] transition-all sm:hidden dim:text-theme-dim-navy-600 hidden"
+              >
+                (
+              </span>
+              <span
+                class="whitespace-nowrap text-xs leading-[15px] transition-all dim:text-theme-dim-navy-600"
                 data-testid="Amount"
               >
                 0.00085 ARK
+              </span>
+              <span
+                class="text-theme-secondary-500 text-xs leading-[15px] transition-all sm:hidden dim:text-theme-dim-navy-600 hidden"
+              >
+                )
               </span>
             </div>
           </div>
@@ -4271,10 +4691,20 @@ exports[`InputFee > simple view type > should update value when clicking button 
               class="flex justify-between sm:w-full"
             >
               <span
-                class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dim:sm:text-theme-dim-navy-600"
+                class="text-theme-secondary-500 ml-1 text-xs leading-[15px] transition-all sm:hidden dim:text-theme-dim-navy-600 hidden"
+              >
+                (
+              </span>
+              <span
+                class="whitespace-nowrap text-xs leading-[15px] transition-all dim:text-theme-dim-navy-600"
                 data-testid="Amount"
               >
                 0.0005006 ARK
+              </span>
+              <span
+                class="text-theme-secondary-500 text-xs leading-[15px] transition-all sm:hidden dim:text-theme-dim-navy-600 hidden"
+              >
+                )
               </span>
             </div>
           </div>
@@ -4313,10 +4743,20 @@ exports[`InputFee > simple view type > should update value when clicking button 
               class="flex justify-between sm:w-full"
             >
               <span
-                class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500 dim:sm:text-theme-dim-200 group-hover:dim:text-theme-dim-50"
+                class="text-theme-secondary-500 ml-1 text-xs leading-[15px] transition-all sm:hidden dark:text-theme-dark-500 dim:text-theme-dim-200 hidden"
+              >
+                (
+              </span>
+              <span
+                class="whitespace-nowrap text-xs leading-[15px] transition-all dark:group-hover:text-theme-dark-200 dark:text-theme-dark-500 dim:text-theme-dim-200 group-hover:dim:text-theme-dim-50"
                 data-testid="Amount"
               >
                 0.0007456 ARK
+              </span>
+              <span
+                class="text-theme-secondary-500 text-xs leading-[15px] transition-all sm:hidden dark:text-theme-dark-500 dim:text-theme-dim-200 hidden"
+              >
+                )
               </span>
             </div>
           </div>
@@ -4355,10 +4795,20 @@ exports[`InputFee > simple view type > should update value when clicking button 
               class="flex justify-between sm:w-full"
             >
               <span
-                class="whitespace-nowrap sm:text-theme-secondary-500 hidden text-xs leading-[15px] transition-all sm:block dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500 dim:sm:text-theme-dim-200 group-hover:dim:text-theme-dim-50"
+                class="text-theme-secondary-500 ml-1 text-xs leading-[15px] transition-all sm:hidden dark:text-theme-dark-500 dim:text-theme-dim-200 hidden"
+              >
+                (
+              </span>
+              <span
+                class="whitespace-nowrap text-xs leading-[15px] transition-all dark:group-hover:text-theme-dark-200 dark:text-theme-dark-500 dim:text-theme-dim-200 group-hover:dim:text-theme-dim-50"
                 data-testid="Amount"
               >
                 0.00085 ARK
+              </span>
+              <span
+                class="text-theme-secondary-500 text-xs leading-[15px] transition-all sm:hidden dark:text-theme-dark-500 dim:text-theme-dim-200 hidden"
+              >
+                )
               </span>
             </div>
           </div>

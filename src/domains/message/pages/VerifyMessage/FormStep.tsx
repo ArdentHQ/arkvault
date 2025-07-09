@@ -88,28 +88,35 @@ export const FormStep = ({
 				}
 			/>
 
-			<span className="mt-6 mb-1 hidden text-lg font-semibold sm:block">
-				{t("MESSAGE.PAGE_VERIFY_MESSAGE.FORM_STEP.VERIFICATION_METHOD.TITLE")}
-			</span>
+			<div className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 mt-6 flex flex-col overflow-hidden rounded-sm border sm:rounded-xl">
+				<div className="flex flex-row justify-between p-4">
+					<span className="text-theme-secondary-700 dark:text-theme-secondary-700 dim:text-theme-dim-700 text-sm font-semibold sm:hidden">
+						{t("MESSAGE.PAGE_VERIFY_MESSAGE.FORM_STEP.VERIFICATION_METHOD.TITLE")}:
+					</span>
 
-			<span className="text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-700 hidden text-sm font-medium sm:block">
-				{t("MESSAGE.PAGE_VERIFY_MESSAGE.FORM_STEP.VERIFICATION_METHOD.DESCRIPTION")}
-			</span>
+					<span className="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 hidden text-base font-semibold sm:block">
+						{t("MESSAGE.PAGE_VERIFY_MESSAGE.FORM_STEP.VERIFICATION_METHOD.FULL_TITLE")}
+					</span>
 
-			<Switch
-				size="lg"
-				className="sm:mt-4"
-				value={method}
-				onChange={onMethodChange}
-				leftOption={{
-					label: t("MESSAGE.PAGE_VERIFY_MESSAGE.FORM_STEP.VERIFICATION_METHOD.JSON"),
-					value: VerificationMethod.Json,
-				}}
-				rightOption={{
-					label: t("MESSAGE.PAGE_VERIFY_MESSAGE.FORM_STEP.VERIFICATION_METHOD.MANUAL"),
-					value: VerificationMethod.Manual,
-				}}
-			/>
+					<Switch
+						value={method}
+						onChange={onMethodChange}
+						leftOption={{
+							label: t("MESSAGE.PAGE_VERIFY_MESSAGE.FORM_STEP.VERIFICATION_METHOD.JSON"),
+							value: VerificationMethod.Json,
+						}}
+						rightOption={{
+							label: t("MESSAGE.PAGE_VERIFY_MESSAGE.FORM_STEP.VERIFICATION_METHOD.MANUAL"),
+							value: VerificationMethod.Manual,
+						}}
+					/>
+				</div>
+				<div className="bg-theme-secondary-100 dim:bg-theme-dim-950 hidden px-4 pt-3 pb-3 sm:block dark:bg-black">
+					<span className="text-theme-secondary-text dim:text-theme-dim-200 text-sm font-normal">
+						{t("MESSAGE.PAGE_VERIFY_MESSAGE.FORM_STEP.VERIFICATION_METHOD.DESCRIPTION")}
+					</span>
+				</div>
+			</div>
 
 			{method === VerificationMethod.Json ? <JsonForm /> : <ManualForm />}
 		</section>

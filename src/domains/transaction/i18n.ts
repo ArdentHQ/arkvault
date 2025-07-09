@@ -288,7 +288,7 @@ export const translations = {
 	},
 	PAGE_VOTE: {
 		FORM_STEP: {
-			DESCRIPTION: "Select a fee to continue.",
+			DESCRIPTION: "Enter details below to send your transaction.",
 			TITLE: "Vote Transaction",
 		},
 	},
