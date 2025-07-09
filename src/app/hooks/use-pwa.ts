@@ -9,7 +9,7 @@ export const usePwa = () => {
 	const { isIos, isWebapp } = usePlatform();
 	const [alertEnabled, setAlertEnabled] = useState<boolean>(!localStorage.getItem(HIDE_PWA_INSTALL_ALERT));
 	const [deferredPrompt, setDeferredPrompt] = useState<any>();
-	const [showBanner, setShowInstallBanner] = useState(isIos() && !isWebapp() && !isE2E());
+	const [showBanner, setShowInstallBanner] = useState(isIos() && !isWebapp());
 	const [showIOSInstructions, setShowIOSInstructions] = useState(false);
 
 	// @README: For options see: https://vite-plugin-pwa.netlify.app/frameworks/react.html#react
@@ -51,7 +51,8 @@ export const usePwa = () => {
 		});
 	}, []);
 
-	const showInstallBanner = useMemo(() => alertEnabled && showBanner, [alertEnabled, showBanner]);
+	const isRunningE2E = isE2E();
+	const showInstallBanner = useMemo(() => alertEnabled && showBanner && !isRunningE2E, [alertEnabled, showBanner, isRunningE2E]);
 
 	return {
 		hideInstallBanner,
