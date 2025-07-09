@@ -1,6 +1,6 @@
 import { describe, vi, expect, beforeEach, afterEach, it } from "vitest";
 import { BigNumber } from "@/app/lib/helpers";
-import { IReadWriteWallet } from "@/app/lib/profiles";
+import { IReadWriteWallet, WalletData } from "./contracts";
 import { Services } from "@/app/lib/mainsail";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
 import { TransactionService } from "./wallet-transaction.service";
@@ -259,5 +259,32 @@ describe("TransactionService", () => {
 
 	it("should return false for #canBeSigned", () => {
 		expect(subject.canBeSigned()).toBe(false);
+	});
+
+	it("should dump the transactions", async () => {
+		// Test initial empty state
+		subject.dump();
+		expect(wallet.data().get(WalletData.SignedTransactions)).toEqual({});
+		expect(wallet.data().get(WalletData.BroadcastedTransactions)).toEqual({});
+		expect(wallet.data().get(WalletData.PendingMultiSignatures)).toEqual({});
+
+		// Sign a transaction and dump
+		const id = await subject.signTransfer(DUMMY_TRANSFER_INPUT);
+		subject.dump();
+
+		// Verify signed transaction is dumped
+		const signed = wallet.data().get(WalletData.SignedTransactions) as Record<string, any>;
+		expect(Object.keys(signed)).toContain(id);
+		expect(signed[id].hash()).toBe(id);
+		expect(wallet.data().get(WalletData.BroadcastedTransactions)).toEqual({});
+
+		// Broadcast the transaction and dump again
+		await subject.broadcast(id);
+		subject.dump();
+
+		// Verify broadcasted transaction is dumped
+		const broadcasted = wallet.data().get(WalletData.BroadcastedTransactions) as Record<string, any>;
+		expect(Object.keys(broadcasted)).toContain(id);
+		expect(broadcasted[id].hash()).toBe(id);
 	});
 });
