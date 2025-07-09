@@ -190,6 +190,20 @@ describe("TransactionService", () => {
 		expect(response).toBe(true);
 	});
 
+	it("should return false if confirming the transaction fails on the client", async () => {
+		const id = await subject.signTransfer(DUMMY_TRANSFER_INPUT);
+		await subject.broadcast(id);
+
+		const clientSpy = vi.spyOn(wallet, "client").mockImplementation(() => ({
+			...mockClient,
+			transaction: vi.fn().mockRejectedValue(new Error("Failed")),
+		}));
+
+		await expect(subject.confirm(id)).resolves.toBe(false);
+
+		clientSpy.mockRestore();
+	});
+
 	it("should throw when trying to confirm a transaction that is not awaiting confirmation", async () => {
 		const id = await subject.signTransfer(DUMMY_TRANSFER_INPUT);
 		await subject.broadcast(id);
