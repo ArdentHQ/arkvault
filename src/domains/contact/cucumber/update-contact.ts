@@ -110,7 +110,7 @@ cucumber("@updateContact-duplicateName", {
 	},
 });
 
-cucumber("@updateContact-noName", {
+cucumber("@updateContact-invalidName", {
 	...preSteps,
 	"And removes the name from the name field": async (t: TestController) => {
 		await t.typeText(nameInput, " ", { replace: true });
