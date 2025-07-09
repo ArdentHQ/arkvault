@@ -25,6 +25,8 @@ describe("SignMessage with encrypted secret", () => {
 	beforeAll(async () => {
 		profile = await env.profiles().create("Example");
 
+		vi.spyOn(profile, "walletSelectionMode").mockReturnValue("multiple");
+
 		await triggerMessageSignOnce(wallet);
 	});
 

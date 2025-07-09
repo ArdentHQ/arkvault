@@ -4,25 +4,25 @@ html {
 
 body {
 	-webkit-tap-highlight-color: transparent;
-	@apply flex flex-col min-h-screen font-sans text-base antialiased;
+	@apply flex min-h-screen flex-col font-sans text-base antialiased;
 	/* mobile viewport bug fix */
 	min-height: -webkit-fill-available;
 }
 
 #root {
-	@apply flex flex-col flex-1;
+	@apply flex flex-1 flex-col;
 }
 
 main {
-	@apply flex-1 bg-theme-background text-theme-text;
+	@apply bg-theme-background text-theme-text flex-1;
 }
 
 .link {
-	@apply transition-colors duration-100 ease-linear cursor-pointer text-theme-primary-400 dark:text-theme-secondary-600 dim:text-theme-dim-50;
+	@apply text-theme-primary-400 dark:text-theme-secondary-600 dim:text-theme-dim-50 cursor-pointer transition-colors duration-100 ease-linear;
 }
 
 .link:hover {
-	@apply text-theme-primary-700 dark:text-white dim:text-white;
+	@apply text-theme-primary-700 dim:text-white dark:text-white;
 }
 
 .important\:bottom-8 {
@@ -48,24 +48,24 @@ main {
 		"calt" off;
 }
 
-.welcome-slider-dots .slick-active>button {
-	@apply border-transparent bg-theme-navy-500 hover:bg-theme-navy-500 dim:bg-theme-dim-navy-600 dim:border-theme-dim-navy-600;
+.welcome-slider-dots .slick-active > button {
+	@apply bg-theme-navy-500 hover:bg-theme-navy-500 dim:bg-theme-dim-navy-600 dim:border-theme-dim-navy-600 border-transparent;
 }
 
-.with-x-padding>table>tbody>tr:not(:last-child) td:first-child::after {
-	@apply absolute left-0 block h-[5px] w-6 bg-theme-background content-[''];
+.with-x-padding > table > tbody > tr:not(:last-child) td:first-child::after {
+	@apply bg-theme-background absolute left-0 block h-[5px] w-6 content-[''];
 }
 
-.with-x-padding>table>tbody>tr:not(:last-child) td:last-child::after {
-	@apply absolute right-0 block h-[5px] w-6 bg-theme-background content-[''];
+.with-x-padding > table > tbody > tr:not(:last-child) td:last-child::after {
+	@apply bg-theme-background absolute right-0 block h-[5px] w-6 content-[''];
 }
 
-.with-x-padding>table>tbody>tr:not(:last-child):hover td:first-child::after {
-	@apply absolute -bottom-[4px] left-0 block h-[5px] w-6 bg-theme-background content-[''];
+.with-x-padding > table > tbody > tr:not(:last-child):hover td:first-child::after {
+	@apply bg-theme-background absolute -bottom-[4px] left-0 block h-[5px] w-6 content-[''];
 }
 
-.with-x-padding>table>tbody>tr:not(:last-child):hover td:last-child::after {
-	@apply absolute -bottom-[4px] right-0 block h-[5px] w-6 bg-theme-background content-[''];
+.with-x-padding > table > tbody > tr:not(:last-child):hover td:last-child::after {
+	@apply bg-theme-background absolute right-0 -bottom-[4px] block h-[5px] w-6 content-[''];
 }
 
 .custom-checkbox:checked:disabled {
@@ -85,7 +85,7 @@ main {
 }
 
 .custom-button-wrapper button {
-	@apply w-10 h-10 overflow-hidden rounded-sm text-theme-secondary-700 dark:text-theme-secondary-600 sm:h-11 sm:w-11 not-disabled:hover:bg-theme-primary-100 not-disabled:hover:text-theme-primary-600 dark:not-disabled:hover:bg-theme-secondary-800 dark:not-disabled:hover:text-theme-secondary-100;
+	@apply text-theme-secondary-700 dark:text-theme-secondary-600 not-disabled:hover:bg-theme-primary-100 not-disabled:hover:text-theme-primary-600 dark:not-disabled:hover:bg-theme-secondary-800 dark:not-disabled:hover:text-theme-secondary-100 h-10 w-10 overflow-hidden rounded-sm sm:h-11 sm:w-11;
 }
 
 .custom-button-nav-wrapper {
@@ -93,7 +93,7 @@ main {
 }
 
 .custom-button-nav-wrapper button {
-	@apply p-0 overflow-hidden rounded-sm h-7 w-7 text-theme-secondary-700 dark:text-theme-dark-200 not-disabled:hover:bg-theme-primary-200 not-disabled:hover:text-theme-primary-700 dark:not-disabled:hover:bg-theme-dark-700 dark:not-disabled:hover:text-theme-dark-50 dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700;
+	@apply text-theme-secondary-700 dark:text-theme-dark-200 not-disabled:hover:bg-theme-primary-200 not-disabled:hover:text-theme-primary-700 dark:not-disabled:hover:bg-theme-dark-700 dark:not-disabled:hover:text-theme-dark-50 dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 h-7 w-7 overflow-hidden rounded-sm p-0;
 }
 
 @supports (padding-bottom: env(safe-area-inset-bottom)) {
@@ -103,11 +103,11 @@ main {
 }
 
 .table-wrapper table {
-	@apply w-full p-0 m-0 border-none;
+	@apply m-0 w-full border-none p-0;
 }
 
 .table-wrapper table thead th:not(:first-of-type)::after {
-	@apply absolute left-0 top-1/4 h-1/2 border-l border-[inherit] content-[""];
+	@apply absolute top-1/4 left-0 h-1/2 border-l border-[inherit] content-[""];
 }
 
 .table-wrapper table thead th:not(:first-of-type).no-border::after {
@@ -135,11 +135,11 @@ main {
 }
 
 .tooltip-wrapper {
-	@apply flex items-center px-3 py-2 rounded-sm bg-theme-secondary-900 dark:bg-theme-secondary-800;
+	@apply bg-theme-secondary-900 dark:bg-theme-secondary-800 flex items-center rounded-sm px-3 py-2;
 }
 
 .tooltip-wrapper::after {
-	@apply absolute -bottom-2 left-[calc(50%-8px)] block h-0 w-0 border-l-8 border-r-8 border-l-transparent border-r-transparent content-[""];
+	@apply absolute -bottom-2 left-[calc(50%-8px)] block h-0 w-0 border-r-8 border-l-8 border-r-transparent border-l-transparent content-[""];
 }
 
 .tooltip-wrapper.left::after {
@@ -147,31 +147,31 @@ main {
 }
 
 .tooltip-wrapper.right::after {
-	@apply left-auto right-5;
+	@apply right-5 left-auto;
 }
 
 .tooltip-wrapper::after {
-	@apply border-t-8 border-t-theme-secondary-900 dark:border-t-theme-secondary-800;
+	@apply border-t-theme-secondary-900 dark:border-t-theme-secondary-800 border-t-8;
 }
 
 .upload-button-wrapper button {
-	@apply w-full h-full focus:ring-0;
+	@apply h-full w-full focus:ring-0;
 }
 
-.toggle-input:checked~.toggle-handle .handle-inner {
-	@apply translate-x-full bg-theme-primary-600;
+.toggle-input:checked ~ .toggle-handle .handle-inner {
+	@apply bg-theme-primary-600 translate-x-full;
 }
 
-.toggle-input:hover~.toggle-handle .handle-inner {
+.toggle-input:hover ~ .toggle-handle .handle-inner {
 	@apply shadow-outline;
 }
 
-.toggle-input:focus~.toggle-handle .handle-inner {
+.toggle-input:focus ~ .toggle-handle .handle-inner {
 	@apply shadow-outline;
 }
 
 .select-options-list {
-	@apply p-1 space-y-1 overflow-y-auto bg-white rounded-sm shadow-xl top-full max-h-64 outline-hidden dark:bg-theme-dark-900 dim:bg-theme-dim-900;
+	@apply dark:bg-theme-dark-900 dim:bg-theme-dim-900 top-full max-h-64 space-y-1 overflow-y-auto rounded-sm bg-white p-1 shadow-xl outline-hidden;
 }
 
 .select-options-list .select-list-option-group:not(:last-child) {
@@ -180,50 +180,46 @@ main {
 
 .select-options-list .select-list-option-head,
 .select-options-list .select-list-option {
-	@apply relative px-5 border-0 rounded text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200;
+	@apply text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 relative rounded-lg border-0 px-5;
 }
 
 .select-options-list .select-list-option-head__label {
-	@apply pb-1 text-xs font-bold uppercase select-none text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-500;
+	@apply text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-500 pb-1 text-xs font-bold uppercase select-none;
 }
 
-.select-options-list .select-list-option-head+.select-list-option .select-list-option__label {
+.select-options-list .select-list-option-head + .select-list-option .select-list-option__label {
 	@apply border-t border-transparent! transition-colors duration-200;
 }
 
 .select-options-list .select-list-option {
-	@apply transition-colors duration-200 cursor-pointer text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-200;
+	@apply text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-200 cursor-pointer transition-colors duration-200;
 }
 
 .select-options-list .select-list-option__label {
 	@apply py-4;
 }
 
-.select-options-list .select-list-option:not(:first-child) .select-list-option__label {
-	@apply transition-colors duration-200 border-t border-theme-secondary-300 dark:border-theme-secondary-700 dim:border-theme-dim-500;
-}
-
 .select-options-list .select-list-option.is-highlighted {
-	@apply z-10 bg-theme-secondary-100 dark:bg-theme-secondary-900 dim:bg-theme-dim-700;
+	@apply bg-theme-secondary-200 dark:bg-theme-dark-700 dim:bg-theme-dim-700 z-10;
 }
 
 .select-options-list .select-list-option.is-highlighted .select-list-option__label {
 	@apply border-theme-secondary-100 dark:border-theme-secondary-900 dim:border-theme-dim-700 dim:text-theme-dim-50;
 }
 
-.select-options-list .select-list-option.is-highlighted+.select-list-option .select-list-option__label {
+.select-options-list .select-list-option.is-highlighted + .select-list-option .select-list-option__label {
 	@apply border-transparent;
 }
 
 .select-options-list .select-list-option.is-selected {
-	@apply z-20 font-semibold bg-theme-secondary-200 text-theme-primary-600 dark:bg-theme-dark-950 dark:text-theme-dark-50 dim:bg-theme-dim-950 dim:text-theme-dim-50;
+	@apply bg-theme-secondary-200 text-theme-primary-600 dark:bg-theme-dark-950 dark:text-theme-dark-50 dim:bg-theme-dim-950 dim:text-theme-dim-50 z-20 font-semibold;
 }
 
 .select-options-list .select-list-option.is-selected .select-list-option__label {
-	@apply border-theme-primary-50 dark:border-black dim:border-theme-dim-50 dim:border-theme-dim-50;
+	@apply border-theme-primary-50 dim:border-theme-dim-50 dim:border-theme-dim-50 dark:border-black;
 }
 
-.select-options-list .select-list-option.is-selected+.select-list-option .select-list-option__label {
+.select-options-list .select-list-option.is-selected + .select-list-option .select-list-option__label {
 	@apply border-transparent;
 }
 
@@ -231,15 +227,15 @@ main {
 	@apply cursor-default;
 }
 
-.tab-list>.tab-button {
+.tab-list > .tab-button {
 	@apply cursor-pointer;
 }
 
-.tab-list>.tab-button[aria-selected="true"] {
-	@apply bg-white text-theme-secondary-900 dark:bg-theme-dark-800 dark:text-theme-dark-50 disabled:text-theme-secondary-500 dark:disabled:text-theme-secondary-700 dim:text-theme-dim-50 dim:bg-theme-dim-800;
+.tab-list > .tab-button[aria-selected="true"] {
+	@apply text-theme-secondary-900 dark:bg-theme-dark-800 dark:text-theme-dark-50 disabled:text-theme-secondary-500 dark:disabled:text-theme-secondary-700 dim:text-theme-dim-50 dim:bg-theme-dim-800 bg-white;
 }
 
-.tab-list>.tab-button[aria-selected="false"] {
+.tab-list > .tab-button[aria-selected="false"] {
 	@apply text-theme-secondary-700 hover:bg-theme-secondary-300 hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:hover:bg-theme-dark-900 dark:hover:text-theme-dark-50 disabled:text-theme-secondary-500 dark:disabled:text-theme-secondary-700 dim:text-theme-dim-200 dim-hover:bg-theme-dim-900 dim-hover:text-theme-dim-50;
 }
 
@@ -260,40 +256,40 @@ main {
 }
 
 .pagination-search-wrapper .search-form {
-	@apply absolute left-0 top-0.5 z-10 flex w-full rounded-sm bg-theme-primary-100 px-2 dark:bg-theme-secondary-800 sm:top-0;
+	@apply bg-theme-primary-100 dark:bg-theme-secondary-800 absolute top-0.5 left-0 z-10 flex w-full rounded-sm px-2 sm:top-0;
 }
 
 .pagination-search-wrapper .search-control {
-	@apply py-2 pl-2 pr-2 text-theme-secondary-500 hover:text-theme-primary-600 dark:text-theme-secondary-200;
+	@apply text-theme-secondary-500 hover:text-theme-primary-600 dark:text-theme-secondary-200 py-2 pr-2 pl-2;
 }
 
 .search-input {
-	@apply w-full appearance-none! border-none bg-transparent! p-2 leading-[17px] shadow-none! dark:text-theme-secondary-200;
+	@apply dark:text-theme-secondary-200 w-full appearance-none! border-none bg-transparent! p-2 leading-[17px] shadow-none!;
 }
 
 .search-input::-webkit-inner-spin-button,
 .search-input::-webkit-outer-spin-button {
-	@apply hidden pointer-events-none;
+	@apply pointer-events-none hidden;
 }
 
 .pagination-search-toggle-button {
-	@apply relative flex w-full cursor-pointer flex-nowrap items-center justify-center p-1.5 px-4 text-theme-primary-600 focus:rounded-sm focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 dark:text-theme-secondary-200 dim:text-theme-dim-200 sm:hover:rounded-sm sm:hover:bg-theme-primary-600 sm:hover:text-white sm:dim-hover:bg-theme-dim-navy-700 sm:dim-hover:text-theme-dim-50;
+	@apply text-theme-primary-600 focus:ring-theme-primary-400 dark:text-theme-secondary-200 dim:text-theme-dim-200 sm:hover:bg-theme-primary-600 sm:dim-hover:bg-theme-dim-navy-700 sm:dim-hover:text-theme-dim-50 relative flex w-full cursor-pointer flex-nowrap items-center justify-center p-1.5 px-4 focus:rounded-sm focus:ring-2 focus:outline-hidden sm:hover:rounded-sm sm:hover:text-white;
 }
 
 .pagination-button {
-	@apply inline-flex items-center justify-center px-2 text-base font-semibold text-center transition-all duration-100 ease-linear cursor-pointer text-theme-primary-600 dark:text-theme-secondary-200;
+	@apply text-theme-primary-600 dark:text-theme-secondary-200 inline-flex cursor-pointer items-center justify-center px-2 text-center text-base font-semibold transition-all duration-100 ease-linear;
 }
 
 .pagination-button:not(:disabled):hover {
-	@apply scale-110 rounded-sm bg-theme-primary-600 text-white shadow-[2px_3px_10px_2px_rgba(var(--theme-color-primary-600)_0.2)];
+	@apply bg-theme-primary-600 scale-110 rounded-sm text-white shadow-[2px_3px_10px_2px_rgba(var(--theme-color-primary-600)_0.2)];
 }
 
 .pagination-button.current-page {
-	@apply text-white bg-theme-primary-500 dark:bg-theme-secondary-600 dark:text-theme-secondary-200;
+	@apply bg-theme-primary-500 dark:bg-theme-secondary-600 dark:text-theme-secondary-200 text-white;
 }
 
 .pagination-button:focus {
-	@apply rounded-sm outline-hidden ring-2 ring-theme-primary-400;
+	@apply ring-theme-primary-400 rounded-sm ring-2 outline-hidden;
 }
 
 .pagination-wrapper {

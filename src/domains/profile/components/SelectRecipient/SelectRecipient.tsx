@@ -1,10 +1,9 @@
 import { Networks } from "@/app/lib/mainsail";
 import { Contracts } from "@/app/lib/profiles";
 import cn from "classnames";
-import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 
 import { useTranslation } from "react-i18next";
-import { Address } from "@/app/components/Address";
 import { Avatar } from "@/app/components/Avatar";
 import { Circle } from "@/app/components/Circle";
 import { useFormField } from "@/app/components/Form/useFormField";
@@ -14,6 +13,7 @@ import { TruncateEnd } from "@/app/components/TruncateEnd";
 import { useWalletAlias, WalletAliasResult } from "@/app/hooks/use-wallet-alias";
 import { AddressProperties, useProfileAddresses } from "@/domains/profile/hooks/use-profile-addresses";
 import { SearchRecipient } from "@/domains/transaction/components/SearchRecipient";
+import { OptionLabel } from "@/domains/profile/components/SelectAddressDropdown";
 
 type SelectRecipientProperties = {
 	network?: Networks.Network;
@@ -42,48 +42,6 @@ const ProfileAvatar = ({ address }: any) => {
 		);
 	}
 	return <Avatar address={address} size="sm" noShadow />;
-};
-
-const OptionLabel = ({
-	option,
-	network,
-	profile,
-}: {
-	option: any;
-	network?: Networks.Network;
-	profile: Contracts.IProfile;
-}) => {
-	const address = option.value;
-
-	const { getWalletAlias } = useWalletAlias();
-
-	const { alias } = useMemo(
-		() =>
-			getWalletAlias({
-				address,
-				network,
-				profile,
-			}),
-		[address, getWalletAlias, network, profile],
-	);
-
-	return (
-		<div className="flex items-center space-x-2 leading-5 whitespace-nowrap">
-			<Address
-				address={address}
-				walletName={alias}
-				truncateOnTable
-				addressClass={cn("leading-[17px] sm:leading-5 text-sm sm:text-base", {
-					"text-theme-primary-600": !alias && option.isSelected,
-					"text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-700": alias,
-					"text-theme-text": !alias,
-				})}
-				walletNameClass={cn("leading-[17px] sm:leading-5 text-theme-text text-sm sm:text-base", {
-					"text-theme-primary-600": option.isSelected,
-				})}
-			/>
-		</div>
-	);
 };
 
 export const SelectRecipient = ({
@@ -145,7 +103,7 @@ export const SelectRecipient = ({
 	// Modify the address from parent component
 	useEffect(() => {
 		onChangeAddress(address, false);
-	}, [address]); // eslint-disable-line react-hooks/exhaustive-deps
+	}, [address]);
 
 	useEffect(() => {
 		if (!selectedAddress) {
