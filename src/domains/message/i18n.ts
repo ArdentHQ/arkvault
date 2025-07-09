@@ -53,7 +53,8 @@ export const translations = {
 				DESCRIPTION: "Input fields manually or provide a JSON string.",
 				JSON: "JSON",
 				MANUAL: "Manual",
-				TITLE: "Verification Method",
+				TITLE: "Method",
+				FULL_TITLE: "Verification Method",
 			},
 		},
 
