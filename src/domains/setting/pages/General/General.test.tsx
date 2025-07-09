@@ -9,7 +9,17 @@ import { useTheme } from "@/app/hooks";
 import { buildTranslations } from "@/app/i18n/helpers";
 import { toasts } from "@/app/services";
 import GeneralSettings from "@/domains/setting/pages/General";
-import { act, env, fireEvent, getMainsailProfileId, render, screen, waitFor, within } from "@/utils/testing-library";
+import {
+	act,
+	env,
+	fireEvent,
+	getMainsailProfileId,
+	render,
+	renderResponsiveWithRoute,
+	screen,
+	waitFor,
+	within,
+} from "@/utils/testing-library";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import { renderHook } from "@testing-library/react";
 
@@ -601,5 +611,21 @@ describe("General Settings", () => {
 		});
 
 		await waitFor(() => expect(router.state.location.pathname).toBe(settingsURL));
+	});
+
+	it("should render viewing mode as button group on desktop", async () => {
+		render(<GeneralSettings />, {
+			route: `/profiles/${profile.id()}/settings`,
+		});
+
+		expect(await screen.findByTestId("ButtonGroup")).toBeInTheDocument();
+	});
+
+	it("should render viewing mode as select on mobile", async () => {
+		renderResponsiveWithRoute(<GeneralSettings />, "xs", {
+			route: `/profiles/${profile.id()}/settings`,
+		});
+
+		await waitFor(() => expect(screen.queryByTestId("ButtonGroup")).not.toBeInTheDocument());
 	});
 });
