@@ -117,6 +117,33 @@ describe("WalletFactory", () => {
 
 			gateSpy.mockRestore();
 		});
+
+		it("should take the extended public key path when the network is configured for it", async () => {
+			// @TODO: This is a temporary test.
+			// The code for this path is commented out in the factory.
+			// This test ensures we enter the correct branch and don't call the `identity` mutator from the `else` branch.
+			const gateSpy = vi.spyOn(Wallet.prototype, "gate").mockReturnValue({
+				allows: () => true,
+			} as any);
+
+			const networkSpy = vi.spyOn(Wallet.prototype, "network").mockReturnValue({
+				usesExtendedPublicKey: () => true,
+			} as any);
+
+			const identityMock = vi.fn();
+			const mutatorSpy = vi.spyOn(Wallet.prototype, "mutator").mockReturnValue({
+				identity: identityMock,
+			} as any);
+
+			const wallet = await subject.fromMnemonicWithBIP44({ levels: { account: 0 }, mnemonic });
+
+			expect(wallet).toBeInstanceOf(Wallet);
+			expect(identityMock).not.toHaveBeenCalled();
+
+			gateSpy.mockRestore();
+			networkSpy.mockRestore();
+			mutatorSpy.mockRestore();
+		});
 	});
 
 	describe("fromMnemonicWithBIP49", () => {
