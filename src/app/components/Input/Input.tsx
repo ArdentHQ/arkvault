@@ -186,7 +186,7 @@ export const Input = ({
 							"no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!",
 							innerClassName,
 							{
-								"caret-theme-text text-transparent": preventAutofill,
+								"caret-theme-text no-selection-style text-transparent": preventAutofill,
 								"text-theme-secondary-text": disabled,
 							},
 						)}
