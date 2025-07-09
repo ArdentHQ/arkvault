@@ -77,6 +77,7 @@ describe("TransactionService", () => {
 		mockClient.broadcast = vi
 			.fn()
 			.mockResolvedValue({ accepted: [TransactionFixture.hash()], errors: {}, rejected: [] });
+		mockClient.transaction = vi.fn().mockResolvedValue({ ...TransactionFixture, isConfirmed: () => true });
 	});
 
 	it("should sign a transfer", async () => {
@@ -242,6 +243,22 @@ describe("TransactionService", () => {
 		const response = await subject.confirm(id);
 
 		expect(response).toBe(true);
+	});
+
+	it("should return false if the transaction is not confirmed by the client", async () => {
+		const id = await subject.signTransfer(DUMMY_TRANSFER_INPUT);
+		await subject.broadcast(id);
+
+		mockClient.transaction = vi.fn().mockResolvedValue({
+			...TransactionFixture,
+			isConfirmed: () => false,
+		});
+
+		const result = await subject.confirm(id);
+
+		expect(result).toBe(false);
+		expect(subject.hasBeenConfirmed(id)).toBe(false);
+		expect(subject.isAwaitingConfirmation(id)).toBe(true);
 	});
 
 	it("should return false if confirming the transaction fails on the client", async () => {
