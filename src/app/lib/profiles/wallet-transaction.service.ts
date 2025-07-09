@@ -299,14 +299,7 @@ export class TransactionService implements ITransactionService {
 			await this.#wallet.transactionService()[type](input),
 		);
 
-		// When we are working with Multi-Signatures we need to sign them in split through
-		// broadcasting and fetching them multiple times until all participants have signed
-		// the transaction. Once the transaction is fully signed we can mark it as finished.
-		if (transaction.isMultiSignatureRegistration()) {
-			this.#pending[transaction.hash()] = transaction;
-		} else {
-			this.#signed[transaction.hash()] = transaction;
-		}
+		this.#signed[transaction.hash()] = transaction;
 
 		return transaction.hash();
 	}
