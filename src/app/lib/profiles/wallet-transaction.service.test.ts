@@ -6,6 +6,7 @@ import { TransactionFixture } from "@/tests/fixtures/transactions";
 import { TransactionService } from "./wallet-transaction.service";
 import { IProfile } from "./profile.contract";
 import { env, MAINSAIL_MNEMONICS } from "@/utils/testing-library";
+import { ExtendedSignedTransactionData } from "./signed-transaction.dto";
 
 const mockTransactionMethod = vi.fn().mockResolvedValue(TransactionFixture);
 
@@ -300,5 +301,19 @@ describe("TransactionService", () => {
 		const broadcasted = wallet.data().get(WalletData.BroadcastedTransactions) as Record<string, any>;
 		expect(Object.keys(broadcasted)).toContain(id);
 		expect(broadcasted[id].hash()).toBe(id);
+	});
+
+	it("should restore dumped transactions", async () => {
+		const id = await subject.signTransfer(DUMMY_TRANSFER_INPUT);
+		subject.dump();
+
+		// Create a new service instance, which will call `restore()` in the constructor
+		const newSubject = new TransactionService(wallet);
+
+		expect(newSubject.hasBeenSigned(id)).toBe(true);
+
+		const restoredTransaction = newSubject.transaction(id);
+		expect(restoredTransaction).toBeInstanceOf(ExtendedSignedTransactionData);
+		expect(typeof restoredTransaction.toBroadcast).toBe("function");
 	});
 });
