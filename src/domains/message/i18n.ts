@@ -52,10 +52,10 @@ export const translations = {
 			TITLE: "Verify Message",
 			VERIFICATION_METHOD: {
 				DESCRIPTION: "Input fields manually or provide a JSON string.",
+				FULL_TITLE: "Verification Method",
 				JSON: "JSON",
 				MANUAL: "Manual",
 				TITLE: "Method",
-				FULL_TITLE: "Verification Method",
 			},
 		},
 
