@@ -105,6 +105,7 @@ exports[`ErrorStep > should display error details 1`] = `
                 data-testid="ErrorStep__errorMessage"
                 disabled=""
                 style="height: 4px;"
+                type="text"
               >
                 Display error details
               </textarea>
