@@ -180,5 +180,17 @@ describe("WalletMutator", () => {
 				"The provided password does not match the wallet.",
 			);
 		});
+
+		it("should also forget the confirmation key for a second signature wallet", async () => {
+			const forgetSpy = vi.fn();
+			vi.spyOn(wallet, "isSecondSignature").mockReturnValue(true);
+			vi.spyOn(wallet, "confirmKey").mockReturnValue({
+				forget: forgetSpy,
+			} as any);
+
+			await subject.removeEncryption(password);
+
+			expect(forgetSpy).toHaveBeenCalledWith(password);
+		});
 	});
 });

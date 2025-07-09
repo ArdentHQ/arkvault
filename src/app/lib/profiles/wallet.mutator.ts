@@ -100,6 +100,10 @@ export class WalletMutator implements IWalletMutator {
 
 		this.#wallet.signingKey().forget(password);
 
+		if (this.#wallet.isSecondSignature()) {
+			this.#wallet.confirmKey().forget(password);
+		}
+
 		if (importMethod === WalletImportMethod.BIP39.MNEMONIC_WITH_ENCRYPTION) {
 			return this.#wallet.data().set(WalletData.ImportMethod, WalletImportMethod.BIP39.MNEMONIC);
 		}
