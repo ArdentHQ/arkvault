@@ -320,7 +320,7 @@ export class TransactionService {
 		}
 
 		if (input.signatory.actsWithLedger()) {
-			await this.#ledgerService.connect()
+			await this.#ledgerService.connect();
 			const extendedPublicKey = await this.#ledgerService.getExtendedPublicKey(input.signatory.signingKey());
 			address = this.#addressService.fromPublicKey(extendedPublicKey).address;
 		}
