@@ -393,4 +393,44 @@ describe("WalletRepository", () => {
 
 		pqueueSpy.mockRestore();
 	});
+
+	it("should call onFailedAttempt when restore fails", async () => {
+		const consoleSpy = vi.spyOn(console, "log").mockImplementation(() => {});
+
+		vi.spyOn(wallet, "hasBeenPartiallyRestored").mockReturnValue(true);
+		vi.spyOn(wallet, "toObject").mockReturnValue({
+			data: { address: wallet.address() },
+			id: wallet.id(),
+			settings: {},
+		} as any);
+
+		// Mock pqueue to execute a function that always fails
+		const pqueueSpy = vi.spyOn(queue, "pqueue").mockImplementation(async (functions) => {
+			// Manually simulate what happens in the real restore method
+			for (const function_ of functions) {
+				try {
+					await function_(); // This will trigger the p-retry mechanism
+					// eslint-disable-next-line @typescript-eslint/no-unused-vars
+				} catch (error) {
+					// Expected
+				}
+			}
+			return [];
+		});
+
+		subject.fill({ [wallet.id()]: wallet.toObject() });
+
+		try {
+			await subject.restore();
+			// eslint-disable-next-line @typescript-eslint/no-unused-vars
+		} catch (error) {
+			// Expected to fail after retries
+		}
+
+		expect(consoleSpy).toHaveBeenCalledTimes(3);
+		expect(consoleSpy).toHaveBeenCalledWith(`Attempt #1 to restore [undefined] failed. There are 2 retries left.`);
+
+		consoleSpy.mockRestore();
+		pqueueSpy.mockRestore();
+	});
 });
