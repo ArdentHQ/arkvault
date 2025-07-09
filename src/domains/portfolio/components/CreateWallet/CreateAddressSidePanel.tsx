@@ -1,5 +1,5 @@
 import { DefaultTReturn, TOptions } from "i18next";
-import React, { useEffect, useMemo, useState, JSX } from "react";
+import React, { useEffect, useMemo, useState, JSX, useRef } from "react";
 import { SidePanel, SidePanelButtons } from "@/app/components/SidePanel/SidePanel";
 import { Form } from "@/app/components/Form";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
@@ -57,6 +57,40 @@ export const CreateAddressesSidePanel = ({
 	const [isEditAliasModalOpen, setIsEditAliasModalOpen] = useState(false);
 
 	const { title, subtitle, titleIcon } = useCreateStepHeaderConfig(activeTab);
+
+	const prevOpenRef = useRef(open);
+	useEffect(() => {
+		if (prevOpenRef.current && !open) {
+			setActiveTab(CreateStep.WalletOverviewStep);
+		}
+		prevOpenRef.current = open;
+	}, [open]);
+
+	useEffect(() => {
+		if (!open) return;
+
+		let historyPushed = false;
+
+		const handlePopState = (event) => {
+			if (activeTab > CreateStep.WalletOverviewStep) {
+				event.preventDefault();
+				event.stopImmediatePropagation();
+				
+				handleBack();
+			}
+		};
+
+		if (!historyPushed) {
+			window.history.pushState({ createPanelStep: activeTab }, '');
+			historyPushed = true;
+		}
+
+		window.addEventListener('popstate', handlePopState, true);
+
+		return () => {
+			window.removeEventListener('popstate', handlePopState, true);
+		};
+	}, [open, activeTab]);
 
 	useEffect(() => {
 		register("network", { required: true });
@@ -235,6 +269,7 @@ export const CreateAddressesSidePanel = ({
 			hasSteps
 			totalSteps={allSteps.length}
 			activeStep={activeTab}
+			disableBackButton={activeTab > CreateStep.WalletOverviewStep}
 			footer={
 				<SidePanelButtons data-testid="CreateAddressSidePanel__footer">
 					{activeTab <= CreateStep.EncryptPasswordStep && (

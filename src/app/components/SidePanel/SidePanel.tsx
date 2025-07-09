@@ -32,6 +32,7 @@ interface SidePanelProps {
 	totalSteps?: number;
 	activeStep?: number;
 	footer?: React.ReactNode;
+	disableBackButton?: boolean;
 }
 
 export const SidePanelButtons = ({ className, ...properties }: React.HTMLAttributes<HTMLDivElement>): JSX.Element => (
@@ -59,6 +60,7 @@ export const SidePanel = ({
 	totalSteps = 0,
 	activeStep = 0,
 	footer,
+	disableBackButton = false,
 }: SidePanelProps): JSX.Element => {
 	const { refs, context } = useFloating({
 		onOpenChange,
@@ -102,25 +104,25 @@ export const SidePanel = ({
 	}, [isMounted]);
 
 	useEffect(() => {
-		if (!open) {
-			return;
+		if (!open || disableBackButton) {
+		  return;
 		}
-
+	
 		const handlePopState = (event) => {
-			event.preventDefault();
-			onOpenChange(false);
+		  event.preventDefault();
+		  onOpenChange(false);
 		};
-
+	
 		window.history.pushState({ sidePanelOpen: true }, "");
 		window.addEventListener("popstate", handlePopState);
-
+	
 		return () => {
-			window.removeEventListener("popstate", handlePopState);
-			if (window.history.state?.sidePanelOpen) {
-				window.history.back();
-			}
+		  window.removeEventListener("popstate", handlePopState);
+		  if (window.history.state?.sidePanelOpen) {
+			window.history.back();
+		  }
 		};
-	}, [open, onOpenChange]);
+	  }, [open, onOpenChange, disableBackButton]); 
 
 	return (
 		<>
