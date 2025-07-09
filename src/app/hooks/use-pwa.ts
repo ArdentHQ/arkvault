@@ -52,7 +52,10 @@ export const usePwa = () => {
 	}, []);
 
 	const isRunningE2E = isE2E();
-	const showInstallBanner = useMemo(() => alertEnabled && showBanner && !isRunningE2E, [alertEnabled, showBanner, isRunningE2E]);
+	const showInstallBanner = useMemo(
+		() => alertEnabled && showBanner && !isRunningE2E,
+		[alertEnabled, showBanner, isRunningE2E],
+	);
 
 	return {
 		hideInstallBanner,
