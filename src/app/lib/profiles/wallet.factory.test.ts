@@ -58,6 +58,35 @@ describe("WalletFactory", () => {
 			expect(wallet.address()).toBeTruthy();
 			expect(wallet.data().get(WalletData.ImportMethod)).toBe(WalletImportMethod.BIP39.MNEMONIC_WITH_ENCRYPTION);
 		});
+
+		it("should throw if the network uses extended public keys", async () => {
+			const networkSpy = vi.spyOn(Wallet.prototype, "network").mockReturnValue({
+				usesExtendedPublicKey: () => true,
+			} as any);
+
+			await expect(subject.fromMnemonicWithBIP39({ mnemonic })).rejects.toThrow(
+				"The configured network uses extended public keys with BIP44 for derivation.",
+			);
+
+			networkSpy.mockRestore();
+		});
+
+		it("should throw if the network does not support BIP39", async () => {
+			const gateSpy = vi.spyOn(Wallet.prototype, "gate").mockReturnValue({
+				allows: () => false,
+			} as any);
+
+			const networkSpy = vi.spyOn(Wallet.prototype, "network").mockReturnValue({
+				usesExtendedPublicKey: () => false,
+			} as any);
+
+			await expect(subject.fromMnemonicWithBIP39({ mnemonic })).rejects.toThrow(
+				"The configured network does not support BIP39.",
+			);
+
+			gateSpy.mockRestore();
+			networkSpy.mockRestore();
+		});
 	});
 
 	describe("fromAddress", () => {
