@@ -191,7 +191,7 @@ export const Input = ({
 							ref={fakePasswordReference}
 							placeholder={properties.placeholder}
 							className={cn(
-								"pointer-events-none absolute inset-0 border-0 bg-transparent p-0! ring-0 outline-none",
+								"pointer-events-none absolute inset-0 border-0 bg-transparent p-0! font-mono ring-0 outline-none",
 								"no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 text-sm! sm:text-base!",
 								innerClassName,
 								{
@@ -207,7 +207,7 @@ export const Input = ({
 						className={cn(
 							"no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!",
 							{
-								"caret-theme-text no-selection-style text-transparent": preventAutofill,
+								"caret-theme-text no-selection-style font-mono text-transparent": preventAutofill,
 								"text-theme-secondary-text": disabled,
 							},
 							innerClassName,
