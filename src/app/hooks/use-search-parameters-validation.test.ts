@@ -279,7 +279,23 @@ describe("useSearchParametersValidation", () => {
 			.mockReturnValue(profile.wallets().first());
 
 		const parameters = new URLSearchParams(
-			"coin=mainsail&network=mainsail.devnet&method=vote&validator=0x125b484e51Ad990b5b3140931f3BD8eAee85Db23",
+			"coin=mainsail&network=mainsail.devnet&method=vote&validator=genesis_31",
+		);
+
+		const { result } = renderHook(() => useSearchParametersValidation());
+
+		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.toBeUndefined();
+
+		mockFindDelegateByName.mockRestore();
+	});
+
+	it("should validate vote using legacy delegate key", async () => {
+		const mockFindDelegateByName = vi
+			.spyOn(profile.validators(), "findByUsername")
+			.mockReturnValue(profile.wallets().first());
+
+		const parameters = new URLSearchParams(
+			"method=vote&delegate=genesis_31&nethash=c481dea3dcc13708364e576dff94dd499692b56cbc646d5acd22a3902297dd51",
 		);
 
 		const { result } = renderHook(() => useSearchParametersValidation());
