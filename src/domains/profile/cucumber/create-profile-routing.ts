@@ -19,7 +19,9 @@ cucumber("@createProfileRouting", {
 		await t.click(Selector("h1").withExactText(translations.PROFILE.PAGE_CREATE_PROFILE.TITLE));
 	},
 	"When she selects back": async (t: TestController) => {
+		await t.click(Selector('[data-testid="InstallPWA__close"]'));
 		await t.click(Selector("button").withExactText(translations.COMMON.BACK));
+		await t.expect(getLocation()).notContains("/profiles/create");
 	},
 	"Then she is back on the welcome page": async (t: TestController) => {
 		await t.expect(Selector("h2").withText(translations.PROFILE.PAGE_WELCOME.WITH_PROFILES.TITLE).exists).ok();
