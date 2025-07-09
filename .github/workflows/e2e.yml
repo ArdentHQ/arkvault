@@ -6,12 +6,8 @@ on:
             - master
             - develop
             - develop-ledger
-        paths-ignore:
-            - "**"
     pull_request:
         types: [ready_for_review, synchronize, opened]
-        paths-ignore:
-            - "**"
 jobs:
     build-and-upload:
         runs-on: ubuntu-latest
