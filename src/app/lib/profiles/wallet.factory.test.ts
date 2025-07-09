@@ -239,6 +239,38 @@ describe("WalletFactory", () => {
 			expect(wallet.data().get(WalletData.ImportMethod)).toBe(WalletImportMethod.BIP44.DERIVATION_PATH);
 			expect(wallet.data().get(WalletData.Status)).toBe(WalletFlag.Cold);
 		});
+
+		it("should create a wallet from an address with a BIP49 derivation path", async () => {
+			const { wallet: tempWallet } = await subject.generate({
+				locale: "english",
+				wordCount: 12,
+			});
+			const address = tempWallet.address();
+			const path = "m/49'/0'/0'/0/0";
+
+			const wallet = await subject.fromAddressWithDerivationPath({ address, path });
+			expect(wallet).toBeInstanceOf(Wallet);
+			expect(wallet.address()).toBe(address);
+			expect(wallet.data().get(WalletData.DerivationPath)).toBe(path);
+			expect(wallet.data().get(WalletData.ImportMethod)).toBe(WalletImportMethod.BIP49.DERIVATION_PATH);
+			expect(wallet.data().get(WalletData.Status)).toBe(WalletFlag.Cold);
+		});
+
+		it("should create a wallet from an address with a BIP84 derivation path", async () => {
+			const { wallet: tempWallet } = await subject.generate({
+				locale: "english",
+				wordCount: 12,
+			});
+			const address = tempWallet.address();
+			const path = "m/84'/0'/0'/0/0";
+
+			const wallet = await subject.fromAddressWithDerivationPath({ address, path });
+			expect(wallet).toBeInstanceOf(Wallet);
+			expect(wallet.address()).toBe(address);
+			expect(wallet.data().get(WalletData.DerivationPath)).toBe(path);
+			expect(wallet.data().get(WalletData.ImportMethod)).toBe(WalletImportMethod.BIP84.DERIVATION_PATH);
+			expect(wallet.data().get(WalletData.Status)).toBe(WalletFlag.Cold);
+		});
 	});
 
 	describe("fromSecret", () => {
