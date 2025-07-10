@@ -74,39 +74,35 @@ cucumber("@saveSettings-unsavedChanges", {
 	},
 });
 
-// cucumber(
-// 	"@saveSettings-updateCurrency",
-// 	{
-// 		"Given Alice signs into a profile with a wallet": async (t: TestController) => {
-// 			await visitWelcomeScreen(t);
-// 			await goToProfile(t);
-// 			await importWalletByAddress(t, "0xb0E6c955a0Df13220C36Ea9c95bE471249247E57", undefined, true);
-// 		},
-// 		"And she is on the settings page": async (t: TestController) => {
-// 			await t.click(Selector('[data-testid="UserMenu"]'));
-// 			await t
-// 				.expect(Selector('[data-testid="dropdown__options"] li').withText(translations.COMMON.SETTINGS).exists)
-// 				.ok();
-// 			await t.click(Selector('[data-testid="dropdown__options"] li').withText(translations.COMMON.SETTINGS));
-// 			await t.expect(Selector("h1").withText(translations.SETTINGS.GENERAL.TITLE).exists).ok();
-// 		},
-// 		"When she saves a new currency setting": async (t: TestController) => {
-// 			await t.click(Selector("[aria-owns=select-currency-menu] [data-testid=SelectDropdown__caret]"));
-// 			await t.click(Selector("#select-currency-menu .select-list-option").withText("ETH (Ξ)"));
-// 			await saveSettings(t);
-// 		},
-// 		"Then the balance in the navbar is updated": async (t: TestController) => {
-// 			await t.expect(Selector("[data-testid=Balance__value]").withText("0 ETH").exists).notOk();
-// 		},
-// 	},
-// 	[
-// 		mockRequest(
-// 			"https://ark-live.arkvault.io/api/transactions?page=1&limit=20&senderId=0xb0E6c955a0Df13220C36Ea9c95bE471249247E57",
-// 			[],
-// 		),
-// 		mockRequest(
-// 			"https://ark-live.arkvault.io/api/transactions?limit=30&address=0xb0E6c955a0Df13220C36Ea9c95bE471249247E57",
-// 			[],
-// 		),
-// 	],
-// );
+cucumber(
+	"@saveSettings-updateCurrency",
+	{
+		"Given Alice signs into a profile with a wallet": async (t: TestController) => {
+			await visitWelcomeScreen(t);
+			await goToProfile(t);
+			await importWalletByAddress(t, "0x659A76be283644AEc2003aa8ba26485047fd1BFB", undefined, true);
+		},
+		"And she is on the settings page": async (t: TestController) => {
+			await t.click(Selector('[data-testid="UserMenu"]'));
+			await t
+				.expect(Selector('[data-testid="dropdown__options"] li').withText(translations.COMMON.SETTINGS).exists)
+				.ok();
+			await t.click(Selector('[data-testid="dropdown__options"] li').withText(translations.COMMON.SETTINGS));
+			await t.expect(Selector("h1").withText(translations.SETTINGS.GENERAL.TITLE).exists).ok();
+		},
+		"When she saves a new currency setting": async (t: TestController) => {
+			await t.click(Selector("[aria-owns=select-currency-menu] [data-testid=SelectDropdown__caret]"));
+			await t.click(Selector("#select-currency-menu .select-list-option").withText("ETH (Ξ)"));
+			await saveSettings(t);
+		},
+		"Then the balance in the navbar is updated": async (t: TestController) => {
+			await t.expect(Selector("[data-testid=Balance__value]").withText("0 ETH").exists).notOk();
+		},
+	},
+	[
+		mockRequest(
+			"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=30&orderBy=timestamp:desc&address=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6,0x659A76be283644AEc2003aa8ba26485047fd1BFB",
+			[],
+		),
+	],
+);
