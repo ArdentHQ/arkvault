@@ -118,7 +118,7 @@
 						]
 					},
 					"addressPanelSettings": {
-						"addressViewPreference": "multiple",
+						"addressViewPreference": "single",
 						"multiSelectedAddresses": [],
 						"singleSelectedAddress": []
 					}

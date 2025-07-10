@@ -15,7 +15,7 @@ const preSteps = {
 		await importWallet(t, mnemonic);
 	},
 	"When she selects to sign message": async (t: TestController) => {
-		await t.click(Selector('[data-testid="WalletHeader__more-button"]'));
+		await t.click(Selector('[data-testid="WalletHeaderMobile__more-button"]'));
 		await t.click(
 			Selector('[data-testid="dropdown__options"] li').withText(
 				translations.WALLETS.PAGE_WALLET_DETAILS.OPTIONS.SIGN_MESSAGE,
@@ -32,7 +32,7 @@ cucumber("@signMessage", {
 		await t.click(Selector("[data-testid=SignMessage__continue-button]"));
 	},
 	"Then the message is successfully signed": async (t: TestController) => {
-		await t.expect(Selector("h1").withText(translations.MESSAGE.PAGE_SIGN_MESSAGE.SUCCESS_STEP.TITLE).exists).ok();
+		await t.expect(Selector("h2").withText(translations.MESSAGE.PAGE_SIGN_MESSAGE.SUCCESS_STEP.TITLE).exists).ok();
 	},
 });
 
