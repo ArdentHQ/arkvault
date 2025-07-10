@@ -80,10 +80,7 @@ describe("AddressesSidePanel", () => {
 		await userEvent.click(screen.getByTestId("SelectAllAddresses"));
 		await userEvent.click(screen.getByTestId(sidePanelCloseButton));
 
-		expect(onClose).toHaveBeenCalledWith(
-			[wallets.first().address()],
-			"single",
-		);
+		expect(onClose).toHaveBeenCalledWith([wallets.first().address()], "single");
 	});
 
 	it("should switch to delete mode when `manage` clicked", async () => {
