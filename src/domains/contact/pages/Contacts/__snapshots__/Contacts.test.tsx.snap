@@ -1317,6 +1317,192 @@ exports[`Contacts > should render compact on md screen 1`] = `
                                   class="no-ligatures transition-colors duration-200"
                                   data-testid="TruncateEnd"
                                 >
+                                  Rok
+                                </span>
+                              </span>
+                            </div>
+                          </td>
+                          <td
+                            class=""
+                            data-testid="ContactListItem__address"
+                          >
+                            <div
+                              class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 space-x-4"
+                            >
+                              <div
+                                class="w-0 flex-1"
+                              >
+                                <div
+                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                >
+                                  <div
+                                    class="relative grow leading-[17px] sm:leading-5 text-left"
+                                  >
+                                    <span
+                                      class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
+                                      data-testid="Address__address"
+                                    >
+                                      0xb9169B1F206d78702e047F3b56b9d7e08eD9B065
+                                    </span>
+                                    <span>
+                                       
+                                    </span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                          <td
+                            class=""
+                          >
+                            <div
+                              class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 space-x-4 justify-center"
+                            >
+                              <button
+                                class="ring-focus relative cursor-pointer focus:outline-hidden"
+                                data-ring-focus-margin="-m-1"
+                                data-testid="clipboard-icon__wrapper"
+                                type="button"
+                              >
+                                <div
+                                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 dim-hover:text-theme-dim-50"
+                                >
+                                  <div>
+                                    <div
+                                      style="height: 16px; width: 16px;"
+                                    >
+                                      <svg
+                                        id="copy"
+                                        style="height: 100%; width: 100%;"
+                                        viewBox="0 0 20 20"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        >
+                                          <path
+                                            d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                          />
+                                          <path
+                                            d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                          />
+                                        </g>
+                                      </svg>
+                                    </div>
+                                  </div>
+                                </div>
+                              </button>
+                            </div>
+                          </td>
+                          <td
+                            class=""
+                          >
+                            <div
+                              class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end"
+                            >
+                              <div
+                                class="-mr-3 flex items-center"
+                              >
+                                <div
+                                  data-testid="ContactListItem__send-button-wrapper"
+                                >
+                                  <button
+                                    class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 text-sm hover:underline"
+                                    data-testid="ContactListItem__send-button"
+                                    type="button"
+                                  >
+                                    <div
+                                      class="flex items-center space-x-2"
+                                    >
+                                      Send
+                                    </div>
+                                  </button>
+                                </div>
+                                <div
+                                  class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle height-[17px] border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 m-0!"
+                                />
+                                <div
+                                  class="visible"
+                                >
+                                  <div
+                                    aria-expanded="false"
+                                    aria-haspopup="dialog"
+                                    data-testid="dropdown__toggle"
+                                  >
+                                    <button
+                                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none dark:hover:bg-theme-secondary-700 hover:bg-theme-navy-200 dim-hover:bg-theme-dim-800 mr-3 p-1"
+                                      type="button"
+                                    >
+                                      <div
+                                        class="flex items-center space-x-2"
+                                      >
+                                        <div
+                                          class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50 transition-colors duration-200"
+                                        >
+                                          <div
+                                            style="height: 16px; width: 16px;"
+                                          >
+                                            <svg
+                                              fill="none"
+                                              style="height: 100%; width: 100%;"
+                                              viewBox="0 0 20 20"
+                                              xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                              <circle
+                                                cx="10.002"
+                                                cy="2.99609"
+                                                fill="currentColor"
+                                                r="2"
+                                                transform="rotate(90 10.002 2.99609)"
+                                              />
+                                              <circle
+                                                cx="10.002"
+                                                cy="9.99805"
+                                                fill="currentColor"
+                                                r="2"
+                                                transform="rotate(90 10.002 9.99805)"
+                                              />
+                                              <circle
+                                                cx="10.002"
+                                                cy="17"
+                                                fill="currentColor"
+                                                r="2"
+                                                transform="rotate(90 10.002 17)"
+                                              />
+                                            </svg>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr
+                          class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-dashed group last:border-theme-secondary-200 dark:last:border-theme-secondary-800 relative last:border-b-4! last:border-solid"
+                          data-testid="ContactListItem"
+                        >
+                          <td>
+                            <div
+                              class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 space-x-4 whitespace-nowrap"
+                            >
+                              <span
+                                class="text-sm leading-[17px] font-semibold"
+                                data-testid="ContactListItem__name"
+                              >
+                                <span
+                                  class="no-ligatures transition-colors duration-200"
+                                  data-testid="TruncateEnd"
+                                >
                                   Mock Contact
                                 </span>
                               </span>
@@ -2521,6 +2707,162 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                                           data-testid="Address__address"
                                         >
                                           0x28FA32ec11f64ae8Bc4223e77DeE4db24A5E46Da
+                                        </span>
+                                        <button
+                                          class="ring-focus relative cursor-pointer focus:outline-hidden"
+                                          data-ring-focus-margin="-m-1"
+                                          data-testid="clipboard-icon__wrapper"
+                                          type="button"
+                                        >
+                                          <div
+                                            class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
+                                          >
+                                            <div
+                                              style="height: 16px; width: 16px;"
+                                            >
+                                              <svg
+                                                id="copy"
+                                                style="height: 100%; width: 100%;"
+                                                viewBox="0 0 20 20"
+                                                x="0"
+                                                xml:space="preserve"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                y="0"
+                                              >
+                                                <g
+                                                  fill="none"
+                                                  stroke="currentColor"
+                                                  stroke-linecap="round"
+                                                  stroke-linejoin="round"
+                                                  stroke-width="2"
+                                                >
+                                                  <path
+                                                    d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                                  />
+                                                  <path
+                                                    d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                                  />
+                                                </g>
+                                              </svg>
+                                            </div>
+                                          </div>
+                                        </button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr
+                          data-testid="ContactListItemMobile"
+                        >
+                          <td
+                            class="pt-3"
+                          >
+                            <div
+                              class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
+                              data-testid="mobile-table-element"
+                            >
+                              <div
+                                class="dark:bg-theme-dark-950 flex space-x-3 overflow-auto px-4 py-3 bg-theme-secondary-100 dim:bg-theme-dim-950 dark:bg-black"
+                                data-testid="mobile-table-element-header"
+                              >
+                                <span
+                                  class="text-theme-secondary-900 dark:text-theme-text flex-1 truncate text-sm font-semibold"
+                                >
+                                  Rok
+                                </span>
+                                <div
+                                  class="flex items-center gap-3"
+                                >
+                                  <button
+                                    class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 p-0 text-sm hover:underline"
+                                    data-testid="ContactListItemMobileAddress__send-button"
+                                    type="button"
+                                  >
+                                    <div
+                                      class="flex items-center space-x-2"
+                                    >
+                                      Send
+                                    </div>
+                                  </button>
+                                  <span
+                                    class="bg-theme-secondary-300 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 block h-5 w-px"
+                                  />
+                                  <div
+                                    aria-expanded="false"
+                                    aria-haspopup="dialog"
+                                    data-testid="dropdown__toggle"
+                                  >
+                                    <button
+                                      class="text-theme-secondary-700 dim:text-theme-dim-200 flex"
+                                      type="button"
+                                    >
+                                      <div>
+                                        <div
+                                          style="height: 16px; width: 16px;"
+                                        >
+                                          <svg
+                                            fill="none"
+                                            style="height: 100%; width: 100%;"
+                                            viewBox="0 0 20 20"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                          >
+                                            <circle
+                                              cx="10.002"
+                                              cy="2.99609"
+                                              fill="currentColor"
+                                              r="2"
+                                              transform="rotate(90 10.002 2.99609)"
+                                            />
+                                            <circle
+                                              cx="10.002"
+                                              cy="9.99805"
+                                              fill="currentColor"
+                                              r="2"
+                                              transform="rotate(90 10.002 9.99805)"
+                                            />
+                                            <circle
+                                              cx="10.002"
+                                              cy="17"
+                                              fill="currentColor"
+                                              r="2"
+                                              transform="rotate(90 10.002 17)"
+                                            />
+                                          </svg>
+                                        </div>
+                                      </div>
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                              <div
+                                class="grid gap-4 px-4 py-3"
+                                data-testid="mobile-table-element-body"
+                              >
+                                <div
+                                  class="grid grid-cols-1 gap-2"
+                                >
+                                  <div
+                                    class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-semibold"
+                                  >
+                                    Address
+                                  </div>
+                                  <div>
+                                    <div
+                                      class="w-full space-y-3"
+                                      data-testid="ContactListItemMobile__addresses"
+                                    >
+                                      <div
+                                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                      >
+                                        <span
+                                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm"
+                                          data-testid="Address__address"
+                                        >
+                                          0xb9169B1F206d78702e047F3b56b9d7e08eD9B065
                                         </span>
                                         <button
                                           class="ring-focus relative cursor-pointer focus:outline-hidden"
@@ -3896,6 +4238,192 @@ exports[`Contacts > should render with contacts 1`] = `
                                       data-testid="Address__address"
                                     >
                                       0x28FA32ec11f64ae8Bc4223e77DeE4db24A5E46Da
+                                    </span>
+                                    <span>
+                                       
+                                    </span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                          <td
+                            class=""
+                          >
+                            <div
+                              class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 space-x-4 justify-center"
+                            >
+                              <button
+                                class="ring-focus relative cursor-pointer focus:outline-hidden"
+                                data-ring-focus-margin="-m-1"
+                                data-testid="clipboard-icon__wrapper"
+                                type="button"
+                              >
+                                <div
+                                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 dim-hover:text-theme-dim-50"
+                                >
+                                  <div>
+                                    <div
+                                      style="height: 16px; width: 16px;"
+                                    >
+                                      <svg
+                                        id="copy"
+                                        style="height: 100%; width: 100%;"
+                                        viewBox="0 0 20 20"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        >
+                                          <path
+                                            d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                          />
+                                          <path
+                                            d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                          />
+                                        </g>
+                                      </svg>
+                                    </div>
+                                  </div>
+                                </div>
+                              </button>
+                            </div>
+                          </td>
+                          <td
+                            class=""
+                          >
+                            <div
+                              class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end"
+                            >
+                              <div
+                                class="-mr-3 flex items-center"
+                              >
+                                <div
+                                  data-testid="ContactListItem__send-button-wrapper"
+                                >
+                                  <button
+                                    class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 text-sm hover:underline"
+                                    data-testid="ContactListItem__send-button"
+                                    type="button"
+                                  >
+                                    <div
+                                      class="flex items-center space-x-2"
+                                    >
+                                      Send
+                                    </div>
+                                  </button>
+                                </div>
+                                <div
+                                  class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle height-[17px] border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 m-0!"
+                                />
+                                <div
+                                  class="visible"
+                                >
+                                  <div
+                                    aria-expanded="false"
+                                    aria-haspopup="dialog"
+                                    data-testid="dropdown__toggle"
+                                  >
+                                    <button
+                                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none dark:hover:bg-theme-secondary-700 hover:bg-theme-navy-200 dim-hover:bg-theme-dim-800 mr-3 p-1"
+                                      type="button"
+                                    >
+                                      <div
+                                        class="flex items-center space-x-2"
+                                      >
+                                        <div
+                                          class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50 transition-colors duration-200"
+                                        >
+                                          <div
+                                            style="height: 16px; width: 16px;"
+                                          >
+                                            <svg
+                                              fill="none"
+                                              style="height: 100%; width: 100%;"
+                                              viewBox="0 0 20 20"
+                                              xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                              <circle
+                                                cx="10.002"
+                                                cy="2.99609"
+                                                fill="currentColor"
+                                                r="2"
+                                                transform="rotate(90 10.002 2.99609)"
+                                              />
+                                              <circle
+                                                cx="10.002"
+                                                cy="9.99805"
+                                                fill="currentColor"
+                                                r="2"
+                                                transform="rotate(90 10.002 9.99805)"
+                                              />
+                                              <circle
+                                                cx="10.002"
+                                                cy="17"
+                                                fill="currentColor"
+                                                r="2"
+                                                transform="rotate(90 10.002 17)"
+                                              />
+                                            </svg>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr
+                          class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-dashed group last:border-theme-secondary-200 dark:last:border-theme-secondary-800 relative last:border-b-4! last:border-solid"
+                          data-testid="ContactListItem"
+                        >
+                          <td>
+                            <div
+                              class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 space-x-4 whitespace-nowrap"
+                            >
+                              <span
+                                class="text-sm leading-[17px] font-semibold"
+                                data-testid="ContactListItem__name"
+                              >
+                                <span
+                                  class="no-ligatures transition-colors duration-200"
+                                  data-testid="TruncateEnd"
+                                >
+                                  Rok
+                                </span>
+                              </span>
+                            </div>
+                          </td>
+                          <td
+                            class=""
+                            data-testid="ContactListItem__address"
+                          >
+                            <div
+                              class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 space-x-4"
+                            >
+                              <div
+                                class="w-0 flex-1"
+                              >
+                                <div
+                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                >
+                                  <div
+                                    class="relative grow leading-[17px] sm:leading-5 text-left"
+                                  >
+                                    <span
+                                      class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
+                                      data-testid="Address__address"
+                                    >
+                                      0xb9169B1F206d78702e047F3b56b9d7e08eD9B065
                                     </span>
                                     <span>
                                        

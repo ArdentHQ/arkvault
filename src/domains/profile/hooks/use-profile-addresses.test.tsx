@@ -28,8 +28,8 @@ describe("useProfileAddresses", () => {
 	it("should return all available addresses", () => {
 		const { result } = renderHook(() => useProfileAddresses({ profile }));
 
-		expect(result.current.allAddresses).toHaveLength(3);
-		expect(result.current.contactAddresses).toHaveLength(1);
+		expect(result.current.allAddresses).toHaveLength(4);
+		expect(result.current.contactAddresses).toHaveLength(2);
 		expect(result.current.profileAddresses).toHaveLength(2);
 	});
 
@@ -50,9 +50,9 @@ describe("useProfileAddresses", () => {
 	it("should return unique addresses", () => {
 		const { result, rerender } = renderHook(() => useProfileAddresses({ profile }));
 
-		expect(result.current.allAddresses).toHaveLength(3);
+		expect(result.current.allAddresses).toHaveLength(4);
 
-		expect(profile.contacts().values()).toHaveLength(1);
+		expect(profile.contacts().values()).toHaveLength(2);
 
 		profile.contacts().create("New name", [
 			{
@@ -62,10 +62,10 @@ describe("useProfileAddresses", () => {
 			},
 		]);
 
-		expect(profile.contacts().values()).toHaveLength(2);
+		expect(profile.contacts().values()).toHaveLength(3);
 
 		rerender();
 
-		expect(result.current.allAddresses).toHaveLength(4);
+		expect(result.current.allAddresses).toHaveLength(5);
 	});
 });
