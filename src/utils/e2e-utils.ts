@@ -300,6 +300,11 @@ export const requestMocks = {
 			transactionsFixture,
 		),
 
+		mockRequest(
+			"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=30&orderBy=timestamp:desc&address=0x659A76be283644AEc2003aa8ba26485047fd1BFB",
+			transactionsFixture,
+		),
+
 		// mockRequest(
 		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=30&orderBy=timestamp:desc&address=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
 		// 	transactionsFixture
