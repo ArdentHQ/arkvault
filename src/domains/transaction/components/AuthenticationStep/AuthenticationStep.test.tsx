@@ -313,4 +313,32 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 
 		vi.clearAllMocks();
 	});
+
+	test("should render with second mnemonic", async () => {
+		const wallet = profile.wallets().first();
+		mockNanoXTransport();
+
+		vi.spyOn(wallet, "actsWithSecret").mockReturnValue(false);
+		vi.spyOn(wallet, "actsWithMnemonic").mockReturnValue(true);
+		vi.spyOn(wallet, "isSecondSignature").mockReturnValue(true);
+		renderWithForm(<AuthenticationStep subject="transaction" wallet={wallet} />, { withProviders: true });
+
+		await expect(screen.findByTestId("AuthenticationStep__second-mnemonic")).resolves.toBeVisible();
+
+		vi.clearAllMocks();
+	});
+
+	test("should render with second secret", async () => {
+		const wallet = profile.wallets().first();
+		mockNanoXTransport();
+
+		vi.spyOn(wallet, "actsWithSecret").mockReturnValue(true);
+		vi.spyOn(wallet, "actsWithMnemonic").mockReturnValue(false);
+		vi.spyOn(wallet, "isSecondSignature").mockReturnValue(true);
+		renderWithForm(<AuthenticationStep subject="transaction" wallet={wallet} />, { withProviders: true });
+
+		await expect(screen.findByTestId("AuthenticationStep__second-secret")).resolves.toBeVisible();
+
+		vi.clearAllMocks();
+	});
 });
