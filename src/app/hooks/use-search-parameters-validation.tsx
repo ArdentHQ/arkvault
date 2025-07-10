@@ -62,7 +62,7 @@ const defaultNetworks = {
 };
 
 const validatorFromSearchParameters = ({ profile, network, searchParameters }: PathProperties) => {
-	const validatorName = searchParameters.get("validator");
+	const validatorName = searchParameters.get("validator") ?? searchParameters.get("delegate");
 	const validatorPublicKey = searchParameters.get("publicKey");
 
 	if (validatorName) {
@@ -101,7 +101,7 @@ const validateVerify = ({ parameters }: ValidateParameters) => {
 };
 
 const validateVote = async ({ parameters, profile, network, env }: ValidateParameters) => {
-	const validatorName = parameters.get("validator");
+	const validatorName = parameters.get("validator") ?? parameters.get("delegate");
 	const publicKey = parameters.get("publicKey");
 
 	if (!validatorName && !publicKey) {
@@ -144,6 +144,23 @@ const validateTransfer = ({ parameters }: ValidateParameters) => {
 	}
 };
 
+const validateSign = ({ parameters }: ValidateParameters) => {
+	const message = parameters.get("message");
+	const address = parameters.get("address");
+
+	if (!message) {
+		return { error: { type: SearchParametersError.MessageMissing } };
+	}
+
+	if (address) {
+		const isValid = new AddressService().validate(address);
+
+		if (!isValid) {
+			return { error: { type: SearchParametersError.InvalidAddress } };
+		}
+	}
+};
+
 /* istanbul ignore next -- @preserve */
 const WrapperQR = ({ children }) => {
 	const { t } = useTranslation();
@@ -168,6 +185,13 @@ const WrapperURI = ({ children }: { children?: React.ReactNode }) => {
 
 export const useSearchParametersValidation = () => {
 	const methods = {
+		sign: {
+			path: ({ profile, searchParameters }: PathProperties) =>
+				`${generatePath(ProfilePaths.SignMessage, {
+					profileId: profile.id(),
+				})}?${searchParameters.toString()}`,
+			validate: validateSign,
+		},
 		transfer: {
 			path: ({ profile, searchParameters }: PathProperties) =>
 				`${generatePath(ProfilePaths.SendTransfer, {

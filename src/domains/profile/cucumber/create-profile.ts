@@ -32,8 +32,7 @@ const formStep = {
 const welcomeScreenStep = {
 	"Then she will see the welcome screen": async (t: TestController) => {
 		await t.expect(getLocation()).notContains("/profiles/create");
-		await t.expect(Selector("span").withText("John Doe").exists).ok();
-		await t.expect(Selector("span").withText("Anne Doe").exists).ok();
+		await t.expect(Selector("h2").withText(translations.PROFILE.MODAL_WELCOME.STEP_1.TITLE).exists).ok();
 	},
 };
 
