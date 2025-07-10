@@ -80,6 +80,9 @@ importers:
       downshift:
         specifier: 6.1.12
         version: 6.1.12(react@19.1.0)
+      ethers:
+        specifier: ^6.15.0
+        version: 6.15.0
       fast-copy:
         specifier: ^3.0.2
         version: 3.0.2
@@ -3264,8 +3267,8 @@ packages:
     resolution: {integrity: sha512-kVscqXk4OCp68SZ0dkgEKVi6/8ij300KBWTJq32P/dYeWTSwK41WyTxalN1eRmA5Z9UU/LX9D7FWSmV9SAYx6g==}
     engines: {node: '>=0.10.0'}
 
-  ethers@6.14.4:
-    resolution: {integrity: sha512-Jm/dzRs2Z9iBrT6e9TvGxyb5YVKAPLlpna7hjxH7KH/++DSh2T/JVmQUv7iHI5E55hDbp/gEVvstWYXVxXFzsA==}
+  ethers@6.15.0:
+    resolution: {integrity: sha512-Kf/3ZW54L4UT0pZtsY/rf+EkBU7Qi5nnhonjUb8yTXcxH3cdcWrV2cRyk0Xk/4jK6OoHhxxZHriyhje20If2hQ==}
     engines: {node: '>=14.0.0'}
 
   eventemitter3@5.0.1:
@@ -6397,7 +6400,7 @@ snapshots:
     dependencies:
       '@noble/secp256k1': 2.3.0
       bignumber.js: 9.3.0
-      ethers: 6.14.4
+      ethers: 6.15.0
       wif: 5.0.0
     transitivePeerDependencies:
       - bufferutil
@@ -9738,7 +9741,7 @@ snapshots:
 
   esutils@2.0.3: {}
 
-  ethers@6.14.4:
+  ethers@6.15.0:
     dependencies:
       '@adraffy/ens-normalize': 1.10.1
       '@noble/curves': 1.2.0

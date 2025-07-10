@@ -5,10 +5,10 @@ import { connectedTransport as ledgerTransportFactory } from "@/app/contexts/Led
 import { createRange } from "./ledger.service.helpers.js";
 import { LedgerSignature } from "./ledger.service.types.js";
 import { AddressService } from "./address.service.js";
-import { Exceptions } from "@/app/lib/mainsail";
 import { WalletData } from "./wallet.dto.js";
 import { ConfigKey, ConfigRepository } from "@/app/lib/mainsail/config.repository";
 import Eth, { ledgerService } from "@ledgerhq/hw-app-eth";
+import { ethers, verifyMessage } from "ethers";
 
 export class LedgerService {
 	readonly #addressService!: AddressService;
@@ -100,8 +100,51 @@ export class LedgerService {
 	}
 
 	public async signMessage(path: string, payload: string): Promise<string> {
-		console.log({ path, payload });
-		throw new Exceptions.NotImplemented(this.constructor.name, this.signMessage.name);
+		const payloadBuffer = new Uint8Array(new TextEncoder().encode(payload))
+		// const hex = [...payloadBuffer].map(b => b.toString(16).padStart(2, '0')).join('');
+		//
+		const hex = Buffer.from(payload).toString("hex")
+		console.log({ hex })
+
+		const result = await this.#transport.signPersonalMessage(path, hex)
+
+		const r = result.r.padStart(64, '0');
+		const s = result.s.padStart(64, '0');
+
+		let v: string | number = result.v - 27;
+		v = v.toString(16);
+
+		if (v.length < 2) {
+			v = "0" + v;
+		}
+
+		let flatSignature
+		try {
+			const normalizedV = result.v >= 27 ? result.v - 27 : result.v;
+
+			const rWithPrefix = result.r.startsWith('0x') ? result.r : '0x' + result.r;
+			const sWithPrefix = result.s.startsWith('0x') ? result.s : '0x' + result.s;
+			console.log({ normalizedV, v })
+
+			const sig = ethers.Signature.from({
+				r: rWithPrefix,
+				s: sWithPrefix,
+				v,
+			});
+
+			flatSignature = sig.serialized;
+			const bytes = new Uint8Array(new TextEncoder().encode())
+			console.log({ flatSignature, sig })
+			const address = verifyMessage(payloadBuffer, flatSignature)
+
+			console.log({ address })
+		} catch (error) {
+			console.log({ error })
+
+		}
+
+		return flatSignature
+
 	}
 
 	public async scan(options?: {
