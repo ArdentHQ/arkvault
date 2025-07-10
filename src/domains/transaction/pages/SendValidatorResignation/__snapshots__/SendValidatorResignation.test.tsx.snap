@@ -2209,6 +2209,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
                               data-testid="SelectAddress__input"
                               name="senderAddress"
                               readonly=""
+                              type="text"
                               value="0x659A76be283644AEc2003aa8ba26485047fd1BFB"
                             />
                           </div>
@@ -4627,16 +4628,16 @@ exports[`SendValidatorResignation > Validator Resignation > should render 3rd st
                         <input
                           aria-hidden="true"
                           autocomplete="off"
-                          class="pointer-events-none absolute inset-0 border-0 bg-transparent p-0! ring-0 outline-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 text-sm! sm:text-base!"
+                          class="pointer-events-none absolute inset-0 border-0 bg-transparent p-0! font-mono ring-0 outline-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 text-sm! sm:text-base!"
                           tabindex="-1"
                           type="password"
                         />
                         <input
                           autocomplete="off"
-                          class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! caret-theme-text no-selection-style text-transparent"
+                          class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! caret-theme-text no-selection-style font-mono text-transparent"
                           data-testid="AuthenticationStep__mnemonic"
                           name="mnemonic"
-                          type="password"
+                          type="text"
                         />
                       </div>
                       <div
@@ -5631,6 +5632,7 @@ exports[`SendValidatorResignation > Validator Resignation > should show error st
                               data-testid="ErrorStep__errorMessage"
                               disabled=""
                               style="height: 4px;"
+                              type="text"
                             >
                               {"message":"broadcast error","type":"Error"}
                             </textarea>
