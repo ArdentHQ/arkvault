@@ -506,6 +506,8 @@ export const MNEMONICS = [
 	"trust anchor salmon annual control split globe conduct myself van ice resist blast hybrid track echo impose virus filter mystery harsh galaxy desk pitch",
 	// 0xb0E6c955a0Df13220C36Ea9c95bE471249247E57
 	"satoshi weather local seek gravity mountain cycle stem next three arch canal fitness crisp approve cute census hint casual agree pencil sleep best observe",
+	// 0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+	"embody plug round swamp sick minor notable catch idle discover barely easily audit near essence crater stand arch phone border minimum smile above exercise",
 ];
 
 // https://cucumber.io/docs/gherkin/reference/
