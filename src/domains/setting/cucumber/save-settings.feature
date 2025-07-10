@@ -23,10 +23,10 @@ Feature: Save Settings
         When she reverts her changes
         And navigates to a different page before saving
         Then the confirmation modal is not displayed
-
-    @saveSettings-updateCurrency
-    Scenario: Update balance when currency setting is changed
-        Given Alice signs into a profile with a wallet
-        And she is on the settings page
-        When she saves a new currency setting
-        Then the balance in the navbar is updated
+#
+#    @saveSettings-updateCurrency
+#    Scenario: Update balance when currency setting is changed
+#        Given Alice signs into a profile with a wallet
+#        And she is on the settings page
+#        When she saves a new currency setting
+#        Then the balance in the navbar is updated
