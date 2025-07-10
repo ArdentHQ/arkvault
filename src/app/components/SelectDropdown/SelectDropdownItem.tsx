@@ -28,7 +28,13 @@ export const SelectDropdownItem = memo(
 			})}
 		>
 			<div className="select-list-option__label">
-				{renderLabel ? renderLabel({ ...item, isSelected: item.label === inputValue }) : item.label}
+				{renderLabel
+					? renderLabel({
+							...item,
+							isHighlighted: highlightedIndex === index,
+							isSelected: item.label === inputValue,
+						})
+					: item.label}
 			</div>
 		</li>
 	),

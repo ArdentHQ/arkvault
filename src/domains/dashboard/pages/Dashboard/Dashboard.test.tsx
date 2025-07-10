@@ -192,4 +192,19 @@ describe("Dashboard", () => {
 
 		selectedWalletsMock.mockRestore();
 	});
+
+	it("should render and handle sign message deeplink", async () => {
+		render(<Dashboard />, {
+			route: `/profiles/${fixtureProfileId}/dashboard?method=sign`,
+			withProfileSynchronizer: true,
+		});
+
+		await waitFor(() =>
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(8),
+		);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("SignMessageSidePanel")).toBeVisible();
+		});
+	});
 });

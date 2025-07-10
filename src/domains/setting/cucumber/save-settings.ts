@@ -79,7 +79,7 @@ cucumber(
 		"Given Alice signs into a profile with a wallet": async (t: TestController) => {
 			await visitWelcomeScreen(t);
 			await goToProfile(t);
-			await importWalletByAddress(t, "AThxYTVgpzZfW7K6UxyB8vBZVMoPAwQS3D", undefined, true);
+			await importWalletByAddress(t, "0xb0E6c955a0Df13220C36Ea9c95bE471249247E57", undefined, true);
 		},
 		"And she is on the settings page": async (t: TestController) => {
 			await t.click(Selector('[data-testid="UserMenu"]'));
@@ -100,11 +100,11 @@ cucumber(
 	},
 	[
 		mockRequest(
-			"https://ark-live.arkvault.io/api/transactions?page=1&limit=20&senderId=AThxYTVgpzZfW7K6UxyB8vBZVMoPAwQS3D",
+			"https://ark-live.arkvault.io/api/transactions?page=1&limit=20&senderId=0xb0E6c955a0Df13220C36Ea9c95bE471249247E57",
 			[],
 		),
 		mockRequest(
-			"https://ark-live.arkvault.io/api/transactions?limit=30&address=AThxYTVgpzZfW7K6UxyB8vBZVMoPAwQS3D",
+			"https://ark-live.arkvault.io/api/transactions?limit=30&address=0xb0E6c955a0Df13220C36Ea9c95bE471249247E57",
 			[],
 		),
 	],

@@ -110,15 +110,18 @@ describe("Contacts", () => {
 		});
 	});
 
-	it("should render without contacts", () => {
+	it.each(["xs", "sm", "md", "lg", "xl"])("should render without contacts in %s", (breakpoint) => {
 		const contactsSpy = vi.spyOn(profile.contacts(), "values").mockReturnValue([]);
 
-		const { asFragment } = renderComponent();
+		const { asFragment } = renderResponsiveComponent(breakpoint);
 
-		expect(screen.getByTestId("header__title")).toHaveTextContent(translations.CONTACTS_PAGE.TITLE);
-		expect(screen.getByTestId("header__subtitle")).toHaveTextContent(translations.CONTACTS_PAGE.SUBTITLE);
+		if (breakpoint !== "xs") {
+			expect(screen.getByTestId("EmptyResults")).toBeInTheDocument();
+		}
 
-		expect(screen.getByTestId("EmptyResults")).toBeInTheDocument();
+		if (breakpoint === "xs") {
+			expect(screen.getByTestId("NoResultsMessage")).toBeInTheDocument();
+		}
 
 		expect(asFragment()).toMatchSnapshot();
 
