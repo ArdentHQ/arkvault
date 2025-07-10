@@ -319,7 +319,7 @@ jobs:
                   path: ${{ github.workspace }}/screenshots/**/*
 
     e2e-profile:
-        needs: e2e-contact
+        needs: e2e-dashboard
 
         runs-on: ubuntu-latest
 
