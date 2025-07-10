@@ -11,30 +11,17 @@ const preSteps = {
 		await goToProfile(t);
 	},
 };
-cucumber(
-	"@notifications-openNotifications",
-	{
-		...preSteps,
-		"When she opens her notifications": async (t: TestController) => {
-			await t.expect(notifications.exists).ok();
-			await t.click(notifications);
-		},
-		"Then the notification list is displayed": async (t: TestController) => {
-			await t.expect(Selector("[data-testid=NotificationsWrapper]").exists).ok();
-			await t.expect(Selector("[data-testid=NotificationsWrapper] [data-testid=TableRow]").count).gt(0);
-		},
+cucumber("@notifications-openNotifications", {
+	...preSteps,
+	"When she opens her notifications": async (t: TestController) => {
+		await t.expect(notifications.exists).ok();
+		await t.click(notifications);
 	},
-	[
-		mockRequest(
-			"https://ark-test.arkvault.io/api/transactions?page=1&limit=12&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
-			"coins/ark/devnet/transactions/byAddress/D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD-1-10",
-		),
-		mockRequest(
-			"https://ark-test.arkvault.io/api/transactions?page=1&limit=12&address=D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
-			"coins/ark/devnet/transactions/byAddress/D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb-1-10",
-		),
-	],
-);
+	"Then the notification list is displayed": async (t: TestController) => {
+		await t.expect(Selector("[data-testid=NotificationsWrapper]").exists).ok();
+		await t.expect(Selector("[data-testid=NotificationsWrapper] [data-testid=TableRow]").count).gt(0);
+	},
+});
 cucumber(
 	"@notifications-transactionDetail",
 	{
@@ -61,105 +48,61 @@ cucumber(
 	},
 	[
 		mockRequest(
-			"https://ark-test.arkvault.io/api/blocks/e6d4760c50419d8665731d3391ba209767f3073d4b2b6661078ff220034d197e",
+			"https://dwallets-evm.mainsailhq.com/api/blocks/1e6789dd661ea8cd38ded6fe818eba181589497a2cc3179c42bb5695c33bcf50",
 			{
 				data: {
-					id: "e6d4760c50419d8665731d3391ba209767f3073d4b2b6661078ff220034d197e",
-					version: 0,
-					height: 19362468,
-					previous: "ee54abc37bac91358cbcdfe725347268bd6ee1c5f0b3a48b3ba3025ee7cfca11",
-					forged: {
-						reward: "200000000",
-						fee: "6206028",
-						amount: "100000",
-						total: "206206028",
-					},
-					payload: {
-						hash: "2cf134885471ae6c9ea44f43a7b5f8a1ab78078cd102615d56344f6a43a1ff6f",
-						length: 32,
-					},
-					generator: {
-						username: "genesis_27",
-						address: "DKY5eyQUKKYyaCfPp6MUv3Y4FW6EbNF53A",
-						publicKey: "03508436f55577f406be58a5e7e59307cea823943c5312d62f4e3f3c63966f6e7c",
-					},
+					confirmations: 17870,
+					fee: "141733562397000",
+					gasUsed: 21000,
+					hash: "1e6789dd661ea8cd38ded6fe818eba181589497a2cc3179c42bb5695c33bcf50",
+					number: 21767940,
+					parentHash: "420663de74f14cdd4a6777bd17f46fbe28ea28e7bb57d920ee818b4ec644b0f1",
+					payloadSize: 120,
+					proposer: "0x437A38B4770aDB4A097cbfDdCa9C14F05a000065",
+					publicKey: "02637b15aa50fa95018609a6d7b52b025de807a41b79b164626cee87dd6f61a662",
+					reward: "2000000000000000000",
+					round: 0,
 					signature:
-						"30450221009b5d4312dc7e2169aa36c35ef33e95fc02d9033faeef822e4e2ef60e53f5609802207614d9a9d2442a426fe01d505b4546c3d8f6e9581d263d873c41c673e4e8f92a",
-					confirmations: 28467,
-					transactions: 1,
-					timestamp: {
-						epoch: 236656104,
-						unix: 1726757304,
-						human: "2024-09-19T14:48:24.000Z",
-					},
+						"84cff78038b5c70c61b138f7e577d36b3287ac5545170021a217b2b4ca5e3855ff9bf6edfb71972502ce93243eac52710fe44cfc16caf09c2c688a937f6d69b0ba2fea344c212ffecab6662dd50cb9a172b6565999a724721ae843b3f17c3a7d",
+					timestamp: "1751888906120",
+					total: "2000141733562397000",
+					transactionsCount: 1,
+					transactionsRoot: "a857421d0dc28d5d75958c9e9937350435e22f0e719fd2183ee5fc5f67837aa8",
+					username: "genesis_41",
+					validatorSet: "9004583606236067",
+					version: 1,
 				},
 			},
 		),
-		mockRequest(
-			"https://ark-test.arkvault.io/api/transactions?page=1&limit=12&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
-			"coins/ark/devnet/transactions/byAddress/D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD-1-10",
-		),
-		mockRequest(
-			"https://ark-test.arkvault.io/api/transactions?page=1&limit=12&address=D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
-			"coins/ark/devnet/transactions/byAddress/D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb-1-10",
-		),
 	],
 );
-cucumber(
-	"@notifications-redDotUnread",
-	{
-		"Given Alice signs into a profile with unread notifications": async (t: TestController) => {
-			await visitWelcomeScreen(t);
-			await goToProfile(t);
-		},
-		"Then a red dot should be present on the notifications icon": async (t: TestController) => {
-			await t.expect(Selector("[data-testid=NavigationBar__buttons--notifications] .rounded-full").exists).ok();
-		},
+cucumber("@notifications-redDotUnread", {
+	"Given Alice signs into a profile with unread notifications": async (t: TestController) => {
+		await visitWelcomeScreen(t);
+		await goToProfile(t);
 	},
-	[
-		mockRequest(
-			"https://ark-test.arkvault.io/api/transactions?page=1&limit=12&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
-			"coins/ark/devnet/transactions/byAddress/D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD-1-10",
-		),
-		mockRequest(
-			"https://ark-test.arkvault.io/api/transactions?page=1&limit=12&address=D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
-			"coins/ark/devnet/transactions/byAddress/D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb-1-10",
-		),
-	],
-);
+	"Then a red dot should be present on the notifications icon": async (t: TestController) => {
+		await t.expect(Selector("[data-testid=NavigationBar__buttons--notifications] .rounded-full").exists).ok();
+	},
+});
 
-cucumber(
-	"@notifications-markAsRead",
-	{
-		"Given Alice signs into a profile with unread notifications": async (t: TestController) => {
-			await visitWelcomeScreen(t);
-			await goToProfile(t);
-		},
-		"Then a red dot should be present on the notifications icon": async (t: TestController) => {
-			await t.expect(Selector("[data-testid=NavigationBar__buttons--notifications] .rounded-full").exists).ok();
-		},
-		"When she opens her notifications": async (t: TestController) => {
-			await t.expect(notifications.exists).ok();
-			await t.click(notifications);
-		},
-		"Then the notifications are marked as read": async (t: TestController) => {
-			await t.expect(Selector("[data-testid=NotificationsWrapper] [data-testid=TableRow]").count).eql(3);
-		},
-		"And the red dot is hidden": async (t: TestController) => {
-			await t.hover(Selector("[data-testid=TableRow]"));
-			await t
-				.expect(Selector("[data-testid=NavigationBar__buttons--notifications] .rounded-full").exists)
-				.notOk();
-		},
+cucumber("@notifications-markAsRead", {
+	"Given Alice signs into a profile with unread notifications": async (t: TestController) => {
+		await visitWelcomeScreen(t);
+		await goToProfile(t);
 	},
-	[
-		mockRequest(
-			"https://ark-test.arkvault.io/api/transactions?page=1&limit=12&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
-			"coins/ark/devnet/transactions/byAddress/D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD-1-10",
-		),
-		mockRequest(
-			"https://ark-test.arkvault.io/api/transactions?page=1&limit=12&address=D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
-			"coins/ark/devnet/transactions/byAddress/D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb-1-10",
-		),
-	],
-);
+	"Then a red dot should be present on the notifications icon": async (t: TestController) => {
+		await t.expect(Selector("[data-testid=NavigationBar__buttons--notifications] .rounded-full").exists).ok();
+	},
+	"When she opens her notifications": async (t: TestController) => {
+		await t.expect(notifications.exists).ok();
+		await t.click(notifications);
+	},
+	"Then the notifications are marked as read": async (t: TestController) => {
+		await t.expect(Selector("[data-testid=NotificationsWrapper] [data-testid=TableRow]").count).eql(2);
+	},
+	"And the red dot is hidden": async (t: TestController) => {
+		await t.hover(Selector("[data-testid=TableRow]"));
+		await t.expect(Selector("[data-testid=NavigationBar__buttons--notifications] .rounded-full").exists).notOk();
+	},
+});

@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { useRegisterSW } from "virtual:pwa-register/react";
 import { usePlatform } from "@/app/hooks/use-platform";
+import { isE2E } from "@/utils/test-helpers";
 
 const HIDE_PWA_INSTALL_ALERT = "hidePwaInstallAlert";
 
@@ -50,7 +51,11 @@ export const usePwa = () => {
 		});
 	}, []);
 
-	const showInstallBanner = useMemo(() => alertEnabled && showBanner, [alertEnabled, showBanner]);
+	const isRunningE2E = isE2E();
+	const showInstallBanner = useMemo(
+		() => alertEnabled && showBanner && !isRunningE2E,
+		[alertEnabled, showBanner, isRunningE2E],
+	);
 
 	return {
 		hideInstallBanner,
