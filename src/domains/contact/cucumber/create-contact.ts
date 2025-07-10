@@ -6,7 +6,6 @@ import { goToContacts } from "../e2e/common";
 const contactName = "Test contact";
 const nameInput = Selector('[data-testid="contact-form__name-input"]');
 const addressInput = Selector('[data-testid="contact-form__address-input"]');
-const addAddressButton = Selector('[data-testid="contact-form__add-address-btn"]');
 const cancelButton = Selector('[data-testid="contact-form__cancel-btn"]');
 const saveButton = Selector('[data-testid="contact-form__save-btn"]');
 const error = Selector('[data-testid="Input__error"]');
@@ -32,12 +31,8 @@ cucumber("@createContact", {
 	...preSteps,
 	"And submits valid contact details": async (t: TestController) => {
 		await t.typeText(nameInput, contactName);
-		await t.typeText(Selector('[data-testid="SelectDropdown__input"]'), "ARK D");
-		await t.pressKey("tab");
 		const addressInput = Selector('[data-testid="contact-form__address-input"]');
-		await t.typeText(addressInput, "D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax");
-		await t.expect(addAddressButton.hasAttribute("disabled")).notOk();
-		await t.click(addAddressButton);
+		await t.typeText(addressInput, "0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54");
 		await scrollToElement(saveButton.parent(), modalOverlay);
 		await t.click(saveButton);
 		await t
@@ -90,11 +85,7 @@ cucumber("@createContact-duplicateName", {
 	...preSteps,
 	"And attempts to create a contact with a duplicate name": async (t: TestController) => {
 		await t.typeText(nameInput, "Brian");
-		await t.typeText(Selector('[data-testid="SelectDropdown__input"]'), "ARK D");
-		await t.pressKey("tab");
-		await t.typeText(addressInput, "D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax");
-		await t.expect(addAddressButton.hasAttribute("disabled")).notOk();
-		await t.click(addAddressButton);
+		await t.typeText(addressInput, "0x522B3294E6d06aA25Ad0f1B8891242E335D3B459");
 	},
 	"Then the name field provides an error": async (t: TestController) => {
 		await t.expect(error.exists).ok();
@@ -112,11 +103,7 @@ cucumber("@createContact-invalidAddress", {
 	...preSteps,
 	"And attempts to create a contact with an invalid address": async (t: TestController) => {
 		await t.typeText(nameInput, contactName);
-		await t.typeText(Selector('[data-testid="SelectDropdown__input"]'), "ARK D");
-		await t.pressKey("tab");
-		await t.typeText(addressInput, "AZzmCRP3Us7q4Pbyu3qCr2Dwq8vvuseLKa");
-		await t.expect(addAddressButton.hasAttribute("disabled")).notOk();
-		await t.click(addAddressButton);
+		await t.typeText(addressInput, "0x522B3294E6d06aA25Ad0f1B8891242E335D3B4");
 	},
 	"Then the address field provides an error": async (t: TestController) => {
 		await t.expect(error.exists).ok();
@@ -129,11 +116,7 @@ cucumber("@createContact-invalidAddress", {
 cucumber("@createContact-noName", {
 	...preSteps,
 	"And attempts to create a contact without entering a name": async (t: TestController) => {
-		await t.typeText(Selector('[data-testid="SelectDropdown__input"]'), "ARK D");
-		await t.pressKey("tab");
-		await t.typeText(addressInput, "D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax");
-		await t.expect(addAddressButton.hasAttribute("disabled")).notOk();
-		await t.click(addAddressButton);
+		await t.typeText(addressInput, "0x522B3294E6d06aA25Ad0f1B8891242E335D3B459");
 	},
 	"Then the save button is disabled": async (t: TestController) => {
 		await t.expect(saveButton.hasAttribute("disabled")).ok();
