@@ -157,7 +157,6 @@ describe("TransactionIndex", () => {
 		const dataSetSpy = vi.spyOn(wallet.data(), "set");
 		vi.spyOn(wallet, "isCold").mockReturnValue(true);
 
-		// eslint-disable-next-line testing-library/await-async-query
 		await subject.all();
 
 		expect(dataSetSpy).not.toHaveBeenCalled();
