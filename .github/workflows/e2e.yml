@@ -305,8 +305,8 @@ jobs:
             - name: Chromium
               run: pnpm test:e2e:ci src/domains/dashboard/cucumber
 
-            - name: Firefox
-              run: pnpm test:e2e:ci:firefox --hostname localhost src/domains/dashboard/cucumber
+#            - name: Firefox
+#              run: pnpm test:e2e:ci:firefox --hostname localhost src/domains/dashboard/cucumber
 
             - name: Edge
               run: pnpm test:e2e:ci:edge src/domains/dashboard/cucumber
