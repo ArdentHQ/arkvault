@@ -132,4 +132,14 @@ describe("TransactionIndex", () => {
 
 		itemsSpy.mockRestore();
 	});
+
+	it("should not flag a cold wallet as hot if it only has received transactions", async () => {
+		const dataSetSpy = vi.spyOn(wallet.data(), "set");
+		vi.spyOn(wallet, "isCold").mockReturnValue(true);
+
+		// eslint-disable-next-line testing-library/await-async-query
+		await subject.all();
+
+		expect(dataSetSpy).not.toHaveBeenCalled();
+	});
 });
