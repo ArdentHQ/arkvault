@@ -60,10 +60,12 @@ export const CreateAddressesSidePanel = ({
 	const { title, subtitle, titleIcon } = useCreateStepHeaderConfig(activeTab);
 
 	useEffect(() => {
-		if (!open) return;
+		if (!open) {
+			return;
+		}
 
-		const params = new URLSearchParams(location.search);
-		const step = parseInt(params.get("createStep") || "1");
+		const parameters = new URLSearchParams(location.search);
+		const step = Number.parseInt(parameters.get("createStep") || "1");
 
 		if (step >= 1 && step <= 4) {
 			setActiveTab(step as CreateStep);
@@ -72,10 +74,12 @@ export const CreateAddressesSidePanel = ({
 
 	useEffect(() => {
 		if (!open) {
-			const params = new URLSearchParams(location.search);
-			if (params.has("createStep")) {
-				params.delete("createStep");
-				const newUrl = params.toString() ? `${location.pathname}?${params.toString()}` : location.pathname;
+			const parameters = new URLSearchParams(location.search);
+			if (parameters.has("createStep")) {
+				parameters.delete("createStep");
+				const newUrl = parameters.toString()
+					? `${location.pathname}?${parameters.toString()}`
+					: location.pathname;
 				navigate(newUrl, { replace: true });
 			}
 		}
