@@ -599,11 +599,20 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                     <div
                       class="flex flex-col"
                     >
-                      <span
-                        class="text-theme-secondary-text mx-auto mb-2 inline-block font-semibold sm:hidden"
+                      <div
+                        class="mb-3 flex flex-col gap-1.5"
                       >
-                        Transaction Review
-                      </span>
+                        <span
+                          class="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 inline-block text-lg leading-[21px] font-semibold sm:hidden"
+                        >
+                          Transaction Review
+                        </span>
+                        <span
+                          class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-xs leading-5 font-semibold sm:hidden"
+                        >
+                          Review the transaction details below.
+                        </span>
+                      </div>
                       <ul
                         class="flex flex-row gap-2"
                       >
@@ -2006,11 +2015,20 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
                     <div
                       class="flex flex-col"
                     >
-                      <span
-                        class="text-theme-secondary-text mx-auto mb-2 inline-block font-semibold sm:hidden"
+                      <div
+                        class="mb-3 flex flex-col gap-1.5"
                       >
-                        Resign Validator
-                      </span>
+                        <span
+                          class="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 inline-block text-lg leading-[21px] font-semibold sm:hidden"
+                        >
+                          Resign Validator
+                        </span>
+                        <span
+                          class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-xs leading-5 font-semibold sm:hidden"
+                        >
+                          This transaction type permanently retires a Validator address.
+                        </span>
+                      </div>
                       <ul
                         class="flex flex-row gap-2"
                       >
@@ -3161,11 +3179,20 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                     <div
                       class="flex flex-col"
                     >
-                      <span
-                        class="text-theme-secondary-text mx-auto mb-2 inline-block font-semibold sm:hidden"
+                      <div
+                        class="mb-3 flex flex-col gap-1.5"
                       >
-                        Transaction Review
-                      </span>
+                        <span
+                          class="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 inline-block text-lg leading-[21px] font-semibold sm:hidden"
+                        >
+                          Transaction Review
+                        </span>
+                        <span
+                          class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-xs leading-5 font-semibold sm:hidden"
+                        >
+                          Review the transaction details below.
+                        </span>
+                      </div>
                       <ul
                         class="flex flex-row gap-2"
                       >
@@ -4452,11 +4479,20 @@ exports[`SendValidatorResignation > Validator Resignation > should render 3rd st
                     <div
                       class="flex flex-col"
                     >
-                      <span
-                        class="text-theme-secondary-text mx-auto mb-2 inline-block font-semibold sm:hidden"
+                      <div
+                        class="mb-3 flex flex-col gap-1.5"
                       >
-                        Authenticate
-                      </span>
+                        <span
+                          class="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 inline-block text-lg leading-[21px] font-semibold sm:hidden"
+                        >
+                          Authenticate
+                        </span>
+                        <span
+                          class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-xs leading-5 font-semibold sm:hidden"
+                        >
+                          Enter your mnemonic passphrase to authenticate the transaction.
+                        </span>
+                      </div>
                       <ul
                         class="flex flex-row gap-2"
                       >
@@ -5446,11 +5482,15 @@ exports[`SendValidatorResignation > Validator Resignation > should show error st
                         <div
                           class="flex flex-col"
                         >
-                          <span
-                            class="text-theme-secondary-text mx-auto mb-2 inline-block font-semibold sm:hidden"
+                          <div
+                            class="mb-3 flex flex-col gap-1.5"
                           >
-                            Transaction Error
-                          </span>
+                            <span
+                              class="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 inline-block text-lg leading-[21px] font-semibold sm:hidden"
+                            >
+                              Transaction Error
+                            </span>
+                          </div>
                           <ul
                             class="flex flex-row gap-2"
                           >
