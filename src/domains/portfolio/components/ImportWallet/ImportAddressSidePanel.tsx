@@ -2,7 +2,7 @@ import { Contracts } from "@/app/lib/profiles";
 import React, { useEffect, useMemo, useState, JSX, useRef } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { LedgerTabs } from "./Ledger/LedgerTabs";
 import { ImportDetailStep } from "./ImportDetailStep";
 import { SuccessStep } from "./SuccessStep";
@@ -37,6 +37,7 @@ export const ImportAddressesSidePanel = ({
 	onMountChange?: (mounted: boolean) => void;
 }): JSX.Element => {
 	const navigate = useNavigate();
+	const location = useLocation();
 	const activeProfile = useActiveProfile();
 	const { persist } = useEnvironmentContext();
 	const [activeTab, setActiveTab] = useState<ImportAddressStep>(ImportAddressStep.MethodStep);
@@ -76,6 +77,40 @@ export const ImportAddressesSidePanel = ({
 	const config = isLedgerImport && activeTab === ImportAddressStep.ImportDetailStep ? ledgerConfig : stepConfig;
 
 	useEffect(() => {
+		if (!open) return;
+
+		const params = new URLSearchParams(location.search);
+		const step = parseInt(params.get("importStep") || "1");
+		
+		if (step >= 1 && step <= 4) {
+			setActiveTab(step as ImportAddressStep);
+		}
+	}, [location.search, open]);
+
+	useEffect(() => {
+		if (!open) {
+			const params = new URLSearchParams(location.search);
+			if (params.has("importStep")) {
+				params.delete("importStep");
+				const newUrl = params.toString() ? `${location.pathname}?${params.toString()}` : location.pathname;
+				navigate(newUrl, { replace: true });
+			}
+		}
+	}, [open, location, navigate]);
+
+	const prevOpenRef = useRef(open);
+	useEffect(() => {
+		if (prevOpenRef.current && !open) {
+			if (activeTab === ImportAddressStep.EncryptPasswordStep && importedWallet) {
+				forgetImportedWallets(importedWallet);
+			}
+			
+			setActiveTab(ImportAddressStep.MethodStep);
+		}
+		prevOpenRef.current = open;
+	}, [open, activeTab, importedWallet]);
+
+	useEffect(() => {
 		register({ name: "importOption", type: "custom" });
 		register({ name: "useEncryption", type: "boolean", value: false });
 		register({ name: "acceptResponsibility", type: "boolean", value: false });
@@ -105,71 +140,11 @@ export const ImportAddressesSidePanel = ({
 		}
 	};
 
-	const prevOpenRef = useRef(open);
-	useEffect(() => {
-		if (prevOpenRef.current && !open) {
-			if (activeTab === ImportAddressStep.EncryptPasswordStep && importedWallet) {
-				forgetImportedWallets(importedWallet);
-			}
-
-			setActiveTab(ImportAddressStep.MethodStep);
-		}
-		prevOpenRef.current = open;
-	}, [open, activeTab, importedWallet]);
-
-	const stepHistoryRef = useRef<ImportAddressStep[]>([]);
-	const isHandlingBackRef = useRef(false);
-
-	useEffect(() => {
-		if (!open) {
-			return;
-		}
-
-		const handlePopState = (event) => {
-			if (isHandlingBackRef.current) {
-				return;
-			}
-
-			if (stepHistoryRef.current.length > 0) {
-				event.preventDefault();
-				isHandlingBackRef.current = true;
-
-				const previousStep = stepHistoryRef.current.pop()!;
-				setActiveTab(previousStep);
-
-				setTimeout(() => {
-					isHandlingBackRef.current = false;
-				}, 50);
-			}
-		};
-
-		window.addEventListener("popstate", handlePopState);
-
-		return () => {
-			window.removeEventListener("popstate", handlePopState);
-		};
-	}, [open]);
-
-	const prevActiveTabRef = useRef(activeTab);
-	useEffect(() => {
-		const prevTab = prevActiveTabRef.current;
-
-		if (open && activeTab > prevTab && !isHandlingBackRef.current) {
-			stepHistoryRef.current.push(prevTab);
-			window.history.pushState({ sidePanelStep: activeTab }, "");
-		}
-
-		if (!open) {
-			stepHistoryRef.current = [];
-		}
-
-		prevActiveTabRef.current = activeTab;
-	}, [activeTab, open]);
-
 	const handleNext = () =>
 		({
 			[ImportAddressStep.MethodStep]: async () => {
 				setActiveTab(ImportAddressStep.ImportDetailStep);
+				navigate(`?importStep=2`, { replace: false });
 			},
 			[ImportAddressStep.ImportDetailStep]: async () => {
 				setIsImporting(true);
@@ -179,8 +154,10 @@ export const ImportAddressesSidePanel = ({
 
 					if (useEncryption && importOption.canBeEncrypted) {
 						setActiveTab(ImportAddressStep.EncryptPasswordStep);
+						navigate(`?importStep=3`, { replace: false });
 					} else {
 						setActiveTab(ImportAddressStep.SummaryStep);
+						navigate(`?importStep=4`, { replace: false });
 					}
 				} catch (error) {
 					/* istanbul ignore next -- @preserve */
@@ -194,6 +171,7 @@ export const ImportAddressesSidePanel = ({
 
 				await encryptInputs();
 				setActiveTab(ImportAddressStep.SummaryStep);
+				navigate(`?importStep=4`, { replace: false });
 
 				setIsEncrypting(false);
 			},
@@ -208,7 +186,11 @@ export const ImportAddressesSidePanel = ({
 			forgetImportedWallets(importedWallet);
 		}
 
-		setActiveTab(activeTab - 1);
+		const previousStep = activeTab - 1;
+		if (previousStep >= ImportAddressStep.MethodStep) {
+			setActiveTab(previousStep);
+			navigate(`?importStep=${previousStep}`, { replace: false });
+		}
 	};
 
 	const importWallet = async () => {
@@ -318,7 +300,6 @@ export const ImportAddressesSidePanel = ({
 			hasSteps={!isMethodStep}
 			totalSteps={allSteps.length}
 			activeStep={getActiveStep()}
-			disableBackButton={activeTab > ImportAddressStep.MethodStep}
 			footer={
 				!isLedgerImport && (
 					<ImportActionToolbar

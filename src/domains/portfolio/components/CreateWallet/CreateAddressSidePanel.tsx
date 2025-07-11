@@ -9,7 +9,7 @@ import { EncryptPasswordStep } from "@/domains/wallet/components/EncryptPassword
 import { SuccessStep } from "@/domains/portfolio/components/CreateWallet/SuccessStep";
 import { Button } from "@/app/components/Button";
 import { useEnvironmentContext } from "@/app/contexts";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useActiveProfile } from "@/app/hooks";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
@@ -32,6 +32,7 @@ export const CreateAddressesSidePanel = ({
 }): JSX.Element => {
 	const { persist } = useEnvironmentContext();
 	const navigate = useNavigate();
+	const location = useLocation();
 	const { t } = useTranslation();
 	const activeProfile = useActiveProfile();
 	const [activeTab, setActiveTab] = useState<CreateStep>(CreateStep.WalletOverviewStep);
@@ -58,6 +59,28 @@ export const CreateAddressesSidePanel = ({
 
 	const { title, subtitle, titleIcon } = useCreateStepHeaderConfig(activeTab);
 
+	useEffect(() => {
+		if (!open) return;
+
+		const params = new URLSearchParams(location.search);
+		const step = parseInt(params.get("createStep") || "1");
+
+		if (step >= 1 && step <= 4) {
+			setActiveTab(step as CreateStep);
+		}
+	}, [location.search, open]);
+
+	useEffect(() => {
+		if (!open) {
+			const params = new URLSearchParams(location.search);
+			if (params.has("createStep")) {
+				params.delete("createStep");
+				const newUrl = params.toString() ? `${location.pathname}?${params.toString()}` : location.pathname;
+				navigate(newUrl, { replace: true });
+			}
+		}
+	}, [open, location, navigate]);
+
 	const prevOpenRef = useRef(open);
 	useEffect(() => {
 		if (prevOpenRef.current && !open) {
@@ -65,34 +88,6 @@ export const CreateAddressesSidePanel = ({
 		}
 		prevOpenRef.current = open;
 	}, [open]);
-
-	useEffect(() => {
-		if (!open) {
-			return;
-		}
-
-		let historyPushed = false;
-
-		const handlePopState = (event) => {
-			if (activeTab > CreateStep.WalletOverviewStep) {
-				event.preventDefault();
-				event.stopImmediatePropagation();
-
-				handleBack();
-			}
-		};
-
-		if (!historyPushed) {
-			window.history.pushState({ createPanelStep: activeTab }, "");
-			historyPushed = true;
-		}
-
-		window.addEventListener("popstate", handlePopState, true);
-
-		return () => {
-			window.removeEventListener("popstate", handlePopState, true);
-		};
-	}, [open, activeTab]);
 
 	useEffect(() => {
 		register("network", { required: true });
@@ -153,7 +148,11 @@ export const CreateAddressesSidePanel = ({
 			return navigate(`/profiles/${activeProfile.id()}/dashboard`);
 		}
 
-		setActiveTab(activeTab - 1);
+		const previousStep = activeTab - 1;
+		if (previousStep >= CreateStep.WalletOverviewStep) {
+			setActiveTab(previousStep);
+			navigate(`?createStep=${previousStep}`, { replace: false });
+		}
 	};
 
 	const handleNext = async (parameters: { encryptionPassword?: string } = {}) => {
@@ -165,7 +164,6 @@ export const CreateAddressesSidePanel = ({
 
 		if (newIndex === CreateStep.WalletOverviewStep) {
 			void handleGenerateWallet();
-
 			return;
 		}
 
@@ -209,6 +207,7 @@ export const CreateAddressesSidePanel = ({
 		}
 
 		setActiveTab(newIndex);
+		navigate(`?createStep=${newIndex}`, { replace: false });
 	};
 
 	const handlePasswordSubmit = () => {
@@ -271,7 +270,6 @@ export const CreateAddressesSidePanel = ({
 			hasSteps
 			totalSteps={allSteps.length}
 			activeStep={activeTab}
-			disableBackButton={activeTab > CreateStep.WalletOverviewStep}
 			footer={
 				<SidePanelButtons data-testid="CreateAddressSidePanel__footer">
 					{activeTab <= CreateStep.EncryptPasswordStep && (
