@@ -82,13 +82,13 @@ describe("TransactionIndex", () => {
 	});
 
 	it("should find a transaction by its ID", async () => {
-		await subject.findById("id");
+		await expect(subject.findById("id")).resolves.toBeDefined();
 
 		expect(transactionSpy).toHaveBeenCalledWith("id");
 	});
 
 	it("should find multiple transactions by their IDs", async () => {
-		await subject.findByIds(["id1", "id2"]);
+		await expect(subject.findByIds(["id1", "id2"])).resolves.toBeDefined();
 
 		expect(transactionSpy).toHaveBeenCalledTimes(2);
 		expect(transactionSpy).toHaveBeenCalledWith("id1");
