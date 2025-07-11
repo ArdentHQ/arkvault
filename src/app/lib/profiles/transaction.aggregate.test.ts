@@ -142,6 +142,29 @@ describe("TransactionAggregate", () => {
 		expect(allSpy).toHaveBeenCalled();
 	});
 
+	it("should filter by networkId", async () => {
+		const allSpy = vi
+			.spyOn(wallet.transactionIndex(), "all")
+			.mockResolvedValue(new ExtendedConfirmedTransactionDataCollection([], {}));
+
+		vi.spyOn(wallet, "networkId").mockReturnValue("ark.mainnet");
+
+		await subject.flush("all");
+
+		// Call with matching networkId
+		await subject.all({
+			identifiers: [{ networkId: "ark.mainnet", type: "address", value: wallet.address() }],
+		});
+		expect(allSpy).toHaveBeenCalledTimes(1);
+
+		// Call with non-matching networkId
+		await subject.all({
+			identifiers: [{ networkId: "ark.devnet", type: "address", value: wallet.address() }],
+		});
+		// getWallets will be empty, so allSpy will not be called again.
+		expect(allSpy).toHaveBeenCalledTimes(1);
+	});
+
 	it("should use history for subsequent calls", async () => {
 		const collectionWithMore = new ExtendedConfirmedTransactionDataCollection([createTransactionMock(wallet)], {
 			next: 2,
