@@ -95,6 +95,26 @@ describe("TransactionIndex", () => {
 		expect(transactionSpy).toHaveBeenCalledWith("id2");
 	});
 
+	it("should fetch sent transactions without a query", async () => {
+		await subject.sent();
+
+		expect(transactionsSpy).toHaveBeenCalledWith(
+			expect.objectContaining({
+				from: wallet.address(),
+			}),
+		);
+	});
+
+	it("should fetch received transactions without a query", async () => {
+		await subject.received();
+
+		expect(transactionsSpy).toHaveBeenCalledWith(
+			expect.objectContaining({
+				to: wallet.address(),
+			}),
+		);
+	});
+
 	it("should flag a cold wallet as hot if it sends a transaction", async () => {
 		const dataSetSpy = vi.spyOn(wallet.data(), "set");
 		vi.spyOn(wallet, "isCold").mockReturnValue(true);
