@@ -145,7 +145,7 @@ export class TransactionAggregate implements ITransactionAggregate {
 							return networkMatch && value === wallet.publicKey();
 						}
 
-						/* istanbul ignore next */
+						/* istanbul ignore next -- @preserve */
 						return false;
 					})
 				);
