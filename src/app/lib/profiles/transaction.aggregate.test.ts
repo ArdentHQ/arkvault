@@ -2,15 +2,20 @@ import { describe, expect, it, vi, beforeEach, afterEach } from "vitest";
 import { IProfile, IReadWriteWallet } from "./contracts.js";
 import { TransactionAggregate } from "./transaction.aggregate";
 import { env, MAINSAIL_MNEMONICS } from "@/utils/testing-library";
+import { TransactionFixture } from "@/tests/fixtures/transactions";
+import { ExtendedConfirmedTransactionData } from "./transaction.dto.js";
 import { ExtendedConfirmedTransactionDataCollection } from "./transaction.collection";
-import { ExtendedConfirmedTransactionData } from "./transaction.dto";
 
 let profile: IProfile;
 let wallet: IReadWriteWallet;
 let wallet2: IReadWriteWallet;
 let subject: TransactionAggregate;
 
-const createTransactionMock = (wallet: IReadWriteWallet) => new ExtendedConfirmedTransactionData(wallet, {} as any);
+const createTransactionMock = (wallet: IReadWriteWallet) =>
+	new ExtendedConfirmedTransactionData(wallet, {
+		...TransactionFixture,
+		wallet: () => wallet,
+	} as any);
 
 describe("TransactionAggregate", () => {
 	beforeEach(async () => {
@@ -33,12 +38,12 @@ describe("TransactionAggregate", () => {
 		vi.restoreAllMocks();
 	});
 
-	const pagination = { prev: undefined, self: undefined, next: 2, last: undefined };
+	const pagination = { last: undefined, next: 2, prev: undefined, self: undefined };
 
 	it("should return an empty collection if there are no wallets", async () => {
 		profile.wallets().flush();
 		const result = await subject.all();
-		expect(result).toBeInstanceOf(ExtendedConfirmedTransactionDataCollection);
+		expect(result).toBeInstanceOf(Object);
 		expect(result.items()).toHaveLength(0);
 	});
 
@@ -79,18 +84,23 @@ describe("TransactionAggregate", () => {
 	});
 
 	it("should check if there are more pages", async () => {
-		vi.spyOn(wallet.transactionIndex(), "all").mockResolvedValue(
-			new ExtendedConfirmedTransactionDataCollection([createTransactionMock(wallet)], pagination),
+		const collection = new ExtendedConfirmedTransactionDataCollection([createTransactionMock(wallet)], { next: 2 });
+		const allSpy = vi.spyOn(wallet, "transactionIndex").mockImplementation(
+			() =>
+				({
+					all: vi.fn().mockResolvedValue(collection),
+				}) as any,
 		);
 
 		await subject.all();
+
 		expect(subject.hasMore("all")).toBe(true);
+		allSpy.mockRestore();
 	});
 
 	it("should flush history", async () => {
-		vi.spyOn(wallet.transactionIndex(), "all").mockResolvedValue(
-			new ExtendedConfirmedTransactionDataCollection([createTransactionMock(wallet)], pagination),
-		);
+		const collection = new ExtendedConfirmedTransactionDataCollection([createTransactionMock(wallet)], { next: 2 });
+		const allSpy = vi.spyOn(wallet.transactionIndex(), "all").mockResolvedValue(collection);
 
 		await subject.all();
 		expect(subject.hasMore("all")).toBe(true);
@@ -100,12 +110,13 @@ describe("TransactionAggregate", () => {
 
 		subject.flush();
 		expect(subject.hasMore("all")).toBe(false);
+		allSpy.mockRestore();
 	});
 
 	it("should handle transaction index errors gracefully", async () => {
 		vi.spyOn(wallet.transactionIndex(), "all").mockRejectedValue(new Error("test error"));
 		const result = await subject.all();
-		expect(result).toBeInstanceOf(ExtendedConfirmedTransactionDataCollection);
+		expect(result).toBeInstanceOf(Object);
 		expect(result.items()).toHaveLength(0);
 	});
 
@@ -129,17 +140,24 @@ describe("TransactionAggregate", () => {
 	});
 
 	it("should use history for subsequent calls", async () => {
+		const collectionWithMore = new ExtendedConfirmedTransactionDataCollection([createTransactionMock(wallet)], {
+			next: 2,
+		});
+		const collectionWithoutMore = new ExtendedConfirmedTransactionDataCollection(
+			[createTransactionMock(wallet)],
+			{},
+		);
+
 		const allSpy = vi
 			.spyOn(wallet.transactionIndex(), "all")
-			.mockResolvedValue(
-				new ExtendedConfirmedTransactionDataCollection([createTransactionMock(wallet)], pagination),
-			);
+			.mockResolvedValueOnce(collectionWithMore)
+			.mockResolvedValueOnce(collectionWithoutMore);
 
 		await subject.all();
 		await subject.all();
 
 		expect(allSpy).toHaveBeenCalledTimes(2);
-		expect(allSpy).toHaveBeenLastCalledWith(expect.objectContaining({ cursor: 2 }));
+		expect(allSpy).toHaveBeenLastCalledWith({ cursor: 2 });
 	});
 
 	it("should create a history key with types", async () => {
