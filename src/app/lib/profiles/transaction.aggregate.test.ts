@@ -180,4 +180,13 @@ describe("TransactionAggregate", () => {
 		await subject.all({ from: wallet.address() });
 		expect(allSpy).toHaveBeenCalled();
 	});
+
+	it("should ignore wallets that have not been synced", async () => {
+		vi.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValue(false);
+		vi.spyOn(wallet2, "hasSyncedWithNetwork").mockReturnValue(false);
+
+		const result = await subject.all();
+
+		expect(result.items()).toHaveLength(0);
+	});
 });
