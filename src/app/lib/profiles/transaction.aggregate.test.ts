@@ -3,16 +3,14 @@ import { IProfile, IReadWriteWallet } from "./contracts.js";
 import { TransactionAggregate } from "./transaction.aggregate";
 import { env, MAINSAIL_MNEMONICS } from "@/utils/testing-library";
 import { ExtendedConfirmedTransactionDataCollection } from "./transaction.collection";
+import { ExtendedConfirmedTransactionData } from "./transaction.dto";
 
 let profile: IProfile;
 let wallet: IReadWriteWallet;
 let wallet2: IReadWriteWallet;
 let subject: TransactionAggregate;
 
-const createTransactionMock = (wallet: IReadWriteWallet) => ({
-	id: "id",
-	wallet: () => wallet,
-});
+const createTransactionMock = (wallet: IReadWriteWallet) => new ExtendedConfirmedTransactionData(wallet, {} as any);
 
 describe("TransactionAggregate", () => {
 	beforeEach(async () => {
@@ -35,6 +33,8 @@ describe("TransactionAggregate", () => {
 		vi.restoreAllMocks();
 	});
 
+	const pagination = { prev: undefined, self: undefined, next: 2, last: undefined };
+
 	it("should return an empty collection if there are no wallets", async () => {
 		profile.wallets().flush();
 		const result = await subject.all();
@@ -46,7 +46,7 @@ describe("TransactionAggregate", () => {
 		const allSpy = vi
 			.spyOn(wallet.transactionIndex(), "all")
 			.mockResolvedValue(
-				new ExtendedConfirmedTransactionDataCollection([createTransactionMock(wallet)], { nextPage: 2 }),
+				new ExtendedConfirmedTransactionDataCollection([createTransactionMock(wallet)], pagination),
 			);
 
 		const result = await subject.all();
@@ -58,7 +58,7 @@ describe("TransactionAggregate", () => {
 		const sentSpy = vi
 			.spyOn(wallet.transactionIndex(), "sent")
 			.mockResolvedValue(
-				new ExtendedConfirmedTransactionDataCollection([createTransactionMock(wallet)], { nextPage: 2 }),
+				new ExtendedConfirmedTransactionDataCollection([createTransactionMock(wallet)], pagination),
 			);
 
 		const result = await subject.sent();
@@ -70,7 +70,7 @@ describe("TransactionAggregate", () => {
 		const receivedSpy = vi
 			.spyOn(wallet.transactionIndex(), "received")
 			.mockResolvedValue(
-				new ExtendedConfirmedTransactionDataCollection([createTransactionMock(wallet)], { nextPage: 2 }),
+				new ExtendedConfirmedTransactionDataCollection([createTransactionMock(wallet)], pagination),
 			);
 
 		const result = await subject.received();
@@ -80,7 +80,7 @@ describe("TransactionAggregate", () => {
 
 	it("should check if there are more pages", async () => {
 		vi.spyOn(wallet.transactionIndex(), "all").mockResolvedValue(
-			new ExtendedConfirmedTransactionDataCollection([createTransactionMock(wallet)], { nextPage: 2 }),
+			new ExtendedConfirmedTransactionDataCollection([createTransactionMock(wallet)], pagination),
 		);
 
 		await subject.all();
@@ -89,7 +89,7 @@ describe("TransactionAggregate", () => {
 
 	it("should flush history", async () => {
 		vi.spyOn(wallet.transactionIndex(), "all").mockResolvedValue(
-			new ExtendedConfirmedTransactionDataCollection([createTransactionMock(wallet)], { nextPage: 2 }),
+			new ExtendedConfirmedTransactionDataCollection([createTransactionMock(wallet)], pagination),
 		);
 
 		await subject.all();
@@ -112,7 +112,7 @@ describe("TransactionAggregate", () => {
 	it("should filter wallets by identifiers", async () => {
 		const allSpy = vi
 			.spyOn(wallet.transactionIndex(), "all")
-			.mockResolvedValue(new ExtendedConfirmedTransactionDataCollection([], {}));
+			.mockResolvedValue(new ExtendedConfirmedTransactionDataCollection([], { ...pagination, next: undefined }));
 
 		await subject.all({ identifiers: [{ type: "address", value: wallet.address() }] });
 		expect(allSpy).toHaveBeenCalled();
@@ -121,7 +121,7 @@ describe("TransactionAggregate", () => {
 	it("should filter wallets by extended public key", async () => {
 		const allSpy = vi
 			.spyOn(wallet.transactionIndex(), "all")
-			.mockResolvedValue(new ExtendedConfirmedTransactionDataCollection([], {}));
+			.mockResolvedValue(new ExtendedConfirmedTransactionDataCollection([], { ...pagination, next: undefined }));
 		vi.spyOn(wallet, "publicKey").mockReturnValue("test-pk");
 
 		await subject.all({ identifiers: [{ type: "extendedPublicKey", value: "test-pk" }] });
@@ -132,7 +132,7 @@ describe("TransactionAggregate", () => {
 		const allSpy = vi
 			.spyOn(wallet.transactionIndex(), "all")
 			.mockResolvedValue(
-				new ExtendedConfirmedTransactionDataCollection([createTransactionMock(wallet)], { nextPage: 2 }),
+				new ExtendedConfirmedTransactionDataCollection([createTransactionMock(wallet)], pagination),
 			);
 
 		await subject.all();
@@ -145,7 +145,7 @@ describe("TransactionAggregate", () => {
 	it("should create a history key with types", async () => {
 		const allSpy = vi
 			.spyOn(wallet.transactionIndex(), "all")
-			.mockResolvedValue(new ExtendedConfirmedTransactionDataCollection([], {}));
+			.mockResolvedValue(new ExtendedConfirmedTransactionDataCollection([], { ...pagination, next: undefined }));
 
 		await subject.all({ types: ["type1", "type2"] });
 		expect(allSpy).toHaveBeenCalled();
@@ -154,7 +154,7 @@ describe("TransactionAggregate", () => {
 	it("should filter wallets by from address", async () => {
 		const allSpy = vi
 			.spyOn(wallet.transactionIndex(), "all")
-			.mockResolvedValue(new ExtendedConfirmedTransactionDataCollection([], {}));
+			.mockResolvedValue(new ExtendedConfirmedTransactionDataCollection([], { ...pagination, next: undefined }));
 
 		await subject.all({ from: wallet.address() });
 		expect(allSpy).toHaveBeenCalled();
