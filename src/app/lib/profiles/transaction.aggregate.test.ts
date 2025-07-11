@@ -92,6 +92,7 @@ describe("TransactionAggregate", () => {
 				}) as any,
 		);
 
+		await subject.flush("all");
 		await subject.all();
 
 		expect(subject.hasMore("all")).toBe(true);
@@ -102,6 +103,7 @@ describe("TransactionAggregate", () => {
 		const collection = new ExtendedConfirmedTransactionDataCollection([createTransactionMock(wallet)], { next: 2 });
 		const allSpy = vi.spyOn(wallet.transactionIndex(), "all").mockResolvedValue(collection);
 
+		await subject.flush("all");
 		await subject.all();
 		expect(subject.hasMore("all")).toBe(true);
 
@@ -153,6 +155,7 @@ describe("TransactionAggregate", () => {
 			.mockResolvedValueOnce(collectionWithMore)
 			.mockResolvedValueOnce(collectionWithoutMore);
 
+		await subject.flush("all");
 		await subject.all();
 		await subject.all();
 
