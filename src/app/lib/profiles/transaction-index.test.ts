@@ -1,13 +1,27 @@
-import { describe, expect, it, vi } from "vitest";
+import { describe, expect, it, vi, beforeEach, afterEach } from "vitest";
 
 import { TransactionIndex } from "./transaction-index";
-import { createWalletMock } from "./wallet.test.helpers";
+import { IProfile, IReadWriteWallet } from "./contracts.js";
+import { env, MAINSAIL_MNEMONICS } from "@/utils/testing-library";
+
+let profile: IProfile;
+let wallet: IReadWriteWallet;
+let transactionIndex: TransactionIndex;
 
 describe("TransactionIndex", () => {
-	it("should create transaction index", () => {
-		const wallet = createWalletMock();
-		const transactionIndex = new TransactionIndex(wallet);
+	beforeEach(async () => {
+		profile = await env.profiles().create("test profile");
+		wallet = await profile.walletFactory().fromMnemonicWithBIP39({
+			mnemonic: MAINSAIL_MNEMONICS[0],
+		});
+		transactionIndex = new TransactionIndex(wallet);
+	});
 
+	afterEach(() => {
+		env.profiles().forget(profile.id());
+	});
+
+	it("should create transaction index", () => {
 		expect(transactionIndex).toBeInstanceOf(TransactionIndex);
 	});
 
