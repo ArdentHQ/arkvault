@@ -183,8 +183,12 @@ export class WalletRepository implements IWalletRepository {
 	}
 
 	/** {@inheritDoc IWalletRepository.toObject} */
-	public toObject(options: IWalletExportOptions): Record<string, IWalletData> {
-		const { addNetworkInformation = true, excludeEmptyWallets = false, excludeLedgerWallets = false } = options;
+	public toObject(options?: IWalletExportOptions): Record<string, IWalletData> {
+		const {
+			addNetworkInformation = true,
+			excludeEmptyWallets = false,
+			excludeLedgerWallets = false,
+		} = options ?? {};
 
 		if (!addNetworkInformation) {
 			throw new Error("This is not implemented yet");
@@ -321,11 +325,11 @@ export class WalletRepository implements IWalletRepository {
 				await wallet.synchroniser().identity(options);
 			},
 			{
-				onFailedAttempt: (error) =>
-					/* istanbul ignore next */
+				onFailedAttempt: (error) => {
 					console.log(
 						`Attempt #${error.attemptNumber} to restore [${address}] failed. There are ${error.retriesLeft} retries left.`,
-					),
+					);
+				},
 				retries: 3,
 			},
 		);
