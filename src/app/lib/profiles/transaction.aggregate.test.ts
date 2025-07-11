@@ -134,10 +134,11 @@ describe("TransactionAggregate", () => {
 	it("should filter wallets by extended public key", async () => {
 		const allSpy = vi
 			.spyOn(wallet.transactionIndex(), "all")
-			.mockResolvedValue(new ExtendedConfirmedTransactionDataCollection([], { ...pagination, next: undefined }));
-		vi.spyOn(wallet, "publicKey").mockReturnValue("test-pk");
+			.mockResolvedValue(new ExtendedConfirmedTransactionDataCollection([], {}));
+		const publicKey = "test-pk";
+		vi.spyOn(wallet, "publicKey").mockReturnValue(publicKey);
 
-		await subject.all({ identifiers: [{ type: "extendedPublicKey", value: "test-pk" }] });
+		await subject.all({ identifiers: [{ type: "extendedPublicKey", value: publicKey }] });
 		expect(allSpy).toHaveBeenCalled();
 	});
 
@@ -188,5 +189,29 @@ describe("TransactionAggregate", () => {
 		const result = await subject.all();
 
 		expect(result.items()).toHaveLength(0);
+	});
+
+	it("should handle orderBy and limit in the history key", async () => {
+		const allSpy = vi
+			.spyOn(wallet.transactionIndex(), "all")
+			.mockResolvedValue(new ExtendedConfirmedTransactionDataCollection([], {}));
+
+		await subject.flush("all");
+
+		// First call with orderBy
+		await subject.all({ orderBy: "timestamp:desc" });
+		expect(allSpy).toHaveBeenCalledTimes(1);
+
+		// Second call with same orderBy, should call again
+		await subject.all({ orderBy: "timestamp:desc" });
+		expect(allSpy).toHaveBeenCalledTimes(2);
+
+		// Third call with limit, should call again
+		await subject.all({ limit: 10 });
+		expect(allSpy).toHaveBeenCalledTimes(3);
+
+		// Fourth call with same limit, should call again
+		await subject.all({ limit: 10 });
+		expect(allSpy).toHaveBeenCalledTimes(4);
 	});
 });
