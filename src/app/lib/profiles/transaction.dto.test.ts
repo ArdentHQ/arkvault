@@ -142,4 +142,75 @@ describe("ExtendedConfirmedTransactionData", () => {
 		const subject = new ExtendedConfirmedTransactionData(wallet, dataMock);
 		expect(subject.hash()).toBe("tx-hash");
 	});
+
+	describe("Delegated methods", () => {
+		it.each([
+			"blockHash",
+			"type",
+			"timestamp",
+			"confirmations",
+			"from",
+			"to",
+			"value",
+			"fee",
+			"memo",
+			"nonce",
+			"isConfirmed",
+			"isSent",
+			"isReceived",
+			"isReturn",
+			"isTransfer",
+			"isSecondSignature",
+			"isUsernameRegistration",
+			"isUsernameResignation",
+			"isValidatorRegistration",
+			"isVoteCombination",
+			"isVote",
+			"isUnvote",
+			"isMultiPayment",
+			"isValidatorResignation",
+			"isUpdateValidator",
+			"votes",
+			"unvotes",
+			"toObject",
+			"hasPassed",
+			"hasFailed",
+			"isSuccess",
+		])("should delegate %s", (method) => {
+			const spy = vi.spyOn(dataMock, method as keyof ConfirmedTransactionData);
+			const subject = new ExtendedConfirmedTransactionData(wallet, dataMock);
+			subject[method as keyof ExtendedConfirmedTransactionData]();
+			expect(spy).toHaveBeenCalled();
+		});
+
+		it("should delegate getMeta", () => {
+			const spy = vi.spyOn(dataMock, "getMeta");
+			const subject = new ExtendedConfirmedTransactionData(wallet, dataMock);
+			subject.getMeta("key");
+			expect(spy).toHaveBeenCalledWith("key");
+		});
+
+		it("should delegate setMeta", () => {
+			const spy = vi.spyOn(dataMock, "setMeta");
+			const subject = new ExtendedConfirmedTransactionData(wallet, dataMock);
+			subject.setMeta("key", "value");
+			expect(spy).toHaveBeenCalledWith("key", "value");
+		});
+
+		it.each([
+			"username",
+			"validatorPublicKey",
+			"expirationType",
+			"expirationValue",
+			"publicKeys",
+			"min",
+			"secondPublicKey",
+			"normalizeData",
+		])("should delegate %s", (method) => {
+			dataMock[method as keyof ConfirmedTransactionData] = vi.fn();
+			const subject = new ExtendedConfirmedTransactionData(wallet, dataMock);
+			subject[method as keyof ExtendedConfirmedTransactionData]();
+			expect(dataMock[method as keyof ConfirmedTransactionData]).toHaveBeenCalled();
+		});
+	});
 });
