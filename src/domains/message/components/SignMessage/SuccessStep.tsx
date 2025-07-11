@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 import { Address } from "@/app/components/Address";
 import { FormField } from "@/app/components/Form";
 import { DetailLabelText, DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
+import { useActiveProfile, useWalletAlias } from "@/app/hooks";
 
 export const SigningMessageInfo = ({
 	message,
@@ -14,6 +15,9 @@ export const SigningMessageInfo = ({
 	wallet: ProfileContracts.IReadWriteWallet;
 }) => {
 	const { t } = useTranslation();
+	const { getWalletAlias } = useWalletAlias();
+	const profile = useActiveProfile();
+
 	return (
 		<div className="space-y-4">
 			<DetailWrapper label={t("COMMON.SIGNING_ADDRESS")}>
@@ -22,7 +26,13 @@ export const SigningMessageInfo = ({
 					<Address
 						truncateOnTable
 						address={wallet.address()}
-						walletName={wallet.alias()}
+						walletName={
+							getWalletAlias({
+								address: wallet.address(),
+								network: wallet.network(),
+								profile,
+							}).alias
+						}
 						showCopyButton
 						walletNameClass="text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
 						addressClass="text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-700 text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4"

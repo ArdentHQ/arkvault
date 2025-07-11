@@ -64,7 +64,7 @@ export const SuccessStep = ({ verificationResult }: { verificationResult?: Verif
 
 			<div className="pt-6 sm:pt-4">
 				<FormField name="json-signature">
-					<FormLabel label={t("MESSAGE.PAGE_VERIFY_MESSAGE.FORM_STEP.JSON_STRING")} />
+					<FormLabel label={t("MESSAGE.PAGE_VERIFY_MESSAGE.FORM_STEP.SIGNATURE_JSON")} />
 					<TextArea
 						className="py-4"
 						wrap="hard"

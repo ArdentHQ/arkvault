@@ -35,110 +35,106 @@ export const scrollToElement = async (selector: Selector, scrollable?: Selector)
 	return t.scroll(0, top);
 };
 
-export const BASEURL = "https://ark-test.arkvault.io/api/";
+export const BASEURL = "https://dwallets-evm.mainsailhq.com/api/";
 
-const PING_RESPONSE_PATH = "coins/ark/mainnet/ping";
+const PING_RESPONSE_PATH = "coins/mainsail/devnet/ping";
 
 const pingServerUrls = new Set([
 	"https://ark-live.arkvault.io/",
 	"https://ark-live.arkvault.io",
-	"https://ark-test.arkvault.io/",
-	"https://ark-test.arkvault.io",
+	"https://dwallets-evm.mainsailhq.com/",
+	"https://dwallets-evm.mainsailhq.com",
 	"https://explorer.blockpool.io:19031",
 	"https://apis.compendia.org",
 	"https://apis-testnet.compendia.org",
 	"https://qredit.cloud",
 	"https://qredit.dev",
-	"https://ark-live.arkvault.io/api/wallets?limit=1&nonce=0",
-	"https://ark-test.arkvault.io/api/wallets?limit=1&nonce=0",
+	"https://wallets-evm.mainsailhq.com/api/wallets?limit=1&nonce=0",
+	"https://dwallets-evm.mainsailhq.com/api/wallets?limit=1&nonce=0",
+	// "https://dwallets-evm.mainsailhq.com/evm/api",
 ]);
 
 const knownWallets: any[] = [];
 
-const transactionsFixture = "coins/ark/devnet/transactions";
-const validatorsFixture = "coins/ark/devnet/validators";
+const transactionsFixture = "coins/mainsail/devnet/transactions";
+const validatorsFixture = "coins/mainsail/devnet/validators";
 const imageFixture = "/assets/background.png";
 
 const walletMocks = () => {
 	const addresses = [
-		"D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax",
-		"D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
-		"D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib",
-		"D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
-		"DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P",
-		"DFJ5Z51F1euNNdRUQJKQVdG4h495LZkc6T",
-		"D9YiyRYMBS2ofzqkufjrkB9nHofWgJLM7f",
-		"DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu",
-		"DDA5nM7KEqLeTtQKv5qGgcnc6dpNBKJNTS",
-		"D68sFcspN2LVd9HZpf98c7bXkNimK3M6AZ",
-		"DJXg9Vqg2tofRNrMAvMzhZTkegu8QyyNQq",
-		"DNTwQTSp999ezQ425utBsWetcmzDuCn2pN",
+		"0x659A76be283644AEc2003aa8ba26485047fd1BFB",
+		"0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
+		"0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54",
 	];
 
 	const publicKeys = ["034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192"];
 
 	const devnetMocks = [...addresses, ...publicKeys].map((identifier: string) =>
-		mockRequest(`https://ark-test.arkvault.io/api/wallets/${identifier}`, `coins/ark/devnet/wallets/${identifier}`),
+		mockRequest(
+			`https://dwallets-evm.mainsailhq.com/api/wallets/${identifier}`,
+			`coins/mainsail/devnet/wallets/${identifier}`,
+		),
 	);
 
-	const mainnetMocks = ["AThxYTVgpzZfW7K6UxyB8vBZVMoPAwQS3D"].map((identifier: string) =>
+	const mainnetMocks = ["0xb0E6c955a0Df13220C36Ea9c95bE471249247E57"].map((identifier: string) =>
 		mockRequest(
-			`https://ark-live.arkvault.io/api/wallets/${identifier}`,
-			`coins/ark/mainnet/wallets/${identifier}`,
+			`https://wallets-evm.mainsailhq.com/api/wallets/${identifier}`,
+			`coins/mainsail/mainnet/wallets/${identifier}`,
 		),
 	);
 
 	// We want to use a clean version of this wallet in E2E tests so we don't have
 	// any pre-defined behaviours like delegation, voting and whatever else exists
-	devnetMocks.push(
-		mockRequest(
-			"https://ark-test.arkvault.io/api/wallets/DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
-			"coins/ark/devnet/wallets/DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr-basic",
-		),
-	);
+	devnetMocks
+		.push
+		// mockRequest(
+		// 	"https://dwallets-evm.mainsailhq.com/api/wallets/0x659A76be283644AEc2003aa8ba26485047fd1BFB",
+		// 	"coins/mainsail/devnet/wallets/0x659A76be283644AEc2003aa8ba26485047fd1BFB-basic",
+		// ),
+		();
 
 	return [...devnetMocks, ...mainnetMocks];
 };
 
 const searchAddressesMocks = () => {
 	const addresses = {
-		AThxYTVgpzZfW7K6UxyB8vBZVMoPAwQS3D: [
-			{ limit: 10, page: 1 },
-			{ limit: 15, page: 1 },
-			{ limit: 30, page: 1 },
-		],
-		D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb: [
-			{ limit: 10, page: 1 },
-			{ limit: 15, page: 1 },
-			{ limit: 30, page: 1 },
-		],
-		D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD: [
+		// "0xb0E6c955a0Df13220C36Ea9c95bE471249247E57": [
+		// 	{ limit: 10, page: 1 },
+		// 	{ limit: 15, page: 1 },
+		// 	{ limit: 30, page: 1 },
+		// ],
+		// D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb: [
+		// 	{ limit: 10, page: 1 },
+		// 	{ limit: 15, page: 1 },
+		// 	{ limit: 30, page: 1 },
+		// ],
+		// D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD: [
+		// 	{ limit: 10, page: 1 },
+		// 	{ limit: 15, page: 1 },
+		// 	{ limit: 15, page: 2 },
+		// 	{ limit: 30, page: 1 },
+		// ],
+		"0x659A76be283644AEc2003aa8ba26485047fd1BFB": [
 			{ limit: 10, page: 1 },
 			{ limit: 15, page: 1 },
 			{ limit: 15, page: 2 },
 			{ limit: 30, page: 1 },
 		],
-		DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr: [
-			{ limit: 10, page: 1 },
-			{ limit: 15, page: 1 },
-			{ limit: 15, page: 2 },
-			{ limit: 30, page: 1 },
-		],
-		DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P: [
-			{ limit: 10, page: 1 },
-			{ limit: 15, page: 1 },
-			{ limit: 30, page: 1 },
-		],
-		DDA5nM7KEqLeTtQKv5qGgcnc6dpNBKJNTS: [
-			{ limit: 10, page: 1 },
-			{ limit: 15, page: 1 },
-			{ limit: 30, page: 1 },
-		],
-		DJXg9Vqg2tofRNrMAvMzhZTkegu8QyyNQq: [
-			{ limit: 10, page: 1 },
-			{ limit: 15, page: 1 },
-			{ limit: 30, page: 1 },
-		],
+		// DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P: [
+		// 	{ limit: 10, page: 1 },
+		// 	{ limit: 15, page: 1 },
+		// 	{ limit: 30, page: 1 },
+		// ],
+		// DDA5nM7KEqLeTtQKv5qGgcnc6dpNBKJNTS: [
+		// 	{ limit: 10, page: 1 },
+		// 	{ limit: 15, page: 1 },
+		// 	{ limit: 30, page: 1 },
+		// ],
+		// DJXg9Vqg2tofRNrMAvMzhZTkegu8QyyNQq: [
+		// 	{ limit: 10, page: 1 },
+		// 	{ limit: 15, page: 1 },
+		// 	{ limit: 30, page: 1 },
+		// ],
 	};
 
 	const mocks: any = [];
@@ -149,10 +145,10 @@ const searchAddressesMocks = () => {
 				mockRequest(
 					(request: any) =>
 						request.url ===
-							`https://ark-test.arkvault.io/api/transactions?page=${page}&limit=${limit}&address=${address}` ||
+							`https://dwallets-evm.mainsailhq.com/api/transactions?page=${page}&limit=${limit}&address=${address}` ||
 						request.url ===
-							`https://ark-test.arkvault.io/api/transactions?limit=${limit}&address=${address}`,
-					`coins/ark/devnet/transactions/byAddress/${address}-${page}-${limit}`,
+							`https://dwallets-evm.mainsailhq.com/api/transactions?limit=${limit}&address=${address}`,
+					`coins/mainsail/devnet/transactions/byAddress/${address}-${page}-${limit}`,
 				),
 			),
 		);
@@ -198,50 +194,59 @@ export const mockRequest = (url: string | object | Function, fixture: string | o
 export const requestMocks = {
 	configuration: [
 		// devnet
-		mockRequest("https://ark-test.arkvault.io/api/blockchain", "coins/ark/devnet/blockchain"),
-		mockRequest("https://ark-test.arkvault.io/api/node/configuration", "coins/ark/devnet/configuration"),
+		mockRequest("https://dwallets-evm.mainsailhq.com/api/blockchain", "coins/mainsail/devnet/blockchain"),
 		mockRequest(
-			"https://ark-test.arkvault.io/api/node/configuration/crypto",
-			"coins/ark/devnet/cryptoConfiguration",
+			"https://dwallets-evm.mainsailhq.com/api/node/configuration",
+			"coins/mainsail/devnet/configuration",
 		),
-		mockRequest("https://ark-test.arkvault.io/api/node/fees", "coins/ark/devnet/node-fees"),
-		mockRequest("https://ark-test.arkvault.io/api/node/syncing", "coins/ark/devnet/syncing"),
-		mockRequest("https://ark-test.arkvault.io/api/peers", "coins/ark/devnet/peers"),
+		mockRequest(
+			"https://dwallets-evm.mainsailhq.com/api/node/configuration/crypto",
+			"coins/mainsail/devnet/cryptoConfiguration",
+		),
+		mockRequest("https://dwallets-evm.mainsailhq.com/api/node/fees", "coins/mainsail/devnet/node-fees"),
+		mockRequest("https://dwallets-evm.mainsailhq.com/api/node/syncing", "coins/mainsail/devnet/syncing"),
+		mockRequest("https://dwallets-evm.mainsailhq.com/api/peers", "coins/mainsail/devnet/peers"),
 
 		// mainnet
 		mockRequest(
-			"https://ark-live.arkvault.io/api/node/configuration/crypto",
-			"coins/ark/mainnet/cryptoConfiguration",
+			"https://wallets-evm.mainsailhq.com/api/node/configuration/crypto",
+			"coins/mainsail/mainnet/cryptoConfiguration",
 		),
-		mockRequest("https://ark-live.arkvault.io/api/node/syncing", "coins/ark/mainnet/syncing"),
-		mockRequest("https://ark-live.arkvault.io/api/node/fees", "coins/ark/mainnet/node-fees"),
+		mockRequest("https://wallets-evm.mainsailhq.com/api/node/syncing", "coins/mainsail/mainnet/syncing"),
+		mockRequest("https://wallets-evm.mainsailhq.com/api/node/fees", "coins/mainsail/mainnet/node-fees"),
 
 		// Compendia
-		mockRequest("https://apis.compendia.org/api/node/configuration", "coins/ark/devnet/configuration"),
-		mockRequest("https://apis.compendia.org/api/node/configuration/crypto", "coins/ark/devnet/cryptoConfiguration"),
-		mockRequest("https://apis.compendia.org/api/node/syncing", "coins/ark/devnet/syncing"),
-		mockRequest("https://apis-testnet.compendia.org/api/node/configuration", "coins/ark/devnet/configuration"),
+		mockRequest("https://apis.compendia.org/api/node/configuration", "coins/mainsail/devnet/configuration"),
+		mockRequest(
+			"https://apis.compendia.org/api/node/configuration/crypto",
+			"coins/mainsail/devnet/cryptoConfiguration",
+		),
+		mockRequest("https://apis.compendia.org/api/node/syncing", "coins/mainsail/devnet/syncing"),
+		mockRequest("https://apis-testnet.compendia.org/api/node/configuration", "coins/mainsail/devnet/configuration"),
 		mockRequest(
 			"https://apis-testnet.compendia.org/api/node/configuration/crypto",
-			"coins/ark/devnet/cryptoConfiguration",
+			"coins/mainsail/devnet/cryptoConfiguration",
 		),
-		mockRequest("https://apis-testnet.compendia.org/api/node/syncing", "coins/ark/devnet/syncing"),
+		mockRequest("https://apis-testnet.compendia.org/api/node/syncing", "coins/mainsail/devnet/syncing"),
 
 		// Blockpool
-		mockRequest("https://explorer.blockpool.io:19031/api/node/configuration", "coins/ark/devnet/configuration"),
+		mockRequest(
+			"https://explorer.blockpool.io:19031/api/node/configuration",
+			"coins/mainsail/devnet/configuration",
+		),
 		mockRequest(
 			"https://explorer.blockpool.io:19031/api/node/configuration/crypto",
-			"coins/ark/devnet/cryptoConfiguration",
+			"coins/mainsail/devnet/cryptoConfiguration",
 		),
-		mockRequest("https://explorer.blockpool.io:19031/api/node/syncing", "coins/ark/devnet/syncing"),
+		mockRequest("https://explorer.blockpool.io:19031/api/node/syncing", "coins/mainsail/devnet/syncing"),
 
 		// Qredit
-		mockRequest("https://qredit.cloud/api/node/configuration", "coins/ark/devnet/configuration"),
-		mockRequest("https://qredit.cloud/api/node/configuration/crypto", "coins/ark/devnet/cryptoConfiguration"),
-		mockRequest("https://qredit.cloud/api/node/syncing", "coins/ark/devnet/syncing"),
-		mockRequest("https://qredit.dev/api/node/configuration", "coins/ark/devnet/configuration"),
-		mockRequest("https://qredit.dev/api/node/configuration/crypto", "coins/ark/devnet/cryptoConfiguration"),
-		mockRequest("https://qredit.dev/api/node/syncing", "coins/ark/devnet/syncing"),
+		mockRequest("https://qredit.cloud/api/node/configuration", "coins/mainsail/devnet/configuration"),
+		mockRequest("https://qredit.cloud/api/node/configuration/crypto", "coins/mainsail/devnet/cryptoConfiguration"),
+		mockRequest("https://qredit.cloud/api/node/syncing", "coins/mainsail/devnet/syncing"),
+		mockRequest("https://qredit.dev/api/node/configuration", "coins/mainsail/devnet/configuration"),
+		mockRequest("https://qredit.dev/api/node/configuration/crypto", "coins/mainsail/devnet/cryptoConfiguration"),
+		mockRequest("https://qredit.dev/api/node/syncing", "coins/mainsail/devnet/syncing"),
 		mockRequest("https://static.zdassets.com/ekr/snippet.js?key=0e4c4d37-9d38-4be4-925d-e659dd4d12bd", () => ""),
 	],
 	exchange: [
@@ -263,7 +268,7 @@ export const requestMocks = {
 	],
 	other: [
 		mockRequest(
-			"https://raw.githubusercontent.com/ArkEcosystem/common/master/devnet/known-wallets-extended.json",
+			"https://raw.githubusercontent.com/ArkEcosystem/common/master/mainsail/devnet/known-wallets-extended.json",
 			knownWallets,
 		),
 	],
@@ -279,133 +284,156 @@ export const requestMocks = {
 	],
 	transactions: [
 		// devnet
-		mockRequest("https://ark-test.arkvault.io/api/transactions/fees", "coins/ark/devnet/transaction-fees"),
-		mockRequest("https://ark-test.arkvault.io/api/transactions?limit=10", transactionsFixture),
-		mockRequest("https://ark-test.arkvault.io/api/transactions?limit=20", transactionsFixture),
-		mockRequest(
-			"https://ark-test.arkvault.io/api/transactions?page=2&limit=30&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
-			transactionsFixture,
-		),
-		mockRequest(
-			"https://ark-test.arkvault.io/api/transactions?page=1&limit=20&senderId=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
-			transactionsFixture,
-		),
-		mockRequest(
-			"https://ark-test.arkvault.io/api/transactions?limit=30&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
-			transactionsFixture,
-		),
-		mockRequest(
-			"https://ark-test.arkvault.io/api/transactions?limit=30&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb%2CDH4Xyyt5zPqM9KwUkevUZPbzM3KjjW8fp5",
-			transactionsFixture,
-		),
-		mockRequest(
-			"https://ark-test.arkvault.io/api/transactions?page=2&limit=30&address=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
-			transactionsFixture,
-		),
-		mockRequest(
-			"https://ark-test.arkvault.io/api/transactions?page=1&limit=10&recipientId=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
-			"coins/ark/devnet/notification-transactions",
-		),
+		// mockRequest("https://dwallets-evm.mainsailhq.com/api/transactions/fees", "coins/mainsail/devnet/transaction-fees"),
+		// mockRequest("https://dwallets-evm.mainsailhq.com/api/transactions?limit=10", transactionsFixture),
+		// mockRequest("https://dwallets-evm.mainsailhq.com/api/transactions?limit=20", transactionsFixture),
 
+		// wallet transactions
 		mockRequest(
-			"https://ark-test.arkvault.io/api/transactions?page=1&limit=10&recipientId=D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
-			"coins/ark/devnet/notification-transactions",
-		),
-
-		mockRequest(
-			"https://ark-test.arkvault.io/api/transactions?page=1&limit=10&recipientId=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
+			"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=30&orderBy=timestamp:desc&address=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
 			transactionsFixture,
 		),
 
+		// for notifications
 		mockRequest(
-			"https://ark-test.arkvault.io/api/transactions?page=1&limit=10&recipientId=DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P",
+			"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=10&to=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6&address=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6,0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54",
 			transactionsFixture,
 		),
 
-		mockRequest(
-			"https://ark-test.arkvault.io/api/transactions?page=1&limit=10&recipientId=DJXg9Vqg2tofRNrMAvMzhZTkegu8QyyNQq",
-			transactionsFixture,
-		),
+		// mockRequest(
+		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=30&orderBy=timestamp:desc&address=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
+		// 	transactionsFixture
+		// ),
 
-		mockRequest(
-			"https://ark-test.arkvault.io/api/transactions?page=1&limit=20&senderId=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
-			transactionsFixture,
-		),
-		mockRequest(
-			"https://ark-test.arkvault.io/api/transactions?limit=30&address=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
-			transactionsFixture,
-		),
-		mockRequest(
-			"https://ark-test.arkvault.io/api/transactions?limit=30&address=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb%2CDH4Xyyt5zPqM9KwUkevUZPbzM3KjjW8fp5",
-			transactionsFixture,
-		),
-		// unconfirmed transactions list before sending single or multiPayment transaction
-		mockRequest(
-			"https://ark-test.arkvault.io/api/transactions?page=1&limit=20&senderId=DDA5nM7KEqLeTtQKv5qGgcnc6dpNBKJNTS",
-			transactionsFixture,
-		),
+		// mockRequest(
+		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?page=2&limit=30&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
+		// 	transactionsFixture,
+		// ),
+		// mockRequest(
+		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=20&senderId=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
+		// 	transactionsFixture,
+		// ),
+		// mockRequest(
+		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?limit=30&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
+		// 	transactionsFixture,
+		// ),
+		// mockRequest(
+		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?limit=30&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb%2CDH4Xyyt5zPqM9KwUkevUZPbzM3KjjW8fp5",
+		// 	transactionsFixture,
+		// ),
+		// mockRequest(
+		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?page=2&limit=30&address=0x659A76be283644AEc2003aa8ba26485047fd1BFB",
+		// 	transactionsFixture,
+		// ),
+		// mockRequest(
+		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=10&recipientId=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
+		// 	"coins/mainsail/devnet/notification-transactions",
+		// ),
 
-		mockRequest(
-			/https:\/\/ark-test\.arkvault\.io\/api\/transactions\?page=1&limit=20&senderId=(.*?)/,
-			transactionsFixture,
-		),
+		// mockRequest(
+		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=10&recipientId=D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
+		// 	"coins/mainsail/devnet/notification-transactions",
+		// ),
 
-		mockRequest(
-			"https://ark-test.arkvault.io/api/transactions?page=1&limit=10&orderBy=timestamp&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
-			transactionsFixture,
-		),
-
-		mockRequest(
-			"https://ark-test.arkvault.io/api/transactions?page=1&limit=10&orderBy=timestamp&address=D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
-			transactionsFixture,
-		),
-
-		mockRequest(
-			"https://ark-test.arkvault.io/api/transactions?page=1&limit=10&orderBy=timestamp&address=DJXg9Vqg2tofRNrMAvMzhZTkegu8QyyNQq",
-			transactionsFixture,
-		),
-
-		mockRequest(
-			"https://ark-test.arkvault.io/api/transactions?page=1&limit=10&orderBy=timestamp&address=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
-			transactionsFixture,
-		),
-
-		mockRequest(
-			"https://ark-test.arkvault.io/api/transactions?page=1&limit=10&orderBy=timestamp&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
-			{ data: [], meta: {} },
-		),
-
-		mockRequest(
-			"https://ark-test.arkvault.io/api/transactions?page=1&limit=10&orderBy=timestamp&address=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
-			{ data: [], meta: {} },
-		),
+		// mockRequest(
+		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=10&recipientId=0x659A76be283644AEc2003aa8ba26485047fd1BFB",
+		// 	transactionsFixture,
+		// ),
+		//
+		// mockRequest(
+		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=10&recipientId=DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P",
+		// 	transactionsFixture,
+		// ),
+		//
+		// mockRequest(
+		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=10&recipientId=DJXg9Vqg2tofRNrMAvMzhZTkegu8QyyNQq",
+		// 	transactionsFixture,
+		// ),
+		//
+		// mockRequest(
+		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=20&senderId=0x659A76be283644AEc2003aa8ba26485047fd1BFB",
+		// 	transactionsFixture,
+		// ),
+		// mockRequest(
+		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?limit=30&address=0x659A76be283644AEc2003aa8ba26485047fd1BFB%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
+		// 	transactionsFixture,
+		// ),
+		// mockRequest(
+		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?limit=30&address=0x659A76be283644AEc2003aa8ba26485047fd1BFB%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb%2CDH4Xyyt5zPqM9KwUkevUZPbzM3KjjW8fp5",
+		// 	transactionsFixture,
+		// ),
+		// // unconfirmed transactions list before sending single or multiPayment transaction
+		// mockRequest(
+		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=20&senderId=DDA5nM7KEqLeTtQKv5qGgcnc6dpNBKJNTS",
+		// 	transactionsFixture,
+		// ),
+		//
+		// mockRequest(
+		// 	/https:\/\/ark-test\.arkvault\.io\/api\/transactions\?page=1&limit=20&senderId=(.*?)/,
+		// 	transactionsFixture,
+		// ),
+		//
+		// mockRequest(
+		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=10&orderBy=timestamp&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
+		// 	transactionsFixture,
+		// ),
+		//
+		// mockRequest(
+		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=10&orderBy=timestamp&address=D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
+		// 	transactionsFixture,
+		// ),
+		//
+		// mockRequest(
+		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=10&orderBy=timestamp&address=DJXg9Vqg2tofRNrMAvMzhZTkegu8QyyNQq",
+		// 	transactionsFixture,
+		// ),
+		//
+		// mockRequest(
+		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=10&orderBy=timestamp&address=0x659A76be283644AEc2003aa8ba26485047fd1BFB",
+		// 	transactionsFixture,
+		// ),
+		//
+		// mockRequest(
+		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=10&orderBy=timestamp&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
+		// 	{ data: [], meta: {} },
+		// ),
+		//
+		// mockRequest(
+		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=10&orderBy=timestamp&address=0x659A76be283644AEc2003aa8ba26485047fd1BFB%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
+		// 	{ data: [], meta: {} },
+		// ),
 
 		// mainnet
-		mockRequest("https://ark-live.arkvault.io/api/transactions/fees", "coins/ark/mainnet/transaction-fees"),
+		// mockRequest("https://wallets-evm.mainsailhq.com/api/transactions/fees", "coins/mainsail/mainnet/transaction-fees"),
 
 		...searchAddressesMocks(),
 	],
 	validators: [
 		// devnet
-		mockRequest("https://ark-test.arkvault.io/api/validators", validatorsFixture),
-		mockRequest("https://ark-test.arkvault.io/api/validators?page=1", validatorsFixture),
-		mockRequest("https://ark-test.arkvault.io/api/validators?page=2", validatorsFixture),
-		mockRequest("https://ark-test.arkvault.io/api/validators?page=3", validatorsFixture),
-		mockRequest("https://ark-test.arkvault.io/api/validators?page=4", validatorsFixture),
-		mockRequest("https://ark-test.arkvault.io/api/validators?page=5", validatorsFixture),
+		mockRequest("https://dwallets-evm.mainsailhq.com/api/validators", validatorsFixture),
+		mockRequest("https://dwallets-evm.mainsailhq.com/api/validators?page=1&limit=100", validatorsFixture),
+		// mockRequest("https://dwallets-evm.mainsailhq.com/api/validators?page=2&limit=10", validatorsFixture),
+		// mockRequest("https://dwallets-evm.mainsailhq.com/api/validators?page=3&limit=10", validatorsFixture),
+		// mockRequest("https://dwallets-evm.mainsailhq.com/api/validators?page=4&limit=10", validatorsFixture),
+		// mockRequest("https://dwallets-evm.mainsailhq.com/api/validators?page=5&limit=10", validatorsFixture),
 
 		// mainnet
-		mockRequest("https://ark-live.arkvault.io/api/validators", "coins/ark/mainnet/validators"),
+		// @TODO use mainnet mock when possible
+		mockRequest("https://wallets-evm.mainsailhq.com/api/validators", "coins/mainsail/devnet/validators"),
 	],
 	wallets: [
-		mockRequest("https://ark-live.arkvault.io/api/wallets?limit=1&nonce=0", {}),
-		mockRequest("https://ark-test.arkvault.io/api/wallets?limit=1&nonce=0", {}),
-		mockRequest(
-			"https://ark-test.arkvault.io/api/wallets/D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD/votes",
-			"coins/ark/devnet/votes",
-		),
+		mockRequest("https://wallets-evm.mainsailhq.com/api/wallets?limit=1&nonce=0", {}),
+		mockRequest("https://dwallets-evm.mainsailhq.com/api/wallets?limit=1&nonce=0", {}),
+		// mockRequest(
+		// 	"https://dwallets-evm.mainsailhq.com/api/wallets/D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD/votes",
+		// 	"coins/mainsail/devnet/votes",
+		// ),
 
 		...walletMocks(),
+	],
+	evm: [mockRequest("https://dwallets-evm.mainsailhq.com/evm/api/", {})],
+	blocks: [
+		// mockRequest("https://dwallets-evm.mainsailhq.com/api/blocks/1e6789dd661ea8cd38ded6fe818eba181589497a2cc3179c42bb5695c33bcf50", {}),
 	],
 };
 
@@ -415,6 +443,8 @@ const combineRequestMocks = (preHooks: RequestMock[] = [], postHooks: RequestMoc
 	...requestMocks.validators,
 	...requestMocks.transactions,
 	...requestMocks.wallets,
+	...requestMocks.evm,
+	...requestMocks.blocks,
 	...requestMocks.other,
 	...requestMocks.exchange,
 	...requestMocks.profile,
@@ -442,17 +472,40 @@ export const createFixture = (name: string, preHooks: RequestMock[] = [], postHo
 		.page(getPageURL())
 		.requestHooks(...combineRequestMocks(preHooks, postHooks));
 
+// export const MNEMONICS = [
+// 	shahinDABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr
+// 	"skin fortune security mom coin hurdle click emotion heart brisk exact rather code feature era leopard grocery tide gift power lawsuit sight vehicle coin",
+// shahinDCX2kvwgL2mrd9GjyYAbfXLGGXWwgN3Px7
+// 	"audit theory scheme profit away wing rescue cloth fit spell atom rely enter upon man clutch divide buddy office tuition input bundle silk scheme",
+// shahinDDHk393YcsxTPN1H5SWTcbjfnCRmF1iBR8
+// 	"uphold egg salon police home famous focus fade skin virus fence surprise hidden skate word famous movie grant ghost save fly assume motion case",
+// shahinD6zDN9rmDThCdYA7y1EjGPmgmuKknWTbMn
+// 	"dress assault rich club glass fancy hood glance install buzz blur attack room outdoor chapter melody tide blur trend into have accuse very little",
+// shahinDQBUSBDkqAZg5etdiPm4uKbUeLNR49fXzp
+// 	"already device awful potato face kingdom coral biology badge donkey ranch random when dove solve system tonight purchase foot way deliver grow raccoon blame",
+// shahinDS1TkHjVPLCRAjEekYJgybvnZyWCytstUe
+// 	"garden neglect enable bone inform deal shallow smart train enrich cloud police pave ignore assault wrong chef harbor river brain way essay zero mouse",
+// shahinDJQnKKbvVzQxNKNuJJHWB5Ddm4dYjDRvBy
+// 	"analyst rifle dose thank unfair remain claim exile math foster clarify unfair gauge wasp notice crash sustain session lunch verify gasp try divorce slender",
+// shahinDB8PEaewudtSM9LHPE2GSdwHjarjHU1A2B
+// 	"tray analyst bulk topple night swing list execute walk bronze invite title silent loud cash apology sibling wheel thumb dragon black soccer mixed curious",
+// shahinDJVWkM8oeyiGF19YfQnXtT5YUuFCF3hSZx
+// 	"cool path congress harbor position ready embody hunt face field boil brown rubber toss arrange later convince anxiety foam urban monster endless essay melt",
+// shahinDD9BS5gKPypDj9uRTFLQPgbMebPSULCSpd
+// 	"subway cradle salad cake toddler sausage neglect eight cruel fault mammal cannon south interest theory sadness pass move outside segment curtain toddler save banner",
+// ];
+
 export const MNEMONICS = [
-	"skin fortune security mom coin hurdle click emotion heart brisk exact rather code feature era leopard grocery tide gift power lawsuit sight vehicle coin",
-	"audit theory scheme profit away wing rescue cloth fit spell atom rely enter upon man clutch divide buddy office tuition input bundle silk scheme",
-	"uphold egg salon police home famous focus fade skin virus fence surprise hidden skate word famous movie grant ghost save fly assume motion case",
-	"dress assault rich club glass fancy hood glance install buzz blur attack room outdoor chapter melody tide blur trend into have accuse very little",
-	"already device awful potato face kingdom coral biology badge donkey ranch random when dove solve system tonight purchase foot way deliver grow raccoon blame",
-	"garden neglect enable bone inform deal shallow smart train enrich cloud police pave ignore assault wrong chef harbor river brain way essay zero mouse",
-	"analyst rifle dose thank unfair remain claim exile math foster clarify unfair gauge wasp notice crash sustain session lunch verify gasp try divorce slender",
-	"tray analyst bulk topple night swing list execute walk bronze invite title silent loud cash apology sibling wheel thumb dragon black soccer mixed curious",
-	"cool path congress harbor position ready embody hunt face field boil brown rubber toss arrange later convince anxiety foam urban monster endless essay melt",
-	"subway cradle salad cake toddler sausage neglect eight cruel fault mammal cannon south interest theory sadness pass move outside segment curtain toddler save banner",
+	// 0x659A76be283644AEc2003aa8ba26485047fd1BFB
+	"join pyramid pitch bracket gasp sword flip elephant property actual current mango man seek merge gather fix unit aspect vault cheap gospel garment spring",
+	// 0x125b484e51Ad990b5b3140931f3BD8eAee85Db23
+	"monkey wage old pistol text garage toss evolve twenty mirror easily alarm ocean catch phrase hen enroll verb trade great limb diesel sight describe",
+	// 0x393f3F74F0cd9e790B5192789F31E0A38159ae03
+	"fade object horse net sleep diagram will casino firm scorpion deal visit this much yard apology guess habit gold crack great old media fury",
+	// 0xB64b3619cEF2642E36B6093da95BA2D14Fa9b52f.json - cold wallet
+	"trust anchor salmon annual control split globe conduct myself van ice resist blast hybrid track echo impose virus filter mystery harsh galaxy desk pitch",
+	// 0xb0E6c955a0Df13220C36Ea9c95bE471249247E57
+	"satoshi weather local seek gravity mountain cycle stem next three arch canal fitness crisp approve cute census hint casual agree pencil sleep best observe",
 ];
 
 // https://cucumber.io/docs/gherkin/reference/

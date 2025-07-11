@@ -169,9 +169,10 @@ export const GeneralSettings: React.FC = () => {
 
 	const appearenceItems = [
 		{
-			itemValueClass: "ml-5",
+			itemValueClass: "sm:ml-5 mt-3 sm:mt-0",
 			label: `${t("SETTINGS.GENERAL.OTHER.VIEWING_MODE.TITLE")}`,
 			labelDescription: `${t("SETTINGS.GENERAL.OTHER.VIEWING_MODE.DESCRIPTION")}`,
+			labelWrapperClass: "flex flex-col sm:flex-row",
 			value: (
 				<ViewingMode
 					viewingMode={viewingMode}
