@@ -3,16 +3,14 @@ import { Selector } from "testcafe";
 import { buildTranslations } from "../../../app/i18n/helpers";
 import { cucumber, MNEMONICS, visitWelcomeScreen } from "../../../utils/e2e-utils";
 import { goToProfile } from "../../profile/e2e/common";
-import { importWallet } from "../../wallet/e2e/common";
 
 const translations = buildTranslations();
-const mnemonic = MNEMONICS[0];
+const mnemonic = MNEMONICS[5];
 
 const preSteps = {
 	"Given Alice is on the wallet details page for imported wallet": async (t: TestController) => {
 		await visitWelcomeScreen(t);
 		await goToProfile(t);
-		await importWallet(t, mnemonic);
 	},
 	"When she selects to sign message": async (t: TestController) => {
 		await t.click(Selector('[data-testid="WalletHeaderMobile__more-button"]'));

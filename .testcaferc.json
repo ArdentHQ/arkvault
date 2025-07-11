@@ -11,6 +11,7 @@
 	"assertionTimeout": 15000,
 	"appCommand": "pnpm serve",
 	"appInitDelay": 5000,
+	"hostname": "localhost",
 	"compilerOptions": {
 		"typescript": {
 			"customCompilerModulePath": "../typescript",
