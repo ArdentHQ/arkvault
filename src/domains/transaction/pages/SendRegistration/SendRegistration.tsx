@@ -165,13 +165,7 @@ export const SendRegistration = () => {
 		assertWallet(activeWallet);
 
 		try {
-			const {
-				mnemonic,
-				secondMnemonic,
-				encryptionPassword,
-				secret,
-				secondSecret,
-			} = getValues();
+			const { mnemonic, secondMnemonic, encryptionPassword, secret, secondSecret } = getValues();
 
 			if (activeWallet.isLedger()) {
 				await connect(activeProfile, activeWallet.networkId());
