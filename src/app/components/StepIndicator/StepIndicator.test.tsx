@@ -32,7 +32,14 @@ describe("StepIndicator", () => {
 	});
 
 	it("should render with active step title and subtitle", () => {
-		render(<StepIndicator steps={["1", "2", "3"]} activeIndex={2} activeStepTitle="Active Step" activeStepSubtitle="Active Step Subtitle" />);
+		render(
+			<StepIndicator
+				steps={["1", "2", "3"]}
+				activeIndex={2}
+				activeStepTitle="Active Step"
+				activeStepSubtitle="Active Step Subtitle"
+			/>,
+		);
 
 		expect(screen.getByRole("list")).toBeInTheDocument();
 		expect(screen.getByText("Active Step")).toBeInTheDocument();
