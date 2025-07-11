@@ -1,4 +1,4 @@
-import { Paginator } from "@/app/lib/mainsail/paginator";
+import { Paginator } from "@/app/lib/mainsail/collections.js";
 import { ExtendedConfirmedTransactionData } from "./transaction.dto.js";
 
 export class ExtendedConfirmedTransactionDataCollection extends Paginator<ExtendedConfirmedTransactionData> {

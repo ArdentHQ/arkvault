@@ -27,7 +27,7 @@ describe("TransactionIndex", () => {
 	beforeEach(async () => {
 		profile = await env.profiles().create("test profile");
 		wallet = await profile.walletFactory().fromAddress({
-			address: "d8bc12a67e5b7d60965e3816174a8c325c957827",
+			address: "0x0000000000000000000000000000000000000000",
 		});
 		subject = new TransactionIndex(wallet);
 
