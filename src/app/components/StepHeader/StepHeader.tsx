@@ -36,7 +36,7 @@ export const StepHeader = ({
 				<StepIndicator
 					steps={Array.from({ length: steps })}
 					activeIndex={activeStep}
-					className="my-2 sm:hidden"
+					className="mt-2 sm:mb-2 sm:hidden"
 				/>
 			</div>
 		</div>
