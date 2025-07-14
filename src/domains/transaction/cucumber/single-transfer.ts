@@ -58,7 +58,7 @@ cucumber(
 		mockRequest(
 			{
 				method: "GET",
-				url: "https://dwallets-evm.mainsailhq.com/api/transactions/101a1cf9f8209c415d03e088ae911799091069f59069a040aed738700d1454a7",
+				url: "https://dwallets-evm.mainsailhq.com/api/transactions/9aaafb2ac44519defcaae64e27b0d71f383d3414ab30dcc3b64671b0632b958a",
 			},
 			{
 				data: {
@@ -68,7 +68,7 @@ cucumber(
 					from: "0x659A76be283644AEc2003aa8ba26485047fd1BFB",
 					gas: "21000",
 					gasPrice: "100000000000",
-					hash: "101a1cf9f8209c415d03e088ae911799091069f59069a040aed738700d1454a7",
+					hash: "9aaafb2ac44519defcaae64e27b0d71f383d3414ab30dcc3b64671b0632b958a",
 					nonce: "3",
 					senderPublicKey: "0311b11b0dea8851d49af7c673d7032e37ee12307f9bbd379b64bbdac6ca302e84",
 					signature:
