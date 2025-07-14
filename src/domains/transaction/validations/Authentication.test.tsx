@@ -208,4 +208,74 @@ describe("Authentication", () => {
 		fromWifMock.mockRestore();
 		walletWifMock.mockRestore();
 	});
+
+	it("should validate second mnemonic", async () => {
+		const secondMnemonicMock = vi
+			.spyOn(wallet, "secondPublicKey")
+			.mockReturnValue("03d7001f0cfff639c0e458356581c919d5885868f14f72ba3be74c8f105cce34ac");
+		const secondMnemonic = authentication(translationMock).secondMnemonic(wallet);
+
+		expect(secondMnemonic.validate.matchSenderPublicKey(MNEMONICS[0])).toBe(true);
+
+		secondMnemonicMock.mockRestore();
+	});
+
+	it("should fail second mnemonic validation", async () => {
+		const secondMnemonicMock = vi.spyOn(wallet, "secondPublicKey").mockReturnValue("1");
+		const secondMnemonic = authentication(translationMock).secondMnemonic(wallet);
+
+		expect(secondMnemonic.validate.matchSenderPublicKey(MNEMONICS[0])).toBe(
+			"COMMON.INPUT_PASSPHRASE.VALIDATION.MNEMONIC_NOT_MATCH_WALLET",
+		);
+
+		secondMnemonicMock.mockRestore();
+	});
+
+	it("should fail second mnemonic validation if exception is thrown", async () => {
+		const secondMnemonicMock = vi.spyOn(wallet, "secondPublicKey").mockImplementation(() => {
+			throw new Error("error");
+		});
+		const secondMnemonic = authentication(translationMock).secondMnemonic(wallet);
+
+		expect(secondMnemonic.validate.matchSenderPublicKey(MNEMONICS[0])).toBe(
+			"COMMON.INPUT_PASSPHRASE.VALIDATION.MNEMONIC_NOT_MATCH_WALLET",
+		);
+
+		secondMnemonicMock.mockRestore();
+	});
+
+	it("should validate second secret", async () => {
+		const secondSecretMock = vi
+			.spyOn(wallet, "secondPublicKey")
+			.mockReturnValue("03a02b9d5fdd1307c2ee4652ba54d492d1fd11a7d1bb3f3a44c4a05e79f19de933");
+		const secondSecret = authentication(translationMock).secondSecret(wallet);
+
+		expect(secondSecret.validate.matchSenderPublicKey("secret")).toBe(true);
+
+		secondSecretMock.mockRestore();
+	});
+
+	it("should fail second secret validation", async () => {
+		const secondSecretMock = vi.spyOn(wallet, "secondPublicKey").mockReturnValue("1");
+		const secondSecret = authentication(translationMock).secondSecret(wallet);
+
+		expect(secondSecret.validate.matchSenderPublicKey("secret")).toBe(
+			"COMMON.INPUT_PASSPHRASE.VALIDATION.SECRET_NOT_MATCH_WALLET",
+		);
+
+		secondSecretMock.mockRestore();
+	});
+
+	it("should fail second secret validation if exception is thrown", async () => {
+		const secondSecretMock = vi.spyOn(wallet, "secondPublicKey").mockImplementation(() => {
+			throw new Error("error");
+		});
+		const secondSecret = authentication(translationMock).secondSecret(wallet);
+
+		expect(secondSecret.validate.matchSenderPublicKey(MNEMONICS[0])).toBe(
+			"COMMON.INPUT_PASSPHRASE.VALIDATION.SECRET_NOT_MATCH_WALLET",
+		);
+
+		secondSecretMock.mockRestore();
+	});
 });

@@ -140,12 +140,12 @@ export class TransactionAggregate implements ITransactionAggregate {
 							return networkMatch && value === wallet.address();
 						}
 
-						/* istanbul ignore else */
+						/* istanbul ignore else -- @preserve */
 						if (type === "extendedPublicKey") {
 							return networkMatch && value === wallet.publicKey();
 						}
 
-						/* istanbul ignore next */
+						/* istanbul ignore next -- @preserve */
 						return false;
 					})
 				);
