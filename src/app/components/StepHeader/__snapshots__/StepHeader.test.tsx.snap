@@ -1,5 +1,85 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
+exports[`StepHeader > should render 1`] = `
+<DocumentFragment>
+  <div
+    class="w-full"
+  >
+    <div
+      class="flex flex-col mb-8 hidden sm:block"
+    >
+      <ul
+        class="flex flex-row gap-2"
+      >
+        <li
+          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-warning-300"
+        />
+        <li
+          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700"
+        />
+        <li
+          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700"
+        />
+        <li
+          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700"
+        />
+      </ul>
+    </div>
+    <div
+      class="flex flex-col justify-between sm:flex-row"
+    >
+      <div
+        class="bg-theme-background flex items-end justify-between"
+      >
+        <div
+          class="space-y-2"
+        >
+          <div
+            class="mb-1 flex items-center gap-3"
+          >
+            <div
+              class="hidden sm:inline"
+            />
+            <h1
+              class="mb-0 text-lg leading-[21px] md:text-2xl md:leading-[29px]"
+              data-testid="header__title"
+            >
+              title
+            </h1>
+          </div>
+          <div
+            class="text-theme-secondary-text mt-0.5 flex items-center text-xs leading-5 font-semibold sm:mt-1 sm:text-sm sm:leading-[17px] sm:font-normal md:text-base md:leading-5"
+            data-testid="header__subtitle"
+          >
+            subtitle
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex flex-col mt-2 sm:mb-2 sm:hidden"
+      >
+        <ul
+          class="flex flex-row gap-2"
+        >
+          <li
+            class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-warning-300"
+          />
+          <li
+            class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700"
+          />
+          <li
+            class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700"
+          />
+          <li
+            class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700"
+          />
+        </ul>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`StepHeader > should render simple header without a provider 1`] = `
 <DocumentFragment>
   <div
@@ -26,6 +106,91 @@ exports[`StepHeader > should render simple header without a provider 1`] = `
         data-testid="header__subtitle"
       >
         subtitle
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`StepHeader > should render with extra 1`] = `
+<DocumentFragment>
+  <div
+    class="w-full"
+  >
+    <div
+      class="flex flex-col mb-8 hidden sm:block"
+    >
+      <ul
+        class="flex flex-row gap-2"
+      >
+        <li
+          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-warning-300"
+        />
+        <li
+          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700"
+        />
+        <li
+          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700"
+        />
+        <li
+          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700"
+        />
+      </ul>
+    </div>
+    <div
+      class="flex flex-col justify-between sm:flex-row"
+    >
+      <div
+        class="bg-theme-background flex items-end justify-between"
+      >
+        <div
+          class="space-y-2"
+        >
+          <div
+            class="mb-1 flex items-center gap-3"
+          >
+            <div
+              class="hidden sm:inline"
+            />
+            <h1
+              class="mb-0 text-lg leading-[21px] md:text-2xl md:leading-[29px]"
+              data-testid="header__title"
+            >
+              title
+            </h1>
+          </div>
+          <div
+            class="text-theme-secondary-text mt-0.5 flex items-center text-xs leading-5 font-semibold sm:mt-1 sm:text-sm sm:leading-[17px] sm:font-normal md:text-base md:leading-5"
+            data-testid="header__subtitle"
+          >
+            subtitle
+          </div>
+        </div>
+      </div>
+      <div
+        class="mt-8 sm:mt-0"
+      >
+        extra
+      </div>
+      <div
+        class="flex flex-col mt-2 sm:mb-2 sm:hidden"
+      >
+        <ul
+          class="flex flex-row gap-2"
+        >
+          <li
+            class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-warning-300"
+          />
+          <li
+            class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700"
+          />
+          <li
+            class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700"
+          />
+          <li
+            class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700"
+          />
+        </ul>
       </div>
     </div>
   </div>
