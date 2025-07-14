@@ -954,10 +954,10 @@ jobs:
         runs-on: ubuntu-latest
         env:
             COVERAGE_INCLUDE_PATH: src/app/lib
-            COVERAGE_THRESHOLD_LINES: 61.93
-            COVERAGE_THRESHOLD_BRANCHES: 59.24
-            COVERAGE_THRESHOLD_FUNCTIONS: 61.93
-            COVERAGE_THRESHOLD_STATEMENTS: 64.04
+            COVERAGE_THRESHOLD_LINES: 68.31
+            COVERAGE_THRESHOLD_BRANCHES: 65.11
+            COVERAGE_THRESHOLD_FUNCTIONS: 67.66
+            COVERAGE_THRESHOLD_STATEMENTS: 68.39
         strategy:
             matrix:
                 node-version:
