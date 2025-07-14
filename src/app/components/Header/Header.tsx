@@ -33,7 +33,7 @@ export const Header = ({ title, titleIcon, className, subtitle, extra, titleClas
 			className={cn(
 				"mb-0",
 				{
-					"text-2xl leading-[29px]": !titleClassName,
+					"text-lg leading-[21px] md:text-2xl md:leading-[29px]": !titleClassName,
 				},
 				titleClassName,
 			)}
@@ -46,8 +46,8 @@ export const Header = ({ title, titleIcon, className, subtitle, extra, titleClas
 	return (
 		<div className={cn("bg-theme-background flex items-end justify-between", className)}>
 			<div className="space-y-2">
-				<div className="flex items-center gap-3">
-					{titleIcon ?? undefined}
+				<div className="mb-1 flex items-center gap-3">
+					<div className="hidden sm:inline">{titleIcon ?? undefined}</div>
 					{isPageHeader ? (
 						<div className="flex flex-col gap-2">
 							{renderTitle()} {renderSubtitle()}
