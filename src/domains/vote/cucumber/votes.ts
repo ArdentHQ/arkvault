@@ -6,7 +6,7 @@ import { goToProfile } from "../../profile/e2e/common";
 
 const translations = buildTranslations();
 
-cucumber("@voteNavigation", {
+cucumber("@votesNavigation", {
 	"Given Alice is signed into a profile": async (t: TestController) => {
 		await visitWelcomeScreen(t);
 		await goToProfile(t);
