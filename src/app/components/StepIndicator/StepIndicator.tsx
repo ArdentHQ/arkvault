@@ -1,14 +1,11 @@
-import React, { useMemo } from "react";
+import React from "react";
 
 import cn from "classnames";
-import { last } from "@/app/lib/helpers";
 import { twMerge } from "tailwind-merge";
 
-interface StepIndicatorProperties {
+interface StepIndicatorProperties extends React.HTMLAttributes<HTMLDivElement> {
 	activeIndex?: number;
 	steps: string[];
-	activeStepTitle?: string;
-	showTitle?: boolean;
 }
 
 const StepStyled = ({ isActive, ...props }: React.HTMLProps<HTMLLIElement> & { isActive: boolean }) => (
@@ -28,32 +25,15 @@ const StepStyled = ({ isActive, ...props }: React.HTMLProps<HTMLLIElement> & { i
 export const StepIndicator: React.FC<StepIndicatorProperties> = ({
 	activeIndex = 1,
 	steps,
-	activeStepTitle,
-	showTitle = true,
+	className,
+	...props
 }: StepIndicatorProperties) => {
-	const title = useMemo(() => {
-		if (activeStepTitle) {
-			return activeStepTitle;
-		}
-
-		if (activeIndex > steps?.length) {
-			return last(steps);
-		}
-
-		return steps[activeIndex - 1];
-	}, [activeIndex, last, steps, activeStepTitle]);
-
 	if (steps.length === 0) {
 		return <></>;
 	}
 
 	return (
-		<div className="flex flex-col">
-			{showTitle && (
-				<span className="text-theme-secondary-text mx-auto mb-2 inline-block font-semibold sm:hidden">
-					{title}
-				</span>
-			)}
+		<div className={cn("flex flex-col", className)} {...props}>
 			<ul className="flex flex-row gap-2">
 				{steps.map((_, index) => (
 					<StepStyled key={index} isActive={activeIndex >= index + 1} />
