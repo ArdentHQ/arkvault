@@ -346,6 +346,10 @@ export class TransactionService {
 			return this.#signWithLedger(input, builder.transaction);
 		}
 
+		if (input.signatory.actsWithConfirmationMnemonic() || input.signatory.actsWithConfirmationSecret()) {
+			return await builder.legacySecondSign(input.signatory.signingKey(), input.signatory.confirmKey());
+		}
+
 		await builder.sign(input.signatory.signingKey());
 	}
 
