@@ -2165,7 +2165,7 @@ exports[`General Settings > should disable submit button when profile is not res
                           data-testid="list-divided-item__wrapper"
                         >
                           <div
-                            class="flex justify-between items-center"
+                            class="flex flex-col sm:flex-row"
                             data-testid="list-divided-item__inner-wrapper"
                           >
                             <div
@@ -2189,7 +2189,7 @@ exports[`General Settings > should disable submit button when profile is not res
                               </span>
                             </div>
                             <div
-                              class="ml-5"
+                              class="sm:ml-5 mt-3 sm:mt-0"
                             >
                               <span
                                 data-testid="list-divided-item__value"
@@ -4789,7 +4789,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                           data-testid="list-divided-item__wrapper"
                         >
                           <div
-                            class="flex justify-between items-center"
+                            class="flex flex-col sm:flex-row"
                             data-testid="list-divided-item__inner-wrapper"
                           >
                             <div
@@ -4813,7 +4813,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                               </span>
                             </div>
                             <div
-                              class="ml-5"
+                              class="sm:ml-5 mt-3 sm:mt-0"
                             >
                               <span
                                 data-testid="list-divided-item__value"
@@ -7367,7 +7367,7 @@ exports[`General Settings > should render 1`] = `
                           data-testid="list-divided-item__wrapper"
                         >
                           <div
-                            class="flex justify-between items-center"
+                            class="flex flex-col sm:flex-row"
                             data-testid="list-divided-item__inner-wrapper"
                           >
                             <div
@@ -7391,7 +7391,7 @@ exports[`General Settings > should render 1`] = `
                               </span>
                             </div>
                             <div
-                              class="ml-5"
+                              class="sm:ml-5 mt-3 sm:mt-0"
                             >
                               <span
                                 data-testid="list-divided-item__value"
@@ -9946,7 +9946,7 @@ exports[`General Settings > should update profile 1`] = `
                           data-testid="list-divided-item__wrapper"
                         >
                           <div
-                            class="flex justify-between items-center"
+                            class="flex flex-col sm:flex-row"
                             data-testid="list-divided-item__inner-wrapper"
                           >
                             <div
@@ -9970,7 +9970,7 @@ exports[`General Settings > should update profile 1`] = `
                               </span>
                             </div>
                             <div
-                              class="ml-5"
+                              class="sm:ml-5 mt-3 sm:mt-0"
                             >
                               <span
                                 data-testid="list-divided-item__value"
@@ -12525,7 +12525,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                           data-testid="list-divided-item__wrapper"
                         >
                           <div
-                            class="flex justify-between items-center"
+                            class="flex flex-col sm:flex-row"
                             data-testid="list-divided-item__inner-wrapper"
                           >
                             <div
@@ -12549,7 +12549,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                               </span>
                             </div>
                             <div
-                              class="ml-5"
+                              class="sm:ml-5 mt-3 sm:mt-0"
                             >
                               <span
                                 data-testid="list-divided-item__value"
@@ -15202,7 +15202,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                           data-testid="list-divided-item__wrapper"
                         >
                           <div
-                            class="flex justify-between items-center"
+                            class="flex flex-col sm:flex-row"
                             data-testid="list-divided-item__inner-wrapper"
                           >
                             <div
@@ -15226,7 +15226,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                               </span>
                             </div>
                             <div
-                              class="ml-5"
+                              class="sm:ml-5 mt-3 sm:mt-0"
                             >
                               <span
                                 data-testid="list-divided-item__value"

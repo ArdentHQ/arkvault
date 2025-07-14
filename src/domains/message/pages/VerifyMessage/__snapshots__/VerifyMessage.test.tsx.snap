@@ -836,47 +836,64 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                       </div>
                     </div>
                   </div>
-                  <span
-                    class="mt-6 mb-1 hidden text-lg font-semibold sm:block"
-                  >
-                    Verification Method
-                  </span>
-                  <span
-                    class="text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-700 hidden text-sm font-medium sm:block"
-                  >
-                    Input fields manually or provide a JSON string.
-                  </span>
                   <div
-                    class="flex items-center sm:mt-4"
+                    class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 mt-6 flex flex-col overflow-hidden rounded-sm border sm:rounded-xl"
                   >
-                    <button
-                      class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-500 text-sm sm:text-lg first:mr-4 last:ml-4"
-                      type="button"
+                    <div
+                      class="flex flex-row justify-between p-4"
                     >
-                      JSON
-                    </button>
-                    <label
-                      class="flex items-center cursor-pointer h-4"
-                    >
-                      <input
-                        checked=""
-                        class="toggle-input sr-only"
-                        type="checkbox"
-                      />
-                      <div
-                        class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
+                      <span
+                        class="text-theme-secondary-700 dark:text-theme-secondary-700 dim:text-theme-dim-700 text-sm font-semibold sm:hidden"
                       >
-                        <span
-                          class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 dim:bg-theme-dim-navy-600 h-4 w-4 handle-inner"
-                        />
+                        Method:
+                      </span>
+                      <span
+                        class="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 hidden text-base font-semibold sm:block"
+                      >
+                        Verification Method
+                      </span>
+                      <div
+                        class="flex items-center"
+                      >
+                        <button
+                          class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-500 text-sm sm:text-base first:mr-3 last:ml-3"
+                          type="button"
+                        >
+                          JSON
+                        </button>
+                        <label
+                          class="flex items-center cursor-pointer h-4"
+                        >
+                          <input
+                            checked=""
+                            class="toggle-input sr-only"
+                            type="checkbox"
+                          />
+                          <div
+                            class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
+                          >
+                            <span
+                              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 dim:bg-theme-dim-navy-600 h-4 w-4 handle-inner"
+                            />
+                          </div>
+                        </label>
+                        <button
+                          class="font-semibold select-none text-sm sm:text-base first:mr-3 last:ml-3 text-theme-secondary-700 dark:text-theme-secondary-200 dim:text-theme-dim-200"
+                          type="button"
+                        >
+                          Manual
+                        </button>
                       </div>
-                    </label>
-                    <button
-                      class="font-semibold select-none text-sm sm:text-lg first:mr-4 last:ml-4 text-theme-secondary-700 dark:text-theme-secondary-200 dim:text-theme-dim-200"
-                      type="button"
+                    </div>
+                    <div
+                      class="bg-theme-secondary-100 dim:bg-theme-dim-950 hidden px-4 pt-3 pb-3 sm:block dark:bg-black"
                     >
-                      Manual
-                    </button>
+                      <span
+                        class="text-theme-secondary-text dim:text-theme-dim-200 text-sm font-normal"
+                      >
+                        Input fields manually or provide a JSON string.
+                      </span>
+                    </div>
                   </div>
                   <div
                     class="mt-4 space-y-5"
@@ -1835,47 +1852,64 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                       </div>
                     </div>
                   </div>
-                  <span
-                    class="mt-6 mb-1 hidden text-lg font-semibold sm:block"
-                  >
-                    Verification Method
-                  </span>
-                  <span
-                    class="text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-700 hidden text-sm font-medium sm:block"
-                  >
-                    Input fields manually or provide a JSON string.
-                  </span>
                   <div
-                    class="flex items-center sm:mt-4"
+                    class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 mt-6 flex flex-col overflow-hidden rounded-sm border sm:rounded-xl"
                   >
-                    <button
-                      class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-500 text-sm sm:text-lg first:mr-4 last:ml-4"
-                      type="button"
+                    <div
+                      class="flex flex-row justify-between p-4"
                     >
-                      JSON
-                    </button>
-                    <label
-                      class="flex items-center cursor-pointer h-4"
-                    >
-                      <input
-                        checked=""
-                        class="toggle-input sr-only"
-                        type="checkbox"
-                      />
-                      <div
-                        class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
+                      <span
+                        class="text-theme-secondary-700 dark:text-theme-secondary-700 dim:text-theme-dim-700 text-sm font-semibold sm:hidden"
                       >
-                        <span
-                          class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 dim:bg-theme-dim-navy-600 h-4 w-4 handle-inner"
-                        />
+                        Method:
+                      </span>
+                      <span
+                        class="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 hidden text-base font-semibold sm:block"
+                      >
+                        Verification Method
+                      </span>
+                      <div
+                        class="flex items-center"
+                      >
+                        <button
+                          class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-500 text-sm sm:text-base first:mr-3 last:ml-3"
+                          type="button"
+                        >
+                          JSON
+                        </button>
+                        <label
+                          class="flex items-center cursor-pointer h-4"
+                        >
+                          <input
+                            checked=""
+                            class="toggle-input sr-only"
+                            type="checkbox"
+                          />
+                          <div
+                            class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
+                          >
+                            <span
+                              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 dim:bg-theme-dim-navy-600 h-4 w-4 handle-inner"
+                            />
+                          </div>
+                        </label>
+                        <button
+                          class="font-semibold select-none text-sm sm:text-base first:mr-3 last:ml-3 text-theme-secondary-700 dark:text-theme-secondary-200 dim:text-theme-dim-200"
+                          type="button"
+                        >
+                          Manual
+                        </button>
                       </div>
-                    </label>
-                    <button
-                      class="font-semibold select-none text-sm sm:text-lg first:mr-4 last:ml-4 text-theme-secondary-700 dark:text-theme-secondary-200 dim:text-theme-dim-200"
-                      type="button"
+                    </div>
+                    <div
+                      class="bg-theme-secondary-100 dim:bg-theme-dim-950 hidden px-4 pt-3 pb-3 sm:block dark:bg-black"
                     >
-                      Manual
-                    </button>
+                      <span
+                        class="text-theme-secondary-text dim:text-theme-dim-200 text-sm font-normal"
+                      >
+                        Input fields manually or provide a JSON string.
+                      </span>
+                    </div>
                   </div>
                   <div
                     class="mt-4 space-y-5"

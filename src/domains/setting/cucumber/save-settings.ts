@@ -37,12 +37,11 @@ cucumber("@saveSettings-general", {
 	},
 	...postSteps,
 });
+
 cucumber("@saveSettings-appearance", {
 	"Given Alice is on the appearance settings page": async (t: TestController) => {
 		await visitWelcomeScreen(t);
 		await goToSettings(t);
-		await t.click(Selector("[data-testid=side-menu__item--appearance]"));
-		await t.expect(Selector("[data-testid=header__title]").textContent).eql(translations.SETTINGS.APPEARANCE.TITLE);
 	},
 	"When she changes her appearance settings": async (t: TestController) => {
 		await t.click(
@@ -51,6 +50,7 @@ cucumber("@saveSettings-appearance", {
 	},
 	...postSteps,
 });
+
 cucumber("@saveSettings-unsavedChanges", {
 	"Given Alice is on the general settings page": async (t: TestController) => {
 		await visitWelcomeScreen(t);
@@ -67,19 +67,20 @@ cucumber("@saveSettings-unsavedChanges", {
 	},
 	"When she reverts her changes": async (t: TestController) => {
 		await t.click(Selector('[data-testid="ConfirmationModal__no-button"]'));
-		await t.click(nameInput).pressKey("ctrl+a delete").typeText(nameInput, "John Doe");
+		await t.click(nameInput).pressKey("ctrl+a delete").typeText(nameInput, "Foo Bar");
 	},
 	"Then the confirmation modal is not displayed": async (t: TestController) => {
 		await t.expect(Selector('[data-testid="ConfirmationModal"]').exists).notOk();
 	},
 });
+
 cucumber(
 	"@saveSettings-updateCurrency",
 	{
 		"Given Alice signs into a profile with a wallet": async (t: TestController) => {
 			await visitWelcomeScreen(t);
 			await goToProfile(t);
-			await importWalletByAddress(t, "AThxYTVgpzZfW7K6UxyB8vBZVMoPAwQS3D", undefined, true);
+			await importWalletByAddress(t, "0x659A76be283644AEc2003aa8ba26485047fd1BFB", undefined, true);
 		},
 		"And she is on the settings page": async (t: TestController) => {
 			await t.click(Selector('[data-testid="UserMenu"]'));
@@ -100,11 +101,7 @@ cucumber(
 	},
 	[
 		mockRequest(
-			"https://ark-live.arkvault.io/api/transactions?page=1&limit=20&senderId=AThxYTVgpzZfW7K6UxyB8vBZVMoPAwQS3D",
-			[],
-		),
-		mockRequest(
-			"https://ark-live.arkvault.io/api/transactions?limit=30&address=AThxYTVgpzZfW7K6UxyB8vBZVMoPAwQS3D",
+			"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=30&orderBy=timestamp:desc&address=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6,0x659A76be283644AEc2003aa8ba26485047fd1BFB",
 			[],
 		),
 	],

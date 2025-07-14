@@ -68,6 +68,8 @@ describe("SignMessageSidePanel", () => {
 		profile.wallets().push(wallet);
 		profile.wallets().push(wallet2);
 
+		vi.spyOn(profile, "walletSelectionMode").mockReturnValue("multiple");
+
 		await triggerMessageSignOnce(wallet);
 	});
 

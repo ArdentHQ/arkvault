@@ -8,6 +8,7 @@ import { useFormField } from "@/app/components/Form/useFormField";
 import { Select } from "@/app/components/SelectDropdown";
 import { TruncateEnd } from "@/app/components/TruncateEnd";
 import { useWalletAlias } from "@/app/hooks/use-wallet-alias";
+import { Icon } from "@/app/components/Icon";
 
 type SelectAddressDropdownProperties = {
 	wallet?: Contracts.IReadWriteWallet;
@@ -20,7 +21,7 @@ type SelectAddressDropdownProperties = {
 	onChange?: (wallet?: Contracts.IReadWriteWallet) => void;
 } & Omit<React.InputHTMLAttributes<any>, "onChange">;
 
-const OptionLabel = ({
+export const OptionLabel = ({
 	option,
 	network,
 	profile,
@@ -48,15 +49,29 @@ const OptionLabel = ({
 			<Address
 				address={address}
 				walletName={alias}
-				addressClass={cn("leading-[17px] sm:leading-5 text-sm sm:text-base", {
-					"text-theme-primary-600": !alias && option.isSelected,
-					"text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-700": alias,
-					"text-theme-text": !alias,
+				addressClass={cn("leading-[17px] sm:leading-5 text-sm sm:text-base text-theme-secondary-500", {
+					"dark:text-theme-dark-200 dim:text-theme-dim-200": !option.isSelected && option.isHighlighted,
+					"dark:text-theme-dark-500 dim:text-theme-dim-500":
+						option.isSelected || (!option.isSelected && !option.isHighlighted),
 				})}
-				walletNameClass={cn("leading-[17px] sm:leading-5 text-theme-text text-sm sm:text-base", {
-					"text-theme-primary-600": option.isSelected,
+				walletNameClass={cn("leading-[17px] sm:leading-5 text-sm sm:text-base ", {
+					"text-theme-primary-600 dark:text-theme-secondary-50 dim:text-theme-dim-50": option.isSelected,
+					"text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200":
+						!option.isSelected && !option.isHighlighted,
+					"text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50":
+						!option.isSelected && option.isHighlighted,
 				})}
 			/>
+
+			<div className="h-4 w-4">
+				{option.isSelected && (
+					<Icon
+						name="CheckmarkDouble"
+						size="md"
+						className="text-theme-primary-600 dark:text-theme-secondary-50 dim:text-theme-dim-50"
+					/>
+				)}
+			</div>
 		</div>
 	);
 };
@@ -127,6 +142,7 @@ export const SelectAddressDropdown = React.forwardRef<HTMLInputElement, SelectAd
 						options={recipientOptions}
 						showOptions={true}
 						allowFreeInput={true}
+						innerClassName="text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200"
 						onChange={changeHandler}
 						addons={{
 							end: undefined,
@@ -135,11 +151,7 @@ export const SelectAddressDropdown = React.forwardRef<HTMLInputElement, SelectAd
 										content: (
 											<div className="flex items-center">
 												{selectedAddressAlias?.alias && (
-													<TruncateEnd
-														className="font-semibold"
-														text={selectedAddressAlias.alias}
-														showTooltip
-													/>
+													<TruncateEnd text={selectedAddressAlias.alias} showTooltip />
 												)}
 											</div>
 										),

@@ -77,6 +77,46 @@ export const authentication = (t: any) => {
 				return t("COMMON.INPUT_PASSPHRASE.VALIDATION.PRIVATE_KEY_NOT_MATCH_WALLET");
 			},
 		}),
+		secondMnemonic: (wallet: Contracts.IReadWriteWallet) => ({
+			required: t(requiredFieldMessage, {
+				field: t("COMMON.SECOND_MNEMONIC"),
+			}),
+			validate: {
+				matchSenderPublicKey: (mnemonic: string) => {
+					try {
+						const { publicKey } = wallet.publicKeyService().fromMnemonic(mnemonic);
+
+						if (publicKey === wallet.secondPublicKey()) {
+							return true;
+						}
+
+						return t("COMMON.INPUT_PASSPHRASE.VALIDATION.MNEMONIC_NOT_MATCH_WALLET");
+					} catch {
+						return t("COMMON.INPUT_PASSPHRASE.VALIDATION.MNEMONIC_NOT_MATCH_WALLET");
+					}
+				},
+			},
+		}),
+		secondSecret: (wallet: Contracts.IReadWriteWallet) => ({
+			required: t(requiredFieldMessage, {
+				field: t("COMMON.SECOND_SECRET"),
+			}),
+			validate: {
+				matchSenderPublicKey: (secret: string) => {
+					try {
+						const { publicKey } = wallet.publicKeyService().fromSecret(secret);
+
+						if (publicKey === wallet.secondPublicKey()) {
+							return true;
+						}
+
+						return t("COMMON.INPUT_PASSPHRASE.VALIDATION.SECRET_NOT_MATCH_WALLET");
+					} catch {
+						return t("COMMON.INPUT_PASSPHRASE.VALIDATION.SECRET_NOT_MATCH_WALLET");
+					}
+				},
+			},
+		}),
 		secret: (wallet: Contracts.IReadWriteWallet) => ({
 			required: t(requiredFieldMessage, {
 				field: t("COMMON.SECRET"),

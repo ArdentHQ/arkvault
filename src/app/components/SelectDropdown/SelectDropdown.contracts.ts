@@ -5,6 +5,7 @@ export interface OptionProperties {
 	label: string;
 	value: string | number;
 	isSelected?: boolean;
+	isHighlighted?: boolean;
 }
 
 export interface OptionGroupProperties {
