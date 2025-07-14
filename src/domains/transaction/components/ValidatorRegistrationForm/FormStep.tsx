@@ -76,7 +76,9 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 
 			{errors.lockedFee && <Alert className="mt-4">{errors.lockedFee.message}</Alert>}
 
-			<FormField name="senderAddress" className="-mx-3 mt-6 sm:mx-0 sm:mt-4">
+			<FormField name="senderAddress" className="mt-6 sm:mt-4">
+				<FormLabel label={t("COMMON.SENDER")} />
+
 				<SelectAddress
 					showWalletAvatar={false}
 					wallet={
