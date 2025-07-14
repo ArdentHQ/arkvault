@@ -9,7 +9,7 @@ export const goToTransferPage = async (t: any) => {
 	await t
 		.expect(
 			Selector("h1").withText(
-				translations.TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.TITLE.replace("{{ticker}}", "DARK"),
+				translations.TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.TITLE.replace("{{ticker}}", "ARK"),
 			).exists,
 		)
 		.ok({ timeout: 60_000 });
