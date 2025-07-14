@@ -37,6 +37,17 @@ describe("WalletIcons", () => {
 		walletSpy.mockRestore();
 	});
 
+	it("should render the ledger icon", () => {
+		const walletSpy = vi.spyOn(wallet, "isLedger").mockReturnValue(true);
+
+		render(<WalletIcons wallet={wallet} />);
+
+		expect(screen.getByTestId("WalletIcon__Ledger")).toBeInTheDocument();
+		expect(document.querySelector("svg#ledger")).toBeInTheDocument();
+
+		walletSpy.mockRestore();
+	});
+
 	it("should render the second signature icon", () => {
 		const hasSyncedWithNetworkSpy = vi.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValue(true);
 		const walletSpy = vi.spyOn(wallet, "isSecondSignature").mockReturnValue(true);
