@@ -320,6 +320,7 @@ export class TransactionService {
 		}
 
 		if (input.signatory.actsWithLedger()) {
+			await this.#ledgerService.connect();
 			const extendedPublicKey = await this.#ledgerService.getExtendedPublicKey(input.signatory.signingKey());
 			address = this.#addressService.fromPublicKey(extendedPublicKey).address;
 		}
@@ -344,6 +345,10 @@ export class TransactionService {
 
 		if (input.signatory.actsWithLedger()) {
 			return this.#signWithLedger(input, builder.transaction);
+		}
+
+		if (input.signatory.actsWithConfirmationMnemonic() || input.signatory.actsWithConfirmationSecret()) {
+			return await builder.legacySecondSign(input.signatory.signingKey(), input.signatory.confirmKey());
 		}
 
 		await builder.sign(input.signatory.signingKey());

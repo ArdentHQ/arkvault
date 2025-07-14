@@ -181,22 +181,6 @@ export interface ITransactionService {
 	broadcasted(): SignedTransactionDataDictionary;
 
 	/**
-	 * Get all transactions that are waiting for your signature.
-	 *
-	 * @return {SignedTransactionDataDictionary}
-	 * @memberof ITransactionService
-	 */
-	waitingForOurSignature(): SignedTransactionDataDictionary;
-
-	/**
-	 * Get all transactions that are waiting for the signatures of other participants.
-	 *
-	 * @return {SignedTransactionDataDictionary}
-	 * @memberof ITransactionService
-	 */
-	waitingForOtherSignatures(): SignedTransactionDataDictionary;
-
-	/**
 	 * Check if the given ID has been signed.
 	 *
 	 * @param {string} id
@@ -231,44 +215,6 @@ export interface ITransactionService {
 	 * @memberof ITransactionService
 	 */
 	isAwaitingConfirmation(id: string): boolean;
-
-	/**
-	 * Check if the given ID is waiting for your signature.
-	 *
-	 * @param {string} id
-	 * @return {boolean}
-	 * @memberof ITransactionService
-	 */
-	isAwaitingOurSignature(id: string): boolean;
-
-	/**
-	 * Check if the given ID is waiting for signatures of other participants.
-	 *
-	 * @param {string} id
-	 * @return {boolean}
-	 * @memberof ITransactionService
-	 */
-	isAwaitingOtherSignatures(id: string): boolean;
-
-	/**
-	 * Check if the given ID is waiting for a signature from the given public key.
-	 *
-	 * @param {string} id
-	 * @param {string} publicKey
-	 * @return {boolean}
-	 * @memberof ITransactionService
-	 */
-	isAwaitingSignatureByPublicKey(id: string, publicKey: string): boolean;
-
-	/**
-	 * Check if the given ID is waiting for the final signature.
-	 *
-	 * @param {string} id
-	 * @param {string} publicKey
-	 * @return {boolean}
-	 * @memberof ITransactionService
-	 */
-	isAwaitingFinalSignature(id: string): boolean;
 
 	/**
 	 * Check if the given transaction for the given ID can be signed.
