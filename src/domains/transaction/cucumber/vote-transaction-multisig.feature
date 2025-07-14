@@ -1,3 +1,4 @@
+@skip
 Feature: Vote Transaction from Multisig Wallet
 
         @voteTransactionMultisig

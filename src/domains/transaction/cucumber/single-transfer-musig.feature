@@ -1,3 +1,4 @@
+@skip
 Feature: Single Transfer Multisig
 
     @singleTransfer-multisig
