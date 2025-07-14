@@ -1,5 +1,5 @@
 import cn from "classnames";
-import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
+import React, { useLayoutEffect, useRef, useState } from "react";
 
 import { TruncateMiddleDynamicProperties } from "@/app/components/TruncateMiddleDynamic/TruncateMiddleDynamic.contracts";
 import { Tooltip } from "@/app/components/Tooltip";
@@ -50,10 +50,7 @@ export const TruncateMiddleDynamic = ({
 	availableWidth,
 	...properties
 }: TruncateMiddleDynamicProperties) => {
-	const [{ truncatedValue, requiresUpdate }, setState] = useState({
-		requiresUpdate: true,
-		truncatedValue: value,
-	});
+	const [truncatedValue, setTruncatedValue] = useState(value);
 
 	const internalReference = useRef<HTMLElement>(null);
 	const spanReference = parentRef ?? internalReference;
@@ -65,31 +62,8 @@ export const TruncateMiddleDynamic = ({
 			return;
 		}
 
-		const handleResize = () => {
-			// Reset original value so recalculation is triggered
-			setState({
-				requiresUpdate: true,
-				truncatedValue: value,
-			});
-		};
-
-		window.addEventListener("resize", handleResize);
-
-		return () => {
-			window.removeEventListener("resize", handleResize);
-		};
+		setTruncatedValue(getTruncatedValue(internalReference.current, width, value, offset));
 	}, [value, internalReference, width, offset]);
-
-	useEffect(() => {
-		if (!internalReference?.current || !width || !requiresUpdate) {
-			return;
-		}
-
-		setState({
-			requiresUpdate: false,
-			truncatedValue: getTruncatedValue(internalReference.current, width, value, offset),
-		});
-	}, [requiresUpdate, value, internalReference, width, offset]);
 
 	return (
 		<Tooltip content={value} disabled={truncatedValue === value} theme={tooltipDarkTheme ? "dark" : undefined}>
