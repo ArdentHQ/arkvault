@@ -18,17 +18,20 @@ exports[`ValidatorRegistrationForm > should render form step 1`] = `
             class="space-y-2"
           >
             <div
-              class="flex items-center gap-3"
+              class="mb-1 flex items-center gap-3"
             >
+              <div
+                class="hidden sm:inline"
+              />
               <h1
-                class="mb-0 text-2xl leading-[29px]"
+                class="mb-0 text-lg leading-[21px] md:text-2xl md:leading-[29px]"
                 data-testid="header__title"
               >
                 Register Validator
               </h1>
             </div>
             <div
-              class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
+              class="text-theme-secondary-text mt-0.5 flex items-center text-xs leading-5 font-semibold sm:mt-1 sm:text-sm sm:leading-[17px] sm:font-normal md:text-base md:leading-5"
               data-testid="header__subtitle"
             >
               Register a new Validator address on the network below.
@@ -36,8 +39,15 @@ exports[`ValidatorRegistrationForm > should render form step 1`] = `
           </div>
         </div>
         <fieldset
-          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 -mx-3 mt-6 sm:mx-0 sm:mt-4"
+          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 mt-6 sm:mt-4"
         >
+          <label
+            class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex leading-[17px] font-semibold transition-colors duration-100 text-sm"
+            data-testid="FormLabel"
+            for="senderAddress"
+          >
+            Sender
+          </label>
           <button
             class="focus:ring-theme-primary-400 relative w-full rounded focus:ring-2 focus:outline-hidden"
             data-testid="SelectAddress__wrapper"
@@ -245,17 +255,20 @@ exports[`ValidatorRegistrationForm > should render review step 1`] = `
             class="space-y-2"
           >
             <div
-              class="flex items-center gap-3"
+              class="mb-1 flex items-center gap-3"
             >
+              <div
+                class="hidden sm:inline"
+              />
               <h1
-                class="mb-0 text-2xl leading-[29px]"
+                class="mb-0 text-lg leading-[21px] md:text-2xl md:leading-[29px]"
                 data-testid="header__title"
               >
                 Transaction Review
               </h1>
             </div>
             <div
-              class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
+              class="text-theme-secondary-text mt-0.5 flex items-center text-xs leading-5 font-semibold sm:mt-1 sm:text-sm sm:leading-[17px] sm:font-normal md:text-base md:leading-5"
               data-testid="header__subtitle"
             >
               Review the transaction details below.
@@ -273,7 +286,7 @@ exports[`ValidatorRegistrationForm > should render review step 1`] = `
               data-testid="DetailLabel"
             >
               <div
-                class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold text-md leading-5"
+                class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold text-sm leading-[17px] sm:text-base sm:leading-5"
                 data-testid="DetailLabelText"
               >
                 Addressing
@@ -372,7 +385,7 @@ exports[`ValidatorRegistrationForm > should render review step 1`] = `
               data-testid="DetailLabel"
             >
               <div
-                class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold text-md leading-5"
+                class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold text-sm leading-[17px] sm:text-base sm:leading-5"
                 data-testid="DetailLabelText"
               >
                 Transaction Type
@@ -442,7 +455,7 @@ exports[`ValidatorRegistrationForm > should render review step 1`] = `
                   data-testid="DetailLabel"
                 >
                   <div
-                    class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold text-md leading-5"
+                    class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold text-sm leading-[17px] sm:text-base sm:leading-5"
                     data-testid="DetailLabelText"
                   >
                     Transaction Summary

@@ -444,9 +444,6 @@ exports[`ExchangeForm > should render exchange form 1`] = `
       <div
         class="flex flex-col"
       >
-        <span
-          class="text-theme-secondary-text mx-auto mb-2 inline-block font-semibold sm:hidden"
-        />
         <ul
           class="flex flex-row gap-2"
         >
@@ -1045,9 +1042,6 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
       <div
         class="flex flex-col"
       >
-        <span
-          class="text-theme-secondary-text mx-auto mb-2 inline-block font-semibold sm:hidden"
-        />
         <ul
           class="flex flex-row gap-2"
         >
@@ -1682,9 +1676,6 @@ exports[`ExchangeForm > should render exchange form with id of pending order 1`]
       <div
         class="flex flex-col"
       >
-        <span
-          class="text-theme-secondary-text mx-auto mb-2 inline-block font-semibold sm:hidden"
-        />
         <ul
           class="flex flex-row gap-2"
         >
