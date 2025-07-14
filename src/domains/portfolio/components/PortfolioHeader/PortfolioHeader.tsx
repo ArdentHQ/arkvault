@@ -227,7 +227,8 @@ export const PortfolioHeader = ({
 									<WalletIcons
 										wallet={wallet}
 										exclude={["isKnown", "isStarred", "isTestNetwork"]}
-										iconColor="text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500 hover:text-theme-secondary-900 dark:hover:text-theme-secondary-200 p-0!"
+										iconColor="text-theme-secondary-300 dark:text-theme-dark-500 dim:text-theme-dim-500 hover:text-theme-secondary-900 dark:hover:text-theme-secondary-200 p-0!"
+										iconSize="md"
 									/>
 								</div>
 							)}

@@ -47,9 +47,9 @@ const getIconName = (type: string) => {
 const getIconColor = (type: string) =>
 	type === "Starred"
 		? "fill-transparent hover:fill-theme-warning-200 stroke-theme-warning-400"
-		: "text-theme-secondary-300 dark:text-theme-dark-500 dim:text-theme-dim-500";
+		: "text-theme-secondary-700 dark:text-theme-secondary-600";
 
-export const WalletIcon = ({ type, label, iconColor, iconSize = "md", tooltipDarkTheme }: WalletIconProperties) => {
+export const WalletIcon = ({ type, label, iconColor, iconSize = "lg", tooltipDarkTheme }: WalletIconProperties) => {
 	const { t } = useTranslation();
 
 	return (
