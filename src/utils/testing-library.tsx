@@ -501,7 +501,8 @@ export const test = baseTest.extend<{
 	defaultWallet: Contracts.IReadWriteWallet;
 }>({
 	defaultWallet: async ({ profile }, vitestUse) => {
-		await vitestUse(profile.wallets().first());
+		const defaultWallet = profile.wallets().findById(getDefaultWalletId());
+		await vitestUse(defaultWallet);
 	},
 	env: [
 		async ({}, use) => {
