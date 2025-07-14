@@ -5,11 +5,6 @@ exports[`StepIndicator > should limit active index to max number of steps 1`] = 
   <div
     class="flex flex-col"
   >
-    <span
-      class="text-theme-secondary-text mx-auto mb-2 inline-block font-semibold sm:hidden"
-    >
-      3
-    </span>
     <ul
       class="flex flex-row gap-2"
     >
@@ -34,11 +29,6 @@ exports[`StepIndicator > should render 1`] = `
   <div
     class="flex flex-col"
   >
-    <span
-      class="text-theme-secondary-text mx-auto mb-2 inline-block font-semibold sm:hidden"
-    >
-      1
-    </span>
     <ul
       class="flex flex-row gap-2"
     >
@@ -61,11 +51,6 @@ exports[`StepIndicator > should render witth active index defined 1`] = `
   <div
     class="flex flex-col"
   >
-    <span
-      class="text-theme-secondary-text mx-auto mb-2 inline-block font-semibold sm:hidden"
-    >
-      2
-    </span>
     <ul
       class="flex flex-row gap-2"
     >
