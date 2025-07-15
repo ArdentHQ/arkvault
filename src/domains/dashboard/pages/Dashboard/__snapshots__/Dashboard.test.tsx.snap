@@ -885,7 +885,7 @@ exports[`Dashboard > should render 1`] = `
                     class="flex w-full max-w-full flex-row items-center justify-between overflow-x-auto"
                   >
                     <div
-                      class="flex w-full flex-1 flex-row items-center gap-1.5"
+                      class="flex w-full flex-1 flex-row items-center gap-3"
                     >
                       <p
                         class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 hidden text-sm leading-[17px] font-semibold sm:block md:text-base md:leading-5"
