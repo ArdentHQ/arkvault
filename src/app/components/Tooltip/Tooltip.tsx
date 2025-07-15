@@ -20,7 +20,11 @@ export const Tooltip: React.FC<TooltipProperties> = ({ size, theme, ...propertie
 			maxWidth={600}
 			theme={theme || themeOptions.theme}
 			{...properties}
-			className={cn(getStyles(size), properties.className)}
+			className={cn(
+				"overflow-wrap-anywhere break-words whitespace-normal",
+				getStyles(size),
+				properties.className,
+			)}
 		/>
 	);
 };
