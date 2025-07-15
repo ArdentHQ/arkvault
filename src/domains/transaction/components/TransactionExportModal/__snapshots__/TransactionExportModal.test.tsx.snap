@@ -23,7 +23,7 @@ exports[`TransactionExportModal > should render 1`] = `
             type="button"
           >
             <div
-              class="flex items-center space-x-2"
+              class="flex items-center gap-2"
             >
               <div>
                 <div
@@ -610,7 +610,7 @@ exports[`TransactionExportModal > should render 1`] = `
                         type="button"
                       >
                         <div
-                          class="flex items-center space-x-2"
+                          class="flex items-center gap-2"
                         >
                           Cancel
                         </div>
@@ -621,7 +621,7 @@ exports[`TransactionExportModal > should render 1`] = `
                         type="submit"
                       >
                         <div
-                          class="flex items-center space-x-2"
+                          class="flex items-center gap-2"
                         >
                           Export
                         </div>
@@ -662,7 +662,7 @@ exports[`TransactionExportModal > should render error status 1`] = `
             type="button"
           >
             <div
-              class="flex items-center space-x-2"
+              class="flex items-center gap-2"
             >
               <div>
                 <div
@@ -1249,7 +1249,7 @@ exports[`TransactionExportModal > should render error status 1`] = `
                         type="button"
                       >
                         <div
-                          class="flex items-center space-x-2"
+                          class="flex items-center gap-2"
                         >
                           Cancel
                         </div>
@@ -1260,7 +1260,7 @@ exports[`TransactionExportModal > should render error status 1`] = `
                         type="submit"
                       >
                         <div
-                          class="flex items-center space-x-2"
+                          class="flex items-center gap-2"
                         >
                           Export
                         </div>
@@ -1301,7 +1301,7 @@ exports[`TransactionExportModal > should render success and download file 1`] = 
             type="button"
           >
             <div
-              class="flex items-center space-x-2"
+              class="flex items-center gap-2"
             >
               <div>
                 <div
@@ -1539,7 +1539,7 @@ exports[`TransactionExportModal > should render success and download file 1`] = 
                         type="button"
                       >
                         <div
-                          class="flex items-center space-x-2"
+                          class="flex items-center gap-2"
                         >
                           Back
                         </div>
@@ -1550,7 +1550,7 @@ exports[`TransactionExportModal > should render success and download file 1`] = 
                         type="button"
                       >
                         <div
-                          class="flex items-center space-x-2"
+                          class="flex items-center gap-2"
                         >
                           Download
                         </div>
@@ -1591,7 +1591,7 @@ exports[`TransactionExportModal > should render success and stay open if downloa
             type="button"
           >
             <div
-              class="flex items-center space-x-2"
+              class="flex items-center gap-2"
             >
               <div>
                 <div
@@ -1829,7 +1829,7 @@ exports[`TransactionExportModal > should render success and stay open if downloa
                         type="button"
                       >
                         <div
-                          class="flex items-center space-x-2"
+                          class="flex items-center gap-2"
                         >
                           Back
                         </div>
@@ -1840,7 +1840,7 @@ exports[`TransactionExportModal > should render success and stay open if downloa
                         type="button"
                       >
                         <div
-                          class="flex items-center space-x-2"
+                          class="flex items-center gap-2"
                         >
                           Download
                         </div>
@@ -1881,7 +1881,7 @@ exports[`TransactionExportModal > should render success status 1`] = `
             type="button"
           >
             <div
-              class="flex items-center space-x-2"
+              class="flex items-center gap-2"
             >
               <div>
                 <div
@@ -2468,7 +2468,7 @@ exports[`TransactionExportModal > should render success status 1`] = `
                         type="button"
                       >
                         <div
-                          class="flex items-center space-x-2"
+                          class="flex items-center gap-2"
                         >
                           Cancel
                         </div>
@@ -2479,7 +2479,7 @@ exports[`TransactionExportModal > should render success status 1`] = `
                         type="submit"
                       >
                         <div
-                          class="flex items-center space-x-2"
+                          class="flex items-center gap-2"
                         >
                           Export
                         </div>
@@ -2520,7 +2520,7 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
             type="button"
           >
             <div
-              class="flex items-center space-x-2"
+              class="flex items-center gap-2"
             >
               <div>
                 <div
@@ -3154,7 +3154,7 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
                         type="button"
                       >
                         <div
-                          class="flex items-center space-x-2"
+                          class="flex items-center gap-2"
                         >
                           Cancel
                         </div>
@@ -3165,7 +3165,7 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
                         type="submit"
                       >
                         <div
-                          class="flex items-center space-x-2"
+                          class="flex items-center gap-2"
                         >
                           Export
                         </div>
