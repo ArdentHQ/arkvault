@@ -62,10 +62,6 @@ cucumber(
 			404,
 		),
 		mockRequest(
-			"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=10&to=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6&address=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6,0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54,0x659A76be283644AEc2003aa8ba26485047fd1BFB",
-			{},
-		),
-		mockRequest(
 			{
 				method: "POST",
 				url: "https://dwallets-evm.mainsailhq.com/tx/api/transactions",
@@ -104,10 +100,6 @@ cucumber(
 					},
 				},
 			},
-		),
-		mockRequest(
-			"https://dwallets-evm.mainsailhq.com/api/blocks/05b124023ddd656c8a95664eb61846cc0f4e204341a0d86db325771077e7f002",
-			{},
 		),
 	],
 );
