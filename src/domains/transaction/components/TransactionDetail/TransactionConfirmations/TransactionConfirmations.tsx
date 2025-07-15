@@ -19,7 +19,7 @@ export const TransactionConfirmations = ({
 	const { t } = useTranslation();
 	const { status } = useMultiSignatureStatus({ transaction, wallet: transaction.wallet() });
 
-	if (confirmations && confirmations > 1 && transaction.isSuccess()) {
+	if (confirmations && confirmations > 1 && !transaction.isSuccess()) {
 		return (
 			<div
 				data-testid="TransactionFailedAlert"
@@ -33,7 +33,7 @@ export const TransactionConfirmations = ({
 
 					<Divider
 						type="vertical"
-						className="text-theme-danger-200 dark:text-theme-secondary-800 dim:text-theme-secondary-800 h-5"
+						className="text-theme-danger-200 dark:text-theme-secondary-800 dim:text-theme-dim-700 h-5"
 					/>
 
 					<p className="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 font-semibold">
@@ -53,14 +53,14 @@ export const TransactionConfirmations = ({
 			{!isConfirmed && (
 				<div
 					data-testid="PendingConfirmationAlert"
-					className="border-theme-warning-200 bg-theme-warning-50 dark:border-theme-warning-600 dim:border-theme-warning-600 dim:bg-transparent flex items-center space-x-3 rounded-xl border px-3 py-2 max-sm:text-sm sm:px-6 sm:py-4 sm:leading-5 dark:bg-transparent"
+					className="border-theme-warning-200 bg-theme-warning-50 dark:border-theme-warning-600 dim:border-theme-warning-600 dim:bg-theme-dim-900 flex items-center space-x-3 rounded-xl border px-3 py-2 max-sm:text-sm sm:px-6 sm:py-4 sm:leading-5 dark:bg-transparent"
 				>
 					<Spinner color="warning-alt" size="sm" width={3} />
 					<Divider
 						type="vertical"
-						className="text-theme-warning-200 dark:text-theme-secondary-800 dim:text-theme-secondary-800 h-5"
+						className="text-theme-warning-200 dark:text-theme-secondary-800 dim:text-theme-dim-700 h-5"
 					/>
-					<p className="text-theme-secondary-700 dark:text-theme-warning-600 dim:text-theme-warning-600 font-semibold">
+					<p className="text-theme-secondary-700 dark:text-theme-warning-600 dim:text-theme-dim-200 font-semibold">
 						{status.value === "isBroadcasted" ? t("TRANSACTION.PENDING.STATUS_TEXT") : status.label}
 					</p>
 				</div>
