@@ -84,30 +84,27 @@ cucumber(
 	],
 );
 
-cucumber(
-	"@voteTransaction-invalidMnemonic",
-	{
-		...preSteps,
-		"When she attempts to vote for a validator with an invalid mnemonic": async (t: TestController) => {
-			await t.click(Selector('[data-testid="AddressRow__select-2"]').withText(translations.COMMON.VOTE));
-			await t.expect(Selector("h1").withText(translations.VOTE.VALIDATOR_TABLE.TITLE).exists).ok();
-			await t.click(Selector('[data-testid="ValidatorRow__toggle-0"]').withText(translations.COMMON.SELECT));
-			await t.expect(Selector("[data-testid=ValidatorTable__footer]").exists).ok();
-			await t.click(
-				Selector('[data-testid="ValidatorTable__continue-button"]').withText(translations.COMMON.CONTINUE),
-			);
-			await t.expect(Selector("h1").withText(translations.TRANSACTION.REVIEW_STEP.TITLE).exists).ok();
-			await t.click(Selector("button").withText(translations.COMMON.CONTINUE));
-			await t.typeText(Selector("[data-testid=AuthenticationStep__mnemonic]"), "wrong mnemonic", {
-				replace: true,
-			});
-		},
-		"Then an error is displayed on the mnemonic field": async (t: TestController) => {
-			await t.click(Selector("[data-testid=StepNavigation__send-button]"));
-			await t.expect(Selector("[data-testid=AuthenticationStep__mnemonic]").hasAttribute("aria-invalid")).ok();
-		},
-		"And the send button is disabled.": async (t: TestController) => {
-			await t.expect(sendButton.hasAttribute("disabled")).ok();
-		},
+cucumber("@voteTransaction-invalidMnemonic", {
+	...preSteps,
+	"When she attempts to vote for a validator with an invalid mnemonic": async (t: TestController) => {
+		await t.click(Selector('[data-testid="AddressRow__select-2"]').withText(translations.COMMON.VOTE));
+		await t.expect(Selector("h1").withText(translations.VOTE.VALIDATOR_TABLE.TITLE).exists).ok();
+		await t.click(Selector('[data-testid="ValidatorRow__toggle-0"]').withText(translations.COMMON.SELECT));
+		await t.expect(Selector("[data-testid=ValidatorTable__footer]").exists).ok();
+		await t.click(
+			Selector('[data-testid="ValidatorTable__continue-button"]').withText(translations.COMMON.CONTINUE),
+		);
+		await t.expect(Selector("h1").withText(translations.TRANSACTION.REVIEW_STEP.TITLE).exists).ok();
+		await t.click(Selector("button").withText(translations.COMMON.CONTINUE));
+		await t.typeText(Selector("[data-testid=AuthenticationStep__mnemonic]"), "wrong mnemonic", {
+			replace: true,
+		});
 	},
-);
+	"Then an error is displayed on the mnemonic field": async (t: TestController) => {
+		await t.click(Selector("[data-testid=StepNavigation__send-button]"));
+		await t.expect(Selector("[data-testid=AuthenticationStep__mnemonic]").hasAttribute("aria-invalid")).ok();
+	},
+	"And the send button is disabled.": async (t: TestController) => {
+		await t.expect(sendButton.hasAttribute("disabled")).ok();
+	},
+});
