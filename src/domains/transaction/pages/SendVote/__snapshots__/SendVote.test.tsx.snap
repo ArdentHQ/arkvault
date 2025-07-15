@@ -607,11 +607,20 @@ exports[`SendVote > should show error if wrong mnemonic 1`] = `
                     <div
                       class="flex flex-col"
                     >
-                      <span
-                        class="text-theme-secondary-text mx-auto mb-2 inline-block font-semibold sm:hidden"
+                      <div
+                        class="mb-3 flex flex-col gap-1.5"
                       >
-                        Authenticate
-                      </span>
+                        <span
+                          class="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 inline-block text-lg leading-[21px] font-semibold sm:hidden"
+                        >
+                          Authenticate
+                        </span>
+                        <span
+                          class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-xs leading-5 font-semibold sm:hidden"
+                        >
+                          Enter your mnemonic passphrase to authenticate the transaction.
+                        </span>
+                      </div>
                       <ul
                         class="flex flex-row gap-2"
                       >
@@ -1662,11 +1671,15 @@ exports[`SendVote > should show error step and go back 1`] = `
                         <div
                           class="flex flex-col"
                         >
-                          <span
-                            class="text-theme-secondary-text mx-auto mb-2 inline-block font-semibold sm:hidden"
+                          <div
+                            class="mb-3 flex flex-col gap-1.5"
                           >
-                            Transaction Error
-                          </span>
+                            <span
+                              class="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 inline-block text-lg leading-[21px] font-semibold sm:hidden"
+                            >
+                              Transaction Error
+                            </span>
+                          </div>
                           <ul
                             class="flex flex-row gap-2"
                           >

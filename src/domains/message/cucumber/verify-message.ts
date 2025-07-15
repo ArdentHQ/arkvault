@@ -11,10 +11,9 @@ const preSteps = {
 	"Given Alice is on the wallet details page": async (t: TestController) => {
 		await visitWelcomeScreen(t);
 		await goToProfile(t);
-		await goToWallet(t);
 	},
 	"And selects to verify message": async (t: TestController) => {
-		await t.click(Selector('[data-testid="WalletHeader__more-button"]'));
+		await t.click(Selector('[data-testid="WalletHeaderMobile__more-button"]'));
 		await t.click(
 			Selector('[data-testid="dropdown__options"] li').withText(
 				translations.WALLETS.PAGE_WALLET_DETAILS.OPTIONS.VERIFY_MESSAGE,
@@ -28,9 +27,9 @@ cucumber("@verifyMessage", {
 	"When she enters valid details to verify a message": async (t: TestController) => {
 		const mockSuccessMessage = {
 			message: "Hello World",
-			signatory: "03df6cd794a7d404db4f1b25816d8976d0e72c5177d17ac9b19a92703b62cdbbbc",
+			signatory: "021adbf4453accaefea33687c672fd690702246ef397363421585f134a1e68c175",
 			signature:
-				"7915d8c22ec9dab41bd93d9e003970b2f6aaa5d9a5e837d4d17847308f6e880f31e2c1ad141d9b080d9a151baa31dcd36dd05faa51e5db95586d630b66485e1e",
+				"4ea475947d646345e27df58717ede5786658db515068e28726de4d11743327974f21ea27db1cb600d4da325bee94cb2b4d1d51049c65bf5b20385bb1047104751c",
 		};
 		await t.click(Selector("input[type=checkbox]").parent());
 		await t.typeText(Selector("[data-testid=VerifyMessage__json-jsonString]"), JSON.stringify(mockSuccessMessage));
