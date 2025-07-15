@@ -8,6 +8,7 @@ interface StepIndicatorProperties {
 	activeIndex?: number;
 	steps: string[];
 	activeStepTitle?: string;
+	activeStepSubtitle?: string;
 	showTitle?: boolean;
 }
 
@@ -29,6 +30,7 @@ export const StepIndicator: React.FC<StepIndicatorProperties> = ({
 	activeIndex = 1,
 	steps,
 	activeStepTitle,
+	activeStepSubtitle,
 	showTitle = true,
 }: StepIndicatorProperties) => {
 	const title = useMemo(() => {
@@ -50,9 +52,16 @@ export const StepIndicator: React.FC<StepIndicatorProperties> = ({
 	return (
 		<div className="flex flex-col">
 			{showTitle && (
-				<span className="text-theme-secondary-text mx-auto mb-2 inline-block font-semibold sm:hidden">
-					{title}
-				</span>
+				<div className="mb-3 flex flex-col gap-1.5">
+					<span className="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 inline-block text-lg leading-[21px] font-semibold sm:hidden">
+						{title}
+					</span>
+					{activeStepSubtitle && (
+						<span className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-xs leading-5 font-semibold sm:hidden">
+							{activeStepSubtitle}
+						</span>
+					)}
+				</div>
 			)}
 			<ul className="flex flex-row gap-2">
 				{steps.map((_, index) => (

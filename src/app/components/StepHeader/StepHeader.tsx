@@ -22,7 +22,12 @@ export const StepHeader = ({
 
 	return (
 		<div className="w-full sm:mt-8">
-			<StepIndicator activeStepTitle={title} steps={Array.from({ length: steps })} activeIndex={activeStep} />
+			<StepIndicator
+				activeStepTitle={title}
+				activeStepSubtitle={subtitle}
+				steps={Array.from({ length: steps })}
+				activeIndex={activeStep}
+			/>
 
 			<div className="flex flex-col justify-between sm:flex-row">
 				<Header title={title} titleIcon={titleIcon} subtitle={subtitle} className="mt-8 hidden sm:block" />
