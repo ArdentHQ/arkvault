@@ -38,7 +38,6 @@ export const HideBalance = ({ profile, className }: { profile: Contracts.IProfil
 							<Icon name="Eye" size="lg" data-testid="HideBalance-icon-show" />
 						)}
 					</div>
-					{}
 					<div className="text-theme-secondary-700 md-lg:flex dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 group-hover:text-theme-secondary-900 hidden text-sm leading-[17px] font-semibold">
 						<Amount value={convertedBalance} ticker={ticker} allowHideBalance profile={profile} />
 					</div>
