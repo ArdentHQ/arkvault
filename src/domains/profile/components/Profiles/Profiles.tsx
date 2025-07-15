@@ -24,7 +24,7 @@ export const Profiles = (properties: ProfilesSliderProperties): JSX.Element => {
 
   useEffect(() => {
     const checkHeight = () => {
-      if (!containerRef.current) return;
+      if (!containerRef.current) {return;}
 
       const viewportHeight = window.innerHeight;
       const shouldUseScrollableForHeight = viewportHeight < HEIGHT_THRESHOLD;
@@ -49,20 +49,30 @@ export const Profiles = (properties: ProfilesSliderProperties): JSX.Element => {
     return () => window.removeEventListener('resize', checkHeight);
   }, [properties.profiles.length]);
 
-  return (
-    <div ref={containerRef}>
-      {useScrollableView ? (
+  const renderProfiles = () => {
+    if (useScrollableView) {
+      return (
         <ScrollableProfiles 
           {...properties} 
           maxVisibleProfiles={maxVisibleProfiles}
         />
-      ) : properties.profiles.length <= PROFILES_PER_SLIDE ? (
+      );
+    }
+
+    if (properties.profiles.length <= PROFILES_PER_SLIDE) {
+      return (
         <div className="space-y-3" data-testid="ProfileList">
           <ProfilesSlide {...properties} />
         </div>
-      ) : (
-        <ProfilesSlider {...properties} />
-      )}
+      );
+    }
+
+    return <ProfilesSlider {...properties} />;
+  };
+
+  return (
+    <div ref={containerRef}>
+      {renderProfiles()}
     </div>
   );
 };
