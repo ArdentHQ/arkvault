@@ -716,11 +716,25 @@ exports[`VerifyMessage > should render (lg) 1`] = `
               >
                 <section>
                   <div
-                    class="w-full"
+                    class="w-full sm:mt-8"
                   >
                     <div
-                      class="flex flex-col mb-8 hidden sm:block"
+                      class="flex flex-col"
                     >
+                      <div
+                        class="mb-3 flex flex-col gap-1.5"
+                      >
+                        <span
+                          class="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 inline-block text-lg leading-[21px] font-semibold sm:hidden"
+                        >
+                          Verify Message
+                        </span>
+                        <span
+                          class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-xs leading-5 font-semibold sm:hidden"
+                        >
+                          Authenticate a message from an address below.
+                        </span>
+                      </div>
                       <ul
                         class="flex flex-row gap-2"
                       >
@@ -736,107 +750,89 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                       class="flex flex-col justify-between sm:flex-row"
                     >
                       <div
-                        class="bg-theme-background flex items-end justify-between"
+                        class="bg-theme-background flex items-end justify-between mt-8 hidden sm:block"
                       >
                         <div
                           class="space-y-2"
                         >
                           <div
-                            class="mb-1 flex items-center gap-3"
+                            class="flex items-center gap-3"
                           >
                             <div
-                              class="hidden sm:inline"
+                              data-testid="icon-SendTransactionLight"
                             >
                               <div
-                                data-testid="icon-SendTransactionLight"
+                                style="height: 24px; width: 24px;"
                               >
-                                <div
-                                  style="height: 24px; width: 24px;"
+                                <svg
+                                  fill="none"
+                                  style="height: 100%; width: 100%;"
+                                  viewBox="0 0 24 25"
+                                  xmlns="http://www.w3.org/2000/svg"
                                 >
-                                  <svg
-                                    fill="none"
-                                    style="height: 100%; width: 100%;"
-                                    viewBox="0 0 24 25"
-                                    xmlns="http://www.w3.org/2000/svg"
+                                  <g
+                                    clip-path="url(#clip0_13879_104416)"
                                   >
-                                    <g
-                                      clip-path="url(#clip0_13879_104416)"
+                                    <path
+                                      clip-rule="evenodd"
+                                      d="M18.8821 8.94457H13.7264C13.0146 8.94457 12.4375 8.3675 12.4375 7.65565V2.5"
+                                      fill="#E6EFF9"
+                                      fill-rule="evenodd"
+                                    />
+                                    <path
+                                      d="M18.8821 8.94457H13.7264C13.0146 8.94457 12.4375 8.3675 12.4375 7.65565V2.5"
+                                      stroke="#235B95"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    />
+                                    <path
+                                      d="M7.99174 21.8337H3.41391C2.70207 21.8337 2.125 21.2566 2.125 20.5448V3.78891C2.125 3.07707 2.70207 2.5 3.41391 2.5H12.5472C12.8891 2.49985 13.217 2.63554 13.4588 2.87722L18.5037 7.92289C18.7451 8.16452 18.8808 8.49212 18.8809 8.83372"
+                                      stroke="#235B95"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    />
+                                    <path
+                                      clip-rule="evenodd"
+                                      d="M9.02802 17.1926C8.71518 17.1043 8.49639 16.8225 8.4885 16.4975C8.48061 16.1725 8.68545 15.8804 8.99364 15.7771L18.994 12.5155C19.1276 12.472 19.2743 12.5069 19.3739 12.606C19.4735 12.7051 19.5092 12.8516 19.4664 12.9854L16.2073 22.9907C16.1044 23.2995 15.812 23.5049 15.4867 23.4968C15.1613 23.4888 14.8793 23.2693 14.7918 22.9559L13.6727 18.3067L9.02802 17.1926Z"
+                                      fill="#E6EFF9"
+                                      fill-rule="evenodd"
+                                      stroke="#235B95"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    />
+                                  </g>
+                                  <defs>
+                                    <clippath
+                                      id="clip0_13879_104416"
                                     >
-                                      <path
-                                        clip-rule="evenodd"
-                                        d="M18.8821 8.94457H13.7264C13.0146 8.94457 12.4375 8.3675 12.4375 7.65565V2.5"
-                                        fill="#E6EFF9"
-                                        fill-rule="evenodd"
+                                      <rect
+                                        fill="white"
+                                        height="24"
+                                        transform="translate(24 24.5) rotate(-180)"
+                                        width="24"
                                       />
-                                      <path
-                                        d="M18.8821 8.94457H13.7264C13.0146 8.94457 12.4375 8.3675 12.4375 7.65565V2.5"
-                                        stroke="#235B95"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                      />
-                                      <path
-                                        d="M7.99174 21.8337H3.41391C2.70207 21.8337 2.125 21.2566 2.125 20.5448V3.78891C2.125 3.07707 2.70207 2.5 3.41391 2.5H12.5472C12.8891 2.49985 13.217 2.63554 13.4588 2.87722L18.5037 7.92289C18.7451 8.16452 18.8808 8.49212 18.8809 8.83372"
-                                        stroke="#235B95"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                      />
-                                      <path
-                                        clip-rule="evenodd"
-                                        d="M9.02802 17.1926C8.71518 17.1043 8.49639 16.8225 8.4885 16.4975C8.48061 16.1725 8.68545 15.8804 8.99364 15.7771L18.994 12.5155C19.1276 12.472 19.2743 12.5069 19.3739 12.606C19.4735 12.7051 19.5092 12.8516 19.4664 12.9854L16.2073 22.9907C16.1044 23.2995 15.812 23.5049 15.4867 23.4968C15.1613 23.4888 14.8793 23.2693 14.7918 22.9559L13.6727 18.3067L9.02802 17.1926Z"
-                                        fill="#E6EFF9"
-                                        fill-rule="evenodd"
-                                        stroke="#235B95"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                      />
-                                    </g>
-                                    <defs>
-                                      <clippath
-                                        id="clip0_13879_104416"
-                                      >
-                                        <rect
-                                          fill="white"
-                                          height="24"
-                                          transform="translate(24 24.5) rotate(-180)"
-                                          width="24"
-                                        />
-                                      </clippath>
-                                    </defs>
-                                  </svg>
-                                </div>
+                                    </clippath>
+                                  </defs>
+                                </svg>
                               </div>
                             </div>
                             <h1
-                              class="mb-0 text-lg leading-[21px] md:text-2xl md:leading-[29px]"
+                              class="mb-0 text-2xl leading-[29px]"
                               data-testid="header__title"
                             >
                               Verify Message
                             </h1>
                           </div>
                           <div
-                            class="text-theme-secondary-text mt-0.5 flex items-center text-xs leading-5 font-semibold sm:mt-1 sm:text-sm sm:leading-[17px] sm:font-normal md:text-base md:leading-5"
+                            class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
                             data-testid="header__subtitle"
                           >
                             Authenticate a message from an address below.
                           </div>
                         </div>
-                      </div>
-                      <div
-                        class="flex flex-col mt-2 sm:mb-2 sm:hidden"
-                      >
-                        <ul
-                          class="flex flex-row gap-2"
-                        >
-                          <li
-                            class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-warning-300"
-                          />
-                          <li
-                            class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700"
-                          />
-                        </ul>
                       </div>
                     </div>
                   </div>
@@ -1736,11 +1732,25 @@ exports[`VerifyMessage > should render (xs) 1`] = `
               >
                 <section>
                   <div
-                    class="w-full"
+                    class="w-full sm:mt-8"
                   >
                     <div
-                      class="flex flex-col mb-8 hidden sm:block"
+                      class="flex flex-col"
                     >
+                      <div
+                        class="mb-3 flex flex-col gap-1.5"
+                      >
+                        <span
+                          class="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 inline-block text-lg leading-[21px] font-semibold sm:hidden"
+                        >
+                          Verify Message
+                        </span>
+                        <span
+                          class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-xs leading-5 font-semibold sm:hidden"
+                        >
+                          Authenticate a message from an address below.
+                        </span>
+                      </div>
                       <ul
                         class="flex flex-row gap-2"
                       >
@@ -1756,107 +1766,89 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                       class="flex flex-col justify-between sm:flex-row"
                     >
                       <div
-                        class="bg-theme-background flex items-end justify-between"
+                        class="bg-theme-background flex items-end justify-between mt-8 hidden sm:block"
                       >
                         <div
                           class="space-y-2"
                         >
                           <div
-                            class="mb-1 flex items-center gap-3"
+                            class="flex items-center gap-3"
                           >
                             <div
-                              class="hidden sm:inline"
+                              data-testid="icon-SendTransactionLight"
                             >
                               <div
-                                data-testid="icon-SendTransactionLight"
+                                style="height: 24px; width: 24px;"
                               >
-                                <div
-                                  style="height: 24px; width: 24px;"
+                                <svg
+                                  fill="none"
+                                  style="height: 100%; width: 100%;"
+                                  viewBox="0 0 24 25"
+                                  xmlns="http://www.w3.org/2000/svg"
                                 >
-                                  <svg
-                                    fill="none"
-                                    style="height: 100%; width: 100%;"
-                                    viewBox="0 0 24 25"
-                                    xmlns="http://www.w3.org/2000/svg"
+                                  <g
+                                    clip-path="url(#clip0_13879_104416)"
                                   >
-                                    <g
-                                      clip-path="url(#clip0_13879_104416)"
+                                    <path
+                                      clip-rule="evenodd"
+                                      d="M18.8821 8.94457H13.7264C13.0146 8.94457 12.4375 8.3675 12.4375 7.65565V2.5"
+                                      fill="#E6EFF9"
+                                      fill-rule="evenodd"
+                                    />
+                                    <path
+                                      d="M18.8821 8.94457H13.7264C13.0146 8.94457 12.4375 8.3675 12.4375 7.65565V2.5"
+                                      stroke="#235B95"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    />
+                                    <path
+                                      d="M7.99174 21.8337H3.41391C2.70207 21.8337 2.125 21.2566 2.125 20.5448V3.78891C2.125 3.07707 2.70207 2.5 3.41391 2.5H12.5472C12.8891 2.49985 13.217 2.63554 13.4588 2.87722L18.5037 7.92289C18.7451 8.16452 18.8808 8.49212 18.8809 8.83372"
+                                      stroke="#235B95"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    />
+                                    <path
+                                      clip-rule="evenodd"
+                                      d="M9.02802 17.1926C8.71518 17.1043 8.49639 16.8225 8.4885 16.4975C8.48061 16.1725 8.68545 15.8804 8.99364 15.7771L18.994 12.5155C19.1276 12.472 19.2743 12.5069 19.3739 12.606C19.4735 12.7051 19.5092 12.8516 19.4664 12.9854L16.2073 22.9907C16.1044 23.2995 15.812 23.5049 15.4867 23.4968C15.1613 23.4888 14.8793 23.2693 14.7918 22.9559L13.6727 18.3067L9.02802 17.1926Z"
+                                      fill="#E6EFF9"
+                                      fill-rule="evenodd"
+                                      stroke="#235B95"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    />
+                                  </g>
+                                  <defs>
+                                    <clippath
+                                      id="clip0_13879_104416"
                                     >
-                                      <path
-                                        clip-rule="evenodd"
-                                        d="M18.8821 8.94457H13.7264C13.0146 8.94457 12.4375 8.3675 12.4375 7.65565V2.5"
-                                        fill="#E6EFF9"
-                                        fill-rule="evenodd"
+                                      <rect
+                                        fill="white"
+                                        height="24"
+                                        transform="translate(24 24.5) rotate(-180)"
+                                        width="24"
                                       />
-                                      <path
-                                        d="M18.8821 8.94457H13.7264C13.0146 8.94457 12.4375 8.3675 12.4375 7.65565V2.5"
-                                        stroke="#235B95"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                      />
-                                      <path
-                                        d="M7.99174 21.8337H3.41391C2.70207 21.8337 2.125 21.2566 2.125 20.5448V3.78891C2.125 3.07707 2.70207 2.5 3.41391 2.5H12.5472C12.8891 2.49985 13.217 2.63554 13.4588 2.87722L18.5037 7.92289C18.7451 8.16452 18.8808 8.49212 18.8809 8.83372"
-                                        stroke="#235B95"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                      />
-                                      <path
-                                        clip-rule="evenodd"
-                                        d="M9.02802 17.1926C8.71518 17.1043 8.49639 16.8225 8.4885 16.4975C8.48061 16.1725 8.68545 15.8804 8.99364 15.7771L18.994 12.5155C19.1276 12.472 19.2743 12.5069 19.3739 12.606C19.4735 12.7051 19.5092 12.8516 19.4664 12.9854L16.2073 22.9907C16.1044 23.2995 15.812 23.5049 15.4867 23.4968C15.1613 23.4888 14.8793 23.2693 14.7918 22.9559L13.6727 18.3067L9.02802 17.1926Z"
-                                        fill="#E6EFF9"
-                                        fill-rule="evenodd"
-                                        stroke="#235B95"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                      />
-                                    </g>
-                                    <defs>
-                                      <clippath
-                                        id="clip0_13879_104416"
-                                      >
-                                        <rect
-                                          fill="white"
-                                          height="24"
-                                          transform="translate(24 24.5) rotate(-180)"
-                                          width="24"
-                                        />
-                                      </clippath>
-                                    </defs>
-                                  </svg>
-                                </div>
+                                    </clippath>
+                                  </defs>
+                                </svg>
                               </div>
                             </div>
                             <h1
-                              class="mb-0 text-lg leading-[21px] md:text-2xl md:leading-[29px]"
+                              class="mb-0 text-2xl leading-[29px]"
                               data-testid="header__title"
                             >
                               Verify Message
                             </h1>
                           </div>
                           <div
-                            class="text-theme-secondary-text mt-0.5 flex items-center text-xs leading-5 font-semibold sm:mt-1 sm:text-sm sm:leading-[17px] sm:font-normal md:text-base md:leading-5"
+                            class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
                             data-testid="header__subtitle"
                           >
                             Authenticate a message from an address below.
                           </div>
                         </div>
-                      </div>
-                      <div
-                        class="flex flex-col mt-2 sm:mb-2 sm:hidden"
-                      >
-                        <ul
-                          class="flex flex-row gap-2"
-                        >
-                          <li
-                            class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-warning-300"
-                          />
-                          <li
-                            class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700"
-                          />
-                        </ul>
                       </div>
                     </div>
                   </div>
