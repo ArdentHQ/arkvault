@@ -78,23 +78,28 @@ export const ImportAddressesSidePanel = ({
 
 	const prevActiveTabRef = useRef(activeTab);
 	useEffect(() => {
-		if (!open) return;
+		if (!open) {
+			return;
+		}
 
-		const params = new URLSearchParams(location.search);
-		const step = parseInt(params.get("importStep") || "1");
-		
+		const parameters = new URLSearchParams(location.search);
+		const step = Number.parseInt(parameters.get("importStep") || "1");
+
 		const previousTab = prevActiveTabRef.current;
-		if (previousTab === ImportAddressStep.EncryptPasswordStep && 
-			step !== ImportAddressStep.EncryptPasswordStep && 
-			step >= 1 && step <= 4 &&
-			importedWallet) {
+		if (
+			previousTab === ImportAddressStep.EncryptPasswordStep &&
+			step !== ImportAddressStep.EncryptPasswordStep &&
+			step >= 1 &&
+			step <= 4 &&
+			importedWallet
+		) {
 			try {
 				forgetImportedWallets(importedWallet);
 			} catch (error) {
-				console.error('Error cleaning up wallet:', error);
+				console.error("Error cleaning up wallet:", error);
 			}
 		}
-		
+
 		if (step >= 1 && step <= 4) {
 			setActiveTab(step as ImportAddressStep);
 			prevActiveTabRef.current = step as ImportAddressStep;
@@ -103,10 +108,12 @@ export const ImportAddressesSidePanel = ({
 
 	useEffect(() => {
 		if (!open) {
-			const params = new URLSearchParams(location.search);
-			if (params.has("importStep")) {
-				params.delete("importStep");
-				const newUrl = params.toString() ? `${location.pathname}?${params.toString()}` : location.pathname;
+			const parameters = new URLSearchParams(location.search);
+			if (parameters.has("importStep")) {
+				parameters.delete("importStep");
+				const newUrl = parameters.toString()
+					? `${location.pathname}?${parameters.toString()}`
+					: location.pathname;
 				navigate(newUrl, { replace: true });
 			}
 		}
@@ -118,7 +125,7 @@ export const ImportAddressesSidePanel = ({
 			if (activeTab === ImportAddressStep.EncryptPasswordStep && importedWallet) {
 				forgetImportedWallets(importedWallet);
 			}
-			
+
 			setActiveTab(ImportAddressStep.MethodStep);
 		}
 		prevOpenRef.current = open;
