@@ -301,6 +301,7 @@ export const AddressesSidePanel = ({
 			}}
 			dataTestId="AddressesSidePanel"
 			onMountChange={onMountChange}
+			hasSteps={false}
 		>
 			<Tabs
 				className={cn("mb-3", { hidden: wallets.length === 1 })}
