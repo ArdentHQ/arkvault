@@ -68,181 +68,183 @@ describe("Profiles", () => {
 	});
 
 	it("should render scrollable view when viewport height is less than threshold and profiles exceed limit", () => {
-    Object.defineProperty(window, 'innerHeight', {
-      writable: true,
-      configurable: true,
-      value: 600,
-    });
+		Object.defineProperty(window, "innerHeight", {
+			configurable: true,
+			value: 600,
+			writable: true,
+		});
 
-    const mockGetBoundingClient = vi.fn(() => ({
-      top: 100,
-      bottom: 0,
-      left: 0,
-      right: 0,
-      width: 0,
-      height: 0,
-    }));
+		const mockGetBoundingClient = vi.fn(() => ({
+			bottom: 0,
+			height: 0,
+			left: 0,
+			right: 0,
+			top: 100,
+			width: 0,
+		}));
 
-    const mockDiv = {
-      getBoundingClientRect: mockGetBoundingClient,
-    };
+		const mockDiv = {
+			getBoundingClientRect: mockGetBoundingClient,
+		};
 
-    vi.spyOn(React, 'useRef').mockReturnValue({ current: mockDiv });
+		vi.spyOn(React, "useRef").mockReturnValue({ current: mockDiv });
 
-    render(<Profiles profiles={sliderProfiles} onClick={vi.fn()} onSelect={vi.fn()} actions={[]} />);
+		render(<Profiles profiles={sliderProfiles} onClick={vi.fn()} onSelect={vi.fn()} actions={[]} />);
 
-    expect(screen.getByTestId("ScrollableProfileList")).toBeInTheDocument();
-    expect(screen.queryByTestId("ProfileSlider")).not.toBeInTheDocument();
-  });
+		expect(screen.getByTestId("ScrollableProfileList")).toBeInTheDocument();
+		expect(screen.queryByTestId("ProfileSlider")).not.toBeInTheDocument();
+	});
 
-  it("should handle resize events and update scrollable view accordingly", async () => {
-    Object.defineProperty(window, 'innerHeight', {
-      writable: true,
-      configurable: true,
-      value: 600,
-    });
+	it("should handle resize events and update scrollable view accordingly", async () => {
+		Object.defineProperty(window, "innerHeight", {
+			configurable: true,
+			value: 600,
+			writable: true,
+		});
 
-    const mockGetBoundingClient = vi.fn(() => ({
-      top: 100,
-      bottom: 0,
-      left: 0,
-      right: 0,
-      width: 0,
-      height: 0,
-    }));
+		const mockGetBoundingClient = vi.fn(() => ({
+			bottom: 0,
+			height: 0,
+			left: 0,
+			right: 0,
+			top: 100,
+			width: 0,
+		}));
 
-    const mockDiv = {
-      getBoundingClientRect: mockGetBoundingClient,
-    };
+		const mockDiv = {
+			getBoundingClientRect: mockGetBoundingClient,
+		};
 
-    vi.spyOn(React, 'useRef').mockReturnValue({ current: mockDiv });
+		vi.spyOn(React, "useRef").mockReturnValue({ current: mockDiv });
 
-    render(<Profiles profiles={sliderProfiles} onClick={vi.fn()} onSelect={vi.fn()} actions={[]} />);
+		render(<Profiles profiles={sliderProfiles} onClick={vi.fn()} onSelect={vi.fn()} actions={[]} />);
 
-    expect(screen.getByTestId("ScrollableProfileList")).toBeInTheDocument();
+		expect(screen.getByTestId("ScrollableProfileList")).toBeInTheDocument();
 
-    Object.defineProperty(window, 'innerHeight', {
-      value: 800,
-    });
-    
-    await act(async () => {
-      window.dispatchEvent(new Event('resize'));
-    });
+		Object.defineProperty(window, "innerHeight", {
+			value: 800,
+		});
 
-    expect(screen.queryByTestId("ScrollableProfileList")).not.toBeInTheDocument();
-    expect(screen.getByTestId("ProfileSlider")).toBeInTheDocument();
-  });
+		await act(async () => {
+			window.dispatchEvent(new Event("resize"));
+		});
 
-  it("should set minimum of 2 profiles when calculated max is less than 2", () => {
-    Object.defineProperty(window, 'innerHeight', {
-      writable: true,
-      configurable: true,
-      value: 300,
-    });
+		expect(screen.queryByTestId("ScrollableProfileList")).not.toBeInTheDocument();
+		expect(screen.getByTestId("ProfileSlider")).toBeInTheDocument();
+	});
 
-    const mockGetBoundingClient = vi.fn(() => ({
-      top: 200,
-      bottom: 0,
-      left: 0,
-      right: 0,
-      width: 0,
-      height: 0,
-    }));
+	it("should set minimum of 2 profiles when calculated max is less than 2", () => {
+		Object.defineProperty(window, "innerHeight", {
+			configurable: true,
+			value: 300,
+			writable: true,
+		});
 
-    const mockDiv = {
-      getBoundingClientRect: mockGetBoundingClient,
-    };
+		const mockGetBoundingClient = vi.fn(() => ({
+			bottom: 0,
+			height: 0,
+			left: 0,
+			right: 0,
+			top: 200,
+			width: 0,
+		}));
 
-    vi.spyOn(React, 'useRef').mockReturnValue({ current: mockDiv });
+		const mockDiv = {
+			getBoundingClientRect: mockGetBoundingClient,
+		};
 
-    const manyProfiles = Array.from({ length: 10 }).fill(profile) as Contracts.IProfile[];
-    render(<Profiles profiles={manyProfiles} onClick={vi.fn()} onSelect={vi.fn()} actions={[]} />);
+		vi.spyOn(React, "useRef").mockReturnValue({ current: mockDiv });
 
-    expect(screen.getByTestId("ScrollableProfileList")).toBeInTheDocument();
-  });
+		const manyProfiles = Array.from({ length: 10 }).fill(profile) as Contracts.IProfile[];
+		render(<Profiles profiles={manyProfiles} onClick={vi.fn()} onSelect={vi.fn()} actions={[]} />);
 
-  it("should handle onSelect events in scrollable view", () => {
-    const mockOnSelect = vi.fn();
-    const mockAction = { label: "Test Action", value: "test" };
-    
-    Object.defineProperty(window, 'innerHeight', {
-      writable: true,
-      configurable: true,
-      value: 600,
-    });
+		expect(screen.getByTestId("ScrollableProfileList")).toBeInTheDocument();
+	});
 
-    const mockGetBoundingClient = vi.fn(() => ({
-      top: 100,
-      bottom: 0,
-      left: 0,
-      right: 0,
-      width: 0,
-      height: 0,
-    }));
+	it("should handle onSelect events in scrollable view", () => {
+		const mockOnSelect = vi.fn();
+		const mockAction = { label: "Test Action", value: "test" };
 
-    const mockDiv = {
-      getBoundingClientRect: mockGetBoundingClient,
-    };
+		Object.defineProperty(window, "innerHeight", {
+			configurable: true,
+			value: 600,
+			writable: true,
+		});
 
-    vi.spyOn(React, 'useRef').mockReturnValue({ current: mockDiv });
+		const mockGetBoundingClient = vi.fn(() => ({
+			bottom: 0,
+			height: 0,
+			left: 0,
+			right: 0,
+			top: 100,
+			width: 0,
+		}));
 
-    render(<Profiles profiles={sliderProfiles} onClick={vi.fn()} onSelect={mockOnSelect} actions={[mockAction]} />);
+		const mockDiv = {
+			getBoundingClientRect: mockGetBoundingClient,
+		};
 
-    expect(screen.getByTestId("ScrollableProfileList")).toBeInTheDocument();
-  });
+		vi.spyOn(React, "useRef").mockReturnValue({ current: mockDiv });
 
-  it("should cleanup resize event listener on unmount", () => {
-    const addEventListenerSpy = vi.spyOn(window, 'addEventListener');
-    const removeEventListenerSpy = vi.spyOn(window, 'removeEventListener');
-    
-    const { unmount } = render(<Profiles profiles={sliderProfiles} onClick={vi.fn()} onSelect={vi.fn()} actions={[]} />);
-    
-    expect(addEventListenerSpy).toHaveBeenCalledWith('resize', expect.any(Function));
-    
-    unmount();
-    
-    expect(removeEventListenerSpy).toHaveBeenCalledWith('resize', expect.any(Function));
-  });
+		render(<Profiles profiles={sliderProfiles} onClick={vi.fn()} onSelect={mockOnSelect} actions={[mockAction]} />);
 
-  it("should not use scrollable view when profiles length is less than or equal to PROFILES_PER_SLIDE even with low height", () => {
-    Object.defineProperty(window, 'innerHeight', {
-      writable: true,
-      configurable: true,
-      value: 500,
-    });
+		expect(screen.getByTestId("ScrollableProfileList")).toBeInTheDocument();
+	});
 
-    const shortProfilesList = Array.from({ length: 3 }).fill(profile) as Contracts.IProfile[];
+	it("should cleanup resize event listener on unmount", () => {
+		const addEventListenerSpy = vi.spyOn(window, "addEventListener");
+		const removeEventListenerSpy = vi.spyOn(window, "removeEventListener");
 
-    render(<Profiles profiles={shortProfilesList} onClick={vi.fn()} onSelect={vi.fn()} actions={[]} />);
+		const { unmount } = render(
+			<Profiles profiles={sliderProfiles} onClick={vi.fn()} onSelect={vi.fn()} actions={[]} />,
+		);
 
-    expect(screen.getByTestId("ProfileList")).toBeInTheDocument();
-    expect(screen.queryByTestId("ScrollableProfileList")).not.toBeInTheDocument();
-  });
+		expect(addEventListenerSpy).toHaveBeenCalledWith("resize", expect.any(Function));
 
-  it("should handle height threshold calculations correctly", () => {
-    Object.defineProperty(window, 'innerHeight', {
-      writable: true,
-      configurable: true,
-      value: 699,
-    });
+		unmount();
 
-    const mockGetBoundingClient = vi.fn(() => ({
-      top: 50,
-      bottom: 0,
-      left: 0,
-      right: 0,
-      width: 0,
-      height: 0,
-    }));
+		expect(removeEventListenerSpy).toHaveBeenCalledWith("resize", expect.any(Function));
+	});
 
-    const mockDiv = {
-      getBoundingClientRect: mockGetBoundingClient,
-    };
+	it("should not use scrollable view when profiles length is less than or equal to PROFILES_PER_SLIDE even with low height", () => {
+		Object.defineProperty(window, "innerHeight", {
+			configurable: true,
+			value: 500,
+			writable: true,
+		});
 
-    vi.spyOn(React, 'useRef').mockReturnValue({ current: mockDiv });
+		const shortProfilesList = Array.from({ length: 3 }).fill(profile) as Contracts.IProfile[];
 
-    render(<Profiles profiles={sliderProfiles} onClick={vi.fn()} onSelect={vi.fn()} actions={[]} />);
+		render(<Profiles profiles={shortProfilesList} onClick={vi.fn()} onSelect={vi.fn()} actions={[]} />);
 
-    expect(screen.getByTestId("ScrollableProfileList")).toBeInTheDocument();
-  });
+		expect(screen.getByTestId("ProfileList")).toBeInTheDocument();
+		expect(screen.queryByTestId("ScrollableProfileList")).not.toBeInTheDocument();
+	});
+
+	it("should handle height threshold calculations correctly", () => {
+		Object.defineProperty(window, "innerHeight", {
+			configurable: true,
+			value: 699,
+			writable: true,
+		});
+
+		const mockGetBoundingClient = vi.fn(() => ({
+			bottom: 0,
+			height: 0,
+			left: 0,
+			right: 0,
+			top: 50,
+			width: 0,
+		}));
+
+		const mockDiv = {
+			getBoundingClientRect: mockGetBoundingClient,
+		};
+
+		vi.spyOn(React, "useRef").mockReturnValue({ current: mockDiv });
+
+		render(<Profiles profiles={sliderProfiles} onClick={vi.fn()} onSelect={vi.fn()} actions={[]} />);
+
+		expect(screen.getByTestId("ScrollableProfileList")).toBeInTheDocument();
+	});
 });
