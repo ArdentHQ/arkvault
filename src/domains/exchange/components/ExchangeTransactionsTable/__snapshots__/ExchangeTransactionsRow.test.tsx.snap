@@ -173,7 +173,7 @@ exports[`ExchangeTransactionsRow > should render (Expired) 1`] = `
               type="button"
             >
               <div
-                class="flex items-center space-x-2"
+                class="flex items-center gap-2"
               >
                 <div>
                   <div
@@ -376,7 +376,7 @@ exports[`ExchangeTransactionsRow > should render (Failed) 1`] = `
               type="button"
             >
               <div
-                class="flex items-center space-x-2"
+                class="flex items-center gap-2"
               >
                 <div>
                   <div
@@ -579,7 +579,7 @@ exports[`ExchangeTransactionsRow > should render (Finished) 1`] = `
               type="button"
             >
               <div
-                class="flex items-center space-x-2"
+                class="flex items-center gap-2"
               >
                 <div>
                   <div
@@ -783,7 +783,7 @@ exports[`ExchangeTransactionsRow > should render (New) 1`] = `
               type="button"
             >
               <div
-                class="flex items-center space-x-2"
+                class="flex items-center gap-2"
               >
                 <div>
                   <div
@@ -991,7 +991,7 @@ exports[`ExchangeTransactionsRow > should render (Refunded) 1`] = `
               type="button"
             >
               <div
-                class="flex items-center space-x-2"
+                class="flex items-center gap-2"
               >
                 <div>
                   <div
@@ -1199,7 +1199,7 @@ exports[`ExchangeTransactionsRow > should render (Verifying) 1`] = `
               type="button"
             >
               <div
-                class="flex items-center space-x-2"
+                class="flex items-center gap-2"
               >
                 <div>
                   <div
@@ -1402,7 +1402,7 @@ exports[`ExchangeTransactionsRow > should render compact 1`] = `
               type="button"
             >
               <div
-                class="flex items-center space-x-2"
+                class="flex items-center gap-2"
               >
                 <div>
                   <div

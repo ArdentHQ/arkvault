@@ -686,7 +686,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     <div>
                       <div
@@ -973,7 +973,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                                     aria-invalid="false"
                                     aria-labelledby="SelectRecipient__dropdown-label"
                                     autocomplete="off"
-                                    class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! cursor-default text-theme-secondary-text"
+                                    class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! text-theme-secondary-text cursor-default"
                                     data-testid="SelectDropdown__input"
                                     disabled=""
                                     id="SelectRecipient__dropdown-input"
@@ -1012,7 +1012,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
               type="button"
             >
               <div
-                class="flex items-center space-x-2"
+                class="flex items-center gap-2"
               >
                 Back
               </div>
@@ -1024,7 +1024,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
               type="button"
             >
               <div
-                class="flex items-center space-x-2"
+                class="flex items-center gap-2"
               >
                 Continue
               </div>
@@ -1653,7 +1653,7 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                 type="button"
               >
                 <div
-                  class="flex items-center space-x-2"
+                  class="flex items-center gap-2"
                 >
                   Go to Portfolio
                 </div>
@@ -1664,7 +1664,7 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                 type="button"
               >
                 <div
-                  class="flex items-center space-x-2"
+                  class="flex items-center gap-2"
                 >
                   New Exchange
                 </div>
@@ -2131,7 +2131,7 @@ exports[`FormStep > should render 1`] = `
                         aria-controls="fromCurrency-menu"
                         aria-labelledby="fromCurrency-label"
                         autocomplete="off"
-                        class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! cursor-default text-theme-secondary-text"
+                        class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! text-theme-secondary-text cursor-default"
                         data-testid="SelectDropdown__input"
                         disabled=""
                         id="fromCurrency-input"
@@ -2270,7 +2270,7 @@ exports[`FormStep > should render 1`] = `
           type="button"
         >
           <div
-            class="flex items-center space-x-2"
+            class="flex items-center gap-2"
           >
             <div>
               <div
@@ -2373,7 +2373,7 @@ exports[`FormStep > should render 1`] = `
                           aria-controls="toCurrency-menu"
                           aria-labelledby="toCurrency-label"
                           autocomplete="off"
-                          class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! cursor-default text-theme-secondary-text"
+                          class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! text-theme-secondary-text cursor-default"
                           data-testid="SelectDropdown__input"
                           disabled=""
                           id="toCurrency-input"
@@ -2558,7 +2558,7 @@ exports[`FormStep > should render 1`] = `
                             aria-invalid="false"
                             aria-labelledby="SelectRecipient__dropdown-label"
                             autocomplete="off"
-                            class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! cursor-default text-theme-secondary-text"
+                            class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! text-theme-secondary-text cursor-default"
                             data-testid="SelectDropdown__input"
                             disabled=""
                             id="SelectRecipient__dropdown-input"

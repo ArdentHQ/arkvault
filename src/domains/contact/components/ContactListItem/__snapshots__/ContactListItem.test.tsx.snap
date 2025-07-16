@@ -122,7 +122,7 @@ exports[`ContactListItem > should render 1`] = `
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     Send
                   </div>
@@ -144,7 +144,7 @@ exports[`ContactListItem > should render 1`] = `
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       <div
                         class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50 transition-colors duration-200"
@@ -317,7 +317,7 @@ exports[`ContactListItem > should render as validator 1`] = `
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     Send
                   </div>
@@ -339,7 +339,7 @@ exports[`ContactListItem > should render as validator 1`] = `
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       <div
                         class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50 transition-colors duration-200"
@@ -512,7 +512,7 @@ exports[`ContactListItem > should render options 1`] = `
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     Send
                   </div>
@@ -534,7 +534,7 @@ exports[`ContactListItem > should render options 1`] = `
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       <div
                         class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50 transition-colors duration-200"
@@ -686,7 +686,7 @@ exports[`ContactListItem > should render options 1`] = `
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     Send
                   </div>
@@ -705,7 +705,7 @@ exports[`ContactListItem > should render options 1`] = `
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       <div
                         class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50 transition-colors duration-200"
@@ -857,7 +857,7 @@ exports[`ContactListItem > should render options 1`] = `
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     Send
                   </div>
@@ -876,7 +876,7 @@ exports[`ContactListItem > should render options 1`] = `
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       <div
                         class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50 transition-colors duration-200"
@@ -1049,7 +1049,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     Send
                   </div>
@@ -1071,7 +1071,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       <div
                         class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50 transition-colors duration-200"
@@ -1223,7 +1223,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     Send
                   </div>
@@ -1242,7 +1242,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       <div
                         class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50 transition-colors duration-200"
@@ -1394,7 +1394,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     Send
                   </div>
@@ -1413,7 +1413,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       <div
                         class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50 transition-colors duration-200"

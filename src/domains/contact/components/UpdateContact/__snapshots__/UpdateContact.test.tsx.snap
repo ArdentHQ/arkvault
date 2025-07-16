@@ -23,7 +23,7 @@ exports[`UpdateContact > should render responsive 1`] = `
             type="button"
           >
             <div
-              class="flex items-center space-x-2"
+              class="flex items-center gap-2"
             >
               <div>
                 <div
@@ -140,7 +140,7 @@ exports[`UpdateContact > should render responsive 1`] = `
                       type="button"
                     >
                       <div
-                        class="flex items-center space-x-2"
+                        class="flex items-center gap-2"
                       >
                         Cancel
                       </div>
@@ -151,7 +151,7 @@ exports[`UpdateContact > should render responsive 1`] = `
                       type="submit"
                     >
                       <div
-                        class="flex items-center space-x-2"
+                        class="flex items-center gap-2"
                       >
                         Save
                       </div>
@@ -191,7 +191,7 @@ exports[`UpdateContact > should render responsive 2`] = `
             type="button"
           >
             <div
-              class="flex items-center space-x-2"
+              class="flex items-center gap-2"
             >
               <div>
                 <div
@@ -305,7 +305,7 @@ exports[`UpdateContact > should render responsive 2`] = `
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       <div>
                         <div
@@ -348,7 +348,7 @@ exports[`UpdateContact > should render responsive 2`] = `
                       type="button"
                     >
                       <div
-                        class="flex items-center space-x-2"
+                        class="flex items-center gap-2"
                       >
                         Cancel
                       </div>
@@ -359,7 +359,7 @@ exports[`UpdateContact > should render responsive 2`] = `
                       type="submit"
                     >
                       <div
-                        class="flex items-center space-x-2"
+                        class="flex items-center gap-2"
                       >
                         Save
                       </div>
@@ -399,7 +399,7 @@ exports[`UpdateContact > should render responsive 3`] = `
             type="button"
           >
             <div
-              class="flex items-center space-x-2"
+              class="flex items-center gap-2"
             >
               <div>
                 <div
@@ -518,7 +518,7 @@ exports[`UpdateContact > should render responsive 3`] = `
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       <div>
                         <div
@@ -561,7 +561,7 @@ exports[`UpdateContact > should render responsive 3`] = `
                       type="button"
                     >
                       <div
-                        class="flex items-center space-x-2"
+                        class="flex items-center gap-2"
                       >
                         Cancel
                       </div>
@@ -572,7 +572,7 @@ exports[`UpdateContact > should render responsive 3`] = `
                       type="submit"
                     >
                       <div
-                        class="flex items-center space-x-2"
+                        class="flex items-center gap-2"
                       >
                         Save
                       </div>

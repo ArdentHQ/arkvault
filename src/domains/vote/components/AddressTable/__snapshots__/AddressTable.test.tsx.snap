@@ -376,7 +376,7 @@ exports[`AddressTable > should render 1`] = `
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       Vote
                     </div>
@@ -768,7 +768,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       Vote
                     </div>
@@ -1348,7 +1348,7 @@ exports[`AddressTable > should render with voting validators and handle exceptio
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       Vote
                     </div>

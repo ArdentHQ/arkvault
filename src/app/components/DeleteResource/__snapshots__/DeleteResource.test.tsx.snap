@@ -25,7 +25,7 @@ exports[`DeleteResource > should render with children 1`] = `
             type="button"
           >
             <div
-              class="flex items-center space-x-2"
+              class="flex items-center gap-2"
             >
               <div>
                 <div
@@ -179,7 +179,7 @@ exports[`DeleteResource > should render with children 1`] = `
                 type="button"
               >
                 <div
-                  class="flex items-center space-x-2"
+                  class="flex items-center gap-2"
                 >
                   Cancel
                 </div>
@@ -190,7 +190,7 @@ exports[`DeleteResource > should render with children 1`] = `
                 type="submit"
               >
                 <div
-                  class="flex items-center space-x-2"
+                  class="flex items-center gap-2"
                 >
                   <div>
                     <div
