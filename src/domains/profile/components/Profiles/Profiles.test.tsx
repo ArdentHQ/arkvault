@@ -7,35 +7,35 @@ let profile: Contracts.IProfile;
 
 let sliderProfiles: Contracts.IProfile[];
 
+const setupScrollableView = () => {
+	Object.defineProperty(window, "innerHeight", {
+		configurable: true,
+		value: 600,
+		writable: true,
+	});
+
+	const mockGetBoundingClient = vi.fn(() => ({
+		bottom: 0,
+		height: 0,
+		left: 0,
+		right: 0,
+		top: 100,
+		width: 0,
+	}));
+
+	const mockDiv = {
+		getBoundingClientRect: mockGetBoundingClient,
+	};
+
+	vi.spyOn(React, "useRef").mockReturnValue({ current: mockDiv });
+};
+
 describe("Profiles", () => {
 	beforeAll(() => {
 		profile = env.profiles().findById(getMainsailProfileId());
 
 		sliderProfiles = Array.from({ length: 8 }).fill(profile) as Contracts.IProfile[];
 	});
-
-	const setupScrollableView = () => {
-		Object.defineProperty(window, "innerHeight", {
-			configurable: true,
-			value: 600,
-			writable: true,
-		});
-
-		const mockGetBoundingClient = vi.fn(() => ({
-			bottom: 0,
-			height: 0,
-			left: 0,
-			right: 0,
-			top: 100,
-			width: 0,
-		}));
-
-		const mockDiv = {
-			getBoundingClientRect: mockGetBoundingClient,
-		};
-
-		vi.spyOn(React, "useRef").mockReturnValue({ current: mockDiv });
-	};
 
 	it("should render a list without a slider if number of profiles are less than given threshold", () => {
 		render(<Profiles profiles={env.profiles().values()} onClick={vi.fn()} onSelect={vi.fn()} actions={[]} />);
