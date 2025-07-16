@@ -1,13 +1,16 @@
 name: E2E
 
 on:
+    workflow_dispatch:
+
     push:
         branches:
             - master
             - develop
             - develop-ledger
     pull_request:
-        types: [ready_for_review, synchronize, opened]
+        branches:
+            - main
 
 jobs:
     build-and-upload:
