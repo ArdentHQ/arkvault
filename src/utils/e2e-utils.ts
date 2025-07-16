@@ -120,9 +120,7 @@ const searchAddressesMocks = () => {
 			{ limit: 15, page: 2 },
 			{ limit: 30, page: 1 },
 		],
-		"0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54": [
-			{ limit: 30, page: 1 },
-		],
+		"0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54": [{ limit: 30, page: 1 }],
 		// DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P: [
 		// 	{ limit: 10, page: 1 },
 		// 	{ limit: 15, page: 1 },
@@ -152,7 +150,7 @@ const searchAddressesMocks = () => {
 						request.url ===
 							`https://dwallets-evm.mainsailhq.com/api/transactions?limit=${limit}&address=${address}` ||
 						request.url ===
-						`https://dwallets-evm.mainsailhq.com/api/transactions?page=${page}&limit=${limit}&orderBy=timestamp:desc&address=${address}`,
+							`https://dwallets-evm.mainsailhq.com/api/transactions?page=${page}&limit=${limit}&orderBy=timestamp:desc&address=${address}`,
 					`coins/mainsail/devnet/transactions/byAddress/${address}-${page}-${limit}`,
 				),
 			),
