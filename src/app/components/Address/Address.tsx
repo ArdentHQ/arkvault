@@ -9,6 +9,7 @@ import { Clipboard } from "@/app/components/Clipboard";
 import { useTranslation } from "react-i18next";
 import { Icon } from "@/app/components/Icon";
 import { useTheme } from "@/app/hooks";
+import { twMerge } from "tailwind-merge";
 
 interface Properties {
 	walletName?: string;
@@ -102,15 +103,13 @@ export const Address = ({
 	return (
 		<div
 			ref={ref}
-			className={cn(
-				"flex overflow-hidden whitespace-nowrap",
+			className={twMerge("flex overflow-hidden whitespace-nowrap", cn(
 				orientation === "horizontal" ? "items-center space-x-2" : "flex-col items-start",
 				alignment === "center" ? "min-w-0" : "w-full",
 				{
 					"justify-end": alignment === "right",
 				},
-				wrapperClass,
-			)}
+			), wrapperClass)}
 		>
 			{walletName && (
 				<span
