@@ -89,14 +89,16 @@ describe("Profiles", () => {
 
 		expect(secondSlideSkeletons?.length).toBe(2);
 	});
-	
-it("should handle onClick and onSelect in ScrollableProfiles", async () => {
+
+	it("should handle onClick and onSelect in ScrollableProfiles", async () => {
 		const mockOnClick = vi.fn();
 		const mockOnSelect = vi.fn();
 		const mockAction = { label: "Test Action", value: "test" };
 
 		setupScrollableView();
-		render(<Profiles profiles={sliderProfiles} onClick={mockOnClick} onSelect={mockOnSelect} actions={[mockAction]} />);
+		render(
+			<Profiles profiles={sliderProfiles} onClick={mockOnClick} onSelect={mockOnSelect} actions={[mockAction]} />,
+		);
 		expect(screen.getByTestId("ScrollableProfileList")).toBeInTheDocument();
 
 		const profileLink = screen.getAllByTestId("ProfileRow__Link")[0];
@@ -104,13 +106,13 @@ it("should handle onClick and onSelect in ScrollableProfiles", async () => {
 		expect(mockOnClick).toHaveBeenCalledWith(profile);
 
 		const dropdownToggle = screen.getAllByTestId("dropdown__toggle")[0];
-		
+
 		await act(async () => {
 			dropdownToggle.click();
 		});
 
 		const dropdownOption = screen.getByText("Test Action");
-		
+
 		await act(async () => {
 			dropdownOption.click();
 		});
@@ -124,7 +126,9 @@ it("should handle onClick and onSelect in ScrollableProfiles", async () => {
 		const mockAction = { label: "Test Action", value: "test" };
 		const fewProfiles = Array.from({ length: 3 }).fill(profile) as Contracts.IProfile[];
 
-		render(<Profiles profiles={fewProfiles} onClick={mockOnClick} onSelect={mockOnSelect} actions={[mockAction]} />);
+		render(
+			<Profiles profiles={fewProfiles} onClick={mockOnClick} onSelect={mockOnSelect} actions={[mockAction]} />,
+		);
 		expect(screen.getByTestId("ProfileList")).toBeInTheDocument();
 
 		const profileLink = screen.getAllByTestId("ProfileRow__Link")[0];
@@ -132,13 +136,13 @@ it("should handle onClick and onSelect in ScrollableProfiles", async () => {
 		expect(mockOnClick).toHaveBeenCalledWith(profile);
 
 		const dropdownToggle = screen.getAllByTestId("dropdown__toggle")[0];
-		
+
 		await act(async () => {
 			dropdownToggle.click();
 		});
 
 		const dropdownOption = screen.getByText("Test Action");
-		
+
 		await act(async () => {
 			dropdownOption.click();
 		});
