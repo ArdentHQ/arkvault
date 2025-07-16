@@ -4,12 +4,7 @@ import { Contracts as ProfileContracts } from "@/app/lib/profiles";
 const signWithLedger = async (message: string, wallet: ProfileContracts.IReadWriteWallet) => {
 	const path = wallet.data().get<string>(ProfileContracts.WalletData.DerivationPath);
 
-	let signatory = wallet.publicKey();
-
-	if (!signatory) {
-		signatory = await wallet.ledger().getPublicKey(path!);
-	}
-
+	const signatory = await wallet.ledger().getExtendedPublicKey(path!);
 	const signature = await wallet.ledger().signMessage(path!, message);
 
 	return {
@@ -21,14 +16,14 @@ const signWithLedger = async (message: string, wallet: ProfileContracts.IReadWri
 
 const withAbortPromise =
 	(signal?: AbortSignal) =>
-	<T>(promise: Promise<T>) =>
-		new Promise<T>((resolve, reject) => {
-			if (signal) {
-				signal.addEventListener("abort", () => reject("ERR_ABORT"));
-			}
+		<T>(promise: Promise<T>) =>
+			new Promise<T>((resolve, reject) => {
+				if (signal) {
+					signal.addEventListener("abort", () => reject("ERR_ABORT"));
+				}
 
-			return promise.then(resolve).catch(reject);
-		});
+				return promise.then(resolve).catch(reject);
+			});
 
 const sign = async (
 	wallet: ProfileContracts.IReadWriteWallet,
