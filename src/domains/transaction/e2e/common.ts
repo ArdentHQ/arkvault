@@ -9,7 +9,7 @@ export const goToTransferPage = async (t: any) => {
 	await t
 		.expect(
 			Selector("h1").withText(
-				translations.TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.TITLE.replace("{{ticker}}", "DARK"),
+				translations.TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.TITLE.replace("{{ticker}}", "ARK"),
 			).exists,
 		)
 		.ok({ timeout: 60_000 });
@@ -32,7 +32,7 @@ export const goToRegistrationPage = async (t: any) => {
 };
 
 export const goToValidatorRegistrationPage = async (t: any) => {
-	await t.click(Selector('[data-testid="WalletHeader__more-button"]'));
+	await t.click(Selector('[data-testid="WalletHeaderMobile__more-button"]'));
 	await t.click(
 		Selector('[data-testid="dropdown__options"] li').withText(
 			translations.WALLETS.PAGE_WALLET_DETAILS.OPTIONS.REGISTER_VALIDATOR,
@@ -45,7 +45,7 @@ export const goToValidatorRegistrationPage = async (t: any) => {
 };
 
 export const goToValidatorResignationPage = async (t: any) => {
-	await t.click(Selector('[data-testid="WalletHeader__more-button"]'));
+	await t.click(Selector('[data-testid="WalletHeaderMobile__more-button"]'));
 	await t.click(
 		Selector('[data-testid="dropdown__options"] li').withText(
 			translations.WALLETS.PAGE_WALLET_DETAILS.OPTIONS.RESIGN_VALIDATOR,
