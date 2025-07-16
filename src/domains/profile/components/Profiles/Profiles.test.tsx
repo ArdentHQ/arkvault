@@ -245,4 +245,49 @@ describe("Profiles", () => {
 
     expect(screen.getByTestId("ScrollableProfileList")).toBeInTheDocument();
   });
+
+  it("should handle onClick in ScrollableProfiles", () => {
+    const mockOnClick = vi.fn();
+    
+    Object.defineProperty(window, 'innerHeight', {
+      writable: true,
+      configurable: true,
+      value: 600,
+    });
+
+    const mockGetBoundingClient = vi.fn(() => ({
+      top: 100,
+      bottom: 0,
+      left: 0,
+      right: 0,
+      width: 0,
+      height: 0,
+    }));
+
+    const mockDiv = {
+      getBoundingClientRect: mockGetBoundingClient,
+    };
+
+    vi.spyOn(React, 'useRef').mockReturnValue({ current: mockDiv });
+
+    render(<Profiles profiles={sliderProfiles} onClick={mockOnClick} onSelect={vi.fn()} actions={[]} />);
+
+    const profileLinks = screen.getAllByTestId("ProfileRow__Link");
+    profileLinks[0].click();
+
+    expect(mockOnClick).toHaveBeenCalledWith(profile);
+  });
+
+   it("should handle onClick in ProfilesSlide", () => {
+    const mockOnClick = vi.fn();
+    
+    const fewProfiles = Array.from({ length: 3 }).fill(profile) as Contracts.IProfile[];
+
+    render(<Profiles profiles={fewProfiles} onClick={mockOnClick} onSelect={vi.fn()} actions={[]} />);
+
+    const profileLinks = screen.getAllByTestId("ProfileRow__Link");
+    profileLinks[0].click();
+
+    expect(mockOnClick).toHaveBeenCalledWith(profile);
+  });
 });
