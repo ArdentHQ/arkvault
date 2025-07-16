@@ -66,7 +66,7 @@ export const VoteTransactionType = ({
 							<Address
 								truncateOnTable
 								address={unvotes[0].wallet?.address()}
-								wrapperClass="justify-start w-60! sm:w-full!"
+								wrapperClass="justify-start w-52 xs:w-60 sm:w-full"
 								addressClass="truncate text-sm font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-200 sm:text-base sm:leading-5 text-right sm:text-left"
 							/>
 						</div>
@@ -77,7 +77,7 @@ export const VoteTransactionType = ({
 							<Address
 								truncateOnTable
 								address={votes[0].wallet?.address()}
-								wrapperClass="justify-start w-60! sm:w-full!"
+								wrapperClass="justify-start w-52 xs:w-60 sm:w-full"
 								addressClass="truncate text-sm font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-200 sm:text-base sm:leading-5 text-right sm:text-left"
 							/>
 						</div>
@@ -100,7 +100,7 @@ export const VoteTransactionType = ({
 							address={
 								voteCategory === "vote" ? votes[0]?.wallet?.address() : unvotes[0]?.wallet?.address()
 							}
-							wrapperClass="justify-start w-60 sm:w-auto"
+							wrapperClass="justify-start w-52 xs:w-60 sm:w-auto"
 							addressClass="truncate text-sm font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-200 sm:text-base sm:leading-5 text-right sm:text-left"
 						/>
 					</div>
