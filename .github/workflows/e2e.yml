@@ -6,8 +6,14 @@ on:
             - master
             - develop
             - develop-ledger
+            - feat/evm
+
     pull_request:
-        types: [ready_for_review, synchronize, opened]
+        branches:
+            - main
+            - develop
+            - develop-ledger
+            - feat/evm
 jobs:
     build-and-upload:
         runs-on: ubuntu-latest
