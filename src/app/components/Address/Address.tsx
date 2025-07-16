@@ -103,13 +103,17 @@ export const Address = ({
 	return (
 		<div
 			ref={ref}
-			className={twMerge("flex overflow-hidden whitespace-nowrap", cn(
-				orientation === "horizontal" ? "items-center space-x-2" : "flex-col items-start",
-				alignment === "center" ? "min-w-0" : "w-full",
-				{
-					"justify-end": alignment === "right",
-				},
-			), wrapperClass)}
+			className={twMerge(
+				"flex overflow-hidden whitespace-nowrap",
+				cn(
+					orientation === "horizontal" ? "items-center space-x-2" : "flex-col items-start",
+					alignment === "center" ? "min-w-0" : "w-full",
+					{
+						"justify-end": alignment === "right",
+					},
+				),
+				wrapperClass,
+			)}
 		>
 			{walletName && (
 				<span
