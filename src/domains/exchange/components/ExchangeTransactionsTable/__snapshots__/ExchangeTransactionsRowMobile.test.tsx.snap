@@ -102,7 +102,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Expired) 1`] = `
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     <div>
                       <div
@@ -326,7 +326,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Failed) 1`] = `
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     <div>
                       <div
@@ -550,7 +550,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Finished) 1`] = `
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     <div>
                       <div
@@ -775,7 +775,7 @@ exports[`ExchangeTransactionsRowMobile > should render (New) 1`] = `
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     <div>
                       <div
@@ -1041,7 +1041,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Refunded) 1`] = `
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     <div>
                       <div
@@ -1270,7 +1270,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Verifying) 1`] = `
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     <div>
                       <div
@@ -1491,7 +1491,7 @@ exports[`ExchangeTransactionsRowMobile > should render N/A if no orderId 1`] = `
               type="button"
             >
               <div
-                class="flex items-center space-x-2"
+                class="flex items-center gap-2"
               >
                 <div>
                   <div
@@ -1711,7 +1711,7 @@ exports[`ExchangeTransactionsRowMobile > should render transaction provider 1`] 
               type="button"
             >
               <div
-                class="flex items-center space-x-2"
+                class="flex items-center gap-2"
               >
                 <div>
                   <div

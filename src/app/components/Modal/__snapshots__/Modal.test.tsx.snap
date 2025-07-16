@@ -23,7 +23,7 @@ exports[`Modal > should closed by the Esc key 1`] = `
             type="button"
           >
             <div
-              class="flex items-center space-x-2"
+              class="flex items-center gap-2"
             >
               <div>
                 <div
@@ -98,7 +98,7 @@ exports[`Modal > should render a 3x large one 1`] = `
             type="button"
           >
             <div
-              class="flex items-center space-x-2"
+              class="flex items-center gap-2"
             >
               <div>
                 <div
@@ -171,7 +171,7 @@ exports[`Modal > should render a 4x large one 1`] = `
             type="button"
           >
             <div
-              class="flex items-center space-x-2"
+              class="flex items-center gap-2"
             >
               <div>
                 <div
@@ -244,7 +244,7 @@ exports[`Modal > should render a 5x large one 1`] = `
             type="button"
           >
             <div
-              class="flex items-center space-x-2"
+              class="flex items-center gap-2"
             >
               <div>
                 <div
@@ -317,7 +317,7 @@ exports[`Modal > should render a large one 1`] = `
             type="button"
           >
             <div
-              class="flex items-center space-x-2"
+              class="flex items-center gap-2"
             >
               <div>
                 <div
@@ -390,7 +390,7 @@ exports[`Modal > should render a medium one 1`] = `
             type="button"
           >
             <div
-              class="flex items-center space-x-2"
+              class="flex items-center gap-2"
             >
               <div>
                 <div
@@ -463,7 +463,7 @@ exports[`Modal > should render a modal with banner 1`] = `
             type="button"
           >
             <div
-              class="flex items-center space-x-2"
+              class="flex items-center gap-2"
             >
               <div>
                 <div
@@ -546,7 +546,7 @@ exports[`Modal > should render a modal with content 1`] = `
             type="button"
           >
             <div
-              class="flex items-center space-x-2"
+              class="flex items-center gap-2"
             >
               <div>
                 <div
@@ -621,7 +621,7 @@ exports[`Modal > should render a modal with description 1`] = `
             type="button"
           >
             <div
-              class="flex items-center space-x-2"
+              class="flex items-center gap-2"
             >
               <div>
                 <div
@@ -700,7 +700,7 @@ exports[`Modal > should render a modal with overlay 1`] = `
             type="button"
           >
             <div
-              class="flex items-center space-x-2"
+              class="flex items-center gap-2"
             >
               <div>
                 <div
@@ -775,7 +775,7 @@ exports[`Modal > should render a modal with overlay 2`] = `
             type="button"
           >
             <div
-              class="flex items-center space-x-2"
+              class="flex items-center gap-2"
             >
               <div>
                 <div
@@ -850,7 +850,7 @@ exports[`Modal > should render a small one 1`] = `
             type="button"
           >
             <div
-              class="flex items-center space-x-2"
+              class="flex items-center gap-2"
             >
               <div>
                 <div
@@ -923,7 +923,7 @@ exports[`Modal > should render a xlarge one 1`] = `
             type="button"
           >
             <div
-              class="flex items-center space-x-2"
+              class="flex items-center gap-2"
             >
               <div>
                 <div
@@ -996,7 +996,7 @@ exports[`Modal > should render with scrollbar if it exceeds window height 1`] = 
             type="button"
           >
             <div
-              class="flex items-center space-x-2"
+              class="flex items-center gap-2"
             >
               <div>
                 <div
@@ -1105,7 +1105,7 @@ exports[`Modal > should render without offset for buttons 1`] = `
             type="button"
           >
             <div
-              class="flex items-center space-x-2"
+              class="flex items-center gap-2"
             >
               <div>
                 <div

@@ -18,7 +18,7 @@ exports[`Notifications > should render with transactions in lg 1`] = `
           type="button"
         >
           <div
-            class="flex items-center space-x-2"
+            class="flex items-center gap-2"
           >
             <div
               class="m-0 p-1"
@@ -75,7 +75,7 @@ exports[`Notifications > should render with transactions in md 1`] = `
           type="button"
         >
           <div
-            class="flex items-center space-x-2"
+            class="flex items-center gap-2"
           >
             <div
               class="m-0 p-1"
@@ -132,7 +132,7 @@ exports[`Notifications > should render with transactions in sm 1`] = `
           type="button"
         >
           <div
-            class="flex items-center space-x-2"
+            class="flex items-center gap-2"
           >
             <div
               class="m-0 p-1"
@@ -189,7 +189,7 @@ exports[`Notifications > should render with transactions in xl 1`] = `
           type="button"
         >
           <div
-            class="flex items-center space-x-2"
+            class="flex items-center gap-2"
           >
             <div
               class="m-0 p-1"
@@ -246,7 +246,7 @@ exports[`Notifications > should render with transactions in xs 1`] = `
           type="button"
         >
           <div
-            class="flex items-center space-x-2"
+            class="flex items-center gap-2"
           >
             <div
               class="m-0 p-1"

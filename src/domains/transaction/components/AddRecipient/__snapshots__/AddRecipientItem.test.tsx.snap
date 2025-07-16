@@ -29,7 +29,7 @@ exports[`Add Recipient item > should render with exchange amount 1`] = `
               type="button"
             >
               <div
-                class="flex items-center space-x-2"
+                class="flex items-center gap-2"
               >
                 <div>
                   <div
@@ -176,7 +176,7 @@ exports[`Add Recipient item > should render with exchange amount 1`] = `
             type="button"
           >
             <div
-              class="flex items-center space-x-2"
+              class="flex items-center gap-2"
             >
               <div>
                 <div
@@ -243,7 +243,7 @@ exports[`Add Recipient item > should render without exchange amount 1`] = `
               type="button"
             >
               <div
-                class="flex items-center space-x-2"
+                class="flex items-center gap-2"
               >
                 <div>
                   <div
@@ -384,7 +384,7 @@ exports[`Add Recipient item > should render without exchange amount 1`] = `
             type="button"
           >
             <div
-              class="flex items-center space-x-2"
+              class="flex items-center gap-2"
             >
               <div>
                 <div
