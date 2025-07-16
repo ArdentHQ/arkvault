@@ -13,7 +13,6 @@ on:
             - main
             - develop
             - develop-ledger
-            - feat/evm
 jobs:
     build-and-upload:
         runs-on: ubuntu-latest
