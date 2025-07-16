@@ -14,6 +14,29 @@ describe("Profiles", () => {
 		sliderProfiles = Array.from({ length: 8 }).fill(profile) as Contracts.IProfile[];
 	});
 
+	const setupScrollableView = () => {
+		Object.defineProperty(window, "innerHeight", {
+			configurable: true,
+			value: 600,
+			writable: true,
+		});
+
+		const mockGetBoundingClient = vi.fn(() => ({
+			bottom: 0,
+			height: 0,
+			left: 0,
+			right: 0,
+			top: 100,
+			width: 0,
+		}));
+
+		const mockDiv = {
+			getBoundingClientRect: mockGetBoundingClient,
+		};
+
+		vi.spyOn(React, "useRef").mockReturnValue({ current: mockDiv });
+	};
+
 	it("should render a list without a slider if number of profiles are less than given threshold", () => {
 		render(<Profiles profiles={env.profiles().values()} onClick={vi.fn()} onSelect={vi.fn()} actions={[]} />);
 
@@ -65,6 +88,62 @@ describe("Profiles", () => {
 			?.querySelectorAll('[data-testid="ProfileRowSkeleton"]');
 
 		expect(secondSlideSkeletons?.length).toBe(2);
+	});
+	
+it("should handle onClick and onSelect in ScrollableProfiles", async () => {
+		const mockOnClick = vi.fn();
+		const mockOnSelect = vi.fn();
+		const mockAction = { label: "Test Action", value: "test" };
+
+		setupScrollableView();
+		render(<Profiles profiles={sliderProfiles} onClick={mockOnClick} onSelect={mockOnSelect} actions={[mockAction]} />);
+		expect(screen.getByTestId("ScrollableProfileList")).toBeInTheDocument();
+
+		const profileLink = screen.getAllByTestId("ProfileRow__Link")[0];
+		profileLink.click();
+		expect(mockOnClick).toHaveBeenCalledWith(profile);
+
+		const dropdownToggle = screen.getAllByTestId("dropdown__toggle")[0];
+		
+		await act(async () => {
+			dropdownToggle.click();
+		});
+
+		const dropdownOption = screen.getByText("Test Action");
+		
+		await act(async () => {
+			dropdownOption.click();
+		});
+
+		expect(mockOnSelect).toHaveBeenCalledWith(profile, mockAction);
+	});
+
+	it("should handle onClick and onSelect in ProfilesSlide", async () => {
+		const mockOnClick = vi.fn();
+		const mockOnSelect = vi.fn();
+		const mockAction = { label: "Test Action", value: "test" };
+		const fewProfiles = Array.from({ length: 3 }).fill(profile) as Contracts.IProfile[];
+
+		render(<Profiles profiles={fewProfiles} onClick={mockOnClick} onSelect={mockOnSelect} actions={[mockAction]} />);
+		expect(screen.getByTestId("ProfileList")).toBeInTheDocument();
+
+		const profileLink = screen.getAllByTestId("ProfileRow__Link")[0];
+		profileLink.click();
+		expect(mockOnClick).toHaveBeenCalledWith(profile);
+
+		const dropdownToggle = screen.getAllByTestId("dropdown__toggle")[0];
+		
+		await act(async () => {
+			dropdownToggle.click();
+		});
+
+		const dropdownOption = screen.getByText("Test Action");
+		
+		await act(async () => {
+			dropdownOption.click();
+		});
+
+		expect(mockOnSelect).toHaveBeenCalledWith(profile, mockAction);
 	});
 
 	it("should render scrollable view when viewport height is less than threshold and profiles exceed limit", () => {
@@ -157,36 +236,6 @@ describe("Profiles", () => {
 
 		const manyProfiles = Array.from({ length: 10 }).fill(profile) as Contracts.IProfile[];
 		render(<Profiles profiles={manyProfiles} onClick={vi.fn()} onSelect={vi.fn()} actions={[]} />);
-
-		expect(screen.getByTestId("ScrollableProfileList")).toBeInTheDocument();
-	});
-
-	it("should handle onSelect events in scrollable view", () => {
-		const mockOnSelect = vi.fn();
-		const mockAction = { label: "Test Action", value: "test" };
-
-		Object.defineProperty(window, "innerHeight", {
-			configurable: true,
-			value: 600,
-			writable: true,
-		});
-
-		const mockGetBoundingClient = vi.fn(() => ({
-			bottom: 0,
-			height: 0,
-			left: 0,
-			right: 0,
-			top: 100,
-			width: 0,
-		}));
-
-		const mockDiv = {
-			getBoundingClientRect: mockGetBoundingClient,
-		};
-
-		vi.spyOn(React, "useRef").mockReturnValue({ current: mockDiv });
-
-		render(<Profiles profiles={sliderProfiles} onClick={vi.fn()} onSelect={mockOnSelect} actions={[mockAction]} />);
 
 		expect(screen.getByTestId("ScrollableProfileList")).toBeInTheDocument();
 	});
