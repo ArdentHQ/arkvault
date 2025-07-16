@@ -23,7 +23,7 @@ exports[`ReceiveFunds > should render with a wallet name 1`] = `
             type="button"
           >
             <div
-              class="flex items-center space-x-2"
+              class="flex items-center gap-2"
             >
               <div>
                 <div
@@ -147,7 +147,7 @@ exports[`ReceiveFunds > should render with a wallet name 1`] = `
                 type="button"
               >
                 <div
-                  class="flex items-center space-x-2"
+                  class="flex items-center gap-2"
                 >
                   Specify Amount
                 </div>
@@ -172,7 +172,7 @@ exports[`ReceiveFunds > should render with a wallet name 1`] = `
                 type="button"
               >
                 <div
-                  class="flex items-center space-x-2"
+                  class="flex items-center gap-2"
                 >
                   <div>
                     <div
@@ -233,7 +233,7 @@ exports[`ReceiveFunds > should render without a wallet name 1`] = `
             type="button"
           >
             <div
-              class="flex items-center space-x-2"
+              class="flex items-center gap-2"
             >
               <div>
                 <div
@@ -346,7 +346,7 @@ exports[`ReceiveFunds > should render without a wallet name 1`] = `
                 type="button"
               >
                 <div
-                  class="flex items-center space-x-2"
+                  class="flex items-center gap-2"
                 >
                   Specify Amount
                 </div>
@@ -371,7 +371,7 @@ exports[`ReceiveFunds > should render without a wallet name 1`] = `
                 type="button"
               >
                 <div
-                  class="flex items-center space-x-2"
+                  class="flex items-center gap-2"
                 >
                   <div>
                     <div

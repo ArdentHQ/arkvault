@@ -71,6 +71,19 @@
 							"address": "0x28FA32ec11f64ae8Bc4223e77DeE4db24A5E46Da"
 						}
 					]
+				},
+				"01ccbf8c-f9af-4fda-8227-55858631ce4e": {
+					"id": "01ccbf8c-f9af-4fda-8227-55858631ce4e",
+					"name": "Rok",
+					"starred": false,
+					"addresses": [
+						{
+							"id": "0b05d911-fc73-4431-ae4c-cd872cf12a9d",
+							"coin": "Mainsail",
+							"network": "mainsail.devnet",
+							"address": "0xb9169B1F206d78702e047F3b56b9d7e08eD9B065"
+						}
+					]
 				}
 			},
 			"notifications": {},
@@ -105,9 +118,9 @@
 						]
 					},
 					"addressPanelSettings": {
-						"addressViewPreference": "multiple",
+						"addressViewPreference": "single",
 						"multiSelectedAddresses": [],
-						"singleSelectedAddress": []
+						"singleSelectedAddress": ["0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6"]
 					}
 				}
 			}

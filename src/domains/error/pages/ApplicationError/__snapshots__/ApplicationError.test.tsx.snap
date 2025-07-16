@@ -281,7 +281,7 @@ exports[`ApplicationError > should render with error message and reload 1`] = `
                 type="button"
               >
                 <div
-                  class="flex items-center space-x-2"
+                  class="flex items-center gap-2"
                 >
                   Reload
                 </div>
@@ -528,7 +528,7 @@ exports[`ApplicationError > should render without error message 1`] = `
                 type="button"
               >
                 <div
-                  class="flex items-center space-x-2"
+                  class="flex items-center gap-2"
                 >
                   Reload
                 </div>

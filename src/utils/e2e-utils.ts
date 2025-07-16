@@ -35,110 +35,106 @@ export const scrollToElement = async (selector: Selector, scrollable?: Selector)
 	return t.scroll(0, top);
 };
 
-export const BASEURL = "https://ark-test.arkvault.io/api/";
+export const BASEURL = "https://dwallets-evm.mainsailhq.com/api/";
 
-const PING_RESPONSE_PATH = "coins/ark/mainnet/ping";
+const PING_RESPONSE_PATH = "coins/mainsail/devnet/ping";
 
 const pingServerUrls = new Set([
 	"https://ark-live.arkvault.io/",
 	"https://ark-live.arkvault.io",
-	"https://ark-test.arkvault.io/",
-	"https://ark-test.arkvault.io",
+	"https://dwallets-evm.mainsailhq.com/",
+	"https://dwallets-evm.mainsailhq.com",
 	"https://explorer.blockpool.io:19031",
 	"https://apis.compendia.org",
 	"https://apis-testnet.compendia.org",
 	"https://qredit.cloud",
 	"https://qredit.dev",
-	"https://ark-live.arkvault.io/api/wallets?limit=1&nonce=0",
-	"https://ark-test.arkvault.io/api/wallets?limit=1&nonce=0",
+	"https://wallets-evm.mainsailhq.com/api/wallets?limit=1&nonce=0",
+	"https://dwallets-evm.mainsailhq.com/api/wallets?limit=1&nonce=0",
+	// "https://dwallets-evm.mainsailhq.com/evm/api",
 ]);
 
 const knownWallets: any[] = [];
 
-const transactionsFixture = "coins/ark/devnet/transactions";
-const validatorsFixture = "coins/ark/devnet/validators";
+const transactionsFixture = "coins/mainsail/devnet/transactions";
+const validatorsFixture = "coins/mainsail/devnet/validators";
 const imageFixture = "/assets/background.png";
 
 const walletMocks = () => {
 	const addresses = [
-		"D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax",
-		"D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
-		"D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib",
-		"D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
-		"DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P",
-		"DFJ5Z51F1euNNdRUQJKQVdG4h495LZkc6T",
-		"D9YiyRYMBS2ofzqkufjrkB9nHofWgJLM7f",
-		"DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu",
-		"DDA5nM7KEqLeTtQKv5qGgcnc6dpNBKJNTS",
-		"D68sFcspN2LVd9HZpf98c7bXkNimK3M6AZ",
-		"DJXg9Vqg2tofRNrMAvMzhZTkegu8QyyNQq",
-		"DNTwQTSp999ezQ425utBsWetcmzDuCn2pN",
+		"0x659A76be283644AEc2003aa8ba26485047fd1BFB",
+		"0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
+		"0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54",
 	];
 
 	const publicKeys = ["034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192"];
 
 	const devnetMocks = [...addresses, ...publicKeys].map((identifier: string) =>
-		mockRequest(`https://ark-test.arkvault.io/api/wallets/${identifier}`, `coins/ark/devnet/wallets/${identifier}`),
+		mockRequest(
+			`https://dwallets-evm.mainsailhq.com/api/wallets/${identifier}`,
+			`coins/mainsail/devnet/wallets/${identifier}`,
+		),
 	);
 
-	const mainnetMocks = ["AThxYTVgpzZfW7K6UxyB8vBZVMoPAwQS3D"].map((identifier: string) =>
+	const mainnetMocks = ["0xb0E6c955a0Df13220C36Ea9c95bE471249247E57"].map((identifier: string) =>
 		mockRequest(
-			`https://ark-live.arkvault.io/api/wallets/${identifier}`,
-			`coins/ark/mainnet/wallets/${identifier}`,
+			`https://wallets-evm.mainsailhq.com/api/wallets/${identifier}`,
+			`coins/mainsail/mainnet/wallets/${identifier}`,
 		),
 	);
 
 	// We want to use a clean version of this wallet in E2E tests so we don't have
 	// any pre-defined behaviours like delegation, voting and whatever else exists
-	devnetMocks.push(
-		mockRequest(
-			"https://ark-test.arkvault.io/api/wallets/DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
-			"coins/ark/devnet/wallets/DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr-basic",
-		),
-	);
+	devnetMocks
+		.push
+		// mockRequest(
+		// 	"https://dwallets-evm.mainsailhq.com/api/wallets/0x659A76be283644AEc2003aa8ba26485047fd1BFB",
+		// 	"coins/mainsail/devnet/wallets/0x659A76be283644AEc2003aa8ba26485047fd1BFB-basic",
+		// ),
+		();
 
 	return [...devnetMocks, ...mainnetMocks];
 };
 
 const searchAddressesMocks = () => {
 	const addresses = {
-		AThxYTVgpzZfW7K6UxyB8vBZVMoPAwQS3D: [
-			{ limit: 10, page: 1 },
-			{ limit: 15, page: 1 },
-			{ limit: 30, page: 1 },
-		],
-		D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb: [
-			{ limit: 10, page: 1 },
-			{ limit: 15, page: 1 },
-			{ limit: 30, page: 1 },
-		],
-		D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD: [
+		// "0xb0E6c955a0Df13220C36Ea9c95bE471249247E57": [
+		// 	{ limit: 10, page: 1 },
+		// 	{ limit: 15, page: 1 },
+		// 	{ limit: 30, page: 1 },
+		// ],
+		// D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb: [
+		// 	{ limit: 10, page: 1 },
+		// 	{ limit: 15, page: 1 },
+		// 	{ limit: 30, page: 1 },
+		// ],
+		// D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD: [
+		// 	{ limit: 10, page: 1 },
+		// 	{ limit: 15, page: 1 },
+		// 	{ limit: 15, page: 2 },
+		// 	{ limit: 30, page: 1 },
+		// ],
+		"0x659A76be283644AEc2003aa8ba26485047fd1BFB": [
 			{ limit: 10, page: 1 },
 			{ limit: 15, page: 1 },
 			{ limit: 15, page: 2 },
 			{ limit: 30, page: 1 },
 		],
-		DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr: [
-			{ limit: 10, page: 1 },
-			{ limit: 15, page: 1 },
-			{ limit: 15, page: 2 },
-			{ limit: 30, page: 1 },
-		],
-		DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P: [
-			{ limit: 10, page: 1 },
-			{ limit: 15, page: 1 },
-			{ limit: 30, page: 1 },
-		],
-		DDA5nM7KEqLeTtQKv5qGgcnc6dpNBKJNTS: [
-			{ limit: 10, page: 1 },
-			{ limit: 15, page: 1 },
-			{ limit: 30, page: 1 },
-		],
-		DJXg9Vqg2tofRNrMAvMzhZTkegu8QyyNQq: [
-			{ limit: 10, page: 1 },
-			{ limit: 15, page: 1 },
-			{ limit: 30, page: 1 },
-		],
+		// DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P: [
+		// 	{ limit: 10, page: 1 },
+		// 	{ limit: 15, page: 1 },
+		// 	{ limit: 30, page: 1 },
+		// ],
+		// DDA5nM7KEqLeTtQKv5qGgcnc6dpNBKJNTS: [
+		// 	{ limit: 10, page: 1 },
+		// 	{ limit: 15, page: 1 },
+		// 	{ limit: 30, page: 1 },
+		// ],
+		// DJXg9Vqg2tofRNrMAvMzhZTkegu8QyyNQq: [
+		// 	{ limit: 10, page: 1 },
+		// 	{ limit: 15, page: 1 },
+		// 	{ limit: 30, page: 1 },
+		// ],
 	};
 
 	const mocks: any = [];
@@ -149,10 +145,10 @@ const searchAddressesMocks = () => {
 				mockRequest(
 					(request: any) =>
 						request.url ===
-							`https://ark-test.arkvault.io/api/transactions?page=${page}&limit=${limit}&address=${address}` ||
+							`https://dwallets-evm.mainsailhq.com/api/transactions?page=${page}&limit=${limit}&address=${address}` ||
 						request.url ===
-							`https://ark-test.arkvault.io/api/transactions?limit=${limit}&address=${address}`,
-					`coins/ark/devnet/transactions/byAddress/${address}-${page}-${limit}`,
+							`https://dwallets-evm.mainsailhq.com/api/transactions?limit=${limit}&address=${address}`,
+					`coins/mainsail/devnet/transactions/byAddress/${address}-${page}-${limit}`,
 				),
 			),
 		);
@@ -198,50 +194,59 @@ export const mockRequest = (url: string | object | Function, fixture: string | o
 export const requestMocks = {
 	configuration: [
 		// devnet
-		mockRequest("https://ark-test.arkvault.io/api/blockchain", "coins/ark/devnet/blockchain"),
-		mockRequest("https://ark-test.arkvault.io/api/node/configuration", "coins/ark/devnet/configuration"),
+		mockRequest("https://dwallets-evm.mainsailhq.com/api/blockchain", "coins/mainsail/devnet/blockchain"),
 		mockRequest(
-			"https://ark-test.arkvault.io/api/node/configuration/crypto",
-			"coins/ark/devnet/cryptoConfiguration",
+			"https://dwallets-evm.mainsailhq.com/api/node/configuration",
+			"coins/mainsail/devnet/configuration",
 		),
-		mockRequest("https://ark-test.arkvault.io/api/node/fees", "coins/ark/devnet/node-fees"),
-		mockRequest("https://ark-test.arkvault.io/api/node/syncing", "coins/ark/devnet/syncing"),
-		mockRequest("https://ark-test.arkvault.io/api/peers", "coins/ark/devnet/peers"),
+		mockRequest(
+			"https://dwallets-evm.mainsailhq.com/api/node/configuration/crypto",
+			"coins/mainsail/devnet/cryptoConfiguration",
+		),
+		mockRequest("https://dwallets-evm.mainsailhq.com/api/node/fees", "coins/mainsail/devnet/node-fees"),
+		mockRequest("https://dwallets-evm.mainsailhq.com/api/node/syncing", "coins/mainsail/devnet/syncing"),
+		mockRequest("https://dwallets-evm.mainsailhq.com/api/peers", "coins/mainsail/devnet/peers"),
 
 		// mainnet
 		mockRequest(
-			"https://ark-live.arkvault.io/api/node/configuration/crypto",
-			"coins/ark/mainnet/cryptoConfiguration",
+			"https://wallets-evm.mainsailhq.com/api/node/configuration/crypto",
+			"coins/mainsail/mainnet/cryptoConfiguration",
 		),
-		mockRequest("https://ark-live.arkvault.io/api/node/syncing", "coins/ark/mainnet/syncing"),
-		mockRequest("https://ark-live.arkvault.io/api/node/fees", "coins/ark/mainnet/node-fees"),
+		mockRequest("https://wallets-evm.mainsailhq.com/api/node/syncing", "coins/mainsail/mainnet/syncing"),
+		mockRequest("https://wallets-evm.mainsailhq.com/api/node/fees", "coins/mainsail/mainnet/node-fees"),
 
 		// Compendia
-		mockRequest("https://apis.compendia.org/api/node/configuration", "coins/ark/devnet/configuration"),
-		mockRequest("https://apis.compendia.org/api/node/configuration/crypto", "coins/ark/devnet/cryptoConfiguration"),
-		mockRequest("https://apis.compendia.org/api/node/syncing", "coins/ark/devnet/syncing"),
-		mockRequest("https://apis-testnet.compendia.org/api/node/configuration", "coins/ark/devnet/configuration"),
+		mockRequest("https://apis.compendia.org/api/node/configuration", "coins/mainsail/devnet/configuration"),
+		mockRequest(
+			"https://apis.compendia.org/api/node/configuration/crypto",
+			"coins/mainsail/devnet/cryptoConfiguration",
+		),
+		mockRequest("https://apis.compendia.org/api/node/syncing", "coins/mainsail/devnet/syncing"),
+		mockRequest("https://apis-testnet.compendia.org/api/node/configuration", "coins/mainsail/devnet/configuration"),
 		mockRequest(
 			"https://apis-testnet.compendia.org/api/node/configuration/crypto",
-			"coins/ark/devnet/cryptoConfiguration",
+			"coins/mainsail/devnet/cryptoConfiguration",
 		),
-		mockRequest("https://apis-testnet.compendia.org/api/node/syncing", "coins/ark/devnet/syncing"),
+		mockRequest("https://apis-testnet.compendia.org/api/node/syncing", "coins/mainsail/devnet/syncing"),
 
 		// Blockpool
-		mockRequest("https://explorer.blockpool.io:19031/api/node/configuration", "coins/ark/devnet/configuration"),
+		mockRequest(
+			"https://explorer.blockpool.io:19031/api/node/configuration",
+			"coins/mainsail/devnet/configuration",
+		),
 		mockRequest(
 			"https://explorer.blockpool.io:19031/api/node/configuration/crypto",
-			"coins/ark/devnet/cryptoConfiguration",
+			"coins/mainsail/devnet/cryptoConfiguration",
 		),
-		mockRequest("https://explorer.blockpool.io:19031/api/node/syncing", "coins/ark/devnet/syncing"),
+		mockRequest("https://explorer.blockpool.io:19031/api/node/syncing", "coins/mainsail/devnet/syncing"),
 
 		// Qredit
-		mockRequest("https://qredit.cloud/api/node/configuration", "coins/ark/devnet/configuration"),
-		mockRequest("https://qredit.cloud/api/node/configuration/crypto", "coins/ark/devnet/cryptoConfiguration"),
-		mockRequest("https://qredit.cloud/api/node/syncing", "coins/ark/devnet/syncing"),
-		mockRequest("https://qredit.dev/api/node/configuration", "coins/ark/devnet/configuration"),
-		mockRequest("https://qredit.dev/api/node/configuration/crypto", "coins/ark/devnet/cryptoConfiguration"),
-		mockRequest("https://qredit.dev/api/node/syncing", "coins/ark/devnet/syncing"),
+		mockRequest("https://qredit.cloud/api/node/configuration", "coins/mainsail/devnet/configuration"),
+		mockRequest("https://qredit.cloud/api/node/configuration/crypto", "coins/mainsail/devnet/cryptoConfiguration"),
+		mockRequest("https://qredit.cloud/api/node/syncing", "coins/mainsail/devnet/syncing"),
+		mockRequest("https://qredit.dev/api/node/configuration", "coins/mainsail/devnet/configuration"),
+		mockRequest("https://qredit.dev/api/node/configuration/crypto", "coins/mainsail/devnet/cryptoConfiguration"),
+		mockRequest("https://qredit.dev/api/node/syncing", "coins/mainsail/devnet/syncing"),
 		mockRequest("https://static.zdassets.com/ekr/snippet.js?key=0e4c4d37-9d38-4be4-925d-e659dd4d12bd", () => ""),
 	],
 	exchange: [
@@ -263,7 +268,7 @@ export const requestMocks = {
 	],
 	other: [
 		mockRequest(
-			"https://raw.githubusercontent.com/ArkEcosystem/common/master/devnet/known-wallets-extended.json",
+			"https://raw.githubusercontent.com/ArkEcosystem/common/master/mainsail/devnet/known-wallets-extended.json",
 			knownWallets,
 		),
 	],
@@ -279,133 +284,198 @@ export const requestMocks = {
 	],
 	transactions: [
 		// devnet
-		mockRequest("https://ark-test.arkvault.io/api/transactions/fees", "coins/ark/devnet/transaction-fees"),
-		mockRequest("https://ark-test.arkvault.io/api/transactions?limit=10", transactionsFixture),
-		mockRequest("https://ark-test.arkvault.io/api/transactions?limit=20", transactionsFixture),
+		// mockRequest("https://dwallets-evm.mainsailhq.com/api/transactions/fees", "coins/mainsail/devnet/transaction-fees"),
+		// mockRequest("https://dwallets-evm.mainsailhq.com/api/transactions?limit=10", transactionsFixture),
+		// mockRequest("https://dwallets-evm.mainsailhq.com/api/transactions?limit=20", transactionsFixture),
+
+		// wallet transactions
 		mockRequest(
-			"https://ark-test.arkvault.io/api/transactions?page=2&limit=30&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
+			"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=30&orderBy=timestamp:desc&address=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
 			transactionsFixture,
-		),
-		mockRequest(
-			"https://ark-test.arkvault.io/api/transactions?page=1&limit=20&senderId=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
-			transactionsFixture,
-		),
-		mockRequest(
-			"https://ark-test.arkvault.io/api/transactions?limit=30&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
-			transactionsFixture,
-		),
-		mockRequest(
-			"https://ark-test.arkvault.io/api/transactions?limit=30&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb%2CDH4Xyyt5zPqM9KwUkevUZPbzM3KjjW8fp5",
-			transactionsFixture,
-		),
-		mockRequest(
-			"https://ark-test.arkvault.io/api/transactions?page=2&limit=30&address=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
-			transactionsFixture,
-		),
-		mockRequest(
-			"https://ark-test.arkvault.io/api/transactions?page=1&limit=10&recipientId=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
-			"coins/ark/devnet/notification-transactions",
 		),
 
+		// for notifications
 		mockRequest(
-			"https://ark-test.arkvault.io/api/transactions?page=1&limit=10&recipientId=D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
-			"coins/ark/devnet/notification-transactions",
-		),
-
-		mockRequest(
-			"https://ark-test.arkvault.io/api/transactions?page=1&limit=10&recipientId=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
+			"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=10&to=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6&address=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6,0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54",
 			transactionsFixture,
 		),
 
 		mockRequest(
-			"https://ark-test.arkvault.io/api/transactions?page=1&limit=10&recipientId=DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P",
+			"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=30&orderBy=timestamp:desc&address=0x659A76be283644AEc2003aa8ba26485047fd1BFB",
 			transactionsFixture,
 		),
 
 		mockRequest(
-			"https://ark-test.arkvault.io/api/transactions?page=1&limit=10&recipientId=DJXg9Vqg2tofRNrMAvMzhZTkegu8QyyNQq",
+			"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=10&to=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6&address=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6,0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54,0x659A76be283644AEc2003aa8ba26485047fd1BFB",
 			transactionsFixture,
 		),
 
+		// block call
 		mockRequest(
-			"https://ark-test.arkvault.io/api/transactions?page=1&limit=20&senderId=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
-			transactionsFixture,
-		),
-		mockRequest(
-			"https://ark-test.arkvault.io/api/transactions?limit=30&address=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
-			transactionsFixture,
-		),
-		mockRequest(
-			"https://ark-test.arkvault.io/api/transactions?limit=30&address=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb%2CDH4Xyyt5zPqM9KwUkevUZPbzM3KjjW8fp5",
-			transactionsFixture,
-		),
-		// unconfirmed transactions list before sending single or multiPayment transaction
-		mockRequest(
-			"https://ark-test.arkvault.io/api/transactions?page=1&limit=20&senderId=DDA5nM7KEqLeTtQKv5qGgcnc6dpNBKJNTS",
-			transactionsFixture,
+			"https://dwallets-evm.mainsailhq.com/api/blocks/05b124023ddd656c8a95664eb61846cc0f4e204341a0d86db325771077e7f002",
+			{},
 		),
 
-		mockRequest(
-			/https:\/\/ark-test\.arkvault\.io\/api\/transactions\?page=1&limit=20&senderId=(.*?)/,
-			transactionsFixture,
-		),
+		// mockRequest(
+		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=30&orderBy=timestamp:desc&address=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
+		// 	transactionsFixture
+		// ),
 
-		mockRequest(
-			"https://ark-test.arkvault.io/api/transactions?page=1&limit=10&orderBy=timestamp&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
-			transactionsFixture,
-		),
+		// mockRequest(
+		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?page=2&limit=30&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
+		// 	transactionsFixture,
+		// ),
+		// mockRequest(
+		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=20&senderId=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
+		// 	transactionsFixture,
+		// ),
+		// mockRequest(
+		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?limit=30&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
+		// 	transactionsFixture,
+		// ),
+		// mockRequest(
+		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?limit=30&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb%2CDH4Xyyt5zPqM9KwUkevUZPbzM3KjjW8fp5",
+		// 	transactionsFixture,
+		// ),
+		// mockRequest(
+		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?page=2&limit=30&address=0x659A76be283644AEc2003aa8ba26485047fd1BFB",
+		// 	transactionsFixture,
+		// ),
+		// mockRequest(
+		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=10&recipientId=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
+		// 	"coins/mainsail/devnet/notification-transactions",
+		// ),
 
-		mockRequest(
-			"https://ark-test.arkvault.io/api/transactions?page=1&limit=10&orderBy=timestamp&address=D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
-			transactionsFixture,
-		),
+		// mockRequest(
+		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=10&recipientId=D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
+		// 	"coins/mainsail/devnet/notification-transactions",
+		// ),
 
-		mockRequest(
-			"https://ark-test.arkvault.io/api/transactions?page=1&limit=10&orderBy=timestamp&address=DJXg9Vqg2tofRNrMAvMzhZTkegu8QyyNQq",
-			transactionsFixture,
-		),
-
-		mockRequest(
-			"https://ark-test.arkvault.io/api/transactions?page=1&limit=10&orderBy=timestamp&address=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
-			transactionsFixture,
-		),
-
-		mockRequest(
-			"https://ark-test.arkvault.io/api/transactions?page=1&limit=10&orderBy=timestamp&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
-			{ data: [], meta: {} },
-		),
-
-		mockRequest(
-			"https://ark-test.arkvault.io/api/transactions?page=1&limit=10&orderBy=timestamp&address=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
-			{ data: [], meta: {} },
-		),
+		// mockRequest(
+		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=10&recipientId=0x659A76be283644AEc2003aa8ba26485047fd1BFB",
+		// 	transactionsFixture,
+		// ),
+		//
+		// mockRequest(
+		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=10&recipientId=DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P",
+		// 	transactionsFixture,
+		// ),
+		//
+		// mockRequest(
+		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=10&recipientId=DJXg9Vqg2tofRNrMAvMzhZTkegu8QyyNQq",
+		// 	transactionsFixture,
+		// ),
+		//
+		// mockRequest(
+		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=20&senderId=0x659A76be283644AEc2003aa8ba26485047fd1BFB",
+		// 	transactionsFixture,
+		// ),
+		// mockRequest(
+		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?limit=30&address=0x659A76be283644AEc2003aa8ba26485047fd1BFB%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
+		// 	transactionsFixture,
+		// ),
+		// mockRequest(
+		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?limit=30&address=0x659A76be283644AEc2003aa8ba26485047fd1BFB%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb%2CDH4Xyyt5zPqM9KwUkevUZPbzM3KjjW8fp5",
+		// 	transactionsFixture,
+		// ),
+		// // unconfirmed transactions list before sending single or multiPayment transaction
+		// mockRequest(
+		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=20&senderId=DDA5nM7KEqLeTtQKv5qGgcnc6dpNBKJNTS",
+		// 	transactionsFixture,
+		// ),
+		//
+		// mockRequest(
+		// 	/https:\/\/ark-test\.arkvault\.io\/api\/transactions\?page=1&limit=20&senderId=(.*?)/,
+		// 	transactionsFixture,
+		// ),
+		//
+		// mockRequest(
+		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=10&orderBy=timestamp&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
+		// 	transactionsFixture,
+		// ),
+		//
+		// mockRequest(
+		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=10&orderBy=timestamp&address=D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
+		// 	transactionsFixture,
+		// ),
+		//
+		// mockRequest(
+		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=10&orderBy=timestamp&address=DJXg9Vqg2tofRNrMAvMzhZTkegu8QyyNQq",
+		// 	transactionsFixture,
+		// ),
+		//
+		// mockRequest(
+		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=10&orderBy=timestamp&address=0x659A76be283644AEc2003aa8ba26485047fd1BFB",
+		// 	transactionsFixture,
+		// ),
+		//
+		// mockRequest(
+		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=10&orderBy=timestamp&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
+		// 	{ data: [], meta: {} },
+		// ),
+		//
+		// mockRequest(
+		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=10&orderBy=timestamp&address=0x659A76be283644AEc2003aa8ba26485047fd1BFB%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
+		// 	{ data: [], meta: {} },
+		// ),
 
 		// mainnet
-		mockRequest("https://ark-live.arkvault.io/api/transactions/fees", "coins/ark/mainnet/transaction-fees"),
+		// mockRequest("https://wallets-evm.mainsailhq.com/api/transactions/fees", "coins/mainsail/mainnet/transaction-fees"),
 
 		...searchAddressesMocks(),
 	],
 	validators: [
 		// devnet
-		mockRequest("https://ark-test.arkvault.io/api/validators", validatorsFixture),
-		mockRequest("https://ark-test.arkvault.io/api/validators?page=1", validatorsFixture),
-		mockRequest("https://ark-test.arkvault.io/api/validators?page=2", validatorsFixture),
-		mockRequest("https://ark-test.arkvault.io/api/validators?page=3", validatorsFixture),
-		mockRequest("https://ark-test.arkvault.io/api/validators?page=4", validatorsFixture),
-		mockRequest("https://ark-test.arkvault.io/api/validators?page=5", validatorsFixture),
+		mockRequest("https://dwallets-evm.mainsailhq.com/api/validators", validatorsFixture),
+		mockRequest("https://dwallets-evm.mainsailhq.com/api/validators?page=1&limit=100", validatorsFixture),
 
 		// mainnet
-		mockRequest("https://ark-live.arkvault.io/api/validators", "coins/ark/mainnet/validators"),
+		// @TODO use mainnet mock when possible
+		mockRequest("https://wallets-evm.mainsailhq.com/api/validators", "coins/mainsail/devnet/validators"),
 	],
 	wallets: [
-		mockRequest("https://ark-live.arkvault.io/api/wallets?limit=1&nonce=0", {}),
-		mockRequest("https://ark-test.arkvault.io/api/wallets?limit=1&nonce=0", {}),
-		mockRequest(
-			"https://ark-test.arkvault.io/api/wallets/D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD/votes",
-			"coins/ark/devnet/votes",
-		),
+		mockRequest("https://wallets-evm.mainsailhq.com/api/wallets?limit=1&nonce=0", {}),
+		mockRequest("https://dwallets-evm.mainsailhq.com/api/wallets?limit=1&nonce=0", {}),
+		// mockRequest(
+		// 	"https://dwallets-evm.mainsailhq.com/api/wallets/D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD/votes",
+		// 	"coins/mainsail/devnet/votes",
+		// ),
 
 		...walletMocks(),
+	],
+	evm: [
+		mockRequest("https://dwallets-evm.mainsailhq.com/evm/api/", function (request: any) {
+			const defaultResponse = JSON.stringify({
+				id: 1,
+				jsonrpc: "2.0",
+				result: "0x0",
+			});
+
+			const body = Buffer.from(request.body).toString();
+
+			if (!body || body.length === 0) {
+				return defaultResponse;
+			}
+
+			const decodedBody = JSON.parse(body);
+
+			// for syncing usernames
+			if (
+				decodedBody.method === "eth_call" &&
+				decodedBody.params[0].to === "0x2c1DE3b4Dbb4aDebEbB5dcECAe825bE2a9fc6eb6"
+			) {
+				return JSON.stringify({
+					id: 1,
+					jsonrpc: "2.0",
+					result: "0x0000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000003700000000000000000000000000000000000000000000000000000000000006e0000000000000000000000000000000000000000000000000000000000000076000000000000000000000000000000000000000000000000000000000000007e0000000000000000000000000000000000000000000000000000000000000086000000000000000000000000000000000000000000000000000000000000008e0000000000000000000000000000000000000000000000000000000000000096000000000000000000000000000000000000000000000000000000000000009e00000000000000000000000000000000000000000000000000000000000000a600000000000000000000000000000000000000000000000000000000000000ae00000000000000000000000000000000000000000000000000000000000000b600000000000000000000000000000000000000000000000000000000000000be00000000000000000000000000000000000000000000000000000000000000c600000000000000000000000000000000000000000000000000000000000000ce00000000000000000000000000000000000000000000000000000000000000d600000000000000000000000000000000000000000000000000000000000000de00000000000000000000000000000000000000000000000000000000000000e600000000000000000000000000000000000000000000000000000000000000ee00000000000000000000000000000000000000000000000000000000000000f600000000000000000000000000000000000000000000000000000000000000fe0000000000000000000000000000000000000000000000000000000000000106000000000000000000000000000000000000000000000000000000000000010e0000000000000000000000000000000000000000000000000000000000000116000000000000000000000000000000000000000000000000000000000000011e0000000000000000000000000000000000000000000000000000000000000126000000000000000000000000000000000000000000000000000000000000012e0000000000000000000000000000000000000000000000000000000000000136000000000000000000000000000000000000000000000000000000000000013e0000000000000000000000000000000000000000000000000000000000000146000000000000000000000000000000000000000000000000000000000000014e0000000000000000000000000000000000000000000000000000000000000156000000000000000000000000000000000000000000000000000000000000015e0000000000000000000000000000000000000000000000000000000000000166000000000000000000000000000000000000000000000000000000000000016e0000000000000000000000000000000000000000000000000000000000000176000000000000000000000000000000000000000000000000000000000000017e0000000000000000000000000000000000000000000000000000000000000186000000000000000000000000000000000000000000000000000000000000018e0000000000000000000000000000000000000000000000000000000000000196000000000000000000000000000000000000000000000000000000000000019e00000000000000000000000000000000000000000000000000000000000001a600000000000000000000000000000000000000000000000000000000000001ae00000000000000000000000000000000000000000000000000000000000001b600000000000000000000000000000000000000000000000000000000000001be00000000000000000000000000000000000000000000000000000000000001c600000000000000000000000000000000000000000000000000000000000001ce00000000000000000000000000000000000000000000000000000000000001d600000000000000000000000000000000000000000000000000000000000001de00000000000000000000000000000000000000000000000000000000000001e600000000000000000000000000000000000000000000000000000000000001ee00000000000000000000000000000000000000000000000000000000000001f600000000000000000000000000000000000000000000000000000000000001fe0000000000000000000000000000000000000000000000000000000000000206000000000000000000000000000000000000000000000000000000000000020e0000000000000000000000000000000000000000000000000000000000000216000000000000000000000000000000000000000000000000000000000000021e0000000000000000000000000e5a97e663158deaf3b65bbf88897b8359dc19f810000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000a67656e657369735f3331000000000000000000000000000000000000000000000000000000000000000000003d51837ca598138a2beef9dbfb6b7db6c1358dc90000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000967656e657369735f3800000000000000000000000000000000000000000000000000000000000000000000007dc7adaa357da87b1ac80542d2052862d05506910000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000a67656e657369735f323600000000000000000000000000000000000000000000000000000000000000000000c301ae32198179cd73c1e7de9c3111319762e5610000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000a67656e657369735f3339000000000000000000000000000000000000000000000000000000000000000000002149e45440f4deecfcbe46e07ddb5e008bfe30f60000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000967656e657369735f3700000000000000000000000000000000000000000000000000000000000000000000001fd0823e76d5809e9f1bf3d151daf6ba8cff11170000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000a67656e657369735f323100000000000000000000000000000000000000000000000000000000000000000000832c2d6c16a8a7197bdcd93957c729f6e0c416690000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000a67656e657369735f3437000000000000000000000000000000000000000000000000000000000000000000009f99156fcfd4fbb2eb547c479b2f59f2abaa871a0000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000a67656e657369735f33320000000000000000000000000000000000000000000000000000000000000000000051af40446a53e70ca86a7c11f5e628df6cd0a4f10000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000967656e657369735f32000000000000000000000000000000000000000000000000000000000000000000000047b68ef70bcbffb37733e9b709fd7a033a454e0f0000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000a67656e657369735f3530000000000000000000000000000000000000000000000000000000000000000000004e07e38408476a5add12c056fab5e130a8881db40000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000a67656e657369735f3238000000000000000000000000000000000000000000000000000000000000000000009d603c8c8d7d48808ac6605085911867bb7669d70000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000a67656e657369735f3135000000000000000000000000000000000000000000000000000000000000000000008fbb154fab0df06ac2067f81974cba857f537aaf0000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000a67656e657369735f33340000000000000000000000000000000000000000000000000000000000000000000084e4604e4d2b4525ad5ec5d150291e0c07369a4b0000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000a67656e657369735f3133000000000000000000000000000000000000000000000000000000000000000000002641fc528785c37ff14bcb9a8630225172e841950000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000a67656e657369735f333700000000000000000000000000000000000000000000000000000000000000000000b75896f871af2299446bb079f5991dbe5e04d1040000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000a67656e657369735f333800000000000000000000000000000000000000000000000000000000000000000000b97206f7e0b62c62e3a5f787207fc5d0dc1fb2930000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000a67656e657369735f3432000000000000000000000000000000000000000000000000000000000000000000005221832fa5e0c7974b7e82b2c6b63ee158d1bdf60000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000a67656e657369735f313200000000000000000000000000000000000000000000000000000000000000000000e030cf877824983a5e20152074ee3545329795650000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000a67656e657369735f323700000000000000000000000000000000000000000000000000000000000000000000b10d96d147e58790b28cec84b4f0482ac8f00ad10000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000a67656e657369735f333000000000000000000000000000000000000000000000000000000000000000000000ce87dc8bbe993486e528fc0f874f138ac9efb0060000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000a67656e657369735f313600000000000000000000000000000000000000000000000000000000000000000000a7a93b19a4a8a7d0576120ca684377100ca753db0000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000a67656e657369735f313800000000000000000000000000000000000000000000000000000000000000000000bcce051b8c77f538d1cdd48c8a7aa2c5aead9c450000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000a67656e657369735f343500000000000000000000000000000000000000000000000000000000000000000000f8ec26e695144ed685eeaac8c4910d992eceb3850000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000a67656e657369735f3239000000000000000000000000000000000000000000000000000000000000000000002f3b1d4b5b6864d8d638f3d04960502319a7f8430000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000967656e657369735f3400000000000000000000000000000000000000000000000000000000000000000000003e687613679c2848396b5943a44ae229c318cbb70000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000a67656e657369735f3234000000000000000000000000000000000000000000000000000000000000000000003de67590598ad51626a5eee4bbe7d4232c5bf73f0000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000a67656e657369735f32300000000000000000000000000000000000000000000000000000000000000000000052e291a2e5edb1dac73fcde49881e19c3f4e2e760000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000a67656e657369735f34300000000000000000000000000000000000000000000000000000000000000000000046ce85f4e44dffb68288327a5089e06016120a470000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000a67656e657369735f323200000000000000000000000000000000000000000000000000000000000000000000cbb816a03c603388a581e2d93ad2d350bb1a706b0000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000a67656e657369735f31340000000000000000000000000000000000000000000000000000000000000000000039283ac778bfef2b1bbb3f5c06edab00a35e11a30000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000a67656e657369735f313700000000000000000000000000000000000000000000000000000000000000000000a825ccfb28c3223ffdf5a4a828898b158e705a830000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000a67656e657369735f313900000000000000000000000000000000000000000000000000000000000000000000958be2c1112f58a4d8674b04e551ef6f74d601700000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000a67656e657369735f3436000000000000000000000000000000000000000000000000000000000000000000005637335bb958c0f087559f11f7398b6d1494f0e30000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000a67656e657369735f313000000000000000000000000000000000000000000000000000000000000000000000bb08b0b863080f58e6e4699cffe2384e556acb730000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000a67656e657369735f34330000000000000000000000000000000000000000000000000000000000000000000052148913fb8d614f1b062c5133d8b31d7d7beb690000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000a67656e657369735f343800000000000000000000000000000000000000000000000000000000000000000000437a38b4770adb4a097cbfddca9c14f05a0000650000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000a67656e657369735f343100000000000000000000000000000000000000000000000000000000000000000000ec520642f9c9d9cdadcd1ebe01b27b60ad8ba8520000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000a67656e657369735f313100000000000000000000000000000000000000000000000000000000000000000000341b241675bec54dfaf5d5f033779be632684d920000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000664646174656400000000000000000000000000000000000000000000000000000000000000000000000000004048eb1b64cd9e710ba5e105dde72c2d42aacf9d0000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000967656e657369735f3100000000000000000000000000000000000000000000000000000000000000000000001e729fd3bc1d98fe32c98fe618919b79ec878c2f0000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000a67656e657369735f3335000000000000000000000000000000000000000000000000000000000000000000000c97fc9bd66791933517c50787c18cc5c0442e580000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000a67656e657369735f33330000000000000000000000000000000000000000000000000000000000000000000024809671e9884d356e98a9ded99d4a4769e976e10000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000a67656e657369735f33360000000000000000000000000000000000000000000000000000000000000000000042d2d45246872573c3c808ddd9a1b72580358c820000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000a67656e657369735f32330000000000000000000000000000000000000000000000000000000000000000000064ce1e2d3740a25fa9fef14d25fff37f1a1d29f20000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000967656e657369735f390000000000000000000000000000000000000000000000000000000000000000000000667447ccad61a8b9e91b5af7faa73843f359c86a0000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000a67656e657369735f3235000000000000000000000000000000000000000000000000000000000000000000007d63134a31b138b8ae517e6f1f741ed8fa00ab380000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000a68656c6c6f7468657265000000000000000000000000000000000000000000000000000000000000000000008d362265d763ac90ac94dc7e90dec2a5e53387ca0000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000e77617475706d79667269656e6473000000000000000000000000000000000000000000000000000000000000976f3c5372d85fa359127bef709a72bcbf56aa4a0000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000967656e657369735f350000000000000000000000000000000000000000000000000000000000000000000000a6c353e75ee6e16f7ef2ff70b9a2ae0250711bd70000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000967656e657369735f330000000000000000000000000000000000000000000000000000000000000000000000a9565fb02c21a9e499c366702685eeb3fc9a67b20000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000967656e657369735f360000000000000000000000000000000000000000000000000000000000000000000000adecce14a14d9b5f820e002cddffa6c152f6b1ae0000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000a67656e657369735f353100000000000000000000000000000000000000000000000000000000000000000000e03669ed97cbd3dbdd50f3876a7b39511a0aaa0b0000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000a67656e657369735f343400000000000000000000000000000000000000000000000000000000000000000000facfcf5a5c0f91ea87e66e7767151ad64f4ef87a0000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000a67656e657369735f343900000000000000000000000000000000000000000000000000000000000000000000b9169b1f206d78702e047f3b56b9d7e08ed9b065000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000000083334657273656672000000000000000000000000000000000000000000000000",
+				});
+			}
+
+			return defaultResponse;
+		}),
+	],
+	blocks: [
+		// mockRequest("https://dwallets-evm.mainsailhq.com/api/blocks/1e6789dd661ea8cd38ded6fe818eba181589497a2cc3179c42bb5695c33bcf50", {}),
 	],
 };
 
@@ -415,6 +485,8 @@ const combineRequestMocks = (preHooks: RequestMock[] = [], postHooks: RequestMoc
 	...requestMocks.validators,
 	...requestMocks.transactions,
 	...requestMocks.wallets,
+	...requestMocks.evm,
+	...requestMocks.blocks,
 	...requestMocks.other,
 	...requestMocks.exchange,
 	...requestMocks.profile,
@@ -443,16 +515,18 @@ export const createFixture = (name: string, preHooks: RequestMock[] = [], postHo
 		.requestHooks(...combineRequestMocks(preHooks, postHooks));
 
 export const MNEMONICS = [
-	"skin fortune security mom coin hurdle click emotion heart brisk exact rather code feature era leopard grocery tide gift power lawsuit sight vehicle coin",
-	"audit theory scheme profit away wing rescue cloth fit spell atom rely enter upon man clutch divide buddy office tuition input bundle silk scheme",
-	"uphold egg salon police home famous focus fade skin virus fence surprise hidden skate word famous movie grant ghost save fly assume motion case",
-	"dress assault rich club glass fancy hood glance install buzz blur attack room outdoor chapter melody tide blur trend into have accuse very little",
-	"already device awful potato face kingdom coral biology badge donkey ranch random when dove solve system tonight purchase foot way deliver grow raccoon blame",
-	"garden neglect enable bone inform deal shallow smart train enrich cloud police pave ignore assault wrong chef harbor river brain way essay zero mouse",
-	"analyst rifle dose thank unfair remain claim exile math foster clarify unfair gauge wasp notice crash sustain session lunch verify gasp try divorce slender",
-	"tray analyst bulk topple night swing list execute walk bronze invite title silent loud cash apology sibling wheel thumb dragon black soccer mixed curious",
-	"cool path congress harbor position ready embody hunt face field boil brown rubber toss arrange later convince anxiety foam urban monster endless essay melt",
-	"subway cradle salad cake toddler sausage neglect eight cruel fault mammal cannon south interest theory sadness pass move outside segment curtain toddler save banner",
+	// 0x659A76be283644AEc2003aa8ba26485047fd1BFB
+	"join pyramid pitch bracket gasp sword flip elephant property actual current mango man seek merge gather fix unit aspect vault cheap gospel garment spring",
+	// 0x125b484e51Ad990b5b3140931f3BD8eAee85Db23
+	"monkey wage old pistol text garage toss evolve twenty mirror easily alarm ocean catch phrase hen enroll verb trade great limb diesel sight describe",
+	// 0x393f3F74F0cd9e790B5192789F31E0A38159ae03
+	"fade object horse net sleep diagram will casino firm scorpion deal visit this much yard apology guess habit gold crack great old media fury",
+	// 0xB64b3619cEF2642E36B6093da95BA2D14Fa9b52f.json - cold wallet
+	"trust anchor salmon annual control split globe conduct myself van ice resist blast hybrid track echo impose virus filter mystery harsh galaxy desk pitch",
+	// 0xb0E6c955a0Df13220C36Ea9c95bE471249247E57
+	"satoshi weather local seek gravity mountain cycle stem next three arch canal fitness crisp approve cute census hint casual agree pencil sleep best observe",
+	// 0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+	"embody plug round swamp sick minor notable catch idle discover barely easily audit near essence crater stand arch phone border minimum smile above exercise",
 ];
 
 // https://cucumber.io/docs/gherkin/reference/

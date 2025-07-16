@@ -1,12 +1,12 @@
+import { AbiType, decodeFunctionData } from "./helpers/decode-function-data";
+import { Address, UnitConverter } from "@arkecosystem/typescript-crypto";
 import { MultiPaymentItem, MultiPaymentRecipient } from "@/app/lib/mainsail/confirmed-transaction.dto.contract";
+import { RawTransactionData, SignedTransactionObject } from "@/app/lib/mainsail/signed-transaction.dto.contract";
+
 import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
 import { Hex } from "viem";
-
-import { AbiType, decodeFunctionData } from "./helpers/decode-function-data";
 import { TransactionTypeService } from "./transaction-type.service";
-import { RawTransactionData, SignedTransactionObject } from "@/app/lib/mainsail/signed-transaction.dto.contract";
-import { Address, UnitConverter } from "@arkecosystem/typescript-crypto";
 
 export class SignedTransactionData {
 	protected identifier!: string;
@@ -89,7 +89,7 @@ export class SignedTransactionData {
 
 	public fee(): BigNumber {
 		const gasPrice = BigNumber.make(UnitConverter.formatUnits(this.signedData.gasPrice, "ark"));
-		return gasPrice.times(this.signedData.gas);
+		return gasPrice.times(this.signedData.gasLimit);
 	}
 
 	public timestamp(): DateTime {

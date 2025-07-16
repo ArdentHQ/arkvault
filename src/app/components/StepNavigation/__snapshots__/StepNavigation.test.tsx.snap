@@ -12,7 +12,7 @@ exports[`StepNavigation > should disable buttons if loading 1`] = `
       type="button"
     >
       <div
-        class="flex items-center space-x-2"
+        class="flex items-center gap-2"
       >
         Back
       </div>
@@ -24,7 +24,7 @@ exports[`StepNavigation > should disable buttons if loading 1`] = `
       type="submit"
     >
       <div
-        class="flex items-center space-x-2"
+        class="flex items-center gap-2"
       >
         <div
           class="flex items-center"
@@ -85,7 +85,7 @@ exports[`StepNavigation > should not render back button if on last step 1`] = `
       type="button"
     >
       <div
-        class="flex items-center space-x-2"
+        class="flex items-center gap-2"
       >
         Back to Wallet
       </div>
@@ -105,7 +105,7 @@ exports[`StepNavigation > should not render back to wallet button if not on last
       type="button"
     >
       <div
-        class="flex items-center space-x-2"
+        class="flex items-center gap-2"
       >
         Back
       </div>
@@ -116,7 +116,7 @@ exports[`StepNavigation > should not render back to wallet button if not on last
       type="submit"
     >
       <div
-        class="flex items-center space-x-2"
+        class="flex items-center gap-2"
       >
         <span>
           Send
@@ -162,7 +162,7 @@ exports[`StepNavigation > should not render continue button if on last two steps
       type="button"
     >
       <div
-        class="flex items-center space-x-2"
+        class="flex items-center gap-2"
       >
         Back
       </div>
@@ -173,7 +173,7 @@ exports[`StepNavigation > should not render continue button if on last two steps
       type="submit"
     >
       <div
-        class="flex items-center space-x-2"
+        class="flex items-center gap-2"
       >
         <span>
           Send
@@ -219,7 +219,7 @@ exports[`StepNavigation > should not render continue button if on last two steps
       type="button"
     >
       <div
-        class="flex items-center space-x-2"
+        class="flex items-center gap-2"
       >
         Back
       </div>
@@ -230,7 +230,7 @@ exports[`StepNavigation > should not render continue button if on last two steps
       type="submit"
     >
       <div
-        class="flex items-center space-x-2"
+        class="flex items-center gap-2"
       >
         <span>
           Send
@@ -276,7 +276,7 @@ exports[`StepNavigation > should render back button if not on last step 1`] = `
       type="button"
     >
       <div
-        class="flex items-center space-x-2"
+        class="flex items-center gap-2"
       >
         Back
       </div>
@@ -287,7 +287,7 @@ exports[`StepNavigation > should render back button if not on last step 1`] = `
       type="submit"
     >
       <div
-        class="flex items-center space-x-2"
+        class="flex items-center gap-2"
       >
         <span>
           Send
@@ -333,7 +333,7 @@ exports[`StepNavigation > should render back to wallet button if on last step 1`
       type="button"
     >
       <div
-        class="flex items-center space-x-2"
+        class="flex items-center gap-2"
       >
         Back to Wallet
       </div>
@@ -353,7 +353,7 @@ exports[`StepNavigation > should render continue button if not on last two steps
       type="button"
     >
       <div
-        class="flex items-center space-x-2"
+        class="flex items-center gap-2"
       >
         Back
       </div>
@@ -364,7 +364,7 @@ exports[`StepNavigation > should render continue button if not on last two steps
       type="button"
     >
       <div
-        class="flex items-center space-x-2"
+        class="flex items-center gap-2"
       >
         Continue
       </div>
