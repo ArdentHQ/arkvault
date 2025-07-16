@@ -517,7 +517,7 @@ exports[`IOsInstructions > should render ios instructions 1`] = `
         type="submit"
       >
         <div
-          class="flex items-center space-x-2"
+          class="flex items-center gap-2"
         >
           Close
         </div>

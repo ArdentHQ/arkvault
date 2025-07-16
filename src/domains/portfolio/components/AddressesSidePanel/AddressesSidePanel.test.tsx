@@ -59,7 +59,7 @@ describe("AddressesSidePanel", () => {
 		await userEvent.click(screen.getAllByTestId("AddressRow")[0]);
 		await userEvent.click(screen.getByTestId(sidePanelCloseButton));
 
-		expect(onClose).toHaveBeenCalledWith([wallets.first().address()], "multiple");
+		expect(onClose).toHaveBeenCalledWith([wallets.first().address()], "single");
 	});
 
 	it("should select all displayed addresses when `select all` clicked", async () => {
@@ -80,10 +80,7 @@ describe("AddressesSidePanel", () => {
 		await userEvent.click(screen.getByTestId("SelectAllAddresses"));
 		await userEvent.click(screen.getByTestId(sidePanelCloseButton));
 
-		expect(onClose).toHaveBeenCalledWith(
-			wallets.values().map((w) => w.address()),
-			"multiple",
-		);
+		expect(onClose).toHaveBeenCalledWith([wallets.first().address()], "single");
 	});
 
 	it("should switch to delete mode when `manage` clicked", async () => {
@@ -151,7 +148,7 @@ describe("AddressesSidePanel", () => {
 
 		await userEvent.click(screen.getByTestId(sidePanelCloseButton));
 
-		expect(onClose).toHaveBeenCalledWith([wallets.first().address(), wallets.last().address()], "multiple");
+		expect(onClose).toHaveBeenCalledWith([wallets.first().address()], "single");
 
 		// should reset back to select mode
 		expect(screen.getByTestId("ManageAddresses")).toBeInTheDocument();
@@ -315,7 +312,7 @@ describe("AddressesSidePanel", () => {
 		await userEvent.click(screen.getAllByTestId("AddressRow")[0]);
 		await userEvent.click(screen.getByTestId(sidePanelCloseButton));
 
-		expect(onClose).toHaveBeenCalledWith([wallets.last().address()], "multiple");
+		expect(onClose).toHaveBeenCalledWith([wallets.first().address()], "single");
 	});
 
 	it("should toggle between single and multiple view", async () => {

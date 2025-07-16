@@ -19,7 +19,7 @@ exports[`Dashboard > should render 1`] = `
           type="button"
         >
           <div
-            class="flex items-center space-x-2"
+            class="flex items-center gap-2"
           >
             <div>
               <div
@@ -59,7 +59,7 @@ exports[`Dashboard > should render 1`] = `
           type="button"
         >
           <div
-            class="flex items-center space-x-2"
+            class="flex items-center gap-2"
           >
             <div>
               <div
@@ -96,7 +96,7 @@ exports[`Dashboard > should render 1`] = `
           type="button"
         >
           <div
-            class="flex items-center space-x-2"
+            class="flex items-center gap-2"
           >
             <div>
               <div
@@ -312,7 +312,7 @@ exports[`Dashboard > should render 1`] = `
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       <div
                         class="m-0 p-1"
@@ -366,7 +366,7 @@ exports[`Dashboard > should render 1`] = `
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       <div
                         class="m-0 p-1"
@@ -418,7 +418,7 @@ exports[`Dashboard > should render 1`] = `
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       <div
                         class="p-1"
@@ -470,7 +470,7 @@ exports[`Dashboard > should render 1`] = `
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       <div
                         class="p-1"
@@ -524,7 +524,7 @@ exports[`Dashboard > should render 1`] = `
                       type="button"
                     >
                       <div
-                        class="flex items-center space-x-2"
+                        class="flex items-center gap-2"
                       >
                         <span
                           class="border-theme-warning-300 bg-theme-warning-50 text-theme-warning-600 dark:border-theme-danger-info-border dark:text-theme-danger-info-text rounded border-2 p-[3px] dark:bg-transparent"
@@ -607,38 +607,42 @@ exports[`Dashboard > should render 1`] = `
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     <div
-                      data-testid="HideBalance-icon-show"
+                      class="flex items-center justify-center"
                     >
                       <div
-                        style="height: 20px; width: 20px;"
+                        data-testid="HideBalance-icon-show"
                       >
-                        <svg
-                          id="eye"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          style="height: 20px; width: 20px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <svg
+                            id="eye"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <path
-                              d="M10 4.6c-3.2-.1-6.5 2.2-8.6 4.5-.5.5-.5 1.3 0 1.8 2 2.3 5.4 4.6 8.6 4.5 3.3-.1 6.5-2.3 8.6-4.5.5-.5.5-1.3 0-1.8-2.1-2.3-5.4-4.6-8.6-4.5z"
-                            />
-                            <path
-                              d="M13 10c0 1.7-1.3 3-3 3s-3-1.3-3-3 1.3-3 3-3c1.2 0 3 .7 3 3z"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M10 4.6c-3.2-.1-6.5 2.2-8.6 4.5-.5.5-.5 1.3 0 1.8 2 2.3 5.4 4.6 8.6 4.5 3.3-.1 6.5-2.3 8.6-4.5.5-.5.5-1.3 0-1.8-2.1-2.3-5.4-4.6-8.6-4.5z"
+                              />
+                              <path
+                                d="M13 10c0 1.7-1.3 3-3 3s-3-1.3-3-3 1.3-3 3-3c1.2 0 3 .7 3 3z"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                     </div>
                     <div
@@ -748,7 +752,7 @@ exports[`Dashboard > should render 1`] = `
                         type="button"
                       >
                         <div
-                          class="flex items-center space-x-2"
+                          class="flex items-center gap-2"
                         >
                           <div>
                             <div
@@ -790,7 +794,7 @@ exports[`Dashboard > should render 1`] = `
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       <div>
                         <div
@@ -837,7 +841,7 @@ exports[`Dashboard > should render 1`] = `
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       <div>
                         <div
@@ -882,10 +886,10 @@ exports[`Dashboard > should render 1`] = `
                   class="dark:bg-theme-dark-900 dim:bg-theme-dim-900 flex w-full flex-col gap-3 rounded bg-white p-4 md:rounded-t-lg md:rounded-b-sm"
                 >
                   <div
-                    class="flex w-full flex-row items-center justify-between"
+                    class="flex w-full max-w-full flex-row items-center justify-between overflow-x-auto"
                   >
                     <div
-                      class="flex grow flex-row items-center gap-1.5"
+                      class="flex w-full flex-1 flex-row items-center gap-3"
                     >
                       <p
                         class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 hidden text-sm leading-[17px] font-semibold sm:block md:text-base md:leading-5"
@@ -893,83 +897,90 @@ exports[`Dashboard > should render 1`] = `
                         Address
                       </p>
                       <div
-                        class="h-[17px] w-full md:h-5"
+                        class="flex h-[17px] items-center md:h-5"
                       >
-                        <div
-                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 min-w-0"
+                        <span
+                          class="no-ligatures text-theme-primary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 text-base leading-[17px] font-semibold md:text-base md:leading-5"
                         >
-                          <div
-                            class="relative grow leading-[17px] sm:leading-5 text-left"
+                          <span
+                            class="lg:hidden"
                           >
                             <span
-                              class="no-ligatures min-w-0 overflow-hidden text-theme-primary-900 text-sm font-semibold leading-[17px] md:text-base md:leading-5 dark:text-theme-dark-50 dim:text-theme-dim-50 font-semibold text-base absolute w-full"
-                              data-testid="Address__address"
+                              class="no-ligatures"
+                              data-testid="TruncateMiddle"
                             >
-                              0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                              0xcd15…158EE6
                             </span>
-                            <span>
-                               
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        class="flex items-center gap-3 leading-[17px] sm:ml-1.5"
-                      >
-                        <button
-                          class="space-x-3 text-base relative items-center justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none inline-block p-1 text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500 hover:text-theme-secondary-900 dark:hover:text-theme-secondary-200 p-0!"
-                          data-testid="WalletIcon__Username"
-                          type="button"
-                        >
-                          <div
-                            class="flex items-center space-x-2"
+                          </span>
+                          <span
+                            class="hidden lg:block"
                           >
-                            <div>
-                              <div
-                                style="height: 20px; width: 20px;"
+                            <div
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            >
+                              <span
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                                data-testid="Address__address"
                               >
-                                <svg
-                                  fill="none"
-                                  style="height: 100%; width: 100%;"
-                                  viewBox="0 0 20 21"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <path
-                                    d="M1 15.0013C1.00124 13.188 1.91209 11.4962 3.42519 10.4969C4.93829 9.49766 6.8518 9.32411 8.52 10.0349"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  />
-                                  <path
-                                    clip-rule="evenodd"
-                                    d="M6.40156 8.40078C8.2241 8.40078 9.70156 6.92332 9.70156 5.10078C9.70156 3.27824 8.2241 1.80078 6.40156 1.80078C4.57902 1.80078 3.10156 3.27824 3.10156 5.10078C3.10156 6.92332 4.57902 8.40078 6.40156 8.40078Z"
-                                    fill-rule="evenodd"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  />
-                                  <path
-                                    d="M18.9984 15.0012C18.9984 17.6521 16.8494 19.8012 14.1984 19.8012C11.5475 19.8012 9.39844 17.6521 9.39844 15.0012C9.39844 12.3502 11.5475 10.2012 14.1984 10.2012"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  />
-                                  <path
-                                    d="M18.9984 11.4004L14.6224 15.7764C14.51 15.8889 14.3575 15.9522 14.1984 15.9522C14.0394 15.9522 13.8868 15.8889 13.7744 15.7764L12.3984 14.4012"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  />
-                                </svg>
-                              </div>
+                                0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                              </span>
+                            </div>
+                          </span>
+                        </span>
+                      </div>
+                      <button
+                        class="space-x-3 text-base relative items-center justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none inline-block p-1 text-theme-secondary-300 dark:text-theme-dark-500 dim:text-theme-dim-500 hover:text-theme-secondary-900 dark:hover:text-theme-secondary-200 p-0!"
+                        data-testid="WalletIcon__Username"
+                        type="button"
+                      >
+                        <div
+                          class="flex items-center gap-2"
+                        >
+                          <div>
+                            <div
+                              style="height: 16px; width: 16px;"
+                            >
+                              <svg
+                                fill="none"
+                                style="height: 100%; width: 100%;"
+                                viewBox="0 0 20 21"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M1 15.0013C1.00124 13.188 1.91209 11.4962 3.42519 10.4969C4.93829 9.49766 6.8518 9.32411 8.52 10.0349"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
+                                <path
+                                  clip-rule="evenodd"
+                                  d="M6.40156 8.40078C8.2241 8.40078 9.70156 6.92332 9.70156 5.10078C9.70156 3.27824 8.2241 1.80078 6.40156 1.80078C4.57902 1.80078 3.10156 3.27824 3.10156 5.10078C3.10156 6.92332 4.57902 8.40078 6.40156 8.40078Z"
+                                  fill-rule="evenodd"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
+                                <path
+                                  d="M18.9984 15.0012C18.9984 17.6521 16.8494 19.8012 14.1984 19.8012C11.5475 19.8012 9.39844 17.6521 9.39844 15.0012C9.39844 12.3502 11.5475 10.2012 14.1984 10.2012"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
+                                <path
+                                  d="M18.9984 11.4004L14.6224 15.7764C14.51 15.8889 14.3575 15.9522 14.1984 15.9522C14.0394 15.9522 13.8868 15.8889 13.7744 15.7764L12.3984 14.4012"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
+                              </svg>
                             </div>
                           </div>
-                        </button>
-                      </div>
+                        </div>
+                      </button>
                     </div>
                     <div
                       class="flex flex-row items-center gap-3"
@@ -1062,7 +1073,7 @@ exports[`Dashboard > should render 1`] = `
                           type="button"
                         >
                           <div
-                            class="flex items-center space-x-2"
+                            class="flex items-center gap-2"
                           >
                             <div
                               class=""
@@ -1136,7 +1147,7 @@ exports[`Dashboard > should render 1`] = `
                         type="button"
                       >
                         <div
-                          class="flex items-center space-x-2"
+                          class="flex items-center gap-2"
                         >
                           Send
                         </div>
@@ -1155,7 +1166,7 @@ exports[`Dashboard > should render 1`] = `
                             type="button"
                           >
                             <div
-                              class="flex items-center space-x-2"
+                              class="flex items-center gap-2"
                             >
                               <div>
                                 <div
@@ -1268,7 +1279,7 @@ exports[`Dashboard > should render 1`] = `
                         type="button"
                       >
                         <div
-                          class="flex items-center space-x-2"
+                          class="flex items-center gap-2"
                         >
                           <div>
                             <div
@@ -1311,7 +1322,7 @@ exports[`Dashboard > should render 1`] = `
                         type="button"
                       >
                         <div
-                          class="flex items-center space-x-2"
+                          class="flex items-center gap-2"
                         >
                           <div>
                             <div
@@ -1609,7 +1620,7 @@ exports[`Dashboard > should render 1`] = `
                       type="button"
                     >
                       <div
-                        class="flex items-center space-x-2"
+                        class="flex items-center gap-2"
                       >
                         <div>
                           <div
@@ -1684,7 +1695,7 @@ exports[`Dashboard > should render 1`] = `
                       type="button"
                     >
                       <div
-                        class="flex items-center space-x-2"
+                        class="flex items-center gap-2"
                       >
                         <div>
                           <div

@@ -98,7 +98,7 @@ exports[`TransactionExportProgress > should render with progress count 1`] = `
         type="button"
       >
         <div
-          class="flex items-center space-x-2"
+          class="flex items-center gap-2"
         >
           Cancel
         </div>
@@ -109,7 +109,7 @@ exports[`TransactionExportProgress > should render with progress count 1`] = `
         type="button"
       >
         <div
-          class="flex items-center space-x-2"
+          class="flex items-center gap-2"
         >
           Download
         </div>

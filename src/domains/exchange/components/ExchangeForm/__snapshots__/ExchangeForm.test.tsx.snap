@@ -444,9 +444,13 @@ exports[`ExchangeForm > should render exchange form 1`] = `
       <div
         class="flex flex-col"
       >
-        <span
-          class="text-theme-secondary-text mx-auto mb-2 inline-block font-semibold sm:hidden"
-        />
+        <div
+          class="mb-3 flex flex-col gap-1.5"
+        >
+          <span
+            class="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 inline-block text-lg leading-[21px] font-semibold sm:hidden"
+          />
+        </div>
         <ul
           class="flex flex-row gap-2"
         >
@@ -682,7 +686,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     <div>
                       <div
@@ -1008,7 +1012,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
               type="button"
             >
               <div
-                class="flex items-center space-x-2"
+                class="flex items-center gap-2"
               >
                 Back
               </div>
@@ -1020,7 +1024,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
               type="button"
             >
               <div
-                class="flex items-center space-x-2"
+                class="flex items-center gap-2"
               >
                 Continue
               </div>
@@ -1045,9 +1049,13 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
       <div
         class="flex flex-col"
       >
-        <span
-          class="text-theme-secondary-text mx-auto mb-2 inline-block font-semibold sm:hidden"
-        />
+        <div
+          class="mb-3 flex flex-col gap-1.5"
+        >
+          <span
+            class="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 inline-block text-lg leading-[21px] font-semibold sm:hidden"
+          />
+        </div>
         <ul
           class="flex flex-row gap-2"
         >
@@ -1645,7 +1653,7 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                 type="button"
               >
                 <div
-                  class="flex items-center space-x-2"
+                  class="flex items-center gap-2"
                 >
                   Go to Portfolio
                 </div>
@@ -1656,7 +1664,7 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                 type="button"
               >
                 <div
-                  class="flex items-center space-x-2"
+                  class="flex items-center gap-2"
                 >
                   New Exchange
                 </div>
@@ -1682,9 +1690,13 @@ exports[`ExchangeForm > should render exchange form with id of pending order 1`]
       <div
         class="flex flex-col"
       >
-        <span
-          class="text-theme-secondary-text mx-auto mb-2 inline-block font-semibold sm:hidden"
-        />
+        <div
+          class="mb-3 flex flex-col gap-1.5"
+        >
+          <span
+            class="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 inline-block text-lg leading-[21px] font-semibold sm:hidden"
+          />
+        </div>
         <ul
           class="flex flex-row gap-2"
         >
@@ -2258,7 +2270,7 @@ exports[`FormStep > should render 1`] = `
           type="button"
         >
           <div
-            class="flex items-center space-x-2"
+            class="flex items-center gap-2"
           >
             <div>
               <div
