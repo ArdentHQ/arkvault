@@ -3,7 +3,7 @@ import { Selector } from "testcafe";
 import { buildTranslations } from "../../../app/i18n/helpers";
 import { cucumber, getLocation, scrollToTop, visitWelcomeScreen } from "../../../utils/e2e-utils";
 import { goToProfile } from "../../profile/e2e/common";
-import { goToWallet, modal } from "../e2e/common";
+import { modal } from "../e2e/common";
 
 const translations = buildTranslations();
 
