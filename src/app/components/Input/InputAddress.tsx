@@ -55,8 +55,8 @@ export const InputAddress = ({
 			ref={registerRef?.(rules)}
 			type="text"
 			data-testid="InputAddress__input"
-			{...properties}
 			autoComplete="off"
+			{...properties}
 		/>
 	);
 };

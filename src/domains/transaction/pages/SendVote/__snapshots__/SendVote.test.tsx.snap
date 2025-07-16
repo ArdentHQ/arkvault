@@ -761,12 +761,19 @@ exports[`SendVote > should show error if wrong mnemonic 1`] = `
                         class="relative flex h-full flex-1"
                       >
                         <input
+                          aria-hidden="true"
+                          autocomplete="off"
+                          class="pointer-events-none absolute inset-0 border-0 bg-transparent p-0! font-mono ring-0 outline-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 text-sm! sm:text-base!"
+                          tabindex="-1"
+                          type="password"
+                        />
+                        <input
                           aria-invalid="true"
                           autocomplete="off"
-                          class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
+                          class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! caret-theme-text no-selection-style font-mono text-transparent"
                           data-testid="AuthenticationStep__mnemonic"
                           name="mnemonic"
-                          type="password"
+                          type="text"
                         />
                       </div>
                       <div
@@ -1818,7 +1825,7 @@ exports[`SendVote > should show error step and go back 1`] = `
                           >
                             <textarea
                               autocomplete="off"
-                              class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! min-h-[8rem] md:min-h-auto md:resize-y resize-none text-theme-secondary-text"
+                              class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! text-theme-secondary-text min-h-[8rem] md:min-h-auto md:resize-y resize-none"
                               data-testid="ErrorStep__errorMessage"
                               disabled=""
                               style="height: 4px;"
