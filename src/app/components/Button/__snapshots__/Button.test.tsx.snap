@@ -7,7 +7,7 @@ exports[`Button > should render 1`] = `
     type="button"
   >
     <div
-      class="flex items-center space-x-2"
+      class="flex items-center gap-2"
     />
   </button>
 </div>
@@ -20,7 +20,7 @@ exports[`Button > should render a large one 1`] = `
     type="button"
   >
     <div
-      class="flex items-center space-x-2"
+      class="flex items-center gap-2"
     />
   </button>
 </div>
@@ -33,7 +33,7 @@ exports[`Button > should render a small one 1`] = `
     type="button"
   >
     <div
-      class="flex items-center space-x-2"
+      class="flex items-center gap-2"
     />
   </button>
 </div>
@@ -46,7 +46,7 @@ exports[`Button > should render an icon 1`] = `
     type="button"
   >
     <div
-      class="flex items-center space-x-2"
+      class="flex items-center gap-2"
     />
   </button>
 </div>
@@ -59,7 +59,7 @@ exports[`Button > should render as danger button 1`] = `
     type="button"
   >
     <div
-      class="flex items-center space-x-2"
+      class="flex items-center gap-2"
     />
   </button>
 </div>
@@ -72,7 +72,7 @@ exports[`Button > should render as info button 1`] = `
     type="button"
   >
     <div
-      class="flex items-center space-x-2"
+      class="flex items-center gap-2"
     />
   </button>
 </div>
@@ -85,7 +85,7 @@ exports[`Button > should render as primary button 1`] = `
     type="button"
   >
     <div
-      class="flex items-center space-x-2"
+      class="flex items-center gap-2"
     />
   </button>
 </div>
@@ -98,7 +98,7 @@ exports[`Button > should render as reverse button 1`] = `
     type="button"
   >
     <div
-      class="flex items-center space-x-2"
+      class="flex items-center gap-2"
     />
   </button>
 </div>
@@ -111,7 +111,7 @@ exports[`Button > should render as secondary button 1`] = `
     type="button"
   >
     <div
-      class="flex items-center space-x-2"
+      class="flex items-center gap-2"
     />
   </button>
 </div>
@@ -124,7 +124,7 @@ exports[`Button > should render as transparent button 1`] = `
     type="button"
   >
     <div
-      class="flex items-center space-x-2"
+      class="flex items-center gap-2"
     />
   </button>
 </div>
@@ -137,7 +137,7 @@ exports[`Button > should render as warning button 1`] = `
     type="button"
   >
     <div
-      class="flex items-center space-x-2"
+      class="flex items-center gap-2"
     />
   </button>
 </div>
@@ -152,7 +152,7 @@ exports[`Button > should render if disabled 1`] = `
     type="button"
   >
     <div
-      class="flex items-center space-x-2"
+      class="flex items-center gap-2"
     >
       Click
     </div>
@@ -167,7 +167,7 @@ exports[`Button > should render loading with icon 1`] = `
     type="button"
   >
     <div
-      class="flex items-center space-x-2"
+      class="flex items-center gap-2"
     >
       <div
         class="flex items-center"
@@ -201,7 +201,7 @@ exports[`Button > should render with icon and custom icon size 1`] = `
     type="button"
   >
     <div
-      class="flex items-center space-x-2"
+      class="flex items-center gap-2"
     >
       <div>
         <div
@@ -243,7 +243,7 @@ exports[`Button > should render with icon on the left side 1`] = `
     type="button"
   >
     <div
-      class="flex items-center space-x-2"
+      class="flex items-center gap-2"
     >
       <div>
         <div
@@ -285,7 +285,7 @@ exports[`Button > should render with icon on the right side 1`] = `
     type="button"
   >
     <div
-      class="flex items-center space-x-2"
+      class="flex items-center gap-2"
     >
       Click Me
       <div>
@@ -327,7 +327,7 @@ exports[`Button > should render with loading state enabled 1`] = `
     type="button"
   >
     <div
-      class="flex items-center space-x-2"
+      class="flex items-center gap-2"
     >
       <div
         class="flex items-center"
@@ -359,7 +359,7 @@ exports[`Button > should render with theme 1`] = `
     type="button"
   >
     <div
-      class="flex items-center space-x-2"
+      class="flex items-center gap-2"
     >
       Click
     </div>

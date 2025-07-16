@@ -686,7 +686,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     <div>
                       <div
@@ -1012,7 +1012,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
               type="button"
             >
               <div
-                class="flex items-center space-x-2"
+                class="flex items-center gap-2"
               >
                 Back
               </div>
@@ -1024,7 +1024,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
               type="button"
             >
               <div
-                class="flex items-center space-x-2"
+                class="flex items-center gap-2"
               >
                 Continue
               </div>
@@ -1653,7 +1653,7 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                 type="button"
               >
                 <div
-                  class="flex items-center space-x-2"
+                  class="flex items-center gap-2"
                 >
                   Go to Portfolio
                 </div>
@@ -1664,7 +1664,7 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                 type="button"
               >
                 <div
-                  class="flex items-center space-x-2"
+                  class="flex items-center gap-2"
                 >
                   New Exchange
                 </div>
@@ -2270,7 +2270,7 @@ exports[`FormStep > should render 1`] = `
           type="button"
         >
           <div
-            class="flex items-center space-x-2"
+            class="flex items-center gap-2"
           >
             <div>
               <div
