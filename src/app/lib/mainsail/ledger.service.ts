@@ -100,8 +100,8 @@ export class LedgerService {
 	}
 
 	public async signMessage(path: string, payload: string): Promise<string> {
-		const hex = Buffer.from(payload).toString("hex")
-		const result = await this.#transport.signPersonalMessage(path, hex)
+		const hex = Buffer.from(payload).toString("hex");
+		const result = await this.#transport.signPersonalMessage(path, hex);
 
 		const signature = ethers.Signature.from({
 			r: `0x${result.r}`,
@@ -110,7 +110,6 @@ export class LedgerService {
 		});
 
 		return signature.serialized;
-
 	}
 
 	public async scan(options?: {

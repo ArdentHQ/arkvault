@@ -40,8 +40,6 @@ export const FormStep = ({
 		handleSelectAddress(wallet?.address() || "");
 	};
 
-	console.log("wallet", { address: wallet?.address(), publicKey: wallet?.publicKey()})
-
 	const { activeNetwork } = useActiveNetwork({ profile });
 
 	const { getWalletAlias } = useWalletAlias();
