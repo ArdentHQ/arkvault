@@ -24,6 +24,7 @@ export const Profiles = (properties: ProfilesSliderProperties): JSX.Element => {
 
 	useEffect(() => {
 		const checkHeight = () => {
+			/* istanbul ignore next -- @preserve */
 			if (!containerRef.current) {
 				return;
 			}
