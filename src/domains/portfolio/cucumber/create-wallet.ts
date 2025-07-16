@@ -24,7 +24,7 @@ const mocks = [
 			return !mockedAddresses.includes(address);
 		},
 		"coins/mainsail/devnet/wallets/not-found",
-		404
+		404,
 	),
 	mockRequest(
 		(request: any) =>
@@ -94,8 +94,7 @@ const inputMnemonicConfirmation = async (t: TestController) => {
 	}
 
 	await t.click(Selector("[data-testid=CreateWallet__ConfirmPassphraseStep__passphraseDisclaimer]"));
-
-}
+};
 
 const walletPageStep = {
 	"Then the new wallet is created": async (t: TestController) => {
@@ -115,7 +114,8 @@ cucumber(
 		},
 		...createWalletStep,
 		"And sees the generated mnemonic": async (t: TestController) => {
-			await t.expect(Selector("h2").withText(translations.WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_STEP.TITLE).exists)
+			await t
+				.expect(Selector("h2").withText(translations.WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_STEP.TITLE).exists)
 				.ok();
 		},
 		...confirmMnemonicStep,
