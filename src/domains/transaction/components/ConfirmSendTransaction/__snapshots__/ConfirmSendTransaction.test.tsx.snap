@@ -25,7 +25,7 @@ exports[`ConfirmSendTransaction > should render modal 1`] = `
             type="button"
           >
             <div
-              class="flex items-center space-x-2"
+              class="flex items-center gap-2"
             >
               <div>
                 <div
@@ -220,7 +220,7 @@ exports[`ConfirmSendTransaction > should render modal 1`] = `
                 type="button"
               >
                 <div
-                  class="flex items-center space-x-2"
+                  class="flex items-center gap-2"
                 >
                   Back
                 </div>
@@ -231,7 +231,7 @@ exports[`ConfirmSendTransaction > should render modal 1`] = `
                 type="submit"
               >
                 <div
-                  class="flex items-center space-x-2"
+                  class="flex items-center gap-2"
                 >
                   Continue
                 </div>

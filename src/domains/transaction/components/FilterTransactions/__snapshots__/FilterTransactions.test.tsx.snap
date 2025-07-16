@@ -17,7 +17,7 @@ exports[`FilterTransactions > should open dropdown list with all transaction typ
         type="button"
       >
         <div
-          class="flex items-center space-x-2"
+          class="flex items-center gap-2"
         >
           <div>
             <div
@@ -82,7 +82,7 @@ exports[`FilterTransactions > should render 1`] = `
         type="button"
       >
         <div
-          class="flex items-center space-x-2"
+          class="flex items-center gap-2"
         >
           <div>
             <div
@@ -148,7 +148,7 @@ exports[`FilterTransactions > should render with default selected option 1`] = `
         type="button"
       >
         <div
-          class="flex items-center space-x-2"
+          class="flex items-center gap-2"
         >
           <div>
             <div

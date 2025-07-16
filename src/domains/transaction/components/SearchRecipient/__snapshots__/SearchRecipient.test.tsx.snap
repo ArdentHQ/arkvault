@@ -23,7 +23,7 @@ exports[`SearchRecipient > should call onAction when no address is selected 1`] 
             type="button"
           >
             <div
-              class="flex items-center space-x-2"
+              class="flex items-center gap-2"
             >
               <div>
                 <div
@@ -340,7 +340,7 @@ exports[`SearchRecipient > should call onAction when no address is selected 1`] 
                               type="button"
                             >
                               <div
-                                class="flex items-center space-x-2"
+                                class="flex items-center gap-2"
                               >
                                 Select
                               </div>
@@ -408,7 +408,7 @@ exports[`SearchRecipient > should call onAction when no address is selected 1`] 
                               type="button"
                             >
                               <div
-                                class="flex items-center space-x-2"
+                                class="flex items-center gap-2"
                               >
                                 Select
                               </div>
@@ -454,7 +454,7 @@ exports[`SearchRecipient > should render a modal 1`] = `
             type="button"
           >
             <div
-              class="flex items-center space-x-2"
+              class="flex items-center gap-2"
             >
               <div>
                 <div
@@ -771,7 +771,7 @@ exports[`SearchRecipient > should render a modal 1`] = `
                               type="button"
                             >
                               <div
-                                class="flex items-center space-x-2"
+                                class="flex items-center gap-2"
                               >
                                 Select
                               </div>
@@ -839,7 +839,7 @@ exports[`SearchRecipient > should render a modal 1`] = `
                               type="button"
                             >
                               <div
-                                class="flex items-center space-x-2"
+                                class="flex items-center gap-2"
                               >
                                 Select
                               </div>
@@ -883,7 +883,7 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
             type="button"
           >
             <div
-              class="flex items-center space-x-2"
+              class="flex items-center gap-2"
             >
               <div>
                 <div
@@ -1200,7 +1200,7 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
                               type="button"
                             >
                               <div
-                                class="flex items-center space-x-2"
+                                class="flex items-center gap-2"
                               >
                                 Select
                               </div>
@@ -1268,7 +1268,7 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
                               type="button"
                             >
                               <div
-                                class="flex items-center space-x-2"
+                                class="flex items-center gap-2"
                               >
                                 Select
                               </div>
@@ -1312,7 +1312,7 @@ exports[`SearchRecipient > should render with contact on desktop 1`] = `
             type="button"
           >
             <div
-              class="flex items-center space-x-2"
+              class="flex items-center gap-2"
             >
               <div>
                 <div
@@ -1629,7 +1629,7 @@ exports[`SearchRecipient > should render with contact on desktop 1`] = `
                               type="button"
                             >
                               <div
-                                class="flex items-center space-x-2"
+                                class="flex items-center gap-2"
                               >
                                 Selected
                               </div>
@@ -1673,7 +1673,7 @@ exports[`SearchRecipient > should render with contact on mobile 1`] = `
             type="button"
           >
             <div
-              class="flex items-center space-x-2"
+              class="flex items-center gap-2"
             >
               <div>
                 <div
@@ -1975,7 +1975,7 @@ exports[`SearchRecipient > should render with my wallet on desktop 1`] = `
             type="button"
           >
             <div
-              class="flex items-center space-x-2"
+              class="flex items-center gap-2"
             >
               <div>
                 <div
@@ -2292,7 +2292,7 @@ exports[`SearchRecipient > should render with my wallet on desktop 1`] = `
                               type="button"
                             >
                               <div
-                                class="flex items-center space-x-2"
+                                class="flex items-center gap-2"
                               >
                                 Selected
                               </div>
@@ -2336,7 +2336,7 @@ exports[`SearchRecipient > should render with my wallet on mobile 1`] = `
             type="button"
           >
             <div
-              class="flex items-center space-x-2"
+              class="flex items-center gap-2"
             >
               <div>
                 <div
@@ -2638,7 +2638,7 @@ exports[`SearchRecipient > should render with no alias if the recipient address 
             type="button"
           >
             <div
-              class="flex items-center space-x-2"
+              class="flex items-center gap-2"
             >
               <div>
                 <div
@@ -2944,7 +2944,7 @@ exports[`SearchRecipient > should render with no alias if the recipient address 
                               type="button"
                             >
                               <div
-                                class="flex items-center space-x-2"
+                                class="flex items-center gap-2"
                               >
                                 Select
                               </div>
@@ -2988,7 +2988,7 @@ exports[`SearchRecipient > should render with selected address 1`] = `
             type="button"
           >
             <div
-              class="flex items-center space-x-2"
+              class="flex items-center gap-2"
             >
               <div>
                 <div
@@ -3305,7 +3305,7 @@ exports[`SearchRecipient > should render with selected address 1`] = `
                               type="button"
                             >
                               <div
-                                class="flex items-center space-x-2"
+                                class="flex items-center gap-2"
                               >
                                 Selected
                               </div>
@@ -3373,7 +3373,7 @@ exports[`SearchRecipient > should render with selected address 1`] = `
                               type="button"
                             >
                               <div
-                                class="flex items-center space-x-2"
+                                class="flex items-center gap-2"
                               >
                                 Select
                               </div>
@@ -3417,7 +3417,7 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
             type="button"
           >
             <div
-              class="flex items-center space-x-2"
+              class="flex items-center gap-2"
             >
               <div>
                 <div
@@ -3734,7 +3734,7 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
                               type="button"
                             >
                               <div
-                                class="flex items-center space-x-2"
+                                class="flex items-center gap-2"
                               >
                                 Selected
                               </div>
@@ -3802,7 +3802,7 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
                               type="button"
                             >
                               <div
-                                class="flex items-center space-x-2"
+                                class="flex items-center gap-2"
                               >
                                 Select
                               </div>
@@ -3846,7 +3846,7 @@ exports[`SearchRecipient > should render with selected address on mobile 1`] = `
             type="button"
           >
             <div
-              class="flex items-center space-x-2"
+              class="flex items-center gap-2"
             >
               <div>
                 <div

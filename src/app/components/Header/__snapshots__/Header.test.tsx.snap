@@ -87,7 +87,7 @@ exports[`Header > should render an header with extra 1`] = `
           type="button"
         >
           <div
-            class="flex items-center space-x-2"
+            class="flex items-center gap-2"
           >
             Extra 1
           </div>
@@ -98,7 +98,7 @@ exports[`Header > should render an header with extra 1`] = `
           type="button"
         >
           <div
-            class="flex items-center space-x-2"
+            class="flex items-center gap-2"
           >
             Extra 2
           </div>

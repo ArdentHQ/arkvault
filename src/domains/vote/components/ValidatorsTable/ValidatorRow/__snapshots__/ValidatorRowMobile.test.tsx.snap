@@ -39,7 +39,7 @@ exports[`ValidatorRowMobile > should render the selected vote 1`] = `
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     Current
                   </div>
@@ -182,7 +182,7 @@ exports[`ValidatorRowMobile > should render the selected vote 1`] = `
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     Select
                   </div>
@@ -329,7 +329,7 @@ exports[`ValidatorRowMobile > should render the selected vote 1`] = `
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       Select
                     </div>

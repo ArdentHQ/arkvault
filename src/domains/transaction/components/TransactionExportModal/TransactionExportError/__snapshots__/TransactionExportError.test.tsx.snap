@@ -98,7 +98,7 @@ exports[`TransactionExportError > should render in lg 1`] = `
         type="button"
       >
         <div
-          class="flex items-center space-x-2"
+          class="flex items-center gap-2"
         >
           Back
         </div>
@@ -109,7 +109,7 @@ exports[`TransactionExportError > should render in lg 1`] = `
         type="button"
       >
         <div
-          class="flex items-center space-x-2"
+          class="flex items-center gap-2"
         >
           Retry
         </div>
@@ -217,7 +217,7 @@ exports[`TransactionExportError > should render in md 1`] = `
         type="button"
       >
         <div
-          class="flex items-center space-x-2"
+          class="flex items-center gap-2"
         >
           Back
         </div>
@@ -228,7 +228,7 @@ exports[`TransactionExportError > should render in md 1`] = `
         type="button"
       >
         <div
-          class="flex items-center space-x-2"
+          class="flex items-center gap-2"
         >
           Retry
         </div>
@@ -336,7 +336,7 @@ exports[`TransactionExportError > should render in sm 1`] = `
         type="button"
       >
         <div
-          class="flex items-center space-x-2"
+          class="flex items-center gap-2"
         >
           Back
         </div>
@@ -347,7 +347,7 @@ exports[`TransactionExportError > should render in sm 1`] = `
         type="button"
       >
         <div
-          class="flex items-center space-x-2"
+          class="flex items-center gap-2"
         >
           Retry
         </div>
@@ -455,7 +455,7 @@ exports[`TransactionExportError > should render in xl 1`] = `
         type="button"
       >
         <div
-          class="flex items-center space-x-2"
+          class="flex items-center gap-2"
         >
           Back
         </div>
@@ -466,7 +466,7 @@ exports[`TransactionExportError > should render in xl 1`] = `
         type="button"
       >
         <div
-          class="flex items-center space-x-2"
+          class="flex items-center gap-2"
         >
           Retry
         </div>
@@ -574,7 +574,7 @@ exports[`TransactionExportError > should render in xs 1`] = `
         type="button"
       >
         <div
-          class="flex items-center space-x-2"
+          class="flex items-center gap-2"
         >
           Back
         </div>
@@ -585,7 +585,7 @@ exports[`TransactionExportError > should render in xs 1`] = `
         type="button"
       >
         <div
-          class="flex items-center space-x-2"
+          class="flex items-center gap-2"
         >
           Retry
         </div>
