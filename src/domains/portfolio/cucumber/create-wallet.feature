@@ -13,7 +13,7 @@ Feature: Wallet
         Given Alice is signed into a profile
         When she navigates to create a wallet
         And sees the generated mnemonic
-        And confirms the generated mnemonic
+		And confirms the generated mnemonic with encryption on
         And enters the encryption passwords
         Then the new wallet is created
 

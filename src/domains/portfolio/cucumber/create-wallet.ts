@@ -52,7 +52,16 @@ const createWalletStep = {
 	},
 };
 
-const inputConfirmationInputs = async (t: TestController) => {
+const confirmMnemonicStep = {
+	"And confirms the generated mnemonic": async (t: TestController) => {
+		await inputMnemonicConfirmation(t);
+
+		await t.hover(Selector("button").withExactText(translations.COMMON.CONTINUE));
+		await t.click(Selector("button").withExactText(translations.COMMON.CONTINUE));
+	},
+};
+
+const inputMnemonicConfirmation = async (t: TestController) => {
 	const mnemonicsCount = await Selector("[data-testid=MnemonicList__item]").count;
 
 	if (mnemonicWords.length > 0) {
@@ -85,28 +94,8 @@ const inputConfirmationInputs = async (t: TestController) => {
 	}
 
 	await t.click(Selector("[data-testid=CreateWallet__ConfirmPassphraseStep__passphraseDisclaimer]"));
+
 }
-
-const confirmMnemonicStep = {
-	"And confirms the generated mnemonic": async (t: TestController) => {
-		await inputConfirmationInputs(t);
-
-		await t.hover(Selector("button").withExactText(translations.COMMON.CONTINUE));
-		await t.click(Selector("button").withExactText(translations.COMMON.CONTINUE));
-	},
-};
-
-const confirmMnemonicWithEncryptionStep = {
-	"And confirms the generated mnemonic": async (t: TestController) => {
-		await inputConfirmationInputs(t);
-
-		await t.click(Selector('[data-testid="WalletEncryptionBanner__encryption"] > label'));
-		await t.click(Selector('[data-testid="WalletEncryptionBanner__checkbox"]'));
-
-		await t.hover(Selector("button").withExactText(translations.COMMON.CONTINUE));
-		await t.click(Selector("button").withExactText(translations.COMMON.CONTINUE));
-	},
-};
 
 const walletPageStep = {
 	"Then the new wallet is created": async (t: TestController) => {
@@ -146,7 +135,15 @@ cucumber(
 		"And sees the generated mnemonic": async (t: TestController) => {
 			await t.expect(Selector("h2").withExactText(translations.COMMON.YOUR_PASSPHRASE).exists).ok();
 		},
-		...confirmMnemonicWithEncryptionStep,
+		"And confirms the generated mnemonic with encryption on": async (t: TestController) => {
+			await inputMnemonicConfirmation(t);
+
+			await t.click(Selector('[data-testid="WalletEncryptionBanner__encryption"] div'));
+			await t.click(Selector('[data-testid="WalletEncryptionBanner__checkbox"]'));
+
+			await t.hover(Selector("button").withExactText(translations.COMMON.CONTINUE));
+			await t.click(Selector("button").withExactText(translations.COMMON.CONTINUE));
+		},
 		"And enters the encryption passwords": async (t: TestController) => {
 			await t.typeText(Selector("[data-testid=PasswordValidation__encryptionPassword]"), "S3cUrePa$sword", {
 				paste: true,
