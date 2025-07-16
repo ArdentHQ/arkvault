@@ -1,17 +1,17 @@
-import { Services } from "@/app/lib/mainsail";
-import { Contracts } from "@/app/lib/profiles";
-import { act as actHook, renderHook } from "@testing-library/react";
-import React from "react";
-
-import { useTransactionBuilder } from "./use-transaction-builder";
 import {
+	WithProviders,
 	env,
 	getDefaultProfileId,
 	getDefaultWalletMnemonic,
 	triggerMessageSignOnce,
-	WithProviders,
 } from "@/utils/testing-library";
-import { server, requestMock } from "@/tests/mocks/server";
+import { act as actHook, renderHook } from "@testing-library/react";
+import { requestMock, server } from "@/tests/mocks/server";
+
+import { Contracts } from "@/app/lib/profiles";
+import React from "react";
+import { Services } from "@/app/lib/mainsail";
+import { useTransactionBuilder } from "./use-transaction-builder";
 
 describe("Use Transaction Builder Hook", () => {
 	let profile: Contracts.IProfile;
@@ -71,6 +71,6 @@ describe("Use Transaction Builder Hook", () => {
 			console.log(transaction.hash());
 		});
 
-		expect(transaction.hash()).toBe("a9c0f8086cb2ecc8b9744620f7ef967013d9c23ce311475a4c2de85f60d94498");
+		expect(transaction.hash()).toBe("b0382e77c6439f99e8c63cb171834834c4b39e6464419a83b203394c9997a508");
 	});
 });

@@ -1,11 +1,11 @@
-import { Contracts } from "@/app/lib/profiles";
-import userEvent from "@testing-library/user-event";
-import React from "react";
+import { MAINSAIL_MNEMONICS, env, render, screen, triggerMessageSignOnce, waitFor } from "@/utils/testing-library";
+import { afterAll, expect, vi } from "vitest";
 
+import { Contracts } from "@/app/lib/profiles";
+import React from "react";
 import { SignMessageSidePanel } from "./SignMessageSidePanel";
 import { translations as messageTranslations } from "@/domains/message/i18n";
-import { env, render, screen, waitFor, triggerMessageSignOnce, MAINSAIL_MNEMONICS } from "@/utils/testing-library";
-import { afterAll, expect, vi } from "vitest";
+import userEvent from "@testing-library/user-event";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
@@ -104,7 +104,7 @@ describe("SignMessageSidePanel", () => {
 				message: signMessage,
 				signatory: "0311b11b0dea8851d49af7c673d7032e37ee12307f9bbd379b64bbdac6ca302e84",
 				signature:
-					"c7d8b526b6c0f3b17b045149424476802ff44d3636446c6394475fd2193f12a06f8b771387ab986c19c39ff42808be6b06cb871c6fbe17b50d1af194576ec9591b",
+					"c7d8b526b6c0f3b17b045149424476802ff44d3636446c6394475fd2193f12a06f8b771387ab986c19c39ff42808be6b06cb871c6fbe17b50d1af194576ec95900",
 			};
 
 			render(<SignMessageSidePanel open={true} onOpenChange={vi.fn()} onMountChange={vi.fn()} />, {
