@@ -11,20 +11,27 @@ const preSteps = {
 		await goToProfile(t);
 	},
 };
-cucumber("@portfolioPage-loadMore", {
-	...preSteps,
-	"When she selects to view more transactions": async (t: TestController) => {
-		await t.expect(Selector("[data-testid=TransactionTable]").exists).ok();
-		await t.expect(Selector("[data-testid=transactions__fetch-more-button]").exists).ok();
-		count = await Selector("[data-testid=TransactionTable] [data-testid=TableRow]").count;
-		await scrollToBottom();
-		await t.click(Selector("[data-testid=transactions__fetch-more-button]"));
+cucumber(
+	"@portfolioPage-loadMore",
+	{
+		...preSteps,
+		"When she selects to view more transactions": async (t: TestController) => {
+			await t.expect(Selector("[data-testid=TransactionTable]").exists).ok();
+			await t.expect(Selector("[data-testid=transactions__fetch-more-button]").exists).ok();
+			count = await Selector("[data-testid=TransactionTable] [data-testid=TableRow]").count;
+			await scrollToBottom();
+			await t.click(Selector("[data-testid=transactions__fetch-more-button]"));
+		},
+		"Then the transaction count is increased": async (t: TestController) => {
+			await t.expect(Selector("[data-testid=TransactionTable] [data-testid=TableRow]").count).gt(count);
+		},
 	},
-	"Then the transaction count is increased": async (t: TestController) => {
-		await t.expect(Selector("[data-testid=TransactionTable] [data-testid=TableRow]").count).gt(count);
-	},
-}, [
-	mockRequest("https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=30&orderBy=timestamp:desc&to=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6", {
-		tr
-	})
-]);
+	[
+		mockRequest(
+			"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=30&orderBy=timestamp:desc&to=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
+			{
+				tr,
+			},
+		),
+	],
+);
