@@ -60,16 +60,16 @@ const transactionsFixture = "coins/mainsail/devnet/transactions";
 const validatorsFixture = "coins/mainsail/devnet/validators";
 const imageFixture = "/assets/background.png";
 
-const walletMocks = () => {
-	const addresses = [
-		"0x659A76be283644AEc2003aa8ba26485047fd1BFB",
-		"0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
-		"0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54",
-	];
+export const mockedAddresses = [
+	"0x659A76be283644AEc2003aa8ba26485047fd1BFB",
+	"0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
+	"0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54",
+];
 
+const walletMocks = () => {
 	const publicKeys = ["034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192"];
 
-	const devnetMocks = [...addresses, ...publicKeys].map((identifier: string) =>
+	const devnetMocks = [...mockedAddresses, ...publicKeys].map((identifier: string) =>
 		mockRequest(
 			`https://dwallets-evm.mainsailhq.com/api/wallets/${identifier}`,
 			`coins/mainsail/devnet/wallets/${identifier}`,
