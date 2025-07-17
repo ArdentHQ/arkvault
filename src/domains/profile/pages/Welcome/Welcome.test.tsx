@@ -94,7 +94,7 @@ describe("Welcome with deeplink", () => {
 		}));
 
 		render(<Welcome />, {
-			route: "/?method=transfer&coin=mainsail&nethash=c481dea3dcc13708364e576dff94dd499692b56cbc646d5acd22a3902297dd51",
+			route: "/?method=transfer&coin=mainsail&nethash=560f869ed6713745a12328e7214cb65077e645bb5e57b1e5b323bb915a51f114",
 		});
 
 		expect(screen.getByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
@@ -118,7 +118,7 @@ describe("Welcome with deeplink", () => {
 		const toastWarningSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
 
 		const route =
-			"?method=vote&coin=Mainsail&nethash=c481dea3dcc13708364e576dff94dd499692b56cbc646d5acd22a3902297dd51&validator=test&vote=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6";
+			"?method=vote&coin=Mainsail&nethash=560f869ed6713745a12328e7214cb65077e645bb5e57b1e5b323bb915a51f114&validator=test&vote=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6";
 
 		const { router } = render(<Welcome />, {
 			route,
@@ -308,7 +308,7 @@ describe("Welcome with deeplink", () => {
 	it("should navigate to transfer page with nethash parameter", async () => {
 		const toastWarningSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
 		const route =
-			"?method=transfer&coin=mainsail&nethash=c481dea3dcc13708364e576dff94dd499692b56cbc646d5acd22a3902297dd51";
+			"?method=transfer&coin=mainsail&nethash=560f869ed6713745a12328e7214cb65077e645bb5e57b1e5b323bb915a51f114";
 
 		const { router } = render(<Welcome />, {
 			route,
@@ -352,7 +352,7 @@ describe("Welcome with deeplink", () => {
 
 		const { router } = render(<Welcome />, {
 			// Using transfer page as an example
-			route: "/?method=transfer&coin=mainsail&nethash=c481dea3dcc13708364e576dff94dd499692b56cbc646d5acd22a3902297dd51",
+			route: "/?method=transfer&coin=mainsail&nethash=560f869ed6713745a12328e7214cb65077e645bb5e57b1e5b323bb915a51f114",
 		});
 
 		await waitFor(() => expect(toastWarningSpy).toHaveBeenCalledWith(commonTranslations.VALIDATING_URI));
@@ -404,7 +404,7 @@ describe("Welcome with deeplink", () => {
 	it.skip("should navigate to sign page", async () => {
 		const toastWarningSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
 		const route =
-			"?method=sign&coin=mainsail&nethash=c481dea3dcc13708364e576dff94dd499692b56cbc646d5acd22a3902297dd51&message=message+to+sign";
+			"?method=sign&coin=mainsail&nethash=560f869ed6713745a12328e7214cb65077e645bb5e57b1e5b323bb915a51f114&message=message+to+sign";
 
 		const { router } = render(<Welcome />, {
 			route,
