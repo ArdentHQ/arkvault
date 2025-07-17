@@ -89,7 +89,7 @@ export class LedgerService {
 	}
 
 	public async sign(path: string, serialized: string | Buffer): Promise<LedgerSignature> {
-		const chainId = configManager.get("network.chainId")
+		const chainId = configManager.get("network.chainId");
 
 		const resolution = await this.#ethLedgerService.resolveTransaction(
 			serialized,
@@ -105,8 +105,8 @@ export class LedgerService {
 			...signature,
 			// Clearing the ledger’s precomputed `v`, as it will be calculated in ts-crypto.
 			// @see https://github.com/ArdentHQ/typescript-crypto/blob/c5141eba1416f0e6f30e4797c34e1834d48e933b/src/utils/TransactionUtils.ts#L20
-			v: Number.parseInt(signature.v, 16) - (chainId * 2 + 35)
-		}
+			v: Number.parseInt(signature.v, 16) - (chainId * 2 + 35),
+		};
 	}
 
 	public async signMessage(path: string, payload: string): Promise<string> {
