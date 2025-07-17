@@ -9,6 +9,7 @@ import { Exceptions } from "@/app/lib/mainsail";
 import { WalletData } from "./wallet.dto.js";
 import { ConfigKey, ConfigRepository } from "@/app/lib/mainsail/config.repository";
 import Eth, { ledgerService } from "@ledgerhq/hw-app-eth";
+import { configManager } from "@/app/lib/mainsail";
 
 export class LedgerService {
 	readonly #addressService!: AddressService;
@@ -88,11 +89,13 @@ export class LedgerService {
 	}
 
 	public async sign(path: string, serialized: string | Buffer): Promise<LedgerSignature> {
+		const chainId = configManager.get("network.chainId")
+
 		const resolution = await this.#ethLedgerService.resolveTransaction(
 			serialized,
 			{},
 			{
-				domain: { chainId: 10_000 },
+				domain: { chainId },
 			},
 		);
 
