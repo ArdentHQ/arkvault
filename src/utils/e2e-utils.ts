@@ -300,38 +300,35 @@ export const requestMocks = {
 		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=30&orderBy=timestamp:desc&address=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
 		// 	transactionsFixture,
 		// ),
-		mockRequest(
-			/^https:\/\/dwallets-evm\.mainsailhq.com\/api\/transactions\/[a-fA-F0-9]{64}$/,
-			(request: any) => {
-				const regex = /\/transactions\/(?<hash>0x[a-fA-F0-9]{64})(?=\/?$)/;
-				const match = request.url.match(regex);
-				const hash = match?.groups?.hash;
+		mockRequest(/^https:\/\/dwallets-evm\.mainsailhq.com\/api\/transactions\/[a-fA-F0-9]{64}$/, (request: any) => {
+			const regex = /\/transactions\/(?<hash>0x[a-fA-F0-9]{64})(?=\/?$)/;
+			const match = request.url.match(regex);
+			const hash = match?.groups?.hash;
 
-				return JSON.stringify({
-					data: {
-						blockHash: "05b124023ddd656c8a95664eb61846cc0f4e204341a0d86db325771077e7f002",
-						confirmations: 1,
-						data: "",
-						from: "0x659A76be283644AEc2003aa8ba26485047fd1BFB",
-						gas: "21000",
-						gasPrice: "100000000000",
-						hash: hash,
-						nonce: "3",
-						senderPublicKey: "0311b11b0dea8851d49af7c673d7032e37ee12307f9bbd379b64bbdac6ca302e84",
-						signature:
+			return JSON.stringify({
+				data: {
+					blockHash: "05b124023ddd656c8a95664eb61846cc0f4e204341a0d86db325771077e7f002",
+					confirmations: 1,
+					data: "",
+					from: "0x659A76be283644AEc2003aa8ba26485047fd1BFB",
+					gas: "21000",
+					gasPrice: "100000000000",
+					hash: hash,
+					nonce: "3",
+					senderPublicKey: "0311b11b0dea8851d49af7c673d7032e37ee12307f9bbd379b64bbdac6ca302e84",
+					signature:
 						"cd1b35240b0c1303392e4dc3e1fc83b9da7b74e5c96b99d1ae207c7c9d5480d868ecf4235298c6438f9c0ea9a8274082ebf051d86ff353ae1fb4fffe86cad91101",
-						to: "0x47ea9bAa16edd859C1792933556c4659A647749C",
-						value: "2000000000000000000",
-						timestamp: "1752502567204",
-						receipt: {
-							gasRefunded: 0,
-							gasUsed: 21000,
-							status: 1,
-						},
+					to: "0x47ea9bAa16edd859C1792933556c4659A647749C",
+					value: "2000000000000000000",
+					timestamp: "1752502567204",
+					receipt: {
+						gasRefunded: 0,
+						gasUsed: 21000,
+						status: 1,
 					},
-				})
-			},
-		),
+				},
+			});
+		}),
 
 		// for notifications
 		mockRequest(
