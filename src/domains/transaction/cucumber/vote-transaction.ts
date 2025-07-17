@@ -55,32 +55,6 @@ cucumber(
 				},
 			},
 		),
-		mockRequest(
-			"https://dwallets-evm.mainsailhq.com/api/transactions/1986812653be5ad1cb0c7aae0bbe29cadcde3ee37196c88ff51cfe665d108767",
-			{
-				data: {
-					blockHash: "05b124023ddd656c8a95664eb61846cc0f4e204341a0d86db325771077e7f002",
-					confirmations: 1,
-					data: "0x602a9eee0000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000003094187d07633373e2621d03d18d5e07df2aa0f15a611de28b05381d212f1a7cce2fef8c3629bdb1b9678ce309e264330b00000000000000000000000000000000",
-					gas: "300000",
-					gasPrice: "5000000000",
-					from: "0x659A76be283644AEc2003aa8ba26485047fd1BFB",
-					hash: "1986812653be5ad1cb0c7aae0bbe29cadcde3ee37196c88ff51cfe665d108767",
-					nonce: "3",
-					senderPublicKey: "0311b11b0dea8851d49af7c673d7032e37ee12307f9bbd379b64bbdac6ca302e84",
-					signature:
-						"cd1b35240b0c1303392e4dc3e1fc83b9da7b74e5c96b99d1ae207c7c9d5480d868ecf4235298c6438f9c0ea9a8274082ebf051d86ff353ae1fb4fffe86cad91101",
-					to: "0x535B3D7A252fa034Ed71F0C53ec0C6F784cB64E1",
-					value: "0",
-					timestamp: "1752502567204",
-					receipt: {
-						gasRefunded: 0,
-						gasUsed: 21000,
-						status: 1,
-					},
-				},
-			},
-		),
 	],
 );
 
