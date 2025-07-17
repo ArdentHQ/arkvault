@@ -26,12 +26,4 @@ cucumber(
 			await t.expect(Selector("[data-testid=TransactionTable] [data-testid=TableRow]").count).gt(count);
 		},
 	},
-	[
-		mockRequest(
-			"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=30&orderBy=timestamp:desc&to=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
-			{
-				tr,
-			},
-		),
-	],
 );

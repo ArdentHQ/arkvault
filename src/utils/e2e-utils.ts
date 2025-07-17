@@ -114,6 +114,10 @@ const searchAddressesMocks = () => {
 		// 	{ limit: 15, page: 2 },
 		// 	{ limit: 30, page: 1 },
 		// ],
+		"0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6": [
+			{ limit: 30, page: 1 },
+			{ limit: 30, page: 2 },
+		],
 		"0x659A76be283644AEc2003aa8ba26485047fd1BFB": [
 			{ limit: 10, page: 1 },
 			{ limit: 15, page: 1 },
@@ -292,10 +296,10 @@ export const requestMocks = {
 		// mockRequest("https://dwallets-evm.mainsailhq.com/api/transactions?limit=20", transactionsFixture),
 
 		// wallet transactions
-		mockRequest(
-			"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=30&orderBy=timestamp:desc&address=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
-			transactionsFixture,
-		),
+		// mockRequest(
+		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=30&orderBy=timestamp:desc&address=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
+		// 	transactionsFixture,
+		// ),
 
 		// for notifications
 		mockRequest(
@@ -318,109 +322,6 @@ export const requestMocks = {
 			"https://dwallets-evm.mainsailhq.com/api/blocks/05b124023ddd656c8a95664eb61846cc0f4e204341a0d86db325771077e7f002",
 			{},
 		),
-
-		// mockRequest(
-		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=30&orderBy=timestamp:desc&address=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
-		// 	transactionsFixture
-		// ),
-
-		// mockRequest(
-		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?page=2&limit=30&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
-		// 	transactionsFixture,
-		// ),
-		// mockRequest(
-		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=20&senderId=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
-		// 	transactionsFixture,
-		// ),
-		// mockRequest(
-		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?limit=30&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
-		// 	transactionsFixture,
-		// ),
-		// mockRequest(
-		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?limit=30&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb%2CDH4Xyyt5zPqM9KwUkevUZPbzM3KjjW8fp5",
-		// 	transactionsFixture,
-		// ),
-		// mockRequest(
-		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?page=2&limit=30&address=0x659A76be283644AEc2003aa8ba26485047fd1BFB",
-		// 	transactionsFixture,
-		// ),
-		// mockRequest(
-		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=10&recipientId=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
-		// 	"coins/mainsail/devnet/notification-transactions",
-		// ),
-
-		// mockRequest(
-		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=10&recipientId=D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
-		// 	"coins/mainsail/devnet/notification-transactions",
-		// ),
-
-		// mockRequest(
-		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=10&recipientId=0x659A76be283644AEc2003aa8ba26485047fd1BFB",
-		// 	transactionsFixture,
-		// ),
-		//
-		// mockRequest(
-		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=10&recipientId=DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P",
-		// 	transactionsFixture,
-		// ),
-		//
-		// mockRequest(
-		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=10&recipientId=DJXg9Vqg2tofRNrMAvMzhZTkegu8QyyNQq",
-		// 	transactionsFixture,
-		// ),
-		//
-		// mockRequest(
-		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=20&senderId=0x659A76be283644AEc2003aa8ba26485047fd1BFB",
-		// 	transactionsFixture,
-		// ),
-		// mockRequest(
-		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?limit=30&address=0x659A76be283644AEc2003aa8ba26485047fd1BFB%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
-		// 	transactionsFixture,
-		// ),
-		// mockRequest(
-		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?limit=30&address=0x659A76be283644AEc2003aa8ba26485047fd1BFB%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb%2CDH4Xyyt5zPqM9KwUkevUZPbzM3KjjW8fp5",
-		// 	transactionsFixture,
-		// ),
-		// // unconfirmed transactions list before sending single or multiPayment transaction
-		// mockRequest(
-		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=20&senderId=DDA5nM7KEqLeTtQKv5qGgcnc6dpNBKJNTS",
-		// 	transactionsFixture,
-		// ),
-		//
-		// mockRequest(
-		// 	/https:\/\/ark-test\.arkvault\.io\/api\/transactions\?page=1&limit=20&senderId=(.*?)/,
-		// 	transactionsFixture,
-		// ),
-		//
-		// mockRequest(
-		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=10&orderBy=timestamp&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
-		// 	transactionsFixture,
-		// ),
-		//
-		// mockRequest(
-		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=10&orderBy=timestamp&address=D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
-		// 	transactionsFixture,
-		// ),
-		//
-		// mockRequest(
-		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=10&orderBy=timestamp&address=DJXg9Vqg2tofRNrMAvMzhZTkegu8QyyNQq",
-		// 	transactionsFixture,
-		// ),
-		//
-		// mockRequest(
-		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=10&orderBy=timestamp&address=0x659A76be283644AEc2003aa8ba26485047fd1BFB",
-		// 	transactionsFixture,
-		// ),
-		//
-		// mockRequest(
-		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=10&orderBy=timestamp&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
-		// 	{ data: [], meta: {} },
-		// ),
-		//
-		// mockRequest(
-		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=10&orderBy=timestamp&address=0x659A76be283644AEc2003aa8ba26485047fd1BFB%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
-		// 	{ data: [], meta: {} },
-		// ),
 
 		// mainnet
 		// mockRequest("https://wallets-evm.mainsailhq.com/api/transactions/fees", "coins/mainsail/mainnet/transaction-fees"),
