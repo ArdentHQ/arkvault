@@ -1,20 +1,21 @@
-import { Contracts } from "@/app/lib/profiles";
+import { Icon, ThemeIcon } from "@/app/components/Icon";
+import { Page, Section } from "@/app/components/Layout";
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
 import { matchPath, useLocation, useNavigate } from "react-router-dom";
-import cn from "classnames";
-import { DropdownOption } from "@/app/components/Dropdown";
-import { Icon, ThemeIcon } from "@/app/components/Icon";
-import { Page, Section } from "@/app/components/Layout";
-import { Link } from "@/app/components/Link";
-import { useEnvironmentContext } from "@/app/contexts";
 import { useDeeplink, useTheme } from "@/app/hooks";
-import { DeleteProfile } from "@/domains/profile/components/DeleteProfile/DeleteProfile";
-import { SignIn } from "@/domains/profile/components/SignIn/SignIn";
-import { toasts } from "@/app/services";
-import { WelcomeSlider } from "@/domains/profile/components/WelcomeSlider/WelcomeSlider";
-import { Profiles } from "@/domains/profile/components/Profiles/Profiles";
+
 import { Button } from "@/app/components/Button";
+import { Contracts } from "@/app/lib/profiles";
+import { DeleteProfile } from "@/domains/profile/components/DeleteProfile/DeleteProfile";
+import { DropdownOption } from "@/app/components/Dropdown";
+import { Link } from "@/app/components/Link";
+import { Profiles } from "@/domains/profile/components/Profiles/Profiles";
+import { SignIn } from "@/domains/profile/components/SignIn/SignIn";
+import { WelcomeSlider } from "@/domains/profile/components/WelcomeSlider/WelcomeSlider";
+import cn from "classnames";
+import { toasts } from "@/app/services";
+import { useEnvironmentContext } from "@/app/contexts";
 
 export const Welcome = () => {
 	const { t } = useTranslation();
@@ -281,7 +282,7 @@ export const Welcome = () => {
 									</div>
 								</div>
 
-								<div className="fixed bottom-8 left-1/2 mt-8 w-full -translate-x-1/2 sm:static sm:bottom-0 sm:translate-x-0">
+								<div className="static bottom-0 mt-8 w-full">
 									<p className="text-theme-secondary-text text-center text-base">
 										<span>{t("PROFILE.PAGE_WELCOME.HAS_EXPORTED_PROFILES")} </span>
 										<Link
