@@ -103,7 +103,7 @@ export class LedgerService {
 
 		return {
 			...signature,
-			// Resetting calculated `v` from ledger, as it will be calculated in ts-crypto.
+			// Clearing the ledger’s precomputed `v`, as it will be calculated in ts-crypto.
 			// @see https://github.com/ArdentHQ/typescript-crypto/blob/c5141eba1416f0e6f30e4797c34e1834d48e933b/src/utils/TransactionUtils.ts#L20
 			v: Number.parseInt(signature.v, 16) - (chainId * 2 + 35)
 		}
