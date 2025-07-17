@@ -509,10 +509,10 @@ jobs:
               run: pnpm test:e2e:ci src/domains/portfolio/cucumber
 
             - name: Firefox
-              run: pnpm test:e2e:ci:firefox src/domains/wallet/cucumber
+              run: pnpm test:e2e:ci:firefox src/domains/portfolio/cucumber
 
             - name: Edge
-              run: pnpm test:e2e:ci:edge src/domains/wallet/cucumber
+              run: pnpm test:e2e:ci:edge src/domains/portfolio/cucumber
 
             - name: Upload Screenshots
               if: ${{ failure() }}
