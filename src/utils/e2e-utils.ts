@@ -98,22 +98,6 @@ const walletMocks = () => {
 
 const searchAddressesMocks = () => {
 	const addresses = {
-		// "0xb0E6c955a0Df13220C36Ea9c95bE471249247E57": [
-		// 	{ limit: 10, page: 1 },
-		// 	{ limit: 15, page: 1 },
-		// 	{ limit: 30, page: 1 },
-		// ],
-		// D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb: [
-		// 	{ limit: 10, page: 1 },
-		// 	{ limit: 15, page: 1 },
-		// 	{ limit: 30, page: 1 },
-		// ],
-		// D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD: [
-		// 	{ limit: 10, page: 1 },
-		// 	{ limit: 15, page: 1 },
-		// 	{ limit: 15, page: 2 },
-		// 	{ limit: 30, page: 1 },
-		// ],
 		"0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6": [
 			{ limit: 30, page: 1 },
 			{ limit: 30, page: 2 },
@@ -125,21 +109,6 @@ const searchAddressesMocks = () => {
 			{ limit: 30, page: 1 },
 		],
 		"0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54": [{ limit: 30, page: 1 }],
-		// DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P: [
-		// 	{ limit: 10, page: 1 },
-		// 	{ limit: 15, page: 1 },
-		// 	{ limit: 30, page: 1 },
-		// ],
-		// DDA5nM7KEqLeTtQKv5qGgcnc6dpNBKJNTS: [
-		// 	{ limit: 10, page: 1 },
-		// 	{ limit: 15, page: 1 },
-		// 	{ limit: 30, page: 1 },
-		// ],
-		// DJXg9Vqg2tofRNrMAvMzhZTkegu8QyyNQq: [
-		// 	{ limit: 10, page: 1 },
-		// 	{ limit: 15, page: 1 },
-		// 	{ limit: 30, page: 1 },
-		// ],
 	};
 
 	const mocks: any = [];
@@ -292,14 +261,7 @@ export const requestMocks = {
 	transactions: [
 		// devnet
 		// mockRequest("https://dwallets-evm.mainsailhq.com/api/transactions/fees", "coins/mainsail/devnet/transaction-fees"),
-		// mockRequest("https://dwallets-evm.mainsailhq.com/api/transactions?limit=10", transactionsFixture),
-		// mockRequest("https://dwallets-evm.mainsailhq.com/api/transactions?limit=20", transactionsFixture),
 
-		// wallet transactions
-		// mockRequest(
-		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=30&orderBy=timestamp:desc&address=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
-		// 	transactionsFixture,
-		// ),
 		mockRequest(
 			/^https:\/\/dwallets-evm\.mainsailhq.com\/api\/transactions\/[a-fA-F0-9]{64}$/,
 			(request: any) => {
@@ -372,10 +334,6 @@ export const requestMocks = {
 	wallets: [
 		mockRequest("https://wallets-evm.mainsailhq.com/api/wallets?limit=1&nonce=0", {}),
 		mockRequest("https://dwallets-evm.mainsailhq.com/api/wallets?limit=1&nonce=0", {}),
-		// mockRequest(
-		// 	"https://dwallets-evm.mainsailhq.com/api/wallets/D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD/votes",
-		// 	"coins/mainsail/devnet/votes",
-		// ),
 
 		...walletMocks(),
 	],
