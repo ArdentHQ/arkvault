@@ -1,6 +1,6 @@
 import { Selector } from "testcafe";
 
-import { cucumber, mockRequest, scrollToBottom, visitWelcomeScreen } from "../../../utils/e2e-utils";
+import { cucumber, scrollToBottom, visitWelcomeScreen } from "../../../utils/e2e-utils";
 import { goToProfile } from "../../profile/e2e/common";
 
 let count: any;
@@ -12,7 +12,7 @@ const preSteps = {
 	},
 };
 cucumber(
-	"@portfolioPage-loadMore",
+	"@portfolioTransactions-loadMore",
 	{
 		...preSteps,
 		"When she selects to view more transactions": async (t: TestController) => {
