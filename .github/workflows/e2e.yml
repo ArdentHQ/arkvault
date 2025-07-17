@@ -522,7 +522,7 @@ jobs:
                   path: ${{ github.workspace }}/screenshots/**/*
 
     e2e-settings:
-        needs: e2e-profile
+        needs: e2e-portfolio
 
         runs-on: ubuntu-latest
 
