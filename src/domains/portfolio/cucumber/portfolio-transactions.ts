@@ -11,19 +11,16 @@ const preSteps = {
 		await goToProfile(t);
 	},
 };
-cucumber(
-	"@portfolioTransactions-loadMore",
-	{
-		...preSteps,
-		"When she selects to view more transactions": async (t: TestController) => {
-			await t.expect(Selector("[data-testid=TransactionTable]").exists).ok();
-			await t.expect(Selector("[data-testid=transactions__fetch-more-button]").exists).ok();
-			count = await Selector("[data-testid=TransactionTable] [data-testid=TableRow]").count;
-			await scrollToBottom();
-			await t.click(Selector("[data-testid=transactions__fetch-more-button]"));
-		},
-		"Then the transaction count is increased": async (t: TestController) => {
-			await t.expect(Selector("[data-testid=TransactionTable] [data-testid=TableRow]").count).gt(count);
-		},
+cucumber("@portfolioTransactions-loadMore", {
+	...preSteps,
+	"When she selects to view more transactions": async (t: TestController) => {
+		await t.expect(Selector("[data-testid=TransactionTable]").exists).ok();
+		await t.expect(Selector("[data-testid=transactions__fetch-more-button]").exists).ok();
+		count = await Selector("[data-testid=TransactionTable] [data-testid=TableRow]").count;
+		await scrollToBottom();
+		await t.click(Selector("[data-testid=transactions__fetch-more-button]"));
 	},
-);
+	"Then the transaction count is increased": async (t: TestController) => {
+		await t.expect(Selector("[data-testid=TransactionTable] [data-testid=TableRow]").count).gt(count);
+	},
+});

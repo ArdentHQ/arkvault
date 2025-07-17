@@ -15,7 +15,9 @@ const preSteps = {
 		await t.click(Selector("div").withExactText(translations.COMMON.MNEMONIC));
 
 		await t
-			.expect(Selector("h2").withExactText(translations.WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.MNEMONIC_TITLE).exists)
+			.expect(
+				Selector("h2").withExactText(translations.WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.MNEMONIC_TITLE).exists,
+			)
 			.ok();
 	},
 };
@@ -115,9 +117,7 @@ cucumber("@importWallet-address", {
 	"When she changes the import type to address": async (t: TestController) => {
 		await t.click(Selector("button").withExactText(translations.COMMON.BACK));
 		await t.click(Selector("div").withExactText(translations.COMMON.ADDRESS));
-		await t
-			.expect(Selector("h2").withExactText(translations.COMMON.ADDRESS).exists)
-			.ok();
+		await t.expect(Selector("h2").withExactText(translations.COMMON.ADDRESS).exists).ok();
 	},
 	"And enters a valid address to import": async (t: TestController) => {
 		const addressInput = Selector("[data-testid=ImportWallet__address-input]");
@@ -137,9 +137,7 @@ cucumber("@importWallet-invalidAddress", {
 	"When she changes the import type to address": async (t: TestController) => {
 		await t.click(Selector("button").withExactText(translations.COMMON.BACK));
 		await t.click(Selector("div").withExactText(translations.COMMON.ADDRESS));
-		await t
-			.expect(Selector("h2").withExactText(translations.COMMON.ADDRESS).exists)
-			.ok();
+		await t.expect(Selector("h2").withExactText(translations.COMMON.ADDRESS).exists).ok();
 	},
 	"And enters an invalid address to import": async (t: TestController) => {
 		const addressInput = Selector("[data-testid=ImportWallet__address-input]");
@@ -190,7 +188,9 @@ cucumber("@importWallet-duplicateAddress", {
 		await t.click(Selector("div").withExactText(translations.COMMON.MNEMONIC));
 
 		await t
-			.expect(Selector("h2").withExactText(translations.WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.MNEMONIC_TITLE).exists)
+			.expect(
+				Selector("h2").withExactText(translations.WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.MNEMONIC_TITLE).exists,
+			)
 			.ok();
 
 		const passphraseInput = Selector("[data-testid=ImportWallet__mnemonic-input]");
