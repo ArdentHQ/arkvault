@@ -354,7 +354,6 @@ export class TransactionService {
 		transaction.data = {
 			...transaction.data,
 			...signature,
-			v: 0,
 		};
 
 		transaction.data.hash = transaction.hash();

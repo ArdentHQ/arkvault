@@ -99,7 +99,14 @@ export class LedgerService {
 			},
 		);
 
-		return await this.#transport.signTransaction(path, serialized, resolution);
+		const signature = await this.#transport.signTransaction(path, serialized, resolution);
+
+		return {
+			...signature,
+			// Resetting calculated `v` from ledger, as it will be calculated in ts-crypto.
+			// @see https://github.com/ArdentHQ/typescript-crypto/blob/c5141eba1416f0e6f30e4797c34e1834d48e933b/src/utils/TransactionUtils.ts#L20
+			v: Number.parseInt(signature.v, 16) - (chainId * 2 + 35)
+		}
 	}
 
 	public async signMessage(path: string, payload: string): Promise<string> {
