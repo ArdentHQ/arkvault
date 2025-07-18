@@ -205,7 +205,7 @@ export const SignMessageSidePanel = ({
 
 	const getSubtitle = () => {
 		if (authenticateLedger) {
-			return
+			return;
 		}
 
 		if (activeTab === Step.FormStep) {
