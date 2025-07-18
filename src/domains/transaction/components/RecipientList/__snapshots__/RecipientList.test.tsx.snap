@@ -137,7 +137,7 @@ exports[`RecipientList > should conditionally disable remove button 1`] = `
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     <div
                       class="py-1"
@@ -241,7 +241,7 @@ exports[`RecipientList > should conditionally disable remove button 1`] = `
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     <div
                       class="py-1"
@@ -345,7 +345,7 @@ exports[`RecipientList > should conditionally disable remove button 1`] = `
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     <div
                       class="py-1"
@@ -438,7 +438,7 @@ exports[`RecipientList > should conditionally disable remove button 1`] = `
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     <div
                       class="py-1"
@@ -973,7 +973,7 @@ exports[`RecipientList > should render editable 1`] = `
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     <div
                       class="py-1"
@@ -1077,7 +1077,7 @@ exports[`RecipientList > should render editable 1`] = `
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     <div
                       class="py-1"
@@ -1181,7 +1181,7 @@ exports[`RecipientList > should render editable 1`] = `
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     <div
                       class="py-1"
@@ -1274,7 +1274,7 @@ exports[`RecipientList > should render editable 1`] = `
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     <div
                       class="py-1"

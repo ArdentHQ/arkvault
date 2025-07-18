@@ -26,6 +26,7 @@ import { Trans } from "react-i18next";
 import { ResetWhenUnmounted } from "@/app/components/SidePanel/ResetWhenUnmounted";
 import { AddressViewType } from "@/domains/portfolio/hooks/use-address-panel";
 import { ProfileSetting } from "@/app/lib/profiles/profile.enum.contract";
+import { TruncateMiddle } from "@/app/components/TruncateMiddle";
 
 export const PortfolioHeader = ({
 	profile,
@@ -205,27 +206,30 @@ export const PortfolioHeader = ({
 
 				<div className="flex flex-col gap-0.5">
 					<div className="dark:bg-theme-dark-900 dim:bg-theme-dim-900 flex w-full flex-col gap-3 rounded bg-white p-4 md:rounded-t-lg md:rounded-b-sm">
-						<div className="flex w-full flex-row items-center justify-between">
+						<div className="flex w-full max-w-full flex-row items-center justify-between overflow-x-auto">
 							{selectedWallets.length === 1 && (
-								<div className="flex grow flex-row items-center gap-1.5">
+								<div className="flex w-full flex-1 flex-row items-center gap-3">
 									<p className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 hidden text-sm leading-[17px] font-semibold sm:block md:text-base md:leading-5">
 										{t("COMMON.ADDRESS")}
 									</p>
-									<div className="h-[17px] w-full md:h-5">
-										<Address
-											alignment="center"
-											address={wallet.address()}
-											truncateOnTable
-											addressClass="text-theme-primary-900 text-sm font-semibold leading-[17px] md:text-base md:leading-5 dark:text-theme-dark-50 dim:text-theme-dim-50"
-										/>
+
+									<div className="flex h-[17px] items-center md:h-5">
+										<span className="no-ligatures text-theme-primary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 text-base leading-[17px] font-semibold md:text-base md:leading-5">
+											<span className="lg:hidden">
+												<TruncateMiddle text={wallet.address()} maxChars={16} />
+											</span>
+											<span className="hidden lg:block">
+												<Address address={wallet.address()} />
+											</span>
+										</span>
 									</div>
-									<div className="flex items-center gap-3 leading-[17px] sm:ml-1.5">
-										<WalletIcons
-											wallet={wallet}
-											exclude={["isKnown", "isStarred", "isTestNetwork"]}
-											iconColor="text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500 hover:text-theme-secondary-900 dark:hover:text-theme-secondary-200 p-0!"
-										/>
-									</div>
+
+									<WalletIcons
+										wallet={wallet}
+										exclude={["isKnown", "isStarred", "isTestNetwork"]}
+										iconColor="text-theme-secondary-300 dark:text-theme-dark-500 dim:text-theme-dim-500 hover:text-theme-secondary-900 dark:hover:text-theme-secondary-200 p-0!"
+										iconSize="md"
+									/>
 								</div>
 							)}
 

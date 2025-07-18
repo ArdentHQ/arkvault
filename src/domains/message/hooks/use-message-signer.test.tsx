@@ -1,14 +1,14 @@
-import { Contracts } from "@/app/lib/profiles";
-import { renderHook } from "@testing-library/react";
-
-import { useMessageSigner } from "./use-message-signer";
 import {
 	env,
+	getDefaultMainsailWalletMnemonic,
 	getMainsailProfileId,
 	mockNanoXTransport,
 	triggerMessageSignOnce,
-	getDefaultMainsailWalletMnemonic,
 } from "@/utils/testing-library";
+
+import { Contracts } from "@/app/lib/profiles";
+import { renderHook } from "@testing-library/react";
+import { useMessageSigner } from "./use-message-signer";
 
 // Mock implementation of TextEncoder to always return Uint8Array.
 vi.stubGlobal(
@@ -28,14 +28,14 @@ describe("Use Message Signer Hook", () => {
 		message: "message",
 		signatory: "021adbf4453accaefea33687c672fd690702246ef397363421585f134a1e68c175",
 		signature:
-			"c1d378bf5ada11ee213a93e96a3faefafb2ca61e59492981844da9d9c371126624f5c31c38300c318182e9d33d0aef1e4bd952398403af8864e87d9833b8aa151c",
+			"c1d378bf5ada11ee213a93e96a3faefafb2ca61e59492981844da9d9c371126624f5c31c38300c318182e9d33d0aef1e4bd952398403af8864e87d9833b8aa1501",
 	};
 
 	const secretSignedMessageData = {
 		message: "message",
 		signatory: "03a02b9d5fdd1307c2ee4652ba54d492d1fd11a7d1bb3f3a44c4a05e79f19de933",
 		signature:
-			"50e0c064787b4bb20efeb2c38d1d8c81f8aea07b0fe4fe3814ec02a176e6fe98095924e34777554b649d9265142e934054cd491de0e333155b4349b2e4b055c91c",
+			"50e0c064787b4bb20efeb2c38d1d8c81f8aea07b0fe4fe3814ec02a176e6fe98095924e34777554b649d9265142e934054cd491de0e333155b4349b2e4b055c901",
 	};
 
 	beforeAll(async () => {

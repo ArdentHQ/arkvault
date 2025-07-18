@@ -43,7 +43,7 @@ describe("Network", () => {
 	});
 
 	it("should return the correct explorer URL", () => {
-		expect(networkInstance.explorer()).toBe("https://explorer-evm-test.mainsailhq.com");
+		expect(networkInstance.explorer()).toBe("https://explorer-demo.mainsailhq.com");
 	});
 
 	it("should return the correct ticker", () => {

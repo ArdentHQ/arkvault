@@ -53,7 +53,7 @@ enum SearchParametersError {
 const defaultNetworks = {
 	"mainsail.devnet": {
 		displayName: "Mainsail Devnet",
-		nethash: "c481dea3dcc13708364e576dff94dd499692b56cbc646d5acd22a3902297dd51",
+		nethash: "560f869ed6713745a12328e7214cb65077e645bb5e57b1e5b323bb915a51f114",
 	},
 	"mainsail.mainnet": {
 		displayName: "Mainsail",

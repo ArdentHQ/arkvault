@@ -1,17 +1,17 @@
 import { Selector } from "testcafe";
 
 import { buildTranslations } from "../../../app/i18n/helpers";
-import { cucumber } from "../../../utils/e2e-utils";
+import { cucumber, visitWelcomeScreen } from "../../../utils/e2e-utils";
 import { goToProfile } from "../../profile/e2e/common";
-import { goToWallet, modal } from "../e2e/common";
+import { modal } from "../e2e/common";
 
 const translations = buildTranslations();
 
 const openUpdateWalletName = async (t: any) => {
-	await t.click(Selector('[data-testid="WalletHeader__more-button"]'));
+	await t.click(Selector('[data-testid="WalletHeaderMobile__more-button"]'));
 	await t.click(
 		Selector('[data-testid="dropdown__options"] li').withText(
-			translations.WALLETS.PAGE_WALLET_DETAILS.OPTIONS.WALLET_NAME,
+			translations.WALLETS.PAGE_WALLET_DETAILS.OPTIONS.ADDRESS_NAME,
 		),
 	);
 
@@ -20,9 +20,9 @@ const openUpdateWalletName = async (t: any) => {
 };
 
 const preSteps = {
-	"Given Alice is on the wallet details page": async (t: TestController) => {
+	"Given Alice is signed into a profile": async (t: TestController) => {
+		await visitWelcomeScreen(t);
 		await goToProfile(t);
-		await goToWallet(t);
 	},
 	"And selects to update wallet name": async (t: TestController) => {
 		await openUpdateWalletName(t);
@@ -54,6 +54,7 @@ cucumber("@updateWalletName", {
 		await t.expect(walletLabelNameInput.value).eql("New Name");
 	},
 });
+
 cucumber("@updateWalletName-openAndCancel", {
 	...preSteps,
 	"When she selects cancel on the update name modal": async (t: TestController) => {
@@ -63,6 +64,7 @@ cucumber("@updateWalletName-openAndCancel", {
 		await t.expect(modal.exists).notOk();
 	},
 });
+
 cucumber("@updateWalletName-openAndClose", {
 	...preSteps,
 	"When she selects close on the update name modal": async (t: TestController) => {
@@ -72,6 +74,7 @@ cucumber("@updateWalletName-openAndClose", {
 		await t.expect(modal.exists).notOk();
 	},
 });
+
 cucumber("@updateWalletName-invalidNameLength", {
 	...preSteps,
 	"When she enters a name that exceeds 42 characters": async (t: TestController) => {
@@ -84,6 +87,7 @@ cucumber("@updateWalletName-invalidNameLength", {
 	},
 	...saveButtonStep,
 });
+
 cucumber("@updateWalletName-whiteSpaceName", {
 	...preSteps,
 	"When she enters a name that just contains white space": async (t: TestController) => {

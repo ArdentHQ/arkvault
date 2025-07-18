@@ -47,12 +47,19 @@ exports[`AuthenticationStep (message) > should request mnemonic if wallet was im
           class="relative flex h-full flex-1"
         >
           <input
+            aria-hidden="true"
+            autocomplete="off"
+            class="pointer-events-none absolute inset-0 border-0 bg-transparent p-0! font-mono ring-0 outline-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 text-sm! sm:text-base!"
+            tabindex="-1"
+            type="password"
+          />
+          <input
             aria-invalid="true"
             autocomplete="off"
-            class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
+            class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! caret-theme-text no-selection-style font-mono text-transparent"
             data-testid="AuthenticationStep__mnemonic"
             name="mnemonic"
-            type="password"
+            type="text"
           />
         </div>
         <div
@@ -205,11 +212,18 @@ exports[`AuthenticationStep (message) > should request mnemonic if wallet was im
           class="relative flex h-full flex-1"
         >
           <input
+            aria-hidden="true"
             autocomplete="off"
-            class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
+            class="pointer-events-none absolute inset-0 border-0 bg-transparent p-0! font-mono ring-0 outline-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 text-sm! sm:text-base!"
+            tabindex="-1"
+            type="password"
+          />
+          <input
+            autocomplete="off"
+            class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! caret-theme-text no-selection-style font-mono text-transparent"
             data-testid="AuthenticationStep__mnemonic"
             name="mnemonic"
-            type="password"
+            type="text"
           />
         </div>
         <div
@@ -313,12 +327,19 @@ exports[`AuthenticationStep (message) > should request secret if wallet was impo
           class="relative flex h-full flex-1"
         >
           <input
+            aria-hidden="true"
+            autocomplete="off"
+            class="pointer-events-none absolute inset-0 border-0 bg-transparent p-0! font-mono ring-0 outline-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 text-sm! sm:text-base!"
+            tabindex="-1"
+            type="password"
+          />
+          <input
             aria-invalid="true"
             autocomplete="off"
-            class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
+            class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! caret-theme-text no-selection-style font-mono text-transparent"
             data-testid="AuthenticationStep__secret"
             name="secret"
-            type="password"
+            type="text"
           />
         </div>
         <div
@@ -857,12 +878,19 @@ exports[`AuthenticationStep (transaction) > should request mnemonic if wallet wa
           class="relative flex h-full flex-1"
         >
           <input
+            aria-hidden="true"
+            autocomplete="off"
+            class="pointer-events-none absolute inset-0 border-0 bg-transparent p-0! font-mono ring-0 outline-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 text-sm! sm:text-base!"
+            tabindex="-1"
+            type="password"
+          />
+          <input
             aria-invalid="true"
             autocomplete="off"
-            class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
+            class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! caret-theme-text no-selection-style font-mono text-transparent"
             data-testid="AuthenticationStep__mnemonic"
             name="mnemonic"
-            type="password"
+            type="text"
           />
         </div>
         <div
@@ -1015,11 +1043,18 @@ exports[`AuthenticationStep (transaction) > should request mnemonic if wallet wa
           class="relative flex h-full flex-1"
         >
           <input
+            aria-hidden="true"
             autocomplete="off"
-            class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
+            class="pointer-events-none absolute inset-0 border-0 bg-transparent p-0! font-mono ring-0 outline-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 text-sm! sm:text-base!"
+            tabindex="-1"
+            type="password"
+          />
+          <input
+            autocomplete="off"
+            class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! caret-theme-text no-selection-style font-mono text-transparent"
             data-testid="AuthenticationStep__mnemonic"
             name="mnemonic"
-            type="password"
+            type="text"
           />
         </div>
         <div
@@ -1123,12 +1158,19 @@ exports[`AuthenticationStep (transaction) > should request secret if wallet was 
           class="relative flex h-full flex-1"
         >
           <input
+            aria-hidden="true"
+            autocomplete="off"
+            class="pointer-events-none absolute inset-0 border-0 bg-transparent p-0! font-mono ring-0 outline-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 text-sm! sm:text-base!"
+            tabindex="-1"
+            type="password"
+          />
+          <input
             aria-invalid="true"
             autocomplete="off"
-            class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
+            class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! caret-theme-text no-selection-style font-mono text-transparent"
             data-testid="AuthenticationStep__secret"
             name="secret"
-            type="password"
+            type="text"
           />
         </div>
         <div

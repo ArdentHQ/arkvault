@@ -23,7 +23,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
             type="button"
           >
             <div
-              class="flex items-center space-x-2"
+              class="flex items-center gap-2"
             >
               <div>
                 <div
@@ -336,7 +336,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                                 type="button"
                               >
                                 <div
-                                  class="flex items-center space-x-2"
+                                  class="flex items-center gap-2"
                                 >
                                   Select
                                 </div>
@@ -401,7 +401,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                                 type="button"
                               >
                                 <div
-                                  class="flex items-center space-x-2"
+                                  class="flex items-center gap-2"
                                 >
                                   Select
                                 </div>
@@ -446,7 +446,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
             type="button"
           >
             <div
-              class="flex items-center space-x-2"
+              class="flex items-center gap-2"
             >
               <div>
                 <div
@@ -759,7 +759,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                                 type="button"
                               >
                                 <div
-                                  class="flex items-center space-x-2"
+                                  class="flex items-center gap-2"
                                 >
                                   Select
                                 </div>
@@ -824,7 +824,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                                 type="button"
                               >
                                 <div
-                                  class="flex items-center space-x-2"
+                                  class="flex items-center gap-2"
                                 >
                                   Select
                                 </div>
@@ -869,7 +869,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
             type="button"
           >
             <div
-              class="flex items-center space-x-2"
+              class="flex items-center gap-2"
             >
               <div>
                 <div
@@ -1181,7 +1181,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                               type="button"
                             >
                               <div
-                                class="flex items-center space-x-2"
+                                class="flex items-center gap-2"
                               >
                                 Selected
                               </div>
@@ -1245,7 +1245,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                                 type="button"
                               >
                                 <div
-                                  class="flex items-center space-x-2"
+                                  class="flex items-center gap-2"
                                 >
                                   Select
                                 </div>
@@ -1290,7 +1290,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 1`
             type="button"
           >
             <div
-              class="flex items-center space-x-2"
+              class="flex items-center gap-2"
             >
               <div>
                 <div
@@ -1612,7 +1612,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 2`
             type="button"
           >
             <div
-              class="flex items-center space-x-2"
+              class="flex items-center gap-2"
             >
               <div>
                 <div
@@ -1934,7 +1934,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive with se
             type="button"
           >
             <div
-              class="flex items-center space-x-2"
+              class="flex items-center gap-2"
             >
               <div>
                 <div
@@ -2256,7 +2256,7 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
             type="button"
           >
             <div
-              class="flex items-center space-x-2"
+              class="flex items-center gap-2"
             >
               <div>
                 <div
@@ -2559,7 +2559,7 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
                                 type="button"
                               >
                                 <div
-                                  class="flex items-center space-x-2"
+                                  class="flex items-center gap-2"
                                 >
                                   Select
                                 </div>
@@ -2604,7 +2604,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
             type="button"
           >
             <div
-              class="flex items-center space-x-2"
+              class="flex items-center gap-2"
             >
               <div>
                 <div
@@ -2916,7 +2916,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                               type="button"
                             >
                               <div
-                                class="flex items-center space-x-2"
+                                class="flex items-center gap-2"
                               >
                                 Selected
                               </div>
@@ -2980,7 +2980,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                                 type="button"
                               >
                                 <div
-                                  class="flex items-center space-x-2"
+                                  class="flex items-center gap-2"
                                 >
                                   Select
                                 </div>
@@ -3025,7 +3025,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
             type="button"
           >
             <div
-              class="flex items-center space-x-2"
+              class="flex items-center gap-2"
             >
               <div>
                 <div
@@ -3338,7 +3338,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                                 type="button"
                               >
                                 <div
-                                  class="flex items-center space-x-2"
+                                  class="flex items-center gap-2"
                                 >
                                   Select
                                 </div>
@@ -3403,7 +3403,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                                 type="button"
                               >
                                 <div
-                                  class="flex items-center space-x-2"
+                                  class="flex items-center gap-2"
                                 >
                                   Select
                                 </div>
@@ -3448,7 +3448,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
             type="button"
           >
             <div
-              class="flex items-center space-x-2"
+              class="flex items-center gap-2"
             >
               <div>
                 <div
@@ -3824,7 +3824,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                                 type="button"
                               >
                                 <div
-                                  class="flex items-center space-x-2"
+                                  class="flex items-center gap-2"
                                 >
                                   Select
                                 </div>
@@ -3903,7 +3903,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                                 type="button"
                               >
                                 <div
-                                  class="flex items-center space-x-2"
+                                  class="flex items-center gap-2"
                                 >
                                   Select
                                 </div>
@@ -3948,7 +3948,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
             type="button"
           >
             <div
-              class="flex items-center space-x-2"
+              class="flex items-center gap-2"
             >
               <div>
                 <div
@@ -4324,7 +4324,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                                 type="button"
                               >
                                 <div
-                                  class="flex items-center space-x-2"
+                                  class="flex items-center gap-2"
                                 >
                                   Select
                                 </div>
@@ -4403,7 +4403,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                                 type="button"
                               >
                                 <div
-                                  class="flex items-center space-x-2"
+                                  class="flex items-center gap-2"
                                 >
                                   Select
                                 </div>
@@ -4448,7 +4448,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
             type="button"
           >
             <div
-              class="flex items-center space-x-2"
+              class="flex items-center gap-2"
             >
               <div>
                 <div
@@ -4823,7 +4823,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                               type="button"
                             >
                               <div
-                                class="flex items-center space-x-2"
+                                class="flex items-center gap-2"
                               >
                                 Selected
                               </div>
@@ -4901,7 +4901,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                                 type="button"
                               >
                                 <div
-                                  class="flex items-center space-x-2"
+                                  class="flex items-center gap-2"
                                 >
                                   Select
                                 </div>
@@ -4946,7 +4946,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 1`]
             type="button"
           >
             <div
-              class="flex items-center space-x-2"
+              class="flex items-center gap-2"
             >
               <div>
                 <div
@@ -5268,7 +5268,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 2`]
             type="button"
           >
             <div
-              class="flex items-center space-x-2"
+              class="flex items-center gap-2"
             >
               <div>
                 <div
@@ -5590,7 +5590,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive with sel
             type="button"
           >
             <div
-              class="flex items-center space-x-2"
+              class="flex items-center gap-2"
             >
               <div>
                 <div
@@ -5912,7 +5912,7 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
             type="button"
           >
             <div
-              class="flex items-center space-x-2"
+              class="flex items-center gap-2"
             >
               <div>
                 <div
@@ -6278,7 +6278,7 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
                                 type="button"
                               >
                                 <div
-                                  class="flex items-center space-x-2"
+                                  class="flex items-center gap-2"
                                 >
                                   Select
                                 </div>
@@ -6323,7 +6323,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
             type="button"
           >
             <div
-              class="flex items-center space-x-2"
+              class="flex items-center gap-2"
             >
               <div>
                 <div
@@ -6698,7 +6698,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                               type="button"
                             >
                               <div
-                                class="flex items-center space-x-2"
+                                class="flex items-center gap-2"
                               >
                                 Selected
                               </div>
@@ -6776,7 +6776,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                                 type="button"
                               >
                                 <div
-                                  class="flex items-center space-x-2"
+                                  class="flex items-center gap-2"
                                 >
                                   Select
                                 </div>
@@ -6821,7 +6821,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
             type="button"
           >
             <div
-              class="flex items-center space-x-2"
+              class="flex items-center gap-2"
             >
               <div>
                 <div
@@ -7197,7 +7197,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                                 type="button"
                               >
                                 <div
-                                  class="flex items-center space-x-2"
+                                  class="flex items-center gap-2"
                                 >
                                   Select
                                 </div>
@@ -7276,7 +7276,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                                 type="button"
                               >
                                 <div
-                                  class="flex items-center space-x-2"
+                                  class="flex items-center gap-2"
                                 >
                                   Select
                                 </div>

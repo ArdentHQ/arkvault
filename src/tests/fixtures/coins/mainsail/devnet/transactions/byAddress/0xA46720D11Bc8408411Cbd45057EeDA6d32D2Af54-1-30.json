@@ -1,0 +1,36 @@
+{
+	"meta": {
+		"totalCountIsEstimate": false,
+		"count": 1,
+		"first": "/transactions?limit=30&orderBy=timestamp%3Adesc&address=0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54&fullReceipt=false&transform=true&page=1",
+		"last": "/transactions?limit=30&orderBy=timestamp%3Adesc&address=0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54&fullReceipt=false&transform=true&page=1",
+		"next": null,
+		"pageCount": 1,
+		"previous": null,
+		"self": "/transactions?limit=30&orderBy=timestamp%3Adesc&address=0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54&fullReceipt=false&transform=true&page=1",
+		"totalCount": 1
+	},
+	"data": [
+		{
+			"value": "2000000000000000000",
+			"blockHash": "1e6789dd661ea8cd38ded6fe818eba181589497a2cc3179c42bb5695c33bcf50",
+			"confirmations": 15,
+			"data": "",
+			"gas": "21000",
+			"gasPrice": "5000000000",
+			"hash": "2dc489ca6683b7c2bc380165204e3a291c66b0648dbc43a04e76b6d130e5cb5f",
+			"nonce": "26",
+			"to": "0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54",
+			"from": "0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54",
+			"senderPublicKey": "031cfc56cf21bad0f66c5be6af951cdb32dd2a19db9d2be46adbb72f54c30c1370",
+			"signature": "ca8fc4555eb3bc07d8f76cb5624575e281ce3cc300518ce3d0b2b8e0668ff8512f82021f7353833e34c14c17dbaf194bf83b6fe53923b805ad54509ce6753b1b1c",
+			"signatures": null,
+			"timestamp": 1741880196401,
+			"receipt": {
+				"gasRefunded": 0,
+				"gasUsed": 21000,
+				"success": true
+			}
+		}
+	]
+}

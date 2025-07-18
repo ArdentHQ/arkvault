@@ -71,7 +71,7 @@ export const Button = ({
 
 	return (
 		<button type={type} ref={ref} disabled={disabled} className={twMerge(initialStyles, className)} {...properties}>
-			<div className="flex items-center space-x-2">{renderContent()}</div>
+			<div className="flex items-center gap-2">{renderContent()}</div>
 		</button>
 	);
 };

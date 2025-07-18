@@ -70,7 +70,7 @@ exports[`WalletVote > should disable vote button when balance is less than votes
         type="button"
       >
         <div
-          class="flex items-center space-x-2"
+          class="flex items-center gap-2"
         >
           <div>
             <div
@@ -114,7 +114,7 @@ exports[`WalletVote > should disable vote button when balance is less than votes
         type="button"
       >
         <div
-          class="flex items-center space-x-2"
+          class="flex items-center gap-2"
         >
           <div>
             <div
@@ -292,7 +292,7 @@ exports[`WalletVote > should render as all resigned 1`] = `
         type="button"
       >
         <div
-          class="flex items-center space-x-2"
+          class="flex items-center gap-2"
         >
           <div>
             <div
@@ -335,7 +335,7 @@ exports[`WalletVote > should render as all resigned 1`] = `
         type="button"
       >
         <div
-          class="flex items-center space-x-2"
+          class="flex items-center gap-2"
         >
           <div>
             <div
@@ -447,7 +447,7 @@ exports[`WalletVote > should render disabled vote button 1`] = `
         type="button"
       >
         <div
-          class="flex items-center space-x-2"
+          class="flex items-center gap-2"
         >
           <div>
             <div
@@ -491,7 +491,7 @@ exports[`WalletVote > should render disabled vote button 1`] = `
         type="button"
       >
         <div
-          class="flex items-center space-x-2"
+          class="flex items-center gap-2"
         >
           <div>
             <div
@@ -677,7 +677,7 @@ exports[`WalletVote > should render skeleton if loading 1`] = `
             type="button"
           >
             <div
-              class="flex items-center space-x-2"
+              class="flex items-center gap-2"
             >
               <div>
                 <div
@@ -824,7 +824,7 @@ exports[`WalletVote > should render the maximum votes 1`] = `
         type="button"
       >
         <div
-          class="flex items-center space-x-2"
+          class="flex items-center gap-2"
         >
           <div>
             <div
@@ -867,7 +867,7 @@ exports[`WalletVote > should render the maximum votes 1`] = `
         type="button"
       >
         <div
-          class="flex items-center space-x-2"
+          class="flex items-center gap-2"
         >
           <div>
             <div
@@ -1112,7 +1112,7 @@ exports[`WalletVote > single vote networks > should render a vote for a validato
         type="button"
       >
         <div
-          class="flex items-center space-x-2"
+          class="flex items-center gap-2"
         >
           <div>
             <div
@@ -1155,7 +1155,7 @@ exports[`WalletVote > single vote networks > should render a vote for a validato
         type="button"
       >
         <div
-          class="flex items-center space-x-2"
+          class="flex items-center gap-2"
         >
           <div>
             <div
@@ -1266,7 +1266,7 @@ exports[`WalletVote > single vote networks > should render a vote for an active 
         type="button"
       >
         <div
-          class="flex items-center space-x-2"
+          class="flex items-center gap-2"
         >
           <div>
             <div
@@ -1309,7 +1309,7 @@ exports[`WalletVote > single vote networks > should render a vote for an active 
         type="button"
       >
         <div
-          class="flex items-center space-x-2"
+          class="flex items-center gap-2"
         >
           <div>
             <div
