@@ -3,7 +3,7 @@ import { Selector } from "testcafe";
 import { buildTranslations } from "../../../app/i18n/helpers";
 import { cucumber, MNEMONICS, mockRequest, visitWelcomeScreen } from "../../../utils/e2e-utils";
 import { goToProfile } from "../../profile/e2e/common";
-import { importWallet } from "../../wallet/e2e/common";
+import { importWallet } from "../../portfolio/e2e/common";
 import { goToValidatorRegistrationPage } from "../e2e/common";
 
 const translations = buildTranslations();
@@ -72,32 +72,6 @@ cucumber(
 					broadcast: [0],
 					excess: [],
 					invalid: [],
-				},
-			},
-		),
-		mockRequest(
-			"https://dwallets-evm.mainsailhq.com/api/transactions/adb9bdd390ef3176be04b2ea841d7cd48dc72a8fdf4f145a8eece22f3c58df14",
-			{
-				data: {
-					blockHash: "05b124023ddd656c8a95664eb61846cc0f4e204341a0d86db325771077e7f002",
-					confirmations: 1,
-					data: "",
-					from: "0x659A76be283644AEc2003aa8ba26485047fd1BFB",
-					gas: "21000",
-					gasPrice: "100000000000",
-					hash: "adb9bdd390ef3176be04b2ea841d7cd48dc72a8fdf4f145a8eece22f3c58df14",
-					nonce: "3",
-					senderPublicKey: "0311b11b0dea8851d49af7c673d7032e37ee12307f9bbd379b64bbdac6ca302e84",
-					signature:
-						"cd1b35240b0c1303392e4dc3e1fc83b9da7b74e5c96b99d1ae207c7c9d5480d868ecf4235298c6438f9c0ea9a8274082ebf051d86ff353ae1fb4fffe86cad91101",
-					to: "0x47ea9bAa16edd859C1792933556c4659A647749C",
-					value: "2000000000000000000",
-					timestamp: "1752502567204",
-					receipt: {
-						gasRefunded: 0,
-						gasUsed: 21000,
-						status: 1,
-					},
 				},
 			},
 		),
