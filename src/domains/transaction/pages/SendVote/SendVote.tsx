@@ -63,7 +63,6 @@ export const SendVote = () => {
 	const walletFromUrl = useActiveWalletWhenNeeded(false);
 	const initialStep = useMemo(() => (walletFromUrl ? Step.ReviewStep : Step.FormStep), [walletFromUrl]);
 	const [activeTab, setActiveTab] = useState<Step>(initialStep);
-	const [lastStepBeforeError, setLastStepBeforeError] = useState<Step | null>(null);
 
 	const [transaction, setTransaction] = useState(undefined as unknown as DTO.ExtendedSignedTransactionData);
 	const [errorMessage, setErrorMessage] = useState<string | undefined>();
@@ -190,13 +189,6 @@ export const SendVote = () => {
 		// Abort any existing listener
 		abortReference.current.abort();
 
-		if (activeTab === Step.ErrorStep && lastStepBeforeError) {
-			setActiveTab(lastStepBeforeError);
-			setLastStepBeforeError(null);
-			setErrorMessage(undefined);
-			return;
-		}
-
 		if (activeTab === Step.FormStep || (activeTab === Step.ReviewStep && skipFormStep)) {
 			const parameters = new URLSearchParams();
 
@@ -227,7 +219,6 @@ export const SendVote = () => {
 
 		if (newIndex === Step.AuthenticationStep && senderWallet.isLedger()) {
 			if (!isLedgerTransportSupported()) {
-				setLastStepBeforeError(activeTab);
 				setErrorMessage(t("WALLETS.MODAL_LEDGER_WALLET.COMPATIBILITY_ERROR"));
 				setActiveTab(Step.ErrorStep);
 				return;
@@ -433,7 +424,6 @@ export const SendVote = () => {
 				await confirmSendVote(activeWallet, isUnvote ? "unvote" : "vote");
 			}
 		} catch (error) {
-			setLastStepBeforeError(Step.ReviewStep);
 			setErrorMessage(JSON.stringify({ message: error.message, type: error.name }));
 			setActiveTab(Step.ErrorStep);
 		}
@@ -507,10 +497,7 @@ export const SendVote = () => {
 								<ErrorStep
 									onClose={() => navigate(`/profiles/${activeProfile.id()}/dashboard`)}
 									isBackDisabled={isSubmitting}
-									onBack={() => {
-										// Use the improved handleBack logic
-										handleBack();
-									}}
+									onBack={() => {setActiveTab(Step.ReviewStep);}}
 									errorMessage={errorMessage}
 								/>
 							</TabPanel>
