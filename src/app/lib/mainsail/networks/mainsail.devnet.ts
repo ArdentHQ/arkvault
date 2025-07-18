@@ -30,7 +30,7 @@ const network: Networks.NetworkManifest = {
 			type: "tx",
 		},
 		{
-			host: "https://explorer-evm-test.mainsailhq.com",
+			host: "https://explorer-demo.mainsailhq.com",
 			type: "explorer",
 		},
 		{
