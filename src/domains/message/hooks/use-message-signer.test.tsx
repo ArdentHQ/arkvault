@@ -118,22 +118,18 @@ describe("Use Message Signer Hook", () => {
 		walletWifMock.mockRestore();
 	});
 
-	// @TODO: Implement message signing with mainsail
-	// Task: https://app.clickup.com/t/86dwq94f5
-	it.skip("should sign message with ledger", async () => {
+	it("should sign message with ledger", async () => {
+		const ledgerSignature = { "message": "test", "signatory": "0453a97a244e6323ef60430e9761be5a972228e533f31723d376397808b4be3b4658578da4e51ee8fe1ea076fb2341902247f80fd87ee1b15b1e85a05905912c3a", "signature": "0xf97c049d45fd18ffd96cba05aa36d73711e979ceecb7f220d89ca2f01b85f66a7f5bb80fddd8c691b456c8e8fa6248c08b17643149b86568ddb3dca8ad0fd7f11b" }
 		const nanoXTransportMock = mockNanoXTransport();
 		const { result } = renderHook(() => useMessageSigner());
 
 		vi.spyOn(wallet, "isLedger").mockReturnValue(true);
-		vi.spyOn(wallet.ledger(), "sign").mockResolvedValue("signature");
+		vi.spyOn(wallet.ledger(), "getExtendedPublicKey").mockResolvedValue(ledgerSignature.signatory);
+		vi.spyOn(wallet.ledger(), "signMessage").mockResolvedValue(ledgerSignature.signature);
 
-		const signedMessage = await result.current.sign(wallet, "message");
+		const signedMessage = await result.current.sign(wallet, ledgerSignature.message);
 
-		expect(signedMessage).toStrictEqual({
-			message: "message",
-			signatory: "021adbf4453accaefea33687c672fd690702246ef397363421585f134a1e68c175",
-			signature: "signature",
-		});
+		expect(signedMessage).toStrictEqual(ledgerSignature);
 
 		vi.clearAllMocks();
 		nanoXTransportMock.mockRestore();
