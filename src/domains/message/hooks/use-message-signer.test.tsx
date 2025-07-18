@@ -119,7 +119,13 @@ describe("Use Message Signer Hook", () => {
 	});
 
 	it("should sign message with ledger", async () => {
-		const ledgerSignature = { "message": "test", "signatory": "0453a97a244e6323ef60430e9761be5a972228e533f31723d376397808b4be3b4658578da4e51ee8fe1ea076fb2341902247f80fd87ee1b15b1e85a05905912c3a", "signature": "0xf97c049d45fd18ffd96cba05aa36d73711e979ceecb7f220d89ca2f01b85f66a7f5bb80fddd8c691b456c8e8fa6248c08b17643149b86568ddb3dca8ad0fd7f11b" }
+		const ledgerSignature = {
+			message: "test",
+			signatory:
+				"0453a97a244e6323ef60430e9761be5a972228e533f31723d376397808b4be3b4658578da4e51ee8fe1ea076fb2341902247f80fd87ee1b15b1e85a05905912c3a",
+			signature:
+				"0xf97c049d45fd18ffd96cba05aa36d73711e979ceecb7f220d89ca2f01b85f66a7f5bb80fddd8c691b456c8e8fa6248c08b17643149b86568ddb3dca8ad0fd7f11b",
+		};
 		const nanoXTransportMock = mockNanoXTransport();
 		const { result } = renderHook(() => useMessageSigner());
 
