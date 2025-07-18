@@ -497,7 +497,9 @@ export const SendVote = () => {
 								<ErrorStep
 									onClose={() => navigate(`/profiles/${activeProfile.id()}/dashboard`)}
 									isBackDisabled={isSubmitting}
-									onBack={() => {setActiveTab(Step.ReviewStep);}}
+									onBack={() => {
+										setActiveTab(Step.ReviewStep);
+									}}
 									errorMessage={errorMessage}
 								/>
 							</TabPanel>
