@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { Contracts } from "@/app/lib/profiles";
 import { FormStep } from "./FormStep";
-import { SigningMessageInfo, SuccessStep } from "./SuccessStep";
+import { SuccessStep } from "./SuccessStep";
 import { Clipboard } from "@/app/components/Clipboard";
 import { Button } from "@/app/components/Button";
 import { Form } from "@/app/components/Form";
@@ -166,8 +166,6 @@ export const SignMessageSidePanel = ({
 
 		const { message, mnemonic, encryptionPassword, secret } = getValues();
 
-		setActiveTab(activeTab + 1);
-
 		try {
 			const signedMessageResult = await sign(selectedWallet!, message, mnemonic, encryptionPassword, secret, {
 				abortSignal,
@@ -207,7 +205,7 @@ export const SignMessageSidePanel = ({
 
 	const getSubtitle = () => {
 		if (authenticateLedger) {
-			return t("MESSAGE.PAGE_SIGN_MESSAGE.AUTHENTICATION_STEP.DESCRIPTION_SECRET");
+			return
 		}
 
 		if (activeTab === Step.FormStep) {
@@ -331,12 +329,6 @@ export const SignMessageSidePanel = ({
 								{authenticateLedger && selectedWallet && (
 									<div className="mb-4">
 										<LedgerAuthentication
-											ledgerDetails={
-												<SigningMessageInfo
-													wallet={selectedWallet}
-													message={getValues("message")}
-												/>
-											}
 											ledgerIsAwaitingApp={hasDeviceAvailable && !isConnected}
 											ledgerIsAwaitingDevice={!hasDeviceAvailable}
 											wallet={selectedWallet}
@@ -345,6 +337,7 @@ export const SignMessageSidePanel = ({
 										/>
 									</div>
 								)}
+
 								<FormStep
 									disabled={false}
 									profile={activeProfile}
