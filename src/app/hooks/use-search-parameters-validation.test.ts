@@ -33,7 +33,7 @@ describe("useSearchParametersValidation", () => {
 
 	it("should validate search parameters without errors (with nethash)", async () => {
 		const parameters = new URLSearchParams(
-			"coin=mainsail&method=transfer&nethash=c481dea3dcc13708364e576dff94dd499692b56cbc646d5acd22a3902297dd51",
+			"coin=mainsail&method=transfer&nethash=560f869ed6713745a12328e7214cb65077e645bb5e57b1e5b323bb915a51f114",
 		);
 
 		const { result } = renderHook(() => useSearchParametersValidation());
@@ -170,7 +170,7 @@ describe("useSearchParametersValidation", () => {
 
 		it("should generate verify message path", () => {
 			const parameters = new URLSearchParams(
-				"coin=Mainsail&nethash=c481dea3dcc13708364e576dff94dd499692b56cbc646d5acd22a3902297dd51&method=verify&message=hello+world&signatory=025f81956d5826bad7d30daed2b5c8c98e72046c1ec8323da336445476183fb7ca&signature=22f8ef55e8120fbf51e2407c808a1cc98d7ef961646226a3d3fad606437f8ba49ab68dc33c6d4a478f954c72e9bac2b4a4fe48baa70121a311a875dba1527d9d",
+				"coin=Mainsail&nethash=560f869ed6713745a12328e7214cb65077e645bb5e57b1e5b323bb915a51f114&method=verify&message=hello+world&signatory=025f81956d5826bad7d30daed2b5c8c98e72046c1ec8323da336445476183fb7ca&signature=22f8ef55e8120fbf51e2407c808a1cc98d7ef961646226a3d3fad606437f8ba49ab68dc33c6d4a478f954c72e9bac2b4a4fe48baa70121a311a875dba1527d9d",
 			);
 
 			const { result } = renderHook(() => useSearchParametersValidation());
@@ -220,7 +220,7 @@ describe("useSearchParametersValidation", () => {
 
 	it("should throw if sign and no message", async () => {
 		const parameters = new URLSearchParams(
-			"coin=Mainsail&nethash=c481dea3dcc13708364e576dff94dd499692b56cbc646d5acd22a3902297dd51&method=sign",
+			"coin=Mainsail&nethash=560f869ed6713745a12328e7214cb65077e645bb5e57b1e5b323bb915a51f114&method=sign",
 		);
 
 		const { result } = renderHook(() => useSearchParametersValidation());
@@ -242,7 +242,7 @@ describe("useSearchParametersValidation", () => {
 
 	it("should generate sign message path", () => {
 		const parameters = new URLSearchParams(
-			"coin=Mainsail&nethash=c481dea3dcc13708364e576dff94dd499692b56cbc646d5acd22a3902297dd51&method=sign&message=test",
+			"coin=Mainsail&nethash=560f869ed6713745a12328e7214cb65077e645bb5e57b1e5b323bb915a51f114&method=sign&message=test",
 		);
 
 		const { result } = renderHook(() => useSearchParametersValidation());
@@ -263,7 +263,7 @@ describe("useSearchParametersValidation", () => {
 
 	it("should throw for invalid address if sign with invalid address", async () => {
 		const parameters = new URLSearchParams(
-			"coin=mainsail&nethash=c481dea3dcc13708364e576dff94dd499692b56cbc646d5acd22a3902297dd51&method=sign&message=hello&address=1",
+			"coin=mainsail&nethash=560f869ed6713745a12328e7214cb65077e645bb5e57b1e5b323bb915a51f114&method=sign&message=hello&address=1",
 		);
 
 		const { result } = renderHook(() => useSearchParametersValidation());
@@ -295,7 +295,7 @@ describe("useSearchParametersValidation", () => {
 			.mockReturnValue(profile.wallets().first());
 
 		const parameters = new URLSearchParams(
-			"method=vote&delegate=genesis_31&nethash=c481dea3dcc13708364e576dff94dd499692b56cbc646d5acd22a3902297dd51",
+			"method=vote&delegate=genesis_31&nethash=560f869ed6713745a12328e7214cb65077e645bb5e57b1e5b323bb915a51f114",
 		);
 
 		const { result } = renderHook(() => useSearchParametersValidation());
@@ -407,7 +407,7 @@ describe("useSearchParametersValidation", () => {
 
 	it("should generate send transfer path", () => {
 		const parameters = new URLSearchParams(
-			"coin=mainsail&method=transfer&nethash=c481dea3dcc13708364e576dff94dd499692b56cbc646d5acd22a3902297dd51",
+			"coin=mainsail&method=transfer&nethash=560f869ed6713745a12328e7214cb65077e645bb5e57b1e5b323bb915a51f114",
 		);
 
 		const { result } = renderHook(() => useSearchParametersValidation());
@@ -428,7 +428,7 @@ describe("useSearchParametersValidation", () => {
 
 	it("should generate send vote path", () => {
 		const parameters = new URLSearchParams(
-			"coin=mainsail&method=vote&nethash=c481dea3dcc13708364e576dff94dd499692b56cbc646d5acd22a3902297dd51&delegate=test",
+			"coin=mainsail&method=vote&nethash=560f869ed6713745a12328e7214cb65077e645bb5e57b1e5b323bb915a51f114&delegate=test",
 		);
 
 		const { result } = renderHook(() => useSearchParametersValidation());
@@ -470,7 +470,7 @@ describe("useSearchParametersValidation", () => {
 		const mockAvailableWallets = vi.spyOn(profile.wallets(), "values").mockReturnValue([]);
 
 		const parameters = new URLSearchParams(
-			"coin=mainsail&method=transfer&nethash=c481dea3dcc13708364e576dff94dd499692b56cbc646d5acd22a3902297dd51",
+			"coin=mainsail&method=transfer&nethash=560f869ed6713745a12328e7214cb65077e645bb5e57b1e5b323bb915a51f114",
 		);
 
 		const { result } = renderHook(() => useSearchParametersValidation());

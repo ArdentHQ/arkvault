@@ -354,7 +354,6 @@ export class TransactionService {
 		transaction.data = {
 			...transaction.data,
 			...signature,
-			v: Number.parseInt(signature.v) + 27, // TODO: remove +27 when updating mainsail packages https://app.clickup.com/t/86dwhby95
 		};
 
 		transaction.data.hash = transaction.hash();
