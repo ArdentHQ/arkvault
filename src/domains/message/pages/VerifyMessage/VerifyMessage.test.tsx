@@ -245,13 +245,13 @@ describe("VerifyMessage", () => {
 
 	it("should render with deeplink values and use them", async () => {
 		render(<VerifyMessage />, {
-			route: `/profiles/${profile.id()}/verify-message?message=hello+world&method=verify&signatory=025f81956d5826bad7d30daed2b5c8c98e72046c1ec8323da336445476183fb7ca&signature=22f8ef55e8120fbf51e2407c808a1cc98d7ef961646226a3d3fad606437f8ba49ab68dc33c6d4a478f954c72e9bac2b4a4fe48baa70121a311a875dba1527d9d&coin=Mainsail&network=mainsail.mainnet`,
+			route: `/profiles/${profile.id()}/verify-message?message=hello+world&method=verify&signatory=025f81956d5826bad7d30daed2b5c8c98e72046c1ec8323da336445476183fb7ca&signature=0xc607eab8cd4d8458a3c784888b6579da23544473d86a6e51a93f9ac19c28ade92d7585c678106b0b8dbba0136f483a615a17cec28cf0bc11424996ffddc4eeb61b&coin=Mainsail&network=mainsail.mainnet`,
 		});
 
 		expect(signatoryInput()).toHaveValue("025f81956d5826bad7d30daed2b5c8c98e72046c1ec8323da336445476183fb7ca");
 		expect(messageInput()).toHaveValue("hello world");
 		expect(signatureInput()).toHaveValue(
-			"22f8ef55e8120fbf51e2407c808a1cc98d7ef961646226a3d3fad606437f8ba49ab68dc33c6d4a478f954c72e9bac2b4a4fe48baa70121a311a875dba1527d9d",
+			"0xc607eab8cd4d8458a3c784888b6579da23544473d86a6e51a93f9ac19c28ade92d7585c678106b0b8dbba0136f483a615a17cec28cf0bc11424996ffddc4eeb61b",
 		);
 
 		await waitFor(() => {
@@ -265,7 +265,7 @@ describe("VerifyMessage", () => {
 
 	it("should return to dashboard when accessed through deeplink", async () => {
 		const { router } = render(<VerifyMessage />, {
-			route: `/profiles/${profile.id()}/verify-message?message=hello+world&method=verify&signatory=025f81956d5826bad7d30daed2b5c8c98e72046c1ec8323da336445476183fb7ca&signature=22f8ef55e8120fbf51e2407c808a1cc98d7ef961646226a3d3fad606437f8ba49ab68dc33c6d4a478f954c72e9bac2b4a4fe48baa70121a311a875dba1527d9d&coin=ARK&network=ark.mainnet`,
+			route: `/profiles/${profile.id()}/verify-message?message=hello+world&method=verify&signatory=025f81956d5826bad7d30daed2b5c8c98e72046c1ec8323da336445476183fb7ca&signature=0xc607eab8cd4d8458a3c784888b6579da23544473d86a6e51a93f9ac19c28ade92d7585c678106b0b8dbba0136f483a615a17cec28cf0bc11424996ffddc4eeb61b&coin=ARK&network=ark.mainnet`,
 		});
 
 		await expectHeading(messageTranslations.PAGE_VERIFY_MESSAGE.FORM_STEP.TITLE);
@@ -295,7 +295,7 @@ describe("VerifyMessage", () => {
 		});
 
 		const signature =
-			"a2bc0c7de7e0615b752697f5789e5ecb1e6ff400fc1a55df4b620bc17721b7ea552898e0df75aa4fa7a4f301119e9a0315f4abc2e71f31b19e1c6e17bda5ab301b";
+			"0xc407eab8cd4d8458a3c784888b6579da23544473d86a6e51a93f9ac19c28ade92d7585c678106b0b8dbba0136f483a615a17cec28cf0bc11424996ffddc4eeb61b";
 
 		await userEvent.type(signatureInput(), signature);
 

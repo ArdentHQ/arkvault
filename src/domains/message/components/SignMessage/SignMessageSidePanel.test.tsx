@@ -104,7 +104,7 @@ describe("SignMessageSidePanel", () => {
 				message: signMessage,
 				signatory: "0311b11b0dea8851d49af7c673d7032e37ee12307f9bbd379b64bbdac6ca302e84",
 				signature:
-					"c7d8b526b6c0f3b17b045149424476802ff44d3636446c6394475fd2193f12a06f8b771387ab986c19c39ff42808be6b06cb871c6fbe17b50d1af194576ec95900",
+					"0xc607eab8cd4d8458a3c784888b6579da23544473d86a6e51a93f9ac19c28ade92d7585c678106b0b8dbba0136f483a615a17cec28cf0bc11424996ffddc4eeb61b",
 			};
 
 			render(<SignMessageSidePanel open={true} onOpenChange={vi.fn()} onMountChange={vi.fn()} />, {
