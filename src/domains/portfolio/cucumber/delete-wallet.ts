@@ -3,7 +3,7 @@ import { Selector } from "testcafe";
 import { buildTranslations } from "../../../app/i18n/helpers";
 import { cucumber, getLocation, scrollToTop, visitWelcomeScreen } from "../../../utils/e2e-utils";
 import { goToProfile } from "../../profile/e2e/common";
-import { goToWallet, modal } from "../e2e/common";
+import { modal } from "../e2e/common";
 
 const translations = buildTranslations();
 
@@ -11,11 +11,10 @@ const preSteps = {
 	"Given Alice is on the wallet details page": async (t: TestController) => {
 		await visitWelcomeScreen(t);
 		await goToProfile(t);
-		await goToWallet(t);
 	},
 	"When she attempts to delete the wallet": async (t: TestController) => {
 		await scrollToTop();
-		await t.click(Selector('[data-testid="WalletHeader__more-button"]'));
+		await t.click(Selector('[data-testid="WalletHeaderMobile__more-button"]'));
 		await t.click(Selector('[data-testid="dropdown__options"] li').withText(translations.COMMON.DELETE));
 	},
 };

@@ -3,7 +3,7 @@ import { Selector } from "testcafe";
 import { buildTranslations } from "../../../app/i18n/helpers";
 import { cucumber, mockRequest, visitWelcomeScreen } from "../../../utils/e2e-utils";
 import { goToProfile } from "../../profile/e2e/common";
-import { goToWallet, importWalletByAddress } from "../../wallet/e2e/common";
+import { goToWallet, importWalletByAddress } from "../../portfolio/e2e/common";
 import { goToValidatorResignationPage, goToTransferPage, goToTransferPageThroughNavbar } from "../e2e/common";
 
 const translations = buildTranslations();

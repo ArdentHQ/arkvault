@@ -3,7 +3,7 @@ import { Selector } from "testcafe";
 import { buildTranslations } from "../../../app/i18n/helpers";
 import { cucumber, MNEMONICS, mockRequest, visitWelcomeScreen } from "../../../utils/e2e-utils";
 import { goToProfile } from "../../profile/e2e/common";
-import { importWallet } from "../../wallet/e2e/common";
+import { importWallet } from "../../portfolio/e2e/common";
 import { goToValidatorResignationPage } from "../e2e/common";
 
 const translations = buildTranslations();
@@ -79,32 +79,6 @@ cucumber(
 				updated_at: "21713937",
 			},
 		}),
-		mockRequest(
-			"https://dwallets-evm.mainsailhq.com/api/transactions/4dd6a4fc8b9fa0a1d46da59802098522bca849038311711b0f07d8dbf4ffc600",
-			{
-				data: {
-					blockHash: "05b124023ddd656c8a95664eb61846cc0f4e204341a0d86db325771077e7f002",
-					confirmations: 1,
-					data: "0x602a9eee0000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000003094187d07633373e2621d03d18d5e07df2aa0f15a611de28b05381d212f1a7cce2fef8c3629bdb1b9678ce309e264330b00000000000000000000000000000000",
-					gas: "300000",
-					gasPrice: "5000000000",
-					from: "0x659A76be283644AEc2003aa8ba26485047fd1BFB",
-					hash: "4dd6a4fc8b9fa0a1d46da59802098522bca849038311711b0f07d8dbf4ffc600",
-					nonce: "3",
-					senderPublicKey: "0311b11b0dea8851d49af7c673d7032e37ee12307f9bbd379b64bbdac6ca302e84",
-					signature:
-						"cd1b35240b0c1303392e4dc3e1fc83b9da7b74e5c96b99d1ae207c7c9d5480d868ecf4235298c6438f9c0ea9a8274082ebf051d86ff353ae1fb4fffe86cad91101",
-					to: "0x535B3D7A252fa034Ed71F0C53ec0C6F784cB64E1",
-					value: "0",
-					timestamp: "1752502567204",
-					receipt: {
-						gasRefunded: 0,
-						gasUsed: 21000,
-						status: 1,
-					},
-				},
-			},
-		),
 	],
 );
 cucumber(

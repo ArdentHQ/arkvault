@@ -60,16 +60,16 @@ const transactionsFixture = "coins/mainsail/devnet/transactions";
 const validatorsFixture = "coins/mainsail/devnet/validators";
 const imageFixture = "/assets/background.png";
 
-const walletMocks = () => {
-	const addresses = [
-		"0x659A76be283644AEc2003aa8ba26485047fd1BFB",
-		"0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
-		"0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54",
-	];
+export const mockedAddresses = [
+	"0x659A76be283644AEc2003aa8ba26485047fd1BFB",
+	"0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
+	"0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54",
+];
 
+const walletMocks = () => {
 	const publicKeys = ["034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192"];
 
-	const devnetMocks = [...addresses, ...publicKeys].map((identifier: string) =>
+	const devnetMocks = [...mockedAddresses, ...publicKeys].map((identifier: string) =>
 		mockRequest(
 			`https://dwallets-evm.mainsailhq.com/api/wallets/${identifier}`,
 			`coins/mainsail/devnet/wallets/${identifier}`,
@@ -98,43 +98,17 @@ const walletMocks = () => {
 
 const searchAddressesMocks = () => {
 	const addresses = {
-		// "0xb0E6c955a0Df13220C36Ea9c95bE471249247E57": [
-		// 	{ limit: 10, page: 1 },
-		// 	{ limit: 15, page: 1 },
-		// 	{ limit: 30, page: 1 },
-		// ],
-		// D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb: [
-		// 	{ limit: 10, page: 1 },
-		// 	{ limit: 15, page: 1 },
-		// 	{ limit: 30, page: 1 },
-		// ],
-		// D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD: [
-		// 	{ limit: 10, page: 1 },
-		// 	{ limit: 15, page: 1 },
-		// 	{ limit: 15, page: 2 },
-		// 	{ limit: 30, page: 1 },
-		// ],
+		"0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6": [
+			{ limit: 30, page: 1 },
+			{ limit: 30, page: 2 },
+		],
 		"0x659A76be283644AEc2003aa8ba26485047fd1BFB": [
 			{ limit: 10, page: 1 },
 			{ limit: 15, page: 1 },
 			{ limit: 15, page: 2 },
 			{ limit: 30, page: 1 },
 		],
-		// DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P: [
-		// 	{ limit: 10, page: 1 },
-		// 	{ limit: 15, page: 1 },
-		// 	{ limit: 30, page: 1 },
-		// ],
-		// DDA5nM7KEqLeTtQKv5qGgcnc6dpNBKJNTS: [
-		// 	{ limit: 10, page: 1 },
-		// 	{ limit: 15, page: 1 },
-		// 	{ limit: 30, page: 1 },
-		// ],
-		// DJXg9Vqg2tofRNrMAvMzhZTkegu8QyyNQq: [
-		// 	{ limit: 10, page: 1 },
-		// 	{ limit: 15, page: 1 },
-		// 	{ limit: 30, page: 1 },
-		// ],
+		"0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54": [{ limit: 30, page: 1 }],
 	};
 
 	const mocks: any = [];
@@ -147,7 +121,9 @@ const searchAddressesMocks = () => {
 						request.url ===
 							`https://dwallets-evm.mainsailhq.com/api/transactions?page=${page}&limit=${limit}&address=${address}` ||
 						request.url ===
-							`https://dwallets-evm.mainsailhq.com/api/transactions?limit=${limit}&address=${address}`,
+							`https://dwallets-evm.mainsailhq.com/api/transactions?limit=${limit}&address=${address}` ||
+						request.url ===
+							`https://dwallets-evm.mainsailhq.com/api/transactions?page=${page}&limit=${limit}&orderBy=timestamp:desc&address=${address}`,
 					`coins/mainsail/devnet/transactions/byAddress/${address}-${page}-${limit}`,
 				),
 			),
@@ -285,14 +261,36 @@ export const requestMocks = {
 	transactions: [
 		// devnet
 		// mockRequest("https://dwallets-evm.mainsailhq.com/api/transactions/fees", "coins/mainsail/devnet/transaction-fees"),
-		// mockRequest("https://dwallets-evm.mainsailhq.com/api/transactions?limit=10", transactionsFixture),
-		// mockRequest("https://dwallets-evm.mainsailhq.com/api/transactions?limit=20", transactionsFixture),
 
-		// wallet transactions
-		mockRequest(
-			"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=30&orderBy=timestamp:desc&address=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
-			transactionsFixture,
-		),
+		mockRequest(/^https:\/\/dwallets-evm\.mainsailhq.com\/api\/transactions\/[a-fA-F0-9]{64}$/, (request: any) => {
+			const regex = /\/transactions\/(?<hash>0x[a-fA-F0-9]{64})(?=\/?$)/;
+			const match = request.url.match(regex);
+			const hash = match?.groups?.hash;
+
+			return JSON.stringify({
+				data: {
+					blockHash: "05b124023ddd656c8a95664eb61846cc0f4e204341a0d86db325771077e7f002",
+					confirmations: 1,
+					data: "",
+					from: "0x659A76be283644AEc2003aa8ba26485047fd1BFB",
+					gas: "21000",
+					gasPrice: "100000000000",
+					hash: hash,
+					nonce: "3",
+					senderPublicKey: "0311b11b0dea8851d49af7c673d7032e37ee12307f9bbd379b64bbdac6ca302e84",
+					signature:
+						"cd1b35240b0c1303392e4dc3e1fc83b9da7b74e5c96b99d1ae207c7c9d5480d868ecf4235298c6438f9c0ea9a8274082ebf051d86ff353ae1fb4fffe86cad91101",
+					to: "0x47ea9bAa16edd859C1792933556c4659A647749C",
+					value: "2000000000000000000",
+					timestamp: "1752502567204",
+					receipt: {
+						gasRefunded: 0,
+						gasUsed: 21000,
+						status: 1,
+					},
+				},
+			});
+		}),
 
 		// for notifications
 		mockRequest(
@@ -316,109 +314,6 @@ export const requestMocks = {
 			{},
 		),
 
-		// mockRequest(
-		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=30&orderBy=timestamp:desc&address=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
-		// 	transactionsFixture
-		// ),
-
-		// mockRequest(
-		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?page=2&limit=30&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
-		// 	transactionsFixture,
-		// ),
-		// mockRequest(
-		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=20&senderId=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
-		// 	transactionsFixture,
-		// ),
-		// mockRequest(
-		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?limit=30&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
-		// 	transactionsFixture,
-		// ),
-		// mockRequest(
-		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?limit=30&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb%2CDH4Xyyt5zPqM9KwUkevUZPbzM3KjjW8fp5",
-		// 	transactionsFixture,
-		// ),
-		// mockRequest(
-		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?page=2&limit=30&address=0x659A76be283644AEc2003aa8ba26485047fd1BFB",
-		// 	transactionsFixture,
-		// ),
-		// mockRequest(
-		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=10&recipientId=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
-		// 	"coins/mainsail/devnet/notification-transactions",
-		// ),
-
-		// mockRequest(
-		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=10&recipientId=D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
-		// 	"coins/mainsail/devnet/notification-transactions",
-		// ),
-
-		// mockRequest(
-		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=10&recipientId=0x659A76be283644AEc2003aa8ba26485047fd1BFB",
-		// 	transactionsFixture,
-		// ),
-		//
-		// mockRequest(
-		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=10&recipientId=DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P",
-		// 	transactionsFixture,
-		// ),
-		//
-		// mockRequest(
-		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=10&recipientId=DJXg9Vqg2tofRNrMAvMzhZTkegu8QyyNQq",
-		// 	transactionsFixture,
-		// ),
-		//
-		// mockRequest(
-		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=20&senderId=0x659A76be283644AEc2003aa8ba26485047fd1BFB",
-		// 	transactionsFixture,
-		// ),
-		// mockRequest(
-		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?limit=30&address=0x659A76be283644AEc2003aa8ba26485047fd1BFB%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
-		// 	transactionsFixture,
-		// ),
-		// mockRequest(
-		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?limit=30&address=0x659A76be283644AEc2003aa8ba26485047fd1BFB%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb%2CDH4Xyyt5zPqM9KwUkevUZPbzM3KjjW8fp5",
-		// 	transactionsFixture,
-		// ),
-		// // unconfirmed transactions list before sending single or multiPayment transaction
-		// mockRequest(
-		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=20&senderId=DDA5nM7KEqLeTtQKv5qGgcnc6dpNBKJNTS",
-		// 	transactionsFixture,
-		// ),
-		//
-		// mockRequest(
-		// 	/https:\/\/ark-test\.arkvault\.io\/api\/transactions\?page=1&limit=20&senderId=(.*?)/,
-		// 	transactionsFixture,
-		// ),
-		//
-		// mockRequest(
-		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=10&orderBy=timestamp&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
-		// 	transactionsFixture,
-		// ),
-		//
-		// mockRequest(
-		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=10&orderBy=timestamp&address=D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
-		// 	transactionsFixture,
-		// ),
-		//
-		// mockRequest(
-		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=10&orderBy=timestamp&address=DJXg9Vqg2tofRNrMAvMzhZTkegu8QyyNQq",
-		// 	transactionsFixture,
-		// ),
-		//
-		// mockRequest(
-		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=10&orderBy=timestamp&address=0x659A76be283644AEc2003aa8ba26485047fd1BFB",
-		// 	transactionsFixture,
-		// ),
-		//
-		// mockRequest(
-		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=10&orderBy=timestamp&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
-		// 	{ data: [], meta: {} },
-		// ),
-		//
-		// mockRequest(
-		// 	"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=10&orderBy=timestamp&address=0x659A76be283644AEc2003aa8ba26485047fd1BFB%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
-		// 	{ data: [], meta: {} },
-		// ),
-
 		// mainnet
 		// mockRequest("https://wallets-evm.mainsailhq.com/api/transactions/fees", "coins/mainsail/mainnet/transaction-fees"),
 
@@ -436,10 +331,6 @@ export const requestMocks = {
 	wallets: [
 		mockRequest("https://wallets-evm.mainsailhq.com/api/wallets?limit=1&nonce=0", {}),
 		mockRequest("https://dwallets-evm.mainsailhq.com/api/wallets?limit=1&nonce=0", {}),
-		// mockRequest(
-		// 	"https://dwallets-evm.mainsailhq.com/api/wallets/D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD/votes",
-		// 	"coins/mainsail/devnet/votes",
-		// ),
 
 		...walletMocks(),
 	],
