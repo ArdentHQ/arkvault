@@ -5,6 +5,7 @@ import { Icon } from "@/app/components/Icon";
 
 type InputPasswordProperties = {
 	isInvalid?: boolean;
+	preventAutofill?: boolean;
 	ref?: React.Ref<HTMLInputElement>;
 } & React.InputHTMLAttributes<any>;
 

@@ -24,7 +24,7 @@ exports[`Servers Settings > should render servers settings 1`] = `
           type="button"
         >
           <div
-            class="flex items-center space-x-2"
+            class="flex items-center gap-2"
           >
             <div>
               <div
@@ -64,7 +64,7 @@ exports[`Servers Settings > should render servers settings 1`] = `
           type="button"
         >
           <div
-            class="flex items-center space-x-2"
+            class="flex items-center gap-2"
           >
             <div>
               <div
@@ -101,7 +101,7 @@ exports[`Servers Settings > should render servers settings 1`] = `
           type="button"
         >
           <div
-            class="flex items-center space-x-2"
+            class="flex items-center gap-2"
           >
             <div>
               <div
@@ -316,7 +316,7 @@ exports[`Servers Settings > should render servers settings 1`] = `
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       <div
                         class="m-0 p-1"
@@ -370,7 +370,7 @@ exports[`Servers Settings > should render servers settings 1`] = `
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       <div
                         class="m-0 p-1"
@@ -422,7 +422,7 @@ exports[`Servers Settings > should render servers settings 1`] = `
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       <div
                         class="p-1"
@@ -474,7 +474,7 @@ exports[`Servers Settings > should render servers settings 1`] = `
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       <div
                         class="p-1"
@@ -528,7 +528,7 @@ exports[`Servers Settings > should render servers settings 1`] = `
                       type="button"
                     >
                       <div
-                        class="flex items-center space-x-2"
+                        class="flex items-center gap-2"
                       >
                         <span
                           class="border-theme-warning-300 bg-theme-warning-50 text-theme-warning-600 dark:border-theme-danger-info-border dark:text-theme-danger-info-text rounded border-2 p-[3px] dark:bg-transparent"
@@ -611,38 +611,42 @@ exports[`Servers Settings > should render servers settings 1`] = `
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     <div
-                      data-testid="HideBalance-icon-show"
+                      class="flex items-center justify-center"
                     >
                       <div
-                        style="height: 20px; width: 20px;"
+                        data-testid="HideBalance-icon-show"
                       >
-                        <svg
-                          id="eye"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          style="height: 20px; width: 20px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <svg
+                            id="eye"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <path
-                              d="M10 4.6c-3.2-.1-6.5 2.2-8.6 4.5-.5.5-.5 1.3 0 1.8 2 2.3 5.4 4.6 8.6 4.5 3.3-.1 6.5-2.3 8.6-4.5.5-.5.5-1.3 0-1.8-2.1-2.3-5.4-4.6-8.6-4.5z"
-                            />
-                            <path
-                              d="M13 10c0 1.7-1.3 3-3 3s-3-1.3-3-3 1.3-3 3-3c1.2 0 3 .7 3 3z"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M10 4.6c-3.2-.1-6.5 2.2-8.6 4.5-.5.5-.5 1.3 0 1.8 2 2.3 5.4 4.6 8.6 4.5 3.3-.1 6.5-2.3 8.6-4.5.5-.5.5-1.3 0-1.8-2.1-2.3-5.4-4.6-8.6-4.5z"
+                              />
+                              <path
+                                d="M13 10c0 1.7-1.3 3-3 3s-3-1.3-3-3 1.3-3 3-3c1.2 0 3 .7 3 3z"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                     </div>
                     <div
@@ -1260,7 +1264,7 @@ exports[`Servers Settings > should render servers settings 1`] = `
                                         type="button"
                                       >
                                         <div
-                                          class="flex items-center space-x-2"
+                                          class="flex items-center gap-2"
                                         >
                                           <div>
                                             <div
@@ -1320,7 +1324,7 @@ exports[`Servers Settings > should render servers settings 1`] = `
                           type="submit"
                         >
                           <div
-                            class="flex items-center space-x-2"
+                            class="flex items-center gap-2"
                           >
                             Save
                           </div>
@@ -1363,7 +1367,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
           type="button"
         >
           <div
-            class="flex items-center space-x-2"
+            class="flex items-center gap-2"
           >
             <div>
               <div
@@ -1403,7 +1407,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
           type="button"
         >
           <div
-            class="flex items-center space-x-2"
+            class="flex items-center gap-2"
           >
             <div>
               <div
@@ -1440,7 +1444,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
           type="button"
         >
           <div
-            class="flex items-center space-x-2"
+            class="flex items-center gap-2"
           >
             <div>
               <div
@@ -1655,7 +1659,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       <div
                         class="m-0 p-1"
@@ -1709,7 +1713,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       <div
                         class="m-0 p-1"
@@ -1761,7 +1765,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       <div
                         class="p-1"
@@ -1813,7 +1817,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       <div
                         class="p-1"
@@ -1867,7 +1871,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                       type="button"
                     >
                       <div
-                        class="flex items-center space-x-2"
+                        class="flex items-center gap-2"
                       >
                         <span
                           class="border-theme-warning-300 bg-theme-warning-50 text-theme-warning-600 dark:border-theme-danger-info-border dark:text-theme-danger-info-text rounded border-2 p-[3px] dark:bg-transparent"
@@ -1950,38 +1954,42 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     <div
-                      data-testid="HideBalance-icon-show"
+                      class="flex items-center justify-center"
                     >
                       <div
-                        style="height: 20px; width: 20px;"
+                        data-testid="HideBalance-icon-show"
                       >
-                        <svg
-                          id="eye"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          style="height: 20px; width: 20px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <svg
+                            id="eye"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <path
-                              d="M10 4.6c-3.2-.1-6.5 2.2-8.6 4.5-.5.5-.5 1.3 0 1.8 2 2.3 5.4 4.6 8.6 4.5 3.3-.1 6.5-2.3 8.6-4.5.5-.5.5-1.3 0-1.8-2.1-2.3-5.4-4.6-8.6-4.5z"
-                            />
-                            <path
-                              d="M13 10c0 1.7-1.3 3-3 3s-3-1.3-3-3 1.3-3 3-3c1.2 0 3 .7 3 3z"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M10 4.6c-3.2-.1-6.5 2.2-8.6 4.5-.5.5-.5 1.3 0 1.8 2 2.3 5.4 4.6 8.6 4.5 3.3-.1 6.5-2.3 8.6-4.5.5-.5.5-1.3 0-1.8-2.1-2.3-5.4-4.6-8.6-4.5z"
+                              />
+                              <path
+                                d="M13 10c0 1.7-1.3 3-3 3s-3-1.3-3-3 1.3-3 3-3c1.2 0 3 .7 3 3z"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                     </div>
                     <div
@@ -2879,7 +2887,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                             type="button"
                                           >
                                             <div
-                                              class="flex items-center space-x-2"
+                                              class="flex items-center gap-2"
                                             >
                                               <div>
                                                 <div
@@ -2939,7 +2947,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                         type="button"
                                       >
                                         <div
-                                          class="flex items-center space-x-2"
+                                          class="flex items-center gap-2"
                                         >
                                           <div>
                                             <div
@@ -2999,7 +3007,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                           type="submit"
                         >
                           <div
-                            class="flex items-center space-x-2"
+                            class="flex items-center gap-2"
                           >
                             Save
                           </div>
@@ -3042,7 +3050,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
           type="button"
         >
           <div
-            class="flex items-center space-x-2"
+            class="flex items-center gap-2"
           >
             <div>
               <div
@@ -3082,7 +3090,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
           type="button"
         >
           <div
-            class="flex items-center space-x-2"
+            class="flex items-center gap-2"
           >
             <div>
               <div
@@ -3119,7 +3127,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
           type="button"
         >
           <div
-            class="flex items-center space-x-2"
+            class="flex items-center gap-2"
           >
             <div>
               <div
@@ -3334,7 +3342,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       <div
                         class="m-0 p-1"
@@ -3388,7 +3396,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       <div
                         class="m-0 p-1"
@@ -3440,7 +3448,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       <div
                         class="p-1"
@@ -3492,7 +3500,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       <div
                         class="p-1"
@@ -3546,7 +3554,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                       type="button"
                     >
                       <div
-                        class="flex items-center space-x-2"
+                        class="flex items-center gap-2"
                       >
                         <span
                           class="border-theme-warning-300 bg-theme-warning-50 text-theme-warning-600 dark:border-theme-danger-info-border dark:text-theme-danger-info-text rounded border-2 p-[3px] dark:bg-transparent"
@@ -3629,38 +3637,42 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     <div
-                      data-testid="HideBalance-icon-show"
+                      class="flex items-center justify-center"
                     >
                       <div
-                        style="height: 20px; width: 20px;"
+                        data-testid="HideBalance-icon-show"
                       >
-                        <svg
-                          id="eye"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          style="height: 20px; width: 20px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <svg
+                            id="eye"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <path
-                              d="M10 4.6c-3.2-.1-6.5 2.2-8.6 4.5-.5.5-.5 1.3 0 1.8 2 2.3 5.4 4.6 8.6 4.5 3.3-.1 6.5-2.3 8.6-4.5.5-.5.5-1.3 0-1.8-2.1-2.3-5.4-4.6-8.6-4.5z"
-                            />
-                            <path
-                              d="M13 10c0 1.7-1.3 3-3 3s-3-1.3-3-3 1.3-3 3-3c1.2 0 3 .7 3 3z"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M10 4.6c-3.2-.1-6.5 2.2-8.6 4.5-.5.5-.5 1.3 0 1.8 2 2.3 5.4 4.6 8.6 4.5 3.3-.1 6.5-2.3 8.6-4.5.5-.5.5-1.3 0-1.8-2.1-2.3-5.4-4.6-8.6-4.5z"
+                              />
+                              <path
+                                d="M13 10c0 1.7-1.3 3-3 3s-3-1.3-3-3 1.3-3 3-3c1.2 0 3 .7 3 3z"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                     </div>
                     <div
@@ -4431,7 +4443,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                             type="button"
                                           >
                                             <div
-                                              class="flex items-center space-x-2"
+                                              class="flex items-center gap-2"
                                             >
                                               <div>
                                                 <div
@@ -4491,7 +4503,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                         type="button"
                                       >
                                         <div
-                                          class="flex items-center space-x-2"
+                                          class="flex items-center gap-2"
                                         >
                                           <div>
                                             <div
@@ -4551,7 +4563,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                           type="submit"
                         >
                           <div
-                            class="flex items-center space-x-2"
+                            class="flex items-center gap-2"
                           >
                             Save
                           </div>
@@ -4594,7 +4606,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
           type="button"
         >
           <div
-            class="flex items-center space-x-2"
+            class="flex items-center gap-2"
           >
             <div>
               <div
@@ -4634,7 +4646,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
           type="button"
         >
           <div
-            class="flex items-center space-x-2"
+            class="flex items-center gap-2"
           >
             <div>
               <div
@@ -4671,7 +4683,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
           type="button"
         >
           <div
-            class="flex items-center space-x-2"
+            class="flex items-center gap-2"
           >
             <div>
               <div
@@ -4886,7 +4898,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       <div
                         class="m-0 p-1"
@@ -4940,7 +4952,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       <div
                         class="m-0 p-1"
@@ -4992,7 +5004,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       <div
                         class="p-1"
@@ -5044,7 +5056,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       <div
                         class="p-1"
@@ -5098,7 +5110,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                       type="button"
                     >
                       <div
-                        class="flex items-center space-x-2"
+                        class="flex items-center gap-2"
                       >
                         <span
                           class="border-theme-warning-300 bg-theme-warning-50 text-theme-warning-600 dark:border-theme-danger-info-border dark:text-theme-danger-info-text rounded border-2 p-[3px] dark:bg-transparent"
@@ -5181,38 +5193,42 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     <div
-                      data-testid="HideBalance-icon-show"
+                      class="flex items-center justify-center"
                     >
                       <div
-                        style="height: 20px; width: 20px;"
+                        data-testid="HideBalance-icon-show"
                       >
-                        <svg
-                          id="eye"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          style="height: 20px; width: 20px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <svg
+                            id="eye"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <path
-                              d="M10 4.6c-3.2-.1-6.5 2.2-8.6 4.5-.5.5-.5 1.3 0 1.8 2 2.3 5.4 4.6 8.6 4.5 3.3-.1 6.5-2.3 8.6-4.5.5-.5.5-1.3 0-1.8-2.1-2.3-5.4-4.6-8.6-4.5z"
-                            />
-                            <path
-                              d="M13 10c0 1.7-1.3 3-3 3s-3-1.3-3-3 1.3-3 3-3c1.2 0 3 .7 3 3z"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M10 4.6c-3.2-.1-6.5 2.2-8.6 4.5-.5.5-.5 1.3 0 1.8 2 2.3 5.4 4.6 8.6 4.5 3.3-.1 6.5-2.3 8.6-4.5.5-.5.5-1.3 0-1.8-2.1-2.3-5.4-4.6-8.6-4.5z"
+                              />
+                              <path
+                                d="M13 10c0 1.7-1.3 3-3 3s-3-1.3-3-3 1.3-3 3-3c1.2 0 3 .7 3 3z"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                     </div>
                     <div
@@ -5709,7 +5725,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                                                 type="button"
                                               >
                                                 <div
-                                                  class="flex items-center space-x-2"
+                                                  class="flex items-center gap-2"
                                                 >
                                                   <div>
                                                     <div
@@ -5928,7 +5944,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                                             type="button"
                                           >
                                             <div
-                                              class="flex items-center space-x-2"
+                                              class="flex items-center gap-2"
                                             >
                                               <div>
                                                 <div
@@ -5962,7 +5978,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                                             type="button"
                                           >
                                             <div
-                                              class="flex items-center space-x-2"
+                                              class="flex items-center gap-2"
                                             >
                                               <div>
                                                 <div
@@ -5992,7 +6008,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                                             type="button"
                                           >
                                             <div
-                                              class="flex items-center space-x-2"
+                                              class="flex items-center gap-2"
                                             >
                                               <div>
                                                 <div
@@ -6045,7 +6061,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                                         type="button"
                                       >
                                         <div
-                                          class="flex items-center space-x-2"
+                                          class="flex items-center gap-2"
                                         >
                                           <div>
                                             <div
@@ -6105,7 +6121,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                           type="submit"
                         >
                           <div
-                            class="flex items-center space-x-2"
+                            class="flex items-center gap-2"
                           >
                             Save
                           </div>
@@ -6148,7 +6164,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
           type="button"
         >
           <div
-            class="flex items-center space-x-2"
+            class="flex items-center gap-2"
           >
             <div>
               <div
@@ -6188,7 +6204,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
           type="button"
         >
           <div
-            class="flex items-center space-x-2"
+            class="flex items-center gap-2"
           >
             <div>
               <div
@@ -6225,7 +6241,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
           type="button"
         >
           <div
-            class="flex items-center space-x-2"
+            class="flex items-center gap-2"
           >
             <div>
               <div
@@ -6440,7 +6456,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       <div
                         class="m-0 p-1"
@@ -6494,7 +6510,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       <div
                         class="m-0 p-1"
@@ -6546,7 +6562,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       <div
                         class="p-1"
@@ -6598,7 +6614,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       <div
                         class="p-1"
@@ -6652,7 +6668,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                       type="button"
                     >
                       <div
-                        class="flex items-center space-x-2"
+                        class="flex items-center gap-2"
                       >
                         <span
                           class="border-theme-warning-300 bg-theme-warning-50 text-theme-warning-600 dark:border-theme-danger-info-border dark:text-theme-danger-info-text rounded border-2 p-[3px] dark:bg-transparent"
@@ -6735,38 +6751,42 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     <div
-                      data-testid="HideBalance-icon-show"
+                      class="flex items-center justify-center"
                     >
                       <div
-                        style="height: 20px; width: 20px;"
+                        data-testid="HideBalance-icon-show"
                       >
-                        <svg
-                          id="eye"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          style="height: 20px; width: 20px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <svg
+                            id="eye"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <path
-                              d="M10 4.6c-3.2-.1-6.5 2.2-8.6 4.5-.5.5-.5 1.3 0 1.8 2 2.3 5.4 4.6 8.6 4.5 3.3-.1 6.5-2.3 8.6-4.5.5-.5.5-1.3 0-1.8-2.1-2.3-5.4-4.6-8.6-4.5z"
-                            />
-                            <path
-                              d="M13 10c0 1.7-1.3 3-3 3s-3-1.3-3-3 1.3-3 3-3c1.2 0 3 .7 3 3z"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M10 4.6c-3.2-.1-6.5 2.2-8.6 4.5-.5.5-.5 1.3 0 1.8 2 2.3 5.4 4.6 8.6 4.5 3.3-.1 6.5-2.3 8.6-4.5.5-.5.5-1.3 0-1.8-2.1-2.3-5.4-4.6-8.6-4.5z"
+                              />
+                              <path
+                                d="M13 10c0 1.7-1.3 3-3 3s-3-1.3-3-3 1.3-3 3-3c1.2 0 3 .7 3 3z"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                     </div>
                     <div
@@ -7664,7 +7684,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                             type="button"
                                           >
                                             <div
-                                              class="flex items-center space-x-2"
+                                              class="flex items-center gap-2"
                                             >
                                               <div>
                                                 <div
@@ -7724,7 +7744,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                         type="button"
                                       >
                                         <div
-                                          class="flex items-center space-x-2"
+                                          class="flex items-center gap-2"
                                         >
                                           <div>
                                             <div
@@ -7784,7 +7804,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                           type="submit"
                         >
                           <div
-                            class="flex items-center space-x-2"
+                            class="flex items-center gap-2"
                           >
                             Save
                           </div>
@@ -7827,7 +7847,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
           type="button"
         >
           <div
-            class="flex items-center space-x-2"
+            class="flex items-center gap-2"
           >
             <div>
               <div
@@ -7867,7 +7887,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
           type="button"
         >
           <div
-            class="flex items-center space-x-2"
+            class="flex items-center gap-2"
           >
             <div>
               <div
@@ -7904,7 +7924,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
           type="button"
         >
           <div
-            class="flex items-center space-x-2"
+            class="flex items-center gap-2"
           >
             <div>
               <div
@@ -8119,7 +8139,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       <div
                         class="m-0 p-1"
@@ -8173,7 +8193,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       <div
                         class="m-0 p-1"
@@ -8225,7 +8245,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       <div
                         class="p-1"
@@ -8277,7 +8297,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       <div
                         class="p-1"
@@ -8331,7 +8351,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                       type="button"
                     >
                       <div
-                        class="flex items-center space-x-2"
+                        class="flex items-center gap-2"
                       >
                         <span
                           class="border-theme-warning-300 bg-theme-warning-50 text-theme-warning-600 dark:border-theme-danger-info-border dark:text-theme-danger-info-text rounded border-2 p-[3px] dark:bg-transparent"
@@ -8414,38 +8434,42 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     <div
-                      data-testid="HideBalance-icon-show"
+                      class="flex items-center justify-center"
                     >
                       <div
-                        style="height: 20px; width: 20px;"
+                        data-testid="HideBalance-icon-show"
                       >
-                        <svg
-                          id="eye"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          style="height: 20px; width: 20px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <svg
+                            id="eye"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <path
-                              d="M10 4.6c-3.2-.1-6.5 2.2-8.6 4.5-.5.5-.5 1.3 0 1.8 2 2.3 5.4 4.6 8.6 4.5 3.3-.1 6.5-2.3 8.6-4.5.5-.5.5-1.3 0-1.8-2.1-2.3-5.4-4.6-8.6-4.5z"
-                            />
-                            <path
-                              d="M13 10c0 1.7-1.3 3-3 3s-3-1.3-3-3 1.3-3 3-3c1.2 0 3 .7 3 3z"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M10 4.6c-3.2-.1-6.5 2.2-8.6 4.5-.5.5-.5 1.3 0 1.8 2 2.3 5.4 4.6 8.6 4.5 3.3-.1 6.5-2.3 8.6-4.5.5-.5.5-1.3 0-1.8-2.1-2.3-5.4-4.6-8.6-4.5z"
+                              />
+                              <path
+                                d="M13 10c0 1.7-1.3 3-3 3s-3-1.3-3-3 1.3-3 3-3c1.2 0 3 .7 3 3z"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                     </div>
                     <div
@@ -8973,7 +8997,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                                 type="button"
                                               >
                                                 <div
-                                                  class="flex items-center space-x-2"
+                                                  class="flex items-center gap-2"
                                                 >
                                                   <div>
                                                     <div
@@ -9288,7 +9312,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                             type="button"
                                           >
                                             <div
-                                              class="flex items-center space-x-2"
+                                              class="flex items-center gap-2"
                                             >
                                               <div>
                                                 <div
@@ -9322,7 +9346,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                             type="button"
                                           >
                                             <div
-                                              class="flex items-center space-x-2"
+                                              class="flex items-center gap-2"
                                             >
                                               <div>
                                                 <div
@@ -9352,7 +9376,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                             type="button"
                                           >
                                             <div
-                                              class="flex items-center space-x-2"
+                                              class="flex items-center gap-2"
                                             >
                                               <div>
                                                 <div
@@ -9405,7 +9429,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                         type="button"
                                       >
                                         <div
-                                          class="flex items-center space-x-2"
+                                          class="flex items-center gap-2"
                                         >
                                           <div>
                                             <div
@@ -9465,7 +9489,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                           type="submit"
                         >
                           <div
-                            class="flex items-center space-x-2"
+                            class="flex items-center gap-2"
                           >
                             Save
                           </div>
@@ -9508,7 +9532,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
           type="button"
         >
           <div
-            class="flex items-center space-x-2"
+            class="flex items-center gap-2"
           >
             <div>
               <div
@@ -9548,7 +9572,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
           type="button"
         >
           <div
-            class="flex items-center space-x-2"
+            class="flex items-center gap-2"
           >
             <div>
               <div
@@ -9585,7 +9609,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
           type="button"
         >
           <div
-            class="flex items-center space-x-2"
+            class="flex items-center gap-2"
           >
             <div>
               <div
@@ -9800,7 +9824,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       <div
                         class="m-0 p-1"
@@ -9854,7 +9878,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       <div
                         class="m-0 p-1"
@@ -9906,7 +9930,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       <div
                         class="p-1"
@@ -9958,7 +9982,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       <div
                         class="p-1"
@@ -10012,7 +10036,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                       type="button"
                     >
                       <div
-                        class="flex items-center space-x-2"
+                        class="flex items-center gap-2"
                       >
                         <span
                           class="border-theme-warning-300 bg-theme-warning-50 text-theme-warning-600 dark:border-theme-danger-info-border dark:text-theme-danger-info-text rounded border-2 p-[3px] dark:bg-transparent"
@@ -10095,38 +10119,42 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     <div
-                      data-testid="HideBalance-icon-show"
+                      class="flex items-center justify-center"
                     >
                       <div
-                        style="height: 20px; width: 20px;"
+                        data-testid="HideBalance-icon-show"
                       >
-                        <svg
-                          id="eye"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          style="height: 20px; width: 20px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <svg
+                            id="eye"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <path
-                              d="M10 4.6c-3.2-.1-6.5 2.2-8.6 4.5-.5.5-.5 1.3 0 1.8 2 2.3 5.4 4.6 8.6 4.5 3.3-.1 6.5-2.3 8.6-4.5.5-.5.5-1.3 0-1.8-2.1-2.3-5.4-4.6-8.6-4.5z"
-                            />
-                            <path
-                              d="M13 10c0 1.7-1.3 3-3 3s-3-1.3-3-3 1.3-3 3-3c1.2 0 3 .7 3 3z"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M10 4.6c-3.2-.1-6.5 2.2-8.6 4.5-.5.5-.5 1.3 0 1.8 2 2.3 5.4 4.6 8.6 4.5 3.3-.1 6.5-2.3 8.6-4.5.5-.5.5-1.3 0-1.8-2.1-2.3-5.4-4.6-8.6-4.5z"
+                              />
+                              <path
+                                d="M13 10c0 1.7-1.3 3-3 3s-3-1.3-3-3 1.3-3 3-3c1.2 0 3 .7 3 3z"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                     </div>
                     <div
@@ -10654,7 +10682,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                                 type="button"
                                               >
                                                 <div
-                                                  class="flex items-center space-x-2"
+                                                  class="flex items-center gap-2"
                                                 >
                                                   <div>
                                                     <div
@@ -10969,7 +10997,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                             type="button"
                                           >
                                             <div
-                                              class="flex items-center space-x-2"
+                                              class="flex items-center gap-2"
                                             >
                                               <div>
                                                 <div
@@ -11003,7 +11031,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                             type="button"
                                           >
                                             <div
-                                              class="flex items-center space-x-2"
+                                              class="flex items-center gap-2"
                                             >
                                               <div>
                                                 <div
@@ -11033,7 +11061,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                             type="button"
                                           >
                                             <div
-                                              class="flex items-center space-x-2"
+                                              class="flex items-center gap-2"
                                             >
                                               <div>
                                                 <div
@@ -11086,7 +11114,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                         type="button"
                                       >
                                         <div
-                                          class="flex items-center space-x-2"
+                                          class="flex items-center gap-2"
                                         >
                                           <div>
                                             <div
@@ -11146,7 +11174,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                           type="submit"
                         >
                           <div
-                            class="flex items-center space-x-2"
+                            class="flex items-center gap-2"
                           >
                             Save
                           </div>
@@ -11189,7 +11217,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
           type="button"
         >
           <div
-            class="flex items-center space-x-2"
+            class="flex items-center gap-2"
           >
             <div>
               <div
@@ -11229,7 +11257,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
           type="button"
         >
           <div
-            class="flex items-center space-x-2"
+            class="flex items-center gap-2"
           >
             <div>
               <div
@@ -11266,7 +11294,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
           type="button"
         >
           <div
-            class="flex items-center space-x-2"
+            class="flex items-center gap-2"
           >
             <div>
               <div
@@ -11481,7 +11509,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       <div
                         class="m-0 p-1"
@@ -11535,7 +11563,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       <div
                         class="m-0 p-1"
@@ -11587,7 +11615,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       <div
                         class="p-1"
@@ -11639,7 +11667,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       <div
                         class="p-1"
@@ -11693,7 +11721,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                       type="button"
                     >
                       <div
-                        class="flex items-center space-x-2"
+                        class="flex items-center gap-2"
                       >
                         <span
                           class="border-theme-warning-300 bg-theme-warning-50 text-theme-warning-600 dark:border-theme-danger-info-border dark:text-theme-danger-info-text rounded border-2 p-[3px] dark:bg-transparent"
@@ -11776,38 +11804,42 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     <div
-                      data-testid="HideBalance-icon-show"
+                      class="flex items-center justify-center"
                     >
                       <div
-                        style="height: 20px; width: 20px;"
+                        data-testid="HideBalance-icon-show"
                       >
-                        <svg
-                          id="eye"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          style="height: 20px; width: 20px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <svg
+                            id="eye"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <path
-                              d="M10 4.6c-3.2-.1-6.5 2.2-8.6 4.5-.5.5-.5 1.3 0 1.8 2 2.3 5.4 4.6 8.6 4.5 3.3-.1 6.5-2.3 8.6-4.5.5-.5.5-1.3 0-1.8-2.1-2.3-5.4-4.6-8.6-4.5z"
-                            />
-                            <path
-                              d="M13 10c0 1.7-1.3 3-3 3s-3-1.3-3-3 1.3-3 3-3c1.2 0 3 .7 3 3z"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M10 4.6c-3.2-.1-6.5 2.2-8.6 4.5-.5.5-.5 1.3 0 1.8 2 2.3 5.4 4.6 8.6 4.5 3.3-.1 6.5-2.3 8.6-4.5.5-.5.5-1.3 0-1.8-2.1-2.3-5.4-4.6-8.6-4.5z"
+                              />
+                              <path
+                                d="M13 10c0 1.7-1.3 3-3 3s-3-1.3-3-3 1.3-3 3-3c1.2 0 3 .7 3 3z"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                     </div>
                     <div
@@ -12699,7 +12731,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                             type="button"
                                           >
                                             <div
-                                              class="flex items-center space-x-2"
+                                              class="flex items-center gap-2"
                                             >
                                               <div>
                                                 <div
@@ -12759,7 +12791,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                         type="button"
                                       >
                                         <div
-                                          class="flex items-center space-x-2"
+                                          class="flex items-center gap-2"
                                         >
                                           <div>
                                             <div
@@ -12819,7 +12851,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                           type="submit"
                         >
                           <div
-                            class="flex items-center space-x-2"
+                            class="flex items-center gap-2"
                           >
                             Save
                           </div>
@@ -12862,7 +12894,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
           type="button"
         >
           <div
-            class="flex items-center space-x-2"
+            class="flex items-center gap-2"
           >
             <div>
               <div
@@ -12902,7 +12934,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
           type="button"
         >
           <div
-            class="flex items-center space-x-2"
+            class="flex items-center gap-2"
           >
             <div>
               <div
@@ -12939,7 +12971,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
           type="button"
         >
           <div
-            class="flex items-center space-x-2"
+            class="flex items-center gap-2"
           >
             <div>
               <div
@@ -13154,7 +13186,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       <div
                         class="m-0 p-1"
@@ -13208,7 +13240,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       <div
                         class="m-0 p-1"
@@ -13260,7 +13292,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       <div
                         class="p-1"
@@ -13312,7 +13344,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       <div
                         class="p-1"
@@ -13366,7 +13398,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                       type="button"
                     >
                       <div
-                        class="flex items-center space-x-2"
+                        class="flex items-center gap-2"
                       >
                         <span
                           class="border-theme-warning-300 bg-theme-warning-50 text-theme-warning-600 dark:border-theme-danger-info-border dark:text-theme-danger-info-text rounded border-2 p-[3px] dark:bg-transparent"
@@ -13449,38 +13481,42 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     <div
-                      data-testid="HideBalance-icon-show"
+                      class="flex items-center justify-center"
                     >
                       <div
-                        style="height: 20px; width: 20px;"
+                        data-testid="HideBalance-icon-show"
                       >
-                        <svg
-                          id="eye"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          style="height: 20px; width: 20px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <svg
+                            id="eye"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <path
-                              d="M10 4.6c-3.2-.1-6.5 2.2-8.6 4.5-.5.5-.5 1.3 0 1.8 2 2.3 5.4 4.6 8.6 4.5 3.3-.1 6.5-2.3 8.6-4.5.5-.5.5-1.3 0-1.8-2.1-2.3-5.4-4.6-8.6-4.5z"
-                            />
-                            <path
-                              d="M13 10c0 1.7-1.3 3-3 3s-3-1.3-3-3 1.3-3 3-3c1.2 0 3 .7 3 3z"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M10 4.6c-3.2-.1-6.5 2.2-8.6 4.5-.5.5-.5 1.3 0 1.8 2 2.3 5.4 4.6 8.6 4.5 3.3-.1 6.5-2.3 8.6-4.5.5-.5.5-1.3 0-1.8-2.1-2.3-5.4-4.6-8.6-4.5z"
+                              />
+                              <path
+                                d="M13 10c0 1.7-1.3 3-3 3s-3-1.3-3-3 1.3-3 3-3c1.2 0 3 .7 3 3z"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                     </div>
                     <div
@@ -14005,7 +14041,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                                 type="button"
                                               >
                                                 <div
-                                                  class="flex items-center space-x-2"
+                                                  class="flex items-center gap-2"
                                                 >
                                                   <div>
                                                     <div
@@ -14317,7 +14353,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                             type="button"
                                           >
                                             <div
-                                              class="flex items-center space-x-2"
+                                              class="flex items-center gap-2"
                                             >
                                               <div>
                                                 <div
@@ -14351,7 +14387,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                             type="button"
                                           >
                                             <div
-                                              class="flex items-center space-x-2"
+                                              class="flex items-center gap-2"
                                             >
                                               <div>
                                                 <div
@@ -14381,7 +14417,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                             type="button"
                                           >
                                             <div
-                                              class="flex items-center space-x-2"
+                                              class="flex items-center gap-2"
                                             >
                                               <div>
                                                 <div
@@ -14434,7 +14470,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                         type="button"
                                       >
                                         <div
-                                          class="flex items-center space-x-2"
+                                          class="flex items-center gap-2"
                                         >
                                           <div>
                                             <div
@@ -14494,7 +14530,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                           type="submit"
                         >
                           <div
-                            class="flex items-center space-x-2"
+                            class="flex items-center gap-2"
                           >
                             Save
                           </div>

@@ -23,7 +23,7 @@ exports[`UpdateWalletName > should render 1`] = `
             type="button"
           >
             <div
-              class="flex items-center space-x-2"
+              class="flex items-center gap-2"
             >
               <div>
                 <div
@@ -115,7 +115,7 @@ exports[`UpdateWalletName > should render 1`] = `
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     Cancel
                   </div>
@@ -127,7 +127,7 @@ exports[`UpdateWalletName > should render 1`] = `
                   type="submit"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     Save
                   </div>
@@ -165,7 +165,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 1`] 
             type="button"
           >
             <div
-              class="flex items-center space-x-2"
+              class="flex items-center gap-2"
             >
               <div>
                 <div
@@ -311,7 +311,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 1`] 
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     Cancel
                   </div>
@@ -323,7 +323,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 1`] 
                   type="submit"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     Save
                   </div>
@@ -361,7 +361,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 2`] 
             type="button"
           >
             <div
-              class="flex items-center space-x-2"
+              class="flex items-center gap-2"
             >
               <div>
                 <div
@@ -507,7 +507,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 2`] 
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     Cancel
                   </div>
@@ -519,7 +519,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 2`] 
                   type="submit"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     Save
                   </div>
@@ -557,7 +557,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 3`] 
             type="button"
           >
             <div
-              class="flex items-center space-x-2"
+              class="flex items-center gap-2"
             >
               <div>
                 <div
@@ -703,7 +703,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 3`] 
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     Cancel
                   </div>
@@ -715,7 +715,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 3`] 
                   type="submit"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     Save
                   </div>
@@ -753,7 +753,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 4`] 
             type="button"
           >
             <div
-              class="flex items-center space-x-2"
+              class="flex items-center gap-2"
             >
               <div>
                 <div
@@ -899,7 +899,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 4`] 
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     Cancel
                   </div>
@@ -911,7 +911,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 4`] 
                   type="submit"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     Save
                   </div>
@@ -949,7 +949,7 @@ exports[`UpdateWalletName > should show error message when name consists only of
             type="button"
           >
             <div
-              class="flex items-center space-x-2"
+              class="flex items-center gap-2"
             >
               <div>
                 <div
@@ -1095,7 +1095,7 @@ exports[`UpdateWalletName > should show error message when name consists only of
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     Cancel
                   </div>
@@ -1107,7 +1107,7 @@ exports[`UpdateWalletName > should show error message when name consists only of
                   type="submit"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     Save
                   </div>
@@ -1145,7 +1145,7 @@ exports[`UpdateWalletName > should show error message when name exceeds 42 chara
             type="button"
           >
             <div
-              class="flex items-center space-x-2"
+              class="flex items-center gap-2"
             >
               <div>
                 <div
@@ -1291,7 +1291,7 @@ exports[`UpdateWalletName > should show error message when name exceeds 42 chara
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     Cancel
                   </div>
@@ -1303,7 +1303,7 @@ exports[`UpdateWalletName > should show error message when name exceeds 42 chara
                   type="submit"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     Save
                   </div>

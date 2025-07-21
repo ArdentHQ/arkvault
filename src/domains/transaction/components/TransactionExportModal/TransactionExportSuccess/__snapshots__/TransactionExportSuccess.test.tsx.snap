@@ -102,7 +102,7 @@ exports[`TransactionExportForm > should render in lg 1`] = `
         type="button"
       >
         <div
-          class="flex items-center space-x-2"
+          class="flex items-center gap-2"
         >
           Back
         </div>
@@ -113,7 +113,7 @@ exports[`TransactionExportForm > should render in lg 1`] = `
         type="button"
       >
         <div
-          class="flex items-center space-x-2"
+          class="flex items-center gap-2"
         >
           Download
         </div>
@@ -225,7 +225,7 @@ exports[`TransactionExportForm > should render in md 1`] = `
         type="button"
       >
         <div
-          class="flex items-center space-x-2"
+          class="flex items-center gap-2"
         >
           Back
         </div>
@@ -236,7 +236,7 @@ exports[`TransactionExportForm > should render in md 1`] = `
         type="button"
       >
         <div
-          class="flex items-center space-x-2"
+          class="flex items-center gap-2"
         >
           Download
         </div>
@@ -348,7 +348,7 @@ exports[`TransactionExportForm > should render in sm 1`] = `
         type="button"
       >
         <div
-          class="flex items-center space-x-2"
+          class="flex items-center gap-2"
         >
           Back
         </div>
@@ -359,7 +359,7 @@ exports[`TransactionExportForm > should render in sm 1`] = `
         type="button"
       >
         <div
-          class="flex items-center space-x-2"
+          class="flex items-center gap-2"
         >
           Download
         </div>
@@ -471,7 +471,7 @@ exports[`TransactionExportForm > should render in xl 1`] = `
         type="button"
       >
         <div
-          class="flex items-center space-x-2"
+          class="flex items-center gap-2"
         >
           Back
         </div>
@@ -482,7 +482,7 @@ exports[`TransactionExportForm > should render in xl 1`] = `
         type="button"
       >
         <div
-          class="flex items-center space-x-2"
+          class="flex items-center gap-2"
         >
           Download
         </div>
@@ -594,7 +594,7 @@ exports[`TransactionExportForm > should render in xs 1`] = `
         type="button"
       >
         <div
-          class="flex items-center space-x-2"
+          class="flex items-center gap-2"
         >
           Back
         </div>
@@ -605,7 +605,7 @@ exports[`TransactionExportForm > should render in xs 1`] = `
         type="button"
       >
         <div
-          class="flex items-center space-x-2"
+          class="flex items-center gap-2"
         >
           Download
         </div>
@@ -718,7 +718,7 @@ exports[`TransactionExportForm > should render warning if count is zero 1`] = `
         type="button"
       >
         <div
-          class="flex items-center space-x-2"
+          class="flex items-center gap-2"
         >
           Back
         </div>
@@ -730,7 +730,7 @@ exports[`TransactionExportForm > should render warning if count is zero 1`] = `
         type="button"
       >
         <div
-          class="flex items-center space-x-2"
+          class="flex items-center gap-2"
         >
           Download
         </div>

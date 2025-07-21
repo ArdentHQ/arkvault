@@ -18,8 +18,8 @@ Feature: Transaction Routing
         Then she is on the transfer page
         When she navigates to the transfer page via the navbar
 
-    @transactionRouting-delegateResignation
-    Scenario: Navigate to Delegate Resignation page
-        Given Alice is on a wallet details page for a delegate wallet
-        When she navigates to the delegate resignation page
-        Then she is on the delegate resignation page
+    @transactionRouting-validatorResignation
+    Scenario: Navigate to Validator Resignation page
+        Given Alice is on a wallet details page for a validator wallet
+        When she navigates to the validator resignation page
+        Then she is on the validator resignation page

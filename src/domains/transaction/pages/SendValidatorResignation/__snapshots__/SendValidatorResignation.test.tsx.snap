@@ -191,7 +191,7 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       <div
                         class="m-0 p-1"
@@ -245,7 +245,7 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       <div
                         class="m-0 p-1"
@@ -297,7 +297,7 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       <div
                         class="p-1"
@@ -349,7 +349,7 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       <div
                         class="p-1"
@@ -403,7 +403,7 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                       type="button"
                     >
                       <div
-                        class="flex items-center space-x-2"
+                        class="flex items-center gap-2"
                       >
                         <span
                           class="border-theme-warning-300 bg-theme-warning-50 text-theme-warning-600 dark:border-theme-danger-info-border dark:text-theme-danger-info-text rounded border-2 p-[3px] dark:bg-transparent"
@@ -486,38 +486,42 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     <div
-                      data-testid="HideBalance-icon-show"
+                      class="flex items-center justify-center"
                     >
                       <div
-                        style="height: 20px; width: 20px;"
+                        data-testid="HideBalance-icon-show"
                       >
-                        <svg
-                          id="eye"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          style="height: 20px; width: 20px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <svg
+                            id="eye"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <path
-                              d="M10 4.6c-3.2-.1-6.5 2.2-8.6 4.5-.5.5-.5 1.3 0 1.8 2 2.3 5.4 4.6 8.6 4.5 3.3-.1 6.5-2.3 8.6-4.5.5-.5.5-1.3 0-1.8-2.1-2.3-5.4-4.6-8.6-4.5z"
-                            />
-                            <path
-                              d="M13 10c0 1.7-1.3 3-3 3s-3-1.3-3-3 1.3-3 3-3c1.2 0 3 .7 3 3z"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M10 4.6c-3.2-.1-6.5 2.2-8.6 4.5-.5.5-.5 1.3 0 1.8 2 2.3 5.4 4.6 8.6 4.5 3.3-.1 6.5-2.3 8.6-4.5.5-.5.5-1.3 0-1.8-2.1-2.3-5.4-4.6-8.6-4.5z"
+                              />
+                              <path
+                                d="M13 10c0 1.7-1.3 3-3 3s-3-1.3-3-3 1.3-3 3-3c1.2 0 3 .7 3 3z"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                     </div>
                     <div
@@ -1265,7 +1269,7 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     Back
                   </div>
@@ -1276,7 +1280,7 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     Continue
                   </div>
@@ -1314,7 +1318,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
           type="button"
         >
           <div
-            class="flex items-center space-x-2"
+            class="flex items-center gap-2"
           >
             <div>
               <div
@@ -1354,7 +1358,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
           type="button"
         >
           <div
-            class="flex items-center space-x-2"
+            class="flex items-center gap-2"
           >
             <div>
               <div
@@ -1391,7 +1395,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
           type="button"
         >
           <div
-            class="flex items-center space-x-2"
+            class="flex items-center gap-2"
           >
             <div>
               <div
@@ -1606,7 +1610,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       <div
                         class="m-0 p-1"
@@ -1660,7 +1664,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       <div
                         class="m-0 p-1"
@@ -1712,7 +1716,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       <div
                         class="p-1"
@@ -1764,7 +1768,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       <div
                         class="p-1"
@@ -1818,7 +1822,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
                       type="button"
                     >
                       <div
-                        class="flex items-center space-x-2"
+                        class="flex items-center gap-2"
                       >
                         <span
                           class="border-theme-warning-300 bg-theme-warning-50 text-theme-warning-600 dark:border-theme-danger-info-border dark:text-theme-danger-info-text rounded border-2 p-[3px] dark:bg-transparent"
@@ -1901,38 +1905,42 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     <div
-                      data-testid="HideBalance-icon-show"
+                      class="flex items-center justify-center"
                     >
                       <div
-                        style="height: 20px; width: 20px;"
+                        data-testid="HideBalance-icon-show"
                       >
-                        <svg
-                          id="eye"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          style="height: 20px; width: 20px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <svg
+                            id="eye"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <path
-                              d="M10 4.6c-3.2-.1-6.5 2.2-8.6 4.5-.5.5-.5 1.3 0 1.8 2 2.3 5.4 4.6 8.6 4.5 3.3-.1 6.5-2.3 8.6-4.5.5-.5.5-1.3 0-1.8-2.1-2.3-5.4-4.6-8.6-4.5z"
-                            />
-                            <path
-                              d="M13 10c0 1.7-1.3 3-3 3s-3-1.3-3-3 1.3-3 3-3c1.2 0 3 .7 3 3z"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M10 4.6c-3.2-.1-6.5 2.2-8.6 4.5-.5.5-.5 1.3 0 1.8 2 2.3 5.4 4.6 8.6 4.5 3.3-.1 6.5-2.3 8.6-4.5.5-.5.5-1.3 0-1.8-2.1-2.3-5.4-4.6-8.6-4.5z"
+                              />
+                              <path
+                                d="M13 10c0 1.7-1.3 3-3 3s-3-1.3-3-3 1.3-3 3-3c1.2 0 3 .7 3 3z"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                     </div>
                     <div
@@ -2430,7 +2438,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     Back
                   </div>
@@ -2441,7 +2449,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     Continue
                   </div>
@@ -2479,7 +2487,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
           type="button"
         >
           <div
-            class="flex items-center space-x-2"
+            class="flex items-center gap-2"
           >
             <div>
               <div
@@ -2519,7 +2527,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
           type="button"
         >
           <div
-            class="flex items-center space-x-2"
+            class="flex items-center gap-2"
           >
             <div>
               <div
@@ -2556,7 +2564,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
           type="button"
         >
           <div
-            class="flex items-center space-x-2"
+            class="flex items-center gap-2"
           >
             <div>
               <div
@@ -2771,7 +2779,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       <div
                         class="m-0 p-1"
@@ -2825,7 +2833,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       <div
                         class="m-0 p-1"
@@ -2877,7 +2885,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       <div
                         class="p-1"
@@ -2929,7 +2937,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       <div
                         class="p-1"
@@ -2983,7 +2991,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                       type="button"
                     >
                       <div
-                        class="flex items-center space-x-2"
+                        class="flex items-center gap-2"
                       >
                         <span
                           class="border-theme-warning-300 bg-theme-warning-50 text-theme-warning-600 dark:border-theme-danger-info-border dark:text-theme-danger-info-text rounded border-2 p-[3px] dark:bg-transparent"
@@ -3066,38 +3074,42 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     <div
-                      data-testid="HideBalance-icon-show"
+                      class="flex items-center justify-center"
                     >
                       <div
-                        style="height: 20px; width: 20px;"
+                        data-testid="HideBalance-icon-show"
                       >
-                        <svg
-                          id="eye"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          style="height: 20px; width: 20px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <svg
+                            id="eye"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <path
-                              d="M10 4.6c-3.2-.1-6.5 2.2-8.6 4.5-.5.5-.5 1.3 0 1.8 2 2.3 5.4 4.6 8.6 4.5 3.3-.1 6.5-2.3 8.6-4.5.5-.5.5-1.3 0-1.8-2.1-2.3-5.4-4.6-8.6-4.5z"
-                            />
-                            <path
-                              d="M13 10c0 1.7-1.3 3-3 3s-3-1.3-3-3 1.3-3 3-3c1.2 0 3 .7 3 3z"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M10 4.6c-3.2-.1-6.5 2.2-8.6 4.5-.5.5-.5 1.3 0 1.8 2 2.3 5.4 4.6 8.6 4.5 3.3-.1 6.5-2.3 8.6-4.5.5-.5.5-1.3 0-1.8-2.1-2.3-5.4-4.6-8.6-4.5z"
+                              />
+                              <path
+                                d="M13 10c0 1.7-1.3 3-3 3s-3-1.3-3-3 1.3-3 3-3c1.2 0 3 .7 3 3z"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                     </div>
                     <div
@@ -3759,7 +3771,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     Back
                   </div>
@@ -3770,7 +3782,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     Continue
                   </div>
@@ -3808,7 +3820,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 3rd st
           type="button"
         >
           <div
-            class="flex items-center space-x-2"
+            class="flex items-center gap-2"
           >
             <div>
               <div
@@ -3848,7 +3860,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 3rd st
           type="button"
         >
           <div
-            class="flex items-center space-x-2"
+            class="flex items-center gap-2"
           >
             <div>
               <div
@@ -3885,7 +3897,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 3rd st
           type="button"
         >
           <div
-            class="flex items-center space-x-2"
+            class="flex items-center gap-2"
           >
             <div>
               <div
@@ -4100,7 +4112,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 3rd st
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       <div
                         class="m-0 p-1"
@@ -4154,7 +4166,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 3rd st
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       <div
                         class="m-0 p-1"
@@ -4206,7 +4218,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 3rd st
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       <div
                         class="p-1"
@@ -4258,7 +4270,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 3rd st
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       <div
                         class="p-1"
@@ -4312,7 +4324,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 3rd st
                       type="button"
                     >
                       <div
-                        class="flex items-center space-x-2"
+                        class="flex items-center gap-2"
                       >
                         <span
                           class="border-theme-warning-300 bg-theme-warning-50 text-theme-warning-600 dark:border-theme-danger-info-border dark:text-theme-danger-info-text rounded border-2 p-[3px] dark:bg-transparent"
@@ -4395,38 +4407,42 @@ exports[`SendValidatorResignation > Validator Resignation > should render 3rd st
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     <div
-                      data-testid="HideBalance-icon-show"
+                      class="flex items-center justify-center"
                     >
                       <div
-                        style="height: 20px; width: 20px;"
+                        data-testid="HideBalance-icon-show"
                       >
-                        <svg
-                          id="eye"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          style="height: 20px; width: 20px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <svg
+                            id="eye"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <path
-                              d="M10 4.6c-3.2-.1-6.5 2.2-8.6 4.5-.5.5-.5 1.3 0 1.8 2 2.3 5.4 4.6 8.6 4.5 3.3-.1 6.5-2.3 8.6-4.5.5-.5.5-1.3 0-1.8-2.1-2.3-5.4-4.6-8.6-4.5z"
-                            />
-                            <path
-                              d="M13 10c0 1.7-1.3 3-3 3s-3-1.3-3-3 1.3-3 3-3c1.2 0 3 .7 3 3z"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M10 4.6c-3.2-.1-6.5 2.2-8.6 4.5-.5.5-.5 1.3 0 1.8 2 2.3 5.4 4.6 8.6 4.5 3.3-.1 6.5-2.3 8.6-4.5.5-.5.5-1.3 0-1.8-2.1-2.3-5.4-4.6-8.6-4.5z"
+                              />
+                              <path
+                                d="M13 10c0 1.7-1.3 3-3 3s-3-1.3-3-3 1.3-3 3-3c1.2 0 3 .7 3 3z"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                     </div>
                     <div
@@ -4662,11 +4678,18 @@ exports[`SendValidatorResignation > Validator Resignation > should render 3rd st
                         class="relative flex h-full flex-1"
                       >
                         <input
+                          aria-hidden="true"
                           autocomplete="off"
-                          class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
+                          class="pointer-events-none absolute inset-0 border-0 bg-transparent p-0! font-mono ring-0 outline-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 text-sm! sm:text-base!"
+                          tabindex="-1"
+                          type="password"
+                        />
+                        <input
+                          autocomplete="off"
+                          class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! caret-theme-text no-selection-style font-mono text-transparent"
                           data-testid="AuthenticationStep__mnemonic"
                           name="mnemonic"
-                          type="password"
+                          type="text"
                         />
                       </div>
                       <div
@@ -4730,7 +4753,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 3rd st
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     Back
                   </div>
@@ -4742,7 +4765,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 3rd st
                   type="submit"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     <span>
                       Send
@@ -4806,7 +4829,7 @@ exports[`SendValidatorResignation > Validator Resignation > should show error st
           type="button"
         >
           <div
-            class="flex items-center space-x-2"
+            class="flex items-center gap-2"
           >
             <div>
               <div
@@ -4846,7 +4869,7 @@ exports[`SendValidatorResignation > Validator Resignation > should show error st
           type="button"
         >
           <div
-            class="flex items-center space-x-2"
+            class="flex items-center gap-2"
           >
             <div>
               <div
@@ -4883,7 +4906,7 @@ exports[`SendValidatorResignation > Validator Resignation > should show error st
           type="button"
         >
           <div
-            class="flex items-center space-x-2"
+            class="flex items-center gap-2"
           >
             <div>
               <div
@@ -5098,7 +5121,7 @@ exports[`SendValidatorResignation > Validator Resignation > should show error st
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       <div
                         class="m-0 p-1"
@@ -5152,7 +5175,7 @@ exports[`SendValidatorResignation > Validator Resignation > should show error st
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       <div
                         class="m-0 p-1"
@@ -5204,7 +5227,7 @@ exports[`SendValidatorResignation > Validator Resignation > should show error st
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       <div
                         class="p-1"
@@ -5256,7 +5279,7 @@ exports[`SendValidatorResignation > Validator Resignation > should show error st
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       <div
                         class="p-1"
@@ -5310,7 +5333,7 @@ exports[`SendValidatorResignation > Validator Resignation > should show error st
                       type="button"
                     >
                       <div
-                        class="flex items-center space-x-2"
+                        class="flex items-center gap-2"
                       >
                         <span
                           class="border-theme-warning-300 bg-theme-warning-50 text-theme-warning-600 dark:border-theme-danger-info-border dark:text-theme-danger-info-text rounded border-2 p-[3px] dark:bg-transparent"
@@ -5393,38 +5416,42 @@ exports[`SendValidatorResignation > Validator Resignation > should show error st
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     <div
-                      data-testid="HideBalance-icon-show"
+                      class="flex items-center justify-center"
                     >
                       <div
-                        style="height: 20px; width: 20px;"
+                        data-testid="HideBalance-icon-show"
                       >
-                        <svg
-                          id="eye"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          style="height: 20px; width: 20px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <svg
+                            id="eye"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <path
-                              d="M10 4.6c-3.2-.1-6.5 2.2-8.6 4.5-.5.5-.5 1.3 0 1.8 2 2.3 5.4 4.6 8.6 4.5 3.3-.1 6.5-2.3 8.6-4.5.5-.5.5-1.3 0-1.8-2.1-2.3-5.4-4.6-8.6-4.5z"
-                            />
-                            <path
-                              d="M13 10c0 1.7-1.3 3-3 3s-3-1.3-3-3 1.3-3 3-3c1.2 0 3 .7 3 3z"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M10 4.6c-3.2-.1-6.5 2.2-8.6 4.5-.5.5-.5 1.3 0 1.8 2 2.3 5.4 4.6 8.6 4.5 3.3-.1 6.5-2.3 8.6-4.5.5-.5.5-1.3 0-1.8-2.1-2.3-5.4-4.6-8.6-4.5z"
+                              />
+                              <path
+                                d="M13 10c0 1.7-1.3 3-3 3s-3-1.3-3-3 1.3-3 3-3c1.2 0 3 .7 3 3z"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                     </div>
                     <div
@@ -5661,7 +5688,7 @@ exports[`SendValidatorResignation > Validator Resignation > should show error st
                           >
                             <textarea
                               autocomplete="off"
-                              class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! min-h-[8rem] md:min-h-auto md:resize-y resize-none text-theme-secondary-text"
+                              class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! text-theme-secondary-text min-h-[8rem] md:min-h-auto md:resize-y resize-none"
                               data-testid="ErrorStep__errorMessage"
                               disabled=""
                               style="height: 4px;"
@@ -5736,7 +5763,7 @@ exports[`SendValidatorResignation > Validator Resignation > should show error st
                       type="button"
                     >
                       <div
-                        class="flex items-center space-x-2"
+                        class="flex items-center gap-2"
                       >
                         <div
                           class="whitespace-nowrap"
@@ -5751,7 +5778,7 @@ exports[`SendValidatorResignation > Validator Resignation > should show error st
                       type="button"
                     >
                       <div
-                        class="flex items-center space-x-2"
+                        class="flex items-center gap-2"
                       >
                         <div
                           class="whitespace-nowrap"
