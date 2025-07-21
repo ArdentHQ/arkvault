@@ -60,7 +60,7 @@ export const VoteTransactionType = ({
 
 				{voteCategory === "swap" && (
 					<>
-						<div className="flex w-full items-center justify-between sm:justify-start gap-4 sm:gap-0">
+						<div className="flex w-full items-center justify-between gap-4 sm:justify-start sm:gap-0">
 							<DetailTitle className="w-auto sm:min-w-[132px]">{t("COMMON.OLD_VALIDATOR")}</DetailTitle>
 
 							<Address
@@ -71,7 +71,7 @@ export const VoteTransactionType = ({
 							/>
 						</div>
 
-						<div className="flex w-full items-center justify-between sm:justify-start gap-4 sm:gap-0">
+						<div className="flex w-full items-center justify-between gap-4 sm:justify-start sm:gap-0">
 							<DetailTitle className="w-auto sm:min-w-[132px]">{t("COMMON.NEW_VALIDATOR")}</DetailTitle>
 
 							<Address
@@ -85,7 +85,7 @@ export const VoteTransactionType = ({
 				)}
 
 				{showValidatorField && (
-					<div className="flex w-full items-center justify-between sm:justify-start gap-4 sm:gap-0">
+					<div className="flex w-full items-center justify-between gap-4 sm:justify-start sm:gap-0">
 						<DetailTitle
 							className={cn("w-auto", {
 								"sm:min-w-[132px]": voteCategory === "swap",
