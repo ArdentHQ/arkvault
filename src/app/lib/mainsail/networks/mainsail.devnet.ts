@@ -30,7 +30,7 @@ const network: Networks.NetworkManifest = {
 			type: "tx",
 		},
 		{
-			host: "https://explorer-evm-test.mainsailhq.com",
+			host: "https://explorer-demo.mainsailhq.com",
 			type: "explorer",
 		},
 		{
@@ -43,9 +43,8 @@ const network: Networks.NetworkManifest = {
 	knownWallets:
 		"https://raw.githubusercontent.com/ArkEcosystem/common/master/mainsail/devnet/known-wallets-extended.json",
 	meta: {
-		chainId: 10_000,
-		// fastDelegateSync: true,
-		nethash: "c481dea3dcc13708364e576dff94dd499692b56cbc646d5acd22a3902297dd51",
+		chainId: 11812,
+		nethash: "560f869ed6713745a12328e7214cb65077e645bb5e57b1e5b323bb915a51f114",
 		slip44: 111,
 		wif: 186,
 	},

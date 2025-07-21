@@ -117,7 +117,7 @@ exports[`ValidatorRow > should emit action on select button 1`] = `
                 type="button"
               >
                 <div
-                  class="flex items-center space-x-2"
+                  class="flex items-center gap-2"
                 >
                   Select
                 </div>
@@ -248,7 +248,7 @@ exports[`ValidatorRow > should render 1`] = `
                 type="button"
               >
                 <div
-                  class="flex items-center space-x-2"
+                  class="flex items-center gap-2"
                 >
                   Select
                 </div>
@@ -424,7 +424,7 @@ exports[`ValidatorRow > should render changed style when network requires vote a
                 type="button"
               >
                 <div
-                  class="flex items-center space-x-2"
+                  class="flex items-center gap-2"
                 >
                   Changed
                 </div>
@@ -555,7 +555,7 @@ exports[`ValidatorRow > should render the selected validator 1`] = `
                 type="button"
               >
                 <div
-                  class="flex items-center space-x-2"
+                  class="flex items-center gap-2"
                 >
                   Selected
                 </div>
@@ -686,7 +686,7 @@ exports[`ValidatorRow > should render the selected vote 1`] = `
                 type="button"
               >
                 <div
-                  class="flex items-center space-x-2"
+                  class="flex items-center gap-2"
                 >
                   Current
                 </div>
@@ -806,7 +806,7 @@ exports[`ValidatorRow > should render the selected vote 1`] = `
                 type="button"
               >
                 <div
-                  class="flex items-center space-x-2"
+                  class="flex items-center gap-2"
                 >
                   Select
                 </div>
@@ -932,7 +932,7 @@ exports[`ValidatorRow > should render the selected vote 1`] = `
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     Select
                   </div>
@@ -1064,7 +1064,7 @@ exports[`ValidatorRow > should render the unselected vote 1`] = `
                 type="button"
               >
                 <div
-                  class="flex items-center space-x-2"
+                  class="flex items-center gap-2"
                 >
                   Unselected
                 </div>
@@ -1202,7 +1202,7 @@ exports[`ValidatorRow > should render when network requires vote amount 1`] = `
                     <input
                       aria-invalid="false"
                       autocomplete="off"
-                      class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! text-right focus:text-left pr-8 text-theme-secondary-text"
+                      class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! text-theme-secondary-text text-right focus:text-left pr-8"
                       data-testid="InputCurrency"
                       disabled=""
                       name="amount"
@@ -1241,7 +1241,7 @@ exports[`ValidatorRow > should render when network requires vote amount 1`] = `
                 type="button"
               >
                 <div
-                  class="flex items-center space-x-2"
+                  class="flex items-center gap-2"
                 >
                   Select
                 </div>

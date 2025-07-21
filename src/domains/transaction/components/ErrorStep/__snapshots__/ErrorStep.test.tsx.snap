@@ -104,7 +104,7 @@ exports[`ErrorStep > should display error details 1`] = `
             >
               <textarea
                 autocomplete="off"
-                class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! min-h-[8rem] md:min-h-auto md:resize-y resize-none text-theme-secondary-text"
+                class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! text-theme-secondary-text min-h-[8rem] md:min-h-auto md:resize-y resize-none"
                 data-testid="ErrorStep__errorMessage"
                 disabled=""
                 style="height: 4px;"
@@ -408,7 +408,7 @@ exports[`ErrorStep > should emit onBack 1`] = `
         type="button"
       >
         <div
-          class="flex items-center space-x-2"
+          class="flex items-center gap-2"
         >
           <div
             class="whitespace-nowrap"
@@ -652,7 +652,7 @@ exports[`ErrorStep > should emit onClose 1`] = `
         type="button"
       >
         <div
-          class="flex items-center space-x-2"
+          class="flex items-center gap-2"
         >
           <div
             class="whitespace-nowrap"

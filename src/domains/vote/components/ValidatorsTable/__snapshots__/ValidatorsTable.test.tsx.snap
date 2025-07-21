@@ -379,7 +379,7 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
                               type="button"
                             >
                               <div
-                                class="flex items-center space-x-2"
+                                class="flex items-center gap-2"
                               >
                                 Select
                               </div>
@@ -501,7 +501,7 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
                               type="button"
                             >
                               <div
-                                class="flex items-center space-x-2"
+                                class="flex items-center gap-2"
                               >
                                 Select
                               </div>
@@ -623,7 +623,7 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
                               type="button"
                             >
                               <div
-                                class="flex items-center space-x-2"
+                                class="flex items-center gap-2"
                               >
                                 Select
                               </div>
@@ -800,7 +800,7 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     Continue
                   </div>
@@ -1194,7 +1194,7 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
                               type="button"
                             >
                               <div
-                                class="flex items-center space-x-2"
+                                class="flex items-center gap-2"
                               >
                                 Unselected
                               </div>
@@ -1316,7 +1316,7 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
                               type="button"
                             >
                               <div
-                                class="flex items-center space-x-2"
+                                class="flex items-center gap-2"
                               >
                                 Select
                               </div>
@@ -1438,7 +1438,7 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
                               type="button"
                             >
                               <div
-                                class="flex items-center space-x-2"
+                                class="flex items-center gap-2"
                               >
                                 Select
                               </div>
@@ -1615,7 +1615,7 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     Continue
                   </div>
@@ -2009,7 +2009,7 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
                               type="button"
                             >
                               <div
-                                class="flex items-center space-x-2"
+                                class="flex items-center gap-2"
                               >
                                 Selected
                               </div>
@@ -2131,7 +2131,7 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
                               type="button"
                             >
                               <div
-                                class="flex items-center space-x-2"
+                                class="flex items-center gap-2"
                               >
                                 Select
                               </div>
@@ -2253,7 +2253,7 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
                               type="button"
                             >
                               <div
-                                class="flex items-center space-x-2"
+                                class="flex items-center gap-2"
                               >
                                 Select
                               </div>
@@ -2430,7 +2430,7 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     Continue
                   </div>
@@ -2824,7 +2824,7 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
                               type="button"
                             >
                               <div
-                                class="flex items-center space-x-2"
+                                class="flex items-center gap-2"
                               >
                                 Select
                               </div>
@@ -2946,7 +2946,7 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
                               type="button"
                             >
                               <div
-                                class="flex items-center space-x-2"
+                                class="flex items-center gap-2"
                               >
                                 Select
                               </div>
@@ -3068,7 +3068,7 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
                               type="button"
                             >
                               <div
-                                class="flex items-center space-x-2"
+                                class="flex items-center gap-2"
                               >
                                 Select
                               </div>
@@ -3245,7 +3245,7 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     Continue
                   </div>
@@ -3639,7 +3639,7 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
                               type="button"
                             >
                               <div
-                                class="flex items-center space-x-2"
+                                class="flex items-center gap-2"
                               >
                                 Unselected
                               </div>
@@ -3761,7 +3761,7 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
                               type="button"
                             >
                               <div
-                                class="flex items-center space-x-2"
+                                class="flex items-center gap-2"
                               >
                                 Selected
                               </div>
@@ -3887,7 +3887,7 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
                                 type="button"
                               >
                                 <div
-                                  class="flex items-center space-x-2"
+                                  class="flex items-center gap-2"
                                 >
                                   Select
                                 </div>
@@ -4065,7 +4065,7 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     Continue
                   </div>
@@ -4459,7 +4459,7 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
                               type="button"
                             >
                               <div
-                                class="flex items-center space-x-2"
+                                class="flex items-center gap-2"
                               >
                                 Selected
                               </div>
@@ -4581,7 +4581,7 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
                               type="button"
                             >
                               <div
-                                class="flex items-center space-x-2"
+                                class="flex items-center gap-2"
                               >
                                 Select
                               </div>
@@ -4703,7 +4703,7 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
                               type="button"
                             >
                               <div
-                                class="flex items-center space-x-2"
+                                class="flex items-center gap-2"
                               >
                                 Select
                               </div>
@@ -4880,7 +4880,7 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     Continue
                   </div>
@@ -5372,7 +5372,7 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
                               type="button"
                             >
                               <div
-                                class="flex items-center space-x-2"
+                                class="flex items-center gap-2"
                               >
                                 Current
                               </div>
@@ -5501,7 +5501,7 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
                                   <input
                                     aria-invalid="false"
                                     autocomplete="off"
-                                    class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! text-right focus:text-left pr-8 text-theme-secondary-text"
+                                    class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! text-theme-secondary-text text-right focus:text-left pr-8"
                                     data-testid="InputCurrency"
                                     disabled=""
                                     name="amount"
@@ -5540,7 +5540,7 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
                               type="button"
                             >
                               <div
-                                class="flex items-center space-x-2"
+                                class="flex items-center gap-2"
                               >
                                 Select
                               </div>
@@ -5669,7 +5669,7 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
                                   <input
                                     aria-invalid="false"
                                     autocomplete="off"
-                                    class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! text-right focus:text-left pr-8 text-theme-secondary-text"
+                                    class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! text-theme-secondary-text text-right focus:text-left pr-8"
                                     data-testid="InputCurrency"
                                     disabled=""
                                     name="amount"
@@ -5708,7 +5708,7 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
                               type="button"
                             >
                               <div
-                                class="flex items-center space-x-2"
+                                class="flex items-center gap-2"
                               >
                                 Select
                               </div>
@@ -5906,7 +5906,7 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     Continue
                   </div>
@@ -6300,7 +6300,7 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
                               type="button"
                             >
                               <div
-                                class="flex items-center space-x-2"
+                                class="flex items-center gap-2"
                               >
                                 Unselected
                               </div>
@@ -6422,7 +6422,7 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
                               type="button"
                             >
                               <div
-                                class="flex items-center space-x-2"
+                                class="flex items-center gap-2"
                               >
                                 Selected
                               </div>
@@ -6548,7 +6548,7 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
                                 type="button"
                               >
                                 <div
-                                  class="flex items-center space-x-2"
+                                  class="flex items-center gap-2"
                                 >
                                   Select
                                 </div>
@@ -6726,7 +6726,7 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     Continue
                   </div>
@@ -7120,7 +7120,7 @@ exports[`ValidatorsTable > should select multiple validators to unvote/vote 1`] 
                               type="button"
                             >
                               <div
-                                class="flex items-center space-x-2"
+                                class="flex items-center gap-2"
                               >
                                 Unselected
                               </div>
@@ -7242,7 +7242,7 @@ exports[`ValidatorsTable > should select multiple validators to unvote/vote 1`] 
                               type="button"
                             >
                               <div
-                                class="flex items-center space-x-2"
+                                class="flex items-center gap-2"
                               >
                                 Selected
                               </div>
@@ -7364,7 +7364,7 @@ exports[`ValidatorsTable > should select multiple validators to unvote/vote 1`] 
                               type="button"
                             >
                               <div
-                                class="flex items-center space-x-2"
+                                class="flex items-center gap-2"
                               >
                                 Selected
                               </div>
@@ -7541,7 +7541,7 @@ exports[`ValidatorsTable > should select multiple validators to unvote/vote 1`] 
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     Continue
                   </div>
@@ -7935,7 +7935,7 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
                               type="button"
                             >
                               <div
-                                class="flex items-center space-x-2"
+                                class="flex items-center gap-2"
                               >
                                 Current
                               </div>
@@ -8057,7 +8057,7 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
                               type="button"
                             >
                               <div
-                                class="flex items-center space-x-2"
+                                class="flex items-center gap-2"
                               >
                                 Select
                               </div>
@@ -8179,7 +8179,7 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
                               type="button"
                             >
                               <div
-                                class="flex items-center space-x-2"
+                                class="flex items-center gap-2"
                               >
                                 Select
                               </div>
@@ -8357,7 +8357,7 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     Continue
                   </div>

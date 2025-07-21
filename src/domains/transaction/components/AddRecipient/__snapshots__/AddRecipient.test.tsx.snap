@@ -276,7 +276,7 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       Send All
                     </div>
@@ -612,7 +612,7 @@ exports[`AddRecipient > should render 1`] = `
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       Send All
                     </div>
@@ -933,7 +933,7 @@ exports[`AddRecipient > should render with empty array of recipients as default 
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       Send All
                     </div>
@@ -1254,7 +1254,7 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       Send All
                     </div>
@@ -1591,7 +1591,7 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       Send All
                     </div>
@@ -1844,7 +1844,7 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       Send All
                     </div>
@@ -2165,7 +2165,7 @@ exports[`AddRecipient > should set available amount 1`] = `
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       Send All
                     </div>
@@ -2465,7 +2465,7 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
                     type="button"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-2"
                     >
                       Send All
                     </div>

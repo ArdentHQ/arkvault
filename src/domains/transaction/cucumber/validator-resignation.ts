@@ -3,14 +3,14 @@ import { Selector } from "testcafe";
 import { buildTranslations } from "../../../app/i18n/helpers";
 import { cucumber, MNEMONICS, mockRequest, visitWelcomeScreen } from "../../../utils/e2e-utils";
 import { goToProfile } from "../../profile/e2e/common";
-import { importWallet } from "../../wallet/e2e/common";
+import { importWallet } from "../../portfolio/e2e/common";
 import { goToValidatorResignationPage } from "../e2e/common";
 
 const translations = buildTranslations();
 const sendButton = Selector("button").withText(translations.COMMON.SEND);
 
 const validatorFormStep = {
-	"Given Alice has navigated to the delegate resignation form for a wallet": async (t: TestController) => {
+	"Given Alice has navigated to the validator resignation form for a wallet": async (t: TestController) => {
 		await visitWelcomeScreen(t);
 		await goToProfile(t);
 		await importWallet(t, MNEMONICS[0]);
@@ -38,41 +38,47 @@ cucumber(
 		mockRequest(
 			{
 				method: "POST",
-				url: "https://ark-test.arkvault.io/api/transactions",
+				url: "https://dwallets-evm.mainsailhq.com/tx/api/transactions",
 			},
 			{
 				data: {
-					accept: ["transaction-id"],
-					broadcast: ["transaction-id"],
+					accept: [0],
+					broadcast: [0],
 					excess: [],
 					invalid: [],
 				},
 			},
 		),
-		mockRequest("https://ark-test.arkvault.io/api/wallets/DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr", {
+		mockRequest("https://dwallets-evm.mainsailhq.com/api/wallets/0x659A76be283644AEc2003aa8ba26485047fd1BFB", {
 			data: {
-				address: "DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
+				address: "0x659A76be283644AEc2003aa8ba26485047fd1BFB",
+				publicKey: "027b320c5429334ecf846122492d12b898a756bf1347aa61f7bf1dcd706315a9fb",
+				balance: "860689411509380000000000",
+				nonce: "0",
 				attributes: {
-					delegate: {
-						username: "testwallet",
+					vote: "0xe5a97E663158dEaF3b65bBF88897b8359Dc19F81",
+					isLegacy: true,
+					username: "genesis_31",
+					validatorFee: "0",
+					validatorRank: 1,
+					validatorApproval: 0.0081,
+					validatorResigned: false,
+					validatorLastBlock: {
+						hash: "f564b7592a73cc5789343c8cd66a880228b5f47a2941bd4b77cb7bf40c5720a5",
+						number: 21713937,
+						timestamp: 1752583636382,
 					},
+					validatorPublicKey:
+						"91ff20e1aee92c4e6febc1f7e1e55355d182812536055afb6a1bab300387580707bc0536e9d994e84fe58be8513e2550",
+					validatorForgedFees: "2205000000000000",
+					validatorForgedTotal: "2205000000000000",
+					validatorVoteBalance: "1367063918905780000000000",
+					validatorVotersCount: 22,
+					validatorProducedBlocks: 1031,
 				},
-				balance: "10000000000",
-				isValidator: true,
-				isResigned: false,
-				nonce: "1",
-				publicKey: "03d3fdad9c5b25bf8880e6b519eb3611a5c0b31adebc8455f0e096175b28321aff",
+				updated_at: "21713937",
 			},
 		}),
-		mockRequest(
-			{
-				method: "GET",
-				url: "https://ark-test.arkvault.io/api/transactions/cb5b0aee8240c965984d7fc5c4a4b637f127f6c356ee4b70363679011cd5291a",
-			},
-			{
-				data: {},
-			},
-		),
 	],
 );
 cucumber(
@@ -95,33 +101,34 @@ cucumber(
 		},
 	},
 	[
-		mockRequest(
-			{
-				method: "POST",
-				url: "https://ark-test.arkvault.io/api/transactions",
-			},
-			{
-				data: {
-					accept: ["transaction-id"],
-					broadcast: ["transaction-id"],
-					excess: [],
-					invalid: [],
-				},
-			},
-		),
-		mockRequest("https://ark-test.arkvault.io/api/wallets/DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr", {
+		mockRequest("https://dwallets-evm.mainsailhq.com/api/wallets/0x659A76be283644AEc2003aa8ba26485047fd1BFB", {
 			data: {
-				address: "DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
+				address: "0x659A76be283644AEc2003aa8ba26485047fd1BFB",
+				publicKey: "027b320c5429334ecf846122492d12b898a756bf1347aa61f7bf1dcd706315a9fb",
+				balance: "860689411509380000000000",
+				nonce: "0",
 				attributes: {
-					delegate: {
-						username: "testwallet",
+					vote: "0xe5a97E663158dEaF3b65bBF88897b8359Dc19F81",
+					isLegacy: true,
+					username: "genesis_31",
+					validatorFee: "0",
+					validatorRank: 1,
+					validatorApproval: 0.0081,
+					validatorResigned: false,
+					validatorLastBlock: {
+						hash: "f564b7592a73cc5789343c8cd66a880228b5f47a2941bd4b77cb7bf40c5720a5",
+						number: 21713937,
+						timestamp: 1752583636382,
 					},
+					validatorPublicKey:
+						"91ff20e1aee92c4e6febc1f7e1e55355d182812536055afb6a1bab300387580707bc0536e9d994e84fe58be8513e2550",
+					validatorForgedFees: "2205000000000000",
+					validatorForgedTotal: "2205000000000000",
+					validatorVoteBalance: "1367063918905780000000000",
+					validatorVotersCount: 22,
+					validatorProducedBlocks: 1031,
 				},
-				balance: "10000000000",
-				isValidator: true,
-				isResigned: false,
-				nonce: "1",
-				publicKey: "03d3fdad9c5b25bf8880e6b519eb3611a5c0b31adebc8455f0e096175b28321aff",
+				updated_at: "21713937",
 			},
 		}),
 	],

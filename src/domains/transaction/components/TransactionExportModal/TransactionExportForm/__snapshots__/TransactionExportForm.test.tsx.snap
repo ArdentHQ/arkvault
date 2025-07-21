@@ -568,7 +568,7 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
         type="button"
       >
         <div
-          class="flex items-center space-x-2"
+          class="flex items-center gap-2"
         >
           Cancel
         </div>
@@ -579,7 +579,7 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
         type="submit"
       >
         <div
-          class="flex items-center space-x-2"
+          class="flex items-center gap-2"
         >
           Export
         </div>
@@ -1111,7 +1111,7 @@ exports[`TransactionExportForm > should render in lg 1`] = `
         type="button"
       >
         <div
-          class="flex items-center space-x-2"
+          class="flex items-center gap-2"
         >
           Cancel
         </div>
@@ -1122,7 +1122,7 @@ exports[`TransactionExportForm > should render in lg 1`] = `
         type="submit"
       >
         <div
-          class="flex items-center space-x-2"
+          class="flex items-center gap-2"
         >
           Export
         </div>
@@ -1654,7 +1654,7 @@ exports[`TransactionExportForm > should render in md 1`] = `
         type="button"
       >
         <div
-          class="flex items-center space-x-2"
+          class="flex items-center gap-2"
         >
           Cancel
         </div>
@@ -1665,7 +1665,7 @@ exports[`TransactionExportForm > should render in md 1`] = `
         type="submit"
       >
         <div
-          class="flex items-center space-x-2"
+          class="flex items-center gap-2"
         >
           Export
         </div>
@@ -2197,7 +2197,7 @@ exports[`TransactionExportForm > should render in sm 1`] = `
         type="button"
       >
         <div
-          class="flex items-center space-x-2"
+          class="flex items-center gap-2"
         >
           Cancel
         </div>
@@ -2208,7 +2208,7 @@ exports[`TransactionExportForm > should render in sm 1`] = `
         type="submit"
       >
         <div
-          class="flex items-center space-x-2"
+          class="flex items-center gap-2"
         >
           Export
         </div>
@@ -2740,7 +2740,7 @@ exports[`TransactionExportForm > should render in xl 1`] = `
         type="button"
       >
         <div
-          class="flex items-center space-x-2"
+          class="flex items-center gap-2"
         >
           Cancel
         </div>
@@ -2751,7 +2751,7 @@ exports[`TransactionExportForm > should render in xl 1`] = `
         type="submit"
       >
         <div
-          class="flex items-center space-x-2"
+          class="flex items-center gap-2"
         >
           Export
         </div>
@@ -3282,7 +3282,7 @@ exports[`TransactionExportForm > should render in xs 1`] = `
         type="button"
       >
         <div
-          class="flex items-center space-x-2"
+          class="flex items-center gap-2"
         >
           Cancel
         </div>
@@ -3293,7 +3293,7 @@ exports[`TransactionExportForm > should render in xs 1`] = `
         type="submit"
       >
         <div
-          class="flex items-center space-x-2"
+          class="flex items-center gap-2"
         >
           Export
         </div>

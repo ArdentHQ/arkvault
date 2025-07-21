@@ -138,7 +138,7 @@ exports[`SuccessStep > should render (lg) 1`] = `
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     <div>
                       <div
@@ -319,7 +319,7 @@ exports[`SuccessStep > should render (xs) 1`] = `
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     <div>
                       <div

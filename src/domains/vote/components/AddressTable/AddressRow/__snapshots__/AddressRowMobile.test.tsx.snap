@@ -41,7 +41,7 @@ exports[`AddressRowMobile > should emit action on select button 1`] = `
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     Vote
                   </div>
@@ -92,7 +92,7 @@ exports[`AddressRowMobile > should emit action on select button 1`] = `
                         class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500 flex w-full items-center text-sm"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
-                        href="https://explorer-evm-test.mainsailhq.com/addresses/0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2"
+                        href="https://explorer-demo.mainsailhq.com/addresses/0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2"
                         rel="noopener noreferrer"
                       >
                         <span
@@ -210,7 +210,7 @@ exports[`AddressRowMobile > should render in 375 screen width 1`] = `
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     Vote
                   </div>
@@ -378,7 +378,7 @@ exports[`AddressRowMobile > should render in 420 screen width 1`] = `
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     Vote
                   </div>
@@ -546,7 +546,7 @@ exports[`AddressRowMobile > should render when the maximum votes is greater than
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     Vote
                   </div>
@@ -713,7 +713,7 @@ exports[`AddressRowMobile > should render when the wallet has many votes 1`] = `
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     Vote
                   </div>
@@ -880,7 +880,7 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     Vote
                   </div>
@@ -931,7 +931,7 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                         class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500 flex w-full items-center text-sm"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
-                        href="https://explorer-evm-test.mainsailhq.com/addresses/0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2"
+                        href="https://explorer-demo.mainsailhq.com/addresses/0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2"
                         rel="noopener noreferrer"
                       >
                         <span
@@ -1028,7 +1028,7 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     Vote
                   </div>
@@ -1142,7 +1142,7 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     Vote
                   </div>
@@ -1193,7 +1193,7 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                         class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500 flex w-full items-center text-sm"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
-                        href="https://explorer-evm-test.mainsailhq.com/addresses/0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2"
+                        href="https://explorer-demo.mainsailhq.com/addresses/0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2"
                         rel="noopener noreferrer"
                       >
                         <span
@@ -1290,7 +1290,7 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     Vote
                   </div>
@@ -1395,7 +1395,7 @@ exports[`AddressRowMobile > should render when wallet not loaded 1`] = `
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     Vote
                   </div>
@@ -1510,7 +1510,7 @@ exports[`AddressRowMobile > should render with active validator 1`] = `
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     Vote
                   </div>
@@ -1677,7 +1677,7 @@ exports[`AddressRowMobile > should render with resigned validator 1`] = `
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     Vote
                   </div>
@@ -1844,7 +1844,7 @@ exports[`AddressRowMobile > should render with standby validator 1`] = `
                   type="button"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="flex items-center gap-2"
                   >
                     Vote
                   </div>
