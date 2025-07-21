@@ -4,22 +4,18 @@ import { AbstractSignatory } from "./abstract.signatory";
 import { AbstractDoubleSignatory } from "./abstract-double.signatory";
 import { ConfirmationMnemonicSignatory } from "./confirmation-mnemonic.signatory";
 import { ConfirmationSecretSignatory } from "./confirmation-secret.signatory";
-import { ConfirmationWIFSignatory } from "./confirmation-wif.signatory";
 import { ForbiddenMethodCallException } from "./exceptions";
 import { LedgerSignatory } from "./ledger.signatory";
 import { MnemonicSignatory } from "./mnemonic.signatory";
 import { SecretSignatory } from "./secret.signatory";
 import { IdentityOptions } from "./services";
-import { WIFSignatory } from "./wif.signatory";
 
 type SignatoryType =
 	| ConfirmationMnemonicSignatory
 	| ConfirmationSecretSignatory
-	| ConfirmationWIFSignatory
 	| LedgerSignatory
 	| MnemonicSignatory
-	| SecretSignatory
-	| WIFSignatory;
+	| SecretSignatory;
 
 export class Signatory {
 	readonly #signatory: SignatoryType;
@@ -39,10 +35,6 @@ export class Signatory {
 		}
 
 		if (this.#signatory instanceof ConfirmationSecretSignatory) {
-			return this.#signatory.confirmKey();
-		}
-
-		if (this.#signatory instanceof ConfirmationWIFSignatory) {
 			return this.#signatory.confirmKey();
 		}
 

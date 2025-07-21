@@ -6,12 +6,10 @@ import { IdentityOptions } from "@/app/lib/mainsail/shared.contract";
 import {
 	ConfirmationMnemonicSignatory,
 	ConfirmationSecretSignatory,
-	ConfirmationWIFSignatory,
 	LedgerSignatory,
 	MnemonicSignatory,
 	SecretSignatory,
 	Signatory,
-	WIFSignatory,
 } from "@/app/lib/mainsail/signatories";
 
 import { AddressService } from "./address.service";
@@ -43,32 +41,6 @@ export class SignatoryService {
 				address: this.#addressService.fromMnemonic(signingKey).address,
 				confirmKey,
 				publicKey: this.#publicKeyService.fromMnemonic(signingKey).publicKey,
-				signingKey,
-			}),
-		);
-	}
-
-	public async wif(primary: string, options?: IdentityOptions): Promise<Signatory> {
-		return new Signatory(
-			new WIFSignatory({
-				address: this.#addressService.fromWIF(primary).address,
-				options,
-				publicKey: (await this.#publicKeyService.fromWIF(primary)).publicKey,
-				signingKey: primary,
-			}),
-		);
-	}
-
-	public async confirmationWIF(
-		signingKey: string,
-		confirmKey: string,
-		options?: IdentityOptions,
-	): Promise<Signatory> {
-		return new Signatory(
-			new ConfirmationWIFSignatory({
-				address: this.#addressService.fromWIF(signingKey).address,
-				confirmKey,
-				publicKey: (await this.#publicKeyService.fromWIF(signingKey)).publicKey,
 				signingKey,
 			}),
 		);

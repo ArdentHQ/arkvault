@@ -1,7 +1,6 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
 import { AddressService } from "./address.service";
 import { MAINSAIL_MNEMONICS } from "@/utils/testing-library";
-import { PrivateKey as PrivateKeyService } from "@arkecosystem/typescript-crypto";
 
 describe("AddressService", () => {
 	let addressService: AddressService;
@@ -69,23 +68,6 @@ describe("AddressService", () => {
 			expect(() => addressService.fromSecret(MAINSAIL_MNEMONICS[0])).toThrow(
 				"The given value is BIP39 compliant. Please use [fromMnemonic] instead.",
 			);
-		});
-	});
-
-	describe("fromWIF", () => {
-		it("should return address from a WIF", () => {
-			const fromWifMock = vi
-				.spyOn(PrivateKeyService, "fromWif")
-				.mockReturnValue({ privateKey: "cbf4b9f70470856bb4f40f80b87edb90865997ffee6df315ab166d713af433a5" });
-
-			const mockWif = "S9q9B5EUjVSFxKxGeJ7SG69YgCiGFfS29r5ZhfoSKZ2ALbPMyFoL";
-			const result = addressService.fromWIF(mockWif);
-
-			expect(result).toEqual({
-				address: "0x0DDBAeF36273c81e4fB9Fe48A36D68C45442c4e6",
-				type: "bip39",
-			});
-			fromWifMock.mockRestore();
 		});
 	});
 

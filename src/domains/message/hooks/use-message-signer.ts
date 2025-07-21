@@ -61,11 +61,7 @@ const sign = async (
 				return wallet.signatory().mnemonic(signingKey);
 			}
 
-			if (wallet.actsWithSecretWithEncryption()) {
-				return wallet.signatory().secret(signingKey);
-			}
-
-			return wallet.signatory().wif(signingKey);
+			return wallet.signatory().secret(signingKey);
 		}
 	};
 
