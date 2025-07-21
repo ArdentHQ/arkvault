@@ -23,7 +23,7 @@ import { assertString } from "@/utils/assertions";
 import { useLink } from "@/app/hooks/use-link";
 import { ProfilePaths } from "@/router/paths";
 import { Size } from "@/types";
-import { Logo } from "@/app/components/Logo";
+import { Logo, LogoAlpha } from "@/app/components/Logo";
 import { useZendesk } from "@/app/contexts/Zendesk";
 import { twMerge } from "tailwind-merge";
 import { HideBalance } from "@/app/components/NavigationBar/components/HideBalance/HideBalance";
@@ -61,6 +61,7 @@ const NavigationBarLogo: React.FC<NavigationBarLogoOnlyProperties> = ({
 }: NavigationBarLogoOnlyProperties) => {
 	const navigate = useNavigate();
 	const { isXs } = useBreakpoint();
+	const { t } = useTranslation()
 
 	const getLogoHeight = () => {
 		if (variant === "default") {
@@ -72,21 +73,11 @@ const NavigationBarLogo: React.FC<NavigationBarLogoOnlyProperties> = ({
 
 	return (
 		<div className="my-auto flex h-12 items-center">
-			<button
-				data-testid="NavigationBarLogo--button"
-				type="button"
-				className={cn(
-					"bg-theme-primary-600 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 my-auto flex cursor-pointer items-center justify-center text-white outline-hidden focus:ring-2 focus:outline-hidden",
-					{
-						"h-11 w-11 rounded-xl": variant === "logo-only" && !isXs,
-						"h-6 w-6 rounded": variant === "default",
-						"h-8 w-8 rounded": variant === "logo-only" && isXs,
-					},
-				)}
+			<LogoAlpha
+				height={getLogoHeight()}
+				variant={variant}
 				onClick={() => (onClick ? onClick() : navigate("/"))}
-			>
-				<Logo height={getLogoHeight()} />
-			</button>
+			/>
 
 			{title && <span className="ml-4 text-lg leading-[21px] uppercase">{title}</span>}
 		</div>

@@ -18,6 +18,7 @@ export const translations = {
 		WARNING: "Warning",
 	},
 	ALL: "All",
+	ALPHA: "ALPHA",
 	AMOUNT: "Amount",
 	AMOUNT_PLACEHOLDER: "Enter an amount",
 	AND: "and",
