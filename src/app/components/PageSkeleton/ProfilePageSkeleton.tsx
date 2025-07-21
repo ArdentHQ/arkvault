@@ -14,7 +14,7 @@ export const ProfilePageSkeleton: React.FC = () => (
 		<div className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-b-theme-dim-700 sticky inset-x-0 top-0 border-b">
 			<div className="relative flex h-12 items-center">
 				<div className="flex flex-1 justify-between px-6 sm:ml-7 sm:px-8">
-					<LogoAlpha height={16} variant="default"/>
+					<LogoAlpha height={16} variant="default" />
 
 					<div className="flex">
 						<div className="my-auto flex items-center space-x-4 sm:hidden">

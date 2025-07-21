@@ -23,7 +23,7 @@ import { assertString } from "@/utils/assertions";
 import { useLink } from "@/app/hooks/use-link";
 import { ProfilePaths } from "@/router/paths";
 import { Size } from "@/types";
-import { Logo, LogoAlpha } from "@/app/components/Logo";
+import { LogoAlpha } from "@/app/components/Logo";
 import { useZendesk } from "@/app/contexts/Zendesk";
 import { twMerge } from "tailwind-merge";
 import { HideBalance } from "@/app/components/NavigationBar/components/HideBalance/HideBalance";
@@ -61,7 +61,6 @@ const NavigationBarLogo: React.FC<NavigationBarLogoOnlyProperties> = ({
 }: NavigationBarLogoOnlyProperties) => {
 	const navigate = useNavigate();
 	const { isXs } = useBreakpoint();
-	const { t } = useTranslation()
 
 	const getLogoHeight = () => {
 		if (variant === "default") {

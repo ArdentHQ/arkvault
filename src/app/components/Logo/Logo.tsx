@@ -13,9 +13,17 @@ export const Logo = ({ height }: { height?: number }) => (
 	</span>
 );
 
-export const LogoAlpha = ({ height, onClick, variant }: { height?: number, onClick?: () => void, variant?: NavbarVariant | "default" }) => {
-	const { t } = useTranslation()
-	const { isXs } = useBreakpoint()
+export const LogoAlpha = ({
+	height,
+	onClick,
+	variant,
+}: {
+	height?: number;
+	onClick?: () => void;
+	variant?: NavbarVariant | "default";
+}) => {
+	const { t } = useTranslation();
+	const { isXs } = useBreakpoint();
 
 	return (
 		<div className="flex items-center space-x-[2px]">
@@ -35,15 +43,20 @@ export const LogoAlpha = ({ height, onClick, variant }: { height?: number, onCli
 				<Logo height={height} />
 			</button>
 
-			<div className={cn("py-[0.313rem] px-2 bg-theme- dark:bg-theme-dark-navy-900 dark:text-theme-dark-navy-300 dim:bg-theme-dim-navy-900 dim:text-theme-dim-navy-300 bg-theme-navy-100 text-theme-navy-600 font-semibold text-xs text-center leading-[0.938rem] flex items-center",
-				{
-					"h-11 rounded-xl rounded-l-none": variant === "logo-only" && !isXs,
-					"h-6 rounded rounded-l-none": variant === "default",
-					"h-8 rounded rounded-l-none": variant === "logo-only" && isXs,
-				},
-			)}>{t("COMMON.ALPHA")}</div>
+			<div
+				className={cn(
+					"bg-theme- dark:bg-theme-dark-navy-900 dark:text-theme-dark-navy-300 dim:bg-theme-dim-navy-900 dim:text-theme-dim-navy-300 bg-theme-navy-100 text-theme-navy-600 flex items-center px-2 py-[0.313rem] text-center text-xs leading-[0.938rem] font-semibold",
+					{
+						"h-11 rounded-xl rounded-l-none": variant === "logo-only" && !isXs,
+						"h-6 rounded rounded-l-none": variant === "default",
+						"h-8 rounded rounded-l-none": variant === "logo-only" && isXs,
+					},
+				)}
+			>
+				{t("COMMON.ALPHA")}
+			</div>
 		</div>
-	)
+	);
 };
 
 Logo.displayName = "Logo";
