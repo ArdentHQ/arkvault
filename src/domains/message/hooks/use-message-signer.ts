@@ -4,6 +4,7 @@ import { Contracts as ProfileContracts } from "@/app/lib/profiles";
 const signWithLedger = async (message: string, wallet: ProfileContracts.IReadWriteWallet) => {
 	const path = wallet.data().get<string>(ProfileContracts.WalletData.DerivationPath);
 
+	await wallet.ledger().connect();
 	const signatory = await wallet.ledger().getExtendedPublicKey(path!);
 	const signature = await wallet.ledger().signMessage(path!, message);
 
