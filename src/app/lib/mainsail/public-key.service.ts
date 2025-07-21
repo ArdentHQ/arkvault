@@ -21,12 +21,6 @@ export class PublicKeyService {
 		};
 	}
 
-	// @TODO: Implement
-	// eslint-disable-next-line @typescript-eslint/no-unused-vars
-	public fromWIF(wif: string): Promise<Services.PublicKeyDataTransferObject> {
-		throw new Exceptions.NotImplemented(this.constructor.name, this.fromWIF.name);
-	}
-
 	public verifyPublicKeyWithBLS(publicKey: string): boolean {
 		return Bls.verify(publicKey);
 	}
