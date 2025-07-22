@@ -4,7 +4,7 @@ import { defineConfig } from "vitest/config";
 import viteConfig from "./vite.config";
 import svgr from "vite-plugin-svgr";
 import { VitePWA } from "vite-plugin-pwa";
-import pkg from './package.json'
+import pkg from "./package.json";
 
 const coverageThresholdLines = Number(process.env.COVERAGE_THRESHOLD_LINES || 100);
 const coverageThresholdFunctions = Number(process.env.COVERAGE_THRESHOLD_FUNCTIONS || 100);
@@ -18,7 +18,7 @@ export default defineConfig(async (env) => {
 		viteConfig(env),
 		defineConfig({
 			define: {
-				'process.env.APP_VERSION': JSON.stringify(pkg.version),
+				"process.env.APP_VERSION": JSON.stringify(pkg.version),
 			},
 			test: {
 				css: false,
