@@ -2,7 +2,7 @@ import { describe, it, expect, beforeEach, afterEach, vi } from "vitest";
 import { http, HttpResponse } from "msw";
 import { server, requestMock } from "@/tests/mocks/server";
 import { ClientService } from "./client.service";
-import { Transactions, EVM } from "@arkecosystem/typescript-client";
+import { Transactions, EVM, Wallets, Validators } from "@arkecosystem/typescript-client";
 
 const validAddress = `0x${"a".repeat(40)}`;
 
@@ -80,6 +80,24 @@ describe("ClientService", () => {
 		expect(txs.items()).toHaveLength(1);
 	});
 
+	it("should fetch transactions with custom limit and page", async () => {
+		server.use(
+			http.get(/http:\/\/localhost\/transactions.*/, ({ request }) => {
+				const url = new URL(request.url);
+				if (url.searchParams.get("page") === "2" && url.searchParams.get("limit") === "5") {
+					return HttpResponse.json({
+						data: [transactionMockData],
+						meta: { last: "page=2", next: null, previous: null, self: "page=2" },
+					});
+				}
+				return HttpResponse.json({ data: [], meta: {} });
+			}),
+		);
+		const txs = await clientService.transactions({ limit: 5, page: 2 });
+		expect(txs).toBeDefined();
+		expect(txs.items()).toHaveLength(1);
+	});
+
 	it("should fetch a wallet", async () => {
 		server.use(requestMock("http://localhost/wallets/walletid", { data: walletMockData }));
 		const wallet = await clientService.wallet({ value: "walletid" });
@@ -105,6 +123,24 @@ describe("ClientService", () => {
 		expect(wallets.items()).toHaveLength(1);
 	});
 
+	it("should fetch wallets with custom limit and page", async () => {
+		server.use(
+			http.get(/http:\/\/localhost\/wallets.*/, ({ request }) => {
+				const url = new URL(request.url);
+				if (url.searchParams.get("page") === "3" && url.searchParams.get("limit") === "15") {
+					return HttpResponse.json({
+						data: [walletMockData],
+						meta: { last: "page=3", next: null, previous: null, self: "page=3" },
+					});
+				}
+				return HttpResponse.json({ data: [], meta: {} });
+			}),
+		);
+		const wallets = await clientService.wallets({ limit: 15, page: 3 });
+		expect(wallets).toBeDefined();
+		expect(wallets.items()).toHaveLength(1);
+	});
+
 	it("should fetch a validator", async () => {
 		server.use(requestMock("http://localhost/validators/validatorid", { data: validatorMockData }));
 		const validator = await clientService.validator("validatorid");
@@ -126,6 +162,24 @@ describe("ClientService", () => {
 			}),
 		);
 		const validators = await clientService.validators();
+		expect(validators).toBeDefined();
+		expect(validators.items()).toHaveLength(1);
+	});
+
+	it("should fetch validators with custom parameters", async () => {
+		server.use(
+			http.get(/http:\/\/localhost\/validators.*/, ({ request }) => {
+				const url = new URL(request.url);
+				if (url.searchParams.get("page") === "4" && url.searchParams.get("limit") === "20") {
+					return HttpResponse.json({
+						data: [validatorMockData],
+						meta: { last: "page=4", next: null, previous: null, self: "page=4" },
+					});
+				}
+				return HttpResponse.json({ data: [], meta: {} });
+			}),
+		);
+		const validators = await clientService.validators({ limit: 20, page: 4 });
 		expect(validators).toBeDefined();
 		expect(validators.items()).toHaveLength(1);
 	});
@@ -225,9 +279,49 @@ describe("ClientService", () => {
 	});
 
 	it("should handle broadcast failure", async () => {
-		const broadcastSpy = vi.spyOn(clientService, "broadcast").mockRejectedValue(new Error());
-		await expect(clientService.broadcast([])).rejects.toThrow();
+		const broadcastSpy = vi.spyOn(clientService, "broadcast").mockRejectedValue(new Error("broadcast error"));
+		await expect(clientService.broadcast([])).rejects.toThrow("broadcast error");
 		broadcastSpy.mockRestore();
+	});
+
+	it("should handle broadcast with non-array accept and invalid", async () => {
+		server.use(
+			http.post("http://localhost/transactions", async () =>
+				HttpResponse.json({
+					data: {
+						accept: "not-an-array",
+						invalid: "not-an-array",
+					},
+				}),
+			),
+		);
+
+		const mockTx = { hash: () => "hash1", toBroadcast: async () => ({ id: "hash1" }) };
+		const result = await clientService.broadcast([mockTx as any]);
+
+		expect(result.accepted).toEqual([]);
+		expect(result.rejected).toEqual([]);
+		expect(result.errors).toEqual({});
+	});
+
+	it("should handle broadcast without errors field", async () => {
+		server.use(
+			http.post("http://localhost/transactions", async () =>
+				HttpResponse.json({
+					data: {
+						accept: [0],
+						invalid: [],
+					},
+				}),
+			),
+		);
+
+		const mockTx = { hash: () => "hash1", toBroadcast: async () => ({ id: "hash1" }) };
+		const result = await clientService.broadcast([mockTx as any]);
+
+		expect(result.accepted).toContain("hash1");
+		expect(result.rejected).toEqual([]);
+		expect(result.errors).toEqual({});
 	});
 
 	it("should make a successful evm call", async () => {
@@ -258,6 +352,44 @@ describe("ClientService", () => {
 		await expect(clientService.evmCall({ data: "0xabc", to: "0xdef" })).rejects.toThrow("custom error");
 
 		spy.mockRestore();
+	});
+
+	it("should handle evmCall error without response.json", async () => {
+		const error = new Error("Network error");
+		const spy = vi.spyOn(EVM.prototype, "call").mockRejectedValue(error);
+
+		await expect(clientService.evmCall({ data: "0xabc", to: "0xdef" })).rejects.toThrow("Failed to make EVM call");
+
+		spy.mockRestore();
+	});
+
+	it("should handle meta pagination with edge case regex", async () => {
+		const spyWithEdgeMeta = vi.spyOn(Transactions.prototype, "all").mockResolvedValue({
+			data: [],
+			meta: { last: "page=", next: "invalid", previous: "page=0", self: "page=1" },
+		} as any);
+
+		const txs = await clientService.transactions({});
+		expect(txs).toBeDefined();
+
+		spyWithEdgeMeta.mockRestore();
+	});
+
+	it("should handle meta pagination regex with empty match", async () => {
+		const spyWithEmptyMatch = vi.spyOn(Transactions.prototype, "all").mockResolvedValue({
+			data: [],
+			meta: {
+				last: "page=0",
+				next: "page=0",
+				previous: "page=0",
+				self: "page=0",
+			},
+		} as any);
+
+		const txs = await clientService.transactions({});
+		expect(txs).toBeDefined();
+
+		spyWithEmptyMatch.mockRestore();
 	});
 
 	describe("usernames", () => {
@@ -385,6 +517,68 @@ describe("ClientService", () => {
 		it("should handle empty query", async () => {
 			await clientService.transactions({});
 			expect(spy).toHaveBeenCalledWith(1, 10, {});
+		});
+
+		it("should handle identifiers with empty addresses", async () => {
+			await clientService.transactions({ identifiers: [{ value: "" }] });
+			expect(spy).toHaveBeenCalledWith(1, 10, {});
+		});
+
+		it("should handle undefined transaction type", async () => {
+			await clientService.transactions({ type: "unknownType" as any });
+			expect(spy).toHaveBeenCalledWith(1, 10, {});
+		});
+
+		it("should handle types with undefined values", async () => {
+			await clientService.transactions({ types: ["unknownType1", "unknownType2"] as any });
+			expect(spy).toHaveBeenCalledWith(1, 10, {});
+		});
+
+		it("should handle meta pagination with null values", async () => {
+			const spyWithNullMeta = vi.spyOn(Transactions.prototype, "all").mockResolvedValue({
+				data: [],
+				meta: { last: null, next: null, previous: null, self: null },
+			} as any);
+
+			await clientService.transactions({});
+
+			spyWithNullMeta.mockRestore();
+		});
+
+		it("should handle transactions with undefined limit and page", async () => {
+			const spy = vi.spyOn(Transactions.prototype, "all").mockResolvedValue({
+				data: [],
+				meta: { last: "page=1" },
+			} as any);
+
+			await clientService.transactions({ limit: undefined, page: undefined } as any);
+			expect(spy).toHaveBeenCalledWith(1, 10, {});
+
+			spy.mockRestore();
+		});
+
+		it("should handle wallets with undefined limit and page", async () => {
+			const spy = vi.spyOn(Wallets.prototype, "all").mockResolvedValue({
+				data: [],
+				meta: { last: "page=1" },
+			} as any);
+
+			await clientService.wallets({ limit: undefined, page: undefined } as any);
+			expect(spy).toHaveBeenCalledWith(1, 10);
+
+			spy.mockRestore();
+		});
+
+		it("should handle validators with undefined limit and page", async () => {
+			const spy = vi.spyOn(Validators.prototype, "all").mockResolvedValue({
+				data: [],
+				meta: { last: "page=1" },
+			} as any);
+
+			await clientService.validators({ limit: undefined, page: undefined } as any);
+			expect(spy).toHaveBeenCalledWith(1, 10, {});
+
+			spy.mockRestore();
 		});
 
 		it("should normalize timestamps with epoch calculation", async () => {
