@@ -84,6 +84,42 @@ describe("ConfirmedTransactionData", () => {
 		expect(value).toEqual(new BigNumber(300));
 	});
 
+	it("should return true for isReturn when transfer and both sent and received", () => {
+		const mockTransaction = new ConfirmedTransactionData();
+		mockTransaction.isTransfer = () => true;
+		mockTransaction.isSent = () => true;
+		mockTransaction.isReceived = () => true;
+		mockTransaction.configure(commonData);
+
+		expect(mockTransaction.isReturn()).toBe(true);
+	});
+
+	it("should return true for isReturn when multi-payment includes sender as recipient", () => {
+		const mockTransaction = new ConfirmedTransactionData();
+		mockTransaction.isMultiPayment = () => true;
+		mockTransaction.recipients = () => [{ address: "sender_address", amount: new BigNumber(100) }];
+		mockTransaction.configure(commonData);
+
+		expect(mockTransaction.isReturn()).toBe(true);
+	});
+
+	it("should return username from decoded function data", () => {
+		const mockTransaction = new ConfirmedTransactionData();
+
+		// Use real encoded data with valid method identifier for registerUsername (0x36a94134)
+		// This includes the method signature + encoded string "testuser"
+		const realEncodedData =
+			"0x36a94134000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000087465737475736572000000000000000000000000000000000000000000000000";
+
+		mockTransaction.configure({
+			...commonData,
+			data: realEncodedData,
+		});
+
+		const username = mockTransaction.username();
+		expect(username).toBe("testuser");
+	});
+
 	it("should be instantiated and configured", () => {
 		expect(transaction.configure(commonData)).toBeInstanceOf(ConfirmedTransactionData);
 		expect(transaction.raw()).toEqual(commonData);
