@@ -28,6 +28,14 @@ describe("ConfirmedTransactionData", () => {
 		};
 	});
 
+	it("should return voteCombination type when isVoteCombination is true", () => {
+		const mockTransaction = new ConfirmedTransactionData();
+		mockTransaction.isVoteCombination = () => true;
+		mockTransaction.configure(commonData);
+
+		expect(mockTransaction.type()).toBe("voteCombination");
+	});
+
 	it("should be instantiated and configured", () => {
 		expect(transaction.configure(commonData)).toBeInstanceOf(ConfirmedTransactionData);
 		expect(transaction.raw()).toEqual(commonData);
