@@ -156,6 +156,7 @@
 		}
 	},
 	"data": {
-		"key": "value"
+		"key": "value",
+		"version": "evm"
 	}
 }
