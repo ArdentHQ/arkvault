@@ -1,8 +1,10 @@
+import { describe, it, expect, beforeEach, vi } from "vitest";
 import { ConfirmedTransactionData } from "./confirmed-transaction.dto";
 import { KeyValuePair } from "./contracts";
 import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
 import { Exceptions } from ".";
+import * as TransactionTypeServiceMock from "./transaction-type.service";
 
 describe("ConfirmedTransactionData", () => {
 	let transaction: ConfirmedTransactionData;
@@ -42,6 +44,18 @@ describe("ConfirmedTransactionData", () => {
 		mockTransaction.configure(commonData);
 
 		expect(mockTransaction.type()).toBe("transfer");
+	});
+
+	it("should return identifier name when TransactionTypeService returns non-null", () => {
+		const spy = vi
+			.spyOn(TransactionTypeServiceMock.TransactionTypeService, "getIdentifierName")
+			.mockReturnValue("customIdentifier");
+
+		transaction.configure(commonData);
+		const result = transaction.type();
+
+		expect(result).toBe("customIdentifier");
+		spy.mockRestore();
 	});
 
 	it("should be instantiated and configured", () => {
