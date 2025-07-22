@@ -1,5 +1,5 @@
 import { HttpClient } from "./http-client";
-
+import { http, HttpResponse } from "msw";
 import { server, requestMock } from "@/tests/mocks/server";
 
 let subject: HttpClient;
@@ -142,13 +142,27 @@ describe("HttpClient", () => {
 		expect(response.body()).toContain("plain text response");
 	});
 
-	it("should clear cache", () => {
-		expect(() => subject.clearCache()).not.toThrow();
+	it("should clear cache completely", async () => {
+		// First, make a request to populate cache
+		const responseBody = { message: "cached" };
+		server.use(requestMock(`${httpbin}/cached`, responseBody));
+
+		const clientWithCache = new HttpClient(60); // 60 seconds TTL
+
+		// First request - should hit the server
+		await clientWithCache.get(`${httpbin}/cached`);
+
+		// Clear cache
+		clientWithCache.clearCache();
+
+		// Make another request - should hit server again since cache was cleared
+		const response = await clientWithCache.get(`${httpbin}/cached`);
+		expect(response.json()).toStrictEqual(responseBody);
 	});
 
-	it("should forget wallet cache", () => {
+	it("should forget specific wallet cache", async () => {
 		const mockWallet = {
-			address: () => "test-address",
+			address: () => "test-wallet-address",
 			network: () => ({
 				config: () => ({
 					host: () => "http://localhost",
@@ -157,15 +171,49 @@ describe("HttpClient", () => {
 			profile: () => ({}),
 		};
 
-		expect(() => subject.forgetWalletCache(mockWallet as any)).not.toThrow();
+		const responseBody = { balance: 1000 };
+		server.use(requestMock("http://localhost/wallets/test-wallet-address", responseBody));
+
+		const clientWithCache = new HttpClient(60);
+
+		// First request - populates cache
+		await clientWithCache.get("http://localhost/wallets/test-wallet-address");
+
+		// Forget wallet cache
+		clientWithCache.forgetWalletCache(mockWallet as any);
+
+		// Request again - should work fine (cache key was removed)
+		const response = await clientWithCache.get("http://localhost/wallets/test-wallet-address");
+		expect(response.json()).toStrictEqual(responseBody);
 	});
 
-	it("should get with ttl option", async () => {
-		const responseBody = { message: "success" };
-		server.use(requestMock(`${httpbin}/get`, responseBody));
+	it("should use cache and then clear it", async () => {
+		let requestCount = 0;
+		const responseBody = { count: 0, message: "cached response" };
 
-		const response = await subject.get(`${httpbin}/get`, undefined, { ttl: 300 });
-		expect(response.json()).toStrictEqual(responseBody);
+		server.use(
+			http.get(`${httpbin}/cache-test`, () => {
+				requestCount++;
+				return HttpResponse.json({ ...responseBody, count: requestCount });
+			}),
+		);
+
+		const clientWithCache = new HttpClient(60);
+
+		// First request - should hit server (count = 1)
+		const response1 = await clientWithCache.get(`${httpbin}/cache-test`);
+		expect(response1.json().count).toBe(1);
+
+		// Second request - should use cache (count still = 1)
+		const response2 = await clientWithCache.get(`${httpbin}/cache-test`);
+		expect(response2.json().count).toBe(1);
+
+		// Clear cache
+		clientWithCache.clearCache();
+
+		// Third request - should hit server again (count = 2)
+		const response3 = await clientWithCache.get(`${httpbin}/cache-test`);
+		expect(response3.json().count).toBe(2);
 	});
 
 	// @README: Run this locally with TOR running.
