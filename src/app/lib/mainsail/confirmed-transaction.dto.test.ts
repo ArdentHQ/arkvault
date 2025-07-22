@@ -161,6 +161,27 @@ describe("ConfirmedTransactionData", () => {
 		expect(unvotes).toEqual([]);
 	});
 
+	it("should return payments from decoded multi-payment function data", () => {
+		const mockTransaction = new ConfirmedTransactionData();
+
+		// Use real encoded data for pay(address[],uint256[]) function from MultiPaymentV1
+		// Method identifier: 084ce708 + encoded arrays for 1 recipient
+		const realEncodedData =
+			"0x084ce708000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000000800000000000000000000000000000000000000000000000000000000000000001000000000000000000000000123456789012345678901234567890123456789000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000de0b6b3a7640000";
+
+		mockTransaction.configure({
+			...commonData,
+			data: realEncodedData,
+		});
+
+		const payments = mockTransaction.payments();
+		expect(payments).toHaveLength(1);
+		expect(payments[0]).toEqual({
+			amount: expect.any(BigNumber),
+			recipientId: "0x1234567890123456789012345678901234567890",
+		});
+	});
+
 	it("should be instantiated and configured", () => {
 		expect(transaction.configure(commonData)).toBeInstanceOf(ConfirmedTransactionData);
 		expect(transaction.raw()).toEqual(commonData);
