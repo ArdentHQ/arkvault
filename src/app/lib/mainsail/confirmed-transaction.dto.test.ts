@@ -153,6 +153,14 @@ describe("ConfirmedTransactionData", () => {
 		expect(votes).toEqual(["0xabCDEF1234567890ABcDEF1234567890aBCDeF12"]);
 	});
 
+	it("should return empty array for unvotes", () => {
+		const mockTransaction = new ConfirmedTransactionData();
+		mockTransaction.configure(commonData);
+
+		const unvotes = mockTransaction.unvotes();
+		expect(unvotes).toEqual([]);
+	});
+
 	it("should be instantiated and configured", () => {
 		expect(transaction.configure(commonData)).toBeInstanceOf(ConfirmedTransactionData);
 		expect(transaction.raw()).toEqual(commonData);
