@@ -1,39 +1,44 @@
-import { describe, it, expect, beforeEach } from "vitest";
+import { describe, it, expect, beforeEach, afterEach, vi } from "vitest";
 import { http, HttpResponse } from "msw";
 import { server, requestMock } from "@/tests/mocks/server";
 import { ClientService } from "./client.service";
+import { Transactions } from "@arkecosystem/typescript-client";
 
 const mockConfig = {
-	host: () => "http://localhost",
 	get: (key?: string) => {
-		if (key === undefined || key === "epoch" || key === "Epoch") return 0;
-		if (key === "network") return { epoch: 0 };
-		return undefined;
+		if (key === undefined || key === "epoch" || key === "Epoch") {
+			return 0;
+		}
+		if (key === "network") {
+			return { epoch: 0 };
+		}
+		return;
 	},
+	host: () => "http://localhost",
 };
 const mockProfile: any = {};
 
 const transactionMockData = {
-	hash: "txid", // El DTO usa hash() para obtener el ID
 	amount: 100,
 	data: "0x1234567890abcdef",
 	from: "sender_address",
-	to: "recipient_address",
 	gas: 21000,
 	gasPrice: 10000000,
+	hash: "txid",
 	nonce: 1,
 	receipt: { status: 1 },
 	senderPublicKey: "somePublicKey",
 	timestamp: Date.now(),
+	to: "recipient_address",
 	value: 100000000,
 };
 
 const walletMockData = {
-	address: "walletid", // El DTO usa address() o primaryKey()
-	vote: "delegateid",
+	address: "walletid",
+	attributes: {},
 	balance: 1000,
 	publicKey: "somePublicKey",
-	attributes: {},
+	vote: "delegateid",
 };
 
 const validatorMockData = {
@@ -130,25 +135,123 @@ describe("ClientService", () => {
 		expect(votes.used).toBe(1);
 	});
 
+	it("should return no votes for a wallet that has not voted", async () => {
+		const walletDataWithoutVote = { ...walletMockData, vote: undefined };
+		server.use(requestMock("http://localhost/wallets/walletid", { data: walletDataWithoutVote }));
+
+		const votes = await clientService.votes("walletid");
+		expect(votes.used).toBe(0);
+		expect(votes.available).toBe(1);
+	});
+
 	it("should broadcast transactions", async () => {
 		server.use(
-			http.post("http://localhost/transactions", async () => {
-				return HttpResponse.json({
-					data: { accept: [0], invalid: [], errors: {} },
-				});
-			}),
+			http.post("http://localhost/transactions", async () =>
+				HttpResponse.json({
+					data: { accept: [0], errors: {}, invalid: [] },
+				}),
+			),
 		);
-		const mockSignedTx = { toBroadcast: async () => ({ hash: "hash" }), hash: () => "hash" };
+		const mockSignedTx = { hash: () => "hash", toBroadcast: async () => ({ hash: "hash" }) };
 		const result = await clientService.broadcast([mockSignedTx as any]);
 		expect(result.accepted).toContain("hash");
 	});
 
-	it("should handle evmCall errors", async () => {
+	it("should handle broadcast with rejections and errors", async () => {
 		server.use(
-			http.post("http://localhost/", () => {
-				return HttpResponse.error();
-			}),
+			http.post("http://localhost/transactions", async () =>
+				HttpResponse.json({
+					data: {
+						accept: [0], // Index of transaction
+						invalid: [1], // Index of transaction
+					},
+					errors: {
+						hash2: [{ message: "some error" }], // Key is the hash
+					},
+				}),
+			),
+		);
+
+		const mockTx1 = { hash: () => "hash1", toBroadcast: async () => ({ id: "hash1" }) };
+		const mockTx2 = { hash: () => "hash2", toBroadcast: async () => ({ id: "hash2" }) };
+		const result = await clientService.broadcast([mockTx1 as any, mockTx2 as any]);
+
+		expect(result.accepted).toContain("hash1");
+		expect(result.rejected).toContain("hash2");
+		expect(result.errors).toHaveProperty("hash2", "some error");
+	});
+
+	it("should handle broadcast failure", async () => {
+		server.use(
+			http.post("http://localhost/transactions", () =>
+				HttpResponse.json({ message: "broadcast error" }, { status: 500 }),
+			),
+		);
+		const mockTx = { hash: () => "hash1", toBroadcast: async () => ({ id: "hash1" }) };
+		await expect(clientService.broadcast([mockTx as any])).rejects.toThrow();
+	});
+
+	it("should handle evmCall API errors", async () => {
+		server.use(
+			http.post("http://localhost/", () =>
+				HttpResponse.json({ error: { message: "API error" } }, { status: 400 }),
+			),
 		);
 		await expect(clientService.evmCall({ data: "0x", to: "0x" })).rejects.toThrow();
+	});
+
+	it("should handle evmCall network errors", async () => {
+		server.use(http.post("http://localhost/", () => HttpResponse.error()));
+		await expect(clientService.evmCall({ data: "0x", to: "0x" })).rejects.toThrow();
+	});
+
+	describe("#createSearchParams", () => {
+		let spy: vi.SpyInstance;
+
+		beforeEach(() => {
+			spy = vi.spyOn(Transactions.prototype, "all").mockResolvedValue({
+				data: [],
+				meta: { last: "page=1" },
+			} as any);
+		});
+
+		afterEach(() => {
+			spy.mockRestore();
+		});
+
+		it("should map memo to vendorField", async () => {
+			await clientService.transactions({ memo: "test" });
+			expect(spy).toHaveBeenCalledWith(1, 10, { vendorField: "test" });
+		});
+
+		it("should handle orderBy", async () => {
+			await clientService.transactions({ orderBy: "amount:desc" });
+			expect(spy).toHaveBeenCalledWith(1, 10, { orderBy: "amount:desc" });
+		});
+
+		it("should handle identifiers", async () => {
+			await clientService.transactions({ identifiers: [{ value: "addr1" }, { value: "addr2" }] });
+			expect(spy).toHaveBeenCalledWith(1, 10, { address: "addr1,addr2" });
+		});
+
+		it("should handle transaction types", async () => {
+			await clientService.transactions({ types: ["transfer", "vote"] });
+			// Transfer is an empty string, so we only check for the vote part
+			expect(spy).toHaveBeenCalledWith(1, 10, { data: expect.stringContaining("6dd7d8ea,3174b689") });
+		});
+
+		it("should handle timestamp", async () => {
+			await clientService.transactions({ timestamp: { from: 1, to: 2 } });
+			expect(spy).toHaveBeenCalledWith(
+				1,
+				10,
+				expect.objectContaining({ "timestamp.from": 1, "timestamp.to": 2 }),
+			);
+		});
+
+		it("should handle empty query", async () => {
+			await clientService.transactions({});
+			expect(spy).toHaveBeenCalledWith(1, 10, {});
+		});
 	});
 });
