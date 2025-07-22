@@ -337,13 +337,13 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 						<BackButton disabled={isBackDisabled} />
 					</div>
 
-					<div className="flex flex-1 items-center justify-between px-6">
-						<div className="flex flex-row items-center gap-6">
+					<div className="flex flex-1 items-center justify-between px-6 gap-3">
+						<div className="flex flex-row items-center gap-5">
 							<NavigationBarLogo onClick={homeButtonHandler} />
-							<div className="mr-4 sm:mr-0">{renderNavigationMenu()}</div>
+							{renderNavigationMenu()}
 						</div>
 
-						<div className="flex flex-row items-center justify-center gap-4 sm:gap-5">
+						<div className="flex flex-row items-center justify-center gap-3 sm:gap-5">
 							<NotificationsDropdown profile={profile} />
 							<div className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 h-6 border-r sm:h-12" />
 							<ServerStatusIndicator profile={profile} />
@@ -401,7 +401,7 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 								</>
 							)}
 
-							<div className="flex items-center gap-5">
+							<div className="flex items-center gap-5 ml-1 sm:ml-0">
 								<HideBalance className="md-lg:flex hidden" profile={profile} />
 								<UserMenu
 									userInitials={userInitials}
