@@ -2,7 +2,7 @@ import { describe, it, expect, beforeEach, afterEach, vi } from "vitest";
 import { http, HttpResponse } from "msw";
 import { server, requestMock } from "@/tests/mocks/server";
 import { ClientService } from "./client.service";
-import { Transactions } from "@arkecosystem/typescript-client";
+import { Transactions, EVM } from "@arkecosystem/typescript-client";
 
 const validAddress = `0x${"a".repeat(40)}`;
 
@@ -227,6 +227,18 @@ describe("ClientService", () => {
 			jsonrpc: "2.0",
 			result: "0x12345",
 		});
+	});
+
+	it("should throw with custom error message from error.response.json", async () => {
+		const spy = vi.spyOn(EVM.prototype, "call").mockRejectedValue({
+			response: {
+				json: () => ({ error: { message: "custom error" } }), // Synchronous for coverage
+			},
+		});
+
+		await expect(clientService.evmCall({ data: "0xabc", to: "0xdef" })).rejects.toThrow("custom error");
+
+		spy.mockRestore();
 	});
 
 	describe("usernames", () => {
