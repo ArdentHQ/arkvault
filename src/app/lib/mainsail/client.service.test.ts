@@ -386,5 +386,33 @@ describe("ClientService", () => {
 			await clientService.transactions({});
 			expect(spy).toHaveBeenCalledWith(1, 10, {});
 		});
+
+		it("should normalize timestamps with epoch calculation", async () => {
+			const epoch = "2017-03-21T13:00:00.000Z";
+			const configWithEpoch = {
+				get: (key?: string) => {
+					if (key === "network.constants.epoch") {
+						return epoch;
+					}
+					return;
+				},
+				host: () => "http://localhost",
+			};
+			const serviceWithEpoch = new ClientService({ config: configWithEpoch as any, profile: mockProfile });
+
+			const epochUnix = 1490101200;
+			const futureTimestamp = epochUnix + 1000;
+
+			await serviceWithEpoch.transactions({ timestamp: { from: futureTimestamp, to: futureTimestamp + 100 } });
+
+			expect(spy).toHaveBeenCalledWith(
+				1,
+				10,
+				expect.objectContaining({
+					"timestamp.from": 1000,
+					"timestamp.to": 1100,
+				}),
+			);
+		});
 	});
 });
