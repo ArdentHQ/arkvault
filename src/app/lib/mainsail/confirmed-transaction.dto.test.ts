@@ -58,6 +58,22 @@ describe("ConfirmedTransactionData", () => {
 		spy.mockRestore();
 	});
 
+	it("should return recipients for multi payment", () => {
+		const mockTransaction = new ConfirmedTransactionData();
+		mockTransaction.isMultiPayment = () => true;
+		mockTransaction.payments = () => [
+			{ amount: new BigNumber(100), recipientId: "address1" },
+			{ amount: new BigNumber(200), recipientId: "address2" },
+		];
+		mockTransaction.configure(commonData);
+
+		const recipients = mockTransaction.recipients();
+
+		expect(recipients).toHaveLength(2);
+		expect(recipients[0]).toEqual({ address: "address1", amount: new BigNumber(100) });
+		expect(recipients[1]).toEqual({ address: "address2", amount: new BigNumber(200) });
+	});
+
 	it("should be instantiated and configured", () => {
 		expect(transaction.configure(commonData)).toBeInstanceOf(ConfirmedTransactionData);
 		expect(transaction.raw()).toEqual(commonData);
