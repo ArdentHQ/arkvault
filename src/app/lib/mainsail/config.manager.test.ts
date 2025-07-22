@@ -27,7 +27,7 @@ describe("ConfigManager", () => {
 			],
 			network: {},
 		};
-		expect(() => configManager.setConfig(invalidConfig as NetworkConfig)).toThrow(
+		expect(() => configManager.setConfig(invalidConfig as unknown as NetworkConfig)).toThrow(
 			"Bad milestone at height: 100. The number of validators can only be changed at the beginning of a new round.",
 		);
 	});
@@ -113,5 +113,145 @@ describe("ConfigManager", () => {
 		const milestones = configManager.getMilestones();
 		expect(milestones).toBeInstanceOf(Array);
 		expect(milestones.length).toBe(config.milestones.length);
+	});
+
+	it("should return milestone for height 1 when no height provided", () => {
+		configManager.setConfig(config);
+		const milestone = configManager.getMilestone();
+		expect(milestone.height).toBe(1);
+	});
+
+	it("should handle milestone navigation backwards", () => {
+		configManager.setConfig(config);
+		// First set to a higher height to move index forward
+		configManager.getMilestone(200);
+		// Then get a lower height to trigger backwards navigation
+		const milestone = configManager.getMilestone(50);
+		expect(milestone).toEqual(expect.objectContaining({ activeValidators: 53 }));
+	});
+
+	it("should find next milestone with new key", () => {
+		const configWithMultipleKeys = {
+			milestones: [
+				{ activeValidators: 51, height: 1, someKey: "value1" },
+				{ activeValidators: 51, height: 100, someKey: "value2" },
+				{ activeValidators: 51, height: 200, someKey: "value3" },
+			],
+			network: {},
+		};
+		configManager.setConfig(configWithMultipleKeys as unknown as NetworkConfig);
+
+		const result = configManager.getNextMilestoneWithNewKey(50, "someKey");
+		expect(result).toEqual({
+			data: "value2",
+			found: true,
+			height: 100,
+		});
+	});
+
+	it("should handle config with multiple milestones for merging", () => {
+		const multiMilestoneConfig = {
+			milestones: [
+				{ activeValidators: 51, feature1: true, height: 1 },
+				{ activeValidators: 51, feature2: true, height: 100 },
+				{ activeValidators: 51, feature3: true, height: 200 },
+			],
+			network: {},
+		};
+		configManager.setConfig(multiMilestoneConfig as unknown as NetworkConfig);
+		const milestones = configManager.getMilestones();
+		// Should have merged features from previous milestones
+		expect(milestones[2]).toEqual(
+			expect.objectContaining({
+				feature1: true,
+				feature2: true,
+				feature3: true,
+			}),
+		);
+	});
+
+	it("should continue validation when activeValidators are the same", () => {
+		const sameValidatorsConfig = {
+			milestones: [
+				{ activeValidators: 51, height: 1 },
+				{ activeValidators: 51, height: 100 }, // Same validators, should continue
+				{ activeValidators: 51, height: 200 },
+			],
+			network: {},
+		};
+		// Should not throw error
+		expect(() => configManager.setConfig(sameValidatorsConfig as unknown as NetworkConfig)).not.toThrow();
+	});
+
+	it("should check if height is new milestone", () => {
+		configManager.setConfig(config);
+		// Test with a height that matches a milestone
+		expect(configManager.isNewMilestone(1)).toBe(true);
+		expect(configManager.isNewMilestone(999)).toBe(false);
+	});
+
+	it("should handle single milestone config without merging", () => {
+		const singleMilestoneConfig = {
+			milestones: [{ activeValidators: 51, feature1: true, height: 1 }],
+			network: {},
+		};
+		configManager.setConfig(singleMilestoneConfig as unknown as NetworkConfig);
+		const milestones = configManager.getMilestones();
+		expect(milestones).toHaveLength(1);
+		expect(milestones[0]).toEqual(expect.objectContaining({ feature1: true }));
+	});
+
+	it("should handle milestone navigation with exact height match", () => {
+		const configWithExactHeights = {
+			milestones: [
+				{ activeValidators: 51, data: "first", height: 1 },
+				{ activeValidators: 51, data: "second", height: 50 },
+				{ activeValidators: 51, data: "third", height: 100 },
+			],
+			network: {},
+		};
+		configManager.setConfig(configWithExactHeights as unknown as NetworkConfig);
+
+		// Move to higher milestone first
+		configManager.getMilestone(100);
+
+		// Then navigate to a lower milestone that requires backward navigation
+		const milestone = configManager.getMilestone(1);
+		expect(milestone.data).toBe("first");
+	});
+
+	it("should handle validation with multiple milestones with same validators", () => {
+		const multiSameValidatorsConfig = {
+			milestones: [
+				{ activeValidators: 51, height: 1 },
+				{ activeValidators: 51, height: 52 }, // Same as previous
+				{ activeValidators: 51, height: 103 }, // Same as previous
+				{ activeValidators: 102, height: 154 }, // Different, valid change
+			],
+			network: {},
+		};
+		// Should not throw because all changes are valid
+		expect(() => configManager.setConfig(multiSameValidatorsConfig as unknown as NetworkConfig)).not.toThrow();
+	});
+
+	it("should handle empty milestones array for validation", () => {
+		const emptyMilestonesConfig = {
+			milestones: [],
+			network: {},
+		};
+		// This should trigger the validation path but with empty array
+		expect(() => configManager.setConfig(emptyMilestonesConfig as unknown as NetworkConfig)).not.toThrow();
+	});
+
+	it("should handle milestones without activeValidators", () => {
+		const noValidatorsConfig = {
+			milestones: [
+				{ height: 1, someOtherProperty: "value" },
+				{ height: 100, someOtherProperty: "value2" },
+			],
+			network: {},
+		};
+		// This should skip validation loop since no activeValidators
+		expect(() => configManager.setConfig(noValidatorsConfig as unknown as NetworkConfig)).not.toThrow();
 	});
 });
