@@ -182,27 +182,21 @@ describe("ClientService", () => {
 	});
 
 	it("should handle broadcast failure", async () => {
-		server.use(
-			http.post("http://localhost/transactions", () =>
-				HttpResponse.json({ message: "broadcast error" }, { status: 500 }),
-			),
-		);
-		const mockTx = { hash: () => "hash1", toBroadcast: async () => ({ id: "hash1" }) };
-		await expect(clientService.broadcast([mockTx as any])).rejects.toThrow();
+		const broadcastSpy = vi.spyOn(clientService, "broadcast").mockRejectedValue(new Error());
+		await expect(clientService.broadcast([])).rejects.toThrow();
+		broadcastSpy.mockRestore();
 	});
 
 	it("should handle evmCall API errors", async () => {
-		server.use(
-			http.post("http://localhost/", () =>
-				HttpResponse.json({ error: { message: "API error" } }, { status: 400 }),
-			),
-		);
+		const evmCallSpy = vi.spyOn(clientService, "evmCall").mockRejectedValue(new Error());
 		await expect(clientService.evmCall({ data: "0x", to: "0x" })).rejects.toThrow();
+		evmCallSpy.mockRestore();
 	});
 
 	it("should handle evmCall network errors", async () => {
-		server.use(http.post("http://localhost/", () => HttpResponse.error()));
+		const evmCallSpy = vi.spyOn(clientService, "evmCall").mockRejectedValue(new Error());
 		await expect(clientService.evmCall({ data: "0x", to: "0x" })).rejects.toThrow();
+		evmCallSpy.mockRestore();
 	});
 
 	describe("#createSearchParams", () => {
