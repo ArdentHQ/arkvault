@@ -120,6 +120,39 @@ describe("ConfirmedTransactionData", () => {
 		expect(username).toBe("testuser");
 	});
 
+	it("should return validator public key from decoded function data", () => {
+		const mockTransaction = new ConfirmedTransactionData();
+
+		// Use real encoded data for registerValidator with bytes parameter (BLS public key)
+		// Method identifier for registerValidator(bytes): 602a9eee + encoded bytes data
+		const realEncodedData =
+			"0x602a9eee00000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000020abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890";
+
+		mockTransaction.configure({
+			...commonData,
+			data: realEncodedData,
+		});
+
+		const validatorPublicKey = mockTransaction.validatorPublicKey();
+		expect(validatorPublicKey).toBe("abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890");
+	});
+
+	it("should return votes array from decoded function data", () => {
+		const mockTransaction = new ConfirmedTransactionData();
+
+		// Use real encoded data for vote(address) function
+		// Method identifier for vote(address): 6dd7d8ea + encoded address parameter
+		const realEncodedData = "0x6dd7d8ea000000000000000000000000abcdef1234567890abcdef1234567890abcdef12";
+
+		mockTransaction.configure({
+			...commonData,
+			data: realEncodedData,
+		});
+
+		const votes = mockTransaction.votes();
+		expect(votes).toEqual(["0xabCDEF1234567890ABcDEF1234567890aBCDeF12"]);
+	});
+
 	it("should be instantiated and configured", () => {
 		expect(transaction.configure(commonData)).toBeInstanceOf(ConfirmedTransactionData);
 		expect(transaction.raw()).toEqual(commonData);
