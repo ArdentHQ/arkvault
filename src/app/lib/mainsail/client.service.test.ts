@@ -209,16 +209,22 @@ describe("ClientService", () => {
 		broadcastSpy.mockRestore();
 	});
 
-	it("should handle evmCall API errors", async () => {
-		const evmCallSpy = vi.spyOn(clientService, "evmCall").mockRejectedValue(new Error());
-		await expect(clientService.evmCall({ data: "0x", to: "0x" })).rejects.toThrow();
-		evmCallSpy.mockRestore();
-	});
-
-	it("should handle evmCall network errors", async () => {
-		const evmCallSpy = vi.spyOn(clientService, "evmCall").mockRejectedValue(new Error());
-		await expect(clientService.evmCall({ data: "0x", to: "0x" })).rejects.toThrow();
-		evmCallSpy.mockRestore();
+	it("should make a successful evm call", async () => {
+		server.use(
+			http.post("http://localhost/", async () =>
+				HttpResponse.json({
+					id: 1,
+					jsonrpc: "2.0",
+					result: "0x12345",
+				}),
+			),
+		);
+		const result = await clientService.evmCall({ data: "0xabc", to: "0xdef" });
+		expect(result).toEqual({
+			id: 1,
+			jsonrpc: "2.0",
+			result: "0x12345",
+		});
 	});
 
 	describe("#createSearchParams", () => {
