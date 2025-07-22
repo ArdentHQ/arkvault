@@ -205,6 +205,25 @@ describe("ClientService", () => {
 		expect(result.errors).toHaveProperty("hash1", "some error");
 	});
 
+	it("should handle error in broadcast and call error.response.json()", async () => {
+		const errorResponse = {
+			json: () => ({
+				data: { accept: [], invalid: [0] },
+				errors: { hash1: { message: "some error" } },
+			}),
+		};
+		const error = { response: errorResponse };
+		const spy = vi.spyOn(Transactions.prototype, "create").mockRejectedValue(error);
+
+		const mockTx = { hash: () => "hash1", toBroadcast: async () => ({ id: "hash1" }) };
+		const result = await clientService.broadcast([mockTx as any]);
+
+		expect(result.rejected).toContain("hash1");
+		expect(result.errors).toHaveProperty("hash1", "some error");
+
+		spy.mockRestore();
+	});
+
 	it("should handle broadcast failure", async () => {
 		const broadcastSpy = vi.spyOn(clientService, "broadcast").mockRejectedValue(new Error());
 		await expect(clientService.broadcast([])).rejects.toThrow();
