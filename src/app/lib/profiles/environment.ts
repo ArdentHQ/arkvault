@@ -8,7 +8,6 @@ import { DataRepository } from "./repositories.js";
 import { ProfileFeeService } from "./fee.service.js";
 import { ProfileRepository } from "./profile.repository.js";
 import { WalletService } from "./wallet.service.js";
-import { version } from '@/package.json' assert { type: 'json' };
 
 export class Environment {
 	#storage!: Storage;
@@ -17,6 +16,8 @@ export class Environment {
 	#fees!: ProfileFeeService;
 	#profiles!: ProfileRepository;
 	#wallets!: WalletService;
+	#migrationVersion!: string;
+	#migrationSchemas!: object;
 
 	public constructor(options: EnvironmentOptions) {
 		this.reset(options);
@@ -165,6 +166,37 @@ export class Environment {
 		} else {
 			this.#storage = options.storage;
 		}
+	}
+
+	/**
+	 * Set the migrations that should be used for profiles, if applicable.
+	 *
+	 * @param {object} schemas
+	 * @param {string} version
+	 * @memberof Environment
+	 */
+	public setMigrations(schemas: object, version: string): void {
+		this.#migrationSchemas = schemas;
+		this.#migrationVersion = version;
+	}
+
+	/**
+	 * Get the latest migration version.
+	 *
+	 * @return string migration version
+	 * @memberof Environment
+	 */
+	public migrationVersion(): string | undefined {
+		return this.#migrationVersion;
+	}
+	/**
+	 * Get the migration schemas.
+	 *
+	 * @return object schemas
+	 * @memberof Environment
+	 */
+	public migrationSchemas(): object | undefined {
+		return this.#migrationSchemas;
 	}
 
 	public storage(): Storage {
