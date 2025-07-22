@@ -88,13 +88,13 @@ export const useImportOptions = (methods: Networks.NetworkManifestImportMethods)
 		let defaultOption: ImportOption | undefined;
 
 		const options: ImportOption[] = [
-			{
-				description: t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.LEDGER_DESCRIPTION"),
-				header: t("COMMON.LEDGER"),
-				icon: <Icon name="LedgerImport" size="lg" />,
-				label: t("COMMON.LEDGER"),
-				value: OptionsValue.LEDGER,
-			},
+			// {
+			// 	description: t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.LEDGER_DESCRIPTION"),
+			// 	header: t("COMMON.LEDGER"),
+			// 	icon: <Icon name="LedgerImport" size="lg" />,
+			// 	label: t("COMMON.LEDGER"),
+			// 	value: OptionsValue.LEDGER,
+			// },
 		];
 
 		for (const option of allOptions) {
