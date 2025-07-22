@@ -238,11 +238,11 @@ describe("ClientService", () => {
 		});
 
 		afterEach(() => {
-			// No-op: evitar error de linter por vi.restoreAllMocks
+			// No-op: avoid linter error for vi.restoreAllMocks
 		});
 
-		it.only("should fetch usernames", async () => {
-			// No mock de viem, solo mock de evmCall con output real
+		it("should fetch usernames", async () => {
+			// Only evmCall is mocked with a real encoded output
 			const encodedResult =
 				"0x000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000020000000000000000000000000aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa00000000000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000009757365726e616d653100000000000000000000000000000000000000000000";
 
@@ -259,43 +259,27 @@ describe("ClientService", () => {
 		});
 
 		it("should handle encodeFunctionData error", async () => {
-			const { encodeFunctionData } = await import("viem");
-			(encodeFunctionData as vi.Mock).mockImplementation(() => {
-				throw new Error("encode error");
-			});
-
-			await expect(clientService.usernames([validAddress])).rejects.toThrow(
-				"Failed to encode function data: encode error",
-			);
+			// Simulate encodeFunctionData error using an invalid address
+			const invalidAddress = "notAnAddress";
+			await expect(clientService.usernames([invalidAddress])).rejects.toThrow(/Failed to encode function data/);
 		});
 
 		it("should handle decodeFunctionResult error", async () => {
-			const { encodeFunctionData, decodeFunctionResult } = await import("viem");
-			(encodeFunctionData as vi.Mock).mockReturnValue("0x00");
+			// Simulate decodeFunctionResult error using an invalid result (not a valid output for getUsernames)
 			evmCallSpy.mockResolvedValue({
 				id: 1,
 				jsonrpc: "2.0",
-				result: "0x00",
+				result: "0xdeadbeef", // invalid output
 			});
-			(decodeFunctionResult as vi.Mock).mockImplementation(() => {
-				throw new Error("decode error");
-			});
-
-			await expect(clientService.usernames([validAddress])).rejects.toThrow(
-				"Failed to decode function result: decode error",
-			);
+			await expect(clientService.usernames([validAddress])).rejects.toThrow(/Failed to decode function result/);
 		});
 
 		it("should handle evmCall error", async () => {
-			const { encodeFunctionData } = await import("viem");
-			(encodeFunctionData as vi.Mock).mockReturnValue("0x00");
 			evmCallSpy.mockRejectedValue(new Error("evm error"));
 			await expect(clientService.usernames([validAddress])).rejects.toThrow("evm error");
 		});
 
 		it("should handle generic error", async () => {
-			const { encodeFunctionData } = await import("viem");
-			(encodeFunctionData as vi.Mock).mockReturnValue("0x00");
 			evmCallSpy.mockRejectedValue({}); // Not an instance of Error
 			await expect(clientService.usernames([validAddress])).rejects.toThrow(
 				"Failed to fetch usernames: Unknown error occurred",
