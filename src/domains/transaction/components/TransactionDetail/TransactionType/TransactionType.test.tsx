@@ -20,7 +20,7 @@ describe("TransactionType", () => {
 			breakpoint,
 		);
 
-		expect(container).toHaveTextContent(translations.TRANSACTION_TYPES.MULTI_PAYMENT);
+		expect(container).toHaveTextContent(translations.TRANSACTION_TYPES.PAY);
 	});
 
 	it("should render validator registration", () => {
@@ -37,7 +37,7 @@ describe("TransactionType", () => {
 			/>,
 		);
 
-		expect(container).toHaveTextContent(translations.TRANSACTION_TYPES.VALIDATOR_REGISTRATION);
+		expect(container).toHaveTextContent(translations.TRANSACTION_TYPES.REGISTER_VALIDATOR);
 		expect(container).toHaveTextContent("validator");
 	});
 

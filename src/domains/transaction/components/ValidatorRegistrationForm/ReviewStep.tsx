@@ -85,7 +85,7 @@ export const ReviewStep = ({
 								<span className="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-[12px] leading-[15px] font-semibold">
 									{wallet.isValidator()
 										? t("TRANSACTION.TRANSACTION_TYPES.UPDATE_VALIDATOR")
-										: t("TRANSACTION.TRANSACTION_TYPES.VALIDATOR_REGISTRATION")}
+										: t("TRANSACTION.TRANSACTION_TYPES.REGISTER_VALIDATOR")}
 								</span>
 							</div>
 						</div>
