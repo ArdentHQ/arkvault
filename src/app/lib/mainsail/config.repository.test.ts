@@ -359,6 +359,32 @@ describe("ConfigRepository", () => {
 			spy.mockRestore();
 			randomHostSpy.mockRestore();
 		});
+
+		it("should test hostSelector with real mainnet config", () => {
+			const realConfigRepository = new ConfigRepository({ network: mainnetConfig });
+			const mockCustomHost = {
+				custom: true,
+				enabled: true,
+				failedCount: 5,
+				host: "https://custom.com",
+				type: "full",
+			};
+			const mockProfile = {
+				hosts: () => ({
+					allByNetwork: () => [{ host: mockCustomHost }],
+				}),
+				settings: () => ({
+					get: () => true,
+				}),
+			};
+
+			const hostSelectorFn = hostSelector(mockProfile as any);
+			const result = hostSelectorFn(realConfigRepository, "full");
+
+			expect(result).toBeDefined();
+			expect(result.host).toBeDefined();
+			expect(result.type).toBe("full");
+		});
 	});
 
 	describe("ConfigKey enum", () => {
