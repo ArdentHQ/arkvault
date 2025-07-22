@@ -9,6 +9,5 @@ export interface KeyPairDataTransferObject {
 export interface KeyPairService {
 	fromMnemonic(mnemonic: string, options?: IdentityOptions): Promise<KeyPairDataTransferObject>;
 	fromPrivateKey(privateKey: string): Promise<KeyPairDataTransferObject>;
-	fromWIF(wif: string): Promise<KeyPairDataTransferObject>;
 	fromSecret(secret: string): Promise<KeyPairDataTransferObject>;
 }
