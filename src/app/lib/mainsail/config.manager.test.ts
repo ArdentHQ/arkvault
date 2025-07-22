@@ -59,6 +59,10 @@ describe("ConfigManager", () => {
 		expect(token).toBe("ARK");
 	});
 
+	it("should return undefined for a key when config is not set", () => {
+		expect(configManager.get("any.key")).toBeUndefined();
+	});
+
 	it("should set the current height", () => {
 		configManager.setHeight(150);
 		expect(configManager.getHeight()).toBe(150);
