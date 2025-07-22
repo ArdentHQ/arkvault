@@ -1,6 +1,7 @@
 import { describe, it, expect, beforeEach, vi } from "vitest";
-import { ConfigRepository, ConfigKey, HostType } from "./config.repository";
+import { ConfigRepository, ConfigKey, HostType, hostSelector } from "./config.repository";
 import * as HostsHelper from "./helpers/hosts";
+import mainnetConfig from "@/app/lib/mainsail/networks/mainsail.mainnet";
 
 describe("ConfigRepository", () => {
 	let configRepository: ConfigRepository;
@@ -9,15 +10,7 @@ describe("ConfigRepository", () => {
 	beforeEach(() => {
 		mockConfig = {
 			network: {
-				constants: {
-					bech32: "test",
-					epoch: "2023-01-01T00:00:00.000Z",
-					slip44: 1,
-				},
-				currency: {
-					decimals: 8,
-					ticker: "TEST",
-				},
+				...mainnetConfig,
 				hosts: [
 					{
 						custom: false,
@@ -33,11 +26,6 @@ describe("ConfigRepository", () => {
 					},
 				],
 				id: "test-network",
-				knownWallets: [],
-				meta: {
-					wif: 1,
-				},
-				type: "test",
 			},
 		};
 
@@ -71,12 +59,12 @@ describe("ConfigRepository", () => {
 
 		it("should get a nested value", () => {
 			const ticker = configRepository.get("network.currency.ticker");
-			expect(ticker).toBe("TEST");
+			expect(ticker).toBe("ARK");
 		});
 
 		it("should return default value when key exists but is undefined", () => {
 			const result = configRepository.get("network.currency.ticker", "DEFAULT");
-			expect(result).toBe("TEST");
+			expect(result).toBe("ARK");
 		});
 
 		it("should throw error for unknown key", () => {
@@ -151,7 +139,7 @@ describe("ConfigRepository", () => {
 	});
 
 	describe("host", () => {
-		it("should return host using hostSelector", () => {
+		it("should return host using hostSelector with no custom hosts", () => {
 			const mockProfile = {
 				hosts: () => ({
 					allByNetwork: () => [],
@@ -170,6 +158,203 @@ describe("ConfigRepository", () => {
 			expect(result).toBe("https://test.com");
 			expect(spy).toHaveBeenCalledWith(configRepository, "full");
 			expect(randomHostSpy).toHaveBeenCalledWith([mockHost], "full");
+
+			spy.mockRestore();
+			randomHostSpy.mockRestore();
+		});
+
+		it("should return host using hostSelector with custom hosts and fallback disabled", () => {
+			const mockCustomHost = { custom: true, enabled: true, host: "https://custom.com", type: "full" };
+			const mockProfile = {
+				hosts: () => ({
+					allByNetwork: () => [{ host: mockCustomHost }],
+				}),
+				settings: () => ({
+					get: () => false,
+				}),
+			};
+
+			const mockDefaultHost = { host: "https://default.com" };
+			const spy = vi.spyOn(HostsHelper, "filterHostsFromConfig").mockReturnValue([mockDefaultHost]);
+			const randomHostSpy = vi.spyOn(HostsHelper, "randomHost").mockReturnValue(mockCustomHost);
+
+			const result = configRepository.host("full" as HostType, mockProfile as any);
+
+			expect(result).toBe("https://custom.com");
+			expect(spy).toHaveBeenCalledWith(configRepository, "full");
+			expect(randomHostSpy).toHaveBeenCalledWith([mockCustomHost], "full");
+
+			spy.mockRestore();
+			randomHostSpy.mockRestore();
+		});
+
+		it("should return host using hostSelector with custom hosts and fallback enabled - custom host not failed", () => {
+			const mockCustomHost = {
+				custom: true,
+				enabled: true,
+				failedCount: 0,
+				host: "https://custom.com",
+				type: "full",
+			};
+			const mockProfile = {
+				hosts: () => ({
+					allByNetwork: () => [{ host: mockCustomHost }],
+				}),
+				settings: () => ({
+					get: () => true,
+				}),
+			};
+
+			const mockDefaultHost = { host: "https://default.com" };
+			const spy = vi.spyOn(HostsHelper, "filterHostsFromConfig").mockReturnValue([mockDefaultHost]);
+			const randomHostSpy = vi.spyOn(HostsHelper, "randomHost").mockReturnValue(mockCustomHost);
+
+			const result = configRepository.host("full" as HostType, mockProfile as any);
+
+			expect(result).toBe("https://custom.com");
+			expect(spy).toHaveBeenCalledWith(configRepository, "full");
+			expect(randomHostSpy).toHaveBeenCalledWith([mockCustomHost], "full");
+
+			spy.mockRestore();
+			randomHostSpy.mockRestore();
+		});
+
+		it("should return host using hostSelector with custom hosts and fallback enabled - custom host failed", () => {
+			const mockCustomHost = {
+				custom: true,
+				enabled: true,
+				failedCount: 5,
+				host: "https://custom.com",
+				type: "full",
+			};
+			const mockProfile = {
+				hosts: () => ({
+					allByNetwork: () => [{ host: mockCustomHost }],
+				}),
+				settings: () => ({
+					get: () => true,
+				}),
+			};
+
+			const mockDefaultHosts = [
+				{ custom: false, host: "https://default1.com", type: "full" },
+				{ custom: false, host: "https://default2.com", type: "full" },
+			];
+			const spy = vi.spyOn(HostsHelper, "filterHostsFromConfig").mockReturnValue(mockDefaultHosts);
+			const randomHostSpy = vi.spyOn(HostsHelper, "randomHost").mockReturnValue(mockDefaultHosts[0]);
+
+			const result = configRepository.host("full" as HostType, mockProfile as any);
+
+			expect(result).toBe("https://default1.com");
+			expect(spy).toHaveBeenCalledWith(configRepository, "full");
+			expect(randomHostSpy).toHaveBeenCalled();
+
+			spy.mockRestore();
+			randomHostSpy.mockRestore();
+		});
+
+		it("should return host using hostSelector with custom hosts and fallback enabled - custom host failed with mixed hosts", () => {
+			const mockCustomHost = {
+				custom: true,
+				enabled: true,
+				failedCount: 5,
+				host: "https://custom.com",
+				type: "full",
+			};
+			const mockProfile = {
+				hosts: () => ({
+					allByNetwork: () => [{ host: mockCustomHost }],
+				}),
+				settings: () => ({
+					get: () => true,
+				}),
+			};
+
+			const mockDefaultHosts = [
+				{ custom: true, host: "https://custom-default.com", type: "full" },
+				{ custom: false, host: "https://default1.com", type: "full" },
+				{ custom: false, host: "https://default2.com", type: "full" },
+			];
+			const spy = vi.spyOn(HostsHelper, "filterHostsFromConfig").mockReturnValue(mockDefaultHosts);
+			const randomHostSpy = vi.spyOn(HostsHelper, "randomHost").mockReturnValue(mockDefaultHosts[1]);
+
+			const result = configRepository.host("full" as HostType, mockProfile as any);
+
+			expect(result).toBe("https://default1.com");
+			expect(spy).toHaveBeenCalledWith(configRepository, "full");
+			expect(randomHostSpy).toHaveBeenCalled();
+
+			spy.mockRestore();
+			randomHostSpy.mockRestore();
+		});
+
+		it("should return host using hostSelector with custom hosts and fallback enabled - custom host failed with filter", () => {
+			const mockCustomHost = {
+				custom: true,
+				enabled: true,
+				failedCount: 5,
+				host: "https://custom.com",
+				type: "full",
+			};
+			const mockProfile = {
+				hosts: () => ({
+					allByNetwork: () => [{ host: mockCustomHost }],
+				}),
+				settings: () => ({
+					get: () => true,
+				}),
+			};
+
+			const mockDefaultHosts = [
+				{ custom: true, host: "https://custom-default.com", type: "full" },
+				{ custom: false, host: "https://default1.com", type: "full" },
+				{ custom: false, host: "https://default2.com", type: "full" },
+			];
+			const filteredHosts = mockDefaultHosts.filter(({ custom }) => !custom);
+			const spy = vi.spyOn(HostsHelper, "filterHostsFromConfig").mockReturnValue(mockDefaultHosts);
+			const randomHostSpy = vi.spyOn(HostsHelper, "randomHost").mockReturnValue(filteredHosts[0]);
+
+			const result = configRepository.host("full" as HostType, mockProfile as any);
+
+			expect(result).toBe("https://default1.com");
+			expect(spy).toHaveBeenCalledWith(configRepository, "full");
+			expect(randomHostSpy).toHaveBeenCalled();
+
+			spy.mockRestore();
+			randomHostSpy.mockRestore();
+		});
+
+		it("should test hostSelector function directly", () => {
+			const mockCustomHost = {
+				custom: true,
+				enabled: true,
+				failedCount: 5,
+				host: "https://custom.com",
+				type: "full",
+			};
+			const mockProfile = {
+				hosts: () => ({
+					allByNetwork: () => [{ host: mockCustomHost }],
+				}),
+				settings: () => ({
+					get: () => true,
+				}),
+			};
+
+			const mockDefaultHosts = [
+				{ custom: true, host: "https://custom-default.com", type: "full" },
+				{ custom: false, host: "https://default1.com", type: "full" },
+				{ custom: false, host: "https://default2.com", type: "full" },
+			];
+			const spy = vi.spyOn(HostsHelper, "filterHostsFromConfig").mockReturnValue(mockDefaultHosts);
+			const randomHostSpy = vi.spyOn(HostsHelper, "randomHost").mockReturnValue(mockDefaultHosts[1]);
+
+			const hostSelectorFn = hostSelector(mockProfile as any);
+			const result = hostSelectorFn(configRepository, "full");
+
+			expect(result).toEqual(mockDefaultHosts[1]);
+			expect(spy).toHaveBeenCalledWith(configRepository, "full");
+			expect(randomHostSpy).toHaveBeenCalled();
 
 			spy.mockRestore();
 			randomHostSpy.mockRestore();
