@@ -274,6 +274,7 @@ export const ImportAddressesSidePanel = ({
 			hasSteps={!isMethodStep}
 			totalSteps={allSteps.length}
 			activeStep={getActiveStep()}
+			onBack={handleBack}
 			footer={
 				!isLedgerImport && (
 					<ImportActionToolbar
