@@ -74,6 +74,16 @@ describe("ConfirmedTransactionData", () => {
 		expect(recipients[1]).toEqual({ address: "address2", amount: new BigNumber(200) });
 	});
 
+	it("should return sum of payments for multi-payment value", () => {
+		const mockTransaction = new ConfirmedTransactionData();
+		mockTransaction.isMultiPayment = () => true;
+		mockTransaction.payments = () => [{ amount: new BigNumber(100) }, { amount: new BigNumber(200) }];
+		mockTransaction.configure(commonData);
+
+		const value = mockTransaction.value();
+		expect(value).toEqual(new BigNumber(300));
+	});
+
 	it("should be instantiated and configured", () => {
 		expect(transaction.configure(commonData)).toBeInstanceOf(ConfirmedTransactionData);
 		expect(transaction.raw()).toEqual(commonData);
