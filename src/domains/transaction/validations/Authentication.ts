@@ -135,21 +135,5 @@ export const authentication = (t: any) => {
 				}
 			},
 		}),
-		wif: (wallet: Contracts.IReadWriteWallet) => ({
-			required: t(requiredFieldMessage, {
-				field: t("COMMON.WIF"),
-			}),
-			validate: {
-				matchSenderAddress: (wif: string) => {
-					const { address } = new AddressService().fromWIF(wif);
-
-					if (address === wallet.address()) {
-						return true;
-					}
-
-					return t("COMMON.INPUT_PASSPHRASE.VALIDATION.WIF_NOT_MATCH_WALLET");
-				},
-			},
-		}),
 	};
 };

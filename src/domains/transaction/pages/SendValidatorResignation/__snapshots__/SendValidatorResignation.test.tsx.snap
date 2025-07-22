@@ -598,25 +598,11 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                   data-testid="SendValidatorResignation__review-step"
                 >
                   <div
-                    class="w-full sm:mt-8"
+                    class="w-full"
                   >
                     <div
-                      class="flex flex-col"
+                      class="flex flex-col mb-8 hidden sm:block"
                     >
-                      <div
-                        class="mb-3 flex flex-col gap-1.5"
-                      >
-                        <span
-                          class="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 inline-block text-lg leading-[21px] font-semibold sm:hidden"
-                        >
-                          Transaction Review
-                        </span>
-                        <span
-                          class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-xs leading-5 font-semibold sm:hidden"
-                        >
-                          Review the transaction details below.
-                        </span>
-                      </div>
                       <ul
                         class="flex flex-row gap-2"
                       >
@@ -638,89 +624,113 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                       class="flex flex-col justify-between sm:flex-row"
                     >
                       <div
-                        class="bg-theme-background flex items-end justify-between mt-8 hidden sm:block"
+                        class="bg-theme-background flex items-end justify-between"
                       >
                         <div
                           class="space-y-2"
                         >
                           <div
-                            class="flex items-center gap-3"
+                            class="mb-1 flex items-center gap-3"
                           >
                             <div
-                              data-testid="icon-SendTransactionLight"
+                              class="hidden sm:inline"
                             >
                               <div
-                                style="height: 24px; width: 24px;"
+                                data-testid="icon-SendTransactionLight"
                               >
-                                <svg
-                                  fill="none"
-                                  style="height: 100%; width: 100%;"
-                                  viewBox="0 0 24 25"
-                                  xmlns="http://www.w3.org/2000/svg"
+                                <div
+                                  style="height: 24px; width: 24px;"
                                 >
-                                  <g
-                                    clip-path="url(#clip0_13879_104416)"
+                                  <svg
+                                    fill="none"
+                                    style="height: 100%; width: 100%;"
+                                    viewBox="0 0 24 25"
+                                    xmlns="http://www.w3.org/2000/svg"
                                   >
-                                    <path
-                                      clip-rule="evenodd"
-                                      d="M18.8821 8.94457H13.7264C13.0146 8.94457 12.4375 8.3675 12.4375 7.65565V2.5"
-                                      fill="#E6EFF9"
-                                      fill-rule="evenodd"
-                                    />
-                                    <path
-                                      d="M18.8821 8.94457H13.7264C13.0146 8.94457 12.4375 8.3675 12.4375 7.65565V2.5"
-                                      stroke="#235B95"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      stroke-width="2"
-                                    />
-                                    <path
-                                      d="M7.99174 21.8337H3.41391C2.70207 21.8337 2.125 21.2566 2.125 20.5448V3.78891C2.125 3.07707 2.70207 2.5 3.41391 2.5H12.5472C12.8891 2.49985 13.217 2.63554 13.4588 2.87722L18.5037 7.92289C18.7451 8.16452 18.8808 8.49212 18.8809 8.83372"
-                                      stroke="#235B95"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      stroke-width="2"
-                                    />
-                                    <path
-                                      clip-rule="evenodd"
-                                      d="M9.02802 17.1926C8.71518 17.1043 8.49639 16.8225 8.4885 16.4975C8.48061 16.1725 8.68545 15.8804 8.99364 15.7771L18.994 12.5155C19.1276 12.472 19.2743 12.5069 19.3739 12.606C19.4735 12.7051 19.5092 12.8516 19.4664 12.9854L16.2073 22.9907C16.1044 23.2995 15.812 23.5049 15.4867 23.4968C15.1613 23.4888 14.8793 23.2693 14.7918 22.9559L13.6727 18.3067L9.02802 17.1926Z"
-                                      fill="#E6EFF9"
-                                      fill-rule="evenodd"
-                                      stroke="#235B95"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      stroke-width="2"
-                                    />
-                                  </g>
-                                  <defs>
-                                    <clippath
-                                      id="clip0_13879_104416"
+                                    <g
+                                      clip-path="url(#clip0_13879_104416)"
                                     >
-                                      <rect
-                                        fill="white"
-                                        height="24"
-                                        transform="translate(24 24.5) rotate(-180)"
-                                        width="24"
+                                      <path
+                                        clip-rule="evenodd"
+                                        d="M18.8821 8.94457H13.7264C13.0146 8.94457 12.4375 8.3675 12.4375 7.65565V2.5"
+                                        fill="#E6EFF9"
+                                        fill-rule="evenodd"
                                       />
-                                    </clippath>
-                                  </defs>
-                                </svg>
+                                      <path
+                                        d="M18.8821 8.94457H13.7264C13.0146 8.94457 12.4375 8.3675 12.4375 7.65565V2.5"
+                                        stroke="#235B95"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                      />
+                                      <path
+                                        d="M7.99174 21.8337H3.41391C2.70207 21.8337 2.125 21.2566 2.125 20.5448V3.78891C2.125 3.07707 2.70207 2.5 3.41391 2.5H12.5472C12.8891 2.49985 13.217 2.63554 13.4588 2.87722L18.5037 7.92289C18.7451 8.16452 18.8808 8.49212 18.8809 8.83372"
+                                        stroke="#235B95"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                      />
+                                      <path
+                                        clip-rule="evenodd"
+                                        d="M9.02802 17.1926C8.71518 17.1043 8.49639 16.8225 8.4885 16.4975C8.48061 16.1725 8.68545 15.8804 8.99364 15.7771L18.994 12.5155C19.1276 12.472 19.2743 12.5069 19.3739 12.606C19.4735 12.7051 19.5092 12.8516 19.4664 12.9854L16.2073 22.9907C16.1044 23.2995 15.812 23.5049 15.4867 23.4968C15.1613 23.4888 14.8793 23.2693 14.7918 22.9559L13.6727 18.3067L9.02802 17.1926Z"
+                                        fill="#E6EFF9"
+                                        fill-rule="evenodd"
+                                        stroke="#235B95"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                      />
+                                    </g>
+                                    <defs>
+                                      <clippath
+                                        id="clip0_13879_104416"
+                                      >
+                                        <rect
+                                          fill="white"
+                                          height="24"
+                                          transform="translate(24 24.5) rotate(-180)"
+                                          width="24"
+                                        />
+                                      </clippath>
+                                    </defs>
+                                  </svg>
+                                </div>
                               </div>
                             </div>
                             <h1
-                              class="mb-0 text-2xl leading-[29px]"
+                              class="mb-0 text-lg leading-[21px] md:text-2xl md:leading-[29px]"
                               data-testid="header__title"
                             >
                               Transaction Review
                             </h1>
                           </div>
                           <div
-                            class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
+                            class="text-theme-secondary-text mt-0.5 flex items-center text-xs leading-5 font-semibold sm:mt-1 sm:text-sm sm:leading-[17px] sm:font-normal md:text-base md:leading-5"
                             data-testid="header__subtitle"
                           >
                             Review the transaction details below.
                           </div>
                         </div>
+                      </div>
+                      <div
+                        class="flex flex-col mt-2 sm:mb-2 sm:hidden"
+                      >
+                        <ul
+                          class="flex flex-row gap-2"
+                        >
+                          <li
+                            class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-warning-300"
+                          />
+                          <li
+                            class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-warning-300"
+                          />
+                          <li
+                            class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700"
+                          />
+                          <li
+                            class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700"
+                          />
+                        </ul>
                       </div>
                     </div>
                   </div>
@@ -735,7 +745,7 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                         data-testid="DetailLabel"
                       >
                         <div
-                          class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold text-md leading-5"
+                          class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold text-sm leading-[17px] sm:text-base sm:leading-5"
                           data-testid="DetailLabelText"
                         >
                           Addressing
@@ -823,7 +833,7 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                         data-testid="DetailLabel"
                       >
                         <div
-                          class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold text-md leading-5"
+                          class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold text-sm leading-[17px] sm:text-base sm:leading-5"
                           data-testid="DetailLabelText"
                         >
                           Transaction Type
@@ -889,7 +899,7 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                         data-testid="DetailLabel"
                       >
                         <div
-                          class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold text-md leading-5"
+                          class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold text-sm leading-[17px] sm:text-base sm:leading-5"
                           data-testid="DetailLabelText"
                         >
                           Transaction Summary
@@ -2018,25 +2028,11 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
                   data-testid="SendValidatorResignation__form-step"
                 >
                   <div
-                    class="w-full sm:mt-8"
+                    class="w-full"
                   >
                     <div
-                      class="flex flex-col"
+                      class="flex flex-col mb-8 hidden sm:block"
                     >
-                      <div
-                        class="mb-3 flex flex-col gap-1.5"
-                      >
-                        <span
-                          class="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 inline-block text-lg leading-[21px] font-semibold sm:hidden"
-                        >
-                          Resign Validator
-                        </span>
-                        <span
-                          class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-xs leading-5 font-semibold sm:hidden"
-                        >
-                          This transaction type permanently retires a Validator address.
-                        </span>
-                      </div>
                       <ul
                         class="flex flex-row gap-2"
                       >
@@ -2058,89 +2054,113 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
                       class="flex flex-col justify-between sm:flex-row"
                     >
                       <div
-                        class="bg-theme-background flex items-end justify-between mt-8 hidden sm:block"
+                        class="bg-theme-background flex items-end justify-between"
                       >
                         <div
                           class="space-y-2"
                         >
                           <div
-                            class="flex items-center gap-3"
+                            class="mb-1 flex items-center gap-3"
                           >
                             <div
-                              data-testid="icon-SendTransactionLight"
+                              class="hidden sm:inline"
                             >
                               <div
-                                style="height: 24px; width: 24px;"
+                                data-testid="icon-SendTransactionLight"
                               >
-                                <svg
-                                  fill="none"
-                                  style="height: 100%; width: 100%;"
-                                  viewBox="0 0 24 25"
-                                  xmlns="http://www.w3.org/2000/svg"
+                                <div
+                                  style="height: 24px; width: 24px;"
                                 >
-                                  <g
-                                    clip-path="url(#clip0_13879_104416)"
+                                  <svg
+                                    fill="none"
+                                    style="height: 100%; width: 100%;"
+                                    viewBox="0 0 24 25"
+                                    xmlns="http://www.w3.org/2000/svg"
                                   >
-                                    <path
-                                      clip-rule="evenodd"
-                                      d="M18.8821 8.94457H13.7264C13.0146 8.94457 12.4375 8.3675 12.4375 7.65565V2.5"
-                                      fill="#E6EFF9"
-                                      fill-rule="evenodd"
-                                    />
-                                    <path
-                                      d="M18.8821 8.94457H13.7264C13.0146 8.94457 12.4375 8.3675 12.4375 7.65565V2.5"
-                                      stroke="#235B95"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      stroke-width="2"
-                                    />
-                                    <path
-                                      d="M7.99174 21.8337H3.41391C2.70207 21.8337 2.125 21.2566 2.125 20.5448V3.78891C2.125 3.07707 2.70207 2.5 3.41391 2.5H12.5472C12.8891 2.49985 13.217 2.63554 13.4588 2.87722L18.5037 7.92289C18.7451 8.16452 18.8808 8.49212 18.8809 8.83372"
-                                      stroke="#235B95"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      stroke-width="2"
-                                    />
-                                    <path
-                                      clip-rule="evenodd"
-                                      d="M9.02802 17.1926C8.71518 17.1043 8.49639 16.8225 8.4885 16.4975C8.48061 16.1725 8.68545 15.8804 8.99364 15.7771L18.994 12.5155C19.1276 12.472 19.2743 12.5069 19.3739 12.606C19.4735 12.7051 19.5092 12.8516 19.4664 12.9854L16.2073 22.9907C16.1044 23.2995 15.812 23.5049 15.4867 23.4968C15.1613 23.4888 14.8793 23.2693 14.7918 22.9559L13.6727 18.3067L9.02802 17.1926Z"
-                                      fill="#E6EFF9"
-                                      fill-rule="evenodd"
-                                      stroke="#235B95"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      stroke-width="2"
-                                    />
-                                  </g>
-                                  <defs>
-                                    <clippath
-                                      id="clip0_13879_104416"
+                                    <g
+                                      clip-path="url(#clip0_13879_104416)"
                                     >
-                                      <rect
-                                        fill="white"
-                                        height="24"
-                                        transform="translate(24 24.5) rotate(-180)"
-                                        width="24"
+                                      <path
+                                        clip-rule="evenodd"
+                                        d="M18.8821 8.94457H13.7264C13.0146 8.94457 12.4375 8.3675 12.4375 7.65565V2.5"
+                                        fill="#E6EFF9"
+                                        fill-rule="evenodd"
                                       />
-                                    </clippath>
-                                  </defs>
-                                </svg>
+                                      <path
+                                        d="M18.8821 8.94457H13.7264C13.0146 8.94457 12.4375 8.3675 12.4375 7.65565V2.5"
+                                        stroke="#235B95"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                      />
+                                      <path
+                                        d="M7.99174 21.8337H3.41391C2.70207 21.8337 2.125 21.2566 2.125 20.5448V3.78891C2.125 3.07707 2.70207 2.5 3.41391 2.5H12.5472C12.8891 2.49985 13.217 2.63554 13.4588 2.87722L18.5037 7.92289C18.7451 8.16452 18.8808 8.49212 18.8809 8.83372"
+                                        stroke="#235B95"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                      />
+                                      <path
+                                        clip-rule="evenodd"
+                                        d="M9.02802 17.1926C8.71518 17.1043 8.49639 16.8225 8.4885 16.4975C8.48061 16.1725 8.68545 15.8804 8.99364 15.7771L18.994 12.5155C19.1276 12.472 19.2743 12.5069 19.3739 12.606C19.4735 12.7051 19.5092 12.8516 19.4664 12.9854L16.2073 22.9907C16.1044 23.2995 15.812 23.5049 15.4867 23.4968C15.1613 23.4888 14.8793 23.2693 14.7918 22.9559L13.6727 18.3067L9.02802 17.1926Z"
+                                        fill="#E6EFF9"
+                                        fill-rule="evenodd"
+                                        stroke="#235B95"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                      />
+                                    </g>
+                                    <defs>
+                                      <clippath
+                                        id="clip0_13879_104416"
+                                      >
+                                        <rect
+                                          fill="white"
+                                          height="24"
+                                          transform="translate(24 24.5) rotate(-180)"
+                                          width="24"
+                                        />
+                                      </clippath>
+                                    </defs>
+                                  </svg>
+                                </div>
                               </div>
                             </div>
                             <h1
-                              class="mb-0 text-2xl leading-[29px]"
+                              class="mb-0 text-lg leading-[21px] md:text-2xl md:leading-[29px]"
                               data-testid="header__title"
                             >
                               Resign Validator
                             </h1>
                           </div>
                           <div
-                            class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
+                            class="text-theme-secondary-text mt-0.5 flex items-center text-xs leading-5 font-semibold sm:mt-1 sm:text-sm sm:leading-[17px] sm:font-normal md:text-base md:leading-5"
                             data-testid="header__subtitle"
                           >
                             This transaction type permanently retires a Validator address.
                           </div>
                         </div>
+                      </div>
+                      <div
+                        class="flex flex-col mt-2 sm:mb-2 sm:hidden"
+                      >
+                        <ul
+                          class="flex flex-row gap-2"
+                        >
+                          <li
+                            class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-warning-300"
+                          />
+                          <li
+                            class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700"
+                          />
+                          <li
+                            class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700"
+                          />
+                          <li
+                            class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700"
+                          />
+                        </ul>
                       </div>
                     </div>
                   </div>
@@ -2295,7 +2315,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
                         data-testid="DetailLabel"
                       >
                         <div
-                          class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold text-md leading-5"
+                          class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold text-sm leading-[17px] sm:text-base sm:leading-5"
                           data-testid="DetailLabelText"
                         >
                           Action
@@ -2361,7 +2381,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
                         data-testid="DetailLabel"
                       >
                         <div
-                          class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold text-md leading-5"
+                          class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold text-sm leading-[17px] sm:text-base sm:leading-5"
                           data-testid="DetailLabelText"
                         >
                           Transaction Summary
@@ -3186,25 +3206,11 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                   data-testid="SendValidatorResignation__review-step"
                 >
                   <div
-                    class="w-full sm:mt-8"
+                    class="w-full"
                   >
                     <div
-                      class="flex flex-col"
+                      class="flex flex-col mb-8 hidden sm:block"
                     >
-                      <div
-                        class="mb-3 flex flex-col gap-1.5"
-                      >
-                        <span
-                          class="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 inline-block text-lg leading-[21px] font-semibold sm:hidden"
-                        >
-                          Transaction Review
-                        </span>
-                        <span
-                          class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-xs leading-5 font-semibold sm:hidden"
-                        >
-                          Review the transaction details below.
-                        </span>
-                      </div>
                       <ul
                         class="flex flex-row gap-2"
                       >
@@ -3226,89 +3232,113 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                       class="flex flex-col justify-between sm:flex-row"
                     >
                       <div
-                        class="bg-theme-background flex items-end justify-between mt-8 hidden sm:block"
+                        class="bg-theme-background flex items-end justify-between"
                       >
                         <div
                           class="space-y-2"
                         >
                           <div
-                            class="flex items-center gap-3"
+                            class="mb-1 flex items-center gap-3"
                           >
                             <div
-                              data-testid="icon-SendTransactionLight"
+                              class="hidden sm:inline"
                             >
                               <div
-                                style="height: 24px; width: 24px;"
+                                data-testid="icon-SendTransactionLight"
                               >
-                                <svg
-                                  fill="none"
-                                  style="height: 100%; width: 100%;"
-                                  viewBox="0 0 24 25"
-                                  xmlns="http://www.w3.org/2000/svg"
+                                <div
+                                  style="height: 24px; width: 24px;"
                                 >
-                                  <g
-                                    clip-path="url(#clip0_13879_104416)"
+                                  <svg
+                                    fill="none"
+                                    style="height: 100%; width: 100%;"
+                                    viewBox="0 0 24 25"
+                                    xmlns="http://www.w3.org/2000/svg"
                                   >
-                                    <path
-                                      clip-rule="evenodd"
-                                      d="M18.8821 8.94457H13.7264C13.0146 8.94457 12.4375 8.3675 12.4375 7.65565V2.5"
-                                      fill="#E6EFF9"
-                                      fill-rule="evenodd"
-                                    />
-                                    <path
-                                      d="M18.8821 8.94457H13.7264C13.0146 8.94457 12.4375 8.3675 12.4375 7.65565V2.5"
-                                      stroke="#235B95"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      stroke-width="2"
-                                    />
-                                    <path
-                                      d="M7.99174 21.8337H3.41391C2.70207 21.8337 2.125 21.2566 2.125 20.5448V3.78891C2.125 3.07707 2.70207 2.5 3.41391 2.5H12.5472C12.8891 2.49985 13.217 2.63554 13.4588 2.87722L18.5037 7.92289C18.7451 8.16452 18.8808 8.49212 18.8809 8.83372"
-                                      stroke="#235B95"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      stroke-width="2"
-                                    />
-                                    <path
-                                      clip-rule="evenodd"
-                                      d="M9.02802 17.1926C8.71518 17.1043 8.49639 16.8225 8.4885 16.4975C8.48061 16.1725 8.68545 15.8804 8.99364 15.7771L18.994 12.5155C19.1276 12.472 19.2743 12.5069 19.3739 12.606C19.4735 12.7051 19.5092 12.8516 19.4664 12.9854L16.2073 22.9907C16.1044 23.2995 15.812 23.5049 15.4867 23.4968C15.1613 23.4888 14.8793 23.2693 14.7918 22.9559L13.6727 18.3067L9.02802 17.1926Z"
-                                      fill="#E6EFF9"
-                                      fill-rule="evenodd"
-                                      stroke="#235B95"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      stroke-width="2"
-                                    />
-                                  </g>
-                                  <defs>
-                                    <clippath
-                                      id="clip0_13879_104416"
+                                    <g
+                                      clip-path="url(#clip0_13879_104416)"
                                     >
-                                      <rect
-                                        fill="white"
-                                        height="24"
-                                        transform="translate(24 24.5) rotate(-180)"
-                                        width="24"
+                                      <path
+                                        clip-rule="evenodd"
+                                        d="M18.8821 8.94457H13.7264C13.0146 8.94457 12.4375 8.3675 12.4375 7.65565V2.5"
+                                        fill="#E6EFF9"
+                                        fill-rule="evenodd"
                                       />
-                                    </clippath>
-                                  </defs>
-                                </svg>
+                                      <path
+                                        d="M18.8821 8.94457H13.7264C13.0146 8.94457 12.4375 8.3675 12.4375 7.65565V2.5"
+                                        stroke="#235B95"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                      />
+                                      <path
+                                        d="M7.99174 21.8337H3.41391C2.70207 21.8337 2.125 21.2566 2.125 20.5448V3.78891C2.125 3.07707 2.70207 2.5 3.41391 2.5H12.5472C12.8891 2.49985 13.217 2.63554 13.4588 2.87722L18.5037 7.92289C18.7451 8.16452 18.8808 8.49212 18.8809 8.83372"
+                                        stroke="#235B95"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                      />
+                                      <path
+                                        clip-rule="evenodd"
+                                        d="M9.02802 17.1926C8.71518 17.1043 8.49639 16.8225 8.4885 16.4975C8.48061 16.1725 8.68545 15.8804 8.99364 15.7771L18.994 12.5155C19.1276 12.472 19.2743 12.5069 19.3739 12.606C19.4735 12.7051 19.5092 12.8516 19.4664 12.9854L16.2073 22.9907C16.1044 23.2995 15.812 23.5049 15.4867 23.4968C15.1613 23.4888 14.8793 23.2693 14.7918 22.9559L13.6727 18.3067L9.02802 17.1926Z"
+                                        fill="#E6EFF9"
+                                        fill-rule="evenodd"
+                                        stroke="#235B95"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                      />
+                                    </g>
+                                    <defs>
+                                      <clippath
+                                        id="clip0_13879_104416"
+                                      >
+                                        <rect
+                                          fill="white"
+                                          height="24"
+                                          transform="translate(24 24.5) rotate(-180)"
+                                          width="24"
+                                        />
+                                      </clippath>
+                                    </defs>
+                                  </svg>
+                                </div>
                               </div>
                             </div>
                             <h1
-                              class="mb-0 text-2xl leading-[29px]"
+                              class="mb-0 text-lg leading-[21px] md:text-2xl md:leading-[29px]"
                               data-testid="header__title"
                             >
                               Transaction Review
                             </h1>
                           </div>
                           <div
-                            class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
+                            class="text-theme-secondary-text mt-0.5 flex items-center text-xs leading-5 font-semibold sm:mt-1 sm:text-sm sm:leading-[17px] sm:font-normal md:text-base md:leading-5"
                             data-testid="header__subtitle"
                           >
                             Review the transaction details below.
                           </div>
                         </div>
+                      </div>
+                      <div
+                        class="flex flex-col mt-2 sm:mb-2 sm:hidden"
+                      >
+                        <ul
+                          class="flex flex-row gap-2"
+                        >
+                          <li
+                            class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-warning-300"
+                          />
+                          <li
+                            class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-warning-300"
+                          />
+                          <li
+                            class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700"
+                          />
+                          <li
+                            class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700"
+                          />
+                        </ul>
                       </div>
                     </div>
                   </div>
@@ -3323,7 +3353,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                         data-testid="DetailLabel"
                       >
                         <div
-                          class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold text-md leading-5"
+                          class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold text-sm leading-[17px] sm:text-base sm:leading-5"
                           data-testid="DetailLabelText"
                         >
                           Addressing
@@ -3411,7 +3441,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                         data-testid="DetailLabel"
                       >
                         <div
-                          class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold text-md leading-5"
+                          class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold text-sm leading-[17px] sm:text-base sm:leading-5"
                           data-testid="DetailLabelText"
                         >
                           Transaction Type
@@ -3477,7 +3507,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                         data-testid="DetailLabel"
                       >
                         <div
-                          class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold text-md leading-5"
+                          class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold text-sm leading-[17px] sm:text-base sm:leading-5"
                           data-testid="DetailLabelText"
                         >
                           Transaction Summary
@@ -4520,25 +4550,11 @@ exports[`SendValidatorResignation > Validator Resignation > should render 3rd st
                   data-testid="AuthenticationStep"
                 >
                   <div
-                    class="w-full sm:mt-8"
+                    class="w-full"
                   >
                     <div
-                      class="flex flex-col"
+                      class="flex flex-col mb-8 hidden sm:block"
                     >
-                      <div
-                        class="mb-3 flex flex-col gap-1.5"
-                      >
-                        <span
-                          class="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 inline-block text-lg leading-[21px] font-semibold sm:hidden"
-                        >
-                          Authenticate
-                        </span>
-                        <span
-                          class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-xs leading-5 font-semibold sm:hidden"
-                        >
-                          Enter your mnemonic passphrase to authenticate the transaction.
-                        </span>
-                      </div>
                       <ul
                         class="flex flex-row gap-2"
                       >
@@ -4560,104 +4576,128 @@ exports[`SendValidatorResignation > Validator Resignation > should render 3rd st
                       class="flex flex-col justify-between sm:flex-row"
                     >
                       <div
-                        class="bg-theme-background flex items-end justify-between mt-8 hidden sm:block"
+                        class="bg-theme-background flex items-end justify-between"
                       >
                         <div
                           class="space-y-2"
                         >
                           <div
-                            class="flex items-center gap-3"
+                            class="mb-1 flex items-center gap-3"
                           >
                             <div
-                              class="text-theme-primary-600"
-                              data-testid="icon-mnemonic"
+                              class="hidden sm:inline"
                             >
                               <div
-                                style="height: 24px; width: 24px;"
+                                class="text-theme-primary-600"
+                                data-testid="icon-mnemonic"
                               >
-                                <svg
-                                  fill="none"
-                                  style="height: 100%; width: 100%;"
-                                  viewBox="0 0 25 25"
-                                  xmlns="http://www.w3.org/2000/svg"
+                                <div
+                                  style="height: 24px; width: 24px;"
                                 >
-                                  <g
-                                    clip-path="url(#clip0_13420_137872)"
+                                  <svg
+                                    fill="none"
+                                    style="height: 100%; width: 100%;"
+                                    viewBox="0 0 25 25"
+                                    xmlns="http://www.w3.org/2000/svg"
                                   >
-                                    <path
-                                      d="M18.0078 14.9033H20.9411"
-                                      stroke="currentColor"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      stroke-width="2"
-                                    />
-                                    <path
-                                      clip-rule="evenodd"
-                                      d="M1.875 6.57031C1.875 6.01803 2.32272 5.57031 2.875 5.57031H22.875C23.4273 5.57031 23.875 6.01803 23.875 6.57031V18.837C23.875 19.3893 23.4273 19.837 22.875 19.837H2.875C2.32272 19.837 1.875 19.3893 1.875 18.837V6.57031Z"
-                                      fill-rule="evenodd"
-                                      stroke="currentColor"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      stroke-width="2"
-                                    />
-                                    <path
-                                      d="M8.47526 11.2373L4.80859 14.904"
-                                      stroke="currentColor"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      stroke-width="2"
-                                    />
-                                    <path
-                                      d="M8.47526 14.904L4.80859 11.2373"
-                                      stroke="currentColor"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      stroke-width="2"
-                                    />
-                                    <path
-                                      d="M15.0729 11.2373L11.4062 14.904"
-                                      stroke="currentColor"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      stroke-width="2"
-                                    />
-                                    <path
-                                      d="M15.0729 14.904L11.4062 11.2373"
-                                      stroke="currentColor"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      stroke-width="2"
-                                    />
-                                  </g>
-                                  <defs>
-                                    <clippath
-                                      id="clip0_13420_137872"
+                                    <g
+                                      clip-path="url(#clip0_13420_137872)"
                                     >
-                                      <rect
-                                        fill="white"
-                                        height="24"
-                                        transform="translate(24.875 24.5) rotate(-180)"
-                                        width="24"
+                                      <path
+                                        d="M18.0078 14.9033H20.9411"
+                                        stroke="currentColor"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
                                       />
-                                    </clippath>
-                                  </defs>
-                                </svg>
+                                      <path
+                                        clip-rule="evenodd"
+                                        d="M1.875 6.57031C1.875 6.01803 2.32272 5.57031 2.875 5.57031H22.875C23.4273 5.57031 23.875 6.01803 23.875 6.57031V18.837C23.875 19.3893 23.4273 19.837 22.875 19.837H2.875C2.32272 19.837 1.875 19.3893 1.875 18.837V6.57031Z"
+                                        fill-rule="evenodd"
+                                        stroke="currentColor"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                      />
+                                      <path
+                                        d="M8.47526 11.2373L4.80859 14.904"
+                                        stroke="currentColor"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                      />
+                                      <path
+                                        d="M8.47526 14.904L4.80859 11.2373"
+                                        stroke="currentColor"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                      />
+                                      <path
+                                        d="M15.0729 11.2373L11.4062 14.904"
+                                        stroke="currentColor"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                      />
+                                      <path
+                                        d="M15.0729 14.904L11.4062 11.2373"
+                                        stroke="currentColor"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                      />
+                                    </g>
+                                    <defs>
+                                      <clippath
+                                        id="clip0_13420_137872"
+                                      >
+                                        <rect
+                                          fill="white"
+                                          height="24"
+                                          transform="translate(24.875 24.5) rotate(-180)"
+                                          width="24"
+                                        />
+                                      </clippath>
+                                    </defs>
+                                  </svg>
+                                </div>
                               </div>
                             </div>
                             <h1
-                              class="mb-0 text-2xl leading-[29px]"
+                              class="mb-0 text-lg leading-[21px] md:text-2xl md:leading-[29px]"
                               data-testid="header__title"
                             >
                               Authenticate
                             </h1>
                           </div>
                           <div
-                            class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
+                            class="text-theme-secondary-text mt-0.5 flex items-center text-xs leading-5 font-semibold sm:mt-1 sm:text-sm sm:leading-[17px] sm:font-normal md:text-base md:leading-5"
                             data-testid="header__subtitle"
                           >
                             Enter your mnemonic passphrase to authenticate the transaction.
                           </div>
                         </div>
+                      </div>
+                      <div
+                        class="flex flex-col mt-2 sm:mb-2 sm:hidden"
+                      >
+                        <ul
+                          class="flex flex-row gap-2"
+                        >
+                          <li
+                            class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-warning-300"
+                          />
+                          <li
+                            class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-warning-300"
+                          />
+                          <li
+                            class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-warning-300"
+                          />
+                          <li
+                            class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700"
+                          />
+                        </ul>
                       </div>
                     </div>
                   </div>
@@ -5534,20 +5574,11 @@ exports[`SendValidatorResignation > Validator Resignation > should show error st
                       class="flex flex-row items-center justify-start gap-3"
                     >
                       <div
-                        class="w-full sm:mt-8"
+                        class="w-full"
                       >
                         <div
-                          class="flex flex-col"
+                          class="flex flex-col mb-8 hidden sm:block"
                         >
-                          <div
-                            class="mb-3 flex flex-col gap-1.5"
-                          >
-                            <span
-                              class="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 inline-block text-lg leading-[21px] font-semibold sm:hidden"
-                            >
-                              Transaction Error
-                            </span>
-                          </div>
                           <ul
                             class="flex flex-row gap-2"
                           >
@@ -5569,50 +5600,74 @@ exports[`SendValidatorResignation > Validator Resignation > should show error st
                           class="flex flex-col justify-between sm:flex-row"
                         >
                           <div
-                            class="bg-theme-background flex items-end justify-between mt-8 hidden sm:block"
+                            class="bg-theme-background flex items-end justify-between"
                           >
                             <div
                               class="space-y-2"
                             >
                               <div
-                                class="flex items-center gap-3"
+                                class="mb-1 flex items-center gap-3"
                               >
-                                <svg
-                                  class="block h-[22px] w-[22px]"
-                                  fill="none"
-                                  height="25"
-                                  viewBox="0 0 24 25"
-                                  width="24"
-                                  xmlns="http://www.w3.org/2000/svg"
+                                <div
+                                  class="hidden sm:inline"
                                 >
-                                  <path
-                                    clip-rule="evenodd"
-                                    d="M12 23.5C18.0751 23.5 23 18.5751 23 12.5C23 6.42487 18.0751 1.5 12 1.5C5.92487 1.5 1 6.42487 1 12.5C1 18.5751 5.92487 23.5 12 23.5Z"
-                                    fill-rule="evenodd"
-                                    stroke="#DE5846"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  />
-                                  <path
-                                    clip-rule="evenodd"
-                                    d="M17.1845 14.5747L15.1136 12.5008L17.1845 10.426C17.7571 9.85323 17.7571 8.92483 17.1845 8.35209L16.151 7.31858C15.8759 7.04332 15.5027 6.88867 15.1136 6.88867C14.7244 6.88867 14.3512 7.04332 14.0761 7.31858L12.0023 9.38951L9.9284 7.31858C9.65332 7.04332 9.28013 6.88867 8.89098 6.88867C8.50183 6.88867 8.12864 7.04332 7.85356 7.31858L6.82005 8.35209C6.24748 8.92483 6.24748 9.85323 6.82005 10.426L8.89098 12.5008L6.82005 14.5747C6.24748 15.1474 6.24748 16.0758 6.82005 16.6485L7.85356 17.683C8.12864 17.9583 8.50183 18.1129 8.89098 18.1129C9.28013 18.1129 9.65332 17.9583 9.9284 17.683L12.0023 15.6121L14.0761 17.683C14.3512 17.9583 14.7244 18.1129 15.1136 18.1129C15.5027 18.1129 15.8759 17.9583 16.151 17.683L17.1874 16.6456C17.7572 16.0724 17.7559 15.1463 17.1845 14.5747Z"
-                                    fill="#FFE0DA"
-                                    fill-rule="evenodd"
-                                    stroke="#DE5846"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  />
-                                </svg>
+                                  <svg
+                                    class="block h-[22px] w-[22px]"
+                                    fill="none"
+                                    height="25"
+                                    viewBox="0 0 24 25"
+                                    width="24"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                      clip-rule="evenodd"
+                                      d="M12 23.5C18.0751 23.5 23 18.5751 23 12.5C23 6.42487 18.0751 1.5 12 1.5C5.92487 1.5 1 6.42487 1 12.5C1 18.5751 5.92487 23.5 12 23.5Z"
+                                      fill-rule="evenodd"
+                                      stroke="#DE5846"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    />
+                                    <path
+                                      clip-rule="evenodd"
+                                      d="M17.1845 14.5747L15.1136 12.5008L17.1845 10.426C17.7571 9.85323 17.7571 8.92483 17.1845 8.35209L16.151 7.31858C15.8759 7.04332 15.5027 6.88867 15.1136 6.88867C14.7244 6.88867 14.3512 7.04332 14.0761 7.31858L12.0023 9.38951L9.9284 7.31858C9.65332 7.04332 9.28013 6.88867 8.89098 6.88867C8.50183 6.88867 8.12864 7.04332 7.85356 7.31858L6.82005 8.35209C6.24748 8.92483 6.24748 9.85323 6.82005 10.426L8.89098 12.5008L6.82005 14.5747C6.24748 15.1474 6.24748 16.0758 6.82005 16.6485L7.85356 17.683C8.12864 17.9583 8.50183 18.1129 8.89098 18.1129C9.28013 18.1129 9.65332 17.9583 9.9284 17.683L12.0023 15.6121L14.0761 17.683C14.3512 17.9583 14.7244 18.1129 15.1136 18.1129C15.5027 18.1129 15.8759 17.9583 16.151 17.683L17.1874 16.6456C17.7572 16.0724 17.7559 15.1463 17.1845 14.5747Z"
+                                      fill="#FFE0DA"
+                                      fill-rule="evenodd"
+                                      stroke="#DE5846"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    />
+                                  </svg>
+                                </div>
                                 <h1
-                                  class="mb-0 text-2xl leading-[29px]"
+                                  class="mb-0 text-lg leading-[21px] md:text-2xl md:leading-[29px]"
                                   data-testid="header__title"
                                 >
                                   Transaction Error
                                 </h1>
                               </div>
                             </div>
+                          </div>
+                          <div
+                            class="flex flex-col mt-2 sm:mb-2 sm:hidden"
+                          >
+                            <ul
+                              class="flex flex-row gap-2"
+                            >
+                              <li
+                                class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-warning-300"
+                              />
+                              <li
+                                class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-warning-300"
+                              />
+                              <li
+                                class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-warning-300"
+                              />
+                              <li
+                                class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-warning-300"
+                              />
+                            </ul>
                           </div>
                         </div>
                       </div>

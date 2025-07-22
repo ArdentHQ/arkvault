@@ -723,13 +723,16 @@ exports[`Votes > should emit action on continue button 1`] = `
               class="space-y-2"
             >
               <div
-                class="flex items-center gap-3"
+                class="mb-1 flex items-center gap-3"
               >
+                <div
+                  class="hidden sm:inline"
+                />
                 <div
                   class="flex flex-col gap-2"
                 >
                   <h1
-                    class="mb-0 text-2xl leading-[29px]"
+                    class="mb-0 text-lg leading-[21px] md:text-2xl md:leading-[29px]"
                     data-testid="header__title"
                   >
                     Select Validator
@@ -9027,13 +9030,16 @@ exports[`Votes > should emit action on continue button to unvote/vote 1`] = `
               class="space-y-2"
             >
               <div
-                class="flex items-center gap-3"
+                class="mb-1 flex items-center gap-3"
               >
+                <div
+                  class="hidden sm:inline"
+                />
                 <div
                   class="flex flex-col gap-2"
                 >
                   <h1
-                    class="mb-0 text-2xl leading-[29px]"
+                    class="mb-0 text-lg leading-[21px] md:text-2xl md:leading-[29px]"
                     data-testid="header__title"
                   >
                     Select Validator
@@ -17007,13 +17013,16 @@ exports[`Votes > should filter current validators 1`] = `
               class="space-y-2"
             >
               <div
-                class="flex items-center gap-3"
+                class="mb-1 flex items-center gap-3"
               >
+                <div
+                  class="hidden sm:inline"
+                />
                 <div
                   class="flex flex-col gap-2"
                 >
                   <h1
-                    class="mb-0 text-2xl leading-[29px]"
+                    class="mb-0 text-lg leading-[21px] md:text-2xl md:leading-[29px]"
                     data-testid="header__title"
                   >
                     Select Validator
@@ -18293,75 +18302,79 @@ exports[`Votes > should open the create wallet side panel 1`] = `
               class="space-y-2"
             >
               <div
-                class="flex items-center gap-3"
+                class="mb-1 flex items-center gap-3"
               >
                 <div
-                  data-testid="icon-VotesLight"
+                  class="hidden sm:inline"
                 >
                   <div
-                    style="height: 55px; width: 54px;"
+                    data-testid="icon-VotesLight"
                   >
-                    <svg
-                      fill="none"
-                      height="55"
-                      style="height: 100%; width: 100%;"
-                      viewBox="0 0 54 55"
-                      width="54"
-                      xmlns="http://www.w3.org/2000/svg"
+                    <div
+                      style="height: 55px; width: 54px;"
                     >
-                      <path
-                        d="M35 47.5H4.2C2.98497 47.5 2 46.515 2 45.3V45.3C2 40.4399 5.93989 36.5 10.8 36.5H11"
-                        stroke="#5CA4EC"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                      />
-                      <path
-                        d="M47.4929 15.5078L30.164 5.50297C28.2541 4.4003 25.8121 5.05147 24.7048 6.95868L23.0933 9.73437C25.1813 9.73438 29.5933 9.72656 33.5933 9.72656C38.5933 9.72656 40.0933 11.2356 40.0933 14.7266L40.0933 36.3244L48.957 20.9719C50.0616 19.0588 49.4061 16.6124 47.4929 15.5078Z"
-                        fill="#5CA4EC"
-                        stroke="#5CA4EC"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                      />
-                      <path
-                        d="M20 10.0937L36 10.0937C38.2091 10.0937 40 11.8846 40 14.0938L40 36.5M20 10.0937L12 18.0937M20 10.0937L20 16.0937C20 17.1983 19.1046 18.0937 18 18.0937L12 18.0937M12 40.0937L12 18.0937M12 40.0937L8.00001 40.0937M12 40.0937L36.5 40.0937"
-                        stroke="#235B95"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                      />
-                      <path
-                        d="M27.8281 34.267L25.051 29.6386C24.7917 29.2065 24.7439 28.6796 24.921 28.2078L29.0941 17.0938C29.2406 16.7037 29.6136 16.4453 30.0303 16.4453H33.5482C34.2494 16.4453 34.7329 17.1483 34.482 17.8031L28.1863 34.2357C28.1267 34.3914 27.9139 34.41 27.8281 34.267Z"
-                        fill="#235B95"
-                      />
-                      <path
-                        d="M21.0984 24H17.817C17.0289 24 16.5505 24.8692 16.9722 25.5351L22.4322 34.1562C22.6156 34.4457 22.9344 34.6211 23.2771 34.6211H26.2711C27.0484 34.6211 27.5285 33.7731 27.1286 33.1066L21.9559 24.4855C21.7752 24.1843 21.4497 24 21.0984 24Z"
-                        stroke="#235B95"
-                        stroke-width="2"
-                      />
-                      <path
-                        d="M35 47.5V45.5C35 40.5294 39.0294 36.5 44 36.5V36.5C48.9706 36.5 53 40.5294 53 45.5V45.6667C53 46.6792 52.1792 47.5 51.1667 47.5H47.5"
-                        stroke="#5CA4EC"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                      />
-                    </svg>
+                      <svg
+                        fill="none"
+                        height="55"
+                        style="height: 100%; width: 100%;"
+                        viewBox="0 0 54 55"
+                        width="54"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M35 47.5H4.2C2.98497 47.5 2 46.515 2 45.3V45.3C2 40.4399 5.93989 36.5 10.8 36.5H11"
+                          stroke="#5CA4EC"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M47.4929 15.5078L30.164 5.50297C28.2541 4.4003 25.8121 5.05147 24.7048 6.95868L23.0933 9.73437C25.1813 9.73438 29.5933 9.72656 33.5933 9.72656C38.5933 9.72656 40.0933 11.2356 40.0933 14.7266L40.0933 36.3244L48.957 20.9719C50.0616 19.0588 49.4061 16.6124 47.4929 15.5078Z"
+                          fill="#5CA4EC"
+                          stroke="#5CA4EC"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M20 10.0937L36 10.0937C38.2091 10.0937 40 11.8846 40 14.0938L40 36.5M20 10.0937L12 18.0937M20 10.0937L20 16.0937C20 17.1983 19.1046 18.0937 18 18.0937L12 18.0937M12 40.0937L12 18.0937M12 40.0937L8.00001 40.0937M12 40.0937L36.5 40.0937"
+                          stroke="#235B95"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M27.8281 34.267L25.051 29.6386C24.7917 29.2065 24.7439 28.6796 24.921 28.2078L29.0941 17.0938C29.2406 16.7037 29.6136 16.4453 30.0303 16.4453H33.5482C34.2494 16.4453 34.7329 17.1483 34.482 17.8031L28.1863 34.2357C28.1267 34.3914 27.9139 34.41 27.8281 34.267Z"
+                          fill="#235B95"
+                        />
+                        <path
+                          d="M21.0984 24H17.817C17.0289 24 16.5505 24.8692 16.9722 25.5351L22.4322 34.1562C22.6156 34.4457 22.9344 34.6211 23.2771 34.6211H26.2711C27.0484 34.6211 27.5285 33.7731 27.1286 33.1066L21.9559 24.4855C21.7752 24.1843 21.4497 24 21.0984 24Z"
+                          stroke="#235B95"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M35 47.5V45.5C35 40.5294 39.0294 36.5 44 36.5V36.5C48.9706 36.5 53 40.5294 53 45.5V45.6667C53 46.6792 52.1792 47.5 51.1667 47.5H47.5"
+                          stroke="#5CA4EC"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </div>
                   </div>
                 </div>
                 <div
                   class="flex flex-col gap-2"
                 >
                   <h1
-                    class="mb-0 text-2xl leading-[29px]"
+                    class="mb-0 text-lg leading-[21px] md:text-2xl md:leading-[29px]"
                     data-testid="header__title"
                   >
                     Votes
                   </h1>
                    
                   <div
-                    class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
+                    class="text-theme-secondary-text mt-0.5 flex items-center text-xs leading-5 font-semibold sm:mt-1 sm:text-sm sm:leading-[17px] sm:font-normal md:text-base md:leading-5"
                     data-testid="header__subtitle"
                   >
                     Manage your cryptoasset staking.
@@ -19135,75 +19148,79 @@ exports[`Votes > should open the import wallet side panel 1`] = `
               class="space-y-2"
             >
               <div
-                class="flex items-center gap-3"
+                class="mb-1 flex items-center gap-3"
               >
                 <div
-                  data-testid="icon-VotesLight"
+                  class="hidden sm:inline"
                 >
                   <div
-                    style="height: 55px; width: 54px;"
+                    data-testid="icon-VotesLight"
                   >
-                    <svg
-                      fill="none"
-                      height="55"
-                      style="height: 100%; width: 100%;"
-                      viewBox="0 0 54 55"
-                      width="54"
-                      xmlns="http://www.w3.org/2000/svg"
+                    <div
+                      style="height: 55px; width: 54px;"
                     >
-                      <path
-                        d="M35 47.5H4.2C2.98497 47.5 2 46.515 2 45.3V45.3C2 40.4399 5.93989 36.5 10.8 36.5H11"
-                        stroke="#5CA4EC"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                      />
-                      <path
-                        d="M47.4929 15.5078L30.164 5.50297C28.2541 4.4003 25.8121 5.05147 24.7048 6.95868L23.0933 9.73437C25.1813 9.73438 29.5933 9.72656 33.5933 9.72656C38.5933 9.72656 40.0933 11.2356 40.0933 14.7266L40.0933 36.3244L48.957 20.9719C50.0616 19.0588 49.4061 16.6124 47.4929 15.5078Z"
-                        fill="#5CA4EC"
-                        stroke="#5CA4EC"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                      />
-                      <path
-                        d="M20 10.0937L36 10.0937C38.2091 10.0937 40 11.8846 40 14.0938L40 36.5M20 10.0937L12 18.0937M20 10.0937L20 16.0937C20 17.1983 19.1046 18.0937 18 18.0937L12 18.0937M12 40.0937L12 18.0937M12 40.0937L8.00001 40.0937M12 40.0937L36.5 40.0937"
-                        stroke="#235B95"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                      />
-                      <path
-                        d="M27.8281 34.267L25.051 29.6386C24.7917 29.2065 24.7439 28.6796 24.921 28.2078L29.0941 17.0938C29.2406 16.7037 29.6136 16.4453 30.0303 16.4453H33.5482C34.2494 16.4453 34.7329 17.1483 34.482 17.8031L28.1863 34.2357C28.1267 34.3914 27.9139 34.41 27.8281 34.267Z"
-                        fill="#235B95"
-                      />
-                      <path
-                        d="M21.0984 24H17.817C17.0289 24 16.5505 24.8692 16.9722 25.5351L22.4322 34.1562C22.6156 34.4457 22.9344 34.6211 23.2771 34.6211H26.2711C27.0484 34.6211 27.5285 33.7731 27.1286 33.1066L21.9559 24.4855C21.7752 24.1843 21.4497 24 21.0984 24Z"
-                        stroke="#235B95"
-                        stroke-width="2"
-                      />
-                      <path
-                        d="M35 47.5V45.5C35 40.5294 39.0294 36.5 44 36.5V36.5C48.9706 36.5 53 40.5294 53 45.5V45.6667C53 46.6792 52.1792 47.5 51.1667 47.5H47.5"
-                        stroke="#5CA4EC"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                      />
-                    </svg>
+                      <svg
+                        fill="none"
+                        height="55"
+                        style="height: 100%; width: 100%;"
+                        viewBox="0 0 54 55"
+                        width="54"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M35 47.5H4.2C2.98497 47.5 2 46.515 2 45.3V45.3C2 40.4399 5.93989 36.5 10.8 36.5H11"
+                          stroke="#5CA4EC"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M47.4929 15.5078L30.164 5.50297C28.2541 4.4003 25.8121 5.05147 24.7048 6.95868L23.0933 9.73437C25.1813 9.73438 29.5933 9.72656 33.5933 9.72656C38.5933 9.72656 40.0933 11.2356 40.0933 14.7266L40.0933 36.3244L48.957 20.9719C50.0616 19.0588 49.4061 16.6124 47.4929 15.5078Z"
+                          fill="#5CA4EC"
+                          stroke="#5CA4EC"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M20 10.0937L36 10.0937C38.2091 10.0937 40 11.8846 40 14.0938L40 36.5M20 10.0937L12 18.0937M20 10.0937L20 16.0937C20 17.1983 19.1046 18.0937 18 18.0937L12 18.0937M12 40.0937L12 18.0937M12 40.0937L8.00001 40.0937M12 40.0937L36.5 40.0937"
+                          stroke="#235B95"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M27.8281 34.267L25.051 29.6386C24.7917 29.2065 24.7439 28.6796 24.921 28.2078L29.0941 17.0938C29.2406 16.7037 29.6136 16.4453 30.0303 16.4453H33.5482C34.2494 16.4453 34.7329 17.1483 34.482 17.8031L28.1863 34.2357C28.1267 34.3914 27.9139 34.41 27.8281 34.267Z"
+                          fill="#235B95"
+                        />
+                        <path
+                          d="M21.0984 24H17.817C17.0289 24 16.5505 24.8692 16.9722 25.5351L22.4322 34.1562C22.6156 34.4457 22.9344 34.6211 23.2771 34.6211H26.2711C27.0484 34.6211 27.5285 33.7731 27.1286 33.1066L21.9559 24.4855C21.7752 24.1843 21.4497 24 21.0984 24Z"
+                          stroke="#235B95"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M35 47.5V45.5C35 40.5294 39.0294 36.5 44 36.5V36.5C48.9706 36.5 53 40.5294 53 45.5V45.6667C53 46.6792 52.1792 47.5 51.1667 47.5H47.5"
+                          stroke="#5CA4EC"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </div>
                   </div>
                 </div>
                 <div
                   class="flex flex-col gap-2"
                 >
                   <h1
-                    class="mb-0 text-2xl leading-[29px]"
+                    class="mb-0 text-lg leading-[21px] md:text-2xl md:leading-[29px]"
                     data-testid="header__title"
                   >
                     Votes
                   </h1>
                    
                   <div
-                    class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
+                    class="text-theme-secondary-text mt-0.5 flex items-center text-xs leading-5 font-semibold sm:mt-1 sm:text-sm sm:leading-[17px] sm:font-normal md:text-base md:leading-5"
                     data-testid="header__subtitle"
                   >
                     Manage your cryptoasset staking.
@@ -20067,13 +20084,16 @@ exports[`Votes > should render 1`] = `
               class="space-y-2"
             >
               <div
-                class="flex items-center gap-3"
+                class="mb-1 flex items-center gap-3"
               >
+                <div
+                  class="hidden sm:inline"
+                />
                 <div
                   class="flex flex-col gap-2"
                 >
                   <h1
-                    class="mb-0 text-2xl leading-[29px]"
+                    class="mb-0 text-lg leading-[21px] md:text-2xl md:leading-[29px]"
                     data-testid="header__title"
                   >
                     Select Validator
@@ -28048,13 +28068,16 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
               class="space-y-2"
             >
               <div
-                class="flex items-center gap-3"
+                class="mb-1 flex items-center gap-3"
               >
+                <div
+                  class="hidden sm:inline"
+                />
                 <div
                   class="flex flex-col gap-2"
                 >
                   <h1
-                    class="mb-0 text-2xl leading-[29px]"
+                    class="mb-0 text-lg leading-[21px] md:text-2xl md:leading-[29px]"
                     data-testid="header__title"
                   >
                     Select Validator
@@ -36029,13 +36052,16 @@ exports[`Votes > should select a validator 1`] = `
               class="space-y-2"
             >
               <div
-                class="flex items-center gap-3"
+                class="mb-1 flex items-center gap-3"
               >
+                <div
+                  class="hidden sm:inline"
+                />
                 <div
                   class="flex flex-col gap-2"
                 >
                   <h1
-                    class="mb-0 text-2xl leading-[29px]"
+                    class="mb-0 text-lg leading-[21px] md:text-2xl md:leading-[29px]"
                     data-testid="header__title"
                   >
                     Select Validator
@@ -44269,13 +44295,16 @@ exports[`Votes > should select an address and validator 1`] = `
               class="space-y-2"
             >
               <div
-                class="flex items-center gap-3"
+                class="mb-1 flex items-center gap-3"
               >
+                <div
+                  class="hidden sm:inline"
+                />
                 <div
                   class="flex flex-col gap-2"
                 >
                   <h1
-                    class="mb-0 text-2xl leading-[29px]"
+                    class="mb-0 text-lg leading-[21px] md:text-2xl md:leading-[29px]"
                     data-testid="header__title"
                   >
                     Select Validator
@@ -52248,13 +52277,16 @@ exports[`Votes > should trigger network connection warning 1`] = `
               class="space-y-2"
             >
               <div
-                class="flex items-center gap-3"
+                class="mb-1 flex items-center gap-3"
               >
+                <div
+                  class="hidden sm:inline"
+                />
                 <div
                   class="flex flex-col gap-2"
                 >
                   <h1
-                    class="mb-0 text-2xl leading-[29px]"
+                    class="mb-0 text-lg leading-[21px] md:text-2xl md:leading-[29px]"
                     data-testid="header__title"
                   >
                     Select Validator

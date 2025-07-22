@@ -1,5 +1,5 @@
 import { Contracts } from "@/app/lib/profiles";
-import { uniq } from "@/app/lib/helpers";
+import { uniq, constantCase } from "@/app/lib/helpers";
 import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -8,51 +8,14 @@ interface TransactionTypeProperties {
 }
 
 export const useTransactionTypes = ({ wallets = [] }: TransactionTypeProperties = {}) => {
-	const { t } = useTranslation();
+	const { t, i18n } = useTranslation();
 
-	const transactionTypes: Record<string, { label: string }> = {
-		htlcClaim: {
-			label: t("TRANSACTION.TRANSACTION_TYPES.HTLC_CLAIM"),
-		},
-		htlcLock: {
-			label: t("TRANSACTION.TRANSACTION_TYPES.HTLC_LOCK"),
-		},
-		htlcRefund: {
-			label: t("TRANSACTION.TRANSACTION_TYPES.HTLC_REFUND"),
-		},
-		multiPayment: {
-			label: t("TRANSACTION.TRANSACTION_TYPES.MULTI_PAYMENT"),
-		},
-		multiSignature: {
-			label: t("TRANSACTION.TRANSACTION_TYPES.MULTI_SIGNATURE"),
-		},
-		transfer: {
-			label: t("TRANSACTION.TRANSACTION_TYPES.TRANSFER"),
-		},
-		unvote: {
-			label: t("TRANSACTION.TRANSACTION_TYPES.UNVOTE"),
-		},
-		updateValidator: {
-			label: t("TRANSACTION.TRANSACTION_TYPES.UPDATE_VALIDATOR"),
-		},
-		usernameRegistration: {
-			label: t("TRANSACTION.TRANSACTION_TYPES.USERNAME_REGISTRATION"),
-		},
-		usernameResignation: {
-			label: t("TRANSACTION.TRANSACTION_TYPES.USERNAME_RESIGNATION"),
-		},
-		validatorRegistration: {
-			label: t("TRANSACTION.TRANSACTION_TYPES.VALIDATOR_REGISTRATION"),
-		},
-		validatorResignation: {
-			label: t("TRANSACTION.TRANSACTION_TYPES.VALIDATOR_RESIGNATION"),
-		},
-		vote: {
-			label: t("TRANSACTION.TRANSACTION_TYPES.VOTE"),
-		},
-		voteCombination: {
-			label: t("TRANSACTION.TRANSACTION_TYPES.VOTE_COMBINATION"),
-		},
+	const nameMap = {
+		multiPayment: "pay",
+		usernameRegistration: "registerUsername",
+		usernameResignation: "resignUsername",
+		validatorRegistration: "registerValidator",
+		validatorResignation: "resignValidator",
 	};
 
 	return {
@@ -61,8 +24,11 @@ export const useTransactionTypes = ({ wallets = [] }: TransactionTypeProperties 
 				return type;
 			}
 
-			if (transactionTypes[type]) {
-				return transactionTypes[type].label;
+			const translationKey = `TRANSACTION.TRANSACTION_TYPES.${constantCase(nameMap[type] || type)}`;
+
+			// check if the key exists in the translations
+			if (i18n.exists(translationKey)) {
+				return t(translationKey);
 			}
 
 			return t("TRANSACTION.TRANSACTION_TYPES.CONTRACT_DEPLOYMENT");

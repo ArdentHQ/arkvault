@@ -11,7 +11,7 @@ describe("StepHeader", () => {
 			</StepsProvider>,
 		);
 
-		expect(screen.getByRole("list")).toBeInTheDocument();
+		expect(screen.getAllByRole("list")).toHaveLength(2);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -22,7 +22,7 @@ describe("StepHeader", () => {
 			</StepsProvider>,
 		);
 
-		expect(screen.getByRole("list")).toBeInTheDocument();
+		expect(screen.getAllByRole("list")).toHaveLength(2);
 		expect(screen.getByText("extra")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
