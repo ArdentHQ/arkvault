@@ -5,7 +5,6 @@ import { connectedTransport as ledgerTransportFactory } from "@/app/contexts/Led
 import { createRange } from "./ledger.service.helpers.js";
 import { LedgerSignature } from "./ledger.service.types.js";
 import { AddressService } from "./address.service.js";
-import { Exceptions } from "@/app/lib/mainsail";
 import { WalletData } from "./wallet.dto.js";
 import { ConfigKey, ConfigRepository } from "@/app/lib/mainsail/config.repository";
 import Eth, { ledgerService } from "@ledgerhq/hw-app-eth";
@@ -110,8 +109,10 @@ export class LedgerService {
 	}
 
 	public async signMessage(path: string, payload: string): Promise<string> {
-		console.log({ path, payload });
-		throw new Exceptions.NotImplemented(this.constructor.name, this.signMessage.name);
+		const hex = Buffer.from(payload).toString("hex");
+		const { r, s, v } = await this.#transport.signPersonalMessage(path, hex);
+
+		return [`0x`, r, s, v.toString(16)].join("");
 	}
 
 	public async scan(options?: {
