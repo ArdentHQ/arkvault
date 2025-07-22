@@ -1,3 +1,4 @@
+/* eslint-disable sonarjs/no-duplicate-string */
 import { describe, it, expect, beforeEach, vi } from "vitest";
 import { ConfigRepository, ConfigKey, HostType, hostSelector } from "./config.repository";
 import * as HostsHelper from "./helpers/hosts";
