@@ -94,6 +94,80 @@ describe("HttpClient", () => {
 		);
 	});
 
+	it("should use acceptJson method", async () => {
+		const responseBody = { message: "success" };
+		server.use(requestMock(`${httpbin}/get`, responseBody));
+
+		const response = await subject.acceptJson().get(`${httpbin}/get`);
+		expect(response.json()).toStrictEqual(responseBody);
+	});
+
+	it("should use accept method with custom content type", async () => {
+		const responseBody = { message: "success" };
+		server.use(requestMock(`${httpbin}/get`, responseBody));
+
+		const response = await subject.accept("application/xml").get(`${httpbin}/get`);
+		expect(response.json()).toStrictEqual(responseBody);
+	});
+
+	it("should use withCacheStore method", () => {
+		const mockCache = {};
+		const result = subject.withCacheStore(mockCache);
+		expect(result).toBeInstanceOf(HttpClient);
+	});
+
+	it("should use withOptions method", () => {
+		const customOptions = { timeout: 5000 };
+		const result = subject.withOptions(customOptions);
+		expect(result).toBeInstanceOf(HttpClient);
+	});
+
+	it("should use withSocksProxy method", () => {
+		const result = subject.withSocksProxy("socks5://127.0.0.1:9050");
+		expect(result).toBeInstanceOf(HttpClient);
+	});
+
+	it("should create new HttpClient instance", () => {
+		const newClient = new HttpClient(60);
+		expect(newClient).toBeInstanceOf(HttpClient);
+	});
+
+	it("should handle github URLs with special headers", async () => {
+		const responseBody = "plain text response";
+		server.use(requestMock("https://github.com/test", responseBody));
+
+		// Create a fresh client to avoid cache issues
+		const githubClient = new HttpClient(0);
+		const response = await githubClient.get("https://github.com/test");
+		expect(response.body()).toContain("plain text response");
+	});
+
+	it("should clear cache", () => {
+		expect(() => subject.clearCache()).not.toThrow();
+	});
+
+	it("should forget wallet cache", () => {
+		const mockWallet = {
+			address: () => "test-address",
+			network: () => ({
+				config: () => ({
+					host: () => "http://localhost",
+				}),
+			}),
+			profile: () => ({}),
+		};
+
+		expect(() => subject.forgetWalletCache(mockWallet as any)).not.toThrow();
+	});
+
+	it("should get with ttl option", async () => {
+		const responseBody = { message: "success" };
+		server.use(requestMock(`${httpbin}/get`, responseBody));
+
+		const response = await subject.get(`${httpbin}/get`, undefined, { ttl: 300 });
+		expect(response.json()).toStrictEqual(responseBody);
+	});
+
 	// @README: Run this locally with TOR running.
 	// it("should connect with TOR", async () => {
 	// 	const realAddress = await subject.get("https://ipinfo.io");
