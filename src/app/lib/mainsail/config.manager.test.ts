@@ -254,4 +254,51 @@ describe("ConfigManager", () => {
 		// This should skip validation loop since no activeValidators
 		expect(() => configManager.setConfig(noValidatorsConfig as unknown as NetworkConfig)).not.toThrow();
 	});
+
+	it("should throw error in buildConstants when config is not found", () => {
+		const freshConfigManager = new ConfigManager();
+
+		const validConfig = {
+			milestones: [{ activeValidators: 51, height: 1 }],
+			network: {},
+		};
+		freshConfigManager.setConfig(validConfig as unknown as NetworkConfig);
+
+		freshConfigManager["config"] = undefined;
+
+		expect(() => {
+			freshConfigManager["buildConstants"]();
+		}).toThrow("Config not found.");
+	});
+
+	it("should throw error in validateMilestones when config is not found", () => {
+		const freshConfigManager = new ConfigManager();
+		freshConfigManager["config"] = undefined;
+
+		expect(() => {
+			freshConfigManager["validateMilestones"]();
+		}).toThrow("Config not found.");
+	});
+
+	it("should handle merging of multiple milestones", () => {
+		const configWithManyMilestones = {
+			milestones: [
+				{ activeValidators: 51, feature1: true, height: 1 },
+				{ activeValidators: 51, feature2: true, height: 100 },
+				{ activeValidators: 51, feature3: true, height: 200 },
+				{ activeValidators: 51, feature4: true, height: 300 },
+			],
+			network: {},
+		};
+		configManager.setConfig(configWithManyMilestones as unknown as NetworkConfig);
+		const milestones = configManager.getMilestones();
+		expect(milestones[3]).toEqual(
+			expect.objectContaining({
+				feature1: true,
+				feature2: true,
+				feature3: true,
+				feature4: true,
+			}),
+		);
+	});
 });
