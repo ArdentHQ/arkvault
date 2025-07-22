@@ -112,7 +112,7 @@ export class LedgerService {
 		const hex = Buffer.from(payload).toString("hex");
 		const { r, s, v } = await this.#transport.signPersonalMessage(path, hex);
 
-		return [`0x`, r, s, v.toString(16)].join("")
+		return [`0x`, r, s, v.toString(16)].join("");
 	}
 
 	public async scan(options?: {
