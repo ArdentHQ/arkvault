@@ -1,6 +1,5 @@
 import { describe, it, expect } from "vitest";
 import { PublicKeyService } from "./public-key.service";
-import { Exceptions } from "@/app/lib/mainsail";
 import { MAINSAIL_MNEMONICS } from "@/utils/testing-library";
 
 describe("PublicKeyService", () => {
@@ -32,11 +31,6 @@ describe("PublicKeyService", () => {
 		expect(() => service.fromSecret(MAINSAIL_MNEMONICS[0])).toThrow(
 			"The given value is BIP39 compliant. Please use [fromMnemonic] instead.",
 		);
-	});
-
-	it("should throw NotImplemented exception for fromWIF", async () => {
-		const service = new PublicKeyService();
-		await expect(() => service.fromWIF("someWIFString")).toThrow(Exceptions.NotImplemented);
 	});
 
 	it("should fail to verify public key with BLS", () => {

@@ -1,4 +1,4 @@
-import { Services, Exceptions } from "@/app/lib/mainsail";
+import { Services } from "@/app/lib/mainsail";
 
 import { PublicKey } from "@arkecosystem/typescript-crypto";
 import { BIP39, Bls } from "@ardenthq/arkvault-crypto";
