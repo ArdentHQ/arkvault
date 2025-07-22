@@ -80,9 +80,6 @@ importers:
       downshift:
         specifier: 6.1.12
         version: 6.1.12(react@19.1.0)
-      ethers:
-        specifier: ^6.15.0
-        version: 6.15.0
       fast-copy:
         specifier: ^3.0.2
         version: 3.0.2

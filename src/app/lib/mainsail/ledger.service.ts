@@ -8,7 +8,6 @@ import { AddressService } from "./address.service.js";
 import { WalletData } from "./wallet.dto.js";
 import { ConfigKey, ConfigRepository } from "@/app/lib/mainsail/config.repository";
 import Eth, { ledgerService } from "@ledgerhq/hw-app-eth";
-import { ethers } from "ethers";
 import { configManager } from "@/app/lib/mainsail";
 
 export class LedgerService {
@@ -111,15 +110,9 @@ export class LedgerService {
 
 	public async signMessage(path: string, payload: string): Promise<string> {
 		const hex = Buffer.from(payload).toString("hex");
-		const result = await this.#transport.signPersonalMessage(path, hex);
+		const { r, s, v } = await this.#transport.signPersonalMessage(path, hex);
 
-		const signature = ethers.Signature.from({
-			r: `0x${result.r}`,
-			s: `0x${result.s}`,
-			v: result.v,
-		});
-
-		return signature.serialized;
+		return [`0x`, r, s, v.toString(16)].join("")
 	}
 
 	public async scan(options?: {
