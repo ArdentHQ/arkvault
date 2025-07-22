@@ -238,9 +238,8 @@ export const SendRegistration = () => {
 		}
 
 		return {
-			default: t("TRANSACTION.TRANSACTION_TYPES.VALIDATOR_REGISTRATION"),
-			multiSignature: t("TRANSACTION.TRANSACTION_TYPES.MULTI_SIGNATURE"),
-			usernameRegistration: t("TRANSACTION.TRANSACTION_TYPES.USERNAME_REGISTRATION"),
+			default: t("TRANSACTION.TRANSACTION_TYPES.REGISTER_VALIDATOR"),
+			usernameRegistration: t("TRANSACTION.TRANSACTION_TYPES.REGISTER_USERNAME"),
 		}[registrationType];
 	};
 
