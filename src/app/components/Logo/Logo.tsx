@@ -46,7 +46,7 @@ export const LogoAlpha = ({
 				</button>
 				<div
 					className={cn(
-						"cursor-pointer dark:bg-theme-dark-navy-900 dark:text-theme-dark-navy-300 dim:bg-theme-dim-navy-900 dim:text-theme-dim-navy-300 bg-theme-navy-100 text-theme-navy-600 flex items-center px-2 py-[0.313rem] text-center text-xs leading-[0.938rem] font-semibold",
+						"dark:bg-theme-dark-navy-900 dark:text-theme-dark-navy-300 dim:bg-theme-dim-navy-900 dim:text-theme-dim-navy-300 bg-theme-navy-100 text-theme-navy-600 flex cursor-pointer items-center px-2 py-[0.313rem] text-center text-xs leading-[0.938rem] font-semibold",
 						{
 							"h-11 rounded-xl rounded-l-none": variant === "logo-only" && !isXs,
 							"h-6 rounded rounded-l-none": variant === "default",
