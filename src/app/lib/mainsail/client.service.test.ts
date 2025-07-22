@@ -162,11 +162,11 @@ describe("ClientService", () => {
 			http.post("http://localhost/transactions", async () =>
 				HttpResponse.json({
 					data: {
-						accept: [0], // Index of transaction
-						invalid: [1], // Index of transaction
+						accept: [0],
+						invalid: [1],
 					},
 					errors: {
-						hash2: [{ message: "some error" }], // Key is the hash
+						hash2: [{ message: "some error" }],
 					},
 				}),
 			),
@@ -179,6 +179,28 @@ describe("ClientService", () => {
 		expect(result.accepted).toContain("hash1");
 		expect(result.rejected).toContain("hash2");
 		expect(result.errors).toHaveProperty("hash2", "some error");
+	});
+
+	it("should handle broadcast with non-array error", async () => {
+		server.use(
+			http.post("http://localhost/transactions", async () =>
+				HttpResponse.json({
+					data: {
+						accept: [],
+						invalid: [0],
+					},
+					errors: {
+						hash1: { message: "some error" }, // Not an array
+					},
+				}),
+			),
+		);
+
+		const mockTx1 = { hash: () => "hash1", toBroadcast: async () => ({ id: "hash1" }) };
+		const result = await clientService.broadcast([mockTx1 as any]);
+
+		expect(result.rejected).toContain("hash1");
+		expect(result.errors).toHaveProperty("hash1", "some error");
 	});
 
 	it("should handle broadcast failure", async () => {
@@ -240,6 +262,26 @@ describe("ClientService", () => {
 				1,
 				10,
 				expect.objectContaining({ "timestamp.from": 1, "timestamp.to": 2 }),
+			);
+		});
+
+		it("should handle single transaction type", async () => {
+			await clientService.transactions({ type: "transfer" });
+			expect(spy).toHaveBeenCalledWith(1, 10, { data: "" });
+		});
+
+		it("should handle timestamp without epoch", async () => {
+			const configWithoutEpoch = {
+				get: () => {},
+				host: () => "http://localhost", // No epoch
+			};
+			const serviceWithoutEpoch = new ClientService({ config: configWithoutEpoch as any, profile: mockProfile });
+
+			await serviceWithoutEpoch.transactions({ timestamp: { from: 1000, to: 2000 } });
+			expect(spy).toHaveBeenCalledWith(
+				1,
+				10,
+				expect.objectContaining({ "timestamp.from": 1000, "timestamp.to": 2000 }),
 			);
 		});
 
