@@ -340,7 +340,7 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 					<div className="flex flex-1 items-center justify-between px-6">
 						<div className="flex flex-row items-center gap-6">
 							<NavigationBarLogo onClick={homeButtonHandler} />
-							{renderNavigationMenu()}
+							<div className="mr-4 sm:mr-0">{renderNavigationMenu()}</div>
 						</div>
 
 						<div className="flex flex-row items-center justify-center gap-4 sm:gap-5">
