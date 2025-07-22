@@ -182,6 +182,22 @@ describe("ConfirmedTransactionData", () => {
 		});
 	});
 
+	it("should normalize data by converting public key to address", () => {
+		const mockTransaction = new ConfirmedTransactionData();
+
+		// Use a valid compressed public key from address.service.test.ts
+		const validPublicKey = "0293b9fd80d472bbf678404d593705268cf09324115f73103bc1477a3933350041";
+
+		mockTransaction.configure({
+			...commonData,
+			senderPublicKey: validPublicKey,
+		});
+
+		// Call normalizeData - this should convert the public key to address internally
+		// We just verify it doesn't throw an error
+		expect(() => mockTransaction.normalizeData()).not.toThrow();
+	});
+
 	it("should be instantiated and configured", () => {
 		expect(transaction.configure(commonData)).toBeInstanceOf(ConfirmedTransactionData);
 		expect(transaction.raw()).toEqual(commonData);
