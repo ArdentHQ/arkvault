@@ -173,10 +173,10 @@ exports[`Servers Settings > should render servers settings 1`] = `
           </button>
         </div>
         <div
-          class="flex flex-1 items-center justify-between px-6"
+          class="flex flex-1 items-center justify-between gap-3 px-6"
         >
           <div
-            class="flex flex-row items-center gap-6"
+            class="flex flex-row items-center gap-5"
           >
             <div
               class="my-auto flex h-12 items-center"
@@ -308,7 +308,7 @@ exports[`Servers Settings > should render servers settings 1`] = `
             </div>
           </div>
           <div
-            class="flex flex-row items-center justify-center gap-4 sm:gap-5"
+            class="flex flex-row items-center justify-center gap-3 sm:gap-5"
           >
             <div>
               <div
@@ -609,7 +609,7 @@ exports[`Servers Settings > should render servers settings 1`] = `
               class="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:block sm:h-12"
             />
             <div
-              class="flex items-center gap-5"
+              class="ml-1 flex items-center gap-5 sm:ml-0"
             >
               <div
                 class="m-0 items-center gap-2 space-x-0 md-lg:flex hidden"
@@ -677,7 +677,7 @@ exports[`Servers Settings > should render servers settings 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <button
-                  class="group dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 flex items-center gap-6 rounded bg-transparent p-0 px-1 py-0.5"
+                  class="group dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 flex items-center gap-6 rounded bg-transparent py-0.5"
                 >
                   <div
                     class="relative cursor-pointer items-center justify-center rounded align-middle"
@@ -1525,10 +1525,10 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
           </button>
         </div>
         <div
-          class="flex flex-1 items-center justify-between px-6"
+          class="flex flex-1 items-center justify-between gap-3 px-6"
         >
           <div
-            class="flex flex-row items-center gap-6"
+            class="flex flex-row items-center gap-5"
           >
             <div
               class="my-auto flex h-12 items-center"
@@ -1660,7 +1660,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
             </div>
           </div>
           <div
-            class="flex flex-row items-center justify-center gap-4 sm:gap-5"
+            class="flex flex-row items-center justify-center gap-3 sm:gap-5"
           >
             <div>
               <div
@@ -1961,7 +1961,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
               class="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:block sm:h-12"
             />
             <div
-              class="flex items-center gap-5"
+              class="ml-1 flex items-center gap-5 sm:ml-0"
             >
               <div
                 class="m-0 items-center gap-2 space-x-0 md-lg:flex hidden"
@@ -2029,7 +2029,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                 data-testid="dropdown__toggle"
               >
                 <button
-                  class="group dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 flex items-center gap-6 rounded bg-transparent p-0 px-1 py-0.5"
+                  class="group dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 flex items-center gap-6 rounded bg-transparent py-0.5"
                 >
                   <div
                     class="relative cursor-pointer items-center justify-center rounded align-middle"
@@ -3217,10 +3217,10 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
           </button>
         </div>
         <div
-          class="flex flex-1 items-center justify-between px-6"
+          class="flex flex-1 items-center justify-between gap-3 px-6"
         >
           <div
-            class="flex flex-row items-center gap-6"
+            class="flex flex-row items-center gap-5"
           >
             <div
               class="my-auto flex h-12 items-center"
@@ -3352,7 +3352,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
             </div>
           </div>
           <div
-            class="flex flex-row items-center justify-center gap-4 sm:gap-5"
+            class="flex flex-row items-center justify-center gap-3 sm:gap-5"
           >
             <div>
               <div
@@ -3653,7 +3653,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
               class="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:block sm:h-12"
             />
             <div
-              class="flex items-center gap-5"
+              class="ml-1 flex items-center gap-5 sm:ml-0"
             >
               <div
                 class="m-0 items-center gap-2 space-x-0 md-lg:flex hidden"
@@ -3721,7 +3721,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <button
-                  class="group dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 flex items-center gap-6 rounded bg-transparent p-0 px-1 py-0.5"
+                  class="group dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 flex items-center gap-6 rounded bg-transparent py-0.5"
                 >
                   <div
                     class="relative cursor-pointer items-center justify-center rounded align-middle"
@@ -4782,10 +4782,10 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
           </button>
         </div>
         <div
-          class="flex flex-1 items-center justify-between px-6"
+          class="flex flex-1 items-center justify-between gap-3 px-6"
         >
           <div
-            class="flex flex-row items-center gap-6"
+            class="flex flex-row items-center gap-5"
           >
             <div
               class="my-auto flex h-12 items-center"
@@ -4917,7 +4917,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
             </div>
           </div>
           <div
-            class="flex flex-row items-center justify-center gap-4 sm:gap-5"
+            class="flex flex-row items-center justify-center gap-3 sm:gap-5"
           >
             <div>
               <div
@@ -5218,7 +5218,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
               class="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:block sm:h-12"
             />
             <div
-              class="flex items-center gap-5"
+              class="ml-1 flex items-center gap-5 sm:ml-0"
             >
               <div
                 class="m-0 items-center gap-2 space-x-0 md-lg:flex hidden"
@@ -5286,7 +5286,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                 data-testid="dropdown__toggle"
               >
                 <button
-                  class="group dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 flex items-center gap-6 rounded bg-transparent p-0 px-1 py-0.5"
+                  class="group dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 flex items-center gap-6 rounded bg-transparent py-0.5"
                 >
                   <div
                     class="relative cursor-pointer items-center justify-center rounded align-middle"
@@ -6349,10 +6349,10 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
           </button>
         </div>
         <div
-          class="flex flex-1 items-center justify-between px-6"
+          class="flex flex-1 items-center justify-between gap-3 px-6"
         >
           <div
-            class="flex flex-row items-center gap-6"
+            class="flex flex-row items-center gap-5"
           >
             <div
               class="my-auto flex h-12 items-center"
@@ -6484,7 +6484,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
             </div>
           </div>
           <div
-            class="flex flex-row items-center justify-center gap-4 sm:gap-5"
+            class="flex flex-row items-center justify-center gap-3 sm:gap-5"
           >
             <div>
               <div
@@ -6785,7 +6785,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
               class="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:block sm:h-12"
             />
             <div
-              class="flex items-center gap-5"
+              class="ml-1 flex items-center gap-5 sm:ml-0"
             >
               <div
                 class="m-0 items-center gap-2 space-x-0 md-lg:flex hidden"
@@ -6853,7 +6853,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                 data-testid="dropdown__toggle"
               >
                 <button
-                  class="group dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 flex items-center gap-6 rounded bg-transparent p-0 px-1 py-0.5"
+                  class="group dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 flex items-center gap-6 rounded bg-transparent py-0.5"
                 >
                   <div
                     class="relative cursor-pointer items-center justify-center rounded align-middle"
@@ -8041,10 +8041,10 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
           </button>
         </div>
         <div
-          class="flex flex-1 items-center justify-between px-6"
+          class="flex flex-1 items-center justify-between gap-3 px-6"
         >
           <div
-            class="flex flex-row items-center gap-6"
+            class="flex flex-row items-center gap-5"
           >
             <div
               class="my-auto flex h-12 items-center"
@@ -8176,7 +8176,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
             </div>
           </div>
           <div
-            class="flex flex-row items-center justify-center gap-4 sm:gap-5"
+            class="flex flex-row items-center justify-center gap-3 sm:gap-5"
           >
             <div>
               <div
@@ -8477,7 +8477,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
               class="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:block sm:h-12"
             />
             <div
-              class="flex items-center gap-5"
+              class="ml-1 flex items-center gap-5 sm:ml-0"
             >
               <div
                 class="m-0 items-center gap-2 space-x-0 md-lg:flex hidden"
@@ -8545,7 +8545,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                 data-testid="dropdown__toggle"
               >
                 <button
-                  class="group dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 flex items-center gap-6 rounded bg-transparent p-0 px-1 py-0.5"
+                  class="group dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 flex items-center gap-6 rounded bg-transparent py-0.5"
                 >
                   <div
                     class="relative cursor-pointer items-center justify-center rounded align-middle"
@@ -9735,10 +9735,10 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
           </button>
         </div>
         <div
-          class="flex flex-1 items-center justify-between px-6"
+          class="flex flex-1 items-center justify-between gap-3 px-6"
         >
           <div
-            class="flex flex-row items-center gap-6"
+            class="flex flex-row items-center gap-5"
           >
             <div
               class="my-auto flex h-12 items-center"
@@ -9870,7 +9870,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
             </div>
           </div>
           <div
-            class="flex flex-row items-center justify-center gap-4 sm:gap-5"
+            class="flex flex-row items-center justify-center gap-3 sm:gap-5"
           >
             <div>
               <div
@@ -10171,7 +10171,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
               class="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:block sm:h-12"
             />
             <div
-              class="flex items-center gap-5"
+              class="ml-1 flex items-center gap-5 sm:ml-0"
             >
               <div
                 class="m-0 items-center gap-2 space-x-0 md-lg:flex hidden"
@@ -10239,7 +10239,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                 data-testid="dropdown__toggle"
               >
                 <button
-                  class="group dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 flex items-center gap-6 rounded bg-transparent p-0 px-1 py-0.5"
+                  class="group dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 flex items-center gap-6 rounded bg-transparent py-0.5"
                 >
                   <div
                     class="relative cursor-pointer items-center justify-center rounded align-middle"
@@ -11429,10 +11429,10 @@ exports[`Servers Settings > with unreachable servers > should show status error 
           </button>
         </div>
         <div
-          class="flex flex-1 items-center justify-between px-6"
+          class="flex flex-1 items-center justify-between gap-3 px-6"
         >
           <div
-            class="flex flex-row items-center gap-6"
+            class="flex flex-row items-center gap-5"
           >
             <div
               class="my-auto flex h-12 items-center"
@@ -11564,7 +11564,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
             </div>
           </div>
           <div
-            class="flex flex-row items-center justify-center gap-4 sm:gap-5"
+            class="flex flex-row items-center justify-center gap-3 sm:gap-5"
           >
             <div>
               <div
@@ -11865,7 +11865,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
               class="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:block sm:h-12"
             />
             <div
-              class="flex items-center gap-5"
+              class="ml-1 flex items-center gap-5 sm:ml-0"
             >
               <div
                 class="m-0 items-center gap-2 space-x-0 md-lg:flex hidden"
@@ -11933,7 +11933,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                 data-testid="dropdown__toggle"
               >
                 <button
-                  class="group dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 flex items-center gap-6 rounded bg-transparent p-0 px-1 py-0.5"
+                  class="group dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 flex items-center gap-6 rounded bg-transparent py-0.5"
                 >
                   <div
                     class="relative cursor-pointer items-center justify-center rounded align-middle"
@@ -13115,10 +13115,10 @@ exports[`Servers Settings > with unreachable servers > should show status error 
           </button>
         </div>
         <div
-          class="flex flex-1 items-center justify-between px-6"
+          class="flex flex-1 items-center justify-between gap-3 px-6"
         >
           <div
-            class="flex flex-row items-center gap-6"
+            class="flex flex-row items-center gap-5"
           >
             <div
               class="my-auto flex h-12 items-center"
@@ -13250,7 +13250,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
             </div>
           </div>
           <div
-            class="flex flex-row items-center justify-center gap-4 sm:gap-5"
+            class="flex flex-row items-center justify-center gap-3 sm:gap-5"
           >
             <div>
               <div
@@ -13551,7 +13551,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
               class="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:block sm:h-12"
             />
             <div
-              class="flex items-center gap-5"
+              class="ml-1 flex items-center gap-5 sm:ml-0"
             >
               <div
                 class="m-0 items-center gap-2 space-x-0 md-lg:flex hidden"
@@ -13619,7 +13619,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                 data-testid="dropdown__toggle"
               >
                 <button
-                  class="group dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 flex items-center gap-6 rounded bg-transparent p-0 px-1 py-0.5"
+                  class="group dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 flex items-center gap-6 rounded bg-transparent py-0.5"
                 >
                   <div
                     class="relative cursor-pointer items-center justify-center rounded align-middle"

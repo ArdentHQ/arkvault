@@ -77,7 +77,7 @@ exports[`LogoAlpha > should render in lg 1`] = `
       </span>
     </button>
     <div
-      class="py-[0.313rem] px-2 bg-theme- dark:bg-theme-dark-navy-900 dark:text-theme-dark-navy-300 dim:bg-theme-dim-navy-900 dim:text-theme-dim-navy-300 bg-theme-navy-100 text-theme-navy-600 font-semibold text-xs text-center leading-[0.938rem] flex items-center"
+      class="bg-theme- dark:bg-theme-dark-navy-900 dark:text-theme-dark-navy-300 dim:bg-theme-dim-navy-900 dim:text-theme-dim-navy-300 bg-theme-navy-100 text-theme-navy-600 flex items-center px-2 py-[0.313rem] text-center text-xs leading-[0.938rem] font-semibold"
     >
       ALPHA
     </div>
@@ -115,7 +115,7 @@ exports[`LogoAlpha > should render in md 1`] = `
       </span>
     </button>
     <div
-      class="py-[0.313rem] px-2 bg-theme- dark:bg-theme-dark-navy-900 dark:text-theme-dark-navy-300 dim:bg-theme-dim-navy-900 dim:text-theme-dim-navy-300 bg-theme-navy-100 text-theme-navy-600 font-semibold text-xs text-center leading-[0.938rem] flex items-center"
+      class="bg-theme- dark:bg-theme-dark-navy-900 dark:text-theme-dark-navy-300 dim:bg-theme-dim-navy-900 dim:text-theme-dim-navy-300 bg-theme-navy-100 text-theme-navy-600 flex items-center px-2 py-[0.313rem] text-center text-xs leading-[0.938rem] font-semibold"
     >
       ALPHA
     </div>
@@ -153,7 +153,7 @@ exports[`LogoAlpha > should render in sm 1`] = `
       </span>
     </button>
     <div
-      class="py-[0.313rem] px-2 bg-theme- dark:bg-theme-dark-navy-900 dark:text-theme-dark-navy-300 dim:bg-theme-dim-navy-900 dim:text-theme-dim-navy-300 bg-theme-navy-100 text-theme-navy-600 font-semibold text-xs text-center leading-[0.938rem] flex items-center"
+      class="bg-theme- dark:bg-theme-dark-navy-900 dark:text-theme-dark-navy-300 dim:bg-theme-dim-navy-900 dim:text-theme-dim-navy-300 bg-theme-navy-100 text-theme-navy-600 flex items-center px-2 py-[0.313rem] text-center text-xs leading-[0.938rem] font-semibold"
     >
       ALPHA
     </div>
@@ -191,7 +191,7 @@ exports[`LogoAlpha > should render in xl 1`] = `
       </span>
     </button>
     <div
-      class="py-[0.313rem] px-2 bg-theme- dark:bg-theme-dark-navy-900 dark:text-theme-dark-navy-300 dim:bg-theme-dim-navy-900 dim:text-theme-dim-navy-300 bg-theme-navy-100 text-theme-navy-600 font-semibold text-xs text-center leading-[0.938rem] flex items-center"
+      class="bg-theme- dark:bg-theme-dark-navy-900 dark:text-theme-dark-navy-300 dim:bg-theme-dim-navy-900 dim:text-theme-dim-navy-300 bg-theme-navy-100 text-theme-navy-600 flex items-center px-2 py-[0.313rem] text-center text-xs leading-[0.938rem] font-semibold"
     >
       ALPHA
     </div>
@@ -229,7 +229,7 @@ exports[`LogoAlpha > should render in xs 1`] = `
       </span>
     </button>
     <div
-      class="py-[0.313rem] px-2 bg-theme- dark:bg-theme-dark-navy-900 dark:text-theme-dark-navy-300 dim:bg-theme-dim-navy-900 dim:text-theme-dim-navy-300 bg-theme-navy-100 text-theme-navy-600 font-semibold text-xs text-center leading-[0.938rem] flex items-center"
+      class="bg-theme- dark:bg-theme-dark-navy-900 dark:text-theme-dark-navy-300 dim:bg-theme-dim-navy-900 dim:text-theme-dim-navy-300 bg-theme-navy-100 text-theme-navy-600 flex items-center px-2 py-[0.313rem] text-center text-xs leading-[0.938rem] font-semibold"
     >
       ALPHA
     </div>

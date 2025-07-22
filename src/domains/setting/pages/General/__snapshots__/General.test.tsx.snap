@@ -175,10 +175,10 @@ exports[`General Settings > should disable submit button when profile is not res
           </button>
         </div>
         <div
-          class="flex flex-1 items-center justify-between px-6"
+          class="flex flex-1 items-center justify-between gap-3 px-6"
         >
           <div
-            class="flex flex-row items-center gap-6"
+            class="flex flex-row items-center gap-5"
           >
             <div
               class="my-auto flex h-12 items-center"
@@ -310,7 +310,7 @@ exports[`General Settings > should disable submit button when profile is not res
             </div>
           </div>
           <div
-            class="flex flex-row items-center justify-center gap-4 sm:gap-5"
+            class="flex flex-row items-center justify-center gap-3 sm:gap-5"
           >
             <div>
               <div
@@ -613,7 +613,7 @@ exports[`General Settings > should disable submit button when profile is not res
               class="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:block sm:h-12"
             />
             <div
-              class="flex items-center gap-5"
+              class="ml-1 flex items-center gap-5 sm:ml-0"
             >
               <div
                 class="m-0 items-center gap-2 space-x-0 md-lg:flex hidden"
@@ -681,7 +681,7 @@ exports[`General Settings > should disable submit button when profile is not res
                 data-testid="dropdown__toggle"
               >
                 <button
-                  class="group dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 flex items-center gap-6 rounded bg-transparent p-0 px-1 py-0.5"
+                  class="group dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 flex items-center gap-6 rounded bg-transparent py-0.5"
                 >
                   <div
                     class="relative cursor-pointer items-center justify-center rounded align-middle"
@@ -2767,10 +2767,10 @@ exports[`General Settings > should not update the uploaded avatar when removing 
           </button>
         </div>
         <div
-          class="flex flex-1 items-center justify-between px-6"
+          class="flex flex-1 items-center justify-between gap-3 px-6"
         >
           <div
-            class="flex flex-row items-center gap-6"
+            class="flex flex-row items-center gap-5"
           >
             <div
               class="my-auto flex h-12 items-center"
@@ -2902,7 +2902,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
             </div>
           </div>
           <div
-            class="flex flex-row items-center justify-center gap-4 sm:gap-5"
+            class="flex flex-row items-center justify-center gap-3 sm:gap-5"
           >
             <div>
               <div
@@ -3203,7 +3203,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
               class="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:block sm:h-12"
             />
             <div
-              class="flex items-center gap-5"
+              class="ml-1 flex items-center gap-5 sm:ml-0"
             >
               <div
                 class="m-0 items-center gap-2 space-x-0 md-lg:flex hidden"
@@ -3271,7 +3271,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                 data-testid="dropdown__toggle"
               >
                 <button
-                  class="group dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 flex items-center gap-6 rounded bg-transparent p-0 px-1 py-0.5"
+                  class="group dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 flex items-center gap-6 rounded bg-transparent py-0.5"
                 >
                   <div
                     class="relative cursor-pointer items-center justify-center rounded align-middle"
@@ -5403,10 +5403,10 @@ exports[`General Settings > should render 1`] = `
           </button>
         </div>
         <div
-          class="flex flex-1 items-center justify-between px-6"
+          class="flex flex-1 items-center justify-between gap-3 px-6"
         >
           <div
-            class="flex flex-row items-center gap-6"
+            class="flex flex-row items-center gap-5"
           >
             <div
               class="my-auto flex h-12 items-center"
@@ -5538,7 +5538,7 @@ exports[`General Settings > should render 1`] = `
             </div>
           </div>
           <div
-            class="flex flex-row items-center justify-center gap-4 sm:gap-5"
+            class="flex flex-row items-center justify-center gap-3 sm:gap-5"
           >
             <div>
               <div
@@ -5839,7 +5839,7 @@ exports[`General Settings > should render 1`] = `
               class="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:block sm:h-12"
             />
             <div
-              class="flex items-center gap-5"
+              class="ml-1 flex items-center gap-5 sm:ml-0"
             >
               <div
                 class="m-0 items-center gap-2 space-x-0 md-lg:flex hidden"
@@ -5907,7 +5907,7 @@ exports[`General Settings > should render 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <button
-                  class="group dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 flex items-center gap-6 rounded bg-transparent p-0 px-1 py-0.5"
+                  class="group dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 flex items-center gap-6 rounded bg-transparent py-0.5"
                 >
                   <div
                     class="relative cursor-pointer items-center justify-center rounded align-middle"
@@ -7995,10 +7995,10 @@ exports[`General Settings > should update profile 1`] = `
           </button>
         </div>
         <div
-          class="flex flex-1 items-center justify-between px-6"
+          class="flex flex-1 items-center justify-between gap-3 px-6"
         >
           <div
-            class="flex flex-row items-center gap-6"
+            class="flex flex-row items-center gap-5"
           >
             <div
               class="my-auto flex h-12 items-center"
@@ -8130,7 +8130,7 @@ exports[`General Settings > should update profile 1`] = `
             </div>
           </div>
           <div
-            class="flex flex-row items-center justify-center gap-4 sm:gap-5"
+            class="flex flex-row items-center justify-center gap-3 sm:gap-5"
           >
             <div>
               <div
@@ -8431,7 +8431,7 @@ exports[`General Settings > should update profile 1`] = `
               class="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:block sm:h-12"
             />
             <div
-              class="flex items-center gap-5"
+              class="ml-1 flex items-center gap-5 sm:ml-0"
             >
               <div
                 class="m-0 items-center gap-2 space-x-0 md-lg:flex hidden"
@@ -8499,7 +8499,7 @@ exports[`General Settings > should update profile 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <button
-                  class="group dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 flex items-center gap-6 rounded bg-transparent p-0 px-1 py-0.5"
+                  class="group dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 flex items-center gap-6 rounded bg-transparent py-0.5"
                 >
                   <div
                     class="relative cursor-pointer items-center justify-center rounded align-middle"
@@ -10587,10 +10587,10 @@ exports[`General Settings > should update the avatar when removing focus from na
           </button>
         </div>
         <div
-          class="flex flex-1 items-center justify-between px-6"
+          class="flex flex-1 items-center justify-between gap-3 px-6"
         >
           <div
-            class="flex flex-row items-center gap-6"
+            class="flex flex-row items-center gap-5"
           >
             <div
               class="my-auto flex h-12 items-center"
@@ -10722,7 +10722,7 @@ exports[`General Settings > should update the avatar when removing focus from na
             </div>
           </div>
           <div
-            class="flex flex-row items-center justify-center gap-4 sm:gap-5"
+            class="flex flex-row items-center justify-center gap-3 sm:gap-5"
           >
             <div>
               <div
@@ -11023,7 +11023,7 @@ exports[`General Settings > should update the avatar when removing focus from na
               class="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:block sm:h-12"
             />
             <div
-              class="flex items-center gap-5"
+              class="ml-1 flex items-center gap-5 sm:ml-0"
             >
               <div
                 class="m-0 items-center gap-2 space-x-0 md-lg:flex hidden"
@@ -11091,7 +11091,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                 data-testid="dropdown__toggle"
               >
                 <button
-                  class="group dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 flex items-center gap-6 rounded bg-transparent p-0 px-1 py-0.5"
+                  class="group dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 flex items-center gap-6 rounded bg-transparent py-0.5"
                 >
                   <div
                     class="relative cursor-pointer items-center justify-center rounded align-middle"
@@ -13178,10 +13178,10 @@ exports[`General Settings > should update the avatar when removing focus from na
           </button>
         </div>
         <div
-          class="flex flex-1 items-center justify-between px-6"
+          class="flex flex-1 items-center justify-between gap-3 px-6"
         >
           <div
-            class="flex flex-row items-center gap-6"
+            class="flex flex-row items-center gap-5"
           >
             <div
               class="my-auto flex h-12 items-center"
@@ -13313,7 +13313,7 @@ exports[`General Settings > should update the avatar when removing focus from na
             </div>
           </div>
           <div
-            class="flex flex-row items-center justify-center gap-4 sm:gap-5"
+            class="flex flex-row items-center justify-center gap-3 sm:gap-5"
           >
             <div>
               <div
@@ -13614,7 +13614,7 @@ exports[`General Settings > should update the avatar when removing focus from na
               class="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:block sm:h-12"
             />
             <div
-              class="flex items-center gap-5"
+              class="ml-1 flex items-center gap-5 sm:ml-0"
             >
               <div
                 class="m-0 items-center gap-2 space-x-0 md-lg:flex hidden"
@@ -13682,7 +13682,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                 data-testid="dropdown__toggle"
               >
                 <button
-                  class="group dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 flex items-center gap-6 rounded bg-transparent p-0 px-1 py-0.5"
+                  class="group dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 flex items-center gap-6 rounded bg-transparent py-0.5"
                 >
                   <div
                     class="relative cursor-pointer items-center justify-center rounded align-middle"
