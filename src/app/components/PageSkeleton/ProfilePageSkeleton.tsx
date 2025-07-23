@@ -1,7 +1,7 @@
 import React from "react";
 import { Skeleton } from "@/app/components/Skeleton";
 import { Section } from "@/app/components/Layout";
-import { Logo } from "@/app/components/Logo";
+import { LogoAlpha } from "@/app/components/Logo";
 
 const MenuItemSkeleton = ({ isCircle = false }: { isCircle?: boolean }) => (
 	<div>
@@ -14,9 +14,7 @@ export const ProfilePageSkeleton: React.FC = () => (
 		<div className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-b-theme-dim-700 sticky inset-x-0 top-0 border-b">
 			<div className="relative flex h-12 items-center">
 				<div className="flex flex-1 justify-between px-6 sm:ml-7 sm:px-8">
-					<div className="bg-theme-primary-600 my-auto flex h-6 w-6 items-center justify-center rounded-md text-white">
-						<Logo height={16} />
-					</div>
+					<LogoAlpha height={16} variant="default" />
 
 					<div className="flex">
 						<div className="my-auto flex items-center space-x-4 sm:hidden">
