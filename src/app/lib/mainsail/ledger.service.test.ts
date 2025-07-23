@@ -29,4 +29,28 @@ describe("LedgerService", () => {
 	it("should disconnect without error", async () => {
 		await expect(ledgerService.disconnect()).resolves.not.toThrow();
 	});
+
+	it("should return version as '1'", async () => {
+		await expect(ledgerService.getVersion()).resolves.toBe("1");
+	});
+
+	it("should return a public key from getPublicKey", async () => {
+		const path = "m/44'/60'/0'/0/0";
+		const fakeExtendedKey = "abcdef";
+		const fakePubKey = { derive: () => ({ publicKey: { toString: () => "deadbeef" } }) };
+
+		// Mock getExtendedPublicKey and HDKey.fromCompressedPublicKey
+		ledgerService.getExtendedPublicKey = async () => fakeExtendedKey;
+		const originalFromCompressed = (global as any).HDKey?.fromCompressedPublicKey;
+		const HDKeyModule = await import("@ardenthq/arkvault-crypto");
+		HDKeyModule.HDKey.fromCompressedPublicKey = () => fakePubKey;
+
+		const result = await ledgerService.getPublicKey(path);
+		expect(result).toBe("deadbeef");
+
+		// Restore
+		if (originalFromCompressed) {
+			HDKeyModule.HDKey.fromCompressedPublicKey = originalFromCompressed;
+		}
+	});
 });
