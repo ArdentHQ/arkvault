@@ -27,7 +27,6 @@ async function patchCryptoForFirefox(t: TestController) {
 	});
 }
 
-
 const preSteps = {
 	"Given Alice is on the wallet details page for imported wallet": async (t: TestController) => {
 		await patchCryptoForFirefox(t);
