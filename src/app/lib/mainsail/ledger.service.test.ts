@@ -4,6 +4,7 @@ import { ConfigRepository } from "./config.repository";
 import { mockNanoXTransport } from "@/utils/testing-library";
 import * as LedgerTransportFactory from "@/app/contexts/Ledger/transport";
 import EthModule, { ledgerService as LedgerEthService } from "@ledgerhq/hw-app-eth";
+import { BIP44 } from "@ardenthq/arkvault-crypto";
 
 describe("LedgerService", () => {
 	let ledgerService: LedgerService;
@@ -232,7 +233,14 @@ describe("LedgerService", () => {
 
 		it("should attempt to scan with startPath", async () => {
 			const startPath = "m/44'/60'/0'/0/5";
+			const mockAddressIndex = 5;
+			const mockBIP44Parse = { addressIndex: mockAddressIndex };
+			const spyBIP44 = vi.spyOn(BIP44, "parse").mockReturnValue(mockBIP44Parse as any);
+
 			await expect(ledgerService.scan({ startPath, useLegacy: false })).rejects.toThrow();
+			expect(spyBIP44).toHaveBeenCalledWith(startPath);
+
+			spyBIP44.mockRestore();
 		});
 	});
 });
