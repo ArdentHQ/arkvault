@@ -221,7 +221,7 @@ describe("HttpResponse", () => {
 		it("should identify client errors (400-499)", () => {
 			// These will throw, so we need to catch them
 			expect(() => {
-				const response = new HttpResponse({
+				new HttpResponse({
 					body: "bad request",
 					headers: {},
 					statusCode: 400,
@@ -229,7 +229,7 @@ describe("HttpResponse", () => {
 			}).toThrow(RequestException);
 
 			expect(() => {
-				const response = new HttpResponse({
+				new HttpResponse({
 					body: "not found",
 					headers: {},
 					statusCode: 404,
@@ -237,7 +237,7 @@ describe("HttpResponse", () => {
 			}).toThrow(RequestException);
 
 			expect(() => {
-				const response = new HttpResponse({
+				new HttpResponse({
 					body: "conflict",
 					headers: {},
 					statusCode: 409,
@@ -248,7 +248,7 @@ describe("HttpResponse", () => {
 		it("should identify server errors (500+)", () => {
 			// These will throw, so we need to catch them
 			expect(() => {
-				const response = new HttpResponse({
+				new HttpResponse({
 					body: "server error",
 					headers: {},
 					statusCode: 500,
@@ -256,7 +256,7 @@ describe("HttpResponse", () => {
 			}).toThrow(RequestException);
 
 			expect(() => {
-				const response = new HttpResponse({
+				new HttpResponse({
 					body: "bad gateway",
 					headers: {},
 					statusCode: 502,
