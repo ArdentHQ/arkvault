@@ -133,5 +133,55 @@ describe("LedgerService", () => {
 			expect(callCount).toBe(3);
 			spy.mockRestore();
 		});
+
+		it("should derive and return public key in getPublicKey", async () => {
+			const path = "m/44'/60'/0'/0/0";
+			const fakeExtendedKey = "abcdef";
+			const fakePubKey = {
+				derive: vi.fn().mockReturnValue({ publicKey: { toString: vi.fn().mockReturnValue("deadbeef") } }),
+			};
+			vi.spyOn(ledgerService, "getExtendedPublicKey").mockResolvedValue(fakeExtendedKey);
+			const HDKeyModule = await import("@ardenthq/arkvault-crypto");
+			const spy = vi.spyOn(HDKeyModule.HDKey, "fromCompressedPublicKey").mockReturnValue(fakePubKey as any);
+			const result = await ledgerService.getPublicKey(path);
+			expect(result).toBe("deadbeef");
+			expect(fakePubKey.derive).toHaveBeenCalled();
+			spy.mockRestore();
+		});
+
+		it("should throw if sign is called without transport", async () => {
+			// Disconnect to ensure #transport is undefined
+			await ledgerService.connect();
+			// @ts-expect-error: force undefined
+			ledgerService["#transport"] = undefined;
+			await expect(ledgerService.sign("m/44'/60'/0'/0/0", "0x1234")).rejects.toThrow();
+		});
+
+		it("should throw if signMessage is called without transport", async () => {
+			await ledgerService.connect();
+			// @ts-expect-error: force undefined
+			ledgerService["#transport"] = undefined;
+			await expect(ledgerService.signMessage("m/44'/60'/0'/0/0", "hello")).rejects.toThrow();
+		});
+
+		it("should throw if sign throws an unexpected error", async () => {
+			await ledgerService.connect();
+			const error = new Error("unexpected");
+			const spy = vi.spyOn(EthModule.prototype, "signTransaction").mockImplementation(() => {
+				throw error;
+			});
+			await expect(ledgerService.sign("m/44'/60'/0'/0/0", "0x1234")).rejects.toThrow();
+			spy.mockRestore();
+		});
+
+		it("should throw if signMessage throws an unexpected error", async () => {
+			await ledgerService.connect();
+			const error = new Error("unexpected");
+			const spy = vi.spyOn(EthModule.prototype, "signPersonalMessage").mockImplementation(() => {
+				throw error;
+			});
+			await expect(ledgerService.signMessage("m/44'/60'/0'/0/0", "hello")).rejects.toThrow();
+			spy.mockRestore();
+		});
 	});
 });
