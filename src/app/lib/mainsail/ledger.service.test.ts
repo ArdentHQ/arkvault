@@ -212,5 +212,22 @@ describe("LedgerService", () => {
 			spySignTx.mockRestore();
 			spyConfig.mockRestore();
 		});
+
+		it("should return hex string signature in signMessage", async () => {
+			const path = "m/44'/60'/0'/0/0";
+			const payload = "hello";
+			const fakeSignature = { r: "dead", s: "beef", v: 27 };
+			const spySignMessage = vi
+				.spyOn(EthModule.prototype, "signPersonalMessage")
+				.mockResolvedValue(fakeSignature);
+
+			await ledgerService.connect();
+			const result = await ledgerService.signMessage(path, payload);
+
+			expect(result).toBe("0xdeadbeef1b"); // 0x + r + s + v.toString(16)
+			expect(result).toMatch(/^0x[a-fA-F0-9]+$/); // Verifica formato hexadecimal
+
+			spySignMessage.mockRestore();
+		});
 	});
 });
