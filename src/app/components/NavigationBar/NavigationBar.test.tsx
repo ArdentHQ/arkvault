@@ -1,4 +1,3 @@
-
 import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
 import React, { useEffect } from "react";
@@ -440,7 +439,7 @@ describe("NavigationBar", () => {
 	});
 
 	it("should render logo-only variant on xs screen", () => {
-		const { container, asFragment } = renderResponsiveWithRoute(<NavigationBar variant="logo-only" />, "xs");
+		const { asFragment } = renderResponsiveWithRoute(<NavigationBar variant="logo-only" />, "xs");
 
 		expect(asFragment()).toMatchSnapshot();
 	});
