@@ -229,5 +229,10 @@ describe("LedgerService", () => {
 
 			spySignMessage.mockRestore();
 		});
+
+		it("should attempt to scan with startPath", async () => {
+			const startPath = "m/44'/60'/0'/0/5";
+			await expect(ledgerService.scan({ startPath, useLegacy: false })).rejects.toThrow();
+		});
 	});
 });
