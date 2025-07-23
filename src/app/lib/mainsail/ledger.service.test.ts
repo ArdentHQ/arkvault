@@ -3,7 +3,7 @@ import { LedgerService } from "./ledger.service";
 import { ConfigRepository } from "./config.repository";
 import { mockNanoXTransport } from "@/utils/testing-library";
 import * as LedgerTransportFactory from "@/app/contexts/Ledger/transport";
-import EthModule from "@ledgerhq/hw-app-eth";
+import EthModule, { ledgerService as LedgerEthService } from "@ledgerhq/hw-app-eth";
 
 describe("LedgerService", () => {
 	let ledgerService: LedgerService;
@@ -182,6 +182,35 @@ describe("LedgerService", () => {
 			});
 			await expect(ledgerService.signMessage("m/44'/60'/0'/0/0", "hello")).rejects.toThrow();
 			spy.mockRestore();
+		});
+
+		it("should return signature object with adjusted v in sign", async () => {
+			const path = "m/44'/60'/0'/0/0";
+			const serialized = "0x1234";
+			const chainId = 99;
+			const fakeSignature = { r: "r", s: "s", v: "100" }; // 0x100 = 256
+			const fakeResolution = {
+				domains: [],
+				erc20Tokens: [],
+				externalPlugin: [],
+				nfts: [],
+				plugin: [],
+			};
+			const spyResolve = vi.spyOn(LedgerEthService, "resolveTransaction").mockResolvedValue(fakeResolution);
+			const spySignTx = vi
+				.spyOn(EthModule.prototype, "signTransaction")
+				.mockImplementation(() => Promise.resolve(fakeSignature));
+			const spyConfig = vi.spyOn(mockConfig, "get").mockReturnValue(chainId);
+
+			await ledgerService.connect();
+			const result = await ledgerService.sign(path, serialized);
+			expect(result).toHaveProperty("r", "r");
+			expect(result).toHaveProperty("s", "s");
+			expect(typeof result.v).toBe("number");
+
+			spyResolve.mockRestore();
+			spySignTx.mockRestore();
+			spyConfig.mockRestore();
 		});
 	});
 });
