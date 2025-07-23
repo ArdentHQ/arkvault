@@ -13,7 +13,7 @@ exports[`TransferLedgerReview > should render 1`] = `
         data-testid="DetailLabel"
       >
         <div
-          class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold text-md leading-5"
+          class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold text-sm leading-[17px] sm:text-base sm:leading-5"
           data-testid="DetailLabelText"
         >
           Addressing
@@ -112,7 +112,7 @@ exports[`TransferLedgerReview > should render 1`] = `
         data-testid="DetailLabel"
       >
         <div
-          class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold text-md leading-5"
+          class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold text-sm leading-[17px] sm:text-base sm:leading-5"
           data-testid="DetailLabelText"
         >
           <div
@@ -177,7 +177,7 @@ exports[`TransferLedgerReview > should render 1`] = `
           data-testid="DetailLabel"
         >
           <div
-            class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold text-md leading-5"
+            class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold text-sm leading-[17px] sm:text-base sm:leading-5"
             data-testid="DetailLabelText"
           >
             Transaction Summary
@@ -290,7 +290,7 @@ exports[`TransferLedgerReview > should render skeleton while loading expiration 
         data-testid="DetailLabel"
       >
         <div
-          class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold text-md leading-5"
+          class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold text-sm leading-[17px] sm:text-base sm:leading-5"
           data-testid="DetailLabelText"
         >
           Addressing
@@ -389,7 +389,7 @@ exports[`TransferLedgerReview > should render skeleton while loading expiration 
         data-testid="DetailLabel"
       >
         <div
-          class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold text-md leading-5"
+          class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold text-sm leading-[17px] sm:text-base sm:leading-5"
           data-testid="DetailLabelText"
         >
           <div
@@ -471,7 +471,7 @@ exports[`TransferLedgerReview > should render skeleton while loading expiration 
           data-testid="DetailLabel"
         >
           <div
-            class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold text-md leading-5"
+            class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold text-sm leading-[17px] sm:text-base sm:leading-5"
             data-testid="DetailLabelText"
           >
             Transaction Summary
@@ -584,7 +584,7 @@ exports[`TransferLedgerReview > should render with memo 1`] = `
         data-testid="DetailLabel"
       >
         <div
-          class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold text-md leading-5"
+          class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold text-sm leading-[17px] sm:text-base sm:leading-5"
           data-testid="DetailLabelText"
         >
           Addressing
@@ -683,7 +683,7 @@ exports[`TransferLedgerReview > should render with memo 1`] = `
         data-testid="DetailLabel"
       >
         <div
-          class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold text-md leading-5"
+          class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold text-sm leading-[17px] sm:text-base sm:leading-5"
           data-testid="DetailLabelText"
         >
           <div
@@ -748,7 +748,7 @@ exports[`TransferLedgerReview > should render with memo 1`] = `
           data-testid="DetailLabel"
         >
           <div
-            class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold text-md leading-5"
+            class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold text-sm leading-[17px] sm:text-base sm:leading-5"
             data-testid="DetailLabelText"
           >
             Transaction Summary

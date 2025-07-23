@@ -60,24 +60,24 @@ export const VoteTransactionType = ({
 
 				{voteCategory === "swap" && (
 					<>
-						<div className="flex w-full items-center justify-between sm:justify-start">
+						<div className="flex w-full items-center justify-between gap-4 sm:justify-start sm:gap-0">
 							<DetailTitle className="w-auto sm:min-w-[132px]">{t("COMMON.OLD_VALIDATOR")}</DetailTitle>
 
 							<Address
 								truncateOnTable
 								address={unvotes[0].wallet?.address()}
-								wrapperClass="justify-start w-52 xs:w-60 sm:w-full"
+								wrapperClass="justify-start"
 								addressClass="truncate text-sm font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-200 sm:text-base sm:leading-5 text-right sm:text-left"
 							/>
 						</div>
 
-						<div className="flex w-full items-center justify-between sm:justify-start">
+						<div className="flex w-full items-center justify-between gap-4 sm:justify-start sm:gap-0">
 							<DetailTitle className="w-auto sm:min-w-[132px]">{t("COMMON.NEW_VALIDATOR")}</DetailTitle>
 
 							<Address
 								truncateOnTable
 								address={votes[0].wallet?.address()}
-								wrapperClass="justify-start w-52 xs:w-60 sm:w-full"
+								wrapperClass="justify-start"
 								addressClass="truncate text-sm font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-200 sm:text-base sm:leading-5 text-right sm:text-left"
 							/>
 						</div>
@@ -85,7 +85,7 @@ export const VoteTransactionType = ({
 				)}
 
 				{showValidatorField && (
-					<div className="flex w-full items-center justify-between sm:justify-start">
+					<div className="flex w-full items-center justify-between gap-4 sm:justify-start sm:gap-0">
 						<DetailTitle
 							className={cn("w-auto", {
 								"sm:min-w-[132px]": voteCategory === "swap",
@@ -100,7 +100,7 @@ export const VoteTransactionType = ({
 							address={
 								voteCategory === "vote" ? votes[0]?.wallet?.address() : unvotes[0]?.wallet?.address()
 							}
-							wrapperClass="justify-start w-52 xs:w-60 sm:w-auto"
+							wrapperClass="justify-start"
 							addressClass="truncate text-sm font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-200 sm:text-base sm:leading-5 text-right sm:text-left"
 						/>
 					</div>

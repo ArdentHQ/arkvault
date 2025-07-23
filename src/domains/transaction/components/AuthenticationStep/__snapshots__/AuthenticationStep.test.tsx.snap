@@ -13,17 +13,20 @@ exports[`AuthenticationStep (message) > should request mnemonic if wallet was im
         class="space-y-2"
       >
         <div
-          class="flex items-center gap-3"
+          class="mb-1 flex items-center gap-3"
         >
+          <div
+            class="hidden sm:inline"
+          />
           <h1
-            class="mb-0 text-2xl leading-[29px]"
+            class="mb-0 text-lg leading-[21px] md:text-2xl md:leading-[29px]"
             data-testid="header__title"
           >
             Authenticate
           </h1>
         </div>
         <div
-          class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
+          class="text-theme-secondary-text mt-0.5 flex items-center text-xs leading-5 font-semibold sm:mt-1 sm:text-sm sm:leading-[17px] sm:font-normal md:text-base md:leading-5"
           data-testid="header__subtitle"
         >
           Enter your mnemonic passphrase to sign the message.
@@ -178,17 +181,20 @@ exports[`AuthenticationStep (message) > should request mnemonic if wallet was im
         class="space-y-2"
       >
         <div
-          class="flex items-center gap-3"
+          class="mb-1 flex items-center gap-3"
         >
+          <div
+            class="hidden sm:inline"
+          />
           <h1
-            class="mb-0 text-2xl leading-[29px]"
+            class="mb-0 text-lg leading-[21px] md:text-2xl md:leading-[29px]"
             data-testid="header__title"
           >
             Authenticate
           </h1>
         </div>
         <div
-          class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
+          class="text-theme-secondary-text mt-0.5 flex items-center text-xs leading-5 font-semibold sm:mt-1 sm:text-sm sm:leading-[17px] sm:font-normal md:text-base md:leading-5"
           data-testid="header__subtitle"
         >
           Enter your mnemonic passphrase to sign the message.
@@ -293,17 +299,20 @@ exports[`AuthenticationStep (message) > should request secret if wallet was impo
         class="space-y-2"
       >
         <div
-          class="flex items-center gap-3"
+          class="mb-1 flex items-center gap-3"
         >
+          <div
+            class="hidden sm:inline"
+          />
           <h1
-            class="mb-0 text-2xl leading-[29px]"
+            class="mb-0 text-lg leading-[21px] md:text-2xl md:leading-[29px]"
             data-testid="header__title"
           >
             Authenticate
           </h1>
         </div>
         <div
-          class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
+          class="text-theme-secondary-text mt-0.5 flex items-center text-xs leading-5 font-semibold sm:mt-1 sm:text-sm sm:leading-[17px] sm:font-normal md:text-base md:leading-5"
           data-testid="header__subtitle"
         >
           Enter your secret to sign the message.
@@ -462,17 +471,20 @@ exports[`AuthenticationStep (message) > should show ledger waiting app screen 1`
           class="space-y-2"
         >
           <div
-            class="flex items-center gap-3"
+            class="mb-1 flex items-center gap-3"
           >
+            <div
+              class="hidden sm:inline"
+            />
             <h1
-              class="mb-0 text-2xl leading-[29px]"
+              class="mb-0 text-lg leading-[21px] md:text-2xl md:leading-[29px]"
               data-testid="header__title"
             >
               Ledger Wallet
             </h1>
           </div>
           <div
-            class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
+            class="text-theme-secondary-text mt-0.5 flex items-center text-xs leading-5 font-semibold sm:mt-1 sm:text-sm sm:leading-[17px] sm:font-normal md:text-base md:leading-5"
             data-testid="header__subtitle"
           >
             Connect your Ledger and confirm input.
@@ -517,17 +529,20 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
           class="space-y-2"
         >
           <div
-            class="flex items-center gap-3"
+            class="mb-1 flex items-center gap-3"
           >
+            <div
+              class="hidden sm:inline"
+            />
             <h1
-              class="mb-0 text-2xl leading-[29px]"
+              class="mb-0 text-lg leading-[21px] md:text-2xl md:leading-[29px]"
               data-testid="header__title"
             >
               Ledger Wallet
             </h1>
           </div>
           <div
-            class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
+            class="text-theme-secondary-text mt-0.5 flex items-center text-xs leading-5 font-semibold sm:mt-1 sm:text-sm sm:leading-[17px] sm:font-normal md:text-base md:leading-5"
             data-testid="header__subtitle"
           >
             Connect your Ledger and confirm input.
@@ -569,10 +584,13 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
         class="space-y-2"
       >
         <div
-          class="flex items-center gap-3"
+          class="mb-1 flex items-center gap-3"
         >
+          <div
+            class="hidden sm:inline"
+          />
           <h1
-            class="mb-0 text-2xl leading-[29px]"
+            class="mb-0 text-lg leading-[21px] md:text-2xl md:leading-[29px]"
             data-testid="header__title"
           >
             Confirm Your Signature
@@ -623,10 +641,13 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
         class="space-y-2"
       >
         <div
-          class="flex items-center gap-3"
+          class="mb-1 flex items-center gap-3"
         >
+          <div
+            class="hidden sm:inline"
+          />
           <h1
-            class="mb-0 text-2xl leading-[29px]"
+            class="mb-0 text-lg leading-[21px] md:text-2xl md:leading-[29px]"
             data-testid="header__title"
           >
             Confirm Your Signature
@@ -677,10 +698,13 @@ exports[`AuthenticationStep (message) > should show only ledger confirmation 1`]
         class="space-y-2"
       >
         <div
-          class="flex items-center gap-3"
+          class="mb-1 flex items-center gap-3"
         >
+          <div
+            class="hidden sm:inline"
+          />
           <h1
-            class="mb-0 text-2xl leading-[29px]"
+            class="mb-0 text-lg leading-[21px] md:text-2xl md:leading-[29px]"
             data-testid="header__title"
           >
             Confirm Your Signature
@@ -735,17 +759,20 @@ exports[`AuthenticationStep (message) > should specify ledger supported model 1`
           class="space-y-2"
         >
           <div
-            class="flex items-center gap-3"
+            class="mb-1 flex items-center gap-3"
           >
+            <div
+              class="hidden sm:inline"
+            />
             <h1
-              class="mb-0 text-2xl leading-[29px]"
+              class="mb-0 text-lg leading-[21px] md:text-2xl md:leading-[29px]"
               data-testid="header__title"
             >
               Ledger Wallet
             </h1>
           </div>
           <div
-            class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
+            class="text-theme-secondary-text mt-0.5 flex items-center text-xs leading-5 font-semibold sm:mt-1 sm:text-sm sm:leading-[17px] sm:font-normal md:text-base md:leading-5"
             data-testid="header__subtitle"
           >
             Connect your Ledger Nano X and confirm input.
@@ -844,17 +871,20 @@ exports[`AuthenticationStep (transaction) > should request mnemonic if wallet wa
         class="space-y-2"
       >
         <div
-          class="flex items-center gap-3"
+          class="mb-1 flex items-center gap-3"
         >
+          <div
+            class="hidden sm:inline"
+          />
           <h1
-            class="mb-0 text-2xl leading-[29px]"
+            class="mb-0 text-lg leading-[21px] md:text-2xl md:leading-[29px]"
             data-testid="header__title"
           >
             Authenticate
           </h1>
         </div>
         <div
-          class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
+          class="text-theme-secondary-text mt-0.5 flex items-center text-xs leading-5 font-semibold sm:mt-1 sm:text-sm sm:leading-[17px] sm:font-normal md:text-base md:leading-5"
           data-testid="header__subtitle"
         >
           Enter your mnemonic passphrase to authenticate the transaction.
@@ -1009,17 +1039,20 @@ exports[`AuthenticationStep (transaction) > should request mnemonic if wallet wa
         class="space-y-2"
       >
         <div
-          class="flex items-center gap-3"
+          class="mb-1 flex items-center gap-3"
         >
+          <div
+            class="hidden sm:inline"
+          />
           <h1
-            class="mb-0 text-2xl leading-[29px]"
+            class="mb-0 text-lg leading-[21px] md:text-2xl md:leading-[29px]"
             data-testid="header__title"
           >
             Authenticate
           </h1>
         </div>
         <div
-          class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
+          class="text-theme-secondary-text mt-0.5 flex items-center text-xs leading-5 font-semibold sm:mt-1 sm:text-sm sm:leading-[17px] sm:font-normal md:text-base md:leading-5"
           data-testid="header__subtitle"
         >
           Enter your mnemonic passphrase to authenticate the transaction.
@@ -1124,17 +1157,20 @@ exports[`AuthenticationStep (transaction) > should request secret if wallet was 
         class="space-y-2"
       >
         <div
-          class="flex items-center gap-3"
+          class="mb-1 flex items-center gap-3"
         >
+          <div
+            class="hidden sm:inline"
+          />
           <h1
-            class="mb-0 text-2xl leading-[29px]"
+            class="mb-0 text-lg leading-[21px] md:text-2xl md:leading-[29px]"
             data-testid="header__title"
           >
             Authenticate
           </h1>
         </div>
         <div
-          class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
+          class="text-theme-secondary-text mt-0.5 flex items-center text-xs leading-5 font-semibold sm:mt-1 sm:text-sm sm:leading-[17px] sm:font-normal md:text-base md:leading-5"
           data-testid="header__subtitle"
         >
           Enter your secret to authenticate the transaction.
@@ -1293,17 +1329,20 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting app scree
           class="space-y-2"
         >
           <div
-            class="flex items-center gap-3"
+            class="mb-1 flex items-center gap-3"
           >
+            <div
+              class="hidden sm:inline"
+            />
             <h1
-              class="mb-0 text-2xl leading-[29px]"
+              class="mb-0 text-lg leading-[21px] md:text-2xl md:leading-[29px]"
               data-testid="header__title"
             >
               Ledger Wallet
             </h1>
           </div>
           <div
-            class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
+            class="text-theme-secondary-text mt-0.5 flex items-center text-xs leading-5 font-semibold sm:mt-1 sm:text-sm sm:leading-[17px] sm:font-normal md:text-base md:leading-5"
             data-testid="header__subtitle"
           >
             Connect your Ledger and confirm input.
@@ -1450,17 +1489,20 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
           class="space-y-2"
         >
           <div
-            class="flex items-center gap-3"
+            class="mb-1 flex items-center gap-3"
           >
+            <div
+              class="hidden sm:inline"
+            />
             <h1
-              class="mb-0 text-2xl leading-[29px]"
+              class="mb-0 text-lg leading-[21px] md:text-2xl md:leading-[29px]"
               data-testid="header__title"
             >
               Ledger Wallet
             </h1>
           </div>
           <div
-            class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
+            class="text-theme-secondary-text mt-0.5 flex items-center text-xs leading-5 font-semibold sm:mt-1 sm:text-sm sm:leading-[17px] sm:font-normal md:text-base md:leading-5"
             data-testid="header__subtitle"
           >
             Connect your Ledger and confirm input.
@@ -1604,10 +1646,13 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
         class="space-y-2"
       >
         <div
-          class="flex items-center gap-3"
+          class="mb-1 flex items-center gap-3"
         >
+          <div
+            class="hidden sm:inline"
+          />
           <h1
-            class="mb-0 text-2xl leading-[29px]"
+            class="mb-0 text-lg leading-[21px] md:text-2xl md:leading-[29px]"
             data-testid="header__title"
           >
             Confirm Your Transaction
@@ -1658,10 +1703,13 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
         class="space-y-2"
       >
         <div
-          class="flex items-center gap-3"
+          class="mb-1 flex items-center gap-3"
         >
+          <div
+            class="hidden sm:inline"
+          />
           <h1
-            class="mb-0 text-2xl leading-[29px]"
+            class="mb-0 text-lg leading-[21px] md:text-2xl md:leading-[29px]"
             data-testid="header__title"
           >
             Confirm Your Transaction
@@ -1712,10 +1760,13 @@ exports[`AuthenticationStep (transaction) > should show only ledger confirmation
         class="space-y-2"
       >
         <div
-          class="flex items-center gap-3"
+          class="mb-1 flex items-center gap-3"
         >
+          <div
+            class="hidden sm:inline"
+          />
           <h1
-            class="mb-0 text-2xl leading-[29px]"
+            class="mb-0 text-lg leading-[21px] md:text-2xl md:leading-[29px]"
             data-testid="header__title"
           >
             Confirm Your Transaction
@@ -1770,17 +1821,20 @@ exports[`AuthenticationStep (transaction) > should specify ledger supported mode
           class="space-y-2"
         >
           <div
-            class="flex items-center gap-3"
+            class="mb-1 flex items-center gap-3"
           >
+            <div
+              class="hidden sm:inline"
+            />
             <h1
-              class="mb-0 text-2xl leading-[29px]"
+              class="mb-0 text-lg leading-[21px] md:text-2xl md:leading-[29px]"
               data-testid="header__title"
             >
               Ledger Wallet
             </h1>
           </div>
           <div
-            class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
+            class="text-theme-secondary-text mt-0.5 flex items-center text-xs leading-5 font-semibold sm:mt-1 sm:text-sm sm:leading-[17px] sm:font-normal md:text-base md:leading-5"
             data-testid="header__subtitle"
           >
             Connect your Ledger Nano X and confirm input.

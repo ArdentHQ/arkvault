@@ -18,10 +18,13 @@ exports[`ErrorStep > should display error details 1`] = `
             class="space-y-2"
           >
             <div
-              class="flex items-center gap-3"
+              class="mb-1 flex items-center gap-3"
             >
+              <div
+                class="hidden sm:inline"
+              />
               <h1
-                class="mb-0 text-2xl leading-[29px]"
+                class="mb-0 text-lg leading-[21px] md:text-2xl md:leading-[29px]"
                 data-testid="header__title"
               >
                 Transaction Error
@@ -193,10 +196,13 @@ exports[`ErrorStep > should emit onBack 1`] = `
             class="space-y-2"
           >
             <div
-              class="flex items-center gap-3"
+              class="mb-1 flex items-center gap-3"
             >
+              <div
+                class="hidden sm:inline"
+              />
               <h1
-                class="mb-0 text-2xl leading-[29px]"
+                class="mb-0 text-lg leading-[21px] md:text-2xl md:leading-[29px]"
                 data-testid="header__title"
               >
                 Custom error title
@@ -434,10 +440,13 @@ exports[`ErrorStep > should emit onClose 1`] = `
             class="space-y-2"
           >
             <div
-              class="flex items-center gap-3"
+              class="mb-1 flex items-center gap-3"
             >
+              <div
+                class="hidden sm:inline"
+              />
               <h1
-                class="mb-0 text-2xl leading-[29px]"
+                class="mb-0 text-lg leading-[21px] md:text-2xl md:leading-[29px]"
                 data-testid="header__title"
               >
                 Custom error title
@@ -675,10 +684,13 @@ exports[`ErrorStep > should render with custom title 1`] = `
             class="space-y-2"
           >
             <div
-              class="flex items-center gap-3"
+              class="mb-1 flex items-center gap-3"
             >
+              <div
+                class="hidden sm:inline"
+              />
               <h1
-                class="mb-0 text-2xl leading-[29px]"
+                class="mb-0 text-lg leading-[21px] md:text-2xl md:leading-[29px]"
                 data-testid="header__title"
               >
                 Custom error title
@@ -900,10 +912,13 @@ exports[`ErrorStep > should render with default texts 1`] = `
             class="space-y-2"
           >
             <div
-              class="flex items-center gap-3"
+              class="mb-1 flex items-center gap-3"
             >
+              <div
+                class="hidden sm:inline"
+              />
               <h1
-                class="mb-0 text-2xl leading-[29px]"
+                class="mb-0 text-lg leading-[21px] md:text-2xl md:leading-[29px]"
                 data-testid="header__title"
               >
                 Transaction Error
