@@ -7,8 +7,30 @@ import { goToProfile } from "../../profile/e2e/common";
 const translations = buildTranslations();
 const mnemonic = MNEMONICS[5];
 
+async function patchCryptoForFirefox(t: TestController) {
+	await t.eval(() => {
+		const isFirefox = navigator.userAgent.toLowerCase().includes("firefox");
+
+		if (isFirefox && typeof window.crypto !== "undefined" && !window.crypto.subtle) {
+			try {
+				Object.defineProperty(window.crypto, "subtle", {
+					configurable: true,
+					writable: true,
+					value: {
+						digest: () => Promise.reject(new Error("fake digest not implemented")),
+					},
+				});
+			} catch (e) {
+				console.error("Failed to define crypto.subtle:", e);
+			}
+		}
+	});
+}
+
+
 const preSteps = {
 	"Given Alice is on the wallet details page for imported wallet": async (t: TestController) => {
+		await patchCryptoForFirefox(t);
 		await visitWelcomeScreen(t);
 		await goToProfile(t);
 	},
