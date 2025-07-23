@@ -85,7 +85,7 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                   </span>
                 </button>
                 <div
-                  class="bg-theme- dark:bg-theme-dark-navy-900 dark:text-theme-dark-navy-300 dim:bg-theme-dim-navy-900 dim:text-theme-dim-navy-300 bg-theme-navy-100 text-theme-navy-600 flex items-center px-2 py-[0.313rem] text-center text-xs leading-[0.938rem] font-semibold h-6 rounded rounded-l-none"
+                  class="dark:bg-theme-dark-navy-900 dark:text-theme-dark-navy-300 dim:bg-theme-dim-navy-900 dim:text-theme-dim-navy-300 bg-theme-navy-100 text-theme-navy-600 flex cursor-pointer items-center px-2 py-[0.313rem] text-center text-xs leading-[0.938rem] font-semibold h-6 rounded rounded-l-none"
                 >
                   ALPHA
                 </div>
@@ -1513,7 +1513,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
                   </span>
                 </button>
                 <div
-                  class="bg-theme- dark:bg-theme-dark-navy-900 dark:text-theme-dark-navy-300 dim:bg-theme-dim-navy-900 dim:text-theme-dim-navy-300 bg-theme-navy-100 text-theme-navy-600 flex items-center px-2 py-[0.313rem] text-center text-xs leading-[0.938rem] font-semibold h-6 rounded rounded-l-none"
+                  class="dark:bg-theme-dark-navy-900 dark:text-theme-dark-navy-300 dim:bg-theme-dim-navy-900 dim:text-theme-dim-navy-300 bg-theme-navy-100 text-theme-navy-600 flex cursor-pointer items-center px-2 py-[0.313rem] text-center text-xs leading-[0.938rem] font-semibold h-6 rounded rounded-l-none"
                 >
                   ALPHA
                 </div>
@@ -2691,7 +2691,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                   </span>
                 </button>
                 <div
-                  class="bg-theme- dark:bg-theme-dark-navy-900 dark:text-theme-dark-navy-300 dim:bg-theme-dim-navy-900 dim:text-theme-dim-navy-300 bg-theme-navy-100 text-theme-navy-600 flex items-center px-2 py-[0.313rem] text-center text-xs leading-[0.938rem] font-semibold h-6 rounded rounded-l-none"
+                  class="dark:bg-theme-dark-navy-900 dark:text-theme-dark-navy-300 dim:bg-theme-dim-navy-900 dim:text-theme-dim-navy-300 bg-theme-navy-100 text-theme-navy-600 flex cursor-pointer items-center px-2 py-[0.313rem] text-center text-xs leading-[0.938rem] font-semibold h-6 rounded rounded-l-none"
                 >
                   ALPHA
                 </div>
@@ -4033,7 +4033,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 3rd st
                   </span>
                 </button>
                 <div
-                  class="bg-theme- dark:bg-theme-dark-navy-900 dark:text-theme-dark-navy-300 dim:bg-theme-dim-navy-900 dim:text-theme-dim-navy-300 bg-theme-navy-100 text-theme-navy-600 flex items-center px-2 py-[0.313rem] text-center text-xs leading-[0.938rem] font-semibold h-6 rounded rounded-l-none"
+                  class="dark:bg-theme-dark-navy-900 dark:text-theme-dark-navy-300 dim:bg-theme-dim-navy-900 dim:text-theme-dim-navy-300 bg-theme-navy-100 text-theme-navy-600 flex cursor-pointer items-center px-2 py-[0.313rem] text-center text-xs leading-[0.938rem] font-semibold h-6 rounded rounded-l-none"
                 >
                   ALPHA
                 </div>
@@ -5051,7 +5051,7 @@ exports[`SendValidatorResignation > Validator Resignation > should show error st
                   </span>
                 </button>
                 <div
-                  class="bg-theme- dark:bg-theme-dark-navy-900 dark:text-theme-dark-navy-300 dim:bg-theme-dim-navy-900 dim:text-theme-dim-navy-300 bg-theme-navy-100 text-theme-navy-600 flex items-center px-2 py-[0.313rem] text-center text-xs leading-[0.938rem] font-semibold h-6 rounded rounded-l-none"
+                  class="dark:bg-theme-dark-navy-900 dark:text-theme-dark-navy-300 dim:bg-theme-dim-navy-900 dim:text-theme-dim-navy-300 bg-theme-navy-100 text-theme-navy-600 flex cursor-pointer items-center px-2 py-[0.313rem] text-center text-xs leading-[0.938rem] font-semibold h-6 rounded rounded-l-none"
                 >
                   ALPHA
                 </div>

@@ -210,7 +210,7 @@ exports[`Servers Settings > should render servers settings 1`] = `
                   </span>
                 </button>
                 <div
-                  class="bg-theme- dark:bg-theme-dark-navy-900 dark:text-theme-dark-navy-300 dim:bg-theme-dim-navy-900 dim:text-theme-dim-navy-300 bg-theme-navy-100 text-theme-navy-600 flex items-center px-2 py-[0.313rem] text-center text-xs leading-[0.938rem] font-semibold h-6 rounded rounded-l-none"
+                  class="dark:bg-theme-dark-navy-900 dark:text-theme-dark-navy-300 dim:bg-theme-dim-navy-900 dim:text-theme-dim-navy-300 bg-theme-navy-100 text-theme-navy-600 flex cursor-pointer items-center px-2 py-[0.313rem] text-center text-xs leading-[0.938rem] font-semibold h-6 rounded rounded-l-none"
                 >
                   ALPHA
                 </div>
@@ -1562,7 +1562,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                   </span>
                 </button>
                 <div
-                  class="bg-theme- dark:bg-theme-dark-navy-900 dark:text-theme-dark-navy-300 dim:bg-theme-dim-navy-900 dim:text-theme-dim-navy-300 bg-theme-navy-100 text-theme-navy-600 flex items-center px-2 py-[0.313rem] text-center text-xs leading-[0.938rem] font-semibold h-6 rounded rounded-l-none"
+                  class="dark:bg-theme-dark-navy-900 dark:text-theme-dark-navy-300 dim:bg-theme-dim-navy-900 dim:text-theme-dim-navy-300 bg-theme-navy-100 text-theme-navy-600 flex cursor-pointer items-center px-2 py-[0.313rem] text-center text-xs leading-[0.938rem] font-semibold h-6 rounded rounded-l-none"
                 >
                   ALPHA
                 </div>
@@ -3254,7 +3254,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                   </span>
                 </button>
                 <div
-                  class="bg-theme- dark:bg-theme-dark-navy-900 dark:text-theme-dark-navy-300 dim:bg-theme-dim-navy-900 dim:text-theme-dim-navy-300 bg-theme-navy-100 text-theme-navy-600 flex items-center px-2 py-[0.313rem] text-center text-xs leading-[0.938rem] font-semibold h-6 rounded rounded-l-none"
+                  class="dark:bg-theme-dark-navy-900 dark:text-theme-dark-navy-300 dim:bg-theme-dim-navy-900 dim:text-theme-dim-navy-300 bg-theme-navy-100 text-theme-navy-600 flex cursor-pointer items-center px-2 py-[0.313rem] text-center text-xs leading-[0.938rem] font-semibold h-6 rounded rounded-l-none"
                 >
                   ALPHA
                 </div>
@@ -4819,7 +4819,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                   </span>
                 </button>
                 <div
-                  class="bg-theme- dark:bg-theme-dark-navy-900 dark:text-theme-dark-navy-300 dim:bg-theme-dim-navy-900 dim:text-theme-dim-navy-300 bg-theme-navy-100 text-theme-navy-600 flex items-center px-2 py-[0.313rem] text-center text-xs leading-[0.938rem] font-semibold h-6 rounded rounded-l-none"
+                  class="dark:bg-theme-dark-navy-900 dark:text-theme-dark-navy-300 dim:bg-theme-dim-navy-900 dim:text-theme-dim-navy-300 bg-theme-navy-100 text-theme-navy-600 flex cursor-pointer items-center px-2 py-[0.313rem] text-center text-xs leading-[0.938rem] font-semibold h-6 rounded rounded-l-none"
                 >
                   ALPHA
                 </div>
@@ -6386,7 +6386,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                   </span>
                 </button>
                 <div
-                  class="bg-theme- dark:bg-theme-dark-navy-900 dark:text-theme-dark-navy-300 dim:bg-theme-dim-navy-900 dim:text-theme-dim-navy-300 bg-theme-navy-100 text-theme-navy-600 flex items-center px-2 py-[0.313rem] text-center text-xs leading-[0.938rem] font-semibold h-6 rounded rounded-l-none"
+                  class="dark:bg-theme-dark-navy-900 dark:text-theme-dark-navy-300 dim:bg-theme-dim-navy-900 dim:text-theme-dim-navy-300 bg-theme-navy-100 text-theme-navy-600 flex cursor-pointer items-center px-2 py-[0.313rem] text-center text-xs leading-[0.938rem] font-semibold h-6 rounded rounded-l-none"
                 >
                   ALPHA
                 </div>
@@ -8078,7 +8078,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                   </span>
                 </button>
                 <div
-                  class="bg-theme- dark:bg-theme-dark-navy-900 dark:text-theme-dark-navy-300 dim:bg-theme-dim-navy-900 dim:text-theme-dim-navy-300 bg-theme-navy-100 text-theme-navy-600 flex items-center px-2 py-[0.313rem] text-center text-xs leading-[0.938rem] font-semibold h-6 rounded rounded-l-none"
+                  class="dark:bg-theme-dark-navy-900 dark:text-theme-dark-navy-300 dim:bg-theme-dim-navy-900 dim:text-theme-dim-navy-300 bg-theme-navy-100 text-theme-navy-600 flex cursor-pointer items-center px-2 py-[0.313rem] text-center text-xs leading-[0.938rem] font-semibold h-6 rounded rounded-l-none"
                 >
                   ALPHA
                 </div>
@@ -9772,7 +9772,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                   </span>
                 </button>
                 <div
-                  class="bg-theme- dark:bg-theme-dark-navy-900 dark:text-theme-dark-navy-300 dim:bg-theme-dim-navy-900 dim:text-theme-dim-navy-300 bg-theme-navy-100 text-theme-navy-600 flex items-center px-2 py-[0.313rem] text-center text-xs leading-[0.938rem] font-semibold h-6 rounded rounded-l-none"
+                  class="dark:bg-theme-dark-navy-900 dark:text-theme-dark-navy-300 dim:bg-theme-dim-navy-900 dim:text-theme-dim-navy-300 bg-theme-navy-100 text-theme-navy-600 flex cursor-pointer items-center px-2 py-[0.313rem] text-center text-xs leading-[0.938rem] font-semibold h-6 rounded rounded-l-none"
                 >
                   ALPHA
                 </div>
@@ -11466,7 +11466,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                   </span>
                 </button>
                 <div
-                  class="bg-theme- dark:bg-theme-dark-navy-900 dark:text-theme-dark-navy-300 dim:bg-theme-dim-navy-900 dim:text-theme-dim-navy-300 bg-theme-navy-100 text-theme-navy-600 flex items-center px-2 py-[0.313rem] text-center text-xs leading-[0.938rem] font-semibold h-6 rounded rounded-l-none"
+                  class="dark:bg-theme-dark-navy-900 dark:text-theme-dark-navy-300 dim:bg-theme-dim-navy-900 dim:text-theme-dim-navy-300 bg-theme-navy-100 text-theme-navy-600 flex cursor-pointer items-center px-2 py-[0.313rem] text-center text-xs leading-[0.938rem] font-semibold h-6 rounded rounded-l-none"
                 >
                   ALPHA
                 </div>
@@ -13152,7 +13152,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                   </span>
                 </button>
                 <div
-                  class="bg-theme- dark:bg-theme-dark-navy-900 dark:text-theme-dark-navy-300 dim:bg-theme-dim-navy-900 dim:text-theme-dim-navy-300 bg-theme-navy-100 text-theme-navy-600 flex items-center px-2 py-[0.313rem] text-center text-xs leading-[0.938rem] font-semibold h-6 rounded rounded-l-none"
+                  class="dark:bg-theme-dark-navy-900 dark:text-theme-dark-navy-300 dim:bg-theme-dim-navy-900 dim:text-theme-dim-navy-300 bg-theme-navy-100 text-theme-navy-600 flex cursor-pointer items-center px-2 py-[0.313rem] text-center text-xs leading-[0.938rem] font-semibold h-6 rounded rounded-l-none"
                 >
                   ALPHA
                 </div>
