@@ -89,7 +89,7 @@ export const useImportOptions = (methods: Networks.NetworkManifestImportMethods)
 
 		const options: ImportOption[] = [];
 
-		if (import.meta.env.VITE_LEDGER_DISABLED === "false") {
+		if (import.meta.env.VITE_LEDGER_DISABLED !== "true") {
 			options.push({
 				description: t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.LEDGER_DESCRIPTION"),
 				header: t("COMMON.LEDGER"),
