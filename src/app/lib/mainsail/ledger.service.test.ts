@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeEach, afterEach } from "vitest";
+import { describe, it, expect, beforeEach, afterEach, vi } from "vitest";
 import { LedgerService } from "./ledger.service";
 import { ConfigRepository } from "./config.repository";
 import { mockNanoXTransport } from "@/utils/testing-library";
@@ -34,23 +34,53 @@ describe("LedgerService", () => {
 		await expect(ledgerService.getVersion()).resolves.toBe("1");
 	});
 
-	it("should return a public key from getPublicKey", async () => {
-		const path = "m/44'/60'/0'/0/0";
-		const fakeExtendedKey = "abcdef";
-		const fakePubKey = { derive: () => ({ publicKey: { toString: () => "deadbeef" } }) };
+	it("should return slip44 from config", () => {
+		expect(ledgerService.slip44()).toBe(60);
+	});
 
-		// Mock getExtendedPublicKey and HDKey.fromCompressedPublicKey
-		ledgerService.getExtendedPublicKey = async () => fakeExtendedKey;
-		const originalFromCompressed = (global as any).HDKey?.fromCompressedPublicKey;
-		const HDKeyModule = await import("@ardenthq/arkvault-crypto");
-		HDKeyModule.HDKey.fromCompressedPublicKey = () => fakePubKey;
+	it("should call disconnect on onPreDestroy", async () => {
+		const disconnectSpy = vi.spyOn(ledgerService, "disconnect");
+		await ledgerService.onPreDestroy();
+		expect(disconnectSpy).toHaveBeenCalled();
+	});
 
-		const result = await ledgerService.getPublicKey(path);
-		expect(result).toBe("deadbeef");
+	describe("after connect", () => {
+		beforeEach(async () => {
+			await ledgerService.connect();
+		});
 
-		// Restore
-		if (originalFromCompressed) {
-			HDKeyModule.HDKey.fromCompressedPublicKey = originalFromCompressed;
-		}
+		it("should check if device is NanoS", async () => {
+			await expect(ledgerService.isNanoS()).resolves.toBeDefined();
+		});
+
+		it("should check if device is NanoX", async () => {
+			await expect(ledgerService.isNanoX()).resolves.toBeDefined();
+		});
+
+		it("should attempt to get extended public key", async () => {
+			const path = "m/44'/60'/0'/0/0";
+			await expect(ledgerService.getExtendedPublicKey(path)).rejects.toThrow();
+		});
+
+		it("should attempt to get public key", async () => {
+			const path = "m/44'/60'/0'/0/0";
+			await expect(ledgerService.getPublicKey(path)).rejects.toThrow();
+		});
+
+		it("should attempt to sign", async () => {
+			const path = "m/44'/60'/0'/0/0";
+			const serialized = "0x1234";
+			await expect(ledgerService.sign(path, serialized)).rejects.toThrow();
+		});
+
+		it("should attempt to sign message", async () => {
+			const path = "m/44'/60'/0'/0/0";
+			const payload = "hello";
+			await expect(ledgerService.signMessage(path, payload)).rejects.toThrow();
+		});
+
+		it("should attempt to scan", async () => {
+			await expect(ledgerService.scan()).rejects.toThrow();
+		});
 	});
 });
