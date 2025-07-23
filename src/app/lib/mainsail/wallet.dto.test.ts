@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeEach } from "vitest";
+import { describe, it, expect, beforeEach, vi } from "vitest";
 import { WalletData } from "./wallet.dto";
 import { ConfigRepository } from "./config.repository";
 import { BigNumber } from "@/app/lib/helpers";
@@ -273,6 +273,65 @@ describe("WalletData", () => {
 			expect(human.publicKey).toBe("test-public-key");
 			expect(human.balance.available).toBe(0.00001); // 1000 / 10^8
 			expect(typeof human.balance.available).toBe("number");
+		});
+
+		it("should convert to human readable format with locked balance", () => {
+			// Mock balance to return locked value
+			const mockBalance = {
+				available: BigNumber.make(1000, 8),
+				fees: BigNumber.make(100, 8),
+				locked: BigNumber.make(500, 8),
+				total: BigNumber.make(1100, 8),
+			};
+			vi.spyOn(walletData, "balance").mockReturnValue(mockBalance as any);
+
+			walletData.fill({ address: "test-address" });
+			const human = walletData.toHuman();
+
+			expect(human.balance.locked).toBe(0.000005); // 500 / 10^8
+			expect(typeof human.balance.locked).toBe("number");
+		});
+
+		it("should convert to human readable format with tokens", () => {
+			// Mock balance to return tokens
+			const mockBalance = {
+				available: BigNumber.make(1000, 8),
+				fees: BigNumber.make(100, 8),
+				tokens: {
+					token1: BigNumber.make(100, 8),
+					token2: BigNumber.make(200, 8),
+				},
+				total: BigNumber.make(1100, 8),
+			};
+			vi.spyOn(walletData, "balance").mockReturnValue(mockBalance as any);
+
+			walletData.fill({ address: "test-address" });
+			const human = walletData.toHuman();
+
+			expect(human.balance.tokens).toBeDefined();
+			expect(human.balance.tokens?.token1).toBe(0.000001); // 100 / 10^8
+			expect(human.balance.tokens?.token2).toBe(0.000002); // 200 / 10^8
+			expect(typeof human.balance.tokens?.token1).toBe("number");
+		});
+
+		it("should convert to human readable format with both locked and tokens", () => {
+			// Mock balance to return both locked and tokens
+			const mockBalance = {
+				available: BigNumber.make(1000, 8),
+				fees: BigNumber.make(100, 8),
+				locked: BigNumber.make(500, 8),
+				tokens: {
+					token1: BigNumber.make(100, 8),
+				},
+				total: BigNumber.make(1100, 8),
+			};
+			vi.spyOn(walletData, "balance").mockReturnValue(mockBalance as any);
+
+			walletData.fill({ address: "test-address" });
+			const human = walletData.toHuman();
+
+			expect(human.balance.locked).toBe(0.000005);
+			expect(human.balance.tokens?.token1).toBe(0.000001);
 		});
 
 		it("should return raw data", () => {
