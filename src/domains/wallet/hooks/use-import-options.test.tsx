@@ -1,7 +1,6 @@
 import { renderHook } from "@testing-library/react";
 
 import { OptionsValue, useImportOptions } from "./use-import-options";
-import { beforeAll } from "vitest";
 
 describe("useImportOptions", () => {
 	it("should return options and default option", () => {
