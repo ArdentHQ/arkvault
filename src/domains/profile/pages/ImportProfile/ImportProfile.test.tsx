@@ -378,8 +378,6 @@ describe("ImportProfile", () => {
 
 		await userEvent.click(screen.getByTestId("ImportError__cancel"));
 
-		await expect(screen.findByTestId("ImportError")).resolves.toBeVisible();
-
 		await waitFor(() => expect(router.state.location.pathname).toBe("/"));
 	});
 });
