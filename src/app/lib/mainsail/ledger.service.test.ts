@@ -2,6 +2,7 @@ import { describe, it, expect, beforeEach, afterEach, vi } from "vitest";
 import { LedgerService } from "./ledger.service";
 import { ConfigRepository } from "./config.repository";
 import { mockNanoXTransport } from "@/utils/testing-library";
+import EthModule from "@ledgerhq/hw-app-eth";
 
 describe("LedgerService", () => {
 	let ledgerService: LedgerService;
@@ -99,27 +100,24 @@ describe("LedgerService", () => {
 			expect(wallet.balance()).toBeDefined();
 		});
 
-		it("should retry getExtendedPublicKey on busy error and eventually succeed (using transport mock)", async () => {
+		it("should handle busy error and retry getExtendedPublicKey until success", async () => {
 			let callCount = 0;
 			const expectedKey = "pubkey123";
-			// Patch Eth prototype used in connect
-			const Eth = (await import("@ledgerhq/hw-app-eth")).default;
-			const originalGetAddress = Eth.prototype.getAddress;
-			Eth.prototype.getAddress = vi.fn().mockImplementation(() => {
+			const spy = vi.spyOn(EthModule.prototype, "getAddress").mockImplementation(() => {
 				callCount++;
 				if (callCount < 3) {
 					const error = new Error("busy");
 					(error as any).message = "busy";
-					throw error;
+					return Promise.reject(error);
 				}
-				return { publicKey: expectedKey };
+				return Promise.resolve({ address: "", chainCode: undefined, publicKey: expectedKey });
 			});
 			mockNanoXTransport();
 			await ledgerService.connect();
 			const result = await ledgerService.getExtendedPublicKey("m/44'/60'/0'/0/0");
 			expect(result).toBe(expectedKey);
 			expect(callCount).toBe(3);
-			Eth.prototype.getAddress = originalGetAddress;
+			spy.mockRestore();
 		});
 	});
 });
