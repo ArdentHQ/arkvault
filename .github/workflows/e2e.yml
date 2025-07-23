@@ -1,8 +1,6 @@
 name: E2E
 
 on:
-    workflow_dispatch:
-
     push:
         branches:
             - master
@@ -11,8 +9,8 @@ on:
             - feat/evm
 
     pull_request:
-        branches:
-            - main
+        types: [ready_for_review, synchronize, opened]
+
 jobs:
     build-and-upload:
         runs-on: ubuntu-latest
