@@ -13,10 +13,13 @@ exports[`ListenLedger > should emit event on device available 1`] = `
         class="space-y-2"
       >
         <div
-          class="flex items-center gap-3"
+          class="mb-1 flex items-center gap-3"
         >
+          <div
+            class="hidden sm:inline"
+          />
           <h1
-            class="mb-0 text-2xl leading-[29px]"
+            class="mb-0 text-lg leading-[21px] md:text-2xl md:leading-[29px]"
             data-testid="header__title"
           >
             Connect and Authorize Ledger Device
@@ -193,10 +196,13 @@ exports[`ListenLedger > should emit event on device not available 1`] = `
         class="space-y-2"
       >
         <div
-          class="flex items-center gap-3"
+          class="mb-1 flex items-center gap-3"
         >
+          <div
+            class="hidden sm:inline"
+          />
           <h1
-            class="mb-0 text-2xl leading-[29px]"
+            class="mb-0 text-lg leading-[21px] md:text-2xl md:leading-[29px]"
             data-testid="header__title"
           >
             Connect and Authorize Ledger Device

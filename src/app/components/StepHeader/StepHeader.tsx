@@ -21,18 +21,23 @@ export const StepHeader = ({
 	}
 
 	return (
-		<div className="w-full sm:mt-8">
+		<div className="w-full">
 			<StepIndicator
-				activeStepTitle={title}
-				activeStepSubtitle={subtitle}
 				steps={Array.from({ length: steps })}
 				activeIndex={activeStep}
+				className="mb-8 hidden sm:block"
 			/>
 
 			<div className="flex flex-col justify-between sm:flex-row">
-				<Header title={title} titleIcon={titleIcon} subtitle={subtitle} className="mt-8 hidden sm:block" />
+				<Header title={title} titleIcon={titleIcon} subtitle={subtitle} />
 
 				{extra && <div className="mt-8 sm:mt-0">{extra}</div>}
+
+				<StepIndicator
+					steps={Array.from({ length: steps })}
+					activeIndex={activeStep}
+					className="mt-2 sm:mb-2 sm:hidden"
+				/>
 			</div>
 		</div>
 	);

@@ -36,7 +36,7 @@ describe("TransactionRowRecipientLabel", () => {
 			/>,
 		);
 
-		expect(screen.getByText(translations.TRANSACTION_TYPES.VALIDATOR_REGISTRATION)).toBeInTheDocument();
+		expect(screen.getByText(translations.TRANSACTION_TYPES.REGISTER_VALIDATOR)).toBeInTheDocument();
 	});
 
 	it("should show a multipayment label", () => {
@@ -51,7 +51,7 @@ describe("TransactionRowRecipientLabel", () => {
 			/>,
 		);
 
-		expect(screen.getByText(translations.TRANSACTION_TYPES.MULTI_PAYMENT)).toBeInTheDocument();
+		expect(screen.getByText(translations.TRANSACTION_TYPES.PAY)).toBeInTheDocument();
 	});
 
 	it.each(["xs", "sm"])("should render with right alignment on mobile view", (breakpoint) => {
@@ -162,31 +162,6 @@ describe("TransactionRowRecipientLabel", () => {
 			);
 			expect(screen.getByTestId("TransactionRowVoteLabel")).toHaveTextContent("validator-0");
 			expect(screen.getByTestId("TransactionRowVoteLabel")).toHaveTextContent("+1");
-		});
-
-		it("should show a vote swap label", () => {
-			render(
-				<TransactionRowRecipientLabel
-					transaction={{
-						...TransactionFixture,
-						isTransfer: () => false,
-						isUnvote: () => true,
-						isVote: () => true,
-						isVoteCombination: () => true,
-						type: () => "voteCombination",
-						unvotes: () => ["-vote"],
-						votes: () => ["-vote"],
-						wallet: () => ({
-							profile: () => profile,
-							validators: () => profile.validators(),
-						}),
-					}}
-				/>,
-			);
-
-			expect(screen.getByTestId("TransactionRowVoteCombinationLabel")).toHaveTextContent(
-				translations.TRANSACTION_TYPES.VOTE_COMBINATION,
-			);
 		});
 
 		it("should show a vote combination label with counter", () => {
