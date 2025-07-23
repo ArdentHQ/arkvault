@@ -4,10 +4,6 @@ import { OptionsValue, useImportOptions } from "./use-import-options";
 import { beforeAll } from "vitest";
 
 describe("useImportOptions", () => {
-	beforeAll(() => {
-		import.meta.env.VITE_LEDGER_DISABLED = "false";
-	});
-
 	it("should return options and default option", () => {
 		const {
 			result: { current },
