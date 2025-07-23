@@ -2,6 +2,7 @@ import { describe, it, expect, beforeEach, afterEach, vi } from "vitest";
 import { LedgerService } from "./ledger.service";
 import { ConfigRepository } from "./config.repository";
 import { mockNanoXTransport } from "@/utils/testing-library";
+import * as LedgerTransportFactory from "@/app/contexts/Ledger/transport";
 import EthModule from "@ledgerhq/hw-app-eth";
 
 describe("LedgerService", () => {
@@ -43,6 +44,19 @@ describe("LedgerService", () => {
 		const disconnectSpy = vi.spyOn(ledgerService, "disconnect");
 		await ledgerService.onPreDestroy();
 		expect(disconnectSpy).toHaveBeenCalled();
+	});
+
+	it("should call close on ledger when disconnect is called", async () => {
+		const closeSpy = vi.fn();
+		const mockTransport = {
+			close: closeSpy,
+			decorateAppAPIMethods: () => {},
+		};
+		vi.spyOn(LedgerTransportFactory, "connectedTransport").mockResolvedValueOnce(mockTransport);
+		const ledgerService = new LedgerService({ config: { get: () => 60 } as any });
+		await ledgerService.connect();
+		await ledgerService.disconnect();
+		expect(closeSpy).toHaveBeenCalled();
 	});
 
 	describe("after connect", () => {
