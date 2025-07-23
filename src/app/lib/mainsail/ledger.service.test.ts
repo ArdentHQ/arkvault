@@ -82,5 +82,21 @@ describe("LedgerService", () => {
 		it("should attempt to scan", async () => {
 			await expect(ledgerService.scan()).rejects.toThrow();
 		});
+
+		it("should scan and create wallet data when getExtendedPublicKey works", async () => {
+			// Mock getExtendedPublicKey to return a valid public key
+			const mockPublicKey = "0293b9fd80d472bbf678404d593705268cf09324115f73103bc1477a3933350041";
+			vi.spyOn(ledgerService, "getExtendedPublicKey").mockResolvedValue(mockPublicKey);
+
+			const result = await ledgerService.scan({ pageSize: 1, useLegacy: false });
+
+			expect(result).toBeDefined();
+			expect(Object.keys(result)).toHaveLength(1);
+
+			const walletPath = Object.keys(result)[0];
+			const wallet = result[walletPath];
+			expect(wallet.address()).toBeDefined();
+			expect(wallet.balance()).toBeDefined();
+		});
 	});
 });
