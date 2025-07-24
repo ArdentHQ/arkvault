@@ -51,4 +51,44 @@ describe("TransactionTypeService", () => {
 		const data = { data: "0xnotfound" };
 		expect(TransactionTypeService.isValidatorRegistration(data)).toBe(false);
 	});
+
+	it("isVote should return true if identifier present", () => {
+		const data = { data: "0x6dd7d8ea" };
+		expect(TransactionTypeService.isVote(data)).toBe(true);
+	});
+
+	it("isUnvote should return true if identifier present", () => {
+		const data = { data: "0x3174b689" };
+		expect(TransactionTypeService.isUnvote(data)).toBe(true);
+	});
+
+	it("isMultiPayment should return true if identifier present", () => {
+		const data = { data: "0x084ce708" };
+		expect(TransactionTypeService.isMultiPayment(data)).toBe(true);
+	});
+
+	it("isUsernameRegistration should return true if identifier present", () => {
+		const data = { data: "0x36a94134" };
+		expect(TransactionTypeService.isUsernameRegistration(data)).toBe(true);
+	});
+
+	it("isUsernameResignation should return true if identifier present", () => {
+		const data = { data: "0xebed6dab" };
+		expect(TransactionTypeService.isUsernameResignation(data)).toBe(true);
+	});
+
+	it("isValidatorResignation should return true if identifier present", () => {
+		const data = { data: "0xb85f5da2" };
+		expect(TransactionTypeService.isValidatorResignation(data)).toBe(true);
+	});
+
+	it("isValidatorRegistration should return true if identifier present", () => {
+		const data = { data: "0x602a9eee" };
+		expect(TransactionTypeService.isValidatorRegistration(data)).toBe(true);
+	});
+
+	it("isValidatorRegistration should return false if identifier not present", () => {
+		const data = { data: "0xnotfound" };
+		expect(TransactionTypeService.isValidatorRegistration(data)).toBe(false);
+	});
 });
