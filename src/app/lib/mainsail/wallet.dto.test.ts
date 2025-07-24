@@ -1,3 +1,4 @@
+/* eslint-disable sonarjs/no-duplicate-string */
 import { describe, it, expect, beforeEach, vi } from "vitest";
 import { WalletData } from "./wallet.dto";
 import { ConfigRepository } from "./config.repository";

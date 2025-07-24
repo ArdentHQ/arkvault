@@ -1,3 +1,4 @@
+/* eslint-disable sonarjs/no-duplicate-string */
 import { describe, it, expect, beforeEach, vi } from "vitest";
 import { server, requestMock } from "@/tests/mocks/server";
 import { TransactionService } from "./transaction.service";
@@ -434,5 +435,26 @@ describe("TransactionService", () => {
 		expect(result).toHaveProperty("serialized");
 
 		profileLedgerSpy.mockRestore();
+	});
+
+	it("should use the provided nonce in transfer (cubre línea 324)", async () => {
+		server.use(
+			requestMock("https://test1.com/wallets/0x659A76be283644AEc2003aa8ba26485047fd1BFB", {
+				data: {},
+			}),
+		);
+
+		const input = {
+			data: { amount: "1", to: "0x0000000000000000000000000000000000000000" },
+			gasLimit: BigNumber.make(21000),
+			gasPrice: BigNumber.make(20000000000),
+			nonce: "12345",
+			signatory,
+		} as any;
+
+		const result = await transactionService.transfer(input);
+		expect(result).toBeDefined();
+		expect(result).toHaveProperty("data");
+		expect(result).toHaveProperty("serialized");
 	});
 });
