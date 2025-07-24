@@ -1,7 +1,9 @@
 import { describe, it, expect, beforeEach, vi } from "vitest";
+import { server, requestMock } from "@/tests/mocks/server";
 import { TransactionService } from "./transaction.service";
 import { ConfigRepository } from "./config.repository";
 import { BigNumber } from "@/app/lib/helpers";
+import { env, MAINSAIL_MNEMONICS } from "@/utils/testing-library";
 
 describe("TransactionService", () => {
 	let config: ConfigRepository;
@@ -51,6 +53,33 @@ describe("TransactionService", () => {
 
 	it("should create instance", () => {
 		expect(transactionService).toBeInstanceOf(TransactionService);
+	});
+
+	it("should call builder chain and return SignedTransactionData", async () => {
+		server.use(
+			requestMock("https://test1.com/wallets/0x659A76be283644AEc2003aa8ba26485047fd1BFB", {
+				data: {},
+			}),
+		);
+
+		const profile = await env.profiles().create("test profile");
+		const wallet = await profile.walletFactory().fromAddress({
+			address: "0x0000000000000000000000000000000000000000",
+		});
+
+		const signatory = await wallet.signatoryFactory().make({
+			mnemonic: MAINSAIL_MNEMONICS[0],
+		});
+
+		const input = {
+			data: { amount: "1", to: "0x0000000000000000000000000000000000000000" },
+			gasLimit: BigNumber.make(21000),
+			gasPrice: BigNumber.make(20000000000),
+			signatory,
+		} as any;
+
+		const result = await transactionService.transfer(input);
+		expect(result).toBeDefined();
 	});
 
 	it("should throw error when transfer input is missing gasPrice", async () => {
