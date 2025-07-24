@@ -40,4 +40,10 @@ describe("TransactionTypeService", () => {
 		const data = { data: "0xnotfound" };
 		expect(TransactionTypeService.isUpdateValidator(data)).toBe(false);
 	});
+
+	it("getIdentifierName should return null if no match", () => {
+		const data = { data: "0xnotfound" };
+		expect(TransactionTypeService.isUpdateValidator(data)).toBe(false);
+		expect(TransactionTypeService.getIdentifierName(data)).toBeNull();
+	});
 });
