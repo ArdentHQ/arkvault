@@ -86,7 +86,6 @@ describe("TransactionService", () => {
 		} as any;
 
 		const result = await transactionService.transfer(input);
-		console.log("transfer result", result);
 		expect(result).toBeDefined();
 		// Check for expected properties
 		expect(result).toHaveProperty("data");
@@ -111,9 +110,30 @@ describe("TransactionService", () => {
 		} as any;
 
 		const result = await transactionService.validatorRegistration(input);
-		console.log("validatorRegistration result", result);
 		expect(result).toBeDefined();
 		// Check for expected properties
+		expect(result).toHaveProperty("data");
+		expect(result).toHaveProperty("serialized");
+	});
+
+	it("should call builder chain and return SignedTransactionData for updateValidator", async () => {
+		server.use(
+			requestMock("https://test1.com/wallets/0x659A76be283644AEc2003aa8ba26485047fd1BFB", {
+				data: {},
+			}),
+		);
+
+		const input = {
+			data: {
+				validatorPublicKey: "659A76be283644AEc2003aa8ba26485047fd1BFB",
+			},
+			gasLimit: BigNumber.make(21000),
+			gasPrice: BigNumber.make(20000000000),
+			signatory,
+		} as any;
+
+		const result = await transactionService.updateValidator(input);
+		expect(result).toBeDefined();
 		expect(result).toHaveProperty("data");
 		expect(result).toHaveProperty("serialized");
 	});
