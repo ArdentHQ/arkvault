@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
 import React, { useEffect } from "react";
@@ -171,12 +170,12 @@ describe("NavigationBar", () => {
 		expect(svg).toHaveAttribute("height", "16");
 	});
 
-	it("should redirect to home by default on logo click", async () => {
-		const { router } = render(<NavigationBar variant="logo-only" />);
+	it("should redirect to dashboard by default on logo click", async () => {
+		const { router } = render(<NavigationBar variant="default" />);
 
 		await userEvent.click(screen.getByTestId(navigationBarLogoButtonSelector));
 
-		expect(router.state.location.pathname).toBe("/");
+		expect(router.state.location.pathname).toBe(`/profiles/${profile.id()}/dashboard`);
 	});
 
 	it("should handle menu click", async () => {
@@ -440,20 +439,15 @@ describe("NavigationBar", () => {
 	});
 
 	it("should render logo-only variant on xs screen", () => {
-		const { container } = renderResponsiveWithRoute(<NavigationBar variant="logo-only" />, "xs");
+		const { asFragment } = renderResponsiveWithRoute(<NavigationBar variant="logo-only" />, "xs");
 
-		expect(container).toBeInTheDocument();
-		const button = screen.getByTestId(navigationBarLogoButtonSelector);
-		// eslint-disable-next-line testing-library/no-node-access
-		expect(button.querySelector("svg")).toHaveAttribute("height", "22");
+		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render logo-only variant on large screen", () => {
-		const { container } = renderResponsiveWithRoute(<NavigationBar variant="logo-only" />, "lg");
+		const { container, asFragment } = renderResponsiveWithRoute(<NavigationBar variant="logo-only" />, "lg");
 
 		expect(container).toBeInTheDocument();
-		const button = screen.getByTestId(navigationBarLogoButtonSelector);
-		// eslint-disable-next-line testing-library/no-node-access
-		expect(button.querySelector("svg")).toHaveAttribute("height", "32");
+		expect(asFragment()).toMatchSnapshot();
 	});
 });
