@@ -23,7 +23,7 @@ import { assertString } from "@/utils/assertions";
 import { useLink } from "@/app/hooks/use-link";
 import { ProfilePaths } from "@/router/paths";
 import { Size } from "@/types";
-import { Logo } from "@/app/components/Logo";
+import { LogoAlpha } from "@/app/components/Logo";
 import { useZendesk } from "@/app/contexts/Zendesk";
 import { twMerge } from "tailwind-merge";
 import { HideBalance } from "@/app/components/NavigationBar/components/HideBalance/HideBalance";
@@ -72,21 +72,11 @@ const NavigationBarLogo: React.FC<NavigationBarLogoOnlyProperties> = ({
 
 	return (
 		<div className="my-auto flex h-12 items-center">
-			<button
-				data-testid="NavigationBarLogo--button"
-				type="button"
-				className={cn(
-					"bg-theme-primary-600 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 my-auto flex cursor-pointer items-center justify-center text-white outline-hidden focus:ring-2 focus:outline-hidden",
-					{
-						"h-11 w-11 rounded-xl": variant === "logo-only" && !isXs,
-						"h-6 w-6 rounded": variant === "default",
-						"h-8 w-8 rounded": variant === "logo-only" && isXs,
-					},
-				)}
+			<LogoAlpha
+				height={getLogoHeight()}
+				variant={variant}
 				onClick={() => (onClick ? onClick() : navigate("/"))}
-			>
-				<Logo height={getLogoHeight()} />
-			</button>
+			/>
 
 			{title && <span className="ml-4 text-lg leading-[21px] uppercase">{title}</span>}
 		</div>
@@ -347,13 +337,13 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 						<BackButton disabled={isBackDisabled} />
 					</div>
 
-					<div className="flex flex-1 items-center justify-between px-6">
-						<div className="flex flex-row items-center gap-6">
+					<div className="flex flex-1 items-center justify-between gap-3 px-6">
+						<div className="flex flex-row items-center gap-5">
 							<NavigationBarLogo onClick={homeButtonHandler} />
 							{renderNavigationMenu()}
 						</div>
 
-						<div className="flex flex-row items-center justify-center gap-4 sm:gap-5">
+						<div className="flex flex-row items-center justify-center gap-3 sm:gap-5">
 							<NotificationsDropdown profile={profile} />
 							<div className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 h-6 border-r sm:h-12" />
 							<ServerStatusIndicator profile={profile} />
@@ -411,7 +401,7 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 								</>
 							)}
 
-							<div className="flex items-center gap-5">
+							<div className="ml-1 flex items-center gap-5 sm:ml-0">
 								<HideBalance className="md-lg:flex hidden" profile={profile} />
 								<UserMenu
 									userInitials={userInitials}

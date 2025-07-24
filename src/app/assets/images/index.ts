@@ -1,6 +1,9 @@
 /// <reference types="vite-plugin-svgr/client" />
 
 import ARKVaultLogo from "./arkvault-logo.svg?react";
+import ARKVaultLogoAlphaLight from "./arkvault-logo-alpha-light.svg?react";
+import ARKVaultLogoAlphaDark from "./arkvault-logo-alpha-dark.svg?react";
+import ARKVaultLogoAlphaDim from "./arkvault-logo-alpha-dim.svg?react";
 import DeleteBannerDark from "./delete-banner-dark.svg?react";
 import DeleteBannerLight from "./delete-banner-light.svg?react";
 import EmptyNotificationsDark from "./empty-notifications-dark.svg?react";
@@ -51,6 +54,9 @@ import ProfileImageExampleResponsiveDim from "./profile-image-example-responsive
 export const images = {
 	common: {
 		ARKVaultLogo,
+		ARKVaultLogoAlphaDark,
+		ARKVaultLogoAlphaDim,
+		ARKVaultLogoAlphaLight,
 		CreateAddressDark,
 		CreateAddressDim,
 		CreateAddressLight,
