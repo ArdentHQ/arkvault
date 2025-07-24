@@ -344,4 +344,29 @@ describe("TransactionService", () => {
 
 		await expect(transactionService.usernameRegistration(input)).rejects.toThrow("Expected username to be defined");
 	});
+
+	it("should call legacySecondSign for confirmation mnemonic signatory in #sign", async () => {
+		server.use(
+			requestMock("https://test1.com/wallets/0x659A76be283644AEc2003aa8ba26485047fd1BFB", {
+				data: {},
+			}),
+		);
+
+		const confirmationSignatory = await wallet.signatoryFactory().make({
+			mnemonic: MAINSAIL_MNEMONICS[0],
+			secondMnemonic: MAINSAIL_MNEMONICS[1],
+		});
+
+		const input = {
+			data: { amount: "1", to: "0x0000000000000000000000000000000000000000" },
+			gasLimit: BigNumber.make(21000),
+			gasPrice: BigNumber.make(20000000000),
+			signatory: confirmationSignatory,
+		} as any;
+
+		const result = await transactionService.transfer(input);
+		expect(result).toBeDefined();
+		expect(result).toHaveProperty("data");
+		expect(result).toHaveProperty("serialized");
+	});
 });
