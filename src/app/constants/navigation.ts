@@ -30,7 +30,7 @@ export const getNavigationMenu = (t: TFunction): NavigationBarMenuItem[] => {
 	}
 
 	return menuItems;
-}
+};
 
 export const getUserMenuActions = (t: TFunction): DropdownOptionGroup[] => [
 	{
