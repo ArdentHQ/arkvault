@@ -394,4 +394,45 @@ describe("TransactionService", () => {
 		expect(result).toHaveProperty("data");
 		expect(result).toHaveProperty("serialized");
 	});
+
+	it("should call #signWithLedger for ledger signatory in #sign", async () => {
+		server.use(
+			requestMock("https://test1.com/wallets/0x47ea9bAa16edd859C1792933556c4659A647749C", {
+				data: {},
+			}),
+		);
+
+		const ledgerSignatory = await wallet.signatoryFactory().make({
+			// using mnemonic to make a signatory that I can spy
+			// to emulate the ledger signatory
+			mnemonic: MAINSAIL_MNEMONICS[0],
+		});
+
+		vi.spyOn(ledgerSignatory, "actsWithMnemonic").mockReturnValue(false);
+		vi.spyOn(ledgerSignatory, "actsWithLedger").mockReturnValue(true);
+
+		const profileLedgerSpy = vi.spyOn(profile, "ledger").mockReturnValue({
+			connect: vi.fn(),
+			getExtendedPublicKey: vi
+				.fn()
+				.mockResolvedValue("0293b9fd80d472bbf678404d593705268cf09324115f73103bc1477a3933350041"),
+			sign: vi.fn(),
+		});
+
+		transactionService = new TransactionService({ config, profile });
+
+		const input = {
+			data: { amount: "1", to: "0x0000000000000000000000000000000000000000" },
+			gasLimit: BigNumber.make(21000),
+			gasPrice: BigNumber.make(20000000000),
+			signatory: ledgerSignatory,
+		} as any;
+
+		const result = await transactionService.transfer(input);
+		expect(result).toBeDefined();
+		expect(result).toHaveProperty("data");
+		expect(result).toHaveProperty("serialized");
+
+		profileLedgerSpy.mockRestore();
+	});
 });
