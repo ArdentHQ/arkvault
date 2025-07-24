@@ -46,4 +46,9 @@ describe("TransactionTypeService", () => {
 		expect(TransactionTypeService.isUpdateValidator(data)).toBe(false);
 		expect(TransactionTypeService.getIdentifierName(data)).toBeNull();
 	});
+
+	it("isValidatorRegistration should return false if identifier not present", () => {
+		const data = { data: "0xnotfound" };
+		expect(TransactionTypeService.isValidatorRegistration(data)).toBe(false);
+	});
 });
