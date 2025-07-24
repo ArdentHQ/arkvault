@@ -5,24 +5,32 @@ import { DropdownOptionGroup } from "@/app/components/Dropdown";
 import { NavigationBarMenuItem } from "@/app/components/NavigationBar";
 import { ProfilePaths } from "@/router/paths";
 
-export const getNavigationMenu = (t: TFunction): NavigationBarMenuItem[] => [
-	{
-		mountPath: (profileId) => generatePath(ProfilePaths.Dashboard, { profileId }),
-		title: t("COMMON.PORTFOLIO"),
-	},
-	{
-		mountPath: (profileId) => generatePath(ProfilePaths.Exchange, { profileId }),
-		title: t("COMMON.EXCHANGE"),
-	},
-	{
-		mountPath: (profileId) => generatePath(ProfilePaths.Contacts, { profileId }),
-		title: t("COMMON.CONTACTS"),
-	},
-	{
-		mountPath: (profileId) => generatePath(ProfilePaths.Votes, { profileId }),
-		title: t("COMMON.VOTES"),
-	},
-];
+export const getNavigationMenu = (t: TFunction): NavigationBarMenuItem[] => {
+	const menuItems: NavigationBarMenuItem[] = [
+		{
+			mountPath: (profileId) => generatePath(ProfilePaths.Dashboard, { profileId }),
+			title: t("COMMON.PORTFOLIO"),
+		},
+		{
+			mountPath: (profileId) => generatePath(ProfilePaths.Exchange, { profileId }),
+			title: t("COMMON.EXCHANGE"),
+		},
+		{
+			mountPath: (profileId) => generatePath(ProfilePaths.Contacts, { profileId }),
+			title: t("COMMON.CONTACTS"),
+		},
+		{
+			mountPath: (profileId) => generatePath(ProfilePaths.Votes, { profileId }),
+			title: t("COMMON.VOTES"),
+		},
+	];
+
+	if (import.meta.env.VITE_HIDE_EXCHANGE_TAB === "true") {
+		return menuItems.filter((menuItem) => menuItem.title !== t("COMMON.EXCHANGE"));
+	}
+
+	return menuItems;
+}
 
 export const getUserMenuActions = (t: TFunction): DropdownOptionGroup[] => [
 	{
