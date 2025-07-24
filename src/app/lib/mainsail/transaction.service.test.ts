@@ -89,6 +89,27 @@ describe("TransactionService", () => {
 		expect(result).toBeDefined();
 	});
 
+	it("should call builder chain and return SignedTransactionData for validatorRegistration", async () => {
+		server.use(
+			requestMock("https://test1.com/wallets/0x659A76be283644AEc2003aa8ba26485047fd1BFB", {
+				data: {},
+			}),
+		);
+
+		const input = {
+			data: {
+				validatorPublicKey: "659A76be283644AEc2003aa8ba26485047fd1BFB",
+				value: "1000000000",
+			},
+			gasLimit: BigNumber.make(21000),
+			gasPrice: BigNumber.make(20000000000),
+			signatory,
+		} as any;
+
+		const result = await transactionService.validatorRegistration(input);
+		expect(result).toBeDefined();
+	});
+
 	it("should throw error when transfer input is missing gasPrice", async () => {
 		const input = {
 			data: { amount: "100", to: "test-address" },
