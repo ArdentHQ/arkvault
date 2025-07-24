@@ -86,7 +86,11 @@ describe("TransactionService", () => {
 		} as any;
 
 		const result = await transactionService.transfer(input);
+		console.log("transfer result", result);
 		expect(result).toBeDefined();
+		// Check for expected properties
+		expect(result).toHaveProperty("data");
+		expect(result).toHaveProperty("serialized");
 	});
 
 	it("should call builder chain and return SignedTransactionData for validatorRegistration", async () => {
@@ -107,7 +111,11 @@ describe("TransactionService", () => {
 		} as any;
 
 		const result = await transactionService.validatorRegistration(input);
+		console.log("validatorRegistration result", result);
 		expect(result).toBeDefined();
+		// Check for expected properties
+		expect(result).toHaveProperty("data");
+		expect(result).toHaveProperty("serialized");
 	});
 
 	it("should throw error when transfer input is missing gasPrice", async () => {
