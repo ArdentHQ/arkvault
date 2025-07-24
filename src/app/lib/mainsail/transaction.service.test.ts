@@ -7,10 +7,12 @@ import { env, MAINSAIL_MNEMONICS } from "@/utils/testing-library";
 
 describe("TransactionService", () => {
 	let config: ConfigRepository;
-	let mockProfile: any;
+	let profile: any;
 	let transactionService: TransactionService;
+	let wallet: any;
+	let signatory: any;
 
-	beforeEach(() => {
+	beforeEach(async () => {
 		config = new ConfigRepository({
 			network: {
 				currency: {
@@ -34,21 +36,35 @@ describe("TransactionService", () => {
 			},
 		});
 
-		mockProfile = {
-			hosts: () => ({
-				allByNetwork: () => [],
-			}),
-			ledger: () => ({
-				connect: vi.fn(),
-				getExtendedPublicKey: vi.fn(),
-				sign: vi.fn(),
-			}),
-			settings: () => ({
-				get: () => false,
-			}),
-		};
+		// profile = {
+		// 	hosts: () => ({
+		// 		allByNetwork: () => [],
+		// 	}),
+		// 	ledger: () => ({
+		// 		connect: vi.fn(),
+		// 		getExtendedPublicKey: vi.fn(),
+		// 		sign: vi.fn(),
+		// 	}),
+		// 	settings: () => ({
+		// 		get: () => false,
+		// 	}),
+		// };
 
-		transactionService = new TransactionService({ config, profile: mockProfile });
+		profile = await env.profiles().create("test profile");
+
+		transactionService = new TransactionService({ config, profile });
+
+		wallet = await profile.walletFactory().fromAddress({
+			address: "0x0000000000000000000000000000000000000000",
+		});
+
+		signatory = await wallet.signatoryFactory().make({
+			mnemonic: MAINSAIL_MNEMONICS[0],
+		});
+	});
+
+	afterEach(() => {
+		env.profiles().forget(profile.id());
 	});
 
 	it("should create instance", () => {
@@ -61,15 +77,6 @@ describe("TransactionService", () => {
 				data: {},
 			}),
 		);
-
-		const profile = await env.profiles().create("test profile");
-		const wallet = await profile.walletFactory().fromAddress({
-			address: "0x0000000000000000000000000000000000000000",
-		});
-
-		const signatory = await wallet.signatoryFactory().make({
-			mnemonic: MAINSAIL_MNEMONICS[0],
-		});
 
 		const input = {
 			data: { amount: "1", to: "0x0000000000000000000000000000000000000000" },
