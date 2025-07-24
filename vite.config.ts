@@ -25,10 +25,11 @@ export default defineConfig(async () => {
 		define: {
 			"process.browser": true,
 			"process.env": {
+				APP_VERSION: pkg.version,
+				DELETE_OLD_PROFILES: process.env.DELETE_OLD_PROFILES,
 				REACT_APP_IS_E2E: process.env.REACT_APP_IS_E2E,
 				REACT_APP_IS_UNIT: process.env.REACT_APP_IS_UNIT,
 				ZENDESK_WIDGET_KEY: process.env.ZENDESK_WIDGET_KEY,
-				APP_VERSION: pkg.version,
 			},
 		},
 		build: {

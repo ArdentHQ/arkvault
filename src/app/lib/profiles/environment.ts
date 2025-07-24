@@ -205,7 +205,7 @@ export class Environment {
 
 	private async updateVersion() {
 		// For pre-evm, clear profiles, as they are not compatible.
-		if (!this.data().has("version")) {
+		if (!this.data().has("version") && process.env.DELETE_OLD_PROFILES === "true") {
 			this.reset();
 		}
 
