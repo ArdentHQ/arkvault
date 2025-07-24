@@ -201,6 +201,14 @@ describe("SignedTransactionData", () => {
 			const votes = transaction.votes();
 			expect(votes).toEqual(["0x1234567890123456789012345678901234567890"]);
 		});
+
+		it("should not add 0x prefix if already present", () => {
+			const dataWith0x = { ...mockSignedData, data: "0xabcdef12" };
+			transaction.configure(dataWith0x, mockSerialized);
+			vi.spyOn(DecodeFunctionDataMock, "decodeFunctionData").mockReturnValue({ args: ["0x1234567890"] });
+			const votes = transaction.votes();
+			expect(votes).toEqual(["0x1234567890"]);
+		});
 	});
 
 	describe("unvotes", () => {
@@ -304,6 +312,14 @@ describe("SignedTransactionData", () => {
 
 			const username = transaction.username();
 			expect(username).toBe("testuser");
+		});
+
+		it("should return data as is if already starts with 0x (username)", () => {
+			const dataWith0x = { ...mockSignedData, data: "0xabcdef12" };
+			transaction.configure(dataWith0x, mockSerialized);
+			vi.spyOn(DecodeFunctionDataMock, "decodeFunctionData").mockReturnValue({ args: ["user0x"] });
+			const username = transaction.username();
+			expect(username).toBe("user0x");
 		});
 	});
 
