@@ -369,4 +369,29 @@ describe("TransactionService", () => {
 		expect(result).toHaveProperty("data");
 		expect(result).toHaveProperty("serialized");
 	});
+
+	it("should call builder.sign for secret signatory in #sign", async () => {
+		// Add handler for the secret signatory address
+		server.use(
+			requestMock("https://test1.com/wallets/0x41459E48257c5781c15BbE266Ad85243883c123B", {
+				data: {},
+			}),
+		);
+
+		const secretSignatory = await wallet.signatoryFactory().make({
+			secret: "mysecret",
+		});
+
+		const input = {
+			data: { amount: "1", to: "0x0000000000000000000000000000000000000000" },
+			gasLimit: BigNumber.make(21000),
+			gasPrice: BigNumber.make(20000000000),
+			signatory: secretSignatory,
+		} as any;
+
+		const result = await transactionService.transfer(input);
+		expect(result).toBeDefined();
+		expect(result).toHaveProperty("data");
+		expect(result).toHaveProperty("serialized");
+	});
 });
