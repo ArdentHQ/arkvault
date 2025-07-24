@@ -340,6 +340,14 @@ describe("SignedTransactionData", () => {
 			const result = transaction.toString();
 			expect(typeof result).toBe("string");
 		});
+
+		it("should return signed data directly when it is a string", () => {
+			const stringData = "string_transaction_data";
+			// Mock the signedData property directly to test the string case
+			(transaction as any).signedData = stringData;
+			const result = transaction.toString();
+			expect(result).toBe(stringData);
+		});
 	});
 
 	describe("get", () => {
@@ -379,6 +387,50 @@ describe("SignedTransactionData", () => {
 			transaction.configure(mockSignedData, mockSerialized);
 			const result = transaction.toSignedData();
 			expect(result).toBeDefined();
+		});
+
+		it("should normalize bigint values", () => {
+			const dataWithBigInt = {
+				...mockSignedData,
+				bigintValue: BigInt(123456789),
+			};
+			transaction.configure(dataWithBigInt, mockSerialized);
+			const result = transaction.toSignedData();
+			expect(result.bigintValue).toBe("123456789");
+		});
+
+		it("should normalize timestamp values", () => {
+			const dataWithTimestamp = {
+				...mockSignedData,
+				timestamp: 1234567890,
+			};
+			transaction.configure(dataWithTimestamp, mockSerialized);
+			const result = transaction.toSignedData();
+			expect(result.timestamp).toBeDefined();
+		});
+
+		it("should normalize amount, nonce, fee values", () => {
+			const dataWithAmounts = {
+				...mockSignedData,
+				amount: BigNumber.make(100),
+				fee: BigNumber.make(10),
+				nonce: BigNumber.make(1),
+			};
+			transaction.configure(dataWithAmounts, mockSerialized);
+			const result = transaction.toSignedData();
+			expect(typeof result.amount).toBe("string");
+			expect(typeof result.nonce).toBe("string");
+			expect(typeof result.fee).toBe("string");
+		});
+
+		it("should normalize Map values", () => {
+			const dataWithMap = {
+				...mockSignedData,
+				mapValue: new Map([["key", "value"]]),
+			};
+			transaction.configure(dataWithMap, mockSerialized);
+			const result = transaction.toSignedData();
+			expect(result.mapValue).toEqual({ key: "value" });
 		});
 	});
 
