@@ -1,19 +1,13 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
 import { SignatoryService } from "./signatory.service";
 import { MAINSAIL_MNEMONICS } from "@/utils/testing-library";
-import { AddressService } from "./address.service";
-import { PublicKeyService } from "./public-key.service";
 
 describe("SignatoryService", () => {
 	let signatoryService: SignatoryService;
-	let addressService: AddressService;
-	let publicKeyService: PublicKeyService;
 
 	beforeEach(() => {
 		vi.clearAllMocks();
 		signatoryService = new SignatoryService();
-		addressService = new AddressService();
-		publicKeyService = new PublicKeyService();
 	});
 
 	describe("mnemonic", () => {

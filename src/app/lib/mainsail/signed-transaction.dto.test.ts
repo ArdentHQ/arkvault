@@ -2,7 +2,6 @@ import { describe, it, expect, beforeEach, vi } from "vitest";
 import { SignedTransactionData } from "./signed-transaction.dto";
 import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
-import { Address } from "@arkecosystem/typescript-crypto";
 import * as TransactionTypeServiceMock from "./transaction-type.service";
 import * as DecodeFunctionDataMock from "./helpers/decode-function-data";
 
