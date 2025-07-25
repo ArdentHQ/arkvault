@@ -111,10 +111,6 @@ export class TransactionTypeService {
 
 		const identifier = functionIdentifiers[identifierName];
 
-		if (!identifier) {
-			return false;
-		}
-
 		return data.data.includes(identifier);
 	}
 
