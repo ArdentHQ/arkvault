@@ -156,11 +156,11 @@ importers:
         specifier: ^10.0.1
         version: 10.0.1(react@19.1.0)
       react-router:
-        specifier: ^7.6.1
-        version: 7.6.2(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+        specifier: ^7.7.1
+        version: 7.7.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       react-router-dom:
-        specifier: 7.6.2
-        version: 7.6.2(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+        specifier: 7.7.1
+        version: 7.7.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       react-slick:
         specifier: ^0.30.3
         version: 0.30.3(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
@@ -356,7 +356,7 @@ importers:
         version: 0.6.13(prettier@3.6.2)
       react-router-config:
         specifier: ^5.1.1
-        version: 5.1.1(react-router@7.6.2(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react@19.1.0)
+        version: 5.1.1(react-router@7.7.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react@19.1.0)
       rollup-plugin-visualizer:
         specifier: ^6.0.3
         version: 6.0.3(rollup@2.79.2)
@@ -5123,15 +5123,15 @@ packages:
       react: '>=15'
       react-router: '>=5'
 
-  react-router-dom@7.6.2:
-    resolution: {integrity: sha512-Q8zb6VlTbdYKK5JJBLQEN06oTUa/RAbG/oQS1auK1I0TbJOXktqm+QENEVJU6QvWynlXPRBXI3fiOQcSEA78rA==}
+  react-router-dom@7.7.1:
+    resolution: {integrity: sha512-bavdk2BA5r3MYalGKZ01u8PGuDBloQmzpBZVhDLrOOv1N943Wq6dcM9GhB3x8b7AbqPMEezauv4PeGkAJfy7FQ==}
     engines: {node: '>=20.0.0'}
     peerDependencies:
       react: '>=18'
       react-dom: '>=18'
 
-  react-router@7.6.2:
-    resolution: {integrity: sha512-U7Nv3y+bMimgWjhlT5CRdzHPu2/KVmqPwKUCChW8en5P3znxUqwlYFlbmyj8Rgp1SF6zs5X4+77kBVknkg6a0w==}
+  react-router@7.7.1:
+    resolution: {integrity: sha512-jVKHXoWRIsD/qS6lvGveckwb862EekvapdHJN/cGmzw40KnJH5gg53ujOJ4qX6EKIK9LSBfFed/xiQ5yeXNrUA==}
     engines: {node: '>=20.0.0'}
     peerDependencies:
       react: '>=18'
@@ -11649,19 +11649,19 @@ snapshots:
       react: 19.1.0
       shallow-equal: 3.1.0
 
-  react-router-config@5.1.1(react-router@7.6.2(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react@19.1.0):
+  react-router-config@5.1.1(react-router@7.7.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react@19.1.0):
     dependencies:
       '@babel/runtime': 7.27.6
       react: 19.1.0
-      react-router: 7.6.2(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      react-router: 7.7.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
 
-  react-router-dom@7.6.2(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
+  react-router-dom@7.7.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
     dependencies:
       react: 19.1.0
       react-dom: 19.1.0(react@19.1.0)
-      react-router: 7.6.2(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      react-router: 7.7.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
 
-  react-router@7.6.2(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
+  react-router@7.7.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
     dependencies:
       cookie: 1.0.2
       react: 19.1.0
