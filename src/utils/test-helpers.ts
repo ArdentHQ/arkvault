@@ -14,7 +14,7 @@ export const bootEnvironmentWithProfileFixtures = async ({
 }) => {
 	const ids = Object.keys(fixtureData.profiles);
 	const fixtureProfiles: any = fixtureData.profiles;
-	const storageData: StorageData = { data: {}, profiles: {} };
+	const storageData: StorageData = { data: fixtureData.data, profiles: {} };
 
 	for (const id of ids) {
 		//@ts-ignore
