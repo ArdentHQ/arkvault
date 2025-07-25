@@ -2,7 +2,7 @@ import { Contracts } from "@/app/lib/profiles";
 import React from "react";
 
 import { images } from "@/app/assets/images";
-import { useActiveProfile } from "@/app/hooks";
+import { useActiveProfile, useTheme } from "@/app/hooks";
 import { shouldUseDarkColors, shouldUseDimColors } from "@/utils/theme";
 
 type ImageProperties = {
@@ -13,6 +13,7 @@ type ImageProperties = {
 
 export const Image = ({ name, domain = "common", loading = "lazy", ...properties }: ImageProperties) => {
 	const [imageName, setImageName] = React.useState("");
+	const { isDarkMode } = useTheme();
 
 	// TODO: remove try/catch usage
 	let profile: Contracts.IProfile | undefined;
@@ -35,7 +36,7 @@ export const Image = ({ name, domain = "common", loading = "lazy", ...properties
 		}
 
 		setImageName(imageName);
-	}, [name, profile]);
+	}, [name, profile, isDarkMode]);
 
 	const Image = (images as any)[domain][imageName] || (images as any)[domain][name];
 
