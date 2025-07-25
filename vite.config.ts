@@ -5,6 +5,7 @@ import path from "path";
 import react from "@vitejs/plugin-react";
 import svgrPlugin from "vite-plugin-svgr";
 import { visualizer } from "rollup-plugin-visualizer";
+import pkg from "./package.json";
 
 export default defineConfig(async () => {
 	const tailwindcss = (await import("@tailwindcss/vite")).default;
@@ -24,6 +25,8 @@ export default defineConfig(async () => {
 		define: {
 			"process.browser": true,
 			"process.env": {
+				APP_VERSION: pkg.version,
+				DELETE_OLD_PROFILES: process.env.DELETE_OLD_PROFILES,
 				REACT_APP_IS_E2E: process.env.REACT_APP_IS_E2E,
 				REACT_APP_IS_UNIT: process.env.REACT_APP_IS_UNIT,
 				ZENDESK_WIDGET_KEY: process.env.ZENDESK_WIDGET_KEY,
