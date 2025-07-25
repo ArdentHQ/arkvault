@@ -34,11 +34,6 @@ export const translations = {
 			"An error occurred while sending your transaction. Please go 'Back' and try again, or click 'Close' to return to the wallet.",
 		TITLE: "Transaction Error",
 	},
-	REJECTED_ERROR: {
-		DESCRIPTION:
-			"You rejected the transaction on your Ledger device. Please go 'Back' and try again, or click 'Close' to return to the wallet.",
-		TITLE: "Transaction Rejected",
-	},
 	EXPIRATION: {
 		HEIGHT: "Block Height Expiration",
 		TIMESTAMP: "Timestamp Expiration",
@@ -316,6 +311,11 @@ export const translations = {
 	RECIPIENTS_HELPTEXT: "Selecting Multiple allows you to add multiple recipients in one transaction.",
 	REGISTRATION: "Registration",
 	REGISTRATION_TYPE: "Registration Type",
+	REJECTED_ERROR: {
+		DESCRIPTION:
+			"You rejected the transaction on your Ledger device. Please go 'Back' and try again, or click 'Close' to return to the wallet.",
+		TITLE: "Transaction Rejected",
+	},
 	REPOSITORIES: {
 		DESCRIPTION: "Show your projects through your repository.",
 		TITLE: "Repository",
