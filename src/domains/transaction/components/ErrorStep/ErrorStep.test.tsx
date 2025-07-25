@@ -12,7 +12,9 @@ describe("ErrorStep", () => {
 	});
 
 	it("should render transaction rejected message", () => {
-		render(<ErrorStep errorMessage="Ledger device: Condition of use not satisfied (denied by the user?) (0x6985)" />);
+		render(
+			<ErrorStep errorMessage="Ledger device: Condition of use not satisfied (denied by the user?) (0x6985)" />,
+		);
 
 		expect(screen.getByText(/Transaction Rejected/)).toBeInTheDocument();
 	});
