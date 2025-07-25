@@ -31,6 +31,7 @@ export const ErrorStep = ({
 }: Properties) => {
 	const { t } = useTranslation();
 	const errorMessageReference = useRef(null);
+	const deniedByUser = errorMessage?.includes("denied by the user");
 
 	return (
 		<div data-testid="ErrorStep">
@@ -38,7 +39,7 @@ export const ErrorStep = ({
 				{!hideHeader && (
 					<div className="flex flex-row items-center justify-start gap-3">
 						<StepHeader
-							title={title || t("TRANSACTION.ERROR.TITLE")}
+							title={title || (deniedByUser ? t("TRANSACTION.REJECTED_ERROR.TITLE") : t("TRANSACTION.ERROR.TITLE"))}
 							titleIcon={
 								<Image
 									name="ErrorHeaderIcon"
@@ -52,11 +53,11 @@ export const ErrorStep = ({
 
 				<div className="space-y-4">
 					<p className="text-theme-secondary-text hidden md:block">
-						{description || t("TRANSACTION.ERROR.DESCRIPTION")}
+						{description || (deniedByUser ? t("TRANSACTION.REJECTED_ERROR.DESCRIPTION") : t("TRANSACTION.ERROR.DESCRIPTION"))}
 					</p>
 
 					<Alert className="md:hidden" variant="danger">
-						{description || t("TRANSACTION.ERROR.DESCRIPTION")}
+						{description || (deniedByUser ? t("TRANSACTION.REJECTED_ERROR.DESCRIPTION") : t("TRANSACTION.ERROR.DESCRIPTION"))}
 					</Alert>
 
 					{errorMessage ? (
