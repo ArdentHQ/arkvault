@@ -71,6 +71,8 @@ export class Environment {
 		if (Object.keys(storage.profiles).length > 0) {
 			this.profiles().fill(storage.profiles);
 		}
+
+		await this.updateVersion();
 	}
 
 	/**
@@ -199,5 +201,18 @@ export class Environment {
 
 	public storage(): Storage {
 		return this.#storage;
+	}
+
+	private async updateVersion() {
+		// For pre-evm, clear profiles, as they are not compatible.
+		if (!this.data().has("version") && process.env.DELETE_OLD_PROFILES === "true") {
+			this.reset();
+		}
+
+		if (this.data().get("version") !== process.env.APP_VERSION) {
+			this.data().set("version", process.env.APP_VERSION);
+		}
+
+		await this.persist();
 	}
 }
