@@ -2,9 +2,6 @@ import { describe, it, expect } from "vitest";
 import { TransactionTypeService, trimHexPrefix, TransactionTypes } from "./transaction-type.service";
 import { Exceptions } from "./index";
 
-const DUMMY_IDENTIFIER = "deadbeef";
-const DUMMY_DATA = { data: `0x${DUMMY_IDENTIFIER}` };
-
 describe("trimHexPrefix", () => {
 	it("should remove 0x prefix", () => {
 		expect(trimHexPrefix("0x1234")).toBe("1234");
@@ -90,5 +87,10 @@ describe("TransactionTypeService", () => {
 	it("isValidatorRegistration should return false if identifier not present", () => {
 		const data = { data: "0xnotfound" };
 		expect(TransactionTypeService.isValidatorRegistration(data)).toBe(false);
+	});
+
+	it("getIdentifierName should return key if match", () => {
+		const data = { data: "0x6dd7d8ea" };
+		expect(TransactionTypeService.getIdentifierName(data)).toBe("vote");
 	});
 });
