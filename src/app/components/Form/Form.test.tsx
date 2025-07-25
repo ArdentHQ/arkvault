@@ -7,7 +7,7 @@ import userEvent from "@testing-library/user-event";
 import { render, screen } from "@/utils/testing-library";
 
 describe("Form", () => {
-	const formSubmitButtonId = "form-submit-button"
+	const formSubmitButtonId = "form-submit-button";
 	it("should render with provider", async () => {
 		const { result: form } = renderHook(() => useForm());
 		const onSubmit = vi.fn();
@@ -35,7 +35,6 @@ describe("Form", () => {
 				<button type="submit" data-testid={formSubmitButtonId} />
 			</Form>,
 		);
-
 
 		await userEvent.click(screen.getByTestId(formSubmitButtonId));
 
