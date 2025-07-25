@@ -211,8 +211,8 @@ importers:
         specifier: ^9.27.0
         version: 9.29.0
       '@ledgerhq/hw-transport-mocker':
-        specifier: ^6.29.7
-        version: 6.29.7
+        specifier: ^6.29.8
+        version: 6.29.8
       '@testing-library/dom':
         specifier: ^10.4.0
         version: 10.4.0
@@ -263,7 +263,7 @@ importers:
         version: 4.6.0(vite@6.3.5(@types/node@22.15.32)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.43.0)(yaml@2.8.0))
       '@vitest/coverage-istanbul':
         specifier: 3.2.4
-        version: 3.2.4(vitest@3.2.4(@types/node@22.15.32)(jiti@2.4.2)(jsdom@26.1.0)(lightningcss@1.30.1)(msw@2.10.2(@types/node@22.15.32)(typescript@5.8.3))(terser@5.43.0)(yaml@2.8.0))
+        version: 3.2.4(vitest@3.2.4(@types/node@22.15.32)(jiti@2.4.2)(jsdom@26.1.0)(lightningcss@1.30.1)(msw@2.10.4(@types/node@22.15.32)(typescript@5.8.3))(terser@5.43.0)(yaml@2.8.0))
       autoprefixer:
         specifier: ^10.4.21
         version: 10.4.21(postcss@8.5.6)
@@ -277,14 +277,14 @@ importers:
         specifier: ^9.27.0
         version: 9.29.0(jiti@2.4.2)
       eslint-config-prettier:
-        specifier: ^10.1.5
-        version: 10.1.5(eslint@9.29.0(jiti@2.4.2))
+        specifier: ^10.1.8
+        version: 10.1.8(eslint@9.29.0(jiti@2.4.2))
       eslint-plugin-import-alias:
         specifier: ^1.2.0
         version: 1.2.0
       eslint-plugin-prettier:
-        specifier: ^5.5.0
-        version: 5.5.0(eslint-config-prettier@10.1.5(eslint@9.29.0(jiti@2.4.2)))(eslint@9.29.0(jiti@2.4.2))(prettier@3.6.0)
+        specifier: ^5.5.3
+        version: 5.5.3(eslint-config-prettier@10.1.8(eslint@9.29.0(jiti@2.4.2)))(eslint@9.29.0(jiti@2.4.2))(prettier@3.6.0)
       eslint-plugin-promise:
         specifier: ^7.2.1
         version: 7.2.1(eslint@9.29.0(jiti@2.4.2))
@@ -298,8 +298,8 @@ importers:
         specifier: ^12.1.1
         version: 12.1.1(eslint@9.29.0(jiti@2.4.2))
       eslint-plugin-sonarjs:
-        specifier: ^3.0.3
-        version: 3.0.3(eslint@9.29.0(jiti@2.4.2))
+        specifier: ^3.0.4
+        version: 3.0.4(eslint@9.29.0(jiti@2.4.2))
       eslint-plugin-sort-imports-es6-autofix:
         specifier: ^0.6.0
         version: 0.6.0(eslint@9.29.0(jiti@2.4.2))
@@ -343,8 +343,8 @@ importers:
         specifier: ^3.0.5
         version: 3.0.5
       msw:
-        specifier: ^2.8.4
-        version: 2.10.2(@types/node@22.15.32)(typescript@5.8.3)
+        specifier: ^2.10.4
+        version: 2.10.4(@types/node@22.15.32)(typescript@5.8.3)
       postcss:
         specifier: ^8.5.3
         version: 8.5.6
@@ -389,7 +389,7 @@ importers:
         version: 4.3.0(rollup@2.79.2)(typescript@5.8.3)(vite@6.3.5(@types/node@22.15.32)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.43.0)(yaml@2.8.0))
       vitest:
         specifier: ^3.2.4
-        version: 3.2.4(@types/node@22.15.32)(jiti@2.4.2)(jsdom@26.1.0)(lightningcss@1.30.1)(msw@2.10.2(@types/node@22.15.32)(typescript@5.8.3))(terser@5.43.0)(yaml@2.8.0)
+        version: 3.2.4(@types/node@22.15.32)(jiti@2.4.2)(jsdom@26.1.0)(lightningcss@1.30.1)(msw@2.10.4(@types/node@22.15.32)(typescript@5.8.3))(terser@5.43.0)(yaml@2.8.0)
       workbox-window:
         specifier: ^7.3.0
         version: 7.3.0
@@ -1521,17 +1521,11 @@ packages:
   '@ledgerhq/cryptoassets-evm-signatures@13.5.10':
     resolution: {integrity: sha512-1s0a6P2E4KKDbk12eVmJfvSA/zmTC8GKuXz+XVVYJIY+xPWs4B3qtPLXC2EpdZhj7GOehj8i0csxlV3rhQRC6w==}
 
-  '@ledgerhq/devices@8.4.7':
-    resolution: {integrity: sha512-CljHIaPmtv93H2If1Zs1xW0pgg+M37bAoJkm6+V6Yw5S0MgFWFpLnTTNgCvHXyD8pG0+uq8TuOXUiG1oAV5AyA==}
-
   '@ledgerhq/devices@8.4.8':
     resolution: {integrity: sha512-joodpi1lTIoPswpH6DBtlAieEfP0xB1NlM8RY3xj82EtO8eU1IRqTQz7wtsbstXJ1FdLRg/CJ5OL41omdBsrZQ==}
 
   '@ledgerhq/domain-service@1.2.37':
     resolution: {integrity: sha512-m4F3Ur9Vwss/K8HCYmfdRH6MkgiTS9yQH30xLVtmb9Py+4at/MGkiDD38a3XN4TG9HPXFJOCj8dnhNs63UpC2Q==}
-
-  '@ledgerhq/errors@6.22.0':
-    resolution: {integrity: sha512-rXtpIOfHL62jWB7o77PNFD4EDYdcqyMeVgt7TZcmTkWT78cK+YYSUTMrNuGLhnZZZTMLWH023Wgt65OfKIdGBQ==}
 
   '@ledgerhq/errors@6.23.0':
     resolution: {integrity: sha512-bM7tPYShPThtBy1Y+9D28iquOeP5W5s4p7KKD/cUQoaVaPibrtC7Mm4u+IeSlH4WGvFJkTmv0vmZJajuZtM79A==}
@@ -1542,9 +1536,6 @@ packages:
   '@ledgerhq/hw-app-eth@6.45.12':
     resolution: {integrity: sha512-0yGienMDf8ZKYO7Id3eNMEdlQ+iY4qh7pJr0nCvnR7D7P1+U8d49h1JZw5gbbh5A5rN6AeOQAi6wDi5GIofgCQ==}
 
-  '@ledgerhq/hw-transport-mocker@6.29.7':
-    resolution: {integrity: sha512-0FEEbS9XRH/Fu8G4xIZq+QbRDnsy0tO3xf2H1wDkhVv0AGHvDHSp1l7fAQZz6Q1sBmLgqjXhKvZRKzNOX4tnfQ==}
-
   '@ledgerhq/hw-transport-mocker@6.29.8':
     resolution: {integrity: sha512-Ea7j0M9miX6KkZTdHcCdcfT1yne1Uuy6/Ph51OKhleiSSBQytSxLtbsEw8r4dppqVHNybf+DoKOsBgo2p7XayA==}
 
@@ -1553,9 +1544,6 @@ packages:
 
   '@ledgerhq/hw-transport-webusb@6.29.8':
     resolution: {integrity: sha512-hAFTnJYB++Ey8qlpGBL2ZHBX4ULQOcBzYzNBcrKUNXqlDaWODtc5uyPCyfGmfUjLnVvZoarDa3h+zDVVQCUHVA==}
-
-  '@ledgerhq/hw-transport@6.31.7':
-    resolution: {integrity: sha512-R+QMlqoLJDPeCiqwWv85PbZ3m0hel5PwQzWwSIbyEwialqjXnG7LFQgytkgXlgMcayT0chvvLeYjuY5ZfMPY7w==}
 
   '@ledgerhq/hw-transport@6.31.8':
     resolution: {integrity: sha512-iH74gILq8BkkLX1Il0wNhcYp1BJ3tjR18fdok4KEdU86i9dOXRKfLbWNhDDFf1px/pMrsGlDS4SpaO74janeEA==}
@@ -3130,8 +3118,8 @@ packages:
     resolution: {integrity: sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==}
     engines: {node: '>=10'}
 
-  eslint-config-prettier@10.1.5:
-    resolution: {integrity: sha512-zc1UmCpNltmVY34vuLRV61r1K27sWuX39E+uyUnY8xS2Bex88VV9cugG+UZbRSRGtGyFboj+D8JODyme1plMpw==}
+  eslint-config-prettier@10.1.8:
+    resolution: {integrity: sha512-82GZUjRS0p/jganf6q1rEO25VSoHH0hKPCTrgillPjdI/3bgBhAE1QzHrHTizjpRvy6pGAvKjDJtk2pF9NDq8w==}
     hasBin: true
     peerDependencies:
       eslint: '>=7.0.0'
@@ -3139,8 +3127,8 @@ packages:
   eslint-plugin-import-alias@1.2.0:
     resolution: {integrity: sha512-hxhpWtaXgBTeCUmQa6EzjKI8vnrk7uej9e+ln2etTMPFAM7Q8xNPdBywSGrWf2mSB018D66sR1ZfdThonXCplg==}
 
-  eslint-plugin-prettier@5.5.0:
-    resolution: {integrity: sha512-8qsOYwkkGrahrgoUv76NZi23koqXOGiiEzXMrT8Q7VcYaUISR+5MorIUxfWqYXN0fN/31WbSrxCxFkVQ43wwrA==}
+  eslint-plugin-prettier@5.5.3:
+    resolution: {integrity: sha512-NAdMYww51ehKfDyDhv59/eIItUVzU0Io9H2E8nHNGKEeeqlnci+1gCvrHib6EmZdf6GxF+LCV5K7UC65Ezvw7w==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
       '@types/eslint': '>=8.0.0'
@@ -3176,8 +3164,8 @@ packages:
     peerDependencies:
       eslint: '>=5.0.0'
 
-  eslint-plugin-sonarjs@3.0.3:
-    resolution: {integrity: sha512-/UrTz8wyTW0MQVJKUF70vSjsMMf54+0cKHWAuYObuE82vNM8zrscm0wvZprolHNN0PIdnvVQ9Dm6MQkIzOKu4A==}
+  eslint-plugin-sonarjs@3.0.4:
+    resolution: {integrity: sha512-ftQcP811kRJNXapqpQXHErEoVOdTPfYPPYd7n3AExIPwv4qWKKHf4slFvXmodiOnfgy1Tl3waPZZLD7lcvJOtw==}
     peerDependencies:
       eslint: ^8.0.0 || ^9.0.0
 
@@ -4455,8 +4443,8 @@ packages:
   ms@2.1.3:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
 
-  msw@2.10.2:
-    resolution: {integrity: sha512-RCKM6IZseZQCWcSWlutdf590M8nVfRHG1ImwzOtwz8IYxgT4zhUO0rfTcTvDGiaFE0Rhcc+h43lcF3Jc9gFtwQ==}
+  msw@2.10.4:
+    resolution: {integrity: sha512-6R1or/qyele7q3RyPwNuvc0IxO8L8/Aim6Sz5ncXEgcWUNxSKE+udriTOWHtpMwmfkLYlacA2y7TIx4cL5lgHA==}
     engines: {node: '>=18'}
     hasBin: true
     peerDependencies:
@@ -7747,13 +7735,6 @@ snapshots:
     transitivePeerDependencies:
       - debug
 
-  '@ledgerhq/devices@8.4.7':
-    dependencies:
-      '@ledgerhq/errors': 6.22.0
-      '@ledgerhq/logs': 6.13.0
-      rxjs: 7.8.2
-      semver: 7.7.2
-
   '@ledgerhq/devices@8.4.8':
     dependencies:
       '@ledgerhq/errors': 6.23.0
@@ -7772,8 +7753,6 @@ snapshots:
       react-dom: 18.3.1(react@18.3.1)
     transitivePeerDependencies:
       - debug
-
-  '@ledgerhq/errors@6.22.0': {}
 
   '@ledgerhq/errors@6.23.0': {}
 
@@ -7807,12 +7786,6 @@ snapshots:
     transitivePeerDependencies:
       - debug
 
-  '@ledgerhq/hw-transport-mocker@6.29.7':
-    dependencies:
-      '@ledgerhq/hw-transport': 6.31.7
-      '@ledgerhq/logs': 6.13.0
-      rxjs: 7.8.2
-
   '@ledgerhq/hw-transport-mocker@6.29.8':
     dependencies:
       '@ledgerhq/hw-transport': 6.31.8
@@ -7832,13 +7805,6 @@ snapshots:
       '@ledgerhq/errors': 6.23.0
       '@ledgerhq/hw-transport': 6.31.8
       '@ledgerhq/logs': 6.13.0
-
-  '@ledgerhq/hw-transport@6.31.7':
-    dependencies:
-      '@ledgerhq/devices': 8.4.7
-      '@ledgerhq/errors': 6.22.0
-      '@ledgerhq/logs': 6.13.0
-      events: 3.3.0
 
   '@ledgerhq/hw-transport@6.31.8':
     dependencies:
@@ -8486,7 +8452,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@vitest/coverage-istanbul@3.2.4(vitest@3.2.4(@types/node@22.15.32)(jiti@2.4.2)(jsdom@26.1.0)(lightningcss@1.30.1)(msw@2.10.2(@types/node@22.15.32)(typescript@5.8.3))(terser@5.43.0)(yaml@2.8.0))':
+  '@vitest/coverage-istanbul@3.2.4(vitest@3.2.4(@types/node@22.15.32)(jiti@2.4.2)(jsdom@26.1.0)(lightningcss@1.30.1)(msw@2.10.4(@types/node@22.15.32)(typescript@5.8.3))(terser@5.43.0)(yaml@2.8.0))':
     dependencies:
       '@istanbuljs/schema': 0.1.3
       debug: 4.4.1(supports-color@8.1.1)
@@ -8498,7 +8464,7 @@ snapshots:
       magicast: 0.3.5
       test-exclude: 7.0.1
       tinyrainbow: 2.0.0
-      vitest: 3.2.4(@types/node@22.15.32)(jiti@2.4.2)(jsdom@26.1.0)(lightningcss@1.30.1)(msw@2.10.2(@types/node@22.15.32)(typescript@5.8.3))(terser@5.43.0)(yaml@2.8.0)
+      vitest: 3.2.4(@types/node@22.15.32)(jiti@2.4.2)(jsdom@26.1.0)(lightningcss@1.30.1)(msw@2.10.4(@types/node@22.15.32)(typescript@5.8.3))(terser@5.43.0)(yaml@2.8.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -8510,13 +8476,13 @@ snapshots:
       chai: 5.2.0
       tinyrainbow: 2.0.0
 
-  '@vitest/mocker@3.2.4(msw@2.10.2(@types/node@22.15.32)(typescript@5.8.3))(vite@6.3.5(@types/node@22.15.32)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.43.0)(yaml@2.8.0))':
+  '@vitest/mocker@3.2.4(msw@2.10.4(@types/node@22.15.32)(typescript@5.8.3))(vite@6.3.5(@types/node@22.15.32)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.43.0)(yaml@2.8.0))':
     dependencies:
       '@vitest/spy': 3.2.4
       estree-walker: 3.0.3
       magic-string: 0.30.17
     optionalDependencies:
-      msw: 2.10.2(@types/node@22.15.32)(typescript@5.8.3)
+      msw: 2.10.4(@types/node@22.15.32)(typescript@5.8.3)
       vite: 6.3.5(@types/node@22.15.32)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.43.0)(yaml@2.8.0)
 
   '@vitest/pretty-format@3.2.4':
@@ -9574,20 +9540,20 @@ snapshots:
 
   escape-string-regexp@4.0.0: {}
 
-  eslint-config-prettier@10.1.5(eslint@9.29.0(jiti@2.4.2)):
+  eslint-config-prettier@10.1.8(eslint@9.29.0(jiti@2.4.2)):
     dependencies:
       eslint: 9.29.0(jiti@2.4.2)
 
   eslint-plugin-import-alias@1.2.0: {}
 
-  eslint-plugin-prettier@5.5.0(eslint-config-prettier@10.1.5(eslint@9.29.0(jiti@2.4.2)))(eslint@9.29.0(jiti@2.4.2))(prettier@3.6.0):
+  eslint-plugin-prettier@5.5.3(eslint-config-prettier@10.1.8(eslint@9.29.0(jiti@2.4.2)))(eslint@9.29.0(jiti@2.4.2))(prettier@3.6.0):
     dependencies:
       eslint: 9.29.0(jiti@2.4.2)
       prettier: 3.6.0
       prettier-linter-helpers: 1.0.0
       synckit: 0.11.8
     optionalDependencies:
-      eslint-config-prettier: 10.1.5(eslint@9.29.0(jiti@2.4.2))
+      eslint-config-prettier: 10.1.8(eslint@9.29.0(jiti@2.4.2))
 
   eslint-plugin-promise@7.2.1(eslint@9.29.0(jiti@2.4.2)):
     dependencies:
@@ -9624,7 +9590,7 @@ snapshots:
     dependencies:
       eslint: 9.29.0(jiti@2.4.2)
 
-  eslint-plugin-sonarjs@3.0.3(eslint@9.29.0(jiti@2.4.2)):
+  eslint-plugin-sonarjs@3.0.4(eslint@9.29.0(jiti@2.4.2)):
     dependencies:
       '@eslint-community/regexpp': 4.12.1
       builtin-modules: 3.3.0
@@ -9632,6 +9598,7 @@ snapshots:
       eslint: 9.29.0(jiti@2.4.2)
       functional-red-black-tree: 1.0.1
       jsx-ast-utils: 3.3.5
+      lodash.merge: 4.6.2
       minimatch: 9.0.5
       scslre: 0.3.0
       semver: 7.7.2
@@ -10939,7 +10906,7 @@ snapshots:
 
   ms@2.1.3: {}
 
-  msw@2.10.2(@types/node@22.15.32)(typescript@5.8.3):
+  msw@2.10.4(@types/node@22.15.32)(typescript@5.8.3):
     dependencies:
       '@bundled-es-modules/cookie': 2.0.1
       '@bundled-es-modules/statuses': 1.0.1
@@ -12737,11 +12704,11 @@ snapshots:
       terser: 5.43.0
       yaml: 2.8.0
 
-  vitest@3.2.4(@types/node@22.15.32)(jiti@2.4.2)(jsdom@26.1.0)(lightningcss@1.30.1)(msw@2.10.2(@types/node@22.15.32)(typescript@5.8.3))(terser@5.43.0)(yaml@2.8.0):
+  vitest@3.2.4(@types/node@22.15.32)(jiti@2.4.2)(jsdom@26.1.0)(lightningcss@1.30.1)(msw@2.10.4(@types/node@22.15.32)(typescript@5.8.3))(terser@5.43.0)(yaml@2.8.0):
     dependencies:
       '@types/chai': 5.2.2
       '@vitest/expect': 3.2.4
-      '@vitest/mocker': 3.2.4(msw@2.10.2(@types/node@22.15.32)(typescript@5.8.3))(vite@6.3.5(@types/node@22.15.32)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.43.0)(yaml@2.8.0))
+      '@vitest/mocker': 3.2.4(msw@2.10.4(@types/node@22.15.32)(typescript@5.8.3))(vite@6.3.5(@types/node@22.15.32)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.43.0)(yaml@2.8.0))
       '@vitest/pretty-format': 3.2.4
       '@vitest/runner': 3.2.4
       '@vitest/snapshot': 3.2.4
