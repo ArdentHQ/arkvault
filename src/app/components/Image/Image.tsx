@@ -13,7 +13,7 @@ type ImageProperties = {
 
 export const Image = ({ name, domain = "common", loading = "lazy", ...properties }: ImageProperties) => {
 	const [imageName, setImageName] = React.useState("");
-	const { isDarkMode } = useTheme();
+	const { isDarkMode, isDimMode } = useTheme();
 
 	// TODO: remove try/catch usage
 	let profile: Contracts.IProfile | undefined;
@@ -36,7 +36,7 @@ export const Image = ({ name, domain = "common", loading = "lazy", ...properties
 		}
 
 		setImageName(imageName);
-	}, [name, profile, isDarkMode]);
+	}, [name, profile, isDarkMode, isDimMode]);
 
 	const Image = (images as any)[domain][imageName] || (images as any)[domain][name];
 
