@@ -1,4 +1,4 @@
-import { IProfileData } from "./contracts.js";
+import { IProfile, IProfileData } from "./contracts.js";
 
 export interface IProfileMainsailMigrator {
 	/**
@@ -8,5 +8,5 @@ export interface IProfileMainsailMigrator {
 	 * @return {IProfileData}
 	 * @memberof Profile
 	 */
-	migrate(data: IProfileData): IProfileData;
+	migrate(profile: IProfile, data: IProfileData): Promise<IProfileData>;
 }
