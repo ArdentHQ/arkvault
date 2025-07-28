@@ -53,13 +53,13 @@ const renderComponent = async () => {
 
 describe("CreateProfile", () => {
 	beforeAll(() => {
-		env.reset({ coins: { Mainsail }, httpClient, storage: new StubStorage() });
+		env.reset({ httpClient, storage: new StubStorage() });
 	});
 
 	it("should render", async () => {
 		await renderComponent();
 
-		userEvent.click(screen.getByText("Back"));
+		await userEvent.click(screen.getByText("Back"));
 		expect(screen.getByTestId("CreateProfile")).toBeInTheDocument();
 	});
 
@@ -156,14 +156,16 @@ describe("CreateProfile", () => {
 	it("should store profile", async () => {
 		await renderComponent();
 
-		await userEvent.type(nameInput(), "test profile 1");
+		const user = userEvent.setup();
+
+		await user.clear(nameInput());
+		await user.paste("test profile 1");
 
 		const selectDropdown = screen.getAllByTestId("SelectDropdown__input")[0];
 
 		await userEvent.clear(selectDropdown);
 		await waitFor(() => expect(selectDropdown).not.toHaveValue());
 
-		const user = userEvent.setup();
 		await user.clear(selectDropdown);
 		await user.paste("BTC");
 
@@ -175,9 +177,7 @@ describe("CreateProfile", () => {
 
 		await waitFor(() => expect(submitButton()).toBeEnabled());
 
-		await act(async () => {
-			await userEvent.click(submitButton());
-		});
+		await userEvent.click(submitButton());
 
 		const profile = env.profiles().last();
 
@@ -257,7 +257,7 @@ describe("CreateProfile", () => {
 		await waitFor(() => expect(submitButton()).toBeEnabled());
 
 		await userEvent.clear(nameInput());
-		await userEvent.type(nameInput(), profileName.repeat(10));
+		await userEvent.type(nameInput(), profileName.repeat(5));
 
 		await waitFor(() => expect(submitButton()).toBeDisabled());
 
