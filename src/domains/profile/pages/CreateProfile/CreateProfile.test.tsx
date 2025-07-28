@@ -29,8 +29,6 @@ const baseSettings = {
 	WALLET_SELECTION_MODE: "single",
 };
 
-const BASE64_REGEX = /(?:[\d+/A-Za-z]{4})*(?:[\d+/A-Za-z]{2}==|[\d+/A-Za-z]{3}=)?/g;
-
 const nameInput = () => screen.getAllByTestId("Input")[0];
 
 const submitButton = () => screen.getByTestId("ProfileForm__submit-button");
