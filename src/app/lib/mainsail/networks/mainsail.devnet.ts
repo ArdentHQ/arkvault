@@ -22,19 +22,19 @@ const network: Networks.NetworkManifest = {
 	},
 	hosts: [
 		{
-			host: "https://dwallets-evm.mainsailhq.com/api",
+			host: import.meta.env.VITE_MAINSAIL_DEVNET_FULL_HOST || "https://testnet.mainsailhq.com/api",
 			type: "full",
 		},
 		{
-			host: "https://dwallets-evm.mainsailhq.com/tx/api",
+			host: import.meta.env.VITE_MAINSAIL_DEVNET_TX_HOST || "https://testnet.mainsailhq.com/tx/api",
 			type: "tx",
 		},
 		{
-			host: "https://explorer-demo.mainsailhq.com",
+			host: import.meta.env.VITE_MAINSAIL_DEVNET_EXPLORER_HOST || "https://explorer-demo.mainsailhq.com",
 			type: "explorer",
 		},
 		{
-			host: "https://dwallets-evm.mainsailhq.com/evm/api",
+			host: import.meta.env.VITE_MAINSAIL_DEVNET_EVM_HOST || "https://testnet.mainsailhq.com/rpc/api",
 			type: "evm",
 		},
 	],
