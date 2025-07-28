@@ -22,11 +22,11 @@ const network: Networks.NetworkManifest = {
 	},
 	hosts: [
 		{
-			host: "https://dwallets-evm.mainsailhq.com/api",
+			host: "https://testnet.mainsailhq.com/api",
 			type: "full",
 		},
 		{
-			host: "https://dwallets-evm.mainsailhq.com/tx/api",
+			host: "https://testnet.mainsailhq.com/tx/api",
 			type: "tx",
 		},
 		{
@@ -34,7 +34,7 @@ const network: Networks.NetworkManifest = {
 			type: "explorer",
 		},
 		{
-			host: "https://dwallets-evm.mainsailhq.com/evm/api",
+			host: "https://testnet.mainsailhq.com/rpc/api",
 			type: "evm",
 		},
 	],
