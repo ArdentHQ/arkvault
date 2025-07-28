@@ -1,3 +1,5 @@
+/* eslint-disable sonarjs/no-duplicate-string */
+
 import { describe, it, expect, beforeEach, afterEach, vi } from "vitest";
 import network from "./mainsail.devnet";
 
