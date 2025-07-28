@@ -161,7 +161,7 @@ const mockTxEndpoint = () =>
 				core: {
 					version: "0.0.1-evm.18",
 				},
-				height: 165_077,
+				blockNumber: 165_077,
 			},
 		}),
 	);
