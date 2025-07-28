@@ -52,11 +52,6 @@ export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 			ADDRESS: wallet.address(),
 		};
 
-		console.log({
-			newAddress: wallet.address(),
-			oldAddress: walletData["ADDRESS"],
-		});
-
 		return migratedWalletData;
 	}
 
