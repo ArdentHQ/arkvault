@@ -248,13 +248,16 @@ describe("CreateProfile", () => {
 	it("should not be able to create new profile if name is too long", async () => {
 		await renderComponent();
 
-		await userEvent.type(nameInput(), "t");
+		const user = userEvent.setup();
+		await user.clear(nameInput());
+		await user.paste("t");
+
 		await userEvent.click(screen.getByRole("checkbox"));
 
 		await waitFor(() => expect(submitButton()).toBeEnabled());
 
 		await userEvent.clear(nameInput());
-		await userEvent.type(nameInput(), profileName.repeat(5));
+		await user.paste(profileName.repeat(5));
 
 		await waitFor(() => expect(submitButton()).toBeDisabled());
 
