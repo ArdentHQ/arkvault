@@ -2,7 +2,6 @@
 
 /* eslint-disable testing-library/no-unnecessary-act */
 
-import * as Mainsail from "@/app/lib/mainsail";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
@@ -10,7 +9,7 @@ import { CreateProfile } from "./CreateProfile";
 import { httpClient } from "@/app/services";
 import { StubStorage } from "@/tests/mocks";
 import * as themeUtils from "@/utils/theme";
-import { act, env, render, screen, waitFor } from "@/utils/testing-library";
+import { env, render, screen, waitFor } from "@/utils/testing-library";
 
 const profileName = "test profile";
 
