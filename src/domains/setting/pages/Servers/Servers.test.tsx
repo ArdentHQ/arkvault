@@ -158,10 +158,10 @@ const mockTxEndpoint = () =>
 	server.use(
 		requestMock(`${txApiUrl}/configuration`, {
 			data: {
+				blockNumber: 165_077,
 				core: {
 					version: "0.0.1-evm.18",
 				},
-				blockNumber: 165_077,
 			},
 		}),
 	);
