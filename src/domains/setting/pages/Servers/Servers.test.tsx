@@ -660,7 +660,7 @@ describe("Servers Settings", () => {
 
 				expect(screen.getByTestId("Input__error")).toHaveAttribute(
 					"data-errortext",
-					"Either failed to connect to the endpoint or it doesn't contain the expected information."
+					"Either failed to connect to the endpoint or it doesn't contain the expected information.",
 				);
 
 				expect(screen.getByTestId(serverFormSaveButtonTestingId)).toBeDisabled();
