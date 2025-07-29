@@ -55,22 +55,21 @@ export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 	async #migrateContacts(profile: IProfile, contacts: IProfileData["contacts"]): Promise<IProfileData["contacts"]> {
 		const migratedContacts: IProfileData["contacts"] = {};
 
-		for (const [id, contact] of Object.entries(contacts)) {
-			const migratedAddresses = [];
-			for (const addr of contact.addresses) {
-				const newAddress = await this.#migrateContactAddress(profile, addr);
-				if (newAddress) {
-					migratedAddresses.push({
-						address: newAddress,
-						id: addr.id,
-					});
-				}
-			}
+		const contactPromises = Object.entries(contacts).map(async ([id, contact]) => {
+			const migratedAddresses = (
+				await Promise.all(
+					contact.addresses.map(async (addr) => {
+						const newAddress = await this.#migrateContactAddress(profile, addr);
+						return newAddress ? { address: newAddress, id: addr.id } : null;
+					}),
+				)
+			).filter((addr): addr is { id: string; address: string } => addr !== null);
 
-			migratedContacts[id] = {
-				...contact,
-				addresses: migratedAddresses,
-			};
+			return [id, { ...contact, addresses: migratedAddresses }] as const;
+		});
+
+		for (const [id, migratedContact] of await Promise.all(contactPromises)) {
+			migratedContacts[id] = migratedContact;
 		}
 
 		return migratedContacts;
