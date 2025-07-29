@@ -2,7 +2,6 @@
 
 /* eslint-disable testing-library/no-unnecessary-act */
 
-import * as Mainsail from "@/app/lib/mainsail";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
@@ -10,7 +9,7 @@ import { CreateProfile } from "./CreateProfile";
 import { httpClient } from "@/app/services";
 import { StubStorage } from "@/tests/mocks";
 import * as themeUtils from "@/utils/theme";
-import { act, env, render, screen, waitFor } from "@/utils/testing-library";
+import { env, render, screen, waitFor } from "@/utils/testing-library";
 
 const profileName = "test profile";
 
@@ -29,8 +28,6 @@ const baseSettings = {
 	USE_TEST_NETWORKS: false,
 	WALLET_SELECTION_MODE: "single",
 };
-
-const BASE64_REGEX = /(?:[\d+/A-Za-z]{4})*(?:[\d+/A-Za-z]{2}==|[\d+/A-Za-z]{3}=)?/g;
 
 const nameInput = () => screen.getAllByTestId("Input")[0];
 
@@ -53,13 +50,13 @@ const renderComponent = async () => {
 
 describe("CreateProfile", () => {
 	beforeAll(() => {
-		env.reset({ coins: { Mainsail }, httpClient, storage: new StubStorage() });
+		env.reset({ httpClient, storage: new StubStorage() });
 	});
 
 	it("should render", async () => {
 		await renderComponent();
 
-		userEvent.click(screen.getByText("Back"));
+		await userEvent.click(screen.getByText("Back"));
 		expect(screen.getByTestId("CreateProfile")).toBeInTheDocument();
 	});
 
@@ -156,14 +153,16 @@ describe("CreateProfile", () => {
 	it("should store profile", async () => {
 		await renderComponent();
 
-		await userEvent.type(nameInput(), "test profile 1");
+		const user = userEvent.setup();
+
+		await user.clear(nameInput());
+		await user.paste("test profile 1");
 
 		const selectDropdown = screen.getAllByTestId("SelectDropdown__input")[0];
 
 		await userEvent.clear(selectDropdown);
 		await waitFor(() => expect(selectDropdown).not.toHaveValue());
 
-		const user = userEvent.setup();
 		await user.clear(selectDropdown);
 		await user.paste("BTC");
 
@@ -175,9 +174,7 @@ describe("CreateProfile", () => {
 
 		await waitFor(() => expect(submitButton()).toBeEnabled());
 
-		await act(async () => {
-			await userEvent.click(submitButton());
-		});
+		await userEvent.click(submitButton());
 
 		const profile = env.profiles().last();
 
@@ -251,13 +248,16 @@ describe("CreateProfile", () => {
 	it("should not be able to create new profile if name is too long", async () => {
 		await renderComponent();
 
-		await userEvent.type(nameInput(), "t");
+		const user = userEvent.setup();
+		await user.clear(nameInput());
+		await user.paste("t");
+
 		await userEvent.click(screen.getByRole("checkbox"));
 
 		await waitFor(() => expect(submitButton()).toBeEnabled());
 
 		await userEvent.clear(nameInput());
-		await userEvent.type(nameInput(), profileName.repeat(10));
+		await user.paste(profileName.repeat(5));
 
 		await waitFor(() => expect(submitButton()).toBeDisabled());
 
