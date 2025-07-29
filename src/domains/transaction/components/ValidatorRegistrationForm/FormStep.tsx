@@ -2,6 +2,7 @@ import { FormField, FormLabel } from "@/app/components/Form";
 import { Icon, ThemeIcon } from "@/app/components/Icon";
 import React, { ChangeEvent, useEffect } from "react";
 
+import { Alert } from "@/app/components/Alert";
 import { FormStepProperties } from "@/domains/transaction/pages/SendRegistration/SendRegistration.contracts";
 import { InputDefault } from "@/app/components/Input";
 import { Link } from "@/app/components/Link";
@@ -10,7 +11,6 @@ import { StepHeader } from "@/app/components/StepHeader";
 import { WalletCapabilities } from "@/domains/portfolio/lib/wallet.capabilities";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { useEnvironmentContext } from "@/app/contexts";
-import { Alert } from "@/app/components/Alert";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { useValidation } from "@/app/hooks";
@@ -101,8 +101,12 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 				<FormField name="validatorPublicKey">
 					<div className="flex flex-1 flex-row justify-between">
 						<FormLabel label={t("TRANSACTION.VALIDATOR_PUBLIC_KEY")} />
-						{/* TODO: update as part of https://app.clickup.com/t/86dx2r53v */}
-						<Link isExternal to="https://ark.dev" showExternalIcon={false} className="text-sm">
+						<Link
+							isExternal
+							to="https://docs.mainsailhq.com/mainsail/deployment/becoming-a-validator"
+							showExternalIcon={false}
+							className="text-sm"
+						>
 							<span className="flex flex-row items-center gap-2">
 								<span>
 									<span className="hidden sm:inline">

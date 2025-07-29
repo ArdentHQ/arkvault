@@ -162,7 +162,7 @@ exports[`ValidatorRegistrationForm > should render form step 1`] = `
                 class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block text-sm"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
-                href="https://ark.dev"
+                href="https://docs.mainsailhq.com/mainsail/deployment/becoming-a-validator"
                 rel="noopener noreferrer"
               >
                 <span
