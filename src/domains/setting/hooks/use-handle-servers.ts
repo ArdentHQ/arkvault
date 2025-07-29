@@ -12,7 +12,7 @@ export async function pingTransactionApi(endpoint: string, controller?: AbortCon
 
 	const body = JSON.parse(response.body());
 
-	return !!body.data.height;
+	return !!body.data.blockNumber;
 }
 
 export async function pingEvmApi(endpoint: string, controller?: AbortController): Promise<boolean> {
