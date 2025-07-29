@@ -467,10 +467,7 @@ describe("Servers Settings", () => {
 			await fillServerForm({ evmApiEndpoint: null, txApiEndpoint: null });
 
 			await expect(screen.findByTestId("Input__error")).resolves.toBeVisible();
-			expect(screen.getByTestId("Input__error")).toHaveAttribute(
-				"data-errortext",
-				"Address already exists."
-			);
+			expect(screen.getByTestId("Input__error")).toHaveAttribute("data-errortext", "Address already exists.");
 
 			profileHostsSpy.mockRestore();
 		});
