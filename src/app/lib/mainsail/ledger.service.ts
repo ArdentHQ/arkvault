@@ -87,7 +87,7 @@ export class LedgerService {
 	}
 
 	public async sign(path: string, serialized: string | Buffer): Promise<LedgerSignature> {
-		const chainId = this.#config.get("network.chainId") as number
+		const chainId = this.#config.get("network.chainId") as number;
 
 		const resolution = await this.#ethLedgerService.resolveTransaction(
 			serialized,

@@ -354,7 +354,7 @@ export class Network {
 	 * @returns {ConfigRepository}
 	 */
 	public config(): ConfigRepository {
-		return this.#config
+		return this.#config;
 	}
 
 	/**
@@ -376,8 +376,8 @@ export class Network {
 		const dataCrypto = crypto.data;
 		const { blockNumber } = status.data;
 
-		this.config().set("height", blockNumber)
-		this.config().set("crypto", dataCrypto)
+		this.config().set("height", blockNumber);
+		this.config().set("crypto", dataCrypto);
 	}
 
 	/**
@@ -393,8 +393,8 @@ export class Network {
 	}
 
 	public milestone(height?: number): { [key: string]: any } {
-		const currentHeight = this.config().get("height") as number
-		const crypto = this.config().get("crypto") as Record<string, any>
+		const currentHeight = this.config().get("height") as number;
+		const crypto = this.config().get("crypto") as Record<string, any>;
 
 		const milestones = crypto.milestones.sort((a, b) => a.height - b.height);
 		const milestone = {
@@ -414,10 +414,7 @@ export class Network {
 			height = 1;
 		}
 
-		while (
-			milestone.index < milestones.length - 1 &&
-			height >= milestones[milestone.index + 1].height
-		) {
+		while (milestone.index < milestones.length - 1 && height >= milestones[milestone.index + 1].height) {
 			milestone.index++;
 			milestone.data = milestones[milestone.index];
 		}

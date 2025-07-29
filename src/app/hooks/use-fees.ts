@@ -33,7 +33,11 @@ interface CalculateProperties {
 	type: string;
 }
 
-export function getEstimateGasParams(network: Network, formData: Record<string, any>, type: string): EstimateGasPayload {
+export function getEstimateGasParams(
+	network: Network,
+	formData: Record<string, any>,
+	type: string,
+): EstimateGasPayload {
 	const {
 		senderAddress,
 		recipientAddress,
@@ -102,14 +106,12 @@ export function getEstimateGasParams(network: Network, formData: Record<string, 
 				functionName: "registerValidator",
 			});
 
-			const value = network.milestone()["validatorRegistrationFee"] ?? 0
+			const value = network.milestone()["validatorRegistrationFee"] ?? 0;
 
 			return {
 				data,
 				to: ContractAddresses.CONSENSUS,
-				value: numberToHex(
-					BigNumber.make(value).toBigInt(),
-				),
+				value: numberToHex(BigNumber.make(value).toBigInt()),
 			};
 		},
 		validatorResignation: () => {
