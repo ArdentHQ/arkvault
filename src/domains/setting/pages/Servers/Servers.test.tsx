@@ -626,6 +626,27 @@ describe("Servers Settings", () => {
 				expect(screen.getByTestId(serverFormSaveButtonTestingId)).toBeDisabled();
 			});
 
+			it("shows an error if the EVM endpoint is unreachable", async () => {
+				server.use(requestMock(evmApiUrl, undefined, { status: 500 }));
+
+				render(<ServersSettings />, {
+					route: `/profiles/${profile.id()}/settings/servers`,
+				});
+
+				await userEvent.click(screen.getByTestId(addNewPeerButtonTestId));
+
+				await fillServerForm({});
+
+				await expect(screen.findByTestId(modalAlertTestId)).resolves.toBeVisible();
+
+				expect(screen.getByTestId("Input__error")).toHaveAttribute(
+					"data-errortext",
+					"Either failed to connect to the endpoint or it doesn't contain the expected information."
+				);
+
+				expect(screen.getByTestId(serverFormSaveButtonTestingId)).toBeDisabled();
+			});
+
 			it.each([
 				"2222-invalid-host", // Invalid URL
 				"http://127.0.0.1", // Valid IP URL without /api path
@@ -1068,6 +1089,7 @@ describe("Servers Settings", () => {
 			serverPushSpy.mockReset();
 		});
 	});
+
 	describe("with unreachable servers", () => {
 		let profileHostsSpy;
 
