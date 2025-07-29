@@ -31,9 +31,9 @@ export class ProfileImporter implements IProfileImporter {
 			await new Migrator(this.#profile, data).migrate(schemas, version);
 		}
 
-		data = this.#validator.validate(data);
-
 		data = await this.#migrator.migrate(this.#profile, data);
+
+		data = this.#validator.validate(data);
 
 		this.#profile.notifications().fill(data.notifications);
 
