@@ -32,7 +32,7 @@ export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 			...wallet,
 			data: {
 				...wallet.data,
-				ADDRESS: await this.#migrateWalletAddress(profile, wallet.data),
+				...(await this.#migrateWalletAddress(profile, wallet.data)),
 			},
 		};
 

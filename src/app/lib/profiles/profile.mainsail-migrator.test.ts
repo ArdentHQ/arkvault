@@ -126,7 +126,7 @@ describe("ProfileMainsailMigrator", () => {
 			expect(migratedContact.starred).toBe(false);
 
 			const migratedWallet = result.wallets["wallet-1"];
-			expect(migratedWallet.data.ADDRESS).toEqual({ ADDRESS: "0x03300acecf" });
+			expect(migratedWallet.data.ADDRESS).toEqual("0x03300acecf");
 		});
 
 		it("should remove contact address when API returns 404", async () => {
