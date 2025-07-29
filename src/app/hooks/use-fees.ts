@@ -9,8 +9,7 @@ import { ConsensusAbi, MultiPaymentAbi, UsernamesAbi } from "@mainsail/evm-contr
 import { ContractAddresses, UnitConverter } from "@arkecosystem/typescript-crypto";
 import { EstimateGasPayload } from "@/app/lib/mainsail/fee.contract";
 import { BigNumber } from "@/app/lib/helpers";
-import { useActiveProfile } from "./env";
-import { Network } from "../lib/mainsail/network";
+import { Network } from "@/app/lib/mainsail/network";
 interface CreateStubTransactionProperties {
 	getData: () => Record<string, any>;
 	stub: boolean;

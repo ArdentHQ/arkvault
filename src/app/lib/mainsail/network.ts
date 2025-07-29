@@ -10,7 +10,6 @@ import {
 } from "./network.models";
 import { ConfigKey, ConfigRepository } from ".";
 import { ArkClient } from "@arkecosystem/typescript-client";
-import { IMilestone } from "./contracts";
 
 export class Network {
 	/**
