@@ -641,7 +641,7 @@ describe("Servers Settings", () => {
 				expect(screen.getByTestId(serverFormSaveButtonTestingId)).toBeDisabled();
 			});
 
-			it("shows an error if the EVM endpoint is unreachable", async () => {
+			it("should show an error if the EVM endpoint is unreachable", async () => {
 				server.use(requestMock(evmApiUrl, undefined, { status: 500 }));
 
 				render(<ServersSettings />, {
