@@ -393,9 +393,9 @@ export class Network {
 		return data.network.client.token === this.config().get(ConfigKey.CurrencyTicker);
 	}
 
-	public milestone(height?: number): { [key: string]: { [key: string]: any } } {
+	public milestone(height?: number): { [key: string]: any } {
 		const currentHeight = this.config().get("height") as number
-		const crypto = this.config().get("crypto")
+		const crypto = this.config().get("crypto") as Record<string, any>
 
 		const milestones = crypto.milestones.sort((a, b) => a.height - b.height);
 		const milestone = {

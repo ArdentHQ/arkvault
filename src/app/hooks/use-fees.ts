@@ -10,6 +10,7 @@ import { ContractAddresses, UnitConverter } from "@arkecosystem/typescript-crypt
 import { EstimateGasPayload } from "@/app/lib/mainsail/fee.contract";
 import { BigNumber } from "@/app/lib/helpers";
 import { useActiveProfile } from "./env";
+import { Network } from "../lib/mainsail/network";
 interface CreateStubTransactionProperties {
 	getData: () => Record<string, any>;
 	stub: boolean;
@@ -33,7 +34,7 @@ interface CalculateProperties {
 	type: string;
 }
 
-export function getEstimateGasParams(formData: Record<string, any>, type: string): EstimateGasPayload {
+export function getEstimateGasParams(network: Network, formData: Record<string, any>, type: string): EstimateGasPayload {
 	const {
 		senderAddress,
 		recipientAddress,
@@ -102,11 +103,13 @@ export function getEstimateGasParams(formData: Record<string, any>, type: string
 				functionName: "registerValidator",
 			});
 
+			const value = network.milestone()["validatorRegistrationFee"] ?? 0
+
 			return {
 				data,
 				to: ContractAddresses.CONSENSUS,
 				value: numberToHex(
-					BigNumber.make(useActiveProfile.activeNetwork().milestone()["validatorRegistrationFee"] ?? 0).toBigInt(),
+					BigNumber.make(value).toBigInt(),
 				),
 			};
 		},
@@ -195,7 +198,7 @@ export const useFees = (profile: Contracts.IProfile) => {
 	const estimateGas = useCallback(
 		async ({ type, data: formData }: EstimateGasProperties) => {
 			const fees = new FeeService({ config: profile.activeNetwork().config(), profile });
-			return await fees.estimateGas(getEstimateGasParams(formData, type));
+			return await fees.estimateGas(getEstimateGasParams(profile.activeNetwork(), formData, type));
 		},
 		[profile],
 	);
