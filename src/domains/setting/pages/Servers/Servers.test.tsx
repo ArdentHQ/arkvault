@@ -464,9 +464,13 @@ describe("Servers Settings", () => {
 
 			await userEvent.click(screen.getByTestId(addNewPeerButtonTestId));
 
-			await fillServerForm({ evmApiEndpoint: undefined, txApiEndpoint: undefined });
+			await fillServerForm({ evmApiEndpoint: null, txApiEndpoint: null });
 
 			await expect(screen.findByTestId("Input__error")).resolves.toBeVisible();
+			expect(screen.getByTestId("Input__error")).toHaveAttribute(
+				"data-errortext",
+				"Address already exists."
+			);
 
 			profileHostsSpy.mockRestore();
 		});
