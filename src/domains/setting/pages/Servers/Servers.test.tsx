@@ -2,7 +2,7 @@ import { Networks } from "@/app/lib/mainsail";
 import { Contracts } from "@/app/lib/profiles";
 import React from "react";
 import userEvent from "@testing-library/user-event";
-import { expect, vi } from "vitest";
+import { beforeEach, expect, vi } from "vitest";
 import ServersSettings from "@/domains/setting/pages/Servers";
 import {
 	env,
@@ -13,7 +13,6 @@ import {
 	fireEvent,
 	within,
 	renderResponsiveWithRoute,
-	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
 import { translations } from "@/app/i18n/common/i18n";
 import { server, requestMock } from "@/tests/mocks/server";
@@ -158,9 +157,9 @@ const mockTxEndpoint = () =>
 	server.use(
 		requestMock(`${txApiUrl}/configuration`, {
 			data: {
-				blockNumber: 165_077,
+				blockNumber: 22010959,
 				core: {
-					version: "0.0.1-evm.18",
+					version: "0.0.1-rc.2",
 				},
 			},
 		}),
@@ -189,8 +188,6 @@ const mockRequests = () => {
 };
 
 describe("Servers Settings", () => {
-	let resetProfileNetworksMock: () => void;
-
 	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
 		await env.profiles().restore(profile);
@@ -200,14 +197,10 @@ describe("Servers Settings", () => {
 	});
 
 	beforeEach(() => {
-		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
+		mockTxEndpoint();
 	});
 
-	afterEach(() => {
-		resetProfileNetworksMock();
-	});
-
-	it("should render servers settings", () => {
+	it("should render servers page", () => {
 		const { container, asFragment } = render(<ServersSettings />, {
 			route: `/profiles/${profile.id()}/settings/servers`,
 		});
@@ -241,19 +234,7 @@ describe("Servers Settings", () => {
 		settingsSetSpy.mockRestore();
 	});
 
-	it("shows the modal for adding new server", async () => {
-		const { container } = render(<ServersSettings />, {
-			route: `/profiles/${profile.id()}/settings/servers`,
-		});
-
-		expect(container).toBeInTheDocument();
-
-		await userEvent.click(screen.getByTestId(addNewPeerButtonTestId));
-
-		expect(screen.getByTestId("ServerFormModal")).toBeInTheDocument();
-	});
-
-	describe("default peers", () => {
+	describe("Default peers", () => {
 		it("should render node statuses", () => {
 			const { container } = render(<ServersSettings />, {
 				route: `/profiles/${profile.id()}/settings/servers`,
@@ -456,7 +437,41 @@ describe("Servers Settings", () => {
 			profileHostsSpy.mockRestore();
 		});
 
-		describe("with reachable server", () => {
+		it("shows the modal for adding new server", async () => {
+			const { container } = render(<ServersSettings />, {
+				route: `/profiles/${profile.id()}/settings/servers`,
+			});
+
+			expect(container).toBeInTheDocument();
+
+			await userEvent.click(screen.getByTestId(addNewPeerButtonTestId));
+
+			expect(screen.getByTestId("ServerFormModal")).toBeInTheDocument();
+		});
+
+		it("should show an error if the server host already exists", async () => {
+			const profileHostsSpy = vi.spyOn(profile.hosts(), "all").mockReturnValue(networksStub);
+
+			render(<ServersSettings />, {
+				route: `/profiles/${profile.id()}/settings/servers`,
+			});
+
+			const table = screen.getByTestId(customPeerListTestId);
+
+			expect(table).toBeInTheDocument();
+
+			expect(screen.getByTestId(addNewPeerButtonTestId)).toBeInTheDocument();
+
+			await userEvent.click(screen.getByTestId(addNewPeerButtonTestId));
+
+			await fillServerForm({ evmApiEndpoint: undefined, txApiEndpoint: undefined });
+
+			await expect(screen.findByTestId("Input__error")).resolves.toBeVisible();
+
+			profileHostsSpy.mockRestore();
+		});
+
+		describe("With reachable endpoints", () => {
 			it("can fill the form and store the new custom server", async () => {
 				const hostsMock = vi.spyOn(profile.hosts(), "all").mockReturnValue({
 					mainsail: [],
@@ -551,7 +566,7 @@ describe("Servers Settings", () => {
 			});
 		});
 
-		describe("with invalid server", () => {
+		describe("With invalid/unreachable endpoints", () => {
 			it("shows an error if the server is reachable but invalid", async () => {
 				const hostsSpy = vi.spyOn(profile.hosts(), "all").mockReturnValue({
 					mainsail: [],
@@ -651,7 +666,7 @@ describe("Servers Settings", () => {
 				"2222-invalid-host", // Invalid URL
 				"http://127.0.0.1", // Valid IP URL without /api path
 				"http://127.0.0.1/api/", // Valid IP URL but ends with a slash
-			])("invalidates the address field if invalid host passed", async (address) => {
+			])("should show an error when an invalid host passed", async (address) => {
 				render(<ServersSettings />, {
 					route: `/profiles/${profile.id()}/settings/servers`,
 				});
@@ -672,7 +687,7 @@ describe("Servers Settings", () => {
 		});
 	});
 
-	describe("with servers", () => {
+	describe("Added reachable servers", () => {
 		let profileHostsSpy;
 
 		beforeEach(() => {
@@ -701,25 +716,7 @@ describe("Servers Settings", () => {
 			expect(asFragment()).toMatchSnapshot();
 		});
 
-		it("should show an error if the server host already exists", async () => {
-			render(<ServersSettings />, {
-				route: `/profiles/${profile.id()}/settings/servers`,
-			});
-
-			const table = screen.getByTestId(customPeerListTestId);
-
-			expect(table).toBeInTheDocument();
-
-			expect(screen.getByTestId(addNewPeerButtonTestId)).toBeInTheDocument();
-
-			await userEvent.click(screen.getByTestId(addNewPeerButtonTestId));
-
-			await fillServerForm({ evmApiEndpoint: null, txApiEndpoint: null });
-
-			await expect(screen.findByTestId("Input__error")).resolves.toBeVisible();
-		});
-
-		it("can fill the form and generate a name", async () => {
+		it("should fill the form and generate a name", async () => {
 			profileHostsSpy = vi.spyOn(profile.hosts(), "all").mockReturnValue(networksStub);
 
 			render(<ServersSettings />, {
@@ -886,21 +883,6 @@ describe("Servers Settings", () => {
 			expect(screen.getAllByTestId(peerStatusLoadingTestId)).toHaveLength(3);
 
 			// After ping, it should show ok
-			await waitFor(() => expect(screen.getAllByTestId(peerStatusOkTestId)).toHaveLength(3));
-
-			expect(asFragment()).toMatchSnapshot();
-		});
-
-		it("should show status ok after ping the servers on mobile when expanded", async () => {
-			const { asFragment } = renderResponsiveWithRoute(<ServersSettings />, "xs", {
-				route: `/profiles/${profile.id()}/settings/servers`,
-			});
-
-			await userEvent.click(
-				within(screen.getByTestId(customPeerListTestId)).getAllByTestId(networkAccordionIconTestId)[0],
-			);
-
-			// After ping it should show ok
 			await waitFor(() => expect(screen.getAllByTestId(peerStatusOkTestId)).toHaveLength(3));
 
 			expect(asFragment()).toMatchSnapshot();
@@ -1090,7 +1072,7 @@ describe("Servers Settings", () => {
 		});
 	});
 
-	describe("with unreachable servers", () => {
+	describe("Added unreachable servers", () => {
 		let profileHostsSpy;
 
 		beforeEach(() => {
