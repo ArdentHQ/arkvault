@@ -9,7 +9,7 @@ import { ConsensusAbi, MultiPaymentAbi, UsernamesAbi } from "@mainsail/evm-contr
 import { ContractAddresses, UnitConverter } from "@arkecosystem/typescript-crypto";
 import { EstimateGasPayload } from "@/app/lib/mainsail/fee.contract";
 import { BigNumber } from "@/app/lib/helpers";
-import { configManager } from "@/app/lib/mainsail";
+import { useActiveProfile } from "./env";
 interface CreateStubTransactionProperties {
 	getData: () => Record<string, any>;
 	stub: boolean;
@@ -106,7 +106,7 @@ export function getEstimateGasParams(formData: Record<string, any>, type: string
 				data,
 				to: ContractAddresses.CONSENSUS,
 				value: numberToHex(
-					BigNumber.make(configManager.getMilestone()["validatorRegistrationFee"] ?? 0).toBigInt(),
+					BigNumber.make(useActiveProfile.activeNetwork().milestone()["validatorRegistrationFee"] ?? 0).toBigInt(),
 				),
 			};
 		},

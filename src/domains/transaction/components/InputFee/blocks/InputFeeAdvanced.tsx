@@ -34,7 +34,7 @@ export const InputFeeAdvanced: React.FC<InputFeeAdvancedProperties> = ({
 		gasLimit.toString(),
 	);
 
-	const { minGasPrice, maxGasPrice, minGasLimit, maxGasLimit } = getFeeMinMax();
+	const { minGasPrice, maxGasPrice, minGasLimit, maxGasLimit } = getFeeMinMax(network);
 
 	const formField = useFormField();
 	const hasError = formField?.isInvalid;

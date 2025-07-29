@@ -370,8 +370,13 @@ export class Profile implements IProfile {
 			activeNetworkId: undefined,
 		};
 
-		if (this.#activeNetwork && this.#activeNetwork.id() === activeNetworkId) {
-			return this.#activeNetwork;
+
+		if (this.#activeNetwork) {
+			const activeNetworkIsChanged = [!!activeNetworkId, this.#activeNetwork.id() !== activeNetworkId].every(Boolean)
+
+			if (!activeNetworkIsChanged) {
+				return this.#activeNetwork;
+			}
 		}
 
 		const activeNetwork = this.networks()

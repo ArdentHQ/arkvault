@@ -82,7 +82,7 @@ export const AddRecipient = ({
 	const { network, senderAddress, recipientAddress, amount, recipientAlias, isSendAllSelected } = watch();
 	const { sendTransfer } = useValidation();
 
-	const { minGasPrice } = getFeeMinMax();
+	const { minGasPrice } = getFeeMinMax(profile.activeNetwork());
 	const fee = calculateGasFee(minGasPrice, GasLimit["transfer"].times(Math.max(recipients.length, 1)));
 
 	const ticker = network?.ticker();
@@ -280,17 +280,17 @@ export const AddRecipient = ({
 	const amountAddons =
 		!errors.amount && !errors.gasPrice && !errors.gasLimit && isSenderFilled && !wallet?.network().isTest()
 			? {
-					end: {
-						content: (
-							<Amount
-								value={convert(amount || 0)}
-								ticker={exchangeTicker}
-								data-testid="AddRecipient__currency-balance"
-								className="whitespace-no-break text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold"
-							/>
-						),
-					},
-				}
+				end: {
+					content: (
+						<Amount
+							value={convert(amount || 0)}
+							ticker={exchangeTicker}
+							data-testid="AddRecipient__currency-balance"
+							className="whitespace-no-break text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold"
+						/>
+					),
+				},
+			}
 			: undefined;
 
 	return (

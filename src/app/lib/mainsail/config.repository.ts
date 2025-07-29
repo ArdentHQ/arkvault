@@ -42,6 +42,8 @@ export class ConfigRepository {
 	public constructor(config: object) {
 		const { error, value } = ValidatorSchema.object({
 			// @TODO: ADD network field validation.
+			crypto: ValidatorSchema.object().optional(),
+			height: ValidatorSchema.number().optional(),
 			network: ValidatorSchema.object(),
 		}).validate(config);
 
@@ -58,6 +60,7 @@ export class ConfigRepository {
 
 	public get<T>(key: string, defaultValue?: T): T {
 		const value: T | undefined = get(this.#config, key, defaultValue);
+
 
 		if (value === undefined) {
 			throw new Error(`The [${key}] is an unknown configuration value.`);

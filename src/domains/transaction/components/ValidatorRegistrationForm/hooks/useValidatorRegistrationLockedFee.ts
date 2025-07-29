@@ -1,7 +1,6 @@
 import { BigNumber } from "@/app/lib/helpers";
 import { Contracts } from "@/app/lib/profiles";
 import { UnitConverter } from "@arkecosystem/typescript-crypto";
-import { configManager } from "@/app/lib/mainsail";
 import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
 
 export const useValidatorRegistrationLockedFee = ({
@@ -20,7 +19,7 @@ export const useValidatorRegistrationLockedFee = ({
 
 	const validatorRegistrationFee = BigNumber.make(
 		UnitConverter.formatUnits(
-			BigNumber.make(configManager.getMilestone()["validatorRegistrationFee"] ?? 0).toString(),
+			BigNumber.make(profile.activeNetwork().milestone()["validatorRegistrationFee"] ?? 0).toString(),
 			"ARK",
 		),
 	).toNumber();
