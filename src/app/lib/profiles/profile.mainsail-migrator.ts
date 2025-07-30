@@ -56,14 +56,15 @@ export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 		const migratedContacts: IProfileData["contacts"] = {};
 
 		const contactPromises = Object.entries(contacts).map(async ([id, contact]) => {
-			const migratedAddresses = (
-				await Promise.all(
-					contact.addresses.map(async (addr) => {
-						const newAddress = await this.#migrateContactAddress(profile, addr);
-						return newAddress ? { address: newAddress, id: addr.id } : null;
-					}),
-				)
-			).filter((addr): addr is { id: string; address: string } => addr !== null);
+			const addressResults = await Promise.all(
+				contact.addresses.map(async (addr) => {
+					const newAddress = await this.#migrateContactAddress(profile, addr);
+					return newAddress ? { address: newAddress, id: addr.id } : null;
+				}),
+			);
+			const migratedAddresses = addressResults.filter(
+				(addr): addr is { id: string; address: string } => addr !== null,
+			);
 
 			return [id, { ...contact, addresses: migratedAddresses }] as const;
 		});
@@ -79,12 +80,14 @@ export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 		profile: IProfile,
 		addr: IProfileData["contacts"][string]["addresses"][number],
 	): Promise<string | undefined> {
+		if (!["ark.mainnet", "ark.devnet"].includes(addr.network)) {
+			return undefined;
+		}
+
 		const apiUrl =
 			addr.network === "ark.mainnet"
-				? "https://ark-live.arkvault.io/api"
-				: addr.network === "ark.devnet"
-					? "https://ark-test.arkvault.io/api"
-					: null;
+				? (import.meta.env.VITE_ARK_LEGACY_MAINNET_API_URL ?? "https://ark-live.arkvault.io/api")
+				: (import.meta.env.VITE_ARK_LEGACY_DEVNET_API_URL ?? "https://ark-test.arkvault.io/api");
 
 		if (!apiUrl) {
 			return undefined;
