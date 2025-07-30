@@ -73,8 +73,7 @@ describe("ProfileMainsailMigrator", () => {
 
 			const result = await migrator.migrate(profile, data);
 
-			expect(result.wallets["wallet-1"].data.ADDRESS).toEqual({ ADDRESS: expect.any(String) });
-			expect(result.wallets["wallet-1"].data.ADDRESS.ADDRESS).toMatch(/^0x[a-fA-F0-9]{40}$/);
+			expect(result.wallets["wallet-1"].data.ADDRESS).toEqual("0xA471E0a5a70211c7929f7d0b2079C424642E2924");
 		});
 
 		it("should handle multiple wallets migration", async () => {
@@ -111,10 +110,8 @@ describe("ProfileMainsailMigrator", () => {
 
 			const result = await migrator.migrate(profile, data);
 
-			expect(result.wallets["wallet-1"].data.ADDRESS).toEqual({ ADDRESS: expect.any(String) });
-			expect(result.wallets["wallet-2"].data.ADDRESS).toEqual({ ADDRESS: expect.any(String) });
-			expect(result.wallets["wallet-1"].data.ADDRESS.ADDRESS).toMatch(/^0x[a-fA-F0-9]{40}$/);
-			expect(result.wallets["wallet-2"].data.ADDRESS.ADDRESS).toMatch(/^0x[a-fA-F0-9]{40}$/);
+			expect(result.wallets["wallet-1"].data.ADDRESS).toEqual("0xA471E0a5a70211c7929f7d0b2079C424642E2924");
+			expect(result.wallets["wallet-2"].data.ADDRESS).toEqual("0xaba5cA9A2b6f6EcB5368EAc9aEF2833C1fB4d428");
 		});
 
 		it("should preserve other wallet data during migration", async () => {
@@ -155,7 +152,7 @@ describe("ProfileMainsailMigrator", () => {
 			const result = await migrator.migrate(profile, data);
 
 			const migratedWallet = result.wallets["wallet-1"];
-			expect(migratedWallet.data.ADDRESS).toEqual({ ADDRESS: expect.any(String) });
+			expect(migratedWallet.data.ADDRESS).toEqual("0xA471E0a5a70211c7929f7d0b2079C424642E2924");
 			expect(migratedWallet.data.PUBLIC_KEY).toBe(originalWalletData.PUBLIC_KEY);
 			expect(migratedWallet.data.BALANCE).toEqual(originalWalletData.BALANCE);
 			expect(migratedWallet.data.VOTES).toEqual(originalWalletData.VOTES);
@@ -237,8 +234,7 @@ describe("ProfileMainsailMigrator", () => {
 
 			const result = await migrator.migrate(profile, data);
 
-			expect(result.wallets["wallet-1"].data.ADDRESS).toEqual({ ADDRESS: expect.any(String) });
-			expect(result.wallets["wallet-1"].data.ADDRESS.ADDRESS).toMatch(/^0x[a-fA-F0-9]{40}$/);
+			expect(result.wallets["wallet-1"].data.ADDRESS).toEqual("0xA471E0a5a70211c7929f7d0b2079C424642E2924");
 		});
 
 		it("should return true for ark.devnet network", async () => {
@@ -266,8 +262,7 @@ describe("ProfileMainsailMigrator", () => {
 
 			const result = await migrator.migrate(profile, data);
 
-			expect(result.wallets["wallet-1"].data.ADDRESS).toEqual({ ADDRESS: expect.any(String) });
-			expect(result.wallets["wallet-1"].data.ADDRESS.ADDRESS).toMatch(/^0x[a-fA-F0-9]{40}$/);
+			expect(result.wallets["wallet-1"].data.ADDRESS).toEqual("0xaba5cA9A2b6f6EcB5368EAc9aEF2833C1fB4d428");
 		});
 	});
 
@@ -299,8 +294,7 @@ describe("ProfileMainsailMigrator", () => {
 
 			const result = await migrator.migrate(profile, data);
 
-			expect(result.wallets["wallet-1"].data.ADDRESS).toEqual({ ADDRESS: expect.any(String) });
-			expect(result.wallets["wallet-1"].data.ADDRESS.ADDRESS).toMatch(/^0x[a-fA-F0-9]{40}$/);
+			expect(result.wallets["wallet-1"].data.ADDRESS).toEqual("0xA471E0a5a70211c7929f7d0b2079C424642E2924");
 		});
 
 		it("should preserve wallet ID and settings during migration", async () => {
@@ -337,7 +331,7 @@ describe("ProfileMainsailMigrator", () => {
 			const migratedWallet = result.wallets["wallet-1"];
 			expect(migratedWallet.id).toBe("wallet-1");
 			expect(migratedWallet.settings).toEqual(originalSettings);
-			expect(migratedWallet.data.ADDRESS).toEqual({ ADDRESS: expect.any(String) });
+			expect(migratedWallet.data.ADDRESS).toEqual("0xA471E0a5a70211c7929f7d0b2079C424642E2924");
 		});
 	});
 });
