@@ -831,7 +831,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
         </div>
       </div>
       <div
-        class="w-full first:pt-8 last:pb-8 py-0"
+        class="w-full first:pt-8 last:pb-8 mt-4 py-0 sm:mt-0"
       >
         <div
           class="mx-auto px-6 md:px-10 lg:container"
@@ -2431,7 +2431,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
         </div>
       </section>
       <div
-        class="w-full first:pt-8 last:pb-8 py-0"
+        class="w-full first:pt-8 last:pb-8 mt-4 py-0 sm:mt-0"
       >
         <div
           class="mx-auto px-6 md:px-10 lg:container"
@@ -3942,7 +3942,7 @@ exports[`Contacts > should render with contacts 1`] = `
         </div>
       </div>
       <div
-        class="w-full first:pt-8 last:pb-8 py-0"
+        class="w-full first:pt-8 last:pb-8 mt-4 py-0 sm:mt-0"
       >
         <div
           class="mx-auto px-6 md:px-10 lg:container"
@@ -5646,7 +5646,7 @@ exports[`Contacts > should render without contacts in lg 1`] = `
         </div>
       </div>
       <div
-        class="w-full first:pt-8 last:pb-8 py-0"
+        class="w-full first:pt-8 last:pb-8 mt-4 py-0 sm:mt-0"
       >
         <div
           class="mx-auto px-6 md:px-10 lg:container"
@@ -6808,7 +6808,7 @@ exports[`Contacts > should render without contacts in md 1`] = `
         </div>
       </div>
       <div
-        class="w-full first:pt-8 last:pb-8 py-0"
+        class="w-full first:pt-8 last:pb-8 mt-4 py-0 sm:mt-0"
       >
         <div
           class="mx-auto px-6 md:px-10 lg:container"
@@ -7866,7 +7866,7 @@ exports[`Contacts > should render without contacts in sm 1`] = `
         </div>
       </section>
       <div
-        class="w-full first:pt-8 last:pb-8 py-0"
+        class="w-full first:pt-8 last:pb-8 mt-4 py-0 sm:mt-0"
       >
         <div
           class="mx-auto px-6 md:px-10 lg:container"
@@ -8925,7 +8925,7 @@ exports[`Contacts > should render without contacts in xl 1`] = `
         </div>
       </div>
       <div
-        class="w-full first:pt-8 last:pb-8 py-0"
+        class="w-full first:pt-8 last:pb-8 mt-4 py-0 sm:mt-0"
       >
         <div
           class="mx-auto px-6 md:px-10 lg:container"
@@ -9983,7 +9983,7 @@ exports[`Contacts > should render without contacts in xs 1`] = `
         </div>
       </section>
       <div
-        class="w-full first:pt-8 last:pb-8 py-0"
+        class="w-full first:pt-8 last:pb-8 mt-4 py-0 sm:mt-0"
       >
         <div
           class="mx-auto px-6 md:px-10 lg:container"

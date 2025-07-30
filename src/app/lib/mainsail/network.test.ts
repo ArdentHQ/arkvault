@@ -4,6 +4,7 @@ import { configManager } from "./config.manager";
 import networkManifest from "./networks/mainsail.devnet";
 import { manifest as manifest } from "./manifest";
 import { ConfigRepository } from "./config.repository";
+import { server, requestMock } from "@/tests/mocks/server";
 
 describe("Network", () => {
 	let networkInstance: Network;
@@ -157,6 +158,31 @@ describe("Network", () => {
 
 	it("should return network meta data", () => {
 		expect(networkInstance.meta()).toEqual(networkManifest.meta);
+	});
+
+	it("should return false for usesMemo if not defined", () => {
+		expect(networkInstance.usesMemo()).toBe(false);
+	});
+
+	it("should return true for usesMemo if transactions.memo is true", () => {
+		const networkWithMemo = new Network(manifest, { ...networkManifest, transactions: { memo: true } });
+		expect(networkWithMemo.usesMemo()).toBe(true);
+	});
+
+	it("should evaluateUrl", async () => {
+		server.use(
+			requestMock("https://test1.com/node/configuration/crypto", {
+				data: {
+					network: {
+						client: {
+							token: "ARK",
+						},
+					},
+				},
+			}),
+		);
+		const result = await networkInstance.evaluateUrl("https://test1.com");
+		expect(result).toBe(true);
 	});
 
 	it("should return empty object for meta if not defined", () => {
