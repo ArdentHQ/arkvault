@@ -1,5 +1,6 @@
 import { IProfile, IProfileData, IProfileMainsailMigrator } from "./contracts.js";
 import { HttpClient } from "@/app/lib/mainsail/http-client.js";
+import { Avatar } from "./helpers/avatar.js";
 
 export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 	readonly #http: HttpClient = new HttpClient(10_000);
@@ -8,6 +9,7 @@ export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 		if (this.#requiresMigration(data)) {
 			data.wallets = await this.#migrateWallets(profile, data.wallets);
 			data.contacts = await this.#migrateContacts(profile, data.contacts);
+			data.settings = await this.#migrateSettings(profile, data.settings, data.wallets);
 		}
 
 		return data;
@@ -190,6 +192,78 @@ export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 		const contacts = Object.values(data.contacts);
 		const firstContact = contacts?.[0];
 		return firstContact?.addresses?.[0]?.network?.startsWith("ark.") || false;
+	}
+
+	async #migrateSettings(
+		profile: IProfile,
+		settings: IProfileData["settings"],
+		wallets: IProfileData["wallets"],
+	): Promise<IProfileData["settings"]> {
+		const migratedSettings: IProfileData["settings"] = {};
+
+		// Paso 2: Mantener configuraciones que son iguales
+		const settingsToKeep = [
+			"AUTOMATIC_SIGN_OUT_PERIOD",
+			"BIP39_LOCALE",
+			"DO_NOT_SHOW_FEE_WARNING",
+			"FALLBACK_TO_DEFAULT_NODES",
+			"EXCHANGE_CURRENCY",
+			"LOCALE",
+			"MARKET_PROVIDER",
+			"NAME",
+			"THEME",
+			"TIME_FORMAT",
+			"USE_NETWORK_WALLET_NAMES",
+			"USE_TEST_NETWORKS",
+		];
+
+		// Copiar configuraciones que se mantienen igual
+		for (const settingKey of settingsToKeep) {
+			migratedSettings[settingKey] = settings[settingKey];
+		}
+
+		// Paso 3: Migrar avatar
+		if (settings["AVATAR"]) {
+			const avatar = settings["AVATAR"];
+			if (avatar.startsWith("data:image")) {
+				migratedSettings["AVATAR"] = avatar;
+			} else {
+				const userName = settings["NAME"] || profile.name();
+				migratedSettings["AVATAR"] = Avatar.make(userName);
+			}
+		}
+
+		// Paso 4: Migrar DASHBOARD_CONFIGURATION
+		this.#migrateDashboardConfiguration(migratedSettings, wallets);
+
+		return migratedSettings;
+	}
+
+	#migrateDashboardConfiguration(migratedSettings: IProfileData["settings"], wallets: IProfileData["wallets"]): void {
+		// Obtener todas las direcciones de wallets migradas
+		const walletAddresses = Object.values(wallets).map((wallet) => wallet.data.ADDRESS);
+
+		migratedSettings["WALLET_SELECTION_MODE"] = "multiple";
+
+		if (walletAddresses.length === 0) {
+			migratedSettings["DASHBOARD_CONFIGURATION"] = {
+				addressPanelSettings: {
+					multiSelectedAddresses: [],
+					singleSelectedAddress: [],
+				},
+				addressViewPreference: "multiple",
+			};
+
+			return;
+		}
+
+		migratedSettings["DASHBOARD_CONFIGURATION"] = {
+			addressPanelSettings: {
+				multiSelectedAddresses: walletAddresses,
+				singleSelectedAddress: [walletAddresses[0]],
+			},
+			addressViewPreference: "multiple",
+		};
 	}
 
 	#generateDeterministicId(originalId: string, index: number): string {
