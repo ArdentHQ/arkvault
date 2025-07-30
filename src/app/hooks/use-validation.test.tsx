@@ -5,7 +5,6 @@ import React from "react";
 import { env, getMainsailProfileId } from "@/utils/testing-library";
 import { renderHook } from "@testing-library/react";
 import { useValidation } from "./use-validation";
-import { vi } from "vitest";
 
 const getValuesMock = () => ({
 	gasLimit: BigNumber.make(21_000),
