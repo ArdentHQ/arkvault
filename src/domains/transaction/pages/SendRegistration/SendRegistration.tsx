@@ -103,8 +103,10 @@ export const SendRegistration = () => {
 		register("suppressWarning");
 		register("isLoading");
 
-		register("lockedFee", validatorRegistration.lockedFee(activeWallet, getValues));
-	}, [register, activeWallet, common, fees, validatorRegistrationFee, validatorRegistration]);
+		if (registrationType === "validatorRegistration") {
+			register("lockedFee", validatorRegistration.lockedFee(activeWallet, getValues));
+		}
+	}, [register, activeWallet, common, fees, validatorRegistrationFee, validatorRegistration, registrationType]);
 
 	useEffect(() => {
 		trigger("lockedFee");
