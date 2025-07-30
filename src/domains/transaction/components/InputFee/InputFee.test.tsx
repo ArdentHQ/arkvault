@@ -1,4 +1,4 @@
-import { configManager, Networks } from "@/app/lib/mainsail";
+import { Networks } from "@/app/lib/mainsail";
 import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
 import React, { useState } from "react";
@@ -345,7 +345,6 @@ describe("InputFee", () => {
 
 			const inputElement: HTMLInputElement = screen.getByTestId("Input_GasPrice");
 
-			inputElement.select();
 			await userEvent.clear(inputElement);
 
 			expect(inputElement).toHaveValue("");
