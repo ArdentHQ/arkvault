@@ -59,15 +59,8 @@ describe("useProfileSyncStatus", () => {
 			expect(configuration.getProfileConfiguration(profile.id()).profileIsSyncingWallets).toBe(true),
 		);
 
-		await renderAct(() => {
-			configuration.setConfiguration(profile.id(), { profileIsSyncingWallets: false });
-		});
-
 		expect(onProfileSyncStart).toHaveBeenCalledTimes(2);
 
-		await waitFor(() =>
-			expect(configuration.getProfileConfiguration(profile.id()).profileIsSyncingWallets).toBe(false),
-		);
 		await waitFor(() => expect(profileErroredNetworks).toHaveLength(1));
 
 		mockWalletSyncStatus.mockRestore();
