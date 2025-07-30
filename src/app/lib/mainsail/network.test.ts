@@ -1,6 +1,5 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 import { Network } from "./network";
-import { configManager } from "./config.manager";
 import networkManifest from "./networks/mainsail.devnet";
 import { manifest as manifest } from "./manifest";
 import { ConfigRepository } from "./config.repository";
@@ -235,7 +234,7 @@ describe("Network", () => {
 
 	it("should sync network data", async () => {
 		await networkInstance.sync();
-		expect(configManager.getHeight()).toBe(34369);
+		expect(networkInstance.config().get("height")).toBe(34369);
 	});
 
 	it("should throw an error if no full host is found during sync", async () => {
