@@ -1,5 +1,6 @@
-import { describe, it, expect, beforeEach } from "vitest";
+import { describe, it, expect, beforeEach, vi } from "vitest";
 import { LinkService } from "./link.service";
+import * as HostsHelper from "./helpers/hosts";
 
 class ConfigRepository {
 	host(): string {
@@ -33,5 +34,20 @@ describe("LinkService", () => {
 
 	it("should correctly handle explorerUrl ending with a trailing slash", () => {
 		expect(linkService.block("123")).toBe("http://explorer.example.com/blocks/123");
+	});
+
+	it("should include query parameters when randomHost returns query", () => {
+		const mockHostWithQuery = {
+			host: "http://explorer.example.com",
+			query: { param1: "value1", param2: "value2" },
+		};
+		const spy = vi.spyOn(HostsHelper, "randomHost").mockReturnValue(mockHostWithQuery);
+
+		const result = linkService.block("123");
+
+		expect(result).toBe("http://explorer.example.com/blocks/123?param1=value1&param2=value2");
+		expect(spy).toHaveBeenCalled();
+
+		spy.mockRestore();
 	});
 });
