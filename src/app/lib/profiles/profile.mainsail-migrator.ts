@@ -1,6 +1,5 @@
 import { IProfile, IProfileData, IProfileMainsailMigrator } from "./contracts.js";
 import { HttpClient } from "@/app/lib/mainsail/http-client.js";
-import { UUID } from "@ardenthq/arkvault-crypto";
 
 export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 	readonly #http: HttpClient = new HttpClient(10_000);
@@ -55,7 +54,6 @@ export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 
 	async #migrateContacts(profile: IProfile, contacts: IProfileData["contacts"]): Promise<IProfileData["contacts"]> {
 		const migratedContacts: IProfileData["contacts"] = {};
-		const contactNameCounts = new Map<string, number>();
 
 		const contactPromises = Object.entries(contacts).map(async ([originalId, contact]) => {
 			const addressResults = await Promise.all(
@@ -80,14 +78,11 @@ export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 				const address = migratedAddresses[index];
 				const originalName = contact.name;
 				let finalName = originalName;
-				let nameCount = contactNameCounts.get(originalName) || 0;
 
-				if (nameCount > 0) {
-					nameCount++;
-					finalName = `${originalName} (${nameCount})`;
+				// For additional contacts from the same original contact, add index + 1
+				if (index > 0) {
+					finalName = `${originalName} (${index + 1})`;
 				}
-
-				contactNameCounts.set(originalName, nameCount + 1);
 
 				// Use original ID for first contact, generate deterministic ID for additional contacts
 				let contactId: string;
@@ -115,11 +110,24 @@ export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 
 		const allResults = await Promise.all(contactPromises);
 
+		// Handle duplicate names across different original contacts
+		const finalNameCounts = new Map<string, number>();
+
 		for (const result of allResults) {
 			if (result !== null) {
 				for (const { id, contact } of result) {
 					// Ensure the contact's id property matches the dictionary key
 					contact.id = id;
+
+					// Handle duplicate names across different contacts
+					const contactName = contact.name;
+					const nameCount = finalNameCounts.get(contactName) || 0;
+
+					if (nameCount > 0) {
+						contact.name = `${contactName} (${nameCount + 1})`;
+					}
+
+					finalNameCounts.set(contactName, nameCount + 1);
 					migratedContacts[id] = contact;
 				}
 			}

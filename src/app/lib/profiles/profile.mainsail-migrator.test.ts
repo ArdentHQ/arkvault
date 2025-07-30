@@ -1,21 +1,69 @@
 /* eslint-disable sonarjs/no-duplicate-string */
-import { describe, expect, it, vi, beforeEach, afterEach } from "vitest";
+import { describe, expect, it, vi, beforeEach, afterEach, beforeAll, afterAll } from "vitest";
 import { ProfileMainsailMigrator } from "./profile.mainsail-migrator";
 import { IProfile, IProfileData } from "./contracts.js";
 import { env } from "@/utils/testing-library";
+import { http, HttpResponse } from "msw";
+import { server } from "@/tests/mocks/server";
 
 describe("ProfileMainsailMigrator", () => {
 	let migrator: ProfileMainsailMigrator;
 	let profile: IProfile;
 
-	beforeEach(async () => {
-		migrator = new ProfileMainsailMigrator();
-		profile = await env.profiles().create("test profile");
+	beforeAll(() => {
+		server.listen();
 	});
 
 	afterEach(() => {
+		server.resetHandlers();
 		env.profiles().forget(profile.id());
 		vi.restoreAllMocks();
+	});
+
+	afterAll(() => {
+		server.close();
+	});
+
+	beforeEach(async () => {
+		server.use(
+			http.get("https://ark-live.arkvault.io/api/wallets/:address", ({ params }) => {
+				const address = params.address as string;
+
+				if (address === "AdViMQwcwquCP8fbY9eczXzTX7yUs2uMw4") {
+					return HttpResponse.json({
+						data: {
+							publicKey: "03300acecfd7cfc5987ad8cc70bf51c5e93749f76103a02eaf4a1d143729b86a00",
+						},
+					});
+				}
+
+				if (address === "DFAWxzGKC3nvqQ5CqRXTqAi8593Jq1gPkt") {
+					return HttpResponse.json({
+						data: {
+							publicKey: "03a124a54dd6d0e16035f52656200f71818f349ebfcfb8de571a6a3f4167f55cc4",
+						},
+					});
+				}
+
+				return new HttpResponse(null, { status: 404 });
+			}),
+			http.get("https://ark-test.arkvault.io/api/wallets/:address", ({ params }) => {
+				const address = params.address as string;
+
+				if (address === "DFAWxzGKC3nvqQ5CqRXTqAi8593Jq1gPkt") {
+					return HttpResponse.json({
+						data: {
+							publicKey: "03a124a54dd6d0e16035f52656200f71818f349ebfcfb8de571a6a3f4167f55cc4",
+						},
+					});
+				}
+
+				return new HttpResponse(null, { status: 404 });
+			}),
+		);
+
+		migrator = new ProfileMainsailMigrator();
+		profile = await env.profiles().create("test profile");
 	});
 
 	describe("migrate", () => {
@@ -332,6 +380,310 @@ describe("ProfileMainsailMigrator", () => {
 			expect(migratedWallet.id).toBe("wallet-1");
 			expect(migratedWallet.settings).toEqual(originalSettings);
 			expect(migratedWallet.data.ADDRESS).toEqual("0xA471E0a5a70211c7929f7d0b2079C424642E2924");
+		});
+	});
+
+	describe("contact migration", () => {
+		it("should migrate contact addresses successfully", async () => {
+			const data: IProfileData = {
+				contacts: {
+					"contact-1": {
+						addresses: [
+							{
+								address: "AdViMQwcwquCP8fbY9eczXzTX7yUs2uMw4",
+								id: "addr-1",
+								network: "ark.mainnet",
+							},
+						],
+						id: "contact-1",
+						name: "Alfonso",
+						starred: false,
+					},
+				},
+				data: {},
+				exchangeTransactions: {},
+				hosts: {},
+				id: "test-profile",
+				networks: {},
+				notifications: {},
+				settings: {},
+				wallets: {},
+			};
+
+			const result = await migrator.migrate(profile, data);
+
+			// The address should be migrated to a new format (starts with 0x)
+			expect(result.contacts["contact-1"].addresses[0].address).toMatch(/^0x[a-fA-F0-9]{40}$/);
+			expect(result.contacts["contact-1"].name).toBe("Alfonso");
+		});
+
+		it("should handle duplicate contact names by adding numbers", async () => {
+			const data: IProfileData = {
+				contacts: {
+					"contact-1": {
+						addresses: [
+							{
+								address: "AdViMQwcwquCP8fbY9eczXzTX7yUs2uMw4",
+								id: "addr-1",
+								network: "ark.mainnet",
+							},
+						],
+						id: "contact-1",
+						name: "Alfonso",
+						starred: false,
+					},
+					"contact-2": {
+						addresses: [
+							{
+								address: "DFAWxzGKC3nvqQ5CqRXTqAi8593Jq1gPkt",
+								id: "addr-2",
+								network: "ark.devnet",
+							},
+						],
+						id: "contact-2",
+						name: "Alfonso",
+						starred: true,
+					},
+				},
+				data: {},
+				exchangeTransactions: {},
+				hosts: {},
+				id: "test-profile",
+				networks: {},
+				notifications: {},
+				settings: {},
+				wallets: {},
+			};
+
+			const result = await migrator.migrate(profile, data);
+
+			expect(result.contacts["contact-1"].name).toBe("Alfonso");
+			expect(result.contacts["contact-2"].name).toBe("Alfonso (2)");
+		});
+
+		it("should remove contacts that have no addresses after migration", async () => {
+			const data: IProfileData = {
+				contacts: {
+					"contact-1": {
+						addresses: [
+							{
+								address: "AdViMQwcwquCP8fbY9eczXzTX7yUs2uMw4",
+								id: "addr-1",
+								network: "ark.mainnet",
+							},
+						],
+						id: "contact-1",
+						name: "Valid Contact",
+						starred: false,
+					},
+					"contact-2": {
+						addresses: [
+							{
+								address: "invalid-address",
+								id: "addr-2",
+								network: "ark.mainnet",
+							},
+						],
+						id: "contact-2",
+						name: "Invalid Contact",
+						starred: true,
+					},
+				},
+				data: {},
+				exchangeTransactions: {},
+				hosts: {},
+				id: "test-profile",
+				networks: {},
+				notifications: {},
+				settings: {},
+				wallets: {},
+			};
+
+			const result = await migrator.migrate(profile, data);
+
+			expect(result.contacts["contact-1"]).toBeDefined();
+			expect(result.contacts["contact-2"]).toBeUndefined();
+			expect(Object.keys(result.contacts)).toHaveLength(1);
+		});
+
+		it("should preserve contact properties during migration", async () => {
+			const data: IProfileData = {
+				contacts: {
+					"contact-1": {
+						addresses: [
+							{
+								address: "AdViMQwcwquCP8fbY9eczXzTX7yUs2uMw4",
+								id: "addr-1",
+								network: "ark.mainnet",
+							},
+						],
+						id: "contact-1",
+						name: "Test Contact",
+						starred: true,
+					},
+				},
+				data: {},
+				exchangeTransactions: {},
+				hosts: {},
+				id: "test-profile",
+				networks: {},
+				notifications: {},
+				settings: {},
+				wallets: {},
+			};
+
+			const result = await migrator.migrate(profile, data);
+
+			const migratedContact = result.contacts["contact-1"];
+			expect(migratedContact.id).toBe("contact-1");
+			expect(migratedContact.name).toBe("Test Contact");
+			expect(migratedContact.starred).toBe(true);
+			expect(migratedContact.addresses).toHaveLength(1);
+			expect(migratedContact.addresses[0].id).toBe("addr-1");
+		});
+
+		it("should reuse original UUID for first contact and generate deterministic UUIDs for additional contacts", async () => {
+			const originalId = "903b2b66-059e-4f03-92e3-f9c685f388b0";
+			const data: IProfileData = {
+				contacts: {
+					[originalId]: {
+						addresses: [
+							{
+								address: "AdViMQwcwquCP8fbY9eczXzTX7yUs2uMw4",
+								id: "addr-1",
+								network: "ark.mainnet",
+							},
+							{
+								address: "DFAWxzGKC3nvqQ5CqRXTqAi8593Jq1gPkt",
+								id: "addr-2",
+								network: "ark.devnet",
+							},
+						],
+						id: originalId,
+						name: "Contact1",
+						starred: false,
+					},
+				},
+				data: {},
+				exchangeTransactions: {},
+				hosts: {},
+				id: "test-profile",
+				networks: {},
+				notifications: {},
+				settings: {},
+				wallets: {},
+			};
+
+			const result = await migrator.migrate(profile, data);
+
+			// First contact should reuse original UUID
+			expect(result.contacts[originalId]).toBeDefined();
+			expect(result.contacts[originalId].id).toBe(originalId);
+			expect(result.contacts[originalId].name).toBe("Contact1");
+
+			// Second contact should have deterministic UUID
+			const secondContactId = "903b2b66-059e-4f03-92e3-f9c685f388b1";
+			expect(result.contacts[secondContactId]).toBeDefined();
+			expect(result.contacts[secondContactId].id).toBe(secondContactId);
+			expect(result.contacts[secondContactId].name).toBe("Contact1 (2)");
+
+			// Should have exactly 2 contacts
+			expect(Object.keys(result.contacts)).toHaveLength(2);
+		});
+
+		it("should generate consistent deterministic UUIDs for multiple additional contacts", async () => {
+			const originalId = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
+			const data: IProfileData = {
+				contacts: {
+					[originalId]: {
+						addresses: [
+							{
+								address: "AdViMQwcwquCP8fbY9eczXzTX7yUs2uMw4",
+								id: "addr-1",
+								network: "ark.mainnet",
+							},
+							{
+								address: "DFAWxzGKC3nvqQ5CqRXTqAi8593Jq1gPkt",
+								id: "addr-2",
+								network: "ark.devnet",
+							},
+							{
+								address: "AdViMQwcwquCP8fbY9eczXzTX7yUs2uMw4",
+								id: "addr-3",
+								network: "ark.mainnet",
+							},
+						],
+						id: originalId,
+						name: "MultiAddress Contact",
+						starred: true,
+					},
+				},
+				data: {},
+				exchangeTransactions: {},
+				hosts: {},
+				id: "test-profile",
+				networks: {},
+				notifications: {},
+				settings: {},
+				wallets: {},
+			};
+
+			const result = await migrator.migrate(profile, data);
+
+			// First contact should reuse original UUID
+			expect(result.contacts[originalId]).toBeDefined();
+			expect(result.contacts[originalId].id).toBe(originalId);
+			expect(result.contacts[originalId].name).toBe("MultiAddress Contact");
+
+			// Second contact should have deterministic UUID
+			const secondContactId = "a1b2c3d4-e5f6-7890-abcd-ef1234567891";
+			expect(result.contacts[secondContactId]).toBeDefined();
+			expect(result.contacts[secondContactId].id).toBe(secondContactId);
+			expect(result.contacts[secondContactId].name).toBe("MultiAddress Contact (2)");
+
+			// Third contact should have deterministic UUID
+			const thirdContactId = "a1b2c3d4-e5f6-7890-abcd-ef1234567892";
+			expect(result.contacts[thirdContactId]).toBeDefined();
+			expect(result.contacts[thirdContactId].id).toBe(thirdContactId);
+			expect(result.contacts[thirdContactId].name).toBe("MultiAddress Contact (3)");
+
+			// Should have exactly 3 contacts
+			expect(Object.keys(result.contacts)).toHaveLength(3);
+		});
+
+		it("should ensure contact id property matches dictionary key", async () => {
+			const originalId = "test-uuid-1234-5678-9abc-def012345678";
+			const data: IProfileData = {
+				contacts: {
+					[originalId]: {
+						addresses: [
+							{
+								address: "AdViMQwcwquCP8fbY9eczXzTX7yUs2uMw4",
+								id: "addr-1",
+								network: "ark.mainnet",
+							},
+						],
+						id: originalId,
+						name: "Test Contact",
+						starred: false,
+					},
+				},
+				data: {},
+				exchangeTransactions: {},
+				hosts: {},
+				id: "test-profile",
+				networks: {},
+				notifications: {},
+				settings: {},
+				wallets: {},
+			};
+
+			const result = await migrator.migrate(profile, data);
+
+			const migratedContact = result.contacts[originalId];
+			expect(migratedContact).toBeDefined();
+			expect(migratedContact.id).toBe(originalId);
+			expect(migratedContact.id).toBe(Object.keys(result.contacts)[0]);
 		});
 	});
 });
