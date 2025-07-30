@@ -201,7 +201,7 @@ export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 	): Promise<IProfileData["settings"]> {
 		const migratedSettings: IProfileData["settings"] = {};
 
-		// Paso 2: Mantener configuraciones que son iguales
+		// Keep settings that remain the same
 		const settingsToKeep = [
 			"AUTOMATIC_SIGN_OUT_PERIOD",
 			"BIP39_LOCALE",
@@ -217,12 +217,11 @@ export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 			"USE_TEST_NETWORKS",
 		];
 
-		// Copiar configuraciones que se mantienen igual
 		for (const settingKey of settingsToKeep) {
 			migratedSettings[settingKey] = settings[settingKey];
 		}
 
-		// Paso 3: Migrar avatar
+		// Migrate avatar
 		if (settings["AVATAR"]) {
 			const avatar = settings["AVATAR"];
 			if (avatar.startsWith("data:image")) {
@@ -233,14 +232,12 @@ export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 			}
 		}
 
-		// Paso 4: Migrar DASHBOARD_CONFIGURATION
 		this.#migrateDashboardConfiguration(migratedSettings, wallets);
 
 		return migratedSettings;
 	}
 
 	#migrateDashboardConfiguration(migratedSettings: IProfileData["settings"], wallets: IProfileData["wallets"]): void {
-		// Obtener todas las direcciones de wallets migradas
 		const walletAddresses = Object.values(wallets).map((wallet) => wallet.data.ADDRESS);
 
 		migratedSettings["WALLET_SELECTION_MODE"] = "multiple";
