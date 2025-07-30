@@ -53,7 +53,7 @@ describe("InputFee", () => {
 			profile,
 		};
 
-		// eslint-disable-next-line react/display-name
+
 		Wrapper = () => {
 			const [gasPrice, setGasPrice] = useState(defaultProps.gasPrice);
 			const [viewType, setViewType] = useState(defaultProps.viewType);
@@ -345,6 +345,7 @@ describe("InputFee", () => {
 
 			const inputElement: HTMLInputElement = screen.getByTestId("Input_GasPrice");
 
+			inputElement.select();
 			await userEvent.clear(inputElement);
 
 			expect(inputElement).toHaveValue("");
@@ -377,8 +378,14 @@ describe("InputFee", () => {
 });
 
 describe("getFeeMinMax", () => {
+	let profile: Contracts.IProfile;
+
+	beforeEach(() => {
+		profile = env.profiles().first();
+	});
+
 	it("should return min/max values for gasPrice/gasLimit", () => {
-		const { minGasPrice, maxGasPrice, minGasLimit, maxGasLimit } = getFeeMinMax();
+		const { minGasPrice, maxGasPrice, minGasLimit, maxGasLimit } = getFeeMinMax(profile.activeNetwork());
 
 		expect(minGasPrice.toString()).toBe("5");
 		expect(maxGasPrice.toString()).toBe("10000");
@@ -387,11 +394,11 @@ describe("getFeeMinMax", () => {
 	});
 
 	it("should handle when config manager doesn't include min/max values", () => {
-		const configSpy = vi.spyOn(configManager, "getMilestone").mockReturnValue({
+		const configSpy = vi.spyOn(profile.activeNetwork(), "milestone").mockReturnValue({
 			gas: {},
 		});
 
-		const { minGasPrice, maxGasPrice, minGasLimit, maxGasLimit } = getFeeMinMax();
+		const { minGasPrice, maxGasPrice, minGasLimit, maxGasLimit } = getFeeMinMax(profile.activeNetwork());
 
 		expect(minGasPrice.toString()).toBe("0");
 		expect(maxGasPrice.toString()).toBe("0");
