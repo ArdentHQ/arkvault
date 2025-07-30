@@ -1,4 +1,3 @@
-
 import { Networks } from "@/app/lib/mainsail";
 import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
@@ -225,8 +224,8 @@ describe("AddRecipient", () => {
 			network: "mainsail.devnet",
 		});
 
-		emptyWallet.network().config().set("height", 1)
-		emptyWallet.network().config().set("crypto", CryptoConfigurationFixture.data)
+		emptyWallet.network().config().set("height", 1);
+		emptyWallet.network().config().set("crypto", CryptoConfigurationFixture.data);
 		vi.spyOn(emptyWallet, "balance").mockReturnValue(0);
 		vi.spyOn(emptyWallet.network(), "isTest").mockReturnValue(false);
 

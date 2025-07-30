@@ -41,7 +41,7 @@ describe("useFees", () => {
 		env.reset({
 			coins: { Mainsail },
 			httpClient,
-			ledgerTransportFactory: async () => { },
+			ledgerTransportFactory: async () => {},
 			storage: new StubStorage(),
 		});
 
@@ -75,7 +75,7 @@ describe("useFees", () => {
 		env.reset({
 			coins: { Mainsail },
 			httpClient,
-			ledgerTransportFactory: async () => { },
+			ledgerTransportFactory: async () => {},
 			storage: new StubStorage(),
 		});
 
@@ -115,7 +115,7 @@ describe("useFees", () => {
 		env.reset({
 			coins: { Mainsail },
 			httpClient,
-			ledgerTransportFactory: async () => { },
+			ledgerTransportFactory: async () => {},
 			storage: new StubStorage(),
 		});
 
@@ -173,7 +173,7 @@ describe("useFees", () => {
 		env.reset({
 			coins: { Mainsail },
 			httpClient,
-			ledgerTransportFactory: async () => { },
+			ledgerTransportFactory: async () => {},
 			storage: new StubStorage(),
 		});
 
@@ -230,7 +230,7 @@ describe("useFees", () => {
 		env.reset({
 			coins: { Mainsail },
 			httpClient,
-			ledgerTransportFactory: async () => { },
+			ledgerTransportFactory: async () => {},
 			storage: new StubStorage(),
 		});
 
@@ -285,7 +285,7 @@ describe("useFees", () => {
 		env.reset({
 			coins: { Mainsail },
 			httpClient,
-			ledgerTransportFactory: async () => { },
+			ledgerTransportFactory: async () => {},
 			storage: new StubStorage(),
 		});
 

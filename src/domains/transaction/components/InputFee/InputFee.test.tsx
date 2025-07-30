@@ -53,7 +53,6 @@ describe("InputFee", () => {
 			profile,
 		};
 
-
 		Wrapper = () => {
 			const [gasPrice, setGasPrice] = useState(defaultProps.gasPrice);
 			const [viewType, setViewType] = useState(defaultProps.viewType);
