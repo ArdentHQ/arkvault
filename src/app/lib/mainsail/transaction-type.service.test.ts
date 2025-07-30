@@ -1,0 +1,96 @@
+import { describe, it, expect } from "vitest";
+import { TransactionTypeService, trimHexPrefix, TransactionTypes } from "./transaction-type.service";
+import { Exceptions } from "./index";
+
+describe("trimHexPrefix", () => {
+	it("should remove 0x prefix", () => {
+		expect(trimHexPrefix("0x1234")).toBe("1234");
+	});
+	it("should return string as is if no 0x", () => {
+		expect(trimHexPrefix("abcd")).toBe("abcd");
+	});
+});
+
+describe("TransactionTypeService", () => {
+	it("isTransfer should return true for empty data", () => {
+		expect(TransactionTypeService.isTransfer({ data: "" })).toBe(true);
+	});
+
+	it("isTransfer should return false for non-empty data", () => {
+		expect(TransactionTypeService.isTransfer({ data: "0x1234" })).toBe(false);
+	});
+
+	it("isSecondSignature should throw NotImplemented", () => {
+		expect(() => TransactionTypeService.isSecondSignature({ data: "" })).toThrow(Exceptions.NotImplemented);
+	});
+
+	it("isVoteCombination should return false", () => {
+		expect(TransactionTypeService.isVoteCombination({ data: "" })).toBe(false);
+	});
+
+	it("isUpdateValidator should check identifier", () => {
+		const data = { data: TransactionTypes.UpdateValidator };
+		expect(TransactionTypeService.isUpdateValidator(data)).toBe(true);
+	});
+
+	it("isUpdateValidator should return false if not present", () => {
+		const data = { data: "0xnotfound" };
+		expect(TransactionTypeService.isUpdateValidator(data)).toBe(false);
+	});
+
+	it("getIdentifierName should return null if no match", () => {
+		const data = { data: "0xnotfound" };
+		expect(TransactionTypeService.isUpdateValidator(data)).toBe(false);
+		expect(TransactionTypeService.getIdentifierName(data)).toBeNull();
+	});
+
+	it("isValidatorRegistration should return false if identifier not present", () => {
+		const data = { data: "0xnotfound" };
+		expect(TransactionTypeService.isValidatorRegistration(data)).toBe(false);
+	});
+
+	it("isVote should return true if identifier present", () => {
+		const data = { data: "0x6dd7d8ea" };
+		expect(TransactionTypeService.isVote(data)).toBe(true);
+	});
+
+	it("isUnvote should return true if identifier present", () => {
+		const data = { data: "0x3174b689" };
+		expect(TransactionTypeService.isUnvote(data)).toBe(true);
+	});
+
+	it("isMultiPayment should return true if identifier present", () => {
+		const data = { data: "0x084ce708" };
+		expect(TransactionTypeService.isMultiPayment(data)).toBe(true);
+	});
+
+	it("isUsernameRegistration should return true if identifier present", () => {
+		const data = { data: "0x36a94134" };
+		expect(TransactionTypeService.isUsernameRegistration(data)).toBe(true);
+	});
+
+	it("isUsernameResignation should return true if identifier present", () => {
+		const data = { data: "0xebed6dab" };
+		expect(TransactionTypeService.isUsernameResignation(data)).toBe(true);
+	});
+
+	it("isValidatorResignation should return true if identifier present", () => {
+		const data = { data: "0xb85f5da2" };
+		expect(TransactionTypeService.isValidatorResignation(data)).toBe(true);
+	});
+
+	it("isValidatorRegistration should return true if identifier present", () => {
+		const data = { data: "0x602a9eee" };
+		expect(TransactionTypeService.isValidatorRegistration(data)).toBe(true);
+	});
+
+	it("isValidatorRegistration should return false if identifier not present", () => {
+		const data = { data: "0xnotfound" };
+		expect(TransactionTypeService.isValidatorRegistration(data)).toBe(false);
+	});
+
+	it("getIdentifierName should return key if match", () => {
+		const data = { data: "0x6dd7d8ea" };
+		expect(TransactionTypeService.getIdentifierName(data)).toBe("vote");
+	});
+});

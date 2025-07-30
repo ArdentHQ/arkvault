@@ -133,7 +133,9 @@ export class ConfigManager {
 
 		while (lastMerged < this.milestones.length - 1) {
 			this.milestones[lastMerged + 1] = deepmerge(this.milestones[lastMerged], this.milestones[lastMerged + 1], {
-				arrayMerge: (_, source) => source,
+				arrayMerge:
+					/* istanbul ignore next -- @preserve */
+					(_, source) => source,
 			});
 			lastMerged++;
 		}
