@@ -1,5 +1,6 @@
 import { IProfile, IProfileData, IProfileMainsailMigrator } from "./contracts.js";
 import { HttpClient } from "@/app/lib/mainsail/http-client.js";
+import { UUID } from "@ardenthq/arkvault-crypto";
 
 export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 	readonly #http: HttpClient = new HttpClient(10_000);
@@ -54,8 +55,9 @@ export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 
 	async #migrateContacts(profile: IProfile, contacts: IProfileData["contacts"]): Promise<IProfileData["contacts"]> {
 		const migratedContacts: IProfileData["contacts"] = {};
+		const contactNameCounts = new Map<string, number>();
 
-		const contactPromises = Object.entries(contacts).map(async ([id, contact]) => {
+		const contactPromises = Object.entries(contacts).map(async ([originalId, contact]) => {
 			const addressResults = await Promise.all(
 				contact.addresses.map(async (addr) => {
 					const newAddress = await this.#migrateContactAddress(profile, addr);
@@ -66,11 +68,61 @@ export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 				(addr): addr is { id: string; address: string } => addr !== null,
 			);
 
-			return [id, { ...contact, addresses: migratedAddresses }] as const;
+			// Skip contacts with no valid addresses after migration
+			if (migratedAddresses.length === 0) {
+				return null;
+			}
+
+			// Create separate contact for each unique address
+			const results: Array<{ id: string; contact: any }> = [];
+
+			for (let index = 0; index < migratedAddresses.length; index++) {
+				const address = migratedAddresses[index];
+				const originalName = contact.name;
+				let finalName = originalName;
+				let nameCount = contactNameCounts.get(originalName) || 0;
+
+				if (nameCount > 0) {
+					nameCount++;
+					finalName = `${originalName} (${nameCount})`;
+				}
+
+				contactNameCounts.set(originalName, nameCount + 1);
+
+				// Use original ID for first contact, generate deterministic ID for additional contacts
+				let contactId: string;
+				if (index === 0) {
+					contactId = originalId;
+				} else {
+					// Generate deterministic UUID by modifying the original ID
+					// The reason for using a deterministic UUID is that it seems to
+					// duplicate the contact in the frontend
+					contactId = this.#generateDeterministicId(originalId, index);
+				}
+
+				const newContact = {
+					...contact,
+					addresses: [address],
+					id: contactId,
+					name: finalName,
+				};
+
+				results.push({ contact: newContact, id: contactId });
+			}
+
+			return results;
 		});
 
-		for (const [id, migratedContact] of await Promise.all(contactPromises)) {
-			migratedContacts[id] = migratedContact;
+		const allResults = await Promise.all(contactPromises);
+
+		for (const result of allResults) {
+			if (result !== null) {
+				for (const { id, contact } of result) {
+					// Ensure the contact's id property matches the dictionary key
+					contact.id = id;
+					migratedContacts[id] = contact;
+				}
+			}
 		}
 
 		return migratedContacts;
@@ -130,5 +182,14 @@ export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 		const contacts = Object.values(data.contacts);
 		const firstContact = contacts?.[0];
 		return firstContact?.addresses?.[0]?.network?.startsWith("ark.") || false;
+	}
+
+	#generateDeterministicId(originalId: string, index: number): string {
+		// Modify the last character of the UUID to create a deterministic variant
+		const lastChar = originalId.charAt(originalId.length - 1);
+		const newLastChar = String.fromCharCode(
+			((lastChar.charCodeAt(0) + index) % 16) + (lastChar.charCodeAt(0) >= 97 ? 97 : 48),
+		);
+		return originalId.slice(0, -1) + newLastChar;
 	}
 }
