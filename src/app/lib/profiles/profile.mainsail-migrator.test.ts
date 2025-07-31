@@ -728,5 +728,55 @@ describe("ProfileMainsailMigrator", () => {
 			expect(result.contacts["contact-1"]).toBeUndefined();
 			expect(Object.keys(result.contacts)).toHaveLength(0);
 		});
+
+		it("should handle contact address migration when API returns non-200 status", async () => {
+			server.use(
+				http.get(
+					"https://ark-live.arkvault.io/api/wallets/:address",
+					() => new HttpResponse(null, { status: 404 }),
+				),
+			);
+
+			const data: IProfileData = {
+				contacts: {
+					"contact-1": {
+						addresses: [
+							{
+								address: "AdViMQwcwquCP8fbY9eczXzTX7yUs2uMw4",
+								id: "addr-1",
+								network: "ark.mainnet",
+							},
+						],
+						id: "contact-1",
+						name: "Test Contact",
+						starred: false,
+					},
+				},
+				data: {},
+				exchangeTransactions: {},
+				hosts: {},
+				id: "test-profile",
+				networks: {},
+				notifications: {},
+				settings: {},
+				wallets: {
+					"wallet-1": {
+						data: {
+							ADDRESS: "AdViMQwcwquCP8fbY9eczXzTX7yUs2uMw4",
+							NETWORK: "ark.mainnet",
+							PUBLIC_KEY: "03300acecfd7cfc5987ad8cc70bf51c5e93749f76103a02eaf4a1d143729b86a00",
+						},
+						id: "wallet-1",
+						settings: {},
+					},
+				},
+			};
+
+			const result = await migrator.migrate(profile, data);
+
+			// Contact should be removed because address migration failed due to non-200 status
+			expect(result.contacts["contact-1"]).toBeUndefined();
+			expect(Object.keys(result.contacts)).toHaveLength(0);
+		});
 	});
 });
