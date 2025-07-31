@@ -3,7 +3,7 @@ import { Contracts } from "@/app/lib/profiles";
 import React from "react";
 import userEvent from "@testing-library/user-event";
 import { AddRecipientItem } from "./AddRecipientItem";
-import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, renderResponsive, screen } from "@/utils/testing-library";
 
 const deleteButton = () => screen.getByTestId("AddRecipientItem--deleteButton-1");
 
@@ -28,6 +28,23 @@ describe("Add Recipient item", () => {
 			alias: wallet.alias(),
 			amount: 1,
 		};
+	});
+
+	it.each(["sm", "lg"] as const)("should render with size %s", (size) => {
+		const { asFragment } = renderResponsive(
+			<AddRecipientItem
+				recipient={recipient}
+				ticker="DARK"
+				exchangeTicker="USD"
+				showExchangeAmount={false}
+				index={1}
+				onDelete={() => {}}
+				profile={profile}
+			/>,
+			size,
+		);
+
+		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render without exchange amount", () => {

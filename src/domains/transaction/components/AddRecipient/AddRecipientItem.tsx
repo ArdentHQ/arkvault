@@ -36,7 +36,7 @@ export const AddRecipientItem: React.FC<{
 	if (isXs) {
 		return (
 			<MultiEntryItem
-				dataTestId="AddRecipientItem"
+				dataTestId="AddRecipientItem--mobile"
 				titleSlot={
 					<div className="flex w-full items-center justify-between">
 						<div className="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 text-sm leading-[17px] font-semibold whitespace-nowrap">
