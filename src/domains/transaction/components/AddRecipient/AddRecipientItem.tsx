@@ -33,7 +33,6 @@ export const AddRecipientItem: React.FC<{
 	const { isXs } = useBreakpoint();
 	const { convert } = useExchangeRate({ exchangeTicker, profile, ticker });
 
-
 	if (isXs) {
 		return (
 			<MultiEntryItem
@@ -171,11 +170,16 @@ const RecipientRow = ({
 							})}
 						/>
 					</div>
-					<div className="flex w-1/2 min-w-0 self-end flex-col items-end space-y-2">
-						{showExchangeAmount && <div data-testid="AddRecipientItem--exchangeAmount">
-								<Amount ticker={exchangeTicker} value={convertedAmount} className="text-sm leading-[17px]" />
+					<div className="flex w-1/2 min-w-0 flex-col items-end space-y-2 self-end">
+						{showExchangeAmount && (
+							<div data-testid="AddRecipientItem--exchangeAmount">
+								<Amount
+									ticker={exchangeTicker}
+									value={convertedAmount}
+									className="text-sm leading-[17px]"
+								/>
 							</div>
-						}
+						)}
 
 						<Amount
 							ticker={ticker}
