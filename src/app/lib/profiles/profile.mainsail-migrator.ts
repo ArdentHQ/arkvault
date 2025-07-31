@@ -151,10 +151,6 @@ export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 				? (import.meta.env.VITE_ARK_LEGACY_MAINNET_API_URL ?? "https://ark-live.arkvault.io/api")
 				: (import.meta.env.VITE_ARK_LEGACY_DEVNET_API_URL ?? "https://ark-test.arkvault.io/api");
 
-		if (!apiUrl) {
-			return undefined;
-		}
-
 		try {
 			const response = await this.#http.get(`${apiUrl}/wallets/${addr.address}`);
 
