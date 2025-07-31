@@ -30,10 +30,9 @@ export const AddRecipientItem: React.FC<{
 	profile,
 }) => {
 	const { t } = useTranslation();
-	const { isSmAndAbove } = useBreakpoint();
+	const { isXs } = useBreakpoint();
 	const { convert } = useExchangeRate({ exchangeTicker, profile, ticker });
 
-	const { isXs } = useBreakpoint();
 
 	if (isXs) {
 		return (
@@ -48,24 +47,16 @@ export const AddRecipientItem: React.FC<{
 							onClick={() => onDelete(index)}
 							data-testid="AddRecipientItem--deleteButton_mobile"
 							size="icon"
-							className="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-50 p-0 sm:hidden"
+							className="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-50 p-0"
 							variant="transparent"
 						>
-							<Icon name="Trash" size={isSmAndAbove ? "lg" : "md"} />
+							<Icon name="Trash" size="md" />
 						</Button>
 					</div>
 				}
 				bodySlot={
 					<div>
-						<div className="mt-1 hidden leading-5 sm:block">
-							<Address
-								address={address}
-								walletName={alias}
-								addressClass="leading-5 text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200"
-								walletNameClass="leading-5"
-							/>
-						</div>
-						<div className="space-y-4 sm:hidden">
+						<div className="space-y-4">
 							<InfoDetail
 								label="Address"
 								body={
@@ -94,15 +85,7 @@ export const AddRecipientItem: React.FC<{
 					<div className="flex items-center gap-3">
 						<div className="flex flex-col items-end space-y-2">
 							<div className="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 leading-[17px] font-semibold whitespace-nowrap">
-								{showExchangeAmount ? (
-									<span data-testid="AddRecipientItem--exchangeAmount" className="hidden sm:inline">
-										<Amount
-											ticker={exchangeTicker}
-											value={convert(amount)}
-											className="text-sm leading-[17px]"
-										/>
-									</span>
-								) : (
+								{!showExchangeAmount && (
 									<span className="text-sm leading-[17px]">{t("COMMON.AMOUNT")}</span>
 								)}
 							</div>
@@ -112,14 +95,6 @@ export const AddRecipientItem: React.FC<{
 								className="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 leading-5 font-semibold"
 							/>
 						</div>
-						<Button
-							variant="danger"
-							onClick={() => onDelete(index)}
-							data-testid="AddRecipientItem--deleteButton"
-							className="h-11 w-11 p-2.5"
-						>
-							<Icon name="Trash" />
-						</Button>
 					</div>
 				}
 			/>
@@ -136,6 +111,7 @@ export const AddRecipientItem: React.FC<{
 			ticker={ticker}
 			exchangeTicker={exchangeTicker}
 			convertedAmount={convert(amount)}
+			showExchangeAmount={showExchangeAmount}
 		/>
 	);
 };
@@ -149,6 +125,7 @@ const RecipientRow = ({
 	alias,
 	exchangeTicker,
 	convertedAmount,
+	showExchangeAmount,
 }: {
 	index: number;
 	onDelete: (index: number) => void;
@@ -158,18 +135,19 @@ const RecipientRow = ({
 	ticker: string;
 	exchangeTicker: string;
 	convertedAmount: number;
+	showExchangeAmount: boolean;
 }) => {
 	const { t } = useTranslation();
 
 	return (
 		<div
-			data-testid="RecipientRow"
+			data-testid="AddRecipientItem"
 			className="group border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 hover:bg-theme-navy-100 dark:hover:bg-theme-dark-700 dim-hover:bg-theme-dim-700 cursor-pointer items-center rounded-lg border transition-all"
 		>
 			<div className="flex items-center px-4 py-3 duration-150">
 				<Button
 					onClick={() => onDelete(index)}
-					data-testid={`MultiPayRecipient--delete-${index}`}
+					data-testid={`AddRecipientItem--deleteButton-${index}`}
 					size="icon"
 					className="text-theme-secondary-700 dark:text-theme-secondary-500 hover:bg-theme-danger-400 dim:text-theme-dim-200 dim-hover:text-white p-1 hover:text-white dark:hover:text-white"
 					variant="transparent"
@@ -193,8 +171,11 @@ const RecipientRow = ({
 							})}
 						/>
 					</div>
-					<div className="flex w-1/2 min-w-0 flex-col items-end space-y-2">
-						<Amount ticker={exchangeTicker} value={convertedAmount} className="text-sm leading-[17px]" />
+					<div className="flex w-1/2 min-w-0 self-end flex-col items-end space-y-2">
+						{showExchangeAmount && <div data-testid="AddRecipientItem--exchangeAmount">
+								<Amount ticker={exchangeTicker} value={convertedAmount} className="text-sm leading-[17px]" />
+							</div>
+						}
 
 						<Amount
 							ticker={ticker}

@@ -5,7 +5,7 @@ import userEvent from "@testing-library/user-event";
 import { AddRecipientItem } from "./AddRecipientItem";
 import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
 
-const deleteButton = () => screen.getByTestId("AddRecipientItem--deleteButton");
+const deleteButton = () => screen.getByTestId("AddRecipientItem--deleteButton-1");
 
 describe("Add Recipient item", () => {
 	let profile: Contracts.IProfile;
@@ -84,12 +84,6 @@ describe("Add Recipient item", () => {
 		);
 
 		await userEvent.click(deleteButton());
-
-		expect(onDelete).toHaveBeenCalledWith(1);
-
-		onDelete.mockReset();
-
-		await userEvent.click(screen.getByTestId("AddRecipientItem--deleteButton_mobile"));
 
 		expect(onDelete).toHaveBeenCalledWith(1);
 	});
