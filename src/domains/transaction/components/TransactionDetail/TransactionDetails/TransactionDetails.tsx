@@ -76,7 +76,7 @@ export const TransactionDetails = ({
 					)}
 
 					{!transaction.blockHash() && (
-						<p className="text-theme-secondary-500 dim:text-theme-dim-200 font-semibold text-sm leading-[17px] sm:text-base sm:leading-5">
+						<p className="text-theme-secondary-500 dim:text-theme-dim-200 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5">
 							{t("COMMON.NOT_AVAILABLE")}
 						</p>
 					)}
