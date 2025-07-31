@@ -72,7 +72,7 @@ describe("Dashboard", () => {
 		);
 
 		await waitFor(() => {
-			expect(screen.getAllByTestId("WalletVote__button")).toHaveLength(2)
+			expect(screen.getAllByTestId("WalletVote__button")).toHaveLength(2);
 		});
 
 		expect(asFragment()).toMatchSnapshot();
