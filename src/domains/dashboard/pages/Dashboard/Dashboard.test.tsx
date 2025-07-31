@@ -184,7 +184,7 @@ describe("Dashboard", () => {
 			expect(screen.getAllByTestId("WalletVote__button")).toHaveLength(2);
 		});
 
-		await userEvent.click(screen.getByTestId("WalletVote__button")[0]);
+		await userEvent.click(screen.getAllByTestId("WalletVote__button")[0]);
 
 		await waitFor(() => {
 			expect(router.state.location.pathname).toBe(`/profiles/${profile.id()}/wallets/${wallet.id()}/votes`);
