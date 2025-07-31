@@ -778,5 +778,105 @@ describe("ProfileMainsailMigrator", () => {
 			expect(result.contacts["contact-1"]).toBeUndefined();
 			expect(Object.keys(result.contacts)).toHaveLength(0);
 		});
+
+		it("should handle contact address migration when API response has no publicKey", async () => {
+			server.use(
+				http.get("https://ark-live.arkvault.io/api/wallets/:address", () =>
+					HttpResponse.json({
+						data: {
+							// No publicKey in response
+						},
+					}),
+				),
+			);
+
+			const data: IProfileData = {
+				contacts: {
+					"contact-1": {
+						addresses: [
+							{
+								address: "AdViMQwcwquCP8fbY9eczXzTX7yUs2uMw4",
+								id: "addr-1",
+								network: "ark.mainnet",
+							},
+						],
+						id: "contact-1",
+						name: "Test Contact",
+						starred: false,
+					},
+				},
+				data: {},
+				exchangeTransactions: {},
+				hosts: {},
+				id: "test-profile",
+				networks: {},
+				notifications: {},
+				settings: {},
+				wallets: {
+					"wallet-1": {
+						data: {
+							ADDRESS: "AdViMQwcwquCP8fbY9eczXzTX7yUs2uMw4",
+							NETWORK: "ark.mainnet",
+							PUBLIC_KEY: "03300acecfd7cfc5987ad8cc70bf51c5e93749f76103a02eaf4a1d143729b86a00",
+						},
+						id: "wallet-1",
+						settings: {},
+					},
+				},
+			};
+
+			const result = await migrator.migrate(profile, data);
+
+			// Contact should be removed because address migration failed due to missing publicKey
+			expect(result.contacts["contact-1"]).toBeUndefined();
+			expect(Object.keys(result.contacts)).toHaveLength(0);
+		});
+
+		it("should throw error when contact address migration fails with non-404 error", async () => {
+			server.use(
+				http.get("https://ark-live.arkvault.io/api/wallets/:address", () => {
+					throw new Error("Network error 500");
+				}),
+			);
+
+			const data: IProfileData = {
+				contacts: {
+					"contact-1": {
+						addresses: [
+							{
+								address: "AdViMQwcwquCP8fbY9eczXzTX7yUs2uMw4",
+								id: "addr-1",
+								network: "ark.mainnet",
+							},
+						],
+						id: "contact-1",
+						name: "Test Contact",
+						starred: false,
+					},
+				},
+				data: {},
+				exchangeTransactions: {},
+				hosts: {},
+				id: "test-profile",
+				networks: {},
+				notifications: {},
+				settings: {},
+				wallets: {
+					"wallet-1": {
+						data: {
+							ADDRESS: "AdViMQwcwquCP8fbY9eczXzTX7yUs2uMw4",
+							NETWORK: "ark.mainnet",
+							PUBLIC_KEY: "03300acecfd7cfc5987ad8cc70bf51c5e93749f76103a02eaf4a1d143729b86a00",
+						},
+						id: "wallet-1",
+						settings: {},
+					},
+				},
+			};
+
+			await expect(migrator.migrate(profile, data)).rejects.toThrow(
+				"Failed to fetch public key for address AdViMQwcwquCP8fbY9eczXzTX7yUs2uMw4: HTTP request failed with status 500",
+			);
+		});
 	});
 });
