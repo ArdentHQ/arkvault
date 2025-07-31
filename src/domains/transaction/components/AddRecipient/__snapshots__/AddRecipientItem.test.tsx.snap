@@ -80,7 +80,7 @@ exports[`Add Recipient item > should render with exchange amount 1`] = `
           </div>
         </div>
         <div
-          class="flex w-1/2 min-w-0 self-end flex-col items-end space-y-2"
+          class="flex w-1/2 min-w-0 flex-col items-end space-y-2 self-end"
         >
           <div
             data-testid="AddRecipientItem--exchangeAmount"
@@ -185,7 +185,7 @@ exports[`Add Recipient item > should render without exchange amount 1`] = `
           </div>
         </div>
         <div
-          class="flex w-1/2 min-w-0 self-end flex-col items-end space-y-2"
+          class="flex w-1/2 min-w-0 flex-col items-end space-y-2 self-end"
         >
           <span
             class="whitespace-nowrap group-hover:text-theme-primary-900 dark:group-hover:text-theme-dark-200 dim:group-hover:text-theme-dim-50 leading-5"
