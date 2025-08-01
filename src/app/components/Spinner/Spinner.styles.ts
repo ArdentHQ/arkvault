@@ -1,6 +1,6 @@
 import { Color, Size, Theme } from "@/types";
 
-const baseStyle = `animate-spin rounded-full border-[5px] shrink-0`;
+const baseStyle = `animate-spin rounded-full border-[3px] shrink-0`;
 
 const getColor = (color: Color | "warning-alt", theme?: Theme) => {
 	const baseColors: Record<Color | "warning-alt", string> = {
