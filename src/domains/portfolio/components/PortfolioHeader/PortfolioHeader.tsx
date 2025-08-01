@@ -218,7 +218,7 @@ export const PortfolioHeader = ({
 											<span className="lg:hidden">
 												<TruncateMiddle text={wallet.address()} maxChars={16} />
 											</span>
-											<span className="hidden lg:block">
+											<span className="hidden lg:block min-w-[26.375rem]">
 												<Address address={wallet.address()} />
 											</span>
 										</span>
