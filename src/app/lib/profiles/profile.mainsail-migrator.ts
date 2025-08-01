@@ -259,10 +259,7 @@ export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 		const lastChar = originalId.charAt(originalId.length - 1);
 		const newLastChar = String.fromCharCode(
 			((lastChar.charCodeAt(0) + index) % 16) +
-				(lastChar.charCodeAt(0) >= 97
-					? /* istanbul ignore next -- @preserve */
-						97
-					: 48),
+				(lastChar.charCodeAt(0) >= 97 ? /* istanbul ignore next -- @preserve */ 97 : 48),
 		);
 		return originalId.slice(0, -1) + newLastChar;
 	}
