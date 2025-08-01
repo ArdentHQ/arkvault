@@ -496,7 +496,7 @@ exports[`AuthenticationStep (message) > should show ledger waiting app screen 1`
         data-testid="LedgerWaitingApp-loading_message"
       >
         <div
-          class="animate-spin border-[5px] shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-l-theme-warning-900 dark:border-l-theme-warning-600 dim:border-l-theme-warning-600 rounded-full"
+          class="animate-spin shrink-0 w-5 h-5 border-[3px] border-theme-warning-200 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-l-theme-warning-900 dark:border-l-theme-warning-600 dim:border-l-theme-warning-600 rounded-full"
         />
         <hr
           class="bg-theme-warning-200 dark:bg-theme-secondary-800 h-5 w-px border-transparent"
@@ -554,7 +554,7 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
         data-testid="LedgerWaitingDevice-loading_message"
       >
         <div
-          class="animate-spin border-[5px] shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-l-theme-warning-900 dark:border-l-theme-warning-600 dim:border-l-theme-warning-600 rounded-full"
+          class="animate-spin shrink-0 w-5 h-5 border-[3px] border-theme-warning-200 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-l-theme-warning-900 dark:border-l-theme-warning-600 dim:border-l-theme-warning-600 rounded-full"
         />
         <hr
           class="bg-theme-warning-200 dark:bg-theme-secondary-800 h-5 w-px border-transparent"
@@ -612,7 +612,7 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
         data-testid="LedgerConfirmation-loading_message"
       >
         <div
-          class="animate-spin rounded-full border-[5px] shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-l-theme-warning-900 dark:border-l-theme-warning-600 dim:border-l-theme-warning-600"
+          class="animate-spin rounded-full shrink-0 w-5 h-5 border-[3px] border-theme-warning-200 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-l-theme-warning-900 dark:border-l-theme-warning-600 dim:border-l-theme-warning-600"
         />
         <div
           class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle text-theme-warning-200 dark:text-theme-secondary-800"
@@ -669,7 +669,7 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
         data-testid="LedgerConfirmation-loading_message"
       >
         <div
-          class="animate-spin rounded-full border-[5px] shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-l-theme-warning-900 dark:border-l-theme-warning-600 dim:border-l-theme-warning-600"
+          class="animate-spin rounded-full shrink-0 w-5 h-5 border-[3px] border-theme-warning-200 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-l-theme-warning-900 dark:border-l-theme-warning-600 dim:border-l-theme-warning-600"
         />
         <div
           class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle text-theme-warning-200 dark:text-theme-secondary-800"
@@ -726,7 +726,7 @@ exports[`AuthenticationStep (message) > should show only ledger confirmation 1`]
         data-testid="LedgerConfirmation-loading_message"
       >
         <div
-          class="animate-spin rounded-full border-[5px] shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-l-theme-warning-900 dark:border-l-theme-warning-600 dim:border-l-theme-warning-600"
+          class="animate-spin rounded-full shrink-0 w-5 h-5 border-[3px] border-theme-warning-200 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-l-theme-warning-900 dark:border-l-theme-warning-600 dim:border-l-theme-warning-600"
         />
         <div
           class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle text-theme-warning-200 dark:text-theme-secondary-800"
@@ -841,7 +841,7 @@ exports[`AuthenticationStep (message) > should specify ledger supported model 1`
         data-testid="LedgerWaitingDevice-loading_message"
       >
         <div
-          class="animate-spin border-[5px] shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-l-theme-warning-900 dark:border-l-theme-warning-600 dim:border-l-theme-warning-600 rounded-full"
+          class="animate-spin shrink-0 w-5 h-5 border-[3px] border-theme-warning-200 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-l-theme-warning-900 dark:border-l-theme-warning-600 dim:border-l-theme-warning-600 rounded-full"
         />
         <hr
           class="bg-theme-warning-200 dark:bg-theme-secondary-800 h-5 w-px border-transparent"
@@ -1459,7 +1459,7 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting app scree
         class="inline-flex w-full items-center justify-center space-x-3"
       >
         <div
-          class="animate-spin rounded-full border-[5px] shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black dim:border-theme-dim-700 border-l-theme-primary-600 dark:border-l-theme-primary-600 dim:border-l-theme-dim-navy-600"
+          class="animate-spin rounded-full shrink-0 w-8 h-8 border-[4px] border-theme-secondary-200 dark:border-black dim:border-theme-dim-700 border-l-theme-primary-600 dark:border-l-theme-primary-600 dim:border-l-theme-dim-navy-600"
         />
         <span
           class="text-theme-secondary-text animate-pulse font-semibold"
@@ -1619,7 +1619,7 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
         class="inline-flex w-full items-center justify-center space-x-3"
       >
         <div
-          class="animate-spin rounded-full border-[5px] shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black dim:border-theme-dim-700 border-l-theme-primary-600 dark:border-l-theme-primary-600 dim:border-l-theme-dim-navy-600"
+          class="animate-spin rounded-full shrink-0 w-8 h-8 border-[4px] border-theme-secondary-200 dark:border-black dim:border-theme-dim-700 border-l-theme-primary-600 dark:border-l-theme-primary-600 dim:border-l-theme-dim-navy-600"
         />
         <span
           class="text-theme-secondary-text animate-pulse font-semibold"
@@ -1674,7 +1674,7 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
         data-testid="LedgerConfirmation-loading_message"
       >
         <div
-          class="animate-spin rounded-full border-[5px] shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-l-theme-warning-900 dark:border-l-theme-warning-600 dim:border-l-theme-warning-600"
+          class="animate-spin rounded-full shrink-0 w-5 h-5 border-[3px] border-theme-warning-200 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-l-theme-warning-900 dark:border-l-theme-warning-600 dim:border-l-theme-warning-600"
         />
         <div
           class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle text-theme-warning-200 dark:text-theme-secondary-800"
@@ -1731,7 +1731,7 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
         data-testid="LedgerConfirmation-loading_message"
       >
         <div
-          class="animate-spin rounded-full border-[5px] shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-l-theme-warning-900 dark:border-l-theme-warning-600 dim:border-l-theme-warning-600"
+          class="animate-spin rounded-full shrink-0 w-5 h-5 border-[3px] border-theme-warning-200 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-l-theme-warning-900 dark:border-l-theme-warning-600 dim:border-l-theme-warning-600"
         />
         <div
           class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle text-theme-warning-200 dark:text-theme-secondary-800"
@@ -1788,7 +1788,7 @@ exports[`AuthenticationStep (transaction) > should show only ledger confirmation
         data-testid="LedgerConfirmation-loading_message"
       >
         <div
-          class="animate-spin rounded-full border-[5px] shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-l-theme-warning-900 dark:border-l-theme-warning-600 dim:border-l-theme-warning-600"
+          class="animate-spin rounded-full shrink-0 w-5 h-5 border-[3px] border-theme-warning-200 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-l-theme-warning-900 dark:border-l-theme-warning-600 dim:border-l-theme-warning-600"
         />
         <div
           class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle text-theme-warning-200 dark:text-theme-secondary-800"
@@ -1999,7 +1999,7 @@ exports[`AuthenticationStep (transaction) > should specify ledger supported mode
         class="inline-flex w-full items-center justify-center space-x-3"
       >
         <div
-          class="animate-spin rounded-full border-[5px] shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black dim:border-theme-dim-700 border-l-theme-primary-600 dark:border-l-theme-primary-600 dim:border-l-theme-dim-navy-600"
+          class="animate-spin rounded-full shrink-0 w-8 h-8 border-[4px] border-theme-secondary-200 dark:border-black dim:border-theme-dim-700 border-l-theme-primary-600 dark:border-l-theme-primary-600 dim:border-l-theme-dim-navy-600"
         />
         <span
           class="text-theme-secondary-text animate-pulse font-semibold"
