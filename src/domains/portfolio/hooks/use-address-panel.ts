@@ -18,23 +18,23 @@ export enum AddressViewSelection {
 	multiple = "multiple",
 }
 
+export const defaultAddressSettings: AddressesPanelSettings = {
+	addressViewPreference: AddressViewSelection.single,
+	multiSelectedAddresses: [],
+	singleSelectedAddress: [],
+};
+
 export const useAddressesPanel = ({ profile }: { profile: Contracts.IProfile }) => {
 	const { persist, state } = useEnvironmentContext();
 	const { activeNetwork } = useActiveNetwork({ profile });
 
 	const getAddressPanelSettings = (): AddressesPanelSettings => {
-		const defaultSettings: AddressesPanelSettings = {
-			addressViewPreference: AddressViewSelection.single,
-			multiSelectedAddresses: [],
-			singleSelectedAddress: [],
-		};
-
 		const config = profile.settings().get(Contracts.ProfileSetting.DashboardConfiguration, {
-			addressPanelSettings: defaultSettings,
+			addressPanelSettings: defaultAddressSettings,
 		}) as unknown as DashboardConfiguration;
 
 		if (!config.addressPanelSettings) {
-			return defaultSettings;
+			return defaultAddressSettings;
 		}
 
 		return config.addressPanelSettings;
@@ -46,11 +46,7 @@ export const useAddressesPanel = ({ profile }: { profile: Contracts.IProfile }) 
 		}) as unknown as DashboardConfiguration;
 
 		if (!config.addressPanelSettings) {
-			config.addressPanelSettings = {
-				addressViewPreference: AddressViewSelection.single,
-				multiSelectedAddresses: [],
-				singleSelectedAddress: [],
-			};
+			config.addressPanelSettings = defaultAddressSettings;
 		}
 
 		config.addressPanelSettings = {
@@ -96,9 +92,14 @@ export const useAddressesPanel = ({ profile }: { profile: Contracts.IProfile }) 
 		await setAddressPanelSettings({ multiSelectedAddresses: addresses });
 	};
 
+	const resetAddressPanelSettings = async (): Promise<void> => {
+		await setAddressPanelSettings(defaultAddressSettings);
+	};
+
 	return {
 		addressViewPreference,
 		multiSelectedAddresses,
+		resetAddressPanelSettings,
 		setAddressViewPreference,
 		setMultiSelectedAddresses,
 		setSingleSelectedAddress,

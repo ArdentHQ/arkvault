@@ -46,6 +46,7 @@ export const AddressesSidePanel = ({
 		setAddressViewPreference,
 		setSingleSelectedAddress,
 		setMultiSelectedAddresses,
+		resetAddressPanelSettings,
 	} = useAddressesPanel({ profile });
 
 	const selectedAddressesFromPortfolio = profile
@@ -274,6 +275,14 @@ export const AddressesSidePanel = ({
 	const isSelectAllDisabled = isDeleteMode || addressesToShow.length === 0;
 	const isSelected = (wallet: Contracts.IReadWriteWallet) => selectedAddresses.includes(wallet.address());
 	const hasSelectedAddresses = () => selectedAddresses.length > 0;
+
+	useEffect(() => {
+		if (addressesToShow.length === 1) {
+			setSelectedAddresses([addressesToShow[0].address()]);
+			setActiveMode(AddressViewSelection.single);
+			resetAddressPanelSettings();
+		}
+	}, [addressesToShow.length]);
 
 	const runErrorAnimation = () => {
 		setIsAnimating(true);
