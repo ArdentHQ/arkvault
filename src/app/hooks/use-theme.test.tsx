@@ -9,6 +9,10 @@ import { browser } from "@/utils/platform";
 import { renderHook } from "@testing-library/react";
 
 describe("useTheme", () => {
+	beforeEach(() => {
+		vi.spyOn(Storage.prototype, "getItem").mockReturnValue(null);
+	});
+
 	describe("theme", () => {
 		it("should return 'dark' if shouldUseDarkColors is true", () => {
 			vi.spyOn(themeUtils, "shouldUseDarkColors").mockImplementationOnce(() => true);
