@@ -116,32 +116,30 @@ export const SidePanel = ({
 
 	useEffect(() => {
 		if (open && hasSteps) {
-		  window.history.pushState({ sidePanelStep: activeStep }, "");
+			window.history.pushState({ sidePanelStep: activeStep }, "");
 		}
-	  }, [open, hasSteps, activeStep]);
+	}, [open, hasSteps, activeStep]);
 
-	  useEffect(() => {
+	useEffect(() => {
 		if (!open) {
-		  return;
+			return;
 		}
-	  
+
 		const handlePopState = () => {
-		  popStateHandlerRef.current?.();
+			popStateHandlerRef.current?.();
 		};
-	  
+
 		window.history.pushState({ sidePanelOpen: true }, "");
 		window.addEventListener("popstate", handlePopState);
-	  
+
 		return () => {
-		  window.removeEventListener("popstate", handlePopState);
-	  
-		  if (window.history.state?.sidePanelOpen) {
-			window.history.back();
-		  }
+			window.removeEventListener("popstate", handlePopState);
+
+			if (window.history.state?.sidePanelOpen) {
+				window.history.back();
+			}
 		};
-	  }, [open, popStateHandlerRef]);
-	  
-	  
+	}, [open, popStateHandlerRef]);
 
 	return (
 		<>
