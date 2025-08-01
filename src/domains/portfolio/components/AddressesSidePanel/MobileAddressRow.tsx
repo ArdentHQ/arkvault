@@ -8,6 +8,7 @@ import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";
 import { InfoDetail, MultiEntryItem } from "@/app/components/MultiEntryItem/MultiEntryItem";
 import { useWalletAlias } from "@/app/hooks";
+import { RadioButton } from "@/app/components/RadioButton";
 
 export const MobileAddressRow = ({
 	profile,
@@ -19,6 +20,7 @@ export const MobileAddressRow = ({
 	isError,
 	errorMessage,
 	deleteContent,
+	isSingleView,
 }: {
 	profile: Contracts.IProfile;
 	wallet: Contracts.IReadWriteWallet;
@@ -29,6 +31,7 @@ export const MobileAddressRow = ({
 	isError?: boolean;
 	errorMessage?: string;
 	deleteContent?: React.ReactNode;
+	isSingleView: boolean;
 }): JSX.Element => {
 	const { getWalletAlias } = useWalletAlias();
 	const { alias } = getWalletAlias({ address: wallet.address(), network: wallet.network(), profile });
@@ -47,11 +50,22 @@ export const MobileAddressRow = ({
 						tabIndex={0}
 						className={cn("flex w-full items-center gap-3", { "justify-between": usesDeleteMode })}
 					>
-						{!usesDeleteMode && (
+						{!usesDeleteMode && !isSingleView && (
 							<Checkbox
 								name="all"
 								data-testid="AddressRow--checkbox"
 								className="m-0.5"
+								checked={isSelected}
+								onChange={() => toggleAddress(wallet.address())}
+							/>
+						)}
+
+						{!usesDeleteMode && isSingleView && (
+							<RadioButton
+								name="single"
+								data-testid="AddressRow--radio"
+								color="info"
+								className="m-0.5 h-5 w-5"
 								checked={isSelected}
 								onChange={() => toggleAddress(wallet.address())}
 							/>
