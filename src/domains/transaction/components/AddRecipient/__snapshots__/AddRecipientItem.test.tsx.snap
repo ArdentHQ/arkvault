@@ -200,94 +200,145 @@ exports[`Add Recipient item > should render with size lg 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Add Recipient item > should render with size sm 1`] = `
+exports[`Add Recipient item > should render with size xs 1`] = `
 <DocumentFragment>
   <div
-    class="group border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 hover:bg-theme-navy-100 dark:hover:bg-theme-dark-700 dim-hover:bg-theme-dim-700 cursor-pointer items-center rounded-lg border transition-all"
-    data-testid="AddRecipientItem"
+    class="border-theme-secondary-300 dark:border-theme-dark-700 dark:bg-theme-dark-900 dim:border-theme-dim-700 dim:bg-transparent mb-3 overflow-hidden rounded border bg-white last:mb-0 sm:rounded-none sm:border-x-0 sm:border-b-0 sm:border-dashed sm:bg-transparent sm:pt-3 sm:dark:bg-transparent"
+    data-testid="AddRecipientItem--mobile"
   >
     <div
-      class="flex items-center px-4 py-3 duration-150"
+      class="flex flex-col items-center space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4"
     >
-      <button
-        class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-500 hover:bg-theme-danger-400 dim:text-theme-dim-200 dim-hover:text-white p-1 hover:text-white dark:hover:text-white"
-        data-testid="AddRecipientItem--deleteButton-1"
-        type="button"
+      <div
+        class="flex w-full min-w-0 flex-1 flex-col sm:w-auto sm:items-start sm:space-y-1 sm:space-x-0"
       >
         <div
-          class="flex items-center gap-2"
+          class="bg-theme-secondary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 flex w-full flex-1 flex-row items-center justify-between px-4 py-3 dim:sm:bg-transparent sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+        >
+          <div
+            class="flex w-full items-center justify-between"
+          >
+            <div
+              class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 text-sm leading-[17px] font-semibold whitespace-nowrap"
+            >
+              Recipient #2
+            </div>
+            <button
+              class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-50 p-0"
+              data-testid="AddRecipientItem--deleteButton_mobile"
+              type="button"
+            >
+              <div
+                class="flex items-center gap-2"
+              >
+                <div>
+                  <div
+                    style="height: 16px; width: 16px;"
+                  >
+                    <svg
+                      id="trash"
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </button>
+          </div>
+        </div>
+        <div
+          class="px-4 pt-3 pb-4 sm:w-full sm:p-0"
         >
           <div>
             <div
-              style="height: 16px; width: 16px;"
+              class="space-y-4"
             >
-              <svg
-                id="trash"
-                style="height: 100%; width: 100%;"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
-              >
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+              <div>
+                <div
+                  class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-2 text-sm leading-[17px] font-semibold"
                 >
-                  <path
-                    d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
-                  />
-                </g>
-              </svg>
+                  Address
+                </div>
+                <div
+                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                >
+                  <span
+                    class="font-semibold text-base leading-[17px] text-sm"
+                    data-testid="Address__alias"
+                  >
+                    <span
+                      class="no-ligatures transition-colors duration-200"
+                      data-testid="TruncateEnd"
+                    >
+                      Mainsail Wallet …
+                    </span>
+                  </span>
+                  <span
+                    class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
+                    data-testid="Address__address"
+                  >
+                    0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                  </span>
+                </div>
+              </div>
+              <div>
+                <div
+                  class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-2 text-sm leading-[17px] font-semibold"
+                >
+                  Value
+                </div>
+                <span
+                  class="whitespace-nowrap text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm leading-[17px] font-semibold"
+                  data-testid="Amount"
+                >
+                  1 DARK
+                </span>
+              </div>
             </div>
           </div>
         </div>
-      </button>
+      </div>
       <div
-        class="border-theme-primary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 ml-4 flex w-full min-w-0 items-center justify-between border-l pl-4 font-semibold"
+        class="hidden sm:block"
       >
         <div
-          class="flex w-1/2 min-w-0 flex-col space-y-2 truncate"
+          class="flex items-center gap-3"
         >
           <div
-            class="group-hover:text-theme-primary-900 dark:group-hover:text-theme-dark-200 dim:group-hover:text-theme-dim-50 text-sm leading-[17px]"
+            class="flex flex-col items-end space-y-2"
           >
-            Recipient #2
-          </div>
-          <div
-            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-          >
-            <span
-              class="font-semibold text-base leading-5 text-theme-text"
-              data-testid="Address__alias"
+            <div
+              class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 leading-[17px] font-semibold whitespace-nowrap"
             >
               <span
-                class="no-ligatures transition-colors duration-200"
-                data-testid="TruncateEnd"
+                class="text-sm leading-[17px]"
               >
-                Mainsail Wallet …
+                Amount
               </span>
-            </span>
+            </div>
             <span
-              class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 font-semibold text-base"
-              data-testid="Address__address"
+              class="whitespace-nowrap text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 leading-5 font-semibold"
+              data-testid="Amount"
             >
-              0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+              1 DARK
             </span>
           </div>
-        </div>
-        <div
-          class="flex w-1/2 min-w-0 flex-col items-end space-y-2 self-end"
-        >
-          <span
-            class="whitespace-nowrap group-hover:text-theme-primary-900 dark:group-hover:text-theme-dark-200 dim:group-hover:text-theme-dim-50 leading-5"
-            data-testid="Amount"
-          >
-            1 DARK
-          </span>
         </div>
       </div>
     </div>
