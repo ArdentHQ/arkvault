@@ -922,7 +922,7 @@ exports[`Dashboard > should render 1`] = `
                             </span>
                           </span>
                           <span
-                            class="hidden lg:block min-w-[26.375rem]"
+                            class="hidden min-w-[26.375rem] lg:block"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
