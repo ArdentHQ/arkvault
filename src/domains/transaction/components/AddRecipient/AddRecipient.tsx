@@ -181,7 +181,7 @@ export const AddRecipient = ({
 
 			onChange([]);
 		}
-	}, [isSingle, clearErrors, clearFields, addedRecipients, setValue]); // eslint-disable-line react-hooks/exhaustive-deps
+	}, [isSingle, clearErrors, clearFields, addedRecipients, setValue]);
 
 	useEffect(() => {
 		if (!isSingle) {
@@ -224,7 +224,6 @@ export const AddRecipient = ({
 			alias: recipientAlias,
 			amount: remaining,
 		});
-		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [fee, isSendAllSelected, remainingBalance, remainingNetBalance, setValue]);
 
 	const singleRecipientOnChange = ({
@@ -418,7 +417,7 @@ export const AddRecipient = ({
 							}
 							data-testid="AddRecipient__add-button"
 							variant="secondary"
-							className="mt-4 w-full"
+							className="w-full"
 							onClick={handleAddRecipient}
 						>
 							{t("TRANSACTION.ADD_RECIPIENT")}
