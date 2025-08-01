@@ -1845,7 +1845,7 @@ exports[`ExchangeForm > should render exchange form with id of pending order 1`]
                   data-testid="StatusIcon__spinner"
                 >
                   <div
-                    class="animate-spin rounded-full border-[5px] shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black dim:border-theme-dim-700 border-l-theme-primary-600 dark:border-l-theme-primary-600 dim:border-l-theme-dim-navy-600 h-6! w-6! border-[3px]!"
+                    class="animate-spin rounded-full shrink-0 w-8 h-8 border-[4px] border-theme-secondary-200 dark:border-black dim:border-theme-dim-700 border-l-theme-primary-600 dark:border-l-theme-primary-600 dim:border-l-theme-dim-navy-600 h-6! w-6! border-[3px]!"
                   />
                 </span>
                 <span
@@ -2935,7 +2935,7 @@ exports[`StatusStep > should render 1`] = `
           data-testid="StatusIcon__spinner"
         >
           <div
-            class="animate-spin rounded-full border-[5px] shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black dim:border-theme-dim-700 border-l-theme-primary-600 dark:border-l-theme-primary-600 dim:border-l-theme-dim-navy-600 h-6! w-6! border-[3px]!"
+            class="animate-spin rounded-full shrink-0 w-8 h-8 border-[4px] border-theme-secondary-200 dark:border-black dim:border-theme-dim-700 border-l-theme-primary-600 dark:border-l-theme-primary-600 dim:border-l-theme-dim-navy-600 h-6! w-6! border-[3px]!"
           />
         </span>
         <span

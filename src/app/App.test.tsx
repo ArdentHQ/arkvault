@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/require-await */
 import { Environment } from "@/app/lib/profiles";
 import React from "react";
 import { App } from "./App";
@@ -166,6 +165,7 @@ describe("App", () => {
 	it.each([false, true])(
 		"should set the theme based on system preferences (dark = %s)",
 		async (shouldUseDarkColors) => {
+			const getItemSpy = vi.spyOn(Storage.prototype, "getItem").mockReturnValue(null);
 			Object.defineProperty(window, "matchMedia", {
 				value: vi.fn().mockImplementation(() => ({
 					matches: shouldUseDarkColors,
@@ -188,6 +188,7 @@ describe("App", () => {
 
 			toastSpy.mockRestore();
 			utilsSpy.mockRestore();
+			getItemSpy.mockRestore();
 		},
 	);
 });

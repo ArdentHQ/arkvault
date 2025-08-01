@@ -1292,7 +1292,7 @@ exports[`Servers Settings > Added reachable servers > should ping the servers in
                                 >
                                   <td>
                                     <div
-                                      class="px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]"
+                                      class="px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]"
                                     >
                                       <div
                                         class="md-lg:overflow-hidden relative flex h-20 w-full flex-col"
@@ -1316,7 +1316,7 @@ exports[`Servers Settings > Added reachable servers > should ping the servers in
                                   </td>
                                   <td>
                                     <div
-                                      class="px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]"
+                                      class="px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]"
                                     >
                                       <div
                                         class="h-20 space-y-3"
@@ -1368,7 +1368,7 @@ exports[`Servers Settings > Added reachable servers > should ping the servers in
                                   </td>
                                   <td>
                                     <div
-                                      class="px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]"
+                                      class="px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]"
                                     >
                                       <div
                                         class="flex h-20 w-full flex-col items-center space-y-2.5"
@@ -1507,7 +1507,7 @@ exports[`Servers Settings > Added reachable servers > should ping the servers in
                                   </td>
                                   <td>
                                     <div
-                                      class="px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]"
+                                      class="px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]"
                                     >
                                       <div
                                         class="text-theme-secondary-900 dark:text-theme-dark-50 flex h-20 items-start"
@@ -1522,7 +1522,7 @@ exports[`Servers Settings > Added reachable servers > should ping the servers in
                                   </td>
                                   <td>
                                     <div
-                                      class="px-3 transition-colors duration-100 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px] pr-0"
+                                      class="px-3 transition-colors duration-100 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px] pr-0"
                                     >
                                       <div
                                         class="flex h-20 items-start"
@@ -2783,7 +2783,7 @@ exports[`Servers Settings > Added reachable servers > should render custom serve
                                     data-testid="NodeStatus--statusloading"
                                   >
                                     <div
-                                      class="animate-spin rounded-full border-[5px] shrink-0 w-5 h-5 border-theme-secondary-200 dark:border-black dim:border-theme-dim-700 border-l-theme-primary-600 dark:border-l-theme-primary-600 dim:border-l-theme-dim-navy-600"
+                                      class="animate-spin rounded-full shrink-0 w-5 h-5 border-[3px] border-theme-secondary-200 dark:border-black dim:border-theme-dim-700 border-l-theme-primary-600 dark:border-l-theme-primary-600 dim:border-l-theme-dim-navy-600"
                                     />
                                   </div>
                                 </div>
@@ -2957,7 +2957,7 @@ exports[`Servers Settings > Added reachable servers > should render custom serve
                                 >
                                   <td>
                                     <div
-                                      class="px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]"
+                                      class="px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]"
                                     >
                                       <div
                                         class="md-lg:overflow-hidden relative flex h-20 w-full flex-col"
@@ -2981,7 +2981,7 @@ exports[`Servers Settings > Added reachable servers > should render custom serve
                                   </td>
                                   <td>
                                     <div
-                                      class="px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]"
+                                      class="px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]"
                                     >
                                       <div
                                         class="h-20 space-y-3"
@@ -3033,7 +3033,7 @@ exports[`Servers Settings > Added reachable servers > should render custom serve
                                   </td>
                                   <td>
                                     <div
-                                      class="px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]"
+                                      class="px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]"
                                     >
                                       <div
                                         class="flex h-20 w-full flex-col items-center space-y-2.5"
@@ -3045,7 +3045,7 @@ exports[`Servers Settings > Added reachable servers > should render custom serve
                                             data-testid="CustomPeersPeer--statusloading"
                                           >
                                             <div
-                                              class="animate-spin rounded-full border-[5px] shrink-0 w-5 h-5 border-theme-secondary-200 dark:border-black dim:border-theme-dim-700 border-l-theme-primary-600 dark:border-l-theme-primary-600 dim:border-l-theme-dim-navy-600"
+                                              class="animate-spin rounded-full shrink-0 w-5 h-5 border-[3px] border-theme-secondary-200 dark:border-black dim:border-theme-dim-700 border-l-theme-primary-600 dark:border-l-theme-primary-600 dim:border-l-theme-dim-navy-600"
                                             />
                                           </div>
                                         </div>
@@ -3056,7 +3056,7 @@ exports[`Servers Settings > Added reachable servers > should render custom serve
                                             data-testid="CustomPeersPeer--statusloading"
                                           >
                                             <div
-                                              class="animate-spin rounded-full border-[5px] shrink-0 w-5 h-5 border-theme-secondary-200 dark:border-black dim:border-theme-dim-700 border-l-theme-primary-600 dark:border-l-theme-primary-600 dim:border-l-theme-dim-navy-600"
+                                              class="animate-spin rounded-full shrink-0 w-5 h-5 border-[3px] border-theme-secondary-200 dark:border-black dim:border-theme-dim-700 border-l-theme-primary-600 dark:border-l-theme-primary-600 dim:border-l-theme-dim-navy-600"
                                             />
                                           </div>
                                         </div>
@@ -3067,7 +3067,7 @@ exports[`Servers Settings > Added reachable servers > should render custom serve
                                             data-testid="CustomPeersPeer--statusloading"
                                           >
                                             <div
-                                              class="animate-spin rounded-full border-[5px] shrink-0 w-5 h-5 border-theme-secondary-200 dark:border-black dim:border-theme-dim-700 border-l-theme-primary-600 dark:border-l-theme-primary-600 dim:border-l-theme-dim-navy-600"
+                                              class="animate-spin rounded-full shrink-0 w-5 h-5 border-[3px] border-theme-secondary-200 dark:border-black dim:border-theme-dim-700 border-l-theme-primary-600 dark:border-l-theme-primary-600 dim:border-l-theme-dim-navy-600"
                                             />
                                           </div>
                                         </div>
@@ -3076,7 +3076,7 @@ exports[`Servers Settings > Added reachable servers > should render custom serve
                                   </td>
                                   <td>
                                     <div
-                                      class="px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]"
+                                      class="px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]"
                                     >
                                       <div
                                         class="text-theme-secondary-900 dark:text-theme-dark-50 flex h-20 items-start"
@@ -3091,7 +3091,7 @@ exports[`Servers Settings > Added reachable servers > should render custom serve
                                   </td>
                                   <td>
                                     <div
-                                      class="px-3 transition-colors duration-100 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px] pr-0"
+                                      class="px-3 transition-colors duration-100 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px] pr-0"
                                     >
                                       <div
                                         class="flex h-20 items-start"
@@ -4281,7 +4281,7 @@ exports[`Servers Settings > Added reachable servers > should render customs serv
                                     data-testid="NodeStatus--statusloading"
                                   >
                                     <div
-                                      class="animate-spin rounded-full border-[5px] shrink-0 w-5 h-5 border-theme-secondary-200 dark:border-black dim:border-theme-dim-700 border-l-theme-primary-600 dark:border-l-theme-primary-600 dim:border-l-theme-dim-navy-600"
+                                      class="animate-spin rounded-full shrink-0 w-5 h-5 border-[3px] border-theme-secondary-200 dark:border-black dim:border-theme-dim-700 border-l-theme-primary-600 dark:border-l-theme-primary-600 dim:border-l-theme-dim-navy-600"
                                     />
                                   </div>
                                 </div>
@@ -4529,7 +4529,7 @@ exports[`Servers Settings > Added reachable servers > should render customs serv
                                                     data-testid="CustomPeersPeer--statusloading"
                                                   >
                                                     <div
-                                                      class="animate-spin rounded-full border-[5px] shrink-0 w-5 h-5 border-theme-secondary-200 dark:border-black dim:border-theme-dim-700 border-l-theme-primary-600 dark:border-l-theme-primary-600 dim:border-l-theme-dim-navy-600"
+                                                      class="animate-spin rounded-full shrink-0 w-5 h-5 border-[3px] border-theme-secondary-200 dark:border-black dim:border-theme-dim-700 border-l-theme-primary-600 dark:border-l-theme-primary-600 dim:border-l-theme-dim-navy-600"
                                                     />
                                                   </div>
                                                 </div>
@@ -4558,7 +4558,7 @@ exports[`Servers Settings > Added reachable servers > should render customs serv
                                                     data-testid="CustomPeersPeer--statusloading"
                                                   >
                                                     <div
-                                                      class="animate-spin rounded-full border-[5px] shrink-0 w-5 h-5 border-theme-secondary-200 dark:border-black dim:border-theme-dim-700 border-l-theme-primary-600 dark:border-l-theme-primary-600 dim:border-l-theme-dim-navy-600"
+                                                      class="animate-spin rounded-full shrink-0 w-5 h-5 border-[3px] border-theme-secondary-200 dark:border-black dim:border-theme-dim-700 border-l-theme-primary-600 dark:border-l-theme-primary-600 dim:border-l-theme-dim-navy-600"
                                                     />
                                                   </div>
                                                 </div>
@@ -4587,7 +4587,7 @@ exports[`Servers Settings > Added reachable servers > should render customs serv
                                                     data-testid="CustomPeersPeer--statusloading"
                                                   >
                                                     <div
-                                                      class="animate-spin rounded-full border-[5px] shrink-0 w-5 h-5 border-theme-secondary-200 dark:border-black dim:border-theme-dim-700 border-l-theme-primary-600 dark:border-l-theme-primary-600 dim:border-l-theme-dim-navy-600"
+                                                      class="animate-spin rounded-full shrink-0 w-5 h-5 border-[3px] border-theme-secondary-200 dark:border-black dim:border-theme-dim-700 border-l-theme-primary-600 dark:border-l-theme-primary-600 dim:border-l-theme-dim-navy-600"
                                                     />
                                                   </div>
                                                 </div>
@@ -6124,7 +6124,7 @@ exports[`Servers Settings > Added reachable servers > should show status ok afte
                                 >
                                   <td>
                                     <div
-                                      class="px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]"
+                                      class="px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]"
                                     >
                                       <div
                                         class="md-lg:overflow-hidden relative flex h-20 w-full flex-col"
@@ -6148,7 +6148,7 @@ exports[`Servers Settings > Added reachable servers > should show status ok afte
                                   </td>
                                   <td>
                                     <div
-                                      class="px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]"
+                                      class="px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]"
                                     >
                                       <div
                                         class="h-20 space-y-3"
@@ -6200,7 +6200,7 @@ exports[`Servers Settings > Added reachable servers > should show status ok afte
                                   </td>
                                   <td>
                                     <div
-                                      class="px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]"
+                                      class="px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]"
                                     >
                                       <div
                                         class="flex h-20 w-full flex-col items-center space-y-2.5"
@@ -6339,7 +6339,7 @@ exports[`Servers Settings > Added reachable servers > should show status ok afte
                                   </td>
                                   <td>
                                     <div
-                                      class="px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]"
+                                      class="px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]"
                                     >
                                       <div
                                         class="text-theme-secondary-900 dark:text-theme-dark-50 flex h-20 items-start"
@@ -6354,7 +6354,7 @@ exports[`Servers Settings > Added reachable servers > should show status ok afte
                                   </td>
                                   <td>
                                     <div
-                                      class="px-3 transition-colors duration-100 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px] pr-0"
+                                      class="px-3 transition-colors duration-100 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px] pr-0"
                                     >
                                       <div
                                         class="flex h-20 items-start"
@@ -9511,7 +9511,7 @@ exports[`Servers Settings > Added unreachable servers > should show status error
                                 >
                                   <td>
                                     <div
-                                      class="px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]"
+                                      class="px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]"
                                     >
                                       <div
                                         class="md-lg:overflow-hidden relative flex h-20 w-full flex-col"
@@ -9535,7 +9535,7 @@ exports[`Servers Settings > Added unreachable servers > should show status error
                                   </td>
                                   <td>
                                     <div
-                                      class="px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]"
+                                      class="px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]"
                                     >
                                       <div
                                         class="h-20 space-y-3"
@@ -9587,7 +9587,7 @@ exports[`Servers Settings > Added unreachable servers > should show status error
                                   </td>
                                   <td>
                                     <div
-                                      class="px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]"
+                                      class="px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]"
                                     >
                                       <div
                                         class="flex h-20 w-full flex-col items-center space-y-2.5"
@@ -9723,7 +9723,7 @@ exports[`Servers Settings > Added unreachable servers > should show status error
                                   </td>
                                   <td>
                                     <div
-                                      class="px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]"
+                                      class="px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]"
                                     >
                                       <div
                                         class="text-theme-secondary-900 dark:text-theme-dark-50 flex h-20 items-start"
@@ -9738,7 +9738,7 @@ exports[`Servers Settings > Added unreachable servers > should show status error
                                   </td>
                                   <td>
                                     <div
-                                      class="px-3 transition-colors duration-100 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px] pr-0"
+                                      class="px-3 transition-colors duration-100 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px] pr-0"
                                     >
                                       <div
                                         class="flex h-20 items-start"
@@ -12688,7 +12688,7 @@ exports[`Servers Settings > should render servers page 1`] = `
                                     data-testid="NodeStatus--statusloading"
                                   >
                                     <div
-                                      class="animate-spin rounded-full border-[5px] shrink-0 w-5 h-5 border-theme-secondary-200 dark:border-black dim:border-theme-dim-700 border-l-theme-primary-600 dark:border-l-theme-primary-600 dim:border-l-theme-dim-navy-600"
+                                      class="animate-spin rounded-full shrink-0 w-5 h-5 border-[3px] border-theme-secondary-200 dark:border-black dim:border-theme-dim-700 border-l-theme-primary-600 dark:border-l-theme-primary-600 dim:border-l-theme-dim-navy-600"
                                     />
                                   </div>
                                 </div>
