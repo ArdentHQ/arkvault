@@ -154,10 +154,6 @@ export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 		try {
 			const response = await this.#http.get(`${apiUrl}/wallets/${addr.address}`);
 
-			if (response.status() !== 200) {
-				return undefined;
-			}
-
 			const body = response.json();
 			const publicKey = body?.data?.publicKey;
 
