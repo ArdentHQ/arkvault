@@ -170,7 +170,7 @@ exports[`ListenLedger > should emit event on device available 1`] = `
       class="inline-flex w-full items-center justify-center space-x-3"
     >
       <div
-        class="animate-spin rounded-full border-[5px] shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black dim:border-theme-dim-700 border-l-theme-primary-600 dark:border-l-theme-primary-600 dim:border-l-theme-dim-navy-600"
+        class="animate-spin rounded-full shrink-0 w-8 h-8 border-[4px] border-theme-secondary-200 dark:border-black dim:border-theme-dim-700 border-l-theme-primary-600 dark:border-l-theme-primary-600 dim:border-l-theme-dim-navy-600"
       />
       <span
         class="text-theme-secondary-text animate-pulse font-semibold"
@@ -353,7 +353,7 @@ exports[`ListenLedger > should emit event on device not available 1`] = `
       class="inline-flex w-full items-center justify-center space-x-3"
     >
       <div
-        class="animate-spin rounded-full border-[5px] shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black dim:border-theme-dim-700 border-l-theme-primary-600 dark:border-l-theme-primary-600 dim:border-l-theme-dim-navy-600"
+        class="animate-spin rounded-full shrink-0 w-8 h-8 border-[4px] border-theme-secondary-200 dark:border-black dim:border-theme-dim-700 border-l-theme-primary-600 dark:border-l-theme-primary-600 dim:border-l-theme-dim-navy-600"
       />
       <span
         class="text-theme-secondary-text animate-pulse font-semibold"
