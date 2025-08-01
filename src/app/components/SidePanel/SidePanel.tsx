@@ -115,24 +115,33 @@ export const SidePanel = ({
 	}, [hasSteps, onBack, onOpenChange]);
 
 	useEffect(() => {
-		if (!open) {
-			return;
+		if (open && hasSteps) {
+		  window.history.pushState({ sidePanelStep: activeStep }, "");
 		}
+	  }, [open, hasSteps, activeStep]);
 
+	  useEffect(() => {
+		if (!open) {
+		  return;
+		}
+	  
 		const handlePopState = () => {
-			popStateHandlerRef.current?.();
+		  popStateHandlerRef.current?.();
 		};
-
+	  
 		window.history.pushState({ sidePanelOpen: true }, "");
 		window.addEventListener("popstate", handlePopState);
-
+	  
 		return () => {
-			window.removeEventListener("popstate", handlePopState);
-			if (window.history.state?.sidePanelOpen) {
-				window.history.back();
-			}
+		  window.removeEventListener("popstate", handlePopState);
+	  
+		  if (window.history.state?.sidePanelOpen) {
+			window.history.back();
+		  }
 		};
-	}, [open]);
+	  }, [open, popStateHandlerRef]);
+	  
+	  
 
 	return (
 		<>
