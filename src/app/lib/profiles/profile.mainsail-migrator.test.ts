@@ -868,6 +868,41 @@ describe("ProfileMainsailMigrator", () => {
 			expect(result.settings.AVATAR).toContain("<svg");
 		});
 
+		it("should preserve avatar when it is a data URL", async () => {
+			const originalAvatar = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCI+PC9zdmc+";
+			const data: IProfileData = {
+				contacts: {},
+				data: {},
+				exchangeTransactions: {},
+				hosts: {},
+				id: "test-profile",
+				networks: {},
+				notifications: {},
+				settings: {
+					AVATAR: originalAvatar,
+					LOCALE: "en-US",
+					NAME: "Test User",
+					THEME: "dark",
+				},
+				wallets: {
+					"wallet-1": {
+						data: {
+							ADDRESS: "AdViMQwcwquCP8fbY9eczXzTX7yUs2uMw4",
+							NETWORK: "ark.mainnet",
+							PUBLIC_KEY: "03300acecfd7cfc5987ad8cc70bf51c5e93749f76103a02eaf4a1d143729b86a00",
+						},
+						id: "wallet-1",
+						settings: {},
+					},
+				},
+			};
+
+			const result = await migrator.migrate(profile, data);
+
+			// Avatar should be preserved since it's a data URL
+			expect(result.settings.AVATAR).toBe(originalAvatar);
+		});
+
 		it("should throw error when contact address migration fails with non-404 error", async () => {
 			server.use(
 				http.get("https://ark-live.arkvault.io/api/wallets/:address", () => {
