@@ -1,8 +1,10 @@
+import { describe, it, expect, beforeEach, vi } from "vitest";
 import { ConfirmedTransactionData } from "./confirmed-transaction.dto";
 import { KeyValuePair } from "./contracts";
 import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
 import { Exceptions } from ".";
+import * as TransactionTypeServiceMock from "./transaction-type.service";
 
 describe("ConfirmedTransactionData", () => {
 	let transaction: ConfirmedTransactionData;
@@ -26,6 +28,174 @@ describe("ConfirmedTransactionData", () => {
 			to: "recipient_address",
 			value: 100000000,
 		};
+	});
+
+	it("should return voteCombination type when isVoteCombination is true", () => {
+		const mockTransaction = new ConfirmedTransactionData();
+		mockTransaction.isVoteCombination = () => true;
+		mockTransaction.configure(commonData);
+
+		expect(mockTransaction.type()).toBe("voteCombination");
+	});
+
+	it("should return transfer type when isTransfer is true", () => {
+		const mockTransaction = new ConfirmedTransactionData();
+		mockTransaction.isTransfer = () => true;
+		mockTransaction.configure(commonData);
+
+		expect(mockTransaction.type()).toBe("transfer");
+	});
+
+	it("should return identifier name when TransactionTypeService returns non-null", () => {
+		const spy = vi
+			.spyOn(TransactionTypeServiceMock.TransactionTypeService, "getIdentifierName")
+			.mockReturnValue("customIdentifier");
+
+		transaction.configure(commonData);
+		const result = transaction.type();
+
+		expect(result).toBe("customIdentifier");
+		spy.mockRestore();
+	});
+
+	it("should return recipients for multi payment", () => {
+		const mockTransaction = new ConfirmedTransactionData();
+		mockTransaction.isMultiPayment = () => true;
+		mockTransaction.payments = () => [
+			{ amount: new BigNumber(100), recipientId: "address1" },
+			{ amount: new BigNumber(200), recipientId: "address2" },
+		];
+		mockTransaction.configure(commonData);
+
+		const recipients = mockTransaction.recipients();
+
+		expect(recipients).toHaveLength(2);
+		expect(recipients[0]).toEqual({ address: "address1", amount: new BigNumber(100) });
+		expect(recipients[1]).toEqual({ address: "address2", amount: new BigNumber(200) });
+	});
+
+	it("should return sum of payments for multi-payment value", () => {
+		const mockTransaction = new ConfirmedTransactionData();
+		mockTransaction.isMultiPayment = () => true;
+		mockTransaction.payments = () => [{ amount: new BigNumber(100) }, { amount: new BigNumber(200) }];
+		mockTransaction.configure(commonData);
+
+		const value = mockTransaction.value();
+		expect(value).toEqual(new BigNumber(300));
+	});
+
+	it("should return true for isReturn when transfer and both sent and received", () => {
+		const mockTransaction = new ConfirmedTransactionData();
+		mockTransaction.isTransfer = () => true;
+		mockTransaction.isSent = () => true;
+		mockTransaction.isReceived = () => true;
+		mockTransaction.configure(commonData);
+
+		expect(mockTransaction.isReturn()).toBe(true);
+	});
+
+	it("should return true for isReturn when multi-payment includes sender as recipient", () => {
+		const mockTransaction = new ConfirmedTransactionData();
+		mockTransaction.isMultiPayment = () => true;
+		mockTransaction.recipients = () => [{ address: "sender_address", amount: new BigNumber(100) }];
+		mockTransaction.configure(commonData);
+
+		expect(mockTransaction.isReturn()).toBe(true);
+	});
+
+	it("should return username from decoded function data", () => {
+		const mockTransaction = new ConfirmedTransactionData();
+
+		// Use real encoded data with valid method identifier for registerUsername (0x36a94134)
+		// This includes the method signature + encoded string "testuser"
+		const realEncodedData =
+			"0x36a94134000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000087465737475736572000000000000000000000000000000000000000000000000";
+
+		mockTransaction.configure({
+			...commonData,
+			data: realEncodedData,
+		});
+
+		const username = mockTransaction.username();
+		expect(username).toBe("testuser");
+	});
+
+	it("should return validator public key from decoded function data", () => {
+		const mockTransaction = new ConfirmedTransactionData();
+
+		// Use real encoded data for registerValidator with bytes parameter (BLS public key)
+		// Method identifier for registerValidator(bytes): 602a9eee + encoded bytes data
+		const realEncodedData =
+			"0x602a9eee00000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000020abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890";
+
+		mockTransaction.configure({
+			...commonData,
+			data: realEncodedData,
+		});
+
+		const validatorPublicKey = mockTransaction.validatorPublicKey();
+		expect(validatorPublicKey).toBe("abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890");
+	});
+
+	it("should return votes array from decoded function data", () => {
+		const mockTransaction = new ConfirmedTransactionData();
+
+		// Use real encoded data for vote(address) function
+		// Method identifier for vote(address): 6dd7d8ea + encoded address parameter
+		const realEncodedData = "0x6dd7d8ea000000000000000000000000abcdef1234567890abcdef1234567890abcdef12";
+
+		mockTransaction.configure({
+			...commonData,
+			data: realEncodedData,
+		});
+
+		const votes = mockTransaction.votes();
+		expect(votes).toEqual(["0xabCDEF1234567890ABcDEF1234567890aBCDeF12"]);
+	});
+
+	it("should return empty array for unvotes", () => {
+		const mockTransaction = new ConfirmedTransactionData();
+		mockTransaction.configure(commonData);
+
+		const unvotes = mockTransaction.unvotes();
+		expect(unvotes).toEqual([]);
+	});
+
+	it("should return payments from decoded multi-payment function data", () => {
+		const mockTransaction = new ConfirmedTransactionData();
+
+		// Use real encoded data for pay(address[],uint256[]) function from MultiPaymentV1
+		// Method identifier: 084ce708 + encoded arrays for 1 recipient
+		const realEncodedData =
+			"0x084ce708000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000000800000000000000000000000000000000000000000000000000000000000000001000000000000000000000000123456789012345678901234567890123456789000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000de0b6b3a7640000";
+
+		mockTransaction.configure({
+			...commonData,
+			data: realEncodedData,
+		});
+
+		const payments = mockTransaction.payments();
+		expect(payments).toHaveLength(1);
+		expect(payments[0]).toEqual({
+			amount: expect.any(BigNumber),
+			recipientId: "0x1234567890123456789012345678901234567890",
+		});
+	});
+
+	it("should normalize data by converting public key to address", () => {
+		const mockTransaction = new ConfirmedTransactionData();
+
+		// Use a valid compressed public key from address.service.test.ts
+		const validPublicKey = "0293b9fd80d472bbf678404d593705268cf09324115f73103bc1477a3933350041";
+
+		mockTransaction.configure({
+			...commonData,
+			senderPublicKey: validPublicKey,
+		});
+
+		// Call normalizeData - this should convert the public key to address internally
+		// We just verify it doesn't throw an error
+		expect(() => mockTransaction.normalizeData()).not.toThrow();
 	});
 
 	it("should be instantiated and configured", () => {

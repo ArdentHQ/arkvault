@@ -112,10 +112,8 @@ export class HttpClient {
 		);
 	}
 
-	private buildCacheKey(method: string, url: string, data?: any): string {
-		const normalizedData = data
-			? Object.fromEntries(Object.entries(data).filter(([, value]) => value !== undefined))
-			: {};
+	private buildCacheKey(method: string, url: string, data: any): string {
+		const normalizedData = Object.fromEntries(Object.entries(data).filter(([, value]) => value !== undefined));
 		return hash(`${method.toLowerCase()}.${url}.${JSON.stringify(normalizedData)}`).toString();
 	}
 

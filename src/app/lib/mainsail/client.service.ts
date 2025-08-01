@@ -237,7 +237,7 @@ export class ClientService {
 		const getPage = (url: string): string | undefined => {
 			const match: RegExpExecArray | null = new RegExp(/page=(\d+)/).exec(url);
 
-			return match ? match[1] || undefined : undefined;
+			return match?.[1] || undefined;
 		};
 
 		return {

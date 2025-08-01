@@ -1,6 +1,6 @@
 import { Color, Size, Theme } from "@/types";
 
-const baseStyle = `animate-spin rounded-full border-[5px] shrink-0`;
+const baseStyle = `animate-spin rounded-full  shrink-0`;
 
 const getColor = (color: Color | "warning-alt", theme?: Theme) => {
 	const baseColors: Record<Color | "warning-alt", string> = {
@@ -30,9 +30,9 @@ const getColor = (color: Color | "warning-alt", theme?: Theme) => {
 
 const getSize = (size?: Size) => {
 	const sizes = {
-		default: () => `w-8 h-8`,
-		lg: () => `w-12 h-12`,
-		sm: () => `w-5 h-5`,
+		default: () => `w-8 h-8 border-[4px]`,
+		lg: () => `w-12 h-12 border-[5px]`,
+		sm: () => `w-5 h-5 border-[3px]`,
 	};
 
 	// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
