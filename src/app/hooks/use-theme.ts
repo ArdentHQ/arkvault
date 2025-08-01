@@ -66,7 +66,16 @@ const setTheme = (theme: Theme) => {
 	}
 };
 
-const resetTheme = () => setTheme("system");
+const resetTheme = () => {
+	// if the theme in the local storage is set, use that
+	const theme = localStorage.getItem("theme");
+
+	if (["system", "dark", "light", "dim"].includes(theme ?? "")) {
+		setTheme(theme as Theme);
+	} else {
+		setTheme("system");
+	}
+};
 
 export const useTheme: () => {
 	resetProfileTheme: (profile: Contracts.IProfile) => void;
@@ -94,6 +103,8 @@ export const useTheme: () => {
 
 	const onThemeChange = useCallback((data: CustomEvent) => {
 		setCurrentTheme(data.detail as ViewingModeType);
+
+		localStorage.setItem("theme", data.detail as ViewingModeType);
 	}, []);
 
 	useEffect(() => {
