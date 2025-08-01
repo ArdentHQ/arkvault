@@ -219,8 +219,7 @@ export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 			if (avatar.startsWith("data:image")) {
 				migratedSettings["AVATAR"] = avatar;
 			} else {
-				const userName = settings["NAME"] || profile.name();
-				migratedSettings["AVATAR"] = Avatar.make(userName);
+				migratedSettings["AVATAR"] = Avatar.make(settings["NAME"]);
 			}
 		}
 
@@ -259,7 +258,11 @@ export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 		// Modify the last character of the UUID to create a deterministic variant
 		const lastChar = originalId.charAt(originalId.length - 1);
 		const newLastChar = String.fromCharCode(
-			((lastChar.charCodeAt(0) + index) % 16) + (lastChar.charCodeAt(0) >= 97 ? 97 : 48),
+			((lastChar.charCodeAt(0) + index) % 16) +
+				(lastChar.charCodeAt(0) >= 97
+					? /* istanbul ignore next -- @preserve */
+						97
+					: 48),
 		);
 		return originalId.slice(0, -1) + newLastChar;
 	}
