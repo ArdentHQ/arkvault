@@ -269,5 +269,27 @@ describe("useTheme", () => {
 
 			expect(document.querySelector("html")).toHaveClass("light");
 		});
+
+		it("should reset theme to system when localStorage has invalid theme", () => {
+			// Mock localStorage to return an invalid theme
+			vi.spyOn(Storage.prototype, "getItem").mockReturnValue("invalid-theme");
+
+			const {
+				result: { current },
+			} = renderHook(() => useTheme());
+
+			act(() => {
+				current.setTheme("dark");
+			});
+
+			expect(document.querySelector("html")).toHaveClass("dark");
+
+			act(() => {
+				current.resetTheme();
+			});
+
+			// Should default to system theme (which resolves to light in this test environment)
+			expect(document.querySelector("html")).toHaveClass("light");
+		});
 	});
 });
