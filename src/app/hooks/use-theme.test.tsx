@@ -9,6 +9,14 @@ import { browser } from "@/utils/platform";
 import { renderHook } from "@testing-library/react";
 
 describe("useTheme", () => {
+	beforeEach(() => {
+		vi.spyOn(Storage.prototype, "getItem").mockReturnValue(null);
+	});
+
+	afterEach(() => {
+		vi.clearAllMocks();
+	});
+
 	describe("theme", () => {
 		it("should return 'dark' if shouldUseDarkColors is true", () => {
 			vi.spyOn(themeUtils, "shouldUseDarkColors").mockImplementationOnce(() => true);
@@ -264,6 +272,53 @@ describe("useTheme", () => {
 			});
 
 			expect(document.querySelector("html")).toHaveClass("light");
+		});
+
+		it("should reset theme to system when localStorage has invalid theme", () => {
+			// Mock localStorage to return an invalid theme
+			vi.spyOn(Storage.prototype, "getItem").mockReturnValue("invalid-theme");
+
+			const {
+				result: { current },
+			} = renderHook(() => useTheme());
+
+			act(() => {
+				current.setTheme("dark");
+			});
+
+			expect(document.querySelector("html")).toHaveClass("dark");
+
+			act(() => {
+				current.resetTheme();
+			});
+
+			// Should default to system theme (which resolves to light in this test environment)
+			expect(document.querySelector("html")).toHaveClass("light");
+		});
+
+		it("should reset theme to stored theme when localStorage has valid theme", () => {
+			// Mock localStorage to return a valid theme
+			const getItemSpy = vi.spyOn(Storage.prototype, "getItem").mockReturnValue("dark");
+
+			const {
+				result: { current },
+			} = renderHook(() => useTheme());
+
+			act(() => {
+				current.setTheme("light");
+			});
+
+			expect(document.querySelector("html")).toHaveClass("light");
+
+			act(() => {
+				current.resetTheme();
+			});
+
+			// Verify that localStorage.getItem was called with "theme"
+			expect(getItemSpy).toHaveBeenCalledWith("theme");
+
+			// Should use the stored theme from localStorage
+			expect(document.querySelector("html")).toHaveClass("dark");
 		});
 	});
 });

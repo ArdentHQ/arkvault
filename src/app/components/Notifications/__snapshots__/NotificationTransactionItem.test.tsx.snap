@@ -166,7 +166,7 @@ exports[`Notifications > should render in xs 3`] = `
           class="w-2/5"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 pl-6 static mx-0"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 pl-6 static mx-0"
           >
             <div
               class="absolute top-0 bottom-0 left-2 flex items-center"
@@ -204,7 +204,7 @@ exports[`Notifications > should render in xs 3`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold justify-end whitespace-nowrap dim:text-theme-dim-200"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold justify-end whitespace-nowrap dim:text-theme-dim-200"
           >
             <span
               data-testid="TimeAgo"
@@ -215,7 +215,7 @@ exports[`Notifications > should render in xs 3`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end pr-6 static"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-end pr-6 static"
           >
             <div
               class="h-5"
@@ -259,7 +259,7 @@ exports[`Notifications > should render in xs 4`] = `
           class="w-2/5"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 pl-6 static mx-0"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 pl-6 static mx-0"
           >
             <div
               class="absolute top-0 bottom-0 left-2 flex items-center"
@@ -297,7 +297,7 @@ exports[`Notifications > should render in xs 4`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold justify-end whitespace-nowrap dim:text-theme-dim-200"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold justify-end whitespace-nowrap dim:text-theme-dim-200"
           >
             <span
               data-testid="TimeAgo"
@@ -308,7 +308,7 @@ exports[`Notifications > should render in xs 4`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end pr-6 static"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-end pr-6 static"
           >
             <div
               class="h-5"
@@ -352,7 +352,7 @@ exports[`Notifications > should render in xs 5`] = `
           class="w-2/5"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 pl-6 static mx-0"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 pl-6 static mx-0"
           >
             <div
               class="absolute top-0 bottom-0 left-2 flex items-center"
@@ -390,7 +390,7 @@ exports[`Notifications > should render in xs 5`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold justify-end whitespace-nowrap dim:text-theme-dim-200"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold justify-end whitespace-nowrap dim:text-theme-dim-200"
           >
             <span
               data-testid="TimeAgo"
@@ -401,7 +401,7 @@ exports[`Notifications > should render in xs 5`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end pr-6 static"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-end pr-6 static"
           >
             <div
               class="h-5"
@@ -445,7 +445,7 @@ exports[`Notifications > should render notification item 1`] = `
           class="w-2/5"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 pl-6 static mx-0"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 pl-6 static mx-0"
           >
             <div
               class="absolute top-0 bottom-0 left-2 flex items-center"
@@ -483,7 +483,7 @@ exports[`Notifications > should render notification item 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold justify-end whitespace-nowrap dim:text-theme-dim-200"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold justify-end whitespace-nowrap dim:text-theme-dim-200"
           >
             <span
               data-testid="TimeAgo"
@@ -494,7 +494,7 @@ exports[`Notifications > should render notification item 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end pr-6 static"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-end pr-6 static"
           >
             <div
               class="h-5"
