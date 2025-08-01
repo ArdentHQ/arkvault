@@ -183,7 +183,7 @@ export const SidePanel = ({
 												data-testid="SidePanel__content"
 											>
 												{subtitle && (
-													<div className="text-theme-secondary-text text-sm leading-5 font-normal md:text-base">
+													<div className="text-theme-secondary-text text-sm leading-7 font-normal md:text-base">
 														{subtitle}
 													</div>
 												)}
