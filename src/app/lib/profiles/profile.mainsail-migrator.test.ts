@@ -827,9 +827,45 @@ describe("ProfileMainsailMigrator", () => {
 
 			const result = await migrator.migrate(profile, data);
 
-			// Contact should be removed because address migration failed due to missing publicKey
+			// Contact should be removed because address migration failed due to no publicKey
 			expect(result.contacts["contact-1"]).toBeUndefined();
 			expect(Object.keys(result.contacts)).toHaveLength(0);
+		});
+
+		it("should migrate avatar when it is not a data URL", async () => {
+			const data: IProfileData = {
+				contacts: {},
+				data: {},
+				exchangeTransactions: {},
+				hosts: {},
+				id: "test-profile",
+				networks: {},
+				notifications: {},
+				settings: {
+					AVATAR: "not-a-data-url",
+					LOCALE: "en-US",
+					NAME: "Test User",
+					THEME: "dark",
+				},
+				wallets: {
+					"wallet-1": {
+						data: {
+							ADDRESS: "AdViMQwcwquCP8fbY9eczXzTX7yUs2uMw4",
+							NETWORK: "ark.mainnet",
+							PUBLIC_KEY: "03300acecfd7cfc5987ad8cc70bf51c5e93749f76103a02eaf4a1d143729b86a00",
+						},
+						id: "wallet-1",
+						settings: {},
+					},
+				},
+			};
+
+			const result = await migrator.migrate(profile, data);
+
+			// Avatar should be migrated to a generated one since it's not a data URL
+			expect(result.settings.AVATAR).toBeDefined();
+			expect(result.settings.AVATAR).not.toBe("not-a-data-url");
+			expect(result.settings.AVATAR).toContain("<svg");
 		});
 
 		it("should throw error when contact address migration fails with non-404 error", async () => {
