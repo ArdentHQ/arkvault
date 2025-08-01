@@ -30,7 +30,7 @@ describe("Add Recipient item", () => {
 		};
 	});
 
-	it.each(["sm", "lg"] as const)("should render with size %s", (size) => {
+	it.each(["xs", "lg"] as const)("should render with size %s", (size) => {
 		const { asFragment } = renderResponsive(
 			<AddRecipientItem
 				recipient={recipient}
