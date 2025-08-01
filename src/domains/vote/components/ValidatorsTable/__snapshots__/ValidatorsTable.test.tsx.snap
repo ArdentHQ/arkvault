@@ -272,14 +272,14 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
                     >
                       <td>
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0"
+                          class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0"
                         >
                           <span />
                         </div>
                       </td>
                       <td>
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
+                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
                         >
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
@@ -304,7 +304,7 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
                         class="hidden sm:table-cell"
                       >
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
+                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
                             class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 group-hover:bg-theme-secondary-300 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent dark:group-hover:bg-transparent"
@@ -318,7 +318,7 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
                         class="hidden sm:table-cell"
                       >
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0!"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0!"
                         >
                           <a
                             class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 dim:[&_svg]:text-theme-dim-500 w-24 md:w-auto"
@@ -368,7 +368,7 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
                         class="w-30 min-w-32"
                       >
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9"
                         >
                           <div
                             class="-mr-0.5 leading-[17px]"
@@ -394,14 +394,14 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
                     >
                       <td>
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0"
+                          class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0"
                         >
                           <span />
                         </div>
                       </td>
                       <td>
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
+                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
                         >
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
@@ -426,7 +426,7 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
                         class="hidden sm:table-cell"
                       >
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
+                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
                             class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 group-hover:bg-theme-secondary-300 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent dark:group-hover:bg-transparent"
@@ -440,7 +440,7 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
                         class="hidden sm:table-cell"
                       >
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0!"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0!"
                         >
                           <a
                             class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 dim:[&_svg]:text-theme-dim-500 w-24 md:w-auto"
@@ -490,7 +490,7 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
                         class="w-30 min-w-32"
                       >
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9"
                         >
                           <div
                             class="-mr-0.5 leading-[17px]"
@@ -516,14 +516,14 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
                     >
                       <td>
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0"
+                          class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0"
                         >
                           <span />
                         </div>
                       </td>
                       <td>
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
+                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
                         >
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
@@ -548,7 +548,7 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
                         class="hidden sm:table-cell"
                       >
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
+                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
                             class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 group-hover:bg-theme-secondary-300 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent dark:group-hover:bg-transparent"
@@ -562,7 +562,7 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
                         class="hidden sm:table-cell"
                       >
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0!"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0!"
                         >
                           <a
                             class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 dim:[&_svg]:text-theme-dim-500 w-24 md:w-auto"
@@ -612,7 +612,7 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
                         class="w-30 min-w-32"
                       >
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9"
                         >
                           <div
                             class="-mr-0.5 leading-[17px]"
@@ -1087,14 +1087,14 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
                     >
                       <td>
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 dim:border-theme-danger-400"
+                          class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 dim:border-theme-danger-400"
                         >
                           <span />
                         </div>
                       </td>
                       <td>
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 dim:border-theme-danger-400"
+                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 dim:border-theme-danger-400"
                         >
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
@@ -1119,7 +1119,7 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
                         class="hidden sm:table-cell"
                       >
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 dim:border-theme-danger-400"
+                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 dim:border-theme-danger-400"
                         >
                           <div
                             class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 group-hover:bg-theme-secondary-300 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent dark:group-hover:bg-transparent"
@@ -1133,7 +1133,7 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
                         class="hidden sm:table-cell"
                       >
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0! bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 dim:border-theme-danger-400"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0! bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 dim:border-theme-danger-400"
                         >
                           <a
                             class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 dim:[&_svg]:text-theme-dim-500 w-24 md:w-auto"
@@ -1183,7 +1183,7 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
                         class="w-30 min-w-32"
                       >
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 dim:border-theme-danger-400"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 dim:border-theme-danger-400"
                         >
                           <div
                             class="-mr-0.5 leading-[17px]"
@@ -1209,14 +1209,14 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
                     >
                       <td>
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0"
+                          class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0"
                         >
                           <span />
                         </div>
                       </td>
                       <td>
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
+                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
                         >
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
@@ -1241,7 +1241,7 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
                         class="hidden sm:table-cell"
                       >
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
+                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
                             class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 group-hover:bg-theme-secondary-300 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent dark:group-hover:bg-transparent"
@@ -1255,7 +1255,7 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
                         class="hidden sm:table-cell"
                       >
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0!"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0!"
                         >
                           <a
                             class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 dim:[&_svg]:text-theme-dim-500 w-24 md:w-auto"
@@ -1305,7 +1305,7 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
                         class="w-30 min-w-32"
                       >
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9"
                         >
                           <div
                             class="-mr-0.5 leading-[17px]"
@@ -1331,14 +1331,14 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
                     >
                       <td>
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0"
+                          class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0"
                         >
                           <span />
                         </div>
                       </td>
                       <td>
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
+                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
                         >
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
@@ -1363,7 +1363,7 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
                         class="hidden sm:table-cell"
                       >
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
+                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
                             class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 group-hover:bg-theme-secondary-300 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent dark:group-hover:bg-transparent"
@@ -1377,7 +1377,7 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
                         class="hidden sm:table-cell"
                       >
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0!"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0!"
                         >
                           <a
                             class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 dim:[&_svg]:text-theme-dim-500 w-24 md:w-auto"
@@ -1427,7 +1427,7 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
                         class="w-30 min-w-32"
                       >
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9"
                         >
                           <div
                             class="-mr-0.5 leading-[17px]"
@@ -1902,14 +1902,14 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
                     >
                       <td>
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600 dim:border-theme-success-600"
+                          class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600 dim:border-theme-success-600"
                         >
                           <span />
                         </div>
                       </td>
                       <td>
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600 dim:border-theme-success-600"
+                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600 dim:border-theme-success-600"
                         >
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
@@ -1934,7 +1934,7 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
                         class="hidden sm:table-cell"
                       >
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600 dim:border-theme-success-600"
+                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600 dim:border-theme-success-600"
                         >
                           <div
                             class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 group-hover:bg-theme-secondary-300 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent dark:group-hover:bg-transparent"
@@ -1948,7 +1948,7 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
                         class="hidden sm:table-cell"
                       >
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0! bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600 dim:border-theme-success-600"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0! bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600 dim:border-theme-success-600"
                         >
                           <a
                             class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 dim:[&_svg]:text-theme-dim-500 w-24 md:w-auto"
@@ -1998,7 +1998,7 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
                         class="w-30 min-w-32"
                       >
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600 dim:border-theme-success-600"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600 dim:border-theme-success-600"
                         >
                           <div
                             class="-mr-0.5 leading-[17px]"
@@ -2024,14 +2024,14 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
                     >
                       <td>
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0"
+                          class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0"
                         >
                           <span />
                         </div>
                       </td>
                       <td>
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
+                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
                         >
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
@@ -2056,7 +2056,7 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
                         class="hidden sm:table-cell"
                       >
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
+                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
                             class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 group-hover:bg-theme-secondary-300 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent dark:group-hover:bg-transparent"
@@ -2070,7 +2070,7 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
                         class="hidden sm:table-cell"
                       >
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0!"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0!"
                         >
                           <a
                             class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 dim:[&_svg]:text-theme-dim-500 w-24 md:w-auto"
@@ -2120,7 +2120,7 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
                         class="w-30 min-w-32"
                       >
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9"
                         >
                           <div
                             class="-mr-0.5 leading-[17px]"
@@ -2146,14 +2146,14 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
                     >
                       <td>
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0"
+                          class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0"
                         >
                           <span />
                         </div>
                       </td>
                       <td>
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
+                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
                         >
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
@@ -2178,7 +2178,7 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
                         class="hidden sm:table-cell"
                       >
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
+                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
                             class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 group-hover:bg-theme-secondary-300 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent dark:group-hover:bg-transparent"
@@ -2192,7 +2192,7 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
                         class="hidden sm:table-cell"
                       >
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0!"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0!"
                         >
                           <a
                             class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 dim:[&_svg]:text-theme-dim-500 w-24 md:w-auto"
@@ -2242,7 +2242,7 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
                         class="w-30 min-w-32"
                       >
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9"
                         >
                           <div
                             class="-mr-0.5 leading-[17px]"
@@ -2717,14 +2717,14 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
                     >
                       <td>
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0"
+                          class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0"
                         >
                           <span />
                         </div>
                       </td>
                       <td>
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
+                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
                         >
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
@@ -2749,7 +2749,7 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
                         class="hidden sm:table-cell"
                       >
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
+                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
                             class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 group-hover:bg-theme-secondary-300 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent dark:group-hover:bg-transparent"
@@ -2763,7 +2763,7 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
                         class="hidden sm:table-cell"
                       >
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0!"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0!"
                         >
                           <a
                             class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 dim:[&_svg]:text-theme-dim-500 w-24 md:w-auto"
@@ -2813,7 +2813,7 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
                         class="w-30 min-w-32"
                       >
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9"
                         >
                           <div
                             class="-mr-0.5 leading-[17px]"
@@ -2839,14 +2839,14 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
                     >
                       <td>
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0"
+                          class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0"
                         >
                           <span />
                         </div>
                       </td>
                       <td>
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
+                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
                         >
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
@@ -2871,7 +2871,7 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
                         class="hidden sm:table-cell"
                       >
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
+                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
                             class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 group-hover:bg-theme-secondary-300 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent dark:group-hover:bg-transparent"
@@ -2885,7 +2885,7 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
                         class="hidden sm:table-cell"
                       >
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0!"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0!"
                         >
                           <a
                             class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 dim:[&_svg]:text-theme-dim-500 w-24 md:w-auto"
@@ -2935,7 +2935,7 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
                         class="w-30 min-w-32"
                       >
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9"
                         >
                           <div
                             class="-mr-0.5 leading-[17px]"
@@ -2961,14 +2961,14 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
                     >
                       <td>
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0"
+                          class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0"
                         >
                           <span />
                         </div>
                       </td>
                       <td>
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
+                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
                         >
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
@@ -2993,7 +2993,7 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
                         class="hidden sm:table-cell"
                       >
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
+                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
                             class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 group-hover:bg-theme-secondary-300 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent dark:group-hover:bg-transparent"
@@ -3007,7 +3007,7 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
                         class="hidden sm:table-cell"
                       >
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0!"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0!"
                         >
                           <a
                             class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 dim:[&_svg]:text-theme-dim-500 w-24 md:w-auto"
@@ -3057,7 +3057,7 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
                         class="w-30 min-w-32"
                       >
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9"
                         >
                           <div
                             class="-mr-0.5 leading-[17px]"
@@ -3532,14 +3532,14 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
                     >
                       <td>
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 dim:border-theme-danger-400"
+                          class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 dim:border-theme-danger-400"
                         >
                           <span />
                         </div>
                       </td>
                       <td>
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 dim:border-theme-danger-400"
+                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 dim:border-theme-danger-400"
                         >
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
@@ -3564,7 +3564,7 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
                         class="hidden sm:table-cell"
                       >
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 dim:border-theme-danger-400"
+                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 dim:border-theme-danger-400"
                         >
                           <div
                             class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 group-hover:bg-theme-secondary-300 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent dark:group-hover:bg-transparent"
@@ -3578,7 +3578,7 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
                         class="hidden sm:table-cell"
                       >
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0! bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 dim:border-theme-danger-400"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0! bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 dim:border-theme-danger-400"
                         >
                           <a
                             class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 dim:[&_svg]:text-theme-dim-500 w-24 md:w-auto"
@@ -3628,7 +3628,7 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
                         class="w-30 min-w-32"
                       >
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 dim:border-theme-danger-400"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 dim:border-theme-danger-400"
                         >
                           <div
                             class="-mr-0.5 leading-[17px]"
@@ -3654,14 +3654,14 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
                     >
                       <td>
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600 dim:border-theme-success-600"
+                          class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600 dim:border-theme-success-600"
                         >
                           <span />
                         </div>
                       </td>
                       <td>
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600 dim:border-theme-success-600"
+                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600 dim:border-theme-success-600"
                         >
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
@@ -3686,7 +3686,7 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
                         class="hidden sm:table-cell"
                       >
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600 dim:border-theme-success-600"
+                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600 dim:border-theme-success-600"
                         >
                           <div
                             class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 group-hover:bg-theme-secondary-300 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent dark:group-hover:bg-transparent"
@@ -3700,7 +3700,7 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
                         class="hidden sm:table-cell"
                       >
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0! bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600 dim:border-theme-success-600"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0! bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600 dim:border-theme-success-600"
                         >
                           <a
                             class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 dim:[&_svg]:text-theme-dim-500 w-24 md:w-auto"
@@ -3750,7 +3750,7 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
                         class="w-30 min-w-32"
                       >
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600 dim:border-theme-success-600"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600 dim:border-theme-success-600"
                         >
                           <div
                             class="-mr-0.5 leading-[17px]"
@@ -3776,14 +3776,14 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
                     >
                       <td>
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0"
+                          class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0"
                         >
                           <span />
                         </div>
                       </td>
                       <td>
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
+                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
                         >
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
@@ -3808,7 +3808,7 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
                         class="hidden sm:table-cell"
                       >
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
+                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
                             class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 group-hover:bg-theme-secondary-300 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent dark:group-hover:bg-transparent"
@@ -3822,7 +3822,7 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
                         class="hidden sm:table-cell"
                       >
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0!"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0!"
                         >
                           <a
                             class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 dim:[&_svg]:text-theme-dim-500 w-24 md:w-auto"
@@ -3872,7 +3872,7 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
                         class="w-30 min-w-32"
                       >
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9"
                         >
                           <div
                             class="-mr-0.5 leading-[17px]"
@@ -4352,14 +4352,14 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
                     >
                       <td>
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600 dim:border-theme-success-600"
+                          class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600 dim:border-theme-success-600"
                         >
                           <span />
                         </div>
                       </td>
                       <td>
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600 dim:border-theme-success-600"
+                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600 dim:border-theme-success-600"
                         >
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
@@ -4384,7 +4384,7 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
                         class="hidden sm:table-cell"
                       >
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600 dim:border-theme-success-600"
+                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600 dim:border-theme-success-600"
                         >
                           <div
                             class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 group-hover:bg-theme-secondary-300 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent dark:group-hover:bg-transparent"
@@ -4398,7 +4398,7 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
                         class="hidden sm:table-cell"
                       >
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0! bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600 dim:border-theme-success-600"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0! bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600 dim:border-theme-success-600"
                         >
                           <a
                             class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 dim:[&_svg]:text-theme-dim-500 w-24 md:w-auto"
@@ -4448,7 +4448,7 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
                         class="w-30 min-w-32"
                       >
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600 dim:border-theme-success-600"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600 dim:border-theme-success-600"
                         >
                           <div
                             class="-mr-0.5 leading-[17px]"
@@ -4474,14 +4474,14 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
                     >
                       <td>
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0"
+                          class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0"
                         >
                           <span />
                         </div>
                       </td>
                       <td>
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
+                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
                         >
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
@@ -4506,7 +4506,7 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
                         class="hidden sm:table-cell"
                       >
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
+                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
                             class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 group-hover:bg-theme-secondary-300 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent dark:group-hover:bg-transparent"
@@ -4520,7 +4520,7 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
                         class="hidden sm:table-cell"
                       >
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0!"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0!"
                         >
                           <a
                             class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 dim:[&_svg]:text-theme-dim-500 w-24 md:w-auto"
@@ -4570,7 +4570,7 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
                         class="w-30 min-w-32"
                       >
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9"
                         >
                           <div
                             class="-mr-0.5 leading-[17px]"
@@ -4596,14 +4596,14 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
                     >
                       <td>
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0"
+                          class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0"
                         >
                           <span />
                         </div>
                       </td>
                       <td>
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
+                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
                         >
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
@@ -4628,7 +4628,7 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
                         class="hidden sm:table-cell"
                       >
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
+                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
                             class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 group-hover:bg-theme-secondary-300 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent dark:group-hover:bg-transparent"
@@ -4642,7 +4642,7 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
                         class="hidden sm:table-cell"
                       >
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0!"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0!"
                         >
                           <a
                             class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 dim:[&_svg]:text-theme-dim-500 w-24 md:w-auto"
@@ -4692,7 +4692,7 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
                         class="w-30 min-w-32"
                       >
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9"
                         >
                           <div
                             class="-mr-0.5 leading-[17px]"
@@ -5220,14 +5220,14 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
                     >
                       <td>
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 dim:border-theme-dim-navy-600"
+                          class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 dim:border-theme-dim-navy-600"
                         >
                           <span />
                         </div>
                       </td>
                       <td>
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 dim:border-theme-dim-navy-600"
+                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 dim:border-theme-dim-navy-600"
                         >
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
@@ -5252,7 +5252,7 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
                         class="hidden sm:table-cell"
                       >
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 dim:border-theme-dim-navy-600"
+                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 dim:border-theme-dim-navy-600"
                         >
                           <div
                             class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 group-hover:bg-theme-secondary-300 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent dark:group-hover:bg-transparent"
@@ -5266,7 +5266,7 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
                         class="hidden sm:table-cell"
                       >
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0! bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 dim:border-theme-dim-navy-600"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0! bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 dim:border-theme-dim-navy-600"
                         >
                           <a
                             class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 dim:[&_svg]:text-theme-dim-500 w-24 md:w-auto"
@@ -5317,7 +5317,7 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
                         data-testid="ValidatorVoteAmount"
                       >
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 dim:border-theme-dim-navy-600"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 dim:border-theme-dim-navy-600"
                         >
                           <div
                             class="relative flex-1 px-3"
@@ -5361,7 +5361,7 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
                         class="w-30 min-w-32"
                       >
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 dim:border-theme-dim-navy-600"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 dim:border-theme-dim-navy-600"
                         >
                           <div
                             class="-mr-0.5 leading-[17px]"
@@ -5387,14 +5387,14 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
                     >
                       <td>
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0"
+                          class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0"
                         >
                           <span />
                         </div>
                       </td>
                       <td>
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
+                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
                         >
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
@@ -5419,7 +5419,7 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
                         class="hidden sm:table-cell"
                       >
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
+                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
                             class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 group-hover:bg-theme-secondary-300 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent dark:group-hover:bg-transparent"
@@ -5433,7 +5433,7 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
                         class="hidden sm:table-cell"
                       >
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0!"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0!"
                         >
                           <a
                             class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 dim:[&_svg]:text-theme-dim-500 w-24 md:w-auto"
@@ -5484,7 +5484,7 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
                         data-testid="ValidatorVoteAmount"
                       >
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent"
                         >
                           <div
                             class="relative flex-1 px-3"
@@ -5529,7 +5529,7 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
                         class="w-30 min-w-32"
                       >
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9"
                         >
                           <div
                             class="-mr-0.5 leading-[17px]"
@@ -5555,14 +5555,14 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
                     >
                       <td>
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0"
+                          class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0"
                         >
                           <span />
                         </div>
                       </td>
                       <td>
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
+                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
                         >
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
@@ -5587,7 +5587,7 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
                         class="hidden sm:table-cell"
                       >
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
+                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
                             class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 group-hover:bg-theme-secondary-300 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent dark:group-hover:bg-transparent"
@@ -5601,7 +5601,7 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
                         class="hidden sm:table-cell"
                       >
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0!"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0!"
                         >
                           <a
                             class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 dim:[&_svg]:text-theme-dim-500 w-24 md:w-auto"
@@ -5652,7 +5652,7 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
                         data-testid="ValidatorVoteAmount"
                       >
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent"
                         >
                           <div
                             class="relative flex-1 px-3"
@@ -5697,7 +5697,7 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
                         class="w-30 min-w-32"
                       >
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9"
                         >
                           <div
                             class="-mr-0.5 leading-[17px]"
@@ -6193,14 +6193,14 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
                     >
                       <td>
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 dim:border-theme-danger-400"
+                          class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 dim:border-theme-danger-400"
                         >
                           <span />
                         </div>
                       </td>
                       <td>
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 dim:border-theme-danger-400"
+                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 dim:border-theme-danger-400"
                         >
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
@@ -6225,7 +6225,7 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
                         class="hidden sm:table-cell"
                       >
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 dim:border-theme-danger-400"
+                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 dim:border-theme-danger-400"
                         >
                           <div
                             class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 group-hover:bg-theme-secondary-300 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent dark:group-hover:bg-transparent"
@@ -6239,7 +6239,7 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
                         class="hidden sm:table-cell"
                       >
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0! bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 dim:border-theme-danger-400"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0! bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 dim:border-theme-danger-400"
                         >
                           <a
                             class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 dim:[&_svg]:text-theme-dim-500 w-24 md:w-auto"
@@ -6289,7 +6289,7 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
                         class="w-30 min-w-32"
                       >
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 dim:border-theme-danger-400"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 dim:border-theme-danger-400"
                         >
                           <div
                             class="-mr-0.5 leading-[17px]"
@@ -6315,14 +6315,14 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
                     >
                       <td>
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600 dim:border-theme-success-600"
+                          class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600 dim:border-theme-success-600"
                         >
                           <span />
                         </div>
                       </td>
                       <td>
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600 dim:border-theme-success-600"
+                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600 dim:border-theme-success-600"
                         >
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
@@ -6347,7 +6347,7 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
                         class="hidden sm:table-cell"
                       >
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600 dim:border-theme-success-600"
+                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600 dim:border-theme-success-600"
                         >
                           <div
                             class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 group-hover:bg-theme-secondary-300 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent dark:group-hover:bg-transparent"
@@ -6361,7 +6361,7 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
                         class="hidden sm:table-cell"
                       >
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0! bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600 dim:border-theme-success-600"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0! bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600 dim:border-theme-success-600"
                         >
                           <a
                             class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 dim:[&_svg]:text-theme-dim-500 w-24 md:w-auto"
@@ -6411,7 +6411,7 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
                         class="w-30 min-w-32"
                       >
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600 dim:border-theme-success-600"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600 dim:border-theme-success-600"
                         >
                           <div
                             class="-mr-0.5 leading-[17px]"
@@ -6437,14 +6437,14 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
                     >
                       <td>
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0"
+                          class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0"
                         >
                           <span />
                         </div>
                       </td>
                       <td>
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
+                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
                         >
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
@@ -6469,7 +6469,7 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
                         class="hidden sm:table-cell"
                       >
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
+                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
                             class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 group-hover:bg-theme-secondary-300 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent dark:group-hover:bg-transparent"
@@ -6483,7 +6483,7 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
                         class="hidden sm:table-cell"
                       >
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0!"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0!"
                         >
                           <a
                             class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 dim:[&_svg]:text-theme-dim-500 w-24 md:w-auto"
@@ -6533,7 +6533,7 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
                         class="w-30 min-w-32"
                       >
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9"
                         >
                           <div
                             class="-mr-0.5 leading-[17px]"
@@ -7013,14 +7013,14 @@ exports[`ValidatorsTable > should select multiple validators to unvote/vote 1`] 
                     >
                       <td>
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 dim:border-theme-danger-400"
+                          class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 dim:border-theme-danger-400"
                         >
                           <span />
                         </div>
                       </td>
                       <td>
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 dim:border-theme-danger-400"
+                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 dim:border-theme-danger-400"
                         >
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
@@ -7045,7 +7045,7 @@ exports[`ValidatorsTable > should select multiple validators to unvote/vote 1`] 
                         class="hidden sm:table-cell"
                       >
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 dim:border-theme-danger-400"
+                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 dim:border-theme-danger-400"
                         >
                           <div
                             class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 group-hover:bg-theme-secondary-300 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent dark:group-hover:bg-transparent"
@@ -7059,7 +7059,7 @@ exports[`ValidatorsTable > should select multiple validators to unvote/vote 1`] 
                         class="hidden sm:table-cell"
                       >
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0! bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 dim:border-theme-danger-400"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0! bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 dim:border-theme-danger-400"
                         >
                           <a
                             class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 dim:[&_svg]:text-theme-dim-500 w-24 md:w-auto"
@@ -7109,7 +7109,7 @@ exports[`ValidatorsTable > should select multiple validators to unvote/vote 1`] 
                         class="w-30 min-w-32"
                       >
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 dim:border-theme-danger-400"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 dim:border-theme-danger-400"
                         >
                           <div
                             class="-mr-0.5 leading-[17px]"
@@ -7135,14 +7135,14 @@ exports[`ValidatorsTable > should select multiple validators to unvote/vote 1`] 
                     >
                       <td>
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600 dim:border-theme-success-600"
+                          class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600 dim:border-theme-success-600"
                         >
                           <span />
                         </div>
                       </td>
                       <td>
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600 dim:border-theme-success-600"
+                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600 dim:border-theme-success-600"
                         >
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
@@ -7167,7 +7167,7 @@ exports[`ValidatorsTable > should select multiple validators to unvote/vote 1`] 
                         class="hidden sm:table-cell"
                       >
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600 dim:border-theme-success-600"
+                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600 dim:border-theme-success-600"
                         >
                           <div
                             class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 group-hover:bg-theme-secondary-300 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent dark:group-hover:bg-transparent"
@@ -7181,7 +7181,7 @@ exports[`ValidatorsTable > should select multiple validators to unvote/vote 1`] 
                         class="hidden sm:table-cell"
                       >
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0! bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600 dim:border-theme-success-600"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0! bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600 dim:border-theme-success-600"
                         >
                           <a
                             class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 dim:[&_svg]:text-theme-dim-500 w-24 md:w-auto"
@@ -7231,7 +7231,7 @@ exports[`ValidatorsTable > should select multiple validators to unvote/vote 1`] 
                         class="w-30 min-w-32"
                       >
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600 dim:border-theme-success-600"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600 dim:border-theme-success-600"
                         >
                           <div
                             class="-mr-0.5 leading-[17px]"
@@ -7257,14 +7257,14 @@ exports[`ValidatorsTable > should select multiple validators to unvote/vote 1`] 
                     >
                       <td>
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600 dim:border-theme-success-600"
+                          class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600 dim:border-theme-success-600"
                         >
                           <span />
                         </div>
                       </td>
                       <td>
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600 dim:border-theme-success-600"
+                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600 dim:border-theme-success-600"
                         >
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
@@ -7289,7 +7289,7 @@ exports[`ValidatorsTable > should select multiple validators to unvote/vote 1`] 
                         class="hidden sm:table-cell"
                       >
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600 dim:border-theme-success-600"
+                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600 dim:border-theme-success-600"
                         >
                           <div
                             class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 group-hover:bg-theme-secondary-300 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent dark:group-hover:bg-transparent"
@@ -7303,7 +7303,7 @@ exports[`ValidatorsTable > should select multiple validators to unvote/vote 1`] 
                         class="hidden sm:table-cell"
                       >
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0! bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600 dim:border-theme-success-600"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0! bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600 dim:border-theme-success-600"
                         >
                           <a
                             class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 dim:[&_svg]:text-theme-dim-500 w-24 md:w-auto"
@@ -7353,7 +7353,7 @@ exports[`ValidatorsTable > should select multiple validators to unvote/vote 1`] 
                         class="w-30 min-w-32"
                       >
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600 dim:border-theme-success-600"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600 dim:border-theme-success-600"
                         >
                           <div
                             class="-mr-0.5 leading-[17px]"
@@ -7828,14 +7828,14 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
                     >
                       <td>
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 dim:border-theme-dim-navy-600"
+                          class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 dim:border-theme-dim-navy-600"
                         >
                           <span />
                         </div>
                       </td>
                       <td>
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 dim:border-theme-dim-navy-600"
+                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 dim:border-theme-dim-navy-600"
                         >
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
@@ -7860,7 +7860,7 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
                         class="hidden sm:table-cell"
                       >
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 dim:border-theme-dim-navy-600"
+                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 dim:border-theme-dim-navy-600"
                         >
                           <div
                             class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 group-hover:bg-theme-secondary-300 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent dark:group-hover:bg-transparent"
@@ -7874,7 +7874,7 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
                         class="hidden sm:table-cell"
                       >
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0! bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 dim:border-theme-dim-navy-600"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0! bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 dim:border-theme-dim-navy-600"
                         >
                           <a
                             class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 dim:[&_svg]:text-theme-dim-500 w-24 md:w-auto"
@@ -7924,7 +7924,7 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
                         class="w-30 min-w-32"
                       >
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 dim:border-theme-dim-navy-600"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 dim:border-theme-dim-navy-600"
                         >
                           <div
                             class="-mr-0.5 leading-[17px]"
@@ -7950,14 +7950,14 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
                     >
                       <td>
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0"
+                          class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0"
                         >
                           <span />
                         </div>
                       </td>
                       <td>
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
+                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
                         >
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
@@ -7982,7 +7982,7 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
                         class="hidden sm:table-cell"
                       >
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
+                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
                             class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 group-hover:bg-theme-secondary-300 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent dark:group-hover:bg-transparent"
@@ -7996,7 +7996,7 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
                         class="hidden sm:table-cell"
                       >
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0!"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0!"
                         >
                           <a
                             class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 dim:[&_svg]:text-theme-dim-500 w-24 md:w-auto"
@@ -8046,7 +8046,7 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
                         class="w-30 min-w-32"
                       >
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9"
                         >
                           <div
                             class="-mr-0.5 leading-[17px]"
@@ -8072,14 +8072,14 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
                     >
                       <td>
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0"
+                          class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0"
                         >
                           <span />
                         </div>
                       </td>
                       <td>
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
+                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
                         >
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
@@ -8104,7 +8104,7 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
                         class="hidden sm:table-cell"
                       >
                         <div
-                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
+                          class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
                             class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 group-hover:bg-theme-secondary-300 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent dark:group-hover:bg-transparent"
@@ -8118,7 +8118,7 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
                         class="hidden sm:table-cell"
                       >
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0!"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0!"
                         >
                           <a
                             class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 dim:[&_svg]:text-theme-dim-500 w-24 md:w-auto"
@@ -8168,7 +8168,7 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
                         class="w-30 min-w-32"
                       >
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9"
                         >
                           <div
                             class="-mr-0.5 leading-[17px]"

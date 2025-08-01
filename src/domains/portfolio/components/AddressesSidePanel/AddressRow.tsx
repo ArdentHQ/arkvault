@@ -49,6 +49,7 @@ export const AddressRow = ({
 				isError={isError}
 				errorMessage={errorMessage}
 				deleteContent={deleteContent}
+				isSingleView={isSingleView}
 			/>
 		);
 	}
