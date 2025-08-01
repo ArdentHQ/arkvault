@@ -2783,7 +2783,7 @@ exports[`Servers Settings > Added reachable servers > should render custom serve
                                     data-testid="NodeStatus--statusloading"
                                   >
                                     <div
-                                      class="animate-spin rounded-full border-[5px] shrink-0 w-5 h-5 border-theme-secondary-200 dark:border-black dim:border-theme-dim-700 border-l-theme-primary-600 dark:border-l-theme-primary-600 dim:border-l-theme-dim-navy-600"
+                                      class="animate-spin rounded-full shrink-0 w-5 h-5 border-[3px] border-theme-secondary-200 dark:border-black dim:border-theme-dim-700 border-l-theme-primary-600 dark:border-l-theme-primary-600 dim:border-l-theme-dim-navy-600"
                                     />
                                   </div>
                                 </div>
@@ -3045,7 +3045,7 @@ exports[`Servers Settings > Added reachable servers > should render custom serve
                                             data-testid="CustomPeersPeer--statusloading"
                                           >
                                             <div
-                                              class="animate-spin rounded-full border-[5px] shrink-0 w-5 h-5 border-theme-secondary-200 dark:border-black dim:border-theme-dim-700 border-l-theme-primary-600 dark:border-l-theme-primary-600 dim:border-l-theme-dim-navy-600"
+                                              class="animate-spin rounded-full shrink-0 w-5 h-5 border-[3px] border-theme-secondary-200 dark:border-black dim:border-theme-dim-700 border-l-theme-primary-600 dark:border-l-theme-primary-600 dim:border-l-theme-dim-navy-600"
                                             />
                                           </div>
                                         </div>
@@ -3056,7 +3056,7 @@ exports[`Servers Settings > Added reachable servers > should render custom serve
                                             data-testid="CustomPeersPeer--statusloading"
                                           >
                                             <div
-                                              class="animate-spin rounded-full border-[5px] shrink-0 w-5 h-5 border-theme-secondary-200 dark:border-black dim:border-theme-dim-700 border-l-theme-primary-600 dark:border-l-theme-primary-600 dim:border-l-theme-dim-navy-600"
+                                              class="animate-spin rounded-full shrink-0 w-5 h-5 border-[3px] border-theme-secondary-200 dark:border-black dim:border-theme-dim-700 border-l-theme-primary-600 dark:border-l-theme-primary-600 dim:border-l-theme-dim-navy-600"
                                             />
                                           </div>
                                         </div>
@@ -3067,7 +3067,7 @@ exports[`Servers Settings > Added reachable servers > should render custom serve
                                             data-testid="CustomPeersPeer--statusloading"
                                           >
                                             <div
-                                              class="animate-spin rounded-full border-[5px] shrink-0 w-5 h-5 border-theme-secondary-200 dark:border-black dim:border-theme-dim-700 border-l-theme-primary-600 dark:border-l-theme-primary-600 dim:border-l-theme-dim-navy-600"
+                                              class="animate-spin rounded-full shrink-0 w-5 h-5 border-[3px] border-theme-secondary-200 dark:border-black dim:border-theme-dim-700 border-l-theme-primary-600 dark:border-l-theme-primary-600 dim:border-l-theme-dim-navy-600"
                                             />
                                           </div>
                                         </div>
@@ -4281,7 +4281,7 @@ exports[`Servers Settings > Added reachable servers > should render customs serv
                                     data-testid="NodeStatus--statusloading"
                                   >
                                     <div
-                                      class="animate-spin rounded-full border-[5px] shrink-0 w-5 h-5 border-theme-secondary-200 dark:border-black dim:border-theme-dim-700 border-l-theme-primary-600 dark:border-l-theme-primary-600 dim:border-l-theme-dim-navy-600"
+                                      class="animate-spin rounded-full shrink-0 w-5 h-5 border-[3px] border-theme-secondary-200 dark:border-black dim:border-theme-dim-700 border-l-theme-primary-600 dark:border-l-theme-primary-600 dim:border-l-theme-dim-navy-600"
                                     />
                                   </div>
                                 </div>
@@ -4529,7 +4529,7 @@ exports[`Servers Settings > Added reachable servers > should render customs serv
                                                     data-testid="CustomPeersPeer--statusloading"
                                                   >
                                                     <div
-                                                      class="animate-spin rounded-full border-[5px] shrink-0 w-5 h-5 border-theme-secondary-200 dark:border-black dim:border-theme-dim-700 border-l-theme-primary-600 dark:border-l-theme-primary-600 dim:border-l-theme-dim-navy-600"
+                                                      class="animate-spin rounded-full shrink-0 w-5 h-5 border-[3px] border-theme-secondary-200 dark:border-black dim:border-theme-dim-700 border-l-theme-primary-600 dark:border-l-theme-primary-600 dim:border-l-theme-dim-navy-600"
                                                     />
                                                   </div>
                                                 </div>
@@ -4558,7 +4558,7 @@ exports[`Servers Settings > Added reachable servers > should render customs serv
                                                     data-testid="CustomPeersPeer--statusloading"
                                                   >
                                                     <div
-                                                      class="animate-spin rounded-full border-[5px] shrink-0 w-5 h-5 border-theme-secondary-200 dark:border-black dim:border-theme-dim-700 border-l-theme-primary-600 dark:border-l-theme-primary-600 dim:border-l-theme-dim-navy-600"
+                                                      class="animate-spin rounded-full shrink-0 w-5 h-5 border-[3px] border-theme-secondary-200 dark:border-black dim:border-theme-dim-700 border-l-theme-primary-600 dark:border-l-theme-primary-600 dim:border-l-theme-dim-navy-600"
                                                     />
                                                   </div>
                                                 </div>
@@ -4587,7 +4587,7 @@ exports[`Servers Settings > Added reachable servers > should render customs serv
                                                     data-testid="CustomPeersPeer--statusloading"
                                                   >
                                                     <div
-                                                      class="animate-spin rounded-full border-[5px] shrink-0 w-5 h-5 border-theme-secondary-200 dark:border-black dim:border-theme-dim-700 border-l-theme-primary-600 dark:border-l-theme-primary-600 dim:border-l-theme-dim-navy-600"
+                                                      class="animate-spin rounded-full shrink-0 w-5 h-5 border-[3px] border-theme-secondary-200 dark:border-black dim:border-theme-dim-700 border-l-theme-primary-600 dark:border-l-theme-primary-600 dim:border-l-theme-dim-navy-600"
                                                     />
                                                   </div>
                                                 </div>
@@ -12688,7 +12688,7 @@ exports[`Servers Settings > should render servers page 1`] = `
                                     data-testid="NodeStatus--statusloading"
                                   >
                                     <div
-                                      class="animate-spin rounded-full border-[5px] shrink-0 w-5 h-5 border-theme-secondary-200 dark:border-black dim:border-theme-dim-700 border-l-theme-primary-600 dark:border-l-theme-primary-600 dim:border-l-theme-dim-navy-600"
+                                      class="animate-spin rounded-full shrink-0 w-5 h-5 border-[3px] border-theme-secondary-200 dark:border-black dim:border-theme-dim-700 border-l-theme-primary-600 dark:border-l-theme-primary-600 dim:border-l-theme-dim-navy-600"
                                     />
                                   </div>
                                 </div>
