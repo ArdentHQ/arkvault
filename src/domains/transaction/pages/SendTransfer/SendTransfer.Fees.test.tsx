@@ -173,17 +173,17 @@ describe("SendTransfer Fee Handling", () => {
 		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
 		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
 
-		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.000105");
+		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.000126");
 
 		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.AVERAGE));
 		await waitFor(() => expect(screen.getAllByRole("radio")[1]).toBeChecked());
 
-		expect(screen.getAllByRole("radio")[1]).toHaveTextContent("0.0001064");
+		expect(screen.getAllByRole("radio")[1]).toHaveTextContent("0.00012768");
 
 		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.FAST));
 		await waitFor(() => expect(screen.getAllByRole("radio")[2]).toBeChecked());
 
-		expect(screen.getAllByRole("radio")[2]).toHaveTextContent("0.000126");
+		expect(screen.getAllByRole("radio")[2]).toHaveTextContent("0.0001512");
 	});
 
 	it("should keep the selected fee when user steps back", async () => {
@@ -275,17 +275,17 @@ describe("SendTransfer Fee Handling", () => {
 		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
 		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
 
-		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.000105");
+		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.000126");
 
 		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.AVERAGE));
 		await waitFor(() => expect(screen.getAllByRole("radio")[1]).toBeChecked());
 
-		expect(screen.getAllByRole("radio")[1]).toHaveTextContent("0.0001064");
+		expect(screen.getAllByRole("radio")[1]).toHaveTextContent("0.00012768");
 
 		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.FAST));
 		await waitFor(() => expect(screen.getAllByRole("radio")[2]).toBeChecked());
 
-		expect(screen.getAllByRole("radio")[2]).toHaveTextContent("0.000126");
+		expect(screen.getAllByRole("radio")[2]).toHaveTextContent("0.0001512");
 
 		await userEvent.click(
 			within(screen.getByTestId("InputFee")).getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED),
