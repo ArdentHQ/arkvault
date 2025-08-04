@@ -20,7 +20,7 @@ export const InputFeeSimple: React.FC<InputFeeSimpleProperties> = ({
 }: InputFeeSimpleProperties) => {
 	const { t } = useTranslation();
 
-	const { byFeeType } = useConfirmationTimes({ blockTime })
+	const { byFeeType } = useConfirmationTimes({ blockTime });
 
 	return (
 		<ButtonGroup className="flex-col space-y-2 sm:flex-row sm:space-y-0 sm:space-x-2">
@@ -113,7 +113,7 @@ export const InputFeeSimple: React.FC<InputFeeSimpleProperties> = ({
 								<span>{t("COMMON.CONFIRMATION_TIME_LABEL")}</span>
 								<span>
 									{t("COMMON.CONFIRMATION_TIME", {
-										time: byFeeType(label)
+										time: byFeeType(label),
 									}).toString()}
 								</span>
 							</div>

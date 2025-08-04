@@ -25,7 +25,7 @@ export const InputFeeAdvanced: React.FC<InputFeeAdvancedProperties> = ({
 	gasPrice,
 	gasLimit,
 	network,
-	blockTime
+	blockTime,
 }: InputFeeAdvancedProperties) => {
 	const { t } = useTranslation();
 
@@ -36,7 +36,7 @@ export const InputFeeAdvanced: React.FC<InputFeeAdvancedProperties> = ({
 		gasLimit.toString(),
 	);
 
-	const { byFeeType } = useConfirmationTimes({ blockTime })
+	const { byFeeType } = useConfirmationTimes({ blockTime });
 
 	const { minGasPrice, maxGasPrice, minGasLimit, maxGasLimit } = getFeeMinMax();
 
