@@ -200,7 +200,7 @@ export const useFees = (profile: Contracts.IProfile) => {
 
 			// Add 20% buffer on the gas, in case the estimate is too low.
 			// @see https://app.clickup.com/t/86dxe6nxx
-			return gas.times(1.2).toFixed(0);
+			return gas.times(1.2).integerValue();
 		},
 		[profile],
 	);
