@@ -44,6 +44,8 @@ const pingServerUrls = new Set([
 	"https://ark-live.arkvault.io",
 	"https://dwallets-evm.mainsailhq.com/",
 	"https://dwallets-evm.mainsailhq.com",
+	"https://testnet.mainsailhq.com",
+	"https://testnet.mainsailhq.com/",
 	"https://explorer.blockpool.io:19031",
 	"https://apis.compendia.org",
 	"https://apis-testnet.compendia.org",
@@ -51,7 +53,6 @@ const pingServerUrls = new Set([
 	"https://qredit.dev",
 	"https://wallets-evm.mainsailhq.com/api/wallets?limit=1&nonce=0",
 	"https://dwallets-evm.mainsailhq.com/api/wallets?limit=1&nonce=0",
-	// "https://dwallets-evm.mainsailhq.com/evm/api",
 ]);
 
 const knownWallets: any[] = [];
@@ -64,6 +65,7 @@ export const mockedAddresses = [
 	"0x659A76be283644AEc2003aa8ba26485047fd1BFB",
 	"0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
 	"0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54",
+	"0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6"
 ];
 
 const walletMocks = () => {
