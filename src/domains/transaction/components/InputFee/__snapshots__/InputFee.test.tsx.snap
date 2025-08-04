@@ -285,7 +285,7 @@ exports[`InputFee > advanced view type > should allow to input a value 1`] = `
             Confirmation Time
           </span>
           <span>
-             ~10s
+             ~8s
           </span>
         </div>
       </div>
@@ -591,7 +591,7 @@ exports[`InputFee > advanced view type > should display converted value when on 
             Confirmation Time
           </span>
           <span>
-             ~10s
+             ~8s
           </span>
         </div>
       </div>
@@ -851,7 +851,7 @@ exports[`InputFee > advanced view type > should render disabled 1`] = `
           Confirmation Time
         </span>
         <span>
-           ~10s
+           ~8s
         </span>
       </div>
     </div>
@@ -1143,7 +1143,7 @@ exports[`InputFee > should keep different values for simple and advanced view ty
             Confirmation Time
           </span>
           <span>
-             ~10s
+             ~8s
           </span>
         </div>
       </div>
@@ -1245,7 +1245,7 @@ exports[`InputFee > should keep different values for simple and advanced view ty
               Confirmation Time
             </span>
             <span>
-              ~10s
+              ~16s
             </span>
           </div>
         </div>
@@ -1297,7 +1297,7 @@ exports[`InputFee > should keep different values for simple and advanced view ty
               Confirmation Time
             </span>
             <span>
-              ~5s
+              ~8s
             </span>
           </div>
         </div>
@@ -1349,7 +1349,7 @@ exports[`InputFee > should keep different values for simple and advanced view ty
               Confirmation Time
             </span>
             <span>
-              ~2s
+              ~8s
             </span>
           </div>
         </div>
@@ -1463,7 +1463,7 @@ exports[`InputFee > simple view type > should display converted values when on l
               Confirmation Time
             </span>
             <span>
-              ~10s
+              ~16s
             </span>
           </div>
         </div>
@@ -1526,7 +1526,7 @@ exports[`InputFee > simple view type > should display converted values when on l
               Confirmation Time
             </span>
             <span>
-              ~5s
+              ~8s
             </span>
           </div>
         </div>
@@ -1589,7 +1589,7 @@ exports[`InputFee > simple view type > should display converted values when on l
               Confirmation Time
             </span>
             <span>
-              ~2s
+              ~8s
             </span>
           </div>
         </div>
@@ -1686,7 +1686,7 @@ exports[`InputFee > simple view type > should render loading state of simple vie
               Confirmation Time
             </span>
             <span>
-              ~10s
+              ~16s
             </span>
           </div>
         </div>
@@ -1731,7 +1731,7 @@ exports[`InputFee > simple view type > should render loading state of simple vie
               Confirmation Time
             </span>
             <span>
-              ~5s
+              ~8s
             </span>
           </div>
         </div>
@@ -1776,7 +1776,7 @@ exports[`InputFee > simple view type > should render loading state of simple vie
               Confirmation Time
             </span>
             <span>
-              ~2s
+              ~8s
             </span>
           </div>
         </div>
@@ -1873,7 +1873,7 @@ exports[`InputFee > simple view type > should render loading state of simple vie
               Confirmation Time
             </span>
             <span>
-              ~10s
+              ~16s
             </span>
           </div>
         </div>
@@ -1918,7 +1918,7 @@ exports[`InputFee > simple view type > should render loading state of simple vie
               Confirmation Time
             </span>
             <span>
-              ~5s
+              ~8s
             </span>
           </div>
         </div>
@@ -1963,7 +1963,7 @@ exports[`InputFee > simple view type > should render loading state of simple vie
               Confirmation Time
             </span>
             <span>
-              ~2s
+              ~8s
             </span>
           </div>
         </div>
@@ -2066,7 +2066,7 @@ exports[`InputFee > simple view type > should render simple view in lg 1`] = `
               Confirmation Time
             </span>
             <span>
-              ~10s
+              ~16s
             </span>
           </div>
         </div>
@@ -2118,7 +2118,7 @@ exports[`InputFee > simple view type > should render simple view in lg 1`] = `
               Confirmation Time
             </span>
             <span>
-              ~5s
+              ~8s
             </span>
           </div>
         </div>
@@ -2170,7 +2170,7 @@ exports[`InputFee > simple view type > should render simple view in lg 1`] = `
               Confirmation Time
             </span>
             <span>
-              ~2s
+              ~8s
             </span>
           </div>
         </div>
@@ -2273,7 +2273,7 @@ exports[`InputFee > simple view type > should render simple view in md 1`] = `
               Confirmation Time
             </span>
             <span>
-              ~10s
+              ~16s
             </span>
           </div>
         </div>
@@ -2325,7 +2325,7 @@ exports[`InputFee > simple view type > should render simple view in md 1`] = `
               Confirmation Time
             </span>
             <span>
-              ~5s
+              ~8s
             </span>
           </div>
         </div>
@@ -2377,7 +2377,7 @@ exports[`InputFee > simple view type > should render simple view in md 1`] = `
               Confirmation Time
             </span>
             <span>
-              ~2s
+              ~8s
             </span>
           </div>
         </div>
@@ -2480,7 +2480,7 @@ exports[`InputFee > simple view type > should render simple view in sm 1`] = `
               Confirmation Time
             </span>
             <span>
-              ~10s
+              ~16s
             </span>
           </div>
         </div>
@@ -2532,7 +2532,7 @@ exports[`InputFee > simple view type > should render simple view in sm 1`] = `
               Confirmation Time
             </span>
             <span>
-              ~5s
+              ~8s
             </span>
           </div>
         </div>
@@ -2584,7 +2584,7 @@ exports[`InputFee > simple view type > should render simple view in sm 1`] = `
               Confirmation Time
             </span>
             <span>
-              ~2s
+              ~8s
             </span>
           </div>
         </div>
@@ -2687,7 +2687,7 @@ exports[`InputFee > simple view type > should render simple view in xl 1`] = `
               Confirmation Time
             </span>
             <span>
-              ~10s
+              ~16s
             </span>
           </div>
         </div>
@@ -2739,7 +2739,7 @@ exports[`InputFee > simple view type > should render simple view in xl 1`] = `
               Confirmation Time
             </span>
             <span>
-              ~5s
+              ~8s
             </span>
           </div>
         </div>
@@ -2791,7 +2791,7 @@ exports[`InputFee > simple view type > should render simple view in xl 1`] = `
               Confirmation Time
             </span>
             <span>
-              ~2s
+              ~8s
             </span>
           </div>
         </div>
@@ -2894,7 +2894,7 @@ exports[`InputFee > simple view type > should render simple view in xs 1`] = `
               Confirmation Time
             </span>
             <span>
-              ~10s
+              ~16s
             </span>
           </div>
         </div>
@@ -2946,7 +2946,7 @@ exports[`InputFee > simple view type > should render simple view in xs 1`] = `
               Confirmation Time
             </span>
             <span>
-              ~5s
+              ~8s
             </span>
           </div>
         </div>
@@ -2998,7 +2998,7 @@ exports[`InputFee > simple view type > should render simple view in xs 1`] = `
               Confirmation Time
             </span>
             <span>
-              ~2s
+              ~8s
             </span>
           </div>
         </div>
@@ -3112,7 +3112,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
               Confirmation Time
             </span>
             <span>
-              ~10s
+              ~16s
             </span>
           </div>
         </div>
@@ -3175,7 +3175,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
               Confirmation Time
             </span>
             <span>
-              ~5s
+              ~8s
             </span>
           </div>
         </div>
@@ -3238,7 +3238,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
               Confirmation Time
             </span>
             <span>
-              ~2s
+              ~8s
             </span>
           </div>
         </div>
@@ -3352,7 +3352,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
               Confirmation Time
             </span>
             <span>
-              ~10s
+              ~16s
             </span>
           </div>
         </div>
@@ -3415,7 +3415,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
               Confirmation Time
             </span>
             <span>
-              ~5s
+              ~8s
             </span>
           </div>
         </div>
@@ -3478,7 +3478,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
               Confirmation Time
             </span>
             <span>
-              ~2s
+              ~8s
             </span>
           </div>
         </div>
@@ -3592,7 +3592,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
               Confirmation Time
             </span>
             <span>
-              ~10s
+              ~16s
             </span>
           </div>
         </div>
@@ -3655,7 +3655,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
               Confirmation Time
             </span>
             <span>
-              ~5s
+              ~8s
             </span>
           </div>
         </div>
@@ -3718,7 +3718,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
               Confirmation Time
             </span>
             <span>
-              ~2s
+              ~8s
             </span>
           </div>
         </div>
@@ -3832,7 +3832,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
               Confirmation Time
             </span>
             <span>
-              ~10s
+              ~16s
             </span>
           </div>
         </div>
@@ -3895,7 +3895,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
               Confirmation Time
             </span>
             <span>
-              ~5s
+              ~8s
             </span>
           </div>
         </div>
@@ -3958,7 +3958,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
               Confirmation Time
             </span>
             <span>
-              ~2s
+              ~8s
             </span>
           </div>
         </div>
@@ -4072,7 +4072,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
               Confirmation Time
             </span>
             <span>
-              ~10s
+              ~16s
             </span>
           </div>
         </div>
@@ -4135,7 +4135,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
               Confirmation Time
             </span>
             <span>
-              ~5s
+              ~8s
             </span>
           </div>
         </div>
@@ -4198,7 +4198,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
               Confirmation Time
             </span>
             <span>
-              ~2s
+              ~8s
             </span>
           </div>
         </div>
@@ -4301,7 +4301,7 @@ exports[`InputFee > simple view type > should update value when clicking button 
               Confirmation Time
             </span>
             <span>
-              ~10s
+              ~16s
             </span>
           </div>
         </div>
@@ -4353,7 +4353,7 @@ exports[`InputFee > simple view type > should update value when clicking button 
               Confirmation Time
             </span>
             <span>
-              ~5s
+              ~8s
             </span>
           </div>
         </div>
@@ -4405,7 +4405,7 @@ exports[`InputFee > simple view type > should update value when clicking button 
               Confirmation Time
             </span>
             <span>
-              ~2s
+              ~8s
             </span>
           </div>
         </div>
@@ -4508,7 +4508,7 @@ exports[`InputFee > simple view type > should update value when clicking button 
               Confirmation Time
             </span>
             <span>
-              ~10s
+              ~16s
             </span>
           </div>
         </div>
@@ -4560,7 +4560,7 @@ exports[`InputFee > simple view type > should update value when clicking button 
               Confirmation Time
             </span>
             <span>
-              ~5s
+              ~8s
             </span>
           </div>
         </div>
@@ -4612,7 +4612,7 @@ exports[`InputFee > simple view type > should update value when clicking button 
               Confirmation Time
             </span>
             <span>
-              ~2s
+              ~8s
             </span>
           </div>
         </div>
@@ -4715,7 +4715,7 @@ exports[`InputFee > simple view type > should update value when clicking button 
               Confirmation Time
             </span>
             <span>
-              ~10s
+              ~16s
             </span>
           </div>
         </div>
@@ -4767,7 +4767,7 @@ exports[`InputFee > simple view type > should update value when clicking button 
               Confirmation Time
             </span>
             <span>
-              ~5s
+              ~8s
             </span>
           </div>
         </div>
@@ -4819,7 +4819,7 @@ exports[`InputFee > simple view type > should update value when clicking button 
               Confirmation Time
             </span>
             <span>
-              ~2s
+              ~8s
             </span>
           </div>
         </div>

@@ -93,7 +93,7 @@ exports[`FeeField > should render 1`] = `
               Confirmation Time
             </span>
             <span>
-              ~10s
+              ~16s
             </span>
           </div>
         </div>
@@ -145,7 +145,7 @@ exports[`FeeField > should render 1`] = `
               Confirmation Time
             </span>
             <span>
-              ~5s
+              ~8s
             </span>
           </div>
         </div>
@@ -197,7 +197,7 @@ exports[`FeeField > should render 1`] = `
               Confirmation Time
             </span>
             <span>
-              ~2s
+              ~8s
             </span>
           </div>
         </div>

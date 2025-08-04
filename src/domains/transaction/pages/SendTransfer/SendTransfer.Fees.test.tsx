@@ -353,7 +353,7 @@ describe("SendTransfer Fee Handling", () => {
 
 		// Assert that fee initial value is 0 and then it changes to 0.1 when loaded
 		await waitFor(() =>
-			expect(screen.getAllByRole("radio")[1]).toHaveTextContent("Average(0.000042 ARK)Confirmation Time~5s"),
+			expect(screen.getAllByRole("radio")[1]).toHaveTextContent("Average(0.000042 ARK)Confirmation Time~8s"),
 		);
 
 		expect(within(screen.getByTestId(reviewStepID)).getAllByTestId("Amount")[0]).toHaveTextContent("1 ARK");

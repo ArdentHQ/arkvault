@@ -1268,7 +1268,7 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                                   Confirmation Time
                                 </span>
                                 <span>
-                                   ~10s
+                                   ~8s
                                 </span>
                               </div>
                             </div>
@@ -3703,7 +3703,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                                     Confirmation Time
                                   </span>
                                   <span>
-                                    ~10s
+                                    ~16s
                                   </span>
                                 </div>
                               </div>
@@ -3755,7 +3755,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                                     Confirmation Time
                                   </span>
                                   <span>
-                                    ~5s
+                                    ~8s
                                   </span>
                                 </div>
                               </div>
@@ -3807,7 +3807,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                                     Confirmation Time
                                   </span>
                                   <span>
-                                    ~2s
+                                    ~8s
                                   </span>
                                 </div>
                               </div>
