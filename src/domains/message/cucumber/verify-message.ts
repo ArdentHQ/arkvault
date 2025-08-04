@@ -28,7 +28,8 @@ cucumber("@verifyMessage", {
 		const mockSuccessMessage = {
 			message: "Hello World",
 			signatory: "025f81956d5826bad7d30daed2b5c8c98e72046c1ec8323da336445476183fb7ca",
-			signature: "0x4c0ab8ad4f6af96954631c0be6f94e91479c5a4e775ff9ec97a0bbe9002a764d14ea05f4ac300c66db0b4ebca401654fe839b211f7c63daab1b1647742b6fcd91b"
+			signature:
+				"0x4c0ab8ad4f6af96954631c0be6f94e91479c5a4e775ff9ec97a0bbe9002a764d14ea05f4ac300c66db0b4ebca401654fe839b211f7c63daab1b1647742b6fcd91b",
 		};
 		await t.click(Selector("input[type=checkbox]").parent());
 		await t.typeText(Selector("[data-testid=VerifyMessage__json-jsonString]"), JSON.stringify(mockSuccessMessage));
@@ -61,12 +62,7 @@ cucumber("@verifyMessage-failVerification", {
 		await t.click(Selector("[data-testid=VerifyMessage__verify-button]"));
 	},
 	"Then the message verification fails": async (t: TestController) => {
-		await t
-			.expect(
-				Selector("h1").withText(translations.MESSAGE.PAGE_VERIFY_MESSAGE.ERROR_STEP.TITLE)
-					.exists,
-			)
-			.ok();
+		await t.expect(Selector("h1").withText(translations.MESSAGE.PAGE_VERIFY_MESSAGE.ERROR_STEP.TITLE).exists).ok();
 	},
 });
 
