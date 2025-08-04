@@ -54,8 +54,9 @@ export const AddressesSidePanel = ({
 		.map((wallet) => wallet.address());
 
 	const [isAnimating, setIsAnimating] = useState(false);
-	const [isDeleteMode, setDeleteMode] = useState<boolean>(false);
+	const [isManageMode, setManageMode] = useState<boolean>(false);
 	const [addressToDelete, setAddressToDelete] = useState<string | undefined>(undefined);
+	const [addressToEdit, setAddressToEdit] = useState<string | undefined>(undefined);
 	const [showManageHint, setShowManageHint] = useState<boolean>(false);
 	const [manageHintHasShown, persistManageHint] = useLocalStorage("manage-hint", false);
 	const [searchQuery, setSearchQuery] = useState<string>("");
@@ -131,7 +132,7 @@ export const AddressesSidePanel = ({
 	);
 
 	const toggleAddressSelection = async (address: string) => {
-		if (isDeleteMode) {
+		if (isManageMode) {
 			return;
 		}
 
@@ -191,7 +192,7 @@ export const AddressesSidePanel = ({
 			}
 		};
 
-		initializeAddresses();
+		void initializeAddresses();
 	}, []);
 
 	// Reset selected addresses when panel closes
@@ -253,9 +254,10 @@ export const AddressesSidePanel = ({
 		};
 	}, [manageHintHasShown, open]);
 
-	const resetDeleteState = () => {
+	const disableManageState = () => {
 		setAddressToDelete(undefined);
-		setDeleteMode(false);
+		setAddressToEdit(undefined);
+		setManageMode(false);
 	};
 
 	const { getWalletAlias } = useWalletAlias();
@@ -271,7 +273,7 @@ export const AddressesSidePanel = ({
 		return wallet.address().toLowerCase().startsWith(query) || (alias && alias.toLowerCase().includes(query));
 	});
 
-	const isSelectAllDisabled = isDeleteMode || addressesToShow.length === 0;
+	const isSelectAllDisabled = isManageMode || addressesToShow.length === 0;
 	const isSelected = (wallet: Contracts.IReadWriteWallet) => selectedAddresses.includes(wallet.address());
 	const hasSelectedAddresses = () => selectedAddresses.length > 0;
 
@@ -291,7 +293,7 @@ export const AddressesSidePanel = ({
 					return;
 				}
 
-				resetDeleteState();
+				disableManageState();
 				onOpenChange(open);
 				setSearchQuery("");
 
@@ -306,7 +308,7 @@ export const AddressesSidePanel = ({
 				className={cn("mb-3", { hidden: wallets.length === 1 })}
 				activeId={activeMode}
 				onChange={activeModeChangeHandler}
-				disabled={isDeleteMode}
+				disabled={isManageMode}
 			>
 				<TabList className="grid h-10 w-full grid-cols-2">
 					{tabOptions.map((option) => (
@@ -376,7 +378,7 @@ export const AddressesSidePanel = ({
 						<span className="font-semibold">{t("COMMON.SELECT_ALL")}</span>
 					</label>
 
-					{!isDeleteMode && (
+					{!isManageMode && (
 						<Tooltip
 							visible={showManageHint}
 							interactive={true}
@@ -407,7 +409,7 @@ export const AddressesSidePanel = ({
 								data-testid="ManageAddresses"
 								size="icon"
 								variant="primary-transparent"
-								onClick={() => setDeleteMode(true)}
+								onClick={() => setManageMode(true)}
 								className={cn(
 									"text-theme-primary-600 dark:text-theme-primary-400 dim:text-theme-dim-navy-600 p-2 py-[3px] text-sm leading-[18px] sm:text-base sm:leading-5",
 									{
@@ -422,13 +424,13 @@ export const AddressesSidePanel = ({
 						</Tooltip>
 					)}
 
-					{isDeleteMode && (
+					{isManageMode && (
 						<div className="flex items-center space-x-2 px-2 leading-[18px] sm:leading-5">
 							<Button
 								data-testid="BackManage"
 								size="icon"
 								variant="primary-transparent"
-								onClick={resetDeleteState}
+								onClick={disableManageState}
 								className="text-theme-primary-600 dark:text-theme-primary-400 dim:text-theme-dim-navy-600 p-2 py-[3px] text-sm leading-[18px] sm:text-base sm:leading-5"
 							>
 								<Icon name="Back" dimensions={[16, 16]} />
@@ -439,7 +441,7 @@ export const AddressesSidePanel = ({
 				</div>
 			</div>
 
-			{isDeleteMode && (
+			{isManageMode && (
 				<div className="bg-theme-info-50 dark:bg-theme-dark-800 dim:bg-theme-dim-800 my-2 flex flex-col overflow-hidden rounded sm:my-3 sm:flex-row sm:items-center sm:rounded-xl">
 					<div className="bg-theme-info-100 dark:bg-theme-info-600 dim:bg-theme-dim-navy-600 flex w-full items-center space-x-2 px-4 py-2 sm:w-auto sm:space-x-0 sm:py-4.5">
 						<Icon
@@ -465,22 +467,24 @@ export const AddressesSidePanel = ({
 						<AddressRow
 							profile={profile}
 							errorMessage={
-								!hasSelectedAddresses() && !isDeleteMode && index === 0
+								!hasSelectedAddresses() && !isManageMode && index === 0
 									? "You need to have at least one address selected."
 									: undefined
 							}
-							isError={(!hasSelectedAddresses() && !isDeleteMode) || wallet.address() === addressToDelete}
+							isError={(!hasSelectedAddresses() && !isManageMode) || wallet.address() === addressToDelete}
 							key={wallet.address()}
 							wallet={wallet}
 							toggleAddress={toggleAddressSelection}
 							isSelected={isSelected(wallet)}
 							isSingleView={activeMode === AddressViewSelection.single}
-							usesDeleteMode={isDeleteMode}
+							usesManageMode={isManageMode}
+							isEditing={addressToEdit === wallet.address()}
 							onDelete={(address: string) => setAddressToDelete(address)}
+							onEdit={(address?: string) => setAddressToEdit(address)}
 							deleteContent={
 								addressToDelete === wallet.address() ? (
 									<DeleteAddressMessage
-										onCancelDelete={resetDeleteState}
+										onCancelDelete={disableManageState}
 										onConfirmDelete={() => onDelete?.(wallet.address())}
 									/>
 								) : undefined
