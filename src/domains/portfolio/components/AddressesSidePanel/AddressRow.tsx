@@ -112,7 +112,8 @@ export const AddressRow = ({
 						disabled={isEditing}
 						size="icon"
 						className={cn("text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200", {
-							"hover:bg-theme-danger-400 dim-hover:text-white p-1 hover:text-white dark:hover:text-white": !isEditing,
+							"hover:bg-theme-danger-400 dim-hover:text-white p-1 hover:text-white dark:hover:text-white":
+								!isEditing,
 						})}
 						variant="transparent"
 					>
@@ -198,7 +199,8 @@ export const AddressRow = ({
 								size="icon"
 								variant="transparent"
 								className={cn("ml-4 p-1", {
-									"dark:hover:bg-theme-secondary-700 hover:bg-theme-navy-200 dim-hover:bg-theme-dim-800": !isEditing && !deleteContent,
+									"dark:hover:bg-theme-secondary-700 hover:bg-theme-navy-200 dim-hover:bg-theme-dim-800":
+										!isEditing && !deleteContent,
 								})}
 							>
 								<Icon

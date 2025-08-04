@@ -48,7 +48,7 @@ export const UpdateAddressName = ({ onAfterSave, onCancel, profile, wallet }: Up
 	};
 
 	return (
-		<Form context={form} onSubmit={onSubmit} className="px-6 py-4 bg-theme-secondary-100 rounded-b-lg">
+		<Form context={form} onSubmit={onSubmit} className="bg-theme-secondary-100 rounded-b-lg px-6 py-4">
 			<FormField name="name">
 				<FormLabel>{t("WALLETS.WALLET_NAME")}</FormLabel>
 				<div className="relative">
@@ -92,4 +92,3 @@ export const UpdateAddressName = ({ onAfterSave, onCancel, profile, wallet }: Up
 		</Form>
 	);
 };
-
