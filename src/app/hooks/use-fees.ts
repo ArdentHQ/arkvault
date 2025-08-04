@@ -195,7 +195,11 @@ export const useFees = (profile: Contracts.IProfile) => {
 	const estimateGas = useCallback(
 		async ({ type, data: formData }: EstimateGasProperties) => {
 			const fees = new FeeService({ config: profile.activeNetwork().config(), profile });
-			return await fees.estimateGas(getEstimateGasParams(formData, type));
+			const gas = await fees.estimateGas(getEstimateGasParams(formData, type));
+
+			// Add 20% buffer on the gas, in case the estimate is too low.
+			// @see https://app.clickup.com/t/86dxe6nxx
+			return gas.times(1.2)
 		},
 		[profile],
 	);
