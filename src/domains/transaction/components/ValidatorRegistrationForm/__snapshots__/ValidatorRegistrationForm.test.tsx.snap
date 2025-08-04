@@ -633,7 +633,7 @@ exports[`ValidatorRegistrationForm > should render review step 1`] = `
                             Confirmation Time
                           </span>
                           <span>
-                            ~10s
+                            ~16s
                           </span>
                         </div>
                       </div>
@@ -685,7 +685,7 @@ exports[`ValidatorRegistrationForm > should render review step 1`] = `
                             Confirmation Time
                           </span>
                           <span>
-                            ~5s
+                            ~8s
                           </span>
                         </div>
                       </div>
@@ -737,7 +737,7 @@ exports[`ValidatorRegistrationForm > should render review step 1`] = `
                             Confirmation Time
                           </span>
                           <span>
-                            ~2s
+                            ~8s
                           </span>
                         </div>
                       </div>
