@@ -1,15 +1,16 @@
-import { Contracts } from "@/app/lib/profiles";
-import { useCallback } from "react";
-
-import { useEnvironmentContext } from "@/app/contexts";
-import { TransactionFees } from "@/types";
-import { FeeService } from "@/app/lib/mainsail/fee.service";
-import { encodeFunctionData, numberToHex } from "viem";
 import { ConsensusAbi, MultiPaymentAbi, UsernamesAbi } from "@mainsail/evm-contracts";
 import { ContractAddresses, UnitConverter } from "@arkecosystem/typescript-crypto";
-import { EstimateGasPayload } from "@/app/lib/mainsail/fee.contract";
+import { encodeFunctionData, numberToHex } from "viem";
+
 import { BigNumber } from "@/app/lib/helpers";
 import { Network } from "@/app/lib/mainsail/network";
+import { Contracts } from "@/app/lib/profiles";
+import { EstimateGasPayload } from "@/app/lib/mainsail/fee.contract";
+import { FeeService } from "@/app/lib/mainsail/fee.service";
+import { TransactionFees } from "@/types";
+import { useCallback } from "react";
+import { useEnvironmentContext } from "@/app/contexts";
+
 interface CreateStubTransactionProperties {
 	getData: () => Record<string, any>;
 	stub: boolean;
@@ -199,7 +200,11 @@ export const useFees = (profile: Contracts.IProfile) => {
 	const estimateGas = useCallback(
 		async ({ type, data: formData }: EstimateGasProperties) => {
 			const fees = new FeeService({ config: profile.activeNetwork().config(), profile });
-			return await fees.estimateGas(getEstimateGasParams(profile.activeNetwork(), formData, type));
+			const gas = await fees.estimateGas(getEstimateGasParams(profile.activeNetwork(), formData, type));
+
+			// Add 20% buffer on the gas, in case the estimate is too low.
+			// @see https://app.clickup.com/t/86dxe6nxx
+			return gas.times(1.2).integerValue();
 		},
 		[profile],
 	);

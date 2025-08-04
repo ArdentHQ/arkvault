@@ -473,7 +473,7 @@ describe("SendTransfer", () => {
 		// remove focus from fee button
 		await userEvent.click(document.body);
 
-		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.000105");
+		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.000126");
 
 		// Step 3
 		expect(continueButton()).not.toBeDisabled();
@@ -562,7 +562,7 @@ describe("SendTransfer", () => {
 
 		expect(screen.getAllByRole("radio")[0]).toBeChecked();
 
-		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.000105");
+		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.000126");
 
 		// Back to Step 1
 		await userEvent.click(backButton());
@@ -651,7 +651,7 @@ describe("SendTransfer", () => {
 		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
 		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
 
-		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.000105");
+		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.000126");
 
 		// Step 3
 		expect(continueButton()).not.toBeDisabled();
@@ -760,7 +760,7 @@ describe("SendTransfer", () => {
 		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
 		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
 
-		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.000105");
+		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.000126");
 
 		// Step 3
 		expect(continueButton()).not.toBeDisabled();
@@ -807,7 +807,7 @@ describe("SendTransfer", () => {
 		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
 		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
 
-		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.000105");
+		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.000126");
 
 		// Review Step
 		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
@@ -879,7 +879,7 @@ describe("SendTransfer", () => {
 		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
 		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
 
-		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.000105");
+		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.000126");
 
 		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
 
@@ -1006,7 +1006,7 @@ describe("SendTransfer", () => {
 		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
 		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
 
-		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.000105");
+		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.000126");
 
 		// Step 3
 		expect(continueButton()).not.toBeDisabled();
@@ -1114,7 +1114,7 @@ describe("SendTransfer", () => {
 		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
 		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
 
-		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.000105");
+		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.000126");
 
 		// proceed to step 3
 		await userEvent.click(continueButton());
@@ -1186,7 +1186,7 @@ describe("SendTransfer", () => {
 
 		expect(screen.getAllByRole("radio")[0]).toBeChecked();
 
-		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.000105");
+		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.000126");
 
 		// Step 3
 		expect(continueButton()).not.toBeDisabled();

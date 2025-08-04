@@ -72,7 +72,7 @@ describe("Dashboard", () => {
 		);
 
 		await waitFor(() => {
-			expect(screen.getByTestId("WalletVote__button")).toBeVisible();
+			expect(screen.getAllByTestId("WalletVote__button")).toHaveLength(2);
 		});
 
 		expect(asFragment()).toMatchSnapshot();
@@ -98,7 +98,7 @@ describe("Dashboard", () => {
 		});
 
 		await waitFor(() => {
-			expect(screen.getByTestId("WalletMyVotes__button")).toBeVisible();
+			expect(screen.getAllByTestId("WalletMyVotes__button")).toHaveLength(2);
 		});
 
 		wallet1SynchroniserMock.mockRestore();
@@ -125,7 +125,7 @@ describe("Dashboard", () => {
 		});
 
 		await waitFor(() => {
-			expect(screen.getByTestId("WalletMyVotes__button")).toBeVisible();
+			expect(screen.getAllByTestId("WalletMyVotes__button")).toHaveLength(2);
 		});
 
 		selectedWalletsMock.mockRestore();
@@ -158,10 +158,10 @@ describe("Dashboard", () => {
 		});
 
 		await waitFor(() => {
-			expect(screen.getByTestId("WalletMyVotes__button")).toBeInTheDocument();
+			expect(screen.getAllByTestId("WalletMyVotes__button")).toHaveLength(2);
 		});
 
-		await userEvent.click(screen.getByTestId("WalletMyVotes__button"));
+		await userEvent.click(screen.getAllByTestId("WalletMyVotes__button")[0]);
 
 		await waitFor(() => {
 			expect(router.state.location.pathname).toBe(`/profiles/${profile.id()}/votes`);
@@ -181,10 +181,10 @@ describe("Dashboard", () => {
 		});
 
 		await waitFor(() => {
-			expect(screen.getByTestId("WalletVote__button")).toBeInTheDocument();
+			expect(screen.getAllByTestId("WalletVote__button")).toHaveLength(2);
 		});
 
-		await userEvent.click(screen.getByTestId("WalletVote__button"));
+		await userEvent.click(screen.getAllByTestId("WalletVote__button")[0]);
 
 		await waitFor(() => {
 			expect(router.state.location.pathname).toBe(`/profiles/${profile.id()}/wallets/${wallet.id()}/votes`);

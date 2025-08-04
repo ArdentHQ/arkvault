@@ -514,9 +514,9 @@ describe("AddRecipient", () => {
 
 		await waitFor(() => expect(recipientList()).toHaveLength(1));
 
-		expect(screen.getAllByTestId("Address__alias")).toHaveLength(2);
+		expect(screen.getAllByTestId("Address__alias")).toHaveLength(1);
 
-		expect(screen.getAllByText(/Mainsail Wallet/).length).toBe(2);
+		expect(screen.getAllByText(/Mainsail Wallet/).length).toBe(1);
 	});
 
 	it("should show error for low balance", async () => {
@@ -634,7 +634,7 @@ describe("AddRecipient", () => {
 
 		await waitFor(() => expect(recipientList()).toHaveLength(2));
 
-		const removeButton = within(recipientList()[0]).getAllByTestId("AddRecipientItem--deleteButton");
+		const removeButton = within(recipientList()[0]).getAllByTestId("AddRecipientItem--deleteButton-0");
 
 		expect(removeButton[0]).toBeInTheDocument();
 
