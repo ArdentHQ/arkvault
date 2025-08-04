@@ -10,6 +10,7 @@ import { useTranslation } from "react-i18next";
 import { Amount } from "@/app/components/Amount";
 import { calculateGasFee, getFeeMinMax } from "@/domains/transaction/components/InputFee/InputFee";
 import { BigNumber } from "@/app/lib/helpers";
+import { useConfirmationTimes } from "@/domains/transaction/components/InputFee/use-confirmation-times";
 
 const GAS_LIMIT_STEP = 1000;
 const GAS_PRICE_STEP = 1;
@@ -24,6 +25,7 @@ export const InputFeeAdvanced: React.FC<InputFeeAdvancedProperties> = ({
 	gasPrice,
 	gasLimit,
 	network,
+	blockTime
 }: InputFeeAdvancedProperties) => {
 	const { t } = useTranslation();
 
@@ -33,6 +35,8 @@ export const InputFeeAdvanced: React.FC<InputFeeAdvancedProperties> = ({
 		GAS_LIMIT_STEP,
 		gasLimit.toString(),
 	);
+
+	const { byFeeType } = useConfirmationTimes({ blockTime })
 
 	const { minGasPrice, maxGasPrice, minGasLimit, maxGasLimit } = getFeeMinMax();
 
@@ -171,7 +175,7 @@ export const InputFeeAdvanced: React.FC<InputFeeAdvancedProperties> = ({
 					<span>
 						{" "}
 						{t("COMMON.CONFIRMATION_TIME", {
-							time: 10,
+							time: byFeeType("Average"),
 						}).toString()}
 					</span>
 				</div>

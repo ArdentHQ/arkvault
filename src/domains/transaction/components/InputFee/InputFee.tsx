@@ -8,7 +8,7 @@ import {
 } from "./InputFee.contracts";
 import React, { memo } from "react";
 
-import { BigNumber } from "@/app/lib/helpers";
+import { BigNumber, get } from "@/app/lib/helpers";
 import { Contracts } from "@/app/lib/profiles";
 import { InputFeeAdvanced } from "./blocks/InputFeeAdvanced";
 import { InputFeeSimple } from "./blocks/InputFeeSimple";
@@ -69,6 +69,9 @@ export const InputFee: React.FC<InputFeeProperties> = memo(
 		const selectedFeeOption = properties.selectedFeeOption ?? DEFAULT_FEE_OPTION;
 
 		const ticker = network.ticker();
+
+		const blockTime = get(configManager.getMilestone(), "timeouts.blockTime")
+
 		const exchangeTicker = profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency);
 		const { convert } = useExchangeRate({ exchangeTicker, profile, ticker });
 
@@ -111,6 +114,7 @@ export const InputFee: React.FC<InputFeeProperties> = memo(
 
 		const renderAdvanced = () => (
 			<InputFeeAdvanced
+				blockTime={blockTime}
 				network={network}
 				convert={convert}
 				disabled={disabled || loading}
@@ -154,6 +158,7 @@ export const InputFee: React.FC<InputFeeProperties> = memo(
 
 				{viewType === InputFeeViewType.Simple && (
 					<InputFeeSimple
+						blockTime={blockTime}
 						options={options}
 						loading={loading || !ticker || !exchangeTicker}
 						ticker={ticker}

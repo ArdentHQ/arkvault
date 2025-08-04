@@ -6,14 +6,7 @@ import { Skeleton } from "@/app/components/Skeleton";
 import { InputFeeSimpleProperties, InputFeeOption } from "@/domains/transaction/components/InputFee/InputFee.contracts";
 import cn from "classnames";
 import { useTranslation } from "react-i18next";
-
-type ConfirmationSpeed = "Slow" | "Average" | "Fast";
-
-const confirmationTimes: Record<ConfirmationSpeed, number> = {
-	Average: 5,
-	Fast: 2,
-	Slow: 10,
-};
+import { useConfirmationTimes } from "@/domains/transaction/components/InputFee/use-confirmation-times";
 
 export const InputFeeSimple: React.FC<InputFeeSimpleProperties> = ({
 	options,
@@ -23,8 +16,11 @@ export const InputFeeSimple: React.FC<InputFeeSimpleProperties> = ({
 	exchangeTicker,
 	showConvertedValues,
 	loading,
+	blockTime,
 }: InputFeeSimpleProperties) => {
 	const { t } = useTranslation();
+
+	const { byFeeType } = useConfirmationTimes({ blockTime })
 
 	return (
 		<ButtonGroup className="flex-col space-y-2 sm:flex-row sm:space-y-0 sm:space-x-2">
@@ -117,7 +113,7 @@ export const InputFeeSimple: React.FC<InputFeeSimpleProperties> = ({
 								<span>{t("COMMON.CONFIRMATION_TIME_LABEL")}</span>
 								<span>
 									{t("COMMON.CONFIRMATION_TIME", {
-										time: confirmationTimes[label as ConfirmationSpeed],
+										time: byFeeType(label)
 									}).toString()}
 								</span>
 							</div>
