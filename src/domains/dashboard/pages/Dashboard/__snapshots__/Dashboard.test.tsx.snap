@@ -922,7 +922,7 @@ exports[`Dashboard > should render 1`] = `
                             </span>
                           </span>
                           <span
-                            class="hidden lg:block"
+                            class="hidden min-w-[26.375rem] lg:block"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -1151,7 +1151,7 @@ exports[`Dashboard > should render 1`] = `
                       class="flex flex-row items-center gap-3"
                     >
                       <button
-                        class="py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 dark:bg-theme-dark-navy-500 dark:hover:bg-theme-dark-navy-700 dim:bg-theme-dim-navy-700 dim:disabled:text-theme-dim-navy-700 dim:disabled:bg-theme-dim-navy-900 dim-hover:disabled:bg-theme-dim-navy-900 dim-hover:disabled:text-theme-dim-navy-700 my-auto flex-1 px-8"
+                        class="py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 dark:bg-theme-dark-navy-500 dark:hover:bg-theme-dark-navy-700 dim:bg-theme-dim-navy-600 dim:disabled:text-theme-dim-navy-700 dim:disabled:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:disabled:bg-theme-dim-navy-900 dim-hover:disabled:text-theme-dim-navy-700 my-auto flex-1 px-8"
                         data-testid="WalletHeader__send-button"
                         type="button"
                       >
@@ -1907,7 +1907,7 @@ exports[`Dashboard > should render 1`] = `
                       >
                         <td>
                           <div
-                            class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 items-start pr-0 lg:pr-3 xl:min-h-11 xl:max-h-11 xl:pt-2.5 lg:min-w-36 min-h-14 my-1 pt-1"
+                            class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start pr-0 lg:pr-3 xl:min-h-11 xl:max-h-11 xl:pt-2.5 lg:min-w-36 min-h-14 my-1 pt-1"
                           >
                             <div
                               class="flex flex-col gap-1 font-semibold"
@@ -1985,7 +1985,7 @@ exports[`Dashboard > should render 1`] = `
                           data-testid="TransactionRow__timestamp"
                         >
                           <div
-                            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 min-h-11 xl:max-h-11 xl:pt-3 lg:min-w-40"
+                            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 min-h-11 xl:max-h-11 xl:pt-3 lg:min-w-40"
                           >
                             <span
                               data-testid="TimeAgo"
@@ -1996,7 +1996,7 @@ exports[`Dashboard > should render 1`] = `
                         </td>
                         <td>
                           <div
-                            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-14 my-1 pt-2"
+                            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-14 my-1 pt-2"
                           >
                             <div
                               class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-40 truncate rounded px-1 py-[3px] whitespace-nowrap dark:border"
@@ -2010,7 +2010,7 @@ exports[`Dashboard > should render 1`] = `
                           class="hidden"
                         >
                           <div
-                            class="flex my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11"
+                            class="flex my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11"
                           >
                             <div
                               class="flex grow flex-col gap-2"
@@ -2174,7 +2174,7 @@ exports[`Dashboard > should render 1`] = `
                           class="hidden"
                         >
                           <div
-                            class="flex my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11"
+                            class="flex my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11"
                           >
                             <div
                               class="flex w-full flex-row gap-2"
@@ -2256,7 +2256,7 @@ exports[`Dashboard > should render 1`] = `
                           class=""
                         >
                           <div
-                            class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 space-x-4 items-start my-1 px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-14 pt-2 mt-1 lg:min-w-36"
+                            class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 space-x-4 items-start my-1 px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-14 pt-2 mt-1 lg:min-w-36"
                           >
                             <div
                               class="flex w-full flex-row gap-2"
@@ -2338,7 +2338,7 @@ exports[`Dashboard > should render 1`] = `
                           class="hidden xl:table-cell"
                         >
                           <div
-                            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3"
+                            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3"
                           >
                             <div
                               class="flex flex-col items-end gap-1"
@@ -2374,7 +2374,7 @@ exports[`Dashboard > should render 1`] = `
                         </td>
                         <td>
                           <div
-                            class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-11 xl:my-0 xl:pt-3 min-h-14 my-1 pt-2"
+                            class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-11 xl:my-0 xl:pt-3 min-h-14 my-1 pt-2"
                           >
                             <div
                               class="flex w-40 flex-col items-end gap-1"
@@ -2415,7 +2415,7 @@ exports[`Dashboard > should render 1`] = `
                       >
                         <td>
                           <div
-                            class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 items-start pr-0 lg:pr-3 xl:min-h-11 xl:max-h-11 xl:pt-2.5 lg:min-w-36 min-h-14 my-1 pt-1"
+                            class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start pr-0 lg:pr-3 xl:min-h-11 xl:max-h-11 xl:pt-2.5 lg:min-w-36 min-h-14 my-1 pt-1"
                           >
                             <div
                               class="flex flex-col gap-1 font-semibold"
@@ -2493,7 +2493,7 @@ exports[`Dashboard > should render 1`] = `
                           data-testid="TransactionRow__timestamp"
                         >
                           <div
-                            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 min-h-11 xl:max-h-11 xl:pt-3 lg:min-w-40"
+                            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 min-h-11 xl:max-h-11 xl:pt-3 lg:min-w-40"
                           >
                             <span
                               data-testid="TimeAgo"
@@ -2504,7 +2504,7 @@ exports[`Dashboard > should render 1`] = `
                         </td>
                         <td>
                           <div
-                            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-14 my-1 pt-2"
+                            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-14 my-1 pt-2"
                           >
                             <div
                               class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-40 truncate rounded px-1 py-[3px] whitespace-nowrap dark:border"
@@ -2518,7 +2518,7 @@ exports[`Dashboard > should render 1`] = `
                           class="hidden"
                         >
                           <div
-                            class="flex my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11"
+                            class="flex my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11"
                           >
                             <div
                               class="flex grow flex-col gap-2"
@@ -2675,7 +2675,7 @@ exports[`Dashboard > should render 1`] = `
                           class="hidden"
                         >
                           <div
-                            class="flex my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11"
+                            class="flex my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11"
                           >
                             <div
                               class="flex w-full flex-row gap-2"
@@ -2750,7 +2750,7 @@ exports[`Dashboard > should render 1`] = `
                           class=""
                         >
                           <div
-                            class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 space-x-4 items-start my-1 px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-14 pt-2 mt-1 lg:min-w-36"
+                            class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 space-x-4 items-start my-1 px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-14 pt-2 mt-1 lg:min-w-36"
                           >
                             <div
                               class="flex w-full flex-row gap-2"
@@ -2825,7 +2825,7 @@ exports[`Dashboard > should render 1`] = `
                           class="hidden xl:table-cell"
                         >
                           <div
-                            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3"
+                            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3"
                           >
                             <div
                               class="flex flex-col items-end gap-1"
@@ -2861,7 +2861,7 @@ exports[`Dashboard > should render 1`] = `
                         </td>
                         <td>
                           <div
-                            class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-11 xl:my-0 xl:pt-3 min-h-14 my-1 pt-2"
+                            class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-11 xl:my-0 xl:pt-3 min-h-14 my-1 pt-2"
                           >
                             <div
                               class="flex w-40 flex-col items-end gap-1"
@@ -2902,7 +2902,7 @@ exports[`Dashboard > should render 1`] = `
                       >
                         <td>
                           <div
-                            class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 items-start pr-0 lg:pr-3 xl:min-h-11 xl:max-h-11 xl:pt-2.5 lg:min-w-36 min-h-14 my-1 pt-1"
+                            class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start pr-0 lg:pr-3 xl:min-h-11 xl:max-h-11 xl:pt-2.5 lg:min-w-36 min-h-14 my-1 pt-1"
                           >
                             <div
                               class="flex flex-col gap-1 font-semibold"
@@ -2980,7 +2980,7 @@ exports[`Dashboard > should render 1`] = `
                           data-testid="TransactionRow__timestamp"
                         >
                           <div
-                            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 min-h-11 xl:max-h-11 xl:pt-3 lg:min-w-40"
+                            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 min-h-11 xl:max-h-11 xl:pt-3 lg:min-w-40"
                           >
                             <span
                               data-testid="TimeAgo"
@@ -2991,7 +2991,7 @@ exports[`Dashboard > should render 1`] = `
                         </td>
                         <td>
                           <div
-                            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-14 my-1 pt-2"
+                            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-14 my-1 pt-2"
                           >
                             <div
                               class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-40 truncate rounded px-1 py-[3px] whitespace-nowrap dark:border"
@@ -3005,7 +3005,7 @@ exports[`Dashboard > should render 1`] = `
                           class="hidden"
                         >
                           <div
-                            class="flex my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11"
+                            class="flex my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11"
                           >
                             <div
                               class="flex grow flex-col gap-2"
@@ -3162,7 +3162,7 @@ exports[`Dashboard > should render 1`] = `
                           class="hidden"
                         >
                           <div
-                            class="flex my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11"
+                            class="flex my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11"
                           >
                             <div
                               class="flex w-full flex-row gap-2"
@@ -3237,7 +3237,7 @@ exports[`Dashboard > should render 1`] = `
                           class=""
                         >
                           <div
-                            class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 space-x-4 items-start my-1 px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-14 pt-2 mt-1 lg:min-w-36"
+                            class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 space-x-4 items-start my-1 px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-14 pt-2 mt-1 lg:min-w-36"
                           >
                             <div
                               class="flex w-full flex-row gap-2"
@@ -3312,7 +3312,7 @@ exports[`Dashboard > should render 1`] = `
                           class="hidden xl:table-cell"
                         >
                           <div
-                            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3"
+                            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3"
                           >
                             <div
                               class="flex flex-col items-end gap-1"
@@ -3348,7 +3348,7 @@ exports[`Dashboard > should render 1`] = `
                         </td>
                         <td>
                           <div
-                            class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-11 xl:my-0 xl:pt-3 min-h-14 my-1 pt-2"
+                            class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-11 xl:my-0 xl:pt-3 min-h-14 my-1 pt-2"
                           >
                             <div
                               class="flex w-40 flex-col items-end gap-1"
@@ -3389,7 +3389,7 @@ exports[`Dashboard > should render 1`] = `
                       >
                         <td>
                           <div
-                            class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 items-start pr-0 lg:pr-3 xl:min-h-11 xl:max-h-11 xl:pt-2.5 lg:min-w-36 min-h-14 my-1 pt-1"
+                            class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start pr-0 lg:pr-3 xl:min-h-11 xl:max-h-11 xl:pt-2.5 lg:min-w-36 min-h-14 my-1 pt-1"
                           >
                             <div
                               class="flex flex-col gap-1 font-semibold"
@@ -3467,7 +3467,7 @@ exports[`Dashboard > should render 1`] = `
                           data-testid="TransactionRow__timestamp"
                         >
                           <div
-                            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 min-h-11 xl:max-h-11 xl:pt-3 lg:min-w-40"
+                            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 min-h-11 xl:max-h-11 xl:pt-3 lg:min-w-40"
                           >
                             <span
                               data-testid="TimeAgo"
@@ -3478,7 +3478,7 @@ exports[`Dashboard > should render 1`] = `
                         </td>
                         <td>
                           <div
-                            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-14 my-1 pt-2"
+                            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-14 my-1 pt-2"
                           >
                             <div
                               class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-40 truncate rounded px-1 py-[3px] whitespace-nowrap dark:border"
@@ -3492,7 +3492,7 @@ exports[`Dashboard > should render 1`] = `
                           class="hidden"
                         >
                           <div
-                            class="flex my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11"
+                            class="flex my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11"
                           >
                             <div
                               class="flex grow flex-col gap-2"
@@ -3649,7 +3649,7 @@ exports[`Dashboard > should render 1`] = `
                           class="hidden"
                         >
                           <div
-                            class="flex my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11"
+                            class="flex my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11"
                           >
                             <div
                               class="flex w-full flex-row gap-2"
@@ -3724,7 +3724,7 @@ exports[`Dashboard > should render 1`] = `
                           class=""
                         >
                           <div
-                            class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 space-x-4 items-start my-1 px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-14 pt-2 mt-1 lg:min-w-36"
+                            class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 space-x-4 items-start my-1 px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-14 pt-2 mt-1 lg:min-w-36"
                           >
                             <div
                               class="flex w-full flex-row gap-2"
@@ -3799,7 +3799,7 @@ exports[`Dashboard > should render 1`] = `
                           class="hidden xl:table-cell"
                         >
                           <div
-                            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3"
+                            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3"
                           >
                             <div
                               class="flex flex-col items-end gap-1"
@@ -3835,7 +3835,7 @@ exports[`Dashboard > should render 1`] = `
                         </td>
                         <td>
                           <div
-                            class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-11 xl:my-0 xl:pt-3 min-h-14 my-1 pt-2"
+                            class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-11 xl:my-0 xl:pt-3 min-h-14 my-1 pt-2"
                           >
                             <div
                               class="flex w-40 flex-col items-end gap-1"
@@ -3876,7 +3876,7 @@ exports[`Dashboard > should render 1`] = `
                       >
                         <td>
                           <div
-                            class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 items-start pr-0 lg:pr-3 xl:min-h-11 xl:max-h-11 xl:pt-2.5 lg:min-w-36 min-h-14 my-1 pt-1"
+                            class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start pr-0 lg:pr-3 xl:min-h-11 xl:max-h-11 xl:pt-2.5 lg:min-w-36 min-h-14 my-1 pt-1"
                           >
                             <div
                               class="flex flex-col gap-1 font-semibold"
@@ -3954,7 +3954,7 @@ exports[`Dashboard > should render 1`] = `
                           data-testid="TransactionRow__timestamp"
                         >
                           <div
-                            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 min-h-11 xl:max-h-11 xl:pt-3 lg:min-w-40"
+                            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 min-h-11 xl:max-h-11 xl:pt-3 lg:min-w-40"
                           >
                             <span
                               data-testid="TimeAgo"
@@ -3965,7 +3965,7 @@ exports[`Dashboard > should render 1`] = `
                         </td>
                         <td>
                           <div
-                            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-14 my-1 pt-2"
+                            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-14 my-1 pt-2"
                           >
                             <div
                               class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-40 truncate rounded px-1 py-[3px] whitespace-nowrap dark:border"
@@ -3979,7 +3979,7 @@ exports[`Dashboard > should render 1`] = `
                           class="hidden"
                         >
                           <div
-                            class="flex my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11"
+                            class="flex my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11"
                           >
                             <div
                               class="flex grow flex-col gap-2"
@@ -4136,7 +4136,7 @@ exports[`Dashboard > should render 1`] = `
                           class="hidden"
                         >
                           <div
-                            class="flex my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11"
+                            class="flex my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11"
                           >
                             <div
                               class="flex w-full flex-row gap-2"
@@ -4211,7 +4211,7 @@ exports[`Dashboard > should render 1`] = `
                           class=""
                         >
                           <div
-                            class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 space-x-4 items-start my-1 px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-14 pt-2 mt-1 lg:min-w-36"
+                            class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 space-x-4 items-start my-1 px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-14 pt-2 mt-1 lg:min-w-36"
                           >
                             <div
                               class="flex w-full flex-row gap-2"
@@ -4286,7 +4286,7 @@ exports[`Dashboard > should render 1`] = `
                           class="hidden xl:table-cell"
                         >
                           <div
-                            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3"
+                            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3"
                           >
                             <div
                               class="flex flex-col items-end gap-1"
@@ -4322,7 +4322,7 @@ exports[`Dashboard > should render 1`] = `
                         </td>
                         <td>
                           <div
-                            class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-11 xl:my-0 xl:pt-3 min-h-14 my-1 pt-2"
+                            class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-11 xl:my-0 xl:pt-3 min-h-14 my-1 pt-2"
                           >
                             <div
                               class="flex w-40 flex-col items-end gap-1"
@@ -4363,7 +4363,7 @@ exports[`Dashboard > should render 1`] = `
                       >
                         <td>
                           <div
-                            class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 items-start pr-0 lg:pr-3 xl:min-h-11 xl:max-h-11 xl:pt-2.5 lg:min-w-36 min-h-14 my-1 pt-1"
+                            class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start pr-0 lg:pr-3 xl:min-h-11 xl:max-h-11 xl:pt-2.5 lg:min-w-36 min-h-14 my-1 pt-1"
                           >
                             <div
                               class="flex flex-col gap-1 font-semibold"
@@ -4441,7 +4441,7 @@ exports[`Dashboard > should render 1`] = `
                           data-testid="TransactionRow__timestamp"
                         >
                           <div
-                            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 min-h-11 xl:max-h-11 xl:pt-3 lg:min-w-40"
+                            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 min-h-11 xl:max-h-11 xl:pt-3 lg:min-w-40"
                           >
                             <span
                               data-testid="TimeAgo"
@@ -4452,7 +4452,7 @@ exports[`Dashboard > should render 1`] = `
                         </td>
                         <td>
                           <div
-                            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-14 my-1 pt-2"
+                            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-14 my-1 pt-2"
                           >
                             <div
                               class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-40 truncate rounded px-1 py-[3px] whitespace-nowrap dark:border"
@@ -4466,7 +4466,7 @@ exports[`Dashboard > should render 1`] = `
                           class="hidden"
                         >
                           <div
-                            class="flex my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11"
+                            class="flex my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11"
                           >
                             <div
                               class="flex grow flex-col gap-2"
@@ -4623,7 +4623,7 @@ exports[`Dashboard > should render 1`] = `
                           class="hidden"
                         >
                           <div
-                            class="flex my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11"
+                            class="flex my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11"
                           >
                             <div
                               class="flex w-full flex-row gap-2"
@@ -4698,7 +4698,7 @@ exports[`Dashboard > should render 1`] = `
                           class=""
                         >
                           <div
-                            class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 space-x-4 items-start my-1 px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-14 pt-2 mt-1 lg:min-w-36"
+                            class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 space-x-4 items-start my-1 px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-14 pt-2 mt-1 lg:min-w-36"
                           >
                             <div
                               class="flex w-full flex-row gap-2"
@@ -4773,7 +4773,7 @@ exports[`Dashboard > should render 1`] = `
                           class="hidden xl:table-cell"
                         >
                           <div
-                            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3"
+                            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3"
                           >
                             <div
                               class="flex flex-col items-end gap-1"
@@ -4809,7 +4809,7 @@ exports[`Dashboard > should render 1`] = `
                         </td>
                         <td>
                           <div
-                            class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-11 xl:my-0 xl:pt-3 min-h-14 my-1 pt-2"
+                            class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-11 xl:my-0 xl:pt-3 min-h-14 my-1 pt-2"
                           >
                             <div
                               class="flex w-40 flex-col items-end gap-1"
@@ -4850,7 +4850,7 @@ exports[`Dashboard > should render 1`] = `
                       >
                         <td>
                           <div
-                            class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 items-start pr-0 lg:pr-3 xl:min-h-11 xl:max-h-11 xl:pt-2.5 lg:min-w-36 min-h-14 my-1 pt-1"
+                            class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start pr-0 lg:pr-3 xl:min-h-11 xl:max-h-11 xl:pt-2.5 lg:min-w-36 min-h-14 my-1 pt-1"
                           >
                             <div
                               class="flex flex-col gap-1 font-semibold"
@@ -4928,7 +4928,7 @@ exports[`Dashboard > should render 1`] = `
                           data-testid="TransactionRow__timestamp"
                         >
                           <div
-                            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 min-h-11 xl:max-h-11 xl:pt-3 lg:min-w-40"
+                            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 min-h-11 xl:max-h-11 xl:pt-3 lg:min-w-40"
                           >
                             <span
                               data-testid="TimeAgo"
@@ -4939,7 +4939,7 @@ exports[`Dashboard > should render 1`] = `
                         </td>
                         <td>
                           <div
-                            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-14 my-1 pt-2"
+                            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-14 my-1 pt-2"
                           >
                             <div
                               class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-40 truncate rounded px-1 py-[3px] whitespace-nowrap dark:border"
@@ -4953,7 +4953,7 @@ exports[`Dashboard > should render 1`] = `
                           class="hidden"
                         >
                           <div
-                            class="flex my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11"
+                            class="flex my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11"
                           >
                             <div
                               class="flex grow flex-col gap-2"
@@ -5110,7 +5110,7 @@ exports[`Dashboard > should render 1`] = `
                           class="hidden"
                         >
                           <div
-                            class="flex my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11"
+                            class="flex my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11"
                           >
                             <div
                               class="flex w-full flex-row gap-2"
@@ -5185,7 +5185,7 @@ exports[`Dashboard > should render 1`] = `
                           class=""
                         >
                           <div
-                            class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 space-x-4 items-start my-1 px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-14 pt-2 mt-1 lg:min-w-36"
+                            class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 space-x-4 items-start my-1 px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-14 pt-2 mt-1 lg:min-w-36"
                           >
                             <div
                               class="flex w-full flex-row gap-2"
@@ -5260,7 +5260,7 @@ exports[`Dashboard > should render 1`] = `
                           class="hidden xl:table-cell"
                         >
                           <div
-                            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3"
+                            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3"
                           >
                             <div
                               class="flex flex-col items-end gap-1"
@@ -5296,7 +5296,7 @@ exports[`Dashboard > should render 1`] = `
                         </td>
                         <td>
                           <div
-                            class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-11 xl:my-0 xl:pt-3 min-h-14 my-1 pt-2"
+                            class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-11 xl:my-0 xl:pt-3 min-h-14 my-1 pt-2"
                           >
                             <div
                               class="flex w-40 flex-col items-end gap-1"
@@ -5337,7 +5337,7 @@ exports[`Dashboard > should render 1`] = `
                       >
                         <td>
                           <div
-                            class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 items-start pr-0 lg:pr-3 xl:min-h-11 xl:max-h-11 xl:pt-2.5 lg:min-w-36 min-h-14 my-1 pt-1"
+                            class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start pr-0 lg:pr-3 xl:min-h-11 xl:max-h-11 xl:pt-2.5 lg:min-w-36 min-h-14 my-1 pt-1"
                           >
                             <div
                               class="flex flex-col gap-1 font-semibold"
@@ -5415,7 +5415,7 @@ exports[`Dashboard > should render 1`] = `
                           data-testid="TransactionRow__timestamp"
                         >
                           <div
-                            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 min-h-11 xl:max-h-11 xl:pt-3 lg:min-w-40"
+                            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 min-h-11 xl:max-h-11 xl:pt-3 lg:min-w-40"
                           >
                             <span
                               data-testid="TimeAgo"
@@ -5426,7 +5426,7 @@ exports[`Dashboard > should render 1`] = `
                         </td>
                         <td>
                           <div
-                            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-14 my-1 pt-2"
+                            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-14 my-1 pt-2"
                           >
                             <div
                               class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-40 truncate rounded px-1 py-[3px] whitespace-nowrap dark:border"
@@ -5440,7 +5440,7 @@ exports[`Dashboard > should render 1`] = `
                           class="hidden"
                         >
                           <div
-                            class="flex my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11"
+                            class="flex my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11"
                           >
                             <div
                               class="flex grow flex-col gap-2"
@@ -5604,7 +5604,7 @@ exports[`Dashboard > should render 1`] = `
                           class="hidden"
                         >
                           <div
-                            class="flex my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11"
+                            class="flex my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11"
                           >
                             <div
                               class="flex w-full flex-row gap-2"
@@ -5686,7 +5686,7 @@ exports[`Dashboard > should render 1`] = `
                           class=""
                         >
                           <div
-                            class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 space-x-4 items-start my-1 px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-14 pt-2 mt-1 lg:min-w-36"
+                            class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 space-x-4 items-start my-1 px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-14 pt-2 mt-1 lg:min-w-36"
                           >
                             <div
                               class="flex w-full flex-row gap-2"
@@ -5768,7 +5768,7 @@ exports[`Dashboard > should render 1`] = `
                           class="hidden xl:table-cell"
                         >
                           <div
-                            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3"
+                            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3"
                           >
                             <div
                               class="flex flex-col items-end gap-1"
@@ -5804,7 +5804,7 @@ exports[`Dashboard > should render 1`] = `
                         </td>
                         <td>
                           <div
-                            class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-11 xl:my-0 xl:pt-3 min-h-14 my-1 pt-2"
+                            class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-11 xl:my-0 xl:pt-3 min-h-14 my-1 pt-2"
                           >
                             <div
                               class="flex w-40 flex-col items-end gap-1"
@@ -5845,7 +5845,7 @@ exports[`Dashboard > should render 1`] = `
                       >
                         <td>
                           <div
-                            class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 items-start pr-0 lg:pr-3 xl:min-h-11 xl:max-h-11 xl:pt-2.5 lg:min-w-36 min-h-14 my-1 pt-1"
+                            class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start pr-0 lg:pr-3 xl:min-h-11 xl:max-h-11 xl:pt-2.5 lg:min-w-36 min-h-14 my-1 pt-1"
                           >
                             <div
                               class="flex flex-col gap-1 font-semibold"
@@ -5923,7 +5923,7 @@ exports[`Dashboard > should render 1`] = `
                           data-testid="TransactionRow__timestamp"
                         >
                           <div
-                            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 min-h-11 xl:max-h-11 xl:pt-3 lg:min-w-40"
+                            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 min-h-11 xl:max-h-11 xl:pt-3 lg:min-w-40"
                           >
                             <span
                               data-testid="TimeAgo"
@@ -5934,7 +5934,7 @@ exports[`Dashboard > should render 1`] = `
                         </td>
                         <td>
                           <div
-                            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-14 my-1 pt-2"
+                            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-14 my-1 pt-2"
                           >
                             <div
                               class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-40 truncate rounded px-1 py-[3px] whitespace-nowrap dark:border"
@@ -5948,7 +5948,7 @@ exports[`Dashboard > should render 1`] = `
                           class="hidden"
                         >
                           <div
-                            class="flex my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11"
+                            class="flex my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11"
                           >
                             <div
                               class="flex grow flex-col gap-2"
@@ -6059,7 +6059,7 @@ exports[`Dashboard > should render 1`] = `
                           class="hidden"
                         >
                           <div
-                            class="flex my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11"
+                            class="flex my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11"
                           >
                             <div
                               class="flex flex-row gap-2"
@@ -6088,7 +6088,7 @@ exports[`Dashboard > should render 1`] = `
                           class=""
                         >
                           <div
-                            class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 space-x-4 items-start my-1 px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-14 pt-2 mt-1 lg:min-w-36"
+                            class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 space-x-4 items-start my-1 px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-14 pt-2 mt-1 lg:min-w-36"
                           >
                             <div
                               class="flex flex-row gap-2"
@@ -6117,7 +6117,7 @@ exports[`Dashboard > should render 1`] = `
                           class="hidden xl:table-cell"
                         >
                           <div
-                            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3"
+                            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3"
                           >
                             <div
                               class="flex flex-col items-end gap-1"
@@ -6153,7 +6153,7 @@ exports[`Dashboard > should render 1`] = `
                         </td>
                         <td>
                           <div
-                            class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-11 xl:my-0 xl:pt-3 min-h-14 my-1 pt-2"
+                            class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-11 xl:my-0 xl:pt-3 min-h-14 my-1 pt-2"
                           >
                             <div
                               class="flex w-40 flex-col items-end gap-1"
@@ -6194,7 +6194,7 @@ exports[`Dashboard > should render 1`] = `
                       >
                         <td>
                           <div
-                            class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 items-start pr-0 lg:pr-3 xl:min-h-11 xl:max-h-11 xl:pt-2.5 lg:min-w-36 min-h-14 my-1 pt-1"
+                            class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start pr-0 lg:pr-3 xl:min-h-11 xl:max-h-11 xl:pt-2.5 lg:min-w-36 min-h-14 my-1 pt-1"
                           >
                             <div
                               class="flex flex-col gap-1 font-semibold"
@@ -6272,7 +6272,7 @@ exports[`Dashboard > should render 1`] = `
                           data-testid="TransactionRow__timestamp"
                         >
                           <div
-                            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 min-h-11 xl:max-h-11 xl:pt-3 lg:min-w-40"
+                            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 min-h-11 xl:max-h-11 xl:pt-3 lg:min-w-40"
                           >
                             <span
                               data-testid="TimeAgo"
@@ -6283,7 +6283,7 @@ exports[`Dashboard > should render 1`] = `
                         </td>
                         <td>
                           <div
-                            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-14 my-1 pt-2"
+                            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-14 my-1 pt-2"
                           >
                             <div
                               class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-40 truncate rounded px-1 py-[3px] whitespace-nowrap dark:border"
@@ -6297,7 +6297,7 @@ exports[`Dashboard > should render 1`] = `
                           class="hidden"
                         >
                           <div
-                            class="flex my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11"
+                            class="flex my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11"
                           >
                             <div
                               class="flex grow flex-col gap-2"
@@ -6463,7 +6463,7 @@ exports[`Dashboard > should render 1`] = `
                           class="hidden"
                         >
                           <div
-                            class="flex my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11"
+                            class="flex my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11"
                           >
                             <div
                               class="flex w-full flex-row gap-2"
@@ -6545,7 +6545,7 @@ exports[`Dashboard > should render 1`] = `
                           class=""
                         >
                           <div
-                            class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 space-x-4 items-start my-1 px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-14 pt-2 mt-1 lg:min-w-36"
+                            class="flex transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 space-x-4 items-start my-1 px-0 lg:px-3 xl:pt-3 xl:min-h-11 min-h-14 pt-2 mt-1 lg:min-w-36"
                           >
                             <div
                               class="flex w-full flex-row gap-2"
@@ -6629,7 +6629,7 @@ exports[`Dashboard > should render 1`] = `
                           class="hidden xl:table-cell"
                         >
                           <div
-                            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3"
+                            class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3"
                           >
                             <div
                               class="flex flex-col items-end gap-1"
@@ -6665,7 +6665,7 @@ exports[`Dashboard > should render 1`] = `
                         </td>
                         <td>
                           <div
-                            class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-11 xl:my-0 xl:pt-3 min-h-14 my-1 pt-2"
+                            class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-11 xl:my-0 xl:pt-3 min-h-14 my-1 pt-2"
                           >
                             <div
                               class="flex w-40 flex-col items-end gap-1"

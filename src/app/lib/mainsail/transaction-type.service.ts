@@ -30,11 +30,7 @@ const getFunctionIdentifiers = (contract: {
 		const inputs = func.inputs.map((index) => index.type).join(",");
 		const signature = `${func.name}(${inputs})`;
 
-		const identifier = contract.methodIdentifiers?.[signature];
-
-		if (identifier) {
-			result[func.name] = identifier;
-		}
+		result[func.name] = contract.methodIdentifiers?.[signature];
 	}
 
 	return result;
@@ -110,10 +106,6 @@ export class TransactionTypeService {
 		const functionIdentifiers = TransactionTypeService.#getFunctionIdentifiers();
 
 		const identifier = functionIdentifiers[identifierName];
-
-		if (!identifier) {
-			return false;
-		}
 
 		return data.data.includes(identifier);
 	}

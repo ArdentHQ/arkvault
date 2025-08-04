@@ -1,6 +1,6 @@
-import { Networks } from "@/app/lib/mainsail";
-
 import { explorer, featureFlags, importMethods, transactions } from "./shared.js";
+
+import { Networks } from "@/app/lib/mainsail";
 
 const network: Networks.NetworkManifest = {
 	coin: "Mainsail",
@@ -22,19 +22,19 @@ const network: Networks.NetworkManifest = {
 	},
 	hosts: [
 		{
-			host: "https://dwallets-evm.mainsailhq.com/api",
+			host: "https://testnet.mainsailhq.com/api",
 			type: "full",
 		},
 		{
-			host: "https://dwallets-evm.mainsailhq.com/tx/api",
+			host: "https://testnet.mainsailhq.com/tx/api",
 			type: "tx",
 		},
 		{
-			host: "https://explorer-evm-test.mainsailhq.com",
+			host: "https://explorer-demo.mainsailhq.com",
 			type: "explorer",
 		},
 		{
-			host: "https://dwallets-evm.mainsailhq.com/evm/api",
+			host: "https://testnet.mainsailhq.com/rpc/api",
 			type: "evm",
 		},
 	],

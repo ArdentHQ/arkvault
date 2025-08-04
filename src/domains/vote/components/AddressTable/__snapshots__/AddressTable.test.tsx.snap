@@ -209,7 +209,7 @@ exports[`AddressTable > should render 1`] = `
               data-testid="AddressRow__wallet"
             >
               <div
-                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 cursor-pointer group space-x-3"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 cursor-pointer group space-x-3"
               >
                 <div
                   class="w-40 flex-1"
@@ -281,7 +281,7 @@ exports[`AddressTable > should render 1`] = `
               class="hidden xl:table-cell"
             >
               <div
-                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 text-sm justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
               >
                 <span
                   class="whitespace-nowrap"
@@ -293,7 +293,7 @@ exports[`AddressTable > should render 1`] = `
             </td>
             <td>
               <div
-                class="px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm font-semibold space-x-3 flex justify-end"
+                class="px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 text-sm font-semibold space-x-3 flex justify-end"
               >
                 <div
                   class="flex items-center space-x-3 overflow-hidden"
@@ -349,7 +349,7 @@ exports[`AddressTable > should render 1`] = `
             </td>
             <td>
               <div
-                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm justify-center"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 text-sm justify-center"
               >
                 <div
                   class="text-theme-secondary-400 font-semibold"
@@ -367,7 +367,7 @@ exports[`AddressTable > should render 1`] = `
             </td>
             <td>
               <div
-                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-end"
               >
                 <div>
                   <button
@@ -601,7 +601,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
               data-testid="AddressRow__wallet"
             >
               <div
-                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 cursor-pointer group space-x-3"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 cursor-pointer group space-x-3"
               >
                 <div
                   class="w-40 flex-1"
@@ -673,7 +673,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
               class="hidden xl:table-cell"
             >
               <div
-                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 text-sm justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
               >
                 <span
                   class="whitespace-nowrap"
@@ -685,7 +685,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
             </td>
             <td>
               <div
-                class="px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm font-semibold space-x-3 flex justify-end"
+                class="px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 text-sm font-semibold space-x-3 flex justify-end"
               >
                 <div
                   class="flex items-center space-x-3 overflow-hidden"
@@ -741,7 +741,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
             </td>
             <td>
               <div
-                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm justify-center"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 text-sm justify-center"
               >
                 <div
                   class="text-theme-secondary-400 font-semibold"
@@ -759,7 +759,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
             </td>
             <td>
               <div
-                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-end"
               >
                 <div>
                   <button
@@ -1226,7 +1226,7 @@ exports[`AddressTable > should render with voting validators and handle exceptio
               data-testid="AddressRow__wallet"
             >
               <div
-                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 cursor-pointer group space-x-3"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 cursor-pointer group space-x-3"
               >
                 <div
                   class="w-40 flex-1"
@@ -1298,7 +1298,7 @@ exports[`AddressTable > should render with voting validators and handle exceptio
               class="hidden xl:table-cell"
             >
               <div
-                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 text-sm justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
               >
                 <span
                   class="whitespace-nowrap"
@@ -1310,7 +1310,7 @@ exports[`AddressTable > should render with voting validators and handle exceptio
             </td>
             <td>
               <div
-                class="px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm font-semibold space-x-3 flex justify-end"
+                class="px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 text-sm font-semibold space-x-3 flex justify-end"
               >
                 <span
                   class="text-theme-secondary-400 dim:text-theme-dim-500"
@@ -1321,7 +1321,7 @@ exports[`AddressTable > should render with voting validators and handle exceptio
             </td>
             <td>
               <div
-                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 text-sm justify-center"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 text-sm justify-center"
               >
                 <div
                   class="text-theme-secondary-400 font-semibold"
@@ -1339,7 +1339,7 @@ exports[`AddressTable > should render with voting validators and handle exceptio
             </td>
             <td>
               <div
-                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 dim:group-hover:bg-theme-dim-950 justify-end"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-end"
               >
                 <div>
                   <button
