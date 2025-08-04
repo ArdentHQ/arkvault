@@ -776,6 +776,8 @@ describe("Welcome", () => {
 	});
 
 	it("should use the system theme", async () => {
+		const getItemSpy = vi.spyOn(Storage.prototype, "getItem").mockReturnValue(null);
+
 		const windowSpy = vi.spyOn(window, "matchMedia").mockImplementation(() => ({ matches: true }) as any);
 		// eslint-disable-next-line testing-library/no-node-access
 		const spy = vi.spyOn(document.querySelector("html").classList, "add");
@@ -788,5 +790,6 @@ describe("Welcome", () => {
 
 		spy.mockRestore();
 		windowSpy.mockRestore();
+		getItemSpy.mockRestore();
 	});
 });
