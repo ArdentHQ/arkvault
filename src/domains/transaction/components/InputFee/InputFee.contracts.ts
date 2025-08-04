@@ -38,6 +38,7 @@ interface InputFeeAdvancedProperties {
 	network: Networks.Network;
 	gasPrice: BigNumber;
 	gasLimit: BigNumber;
+	blockTime?: number;
 }
 
 interface InputFeeSimpleProperties {
@@ -48,6 +49,7 @@ interface InputFeeSimpleProperties {
 	exchangeTicker: string;
 	showConvertedValues: boolean;
 	loading?: boolean;
+	blockTime?: number;
 }
 
 interface InputFeeProperties {
