@@ -70,7 +70,7 @@ export const InputFee: React.FC<InputFeeProperties> = memo(
 
 		const ticker = network.ticker();
 
-		const blockTime = get(configManager.getMilestone(), "timeouts.blockTime")
+		const blockTime = get(configManager.getMilestone(), "timeouts.blockTime") as number
 
 		const exchangeTicker = profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency);
 		const { convert } = useExchangeRate({ exchangeTicker, profile, ticker });
