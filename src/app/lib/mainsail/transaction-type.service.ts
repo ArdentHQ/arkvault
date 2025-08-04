@@ -9,7 +9,7 @@ type TransactionData = Record<string, any>;
 export const TransactionTypes = {
 	MultiPayment: `0x${MultipaymentContract.methodIdentifiers["pay(address[],uint256[])"]}`,
 	RegisterUsername: `0x${UsernamesContract.methodIdentifiers["registerUsername(string)"]}`,
-	ResignUsername: `0x${UsernamesContract.methodIdentifiers["resignUsername(string)"]}`,
+	ResignUsername: `0x${UsernamesContract.methodIdentifiers["resignUsername()"]}`,
 	Transfer: "",
 	...FunctionSigs.ConsensusV1,
 } as const;
