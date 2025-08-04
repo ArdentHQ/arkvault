@@ -311,7 +311,7 @@ export const AddRecipient = ({
 
 			<SubForm
 				data-testid="AddRecipient__form-wrapper"
-				noBackground={isSingle}
+				noBorder={isSingle}
 				noPadding={isSingle}
 				className="rounded-xl"
 			>
@@ -425,7 +425,7 @@ export const AddRecipient = ({
 					)}
 
 					{!isSingle && addedRecipients.length > 0 && (
-						<div>
+						<div className="space-y-0 sm:space-y-1">
 							{addedRecipients.map((recipient, index) => (
 								<AddRecipientItem
 									index={index}
