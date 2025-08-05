@@ -41,7 +41,7 @@ describe("UpdateAddressName", () => {
 
 		const name = "Sample label";
 
-		const user = userEvent.setup()
+		const user = userEvent.setup();
 
 		await user.clear(screen.getByTestId("UpdateWalletName__input"));
 		await user.paste(name);
@@ -69,7 +69,7 @@ describe("UpdateAddressName", () => {
 
 		const nameVariations = ["Mainsail Wallet 2", "mainsail wallet 2", " Mainsail Wallet 2", "Mainsail Wallet 2 "];
 
-		const user = userEvent.setup()
+		const user = userEvent.setup();
 
 		for (const name of nameVariations) {
 			await user.clear(screen.getByTestId("UpdateWalletName__input"));
@@ -93,7 +93,7 @@ describe("UpdateAddressName", () => {
 			<UpdateAddressName profile={profile} wallet={wallet} onAfterSave={vi.fn()} onCancel={vi.fn()} />,
 		);
 
-		const user = userEvent.setup()
+		const user = userEvent.setup();
 
 		await user.clear(screen.getByTestId("UpdateWalletName__input"));
 		await user.paste("      ");
@@ -110,7 +110,7 @@ describe("UpdateAddressName", () => {
 			<UpdateAddressName profile={profile} wallet={wallet} onAfterSave={vi.fn()} onCancel={vi.fn()} />,
 		);
 
-		const user = userEvent.setup()
+		const user = userEvent.setup();
 
 		await user.clear(screen.getByTestId("UpdateWalletName__input"));
 		await user.paste("Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet fugit distinctio");
