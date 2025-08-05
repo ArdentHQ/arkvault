@@ -62,12 +62,7 @@ cucumber("@verifyMessage-failVerification", {
 		await t.click(Selector("[data-testid=VerifyMessage__verify-button]"));
 	},
 	"Then the message verification fails": async (t: TestController) => {
-		await t
-			.expect(
-				Selector("h1").withText(translations.MESSAGE.PAGE_VERIFY_MESSAGE.SUCCESS_STEP.NOT_VERIFIED.TITLE)
-					.exists,
-			)
-			.ok();
+		await t.expect(Selector("h1").withText(translations.MESSAGE.PAGE_VERIFY_MESSAGE.ERROR_STEP.TITLE).exists).ok();
 	},
 });
 
