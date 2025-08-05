@@ -286,7 +286,13 @@ describe("FilterTransactions", () => {
 				value: expect.any(String),
 			},
 			undefined,
-			["validatorRegistration", "usernameRegistration", "usernameResignation", "updateValidator", "validatorResignation"],
+			[
+				"validatorRegistration",
+				"usernameRegistration",
+				"usernameResignation",
+				"updateValidator",
+				"validatorResignation",
+			],
 		);
 	});
 
