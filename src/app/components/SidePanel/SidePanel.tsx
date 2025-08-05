@@ -33,6 +33,7 @@ interface SidePanelProps {
 	activeStep?: number;
 	footer?: React.ReactNode;
 	onBack?: () => void;
+	lastStep?: boolean;
 }
 
 export const SidePanelButtons = ({ className, ...properties }: React.HTMLAttributes<HTMLDivElement>): JSX.Element => (
@@ -61,6 +62,7 @@ export const SidePanel = ({
 	activeStep = 0,
 	footer,
 	onBack,
+	lastStep,
 }: SidePanelProps): JSX.Element => {
 	const popStateHandlerRef = useRef<() => void>(() => {});
 	const { refs, context } = useFloating({
@@ -106,13 +108,13 @@ export const SidePanel = ({
 
 	useEffect(() => {
 		popStateHandlerRef.current = () => {
-			if (hasSteps && typeof onBack === "function") {
+			if (hasSteps && typeof onBack === "function" && !lastStep) {
 				onBack();
 			} else {
 				onOpenChange(false);
 			}
 		};
-	}, [hasSteps, onBack, onOpenChange]);
+	}, [hasSteps, onBack, onOpenChange, lastStep]);
 
 	useEffect(() => {
 		if (open && hasSteps) {

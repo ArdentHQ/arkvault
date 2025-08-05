@@ -320,6 +320,7 @@ export const SignMessageSidePanel = ({
 					)}
 				</SidePanelButtons>
 			}
+			lastStep={activeTab === Step.SuccessStep}
 		>
 			<Form data-testid="SignMessage" context={form} onSubmit={submitForm}>
 				<Tabs activeId={activeTab}>
