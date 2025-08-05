@@ -82,7 +82,7 @@ export const AddRecipient = ({
 	const { network, senderAddress, recipientAddress, amount, recipientAlias, isSendAllSelected } = watch();
 	const { sendTransfer } = useValidation();
 
-	const { minGasPrice } = getFeeMinMax();
+	const { minGasPrice } = getFeeMinMax(profile.activeNetwork());
 	const fee = calculateGasFee(minGasPrice, GasLimit["transfer"].times(Math.max(recipients.length, 1)));
 
 	const ticker = network?.ticker();

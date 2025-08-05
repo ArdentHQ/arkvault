@@ -10,7 +10,6 @@ import {
 } from "./network.models";
 import { ConfigKey, ConfigRepository } from ".";
 import { ArkClient } from "@arkecosystem/typescript-client";
-import { configManager } from "./config.manager";
 
 export class Network {
 	/**
@@ -28,6 +27,13 @@ export class Network {
 	readonly #network: NetworkManifest;
 
 	/**
+	 * The config of the network.
+	 *
+	 * @memberof Network
+	 */
+	readonly #config: ConfigRepository;
+
+	/**
 	 * Create a new Network instance.
 	 *
 	 * @param {string} coin
@@ -37,6 +43,7 @@ export class Network {
 	public constructor(coin: CoinManifest, network: NetworkManifest) {
 		this.#coin = coin;
 		this.#network = network;
+		this.#config = new ConfigRepository({ network });
 	}
 
 	/**
@@ -347,7 +354,7 @@ export class Network {
 	 * @returns {ConfigRepository}
 	 */
 	public config(): ConfigRepository {
-		return new ConfigRepository({ network: this.#network });
+		return this.#config;
 	}
 
 	/**
@@ -369,9 +376,8 @@ export class Network {
 		const dataCrypto = crypto.data;
 		const { blockNumber } = status.data;
 
-		// Set network configuration globally.
-		configManager.setConfig(dataCrypto);
-		configManager.setHeight(blockNumber);
+		this.config().set("height", blockNumber);
+		this.config().set("crypto", dataCrypto);
 	}
 
 	/**
@@ -384,5 +390,40 @@ export class Network {
 		const client = new ArkClient(host);
 		const { data } = await client.node().crypto();
 		return data.network.client.token === this.config().get(ConfigKey.CurrencyTicker);
+	}
+
+	public milestone(height?: number): { [key: string]: any } {
+		const currentHeight = this.config().get("height") as number;
+		const crypto = this.config().get("crypto") as Record<string, any>;
+
+		const milestones = crypto.milestones.sort((a, b) => a.height - b.height);
+		const milestone = {
+			data: milestones[0],
+			index: 0,
+		};
+
+		if (!milestone || !milestones) {
+			throw new Error("Milestone not found.");
+		}
+
+		if (!height && currentHeight) {
+			height = currentHeight;
+		}
+
+		if (!height) {
+			height = 1;
+		}
+
+		while (milestone.index < milestones.length - 1 && height >= milestones[milestone.index + 1].height) {
+			milestone.index++;
+			milestone.data = milestones[milestone.index];
+		}
+
+		while (height < milestones[milestone.index].height) {
+			milestone.index--;
+			milestone.data = milestones[milestone.index];
+		}
+
+		return milestone.data;
 	}
 }

@@ -18,11 +18,8 @@ import { AddressService } from "./address.service.js";
 import { ClientService } from "./client.service.js";
 import { ConfigRepository } from "@/app/lib/mainsail";
 import { IProfile } from "@/app/lib/profiles/profile.contract.js";
-import { NetworkConfig } from "./contracts.js";
 import { Services } from "@/app/lib/mainsail";
 import { SignedTransactionData } from "./signed-transaction.dto";
-import { applyCryptoConfiguration } from "./config.js";
-import { configManager } from "./config.manager.js";
 
 interface ValidatedTransferInput extends Services.TransferInput {
 	gasPrice: BigNumber;
@@ -40,17 +37,10 @@ export class TransactionService {
 	readonly #addressService!: AddressService;
 	readonly #clientService!: ClientService;
 
-	#configCrypto!: { crypto: NetworkConfig; height: number };
-
 	public constructor({ config, profile }: { config: ConfigRepository; profile: IProfile }) {
 		this.#ledgerService = profile.ledger();
 		this.#addressService = new AddressService();
 		this.#clientService = new ClientService({ config, profile });
-
-		this.#configCrypto = {
-			crypto: configManager.all() as NetworkConfig,
-			height: configManager.getHeight() as number,
-		};
 	}
 
 	#assertGasFee(input: TransactionsInputs): asserts input is ValidatedTransferInput {
@@ -76,7 +66,6 @@ export class TransactionService {
 	}
 
 	public async transfer(input: Services.TransferInput): Promise<SignedTransactionData> {
-		applyCryptoConfiguration(this.#configCrypto);
 		this.#assertGasFee(input);
 		this.#assertAmount(input);
 
@@ -99,7 +88,6 @@ export class TransactionService {
 	}
 
 	public async validatorRegistration(input: Services.ValidatorRegistrationInput): Promise<SignedTransactionData> {
-		applyCryptoConfiguration(this.#configCrypto);
 		this.#assertGasFee(input);
 
 		if (!input.data.validatorPublicKey) {
@@ -127,7 +115,6 @@ export class TransactionService {
 	}
 
 	public async updateValidator(input: Services.UpdateValidatorInput): Promise<SignedTransactionData> {
-		applyCryptoConfiguration(this.#configCrypto);
 		this.#assertGasFee(input);
 
 		if (!input.data.validatorPublicKey) {
@@ -162,7 +149,6 @@ export class TransactionService {
 	 * @inheritDoc
 	 */
 	public async vote(input: Services.VoteInput): Promise<SignedTransactionData> {
-		applyCryptoConfiguration(this.#configCrypto);
 		this.#assertGasFee(input);
 
 		const vote: { id: string } | undefined = get(input, "data.votes[0]");
@@ -203,7 +189,6 @@ export class TransactionService {
 	 * @inheritDoc
 	 */
 	public async multiPayment(input: Services.MultiPaymentInput): Promise<SignedTransactionData> {
-		applyCryptoConfiguration(this.#configCrypto);
 		this.#assertGasFee(input);
 
 		if (!input.data.payments) {
@@ -233,7 +218,6 @@ export class TransactionService {
 	}
 
 	public async usernameRegistration(input: Services.UsernameRegistrationInput): Promise<SignedTransactionData> {
-		applyCryptoConfiguration(this.#configCrypto);
 		this.#assertGasFee(input);
 
 		if (!input.data.username) {
@@ -260,7 +244,6 @@ export class TransactionService {
 	}
 
 	public async usernameResignation(input: Services.UsernameResignationInput): Promise<SignedTransactionData> {
-		applyCryptoConfiguration(this.#configCrypto);
 		this.#assertGasFee(input);
 
 		const nonce = await this.#generateNonce(input);
@@ -280,7 +263,6 @@ export class TransactionService {
 	}
 
 	public async validatorResignation(input: Services.ValidatorResignationInput): Promise<SignedTransactionData> {
-		applyCryptoConfiguration(this.#configCrypto);
 		this.#assertGasFee(input);
 
 		const nonce = await this.#generateNonce(input);
