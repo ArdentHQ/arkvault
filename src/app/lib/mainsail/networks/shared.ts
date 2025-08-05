@@ -14,6 +14,7 @@ export const transactions: Networks.NetworkManifestTransactions = {
 		"validatorRegistration",
 		"usernameRegistration",
 		"usernameResignation",
+		"updateValidator",
 		"validatorResignation",
 		"multiPayment",
 		"transfer",
