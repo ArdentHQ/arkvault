@@ -12,7 +12,6 @@ import { RadioButton } from "@/app/components/RadioButton";
 import { Dropdown, DropdownOption } from "@/app/components/Dropdown";
 import { useTranslation } from "react-i18next";
 import { useLink } from "@/app/hooks/use-link";
-import { UpdateAddressName } from "@/domains/portfolio/components/AddressesSidePanel/UpdateAddressName";
 import { TFunction } from "i18next";
 
 export const getMenuOptions = (t: TFunction): DropdownOption[] => {
