@@ -51,7 +51,7 @@ export const UpdateAddressName = ({ onAfterSave, onCancel, profile, wallet }: Up
 		<Form
 			context={form}
 			onSubmit={onSubmit}
-			className="bg-theme-secondary-100 border-theme-secondary-300 dark:bg-theme-dark-800 dark:border-theme-dark-700 dim:bg-theme-dim-800 dim:border-theme-dim-700 rounded-b border-b px-4 py-3 sm:px-6 sm:py-4 sm:rounded-b-lg sm:border-b-0"
+			className="bg-theme-secondary-100 border-theme-secondary-300 dark:bg-theme-dark-800 dark:border-theme-dark-700 dim:bg-theme-dim-800 dim:border-theme-dim-700 rounded-b border-b px-4 py-3 sm:rounded-b-lg sm:border-b-0 sm:px-6 sm:py-4"
 		>
 			<FormField name="name">
 				<FormLabel>{t("COMMON.NAME")}</FormLabel>
