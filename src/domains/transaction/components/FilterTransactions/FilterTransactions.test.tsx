@@ -12,7 +12,6 @@ describe("FilterTransactions", () => {
 		"validatorRegistration",
 		"usernameRegistration",
 		"usernameResignation",
-		"updateValidator",
 		"validatorResignation",
 		"multiPayment",
 		"transfer",
