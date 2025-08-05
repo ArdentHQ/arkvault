@@ -4,6 +4,7 @@ import { env, getMainsailProfileId, render, renderResponsive, screen } from "@/u
 import { AddressRow } from "./AddressRow";
 import { expect } from "vitest";
 import userEvent from "@testing-library/user-event";
+import { MobileAddressRow } from "./MobileAddressRow";
 
 describe("AddressRow", () => {
 	let profile: Contracts.IProfile;
@@ -28,6 +29,7 @@ describe("AddressRow", () => {
 				usesManageMode={false}
 				toggleAddress={vi.fn()}
 				isSelected={false}
+				onEdit={vi.fn()}
 			/>,
 		);
 
@@ -43,6 +45,7 @@ describe("AddressRow", () => {
 				usesManageMode={false}
 				toggleAddress={vi.fn()}
 				isSelected={false}
+				onEdit={vi.fn()}
 			/>,
 			"xs",
 		);
@@ -59,6 +62,7 @@ describe("AddressRow", () => {
 				usesManageMode={true}
 				toggleAddress={vi.fn()}
 				isSelected={false}
+				onEdit={vi.fn()}
 			/>,
 		);
 
@@ -76,6 +80,7 @@ describe("AddressRow", () => {
 				usesManageMode={true}
 				toggleAddress={vi.fn()}
 				isSelected={false}
+				onEdit={vi.fn()}
 			/>,
 		);
 
@@ -92,6 +97,7 @@ describe("AddressRow", () => {
 				usesManageMode={false}
 				toggleAddress={vi.fn()}
 				isSelected={true}
+				onEdit={vi.fn()}
 			/>,
 		);
 
@@ -109,6 +115,7 @@ describe("AddressRow", () => {
 				usesManageMode={false}
 				toggleAddress={toggleAddress}
 				isSelected={true}
+				onEdit={vi.fn()}
 			/>,
 		);
 
@@ -127,6 +134,7 @@ describe("AddressRow", () => {
 				usesManageMode={false}
 				toggleAddress={toggleAddress}
 				isSelected={true}
+				onEdit={vi.fn()}
 			/>,
 		);
 
@@ -145,6 +153,7 @@ describe("AddressRow", () => {
 				usesManageMode={false}
 				toggleAddress={toggleAddress}
 				isSelected={true}
+				onEdit={vi.fn()}
 			/>,
 		);
 
@@ -164,6 +173,7 @@ describe("AddressRow", () => {
 				isSelected={false}
 				isSingleView={false}
 				deleteContent={<div>Delete content</div>}
+				onEdit={vi.fn()}
 			/>,
 		);
 
@@ -181,9 +191,81 @@ describe("AddressRow", () => {
 				toggleAddress={vi.fn()}
 				isSelected={true}
 				isSingleView={true}
+				onEdit={vi.fn()}
 			/>,
 		);
 
 		expect(screen.getByTestId("AddressRow--radio")).toBeInTheDocument();
+	});
+
+	it("should should render editContent", () => {
+		render(
+			<AddressRow
+				profile={profile}
+				wallet={wallet}
+				onDelete={vi.fn()}
+				usesManageMode={true}
+				toggleAddress={vi.fn()}
+				isSelected={false}
+				isSingleView={false}
+				editContent={<div>Edit content</div>}
+				onEdit={vi.fn()}
+			/>,
+		);
+
+		expect(screen.getByText("Edit content")).toBeInTheDocument();
+	});
+
+	it("should should trigger onEdit", async () => {
+		const onEdit = vi.fn();
+
+		render(
+			<AddressRow
+				profile={profile}
+				wallet={wallet}
+				onDelete={vi.fn()}
+				usesManageMode={true}
+				toggleAddress={vi.fn()}
+				isSelected={false}
+				onEdit={onEdit}
+			/>,
+		);
+
+		expect(screen.getByTestId("dropdown__toggle")).toBeInTheDocument();
+
+		await userEvent.click(screen.getByTestId("dropdown__toggle"));
+		await expect(screen.findByTestId("dropdown__option--0")).resolves.toBeInTheDocument();
+
+		await userEvent.click(screen.getByTestId("dropdown__option--0"));
+		expect(onEdit).toHaveBeenCalled();
+	});
+
+	it("should should trigger `Open in Explorer` option", async () => {
+		const windowOpen = vi.spyOn(window, "open").mockImplementation(vi.fn());
+		const explorerLinkSpy = vi.spyOn(wallet, "explorerLink").mockReturnValue("https://mainsail-scan.com/address");
+
+		render(
+			<AddressRow
+				profile={profile}
+				wallet={wallet}
+				onDelete={vi.fn()}
+				usesManageMode={true}
+				toggleAddress={vi.fn()}
+				isSelected={false}
+				onEdit={vi.fn()}
+			/>,
+		);
+
+		expect(screen.getByTestId("dropdown__toggle")).toBeInTheDocument();
+
+		await userEvent.click(screen.getByTestId("dropdown__toggle"));
+		await expect(screen.findByTestId("dropdown__option--1")).resolves.toBeInTheDocument();
+
+		await userEvent.click(screen.getByTestId("dropdown__option--1"));
+
+		expect(windowOpen).toHaveBeenCalledWith(new URL("https://mainsail-scan.com/address").toString(), "_blank");
+
+		windowOpen.mockRestore();
+		explorerLinkSpy.mockRestore();
 	});
 });
