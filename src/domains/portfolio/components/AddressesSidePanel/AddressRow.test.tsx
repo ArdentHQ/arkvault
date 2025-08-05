@@ -4,7 +4,6 @@ import { env, getMainsailProfileId, render, renderResponsive, screen } from "@/u
 import { AddressRow } from "./AddressRow";
 import { expect } from "vitest";
 import userEvent from "@testing-library/user-event";
-import { MobileAddressRow } from "./MobileAddressRow";
 
 describe("AddressRow", () => {
 	let profile: Contracts.IProfile;
