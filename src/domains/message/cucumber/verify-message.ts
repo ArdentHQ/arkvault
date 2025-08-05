@@ -26,10 +26,10 @@ cucumber("@verifyMessage", {
 	...preSteps,
 	"When she enters valid details to verify a message": async (t: TestController) => {
 		const mockSuccessMessage = {
-			message: "Hello World",
-			signatory: "025f81956d5826bad7d30daed2b5c8c98e72046c1ec8323da336445476183fb7ca",
+			message: "Hello world",
+			signatory: "022a40ea35d53eedf0341ffa17574fca844d69665ce35f224e9a6b1385575044fd",
 			signature:
-				"0x4c0ab8ad4f6af96954631c0be6f94e91479c5a4e775ff9ec97a0bbe9002a764d14ea05f4ac300c66db0b4ebca401654fe839b211f7c63daab1b1647742b6fcd91b",
+				"0x43abaa1f21d5b74006409e988c0102ece47b44c3a7901c7e19948c6f6aecb0786683d351ebf34a40a8402d01da3465ffa49fcab82d82f07ca5904fd3e0b8b3891c",
 		};
 		await t.click(Selector("input[type=checkbox]").parent());
 		await t.typeText(Selector("[data-testid=VerifyMessage__json-jsonString]"), JSON.stringify(mockSuccessMessage));
@@ -51,9 +51,9 @@ cucumber("@verifyMessage-failVerification", {
 	"When she enters invalid details to verify a message": async (t: TestController) => {
 		const mockFailingMessage = {
 			message: "Wrong message",
-			signatory: "03df6cd794a7d404db4f1b25816d8976d0e72c5177d17ac9b19a92703b62cdbbbc",
+			signatory: "022a40ea35d53eedf0341ffa17574fca844d69665ce35f224e9a6b1385575044fd",
 			signature:
-				"7915d8c22ec9dab41bd93d9e003970b2f6aaa5d9a5e837d4d17847308f6e880f31e2c1ad141d9b080d9a151baa31dcd36dd05faa51e5db95586d630b66485e1e",
+				"0x43abaa1f21d5b74006409e988c0102ece47b44c3a7901c7e19948c6f6aecb0786683d351ebf34a40a8402d01da3465ffa49fcab82d82f07ca5904fd3e0b8b3891c",
 		};
 		await t.click(Selector("input[type=checkbox]").parent());
 		await t.typeText(Selector("[data-testid=VerifyMessage__json-jsonString]"), JSON.stringify(mockFailingMessage));
