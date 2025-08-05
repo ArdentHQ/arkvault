@@ -17,6 +17,7 @@ import cn from "classnames";
 import { t } from "i18next";
 import { useLocalStorage } from "usehooks-ts";
 import { EmptyBlock } from "@/app/components/EmptyBlock";
+import { UpdateAddressName } from "@/domains/portfolio/components/AddressesSidePanel/UpdateAddressName";
 
 export const AddressesSidePanel = ({
 	profile,
@@ -478,9 +479,18 @@ export const AddressesSidePanel = ({
 							isSelected={isSelected(wallet)}
 							isSingleView={activeMode === AddressViewSelection.single}
 							usesManageMode={isManageMode}
-							isEditing={addressToEdit === wallet.address()}
 							onDelete={(address: string) => setAddressToDelete(address)}
 							onEdit={(address?: string) => setAddressToEdit(address)}
+							editContent={
+								addressToEdit === wallet.address() ? (
+									<UpdateAddressName
+										onAfterSave={() => setAddressToEdit(undefined)}
+										onCancel={() => disableManageState()}
+										profile={profile}
+										wallet={wallet}
+									/>
+								) : undefined
+							}
 							deleteContent={
 								addressToDelete === wallet.address() ? (
 									<DeleteAddressMessage

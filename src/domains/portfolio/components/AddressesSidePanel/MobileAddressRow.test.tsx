@@ -25,7 +25,7 @@ describe("MobileAddressRow", () => {
 				profile={profile}
 				wallet={wallet}
 				onDelete={vi.fn()}
-				usesDeleteMode={false}
+				usesManageMode={false}
 				toggleAddress={vi.fn()}
 				isSelected={false}
 			/>,
@@ -40,7 +40,7 @@ describe("MobileAddressRow", () => {
 				profile={profile}
 				wallet={wallet}
 				onDelete={vi.fn()}
-				usesDeleteMode={true}
+				usesManageMode={true}
 				toggleAddress={vi.fn()}
 				isSelected={false}
 			/>,
@@ -57,7 +57,7 @@ describe("MobileAddressRow", () => {
 				profile={profile}
 				wallet={wallet}
 				onDelete={onDelete}
-				usesDeleteMode={true}
+				usesManageMode={true}
 				toggleAddress={vi.fn()}
 				isSelected={false}
 			/>,
@@ -73,7 +73,7 @@ describe("MobileAddressRow", () => {
 				profile={profile}
 				wallet={wallet}
 				onDelete={vi.fn()}
-				usesDeleteMode={false}
+				usesManageMode={false}
 				toggleAddress={vi.fn()}
 				isSelected={true}
 			/>,
@@ -90,7 +90,7 @@ describe("MobileAddressRow", () => {
 				profile={profile}
 				wallet={wallet}
 				onDelete={vi.fn()}
-				usesDeleteMode={false}
+				usesManageMode={false}
 				toggleAddress={toggleAddress}
 				isSelected={true}
 			/>,
@@ -108,7 +108,7 @@ describe("MobileAddressRow", () => {
 				profile={profile}
 				wallet={wallet}
 				onDelete={vi.fn()}
-				usesDeleteMode={false}
+				usesManageMode={false}
 				toggleAddress={toggleAddress}
 				isSelected={true}
 			/>,
@@ -125,7 +125,7 @@ describe("MobileAddressRow", () => {
 				profile={profile}
 				wallet={wallet}
 				onDelete={onDelete}
-				usesDeleteMode={true}
+				usesManageMode={true}
 				toggleAddress={vi.fn()}
 				isSelected={false}
 				deleteContent={<div>Delete content</div>}

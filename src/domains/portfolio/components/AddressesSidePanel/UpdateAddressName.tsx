@@ -48,9 +48,13 @@ export const UpdateAddressName = ({ onAfterSave, onCancel, profile, wallet }: Up
 	};
 
 	return (
-		<Form context={form} onSubmit={onSubmit} className="px-6 py-4 bg-theme-secondary-100 rounded-b-lg">
+		<Form
+			context={form}
+			onSubmit={onSubmit}
+			className="bg-theme-secondary-100 border-theme-secondary-300 dark:bg-theme-dark-800 dark:border-theme-dark-700 dim:bg-theme-dim-800 dim:border-theme-dim-700 rounded-b border-b px-6 py-4 sm:rounded-b-lg sm:border-b-0"
+		>
 			<FormField name="name">
-				<FormLabel>{t("WALLETS.WALLET_NAME")}</FormLabel>
+				<FormLabel>{t("COMMON.NAME")}</FormLabel>
 				<div className="relative">
 					<Input
 						autoFocus
@@ -62,13 +66,13 @@ export const UpdateAddressName = ({ onAfterSave, onCancel, profile, wallet }: Up
 				</div>
 			</FormField>
 
-			<div className="mt-4 flex w-full items-center justify-center leading-[18px] sm:justify-end sm:leading-5">
+			<div className="mt-4 flex w-full items-center justify-end leading-[18px] sm:leading-5">
 				<Button
 					data-testid="UpdateWalletName__cancel"
 					size="icon"
 					variant="transparent"
 					onClick={onCancel}
-					className="text-theme-primary-600 dark:text-theme-primary-400 dim:text-theme-dim-navy-400 px-2 py-[3px] text-sm leading-[18px] sm:text-base sm:leading-5"
+					className="text-theme-primary-600 dark:text-theme-primary-400 dim:text-theme-dim-navy-400 px-2 py-[3px] leading-5"
 				>
 					{t("COMMON.CANCEL")}
 				</Button>
@@ -84,7 +88,7 @@ export const UpdateAddressName = ({ onAfterSave, onCancel, profile, wallet }: Up
 					variant="transparent"
 					data-testid="UpdateWalletName__submit"
 					disabled={!isValid || !isChanged}
-					className="text-theme-primary-600 dark:text-theme-primary-400 dim:text-theme-dim-navy-400 px-2 py-[3px] text-sm leading-[18px] sm:text-base sm:leading-5"
+					className="text-theme-primary-600 dark:text-theme-primary-400 dim:text-theme-dim-navy-400 px-2 py-[3px] leading-5"
 				>
 					{t("COMMON.SAVE")}
 				</Button>
@@ -92,4 +96,3 @@ export const UpdateAddressName = ({ onAfterSave, onCancel, profile, wallet }: Up
 		</Form>
 	);
 };
-

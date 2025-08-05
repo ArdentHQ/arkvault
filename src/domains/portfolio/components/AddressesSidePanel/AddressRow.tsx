@@ -13,60 +13,10 @@ import { Dropdown, DropdownOption } from "@/app/components/Dropdown";
 import { useTranslation } from "react-i18next";
 import { useLink } from "@/app/hooks/use-link";
 import { UpdateAddressName } from "@/domains/portfolio/components/AddressesSidePanel/UpdateAddressName";
+import { TFunction } from "i18next";
 
-export const AddressRow = ({
-	profile,
-	wallet,
-	toggleAddress,
-	isSelected,
-	usesManageMode,
-	isEditing,
-	onDelete,
-	onEdit,
-	isError = false,
-	isSingleView = false,
-	errorMessage,
-	deleteContent,
-}: {
-	profile: Contracts.IProfile;
-	wallet: Contracts.IReadWriteWallet;
-	toggleAddress: (address: string) => void;
-	isSelected: boolean;
-	isEditing: boolean;
-	isError?: boolean;
-	usesManageMode: boolean;
-	errorMessage?: string;
-	onDelete: (address: string) => void;
-	onEdit: (address?: string) => void;
-	isSingleView?: boolean;
-	deleteContent?: React.ReactNode;
-}): JSX.Element => {
-	const { t } = useTranslation();
-	const { isXs } = useBreakpoint();
-
-	const { openExternal } = useLink();
-	const { getWalletAlias } = useWalletAlias();
-
-	if (isXs) {
-		return (
-			<MobileAddressRow
-				profile={profile}
-				wallet={wallet}
-				toggleAddress={toggleAddress}
-				isSelected={isSelected}
-				usesDeleteMode={usesManageMode}
-				onDelete={onDelete}
-				isError={isError}
-				errorMessage={errorMessage}
-				deleteContent={deleteContent}
-				isSingleView={isSingleView}
-			/>
-		);
-	}
-
-	const { alias } = getWalletAlias({ address: wallet.address(), network: wallet.network(), profile });
-
-	const menuOptions: DropdownOption[] = [
+export const getMenuOptions = (t: TFunction): DropdownOption[] => {
+	return [
 		{
 			icon: "Pencil",
 			iconPosition: "start",
@@ -80,6 +30,40 @@ export const AddressRow = ({
 			value: "open-explorer",
 		},
 	];
+};
+
+export const AddressRow = ({
+	profile,
+	wallet,
+	toggleAddress,
+	isSelected,
+	usesManageMode,
+	onDelete,
+	onEdit,
+	isError = false,
+	isSingleView = false,
+	errorMessage,
+	deleteContent,
+	editContent,
+}: {
+	profile: Contracts.IProfile;
+	wallet: Contracts.IReadWriteWallet;
+	toggleAddress: (address: string) => void;
+	isSelected: boolean;
+	isError?: boolean;
+	usesManageMode: boolean;
+	errorMessage?: string;
+	onDelete: (address: string) => void;
+	onEdit: (address?: string) => void;
+	isSingleView?: boolean;
+	deleteContent?: React.ReactNode;
+	editContent?: React.ReactNode;
+}): JSX.Element => {
+	const { t } = useTranslation();
+	const { isXs } = useBreakpoint();
+
+	const { openExternal } = useLink();
+	const { getWalletAlias } = useWalletAlias();
 
 	const handleSelectOption = (action: DropdownOption, wallet: Contracts.IReadWriteWallet) => {
 		if (action.value === "open-explorer") {
@@ -89,6 +73,29 @@ export const AddressRow = ({
 
 		onEdit(wallet.address());
 	};
+
+	if (isXs) {
+		return (
+			<MobileAddressRow
+				profile={profile}
+				wallet={wallet}
+				toggleAddress={toggleAddress}
+				isSelected={isSelected}
+				usesManageMode={usesManageMode}
+				onDelete={onDelete}
+				isError={isError}
+				errorMessage={errorMessage}
+				deleteContent={deleteContent}
+				editContent={editContent}
+				isSingleView={isSingleView}
+				onSelectOption={handleSelectOption}
+			/>
+		);
+	}
+
+	const { alias } = getWalletAlias({ address: wallet.address(), network: wallet.network(), profile });
+
+	const isEditing = !!editContent;
 
 	return (
 		<div
@@ -112,7 +119,8 @@ export const AddressRow = ({
 						disabled={isEditing}
 						size="icon"
 						className={cn("text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200", {
-							"hover:bg-theme-danger-400 dim-hover:text-white p-1 hover:text-white dark:hover:text-white": !isEditing,
+							"hover:bg-theme-danger-400 dim-hover:text-white p-1 hover:text-white dark:hover:text-white":
+								!isEditing,
 						})}
 						variant="transparent"
 					>
@@ -194,21 +202,25 @@ export const AddressRow = ({
 						wrapperClass="z-50"
 						toggleContent={
 							<Button
-								disabled={isEditing || !!deleteContent}
 								size="icon"
 								variant="transparent"
 								className={cn("ml-4 p-1", {
-									"dark:hover:bg-theme-secondary-700 hover:bg-theme-navy-200 dim-hover:bg-theme-dim-800": !isEditing && !deleteContent,
+									"dark:hover:bg-theme-secondary-700 hover:bg-theme-navy-200 dim-hover:bg-theme-dim-800":
+										!isEditing && !deleteContent,
 								})}
 							>
 								<Icon
 									name="EllipsisVerticalFilled"
 									size="md"
-									className="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50 transition-colors duration-200"
+									className={cn("transition-colors duration-200", {
+										"text-theme-secondary-500": isEditing || deleteContent,
+										"text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50":
+											!isEditing && !deleteContent,
+									})}
 								/>
 							</Button>
 						}
-						options={menuOptions}
+						options={getMenuOptions(t)}
 						onSelect={(action) => handleSelectOption(action, wallet)}
 					/>
 				)}
@@ -227,18 +239,14 @@ export const AddressRow = ({
 					</p>
 				</div>
 			)}
+
 			<div
 				className={cn("transition-all duration-300", {
 					"max-h-0 opacity-0": !isEditing,
 					"max-h-52 opacity-100": isEditing,
 				})}
 			>
-				<UpdateAddressName
-					onAfterSave={() => onEdit(undefined)}
-					onCancel={() => onEdit(undefined)}
-					profile={profile}
-					wallet={wallet}
-				/>
+				{editContent}
 			</div>
 
 			<div
