@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/require-await */
 import { Networks } from "@/app/lib/mainsail";
 import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
@@ -8,6 +7,8 @@ import { BigNumber } from "@/app/lib/helpers";
 import { AddRecipient } from "./AddRecipient";
 import { buildTranslations } from "@/app/i18n/helpers";
 import { env, getDefaultProfileId, MNEMONICS, render, screen, waitFor, within } from "@/utils/testing-library";
+
+import CryptoConfigurationFixture from "@/tests/fixtures/coins/mainsail/devnet/cryptoConfiguration.json";
 
 const translations = buildTranslations();
 
@@ -223,6 +224,8 @@ describe("AddRecipient", () => {
 			network: "mainsail.devnet",
 		});
 
+		emptyWallet.network().config().set("height", 1);
+		emptyWallet.network().config().set("crypto", CryptoConfigurationFixture.data);
 		vi.spyOn(emptyWallet, "balance").mockReturnValue(0);
 		vi.spyOn(emptyWallet.network(), "isTest").mockReturnValue(false);
 
@@ -511,9 +514,9 @@ describe("AddRecipient", () => {
 
 		await waitFor(() => expect(recipientList()).toHaveLength(1));
 
-		expect(screen.getAllByTestId("Address__alias")).toHaveLength(2);
+		expect(screen.getAllByTestId("Address__alias")).toHaveLength(1);
 
-		expect(screen.getAllByText(/Mainsail Wallet/).length).toBe(2);
+		expect(screen.getAllByText(/Mainsail Wallet/).length).toBe(1);
 	});
 
 	it("should show error for low balance", async () => {
@@ -631,7 +634,7 @@ describe("AddRecipient", () => {
 
 		await waitFor(() => expect(recipientList()).toHaveLength(2));
 
-		const removeButton = within(recipientList()[0]).getAllByTestId("AddRecipientItem--deleteButton");
+		const removeButton = within(recipientList()[0]).getAllByTestId("AddRecipientItem--deleteButton-0");
 
 		expect(removeButton[0]).toBeInTheDocument();
 

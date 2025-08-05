@@ -1,15 +1,16 @@
-import { Contracts } from "@/app/lib/profiles";
-import { useCallback } from "react";
-
-import { useEnvironmentContext } from "@/app/contexts";
-import { TransactionFees } from "@/types";
-import { FeeService } from "@/app/lib/mainsail/fee.service";
-import { encodeFunctionData, numberToHex } from "viem";
 import { ConsensusAbi, MultiPaymentAbi, UsernamesAbi } from "@mainsail/evm-contracts";
 import { ContractAddresses, UnitConverter } from "@arkecosystem/typescript-crypto";
-import { EstimateGasPayload } from "@/app/lib/mainsail/fee.contract";
+import { encodeFunctionData, numberToHex } from "viem";
+
 import { BigNumber } from "@/app/lib/helpers";
-import { configManager } from "@/app/lib/mainsail";
+import { Network } from "@/app/lib/mainsail/network";
+import { Contracts } from "@/app/lib/profiles";
+import { EstimateGasPayload } from "@/app/lib/mainsail/fee.contract";
+import { FeeService } from "@/app/lib/mainsail/fee.service";
+import { TransactionFees } from "@/types";
+import { useCallback } from "react";
+import { useEnvironmentContext } from "@/app/contexts";
+
 interface CreateStubTransactionProperties {
 	getData: () => Record<string, any>;
 	stub: boolean;
@@ -33,7 +34,11 @@ interface CalculateProperties {
 	type: string;
 }
 
-export function getEstimateGasParams(formData: Record<string, any>, type: string): EstimateGasPayload {
+export function getEstimateGasParams(
+	network: Network,
+	formData: Record<string, any>,
+	type: string,
+): EstimateGasPayload {
 	const {
 		senderAddress,
 		recipientAddress,
@@ -102,12 +107,12 @@ export function getEstimateGasParams(formData: Record<string, any>, type: string
 				functionName: "registerValidator",
 			});
 
+			const value = network.milestone()["validatorRegistrationFee"] ?? 0;
+
 			return {
 				data,
 				to: ContractAddresses.CONSENSUS,
-				value: numberToHex(
-					BigNumber.make(configManager.getMilestone()["validatorRegistrationFee"] ?? 0).toBigInt(),
-				),
+				value: numberToHex(BigNumber.make(value).toBigInt()),
 			};
 		},
 		validatorResignation: () => {
@@ -195,7 +200,11 @@ export const useFees = (profile: Contracts.IProfile) => {
 	const estimateGas = useCallback(
 		async ({ type, data: formData }: EstimateGasProperties) => {
 			const fees = new FeeService({ config: profile.activeNetwork().config(), profile });
-			return await fees.estimateGas(getEstimateGasParams(formData, type));
+			const gas = await fees.estimateGas(getEstimateGasParams(profile.activeNetwork(), formData, type));
+
+			// Add 20% buffer on the gas, in case the estimate is too low.
+			// @see https://app.clickup.com/t/86dxe6nxx
+			return gas.times(1.2).integerValue();
 		},
 		[profile],
 	);

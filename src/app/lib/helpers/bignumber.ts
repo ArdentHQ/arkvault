@@ -151,6 +151,17 @@ export class BigNumber {
 	}
 
 	/**
+	 * Returns the current value as a BigNumber integer, rounded to the given rounding mode.
+	 *
+	 * @param {BigNumberJs.RoundingMode} [roundingMode]
+	 * @returns {BigNumber}
+	 * @memberof BigNumber
+	 */
+	public integerValue(roundingMode?: BigNumberJs.RoundingMode): BigNumber {
+		return BigNumber.make(this.#value.integerValue(roundingMode), this.#decimals);
+	}
+
+	/**
 	 * Creates an instance of BigNumber that's a power of ten.
 	 *
 	 * @param {NumberLike} exponent
