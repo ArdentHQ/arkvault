@@ -14,22 +14,20 @@ import { useTranslation } from "react-i18next";
 import { useLink } from "@/app/hooks/use-link";
 import { TFunction } from "i18next";
 
-export const getMenuOptions = (t: TFunction): DropdownOption[] => {
-	return [
-		{
-			icon: "Pencil",
-			iconPosition: "start",
-			label: t("COMMON.EDIT_item", { item: t("COMMON.NAME") }),
-			value: "edit",
-		},
-		{
-			icon: "ArrowExternal",
-			iconPosition: "start",
-			label: t("COMMON.OPEN_IN_EXPLORER"),
-			value: "open-explorer",
-		},
-	];
-};
+export const getMenuOptions = (t: TFunction): DropdownOption[] => [
+	{
+		icon: "Pencil",
+		iconPosition: "start",
+		label: t("COMMON.EDIT_item", { item: t("COMMON.NAME") }),
+		value: "edit",
+	},
+	{
+		icon: "ArrowExternal",
+		iconPosition: "start",
+		label: t("COMMON.OPEN_IN_EXPLORER"),
+		value: "open-explorer",
+	},
+];
 
 export const AddressRow = ({
 	profile,
