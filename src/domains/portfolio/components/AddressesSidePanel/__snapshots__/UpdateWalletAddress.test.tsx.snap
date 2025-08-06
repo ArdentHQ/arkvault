@@ -1,0 +1,822 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`UpdateAddressName > should render 1`] = `
+<DocumentFragment>
+  <form
+    class="space-y-5 bg-theme-secondary-100 border-theme-secondary-300 dark:bg-theme-dark-800 dark:border-theme-dark-700 dim:bg-theme-dim-800 dim:border-theme-dim-700 rounded-b border-b px-4 py-3 sm:rounded-b-lg sm:border-b-0 sm:px-6 sm:py-4"
+    data-testid="Form"
+  >
+    <fieldset
+      class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
+    >
+      <label
+        class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex leading-[17px] font-semibold transition-colors duration-100 text-sm"
+        data-testid="FormLabel"
+        for="name"
+      >
+        Name
+      </label>
+      <div
+        class="relative"
+      >
+        <div
+          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+        >
+          <div
+            class="relative flex h-full flex-1"
+          >
+            <input
+              aria-invalid="false"
+              autocomplete="off"
+              class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
+              data-testid="UpdateWalletName__input"
+              name="name"
+              type="text"
+            />
+          </div>
+        </div>
+      </div>
+    </fieldset>
+    <div
+      class="mt-4 flex w-full items-center justify-end leading-[18px] sm:leading-5"
+    >
+      <button
+        class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:text-theme-primary-400 dim:text-theme-dim-navy-400 px-2 py-[3px] leading-5"
+        data-testid="UpdateWalletName__cancel"
+        type="button"
+      >
+        <div
+          class="flex items-center gap-2"
+        >
+          Cancel
+        </div>
+      </button>
+      <div
+        class="h-4 relative inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-400 dark:border-theme-dark-600 dim:border-theme-dim-600 mx-3"
+      />
+      <button
+        class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-primary-600 dark:text-theme-primary-400 dim:text-theme-dim-navy-400 px-2 py-[3px] leading-5"
+        data-testid="UpdateWalletName__submit"
+        disabled=""
+        type="submit"
+      >
+        <div
+          class="flex items-center gap-2"
+        >
+          Save
+        </div>
+      </button>
+    </div>
+  </form>
+</DocumentFragment>
+`;
+
+exports[`UpdateAddressName > should show an error message for duplicate name 1`] = `
+<DocumentFragment>
+  <form
+    class="space-y-5 bg-theme-secondary-100 border-theme-secondary-300 dark:bg-theme-dark-800 dark:border-theme-dark-700 dim:bg-theme-dim-800 dim:border-theme-dim-700 rounded-b border-b px-4 py-3 sm:rounded-b-lg sm:border-b-0 sm:px-6 sm:py-4"
+    data-testid="Form"
+  >
+    <fieldset
+      class="[&:focus-within_.FormLabel]:text-theme-danger-500 [&>.FormLabel]:text-theme-danger-500 flex min-w-0 flex-col"
+    >
+      <label
+        class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex leading-[17px] font-semibold transition-colors duration-100 text-sm"
+        data-testid="FormLabel"
+        for="name"
+      >
+        Name
+      </label>
+      <div
+        class="relative"
+      >
+        <div
+          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+        >
+          <div
+            class="relative flex h-full flex-1"
+          >
+            <input
+              aria-invalid="true"
+              autocomplete="off"
+              class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
+              data-testid="UpdateWalletName__input"
+              name="name"
+              type="text"
+            />
+          </div>
+          <div
+            class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-danger-500"
+            data-testid="Input__addon-end"
+          >
+            <div
+              class=""
+            >
+              <span
+                data-errortext="The name 'Mainsail Wallet 2' is already assigned to another wallet."
+                data-testid="Input__error"
+              >
+                <div
+                  class="text-theme-danger-500"
+                >
+                  <div
+                    style="height: 20px; width: 20px;"
+                  >
+                    <svg
+                      id="circle-exclamation-mark"
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <circle
+                          cx="10"
+                          cy="10"
+                          r="9"
+                          stroke-miterlimit="10"
+                        />
+                        <path
+                          d="M10 10.5v-5"
+                          stroke-linecap="round"
+                          stroke-miterlimit="10"
+                        />
+                        <path
+                          d="M10 14h0"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </div>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+    <div
+      class="mt-4 flex w-full items-center justify-end leading-[18px] sm:leading-5"
+    >
+      <button
+        class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:text-theme-primary-400 dim:text-theme-dim-navy-400 px-2 py-[3px] leading-5"
+        data-testid="UpdateWalletName__cancel"
+        type="button"
+      >
+        <div
+          class="flex items-center gap-2"
+        >
+          Cancel
+        </div>
+      </button>
+      <div
+        class="h-4 relative inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-400 dark:border-theme-dark-600 dim:border-theme-dim-600 mx-3"
+      />
+      <button
+        class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-primary-600 dark:text-theme-primary-400 dim:text-theme-dim-navy-400 px-2 py-[3px] leading-5"
+        data-testid="UpdateWalletName__submit"
+        disabled=""
+        type="submit"
+      >
+        <div
+          class="flex items-center gap-2"
+        >
+          Save
+        </div>
+      </button>
+    </div>
+  </form>
+</DocumentFragment>
+`;
+
+exports[`UpdateAddressName > should show an error message for duplicate name 2`] = `
+<DocumentFragment>
+  <form
+    class="space-y-5 bg-theme-secondary-100 border-theme-secondary-300 dark:bg-theme-dark-800 dark:border-theme-dark-700 dim:bg-theme-dim-800 dim:border-theme-dim-700 rounded-b border-b px-4 py-3 sm:rounded-b-lg sm:border-b-0 sm:px-6 sm:py-4"
+    data-testid="Form"
+  >
+    <fieldset
+      class="[&:focus-within_.FormLabel]:text-theme-danger-500 [&>.FormLabel]:text-theme-danger-500 flex min-w-0 flex-col"
+    >
+      <label
+        class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex leading-[17px] font-semibold transition-colors duration-100 text-sm"
+        data-testid="FormLabel"
+        for="name"
+      >
+        Name
+      </label>
+      <div
+        class="relative"
+      >
+        <div
+          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+        >
+          <div
+            class="relative flex h-full flex-1"
+          >
+            <input
+              aria-invalid="true"
+              autocomplete="off"
+              class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
+              data-testid="UpdateWalletName__input"
+              name="name"
+              type="text"
+            />
+          </div>
+          <div
+            class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-danger-500"
+            data-testid="Input__addon-end"
+          >
+            <div
+              class=""
+            >
+              <span
+                data-errortext="The name 'mainsail wallet 2' is already assigned to another wallet."
+                data-testid="Input__error"
+              >
+                <div
+                  class="text-theme-danger-500"
+                >
+                  <div
+                    style="height: 20px; width: 20px;"
+                  >
+                    <svg
+                      id="circle-exclamation-mark"
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <circle
+                          cx="10"
+                          cy="10"
+                          r="9"
+                          stroke-miterlimit="10"
+                        />
+                        <path
+                          d="M10 10.5v-5"
+                          stroke-linecap="round"
+                          stroke-miterlimit="10"
+                        />
+                        <path
+                          d="M10 14h0"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </div>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+    <div
+      class="mt-4 flex w-full items-center justify-end leading-[18px] sm:leading-5"
+    >
+      <button
+        class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:text-theme-primary-400 dim:text-theme-dim-navy-400 px-2 py-[3px] leading-5"
+        data-testid="UpdateWalletName__cancel"
+        type="button"
+      >
+        <div
+          class="flex items-center gap-2"
+        >
+          Cancel
+        </div>
+      </button>
+      <div
+        class="h-4 relative inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-400 dark:border-theme-dark-600 dim:border-theme-dim-600 mx-3"
+      />
+      <button
+        class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-primary-600 dark:text-theme-primary-400 dim:text-theme-dim-navy-400 px-2 py-[3px] leading-5"
+        data-testid="UpdateWalletName__submit"
+        disabled=""
+        type="submit"
+      >
+        <div
+          class="flex items-center gap-2"
+        >
+          Save
+        </div>
+      </button>
+    </div>
+  </form>
+</DocumentFragment>
+`;
+
+exports[`UpdateAddressName > should show an error message for duplicate name 3`] = `
+<DocumentFragment>
+  <form
+    class="space-y-5 bg-theme-secondary-100 border-theme-secondary-300 dark:bg-theme-dark-800 dark:border-theme-dark-700 dim:bg-theme-dim-800 dim:border-theme-dim-700 rounded-b border-b px-4 py-3 sm:rounded-b-lg sm:border-b-0 sm:px-6 sm:py-4"
+    data-testid="Form"
+  >
+    <fieldset
+      class="[&:focus-within_.FormLabel]:text-theme-danger-500 [&>.FormLabel]:text-theme-danger-500 flex min-w-0 flex-col"
+    >
+      <label
+        class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex leading-[17px] font-semibold transition-colors duration-100 text-sm"
+        data-testid="FormLabel"
+        for="name"
+      >
+        Name
+      </label>
+      <div
+        class="relative"
+      >
+        <div
+          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+        >
+          <div
+            class="relative flex h-full flex-1"
+          >
+            <input
+              aria-invalid="true"
+              autocomplete="off"
+              class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
+              data-testid="UpdateWalletName__input"
+              name="name"
+              type="text"
+            />
+          </div>
+          <div
+            class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-danger-500"
+            data-testid="Input__addon-end"
+          >
+            <div
+              class=""
+            >
+              <span
+                data-errortext="The name 'Mainsail Wallet 2' is already assigned to another wallet."
+                data-testid="Input__error"
+              >
+                <div
+                  class="text-theme-danger-500"
+                >
+                  <div
+                    style="height: 20px; width: 20px;"
+                  >
+                    <svg
+                      id="circle-exclamation-mark"
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <circle
+                          cx="10"
+                          cy="10"
+                          r="9"
+                          stroke-miterlimit="10"
+                        />
+                        <path
+                          d="M10 10.5v-5"
+                          stroke-linecap="round"
+                          stroke-miterlimit="10"
+                        />
+                        <path
+                          d="M10 14h0"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </div>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+    <div
+      class="mt-4 flex w-full items-center justify-end leading-[18px] sm:leading-5"
+    >
+      <button
+        class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:text-theme-primary-400 dim:text-theme-dim-navy-400 px-2 py-[3px] leading-5"
+        data-testid="UpdateWalletName__cancel"
+        type="button"
+      >
+        <div
+          class="flex items-center gap-2"
+        >
+          Cancel
+        </div>
+      </button>
+      <div
+        class="h-4 relative inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-400 dark:border-theme-dark-600 dim:border-theme-dim-600 mx-3"
+      />
+      <button
+        class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-primary-600 dark:text-theme-primary-400 dim:text-theme-dim-navy-400 px-2 py-[3px] leading-5"
+        data-testid="UpdateWalletName__submit"
+        disabled=""
+        type="submit"
+      >
+        <div
+          class="flex items-center gap-2"
+        >
+          Save
+        </div>
+      </button>
+    </div>
+  </form>
+</DocumentFragment>
+`;
+
+exports[`UpdateAddressName > should show an error message for duplicate name 4`] = `
+<DocumentFragment>
+  <form
+    class="space-y-5 bg-theme-secondary-100 border-theme-secondary-300 dark:bg-theme-dark-800 dark:border-theme-dark-700 dim:bg-theme-dim-800 dim:border-theme-dim-700 rounded-b border-b px-4 py-3 sm:rounded-b-lg sm:border-b-0 sm:px-6 sm:py-4"
+    data-testid="Form"
+  >
+    <fieldset
+      class="[&:focus-within_.FormLabel]:text-theme-danger-500 [&>.FormLabel]:text-theme-danger-500 flex min-w-0 flex-col"
+    >
+      <label
+        class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex leading-[17px] font-semibold transition-colors duration-100 text-sm"
+        data-testid="FormLabel"
+        for="name"
+      >
+        Name
+      </label>
+      <div
+        class="relative"
+      >
+        <div
+          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+        >
+          <div
+            class="relative flex h-full flex-1"
+          >
+            <input
+              aria-invalid="true"
+              autocomplete="off"
+              class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
+              data-testid="UpdateWalletName__input"
+              name="name"
+              type="text"
+            />
+          </div>
+          <div
+            class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-danger-500"
+            data-testid="Input__addon-end"
+          >
+            <div
+              class=""
+            >
+              <span
+                data-errortext="The name 'Mainsail Wallet 2' is already assigned to another wallet."
+                data-testid="Input__error"
+              >
+                <div
+                  class="text-theme-danger-500"
+                >
+                  <div
+                    style="height: 20px; width: 20px;"
+                  >
+                    <svg
+                      id="circle-exclamation-mark"
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <circle
+                          cx="10"
+                          cy="10"
+                          r="9"
+                          stroke-miterlimit="10"
+                        />
+                        <path
+                          d="M10 10.5v-5"
+                          stroke-linecap="round"
+                          stroke-miterlimit="10"
+                        />
+                        <path
+                          d="M10 14h0"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </div>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+    <div
+      class="mt-4 flex w-full items-center justify-end leading-[18px] sm:leading-5"
+    >
+      <button
+        class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:text-theme-primary-400 dim:text-theme-dim-navy-400 px-2 py-[3px] leading-5"
+        data-testid="UpdateWalletName__cancel"
+        type="button"
+      >
+        <div
+          class="flex items-center gap-2"
+        >
+          Cancel
+        </div>
+      </button>
+      <div
+        class="h-4 relative inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-400 dark:border-theme-dark-600 dim:border-theme-dim-600 mx-3"
+      />
+      <button
+        class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-primary-600 dark:text-theme-primary-400 dim:text-theme-dim-navy-400 px-2 py-[3px] leading-5"
+        data-testid="UpdateWalletName__submit"
+        disabled=""
+        type="submit"
+      >
+        <div
+          class="flex items-center gap-2"
+        >
+          Save
+        </div>
+      </button>
+    </div>
+  </form>
+</DocumentFragment>
+`;
+
+exports[`UpdateAddressName > should show error message when name consists only of whitespace 1`] = `
+<DocumentFragment>
+  <form
+    class="space-y-5 bg-theme-secondary-100 border-theme-secondary-300 dark:bg-theme-dark-800 dark:border-theme-dark-700 dim:bg-theme-dim-800 dim:border-theme-dim-700 rounded-b border-b px-4 py-3 sm:rounded-b-lg sm:border-b-0 sm:px-6 sm:py-4"
+    data-testid="Form"
+  >
+    <fieldset
+      class="[&:focus-within_.FormLabel]:text-theme-danger-500 [&>.FormLabel]:text-theme-danger-500 flex min-w-0 flex-col"
+    >
+      <label
+        class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex leading-[17px] font-semibold transition-colors duration-100 text-sm"
+        data-testid="FormLabel"
+        for="name"
+      >
+        Name
+      </label>
+      <div
+        class="relative"
+      >
+        <div
+          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+        >
+          <div
+            class="relative flex h-full flex-1"
+          >
+            <input
+              aria-invalid="true"
+              autocomplete="off"
+              class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
+              data-testid="UpdateWalletName__input"
+              name="name"
+              type="text"
+            />
+          </div>
+          <div
+            class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-danger-500"
+            data-testid="Input__addon-end"
+          >
+            <div
+              class=""
+            >
+              <span
+                data-errortext="WALLETS.VALIDATION.ALIAS_REQUIRED"
+                data-testid="Input__error"
+              >
+                <div
+                  class="text-theme-danger-500"
+                >
+                  <div
+                    style="height: 20px; width: 20px;"
+                  >
+                    <svg
+                      id="circle-exclamation-mark"
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <circle
+                          cx="10"
+                          cy="10"
+                          r="9"
+                          stroke-miterlimit="10"
+                        />
+                        <path
+                          d="M10 10.5v-5"
+                          stroke-linecap="round"
+                          stroke-miterlimit="10"
+                        />
+                        <path
+                          d="M10 14h0"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </div>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+    <div
+      class="mt-4 flex w-full items-center justify-end leading-[18px] sm:leading-5"
+    >
+      <button
+        class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:text-theme-primary-400 dim:text-theme-dim-navy-400 px-2 py-[3px] leading-5"
+        data-testid="UpdateWalletName__cancel"
+        type="button"
+      >
+        <div
+          class="flex items-center gap-2"
+        >
+          Cancel
+        </div>
+      </button>
+      <div
+        class="h-4 relative inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-400 dark:border-theme-dark-600 dim:border-theme-dim-600 mx-3"
+      />
+      <button
+        class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-primary-600 dark:text-theme-primary-400 dim:text-theme-dim-navy-400 px-2 py-[3px] leading-5"
+        data-testid="UpdateWalletName__submit"
+        disabled=""
+        type="submit"
+      >
+        <div
+          class="flex items-center gap-2"
+        >
+          Save
+        </div>
+      </button>
+    </div>
+  </form>
+</DocumentFragment>
+`;
+
+exports[`UpdateAddressName > should show error message when name exceeds 42 characters 1`] = `
+<DocumentFragment>
+  <form
+    class="space-y-5 bg-theme-secondary-100 border-theme-secondary-300 dark:bg-theme-dark-800 dark:border-theme-dark-700 dim:bg-theme-dim-800 dim:border-theme-dim-700 rounded-b border-b px-4 py-3 sm:rounded-b-lg sm:border-b-0 sm:px-6 sm:py-4"
+    data-testid="Form"
+  >
+    <fieldset
+      class="[&:focus-within_.FormLabel]:text-theme-danger-500 [&>.FormLabel]:text-theme-danger-500 flex min-w-0 flex-col"
+    >
+      <label
+        class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex leading-[17px] font-semibold transition-colors duration-100 text-sm"
+        data-testid="FormLabel"
+        for="name"
+      >
+        Name
+      </label>
+      <div
+        class="relative"
+      >
+        <div
+          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+        >
+          <div
+            class="relative flex h-full flex-1"
+          >
+            <input
+              aria-invalid="true"
+              autocomplete="off"
+              class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
+              data-testid="UpdateWalletName__input"
+              name="name"
+              type="text"
+            />
+          </div>
+          <div
+            class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-danger-500"
+            data-testid="Input__addon-end"
+          >
+            <div
+              class=""
+            >
+              <span
+                data-errortext="Wallet Name should have at most 42 characters."
+                data-testid="Input__error"
+              >
+                <div
+                  class="text-theme-danger-500"
+                >
+                  <div
+                    style="height: 20px; width: 20px;"
+                  >
+                    <svg
+                      id="circle-exclamation-mark"
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <circle
+                          cx="10"
+                          cy="10"
+                          r="9"
+                          stroke-miterlimit="10"
+                        />
+                        <path
+                          d="M10 10.5v-5"
+                          stroke-linecap="round"
+                          stroke-miterlimit="10"
+                        />
+                        <path
+                          d="M10 14h0"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </div>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+    <div
+      class="mt-4 flex w-full items-center justify-end leading-[18px] sm:leading-5"
+    >
+      <button
+        class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:text-theme-primary-400 dim:text-theme-dim-navy-400 px-2 py-[3px] leading-5"
+        data-testid="UpdateWalletName__cancel"
+        type="button"
+      >
+        <div
+          class="flex items-center gap-2"
+        >
+          Cancel
+        </div>
+      </button>
+      <div
+        class="h-4 relative inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-400 dark:border-theme-dark-600 dim:border-theme-dim-600 mx-3"
+      />
+      <button
+        class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-primary-600 dark:text-theme-primary-400 dim:text-theme-dim-navy-400 px-2 py-[3px] leading-5"
+        data-testid="UpdateWalletName__submit"
+        disabled=""
+        type="submit"
+      >
+        <div
+          class="flex items-center gap-2"
+        >
+          Save
+        </div>
+      </button>
+    </div>
+  </form>
+</DocumentFragment>
+`;
