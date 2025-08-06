@@ -95,9 +95,9 @@ const getOrderByStr = ({ column, desc }: SortBy): string => {
 
 const removeConfirmedPendingTransactions = (
 	confirmedTransactions: DTO.ExtendedConfirmedTransactionData[],
-	removePendingTransaction: (hash: string) => void
+	removePendingTransaction: (hash: string) => void,
 ) => {
-	const confirmedHashes = new Set(confirmedTransactions.map(tx => tx.hash()));
+	const confirmedHashes = new Set(confirmedTransactions.map((tx) => tx.hash()));
 
 	return (pendingHash: string) => {
 		if (confirmedHashes.has(pendingHash)) {
@@ -151,20 +151,19 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 	};
 
 	const mergedTransactions = useMemo(() => {
-		const walletAddresses = wallets.map(w => w.address());
-		const walletNetworkIds = wallets.map(w => w.networkId());
+		const walletAddresses = wallets.map((w) => w.address());
+		const walletNetworkIds = wallets.map((w) => w.networkId());
 
-		const relevantPendingTxs = pendingTransactions.filter(tx =>
-			walletAddresses.includes(tx.walletAddress) &&
-			walletNetworkIds.includes(tx.networkId)
+		const relevantPendingTxs = pendingTransactions.filter(
+			(tx) => walletAddresses.includes(tx.walletAddress) && walletNetworkIds.includes(tx.networkId),
 		);
 
 		const hasAllSelected = selectedTransactionTypes.length === allTransactionTypes.length;
 		const filteredPendingTxs = hasAllSelected
 			? relevantPendingTxs
-			: relevantPendingTxs.filter(tx => selectedTransactionTypes.includes(tx.type));
+			: relevantPendingTxs.filter((tx) => selectedTransactionTypes.includes(tx.type));
 
-		const modeFilteredPendingTxs = filteredPendingTxs.filter(tx => {
+		const modeFilteredPendingTxs = filteredPendingTxs.filter((tx) => {
 			if (activeMode === "sent") {
 				return walletAddresses.includes(tx.from);
 			}
@@ -174,15 +173,15 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 			return true;
 		});
 
-		const pendingAsConfirmed = modeFilteredPendingTxs.map(tx => {
+		const pendingAsConfirmed = modeFilteredPendingTxs.map((tx) => {
 			const timestampObj = DateTime.make(tx.timestamp);
 
 			return {
 				...tx,
-				blockHash: () => undefined,
+				blockHash: () => {},
 				confirmations: () => ({ toNumber: () => 0 }),
-				convertedTotal: () => tx.convertedTotal,
 				convertedAmount: () => tx.convertedAmount,
+				convertedTotal: () => tx.convertedTotal,
 				explorerLink: () => tx.explorerLink,
 				fee: () => tx.fee,
 				from: () => tx.from,
@@ -204,7 +203,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 				isValidatorResignation: () => tx.isValidatorResignation,
 				isVote: () => tx.isVote,
 				isVoteCombination: () => tx.isVoteCombination,
-				network: () => wallets.find(w => w.address() === tx.walletAddress)?.network(),
+				network: () => wallets.find((w) => w.address() === tx.walletAddress)?.network(),
 				nonce: () => tx.nonce,
 				recipients: () => tx.recipients || [],
 				timestamp: () => timestampObj,
@@ -212,7 +211,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 				total: () => tx.total,
 				type: () => tx.type,
 				value: () => tx.value,
-				wallet: () => wallets.find(w => w.address() === tx.walletAddress),
+				wallet: () => wallets.find((w) => w.address() === tx.walletAddress),
 			};
 		}) as any[];
 
@@ -227,8 +226,12 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 			}
 
 			if (sortBy.desc) {
-				if (a.isPending && !b.isPending) return -1;
-				if (!a.isPending && b.isPending) return 1;
+				if (a.isPending && !b.isPending) {
+					return -1;
+				}
+				if (!a.isPending && b.isPending) {
+					return 1;
+				}
 			}
 
 			return 0;
@@ -296,12 +299,12 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 
 		const checkForConfirmedTransactions = removeConfirmedPendingTransactions(
 			transactions,
-			removePendingTransaction
+			removePendingTransaction,
 		);
 
-		pendingTransactions.forEach(pendingTx => {
+		for (const pendingTx of pendingTransactions) {
 			checkForConfirmedTransactions(pendingTx.hash);
-		});
+		}
 	}, [transactions, pendingTransactions, removePendingTransaction]);
 
 	const updateFilters = useCallback(

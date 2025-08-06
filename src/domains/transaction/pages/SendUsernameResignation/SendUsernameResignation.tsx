@@ -143,7 +143,7 @@ export const SendUsernameResignation = () => {
 			await persist();
 
 			const transactionData = activeWallet.transaction().transaction(signedTransactionId);
-			
+
 			addPendingTransaction(transactionData);
 			setTransaction(transactionData);
 
