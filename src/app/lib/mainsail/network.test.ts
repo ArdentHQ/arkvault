@@ -1,6 +1,5 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 import { Network } from "./network";
-import { configManager } from "./config.manager";
 import networkManifest from "./networks/mainsail.devnet";
 import { manifest as manifest } from "./manifest";
 import { ConfigRepository } from "./config.repository";
@@ -235,7 +234,7 @@ describe("Network", () => {
 
 	it("should sync network data", async () => {
 		await networkInstance.sync();
-		expect(configManager.getHeight()).toBe(34369);
+		expect(networkInstance.config().get("height")).toBe(34369);
 	});
 
 	it("should throw an error if no full host is found during sync", async () => {
@@ -245,5 +244,62 @@ describe("Network", () => {
 
 	it("should throw an error if ArkClient crypto() fails during evaluateUrl", async () => {
 		await expect(networkInstance.evaluateUrl("http://bad.host")).rejects.toThrow("fetch failed");
+	});
+
+	it("should return correct milestone moving forward", () => {
+		const milestones = [
+			{ data: "first", height: 1 },
+			{ data: "second", height: 10 },
+			{ data: "third", height: 20 },
+		];
+		networkInstance.config().set("height", 5);
+		networkInstance.config().set("crypto", { milestones: [...milestones] });
+
+		const result = networkInstance.milestone(15);
+		expect(result.data).toBe("second");
+	});
+
+	it("should return correct milestone moving backward", () => {
+		const milestones = [
+			{ data: "first", height: 1 },
+			{ data: "second", height: 10 },
+			{ data: "third", height: 20 },
+		];
+		networkInstance.config().set("height", 25);
+		networkInstance.config().set("crypto", { milestones: [...milestones] });
+
+		const result = networkInstance.milestone(5);
+		expect(result.data).toBe("first");
+	});
+
+	it("should use current height from config when no height is provided", () => {
+		const milestones = [
+			{ data: "first", height: 1 },
+			{ data: "second", height: 10 },
+		];
+		networkInstance.config().set("height", 10);
+		networkInstance.config().set("crypto", { milestones: [...milestones] });
+
+		const result = networkInstance.milestone();
+		expect(result.data).toBe("second");
+	});
+
+	it("should default height to 1 if height is null ", () => {
+		const milestones = [
+			{ data: "first", height: 1 },
+			{ data: "second", height: 10 },
+		];
+		networkInstance.config().set("height", null);
+		networkInstance.config().set("crypto", { milestones: [...milestones] });
+
+		const result = networkInstance.milestone();
+		expect(result.data).toBe("first");
+	});
+
+	it("should for missing milestone", () => {
+		networkInstance.config().set("height", undefined);
+		networkInstance.config().set("crypto", {});
+
+		expect(() => networkInstance.milestone()).toThrow("The [height] is an unknown configuration value.");
 	});
 });
