@@ -368,6 +368,7 @@ describe("getEstimateGasParams", () => {
 
 	it("should return params for transfer", () => {
 		const result = getEstimateGasParams(
+			profile.activeNetwork(),
 			{
 				recipientAddress: wallet.address(),
 				senderAddress: wallet.address(),
@@ -383,6 +384,7 @@ describe("getEstimateGasParams", () => {
 
 	it("should return params for vote", () => {
 		const result = getEstimateGasParams(
+			profile.activeNetwork(),
 			{
 				senderAddress: wallet.address(),
 				voteAddresses: [wallet.address()],
@@ -399,6 +401,7 @@ describe("getEstimateGasParams", () => {
 
 	it("should return params for validatorRegistration", () => {
 		const result = getEstimateGasParams(
+			profile.activeNetwork(),
 			{
 				senderAddress: wallet.address(),
 				validatorPublicKey: "bls-key",
@@ -416,6 +419,7 @@ describe("getEstimateGasParams", () => {
 
 	it("should return params for validatorResignation", () => {
 		const result = getEstimateGasParams(
+			profile.activeNetwork(),
 			{
 				senderAddress: wallet.address(),
 			},
@@ -431,6 +435,7 @@ describe("getEstimateGasParams", () => {
 
 	it("should return params for usernameRegistration", () => {
 		const result = getEstimateGasParams(
+			profile.activeNetwork(),
 			{
 				senderAddress: wallet.address(),
 			},
@@ -446,6 +451,7 @@ describe("getEstimateGasParams", () => {
 
 	it("should return params for usernameResignation", () => {
 		const result = getEstimateGasParams(
+			profile.activeNetwork(),
 			{
 				senderAddress: wallet.address(),
 			},
@@ -461,6 +467,7 @@ describe("getEstimateGasParams", () => {
 
 	it("should return params for multiPayment", () => {
 		const result = getEstimateGasParams(
+			profile.activeNetwork(),
 			{
 				recipients: [
 					{ address: wallet.address(), amount: 5 },

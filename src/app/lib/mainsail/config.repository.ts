@@ -42,6 +42,8 @@ export class ConfigRepository {
 	public constructor(config: object) {
 		const { error, value } = ValidatorSchema.object({
 			// @TODO: ADD network field validation.
+			crypto: ValidatorSchema.object().optional(),
+			height: ValidatorSchema.number().optional(),
 			network: ValidatorSchema.object(),
 		}).validate(config);
 

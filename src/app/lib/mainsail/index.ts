@@ -1,4 +1,3 @@
-export { configManager } from "./config.manager";
 export { manifest } from "./manifest";
 
 export * as Networks from "./networks";

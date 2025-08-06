@@ -8,7 +8,6 @@ import { ValidatorRegistrationForm, signValidatorRegistration } from "./Validato
 import * as useFeesHook from "@/app/hooks/use-fees";
 import validatorRegistrationFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/validator-registration.json";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
-import { configManager } from "@/app/lib/mainsail";
 
 import {
 	env,
@@ -138,7 +137,7 @@ describe("ValidatorRegistrationForm", () => {
 	});
 
 	it("should sign transaction", async () => {
-		const getMilestoneMock = vi.spyOn(configManager, "getMilestone").mockReturnValue({
+		const getMilestoneMock = vi.spyOn(wallet.network(), "milestone").mockReturnValue({
 			validatorRegistrationFee: 250_000_000_000_000_000_000,
 		});
 
@@ -221,7 +220,7 @@ describe("ValidatorRegistrationForm", () => {
 		const walletUsesWIFMock = vi.spyOn(wallet.signingKey(), "exists").mockReturnValue(true);
 		const walletWifMock = vi.spyOn(wallet.signingKey(), "get").mockReturnValue(MNEMONICS[0]);
 
-		const getMilestoneMock = vi.spyOn(configManager, "getMilestone").mockReturnValue({
+		const getMilestoneMock = vi.spyOn(wallet.network(), "milestone").mockReturnValue({
 			validatorRegistrationFee: 250_000_000_000_000_000_000,
 		});
 

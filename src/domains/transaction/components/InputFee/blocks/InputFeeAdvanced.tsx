@@ -37,8 +37,7 @@ export const InputFeeAdvanced: React.FC<InputFeeAdvancedProperties> = ({
 	);
 
 	const { byFeeType } = useConfirmationTimes({ blockTime });
-
-	const { minGasPrice, maxGasPrice, minGasLimit, maxGasLimit } = getFeeMinMax();
+	const { minGasPrice, maxGasPrice, minGasLimit, maxGasLimit } = getFeeMinMax(network);
 
 	const formField = useFormField();
 	const hasError = formField?.isInvalid;
