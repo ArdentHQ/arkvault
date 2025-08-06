@@ -20,7 +20,7 @@ export const DeleteAddressMessage = ({
 				{t("COMMON.DELETE_DESCRIPTION")}
 			</p>
 
-			<div className="mt-4 flex w-full items-center leading-[18px] justify-end sm:leading-5">
+			<div className="mt-4 flex w-full items-center justify-end leading-[18px] sm:leading-5">
 				<Button
 					data-testid="CancelDelete"
 					size="icon"
