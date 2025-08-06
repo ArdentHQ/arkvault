@@ -114,13 +114,11 @@ export const useProfileBackgroundJobsRunner = (profile: Contracts.IProfile) => {
 
 	useEffect(() => {
 		if (!isSyncing.current) {
-			console.log("running");
 			runAll();
 			start();
 		}
 
 		return () => {
-			console.log("stop");
 			stop({ clearTimers: true });
 			isSyncing.current = false;
 		};
