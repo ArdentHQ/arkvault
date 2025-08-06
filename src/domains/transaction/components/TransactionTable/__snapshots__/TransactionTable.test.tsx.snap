@@ -5952,7 +5952,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                             To
                           </div>
                           <span
-                            class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
+                            class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 flex gap-2 text-sm font-semibold"
                           >
                             Multiple 
                             <span
@@ -8877,7 +8877,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                             To
                           </div>
                           <span
-                            class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
+                            class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 flex gap-2 text-sm font-semibold"
                           >
                             Multiple 
                             <span
@@ -13414,7 +13414,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         To
                       </div>
                       <span
-                        class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
+                        class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 flex gap-2 text-sm font-semibold"
                       >
                         Multiple 
                         <span
@@ -13445,7 +13445,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                     To
                   </div>
                   <span
-                    class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
+                    class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 flex gap-2 text-sm font-semibold"
                   >
                     Multiple 
                     <span
@@ -13474,7 +13474,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                     To
                   </div>
                   <span
-                    class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
+                    class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 flex gap-2 text-sm font-semibold"
                   >
                     Multiple 
                     <span
@@ -18218,7 +18218,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         To
                       </div>
                       <span
-                        class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
+                        class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 flex gap-2 text-sm font-semibold"
                       >
                         Multiple 
                         <span
@@ -18249,7 +18249,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                     To
                   </div>
                   <span
-                    class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
+                    class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 flex gap-2 text-sm font-semibold"
                   >
                     Multiple 
                     <span
@@ -18278,7 +18278,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                     To
                   </div>
                   <span
-                    class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
+                    class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 flex gap-2 text-sm font-semibold"
                   >
                     Multiple 
                     <span
@@ -22902,7 +22902,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         To
                       </div>
                       <span
-                        class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
+                        class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 flex gap-2 text-sm font-semibold"
                       >
                         Multiple 
                         <span
@@ -22933,7 +22933,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                     To
                   </div>
                   <span
-                    class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
+                    class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 flex gap-2 text-sm font-semibold"
                   >
                     Multiple 
                     <span
@@ -22962,7 +22962,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                     To
                   </div>
                   <span
-                    class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
+                    class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 flex gap-2 text-sm font-semibold"
                   >
                     Multiple 
                     <span
