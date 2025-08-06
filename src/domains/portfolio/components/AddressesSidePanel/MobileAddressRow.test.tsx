@@ -25,9 +25,11 @@ describe("MobileAddressRow", () => {
 				profile={profile}
 				wallet={wallet}
 				onDelete={vi.fn()}
-				usesDeleteMode={false}
+				usesManageMode={false}
 				toggleAddress={vi.fn()}
 				isSelected={false}
+				onSelectOption={vi.fn()}
+				isSingleView={true}
 			/>,
 		);
 
@@ -40,9 +42,11 @@ describe("MobileAddressRow", () => {
 				profile={profile}
 				wallet={wallet}
 				onDelete={vi.fn()}
-				usesDeleteMode={true}
+				usesManageMode={true}
 				toggleAddress={vi.fn()}
 				isSelected={false}
+				onSelectOption={vi.fn()}
+				isSingleView={true}
 			/>,
 		);
 
@@ -57,9 +61,11 @@ describe("MobileAddressRow", () => {
 				profile={profile}
 				wallet={wallet}
 				onDelete={onDelete}
-				usesDeleteMode={true}
+				usesManageMode={true}
 				toggleAddress={vi.fn()}
 				isSelected={false}
+				onSelectOption={vi.fn()}
+				isSingleView={true}
 			/>,
 		);
 
@@ -73,9 +79,11 @@ describe("MobileAddressRow", () => {
 				profile={profile}
 				wallet={wallet}
 				onDelete={vi.fn()}
-				usesDeleteMode={false}
+				usesManageMode={false}
 				toggleAddress={vi.fn()}
 				isSelected={true}
+				onSelectOption={vi.fn()}
+				isSingleView={false}
 			/>,
 		);
 
@@ -90,9 +98,11 @@ describe("MobileAddressRow", () => {
 				profile={profile}
 				wallet={wallet}
 				onDelete={vi.fn()}
-				usesDeleteMode={false}
+				usesManageMode={false}
 				toggleAddress={toggleAddress}
 				isSelected={true}
+				onSelectOption={vi.fn()}
+				isSingleView={false}
 			/>,
 		);
 
@@ -108,9 +118,11 @@ describe("MobileAddressRow", () => {
 				profile={profile}
 				wallet={wallet}
 				onDelete={vi.fn()}
-				usesDeleteMode={false}
+				usesManageMode={false}
 				toggleAddress={toggleAddress}
 				isSelected={true}
+				onSelectOption={vi.fn()}
+				isSingleView={true}
 			/>,
 		);
 
@@ -125,14 +137,60 @@ describe("MobileAddressRow", () => {
 				profile={profile}
 				wallet={wallet}
 				onDelete={onDelete}
-				usesDeleteMode={true}
+				usesManageMode={true}
 				toggleAddress={vi.fn()}
 				isSelected={false}
 				deleteContent={<div>Delete content</div>}
+				onSelectOption={vi.fn()}
+				isSingleView={true}
 			/>,
 		);
 
 		expect(screen.getByText("Delete content")).toBeInTheDocument();
 		expect(screen.getByTestId("icon-MarkedTrash")).toBeInTheDocument();
+	});
+
+	it("should should render editContent", async () => {
+		render(
+			<MobileAddressRow
+				profile={profile}
+				wallet={wallet}
+				onDelete={vi.fn()}
+				usesManageMode={true}
+				toggleAddress={vi.fn()}
+				isSelected={false}
+				editContent={<div>Edit content</div>}
+				onSelectOption={vi.fn()}
+				isSingleView={true}
+			/>,
+		);
+
+		expect(screen.getByTestId("dropdown__toggle")).toBeInTheDocument();
+		expect(screen.getByText("Edit content")).toBeInTheDocument();
+	});
+
+	it("should should trigger onSelectOption when option is selected", async () => {
+		const onSelectOption = vi.fn();
+
+		render(
+			<MobileAddressRow
+				profile={profile}
+				wallet={wallet}
+				onDelete={vi.fn()}
+				usesManageMode={true}
+				toggleAddress={vi.fn()}
+				isSelected={false}
+				onSelectOption={onSelectOption}
+				isSingleView={true}
+			/>,
+		);
+
+		expect(screen.getByTestId("dropdown__toggle")).toBeInTheDocument();
+
+		await userEvent.click(screen.getByTestId("dropdown__toggle"));
+		await expect(screen.findByTestId("dropdown__option--0")).resolves.toBeInTheDocument();
+
+		await userEvent.click(screen.getByTestId("dropdown__option--0"));
+		expect(onSelectOption).toHaveBeenCalled();
 	});
 });
