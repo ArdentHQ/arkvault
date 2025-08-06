@@ -55,7 +55,7 @@ export const TransactionRow = memo(
 			<TableRow onClick={onClick} className={twMerge("relative", className)} {...properties}>
 				<TableCell
 					variant="start"
-					innerClassName={cn("items-start pr-0 lg:pr-3 xl:min-h-11 xl:max-h-11 xl:pt-2.5 lg:min-w-36", {
+					innerClassName={cn("items-start pr-0 lg:px-0 lg:pl-3 xl:min-h-11 xl:max-h-11 xl:pt-2.5 lg:min-w-36", {
 						"min-h-14 my-1 pt-1": hideSender,
 						"min-h-[66px] py-1 my-0 md-lg:min-h-14": !hideSender,
 					})}
