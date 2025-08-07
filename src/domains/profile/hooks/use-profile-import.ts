@@ -36,41 +36,6 @@ export const useProfileImport = ({ env }: { env: Environment }) => {
 		return profile;
 	};
 
-	const importLegacyProfile = async (file: ReadableFile) => {
-		let data: Record<string, any>;
-
-		try {
-			data = JSON.parse(file.content);
-		} catch {
-			throw new Error("CorruptedData");
-		}
-
-		if (!data.wallets?.length) {
-			throw new Error("MissingWallets");
-		}
-
-		const profile = await env.profiles().create(file.name.split(".")[0]);
-
-		await Promise.all(
-			data.wallets.map(async (wallet: Record<string, any>) => {
-				if (wallet.address && wallet.balance.ARK) {
-					const importedWallet = await profile.walletFactory().fromAddress({ address: wallet.address });
-					profile.wallets().push(importedWallet);
-					return wallet;
-				}
-
-				if (wallet.address && wallet.balance.DARK) {
-					const importedWallet = await profile.walletFactory().fromAddress({ address: wallet.address });
-					profile.wallets().push(importedWallet);
-					return importedWallet;
-				}
-			}),
-		);
-
-		env.profiles().forget(profile.id());
-		return profile;
-	};
-
 	const importProfile = async ({ password, file }: ImportFileProperties) => {
 		if (!file) {
 			return;
@@ -78,10 +43,6 @@ export const useProfileImport = ({ env }: { env: Environment }) => {
 
 		if (file.extension === "wwe") {
 			return await importProfileFromWwe(file.content, password);
-		}
-
-		if (file.extension === "json") {
-			return await importLegacyProfile(file);
 		}
 	};
 
