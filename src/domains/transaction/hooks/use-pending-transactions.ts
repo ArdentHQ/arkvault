@@ -82,6 +82,7 @@ export const usePendingTransactions = (): UsePendingTransactionsReturn => {
 					return [...filtered, pendingTransaction];
 				});
 			} catch (error) {
+				/* istanbul ignore next -- @preserve */
 				console.error("Failed to add pending transaction:", error);
 			}
 		},
