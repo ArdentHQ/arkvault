@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
-import { Alert } from "@/app/components/Alert";
 import { Button } from "@/app/components/Button";
 import { FormButtons } from "@/app/components/Form";
 import { SelectFile } from "@/app/components/SelectFile";
