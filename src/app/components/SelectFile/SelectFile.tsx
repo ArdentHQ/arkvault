@@ -91,7 +91,6 @@ export const SelectFile = ({ onSelect, fileFormat }: SelectFileProperties) => {
 	};
 
 	const fileFormatIcon: Record<string, string[]> = {
-		".json": ["ExtensionJsonDark", "ExtensionJsonLight", "ExtensionJson"],
 		".wwe": ["ExtensionWweDark", "ExtensionWweLight", "ExtensionWweDim"],
 	};
 
