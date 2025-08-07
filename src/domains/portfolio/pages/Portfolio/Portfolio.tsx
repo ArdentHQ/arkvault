@@ -16,8 +16,6 @@ export const Portfolio = () => {
 	const [showCreateAddressPanel, setShowCreateAddressPanel] = useState(false);
 	const [showImportAddressPanel, setShowImportAddressPanel] = useState(false);
 
-	useProfileBackgroundJobsRunner(profile);
-
 	return (
 		<>
 			{profile.wallets().selected().length > 0 && (

@@ -22,12 +22,18 @@ export const useProfileJobs = (profile?: Contracts.IProfile): Record<string, any
 
 	return useMemo(() => {
 		if (!profile || !profileId) {
-			return [];
+			return {
+				allJobs: [],
+				syncExchangeRates: undefined,
+				syncProfileWallets: undefined,
+				syncServerStatus: undefined,
+			};
 		}
 
 		const syncProfileWallets = {
 			callback: async (reset = false) => {
 				try {
+					console.log("syncProfileWallets", profile.id())
 					setConfiguration(profileId, {
 						profileIsSyncingWallets: true,
 						...(reset && { isProfileInitialSync: true }),
@@ -107,20 +113,23 @@ export const useProfileJobs = (profile?: Contracts.IProfile): Record<string, any
 	}, [env, profile, walletsCount, setConfiguration, profileId]);
 };
 
-export const useProfileBackgroundJobsRunner = (profile: Contracts.IProfile) => {
+export const useProfileBackgroundJobsRunner = (profile?: Contracts.IProfile) => {
 	const { allJobs } = useProfileJobs(profile);
 	const { start, stop, runAll } = useSynchronizer(allJobs);
-	const isSyncing = useRef(false);
 
 	useEffect(() => {
-		if (!isSyncing.current) {
+		if (profile) {
 			runAll();
 			start();
+			return
 		}
+
+		stop({ clearTimers: true });
 
 		return () => {
 			stop({ clearTimers: true });
-			isSyncing.current = false;
-		};
-	}, []);
+		}
+
+	}, [profile])
+
 };

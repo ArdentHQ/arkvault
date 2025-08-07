@@ -1,11 +1,11 @@
-import React, { useLayoutEffect, useRef } from "react";
+import React, { useEffect, useLayoutEffect, useRef } from "react";
 import { createHashRouter, RouterProvider, useNavigate, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useErrorBoundary } from "react-error-boundary";
 import { ToastContainer } from "react-toastify";
 
 import { useConfiguration, useEnvironmentContext, useNavigationContext } from "@/app/contexts";
-import { useNetworkStatus, useProfileSynchronizer, useTheme } from "@/app/hooks";
+import { useNetworkStatus, useProfileSynchronizer, useProfileWatcher, useTheme } from "@/app/hooks";
 import { toasts } from "@/app/services";
 import { SyncErrorMessage } from "@/app/components/ProfileSyncStatusMessage";
 import { bootEnvironmentWithProfileFixtures, isE2E, isUnit } from "@/utils/test-helpers";
@@ -14,6 +14,7 @@ import { middlewares, RouterView, routes } from "@/router";
 import { PageSkeleton } from "@/app/components/PageSkeleton";
 import { ProfilePageSkeleton } from "@/app/components/PageSkeleton/ProfilePageSkeleton";
 import { InstallPWA } from "@/domains/dashboard/components/InstallPWA";
+import { useProfileBackgroundJobsRunner } from "./hooks/use-profile-background-jobs";
 
 const Main = () => {
 	const { env, persist, isEnvironmentBooted, setIsEnvironmentBooted } = useEnvironmentContext();
@@ -60,6 +61,8 @@ const Main = () => {
 			navigate("/");
 		},
 	});
+
+	useProfileBackgroundJobsRunner(profile)
 
 	const { profileHasSyncedOnce } = useConfiguration().getProfileConfiguration(profile?.id());
 
