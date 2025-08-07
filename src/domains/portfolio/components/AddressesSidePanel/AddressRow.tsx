@@ -9,33 +9,67 @@ import { Icon } from "@/app/components/Icon";
 import { useBreakpoint, useWalletAlias } from "@/app/hooks";
 import { MobileAddressRow } from "@/domains/portfolio/components/AddressesSidePanel/MobileAddressRow";
 import { RadioButton } from "@/app/components/RadioButton";
+import { Dropdown, DropdownOption } from "@/app/components/Dropdown";
+import { useTranslation } from "react-i18next";
+import { useLink } from "@/app/hooks/use-link";
+import { TFunction } from "i18next";
+
+export const getMenuOptions = (t: TFunction): DropdownOption[] => [
+	{
+		icon: "Pencil",
+		iconPosition: "start",
+		label: t("COMMON.EDIT_item", { item: t("COMMON.NAME") }),
+		value: "edit",
+	},
+	{
+		icon: "ArrowExternal",
+		iconPosition: "start",
+		label: t("COMMON.OPEN_IN_EXPLORER"),
+		value: "open-explorer",
+	},
+];
 
 export const AddressRow = ({
 	profile,
 	wallet,
 	toggleAddress,
 	isSelected,
-	usesDeleteMode,
+	usesManageMode,
 	onDelete,
+	onEdit,
 	isError = false,
 	isSingleView = false,
 	errorMessage,
 	deleteContent,
+	editContent,
 }: {
 	profile: Contracts.IProfile;
 	wallet: Contracts.IReadWriteWallet;
 	toggleAddress: (address: string) => void;
 	isSelected: boolean;
 	isError?: boolean;
-	usesDeleteMode: boolean;
+	usesManageMode: boolean;
 	errorMessage?: string;
 	onDelete: (address: string) => void;
+	onEdit: (address?: string) => void;
 	isSingleView?: boolean;
 	deleteContent?: React.ReactNode;
+	editContent?: React.ReactNode;
 }): JSX.Element => {
+	const { t } = useTranslation();
 	const { isXs } = useBreakpoint();
 
+	const { openExternal } = useLink();
 	const { getWalletAlias } = useWalletAlias();
+
+	const handleSelectOption = (action: DropdownOption, wallet: Contracts.IReadWriteWallet) => {
+		if (action.value === "open-explorer") {
+			openExternal(wallet.explorerLink());
+			return;
+		}
+
+		onEdit(wallet.address());
+	};
 
 	if (isXs) {
 		return (
@@ -44,17 +78,21 @@ export const AddressRow = ({
 				wallet={wallet}
 				toggleAddress={toggleAddress}
 				isSelected={isSelected}
-				usesDeleteMode={usesDeleteMode}
+				usesManageMode={usesManageMode}
 				onDelete={onDelete}
 				isError={isError}
 				errorMessage={errorMessage}
 				deleteContent={deleteContent}
+				editContent={editContent}
 				isSingleView={isSingleView}
+				onSelectOption={handleSelectOption}
 			/>
 		);
 	}
 
 	const { alias } = getWalletAlias({ address: wallet.address(), network: wallet.network(), profile });
+
+	const isEditing = !!editContent;
 
 	return (
 		<div
@@ -63,27 +101,31 @@ export const AddressRow = ({
 			onKeyPress={() => toggleAddress(wallet.address())}
 			tabIndex={0}
 			className={cn("group cursor-pointer items-center rounded-lg border transition-all", {
-				"bg-theme-secondary-200 dark:bg-theme-dark-950 dim:bg-theme-dim-950": isSelected && !usesDeleteMode,
+				"bg-theme-secondary-200 dark:bg-theme-dark-950 dim:bg-theme-dim-950": isSelected && !usesManageMode,
 				"border-theme-danger-400 dark:border-theme-danger-400 dim:border-theme-danger-400": isError,
 				"border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700": !isError,
 				"hover:bg-theme-navy-100 dark:hover:bg-theme-dark-700 dim-hover:bg-theme-dim-700":
-					!isError || (usesDeleteMode && !deleteContent),
+					(!isError || (usesManageMode && !deleteContent)) && !isEditing,
 			})}
 		>
 			<div className="flex items-center px-4 py-3 duration-150">
-				{usesDeleteMode && !deleteContent && (
+				{usesManageMode && !deleteContent && (
 					<Button
 						onClick={() => onDelete(wallet.address())}
 						data-testid={`AddressRow--delete-${wallet.address()}`}
+						disabled={isEditing}
 						size="icon"
-						className="text-theme-secondary-700 dark:text-theme-secondary-500 hover:bg-theme-danger-400 dim:text-theme-dim-200 dim-hover:text-white p-1 hover:text-white dark:hover:text-white"
+						className={cn("text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200", {
+							"hover:bg-theme-danger-400 dim-hover:text-white p-1 hover:text-white dark:hover:text-white":
+								!isEditing,
+						})}
 						variant="transparent"
 					>
 						<Icon name="Trash" dimensions={[16, 16]} />
 					</Button>
 				)}
 
-				{usesDeleteMode && deleteContent && (
+				{usesManageMode && deleteContent && (
 					<Icon
 						data-testid="icon-MarkedTrash"
 						name="MarkedTrash"
@@ -92,7 +134,7 @@ export const AddressRow = ({
 					/>
 				)}
 
-				{isSingleView && !usesDeleteMode && (
+				{isSingleView && !usesManageMode && (
 					<RadioButton
 						name="single"
 						data-testid="AddressRow--radio"
@@ -103,7 +145,7 @@ export const AddressRow = ({
 					/>
 				)}
 
-				{!usesDeleteMode && !isSingleView && (
+				{!usesManageMode && !isSingleView && (
 					<Checkbox
 						name="all"
 						data-testid="AddressRow--checkbox"
@@ -120,7 +162,7 @@ export const AddressRow = ({
 								"group-hover:text-theme-primary-900 dark:group-hover:text-theme-dark-200 dim:group-hover:text-theme-dim-50":
 									!isSelected,
 								"text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50":
-									isSelected && !usesDeleteMode,
+									isSelected && !usesManageMode,
 							})}
 						>
 							{alias}
@@ -139,7 +181,7 @@ export const AddressRow = ({
 								"group-hover:text-theme-primary-900 dark:group-hover:text-theme-dark-200 dim:group-hover:text-theme-dim-50":
 									!isSelected,
 								"text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-200":
-									isSelected && !usesDeleteMode,
+									isSelected && !usesManageMode,
 							})}
 						/>
 						<Amount
@@ -149,6 +191,36 @@ export const AddressRow = ({
 						/>
 					</div>
 				</div>
+
+				{usesManageMode && (
+					<Dropdown
+						disableToggle={isEditing || !!deleteContent}
+						placement="bottom-end"
+						wrapperClass="z-50"
+						toggleContent={
+							<Button
+								size="icon"
+								variant="transparent"
+								className={cn("ml-4 p-1", {
+									"dark:hover:bg-theme-secondary-700 hover:bg-theme-navy-200 dim-hover:bg-theme-dim-800":
+										!isEditing && !deleteContent,
+								})}
+							>
+								<Icon
+									name="EllipsisVerticalFilled"
+									size="md"
+									className={cn("transition-colors duration-200", {
+										"text-theme-secondary-500": isEditing || deleteContent,
+										"text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50":
+											!isEditing && !deleteContent,
+									})}
+								/>
+							</Button>
+						}
+						options={getMenuOptions(t)}
+						onSelect={(action) => handleSelectOption(action, wallet)}
+					/>
+				)}
 			</div>
 			{!!errorMessage && (
 				<div className="bg-theme-danger-50 dark:bg-theme-dark-800 dim:bg-theme-dim-800 flex items-center space-x-4 rounded-b-lg px-4 py-3">
@@ -164,6 +236,16 @@ export const AddressRow = ({
 					</p>
 				</div>
 			)}
+
+			<div
+				className={cn("transition-all duration-300", {
+					"max-h-0 opacity-0": !isEditing,
+					"max-h-52 opacity-100": isEditing,
+				})}
+			>
+				{editContent}
+			</div>
+
 			<div
 				className={cn("transition-all duration-300", {
 					"max-h-0 opacity-0": !deleteContent,

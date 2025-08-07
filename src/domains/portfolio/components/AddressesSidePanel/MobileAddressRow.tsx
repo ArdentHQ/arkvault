@@ -9,32 +9,42 @@ import { Icon } from "@/app/components/Icon";
 import { InfoDetail, MultiEntryItem } from "@/app/components/MultiEntryItem/MultiEntryItem";
 import { useWalletAlias } from "@/app/hooks";
 import { RadioButton } from "@/app/components/RadioButton";
+import { getMenuOptions } from "@/domains/portfolio/components/AddressesSidePanel/AddressRow";
+import { useTranslation } from "react-i18next";
+import { Dropdown, DropdownOption } from "@/app/components/Dropdown";
 
 export const MobileAddressRow = ({
 	profile,
 	wallet,
 	toggleAddress,
 	isSelected,
-	usesDeleteMode,
+	usesManageMode,
 	onDelete,
 	isError,
 	errorMessage,
 	deleteContent,
 	isSingleView,
+	editContent,
+	onSelectOption,
 }: {
 	profile: Contracts.IProfile;
 	wallet: Contracts.IReadWriteWallet;
 	toggleAddress: (address: string) => void;
 	isSelected: boolean;
-	usesDeleteMode: boolean;
+	usesManageMode: boolean;
 	onDelete: (address: string) => void;
 	isError?: boolean;
 	errorMessage?: string;
 	deleteContent?: React.ReactNode;
 	isSingleView: boolean;
+	editContent?: React.ReactNode;
+	onSelectOption: (action: DropdownOption, wallet: Contracts.IReadWriteWallet) => void;
 }): JSX.Element => {
+	const { t } = useTranslation();
 	const { getWalletAlias } = useWalletAlias();
 	const { alias } = getWalletAlias({ address: wallet.address(), network: wallet.network(), profile });
+
+	const isEditing = !!editContent;
 
 	return (
 		<div className="space-y-2">
@@ -48,9 +58,9 @@ export const MobileAddressRow = ({
 						data-testid="MobileAddressRowHeader"
 						onClick={() => toggleAddress(wallet.address())}
 						tabIndex={0}
-						className={cn("flex w-full items-center gap-3", { "justify-between": usesDeleteMode })}
+						className={cn("flex w-full items-center gap-3", { "justify-between": usesManageMode })}
 					>
-						{!usesDeleteMode && !isSingleView && (
+						{!usesManageMode && !isSingleView && (
 							<Checkbox
 								name="all"
 								data-testid="AddressRow--checkbox"
@@ -60,7 +70,7 @@ export const MobileAddressRow = ({
 							/>
 						)}
 
-						{!usesDeleteMode && isSingleView && (
+						{!usesManageMode && isSingleView && (
 							<RadioButton
 								name="single"
 								data-testid="AddressRow--radio"
@@ -76,31 +86,57 @@ export const MobileAddressRow = ({
 								"group-hover:text-theme-primary-900 dark:group-hover:text-theme-dark-200 dim:text-theme-dim-200 dim:group-hover:text-theme-dim-50":
 									!isSelected,
 								"text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50":
-									isSelected && !usesDeleteMode,
+									isSelected && !usesManageMode,
 							})}
 						>
 							{alias}
 						</div>
 
-						{usesDeleteMode && !deleteContent && (
-							<Button
-								onClick={() => onDelete(wallet.address())}
-								data-testid={`AddressRow--delete-${wallet.address()}`}
-								size="icon"
-								className="text-theme-secondary-700 dark:text-theme-secondary-500 hover:bg-theme-danger-400 dim:text-theme-dim-500 dim-hover:text-white p-1 hover:text-white dark:hover:text-white"
-								variant="transparent"
-							>
-								<Icon name="Trash" dimensions={[16, 16]} />
-							</Button>
-						)}
+						{usesManageMode && (
+							<div className="flex items-center gap-3">
+								{!deleteContent && (
+									<Button
+										disabled={isEditing}
+										onClick={() => onDelete(wallet.address())}
+										data-testid={`AddressRow--delete-${wallet.address()}`}
+										size="icon"
+										className="text-theme-secondary-700 dark:text-theme-secondary-500 hover:bg-theme-danger-400 dim:text-theme-dim-500 dim-hover:text-white p-1 hover:text-white dark:hover:text-white"
+										variant="transparent"
+									>
+										<Icon name="Trash" dimensions={[16, 16]} />
+									</Button>
+								)}
 
-						{usesDeleteMode && deleteContent && (
-							<Icon
-								data-testid="icon-MarkedTrash"
-								name="MarkedTrash"
-								dimensions={[16, 16]}
-								className="text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500 p-1"
-							/>
+								{deleteContent && (
+									<Icon
+										data-testid="icon-MarkedTrash"
+										name="MarkedTrash"
+										dimensions={[16, 16]}
+										className="text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500 p-1"
+									/>
+								)}
+
+								<span className="bg-theme-secondary-300 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 block h-5 w-px" />
+
+								<Dropdown
+									disableToggle={isEditing || !!deleteContent}
+									wrapperClass="z-50"
+									toggleContent={
+										<button
+											type="button"
+											className={cn("flex", {
+												"text-theme-secondary-500": isEditing || deleteContent,
+												"text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50":
+													!isEditing && !deleteContent,
+											})}
+										>
+											<Icon name="EllipsisVerticalFilled" size="md" />
+										</button>
+									}
+									options={getMenuOptions(t)}
+									onSelect={(action) => onSelectOption(action, wallet)}
+								/>
+							</div>
 						)}
 					</div>
 				}
@@ -142,6 +178,15 @@ export const MobileAddressRow = ({
 							</p>
 						</div>
 					)}
+
+					<div
+						className={cn("transition-all duration-300", {
+							"max-h-0 opacity-0": !isEditing,
+							"max-h-52 opacity-100": isEditing,
+						})}
+					>
+						{editContent}
+					</div>
 
 					<div
 						className={cn("transition-all duration-300", {
