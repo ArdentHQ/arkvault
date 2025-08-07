@@ -10,6 +10,7 @@ export const translations = {
 			SINGLE_VIEW: "Single View",
 		},
 	},
+	ADDRESS_NAME: "Address Name",
 	CONNECT_LEDGER: {
 		DESCRIPTION: "Connect your Ledger device, open the ARK app, and authorize the connection with ARK Vault.",
 		HEADER: "Connect and Authorize Ledger Device",
@@ -54,8 +55,8 @@ export const translations = {
 	},
 
 	MODAL_NAME_WALLET: {
-		DESCRIPTION: "Enter a name for this wallet address (only visible to you).",
-		TITLE: "Wallet Name",
+		DESCRIPTION: "Select a personalized address name, visible only to you",
+		TITLE: "Address Name",
 	},
 
 	MODAL_RECEIVE_FUNDS: {
@@ -290,5 +291,4 @@ export const translations = {
 	VALIDATION: {
 		ALIAS_ASSIGNED: "The name '{{alias}}' is already assigned to another wallet.",
 	},
-	WALLET_NAME: "Wallet Name",
 };

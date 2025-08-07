@@ -13,14 +13,14 @@ exports[`DeleteExchangeTransaction > should render a modal 1`] = `
       tabindex="-1"
     >
       <div
-        class="bg-theme-background dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8"
+        class="bg-theme-background dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl"
         data-testid="Modal__inner"
       >
         <div
-          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
+          class="text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-3.5 mr-6 rounded transition-all duration-100 ease-linear md:mt-3.5 md:mr-6"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -58,15 +58,19 @@ exports[`DeleteExchangeTransaction > should render a modal 1`] = `
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-1.5"
+          class="relative flex flex-1 flex-col"
         >
-          <h2
-            class="mb-0 max-w-[calc(100%_-_32px)] text-lg font-bold md:pt-0 md:text-2xl"
-          >
-            Remove Transaction
-          </h2>
           <div
-            class="flex flex-1 flex-col"
+            class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 border-b px-6 py-3.5"
+          >
+            <h2
+              class="mb-0 max-w-[calc(100%_-_32px)] text-lg leading-5 font-semibold md:pt-0 md:text-lg"
+            >
+              Remove Transaction
+            </h2>
+          </div>
+          <div
+            class="flex flex-1 flex-col px-6 pt-4 sm:pb-4"
           >
             <svg
               class="mx-auto my-8 max-w-52"
@@ -173,7 +177,7 @@ exports[`DeleteExchangeTransaction > should render a modal 1`] = `
               class="mt-4"
             />
             <div
-              class="bg-theme-background shadow-footer-smooth dark:shadow-footer-smooth-dark fixed inset-x-0 bottom-0 flex gap-3 px-8 py-3 sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none dark:bg-black sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none pb-3 sm:pb-0"
+              class="[.modal-footer_&]:mt-4 [.modal-footer_&]:px-6 [.modal-footer_&]:sm:px-0 bg-theme-background shadow-footer-smooth dark:shadow-footer-smooth-dark fixed inset-x-0 bottom-0 flex gap-3 px-8 py-3 sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none dark:bg-black sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none pb-3 sm:pb-0"
             >
               <button
                 class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white"
