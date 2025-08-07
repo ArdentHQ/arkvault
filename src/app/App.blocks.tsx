@@ -62,7 +62,7 @@ const Main = () => {
 		},
 	});
 
-	useProfileBackgroundJobsRunner(profile)
+	useProfileBackgroundJobsRunner(profile);
 
 	const { profileHasSyncedOnce } = useConfiguration().getProfileConfiguration(profile?.id());
 
