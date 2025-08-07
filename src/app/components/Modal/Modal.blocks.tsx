@@ -60,7 +60,6 @@ const ModalContent = ({
 	<div
 		className={twMerge(
 			"bg-theme-background dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl",
-			noButtons && "pb-24",
 			className,
 		)}
 		data-testid="Modal__inner"
