@@ -80,13 +80,15 @@ const ModalContent = ({
 		)}
 
 		<div className="relative flex flex-1 flex-col">
-			<div className="px-6 py-3.5 border-b border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700">
+			<div className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 border-b px-6 py-3.5">
 				{banner && (
 					<div className="relative -mx-10 -mt-10 mb-10 h-56">
 						{banner}
 
 						<div className="absolute bottom-0 left-0 mb-10 ml-10">
-							<h2 className={`m-0 text-4xl leading-tight font-extrabold ${titleClass || "text-theme-text"}`}>
+							<h2
+								className={`m-0 text-4xl leading-tight font-extrabold ${titleClass || "text-theme-text"}`}
+							>
 								{title}
 							</h2>
 						</div>
@@ -94,7 +96,12 @@ const ModalContent = ({
 				)}
 
 				{!banner && title && (
-					<h2 className={cn("mb-0 max-w-[calc(100%_-_32px)] text-lg font-semibold md:pt-0 md:text-lg leading-5", titleClass)}>
+					<h2
+						className={cn(
+							"mb-0 max-w-[calc(100%_-_32px)] text-lg leading-5 font-semibold md:pt-0 md:text-lg",
+							titleClass,
+						)}
+					>
 						{title}
 					</h2>
 				)}
