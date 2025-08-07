@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef } from "react";
+import { useEffect, useMemo } from "react";
 import { useConfiguration, useEnvironmentContext } from "@/app/contexts";
 
 import { Contracts } from "@/app/lib/profiles";

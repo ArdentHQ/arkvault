@@ -7,7 +7,6 @@ import { Dashboard } from "@/domains/dashboard/pages/Dashboard/Dashboard";
 import { CreateAddressesSidePanel } from "@/domains/portfolio/components/CreateWallet/CreateAddressSidePanel";
 import { ImportAddressesSidePanel } from "@/domains/portfolio/components/ImportWallet";
 import { ResetWhenUnmounted } from "@/app/components/SidePanel/ResetWhenUnmounted";
-import { useProfileBackgroundJobsRunner } from "@/app/hooks/use-profile-background-jobs";
 
 export const Portfolio = () => {
 	const profile = useActiveProfile();
