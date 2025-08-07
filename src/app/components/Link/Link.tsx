@@ -94,6 +94,41 @@ const Anchor = ({
 
 Anchor.displayName = "Anchor";
 
+const StyledRouterLink = ({
+	isDisabled,
+	showExternalIcon,
+	children,
+	className,
+	...props
+}: LinkProps & { isDisabled?: boolean; showExternalIcon?: boolean }) => (
+	<RouterLink
+		{...props}
+		className={cn(
+			"ring-focus group/inner relative inline-block cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden",
+			{
+				"text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700":
+					!isDisabled,
+				"text-theme-secondary-text cursor-not-allowed": isDisabled,
+			},
+			className,
+		)}
+		data-testid="RouterLink"
+		data-ring-focus-margin="-m-1"
+	>
+		<Content isDisabled={isDisabled} showExternalIcon={showExternalIcon}>
+			{children}
+		</Content>
+		{showExternalIcon && (
+			<Icon
+				data-testid="RouterLink__external"
+				name="ArrowExternal"
+				dimensions={[12, 12]}
+				className={cn("mb-[3px] shrink-0 align-middle duration-200", { "inline-block text-sm": children })}
+			/>
+		)}
+	</RouterLink>
+);
+
 type Properties = {
 	isDisabled?: boolean;
 	isExternal?: boolean;
@@ -139,11 +174,14 @@ export const Link = ({
 					{properties.children}
 				</Anchor>
 			) : (
-				<RouterLink {...properties}>
-					<Anchor className={className} isDisabled={isDisabled} showExternalIcon={showExternalIcon}>
-						{properties.children}
-					</Anchor>
-				</RouterLink>
+				<StyledRouterLink
+					{...properties}
+					className={className}
+					isDisabled={isDisabled}
+					showExternalIcon={showExternalIcon}
+				>
+					{properties.children}
+				</StyledRouterLink>
 			)}
 		</Tooltip>
 	);
