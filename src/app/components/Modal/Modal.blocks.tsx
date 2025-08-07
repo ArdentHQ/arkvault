@@ -60,46 +60,48 @@ const ModalContent = ({
 	<div
 		className={twMerge(
 			"bg-theme-background dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl",
-			"px-6 pt-4 md:p-8",
+			// "px-6 pt-2.5 md:p-2.5",
 			noButtons && "pb-24",
 			className,
 		)}
 		data-testid="Modal__inner"
 	>
 		{!hideCloseButton && (
-			<div className="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white">
+			<div className="text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-3.5 mr-6 rounded transition-all duration-100 ease-linear md:mt-3.5 md:mr-6">
 				<Button
 					data-testid="Modal__close-button"
 					variant="transparent"
 					size="icon"
 					onClick={onClose}
-					className="h-8 w-8"
+					className="h-5 w-5"
 				>
 					<Icon name="Cross" />
 				</Button>
 			</div>
 		)}
 
-		<div className="relative flex flex-1 flex-col space-y-1.5">
-			{banner && (
-				<div className="relative -mx-10 -mt-10 mb-10 h-56">
-					{banner}
+		<div className="relative flex flex-1 flex-col">
+			<div className="px-6 py-3.5 border-b border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700">
+				{banner && (
+					<div className="relative -mx-10 -mt-10 mb-10 h-56">
+						{banner}
 
-					<div className="absolute bottom-0 left-0 mb-10 ml-10">
-						<h2 className={`m-0 text-4xl leading-tight font-extrabold ${titleClass || "text-theme-text"}`}>
-							{title}
-						</h2>
+						<div className="absolute bottom-0 left-0 mb-10 ml-10">
+							<h2 className={`m-0 text-4xl leading-tight font-extrabold ${titleClass || "text-theme-text"}`}>
+								{title}
+							</h2>
+						</div>
 					</div>
-				</div>
-			)}
+				)}
 
-			{!banner && title && (
-				<h2 className={cn("mb-0 max-w-[calc(100%_-_32px)] text-lg font-bold md:pt-0 md:text-2xl", titleClass)}>
-					{title}
-				</h2>
-			)}
+				{!banner && title && (
+					<h2 className={cn("mb-0 max-w-[calc(100%_-_32px)] text-lg font-semibold md:pt-0 md:text-lg leading-5", titleClass)}>
+						{title}
+					</h2>
+				)}
+			</div>
 
-			<div className="flex flex-1 flex-col">
+			<div className="flex flex-1 flex-col px-6 pt-4 sm:pb-4">
 				{image}
 
 				{description && (
