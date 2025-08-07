@@ -33,7 +33,6 @@ export const useProfileJobs = (profile?: Contracts.IProfile): Record<string, any
 		const syncProfileWallets = {
 			callback: async (reset = false) => {
 				try {
-					console.log("syncProfileWallets", profile.id())
 					setConfiguration(profileId, {
 						profileIsSyncingWallets: true,
 						...(reset && { isProfileInitialSync: true }),
