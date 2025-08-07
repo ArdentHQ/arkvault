@@ -1,5 +1,5 @@
 import { usePendingTransactions } from "./use-pending-transactions";
-import { act, renderHook } from '@/utils/testing-library';
+import { act, renderHook } from "@/utils/testing-library";
 import { DTO } from "@/app/lib/profiles";
 import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
