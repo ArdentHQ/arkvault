@@ -13,8 +13,6 @@ export const translations = {
 		SELECT_FILE_STEP: {
 			BROWSE_FILES: "Browse Files",
 			CLICK_HERE: "Click here.",
-			DEPRECATION_WARNING:
-				"Please note that importing a Profile from Desktop Wallet v2 in .json format is supported temporarily and will soon be disabled. We recommend that you re-save your Profile in the new .wwe format.",
 			DESCRIPTION:
 				"Select a {{fileFormat}} file with your Profile and related properties to start the import process.",
 			DRAG_AND_DROP: "Drag & Drop or",
@@ -23,7 +21,6 @@ export const translations = {
 					"This file type is not supported.\nPlease retry with a <strong>{{fileFormat}}</strong> file.",
 				TOO_MANY: "You tried to import <strong>{{fileCount}}</strong> files.\nPlease retry with one file only.",
 			},
-			LEGACY_IMPORT: "Importing from Desktop Wallet v2?",
 			SUPPORTED_FORMAT: "Supported format is {{fileFormat}}",
 			UPLOAD_TITLE: "Click here to upload",
 		},
