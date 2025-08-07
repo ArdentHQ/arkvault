@@ -298,6 +298,7 @@ export class ClientService {
 		const transactionTypeMap: Record<string, string | undefined> = {
 			multiPayment: TransactionTypes.MultiPayment,
 			transfer: TransactionTypes.Transfer,
+			updateValidator: TransactionTypes.UpdateValidator,
 			usernameRegistration: TransactionTypes.RegisterUsername,
 			usernameResignation: TransactionTypes.ResignUsername,
 			validatorRegistration: TransactionTypes.RegisterValidator,
