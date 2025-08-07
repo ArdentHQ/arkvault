@@ -23,6 +23,7 @@ describe("useTransactionTypes", () => {
 			"validatorRegistration",
 			"usernameRegistration",
 			"usernameResignation",
+			"updateValidator",
 			"validatorResignation",
 			"multiPayment",
 			"transfer",

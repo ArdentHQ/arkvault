@@ -738,7 +738,7 @@ exports[`UpdateAddressName > should show error message when name exceeds 42 char
               class=""
             >
               <span
-                data-errortext="Wallet Name should have at most 42 characters."
+                data-errortext="Address Name should have at most 42 characters."
                 data-testid="Input__error"
               >
                 <div
