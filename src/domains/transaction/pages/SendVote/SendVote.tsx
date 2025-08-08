@@ -435,7 +435,7 @@ export const SendVote = () => {
 	const activeIndex = skipFormStep ? activeTab - 1 : activeTab;
 
 	return (
-		<Page pageTitle={t("TRANSACTION.TRANSACTION_TYPES.VOTE")}>
+		<Page pageTitle={t("TRANSACTION.TRANSACTION_TYPES.VOTE")} showBottomNavigationBar={false}>
 			<Section className="flex-1">
 				<StepsProvider activeStep={activeIndex} steps={stepsCount}>
 					<Form className="mx-auto max-w-172" context={form} onSubmit={submitForm}>

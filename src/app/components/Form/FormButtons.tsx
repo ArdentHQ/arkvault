@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useNavigationContext } from "@/app/contexts";
-import { useInputFocus, useBreakpoint } from "@/app/hooks";
+import { useBreakpoint } from "@/app/hooks";
 import { twMerge } from "tailwind-merge";
 import cn from "classnames";
 
@@ -26,7 +26,6 @@ const FormButtons: React.FC<{
 	children: React.ReactNode;
 }> = ({ children }) => {
 	const { showMobileNavigation, setHasFixedFormButtons } = useNavigationContext();
-	const { isInputElementFocused } = useInputFocus();
 	const { isXs, isSm } = useBreakpoint();
 
 	useEffect(() => {
@@ -36,7 +35,7 @@ const FormButtons: React.FC<{
 		};
 	});
 
-	if (isInputElementFocused && (isXs || isSm)) {
+	if (isXs || isSm) {
 		return <FormButtonsWrapper>{children}</FormButtonsWrapper>;
 	}
 

@@ -146,7 +146,7 @@ export const VerifyMessage = () => {
 	};
 
 	return (
-		<Page pageTitle={t("MESSAGE.PAGE_VERIFY_MESSAGE.TITLE")}>
+		<Page pageTitle={t("MESSAGE.PAGE_VERIFY_MESSAGE.TITLE")} showBottomNavigationBar={false}>
 			<Section className="flex-1">
 				<Form className="mx-auto max-w-172" data-testid="VerifyMessage" context={form} onSubmit={submitForm}>
 					<Tabs activeId={activeTab}>

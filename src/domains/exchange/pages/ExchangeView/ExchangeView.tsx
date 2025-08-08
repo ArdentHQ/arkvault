@@ -85,7 +85,7 @@ export const ExchangeView = () => {
 	);
 
 	return (
-		<Page pageTitle={exchangeProvider?.name}>
+		<Page pageTitle={exchangeProvider?.name} showBottomNavigationBar={false}>
 			<div className="relative flex h-full w-full flex-1 flex-col items-center justify-center md:py-20">
 				<div className="absolute inset-0 hidden items-center bg-[#3f4455] sm:flex sm:p-32">
 					<Image name="WorldMap" className="h-full w-full" />
