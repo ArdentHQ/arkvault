@@ -14,6 +14,7 @@ import { middlewares, RouterView, routes } from "@/router";
 import { PageSkeleton } from "@/app/components/PageSkeleton";
 import { ProfilePageSkeleton } from "@/app/components/PageSkeleton/ProfilePageSkeleton";
 import { InstallPWA } from "@/domains/dashboard/components/InstallPWA";
+import { useProfileBackgroundJobsRunner } from "./hooks/use-profile-background-jobs";
 
 const Main = () => {
 	const { env, persist, isEnvironmentBooted, setIsEnvironmentBooted } = useEnvironmentContext();
@@ -60,6 +61,8 @@ const Main = () => {
 			navigate("/");
 		},
 	});
+
+	useProfileBackgroundJobsRunner(profile);
 
 	const { profileHasSyncedOnce } = useConfiguration().getProfileConfiguration(profile?.id());
 
