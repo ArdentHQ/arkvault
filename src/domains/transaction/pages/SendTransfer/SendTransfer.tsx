@@ -363,7 +363,7 @@ export const SendTransfer = () => {
 	);
 
 	return (
-		<Page pageTitle={t("TRANSACTION.TRANSACTION_TYPES.TRANSFER")}>
+		<Page pageTitle={t("TRANSACTION.TRANSACTION_TYPES.TRANSFER")} showBottomNavigationBar={false}>
 			<Section className="flex-1">
 				<Form className="mx-auto max-w-172" context={form}>
 					<Tabs activeId={activeTab}>{renderTabs()}</Tabs>
