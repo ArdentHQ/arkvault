@@ -33,7 +33,7 @@ interface SidePanelProps {
 	activeStep?: number;
 	footer?: React.ReactNode;
 	onBack?: () => void;
-	lastStep?: boolean;
+	isLastStep?: boolean;
 }
 
 export const SidePanelButtons = ({ className, ...properties }: React.HTMLAttributes<HTMLDivElement>): JSX.Element => (
