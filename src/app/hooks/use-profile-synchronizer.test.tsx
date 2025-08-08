@@ -4,12 +4,12 @@ import userEvent from "@testing-library/user-event";
 import React from "react";
 
 import {
-	useProfileJobs,
 	useProfileRestore,
 	useProfileStatusWatcher,
 	useProfileSynchronizer,
 	useProfileSyncStatus,
 } from "./use-profile-synchronizer";
+import { useProfileJobs } from "@/app/hooks/use-profile-background-jobs";
 import * as profileUtils from "@/utils/profile-utils";
 import { ConfigurationProvider, EnvironmentProvider, useConfiguration } from "@/app/contexts";
 import { toasts } from "@/app/services";
