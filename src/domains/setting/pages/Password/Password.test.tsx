@@ -174,8 +174,8 @@ describe("Password Settings", () => {
 
 		await waitFor(() => expect(confirmPasswordInput()).toHaveValue("S3cUrePa$sword2different1"));
 
-		await userEvent.clear(passwordInput(), "new password 2");
-		await userEvent.type(passwordInput(), "new password 2");
+		await user.clear(passwordInput());
+		await user.paste("new password 2");
 
 		await waitFor(() => expect(confirmPasswordInput()).toHaveAttribute("aria-invalid"));
 		// wait for formState.isValid to be updated
