@@ -201,9 +201,7 @@ describe("AddRecipient", () => {
 		await userEvent.click(screen.getByTestId("AddRecipient__send-all"));
 
 		await waitFor(() =>
-			expect(screen.getByTestId("AddRecipient__amount")).toHaveValue(
-				BigNumber.make(wallet.balance()).toString()
-			),
+			expect(screen.getByTestId("AddRecipient__amount")).toHaveValue(BigNumber.make(wallet.balance()).toString()),
 		);
 
 		expect(container).toMatchSnapshot();
