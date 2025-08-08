@@ -310,8 +310,8 @@ describe("SendTransfer", () => {
 		const transferURL = `/profiles/${fixtureProfileId}/send-transfer`;
 
 		const defaultValues = {
-			gasLimit: "1",
-			gasPrice: "1",
+			gasLimit: BigNumber.make(1),
+			gasPrice: BigNumber.make(1),
 			network: wallet.network(),
 			recipients: [
 				{
@@ -341,8 +341,8 @@ describe("SendTransfer", () => {
 		const transferURL = `/profiles/${fixtureProfileId}/send-transfer`;
 
 		const defaultValues = {
-			gasLimit: "1",
-			gasPrice: "1",
+			gasLimit: BigNumber.make(1),
+			gasPrice: BigNumber.make(1),
 			network: wallet.network(),
 			recipients: [
 				{
