@@ -94,7 +94,7 @@ export const AddRecipient = ({
 		}
 
 		for (const recipient of addedRecipients) {
-			senderBalance = senderBalance.minus(BigNumber.make(recipient.amount || 0))
+			senderBalance = senderBalance.minus(BigNumber.make(recipient.amount || 0));
 		}
 
 		return senderBalance.toString();
