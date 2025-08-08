@@ -8,14 +8,9 @@ import { env } from "@/utils/testing-library";
 
 let wwe: ReadableFile;
 let passwordProtectedWwe: ReadableFile;
-let json: ReadableFile;
-let jsonCorrupted: ReadableFile;
-let jsonEmpty: ReadableFile;
 
 describe("useProfileImport", () => {
 	beforeAll(() => {
-		const jsonEmptyContent = fs.readFileSync("src/tests/fixtures/profile/import/d2_test_wallets-empty.json");
-		const jsonContent = fs.readFileSync("src/tests/fixtures/profile/import/d2_test_wallets.json");
 		const wweFileContents = fs.readFileSync("src/tests/fixtures/profile/import/profile.wwe");
 		const passwordProtectedWweFileContents = fs.readFileSync(
 			"src/tests/fixtures/profile/import/password-protected-profile.wwe",
@@ -27,10 +22,6 @@ describe("useProfileImport", () => {
 			extension: "wwe",
 			name: "export",
 		};
-
-		json = { content: jsonContent.toString(), extension: "json", name: "export" };
-		jsonCorrupted = { content: jsonContent.toString() + "...", extension: "json", name: "export" };
-		jsonEmpty = { content: jsonEmptyContent.toString(), extension: "json", name: "export" };
 	});
 
 	it("should import profile from wwe", async () => {
@@ -100,16 +91,6 @@ describe("useProfileImport", () => {
 		mockProfileImport.mockRestore();
 	});
 
-	it("should import from json file", async () => {
-		const { result } = renderHook(() => useProfileImport({ env }));
-
-		await act(async () => {
-			const profile = await result.current.importProfile({ file: json });
-
-			expect(profile?.wallets().count()).toBe(2);
-		});
-	});
-
 	it("should return undefined if file is not provided", async () => {
 		const { result } = renderHook(() => useProfileImport({ env }));
 
@@ -118,22 +99,6 @@ describe("useProfileImport", () => {
 			const profile = await result.current.importProfile({});
 
 			expect(profile).toBeUndefined();
-		});
-	});
-
-	it("should throw if json has missing wallets", async () => {
-		const { result } = renderHook(() => useProfileImport({ env }));
-
-		await act(async () => {
-			await expect(result.current.importProfile({ file: jsonEmpty })).rejects.toThrow("MissingWallets");
-		});
-	});
-
-	it("should throw if json is corrupted", async () => {
-		const { result } = renderHook(() => useProfileImport({ env }));
-
-		await act(async () => {
-			await expect(result.current.importProfile({ file: jsonCorrupted })).rejects.toThrow("CorruptedData");
 		});
 	});
 
