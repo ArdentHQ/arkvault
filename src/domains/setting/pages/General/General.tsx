@@ -13,7 +13,7 @@ import { ListDivided } from "@/app/components/ListDivided";
 import { Select } from "@/app/components/SelectDropdown";
 import { SelectProfileImage } from "@/app/components/SelectProfileImage";
 import { useEnvironmentContext } from "@/app/contexts";
-import { useActiveProfile, useProfileJobs, useTheme, useValidation, ViewingModeType } from "@/app/hooks";
+import { useActiveProfile, useTheme, useValidation, ViewingModeType } from "@/app/hooks";
 import { useCurrencyOptions } from "@/app/hooks/use-currency-options";
 import { toasts } from "@/app/services";
 import { PlatformSdkChoices } from "@/data";
@@ -25,6 +25,7 @@ import { Toggle } from "@/app/components/Toggle";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { Image } from "@/app/components/Image";
 import { SettingsUnsavedChangesConfirmation } from "@/domains/setting/components/SettingsUnsavedChangesConfirmation";
+import { useProfileJobs } from "@/app/hooks/use-profile-background-jobs";
 
 const requiredFieldMessage = "COMMON.VALIDATION.FIELD_REQUIRED";
 const selectOption = "COMMON.SELECT_OPTION";
