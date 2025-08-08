@@ -62,7 +62,7 @@ export const SidePanel = ({
 	activeStep = 0,
 	footer,
 	onBack,
-	lastStep,
+	isLastStep,
 }: SidePanelProps): JSX.Element => {
 	const popStateHandlerRef = useRef<() => void>(() => {});
 	const { refs, context } = useFloating({
@@ -108,13 +108,13 @@ export const SidePanel = ({
 
 	useEffect(() => {
 		popStateHandlerRef.current = () => {
-			if (hasSteps && typeof onBack === "function" && !lastStep) {
+			if (hasSteps && typeof onBack === "function" && !isLastStep) {
 				onBack();
 			} else {
 				onOpenChange(false);
 			}
 		};
-	}, [hasSteps, onBack, onOpenChange, lastStep]);
+	}, [hasSteps, onBack, onOpenChange, isLastStep]);
 
 	useEffect(() => {
 		if (open && hasSteps) {

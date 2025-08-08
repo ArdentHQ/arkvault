@@ -290,7 +290,7 @@ export const ImportAddressesSidePanel = ({
 					/>
 				)
 			}
-			lastStep={activeTab === ImportAddressStep.SummaryStep}
+			isLastStep={activeTab === ImportAddressStep.SummaryStep}
 		>
 			<Form context={form} data-testid="ImportWallet__form">
 				<Tabs activeId={activeTab}>

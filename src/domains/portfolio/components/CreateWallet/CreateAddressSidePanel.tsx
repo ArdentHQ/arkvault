@@ -291,7 +291,7 @@ export const CreateAddressesSidePanel = ({
 					)}
 				</SidePanelButtons>
 			}
-			lastStep={activeTab === CreateStep.SuccessStep}
+			isLastStep={activeTab === CreateStep.SuccessStep}
 		>
 			<Form context={form} onSubmit={handleFinish} className="space-y-0" id="CreateWallet__form">
 				<Tabs activeId={activeTab}>
