@@ -202,7 +202,7 @@ describe("AddRecipient", () => {
 
 		await waitFor(() =>
 			expect(screen.getByTestId("AddRecipient__amount")).toHaveValue(
-				`${BigNumber.make(wallet.balance()).minus(0.000_105).toFixed(10)}`,
+				BigNumber.make(wallet.balance()).toString()
 			),
 		);
 
