@@ -30,7 +30,7 @@ export const ReviewStep = ({ wallet, network }: ReviewStepProperties) => {
 	const { unregister, watch, register, getValues, setError, errors, clearErrors, setValue } = useFormContext();
 	const { recipients } = watch();
 	const profile = useActiveProfile();
-	const { gasPrice, gasLimit } = getValues(['gasPrice', 'gasLimit']);
+	const { gasPrice, gasLimit } = getValues(["gasPrice", "gasLimit"]);
 
 	const walletBalance = wallet.balance();
 
@@ -62,7 +62,7 @@ export const ReviewStep = ({ wallet, network }: ReviewStepProperties) => {
 			if (isMultiPayment) {
 				setError("amount", {
 					message: t("TRANSACTION.INSUFFICIENT_BALANCE"),
-					type: "error"
+					type: "error",
 				});
 			} else {
 				const newAmount = amount.minus(fee);
@@ -72,8 +72,8 @@ export const ReviewStep = ({ wallet, network }: ReviewStepProperties) => {
 		}
 
 		return () => {
-			clearErrors("amount")
-		}
+			clearErrors("amount");
+		};
 	}, [isMultiPayment, walletBalance, amount.toString(), fee.toString()]);
 
 	useEffect(() => {
@@ -134,7 +134,7 @@ export const ReviewStep = ({ wallet, network }: ReviewStepProperties) => {
 										{t("COMMON.AMOUNT")}
 									</DetailTitle>
 
-									<div className="flex flex-row items-center gap-2 sm:w-full justify-end flex-1 sm:justify-start">
+									<div className="flex flex-1 flex-row items-center justify-end gap-2 sm:w-full sm:justify-start">
 										<Amount ticker={ticker} value={displayAmount} className="font-semibold" />
 										{!isTestnet && !!convertedAmount && !!exchangeTicker && (
 											<div className="text-theme-secondary-700 font-semibold">
@@ -147,10 +147,14 @@ export const ReviewStep = ({ wallet, network }: ReviewStepProperties) => {
 									{errors.amount && (
 										<div
 											data-testid="Input__addon-end"
-											className="divide-theme-secondary-300 text-theme-danger-500 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x">
+											className="divide-theme-secondary-300 text-theme-danger-500 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x"
+										>
 											<div>
 												<Tooltip content={errors.amount.message} size="sm">
-													<span data-errortext={errors.amount.message} data-testid="Input__error">
+													<span
+														data-errortext={errors.amount.message}
+														data-testid="Input__error"
+													>
 														<Icon
 															name="CircleExclamationMark"
 															className="text-theme-danger-500"
