@@ -48,6 +48,10 @@ const renderComponent = async () => {
 	return utils;
 };
 
+vi.mock("@/utils/delay", () => ({
+	delay: (callback: () => void) => callback(),
+}));
+
 describe("CreateProfile", () => {
 	beforeAll(() => {
 		env.reset({ httpClient, storage: new StubStorage() });
