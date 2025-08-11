@@ -21,7 +21,9 @@ export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 
 		for (const [id, wallet] of Object.entries(wallets)) {
 			const migratedWallet = await this.#migrateWallet(profile, wallet);
-			migratedWallets[id] = migratedWallet;
+			if (migratedWallet !== undefined) {
+				migratedWallets[id] = migratedWallet;
+			}
 		}
 
 		return migratedWallets;
@@ -30,12 +32,18 @@ export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 	async #migrateWallet(
 		profile: IProfile,
 		wallet: IProfileData["wallets"][string],
-	): Promise<IProfileData["wallets"][string]> {
+	): Promise<IProfileData["wallets"][string] | undefined> {
+		const newData = await this.#migrateWalletAddress(profile, wallet.data);
+
+		if (newData === undefined) {
+			return undefined;
+		}
+
 		const migratedWallet: IProfileData["wallets"][string] = {
 			...wallet,
 			data: {
 				...wallet.data,
-				...(await this.#migrateWalletAddress(profile, wallet.data)),
+				...newData,
 			},
 		};
 
@@ -45,8 +53,12 @@ export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 	async #migrateWalletAddress(
 		profile: IProfile,
 		walletData: IProfileData["wallets"][string]["data"],
-	): Promise<IProfileData["wallets"][string]["data"]> {
+	): Promise<IProfileData["wallets"][string]["data"] | undefined> {
 		const publicKey = walletData["PUBLIC_KEY"];
+		if (publicKey === undefined) {
+			return undefined;
+		}
+
 		const wallet = await profile.walletFactory().fromPublicKey({ publicKey });
 		const migratedWalletData: IProfileData["wallets"][string]["data"] = {
 			ADDRESS: wallet.address(),
