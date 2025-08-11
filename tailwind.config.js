@@ -326,6 +326,7 @@ module.exports = {
 			},
 			fontFamily: {
 				sans: ["Inter", ...defaultTheme.fontFamily.sans],
+				"password-mask": ["Courier New", ...defaultTheme.fontFamily.mono],
 			},
 			borderColor: (theme) => ({
 				default: theme("colors.theme-secondary-400"),
