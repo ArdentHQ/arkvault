@@ -25,6 +25,7 @@ let wallet2: Contracts.IReadWriteWallet;
 const blankWalletPassphrase = "power return attend drink piece found tragic fire liar page disease combine";
 
 const ADDRESS_ROW_STATUS_TEST_ID = "AddressRow__wallet-status";
+const FIRST_ADDRESS_VOTE_BUTTON = "AddressRowMobile__select-0";
 
 const AddressWrapper = ({ children }) => {
 	const { setConfiguration } = useConfiguration();
@@ -316,11 +317,10 @@ describe("AddressRowMobile", () => {
 			},
 		);
 
-		const voteButton = "AddressRowMobile__select-0";
-		await expect(screen.findByTestId(voteButton)).resolves.toBeVisible();
-		expect(screen.getByTestId(voteButton)).toBeDisabled();
+		await expect(screen.findByTestId(FIRST_ADDRESS_VOTE_BUTTON)).resolves.toBeVisible();
+		expect(screen.getByTestId(FIRST_ADDRESS_VOTE_BUTTON)).toBeDisabled();
 
-		await userEvent.hover(screen.getByTestId(voteButton));
+		await userEvent.hover(screen.getByTestId(FIRST_ADDRESS_VOTE_BUTTON));
 
 		expect(screen.getByText(/Voting disabled due to insufficient balance./)).toBeInTheDocument();
 
@@ -340,11 +340,10 @@ describe("AddressRowMobile", () => {
 			},
 		);
 
-		const voteButton = "AddressRowMobile__select-0";
-		await expect(screen.findByTestId(voteButton)).resolves.toBeVisible();
-		expect(screen.getByTestId(voteButton)).toBeDisabled();
+		await expect(screen.findByTestId(FIRST_ADDRESS_VOTE_BUTTON)).resolves.toBeVisible();
+		expect(screen.getByTestId(FIRST_ADDRESS_VOTE_BUTTON)).toBeDisabled();
 
-		await userEvent.hover(screen.getByTestId(voteButton));
+		await userEvent.hover(screen.getByTestId(FIRST_ADDRESS_VOTE_BUTTON));
 
 		expect(screen.getByText(/ARK Vault requires the use of a chromium based browser when using a Ledger./)).toBeInTheDocument();
 
