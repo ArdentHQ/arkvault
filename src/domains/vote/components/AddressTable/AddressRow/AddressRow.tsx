@@ -201,7 +201,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 		}
 
 		return isLedgerWalletCompatible(wallet) ? "" : t("COMMON.LEDGER_COMPATIBILITY_ERROR");
-	}
+	};
 
 	const isButtonDisabled =
 		!wallet.hasBeenFullyRestored() ||
