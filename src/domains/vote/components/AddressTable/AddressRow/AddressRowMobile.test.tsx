@@ -318,6 +318,7 @@ describe("AddressRowMobile", () => {
 
 		const voteButton = "AddressRowMobile__select-0";
 		await expect(screen.findByTestId(voteButton)).resolves.toBeVisible();
+		expect(screen.getByTestId(voteButton)).toBeDisabled();
 
 		await userEvent.hover(screen.getByTestId(voteButton));
 
