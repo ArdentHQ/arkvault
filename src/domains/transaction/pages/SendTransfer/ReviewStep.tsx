@@ -24,6 +24,8 @@ interface ReviewStepProperties {
 	network: Networks.Network;
 }
 
+const DUST_AMOUNT = 0.0001;
+
 export const ReviewStep = ({ wallet, network }: ReviewStepProperties) => {
 	const { t } = useTranslation();
 
@@ -65,9 +67,9 @@ export const ReviewStep = ({ wallet, network }: ReviewStepProperties) => {
 					type: "error",
 				});
 			} else {
-				const newAmount = amount.minus(fee);
+				const newAmount = amount.minus(fee).minus(DUST_AMOUNT);
 				setDisplayAmount(newAmount.toNumber());
-				setValue("amount", amount.minus(fee).toString());
+				setValue("amount", newAmount.toString());
 			}
 		}
 
