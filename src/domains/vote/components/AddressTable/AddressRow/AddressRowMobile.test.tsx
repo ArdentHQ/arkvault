@@ -305,7 +305,7 @@ describe("AddressRowMobile", () => {
 	});
 
 	it("should render disable vote button & tooltip when balance is zero", async () => {
-		vi.spyOn(wallet, "balance").mockReturnValue(0);
+		const balanceMock = vi.spyOn(wallet, "balance").mockReturnValue(0);
 
 		render(
 			<AddressWrapper>
@@ -323,11 +323,13 @@ describe("AddressRowMobile", () => {
 		await userEvent.hover(screen.getByTestId(voteButton));
 
 		expect(screen.getByText(/Voting disabled due to insufficient balance./)).toBeInTheDocument();
+
+		balanceMock.mockRestore();
 	});
 
 	it("should render disable vote button & tooltip when ledger wallet", async () => {
 		process.env.REACT_APP_IS_UNIT = undefined;
-		vi.spyOn(wallet, "isLedger").mockReturnValue(true);
+		const ledgerWalletMock = vi.spyOn(wallet, "isLedger").mockReturnValue(true);
 
 		render(
 			<AddressWrapper>
@@ -345,6 +347,8 @@ describe("AddressRowMobile", () => {
 		await userEvent.hover(screen.getByTestId(voteButton));
 
 		expect(screen.getByText(/ARK Vault requires the use of a chromium based browser when using a Ledger./)).toBeInTheDocument();
+
+		ledgerWalletMock.mockRestore();
 	});
 
 	// @TODO fix test when we are clear
