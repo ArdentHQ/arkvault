@@ -26,7 +26,7 @@ export const SuccessStep = ({ onClickEditAlias }: { onClickEditAlias: () => void
 
 	return (
 		<section data-testid="CreateWallet__SuccessStep">
-			<div className="space-y-4 -mx-3 sm:mx-0">
+			<div className="-mx-3 space-y-4 sm:mx-0">
 				<DetailWrapper label={t("COMMON.ADDRESSING")}>
 					<div className="mb-3 flex w-full items-center justify-between leading-5 sm:mb-0 sm:justify-start">
 						<DetailTitle> {t("COMMON.ADDRESS")} </DetailTitle>
