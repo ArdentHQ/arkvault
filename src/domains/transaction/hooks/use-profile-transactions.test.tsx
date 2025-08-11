@@ -689,4 +689,57 @@ describe("useProfileTransactions", () => {
 
 		pendingSpy.mockRestore();
 	});
+
+	it("should sort by amount desc", async () => {
+		const walletsAll = profile.wallets().values();
+		const walletA = walletsAll[0];
+		const walletAddress = walletA.address();
+
+		const pendingTx = createMockPendingTransaction({
+			from: "ADDR_EXTERNAL",
+			hash: "PENDING_FORCE_COMPARE",
+			networkId: walletA.networkId(),
+			to: walletAddress,
+			walletAddress,
+		});
+
+		const { pendingSpy } = await mockPendingTransactionsHook([pendingTx]);
+
+		const originalSort = Array.prototype.sort;
+		let branchHit = false;
+
+		// @ts-ignore - ignoring use of any this for test only
+		Array.prototype.sort = function (compareFn: any) {
+			if (typeof compareFn === "function") {
+				const array = this as any[];
+				const pending = array.find((t: any) => typeof t?.isPending === "function");
+				const confirmed = array.find((t: any) => typeof t?.isPending !== "function");
+				if (pending && confirmed) {
+					const res = compareFn(pending, confirmed);
+					if (res === -1) {
+						branchHit = true;
+					}
+				}
+			}
+			return originalSort.call(this, compareFn);
+		};
+
+		try {
+			const { result } = renderHook(() => useProfileTransactions({ profile, wallets: [walletA] }), { wrapper });
+
+			act(() => {
+				result.current.setSortBy({ column: "amount", desc: true });
+			});
+			act(() => {
+				result.current.updateFilters({ activeMode: "all" });
+			});
+
+			await waitFor(() => expect(result.current.isLoadingTransactions).toBe(false));
+			await waitFor(() => expect(result.current.transactions.length).toBeGreaterThan(0));
+			await waitFor(() => expect(branchHit).toBe(true));
+		} finally {
+			Array.prototype.sort = originalSort;
+			pendingSpy.mockRestore();
+		}
+	});
 });
