@@ -340,6 +340,26 @@ describe("AddressRow", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
+	it("should render tooltip wallet when balance is zero", async () => {
+		vi.spyOn(wallet, "balance").mockReturnValue(0);
+
+		render(
+			<AddressWrapper>
+				<AddressRow index={0} maxVotes={1} wallet={wallet} />
+			</AddressWrapper>,
+			{
+				route: `/profiles/${profile.id()}/votes`,
+			},
+		);
+
+		const voteButton = "AddressRow__select-0";
+		await expect(screen.findByTestId(voteButton)).resolves.toBeVisible();
+
+		await userEvent.hover(screen.getByTestId(voteButton));
+
+		expect(screen.getByText(/Voting disabled due to insufficient balance./)).toBeInTheDocument();
+	});
+
 	// @TODO fix test when we are clear
 	it.skip("should redirect to wallet details page", async () => {
 		const route = `/profiles/${profile.id()}/votes`;
