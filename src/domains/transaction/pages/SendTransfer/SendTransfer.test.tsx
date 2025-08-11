@@ -1258,4 +1258,48 @@ describe("SendTransfer", () => {
 		expect(transferData.amount).toBe(0);
 		expect(transferData.to).toBe(wallet.address());
 	});
+
+	it("should recalculate transfer amount when sending all", async () => {
+		const walletSpy = vi.spyOn(wallet, "balance").mockReturnValue(50);
+
+		const transferURL = `/profiles/${getDefaultProfileId()}/wallets/${wallet.id()}/send-transfer`;
+		console.log(wallet.balance());
+
+		render(<SendTransfer />, {
+			route: transferURL,
+		});
+
+		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
+
+		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
+
+		await selectRecipient();
+
+		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
+
+		await selectFirstRecipient();
+		await waitFor(() =>
+			expect(screen.getAllByTestId("SelectDropdown__input")[0]).toHaveValue(profile.wallets().first().address()),
+		);
+
+		// Amount
+		await userEvent.click(screen.getByTestId(sendAllID));
+		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("50"));
+
+		expect(continueButton()).not.toBeDisabled();
+		await userEvent.click(continueButton());
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
+
+		// Should display amount - fee after fee calculation
+		await expect(screen.findByText(/49.9998723191285 ARK/)).resolves.toBeVisible();
+
+		// Fee
+		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
+		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
+
+		// Should re-calculate amount after fee changes
+		await expect(screen.findByText(/49.999874 ARK/)).resolves.toBeVisible();
+
+		walletSpy.mockRestore();
+	});
 });
