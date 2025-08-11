@@ -635,6 +635,7 @@ describe("useProfileTransactions", () => {
 		expect(withRecipients.total()).toBe(3.5);
 		expect(withRecipients.isReturn()).toBe(false);
 		expect(withRecipients.isUsernameResignation()).toBe(false);
+		expect(withRecipients.blockHash()).toBeUndefined();
 
 		expect(noRecipients.recipients()).toEqual([]);
 		expect(noRecipients.isReceived()).toBe(false);
@@ -646,6 +647,7 @@ describe("useProfileTransactions", () => {
 		expect(noRecipients.wallet()?.address()).toBe(walletAddress);
 		expect(noRecipients.isReturn()).toBe(true);
 		expect(noRecipients.isUsernameResignation()).toBe(true);
+		expect(noRecipients.blockHash()).toBeUndefined();
 
 		pendingSpy.mockRestore();
 	});
