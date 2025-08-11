@@ -35,17 +35,19 @@ exports[`AddressRowMobile > should emit action on select button 1`] = `
                 <span
                   class="bg-theme-secondary-300 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 block h-5 w-px sm:hidden"
                 />
-                <button
-                  class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 p-0 text-sm hover:underline"
-                  data-testid="AddressRowMobile__select-0"
-                  type="button"
-                >
-                  <div
-                    class="flex items-center gap-2"
+                <div>
+                  <button
+                    class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 p-0 text-sm hover:underline"
+                    data-testid="AddressRowMobile__select-0"
+                    type="button"
                   >
-                    Vote
-                  </div>
-                </button>
+                    <div
+                      class="flex items-center gap-2"
+                    >
+                      Vote
+                    </div>
+                  </button>
+                </div>
               </div>
             </div>
             <div
@@ -204,17 +206,19 @@ exports[`AddressRowMobile > should render in 375 screen width 1`] = `
                 <span
                   class="bg-theme-secondary-300 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 block h-5 w-px sm:hidden"
                 />
-                <button
-                  class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 p-0 text-sm hover:underline"
-                  data-testid="AddressRowMobile__select-0"
-                  type="button"
-                >
-                  <div
-                    class="flex items-center gap-2"
+                <div>
+                  <button
+                    class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 p-0 text-sm hover:underline"
+                    data-testid="AddressRowMobile__select-0"
+                    type="button"
                   >
-                    Vote
-                  </div>
-                </button>
+                    <div
+                      class="flex items-center gap-2"
+                    >
+                      Vote
+                    </div>
+                  </button>
+                </div>
               </div>
             </div>
             <div
@@ -372,17 +376,19 @@ exports[`AddressRowMobile > should render in 420 screen width 1`] = `
                 <span
                   class="bg-theme-secondary-300 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 block h-5 w-px sm:hidden"
                 />
-                <button
-                  class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 p-0 text-sm hover:underline"
-                  data-testid="AddressRowMobile__select-0"
-                  type="button"
-                >
-                  <div
-                    class="flex items-center gap-2"
+                <div>
+                  <button
+                    class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 p-0 text-sm hover:underline"
+                    data-testid="AddressRowMobile__select-0"
+                    type="button"
                   >
-                    Vote
-                  </div>
-                </button>
+                    <div
+                      class="flex items-center gap-2"
+                    >
+                      Vote
+                    </div>
+                  </button>
+                </div>
               </div>
             </div>
             <div
@@ -540,17 +546,20 @@ exports[`AddressRowMobile > should render when the maximum votes is greater than
                 <span
                   class="bg-theme-secondary-300 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 block h-5 w-px sm:hidden"
                 />
-                <button
-                  class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 p-0 text-sm hover:underline"
-                  data-testid="AddressRowMobile__select-0"
-                  type="button"
-                >
-                  <div
-                    class="flex items-center gap-2"
+                <div>
+                  <button
+                    class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 p-0 text-sm hover:underline"
+                    data-testid="AddressRowMobile__select-0"
+                    disabled=""
+                    type="button"
                   >
-                    Vote
-                  </div>
-                </button>
+                    <div
+                      class="flex items-center gap-2"
+                    >
+                      Vote
+                    </div>
+                  </button>
+                </div>
               </div>
             </div>
             <div
@@ -707,17 +716,20 @@ exports[`AddressRowMobile > should render when the wallet has many votes 1`] = `
                 <span
                   class="bg-theme-secondary-300 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 block h-5 w-px sm:hidden"
                 />
-                <button
-                  class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 p-0 text-sm hover:underline"
-                  data-testid="AddressRowMobile__select-0"
-                  type="button"
-                >
-                  <div
-                    class="flex items-center gap-2"
+                <div>
+                  <button
+                    class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 p-0 text-sm hover:underline"
+                    data-testid="AddressRowMobile__select-0"
+                    disabled=""
+                    type="button"
                   >
-                    Vote
-                  </div>
-                </button>
+                    <div
+                      class="flex items-center gap-2"
+                    >
+                      Vote
+                    </div>
+                  </button>
+                </div>
               </div>
             </div>
             <div
@@ -874,17 +886,19 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                 <span
                   class="bg-theme-secondary-300 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 block h-5 w-px sm:hidden"
                 />
-                <button
-                  class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 p-0 text-sm hover:underline"
-                  data-testid="AddressRowMobile__select-0"
-                  type="button"
-                >
-                  <div
-                    class="flex items-center gap-2"
+                <div>
+                  <button
+                    class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 p-0 text-sm hover:underline"
+                    data-testid="AddressRowMobile__select-0"
+                    type="button"
                   >
-                    Vote
-                  </div>
-                </button>
+                    <div
+                      class="flex items-center gap-2"
+                    >
+                      Vote
+                    </div>
+                  </button>
+                </div>
               </div>
             </div>
             <div
@@ -1021,18 +1035,20 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
               <div
                 class="flex items-center gap-3"
               >
-                <button
-                  class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 p-0 text-sm hover:underline"
-                  data-testid="AddressRowMobile__select-1"
-                  disabled=""
-                  type="button"
-                >
-                  <div
-                    class="flex items-center gap-2"
+                <div>
+                  <button
+                    class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 p-0 text-sm hover:underline"
+                    data-testid="AddressRowMobile__select-1"
+                    disabled=""
+                    type="button"
                   >
-                    Vote
-                  </div>
-                </button>
+                    <div
+                      class="flex items-center gap-2"
+                    >
+                      Vote
+                    </div>
+                  </button>
+                </div>
               </div>
             </div>
             <div
@@ -1136,17 +1152,19 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                 <span
                   class="bg-theme-secondary-300 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 block h-5 w-px sm:hidden"
                 />
-                <button
-                  class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 p-0 text-sm hover:underline"
-                  data-testid="AddressRowMobile__select-0"
-                  type="button"
-                >
-                  <div
-                    class="flex items-center gap-2"
+                <div>
+                  <button
+                    class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 p-0 text-sm hover:underline"
+                    data-testid="AddressRowMobile__select-0"
+                    type="button"
                   >
-                    Vote
-                  </div>
-                </button>
+                    <div
+                      class="flex items-center gap-2"
+                    >
+                      Vote
+                    </div>
+                  </button>
+                </div>
               </div>
             </div>
             <div
@@ -1283,18 +1301,20 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
               <div
                 class="flex items-center gap-3"
               >
-                <button
-                  class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 p-0 text-sm hover:underline"
-                  data-testid="AddressRowMobile__select-1"
-                  disabled=""
-                  type="button"
-                >
-                  <div
-                    class="flex items-center gap-2"
+                <div>
+                  <button
+                    class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 p-0 text-sm hover:underline"
+                    data-testid="AddressRowMobile__select-1"
+                    disabled=""
+                    type="button"
                   >
-                    Vote
-                  </div>
-                </button>
+                    <div
+                      class="flex items-center gap-2"
+                    >
+                      Vote
+                    </div>
+                  </button>
+                </div>
               </div>
             </div>
             <div
@@ -1389,17 +1409,19 @@ exports[`AddressRowMobile > should render when wallet not loaded 1`] = `
               <div
                 class="flex items-center gap-3"
               >
-                <button
-                  class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 p-0 text-sm hover:underline"
-                  data-testid="AddressRowMobile__select-0"
-                  type="button"
-                >
-                  <div
-                    class="flex items-center gap-2"
+                <div>
+                  <button
+                    class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 p-0 text-sm hover:underline"
+                    data-testid="AddressRowMobile__select-0"
+                    type="button"
                   >
-                    Vote
-                  </div>
-                </button>
+                    <div
+                      class="flex items-center gap-2"
+                    >
+                      Vote
+                    </div>
+                  </button>
+                </div>
               </div>
             </div>
             <div
@@ -1504,17 +1526,19 @@ exports[`AddressRowMobile > should render with active validator 1`] = `
                 <span
                   class="bg-theme-secondary-300 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 block h-5 w-px sm:hidden"
                 />
-                <button
-                  class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 p-0 text-sm hover:underline"
-                  data-testid="AddressRowMobile__select-0"
-                  type="button"
-                >
-                  <div
-                    class="flex items-center gap-2"
+                <div>
+                  <button
+                    class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 p-0 text-sm hover:underline"
+                    data-testid="AddressRowMobile__select-0"
+                    type="button"
                   >
-                    Vote
-                  </div>
-                </button>
+                    <div
+                      class="flex items-center gap-2"
+                    >
+                      Vote
+                    </div>
+                  </button>
+                </div>
               </div>
             </div>
             <div
@@ -1671,17 +1695,19 @@ exports[`AddressRowMobile > should render with resigned validator 1`] = `
                 <span
                   class="bg-theme-secondary-300 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 block h-5 w-px sm:hidden"
                 />
-                <button
-                  class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 p-0 text-sm hover:underline"
-                  data-testid="AddressRowMobile__select-0"
-                  type="button"
-                >
-                  <div
-                    class="flex items-center gap-2"
+                <div>
+                  <button
+                    class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 p-0 text-sm hover:underline"
+                    data-testid="AddressRowMobile__select-0"
+                    type="button"
                   >
-                    Vote
-                  </div>
-                </button>
+                    <div
+                      class="flex items-center gap-2"
+                    >
+                      Vote
+                    </div>
+                  </button>
+                </div>
               </div>
             </div>
             <div
@@ -1838,17 +1864,19 @@ exports[`AddressRowMobile > should render with standby validator 1`] = `
                 <span
                   class="bg-theme-secondary-300 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 block h-5 w-px sm:hidden"
                 />
-                <button
-                  class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 p-0 text-sm hover:underline"
-                  data-testid="AddressRowMobile__select-0"
-                  type="button"
-                >
-                  <div
-                    class="flex items-center gap-2"
+                <div>
+                  <button
+                    class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 p-0 text-sm hover:underline"
+                    data-testid="AddressRowMobile__select-0"
+                    type="button"
                   >
-                    Vote
-                  </div>
-                </button>
+                    <div
+                      class="flex items-center gap-2"
+                    >
+                      Vote
+                    </div>
+                  </button>
+                </div>
               </div>
             </div>
             <div
