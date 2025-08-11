@@ -25,7 +25,7 @@ interface ReviewStepProperties {
 }
 
 // This is to prevent Insufficient balance error when sending all
-const DUST_AMOUNT = 0.0001;
+const DUST_AMOUNT = 0.00015;
 
 export const ReviewStep = ({ wallet, network }: ReviewStepProperties) => {
 	const { t } = useTranslation();

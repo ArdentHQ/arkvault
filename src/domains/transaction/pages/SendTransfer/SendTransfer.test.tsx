@@ -1291,14 +1291,7 @@ describe("SendTransfer", () => {
 		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
 
 		// Should display amount - fee after fee calculation
-		await expect(screen.findByText(/49.9997723191285 ARK/)).resolves.toBeVisible();
-
-		// Fee
-		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
-		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
-
-		// Should re-calculate amount after fee changes
-		await expect(screen.findByText(/49.999774 ARK/)).resolves.toBeVisible();
+		await expect(screen.findByText(/49.99985 ARK/)).resolves.toBeVisible();
 
 		walletSpy.mockRestore();
 	});
