@@ -280,7 +280,8 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 					transactions: items,
 				}));
 			} catch (error) {
-				console.log({ error });
+				/* istanbul ignore next -- @preserve */
+				console.error({ error });
 			}
 		};
 
