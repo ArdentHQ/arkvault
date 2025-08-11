@@ -208,6 +208,48 @@ describe("ProfileMainsailMigrator", () => {
 			expect(migratedWallet.data.STATUS).toBe(originalWalletData.STATUS);
 			expect(migratedWallet.settings).toEqual(data.wallets["wallet-1"].settings);
 		});
+
+		it("should deduplicate wallets that share the same PUBLIC_KEY across networks", async () => {
+			const data: IProfileData = {
+				contacts: {},
+				data: {},
+				exchangeTransactions: {},
+				hosts: {},
+				id: "test-profile",
+				networks: {},
+				notifications: {},
+				settings: {},
+				wallets: {
+					"wallet-1": {
+						data: {
+							ADDRESS: "AdViMQwcwquCP8fbY9eczXzTX7yUs2uMw4",
+							NETWORK: "ark.mainnet",
+							PUBLIC_KEY: "03300acecfd7cfc5987ad8cc70bf51c5e93749f76103a02eaf4a1d143729b86a00",
+						},
+						id: "wallet-1",
+						settings: { ALIAS: "Mainnet Wallet" },
+					},
+					"wallet-2": {
+						data: {
+							ADDRESS: "DFAWxzGKC3nvqQ5CqRXTqAi8593Jq1gPkt",
+							NETWORK: "ark.devnet",
+							PUBLIC_KEY: "03300acecfd7cfc5987ad8cc70bf51c5e93749f76103a02eaf4a1d143729b86a00",
+						},
+						id: "wallet-2",
+						settings: { ALIAS: "Devnet Wallet" },
+					},
+				},
+			};
+
+			const result = await migrator.migrate(profile, data);
+
+			const walletIds = Object.keys(result.wallets);
+			expect(walletIds.length).toBe(1);
+			expect(walletIds).toContain("wallet-1");
+			expect(walletIds).not.toContain("wallet-2");
+			expect(result.wallets["wallet-1"].data.ADDRESS).toEqual("0xA471E0a5a70211c7929f7d0b2079C424642E2924");
+			expect(result.wallets["wallet-1"].settings).toEqual({ ALIAS: "Mainnet Wallet" });
+		});
 	});
 
 	describe("requiresMigration", () => {
