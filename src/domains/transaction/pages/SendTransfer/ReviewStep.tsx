@@ -24,6 +24,7 @@ interface ReviewStepProperties {
 	network: Networks.Network;
 }
 
+// This is to prevent Insufficient balance error when sending all
 const DUST_AMOUNT = 0.0001;
 
 export const ReviewStep = ({ wallet, network }: ReviewStepProperties) => {
@@ -41,8 +42,6 @@ export const ReviewStep = ({ wallet, network }: ReviewStepProperties) => {
 	for (const recipient of recipients) {
 		amount = amount.plus(BigNumber.make(recipient.amount));
 	}
-
-	const [displayAmount, setDisplayAmount] = useState(amount.toNumber());
 
 	const ticker = wallet.currency();
 	const exchangeTicker = profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency) as string;
@@ -68,8 +67,17 @@ export const ReviewStep = ({ wallet, network }: ReviewStepProperties) => {
 				});
 			} else {
 				const newAmount = amount.minus(fee).minus(DUST_AMOUNT);
-				setDisplayAmount(newAmount.toNumber());
-				setValue("amount", newAmount.toString());
+
+				const firstRecipient = recipients.at(0);
+
+				setValue("recipients", [
+					{
+						address: firstRecipient.address,
+						alias: firstRecipient.alias,
+						amount: newAmount.toNumber(),
+					}
+				])
+
 			}
 		}
 
@@ -99,7 +107,7 @@ export const ReviewStep = ({ wallet, network }: ReviewStepProperties) => {
 	const showFeeInput = useMemo(() => !network.chargesZeroFees(), [network]);
 
 	const isTestnet = wallet.network().isTest();
-	const convertedAmount = isTestnet ? 0 : convert(displayAmount);
+	const convertedAmount = isTestnet ? 0 : convert(amount.toNumber());
 
 	return (
 		<section data-testid="SendTransfer__review-step">
@@ -137,7 +145,7 @@ export const ReviewStep = ({ wallet, network }: ReviewStepProperties) => {
 									</DetailTitle>
 
 									<div className="flex flex-1 flex-row items-center justify-end gap-2 sm:w-full sm:justify-start">
-										<Amount ticker={ticker} value={displayAmount} className="font-semibold" />
+										<Amount ticker={ticker} value={amount.toNumber()} className="font-semibold" />
 										{!isTestnet && !!convertedAmount && !!exchangeTicker && (
 											<div className="text-theme-secondary-700 font-semibold">
 												(~
