@@ -345,7 +345,9 @@ describe("AddressRowMobile", () => {
 
 		await userEvent.hover(screen.getByTestId(FIRST_ADDRESS_VOTE_BUTTON));
 
-		expect(screen.getByText(/ARK Vault requires the use of a chromium based browser when using a Ledger./)).toBeInTheDocument();
+		expect(
+			screen.getByText(/ARK Vault requires the use of a chromium based browser when using a Ledger./),
+		).toBeInTheDocument();
 
 		ledgerWalletMock.mockRestore();
 	});
