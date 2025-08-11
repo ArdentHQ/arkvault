@@ -14,7 +14,7 @@ export const DeleteAddressMessage = ({
 	return (
 		<div
 			data-testid="DeleteAddressMessage"
-			className="bg-theme-danger-50 dark:bg-theme-dark-800 dim:bg-theme-dim-800 flex flex-col items-center rounded-b-lg px-4 py-3"
+			className="bg-theme-danger-50 dark:bg-theme-dark-800 dim:bg-theme-dim-800 flex flex-col items-center rounded-b-sm md:rounded-b-lg px-4 py-3"
 		>
 			<p className="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm">
 				{t("COMMON.DELETE_DESCRIPTION")}
