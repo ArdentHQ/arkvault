@@ -75,9 +75,8 @@ export const ReviewStep = ({ wallet, network }: ReviewStepProperties) => {
 						address: firstRecipient.address,
 						alias: firstRecipient.alias,
 						amount: newAmount.toString(),
-					}
-				])
-
+					},
+				]);
 			}
 		}
 
