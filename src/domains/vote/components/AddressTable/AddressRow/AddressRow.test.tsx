@@ -19,6 +19,7 @@ let wallet2: Contracts.IReadWriteWallet;
 const blankWalletPassphrase = "power return attend drink piece found tragic fire liar page disease combine";
 
 const ADDRESS_ROW_STATUS_TEST_ID = "AddressRow__wallet-status";
+const FIRST_ADDRESS_VOTE_BUTTON = "AddressRow__select-0";
 
 const AddressWrapper = ({ children }) => {
 	const { setConfiguration } = useConfiguration();
@@ -334,8 +335,7 @@ describe("AddressRow", () => {
 
 		expect(container).toBeInTheDocument();
 
-		const voteButton = "AddressRow__select-0";
-		await expect(screen.findByTestId(voteButton)).resolves.toBeVisible();
+		await expect(screen.findByTestId(FIRST_ADDRESS_VOTE_BUTTON)).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -352,10 +352,9 @@ describe("AddressRow", () => {
 			},
 		);
 
-		const voteButton = "AddressRow__select-0";
-		await expect(screen.findByTestId(voteButton)).resolves.toBeVisible();
+		await expect(screen.findByTestId(FIRST_ADDRESS_VOTE_BUTTON)).resolves.toBeVisible();
 
-		await userEvent.hover(screen.getByTestId(voteButton));
+		await userEvent.hover(screen.getByTestId(FIRST_ADDRESS_VOTE_BUTTON));
 
 		expect(screen.getByText(/Voting disabled due to insufficient balance./)).toBeInTheDocument();
 	});
