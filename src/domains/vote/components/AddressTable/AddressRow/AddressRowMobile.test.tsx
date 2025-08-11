@@ -304,7 +304,7 @@ describe("AddressRowMobile", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render tooltip wallet when balance is zero", async () => {
+	it("should render disable vote button & tooltip when balance is zero", async () => {
 		vi.spyOn(wallet, "balance").mockReturnValue(0);
 
 		render(
@@ -323,6 +323,28 @@ describe("AddressRowMobile", () => {
 		await userEvent.hover(screen.getByTestId(voteButton));
 
 		expect(screen.getByText(/Voting disabled due to insufficient balance./)).toBeInTheDocument();
+	});
+
+	it("should render disable vote button & tooltip when ledger wallet", async () => {
+		process.env.REACT_APP_IS_UNIT = undefined;
+		vi.spyOn(wallet, "isLedger").mockReturnValue(true);
+
+		render(
+			<AddressWrapper>
+				<AddressRowMobile index={0} maxVotes={1} wallet={wallet} />
+			</AddressWrapper>,
+			{
+				route: `/profiles/${profile.id()}/votes`,
+			},
+		);
+
+		const voteButton = "AddressRowMobile__select-0";
+		await expect(screen.findByTestId(voteButton)).resolves.toBeVisible();
+		expect(screen.getByTestId(voteButton)).toBeDisabled();
+
+		await userEvent.hover(screen.getByTestId(voteButton));
+
+		expect(screen.getByText(/ARK Vault requires the use of a chromium based browser when using a Ledger./)).toBeInTheDocument();
 	});
 
 	// @TODO fix test when we are clear
