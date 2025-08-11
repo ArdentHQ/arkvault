@@ -153,6 +153,7 @@ export const Dashboard = ({
 						isLoadingVotes={isLoadingVotes}
 						votes={votes}
 						wallet={selectedWallets.at(0)}
+						wallets={selectedWallets}
 						onButtonClick={handleVoteButton}
 					/>
 				</Section>
