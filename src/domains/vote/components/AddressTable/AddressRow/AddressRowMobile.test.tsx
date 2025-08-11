@@ -327,7 +327,7 @@ describe("AddressRowMobile", () => {
 		balanceMock.mockRestore();
 	});
 
-	it("should render disable vote button & tooltip when ledger wallet", async () => {
+	it("should render disable vote button & tooltip when ledger is not supported", async () => {
 		process.env.REACT_APP_IS_UNIT = undefined;
 		const ledgerWalletMock = vi.spyOn(wallet, "isLedger").mockReturnValue(true);
 
