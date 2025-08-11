@@ -11,14 +11,14 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
       tabindex="-1"
     >
       <div
-        class="bg-theme-background dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8 pb-24"
+        class="bg-theme-background dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl pb-24 sm:pb-0"
         data-testid="Modal__inner"
       >
         <div
-          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
+          class="text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-3.5 mr-6 rounded transition-all duration-100 ease-linear md:mt-3.5 md:mr-6"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -56,15 +56,19 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-1.5"
+          class="relative flex flex-1 flex-col"
         >
-          <h2
-            class="mb-0 max-w-[calc(100%_-_32px)] text-lg font-bold md:pt-0 md:text-2xl"
-          >
-            Select Account
-          </h2>
           <div
-            class="flex flex-1 flex-col"
+            class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 border-b px-6 py-3.5"
+          >
+            <h2
+              class="mb-0 max-w-[calc(100%_-_32px)] text-lg leading-5 font-semibold md:pt-0 md:text-lg"
+            >
+              Select Account
+            </h2>
+          </div>
+          <div
+            class="flex flex-1 flex-col px-6 pt-4 sm:pb-4"
           >
             <div
               class="text-theme-secondary-text pr-10 text-sm whitespace-pre-line md:pr-0 md:text-base"
@@ -434,14 +438,14 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
       tabindex="-1"
     >
       <div
-        class="bg-theme-background dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8 pb-24"
+        class="bg-theme-background dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl pb-24 sm:pb-0"
         data-testid="Modal__inner"
       >
         <div
-          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
+          class="text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-3.5 mr-6 rounded transition-all duration-100 ease-linear md:mt-3.5 md:mr-6"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -479,15 +483,19 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-1.5"
+          class="relative flex flex-1 flex-col"
         >
-          <h2
-            class="mb-0 max-w-[calc(100%_-_32px)] text-lg font-bold md:pt-0 md:text-2xl"
-          >
-            Select Account
-          </h2>
           <div
-            class="flex flex-1 flex-col"
+            class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 border-b px-6 py-3.5"
+          >
+            <h2
+              class="mb-0 max-w-[calc(100%_-_32px)] text-lg leading-5 font-semibold md:pt-0 md:text-lg"
+            >
+              Select Account
+            </h2>
+          </div>
+          <div
+            class="flex flex-1 flex-col px-6 pt-4 sm:pb-4"
           >
             <div
               class="text-theme-secondary-text pr-10 text-sm whitespace-pre-line md:pr-0 md:text-base"
@@ -857,14 +865,14 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
       tabindex="-1"
     >
       <div
-        class="bg-theme-background dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8 pb-24"
+        class="bg-theme-background dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl pb-24 sm:pb-0"
         data-testid="Modal__inner"
       >
         <div
-          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
+          class="text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-3.5 mr-6 rounded transition-all duration-100 ease-linear md:mt-3.5 md:mr-6"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -902,15 +910,19 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-1.5"
+          class="relative flex flex-1 flex-col"
         >
-          <h2
-            class="mb-0 max-w-[calc(100%_-_32px)] text-lg font-bold md:pt-0 md:text-2xl"
-          >
-            Select Account
-          </h2>
           <div
-            class="flex flex-1 flex-col"
+            class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 border-b px-6 py-3.5"
+          >
+            <h2
+              class="mb-0 max-w-[calc(100%_-_32px)] text-lg leading-5 font-semibold md:pt-0 md:text-lg"
+            >
+              Select Account
+            </h2>
+          </div>
+          <div
+            class="flex flex-1 flex-col px-6 pt-4 sm:pb-4"
           >
             <div
               class="text-theme-secondary-text pr-10 text-sm whitespace-pre-line md:pr-0 md:text-base"
@@ -1278,14 +1290,14 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 1`
       tabindex="-1"
     >
       <div
-        class="bg-theme-background dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8 pb-24"
+        class="bg-theme-background dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl pb-24 sm:pb-0"
         data-testid="Modal__inner"
       >
         <div
-          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
+          class="text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-3.5 mr-6 rounded transition-all duration-100 ease-linear md:mt-3.5 md:mr-6"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -1323,15 +1335,19 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 1`
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-1.5"
+          class="relative flex flex-1 flex-col"
         >
-          <h2
-            class="mb-0 max-w-[calc(100%_-_32px)] text-lg font-bold md:pt-0 md:text-2xl"
-          >
-            Select Account
-          </h2>
           <div
-            class="flex flex-1 flex-col"
+            class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 border-b px-6 py-3.5"
+          >
+            <h2
+              class="mb-0 max-w-[calc(100%_-_32px)] text-lg leading-5 font-semibold md:pt-0 md:text-lg"
+            >
+              Select Account
+            </h2>
+          </div>
+          <div
+            class="flex flex-1 flex-col px-6 pt-4 sm:pb-4"
           >
             <div
               class="text-theme-secondary-text pr-10 text-sm whitespace-pre-line md:pr-0 md:text-base"
@@ -1600,14 +1616,14 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 2`
       tabindex="-1"
     >
       <div
-        class="bg-theme-background dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8 pb-24"
+        class="bg-theme-background dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl pb-24 sm:pb-0"
         data-testid="Modal__inner"
       >
         <div
-          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
+          class="text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-3.5 mr-6 rounded transition-all duration-100 ease-linear md:mt-3.5 md:mr-6"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -1645,15 +1661,19 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 2`
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-1.5"
+          class="relative flex flex-1 flex-col"
         >
-          <h2
-            class="mb-0 max-w-[calc(100%_-_32px)] text-lg font-bold md:pt-0 md:text-2xl"
-          >
-            Select Account
-          </h2>
           <div
-            class="flex flex-1 flex-col"
+            class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 border-b px-6 py-3.5"
+          >
+            <h2
+              class="mb-0 max-w-[calc(100%_-_32px)] text-lg leading-5 font-semibold md:pt-0 md:text-lg"
+            >
+              Select Account
+            </h2>
+          </div>
+          <div
+            class="flex flex-1 flex-col px-6 pt-4 sm:pb-4"
           >
             <div
               class="text-theme-secondary-text pr-10 text-sm whitespace-pre-line md:pr-0 md:text-base"
@@ -1922,14 +1942,14 @@ exports[`SearchWallet uses fiat value = false > should render responsive with se
       tabindex="-1"
     >
       <div
-        class="bg-theme-background dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8 pb-24"
+        class="bg-theme-background dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl pb-24 sm:pb-0"
         data-testid="Modal__inner"
       >
         <div
-          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
+          class="text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-3.5 mr-6 rounded transition-all duration-100 ease-linear md:mt-3.5 md:mr-6"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -1967,15 +1987,19 @@ exports[`SearchWallet uses fiat value = false > should render responsive with se
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-1.5"
+          class="relative flex flex-1 flex-col"
         >
-          <h2
-            class="mb-0 max-w-[calc(100%_-_32px)] text-lg font-bold md:pt-0 md:text-2xl"
-          >
-            Select Account
-          </h2>
           <div
-            class="flex flex-1 flex-col"
+            class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 border-b px-6 py-3.5"
+          >
+            <h2
+              class="mb-0 max-w-[calc(100%_-_32px)] text-lg leading-5 font-semibold md:pt-0 md:text-lg"
+            >
+              Select Account
+            </h2>
+          </div>
+          <div
+            class="flex flex-1 flex-col px-6 pt-4 sm:pb-4"
           >
             <div
               class="text-theme-secondary-text pr-10 text-sm whitespace-pre-line md:pr-0 md:text-base"
@@ -2244,14 +2268,14 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
       tabindex="-1"
     >
       <div
-        class="bg-theme-background dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8 pb-24"
+        class="bg-theme-background dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl pb-24 sm:pb-0"
         data-testid="Modal__inner"
       >
         <div
-          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
+          class="text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-3.5 mr-6 rounded transition-all duration-100 ease-linear md:mt-3.5 md:mr-6"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -2289,15 +2313,19 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-1.5"
+          class="relative flex flex-1 flex-col"
         >
-          <h2
-            class="mb-0 max-w-[calc(100%_-_32px)] text-lg font-bold md:pt-0 md:text-2xl"
-          >
-            Select Account
-          </h2>
           <div
-            class="flex flex-1 flex-col"
+            class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 border-b px-6 py-3.5"
+          >
+            <h2
+              class="mb-0 max-w-[calc(100%_-_32px)] text-lg leading-5 font-semibold md:pt-0 md:text-lg"
+            >
+              Select Account
+            </h2>
+          </div>
+          <div
+            class="flex flex-1 flex-col px-6 pt-4 sm:pb-4"
           >
             <div
               class="text-theme-secondary-text pr-10 text-sm whitespace-pre-line md:pr-0 md:text-base"
@@ -2592,14 +2620,14 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
       tabindex="-1"
     >
       <div
-        class="bg-theme-background dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8 pb-24"
+        class="bg-theme-background dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl pb-24 sm:pb-0"
         data-testid="Modal__inner"
       >
         <div
-          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
+          class="text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-3.5 mr-6 rounded transition-all duration-100 ease-linear md:mt-3.5 md:mr-6"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -2637,15 +2665,19 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-1.5"
+          class="relative flex flex-1 flex-col"
         >
-          <h2
-            class="mb-0 max-w-[calc(100%_-_32px)] text-lg font-bold md:pt-0 md:text-2xl"
-          >
-            Select Account
-          </h2>
           <div
-            class="flex flex-1 flex-col"
+            class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 border-b px-6 py-3.5"
+          >
+            <h2
+              class="mb-0 max-w-[calc(100%_-_32px)] text-lg leading-5 font-semibold md:pt-0 md:text-lg"
+            >
+              Select Account
+            </h2>
+          </div>
+          <div
+            class="flex flex-1 flex-col px-6 pt-4 sm:pb-4"
           >
             <div
               class="text-theme-secondary-text pr-10 text-sm whitespace-pre-line md:pr-0 md:text-base"
@@ -3013,14 +3045,14 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
       tabindex="-1"
     >
       <div
-        class="bg-theme-background dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8 pb-24"
+        class="bg-theme-background dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl pb-24 sm:pb-0"
         data-testid="Modal__inner"
       >
         <div
-          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
+          class="text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-3.5 mr-6 rounded transition-all duration-100 ease-linear md:mt-3.5 md:mr-6"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -3058,15 +3090,19 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-1.5"
+          class="relative flex flex-1 flex-col"
         >
-          <h2
-            class="mb-0 max-w-[calc(100%_-_32px)] text-lg font-bold md:pt-0 md:text-2xl"
-          >
-            Select Account
-          </h2>
           <div
-            class="flex flex-1 flex-col"
+            class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 border-b px-6 py-3.5"
+          >
+            <h2
+              class="mb-0 max-w-[calc(100%_-_32px)] text-lg leading-5 font-semibold md:pt-0 md:text-lg"
+            >
+              Select Account
+            </h2>
+          </div>
+          <div
+            class="flex flex-1 flex-col px-6 pt-4 sm:pb-4"
           >
             <div
               class="text-theme-secondary-text pr-10 text-sm whitespace-pre-line md:pr-0 md:text-base"
@@ -3436,14 +3472,14 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
       tabindex="-1"
     >
       <div
-        class="bg-theme-background dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8 pb-24"
+        class="bg-theme-background dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl pb-24 sm:pb-0"
         data-testid="Modal__inner"
       >
         <div
-          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
+          class="text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-3.5 mr-6 rounded transition-all duration-100 ease-linear md:mt-3.5 md:mr-6"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -3481,15 +3517,19 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-1.5"
+          class="relative flex flex-1 flex-col"
         >
-          <h2
-            class="mb-0 max-w-[calc(100%_-_32px)] text-lg font-bold md:pt-0 md:text-2xl"
-          >
-            Select Account
-          </h2>
           <div
-            class="flex flex-1 flex-col"
+            class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 border-b px-6 py-3.5"
+          >
+            <h2
+              class="mb-0 max-w-[calc(100%_-_32px)] text-lg leading-5 font-semibold md:pt-0 md:text-lg"
+            >
+              Select Account
+            </h2>
+          </div>
+          <div
+            class="flex flex-1 flex-col px-6 pt-4 sm:pb-4"
           >
             <div
               class="text-theme-secondary-text pr-10 text-sm whitespace-pre-line md:pr-0 md:text-base"
@@ -3936,14 +3976,14 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
       tabindex="-1"
     >
       <div
-        class="bg-theme-background dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8 pb-24"
+        class="bg-theme-background dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl pb-24 sm:pb-0"
         data-testid="Modal__inner"
       >
         <div
-          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
+          class="text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-3.5 mr-6 rounded transition-all duration-100 ease-linear md:mt-3.5 md:mr-6"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -3981,15 +4021,19 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-1.5"
+          class="relative flex flex-1 flex-col"
         >
-          <h2
-            class="mb-0 max-w-[calc(100%_-_32px)] text-lg font-bold md:pt-0 md:text-2xl"
-          >
-            Select Account
-          </h2>
           <div
-            class="flex flex-1 flex-col"
+            class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 border-b px-6 py-3.5"
+          >
+            <h2
+              class="mb-0 max-w-[calc(100%_-_32px)] text-lg leading-5 font-semibold md:pt-0 md:text-lg"
+            >
+              Select Account
+            </h2>
+          </div>
+          <div
+            class="flex flex-1 flex-col px-6 pt-4 sm:pb-4"
           >
             <div
               class="text-theme-secondary-text pr-10 text-sm whitespace-pre-line md:pr-0 md:text-base"
@@ -4436,14 +4480,14 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
       tabindex="-1"
     >
       <div
-        class="bg-theme-background dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8 pb-24"
+        class="bg-theme-background dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl pb-24 sm:pb-0"
         data-testid="Modal__inner"
       >
         <div
-          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
+          class="text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-3.5 mr-6 rounded transition-all duration-100 ease-linear md:mt-3.5 md:mr-6"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -4481,15 +4525,19 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-1.5"
+          class="relative flex flex-1 flex-col"
         >
-          <h2
-            class="mb-0 max-w-[calc(100%_-_32px)] text-lg font-bold md:pt-0 md:text-2xl"
-          >
-            Select Account
-          </h2>
           <div
-            class="flex flex-1 flex-col"
+            class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 border-b px-6 py-3.5"
+          >
+            <h2
+              class="mb-0 max-w-[calc(100%_-_32px)] text-lg leading-5 font-semibold md:pt-0 md:text-lg"
+            >
+              Select Account
+            </h2>
+          </div>
+          <div
+            class="flex flex-1 flex-col px-6 pt-4 sm:pb-4"
           >
             <div
               class="text-theme-secondary-text pr-10 text-sm whitespace-pre-line md:pr-0 md:text-base"
@@ -4934,14 +4982,14 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 1`]
       tabindex="-1"
     >
       <div
-        class="bg-theme-background dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8 pb-24"
+        class="bg-theme-background dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl pb-24 sm:pb-0"
         data-testid="Modal__inner"
       >
         <div
-          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
+          class="text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-3.5 mr-6 rounded transition-all duration-100 ease-linear md:mt-3.5 md:mr-6"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -4979,15 +5027,19 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 1`]
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-1.5"
+          class="relative flex flex-1 flex-col"
         >
-          <h2
-            class="mb-0 max-w-[calc(100%_-_32px)] text-lg font-bold md:pt-0 md:text-2xl"
-          >
-            Select Account
-          </h2>
           <div
-            class="flex flex-1 flex-col"
+            class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 border-b px-6 py-3.5"
+          >
+            <h2
+              class="mb-0 max-w-[calc(100%_-_32px)] text-lg leading-5 font-semibold md:pt-0 md:text-lg"
+            >
+              Select Account
+            </h2>
+          </div>
+          <div
+            class="flex flex-1 flex-col px-6 pt-4 sm:pb-4"
           >
             <div
               class="text-theme-secondary-text pr-10 text-sm whitespace-pre-line md:pr-0 md:text-base"
@@ -5256,14 +5308,14 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 2`]
       tabindex="-1"
     >
       <div
-        class="bg-theme-background dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8 pb-24"
+        class="bg-theme-background dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl pb-24 sm:pb-0"
         data-testid="Modal__inner"
       >
         <div
-          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
+          class="text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-3.5 mr-6 rounded transition-all duration-100 ease-linear md:mt-3.5 md:mr-6"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -5301,15 +5353,19 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 2`]
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-1.5"
+          class="relative flex flex-1 flex-col"
         >
-          <h2
-            class="mb-0 max-w-[calc(100%_-_32px)] text-lg font-bold md:pt-0 md:text-2xl"
-          >
-            Select Account
-          </h2>
           <div
-            class="flex flex-1 flex-col"
+            class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 border-b px-6 py-3.5"
+          >
+            <h2
+              class="mb-0 max-w-[calc(100%_-_32px)] text-lg leading-5 font-semibold md:pt-0 md:text-lg"
+            >
+              Select Account
+            </h2>
+          </div>
+          <div
+            class="flex flex-1 flex-col px-6 pt-4 sm:pb-4"
           >
             <div
               class="text-theme-secondary-text pr-10 text-sm whitespace-pre-line md:pr-0 md:text-base"
@@ -5578,14 +5634,14 @@ exports[`SearchWallet uses fiat value = true > should render responsive with sel
       tabindex="-1"
     >
       <div
-        class="bg-theme-background dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8 pb-24"
+        class="bg-theme-background dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl pb-24 sm:pb-0"
         data-testid="Modal__inner"
       >
         <div
-          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
+          class="text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-3.5 mr-6 rounded transition-all duration-100 ease-linear md:mt-3.5 md:mr-6"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -5623,15 +5679,19 @@ exports[`SearchWallet uses fiat value = true > should render responsive with sel
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-1.5"
+          class="relative flex flex-1 flex-col"
         >
-          <h2
-            class="mb-0 max-w-[calc(100%_-_32px)] text-lg font-bold md:pt-0 md:text-2xl"
-          >
-            Select Account
-          </h2>
           <div
-            class="flex flex-1 flex-col"
+            class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 border-b px-6 py-3.5"
+          >
+            <h2
+              class="mb-0 max-w-[calc(100%_-_32px)] text-lg leading-5 font-semibold md:pt-0 md:text-lg"
+            >
+              Select Account
+            </h2>
+          </div>
+          <div
+            class="flex flex-1 flex-col px-6 pt-4 sm:pb-4"
           >
             <div
               class="text-theme-secondary-text pr-10 text-sm whitespace-pre-line md:pr-0 md:text-base"
@@ -5900,14 +5960,14 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
       tabindex="-1"
     >
       <div
-        class="bg-theme-background dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8 pb-24"
+        class="bg-theme-background dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl pb-24 sm:pb-0"
         data-testid="Modal__inner"
       >
         <div
-          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
+          class="text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-3.5 mr-6 rounded transition-all duration-100 ease-linear md:mt-3.5 md:mr-6"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -5945,15 +6005,19 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-1.5"
+          class="relative flex flex-1 flex-col"
         >
-          <h2
-            class="mb-0 max-w-[calc(100%_-_32px)] text-lg font-bold md:pt-0 md:text-2xl"
-          >
-            Select Account
-          </h2>
           <div
-            class="flex flex-1 flex-col"
+            class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 border-b px-6 py-3.5"
+          >
+            <h2
+              class="mb-0 max-w-[calc(100%_-_32px)] text-lg leading-5 font-semibold md:pt-0 md:text-lg"
+            >
+              Select Account
+            </h2>
+          </div>
+          <div
+            class="flex flex-1 flex-col px-6 pt-4 sm:pb-4"
           >
             <div
               class="text-theme-secondary-text pr-10 text-sm whitespace-pre-line md:pr-0 md:text-base"
@@ -6311,14 +6375,14 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
       tabindex="-1"
     >
       <div
-        class="bg-theme-background dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8 pb-24"
+        class="bg-theme-background dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl pb-24 sm:pb-0"
         data-testid="Modal__inner"
       >
         <div
-          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
+          class="text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-3.5 mr-6 rounded transition-all duration-100 ease-linear md:mt-3.5 md:mr-6"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -6356,15 +6420,19 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-1.5"
+          class="relative flex flex-1 flex-col"
         >
-          <h2
-            class="mb-0 max-w-[calc(100%_-_32px)] text-lg font-bold md:pt-0 md:text-2xl"
-          >
-            Select Account
-          </h2>
           <div
-            class="flex flex-1 flex-col"
+            class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 border-b px-6 py-3.5"
+          >
+            <h2
+              class="mb-0 max-w-[calc(100%_-_32px)] text-lg leading-5 font-semibold md:pt-0 md:text-lg"
+            >
+              Select Account
+            </h2>
+          </div>
+          <div
+            class="flex flex-1 flex-col px-6 pt-4 sm:pb-4"
           >
             <div
               class="text-theme-secondary-text pr-10 text-sm whitespace-pre-line md:pr-0 md:text-base"
@@ -6809,14 +6877,14 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
       tabindex="-1"
     >
       <div
-        class="bg-theme-background dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8 pb-24"
+        class="bg-theme-background dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl pb-24 sm:pb-0"
         data-testid="Modal__inner"
       >
         <div
-          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
+          class="text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-3.5 mr-6 rounded transition-all duration-100 ease-linear md:mt-3.5 md:mr-6"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -6854,15 +6922,19 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-1.5"
+          class="relative flex flex-1 flex-col"
         >
-          <h2
-            class="mb-0 max-w-[calc(100%_-_32px)] text-lg font-bold md:pt-0 md:text-2xl"
-          >
-            Select Account
-          </h2>
           <div
-            class="flex flex-1 flex-col"
+            class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 border-b px-6 py-3.5"
+          >
+            <h2
+              class="mb-0 max-w-[calc(100%_-_32px)] text-lg leading-5 font-semibold md:pt-0 md:text-lg"
+            >
+              Select Account
+            </h2>
+          </div>
+          <div
+            class="flex flex-1 flex-col px-6 pt-4 sm:pb-4"
           >
             <div
               class="text-theme-secondary-text pr-10 text-sm whitespace-pre-line md:pr-0 md:text-base"

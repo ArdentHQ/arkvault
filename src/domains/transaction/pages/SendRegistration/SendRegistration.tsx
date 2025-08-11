@@ -250,7 +250,7 @@ export const SendRegistration = () => {
 	};
 
 	return (
-		<Page pageTitle={getPageTitle()}>
+		<Page pageTitle={getPageTitle()} showBottomNavigationBar={false}>
 			<Section className="flex-1">
 				<StepsProvider steps={stepCount} activeStep={activeTab}>
 					<Form

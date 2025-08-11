@@ -157,7 +157,7 @@ export const SendUsernameResignation = () => {
 	const hideStepNavigation = activeTab === Step.ErrorStep;
 
 	return (
-		<Page pageTitle={t("TRANSACTION.TRANSACTION_TYPES.RESIGN_USERNAME")}>
+		<Page pageTitle={t("TRANSACTION.TRANSACTION_TYPES.RESIGN_USERNAME")} showBottomNavigationBar={false}>
 			<Section className="flex-1">
 				<StepsProvider steps={4} activeStep={activeTab}>
 					<Form className="mx-auto max-w-172" context={form} onSubmit={handleSubmit}>

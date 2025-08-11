@@ -103,7 +103,7 @@ export const PasswordSettings = () => {
 			itemValueClass: "w-full sm:w-auto",
 			label: t("SETTINGS.PASSWORD.REMOVE_PASSWORD.TITLE"),
 			labelDescription: t("SETTINGS.PASSWORD.REMOVE_PASSWORD.DESCRIPTION"),
-			labelWrapperClass: "flex flex-col sm:flex-row justify-between items-center",
+			labelWrapperClass: "flex flex-col sm:flex-row justify-between items-center space-y-3",
 			value: (
 				<Tooltip disabled={usesPassword} content={t("SETTINGS.PASSWORD.REMOVE_PASSWORD.TOOLTIP")}>
 					<div>
