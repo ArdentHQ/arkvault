@@ -138,7 +138,7 @@ describe("SendTransfer MultiPayment", () => {
 		await waitFor(() => {
 			expect(screen.getByTestId("Input__error")).toHaveAttribute(
 				"data-errortext",
-				"The current balance does not cover the transaction amount plus fees."
+				"The current balance does not cover the transaction amount plus fees.",
 			);
 		});
 
