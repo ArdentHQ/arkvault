@@ -837,45 +837,44 @@ describe("useProfileTransactions", () => {
 	it("should execute the non-date sort path with two pending items", async () => {
 		const wallets = profile.wallets().values();
 		const walletA = wallets[0];
-	  
+
 		const p1 = createMockPendingTransaction({
-		  hash: "P1",
-		  to: walletA.address(),
-		  from: "ADDRESS_FROM",
-		  walletAddress: walletA.address(),
-		  networkId: walletA.networkId(),
-		  timestamp: Date.now() - 1_000,
+			from: "ADDRESS_FROM",
+			hash: "P1",
+			networkId: walletA.networkId(),
+			timestamp: Date.now() - 1_000,
+			to: walletA.address(),
+			walletAddress: walletA.address(),
 		});
 		const p2 = createMockPendingTransaction({
-		  hash: "P2",
-		  to: walletA.address(),
-		  from: "ADDRESS_FROM",
-		  walletAddress: walletA.address(),
-		  networkId: walletA.networkId(),
-		  timestamp: Date.now(),
+			from: "ADDRESS_FROM",
+			hash: "P2",
+			networkId: walletA.networkId(),
+			timestamp: Date.now(),
+			to: walletA.address(),
+			walletAddress: walletA.address(),
 		});
-	  
+
 		const { pendingSpy } = await mockPendingTransactionsHook([p1, p2]);
-	  
+
 		const allMock = vi.spyOn(profile.transactionAggregate(), "all").mockResolvedValue({
-		  hasMorePages: () => false,
-		  items: () => [],
+			hasMorePages: () => false,
+			items: () => [],
 		});
-	  
+
 		const { result } = renderHook(() => useProfileTransactions({ profile, wallets: [walletA] }), { wrapper });
-	  
+
 		act(() => {
-		  result.current.setSortBy({ column: "amount", desc: true });
+			result.current.setSortBy({ column: "amount", desc: true });
 		});
 		act(() => {
-		  result.current.updateFilters({ activeMode: "all" });
+			result.current.updateFilters({ activeMode: "all" });
 		});
-	  
+
 		await waitFor(() => expect(result.current.isLoadingTransactions).toBe(false));
 		expect(result.current.transactions).toHaveLength(2);
-	  
+
 		pendingSpy.mockRestore();
 		allMock.mockRestore();
-	  });
-	  
+	});
 });
