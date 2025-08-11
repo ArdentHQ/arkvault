@@ -64,7 +64,7 @@ export const AddressRowMobile = ({ index, wallet, onSelect }: AddressRowMobilePr
 		}
 
 		return isLedgerWalletCompatible(wallet) ? "" : t("COMMON.LEDGER_COMPATIBILITY_ERROR");
-	}
+	};
 
 	const isButtonDisabled =
 		!wallet.hasBeenFullyRestored() ||
