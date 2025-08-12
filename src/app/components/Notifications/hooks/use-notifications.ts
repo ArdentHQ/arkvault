@@ -17,7 +17,9 @@ export const useNotifications = ({ profile }: { profile: Contracts.IProfile }) =
 	const liveNotifications = Object.values(profile.notifications().all());
 
 	const transactions = useMemo((): DTO.ExtendedConfirmedTransactionData[] => {
-		if (liveTransactions.length > 0) return liveTransactions;
+		if (liveTransactions.length > 0) {
+			return liveTransactions;
+		}
 
 		if (cachedData?.lastSync) {
 			const isRecent = Date.now() - cachedData.lastSync < 24 * 60 * 60 * 1000;
@@ -39,9 +41,9 @@ export const useNotifications = ({ profile }: { profile: Contracts.IProfile }) =
 					timestamp: () =>
 						cachedTx._timestamp
 							? {
-								toISOString: () => cachedTx._timestamp.iso,
-								toUNIX: () => cachedTx._timestamp.unix,
-							}
+									toISOString: () => cachedTx._timestamp.iso,
+									toUNIX: () => cachedTx._timestamp.unix,
+								}
 							: null,
 					to: () => cachedTx.to,
 					toObject: () => cachedTx,
@@ -86,19 +88,18 @@ export const useNotifications = ({ profile }: { profile: Contracts.IProfile }) =
 					return {
 						...tx.toObject?.(),
 
-						_wallet: w && n
-							? {
-								currency: w.currency?.(),
-								network: {
-									coin: n.coin?.(),
-									id: n.id?.(),
-									name: n.name?.(),
-								},
-							}
-							: null,
-						_timestamp: ts
-							? { iso: ts.toISOString?.(), unix: ts.toUNIX?.() }
-							: null,
+						_timestamp: ts ? { iso: ts.toISOString?.(), unix: ts.toUNIX?.() } : null,
+						_wallet:
+							w && n
+								? {
+										currency: w.currency?.(),
+										network: {
+											coin: n.coin?.(),
+											id: n.id?.(),
+											name: n.name?.(),
+										},
+									}
+								: null,
 					};
 				}),
 			};

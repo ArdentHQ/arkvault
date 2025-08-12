@@ -6,7 +6,7 @@ import { server, requestMock } from "@/tests/mocks/server";
 import NotificationTransactionsFixtures from "@/tests/fixtures/coins/mainsail/devnet/notification-transactions.json";
 import TransactionsFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions.json";
 import { useLocalStorage } from "usehooks-ts";
-import { useNotifications } from '@/app/components/Notifications/hooks/use-notifications';
+import { useNotifications } from "@/app/components/Notifications/hooks/use-notifications";
 
 vi.mock("usehooks-ts", () => ({
 	useLocalStorage: vi.fn(),
@@ -143,12 +143,12 @@ describe("useNotifications", () => {
 
 	it("should return cached transactions when recent cache exists and no live data", () => {
 		const nowSpy = seedCache([mockCachedTransaction()], { now: 1_000_000 });
-	
+
 		stubNoLiveData(profile);
-	
+
 		const { result } = renderHook(() => useNotifications({ profile }));
 		expect(result.current.transactions).toHaveLength(1);
-	
+
 		const tx = result.current.transactions[0];
 		expect(tx.hash()).toBe("tx-1");
 		expect(tx.to()).toBe("ADDRESS_TO");
@@ -173,47 +173,47 @@ describe("useNotifications", () => {
 		expect(tx.isUsernameRegistration()).toBe(false);
 		expect(tx.isUsernameResignation()).toBe(false);
 		expect(tx.isValidatorRegistration()).toBe(false);
-	
+
 		nowSpy.mockRestore();
 	});
-	
+
 	it("should sync on initialization when no live or cached data and not syncing", async () => {
 		setCached(null);
-	
+
 		const mgr = stubNoLiveData(profile);
 		mgr.sync.mockResolvedValue(undefined);
-	
+
 		renderHook(() => useNotifications({ profile }));
-	
+
 		await waitFor(() => {
 			expect(mgr.sync).toHaveBeenCalledTimes(1);
 		});
 	});
-	
+
 	it("should return true only for matching unread notifications", () => {
 		setCached(null);
-	
+
 		const notifCenter = profile.notifications();
 		const txHash = "abc-123";
 		const allSpy = vi.spyOn(notifCenter, "all");
-	
+
 		allSpy.mockReturnValue({
 			n1: { id: "n1", meta: { transactionId: txHash }, read_at: undefined },
 		} as any);
-	
+
 		const { result, rerender } = renderHook(() => useNotifications({ profile }));
 		const fakeTx = { hash: () => txHash } as any;
-	
+
 		expect(result.current.isNotificationUnread(fakeTx)).toBe(true);
-	
+
 		allSpy.mockReturnValue({
 			n1: { id: "n1", meta: { transactionId: txHash }, read_at: new Date().toISOString() },
 		} as any);
 		rerender();
-	
+
 		expect(result.current.isNotificationUnread(fakeTx)).toBe(false);
 	});
-	
+
 	it("returns cached transactions when recent cache exists and no live data (multiple)", () => {
 		const nowSpy = seedCache(
 			[
@@ -237,14 +237,14 @@ describe("useNotifications", () => {
 					value: "2",
 				}),
 			],
-			{ now: 1_000_000 }
+			{ now: 1_000_000 },
 		);
-	
+
 		stubNoLiveData(profile);
-	
+
 		const { result } = renderHook(() => useNotifications({ profile }));
 		expect(result.current.transactions).toHaveLength(2);
-	
+
 		const tx1 = result.current.transactions.find((t) => t.hash() === "tx-1")!;
 		expect(tx1.hash()).toBe("tx-1");
 		expect(tx1.to()).toBe("ADDRESS_TO");
@@ -269,7 +269,7 @@ describe("useNotifications", () => {
 		expect(tx1.wallet().network().id()).toBe("mainsail");
 		expect(tx1.wallet().network().name()).toBe("Mainsail Devnet");
 		expect(tx1.toObject()).toEqual({ fee: "0.1" });
-	
+
 		const tx2 = result.current.transactions.find((t) => t.hash() === "tx-2")!;
 		expect(tx2.hash()).toBe("tx-2");
 		expect(tx2.to()).toBe("ADDRESS_TO_2");
@@ -293,17 +293,17 @@ describe("useNotifications", () => {
 		expect(tx2.wallet().network().id()).toBe("mainsail");
 		expect(tx2.wallet().network().name()).toBe("Mainsail Devnet");
 		expect(tx2.toObject()).toEqual({ baz: "qux" });
-	
+
 		nowSpy.mockRestore();
 	});
-	
+
 	it("should return empty array when recent cache has no transactions", () => {
 		const nowSpy = seedCache([], { ageMs: 5_000, now: 2_000_000 });
 		stubNoLiveData(profile);
-	
+
 		const { result } = renderHook(() => useNotifications({ profile }));
 		expect(result.current.transactions).toEqual([]);
-	
+
 		nowSpy.mockRestore();
 	});
 });
