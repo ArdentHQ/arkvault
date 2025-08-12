@@ -10,18 +10,10 @@ describe("ProfileMainsailMigrator", () => {
 	let migrator: ProfileMainsailMigrator;
 	let profile: IProfile;
 
-	beforeAll(() => {
+	beforeAll(async () => {
 		server.listen();
-	});
 
-	afterEach(() => {
-		server.resetHandlers();
-		env.profiles().forget(profile.id());
-		vi.restoreAllMocks();
-	});
-
-	afterAll(() => {
-		server.close();
+		migrator = new ProfileMainsailMigrator();
 	});
 
 	beforeEach(async () => {
@@ -64,6 +56,17 @@ describe("ProfileMainsailMigrator", () => {
 
 		migrator = new ProfileMainsailMigrator();
 		profile = await env.profiles().create("test profile");
+	});
+
+	afterEach(() => {
+		env.profiles().forget(profile.id());
+
+		server.resetHandlers();
+		vi.restoreAllMocks();
+	});
+
+	afterAll(() => {
+		server.close();
 	});
 
 	describe("migrate", () => {
