@@ -3,7 +3,7 @@
 exports[`Link > should do nothing on click when disabled 1`] = `
 <DocumentFragment>
   <a
-    class="relative space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-secondary-text cursor-not-allowed ring-focus group/inner inline-block"
+    class="relative space-x-1 font-semibold no-underline transition-colors focus:outline-hidden cursor-not-allowed text-theme-secondary-text inline-block ring-focus group/inner"
     data-ring-focus-margin="-m-1"
     data-testid="Link"
     href="https://app.arkvault.io/"
@@ -15,7 +15,7 @@ exports[`Link > should do nothing on click when disabled 1`] = `
       app.arkvault.io
     </span>
     <div
-      class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
+      class="align-middle duration-200 mb-[3px] shrink-0 inline-block text-sm"
       data-testid="Link__external"
     >
       <div
@@ -48,7 +48,7 @@ exports[`Link > should do nothing on click when disabled 1`] = `
 exports[`Link > should open an external link 1`] = `
 <DocumentFragment>
   <a
-    class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
+    class="relative space-x-1 font-semibold no-underline transition-colors cursor-pointer focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 inline-block ring-focus group/inner"
     data-ring-focus-margin="-m-1"
     data-testid="Link"
     href="https://app.arkvault.io/"
@@ -58,7 +58,7 @@ exports[`Link > should open an external link 1`] = `
       class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
     />
     <div
-      class="mb-[3px] shrink-0 align-middle duration-200"
+      class="align-middle duration-200 mb-[3px] shrink-0"
       data-testid="Link__external"
     >
       <div
@@ -91,44 +91,17 @@ exports[`Link > should open an external link 1`] = `
 exports[`Link > should render 1`] = `
 <DocumentFragment>
   <a
-    class="ring-focus group/inner relative inline-block cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700"
+    class="inline-block relative space-x-1 font-semibold no-underline transition-colors cursor-pointer ring-focus group/inner focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700"
     data-discover="true"
     data-ring-focus-margin="-m-1"
     data-testid="RouterLink"
     href="/test"
   >
     <span
-      class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
+      class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
     >
       Test
     </span>
-    <div
-      class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
-      data-testid="RouterLink__external"
-    >
-      <div
-        style="height: 12px; width: 12px;"
-      >
-        <svg
-          id="arrow-external"
-          style="height: 100%; width: 100%;"
-          viewBox="0 0 20 20"
-          x="0"
-          xml:space="preserve"
-          xmlns="http://www.w3.org/2000/svg"
-          y="0"
-        >
-          <path
-            d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-            fill="none"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-          />
-        </svg>
-      </div>
-    </div>
   </a>
 </DocumentFragment>
 `;
@@ -136,7 +109,7 @@ exports[`Link > should render 1`] = `
 exports[`Link > should render external without children 1`] = `
 <DocumentFragment>
   <a
-    class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
+    class="relative space-x-1 font-semibold no-underline transition-colors cursor-pointer focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 inline-block ring-focus group/inner"
     data-ring-focus-margin="-m-1"
     data-testid="Link"
     href="https://app.arkvault.io"
@@ -146,7 +119,7 @@ exports[`Link > should render external without children 1`] = `
       class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
     />
     <div
-      class="mb-[3px] shrink-0 align-middle duration-200"
+      class="align-middle duration-200 mb-[3px] shrink-0"
       data-testid="Link__external"
     >
       <div
@@ -179,7 +152,7 @@ exports[`Link > should render external without children 1`] = `
 exports[`Link > should render with tooltip 1`] = `
 <DocumentFragment>
   <a
-    class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
+    class="relative space-x-1 font-semibold no-underline transition-colors cursor-pointer focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 inline-block ring-focus group/inner"
     data-ring-focus-margin="-m-1"
     data-testid="Link"
     href="/test"
@@ -191,7 +164,7 @@ exports[`Link > should render with tooltip 1`] = `
       Test
     </span>
     <div
-      class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
+      class="align-middle duration-200 mb-[3px] shrink-0 inline-block text-sm"
       data-testid="Link__external"
     >
       <div
@@ -224,7 +197,7 @@ exports[`Link > should render with tooltip 1`] = `
 exports[`Link > should show a toast when trying to open an invalid external link 1`] = `
 <DocumentFragment>
   <a
-    class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
+    class="relative space-x-1 font-semibold no-underline transition-colors cursor-pointer focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 inline-block ring-focus group/inner"
     data-ring-focus-margin="-m-1"
     data-testid="Link"
     href="invalid-url"
@@ -234,7 +207,7 @@ exports[`Link > should show a toast when trying to open an invalid external link
       class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
     />
     <div
-      class="mb-[3px] shrink-0 align-middle duration-200"
+      class="align-middle duration-200 mb-[3px] shrink-0"
       data-testid="Link__external"
     >
       <div

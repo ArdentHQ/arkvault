@@ -128,15 +128,15 @@ describe("Link", () => {
 		expect(link).toHaveClass("text-theme-secondary-text", "cursor-not-allowed");
 	});
 
-	it("should show external icon for internal links", () => {
+	it("should not show external icon for internal links", () => {
 		render(
-			<Link to="/internal" showExternalIcon>
+			<Link to="/internal">
 				Internal Link
 			</Link>,
 		);
 
 		expect(screen.getByTestId("RouterLink")).toBeInTheDocument();
-		expect(screen.getByTestId("RouterLink__external")).toBeInTheDocument();
+		expect(screen.queryByTestId("RouterLink__external")).not.toBeInTheDocument();
 	});
 
 	it("should render internal link with custom className", () => {

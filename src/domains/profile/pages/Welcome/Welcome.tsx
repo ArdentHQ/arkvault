@@ -218,7 +218,7 @@ export const Welcome = () => {
 	return (
 		<>
 			<Page navbarVariant="logo-only" pageTitle={t("COMMON.WELCOME")} title={<Trans i18nKey="COMMON.APP_NAME" />}>
-				<Section className="-mt-5 flex flex-1 md:mt-0 xl:px-10" innerClassName="w-full lg:max-w-screen-xl">
+				<Section className="flex flex-1 -mt-5 md:mt-0 xl:px-10" innerClassName="w-full lg:max-w-screen-xl">
 					<div className="flex flex-col gap-3 lg:flex-row">
 						<div
 							className={cn(
@@ -231,14 +231,14 @@ export const Welcome = () => {
 						>
 							<WelcomeSlider />
 						</div>
-						<div className="border-theme-navy-100 dark:border-theme-secondary-800 dim:border-theme-dim-700 min-w-0 basis-1/2 rounded-xl sm:border sm:p-6">
+						<div className="min-w-0 rounded-xl border-theme-navy-100 dark:border-theme-secondary-800 dim:border-theme-dim-700 basis-1/2 sm:border sm:p-6">
 							<div
-								className={cn("mx-auto flex max-w-[400px] flex-col", {
+								className={cn("flex flex-col mx-auto max-w-[400px]", {
 									"h-[calc(100vh_-_160px)] sm:h-full": hasProfiles,
 									"h-full": !hasProfiles,
 								})}
 							>
-								<div className="flex flex-1 flex-col items-center justify-center">
+								<div className="flex flex-col flex-1 justify-center items-center">
 									<div className="flex flex-col items-center space-y-2 text-center sm:px-4">
 										<ThemeIcon
 											darkIcon="PersonDark"
@@ -253,14 +253,14 @@ export const Welcome = () => {
 												: t("PROFILE.PAGE_WELCOME.WITHOUT_PROFILES.TITLE")}
 										</h2>
 
-										<p className="text-theme-secondary-text text-base leading-7">
+										<p className="text-base leading-7 text-theme-secondary-text">
 											{hasProfiles
 												? t("PROFILE.PAGE_WELCOME.WITH_PROFILES.DESCRIPTION")
 												: t("PROFILE.PAGE_WELCOME.WITHOUT_PROFILES.DESCRIPTION")}
 										</p>
 									</div>
 
-									<div className="mt-4 flex w-full flex-col justify-center">
+									<div className="flex flex-col justify-center mt-4 w-full">
 										<Profiles
 											profiles={profiles}
 											actions={profileCardActions}
@@ -281,7 +281,7 @@ export const Welcome = () => {
 								</div>
 
 								<div className="static bottom-2 mt-8 w-full">
-									<span className="text-theme-secondary-text mb-4 text-center text-base sm:mb-0">
+									<span className="mb-4 text-base text-center text-theme-secondary-text sm:mb-0">
 										<span>{t("PROFILE.PAGE_WELCOME.HAS_EXPORTED_PROFILES")} </span>
 										<Link
 											to="/profiles/import"
