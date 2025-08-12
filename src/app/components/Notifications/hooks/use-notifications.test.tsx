@@ -17,7 +17,7 @@ const setCached = (value: any) => {
 };
 
 const mockCachedTransaction = (overrides: any = {}) => ({
-	_rawData: { foo: "bar", ...(overrides._rawData ?? {}) },
+	_rawData: { fee: "0.1", ...(overrides._rawData ?? {}) },
 	fee: "0.1",
 	from: "ADDRESS_FROM",
 	hash: "tx-1",
@@ -163,7 +163,7 @@ describe("useNotifications", () => {
 		expect(tx.wallet().network().coin()).toBe("DARK");
 		expect(tx.wallet().network().id()).toBe("mainsail");
 		expect(tx.wallet().network().name()).toBe("Mainsail Devnet");
-		expect(tx.toObject()).toEqual({ foo: "bar" });
+		expect(tx.toObject()).toEqual({ fee: "0.1" });
 		expect(tx.isSent()).toBe(true);
 		expect(tx.isReceived()).toBe(false);
 		expect(tx.isMultiPayment()).toBe(false);
@@ -194,7 +194,6 @@ describe("useNotifications", () => {
 		setCached(null);
 	
 		const notifCenter = profile.notifications();
-		const mgr = stubNoLiveData(profile);
 		const txHash = "abc-123";
 		const allSpy = vi.spyOn(notifCenter, "all");
 	
@@ -269,7 +268,7 @@ describe("useNotifications", () => {
 		expect(tx1.wallet().network().coin()).toBe("DARK");
 		expect(tx1.wallet().network().id()).toBe("mainsail");
 		expect(tx1.wallet().network().name()).toBe("Mainsail Devnet");
-		expect(tx1.toObject()).toEqual({ foo: "bar" });
+		expect(tx1.toObject()).toEqual({ fee: "0.1" });
 	
 		const tx2 = result.current.transactions.find((t) => t.hash() === "tx-2")!;
 		expect(tx2.hash()).toBe("tx-2");

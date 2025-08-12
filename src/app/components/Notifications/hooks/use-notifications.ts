@@ -24,7 +24,6 @@ export const useNotifications = ({ profile }: { profile: Contracts.IProfile }) =
 		if (cachedData?.lastSync) {
 			const isRecent = Date.now() - cachedData.lastSync < 24 * 60 * 60 * 1000;
 			if (isRecent && cachedData.transactions.length > 0) {
-
 				return cachedData.transactions.map((cachedTx) => ({
 					fee: () => cachedTx.fee,
 					from: () => cachedTx.from,
@@ -39,10 +38,13 @@ export const useNotifications = ({ profile }: { profile: Contracts.IProfile }) =
 					isVote: () => cachedTx.isVote,
 					isVoteCombination: () => cachedTx.isVoteCombination,
 					recipients: () => cachedTx.recipients || [],
-					timestamp: () => cachedTx.timestamp ? {
-						toISOString: () => cachedTx.timestamp.toISOString,
-						toUNIX: () => cachedTx.timestamp.toUNIX,
-					} : null,
+					timestamp: () =>
+						cachedTx.timestamp
+							? {
+									toISOString: () => cachedTx.timestamp.toISOString,
+									toUNIX: () => cachedTx.timestamp.toUNIX,
+								}
+							: null,
 					to: () => cachedTx.to,
 					toObject: () => cachedTx._rawData,
 					type: () => cachedTx.type,
@@ -75,7 +77,7 @@ export const useNotifications = ({ profile }: { profile: Contracts.IProfile }) =
 			const dataToCache: CachedNotificationData = {
 				lastSync: Date.now(),
 				notifications: liveNotifications,
-				transactions: liveTransactions.map(tx => tx.toObject()),
+				transactions: liveTransactions.map((tx) => tx.toObject()),
 			};
 
 			setCachedData(dataToCache);
@@ -90,7 +92,7 @@ export const useNotifications = ({ profile }: { profile: Contracts.IProfile }) =
 				await profile.notifications().transactions().sync();
 			} catch (error) {
 				/* istanbul ignore next -- @preserve */
-				console.error('Failed to sync notifications on initialization:', error);
+				console.error("Failed to sync notifications on initialization:", error);
 			}
 		}
 	}, [profile, isSyncing, liveTransactions.length, hasCachedData]);
@@ -107,12 +109,16 @@ export const useNotifications = ({ profile }: { profile: Contracts.IProfile }) =
 
 	const { markAllTransactionsAsRead, markAsRead } = useMemo(() => {
 		const markAllTransactionsAsRead = (isVisible: boolean) => {
-			if (!isVisible) { return; }
+			if (!isVisible) {
+				return;
+			}
 			profile.notifications().transactions().markAllAsRead();
 		};
 
 		const markAsRead = (isVisible: boolean, id: string) => {
-			if (!isVisible) { return; }
+			if (!isVisible) {
+				return;
+			}
 			profile.notifications().markAsRead(id);
 		};
 
