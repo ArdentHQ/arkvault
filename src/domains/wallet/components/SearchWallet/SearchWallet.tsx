@@ -124,7 +124,7 @@ const SearchSenderWalletItemResponsive = ({ alias, wallet, onAction, selectedAdd
 				<ReceiverItemMobile
 					balance={
 						<Balance
-							className="leading-[17px] text-sm text-theme-secondary-900 font-semibold dark:text-theme-dark-50 dim:text-theme-dim-50"
+							className="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm leading-[17px] font-semibold"
 							wallet={wallet}
 							isSynced={isSynced}
 							isLargeScreen={false}

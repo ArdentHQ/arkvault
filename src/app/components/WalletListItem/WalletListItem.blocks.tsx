@@ -109,27 +109,31 @@ export const ReceiverItemMobile: React.FC<ReceiverItemMobileProperties> = ({
 	return (
 		<MultiEntryItem
 			dataTestId={selected ? "ReceiverItemMobile--selected" : "ReceiverItemMobile"}
-			className={cn({"border-theme-success-200 dark:border-theme-success-700 dim:border-theme-success-700": selected})}
-			titleWrapperClassName={cn({"bg-theme-success-100": selected})}
+			className={cn({
+				"border-theme-success-200 dark:border-theme-success-700 dim:border-theme-success-700": selected,
+			})}
+			titleWrapperClassName={cn({ "bg-theme-success-100": selected })}
 			titleSlot={
 				<div className="flex w-full items-center justify-between">
-					<div className={cn("max-w-56 truncate text-sm leading-[17px] font-semibold whitespace-nowrap", {
-						"text-theme-secondary-700 dark:text-theme-secondary-200 dim:text-theme-dim-200": !selected,
-						"text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50": selected,
-					})}>
+					<div
+						className={cn("max-w-56 truncate text-sm leading-[17px] font-semibold whitespace-nowrap", {
+							"text-theme-secondary-700 dark:text-theme-secondary-200 dim:text-theme-dim-200": !selected,
+							"text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50": selected,
+						})}
+					>
 						{name}
 					</div>
 					<Button
 						onClick={onClick}
-						data-testid="AddRecipientItem--deleteButton_mobile"
+						data-testid="ReceiverItemMobile--Select"
 						size="icon"
-						className={cn("leading-[17px] text-sm p-0", {
+						className={cn("p-0 text-sm leading-[17px]", {
 							"text-theme-navy-600 dark:text-theme-secondary-500 dim:text-theme-dim-50": !selected,
 							"text-theme-success-600 dark:text-theme-green-600 dim:text-theme-green-600": selected,
 						})}
 						variant="transparent"
 					>
-						{selected ? "Selected" : "Select"}
+						{selected ? t("COMMON.SELECTED") : t("COMMON.SELECT")}
 					</Button>
 				</div>
 			}
@@ -147,13 +151,10 @@ export const ReceiverItemMobile: React.FC<ReceiverItemMobileProperties> = ({
 								/>
 							}
 						/>
-						<InfoDetail
-							label={t("COMMON.BALANCE")}
-							body={balance}
-						/>
+						<InfoDetail label={t("COMMON.BALANCE")} body={balance} />
 					</div>
 				</div>
 			}
 		/>
-	)
+	);
 };

@@ -205,9 +205,9 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 			},
 		);
 
-		const walletItems = screen.getAllByTestId("ReceiverItemMobile");
+		const walletItems = screen.getAllByTestId("ReceiverItemMobile--Select");
 
-		userEvent.click(walletItems[0]);
+		await userEvent.click(walletItems[0]);
 
 		await waitFor(() => {
 			expect(onSelectWalletMock).toHaveBeenCalledTimes(1);

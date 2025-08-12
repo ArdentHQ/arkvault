@@ -1495,47 +1495,129 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 1`
                           class="pt-3"
                         >
                           <div
-                            class="bg-theme-primary-100 dark:bg-theme-background flex h-[117px] w-full cursor-pointer flex-col gap-3 rounded-xl p-2 ring-2 ring-theme-primary-100 dark:ring-theme-secondary-800 dim:ring-theme-dim-700"
+                            class="border-theme-secondary-300 dark:border-theme-dark-700 dark:bg-theme-dark-900 dim:border-theme-dim-700 dim:bg-transparent mb-3 overflow-hidden rounded border bg-white last:mb-0 sm:rounded-none sm:border-x-0 sm:border-b-0 sm:border-dashed sm:bg-transparent sm:pt-3 sm:dark:bg-transparent"
                             data-testid="ReceiverItemMobile"
-                            tabindex="0"
                           >
                             <div
-                              class="flex flex-col gap-2 pt-2 pl-2"
-                            >
-                              <span
-                                class="text-theme-secondary-900 xs:max-w-80 dark:text-theme-secondary-200 dim:text-theme-dim-200 w-full max-w-48 truncate text-sm font-semibold sm:max-w-128"
-                              >
-                                Sample Wallet
-                              </span>
-                              <span
-                                class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 text-xs font-semibold"
-                              >
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden"
-                                  data-testid="SenderWalletItemResponsive__address"
-                                >
-                                  0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                </span>
-                              </span>
-                            </div>
-                            <div
-                              class="bg-theme-primary-500 dim:bg-theme-dim-navy-600 dim:text-theme-dim-50 flex flex-row items-center justify-between overflow-hidden rounded-lg text-sm font-semibold text-white"
+                              class="flex flex-col items-center space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4"
                             >
                               <div
-                                class="pl-2"
+                                class="flex w-full min-w-0 flex-1 flex-col my-0 sm:w-auto sm:items-start sm:space-y-1 sm:space-x-0"
                               >
-                                <span
-                                  class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 dim:text-theme-dim-50 text-sm text-white"
-                                  data-testid="Amount"
+                                <div
+                                  class="bg-theme-secondary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 flex w-full flex-1 flex-row items-center justify-between px-4 py-3 dim:sm:bg-transparent sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
                                 >
-                                  95.27653252325068 ARK
-                                </span>
+                                  <div
+                                    class="flex w-full items-center justify-between"
+                                  >
+                                    <div
+                                      class="max-w-56 truncate text-sm leading-[17px] font-semibold whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-200 dim:text-theme-dim-200"
+                                    >
+                                      Sample Wallet
+                                    </div>
+                                    <button
+                                      class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] text-theme-navy-600 dark:text-theme-secondary-500 dim:text-theme-dim-50"
+                                      data-testid="ReceiverItemMobile--Select"
+                                      type="button"
+                                    >
+                                      <div
+                                        class="flex items-center gap-2"
+                                      >
+                                        Select
+                                      </div>
+                                    </button>
+                                  </div>
+                                </div>
+                                <div
+                                  class="px-4 pt-3 pb-4 sm:w-full sm:p-0"
+                                >
+                                  <div>
+                                    <div
+                                      class="space-y-4"
+                                    >
+                                      <div>
+                                        <div
+                                          class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-2 text-sm leading-[17px] font-semibold"
+                                        >
+                                          Address
+                                        </div>
+                                        <div
+                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                        >
+                                          <div
+                                            class="relative grow leading-[17px] sm:leading-5 text-left"
+                                          >
+                                            <span
+                                              class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 font-semibold text-base absolute w-full"
+                                              data-testid="Address__address"
+                                            >
+                                              0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                                            </span>
+                                            <span>
+                                               
+                                            </span>
+                                          </div>
+                                          <button
+                                            class="ring-focus relative cursor-pointer focus:outline-hidden"
+                                            data-ring-focus-margin="-m-1"
+                                            data-testid="clipboard-icon__wrapper"
+                                            type="button"
+                                          >
+                                            <div
+                                              class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
+                                            >
+                                              <div
+                                                style="height: 16px; width: 16px;"
+                                              >
+                                                <svg
+                                                  id="copy"
+                                                  style="height: 100%; width: 100%;"
+                                                  viewBox="0 0 20 20"
+                                                  x="0"
+                                                  xml:space="preserve"
+                                                  xmlns="http://www.w3.org/2000/svg"
+                                                  y="0"
+                                                >
+                                                  <g
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    stroke-width="2"
+                                                  >
+                                                    <path
+                                                      d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                                    />
+                                                    <path
+                                                      d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                                    />
+                                                  </g>
+                                                </svg>
+                                              </div>
+                                            </div>
+                                          </button>
+                                        </div>
+                                      </div>
+                                      <div>
+                                        <div
+                                          class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-2 text-sm leading-[17px] font-semibold"
+                                        >
+                                          Balance
+                                        </div>
+                                        <span
+                                          class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 dim:text-theme-dim-50 text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm leading-[17px] font-semibold"
+                                          data-testid="Amount"
+                                        >
+                                          95.27653252325068 ARK
+                                        </span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
                               </div>
-                              <button
-                                class="bg-theme-primary-600 dim:bg-theme-dim-navy-600 flex h-full items-center justify-center px-5 py-3"
-                              >
-                                Select
-                              </button>
+                              <div
+                                class="hidden sm:block"
+                              />
                             </div>
                           </div>
                         </td>
@@ -1547,47 +1629,129 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 1`
                           class="pt-3"
                         >
                           <div
-                            class="bg-theme-primary-100 dark:bg-theme-background flex h-[117px] w-full cursor-pointer flex-col gap-3 rounded-xl p-2 ring-2 ring-theme-primary-100 dark:ring-theme-secondary-800 dim:ring-theme-dim-700"
+                            class="border-theme-secondary-300 dark:border-theme-dark-700 dark:bg-theme-dark-900 dim:border-theme-dim-700 dim:bg-transparent mb-3 overflow-hidden rounded border bg-white last:mb-0 sm:rounded-none sm:border-x-0 sm:border-b-0 sm:border-dashed sm:bg-transparent sm:pt-3 sm:dark:bg-transparent"
                             data-testid="ReceiverItemMobile"
-                            tabindex="0"
                           >
                             <div
-                              class="flex flex-col gap-2 pt-2 pl-2"
-                            >
-                              <span
-                                class="text-theme-secondary-900 xs:max-w-80 dark:text-theme-secondary-200 dim:text-theme-dim-200 w-full max-w-48 truncate text-sm font-semibold sm:max-w-128"
-                              >
-                                Mainsail Wallet 2
-                              </span>
-                              <span
-                                class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 text-xs font-semibold"
-                              >
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden"
-                                  data-testid="SenderWalletItemResponsive__address"
-                                >
-                                  0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54
-                                </span>
-                              </span>
-                            </div>
-                            <div
-                              class="bg-theme-primary-500 dim:bg-theme-dim-navy-600 dim:text-theme-dim-50 flex flex-row items-center justify-between overflow-hidden rounded-lg text-sm font-semibold text-white"
+                              class="flex flex-col items-center space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4"
                             >
                               <div
-                                class="pl-2"
+                                class="flex w-full min-w-0 flex-1 flex-col my-0 sm:w-auto sm:items-start sm:space-y-1 sm:space-x-0"
                               >
-                                <span
-                                  class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 dim:text-theme-dim-50 text-sm text-white"
-                                  data-testid="Amount"
+                                <div
+                                  class="bg-theme-secondary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 flex w-full flex-1 flex-row items-center justify-between px-4 py-3 dim:sm:bg-transparent sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
                                 >
-                                  0.01989216404723 ARK
-                                </span>
+                                  <div
+                                    class="flex w-full items-center justify-between"
+                                  >
+                                    <div
+                                      class="max-w-56 truncate text-sm leading-[17px] font-semibold whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-200 dim:text-theme-dim-200"
+                                    >
+                                      Mainsail Wallet 2
+                                    </div>
+                                    <button
+                                      class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] text-theme-navy-600 dark:text-theme-secondary-500 dim:text-theme-dim-50"
+                                      data-testid="ReceiverItemMobile--Select"
+                                      type="button"
+                                    >
+                                      <div
+                                        class="flex items-center gap-2"
+                                      >
+                                        Select
+                                      </div>
+                                    </button>
+                                  </div>
+                                </div>
+                                <div
+                                  class="px-4 pt-3 pb-4 sm:w-full sm:p-0"
+                                >
+                                  <div>
+                                    <div
+                                      class="space-y-4"
+                                    >
+                                      <div>
+                                        <div
+                                          class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-2 text-sm leading-[17px] font-semibold"
+                                        >
+                                          Address
+                                        </div>
+                                        <div
+                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                        >
+                                          <div
+                                            class="relative grow leading-[17px] sm:leading-5 text-left"
+                                          >
+                                            <span
+                                              class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 font-semibold text-base absolute w-full"
+                                              data-testid="Address__address"
+                                            >
+                                              0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54
+                                            </span>
+                                            <span>
+                                               
+                                            </span>
+                                          </div>
+                                          <button
+                                            class="ring-focus relative cursor-pointer focus:outline-hidden"
+                                            data-ring-focus-margin="-m-1"
+                                            data-testid="clipboard-icon__wrapper"
+                                            type="button"
+                                          >
+                                            <div
+                                              class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
+                                            >
+                                              <div
+                                                style="height: 16px; width: 16px;"
+                                              >
+                                                <svg
+                                                  id="copy"
+                                                  style="height: 100%; width: 100%;"
+                                                  viewBox="0 0 20 20"
+                                                  x="0"
+                                                  xml:space="preserve"
+                                                  xmlns="http://www.w3.org/2000/svg"
+                                                  y="0"
+                                                >
+                                                  <g
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    stroke-width="2"
+                                                  >
+                                                    <path
+                                                      d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                                    />
+                                                    <path
+                                                      d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                                    />
+                                                  </g>
+                                                </svg>
+                                              </div>
+                                            </div>
+                                          </button>
+                                        </div>
+                                      </div>
+                                      <div>
+                                        <div
+                                          class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-2 text-sm leading-[17px] font-semibold"
+                                        >
+                                          Balance
+                                        </div>
+                                        <span
+                                          class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 dim:text-theme-dim-50 text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm leading-[17px] font-semibold"
+                                          data-testid="Amount"
+                                        >
+                                          0.01989216404723 ARK
+                                        </span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
                               </div>
-                              <button
-                                class="bg-theme-primary-600 dim:bg-theme-dim-navy-600 flex h-full items-center justify-center px-5 py-3"
-                              >
-                                Select
-                              </button>
+                              <div
+                                class="hidden sm:block"
+                              />
                             </div>
                           </div>
                         </td>
@@ -1821,47 +1985,129 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 2`
                           class="pt-3"
                         >
                           <div
-                            class="bg-theme-primary-100 dark:bg-theme-background flex h-[117px] w-full cursor-pointer flex-col gap-3 rounded-xl p-2 ring-2 ring-theme-primary-100 dark:ring-theme-secondary-800 dim:ring-theme-dim-700"
+                            class="border-theme-secondary-300 dark:border-theme-dark-700 dark:bg-theme-dark-900 dim:border-theme-dim-700 dim:bg-transparent mb-3 overflow-hidden rounded border bg-white last:mb-0 sm:rounded-none sm:border-x-0 sm:border-b-0 sm:border-dashed sm:bg-transparent sm:pt-3 sm:dark:bg-transparent"
                             data-testid="ReceiverItemMobile"
-                            tabindex="0"
                           >
                             <div
-                              class="flex flex-col gap-2 pt-2 pl-2"
-                            >
-                              <span
-                                class="text-theme-secondary-900 xs:max-w-80 dark:text-theme-secondary-200 dim:text-theme-dim-200 w-full max-w-48 truncate text-sm font-semibold sm:max-w-128"
-                              >
-                                Sample Wallet
-                              </span>
-                              <span
-                                class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 text-xs font-semibold"
-                              >
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden"
-                                  data-testid="SenderWalletItemResponsive__address"
-                                >
-                                  0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                </span>
-                              </span>
-                            </div>
-                            <div
-                              class="bg-theme-primary-500 dim:bg-theme-dim-navy-600 dim:text-theme-dim-50 flex flex-row items-center justify-between overflow-hidden rounded-lg text-sm font-semibold text-white"
+                              class="flex flex-col items-center space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4"
                             >
                               <div
-                                class="pl-2"
+                                class="flex w-full min-w-0 flex-1 flex-col my-0 sm:w-auto sm:items-start sm:space-y-1 sm:space-x-0"
                               >
-                                <span
-                                  class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 dim:text-theme-dim-50 text-sm text-white"
-                                  data-testid="Amount"
+                                <div
+                                  class="bg-theme-secondary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 flex w-full flex-1 flex-row items-center justify-between px-4 py-3 dim:sm:bg-transparent sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
                                 >
-                                  95.27653252325068 ARK
-                                </span>
+                                  <div
+                                    class="flex w-full items-center justify-between"
+                                  >
+                                    <div
+                                      class="max-w-56 truncate text-sm leading-[17px] font-semibold whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-200 dim:text-theme-dim-200"
+                                    >
+                                      Sample Wallet
+                                    </div>
+                                    <button
+                                      class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] text-theme-navy-600 dark:text-theme-secondary-500 dim:text-theme-dim-50"
+                                      data-testid="ReceiverItemMobile--Select"
+                                      type="button"
+                                    >
+                                      <div
+                                        class="flex items-center gap-2"
+                                      >
+                                        Select
+                                      </div>
+                                    </button>
+                                  </div>
+                                </div>
+                                <div
+                                  class="px-4 pt-3 pb-4 sm:w-full sm:p-0"
+                                >
+                                  <div>
+                                    <div
+                                      class="space-y-4"
+                                    >
+                                      <div>
+                                        <div
+                                          class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-2 text-sm leading-[17px] font-semibold"
+                                        >
+                                          Address
+                                        </div>
+                                        <div
+                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                        >
+                                          <div
+                                            class="relative grow leading-[17px] sm:leading-5 text-left"
+                                          >
+                                            <span
+                                              class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 font-semibold text-base absolute w-full"
+                                              data-testid="Address__address"
+                                            >
+                                              0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                                            </span>
+                                            <span>
+                                               
+                                            </span>
+                                          </div>
+                                          <button
+                                            class="ring-focus relative cursor-pointer focus:outline-hidden"
+                                            data-ring-focus-margin="-m-1"
+                                            data-testid="clipboard-icon__wrapper"
+                                            type="button"
+                                          >
+                                            <div
+                                              class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
+                                            >
+                                              <div
+                                                style="height: 16px; width: 16px;"
+                                              >
+                                                <svg
+                                                  id="copy"
+                                                  style="height: 100%; width: 100%;"
+                                                  viewBox="0 0 20 20"
+                                                  x="0"
+                                                  xml:space="preserve"
+                                                  xmlns="http://www.w3.org/2000/svg"
+                                                  y="0"
+                                                >
+                                                  <g
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    stroke-width="2"
+                                                  >
+                                                    <path
+                                                      d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                                    />
+                                                    <path
+                                                      d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                                    />
+                                                  </g>
+                                                </svg>
+                                              </div>
+                                            </div>
+                                          </button>
+                                        </div>
+                                      </div>
+                                      <div>
+                                        <div
+                                          class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-2 text-sm leading-[17px] font-semibold"
+                                        >
+                                          Balance
+                                        </div>
+                                        <span
+                                          class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 dim:text-theme-dim-50 text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm leading-[17px] font-semibold"
+                                          data-testid="Amount"
+                                        >
+                                          95.27653252325068 ARK
+                                        </span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
                               </div>
-                              <button
-                                class="bg-theme-primary-600 dim:bg-theme-dim-navy-600 flex h-full items-center justify-center px-5 py-3"
-                              >
-                                Select
-                              </button>
+                              <div
+                                class="hidden sm:block"
+                              />
                             </div>
                           </div>
                         </td>
@@ -1873,47 +2119,129 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 2`
                           class="pt-3"
                         >
                           <div
-                            class="bg-theme-primary-100 dark:bg-theme-background flex h-[117px] w-full cursor-pointer flex-col gap-3 rounded-xl p-2 ring-2 ring-theme-primary-100 dark:ring-theme-secondary-800 dim:ring-theme-dim-700"
+                            class="border-theme-secondary-300 dark:border-theme-dark-700 dark:bg-theme-dark-900 dim:border-theme-dim-700 dim:bg-transparent mb-3 overflow-hidden rounded border bg-white last:mb-0 sm:rounded-none sm:border-x-0 sm:border-b-0 sm:border-dashed sm:bg-transparent sm:pt-3 sm:dark:bg-transparent"
                             data-testid="ReceiverItemMobile"
-                            tabindex="0"
                           >
                             <div
-                              class="flex flex-col gap-2 pt-2 pl-2"
-                            >
-                              <span
-                                class="text-theme-secondary-900 xs:max-w-80 dark:text-theme-secondary-200 dim:text-theme-dim-200 w-full max-w-48 truncate text-sm font-semibold sm:max-w-128"
-                              >
-                                Mainsail Wallet 2
-                              </span>
-                              <span
-                                class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 text-xs font-semibold"
-                              >
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden"
-                                  data-testid="SenderWalletItemResponsive__address"
-                                >
-                                  0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54
-                                </span>
-                              </span>
-                            </div>
-                            <div
-                              class="bg-theme-primary-500 dim:bg-theme-dim-navy-600 dim:text-theme-dim-50 flex flex-row items-center justify-between overflow-hidden rounded-lg text-sm font-semibold text-white"
+                              class="flex flex-col items-center space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4"
                             >
                               <div
-                                class="pl-2"
+                                class="flex w-full min-w-0 flex-1 flex-col my-0 sm:w-auto sm:items-start sm:space-y-1 sm:space-x-0"
                               >
-                                <span
-                                  class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 dim:text-theme-dim-50 text-sm text-white"
-                                  data-testid="Amount"
+                                <div
+                                  class="bg-theme-secondary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 flex w-full flex-1 flex-row items-center justify-between px-4 py-3 dim:sm:bg-transparent sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
                                 >
-                                  0.01989216404723 ARK
-                                </span>
+                                  <div
+                                    class="flex w-full items-center justify-between"
+                                  >
+                                    <div
+                                      class="max-w-56 truncate text-sm leading-[17px] font-semibold whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-200 dim:text-theme-dim-200"
+                                    >
+                                      Mainsail Wallet 2
+                                    </div>
+                                    <button
+                                      class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] text-theme-navy-600 dark:text-theme-secondary-500 dim:text-theme-dim-50"
+                                      data-testid="ReceiverItemMobile--Select"
+                                      type="button"
+                                    >
+                                      <div
+                                        class="flex items-center gap-2"
+                                      >
+                                        Select
+                                      </div>
+                                    </button>
+                                  </div>
+                                </div>
+                                <div
+                                  class="px-4 pt-3 pb-4 sm:w-full sm:p-0"
+                                >
+                                  <div>
+                                    <div
+                                      class="space-y-4"
+                                    >
+                                      <div>
+                                        <div
+                                          class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-2 text-sm leading-[17px] font-semibold"
+                                        >
+                                          Address
+                                        </div>
+                                        <div
+                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                        >
+                                          <div
+                                            class="relative grow leading-[17px] sm:leading-5 text-left"
+                                          >
+                                            <span
+                                              class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 font-semibold text-base absolute w-full"
+                                              data-testid="Address__address"
+                                            >
+                                              0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54
+                                            </span>
+                                            <span>
+                                               
+                                            </span>
+                                          </div>
+                                          <button
+                                            class="ring-focus relative cursor-pointer focus:outline-hidden"
+                                            data-ring-focus-margin="-m-1"
+                                            data-testid="clipboard-icon__wrapper"
+                                            type="button"
+                                          >
+                                            <div
+                                              class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
+                                            >
+                                              <div
+                                                style="height: 16px; width: 16px;"
+                                              >
+                                                <svg
+                                                  id="copy"
+                                                  style="height: 100%; width: 100%;"
+                                                  viewBox="0 0 20 20"
+                                                  x="0"
+                                                  xml:space="preserve"
+                                                  xmlns="http://www.w3.org/2000/svg"
+                                                  y="0"
+                                                >
+                                                  <g
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    stroke-width="2"
+                                                  >
+                                                    <path
+                                                      d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                                    />
+                                                    <path
+                                                      d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                                    />
+                                                  </g>
+                                                </svg>
+                                              </div>
+                                            </div>
+                                          </button>
+                                        </div>
+                                      </div>
+                                      <div>
+                                        <div
+                                          class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-2 text-sm leading-[17px] font-semibold"
+                                        >
+                                          Balance
+                                        </div>
+                                        <span
+                                          class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 dim:text-theme-dim-50 text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm leading-[17px] font-semibold"
+                                          data-testid="Amount"
+                                        >
+                                          0.01989216404723 ARK
+                                        </span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
                               </div>
-                              <button
-                                class="bg-theme-primary-600 dim:bg-theme-dim-navy-600 flex h-full items-center justify-center px-5 py-3"
-                              >
-                                Select
-                              </button>
+                              <div
+                                class="hidden sm:block"
+                              />
                             </div>
                           </div>
                         </td>
@@ -2147,47 +2475,129 @@ exports[`SearchWallet uses fiat value = false > should render responsive with se
                           class="pt-3"
                         >
                           <div
-                            class="bg-theme-primary-100 dark:bg-theme-background flex h-[117px] w-full cursor-pointer flex-col gap-3 rounded-xl p-2 ring-2 ring-theme-primary-600 dark:ring-theme-primary-600 dim:ring-theme-dim-navy-600"
+                            class="dark:bg-theme-dark-900 dim:bg-transparent mb-3 overflow-hidden rounded border bg-white last:mb-0 sm:rounded-none sm:border-x-0 sm:border-b-0 sm:border-dashed sm:bg-transparent sm:pt-3 sm:dark:bg-transparent border-theme-success-200 dark:border-theme-success-700 dim:border-theme-success-700"
                             data-testid="ReceiverItemMobile--selected"
-                            tabindex="0"
                           >
                             <div
-                              class="flex flex-col gap-2 pt-2 pl-2"
-                            >
-                              <span
-                                class="text-theme-secondary-900 xs:max-w-80 dark:text-theme-secondary-200 dim:text-theme-dim-200 w-full max-w-48 truncate text-sm font-semibold sm:max-w-128"
-                              >
-                                Sample Wallet
-                              </span>
-                              <span
-                                class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 text-xs font-semibold"
-                              >
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden"
-                                  data-testid="SenderWalletItemResponsive__address"
-                                >
-                                  0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                </span>
-                              </span>
-                            </div>
-                            <div
-                              class="bg-theme-primary-500 dim:bg-theme-dim-navy-600 dim:text-theme-dim-50 flex flex-row items-center justify-between overflow-hidden rounded-lg text-sm font-semibold text-white"
+                              class="flex flex-col items-center space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4"
                             >
                               <div
-                                class="pl-2"
+                                class="flex w-full min-w-0 flex-1 flex-col my-0 sm:w-auto sm:items-start sm:space-y-1 sm:space-x-0"
                               >
-                                <span
-                                  class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 dim:text-theme-dim-50 text-sm text-white"
-                                  data-testid="Amount"
+                                <div
+                                  class="dark:bg-theme-dark-950 dim:bg-theme-dim-950 flex w-full flex-1 flex-row items-center justify-between px-4 py-3 dim:sm:bg-transparent sm:bg-transparent sm:p-0 dark:sm:bg-transparent bg-theme-success-100"
                                 >
-                                  95.27653252325068 ARK
-                                </span>
+                                  <div
+                                    class="flex w-full items-center justify-between"
+                                  >
+                                    <div
+                                      class="max-w-56 truncate text-sm leading-[17px] font-semibold whitespace-nowrap text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50"
+                                    >
+                                      Sample Wallet
+                                    </div>
+                                    <button
+                                      class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] text-theme-success-600 dark:text-theme-green-600 dim:text-theme-green-600"
+                                      data-testid="ReceiverItemMobile--Select"
+                                      type="button"
+                                    >
+                                      <div
+                                        class="flex items-center gap-2"
+                                      >
+                                        Selected
+                                      </div>
+                                    </button>
+                                  </div>
+                                </div>
+                                <div
+                                  class="px-4 pt-3 pb-4 sm:w-full sm:p-0"
+                                >
+                                  <div>
+                                    <div
+                                      class="space-y-4"
+                                    >
+                                      <div>
+                                        <div
+                                          class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-2 text-sm leading-[17px] font-semibold"
+                                        >
+                                          Address
+                                        </div>
+                                        <div
+                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                        >
+                                          <div
+                                            class="relative grow leading-[17px] sm:leading-5 text-left"
+                                          >
+                                            <span
+                                              class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 font-semibold text-base absolute w-full"
+                                              data-testid="Address__address"
+                                            >
+                                              0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                                            </span>
+                                            <span>
+                                               
+                                            </span>
+                                          </div>
+                                          <button
+                                            class="ring-focus relative cursor-pointer focus:outline-hidden"
+                                            data-ring-focus-margin="-m-1"
+                                            data-testid="clipboard-icon__wrapper"
+                                            type="button"
+                                          >
+                                            <div
+                                              class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
+                                            >
+                                              <div
+                                                style="height: 16px; width: 16px;"
+                                              >
+                                                <svg
+                                                  id="copy"
+                                                  style="height: 100%; width: 100%;"
+                                                  viewBox="0 0 20 20"
+                                                  x="0"
+                                                  xml:space="preserve"
+                                                  xmlns="http://www.w3.org/2000/svg"
+                                                  y="0"
+                                                >
+                                                  <g
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    stroke-width="2"
+                                                  >
+                                                    <path
+                                                      d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                                    />
+                                                    <path
+                                                      d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                                    />
+                                                  </g>
+                                                </svg>
+                                              </div>
+                                            </div>
+                                          </button>
+                                        </div>
+                                      </div>
+                                      <div>
+                                        <div
+                                          class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-2 text-sm leading-[17px] font-semibold"
+                                        >
+                                          Balance
+                                        </div>
+                                        <span
+                                          class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 dim:text-theme-dim-50 text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm leading-[17px] font-semibold"
+                                          data-testid="Amount"
+                                        >
+                                          95.27653252325068 ARK
+                                        </span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
                               </div>
-                              <button
-                                class="bg-theme-primary-600 dim:bg-theme-dim-navy-600 flex h-full items-center justify-center px-5 py-3"
-                              >
-                                Select
-                              </button>
+                              <div
+                                class="hidden sm:block"
+                              />
                             </div>
                           </div>
                         </td>
@@ -2199,47 +2609,129 @@ exports[`SearchWallet uses fiat value = false > should render responsive with se
                           class="pt-3"
                         >
                           <div
-                            class="bg-theme-primary-100 dark:bg-theme-background flex h-[117px] w-full cursor-pointer flex-col gap-3 rounded-xl p-2 ring-2 ring-theme-primary-100 dark:ring-theme-secondary-800 dim:ring-theme-dim-700"
+                            class="border-theme-secondary-300 dark:border-theme-dark-700 dark:bg-theme-dark-900 dim:border-theme-dim-700 dim:bg-transparent mb-3 overflow-hidden rounded border bg-white last:mb-0 sm:rounded-none sm:border-x-0 sm:border-b-0 sm:border-dashed sm:bg-transparent sm:pt-3 sm:dark:bg-transparent"
                             data-testid="ReceiverItemMobile"
-                            tabindex="0"
                           >
                             <div
-                              class="flex flex-col gap-2 pt-2 pl-2"
-                            >
-                              <span
-                                class="text-theme-secondary-900 xs:max-w-80 dark:text-theme-secondary-200 dim:text-theme-dim-200 w-full max-w-48 truncate text-sm font-semibold sm:max-w-128"
-                              >
-                                Mainsail Wallet 2
-                              </span>
-                              <span
-                                class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 text-xs font-semibold"
-                              >
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden"
-                                  data-testid="SenderWalletItemResponsive__address"
-                                >
-                                  0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54
-                                </span>
-                              </span>
-                            </div>
-                            <div
-                              class="bg-theme-primary-500 dim:bg-theme-dim-navy-600 dim:text-theme-dim-50 flex flex-row items-center justify-between overflow-hidden rounded-lg text-sm font-semibold text-white"
+                              class="flex flex-col items-center space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4"
                             >
                               <div
-                                class="pl-2"
+                                class="flex w-full min-w-0 flex-1 flex-col my-0 sm:w-auto sm:items-start sm:space-y-1 sm:space-x-0"
                               >
-                                <span
-                                  class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 dim:text-theme-dim-50 text-sm text-white"
-                                  data-testid="Amount"
+                                <div
+                                  class="bg-theme-secondary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 flex w-full flex-1 flex-row items-center justify-between px-4 py-3 dim:sm:bg-transparent sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
                                 >
-                                  0.01989216404723 ARK
-                                </span>
+                                  <div
+                                    class="flex w-full items-center justify-between"
+                                  >
+                                    <div
+                                      class="max-w-56 truncate text-sm leading-[17px] font-semibold whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-200 dim:text-theme-dim-200"
+                                    >
+                                      Mainsail Wallet 2
+                                    </div>
+                                    <button
+                                      class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] text-theme-navy-600 dark:text-theme-secondary-500 dim:text-theme-dim-50"
+                                      data-testid="ReceiverItemMobile--Select"
+                                      type="button"
+                                    >
+                                      <div
+                                        class="flex items-center gap-2"
+                                      >
+                                        Select
+                                      </div>
+                                    </button>
+                                  </div>
+                                </div>
+                                <div
+                                  class="px-4 pt-3 pb-4 sm:w-full sm:p-0"
+                                >
+                                  <div>
+                                    <div
+                                      class="space-y-4"
+                                    >
+                                      <div>
+                                        <div
+                                          class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-2 text-sm leading-[17px] font-semibold"
+                                        >
+                                          Address
+                                        </div>
+                                        <div
+                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                        >
+                                          <div
+                                            class="relative grow leading-[17px] sm:leading-5 text-left"
+                                          >
+                                            <span
+                                              class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 font-semibold text-base absolute w-full"
+                                              data-testid="Address__address"
+                                            >
+                                              0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54
+                                            </span>
+                                            <span>
+                                               
+                                            </span>
+                                          </div>
+                                          <button
+                                            class="ring-focus relative cursor-pointer focus:outline-hidden"
+                                            data-ring-focus-margin="-m-1"
+                                            data-testid="clipboard-icon__wrapper"
+                                            type="button"
+                                          >
+                                            <div
+                                              class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
+                                            >
+                                              <div
+                                                style="height: 16px; width: 16px;"
+                                              >
+                                                <svg
+                                                  id="copy"
+                                                  style="height: 100%; width: 100%;"
+                                                  viewBox="0 0 20 20"
+                                                  x="0"
+                                                  xml:space="preserve"
+                                                  xmlns="http://www.w3.org/2000/svg"
+                                                  y="0"
+                                                >
+                                                  <g
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    stroke-width="2"
+                                                  >
+                                                    <path
+                                                      d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                                    />
+                                                    <path
+                                                      d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                                    />
+                                                  </g>
+                                                </svg>
+                                              </div>
+                                            </div>
+                                          </button>
+                                        </div>
+                                      </div>
+                                      <div>
+                                        <div
+                                          class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-2 text-sm leading-[17px] font-semibold"
+                                        >
+                                          Balance
+                                        </div>
+                                        <span
+                                          class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 dim:text-theme-dim-50 text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm leading-[17px] font-semibold"
+                                          data-testid="Amount"
+                                        >
+                                          0.01989216404723 ARK
+                                        </span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
                               </div>
-                              <button
-                                class="bg-theme-primary-600 dim:bg-theme-dim-navy-600 flex h-full items-center justify-center px-5 py-3"
-                              >
-                                Select
-                              </button>
+                              <div
+                                class="hidden sm:block"
+                              />
                             </div>
                           </div>
                         </td>
@@ -5187,47 +5679,129 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 1`]
                           class="pt-3"
                         >
                           <div
-                            class="bg-theme-primary-100 dark:bg-theme-background flex h-[117px] w-full cursor-pointer flex-col gap-3 rounded-xl p-2 ring-2 ring-theme-primary-100 dark:ring-theme-secondary-800 dim:ring-theme-dim-700"
+                            class="border-theme-secondary-300 dark:border-theme-dark-700 dark:bg-theme-dark-900 dim:border-theme-dim-700 dim:bg-transparent mb-3 overflow-hidden rounded border bg-white last:mb-0 sm:rounded-none sm:border-x-0 sm:border-b-0 sm:border-dashed sm:bg-transparent sm:pt-3 sm:dark:bg-transparent"
                             data-testid="ReceiverItemMobile"
-                            tabindex="0"
                           >
                             <div
-                              class="flex flex-col gap-2 pt-2 pl-2"
-                            >
-                              <span
-                                class="text-theme-secondary-900 xs:max-w-80 dark:text-theme-secondary-200 dim:text-theme-dim-200 w-full max-w-48 truncate text-sm font-semibold sm:max-w-128"
-                              >
-                                Sample Wallet
-                              </span>
-                              <span
-                                class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 text-xs font-semibold"
-                              >
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden"
-                                  data-testid="SenderWalletItemResponsive__address"
-                                >
-                                  0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                </span>
-                              </span>
-                            </div>
-                            <div
-                              class="bg-theme-primary-500 dim:bg-theme-dim-navy-600 dim:text-theme-dim-50 flex flex-row items-center justify-between overflow-hidden rounded-lg text-sm font-semibold text-white"
+                              class="flex flex-col items-center space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4"
                             >
                               <div
-                                class="pl-2"
+                                class="flex w-full min-w-0 flex-1 flex-col my-0 sm:w-auto sm:items-start sm:space-y-1 sm:space-x-0"
                               >
-                                <span
-                                  class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 dim:text-theme-dim-50 text-sm text-white"
-                                  data-testid="Amount"
+                                <div
+                                  class="bg-theme-secondary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 flex w-full flex-1 flex-row items-center justify-between px-4 py-3 dim:sm:bg-transparent sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
                                 >
-                                  95.27653252325068 ARK
-                                </span>
+                                  <div
+                                    class="flex w-full items-center justify-between"
+                                  >
+                                    <div
+                                      class="max-w-56 truncate text-sm leading-[17px] font-semibold whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-200 dim:text-theme-dim-200"
+                                    >
+                                      Sample Wallet
+                                    </div>
+                                    <button
+                                      class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] text-theme-navy-600 dark:text-theme-secondary-500 dim:text-theme-dim-50"
+                                      data-testid="ReceiverItemMobile--Select"
+                                      type="button"
+                                    >
+                                      <div
+                                        class="flex items-center gap-2"
+                                      >
+                                        Select
+                                      </div>
+                                    </button>
+                                  </div>
+                                </div>
+                                <div
+                                  class="px-4 pt-3 pb-4 sm:w-full sm:p-0"
+                                >
+                                  <div>
+                                    <div
+                                      class="space-y-4"
+                                    >
+                                      <div>
+                                        <div
+                                          class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-2 text-sm leading-[17px] font-semibold"
+                                        >
+                                          Address
+                                        </div>
+                                        <div
+                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                        >
+                                          <div
+                                            class="relative grow leading-[17px] sm:leading-5 text-left"
+                                          >
+                                            <span
+                                              class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 font-semibold text-base absolute w-full"
+                                              data-testid="Address__address"
+                                            >
+                                              0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                                            </span>
+                                            <span>
+                                               
+                                            </span>
+                                          </div>
+                                          <button
+                                            class="ring-focus relative cursor-pointer focus:outline-hidden"
+                                            data-ring-focus-margin="-m-1"
+                                            data-testid="clipboard-icon__wrapper"
+                                            type="button"
+                                          >
+                                            <div
+                                              class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
+                                            >
+                                              <div
+                                                style="height: 16px; width: 16px;"
+                                              >
+                                                <svg
+                                                  id="copy"
+                                                  style="height: 100%; width: 100%;"
+                                                  viewBox="0 0 20 20"
+                                                  x="0"
+                                                  xml:space="preserve"
+                                                  xmlns="http://www.w3.org/2000/svg"
+                                                  y="0"
+                                                >
+                                                  <g
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    stroke-width="2"
+                                                  >
+                                                    <path
+                                                      d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                                    />
+                                                    <path
+                                                      d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                                    />
+                                                  </g>
+                                                </svg>
+                                              </div>
+                                            </div>
+                                          </button>
+                                        </div>
+                                      </div>
+                                      <div>
+                                        <div
+                                          class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-2 text-sm leading-[17px] font-semibold"
+                                        >
+                                          Balance
+                                        </div>
+                                        <span
+                                          class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 dim:text-theme-dim-50 text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm leading-[17px] font-semibold"
+                                          data-testid="Amount"
+                                        >
+                                          95.27653252325068 ARK
+                                        </span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
                               </div>
-                              <button
-                                class="bg-theme-primary-600 dim:bg-theme-dim-navy-600 flex h-full items-center justify-center px-5 py-3"
-                              >
-                                Select
-                              </button>
+                              <div
+                                class="hidden sm:block"
+                              />
                             </div>
                           </div>
                         </td>
@@ -5239,47 +5813,129 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 1`]
                           class="pt-3"
                         >
                           <div
-                            class="bg-theme-primary-100 dark:bg-theme-background flex h-[117px] w-full cursor-pointer flex-col gap-3 rounded-xl p-2 ring-2 ring-theme-primary-100 dark:ring-theme-secondary-800 dim:ring-theme-dim-700"
+                            class="border-theme-secondary-300 dark:border-theme-dark-700 dark:bg-theme-dark-900 dim:border-theme-dim-700 dim:bg-transparent mb-3 overflow-hidden rounded border bg-white last:mb-0 sm:rounded-none sm:border-x-0 sm:border-b-0 sm:border-dashed sm:bg-transparent sm:pt-3 sm:dark:bg-transparent"
                             data-testid="ReceiverItemMobile"
-                            tabindex="0"
                           >
                             <div
-                              class="flex flex-col gap-2 pt-2 pl-2"
-                            >
-                              <span
-                                class="text-theme-secondary-900 xs:max-w-80 dark:text-theme-secondary-200 dim:text-theme-dim-200 w-full max-w-48 truncate text-sm font-semibold sm:max-w-128"
-                              >
-                                Mainsail Wallet 2
-                              </span>
-                              <span
-                                class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 text-xs font-semibold"
-                              >
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden"
-                                  data-testid="SenderWalletItemResponsive__address"
-                                >
-                                  0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54
-                                </span>
-                              </span>
-                            </div>
-                            <div
-                              class="bg-theme-primary-500 dim:bg-theme-dim-navy-600 dim:text-theme-dim-50 flex flex-row items-center justify-between overflow-hidden rounded-lg text-sm font-semibold text-white"
+                              class="flex flex-col items-center space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4"
                             >
                               <div
-                                class="pl-2"
+                                class="flex w-full min-w-0 flex-1 flex-col my-0 sm:w-auto sm:items-start sm:space-y-1 sm:space-x-0"
                               >
-                                <span
-                                  class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 dim:text-theme-dim-50 text-sm text-white"
-                                  data-testid="Amount"
+                                <div
+                                  class="bg-theme-secondary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 flex w-full flex-1 flex-row items-center justify-between px-4 py-3 dim:sm:bg-transparent sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
                                 >
-                                  0.01989216404723 ARK
-                                </span>
+                                  <div
+                                    class="flex w-full items-center justify-between"
+                                  >
+                                    <div
+                                      class="max-w-56 truncate text-sm leading-[17px] font-semibold whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-200 dim:text-theme-dim-200"
+                                    >
+                                      Mainsail Wallet 2
+                                    </div>
+                                    <button
+                                      class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] text-theme-navy-600 dark:text-theme-secondary-500 dim:text-theme-dim-50"
+                                      data-testid="ReceiverItemMobile--Select"
+                                      type="button"
+                                    >
+                                      <div
+                                        class="flex items-center gap-2"
+                                      >
+                                        Select
+                                      </div>
+                                    </button>
+                                  </div>
+                                </div>
+                                <div
+                                  class="px-4 pt-3 pb-4 sm:w-full sm:p-0"
+                                >
+                                  <div>
+                                    <div
+                                      class="space-y-4"
+                                    >
+                                      <div>
+                                        <div
+                                          class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-2 text-sm leading-[17px] font-semibold"
+                                        >
+                                          Address
+                                        </div>
+                                        <div
+                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                        >
+                                          <div
+                                            class="relative grow leading-[17px] sm:leading-5 text-left"
+                                          >
+                                            <span
+                                              class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 font-semibold text-base absolute w-full"
+                                              data-testid="Address__address"
+                                            >
+                                              0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54
+                                            </span>
+                                            <span>
+                                               
+                                            </span>
+                                          </div>
+                                          <button
+                                            class="ring-focus relative cursor-pointer focus:outline-hidden"
+                                            data-ring-focus-margin="-m-1"
+                                            data-testid="clipboard-icon__wrapper"
+                                            type="button"
+                                          >
+                                            <div
+                                              class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
+                                            >
+                                              <div
+                                                style="height: 16px; width: 16px;"
+                                              >
+                                                <svg
+                                                  id="copy"
+                                                  style="height: 100%; width: 100%;"
+                                                  viewBox="0 0 20 20"
+                                                  x="0"
+                                                  xml:space="preserve"
+                                                  xmlns="http://www.w3.org/2000/svg"
+                                                  y="0"
+                                                >
+                                                  <g
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    stroke-width="2"
+                                                  >
+                                                    <path
+                                                      d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                                    />
+                                                    <path
+                                                      d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                                    />
+                                                  </g>
+                                                </svg>
+                                              </div>
+                                            </div>
+                                          </button>
+                                        </div>
+                                      </div>
+                                      <div>
+                                        <div
+                                          class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-2 text-sm leading-[17px] font-semibold"
+                                        >
+                                          Balance
+                                        </div>
+                                        <span
+                                          class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 dim:text-theme-dim-50 text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm leading-[17px] font-semibold"
+                                          data-testid="Amount"
+                                        >
+                                          0.01989216404723 ARK
+                                        </span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
                               </div>
-                              <button
-                                class="bg-theme-primary-600 dim:bg-theme-dim-navy-600 flex h-full items-center justify-center px-5 py-3"
-                              >
-                                Select
-                              </button>
+                              <div
+                                class="hidden sm:block"
+                              />
                             </div>
                           </div>
                         </td>
@@ -5513,47 +6169,129 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 2`]
                           class="pt-3"
                         >
                           <div
-                            class="bg-theme-primary-100 dark:bg-theme-background flex h-[117px] w-full cursor-pointer flex-col gap-3 rounded-xl p-2 ring-2 ring-theme-primary-100 dark:ring-theme-secondary-800 dim:ring-theme-dim-700"
+                            class="border-theme-secondary-300 dark:border-theme-dark-700 dark:bg-theme-dark-900 dim:border-theme-dim-700 dim:bg-transparent mb-3 overflow-hidden rounded border bg-white last:mb-0 sm:rounded-none sm:border-x-0 sm:border-b-0 sm:border-dashed sm:bg-transparent sm:pt-3 sm:dark:bg-transparent"
                             data-testid="ReceiverItemMobile"
-                            tabindex="0"
                           >
                             <div
-                              class="flex flex-col gap-2 pt-2 pl-2"
-                            >
-                              <span
-                                class="text-theme-secondary-900 xs:max-w-80 dark:text-theme-secondary-200 dim:text-theme-dim-200 w-full max-w-48 truncate text-sm font-semibold sm:max-w-128"
-                              >
-                                Sample Wallet
-                              </span>
-                              <span
-                                class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 text-xs font-semibold"
-                              >
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden"
-                                  data-testid="SenderWalletItemResponsive__address"
-                                >
-                                  0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                </span>
-                              </span>
-                            </div>
-                            <div
-                              class="bg-theme-primary-500 dim:bg-theme-dim-navy-600 dim:text-theme-dim-50 flex flex-row items-center justify-between overflow-hidden rounded-lg text-sm font-semibold text-white"
+                              class="flex flex-col items-center space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4"
                             >
                               <div
-                                class="pl-2"
+                                class="flex w-full min-w-0 flex-1 flex-col my-0 sm:w-auto sm:items-start sm:space-y-1 sm:space-x-0"
                               >
-                                <span
-                                  class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 dim:text-theme-dim-50 text-sm text-white"
-                                  data-testid="Amount"
+                                <div
+                                  class="bg-theme-secondary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 flex w-full flex-1 flex-row items-center justify-between px-4 py-3 dim:sm:bg-transparent sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
                                 >
-                                  95.27653252325068 ARK
-                                </span>
+                                  <div
+                                    class="flex w-full items-center justify-between"
+                                  >
+                                    <div
+                                      class="max-w-56 truncate text-sm leading-[17px] font-semibold whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-200 dim:text-theme-dim-200"
+                                    >
+                                      Sample Wallet
+                                    </div>
+                                    <button
+                                      class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] text-theme-navy-600 dark:text-theme-secondary-500 dim:text-theme-dim-50"
+                                      data-testid="ReceiverItemMobile--Select"
+                                      type="button"
+                                    >
+                                      <div
+                                        class="flex items-center gap-2"
+                                      >
+                                        Select
+                                      </div>
+                                    </button>
+                                  </div>
+                                </div>
+                                <div
+                                  class="px-4 pt-3 pb-4 sm:w-full sm:p-0"
+                                >
+                                  <div>
+                                    <div
+                                      class="space-y-4"
+                                    >
+                                      <div>
+                                        <div
+                                          class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-2 text-sm leading-[17px] font-semibold"
+                                        >
+                                          Address
+                                        </div>
+                                        <div
+                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                        >
+                                          <div
+                                            class="relative grow leading-[17px] sm:leading-5 text-left"
+                                          >
+                                            <span
+                                              class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 font-semibold text-base absolute w-full"
+                                              data-testid="Address__address"
+                                            >
+                                              0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                                            </span>
+                                            <span>
+                                               
+                                            </span>
+                                          </div>
+                                          <button
+                                            class="ring-focus relative cursor-pointer focus:outline-hidden"
+                                            data-ring-focus-margin="-m-1"
+                                            data-testid="clipboard-icon__wrapper"
+                                            type="button"
+                                          >
+                                            <div
+                                              class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
+                                            >
+                                              <div
+                                                style="height: 16px; width: 16px;"
+                                              >
+                                                <svg
+                                                  id="copy"
+                                                  style="height: 100%; width: 100%;"
+                                                  viewBox="0 0 20 20"
+                                                  x="0"
+                                                  xml:space="preserve"
+                                                  xmlns="http://www.w3.org/2000/svg"
+                                                  y="0"
+                                                >
+                                                  <g
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    stroke-width="2"
+                                                  >
+                                                    <path
+                                                      d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                                    />
+                                                    <path
+                                                      d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                                    />
+                                                  </g>
+                                                </svg>
+                                              </div>
+                                            </div>
+                                          </button>
+                                        </div>
+                                      </div>
+                                      <div>
+                                        <div
+                                          class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-2 text-sm leading-[17px] font-semibold"
+                                        >
+                                          Balance
+                                        </div>
+                                        <span
+                                          class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 dim:text-theme-dim-50 text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm leading-[17px] font-semibold"
+                                          data-testid="Amount"
+                                        >
+                                          95.27653252325068 ARK
+                                        </span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
                               </div>
-                              <button
-                                class="bg-theme-primary-600 dim:bg-theme-dim-navy-600 flex h-full items-center justify-center px-5 py-3"
-                              >
-                                Select
-                              </button>
+                              <div
+                                class="hidden sm:block"
+                              />
                             </div>
                           </div>
                         </td>
@@ -5565,47 +6303,129 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 2`]
                           class="pt-3"
                         >
                           <div
-                            class="bg-theme-primary-100 dark:bg-theme-background flex h-[117px] w-full cursor-pointer flex-col gap-3 rounded-xl p-2 ring-2 ring-theme-primary-100 dark:ring-theme-secondary-800 dim:ring-theme-dim-700"
+                            class="border-theme-secondary-300 dark:border-theme-dark-700 dark:bg-theme-dark-900 dim:border-theme-dim-700 dim:bg-transparent mb-3 overflow-hidden rounded border bg-white last:mb-0 sm:rounded-none sm:border-x-0 sm:border-b-0 sm:border-dashed sm:bg-transparent sm:pt-3 sm:dark:bg-transparent"
                             data-testid="ReceiverItemMobile"
-                            tabindex="0"
                           >
                             <div
-                              class="flex flex-col gap-2 pt-2 pl-2"
-                            >
-                              <span
-                                class="text-theme-secondary-900 xs:max-w-80 dark:text-theme-secondary-200 dim:text-theme-dim-200 w-full max-w-48 truncate text-sm font-semibold sm:max-w-128"
-                              >
-                                Mainsail Wallet 2
-                              </span>
-                              <span
-                                class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 text-xs font-semibold"
-                              >
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden"
-                                  data-testid="SenderWalletItemResponsive__address"
-                                >
-                                  0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54
-                                </span>
-                              </span>
-                            </div>
-                            <div
-                              class="bg-theme-primary-500 dim:bg-theme-dim-navy-600 dim:text-theme-dim-50 flex flex-row items-center justify-between overflow-hidden rounded-lg text-sm font-semibold text-white"
+                              class="flex flex-col items-center space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4"
                             >
                               <div
-                                class="pl-2"
+                                class="flex w-full min-w-0 flex-1 flex-col my-0 sm:w-auto sm:items-start sm:space-y-1 sm:space-x-0"
                               >
-                                <span
-                                  class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 dim:text-theme-dim-50 text-sm text-white"
-                                  data-testid="Amount"
+                                <div
+                                  class="bg-theme-secondary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 flex w-full flex-1 flex-row items-center justify-between px-4 py-3 dim:sm:bg-transparent sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
                                 >
-                                  0.01989216404723 ARK
-                                </span>
+                                  <div
+                                    class="flex w-full items-center justify-between"
+                                  >
+                                    <div
+                                      class="max-w-56 truncate text-sm leading-[17px] font-semibold whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-200 dim:text-theme-dim-200"
+                                    >
+                                      Mainsail Wallet 2
+                                    </div>
+                                    <button
+                                      class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] text-theme-navy-600 dark:text-theme-secondary-500 dim:text-theme-dim-50"
+                                      data-testid="ReceiverItemMobile--Select"
+                                      type="button"
+                                    >
+                                      <div
+                                        class="flex items-center gap-2"
+                                      >
+                                        Select
+                                      </div>
+                                    </button>
+                                  </div>
+                                </div>
+                                <div
+                                  class="px-4 pt-3 pb-4 sm:w-full sm:p-0"
+                                >
+                                  <div>
+                                    <div
+                                      class="space-y-4"
+                                    >
+                                      <div>
+                                        <div
+                                          class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-2 text-sm leading-[17px] font-semibold"
+                                        >
+                                          Address
+                                        </div>
+                                        <div
+                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                        >
+                                          <div
+                                            class="relative grow leading-[17px] sm:leading-5 text-left"
+                                          >
+                                            <span
+                                              class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 font-semibold text-base absolute w-full"
+                                              data-testid="Address__address"
+                                            >
+                                              0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54
+                                            </span>
+                                            <span>
+                                               
+                                            </span>
+                                          </div>
+                                          <button
+                                            class="ring-focus relative cursor-pointer focus:outline-hidden"
+                                            data-ring-focus-margin="-m-1"
+                                            data-testid="clipboard-icon__wrapper"
+                                            type="button"
+                                          >
+                                            <div
+                                              class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
+                                            >
+                                              <div
+                                                style="height: 16px; width: 16px;"
+                                              >
+                                                <svg
+                                                  id="copy"
+                                                  style="height: 100%; width: 100%;"
+                                                  viewBox="0 0 20 20"
+                                                  x="0"
+                                                  xml:space="preserve"
+                                                  xmlns="http://www.w3.org/2000/svg"
+                                                  y="0"
+                                                >
+                                                  <g
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    stroke-width="2"
+                                                  >
+                                                    <path
+                                                      d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                                    />
+                                                    <path
+                                                      d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                                    />
+                                                  </g>
+                                                </svg>
+                                              </div>
+                                            </div>
+                                          </button>
+                                        </div>
+                                      </div>
+                                      <div>
+                                        <div
+                                          class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-2 text-sm leading-[17px] font-semibold"
+                                        >
+                                          Balance
+                                        </div>
+                                        <span
+                                          class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 dim:text-theme-dim-50 text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm leading-[17px] font-semibold"
+                                          data-testid="Amount"
+                                        >
+                                          0.01989216404723 ARK
+                                        </span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
                               </div>
-                              <button
-                                class="bg-theme-primary-600 dim:bg-theme-dim-navy-600 flex h-full items-center justify-center px-5 py-3"
-                              >
-                                Select
-                              </button>
+                              <div
+                                class="hidden sm:block"
+                              />
                             </div>
                           </div>
                         </td>
@@ -5839,47 +6659,129 @@ exports[`SearchWallet uses fiat value = true > should render responsive with sel
                           class="pt-3"
                         >
                           <div
-                            class="bg-theme-primary-100 dark:bg-theme-background flex h-[117px] w-full cursor-pointer flex-col gap-3 rounded-xl p-2 ring-2 ring-theme-primary-600 dark:ring-theme-primary-600 dim:ring-theme-dim-navy-600"
+                            class="dark:bg-theme-dark-900 dim:bg-transparent mb-3 overflow-hidden rounded border bg-white last:mb-0 sm:rounded-none sm:border-x-0 sm:border-b-0 sm:border-dashed sm:bg-transparent sm:pt-3 sm:dark:bg-transparent border-theme-success-200 dark:border-theme-success-700 dim:border-theme-success-700"
                             data-testid="ReceiverItemMobile--selected"
-                            tabindex="0"
                           >
                             <div
-                              class="flex flex-col gap-2 pt-2 pl-2"
-                            >
-                              <span
-                                class="text-theme-secondary-900 xs:max-w-80 dark:text-theme-secondary-200 dim:text-theme-dim-200 w-full max-w-48 truncate text-sm font-semibold sm:max-w-128"
-                              >
-                                Sample Wallet
-                              </span>
-                              <span
-                                class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 text-xs font-semibold"
-                              >
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden"
-                                  data-testid="SenderWalletItemResponsive__address"
-                                >
-                                  0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                </span>
-                              </span>
-                            </div>
-                            <div
-                              class="bg-theme-primary-500 dim:bg-theme-dim-navy-600 dim:text-theme-dim-50 flex flex-row items-center justify-between overflow-hidden rounded-lg text-sm font-semibold text-white"
+                              class="flex flex-col items-center space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4"
                             >
                               <div
-                                class="pl-2"
+                                class="flex w-full min-w-0 flex-1 flex-col my-0 sm:w-auto sm:items-start sm:space-y-1 sm:space-x-0"
                               >
-                                <span
-                                  class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 dim:text-theme-dim-50 text-sm text-white"
-                                  data-testid="Amount"
+                                <div
+                                  class="dark:bg-theme-dark-950 dim:bg-theme-dim-950 flex w-full flex-1 flex-row items-center justify-between px-4 py-3 dim:sm:bg-transparent sm:bg-transparent sm:p-0 dark:sm:bg-transparent bg-theme-success-100"
                                 >
-                                  95.27653252325068 ARK
-                                </span>
+                                  <div
+                                    class="flex w-full items-center justify-between"
+                                  >
+                                    <div
+                                      class="max-w-56 truncate text-sm leading-[17px] font-semibold whitespace-nowrap text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50"
+                                    >
+                                      Sample Wallet
+                                    </div>
+                                    <button
+                                      class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] text-theme-success-600 dark:text-theme-green-600 dim:text-theme-green-600"
+                                      data-testid="ReceiverItemMobile--Select"
+                                      type="button"
+                                    >
+                                      <div
+                                        class="flex items-center gap-2"
+                                      >
+                                        Selected
+                                      </div>
+                                    </button>
+                                  </div>
+                                </div>
+                                <div
+                                  class="px-4 pt-3 pb-4 sm:w-full sm:p-0"
+                                >
+                                  <div>
+                                    <div
+                                      class="space-y-4"
+                                    >
+                                      <div>
+                                        <div
+                                          class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-2 text-sm leading-[17px] font-semibold"
+                                        >
+                                          Address
+                                        </div>
+                                        <div
+                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                        >
+                                          <div
+                                            class="relative grow leading-[17px] sm:leading-5 text-left"
+                                          >
+                                            <span
+                                              class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 font-semibold text-base absolute w-full"
+                                              data-testid="Address__address"
+                                            >
+                                              0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                                            </span>
+                                            <span>
+                                               
+                                            </span>
+                                          </div>
+                                          <button
+                                            class="ring-focus relative cursor-pointer focus:outline-hidden"
+                                            data-ring-focus-margin="-m-1"
+                                            data-testid="clipboard-icon__wrapper"
+                                            type="button"
+                                          >
+                                            <div
+                                              class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
+                                            >
+                                              <div
+                                                style="height: 16px; width: 16px;"
+                                              >
+                                                <svg
+                                                  id="copy"
+                                                  style="height: 100%; width: 100%;"
+                                                  viewBox="0 0 20 20"
+                                                  x="0"
+                                                  xml:space="preserve"
+                                                  xmlns="http://www.w3.org/2000/svg"
+                                                  y="0"
+                                                >
+                                                  <g
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    stroke-width="2"
+                                                  >
+                                                    <path
+                                                      d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                                    />
+                                                    <path
+                                                      d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                                    />
+                                                  </g>
+                                                </svg>
+                                              </div>
+                                            </div>
+                                          </button>
+                                        </div>
+                                      </div>
+                                      <div>
+                                        <div
+                                          class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-2 text-sm leading-[17px] font-semibold"
+                                        >
+                                          Balance
+                                        </div>
+                                        <span
+                                          class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 dim:text-theme-dim-50 text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm leading-[17px] font-semibold"
+                                          data-testid="Amount"
+                                        >
+                                          95.27653252325068 ARK
+                                        </span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
                               </div>
-                              <button
-                                class="bg-theme-primary-600 dim:bg-theme-dim-navy-600 flex h-full items-center justify-center px-5 py-3"
-                              >
-                                Select
-                              </button>
+                              <div
+                                class="hidden sm:block"
+                              />
                             </div>
                           </div>
                         </td>
@@ -5891,47 +6793,129 @@ exports[`SearchWallet uses fiat value = true > should render responsive with sel
                           class="pt-3"
                         >
                           <div
-                            class="bg-theme-primary-100 dark:bg-theme-background flex h-[117px] w-full cursor-pointer flex-col gap-3 rounded-xl p-2 ring-2 ring-theme-primary-100 dark:ring-theme-secondary-800 dim:ring-theme-dim-700"
+                            class="border-theme-secondary-300 dark:border-theme-dark-700 dark:bg-theme-dark-900 dim:border-theme-dim-700 dim:bg-transparent mb-3 overflow-hidden rounded border bg-white last:mb-0 sm:rounded-none sm:border-x-0 sm:border-b-0 sm:border-dashed sm:bg-transparent sm:pt-3 sm:dark:bg-transparent"
                             data-testid="ReceiverItemMobile"
-                            tabindex="0"
                           >
                             <div
-                              class="flex flex-col gap-2 pt-2 pl-2"
-                            >
-                              <span
-                                class="text-theme-secondary-900 xs:max-w-80 dark:text-theme-secondary-200 dim:text-theme-dim-200 w-full max-w-48 truncate text-sm font-semibold sm:max-w-128"
-                              >
-                                Mainsail Wallet 2
-                              </span>
-                              <span
-                                class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 text-xs font-semibold"
-                              >
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden"
-                                  data-testid="SenderWalletItemResponsive__address"
-                                >
-                                  0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54
-                                </span>
-                              </span>
-                            </div>
-                            <div
-                              class="bg-theme-primary-500 dim:bg-theme-dim-navy-600 dim:text-theme-dim-50 flex flex-row items-center justify-between overflow-hidden rounded-lg text-sm font-semibold text-white"
+                              class="flex flex-col items-center space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4"
                             >
                               <div
-                                class="pl-2"
+                                class="flex w-full min-w-0 flex-1 flex-col my-0 sm:w-auto sm:items-start sm:space-y-1 sm:space-x-0"
                               >
-                                <span
-                                  class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 dim:text-theme-dim-50 text-sm text-white"
-                                  data-testid="Amount"
+                                <div
+                                  class="bg-theme-secondary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 flex w-full flex-1 flex-row items-center justify-between px-4 py-3 dim:sm:bg-transparent sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
                                 >
-                                  0.01989216404723 ARK
-                                </span>
+                                  <div
+                                    class="flex w-full items-center justify-between"
+                                  >
+                                    <div
+                                      class="max-w-56 truncate text-sm leading-[17px] font-semibold whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-200 dim:text-theme-dim-200"
+                                    >
+                                      Mainsail Wallet 2
+                                    </div>
+                                    <button
+                                      class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] text-theme-navy-600 dark:text-theme-secondary-500 dim:text-theme-dim-50"
+                                      data-testid="ReceiverItemMobile--Select"
+                                      type="button"
+                                    >
+                                      <div
+                                        class="flex items-center gap-2"
+                                      >
+                                        Select
+                                      </div>
+                                    </button>
+                                  </div>
+                                </div>
+                                <div
+                                  class="px-4 pt-3 pb-4 sm:w-full sm:p-0"
+                                >
+                                  <div>
+                                    <div
+                                      class="space-y-4"
+                                    >
+                                      <div>
+                                        <div
+                                          class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-2 text-sm leading-[17px] font-semibold"
+                                        >
+                                          Address
+                                        </div>
+                                        <div
+                                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                        >
+                                          <div
+                                            class="relative grow leading-[17px] sm:leading-5 text-left"
+                                          >
+                                            <span
+                                              class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 font-semibold text-base absolute w-full"
+                                              data-testid="Address__address"
+                                            >
+                                              0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54
+                                            </span>
+                                            <span>
+                                               
+                                            </span>
+                                          </div>
+                                          <button
+                                            class="ring-focus relative cursor-pointer focus:outline-hidden"
+                                            data-ring-focus-margin="-m-1"
+                                            data-testid="clipboard-icon__wrapper"
+                                            type="button"
+                                          >
+                                            <div
+                                              class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
+                                            >
+                                              <div
+                                                style="height: 16px; width: 16px;"
+                                              >
+                                                <svg
+                                                  id="copy"
+                                                  style="height: 100%; width: 100%;"
+                                                  viewBox="0 0 20 20"
+                                                  x="0"
+                                                  xml:space="preserve"
+                                                  xmlns="http://www.w3.org/2000/svg"
+                                                  y="0"
+                                                >
+                                                  <g
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    stroke-width="2"
+                                                  >
+                                                    <path
+                                                      d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                                    />
+                                                    <path
+                                                      d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                                    />
+                                                  </g>
+                                                </svg>
+                                              </div>
+                                            </div>
+                                          </button>
+                                        </div>
+                                      </div>
+                                      <div>
+                                        <div
+                                          class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-2 text-sm leading-[17px] font-semibold"
+                                        >
+                                          Balance
+                                        </div>
+                                        <span
+                                          class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 dim:text-theme-dim-50 text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm leading-[17px] font-semibold"
+                                          data-testid="Amount"
+                                        >
+                                          0.01989216404723 ARK
+                                        </span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
                               </div>
-                              <button
-                                class="bg-theme-primary-600 dim:bg-theme-dim-navy-600 flex h-full items-center justify-center px-5 py-3"
-                              >
-                                Select
-                              </button>
+                              <div
+                                class="hidden sm:block"
+                              />
                             </div>
                           </div>
                         </td>
