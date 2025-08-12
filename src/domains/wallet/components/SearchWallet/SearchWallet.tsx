@@ -17,7 +17,6 @@ import { isFullySynced } from "@/domains/wallet/utils/is-fully-synced";
 import { Balance, ReceiverItemMobile } from "@/app/components/WalletListItem/WalletListItem.blocks";
 import { Tooltip } from "@/app/components/Tooltip";
 import { isLedgerWalletCompatible } from "@/utils/wallet-utils";
-import { TruncateMiddleDynamic } from "@/app/components/TruncateMiddleDynamic";
 import { TableWrapper } from "@/app/components/Table/TableWrapper";
 import cn from "classnames";
 
@@ -110,7 +109,6 @@ const SearchWalletListItem = ({
 };
 
 const SearchSenderWalletItemResponsive = ({ alias, wallet, onAction, selectedAddress }) => {
-	const { isSmAndAbove } = useBreakpoint();
 	const handleButtonClick = useCallback(
 		() => onAction({ address: wallet.address(), name: alias, network: wallet.network() }),
 		[alias, wallet],
