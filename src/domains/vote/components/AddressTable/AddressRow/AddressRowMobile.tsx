@@ -60,7 +60,7 @@ export const AddressRowMobile = ({ index, wallet, onSelect }: AddressRowMobilePr
 
 	const tooltipContent = () => {
 		if (!wallet.balance()) {
-			return t("VOTE.VOTES_PAGE.NO_BALANCE");
+			return t("COMMON.DISABLED_DUE_INSUFFICIENT_BALANCE");
 		}
 
 		return isLedgerWalletCompatible(wallet) ? "" : t("COMMON.LEDGER_COMPATIBILITY_ERROR");
