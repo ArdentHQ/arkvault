@@ -57,72 +57,72 @@ export const WalletVote = ({ wallet, onButtonClick, votes, isLoadingVotes, walle
 			className="-mt-4 flex w-full flex-col items-center md:mt-0 md:flex-row md:items-center"
 		>
 			{renderVotes()}
-				<div className="w-full md:w-auto md:max-md:self-end">
-					{wallets.length > 1 && (
-						<>
+			<div className="w-full md:w-auto md:max-md:self-end">
+				{wallets.length > 1 && (
+					<>
+						<Button
+							data-testid="WalletMyVotes__button"
+							variant="secondary-icon"
+							className="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 dim:disabled:bg-transparent mt-4 hidden w-full space-x-2 whitespace-nowrap disabled:bg-transparent md:mt-0 md:flex md:w-auto md:px-2 md:py-[3px] dark:disabled:bg-transparent"
+							onClick={() => onButtonClick()}
+						>
+							<Icon name="Vote" />
+							<span>{t("COMMON.MY_VOTES")}</span>
+						</Button>
+
+						<Button
+							data-testid="WalletMyVotes__button_mobile"
+							variant="secondary"
+							className="text-theme-primary-600 dim:text-theme-dim-navy-600 w-full disabled:bg-transparent md:hidden dark:text-white dark:disabled:bg-transparent"
+							onClick={() => onButtonClick()}
+						>
+							<Icon name="Vote" />
+							<span>{t("COMMON.MY_VOTES")}</span>
+						</Button>
+					</>
+				)}
+				{wallets.length === 1 && (
+					<Tooltip content={tooltipContent()}>
+						<div>
 							<Button
-								data-testid="WalletMyVotes__button"
+								data-testid="WalletVote__button"
+								disabled={
+									wallet.balance() === 0 ||
+									(wallet.network().usesLockedBalance() &&
+										wallet.balance("available") < wallet.network().votesAmountStep()) ||
+									!wallet.hasBeenFullyRestored() ||
+									!wallet.hasSyncedWithNetwork() ||
+									!isLedgerWalletCompatible(wallet)
+								}
 								variant="secondary-icon"
-								className="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 dim:disabled:bg-transparent mt-4 hidden w-full space-x-2 whitespace-nowrap disabled:bg-transparent md:mt-0 md:flex md:w-auto md:px-2 md:py-[3px] dark:disabled:bg-transparent"
+								className="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 mt-4 hidden w-full space-x-2 disabled:bg-transparent md:mt-0 md:flex md:w-auto md:px-2 md:py-[3px] dark:disabled:bg-transparent"
 								onClick={() => onButtonClick()}
 							>
 								<Icon name="Vote" />
-								<span>{t("COMMON.MY_VOTES")}</span>
+								<span>{t("COMMON.VOTE")}</span>
 							</Button>
 
 							<Button
-								data-testid="WalletMyVotes__button_mobile"
+								data-testid="WalletVote__button_mobile"
+								disabled={
+									wallet.balance() === 0 ||
+									(wallet.network().usesLockedBalance() &&
+										wallet.balance("available") < wallet.network().votesAmountStep()) ||
+									!wallet.hasBeenFullyRestored() ||
+									!wallet.hasSyncedWithNetwork() ||
+									!isLedgerWalletCompatible(wallet)
+								}
 								variant="secondary"
 								className="text-theme-primary-600 dim:text-theme-dim-navy-600 w-full disabled:bg-transparent md:hidden dark:text-white dark:disabled:bg-transparent"
 								onClick={() => onButtonClick()}
 							>
 								<Icon name="Vote" />
-								<span>{t("COMMON.MY_VOTES")}</span>
+								<span>{t("COMMON.VOTE")}</span>
 							</Button>
-						</>
-					)}
-					{wallets.length === 1 && (
-						<Tooltip content={tooltipContent()}>
-							<div>
-								<Button
-									data-testid="WalletVote__button"
-									disabled={
-										wallet.balance() === 0 ||
-										(wallet.network().usesLockedBalance() &&
-											wallet.balance("available") < wallet.network().votesAmountStep()) ||
-										!wallet.hasBeenFullyRestored() ||
-										!wallet.hasSyncedWithNetwork() ||
-										!isLedgerWalletCompatible(wallet)
-									}
-									variant="secondary-icon"
-									className="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 mt-4 hidden w-full space-x-2 disabled:bg-transparent md:mt-0 md:flex md:w-auto md:px-2 md:py-[3px] dark:disabled:bg-transparent"
-									onClick={() => onButtonClick()}
-								>
-									<Icon name="Vote" />
-									<span>{t("COMMON.VOTE")}</span>
-								</Button>
-
-								<Button
-									data-testid="WalletVote__button_mobile"
-									disabled={
-										wallet.balance() === 0 ||
-										(wallet.network().usesLockedBalance() &&
-											wallet.balance("available") < wallet.network().votesAmountStep()) ||
-										!wallet.hasBeenFullyRestored() ||
-										!wallet.hasSyncedWithNetwork() ||
-										!isLedgerWalletCompatible(wallet)
-									}
-									variant="secondary"
-									className="text-theme-primary-600 dim:text-theme-dim-navy-600 w-full disabled:bg-transparent md:hidden dark:text-white dark:disabled:bg-transparent"
-									onClick={() => onButtonClick()}
-								>
-									<Icon name="Vote" />
-									<span>{t("COMMON.VOTE")}</span>
-								</Button>
-							</div>
-						</Tooltip>
-					)}
-				</div>
+						</div>
+					</Tooltip>
+				)}
+			</div>
 		</div>
 	);
 };
