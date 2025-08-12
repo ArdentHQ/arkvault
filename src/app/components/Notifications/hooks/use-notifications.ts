@@ -17,9 +17,7 @@ export const useNotifications = ({ profile }: { profile: Contracts.IProfile }) =
 	const liveNotifications = Object.values(profile.notifications().all());
 
 	const transactions = useMemo((): DTO.ExtendedConfirmedTransactionData[] => {
-		if (liveTransactions.length > 0) {
-			return liveTransactions;
-		}
+		if (liveTransactions.length > 0) return liveTransactions;
 
 		if (cachedData?.lastSync) {
 			const isRecent = Date.now() - cachedData.lastSync < 24 * 60 * 60 * 1000;
@@ -39,24 +37,27 @@ export const useNotifications = ({ profile }: { profile: Contracts.IProfile }) =
 					isVoteCombination: () => cachedTx.isVoteCombination,
 					recipients: () => cachedTx.recipients || [],
 					timestamp: () =>
-						cachedTx.timestamp
+						cachedTx._timestamp
 							? {
-									toISOString: () => cachedTx.timestamp.toISOString,
-									toUNIX: () => cachedTx.timestamp.toUNIX,
-								}
+								toISOString: () => cachedTx._timestamp.iso,
+								toUNIX: () => cachedTx._timestamp.unix,
+							}
 							: null,
 					to: () => cachedTx.to,
-					toObject: () => cachedTx._rawData,
+					toObject: () => cachedTx,
 					type: () => cachedTx.type,
 					value: () => cachedTx.value,
-					wallet: () => ({
-						currency: () => cachedTx.wallet.currency,
-						network: () => ({
-							coin: () => cachedTx.wallet.network.coin,
-							id: () => cachedTx.wallet.network.id,
-							name: () => cachedTx.wallet.network.name,
-						}),
-					}),
+					wallet: () => {
+						const w = cachedTx._wallet;
+						return {
+							currency: () => w?.currency,
+							network: () => ({
+								coin: () => w?.network?.coin,
+								id: () => w?.network?.id,
+								name: () => w?.network?.name,
+							}),
+						};
+					},
 				})) as DTO.ExtendedConfirmedTransactionData[];
 			}
 		}
@@ -77,7 +78,29 @@ export const useNotifications = ({ profile }: { profile: Contracts.IProfile }) =
 			const dataToCache: CachedNotificationData = {
 				lastSync: Date.now(),
 				notifications: liveNotifications,
-				transactions: liveTransactions.map((tx) => tx.toObject()),
+				transactions: liveTransactions.map((tx) => {
+					const w = tx.wallet?.();
+					const n = w?.network?.();
+					const ts = tx.timestamp?.();
+
+					return {
+						...tx.toObject?.(),
+
+						_wallet: w && n
+							? {
+								currency: w.currency?.(),
+								network: {
+									coin: n.coin?.(),
+									id: n.id?.(),
+									name: n.name?.(),
+								},
+							}
+							: null,
+						_timestamp: ts
+							? { iso: ts.toISOString?.(), unix: ts.toUNIX?.() }
+							: null,
+					};
+				}),
 			};
 
 			setCachedData(dataToCache);
