@@ -129,11 +129,7 @@ describe("Link", () => {
 	});
 
 	it("should not show external icon for internal links", () => {
-		render(
-			<Link to="/internal">
-				Internal Link
-			</Link>,
-		);
+		render(<Link to="/internal">Internal Link</Link>);
 
 		expect(screen.getByTestId("RouterLink")).toBeInTheDocument();
 		expect(screen.queryByTestId("RouterLink__external")).not.toBeInTheDocument();

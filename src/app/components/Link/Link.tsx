@@ -19,11 +19,11 @@ const AnchorStyled = ({ isDisabled, ...properties }: AnchorStyledProps) => (
 	<a
 		{...properties}
 		className={twMerge(
-			"relative space-x-1 font-semibold no-underline transition-colors cursor-pointer focus:outline-hidden",
+			"relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden",
 			cn({
+				"text-theme-secondary-text cursor-not-allowed": isDisabled,
 				"text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700":
 					!isDisabled,
-				"cursor-not-allowed text-theme-secondary-text": isDisabled,
 			}),
 			properties.className,
 		)}
@@ -69,7 +69,7 @@ const Anchor = ({
 	className,
 }: AnchorProperties) => (
 	<AnchorStyled
-		className={cn("inline-block ring-focus group/inner", className)}
+		className={cn("ring-focus group/inner inline-block", className)}
 		data-testid="Link"
 		rel={isExternal ? "noopener noreferrer" : rel}
 		ref={ref}
@@ -86,7 +86,7 @@ const Anchor = ({
 				data-testid="Link__external"
 				name="ArrowExternal"
 				dimensions={[12, 12]}
-				className={cn("align-middle duration-200 mb-[3px] shrink-0", { "inline-block text-sm": children })}
+				className={cn("mb-[3px] shrink-0 align-middle duration-200", { "inline-block text-sm": children })}
 			/>
 		)}
 	</AnchorStyled>
@@ -104,11 +104,11 @@ const StyledRouterLink = ({
 	<RouterLink
 		{...props}
 		className={cn(
-			"inline-block relative space-x-1 font-semibold no-underline transition-colors cursor-pointer ring-focus group/inner focus:outline-hidden",
+			"ring-focus group/inner relative inline-block cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden",
 			{
+				"text-theme-secondary-text cursor-not-allowed": isDisabled,
 				"text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700":
 					!isDisabled,
-				"cursor-not-allowed text-theme-secondary-text": isDisabled,
 			},
 			className,
 		)}
@@ -123,7 +123,7 @@ const StyledRouterLink = ({
 				data-testid="RouterLink__external"
 				name="ArrowExternal"
 				dimensions={[12, 12]}
-				className={cn("align-middle duration-200 mb-[3px] shrink-0", { "inline-block text-sm": children })}
+				className={cn("mb-[3px] shrink-0 align-middle duration-200", { "inline-block text-sm": children })}
 			/>
 		)}
 	</RouterLink>
