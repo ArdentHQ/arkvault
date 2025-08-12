@@ -98,7 +98,7 @@ describe("ValidatorFooter", () => {
 			),
 		).toBeInTheDocument();
 
-		expect(screen.getByText(`47.63826626 ${wallet.network().ticker()}`)).toBeInTheDocument();
+		expect(screen.getByText(`47.63826626162534 ${wallet.network().ticker()}`)).toBeInTheDocument();
 
 		votesAmountMinimumMock.mockRestore();
 	});

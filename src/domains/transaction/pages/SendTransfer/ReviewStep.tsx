@@ -15,23 +15,32 @@ import { getFeeType } from "@/domains/transaction/pages/SendTransfer/utils";
 import { buildTransferData } from "@/domains/transaction/pages/SendTransfer/SendTransfer.helpers";
 import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
 import { Amount } from "@/app/components/Amount";
+import { BigNumber } from "@/app/lib/helpers";
+import { calculateGasFee } from "@/domains/transaction/components/InputFee/InputFee";
+import { Tooltip } from "@/app/components/Tooltip";
 
 interface ReviewStepProperties {
 	wallet: Contracts.IReadWriteWallet;
 	network: Networks.Network;
 }
 
+// This is to prevent Insufficient balance error when sending all
+const DUST_AMOUNT = 0.00015;
+
 export const ReviewStep = ({ wallet, network }: ReviewStepProperties) => {
 	const { t } = useTranslation();
 
-	const { unregister, watch, register, getValues } = useFormContext();
+	const { unregister, watch, register, getValues, setError, errors, clearErrors, setValue } = useFormContext();
 	const { recipients } = watch();
 	const profile = useActiveProfile();
+	const { gasPrice, gasLimit } = getValues(["gasPrice", "gasLimit"]);
 
-	let amount = 0;
+	const walletBalance = wallet.balance();
+
+	let amount = BigNumber.make(0);
 
 	for (const recipient of recipients) {
-		amount += recipient.amount;
+		amount = amount.plus(BigNumber.make(recipient.amount));
 	}
 
 	const ticker = wallet.currency();
@@ -40,12 +49,41 @@ export const ReviewStep = ({ wallet, network }: ReviewStepProperties) => {
 
 	const { common: commonValidation } = useValidation();
 
-	const walletBalance = wallet.balance();
-
 	useEffect(() => {
 		register("gasPrice", commonValidation.gasPrice(walletBalance, getValues, wallet.network()));
 		register("gasLimit", commonValidation.gasLimit(walletBalance, getValues, wallet.network()));
 	}, [commonValidation, register, walletBalance]);
+
+	const fee = BigNumber.make(calculateGasFee(gasPrice, gasLimit));
+	const isMultiPayment = recipients.length > 1;
+
+	useEffect(() => {
+		const remainingBalance = BigNumber.make(walletBalance).minus(amount).minus(fee);
+		if (remainingBalance.isLessThanOrEqualTo(0)) {
+			if (isMultiPayment) {
+				setError("amount", {
+					message: t("TRANSACTION.INSUFFICIENT_BALANCE"),
+					type: "error",
+				});
+			} else {
+				const newAmount = amount.minus(fee).minus(DUST_AMOUNT);
+
+				const firstRecipient = recipients.at(0);
+
+				setValue("recipients", [
+					{
+						address: firstRecipient.address,
+						alias: firstRecipient.alias,
+						amount: newAmount.toString(),
+					},
+				]);
+			}
+		}
+
+		return () => {
+			clearErrors("amount");
+		};
+	}, [isMultiPayment, walletBalance, amount.toString(), fee.toString()]);
 
 	useEffect(() => {
 		unregister("mnemonic");
@@ -68,7 +106,7 @@ export const ReviewStep = ({ wallet, network }: ReviewStepProperties) => {
 	const showFeeInput = useMemo(() => !network.chargesZeroFees(), [network]);
 
 	const isTestnet = wallet.network().isTest();
-	const convertedAmount = isTestnet ? 0 : convert(amount);
+	const convertedAmount = isTestnet ? 0 : convert(amount.toNumber());
 
 	return (
 		<section data-testid="SendTransfer__review-step">
@@ -105,8 +143,8 @@ export const ReviewStep = ({ wallet, network }: ReviewStepProperties) => {
 										{t("COMMON.AMOUNT")}
 									</DetailTitle>
 
-									<div className="flex flex-row items-center gap-2">
-										<Amount ticker={ticker} value={amount} className="font-semibold" />
+									<div className="flex flex-1 flex-row items-center justify-end gap-2 sm:w-full sm:justify-start">
+										<Amount ticker={ticker} value={amount.toNumber()} className="font-semibold" />
 										{!isTestnet && !!convertedAmount && !!exchangeTicker && (
 											<div className="text-theme-secondary-700 font-semibold">
 												(~
@@ -114,6 +152,28 @@ export const ReviewStep = ({ wallet, network }: ReviewStepProperties) => {
 											</div>
 										)}
 									</div>
+
+									{errors.amount && (
+										<div
+											data-testid="Input__addon-end"
+											className="divide-theme-secondary-300 text-theme-danger-500 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x"
+										>
+											<div>
+												<Tooltip content={errors.amount.message} size="sm">
+													<span
+														data-errortext={errors.amount.message}
+														data-testid="Input__error"
+													>
+														<Icon
+															name="CircleExclamationMark"
+															className="text-theme-danger-500"
+															size="lg"
+														/>
+													</span>
+												</Tooltip>
+											</div>
+										</div>
+									)}
 								</div>
 							</div>
 						</DetailWrapper>

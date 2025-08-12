@@ -1,10 +1,12 @@
 import { Contracts, DTO, Contracts as ProfileContracts } from "@/app/lib/profiles";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useSynchronizer, useWalletAlias } from "@/app/hooks";
+import { usePendingTransactions } from "@/domains/transaction/hooks/use-pending-transactions";
 
 import { SortBy } from "@/app/components/Table";
 import { delay } from "@/utils/delay";
 import { useTransactionTypes } from "./use-transaction-types";
+import { DateTime } from "@/app/lib/intl";
 
 interface TransactionsState {
 	transactions: DTO.ExtendedConfirmedTransactionData[];
@@ -91,12 +93,26 @@ const getOrderByStr = ({ column, desc }: SortBy): string => {
 	return columnMap[column] + ":" + (desc ? "desc" : "asc");
 };
 
+const removeConfirmedPendingTransactions = (
+	confirmedTransactions: DTO.ExtendedConfirmedTransactionData[],
+	removePendingTransaction: (hash: string) => void,
+) => {
+	const confirmedHashes = new Set(confirmedTransactions.map((tx) => tx.hash()));
+
+	return (pendingHash: string) => {
+		if (confirmedHashes.has(pendingHash)) {
+			removePendingTransaction(pendingHash);
+		}
+	};
+};
+
 export const useProfileTransactions = ({ profile, wallets, limit = 30 }: ProfileTransactionsProperties) => {
 	const isMounted = useRef(true);
 	const cursor = useRef(1);
 	const LIMIT = limit;
 	const { types } = useTransactionTypes({ wallets });
 	const { syncOnChainUsernames } = useWalletAlias();
+	const { pendingTransactions, removePendingTransaction } = usePendingTransactions();
 	const allTransactionTypes = [...types.core];
 
 	const [sortBy, setSortBy] = useState<SortBy>({ column: "date", desc: true });
@@ -134,7 +150,96 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 		return hasMorePages;
 	};
 
+	const mergedTransactions = useMemo(() => {
+		const walletAddresses = wallets.map((w) => w.address());
+		const walletNetworkIds = wallets.map((w) => w.networkId());
+
+		const relevantPendingTxs = pendingTransactions.filter(
+			(tx) => walletAddresses.includes(tx.walletAddress) && walletNetworkIds.includes(tx.networkId),
+		);
+
+		const hasAllSelected = selectedTransactionTypes.length === allTransactionTypes.length;
+		const filteredPendingTxs = hasAllSelected
+			? relevantPendingTxs
+			: relevantPendingTxs.filter((tx) => selectedTransactionTypes.includes(tx.type));
+
+		const modeFilteredPendingTxs = filteredPendingTxs.filter((tx) => {
+			if (activeMode === "sent") {
+				return walletAddresses.includes(tx.from);
+			}
+			if (activeMode === "received") {
+				return walletAddresses.includes(tx.to);
+			}
+			return true;
+		});
+
+		const pendingAsConfirmed = modeFilteredPendingTxs.map((tx) => {
+			const timestampObj = DateTime.make(tx.timestamp);
+
+			return {
+				...tx,
+				blockHash: () => {},
+				confirmations: () => ({ toNumber: () => 0 }),
+				convertedAmount: () => tx.convertedAmount,
+				convertedTotal: () => tx.convertedTotal,
+				explorerLink: () => tx.explorerLink,
+				fee: () => tx.fee,
+				from: () => tx.from,
+				hash: () => tx.hash,
+				isConfirmed: () => false,
+				isFailed: () => false,
+				isMultiPayment: () => tx.isMultiPayment,
+				isPending: () => true,
+				isReceived: () => walletAddresses.includes(tx.to),
+				isReturn: () => tx.isReturn,
+				isSent: () => walletAddresses.includes(tx.from),
+				isSuccess: () => false,
+				isTransfer: () => tx.isTransfer,
+				isUnvote: () => tx.isUnvote,
+				isUpdateValidator: () => tx.isUpdateValidator,
+				isUsernameRegistration: () => tx.isUsernameRegistration,
+				isUsernameResignation: () => tx.isUsernameResignation,
+				isValidatorRegistration: () => tx.isValidatorRegistration,
+				isValidatorResignation: () => tx.isValidatorResignation,
+				isVote: () => tx.isVote,
+				isVoteCombination: () => tx.isVoteCombination,
+				network: () => wallets.find((w) => w.address() === tx.walletAddress)?.network(),
+				nonce: () => tx.nonce,
+				recipients: () => tx.recipients || [],
+				timestamp: () => timestampObj,
+				to: () => tx.to,
+				total: () => tx.total,
+				type: () => tx.type,
+				value: () => tx.value,
+				wallet: () => wallets.find((w) => w.address() === tx.walletAddress),
+			};
+		}) as any[];
+
+		const combined = [...pendingAsConfirmed, ...transactions];
+
+		return combined.sort((a, b) => {
+			const aTimestamp = a.timestamp().toUNIX();
+			const bTimestamp = b.timestamp().toUNIX();
+
+			if (sortBy.column === "date") {
+				return sortBy.desc ? bTimestamp - aTimestamp : aTimestamp - bTimestamp;
+			}
+
+			if (sortBy.desc) {
+				if (a.isPending && !b.isPending) {
+					return -1;
+				}
+				if (!a.isPending && b.isPending) {
+					return 1;
+				}
+			}
+
+			return 0;
+		});
+	}, [transactions, pendingTransactions, wallets, selectedTransactionTypes, activeMode, sortBy, allTransactionTypes]);
+
 	const selectedWalletAddresses = wallets.map((wallet) => wallet.address()).join("-");
+
 	useEffect(() => {
 		const loadTransactions = async () => {
 			try {
@@ -175,7 +280,8 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 					transactions: items,
 				}));
 			} catch (error) {
-				console.log({ error });
+				/* istanbul ignore next -- @preserve */
+				console.error({ error });
 			}
 		};
 
@@ -186,6 +292,21 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 			isMounted.current = false;
 		};
 	}, [selectedWalletAddresses, activeMode, activeTransactionType, timestamp, selectedTransactionTypes, orderBy]);
+
+	useEffect(() => {
+		if (transactions.length === 0 || pendingTransactions.length === 0) {
+			return;
+		}
+
+		const checkForConfirmedTransactions = removeConfirmedPendingTransactions(
+			transactions,
+			removePendingTransaction,
+		);
+
+		for (const pendingTx of pendingTransactions) {
+			checkForConfirmedTransactions(pendingTx.hash);
+		}
+	}, [transactions, pendingTransactions, removePendingTransaction]);
 
 	const updateFilters = useCallback(
 		({
@@ -327,8 +448,8 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 			return true;
 		}
 
-		return transactions.length === 0 && !isLoadingTransactions;
-	}, [isLoadingTransactions, transactions.length]);
+		return mergedTransactions.length === 0 && !isLoadingTransactions;
+	}, [isLoadingTransactions, mergedTransactions.length]);
 
 	const addresses = wallets
 		.map((wallet) => wallet.address())
@@ -366,7 +487,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 		selectedTransactionTypes,
 		setSortBy,
 		sortBy,
-		transactions: selectedTransactionTypes.length > 0 ? transactions : [],
+		transactions: selectedTransactionTypes.length > 0 ? mergedTransactions : [],
 		updateFilters,
 	};
 };

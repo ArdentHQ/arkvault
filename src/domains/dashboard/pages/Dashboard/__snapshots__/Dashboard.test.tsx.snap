@@ -1134,7 +1134,7 @@ exports[`Dashboard > should render 1`] = `
                           class="whitespace-nowrap dark:text-theme-dark-50 dim:text-theme-dim-50"
                           data-testid="Amount"
                         >
-                          95.27653252 ARK
+                          95.27653252325068 ARK
                         </span>
                         <div
                           class="relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 md-lg:block dark:border-theme-dark-700 dim:border-theme-dim-700 hidden h-6"
@@ -1994,7 +1994,7 @@ exports[`Dashboard > should render 1`] = `
                       >
                         <td>
                           <div
-                            class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start pr-0 lg:pr-3 xl:min-h-11 xl:max-h-11 xl:pt-2.5 lg:min-w-36 min-h-14 my-1 pt-1"
+                            class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start pr-0 lg:px-0 lg:pl-3 xl:min-h-11 xl:max-h-11 xl:pt-2.5 lg:min-w-36 min-h-14 my-1 pt-1"
                           >
                             <div
                               class="flex flex-col gap-1 font-semibold"
@@ -2028,26 +2028,25 @@ exports[`Dashboard > should render 1`] = `
                                           style="height: 12px; width: 12px;"
                                         >
                                           <svg
+                                            id="cross-small"
                                             style="height: 100%; width: 100%;"
-                                            viewBox="0 0 12 13"
+                                            viewBox="0 0 10 10"
+                                            x="0"
+                                            xml:space="preserve"
                                             xmlns="http://www.w3.org/2000/svg"
+                                            y="0"
                                           >
-                                            <path
-                                              d="M6,11.5c2.8,0,5-2.2,5-5S8.8,1.5,6,1.5,1,3.7,1,6.5s2.2,5,5,5Z"
+                                            <g
                                               fill="none"
                                               stroke="currentColor"
                                               stroke-linecap="round"
                                               stroke-linejoin="round"
-                                              stroke-width="1.6"
-                                            />
-                                            <path
-                                              d="M4,6.5h4"
-                                              fill="none"
-                                              stroke="currentColor"
-                                              stroke-linecap="round"
-                                              stroke-linejoin="round"
-                                              stroke-width="1.6"
-                                            />
+                                              stroke-width="2"
+                                            >
+                                              <path
+                                                d="M1 9l8-8M9 9L1 1"
+                                              />
+                                            </g>
                                           </svg>
                                         </div>
                                       </div>
@@ -2502,7 +2501,7 @@ exports[`Dashboard > should render 1`] = `
                       >
                         <td>
                           <div
-                            class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start pr-0 lg:pr-3 xl:min-h-11 xl:max-h-11 xl:pt-2.5 lg:min-w-36 min-h-14 my-1 pt-1"
+                            class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start pr-0 lg:px-0 lg:pl-3 xl:min-h-11 xl:max-h-11 xl:pt-2.5 lg:min-w-36 min-h-14 my-1 pt-1"
                           >
                             <div
                               class="flex flex-col gap-1 font-semibold"
@@ -2536,26 +2535,25 @@ exports[`Dashboard > should render 1`] = `
                                           style="height: 12px; width: 12px;"
                                         >
                                           <svg
+                                            id="cross-small"
                                             style="height: 100%; width: 100%;"
-                                            viewBox="0 0 12 13"
+                                            viewBox="0 0 10 10"
+                                            x="0"
+                                            xml:space="preserve"
                                             xmlns="http://www.w3.org/2000/svg"
+                                            y="0"
                                           >
-                                            <path
-                                              d="M6,11.5c2.8,0,5-2.2,5-5S8.8,1.5,6,1.5,1,3.7,1,6.5s2.2,5,5,5Z"
+                                            <g
                                               fill="none"
                                               stroke="currentColor"
                                               stroke-linecap="round"
                                               stroke-linejoin="round"
-                                              stroke-width="1.6"
-                                            />
-                                            <path
-                                              d="M4,6.5h4"
-                                              fill="none"
-                                              stroke="currentColor"
-                                              stroke-linecap="round"
-                                              stroke-linejoin="round"
-                                              stroke-width="1.6"
-                                            />
+                                              stroke-width="2"
+                                            >
+                                              <path
+                                                d="M1 9l8-8M9 9L1 1"
+                                              />
+                                            </g>
                                           </svg>
                                         </div>
                                       </div>
@@ -2928,7 +2926,7 @@ exports[`Dashboard > should render 1`] = `
                                     class="whitespace-nowrap text-sm"
                                     data-testid="Amount"
                                   >
-                                    - 0.00254046 ARK
+                                    - 0.0025404579555 ARK
                                   </span>
                                 </div>
                               </div>
@@ -2964,7 +2962,7 @@ exports[`Dashboard > should render 1`] = `
                                     class="whitespace-nowrap text-sm"
                                     data-testid="Amount"
                                   >
-                                    - 0.00254046 ARK
+                                    - 0.0025404579555 ARK
                                   </span>
                                 </div>
                               </div>
@@ -2989,7 +2987,7 @@ exports[`Dashboard > should render 1`] = `
                       >
                         <td>
                           <div
-                            class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start pr-0 lg:pr-3 xl:min-h-11 xl:max-h-11 xl:pt-2.5 lg:min-w-36 min-h-14 my-1 pt-1"
+                            class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start pr-0 lg:px-0 lg:pl-3 xl:min-h-11 xl:max-h-11 xl:pt-2.5 lg:min-w-36 min-h-14 my-1 pt-1"
                           >
                             <div
                               class="flex flex-col gap-1 font-semibold"
@@ -3023,26 +3021,25 @@ exports[`Dashboard > should render 1`] = `
                                           style="height: 12px; width: 12px;"
                                         >
                                           <svg
+                                            id="cross-small"
                                             style="height: 100%; width: 100%;"
-                                            viewBox="0 0 12 13"
+                                            viewBox="0 0 10 10"
+                                            x="0"
+                                            xml:space="preserve"
                                             xmlns="http://www.w3.org/2000/svg"
+                                            y="0"
                                           >
-                                            <path
-                                              d="M6,11.5c2.8,0,5-2.2,5-5S8.8,1.5,6,1.5,1,3.7,1,6.5s2.2,5,5,5Z"
+                                            <g
                                               fill="none"
                                               stroke="currentColor"
                                               stroke-linecap="round"
                                               stroke-linejoin="round"
-                                              stroke-width="1.6"
-                                            />
-                                            <path
-                                              d="M4,6.5h4"
-                                              fill="none"
-                                              stroke="currentColor"
-                                              stroke-linecap="round"
-                                              stroke-linejoin="round"
-                                              stroke-width="1.6"
-                                            />
+                                              stroke-width="2"
+                                            >
+                                              <path
+                                                d="M1 9l8-8M9 9L1 1"
+                                              />
+                                            </g>
                                           </svg>
                                         </div>
                                       </div>
@@ -3476,7 +3473,7 @@ exports[`Dashboard > should render 1`] = `
                       >
                         <td>
                           <div
-                            class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start pr-0 lg:pr-3 xl:min-h-11 xl:max-h-11 xl:pt-2.5 lg:min-w-36 min-h-14 my-1 pt-1"
+                            class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start pr-0 lg:px-0 lg:pl-3 xl:min-h-11 xl:max-h-11 xl:pt-2.5 lg:min-w-36 min-h-14 my-1 pt-1"
                           >
                             <div
                               class="flex flex-col gap-1 font-semibold"
@@ -3510,26 +3507,25 @@ exports[`Dashboard > should render 1`] = `
                                           style="height: 12px; width: 12px;"
                                         >
                                           <svg
+                                            id="cross-small"
                                             style="height: 100%; width: 100%;"
-                                            viewBox="0 0 12 13"
+                                            viewBox="0 0 10 10"
+                                            x="0"
+                                            xml:space="preserve"
                                             xmlns="http://www.w3.org/2000/svg"
+                                            y="0"
                                           >
-                                            <path
-                                              d="M6,11.5c2.8,0,5-2.2,5-5S8.8,1.5,6,1.5,1,3.7,1,6.5s2.2,5,5,5Z"
+                                            <g
                                               fill="none"
                                               stroke="currentColor"
                                               stroke-linecap="round"
                                               stroke-linejoin="round"
-                                              stroke-width="1.6"
-                                            />
-                                            <path
-                                              d="M4,6.5h4"
-                                              fill="none"
-                                              stroke="currentColor"
-                                              stroke-linecap="round"
-                                              stroke-linejoin="round"
-                                              stroke-width="1.6"
-                                            />
+                                              stroke-width="2"
+                                            >
+                                              <path
+                                                d="M1 9l8-8M9 9L1 1"
+                                              />
+                                            </g>
                                           </svg>
                                         </div>
                                       </div>
@@ -3963,7 +3959,7 @@ exports[`Dashboard > should render 1`] = `
                       >
                         <td>
                           <div
-                            class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start pr-0 lg:pr-3 xl:min-h-11 xl:max-h-11 xl:pt-2.5 lg:min-w-36 min-h-14 my-1 pt-1"
+                            class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start pr-0 lg:px-0 lg:pl-3 xl:min-h-11 xl:max-h-11 xl:pt-2.5 lg:min-w-36 min-h-14 my-1 pt-1"
                           >
                             <div
                               class="flex flex-col gap-1 font-semibold"
@@ -3997,26 +3993,25 @@ exports[`Dashboard > should render 1`] = `
                                           style="height: 12px; width: 12px;"
                                         >
                                           <svg
+                                            id="cross-small"
                                             style="height: 100%; width: 100%;"
-                                            viewBox="0 0 12 13"
+                                            viewBox="0 0 10 10"
+                                            x="0"
+                                            xml:space="preserve"
                                             xmlns="http://www.w3.org/2000/svg"
+                                            y="0"
                                           >
-                                            <path
-                                              d="M6,11.5c2.8,0,5-2.2,5-5S8.8,1.5,6,1.5,1,3.7,1,6.5s2.2,5,5,5Z"
+                                            <g
                                               fill="none"
                                               stroke="currentColor"
                                               stroke-linecap="round"
                                               stroke-linejoin="round"
-                                              stroke-width="1.6"
-                                            />
-                                            <path
-                                              d="M4,6.5h4"
-                                              fill="none"
-                                              stroke="currentColor"
-                                              stroke-linecap="round"
-                                              stroke-linejoin="round"
-                                              stroke-width="1.6"
-                                            />
+                                              stroke-width="2"
+                                            >
+                                              <path
+                                                d="M1 9l8-8M9 9L1 1"
+                                              />
+                                            </g>
                                           </svg>
                                         </div>
                                       </div>
@@ -4450,7 +4445,7 @@ exports[`Dashboard > should render 1`] = `
                       >
                         <td>
                           <div
-                            class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start pr-0 lg:pr-3 xl:min-h-11 xl:max-h-11 xl:pt-2.5 lg:min-w-36 min-h-14 my-1 pt-1"
+                            class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start pr-0 lg:px-0 lg:pl-3 xl:min-h-11 xl:max-h-11 xl:pt-2.5 lg:min-w-36 min-h-14 my-1 pt-1"
                           >
                             <div
                               class="flex flex-col gap-1 font-semibold"
@@ -4484,26 +4479,25 @@ exports[`Dashboard > should render 1`] = `
                                           style="height: 12px; width: 12px;"
                                         >
                                           <svg
+                                            id="cross-small"
                                             style="height: 100%; width: 100%;"
-                                            viewBox="0 0 12 13"
+                                            viewBox="0 0 10 10"
+                                            x="0"
+                                            xml:space="preserve"
                                             xmlns="http://www.w3.org/2000/svg"
+                                            y="0"
                                           >
-                                            <path
-                                              d="M6,11.5c2.8,0,5-2.2,5-5S8.8,1.5,6,1.5,1,3.7,1,6.5s2.2,5,5,5Z"
+                                            <g
                                               fill="none"
                                               stroke="currentColor"
                                               stroke-linecap="round"
                                               stroke-linejoin="round"
-                                              stroke-width="1.6"
-                                            />
-                                            <path
-                                              d="M4,6.5h4"
-                                              fill="none"
-                                              stroke="currentColor"
-                                              stroke-linecap="round"
-                                              stroke-linejoin="round"
-                                              stroke-width="1.6"
-                                            />
+                                              stroke-width="2"
+                                            >
+                                              <path
+                                                d="M1 9l8-8M9 9L1 1"
+                                              />
+                                            </g>
                                           </svg>
                                         </div>
                                       </div>
@@ -4937,7 +4931,7 @@ exports[`Dashboard > should render 1`] = `
                       >
                         <td>
                           <div
-                            class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start pr-0 lg:pr-3 xl:min-h-11 xl:max-h-11 xl:pt-2.5 lg:min-w-36 min-h-14 my-1 pt-1"
+                            class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start pr-0 lg:px-0 lg:pl-3 xl:min-h-11 xl:max-h-11 xl:pt-2.5 lg:min-w-36 min-h-14 my-1 pt-1"
                           >
                             <div
                               class="flex flex-col gap-1 font-semibold"
@@ -4971,26 +4965,25 @@ exports[`Dashboard > should render 1`] = `
                                           style="height: 12px; width: 12px;"
                                         >
                                           <svg
+                                            id="cross-small"
                                             style="height: 100%; width: 100%;"
-                                            viewBox="0 0 12 13"
+                                            viewBox="0 0 10 10"
+                                            x="0"
+                                            xml:space="preserve"
                                             xmlns="http://www.w3.org/2000/svg"
+                                            y="0"
                                           >
-                                            <path
-                                              d="M6,11.5c2.8,0,5-2.2,5-5S8.8,1.5,6,1.5,1,3.7,1,6.5s2.2,5,5,5Z"
+                                            <g
                                               fill="none"
                                               stroke="currentColor"
                                               stroke-linecap="round"
                                               stroke-linejoin="round"
-                                              stroke-width="1.6"
-                                            />
-                                            <path
-                                              d="M4,6.5h4"
-                                              fill="none"
-                                              stroke="currentColor"
-                                              stroke-linecap="round"
-                                              stroke-linejoin="round"
-                                              stroke-width="1.6"
-                                            />
+                                              stroke-width="2"
+                                            >
+                                              <path
+                                                d="M1 9l8-8M9 9L1 1"
+                                              />
+                                            </g>
                                           </svg>
                                         </div>
                                       </div>
@@ -5424,7 +5417,7 @@ exports[`Dashboard > should render 1`] = `
                       >
                         <td>
                           <div
-                            class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start pr-0 lg:pr-3 xl:min-h-11 xl:max-h-11 xl:pt-2.5 lg:min-w-36 min-h-14 my-1 pt-1"
+                            class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start pr-0 lg:px-0 lg:pl-3 xl:min-h-11 xl:max-h-11 xl:pt-2.5 lg:min-w-36 min-h-14 my-1 pt-1"
                           >
                             <div
                               class="flex flex-col gap-1 font-semibold"
@@ -5458,26 +5451,25 @@ exports[`Dashboard > should render 1`] = `
                                           style="height: 12px; width: 12px;"
                                         >
                                           <svg
+                                            id="cross-small"
                                             style="height: 100%; width: 100%;"
-                                            viewBox="0 0 12 13"
+                                            viewBox="0 0 10 10"
+                                            x="0"
+                                            xml:space="preserve"
                                             xmlns="http://www.w3.org/2000/svg"
+                                            y="0"
                                           >
-                                            <path
-                                              d="M6,11.5c2.8,0,5-2.2,5-5S8.8,1.5,6,1.5,1,3.7,1,6.5s2.2,5,5,5Z"
+                                            <g
                                               fill="none"
                                               stroke="currentColor"
                                               stroke-linecap="round"
                                               stroke-linejoin="round"
-                                              stroke-width="1.6"
-                                            />
-                                            <path
-                                              d="M4,6.5h4"
-                                              fill="none"
-                                              stroke="currentColor"
-                                              stroke-linecap="round"
-                                              stroke-linejoin="round"
-                                              stroke-width="1.6"
-                                            />
+                                              stroke-width="2"
+                                            >
+                                              <path
+                                                d="M1 9l8-8M9 9L1 1"
+                                              />
+                                            </g>
                                           </svg>
                                         </div>
                                       </div>
@@ -5932,7 +5924,7 @@ exports[`Dashboard > should render 1`] = `
                       >
                         <td>
                           <div
-                            class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start pr-0 lg:pr-3 xl:min-h-11 xl:max-h-11 xl:pt-2.5 lg:min-w-36 min-h-14 my-1 pt-1"
+                            class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start pr-0 lg:px-0 lg:pl-3 xl:min-h-11 xl:max-h-11 xl:pt-2.5 lg:min-w-36 min-h-14 my-1 pt-1"
                           >
                             <div
                               class="flex flex-col gap-1 font-semibold"
@@ -5966,26 +5958,25 @@ exports[`Dashboard > should render 1`] = `
                                           style="height: 12px; width: 12px;"
                                         >
                                           <svg
+                                            id="cross-small"
                                             style="height: 100%; width: 100%;"
-                                            viewBox="0 0 12 13"
+                                            viewBox="0 0 10 10"
+                                            x="0"
+                                            xml:space="preserve"
                                             xmlns="http://www.w3.org/2000/svg"
+                                            y="0"
                                           >
-                                            <path
-                                              d="M6,11.5c2.8,0,5-2.2,5-5S8.8,1.5,6,1.5,1,3.7,1,6.5s2.2,5,5,5Z"
+                                            <g
                                               fill="none"
                                               stroke="currentColor"
                                               stroke-linecap="round"
                                               stroke-linejoin="round"
-                                              stroke-width="1.6"
-                                            />
-                                            <path
-                                              d="M4,6.5h4"
-                                              fill="none"
-                                              stroke="currentColor"
-                                              stroke-linecap="round"
-                                              stroke-linejoin="round"
-                                              stroke-width="1.6"
-                                            />
+                                              stroke-width="2"
+                                            >
+                                              <path
+                                                d="M1 9l8-8M9 9L1 1"
+                                              />
+                                            </g>
                                           </svg>
                                         </div>
                                       </div>
@@ -6220,7 +6211,7 @@ exports[`Dashboard > should render 1`] = `
                                     class="whitespace-nowrap text-sm"
                                     data-testid="Amount"
                                   >
-                                    - 1.50102853 ARK
+                                    - 1.5010285261064 ARK
                                   </span>
                                 </div>
                               </div>
@@ -6256,7 +6247,7 @@ exports[`Dashboard > should render 1`] = `
                                     class="whitespace-nowrap text-sm"
                                     data-testid="Amount"
                                   >
-                                    - 1.50102853 ARK
+                                    - 1.5010285261064 ARK
                                   </span>
                                 </div>
                               </div>
@@ -6281,7 +6272,7 @@ exports[`Dashboard > should render 1`] = `
                       >
                         <td>
                           <div
-                            class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start pr-0 lg:pr-3 xl:min-h-11 xl:max-h-11 xl:pt-2.5 lg:min-w-36 min-h-14 my-1 pt-1"
+                            class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start pr-0 lg:px-0 lg:pl-3 xl:min-h-11 xl:max-h-11 xl:pt-2.5 lg:min-w-36 min-h-14 my-1 pt-1"
                           >
                             <div
                               class="flex flex-col gap-1 font-semibold"
@@ -6315,26 +6306,25 @@ exports[`Dashboard > should render 1`] = `
                                           style="height: 12px; width: 12px;"
                                         >
                                           <svg
+                                            id="cross-small"
                                             style="height: 100%; width: 100%;"
-                                            viewBox="0 0 12 13"
+                                            viewBox="0 0 10 10"
+                                            x="0"
+                                            xml:space="preserve"
                                             xmlns="http://www.w3.org/2000/svg"
+                                            y="0"
                                           >
-                                            <path
-                                              d="M6,11.5c2.8,0,5-2.2,5-5S8.8,1.5,6,1.5,1,3.7,1,6.5s2.2,5,5,5Z"
+                                            <g
                                               fill="none"
                                               stroke="currentColor"
                                               stroke-linecap="round"
                                               stroke-linejoin="round"
-                                              stroke-width="1.6"
-                                            />
-                                            <path
-                                              d="M4,6.5h4"
-                                              fill="none"
-                                              stroke="currentColor"
-                                              stroke-linecap="round"
-                                              stroke-linejoin="round"
-                                              stroke-width="1.6"
-                                            />
+                                              stroke-width="2"
+                                            >
+                                              <path
+                                                d="M1 9l8-8M9 9L1 1"
+                                              />
+                                            </g>
                                           </svg>
                                         </div>
                                       </div>
