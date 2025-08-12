@@ -30,20 +30,17 @@ exports[`SyncErrorMessage > should handle retry 1`] = `
     data-testid="SyncErrorMessage__retry"
   >
     <a
+      class="ring-focus group/inner relative inline-block cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700"
       data-discover="true"
+      data-ring-focus-margin="-m-1"
+      data-testid="RouterLink"
       href="/"
     >
-      <a
-        class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
-        data-ring-focus-margin="-m-1"
-        data-testid="Link"
+      <span
+        class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
       >
-        <span
-          class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
-        >
-          here
-        </span>
-      </a>
+        here
+      </span>
     </a>
   </span>
    to retry.
@@ -80,20 +77,17 @@ exports[`SyncErrorMessage > should render multiple failed networks 1`] = `
     data-testid="SyncErrorMessage__retry"
   >
     <a
+      class="ring-focus group/inner relative inline-block cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700"
       data-discover="true"
+      data-ring-focus-margin="-m-1"
+      data-testid="RouterLink"
       href="/"
     >
-      <a
-        class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
-        data-ring-focus-margin="-m-1"
-        data-testid="Link"
+      <span
+        class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
       >
-        <span
-          class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
-        >
-          here
-        </span>
-      </a>
+        here
+      </span>
     </a>
   </span>
    to retry.
@@ -113,20 +107,17 @@ exports[`SyncErrorMessage > should render one failed network 1`] = `
     data-testid="SyncErrorMessage__retry"
   >
     <a
+      class="ring-focus group/inner relative inline-block cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700"
       data-discover="true"
+      data-ring-focus-margin="-m-1"
+      data-testid="RouterLink"
       href="/"
     >
-      <a
-        class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
-        data-ring-focus-margin="-m-1"
-        data-testid="Link"
+      <span
+        class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
       >
-        <span
-          class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
-        >
-          here
-        </span>
-      </a>
+        here
+      </span>
     </a>
   </span>
    to retry.
@@ -157,20 +148,17 @@ exports[`SyncErrorMessage > should render two failed networks 1`] = `
     data-testid="SyncErrorMessage__retry"
   >
     <a
+      class="ring-focus group/inner relative inline-block cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700"
       data-discover="true"
+      data-ring-focus-margin="-m-1"
+      data-testid="RouterLink"
       href="/"
     >
-      <a
-        class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
-        data-ring-focus-margin="-m-1"
-        data-testid="Link"
+      <span
+        class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
       >
-        <span
-          class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
-        >
-          here
-        </span>
-      </a>
+        here
+      </span>
     </a>
   </span>
    to retry.
