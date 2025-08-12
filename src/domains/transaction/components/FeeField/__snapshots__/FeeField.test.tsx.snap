@@ -129,7 +129,7 @@ exports[`FeeField > should render 1`] = `
                 class="whitespace-nowrap text-xs leading-[15px] transition-all dim:text-theme-dim-navy-600"
                 data-testid="Amount"
               >
-                0.00012768 ARK
+                0.0001276808715 ARK
               </span>
               <span
                 class="text-theme-secondary-500 text-xs leading-[15px] transition-all sm:hidden dim:text-theme-dim-navy-600 hidden"

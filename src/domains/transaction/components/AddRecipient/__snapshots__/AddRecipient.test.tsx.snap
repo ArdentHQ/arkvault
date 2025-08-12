@@ -574,7 +574,7 @@ exports[`AddRecipient > should render 1`] = `
                     class="whitespace-nowrap"
                     data-testid="Amount"
                   >
-                    95.27653252
+                    95.27653252325068
                   </span>
                   )
                 </span>
@@ -596,7 +596,7 @@ exports[`AddRecipient > should render 1`] = `
                     class="whitespace-nowrap"
                     data-testid="Amount"
                   >
-                    95.27653252 ARK
+                    95.27653252325068 ARK
                   </span>
                 </div>
                 <div
@@ -895,7 +895,7 @@ exports[`AddRecipient > should render with empty array of recipients as default 
                     class="whitespace-nowrap"
                     data-testid="Amount"
                   >
-                    95.27653252
+                    95.27653252325068
                   </span>
                   )
                 </span>
@@ -917,7 +917,7 @@ exports[`AddRecipient > should render with empty array of recipients as default 
                     class="whitespace-nowrap"
                     data-testid="Amount"
                   >
-                    95.27653252 ARK
+                    95.27653252325068 ARK
                   </span>
                 </div>
                 <div
@@ -1216,7 +1216,7 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
                     class="whitespace-nowrap"
                     data-testid="Amount"
                   >
-                    95.27653252
+                    95.27653252325068
                   </span>
                   )
                 </span>
@@ -1238,7 +1238,7 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
                     class="whitespace-nowrap"
                     data-testid="Amount"
                   >
-                    95.27653252 ARK
+                    95.27653252325068 ARK
                   </span>
                 </div>
                 <div
@@ -1553,7 +1553,7 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
                     class="whitespace-nowrap"
                     data-testid="Amount"
                   >
-                    95.27653252
+                    95.27653252325068
                   </span>
                   )
                 </span>
@@ -1575,7 +1575,7 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
                     class="whitespace-nowrap"
                     data-testid="Amount"
                   >
-                    95.27653252 ARK
+                    95.27653252325068 ARK
                   </span>
                 </div>
                 <div
@@ -1806,7 +1806,7 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
                     class="whitespace-nowrap"
                     data-testid="Amount"
                   >
-                    95.27653252
+                    95.27653252325068
                   </span>
                   )
                 </span>
@@ -1828,7 +1828,7 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
                     class="whitespace-nowrap"
                     data-testid="Amount"
                   >
-                    95.27653252 ARK
+                    95.27653252325068 ARK
                   </span>
                 </div>
                 <div
@@ -2127,7 +2127,7 @@ exports[`AddRecipient > should set available amount 1`] = `
                     class="whitespace-nowrap"
                     data-testid="Amount"
                   >
-                    95.27653252
+                    95.27653252325068
                   </span>
                   )
                 </span>
@@ -2149,7 +2149,7 @@ exports[`AddRecipient > should set available amount 1`] = `
                     class="whitespace-nowrap"
                     data-testid="Amount"
                   >
-                    95.27653252 ARK
+                    95.27653252325068 ARK
                   </span>
                 </div>
                 <div
@@ -2196,7 +2196,7 @@ exports[`AddRecipient > should set available amount 1`] = `
                       name="amount"
                       placeholder="Enter an amount"
                       type="text"
-                      value="95.2764275232"
+                      value="95.27653252325068"
                     />
                   </div>
                 </div>
@@ -2456,6 +2456,27 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
               <div
                 class="flex flex-row items-center gap-2"
               >
+                <div
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 hidden sm:flex"
+                  data-testid="AddRecipient__available"
+                >
+                  <span
+                    class="hidden pr-1 sm:inline"
+                  >
+                    Balance
+                    :
+                  </span>
+                  <span
+                    class="whitespace-nowrap"
+                    data-testid="Amount"
+                  >
+                    0 ARK
+                  </span>
+                </div>
+                <div
+                  class="bg-theme-secondary-300 dark:bg-theme-dark-700 dim:bg-theme-dim-700 hidden h-3 w-px sm:flex"
+                  data-testid="AddRecipient__divider"
+                />
                 <span
                   class="inline-flex"
                 >

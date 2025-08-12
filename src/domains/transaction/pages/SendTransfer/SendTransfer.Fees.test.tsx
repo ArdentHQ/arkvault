@@ -120,7 +120,7 @@ describe("SendTransfer Fee Handling", () => {
 		const secondAddress = screen.getByTestId("SearchWalletListItem__select-1");
 		await userEvent.click(secondAddress);
 
-		expect(screen.getByText("0.01989216")).toBeInTheDocument();
+		expect(screen.getByText("0.01989216404723")).toBeInTheDocument();
 
 		await userEvent.type(screen.getByTestId("AddRecipient__amount"), "55");
 
@@ -134,7 +134,7 @@ describe("SendTransfer Fee Handling", () => {
 		const firstAddress = screen.getByTestId("SearchWalletListItem__select-0");
 		await userEvent.click(firstAddress);
 
-		expect(screen.getByText("95.27653252")).toBeInTheDocument();
+		expect(screen.getByText("95.27653252325068")).toBeInTheDocument();
 
 		await waitFor(() => expect(screen.queryByTestId("Input__error")).not.toBeInTheDocument());
 	});
