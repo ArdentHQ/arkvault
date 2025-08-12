@@ -262,7 +262,7 @@ export class Profile implements IProfile {
 		this.#transactionAggregate = new TransactionAggregate(this);
 		this.#walletAggregate = new WalletAggregate(this);
 		this.#authenticator = new Authenticator(this);
-		this.#validators = new ValidatorService();
+		this.#validators = new ValidatorService(this);
 		this.#password = new PasswordManager();
 		this.#status = new ProfileStatus();
 		this.#knownWalletService = new KnownWalletService();

@@ -1,4 +1,4 @@
-import { Contracts } from "@/app/lib/mainsail";
+import { Contracts, Networks } from "@/app/lib/mainsail";
 
 import { IDataRepository, IValidatorService, IProfile, IReadOnlyWallet, IReadWriteWallet } from "./contracts.js";
 import { DataRepository } from "./data.repository";
@@ -12,6 +12,11 @@ import { Cache } from "@/app/lib/mainsail/cache.js";
 export class ValidatorService implements IValidatorService {
 	readonly #dataRepository: IDataRepository = new DataRepository();
 	readonly #cache = new Cache(300); // 5-minute TTL in seconds
+	readonly #profile: IProfile;
+
+	public constructor(profile: IProfile) {
+		this.#profile = profile;
+	}
 
 	/** {@inheritDoc IValidatorService.all} */
 	public all(network: string): IReadOnlyWallet[] {
@@ -140,5 +145,25 @@ export class ValidatorService implements IValidatorService {
 			rank: validator.rank as unknown as number,
 			username: validator.username,
 		});
+	}
+
+	public async publicKeyExists(publicKey: string, network: Networks.Network): Promise<boolean> {
+		if (publicKey.length === 0) {
+			return false;
+		}
+
+		const publicApiEndpoint = network.config().host("full", this.#profile);
+		const response = await fetch(`${publicApiEndpoint}?attributes.validatorPublicKey=${publicKey}`);
+
+		console.log({ response })
+		if (response.status !== 404) {
+			const data = await response.json();
+
+			if (data.meta?.count > 0) {
+				throw new Error("Public key has been used already!");
+			}
+		}
+
+		return true;
 	}
 }

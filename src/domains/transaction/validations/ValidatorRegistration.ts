@@ -6,6 +6,7 @@ import { ValidateResult } from "react-hook-form";
 import { Contracts, Helpers } from "@/app/lib/profiles";
 import { BigNumber } from "@/app/lib/helpers";
 import { UnitConverter } from "@arkecosystem/typescript-crypto";
+
 export const validatorRegistration = (t: any) => ({
 	lockedFee: (wallet: Contracts.IReadWriteWallet | undefined, getValues: () => object) => ({
 		required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
@@ -83,32 +84,7 @@ export const validatorRegistration = (t: any) => ({
 
 				return true;
 			},
-			unique: debounceAsync(async (publicKey: string) => {
-				try {
-					await publicKeyExists(network, profile, publicKey);
-				} catch {
-					return t("COMMON.INPUT_PUBLIC_KEY.VALIDATION.PUBLIC_KEY_ALREADY_EXISTS", { publicKey });
-				}
-			}, 300) as () => Promise<ValidateResult>,
+			unique: debounceAsync(async (publicKey: string) => await profile.validators().publicKeyExists(publicKey, network), 300) as () => Promise<ValidateResult>,
 		},
 	}),
 });
-
-const publicKeyExists = async (network: Networks.Network, profile: IProfile, publicKey: string) => {
-	if (publicKey.length === 0) {
-		return;
-	}
-
-	const publicApiEndpoint = network.config().host("full", profile);
-	const response = await fetch(`${publicApiEndpoint}?attributes.validatorPublicKey=${publicKey}`);
-
-	if (response.status !== 404) {
-		const data = await response.json();
-
-		if (data.meta?.count > 0) {
-			throw new Error("Public key has been used already!");
-		}
-	}
-
-	return true;
-};
