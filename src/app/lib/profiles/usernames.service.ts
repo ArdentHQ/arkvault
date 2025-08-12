@@ -54,4 +54,11 @@ export class UsernamesService implements IUsernamesService {
 		}
 		return registry.findByAddress(address);
 	}
+
+	public async usernameExists(username: string): Promise<boolean> {
+		const publicApiEndpoint = this.#network.config().host("full", this.#profile);
+		const response = await fetch(`${publicApiEndpoint}/wallets/${username}`, { signal: controller.current?.signal });
+
+		return !!response.ok
+	}
 }

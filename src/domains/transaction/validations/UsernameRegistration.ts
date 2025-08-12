@@ -40,12 +40,7 @@ const validateUsername = (t: any, value: string): string | undefined => {
 };
 
 export const usernameRegistration = (t: any) => ({
-	username: (
-		env: Environment,
-		network: Networks.Network,
-		profile: IProfile,
-		controller: MutableRefObject<AbortController | undefined>,
-	) => ({
+	username: (profile: IProfile) => ({
 		required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
 			field: t("COMMON.USERNAME"),
 		}),
@@ -57,30 +52,11 @@ export const usernameRegistration = (t: any) => ({
 					return error;
 				}
 
-				try {
-					await usernameExists(env, network, profile, value, controller);
-				} catch (error) {
-					if (error.name === "UsernameExistsError") {
-						return t("COMMON.VALIDATION.EXISTS", { field: t("COMMON.USERNAME") });
-					}
-					return true;
+				if (await profile.usernames().usernameExists(value)) {
+					return t("COMMON.VALIDATION.EXISTS", { field: t("COMMON.USERNAME") });
 				}
+
 			}, 300) as () => Promise<ValidateResult>,
 		},
 	}),
 });
-
-const usernameExists = async (
-	env: Environment,
-	network: Networks.Network,
-	profile: IProfile,
-	username: string,
-	controller: MutableRefObject<AbortController | undefined>,
-) => {
-	const publicApiEndpoint = network.config().host("full", profile);
-	const response = await fetch(`${publicApiEndpoint}/wallets/${username}`, { signal: controller.current?.signal });
-
-	if (response.ok) {
-		throw new UsernameExistsError("Username is occupied!");
-	}
-};
