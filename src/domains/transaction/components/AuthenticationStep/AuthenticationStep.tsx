@@ -253,7 +253,6 @@ export const AuthenticationStep = ({
 						<InputPassword
 							data-testid="AuthenticationStep__secret"
 							ref={register(authentication.secret(wallet))}
-							preventAutofill
 						/>
 					</FormField>
 				</>
@@ -316,7 +315,6 @@ export const AuthenticationStep = ({
 						<InputPassword
 							data-testid="AuthenticationStep__mnemonic"
 							ref={register(authentication.mnemonic(wallet))}
-							preventAutofill
 						/>
 					</FormField>
 				</>
