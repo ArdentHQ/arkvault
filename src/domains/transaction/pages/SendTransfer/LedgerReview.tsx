@@ -55,6 +55,7 @@ export const TransferLedgerReview = ({
 				recipients={recipients}
 				profile={profile}
 				network={wallet.network()}
+				isMultiPayment={recipients.length > 1}
 			/>
 
 			<DetailWrapper
