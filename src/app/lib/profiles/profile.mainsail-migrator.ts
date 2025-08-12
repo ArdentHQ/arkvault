@@ -4,7 +4,14 @@ import { HttpClient } from "@/app/lib/mainsail/http-client.js";
 export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 	readonly #http: HttpClient = new HttpClient(10_000);
 
-	async migrate(profile: IProfile, data: IProfileData): Promise<IProfileData> {
+	/**
+	 * Migrates the profile data from Mainsail to ArkVault if needed.
+	 *
+	 * @param {IProfileData} [data]
+	 * @return {Promise<IProfileData>}
+	 * @memberof Profile
+	 */
+	public async migrate(profile: IProfile, data: IProfileData): Promise<IProfileData> {
 		if (this.#requiresMigration(data)) {
 			data.wallets = await this.#migrateWallets(profile, data.wallets);
 			data.contacts = await this.#migrateContacts(profile, data.contacts);
