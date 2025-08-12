@@ -6,7 +6,7 @@ exports[`SuccessStep > should render (lg) 1`] = `
     data-testid="CreateWallet__SuccessStep"
   >
     <div
-      class="space-y-4"
+      class="-mx-3 space-y-4 sm:mx-0"
     >
       <div
         data-testid="DetailWrapper"
@@ -187,7 +187,7 @@ exports[`SuccessStep > should render (xs) 1`] = `
     data-testid="CreateWallet__SuccessStep"
   >
     <div
-      class="space-y-4"
+      class="-mx-3 space-y-4 sm:mx-0"
     >
       <div
         data-testid="DetailWrapper"
