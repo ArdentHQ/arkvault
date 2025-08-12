@@ -40,7 +40,7 @@ const validateUsername = (t: any, value: string): string | undefined => {
 };
 
 export const usernameRegistration = (t: any) => ({
-	username: (profile: IProfile) => ({
+	username: (profile: IProfile, controller: MutableRefObject<AbortController | undefined>) => ({
 		required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
 			field: t("COMMON.USERNAME"),
 		}),
@@ -52,7 +52,7 @@ export const usernameRegistration = (t: any) => ({
 					return error;
 				}
 
-				if (await profile.usernames().usernameExists(value)) {
+				if (await profile.usernames().usernameExists(value, { signal: controller.current?.signal })) {
 					return t("COMMON.VALIDATION.EXISTS", { field: t("COMMON.USERNAME") });
 				}
 
