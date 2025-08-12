@@ -48,6 +48,10 @@ vi.stubGlobal(
 	},
 );
 
+vi.mock("@/utils/delay", () => ({
+	delay: (callback: () => void) => callback(),
+}));
+
 const originalHasInstance = Uint8Array[Symbol.hasInstance];
 
 describe("VerifyMessage", () => {

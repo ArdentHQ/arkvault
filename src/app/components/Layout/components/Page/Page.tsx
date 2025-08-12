@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, useEffect } from "react";
 import { PageProperties } from "./Page.contracts";
 import { NavigationBar } from "@/app/components/NavigationBar";
 import { useDocumentTitle } from "@/app/hooks/use-document-title";
@@ -32,10 +32,18 @@ export const Page: FC<PageProperties> = ({
 	isBackDisabled,
 	children,
 	wrapperClassName,
+	showBottomNavigationBar,
 }) => {
 	useDocumentTitle(pageTitle);
 
-	const { showMobileNavigation, hasFixedFormButtons } = useNavigationContext();
+	const { showMobileNavigation, hasFixedFormButtons, setShowMobileNavigation } = useNavigationContext();
+
+	useEffect(() => {
+		if (showBottomNavigationBar === false) {
+			setShowMobileNavigation(false);
+			return;
+		}
+	}, [showMobileNavigation]);
 
 	return (
 		<PageWrapper showMobileNavigation={showMobileNavigation} hasFixedFormButtons={hasFixedFormButtons}>

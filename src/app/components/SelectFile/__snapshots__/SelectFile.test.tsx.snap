@@ -11,13 +11,6 @@ exports[`SelectFile > should render with json file format 1`] = `
       data-testid="SelectFile__drop-zone"
     >
       <div
-        data-testid="icon-ExtensionJsonLight"
-      >
-        <div
-          style="height: 40px; width: 40px;"
-        />
-      </div>
-      <div
         class="mt-4"
       >
         <span

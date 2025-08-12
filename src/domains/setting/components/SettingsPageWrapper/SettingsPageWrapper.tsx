@@ -28,7 +28,7 @@ export const SettingsWrapper = ({
 	return (
 		<NavigationBlockingProvider>
 			<NavigationBlocker />
-			<Page pageTitle={t(`SETTINGS.${activeSettings.toUpperCase()}.MENU_ITEM`)}>
+			<Page pageTitle={t(`SETTINGS.${activeSettings.toUpperCase()}.MENU_ITEM`)} showBottomNavigationBar={false}>
 				<PageHeader
 					className="lg:-mb-4"
 					title={t("SETTINGS.GENERAL.TITLE")}
