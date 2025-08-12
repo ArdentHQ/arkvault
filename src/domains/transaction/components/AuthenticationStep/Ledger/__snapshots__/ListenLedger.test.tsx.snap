@@ -3,7 +3,7 @@
 exports[`ListenLedger > should emit event on device available 1`] = `
 <div>
   <section
-    class="space-y-8"
+    class="h-full space-y-8 overflow-hidden"
     data-testid="LedgerAuthStep"
   >
     <div
@@ -186,7 +186,7 @@ exports[`ListenLedger > should emit event on device available 1`] = `
 exports[`ListenLedger > should emit event on device not available 1`] = `
 <div>
   <section
-    class="space-y-8"
+    class="h-full space-y-8 overflow-hidden"
     data-testid="LedgerAuthStep"
   >
     <div
