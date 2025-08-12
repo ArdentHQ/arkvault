@@ -84,7 +84,10 @@ export const validatorRegistration = (t: any) => ({
 
 				return true;
 			},
-			unique: debounceAsync(async (publicKey: string) => await profile.validators().publicKeyExists(publicKey, network), 300) as () => Promise<ValidateResult>,
+			unique: debounceAsync(
+				async (publicKey: string) => await profile.validators().publicKeyExists(publicKey, network),
+				300,
+			) as () => Promise<ValidateResult>,
 		},
 	}),
 });

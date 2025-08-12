@@ -1,16 +1,7 @@
 import { ValidateResult } from "react-hook-form";
 import { MutableRefObject } from "react";
 import { debounceAsync } from "@/utils/debounce";
-import { Environment } from "@/app/lib/profiles";
-import { Networks } from "@/app/lib/mainsail";
 import { IProfile } from "@/app/lib/profiles/profile.contract";
-
-class UsernameExistsError extends Error {
-	constructor(message: string) {
-		super(message);
-		this.name = "UsernameExistsError";
-	}
-}
 
 const validateUsername = (t: any, value: string): string | undefined => {
 	if (value.length > 20) {
@@ -55,7 +46,6 @@ export const usernameRegistration = (t: any) => ({
 				if (await profile.usernames().usernameExists(value, { signal: controller.current?.signal })) {
 					return t("COMMON.VALIDATION.EXISTS", { field: t("COMMON.USERNAME") });
 				}
-
 			}, 300) as () => Promise<ValidateResult>,
 		},
 	}),

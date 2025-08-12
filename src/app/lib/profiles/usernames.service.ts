@@ -59,6 +59,6 @@ export class UsernamesService implements IUsernamesService {
 		const publicApiEndpoint = this.#network.config().host("full", this.#profile);
 		const response = await fetch(`${publicApiEndpoint}/wallets/${username}`, options);
 
-		return !!response.ok
+		return !!response.ok;
 	}
 }
