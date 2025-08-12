@@ -1134,7 +1134,7 @@ exports[`Dashboard > should render 1`] = `
                           class="whitespace-nowrap dark:text-theme-dark-50 dim:text-theme-dim-50"
                           data-testid="Amount"
                         >
-                          95.27653252 ARK
+                          95.27653252325068 ARK
                         </span>
                         <div
                           class="relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 md-lg:block dark:border-theme-dark-700 dim:border-theme-dim-700 hidden h-6"
@@ -2926,7 +2926,7 @@ exports[`Dashboard > should render 1`] = `
                                     class="whitespace-nowrap text-sm"
                                     data-testid="Amount"
                                   >
-                                    - 0.00254046 ARK
+                                    - 0.0025404579555 ARK
                                   </span>
                                 </div>
                               </div>
@@ -2962,7 +2962,7 @@ exports[`Dashboard > should render 1`] = `
                                     class="whitespace-nowrap text-sm"
                                     data-testid="Amount"
                                   >
-                                    - 0.00254046 ARK
+                                    - 0.0025404579555 ARK
                                   </span>
                                 </div>
                               </div>
@@ -6211,7 +6211,7 @@ exports[`Dashboard > should render 1`] = `
                                     class="whitespace-nowrap text-sm"
                                     data-testid="Amount"
                                   >
-                                    - 1.50102853 ARK
+                                    - 1.5010285261064 ARK
                                   </span>
                                 </div>
                               </div>
@@ -6247,7 +6247,7 @@ exports[`Dashboard > should render 1`] = `
                                     class="whitespace-nowrap text-sm"
                                     data-testid="Amount"
                                   >
-                                    - 1.50102853 ARK
+                                    - 1.5010285261064 ARK
                                   </span>
                                 </div>
                               </div>
