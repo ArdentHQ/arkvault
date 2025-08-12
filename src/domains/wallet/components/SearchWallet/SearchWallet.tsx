@@ -126,7 +126,7 @@ const SearchSenderWalletItemResponsive = ({ alias, wallet, onAction, selectedAdd
 				<ReceiverItemMobile
 					balance={
 						<Balance
-							className="text-sm text-white"
+							className="leading-[17px] text-sm text-theme-secondary-900 font-semibold dark:text-theme-dark-50 dim:text-theme-dim-50"
 							wallet={wallet}
 							isSynced={isSynced}
 							isLargeScreen={false}
@@ -134,13 +134,7 @@ const SearchSenderWalletItemResponsive = ({ alias, wallet, onAction, selectedAdd
 					}
 					selected={isSelected}
 					onClick={handleButtonClick}
-					address={
-						<TruncateMiddleDynamic
-							data-testid="SenderWalletItemResponsive__address"
-							value={wallet.address()}
-							availableWidth={isSmAndAbove ? undefined : 100}
-						/>
-					}
+					address={wallet.address()}
 					name={alias}
 				/>
 			</td>

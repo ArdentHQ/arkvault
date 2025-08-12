@@ -12,6 +12,9 @@ import {
 import { useBreakpoint } from "@/app/hooks";
 import { Skeleton } from "@/app/components/Skeleton";
 import { TruncateEnd } from "@/app/components/TruncateEnd";
+import { InfoDetail, MultiEntryItem } from "@/app/components/MultiEntryItem/MultiEntryItem";
+import { Button } from "@/app/components/Button";
+import { Address } from "@/app/components/Address";
 
 export const Balance = ({ wallet, isSynced, isLargeScreen = true, className }: BalanceProperties) => {
 	const renderAmount = () => {
@@ -104,33 +107,53 @@ export const ReceiverItemMobile: React.FC<ReceiverItemMobileProperties> = ({
 	const { t } = useTranslation();
 
 	return (
-		<div
-			data-testid={selected ? "ReceiverItemMobile--selected" : "ReceiverItemMobile"}
-			className={cn(
-				"bg-theme-primary-100 dark:bg-theme-background flex h-[117px] w-full cursor-pointer flex-col gap-3 rounded-xl p-2 ring-2",
-				{
-					"ring-theme-primary-100 dark:ring-theme-secondary-800 dim:ring-theme-dim-700": !selected,
-					"ring-theme-primary-600 dark:ring-theme-primary-600 dim:ring-theme-dim-navy-600": selected,
-				},
-			)}
-			tabIndex={onClick ? 0 : -1}
-			onClick={onClick}
-		>
-			<div className="flex flex-col gap-2 pt-2 pl-2">
-				<span className="text-theme-secondary-900 xs:max-w-80 dark:text-theme-secondary-200 dim:text-theme-dim-200 w-full max-w-48 truncate text-sm font-semibold sm:max-w-128">
-					{name}
-				</span>
-				<span className="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 text-xs font-semibold">
-					{address}
-				</span>
-			</div>
-
-			<div className="bg-theme-primary-500 dim:bg-theme-dim-navy-600 dim:text-theme-dim-50 flex flex-row items-center justify-between overflow-hidden rounded-lg text-sm font-semibold text-white">
-				<div className="pl-2">{balance}</div>
-				<button className="bg-theme-primary-600 dim:bg-theme-dim-navy-600 flex h-full items-center justify-center px-5 py-3">
-					{t("COMMON.SELECT")}
-				</button>
-			</div>
-		</div>
-	);
+		<MultiEntryItem
+			dataTestId={selected ? "ReceiverItemMobile--selected" : "ReceiverItemMobile"}
+			className={cn({"border-theme-success-200 dark:border-theme-success-700 dim:border-theme-success-700": selected})}
+			titleWrapperClassName={cn({"bg-theme-success-100": selected})}
+			titleSlot={
+				<div className="flex w-full items-center justify-between">
+					<div className={cn("max-w-56 truncate text-sm leading-[17px] font-semibold whitespace-nowrap", {
+						"text-theme-secondary-700 dark:text-theme-secondary-200 dim:text-theme-dim-200": !selected,
+						"text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50": selected,
+					})}>
+						{name}
+					</div>
+					<Button
+						onClick={onClick}
+						data-testid="AddRecipientItem--deleteButton_mobile"
+						size="icon"
+						className={cn("leading-[17px] text-sm p-0", {
+							"text-theme-navy-600 dark:text-theme-secondary-500 dim:text-theme-dim-50": !selected,
+							"text-theme-success-600 dark:text-theme-green-600 dim:text-theme-green-600": selected,
+						})}
+						variant="transparent"
+					>
+						{selected ? "Selected" : "Select"}
+					</Button>
+				</div>
+			}
+			bodySlot={
+				<div>
+					<div className="space-y-4">
+						<InfoDetail
+							label={t("COMMON.ADDRESS")}
+							body={
+								<Address
+									showCopyButton={true}
+									truncateOnTable={true}
+									address={address}
+									addressClass="leading-[17px] text-sm text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50"
+								/>
+							}
+						/>
+						<InfoDetail
+							label={t("COMMON.BALANCE")}
+							body={balance}
+						/>
+					</div>
+				</div>
+			}
+		/>
+	)
 };

@@ -21,7 +21,7 @@ export interface RecipientItemMobileProperties extends MobileItemProperties {
 }
 
 export interface ReceiverItemMobileProperties extends MobileItemProperties {
-	address: React.ReactNode;
+	address: string;
 	name: string;
 	balance: React.ReactNode;
 }
