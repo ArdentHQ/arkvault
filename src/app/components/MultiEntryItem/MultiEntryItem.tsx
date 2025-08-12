@@ -45,7 +45,7 @@ export const MultiEntryItem = ({
 			<div
 				className={cn("flex w-full min-w-0 flex-1 flex-col", {
 					"md:w-auto md:items-start md:space-y-1 md:space-x-0": size === "md",
-					"sm:w-auto sm:items-start sm:space-y-1 sm:space-x-0": size === "sm",
+					"my-0 sm:w-auto sm:items-start sm:space-y-1 sm:space-x-0": size === "sm",
 				})}
 			>
 				<div
