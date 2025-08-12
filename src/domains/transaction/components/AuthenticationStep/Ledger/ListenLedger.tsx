@@ -56,7 +56,7 @@ export const ListenLedger = ({
 	}, [hasDeviceAvailable, onDeviceAvailable]);
 
 	return (
-		<section data-testid="LedgerAuthStep" className="space-y-8">
+		<section data-testid="LedgerAuthStep" className="h-full space-y-8 overflow-hidden">
 			{!noHeading && <Header title={t("WALLETS.CONNECT_LEDGER.HEADER")} />}
 
 			{subject === "message" && (
