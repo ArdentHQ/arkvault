@@ -70,6 +70,22 @@ describe("WalletVote", () => {
 		ledgerMock.mockRestore();
 	});
 
+	it("should render tooltip when wallet does not have sufficient funds", async () => {
+		const balanceMock = vi.spyOn(wallet, "balance").mockReturnValue(0);
+
+		render(
+			<WalletVote wallet={wallet} wallets={[wallet]} onButtonClick={vi.fn()} votes={votes} isLoadingVotes={false} />,
+		);
+
+		await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
+
+		await userEvent.hover(screen.getByTestId("WalletVote__button"));
+
+		expect(screen.getByText(/Voting disabled due to insufficient balance./)).toBeInTheDocument();
+
+		balanceMock.mockRestore();
+	});
+
 	it("should render skeleton if loading", async () => {
 		const { asFragment } = render(
 			<WalletVote wallet={wallet} onButtonClick={vi.fn()} votes={votes} isLoadingVotes={true} />,
