@@ -487,6 +487,7 @@ export const translations = {
 	WALLET: "Wallet",
 	WALLETS: "Wallets",
 	WALLET_ADDRESS: "Wallet Address",
+	WALLET_NAME: "Wallet Name",
 	WALLET_TYPE: "Wallet Type",
 	WARNING: "Warning",
 	WEBSITE: "Website",
