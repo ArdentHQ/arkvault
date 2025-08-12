@@ -74,7 +74,13 @@ describe("WalletVote", () => {
 		const balanceMock = vi.spyOn(wallet, "balance").mockReturnValue(0);
 
 		render(
-			<WalletVote wallet={wallet} wallets={[wallet]} onButtonClick={vi.fn()} votes={votes} isLoadingVotes={false} />,
+			<WalletVote
+				wallet={wallet}
+				wallets={[wallet]}
+				onButtonClick={vi.fn()}
+				votes={votes}
+				isLoadingVotes={false}
+			/>,
 		);
 
 		await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
