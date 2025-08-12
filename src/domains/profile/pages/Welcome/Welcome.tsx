@@ -97,8 +97,6 @@ export const Welcome = () => {
 			}
 
 			setProfileTheme(profile);
-
-			console.log("navigating");
 			navigate(`/profiles/${profile.id()}/${subPath}`);
 		},
 		[location, isDeeplink],
@@ -283,7 +281,7 @@ export const Welcome = () => {
 								</div>
 
 								<div className="static bottom-2 mt-8 w-full">
-									<p className="text-theme-secondary-text mb-4 text-center text-base sm:mb-0">
+									<span className="text-theme-secondary-text mb-4 text-center text-base sm:mb-0">
 										<span>{t("PROFILE.PAGE_WELCOME.HAS_EXPORTED_PROFILES")} </span>
 										<Link
 											to="/profiles/import"
@@ -291,7 +289,7 @@ export const Welcome = () => {
 										>
 											{t("PROFILE.PAGE_WELCOME.IMPORT_PROFILE")}
 										</Link>
-									</p>
+									</span>
 								</div>
 							</div>
 						</div>

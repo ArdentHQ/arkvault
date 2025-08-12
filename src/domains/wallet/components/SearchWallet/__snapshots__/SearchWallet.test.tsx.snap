@@ -325,7 +325,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                               class="whitespace-nowrap text-sm leading-[17px]"
                               data-testid="Amount"
                             >
-                              95.27653252 ARK
+                              95.27653252325068 ARK
                             </span>
                           </div>
                         </td>
@@ -390,7 +390,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                               class="whitespace-nowrap text-sm leading-[17px]"
                               data-testid="Amount"
                             >
-                              0.01989216 ARK
+                              0.01989216404723 ARK
                             </span>
                           </div>
                         </td>
@@ -752,7 +752,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                               class="whitespace-nowrap text-sm leading-[17px]"
                               data-testid="Amount"
                             >
-                              95.27653252 ARK
+                              95.27653252325068 ARK
                             </span>
                           </div>
                         </td>
@@ -817,7 +817,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                               class="whitespace-nowrap text-sm leading-[17px]"
                               data-testid="Amount"
                             >
-                              0.01989216 ARK
+                              0.01989216404723 ARK
                             </span>
                           </div>
                         </td>
@@ -1179,7 +1179,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                               class="whitespace-nowrap text-sm leading-[17px]"
                               data-testid="Amount"
                             >
-                              95.27653252 ARK
+                              95.27653252325068 ARK
                             </span>
                           </div>
                         </td>
@@ -1242,7 +1242,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                               class="whitespace-nowrap text-sm leading-[17px]"
                               data-testid="Amount"
                             >
-                              0.01989216 ARK
+                              0.01989216404723 ARK
                             </span>
                           </div>
                         </td>
@@ -1528,7 +1528,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 1`
                                   class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 dim:text-theme-dim-50 text-sm text-white"
                                   data-testid="Amount"
                                 >
-                                  95.27653252 ARK
+                                  95.27653252325068 ARK
                                 </span>
                               </div>
                               <button
@@ -1580,7 +1580,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 1`
                                   class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 dim:text-theme-dim-50 text-sm text-white"
                                   data-testid="Amount"
                                 >
-                                  0.01989216 ARK
+                                  0.01989216404723 ARK
                                 </span>
                               </div>
                               <button
@@ -1854,7 +1854,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 2`
                                   class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 dim:text-theme-dim-50 text-sm text-white"
                                   data-testid="Amount"
                                 >
-                                  95.27653252 ARK
+                                  95.27653252325068 ARK
                                 </span>
                               </div>
                               <button
@@ -1906,7 +1906,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 2`
                                   class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 dim:text-theme-dim-50 text-sm text-white"
                                   data-testid="Amount"
                                 >
-                                  0.01989216 ARK
+                                  0.01989216404723 ARK
                                 </span>
                               </div>
                               <button
@@ -2180,7 +2180,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive with se
                                   class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 dim:text-theme-dim-50 text-sm text-white"
                                   data-testid="Amount"
                                 >
-                                  95.27653252 ARK
+                                  95.27653252325068 ARK
                                 </span>
                               </div>
                               <button
@@ -2232,7 +2232,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive with se
                                   class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 dim:text-theme-dim-50 text-sm text-white"
                                   data-testid="Amount"
                                 >
-                                  0.01989216 ARK
+                                  0.01989216404723 ARK
                                 </span>
                               </div>
                               <button
@@ -2934,7 +2934,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                               class="whitespace-nowrap text-sm leading-[17px]"
                               data-testid="Amount"
                             >
-                              95.27653252 ARK
+                              95.27653252325068 ARK
                             </span>
                           </div>
                         </td>
@@ -2997,7 +2997,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                               class="whitespace-nowrap text-sm leading-[17px]"
                               data-testid="Amount"
                             >
-                              0.01989216 ARK
+                              0.01989216404723 ARK
                             </span>
                           </div>
                         </td>
@@ -3359,7 +3359,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                               class="whitespace-nowrap text-sm leading-[17px]"
                               data-testid="Amount"
                             >
-                              95.27653252 ARK
+                              95.27653252325068 ARK
                             </span>
                           </div>
                         </td>
@@ -3424,7 +3424,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                               class="whitespace-nowrap text-sm leading-[17px]"
                               data-testid="Amount"
                             >
-                              0.01989216 ARK
+                              0.01989216404723 ARK
                             </span>
                           </div>
                         </td>
@@ -3835,7 +3835,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                               class="whitespace-nowrap text-sm leading-[17px]"
                               data-testid="Amount"
                             >
-                              95.27653252 ARK
+                              95.27653252325068 ARK
                             </span>
                           </div>
                         </td>
@@ -3914,7 +3914,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                               class="whitespace-nowrap text-sm leading-[17px]"
                               data-testid="Amount"
                             >
-                              0.01989216 ARK
+                              0.01989216404723 ARK
                             </span>
                           </div>
                         </td>
@@ -4339,7 +4339,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                               class="whitespace-nowrap text-sm leading-[17px]"
                               data-testid="Amount"
                             >
-                              95.27653252 ARK
+                              95.27653252325068 ARK
                             </span>
                           </div>
                         </td>
@@ -4418,7 +4418,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                               class="whitespace-nowrap text-sm leading-[17px]"
                               data-testid="Amount"
                             >
-                              0.01989216 ARK
+                              0.01989216404723 ARK
                             </span>
                           </div>
                         </td>
@@ -4843,7 +4843,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                               class="whitespace-nowrap text-sm leading-[17px]"
                               data-testid="Amount"
                             >
-                              95.27653252 ARK
+                              95.27653252325068 ARK
                             </span>
                           </div>
                         </td>
@@ -4920,7 +4920,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                               class="whitespace-nowrap text-sm leading-[17px]"
                               data-testid="Amount"
                             >
-                              0.01989216 ARK
+                              0.01989216404723 ARK
                             </span>
                           </div>
                         </td>
@@ -5220,7 +5220,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 1`]
                                   class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 dim:text-theme-dim-50 text-sm text-white"
                                   data-testid="Amount"
                                 >
-                                  95.27653252 ARK
+                                  95.27653252325068 ARK
                                 </span>
                               </div>
                               <button
@@ -5272,7 +5272,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 1`]
                                   class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 dim:text-theme-dim-50 text-sm text-white"
                                   data-testid="Amount"
                                 >
-                                  0.01989216 ARK
+                                  0.01989216404723 ARK
                                 </span>
                               </div>
                               <button
@@ -5546,7 +5546,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 2`]
                                   class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 dim:text-theme-dim-50 text-sm text-white"
                                   data-testid="Amount"
                                 >
-                                  95.27653252 ARK
+                                  95.27653252325068 ARK
                                 </span>
                               </div>
                               <button
@@ -5598,7 +5598,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 2`]
                                   class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 dim:text-theme-dim-50 text-sm text-white"
                                   data-testid="Amount"
                                 >
-                                  0.01989216 ARK
+                                  0.01989216404723 ARK
                                 </span>
                               </div>
                               <button
@@ -5872,7 +5872,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive with sel
                                   class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 dim:text-theme-dim-50 text-sm text-white"
                                   data-testid="Amount"
                                 >
-                                  95.27653252 ARK
+                                  95.27653252325068 ARK
                                 </span>
                               </div>
                               <button
@@ -5924,7 +5924,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive with sel
                                   class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 dim:text-theme-dim-50 text-sm text-white"
                                   data-testid="Amount"
                                 >
-                                  0.01989216 ARK
+                                  0.01989216404723 ARK
                                 </span>
                               </div>
                               <button
@@ -6738,7 +6738,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                               class="whitespace-nowrap text-sm leading-[17px]"
                               data-testid="Amount"
                             >
-                              95.27653252 ARK
+                              95.27653252325068 ARK
                             </span>
                           </div>
                         </td>
@@ -6815,7 +6815,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                               class="whitespace-nowrap text-sm leading-[17px]"
                               data-testid="Amount"
                             >
-                              0.01989216 ARK
+                              0.01989216404723 ARK
                             </span>
                           </div>
                         </td>
@@ -7240,7 +7240,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                               class="whitespace-nowrap text-sm leading-[17px]"
                               data-testid="Amount"
                             >
-                              95.27653252 ARK
+                              95.27653252325068 ARK
                             </span>
                           </div>
                         </td>
@@ -7319,7 +7319,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                               class="whitespace-nowrap text-sm leading-[17px]"
                               data-testid="Amount"
                             >
-                              0.01989216 ARK
+                              0.01989216404723 ARK
                             </span>
                           </div>
                         </td>

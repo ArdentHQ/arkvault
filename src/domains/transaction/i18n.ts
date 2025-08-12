@@ -93,6 +93,7 @@ export const translations = {
 		ADVANCED: "Advanced",
 		SIMPLE: "Simple",
 	},
+	INSUFFICIENT_BALANCE: "The current balance does not cover the transaction amount plus fees.",
 	INVALID_MNEMONIC: "Invalid Mnemonic",
 	INVALID_URL: "Invalid URL",
 	LEARN_MORE_ABOUT_BLS_KEYS: "Learn more about BLS keys",

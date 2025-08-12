@@ -210,7 +210,7 @@ exports[`Add Recipient item > should render with size xs 1`] = `
       class="flex flex-col items-center space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4"
     >
       <div
-        class="flex w-full min-w-0 flex-1 flex-col sm:w-auto sm:items-start sm:space-y-1 sm:space-x-0"
+        class="flex w-full min-w-0 flex-1 flex-col my-0 sm:w-auto sm:items-start sm:space-y-1 sm:space-x-0"
       >
         <div
           class="bg-theme-secondary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 flex w-full flex-1 flex-row items-center justify-between px-4 py-3 dim:sm:bg-transparent sm:bg-transparent sm:p-0 dark:sm:bg-transparent"

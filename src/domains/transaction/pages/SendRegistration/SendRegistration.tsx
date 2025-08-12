@@ -5,6 +5,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 
 import { useTranslation } from "react-i18next";
 import { SendRegistrationForm } from "./SendRegistration.contracts";
+import { usePendingTransactions } from "@/domains/transaction/hooks/use-pending-transactions";
 import { Form } from "@/app/components/Form";
 import { Page, Section } from "@/app/components/Layout";
 import { StepNavigation } from "@/app/components/StepNavigation";
@@ -42,6 +43,7 @@ export const SendRegistration = () => {
 	const { env } = useEnvironmentContext();
 	const activeProfile = useActiveProfile();
 	const { common, validatorRegistration } = useValidation();
+	const { addPendingTransaction } = usePendingTransactions();
 
 	const { hasDeviceAvailable, isConnected, connect, ledgerDevice } = useLedgerContext();
 
@@ -189,6 +191,7 @@ export const SendRegistration = () => {
 					signatory,
 				});
 
+				addPendingTransaction(transaction);
 				setTransaction(transaction);
 				handleNext();
 			}
@@ -201,6 +204,7 @@ export const SendRegistration = () => {
 					signatory,
 				});
 
+				addPendingTransaction(transaction);
 				setTransaction(transaction);
 				handleNext();
 			}

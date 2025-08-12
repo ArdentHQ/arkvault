@@ -8,6 +8,7 @@ import { useNavigate } from "react-router-dom";
 import { FormStep } from "./FormStep";
 import { VoteLedgerReview } from "./LedgerReview";
 import { ReviewStep } from "./ReviewStep";
+import { usePendingTransactions } from "@/domains/transaction/hooks/use-pending-transactions";
 import { Form } from "@/app/components/Form";
 import { Page, Section } from "@/app/components/Layout";
 import { StepNavigation } from "@/app/components/StepNavigation";
@@ -54,6 +55,8 @@ export const SendVote = () => {
 		network: activeNetwork,
 		profile: activeProfile,
 	});
+
+	const { addPendingTransaction } = usePendingTransactions();
 
 	const walletFromUrl = useActiveWalletWhenNeeded(false);
 	const initialStep = useMemo(() => (walletFromUrl ? Step.ReviewStep : Step.FormStep), [walletFromUrl]);
@@ -324,6 +327,8 @@ export const SendVote = () => {
 
 					await persist();
 
+					addPendingTransaction(transaction);
+
 					setTransaction(transaction);
 
 					setActiveTab(Step.SummaryStep);
@@ -376,6 +381,8 @@ export const SendVote = () => {
 
 					await persist();
 
+					addPendingTransaction(voteResult.transaction);
+
 					setTransaction(voteResult.transaction);
 
 					setActiveTab(Step.SummaryStep);
@@ -411,6 +418,8 @@ export const SendVote = () => {
 				handleBroadcastError(response);
 
 				await persist();
+
+				addPendingTransaction(transaction);
 
 				setTransaction(transaction);
 

@@ -10,7 +10,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
       >
         <td>
           <div
-            class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start pr-0 lg:pr-3 xl:min-h-11 xl:max-h-11 xl:pt-2.5 lg:min-w-36 min-h-[66px] py-1 my-0 md-lg:min-h-14"
+            class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start pr-0 lg:px-0 lg:pl-3 xl:min-h-11 xl:max-h-11 xl:pt-2.5 lg:min-w-36 min-h-[66px] py-1 my-0 md-lg:min-h-14"
           >
             <div
               class="flex flex-col gap-1 font-semibold"
@@ -464,7 +464,7 @@ exports[`TransactionRow > should render responsive (lg) 1`] = `
       >
         <td>
           <div
-            class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start pr-0 lg:pr-3 xl:min-h-11 xl:max-h-11 xl:pt-2.5 lg:min-w-36 min-h-[66px] py-1 my-0 md-lg:min-h-14"
+            class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start pr-0 lg:px-0 lg:pl-3 xl:min-h-11 xl:max-h-11 xl:pt-2.5 lg:min-w-36 min-h-[66px] py-1 my-0 md-lg:min-h-14"
           >
             <div
               class="flex flex-col gap-1 font-semibold"
@@ -933,7 +933,7 @@ exports[`TransactionRow > should render responsive (md) 1`] = `
       >
         <td>
           <div
-            class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start pr-0 lg:pr-3 xl:min-h-11 xl:max-h-11 xl:pt-2.5 lg:min-w-36 min-h-[66px] py-1 my-0 md-lg:min-h-14"
+            class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start pr-0 lg:px-0 lg:pl-3 xl:min-h-11 xl:max-h-11 xl:pt-2.5 lg:min-w-36 min-h-[66px] py-1 my-0 md-lg:min-h-14"
           >
             <div
               class="flex flex-col gap-1 font-semibold"
@@ -1680,7 +1680,7 @@ exports[`TransactionRow > should render responsive (xl) 1`] = `
       >
         <td>
           <div
-            class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start pr-0 lg:pr-3 xl:min-h-11 xl:max-h-11 xl:pt-2.5 lg:min-w-36 min-h-[66px] py-1 my-0 md-lg:min-h-14"
+            class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start pr-0 lg:px-0 lg:pl-3 xl:min-h-11 xl:max-h-11 xl:pt-2.5 lg:min-w-36 min-h-[66px] py-1 my-0 md-lg:min-h-14"
           >
             <div
               class="flex flex-col gap-1 font-semibold"
@@ -2968,7 +2968,7 @@ exports[`TransactionRow > should render with currency 1`] = `
       >
         <td>
           <div
-            class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start pr-0 lg:pr-3 xl:min-h-11 xl:max-h-11 xl:pt-2.5 lg:min-w-36 min-h-[66px] py-1 my-0 md-lg:min-h-14"
+            class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start pr-0 lg:px-0 lg:pl-3 xl:min-h-11 xl:max-h-11 xl:pt-2.5 lg:min-w-36 min-h-[66px] py-1 my-0 md-lg:min-h-14"
           >
             <div
               class="flex flex-col gap-1 font-semibold"
