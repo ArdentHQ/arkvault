@@ -7,6 +7,8 @@ import { SortBy } from "@/app/components/Table";
 import { delay } from "@/utils/delay";
 import { useTransactionTypes } from "./use-transaction-types";
 import { DateTime } from "@/app/lib/intl";
+import { PendingTransactionsService } from "@/app/lib/mainsail/pending-transactions.service";
+import { HttpClient } from "@/app/lib/mainsail/http-client";
 
 interface TransactionsState {
 	transactions: DTO.ExtendedConfirmedTransactionData[];
@@ -66,7 +68,6 @@ const filterTransactions = ({ transactions }: FilterTransactionProperties) =>
 		if (!transaction.isSent()) {
 			return true;
 		}
-
 		return transaction.isConfirmed();
 	});
 
@@ -77,7 +78,6 @@ const syncWallets = async (wallets: Contracts.IReadWriteWallet[]) => {
 			if (wallet.hasSyncedWithNetwork()) {
 				return;
 			}
-
 			return wallet.synchroniser().identity({ ttl });
 		}),
 	);
@@ -89,7 +89,6 @@ const getOrderByStr = ({ column, desc }: SortBy): string => {
 		amount: "amount",
 		date: "timestamp",
 	};
-
 	return columnMap[column] + ":" + (desc ? "desc" : "asc");
 };
 
@@ -98,7 +97,6 @@ const removeConfirmedPendingTransactions = (
 	removePendingTransaction: (hash: string) => void,
 ) => {
 	const confirmedHashes = new Set(confirmedTransactions.map((tx) => tx.hash()));
-
 	return (pendingHash: string) => {
 		if (confirmedHashes.has(pendingHash)) {
 			removePendingTransaction(pendingHash);
@@ -116,7 +114,6 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 	const allTransactionTypes = [...types.core];
 
 	const [sortBy, setSortBy] = useState<SortBy>({ column: "date", desc: true });
-
 	const orderBy = getOrderByStr(sortBy);
 
 	const [
@@ -144,9 +141,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 	});
 
 	const hasMorePages = (itemsLength: number, hasMorePages: boolean, itemsLimit = LIMIT) => {
-		if (itemsLength < itemsLimit) {
-			return false;
-		}
+		if (itemsLength < itemsLimit) return false;
 		return hasMorePages;
 	};
 
@@ -164,21 +159,16 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 			: relevantPendingTxs.filter((tx) => selectedTransactionTypes.includes(tx.type));
 
 		const modeFilteredPendingTxs = filteredPendingTxs.filter((tx) => {
-			if (activeMode === "sent") {
-				return walletAddresses.includes(tx.from);
-			}
-			if (activeMode === "received") {
-				return walletAddresses.includes(tx.to);
-			}
+			if (activeMode === "sent") return walletAddresses.includes(tx.from);
+			if (activeMode === "received") return walletAddresses.includes(tx.to);
 			return true;
 		});
 
 		const pendingAsConfirmed = modeFilteredPendingTxs.map((tx) => {
 			const timestampObj = DateTime.make(tx.timestamp);
-
 			return {
 				...tx,
-				blockHash: () => {},
+				blockHash: () => { },
 				confirmations: () => ({ toNumber: () => 0 }),
 				convertedAmount: () => tx.convertedAmount,
 				convertedTotal: () => tx.convertedTotal,
@@ -226,12 +216,8 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 			}
 
 			if (sortBy.desc) {
-				if (a.isPending && !b.isPending) {
-					return -1;
-				}
-				if (!a.isPending && b.isPending) {
-					return 1;
-				}
+				if (a.isPending && !b.isPending) return -1;
+				if (!a.isPending && b.isPending) return 1;
 			}
 
 			return 0;
@@ -239,6 +225,31 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 	}, [transactions, pendingTransactions, wallets, selectedTransactionTypes, activeMode, sortBy, allTransactionTypes]);
 
 	const selectedWalletAddresses = wallets.map((wallet) => wallet.address()).join("-");
+
+	const pendingTransactionsService = useRef<PendingTransactionsService | null>(null);
+
+	useEffect(() => {
+		if (!wallets || wallets.length === 0) {
+			pendingTransactionsService.current = null;
+			return;
+		}
+
+		const firstWallet = wallets[0];
+
+		try {
+			const host = firstWallet.network().config().host("tx", firstWallet.profile());
+			const httpClient = new HttpClient(10_000);
+
+			pendingTransactionsService.current = new PendingTransactionsService({
+				httpClient,
+				host,
+			});
+		} catch (error) {
+			/* istanbul ignore next -- @preserve */
+			console.error("Failed to initialize PendingTransactionsService:", error);
+			pendingTransactionsService.current = null;
+		}
+	}, [wallets]);
 
 	useEffect(() => {
 		const loadTransactions = async () => {
@@ -252,9 +263,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 				});
 
 				/* istanbul ignore next -- @preserve */
-				if (!isMounted.current) {
-					return;
-				}
+				if (!isMounted.current) return;
 
 				const addresses = response
 					.items()
@@ -263,10 +272,9 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 						transaction.to(),
 						...transaction.recipients().map(({ address }) => address),
 					])
-					.filter(Boolean); // This is to filter out null values, for example a contract deployment recipient
+					.filter(Boolean);
 
 				const uniqueAddresses = [...new Set(addresses)] as string[];
-
 				const networks = wallets.map((wallet) => wallet.network());
 
 				await syncOnChainUsernames({ addresses: uniqueAddresses, networks, profile });
@@ -319,13 +327,10 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 			cursor.current = 1;
 
 			/* istanbul ignore next -- @preserve */
-			if (!isMounted.current) {
-				return;
-			}
+			if (!isMounted.current) return;
 
 			// @ts-ignore
 			setState({
-				// Don't set isLoading when there are no wallets
 				activeMode,
 				activeTransactionType,
 				isLoadingMore: false,
@@ -420,20 +425,13 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 		});
 
 		const items = filterTransactions({ transactions: response });
-
 		const latestTransaction = items[0];
 
 		const foundNew =
 			latestTransaction &&
-			/* istanbul ignore next -- @preserve */
-			!transactions.some(
-				/* istanbul ignore next -- @preserve */
-				(transaction) => latestTransaction.hash() === transaction.hash(),
-			);
+			!transactions.some((transaction) => latestTransaction.hash() === transaction.hash());
 
-		if (!foundNew) {
-			return;
-		}
+		if (!foundNew) return;
 
 		setState((state) => ({
 			...state,
@@ -443,13 +441,29 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 		}));
 	};
 
-	const hasEmptyResults = useMemo(() => {
-		if (selectedTransactionTypes?.length === 0) {
-			return true;
-		}
+	const fetchUnconfirmedAndLog = useCallback(async () => {
+		const svc = pendingTransactionsService.current;
+		if (!svc) return;
 
-		return mergedTransactions.length === 0 && !isLoadingTransactions;
-	}, [isLoadingTransactions, mergedTransactions.length]);
+		try {
+			const res = await svc.listUnconfirmed();
+			const addrSet = new Set(wallets.map((w) => w.address().toLowerCase()));
+
+			const filtered = (res?.results ?? []).filter((tx) => {
+				const from = tx.from?.toLowerCase?.();
+				const to = tx.to?.toLowerCase?.();
+				return (from && addrSet.has(from)) || (to && addrSet.has(to));
+			});
+
+			if (filtered.length > 0) {
+				console.log("[unconfirmed txs/filtered]", filtered);
+			} else {
+				console.log("[unconfirmed txs/filtered] none");
+			}
+		} catch (error) {
+			console.error("Failed to fetch unconfirmed transactions:", error);
+		}
+	}, [wallets]);
 
 	const addresses = wallets
 		.map((wallet) => wallet.address())
@@ -474,6 +488,21 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 		start();
 		return () => stop();
 	}, [start, stop]);
+
+	useEffect(() => {
+		if (!pendingTransactionsService.current) return;
+
+		const id = setInterval(() => {
+			fetchUnconfirmedAndLog();
+		}, 5_000);
+
+		return () => clearInterval(id);
+	}, [fetchUnconfirmedAndLog, selectedWalletAddresses]);
+
+	const hasEmptyResults = useMemo(() => {
+		if (selectedTransactionTypes?.length === 0) return true;
+		return mergedTransactions.length === 0 && !isLoadingTransactions;
+	}, [isLoadingTransactions, mergedTransactions.length]);
 
 	return {
 		activeMode,
