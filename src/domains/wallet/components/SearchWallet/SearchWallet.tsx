@@ -1,144 +1,13 @@
 import { Contracts } from "@/app/lib/profiles";
-import React, { FC, useCallback, useMemo } from "react";
+import React, { FC, useCallback } from "react";
 import { useTranslation } from "react-i18next";
-import { Column } from "react-table";
-import { SearchWalletListItemProperties, SearchWalletProperties } from "./SearchWallet.contracts";
-import { Address } from "@/app/components/Address";
-import { Amount } from "@/app/components/Amount";
-import { Button } from "@/app/components/Button";
+import { SearchWalletProperties } from "./SearchWallet.contracts";
 import { EmptyResults } from "@/app/components/EmptyResults";
-import { HeaderSearchBar } from "@/app/components/Header/HeaderSearchBar";
 import { Modal } from "@/app/components/Modal";
-import { Table, TableCell, TableRow } from "@/app/components/Table";
 import { useBreakpoint, useWalletAlias } from "@/app/hooks";
 import { useSearchWallet } from "@/app/hooks/use-search-wallet";
 import { HeaderSearchInput } from "@/app/components/Header/HeaderSearchInput";
-import { isFullySynced } from "@/domains/wallet/utils/is-fully-synced";
-import { Balance, ReceiverItemMobile } from "@/app/components/WalletListItem/WalletListItem.blocks";
-import { Tooltip } from "@/app/components/Tooltip";
-import { isLedgerWalletCompatible } from "@/utils/wallet-utils";
-import { TableWrapper } from "@/app/components/Table/TableWrapper";
-import cn from "classnames";
-
-const SearchWalletListItem = ({
-	index,
-	disabled,
-	alias,
-	wallet,
-	exchangeCurrency,
-	showConvertedValue,
-	onAction,
-	selectedAddress,
-}: SearchWalletListItemProperties) => {
-	const { t } = useTranslation();
-
-	const isSelected = useMemo(() => selectedAddress === wallet.address(), [selectedAddress, wallet]);
-
-	const renderButton = () => {
-		if (isSelected) {
-			return (
-				<Button
-					data-testid={`SearchWalletListItem__selected-${index}`}
-					size="icon"
-					variant="transparent"
-					onClick={() => onAction({ address: wallet.address(), name: alias, network: wallet.network() })}
-					className="text-theme-primary-reverse-600 dim:text-theme-dim-navy-700 -mr-3 py-0 text-sm leading-[17px]"
-				>
-					{t("COMMON.SELECTED")}
-				</Button>
-			);
-		}
-
-		return (
-			<Tooltip content={t("TRANSACTION.TRANSACTION_TYPE_NOT_AVAILABLE")} disabled={!disabled}>
-				<div>
-					<Button
-						data-testid={`SearchWalletListItem__select-${index}`}
-						disabled={disabled || !isLedgerWalletCompatible(wallet)}
-						size="icon"
-						variant="transparent"
-						className="text-theme-primary-600 dim:text-theme-dim-navy-600 -mr-3 text-sm leading-[17px]"
-						onClick={() => onAction({ address: wallet.address(), name: alias, network: wallet.network() })}
-					>
-						{t("COMMON.SELECT")}
-					</Button>
-				</div>
-			</Tooltip>
-		);
-	};
-
-	return (
-		<TableRow className="relative">
-			<TableCell
-				variant="start"
-				innerClassName="space-x-4 my-0.5"
-				className="w-full max-w-28"
-				isSelected={isSelected}
-			>
-				<Address
-					walletName={alias}
-					address={wallet.address()}
-					walletNameClass="text-sm leading-[17px]"
-					addressClass="leading-[17px] text-sm text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200"
-				/>
-			</TableCell>
-
-			<TableCell innerClassName="font-semibold justify-end my-0.5" isSelected={isSelected}>
-				<Amount value={wallet.balance()} ticker={wallet.currency()} className="text-sm leading-[17px]" />
-			</TableCell>
-
-			{showConvertedValue && (
-				<TableCell
-					innerClassName="text-theme-secondary-text justify-end dim:text-theme-dim-50"
-					className="hidden xl:table-cell"
-					isSelected={isSelected}
-				>
-					<Amount
-						value={wallet.convertedBalance()}
-						ticker={exchangeCurrency}
-						className="text-sm leading-[17px]"
-					/>
-				</TableCell>
-			)}
-
-			<TableCell variant="end" innerClassName="justify-end my-0.5" isSelected={isSelected}>
-				{renderButton()}
-			</TableCell>
-		</TableRow>
-	);
-};
-
-const SearchSenderWalletItemResponsive = ({ alias, wallet, onAction, selectedAddress }) => {
-	const handleButtonClick = useCallback(
-		() => onAction({ address: wallet.address(), name: alias, network: wallet.network() }),
-		[alias, wallet],
-	);
-
-	const isSelected = useMemo(() => selectedAddress === wallet.address(), [selectedAddress, wallet]);
-
-	const isSynced = isFullySynced(wallet);
-
-	return (
-		<tr data-testid="SenderWalletItemResponsive--item">
-			<td className="pt-3">
-				<ReceiverItemMobile
-					balance={
-						<Balance
-							className="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm leading-[17px] font-semibold"
-							wallet={wallet}
-							isSynced={isSynced}
-							isLargeScreen={false}
-						/>
-					}
-					selected={isSelected}
-					onClick={handleButtonClick}
-					address={wallet.address()}
-					name={alias}
-				/>
-			</td>
-		</tr>
-	);
-};
+import { ReceiverItem, ReceiverItemMobile } from "@/app/components/WalletListItem/WalletListItem.blocks";
 
 export const SearchWallet: FC<SearchWalletProperties> = ({
 	isOpen,
@@ -159,75 +28,7 @@ export const SearchWallet: FC<SearchWalletProperties> = ({
 
 	const { t } = useTranslation();
 
-	const { isXs, isSm, isMdAndAbove } = useBreakpoint();
-
-	const useResponsive = useMemo<boolean>(() => isXs || isSm, [isXs, isSm]);
-
-	const columns = useMemo<Column<Contracts.IReadWriteWallet>[]>(() => {
-		const commonColumns: Column<Contracts.IReadWriteWallet>[] = [
-			{
-				Header: t("COMMON.ADDRESS"),
-				accessor: (wallet: Contracts.IReadWriteWallet) => wallet.alias(),
-				headerClassName: "no-border",
-			},
-			{
-				Header: t("COMMON.BALANCE"),
-				accessor: (wallet: Contracts.IReadWriteWallet) => wallet.balance().toFixed(0),
-				className: "justify-end",
-				headerClassName: "no-border",
-			},
-		];
-
-		if (showConvertedValue) {
-			return [
-				...commonColumns,
-				{
-					Header: t("COMMON.FIAT_VALUE"),
-					accessor: (wallet: Contracts.IReadWriteWallet) => wallet.convertedBalance().toFixed(0),
-					className: "justify-end",
-					headerClassName: "hidden xl:table-cell",
-					noWrap: true,
-				},
-				{
-					Header: (
-						<HeaderSearchBar
-							placeholder={searchPlaceholder}
-							offsetClassName="top-1/3 -translate-y-8 -translate-x-6"
-							onSearch={setSearchKeyword}
-							onReset={() => setSearchKeyword("")}
-							debounceTimeout={100}
-							noToggleBorder
-							alwaysDisplayClearButton
-						/>
-					),
-					accessor: "search",
-					className: "justify-end",
-					disableSortBy: true,
-				},
-			] as Column<Contracts.IReadWriteWallet>[];
-		}
-
-		return [
-			...commonColumns,
-			{
-				Header: (
-					<HeaderSearchBar
-						placeholder={searchPlaceholder}
-						offsetClassName="top-1/3 -translate-y-8 -translate-x-6"
-						onSearch={setSearchKeyword}
-						onReset={() => setSearchKeyword("")}
-						debounceTimeout={100}
-						noToggleBorder
-						alwaysDisplayClearButton
-					/>
-				),
-				accessor: "search",
-				className: "justify-end",
-				disableSortBy: true,
-				headerClassName: "no-border",
-			},
-		] as Column<Contracts.IReadWriteWallet>[];
-	}, [searchPlaceholder, setSearchKeyword, showConvertedValue, t]);
+	const { isXs } = useBreakpoint();
 
 	const { getWalletAlias } = useWalletAlias();
 
@@ -244,72 +45,70 @@ export const SearchWallet: FC<SearchWalletProperties> = ({
 		[getWalletAlias, profile],
 	);
 
-	const renderTableRow = useCallback(
+	const renderItems = useCallback(
 		(wallet: Contracts.IReadWriteWallet, index: number) => {
 			const alias = getWalletAliasCallback(wallet);
+			const isSelected = selectedAddress === wallet.address();
 
-			if (useResponsive) {
+			const handleOnClick = () => {
+				onSelectWallet({
+					address: wallet.address(),
+					name: alias!,
+					network: wallet.network(),
+				});
+			};
+
+			if (isXs) {
 				return (
-					<SearchSenderWalletItemResponsive
+					<ReceiverItemMobile
 						wallet={wallet}
-						alias={alias}
-						onAction={onSelectWallet}
-						selectedAddress={selectedAddress}
+						selected={isSelected}
+						onClick={handleOnClick}
+						name={alias!}
+						disabled={disableAction?.(wallet)}
 					/>
 				);
 			}
 
 			return (
-				<SearchWalletListItem
+				<ReceiverItem
 					index={index}
 					wallet={wallet}
-					alias={alias}
+					name={alias!}
 					disabled={disableAction?.(wallet)}
+					onClick={handleOnClick}
 					exchangeCurrency={
 						wallet.exchangeCurrency() ||
 						(profile.settings().get(Contracts.ProfileSetting.ExchangeCurrency) as string)
 					}
-					showConvertedValue={showConvertedValue}
-					showNetwork={showNetwork}
-					onAction={onSelectWallet}
-					selectedAddress={selectedAddress}
-					profile={profile}
+					selected={isSelected}
 				/>
 			);
 		},
-		[profile, disableAction, showConvertedValue, showNetwork, onSelectWallet, selectedAddress, useResponsive],
+		[profile, disableAction, showConvertedValue, showNetwork, onSelectWallet, selectedAddress, isXs],
 	);
 
 	return (
 		<Modal title={title} description={description} isOpen={isOpen} size={size} onClose={onClose} noButtons>
 			<div className="mt-4">
-				{useResponsive && (
-					<HeaderSearchInput
-						placeholder={searchPlaceholder}
-						onSearch={setSearchKeyword}
-						onReset={() => setSearchKeyword("")}
-						debounceTimeout={100}
+				<HeaderSearchInput
+					placeholder={searchPlaceholder}
+					onSearch={setSearchKeyword}
+					onReset={() => setSearchKeyword("")}
+					debounceTimeout={100}
+				/>
+
+				<div className="mt-3 space-y-1">
+					{filteredWallets.map((wallet, index) => renderItems(wallet, index))}
+				</div>
+
+				{isEmptyResults && (
+					<EmptyResults
+						className="mt-10"
+						title={t("COMMON.EMPTY_RESULTS.TITLE")}
+						subtitle={t("COMMON.EMPTY_RESULTS.SUBTITLE")}
 					/>
 				)}
-
-				<TableWrapper>
-					<Table
-						columns={columns}
-						data={filteredWallets as Contracts.IReadWriteWallet[]}
-						hideHeader={useResponsive}
-						className={cn({ "with-x-padding": isMdAndAbove })}
-					>
-						{renderTableRow}
-					</Table>
-
-					{isEmptyResults && (
-						<EmptyResults
-							className="mt-10"
-							title={t("COMMON.EMPTY_RESULTS.TITLE")}
-							subtitle={t("COMMON.EMPTY_RESULTS.SUBTITLE")}
-						/>
-					)}
-				</TableWrapper>
 			</div>
 		</Modal>
 	);

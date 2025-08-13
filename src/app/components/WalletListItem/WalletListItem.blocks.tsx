@@ -8,6 +8,7 @@ import {
 	BalanceProperties,
 	RecipientItemMobileProperties,
 	ReceiverItemMobileProperties,
+	ReceiverItemProperties,
 } from "@/app/components/WalletListItem/WalletListItem.contracts";
 import { useBreakpoint } from "@/app/hooks";
 import { Skeleton } from "@/app/components/Skeleton";
@@ -15,6 +16,8 @@ import { TruncateEnd } from "@/app/components/TruncateEnd";
 import { InfoDetail, MultiEntryItem } from "@/app/components/MultiEntryItem/MultiEntryItem";
 import { Button } from "@/app/components/Button";
 import { Address } from "@/app/components/Address";
+import { Tooltip } from "@/app/components/Tooltip";
+import { isLedgerWalletCompatible } from "@/utils/wallet-utils";
 
 export const Balance = ({ wallet, isSynced, isLargeScreen = true, className }: BalanceProperties) => {
 	const renderAmount = () => {
@@ -100,8 +103,8 @@ export const RecipientItemMobile = ({
 export const ReceiverItemMobile: React.FC<ReceiverItemMobileProperties> = ({
 	onClick,
 	selected = false,
-	balance,
-	address,
+	wallet,
+	disabled,
 	name,
 }) => {
 	const { t } = useTranslation();
@@ -123,18 +126,25 @@ export const ReceiverItemMobile: React.FC<ReceiverItemMobileProperties> = ({
 					>
 						{name}
 					</div>
-					<Button
-						onClick={onClick}
-						data-testid="ReceiverItemMobile--Select"
-						size="icon"
-						className={cn("p-0 text-sm leading-[17px]", {
-							"text-theme-navy-600 dark:text-theme-secondary-500 dim:text-theme-dim-50": !selected,
-							"text-theme-success-600 dark:text-theme-green-600 dim:text-theme-green-600": selected,
-						})}
-						variant="transparent"
-					>
-						{selected ? t("COMMON.SELECTED") : t("COMMON.SELECT")}
-					</Button>
+					<Tooltip content={t("TRANSACTION.TRANSACTION_TYPE_NOT_AVAILABLE")} disabled={!disabled}>
+						<div>
+							<Button
+								onClick={onClick}
+								disabled={disabled}
+								data-testid="ReceiverItemMobile--Select"
+								size="icon"
+								className={cn("p-0 text-sm leading-[17px]", {
+									"text-theme-navy-600 dark:text-theme-secondary-500 dim:text-theme-dim-50":
+										!selected,
+									"text-theme-success-600 dark:text-theme-green-600 dim:text-theme-green-600":
+										selected,
+								})}
+								variant="transparent"
+							>
+								{selected ? t("COMMON.SELECTED") : t("COMMON.SELECT")}
+							</Button>
+						</div>
+					</Tooltip>
 				</div>
 			}
 			bodySlot={
@@ -143,18 +153,124 @@ export const ReceiverItemMobile: React.FC<ReceiverItemMobileProperties> = ({
 						<InfoDetail
 							label={t("COMMON.ADDRESS")}
 							body={
-								<Address
-									showCopyButton={true}
-									truncateOnTable={true}
-									address={address}
-									addressClass="leading-[17px] text-sm text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50"
+								<div className="max-w-100">
+									<Address
+										showCopyButton={true}
+										truncateOnTable={true}
+										address={wallet.address()}
+										addressClass="leading-[17px] text-sm text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50"
+									/>
+								</div>
+							}
+						/>
+						<InfoDetail
+							label={t("COMMON.BALANCE")}
+							body={
+								<Amount
+									ticker={wallet.currency()}
+									value={wallet.balance()}
+									className="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm leading-[17px] font-semibold"
 								/>
 							}
 						/>
-						<InfoDetail label={t("COMMON.BALANCE")} body={balance} />
 					</div>
 				</div>
 			}
 		/>
+	);
+};
+
+export const ReceiverItem: React.FC<ReceiverItemProperties> = ({
+	onClick,
+	selected = false,
+	name,
+	wallet,
+	exchangeCurrency,
+	disabled,
+	index,
+}) => {
+	const { t } = useTranslation();
+
+	return (
+		<div
+			data-testid="AddRecipientItem"
+			className={cn("group cursor-pointer items-center rounded-lg border transition-all", {
+				"border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 hover:bg-theme-navy-100 dark:hover:bg-theme-dark-700 dim-hover:bg-theme-dim-700":
+					!selected,
+				"border-theme-success-200 dark:border-theme-success-700 dim:border-theme-success-700 bg-theme-success-100":
+					selected,
+				"hover:bg-theme-secondary-200 hover:border-theme-navy-200 dark:hover:bg-theme-dark-700 dim-hover:bg-theme-dim-700":
+					selected,
+			})}
+		>
+			<div className="flex items-center px-4 py-3 duration-150">
+				<div className="border-theme-primary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold">
+					<div className="flex w-1/2 min-w-0 flex-col space-y-2 truncate">
+						<div
+							className={cn("text-sm leading-5", {
+								"group-hover:text-theme-primary-900 dark:group-hover:text-theme-dark-200 dim:group-hover:text-theme-dim-50":
+									!selected,
+								"text-theme-secondary-900": selected,
+							})}
+						>
+							{name}
+						</div>
+						<Address
+							address={wallet.address()}
+							addressClass={cn(
+								"text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200",
+							)}
+						/>
+					</div>
+					<div className="flex w-1/2 min-w-0 flex-col items-end space-y-2 self-end">
+						<Amount
+							ticker={wallet.currency()}
+							value={wallet.balance()}
+							className={cn("leading-5", {
+								"group-hover:text-theme-primary-900 dark:group-hover:text-theme-dark-200 dim:group-hover:text-theme-dim-50":
+									!selected,
+								"text-theme-primary-900 dark:text-theme-dark-200 dim:text-theme-dim-50": selected,
+							})}
+						/>
+
+						{wallet.network().isTest() && (
+							<div data-testid="AddRecipientItem--exchangeAmount" className="leading-[17px]">
+								<Amount
+									ticker={exchangeCurrency}
+									value={wallet.convertedBalance()}
+									className="text-sm leading-[17px]"
+								/>
+							</div>
+						)}
+					</div>
+				</div>
+
+				<div className="flex w-[72px] min-w-[72px] flex-1 shrink-0 items-center justify-center pl-4">
+					<Tooltip content={t("TRANSACTION.TRANSACTION_TYPE_NOT_AVAILABLE")} disabled={!disabled}>
+						<div>
+							<Button
+								disabled={disabled || !isLedgerWalletCompatible(wallet)}
+								onClick={onClick}
+								data-testid={
+									selected
+										? `SearchWalletListItem__selected-${index}`
+										: `SearchWalletListItem__select-${index}`
+								}
+								size="icon"
+								className={cn("p-0 text-sm leading-[17px]", {
+									"text-theme-navy-600 dark:text-theme-secondary-500 dim:text-theme-dim-50":
+										!selected,
+									"text-theme-success-600 dark:text-theme-green-600 dim:text-theme-green-600":
+										selected,
+								})}
+								variant="transparent"
+							>
+								{selected ? t("COMMON.SELECTED") : t("COMMON.SELECT")}
+							</Button>
+						</div>
+					</Tooltip>
+				</div>
+			</div>
+		</div>
 	);
 };
