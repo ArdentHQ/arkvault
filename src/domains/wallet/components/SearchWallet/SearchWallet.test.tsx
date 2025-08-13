@@ -570,4 +570,4 @@ describe("SearchWallet", () => {
 		expect(screen.getAllByTestId("ReceiverItem")[1]).not.toHaveTextContent(walletAlias);
 		expect(within(screen.getAllByTestId("ReceiverItem")[1]).getByRole("button")).not.toBeDisabled();
 	});
-})
+});
