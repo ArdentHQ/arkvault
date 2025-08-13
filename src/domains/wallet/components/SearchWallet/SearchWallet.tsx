@@ -24,7 +24,8 @@ export const SearchWallet: FC<SearchWalletProperties> = ({
 	profile,
 	selectedAddress,
 }) => {
-	const { setSearchKeyword, filteredList: filteredWallets, isEmptyResults } = useSearchWallet({ profile, wallets });
+	const { setSearchKeyword, filteredList, isEmptyResults } = useSearchWallet({ profile, wallets });
+	const filteredWallets = filteredList as Contracts.IReadWriteWallet[];
 
 	const { t } = useTranslation();
 
