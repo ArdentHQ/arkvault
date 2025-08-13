@@ -20,7 +20,7 @@ export const useTransactionVotingWallets = ({ transaction, profile }: Properties
 			try {
 				profile.validators().all(network.id());
 			} catch {
-				await profile.validators().sync(profile, network.id());
+				await profile.validators().sync(network.id());
 			}
 
 			try {
