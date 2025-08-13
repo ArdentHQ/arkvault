@@ -11,6 +11,8 @@ import { Link } from "@/app/components/Link";
 import { TruncateMiddle } from "@/app/components/TruncateMiddle";
 import { WalletStatus } from "./AddressRow";
 import { MobileTableElement, MobileTableElementRow } from "@/app/components/MobileTableElement";
+import { Tooltip } from "@/app/components/Tooltip";
+import { isLedgerWalletCompatible } from "@/utils/wallet-utils";
 
 interface AddressRowMobileProperties {
 	index: number;
@@ -55,6 +57,20 @@ export const AddressRowMobile = ({ index, wallet, onSelect }: AddressRowMobilePr
 	const [votes, setVotes] = useState<Contracts.VoteRegistryItem[]>([]);
 
 	const hasVotes = useMemo(() => votes.length > 0, [votes]);
+
+	const tooltipContent = () => {
+		if (!wallet.balance()) {
+			return t("VOTE.VOTES_PAGE.NO_BALANCE");
+		}
+
+		return isLedgerWalletCompatible(wallet) ? "" : t("COMMON.LEDGER_COMPATIBILITY_ERROR");
+	};
+
+	const isButtonDisabled =
+		!wallet.hasBeenFullyRestored() ||
+		!wallet.hasSyncedWithNetwork() ||
+		!wallet.balance() ||
+		!isLedgerWalletCompatible(wallet);
 
 	useEffect(() => {
 		if (!profileHasSyncedOnce || profileIsSyncingWallets) {
@@ -134,18 +150,22 @@ export const AddressRowMobile = ({ index, wallet, onSelect }: AddressRowMobilePr
 								<span className="bg-theme-secondary-300 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 block h-5 w-px sm:hidden" />
 							)}
 
-							<Button
-								disabled={!wallet.hasBeenFullyRestored() || !wallet.hasSyncedWithNetwork()}
-								variant="transparent"
-								onClick={(e) => {
-									e.stopPropagation();
-									onSelect?.(wallet.address());
-								}}
-								data-testid={`AddressRowMobile__select-${index}`}
-								className="text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 p-0 text-sm hover:underline"
-							>
-								{t("COMMON.VOTE")}
-							</Button>
+							<Tooltip content={tooltipContent()} placement="auto-end">
+								<div>
+									<Button
+										disabled={isButtonDisabled}
+										variant="transparent"
+										onClick={(e) => {
+											e.stopPropagation();
+											onSelect?.(wallet.address());
+										}}
+										data-testid={`AddressRowMobile__select-${index}`}
+										className="text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 p-0 text-sm hover:underline"
+									>
+										{t("COMMON.VOTE")}
+									</Button>
+								</div>
+							</Tooltip>
 						</div>
 					}
 					bodyClassName="sm:grid-cols-3"
