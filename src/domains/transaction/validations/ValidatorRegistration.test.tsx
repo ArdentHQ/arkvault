@@ -94,8 +94,8 @@ describe("Register validator validation", () => {
 
 	it("should handle exception", async () => {
 		const publicKeyExistsMock = vi.spyOn(profile.validators(), "publicKeyExists").mockImplementation(() => {
-			throw new Error("error")
-		})
+			throw new Error("error");
+		});
 
 		const { validate } = validatorRegistration(translationMock).validatorPublicKey(profile, network);
 
