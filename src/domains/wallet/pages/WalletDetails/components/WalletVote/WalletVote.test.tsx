@@ -87,7 +87,7 @@ describe("WalletVote", () => {
 
 		await userEvent.hover(screen.getByTestId("WalletVote__button"));
 
-		expect(screen.getByText(/Voting disabled due to insufficient balance./)).toBeInTheDocument();
+		expect(screen.getByText(/Disabled due to insufficient balance./)).toBeInTheDocument();
 
 		balanceMock.mockRestore();
 	});
