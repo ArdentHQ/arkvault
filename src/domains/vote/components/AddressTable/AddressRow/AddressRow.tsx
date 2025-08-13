@@ -195,6 +195,14 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 		);
 	};
 
+	const tooltipContent = () => {
+		if (!wallet.balance()) {
+			return t("VOTE.VOTES_PAGE.NO_BALANCE");
+		}
+
+		return isLedgerWalletCompatible(wallet) ? "" : t("COMMON.LEDGER_COMPATIBILITY_ERROR");
+	};
+
 	const isButtonDisabled =
 		!wallet.hasBeenFullyRestored() ||
 		!wallet.hasSyncedWithNetwork() ||
@@ -249,7 +257,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 			)}
 
 			<TableCell variant="end" innerClassName="justify-end">
-				<Tooltip content={isLedgerWalletCompatible(wallet) ? "" : t("COMMON.LEDGER_COMPATIBILITY_ERROR")}>
+				<Tooltip content={tooltipContent()}>
 					<div>
 						<Button
 							size="icon"
