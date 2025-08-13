@@ -9,6 +9,7 @@ import { useTransactionTypes } from "./use-transaction-types";
 import { DateTime } from "@/app/lib/intl";
 import { PendingTransactionsService } from "@/app/lib/mainsail/pending-transactions.service";
 import { HttpClient } from "@/app/lib/mainsail/http-client";
+import { BigNumber } from "@/app/lib/helpers";
 
 interface TransactionsState {
 	transactions: DTO.ExtendedConfirmedTransactionData[];
@@ -169,14 +170,17 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 
 		const pendingAsConfirmed = modeFilteredPendingTxs.map((tx) => {
 			const timestampObj = DateTime.make(tx.timestamp);
+
+			const wallet = wallets.find((w) => w.address() === tx.walletAddress);
+
 			return {
 				...tx,
-				blockHash: () => { },
-				confirmations: () => ({ toNumber: () => 0 }),
+				blockHash: () => undefined,
+				confirmations: () => BigNumber.make(0),
 				convertedAmount: () => tx.convertedAmount,
 				convertedTotal: () => tx.convertedTotal,
 				explorerLink: () => tx.explorerLink,
-				fee: () => tx.fee,
+				fee: () => BigNumber.make(tx.fee),
 				from: () => tx.from,
 				hash: () => tx.hash,
 				isConfirmed: () => false,
@@ -196,15 +200,15 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 				isValidatorResignation: () => tx.isValidatorResignation,
 				isVote: () => tx.isVote,
 				isVoteCombination: () => tx.isVoteCombination,
-				network: () => wallets.find((w) => w.address() === tx.walletAddress)?.network(),
-				nonce: () => tx.nonce,
+				network: () => wallet?.network(),
+				nonce: () => BigNumber.make(tx.nonce),
 				recipients: () => tx.recipients || [],
 				timestamp: () => timestampObj,
 				to: () => tx.to,
-				total: () => tx.total,
+				total: () => BigNumber.make(tx.total),
 				type: () => tx.type,
-				value: () => tx.value,
-				wallet: () => wallets.find((w) => w.address() === tx.walletAddress),
+				value: () => BigNumber.make(tx.value),
+				wallet: () => wallet,
 			};
 		}) as any[];
 
@@ -473,6 +477,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 					hash: tx.hash,
 					value: tx.value,
 					nonce: tx.nonce,
+					data: tx.data,
 					gasPrice: String((tx as any).gasPrice ?? "0"),
 					gasLimit: String(gasLimit ?? "0"),
 					walletAddress: matched.address(),
