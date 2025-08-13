@@ -12,12 +12,18 @@ export class ProfileImporter implements IProfileImporter {
 	readonly #validator: IProfileValidator;
 	readonly #migrator: IProfileMainsailMigrator;
 	readonly #env: Environment;
+	#skipMigration: boolean = false;
 
 	public constructor(profile: IProfile, env: Environment) {
 		this.#profile = profile;
 		this.#validator = new ProfileValidator();
 		this.#migrator = new ProfileMainsailMigrator();
 		this.#env = env;
+	}
+
+	public skipMigration(): ProfileImporter {
+		this.#skipMigration = true;
+		return this;
 	}
 
 	/** {@inheritDoc IProfileImporter.import} */
@@ -31,11 +37,11 @@ export class ProfileImporter implements IProfileImporter {
 			await new Migrator(this.#profile, data).migrate(schemas, version);
 		}
 
-		data = await this.#migrator.migrate(this.#profile, data);
+		if (!this.#skipMigration) {
+			data = await this.#migrator.migrate(this.#profile, data);
+		}
 
 		data = this.#validator.validate(data);
-
-		data = await this.#migrator.migrate(this.#profile, data);
 
 		this.#profile.notifications().fill(data.notifications);
 
