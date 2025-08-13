@@ -166,7 +166,6 @@ export const SelectAddress = ({
 				searchPlaceholder={t("PROFILE.MODAL_SELECT_SENDER.SEARCH_PLACEHOLDER")}
 				wallets={wallets}
 				size="3xl"
-				showConvertedValue={false}
 				showNetwork={false}
 				onSelectWallet={handleSelectWallet}
 				onClose={() => setSearchWalletIsOpen(false)}

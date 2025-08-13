@@ -17,7 +17,6 @@ export const SearchWallet: FC<SearchWalletProperties> = ({
 	wallets,
 	searchPlaceholder,
 	size = "5xl",
-	showConvertedValue = true,
 	showNetwork = true,
 	onClose,
 	onSelectWallet,
@@ -62,6 +61,7 @@ export const SearchWallet: FC<SearchWalletProperties> = ({
 			if (isXs) {
 				return (
 					<ReceiverItemMobile
+						key={index}
 						wallet={wallet}
 						selected={isSelected}
 						onClick={handleOnClick}
@@ -74,6 +74,7 @@ export const SearchWallet: FC<SearchWalletProperties> = ({
 			return (
 				<ReceiverItem
 					index={index}
+					key={index}
 					wallet={wallet}
 					name={alias!}
 					disabled={disableAction?.(wallet)}
@@ -86,7 +87,7 @@ export const SearchWallet: FC<SearchWalletProperties> = ({
 				/>
 			);
 		},
-		[profile, disableAction, showConvertedValue, showNetwork, onSelectWallet, selectedAddress, isXs],
+		[profile, disableAction, showNetwork, onSelectWallet, selectedAddress, isXs],
 	);
 
 	return (

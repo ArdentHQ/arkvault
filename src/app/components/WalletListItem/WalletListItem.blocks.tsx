@@ -18,6 +18,8 @@ import { Button } from "@/app/components/Button";
 import { Address } from "@/app/components/Address";
 import { Tooltip } from "@/app/components/Tooltip";
 import { isLedgerWalletCompatible } from "@/utils/wallet-utils";
+import { Contracts } from "@/app/lib/profiles";
+import { TFunction } from "i18next";
 
 export const Balance = ({ wallet, isSynced, isLargeScreen = true, className }: BalanceProperties) => {
 	const renderAmount = () => {
@@ -100,6 +102,14 @@ export const RecipientItemMobile = ({
 	);
 };
 
+const getTooltipContent = (wallet: Contracts.IReadWriteWallet, t: TFunction): string => {
+	if (wallet.balance() === 0) {
+		return t("COMMON.DISABLED_DUE_INSUFFICIENT_BALANCE");
+	}
+
+	return t("TRANSACTION.TRANSACTION_TYPE_NOT_AVAILABLE");
+};
+
 export const ReceiverItemMobile: React.FC<ReceiverItemMobileProperties> = ({
 	onClick,
 	selected = false,
@@ -111,7 +121,7 @@ export const ReceiverItemMobile: React.FC<ReceiverItemMobileProperties> = ({
 
 	return (
 		<MultiEntryItem
-			dataTestId={selected ? "ReceiverItemMobile--selected" : "ReceiverItemMobile"}
+			dataTestId="ReceiverItemMobile"
 			className={cn({
 				"border-theme-success-200 dark:border-theme-success-700 dim:border-theme-success-700": selected,
 			})}
@@ -126,7 +136,7 @@ export const ReceiverItemMobile: React.FC<ReceiverItemMobileProperties> = ({
 					>
 						{name}
 					</div>
-					<Tooltip content={t("TRANSACTION.TRANSACTION_TYPE_NOT_AVAILABLE")} disabled={!disabled}>
+					<Tooltip content={getTooltipContent(wallet, t)} disabled={!disabled}>
 						<div>
 							<Button
 								onClick={onClick}
@@ -193,13 +203,13 @@ export const ReceiverItem: React.FC<ReceiverItemProperties> = ({
 
 	return (
 		<div
-			data-testid={selected ? "ReceiverItem--selected" : "ReceiverItem"}
+			data-testid="ReceiverItem"
 			className={cn("group cursor-pointer items-center rounded-lg border transition-all", {
 				"border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 hover:bg-theme-navy-100 dark:hover:bg-theme-dark-700 dim-hover:bg-theme-dim-700":
 					!selected,
-				"border-theme-success-200 dark:border-theme-success-700 dim:border-theme-success-700 bg-theme-success-100":
+				"border-theme-success-200 dark:border-theme-success-700 dim:border-theme-success-700 bg-theme-success-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950":
 					selected,
-				"hover:bg-theme-secondary-200 hover:border-theme-navy-200 dark:hover:bg-theme-dark-700 dim-hover:bg-theme-dim-700":
+				"hover:bg-theme-secondary-200 hover:border-theme-navy-200 dark:hover:bg-theme-dark-700 dark:hover:border-theme-dark-700 dim-hover:bg-theme-dim-700 dim:hover:border-theme-dim-700":
 					selected,
 			})}
 		>
@@ -208,9 +218,9 @@ export const ReceiverItem: React.FC<ReceiverItemProperties> = ({
 					<div className="flex w-1/2 min-w-0 flex-col space-y-2 truncate">
 						<div
 							className={cn("text-sm leading-5", {
-								"group-hover:text-theme-primary-900 dark:group-hover:text-theme-dark-200 dim:group-hover:text-theme-dim-50":
+								"group-hover:text-theme-primary-900 dark:group-hover:text-theme-dark-50 dim:group-hover:text-theme-dim-50":
 									!selected,
-								"text-theme-secondary-900": selected,
+								"text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50": selected,
 							})}
 						>
 							{name}
@@ -222,19 +232,19 @@ export const ReceiverItem: React.FC<ReceiverItemProperties> = ({
 							)}
 						/>
 					</div>
-					<div className="flex w-1/2 min-w-0 flex-col items-end space-y-2 self-end">
+					<div className="flex w-1/2 min-w-0 flex-col items-end space-y-2 self-start">
 						<Amount
 							ticker={wallet.currency()}
 							value={wallet.balance()}
 							className={cn("leading-5", {
-								"group-hover:text-theme-primary-900 dark:group-hover:text-theme-dark-200 dim:group-hover:text-theme-dim-50":
+								"group-hover:text-theme-primary-900 dark:group-hover:text-theme-dark-50 dim:group-hover:text-theme-dim-50":
 									!selected,
-								"text-theme-primary-900 dark:text-theme-dark-200 dim:text-theme-dim-50": selected,
+								"text-theme-primary-900 dark:text-theme-dark-50 dim:text-theme-dim-50": selected,
 							})}
 						/>
 
-						{wallet.network().isTest() && (
-							<div data-testid="AddRecipientItem--exchangeAmount" className="leading-[17px]">
+						{wallet.network().isLive() && (
+							<div data-testid="ReceiverItem--exchangeAmount" className="leading-[17px]">
 								<Amount
 									ticker={exchangeCurrency}
 									value={wallet.convertedBalance()}
@@ -246,7 +256,7 @@ export const ReceiverItem: React.FC<ReceiverItemProperties> = ({
 				</div>
 
 				<div className="flex w-[72px] min-w-[72px] flex-1 shrink-0 items-center justify-center pl-4">
-					<Tooltip content={t("TRANSACTION.TRANSACTION_TYPE_NOT_AVAILABLE")} disabled={!disabled}>
+					<Tooltip content={getTooltipContent(wallet, t)} disabled={!disabled}>
 						<div>
 							<Button
 								disabled={disabled || !isLedgerWalletCompatible(wallet)}
@@ -258,8 +268,11 @@ export const ReceiverItem: React.FC<ReceiverItemProperties> = ({
 								}
 								size="icon"
 								className={cn("p-0 text-sm leading-[17px]", {
-									"text-theme-navy-600 dark:text-theme-secondary-500 dim:text-theme-dim-50":
+									"group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500 dim:group-hover:text-theme-navy-700":
 										!selected,
+									"group-hover:text-theme-success-700 dark:group-hover:text-theme-green-500 dim:group-hover:text-theme-green-500":
+										selected,
+									"text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600": !selected,
 									"text-theme-success-600 dark:text-theme-green-600 dim:text-theme-green-600":
 										selected,
 								})}
