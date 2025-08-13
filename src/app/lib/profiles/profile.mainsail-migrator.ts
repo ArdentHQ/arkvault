@@ -12,7 +12,7 @@ export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 	 * @memberof Profile
 	 */
 	public async migrate(profile: IProfile, data: IProfileData): Promise<IProfileData> {
-		if (this.#requiresMigration(profile, data)) {
+		if (this.#requiresMigration(data)) {
 			data.wallets = await this.#migrateWallets(profile, data.wallets);
 			data.contacts = await this.#migrateContacts(profile, data.contacts);
 		}
@@ -200,7 +200,7 @@ export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 		}
 	}
 
-	#requiresMigration(profile: IProfile, data: IProfileData): boolean {
+	#requiresMigration(data: IProfileData): boolean {
 		const wallets = Object.values(data.wallets);
 		const firstWallet = wallets?.[0];
 
