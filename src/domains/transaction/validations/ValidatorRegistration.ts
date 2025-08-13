@@ -84,10 +84,18 @@ export const validatorRegistration = (t: any) => ({
 
 				return true;
 			},
-			unique: debounceAsync(
-				async (publicKey: string) => await profile.validators().publicKeyExists(publicKey, network),
-				300,
-			) as () => Promise<ValidateResult>,
+			unique: debounceAsync(async (publicKey: string) => {
+				try {
+					const exists = await profile.validators().publicKeyExists(publicKey, network)
+
+					if (exists) {
+						return t("COMMON.INPUT_PUBLIC_KEY.VALIDATION.PUBLIC_KEY_ALREADY_EXISTS", { publicKey });
+					}
+				} catch {
+					return t("COMMON.INPUT_PUBLIC_KEY.VALIDATION.PUBLIC_KEY_ALREADY_EXISTS", { publicKey });
+				}
+
+			}, 300) as () => Promise<ValidateResult>,
 		},
 	}),
 });

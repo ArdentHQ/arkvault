@@ -153,16 +153,16 @@ export class ValidatorService implements IValidatorService {
 		}
 
 		const publicApiEndpoint = network.config().host("full", this.#profile);
-		const response = await fetch(`${publicApiEndpoint}?attributes.validatorPublicKey=${publicKey}`);
+		const response = await fetch(`${publicApiEndpoint}/wallets?attributes.validatorPublicKey=${publicKey}`);
 
 		if (response.status !== 404) {
 			const data = await response.json();
 
 			if (data.meta?.count > 0) {
-				throw new Error("Public key has been used already!");
+				return true
 			}
 		}
 
-		return true;
+		return false;
 	}
 }
