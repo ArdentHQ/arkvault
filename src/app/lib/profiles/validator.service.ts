@@ -157,6 +157,9 @@ export class ValidatorService implements IValidatorService {
 
 		const publicApiEndpoint = network.config().host("full", this.#profile);
 		const response = await fetch(`${publicApiEndpoint}/wallets?attributes.validatorPublicKey=${publicKey}`);
+		const data = await response.json();
+		console.log({ data, response })
+
 
 		if (response.status !== 404) {
 			const data = await response.json();
