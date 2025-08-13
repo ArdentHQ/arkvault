@@ -144,8 +144,7 @@ export const ReceiverItemMobile: React.FC<ReceiverItemMobileProperties> = ({
 								data-testid="ReceiverItemMobile--Select"
 								size="icon"
 								className={cn("p-0 text-sm leading-[17px]", {
-									"text-theme-navy-600 dark:text-theme-secondary-500 dim:text-theme-dim-50":
-										!selected,
+									"text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600": !selected,
 									"text-theme-success-600 dark:text-theme-green-600 dim:text-theme-green-600":
 										selected,
 								})}
