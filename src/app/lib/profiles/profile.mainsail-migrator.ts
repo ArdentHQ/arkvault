@@ -1,6 +1,6 @@
 import { IProfile, IProfileData, IProfileMainsailMigrator } from "./contracts.js";
 import { HttpClient } from "@/app/lib/mainsail/http-client.js";
-
+import { UUID } from "@ardenthq/arkvault-crypto";
 export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 	readonly #http: HttpClient = new HttpClient(10_000);
 
@@ -12,7 +12,7 @@ export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 	 * @memberof Profile
 	 */
 	public async migrate(profile: IProfile, data: IProfileData): Promise<IProfileData> {
-		if (this.#requiresMigration(data)) {
+		if (this.#requiresMigration(profile, data)) {
 			data.wallets = await this.#migrateWallets(profile, data.wallets);
 			data.contacts = await this.#migrateContacts(profile, data.contacts);
 		}
@@ -114,16 +114,7 @@ export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 					finalName = `${originalName} (${index + 1})`;
 				}
 
-				// Use original ID for first contact, generate deterministic ID for additional contacts
-				let contactId: string;
-				if (index === 0) {
-					contactId = originalId;
-				} else {
-					// Generate deterministic UUID by modifying the original ID
-					// The reason for using a deterministic UUID is that it seems to
-					// duplicate the contact in the frontend
-					contactId = this.#generateDeterministicId(originalId, index);
-				}
+				const contactId = index === 0 ? originalId : UUID.random();
 
 				const newContact = {
 					...contact,
@@ -209,7 +200,7 @@ export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 		}
 	}
 
-	#requiresMigration(data: IProfileData): boolean {
+	#requiresMigration(profile: IProfile, data: IProfileData): boolean {
 		const wallets = Object.values(data.wallets);
 		const firstWallet = wallets?.[0];
 
@@ -220,14 +211,5 @@ export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 		const contacts = Object.values(data.contacts);
 		const firstContact = contacts?.[0];
 		return firstContact?.addresses?.[0]?.network?.startsWith("ark.") || false;
-	}
-
-	#generateDeterministicId(originalId: string, index: number): string {
-		// Modify the last character of the UUID to create a deterministic variant
-		const lastChar = originalId.charAt(originalId.length - 1);
-		const newLastChar = String.fromCharCode(
-			((lastChar.charCodeAt(0) + index) % 16) + (lastChar.charCodeAt(0) >= 97 ? 97 : 48),
-		);
-		return originalId.slice(0, -1) + newLastChar;
 	}
 }
