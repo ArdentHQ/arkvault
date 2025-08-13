@@ -66,7 +66,7 @@ describe("Register validator validation", () => {
 	});
 
 	it("should pass if public key hasn't used", async () => {
-		const publicKeyExistsMock = vi.spyOn(profile.validators(), "publicKeyExists").mockResolvedValue(false)
+		const publicKeyExistsMock = vi.spyOn(profile.validators(), "publicKeyExists").mockResolvedValue(false);
 		const { validate } = validatorRegistration(translationMock).validatorPublicKey(profile, network);
 
 		// Emulate public key hasn't used
@@ -93,7 +93,7 @@ describe("Register validator validation", () => {
 	});
 
 	it("should pass if the server returns a response without meta", async () => {
-		const publicKeyExistsMock = vi.spyOn(profile.validators(), "publicKeyExists").mockResolvedValue(false)
+		const publicKeyExistsMock = vi.spyOn(profile.validators(), "publicKeyExists").mockResolvedValue(false);
 		const { validate } = validatorRegistration(translationMock).validatorPublicKey(profile, network);
 		const publicKey = "any-non-existent-key-without-meta";
 		server.use(
@@ -113,7 +113,7 @@ describe("Register validator validation", () => {
 	});
 
 	it("should pass if the server returns 404", async () => {
-		const publicKeyExistsMock = vi.spyOn(profile.validators(), "publicKeyExists").mockResolvedValue(false)
+		const publicKeyExistsMock = vi.spyOn(profile.validators(), "publicKeyExists").mockResolvedValue(false);
 		const { validate } = validatorRegistration(translationMock).validatorPublicKey(profile, network);
 		const publicKey = "any-non-existent-key";
 		server.use(
@@ -134,7 +134,7 @@ describe("Register validator validation", () => {
 	});
 
 	it("should fail if public key was used", async () => {
-		vi.spyOn(profile.validators(), "publicKeyExists").mockResolvedValue(true)
+		vi.spyOn(profile.validators(), "publicKeyExists").mockResolvedValue(true);
 		const { validate } = validatorRegistration(translationMock).validatorPublicKey(profile, network);
 
 		await expect(

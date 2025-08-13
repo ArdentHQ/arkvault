@@ -159,7 +159,7 @@ export class ValidatorService implements IValidatorService {
 			const data = await response.json();
 
 			if (data.meta?.count > 0) {
-				return true
+				return true;
 			}
 		}
 
