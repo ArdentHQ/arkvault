@@ -1,5 +1,3 @@
-
-
 import { IProfile } from "@/app/lib/profiles/profile.contract";
 import { usernameRegistration } from "./UsernameRegistration";
 import { env, getMainsailProfileId, t } from "@/utils/testing-library";

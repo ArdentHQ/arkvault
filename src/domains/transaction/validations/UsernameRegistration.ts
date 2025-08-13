@@ -48,9 +48,8 @@ export const usernameRegistration = (t: any) => ({
 						return t("COMMON.VALIDATION.EXISTS", { field: t("COMMON.USERNAME") });
 					}
 				} catch {
-					return false
+					return false;
 				}
-
 			}, 300) as () => Promise<ValidateResult>,
 		},
 	}),
