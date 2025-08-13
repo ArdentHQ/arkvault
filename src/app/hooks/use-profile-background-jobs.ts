@@ -62,7 +62,7 @@ export const useProfileJobs = (profile?: Contracts.IProfile): Record<string, any
 		};
 
 		const syncValidators = {
-			callback: () => profile.validators().syncAll(profile),
+			callback: () => profile.validators().syncAll(),
 			interval: Intervals.Long,
 		};
 

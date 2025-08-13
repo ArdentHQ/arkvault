@@ -36,7 +36,7 @@ export const useValidatorsFromURL = ({
 			try {
 				profile.validators().all(network.id());
 			} catch {
-				await profile.validators().sync(profile, network.id());
+				await profile.validators().sync(network.id());
 			}
 
 			if (unvoteValidators.length > 0 && unvotes.length === 0) {

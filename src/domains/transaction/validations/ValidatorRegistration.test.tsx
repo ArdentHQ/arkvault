@@ -66,6 +66,7 @@ describe("Register validator validation", () => {
 	});
 
 	it("should pass if public key hasn't used", async () => {
+		const publicKeyExistsMock = vi.spyOn(profile.validators(), "publicKeyExists").mockResolvedValue(false);
 		const { validate } = validatorRegistration(translationMock).validatorPublicKey(profile, network);
 
 		// Emulate public key hasn't used
@@ -87,9 +88,28 @@ describe("Register validator validation", () => {
 				"a08058db53e2665c84a40f5152e76dd2b652125a6079130d4c315e728bcf4dd1dfb44ac26e82302331d61977d3141118",
 			),
 		).resolves.toBeFalsy();
+
+		publicKeyExistsMock.mockRestore();
+	});
+
+	it("should handle exception", async () => {
+		const publicKeyExistsMock = vi.spyOn(profile.validators(), "publicKeyExists").mockImplementation(() => {
+			throw new Error("error");
+		});
+
+		const { validate } = validatorRegistration(translationMock).validatorPublicKey(profile, network);
+
+		await expect(
+			validate.unique(
+				"a08058db53e2665c84a40f5152e76dd2b652125a6079130d4c315e728bcf4dd1dfb44ac26e82302331d61977d3141118",
+			),
+		).resolves.toBe("COMMON.INPUT_PUBLIC_KEY.VALIDATION.PUBLIC_KEY_ALREADY_EXISTS");
+
+		publicKeyExistsMock.mockRestore();
 	});
 
 	it("should pass if the server returns a response without meta", async () => {
+		const publicKeyExistsMock = vi.spyOn(profile.validators(), "publicKeyExists").mockResolvedValue(false);
 		const { validate } = validatorRegistration(translationMock).validatorPublicKey(profile, network);
 		const publicKey = "any-non-existent-key-without-meta";
 		server.use(
@@ -105,9 +125,11 @@ describe("Register validator validation", () => {
 		);
 
 		await expect(validate.unique(publicKey)).resolves.toBeFalsy();
+		publicKeyExistsMock.mockRestore();
 	});
 
 	it("should pass if the server returns 404", async () => {
+		const publicKeyExistsMock = vi.spyOn(profile.validators(), "publicKeyExists").mockResolvedValue(false);
 		const { validate } = validatorRegistration(translationMock).validatorPublicKey(profile, network);
 		const publicKey = "any-non-existent-key";
 		server.use(
@@ -124,24 +146,12 @@ describe("Register validator validation", () => {
 		);
 
 		await expect(validate.unique(publicKey)).resolves.toBeFalsy();
+		publicKeyExistsMock.mockRestore();
 	});
 
-	it("should fail if public key has used", async () => {
+	it("should fail if public key was used", async () => {
+		vi.spyOn(profile.validators(), "publicKeyExists").mockResolvedValue(true);
 		const { validate } = validatorRegistration(translationMock).validatorPublicKey(profile, network);
-
-		// Emulate public key has used
-		server.use(
-			requestMock(
-				"https://dwallets-evm.mainsailhq.com/api",
-				{ meta: { count: 1 } },
-				{
-					query: {
-						"attributes.validatorPublicKey":
-							"a08058db53e2665c84a40f5152e76dd2b652125a6079130d4c315e728bcf4dd1dfb44ac26e82302331d61977d3141118",
-					},
-				},
-			),
-		);
 
 		await expect(
 			validate.unique(
