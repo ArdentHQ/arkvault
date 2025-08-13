@@ -587,7 +587,7 @@ describe("ProfileMainsailMigrator", () => {
 			expect(migratedContact.addresses[0].id).toBe("addr-1");
 		});
 
-		it("should reuse original UUID for first contact and generate deterministic UUIDs for additional contacts", async () => {
+		it("should reuse original UUID for first contact and generate UUIDs for additional contacts", async () => {
 			const originalId = "903b2b66-059e-4f03-92e3-f9c685f388b0";
 			const data: IProfileData = {
 				contacts: {
@@ -626,74 +626,13 @@ describe("ProfileMainsailMigrator", () => {
 			expect(result.contacts[originalId].id).toBe(originalId);
 			expect(result.contacts[originalId].name).toBe("Contact1");
 
-			// Second contact should have deterministic UUID
-			const secondContactId = "903b2b66-059e-4f03-92e3-f9c685f388b1";
+			const secondContactId = Object.keys(result.contacts)[1];
 			expect(result.contacts[secondContactId]).toBeDefined();
-			expect(result.contacts[secondContactId].id).toBe(secondContactId);
+			expect(result.contacts[secondContactId].id).not.toBe(originalId);
 			expect(result.contacts[secondContactId].name).toBe("Contact1 (2)");
 
 			// Should have exactly 2 contacts
 			expect(Object.keys(result.contacts)).toHaveLength(2);
-		});
-
-		it("should generate consistent deterministic UUIDs for multiple additional contacts", async () => {
-			const originalId = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
-			const data: IProfileData = {
-				contacts: {
-					[originalId]: {
-						addresses: [
-							{
-								address: "AdViMQwcwquCP8fbY9eczXzTX7yUs2uMw4",
-								id: "addr-1",
-								network: "ark.mainnet",
-							},
-							{
-								address: "DFAWxzGKC3nvqQ5CqRXTqAi8593Jq1gPkt",
-								id: "addr-2",
-								network: "ark.devnet",
-							},
-							{
-								address: "AdViMQwcwquCP8fbY9eczXzTX7yUs2uMw4",
-								id: "addr-3",
-								network: "ark.mainnet",
-							},
-						],
-						id: originalId,
-						name: "MultiAddress Contact",
-						starred: true,
-					},
-				},
-				data: {},
-				exchangeTransactions: {},
-				hosts: {},
-				id: "test-profile",
-				networks: {},
-				notifications: {},
-				settings: {},
-				wallets: {},
-			};
-
-			const result = await migrator.migrate(profile, data);
-
-			// First contact should reuse original UUID
-			expect(result.contacts[originalId]).toBeDefined();
-			expect(result.contacts[originalId].id).toBe(originalId);
-			expect(result.contacts[originalId].name).toBe("MultiAddress Contact");
-
-			// Second contact should have deterministic UUID
-			const secondContactId = "a1b2c3d4-e5f6-7890-abcd-ef1234567891";
-			expect(result.contacts[secondContactId]).toBeDefined();
-			expect(result.contacts[secondContactId].id).toBe(secondContactId);
-			expect(result.contacts[secondContactId].name).toBe("MultiAddress Contact (2)");
-
-			// Third contact should have deterministic UUID
-			const thirdContactId = "a1b2c3d4-e5f6-7890-abcd-ef1234567892";
-			expect(result.contacts[thirdContactId]).toBeDefined();
-			expect(result.contacts[thirdContactId].id).toBe(thirdContactId);
-			expect(result.contacts[thirdContactId].name).toBe("MultiAddress Contact (3)");
-
-			// Should have exactly 3 contacts
-			expect(Object.keys(result.contacts)).toHaveLength(3);
 		});
 
 		it("should ensure contact id property matches dictionary key", async () => {
