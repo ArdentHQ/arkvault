@@ -193,7 +193,7 @@ export const ReceiverItem: React.FC<ReceiverItemProperties> = ({
 
 	return (
 		<div
-			data-testid="AddRecipientItem"
+			data-testid={selected ? "ReceiverItem--selected" : "ReceiverItem"}
 			className={cn("group cursor-pointer items-center rounded-lg border transition-all", {
 				"border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 hover:bg-theme-navy-100 dark:hover:bg-theme-dark-700 dim-hover:bg-theme-dim-700":
 					!selected,
