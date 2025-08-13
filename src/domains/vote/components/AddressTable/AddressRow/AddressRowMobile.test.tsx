@@ -1,5 +1,5 @@
 /* eslint-disable testing-library/no-node-access */
-/* eslint-disable @typescript-eslint/require-await */
+
 import { Contracts, ReadOnlyWallet } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
 import React, { useEffect } from "react";
@@ -322,7 +322,7 @@ describe("AddressRowMobile", () => {
 
 		await userEvent.hover(screen.getByTestId(FIRST_ADDRESS_VOTE_BUTTON));
 
-		expect(screen.getByText(/Voting disabled due to insufficient balance./)).toBeInTheDocument();
+		expect(screen.getByText(/Disabled due to insufficient balance./)).toBeInTheDocument();
 
 		balanceMock.mockRestore();
 	});

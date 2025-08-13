@@ -50,8 +50,16 @@ const SearchWalletListItem = ({
 			);
 		}
 
+		const tooltipContent = () => {
+			if (wallet.balance() === 0) {
+				return t("COMMON.DISABLED_DUE_INSUFFICIENT_BALANCE");
+			}
+
+			return t("TRANSACTION.TRANSACTION_TYPE_NOT_AVAILABLE");
+		};
+
 		return (
-			<Tooltip content={t("TRANSACTION.TRANSACTION_TYPE_NOT_AVAILABLE")} disabled={!disabled}>
+			<Tooltip content={tooltipContent()} disabled={!disabled}>
 				<div>
 					<Button
 						data-testid={`SearchWalletListItem__select-${index}`}

@@ -108,6 +108,7 @@ export const translations = {
 	DETAILS: "Details",
 	DEVELOPMENT_NETWORKS: "Development Networks",
 	DISABLE: "Disable",
+	DISABLED_DUE_INSUFFICIENT_BALANCE: "Disabled due to insufficient balance.",
 	DISCLAIMER: "Disclaimer",
 	DOCS: "Docs",
 	DONE: "Done",
