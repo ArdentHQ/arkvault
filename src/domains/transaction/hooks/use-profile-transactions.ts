@@ -110,7 +110,10 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 	const LIMIT = limit;
 	const { types } = useTransactionTypes({ wallets });
 	const { syncOnChainUsernames } = useWalletAlias();
-	const { pendingTransactions, removePendingTransaction } = usePendingTransactions();
+
+	const { pendingTransactions, removePendingTransaction, addPendingTransactionFromUnconfirmed } =
+		usePendingTransactions();
+
 	const allTransactionTypes = [...types.core];
 
 	const [sortBy, setSortBy] = useState<SortBy>({ column: "date", desc: true });
@@ -455,15 +458,31 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 				return (from && addrSet.has(from)) || (to && addrSet.has(to));
 			});
 
-			if (filtered.length > 0) {
-				console.log("[unconfirmed txs/filtered]", filtered);
-			} else {
-				console.log("[unconfirmed txs/filtered] none");
+			for (const tx of filtered) {
+				const matched =
+					wallets.find((w) => w.address().toLowerCase() === tx.from?.toLowerCase?.()) ||
+					wallets.find((w) => w.address().toLowerCase() === tx.to?.toLowerCase?.());
+
+				if (!matched) continue;
+
+				const gasLimit = (tx as any).gasLimit ?? (tx as any).gas;
+
+				addPendingTransactionFromUnconfirmed({
+					from: tx.from,
+					to: tx.to,
+					hash: tx.hash,
+					value: tx.value,
+					nonce: tx.nonce,
+					gasPrice: String((tx as any).gasPrice ?? "0"),
+					gasLimit: String(gasLimit ?? "0"),
+					walletAddress: matched.address(),
+					networkId: matched.networkId(),
+				});
 			}
 		} catch (error) {
 			console.error("Failed to fetch unconfirmed transactions:", error);
 		}
-	}, [wallets]);
+	}, [wallets, addPendingTransactionFromUnconfirmed]);
 
 	const addresses = wallets
 		.map((wallet) => wallet.address())
