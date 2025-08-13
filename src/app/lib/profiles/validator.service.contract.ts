@@ -1,4 +1,4 @@
-import { IProfile, IReadOnlyWallet, IReadWriteWallet } from "./contracts.js";
+import { IReadOnlyWallet, IReadWriteWallet } from "./contracts.js";
 
 /**
  * Defines the implementation contract for the delegate service.

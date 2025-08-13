@@ -55,7 +55,10 @@ export class ValidatorService implements IValidatorService {
 		}
 
 		const cached = await this.#cache.remember(cacheKey, async () => {
-			const clientService = new ClientService({ config: this.#profile.activeNetwork().config(), profile: this.#profile });
+			const clientService = new ClientService({
+				config: this.#profile.activeNetwork().config(),
+				profile: this.#profile,
+			});
 			const syncer: IValidatorSyncer = this.#profile.activeNetwork().meta().fastValidatorSync
 				? new ParallelValidatorSyncer(clientService)
 				: new SerialValidatorSyncer(clientService);
@@ -64,9 +67,10 @@ export class ValidatorService implements IValidatorService {
 
 			return result.map((validator: Contracts.WalletData) => ({
 				...validator.toObject(),
-				explorerLink: new LinkService({ config: this.#profile.activeNetwork().config(), profile: this.#profile }).wallet(
-					validator.address(),
-				),
+				explorerLink: new LinkService({
+					config: this.#profile.activeNetwork().config(),
+					profile: this.#profile,
+				}).wallet(validator.address()),
 				governanceIdentifier: this.#profile.activeNetwork().validatorIdentifier(),
 			}));
 		});
