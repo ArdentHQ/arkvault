@@ -73,7 +73,6 @@ const MnemonicField = ({
 							value,
 						}),
 				})}
-				preventAutofill
 				{...properties}
 			/>
 		</FormField>

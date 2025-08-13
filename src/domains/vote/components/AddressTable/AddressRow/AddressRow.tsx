@@ -197,7 +197,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 
 	const tooltipContent = () => {
 		if (!wallet.balance()) {
-			return t("VOTE.VOTES_PAGE.NO_BALANCE");
+			return t("COMMON.DISABLED_DUE_INSUFFICIENT_BALANCE");
 		}
 
 		return isLedgerWalletCompatible(wallet) ? "" : t("COMMON.LEDGER_COMPATIBILITY_ERROR");
