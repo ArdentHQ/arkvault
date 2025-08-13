@@ -43,9 +43,14 @@ export const usernameRegistration = (t: any) => ({
 					return error;
 				}
 
-				if (await profile.usernames().usernameExists(value, { signal: controller.current?.signal })) {
-					return t("COMMON.VALIDATION.EXISTS", { field: t("COMMON.USERNAME") });
+				try {
+					if (await profile.usernames().usernameExists(value, { signal: controller.current?.signal })) {
+						return t("COMMON.VALIDATION.EXISTS", { field: t("COMMON.USERNAME") });
+					}
+				} catch {
+					return false
 				}
+
 			}, 300) as () => Promise<ValidateResult>,
 		},
 	}),

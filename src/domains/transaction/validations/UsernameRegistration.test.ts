@@ -1,4 +1,4 @@
-/* eslint-disable sonarjs/no-duplicate-string */
+
 
 import { IProfile } from "@/app/lib/profiles/profile.contract";
 import { usernameRegistration } from "./UsernameRegistration";
@@ -67,7 +67,7 @@ describe("Username Registration Validation", () => {
 	});
 
 	it("should fail for empty username", async () => {
-		const { validate } = usernameRegistration(t).username(environment, network, profile, controller);
+		const { validate } = usernameRegistration(t).username(profile, controller);
 		await expect(validate.unique("")).resolves.toBe(t("COMMON.VALIDATION.USERNAME_ALLOWED_CHARS"));
 	});
 
@@ -75,7 +75,7 @@ describe("Username Registration Validation", () => {
 		const username = "existing_user";
 		server.use(requestMock(`${network.config().host("full", profile)}/wallets/${username}`, {}));
 
-		const { validate } = usernameRegistration(t).username(environment, network, profile, controller);
+		const { validate } = usernameRegistration(t).username(profile, controller);
 		await expect(validate.unique(username)).resolves.toBe(
 			t("COMMON.VALIDATION.EXISTS", { field: t("COMMON.USERNAME") }),
 		);
@@ -85,17 +85,17 @@ describe("Username Registration Validation", () => {
 		const username = "new_user";
 		server.use(requestMock(`${network.config().host("full", profile)}/wallets/${username}`, {}, { status: 404 }));
 
-		const { validate } = usernameRegistration(t).username(environment, network, profile, controller);
+		const { validate } = usernameRegistration(t).username(profile, controller);
 		await expect(validate.unique(username)).resolves.toBeUndefined();
 	});
 
-	it("should return true on other fetch errors", async () => {
+	it("should handle fetch exceptions", async () => {
 		const username = "any_user";
 		server.use(
 			http.get(`${network.config().host("full", profile)}/wallets/${username}`, () => HttpResponse.error()),
 		);
 
-		const { validate } = usernameRegistration(t).username(environment, network, profile, controller);
-		await expect(validate.unique(username)).resolves.toBe(true);
+		const { validate } = usernameRegistration(t).username(profile, controller);
+		await expect(validate.unique(username)).resolves.toBe(false);
 	});
 });
