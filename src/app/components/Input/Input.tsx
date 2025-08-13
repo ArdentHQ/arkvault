@@ -1,11 +1,11 @@
-import cn from "classnames";
-import React, { useEffect, useRef, JSX } from "react";
+import React, { JSX, useEffect, useRef } from "react";
 
-import { InputSuggestion } from "./InputSuggestion";
-import { useFormField } from "@/app/components/Form/useFormField";
 import { Icon } from "@/app/components/Icon";
+import { InputSuggestion } from "./InputSuggestion";
 import { Tooltip } from "@/app/components/Tooltip";
+import cn from "classnames";
 import { twMerge } from "tailwind-merge";
+import { useFormField } from "@/app/components/Form/useFormField";
 
 interface AddonProperties {
 	wrapperClassName?: string;
@@ -76,16 +76,19 @@ export const InputWrapperStyled = ({
 );
 
 interface InputStyledProps {
+	autocomplete?: string;
 	as?: React.ElementType;
 	ref?: React.Ref<HTMLInputElement>;
 }
 
 const InputStyled = ({
+	autocomplete = "off",
 	as: Component = "input",
 	...properties
 }: InputStyledProps & React.ComponentPropsWithRef<"input">) => (
 	<Component
 		{...properties}
+		autoComplete={autocomplete}
 		className={twMerge(
 			"bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none",
 			properties.className,
