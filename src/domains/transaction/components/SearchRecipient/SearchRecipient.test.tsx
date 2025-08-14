@@ -183,9 +183,7 @@ describe("SearchRecipient", () => {
 			"xs",
 		);
 
-		expect(
-			within(screen.getByTestId("RecipientItemMobile")).getByText("My Address"),
-		).toBeInTheDocument();
+		expect(within(screen.getByTestId("RecipientItemMobile")).getByText("My Address")).toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 	});

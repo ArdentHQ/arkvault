@@ -169,7 +169,7 @@ export const RecipientItem: React.FC<RecipientItemProperties> = ({
 								color="secondary"
 								size="xs"
 								noBorder
-								className="flex! h-[21px] shrink-0 items-center justify-center rounded px-1 py-[3px] dark:border dark:group-hover:border-theme-dark-500 dim:group-hover:border-theme-dim-500"
+								className="dark:group-hover:border-theme-dark-500 dim:group-hover:border-theme-dim-500 flex! h-[21px] shrink-0 items-center justify-center rounded px-1 py-[3px] dark:border"
 								data-testid="TransactionRowAddressing__label"
 							>
 								{type}
