@@ -90,14 +90,14 @@ export const RecipientItemMobile = ({
 			bodySlot={
 				<InfoDetail
 					label={
-						<div className="flex items-center gap-2">
+						<div className="flex items-center gap-2 leading-[17px]">
 							<span>{t("COMMON.ADDRESS")}</span>
 
 							<Label
 								color="secondary"
 								size="xs"
 								noBorder
-								className="flex! h-[21px] shrink-0 items-center justify-center rounded px-1 py-[3px] dark:border"
+								className="flex! h-[21px] shrink-0 items-center justify-center rounded px-1 py-[3px] text-xs leading-[15px] dark:border"
 							>
 								{type}
 							</Label>
@@ -143,7 +143,7 @@ export const RecipientItem: React.FC<RecipientItemProperties> = ({
 		>
 			<div className="flex items-center px-4 py-3 duration-150">
 				<div className="border-theme-primary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold">
-					<div className="flex min-w-0 flex-col space-y-2 truncate">
+					<div className="flex min-w-0 flex-col space-y-1 truncate">
 						<div
 							className={cn("text-sm leading-5", {
 								"group-hover:text-theme-primary-900 dark:group-hover:text-theme-dark-50 dim:group-hover:text-theme-dim-50":
@@ -153,7 +153,7 @@ export const RecipientItem: React.FC<RecipientItemProperties> = ({
 						>
 							{name}
 						</div>
-						<div className="flex min-w-0 items-center gap-1">
+						<div className="flex min-w-0 items-center gap-1 leading-[17px]">
 							<Address
 								showCopyButton={true}
 								address={address}
@@ -169,8 +169,7 @@ export const RecipientItem: React.FC<RecipientItemProperties> = ({
 								color="secondary"
 								size="xs"
 								noBorder
-								className="dark:group-hover:border-theme-dark-500 dim:group-hover:border-theme-dim-500 flex! h-[21px] shrink-0 items-center justify-center rounded px-1 py-[3px] dark:border"
-								data-testid="TransactionRowAddressing__label"
+								className="dark:group-hover:border-theme-dark-500 dim:group-hover:border-theme-dim-500 flex! h-[21px] shrink-0 items-center justify-center rounded px-1 py-[3px] text-xs leading-[15px] dark:border"
 							>
 								{type}
 							</Label>
