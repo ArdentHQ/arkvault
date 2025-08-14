@@ -85,74 +85,83 @@ export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 	}
 
 	async #migrateContacts(profile: IProfile, contacts: IProfileData["contacts"]): Promise<IProfileData["contacts"]> {
-		const migratedContacts: IProfileData["contacts"] = {};
-
-		const contactPromises = Object.entries(contacts).map(async ([originalId, contact]) => {
-			const addressResults = await Promise.all(
-				contact.addresses.map(async (addr) => {
-					const newAddress = await this.#migrateContactAddress(profile, addr);
-					return newAddress ? { address: newAddress, id: addr.id } : null;
-				}),
-			);
-			const migratedAddresses = addressResults.filter(
-				(addr): addr is { id: string; address: string } => addr !== null,
-			);
-
-			// Skip contacts with no valid addresses after migration
-			if (migratedAddresses.length === 0) {
-				return null;
-			}
-
-			// Create separate contact for each unique address
-			const results: Array<{ id: string; contact: any }> = [];
-
-			for (let index = 0; index < migratedAddresses.length; index++) {
-				const address = migratedAddresses[index];
-				const originalName = contact.name;
-				let finalName = originalName;
-
-				// For additional contacts from the same original contact, add index + 1
-				if (index > 0) {
-					finalName = `${originalName} (${index + 1})`;
-				}
-
-				const contactId = index === 0 ? originalId : UUID.random();
-
-				const newContact = {
-					...contact,
-					addresses: [address],
-					id: contactId,
-					name: finalName,
-				};
-
-				results.push({ contact: newContact, id: contactId });
-			}
-
-			return results;
-		});
+		const contactPromises = Object.entries(contacts).map(([originalId, contact]) =>
+			this.#processContactEntry(profile, originalId, contact),
+		);
 
 		const allResults = await Promise.all(contactPromises);
+		return this.#finalizeContacts(allResults);
+	}
 
-		// Handle duplicate names across different original contacts
+	async #processContactEntry(
+		profile: IProfile,
+		originalId: string,
+		contact: IProfileData["contacts"][string],
+	): Promise<Array<{ id: string; contact: any }> | null> {
+		const addressResults = await Promise.all(
+			contact.addresses.map(async (addr) => {
+				const newAddress = await this.#migrateContactAddress(profile, addr);
+				return newAddress ? { address: newAddress, id: addr.id } : null;
+			}),
+		);
+
+		const migratedAddresses = addressResults.filter(
+			(addr): addr is { id: string; address: string } => addr !== null,
+		);
+
+		if (migratedAddresses.length === 0) {
+			return null;
+		}
+
+		const results: Array<{ id: string; contact: any }> = [];
+		for (let index = 0; index < migratedAddresses.length; index++) {
+			const address = migratedAddresses[index];
+			const originalName = contact.name;
+			const finalName = index > 0 ? `${originalName} (${index + 1})` : originalName;
+			const contactId = index === 0 ? originalId : UUID.random();
+
+			const newContact = {
+				...contact,
+				addresses: [address],
+				id: contactId,
+				name: finalName,
+			};
+
+			results.push({ contact: newContact, id: contactId });
+		}
+
+		return results;
+	}
+
+	#finalizeContacts(allResults: Array<Array<{ id: string; contact: any }> | null>): IProfileData["contacts"] {
+		const migratedContacts: IProfileData["contacts"] = {};
 		const finalNameCounts = new Map<string, number>();
+		const seenAddresses = new Map<string, string>();
 
 		for (const result of allResults) {
-			if (result !== null) {
-				for (const { id, contact } of result) {
-					// Ensure the contact's id property matches the dictionary key
-					contact.id = id;
+			if (result === null) {
+				continue;
+			}
 
-					// Handle duplicate names across different contacts
-					const contactName = contact.name;
-					const nameCount = finalNameCounts.get(contactName) || 0;
+			for (const { id, contact } of result) {
+				contact.id = id;
 
-					if (nameCount > 0) {
-						contact.name = `${contactName} (${nameCount + 1})`;
+				const migratedAddress = contact.addresses?.[0]?.address;
+				if (typeof migratedAddress === "string") {
+					if (seenAddresses.has(migratedAddress)) {
+						continue;
 					}
-
-					finalNameCounts.set(contactName, nameCount + 1);
-					migratedContacts[id] = contact;
+					seenAddresses.set(migratedAddress, id);
 				}
+
+				const contactName = contact.name;
+				const nameCount = finalNameCounts.get(contactName) || 0;
+				if (nameCount > 0) {
+					contact.name = `${contactName} (${nameCount + 1})`;
+				}
+				finalNameCounts.set(contactName, nameCount + 1);
+
+				migratedContacts[id] = contact;
 			}
 		}
 
