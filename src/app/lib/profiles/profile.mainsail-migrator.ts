@@ -133,12 +133,24 @@ export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 
 		// Handle duplicate names across different original contacts
 		const finalNameCounts = new Map<string, number>();
+		// Deduplicate contacts that resolve to the same migrated address, keeping the first one
+		const seenAddresses = new Map<string, string>(); // address -> contactId
 
 		for (const result of allResults) {
 			if (result !== null) {
 				for (const { id, contact } of result) {
 					// Ensure the contact's id property matches the dictionary key
 					contact.id = id;
+
+					const migratedAddress = contact.addresses?.[0]?.address;
+					if (typeof migratedAddress === "string") {
+						if (seenAddresses.has(migratedAddress)) {
+							// Skip duplicates that resolve to the same address, preserving the first contact's data
+							continue;
+						}
+
+						seenAddresses.set(migratedAddress, id);
+					}
 
 					// Handle duplicate names across different contacts
 					const contactName = contact.name;
