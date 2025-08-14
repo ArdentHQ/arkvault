@@ -2,17 +2,14 @@ import cn from "classnames";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { Amount } from "@/app/components/Amount";
-import { Icon } from "@/app/components/Icon";
 import { TableCell } from "@/app/components/Table";
 import {
 	BalanceProperties,
 	RecipientItemMobileProperties,
 	ReceiverItemMobileProperties,
-	ReceiverItemProperties,
+	ReceiverItemProperties, RecipientItemProperties,
 } from "@/app/components/WalletListItem/WalletListItem.contracts";
-import { useBreakpoint } from "@/app/hooks";
 import { Skeleton } from "@/app/components/Skeleton";
-import { TruncateEnd } from "@/app/components/TruncateEnd";
 import { InfoDetail, MultiEntryItem } from "@/app/components/MultiEntryItem/MultiEntryItem";
 import { Button } from "@/app/components/Button";
 import { Address } from "@/app/components/Address";
@@ -20,6 +17,8 @@ import { Tooltip } from "@/app/components/Tooltip";
 import { isLedgerWalletCompatible } from "@/utils/wallet-utils";
 import { Contracts } from "@/app/lib/profiles";
 import { TFunction } from "i18next";
+import { Label } from "@/app/components/Label";
+import { Divider } from "@/app/components/Divider";
 
 export const Balance = ({ wallet, isSynced, isLargeScreen = true, className }: BalanceProperties) => {
 	const renderAmount = () => {
@@ -53,49 +52,148 @@ export const RecipientItemMobile = ({
 	address,
 	name,
 }: RecipientItemMobileProperties) => {
-	const { isSmAndAbove } = useBreakpoint();
-	const maxCharacters = isSmAndAbove ? 20 : 10;
+	const { t } = useTranslation();
+
+	return (
+		<MultiEntryItem
+			className={cn({
+				"border-theme-success-200 dark:border-theme-success-700 dim:border-theme-success-700": selected,
+			})}
+			titleWrapperClassName={cn({ "bg-theme-success-100": selected })}
+			titleSlot={
+				<div className="flex w-full items-center justify-between">
+					<div
+						className={cn("max-w-56 truncate text-sm leading-[17px] font-semibold whitespace-nowrap", {
+							"text-theme-secondary-700 dark:text-theme-secondary-200 dim:text-theme-dim-200": !selected,
+							"text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50": selected,
+						})}
+					>
+						{name}
+					</div>
+
+					<Button
+						onClick={onClick}
+						data-testid={selected ? "WalletListItemMobile--selected" : "WalletListItemMobile"}
+						size="icon"
+						className={cn("p-0 text-sm leading-[17px]", {
+							"text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600": !selected,
+							"text-theme-success-600 dark:text-theme-green-600 dim:text-theme-green-600": selected,
+						})}
+						variant="transparent"
+					>
+						{selected ? t("COMMON.SELECTED") : t("COMMON.SELECT")}
+					</Button>
+				</div>
+			}
+			bodySlot={
+				<InfoDetail
+					label={
+						<div className="flex items-center gap-2">
+							<span>
+								{ t("COMMON.ADDRESS")}
+							</span>
+
+							<Label
+								color="secondary"
+								size="xs"
+								noBorder
+								className="flex! h-[21px] shrink-0 items-center justify-center rounded px-1 py-[3px] dark:border"
+								data-testid="TransactionRowAddressing__label"
+							>
+								{type}
+							</Label>
+						</div>
+					}
+					body={
+						<div className="max-w-100">
+							<Address
+								showCopyButton={true}
+								truncateOnTable={true}
+								address={address}
+								addressClass="leading-[17px] text-sm text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50"
+							/>
+						</div>
+					}
+				/>
+			}
+		/>
+	);
+};
+
+export const RecipientItem: React.FC<RecipientItemProperties> = ({ onClick, selected = false, type, index, address, name }) => {
+	const { t } = useTranslation();
 
 	return (
 		<div
-			data-testid={selected ? "WalletListItemMobile--selected" : "WalletListItemMobile"}
-			className={cn(
-				"bg-theme-primary-100 dark:bg-theme-background flex w-full cursor-pointer flex-row rounded-xl border-2",
-				{
-					"border-theme-primary-100 dark:border-theme-secondary-800 dim:border-theme-dim-700": !selected,
-					"border-theme-primary-600 dark:border-theme-primary-600 dim:border-theme-dim-navy-600": selected,
-				},
-			)}
-			tabIndex={onClick ? 0 : -1}
-			onClick={onClick}
+			data-testid="ReceiverItem"
+			className={cn("group cursor-pointer items-center rounded-lg border transition-all", {
+				"border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 hover:bg-theme-navy-100 dark:hover:bg-theme-dark-700 dim-hover:bg-theme-dim-700":
+					!selected,
+				"border-theme-success-200 dark:border-theme-success-700 dim:border-theme-success-700 bg-theme-success-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950":
+					selected,
+				"hover:bg-theme-secondary-200 hover:border-theme-navy-200 dark:hover:bg-theme-dark-700 dark:hover:border-theme-dark-700 dim-hover:bg-theme-dim-700 dim:hover:border-theme-dim-700":
+					selected,
+			})}
 		>
-			<div className="flex h-full w-full flex-col items-start justify-center gap-1.5 p-4">
-				<div className="flex flex-row gap-1.5">
-					<span className="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-200 truncate text-sm font-semibold">
-						<TruncateEnd text={name} maxChars={maxCharacters} showTooltip={name.length > maxCharacters} />
-					</span>
-					<span className="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 text-sm font-semibold">
-						({type})
-					</span>
+			<div className="flex items-center px-4 py-3 duration-150">
+				<div className="border-theme-primary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold">
+					<div className="flex min-w-0 flex-col space-y-2 truncate">
+						<div
+							className={cn("text-sm leading-5", {
+								"group-hover:text-theme-primary-900 dark:group-hover:text-theme-dark-50 dim:group-hover:text-theme-dim-50":
+									!selected,
+								"text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50": selected,
+							})}
+						>
+							{name}
+						</div>
+						<div className="flex gap-1 min-w-0 items-center">
+							<Address
+								showCopyButton={true}
+								address={address}
+								wrapperClass="w-52 min-w-52 justify-between"
+								addressClass={cn(
+									"text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200",
+								)}
+							/>
+
+							<Divider type="vertical"/>
+
+							<Label
+								color="secondary"
+								size="xs"
+								noBorder
+								className="flex! h-[21px] shrink-0 items-center justify-center rounded px-1 py-[3px] dark:border"
+								data-testid="TransactionRowAddressing__label"
+							>
+								{type}
+							</Label>
+						</div>
+					</div>
 				</div>
 
-				{address}
-			</div>
-			<div
-				className={cn("flex w-11 items-center justify-center", {
-					"bg-theme-primary-100 dark:bg-theme-background rounded-r-xl": !selected,
-					"bg-theme-primary-600 dark:bg-theme-primary-600 dim:bg-theme-dim-navy-600 rounded-r-lg": selected,
-				})}
-			>
-				<div>
-					<Icon
-						className={cn({
-							"text-theme-primary-200 dark:text-theme-secondary-800 dim:text-theme-dim-700": !selected,
-							"text-theme-primary-50 dim:text-theme-dim-50": selected,
+				<div className="flex w-[72px] min-w-[72px] flex-1 shrink-0 items-center justify-center pl-4">
+					<Button
+						onClick={onClick}
+						data-testid={
+							selected
+								? `RecipientListItem__selected-button-${index}`
+								: `RecipientListItem__select-button-${index}`
+						}
+						size="icon"
+						className={cn("p-0 text-sm leading-[17px]", {
+							"group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500 dim:group-hover:text-theme-navy-700":
+								!selected,
+							"group-hover:text-theme-success-700 dark:group-hover:text-theme-green-500 dim:group-hover:text-theme-green-500":
+								selected,
+							"text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600": !selected,
+							"text-theme-success-600 dark:text-theme-green-600 dim:text-theme-green-600":
+								selected,
 						})}
-						name="CircleCheckMark"
-						size="lg"
-					/>
+						variant="transparent"
+					>
+						{selected ? t("COMMON.SELECTED") : t("COMMON.SELECT")}
+					</Button>
 				</div>
 			</div>
 		</div>
