@@ -37,7 +37,7 @@ export const SearchRecipient: FC<SearchRecipientProperties> = ({
 						key={index}
 						address={recipient.address}
 						type={recipient.type === "wallet" ? t("COMMON.MY_ADDRESS") : t("COMMON.CONTACT")}
-						name={recipient.alias || ""}
+						name={recipient.alias!}
 						selected={recipient.address === selectedAddress}
 						onClick={() => onAction(recipient.address)}
 					/>
@@ -50,7 +50,7 @@ export const SearchRecipient: FC<SearchRecipientProperties> = ({
 					key={index}
 					address={recipient.address}
 					type={recipient.type === "wallet" ? t("COMMON.MY_ADDRESS") : t("COMMON.CONTACT")}
-					name={recipient.alias || ""}
+					name={recipient.alias!}
 					selected={recipient.address === selectedAddress}
 					onClick={() => onAction(recipient.address)}
 				/>
