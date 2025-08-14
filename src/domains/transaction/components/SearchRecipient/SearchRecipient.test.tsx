@@ -161,12 +161,12 @@ describe("SearchRecipient", () => {
 			"xs",
 		);
 
-		expect(within(screen.getByTestId("WalletListItemMobile--selected")).getByText("(Contact)")).toBeInTheDocument();
+		expect(within(screen.getByTestId("RecipientItemMobile")).getByText("Contact")).toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render with my wallet on mobile", () => {
+	it("should render with my address on mobile", () => {
 		const { asFragment } = renderResponsive(
 			<SearchRecipient
 				profile={profile}
@@ -184,13 +184,13 @@ describe("SearchRecipient", () => {
 		);
 
 		expect(
-			within(screen.getByTestId("WalletListItemMobile--selected")).getByText("(My Wallet)"),
+			within(screen.getByTestId("RecipientItemMobile")).getByText("My Address"),
 		).toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render with my wallet on desktop", () => {
+	it("should render with my address on desktop", () => {
 		const { asFragment } = renderResponsive(
 			<SearchRecipient
 				profile={profile}
@@ -207,7 +207,7 @@ describe("SearchRecipient", () => {
 			"md",
 		);
 
-		expect(screen.getByTestId("RecipientListItem__type")).toHaveTextContent("My Wallet");
+		expect(screen.getByTestId("RecipientItem")).toHaveTextContent("My Address");
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -229,7 +229,7 @@ describe("SearchRecipient", () => {
 			"md",
 		);
 
-		expect(screen.getByTestId("RecipientListItem__type")).toHaveTextContent("Contact");
+		expect(screen.getByTestId("RecipientItem")).toHaveTextContent("Contact");
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -248,14 +248,14 @@ describe("SearchRecipient", () => {
 			"xs",
 		);
 
-		const selected = within(screen.getByTestId("SearchRecipientListItemResponsive--item-0")).getByTestId(
+		const selected = within(screen.getAllByTestId("RecipientItemMobile")[0]).getByTestId(
 			"WalletListItemMobile--selected",
 		);
 
 		expect(selected).toBeInTheDocument();
 
 		await userEvent.click(
-			within(screen.getByTestId("SearchRecipientListItemResponsive--item-1")).getByTestId("WalletListItemMobile"),
+			within(screen.getAllByTestId("RecipientItemMobile")[1]).getByTestId("WalletListItemMobile"),
 		);
 
 		expect(onAction).toHaveBeenCalledWith(recipients[1].address);
@@ -293,18 +293,13 @@ describe("SearchRecipient", () => {
 		);
 		await waitFor(modalDescription);
 
-		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(2));
+		await waitFor(() => expect(screen.queryAllByTestId("RecipientItem")).toHaveLength(2));
 
-		await userEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
-
-		await expect(screen.findByTestId("HeaderSearchBar__input")).resolves.toBeVisible();
-
-		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
-		await waitFor(() => expect(searchInput).toBeInTheDocument());
+		const searchInput = screen.getByTestId("HeaderSearchInput__input__input");
 
 		await userEvent.type(searchInput, "0xcd15953dD076e56D");
 
-		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(1));
+		await waitFor(() => expect(screen.queryAllByTestId("RecipientItem")).toHaveLength(1));
 	});
 
 	it("should filter recipients by alias", async () => {
@@ -315,18 +310,13 @@ describe("SearchRecipient", () => {
 		);
 		await waitFor(modalDescription);
 
-		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(2));
+		await waitFor(() => expect(screen.queryAllByTestId("RecipientItem")).toHaveLength(2));
 
-		await userEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
-
-		await expect(screen.findByTestId("HeaderSearchBar__input")).resolves.toBeVisible();
-
-		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
-		await waitFor(() => expect(searchInput).toBeInTheDocument());
+		const searchInput = screen.getByTestId("HeaderSearchInput__input__input");
 
 		await userEvent.type(searchInput, "Mainsail Wallet 1");
 
-		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(1));
+		await waitFor(() => expect(screen.queryAllByTestId("RecipientItem")).toHaveLength(1));
 	});
 
 	it("should reset recipient search", async () => {
@@ -337,24 +327,20 @@ describe("SearchRecipient", () => {
 		);
 		await waitFor(modalDescription);
 
-		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(2));
+		await waitFor(() => expect(screen.queryAllByTestId("RecipientItem")).toHaveLength(2));
 
-		await userEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
-
-		await expect(screen.findByTestId("HeaderSearchBar__input")).resolves.toBeVisible();
-
-		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
+		const searchInput = screen.getByTestId("HeaderSearchInput__input__input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
 		await userEvent.type(searchInput, "Mainsail Wallet 1");
 
-		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(1));
+		await waitFor(() => expect(screen.queryAllByTestId("RecipientItem")).toHaveLength(1));
 
 		// Reset search
-		await userEvent.click(screen.getByTestId("header-search-bar__reset"));
+		await userEvent.click(screen.getByTestId("HeaderSearchInput__input__reset"));
 
 		await waitFor(() => expect(searchInput).not.toHaveValue());
-		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(2));
+		await waitFor(() => expect(screen.queryAllByTestId("RecipientItem")).toHaveLength(2));
 	});
 
 	it("should not find recipient and show empty results screen", async () => {
@@ -365,19 +351,14 @@ describe("SearchRecipient", () => {
 		);
 		await waitFor(modalDescription);
 
-		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(2));
+		await waitFor(() => expect(screen.queryAllByTestId("RecipientItem")).toHaveLength(2));
 
-		await userEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
-
-		await expect(screen.findByTestId("HeaderSearchBar__input")).resolves.toBeVisible();
-
-		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
-		await waitFor(() => expect(searchInput).toBeInTheDocument());
+		const searchInput = screen.getByTestId("HeaderSearchInput__input__input");
 
 		await userEvent.type(searchInput, "non-existent recipient address");
 
-		await waitFor(() => expect(screen.getByTestId("Input")).toHaveValue("non-existent recipient address"));
-		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(0));
+		await waitFor(() => expect(searchInput).toHaveValue("non-existent recipient address"));
+		await waitFor(() => expect(screen.queryAllByTestId("RecipientItem")).toHaveLength(0));
 
 		await expect(screen.findByTestId("EmptyResults")).resolves.toBeVisible();
 	});

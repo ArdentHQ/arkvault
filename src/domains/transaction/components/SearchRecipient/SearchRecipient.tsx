@@ -36,7 +36,7 @@ export const SearchRecipient: FC<SearchRecipientProperties> = ({
 					<RecipientItemMobile
 						key={index}
 						address={recipient.address}
-						type={recipient.type === "wallet" ? t("COMMON.MY_WALLET") : t("COMMON.CONTACT")}
+						type={recipient.type === "wallet" ? t("COMMON.MY_ADDRESS") : t("COMMON.CONTACT")}
 						name={recipient.alias || ""}
 						selected={recipient.address === selectedAddress}
 						onClick={() => onAction(recipient.address)}

@@ -57,6 +57,7 @@ export const RecipientItemMobile = ({
 
 	return (
 		<MultiEntryItem
+			dataTestId="RecipientItemMobile"
 			className={cn({
 				"border-theme-success-200 dark:border-theme-success-700 dim:border-theme-success-700": selected,
 			})}
@@ -97,7 +98,6 @@ export const RecipientItemMobile = ({
 								size="xs"
 								noBorder
 								className="flex! h-[21px] shrink-0 items-center justify-center rounded px-1 py-[3px] dark:border"
-								data-testid="TransactionRowAddressing__label"
 							>
 								{type}
 							</Label>
@@ -131,7 +131,7 @@ export const RecipientItem: React.FC<RecipientItemProperties> = ({
 
 	return (
 		<div
-			data-testid="ReceiverItem"
+			data-testid="RecipientItem"
 			className={cn("group cursor-pointer items-center rounded-lg border transition-all", {
 				"border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 hover:bg-theme-navy-100 dark:hover:bg-theme-dark-700 dim-hover:bg-theme-dim-700":
 					!selected,
