@@ -1,9 +1,6 @@
 import React, { FC, useCallback } from "react";
 import { useTranslation } from "react-i18next";
-import {
-	RecipientProperties,
-	SearchRecipientProperties,
-} from "./SearchRecipient.contracts";
+import { RecipientProperties, SearchRecipientProperties } from "./SearchRecipient.contracts";
 import { EmptyResults } from "@/app/components/EmptyResults";
 import { Modal } from "@/app/components/Modal";
 import { useSearchWallet } from "@/app/hooks/use-search-wallet";

@@ -7,7 +7,8 @@ import {
 	BalanceProperties,
 	RecipientItemMobileProperties,
 	ReceiverItemMobileProperties,
-	ReceiverItemProperties, RecipientItemProperties,
+	ReceiverItemProperties,
+	RecipientItemProperties,
 } from "@/app/components/WalletListItem/WalletListItem.contracts";
 import { Skeleton } from "@/app/components/Skeleton";
 import { InfoDetail, MultiEntryItem } from "@/app/components/MultiEntryItem/MultiEntryItem";
@@ -89,9 +90,7 @@ export const RecipientItemMobile = ({
 				<InfoDetail
 					label={
 						<div className="flex items-center gap-2">
-							<span>
-								{ t("COMMON.ADDRESS")}
-							</span>
+							<span>{t("COMMON.ADDRESS")}</span>
 
 							<Label
 								color="secondary"
@@ -120,7 +119,14 @@ export const RecipientItemMobile = ({
 	);
 };
 
-export const RecipientItem: React.FC<RecipientItemProperties> = ({ onClick, selected = false, type, index, address, name }) => {
+export const RecipientItem: React.FC<RecipientItemProperties> = ({
+	onClick,
+	selected = false,
+	type,
+	index,
+	address,
+	name,
+}) => {
 	const { t } = useTranslation();
 
 	return (
@@ -147,7 +153,7 @@ export const RecipientItem: React.FC<RecipientItemProperties> = ({ onClick, sele
 						>
 							{name}
 						</div>
-						<div className="flex gap-1 min-w-0 items-center">
+						<div className="flex min-w-0 items-center gap-1">
 							<Address
 								showCopyButton={true}
 								address={address}
@@ -157,7 +163,7 @@ export const RecipientItem: React.FC<RecipientItemProperties> = ({ onClick, sele
 								)}
 							/>
 
-							<Divider type="vertical"/>
+							<Divider type="vertical" />
 
 							<Label
 								color="secondary"
@@ -187,8 +193,7 @@ export const RecipientItem: React.FC<RecipientItemProperties> = ({ onClick, sele
 							"group-hover:text-theme-success-700 dark:group-hover:text-theme-green-500 dim:group-hover:text-theme-green-500":
 								selected,
 							"text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600": !selected,
-							"text-theme-success-600 dark:text-theme-green-600 dim:text-theme-green-600":
-								selected,
+							"text-theme-success-600 dark:text-theme-green-600 dim:text-theme-green-600": selected,
 						})}
 						variant="transparent"
 					>
