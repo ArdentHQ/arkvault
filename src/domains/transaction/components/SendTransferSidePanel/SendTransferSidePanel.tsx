@@ -33,6 +33,7 @@ import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { SidePanel, SidePanelButtons } from "@/app/components/SidePanel/SidePanel";
 import { Button } from "@/app/components/Button";
 import { ConfirmSendTransaction } from "@/domains/transaction/components/ConfirmSendTransaction";
+import { ThemeIcon } from "@/app/components/Icon";
 
 const MAX_TABS = 5;
 
@@ -285,11 +286,84 @@ export const SendTransferSidePanel = ({
 		toasts.success(t("TRANSACTION.QR_CODE_SUCCESS"));
 	};
 
+	const getTitle = () => {
+		if (activeTab === SendTransferStep.ErrorStep) {
+			return t("TRANSACTION.ERROR.TITLE");
+		}
+
+		if (activeTab === SendTransferStep.AuthenticationStep) {
+			return t("TRANSACTION.AUTHENTICATION_STEP.TITLE");
+		}
+
+		if (activeTab === SendTransferStep.ReviewStep) {
+			return t("TRANSACTION.REVIEW_STEP.TITLE");
+		}
+
+		if (activeTab === SendTransferStep.SummaryStep) {
+			return t("TRANSACTION.SUCCESS.CREATED");
+		}
+
+		return t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.TITLE", { ticker: activeNetwork?.ticker() });
+	};
+
+	const getSubtitle = () => {
+		if (activeTab === SendTransferStep.ReviewStep) {
+			return t("TRANSACTION.REVIEW_STEP.DESCRIPTION");
+		}
+
+		if (activeTab === SendTransferStep.FormStep) {
+			return t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.DESCRIPTION");
+		}
+
+		return;
+	};
+
+	const getTitleIcon = () => {
+		if (activeTab === SendTransferStep.SummaryStep) {
+			return (
+				<ThemeIcon
+					lightIcon="CompletedLight"
+					darkIcon="CompletedDark"
+					dimIcon="CompletedDim"
+					dimensions={[24, 24]}
+				/>
+			);
+		}
+
+		if (activeTab === SendTransferStep.AuthenticationStep && wallet?.isLedger()) {
+			return (
+				<ThemeIcon lightIcon="LedgerLight" darkIcon="LedgerDark" dimIcon="LedgerDim" dimensions={[24, 24]} />
+			);
+		}
+
+		if (activeTab === SendTransferStep.ReviewStep) {
+			return (
+				<ThemeIcon
+					lightIcon="DocumentView"
+					darkIcon="DocumentView"
+					dimIcon="DocumentView"
+					dimensions={[24, 24]}
+				/>
+			);
+		}
+
+		return (
+			<ThemeIcon
+				lightIcon="SendTransactionLight"
+				darkIcon="SendTransactionDark"
+				dimIcon="SendTransactionDim"
+				dimensions={[24, 24]}
+			/>
+		);
+	};
+
 	return (
 		<SidePanel
 			open={open}
 			onOpenChange={onOpenChange}
-			title={t("TRANSACTION.TRANSACTION_TYPES.TRANSFER")}
+			title={getTitle()}
+			subtitle={getSubtitle()}
+			titleIcon={getTitleIcon()}
 			dataTestId="SendTransferSidePanel"
 			hasSteps
 			totalSteps={MAX_TABS - 1}
