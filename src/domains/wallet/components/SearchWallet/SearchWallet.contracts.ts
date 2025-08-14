@@ -29,7 +29,6 @@ export interface SearchWalletProperties {
 	wallets: Contracts.IReadWriteWallet[];
 	searchPlaceholder?: string;
 	size?: Size;
-	showConvertedValue?: boolean;
 	showNetwork?: boolean;
 	onClose?: any;
 	onSelectWallet: (wallet: SelectedWallet) => void;

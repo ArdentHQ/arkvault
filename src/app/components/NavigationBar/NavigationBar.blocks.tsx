@@ -198,14 +198,14 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 
 	const modalSize = useMemo<Size>(() => {
 		if (isLg) {
-			return "4xl";
+			return "3xl";
 		}
 
 		if (isMd) {
 			return "2xl";
 		}
 
-		return "5xl";
+		return "3xl";
 	}, [isLg, isMd]);
 
 	const { hasFixedFormButtons, showMobileNavigation } = useNavigationContext();

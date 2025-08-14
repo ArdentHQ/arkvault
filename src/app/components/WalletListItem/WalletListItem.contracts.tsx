@@ -21,7 +21,15 @@ export interface RecipientItemMobileProperties extends MobileItemProperties {
 }
 
 export interface ReceiverItemMobileProperties extends MobileItemProperties {
-	address: React.ReactNode;
+	wallet: Contracts.IReadWriteWallet;
 	name: string;
-	balance: React.ReactNode;
+	disabled?: boolean;
+}
+
+export interface ReceiverItemProperties extends MobileItemProperties {
+	wallet: Contracts.IReadWriteWallet;
+	name: string;
+	exchangeCurrency: string;
+	disabled?: boolean;
+	index: number;
 }
