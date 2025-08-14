@@ -328,7 +328,7 @@ export const SendTransferSidePanel = ({
 				</SidePanelButtons>
 			}
 		>
-			<Form className="mx-auto max-w-172" context={form}>
+			<Form context={form}>
 				<Tabs activeId={activeTab}>
 					<StepsProvider steps={MAX_TABS - 1} activeStep={activeTab}>
 						<TabPanel tabId={SendTransferStep.FormStep}>
