@@ -24,6 +24,7 @@ import { toasts } from "@/app/services";
 import { useSearchParametersValidation } from "@/app/hooks/use-search-parameters-validation";
 import { isLedgerTransportSupported } from "@/app/contexts/Ledger/transport";
 import { isValidUrl } from "@/utils/url-validation";
+import cn from "classnames";
 import {
 	TransferFormData,
 	TransferOverwriteModal,
@@ -34,6 +35,7 @@ import { SidePanel, SidePanelButtons } from "@/app/components/SidePanel/SidePane
 import { Button } from "@/app/components/Button";
 import { ConfirmSendTransaction } from "@/domains/transaction/components/ConfirmSendTransaction";
 import { ThemeIcon } from "@/app/components/Icon";
+import { useConfirmedTransaction } from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
 
 const MAX_TABS = 5;
 
@@ -286,6 +288,11 @@ export const SendTransferSidePanel = ({
 		toasts.success(t("TRANSACTION.QR_CODE_SUCCESS"));
 	};
 
+	const { isConfirmed } = useConfirmedTransaction({
+		transactionId: transaction?.hash(),
+		wallet: wallet,
+	});
+
 	const getTitle = () => {
 		if (activeTab === SendTransferStep.ErrorStep) {
 			return t("TRANSACTION.ERROR.TITLE");
@@ -300,7 +307,7 @@ export const SendTransferSidePanel = ({
 		}
 
 		if (activeTab === SendTransferStep.SummaryStep) {
-			return t("TRANSACTION.SUCCESS.CREATED");
+			return isConfirmed ? t("TRANSACTION.PENDING.TITLE") : t("TRANSACTION.SUCCESS.CREATED");
 		}
 
 		return t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.TITLE");
@@ -326,10 +333,14 @@ export const SendTransferSidePanel = ({
 		if (activeTab === SendTransferStep.SummaryStep) {
 			return (
 				<ThemeIcon
-					lightIcon="CompletedLight"
-					darkIcon="CompletedDark"
-					dimIcon="CompletedDim"
+					lightIcon={isConfirmed ? "CheckmarkDoubleCircle" : "PendingTransaction"}
+					darkIcon={isConfirmed ? "CheckmarkDoubleCircle" : "PendingTransaction"}
+					dimIcon={isConfirmed ? "CheckmarkDoubleCircle" : "PendingTransaction"}
 					dimensions={[24, 24]}
+					className={cn({
+						"text-theme-primary-600": !isConfirmed,
+						"text-theme-success-600": isConfirmed,
+					})}
 				/>
 			);
 		}
