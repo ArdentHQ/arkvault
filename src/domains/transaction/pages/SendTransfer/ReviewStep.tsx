@@ -18,6 +18,7 @@ import { Amount } from "@/app/components/Amount";
 import { BigNumber } from "@/app/lib/helpers";
 import { calculateGasFee } from "@/domains/transaction/components/InputFee/InputFee";
 import { Tooltip } from "@/app/components/Tooltip";
+import cn from "classnames";
 
 interface ReviewStepProperties {
 	wallet: Contracts.IReadWriteWallet;
@@ -125,7 +126,11 @@ export const ReviewStep = ({ wallet, network, hideHeader = false }: ReviewStepPr
 					subtitle={t("TRANSACTION.REVIEW_STEP.DESCRIPTION")}
 				/>
 			)}
-			<div className="-mx-3 mt-4 space-y-3 sm:mx-0 sm:space-y-4">
+			<div
+				className={cn("-mx-3 space-y-3 sm:mx-0 sm:space-y-4", {
+					"mt-4": !hideHeader,
+				})}
+			>
 				<TransactionAddresses
 					senderAddress={wallet.address()}
 					recipients={recipients}

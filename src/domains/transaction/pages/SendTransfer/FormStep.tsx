@@ -3,7 +3,7 @@ import { Contracts } from "@/app/lib/profiles";
 import React, { useEffect } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-
+import cn from "classnames";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { useBreakpoint } from "@/app/hooks";
 import { SelectAddress } from "@/domains/profile/components/SelectAddress";
@@ -118,7 +118,11 @@ export const FormStep = ({
 				/>
 			)}
 
-			<div className="space-y-4 pt-4">
+			<div
+				className={cn("space-y-4", {
+					"pt-4": !hideHeader,
+				})}
+			>
 				<FormField name="senderAddress">
 					<div data-testid="sender-address">
 						<div className="mb-2 flex items-center justify-between">

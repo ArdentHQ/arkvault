@@ -303,12 +303,16 @@ export const SendTransferSidePanel = ({
 			return t("TRANSACTION.SUCCESS.CREATED");
 		}
 
-		return t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.TITLE", { ticker: activeNetwork?.ticker() });
+		return t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.TITLE");
 	};
 
 	const getSubtitle = () => {
 		if (activeTab === SendTransferStep.ReviewStep) {
 			return t("TRANSACTION.REVIEW_STEP.DESCRIPTION");
+		}
+
+		if (activeTab === SendTransferStep.AuthenticationStep) {
+			return t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_SECRET");
 		}
 
 		if (activeTab === SendTransferStep.FormStep) {
@@ -330,10 +334,19 @@ export const SendTransferSidePanel = ({
 			);
 		}
 
-		if (activeTab === SendTransferStep.AuthenticationStep && wallet?.isLedger()) {
-			return (
-				<ThemeIcon lightIcon="LedgerLight" darkIcon="LedgerDark" dimIcon="LedgerDim" dimensions={[24, 24]} />
-			);
+		if (activeTab === SendTransferStep.AuthenticationStep) {
+			if (wallet?.isLedger()) {
+				return (
+					<ThemeIcon
+						lightIcon="LedgerLight"
+						darkIcon="LedgerDark"
+						dimIcon="LedgerDim"
+						dimensions={[24, 24]}
+					/>
+				);
+			}
+
+			return <ThemeIcon lightIcon="Mnemonic" darkIcon="Mnemonic" dimIcon="Mnemonic" dimensions={[24, 24]} />;
 		}
 
 		if (activeTab === SendTransferStep.ReviewStep) {
