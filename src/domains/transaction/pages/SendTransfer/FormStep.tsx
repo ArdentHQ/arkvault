@@ -32,6 +32,8 @@ export const FormStep = ({
 	deeplinkProps,
 	onScan,
 	onChange,
+	// @TODO: always hide header once the side panel is fully implemented
+	hideHeader = false,
 }: {
 	network: Networks.Network;
 	senderWallet?: Contracts.IReadWriteWallet;
@@ -39,6 +41,7 @@ export const FormStep = ({
 	deeplinkProps: Record<string, string>;
 	onScan?: () => void;
 	onChange?: ({ sender }: { sender?: Contracts.IReadWriteWallet }) => void;
+	hideHeader?: boolean;
 }) => {
 	const { t } = useTranslation();
 
@@ -83,35 +86,37 @@ export const FormStep = ({
 
 	return (
 		<section data-testid="SendTransfer__form-step">
-			<StepHeader
-				title={t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.TITLE", { ticker: network.ticker() })}
-				titleIcon={
-					<ThemeIcon
-						dimensions={[24, 24]}
-						lightIcon="SendTransactionLight"
-						darkIcon="SendTransactionDark"
-						dimIcon="SendTransactionDim"
-					/>
-				}
-				subtitle={t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.DESCRIPTION")}
-				extra={
-					!isXs && (
-						<div className="hidden sm:flex sm:h-full sm:align-bottom">
-							<QRCodeButton
-								className="group"
-								type="button"
-								onClick={onScan}
-								data-testid="QRCodeModalButton"
-							>
-								<Icon size="lg" name="QRCode" />
-								<span className="text-base leading-5 font-semibold">
-									{t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.SCAN")}
-								</span>
-							</QRCodeButton>
-						</div>
-					)
-				}
-			/>
+			{!hideHeader && (
+				<StepHeader
+					title={t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.TITLE", { ticker: network.ticker() })}
+					titleIcon={
+						<ThemeIcon
+							dimensions={[24, 24]}
+							lightIcon="SendTransactionLight"
+							darkIcon="SendTransactionDark"
+							dimIcon="SendTransactionDim"
+						/>
+					}
+					subtitle={t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.DESCRIPTION")}
+					extra={
+						!isXs && (
+							<div className="hidden sm:flex sm:h-full sm:align-bottom">
+								<QRCodeButton
+									className="group"
+									type="button"
+									onClick={onScan}
+									data-testid="QRCodeModalButton"
+								>
+									<Icon size="lg" name="QRCode" />
+									<span className="text-base leading-5 font-semibold">
+										{t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.SCAN")}
+									</span>
+								</QRCodeButton>
+							</div>
+						)
+					}
+				/>
+			)}
 
 			<div className="space-y-4 pt-4">
 				<FormField name="senderAddress">

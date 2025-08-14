@@ -341,11 +341,12 @@ export const SendTransferSidePanel = ({
 								onChange={({ sender }) => {
 									setWallet(sender);
 								}}
+								hideHeader
 							/>
 						</TabPanel>
 
 						<TabPanel tabId={SendTransferStep.ReviewStep}>
-							<ReviewStep wallet={wallet!} network={activeNetwork} />
+							<ReviewStep wallet={wallet!} network={activeNetwork} hideHeader />
 						</TabPanel>
 
 						<TabPanel tabId={SendTransferStep.AuthenticationStep}>
@@ -369,11 +370,12 @@ export const SendTransferSidePanel = ({
 									);
 									setActiveTab(SendTransferStep.ErrorStep);
 								}}
+								noHeading
 							/>
 						</TabPanel>
 
 						<TabPanel tabId={SendTransferStep.SummaryStep}>
-							<TransactionSuccessful transaction={transaction!} senderWallet={wallet!} />
+							<TransactionSuccessful transaction={transaction!} senderWallet={wallet!} noHeading />
 						</TabPanel>
 
 						<TabPanel tabId={SendTransferStep.ErrorStep}>
@@ -387,6 +389,7 @@ export const SendTransferSidePanel = ({
 									setActiveTab(SendTransferStep.FormStep);
 								}}
 								errorMessage={errorMessage}
+								hideHeader
 							/>
 						</TabPanel>
 
