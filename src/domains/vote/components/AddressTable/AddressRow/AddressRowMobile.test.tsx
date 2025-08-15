@@ -1,5 +1,5 @@
 /* eslint-disable testing-library/no-node-access */
-/* eslint-disable @typescript-eslint/require-await */
+
 import { Contracts, ReadOnlyWallet } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
 import React, { useEffect } from "react";
@@ -25,6 +25,7 @@ let wallet2: Contracts.IReadWriteWallet;
 const blankWalletPassphrase = "power return attend drink piece found tragic fire liar page disease combine";
 
 const ADDRESS_ROW_STATUS_TEST_ID = "AddressRow__wallet-status";
+const FIRST_ADDRESS_VOTE_BUTTON = "AddressRowMobile__select-0";
 
 const AddressWrapper = ({ children }) => {
 	const { setConfiguration } = useConfiguration();
@@ -302,6 +303,53 @@ describe("AddressRowMobile", () => {
 		expect(container).toBeInTheDocument();
 		expect(onSelect).toHaveBeenCalledWith(wallet.address());
 		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should render disable vote button & tooltip when balance is zero", async () => {
+		const balanceMock = vi.spyOn(wallet, "balance").mockReturnValue(0);
+
+		render(
+			<AddressWrapper>
+				<AddressRowMobile index={0} maxVotes={1} wallet={wallet} />
+			</AddressWrapper>,
+			{
+				route: `/profiles/${profile.id()}/votes`,
+			},
+		);
+
+		await expect(screen.findByTestId(FIRST_ADDRESS_VOTE_BUTTON)).resolves.toBeVisible();
+		expect(screen.getByTestId(FIRST_ADDRESS_VOTE_BUTTON)).toBeDisabled();
+
+		await userEvent.hover(screen.getByTestId(FIRST_ADDRESS_VOTE_BUTTON));
+
+		expect(screen.getByText(/Disabled due to insufficient balance./)).toBeInTheDocument();
+
+		balanceMock.mockRestore();
+	});
+
+	it("should render disable vote button & tooltip when ledger is not supported", async () => {
+		process.env.REACT_APP_IS_UNIT = undefined;
+		const ledgerWalletMock = vi.spyOn(wallet, "isLedger").mockReturnValue(true);
+
+		render(
+			<AddressWrapper>
+				<AddressRowMobile index={0} maxVotes={1} wallet={wallet} />
+			</AddressWrapper>,
+			{
+				route: `/profiles/${profile.id()}/votes`,
+			},
+		);
+
+		await expect(screen.findByTestId(FIRST_ADDRESS_VOTE_BUTTON)).resolves.toBeVisible();
+		expect(screen.getByTestId(FIRST_ADDRESS_VOTE_BUTTON)).toBeDisabled();
+
+		await userEvent.hover(screen.getByTestId(FIRST_ADDRESS_VOTE_BUTTON));
+
+		expect(
+			screen.getByText(/ARK Vault requires the use of a chromium based browser when using a Ledger./),
+		).toBeInTheDocument();
+
+		ledgerWalletMock.mockRestore();
 	});
 
 	// @TODO fix test when we are clear

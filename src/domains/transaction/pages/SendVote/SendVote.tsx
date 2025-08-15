@@ -8,18 +8,13 @@ import { useNavigate } from "react-router-dom";
 import { FormStep } from "./FormStep";
 import { VoteLedgerReview } from "./LedgerReview";
 import { ReviewStep } from "./ReviewStep";
+import { usePendingTransactions } from "@/domains/transaction/hooks/use-pending-transactions";
 import { Form } from "@/app/components/Form";
 import { Page, Section } from "@/app/components/Layout";
 import { StepNavigation } from "@/app/components/StepNavigation";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { StepsProvider, useEnvironmentContext, useLedgerContext } from "@/app/contexts";
-import {
-	useActiveProfile,
-	useValidation,
-	useNetworkFromQueryParameters,
-	useActiveWalletWhenNeeded,
-	useProfileJobs,
-} from "@/app/hooks";
+import { useActiveProfile, useValidation, useNetworkFromQueryParameters, useActiveWalletWhenNeeded } from "@/app/hooks";
 import { useKeydown } from "@/app/hooks/use-keydown";
 import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
 import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
@@ -32,6 +27,7 @@ import { toasts } from "@/app/services";
 import { isLedgerTransportSupported } from "@/app/contexts/Ledger/transport";
 import { TransactionSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
 import { useToggleFeeFields } from "@/domains/transaction/hooks/useToggleFeeFields";
+import { useProfileJobs } from "@/app/hooks/use-profile-background-jobs";
 
 enum Step {
 	FormStep = 1,
@@ -59,6 +55,8 @@ export const SendVote = () => {
 		network: activeNetwork,
 		profile: activeProfile,
 	});
+
+	const { addPendingTransaction } = usePendingTransactions();
 
 	const walletFromUrl = useActiveWalletWhenNeeded(false);
 	const initialStep = useMemo(() => (walletFromUrl ? Step.ReviewStep : Step.FormStep), [walletFromUrl]);
@@ -329,6 +327,8 @@ export const SendVote = () => {
 
 					await persist();
 
+					addPendingTransaction(transaction);
+
 					setTransaction(transaction);
 
 					setActiveTab(Step.SummaryStep);
@@ -381,6 +381,8 @@ export const SendVote = () => {
 
 					await persist();
 
+					addPendingTransaction(voteResult.transaction);
+
 					setTransaction(voteResult.transaction);
 
 					setActiveTab(Step.SummaryStep);
@@ -417,6 +419,8 @@ export const SendVote = () => {
 
 				await persist();
 
+				addPendingTransaction(transaction);
+
 				setTransaction(transaction);
 
 				setActiveTab(Step.SummaryStep);
@@ -440,7 +444,7 @@ export const SendVote = () => {
 	const activeIndex = skipFormStep ? activeTab - 1 : activeTab;
 
 	return (
-		<Page pageTitle={t("TRANSACTION.TRANSACTION_TYPES.VOTE")}>
+		<Page pageTitle={t("TRANSACTION.TRANSACTION_TYPES.VOTE")} showBottomNavigationBar={false}>
 			<Section className="flex-1">
 				<StepsProvider activeStep={activeIndex} steps={stepsCount}>
 					<Form className="mx-auto max-w-172" context={form} onSubmit={submitForm}>

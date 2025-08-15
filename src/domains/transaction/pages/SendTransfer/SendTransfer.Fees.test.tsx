@@ -120,7 +120,7 @@ describe("SendTransfer Fee Handling", () => {
 		const secondAddress = screen.getByTestId("SearchWalletListItem__select-1");
 		await userEvent.click(secondAddress);
 
-		expect(screen.getByText("0.01989216")).toBeInTheDocument();
+		expect(screen.getByText("0.01989216404723")).toBeInTheDocument();
 
 		await userEvent.type(screen.getByTestId("AddRecipient__amount"), "55");
 
@@ -134,7 +134,7 @@ describe("SendTransfer Fee Handling", () => {
 		const firstAddress = screen.getByTestId("SearchWalletListItem__select-0");
 		await userEvent.click(firstAddress);
 
-		expect(screen.getByText("95.27653252")).toBeInTheDocument();
+		expect(screen.getByText("95.27653252325068")).toBeInTheDocument();
 
 		await waitFor(() => expect(screen.queryByTestId("Input__error")).not.toBeInTheDocument());
 	});
@@ -173,17 +173,17 @@ describe("SendTransfer Fee Handling", () => {
 		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
 		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
 
-		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.000105");
+		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.000126");
 
 		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.AVERAGE));
 		await waitFor(() => expect(screen.getAllByRole("radio")[1]).toBeChecked());
 
-		expect(screen.getAllByRole("radio")[1]).toHaveTextContent("0.0001064");
+		expect(screen.getAllByRole("radio")[1]).toHaveTextContent("0.00012768");
 
 		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.FAST));
 		await waitFor(() => expect(screen.getAllByRole("radio")[2]).toBeChecked());
 
-		expect(screen.getAllByRole("radio")[2]).toHaveTextContent("0.000126");
+		expect(screen.getAllByRole("radio")[2]).toHaveTextContent("0.0001512");
 	});
 
 	it("should keep the selected fee when user steps back", async () => {
@@ -275,17 +275,17 @@ describe("SendTransfer Fee Handling", () => {
 		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
 		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
 
-		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.000105");
+		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.000126");
 
 		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.AVERAGE));
 		await waitFor(() => expect(screen.getAllByRole("radio")[1]).toBeChecked());
 
-		expect(screen.getAllByRole("radio")[1]).toHaveTextContent("0.0001064");
+		expect(screen.getAllByRole("radio")[1]).toHaveTextContent("0.00012768");
 
 		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.FAST));
 		await waitFor(() => expect(screen.getAllByRole("radio")[2]).toBeChecked());
 
-		expect(screen.getAllByRole("radio")[2]).toHaveTextContent("0.000126");
+		expect(screen.getAllByRole("radio")[2]).toHaveTextContent("0.0001512");
 
 		await userEvent.click(
 			within(screen.getByTestId("InputFee")).getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED),
@@ -353,7 +353,7 @@ describe("SendTransfer Fee Handling", () => {
 
 		// Assert that fee initial value is 0 and then it changes to 0.1 when loaded
 		await waitFor(() =>
-			expect(screen.getAllByRole("radio")[1]).toHaveTextContent("Average(0.000042 ARK)Confirmation Time~5s"),
+			expect(screen.getAllByRole("radio")[1]).toHaveTextContent("Average(0.000042 ARK)Confirmation Time~8s"),
 		);
 
 		expect(within(screen.getByTestId(reviewStepID)).getAllByTestId("Amount")[0]).toHaveTextContent("1 ARK");

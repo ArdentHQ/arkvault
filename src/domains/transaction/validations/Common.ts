@@ -24,7 +24,7 @@ export const common = (t: TFunction) => ({
 					});
 				}
 
-				const { minGasLimit, maxGasLimit } = getFeeMinMax();
+				const { minGasLimit, maxGasLimit } = getFeeMinMax(network);
 
 				if (gasLimit.isLessThan(minGasLimit)) {
 					return t("COMMON.VALIDATION.GAS_LIMIT_IS_TOO_LOW", {
@@ -84,7 +84,7 @@ export const common = (t: TFunction) => ({
 					});
 				}
 
-				const { minGasPrice, maxGasPrice } = getFeeMinMax();
+				const { minGasPrice, maxGasPrice } = getFeeMinMax(network);
 
 				if (gasPrice.isLessThan(minGasPrice)) {
 					return t("COMMON.VALIDATION.GAS_PRICE_IS_TOO_LOW", {

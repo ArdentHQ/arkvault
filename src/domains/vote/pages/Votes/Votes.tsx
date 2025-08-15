@@ -1,7 +1,7 @@
 import { Page, Section } from "@/app/components/Layout";
 import React, { FC, useCallback, useEffect, useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
-import { useActiveProfile, useActiveWalletWhenNeeded, useProfileJobs } from "@/app/hooks";
+import { useActiveProfile, useActiveWalletWhenNeeded } from "@/app/hooks";
 
 import { AddressTable } from "@/domains/vote/components/AddressTable";
 import { Alert } from "@/app/components/Alert";
@@ -21,6 +21,7 @@ import { useVoteActions } from "@/domains/vote/hooks/use-vote-actions";
 import { useVoteFilters } from "@/domains/vote/hooks/use-vote-filters";
 import { useVoteQueryParameters } from "@/domains/vote/hooks/use-vote-query-parameters";
 import { ResetWhenUnmounted } from "@/app/components/SidePanel/ResetWhenUnmounted";
+import { useProfileJobs } from "@/app/hooks/use-profile-background-jobs";
 
 export const Votes: FC = () => {
 	const { t } = useTranslation();
@@ -108,7 +109,7 @@ export const Votes: FC = () => {
 	useEffect(() => {
 		const syncVotes = async () => {
 			if (selectedWallet) {
-				await activeProfile.validators().sync(activeProfile, selectedWallet.networkId());
+				await activeProfile.validators().sync(selectedWallet.networkId());
 				await selectedWallet.synchroniser().votes();
 			}
 		};
@@ -123,7 +124,7 @@ export const Votes: FC = () => {
 		}
 
 		syncProfileWallets(true);
-	}, []); // eslint-disable-line react-hooks/exhaustive-deps
+	}, []);
 
 	const handleSelectAddress = useCallback(
 		async (address: string) => {

@@ -71,6 +71,7 @@ describe("Mainsail Mainnet Network Configuration", () => {
 				"validatorRegistration",
 				"usernameRegistration",
 				"usernameResignation",
+				"updateValidator",
 				"validatorResignation",
 				"multiPayment",
 				"transfer",

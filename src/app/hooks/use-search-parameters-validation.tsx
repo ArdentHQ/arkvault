@@ -112,7 +112,7 @@ const validateVote = async ({ parameters, profile, network, env }: ValidateParam
 		return { error: { type: SearchParametersError.AmbiguousValidator } };
 	}
 
-	await profile.validators().sync(profile, network.id());
+	await profile.validators().sync(network.id());
 
 	const validator = validatorFromSearchParameters({ env, network, profile, searchParameters: parameters });
 

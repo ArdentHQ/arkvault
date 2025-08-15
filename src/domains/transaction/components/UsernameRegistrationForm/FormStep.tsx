@@ -27,7 +27,7 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 	const { env } = useEnvironmentContext();
 
 	useEffect(() => {
-		register("username", usernameRegistration.username(env, network, profile, userExistsController));
+		register("username", usernameRegistration.username(profile, userExistsController));
 	}, [usernameRegistration, register, env, network.id(), profile]);
 
 	const hasUsernameErrors = "username" in errors;

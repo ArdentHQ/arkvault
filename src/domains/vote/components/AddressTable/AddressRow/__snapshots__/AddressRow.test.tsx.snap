@@ -90,7 +90,7 @@ exports[`AddressRow > should emit action on select button 1`] = `
               class="whitespace-nowrap"
               data-testid="Amount"
             >
-              95.27653252 ARK
+              95.27653252325068 ARK
             </span>
           </div>
         </td>
@@ -288,7 +288,7 @@ exports[`AddressRow > should render 1`] = `
               class="whitespace-nowrap"
               data-testid="Amount"
             >
-              95.27653252 ARK
+              95.27653252325068 ARK
             </span>
           </div>
         </td>
@@ -486,7 +486,7 @@ exports[`AddressRow > should render tooltip wallet when ledger and incompatible 
               class="whitespace-nowrap"
               data-testid="Amount"
             >
-              95.27653252 ARK
+              95.27653252325068 ARK
             </span>
           </div>
         </td>
@@ -685,7 +685,7 @@ exports[`AddressRow > should render when the maximum votes is greater than 1 1`]
               class="whitespace-nowrap"
               data-testid="Amount"
             >
-              95.27653252 ARK
+              95.27653252325068 ARK
             </span>
           </div>
         </td>
@@ -833,7 +833,7 @@ exports[`AddressRow > should render when the wallet has exactly 4 votes 1`] = `
               class="whitespace-nowrap"
               data-testid="Amount"
             >
-              95.27653252 ARK
+              95.27653252325068 ARK
             </span>
           </div>
         </td>
@@ -1035,7 +1035,7 @@ exports[`AddressRow > should render when the wallet has many votes 1`] = `
               class="whitespace-nowrap"
               data-testid="Amount"
             >
-              95.27653252 ARK
+              95.27653252325068 ARK
             </span>
           </div>
         </td>
@@ -1237,7 +1237,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
               class="whitespace-nowrap"
               data-testid="Amount"
             >
-              95.27653252 ARK
+              95.27653252325068 ARK
             </span>
           </div>
         </td>
@@ -1558,7 +1558,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
               class="whitespace-nowrap"
               data-testid="Amount"
             >
-              95.27653252 ARK
+              95.27653252325068 ARK
             </span>
           </div>
         </td>
@@ -1879,7 +1879,7 @@ exports[`AddressRow > should render with active validator 1`] = `
               class="whitespace-nowrap"
               data-testid="Amount"
             >
-              95.27653252 ARK
+              95.27653252325068 ARK
             </span>
           </div>
         </td>
@@ -2077,7 +2077,7 @@ exports[`AddressRow > should render with resigned validator 1`] = `
               class="whitespace-nowrap"
               data-testid="Amount"
             >
-              95.27653252 ARK
+              95.27653252325068 ARK
             </span>
           </div>
         </td>
@@ -2277,7 +2277,7 @@ exports[`AddressRow > should render with standby validator 1`] = `
               class="whitespace-nowrap"
               data-testid="Amount"
             >
-              95.27653252 ARK
+              95.27653252325068 ARK
             </span>
           </div>
         </td>

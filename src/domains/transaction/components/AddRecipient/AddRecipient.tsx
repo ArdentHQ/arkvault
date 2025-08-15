@@ -15,11 +15,9 @@ import { RecipientItem } from "@/domains/transaction/components/RecipientList/Re
 import { SelectRecipient } from "@/domains/profile/components/SelectRecipient";
 import { Switch } from "@/app/components/Switch";
 import { Tooltip } from "@/app/components/Tooltip";
-import { calculateGasFee, getFeeMinMax } from "@/domains/transaction/components/InputFee/InputFee";
 import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-import { GasLimit } from "@/domains/transaction/components/FeeField/FeeField";
 
 const TransferType = ({ isSingle, disableMultiple, onChange, maxRecipients }: ToggleButtonProperties) => {
 	const { t } = useTranslation();
@@ -82,9 +80,6 @@ export const AddRecipient = ({
 	const { network, senderAddress, recipientAddress, amount, recipientAlias, isSendAllSelected } = watch();
 	const { sendTransfer } = useValidation();
 
-	const { minGasPrice } = getFeeMinMax();
-	const fee = calculateGasFee(minGasPrice, GasLimit["transfer"].times(Math.max(recipients.length, 1)));
-
 	const ticker = network?.ticker();
 	const exchangeTicker = profile.settings().get(Contracts.ProfileSetting.ExchangeCurrency) as string;
 	const { convert } = useExchangeRate({ exchangeTicker, profile, ticker });
@@ -92,24 +87,18 @@ export const AddRecipient = ({
 	const maxRecipients = network?.multiPaymentRecipients() ?? 0;
 
 	const remainingBalance = useMemo(() => {
-		let senderBalance = wallet?.balance() || 0;
+		let senderBalance = BigNumber.make(wallet?.balance() || 0);
 
 		if (isSingle) {
-			return senderBalance;
+			return senderBalance.toString();
 		}
 
 		for (const recipient of addedRecipients) {
-			senderBalance = senderBalance - Number(recipient.amount || 0);
+			senderBalance = senderBalance.minus(BigNumber.make(recipient.amount || 0));
 		}
 
-		return senderBalance;
+		return senderBalance.toString();
 	}, [addedRecipients, wallet, isSingle]);
-
-	const remainingNetBalance = useMemo(() => {
-		const netBalance = BigNumber.make(remainingBalance).minus(fee || 0);
-
-		return netBalance.isGreaterThan(0) ? netBalance.toFixed(10) : "0";
-	}, [fee, remainingBalance]);
 
 	const isSenderFilled = useMemo(() => !!network?.id() && !!senderAddress, [network, senderAddress]);
 
@@ -125,15 +114,15 @@ export const AddRecipient = ({
 	}, [register]);
 
 	useEffect(() => {
-		const remaining = remainingBalance <= 0 ? 0 : remainingBalance;
+		const remaining = +remainingBalance <= 0 ? 0 : remainingBalance;
 
 		setValue("remainingBalance", remaining);
-	}, [remainingBalance, setValue, amount, recipientAddress, fee, senderAddress]);
+	}, [remainingBalance, setValue, amount, recipientAddress, senderAddress]);
 
 	useEffect(() => {
-		register("amount", sendTransfer.amount(network, remainingNetBalance, addedRecipients, isSingle));
+		register("amount", sendTransfer.amount(network, remainingBalance, addedRecipients, isSingle));
 		register("recipientAddress", sendTransfer.recipientAddress(profile, network, addedRecipients, isSingle));
-	}, [register, network, sendTransfer, addedRecipients, isSingle, profile, remainingNetBalance]);
+	}, [register, network, sendTransfer, addedRecipients, isSingle, profile, remainingBalance]);
 
 	useEffect(() => {
 		if (network && recipientAddress) {
@@ -145,7 +134,7 @@ export const AddRecipient = ({
 		if (getValues("amount")) {
 			trigger("amount");
 		}
-	}, [fee, senderAddress, getValues, trigger]);
+	}, [senderAddress, getValues, trigger]);
 
 	useEffect(() => {
 		if (!isMountedReference.current) {
@@ -210,11 +199,7 @@ export const AddRecipient = ({
 			return;
 		}
 
-		const remaining = BigNumber.make(remainingBalance).isGreaterThan(fee || 0)
-			? +remainingNetBalance
-			: remainingBalance;
-
-		setValue("amount", remaining, {
+		setValue("amount", remainingBalance, {
 			shouldDirty: true,
 			shouldValidate: true,
 		});
@@ -222,9 +207,9 @@ export const AddRecipient = ({
 		singleRecipientOnChange({
 			address: recipientAddress,
 			alias: recipientAlias,
-			amount: remaining,
+			amount: remainingBalance,
 		});
-	}, [fee, isSendAllSelected, remainingBalance, remainingNetBalance, setValue]);
+	}, [isSendAllSelected, remainingBalance, setValue]);
 
 	const singleRecipientOnChange = ({
 		address,
@@ -311,7 +296,7 @@ export const AddRecipient = ({
 
 			<SubForm
 				data-testid="AddRecipient__form-wrapper"
-				noBackground={isSingle}
+				noBorder={isSingle}
 				noPadding={isSingle}
 				className="rounded-xl"
 			>
@@ -425,7 +410,7 @@ export const AddRecipient = ({
 					)}
 
 					{!isSingle && addedRecipients.length > 0 && (
-						<div>
+						<div className="space-y-0 sm:space-y-1">
 							{addedRecipients.map((recipient, index) => (
 								<AddRecipientItem
 									index={index}

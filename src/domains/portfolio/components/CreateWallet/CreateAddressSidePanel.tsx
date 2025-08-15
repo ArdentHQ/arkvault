@@ -9,7 +9,6 @@ import { EncryptPasswordStep } from "@/domains/wallet/components/EncryptPassword
 import { SuccessStep } from "@/domains/portfolio/components/CreateWallet/SuccessStep";
 import { Button } from "@/app/components/Button";
 import { useEnvironmentContext } from "@/app/contexts";
-import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useActiveProfile } from "@/app/hooks";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
@@ -31,7 +30,6 @@ export const CreateAddressesSidePanel = ({
 	onMountChange?: (mounted: boolean) => void;
 }): JSX.Element => {
 	const { persist } = useEnvironmentContext();
-	const navigate = useNavigate();
 	const { t } = useTranslation();
 	const activeProfile = useActiveProfile();
 	const [activeTab, setActiveTab] = useState<CreateStep>(CreateStep.WalletOverviewStep);
@@ -114,7 +112,8 @@ export const CreateAddressesSidePanel = ({
 
 	const handleBack = () => {
 		if (activeTab === CreateStep.WalletOverviewStep) {
-			return navigate(`/profiles/${activeProfile.id()}/dashboard`);
+			onOpenChange(false);
+			return;
 		}
 
 		setActiveTab(activeTab - 1);
@@ -235,6 +234,7 @@ export const CreateAddressesSidePanel = ({
 			hasSteps
 			totalSteps={allSteps.length}
 			activeStep={activeTab}
+			onBack={handleBack}
 			footer={
 				<SidePanelButtons data-testid="CreateAddressSidePanel__footer">
 					{activeTab <= CreateStep.EncryptPasswordStep && (
@@ -291,6 +291,7 @@ export const CreateAddressesSidePanel = ({
 					)}
 				</SidePanelButtons>
 			}
+			isLastStep={activeTab === CreateStep.SuccessStep}
 		>
 			<Form context={form} onSubmit={handleFinish} className="space-y-0" id="CreateWallet__form">
 				<Tabs activeId={activeTab}>

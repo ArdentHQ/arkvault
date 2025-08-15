@@ -310,8 +310,8 @@ describe("SendTransfer", () => {
 		const transferURL = `/profiles/${fixtureProfileId}/send-transfer`;
 
 		const defaultValues = {
-			gasLimit: "1",
-			gasPrice: "1",
+			gasLimit: BigNumber.make(1),
+			gasPrice: BigNumber.make(1),
 			network: wallet.network(),
 			recipients: [
 				{
@@ -341,8 +341,8 @@ describe("SendTransfer", () => {
 		const transferURL = `/profiles/${fixtureProfileId}/send-transfer`;
 
 		const defaultValues = {
-			gasLimit: "1",
-			gasPrice: "1",
+			gasLimit: BigNumber.make(1),
+			gasPrice: BigNumber.make(1),
 			network: wallet.network(),
 			recipients: [
 				{
@@ -473,7 +473,7 @@ describe("SendTransfer", () => {
 		// remove focus from fee button
 		await userEvent.click(document.body);
 
-		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.000105");
+		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.000126");
 
 		// Step 3
 		expect(continueButton()).not.toBeDisabled();
@@ -562,7 +562,7 @@ describe("SendTransfer", () => {
 
 		expect(screen.getAllByRole("radio")[0]).toBeChecked();
 
-		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.000105");
+		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.000126");
 
 		// Back to Step 1
 		await userEvent.click(backButton());
@@ -651,7 +651,7 @@ describe("SendTransfer", () => {
 		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
 		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
 
-		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.000105");
+		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.000126");
 
 		// Step 3
 		expect(continueButton()).not.toBeDisabled();
@@ -760,7 +760,7 @@ describe("SendTransfer", () => {
 		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
 		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
 
-		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.000105");
+		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.000126");
 
 		// Step 3
 		expect(continueButton()).not.toBeDisabled();
@@ -807,7 +807,7 @@ describe("SendTransfer", () => {
 		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
 		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
 
-		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.000105");
+		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.000126");
 
 		// Review Step
 		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
@@ -879,7 +879,7 @@ describe("SendTransfer", () => {
 		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
 		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
 
-		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.000105");
+		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.000126");
 
 		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
 
@@ -1006,7 +1006,7 @@ describe("SendTransfer", () => {
 		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
 		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
 
-		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.000105");
+		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.000126");
 
 		// Step 3
 		expect(continueButton()).not.toBeDisabled();
@@ -1114,7 +1114,7 @@ describe("SendTransfer", () => {
 		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
 		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
 
-		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.000105");
+		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.000126");
 
 		// proceed to step 3
 		await userEvent.click(continueButton());
@@ -1186,7 +1186,7 @@ describe("SendTransfer", () => {
 
 		expect(screen.getAllByRole("radio")[0]).toBeChecked();
 
-		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.000105");
+		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.000126");
 
 		// Step 3
 		expect(continueButton()).not.toBeDisabled();
@@ -1257,5 +1257,42 @@ describe("SendTransfer", () => {
 
 		expect(transferData.amount).toBe(0);
 		expect(transferData.to).toBe(wallet.address());
+	});
+
+	it("should recalculate transfer amount when sending all", async () => {
+		const walletSpy = vi.spyOn(wallet, "balance").mockReturnValue(50);
+
+		const transferURL = `/profiles/${getDefaultProfileId()}/wallets/${wallet.id()}/send-transfer`;
+		console.log(wallet.balance());
+
+		render(<SendTransfer />, {
+			route: transferURL,
+		});
+
+		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
+
+		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
+
+		await selectRecipient();
+
+		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
+
+		await selectFirstRecipient();
+		await waitFor(() =>
+			expect(screen.getAllByTestId("SelectDropdown__input")[0]).toHaveValue(profile.wallets().first().address()),
+		);
+
+		// Amount
+		await userEvent.click(screen.getByTestId(sendAllID));
+		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("50"));
+
+		expect(continueButton()).not.toBeDisabled();
+		await userEvent.click(continueButton());
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
+
+		// Should display amount - fee after fee calculation
+		await expect(screen.findByText(/49.99985 ARK/)).resolves.toBeVisible();
+
+		walletSpy.mockRestore();
 	});
 });

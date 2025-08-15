@@ -262,7 +262,7 @@ export class Profile implements IProfile {
 		this.#transactionAggregate = new TransactionAggregate(this);
 		this.#walletAggregate = new WalletAggregate(this);
 		this.#authenticator = new Authenticator(this);
-		this.#validators = new ValidatorService();
+		this.#validators = new ValidatorService(this);
 		this.#password = new PasswordManager();
 		this.#status = new ProfileStatus();
 		this.#knownWalletService = new KnownWalletService();
@@ -370,8 +370,14 @@ export class Profile implements IProfile {
 			activeNetworkId: undefined,
 		};
 
-		if (this.#activeNetwork && this.#activeNetwork.id() === activeNetworkId) {
-			return this.#activeNetwork;
+		if (this.#activeNetwork) {
+			const activeNetworkIsChanged = [!!activeNetworkId, this.#activeNetwork.id() !== activeNetworkId].every(
+				Boolean,
+			);
+
+			if (!activeNetworkIsChanged) {
+				return this.#activeNetwork;
+			}
 		}
 
 		const activeNetwork = this.networks()

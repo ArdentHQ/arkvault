@@ -9,6 +9,7 @@ import { TransferLedgerReview } from "./LedgerReview";
 import { ReviewStep } from "./ReviewStep";
 import { SendTransferStep } from "@/domains/transaction/pages/SendTransfer/SendTransfer.contracts";
 import { useSendTransferForm } from "@/domains/transaction/hooks/use-send-transfer-form";
+import { usePendingTransactions } from "@/domains/transaction/hooks/use-pending-transactions";
 import { Form } from "@/app/components/Form";
 import { Page, Section } from "@/app/components/Layout";
 import { QRModal } from "@/app/components/QRModal";
@@ -51,6 +52,7 @@ export const SendTransfer = () => {
 
 	const { fetchWalletUnconfirmedTransactions } = useTransaction();
 	const { hasDeviceAvailable, isConnected, connect } = useLedgerContext();
+	const { addPendingTransaction } = usePendingTransactions();
 
 	const { hasReset: shouldResetForm, queryParameters: deepLinkParameters } = useTransactionQueryParameters();
 
@@ -148,6 +150,8 @@ export const SendTransfer = () => {
 			try {
 				const transaction = await submitForm(abortReference);
 
+				addPendingTransaction(transaction);
+
 				setTransaction(transaction);
 				setActiveTab(SendTransferStep.SummaryStep);
 			} catch (error) {
@@ -155,8 +159,9 @@ export const SendTransfer = () => {
 				setActiveTab(SendTransferStep.ErrorStep);
 			}
 		},
-		[fetchWalletUnconfirmedTransactions, submitForm, wallet],
+		[fetchWalletUnconfirmedTransactions, submitForm, wallet, addPendingTransaction],
 	);
+
 	const handleBack = () => {
 		// Abort any existing listener
 		abortReference.current.abort();
@@ -363,7 +368,7 @@ export const SendTransfer = () => {
 	);
 
 	return (
-		<Page pageTitle={t("TRANSACTION.TRANSACTION_TYPES.TRANSFER")}>
+		<Page pageTitle={t("TRANSACTION.TRANSACTION_TYPES.TRANSFER")} showBottomNavigationBar={false}>
 			<Section className="flex-1">
 				<Form className="mx-auto max-w-172" context={form}>
 					<Tabs activeId={activeTab}>{renderTabs()}</Tabs>

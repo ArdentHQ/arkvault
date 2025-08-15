@@ -296,12 +296,13 @@ export class ClientService {
 		}
 
 		const transactionTypeMap: Record<string, string | undefined> = {
-			delegateRegistration: TransactionTypes.RegisterValidator,
-			delegateResignation: TransactionTypes.ResignValidator,
 			multiPayment: TransactionTypes.MultiPayment,
 			transfer: TransactionTypes.Transfer,
+			updateValidator: TransactionTypes.UpdateValidator,
 			usernameRegistration: TransactionTypes.RegisterUsername,
 			usernameResignation: TransactionTypes.ResignUsername,
+			validatorRegistration: TransactionTypes.RegisterValidator,
+			validatorResignation: TransactionTypes.ResignValidator,
 			vote: [trimHexPrefix(TransactionTypes.Vote), trimHexPrefix(TransactionTypes.Unvote)].join(","),
 		};
 

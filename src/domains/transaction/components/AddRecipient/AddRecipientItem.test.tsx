@@ -3,9 +3,9 @@ import { Contracts } from "@/app/lib/profiles";
 import React from "react";
 import userEvent from "@testing-library/user-event";
 import { AddRecipientItem } from "./AddRecipientItem";
-import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, renderResponsive, screen } from "@/utils/testing-library";
 
-const deleteButton = () => screen.getByTestId("AddRecipientItem--deleteButton");
+const deleteButton = () => screen.getByTestId("AddRecipientItem--deleteButton-1");
 
 describe("Add Recipient item", () => {
 	let profile: Contracts.IProfile;
@@ -28,6 +28,23 @@ describe("Add Recipient item", () => {
 			alias: wallet.alias(),
 			amount: 1,
 		};
+	});
+
+	it.each(["xs", "lg"] as const)("should render with size %s", (size) => {
+		const { asFragment } = renderResponsive(
+			<AddRecipientItem
+				recipient={recipient}
+				ticker="DARK"
+				exchangeTicker="USD"
+				showExchangeAmount={false}
+				index={1}
+				onDelete={() => {}}
+				profile={profile}
+			/>,
+			size,
+		);
+
+		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render without exchange amount", () => {
@@ -84,12 +101,6 @@ describe("Add Recipient item", () => {
 		);
 
 		await userEvent.click(deleteButton());
-
-		expect(onDelete).toHaveBeenCalledWith(1);
-
-		onDelete.mockReset();
-
-		await userEvent.click(screen.getByTestId("AddRecipientItem--deleteButton_mobile"));
 
 		expect(onDelete).toHaveBeenCalledWith(1);
 	});

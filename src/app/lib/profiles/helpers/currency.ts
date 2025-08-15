@@ -6,7 +6,7 @@ interface CurrencyFormatOptions {
 	withTicker?: boolean;
 }
 
-const DEFAULT_DECIMALS = 8;
+const DEFAULT_DECIMALS = 18;
 
 export class Currency {
 	public static format(value: number, ticker: string, options: CurrencyFormatOptions = {}): string {
