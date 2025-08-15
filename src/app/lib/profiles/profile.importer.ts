@@ -12,7 +12,7 @@ export class ProfileImporter implements IProfileImporter {
 	readonly #validator: IProfileValidator;
 	readonly #migrator: IProfileMainsailMigrator;
 	readonly #env: Environment;
-	#skipMigration: boolean = false;
+	#ignoreDetails: boolean = false;
 
 	public constructor(profile: IProfile, env: Environment) {
 		this.#profile = profile;
@@ -21,8 +21,8 @@ export class ProfileImporter implements IProfileImporter {
 		this.#env = env;
 	}
 
-	public skipMigration(): ProfileImporter {
-		this.#skipMigration = true;
+	public ignoreDetails(): ProfileImporter {
+		this.#ignoreDetails = true;
 		return this;
 	}
 
@@ -37,29 +37,29 @@ export class ProfileImporter implements IProfileImporter {
 			await new Migrator(this.#profile, data).migrate(schemas, version);
 		}
 
-		if (!this.#skipMigration) {
-			data = await this.#migrator.migrate(this.#profile, data);
-		}
+		data = await this.#migrator.migrate(this.#profile, data);
 
 		data = this.#validator.validate(data);
 
-		this.#profile.notifications().fill(data.notifications);
+		if (!this.#ignoreDetails) {
+			this.#profile.notifications().fill(data.notifications);
 
-		this.#profile.data().fill(data.data);
+			this.#profile.data().fill(data.data);
 
-		this.#profile.hosts().fill(data.hosts);
+			this.#profile.hosts().fill(data.hosts);
 
-		this.#profile.networks().fill(data.networks);
+			this.#profile.networks().fill(data.networks);
 
-		this.#profile.exchangeTransactions().fill(data.exchangeTransactions);
+			this.#profile.exchangeTransactions().fill(data.exchangeTransactions);
+
+			this.#profile.wallets().fill(data.wallets);
+
+			this.#profile.contacts().fill(data.contacts);
+
+			this.#profile.exchangeRates().restore();
+		}
 
 		this.#profile.settings().fill(data.settings);
-
-		this.#profile.wallets().fill(data.wallets);
-
-		this.#profile.contacts().fill(data.contacts);
-
-		this.#profile.exchangeRates().restore();
 	}
 
 	/**
