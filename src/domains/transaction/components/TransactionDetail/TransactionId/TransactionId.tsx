@@ -26,7 +26,7 @@ export const TransactionId = ({ transaction, isConfirmed }: Properties): ReactEl
 	const [mounted, setMounted] = useState(false);
 
 	useEffect(() => {
-		if(!mounted) {
+		if (!mounted) {
 			setMounted(true);
 		}
 	}, [mounted]);
