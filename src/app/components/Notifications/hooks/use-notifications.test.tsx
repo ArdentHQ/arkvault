@@ -1,5 +1,5 @@
 import { renderHook, act, waitFor } from "@testing-library/react";
-import { vi, type Mock } from "vitest";
+import { vi } from "vitest";
 import { Contracts } from "@/app/lib/profiles";
 import { env, getMainsailProfileId } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
