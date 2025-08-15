@@ -26,9 +26,12 @@ export const TransactionId = ({ transaction, isConfirmed }: Properties): ReactEl
 
 	const [mounted, setMounted] = useState(false);
 
-	useInterval(() => {
-		setMounted(true);
-	}, mounted ? null : 1000)
+	useInterval(
+		() => {
+			setMounted(true);
+		},
+		mounted ? null : 1000,
+	);
 
 	return (
 		<div
