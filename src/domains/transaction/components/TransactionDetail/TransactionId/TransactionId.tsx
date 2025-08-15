@@ -1,4 +1,4 @@
-import React, { ReactElement, useRef, useState } from "react";
+import React, { ReactElement, useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { DTO } from "@/app/lib/profiles";
 import { useBreakpoint } from "@/app/hooks";
@@ -10,7 +10,6 @@ import { useLink } from "@/app/hooks/use-link";
 import { getStyles } from "@/app/components/Button/Button.styles";
 import { twMerge } from "tailwind-merge";
 import { TruncateMiddleDynamic } from "@/app/components/TruncateMiddleDynamic";
-import { useInterval } from "usehooks-ts";
 
 interface Properties {
 	transaction: DTO.ExtendedSignedTransactionData | DTO.ExtendedConfirmedTransactionData;
@@ -26,9 +25,11 @@ export const TransactionId = ({ transaction, isConfirmed }: Properties): ReactEl
 
 	const [mounted, setMounted] = useState(false);
 
-	useInterval(() => {
-		setMounted(true);
-	}, mounted ? null : 1000)
+	useEffect(() => {
+		if(!mounted) {
+			setMounted(true);
+		}
+	}, [mounted]);
 
 	return (
 		<div
