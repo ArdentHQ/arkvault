@@ -30,7 +30,6 @@ export class TransactionReceipt {
 			return false;
 		}
 
-
 		return true;
 	}
 
