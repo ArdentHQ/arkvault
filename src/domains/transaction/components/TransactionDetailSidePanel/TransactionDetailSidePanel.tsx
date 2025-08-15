@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { TransactionDetailModalProperties } from "./TransactionDetailSidePanel.contracts";
 import { useTranslation } from "react-i18next";
 
@@ -122,8 +122,23 @@ export const TransactionDetailSidePanel = ({
 	onClose,
 }: TransactionDetailModalProperties) => {
 	const { t } = useTranslation();
+
+	const [isSidePanelOpen, setIsSidePanelOpen] = useState(isOpen);
+
+	useEffect(() => {
+		let timeoutId: NodeJS.Timeout | undefined;
+
+		if (!isSidePanelOpen) {
+			timeoutId = setTimeout(() => {
+				onClose?.();
+			}, 1000);
+		}
+
+		return () => clearTimeout(timeoutId);
+	}, [isSidePanelOpen])
+
 	return (
-		<SidePanel title={t("TRANSACTION.MODAL_TRANSACTION_DETAILS.TITLE")} open={isOpen} onOpenChange={onClose}>
+		<SidePanel title={t("TRANSACTION.MODAL_TRANSACTION_DETAILS.TITLE")} open={isSidePanelOpen} onOpenChange={setIsSidePanelOpen}>
 			<TransactionDetailContent transactionItem={transactionItem} profile={profile} />
 		</SidePanel>
 	);
