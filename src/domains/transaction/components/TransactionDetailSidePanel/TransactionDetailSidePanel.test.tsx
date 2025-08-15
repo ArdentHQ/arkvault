@@ -94,7 +94,9 @@ describe("TransactionDetailModal", () => {
 			},
 		);
 
-		expect(screen.getByTestId("SidePanel__content")).toHaveTextContent(translations.MODAL_TRANSACTION_DETAILS.TITLE);
+		expect(screen.getByTestId("SidePanel__content")).toHaveTextContent(
+			translations.MODAL_TRANSACTION_DETAILS.TITLE,
+		);
 	});
 
 	it.each(["vote", "unvote", "voteCombination"])("should render a %s modal", (transactionType) => {
