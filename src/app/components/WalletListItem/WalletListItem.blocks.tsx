@@ -131,6 +131,8 @@ export const RecipientItem: React.FC<RecipientItemProperties> = ({
 
 	return (
 		<div
+			onClick={onClick}
+			tabIndex={0}
 			data-testid="RecipientItem"
 			className={cn("group cursor-pointer items-center rounded-lg border transition-all", {
 				"border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 hover:bg-theme-navy-100 dark:hover:bg-theme-dark-700 dim-hover:bg-theme-dim-700":
@@ -142,7 +144,17 @@ export const RecipientItem: React.FC<RecipientItemProperties> = ({
 			})}
 		>
 			<div className="flex items-center px-4 py-3 duration-150">
-				<div className="border-theme-primary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold">
+				<div
+					className={cn(
+						"text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold",
+						{
+							"border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 group-hover:dark:border-theme-dark-500 group-hover:dim:border-theme-dim-500":
+								!selected,
+							"border-theme-success-200 dark:border-theme-success-700 dim:border-theme-success-700":
+								selected,
+						},
+					)}
+				>
 					<div className="flex min-w-0 flex-col space-y-1 truncate">
 						<div
 							className={cn("text-sm leading-5", {
@@ -163,13 +175,21 @@ export const RecipientItem: React.FC<RecipientItemProperties> = ({
 								)}
 							/>
 
-							<Divider type="vertical" />
+							<Divider
+								type="vertical"
+								className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 group-hover:dark:border-theme-dark-500 group-hover:dim:border-theme-dim-500"
+							/>
 
 							<Label
 								color="secondary"
 								size="xs"
 								noBorder
-								className="dark:group-hover:border-theme-dark-500 dim:group-hover:border-theme-dim-500 flex! h-[21px] shrink-0 items-center justify-center rounded px-1 py-[3px] text-xs leading-[15px] dark:border"
+								className={cn(
+									"dark:group-hover:border-theme-dark-500 dim:group-hover:border-theme-dim-500 flex! h-[21px] shrink-0 items-center justify-center rounded px-1 py-[3px] text-xs leading-[15px] dark:border",
+									{
+										"bg-theme-secondary-100": selected,
+									},
+								)}
 							>
 								{type}
 							</Label>
@@ -179,7 +199,6 @@ export const RecipientItem: React.FC<RecipientItemProperties> = ({
 
 				<div className="flex w-[72px] min-w-[72px] flex-1 shrink-0 items-center justify-center pl-4">
 					<Button
-						onClick={onClick}
 						data-testid={
 							selected
 								? `RecipientListItem__selected-button-${index}`
