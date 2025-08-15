@@ -30,7 +30,6 @@ export class TransactionReceipt {
 			return false;
 		}
 
-		// TODO: Add more known errors here.
 
 		return true;
 	}
