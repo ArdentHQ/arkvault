@@ -7,7 +7,7 @@ import { Dropdown } from "@/app/components/Dropdown";
 import { Icon } from "@/app/components/Icon";
 import { NavigationButtonWrapper } from "@/app/components/NavigationBar/NavigationBar.blocks";
 import { Notifications, useNotifications } from "@/app/components/Notifications";
-import { TransactionDetailModal } from "@/domains/transaction/components/TransactionDetailModal";
+import { TransactionDetailSidePanel } from "@/domains/transaction/components/TransactionDetailSidePanel";
 import { Tooltip } from "@/app/components/Tooltip";
 import { useTranslation } from "react-i18next";
 export const NotificationsDropdown = ({ profile }: { profile: Contracts.IProfile }) => {
@@ -43,7 +43,7 @@ export const NotificationsDropdown = ({ profile }: { profile: Contracts.IProfile
 			</Dropdown>
 
 			{transactionModalItem && (
-				<TransactionDetailModal
+				<TransactionDetailSidePanel
 					isOpen={!!transactionModalItem}
 					transactionItem={transactionModalItem}
 					profile={profile}

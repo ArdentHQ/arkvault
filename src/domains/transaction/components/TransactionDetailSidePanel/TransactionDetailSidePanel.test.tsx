@@ -1,7 +1,7 @@
 import { Contracts, ReadOnlyWallet } from "@/app/lib/profiles";
 import React from "react";
 import { requestMock, server } from "@/tests/mocks/server";
-import { TransactionDetailModal } from "./TransactionDetailModal";
+import { TransactionDetailSidePanel } from "./TransactionDetailSidePanel";
 import { translations } from "@/domains/transaction/i18n";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
 import { env, getDefaultProfileId, render, screen, syncValidators } from "@/utils/testing-library";
@@ -34,7 +34,7 @@ describe("TransactionDetailModal", () => {
 
 	it("should not render if not open", () => {
 		render(
-			<TransactionDetailModal
+			<TransactionDetailSidePanel
 				profile={profile}
 				isOpen={false}
 				transactionItem={{
@@ -51,7 +51,7 @@ describe("TransactionDetailModal", () => {
 
 	it("should render a transfer modal", () => {
 		render(
-			<TransactionDetailModal
+			<TransactionDetailSidePanel
 				profile={profile}
 				isOpen={true}
 				transactionItem={{
@@ -73,7 +73,7 @@ describe("TransactionDetailModal", () => {
 
 	it("should render a multi payment modal", () => {
 		render(
-			<TransactionDetailModal
+			<TransactionDetailSidePanel
 				profile={profile}
 				isOpen={true}
 				transactionItem={{
@@ -110,7 +110,7 @@ describe("TransactionDetailModal", () => {
 		);
 
 		render(
-			<TransactionDetailModal
+			<TransactionDetailSidePanel
 				profile={profile}
 				isOpen={true}
 				transactionItem={{
@@ -169,7 +169,7 @@ describe("TransactionDetailModal", () => {
 		);
 
 		render(
-			<TransactionDetailModal
+			<TransactionDetailSidePanel
 				profile={profile}
 				isOpen={true}
 				transactionItem={{
@@ -203,7 +203,7 @@ describe("TransactionDetailModal", () => {
 
 	it("should render a validator registration modal", () => {
 		render(
-			<TransactionDetailModal
+			<TransactionDetailSidePanel
 				profile={profile}
 				isOpen={true}
 				transactionItem={{
@@ -224,7 +224,7 @@ describe("TransactionDetailModal", () => {
 
 	it("should render a validator resignation modal", () => {
 		render(
-			<TransactionDetailModal
+			<TransactionDetailSidePanel
 				profile={profile}
 				isOpen={true}
 				transactionItem={{

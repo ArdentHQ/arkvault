@@ -87,8 +87,8 @@ export const DetailDivider = (): ReactNode => (
 	</div>
 );
 
-export const DetailPadded = ({ children }: { children: React.ReactNode }) => (
-	<div className="group flex">
+export const DetailPadded = ({ children, className }: { children: React.ReactNode, className?: string  }) => (
+	<div className={cn("group flex", className)}>
 		<div className="hidden sm:ml-3 sm:flex">
 			<div className="min-w-9 flex-row pr-3">
 				<div className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 -mt-2 h-6 w-full rounded-bl-xl border-b-2 border-l-2" />
