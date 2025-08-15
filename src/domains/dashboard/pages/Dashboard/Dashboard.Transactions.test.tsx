@@ -102,7 +102,9 @@ describe("Dashboard", () => {
 
 		await userEvent.click(screen.getByTestId("SidePanel__close-button"));
 
-		expect(screen.queryByTestId("SidePanel__content")).not.toBeInTheDocument();
+		await waitFor(() => {
+			expect(screen.queryByTestId("SidePanel__content")).not.toBeInTheDocument();
+		});
 
 		mockTransactionsAggregate.mockRestore();
 	});
