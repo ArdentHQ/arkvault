@@ -1,12 +1,7 @@
 import { Services } from "@/app/lib/mainsail";
 import { sortByDesc } from "@/app/lib/helpers";
 
-import {
-	INotificationTypes,
-	IProfile,
-	IProfileTransactionNotificationService,
-	ProfileSetting,
-} from "./contracts.js";
+import { INotificationTypes, IProfile, IProfileTransactionNotificationService, ProfileSetting } from "./contracts.js";
 import { INotification, INotificationRepository } from "./notification.repository.contract.js";
 import { AggregateQuery } from "./transaction.aggregate.contract.js";
 import { ExtendedConfirmedTransactionDataCollection } from "./transaction.collection.js";
@@ -97,15 +92,12 @@ export class ProfileTransactionNotificationService implements IProfileTransactio
 
 	/** {@inheritDoc IProfileTransactionNotificationService.hydrateFromCache} */
 	public async hydrateFromCache(): Promise<void> {
-		const cached = await this.#cache.remember(this.#cacheKey(), async () => {
-			return Object.values(this.#transactions);
-		});
+		const cached = await this.#cache.remember(this.#cacheKey(), async () => Object.values(this.#transactions));
 
 		if (Array.isArray(cached) && cached.length > 0) {
 			this.#storeTransactions(cached as ExtendedConfirmedTransactionData[]);
 		}
 	}
-
 
 	/** {@inheritDoc IProfileTransactionNotificationService.sync} */
 	public async sync(queryInput?: AggregateQuery) {
@@ -126,7 +118,10 @@ export class ProfileTransactionNotificationService implements IProfileTransactio
 			for (const transaction of this.#filterUnseen(transactions.items())) {
 				this.#notifications.push({
 					meta: {
-						recipients: [transaction.to(), ...transaction.recipients().map((recipient) => recipient.address)],
+						recipients: [
+							transaction.to(),
+							...transaction.recipients().map((recipient) => recipient.address),
+						],
 						timestamp: transaction.timestamp()?.toUNIX(),
 						transactionId: transaction.hash(),
 					},

@@ -6,9 +6,7 @@ export const useNotifications = ({ profile }: { profile: Contracts.IProfile }) =
 	const liveTransactions = profile.notifications().transactions().transactions();
 	const liveNotifications = Object.values(profile.notifications().all());
 
-	const transactions = useMemo<DTO.ExtendedConfirmedTransactionData[]>(() => {
-		return liveTransactions;
-	}, [liveTransactions]);
+	const transactions = useMemo<DTO.ExtendedConfirmedTransactionData[]>(() => liveTransactions, [liveTransactions]);
 
 	useEffect(() => {
 		void profile.notifications().transactions().hydrateFromCache();
