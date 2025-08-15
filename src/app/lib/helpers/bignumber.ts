@@ -22,15 +22,6 @@ export class BigNumber {
 	public static readonly ZERO: BigNumber = new BigNumber(0);
 
 	/**
-	 * Rounding down mode.
-	 *
-	 * @static
-	 * @type {number}
-	 * @memberof BigNumber
-	 */
-	public static readonly ROUND_DOWN: number = BigNumberJs.ROUND_DOWN;
-
-	/**
 	 * Quick accessor for 1, a commonly used value.
 	 *
 	 * @static

@@ -14,7 +14,7 @@ export class TransactionReceipt {
 
 	constructor(receipt: ReceiptData, gasLimit: number = 0) {
 		this.#receipt = receipt;
-		this.#gasLimit = gasLimit
+		this.#gasLimit = gasLimit;
 	}
 
 	public isSuccess(): boolean {
@@ -23,16 +23,16 @@ export class TransactionReceipt {
 
 	public hasUnknownError(): boolean {
 		if (this.isSuccess()) {
-			return false
+			return false;
 		}
 
 		if (this.hasInsufficientGasError()) {
-			return false
+			return false;
 		}
 
 		// TODO: Add more known errors here.
 
-		return true
+		return true;
 	}
 
 	public hasInsufficientGasError(): boolean {
@@ -41,10 +41,7 @@ export class TransactionReceipt {
 		}
 
 		const gasUsed = BigNumber.make(this.#receipt.gasUsed);
-		const ratio = gasUsed
-			.divide(this.#gasLimit)
-			.decimalPlaces(2)
-			.toNumber();
+		const ratio = gasUsed.divide(this.#gasLimit).decimalPlaces(2).toNumber();
 
 		return ratio > this.#insufficientGasThreshold;
 	}

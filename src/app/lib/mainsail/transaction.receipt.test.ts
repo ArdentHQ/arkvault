@@ -27,7 +27,7 @@ describe("TransactionReceipt", () => {
 		it("should throw when gasLimit is not provided", () => {
 			const receipt = new TransactionReceipt({ gasRefunded: 0, gasUsed: 21000, status: 0 }, 0);
 			expect(() => receipt.hasInsufficientGasError()).toThrow(
-				"[TransactionReceipt#hasInsufficientGasError] Gas limit is not provided."
+				"[TransactionReceipt#hasInsufficientGasError] Gas limit is not provided.",
 			);
 		});
 	});

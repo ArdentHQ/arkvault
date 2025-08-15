@@ -325,7 +325,7 @@ export class ConfirmedTransactionData {
 	}
 
 	public receipt(): TransactionReceipt {
-		return new TransactionReceipt(this.data.receipt, this.data.gas)
+		return new TransactionReceipt(this.data.receipt, this.data.gas);
 	}
 
 	public isConfirmed(): boolean {
