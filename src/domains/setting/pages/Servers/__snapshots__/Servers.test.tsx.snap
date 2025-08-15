@@ -232,6 +232,13 @@ exports[`Servers Settings > Added reachable servers > should ping the servers in
                           </svg>
                         </div>
                       </div>
+                      <div
+                        class="bg-theme-background group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800 absolute top-0 right-0 flex items-center justify-center rounded-full p-0.5 transition-all duration-100 ease-linear"
+                      >
+                        <div
+                          class="bg-theme-danger-500 h-1.5 w-1.5 rounded-full"
+                        />
+                      </div>
                     </div>
                   </button>
                 </div>
@@ -1804,6 +1811,13 @@ exports[`Servers Settings > Added reachable servers > should render custom serve
                           </svg>
                         </div>
                       </div>
+                      <div
+                        class="bg-theme-background group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800 absolute top-0 right-0 flex items-center justify-center rounded-full p-0.5 transition-all duration-100 ease-linear"
+                      >
+                        <div
+                          class="bg-theme-danger-500 h-1.5 w-1.5 rounded-full"
+                        />
+                      </div>
                     </div>
                   </button>
                 </div>
@@ -3249,6 +3263,13 @@ exports[`Servers Settings > Added reachable servers > should render customs serv
                           </svg>
                         </div>
                       </div>
+                      <div
+                        class="bg-theme-background group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800 absolute top-0 right-0 flex items-center justify-center rounded-full p-0.5 transition-all duration-100 ease-linear"
+                      >
+                        <div
+                          class="bg-theme-danger-500 h-1.5 w-1.5 rounded-full"
+                        />
+                      </div>
                     </div>
                   </button>
                 </div>
@@ -4691,6 +4712,13 @@ exports[`Servers Settings > Added reachable servers > should show status ok afte
                             </g>
                           </svg>
                         </div>
+                      </div>
+                      <div
+                        class="bg-theme-background group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800 absolute top-0 right-0 flex items-center justify-center rounded-full p-0.5 transition-all duration-100 ease-linear"
+                      >
+                        <div
+                          class="bg-theme-danger-500 h-1.5 w-1.5 rounded-full"
+                        />
                       </div>
                     </div>
                   </button>
@@ -6264,6 +6292,13 @@ exports[`Servers Settings > Added reachable servers > should show status ok afte
                           </svg>
                         </div>
                       </div>
+                      <div
+                        class="bg-theme-background group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800 absolute top-0 right-0 flex items-center justify-center rounded-full p-0.5 transition-all duration-100 ease-linear"
+                      >
+                        <div
+                          class="bg-theme-danger-500 h-1.5 w-1.5 rounded-full"
+                        />
+                      </div>
                     </div>
                   </button>
                 </div>
@@ -7834,6 +7869,13 @@ exports[`Servers Settings > Added unreachable servers > should show status error
                           </svg>
                         </div>
                       </div>
+                      <div
+                        class="bg-theme-background group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800 absolute top-0 right-0 flex items-center justify-center rounded-full p-0.5 transition-all duration-100 ease-linear"
+                      >
+                        <div
+                          class="bg-theme-danger-500 h-1.5 w-1.5 rounded-full"
+                        />
+                      </div>
                     </div>
                   </button>
                 </div>
@@ -9399,6 +9441,13 @@ exports[`Servers Settings > Added unreachable servers > should show status error
                             </g>
                           </svg>
                         </div>
+                      </div>
+                      <div
+                        class="bg-theme-background group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800 absolute top-0 right-0 flex items-center justify-center rounded-full p-0.5 transition-all duration-100 ease-linear"
+                      >
+                        <div
+                          class="bg-theme-danger-500 h-1.5 w-1.5 rounded-full"
+                        />
                       </div>
                     </div>
                   </button>
