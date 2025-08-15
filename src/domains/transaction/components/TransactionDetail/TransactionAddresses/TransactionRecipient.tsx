@@ -82,10 +82,12 @@ export const TransactionRecipients = ({
 	recipients,
 	explorerLink,
 	labelClassName,
+	isMultiPayment,
 }: {
 	recipients: RecipientItem[];
 	explorerLink: string;
 	labelClassName?: string;
+	isMultiPayment: boolean;
 }) => {
 	const { t } = useTranslation();
 
@@ -93,7 +95,7 @@ export const TransactionRecipients = ({
 		return <></>;
 	}
 
-	if (recipients.length === 1) {
+	if (!isMultiPayment) {
 		return <TransactionRecipient recipient={recipients.at(0)} labelClassName={labelClassName} showLabel />;
 	}
 
@@ -130,10 +132,12 @@ export const TransactionRecipientsModal = ({
 	recipients,
 	labelClassName,
 	ticker,
+	isMultiPayment,
 }: {
 	recipients: RecipientItem[];
 	labelClassName?: string;
 	ticker: string;
+	isMultiPayment: boolean;
 }): JSX.Element => {
 	const { t } = useTranslation();
 
@@ -143,7 +147,7 @@ export const TransactionRecipientsModal = ({
 		return <></>;
 	}
 
-	if (recipients.length === 1) {
+	if (!isMultiPayment) {
 		return <TransactionRecipient recipient={recipients.at(0)} labelClassName={labelClassName} showLabel />;
 	}
 

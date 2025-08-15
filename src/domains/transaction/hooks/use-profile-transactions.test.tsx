@@ -6,12 +6,57 @@ import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
 import { env, getDefaultProfileId, syncValidators } from "@/utils/testing-library";
 import * as hooksMock from "@/app/hooks";
 import { expect, vi } from "vitest";
+import { BigNumber } from "@/app/lib/helpers";
+import { DateTime } from "@/app/lib/intl";
 
 const wrapper = ({ children }: any) => (
 	<EnvironmentProvider env={env}>
 		<ConfigurationProvider>{children}</ConfigurationProvider>
 	</EnvironmentProvider>
 );
+
+const createMockPendingTransaction = (overrides: Partial<any> = {}): any => ({
+	convertedAmount: 0,
+	convertedTotal: 0,
+	explorerLink: "",
+	fee: 0,
+	from: "",
+	hash: "",
+	isMultiPayment: false,
+	isReturn: false,
+	isTransfer: true,
+	isUnvote: false,
+	isUpdateValidator: false,
+	isUsernameRegistration: false,
+	isUsernameResignation: false,
+	isValidatorRegistration: false,
+	isValidatorResignation: false,
+	isVote: false,
+	isVoteCombination: false,
+	networkId: "",
+	nonce: BigNumber.make(1),
+	recipients: [],
+	timestamp: DateTime.make(Date.now()),
+	to: "",
+	total: 0,
+	type: "transfer",
+	value: 0,
+	walletAddress: "",
+	...overrides,
+});
+
+const mockPendingTransactionsHook = async (pendingTransactions: any[] = []) => {
+	const removePendingTransaction = vi.fn();
+	const pendingHook = await import("@/domains/transaction/hooks/use-pending-transactions");
+
+	const pendingSpy = vi.spyOn(pendingHook, "usePendingTransactions").mockReturnValue({
+		addPendingTransaction: vi.fn(),
+		pendingTransactions,
+		removePendingTransaction,
+	});
+
+	return { pendingSpy, removePendingTransaction };
+};
 
 describe("useProfileTransactions", () => {
 	let profile: any;
@@ -259,11 +304,11 @@ describe("useProfileTransactions", () => {
 		);
 
 		act(() => {
-			result.current.setSortBy({ column: "Fiat Value", desc: true });
+			result.current.setSortBy({ column: "Fiat Value", desc: false });
 		});
 
 		await waitFor(() =>
-			expect(transactionAggregateSpy).toHaveBeenCalledWith(expect.objectContaining({ orderBy: "amount:desc" })),
+			expect(transactionAggregateSpy).toHaveBeenCalledWith(expect.objectContaining({ orderBy: "amount:asc" })),
 		);
 
 		transactionAggregateSpy.mockRestore();
@@ -344,5 +389,492 @@ describe("useProfileTransactions", () => {
 		});
 
 		await waitFor(() => expect(result.current.sortBy).toEqual({ column: "amount", desc: false }));
+	});
+
+	it("should remove a pending transaction once it appears in confirmed results", async () => {
+		const wallets = profile.wallets().values();
+		const transactionAggregate = await profile.transactionAggregate().all();
+		const confirmed = transactionAggregate.items()[0];
+		const confirmedHash = confirmed.hash();
+
+		const pendingTransaction = createMockPendingTransaction({
+			from: confirmed.from?.() ?? wallets[0].address(),
+			hash: confirmedHash,
+			networkId: wallets[0].networkId(),
+			to: confirmed.to?.() ?? wallets[0].address(),
+			type: confirmed.type?.() ?? "transfer",
+			walletAddress: wallets[0].address(),
+		});
+
+		const { pendingSpy, removePendingTransaction } = await mockPendingTransactionsHook([pendingTransaction]);
+
+		const { result } = renderHook(() => useProfileTransactions({ profile, wallets }), { wrapper });
+
+		act(() => {
+			result.current.updateFilters({ activeMode: "all" });
+		});
+
+		await waitFor(() => expect(result.current.isLoadingTransactions).toBe(false));
+		await waitFor(() => expect(removePendingTransaction).toHaveBeenCalledWith(confirmedHash));
+
+		pendingSpy.mockRestore();
+	});
+
+	it("should filter pending by selectedTransactionTypes", async () => {
+		const wallets = profile.wallets().values();
+		const walletA = wallets[0];
+		const walletAddress = walletA.address();
+
+		const transferTransaction = createMockPendingTransaction({
+			convertedAmount: 1,
+			convertedTotal: 1,
+			explorerLink: "link1",
+			fee: 0.1,
+			from: walletAddress,
+			hash: "PENDING_TRANSFER",
+			networkId: walletA.networkId(),
+			to: "ADDRESS_TO",
+			total: 1,
+			value: 1,
+			walletAddress,
+		});
+
+		const voteTransaction = createMockPendingTransaction({
+			convertedAmount: 2,
+			convertedTotal: 2,
+			explorerLink: "link2",
+			fee: 0.2,
+			from: "ADDRESS_FROM",
+			hash: "PENDING_VOTE",
+			isTransfer: false,
+			isVote: true,
+			networkId: walletA.networkId(),
+			nonce: BigNumber.make(2),
+			to: walletAddress,
+			total: 2,
+			type: "vote",
+			value: 2,
+			walletAddress,
+		});
+
+		const { pendingSpy } = await mockPendingTransactionsHook([transferTransaction, voteTransaction]);
+
+		const { result } = renderHook(() => useProfileTransactions({ profile, wallets }), { wrapper });
+
+		act(() => {
+			result.current.updateFilters({ activeMode: "all", selectedTransactionTypes: ["transfer"] });
+		});
+
+		await waitFor(() => expect(result.current.isLoadingTransactions).toBe(false));
+
+		const pending = result.current.transactions.filter((t: any) => typeof t.isPending === "function");
+		expect(pending.some((t: any) => t.hash() === "PENDING_TRANSFER")).toBe(true);
+		expect(pending.some((t: any) => t.hash() === "PENDING_VOTE")).toBe(false);
+
+		pendingSpy.mockRestore();
+	});
+
+	it("should filter pending by activeMode sent/received using from/to", async () => {
+		const walletsAll = profile.wallets().values();
+		const walletA = walletsAll[0];
+		const walletAddress = walletA.address();
+
+		const sentTransaction = createMockPendingTransaction({
+			convertedAmount: 1,
+			convertedTotal: 1,
+			explorerLink: "link1",
+			fee: 0.1,
+			from: walletAddress,
+			hash: "PENDING_FROM_ME",
+			networkId: walletA.networkId(),
+			to: "ADDRESS_TO",
+			total: 1,
+			value: 1,
+			walletAddress,
+		});
+
+		const receivedTransaction = createMockPendingTransaction({
+			convertedAmount: 2,
+			convertedTotal: 2,
+			explorerLink: "link2",
+			fee: 0.2,
+			from: "ADDRESS_FROM",
+			hash: "PENDING_TO_ME",
+			networkId: walletA.networkId(),
+			nonce: BigNumber.make(2),
+			to: walletAddress,
+			total: 2,
+			value: 2,
+			walletAddress,
+		});
+
+		const { pendingSpy } = await mockPendingTransactionsHook([sentTransaction, receivedTransaction]);
+
+		const onlyMyWallets = [walletA];
+
+		const { result: sentRes } = renderHook(() => useProfileTransactions({ profile, wallets: onlyMyWallets }), {
+			wrapper,
+		});
+
+		act(() => {
+			sentRes.current.updateFilters({ activeMode: "sent" });
+		});
+
+		await waitFor(() => expect(sentRes.current.isLoadingTransactions).toBe(false));
+
+		const sentPending = sentRes.current.transactions.filter((t: any) => typeof t.isPending === "function");
+		expect(sentPending.some((t: any) => t.hash() === "PENDING_FROM_ME")).toBe(true);
+		expect(sentPending.some((t: any) => t.hash() === "PENDING_TO_ME")).toBe(false);
+
+		const { result: recvRes } = renderHook(() => useProfileTransactions({ profile, wallets: onlyMyWallets }), {
+			wrapper,
+		});
+
+		act(() => {
+			recvRes.current.updateFilters({ activeMode: "received" });
+		});
+
+		await waitFor(() => expect(recvRes.current.isLoadingTransactions).toBe(false));
+
+		const recvPending = recvRes.current.transactions.filter((t: any) => typeof t.isPending === "function");
+		expect(recvPending.some((t: any) => t.hash() === "PENDING_TO_ME")).toBe(true);
+		expect(recvPending.some((t: any) => t.hash() === "PENDING_FROM_ME")).toBe(false);
+
+		pendingSpy.mockRestore();
+	});
+
+	it("should map pending to confirmed-like DTO with correct methods/values", async () => {
+		const wallets = profile.wallets().values();
+		const walletA = wallets[0];
+		const walletAddress = walletA.address();
+
+		const pendingTxWithRecipients = createMockPendingTransaction({
+			convertedAmount: 3.5,
+			convertedTotal: 3.5,
+			explorerLink: "link3",
+			fee: 0.05,
+			from: "ADDRESS_FROM",
+			hash: "PENDING_WITH_RECIPIENTS",
+			isMultiPayment: true,
+			isTransfer: false,
+			isUsernameRegistration: true,
+			isValidatorRegistration: true,
+			networkId: walletA.networkId(),
+			nonce: BigNumber.make(7),
+			recipients: [{ address: walletAddress, amount: BigNumber.make(1) }] as any,
+			to: walletAddress,
+			total: 3.5,
+			type: "validatorRegistration",
+			value: 3.5,
+			walletAddress,
+		});
+
+		const pendingTxNoRecipients = createMockPendingTransaction({
+			convertedAmount: 9,
+			convertedTotal: 9,
+			explorerLink: "link4",
+			fee: 0.01,
+			from: walletAddress,
+			hash: "PENDING_NO_RECIPIENTS",
+			isReturn: true,
+			isUnvote: true,
+			isUpdateValidator: true,
+			isUsernameResignation: true,
+			isValidatorResignation: true,
+			isVote: true,
+			isVoteCombination: true,
+			networkId: walletA.networkId(),
+			nonce: BigNumber.make(11),
+			to: "ADDRESS_TO",
+			total: 9,
+			value: 9,
+			walletAddress,
+		});
+
+		const { pendingSpy } = await mockPendingTransactionsHook([pendingTxWithRecipients, pendingTxNoRecipients]);
+
+		const { result } = renderHook(() => useProfileTransactions({ profile, wallets }), { wrapper });
+
+		act(() => {
+			result.current.updateFilters({ activeMode: "all" });
+		});
+
+		await waitFor(() => expect(result.current.isLoadingTransactions).toBe(false));
+
+		const pending = result.current.transactions.filter((t: any) => typeof t.isPending === "function");
+
+		const withRecipients = pending.find((t: any) => t.hash() === "PENDING_WITH_RECIPIENTS")!;
+		const noRecipients = pending.find((t: any) => t.hash() === "PENDING_NO_RECIPIENTS")!;
+
+		expect(withRecipients.confirmations().toNumber()).toBe(0);
+		expect(withRecipients.convertedAmount()).toBe(3.5);
+		expect(withRecipients.convertedTotal()).toBe(3.5);
+		expect(withRecipients.explorerLink()).toBe("link3");
+		expect(withRecipients.fee()).toBe(0.05);
+		expect(withRecipients.from()).toBe("ADDRESS_FROM");
+		expect(withRecipients.hash()).toBe("PENDING_WITH_RECIPIENTS");
+		expect(withRecipients.isConfirmed()).toBe(false);
+		expect(withRecipients.isFailed()).toBe(false);
+		expect(withRecipients.isSuccess()).toBe(false);
+		expect(withRecipients.isMultiPayment()).toBe(true);
+		expect(withRecipients.isTransfer()).toBe(false);
+		expect(withRecipients.isUsernameRegistration()).toBe(true);
+		expect(withRecipients.isValidatorRegistration()).toBe(true);
+		expect(withRecipients.isValidatorResignation()).toBe(false);
+		expect(withRecipients.isVote()).toBe(false);
+		expect(withRecipients.isVoteCombination()).toBe(false);
+		expect(withRecipients.isUnvote()).toBe(false);
+		expect(withRecipients.isUpdateValidator()).toBe(false);
+		expect(withRecipients.isReceived()).toBe(true);
+		expect(withRecipients.isSent()).toBe(false);
+		expect(withRecipients.network()).toBe(walletA.network());
+		expect(withRecipients.nonce().toString()).toBe("7");
+		expect(withRecipients.recipients()).toHaveLength(1);
+		expect(withRecipients.isPending()).toBe(true);
+		expect(withRecipients.to()).toBe(walletAddress);
+		expect(withRecipients.total()).toBe(3.5);
+		expect(withRecipients.isReturn()).toBe(false);
+		expect(withRecipients.isUsernameResignation()).toBe(false);
+		expect(withRecipients.blockHash()).toBeUndefined();
+
+		expect(noRecipients.recipients()).toEqual([]);
+		expect(noRecipients.isReceived()).toBe(false);
+		expect(noRecipients.isSent()).toBe(true);
+		expect(noRecipients.isPending()).toBe(true);
+		expect(noRecipients.to()).toBe("ADDRESS_TO");
+		expect(noRecipients.type()).toBe("transfer");
+		expect(noRecipients.value()).toBe(9);
+		expect(noRecipients.wallet()?.address()).toBe(walletAddress);
+		expect(noRecipients.isReturn()).toBe(true);
+		expect(noRecipients.isUsernameResignation()).toBe(true);
+		expect(noRecipients.blockHash()).toBeUndefined();
+
+		pendingSpy.mockRestore();
+	});
+
+	it("should sort pending transactions to the top when sorting by amount desc", async () => {
+		const walletsAll = profile.wallets().values();
+		const walletA = walletsAll[0];
+		const walletAddress = walletA.address();
+
+		const pendingTransaction = createMockPendingTransaction({
+			convertedAmount: 1,
+			convertedTotal: 1,
+			explorerLink: "link1",
+			fee: 0.1,
+			from: "ADDR_EXTERNAL",
+			hash: "PENDING_SORT_TEST",
+			networkId: walletA.networkId(),
+			to: walletAddress,
+			total: 1,
+			value: 1,
+			walletAddress,
+		});
+
+		const { pendingSpy } = await mockPendingTransactionsHook([pendingTransaction]);
+
+		const { result } = renderHook(() => useProfileTransactions({ profile, wallets: [walletA] }), { wrapper });
+
+		act(() => {
+			result.current.setSortBy({ column: "amount", desc: true });
+		});
+		act(() => {
+			result.current.updateFilters({ activeMode: "all" });
+		});
+
+		await waitFor(() => expect(result.current.isLoadingTransactions).toBe(false));
+
+		const first = result.current.transactions[0] as any;
+		expect(typeof first.isPending).toBe("function");
+		expect(first.isPending()).toBe(true);
+		expect(first.hash()).toBe("PENDING_SORT_TEST");
+
+		pendingSpy.mockRestore();
+	});
+
+	it("should sort by amount desc", async () => {
+		const walletsAll = profile.wallets().values();
+		const walletA = walletsAll[0];
+		const walletAddress = walletA.address();
+
+		const pendingTx = createMockPendingTransaction({
+			from: "ADDR_EXTERNAL",
+			hash: "PENDING_FORCE_COMPARE",
+			networkId: walletA.networkId(),
+			to: walletAddress,
+			walletAddress,
+		});
+
+		const { pendingSpy } = await mockPendingTransactionsHook([pendingTx]);
+
+		const originalSort = Array.prototype.sort;
+		let branchHit = false;
+
+		// @ts-ignore - ignoring use of any this for test only
+		Array.prototype.sort = function (compareFn: any) {
+			if (typeof compareFn === "function") {
+				const array = this as any[];
+				const pending = array.find((t: any) => typeof t?.isPending === "function");
+				const confirmed = array.find((t: any) => typeof t?.isPending !== "function");
+				if (pending && confirmed) {
+					const res = compareFn(pending, confirmed);
+					if (res === -1) {
+						branchHit = true;
+					}
+				}
+			}
+			return originalSort.call(this, compareFn);
+		};
+
+		try {
+			const { result } = renderHook(() => useProfileTransactions({ profile, wallets: [walletA] }), { wrapper });
+
+			act(() => {
+				result.current.setSortBy({ column: "amount", desc: true });
+			});
+			act(() => {
+				result.current.updateFilters({ activeMode: "all" });
+			});
+
+			await waitFor(() => expect(result.current.isLoadingTransactions).toBe(false));
+			await waitFor(() => expect(result.current.transactions.length).toBeGreaterThan(0));
+			await waitFor(() => expect(branchHit).toBe(true));
+		} finally {
+			Array.prototype.sort = originalSort;
+			pendingSpy.mockRestore();
+		}
+	});
+
+	it("should default recipients to empty array when pending tx has no recipients property", async () => {
+		const wallets = profile.wallets().values();
+		const walletA = wallets[0];
+
+		const pendingNoRecipients = createMockPendingTransaction({
+			from: "ADDRESS_FROM",
+			hash: "PENDING_NO_RECIPS_FALLBACK",
+			networkId: walletA.networkId(),
+			recipients: undefined,
+			to: walletA.address(),
+			walletAddress: walletA.address(),
+		});
+
+		const { pendingSpy } = await mockPendingTransactionsHook([pendingNoRecipients]);
+
+		const allMock = vi.spyOn(profile.transactionAggregate(), "all").mockResolvedValue({
+			hasMorePages: () => false,
+			items: () => [],
+		});
+
+		const { result } = renderHook(() => useProfileTransactions({ profile, wallets: [walletA] }), { wrapper });
+
+		act(() => {
+			result.current.updateFilters({ activeMode: "all" });
+		});
+
+		await waitFor(() => expect(result.current.isLoadingTransactions).toBe(false));
+
+		const tx = result.current.transactions.find(
+			(t: any) => typeof t.isPending === "function" && t.hash() === "PENDING_NO_RECIPS_FALLBACK",
+		) as any;
+
+		expect(tx).toBeTruthy();
+		expect(tx.recipients()).toEqual([]);
+
+		pendingSpy.mockRestore();
+		allMock.mockRestore();
+	});
+
+	it("should sort by date desc and asc using timestamps", async () => {
+		const wallets = profile.wallets().values();
+		const walletA = wallets[0];
+		const base = Date.now();
+
+		const older = createMockPendingTransaction({
+			from: "ADDRESS_FROM",
+			hash: "PENDING_OLD",
+			networkId: walletA.networkId(),
+			timestamp: base - 60_000,
+			to: walletA.address(),
+			walletAddress: walletA.address(),
+		});
+
+		const newer = createMockPendingTransaction({
+			from: "ADDRESS_FROM",
+			hash: "PENDING_NEW",
+			networkId: walletA.networkId(),
+			timestamp: base,
+			to: walletA.address(),
+			walletAddress: walletA.address(),
+		});
+
+		const { pendingSpy } = await mockPendingTransactionsHook([older, newer]);
+
+		const allMock = vi.spyOn(profile.transactionAggregate(), "all").mockResolvedValue({
+			hasMorePages: () => false,
+			items: () => [],
+		});
+
+		const { result } = renderHook(() => useProfileTransactions({ profile, wallets: [walletA] }), { wrapper });
+
+		act(() => {
+			result.current.setSortBy({ column: "date", desc: true });
+		});
+		act(() => {
+			result.current.updateFilters({ activeMode: "all" });
+		});
+		await waitFor(() => expect(result.current.isLoadingTransactions).toBe(false));
+		expect((result.current.transactions[0] as any).hash()).toBe("PENDING_NEW");
+
+		act(() => {
+			result.current.setSortBy({ column: "date", desc: false });
+		});
+		await waitFor(() => expect((result.current.transactions[0] as any).hash()).toBe("PENDING_OLD"));
+
+		pendingSpy.mockRestore();
+		allMock.mockRestore();
+	});
+
+	it("should execute the non-date sort path with two pending items", async () => {
+		const wallets = profile.wallets().values();
+		const walletA = wallets[0];
+
+		const p1 = createMockPendingTransaction({
+			from: "ADDRESS_FROM",
+			hash: "P1",
+			networkId: walletA.networkId(),
+			timestamp: Date.now() - 1_000,
+			to: walletA.address(),
+			walletAddress: walletA.address(),
+		});
+		const p2 = createMockPendingTransaction({
+			from: "ADDRESS_FROM",
+			hash: "P2",
+			networkId: walletA.networkId(),
+			timestamp: Date.now(),
+			to: walletA.address(),
+			walletAddress: walletA.address(),
+		});
+
+		const { pendingSpy } = await mockPendingTransactionsHook([p1, p2]);
+
+		const allMock = vi.spyOn(profile.transactionAggregate(), "all").mockResolvedValue({
+			hasMorePages: () => false,
+			items: () => [],
+		});
+
+		const { result } = renderHook(() => useProfileTransactions({ profile, wallets: [walletA] }), { wrapper });
+
+		act(() => {
+			result.current.setSortBy({ column: "amount", desc: true });
+		});
+		act(() => {
+			result.current.updateFilters({ activeMode: "all" });
+		});
+
+		await waitFor(() => expect(result.current.isLoadingTransactions).toBe(false));
+		expect(result.current.transactions).toHaveLength(2);
+
+		pendingSpy.mockRestore();
+		allMock.mockRestore();
 	});
 });

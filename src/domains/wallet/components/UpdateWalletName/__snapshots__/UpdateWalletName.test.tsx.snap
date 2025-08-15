@@ -7,7 +7,7 @@ exports[`UpdateWalletName > should render 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="max-w-full flex-1 md:m-auto md:max-w-2xl md:px-10"
+      class="max-w-full flex-1 md:m-auto md:max-w-2xl md:px-10 mt-[20%] md:mt-0"
       tabindex="-1"
     >
       <div
@@ -157,7 +157,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 1`] 
     data-testid="Modal__overlay"
   >
     <div
-      class="max-w-full flex-1 md:m-auto md:max-w-2xl md:px-10"
+      class="max-w-full flex-1 md:m-auto md:max-w-2xl md:px-10 mt-[20%] md:mt-0"
       tabindex="-1"
     >
       <div
@@ -361,7 +361,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 2`] 
     data-testid="Modal__overlay"
   >
     <div
-      class="max-w-full flex-1 md:m-auto md:max-w-2xl md:px-10"
+      class="max-w-full flex-1 md:m-auto md:max-w-2xl md:px-10 mt-[20%] md:mt-0"
       tabindex="-1"
     >
       <div
@@ -565,7 +565,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 3`] 
     data-testid="Modal__overlay"
   >
     <div
-      class="max-w-full flex-1 md:m-auto md:max-w-2xl md:px-10"
+      class="max-w-full flex-1 md:m-auto md:max-w-2xl md:px-10 mt-[20%] md:mt-0"
       tabindex="-1"
     >
       <div
@@ -769,7 +769,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 4`] 
     data-testid="Modal__overlay"
   >
     <div
-      class="max-w-full flex-1 md:m-auto md:max-w-2xl md:px-10"
+      class="max-w-full flex-1 md:m-auto md:max-w-2xl md:px-10 mt-[20%] md:mt-0"
       tabindex="-1"
     >
       <div
@@ -973,7 +973,7 @@ exports[`UpdateWalletName > should show error message when name consists only of
     data-testid="Modal__overlay"
   >
     <div
-      class="max-w-full flex-1 md:m-auto md:max-w-2xl md:px-10"
+      class="max-w-full flex-1 md:m-auto md:max-w-2xl md:px-10 mt-[20%] md:mt-0"
       tabindex="-1"
     >
       <div
@@ -1177,7 +1177,7 @@ exports[`UpdateWalletName > should show error message when name exceeds 42 chara
     data-testid="Modal__overlay"
   >
     <div
-      class="max-w-full flex-1 md:m-auto md:max-w-2xl md:px-10"
+      class="max-w-full flex-1 md:m-auto md:max-w-2xl md:px-10 mt-[20%] md:mt-0"
       tabindex="-1"
     >
       <div

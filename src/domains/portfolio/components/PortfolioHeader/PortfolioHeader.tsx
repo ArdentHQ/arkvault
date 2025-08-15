@@ -337,31 +337,51 @@ export const PortfolioHeader = ({
 
 							<div className="flex flex-row items-center gap-3">
 								{selectedWallets.length === 1 && (
-									<Button
-										data-testid="WalletHeader__send-button"
-										className="dark:bg-theme-dark-navy-500 dark:hover:bg-theme-dark-navy-700 dim:bg-theme-dim-navy-600 dim:disabled:text-theme-dim-navy-700 dim:disabled:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:disabled:bg-theme-dim-navy-900 dim-hover:disabled:text-theme-dim-navy-700 my-auto flex-1 px-8"
+									<Tooltip
+										content={t("COMMON.DISABLED_DUE_INSUFFICIENT_BALANCE")}
 										disabled={
-											wallet.balance() === 0 ||
-											!wallet.hasBeenFullyRestored() ||
-											!wallet.hasSyncedWithNetwork()
+											!(
+												wallet.balance() === 0 ||
+												!wallet.hasBeenFullyRestored() ||
+												!wallet.hasSyncedWithNetwork()
+											)
 										}
-										variant="primary"
-										onClick={handleSend}
 									>
-										{t("COMMON.SEND")}
-									</Button>
+										<div className="my-auto flex flex-1">
+											<Button
+												data-testid="WalletHeader__send-button"
+												className="dark:bg-theme-dark-navy-500 dark:hover:bg-theme-dark-navy-700 dim:bg-theme-dim-navy-600 dim:disabled:text-theme-dim-navy-700 dim:disabled:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:disabled:bg-theme-dim-navy-900 dim-hover:disabled:text-theme-dim-navy-700 my-auto flex-1 px-8"
+												disabled={
+													wallet.balance() === 0 ||
+													!wallet.hasBeenFullyRestored() ||
+													!wallet.hasSyncedWithNetwork()
+												}
+												variant="primary"
+												onClick={handleSend}
+											>
+												{t("COMMON.SEND")}
+											</Button>
+										</div>
+									</Tooltip>
 								)}
 
 								{selectedWallets.length > 1 && (
-									<Button
-										data-testid="WalletHeader__send-button"
-										className="dark:bg-theme-dark-navy-500 dark:hover:bg-theme-dark-navy-700 dim:bg-theme-dim-navy-600 dim-hover:bg-theme-dim-navy-700 dim:disabled:text-theme-dim-navy-700 dim:disabled:bg-theme-dim-navy-900 dim-hover:disabled:bg-theme-dim-navy-900 dim-hover:disabled:text-theme-dim-navy-700 my-auto flex-1 px-8"
-										disabled={profile.totalBalance().isZero()}
-										variant="primary"
-										onClick={handleSend}
+									<Tooltip
+										content={t("COMMON.DISABLED_DUE_INSUFFICIENT_BALANCE")}
+										disabled={!profile.totalBalance().isZero()}
 									>
-										{t("COMMON.SEND")}
-									</Button>
+										<div className="my-auto flex flex-1">
+											<Button
+												data-testid="WalletHeader__send-button"
+												className="dark:bg-theme-dark-navy-500 dark:hover:bg-theme-dark-navy-700 dim:bg-theme-dim-navy-600 dim-hover:bg-theme-dim-navy-700 dim:disabled:text-theme-dim-navy-700 dim:disabled:bg-theme-dim-navy-900 dim-hover:disabled:bg-theme-dim-navy-900 dim-hover:disabled:text-theme-dim-navy-700 my-auto flex-1 px-8"
+												disabled={profile.totalBalance().isZero()}
+												variant="primary"
+												onClick={handleSend}
+											>
+												{t("COMMON.SEND")}
+											</Button>
+										</div>
+									</Tooltip>
 								)}
 
 								<div data-testid="WalletHeaderMobile__more-button" className="my-auto">

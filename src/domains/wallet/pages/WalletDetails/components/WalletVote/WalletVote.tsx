@@ -43,40 +43,47 @@ export const WalletVote = ({ wallet, onButtonClick, votes, isLoadingVotes, walle
 		return <Votes votes={votes} activeValidators={activeValidators} />;
 	};
 
+	const tooltipContent = () => {
+		if (!wallet.balance()) {
+			return t("COMMON.DISABLED_DUE_INSUFFICIENT_BALANCE");
+		}
+
+		return isLedgerWalletCompatible(wallet) ? "" : t("COMMON.LEDGER_COMPATIBILITY_ERROR");
+	};
+
 	return (
 		<div
 			data-testid="WalletVote"
 			className="-mt-4 flex w-full flex-col items-center md:mt-0 md:flex-row md:items-center"
 		>
 			{renderVotes()}
+			<div className="w-full md:w-auto md:max-md:self-end">
+				{wallets.length > 1 && (
+					<>
+						<Button
+							data-testid="WalletMyVotes__button"
+							variant="secondary-icon"
+							className="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 dim:disabled:bg-transparent mt-4 hidden w-full space-x-2 whitespace-nowrap disabled:bg-transparent md:mt-0 md:flex md:w-auto md:px-2 md:py-[3px] dark:disabled:bg-transparent"
+							onClick={() => onButtonClick()}
+						>
+							<Icon name="Vote" />
+							<span>{t("COMMON.MY_VOTES")}</span>
+						</Button>
 
-			<Tooltip content={isLedgerWalletCompatible(wallet) ? "" : t("COMMON.LEDGER_COMPATIBILITY_ERROR")}>
-				<div className="w-full md:w-auto md:max-md:self-end">
-					{wallets.length > 1 && (
-						<>
-							<Button
-								data-testid="WalletMyVotes__button"
-								variant="secondary-icon"
-								className="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 dim:disabled:bg-transparent mt-4 hidden w-full space-x-2 whitespace-nowrap disabled:bg-transparent md:mt-0 md:flex md:w-auto md:px-2 md:py-[3px] dark:disabled:bg-transparent"
-								onClick={() => onButtonClick()}
-							>
-								<Icon name="Vote" />
-								<span>{t("COMMON.MY_VOTES")}</span>
-							</Button>
-
-							<Button
-								data-testid="WalletMyVotes__button_mobile"
-								variant="secondary"
-								className="text-theme-primary-600 dim:text-theme-dim-navy-600 w-full disabled:bg-transparent md:hidden dark:text-white dark:disabled:bg-transparent"
-								onClick={() => onButtonClick()}
-							>
-								<Icon name="Vote" />
-								<span>{t("COMMON.MY_VOTES")}</span>
-							</Button>
-						</>
-					)}
-					{wallets.length === 1 && (
-						<>
+						<Button
+							data-testid="WalletMyVotes__button_mobile"
+							variant="secondary"
+							className="text-theme-primary-600 dim:text-theme-dim-navy-600 w-full disabled:bg-transparent md:hidden dark:text-white dark:disabled:bg-transparent"
+							onClick={() => onButtonClick()}
+						>
+							<Icon name="Vote" />
+							<span>{t("COMMON.MY_VOTES")}</span>
+						</Button>
+					</>
+				)}
+				{wallets.length === 1 && (
+					<Tooltip content={tooltipContent()}>
+						<div>
 							<Button
 								data-testid="WalletVote__button"
 								disabled={
@@ -112,10 +119,10 @@ export const WalletVote = ({ wallet, onButtonClick, votes, isLoadingVotes, walle
 								<Icon name="Vote" />
 								<span>{t("COMMON.VOTE")}</span>
 							</Button>
-						</>
-					)}
-				</div>
-			</Tooltip>
+						</div>
+					</Tooltip>
+				)}
+			</div>
 		</div>
 	);
 };

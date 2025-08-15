@@ -5796,7 +5796,7 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
                   class="whitespace-nowrap"
                   data-testid="Amount"
                 >
-                  95.27653252 ARK
+                  95.27653252325068 ARK
                 </span>
               </div>
             </div>

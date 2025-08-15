@@ -69,6 +69,7 @@ export const TransactionDetailContent = ({
 						profile={profile}
 						senderAddress={transaction.from()}
 						network={transaction.wallet().network()}
+						isMultiPayment={transaction.isMultiPayment()}
 						recipients={recipients}
 						labelClassName={labelClassName}
 						interactedWith={

@@ -57,6 +57,7 @@ import Globe from "./globe.svg?react";
 import GlobePointer from "./globe-pointer.svg?react";
 import Grid from "./grid.svg?react";
 import HintSmall from "./hint-small.svg?react";
+import Hourglass from "./hourglass.svg?react";
 import Ledger from "./ledger.svg?react";
 import LedgerAlt from "./ledger-alt.svg?react";
 import LedgerImport from "./ledger-import.svg?react";
@@ -216,6 +217,7 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	GlobePointer,
 	Grid,
 	HintSmall,
+	Hourglass,
 	ImportProfileDark,
 	ImportProfileDim,
 	ImportProfileLight,

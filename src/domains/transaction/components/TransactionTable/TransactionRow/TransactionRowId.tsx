@@ -44,7 +44,7 @@ export const TransactionRowId = ({ transaction }: { transaction: DTO.ExtendedCon
 					</span>
 				</Link>
 			)}
-			{!transaction.isSuccess() && (
+			{!transaction.isSuccess() && transaction.blockHash() && (
 				<Link to={transaction.explorerLink()} showExternalIcon={false} isExternal>
 					<Tooltip content={transaction.hash()}>
 						<span className="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent">
@@ -56,8 +56,29 @@ export const TransactionRowId = ({ transaction }: { transaction: DTO.ExtendedCon
 							/>
 
 							<Icon
-								name="CircleMinus"
+								name="CrossSmall"
 								className="text-theme-danger-700 dark:text-theme-danger-info-border dim:text-theme-danger-info-border"
+								width={12}
+								height={12}
+							/>
+						</span>
+					</Tooltip>
+				</Link>
+			)}
+			{!transaction.isSuccess() && !transaction.blockHash() && (
+				<Link to={transaction.explorerLink()} showExternalIcon={false} isExternal>
+					<Tooltip content={transaction.hash()}>
+						<span className="bg-theme-secondary-200 dark:border-theme-dark-700 dim:bg-transparent dim:border dim:border-theme-dim-700 flex h-[21px] items-center space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent">
+							<TruncateMiddle
+								className="text-theme-primary-600 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-500 hover:border-theme-primary-600 dim:text-theme-dim-200 dim-hover:border-theme-dim-200 cursor-pointer border-b border-b-transparent leading-[17px]"
+								text={transaction.hash()}
+								maxChars={maxCharacters()}
+								data-testid="TransactionRow__id"
+							/>
+
+							<Icon
+								name="Hourglass"
+								className="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200"
 								width={12}
 								height={12}
 							/>

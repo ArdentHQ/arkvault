@@ -38,10 +38,3 @@
 		border-color: var(--color-gray-200, currentcolor);
 	}
 }
-
-@layer utilities {
-	.no-selection-style::selection {
-		background-color: #b3d4fc;
-		color: transparent;
-	}
-}
