@@ -116,29 +116,29 @@ export const TransactionDetailContent = ({
 };
 
 export const TransactionDetailSidePanel = ({
-	isOpen,
+	isOpen: isSidePanelOpen,
 	transactionItem,
 	profile,
 	onClose,
 }: TransactionDetailModalProperties) => {
 	const { t } = useTranslation();
 
-	const [isSidePanelOpen, setIsSidePanelOpen] = useState(isOpen);
+	const [isOpen, setIsOpen] = useState(isSidePanelOpen);
 
 	useEffect(() => {
 		let timeoutId: NodeJS.Timeout | undefined;
 
-		if (!isSidePanelOpen) {
+		if (!isOpen) {
 			timeoutId = setTimeout(() => {
 				onClose?.();
 			}, 1000);
 		}
 
 		return () => clearTimeout(timeoutId);
-	}, [isSidePanelOpen])
+	}, [isOpen])
 
 	return (
-		<SidePanel title={t("TRANSACTION.MODAL_TRANSACTION_DETAILS.TITLE")} open={isSidePanelOpen} onOpenChange={setIsSidePanelOpen}>
+		<SidePanel title={t("TRANSACTION.MODAL_TRANSACTION_DETAILS.TITLE")} open={isOpen} onOpenChange={setIsOpen}>
 			<TransactionDetailContent transactionItem={transactionItem} profile={profile} />
 		</SidePanel>
 	);
