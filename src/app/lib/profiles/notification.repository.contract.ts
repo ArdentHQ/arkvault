@@ -286,6 +286,13 @@ export interface IProfileTransactionNotificationService {
 	 * @memberof IProfileTransactionNotificationService
 	 */
 	markAllAsRead(): void;
+
+	/** 
+	 * Hydrate the in-memory transaction list from cache
+	 *
+	 * @memberof IProfileTransactionNotificationService
+	 */
+	hydrateFromCache(): Promise<void>;
 }
 
 /**
