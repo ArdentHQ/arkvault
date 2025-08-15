@@ -46,7 +46,7 @@ describe("TransactionDetailModal", () => {
 			/>,
 		);
 
-		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
+		expect(screen.queryByTestId("SidePanel__content")).not.toBeInTheDocument();
 	});
 
 	it("should render a transfer modal", () => {
@@ -68,7 +68,7 @@ describe("TransactionDetailModal", () => {
 			},
 		);
 
-		expect(screen.getByTestId("Modal__inner")).toHaveTextContent(translations.MODAL_TRANSFER_DETAIL.TITLE);
+		expect(screen.getByTestId("SidePanel__content")).toHaveTextContent(translations.MODAL_TRANSFER_DETAIL.TITLE);
 	});
 
 	it("should render a multi payment modal", () => {
@@ -94,7 +94,7 @@ describe("TransactionDetailModal", () => {
 			},
 		);
 
-		expect(screen.getByTestId("Modal__inner")).toHaveTextContent(translations.MODAL_TRANSACTION_DETAILS.TITLE);
+		expect(screen.getByTestId("SidePanel__content")).toHaveTextContent(translations.MODAL_TRANSACTION_DETAILS.TITLE);
 	});
 
 	it.each(["vote", "unvote", "voteCombination"])("should render a %s modal", (transactionType) => {
@@ -153,7 +153,7 @@ describe("TransactionDetailModal", () => {
 			voteCombination: "VoteOld",
 		};
 
-		expect(screen.getByTestId("Modal__inner")).toHaveTextContent(labels[transactionType]);
+		expect(screen.getByTestId("SidePanel__content")).toHaveTextContent(labels[transactionType]);
 	});
 
 	it("should render an vote swap modal for signed transaction", () => {
@@ -198,7 +198,7 @@ describe("TransactionDetailModal", () => {
 			},
 		);
 
-		expect(screen.getByTestId("Modal__inner")).toHaveTextContent("VoteOld");
+		expect(screen.getByTestId("SidePanel__content")).toHaveTextContent("VoteOld");
 	});
 
 	it("should render a validator registration modal", () => {
@@ -219,7 +219,7 @@ describe("TransactionDetailModal", () => {
 			},
 		);
 
-		expect(screen.getByTestId("Modal__inner")).toHaveTextContent("Registration");
+		expect(screen.getByTestId("SidePanel__content")).toHaveTextContent("Registration");
 	});
 
 	it("should render a validator resignation modal", () => {
@@ -239,6 +239,6 @@ describe("TransactionDetailModal", () => {
 			},
 		);
 
-		expect(screen.getByTestId("Modal__inner")).toHaveTextContent("Resignation");
+		expect(screen.getByTestId("SidePanel__content")).toHaveTextContent("Resignation");
 	});
 });
