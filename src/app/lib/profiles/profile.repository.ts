@@ -101,13 +101,14 @@ export class ProfileRepository implements IProfileRepository {
 			this.#env,
 		);
 
-		// Skipping legacy data migration (`skipMigration`) for now. At this point,
-		// the ProfileImporter only extracts the data to populate the form.
-		// It will run again in the `restore` method, where it would migrate the rest
-		// of the data (if necessary).
+		// Ignoring details (`ignoreDetails`) for now. At this point, the
+		// ProfileImporter only needs the profile name and some settings to populate
+		// the form.
+		// It will run again in the `restore` method, where it would fill the rest
+		// of the data.
 		// This helps avoid issues like duplicated data—for example, this can happen
 		// when migrating a contact that has two addresses.
-		await new ProfileImporter(result, this.#env).skipMigration().import(password);
+		await new ProfileImporter(result, this.#env).ignoreDetails().import(password);
 
 		return result;
 	}
