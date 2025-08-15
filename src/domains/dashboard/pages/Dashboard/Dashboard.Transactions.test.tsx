@@ -77,7 +77,7 @@ describe("Dashboard", () => {
 		mockTransactionsAggregate.mockRestore();
 	});
 
-	it("should open modal when click on a transaction", async () => {
+	it("should open side panel when click on a transaction", async () => {
 		const all = await profile.transactionAggregate().all({ limit: 10 });
 		const transactions = all.items();
 
