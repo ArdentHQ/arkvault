@@ -219,7 +219,7 @@ describe("Transactions", () => {
 		expect(button).not.toBeDisabled();
 	});
 
-	it("should open detail modal on transaction row click", async () => {
+	it("should open detail side panel on transaction row click", async () => {
 		await env.profiles().restore(profile);
 		await profile.sync();
 
@@ -234,10 +234,10 @@ describe("Transactions", () => {
 		await userEvent.click(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")[0]);
 
 		await waitFor(() => {
-			expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
+			expect(screen.getByTestId("SidePanel__content")).toBeInTheDocument();
 		});
 
-		await userEvent.click(screen.getByTestId("Modal__close-button"));
+		await userEvent.click(screen.getByTestId("SidePanel__close-button"));
 
 		expect(asFragment()).toMatchSnapshot();
 	});

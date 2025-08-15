@@ -98,11 +98,11 @@ describe("Dashboard", () => {
 
 		await userEvent.click(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")[0]);
 
-		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
+		await expect(screen.findByTestId("SidePanel__content")).resolves.toBeVisible();
 
-		await userEvent.click(screen.getByTestId("Modal__close-button"));
+		await userEvent.click(screen.getByTestId("SidePanel__close-button"));
 
-		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
+		expect(screen.queryByTestId("SidePanel__content")).not.toBeInTheDocument();
 
 		mockTransactionsAggregate.mockRestore();
 	});
