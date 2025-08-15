@@ -26,7 +26,7 @@ export const AddressesSidePanel = ({
 	defaultSelectedWallet,
 	open,
 	onOpenChange,
-	onClose,
+	onClose: onCloseFromParent,
 	onDelete,
 	onMountChange,
 }: {
@@ -49,6 +49,18 @@ export const AddressesSidePanel = ({
 		setMultiSelectedAddresses,
 		resetAddressPanelSettings,
 	} = useAddressesPanel({ profile });
+
+	const onClose = (addresses: string[], mode: AddressViewType) => {
+		if (addresses.length === 1) {
+			setActiveMode(AddressViewSelection.single);
+			resetAddressPanelSettings();
+			onCloseFromParent(addresses, AddressViewSelection.single);
+
+			return;
+		}
+
+		onCloseFromParent(addresses, mode);
+	};
 
 	const selectedAddressesFromPortfolio = profile
 		.wallets()
@@ -278,14 +290,6 @@ export const AddressesSidePanel = ({
 	const isSelectAllDisabled = isManageMode || addressesToShow.length === 0;
 	const isSelected = (wallet: Contracts.IReadWriteWallet) => selectedAddresses.includes(wallet.address());
 	const hasSelectedAddresses = () => selectedAddresses.length > 0;
-
-	useEffect(() => {
-		if (addressesToShow.length === 1) {
-			setSelectedAddresses([addressesToShow[0].address()]);
-			setActiveMode(AddressViewSelection.single);
-			resetAddressPanelSettings();
-		}
-	}, [addressesToShow.length]);
 
 	const runErrorAnimation = () => {
 		setIsAnimating(true);
