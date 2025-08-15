@@ -200,12 +200,13 @@ exports[`SearchRecipient > should call onAction when no address is selected 1`] 
                 <div
                   class="group cursor-pointer items-center rounded-lg border transition-all border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 hover:bg-theme-navy-100 dark:hover:bg-theme-dark-700 dim-hover:bg-theme-dim-700"
                   data-testid="RecipientItem"
+                  tabindex="0"
                 >
                   <div
                     class="flex items-center px-4 py-3 duration-150"
                   >
                     <div
-                      class="border-theme-primary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold"
+                      class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 group-hover:dark:border-theme-dark-500 group-hover:dim:border-theme-dim-500"
                     >
                       <div
                         class="flex min-w-0 flex-col space-y-1 truncate"
@@ -268,7 +269,7 @@ exports[`SearchRecipient > should call onAction when no address is selected 1`] 
                             </button>
                           </div>
                           <div
-                            class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
+                            class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 group-hover:dark:border-theme-dark-500 group-hover:dim:border-theme-dim-500"
                           />
                           <div
                             class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 dark:group-hover:border-theme-dark-500 dim:group-hover:border-theme-dim-500 flex! h-[21px] shrink-0 items-center justify-center rounded px-1 py-[3px] text-xs leading-[15px] dark:border"
@@ -298,12 +299,13 @@ exports[`SearchRecipient > should call onAction when no address is selected 1`] 
                 <div
                   class="group cursor-pointer items-center rounded-lg border transition-all border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 hover:bg-theme-navy-100 dark:hover:bg-theme-dark-700 dim-hover:bg-theme-dim-700"
                   data-testid="RecipientItem"
+                  tabindex="0"
                 >
                   <div
                     class="flex items-center px-4 py-3 duration-150"
                   >
                     <div
-                      class="border-theme-primary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold"
+                      class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 group-hover:dark:border-theme-dark-500 group-hover:dim:border-theme-dim-500"
                     >
                       <div
                         class="flex min-w-0 flex-col space-y-1 truncate"
@@ -366,7 +368,7 @@ exports[`SearchRecipient > should call onAction when no address is selected 1`] 
                             </button>
                           </div>
                           <div
-                            class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
+                            class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 group-hover:dark:border-theme-dark-500 group-hover:dim:border-theme-dim-500"
                           />
                           <div
                             class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 dark:group-hover:border-theme-dark-500 dim:group-hover:border-theme-dim-500 flex! h-[21px] shrink-0 items-center justify-center rounded px-1 py-[3px] text-xs leading-[15px] dark:border"
@@ -605,12 +607,13 @@ exports[`SearchRecipient > should render a modal 1`] = `
                 <div
                   class="group cursor-pointer items-center rounded-lg border transition-all border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 hover:bg-theme-navy-100 dark:hover:bg-theme-dark-700 dim-hover:bg-theme-dim-700"
                   data-testid="RecipientItem"
+                  tabindex="0"
                 >
                   <div
                     class="flex items-center px-4 py-3 duration-150"
                   >
                     <div
-                      class="border-theme-primary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold"
+                      class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 group-hover:dark:border-theme-dark-500 group-hover:dim:border-theme-dim-500"
                     >
                       <div
                         class="flex min-w-0 flex-col space-y-1 truncate"
@@ -673,7 +676,7 @@ exports[`SearchRecipient > should render a modal 1`] = `
                             </button>
                           </div>
                           <div
-                            class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
+                            class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 group-hover:dark:border-theme-dark-500 group-hover:dim:border-theme-dim-500"
                           />
                           <div
                             class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 dark:group-hover:border-theme-dark-500 dim:group-hover:border-theme-dim-500 flex! h-[21px] shrink-0 items-center justify-center rounded px-1 py-[3px] text-xs leading-[15px] dark:border"
@@ -703,12 +706,13 @@ exports[`SearchRecipient > should render a modal 1`] = `
                 <div
                   class="group cursor-pointer items-center rounded-lg border transition-all border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 hover:bg-theme-navy-100 dark:hover:bg-theme-dark-700 dim-hover:bg-theme-dim-700"
                   data-testid="RecipientItem"
+                  tabindex="0"
                 >
                   <div
                     class="flex items-center px-4 py-3 duration-150"
                   >
                     <div
-                      class="border-theme-primary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold"
+                      class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 group-hover:dark:border-theme-dark-500 group-hover:dim:border-theme-dim-500"
                     >
                       <div
                         class="flex min-w-0 flex-col space-y-1 truncate"
@@ -771,7 +775,7 @@ exports[`SearchRecipient > should render a modal 1`] = `
                             </button>
                           </div>
                           <div
-                            class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
+                            class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 group-hover:dark:border-theme-dark-500 group-hover:dim:border-theme-dim-500"
                           />
                           <div
                             class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 dark:group-hover:border-theme-dark-500 dim:group-hover:border-theme-dim-500 flex! h-[21px] shrink-0 items-center justify-center rounded px-1 py-[3px] text-xs leading-[15px] dark:border"
@@ -1008,12 +1012,13 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
                 <div
                   class="group cursor-pointer items-center rounded-lg border transition-all border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 hover:bg-theme-navy-100 dark:hover:bg-theme-dark-700 dim-hover:bg-theme-dim-700"
                   data-testid="RecipientItem"
+                  tabindex="0"
                 >
                   <div
                     class="flex items-center px-4 py-3 duration-150"
                   >
                     <div
-                      class="border-theme-primary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold"
+                      class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 group-hover:dark:border-theme-dark-500 group-hover:dim:border-theme-dim-500"
                     >
                       <div
                         class="flex min-w-0 flex-col space-y-1 truncate"
@@ -1076,7 +1081,7 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
                             </button>
                           </div>
                           <div
-                            class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
+                            class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 group-hover:dark:border-theme-dark-500 group-hover:dim:border-theme-dim-500"
                           />
                           <div
                             class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 dark:group-hover:border-theme-dark-500 dim:group-hover:border-theme-dim-500 flex! h-[21px] shrink-0 items-center justify-center rounded px-1 py-[3px] text-xs leading-[15px] dark:border"
@@ -1106,12 +1111,13 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
                 <div
                   class="group cursor-pointer items-center rounded-lg border transition-all border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 hover:bg-theme-navy-100 dark:hover:bg-theme-dark-700 dim-hover:bg-theme-dim-700"
                   data-testid="RecipientItem"
+                  tabindex="0"
                 >
                   <div
                     class="flex items-center px-4 py-3 duration-150"
                   >
                     <div
-                      class="border-theme-primary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold"
+                      class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 group-hover:dark:border-theme-dark-500 group-hover:dim:border-theme-dim-500"
                     >
                       <div
                         class="flex min-w-0 flex-col space-y-1 truncate"
@@ -1174,7 +1180,7 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
                             </button>
                           </div>
                           <div
-                            class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
+                            class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 group-hover:dark:border-theme-dark-500 group-hover:dim:border-theme-dim-500"
                           />
                           <div
                             class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 dark:group-hover:border-theme-dark-500 dim:group-hover:border-theme-dim-500 flex! h-[21px] shrink-0 items-center justify-center rounded px-1 py-[3px] text-xs leading-[15px] dark:border"
@@ -1411,12 +1417,13 @@ exports[`SearchRecipient > should render with contact on desktop 1`] = `
                 <div
                   class="group cursor-pointer items-center rounded-lg border transition-all border-theme-success-200 dark:border-theme-success-700 dim:border-theme-success-700 bg-theme-success-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 hover:bg-theme-secondary-200 hover:border-theme-navy-200 dark:hover:bg-theme-dark-700 dark:hover:border-theme-dark-700 dim-hover:bg-theme-dim-700 dim:hover:border-theme-dim-700"
                   data-testid="RecipientItem"
+                  tabindex="0"
                 >
                   <div
                     class="flex items-center px-4 py-3 duration-150"
                   >
                     <div
-                      class="border-theme-primary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold"
+                      class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold border-theme-success-200 dark:border-theme-success-700 dim:border-theme-success-700"
                     >
                       <div
                         class="flex min-w-0 flex-col space-y-1 truncate"
@@ -1479,10 +1486,10 @@ exports[`SearchRecipient > should render with contact on desktop 1`] = `
                             </button>
                           </div>
                           <div
-                            class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
+                            class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 group-hover:dark:border-theme-dark-500 group-hover:dim:border-theme-dim-500"
                           />
                           <div
-                            class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 dark:group-hover:border-theme-dark-500 dim:group-hover:border-theme-dim-500 flex! h-[21px] shrink-0 items-center justify-center rounded px-1 py-[3px] text-xs leading-[15px] dark:border"
+                            class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 dark:group-hover:border-theme-dark-500 dim:group-hover:border-theme-dim-500 flex! h-[21px] shrink-0 items-center justify-center rounded px-1 py-[3px] text-xs leading-[15px] dark:border bg-theme-secondary-100"
                           >
                             Contact
                           </div>
@@ -2045,12 +2052,13 @@ exports[`SearchRecipient > should render with my address on desktop 1`] = `
                 <div
                   class="group cursor-pointer items-center rounded-lg border transition-all border-theme-success-200 dark:border-theme-success-700 dim:border-theme-success-700 bg-theme-success-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 hover:bg-theme-secondary-200 hover:border-theme-navy-200 dark:hover:bg-theme-dark-700 dark:hover:border-theme-dark-700 dim-hover:bg-theme-dim-700 dim:hover:border-theme-dim-700"
                   data-testid="RecipientItem"
+                  tabindex="0"
                 >
                   <div
                     class="flex items-center px-4 py-3 duration-150"
                   >
                     <div
-                      class="border-theme-primary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold"
+                      class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold border-theme-success-200 dark:border-theme-success-700 dim:border-theme-success-700"
                     >
                       <div
                         class="flex min-w-0 flex-col space-y-1 truncate"
@@ -2113,10 +2121,10 @@ exports[`SearchRecipient > should render with my address on desktop 1`] = `
                             </button>
                           </div>
                           <div
-                            class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
+                            class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 group-hover:dark:border-theme-dark-500 group-hover:dim:border-theme-dim-500"
                           />
                           <div
-                            class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 dark:group-hover:border-theme-dark-500 dim:group-hover:border-theme-dim-500 flex! h-[21px] shrink-0 items-center justify-center rounded px-1 py-[3px] text-xs leading-[15px] dark:border"
+                            class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 dark:group-hover:border-theme-dark-500 dim:group-hover:border-theme-dim-500 flex! h-[21px] shrink-0 items-center justify-center rounded px-1 py-[3px] text-xs leading-[15px] dark:border bg-theme-secondary-100"
                           >
                             My Address
                           </div>
@@ -2679,12 +2687,13 @@ exports[`SearchRecipient > should render with no alias if the recipient address 
                 <div
                   class="group cursor-pointer items-center rounded-lg border transition-all border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 hover:bg-theme-navy-100 dark:hover:bg-theme-dark-700 dim-hover:bg-theme-dim-700"
                   data-testid="RecipientItem"
+                  tabindex="0"
                 >
                   <div
                     class="flex items-center px-4 py-3 duration-150"
                   >
                     <div
-                      class="border-theme-primary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold"
+                      class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 group-hover:dark:border-theme-dark-500 group-hover:dim:border-theme-dim-500"
                     >
                       <div
                         class="flex min-w-0 flex-col space-y-1 truncate"
@@ -2745,7 +2754,7 @@ exports[`SearchRecipient > should render with no alias if the recipient address 
                             </button>
                           </div>
                           <div
-                            class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
+                            class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 group-hover:dark:border-theme-dark-500 group-hover:dim:border-theme-dim-500"
                           />
                           <div
                             class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 dark:group-hover:border-theme-dark-500 dim:group-hover:border-theme-dim-500 flex! h-[21px] shrink-0 items-center justify-center rounded px-1 py-[3px] text-xs leading-[15px] dark:border"
@@ -2982,12 +2991,13 @@ exports[`SearchRecipient > should render with selected address 1`] = `
                 <div
                   class="group cursor-pointer items-center rounded-lg border transition-all border-theme-success-200 dark:border-theme-success-700 dim:border-theme-success-700 bg-theme-success-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 hover:bg-theme-secondary-200 hover:border-theme-navy-200 dark:hover:bg-theme-dark-700 dark:hover:border-theme-dark-700 dim-hover:bg-theme-dim-700 dim:hover:border-theme-dim-700"
                   data-testid="RecipientItem"
+                  tabindex="0"
                 >
                   <div
                     class="flex items-center px-4 py-3 duration-150"
                   >
                     <div
-                      class="border-theme-primary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold"
+                      class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold border-theme-success-200 dark:border-theme-success-700 dim:border-theme-success-700"
                     >
                       <div
                         class="flex min-w-0 flex-col space-y-1 truncate"
@@ -3050,10 +3060,10 @@ exports[`SearchRecipient > should render with selected address 1`] = `
                             </button>
                           </div>
                           <div
-                            class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
+                            class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 group-hover:dark:border-theme-dark-500 group-hover:dim:border-theme-dim-500"
                           />
                           <div
-                            class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 dark:group-hover:border-theme-dark-500 dim:group-hover:border-theme-dim-500 flex! h-[21px] shrink-0 items-center justify-center rounded px-1 py-[3px] text-xs leading-[15px] dark:border"
+                            class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 dark:group-hover:border-theme-dark-500 dim:group-hover:border-theme-dim-500 flex! h-[21px] shrink-0 items-center justify-center rounded px-1 py-[3px] text-xs leading-[15px] dark:border bg-theme-secondary-100"
                           >
                             My Address
                           </div>
@@ -3080,12 +3090,13 @@ exports[`SearchRecipient > should render with selected address 1`] = `
                 <div
                   class="group cursor-pointer items-center rounded-lg border transition-all border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 hover:bg-theme-navy-100 dark:hover:bg-theme-dark-700 dim-hover:bg-theme-dim-700"
                   data-testid="RecipientItem"
+                  tabindex="0"
                 >
                   <div
                     class="flex items-center px-4 py-3 duration-150"
                   >
                     <div
-                      class="border-theme-primary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold"
+                      class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 group-hover:dark:border-theme-dark-500 group-hover:dim:border-theme-dim-500"
                     >
                       <div
                         class="flex min-w-0 flex-col space-y-1 truncate"
@@ -3148,7 +3159,7 @@ exports[`SearchRecipient > should render with selected address 1`] = `
                             </button>
                           </div>
                           <div
-                            class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
+                            class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 group-hover:dark:border-theme-dark-500 group-hover:dim:border-theme-dim-500"
                           />
                           <div
                             class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 dark:group-hover:border-theme-dark-500 dim:group-hover:border-theme-dim-500 flex! h-[21px] shrink-0 items-center justify-center rounded px-1 py-[3px] text-xs leading-[15px] dark:border"
@@ -3385,12 +3396,13 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
                 <div
                   class="group cursor-pointer items-center rounded-lg border transition-all border-theme-success-200 dark:border-theme-success-700 dim:border-theme-success-700 bg-theme-success-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 hover:bg-theme-secondary-200 hover:border-theme-navy-200 dark:hover:bg-theme-dark-700 dark:hover:border-theme-dark-700 dim-hover:bg-theme-dim-700 dim:hover:border-theme-dim-700"
                   data-testid="RecipientItem"
+                  tabindex="0"
                 >
                   <div
                     class="flex items-center px-4 py-3 duration-150"
                   >
                     <div
-                      class="border-theme-primary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold"
+                      class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold border-theme-success-200 dark:border-theme-success-700 dim:border-theme-success-700"
                     >
                       <div
                         class="flex min-w-0 flex-col space-y-1 truncate"
@@ -3453,10 +3465,10 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
                             </button>
                           </div>
                           <div
-                            class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
+                            class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 group-hover:dark:border-theme-dark-500 group-hover:dim:border-theme-dim-500"
                           />
                           <div
-                            class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 dark:group-hover:border-theme-dark-500 dim:group-hover:border-theme-dim-500 flex! h-[21px] shrink-0 items-center justify-center rounded px-1 py-[3px] text-xs leading-[15px] dark:border"
+                            class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 dark:group-hover:border-theme-dark-500 dim:group-hover:border-theme-dim-500 flex! h-[21px] shrink-0 items-center justify-center rounded px-1 py-[3px] text-xs leading-[15px] dark:border bg-theme-secondary-100"
                           >
                             My Address
                           </div>
@@ -3483,12 +3495,13 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
                 <div
                   class="group cursor-pointer items-center rounded-lg border transition-all border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 hover:bg-theme-navy-100 dark:hover:bg-theme-dark-700 dim-hover:bg-theme-dim-700"
                   data-testid="RecipientItem"
+                  tabindex="0"
                 >
                   <div
                     class="flex items-center px-4 py-3 duration-150"
                   >
                     <div
-                      class="border-theme-primary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold"
+                      class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 group-hover:dark:border-theme-dark-500 group-hover:dim:border-theme-dim-500"
                     >
                       <div
                         class="flex min-w-0 flex-col space-y-1 truncate"
@@ -3551,7 +3564,7 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
                             </button>
                           </div>
                           <div
-                            class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
+                            class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 group-hover:dark:border-theme-dark-500 group-hover:dim:border-theme-dim-500"
                           />
                           <div
                             class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 dark:group-hover:border-theme-dark-500 dim:group-hover:border-theme-dim-500 flex! h-[21px] shrink-0 items-center justify-center rounded px-1 py-[3px] text-xs leading-[15px] dark:border"
