@@ -1,117 +1,25 @@
 import { Contracts, DTO } from "@/app/lib/profiles";
 import { useMemo, useEffect, useCallback } from "react";
-import { useLocalStorage } from "usehooks-ts";
-
-interface CachedNotificationData {
-	transactions: any[];
-	notifications: Contracts.INotification[];
-	lastSync: number;
-}
 
 export const useNotifications = ({ profile }: { profile: Contracts.IProfile }) => {
-	const storageKey = `notifications_${profile.id()}`;
-	const [cachedData, setCachedData] = useLocalStorage<CachedNotificationData | null>(storageKey, null);
-
 	const isSyncing = profile.notifications().transactions().isSyncing();
 	const liveTransactions = profile.notifications().transactions().transactions();
 	const liveNotifications = Object.values(profile.notifications().all());
 
-	const transactions = useMemo((): DTO.ExtendedConfirmedTransactionData[] => {
-		if (liveTransactions.length > 0) {
-			return liveTransactions;
-		}
-
-		if (cachedData?.lastSync) {
-			const isRecent = Date.now() - cachedData.lastSync < 24 * 60 * 60 * 1000;
-			if (isRecent && cachedData.transactions.length > 0) {
-				return cachedData.transactions.map((cachedTx) => ({
-					fee: () => cachedTx.fee,
-					from: () => cachedTx.from,
-					hash: () => cachedTx.hash,
-					isMultiPayment: () => cachedTx.isMultiPayment,
-					isReceived: () => cachedTx.isReceived,
-					isSent: () => cachedTx.isSent,
-					isUnvote: () => cachedTx.isUnvote,
-					isUsernameRegistration: () => cachedTx.isUsernameRegistration,
-					isUsernameResignation: () => cachedTx.isUsernameResignation,
-					isValidatorRegistration: () => cachedTx.isValidatorRegistration,
-					isVote: () => cachedTx.isVote,
-					isVoteCombination: () => cachedTx.isVoteCombination,
-					recipients: () => cachedTx.recipients || [],
-					timestamp: () =>
-						cachedTx._timestamp
-							? {
-									toISOString: () => cachedTx._timestamp.iso,
-									toUNIX: () => cachedTx._timestamp.unix,
-								}
-							: null,
-					to: () => cachedTx.to,
-					toObject: () => cachedTx,
-					type: () => cachedTx.type,
-					value: () => cachedTx.value,
-					wallet: () => {
-						const w = cachedTx._wallet;
-						return {
-							currency: () => w?.currency,
-							network: () => ({
-								coin: () => w?.network?.coin,
-								id: () => w?.network?.id,
-								name: () => w?.network?.name,
-							}),
-						};
-					},
-				})) as DTO.ExtendedConfirmedTransactionData[];
-			}
-		}
-
-		return [];
-	}, [liveTransactions, cachedData]);
-
-	const hasCachedData = useMemo(() => {
-		if (cachedData?.lastSync) {
-			const isRecent = Date.now() - cachedData.lastSync < 24 * 60 * 60 * 1000;
-			return isRecent && cachedData.transactions.length > 0;
-		}
-		return false;
-	}, [cachedData]);
+	const transactions = useMemo<DTO.ExtendedConfirmedTransactionData[]>(() => {
+		return liveTransactions;
+	}, [liveTransactions]);
 
 	useEffect(() => {
-		if (liveTransactions.length > 0) {
-			const dataToCache: CachedNotificationData = {
-				lastSync: Date.now(),
-				notifications: liveNotifications,
-				transactions: liveTransactions.map((tx) => {
-					const w = tx.wallet?.();
-					const n = w?.network?.();
-					const ts = tx.timestamp?.();
+		void profile.notifications().transactions().hydrateFromCache();
 
-					return {
-						...tx.toObject?.(),
-
-						_timestamp: ts ? { iso: ts.toISOString?.(), unix: ts.toUNIX?.() } : null,
-						_wallet:
-							w && n
-								? {
-										currency: w.currency?.(),
-										network: {
-											coin: n.coin?.(),
-											id: n.id?.(),
-											name: n.name?.(),
-										},
-									}
-								: null,
-					};
-				}),
-			};
-
-			setCachedData(dataToCache);
-		}
-	}, [liveTransactions.length, liveNotifications.length, setCachedData]);
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [profile]);
 
 	const triggerInitialSync = useCallback(async () => {
 		const hasLiveData = liveTransactions.length > 0;
 
-		if (!hasLiveData && !hasCachedData && !isSyncing) {
+		if (!hasLiveData && !isSyncing) {
 			try {
 				await profile.notifications().transactions().sync();
 			} catch (error) {
@@ -119,7 +27,7 @@ export const useNotifications = ({ profile }: { profile: Contracts.IProfile }) =
 				console.error("Failed to sync notifications on initialization:", error);
 			}
 		}
-	}, [profile, isSyncing, liveTransactions.length, hasCachedData]);
+	}, [profile, isSyncing, liveTransactions.length]);
 
 	useEffect(() => {
 		triggerInitialSync();
