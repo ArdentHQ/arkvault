@@ -135,7 +135,7 @@ export const TransactionDetailSidePanel = ({
 		}
 
 		return () => clearTimeout(timeoutId);
-	}, [isOpen])
+	}, [isOpen]);
 
 	return (
 		<SidePanel title={t("TRANSACTION.MODAL_TRANSACTION_DETAILS.TITLE")} open={isOpen} onOpenChange={setIsOpen}>
