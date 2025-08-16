@@ -397,13 +397,22 @@ export const SendTransferSidePanel = ({
 			footer={
 				<SidePanelButtons>
 					{activeTab !== SendTransferStep.SummaryStep && (
-						<Button variant="secondary" onClick={handleBack} disabled={isSubmitting}>
+						<Button
+							data-testid="SendTransfer__back-button"
+							variant="secondary"
+							onClick={handleBack}
+							disabled={isSubmitting}
+						>
 							{t("COMMON.BACK")}
 						</Button>
 					)}
 
 					{activeTab < SendTransferStep.AuthenticationStep && (
-						<Button onClick={handleNext} disabled={isNextDisabled || isSubmitting}>
+						<Button
+							data-testid="SendTransfer__continue-button"
+							onClick={handleNext}
+							disabled={isNextDisabled || isSubmitting}
+						>
 							{t("COMMON.CONTINUE")}
 						</Button>
 					)}
@@ -421,7 +430,9 @@ export const SendTransferSidePanel = ({
 					)}
 
 					{activeTab === SendTransferStep.SummaryStep && (
-						<Button onClick={() => onOpenChange(false)}>{t("COMMON.CLOSE")}</Button>
+						<Button data-testid="SendTransfer__close-button" onClick={() => onOpenChange(false)}>
+							{t("COMMON.CLOSE")}
+						</Button>
 					)}
 				</SidePanelButtons>
 			}
