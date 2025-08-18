@@ -6,26 +6,30 @@ import { UnconfirmedTransactionsResponse } from "./pending-transaction.contract"
  * Small wrapper to call /transactions/unconfirmed on the node.
  */
 export class PendingTransactionsService {
-    private readonly http: HttpClient;
-    private readonly host: string;
+	private readonly http: HttpClient;
+	private readonly host: string;
 
-    constructor({ httpClient, host }: { httpClient: Http.HttpClient; host: string }) {
-        this.http = httpClient;
-        this.host = host.replace(/\/+$/, "");
-    }
+	constructor({ httpClient, host }: { httpClient: Http.HttpClient; host: string }) {
+		this.http = httpClient;
+		this.host = host.replace(/\/+$/, "");
+	}
 
-    /**
-     * Returns raw unconfirmed txs from node.
-     */
-    public async listUnconfirmed(params?: { page?: number; limit?: number }) {
-        const query: Record<string, string | number> = {};
-        if (params?.page) query.page = params.page;
-        if (params?.limit) query.limit = params.limit;
+	/**
+	 * Returns raw unconfirmed txs from node.
+	 */
+	public async listUnconfirmed(parameters?: { page?: number; limit?: number }) {
+		const query: Record<string, string | number> = {};
+		if (parameters?.page) {
+			query.page = parameters.page;
+		}
+		if (parameters?.limit) {
+			query.limit = parameters.limit;
+		}
 
-        const res = await this.http.get(`${this.host}/transactions/unconfirmed`, query, {
-            ttl: 5_000,
-        });
+		const res = await this.http.get(`${this.host}/transactions/unconfirmed`, query, {
+			ttl: 5_000,
+		});
 
-        return res.json() as Promise<UnconfirmedTransactionsResponse>;
-    }
+		return res.json() as Promise<UnconfirmedTransactionsResponse>;
+	}
 }
