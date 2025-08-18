@@ -14,9 +14,16 @@ interface MobileItemProperties {
 	selected?: boolean;
 }
 
+export interface RecipientItemProperties extends MobileItemProperties {
+	type: string;
+	address: string;
+	name: string;
+	index: number;
+}
+
 export interface RecipientItemMobileProperties extends MobileItemProperties {
 	type: string;
-	address: React.ReactNode;
+	address: string;
 	name: string;
 }
 

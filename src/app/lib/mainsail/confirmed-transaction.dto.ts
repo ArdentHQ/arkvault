@@ -7,6 +7,8 @@ import { AbiType, decodeFunctionData } from "./helpers/decode-function-data";
 import { TransactionTypeService } from "./transaction-type.service";
 import { AddressService } from "./address.service";
 import { UnitConverter } from "@arkecosystem/typescript-crypto";
+import { TransactionReceipt } from "./transaction.receipt";
+
 export type KeyValuePair = Record<string, any>;
 
 export class ConfirmedTransactionData {
@@ -320,6 +322,10 @@ export class ConfirmedTransactionData {
 
 	public isSuccess(): boolean {
 		return this.data.receipt.status === 1;
+	}
+
+	public receipt(): TransactionReceipt {
+		return new TransactionReceipt(this.data.receipt, this.data.gas);
 	}
 
 	public isConfirmed(): boolean {
