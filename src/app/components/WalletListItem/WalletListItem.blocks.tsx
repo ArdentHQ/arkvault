@@ -150,7 +150,7 @@ export const RecipientItem: React.FC<RecipientItemProperties> = ({
 						{
 							"border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 group-hover:dark:border-theme-dark-500 group-hover:dim:border-theme-dim-500":
 								!selected,
-							"border-theme-success-200 dark:border-theme-success-700 dim:border-theme-success-700":
+							"border-theme-success-200 dark:border-theme-dark-700 dim:border-theme-dim-700 group-hover:dark:border-theme-dark-600 group-hover:dim:border-theme-dim-600":
 								selected,
 						},
 					)}
@@ -204,6 +204,7 @@ export const RecipientItem: React.FC<RecipientItemProperties> = ({
 								? `RecipientListItem__selected-button-${index}`
 								: `RecipientListItem__select-button-${index}`
 						}
+						tabIndex={-1}
 						size="icon"
 						className={cn("p-0 text-sm leading-[17px]", {
 							"group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500 dim:group-hover:text-theme-navy-700":
