@@ -18,10 +18,29 @@ export enum AddressViewSelection {
 	multiple = "multiple",
 }
 
-export const defaultAddressSettings: AddressesPanelSettings = {
+const defaultAddressSettings: AddressesPanelSettings = {
 	addressViewPreference: AddressViewSelection.single,
 	multiSelectedAddresses: [],
 	singleSelectedAddress: [],
+};
+
+export const resetViewPreferences = (profile: Contracts.IProfile): void => {
+	const config = profile.settings().get(Contracts.ProfileSetting.DashboardConfiguration, {
+		addressPanelSettings: {},
+	}) as unknown as DashboardConfiguration;
+
+	if (!config.addressPanelSettings) {
+		config.addressPanelSettings = defaultAddressSettings;
+	}
+
+	config.addressPanelSettings = {
+		...config.addressPanelSettings,
+		...defaultAddressSettings,
+	};
+
+	profile.settings().set(Contracts.ProfileSetting.DashboardConfiguration, config);
+
+	profile.settings().set(Contracts.ProfileSetting.WalletSelectionMode, AddressViewSelection.single);
 };
 
 export const useAddressesPanel = ({ profile }: { profile: Contracts.IProfile }) => {
@@ -93,7 +112,9 @@ export const useAddressesPanel = ({ profile }: { profile: Contracts.IProfile }) 
 	};
 
 	const resetAddressPanelSettings = async (): Promise<void> => {
-		await setAddressPanelSettings(defaultAddressSettings);
+		resetViewPreferences(profile);
+
+		await persist();
 	};
 
 	return {
