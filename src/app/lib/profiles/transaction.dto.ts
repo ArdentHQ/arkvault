@@ -80,7 +80,7 @@ export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTran
 	}
 
 	public nonce(): BigNumber {
-		return this.#data.nonce();
+		return BigNumber.make(this.#data.nonce());
 	}
 
 	public isConfirmed(): boolean {
