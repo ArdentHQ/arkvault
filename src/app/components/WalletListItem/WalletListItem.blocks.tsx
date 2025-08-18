@@ -150,7 +150,7 @@ export const RecipientItem: React.FC<RecipientItemProperties> = ({
 						{
 							"border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 group-hover:dark:border-theme-dark-500 group-hover:dim:border-theme-dim-500":
 								!selected,
-							"border-theme-success-200 dark:border-theme-success-700 dim:border-theme-success-700":
+							"border-theme-success-200 dark:border-theme-dark-700 dim:border-theme-dim-700 group-hover:dark:border-theme-dark-600 group-hover:dim:border-theme-dim-600":
 								selected,
 						},
 					)}
@@ -199,6 +199,7 @@ export const RecipientItem: React.FC<RecipientItemProperties> = ({
 
 				<div className="flex w-[72px] min-w-[72px] flex-1 shrink-0 items-center justify-center pl-4">
 					<Button
+						tabIndex={-1}
 						data-testid={
 							selected
 								? `RecipientListItem__selected-button-${index}`
@@ -370,6 +371,7 @@ export const ReceiverItem: React.FC<ReceiverItemProperties> = ({
 								{name}
 							</div>
 							<Address
+								showCopyButton={true}
 								address={wallet.address()}
 								addressClass={cn("text-sm leading-[17px]", {
 									"text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500":
