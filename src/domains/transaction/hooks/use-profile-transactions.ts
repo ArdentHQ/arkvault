@@ -445,8 +445,8 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 
 			for (const transaction of response?.results ?? []) {
 				const matched =
-					wallets.find((w) => w.address().toLowerCase() === tx.from?.toLowerCase?.()) ||
-					wallets.find((w) => w.address().toLowerCase() === tx.to?.toLowerCase?.());
+					wallets.find((w) => w.address().toLowerCase() === transaction.from?.toLowerCase?.()) ||
+					wallets.find((w) => w.address().toLowerCase() === transaction.to?.toLowerCase?.());
 
 				if (!matched) { continue; }
 
