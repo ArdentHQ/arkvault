@@ -285,6 +285,7 @@ exports[`SearchRecipient > should call onAction when no address is selected 1`] 
                       <button
                         class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500 dim:group-hover:text-theme-navy-700 text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600"
                         data-testid="RecipientListItem__select-button-0"
+                        tabindex="-1"
                         type="button"
                       >
                         <div
@@ -384,6 +385,7 @@ exports[`SearchRecipient > should call onAction when no address is selected 1`] 
                       <button
                         class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500 dim:group-hover:text-theme-navy-700 text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600"
                         data-testid="RecipientListItem__select-button-1"
+                        tabindex="-1"
                         type="button"
                       >
                         <div
@@ -692,6 +694,7 @@ exports[`SearchRecipient > should render a modal 1`] = `
                       <button
                         class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500 dim:group-hover:text-theme-navy-700 text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600"
                         data-testid="RecipientListItem__select-button-0"
+                        tabindex="-1"
                         type="button"
                       >
                         <div
@@ -791,6 +794,7 @@ exports[`SearchRecipient > should render a modal 1`] = `
                       <button
                         class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500 dim:group-hover:text-theme-navy-700 text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600"
                         data-testid="RecipientListItem__select-button-1"
+                        tabindex="-1"
                         type="button"
                       >
                         <div
@@ -1097,6 +1101,7 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
                       <button
                         class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500 dim:group-hover:text-theme-navy-700 text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600"
                         data-testid="RecipientListItem__select-button-0"
+                        tabindex="-1"
                         type="button"
                       >
                         <div
@@ -1196,6 +1201,7 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
                       <button
                         class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500 dim:group-hover:text-theme-navy-700 text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600"
                         data-testid="RecipientListItem__select-button-1"
+                        tabindex="-1"
                         type="button"
                       >
                         <div
@@ -1423,7 +1429,7 @@ exports[`SearchRecipient > should render with contact on desktop 1`] = `
                     class="flex items-center px-4 py-3 duration-150"
                   >
                     <div
-                      class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold border-theme-success-200 dark:border-theme-success-700 dim:border-theme-success-700"
+                      class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold border-theme-success-200 dark:border-theme-dark-700 dim:border-theme-dim-700 group-hover:dark:border-theme-dark-600 group-hover:dim:border-theme-dim-600"
                     >
                       <div
                         class="flex min-w-0 flex-col space-y-1 truncate"
@@ -1502,6 +1508,7 @@ exports[`SearchRecipient > should render with contact on desktop 1`] = `
                       <button
                         class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-success-700 dark:group-hover:text-theme-green-500 dim:group-hover:text-theme-green-500 text-theme-success-600 dark:text-theme-green-600 dim:text-theme-green-600"
                         data-testid="RecipientListItem__selected-button-0"
+                        tabindex="-1"
                         type="button"
                       >
                         <div
@@ -2058,7 +2065,7 @@ exports[`SearchRecipient > should render with my address on desktop 1`] = `
                     class="flex items-center px-4 py-3 duration-150"
                   >
                     <div
-                      class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold border-theme-success-200 dark:border-theme-success-700 dim:border-theme-success-700"
+                      class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold border-theme-success-200 dark:border-theme-dark-700 dim:border-theme-dim-700 group-hover:dark:border-theme-dark-600 group-hover:dim:border-theme-dim-600"
                     >
                       <div
                         class="flex min-w-0 flex-col space-y-1 truncate"
@@ -2137,6 +2144,7 @@ exports[`SearchRecipient > should render with my address on desktop 1`] = `
                       <button
                         class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-success-700 dark:group-hover:text-theme-green-500 dim:group-hover:text-theme-green-500 text-theme-success-600 dark:text-theme-green-600 dim:text-theme-green-600"
                         data-testid="RecipientListItem__selected-button-0"
+                        tabindex="-1"
                         type="button"
                       >
                         <div
@@ -2770,6 +2778,7 @@ exports[`SearchRecipient > should render with no alias if the recipient address 
                       <button
                         class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500 dim:group-hover:text-theme-navy-700 text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600"
                         data-testid="RecipientListItem__select-button-0"
+                        tabindex="-1"
                         type="button"
                       >
                         <div
@@ -2997,7 +3006,7 @@ exports[`SearchRecipient > should render with selected address 1`] = `
                     class="flex items-center px-4 py-3 duration-150"
                   >
                     <div
-                      class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold border-theme-success-200 dark:border-theme-success-700 dim:border-theme-success-700"
+                      class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold border-theme-success-200 dark:border-theme-dark-700 dim:border-theme-dim-700 group-hover:dark:border-theme-dark-600 group-hover:dim:border-theme-dim-600"
                     >
                       <div
                         class="flex min-w-0 flex-col space-y-1 truncate"
@@ -3076,6 +3085,7 @@ exports[`SearchRecipient > should render with selected address 1`] = `
                       <button
                         class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-success-700 dark:group-hover:text-theme-green-500 dim:group-hover:text-theme-green-500 text-theme-success-600 dark:text-theme-green-600 dim:text-theme-green-600"
                         data-testid="RecipientListItem__selected-button-0"
+                        tabindex="-1"
                         type="button"
                       >
                         <div
@@ -3175,6 +3185,7 @@ exports[`SearchRecipient > should render with selected address 1`] = `
                       <button
                         class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500 dim:group-hover:text-theme-navy-700 text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600"
                         data-testid="RecipientListItem__select-button-1"
+                        tabindex="-1"
                         type="button"
                       >
                         <div
@@ -3402,7 +3413,7 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
                     class="flex items-center px-4 py-3 duration-150"
                   >
                     <div
-                      class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold border-theme-success-200 dark:border-theme-success-700 dim:border-theme-success-700"
+                      class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold border-theme-success-200 dark:border-theme-dark-700 dim:border-theme-dim-700 group-hover:dark:border-theme-dark-600 group-hover:dim:border-theme-dim-600"
                     >
                       <div
                         class="flex min-w-0 flex-col space-y-1 truncate"
@@ -3481,6 +3492,7 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
                       <button
                         class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-success-700 dark:group-hover:text-theme-green-500 dim:group-hover:text-theme-green-500 text-theme-success-600 dark:text-theme-green-600 dim:text-theme-green-600"
                         data-testid="RecipientListItem__selected-button-0"
+                        tabindex="-1"
                         type="button"
                       >
                         <div
@@ -3580,6 +3592,7 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
                       <button
                         class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500 dim:group-hover:text-theme-navy-700 text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600"
                         data-testid="RecipientListItem__select-button-1"
+                        tabindex="-1"
                         type="button"
                       >
                         <div
