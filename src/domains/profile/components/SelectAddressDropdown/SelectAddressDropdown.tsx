@@ -5,10 +5,12 @@ import React, { useMemo, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { Address } from "@/app/components/Address";
 import { useFormField } from "@/app/components/Form/useFormField";
-import { Select } from "@/app/components/SelectDropdown";
+import { OptionProperties, Select } from "@/app/components/SelectDropdown";
 import { TruncateEnd } from "@/app/components/TruncateEnd";
 import { useWalletAlias } from "@/app/hooks/use-wallet-alias";
 import { Icon } from "@/app/components/Icon";
+import { Amount } from "@/app/components/Amount";
+import { NetworkOption } from "@/app/components/NavigationBar/components/SelectNetwork/SelectNetwork.blocks";
 
 type SelectAddressDropdownProperties = {
 	wallet?: Contracts.IReadWriteWallet;
@@ -20,20 +22,28 @@ type SelectAddressDropdownProperties = {
 	placeholder?: string;
 	onChange?: (wallet?: Contracts.IReadWriteWallet) => void;
 	disableAction?: (wallet: Contracts.IReadWriteWallet) => boolean;
+	showBalance?: boolean;
 } & Omit<React.InputHTMLAttributes<any>, "onChange">;
 
 export const OptionLabel = ({
 	option,
 	network,
 	profile,
+	showBalance = false,
 }: {
 	option: any;
 	network?: Networks.Network;
 	profile: Contracts.IProfile;
+	showBalance?: boolean;
 }) => {
 	const address = option.value;
 
 	const { getWalletAlias } = useWalletAlias();
+
+	const wallet = useMemo(
+		() => profile.wallets().findByAddressWithNetwork(address, network?.id() ?? NetworkOption.Mainnet),
+		[address, profile, network],
+	);
 
 	const { alias } = useMemo(
 		() =>
@@ -62,7 +72,18 @@ export const OptionLabel = ({
 					"text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50":
 						!option.isSelected && option.isHighlighted,
 				})}
+				wrapperClass={cn({
+					"flex-1": showBalance,
+				})}
 			/>
+
+			{showBalance && (
+				<Amount
+					value={wallet?.balance() ?? 0}
+					ticker={wallet?.network().ticker() ?? ""}
+					className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex-1 text-right font-semibold"
+				/>
+			)}
 
 			<div className="h-4 w-4">
 				{option.isSelected && (
@@ -88,6 +109,7 @@ export const SelectAddressDropdown = React.forwardRef<HTMLInputElement, SelectAd
 			onChange,
 			wallets,
 			defaultNetwork,
+			showBalance = false,
 			disableAction = () => false,
 		}: SelectAddressDropdownProperties,
 		reference,
@@ -166,6 +188,7 @@ export const SelectAddressDropdown = React.forwardRef<HTMLInputElement, SelectAd
 								option={option}
 								network={wallet?.network() ?? defaultNetwork}
 								profile={profile}
+								showBalance={showBalance}
 							/>
 						)}
 					/>

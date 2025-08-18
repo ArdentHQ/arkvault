@@ -154,6 +154,7 @@ export const FormStep = ({
 							wallet={senderWallet}
 							defaultNetwork={activeNetwork}
 							disableAction={(wallet) => !WalletCapabilities(wallet).canSendTransfer()}
+							showBalance
 						/>
 					</div>
 				</FormField>
