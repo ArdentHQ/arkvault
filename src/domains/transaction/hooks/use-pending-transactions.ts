@@ -98,7 +98,7 @@ export const usePendingTransactions = () => {
 				const isSent = walletAddresses.includes(dto.from());
 
 				return {
-					blockHash: () => { },
+					blockHash: () => {},
 					confirmations: () => BigNumber.make(0),
 					convertedAmount: () => 0,
 					convertedTotal: () => 0,
