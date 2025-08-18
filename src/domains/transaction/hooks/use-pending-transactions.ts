@@ -6,7 +6,10 @@ import type { PendingPersistedJSON, UnconfirmedTransaction } from "@/app/lib/mai
 import { PendingTransactionData as PendingDTO } from "@/app/lib/mainsail/pending-transaction.dto";
 import { Contracts } from "@/app/lib/profiles";
 
-type PendingTransactionFromUnconfirmed = Omit<UnconfirmedTransaction, "network" | "gas" | "r" | "v" | "s" | "senderPublicKey"> & {
+type PendingTransactionFromUnconfirmed = Omit<
+	UnconfirmedTransaction,
+	"network" | "gas" | "r" | "v" | "s" | "senderPublicKey"
+> & {
 	gasLimit?: string;
 	networkId: string;
 	walletAddress: string;
@@ -98,7 +101,7 @@ export const usePendingTransactions = () => {
 				const isSent = walletAddresses.includes(dto.from());
 
 				return {
-					blockHash: () => { },
+					blockHash: () => {},
 					confirmations: () => BigNumber.make(0),
 					convertedAmount: () => 0,
 					convertedTotal: () => 0,
