@@ -46,14 +46,14 @@ export class ConfirmedTransactionData extends TransactionBaseData<ConfirmedTrans
 	}
 
 	public normalizeData(): void {
-		if (!this.data.senderPublicKey) return;
+		if (!this.data.senderPublicKey) {return;}
 		const { address } = this.#addressService.fromPublicKey(this.data.senderPublicKey);
 
 		(this.data as unknown as { sender?: string }).sender = address;
 	}
 
 	public recipients(): Contracts.MultiPaymentRecipient[] {
-		if (!this.isMultiPayment()) return [];
+		if (!this.isMultiPayment()) {return [];}
 		return this.payments().map((payment) => ({
 			address: payment.recipientId,
 			amount: payment.amount,
@@ -77,7 +77,7 @@ export class ConfirmedTransactionData extends TransactionBaseData<ConfirmedTrans
 
 	public timestamp(): DateTime | undefined {
 		const ts = this.data.timestamp;
-		if (ts === undefined || ts === null) return undefined;
+		if (ts === undefined || ts === null) {return undefined;}
 		return DateTime.fromUnix(Number(ts) / 1000);
 	}
 	protected serializeTimestamp(): string | undefined {
