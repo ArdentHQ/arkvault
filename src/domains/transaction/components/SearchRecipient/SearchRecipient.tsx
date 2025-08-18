@@ -1,124 +1,12 @@
-import React, { FC, useCallback, useMemo } from "react";
+import React, { FC, useCallback } from "react";
 import { useTranslation } from "react-i18next";
-import { Column } from "react-table";
-
-import {
-	RecipientProperties,
-	SearchRecipientListItemProperties,
-	SearchRecipientListItemResponsiveProperties,
-	SearchRecipientProperties,
-} from "./SearchRecipient.contracts";
-import { Address } from "@/app/components/Address";
-import { Button } from "@/app/components/Button";
+import { RecipientProperties, SearchRecipientProperties } from "./SearchRecipient.contracts";
 import { EmptyResults } from "@/app/components/EmptyResults";
-import { HeaderSearchBar } from "@/app/components/Header/HeaderSearchBar";
 import { Modal } from "@/app/components/Modal";
-import { Table, TableCell, TableRow } from "@/app/components/Table";
 import { useSearchWallet } from "@/app/hooks/use-search-wallet";
 import { useBreakpoint } from "@/app/hooks";
 import { HeaderSearchInput } from "@/app/components/Header/HeaderSearchInput";
-import { RecipientItemMobile } from "@/app/components/WalletListItem/WalletListItem.blocks";
-import { TruncateMiddleDynamic } from "@/app/components/TruncateMiddleDynamic";
-import { TableWrapper } from "@/app/components/Table/TableWrapper";
-
-const SearchRecipientListItem: FC<SearchRecipientListItemProperties> = ({
-	index,
-	recipient,
-	onAction,
-	selectedAddress,
-}) => {
-	const { t } = useTranslation();
-	const isSelected = useMemo(() => selectedAddress === recipient.address, [selectedAddress, recipient]);
-
-	const renderButton = () => {
-		if (isSelected) {
-			return (
-				<Button
-					data-testid={`RecipientListItem__selected-button-${index}`}
-					size="icon"
-					variant="transparent"
-					onClick={() => onAction(recipient.address)}
-					className="text-theme-primary-reverse-600 dim:text-theme-dim-navy-700 -mr-3 py-0 text-sm leading-[17px] font-semibold"
-				>
-					{t("COMMON.SELECTED")}
-				</Button>
-			);
-		}
-
-		return (
-			<Button
-				data-testid={`RecipientListItem__select-button-${index}`}
-				size="icon"
-				variant="transparent"
-				onClick={() => onAction(recipient.address)}
-				className="text-theme-primary-600 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 -mr-3 text-sm leading-[17px] font-semibold"
-			>
-				{t("COMMON.SELECT")}
-			</Button>
-		);
-	};
-
-	return (
-		<TableRow key={recipient.id} border className="relative">
-			<TableCell variant="start" innerClassName="space-x-4 my-0.5" isSelected={isSelected}>
-				<Address
-					walletName={recipient.alias}
-					address={recipient.address}
-					truncateOnTable
-					walletNameClass="text-sm text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-200 leading-[17px]"
-					addressClass="text-sm text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 leading-[17px] flex items-center h-5"
-				/>
-			</TableCell>
-
-			<TableCell isSelected={isSelected} innerClassName="my-0.5">
-				<span
-					data-testid="RecipientListItem__type"
-					className="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-sm leading-[17px] font-semibold whitespace-nowrap"
-				>
-					{recipient.type === "wallet" ? t("COMMON.MY_WALLET") : t("COMMON.CONTACT")}
-				</span>
-			</TableCell>
-
-			<TableCell variant="end" innerClassName="justify-end my-0.5" isSelected={isSelected}>
-				{renderButton()}
-			</TableCell>
-		</TableRow>
-	);
-};
-
-const SearchRecipientListItemResponsive: FC<SearchRecipientListItemResponsiveProperties> = ({
-	index,
-	recipient,
-	onAction,
-	selectedAddress,
-}) => {
-	const { t } = useTranslation();
-	const { isSmAndAbove } = useBreakpoint();
-	const handleClick = useCallback(() => onAction(recipient.address), [recipient]);
-
-	const isSelected = useMemo(() => selectedAddress === recipient.address, [selectedAddress, recipient]);
-
-	return (
-		<tr data-testid={`SearchRecipientListItemResponsive--item-${index}`}>
-			<td className="pt-3">
-				<RecipientItemMobile
-					address={
-						<TruncateMiddleDynamic
-							data-testid="Address__address_condensed"
-							value={recipient.address}
-							availableWidth={isSmAndAbove ? undefined : 100}
-							className="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 text-xs font-semibold"
-						/>
-					}
-					type={recipient.type === "wallet" ? t("COMMON.MY_WALLET") : t("COMMON.CONTACT")}
-					name={recipient.alias || ""}
-					selected={isSelected}
-					onClick={handleClick}
-				/>
-			</td>
-		</tr>
-	);
-};
+import { RecipientItem, RecipientItemMobile } from "@/app/components/WalletListItem/WalletListItem.blocks";
 
 export const SearchRecipient: FC<SearchRecipientProperties> = ({
 	title,
@@ -130,78 +18,45 @@ export const SearchRecipient: FC<SearchRecipientProperties> = ({
 	selectedAddress,
 	profile,
 }) => {
-	const {
-		setSearchKeyword,
-		filteredList: filteredRecipients,
-		isEmptyResults,
-	} = useSearchWallet({
+	const { setSearchKeyword, filteredList, isEmptyResults } = useSearchWallet({
 		profile,
 		wallets: recipients,
 	});
 
+	const filteredRecipients = filteredList as RecipientProperties[];
+
 	const { t } = useTranslation();
 
-	const { isXs, isSm, isLgAndAbove } = useBreakpoint();
+	const { isXs } = useBreakpoint();
 
-	const useResponsive = useMemo<boolean>(() => isXs || isSm, [isXs, isSm]);
-
-	const columns = useMemo<Column<RecipientProperties>[]>(
-		() => [
-			{
-				Header: t("COMMON.ADDRESS"),
-				accessor: "alias",
-			},
-			{
-				Header: t("COMMON.TYPE"),
-				accessor: "type",
-				headerClassName: "no-border",
-				minimumWidth: true,
-			},
-			{
-				Header: (
-					<HeaderSearchBar
-						placeholder={t("TRANSACTION.MODAL_SEARCH_RECIPIENT.SEARCH_PLACEHOLDER")}
-						offsetClassName="top-1/3 -translate-y-8 -translate-x-8"
-						onSearch={setSearchKeyword}
-						onReset={() => setSearchKeyword("")}
-						debounceTimeout={100}
-						noToggleBorder
-						alwaysDisplayClearButton
-					/>
-				),
-				accessor: "id",
-				className: "justify-end",
-				disableSortBy: true,
-				headerClassName: "no-border",
-				minimumWidth: true,
-			},
-		],
-		[t, setSearchKeyword],
-	);
-
-	const renderTableRow = useCallback(
+	const renderItems = useCallback(
 		(recipient: RecipientProperties, index: number) => {
-			if (useResponsive) {
+			if (isXs) {
 				return (
-					<SearchRecipientListItemResponsive
-						index={index}
-						selectedAddress={selectedAddress}
-						recipient={recipient}
-						onAction={onAction}
+					<RecipientItemMobile
+						key={index}
+						address={recipient.address}
+						type={recipient.type === "wallet" ? t("COMMON.MY_ADDRESS") : t("COMMON.CONTACT")}
+						name={recipient.alias!}
+						selected={recipient.address === selectedAddress}
+						onClick={() => onAction(recipient.address)}
 					/>
 				);
 			}
 
 			return (
-				<SearchRecipientListItem
+				<RecipientItem
 					index={index}
-					selectedAddress={selectedAddress}
-					recipient={recipient}
-					onAction={onAction}
+					key={index}
+					address={recipient.address}
+					type={recipient.type === "wallet" ? t("COMMON.MY_ADDRESS") : t("COMMON.CONTACT")}
+					name={recipient.alias!}
+					selected={recipient.address === selectedAddress}
+					onClick={() => onAction(recipient.address)}
 				/>
 			);
 		},
-		[selectedAddress, onAction, useResponsive],
+		[selectedAddress, onAction, isXs],
 	);
 
 	return (
@@ -209,37 +64,29 @@ export const SearchRecipient: FC<SearchRecipientProperties> = ({
 			isOpen={isOpen}
 			title={title || t("TRANSACTION.MODAL_SEARCH_RECIPIENT.TITLE")}
 			description={description || t("TRANSACTION.MODAL_SEARCH_RECIPIENT.DESCRIPTION")}
-			size={isLgAndAbove ? "4xl" : "2xl"}
+			size="3xl"
 			onClose={onClose}
 			noButtons
 		>
 			<div className="mt-4">
-				{useResponsive && (
-					<HeaderSearchInput
-						placeholder={t("TRANSACTION.MODAL_SEARCH_RECIPIENT.SEARCH_PLACEHOLDER")}
-						onSearch={setSearchKeyword}
-						onReset={() => setSearchKeyword("")}
-						debounceTimeout={100}
+				<HeaderSearchInput
+					placeholder={t("TRANSACTION.MODAL_SEARCH_RECIPIENT.SEARCH_PLACEHOLDER")}
+					onSearch={setSearchKeyword}
+					onReset={() => setSearchKeyword("")}
+					debounceTimeout={100}
+				/>
+
+				<div className="mt-3 space-y-1">
+					{filteredRecipients.map((recipient, index) => renderItems(recipient, index))}
+				</div>
+
+				{isEmptyResults && (
+					<EmptyResults
+						className="mt-10 rounded-xl"
+						title={t("COMMON.EMPTY_RESULTS.TITLE")}
+						subtitle={t("COMMON.EMPTY_RESULTS.SUBTITLE")}
 					/>
 				)}
-
-				<TableWrapper>
-					<Table
-						columns={columns}
-						data={filteredRecipients as RecipientProperties[]}
-						hideHeader={useResponsive}
-					>
-						{renderTableRow}
-					</Table>
-
-					{isEmptyResults && (
-						<EmptyResults
-							className="mt-10 rounded-xl"
-							title={t("COMMON.EMPTY_RESULTS.TITLE")}
-							subtitle={t("COMMON.EMPTY_RESULTS.SUBTITLE")}
-						/>
-					)}
-				</TableWrapper>
 			</div>
 		</Modal>
 	);

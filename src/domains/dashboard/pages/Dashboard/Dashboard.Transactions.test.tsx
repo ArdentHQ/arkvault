@@ -77,7 +77,7 @@ describe("Dashboard", () => {
 		mockTransactionsAggregate.mockRestore();
 	});
 
-	it("should open modal when click on a transaction", async () => {
+	it("should open side panel when click on a transaction", async () => {
 		const all = await profile.transactionAggregate().all({ limit: 10 });
 		const transactions = all.items();
 
@@ -98,11 +98,13 @@ describe("Dashboard", () => {
 
 		await userEvent.click(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")[0]);
 
-		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
+		await expect(screen.findByTestId("SidePanel__content")).resolves.toBeVisible();
 
-		await userEvent.click(screen.getByTestId("Modal__close-button"));
+		await userEvent.click(screen.getByTestId("SidePanel__close-button"));
 
-		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
+		await waitFor(() => {
+			expect(screen.queryByTestId("SidePanel__content")).not.toBeInTheDocument();
+		});
 
 		mockTransactionsAggregate.mockRestore();
 	});
