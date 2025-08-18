@@ -236,17 +236,6 @@ exports[`SearchWallet > should render 1`] = `
                         >
                           95.27653252325068 ARK
                         </span>
-                        <div
-                          class="leading-[17px]"
-                          data-testid="ReceiverItem--exchangeAmount"
-                        >
-                          <span
-                            class="whitespace-nowrap text-sm leading-[17px]"
-                            data-testid="Amount"
-                          >
-                            0 BTC
-                          </span>
-                        </div>
                       </div>
                     </div>
                     <div
@@ -306,17 +295,6 @@ exports[`SearchWallet > should render 1`] = `
                         >
                           0.01989216404723 ARK
                         </span>
-                        <div
-                          class="leading-[17px]"
-                          data-testid="ReceiverItem--exchangeAmount"
-                        >
-                          <span
-                            class="whitespace-nowrap text-sm leading-[17px]"
-                            data-testid="Amount"
-                          >
-                            0 BTC
-                          </span>
-                        </div>
                       </div>
                     </div>
                     <div
@@ -583,17 +561,6 @@ exports[`SearchWallet > should render compact on md screen 1`] = `
                         >
                           95.27653252325068 ARK
                         </span>
-                        <div
-                          class="leading-[17px]"
-                          data-testid="ReceiverItem--exchangeAmount"
-                        >
-                          <span
-                            class="whitespace-nowrap text-sm leading-[17px]"
-                            data-testid="Amount"
-                          >
-                            0 BTC
-                          </span>
-                        </div>
                       </div>
                     </div>
                     <div
@@ -653,17 +620,6 @@ exports[`SearchWallet > should render compact on md screen 1`] = `
                         >
                           0.01989216404723 ARK
                         </span>
-                        <div
-                          class="leading-[17px]"
-                          data-testid="ReceiverItem--exchangeAmount"
-                        >
-                          <span
-                            class="whitespace-nowrap text-sm leading-[17px]"
-                            data-testid="Amount"
-                          >
-                            0 BTC
-                          </span>
-                        </div>
                       </div>
                     </div>
                     <div
@@ -930,17 +886,6 @@ exports[`SearchWallet > should render compact with selected address 1`] = `
                         >
                           95.27653252325068 ARK
                         </span>
-                        <div
-                          class="leading-[17px]"
-                          data-testid="ReceiverItem--exchangeAmount"
-                        >
-                          <span
-                            class="whitespace-nowrap text-sm leading-[17px]"
-                            data-testid="Amount"
-                          >
-                            0 BTC
-                          </span>
-                        </div>
                       </div>
                     </div>
                     <div
@@ -1000,17 +945,6 @@ exports[`SearchWallet > should render compact with selected address 1`] = `
                         >
                           0.01989216404723 ARK
                         </span>
-                        <div
-                          class="leading-[17px]"
-                          data-testid="ReceiverItem--exchangeAmount"
-                        >
-                          <span
-                            class="whitespace-nowrap text-sm leading-[17px]"
-                            data-testid="Amount"
-                          >
-                            0 BTC
-                          </span>
-                        </div>
                       </div>
                     </div>
                     <div
@@ -2217,17 +2151,6 @@ exports[`SearchWallet > should render with incompatible ledger wallet 1`] = `
                         >
                           0 ARK
                         </span>
-                        <div
-                          class="leading-[17px]"
-                          data-testid="ReceiverItem--exchangeAmount"
-                        >
-                          <span
-                            class="whitespace-nowrap text-sm leading-[17px]"
-                            data-testid="Amount"
-                          >
-                            0 BTC
-                          </span>
-                        </div>
                       </div>
                     </div>
                     <div
@@ -2495,17 +2418,6 @@ exports[`SearchWallet > should render with selected address 1`] = `
                         >
                           95.27653252325068 ARK
                         </span>
-                        <div
-                          class="leading-[17px]"
-                          data-testid="ReceiverItem--exchangeAmount"
-                        >
-                          <span
-                            class="whitespace-nowrap text-sm leading-[17px]"
-                            data-testid="Amount"
-                          >
-                            0 BTC
-                          </span>
-                        </div>
                       </div>
                     </div>
                     <div
@@ -2565,17 +2477,6 @@ exports[`SearchWallet > should render with selected address 1`] = `
                         >
                           0.01989216404723 ARK
                         </span>
-                        <div
-                          class="leading-[17px]"
-                          data-testid="ReceiverItem--exchangeAmount"
-                        >
-                          <span
-                            class="whitespace-nowrap text-sm leading-[17px]"
-                            data-testid="Amount"
-                          >
-                            0 BTC
-                          </span>
-                        </div>
                       </div>
                     </div>
                     <div
@@ -2842,17 +2743,6 @@ exports[`SearchWallet > should render with the default exchange currency enabled
                         >
                           95.27653252325068 ARK
                         </span>
-                        <div
-                          class="leading-[17px]"
-                          data-testid="ReceiverItem--exchangeAmount"
-                        >
-                          <span
-                            class="whitespace-nowrap text-sm leading-[17px]"
-                            data-testid="Amount"
-                          >
-                            0 BTC
-                          </span>
-                        </div>
                       </div>
                     </div>
                     <div
@@ -2912,17 +2802,6 @@ exports[`SearchWallet > should render with the default exchange currency enabled
                         >
                           0.01989216404723 ARK
                         </span>
-                        <div
-                          class="leading-[17px]"
-                          data-testid="ReceiverItem--exchangeAmount"
-                        >
-                          <span
-                            class="whitespace-nowrap text-sm leading-[17px]"
-                            data-testid="Amount"
-                          >
-                            0 BTC
-                          </span>
-                        </div>
                       </div>
                     </div>
                     <div
