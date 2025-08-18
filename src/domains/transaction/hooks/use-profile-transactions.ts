@@ -437,21 +437,13 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 		if (!pendingTransactionService) { return; }
 
 		try {
-			const addresses = wallets.map((w) => w.address());
+			const addrs = wallets.map((w) => w.address());
 			const res = await pendingTransactionService.listUnconfirmed({
-				from: addresses,
-				to: addresses,
+				from: addrs,
+				to: addrs,
 			});
 
-			const addrSet = new Set(addresses.map((a) => a.toLowerCase()));
-
-			const filtered = (res?.results ?? []).filter((tx) => {
-				const from = tx.from?.toLowerCase?.();
-				const to = tx.to?.toLowerCase?.();
-				return (from && addrSet.has(from)) || (to && addrSet.has(to));
-			});
-
-			for (const tx of filtered) {
+			for (const tx of res?.results ?? []) {
 				const matched =
 					wallets.find((w) => w.address().toLowerCase() === tx.from?.toLowerCase?.()) ||
 					wallets.find((w) => w.address().toLowerCase() === tx.to?.toLowerCase?.());
