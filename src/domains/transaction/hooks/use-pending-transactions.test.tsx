@@ -32,7 +32,7 @@ vi.mock("usehooks-ts", () => ({
   useLocalStorage: vi.fn(() => [mockPendingJson, mockSetPendingJson]),
 }));
 
-describe("usePendingTransactions (current API)", () => {
+describe("usePendingTransactions", () => {
   beforeEach(() => {
     vi.clearAllMocks();
     mockPendingJson.length = 0;
