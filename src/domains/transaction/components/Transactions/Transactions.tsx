@@ -9,7 +9,7 @@ import { FilterTransactions } from "@/domains/transaction/components/FilterTrans
 import { Icon } from "@/app/components/Icon";
 import { TabId } from "@/app/components/Tabs/useTab";
 import { TableWrapper } from "@/app/components/Table/TableWrapper";
-import { TransactionDetailModal } from "@/domains/transaction/components/TransactionDetailModal";
+import { TransactionDetailSidePanel } from "@/domains/transaction/components/TransactionDetailSidePanel";
 import { TransactionTable } from "@/domains/transaction/components/TransactionTable";
 import cn from "classnames";
 import { useProfileTransactions } from "@/domains/transaction/hooks/use-profile-transactions";
@@ -291,7 +291,7 @@ export const Transactions = memo(function Transactions({
 				)}
 
 				{transactionModalItem && (
-					<TransactionDetailModal
+					<TransactionDetailSidePanel
 						isOpen={!!transactionModalItem}
 						transactionItem={transactionModalItem}
 						profile={profile}

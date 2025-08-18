@@ -231,6 +231,13 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                           </svg>
                         </div>
                       </div>
+                      <div
+                        class="bg-theme-background group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800 absolute top-0 right-0 flex items-center justify-center rounded-full p-0.5 transition-all duration-100 ease-linear"
+                      >
+                        <div
+                          class="bg-theme-danger-500 h-1.5 w-1.5 rounded-full"
+                        />
+                      </div>
                     </div>
                   </button>
                 </div>
@@ -1545,6 +1552,13 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
                           </svg>
                         </div>
                       </div>
+                      <div
+                        class="bg-theme-background group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800 absolute top-0 right-0 flex items-center justify-center rounded-full p-0.5 transition-all duration-100 ease-linear"
+                      >
+                        <div
+                          class="bg-theme-danger-500 h-1.5 w-1.5 rounded-full"
+                        />
+                      </div>
                     </div>
                   </button>
                 </div>
@@ -2608,6 +2622,13 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                             </g>
                           </svg>
                         </div>
+                      </div>
+                      <div
+                        class="bg-theme-background group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800 absolute top-0 right-0 flex items-center justify-center rounded-full p-0.5 transition-all duration-100 ease-linear"
+                      >
+                        <div
+                          class="bg-theme-danger-500 h-1.5 w-1.5 rounded-full"
+                        />
                       </div>
                     </div>
                   </button>
@@ -3837,6 +3858,13 @@ exports[`SendValidatorResignation > Validator Resignation > should render 3rd st
                           </svg>
                         </div>
                       </div>
+                      <div
+                        class="bg-theme-background group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800 absolute top-0 right-0 flex items-center justify-center rounded-full p-0.5 transition-all duration-100 ease-linear"
+                      >
+                        <div
+                          class="bg-theme-danger-500 h-1.5 w-1.5 rounded-full"
+                        />
+                      </div>
                     </div>
                   </button>
                 </div>
@@ -4382,18 +4410,11 @@ exports[`SendValidatorResignation > Validator Resignation > should render 3rd st
                         class="relative flex h-full flex-1"
                       >
                         <input
-                          aria-hidden="true"
                           autocomplete="off"
-                          class="pointer-events-none absolute inset-0 border-0 bg-transparent p-0! font-mono ring-0 outline-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 text-sm! sm:text-base!"
-                          tabindex="-1"
-                          type="password"
-                        />
-                        <input
-                          autocomplete="off"
-                          class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! caret-theme-text no-selection-style font-mono text-transparent"
+                          class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
                           data-testid="AuthenticationStep__mnemonic"
                           name="mnemonic"
-                          type="text"
+                          type="password"
                         />
                       </div>
                       <div
@@ -4740,6 +4761,13 @@ exports[`SendValidatorResignation > Validator Resignation > should show error st
                             </g>
                           </svg>
                         </div>
+                      </div>
+                      <div
+                        class="bg-theme-background group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800 absolute top-0 right-0 flex items-center justify-center rounded-full p-0.5 transition-all duration-100 ease-linear"
+                      >
+                        <div
+                          class="bg-theme-danger-500 h-1.5 w-1.5 rounded-full"
+                        />
                       </div>
                     </div>
                   </button>

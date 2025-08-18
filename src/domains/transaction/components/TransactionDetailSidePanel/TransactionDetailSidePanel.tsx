@@ -1,8 +1,7 @@
-import React from "react";
-import { TransactionDetailModalProperties } from "./TransactionDetailModal.contracts";
+import React, { useEffect, useState } from "react";
+import { TransactionDetailModalProperties } from "./TransactionDetailSidePanel.contracts";
 import { useTranslation } from "react-i18next";
 
-import { Modal } from "@/app/components/Modal";
 import {
 	TransactionAddresses,
 	TransactionType,
@@ -20,6 +19,7 @@ import cn from "classnames";
 import { Contracts } from "@/app/lib/profiles";
 import { DTO } from "@/app/lib/mainsail";
 import { isContractDeployment } from "@/domains/transaction/utils";
+import { SidePanel } from "@/app/components/SidePanel/SidePanel";
 
 export const TransactionDetailContent = ({
 	transactionItem: transaction,
@@ -58,17 +58,16 @@ export const TransactionDetailContent = ({
 
 	return (
 		<DetailsCondensed>
-			<div className="mt-4">
-				<TransactionId transaction={transaction} isConfirmed={isConfirmed} />
-			</div>
+			<TransactionId transaction={transaction} isConfirmed={isConfirmed} />
 
 			<div className={cn("mt-6 space-y-3 sm:space-y-4", containerClassname)}>
-				<DetailPadded>
+				<DetailPadded className="-mx-3 flex-1 sm:ml-0">
 					<TransactionAddresses
 						explorerLink={transaction.explorerLink()}
 						profile={profile}
 						senderAddress={transaction.from()}
 						network={transaction.wallet().network()}
+						isMultiPayment={transaction.isMultiPayment()}
 						recipients={recipients}
 						labelClassName={labelClassName}
 						interactedWith={
@@ -79,12 +78,12 @@ export const TransactionDetailContent = ({
 					/>
 				</DetailPadded>
 
-				<DetailPadded>
+				<DetailPadded className="-mx-3 flex-1 sm:ml-0">
 					{!isVoteTransaction && <TransactionType transaction={transaction} />}
 					{isVoteTransaction && <VoteTransactionType votes={votes} unvotes={unvotes} showValidator />}
 				</DetailPadded>
 
-				<DetailPadded>
+				<DetailPadded className="-mx-3 flex-1 sm:ml-0">
 					<TransactionSummary
 						labelClassName={labelClassName}
 						transaction={transaction}
@@ -93,7 +92,7 @@ export const TransactionDetailContent = ({
 					/>
 				</DetailPadded>
 
-				<DetailPadded>
+				<DetailPadded className="-mx-3 flex-1 sm:ml-0">
 					<TransactionDetails
 						isConfirmed={isConfirmed}
 						transaction={transaction}
@@ -101,9 +100,9 @@ export const TransactionDetailContent = ({
 					/>
 				</DetailPadded>
 
-				<DetailPadded>
+				<DetailPadded className="-mx-3 flex-1 sm:ml-0">
 					<DetailLabel>{t("TRANSACTION.CONFIRMATIONS")}</DetailLabel>
-					<div className="mt-2">
+					<div className="mt-2 px-3 sm:px-0">
 						<TransactionConfirmations
 							isConfirmed={isConfirmed ?? transaction.isConfirmed()}
 							confirmations={confirmations ?? transaction.confirmations().toNumber()}
@@ -116,16 +115,31 @@ export const TransactionDetailContent = ({
 	);
 };
 
-export const TransactionDetailModal = ({
-	isOpen,
+export const TransactionDetailSidePanel = ({
+	isOpen: isSidePanelOpen,
 	transactionItem,
 	profile,
 	onClose,
 }: TransactionDetailModalProperties) => {
 	const { t } = useTranslation();
+
+	const [isOpen, setIsOpen] = useState(isSidePanelOpen);
+
+	useEffect(() => {
+		let timeoutId: NodeJS.Timeout | undefined;
+
+		if (!isOpen) {
+			timeoutId = setTimeout(() => {
+				onClose?.();
+			}, 1000);
+		}
+
+		return () => clearTimeout(timeoutId);
+	}, [isOpen]);
+
 	return (
-		<Modal title={t("TRANSACTION.MODAL_TRANSACTION_DETAILS.TITLE")} isOpen={isOpen} onClose={onClose} noButtons>
+		<SidePanel title={t("TRANSACTION.MODAL_TRANSACTION_DETAILS.TITLE")} open={isOpen} onOpenChange={setIsOpen}>
 			<TransactionDetailContent transactionItem={transactionItem} profile={profile} />
-		</Modal>
+		</SidePanel>
 	);
 };

@@ -39,7 +39,7 @@ describe("Notifications", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should open and close transaction details modal", async () => {
+	it("should open and close transaction details side panel", async () => {
 		await profile.sync();
 
 		render(<NotificationsDropdown profile={profile} />, {
@@ -52,10 +52,10 @@ describe("Notifications", () => {
 
 		await userEvent.click(screen.getAllByTestId("TableRow")[0]);
 
-		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
+		await expect(screen.findByTestId("SidePanel__content")).resolves.toBeVisible();
 
-		await userEvent.click(screen.getByTestId("Modal__close-button"));
+		await userEvent.click(screen.getByTestId("SidePanel__close-button"));
 
-		await waitFor(() => expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument());
+		await waitFor(() => expect(screen.queryByTestId("SidePanel__content")).not.toBeInTheDocument());
 	});
 });

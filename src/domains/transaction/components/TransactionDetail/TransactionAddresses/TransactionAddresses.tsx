@@ -17,6 +17,7 @@ interface Properties {
 	network: Networks.Network;
 	explorerLink?: string;
 	interactedWith?: string;
+	isMultiPayment?: boolean;
 }
 
 export const TransactionAddresses = ({
@@ -27,6 +28,7 @@ export const TransactionAddresses = ({
 	labelClassName,
 	explorerLink,
 	interactedWith,
+	isMultiPayment = false,
 }: Properties): ReactElement => {
 	const { t } = useTranslation();
 	const { getWalletAlias } = useWalletAlias();
@@ -72,6 +74,7 @@ export const TransactionAddresses = ({
 					labelClassName={labelClassName}
 					recipients={recipients}
 					explorerLink={explorerLink}
+					isMultiPayment={isMultiPayment}
 				/>
 			)}
 
@@ -80,6 +83,7 @@ export const TransactionAddresses = ({
 					recipients={recipients}
 					ticker={network.ticker()}
 					labelClassName={labelClassName}
+					isMultiPayment={isMultiPayment}
 				/>
 			)}
 		</DetailWrapper>

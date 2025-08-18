@@ -366,11 +366,11 @@ describe("useProfileTransactions", () => {
 		);
 
 		act(() => {
-			result.current.setSortBy({ column: "Fiat Value", desc: true });
+			result.current.setSortBy({ column: "Fiat Value", desc: false });
 		});
 
 		await waitFor(() =>
-			expect(transactionAggregateSpy).toHaveBeenCalledWith(expect.objectContaining({ orderBy: "amount:desc" })),
+			expect(transactionAggregateSpy).toHaveBeenCalledWith(expect.objectContaining({ orderBy: "amount:asc" })),
 		);
 
 		transactionAggregateSpy.mockRestore();

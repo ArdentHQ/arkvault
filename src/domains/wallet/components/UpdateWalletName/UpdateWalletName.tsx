@@ -54,6 +54,7 @@ export const UpdateWalletName = ({ onAfterSave, onCancel, profile, wallet }: Upd
 			title={t("WALLETS.MODAL_NAME_WALLET.TITLE")}
 			description={t("WALLETS.MODAL_NAME_WALLET.DESCRIPTION")}
 			size="2xl"
+			containerClassName="mt-[20%] md:mt-0"
 			onClose={onCancel}
 		>
 			<Form context={form} onSubmit={onSubmit} className="mt-4 space-y-6">
