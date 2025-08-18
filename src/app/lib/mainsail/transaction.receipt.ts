@@ -1,6 +1,6 @@
 import { BigNumber } from "@/app/lib/helpers";
 
-interface ReceiptData {
+export interface ReceiptData {
 	gasRefunded: number;
 	gasUsed: number;
 	status: number;

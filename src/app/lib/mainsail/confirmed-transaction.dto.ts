@@ -6,13 +6,13 @@ import { AbiType, decodeFunctionData } from "./helpers/decode-function-data";
 import { AddressService } from "./address.service";
 import { UnitConverter } from "@arkecosystem/typescript-crypto";
 import { TransactionBaseData, type TransactionBaseDTO, type KeyValuePair } from "./transaction-base.dto";
-import { TransactionReceipt } from "./transaction.receipt";
+import { ReceiptData, TransactionReceipt } from "./transaction.receipt";
 
 export interface ConfirmedTransactionDTO extends TransactionBaseDTO {
 	gas: number;
 	confirmations: string | number;
 	timestamp?: string | number;
-	receipt?: { status?: number };
+	receipt: ReceiptData;
 	blockHash?: string;
 	asset?: {
 		signature?: { publicKey: string };
@@ -20,8 +20,6 @@ export interface ConfirmedTransactionDTO extends TransactionBaseDTO {
 	};
 	senderPublicKey?: string;
 }
-
-export type KeyValuePair = Record<string, any>;
 
 export class ConfirmedTransactionData extends TransactionBaseData<ConfirmedTransactionDTO> {
 	readonly #addressService = new AddressService();
@@ -75,9 +73,7 @@ export class ConfirmedTransactionData extends TransactionBaseData<ConfirmedTrans
 	public isSuccess(): boolean {
 		return this.data.receipt?.status === 1;
 	}
-	public isConfirmed(): boolean {
-		return this.confirmations().isGreaterThanOrEqualTo(1);
-	}
+
 	public confirmations(): BigNumber {
 		return BigNumber.make(this.data.confirmations);
 	}
@@ -167,6 +163,7 @@ export class ConfirmedTransactionData extends TransactionBaseData<ConfirmedTrans
 
 	public hasFailed(): boolean {
 		return !this.hasPassed();
+	}
 
 	public receipt(): TransactionReceipt {
 		return new TransactionReceipt(this.data.receipt, this.data.gas);
