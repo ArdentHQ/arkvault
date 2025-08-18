@@ -49,10 +49,7 @@ const wrapPending = (tx: any, walletAddresses: string[], wallets: any[]) => {
 	const walletByAddress = (addr: string) => wallets.find((w: any) => w.address() === addr);
 	const walletByNetworkId = (id: string) => wallets.find((w: any) => w.networkId() === id);
 
-	const unix =
-    typeof tx.timestamp === "number"
-      ? tx.timestamp
-      : tx.timestamp?.toUNIX?.() ?? Date.now();
+	const unix = typeof tx.timestamp === "number" ? tx.timestamp : (tx.timestamp?.toUNIX?.() ?? Date.now());
 
 	const recipients = Array.isArray(tx.recipients) ? tx.recipients : [];
 
