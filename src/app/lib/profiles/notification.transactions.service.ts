@@ -110,8 +110,8 @@ export class ProfileTransactionNotificationService implements IProfileTransactio
 				.transactionAggregate()
 				.received({
 					cursor: 1,
-					identifiers: this.#getIdentifiers(),
 					limit: this.#defaultLimit,
+					to: this.#getToAddresses().join(','),
 					...queryInput,
 				});
 
@@ -194,18 +194,15 @@ export class ProfileTransactionNotificationService implements IProfileTransactio
 		return result;
 	}
 
-	#getIdentifiers(): Services.WalletIdentifier[] {
-		const usesTestNetworks = this.#profile.settings().get(ProfileSetting.UseTestNetworks);
+	#getToAddresses(): string[] {
+		const activeNetwork = this.#profile.activeNetwork();
 
 		const availableWallets = this.#profile
 			.wallets()
 			.values()
-			.filter((wallet) => wallet.network().isLive() || usesTestNetworks);
+			.filter((wallet) => wallet.network().id() === activeNetwork.id());
 
-		return availableWallets.map((wallet) => ({
-			type: "address",
-			value: wallet.address(),
-		}));
+		return availableWallets.map((wallet) => wallet.address());
 	}
 
 	#storeTransactions(transactions: ExtendedConfirmedTransactionData[]): void {

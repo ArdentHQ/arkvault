@@ -42,18 +42,13 @@ export const useProfileJobs = (profile?: Contracts.IProfile): Record<string, any
 					await profile.sync({ networkId: activeNetwork.id(), ttl: 15_000 });
 					await env.wallets().syncByProfile(profile, activeNetwork ? [activeNetwork.id()] : undefined);
 
-					const walletIdentifiers: Services.WalletIdentifier[] = profile
+					const toAddresses: string[] = profile
 						.wallets()
 						.values()
-						.filter((wallet) =>
-							profile.availableNetworks().some((network) => wallet.networkId() === network.id()),
-						)
-						.map((wallet) => ({
-							networkId: wallet.networkId(),
-							type: "address",
-							value: wallet.address(),
-						}));
-					await profile.notifications().transactions().sync({ identifiers: walletIdentifiers });
+						.filter((wallet) => wallet.network().id() === activeNetwork.id())
+						.map((wallet) => wallet.address());
+
+					await profile.notifications().transactions().sync({ to: toAddresses.join(',') });
 				} finally {
 					setConfiguration(profileId, { profileIsSyncingWallets: false });
 				}
