@@ -19,6 +19,7 @@ type SelectAddressDropdownProperties = {
 	isInvalid?: boolean;
 	placeholder?: string;
 	onChange?: (wallet?: Contracts.IReadWriteWallet) => void;
+	disableAction?: (wallet: Contracts.IReadWriteWallet) => boolean;
 } & Omit<React.InputHTMLAttributes<any>, "onChange">;
 
 export const OptionLabel = ({
@@ -87,6 +88,7 @@ export const SelectAddressDropdown = React.forwardRef<HTMLInputElement, SelectAd
 			onChange,
 			wallets,
 			defaultNetwork,
+			disableAction = () => false,
 		}: SelectAddressDropdownProperties,
 		reference,
 	) => {
@@ -102,6 +104,7 @@ export const SelectAddressDropdown = React.forwardRef<HTMLInputElement, SelectAd
 
 		const recipientOptions =
 			wallets?.map((wallet: Contracts.IReadWriteWallet) => ({
+				isDisabled: disableAction(wallet),
 				label: wallet.address(),
 				value: wallet.address(),
 			})) || [];

@@ -14,6 +14,8 @@ import { ThemeIcon, Icon } from "@/app/components/Icon";
 import { Button } from "@/app/components/Button";
 import { twMerge } from "tailwind-merge";
 import { WalletCapabilities } from "@/domains/portfolio/lib/wallet.capabilities";
+import { SelectAddressDropdown } from "@/domains/profile/components/SelectAddressDropdown";
+import { useActiveNetwork } from "@/app/hooks/use-active-network";
 
 const QRCodeButton = ({ ...props }: React.ButtonHTMLAttributes<HTMLButtonElement>) => (
 	<button
@@ -48,6 +50,8 @@ export const FormStep = ({
 	const { isXs } = useBreakpoint();
 
 	const { setValue, getValues, unregister } = useFormContext();
+
+	const { activeNetwork } = useActiveNetwork({ profile });
 
 	useEffect(() => {
 		unregister(["gasLimit", "gasPrice"]);
@@ -140,20 +144,15 @@ export const FormStep = ({
 							</Button>
 						</div>
 
-						<SelectAddress
-							showWalletAvatar={false}
-							wallet={
-								senderWallet
-									? {
-											address: senderWallet.address(),
-											network,
-										}
-									: undefined
-							}
-							wallets={profile.wallets().values()}
-							profile={profile}
+						<SelectAddressDropdown
 							disabled={profile.wallets().count() === 0}
-							onChange={handleSelectSender}
+							profile={profile}
+							onChange={(wallet) => {
+								handleSelectSender(wallet?.address() ?? "");
+							}}
+							wallets={profile.wallets().values()}
+							wallet={senderWallet}
+							defaultNetwork={activeNetwork}
 							disableAction={(wallet) => !WalletCapabilities(wallet).canSendTransfer()}
 						/>
 					</div>
