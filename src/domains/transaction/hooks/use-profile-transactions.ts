@@ -109,7 +109,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 	const LIMIT = limit;
 	const { types } = useTransactionTypes({ wallets });
 	const { syncOnChainUsernames } = useWalletAlias();
-	const blockTime = get(wallets[0].network().milestone(), "timeouts.blockTime") as number;
+	const blockTime = wallets[0] ? get(wallets[0].network().milestone(), "timeouts.blockTime") as number : 15_000;
 
 	const { pendingJson, removePendingTransaction, addPendingTransactionFromUnconfirmed, buildPendingForUI } =
 		usePendingTransactions();
