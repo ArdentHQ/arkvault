@@ -45,72 +45,68 @@ const createMockPendingTransaction = (overrides: Partial<any> = {}): any => ({
 	...overrides,
 });
 
+const wrapPending = (tx: any, walletAddresses: string[], wallets: any[]) => {
+	const walletByAddress = (addr: string) => wallets.find((w: any) => w.address() === addr);
+	const walletByNetworkId = (id: string) => wallets.find((w: any) => w.networkId() === id);
+
+	const unix =
+    typeof tx.timestamp === "number"
+      ? tx.timestamp
+      : tx.timestamp?.toUNIX?.() ?? Date.now();
+
+	const recipients = Array.isArray(tx.recipients) ? tx.recipients : [];
+
+	const isReceived =
+		(walletAddresses?.includes?.(tx.to) ?? false) ||
+		recipients.some((r: any) => walletAddresses?.includes?.(r.address));
+
+	const isSent = walletAddresses?.includes?.(tx.from) ?? false;
+
+	const networkWallet = walletByNetworkId(tx.networkId);
+
+	return {
+		blockHash: () => {},
+		confirmations: () => BigNumber.make(0),
+		convertedAmount: () => tx.convertedAmount ?? 0,
+		convertedTotal: () => tx.convertedTotal ?? 0,
+		explorerLink: () => tx.explorerLink ?? "",
+		fee: () => tx.fee ?? 0,
+		from: () => tx.from ?? "",
+		hash: () => tx.hash,
+		isConfirmed: () => false,
+		isFailed: () => false,
+		isMultiPayment: () => !!tx.isMultiPayment,
+		isPending: () => true,
+		isReceived: () => isReceived,
+		isReturn: () => !!tx.isReturn,
+		isSent: () => isSent,
+		isSuccess: () => false,
+		isTransfer: () => !!tx.isTransfer,
+		isUnvote: () => !!tx.isUnvote,
+		isUpdateValidator: () => !!tx.isUpdateValidator,
+		isUsernameRegistration: () => !!tx.isUsernameRegistration,
+		isUsernameResignation: () => !!tx.isUsernameResignation,
+		isValidatorRegistration: () => !!tx.isValidatorRegistration,
+		isValidatorResignation: () => !!tx.isValidatorResignation,
+		isVote: () => !!tx.isVote,
+		isVoteCombination: () => !!tx.isVoteCombination,
+		network: () => networkWallet?.network(),
+		nonce: () => BigNumber.make(String(tx.nonce ?? 0)),
+		recipients: () => recipients,
+		timestamp: () => DateTime.make(unix),
+		to: () => tx.to ?? "",
+		total: () => tx.total ?? tx.value ?? 0,
+		type: () => tx.type ?? (tx.isTransfer ? "transfer" : "unknown"),
+		value: () => tx.value ?? 0,
+		wallet: () => walletByAddress(tx.walletAddress),
+	};
+};
+
 const mockPendingTransactionsHook = async (pendingTransactions: any[] = []) => {
 	const removePendingTransaction = vi.fn();
 	const addPendingTransactionFromUnconfirmed = vi.fn();
 
 	const pendingHook = await import("@/domains/transaction/hooks/use-pending-transactions");
-
-	// helper to wrap a raw pending tx as a confirmed-like DTO
-	const wrapPending = (tx: any, walletAddresses: string[], wallets: any[]) => {
-		const walletByAddress = (addr: string) => wallets.find((w: any) => w.address() === addr);
-		const walletByNetworkId = (id: string) => wallets.find((w: any) => w.networkId() === id);
-
-		const rawTs = tx.timestamp;
-		const unix =
-			typeof rawTs === "number"
-				? rawTs
-				: typeof rawTs?.toUNIX === "function"
-				? rawTs.toUNIX()
-				: Date.now();
-
-		const recipients = Array.isArray(tx.recipients) ? tx.recipients : [];
-
-		const isReceived =
-			(walletAddresses?.includes?.(tx.to) ?? false) ||
-			recipients.some((r: any) => walletAddresses?.includes?.(r.address));
-
-		const isSent = walletAddresses?.includes?.(tx.from) ?? false;
-
-		const networkWallet = walletByNetworkId(tx.networkId);
-
-		return {
-			confirmations: () => BigNumber.make(0),
-			convertedAmount: () => tx.convertedAmount ?? 0,
-			convertedTotal: () => tx.convertedTotal ?? 0,
-			explorerLink: () => tx.explorerLink ?? "",
-			fee: () => tx.fee ?? 0,
-			from: () => tx.from ?? "",
-			hash: () => tx.hash,
-			isConfirmed: () => false,
-			isFailed: () => false,
-			isSuccess: () => false,
-			isMultiPayment: () => !!tx.isMultiPayment,
-			isTransfer: () => !!tx.isTransfer,
-			isUsernameRegistration: () => !!tx.isUsernameRegistration,
-			isUsernameResignation: () => !!tx.isUsernameResignation,
-			isValidatorRegistration: () => !!tx.isValidatorRegistration,
-			isValidatorResignation: () => !!tx.isValidatorResignation,
-			isVote: () => !!tx.isVote,
-			isVoteCombination: () => !!tx.isVoteCombination,
-			isUnvote: () => !!tx.isUnvote,
-			isUpdateValidator: () => !!tx.isUpdateValidator,
-			isReturn: () => !!tx.isReturn,
-			isReceived: () => isReceived,
-			isSent: () => isSent,
-			network: () => networkWallet?.network(),
-			nonce: () => BigNumber.make(String(tx.nonce ?? 0)),
-			recipients: () => recipients,
-			isPending: () => true,
-			to: () => tx.to ?? "",
-			total: () => (tx.total ?? tx.value ?? 0),
-			type: () => tx.type ?? (tx.isTransfer ? "transfer" : "unknown"),
-			value: () => tx.value ?? 0,
-			wallet: () => walletByAddress(tx.walletAddress),
-			blockHash: () => undefined,
-			timestamp: () => DateTime.make(unix),
-		};
-	};
 
 	const buildPendingForUI = (walletAddresses: string[], walletsArg: any[]) =>
 		pendingTransactions.map((tx) => wrapPending(tx, walletAddresses, walletsArg));
@@ -118,15 +114,14 @@ const mockPendingTransactionsHook = async (pendingTransactions: any[] = []) => {
 	const pendingJson = pendingTransactions.map((tx) => ({ hash: tx.hash }));
 
 	const pendingSpy = vi.spyOn(pendingHook, "usePendingTransactions").mockReturnValue({
-		pendingJson,
-		removePendingTransaction,
 		addPendingTransactionFromUnconfirmed,
 		buildPendingForUI,
+		pendingJson,
+		removePendingTransaction,
 	});
 
 	return { pendingSpy, removePendingTransaction };
 };
-
 
 describe("useProfileTransactions", () => {
 	let profile: any;

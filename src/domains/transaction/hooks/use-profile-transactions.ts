@@ -109,7 +109,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 	const LIMIT = limit;
 	const { types } = useTransactionTypes({ wallets });
 	const { syncOnChainUsernames } = useWalletAlias();
-	const blockTime = wallets[0] ? get(wallets[0].network().milestone(), "timeouts.blockTime") as number : 15_000;
+	const blockTime = wallets[0] ? (get(wallets[0].network().milestone(), "timeouts.blockTime") as number) : 15_000;
 
 	const { pendingJson, removePendingTransaction, addPendingTransactionFromUnconfirmed, buildPendingForUI } =
 		usePendingTransactions();
@@ -434,7 +434,9 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 
 	const fetchUnconfirmedAndLog = useCallback(async () => {
 		const pendingTransactionService = pendingTransactionsService.current;
-		if (!pendingTransactionService) { return; }
+		if (!pendingTransactionService) {
+			return;
+		}
 
 		try {
 			const selectedAddresses = wallets.map((w) => w.address());
@@ -448,7 +450,9 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 					wallets.find((w) => w.address().toLowerCase() === transaction.from?.toLowerCase?.()) ||
 					wallets.find((w) => w.address().toLowerCase() === transaction.to?.toLowerCase?.());
 
-				if (!matched) { continue; }
+				if (!matched) {
+					continue;
+				}
 
 				const gasLimit = (transaction as any).gasLimit ?? (transaction as any).gas;
 

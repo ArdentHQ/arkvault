@@ -253,7 +253,7 @@ export const Transactions = memo(function Transactions({
 				</div>
 
 				<TransactionTable
-					transactions={transactions}
+					transactions={transactions as DTO.ExtendedConfirmedTransactionData[]}
 					exchangeCurrency={profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency)}
 					isLoading={isLoadingTransactions}
 					skeletonRowsLimit={8}
