@@ -1,7 +1,6 @@
-import { Services } from "@/app/lib/mainsail";
 import { sortByDesc } from "@/app/lib/helpers";
 
-import { INotificationTypes, IProfile, IProfileTransactionNotificationService, ProfileSetting } from "./contracts.js";
+import { INotificationTypes, IProfile, IProfileTransactionNotificationService, } from "./contracts.js";
 import { INotification, INotificationRepository } from "./notification.repository.contract.js";
 import { AggregateQuery } from "./transaction.aggregate.contract.js";
 import { ExtendedConfirmedTransactionDataCollection } from "./transaction.collection.js";

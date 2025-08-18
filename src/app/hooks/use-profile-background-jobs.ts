@@ -3,7 +3,6 @@ import { useConfiguration, useEnvironmentContext } from "@/app/contexts";
 
 import { Contracts } from "@/app/lib/profiles";
 import { ProfilePeers } from "@/utils/profile-peers";
-import { Services } from "@/app/lib/mainsail";
 import { useSynchronizer } from "./use-synchronizer";
 
 enum Intervals {
