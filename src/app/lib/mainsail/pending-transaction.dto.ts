@@ -7,126 +7,124 @@ import { TransactionBaseData, type TransactionBaseDTO, type KeyValuePair } from 
 
 type PendingTransactionDTO = (UnconfirmedTransaction & { gasLimit?: number }) & TransactionBaseDTO;
 
-
-
 export class PendingTransactionData extends TransactionBaseData<PendingTransactionDTO> {
-    protected createdAt: DateTime = DateTime.make(Date.now());
+	protected createdAt: DateTime = DateTime.make(Date.now());
 
-    public configure(data: PendingTransactionDTO) {
-        return super.configure(data);
-    }
+	public configure(data: PendingTransactionDTO) {
+		return super.configure(data);
+	}
 
-    public recipients(): { address: string; amount: number }[] {
-        if (!this.isMultiPayment()) {
-            return [];
-        }
-        return this.payments().map((p: MultiPaymentItem) => ({
-            address: p.recipientId,
-            amount: p.amount.toNumber(),
-        }));
-    }
+	public recipients(): { address: string; amount: number }[] {
+		if (!this.isMultiPayment()) {
+			return [];
+		}
+		return this.payments().map((p: MultiPaymentItem) => ({
+			address: p.recipientId,
+			amount: p.amount.toNumber(),
+		}));
+	}
 
-    protected computeFee(): BigNumber {
-        const gas = (this.data.gasLimit ?? (this.data as UnconfirmedTransaction).gas) as number;
-        const gasPriceArk = BigNumber.make(UnitConverter.formatUnits(String(this.data.gasPrice), "ark"));
+	protected computeFee(): BigNumber {
+		const gas = (this.data.gasLimit ?? (this.data as UnconfirmedTransaction).gas) as number;
+		const gasPriceArk = BigNumber.make(UnitConverter.formatUnits(String(this.data.gasPrice), "ark"));
 
-        return gasPriceArk.times(gas);
-    }
+		return gasPriceArk.times(gas);
+	}
 
-    public isSuccess(): boolean {
-        return false;
-    }
-    public isConfirmed(): boolean {
-        return false;
-    }
-    public confirmations(): BigNumber {
-        return BigNumber.make(0);
-    }
+	public isSuccess(): boolean {
+		return false;
+	}
+	public isConfirmed(): boolean {
+		return false;
+	}
+	public confirmations(): BigNumber {
+		return BigNumber.make(0);
+	}
 
-    public timestamp(): DateTime {
-        return this.createdAt;
-    }
-    protected serializeTimestamp(): string {
-        return this.createdAt.toISOString();
-    }
+	public timestamp(): DateTime {
+		return this.createdAt;
+	}
+	protected serializeTimestamp(): string {
+		return this.createdAt.toISOString();
+	}
 
-    public toPersistedJSON(): PendingPersistedJSON {
-        return {
-            createdAt: this.serializeTimestamp(),
-            data: this.data.data,
-            decimals: this.decimals,
-            from: this.data.from,
-            gas: Number(this.data.gas),
-            gasLimit: this.data.gasLimit,
-            gasPrice: String(this.data.gasPrice),
-            hash: this.data.hash,
-            meta: {
-                address: this.getMeta("address"),
-                explorerLink: this.getMeta("explorerLink"),
-                networkId: this.getMeta("networkId"),
-            },
-            network: this.data.network,
-            nonce: String(this.data.nonce),
-            r: this.data.r,
-            s: this.data.s,
-            senderPublicKey: this.data.senderPublicKey,
-            to: this.data.to,
-            v: this.data.v,
-            value: String(this.data.value),
-        };
-    }
+	public toPersistedJSON(): PendingPersistedJSON {
+		return {
+			createdAt: this.serializeTimestamp(),
+			data: this.data.data,
+			decimals: this.decimals,
+			from: this.data.from,
+			gas: Number(this.data.gas),
+			gasLimit: this.data.gasLimit,
+			gasPrice: String(this.data.gasPrice),
+			hash: this.data.hash,
+			meta: {
+				address: this.getMeta("address"),
+				explorerLink: this.getMeta("explorerLink"),
+				networkId: this.getMeta("networkId"),
+			},
+			network: this.data.network,
+			nonce: String(this.data.nonce),
+			r: this.data.r,
+			s: this.data.s,
+			senderPublicKey: this.data.senderPublicKey,
+			to: this.data.to,
+			v: this.data.v,
+			value: String(this.data.value),
+		};
+	}
 
-    public static fromPersistedJSON(json: PendingPersistedJSON): PendingTransactionData {
-        const dto = new PendingTransactionData().configure({
-            data: json.data as any,
-            from: json.from,
-            gas: Number(json.gas),
-            gasLimit: json.gasLimit,
-            gasPrice: Number(json.gasPrice),
-            hash: json.hash,
-            network: json.network,
-            nonce: json.nonce,
-            r: json.r,
-            s: json.s,
-            senderPublicKey: json.senderPublicKey,
-            to: json.to,
-            v: json.v,
-            value: String(json.value),
-        });
+	public static fromPersistedJSON(json: PendingPersistedJSON): PendingTransactionData {
+		const dto = new PendingTransactionData().configure({
+			data: json.data as any,
+			from: json.from,
+			gas: Number(json.gas),
+			gasLimit: json.gasLimit,
+			gasPrice: Number(json.gasPrice),
+			hash: json.hash,
+			network: json.network,
+			nonce: json.nonce,
+			r: json.r,
+			s: json.s,
+			senderPublicKey: json.senderPublicKey,
+			to: json.to,
+			v: json.v,
+			value: String(json.value),
+		});
 
-        if (json.decimals != null) {
-            dto.withDecimals(json.decimals);
-        }
+		if (json.decimals != null) {
+			dto.withDecimals(json.decimals);
+		}
 
-        if (json.meta) {
-            if (json.meta.address) {
-                dto.setMeta("address", json.meta.address);
-            }
-            if (json.meta.networkId) {
-                dto.setMeta("networkId", json.meta.networkId);
-            }
-            if (json.meta.explorerLink) {
-                dto.setMeta("explorerLink", json.meta.explorerLink);
-            }
-        }
+		if (json.meta) {
+			if (json.meta.address) {
+				dto.setMeta("address", json.meta.address);
+			}
+			if (json.meta.networkId) {
+				dto.setMeta("networkId", json.meta.networkId);
+			}
+			if (json.meta.explorerLink) {
+				dto.setMeta("explorerLink", json.meta.explorerLink);
+			}
+		}
 
-        try {
-            const ms = new Date(json.createdAt).getTime();
-            (dto as any).createdAt = DateTime.make(ms);
-        } catch {
-            (dto as any).createdAt = DateTime.make(Date.now());
-        }
+		try {
+			const ms = new Date(json.createdAt).getTime();
+			(dto as any).createdAt = DateTime.make(ms);
+		} catch {
+			(dto as any).createdAt = DateTime.make(Date.now());
+		}
 
-        return dto;
-    }
+		return dto;
+	}
 
-    public toObject(): KeyValuePair {
-        return super.toObject();
-    }
-    public toJSON(): KeyValuePair {
-        return super.toJSON();
-    }
-    public toHuman(): KeyValuePair {
-        return super.toHuman();
-    }
+	public toObject(): KeyValuePair {
+		return super.toObject();
+	}
+	public toJSON(): KeyValuePair {
+		return super.toJSON();
+	}
+	public toHuman(): KeyValuePair {
+		return super.toHuman();
+	}
 }

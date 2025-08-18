@@ -3,9 +3,7 @@ import { DTO } from "@/app/lib/profiles";
 import { useLocalStorage } from "usehooks-ts";
 import { BigNumber } from "@/app/lib/helpers";
 import type { PendingPersistedJSON, UnconfirmedTransaction } from "@/app/lib/mainsail/pending-transaction.contract";
-import {
-	PendingTransactionData as PendingDTO
-} from "@/app/lib/mainsail/pending-transaction.dto";
+import { PendingTransactionData as PendingDTO } from "@/app/lib/mainsail/pending-transaction.dto";
 import { Contracts } from "@/app/lib/profiles";
 
 export const usePendingTransactions = () => {
@@ -105,7 +103,7 @@ export const usePendingTransactions = () => {
 				const isSent = walletAddresses.includes(dto.from());
 
 				return {
-					blockHash: () => { },
+					blockHash: () => {},
 					confirmations: () => BigNumber.make(0),
 					convertedAmount: () => 0,
 					convertedTotal: () => 0,
