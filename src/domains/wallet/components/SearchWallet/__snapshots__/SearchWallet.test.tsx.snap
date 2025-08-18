@@ -200,12 +200,13 @@ exports[`SearchWallet > should render 1`] = `
                 <div
                   class="group cursor-pointer items-center rounded-lg border transition-all border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 hover:bg-theme-navy-100 dark:hover:bg-theme-dark-700 dim-hover:bg-theme-dim-700"
                   data-testid="ReceiverItem"
+                  tabindex="0"
                 >
                   <div
                     class="flex items-center px-4 py-3 duration-150"
                   >
                     <div
-                      class="border-theme-primary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold"
+                      class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 group-hover:dark:border-theme-dark-500 group-hover:dim:border-theme-dim-500"
                     >
                       <div
                         class="flex w-1/2 min-w-0 flex-col space-y-2 truncate"
@@ -235,36 +236,47 @@ exports[`SearchWallet > should render 1`] = `
                         >
                           95.27653252325068 ARK
                         </span>
+                        <div
+                          class="leading-[17px]"
+                          data-testid="ReceiverItem--exchangeAmount"
+                        >
+                          <span
+                            class="whitespace-nowrap text-sm leading-[17px]"
+                            data-testid="Amount"
+                          >
+                            0 BTC
+                          </span>
+                        </div>
                       </div>
                     </div>
                     <div
                       class="flex w-[72px] min-w-[72px] flex-1 shrink-0 items-center justify-center pl-4"
                     >
-                      <div>
-                        <button
-                          class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500 dim:group-hover:text-theme-navy-700 text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600"
-                          data-testid="SearchWalletListItem__select-0"
-                          type="button"
+                      <button
+                        class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500 dim:group-hover:text-theme-navy-700 text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600"
+                        data-testid="SearchWalletListItem__select-0"
+                        tabindex="-1"
+                        type="button"
+                      >
+                        <div
+                          class="flex items-center gap-2"
                         >
-                          <div
-                            class="flex items-center gap-2"
-                          >
-                            Select
-                          </div>
-                        </button>
-                      </div>
+                          Select
+                        </div>
+                      </button>
                     </div>
                   </div>
                 </div>
                 <div
                   class="group cursor-pointer items-center rounded-lg border transition-all border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 hover:bg-theme-navy-100 dark:hover:bg-theme-dark-700 dim-hover:bg-theme-dim-700"
                   data-testid="ReceiverItem"
+                  tabindex="0"
                 >
                   <div
                     class="flex items-center px-4 py-3 duration-150"
                   >
                     <div
-                      class="border-theme-primary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold"
+                      class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 group-hover:dark:border-theme-dark-500 group-hover:dim:border-theme-dim-500"
                     >
                       <div
                         class="flex w-1/2 min-w-0 flex-col space-y-2 truncate"
@@ -294,24 +306,34 @@ exports[`SearchWallet > should render 1`] = `
                         >
                           0.01989216404723 ARK
                         </span>
+                        <div
+                          class="leading-[17px]"
+                          data-testid="ReceiverItem--exchangeAmount"
+                        >
+                          <span
+                            class="whitespace-nowrap text-sm leading-[17px]"
+                            data-testid="Amount"
+                          >
+                            0 BTC
+                          </span>
+                        </div>
                       </div>
                     </div>
                     <div
                       class="flex w-[72px] min-w-[72px] flex-1 shrink-0 items-center justify-center pl-4"
                     >
-                      <div>
-                        <button
-                          class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500 dim:group-hover:text-theme-navy-700 text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600"
-                          data-testid="SearchWalletListItem__select-1"
-                          type="button"
+                      <button
+                        class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500 dim:group-hover:text-theme-navy-700 text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600"
+                        data-testid="SearchWalletListItem__select-1"
+                        tabindex="-1"
+                        type="button"
+                      >
+                        <div
+                          class="flex items-center gap-2"
                         >
-                          <div
-                            class="flex items-center gap-2"
-                          >
-                            Select
-                          </div>
-                        </button>
-                      </div>
+                          Select
+                        </div>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -525,12 +547,13 @@ exports[`SearchWallet > should render compact on md screen 1`] = `
                 <div
                   class="group cursor-pointer items-center rounded-lg border transition-all border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 hover:bg-theme-navy-100 dark:hover:bg-theme-dark-700 dim-hover:bg-theme-dim-700"
                   data-testid="ReceiverItem"
+                  tabindex="0"
                 >
                   <div
                     class="flex items-center px-4 py-3 duration-150"
                   >
                     <div
-                      class="border-theme-primary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold"
+                      class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 group-hover:dark:border-theme-dark-500 group-hover:dim:border-theme-dim-500"
                     >
                       <div
                         class="flex w-1/2 min-w-0 flex-col space-y-2 truncate"
@@ -560,36 +583,47 @@ exports[`SearchWallet > should render compact on md screen 1`] = `
                         >
                           95.27653252325068 ARK
                         </span>
+                        <div
+                          class="leading-[17px]"
+                          data-testid="ReceiverItem--exchangeAmount"
+                        >
+                          <span
+                            class="whitespace-nowrap text-sm leading-[17px]"
+                            data-testid="Amount"
+                          >
+                            0 BTC
+                          </span>
+                        </div>
                       </div>
                     </div>
                     <div
                       class="flex w-[72px] min-w-[72px] flex-1 shrink-0 items-center justify-center pl-4"
                     >
-                      <div>
-                        <button
-                          class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500 dim:group-hover:text-theme-navy-700 text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600"
-                          data-testid="SearchWalletListItem__select-0"
-                          type="button"
+                      <button
+                        class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500 dim:group-hover:text-theme-navy-700 text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600"
+                        data-testid="SearchWalletListItem__select-0"
+                        tabindex="-1"
+                        type="button"
+                      >
+                        <div
+                          class="flex items-center gap-2"
                         >
-                          <div
-                            class="flex items-center gap-2"
-                          >
-                            Select
-                          </div>
-                        </button>
-                      </div>
+                          Select
+                        </div>
+                      </button>
                     </div>
                   </div>
                 </div>
                 <div
                   class="group cursor-pointer items-center rounded-lg border transition-all border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 hover:bg-theme-navy-100 dark:hover:bg-theme-dark-700 dim-hover:bg-theme-dim-700"
                   data-testid="ReceiverItem"
+                  tabindex="0"
                 >
                   <div
                     class="flex items-center px-4 py-3 duration-150"
                   >
                     <div
-                      class="border-theme-primary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold"
+                      class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 group-hover:dark:border-theme-dark-500 group-hover:dim:border-theme-dim-500"
                     >
                       <div
                         class="flex w-1/2 min-w-0 flex-col space-y-2 truncate"
@@ -619,24 +653,34 @@ exports[`SearchWallet > should render compact on md screen 1`] = `
                         >
                           0.01989216404723 ARK
                         </span>
+                        <div
+                          class="leading-[17px]"
+                          data-testid="ReceiverItem--exchangeAmount"
+                        >
+                          <span
+                            class="whitespace-nowrap text-sm leading-[17px]"
+                            data-testid="Amount"
+                          >
+                            0 BTC
+                          </span>
+                        </div>
                       </div>
                     </div>
                     <div
                       class="flex w-[72px] min-w-[72px] flex-1 shrink-0 items-center justify-center pl-4"
                     >
-                      <div>
-                        <button
-                          class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500 dim:group-hover:text-theme-navy-700 text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600"
-                          data-testid="SearchWalletListItem__select-1"
-                          type="button"
+                      <button
+                        class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500 dim:group-hover:text-theme-navy-700 text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600"
+                        data-testid="SearchWalletListItem__select-1"
+                        tabindex="-1"
+                        type="button"
+                      >
+                        <div
+                          class="flex items-center gap-2"
                         >
-                          <div
-                            class="flex items-center gap-2"
-                          >
-                            Select
-                          </div>
-                        </button>
-                      </div>
+                          Select
+                        </div>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -850,12 +894,13 @@ exports[`SearchWallet > should render compact with selected address 1`] = `
                 <div
                   class="group cursor-pointer items-center rounded-lg border transition-all border-theme-success-200 dark:border-theme-success-700 dim:border-theme-success-700 bg-theme-success-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 hover:bg-theme-secondary-200 hover:border-theme-navy-200 dark:hover:bg-theme-dark-700 dark:hover:border-theme-dark-700 dim-hover:bg-theme-dim-700 dim:hover:border-theme-dim-700"
                   data-testid="ReceiverItem"
+                  tabindex="0"
                 >
                   <div
                     class="flex items-center px-4 py-3 duration-150"
                   >
                     <div
-                      class="border-theme-primary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold"
+                      class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold border-theme-success-200 dark:border-theme-dark-600 dim:border-theme-dim-600"
                     >
                       <div
                         class="flex w-1/2 min-w-0 flex-col space-y-2 truncate"
@@ -885,36 +930,47 @@ exports[`SearchWallet > should render compact with selected address 1`] = `
                         >
                           95.27653252325068 ARK
                         </span>
+                        <div
+                          class="leading-[17px]"
+                          data-testid="ReceiverItem--exchangeAmount"
+                        >
+                          <span
+                            class="whitespace-nowrap text-sm leading-[17px]"
+                            data-testid="Amount"
+                          >
+                            0 BTC
+                          </span>
+                        </div>
                       </div>
                     </div>
                     <div
                       class="flex w-[72px] min-w-[72px] flex-1 shrink-0 items-center justify-center pl-4"
                     >
-                      <div>
-                        <button
-                          class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-success-700 dark:group-hover:text-theme-green-500 dim:group-hover:text-theme-green-500 text-theme-success-600 dark:text-theme-green-600 dim:text-theme-green-600"
-                          data-testid="SearchWalletListItem__selected-0"
-                          type="button"
+                      <button
+                        class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-success-700 dark:group-hover:text-theme-green-500 dim:group-hover:text-theme-green-500 text-theme-success-600 dark:text-theme-green-600 dim:text-theme-green-600"
+                        data-testid="SearchWalletListItem__selected-0"
+                        tabindex="-1"
+                        type="button"
+                      >
+                        <div
+                          class="flex items-center gap-2"
                         >
-                          <div
-                            class="flex items-center gap-2"
-                          >
-                            Selected
-                          </div>
-                        </button>
-                      </div>
+                          Selected
+                        </div>
+                      </button>
                     </div>
                   </div>
                 </div>
                 <div
                   class="group cursor-pointer items-center rounded-lg border transition-all border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 hover:bg-theme-navy-100 dark:hover:bg-theme-dark-700 dim-hover:bg-theme-dim-700"
                   data-testid="ReceiverItem"
+                  tabindex="0"
                 >
                   <div
                     class="flex items-center px-4 py-3 duration-150"
                   >
                     <div
-                      class="border-theme-primary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold"
+                      class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 group-hover:dark:border-theme-dark-500 group-hover:dim:border-theme-dim-500"
                     >
                       <div
                         class="flex w-1/2 min-w-0 flex-col space-y-2 truncate"
@@ -944,24 +1000,34 @@ exports[`SearchWallet > should render compact with selected address 1`] = `
                         >
                           0.01989216404723 ARK
                         </span>
+                        <div
+                          class="leading-[17px]"
+                          data-testid="ReceiverItem--exchangeAmount"
+                        >
+                          <span
+                            class="whitespace-nowrap text-sm leading-[17px]"
+                            data-testid="Amount"
+                          >
+                            0 BTC
+                          </span>
+                        </div>
                       </div>
                     </div>
                     <div
                       class="flex w-[72px] min-w-[72px] flex-1 shrink-0 items-center justify-center pl-4"
                     >
-                      <div>
-                        <button
-                          class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500 dim:group-hover:text-theme-navy-700 text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600"
-                          data-testid="SearchWalletListItem__select-1"
-                          type="button"
+                      <button
+                        class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500 dim:group-hover:text-theme-navy-700 text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600"
+                        data-testid="SearchWalletListItem__select-1"
+                        tabindex="-1"
+                        type="button"
+                      >
+                        <div
+                          class="flex items-center gap-2"
                         >
-                          <div
-                            class="flex items-center gap-2"
-                          >
-                            Select
-                          </div>
-                        </button>
-                      </div>
+                          Select
+                        </div>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -2117,12 +2183,13 @@ exports[`SearchWallet > should render with incompatible ledger wallet 1`] = `
                 <div
                   class="group cursor-pointer items-center rounded-lg border transition-all border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 hover:bg-theme-navy-100 dark:hover:bg-theme-dark-700 dim-hover:bg-theme-dim-700"
                   data-testid="ReceiverItem"
+                  tabindex="0"
                 >
                   <div
                     class="flex items-center px-4 py-3 duration-150"
                   >
                     <div
-                      class="border-theme-primary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold"
+                      class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 group-hover:dark:border-theme-dark-500 group-hover:dim:border-theme-dim-500"
                     >
                       <div
                         class="flex w-1/2 min-w-0 flex-col space-y-2 truncate"
@@ -2150,25 +2217,35 @@ exports[`SearchWallet > should render with incompatible ledger wallet 1`] = `
                         >
                           0 ARK
                         </span>
+                        <div
+                          class="leading-[17px]"
+                          data-testid="ReceiverItem--exchangeAmount"
+                        >
+                          <span
+                            class="whitespace-nowrap text-sm leading-[17px]"
+                            data-testid="Amount"
+                          >
+                            0 BTC
+                          </span>
+                        </div>
                       </div>
                     </div>
                     <div
                       class="flex w-[72px] min-w-[72px] flex-1 shrink-0 items-center justify-center pl-4"
                     >
-                      <div>
-                        <button
-                          class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 p-0 text-sm leading-[17px] group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500 dim:group-hover:text-theme-navy-700 text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600"
-                          data-testid="SearchWalletListItem__select-0"
-                          disabled=""
-                          type="button"
+                      <button
+                        class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 p-0 text-sm leading-[17px] group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500 dim:group-hover:text-theme-navy-700 text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600"
+                        data-testid="SearchWalletListItem__select-0"
+                        disabled=""
+                        tabindex="-1"
+                        type="button"
+                      >
+                        <div
+                          class="flex items-center gap-2"
                         >
-                          <div
-                            class="flex items-center gap-2"
-                          >
-                            Select
-                          </div>
-                        </button>
-                      </div>
+                          Select
+                        </div>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -2382,12 +2459,13 @@ exports[`SearchWallet > should render with selected address 1`] = `
                 <div
                   class="group cursor-pointer items-center rounded-lg border transition-all border-theme-success-200 dark:border-theme-success-700 dim:border-theme-success-700 bg-theme-success-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 hover:bg-theme-secondary-200 hover:border-theme-navy-200 dark:hover:bg-theme-dark-700 dark:hover:border-theme-dark-700 dim-hover:bg-theme-dim-700 dim:hover:border-theme-dim-700"
                   data-testid="ReceiverItem"
+                  tabindex="0"
                 >
                   <div
                     class="flex items-center px-4 py-3 duration-150"
                   >
                     <div
-                      class="border-theme-primary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold"
+                      class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold border-theme-success-200 dark:border-theme-dark-600 dim:border-theme-dim-600"
                     >
                       <div
                         class="flex w-1/2 min-w-0 flex-col space-y-2 truncate"
@@ -2417,36 +2495,47 @@ exports[`SearchWallet > should render with selected address 1`] = `
                         >
                           95.27653252325068 ARK
                         </span>
+                        <div
+                          class="leading-[17px]"
+                          data-testid="ReceiverItem--exchangeAmount"
+                        >
+                          <span
+                            class="whitespace-nowrap text-sm leading-[17px]"
+                            data-testid="Amount"
+                          >
+                            0 BTC
+                          </span>
+                        </div>
                       </div>
                     </div>
                     <div
                       class="flex w-[72px] min-w-[72px] flex-1 shrink-0 items-center justify-center pl-4"
                     >
-                      <div>
-                        <button
-                          class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-success-700 dark:group-hover:text-theme-green-500 dim:group-hover:text-theme-green-500 text-theme-success-600 dark:text-theme-green-600 dim:text-theme-green-600"
-                          data-testid="SearchWalletListItem__selected-0"
-                          type="button"
+                      <button
+                        class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-success-700 dark:group-hover:text-theme-green-500 dim:group-hover:text-theme-green-500 text-theme-success-600 dark:text-theme-green-600 dim:text-theme-green-600"
+                        data-testid="SearchWalletListItem__selected-0"
+                        tabindex="-1"
+                        type="button"
+                      >
+                        <div
+                          class="flex items-center gap-2"
                         >
-                          <div
-                            class="flex items-center gap-2"
-                          >
-                            Selected
-                          </div>
-                        </button>
-                      </div>
+                          Selected
+                        </div>
+                      </button>
                     </div>
                   </div>
                 </div>
                 <div
                   class="group cursor-pointer items-center rounded-lg border transition-all border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 hover:bg-theme-navy-100 dark:hover:bg-theme-dark-700 dim-hover:bg-theme-dim-700"
                   data-testid="ReceiverItem"
+                  tabindex="0"
                 >
                   <div
                     class="flex items-center px-4 py-3 duration-150"
                   >
                     <div
-                      class="border-theme-primary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold"
+                      class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 group-hover:dark:border-theme-dark-500 group-hover:dim:border-theme-dim-500"
                     >
                       <div
                         class="flex w-1/2 min-w-0 flex-col space-y-2 truncate"
@@ -2476,24 +2565,34 @@ exports[`SearchWallet > should render with selected address 1`] = `
                         >
                           0.01989216404723 ARK
                         </span>
+                        <div
+                          class="leading-[17px]"
+                          data-testid="ReceiverItem--exchangeAmount"
+                        >
+                          <span
+                            class="whitespace-nowrap text-sm leading-[17px]"
+                            data-testid="Amount"
+                          >
+                            0 BTC
+                          </span>
+                        </div>
                       </div>
                     </div>
                     <div
                       class="flex w-[72px] min-w-[72px] flex-1 shrink-0 items-center justify-center pl-4"
                     >
-                      <div>
-                        <button
-                          class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500 dim:group-hover:text-theme-navy-700 text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600"
-                          data-testid="SearchWalletListItem__select-1"
-                          type="button"
+                      <button
+                        class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500 dim:group-hover:text-theme-navy-700 text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600"
+                        data-testid="SearchWalletListItem__select-1"
+                        tabindex="-1"
+                        type="button"
+                      >
+                        <div
+                          class="flex items-center gap-2"
                         >
-                          <div
-                            class="flex items-center gap-2"
-                          >
-                            Select
-                          </div>
-                        </button>
-                      </div>
+                          Select
+                        </div>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -2707,12 +2806,13 @@ exports[`SearchWallet > should render with the default exchange currency enabled
                 <div
                   class="group cursor-pointer items-center rounded-lg border transition-all border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 hover:bg-theme-navy-100 dark:hover:bg-theme-dark-700 dim-hover:bg-theme-dim-700"
                   data-testid="ReceiverItem"
+                  tabindex="0"
                 >
                   <div
                     class="flex items-center px-4 py-3 duration-150"
                   >
                     <div
-                      class="border-theme-primary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold"
+                      class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 group-hover:dark:border-theme-dark-500 group-hover:dim:border-theme-dim-500"
                     >
                       <div
                         class="flex w-1/2 min-w-0 flex-col space-y-2 truncate"
@@ -2742,36 +2842,47 @@ exports[`SearchWallet > should render with the default exchange currency enabled
                         >
                           95.27653252325068 ARK
                         </span>
+                        <div
+                          class="leading-[17px]"
+                          data-testid="ReceiverItem--exchangeAmount"
+                        >
+                          <span
+                            class="whitespace-nowrap text-sm leading-[17px]"
+                            data-testid="Amount"
+                          >
+                            0 BTC
+                          </span>
+                        </div>
                       </div>
                     </div>
                     <div
                       class="flex w-[72px] min-w-[72px] flex-1 shrink-0 items-center justify-center pl-4"
                     >
-                      <div>
-                        <button
-                          class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500 dim:group-hover:text-theme-navy-700 text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600"
-                          data-testid="SearchWalletListItem__select-0"
-                          type="button"
+                      <button
+                        class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500 dim:group-hover:text-theme-navy-700 text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600"
+                        data-testid="SearchWalletListItem__select-0"
+                        tabindex="-1"
+                        type="button"
+                      >
+                        <div
+                          class="flex items-center gap-2"
                         >
-                          <div
-                            class="flex items-center gap-2"
-                          >
-                            Select
-                          </div>
-                        </button>
-                      </div>
+                          Select
+                        </div>
+                      </button>
                     </div>
                   </div>
                 </div>
                 <div
                   class="group cursor-pointer items-center rounded-lg border transition-all border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 hover:bg-theme-navy-100 dark:hover:bg-theme-dark-700 dim-hover:bg-theme-dim-700"
                   data-testid="ReceiverItem"
+                  tabindex="0"
                 >
                   <div
                     class="flex items-center px-4 py-3 duration-150"
                   >
                     <div
-                      class="border-theme-primary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold"
+                      class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 group-hover:dark:border-theme-dark-500 group-hover:dim:border-theme-dim-500"
                     >
                       <div
                         class="flex w-1/2 min-w-0 flex-col space-y-2 truncate"
@@ -2801,24 +2912,34 @@ exports[`SearchWallet > should render with the default exchange currency enabled
                         >
                           0.01989216404723 ARK
                         </span>
+                        <div
+                          class="leading-[17px]"
+                          data-testid="ReceiverItem--exchangeAmount"
+                        >
+                          <span
+                            class="whitespace-nowrap text-sm leading-[17px]"
+                            data-testid="Amount"
+                          >
+                            0 BTC
+                          </span>
+                        </div>
                       </div>
                     </div>
                     <div
                       class="flex w-[72px] min-w-[72px] flex-1 shrink-0 items-center justify-center pl-4"
                     >
-                      <div>
-                        <button
-                          class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500 dim:group-hover:text-theme-navy-700 text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600"
-                          data-testid="SearchWalletListItem__select-1"
-                          type="button"
+                      <button
+                        class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500 dim:group-hover:text-theme-navy-700 text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600"
+                        data-testid="SearchWalletListItem__select-1"
+                        tabindex="-1"
+                        type="button"
+                      >
+                        <div
+                          class="flex items-center gap-2"
                         >
-                          <div
-                            class="flex items-center gap-2"
-                          >
-                            Select
-                          </div>
-                        </button>
-                      </div>
+                          Select
+                        </div>
+                      </button>
                     </div>
                   </div>
                 </div>
