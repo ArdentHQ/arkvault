@@ -367,10 +367,7 @@ describe("useProfileSynchronizer", () => {
 
 		await waitFor(() =>
 			expect(profileNotificationsSyncSpy).toHaveBeenCalledWith({
-				identifiers: [
-					{ networkId: mainsailDevnet, type: "address", value: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6" },
-					{ networkId: mainsailDevnet, type: "address", value: "0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54" },
-				],
+				to: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6,0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54"
 			}),
 		);
 
