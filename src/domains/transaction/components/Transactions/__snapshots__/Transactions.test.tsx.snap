@@ -33110,7 +33110,7 @@ exports[`Transactions > should hide view more button when there are no next page
 </DocumentFragment>
 `;
 
-exports[`Transactions > should open detail modal on transaction row click 1`] = `
+exports[`Transactions > should open detail side panel on transaction row click 1`] = `
 <DocumentFragment>
   <div
     class="mb-3 hidden md:block"
