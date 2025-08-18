@@ -7,6 +7,7 @@ import { delay } from "@/utils/delay";
 import { useTransactionTypes } from "./use-transaction-types";
 import { PendingTransactionsService } from "@/app/lib/mainsail/pending-transactions.service";
 import { HttpClient } from "@/app/lib/mainsail/http-client";
+import { get } from "@/app/lib/helpers";
 
 interface TransactionsState {
 	transactions: DTO.ExtendedConfirmedTransactionData[];
@@ -108,6 +109,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 	const LIMIT = limit;
 	const { types } = useTransactionTypes({ wallets });
 	const { syncOnChainUsernames } = useWalletAlias();
+	const blockTime = get(wallets[0].network().milestone(), "timeouts.blockTime") as number;
 
 	const { pendingJson, removePendingTransaction, addPendingTransactionFromUnconfirmed, buildPendingForUI } =
 		usePendingTransactions();
@@ -506,7 +508,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 
 		const id = setInterval(() => {
 			fetchUnconfirmedAndLog();
-		}, 5_000);
+		}, blockTime);
 
 		return () => clearInterval(id);
 	}, [fetchUnconfirmedAndLog, selectedWalletAddresses]);
