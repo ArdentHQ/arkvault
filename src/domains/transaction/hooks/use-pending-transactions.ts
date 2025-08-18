@@ -6,24 +6,19 @@ import type { PendingPersistedJSON, UnconfirmedTransaction } from "@/app/lib/mai
 import { PendingTransactionData as PendingDTO } from "@/app/lib/mainsail/pending-transaction.dto";
 import { Contracts } from "@/app/lib/profiles";
 
+type PendingTransactionFromUnconfirmed = UnconfirmedTransaction & {
+	gasLimit?: string;
+	networkId: string;
+	walletAddress: string;
+	explorerLink?: string;
+	decimals?: number;
+};
+
 export const usePendingTransactions = () => {
 	const [pendingJson, setPendingJson] = useLocalStorage<PendingPersistedJSON[]>("pending-transactions", []);
 
 	const addPendingTransactionFromUnconfirmed = useCallback(
-		(input: {
-			from: UnconfirmedTransaction["from"];
-			to: UnconfirmedTransaction["to"];
-			hash: UnconfirmedTransaction["hash"];
-			value: UnconfirmedTransaction["value"];
-			nonce: UnconfirmedTransaction["nonce"];
-			data: UnconfirmedTransaction["data"];
-			gasPrice?: string | number;
-			gasLimit?: string | number;
-			decimals?: number | string;
-			walletAddress: string;
-			networkId: string;
-			explorerLink?: string;
-		}) => {
+		(input: PendingTransactionFromUnconfirmed) => {
 			try {
 				const dto = new PendingDTO()
 					.configure({
