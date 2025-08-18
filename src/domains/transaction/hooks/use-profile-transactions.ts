@@ -443,25 +443,25 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 				to: selectedAddresses,
 			});
 
-			for (const tx of response?.results ?? []) {
+			for (const transaction of response?.results ?? []) {
 				const matched =
 					wallets.find((w) => w.address().toLowerCase() === tx.from?.toLowerCase?.()) ||
 					wallets.find((w) => w.address().toLowerCase() === tx.to?.toLowerCase?.());
 
 				if (!matched) { continue; }
 
-				const gasLimit = (tx as any).gasLimit ?? (tx as any).gas;
+				const gasLimit = (transaction as any).gasLimit ?? (transaction as any).gas;
 
 				addPendingTransactionFromUnconfirmed({
-					data: tx.data,
-					from: tx.from,
+					data: transaction.data,
+					from: transaction.from,
 					gasLimit: String(gasLimit ?? "0"),
-					gasPrice: String((tx as any).gasPrice ?? "0"),
-					hash: tx.hash,
+					gasPrice: String((transaction as any).gasPrice ?? "0"),
+					hash: transaction.hash,
 					networkId: matched.networkId(),
-					nonce: tx.nonce,
-					to: tx.to,
-					value: tx.value,
+					nonce: transaction.nonce,
+					to: transaction.to,
+					value: transaction.value,
 					walletAddress: matched.address(),
 				});
 			}
