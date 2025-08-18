@@ -54,9 +54,9 @@ export class PendingTransactionData extends TransactionBaseData<PendingTransacti
 			data: this.data.data,
 			decimals: this.decimals,
 			from: this.data.from,
-			gas: Number(this.data.gas),
+			gas: this.data.gas.toString(),
 			gasLimit: this.data.gasLimit,
-			gasPrice: String(this.data.gasPrice),
+			gasPrice: this.data.gasPrice.toString(),
 			hash: this.data.hash,
 			meta: {
 				address: this.getMeta("address"),
@@ -64,13 +64,13 @@ export class PendingTransactionData extends TransactionBaseData<PendingTransacti
 				networkId: this.getMeta("networkId"),
 			},
 			network: this.data.network,
-			nonce: String(this.data.nonce),
+			nonce: this.data.nonce.toString(),
 			r: this.data.r,
 			s: this.data.s,
 			senderPublicKey: this.data.senderPublicKey,
 			to: this.data.to,
 			v: this.data.v,
-			value: String(this.data.value),
+			value: this.data.value.toString(),
 		};
 	}
 
@@ -78,9 +78,9 @@ export class PendingTransactionData extends TransactionBaseData<PendingTransacti
 		const dto = new PendingTransactionData().configure({
 			data: json.data as any,
 			from: json.from,
-			gas: Number(json.gas),
+			gas: json.gas,
 			gasLimit: json.gasLimit,
-			gasPrice: Number(json.gasPrice),
+			gasPrice: json.gasPrice,
 			hash: json.hash,
 			network: json.network,
 			nonce: json.nonce,

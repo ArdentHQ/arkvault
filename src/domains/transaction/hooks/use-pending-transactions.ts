@@ -29,9 +29,9 @@ export const usePendingTransactions = () => {
 					.configure({
 						data: input.data as any,
 						from: input.from,
-						gas: Number(input.gasPrice ?? 0),
+						gas: input.gasPrice?.toString() ?? "0",
 						gasLimit: input.gasLimit ? Number(input.gasLimit) : undefined,
-						gasPrice: Number(input.gasPrice ?? 0),
+						gasPrice: input.gasPrice?.toString() ?? "0",
 						hash: input.hash,
 						network: Number(input.networkId),
 						nonce: input.nonce,
@@ -103,7 +103,7 @@ export const usePendingTransactions = () => {
 				const isSent = walletAddresses.includes(dto.from());
 
 				return {
-					blockHash: () => {},
+					blockHash: () => { },
 					confirmations: () => BigNumber.make(0),
 					convertedAmount: () => 0,
 					convertedTotal: () => 0,

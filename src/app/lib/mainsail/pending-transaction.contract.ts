@@ -1,8 +1,8 @@
 export interface UnconfirmedTransaction {
 	network: number;
 	nonce: string;
-	gasPrice: number;
-	gas: number;
+	gasPrice: string;
+	gas: string;
 	to: string;
 	value: string;
 	data: string;
@@ -23,7 +23,7 @@ export interface PendingPersistedJSON {
 	network: number;
 	nonce: string;
 	gasPrice: string;
-	gas: number;
+	gas: string;
 	gasLimit?: number;
 	to: string;
 	value: string;
