@@ -97,6 +97,7 @@ let resetProfileNetworksMock: () => void;
 
 const ComponentWrapper = ({ children }: { children: React.ReactNode }) => {
 	const form = useForm({});
+
 	return (
 		<StepsProvider activeStep={1} steps={4}>
 			<FormProvider {...form}>{children}</FormProvider>
