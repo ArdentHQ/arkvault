@@ -433,14 +433,17 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 	};
 
 	const fetchUnconfirmedAndLog = useCallback(async () => {
-		const svc = pendingTransactionsService.current;
-		if (!svc) {
-			return;
-		}
+		const pendingTransactionService = pendingTransactionsService.current;
+		if (!pendingTransactionService) { return; }
 
 		try {
-			const res = await svc.listUnconfirmed();
-			const addrSet = new Set(wallets.map((w) => w.address().toLowerCase()));
+			const addresses = wallets.map((w) => w.address());
+			const res = await pendingTransactionService.listUnconfirmed({
+				from: addresses,
+				to: addresses,
+			});
+
+			const addrSet = new Set(addresses.map((a) => a.toLowerCase()));
 
 			const filtered = (res?.results ?? []).filter((tx) => {
 				const from = tx.from?.toLowerCase?.();
@@ -453,9 +456,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 					wallets.find((w) => w.address().toLowerCase() === tx.from?.toLowerCase?.()) ||
 					wallets.find((w) => w.address().toLowerCase() === tx.to?.toLowerCase?.());
 
-				if (!matched) {
-					continue;
-				}
+				if (!matched) { continue; }
 
 				const gasLimit = (tx as any).gasLimit ?? (tx as any).gas;
 

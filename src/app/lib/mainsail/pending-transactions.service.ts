@@ -25,15 +25,15 @@ export class PendingTransactionsService {
 	}) {
 		const qs = new URLSearchParams();
 
-		if (parameters?.page != null) qs.set("page", String(parameters.page));
-		if (parameters?.limit != null) qs.set("limit", String(parameters.limit));
+		if (parameters?.page != null) {qs.set("page", String(parameters.page));}
+		if (parameters?.limit != null) {qs.set("limit", String(parameters.limit));}
 
 		if (parameters?.from?.length) {
-			for (const addr of parameters.from) qs.append("from", addr);
+			for (const addr of parameters.from) {qs.append("from", addr);}
 		}
 
 		if (parameters?.to?.length) {
-			for (const addr of parameters.to) qs.append("to", addr);
+			for (const addr of parameters.to) {qs.append("to", addr);}
 		}
 
 		const url =
