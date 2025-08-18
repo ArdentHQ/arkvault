@@ -2,221 +2,233 @@ import { usePendingTransactions } from "./use-pending-transactions";
 import { act, renderHook } from "@/utils/testing-library";
 import { DTO } from "@/app/lib/profiles";
 import { BigNumber } from "@/app/lib/helpers";
-import { DateTime } from "@/app/lib/intl";
 import { expect, vi } from "vitest";
 
-const mockSetPendingTransactions = vi.fn();
-const mockPendingTransactions = [];
+const mockSetPendingJson = vi.fn();
+const mockPendingJson: any[] = [];
 
 const createMockTransaction = (): DTO.ExtendedSignedTransactionData => {
-	const mockWallet = {
-		address: vi.fn().mockReturnValue("test-address"),
-		networkId: vi.fn().mockReturnValue("mainsail"),
-	};
+  const mockWallet = {
+    address: vi.fn().mockReturnValue("test-address"),
+    networkId: vi.fn().mockReturnValue("mainsail"),
+  };
 
-	return {
-		convertedAmount: vi.fn().mockReturnValue(100),
-		convertedTotal: vi.fn().mockReturnValue(110),
-		explorerLink: vi.fn().mockReturnValue("https://explorer.test/tx/hash123"),
-		fee: vi.fn().mockReturnValue(10),
-		from: vi.fn().mockReturnValue("from-address"),
-		hash: vi.fn().mockReturnValue("hash123"),
-		isMultiPayment: vi.fn().mockReturnValue(false),
-		isReturn: vi.fn().mockReturnValue(false),
-		isTransfer: vi.fn().mockReturnValue(true),
-		isUnvote: vi.fn().mockReturnValue(false),
-		isUpdateValidator: vi.fn().mockReturnValue(false),
-		isUsernameRegistration: vi.fn().mockReturnValue(false),
-		isUsernameResignation: vi.fn().mockReturnValue(false),
-		isValidatorRegistration: vi.fn().mockReturnValue(false),
-		isValidatorResignation: vi.fn().mockReturnValue(false),
-		isVote: vi.fn().mockReturnValue(false),
-		isVoteCombination: vi.fn().mockReturnValue(false),
-		nonce: vi.fn().mockReturnValue(new BigNumber(123)),
-		recipients: vi.fn().mockReturnValue([{ address: "recipient1", amount: 50 }]),
-		timestamp: vi.fn().mockReturnValue(1640995200000),
-		to: vi.fn().mockReturnValue("to-address"),
-		total: vi.fn().mockReturnValue(110),
-		type: vi.fn().mockReturnValue("transfer"),
-		value: vi.fn().mockReturnValue(100),
-		wallet: vi.fn().mockReturnValue(mockWallet),
-	} as unknown as DTO.ExtendedSignedTransactionData;
+  const dataL2 = { data: "0x" };
+  const dataL1 = { data: vi.fn().mockReturnValue(dataL2) };
+
+  return {
+    explorerLink: vi.fn().mockReturnValue("https://explorer.test/tx/hash123"),
+    from: vi.fn().mockReturnValue("from-address"),
+    hash: vi.fn().mockReturnValue("hash123"),
+    nonce: vi.fn().mockReturnValue(new BigNumber(123)),
+    to: vi.fn().mockReturnValue("to-address"),
+    value: vi.fn().mockReturnValue(100),
+    wallet: vi.fn().mockReturnValue(mockWallet),
+    data: vi.fn().mockReturnValue(dataL1),
+  } as unknown as DTO.ExtendedSignedTransactionData;
 };
 
 vi.mock("usehooks-ts", () => ({
-	useLocalStorage: vi.fn(() => [mockPendingTransactions, mockSetPendingTransactions]),
+  useLocalStorage: vi.fn(() => [mockPendingJson, mockSetPendingJson]),
 }));
 
-describe("usePendingTransactions", () => {
-	beforeEach(() => {
-		vi.clearAllMocks();
-	});
+describe("usePendingTransactions (current API)", () => {
+  beforeEach(() => {
+    vi.clearAllMocks();
+    mockPendingJson.length = 0;
+  });
 
-	it("should render", () => {
-		const { result, rerender } = renderHook(() => usePendingTransactions());
+  it("should render and keep stable function refs", () => {
+    const { result, rerender } = renderHook(() => usePendingTransactions());
 
-		const firstRender = {
-			addPendingTransaction: result.current.addPendingTransaction,
-			removePendingTransaction: result.current.removePendingTransaction,
-		};
+    const firstRefs = {
+      add: result.current.addPendingTransaction,
+      rem: result.current.removePendingTransaction,
+      addUnc: result.current.addPendingTransactionFromUnconfirmed,
+      build: result.current.buildPendingForUI,
+    };
 
-		rerender();
+    rerender();
 
-		expect(result.current.addPendingTransaction).toBe(firstRender.addPendingTransaction);
-		expect(result.current.removePendingTransaction).toBe(firstRender.removePendingTransaction);
-	});
+    expect(result.current.addPendingTransaction).toBe(firstRefs.add);
+    expect(result.current.removePendingTransaction).toBe(firstRefs.rem);
+    expect(result.current.addPendingTransactionFromUnconfirmed).toBe(firstRefs.addUnc);
+    expect(result.current.buildPendingForUI).toBe(firstRefs.build);
+  });
 
-	it("should initialize with empty array", () => {
-		const { result } = renderHook(() => usePendingTransactions());
+  it("should initialize with empty pendingJson", () => {
+    const { result } = renderHook(() => usePendingTransactions());
 
-		expect(result.current.pendingTransactions).toEqual([]);
-		expect(typeof result.current.addPendingTransaction).toBe("function");
-		expect(typeof result.current.removePendingTransaction).toBe("function");
-	});
+    expect(result.current.pendingJson).toEqual([]);
+    expect(typeof result.current.addPendingTransaction).toBe("function");
+    expect(typeof result.current.addPendingTransactionFromUnconfirmed).toBe("function");
+    expect(typeof result.current.removePendingTransaction).toBe("function");
+    expect(typeof result.current.buildPendingForUI).toBe("function");
+  });
 
-	it("should add a new pending transaction", () => {
-		const mockTransaction = createMockTransaction();
-		const { result } = renderHook(() => usePendingTransactions());
+  it("should add a new pending transaction via addPendingTransaction (signed tx path)", () => {
+    const mockTx = createMockTransaction();
+    const { result } = renderHook(() => usePendingTransactions());
 
-		act(() => {
-			result.current.addPendingTransaction(mockTransaction);
-		});
+    act(() => {
+      result.current.addPendingTransaction(mockTx);
+    });
 
-		expect(mockSetPendingTransactions).toHaveBeenCalledWith(expect.any(Function));
+    expect(mockSetPendingJson).toHaveBeenCalledWith(expect.any(Function));
 
-		const callback = mockSetPendingTransactions.mock.calls[0][0];
-		const prevTransactions = [];
-		const newTransactions = callback(prevTransactions);
+    const callback = mockSetPendingJson.mock.calls[0][0];
+    const prev: any[] = [];
+    const next = callback(prev);
 
-		expect(newTransactions).toHaveLength(1);
-		expect(newTransactions[0]).toEqual({
-			convertedAmount: 100,
-			convertedTotal: 110,
-			explorerLink: "https://explorer.test/tx/hash123",
-			fee: 10,
-			from: "from-address",
-			hash: "hash123",
-			isMultiPayment: false,
-			isReturn: false,
-			isTransfer: true,
-			isUnvote: false,
-			isUpdateValidator: false,
-			isUsernameRegistration: false,
-			isUsernameResignation: false,
-			isValidatorRegistration: false,
-			isValidatorResignation: false,
-			isVote: false,
-			isVoteCombination: false,
-			networkId: "mainsail",
-			nonce: expect.any(BigNumber),
-			recipients: [{ address: "recipient1", amount: 50 }],
-			timestamp: expect.any(DateTime),
-			to: "to-address",
-			total: 110,
-			type: "transfer",
-			value: 100,
-			walletAddress: "test-address",
-		});
-	});
+    expect(next).toHaveLength(1);
+    const item = next[0];
 
-	it("should replace existing transaction with same hash", () => {
-		const mockTransaction = createMockTransaction();
-		const { result } = renderHook(() => usePendingTransactions());
+    expect(item.hash).toBe("hash123");
+    expect(item.from).toBe("from-address");
+    expect(item.to).toBe("to-address");
+    expect(item.value).toBe("100");
+    expect(item.nonce).toBe("123");
+    expect(item.data).toBe("0x");
+    expect(typeof item.createdAt).toBe("string");
+    expect(item.meta?.address).toBe("test-address");
+    expect(item.meta?.networkId).toBe("mainsail");
+    expect(item.meta?.explorerLink).toBe("https://explorer.test/tx/hash123");
+  });
 
-		act(() => {
-			result.current.addPendingTransaction(mockTransaction);
-		});
+  it("should add a new pending transaction via addPendingTransactionFromUnconfirmed", () => {
+    const { result } = renderHook(() => usePendingTransactions());
 
-		const callback = mockSetPendingTransactions.mock.calls[0][0];
-		const prevTransactions = [
-			{
-				convertedAmount: 50,
-				convertedTotal: 60,
-				explorerLink: "https://explorer.test/tx/hash123",
-				fee: 5,
-				from: "from-address",
-				hash: "hash123",
-				isMultiPayment: false,
-				isReturn: false,
-				isTransfer: true,
-				isUnvote: false,
-				isUpdateValidator: false,
-				isUsernameRegistration: false,
-				isUsernameResignation: false,
-				isValidatorRegistration: false,
-				isValidatorResignation: false,
-				isVote: false,
-				isVoteCombination: false,
-				networkId: "devnet",
-				nonce: new BigNumber(1),
-				recipients: [],
-				timestamp: DateTime.make(1234567890),
-				to: "to-address",
-				total: 60,
-				type: "transfer",
-				value: 50,
-				walletAddress: "test-address",
-			},
-		];
+    act(() => {
+      result.current.addPendingTransactionFromUnconfirmed({
+        from: "0xFrom",
+        to: "0xTo",
+        hash: "hashABC",
+        value: "42",
+        nonce: "7",
+        data: "0x",
+        gasPrice: "5",
+        gasLimit: "21000",
+        walletAddress: "test-address",
+        networkId: "mainsail",
+        explorerLink: "https://explorer/tx/hashABC",
+      });
+    });
 
-		const newTransactions = callback(prevTransactions);
+    expect(mockSetPendingJson).toHaveBeenCalledWith(expect.any(Function));
 
-		expect(newTransactions).toHaveLength(1);
-		expect(newTransactions[0].hash).toBe("hash123");
-		expect(newTransactions[0].convertedAmount).toBe(100);
-	});
+    const callback = mockSetPendingJson.mock.calls[0][0];
+    const prev: any[] = [];
+    const next = callback(prev);
 
-	it("should handle transaction without recipients", () => {
-		const mockTransaction = createMockTransaction();
-		mockTransaction.recipients = undefined;
+    expect(next).toHaveLength(1);
+    const item = next[0];
 
-		const { result } = renderHook(() => usePendingTransactions());
+    expect(item.hash).toBe("hashABC");
+    expect(item.from).toBe("0xFrom");
+    expect(item.to).toBe("0xTo");
+    expect(item.value).toBe("42");
+    expect(item.nonce).toBe("7");
+    expect(item.data).toBe("0x");
+    expect(item.meta?.address).toBe("test-address");
+    expect(item.meta?.networkId).toBe("mainsail");
+    expect(item.meta?.explorerLink).toBe("https://explorer/tx/hashABC");
+  });
 
-		act(() => {
-			result.current.addPendingTransaction(mockTransaction);
-		});
+  it("should replace existing transaction with the same hash", () => {
+    const mockTx = createMockTransaction();
+    const { result } = renderHook(() => usePendingTransactions());
 
-		const callback = mockSetPendingTransactions.mock.calls[0][0];
-		const newTransactions = callback([]);
+    act(() => {
+      result.current.addPendingTransaction(mockTx);
+    });
 
-		expect(newTransactions[0].recipients).toBeUndefined();
-	});
+    expect(mockSetPendingJson).toHaveBeenCalledWith(expect.any(Function));
+    const callback = mockSetPendingJson.mock.calls[0][0];
 
-	it("should remove transaction by hash", () => {
-		const { result } = renderHook(() => usePendingTransactions());
+    const prev = [
+      {
+        hash: "hash123",
+        from: "old-from",
+        to: "old-to",
+        value: "1",
+        nonce: "1",
+        data: "0x",
+        gasPrice: "0",
+        gas: 0,
+        v: 0,
+        r: "",
+        s: "",
+        senderPublicKey: "",
+        network: 0,
+        createdAt: new Date().toISOString(),
+        meta: { address: "test-address", networkId: "mainsail" },
+      },
+    ];
 
-		act(() => {
-			result.current.removePendingTransaction("hash123");
-		});
+    const next = callback(prev);
 
-		expect(mockSetPendingTransactions).toHaveBeenCalledWith(expect.any(Function));
+    expect(next).toHaveLength(1);
+    expect(next[0].hash).toBe("hash123");
+    expect(next[0].from).toBe("from-address"); // replaced by the new item
+  });
 
-		const callback = mockSetPendingTransactions.mock.calls[0][0];
-		const prevTransactions = [
-			{ hash: "hash123", value: 100 },
-			{ hash: "hash456", value: 200 },
-		];
-		const filteredTransactions = callback(prevTransactions);
+  it("should remove transaction by hash", () => {
+    const { result } = renderHook(() => usePendingTransactions());
 
-		expect(filteredTransactions).toHaveLength(1);
-		expect(filteredTransactions[0].hash).toBe("hash456");
-	});
+    act(() => {
+      result.current.removePendingTransaction("hash123");
+    });
 
-	it("should do nothing if hash doesn't exist", () => {
-		const { result } = renderHook(() => usePendingTransactions());
+    expect(mockSetPendingJson).toHaveBeenCalledWith(expect.any(Function));
 
-		act(() => {
-			result.current.removePendingTransaction("nonexistent-hash");
-		});
+    const callback = mockSetPendingJson.mock.calls[0][0];
+    const prev = [
+      { hash: "hash123", value: "100" },
+      { hash: "hash456", value: "200" },
+    ];
+    const filtered = callback(prev);
 
-		const callback = mockSetPendingTransactions.mock.calls[0][0];
-		const prevTransactions = [
-			{ hash: "hash123", value: 100 },
-			{ hash: "hash456", value: 200 },
-		];
-		const filteredTransactions = callback(prevTransactions);
+    expect(filtered).toHaveLength(1);
+    expect(filtered[0].hash).toBe("hash456");
+  });
 
-		expect(filteredTransactions).toHaveLength(2);
-		expect(filteredTransactions).toEqual(prevTransactions);
-	});
+  it("buildPendingForUI: adapts persisted JSON into confirmed-like rows", () => {
+    mockPendingJson.push({
+      hash: "h1",
+      from: "from-1",
+      to: "test-address",
+      value: "10",
+      nonce: "1",
+      data: "0x",
+      gasPrice: "0",
+      gas: 0,
+      v: 0,
+      r: "",
+      s: "",
+      senderPublicKey: "",
+      network: 0,
+      createdAt: new Date().toISOString(),
+      meta: { address: "test-address", networkId: "mainsail", explorerLink: "https://explorer/tx/h1" },
+    });
+
+    const { result } = renderHook(() => usePendingTransactions());
+
+    const wallets = [
+      {
+        address: () => "test-address",
+        network: () => ({ id: "mainsail" }),
+      },
+    ] as any;
+
+    const rows = result.current.buildPendingForUI(["test-address"], wallets);
+    expect(rows).toHaveLength(1);
+
+    const row = rows[0];
+    expect(row.isPending()).toBe(true);
+    expect(row.hash()).toBe("h1");
+    expect(row.to()).toBe("test-address");
+    expect(row.from()).toBe("from-1");
+    expect(row.explorerLink()).toBe("https://explorer/tx/h1");
+    expect(typeof row.timestamp().toUNIX()).toBe("number");
+  });
 });
