@@ -392,7 +392,7 @@ export const ReceiverItem: React.FC<ReceiverItemProperties> = ({
 								})}
 							/>
 
-							{wallet.network().isTest() && (
+							{wallet.network().isLive() && (
 								<div data-testid="ReceiverItem--exchangeAmount" className="leading-[17px]">
 									<Amount
 										ticker={exchangeCurrency}
