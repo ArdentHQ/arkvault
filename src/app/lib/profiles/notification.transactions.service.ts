@@ -1,6 +1,6 @@
 import { sortByDesc } from "@/app/lib/helpers";
 
-import { INotificationTypes, IProfile, IProfileTransactionNotificationService, } from "./contracts.js";
+import { INotificationTypes, IProfile, IProfileTransactionNotificationService } from "./contracts.js";
 import { INotification, INotificationRepository } from "./notification.repository.contract.js";
 import { AggregateQuery } from "./transaction.aggregate.contract.js";
 import { ExtendedConfirmedTransactionDataCollection } from "./transaction.collection.js";
@@ -110,7 +110,7 @@ export class ProfileTransactionNotificationService implements IProfileTransactio
 				.received({
 					cursor: 1,
 					limit: this.#defaultLimit,
-					to: this.#getToAddresses().join(','),
+					to: this.#getToAddresses().join(","),
 					...queryInput,
 				});
 
