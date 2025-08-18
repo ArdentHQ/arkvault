@@ -1,10 +1,11 @@
 import { Contracts, ReadOnlyWallet } from "@/app/lib/profiles";
 import React from "react";
 import { requestMock, server } from "@/tests/mocks/server";
-import { TransactionDetailModal } from "./TransactionDetailModal";
+import { TransactionDetailSidePanel } from "./TransactionDetailSidePanel";
 import { translations } from "@/domains/transaction/i18n";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
-import { env, getDefaultProfileId, render, screen, syncValidators } from "@/utils/testing-library";
+import { act, env, getDefaultProfileId, render, screen, syncValidators, waitFor } from "@/utils/testing-library";
+import userEvent from "@testing-library/user-event";
 
 const fixtureProfileId = getDefaultProfileId();
 let dashboardURL: string;
@@ -34,7 +35,7 @@ describe("TransactionDetailModal", () => {
 
 	it("should not render if not open", () => {
 		render(
-			<TransactionDetailModal
+			<TransactionDetailSidePanel
 				profile={profile}
 				isOpen={false}
 				transactionItem={{
@@ -46,12 +47,44 @@ describe("TransactionDetailModal", () => {
 			/>,
 		);
 
-		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
+		expect(screen.queryByTestId("SidePanel__content")).not.toBeInTheDocument();
 	});
 
-	it("should render a transfer modal", () => {
+	it("should handle onClose gracefully", async () => {
+		vi.useFakeTimers({ shouldAdvanceTime: true });
+
+		const onCloseMock = vi.fn();
+
 		render(
-			<TransactionDetailModal
+			<TransactionDetailSidePanel
+				profile={profile}
+				isOpen={true}
+				onClose={onCloseMock}
+				transactionItem={{
+					...TransactionFixture,
+					blockHash: () => "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
+					type: () => "transfer",
+					wallet: () => wallet,
+				}}
+			/>,
+		);
+
+		await expect(screen.findByTestId("SidePanel__content")).resolves.toBeVisible();
+
+		await userEvent.click(screen.getByTestId("SidePanel__close-button"));
+
+		act(() => {
+			vi.advanceTimersByTime(1000);
+		});
+
+		await waitFor(() => {
+			expect(onCloseMock).toHaveBeenCalled();
+		});
+	});
+
+	it("should render a transfer side panel", () => {
+		render(
+			<TransactionDetailSidePanel
 				profile={profile}
 				isOpen={true}
 				transactionItem={{
@@ -68,12 +101,12 @@ describe("TransactionDetailModal", () => {
 			},
 		);
 
-		expect(screen.getByTestId("Modal__inner")).toHaveTextContent(translations.MODAL_TRANSFER_DETAIL.TITLE);
+		expect(screen.getByTestId("SidePanel__content")).toHaveTextContent(translations.MODAL_TRANSFER_DETAIL.TITLE);
 	});
 
-	it("should render a multi payment modal", () => {
+	it("should render a multi payment side panel", () => {
 		render(
-			<TransactionDetailModal
+			<TransactionDetailSidePanel
 				profile={profile}
 				isOpen={true}
 				transactionItem={{
@@ -94,10 +127,12 @@ describe("TransactionDetailModal", () => {
 			},
 		);
 
-		expect(screen.getByTestId("Modal__inner")).toHaveTextContent(translations.MODAL_TRANSACTION_DETAILS.TITLE);
+		expect(screen.getByTestId("SidePanel__content")).toHaveTextContent(
+			translations.MODAL_TRANSACTION_DETAILS.TITLE,
+		);
 	});
 
-	it.each(["vote", "unvote", "voteCombination"])("should render a %s modal", (transactionType) => {
+	it.each(["vote", "unvote", "voteCombination"])("should render a %s side panel", (transactionType) => {
 		vi.spyOn(profile.validators(), "map").mockImplementation((wallet, votes) =>
 			votes.map(
 				(vote: string, index: number) =>
@@ -110,7 +145,7 @@ describe("TransactionDetailModal", () => {
 		);
 
 		render(
-			<TransactionDetailModal
+			<TransactionDetailSidePanel
 				profile={profile}
 				isOpen={true}
 				transactionItem={{
@@ -153,10 +188,10 @@ describe("TransactionDetailModal", () => {
 			voteCombination: "VoteOld",
 		};
 
-		expect(screen.getByTestId("Modal__inner")).toHaveTextContent(labels[transactionType]);
+		expect(screen.getByTestId("SidePanel__content")).toHaveTextContent(labels[transactionType]);
 	});
 
-	it("should render an vote swap modal for signed transaction", () => {
+	it("should render an vote swap side panel for signed transaction", () => {
 		vi.spyOn(profile.validators(), "map").mockImplementation((wallet, votes) =>
 			votes.map(
 				(vote: string, index: number) =>
@@ -169,7 +204,7 @@ describe("TransactionDetailModal", () => {
 		);
 
 		render(
-			<TransactionDetailModal
+			<TransactionDetailSidePanel
 				profile={profile}
 				isOpen={true}
 				transactionItem={{
@@ -198,12 +233,12 @@ describe("TransactionDetailModal", () => {
 			},
 		);
 
-		expect(screen.getByTestId("Modal__inner")).toHaveTextContent("VoteOld");
+		expect(screen.getByTestId("SidePanel__content")).toHaveTextContent("VoteOld");
 	});
 
-	it("should render a validator registration modal", () => {
+	it("should render a validator registration side panel", () => {
 		render(
-			<TransactionDetailModal
+			<TransactionDetailSidePanel
 				profile={profile}
 				isOpen={true}
 				transactionItem={{
@@ -219,12 +254,12 @@ describe("TransactionDetailModal", () => {
 			},
 		);
 
-		expect(screen.getByTestId("Modal__inner")).toHaveTextContent("Registration");
+		expect(screen.getByTestId("SidePanel__content")).toHaveTextContent("Registration");
 	});
 
-	it("should render a validator resignation modal", () => {
+	it("should render a validator resignation side panel", () => {
 		render(
-			<TransactionDetailModal
+			<TransactionDetailSidePanel
 				profile={profile}
 				isOpen={true}
 				transactionItem={{
@@ -239,6 +274,6 @@ describe("TransactionDetailModal", () => {
 			},
 		);
 
-		expect(screen.getByTestId("Modal__inner")).toHaveTextContent("Resignation");
+		expect(screen.getByTestId("SidePanel__content")).toHaveTextContent("Resignation");
 	});
 });

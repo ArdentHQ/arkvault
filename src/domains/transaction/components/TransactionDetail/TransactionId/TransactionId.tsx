@@ -1,4 +1,4 @@
-import React, { ReactElement, useRef } from "react";
+import React, { ReactElement, useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { DTO } from "@/app/lib/profiles";
 import { useBreakpoint } from "@/app/hooks";
@@ -22,6 +22,14 @@ export const TransactionId = ({ transaction, isConfirmed }: Properties): ReactEl
 	const { isSmAndAbove } = useBreakpoint();
 	const { openExternal } = useLink();
 	const reference = useRef(null);
+
+	const [mounted, setMounted] = useState(false);
+
+	useEffect(() => {
+		if (!mounted) {
+			setMounted(true);
+		}
+	}, [mounted]);
 
 	return (
 		<div
