@@ -109,7 +109,6 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 	const LIMIT = limit;
 	const { types } = useTransactionTypes({ wallets });
 	const { syncOnChainUsernames } = useWalletAlias();
-	const blockTime = wallets[0] ? (get(wallets[0].network().milestone(), "timeouts.blockTime") as number) : 15_000;
 
 	const { pendingJson, removePendingTransaction, addPendingTransactionFromUnconfirmed, buildPendingForUI } =
 		usePendingTransactions();
@@ -149,6 +148,24 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 		}
 		return hasMorePages;
 	};
+
+	const getBlockTime = () => {
+		try {
+			const first = wallets[0];
+			if (!first) return 15_000;
+
+			const milestone = first.network().milestone?.();
+			const bt = get(milestone, "timeouts.blockTime") as unknown;
+
+			if (typeof bt === "number" && Number.isFinite(bt)) return bt;
+		} catch {
+			/* istanbul ignore next -- @preserve */
+			console.error("Failed to get block time");
+		}
+		return 15_000;
+	};
+
+	const blockTime = getBlockTime();
 
 	const mergedTransactions = useMemo(() => {
 		const walletAddresses = wallets.map((w) => w.address());
