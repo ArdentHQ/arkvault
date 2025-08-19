@@ -5,7 +5,7 @@ import React, { useMemo, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { Address } from "@/app/components/Address";
 import { useFormField } from "@/app/components/Form/useFormField";
-import { OptionProperties, Select } from "@/app/components/SelectDropdown";
+import { Select } from "@/app/components/SelectDropdown";
 import { TruncateEnd } from "@/app/components/TruncateEnd";
 import { useWalletAlias } from "@/app/hooks/use-wallet-alias";
 import { Icon } from "@/app/components/Icon";
@@ -56,22 +56,29 @@ export const OptionLabel = ({
 	);
 
 	return (
-		<div className="flex flex-col sm:flex-row">
+		<div
+			className={cn("flex flex-col sm:flex-row", {
+				"cursor-not-allowed": option.isDisabled,
+			})}
+		>
 			<div className="flex w-full items-center space-x-2 leading-5 whitespace-nowrap">
 				<Address
 					address={address}
 					walletName={alias}
 					addressClass={cn("leading-[17px] sm:leading-5 text-sm sm:text-base text-theme-secondary-500", {
-						"dark:text-theme-dark-200 dim:text-theme-dim-200": !option.isSelected && option.isHighlighted,
+						"dark:text-theme-dark-200 dim:text-theme-dim-200":
+							!option.isSelected && option.isHighlighted && !option.isDisabled,
 						"dark:text-theme-dark-500 dim:text-theme-dim-500":
 							option.isSelected || (!option.isSelected && !option.isHighlighted),
+						"text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500": option.isDisabled,
 					})}
 					walletNameClass={cn("leading-[17px] sm:leading-5 text-sm sm:text-base ", {
 						"text-theme-primary-600 dark:text-theme-secondary-50 dim:text-theme-dim-50": option.isSelected,
+						"text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500": option.isDisabled,
 						"text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200":
-							!option.isSelected && !option.isHighlighted,
+							!option.isSelected && !option.isHighlighted && !option.isDisabled,
 						"text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50":
-							!option.isSelected && option.isHighlighted,
+							!option.isSelected && option.isHighlighted && !option.isDisabled,
 					})}
 					wrapperClass={cn({
 						"flex-1": showBalance,
@@ -82,7 +89,12 @@ export const OptionLabel = ({
 					<Amount
 						value={wallet?.balance() ?? 0}
 						ticker={wallet?.network().ticker() ?? ""}
-						className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 hidden flex-1 text-right font-semibold sm:inline-block"
+						className={cn("hidden flex-1 text-right font-semibold sm:inline-block", {
+							"text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500":
+								option.isDisabled,
+							"text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200":
+								!option.isDisabled,
+						})}
 					/>
 				)}
 
@@ -91,7 +103,12 @@ export const OptionLabel = ({
 						<Icon
 							name="CheckmarkDouble"
 							size="md"
-							className="text-theme-primary-600 dark:text-theme-secondary-50 dim:text-theme-dim-50"
+							className={cn({
+								"text-theme-primary-600 dark:text-theme-secondary-50 dim:text-theme-dim-50":
+									!option.isDisabled,
+								"text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500":
+									option.isDisabled,
+							})}
 						/>
 					)}
 				</div>
@@ -101,7 +118,10 @@ export const OptionLabel = ({
 				<Amount
 					value={wallet?.balance() ?? 0}
 					ticker={wallet?.network().ticker() ?? ""}
-					className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mt-2 flex-1 text-sm font-semibold sm:hidden"
+					className={cn("mt-2 flex-1 text-sm font-semibold sm:hidden", {
+						"text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500": option.isDisabled,
+						"text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200": !option.isDisabled,
+					})}
 				/>
 			)}
 		</div>
