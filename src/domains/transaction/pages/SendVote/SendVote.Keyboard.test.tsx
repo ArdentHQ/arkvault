@@ -144,8 +144,8 @@ describe("SendVote", () => {
 				{
 					data: {
 						...transactionFixture.data,
-						data: "3174b689"
-					}
+						data: "3174b689",
+					},
 				},
 			),
 			requestMock("https://dwallets-evm.mainsailhq.com/api/blocks/*", { data: {} }),
