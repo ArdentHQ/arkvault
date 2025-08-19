@@ -152,12 +152,16 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 	const getBlockTime = () => {
 		try {
 			const first = wallets[0];
-			if (!first) return 15_000;
+			if (!first) {
+				return 15_000;
+			}
 
 			const milestone = first.network().milestone?.();
 			const bt = get(milestone, "timeouts.blockTime") as unknown;
 
-			if (typeof bt === "number" && Number.isFinite(bt)) return bt;
+			if (typeof bt === "number" && Number.isFinite(bt)) {
+				return bt;
+			}
 		} catch {
 			/* istanbul ignore next -- @preserve */
 			console.error("Failed to get block time");
@@ -180,8 +184,12 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 			: pendingMine.filter((tx) => selectedTransactionTypes.includes(tx.type()));
 
 		const pendingFilteredByMode = pendingFilteredByType.filter((tx) => {
-			if (activeMode === "sent") return tx.isSent();
-			if (activeMode === "received") return tx.isReceived();
+			if (activeMode === "sent") {
+				return tx.isSent();
+			}
+			if (activeMode === "received") {
+				return tx.isReceived();
+			}
 			return true;
 		});
 
@@ -196,8 +204,12 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 			}
 
 			if (sortBy.desc) {
-				if ((a as any).isPending && !(b as any).isPending) return -1;
-				if (!(a as any).isPending && (b as any).isPending) return 1;
+				if ((a as any).isPending && !(b as any).isPending) {
+					return -1;
+				}
+				if (!(a as any).isPending && (b as any).isPending) {
+					return 1;
+				}
 			}
 
 			return 0;
@@ -211,7 +223,6 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 		allTransactionTypes.length,
 		buildPendingForUI,
 	]);
-
 
 	const selectedWalletAddresses = wallets.map((wallet) => wallet.address()).join("-");
 
