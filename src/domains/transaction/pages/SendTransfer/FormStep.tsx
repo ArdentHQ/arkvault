@@ -6,7 +6,6 @@ import { useTranslation } from "react-i18next";
 import cn from "classnames";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { useBreakpoint } from "@/app/hooks";
-import { SelectAddress } from "@/domains/profile/components/SelectAddress";
 import { AddRecipient } from "@/domains/transaction/components/AddRecipient";
 import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
 import { StepHeader } from "@/app/components/StepHeader";
