@@ -146,6 +146,7 @@ export const Address = ({
 								getFontSize(size),
 								{ "absolute w-full": truncateOnTable },
 							)}
+							showTooltip={showTooltip}
 						/>
 					</AddressWrapper>
 					{showCopyButton && (

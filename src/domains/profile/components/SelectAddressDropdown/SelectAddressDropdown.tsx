@@ -11,6 +11,7 @@ import { useWalletAlias } from "@/app/hooks/use-wallet-alias";
 import { Icon } from "@/app/components/Icon";
 import { Amount } from "@/app/components/Amount";
 import { NetworkOption } from "@/app/components/NavigationBar/components/SelectNetwork/SelectNetwork.blocks";
+import { Tooltip } from "@/app/components/Tooltip";
 
 type SelectAddressDropdownProperties = {
 	wallet?: Contracts.IReadWriteWallet;
@@ -55,41 +56,77 @@ export const OptionLabel = ({
 		[address, getWalletAlias, network, profile],
 	);
 
+	const { t } = useTranslation();
+
 	return (
-		<div
-			className={cn("flex flex-col sm:flex-row", {
-				"cursor-not-allowed": option.isDisabled,
-			})}
-		>
-			<div className="flex w-full items-center space-x-2 leading-5 whitespace-nowrap">
-				<Address
-					address={address}
-					walletName={alias}
-					addressClass={cn("leading-[17px] sm:leading-5 text-sm sm:text-base text-theme-secondary-500", {
-						"dark:text-theme-dark-200 dim:text-theme-dim-200":
-							!option.isSelected && option.isHighlighted && !option.isDisabled,
-						"dark:text-theme-dark-500 dim:text-theme-dim-500":
-							option.isSelected || (!option.isSelected && !option.isHighlighted),
-						"text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500": option.isDisabled,
-					})}
-					walletNameClass={cn("leading-[17px] sm:leading-5 text-sm sm:text-base ", {
-						"text-theme-primary-600 dark:text-theme-secondary-50 dim:text-theme-dim-50": option.isSelected,
-						"text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500": option.isDisabled,
-						"text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200":
-							!option.isSelected && !option.isHighlighted && !option.isDisabled,
-						"text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50":
-							!option.isSelected && option.isHighlighted && !option.isDisabled,
-					})}
-					wrapperClass={cn({
-						"flex-1": showBalance,
-					})}
-				/>
+		<Tooltip content={t("COMMON.DISABLED_DUE_INSUFFICIENT_BALANCE")} disabled={!option.isDisabled}>
+			<div
+				className={cn("flex flex-col sm:flex-row", {
+					"cursor-not-allowed": option.isDisabled,
+				})}
+			>
+				<div className="flex w-full items-center space-x-2 leading-5 whitespace-nowrap">
+					<Address
+						address={address}
+						walletName={alias}
+						addressClass={cn("leading-[17px] sm:leading-5 text-sm sm:text-base text-theme-secondary-500", {
+							"dark:text-theme-dark-200 dim:text-theme-dim-200":
+								!option.isSelected && option.isHighlighted && !option.isDisabled,
+							"dark:text-theme-dark-500 dim:text-theme-dim-500":
+								option.isSelected || (!option.isSelected && !option.isHighlighted),
+							"text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500":
+								option.isDisabled,
+						})}
+						walletNameClass={cn("leading-[17px] sm:leading-5 text-sm sm:text-base ", {
+							"text-theme-primary-600 dark:text-theme-secondary-50 dim:text-theme-dim-50":
+								option.isSelected,
+							"text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500":
+								option.isDisabled,
+							"text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200":
+								!option.isSelected && !option.isHighlighted && !option.isDisabled,
+							"text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50":
+								!option.isSelected && option.isHighlighted && !option.isDisabled,
+						})}
+						wrapperClass={cn({
+							"flex-1": showBalance,
+						})}
+						showTooltip={!option.isDisabled}
+					/>
+
+					{showBalance && (
+						<Amount
+							value={wallet?.balance() ?? 0}
+							ticker={wallet?.network().ticker() ?? ""}
+							className={cn("hidden flex-1 text-right font-semibold sm:inline-block", {
+								"text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500":
+									option.isDisabled,
+								"text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200":
+									!option.isDisabled,
+							})}
+						/>
+					)}
+
+					<div className="h-4 w-4">
+						{option.isSelected && (
+							<Icon
+								name="CheckmarkDouble"
+								size="md"
+								className={cn({
+									"text-theme-primary-600 dark:text-theme-secondary-50 dim:text-theme-dim-50":
+										!option.isDisabled,
+									"text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500":
+										option.isDisabled,
+								})}
+							/>
+						)}
+					</div>
+				</div>
 
 				{showBalance && (
 					<Amount
 						value={wallet?.balance() ?? 0}
 						ticker={wallet?.network().ticker() ?? ""}
-						className={cn("hidden flex-1 text-right font-semibold sm:inline-block", {
+						className={cn("mt-2 flex-1 text-sm font-semibold sm:hidden", {
 							"text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500":
 								option.isDisabled,
 							"text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200":
@@ -97,34 +134,8 @@ export const OptionLabel = ({
 						})}
 					/>
 				)}
-
-				<div className="h-4 w-4">
-					{option.isSelected && (
-						<Icon
-							name="CheckmarkDouble"
-							size="md"
-							className={cn({
-								"text-theme-primary-600 dark:text-theme-secondary-50 dim:text-theme-dim-50":
-									!option.isDisabled,
-								"text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500":
-									option.isDisabled,
-							})}
-						/>
-					)}
-				</div>
 			</div>
-
-			{showBalance && (
-				<Amount
-					value={wallet?.balance() ?? 0}
-					ticker={wallet?.network().ticker() ?? ""}
-					className={cn("mt-2 flex-1 text-sm font-semibold sm:hidden", {
-						"text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500": option.isDisabled,
-						"text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200": !option.isDisabled,
-					})}
-				/>
-			)}
-		</div>
+		</Tooltip>
 	);
 };
 
