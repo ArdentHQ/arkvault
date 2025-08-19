@@ -136,10 +136,14 @@ export const FormStep = ({
 							<Button
 								type="button"
 								variant="transparent"
-								className="text-theme-navy-600 block p-0 text-sm sm:hidden"
+								className="text-theme-navy-600 block p-0 text-sm"
 								onClick={onScan}
 							>
-								{t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.SCAN_FULL")}
+								<span className="hidden sm:block">
+									<Icon size="md" name="QRCode" />
+								</span>
+
+								<span>{t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.SCAN_FULL")}</span>
 							</Button>
 						</div>
 
