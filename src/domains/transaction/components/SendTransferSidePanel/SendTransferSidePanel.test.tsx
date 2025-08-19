@@ -7,7 +7,6 @@ import {
 	getDefaultProfileId,
 	getDefaultWalletId,
 	getDefaultWalletMnemonic,
-	mockNanoXTransport,
 	mockProfileWithPublicAndTestNetworks,
 	render,
 	screen,
@@ -91,7 +90,6 @@ const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
-let secondWallet: Contracts.IReadWriteWallet;
 let firstWalletAddress: string;
 let resetProfileNetworksMock: () => void;
 
@@ -110,11 +108,9 @@ const selectRecipient = () =>
 	userEvent.click(within(screen.getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"));
 
 const continueButton = () => screen.getByTestId("SendTransfer__continue-button");
-const backButton = () => screen.getByTestId("SendTransfer__back-button");
 const sendButton = () => screen.getByTestId("SendTransfer__send-button");
 const reviewStepID = "SendTransfer__review-step";
 const formStepID = "SendTransfer__form-step";
-const sendAllID = "AddRecipient__send-all";
 
 describe("SendTransferSidePanel", () => {
 	beforeAll(async () => {
@@ -124,7 +120,6 @@ describe("SendTransferSidePanel", () => {
 		await profile.sync();
 
 		wallet = profile.wallets().first();
-		secondWallet = profile.wallets().last();
 
 		const { wallet: arkMainnetWallet } = await profile
 			.walletFactory()
