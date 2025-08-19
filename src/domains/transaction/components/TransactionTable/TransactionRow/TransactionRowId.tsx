@@ -6,8 +6,9 @@ import { useBreakpoint } from "@/app/hooks";
 import { TruncateMiddle } from "@/app/components/TruncateMiddle";
 import { Icon } from "@/app/components/Icon";
 import { Tooltip } from "@/app/components/Tooltip";
+import { ExtendedTransactionDTO } from "@/domains/transaction/components/TransactionTable";
 
-export const TransactionRowId = ({ transaction }: { transaction: DTO.ExtendedConfirmedTransactionData }) => {
+export const TransactionRowId = ({ transaction }: { transaction: ExtendedTransactionDTO }) => {
 	const { isLgAndAbove, isMdAndAbove, isXl, isSmAndAbove } = useBreakpoint();
 
 	const maxCharacters = () => {
