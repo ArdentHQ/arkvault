@@ -51,7 +51,7 @@ export const TransactionTable: FC<TransactionTableProperties> = ({
 	const data = useMemo<ExtendedTransactionDTO[]>(() => {
 		const skeletonRows: ExtendedTransactionDTO[] = Array.from(
 			{ length: skeletonRowsLimit },
-			() => ({}) as ExtendedTransactionDTO
+			() => ({}) as ExtendedTransactionDTO,
 		);
 		return showSkeleton ? skeletonRows : transactions;
 	}, [showSkeleton, transactions, skeletonRowsLimit]);

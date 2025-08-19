@@ -3,7 +3,7 @@ import { Contracts } from "@/app/lib/profiles";
 import { ExtendedTransactionDTO } from "@/domains/transaction/components/TransactionTable";
 
 export type TransactionRowProperties = {
-	transaction: ExtendedTransactionDTO
+	transaction: ExtendedTransactionDTO;
 	exchangeCurrency?: string;
 	onClick?: () => void;
 	isLoading?: boolean;
