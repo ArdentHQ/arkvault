@@ -47,7 +47,7 @@ describe("useSearchWallet", () => {
 			const defaultList = getList(listType);
 			const {
 				result: { current },
-			} = renderHook(() => useSearchWallet({ wallets: defaultList }), { wrapper });
+			} = renderHook(() => useSearchWallet({ profile, wallets: defaultList }), { wrapper });
 
 			const { filteredList } = current;
 
@@ -56,7 +56,7 @@ describe("useSearchWallet", () => {
 	);
 
 	it.each([ListType.wallets, ListType.recipients])("should filter %s by address", (listType) => {
-		const { result } = renderHook(() => useSearchWallet({ wallets: getList(listType) }), { wrapper });
+		const { result } = renderHook(() => useSearchWallet({ profile, wallets: getList(listType) }), { wrapper });
 
 		expect(result.current.filteredList).toHaveLength(2);
 
@@ -100,7 +100,7 @@ describe("useSearchWallet", () => {
 	it.each([ListType.wallets, ListType.recipients])(
 		"should not find search %s and turn 'isEmptyResults' to true",
 		(listType) => {
-			const { result } = renderHook(() => useSearchWallet({ wallets: getList(listType) }), { wrapper });
+			const { result } = renderHook(() => useSearchWallet({ profile, wallets: getList(listType) }), { wrapper });
 
 			expect(result.current.filteredList).toHaveLength(2);
 			expect(result.current.isEmptyResults).toBeFalsy();
@@ -115,4 +115,29 @@ describe("useSearchWallet", () => {
 			expect(isEmptyResults).toBeTruthy();
 		},
 	);
+
+	it("should return empty list when wallets is an empty array", () => {
+		const { result } = renderHook(() => useSearchWallet({ profile, wallets: [] }), { wrapper });
+	  
+		expect(result.current.filteredList).toHaveLength(0);
+		expect(result.current.isEmptyResults).toBe(false);
+	  
+		act(() => result.current.setSearchKeyword("anything"));
+		expect(result.current.filteredList).toHaveLength(0);
+		expect(result.current.isEmptyResults).toBe(true);
+	});
+
+	it("should return empty list when wallets is undefined", () => {
+		const { result } = renderHook(
+		  () => useSearchWallet({ profile, wallets: undefined as any }),
+		  { wrapper },
+		);
+	  
+		expect(result.current.filteredList).toHaveLength(0);
+		expect(result.current.isEmptyResults).toBe(false);
+	  
+		act(() => result.current.setSearchKeyword("anything"));
+		expect(result.current.filteredList).toHaveLength(0);
+		expect(result.current.isEmptyResults).toBe(true);
+	});
 });
