@@ -9,7 +9,7 @@ import { useTransactionTypes } from "./use-transaction-types";
 import { SignedTransactionData } from "@/app/lib/mainsail/signed-transaction.dto";
 import { ExtendedSignedTransactionData } from "@/app/lib/profiles/signed-transaction.dto";
 import { IReadWriteWallet } from "@/app/lib/profiles/wallet.contract";
-import { ExtendedConfirmedTransactionData } from "@/app/lib/profiles/transaction.dto";
+import { ExtendedTransactionDTO } from "@/domains/transaction/components/TransactionTable";
 
 interface TransactionsState {
 	transactions: DTO.ExtendedConfirmedTransactionData[];
@@ -180,7 +180,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 				return true;
 			});
 
-		const combined: Array<ExtendedSignedTransactionData | ExtendedConfirmedTransactionData> = [
+		const combined: ExtendedTransactionDTO[] = [
 			...signedTransactions,
 			...transactions,
 		];
