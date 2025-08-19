@@ -1,38 +1,7 @@
-import { useCallback, useEffect } from "react";
+import { useCallback } from "react";
 import { DTO } from "@/app/lib/profiles";
 import { useLocalStorage } from "usehooks-ts";
-import { BigNumber } from "@/app/lib/helpers";
-import { DateTime } from "@/app/lib/intl";
-import { RawTransactionData, SignedTransactionObject } from "@/app/lib/mainsail/signed-transaction.dto.contract";
-
-// interface PendingTransactionData {
-// 	convertedAmount: number;
-// 	convertedTotal: number;
-// 	explorerLink: string;
-// 	fee: number;
-// 	from: string;
-// 	hash: string;
-// 	isMultiPayment: boolean;
-// 	isReturn: boolean;
-// 	isTransfer: boolean;
-// 	isUsernameRegistration: boolean;
-// 	isUsernameResignation: boolean;
-// 	isUnvote: boolean;
-// 	isUpdateValidator: boolean;
-// 	isValidatorResignation: boolean;
-// 	isValidatorRegistration: boolean;
-// 	isVote: boolean;
-// 	isVoteCombination: boolean;
-// 	networkId: string;
-// 	nonce: BigNumber;
-// 	recipients?: DTO.ExtendedTransactionRecipient[];
-// 	timestamp: DateTime;
-// 	to: string;
-// 	total: number;
-// 	type: string;
-// 	value: number;
-// 	walletAddress: string;
-// }
+import { RawTransactionData } from "@/app/lib/mainsail/signed-transaction.dto.contract";
 
 interface PendingTransactionData {
 	transaction: RawTransactionData;
