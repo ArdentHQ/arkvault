@@ -24,7 +24,7 @@ import { Tooltip } from "@/app/components/Tooltip";
 import cn from "classnames";
 import { Trans } from "react-i18next";
 import { ResetWhenUnmounted } from "@/app/components/SidePanel/ResetWhenUnmounted";
-import { AddressViewType } from "@/domains/portfolio/hooks/use-address-panel";
+import { AddressViewType, resetViewPreferences } from "@/domains/portfolio/hooks/use-address-panel";
 import { ProfileSetting } from "@/app/lib/profiles/profile.enum.contract";
 import { TruncateMiddle } from "@/app/components/TruncateMiddle";
 
@@ -102,6 +102,10 @@ export const PortfolioHeader = ({
 				profile.wallets().forget(wallet.id());
 				profile.notifications().transactions().forgetByRecipient(wallet.address());
 			}
+		}
+
+		if (profile.wallets().values().length === 0) {
+			resetViewPreferences(profile);
 		}
 
 		await persist();
