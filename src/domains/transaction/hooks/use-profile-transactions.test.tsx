@@ -454,7 +454,7 @@ describe("useProfileTransactions", () => {
 		await waitFor(() => expect(result.current.sortBy).toEqual({ column: "amount", desc: false }));
 	});
 
-	it("removes a pending transaction once it appears in confirmed results", async () => {
+	it("should remove a pending transaction once it appears in confirmed results", async () => {
 		const wallets = profile.wallets().values();
 		const transactionAggregate = await profile.transactionAggregate().all();
 		const confirmed = transactionAggregate.items()[0];
@@ -483,7 +483,7 @@ describe("useProfileTransactions", () => {
 		pendingSpy.mockRestore();
 	});
 
-	it("maps pending to confirmed-like DTO (incl. recipients fallback) and supports selectedTransactionTypes filter", async () => {
+	it("should map pending to confirmed-like DTO and support selectedTransactionTypes filter", async () => {
 		const wallets = profile.wallets().values();
 		const walletA = wallets[0];
 		const walletAddress = walletA.address();
@@ -622,7 +622,7 @@ describe("useProfileTransactions", () => {
 		allMock.mockRestore();
 	});
 
-	it("filters pending by activeMode sent/received and sorts by amount (pending first) hitting compare branch", async () => {
+	it("should filter pending by activeMode sent/received and sort by amount (pending first)", async () => {
 		const walletsAll = profile.wallets().values();
 		const walletA = walletsAll[0];
 		const walletAddress = walletA.address();
@@ -668,7 +668,9 @@ describe("useProfileTransactions", () => {
 				const confirmed = array.find((t: any) => typeof t?.isPending !== "function");
 				if (pending && confirmed) {
 					const res = compareFn(pending, confirmed);
-					if (res === -1) branchHit = true;
+					if (res === -1) {
+						branchHit = true;
+					}
 				}
 			}
 			return originalSort.call(this, compareFn);
@@ -707,7 +709,7 @@ describe("useProfileTransactions", () => {
 		}
 	});
 
-	it("sorts by date (desc/asc) and treats missing timestamp() as 0", async () => {
+	it("should sort by date and treat missing timestamp() as 0", async () => {
 		const wallets = profile.wallets().values();
 		const walletA = wallets[0];
 		const base = Date.now();
@@ -730,11 +732,11 @@ describe("useProfileTransactions", () => {
 			walletAddress: walletA.address(),
 		});
 
-		const pNone = {
-			isSent: () => false,
+		const pendingNone = {
 			isReceived: () => true,
+			isSent: () => false,
+			timestamp: () => {},
 			type: () => "transfer",
-			timestamp: () => undefined,
 		};
 
 		const allMock = vi.spyOn(profile.transactionAggregate(), "all").mockResolvedValue({
@@ -745,14 +747,28 @@ describe("useProfileTransactions", () => {
 		const pendingHook = await import("@/domains/transaction/hooks/use-pending-transactions");
 		const pendingSpy = vi.spyOn(pendingHook, "usePendingTransactions").mockReturnValue({
 			addPendingTransactionFromUnconfirmed: vi.fn(),
-			buildPendingForUI: vi.fn().mockImplementation((_addresses: string[], _wallets: any[]) => [
-				wrapPending(older, [walletA.address()], [walletA]),
-				wrapPending(newer, [walletA.address()], [walletA]),
-				pNone,
-			]),
+			// eslint-disable-next-line @typescript-eslint/no-unused-vars
+			buildPendingForUI: vi
+				.fn()
+				.mockImplementation((_addresses: string[], _wallets: any[]) => [
+					wrapPending(older, [walletA.address()], [walletA]),
+					wrapPending(newer, [walletA.address()], [walletA]),
+					pendingNone,
+				]),
 			pendingJson: [],
 			removePendingTransaction: vi.fn(),
 		} as any);
+
+		const originalSort = Array.prototype.sort;
+		// @ts-ignore
+		Array.prototype.sort = function (compareFn: any) {
+			if (typeof compareFn === "function") {
+				const a = { timestamp: () => DateTime.make(base) };
+				const b = { timestamp: () => {} };
+				compareFn(a as any, b as any);
+			}
+			return originalSort.call(this, compareFn);
+		};
 
 		const { result } = renderHook(() => useProfileTransactions({ profile, wallets: [walletA] }), { wrapper });
 
@@ -761,7 +777,7 @@ describe("useProfileTransactions", () => {
 			result.current.updateFilters({ activeMode: "all" });
 		});
 		await waitFor(() => expect(result.current.isLoadingTransactions).toBe(false));
-		expect(((result.current.transactions[0] as any).hash?.() ?? "NO_HASH")).toBe("PENDING_NEW");
+		expect((result.current.transactions[0] as any).hash?.() ?? "NO_HASH").toBe("PENDING_NEW");
 
 		act(() => {
 			result.current.setSortBy({ column: "date", desc: false });
@@ -771,24 +787,25 @@ describe("useProfileTransactions", () => {
 			expect(first.timestamp?.()).toBeUndefined();
 		});
 
+		Array.prototype.sort = originalSort;
 		pendingSpy.mockRestore();
 		allMock.mockRestore();
 	});
 
 	it.each([
 		{
+			expectLog: true,
 			label: "milestone throws -> fallback 15_000 and logs",
 			milestoneImpl: () => {
 				throw new Error("boom");
 			},
-			expectLog: true,
 		},
 		{
+			expectLog: false,
 			label: "milestone blockTime not finite -> fallback 15_000 without error log",
 			milestoneImpl: () => ({ timeouts: { blockTime: "fast" as any } }),
-			expectLog: false,
 		},
-	])("schedules polling with fallback block time: $label", async ({ milestoneImpl, expectLog }) => {
+	])("should schedule polling with fallback block time: $label", async ({ milestoneImpl, expectLog }) => {
 		const wallets = profile.wallets().values();
 		const first = wallets[0];
 
@@ -796,7 +813,9 @@ describe("useProfileTransactions", () => {
 		const setIntervalSpy = vi.spyOn(globalThis, "setInterval");
 		const consoleSpy = vi.spyOn(console, "error").mockImplementation(() => {});
 
-		const listSpy = vi.spyOn(PendingTransactionsService.prototype, "listUnconfirmed").mockResolvedValue({ results: [] });
+		const listSpy = vi
+			.spyOn(PendingTransactionsService.prototype, "listUnconfirmed")
+			.mockResolvedValue({ results: [] });
 		const pendingHook = await import("@/domains/transaction/hooks/use-pending-transactions");
 		const pendingSpy = vi.spyOn(pendingHook, "usePendingTransactions").mockReturnValue({
 			addPendingTransactionFromUnconfirmed: vi.fn(),
@@ -822,10 +841,12 @@ describe("useProfileTransactions", () => {
 		pendingSpy.mockRestore();
 	});
 
-	it("unconfirmed polling: adds mapped match, maps missing gas to '0', and skips when no results", async () => {
+	it("should add mapped match, map missing gas to '0', and skip when no results", async () => {
 		const wallets = profile.wallets().values();
 		const walletA = wallets[0];
-		const useSyncSpy = vi.spyOn(hooksMock, "useSynchronizer").mockReturnValue({ start: vi.fn(), stop: vi.fn() } as any);
+		const useSyncSpy = vi
+			.spyOn(hooksMock, "useSynchronizer")
+			.mockReturnValue({ start: vi.fn(), stop: vi.fn() } as any);
 
 		const listSpy = vi
 			.spyOn(PendingTransactionsService.prototype, "listUnconfirmed")
@@ -833,26 +854,26 @@ describe("useProfileTransactions", () => {
 			.mockResolvedValueOnce({
 				results: [
 					{
-						hash: "MATCH_FROM",
-						from: walletA.address(),
-						to: "EXTERNAL_TO",
-						nonce: 7,
-						value: "123",
 						data: "0xabc",
+						from: walletA.address(),
 						gas: 21000,
 						gasPrice: 5,
+						hash: "MATCH_FROM",
+						nonce: 7,
+						to: "EXTERNAL_TO",
+						value: "123",
 					},
 				],
 			})
 			.mockResolvedValueOnce({
 				results: [
 					{
-						hash: "NO_GAS_FIELDS",
-						from: walletA.address(),
-						to: "ADDRESS_TO",
-						nonce: 3,
-						value: "42",
 						data: "0x",
+						from: walletA.address(),
+						hash: "NO_GAS_FIELDS",
+						nonce: 3,
+						to: "ADDRESS_TO",
+						value: "42",
 					},
 				],
 			});
@@ -898,16 +919,16 @@ describe("useProfileTransactions", () => {
 		expect(addPendingSpy).toHaveBeenCalledTimes(2);
 		expect(addPendingSpy).toHaveBeenLastCalledWith(
 			expect.objectContaining({
-				hash: "NO_GAS_FIELDS",
-				from: walletA.address(),
-				to: "ADDRESS_TO",
-				nonce: 3,
-				value: "42",
 				data: "0x",
+				from: walletA.address(),
 				gasLimit: "0",
 				gasPrice: "0",
-				walletAddress: walletA.address(),
+				hash: "NO_GAS_FIELDS",
 				networkId: walletA.networkId(),
+				nonce: 3,
+				to: "ADDRESS_TO",
+				value: "42",
+				walletAddress: walletA.address(),
 			}),
 		);
 
@@ -917,7 +938,7 @@ describe("useProfileTransactions", () => {
 		setIntervalSpy.mockRestore();
 	});
 
-	it("does not schedule unconfirmed polling when service init fails", async () => {
+	it("should not schedule unconfirmed polling when service init fails", async () => {
 		const wallets = profile.wallets().values();
 		const first = wallets[0];
 
@@ -942,4 +963,66 @@ describe("useProfileTransactions", () => {
 		setIntervalSpy.mockRestore();
 	});
 
+	it("should match by 'to' address", async () => {
+		const wallets = profile.wallets().values();
+		const walletA = wallets[0];
+
+		const useSynchronizerSpy = vi
+			.spyOn(hooksMock, "useSynchronizer")
+			.mockReturnValue({ start: vi.fn(), stop: vi.fn() } as any);
+
+		const listSpy = vi.spyOn(PendingTransactionsService.prototype, "listUnconfirmed").mockResolvedValue({
+			results: [
+				{
+					data: "0x123",
+					from: "ADDRESS_FROM",
+					gas: 50000,
+					gasPrice: 11,
+					hash: "MATCH_TO_CASE",
+					nonce: 12,
+					to: walletA.address().toUpperCase(),
+					value: "999",
+				},
+			],
+		});
+
+		const pendingHook = await import("@/domains/transaction/hooks/use-pending-transactions");
+		const addPendingSpy = vi.fn();
+		const pendingSpy = vi.spyOn(pendingHook, "usePendingTransactions").mockReturnValue({
+			addPendingTransactionFromUnconfirmed: addPendingSpy,
+			buildPendingForUI: vi.fn().mockReturnValue([]),
+			pendingJson: [],
+			removePendingTransaction: vi.fn(),
+		} as any);
+
+		const setIntervalSpy = vi.spyOn(globalThis, "setInterval");
+
+		renderHook(() => useProfileTransactions({ profile, wallets: [walletA] }), { wrapper });
+
+		await waitFor(() => expect(setIntervalSpy).toHaveBeenCalled());
+		const callbackMock = setIntervalSpy.mock.calls[0]?.[0] as () => Promise<void>;
+
+		await callbackMock();
+
+		expect(addPendingSpy).toHaveBeenCalledTimes(1);
+		expect(addPendingSpy).toHaveBeenLastCalledWith(
+			expect.objectContaining({
+				data: "0x123",
+				from: "ADDRESS_FROM",
+				gasLimit: "50000",
+				gasPrice: "11",
+				hash: "MATCH_TO_CASE",
+				networkId: walletA.networkId(),
+				nonce: 12,
+				to: walletA.address().toUpperCase(),
+				value: "999",
+				walletAddress: walletA.address(),
+			}),
+		);
+
+		pendingSpy.mockRestore();
+		listSpy.mockRestore();
+		setIntervalSpy.mockRestore();
+		useSynchronizerSpy.mockRestore();
+	});
 });

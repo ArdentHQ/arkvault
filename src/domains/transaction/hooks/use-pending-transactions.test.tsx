@@ -263,55 +263,55 @@ describe("usePendingTransactions", () => {
 
 	it("should cover fallbacks when gasLimit, gasPrice, and explorerLink are missing", () => {
 		const { result } = renderHook(() => usePendingTransactions());
-	  
+
 		act(() => {
-		  result.current.addPendingTransactionFromUnconfirmed({
-			data: "",
-			from: "ADDRESS_FROM",
-			hash: "hashDEF",
-			networkId: "mainsail",
-			nonce: "8",
-			to: "ADDRESS_TO",
-			value: "99",
-			walletAddress: address,
-		  } as any);
+			result.current.addPendingTransactionFromUnconfirmed({
+				data: "",
+				from: "ADDRESS_FROM",
+				hash: "hashDEF",
+				networkId: "mainsail",
+				nonce: "8",
+				to: "ADDRESS_TO",
+				value: "99",
+				walletAddress: address,
+			} as any);
 		});
-	  
+
 		expect(mockSetPendingJson).toHaveBeenCalledWith(expect.any(Function));
 		const callback = mockSetPendingJson.mock.calls[0][0];
 		const next = callback([]);
-	  
+
 		const item = next[0];
 		expect(item.gasPrice).toBe("0");
 		expect(item.gas).toBe("0");
 		expect(item.meta?.explorerLink).toBe("");
-	  });
+	});
 
-	  it("should cover wallet-not-found path in buildPendingForUI and calls blockHash()", () => {
+	it("should cover wallet-not-found path in buildPendingForUI and calls blockHash()", () => {
 		mockPendingJson.push({
-		  createdAt: new Date().toISOString(),
-		  data: "",
-		  from: "ADDRESS_FROM",
-		  gas: 0,
-		  gasPrice: "0",
-		  hash: "hNF",
-		  meta: { address: "ADDRESS_FROM_2", networkId: "mainsail" },
-		  network: 0,
-		  nonce: "2",
-		  r: "",
-		  s: "",
-		  senderPublicKey: "",
-		  to: "ADDRESS_TO",
-		  v: 0,
-		  value: "20",
+			createdAt: new Date().toISOString(),
+			data: "",
+			from: "ADDRESS_FROM",
+			gas: 0,
+			gasPrice: "0",
+			hash: "hNF",
+			meta: { address: "ADDRESS_FROM_2", networkId: "mainsail" },
+			network: 0,
+			nonce: "2",
+			r: "",
+			s: "",
+			senderPublicKey: "",
+			to: "ADDRESS_TO",
+			v: 0,
+			value: "20",
 		});
-	  
+
 		const { result } = renderHook(() => usePendingTransactions());
-	  
+
 		const wallets: any[] = [];
 		const rows = result.current.buildPendingForUI([address], wallets);
 		expect(rows).toHaveLength(1);
-	  
+
 		const row = rows[0];
 		expect(row.wallet()).toBeUndefined();
 		expect(row.network()).toBeUndefined();
@@ -319,5 +319,5 @@ describe("usePendingTransactions", () => {
 		expect(row.isSent()).toBe(false);
 		expect(row.blockHash()).toBeUndefined();
 		expect(row.explorerLink()).toBe("");
-	  });
+	});
 });
