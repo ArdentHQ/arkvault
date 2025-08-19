@@ -253,4 +253,8 @@ export class ExtendedSignedTransactionData {
 			.exchangeRates()
 			.exchange(this.wallet().currency(), this.wallet().exchangeCurrency(), timestamp, value);
 	}
+
+	public isSuccess(): boolean {
+		return false;
+	}
 }
