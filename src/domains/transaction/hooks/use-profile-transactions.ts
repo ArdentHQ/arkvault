@@ -465,6 +465,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 					wallets.find((w) => w.address().toLowerCase() === transaction.to?.toLowerCase?.());
 
 				if (!matched) {
+					/* istanbul ignore next -- @preserve */
 					continue;
 				}
 

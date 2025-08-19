@@ -194,10 +194,10 @@ describe("usePendingTransactions", () => {
 		expect(filtered[0].hash).toBe("hash456");
 	});
 
-	it("buildPendingForUI: adapts persisted JSON into confirmed-like rows", () => {
+	it("should adapt persisted JSON into confirmed-like rows", () => {
 		mockPendingJson.push({
 			createdAt: new Date().toISOString(),
-			data: "0x",
+			data: "",
 			from: "from-1",
 			gas: 0,
 			gasPrice: "0",
@@ -232,5 +232,92 @@ describe("usePendingTransactions", () => {
 		expect(row.from()).toBe("from-1");
 		expect(row.explorerLink()).toBe("https://explorer/tx/h1");
 		expect(typeof row.timestamp().toUNIX()).toBe("number");
+		expect(row.isTransfer()).toBe(true);
+		expect(row.isReceived()).toBe(true);
+		expect(row.isSent()).toBe(false);
+		expect(row.isConfirmed()).toBe(false);
+		expect(row.isFailed()).toBe(false);
+		expect(row.isSuccess()).toBe(false);
+		expect(row.isUnvote()).toBe(false);
+		expect(row.isUpdateValidator()).toBe(false);
+		expect(row.isUsernameRegistration()).toBe(false);
+		expect(row.isUsernameResignation()).toBe(false);
+		expect(row.isValidatorRegistration()).toBe(false);
+		expect(row.isValidatorResignation()).toBe(false);
+		expect(row.isVote()).toBe(false);
+		expect(row.isVoteCombination()).toBe(false);
+		expect(row.network()).toStrictEqual({ id: "mainsail" });
+		expect(row.nonce()).toStrictEqual(BigNumber.make("1"));
+		expect(row.recipients()).toEqual([]);
+		expect(row.isMultiPayment()).toBe(false);
+		expect(row.isReturn()).toBe(false);
+		expect(row.confirmations()).toStrictEqual(BigNumber.make("0"));
+		expect(row.convertedAmount()).toBe(0);
+		expect(row.convertedTotal()).toBe(0);
+		expect(row.fee()).toStrictEqual(BigNumber.make("0"));
+		expect(row.total()).toStrictEqual(BigNumber.make("10"));
+		expect(row.type()).toBe("transfer");
+		expect(row.value()).toStrictEqual(BigNumber.make("10"));
+		expect(row.wallet()).toStrictEqual(wallets[0]);
 	});
+
+	it("should cover fallbacks when gasLimit, gasPrice, and explorerLink are missing", () => {
+		const { result } = renderHook(() => usePendingTransactions());
+	  
+		act(() => {
+		  result.current.addPendingTransactionFromUnconfirmed({
+			data: "",
+			from: "ADDRESS_FROM",
+			hash: "hashDEF",
+			networkId: "mainsail",
+			nonce: "8",
+			to: "ADDRESS_TO",
+			value: "99",
+			walletAddress: address,
+		  } as any);
+		});
+	  
+		expect(mockSetPendingJson).toHaveBeenCalledWith(expect.any(Function));
+		const callback = mockSetPendingJson.mock.calls[0][0];
+		const next = callback([]);
+	  
+		const item = next[0];
+		expect(item.gasPrice).toBe("0");
+		expect(item.gas).toBe("0");
+		expect(item.meta?.explorerLink).toBe("");
+	  });
+
+	  it("should cover wallet-not-found path in buildPendingForUI and calls blockHash()", () => {
+		mockPendingJson.push({
+		  createdAt: new Date().toISOString(),
+		  data: "",
+		  from: "ADDRESS_FROM",
+		  gas: 0,
+		  gasPrice: "0",
+		  hash: "hNF",
+		  meta: { address: "ADDRESS_FROM_2", networkId: "mainsail" },
+		  network: 0,
+		  nonce: "2",
+		  r: "",
+		  s: "",
+		  senderPublicKey: "",
+		  to: "ADDRESS_TO",
+		  v: 0,
+		  value: "20",
+		});
+	  
+		const { result } = renderHook(() => usePendingTransactions());
+	  
+		const wallets: any[] = [];
+		const rows = result.current.buildPendingForUI([address], wallets);
+		expect(rows).toHaveLength(1);
+	  
+		const row = rows[0];
+		expect(row.wallet()).toBeUndefined();
+		expect(row.network()).toBeUndefined();
+		expect(row.isReceived()).toBe(false);
+		expect(row.isSent()).toBe(false);
+		expect(row.blockHash()).toBeUndefined();
+		expect(row.explorerLink()).toBe("");
+	  });
 });
