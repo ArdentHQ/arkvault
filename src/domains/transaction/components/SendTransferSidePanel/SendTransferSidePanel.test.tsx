@@ -93,15 +93,6 @@ let wallet: Contracts.IReadWriteWallet;
 let firstWalletAddress: string;
 let resetProfileNetworksMock: () => void;
 
-const ComponentWrapper = ({ children }: { children: React.ReactNode }) => {
-	const form = useForm({});
-
-	return (
-		<StepsProvider activeStep={1} steps={4}>
-			<FormProvider {...form}>{children}</FormProvider>
-		</StepsProvider>
-	);
-};
 
 const selectFirstRecipient = () => userEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
 const selectRecipient = () =>
@@ -111,6 +102,22 @@ const continueButton = () => screen.getByTestId("SendTransfer__continue-button")
 const sendButton = () => screen.getByTestId("SendTransfer__send-button");
 const reviewStepID = "SendTransfer__review-step";
 const formStepID = "SendTransfer__form-step";
+
+// Select sender address via shared SelectAddressDropdown
+const selectNthSenderAddress = async (index = 0) => {
+	const container = screen.getByTestId("sender-address");
+	await userEvent.click(within(container).getByTestId("SelectDropdown__input"));
+
+	const elementTestId = `SelectDropdown__option--${index}`;
+
+	await waitFor(() => {
+		expect(screen.getByTestId(elementTestId)).toBeInTheDocument();
+	});
+
+	await userEvent.click(screen.getByTestId(elementTestId));
+};
+
+const selectFirstSenderAddress = async () => selectNthSenderAddress(0);
 
 describe("SendTransferSidePanel", () => {
 	beforeAll(async () => {
@@ -167,6 +174,9 @@ describe("SendTransferSidePanel", () => {
 		});
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
+
+		// Select a valid sender address before proceeding
+		await selectFirstSenderAddress();
 
 		await selectRecipient();
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeInTheDocument();
