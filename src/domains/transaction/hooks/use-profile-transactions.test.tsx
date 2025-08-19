@@ -5,6 +5,7 @@ import { useProfileTransactions } from "./use-profile-transactions";
 import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
 import { env, getDefaultProfileId, syncValidators } from "@/utils/testing-library";
 import * as hooksMock from "@/app/hooks";
+import { PendingTransactionsService } from "@/app/lib/mainsail/pending-transactions.service";
 import { expect, vi } from "vitest";
 import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
@@ -938,5 +939,305 @@ describe("useProfileTransactions", () => {
 
 		pendingSpy.mockRestore();
 		allMock.mockRestore();
+	});
+	
+	it("should fall back to 15 000 block time and logs when milestone access throws", async () => {
+		const wallets = profile.wallets().values();
+		const first = wallets[0];
+	
+		const milestoneSpy = vi
+			.spyOn(first.network(), "milestone")
+			.mockImplementation(() => {
+				throw new Error("boom");
+			});
+	
+		const consoleSpy = vi.spyOn(console, "error").mockImplementation(() => {});
+		const setIntervalSpy = vi.spyOn(globalThis, "setInterval");
+	
+		renderHook(() => useProfileTransactions({ profile, wallets }), { wrapper });
+	
+		await waitFor(() => expect(setIntervalSpy).toHaveBeenCalled());
+		expect(setIntervalSpy.mock.calls[0]?.[1]).toBe(15_000);
+		expect(consoleSpy).toHaveBeenCalledWith("Failed to get block time");
+	
+		milestoneSpy.mockRestore();
+		consoleSpy.mockRestore();
+		setIntervalSpy.mockRestore();
+	});
+	
+	it("should not schedule unconfirmed polling when service init fails", async () => {
+		const wallets = profile.wallets().values();
+		const first = wallets[0];
+	  
+		const useSynchronizerSpy = vi
+		  .spyOn(hooksMock, "useSynchronizer")
+		  .mockReturnValue({ start: vi.fn(), stop: vi.fn() } as any);
+	  
+		const configSpy = vi
+		  .spyOn(first.network(), "config")
+		  .mockReturnValue({
+			host: () => {
+			  throw new Error("host failed");
+			},
+		  } as any);
+	  
+		const setIntervalSpy = vi.spyOn(globalThis, "setInterval");
+	  
+		renderHook(() => useProfileTransactions({ profile, wallets }), { wrapper });
+	  
+		expect(setIntervalSpy).not.toHaveBeenCalled();
+	  
+		useSynchronizerSpy.mockRestore();
+		configSpy.mockRestore();
+		setIntervalSpy.mockRestore();
+	});
+
+	it("should add mapped pending transaction for matching address", async () => {
+		const wallets = profile.wallets().values();
+		const walletA = wallets[0];
+		const syncSpy = vi.spyOn(hooksMock, "useSynchronizer").mockReturnValue({ start: vi.fn(), stop: vi.fn() } as any);
+	
+		const listSpy = vi.spyOn(PendingTransactionsService.prototype, "listUnconfirmed").mockResolvedValue({
+			results: [
+				{
+					hash: "MATCH_FROM",
+					from: walletA.address(),
+					to: "EXTERNAL_TO",
+					nonce: 7,
+					value: "123",
+					data: "0xabc",
+					gas: 21000,
+					gasPrice: 5,
+				},
+				{
+					hash: "NO_MATCH",
+					from: "EXT1",
+					to: "EXT2",
+					nonce: 8,
+					value: "1",
+					data: "0x0",
+					gas: 1000,
+					gasPrice: 1,
+				},
+			],
+		});
+	
+		const pendingHook = await import("@/domains/transaction/hooks/use-pending-transactions");
+		const addPendingSpy = vi.fn();
+		const pendingSpy = vi.spyOn(pendingHook, "usePendingTransactions").mockReturnValue({
+			addPendingTransactionFromUnconfirmed: addPendingSpy,
+			buildPendingForUI: vi.fn().mockReturnValue([]),
+			pendingJson: [],
+			removePendingTransaction: vi.fn(),
+		} as any);
+		
+		const setIntervalSpy = vi.spyOn(globalThis, "setInterval");
+		
+		renderHook(() => useProfileTransactions({ profile, wallets: [walletA] }), { wrapper });
+
+		await waitFor(() => expect(setIntervalSpy).toHaveBeenCalled());
+
+		const intervalCallback = setIntervalSpy.mock.calls[0]?.[0] as () => Promise<void>;
+
+		await intervalCallback();
+	
+		expect(listSpy).toHaveBeenCalledWith({
+			from: [walletA.address()],
+			to: [walletA.address()],
+		});
+	
+		expect(addPendingSpy).toHaveBeenCalledTimes(1);
+		expect(addPendingSpy).toHaveBeenCalledWith(
+			expect.objectContaining({
+				data: "0xabc",
+				from: walletA.address(),
+				gasLimit: "21000",
+				gasPrice: "5",
+				hash: "MATCH_FROM",
+				networkId: walletA.networkId(),
+				nonce: 7,
+				to: "EXTERNAL_TO",
+				value: "123",
+				walletAddress: walletA.address(),
+			}),
+		);
+	
+		syncSpy.mockRestore();
+		listSpy.mockRestore();
+		pendingSpy.mockRestore();
+		setIntervalSpy.mockRestore();
+	});
+
+	it("should sort by date using 0 when a pending transaction has no timestamp()", async () => {
+		const wallets = profile.wallets().values();
+		const walletA = wallets[0];
+	
+		const allMock = vi.spyOn(profile.transactionAggregate(), "all").mockResolvedValue({
+			hasMorePages: () => false,
+			items: () => [],
+		});
+	
+		const pNone = {
+			isSent: () => false,
+			isReceived: () => true,
+			type: () => "transfer",
+			timestamp: () => undefined,
+		};
+		const pNow = {
+			isSent: () => false,
+			isReceived: () => true,
+			type: () => "transfer",
+			timestamp: () => DateTime.make(Date.now()),
+		};
+	
+		const pendingHook = await import("@/domains/transaction/hooks/use-pending-transactions");
+		const pendingSpy = vi.spyOn(pendingHook, "usePendingTransactions").mockReturnValue({
+			addPendingTransactionFromUnconfirmed: vi.fn(),
+			buildPendingForUI: vi.fn().mockImplementation(() => [pNone, pNow]),
+			pendingJson: [],
+			removePendingTransaction: vi.fn(),
+		} as any);
+	
+		const { result } = renderHook(() => useProfileTransactions({ profile, wallets: [walletA] }), { wrapper });
+	
+		act(() => {
+			result.current.setSortBy({ column: "date", desc: true });
+		});
+		act(() => {
+			result.current.updateFilters({ activeMode: "all" });
+		});
+		await waitFor(() => expect(result.current.isLoadingTransactions).toBe(false));
+		expect(result.current.transactions[0]).toBe(pNow);
+	
+		act(() => {
+			result.current.setSortBy({ column: "date", desc: false });
+		});
+		await waitFor(() => expect(result.current.transactions[0]).toBe(pNone));
+	
+		pendingSpy.mockRestore();
+		allMock.mockRestore();
+	});	
+
+	it("should fall back block time to 15 000 when milestone is not a finite number", async () => {
+		const wallets = profile.wallets().values();
+		const first = wallets[0];
+	
+		const milestoneSpy = vi.spyOn(first.network(), "milestone").mockReturnValue({
+			timeouts: { blockTime: "fast" as any },
+		} as any);
+	
+		const setIntervalSpy = vi.spyOn(globalThis, "setInterval");
+		const consoleSpy = vi.spyOn(console, "error").mockImplementation(() => {});
+	
+		const listSpy = vi.spyOn(PendingTransactionsService.prototype, "listUnconfirmed").mockResolvedValue({ results: [] });
+		const pendingHook = await import("@/domains/transaction/hooks/use-pending-transactions");
+		const pendingSpy = vi.spyOn(pendingHook, "usePendingTransactions").mockReturnValue({
+			addPendingTransactionFromUnconfirmed: vi.fn(),
+			buildPendingForUI: vi.fn().mockReturnValue([]),
+			pendingJson: [],
+			removePendingTransaction: vi.fn(),
+		} as any);
+	
+		renderHook(() => useProfileTransactions({ profile, wallets }), { wrapper });
+	
+		await waitFor(() => expect(setIntervalSpy).toHaveBeenCalled());
+		expect(setIntervalSpy.mock.calls[0]?.[1]).toBe(15_000);
+		expect(consoleSpy).not.toHaveBeenCalledWith("Failed to get block time");
+	
+		milestoneSpy.mockRestore();
+		setIntervalSpy.mockRestore();
+		consoleSpy.mockRestore();
+		listSpy.mockRestore();
+		pendingSpy.mockRestore();
+	});
+	
+	it("should not add pending transactions when listUnconfirmed returns no results", async () => {
+		const wallets = profile.wallets().values();
+		const walletA = wallets[0];
+	
+		const syncSpy = vi.spyOn(hooksMock, "useSynchronizer").mockReturnValue({ start: vi.fn(), stop: vi.fn() } as any);
+	
+		const listSpy = vi
+			.spyOn(PendingTransactionsService.prototype, "listUnconfirmed")
+			.mockResolvedValue({} as any);
+	
+		const pendingHook = await import("@/domains/transaction/hooks/use-pending-transactions");
+		const addPendingSpy = vi.fn();
+		const pendingSpy = vi.spyOn(pendingHook, "usePendingTransactions").mockReturnValue({
+			addPendingTransactionFromUnconfirmed: addPendingSpy,
+			buildPendingForUI: vi.fn().mockReturnValue([]),
+			pendingJson: [],
+			removePendingTransaction: vi.fn(),
+		} as any);
+	
+		const setIntervalSpy = vi.spyOn(globalThis, "setInterval");
+	
+		renderHook(() => useProfileTransactions({ profile, wallets: [walletA] }), { wrapper });
+	
+		await waitFor(() => expect(setIntervalSpy).toHaveBeenCalled());
+	
+		expect(addPendingSpy).not.toHaveBeenCalled();
+	
+		syncSpy.mockRestore();
+		listSpy.mockRestore();
+		pendingSpy.mockRestore();
+		setIntervalSpy.mockRestore();
+	});
+	
+	it("should map unconfirmed transaction with missing gas/gasPrice to '0' strings", async () => {
+		const wallets = profile.wallets().values();
+		const walletA = wallets[0];
+	
+		const syncSpy = vi.spyOn(hooksMock, "useSynchronizer").mockReturnValue({ start: vi.fn(), stop: vi.fn() } as any);
+	
+		const listSpy = vi.spyOn(PendingTransactionsService.prototype, "listUnconfirmed").mockResolvedValue({
+			results: [
+				{
+					hash: "NO_GAS_FIELDS",
+					from: walletA.address(),
+					to: "ADDRESS_TO",
+					nonce: 3,
+					value: "42",
+					data: "0x",
+				},
+			],
+		});
+	
+		const pendingHook = await import("@/domains/transaction/hooks/use-pending-transactions");
+		const addPendingSpy = vi.fn();
+		const pendingSpy = vi.spyOn(pendingHook, "usePendingTransactions").mockReturnValue({
+			addPendingTransactionFromUnconfirmed: addPendingSpy,
+			buildPendingForUI: vi.fn().mockReturnValue([]),
+			pendingJson: [],
+			removePendingTransaction: vi.fn(),
+		} as any);
+	
+		const setIntervalSpy = vi.spyOn(globalThis, "setInterval");
+	
+		renderHook(() => useProfileTransactions({ profile, wallets: [walletA] }), { wrapper });
+	
+		await waitFor(() => expect(setIntervalSpy).toHaveBeenCalled());
+		const cb = setIntervalSpy.mock.calls[0]?.[0] as () => Promise<void>;
+		await cb();
+	
+		expect(addPendingSpy).toHaveBeenCalledWith(
+			expect.objectContaining({
+				hash: "NO_GAS_FIELDS",
+				from: walletA.address(),
+				to: "ADDRESS_TO",
+				nonce: 3,
+				value: "42",
+				data: "0x",
+				gasLimit: "0",
+				gasPrice: "0",
+				walletAddress: walletA.address(),
+				networkId: walletA.networkId(),
+			}),
+		);
+	
+		syncSpy.mockRestore();
+		listSpy.mockRestore();
+		pendingSpy.mockRestore();
+		setIntervalSpy.mockRestore();
 	});
 });

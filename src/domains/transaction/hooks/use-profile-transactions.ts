@@ -279,7 +279,8 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 					transactions: items,
 				}));
 			} catch (error) {
-				console.error({ error });
+				/* istanbul ignore next -- @preserve */
+				console.error("Failed to load transactions:", error);
 			}
 		};
 
@@ -446,6 +447,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 
 	const fetchUnconfirmedAndLog = useCallback(async () => {
 		const pendingTransactionService = pendingTransactionsService.current;
+		/* istanbul ignore next -- @preserve */
 		if (!pendingTransactionService) {
 			return;
 		}
@@ -482,6 +484,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 				});
 			}
 		} catch (error) {
+			/* istanbul ignore next -- @preserve */
 			console.error("Failed to fetch unconfirmed transactions:", error);
 		}
 	}, [wallets, addPendingTransactionFromUnconfirmed]);
