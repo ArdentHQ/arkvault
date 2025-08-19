@@ -155,18 +155,16 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 
 		const pendingAll = buildPendingForUI(walletAddresses, wallets);
 
+		const pendingMine = pendingAll.filter((tx) => tx.isSent() || tx.isReceived());
+
 		const hasAllSelected = selectedTransactionTypes.length === allTransactionTypes.length;
 		const pendingFilteredByType = hasAllSelected
-			? pendingAll
-			: pendingAll.filter((tx) => selectedTransactionTypes.includes(tx.type()));
+			? pendingMine
+			: pendingMine.filter((tx) => selectedTransactionTypes.includes(tx.type()));
 
 		const pendingFilteredByMode = pendingFilteredByType.filter((tx) => {
-			if (activeMode === "sent") {
-				return tx.isSent();
-			}
-			if (activeMode === "received") {
-				return tx.isReceived();
-			}
+			if (activeMode === "sent") return tx.isSent();
+			if (activeMode === "received") return tx.isReceived();
 			return true;
 		});
 
@@ -181,12 +179,8 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 			}
 
 			if (sortBy.desc) {
-				if ((a as any).isPending && !(b as any).isPending) {
-					return -1;
-				}
-				if (!(a as any).isPending && (b as any).isPending) {
-					return 1;
-				}
+				if ((a as any).isPending && !(b as any).isPending) return -1;
+				if (!(a as any).isPending && (b as any).isPending) return 1;
 			}
 
 			return 0;
@@ -200,6 +194,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 		allTransactionTypes.length,
 		buildPendingForUI,
 	]);
+
 
 	const selectedWalletAddresses = wallets.map((wallet) => wallet.address()).join("-");
 
