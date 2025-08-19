@@ -8,9 +8,9 @@ export const useConfirmedTransaction = ({
 }: {
 	wallet: Contracts.IReadWriteWallet;
 	transactionId: string;
-}): { isConfirmed: boolean; transaction?: ExtendedConfirmedTransactionData; } => {
+}): { isConfirmed: boolean; transaction?: ExtendedConfirmedTransactionData } => {
 	const [isConfirmed, setIsConfirmed] = useState(false);
-	const [transaction, setTransaction] = useState<ExtendedConfirmedTransactionData|undefined>(undefined);
+	const [transaction, setTransaction] = useState<ExtendedConfirmedTransactionData | undefined>(undefined);
 
 	useEffect(() => {
 		const checkConfirmed = (): void => {
