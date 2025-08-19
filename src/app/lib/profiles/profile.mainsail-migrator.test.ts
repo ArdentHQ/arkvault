@@ -669,7 +669,6 @@ describe("ProfileMainsailMigrator", () => {
 			expect(migratedContact.id).toBe(originalId);
 			expect(migratedContact.id).toBe(Object.keys(result.contacts)[0]);
 		});
-
 		it("should skip contact addresses with non-ark networks", async () => {
 			const data: IProfileData = {
 				contacts: {
@@ -933,6 +932,71 @@ describe("ProfileMainsailMigrator", () => {
 				"Failed to fetch public key for address AdViMQwcwquCP8fbY9eczXzTX7yUs2uMw4: HTTP request failed with status 500",
 			);
 		});
+	});
+
+	it("should merge contacts that resolve to the same migrated address, keeping the first contact's data", async () => {
+		// Override devnet handler to return the same publicKey as the known mainnet address
+		server.use(
+			http.get("https://ark-test.arkvault.io/api/wallets/:address", ({ params }) => {
+				const address = params.address as string;
+				if (address === "DFAWxzGKC3nvqQ5CqRXTqAi8593Jq1gPkt") {
+					// Same public key as AdViMQwcwquCP8fbY9eczXzTX7yUs2uMw4
+					return HttpResponse.json({
+						data: { publicKey: "03300acecfd7cfc5987ad8cc70bf51c5e93749f76103a02eaf4a1d143729b86a00" },
+					});
+				}
+
+				return new HttpResponse(null, { status: 404 });
+			}),
+		);
+
+		const data: IProfileData = {
+			contacts: {
+				"contact-1": {
+					addresses: [
+						{
+							address: "AdViMQwcwquCP8fbY9eczXzTX7yUs2uMw4",
+							id: "addr-dup-1",
+							network: "ark.mainnet",
+						},
+					],
+					id: "contact-1",
+					name: "First",
+					starred: true,
+				},
+				"contact-2": {
+					addresses: [
+						{
+							address: "DFAWxzGKC3nvqQ5CqRXTqAi8593Jq1gPkt",
+							id: "addr-dup-2",
+							network: "ark.devnet",
+						},
+					],
+					id: "contact-2",
+					name: "Second",
+					starred: false,
+				},
+			},
+			data: {},
+			exchangeTransactions: {},
+			hosts: {},
+			id: "test-profile",
+			networks: {},
+			notifications: {},
+			settings: {},
+			wallets: {},
+		};
+
+		const result = await migrator.migrate(profile, data);
+
+		const contactIds = Object.keys(result.contacts);
+		expect(contactIds).toHaveLength(1);
+		expect(contactIds[0]).toBe("contact-1");
+		const merged = result.contacts["contact-1"];
+		expect(merged.name).toBe("First");
+		expect(merged.starred).toBe(true);
+		expect(merged.addresses).toHaveLength(1);
+		expect(merged.addresses[0].address).toMatch(/^0x[a-fA-F0-9]{40}$/);
 	});
 
 	it("should merge contacts that resolve to the same migrated address, keeping the first contact's data", async () => {
