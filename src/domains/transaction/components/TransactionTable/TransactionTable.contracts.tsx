@@ -1,7 +1,7 @@
 import { Contracts, DTO } from "@/app/lib/profiles";
 import { SortBy } from "@/app/components/Table";
 
-export type ExtendedTransactionDTO = DTO.ExtendedConfirmedTransactionData|DTO.ExtendedSignedTransactionData;
+export type ExtendedTransactionDTO = DTO.ExtendedConfirmedTransactionData | DTO.ExtendedSignedTransactionData;
 
 export interface TransactionTableProperties {
 	transactions: ExtendedTransactionDTO[];
