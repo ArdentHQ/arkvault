@@ -133,6 +133,9 @@ describe("SendTransferSidePanel", () => {
 		await syncFees(profile);
 
 		server.use(
+			requestMock(`https://dwallets-evm.mainsailhq.com/api/blocks*`, {
+				data: {},
+			}),
 			requestMock(
 				`https://dwallets-evm.mainsailhq.com/api/transactions/${transactionFixture.data.hash}`,
 				transactionFixture,
@@ -140,15 +143,6 @@ describe("SendTransferSidePanel", () => {
 			requestMock("https://dwallets-evm.mainsailhq.com/api/transactions", transactionsFixture, {
 				query: { address: wallet.address() },
 			}),
-			requestMock(`https://dwallets-evm.mainsailhq.com/api/blocks/${transactionFixture.data.blockHash}`, {
-				data: {},
-			}),
-			requestMock(
-				`https://dwallets-evm.mainsailhq.com/api/blocks/f7054cf37ce49e17cf2b06a0a868cac183bf78e2f1b4a6fe675f2412364fe0ae`,
-				{
-					data: {},
-				},
-			),
 			requestMock("https://ark-test-musig.arkvault.io/", { result: [] }, { method: "post" }),
 			requestMock("https://ark-live.arkvault.io/api/node/fees", nodeFeesFixture),
 		);
