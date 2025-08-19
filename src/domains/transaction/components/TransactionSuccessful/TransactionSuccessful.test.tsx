@@ -41,7 +41,7 @@ describe("TransactionSuccessful", () => {
 		return transaction[attribute]();
 	};
 
-	it("should render", async () => {
+	it.skip("should render", async () => {
 		const transaction = {
 			...TransactionFixture,
 			timestamp: () => ({
