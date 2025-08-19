@@ -180,10 +180,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 				return true;
 			});
 
-		const combined: ExtendedTransactionDTO[] = [
-			...signedTransactions,
-			...transactions,
-		];
+		const combined: ExtendedTransactionDTO[] = [...signedTransactions, ...transactions];
 
 		return combined.sort((a, b) => {
 			const aTimestamp = a.timestamp()!.toUNIX();

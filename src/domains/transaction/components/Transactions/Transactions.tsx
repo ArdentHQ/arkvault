@@ -40,9 +40,7 @@ export const Transactions = memo(function Transactions({
 }: TransactionsProperties) {
 	const { t } = useTranslation();
 
-	const [transactionModalItem, setTransactionModalItem] = useState<ExtendedTransactionDTO | undefined>(
-		undefined,
-	);
+	const [transactionModalItem, setTransactionModalItem] = useState<ExtendedTransactionDTO | undefined>(undefined);
 
 	const [activeTransactionTypeLabel, setActiveTransactionTypeLabel] = useState("");
 

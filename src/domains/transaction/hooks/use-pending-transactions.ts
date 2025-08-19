@@ -42,11 +42,7 @@ export const usePendingTransactions = (): UsePendingTransactionsReturn => {
 
 	const removePendingTransaction = useCallback(
 		(hash: string) => {
-			setPendingTransactions((prev) =>
-				prev.filter(({ transaction }) => {
-					return transaction.signedData.hash !== hash;
-				}),
-			);
+			setPendingTransactions((prev) => prev.filter(({ transaction }) => transaction.signedData.hash !== hash));
 		},
 		[setPendingTransactions],
 	);
