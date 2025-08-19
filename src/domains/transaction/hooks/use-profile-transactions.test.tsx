@@ -747,9 +747,9 @@ describe("useProfileTransactions", () => {
 		const pendingHook = await import("@/domains/transaction/hooks/use-pending-transactions");
 		const pendingSpy = vi.spyOn(pendingHook, "usePendingTransactions").mockReturnValue({
 			addPendingTransactionFromUnconfirmed: vi.fn(),
-			// eslint-disable-next-line @typescript-eslint/no-unused-vars
 			buildPendingForUI: vi
 				.fn()
+				// eslint-disable-next-line @typescript-eslint/no-unused-vars
 				.mockImplementation((_addresses: string[], _wallets: any[]) => [
 					wrapPending(older, [walletA.address()], [walletA]),
 					wrapPending(newer, [walletA.address()], [walletA]),
