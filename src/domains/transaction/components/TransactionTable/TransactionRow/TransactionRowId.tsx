@@ -1,5 +1,4 @@
 import React from "react";
-import { DTO } from "@/app/lib/profiles";
 
 import { Link } from "@/app/components/Link";
 import { useBreakpoint } from "@/app/hooks";
