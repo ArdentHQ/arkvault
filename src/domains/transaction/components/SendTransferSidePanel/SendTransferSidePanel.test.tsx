@@ -93,7 +93,6 @@ let wallet: Contracts.IReadWriteWallet;
 let firstWalletAddress: string;
 let resetProfileNetworksMock: () => void;
 
-
 const selectFirstRecipient = () => userEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
 const selectRecipient = () =>
 	userEvent.click(within(screen.getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"));
