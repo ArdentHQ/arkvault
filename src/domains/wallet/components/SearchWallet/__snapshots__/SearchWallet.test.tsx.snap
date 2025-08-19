@@ -200,12 +200,13 @@ exports[`SearchWallet > should render 1`] = `
                 <div
                   class="group cursor-pointer items-center rounded-lg border transition-all border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 hover:bg-theme-navy-100 dark:hover:bg-theme-dark-700 dim-hover:bg-theme-dim-700"
                   data-testid="ReceiverItem"
+                  tabindex="0"
                 >
                   <div
                     class="flex items-center px-4 py-3 duration-150"
                   >
                     <div
-                      class="border-theme-primary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold"
+                      class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 group-hover:dark:border-theme-dark-500 group-hover:dim:border-theme-dim-500"
                     >
                       <div
                         class="flex w-1/2 min-w-0 flex-col space-y-2 truncate"
@@ -224,6 +225,45 @@ exports[`SearchWallet > should render 1`] = `
                           >
                             0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                           </span>
+                          <button
+                            class="ring-focus relative cursor-pointer focus:outline-hidden"
+                            data-ring-focus-margin="-m-1"
+                            data-testid="clipboard-icon__wrapper"
+                            type="button"
+                          >
+                            <div
+                              class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
+                            >
+                              <div
+                                style="height: 16px; width: 16px;"
+                              >
+                                <svg
+                                  id="copy"
+                                  style="height: 100%; width: 100%;"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <g
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  >
+                                    <path
+                                      d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                    />
+                                    <path
+                                      d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                    />
+                                  </g>
+                                </svg>
+                              </div>
+                            </div>
+                          </button>
                         </div>
                       </div>
                       <div
@@ -240,31 +280,31 @@ exports[`SearchWallet > should render 1`] = `
                     <div
                       class="flex w-[72px] min-w-[72px] flex-1 shrink-0 items-center justify-center pl-4"
                     >
-                      <div>
-                        <button
-                          class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500 dim:group-hover:text-theme-navy-700 text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600"
-                          data-testid="SearchWalletListItem__select-0"
-                          type="button"
+                      <button
+                        class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500 dim:group-hover:text-theme-navy-700 text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600"
+                        data-testid="SearchWalletListItem__select-0"
+                        tabindex="-1"
+                        type="button"
+                      >
+                        <div
+                          class="flex items-center gap-2"
                         >
-                          <div
-                            class="flex items-center gap-2"
-                          >
-                            Select
-                          </div>
-                        </button>
-                      </div>
+                          Select
+                        </div>
+                      </button>
                     </div>
                   </div>
                 </div>
                 <div
                   class="group cursor-pointer items-center rounded-lg border transition-all border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 hover:bg-theme-navy-100 dark:hover:bg-theme-dark-700 dim-hover:bg-theme-dim-700"
                   data-testid="ReceiverItem"
+                  tabindex="0"
                 >
                   <div
                     class="flex items-center px-4 py-3 duration-150"
                   >
                     <div
-                      class="border-theme-primary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold"
+                      class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 group-hover:dark:border-theme-dark-500 group-hover:dim:border-theme-dim-500"
                     >
                       <div
                         class="flex w-1/2 min-w-0 flex-col space-y-2 truncate"
@@ -283,6 +323,45 @@ exports[`SearchWallet > should render 1`] = `
                           >
                             0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54
                           </span>
+                          <button
+                            class="ring-focus relative cursor-pointer focus:outline-hidden"
+                            data-ring-focus-margin="-m-1"
+                            data-testid="clipboard-icon__wrapper"
+                            type="button"
+                          >
+                            <div
+                              class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
+                            >
+                              <div
+                                style="height: 16px; width: 16px;"
+                              >
+                                <svg
+                                  id="copy"
+                                  style="height: 100%; width: 100%;"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <g
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  >
+                                    <path
+                                      d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                    />
+                                    <path
+                                      d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                    />
+                                  </g>
+                                </svg>
+                              </div>
+                            </div>
+                          </button>
                         </div>
                       </div>
                       <div
@@ -299,19 +378,18 @@ exports[`SearchWallet > should render 1`] = `
                     <div
                       class="flex w-[72px] min-w-[72px] flex-1 shrink-0 items-center justify-center pl-4"
                     >
-                      <div>
-                        <button
-                          class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500 dim:group-hover:text-theme-navy-700 text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600"
-                          data-testid="SearchWalletListItem__select-1"
-                          type="button"
+                      <button
+                        class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500 dim:group-hover:text-theme-navy-700 text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600"
+                        data-testid="SearchWalletListItem__select-1"
+                        tabindex="-1"
+                        type="button"
+                      >
+                        <div
+                          class="flex items-center gap-2"
                         >
-                          <div
-                            class="flex items-center gap-2"
-                          >
-                            Select
-                          </div>
-                        </button>
-                      </div>
+                          Select
+                        </div>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -525,12 +603,13 @@ exports[`SearchWallet > should render compact on md screen 1`] = `
                 <div
                   class="group cursor-pointer items-center rounded-lg border transition-all border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 hover:bg-theme-navy-100 dark:hover:bg-theme-dark-700 dim-hover:bg-theme-dim-700"
                   data-testid="ReceiverItem"
+                  tabindex="0"
                 >
                   <div
                     class="flex items-center px-4 py-3 duration-150"
                   >
                     <div
-                      class="border-theme-primary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold"
+                      class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 group-hover:dark:border-theme-dark-500 group-hover:dim:border-theme-dim-500"
                     >
                       <div
                         class="flex w-1/2 min-w-0 flex-col space-y-2 truncate"
@@ -549,6 +628,45 @@ exports[`SearchWallet > should render compact on md screen 1`] = `
                           >
                             0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                           </span>
+                          <button
+                            class="ring-focus relative cursor-pointer focus:outline-hidden"
+                            data-ring-focus-margin="-m-1"
+                            data-testid="clipboard-icon__wrapper"
+                            type="button"
+                          >
+                            <div
+                              class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
+                            >
+                              <div
+                                style="height: 16px; width: 16px;"
+                              >
+                                <svg
+                                  id="copy"
+                                  style="height: 100%; width: 100%;"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <g
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  >
+                                    <path
+                                      d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                    />
+                                    <path
+                                      d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                    />
+                                  </g>
+                                </svg>
+                              </div>
+                            </div>
+                          </button>
                         </div>
                       </div>
                       <div
@@ -565,31 +683,31 @@ exports[`SearchWallet > should render compact on md screen 1`] = `
                     <div
                       class="flex w-[72px] min-w-[72px] flex-1 shrink-0 items-center justify-center pl-4"
                     >
-                      <div>
-                        <button
-                          class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500 dim:group-hover:text-theme-navy-700 text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600"
-                          data-testid="SearchWalletListItem__select-0"
-                          type="button"
+                      <button
+                        class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500 dim:group-hover:text-theme-navy-700 text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600"
+                        data-testid="SearchWalletListItem__select-0"
+                        tabindex="-1"
+                        type="button"
+                      >
+                        <div
+                          class="flex items-center gap-2"
                         >
-                          <div
-                            class="flex items-center gap-2"
-                          >
-                            Select
-                          </div>
-                        </button>
-                      </div>
+                          Select
+                        </div>
+                      </button>
                     </div>
                   </div>
                 </div>
                 <div
                   class="group cursor-pointer items-center rounded-lg border transition-all border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 hover:bg-theme-navy-100 dark:hover:bg-theme-dark-700 dim-hover:bg-theme-dim-700"
                   data-testid="ReceiverItem"
+                  tabindex="0"
                 >
                   <div
                     class="flex items-center px-4 py-3 duration-150"
                   >
                     <div
-                      class="border-theme-primary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold"
+                      class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 group-hover:dark:border-theme-dark-500 group-hover:dim:border-theme-dim-500"
                     >
                       <div
                         class="flex w-1/2 min-w-0 flex-col space-y-2 truncate"
@@ -608,6 +726,45 @@ exports[`SearchWallet > should render compact on md screen 1`] = `
                           >
                             0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54
                           </span>
+                          <button
+                            class="ring-focus relative cursor-pointer focus:outline-hidden"
+                            data-ring-focus-margin="-m-1"
+                            data-testid="clipboard-icon__wrapper"
+                            type="button"
+                          >
+                            <div
+                              class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
+                            >
+                              <div
+                                style="height: 16px; width: 16px;"
+                              >
+                                <svg
+                                  id="copy"
+                                  style="height: 100%; width: 100%;"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <g
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  >
+                                    <path
+                                      d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                    />
+                                    <path
+                                      d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                    />
+                                  </g>
+                                </svg>
+                              </div>
+                            </div>
+                          </button>
                         </div>
                       </div>
                       <div
@@ -624,19 +781,18 @@ exports[`SearchWallet > should render compact on md screen 1`] = `
                     <div
                       class="flex w-[72px] min-w-[72px] flex-1 shrink-0 items-center justify-center pl-4"
                     >
-                      <div>
-                        <button
-                          class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500 dim:group-hover:text-theme-navy-700 text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600"
-                          data-testid="SearchWalletListItem__select-1"
-                          type="button"
+                      <button
+                        class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500 dim:group-hover:text-theme-navy-700 text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600"
+                        data-testid="SearchWalletListItem__select-1"
+                        tabindex="-1"
+                        type="button"
+                      >
+                        <div
+                          class="flex items-center gap-2"
                         >
-                          <div
-                            class="flex items-center gap-2"
-                          >
-                            Select
-                          </div>
-                        </button>
-                      </div>
+                          Select
+                        </div>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -850,12 +1006,13 @@ exports[`SearchWallet > should render compact with selected address 1`] = `
                 <div
                   class="group cursor-pointer items-center rounded-lg border transition-all border-theme-success-200 dark:border-theme-success-700 dim:border-theme-success-700 bg-theme-success-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 hover:bg-theme-secondary-200 hover:border-theme-navy-200 dark:hover:bg-theme-dark-700 dark:hover:border-theme-dark-700 dim-hover:bg-theme-dim-700 dim:hover:border-theme-dim-700"
                   data-testid="ReceiverItem"
+                  tabindex="0"
                 >
                   <div
                     class="flex items-center px-4 py-3 duration-150"
                   >
                     <div
-                      class="border-theme-primary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold"
+                      class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold border-theme-success-200 dark:border-theme-dark-600 dim:border-theme-dim-600"
                     >
                       <div
                         class="flex w-1/2 min-w-0 flex-col space-y-2 truncate"
@@ -874,6 +1031,45 @@ exports[`SearchWallet > should render compact with selected address 1`] = `
                           >
                             0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                           </span>
+                          <button
+                            class="ring-focus relative cursor-pointer focus:outline-hidden"
+                            data-ring-focus-margin="-m-1"
+                            data-testid="clipboard-icon__wrapper"
+                            type="button"
+                          >
+                            <div
+                              class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
+                            >
+                              <div
+                                style="height: 16px; width: 16px;"
+                              >
+                                <svg
+                                  id="copy"
+                                  style="height: 100%; width: 100%;"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <g
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  >
+                                    <path
+                                      d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                    />
+                                    <path
+                                      d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                    />
+                                  </g>
+                                </svg>
+                              </div>
+                            </div>
+                          </button>
                         </div>
                       </div>
                       <div
@@ -890,31 +1086,31 @@ exports[`SearchWallet > should render compact with selected address 1`] = `
                     <div
                       class="flex w-[72px] min-w-[72px] flex-1 shrink-0 items-center justify-center pl-4"
                     >
-                      <div>
-                        <button
-                          class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-success-700 dark:group-hover:text-theme-green-500 dim:group-hover:text-theme-green-500 text-theme-success-600 dark:text-theme-green-600 dim:text-theme-green-600"
-                          data-testid="SearchWalletListItem__selected-0"
-                          type="button"
+                      <button
+                        class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-success-700 dark:group-hover:text-theme-green-500 dim:group-hover:text-theme-green-500 text-theme-success-600 dark:text-theme-green-600 dim:text-theme-green-600"
+                        data-testid="SearchWalletListItem__selected-0"
+                        tabindex="-1"
+                        type="button"
+                      >
+                        <div
+                          class="flex items-center gap-2"
                         >
-                          <div
-                            class="flex items-center gap-2"
-                          >
-                            Selected
-                          </div>
-                        </button>
-                      </div>
+                          Selected
+                        </div>
+                      </button>
                     </div>
                   </div>
                 </div>
                 <div
                   class="group cursor-pointer items-center rounded-lg border transition-all border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 hover:bg-theme-navy-100 dark:hover:bg-theme-dark-700 dim-hover:bg-theme-dim-700"
                   data-testid="ReceiverItem"
+                  tabindex="0"
                 >
                   <div
                     class="flex items-center px-4 py-3 duration-150"
                   >
                     <div
-                      class="border-theme-primary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold"
+                      class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 group-hover:dark:border-theme-dark-500 group-hover:dim:border-theme-dim-500"
                     >
                       <div
                         class="flex w-1/2 min-w-0 flex-col space-y-2 truncate"
@@ -933,6 +1129,45 @@ exports[`SearchWallet > should render compact with selected address 1`] = `
                           >
                             0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54
                           </span>
+                          <button
+                            class="ring-focus relative cursor-pointer focus:outline-hidden"
+                            data-ring-focus-margin="-m-1"
+                            data-testid="clipboard-icon__wrapper"
+                            type="button"
+                          >
+                            <div
+                              class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
+                            >
+                              <div
+                                style="height: 16px; width: 16px;"
+                              >
+                                <svg
+                                  id="copy"
+                                  style="height: 100%; width: 100%;"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <g
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  >
+                                    <path
+                                      d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                    />
+                                    <path
+                                      d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                    />
+                                  </g>
+                                </svg>
+                              </div>
+                            </div>
+                          </button>
                         </div>
                       </div>
                       <div
@@ -949,19 +1184,18 @@ exports[`SearchWallet > should render compact with selected address 1`] = `
                     <div
                       class="flex w-[72px] min-w-[72px] flex-1 shrink-0 items-center justify-center pl-4"
                     >
-                      <div>
-                        <button
-                          class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500 dim:group-hover:text-theme-navy-700 text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600"
-                          data-testid="SearchWalletListItem__select-1"
-                          type="button"
+                      <button
+                        class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500 dim:group-hover:text-theme-navy-700 text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600"
+                        data-testid="SearchWalletListItem__select-1"
+                        tabindex="-1"
+                        type="button"
+                      >
+                        <div
+                          class="flex items-center gap-2"
                         >
-                          <div
-                            class="flex items-center gap-2"
-                          >
-                            Select
-                          </div>
-                        </button>
-                      </div>
+                          Select
+                        </div>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -2117,12 +2351,13 @@ exports[`SearchWallet > should render with incompatible ledger wallet 1`] = `
                 <div
                   class="group cursor-pointer items-center rounded-lg border transition-all border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 hover:bg-theme-navy-100 dark:hover:bg-theme-dark-700 dim-hover:bg-theme-dim-700"
                   data-testid="ReceiverItem"
+                  tabindex="0"
                 >
                   <div
                     class="flex items-center px-4 py-3 duration-150"
                   >
                     <div
-                      class="border-theme-primary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold"
+                      class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 group-hover:dark:border-theme-dark-500 group-hover:dim:border-theme-dim-500"
                     >
                       <div
                         class="flex w-1/2 min-w-0 flex-col space-y-2 truncate"
@@ -2139,6 +2374,45 @@ exports[`SearchWallet > should render with incompatible ledger wallet 1`] = `
                           >
                             0x125b484e51Ad990b5b3140931f3BD8eAee85Db23
                           </span>
+                          <button
+                            class="ring-focus relative cursor-pointer focus:outline-hidden"
+                            data-ring-focus-margin="-m-1"
+                            data-testid="clipboard-icon__wrapper"
+                            type="button"
+                          >
+                            <div
+                              class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
+                            >
+                              <div
+                                style="height: 16px; width: 16px;"
+                              >
+                                <svg
+                                  id="copy"
+                                  style="height: 100%; width: 100%;"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <g
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  >
+                                    <path
+                                      d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                    />
+                                    <path
+                                      d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                    />
+                                  </g>
+                                </svg>
+                              </div>
+                            </div>
+                          </button>
                         </div>
                       </div>
                       <div
@@ -2155,20 +2429,19 @@ exports[`SearchWallet > should render with incompatible ledger wallet 1`] = `
                     <div
                       class="flex w-[72px] min-w-[72px] flex-1 shrink-0 items-center justify-center pl-4"
                     >
-                      <div>
-                        <button
-                          class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 p-0 text-sm leading-[17px] group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500 dim:group-hover:text-theme-navy-700 text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600"
-                          data-testid="SearchWalletListItem__select-0"
-                          disabled=""
-                          type="button"
+                      <button
+                        class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 p-0 text-sm leading-[17px] group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500 dim:group-hover:text-theme-navy-700 text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600"
+                        data-testid="SearchWalletListItem__select-0"
+                        disabled=""
+                        tabindex="-1"
+                        type="button"
+                      >
+                        <div
+                          class="flex items-center gap-2"
                         >
-                          <div
-                            class="flex items-center gap-2"
-                          >
-                            Select
-                          </div>
-                        </button>
-                      </div>
+                          Select
+                        </div>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -2382,12 +2655,13 @@ exports[`SearchWallet > should render with selected address 1`] = `
                 <div
                   class="group cursor-pointer items-center rounded-lg border transition-all border-theme-success-200 dark:border-theme-success-700 dim:border-theme-success-700 bg-theme-success-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 hover:bg-theme-secondary-200 hover:border-theme-navy-200 dark:hover:bg-theme-dark-700 dark:hover:border-theme-dark-700 dim-hover:bg-theme-dim-700 dim:hover:border-theme-dim-700"
                   data-testid="ReceiverItem"
+                  tabindex="0"
                 >
                   <div
                     class="flex items-center px-4 py-3 duration-150"
                   >
                     <div
-                      class="border-theme-primary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold"
+                      class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold border-theme-success-200 dark:border-theme-dark-600 dim:border-theme-dim-600"
                     >
                       <div
                         class="flex w-1/2 min-w-0 flex-col space-y-2 truncate"
@@ -2406,6 +2680,45 @@ exports[`SearchWallet > should render with selected address 1`] = `
                           >
                             0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                           </span>
+                          <button
+                            class="ring-focus relative cursor-pointer focus:outline-hidden"
+                            data-ring-focus-margin="-m-1"
+                            data-testid="clipboard-icon__wrapper"
+                            type="button"
+                          >
+                            <div
+                              class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
+                            >
+                              <div
+                                style="height: 16px; width: 16px;"
+                              >
+                                <svg
+                                  id="copy"
+                                  style="height: 100%; width: 100%;"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <g
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  >
+                                    <path
+                                      d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                    />
+                                    <path
+                                      d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                    />
+                                  </g>
+                                </svg>
+                              </div>
+                            </div>
+                          </button>
                         </div>
                       </div>
                       <div
@@ -2422,31 +2735,31 @@ exports[`SearchWallet > should render with selected address 1`] = `
                     <div
                       class="flex w-[72px] min-w-[72px] flex-1 shrink-0 items-center justify-center pl-4"
                     >
-                      <div>
-                        <button
-                          class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-success-700 dark:group-hover:text-theme-green-500 dim:group-hover:text-theme-green-500 text-theme-success-600 dark:text-theme-green-600 dim:text-theme-green-600"
-                          data-testid="SearchWalletListItem__selected-0"
-                          type="button"
+                      <button
+                        class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-success-700 dark:group-hover:text-theme-green-500 dim:group-hover:text-theme-green-500 text-theme-success-600 dark:text-theme-green-600 dim:text-theme-green-600"
+                        data-testid="SearchWalletListItem__selected-0"
+                        tabindex="-1"
+                        type="button"
+                      >
+                        <div
+                          class="flex items-center gap-2"
                         >
-                          <div
-                            class="flex items-center gap-2"
-                          >
-                            Selected
-                          </div>
-                        </button>
-                      </div>
+                          Selected
+                        </div>
+                      </button>
                     </div>
                   </div>
                 </div>
                 <div
                   class="group cursor-pointer items-center rounded-lg border transition-all border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 hover:bg-theme-navy-100 dark:hover:bg-theme-dark-700 dim-hover:bg-theme-dim-700"
                   data-testid="ReceiverItem"
+                  tabindex="0"
                 >
                   <div
                     class="flex items-center px-4 py-3 duration-150"
                   >
                     <div
-                      class="border-theme-primary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold"
+                      class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 group-hover:dark:border-theme-dark-500 group-hover:dim:border-theme-dim-500"
                     >
                       <div
                         class="flex w-1/2 min-w-0 flex-col space-y-2 truncate"
@@ -2465,6 +2778,45 @@ exports[`SearchWallet > should render with selected address 1`] = `
                           >
                             0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54
                           </span>
+                          <button
+                            class="ring-focus relative cursor-pointer focus:outline-hidden"
+                            data-ring-focus-margin="-m-1"
+                            data-testid="clipboard-icon__wrapper"
+                            type="button"
+                          >
+                            <div
+                              class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
+                            >
+                              <div
+                                style="height: 16px; width: 16px;"
+                              >
+                                <svg
+                                  id="copy"
+                                  style="height: 100%; width: 100%;"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <g
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  >
+                                    <path
+                                      d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                    />
+                                    <path
+                                      d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                    />
+                                  </g>
+                                </svg>
+                              </div>
+                            </div>
+                          </button>
                         </div>
                       </div>
                       <div
@@ -2481,19 +2833,18 @@ exports[`SearchWallet > should render with selected address 1`] = `
                     <div
                       class="flex w-[72px] min-w-[72px] flex-1 shrink-0 items-center justify-center pl-4"
                     >
-                      <div>
-                        <button
-                          class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500 dim:group-hover:text-theme-navy-700 text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600"
-                          data-testid="SearchWalletListItem__select-1"
-                          type="button"
+                      <button
+                        class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500 dim:group-hover:text-theme-navy-700 text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600"
+                        data-testid="SearchWalletListItem__select-1"
+                        tabindex="-1"
+                        type="button"
+                      >
+                        <div
+                          class="flex items-center gap-2"
                         >
-                          <div
-                            class="flex items-center gap-2"
-                          >
-                            Select
-                          </div>
-                        </button>
-                      </div>
+                          Select
+                        </div>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -2707,12 +3058,13 @@ exports[`SearchWallet > should render with the default exchange currency enabled
                 <div
                   class="group cursor-pointer items-center rounded-lg border transition-all border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 hover:bg-theme-navy-100 dark:hover:bg-theme-dark-700 dim-hover:bg-theme-dim-700"
                   data-testid="ReceiverItem"
+                  tabindex="0"
                 >
                   <div
                     class="flex items-center px-4 py-3 duration-150"
                   >
                     <div
-                      class="border-theme-primary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold"
+                      class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 group-hover:dark:border-theme-dark-500 group-hover:dim:border-theme-dim-500"
                     >
                       <div
                         class="flex w-1/2 min-w-0 flex-col space-y-2 truncate"
@@ -2731,6 +3083,45 @@ exports[`SearchWallet > should render with the default exchange currency enabled
                           >
                             0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                           </span>
+                          <button
+                            class="ring-focus relative cursor-pointer focus:outline-hidden"
+                            data-ring-focus-margin="-m-1"
+                            data-testid="clipboard-icon__wrapper"
+                            type="button"
+                          >
+                            <div
+                              class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
+                            >
+                              <div
+                                style="height: 16px; width: 16px;"
+                              >
+                                <svg
+                                  id="copy"
+                                  style="height: 100%; width: 100%;"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <g
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  >
+                                    <path
+                                      d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                    />
+                                    <path
+                                      d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                    />
+                                  </g>
+                                </svg>
+                              </div>
+                            </div>
+                          </button>
                         </div>
                       </div>
                       <div
@@ -2747,31 +3138,31 @@ exports[`SearchWallet > should render with the default exchange currency enabled
                     <div
                       class="flex w-[72px] min-w-[72px] flex-1 shrink-0 items-center justify-center pl-4"
                     >
-                      <div>
-                        <button
-                          class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500 dim:group-hover:text-theme-navy-700 text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600"
-                          data-testid="SearchWalletListItem__select-0"
-                          type="button"
+                      <button
+                        class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500 dim:group-hover:text-theme-navy-700 text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600"
+                        data-testid="SearchWalletListItem__select-0"
+                        tabindex="-1"
+                        type="button"
+                      >
+                        <div
+                          class="flex items-center gap-2"
                         >
-                          <div
-                            class="flex items-center gap-2"
-                          >
-                            Select
-                          </div>
-                        </button>
-                      </div>
+                          Select
+                        </div>
+                      </button>
                     </div>
                   </div>
                 </div>
                 <div
                   class="group cursor-pointer items-center rounded-lg border transition-all border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 hover:bg-theme-navy-100 dark:hover:bg-theme-dark-700 dim-hover:bg-theme-dim-700"
                   data-testid="ReceiverItem"
+                  tabindex="0"
                 >
                   <div
                     class="flex items-center px-4 py-3 duration-150"
                   >
                     <div
-                      class="border-theme-primary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold"
+                      class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex w-full min-w-0 items-center justify-between border-r pr-4 font-semibold border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 group-hover:dark:border-theme-dark-500 group-hover:dim:border-theme-dim-500"
                     >
                       <div
                         class="flex w-1/2 min-w-0 flex-col space-y-2 truncate"
@@ -2790,6 +3181,45 @@ exports[`SearchWallet > should render with the default exchange currency enabled
                           >
                             0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54
                           </span>
+                          <button
+                            class="ring-focus relative cursor-pointer focus:outline-hidden"
+                            data-ring-focus-margin="-m-1"
+                            data-testid="clipboard-icon__wrapper"
+                            type="button"
+                          >
+                            <div
+                              class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
+                            >
+                              <div
+                                style="height: 16px; width: 16px;"
+                              >
+                                <svg
+                                  id="copy"
+                                  style="height: 100%; width: 100%;"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <g
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  >
+                                    <path
+                                      d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                    />
+                                    <path
+                                      d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                    />
+                                  </g>
+                                </svg>
+                              </div>
+                            </div>
+                          </button>
                         </div>
                       </div>
                       <div
@@ -2806,19 +3236,18 @@ exports[`SearchWallet > should render with the default exchange currency enabled
                     <div
                       class="flex w-[72px] min-w-[72px] flex-1 shrink-0 items-center justify-center pl-4"
                     >
-                      <div>
-                        <button
-                          class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500 dim:group-hover:text-theme-navy-700 text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600"
-                          data-testid="SearchWalletListItem__select-1"
-                          type="button"
+                      <button
+                        class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500 dim:group-hover:text-theme-navy-700 text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600"
+                        data-testid="SearchWalletListItem__select-1"
+                        tabindex="-1"
+                        type="button"
+                      >
+                        <div
+                          class="flex items-center gap-2"
                         >
-                          <div
-                            class="flex items-center gap-2"
-                          >
-                            Select
-                          </div>
-                        </button>
-                      </div>
+                          Select
+                        </div>
+                      </button>
                     </div>
                   </div>
                 </div>

@@ -12,7 +12,6 @@ import {
 	render,
 	screen,
 	waitFor,
-	within,
 	renderResponsiveWithRoute,
 	getMainsailProfileId,
 } from "@/utils/testing-library";
@@ -565,9 +564,9 @@ describe("SearchWallet", () => {
 		await waitFor(() => expect(screen.getAllByTestId("ReceiverItem")).toHaveLength(2));
 
 		expect(screen.getAllByTestId("ReceiverItem")[0]).toHaveTextContent(walletAlias);
-		expect(within(screen.getAllByTestId("ReceiverItem")[0]).getByRole("button")).toBeDisabled();
+		expect(screen.getByTestId("SearchWalletListItem__select-0")).toBeDisabled();
 
 		expect(screen.getAllByTestId("ReceiverItem")[1]).not.toHaveTextContent(walletAlias);
-		expect(within(screen.getAllByTestId("ReceiverItem")[1]).getByRole("button")).not.toBeDisabled();
+		expect(screen.getByTestId("SearchWalletListItem__select-1")).not.toBeDisabled();
 	});
 });
