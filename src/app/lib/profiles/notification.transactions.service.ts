@@ -1,7 +1,6 @@
-import { Services } from "@/app/lib/mainsail";
 import { sortByDesc } from "@/app/lib/helpers";
 
-import { INotificationTypes, IProfile, IProfileTransactionNotificationService, ProfileSetting } from "./contracts.js";
+import { INotificationTypes, IProfile, IProfileTransactionNotificationService } from "./contracts.js";
 import { INotification, INotificationRepository } from "./notification.repository.contract.js";
 import { AggregateQuery } from "./transaction.aggregate.contract.js";
 import { ExtendedConfirmedTransactionDataCollection } from "./transaction.collection.js";
@@ -110,8 +109,8 @@ export class ProfileTransactionNotificationService implements IProfileTransactio
 				.transactionAggregate()
 				.received({
 					cursor: 1,
-					identifiers: this.#getIdentifiers(),
 					limit: this.#defaultLimit,
+					to: this.#getToAddresses().join(","),
 					...queryInput,
 				});
 
@@ -194,18 +193,15 @@ export class ProfileTransactionNotificationService implements IProfileTransactio
 		return result;
 	}
 
-	#getIdentifiers(): Services.WalletIdentifier[] {
-		const usesTestNetworks = this.#profile.settings().get(ProfileSetting.UseTestNetworks);
+	#getToAddresses(): string[] {
+		const activeNetwork = this.#profile.activeNetwork();
 
 		const availableWallets = this.#profile
 			.wallets()
 			.values()
-			.filter((wallet) => wallet.network().isLive() || usesTestNetworks);
+			.filter((wallet) => wallet.network().id() === activeNetwork.id());
 
-		return availableWallets.map((wallet) => ({
-			type: "address",
-			value: wallet.address(),
-		}));
+		return availableWallets.map((wallet) => wallet.address());
 	}
 
 	#storeTransactions(transactions: ExtendedConfirmedTransactionData[]): void {
