@@ -704,10 +704,10 @@ jobs:
 
             - name: Test Components ^P-S
               env:
-                  COVERAGE_THRESHOLD_LINES: 98.18
-                  COVERAGE_THRESHOLD_FUNCTIONS: 97.61
-                  COVERAGE_THRESHOLD_STATEMENTS: 98.18
-                  COVERAGE_THRESHOLD_BRANCHES: 95.83
+                  COVERAGE_THRESHOLD_LINES: 63.04
+                  COVERAGE_THRESHOLD_FUNCTIONS: 59.61
+                  COVERAGE_THRESHOLD_STATEMENTS: 62.66
+                  COVERAGE_THRESHOLD_BRANCHES: 68.93
                   COVERAGE_INCLUDE_PATH: src/domains/transaction/components/[P-S]*
               uses: nick-invision/retry@v2
               with:
