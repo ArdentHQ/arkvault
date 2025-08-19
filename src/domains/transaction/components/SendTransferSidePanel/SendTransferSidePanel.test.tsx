@@ -1,11 +1,9 @@
 import * as useConfirmedTransactionMock from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
 
 import { Contracts, DTO } from "@/app/lib/profiles";
-import { FormProvider, useForm } from "react-hook-form";
 import {
 	env,
 	getDefaultProfileId,
-	getDefaultWalletId,
 	getDefaultWalletMnemonic,
 	mockProfileWithPublicAndTestNetworks,
 	render,
@@ -16,7 +14,6 @@ import {
 	getMainsailProfileId,
 } from "@/utils/testing-library";
 import React from "react";
-import { StepsProvider } from "@/app/contexts";
 import { requestMock, server } from "@/tests/mocks/server";
 
 import { BigNumber } from "@/app/lib/helpers";
@@ -30,7 +27,6 @@ import userEvent from "@testing-library/user-event";
 
 const passphrase = getDefaultWalletMnemonic();
 const fixtureProfileId = getDefaultProfileId();
-const fixtureWalletId = getDefaultWalletId();
 
 const signedTransactionMock = {
 	blockHash: () => {},
@@ -135,11 +131,6 @@ describe("SendTransferSidePanel", () => {
 		firstWalletAddress = wallet.address();
 
 		await syncFees(profile);
-	});
-
-	beforeEach(() => {
-		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
-		vi.spyOn(wallet, "balance").mockReturnValue(1_000_000_000_000_000_000);
 
 		server.use(
 			requestMock(
@@ -152,9 +143,20 @@ describe("SendTransferSidePanel", () => {
 			requestMock(`https://dwallets-evm.mainsailhq.com/api/blocks/${transactionFixture.data.blockHash}`, {
 				data: {},
 			}),
+			requestMock(
+				`https://dwallets-evm.mainsailhq.com/api/blocks/f7054cf37ce49e17cf2b06a0a868cac183bf78e2f1b4a6fe675f2412364fe0ae`,
+				{
+					data: {},
+				},
+			),
 			requestMock("https://ark-test-musig.arkvault.io/", { result: [] }, { method: "post" }),
 			requestMock("https://ark-live.arkvault.io/api/node/fees", nodeFeesFixture),
 		);
+	});
+
+	beforeEach(() => {
+		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
+		vi.spyOn(wallet, "balance").mockReturnValue(1_000_000_000_000_000_000);
 
 		vi.spyOn(useConfirmedTransactionMock, "useConfirmedTransaction").mockReturnValue({
 			confirmations: 10,
