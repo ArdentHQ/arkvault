@@ -162,12 +162,9 @@ describe("SendTransferSidePanel", () => {
 	});
 
 	it("should send a single transfer via side panel", async () => {
-		render(
-			<ComponentWrapper>
-				<SendTransferSidePanel open={true} onOpenChange={vi.fn()} />
-			</ComponentWrapper>,
-			{ route: `/profiles/${fixtureProfileId}/wallets/${fixtureWalletId}/send-transfer` },
-		);
+		render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: `/profiles/${fixtureProfileId}/dashboard`,
+		});
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
