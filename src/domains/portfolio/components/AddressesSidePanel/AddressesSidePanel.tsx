@@ -26,7 +26,7 @@ export const AddressesSidePanel = ({
 	defaultSelectedWallet,
 	open,
 	onOpenChange,
-	onClose,
+	onClose: onCloseFromParent,
 	onDelete,
 	onMountChange,
 }: {
@@ -47,7 +47,20 @@ export const AddressesSidePanel = ({
 		setAddressViewPreference,
 		setSingleSelectedAddress,
 		setMultiSelectedAddresses,
+		resetAddressPanelSettings,
 	} = useAddressesPanel({ profile });
+
+	const onClose = (addresses: string[], mode: AddressViewType) => {
+		if (addresses.length === 1) {
+			setActiveMode(AddressViewSelection.single);
+			resetAddressPanelSettings();
+			onCloseFromParent(addresses, AddressViewSelection.single);
+
+			return;
+		}
+
+		onCloseFromParent(addresses, mode);
+	};
 
 	const selectedAddressesFromPortfolio = profile
 		.wallets()
