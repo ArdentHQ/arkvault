@@ -5,7 +5,7 @@ import { TransactionSuccessful } from "./TransactionSuccessful";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
 import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
-import transactionsFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions.json";
+import transactionFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/transfer.json";
 
 describe("TransactionSuccessful", () => {
 	let profile: Contracts.IProfile;
@@ -20,12 +20,12 @@ describe("TransactionSuccessful", () => {
 
 		server.use(
 			requestMock(
-				"https://dwallets-evm.mainsailhq.com/api/transactions/ea63bf9a4b3eaf75a1dfff721967c45dce64eb7facf1aef29461868681b5c79b",
-				transactionsFixture,
-			),
-			requestMock(
 				"https://dwallets-evm.mainsailhq.com/api/blocks/*",
 				{ data: {} }, // Basic mock for block data
+			),
+			requestMock(
+				"https://dwallets-evm.mainsailhq.com/api/transactions/ea63bf9a4b3eaf75a1dfff721967c45dce64eb7facf1aef29461868681b5c79b",
+				transactionFixture
 			),
 		);
 	});
@@ -41,7 +41,7 @@ describe("TransactionSuccessful", () => {
 		return transaction[attribute]();
 	};
 
-	it.skip("should render", async () => {
+	it("should render", async () => {
 		const transaction = {
 			...TransactionFixture,
 			timestamp: () => ({
