@@ -395,6 +395,8 @@ export const SendTransferSidePanel = ({
 				activeStep={activeTab}
 				onBack={handleBack}
 				isLastStep={activeTab === SendTransferStep.SummaryStep}
+				disableOutsidePress
+				disableEscapeKey={showQRModal || isConfirmModalOpen || showOverwriteModal}
 				footer={
 					<SidePanelButtons>
 						{activeTab !== SendTransferStep.SummaryStep && (
