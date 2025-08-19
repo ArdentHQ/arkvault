@@ -48,23 +48,15 @@ describe("TransactionBaseData", () => {
 	beforeEach(() => {
 		tx = new TestTransactionData();
 		commonData = {
-			// 1 ARK in base units
 			data: "0x1234567890abcdef" as any,
-
 			from: "sender_address",
-
-			// 0.1 ARK per gas unit (assuming 1e8 base units)
 			gas: 21000,
-
 			gasPrice: 10000000,
-
 			hash: "test_hash",
-
 			nonce: 1,
-
 			to: "recipient_address",
 			ts: 1593561600,
-			value: 100000000, // 2020-07-01T00:00:00Z
+			value: 100000000,
 		};
 	});
 
@@ -105,7 +97,6 @@ describe("TransactionBaseData", () => {
 
 	it("isReturn true when transfer AND sent+received", () => {
 		tx.configure(commonData);
-		// Override behavior for this test
 		tx.isTransfer = () => true;
 		tx.isSent = () => true;
 		tx.isReceived = () => true;
@@ -132,6 +123,47 @@ describe("TransactionBaseData", () => {
 		tx.isMultiPayment = () => false;
 		tx.isTransfer = () => true;
 		expect(tx.type()).toBe("transfer");
+
+		tx.isMultiPayment = () => false;
+		tx.isTransfer = () => false;
+		tx.isVote = () => true;
+		expect(tx.type()).toBe("vote");
+
+		tx.isMultiPayment = () => false;
+		tx.isTransfer = () => false;
+		tx.isVote = () => false;
+		tx.isUpdateValidator = () => true;
+		expect(tx.type()).toBe("updateValidator");
+
+		tx.isMultiPayment = () => false;
+		tx.isTransfer = () => false;
+		tx.isValidatorResignation = () => true;
+		expect(tx.type()).toBe("validatorResignation");
+
+		tx.isMultiPayment = () => false;
+		tx.isTransfer = () => false;
+		tx.isValidatorRegistration = () => true;
+		expect(tx.type()).toBe("validatorRegistration");
+
+		tx.isMultiPayment = () => false;
+		tx.isTransfer = () => false;
+		tx.isUnvote = () => true;
+		expect(tx.type()).toBe("unvote");
+
+		tx.isMultiPayment = () => false;
+		tx.isTransfer = () => false;
+		tx.isUsernameRegistration = () => true;
+		expect(tx.type()).toBe("usernameRegistration");
+
+		tx.isMultiPayment = () => false;
+		tx.isTransfer = () => false;
+		tx.isUsernameRegistration = () => false;
+		tx.isUsernameResignation = () => true;
+		expect(tx.type()).toBe("usernameResignation");
+
+		tx.isMultiPayment = () => false;
+		tx.isSecondSignature = () => true;
+		expect(tx.type()).toBe("secondSignature");
 	});
 
 	it("type() falls back to TransactionTypeService.getIdentifierName", () => {
@@ -140,7 +172,6 @@ describe("TransactionBaseData", () => {
 			.mockReturnValue("customIdentifier");
 
 		tx.configure(commonData);
-		// Ensure all guards return false
 		tx.isVoteCombination = () => false;
 		tx.isMultiPayment = () => false;
 		tx.isSecondSignature = () => false;
@@ -163,7 +194,6 @@ describe("TransactionBaseData", () => {
 			.mockReturnValue(null);
 
 		tx.configure({ ...commonData, data: "0xabcdef0123456789" as any });
-		// All guards false
 		tx.isVoteCombination = () => false;
 		tx.isMultiPayment = () => false;
 		tx.isSecondSignature = () => false;
@@ -217,7 +247,7 @@ describe("TransactionBaseData", () => {
 			"0000000000000000000000000000000000000000000000000000000000000001" +
 			"0000000000000000000000001234567890123456789012345678901234567890" +
 			"0000000000000000000000000000000000000000000000000000000000000001" +
-			"0000000000000000000000000000000000000000000000000de0b6b3a7640000"; // 1e18 base units -> 10 ARK if 'ark' == 1e8? formatting not asserted strictly
+			"0000000000000000000000000000000000000000000000000de0b6b3a7640000";
 		tx.configure({ ...commonData, data: encoded as any });
 		tx.isMultiPayment = () => true;
 
@@ -233,14 +263,12 @@ describe("TransactionBaseData", () => {
 		tx.configure({ ...commonData, value: 100000000 });
 		tx.isMultiPayment = () => false;
 		const value = tx.value();
-		// We won't assert the exact converted number; just ensure it returns a BigNumber
 		expect(value).toBeInstanceOf(BigNumber);
 	});
 
 	it("value(): multipayment sums payments", () => {
 		tx.configure(commonData);
 		tx.isMultiPayment = () => true;
-		// override payments method for a simple deterministic sum
 		tx.payments = () => [{ amount: new BigNumber(100) }, { amount: new BigNumber(200) }] as any;
 		expect(tx.value()).toEqual(new BigNumber(300));
 	});
@@ -289,5 +317,19 @@ describe("TransactionBaseData", () => {
 	it("default flags", () => {
 		tx.configure(commonData);
 		expect(tx.isSecondSignature()).toBe(false);
+	});
+
+	it("payments() returns [] when isMultiPayment = false", () => {
+		tx.configure(commonData);
+		tx.isMultiPayment = () => false;
+		expect(tx.payments()).toEqual([]);
+	});
+
+	it("isReturn() returns false when neither transfer nor multipayment", () => {
+		tx.configure(commonData);
+		tx.isTransfer = () => false;
+		tx.isMultiPayment = () => false;
+		tx.setRecipients([]);
+		expect(tx.isReturn()).toBe(false);
 	});
 });
