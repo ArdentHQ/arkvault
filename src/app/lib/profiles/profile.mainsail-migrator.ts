@@ -1,6 +1,9 @@
 import { IProfile, IProfileData, IProfileMainsailMigrator } from "./contracts.js";
-
+import { HttpClient } from "@/app/lib/mainsail/http-client.js";
+import { UUID } from "@ardenthq/arkvault-crypto";
 export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
+	readonly #http: HttpClient = new HttpClient(10_000);
+
 	/**
 	 * Migrates the profile data from Mainsail to ArkVault if needed.
 	 *
@@ -11,6 +14,7 @@ export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 	public async migrate(profile: IProfile, data: IProfileData): Promise<IProfileData> {
 		if (this.#requiresMigration(data)) {
 			data.wallets = await this.#migrateWallets(profile, data.wallets);
+			data.contacts = await this.#migrateContacts(profile, data.contacts);
 		}
 
 		return data;
@@ -78,17 +82,143 @@ export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 		return migratedWalletData;
 	}
 
+	async #migrateContacts(profile: IProfile, contacts: IProfileData["contacts"]): Promise<IProfileData["contacts"]> {
+		const contactPromises = Object.entries(contacts).map(([originalId, contact]) =>
+			this.#processContactEntry(profile, originalId, contact),
+		);
+
+		const allResults = await Promise.all(contactPromises);
+		return this.#finalizeContacts(allResults);
+	}
+
+	async #processContactEntry(
+		profile: IProfile,
+		originalId: string,
+		contact: IProfileData["contacts"][string],
+	): Promise<Array<{ id: string; contact: any }> | null> {
+		const addressResults = await Promise.all(
+			contact.addresses.map(async (addr) => {
+				const newAddress = await this.#migrateContactAddress(profile, addr);
+				return newAddress ? { address: newAddress, id: addr.id } : null;
+			}),
+		);
+
+		const migratedAddresses = addressResults.filter(
+			(addr): addr is { id: string; address: string } => addr !== null,
+		);
+
+		if (migratedAddresses.length === 0) {
+			return null;
+		}
+
+		const results: Array<{ id: string; contact: any }> = [];
+		for (let index = 0; index < migratedAddresses.length; index++) {
+			const address = migratedAddresses[index];
+			const originalName = contact.name;
+			const finalName = index > 0 ? `${originalName} (${index + 1})` : originalName;
+			const contactId = index === 0 ? originalId : UUID.random();
+
+			const newContact = {
+				...contact,
+				addresses: [address],
+				id: contactId,
+				name: finalName,
+			};
+
+			results.push({ contact: newContact, id: contactId });
+		}
+
+		return results;
+	}
+
+	#finalizeContacts(allResults: Array<Array<{ id: string; contact: any }> | null>): IProfileData["contacts"] {
+		const migratedContacts: IProfileData["contacts"] = {};
+		const finalNameCounts = new Map<string, number>();
+		const seenAddresses = new Map<string, string>();
+
+		for (const result of allResults) {
+			if (result === null) {
+				continue;
+			}
+
+			for (const { id, contact } of result) {
+				contact.id = id;
+
+				const migratedAddress = contact.addresses?.[0]?.address;
+				if (typeof migratedAddress === "string") {
+					if (seenAddresses.has(migratedAddress)) {
+						continue;
+					}
+					seenAddresses.set(migratedAddress, id);
+				}
+
+				const contactName = contact.name;
+				const nameCount = finalNameCounts.get(contactName) || 0;
+				if (nameCount > 0) {
+					contact.name = `${contactName} (${nameCount + 1})`;
+				}
+				finalNameCounts.set(contactName, nameCount + 1);
+
+				migratedContacts[id] = contact;
+			}
+		}
+
+		return migratedContacts;
+	}
+
+	async #migrateContactAddress(
+		profile: IProfile,
+		addr: IProfileData["contacts"][string]["addresses"][number],
+	): Promise<string | undefined> {
+		if (!["ark.mainnet", "ark.devnet"].includes(addr.network)) {
+			return undefined;
+		}
+
+		const apiUrl =
+			addr.network === "ark.mainnet"
+				? (import.meta.env.VITE_ARK_LEGACY_MAINNET_API_URL ?? "https://ark-live.arkvault.io/api")
+				: (import.meta.env.VITE_ARK_LEGACY_DEVNET_API_URL ?? "https://ark-test.arkvault.io/api");
+
+		if (!apiUrl) {
+			return undefined;
+		}
+
+		try {
+			const response = await this.#http.get(`${apiUrl}/wallets/${addr.address}`);
+
+			if (response.status() !== 200) {
+				return undefined;
+			}
+
+			const body = response.json();
+			const publicKey = body?.data?.publicKey;
+
+			if (!publicKey) {
+				return undefined;
+			}
+
+			const wallet = await profile.walletFactory().fromPublicKey({ publicKey });
+			return wallet.address();
+		} catch (error) {
+			if (error.message.includes("404")) {
+				return undefined;
+			}
+			throw new Error(
+				`Failed to fetch public key for address ${addr.address}: HTTP request failed with status ${error.message.match(/\d+/)[0]}`,
+			);
+		}
+	}
+
 	#requiresMigration(data: IProfileData): boolean {
 		const wallets = Object.values(data.wallets);
 		const firstWallet = wallets?.[0];
 
-		// @TODO: consider the case where there are no wallets
-		if (!firstWallet) {
-			return false;
+		if (firstWallet?.data["NETWORK"]?.startsWith("ark.")) {
+			return true;
 		}
 
-		const firstWalletNetwork = firstWallet.data["NETWORK"];
-
-		return firstWalletNetwork.startsWith("ark.");
+		const contacts = Object.values(data.contacts);
+		const firstContact = contacts?.[0];
+		return firstContact?.addresses?.[0]?.network?.startsWith("ark.") || false;
 	}
 }
