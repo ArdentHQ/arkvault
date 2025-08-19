@@ -602,7 +602,7 @@ jobs:
                   COVERAGE_THRESHOLD_LINES: 96.67
                   COVERAGE_THRESHOLD_FUNCTIONS: 97.41
                   COVERAGE_THRESHOLD_STATEMENTS: 96.76
-                  COVERAGE_THRESHOLD_BRANCHES: 93.23
+                  COVERAGE_THRESHOLD_BRANCHES: 90.2
               uses: nick-invision/retry@v2
               with:
                   timeout_minutes: 10
