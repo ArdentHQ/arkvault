@@ -118,24 +118,21 @@ describe("useSearchWallet", () => {
 
 	it("should return empty list when wallets is an empty array", () => {
 		const { result } = renderHook(() => useSearchWallet({ profile, wallets: [] }), { wrapper });
-	  
+
 		expect(result.current.filteredList).toHaveLength(0);
 		expect(result.current.isEmptyResults).toBe(false);
-	  
+
 		act(() => result.current.setSearchKeyword("anything"));
 		expect(result.current.filteredList).toHaveLength(0);
 		expect(result.current.isEmptyResults).toBe(true);
 	});
 
 	it("should return empty list when wallets is undefined", () => {
-		const { result } = renderHook(
-		  () => useSearchWallet({ profile, wallets: undefined as any }),
-		  { wrapper },
-		);
-	  
+		const { result } = renderHook(() => useSearchWallet({ profile, wallets: undefined as any }), { wrapper });
+
 		expect(result.current.filteredList).toHaveLength(0);
 		expect(result.current.isEmptyResults).toBe(false);
-	  
+
 		act(() => result.current.setSearchKeyword("anything"));
 		expect(result.current.filteredList).toHaveLength(0);
 		expect(result.current.isEmptyResults).toBe(true);
