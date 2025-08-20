@@ -270,6 +270,7 @@ describe("SearchRecipient", () => {
 				recipients={recipients}
 				selectedAddress="0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6"
 				onAction={onAction}
+				profile={profile}
 			/>,
 			"md",
 		);
