@@ -29,9 +29,7 @@ export const usePendingTransactions = (): UsePendingTransactionsReturn => {
 				};
 
 				setPendingTransactions((prev) => {
-					const filtered = prev.filter((tx) => {
-						return tx.transaction.signedData.hash !== transaction.hash()
-					});
+					const filtered = prev.filter((tx) => tx.transaction.signedData.hash !== transaction.hash());
 					return [...filtered, pendingTransaction];
 				});
 			} catch (error) {
