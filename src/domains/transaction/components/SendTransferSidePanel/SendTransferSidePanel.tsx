@@ -109,6 +109,28 @@ export const SendTransferSidePanel = ({
 		}
 	}, [activeProfile, wallet]);
 
+	const resetState = useCallback(() => {
+		setActiveTab(firstTabIndex);
+
+		resetForm(() => {
+			setErrorMessage(undefined);
+			setUnconfirmedTransactions([]);
+			setTransaction(undefined);
+			setWallet(undefined);
+		});
+	}, [resetForm, firstTabIndex]);
+
+	const onMountChange = useCallback(
+		(mounted: boolean) => {
+			console.log("mounted", mounted);
+			if (!mounted) {
+				resetState();
+				return;
+			}
+		},
+		[resetState],
+	);
+
 	useEffect(() => {
 		if (!shouldResetForm || !open) {
 			return;
@@ -116,19 +138,12 @@ export const SendTransferSidePanel = ({
 
 		setActiveTab(firstTabIndex);
 
-		const resetValues = window.setTimeout(() =>
-			resetForm(() => {
-				setErrorMessage(undefined);
-				setUnconfirmedTransactions([]);
-				setTransaction(undefined);
-				setWallet(undefined);
-			}),
-		);
+		const resetValues = window.setTimeout(() => resetState());
 
 		return () => {
 			window.clearTimeout(resetValues);
 		};
-	}, [firstTabIndex, resetForm, shouldResetForm, open]);
+	}, [firstTabIndex, shouldResetForm, open, resetState]);
 
 	const [showOverwriteModal, setShowOverwriteModal] = useState(false);
 	const [overwriteData, setOverwriteData] = useState<TransferFormData>({} as TransferFormData);
@@ -307,7 +322,7 @@ export const SendTransferSidePanel = ({
 		}
 
 		if (activeTab === SendTransferStep.SummaryStep) {
-			return isConfirmed ? t("TRANSACTION.PENDING.TITLE") : t("TRANSACTION.SUCCESS.CREATED");
+			return isConfirmed ? t("TRANSACTION.SUCCESS.CREATED") : t("TRANSACTION.PENDING.TITLE");
 		}
 
 		return t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.TITLE");
@@ -386,6 +401,7 @@ export const SendTransferSidePanel = ({
 			<SidePanel
 				open={open}
 				onOpenChange={onOpenChange}
+				onMountChange={onMountChange}
 				title={getTitle()}
 				subtitle={getSubtitle()}
 				titleIcon={getTitleIcon()}
