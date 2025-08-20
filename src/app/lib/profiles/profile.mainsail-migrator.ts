@@ -1,5 +1,6 @@
 import { IProfile, IProfileData, IProfileMainsailMigrator } from "./contracts.js";
 import { HttpClient } from "@/app/lib/mainsail/http-client.js";
+import { Avatar } from "./helpers/avatar.js";
 import { UUID } from "@ardenthq/arkvault-crypto";
 export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 	readonly #http: HttpClient = new HttpClient(10_000);
@@ -15,6 +16,7 @@ export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 		if (this.#requiresMigration(data)) {
 			data.wallets = await this.#migrateWallets(profile, data.wallets);
 			data.contacts = await this.#migrateContacts(profile, data.contacts);
+			data.settings = await this.#migrateSettings(profile, data.settings, data.wallets);
 		}
 
 		return data;
@@ -179,16 +181,8 @@ export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 				? (import.meta.env.VITE_ARK_LEGACY_MAINNET_API_URL ?? "https://ark-live.arkvault.io/api")
 				: (import.meta.env.VITE_ARK_LEGACY_DEVNET_API_URL ?? "https://ark-test.arkvault.io/api");
 
-		if (!apiUrl) {
-			return undefined;
-		}
-
 		try {
 			const response = await this.#http.get(`${apiUrl}/wallets/${addr.address}`);
-
-			if (response.status() !== 200) {
-				return undefined;
-			}
 
 			const body = response.json();
 			const publicKey = body?.data?.publicKey;
@@ -220,5 +214,73 @@ export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 		const contacts = Object.values(data.contacts);
 		const firstContact = contacts?.[0];
 		return firstContact?.addresses?.[0]?.network?.startsWith("ark.") || false;
+	}
+
+	async #migrateSettings(
+		profile: IProfile,
+		settings: IProfileData["settings"],
+		wallets: IProfileData["wallets"],
+	): Promise<IProfileData["settings"]> {
+		const migratedSettings: IProfileData["settings"] = {};
+
+		// Keep settings that remain the same
+		const settingsToKeep = [
+			"AUTOMATIC_SIGN_OUT_PERIOD",
+			"BIP39_LOCALE",
+			"DO_NOT_SHOW_FEE_WARNING",
+			"FALLBACK_TO_DEFAULT_NODES",
+			"EXCHANGE_CURRENCY",
+			"LOCALE",
+			"MARKET_PROVIDER",
+			"NAME",
+			"THEME",
+			"TIME_FORMAT",
+			"USE_NETWORK_WALLET_NAMES",
+			"USE_TEST_NETWORKS",
+		];
+
+		for (const settingKey of settingsToKeep) {
+			migratedSettings[settingKey] = settings[settingKey];
+		}
+
+		// Migrate avatar
+		if (settings["AVATAR"]) {
+			const avatar = settings["AVATAR"];
+			if (avatar.startsWith("data:image")) {
+				migratedSettings["AVATAR"] = avatar;
+			} else {
+				migratedSettings["AVATAR"] = Avatar.make(settings["NAME"]);
+			}
+		}
+
+		this.#migrateDashboardConfiguration(migratedSettings, wallets);
+
+		return migratedSettings;
+	}
+
+	#migrateDashboardConfiguration(migratedSettings: IProfileData["settings"], wallets: IProfileData["wallets"]): void {
+		const walletAddresses = Object.values(wallets).map((wallet) => wallet.data.ADDRESS);
+
+		migratedSettings["WALLET_SELECTION_MODE"] = "multiple";
+
+		if (walletAddresses.length === 0) {
+			migratedSettings["DASHBOARD_CONFIGURATION"] = {
+				addressPanelSettings: {
+					multiSelectedAddresses: [],
+					singleSelectedAddress: [],
+				},
+				addressViewPreference: "multiple",
+			};
+
+			return;
+		}
+
+		migratedSettings["DASHBOARD_CONFIGURATION"] = {
+			addressPanelSettings: {
+				multiSelectedAddresses: walletAddresses,
+				singleSelectedAddress: [walletAddresses[0]],
+			},
+			addressViewPreference: "multiple",
+		};
 	}
 }

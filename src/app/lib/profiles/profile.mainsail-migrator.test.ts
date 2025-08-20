@@ -669,47 +669,19 @@ describe("ProfileMainsailMigrator", () => {
 			expect(migratedContact.id).toBe(originalId);
 			expect(migratedContact.id).toBe(Object.keys(result.contacts)[0]);
 		});
-
-		it("should merge contacts that resolve to the same migrated address, keeping the first contact's data", async () => {
-			// Override devnet handler to return the same publicKey as the known mainnet address
-			server.use(
-				http.get("https://ark-test.arkvault.io/api/wallets/:address", ({ params }) => {
-					const address = params.address as string;
-					if (address === "DFAWxzGKC3nvqQ5CqRXTqAi8593Jq1gPkt") {
-						// Same public key as AdViMQwcwquCP8fbY9eczXzTX7yUs2uMw4
-						return HttpResponse.json({
-							data: { publicKey: "03300acecfd7cfc5987ad8cc70bf51c5e93749f76103a02eaf4a1d143729b86a00" },
-						});
-					}
-
-					return new HttpResponse(null, { status: 404 });
-				}),
-			);
-
+		it("should skip contact addresses with non-ark networks", async () => {
 			const data: IProfileData = {
 				contacts: {
 					"contact-1": {
 						addresses: [
 							{
-								address: "AdViMQwcwquCP8fbY9eczXzTX7yUs2uMw4",
-								id: "addr-dup-1",
-								network: "ark.mainnet",
+								address: "0x1234567890abcdef",
+								id: "addr-1",
+								network: "mainsail.devnet", // Non-ark network
 							},
 						],
 						id: "contact-1",
-						name: "First",
-						starred: true,
-					},
-					"contact-2": {
-						addresses: [
-							{
-								address: "DFAWxzGKC3nvqQ5CqRXTqAi8593Jq1gPkt",
-								id: "addr-dup-2",
-								network: "ark.devnet",
-							},
-						],
-						id: "contact-2",
-						name: "Second",
+						name: "Test Contact",
 						starred: false,
 					},
 				},
@@ -720,19 +692,375 @@ describe("ProfileMainsailMigrator", () => {
 				networks: {},
 				notifications: {},
 				settings: {},
-				wallets: {},
+				wallets: {
+					"wallet-1": {
+						data: {
+							ADDRESS: "AdViMQwcwquCP8fbY9eczXzTX7yUs2uMw4",
+							NETWORK: "ark.mainnet", // This triggers migration
+							PUBLIC_KEY: "03300acecfd7cfc5987ad8cc70bf51c5e93749f76103a02eaf4a1d143729b86a00",
+						},
+						id: "wallet-1",
+						settings: {},
+					},
+				},
 			};
 
 			const result = await migrator.migrate(profile, data);
 
-			const contactIds = Object.keys(result.contacts);
-			expect(contactIds).toHaveLength(1);
-			expect(contactIds[0]).toBe("contact-1");
-			const merged = result.contacts["contact-1"];
-			expect(merged.name).toBe("First");
-			expect(merged.starred).toBe(true);
-			expect(merged.addresses).toHaveLength(1);
-			expect(merged.addresses[0].address).toMatch(/^0x[a-fA-F0-9]{40}$/);
+			// Contact should be removed because no addresses remain after migration
+			expect(result.contacts["contact-1"]).toBeUndefined();
+			expect(Object.keys(result.contacts)).toHaveLength(0);
 		});
+
+		it("should handle contact address migration when API returns non-200 status", async () => {
+			server.use(
+				http.get(
+					"https://ark-live.arkvault.io/api/wallets/:address",
+					() => new HttpResponse(null, { status: 404 }),
+				),
+			);
+
+			const data: IProfileData = {
+				contacts: {
+					"contact-1": {
+						addresses: [
+							{
+								address: "AdViMQwcwquCP8fbY9eczXzTX7yUs2uMw4",
+								id: "addr-1",
+								network: "ark.mainnet",
+							},
+						],
+						id: "contact-1",
+						name: "Test Contact",
+						starred: false,
+					},
+				},
+				data: {},
+				exchangeTransactions: {},
+				hosts: {},
+				id: "test-profile",
+				networks: {},
+				notifications: {},
+				settings: {},
+				wallets: {
+					"wallet-1": {
+						data: {
+							ADDRESS: "AdViMQwcwquCP8fbY9eczXzTX7yUs2uMw4",
+							NETWORK: "ark.mainnet",
+							PUBLIC_KEY: "03300acecfd7cfc5987ad8cc70bf51c5e93749f76103a02eaf4a1d143729b86a00",
+						},
+						id: "wallet-1",
+						settings: {},
+					},
+				},
+			};
+
+			const result = await migrator.migrate(profile, data);
+
+			// Contact should be removed because address migration failed due to non-200 status
+			expect(result.contacts["contact-1"]).toBeUndefined();
+			expect(Object.keys(result.contacts)).toHaveLength(0);
+		});
+
+		it("should handle contact address migration when API response has no publicKey", async () => {
+			server.use(
+				http.get("https://ark-live.arkvault.io/api/wallets/:address", () =>
+					HttpResponse.json({
+						data: {
+							// No publicKey in response
+						},
+					}),
+				),
+			);
+
+			const data: IProfileData = {
+				contacts: {
+					"contact-1": {
+						addresses: [
+							{
+								address: "AdViMQwcwquCP8fbY9eczXzTX7yUs2uMw4",
+								id: "addr-1",
+								network: "ark.mainnet",
+							},
+						],
+						id: "contact-1",
+						name: "Test Contact",
+						starred: false,
+					},
+				},
+				data: {},
+				exchangeTransactions: {},
+				hosts: {},
+				id: "test-profile",
+				networks: {},
+				notifications: {},
+				settings: {},
+				wallets: {
+					"wallet-1": {
+						data: {
+							ADDRESS: "AdViMQwcwquCP8fbY9eczXzTX7yUs2uMw4",
+							NETWORK: "ark.mainnet",
+							PUBLIC_KEY: "03300acecfd7cfc5987ad8cc70bf51c5e93749f76103a02eaf4a1d143729b86a00",
+						},
+						id: "wallet-1",
+						settings: {},
+					},
+				},
+			};
+
+			const result = await migrator.migrate(profile, data);
+
+			// Contact should be removed because address migration failed due to no publicKey
+			expect(result.contacts["contact-1"]).toBeUndefined();
+			expect(Object.keys(result.contacts)).toHaveLength(0);
+		});
+
+		it("should migrate avatar when it is not a data URL", async () => {
+			const data: IProfileData = {
+				contacts: {},
+				data: {},
+				exchangeTransactions: {},
+				hosts: {},
+				id: "test-profile",
+				networks: {},
+				notifications: {},
+				settings: {
+					AVATAR: "not-a-data-url",
+					LOCALE: "en-US",
+					NAME: "Test User",
+					THEME: "dark",
+				},
+				wallets: {
+					"wallet-1": {
+						data: {
+							ADDRESS: "AdViMQwcwquCP8fbY9eczXzTX7yUs2uMw4",
+							NETWORK: "ark.mainnet",
+							PUBLIC_KEY: "03300acecfd7cfc5987ad8cc70bf51c5e93749f76103a02eaf4a1d143729b86a00",
+						},
+						id: "wallet-1",
+						settings: {},
+					},
+				},
+			};
+
+			const result = await migrator.migrate(profile, data);
+
+			// Avatar should be migrated to a generated one since it's not a data URL
+			expect(result.settings.AVATAR).toBeDefined();
+			expect(result.settings.AVATAR).not.toBe("not-a-data-url");
+			expect(result.settings.AVATAR).toContain("<svg");
+		});
+
+		it("should preserve avatar when it is a data URL", async () => {
+			const originalAvatar = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCI+PC9zdmc+";
+			const data: IProfileData = {
+				contacts: {},
+				data: {},
+				exchangeTransactions: {},
+				hosts: {},
+				id: "test-profile",
+				networks: {},
+				notifications: {},
+				settings: {
+					AVATAR: originalAvatar,
+					LOCALE: "en-US",
+					NAME: "Test User",
+					THEME: "dark",
+				},
+				wallets: {
+					"wallet-1": {
+						data: {
+							ADDRESS: "AdViMQwcwquCP8fbY9eczXzTX7yUs2uMw4",
+							NETWORK: "ark.mainnet",
+							PUBLIC_KEY: "03300acecfd7cfc5987ad8cc70bf51c5e93749f76103a02eaf4a1d143729b86a00",
+						},
+						id: "wallet-1",
+						settings: {},
+					},
+				},
+			};
+
+			const result = await migrator.migrate(profile, data);
+
+			// Avatar should be preserved since it's a data URL
+			expect(result.settings.AVATAR).toBe(originalAvatar);
+		});
+
+		it("should throw error when contact address migration fails with non-404 error", async () => {
+			server.use(
+				http.get("https://ark-live.arkvault.io/api/wallets/:address", () => {
+					throw new Error("Network error 500");
+				}),
+			);
+
+			const data: IProfileData = {
+				contacts: {
+					"contact-1": {
+						addresses: [
+							{
+								address: "AdViMQwcwquCP8fbY9eczXzTX7yUs2uMw4",
+								id: "addr-1",
+								network: "ark.mainnet",
+							},
+						],
+						id: "contact-1",
+						name: "Test Contact",
+						starred: false,
+					},
+				},
+				data: {},
+				exchangeTransactions: {},
+				hosts: {},
+				id: "test-profile",
+				networks: {},
+				notifications: {},
+				settings: {},
+				wallets: {
+					"wallet-1": {
+						data: {
+							ADDRESS: "AdViMQwcwquCP8fbY9eczXzTX7yUs2uMw4",
+							NETWORK: "ark.mainnet",
+							PUBLIC_KEY: "03300acecfd7cfc5987ad8cc70bf51c5e93749f76103a02eaf4a1d143729b86a00",
+						},
+						id: "wallet-1",
+						settings: {},
+					},
+				},
+			};
+
+			await expect(migrator.migrate(profile, data)).rejects.toThrow(
+				"Failed to fetch public key for address AdViMQwcwquCP8fbY9eczXzTX7yUs2uMw4: HTTP request failed with status 500",
+			);
+		});
+	});
+
+	it("should merge contacts that resolve to the same migrated address, keeping the first contact's data", async () => {
+		// Override devnet handler to return the same publicKey as the known mainnet address
+		server.use(
+			http.get("https://ark-test.arkvault.io/api/wallets/:address", ({ params }) => {
+				const address = params.address as string;
+				if (address === "DFAWxzGKC3nvqQ5CqRXTqAi8593Jq1gPkt") {
+					// Same public key as AdViMQwcwquCP8fbY9eczXzTX7yUs2uMw4
+					return HttpResponse.json({
+						data: { publicKey: "03300acecfd7cfc5987ad8cc70bf51c5e93749f76103a02eaf4a1d143729b86a00" },
+					});
+				}
+
+				return new HttpResponse(null, { status: 404 });
+			}),
+		);
+
+		const data: IProfileData = {
+			contacts: {
+				"contact-1": {
+					addresses: [
+						{
+							address: "AdViMQwcwquCP8fbY9eczXzTX7yUs2uMw4",
+							id: "addr-dup-1",
+							network: "ark.mainnet",
+						},
+					],
+					id: "contact-1",
+					name: "First",
+					starred: true,
+				},
+				"contact-2": {
+					addresses: [
+						{
+							address: "DFAWxzGKC3nvqQ5CqRXTqAi8593Jq1gPkt",
+							id: "addr-dup-2",
+							network: "ark.devnet",
+						},
+					],
+					id: "contact-2",
+					name: "Second",
+					starred: false,
+				},
+			},
+			data: {},
+			exchangeTransactions: {},
+			hosts: {},
+			id: "test-profile",
+			networks: {},
+			notifications: {},
+			settings: {},
+			wallets: {},
+		};
+
+		const result = await migrator.migrate(profile, data);
+
+		const contactIds = Object.keys(result.contacts);
+		expect(contactIds).toHaveLength(1);
+		expect(contactIds[0]).toBe("contact-1");
+		const merged = result.contacts["contact-1"];
+		expect(merged.name).toBe("First");
+		expect(merged.starred).toBe(true);
+		expect(merged.addresses).toHaveLength(1);
+		expect(merged.addresses[0].address).toMatch(/^0x[a-fA-F0-9]{40}$/);
+	});
+
+	it("should merge contacts that resolve to the same migrated address, keeping the first contact's data", async () => {
+		// Override devnet handler to return the same publicKey as the known mainnet address
+		server.use(
+			http.get("https://ark-test.arkvault.io/api/wallets/:address", ({ params }) => {
+				const address = params.address as string;
+				if (address === "DFAWxzGKC3nvqQ5CqRXTqAi8593Jq1gPkt") {
+					// Same public key as AdViMQwcwquCP8fbY9eczXzTX7yUs2uMw4
+					return HttpResponse.json({
+						data: { publicKey: "03300acecfd7cfc5987ad8cc70bf51c5e93749f76103a02eaf4a1d143729b86a00" },
+					});
+				}
+
+				return new HttpResponse(null, { status: 404 });
+			}),
+		);
+
+		const data: IProfileData = {
+			contacts: {
+				"contact-1": {
+					addresses: [
+						{
+							address: "AdViMQwcwquCP8fbY9eczXzTX7yUs2uMw4",
+							id: "addr-dup-1",
+							network: "ark.mainnet",
+						},
+					],
+					id: "contact-1",
+					name: "First",
+					starred: true,
+				},
+				"contact-2": {
+					addresses: [
+						{
+							address: "DFAWxzGKC3nvqQ5CqRXTqAi8593Jq1gPkt",
+							id: "addr-dup-2",
+							network: "ark.devnet",
+						},
+					],
+					id: "contact-2",
+					name: "Second",
+					starred: false,
+				},
+			},
+			data: {},
+			exchangeTransactions: {},
+			hosts: {},
+			id: "test-profile",
+			networks: {},
+			notifications: {},
+			settings: {},
+			wallets: {},
+		};
+
+		const result = await migrator.migrate(profile, data);
+
+		const contactIds = Object.keys(result.contacts);
+		expect(contactIds).toHaveLength(1);
+		expect(contactIds[0]).toBe("contact-1");
+		const merged = result.contacts["contact-1"];
+		expect(merged.name).toBe("First");
+		expect(merged.starred).toBe(true);
+		expect(merged.addresses).toHaveLength(1);
+		expect(merged.addresses[0].address).toMatch(/^0x[a-fA-F0-9]{40}$/);
 	});
 });
