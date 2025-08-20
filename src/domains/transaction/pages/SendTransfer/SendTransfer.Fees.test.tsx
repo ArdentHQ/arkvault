@@ -21,7 +21,7 @@ import transactionFixture from "@/tests/fixtures/coins/mainsail/devnet/transacti
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import transactionsFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions.json";
 import userEvent from "@testing-library/user-event";
-import { signedTransactionMock } from "./SendTransfer.test";
+import { selectFirstSenderAddress, selectNthSenderAddress, signedTransactionMock } from "./SendTransfer.test";
 import { BigNumber } from "@/app/lib/helpers";
 
 const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
@@ -112,13 +112,7 @@ describe("SendTransfer Fee Handling", () => {
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
-		// Select sender
-		await userEvent.click(within(screen.getByTestId("sender-address")).getByTestId("SelectAddress__wrapper"));
-
-		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
-
-		const secondAddress = screen.getByTestId("SearchWalletListItem__select-1");
-		await userEvent.click(secondAddress);
+		await selectNthSenderAddress(1);
 
 		expect(screen.getByText("0.01989216404723")).toBeInTheDocument();
 
@@ -126,13 +120,7 @@ describe("SendTransfer Fee Handling", () => {
 
 		await expect(screen.findByTestId("Input__error")).resolves.toBeVisible();
 
-		// Select sender
-		await userEvent.click(within(screen.getByTestId("sender-address")).getByTestId("SelectAddress__wrapper"));
-
-		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
-
-		const firstAddress = screen.getByTestId("SearchWalletListItem__select-0");
-		await userEvent.click(firstAddress);
+		await selectNthSenderAddress(0);
 
 		expect(screen.getByText("95.27653252325068")).toBeInTheDocument();
 
@@ -148,7 +136,7 @@ describe("SendTransfer Fee Handling", () => {
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
-		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
+		await selectFirstSenderAddress();
 
 		await selectRecipient();
 
@@ -195,7 +183,7 @@ describe("SendTransfer Fee Handling", () => {
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
-		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
+		await selectFirstSenderAddress();
 
 		await selectRecipient();
 
@@ -249,7 +237,7 @@ describe("SendTransfer Fee Handling", () => {
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
-		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
+		await selectFirstSenderAddress();
 
 		expect(backButton()).not.toHaveAttribute("disabled");
 
@@ -325,7 +313,7 @@ describe("SendTransfer Fee Handling", () => {
 			route: transferURL,
 		});
 
-		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(arkWallet.address()));
+		await selectFirstSenderAddress();
 
 		expect(backButton()).not.toHaveAttribute("disabled");
 
@@ -374,7 +362,7 @@ describe("SendTransfer Fee Handling", () => {
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
-		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
+		await selectFirstSenderAddress();
 
 		await selectRecipient();
 
@@ -436,7 +424,7 @@ describe("SendTransfer Fee Handling", () => {
 
 			await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
-			await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
+			await selectFirstSenderAddress();
 
 			await selectRecipient();
 
@@ -510,7 +498,7 @@ describe("SendTransfer Fee Handling", () => {
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
-		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
+		await selectFirstSenderAddress();
 
 		await selectRecipient();
 
