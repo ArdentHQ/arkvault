@@ -69,6 +69,7 @@ describe("usePendingTransactions", () => {
 
 		expect(result.current.pendingTransactions).toHaveLength(1);
 		expect(result.current.pendingTransactions[0]).toEqual({
+			networkId: "mainsail.devnet",
 			transaction: signedTransactionData,
 			walletAddress: wallet.address(),
 		});

@@ -153,12 +153,14 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 		return hasMorePages;
 	};
 
-	const mergedTransactions = useMemo(() => {
+	const allTransactions = useMemo(() => {
 		const walletAddresses = wallets.map((w) => w.address());
+		const walletNetworkIds = wallets.map((w) => w.networkId());
+
 		const hasAllSelected = selectedTransactionTypes.length === allTransactionTypes.length;
 
 		const signedTransactions = pendingTransactions
-			.filter((pendingTransaction) => walletAddresses.includes(pendingTransaction.walletAddress))
+			.filter((pendingTransaction) => walletAddresses.includes(pendingTransaction.walletAddress) && walletNetworkIds.includes(pendingTransaction.networkId))
 			.map((tx): [SignedTransactionData, string] => [
 				new SignedTransactionData().configure(tx.transaction.signedData, tx.transaction.serialized),
 				tx.walletAddress,
@@ -416,8 +418,8 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 			return true;
 		}
 
-		return mergedTransactions.length === 0 && !isLoadingTransactions;
-	}, [isLoadingTransactions, mergedTransactions.length]);
+		return allTransactions.length === 0 && !isLoadingTransactions;
+	}, [isLoadingTransactions, allTransactions.length]);
 
 	const addresses = wallets
 		.map((wallet) => wallet.address())
@@ -455,7 +457,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 		selectedTransactionTypes,
 		setSortBy,
 		sortBy,
-		transactions: selectedTransactionTypes.length > 0 ? mergedTransactions : [],
+		transactions: selectedTransactionTypes.length > 0 ? allTransactions : [],
 		updateFilters,
 	};
 };

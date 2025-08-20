@@ -3,9 +3,10 @@ import { DTO } from "@/app/lib/profiles";
 import { useLocalStorage } from "usehooks-ts";
 import { RawTransactionData } from "@/app/lib/mainsail/signed-transaction.dto.contract";
 
-interface PendingTransactionData {
+export interface PendingTransactionData {
 	transaction: RawTransactionData;
 	walletAddress: string;
+	networkId: string;
 }
 
 interface UsePendingTransactionsReturn {
@@ -24,6 +25,7 @@ export const usePendingTransactions = (): UsePendingTransactionsReturn => {
 		(transaction: DTO.ExtendedSignedTransactionData) => {
 			try {
 				const pendingTransaction: PendingTransactionData = {
+					networkId: transaction.wallet().networkId(),
 					transaction: transaction.data(),
 					walletAddress: transaction.wallet().address(),
 				};
