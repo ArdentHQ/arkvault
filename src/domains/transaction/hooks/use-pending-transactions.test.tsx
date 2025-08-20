@@ -159,7 +159,6 @@ describe("usePendingTransactions", () => {
 	it("should handle error when adding transaction fails", async () => {
 		const { result } = renderHook(() => usePendingTransactions());
 
-		// Mock a transaction that throws an error
 		const mockTransaction = {
 			data: () => {
 				throw new Error("Transaction data error");
