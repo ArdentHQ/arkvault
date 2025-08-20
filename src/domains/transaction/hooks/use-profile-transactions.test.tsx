@@ -738,20 +738,20 @@ describe("useProfileTransactions", () => {
 		const firstWallet = wallets[0];
 
 		const matchingPendingTx = createMockedTransactionData({
-			hash: "MATCHING_PENDING_TX",
 			from: "ADDRESS_FROM",
+			hash: "MATCHING_PENDING_TX",
 			to: firstWallet.address(),
 		});
 
 		const nonMatchingAddressTx = createMockedTransactionData({
-			hash: "NON_MATCHING_ADDRESS_TX",
 			from: "ADDRESS_FROM",
+			hash: "NON_MATCHING_ADDRESS_TX",
 			to: "NON_MATCHING_ADDRESS",
 		});
 
 		const nonMatchingNetworkTx = createMockedTransactionData({
-			hash: "NON_MATCHING_NETWORK_TX",
 			from: "ADDRESS_FROM",
+			hash: "NON_MATCHING_NETWORK_TX",
 			to: firstWallet.address(),
 		});
 
@@ -773,7 +773,7 @@ describe("useProfileTransactions", () => {
 				networkId: "non-matching-network",
 				transaction: nonMatchingNetworkTx,
 				walletAddress: firstWallet.address(),
-			}
+			},
 		]);
 
 		const confirmedTransactionsMock = vi.spyOn(profile.transactionAggregate(), "all").mockResolvedValue({
@@ -790,7 +790,7 @@ describe("useProfileTransactions", () => {
 		await waitFor(() => expect(result.current.isLoadingTransactions).toBe(false));
 
 		// Should only include the matching pending transaction
-		const resultHashes = result.current.transactions.map(tx => tx.hash());
+		const resultHashes = result.current.transactions.map((tx) => tx.hash());
 		expect(resultHashes).toContain("MATCHING_PENDING_TX");
 		expect(resultHashes).not.toContain("NON_MATCHING_ADDRESS_TX");
 		expect(resultHashes).not.toContain("NON_MATCHING_NETWORK_TX");
