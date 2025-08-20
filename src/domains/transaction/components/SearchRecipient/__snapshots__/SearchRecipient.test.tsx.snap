@@ -2708,7 +2708,9 @@ exports[`SearchRecipient > should render with no alias if the recipient address 
                       >
                         <div
                           class="text-sm leading-5 group-hover:text-theme-primary-900 dark:group-hover:text-theme-dark-50 dim:group-hover:text-theme-dim-50"
-                        />
+                        >
+                          Mainsail Wallet 1
+                        </div>
                         <div
                           class="flex min-w-0 items-center gap-1 leading-[17px]"
                         >
