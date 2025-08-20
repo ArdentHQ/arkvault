@@ -17,7 +17,8 @@
 		"receipt": {
 			"gasRefunded": 0,
 			"gasUsed": 21000,
-			"success": true
+			"success": true,
+			"status": 1
 		}
 	}
 }

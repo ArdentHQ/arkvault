@@ -19,7 +19,9 @@ export const TransactionConfirmations = ({
 	const { t } = useTranslation();
 	const { status } = useMultiSignatureStatus({ transaction, wallet: transaction.wallet() });
 
-	if (confirmations && confirmations > 1 && !transaction.isSuccess()) {
+	const hasFailed = !!(confirmations && confirmations > 0 && "isSuccess" in transaction && !transaction.isSuccess());
+
+	if (hasFailed) {
 		return (
 			<div
 				data-testid="TransactionFailedAlert"

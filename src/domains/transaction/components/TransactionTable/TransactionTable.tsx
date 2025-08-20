@@ -3,7 +3,7 @@ import React, { FC, useCallback, useEffect, useMemo, useState } from "react";
 import { TableState } from "react-table";
 
 import { TransactionRow } from "./TransactionRow/TransactionRow";
-import { TransactionTableProperties } from "./TransactionTable.contracts";
+import { ExtendedTransactionDTO, TransactionTableProperties } from "./TransactionTable.contracts";
 import { Table } from "@/app/components/Table";
 import { useTransactionTableColumns } from "@/domains/transaction/components/TransactionTable/TransactionTable.helpers";
 import { useBreakpoint } from "@/app/hooks";
@@ -48,16 +48,16 @@ export const TransactionTable: FC<TransactionTableProperties> = ({
 
 	const showSkeleton = isLoading && transactions.length === 0;
 
-	const data = useMemo<DTO.ExtendedConfirmedTransactionData[]>(() => {
-		const skeletonRows: DTO.ExtendedConfirmedTransactionData[] = Array.from(
+	const data = useMemo<ExtendedTransactionDTO[]>(() => {
+		const skeletonRows: ExtendedTransactionDTO[] = Array.from(
 			{ length: skeletonRowsLimit },
-			() => ({}) as DTO.ExtendedConfirmedTransactionData,
+			() => ({}) as ExtendedTransactionDTO,
 		);
 		return showSkeleton ? skeletonRows : transactions;
 	}, [showSkeleton, transactions, skeletonRowsLimit]);
 
 	const renderTableRow = useCallback(
-		(row: DTO.ExtendedConfirmedTransactionData) => (
+		(row: ExtendedTransactionDTO) => (
 			<TransactionRow
 				isLoading={showSkeleton}
 				onClick={() => onRowClick?.(row)}

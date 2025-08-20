@@ -22,7 +22,7 @@ export const TransactionSuccessful = ({
 }: TransactionSuccessfulProperties) => {
 	const { t } = useTranslation();
 
-	const { isConfirmed, confirmations } = useConfirmedTransaction({
+	const { isConfirmed, transaction: confirmedTransaction } = useConfirmedTransaction({
 		transactionId: transaction.hash(),
 		wallet: senderWallet,
 	});
@@ -50,10 +50,10 @@ export const TransactionSuccessful = ({
 
 			<div className="mt-4">
 				<TransactionDetailContent
-					transactionItem={transaction}
+					transactionItem={confirmedTransaction ?? transaction}
 					profile={senderWallet.profile()}
 					isConfirmed={isConfirmed}
-					confirmations={confirmations}
+					confirmations={confirmedTransaction?.confirmations().toNumber() ?? 0}
 					containerClassname="-mx-3 sm:mx-0"
 				/>
 			</div>
