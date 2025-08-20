@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Contracts } from "@/app/lib/profiles";
+import { ExtendedConfirmedTransactionData } from "@/app/lib/profiles/transaction.dto";
 
 export const useConfirmedTransaction = ({
 	wallet,
@@ -7,9 +8,9 @@ export const useConfirmedTransaction = ({
 }: {
 	wallet: Contracts.IReadWriteWallet;
 	transactionId: string;
-}): { isConfirmed: boolean; confirmations: number } => {
+}): { isConfirmed: boolean; transaction?: ExtendedConfirmedTransactionData } => {
 	const [isConfirmed, setIsConfirmed] = useState(false);
-	const [confirmations, setConfirmations] = useState(0);
+	const [transaction, setTransaction] = useState<ExtendedConfirmedTransactionData | undefined>(undefined);
 
 	useEffect(() => {
 		const checkConfirmed = (): void => {
@@ -17,7 +18,7 @@ export const useConfirmedTransaction = ({
 				try {
 					const transaction = await wallet.client().transaction(transactionId);
 					setIsConfirmed(true);
-					setConfirmations(transaction.confirmations().toNumber());
+					setTransaction(new ExtendedConfirmedTransactionData(wallet, transaction));
 					clearInterval(id);
 				} catch {
 					// transaction is not forged yet, ignore the error
@@ -28,5 +29,5 @@ export const useConfirmedTransaction = ({
 		void checkConfirmed();
 	}, [wallet.id(), transactionId]);
 
-	return { confirmations, isConfirmed };
+	return { isConfirmed, transaction };
 };

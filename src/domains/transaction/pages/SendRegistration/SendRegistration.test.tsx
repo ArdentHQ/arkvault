@@ -50,7 +50,7 @@ const renderPage = async (wallet: Contracts.IReadWriteWallet, type = "validatorR
 
 const signedTransactionMock = {
 	blockHash: () => {},
-	confirmations: () => Promise.resolve(BigNumber.make(154_178)),
+	confirmations: () => BigNumber.make(154_178),
 	convertedAmount: () => BigNumber.make(10),
 	convertedFee: () => {
 		const fee = BigNumber.make(ValidatorRegistrationFixture.data.gasPrice)
@@ -63,7 +63,7 @@ const signedTransactionMock = {
 	explorerLink: () => `https://mainsail-explorer.ihost.org/transactions/${ValidatorRegistrationFixture.data.hash}`,
 	explorerLinkForBlock: () =>
 		`https://mainsail-explorer.ihost.org/transactions/${ValidatorRegistrationFixture.data.hash}`,
-	fee: () => +ValidatorRegistrationFixture.data.fee / 1e18,
+	fee: () => BigNumber.make(107),
 	from: () => ValidatorRegistrationFixture.data.from,
 	hash: () => ValidatorRegistrationFixture.data.hash,
 	isConfirmed: () => false,
@@ -97,7 +97,7 @@ const signedTransactionMock = {
 	},
 	type: () => "transfer",
 	usesMultiSignature: () => false,
-	value: () => +ValidatorRegistrationFixture.data.value / 1e8,
+	value: () => BigNumber.make(0),
 	wallet: () => wallet,
 };
 
