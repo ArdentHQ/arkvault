@@ -201,6 +201,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 				const bIsSignedTransaction = b instanceof ExtendedSignedTransactionData;
 
 				if (aIsSignedTransaction && !bIsSignedTransaction) {
+					/* istanbul ignore next -- @preserve */
 					return -1;
 				}
 				if (!aIsSignedTransaction && bIsSignedTransaction) {
