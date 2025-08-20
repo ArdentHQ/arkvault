@@ -160,7 +160,11 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 		const hasAllSelected = selectedTransactionTypes.length === allTransactionTypes.length;
 
 		const signedTransactions = pendingTransactions
-			.filter((pendingTransaction) => walletAddresses.includes(pendingTransaction.walletAddress) && walletNetworkIds.includes(pendingTransaction.networkId))
+			.filter(
+				(pendingTransaction) =>
+					walletAddresses.includes(pendingTransaction.walletAddress) &&
+					walletNetworkIds.includes(pendingTransaction.networkId),
+			)
 			.map((tx): [SignedTransactionData, string] => [
 				new SignedTransactionData().configure(tx.transaction.signedData, tx.transaction.serialized),
 				tx.walletAddress,

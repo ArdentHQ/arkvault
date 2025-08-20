@@ -3,7 +3,7 @@ import React from "react";
 
 import { useProfileTransactions } from "./use-profile-transactions";
 import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
-import { env, getDefaultProfileId, } from "@/utils/testing-library";
+import { env, getDefaultProfileId } from "@/utils/testing-library";
 import * as hooksMock from "@/app/hooks";
 import { expect, vi } from "vitest";
 import { RawTransactionData } from "@/app/lib/mainsail/signed-transaction.dto.contract";
@@ -37,12 +37,12 @@ const signedTransactionData = {
 };
 
 const createMockedTransactionData = (overrides: Partial<RawTransactionData> = {}): RawTransactionData => ({
-		...signedTransactionData,
-		signedData: {
-			...signedTransactionData.signedData,
-			...overrides,
-		}
-	})
+	...signedTransactionData,
+	signedData: {
+		...signedTransactionData.signedData,
+		...overrides,
+	},
+});
 
 const mockPendingTransactionsHook = async (pendingTransactions: PendingTransactionData[] = []) => {
 	const removePendingTransaction = vi.fn();
@@ -399,11 +399,13 @@ describe("useProfileTransactions", () => {
 			to: confirmed.to() ?? wallet.address(),
 		});
 
-		const { pendingSpy, removePendingTransaction } = await mockPendingTransactionsHook([{
-			networkId: wallet.networkId(),
-			transaction: pendingTransaction,
-			walletAddress: wallet.address(),
-		}]);
+		const { pendingSpy, removePendingTransaction } = await mockPendingTransactionsHook([
+			{
+				networkId: wallet.networkId(),
+				transaction: pendingTransaction,
+				walletAddress: wallet.address(),
+			},
+		]);
 
 		const { result } = renderHook(() => useProfileTransactions({ profile, wallets: [wallet] }), { wrapper });
 
@@ -442,11 +444,13 @@ describe("useProfileTransactions", () => {
 				networkId: firstWallet.networkId(),
 				transaction: transferTransaction,
 				walletAddress: firstWallet.address(),
-			}, {
+			},
+			{
 				networkId: firstWallet.networkId(),
 				transaction: voteTransaction,
 				walletAddress: firstWallet.address(),
-			}]);
+			},
+		]);
 
 		const { result } = renderHook(() => useProfileTransactions({ profile, wallets }), { wrapper });
 
@@ -484,16 +488,19 @@ describe("useProfileTransactions", () => {
 		const pendingTransaction = {
 			networkId: firstWallet.networkId(),
 			walletAddress,
-		}
+		};
 
 		const { pendingSpy } = await mockPendingTransactionsHook([
-			{...pendingTransaction, transaction: sentTransaction},
-			{...pendingTransaction, transaction: receivedTransaction},
+			{ ...pendingTransaction, transaction: sentTransaction },
+			{ ...pendingTransaction, transaction: receivedTransaction },
 		]);
 
-		const { result: sentTransactions } = renderHook(() => useProfileTransactions({ profile, wallets: [firstWallet] }), {
-			wrapper,
-		});
+		const { result: sentTransactions } = renderHook(
+			() => useProfileTransactions({ profile, wallets: [firstWallet] }),
+			{
+				wrapper,
+			},
+		);
 
 		act(() => {
 			sentTransactions.current.updateFilters({ activeMode: "sent" });
@@ -505,9 +512,12 @@ describe("useProfileTransactions", () => {
 		expect(sentPending.some((t) => t.hash() === "PENDING_FROM_ME")).toBe(true);
 		expect(sentPending.some((t) => t.hash() === "PENDING_TO_ME")).toBe(false);
 
-		const { result: receivedTransactions } = renderHook(() => useProfileTransactions({ profile, wallets: [firstWallet]}), {
-			wrapper,
-		});
+		const { result: receivedTransactions } = renderHook(
+			() => useProfileTransactions({ profile, wallets: [firstWallet] }),
+			{
+				wrapper,
+			},
+		);
 
 		act(() => {
 			receivedTransactions.current.updateFilters({ activeMode: "received" });
@@ -539,11 +549,13 @@ describe("useProfileTransactions", () => {
 			value: 1,
 		});
 
-		const { pendingSpy } = await mockPendingTransactionsHook([{
-			networkId: firstWallet.networkId(),
-			transaction: pendingTransaction,
-			walletAddress,
-		}]);
+		const { pendingSpy } = await mockPendingTransactionsHook([
+			{
+				networkId: firstWallet.networkId(),
+				transaction: pendingTransaction,
+				walletAddress,
+			},
+		]);
 
 		const { result } = renderHook(() => useProfileTransactions({ profile, wallets: [firstWallet] }), { wrapper });
 
@@ -587,11 +599,11 @@ describe("useProfileTransactions", () => {
 		const pendingTransaction = {
 			networkId: firstWallet.networkId(),
 			walletAddress,
-		}
+		};
 
 		const { pendingSpy } = await mockPendingTransactionsHook([
-			{...pendingTransaction, transaction: transactionData1},
-			{...pendingTransaction, transaction: transactionData2},
+			{ ...pendingTransaction, transaction: transactionData1 },
+			{ ...pendingTransaction, transaction: transactionData2 },
 		]);
 
 		const { result } = renderHook(() => useProfileTransactions({ profile, wallets }), { wrapper });
@@ -633,11 +645,11 @@ describe("useProfileTransactions", () => {
 		const pendingTransaction = {
 			networkId: firstWallet.networkId(),
 			walletAddress: firstWallet.address(),
-		}
+		};
 
 		const { pendingSpy } = await mockPendingTransactionsHook([
-			{...pendingTransaction, transaction: older},
-			{...pendingTransaction, transaction: newer },
+			{ ...pendingTransaction, transaction: older },
+			{ ...pendingTransaction, transaction: newer },
 		]);
 
 		const confirmedTransactionsMock = vi.spyOn(profile.transactionAggregate(), "all").mockResolvedValue({
@@ -657,13 +669,13 @@ describe("useProfileTransactions", () => {
 
 		await waitFor(() => expect(result.current.isLoadingTransactions).toBe(false));
 
-		expect((result.current.transactions[0]).hash()).toBe("PENDING_NEW");
+		expect(result.current.transactions[0].hash()).toBe("PENDING_NEW");
 
 		act(() => {
 			result.current.setSortBy({ column: "date", desc: false });
 		});
 
-		await waitFor(() => expect((result.current.transactions[0]).hash()).toBe("PENDING_OLD"));
+		await waitFor(() => expect(result.current.transactions[0].hash()).toBe("PENDING_OLD"));
 
 		pendingSpy.mockRestore();
 		confirmedTransactionsMock.mockRestore();
@@ -690,11 +702,11 @@ describe("useProfileTransactions", () => {
 		const pendingTransaction = {
 			networkId: firstWallet.networkId(),
 			walletAddress: firstWallet.address(),
-		}
+		};
 
 		const { pendingSpy } = await mockPendingTransactionsHook([
-			{...pendingTransaction, transaction: transactionData1 },
-			{...pendingTransaction, transaction: transactionData2 },
+			{ ...pendingTransaction, transaction: transactionData1 },
+			{ ...pendingTransaction, transaction: transactionData2 },
 		]);
 
 		const confirmedTransactionsMock = vi.spyOn(profile.transactionAggregate(), "all").mockResolvedValue({
