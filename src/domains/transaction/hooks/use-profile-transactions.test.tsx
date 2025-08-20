@@ -793,11 +793,13 @@ describe("useProfileTransactions", () => {
 			to: firstWallet.address(),
 		});
 
-		const { pendingSpy } = await mockPendingTransactionsHook([{
-			networkId: firstWallet.networkId(),
-			transaction: pendingTransactionData,
-			walletAddress: firstWallet.address(),
-		}]);
+		const { pendingSpy } = await mockPendingTransactionsHook([
+			{
+				networkId: firstWallet.networkId(),
+				transaction: pendingTransactionData,
+				walletAddress: firstWallet.address(),
+			},
+		]);
 
 		// Get one confirmed transaction that will be second in sort (b = confirmed)
 		const confirmedTransactions = await profile.transactionAggregate().all({});
@@ -821,18 +823,18 @@ describe("useProfileTransactions", () => {
 		});
 
 		await waitFor(() => expect(result.current.isLoadingTransactions).toBe(false));
-		
+
 		// Verify we have both pending and confirmed transactions
 		const transactions = result.current.transactions;
 		expect(transactions.length).toBeGreaterThan(1);
-		
+
 		// Find our specific transactions in the results
-		const pendingTx = transactions.find(tx => tx.hash() === "PENDING_TX_LINE_204");
-		const confirmedTx = transactions.find(tx => tx.hash() === confirmedTransaction.hash());
-		
+		const pendingTx = transactions.find((tx) => tx.hash() === "PENDING_TX_LINE_204");
+		const confirmedTx = transactions.find((tx) => tx.hash() === confirmedTransaction.hash());
+
 		expect(pendingTx).toBeDefined();
 		expect(confirmedTx).toBeDefined();
-		
+
 		// Verify pending transaction is sorted before confirmed transaction
 		// This tests line 204: return -1; (when aIsSignedTransaction && !bIsSignedTransaction)
 		const pendingIndex = transactions.indexOf(pendingTx!);
