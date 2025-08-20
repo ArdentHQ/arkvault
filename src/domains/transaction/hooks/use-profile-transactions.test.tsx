@@ -737,7 +737,6 @@ describe("useProfileTransactions", () => {
 		const wallets = profile.wallets().values();
 		const firstWallet = wallets[0];
 
-		// Create pending transactions with different combinations of matching/non-matching addresses and networks
 		const matchingPendingTx = createMockedTransactionData({
 			hash: "MATCHING_PENDING_TX",
 			from: "ADDRESS_FROM",
@@ -745,14 +744,14 @@ describe("useProfileTransactions", () => {
 		});
 
 		const nonMatchingAddressTx = createMockedTransactionData({
-			hash: "NON_MATCHING_ADDRESS_TX",  
+			hash: "NON_MATCHING_ADDRESS_TX",
 			from: "ADDRESS_FROM",
 			to: "NON_MATCHING_ADDRESS",
 		});
 
 		const nonMatchingNetworkTx = createMockedTransactionData({
 			hash: "NON_MATCHING_NETWORK_TX",
-			from: "ADDRESS_FROM", 
+			from: "ADDRESS_FROM",
 			to: firstWallet.address(),
 		});
 
@@ -777,7 +776,6 @@ describe("useProfileTransactions", () => {
 			}
 		]);
 
-		// Mock to return empty confirmed transactions to focus on pending filtering
 		const confirmedTransactionsMock = vi.spyOn(profile.transactionAggregate(), "all").mockResolvedValue({
 			hasMorePages: () => false,
 			items: () => [],
@@ -797,7 +795,6 @@ describe("useProfileTransactions", () => {
 		expect(resultHashes).not.toContain("NON_MATCHING_ADDRESS_TX");
 		expect(resultHashes).not.toContain("NON_MATCHING_NETWORK_TX");
 
-		// Verify only 1 transaction is included (the matching one)
 		expect(result.current.transactions).toHaveLength(1);
 
 		pendingSpy.mockRestore();
