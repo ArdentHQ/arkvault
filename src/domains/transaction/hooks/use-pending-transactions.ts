@@ -1,36 +1,12 @@
 import { useCallback } from "react";
 import { DTO } from "@/app/lib/profiles";
 import { useLocalStorage } from "usehooks-ts";
-import { BigNumber } from "@/app/lib/helpers";
-import { DateTime } from "@/app/lib/intl";
+import { RawTransactionData } from "@/app/lib/mainsail/signed-transaction.dto.contract";
 
-interface PendingTransactionData {
-	convertedAmount: number;
-	convertedTotal: number;
-	explorerLink: string;
-	fee: number;
-	from: string;
-	hash: string;
-	isMultiPayment: boolean;
-	isReturn: boolean;
-	isTransfer: boolean;
-	isUsernameRegistration: boolean;
-	isUsernameResignation: boolean;
-	isUnvote: boolean;
-	isUpdateValidator: boolean;
-	isValidatorResignation: boolean;
-	isValidatorRegistration: boolean;
-	isVote: boolean;
-	isVoteCombination: boolean;
-	networkId: string;
-	nonce: BigNumber;
-	recipients?: DTO.ExtendedTransactionRecipient[];
-	timestamp: DateTime;
-	to: string;
-	total: number;
-	type: string;
-	value: number;
+export interface PendingTransactionData {
+	transaction: RawTransactionData;
 	walletAddress: string;
+	networkId: string;
 }
 
 interface UsePendingTransactionsReturn {
@@ -49,36 +25,13 @@ export const usePendingTransactions = (): UsePendingTransactionsReturn => {
 		(transaction: DTO.ExtendedSignedTransactionData) => {
 			try {
 				const pendingTransaction: PendingTransactionData = {
-					convertedAmount: transaction.convertedAmount?.(),
-					convertedTotal: transaction.convertedTotal(),
-					explorerLink: transaction.explorerLink(),
-					fee: transaction.fee(),
-					from: transaction.from(),
-					hash: transaction.hash(),
-					isMultiPayment: transaction.isMultiPayment(),
-					isReturn: transaction.isReturn(),
-					isTransfer: transaction.isTransfer(),
-					isUnvote: transaction.isUnvote(),
-					isUpdateValidator: transaction.isUpdateValidator(),
-					isUsernameRegistration: transaction.isUsernameRegistration(),
-					isUsernameResignation: transaction.isUsernameResignation(),
-					isValidatorRegistration: transaction.isValidatorRegistration(),
-					isValidatorResignation: transaction.isValidatorResignation(),
-					isVote: transaction.isVote(),
-					isVoteCombination: transaction.isVoteCombination(),
 					networkId: transaction.wallet().networkId(),
-					nonce: transaction.nonce(),
-					recipients: transaction.recipients?.(),
-					timestamp: DateTime.make(transaction.timestamp()),
-					to: transaction.to(),
-					total: transaction.total(),
-					type: transaction.type(),
-					value: transaction.value(),
+					transaction: transaction.data(),
 					walletAddress: transaction.wallet().address(),
 				};
 
 				setPendingTransactions((prev) => {
-					const filtered = prev.filter((tx) => tx.hash !== transaction.hash());
+					const filtered = prev.filter((tx) => tx.transaction.signedData.hash !== transaction.hash());
 					return [...filtered, pendingTransaction];
 				});
 			} catch (error) {
@@ -91,7 +44,7 @@ export const usePendingTransactions = (): UsePendingTransactionsReturn => {
 
 	const removePendingTransaction = useCallback(
 		(hash: string) => {
-			setPendingTransactions((prev) => prev.filter((tx) => tx.hash !== hash));
+			setPendingTransactions((prev) => prev.filter(({ transaction }) => transaction.signedData.hash !== hash));
 		},
 		[setPendingTransactions],
 	);

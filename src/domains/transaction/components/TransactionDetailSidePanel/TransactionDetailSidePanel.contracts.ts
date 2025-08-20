@@ -1,6 +1,7 @@
 import { Contracts, DTO } from "@/app/lib/profiles";
 
 import { WalletAliasResult } from "@/app/hooks";
+import { ExtendedTransactionDTO } from "@/domains/transaction/components/TransactionTable";
 
 export interface TransactionAliases {
 	sender: WalletAliasResult;
@@ -9,7 +10,7 @@ export interface TransactionAliases {
 
 export interface TransactionDetailModalProperties {
 	isOpen: boolean;
-	transactionItem: DTO.ExtendedConfirmedTransactionData | DTO.ExtendedConfirmedTransactionData;
+	transactionItem: ExtendedTransactionDTO;
 	profile: Contracts.IProfile;
 	onClose?: any;
 }

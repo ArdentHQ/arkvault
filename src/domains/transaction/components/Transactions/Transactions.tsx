@@ -1,4 +1,4 @@
-import { Contracts, DTO } from "@/app/lib/profiles";
+import { Contracts } from "@/app/lib/profiles";
 import React, { memo, useCallback, useEffect, useMemo, useState } from "react";
 import { Tab, TabList, Tabs } from "@/app/components/Tabs";
 import { Trans, useTranslation } from "react-i18next";
@@ -10,7 +10,7 @@ import { Icon } from "@/app/components/Icon";
 import { TabId } from "@/app/components/Tabs/useTab";
 import { TableWrapper } from "@/app/components/Table/TableWrapper";
 import { TransactionDetailSidePanel } from "@/domains/transaction/components/TransactionDetailSidePanel";
-import { TransactionTable } from "@/domains/transaction/components/TransactionTable";
+import { ExtendedTransactionDTO, TransactionTable } from "@/domains/transaction/components/TransactionTable";
 import cn from "classnames";
 import { useProfileTransactions } from "@/domains/transaction/hooks/use-profile-transactions";
 import { Skeleton } from "@/app/components/Skeleton";
@@ -40,9 +40,7 @@ export const Transactions = memo(function Transactions({
 }: TransactionsProperties) {
 	const { t } = useTranslation();
 
-	const [transactionModalItem, setTransactionModalItem] = useState<DTO.ExtendedConfirmedTransactionData | undefined>(
-		undefined,
-	);
+	const [transactionModalItem, setTransactionModalItem] = useState<ExtendedTransactionDTO | undefined>(undefined);
 
 	const [activeTransactionTypeLabel, setActiveTransactionTypeLabel] = useState("");
 
