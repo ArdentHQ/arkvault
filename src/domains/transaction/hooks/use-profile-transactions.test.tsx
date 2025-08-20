@@ -732,4 +732,75 @@ describe("useProfileTransactions", () => {
 		pendingSpy.mockRestore();
 		confirmedTransactionsMock.mockRestore();
 	});
+
+	it("should filter out pending transactions with non-matching wallet address or network ID", async () => {
+		const wallets = profile.wallets().values();
+		const firstWallet = wallets[0];
+
+		// Create pending transactions with different combinations of matching/non-matching addresses and networks
+		const matchingPendingTx = createMockedTransactionData({
+			hash: "MATCHING_PENDING_TX",
+			from: "ADDRESS_FROM",
+			to: firstWallet.address(),
+		});
+
+		const nonMatchingAddressTx = createMockedTransactionData({
+			hash: "NON_MATCHING_ADDRESS_TX",  
+			from: "ADDRESS_FROM",
+			to: "NON_MATCHING_ADDRESS",
+		});
+
+		const nonMatchingNetworkTx = createMockedTransactionData({
+			hash: "NON_MATCHING_NETWORK_TX",
+			from: "ADDRESS_FROM", 
+			to: firstWallet.address(),
+		});
+
+		const { pendingSpy } = await mockPendingTransactionsHook([
+			{
+				// This should be included (matching wallet address and network)
+				networkId: firstWallet.networkId(),
+				transaction: matchingPendingTx,
+				walletAddress: firstWallet.address(),
+			},
+			{
+				// This should be filtered out (non-matching wallet address)
+				networkId: firstWallet.networkId(),
+				transaction: nonMatchingAddressTx,
+				walletAddress: "NON_MATCHING_WALLET_ADDRESS",
+			},
+			{
+				// This should be filtered out (non-matching network ID)
+				networkId: "non-matching-network",
+				transaction: nonMatchingNetworkTx,
+				walletAddress: firstWallet.address(),
+			}
+		]);
+
+		// Mock to return empty confirmed transactions to focus on pending filtering
+		const confirmedTransactionsMock = vi.spyOn(profile.transactionAggregate(), "all").mockResolvedValue({
+			hasMorePages: () => false,
+			items: () => [],
+		});
+
+		const { result } = renderHook(() => useProfileTransactions({ profile, wallets: [firstWallet] }), { wrapper });
+
+		act(() => {
+			result.current.updateFilters({ activeMode: "all" });
+		});
+
+		await waitFor(() => expect(result.current.isLoadingTransactions).toBe(false));
+
+		// Should only include the matching pending transaction
+		const resultHashes = result.current.transactions.map(tx => tx.hash());
+		expect(resultHashes).toContain("MATCHING_PENDING_TX");
+		expect(resultHashes).not.toContain("NON_MATCHING_ADDRESS_TX");
+		expect(resultHashes).not.toContain("NON_MATCHING_NETWORK_TX");
+
+		// Verify only 1 transaction is included (the matching one)
+		expect(result.current.transactions).toHaveLength(1);
+
+		pendingSpy.mockRestore();
+		confirmedTransactionsMock.mockRestore();
+	});
 });
