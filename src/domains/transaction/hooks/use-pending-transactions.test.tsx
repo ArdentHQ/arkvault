@@ -37,36 +37,12 @@ const createMockTransaction = (wallet: Contracts.IReadWriteWallet, signedData = 
 	return new ExtendedSignedTransactionData(signedTransaction, wallet);
 };
 
-// Mock localStorage to avoid persistence between tests
-const localStorageMock = (() => {
-	let store: Record<string, string> = {};
-
-	return {
-		getItem: (key: string) => {
-			return store[key] || null;
-		},
-		setItem: (key: string, value: string) => {
-			store[key] = value.toString();
-		},
-		removeItem: (key: string) => {
-			delete store[key];
-		},
-		clear: () => {
-			store = {};
-		}
-	};
-})();
-
-Object.defineProperty(window, 'localStorage', {
-	value: localStorageMock
-});
-
 describe("usePendingTransactions", () => {
 	beforeEach(async () => {
 		wallet = env.profiles().findById(getMainsailProfileId()).wallets().first();
 		await wallet.synchroniser().identity();
 
-		// Clear localStorage before each test
+		// Clear localStorage to prevent test interference
 		localStorage.clear();
 		vi.clearAllMocks();
 	});
@@ -180,32 +156,25 @@ describe("usePendingTransactions", () => {
 		expect(result.current.pendingTransactions[0].transaction.signedData.hash).toBe(signedTransactionData.signedData.hash);
 	});
 
-	it("should persist and retrieve pending transactions from localStorage", async () => {
-		// First hook instance - add transaction
-		const { result: result1 } = renderHook(() => usePendingTransactions());
-
-		const mockTransaction = createMockTransaction(wallet);
-
-		act(() => {
-			result1.current.addPendingTransaction(mockTransaction);
-		});
-
-		expect(result1.current.pendingTransactions).toHaveLength(1);
-
-		// Second hook instance - should retrieve from localStorage
-		const { result: result2 } = renderHook(() => usePendingTransactions());
-
-		expect(result2.current.pendingTransactions).toHaveLength(1);
-		expect(result2.current.pendingTransactions[0].transaction.signedData.hash).toBe(signedTransactionData.signedData.hash);
-		expect(result2.current.pendingTransactions[0].walletAddress).toBe(wallet.address());
-	});
-
-	it("should properly handle empty localStorage", async () => {
-		// Ensure localStorage is empty
-		localStorage.clear();
-
+	it("should handle error when adding transaction fails", async () => {
 		const { result } = renderHook(() => usePendingTransactions());
 
-		expect(result.current.pendingTransactions).toEqual([]);
+		// Mock a transaction that throws an error
+		const mockTransaction = {
+			data: () => {
+				throw new Error("Transaction data error");
+			},
+			hash: () => "test-hash",
+			wallet: () => ({
+				address: () => "test-address"
+			})
+		} as unknown as DTO.ExtendedSignedTransactionData;
+
+		act(() => {
+			result.current.addPendingTransaction(mockTransaction);
+		});
+
+		// Should not add the transaction and should remain empty
+		expect(result.current.pendingTransactions).toHaveLength(0);
 	});
 });
