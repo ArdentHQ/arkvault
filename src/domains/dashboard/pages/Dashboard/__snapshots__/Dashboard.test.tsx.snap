@@ -1951,7 +1951,7 @@ exports[`Dashboard > should render 1`] = `
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border whitespace-nowrap first:rounded-tl-xl last:rounded-tr-xl w-full min-w-full lg:w-24"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border whitespace-nowrap first:rounded-tl-xl last:rounded-tr-xl w-fit min-w-fit lg:w-24"
                           colspan="1"
                           data-testid="table__th--3"
                           role="columnheader"
@@ -2028,7 +2028,7 @@ exports[`Dashboard > should render 1`] = `
                                     class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                                   >
                                     <span
-                                      class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
+                                      class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center space-x-1 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
                                     >
                                       <span
                                         class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
@@ -2535,7 +2535,7 @@ exports[`Dashboard > should render 1`] = `
                                     class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                                   >
                                     <span
-                                      class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
+                                      class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center space-x-1 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
                                     >
                                       <span
                                         class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
@@ -3021,7 +3021,7 @@ exports[`Dashboard > should render 1`] = `
                                     class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                                   >
                                     <span
-                                      class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
+                                      class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center space-x-1 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
                                     >
                                       <span
                                         class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
@@ -3507,7 +3507,7 @@ exports[`Dashboard > should render 1`] = `
                                     class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                                   >
                                     <span
-                                      class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
+                                      class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center space-x-1 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
                                     >
                                       <span
                                         class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
@@ -3993,7 +3993,7 @@ exports[`Dashboard > should render 1`] = `
                                     class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                                   >
                                     <span
-                                      class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
+                                      class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center space-x-1 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
                                     >
                                       <span
                                         class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
@@ -4479,7 +4479,7 @@ exports[`Dashboard > should render 1`] = `
                                     class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                                   >
                                     <span
-                                      class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
+                                      class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center space-x-1 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
                                     >
                                       <span
                                         class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
@@ -4965,7 +4965,7 @@ exports[`Dashboard > should render 1`] = `
                                     class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                                   >
                                     <span
-                                      class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
+                                      class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center space-x-1 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
                                     >
                                       <span
                                         class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
@@ -5451,7 +5451,7 @@ exports[`Dashboard > should render 1`] = `
                                     class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                                   >
                                     <span
-                                      class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
+                                      class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center space-x-1 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
                                     >
                                       <span
                                         class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
@@ -5958,7 +5958,7 @@ exports[`Dashboard > should render 1`] = `
                                     class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                                   >
                                     <span
-                                      class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
+                                      class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center space-x-1 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
                                     >
                                       <span
                                         class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
@@ -6306,7 +6306,7 @@ exports[`Dashboard > should render 1`] = `
                                     class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                                   >
                                     <span
-                                      class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
+                                      class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center space-x-1 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
                                     >
                                       <span
                                         class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
