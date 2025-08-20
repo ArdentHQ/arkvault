@@ -747,11 +747,13 @@ describe("useProfileTransactions", () => {
 			to: firstWallet.address(),
 		});
 
-		const { pendingSpy } = await mockPendingTransactionsHook([{
-			networkId: firstWallet.networkId(),
-			transaction: pendingTransactionData,
-			walletAddress: firstWallet.address(),
-		}]);
+		const { pendingSpy } = await mockPendingTransactionsHook([
+			{
+				networkId: firstWallet.networkId(),
+				transaction: pendingTransactionData,
+				walletAddress: firstWallet.address(),
+			},
+		]);
 
 		// Mock to return one confirmed transaction
 		const confirmedTransactionsMock = vi.spyOn(profile.transactionAggregate(), "all").mockResolvedValue({
