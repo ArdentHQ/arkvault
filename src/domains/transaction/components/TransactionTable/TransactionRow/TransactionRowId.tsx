@@ -32,7 +32,7 @@ export const TransactionRowId = ({ transaction }: { transaction: ExtendedTransac
 				<Link to={transaction.explorerLink()} showExternalIcon={false} isExternal>
 					<span className="text-sm">
 						<TruncateMiddle
-							className="cursor-pointer text-theme-primary-600 dim:text-theme-dim-navy-600"
+							className="text-theme-primary-600 dim:text-theme-dim-navy-600 cursor-pointer"
 							text={transaction.hash()}
 							maxChars={isLgAndAbove ? 14 : 12}
 							data-testid="TransactionRow__id"
