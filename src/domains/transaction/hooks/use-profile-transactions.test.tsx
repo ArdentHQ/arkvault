@@ -720,4 +720,50 @@ describe("useProfileTransactions", () => {
 		pendingSpy.mockRestore();
 		confirmedTransactionsMock.mockRestore();
 	});
+
+	it("should sort confirmed transactions after pending transactions when sorting desc (non-date)", async () => {
+		const wallets = profile.wallets().values();
+		const firstWallet = wallets[0];
+
+		const confirmedTransactions = await profile.transactionAggregate().all({});
+		const confirmedTransaction = confirmedTransactions.items()[0];
+
+		const pendingTransactionData = createMockedTransactionData({
+			from: "ADDRESS_FROM",
+			hash: "PENDING_TX_AFTER_CONFIRMED",
+			timestamp: Date.now(),
+			to: firstWallet.address(),
+		});
+
+		const { pendingSpy } = await mockPendingTransactionsHook([{
+			networkId: firstWallet.networkId(),
+			transaction: pendingTransactionData,
+			walletAddress: firstWallet.address(),
+		}]);
+
+		// Mock to return one confirmed transaction
+		const confirmedTransactionsMock = vi.spyOn(profile.transactionAggregate(), "all").mockResolvedValue({
+			hasMorePages: () => false,
+			items: () => [confirmedTransaction],
+		});
+
+		const { result } = renderHook(() => useProfileTransactions({ profile, wallets: [firstWallet] }), { wrapper });
+
+		act(() => {
+			result.current.setSortBy({ column: "amount", desc: true });
+		});
+
+		act(() => {
+			result.current.updateFilters({ activeMode: "all" });
+		});
+
+		await waitFor(() => expect(result.current.isLoadingTransactions).toBe(false));
+		expect(result.current.transactions.length).toBeGreaterThan(1);
+
+		// Pending transaction should be sorted before confirmed transaction when desc=true
+		expect(result.current.transactions[0].hash()).toBe("PENDING_TX_AFTER_CONFIRMED");
+
+		pendingSpy.mockRestore();
+		confirmedTransactionsMock.mockRestore();
+	});
 });
