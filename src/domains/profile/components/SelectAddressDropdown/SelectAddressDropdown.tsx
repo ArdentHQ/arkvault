@@ -12,6 +12,8 @@ import { Icon } from "@/app/components/Icon";
 import { Amount } from "@/app/components/Amount";
 import { NetworkOption } from "@/app/components/NavigationBar/components/SelectNetwork/SelectNetwork.blocks";
 import { Tooltip } from "@/app/components/Tooltip";
+import { Circle } from "@/app/components/Circle";
+import { Avatar } from "@/app/components/Avatar";
 
 type SelectAddressDropdownProperties = {
 	wallet?: Contracts.IReadWriteWallet;
@@ -24,7 +26,22 @@ type SelectAddressDropdownProperties = {
 	onChange?: (wallet?: Contracts.IReadWriteWallet) => void;
 	disableAction?: (wallet: Contracts.IReadWriteWallet) => boolean;
 	showBalance?: boolean;
+	showWalletAvatar?: boolean;
+	showOptions?: boolean;
 } & Omit<React.InputHTMLAttributes<any>, "onChange">;
+
+export const ProfileAvatar = ({ address }: any) => {
+	if (!address) {
+		return (
+			<Circle
+				className="border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700"
+				size="sm"
+				noShadow
+			/>
+		);
+	}
+	return <Avatar address={address} size="sm" noShadow />;
+};
 
 export const OptionLabel = ({
 	option,
@@ -151,6 +168,8 @@ export const SelectAddressDropdown = React.forwardRef<HTMLInputElement, SelectAd
 			wallets,
 			defaultNetwork,
 			showBalance = false,
+			showOptions = true,
+			showWalletAvatar = true,
 			disableAction = () => false,
 		}: SelectAddressDropdownProperties,
 		reference,
@@ -190,6 +209,10 @@ export const SelectAddressDropdown = React.forwardRef<HTMLInputElement, SelectAd
 			});
 		}, [wallet, profile, defaultNetwork]);
 
+		const openRecipients = () => {
+			console.log("openRecipients");
+		};
+
 		return (
 			<div>
 				<div
@@ -205,13 +228,28 @@ export const SelectAddressDropdown = React.forwardRef<HTMLInputElement, SelectAd
 						defaultValue={wallet?.address()}
 						placeholder={placeholder || t("COMMON.ADDRESS")}
 						ref={reference}
-						options={recipientOptions}
-						showOptions={true}
+						options={showOptions ? recipientOptions : []}
+						showOptions={showOptions}
 						allowFreeInput={true}
 						innerClassName="text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200"
 						onChange={changeHandler}
 						addons={{
-							end: undefined,
+							end: showOptions
+								? {
+										content: (
+											<div
+												data-testid="SelectRecipient__select-recipient"
+												className={cn("flex items-center", {
+													"text-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 cursor-pointer rounded bg-transparent p-1 transition-colors dark:hover:text-white":
+														!disabled,
+												})}
+												onClick={openRecipients}
+											>
+												<Icon name="User" size="lg" />
+											</div>
+										),
+									}
+								: undefined,
 							start: selectedAddressAlias?.alias
 								? {
 										content: (
