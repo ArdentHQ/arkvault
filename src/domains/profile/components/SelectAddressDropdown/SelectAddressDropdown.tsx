@@ -14,8 +14,6 @@ import { NetworkOption } from "@/app/components/NavigationBar/components/SelectN
 import { Tooltip } from "@/app/components/Tooltip";
 import { Circle } from "@/app/components/Circle";
 import { Avatar } from "@/app/components/Avatar";
-import { SearchRecipient } from "@/domains/transaction/components/SearchRecipient";
-import { useProfileAddresses } from "@/domains/profile/hooks/use-profile-addresses";
 import { SearchWallet } from "@/domains/wallet/components/SearchWallet";
 import { SelectedWallet } from "@/domains/wallet/components/SearchWallet/SearchWallet.contracts";
 
