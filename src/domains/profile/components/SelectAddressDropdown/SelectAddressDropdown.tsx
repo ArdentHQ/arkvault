@@ -57,6 +57,8 @@ export const OptionLabel = ({
 }) => {
 	const address = option.value;
 
+	const { t } = useTranslation();
+
 	const { getWalletAlias } = useWalletAlias();
 
 	const wallet = useMemo(
@@ -73,8 +75,6 @@ export const OptionLabel = ({
 			}),
 		[address, getWalletAlias, network, profile],
 	);
-
-	const { t } = useTranslation();
 
 	return (
 		<Tooltip content={t("COMMON.DISABLED_DUE_INSUFFICIENT_BALANCE")} disabled={!option.isDisabled}>
