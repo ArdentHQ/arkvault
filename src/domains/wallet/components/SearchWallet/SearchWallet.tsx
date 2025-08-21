@@ -1,5 +1,6 @@
 import { Contracts } from "@/app/lib/profiles";
 import React, { FC, useCallback } from "react";
+import { createPortal } from "react-dom";
 import { useTranslation } from "react-i18next";
 import { SearchWalletProperties } from "./SearchWallet.contracts";
 import { EmptyResults } from "@/app/components/EmptyResults";
@@ -90,7 +91,7 @@ export const SearchWallet: FC<SearchWalletProperties> = ({
 		[profile, disableAction, showNetwork, onSelectWallet, selectedAddress, isXs],
 	);
 
-	return (
+	return createPortal(
 		<Modal title={title} description={description} isOpen={isOpen} size={size} onClose={onClose} noButtons>
 			<div className="mt-4">
 				<HeaderSearchInput
@@ -112,6 +113,7 @@ export const SearchWallet: FC<SearchWalletProperties> = ({
 					/>
 				)}
 			</div>
-		</Modal>
+		</Modal>,
+		document.body,
 	);
 };
