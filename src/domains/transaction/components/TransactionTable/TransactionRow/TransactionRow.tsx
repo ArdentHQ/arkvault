@@ -104,7 +104,7 @@ export const TransactionRow = memo(
 						color="secondary"
 						size="xs"
 						noBorder
-						className="max-w-40 truncate rounded px-1 py-[3px] whitespace-nowrap dark:border"
+						className="max-w-20 truncate rounded px-1 py-[3px] whitespace-nowrap lg:max-w-40 dark:border"
 						data-testid="TransactionRow__type"
 					>
 						{getLabel(transaction.type())}
