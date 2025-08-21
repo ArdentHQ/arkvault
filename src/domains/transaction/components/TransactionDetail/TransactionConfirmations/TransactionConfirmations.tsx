@@ -16,9 +16,10 @@ export const TransactionConfirmations = ({
 	confirmations?: number;
 	transaction: DTO.RawTransactionData;
 }) => {
-	console.log(transaction.data().receipt().error());
 	const { t } = useTranslation();
 	const { status } = useMultiSignatureStatus({ transaction, wallet: transaction.wallet() });
+
+	const error = isConfirmed ? transaction.data()?.receipt().error() as string | undefined : undefined;
 
 	const hasFailed = !!(confirmations && confirmations > 0 && "isSuccess" in transaction && !transaction.isSuccess());
 
@@ -47,6 +48,12 @@ export const TransactionConfirmations = ({
 				{transaction.data().receipt().hasUnknownError() && (
 					<p className="border-theme-danger-200 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dim:text-theme-dim-200 dim:border-theme-danger-400 border-t px-3 pt-2 font-semibold sm:px-6 sm:pt-4">
 						{t("TRANSACTION.TRANSACTION_EXECUTION_ERROR")}
+					</p>
+				)}
+
+				{error && (
+					<p className="border-theme-danger-200 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dim:text-theme-dim-200 dim:border-theme-danger-400 border-t px-3 pt-2 font-semibold sm:px-6 sm:pt-4">
+						{t("TRANSACTION.TRANSACTION_EXECUTION_ERROR_WITH_MESSAGE", { error: error.replace(/([A-Z])/g, ' $1') })}
 					</p>
 				)}
 

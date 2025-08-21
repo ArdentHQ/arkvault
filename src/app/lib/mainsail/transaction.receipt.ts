@@ -33,7 +33,7 @@ export class TransactionReceipt {
 			return false;
 		}
 
-		return true;
+		return !this.error();
 	}
 
 	public error(): string | undefined {
