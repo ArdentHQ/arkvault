@@ -1,7 +1,7 @@
 import { Networks } from "@/app/lib/mainsail";
 import { Contracts } from "@/app/lib/profiles";
 import cn from "classnames";
-import React, { useMemo, useRef } from "react";
+import React, { useCallback, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Address } from "@/app/components/Address";
 import { useFormField } from "@/app/components/Form/useFormField";
@@ -14,6 +14,10 @@ import { NetworkOption } from "@/app/components/NavigationBar/components/SelectN
 import { Tooltip } from "@/app/components/Tooltip";
 import { Circle } from "@/app/components/Circle";
 import { Avatar } from "@/app/components/Avatar";
+import { SearchRecipient } from "@/domains/transaction/components/SearchRecipient";
+import { useProfileAddresses } from "@/domains/profile/hooks/use-profile-addresses";
+import { SearchWallet } from "@/domains/wallet/components/SearchWallet";
+import { SelectedWallet } from "@/domains/wallet/components/SearchWallet/SearchWallet.contracts";
 
 type SelectAddressDropdownProperties = {
 	wallet?: Contracts.IReadWriteWallet;
@@ -26,7 +30,6 @@ type SelectAddressDropdownProperties = {
 	onChange?: (wallet?: Contracts.IReadWriteWallet) => void;
 	disableAction?: (wallet: Contracts.IReadWriteWallet) => boolean;
 	showBalance?: boolean;
-	showWalletAvatar?: boolean;
 	showOptions?: boolean;
 } & Omit<React.InputHTMLAttributes<any>, "onChange">;
 
@@ -169,12 +172,13 @@ export const SelectAddressDropdown = React.forwardRef<HTMLInputElement, SelectAd
 			defaultNetwork,
 			showBalance = false,
 			showOptions = true,
-			showWalletAvatar = true,
 			disableAction = () => false,
 		}: SelectAddressDropdownProperties,
 		reference,
 	) => {
 		const { t } = useTranslation();
+
+		const [searchWalletIsOpen, setSearchWalletIsOpen] = useState(false);
 
 		const { getWalletAlias } = useWalletAlias();
 
@@ -209,9 +213,34 @@ export const SelectAddressDropdown = React.forwardRef<HTMLInputElement, SelectAd
 			});
 		}, [wallet, profile, defaultNetwork]);
 
-		const openRecipients = () => {
-			console.log("openRecipients");
-		};
+		const openRecipients = useCallback(() => {
+			if (disabled) {
+				return;
+			}
+
+			const dropdownWrapper = selectReference.current!.querySelector("[role=combobox]") as HTMLDivElement;
+			// Necessary to ensure the select dropdown is hidden
+			if (dropdownWrapper.getAttribute("aria-expanded") === "true") {
+				const input = selectReference.current!.querySelector(
+					"input#SelectAddressDropdown__dropdown-input",
+				) as HTMLInputElement;
+				input.focus();
+				input.blur();
+			}
+
+			setSearchWalletIsOpen(true);
+		}, [disabled, selectReference]);
+
+		const handleSelectWallet = useCallback(
+			(selectedWallet: SelectedWallet) => {
+				setSearchWalletIsOpen(false);
+				const wallet = wallets.find(
+					(wallet: Contracts.IReadWriteWallet) => wallet.address() === selectedWallet.address,
+				);
+				onChange?.(wallet);
+			},
+			[setSearchWalletIsOpen, onChange],
+		);
 
 		return (
 			<div>
@@ -272,6 +301,21 @@ export const SelectAddressDropdown = React.forwardRef<HTMLInputElement, SelectAd
 						)}
 					/>
 				</div>
+
+				<SearchWallet
+					isOpen={searchWalletIsOpen}
+					profile={profile}
+					title={t("PROFILE.MODAL_SELECT_SENDER.TITLE")}
+					description={t("PROFILE.MODAL_SELECT_SENDER.DESCRIPTION")}
+					disableAction={disableAction}
+					searchPlaceholder={t("PROFILE.MODAL_SELECT_SENDER.SEARCH_PLACEHOLDER")}
+					wallets={wallets}
+					size="3xl"
+					showNetwork={false}
+					onSelectWallet={handleSelectWallet}
+					onClose={() => setSearchWalletIsOpen(false)}
+					selectedAddress={wallet?.address()}
+				/>
 			</div>
 		);
 	},
