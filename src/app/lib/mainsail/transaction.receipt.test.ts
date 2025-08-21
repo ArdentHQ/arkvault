@@ -66,7 +66,10 @@ describe("TransactionReceipt", () => {
 		});
 
 		it("should return error", () => {
-			const receipt = new TransactionReceipt({ gasRefunded: 0, gasUsed: 96, output: "0xa0ca2f4e", status: 0 }, 100);
+			const receipt = new TransactionReceipt(
+				{ gasRefunded: 0, gasUsed: 96, output: "0xa0ca2f4e", status: 0 },
+				100,
+			);
 			expect(receipt.error()).toBe("TakenUsername");
 		});
 
