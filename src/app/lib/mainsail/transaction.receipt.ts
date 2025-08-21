@@ -1,10 +1,13 @@
 import { BigNumber } from "@/app/lib/helpers";
+import { Hex, hexToString } from "viem";
+import { AbiDecoder, ContractAbiType } from "@arkecosystem/typescript-crypto";
 
 interface ReceiptData {
 	gasRefunded: number;
 	gasUsed: number;
 	status: number;
 	gasLimit?: number;
+	output?: string;
 }
 
 export class TransactionReceipt {
@@ -31,6 +34,35 @@ export class TransactionReceipt {
 		}
 
 		return true;
+	}
+
+	public error(): string | undefined {
+		if (this.isSuccess()) {
+			return undefined;
+		}
+
+		const output = this.#receipt.output;
+
+		if (!output || !hexToString(output as Hex)) {
+			return undefined;
+		}
+
+		const contractAbiTypes = [
+			ContractAbiType.CUSTOM,
+			ContractAbiType.CONSENSUS,
+			ContractAbiType.MULTIPAYMENT,
+			ContractAbiType.USERNAMES,
+		];
+
+		for (const contractAbiType of contractAbiTypes) {
+			try {
+				return new AbiDecoder(contractAbiType).decodeError(output);
+			} catch {
+				// If the ABI type is not found, we will try the next one
+			}
+		}
+
+		return undefined;
 	}
 
 	public hasInsufficientGasError(): boolean {

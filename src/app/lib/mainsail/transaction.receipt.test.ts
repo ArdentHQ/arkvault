@@ -48,4 +48,31 @@ describe("TransactionReceipt", () => {
 			expect(receipt.hasUnknownError()).toBe(false);
 		});
 	});
+
+	describe("#error", () => {
+		it("should return undefined when transaction is successful", () => {
+			const receipt = new TransactionReceipt({ gasRefunded: 0, gasUsed: 50, output: "0x", status: 1 }, 100);
+			expect(receipt.error()).toBe(undefined);
+		});
+
+		it("should return undefined when output is empty", () => {
+			const receipt = new TransactionReceipt({ gasRefunded: 0, gasUsed: 50, status: 0 }, 100);
+			expect(receipt.error()).toBe(undefined);
+		});
+
+		it("should return undefined when output it 0x", () => {
+			const receipt = new TransactionReceipt({ gasRefunded: 0, gasUsed: 50, output: "0x", status: 0 }, 100);
+			expect(receipt.error()).toBe(undefined);
+		});
+
+		it("should return error", () => {
+			const receipt = new TransactionReceipt({ gasRefunded: 0, gasUsed: 96, output: "0xa0ca2f4e", status: 0 }, 100);
+			expect(receipt.error()).toBe("TakenUsername");
+		});
+
+		it("should return undefined when error name couldn't be found", () => {
+			const receipt = new TransactionReceipt({ gasRefunded: 0, gasUsed: 96, output: "0xacadef", status: 0 }, 100);
+			expect(receipt.error()).toBe(undefined);
+		});
+	});
 });

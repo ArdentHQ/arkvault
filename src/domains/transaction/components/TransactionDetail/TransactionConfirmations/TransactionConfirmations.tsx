@@ -16,6 +16,7 @@ export const TransactionConfirmations = ({
 	confirmations?: number;
 	transaction: DTO.RawTransactionData;
 }) => {
+	console.log(transaction.data().receipt().error());
 	const { t } = useTranslation();
 	const { status } = useMultiSignatureStatus({ transaction, wallet: transaction.wallet() });
 
