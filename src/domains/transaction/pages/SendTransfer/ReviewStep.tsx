@@ -127,7 +127,7 @@ export const ReviewStep = ({ wallet, network, hideHeader = false }: ReviewStepPr
 				/>
 			)}
 			<div
-				className={cn("-mx-3 space-y-3 sm:mx-0 sm:space-y-4", {
+				className={cn("space-y-3 sm:mx-0 sm:space-y-4", {
 					"mt-4": !hideHeader,
 				})}
 			>

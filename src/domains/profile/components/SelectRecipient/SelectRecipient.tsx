@@ -204,8 +204,7 @@ export const SelectRecipient = ({
 						profile={profile}
 					/>,
 					document.body,
-				)
-			}
+				)}
 		</div>
 	);
 };
