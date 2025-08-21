@@ -19,7 +19,7 @@ exports[`TransactionTable > loading state > should render 1`] = `
             role="row"
           >
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border whitespace-nowrap w-32 min-w-32 lg:w-36 xl:w-48"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border whitespace-nowrap w-36 min-w-36 xl:w-48"
               colspan="1"
               data-testid="table__th--0"
               role="columnheader"
@@ -84,7 +84,7 @@ exports[`TransactionTable > loading state > should render 1`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border first:rounded-tl-xl last:rounded-tr-xl w-40 min-w-40 lg:w-24 lg:min-w-24 xl:min-w-32"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border first:rounded-tl-xl last:rounded-tr-xl w-20 min-w-20 lg:min-w-40 lg:w-40"
               colspan="1"
               data-testid="table__th--2"
               role="columnheader"
@@ -100,7 +100,7 @@ exports[`TransactionTable > loading state > should render 1`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border whitespace-nowrap first:rounded-tl-xl last:rounded-tr-xl w-full min-w-full lg:w-24"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border whitespace-nowrap first:rounded-tl-xl last:rounded-tr-xl w-fit min-w-fit lg:w-24"
               colspan="1"
               data-testid="table__th--3"
               role="columnheader"
@@ -1714,7 +1714,7 @@ exports[`TransactionTable > loading state > should render with currency column 1
             role="row"
           >
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border whitespace-nowrap w-32 min-w-32 lg:w-36 xl:w-48"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border whitespace-nowrap w-36 min-w-36 xl:w-48"
               colspan="1"
               data-testid="table__th--0"
               role="columnheader"
@@ -1779,7 +1779,7 @@ exports[`TransactionTable > loading state > should render with currency column 1
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border first:rounded-tl-xl last:rounded-tr-xl w-40 min-w-40 lg:w-24 lg:min-w-24 xl:min-w-32"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border first:rounded-tl-xl last:rounded-tr-xl w-20 min-w-20 lg:min-w-40 lg:w-40"
               colspan="1"
               data-testid="table__th--2"
               role="columnheader"
@@ -1795,7 +1795,7 @@ exports[`TransactionTable > loading state > should render with currency column 1
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border whitespace-nowrap first:rounded-tl-xl last:rounded-tr-xl w-full min-w-full lg:w-24"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border whitespace-nowrap first:rounded-tl-xl last:rounded-tr-xl w-fit min-w-fit lg:w-24"
               colspan="1"
               data-testid="table__th--3"
               role="columnheader"
@@ -3437,7 +3437,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                           class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                         >
                           <span
-                            class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
+                            class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-1 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
                           >
                             <span
                               class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
@@ -3737,7 +3737,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                           class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                         >
                           <span
-                            class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
+                            class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-1 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
                           >
                             <span
                               class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
@@ -4028,7 +4028,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                           class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                         >
                           <span
-                            class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
+                            class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-1 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
                           >
                             <span
                               class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
@@ -4319,7 +4319,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                           class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                         >
                           <span
-                            class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
+                            class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-1 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
                           >
                             <span
                               class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
@@ -4610,7 +4610,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                           class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                         >
                           <span
-                            class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
+                            class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-1 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
                           >
                             <span
                               class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
@@ -4901,7 +4901,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                           class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                         >
                           <span
-                            class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
+                            class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-1 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
                           >
                             <span
                               class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
@@ -5192,7 +5192,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                           class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                         >
                           <span
-                            class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
+                            class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-1 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
                           >
                             <span
                               class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
@@ -5483,7 +5483,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                           class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                         >
                           <span
-                            class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
+                            class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-1 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
                           >
                             <span
                               class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
@@ -5783,7 +5783,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                           class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                         >
                           <span
-                            class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
+                            class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-1 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
                           >
                             <span
                               class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
@@ -6028,7 +6028,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                           class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                         >
                           <span
-                            class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
+                            class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-1 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
                           >
                             <span
                               class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
@@ -6352,7 +6352,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                           class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                         >
                           <span
-                            class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
+                            class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-1 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
                           >
                             <span
                               class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
@@ -6652,7 +6652,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                           class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                         >
                           <span
-                            class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
+                            class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-1 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
                           >
                             <span
                               class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
@@ -6943,7 +6943,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                           class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                         >
                           <span
-                            class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
+                            class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-1 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
                           >
                             <span
                               class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
@@ -7234,7 +7234,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                           class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                         >
                           <span
-                            class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
+                            class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-1 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
                           >
                             <span
                               class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
@@ -7525,7 +7525,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                           class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                         >
                           <span
-                            class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
+                            class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-1 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
                           >
                             <span
                               class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
@@ -7816,7 +7816,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                           class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                         >
                           <span
-                            class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
+                            class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-1 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
                           >
                             <span
                               class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
@@ -8107,7 +8107,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                           class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                         >
                           <span
-                            class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
+                            class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-1 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
                           >
                             <span
                               class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
@@ -8398,7 +8398,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                           class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                         >
                           <span
-                            class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
+                            class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-1 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
                           >
                             <span
                               class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
@@ -8698,7 +8698,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                           class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                         >
                           <span
-                            class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
+                            class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-1 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
                           >
                             <span
                               class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
@@ -8943,7 +8943,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                           class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                         >
                           <span
-                            class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
+                            class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-1 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
                           >
                             <span
                               class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
@@ -9239,7 +9239,7 @@ exports[`TransactionTable > should render responsive 3`] = `
             role="row"
           >
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border whitespace-nowrap w-32 min-w-32 lg:w-36 xl:w-48"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border whitespace-nowrap w-36 min-w-36 xl:w-48"
               colspan="1"
               data-testid="table__th--0"
               role="columnheader"
@@ -9304,7 +9304,7 @@ exports[`TransactionTable > should render responsive 3`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border first:rounded-tl-xl last:rounded-tr-xl w-40 min-w-40 lg:w-24 lg:min-w-24 xl:min-w-32"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border first:rounded-tl-xl last:rounded-tr-xl w-20 min-w-20 lg:min-w-40 lg:w-40"
               colspan="1"
               data-testid="table__th--2"
               role="columnheader"
@@ -9320,7 +9320,7 @@ exports[`TransactionTable > should render responsive 3`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border whitespace-nowrap first:rounded-tl-xl last:rounded-tr-xl w-full min-w-full lg:w-24"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border whitespace-nowrap first:rounded-tl-xl last:rounded-tr-xl w-fit min-w-fit lg:w-24"
               colspan="1"
               data-testid="table__th--3"
               role="columnheader"
@@ -9413,13 +9413,13 @@ exports[`TransactionTable > should render responsive 3`] = `
                         class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                       >
                         <span
-                          class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
+                          class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-1 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
                         >
                           <span
                             class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
                             data-testid="TransactionRow__id"
                           >
-                            2d…5f
+                            2dc4…cb5f
                           </span>
                           <div
                             class="text-theme-danger-700 dark:text-theme-danger-info-border dim:text-theme-danger-info-border"
@@ -9485,7 +9485,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2 lg:w-24 lg:min-w-24 xl:min-w-38 xl:w-auto"
               >
                 <div
-                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-40 truncate rounded px-1 py-[3px] whitespace-nowrap dark:border"
+                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-20 truncate rounded px-1 py-[3px] whitespace-nowrap lg:max-w-40 dark:border"
                   data-testid="TransactionRow__type"
                 >
                   Transfer
@@ -9906,13 +9906,13 @@ exports[`TransactionTable > should render responsive 3`] = `
                         class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                       >
                         <span
-                          class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
+                          class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-1 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
                         >
                           <span
                             class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
                             data-testid="TransactionRow__id"
                           >
-                            2c…64
+                            2c0e…4364
                           </span>
                           <div
                             class="text-theme-danger-700 dark:text-theme-danger-info-border dim:text-theme-danger-info-border"
@@ -9978,7 +9978,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2 lg:w-24 lg:min-w-24 xl:min-w-38 xl:w-auto"
               >
                 <div
-                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-40 truncate rounded px-1 py-[3px] whitespace-nowrap dark:border"
+                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-20 truncate rounded px-1 py-[3px] whitespace-nowrap lg:max-w-40 dark:border"
                   data-testid="TransactionRow__type"
                 >
                   Registration
@@ -10374,13 +10374,13 @@ exports[`TransactionTable > should render responsive 3`] = `
                         class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                       >
                         <span
-                          class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
+                          class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-1 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
                         >
                           <span
                             class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
                             data-testid="TransactionRow__id"
                           >
-                            11…22
+                            1170…2e22
                           </span>
                           <div
                             class="text-theme-danger-700 dark:text-theme-danger-info-border dim:text-theme-danger-info-border"
@@ -10446,7 +10446,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2 lg:w-24 lg:min-w-24 xl:min-w-38 xl:w-auto"
               >
                 <div
-                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-40 truncate rounded px-1 py-[3px] whitespace-nowrap dark:border"
+                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-20 truncate rounded px-1 py-[3px] whitespace-nowrap lg:max-w-40 dark:border"
                   data-testid="TransactionRow__type"
                 >
                   Username Registration
@@ -10842,13 +10842,13 @@ exports[`TransactionTable > should render responsive 3`] = `
                         class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                       >
                         <span
-                          class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
+                          class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-1 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
                         >
                           <span
                             class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
                             data-testid="TransactionRow__id"
                           >
-                            1e…30
+                            1e68…4b30
                           </span>
                           <div
                             class="text-theme-danger-700 dark:text-theme-danger-info-border dim:text-theme-danger-info-border"
@@ -10914,7 +10914,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2 lg:w-24 lg:min-w-24 xl:min-w-38 xl:w-auto"
               >
                 <div
-                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-40 truncate rounded px-1 py-[3px] whitespace-nowrap dark:border"
+                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-20 truncate rounded px-1 py-[3px] whitespace-nowrap lg:max-w-40 dark:border"
                   data-testid="TransactionRow__type"
                 >
                   Username Resignation
@@ -11310,13 +11310,13 @@ exports[`TransactionTable > should render responsive 3`] = `
                         class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                       >
                         <span
-                          class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
+                          class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-1 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
                         >
                           <span
                             class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
                             data-testid="TransactionRow__id"
                           >
-                            e9…2e
+                            e9ba…1e2e
                           </span>
                           <div
                             class="text-theme-danger-700 dark:text-theme-danger-info-border dim:text-theme-danger-info-border"
@@ -11382,7 +11382,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2 lg:w-24 lg:min-w-24 xl:min-w-38 xl:w-auto"
               >
                 <div
-                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-40 truncate rounded px-1 py-[3px] whitespace-nowrap dark:border"
+                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-20 truncate rounded px-1 py-[3px] whitespace-nowrap lg:max-w-40 dark:border"
                   data-testid="TransactionRow__type"
                 >
                   Username Registration
@@ -11778,13 +11778,13 @@ exports[`TransactionTable > should render responsive 3`] = `
                         class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                       >
                         <span
-                          class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
+                          class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-1 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
                         >
                           <span
                             class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
                             data-testid="TransactionRow__id"
                           >
-                            f4…b2
+                            f40a…8fb2
                           </span>
                           <div
                             class="text-theme-danger-700 dark:text-theme-danger-info-border dim:text-theme-danger-info-border"
@@ -11850,7 +11850,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2 lg:w-24 lg:min-w-24 xl:min-w-38 xl:w-auto"
               >
                 <div
-                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-40 truncate rounded px-1 py-[3px] whitespace-nowrap dark:border"
+                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-20 truncate rounded px-1 py-[3px] whitespace-nowrap lg:max-w-40 dark:border"
                   data-testid="TransactionRow__type"
                 >
                   Vote
@@ -12246,13 +12246,13 @@ exports[`TransactionTable > should render responsive 3`] = `
                         class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                       >
                         <span
-                          class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
+                          class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-1 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
                         >
                           <span
                             class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
                             data-testid="TransactionRow__id"
                           >
-                            45…0e
+                            4511…880e
                           </span>
                           <div
                             class="text-theme-danger-700 dark:text-theme-danger-info-border dim:text-theme-danger-info-border"
@@ -12318,7 +12318,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2 lg:w-24 lg:min-w-24 xl:min-w-38 xl:w-auto"
               >
                 <div
-                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-40 truncate rounded px-1 py-[3px] whitespace-nowrap dark:border"
+                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-20 truncate rounded px-1 py-[3px] whitespace-nowrap lg:max-w-40 dark:border"
                   data-testid="TransactionRow__type"
                 >
                   Vote
@@ -12714,13 +12714,13 @@ exports[`TransactionTable > should render responsive 3`] = `
                         class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                       >
                         <span
-                          class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
+                          class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-1 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
                         >
                           <span
                             class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
                             data-testid="TransactionRow__id"
                           >
-                            d1…c5
+                            d1dc…50c5
                           </span>
                           <div
                             class="text-theme-danger-700 dark:text-theme-danger-info-border dim:text-theme-danger-info-border"
@@ -12786,7 +12786,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2 lg:w-24 lg:min-w-24 xl:min-w-38 xl:w-auto"
               >
                 <div
-                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-40 truncate rounded px-1 py-[3px] whitespace-nowrap dark:border"
+                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-20 truncate rounded px-1 py-[3px] whitespace-nowrap lg:max-w-40 dark:border"
                   data-testid="TransactionRow__type"
                 >
                   Transfer
@@ -13209,13 +13209,13 @@ exports[`TransactionTable > should render responsive 3`] = `
                         class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                       >
                         <span
-                          class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
+                          class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-1 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
                         >
                           <span
                             class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
                             data-testid="TransactionRow__id"
                           >
-                            8f…cc
+                            8f26…cacc
                           </span>
                           <div
                             class="text-theme-danger-700 dark:text-theme-danger-info-border dim:text-theme-danger-info-border"
@@ -13281,7 +13281,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2 lg:w-24 lg:min-w-24 xl:min-w-38 xl:w-auto"
               >
                 <div
-                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-40 truncate rounded px-1 py-[3px] whitespace-nowrap dark:border"
+                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-20 truncate rounded px-1 py-[3px] whitespace-nowrap lg:max-w-40 dark:border"
                   data-testid="TransactionRow__type"
                 >
                   Multipayment
@@ -13539,13 +13539,13 @@ exports[`TransactionTable > should render responsive 3`] = `
                         class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                       >
                         <span
-                          class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
+                          class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-1 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
                         >
                           <span
                             class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
                             data-testid="TransactionRow__id"
                           >
-                            11…f8
+                            1105…28f8
                           </span>
                           <div
                             class="text-theme-danger-700 dark:text-theme-danger-info-border dim:text-theme-danger-info-border"
@@ -13611,7 +13611,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2 lg:w-24 lg:min-w-24 xl:min-w-38 xl:w-auto"
               >
                 <div
-                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-40 truncate rounded px-1 py-[3px] whitespace-nowrap dark:border"
+                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-20 truncate rounded px-1 py-[3px] whitespace-nowrap lg:max-w-40 dark:border"
                   data-testid="TransactionRow__type"
                 >
                   Transfer
@@ -14033,7 +14033,7 @@ exports[`TransactionTable > should render responsive 4`] = `
             role="row"
           >
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border whitespace-nowrap w-32 min-w-32 lg:w-36 xl:w-48"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border whitespace-nowrap w-36 min-w-36 xl:w-48"
               colspan="1"
               data-testid="table__th--0"
               role="columnheader"
@@ -14098,7 +14098,7 @@ exports[`TransactionTable > should render responsive 4`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border first:rounded-tl-xl last:rounded-tr-xl w-40 min-w-40 lg:w-24 lg:min-w-24 xl:min-w-32"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border first:rounded-tl-xl last:rounded-tr-xl w-20 min-w-20 lg:min-w-40 lg:w-40"
               colspan="1"
               data-testid="table__th--2"
               role="columnheader"
@@ -14114,7 +14114,7 @@ exports[`TransactionTable > should render responsive 4`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border whitespace-nowrap first:rounded-tl-xl last:rounded-tr-xl w-full min-w-full lg:w-24"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border whitespace-nowrap first:rounded-tl-xl last:rounded-tr-xl w-fit min-w-fit lg:w-24"
               colspan="1"
               data-testid="table__th--3"
               role="columnheader"
@@ -14207,13 +14207,13 @@ exports[`TransactionTable > should render responsive 4`] = `
                         class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                       >
                         <span
-                          class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
+                          class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-1 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
                         >
                           <span
                             class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
                             data-testid="TransactionRow__id"
                           >
-                            2dc…b5f
+                            2dc4…cb5f
                           </span>
                           <div
                             class="text-theme-danger-700 dark:text-theme-danger-info-border dim:text-theme-danger-info-border"
@@ -14279,7 +14279,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2 lg:w-24 lg:min-w-24 xl:min-w-38 xl:w-auto"
               >
                 <div
-                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-40 truncate rounded px-1 py-[3px] whitespace-nowrap dark:border"
+                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-20 truncate rounded px-1 py-[3px] whitespace-nowrap lg:max-w-40 dark:border"
                   data-testid="TransactionRow__type"
                 >
                   Transfer
@@ -14700,13 +14700,13 @@ exports[`TransactionTable > should render responsive 4`] = `
                         class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                       >
                         <span
-                          class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
+                          class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-1 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
                         >
                           <span
                             class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
                             data-testid="TransactionRow__id"
                           >
-                            2c0…364
+                            2c0e…4364
                           </span>
                           <div
                             class="text-theme-danger-700 dark:text-theme-danger-info-border dim:text-theme-danger-info-border"
@@ -14772,7 +14772,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2 lg:w-24 lg:min-w-24 xl:min-w-38 xl:w-auto"
               >
                 <div
-                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-40 truncate rounded px-1 py-[3px] whitespace-nowrap dark:border"
+                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-20 truncate rounded px-1 py-[3px] whitespace-nowrap lg:max-w-40 dark:border"
                   data-testid="TransactionRow__type"
                 >
                   Registration
@@ -15168,13 +15168,13 @@ exports[`TransactionTable > should render responsive 4`] = `
                         class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                       >
                         <span
-                          class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
+                          class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-1 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
                         >
                           <span
                             class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
                             data-testid="TransactionRow__id"
                           >
-                            117…e22
+                            1170…2e22
                           </span>
                           <div
                             class="text-theme-danger-700 dark:text-theme-danger-info-border dim:text-theme-danger-info-border"
@@ -15240,7 +15240,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2 lg:w-24 lg:min-w-24 xl:min-w-38 xl:w-auto"
               >
                 <div
-                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-40 truncate rounded px-1 py-[3px] whitespace-nowrap dark:border"
+                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-20 truncate rounded px-1 py-[3px] whitespace-nowrap lg:max-w-40 dark:border"
                   data-testid="TransactionRow__type"
                 >
                   Username Registration
@@ -15636,13 +15636,13 @@ exports[`TransactionTable > should render responsive 4`] = `
                         class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                       >
                         <span
-                          class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
+                          class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-1 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
                         >
                           <span
                             class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
                             data-testid="TransactionRow__id"
                           >
-                            1e6…b30
+                            1e68…4b30
                           </span>
                           <div
                             class="text-theme-danger-700 dark:text-theme-danger-info-border dim:text-theme-danger-info-border"
@@ -15708,7 +15708,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2 lg:w-24 lg:min-w-24 xl:min-w-38 xl:w-auto"
               >
                 <div
-                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-40 truncate rounded px-1 py-[3px] whitespace-nowrap dark:border"
+                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-20 truncate rounded px-1 py-[3px] whitespace-nowrap lg:max-w-40 dark:border"
                   data-testid="TransactionRow__type"
                 >
                   Username Resignation
@@ -16104,13 +16104,13 @@ exports[`TransactionTable > should render responsive 4`] = `
                         class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                       >
                         <span
-                          class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
+                          class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-1 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
                         >
                           <span
                             class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
                             data-testid="TransactionRow__id"
                           >
-                            e9b…e2e
+                            e9ba…1e2e
                           </span>
                           <div
                             class="text-theme-danger-700 dark:text-theme-danger-info-border dim:text-theme-danger-info-border"
@@ -16176,7 +16176,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2 lg:w-24 lg:min-w-24 xl:min-w-38 xl:w-auto"
               >
                 <div
-                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-40 truncate rounded px-1 py-[3px] whitespace-nowrap dark:border"
+                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-20 truncate rounded px-1 py-[3px] whitespace-nowrap lg:max-w-40 dark:border"
                   data-testid="TransactionRow__type"
                 >
                   Username Registration
@@ -16572,13 +16572,13 @@ exports[`TransactionTable > should render responsive 4`] = `
                         class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                       >
                         <span
-                          class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
+                          class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-1 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
                         >
                           <span
                             class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
                             data-testid="TransactionRow__id"
                           >
-                            f40…fb2
+                            f40a…8fb2
                           </span>
                           <div
                             class="text-theme-danger-700 dark:text-theme-danger-info-border dim:text-theme-danger-info-border"
@@ -16644,7 +16644,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2 lg:w-24 lg:min-w-24 xl:min-w-38 xl:w-auto"
               >
                 <div
-                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-40 truncate rounded px-1 py-[3px] whitespace-nowrap dark:border"
+                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-20 truncate rounded px-1 py-[3px] whitespace-nowrap lg:max-w-40 dark:border"
                   data-testid="TransactionRow__type"
                 >
                   Vote
@@ -17040,13 +17040,13 @@ exports[`TransactionTable > should render responsive 4`] = `
                         class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                       >
                         <span
-                          class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
+                          class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-1 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
                         >
                           <span
                             class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
                             data-testid="TransactionRow__id"
                           >
-                            451…80e
+                            4511…880e
                           </span>
                           <div
                             class="text-theme-danger-700 dark:text-theme-danger-info-border dim:text-theme-danger-info-border"
@@ -17112,7 +17112,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2 lg:w-24 lg:min-w-24 xl:min-w-38 xl:w-auto"
               >
                 <div
-                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-40 truncate rounded px-1 py-[3px] whitespace-nowrap dark:border"
+                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-20 truncate rounded px-1 py-[3px] whitespace-nowrap lg:max-w-40 dark:border"
                   data-testid="TransactionRow__type"
                 >
                   Vote
@@ -17508,13 +17508,13 @@ exports[`TransactionTable > should render responsive 4`] = `
                         class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                       >
                         <span
-                          class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
+                          class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-1 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
                         >
                           <span
                             class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
                             data-testid="TransactionRow__id"
                           >
-                            d1d…0c5
+                            d1dc…50c5
                           </span>
                           <div
                             class="text-theme-danger-700 dark:text-theme-danger-info-border dim:text-theme-danger-info-border"
@@ -17580,7 +17580,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2 lg:w-24 lg:min-w-24 xl:min-w-38 xl:w-auto"
               >
                 <div
-                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-40 truncate rounded px-1 py-[3px] whitespace-nowrap dark:border"
+                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-20 truncate rounded px-1 py-[3px] whitespace-nowrap lg:max-w-40 dark:border"
                   data-testid="TransactionRow__type"
                 >
                   Transfer
@@ -18003,13 +18003,13 @@ exports[`TransactionTable > should render responsive 4`] = `
                         class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                       >
                         <span
-                          class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
+                          class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-1 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
                         >
                           <span
                             class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
                             data-testid="TransactionRow__id"
                           >
-                            8f2…acc
+                            8f26…cacc
                           </span>
                           <div
                             class="text-theme-danger-700 dark:text-theme-danger-info-border dim:text-theme-danger-info-border"
@@ -18075,7 +18075,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2 lg:w-24 lg:min-w-24 xl:min-w-38 xl:w-auto"
               >
                 <div
-                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-40 truncate rounded px-1 py-[3px] whitespace-nowrap dark:border"
+                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-20 truncate rounded px-1 py-[3px] whitespace-nowrap lg:max-w-40 dark:border"
                   data-testid="TransactionRow__type"
                 >
                   Multipayment
@@ -18333,13 +18333,13 @@ exports[`TransactionTable > should render responsive 4`] = `
                         class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                       >
                         <span
-                          class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
+                          class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-1 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
                         >
                           <span
                             class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
                             data-testid="TransactionRow__id"
                           >
-                            110…8f8
+                            1105…28f8
                           </span>
                           <div
                             class="text-theme-danger-700 dark:text-theme-danger-info-border dim:text-theme-danger-info-border"
@@ -18405,7 +18405,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2 lg:w-24 lg:min-w-24 xl:min-w-38 xl:w-auto"
               >
                 <div
-                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-40 truncate rounded px-1 py-[3px] whitespace-nowrap dark:border"
+                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-20 truncate rounded px-1 py-[3px] whitespace-nowrap lg:max-w-40 dark:border"
                   data-testid="TransactionRow__type"
                 >
                   Transfer
@@ -18827,7 +18827,7 @@ exports[`TransactionTable > should render responsive 5`] = `
             role="row"
           >
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border whitespace-nowrap w-32 min-w-32 lg:w-36 xl:w-48"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border whitespace-nowrap w-36 min-w-36 xl:w-48"
               colspan="1"
               data-testid="table__th--0"
               role="columnheader"
@@ -18892,7 +18892,7 @@ exports[`TransactionTable > should render responsive 5`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border first:rounded-tl-xl last:rounded-tr-xl w-40 min-w-40 lg:w-24 lg:min-w-24 xl:min-w-32"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border first:rounded-tl-xl last:rounded-tr-xl w-20 min-w-20 lg:min-w-40 lg:w-40"
               colspan="1"
               data-testid="table__th--2"
               role="columnheader"
@@ -18908,7 +18908,7 @@ exports[`TransactionTable > should render responsive 5`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border whitespace-nowrap first:rounded-tl-xl last:rounded-tr-xl w-full min-w-full lg:w-24"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border whitespace-nowrap first:rounded-tl-xl last:rounded-tr-xl w-fit min-w-fit lg:w-24"
               colspan="1"
               data-testid="table__th--3"
               role="columnheader"
@@ -19001,7 +19001,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                       >
                         <span
-                          class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
+                          class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-1 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
                         >
                           <span
                             class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
@@ -19073,7 +19073,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2 lg:w-24 lg:min-w-24 xl:min-w-38 xl:w-auto"
               >
                 <div
-                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-40 truncate rounded px-1 py-[3px] whitespace-nowrap dark:border"
+                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-20 truncate rounded px-1 py-[3px] whitespace-nowrap lg:max-w-40 dark:border"
                   data-testid="TransactionRow__type"
                 >
                   Transfer
@@ -19479,7 +19479,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                       >
                         <span
-                          class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
+                          class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-1 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
                         >
                           <span
                             class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
@@ -19551,7 +19551,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2 lg:w-24 lg:min-w-24 xl:min-w-38 xl:w-auto"
               >
                 <div
-                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-40 truncate rounded px-1 py-[3px] whitespace-nowrap dark:border"
+                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-20 truncate rounded px-1 py-[3px] whitespace-nowrap lg:max-w-40 dark:border"
                   data-testid="TransactionRow__type"
                 >
                   Registration
@@ -19932,7 +19932,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                       >
                         <span
-                          class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
+                          class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-1 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
                         >
                           <span
                             class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
@@ -20004,7 +20004,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2 lg:w-24 lg:min-w-24 xl:min-w-38 xl:w-auto"
               >
                 <div
-                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-40 truncate rounded px-1 py-[3px] whitespace-nowrap dark:border"
+                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-20 truncate rounded px-1 py-[3px] whitespace-nowrap lg:max-w-40 dark:border"
                   data-testid="TransactionRow__type"
                 >
                   Username Registration
@@ -20385,7 +20385,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                       >
                         <span
-                          class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
+                          class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-1 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
                         >
                           <span
                             class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
@@ -20457,7 +20457,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2 lg:w-24 lg:min-w-24 xl:min-w-38 xl:w-auto"
               >
                 <div
-                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-40 truncate rounded px-1 py-[3px] whitespace-nowrap dark:border"
+                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-20 truncate rounded px-1 py-[3px] whitespace-nowrap lg:max-w-40 dark:border"
                   data-testid="TransactionRow__type"
                 >
                   Username Resignation
@@ -20838,7 +20838,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                       >
                         <span
-                          class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
+                          class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-1 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
                         >
                           <span
                             class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
@@ -20910,7 +20910,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2 lg:w-24 lg:min-w-24 xl:min-w-38 xl:w-auto"
               >
                 <div
-                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-40 truncate rounded px-1 py-[3px] whitespace-nowrap dark:border"
+                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-20 truncate rounded px-1 py-[3px] whitespace-nowrap lg:max-w-40 dark:border"
                   data-testid="TransactionRow__type"
                 >
                   Username Registration
@@ -21291,7 +21291,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                       >
                         <span
-                          class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
+                          class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-1 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
                         >
                           <span
                             class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
@@ -21363,7 +21363,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2 lg:w-24 lg:min-w-24 xl:min-w-38 xl:w-auto"
               >
                 <div
-                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-40 truncate rounded px-1 py-[3px] whitespace-nowrap dark:border"
+                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-20 truncate rounded px-1 py-[3px] whitespace-nowrap lg:max-w-40 dark:border"
                   data-testid="TransactionRow__type"
                 >
                   Vote
@@ -21744,7 +21744,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                       >
                         <span
-                          class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
+                          class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-1 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
                         >
                           <span
                             class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
@@ -21816,7 +21816,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2 lg:w-24 lg:min-w-24 xl:min-w-38 xl:w-auto"
               >
                 <div
-                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-40 truncate rounded px-1 py-[3px] whitespace-nowrap dark:border"
+                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-20 truncate rounded px-1 py-[3px] whitespace-nowrap lg:max-w-40 dark:border"
                   data-testid="TransactionRow__type"
                 >
                   Vote
@@ -22197,7 +22197,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                       >
                         <span
-                          class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
+                          class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-1 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
                         >
                           <span
                             class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
@@ -22269,7 +22269,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2 lg:w-24 lg:min-w-24 xl:min-w-38 xl:w-auto"
               >
                 <div
-                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-40 truncate rounded px-1 py-[3px] whitespace-nowrap dark:border"
+                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-20 truncate rounded px-1 py-[3px] whitespace-nowrap lg:max-w-40 dark:border"
                   data-testid="TransactionRow__type"
                 >
                   Transfer
@@ -22677,7 +22677,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                       >
                         <span
-                          class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
+                          class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-1 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
                         >
                           <span
                             class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
@@ -22749,7 +22749,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2 lg:w-24 lg:min-w-24 xl:min-w-38 xl:w-auto"
               >
                 <div
-                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-40 truncate rounded px-1 py-[3px] whitespace-nowrap dark:border"
+                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-20 truncate rounded px-1 py-[3px] whitespace-nowrap lg:max-w-40 dark:border"
                   data-testid="TransactionRow__type"
                 >
                   Multipayment
@@ -22992,7 +22992,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                       >
                         <span
-                          class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
+                          class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-1 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
                         >
                           <span
                             class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
@@ -23064,7 +23064,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2 lg:w-24 lg:min-w-24 xl:min-w-38 xl:w-auto"
               >
                 <div
-                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-40 truncate rounded px-1 py-[3px] whitespace-nowrap dark:border"
+                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-20 truncate rounded px-1 py-[3px] whitespace-nowrap lg:max-w-40 dark:border"
                   data-testid="TransactionRow__type"
                 >
                   Transfer
