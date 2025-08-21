@@ -2,10 +2,9 @@ import { Networks } from "@/app/lib/mainsail";
 import { Contracts } from "@/app/lib/profiles";
 import cn from "classnames";
 import React, { useCallback, useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 
 import { useTranslation } from "react-i18next";
-import { Avatar } from "@/app/components/Avatar";
-import { Circle } from "@/app/components/Circle";
 import { useFormField } from "@/app/components/Form/useFormField";
 import { Icon } from "@/app/components/Icon";
 import { Select } from "@/app/components/SelectDropdown";
@@ -192,16 +191,21 @@ export const SelectRecipient = ({
 				/>
 			</div>
 
-			<SearchRecipient
-				title={contactSearchTitle}
-				description={contactSearchDescription}
-				isOpen={isRecipientSearchOpen}
-				recipients={allAddresses}
-				onAction={onAction}
-				onClose={() => setIsRecipientSearchOpen(false)}
-				selectedAddress={selectedAddress}
-				profile={profile}
-			/>
+			{isRecipientSearchOpen &&
+				createPortal(
+					<SearchRecipient
+						title={contactSearchTitle}
+						description={contactSearchDescription}
+						isOpen={isRecipientSearchOpen}
+						recipients={allAddresses}
+						onAction={onAction}
+						onClose={() => setIsRecipientSearchOpen(false)}
+						selectedAddress={selectedAddress}
+						profile={profile}
+					/>,
+					document.body,
+				)
+			}
 		</div>
 	);
 };
