@@ -62,6 +62,52 @@ exports[`SelectAddressDropdown > should render disabled 1`] = `
                     value=""
                   />
                 </div>
+                <div
+                  class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                  data-testid="Input__addon-end"
+                >
+                  <div
+                    class=""
+                  >
+                    <div
+                      class="flex items-center"
+                      data-testid="SelectRecipient__select-recipient"
+                    >
+                      <div>
+                        <div
+                          style="height: 20px; width: 20px;"
+                        >
+                          <svg
+                            id="user"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <circle
+                                cx="10"
+                                cy="5"
+                                r="4"
+                              />
+                              <path
+                                d="M2 19c0-4.899 3.544-9 8-9 4.354 0 8 3.987 8 9"
+                              />
+                            </g>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <div
@@ -137,6 +183,52 @@ exports[`SelectAddressDropdown > should render empty 1`] = `
                     type="text"
                     value=""
                   />
+                </div>
+                <div
+                  class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                  data-testid="Input__addon-end"
+                >
+                  <div
+                    class=""
+                  >
+                    <div
+                      class="flex items-center text-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 cursor-pointer rounded bg-transparent p-1 transition-colors dark:hover:text-white"
+                      data-testid="SelectRecipient__select-recipient"
+                    >
+                      <div>
+                        <div
+                          style="height: 20px; width: 20px;"
+                        >
+                          <svg
+                            id="user"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <circle
+                                cx="10"
+                                cy="5"
+                                r="4"
+                              />
+                              <path
+                                d="M2 19c0-4.899 3.544-9 8-9 4.354 0 8 3.987 8 9"
+                              />
+                            </g>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -290,7 +382,7 @@ exports[`SelectAddressDropdown > should render invalid 1`] = `
                   data-testid="Input__addon-end"
                 >
                   <div
-                    class=""
+                    class="pr-3"
                   >
                     <span
                       data-testid="Input__error"
@@ -336,6 +428,47 @@ exports[`SelectAddressDropdown > should render invalid 1`] = `
                         </div>
                       </div>
                     </span>
+                  </div>
+                  <div
+                    class="pl-3"
+                  >
+                    <div
+                      class="flex items-center text-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 cursor-pointer rounded bg-transparent p-1 transition-colors dark:hover:text-white"
+                      data-testid="SelectRecipient__select-recipient"
+                    >
+                      <div>
+                        <div
+                          style="height: 20px; width: 20px;"
+                        >
+                          <svg
+                            id="user"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <circle
+                                cx="10"
+                                cy="5"
+                                r="4"
+                              />
+                              <path
+                                d="M2 19c0-4.899 3.544-9 8-9 4.354 0 8 3.987 8 9"
+                              />
+                            </g>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -429,6 +562,52 @@ exports[`SelectAddressDropdown > should render with preselected address 1`] = `
                       0x659A76be283644AEc2003aa8ba26485047fd1BFB
                     </span>
                   </span>
+                </div>
+                <div
+                  class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                  data-testid="Input__addon-end"
+                >
+                  <div
+                    class=""
+                  >
+                    <div
+                      class="flex items-center text-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 cursor-pointer rounded bg-transparent p-1 transition-colors dark:hover:text-white"
+                      data-testid="SelectRecipient__select-recipient"
+                    >
+                      <div>
+                        <div
+                          style="height: 20px; width: 20px;"
+                        >
+                          <svg
+                            id="user"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <circle
+                                cx="10"
+                                cy="5"
+                                r="4"
+                              />
+                              <path
+                                d="M2 19c0-4.899 3.544-9 8-9 4.354 0 8 3.987 8 9"
+                              />
+                            </g>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
