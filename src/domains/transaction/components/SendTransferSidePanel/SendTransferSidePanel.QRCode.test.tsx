@@ -30,21 +30,21 @@ vi.mock("@/utils/delay", () => ({
 }));
 
 const fixtureProfileId = getDefaultProfileId();
+const formStepID = "SendTransfer__form-step";
+const modalInnerID = "Modal__inner";
 
 let qrScannerMock;
 
 const selectFirstSenderAddress = async () => {
 	const container = screen.getByTestId("sender-address");
 	await userEvent.click(within(container).getByTestId("SelectDropdown__input"));
-	await screen.findByTestId("SelectDropdown__option--0");
+	await expect(screen.findByTestId("SelectDropdown__option--0")).resolves.toBeInTheDocument();
 	await userEvent.click(screen.getByTestId("SelectDropdown__option--0"));
 };
 
 const openScanModal = async () => {
-	await act(async () => {
-		await userEvent.click(screen.getByText(transactionTranslations.PAGE_TRANSACTION_SEND.FORM_STEP.SCAN_FULL));
-	});
-	await expect(screen.findByTestId("Modal__inner")).resolves.toBeInTheDocument();
+	await userEvent.click(screen.getByText(transactionTranslations.PAGE_TRANSACTION_SEND.FORM_STEP.SCAN_FULL));
+	await expect(screen.findByTestId(modalInnerID)).resolves.toBeInTheDocument();
 };
 
 describe("SendTransferSidePanel QRModal", () => {
@@ -101,7 +101,7 @@ describe("SendTransferSidePanel QRModal", () => {
 			route: `/profiles/${fixtureProfileId}/dashboard`,
 		});
 
-		await screen.findByTestId("SendTransfer__form-step");
+		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 		await selectFirstSenderAddress();
 
 		await openScanModal();
@@ -127,7 +127,7 @@ describe("SendTransferSidePanel QRModal", () => {
 			route: `/profiles/${fixtureProfileId}/dashboard`,
 		});
 
-		await screen.findByTestId("SendTransfer__form-step");
+		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 		await selectFirstSenderAddress();
 
 		expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("");
@@ -149,7 +149,7 @@ describe("SendTransferSidePanel QRModal", () => {
 			route: `/profiles/${fixtureProfileId}/dashboard`,
 		});
 
-		await screen.findByTestId("SendTransfer__form-step");
+		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 		await selectFirstSenderAddress();
 
 		await openScanModal();
@@ -174,7 +174,7 @@ describe("SendTransferSidePanel QRModal", () => {
 			route: `/profiles/${fixtureProfileId}/dashboard`,
 		});
 
-		await screen.findByTestId("SendTransfer__form-step");
+		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 		await selectFirstSenderAddress();
 
 		await openScanModal();
@@ -191,26 +191,18 @@ describe("SendTransferSidePanel QRModal", () => {
 		const profile = env.profiles().findById(fixtureProfileId);
 		const mockProfileReset = mockProfileWithPublicAndTestNetworks(profile);
 
-		await act(async () => {
-			render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} />, {
-				route: `/profiles/${fixtureProfileId}/dashboard`,
-			});
+		render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: `/profiles/${fixtureProfileId}/dashboard`,
 		});
 
-		await expect(screen.findByTestId("SendTransfer__form-step")).resolves.toBeVisible();
+		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 		await selectFirstSenderAddress();
 
-		await act(async () => {
-			await userEvent.click(screen.getByText(transactionTranslations.PAGE_TRANSACTION_SEND.FORM_STEP.SCAN_FULL));
-		});
+		await userEvent.click(screen.getByText(transactionTranslations.PAGE_TRANSACTION_SEND.FORM_STEP.SCAN_FULL));
+		await expect(screen.findByTestId(modalInnerID)).resolves.toBeInTheDocument();
 
-		await expect(screen.findByTestId("Modal__inner")).resolves.toBeInTheDocument();
-
-		await act(async () => {
-			await userEvent.click(screen.getByTestId("Modal__close-button"));
-		});
-
-		await expect(screen.findByTestId("Modal__inner")).rejects.toThrow(/Unable to find/);
+		await userEvent.click(screen.getByTestId("Modal__close-button"));
+		await expect(screen.findByTestId(modalInnerID)).rejects.toThrow(/Unable to find/);
 
 		mockProfileReset();
 	});
@@ -220,13 +212,11 @@ describe("SendTransferSidePanel QRModal", () => {
 		const mockProfileReset = mockProfileWithPublicAndTestNetworks(profile);
 		const toastSpy = vi.spyOn(toasts, "success");
 
-		await act(async () => {
-			render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} />, {
-				route: `/profiles/${fixtureProfileId}/dashboard`,
-			});
+		render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: `/profiles/${fixtureProfileId}/dashboard`,
 		});
 
-		await expect(screen.findByTestId("SendTransfer__form-step")).resolves.toBeVisible();
+		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 		await selectFirstSenderAddress();
 
 		const recipientInput = within(screen.getByTestId("SelectRecipient__wrapper")).getByTestId(
@@ -267,13 +257,11 @@ describe("SendTransferSidePanel QRModal", () => {
 		const mockProfileReset = mockProfileWithPublicAndTestNetworks(profile);
 		const toastSpy = vi.spyOn(toasts, "success");
 
-		await act(async () => {
-			render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} />, {
-				route: `/profiles/${fixtureProfileId}/dashboard`,
-			});
+		render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: `/profiles/${fixtureProfileId}/dashboard`,
 		});
 
-		await expect(screen.findByTestId("SendTransfer__form-step")).resolves.toBeVisible();
+		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 		await selectFirstSenderAddress();
 
 		qrScannerMock.mockResolvedValue({
@@ -315,7 +303,7 @@ describe("SendTransferSidePanel QRModal", () => {
 			route: `/profiles/${fixtureProfileId}/dashboard`,
 		});
 
-		await screen.findByTestId("SendTransfer__form-step");
+		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 		await selectFirstSenderAddress();
 
 		qrScannerMock.mockResolvedValue({
@@ -340,7 +328,7 @@ describe("SendTransferSidePanel QRModal", () => {
 			route: `/profiles/${fixtureProfileId}/dashboard`,
 		});
 
-		await screen.findByTestId("SendTransfer__form-step");
+		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 		await selectFirstSenderAddress();
 
 		qrScannerMock.mockResolvedValue({
