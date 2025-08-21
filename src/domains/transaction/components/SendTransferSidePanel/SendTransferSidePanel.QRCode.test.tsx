@@ -2,7 +2,8 @@ import React from "react";
 import QRScanner from "qr-scanner";
 import * as browserAccess from "browser-fs-access";
 import userEvent from "@testing-library/user-event";
-import { act, within } from "@testing-library/react";
+import { act, within, renderHook } from "@testing-library/react";
+import { Trans, useTranslation } from "react-i18next";
 import { SendTransferSidePanel } from "./SendTransferSidePanel";
 import {
 	env,
@@ -14,6 +15,8 @@ import {
 } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
+import { useSearchParametersValidation } from "@/app/hooks/use-search-parameters-validation";
+import { toasts } from "@/app/services";
 
 import transactionFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/transfer.json";
 import transactionsFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions.json";
@@ -35,6 +38,13 @@ const selectFirstSenderAddress = async () => {
 	await userEvent.click(within(container).getByTestId("SelectDropdown__input"));
 	await screen.findByTestId("SelectDropdown__option--0");
 	await userEvent.click(screen.getByTestId("SelectDropdown__option--0"));
+};
+
+const openScanModal = async () => {
+	await act(async () => {
+		await userEvent.click(screen.getByText(transactionTranslations.PAGE_TRANSACTION_SEND.FORM_STEP.SCAN_FULL));
+	});
+	await expect(screen.findByTestId("Modal__inner")).resolves.toBeInTheDocument();
 };
 
 describe("SendTransferSidePanel QRModal", () => {
@@ -82,6 +92,101 @@ describe("SendTransferSidePanel QRModal", () => {
 		vi.restoreAllMocks();
 	});
 
+	it("should read QR and apply transaction parameters", async () => {
+		const profile = env.profiles().findById(fixtureProfileId);
+		const mockProfileReset = mockProfileWithPublicAndTestNetworks(profile);
+		const toastSpy = vi.spyOn(toasts, "success");
+
+		render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: `/profiles/${fixtureProfileId}/dashboard`,
+		});
+
+		await screen.findByTestId("SendTransfer__form-step");
+		await selectFirstSenderAddress();
+
+		await openScanModal();
+		await userEvent.click(screen.getByTestId("QRFileUpload__upload"));
+
+		// Just assert success toast (values application is covered elsewhere)
+		const { result } = renderHook(() => useTranslation());
+		await waitFor(() => expect(toastSpy).toHaveBeenCalledWith(result.current.t("TRANSACTION.QR_CODE_SUCCESS")));
+
+		mockProfileReset();
+	});
+
+	it("should read QR and prevent from applying parameters if not available in qr code", async () => {
+		qrScannerMock.mockResolvedValue({
+			data: "http://localhost:3000/#/?coin=mainsail&method=transfer&network=mainsail.devnet",
+		} as any);
+
+		const profile = env.profiles().findById(fixtureProfileId);
+		const mockProfileReset = mockProfileWithPublicAndTestNetworks(profile);
+		const toastSpy = vi.spyOn(toasts, "success");
+
+		render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: `/profiles/${fixtureProfileId}/dashboard`,
+		});
+
+		await screen.findByTestId("SendTransfer__form-step");
+		await selectFirstSenderAddress();
+
+		expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("");
+
+		await openScanModal();
+		await userEvent.click(screen.getByTestId("QRFileUpload__upload"));
+
+		await waitFor(() => expect(toastSpy).toHaveBeenCalled());
+		expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("");
+
+		mockProfileReset();
+	});
+
+	it("should read QR and error for invalid url", async () => {
+		qrScannerMock.mockResolvedValue({ data: "invalid url" } as any);
+		const toastSpy = vi.spyOn(toasts, "error");
+
+		render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: `/profiles/${fixtureProfileId}/dashboard`,
+		});
+
+		await screen.findByTestId("SendTransfer__form-step");
+		await selectFirstSenderAddress();
+
+		await openScanModal();
+		await userEvent.click(screen.getByTestId("QRFileUpload__upload"));
+
+		await waitFor(() =>
+			expect(toastSpy).toHaveBeenCalledWith(
+				<Trans
+					i18nKey="TRANSACTION.VALIDATION.INVALID_ADDRESS_OR_NETWORK_MISMATCH"
+					parent={expect.anything()}
+				/>,
+			),
+		);
+	});
+
+	it("should read QR and error for invalid format", async () => {
+		qrScannerMock.mockResolvedValue({ data: "http://localhost:3000/#/?coin=mainsail" } as any);
+		const toastSpy = vi.spyOn(toasts, "error");
+		const { result } = renderHook(() => useSearchParametersValidation());
+
+		render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: `/profiles/${fixtureProfileId}/dashboard`,
+		});
+
+		await screen.findByTestId("SendTransfer__form-step");
+		await selectFirstSenderAddress();
+
+		await openScanModal();
+		await userEvent.click(screen.getByTestId("QRFileUpload__upload"));
+
+		await waitFor(() =>
+			expect(toastSpy).toHaveBeenCalledWith(
+				result.current.buildSearchParametersError({ type: "MISSING_NETWORK_OR_NETHASH" }, true),
+			),
+		);
+	});
+
 	it("should open and close the QR Code Modal", async () => {
 		const profile = env.profiles().findById(fixtureProfileId);
 		const mockProfileReset = mockProfileWithPublicAndTestNetworks(profile);
@@ -110,9 +215,10 @@ describe("SendTransferSidePanel QRModal", () => {
 		mockProfileReset();
 	});
 
-	it("should show overwrite modal and confirm", async () => {
+	it("should show the overwrite modal and fill values when confirmed", async () => {
 		const profile = env.profiles().findById(fixtureProfileId);
 		const mockProfileReset = mockProfileWithPublicAndTestNetworks(profile);
+		const toastSpy = vi.spyOn(toasts, "success");
 
 		await act(async () => {
 			render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} />, {
@@ -123,25 +229,139 @@ describe("SendTransferSidePanel QRModal", () => {
 		await expect(screen.findByTestId("SendTransfer__form-step")).resolves.toBeVisible();
 		await selectFirstSenderAddress();
 
-		await userEvent.type(screen.getByTestId("AddRecipient__amount"), "1");
+		const recipientInput = within(screen.getByTestId("SelectRecipient__wrapper")).getByTestId(
+			"SelectDropdown__input",
+		);
+		await userEvent.clear(recipientInput);
+		await userEvent.type(recipientInput, "address 1");
 
-		await act(async () => {
-			await userEvent.click(screen.getByText(transactionTranslations.PAGE_TRANSACTION_SEND.FORM_STEP.SCAN_FULL));
-		});
-
-		await expect(screen.findByTestId("Modal__inner")).resolves.toBeInTheDocument();
-
-		await act(async () => {
-			await userEvent.click(screen.getByTestId("QRFileUpload__upload"));
-		});
+		await openScanModal();
+		await userEvent.click(screen.getByTestId("QRFileUpload__upload"));
 
 		await expect(screen.findByTestId("TransferOverwriteModal")).resolves.toBeInTheDocument();
 
+		const recipientContainer = screen.getByTestId("OverwriteModal__Recipient");
+		expect(recipientContainer).toBeInTheDocument();
+		expect(within(recipientContainer).getByTestId("OverwriteDetail__Current")).toHaveTextContent("address 1");
+		expect(within(recipientContainer).getByTestId("OverwriteDetail__New")).toHaveTextContent(
+			"0x93485b57ff3DeD81430D08579142fAe8234c6A17",
+		);
+
+		const amountContainer = screen.getByTestId("OverwriteModal__Amount");
+		expect(amountContainer).toBeInTheDocument();
+		expect(within(amountContainer).getByTestId("OverwriteDetail__Current")).toHaveTextContent("N/A");
+		expect(within(amountContainer).getByTestId("OverwriteDetail__New")).toHaveTextContent("10");
+
+		await userEvent.click(screen.getByTestId("OverwriteModal__confirm-button"));
+
+		await waitFor(() => expect(toastSpy).toHaveBeenCalled());
+		expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("10");
+		expect(recipientInput).toHaveValue("0x93485b57ff3DeD81430D08579142fAe8234c6A17");
+
+		await waitFor(() => expect(screen.queryByTestId("TransferOverwriteModal")).not.toBeInTheDocument());
+		mockProfileReset();
+	});
+
+	it("should clear the prefilled values", async () => {
+		const profile = env.profiles().findById(fixtureProfileId);
+		const mockProfileReset = mockProfileWithPublicAndTestNetworks(profile);
+		const toastSpy = vi.spyOn(toasts, "success");
+
 		await act(async () => {
-			await userEvent.click(screen.getByTestId("OverwriteModal__confirm-button"));
+			render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} />, {
+				route: `/profiles/${fixtureProfileId}/dashboard`,
+			});
 		});
 
+		await expect(screen.findByTestId("SendTransfer__form-step")).resolves.toBeVisible();
+		await selectFirstSenderAddress();
+
+		qrScannerMock.mockResolvedValue({
+			data: "http://localhost:3000/#/?amount=10&coin=mainsail&method=transfer&memo=test&network=mainsail.devnet",
+		} as any);
+
+		const recipientInput = within(screen.getByTestId("SelectRecipient__wrapper")).getByTestId(
+			"SelectDropdown__input",
+		);
+		await userEvent.clear(recipientInput);
+		await userEvent.type(recipientInput, "address 1");
+
+		await openScanModal();
+		await userEvent.click(screen.getByTestId("QRFileUpload__upload"));
+
+		await expect(screen.findByTestId("TransferOverwriteModal")).resolves.toBeInTheDocument();
+
+		const recipientContainer = screen.getByTestId("OverwriteModal__Recipient");
+		expect(recipientContainer).toBeInTheDocument();
+		expect(within(recipientContainer).getByTestId("OverwriteDetail__Current")).toHaveTextContent("address 1");
+		expect(within(recipientContainer).getByTestId("OverwriteDetail__New")).toHaveTextContent("N/A");
+
+		await userEvent.click(screen.getByTestId("OverwriteModal__confirm-button"));
+
+		await waitFor(() => expect(toastSpy).toHaveBeenCalled());
+		expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("10");
+		expect(recipientInput).toHaveValue("");
+
+		await waitFor(() => expect(screen.queryByTestId("TransferOverwriteModal")).not.toBeInTheDocument());
+		mockProfileReset();
+	});
+
+	it("should not show the overwrite modal if the transfer form hasn't filled", async () => {
+		const profile = env.profiles().findById(fixtureProfileId);
+		const mockProfileReset = mockProfileWithPublicAndTestNetworks(profile);
+		const toastSpy = vi.spyOn(toasts, "success");
+
+		render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: `/profiles/${fixtureProfileId}/dashboard`,
+		});
+
+		await screen.findByTestId("SendTransfer__form-step");
+		await selectFirstSenderAddress();
+
+		qrScannerMock.mockResolvedValue({
+			data: "http://localhost:3000/#/?amount=10&coin=mainsail&method=transfer&memo=test&network=mainsail.devnet",
+		} as any);
+
+		await openScanModal();
+		await userEvent.click(screen.getByTestId("QRFileUpload__upload"));
+
+		expect(screen.queryByTestId("TransferOverwriteModal")).not.toBeInTheDocument();
+		await waitFor(() => expect(toastSpy).toHaveBeenCalled());
 		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("10"));
+
+		mockProfileReset();
+	});
+
+	it("should close the overwrite modal when canceled", async () => {
+		const profile = env.profiles().findById(fixtureProfileId);
+		const mockProfileReset = mockProfileWithPublicAndTestNetworks(profile);
+
+		render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: `/profiles/${fixtureProfileId}/dashboard`,
+		});
+
+		await screen.findByTestId("SendTransfer__form-step");
+		await selectFirstSenderAddress();
+
+		qrScannerMock.mockResolvedValue({
+			data: "http://localhost:3000/#/?amount=10&coin=mainsail&method=transfer&memo=test&network=mainsail.devnet",
+		} as any);
+
+		const recipientInput = within(screen.getByTestId("SelectRecipient__wrapper")).getByTestId(
+			"SelectDropdown__input",
+		);
+		await userEvent.clear(recipientInput);
+		await userEvent.type(recipientInput, "address 1");
+
+		await openScanModal();
+		await userEvent.click(screen.getByTestId("QRFileUpload__upload"));
+
+		await expect(screen.findByTestId("TransferOverwriteModal")).resolves.toBeInTheDocument();
+		await userEvent.click(screen.getByTestId("OverwriteModal__cancel-button"));
+
+		await waitFor(() => expect(screen.queryByTestId("TransferOverwriteModal")).not.toBeInTheDocument());
+		expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("");
+		expect(recipientInput).toHaveValue("address 1");
 
 		mockProfileReset();
 	});
