@@ -2,7 +2,7 @@ import React from "react";
 import QRScanner from "qr-scanner";
 import * as browserAccess from "browser-fs-access";
 import userEvent from "@testing-library/user-event";
-import { act, within, renderHook } from "@testing-library/react";
+import { within, renderHook } from "@testing-library/react";
 import { Trans, useTranslation } from "react-i18next";
 import { SendTransferSidePanel } from "./SendTransferSidePanel";
 import {
