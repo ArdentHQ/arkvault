@@ -42,8 +42,11 @@ export class ClientService {
 		});
 	}
 
-	public async transaction(id: string): Promise<ConfirmedTransactionData> {
-		const body = await this.#client.transactions().get(id);
+	public async transaction(
+		id: string,
+		query?: Record<string, string | number | boolean | null>,
+	): Promise<ConfirmedTransactionData> {
+		const body = await this.#client.transactions().get(id, query);
 		return new ConfirmedTransactionData().configure(body.data);
 	}
 

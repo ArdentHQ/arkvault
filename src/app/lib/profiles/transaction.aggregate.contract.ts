@@ -7,6 +7,7 @@ export type AggregateQuery = {
 	types?: string[];
 	from?: string;
 	to?: string;
+	fullReceipt?: boolean;
 } & Services.ClientPagination;
 
 /**

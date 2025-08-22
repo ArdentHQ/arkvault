@@ -162,7 +162,7 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({
 				return;
 			}
 
-			await connect(profile, senderWallet!.networkId());
+			await connect(profile);
 			handleSubmit(() => submit())();
 		};
 
