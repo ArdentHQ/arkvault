@@ -207,4 +207,79 @@ describe("SendTransferSidePanel", () => {
 		broadcastMock.mockRestore();
 		transactionMock.mockRestore();
 	});
+
+	it("should advance to ReviewStep on Enter when form valid and focus is not a button", async () => {
+		render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: `/profiles/${fixtureProfileId}/dashboard`,
+		});
+
+		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
+
+		await selectFirstSenderAddress();
+		await selectRecipient();
+		await expect(screen.findByTestId("Modal__inner")).resolves.toBeInTheDocument();
+		await selectFirstRecipient();
+		await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__input")[0]).toHaveValue(firstWalletAddress));
+
+		await userEvent.clear(screen.getByTestId("AddRecipient__amount"));
+		await userEvent.type(screen.getByTestId("AddRecipient__amount"), "1");
+		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("1"));
+
+		await waitFor(() => expect(continueButton()).not.toBeDisabled());
+		await userEvent.keyboard("{Enter}");
+
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
+	});
+
+	it("should do nothing on Enter when focus is on a button", async () => {
+		render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: `/profiles/${fixtureProfileId}/dashboard`,
+		});
+
+		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
+
+		screen.getByTestId("SendTransfer__back-button").focus();
+		await userEvent.keyboard("{Enter}");
+
+		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
+	});
+
+	it("should do nothing on Enter when next is disabled (invalid form)", async () => {
+		render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: `/profiles/${fixtureProfileId}/dashboard`,
+		});
+
+		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
+
+		await userEvent.keyboard("{Enter}");
+
+		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
+	});
+
+	it("should do nothing on Enter when at or past AuthenticationStep", async () => {
+		render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: `/profiles/${fixtureProfileId}/dashboard`,
+		});
+
+		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
+		await selectFirstSenderAddress();
+		await selectRecipient();
+		await expect(screen.findByTestId("Modal__inner")).resolves.toBeInTheDocument();
+		await selectFirstRecipient();
+		await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__input")[0]).toHaveValue(firstWalletAddress));
+
+		await userEvent.clear(screen.getByTestId("AddRecipient__amount"));
+		await userEvent.type(screen.getByTestId("AddRecipient__amount"), "1");
+		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("1"));
+
+		await waitFor(() => expect(continueButton()).not.toBeDisabled());
+		await userEvent.click(continueButton());
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
+
+		await userEvent.click(continueButton());
+		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
+
+		await userEvent.keyboard("{Enter}");
+		expect(screen.getByTestId("AuthenticationStep")).toBeInTheDocument();
+	});
 });
