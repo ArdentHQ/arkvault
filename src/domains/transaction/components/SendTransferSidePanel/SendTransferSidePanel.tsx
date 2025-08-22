@@ -122,7 +122,6 @@ export const SendTransferSidePanel = ({
 
 	const onMountChange = useCallback(
 		(mounted: boolean) => {
-			console.log("mounted", mounted);
 			if (!mounted) {
 				resetState();
 				return;
