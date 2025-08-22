@@ -97,7 +97,7 @@ export const SendTransferSidePanel = ({
 
 	const connectLedger = useCallback(async () => {
 		if (wallet) {
-			await connect(activeProfile, wallet.networkId());
+			await connect(activeProfile);
 			void handleSubmit(() => submit(true))();
 		}
 	}, [wallet, activeProfile, connect]);
