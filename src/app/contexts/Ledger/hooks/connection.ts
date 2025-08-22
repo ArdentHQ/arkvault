@@ -100,7 +100,7 @@ export const useLedgerConnection = () => {
 
 	const isAttemptingConnect = useRef(false);
 
-	const connect = useCallback(async (profile: Contracts.IProfile, string, retryOptions?: Options) => {
+	const connect = useCallback(async (profile: Contracts.IProfile, retryOptions?: Options) => {
 		if (isAttemptingConnect.current) {
 			return;
 		}

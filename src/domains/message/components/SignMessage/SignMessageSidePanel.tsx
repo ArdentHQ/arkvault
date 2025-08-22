@@ -138,7 +138,7 @@ export const SignMessageSidePanel = ({
 	const { sign } = useMessageSigner();
 
 	const connectLedger = useCallback(async () => {
-		await connect(activeProfile, selectedWallet!.networkId());
+		await connect(activeProfile);
 		handleSubmit(submitForm)();
 	}, [selectedWallet, activeProfile, connect]);
 
