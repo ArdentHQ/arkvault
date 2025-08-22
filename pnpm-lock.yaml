@@ -15,11 +15,11 @@ importers:
         specifier: ^1.2.0
         version: 1.2.0
       '@arkecosystem/typescript-client':
-        specifier: ^0.0.5
-        version: 0.0.5
+        specifier: ^0.0.6
+        version: 0.0.6
       '@arkecosystem/typescript-crypto':
-        specifier: ^0.0.13
-        version: 0.0.13
+        specifier: ^0.0.15
+        version: 0.0.15
       '@faustbrian/node-haveibeenpwned':
         specifier: ^1.1.0
         version: 1.1.0
@@ -426,12 +426,12 @@ packages:
     resolution: {integrity: sha512-0Ld6SSNEzb/TeOZ0YUDAa+vFyk65LprU+wiLjWDwhqpaDtUkJZ9MBM4alagfJ5665SN+DM7Dti2QxqKX+Y8S2w==}
     engines: {node: '>=14.16'}
 
-  '@arkecosystem/typescript-client@0.0.5':
-    resolution: {integrity: sha512-C+E5MFldX3HhCDU6L63d4C3ror1Iek+b7bltyisZ/WP3q6IrZXfqKmwjsbwD0T/YKbqFiRXkfLnmLYP/RcehaA==}
+  '@arkecosystem/typescript-client@0.0.6':
+    resolution: {integrity: sha512-UCNYMPn6FXP68R+X2nsVSBz+2dXClNFPsmCEXQ+R8YlhyzhlnSyezM1cWJLvAPg7MjQcyS1ao98zrZn4FFkh+Q==}
     engines: {node: '>=20.12.2'}
 
-  '@arkecosystem/typescript-crypto@0.0.13':
-    resolution: {integrity: sha512-DMeBGBlbrgPnVS8hzj/77TpsPLX3Cns8WE3ZvYjOOGG6yw/NekRFLHmXPXKYJrxtZbn6Rc6F/j9xaYr0D93Gag==}
+  '@arkecosystem/typescript-crypto@0.0.15':
+    resolution: {integrity: sha512-g7dXSmBPPcjsxi3XtVVYRHkC78jPJcw98GsgOV2In87Botg2ZLeHryTLQBMNdabvg0WqV4APqvuFWSmOcGR+qw==}
     engines: {node: '>=20.12.2'}
 
   '@asamuzakjp/css-color@3.2.0':
@@ -5580,6 +5580,7 @@ packages:
   source-map@0.8.0-beta.0:
     resolution: {integrity: sha512-2ymg6oRBpebeZi9UUNsgQ89bhx01TcTkmNTGnNO88imTmbSgy4nfujrgVEFKWpMTEGA11EDkTt7mqObTPdigIA==}
     engines: {node: '>= 8'}
+    deprecated: The work that was done in this beta branch won't be included in future versions
 
   sourcemap-codec@1.4.8:
     resolution: {integrity: sha512-9NykojV5Uih4lgo5So5dtw+f0JgJX30KCNI8gwhz2J9A15wD0Ml6tjHKwf6fTSa6fAdVBdZeNOs9eJ71qCk8vA==}
@@ -6542,9 +6543,9 @@ snapshots:
 
   '@ardenthq/arkvault-url@1.2.0': {}
 
-  '@arkecosystem/typescript-client@0.0.5': {}
+  '@arkecosystem/typescript-client@0.0.6': {}
 
-  '@arkecosystem/typescript-crypto@0.0.13':
+  '@arkecosystem/typescript-crypto@0.0.15':
     dependencies:
       '@noble/secp256k1': 2.3.0
       bignumber.js: 9.3.1
