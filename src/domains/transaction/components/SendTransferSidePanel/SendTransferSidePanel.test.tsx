@@ -19,10 +19,8 @@ import { requestMock, server } from "@/tests/mocks/server";
 import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
 import { SendTransferSidePanel } from "./SendTransferSidePanel";
-import nodeFeesFixture from "@/tests/fixtures/coins/mainsail/devnet/node-fees.json";
 import transactionFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/transfer.json";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
-import transactionsFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions.json";
 import userEvent from "@testing-library/user-event";
 
 const passphrase = getDefaultWalletMnemonic();
@@ -133,18 +131,10 @@ describe("SendTransferSidePanel", () => {
 		await syncFees(profile);
 
 		server.use(
-			requestMock(`https://dwallets-evm.mainsailhq.com/api/blocks*`, {
-				data: {},
-			}),
 			requestMock(
 				`https://dwallets-evm.mainsailhq.com/api/transactions/${transactionFixture.data.hash}`,
 				transactionFixture,
 			),
-			requestMock("https://dwallets-evm.mainsailhq.com/api/transactions", transactionsFixture, {
-				query: { address: wallet.address() },
-			}),
-			requestMock("https://ark-test-musig.arkvault.io/", { result: [] }, { method: "post" }),
-			requestMock("https://ark-live.arkvault.io/api/node/fees", nodeFeesFixture),
 		);
 	});
 
