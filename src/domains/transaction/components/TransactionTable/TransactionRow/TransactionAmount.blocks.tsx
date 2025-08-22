@@ -1,9 +1,11 @@
 import { Amount, AmountLabel } from "@/app/components/Amount";
-import React, { JSX } from "react";
+import React, { JSX, useEffect, useRef, useState } from "react";
 import { Contracts } from "@/app/lib/profiles";
 import { useTranslation } from "react-i18next";
 import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
 import { ExtendedTransactionData, useTransactionTotal } from "@/domains/transaction/hooks/use-transaction-total";
+import { Tooltip } from "@/app/components/Tooltip";
+import { Label, LabelProperties } from "@/app/components/Label";
 
 export const TransactionAmountLabel = ({
 	transaction,
@@ -115,4 +117,52 @@ export const TransactionFiatAmount = ({
 	const amount = total - returnedAmount;
 
 	return <Amount value={convert(amount)} ticker={exchangeCurrency || ""} allowHideBalance profile={profile} />;
+};
+
+export const TransactionTypeLabel = ({
+	tooltipContent,
+	children,
+	...props
+}: {
+	tooltipContent?: string;
+	children: React.ReactNode;
+	props: LabelProperties;
+}): JSX.Element => {
+	const [isTruncated, setIsTruncated] = useState(false);
+	const textRef = useRef<HTMLSpanElement>(null);
+
+	useEffect(() => {
+		const checkTruncation = () => {
+			if (textRef.current) {
+				const isOverflowing = textRef.current.scrollWidth > textRef.current.clientWidth;
+				setIsTruncated(isOverflowing);
+			}
+		};
+
+		checkTruncation();
+
+		window.addEventListener("resize", checkTruncation);
+
+		return () => {
+			window.removeEventListener("resize", checkTruncation);
+		};
+	}, [children]);
+
+	const labelContent = (
+		<Label
+			{...props}
+			className="max-w-20 rounded px-1 py-[3px] lg:max-w-40 dark:border"
+			data-testid="TransactionRow__type"
+		>
+			<span ref={textRef} className="block truncate whitespace-nowrap">
+				{children}
+			</span>
+		</Label>
+	);
+
+	if (isTruncated && tooltipContent) {
+		return <Tooltip content={tooltipContent}>{labelContent}</Tooltip>;
+	}
+
+	return labelContent;
 };
