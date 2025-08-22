@@ -26,6 +26,7 @@ import * as LedgerTransportFactory from "@/app/contexts/Ledger/transport";
 import * as AppContexts from "@/app/contexts";
 import * as hooks from "@/domains/transaction/hooks";
 import * as pendingHook from "@/domains/transaction/hooks/use-pending-transactions";
+import * as appHooks from "@/app/hooks";
 
 const passphrase = getDefaultWalletMnemonic();
 const fixtureProfileId = getDefaultProfileId();
@@ -444,6 +445,27 @@ describe("SendTransferSidePanel", () => {
 		transactionMock.mockRestore();
 	});
 
+	it("should auto-select sole wallet when none set", async () => {
+		const useActiveWalletSpy = vi.spyOn(appHooks, "useActiveWalletWhenNeeded").mockReturnValue(undefined as any);
+		const countSpy = vi.spyOn(profile.wallets(), "count").mockReturnValue(1 as any);
+		const valuesSpy = vi.spyOn(profile.wallets(), "values").mockReturnValue([wallet] as any);
+
+		render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: `/profiles/${fixtureProfileId}/dashboard`,
+		});
+
+		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
+		await waitFor(() =>
+			expect(within(screen.getByTestId("sender-address")).getByTestId("SelectDropdown__input")).toHaveValue(
+				firstWalletAddress,
+			),
+		);
+
+		useActiveWalletSpy.mockRestore();
+		countSpy.mockRestore();
+		valuesSpy.mockRestore();
+	});
+
 	it("should open unconfirmed transactions modal and close it", async () => {
 		const useTransactionSpy = vi.spyOn(hooks, "useTransaction").mockReturnValue({
 			fetchWalletUnconfirmedTransactions: vi.fn().mockResolvedValue([signedTransactionMock]),
@@ -608,5 +630,62 @@ describe("SendTransferSidePanel", () => {
 		await userEvent.click(continueButton());
 
 		await expect(screen.findByTestId("ErrorStep")).resolves.toBeVisible();
+	});
+
+	it("should close side panel from summary step", async () => {
+		server.use(
+			requestMock(
+				`https://dwallets-evm.mainsailhq.com/api/transactions/8e4a8c3eaf2f9543a5bd61bb85ddd2205d5091597a77446c8b99692e0854b978`,
+				transactionFixture,
+			),
+			requestMock(`https://dwallets-evm.mainsailhq.com/api/blocks*`, { data: {} }),
+		);
+
+		const useTransactionSpy = vi.spyOn(hooks, "useTransaction").mockReturnValue({
+			fetchWalletUnconfirmedTransactions: vi.fn().mockResolvedValue([signedTransactionMock]),
+		} as any);
+		vi.spyOn(pendingHook, "usePendingTransactions").mockReturnValue({ addPendingTransaction: vi.fn() } as any);
+
+		const onOpenChange = vi.fn();
+		render(<SendTransferSidePanel open={true} onOpenChange={onOpenChange} />, {
+			route: `/profiles/${fixtureProfileId}/dashboard`,
+		});
+
+		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
+		await selectFirstSenderAddress();
+		await selectRecipient();
+		await expect(screen.findByTestId("Modal__inner")).resolves.toBeInTheDocument();
+		await selectFirstRecipient();
+		await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__input")[0]).toHaveValue(firstWalletAddress));
+		await userEvent.clear(screen.getByTestId("AddRecipient__amount"));
+		await userEvent.type(screen.getByTestId("AddRecipient__amount"), "1");
+		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("1"));
+		await waitFor(() => expect(continueButton()).not.toBeDisabled());
+		await userEvent.click(continueButton());
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
+		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
+		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
+		await userEvent.click(continueButton());
+		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
+		await userEvent.clear(screen.getByTestId("AuthenticationStep__mnemonic"));
+		await userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
+		await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
+		const signMock = vi
+			.spyOn(wallet.transaction(), "signTransfer")
+			.mockReturnValue(Promise.resolve(transactionFixture.data.hash));
+		const broadcastMock = vi
+			.spyOn(wallet.transaction(), "broadcast")
+			.mockResolvedValue({ accepted: [transactionFixture.data.hash], errors: {}, rejected: [] });
+		const transactionMock = createTransactionMock(wallet);
+		await userEvent.click(sendButton());
+		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
+		await userEvent.click(screen.getByTestId("ConfirmSendTransaction__confirm"));
+		await waitFor(() => expect(screen.getByTestId("SendTransfer__close-button")).toBeVisible());
+		await userEvent.click(screen.getByTestId("SendTransfer__close-button"));
+		await waitFor(() => expect(onOpenChange).toHaveBeenCalledWith(false));
+		signMock.mockRestore();
+		broadcastMock.mockRestore();
+		transactionMock.mockRestore();
+		useTransactionSpy.mockRestore();
 	});
 });
