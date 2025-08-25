@@ -18,6 +18,8 @@ import userEvent from "@testing-library/user-event";
 import { requestMock, server } from "@/tests/mocks/server";
 import transactionFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/transfer.json";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
+import { appendParameters } from "@/domains/vote/utils/url-parameters";
+import { data as validatorData } from "@/tests/fixtures/coins/mainsail/devnet/validators.json";
 
 describe("SendVoteSidePanel", () => {
 	const passphrase = getDefaultWalletMnemonic();
@@ -59,17 +61,22 @@ describe("SendVoteSidePanel", () => {
 	});
 
 	it("renders and goes through happy-path to auth step", async () => {
+		const params = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
+		appendParameters(params, "vote", [
+			{ amount: 10, validatorAddress: validatorData[0].address },
+		]);
+
 		render(<SendVoteSidePanel open={true} onOpenChange={vi.fn()} />, {
-			route: `/profiles/${profile.id()}/dashboard`,
+			route: `/profiles/${profile.id()}/dashboard?${params}`,
 		});
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
-		// Select sender
+		// Select sender (modal)
 		const senderContainer = screen.getByTestId("sender-address");
-		await userEvent.click(within(senderContainer).getByTestId("SelectDropdown__input"));
-		await waitFor(() => expect(screen.getByTestId("SelectDropdown__option--0")).toBeInTheDocument());
-		await userEvent.click(screen.getByTestId("SelectDropdown__option--0"));
+		await userEvent.click(within(senderContainer).getByTestId("SelectAddress__wrapper"));
+		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
+		await userEvent.click(screen.getByTestId("SearchWalletListItem__select-0"));
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
 		await userEvent.click(continueButton());
