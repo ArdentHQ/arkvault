@@ -9,7 +9,7 @@ import { LedgerScanStep } from "./LedgerScanStep";
 import { LedgerTabsProperties, LedgerTabStep } from "./LedgerTabs.contracts";
 import { ListenLedger } from "@/domains/transaction/components/AuthenticationStep/Ledger/ListenLedger";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
-import { LedgerData, useLedgerContext } from "@/app/contexts";
+import { LedgerData, useEnvironmentContext, useLedgerContext } from "@/app/contexts";
 import { useActiveProfile } from "@/app/hooks";
 import { useKeydown } from "@/app/hooks/use-keydown";
 import { assertString } from "@/utils/assertions";
@@ -17,6 +17,8 @@ import { ProfilePaths } from "@/router/paths";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { ImportActionToolbar } from "@/domains/portfolio/components/ImportWallet/ImportAddressSidePanel.blocks";
 import { OptionsValue, useWalletImport } from "@/domains/wallet/hooks";
+import { AddressViewSelection, useAddressesPanel } from "@/domains/portfolio/hooks/use-address-panel";
+import { IReadWriteWallet } from "@/app/lib/profiles/wallet.contract";
 
 export const LedgerTabs = ({
 	activeIndex = LedgerTabStep.ListenLedgerStep,
@@ -25,9 +27,11 @@ export const LedgerTabs = ({
 	onCancel,
 	onSubmit,
 }: LedgerTabsProperties) => {
+	const {persist } = useEnvironmentContext();
 	const activeProfile = useActiveProfile();
 	const { activeNetwork } = useActiveNetwork({ profile: activeProfile });
 	const { importWallets } = useWalletImport({ profile: activeProfile });
+	const { addressViewPreference } = useAddressesPanel({ profile: activeProfile });
 
 	const navigate = useNavigate();
 	const { isBusy, disconnect, isAwaitingConnection, isAwaitingDeviceConfirmation, isConnected, listenDevice } =
@@ -51,7 +55,7 @@ export const LedgerTabs = ({
 			const deviceId = device?.id;
 			assertString(deviceId);
 
-			await Promise.all(
+			const importedWallets = await Promise.all(
 				wallets.map(({ path, address }, index) =>
 					importWallets({
 						ledgerOptions: {
@@ -60,9 +64,16 @@ export const LedgerTabs = ({
 						},
 						type: OptionsValue.LEDGER,
 						value: address,
+						selectedSingleAddress: wallets[0].address,
 					}),
 				),
 			);
+
+			// if (addressViewPreference === AddressViewSelection.single) {
+			// 	activeProfile.wallets().selectOne(importedWallets[0][0]);
+			// }
+			//
+			// await persist();
 
 			setImportedWallets(wallets);
 		},

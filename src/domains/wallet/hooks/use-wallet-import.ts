@@ -167,6 +167,7 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 		value,
 		type,
 		ledgerOptions,
+		selectedSingleAddress,
 	}: {
 		value: WalletGenerationInput;
 		type: string;
@@ -174,6 +175,7 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 			deviceId: string;
 			path: string;
 		};
+		selectedSingleAddress?: string;
 	}) => {
 		const wallets: Contracts.IReadWriteWallet[] = [];
 
@@ -189,6 +191,12 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 			profile.wallets().selectOne(wallet);
 		} else {
 			wallet.mutator().isSelected(true);
+		}
+
+		if (selectedSingleAddress) {
+			profile.wallets().selectOne(
+				profile.wallets().filterByAddress(selectedSingleAddress)[0]
+			)
 		}
 
 		await persist();
