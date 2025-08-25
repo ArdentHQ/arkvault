@@ -187,8 +187,10 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 		});
 		wallets.push(wallet);
 
-		if (addressViewPreference === AddressViewSelection.single && setSelected) {
-			profile.wallets().selectOne(wallet);
+		if (addressViewPreference === AddressViewSelection.single) {
+			if (setSelected) {
+				profile.wallets().selectOne(wallet);
+			}
 		} else {
 			wallet.mutator().isSelected(true);
 		}
