@@ -46,7 +46,7 @@ export const LedgerTabs = ({
 	const retryFunctionReference = useRef<() => void>(undefined);
 
 	const handleWalletImporting = useCallback(
-		async ({ wallets }: { wallets: Array<Record<string, string>> }) => {
+		async ({ wallets }: { wallets: LedgerData[] }) => {
 			const device = await listenDevice();
 			const deviceId = device?.id;
 			assertString(deviceId);
