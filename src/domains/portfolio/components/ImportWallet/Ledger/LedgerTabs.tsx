@@ -54,7 +54,7 @@ export const LedgerTabs = ({
 			await Promise.all(
 				wallets.map(({ path, address }, index) =>
 					importWallets({
-						disableAddressSelection: index !== 0,
+						disableAddressSelection: index !== 0, // set the very first address to be selected
 						ledgerOptions: {
 							deviceId,
 							path,
