@@ -140,8 +140,6 @@ describe("SendTransferSidePanel", () => {
 				`https://dwallets-evm.mainsailhq.com/api/transactions/${transactionFixture.data.hash}`,
 				transactionFixture,
 			),
-
-			requestMock(`https://dwallets-evm.mainsailhq.com/api/blocks*`, { data: {} }),
 		);
 	});
 
