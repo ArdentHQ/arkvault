@@ -27,7 +27,7 @@ export const LedgerTabs = ({
 }: LedgerTabsProperties) => {
 	const activeProfile = useActiveProfile();
 	const { activeNetwork } = useActiveNetwork({ profile: activeProfile });
-	const { importWallet } = useWalletImport({ profile: activeProfile });
+	const { importWallets } = useWalletImport({ profile: activeProfile });
 
 	const navigate = useNavigate();
 	const { isBusy, disconnect, isAwaitingConnection, isAwaitingDeviceConfirmation, isConnected, listenDevice } =
@@ -45,29 +45,29 @@ export const LedgerTabs = ({
 	const [cancelling, setCancelling] = useState(false);
 	const retryFunctionReference = useRef<() => void>(undefined);
 
-	const importWallets = useCallback(
-		async ({ wallets }: any) => {
+	const handleWalletImporting = useCallback(
+		async ({ wallets }: { wallets: Array<Record<string, string>> }) => {
 			const device = await listenDevice();
 			const deviceId = device?.id;
 			assertString(deviceId);
 
-			setImportedWallets(wallets);
+			// reversing wallets so the first one will be selected
+			const orderedWallets = [...wallets].reverse();
 
-			for (const network of activeProfile.availableNetworks()) {
-				await Promise.all(
-					wallets.map(({ path, address }) =>
-						importWallet({
-							ledgerOptions: {
-								deviceId,
-								path,
-							},
-							network,
-							type: OptionsValue.LEDGER,
-							value: address,
-						}),
-					),
-				);
-			}
+			await Promise.all(
+				orderedWallets.map(({ path, address }) =>
+					importWallets({
+						ledgerOptions: {
+							deviceId,
+							path,
+						},
+						type: OptionsValue.LEDGER,
+						value: address,
+					}),
+				),
+			);
+
+			setImportedWallets(wallets);
 		},
 		[activeProfile, activeNetwork, listenDevice],
 	);
@@ -89,12 +89,12 @@ export const LedgerTabs = ({
 
 	const handleNext = useCallback(async () => {
 		if (activeTab === LedgerTabStep.LedgerScanStep) {
-			await handleSubmit((data: any) => importWallets(data))();
+			await handleSubmit((data: any) => handleWalletImporting(data))();
 		}
 
 		setActiveTab(activeTab + 1);
 		onStepChange?.(activeTab + 1);
-	}, [activeTab, handleSubmit, importWallets]);
+	}, [activeTab, handleSubmit, handleWalletImporting]);
 
 	useEffect(() => {
 		const cancel = async () => {
