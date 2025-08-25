@@ -167,7 +167,6 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 		value,
 		type,
 		ledgerOptions,
-		setSelected = true,
 	}: {
 		value: WalletGenerationInput;
 		type: string;
@@ -175,7 +174,6 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 			deviceId: string;
 			path: string;
 		};
-		setSelected?: boolean;
 	}) => {
 		const wallets: Contracts.IReadWriteWallet[] = [];
 
@@ -188,9 +186,7 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 		wallets.push(wallet);
 
 		if (addressViewPreference === AddressViewSelection.single) {
-			if (setSelected) {
-				profile.wallets().selectOne(wallet);
-			}
+			profile.wallets().selectOne(wallet);
 		} else {
 			wallet.mutator().isSelected(true);
 		}
