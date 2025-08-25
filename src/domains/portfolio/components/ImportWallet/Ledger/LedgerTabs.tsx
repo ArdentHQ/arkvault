@@ -51,7 +51,7 @@ export const LedgerTabs = ({
 			const deviceId = device?.id;
 			assertString(deviceId);
 
-			// reversing wallets so the first one will be selected
+			// reversing wallet ordering so the first one will be selected
 			const orderedWallets = [...wallets].reverse();
 
 			await Promise.all(
