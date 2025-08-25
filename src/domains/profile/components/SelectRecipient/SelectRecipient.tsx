@@ -2,10 +2,9 @@ import { Networks } from "@/app/lib/mainsail";
 import { Contracts } from "@/app/lib/profiles";
 import cn from "classnames";
 import React, { useCallback, useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 
 import { useTranslation } from "react-i18next";
-import { Avatar } from "@/app/components/Avatar";
-import { Circle } from "@/app/components/Circle";
 import { useFormField } from "@/app/components/Form/useFormField";
 import { Icon } from "@/app/components/Icon";
 import { Select } from "@/app/components/SelectDropdown";
@@ -13,7 +12,7 @@ import { TruncateEnd } from "@/app/components/TruncateEnd";
 import { useWalletAlias, WalletAliasResult } from "@/app/hooks/use-wallet-alias";
 import { AddressProperties, useProfileAddresses } from "@/domains/profile/hooks/use-profile-addresses";
 import { SearchRecipient } from "@/domains/transaction/components/SearchRecipient";
-import { OptionLabel } from "@/domains/profile/components/SelectAddressDropdown";
+import { OptionLabel, ProfileAvatar } from "@/domains/profile/components/SelectAddressDropdown";
 
 type SelectRecipientProperties = {
 	network?: Networks.Network;
@@ -30,19 +29,6 @@ type SelectRecipientProperties = {
 	ref?: React.Ref<HTMLInputElement>;
 	onChange?: (address: string | undefined, alias: WalletAliasResult) => void;
 } & Omit<React.InputHTMLAttributes<any>, "onChange">;
-
-const ProfileAvatar = ({ address }: any) => {
-	if (!address) {
-		return (
-			<Circle
-				className="border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700"
-				size="sm"
-				noShadow
-			/>
-		);
-	}
-	return <Avatar address={address} size="sm" noShadow />;
-};
 
 export const SelectRecipient = ({
 	address,
@@ -162,6 +148,7 @@ export const SelectRecipient = ({
 					options={showOptions ? recipientOptions : []}
 					showOptions={showOptions}
 					allowFreeInput={true}
+					innerClassName="text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200"
 					onChange={(option: any) => onChangeAddress(option.value)}
 					addons={{
 						end: showOptions
@@ -188,7 +175,7 @@ export const SelectRecipient = ({
 												{showWalletAvatar && <ProfileAvatar address={selectedAddress} />}
 												{selectedAddressAlias?.alias && (
 													<TruncateEnd
-														className={cn("font-semibold", {
+														className={cn({
 															"ml-2": showWalletAvatar,
 														})}
 														text={selectedAddressAlias.alias}
@@ -204,16 +191,20 @@ export const SelectRecipient = ({
 				/>
 			</div>
 
-			<SearchRecipient
-				title={contactSearchTitle}
-				description={contactSearchDescription}
-				isOpen={isRecipientSearchOpen}
-				recipients={allAddresses}
-				onAction={onAction}
-				onClose={() => setIsRecipientSearchOpen(false)}
-				selectedAddress={selectedAddress}
-				profile={profile}
-			/>
+			{isRecipientSearchOpen &&
+				createPortal(
+					<SearchRecipient
+						title={contactSearchTitle}
+						description={contactSearchDescription}
+						isOpen={isRecipientSearchOpen}
+						recipients={allAddresses}
+						onAction={onAction}
+						onClose={() => setIsRecipientSearchOpen(false)}
+						selectedAddress={selectedAddress}
+						profile={profile}
+					/>,
+					document.body,
+				)}
 		</div>
 	);
 };

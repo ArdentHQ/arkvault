@@ -6,13 +6,17 @@ export const useConfirmedTransaction = ({
 	wallet,
 	transactionId,
 }: {
-	wallet: Contracts.IReadWriteWallet;
-	transactionId: string;
+	wallet?: Contracts.IReadWriteWallet;
+	transactionId?: string;
 }): { isConfirmed: boolean; transaction?: ExtendedConfirmedTransactionData } => {
 	const [isConfirmed, setIsConfirmed] = useState(false);
 	const [transaction, setTransaction] = useState<ExtendedConfirmedTransactionData | undefined>(undefined);
 
 	useEffect(() => {
+		if (!transactionId || !wallet) {
+			return;
+		}
+
 		const checkConfirmed = (): void => {
 			const id = setInterval(async () => {
 				try {
@@ -27,7 +31,7 @@ export const useConfirmedTransaction = ({
 		};
 
 		void checkConfirmed();
-	}, [wallet.id(), transactionId]);
+	}, [wallet?.id(), transactionId]);
 
 	return { isConfirmed, transaction };
 };

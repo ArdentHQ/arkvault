@@ -243,7 +243,7 @@ export const translations = {
 			MULTIPLE_UNAVAILBLE: "Multiple Recipient Transactions are not available from Ledger wallets.",
 			SCAN: "Scan",
 			SCAN_FULL: "Scan QR-Code",
-			TITLE: "Send {{ticker}}",
+			TITLE: "Send",
 		},
 		NETWORK_STEP: {
 			SUBTITLE: "Select a cryptoasset to send funds from.",

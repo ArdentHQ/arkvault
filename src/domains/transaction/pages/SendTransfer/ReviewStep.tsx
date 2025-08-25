@@ -18,16 +18,18 @@ import { Amount } from "@/app/components/Amount";
 import { BigNumber } from "@/app/lib/helpers";
 import { calculateGasFee } from "@/domains/transaction/components/InputFee/InputFee";
 import { Tooltip } from "@/app/components/Tooltip";
+import cn from "classnames";
 
 interface ReviewStepProperties {
 	wallet: Contracts.IReadWriteWallet;
 	network: Networks.Network;
+	hideHeader?: boolean;
 }
 
 // This is to prevent Insufficient balance error when sending all
 const DUST_AMOUNT = 0.00015;
 
-export const ReviewStep = ({ wallet, network }: ReviewStepProperties) => {
+export const ReviewStep = ({ wallet, network, hideHeader = false }: ReviewStepProperties) => {
 	const { t } = useTranslation();
 
 	const { unregister, watch, register, getValues, setError, errors, clearErrors, setValue } = useFormContext();
@@ -110,19 +112,25 @@ export const ReviewStep = ({ wallet, network }: ReviewStepProperties) => {
 
 	return (
 		<section data-testid="SendTransfer__review-step">
-			<StepHeader
-				titleIcon={
-					<Icon
-						dimensions={[24, 24]}
-						name="DocumentView"
-						data-testid="icon-DocumentView"
-						className="text-theme-primary-600"
-					/>
-				}
-				title={t("TRANSACTION.REVIEW_STEP.TITLE")}
-				subtitle={t("TRANSACTION.REVIEW_STEP.DESCRIPTION")}
-			/>
-			<div className="-mx-3 mt-4 space-y-3 sm:mx-0 sm:space-y-4">
+			{!hideHeader && (
+				<StepHeader
+					titleIcon={
+						<Icon
+							dimensions={[24, 24]}
+							name="DocumentView"
+							data-testid="icon-DocumentView"
+							className="text-theme-primary-600"
+						/>
+					}
+					title={t("TRANSACTION.REVIEW_STEP.TITLE")}
+					subtitle={t("TRANSACTION.REVIEW_STEP.DESCRIPTION")}
+				/>
+			)}
+			<div
+				className={cn("space-y-3 sm:mx-0 sm:space-y-4", {
+					"mt-4": !hideHeader,
+				})}
+			>
 				<TransactionAddresses
 					senderAddress={wallet.address()}
 					recipients={recipients}

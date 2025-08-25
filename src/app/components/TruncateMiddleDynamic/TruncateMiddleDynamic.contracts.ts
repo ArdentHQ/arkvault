@@ -7,4 +7,5 @@ export type TruncateMiddleDynamicProperties = {
 	parentRef?: RefObject<HTMLElement> | OnRefChangeType<HTMLElement> | RefObject<null>;
 	tooltipDarkTheme?: boolean;
 	availableWidth?: number;
+	showTooltip?: boolean;
 } & React.HTMLProps<any>;

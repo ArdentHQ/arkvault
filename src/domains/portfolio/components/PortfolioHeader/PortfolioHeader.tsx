@@ -38,6 +38,7 @@ export const PortfolioHeader = ({
 	onCreateAddress,
 	onImportAddress,
 	onSignMessage,
+	onSendTransfer,
 	hasFocus,
 }: {
 	profile: Contracts.IProfile;
@@ -49,6 +50,7 @@ export const PortfolioHeader = ({
 	onCreateAddress?: (open: boolean) => void;
 	onImportAddress?: (open: boolean) => void;
 	onSignMessage?: (open: boolean) => void;
+	onSendTransfer?: (open: boolean) => void;
 	hasFocus?: boolean;
 }) => {
 	const [showAddressesPanel, setShowAddressesPanel] = useState(false);
@@ -64,7 +66,12 @@ export const PortfolioHeader = ({
 		onSignMessage?.(true);
 	};
 
+	const handleSendTransfer = () => {
+		onSendTransfer?.(true);
+	};
+
 	const { activeModal, setActiveModal, handleSelectOption, handleSend } = useWalletActions({
+		handleSendTransfer,
 		handleSignMessage,
 		wallets: selectedWallets,
 	});

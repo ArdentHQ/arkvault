@@ -129,7 +129,7 @@ export const QRModal = ({ isOpen, onCancel, onRead }: QRModalProperties) => {
 			description={t("TRANSACTION.MODAL_QR_CODE.DESCRIPTION")}
 			size="4xl"
 			noButtons
-			contentClassName="px-4 pt-4 md:pt-8 md:px-8"
+			contentClassName="px-4 pt-4 md:pt-8 md:px-8 sm:pb-12"
 			onClose={() => onCancel()}
 		>
 			<div className="relative -mx-10 mt-4 -mb-10 flex min-h-full flex-1 items-center justify-center overflow-hidden bg-black">
