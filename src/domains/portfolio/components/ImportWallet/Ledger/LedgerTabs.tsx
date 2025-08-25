@@ -58,7 +58,6 @@ export const LedgerTabs = ({
 							deviceId,
 							path,
 						},
-						setSelected: index === 0,
 						type: OptionsValue.LEDGER,
 						value: address,
 					}),
