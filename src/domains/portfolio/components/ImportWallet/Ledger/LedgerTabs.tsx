@@ -52,12 +52,13 @@ export const LedgerTabs = ({
 			assertString(deviceId);
 
 			await Promise.all(
-				wallets.map(({ path, address }) =>
+				wallets.map(({ path, address }, index) =>
 					importWallets({
 						ledgerOptions: {
 							deviceId,
 							path,
 						},
+						setSelected: index === 0,
 						type: OptionsValue.LEDGER,
 						value: address,
 					}),
