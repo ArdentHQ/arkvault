@@ -158,7 +158,6 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 			: getDefaultAlias({ network, profile });
 
 		wallet.mutator().alias(alias);
-		wallet.mutator().isSelected(true);
 
 		return wallet;
 	};
@@ -167,7 +166,7 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 		value,
 		type,
 		ledgerOptions,
-		selectedSingleAddress,
+		disableAddressSelection = false,
 	}: {
 		value: WalletGenerationInput;
 		type: string;
@@ -175,7 +174,7 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 			deviceId: string;
 			path: string;
 		};
-		selectedSingleAddress?: string;
+		disableAddressSelection?: boolean;
 	}) => {
 		const wallets: Contracts.IReadWriteWallet[] = [];
 
@@ -187,16 +186,12 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 		});
 		wallets.push(wallet);
 
-		if (addressViewPreference === AddressViewSelection.single) {
-			profile.wallets().selectOne(wallet);
-		} else {
-			wallet.mutator().isSelected(true);
-		}
-
-		if (selectedSingleAddress) {
-			profile.wallets().selectOne(
-				profile.wallets().filterByAddress(selectedSingleAddress)[0]
-			)
+		if (!disableAddressSelection) {
+			if (addressViewPreference === AddressViewSelection.single) {
+				profile.wallets().selectOne(wallet);
+			} else {
+				wallet.mutator().isSelected(true);
+			}
 		}
 
 		await persist();
