@@ -49,7 +49,7 @@ export const SendRegistration = () => {
 
 	const { isLedgerModelSupported } = useLedgerModelStatus({
 		connectedModel: ledgerDevice?.id,
-		supportedModels: [Contracts.WalletLedgerModel.NanoX],
+		supportedModels: [Contracts.WalletLedgerModel.NanoX, Contracts.WalletLedgerModel.NanoSP],
 	});
 
 	const form = useForm({ mode: "onChange" });
