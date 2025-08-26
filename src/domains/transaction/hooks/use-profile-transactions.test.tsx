@@ -10,6 +10,7 @@ import { RawTransactionData } from "@/app/lib/mainsail/signed-transaction.dto.co
 import { PendingTransactionData } from "./use-pending-transactions";
 import { IProfile } from "@/app/lib/profiles/profile.contract";
 import * as pendingTransactionsMock from "./use-pending-transactions";
+import * as pendingTransactionsServiceMock from "@/app/lib/mainsail/pending-transactions.service";
 
 const wrapper = ({ children }: any) => (
 	<EnvironmentProvider env={env}>
@@ -931,8 +932,7 @@ describe("useProfileTransactions", () => {
 	
 		const listSpy = vi
 			.spyOn(
-				(await import("@/app/lib/mainsail/pending-transactions.service"))
-					.PendingTransactionsService.prototype,
+				pendingTransactionsServiceMock.PendingTransactionsService.prototype,
 				"listUnconfirmed",
 			)
 			.mockResolvedValue({
