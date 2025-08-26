@@ -22,22 +22,27 @@ import { useVoteFilters } from "@/domains/vote/hooks/use-vote-filters";
 import { useVoteQueryParameters } from "@/domains/vote/hooks/use-vote-query-parameters";
 import { ResetWhenUnmounted } from "@/app/components/SidePanel/ResetWhenUnmounted";
 import { useProfileJobs } from "@/app/hooks/use-profile-background-jobs";
-import { SendTransferSidePanel } from "@/domains/transaction/components/SendTransferSidePanel/SendTransferSidePanel";
 import { SendVoteSidePanel } from "@/domains/transaction/components/SendVoteSidePanel/SendVoteSidePanel";
+import { useVoteFormContext, VoteFormProvider } from "@/domains/vote/contexts/VoteFormContext";
+import { Networks } from "@/app/lib/mainsail";
 
-export const Votes: FC = () => {
+export const VotesPage: FC<{
+	profile: Contracts.IProfile;
+	network: Networks.Network;
+	wallet: Contracts.IReadWriteWallet;
+}> = ({ profile: activeProfile, network: activeNetwork, wallet: activeWallet }) => {
 	const { t } = useTranslation();
 
 	const [showCreateAddressPanel, setShowCreateAddressPanel] = useState(false);
 	const [showImportAddressPanel, setShowImportAddressPanel] = useState(false);
+
+	const { showSendVotePanel, setShowSendVotePanel, openSendVotePanel } = useVoteFormContext();
 
 	// @TODO: the hasWalletId alias is misleading because it indicates that it
 	// is a boolean but it's just a string or undefined and you still need to
 	// do an assertion or casting to ensure it has a value other than undefined
 	const { env } = useEnvironmentContext();
 
-	const activeProfile = useActiveProfile();
-	const activeWallet = useActiveWalletWhenNeeded(false);
 	const hasWalletId = activeWallet && activeWallet.address();
 
 	const [selectedWallet, setSelectedWallet] = useState<Contracts.IReadWriteWallet | undefined>(activeWallet);
@@ -45,8 +50,6 @@ export const Votes: FC = () => {
 	const { syncProfileWallets } = useProfileJobs(activeProfile);
 
 	const { filter, voteValidators, unvoteValidators } = useVoteQueryParameters();
-
-	const { activeNetwork } = useActiveNetwork({ profile: activeProfile });
 
 	const {
 		filteredWallets,
@@ -81,16 +84,6 @@ export const Votes: FC = () => {
 		searchQuery,
 		voteFilter,
 	});
-
-	const { navigateToSendVote, openSendVotePanel, showSendVotePanel, setShowSendVotePanel } = useVoteActions({
-		hasWalletId: !!hasWalletId,
-		profile: activeProfile,
-		selectedAddress,
-		selectedNetwork: activeNetwork.id(),
-		wallet: activeWallet!, // @TODO
-	});
-
-	// const openSendVotePanel = (unvotes: VoteValidatorProperties[], votes: VoteValidatorProperties[]) => {
 
 	useEffect(() => {
 		if (selectedAddress) {
@@ -229,5 +222,17 @@ export const Votes: FC = () => {
 				<SendVoteSidePanel open={showSendVotePanel} onOpenChange={setShowSendVotePanel} />
 			</ResetWhenUnmounted>
 		</Page>
+	);
+};
+
+export const Votes: FC = () => {
+	const activeProfile = useActiveProfile();
+	const activeWallet = useActiveWalletWhenNeeded(false);
+	const { activeNetwork } = useActiveNetwork({ profile: activeProfile });
+
+	return (
+		<VoteFormProvider profile={activeProfile} network={activeNetwork} wallet={activeWallet!}>
+			<VotesPage profile={activeProfile} network={activeNetwork} wallet={activeWallet!} />
+		</VoteFormProvider>
 	);
 };

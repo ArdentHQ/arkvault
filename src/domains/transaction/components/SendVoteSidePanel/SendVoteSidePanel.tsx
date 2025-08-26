@@ -10,19 +10,15 @@ import { VoteLedgerReview } from "@/domains/transaction/pages/SendVote/LedgerRev
 import { ReviewStep } from "@/domains/transaction/pages/SendVote/ReviewStep";
 import { usePendingTransactions } from "@/domains/transaction/hooks/use-pending-transactions";
 import { Form } from "@/app/components/Form";
-import { Section } from "@/app/components/Layout";
-import { StepNavigation } from "@/app/components/StepNavigation";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
-import { StepsProvider, useEnvironmentContext, useLedgerContext } from "@/app/contexts";
-import { useActiveProfile, useValidation, useNetworkFromQueryParameters, useActiveWalletWhenNeeded } from "@/app/hooks";
+import { useEnvironmentContext, useLedgerContext } from "@/app/contexts";
+import { useActiveProfile, useValidation, useActiveWalletWhenNeeded } from "@/app/hooks";
 import { useKeydown } from "@/app/hooks/use-keydown";
 import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
 import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
 import { useTransactionBuilder } from "@/domains/transaction/hooks";
 import { handleBroadcastError } from "@/domains/transaction/utils";
-import { appendParameters } from "@/domains/vote/utils/url-parameters";
 import { assertNetwork, assertProfile, assertWallet } from "@/utils/assertions";
-import { useValidatorsFromURL } from "@/domains/vote/hooks/use-vote-query-parameters";
 import { toasts } from "@/app/services";
 import { isLedgerTransportSupported } from "@/app/contexts/Ledger/transport";
 import { TransactionSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
@@ -32,6 +28,8 @@ import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { SidePanel, SidePanelButtons } from "@/app/components/SidePanel/SidePanel";
 import { Button } from "@/app/components/Button";
 import { Icon, ThemeIcon } from "@/app/components/Icon";
+import { useVoteFormContext } from "@/domains/vote/contexts/VoteFormContext";
+import { useConfirmedTransaction } from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
 
 enum Step {
 	FormStep = 1,
@@ -55,10 +53,7 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 	const networks = useMemo(() => activeProfile.availableNetworks(), [env]);
 	const wallet = useActiveWalletWhenNeeded(false);
 
-	const { votes, unvotes, voteValidators, unvoteValidators, setUnvotes, isLoading } = useValidatorsFromURL({
-		network: activeNetwork,
-		profile: activeProfile,
-	});
+	const { votes, unvotes, setUnvotes, isLoading } = useVoteFormContext();
 
 	const { addPendingTransaction } = usePendingTransactions();
 
@@ -192,19 +187,11 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 		abortReference.current.abort();
 
 		if (activeTab === Step.FormStep || (activeTab === Step.ReviewStep && skipFormStep)) {
-			const parameters = new URLSearchParams();
-
 			if (!wallet) {
 				return navigate(`/profiles/${activeProfile.id()}/dashboard`);
 			}
 
-			appendParameters(parameters, "unvote", unvoteValidators);
-			appendParameters(parameters, "vote", voteValidators);
-
-			return navigate({
-				pathname: `/profiles/${activeProfile.id()}/wallets/${wallet.id()}/votes`,
-				search: `?${parameters}`,
-			});
+			return onOpenChange(false);
 		}
 
 		setActiveTab(activeTab - 1);
@@ -447,6 +434,11 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 	const stepsCount = skipFormStep ? 3 : 4;
 	const activeIndex = skipFormStep ? activeTab - 1 : activeTab;
 
+	const { isConfirmed } = useConfirmedTransaction({
+		transactionId: transaction?.hash(),
+		wallet: wallet,
+	});
+
 	const getTitle = () => {
 		if (activeTab === Step.FormStep) {
 			return t("TRANSACTION.PAGE_VOTE.FORM_STEP.TITLE");
@@ -459,6 +451,12 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 		if (activeTab === Step.AuthenticationStep) {
 			return t("TRANSACTION.AUTHENTICATION_STEP.TITLE");
 		}
+
+		if (activeTab === Step.SummaryStep) {
+			return isConfirmed ? t("TRANSACTION.SUCCESS.CREATED") : t("TRANSACTION.PENDING.TITLE");
+		}
+
+		return t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.TITLE");
 	};
 
 	const getSubtitle = () => {
@@ -473,9 +471,26 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 		if (activeTab === Step.AuthenticationStep) {
 			return t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_SECRET");
 		}
+
+		return;
 	};
 
 	const getTitleIcon = () => {
+		if (activeTab === Step.SummaryStep) {
+			return (
+				<ThemeIcon
+					lightIcon={isConfirmed ? "CheckmarkDoubleCircle" : "PendingTransaction"}
+					darkIcon={isConfirmed ? "CheckmarkDoubleCircle" : "PendingTransaction"}
+					dimIcon={isConfirmed ? "CheckmarkDoubleCircle" : "PendingTransaction"}
+					dimensions={[24, 24]}
+					className={cn({
+						"text-theme-primary-600": !isConfirmed,
+						"text-theme-success-600": isConfirmed,
+					})}
+				/>
+			);
+		}
+
 		if (activeTab === Step.FormStep) {
 			return (
 				<ThemeIcon
@@ -515,8 +530,6 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 	};
 
 	return (
-		// <Page pageTitle={t("TRANSACTION.TRANSACTION_TYPES.VOTE")} showBottomNavigationBar={false}>
-
 		<SidePanel
 			open={open}
 			onOpenChange={onOpenChange}
@@ -526,7 +539,7 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 			dataTestId="SendVoteSidePanel"
 			hasSteps
 			totalSteps={stepsCount}
-			activeStep={activeTab}
+			activeStep={activeIndex}
 			onBack={handleBack}
 			isLastStep={activeTab === Step.SummaryStep}
 			disableOutsidePress
