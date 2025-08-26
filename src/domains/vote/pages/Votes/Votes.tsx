@@ -22,6 +22,8 @@ import { useVoteFilters } from "@/domains/vote/hooks/use-vote-filters";
 import { useVoteQueryParameters } from "@/domains/vote/hooks/use-vote-query-parameters";
 import { ResetWhenUnmounted } from "@/app/components/SidePanel/ResetWhenUnmounted";
 import { useProfileJobs } from "@/app/hooks/use-profile-background-jobs";
+import { SendTransferSidePanel } from "@/domains/transaction/components/SendTransferSidePanel/SendTransferSidePanel";
+import { SendVoteSidePanel } from "@/domains/transaction/components/SendVoteSidePanel/SendVoteSidePanel";
 
 export const Votes: FC = () => {
 	const { t } = useTranslation();
@@ -80,13 +82,15 @@ export const Votes: FC = () => {
 		voteFilter,
 	});
 
-	const { navigateToSendVote } = useVoteActions({
+	const { navigateToSendVote, openSendVotePanel, showSendVotePanel, setShowSendVotePanel } = useVoteActions({
 		hasWalletId: !!hasWalletId,
 		profile: activeProfile,
 		selectedAddress,
 		selectedNetwork: activeNetwork.id(),
 		wallet: activeWallet!, // @TODO
 	});
+
+	// const openSendVotePanel = (unvotes: VoteValidatorProperties[], votes: VoteValidatorProperties[]) => {
 
 	useEffect(() => {
 		if (selectedAddress) {
@@ -187,7 +191,7 @@ export const Votes: FC = () => {
 					unvoteValidators={unvoteValidators}
 					voteValidators={voteValidators}
 					selectedWallet={selectedWallet!}
-					onContinue={navigateToSendVote}
+					onContinue={openSendVotePanel}
 					setSearchQuery={setSearchQuery}
 					totalCurrentVotes={currentVotes.length}
 					selectedFilter={voteFilter}
@@ -216,8 +220,13 @@ export const Votes: FC = () => {
 			<ResetWhenUnmounted>
 				<CreateAddressesSidePanel open={showCreateAddressPanel} onOpenChange={setShowCreateAddressPanel} />
 			</ResetWhenUnmounted>
+
 			<ResetWhenUnmounted>
 				<ImportAddressesSidePanel open={showImportAddressPanel} onOpenChange={setShowImportAddressPanel} />
+			</ResetWhenUnmounted>
+
+			<ResetWhenUnmounted>
+				<SendVoteSidePanel open={showSendVotePanel} onOpenChange={setShowSendVotePanel} />
 			</ResetWhenUnmounted>
 		</Page>
 	);

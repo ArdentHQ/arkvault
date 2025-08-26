@@ -1,31 +1,37 @@
 import { Services } from "@/app/lib/mainsail";
 import { Contracts, DTO } from "@/app/lib/profiles";
-import React, { JSX, useCallback, useEffect, useMemo, useRef, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 
 import { FormStep } from "@/domains/transaction/pages/SendVote/FormStep";
 import { VoteLedgerReview } from "@/domains/transaction/pages/SendVote/LedgerReview";
 import { ReviewStep } from "@/domains/transaction/pages/SendVote/ReviewStep";
 import { usePendingTransactions } from "@/domains/transaction/hooks/use-pending-transactions";
 import { Form } from "@/app/components/Form";
+import { Section } from "@/app/components/Layout";
+import { StepNavigation } from "@/app/components/StepNavigation";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { StepsProvider, useEnvironmentContext, useLedgerContext } from "@/app/contexts";
-import { useActiveProfile, useActiveWalletWhenNeeded } from "@/app/hooks";
+import { useActiveProfile, useValidation, useNetworkFromQueryParameters, useActiveWalletWhenNeeded } from "@/app/hooks";
+import { useKeydown } from "@/app/hooks/use-keydown";
 import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
 import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
 import { useTransactionBuilder } from "@/domains/transaction/hooks";
 import { handleBroadcastError } from "@/domains/transaction/utils";
+import { appendParameters } from "@/domains/vote/utils/url-parameters";
 import { assertNetwork, assertProfile, assertWallet } from "@/utils/assertions";
 import { useValidatorsFromURL } from "@/domains/vote/hooks/use-vote-query-parameters";
 import { toasts } from "@/app/services";
 import { isLedgerTransportSupported } from "@/app/contexts/Ledger/transport";
 import { TransactionSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
+import { useToggleFeeFields } from "@/domains/transaction/hooks/useToggleFeeFields";
+import { useProfileJobs } from "@/app/hooks/use-profile-background-jobs";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { SidePanel, SidePanelButtons } from "@/app/components/SidePanel/SidePanel";
 import { Button } from "@/app/components/Button";
-import { ThemeIcon } from "@/app/components/Icon";
-import cn from "classnames";
+import { Icon, ThemeIcon } from "@/app/components/Icon";
 
 enum Step {
 	FormStep = 1,
@@ -35,83 +41,104 @@ enum Step {
 	ErrorStep,
 }
 
-const MAX_TABS = 5;
-
-export const SendVoteSidePanel = ({
-	open,
-	onOpenChange,
-}: {
-	open: boolean;
-	onOpenChange: (open: boolean) => void;
-}): JSX.Element => {
+export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpenChange: (open: boolean) => void }) => {
+	const { env, persist } = useEnvironmentContext();
+	const navigate = useNavigate();
 	const { t } = useTranslation();
 
-	const { env, persist } = useEnvironmentContext();
 	const activeProfile = useActiveProfile();
 	assertProfile(activeProfile);
 
 	const { activeNetwork } = useActiveNetwork({ profile: activeProfile });
 	assertNetwork(activeNetwork);
 
-	const walletFromHook = useActiveWalletWhenNeeded(false);
-	const [wallet, setWallet] = useState<Contracts.IReadWriteWallet | undefined>(walletFromHook);
+	const networks = useMemo(() => activeProfile.availableNetworks(), [env]);
+	const wallet = useActiveWalletWhenNeeded(false);
 
-	const { votes, unvotes, setUnvotes, isLoading } = useValidatorsFromURL({
+	const { votes, unvotes, voteValidators, unvoteValidators, setUnvotes, isLoading } = useValidatorsFromURL({
 		network: activeNetwork,
 		profile: activeProfile,
 	});
 
 	const { addPendingTransaction } = usePendingTransactions();
 
-	const { hasDeviceAvailable, isConnected } = useLedgerContext();
+	const walletFromUrl = useActiveWalletWhenNeeded(false);
+	const initialStep = useMemo(() => (walletFromUrl ? Step.ReviewStep : Step.FormStep), [walletFromUrl]);
+	const [activeTab, setActiveTab] = useState<Step>(initialStep);
 
-	const [activeTab, setActiveTab] = useState<Step>(Step.FormStep);
-
-	const [transaction, setTransaction] = useState<DTO.ExtendedSignedTransactionData | undefined>(undefined);
+	const [transaction, setTransaction] = useState(undefined as unknown as DTO.ExtendedSignedTransactionData);
 	const [errorMessage, setErrorMessage] = useState<string | undefined>();
 
 	const form = useForm({ mode: "onChange" });
+	const { senderAddress } = form.watch();
+
+	const { hasDeviceAvailable, isConnected } = useLedgerContext();
+	const { syncProfileWallets } = useProfileJobs(activeProfile);
+
 	const { clearErrors, formState, getValues, handleSubmit, register, setValue, watch } = form;
 	const { isDirty, isSubmitting, errors } = formState;
 
 	const { fees } = watch();
+	const { sendVote, common } = useValidation();
 
 	const abortReference = useRef(new AbortController());
 	const transactionBuilder = useTransactionBuilder();
 
 	const activeWallet = useMemo(
-		() =>
-			wallet
-				? wallet
-				: activeProfile.wallets().findByAddressWithNetwork(getValues("senderAddress"), activeNetwork.id()),
-		[wallet, activeProfile, activeNetwork, getValues],
+		() => activeProfile.wallets().findByAddressWithNetwork(senderAddress, activeNetwork.id()),
+		[senderAddress],
 	);
 
 	useEffect(() => {
-		register("network");
-		register("senderAddress");
+		register("network", sendVote.network());
+		register("senderAddress", sendVote.senderAddress({ network: activeNetwork, profile: activeProfile, votes }));
 		register("fees");
+
 		register("inputFeeSettings");
+
 		register("suppressWarning");
 
-		setValue("network", activeNetwork, { shouldDirty: true, shouldValidate: true });
+		for (const network of networks) {
+			if (network.id() === activeWallet?.networkId()) {
+				setValue("network", network, { shouldDirty: true, shouldValidate: true });
 
-		if (walletFromHook) {
-			setValue("senderAddress", walletFromHook.address(), { shouldDirty: true, shouldValidate: true });
-		} else if (activeProfile.wallets().count() === 1) {
-			setValue("senderAddress", activeProfile.wallets().first().address(), {
-				shouldDirty: true,
-				shouldValidate: true,
-			});
+				break;
+			}
 		}
-	}, [register, setValue, activeNetwork, activeProfile, walletFromHook]);
+	}, [
+		activeWallet,
+		networks,
+		register,
+		setValue,
+		common,
+		getValues,
+		sendVote,
+		fees,
+		votes,
+		activeProfile,
+		activeNetwork,
+		wallet,
+	]);
 
 	useEffect(() => {
-		const senderAddress: string | undefined = getValues("senderAddress");
-		if (!senderAddress) {
+		if (!senderAddress && activeProfile.wallets().count() === 1) {
+			setValue("senderAddress", activeProfile.wallets().first().address(), {
+				shouldDirty: true,
+				shouldValidate: false,
+			});
 			return;
 		}
 
+		setValue("senderAddress", wallet?.address(), { shouldDirty: true, shouldValidate: false });
+	}, [wallet, activeProfile]);
+
+	useToggleFeeFields({
+		activeTab,
+		form,
+		wallet,
+	});
+
+	useEffect(() => {
 		const updateWallet = async () => {
 			const senderWallet = activeProfile.wallets().findByAddressWithNetwork(senderAddress, activeNetwork.id());
 
@@ -122,11 +149,21 @@ export const SendVoteSidePanel = ({
 			const isFullyRestoredAndSynced = senderWallet.hasBeenFullyRestored() && senderWallet.hasSyncedWithNetwork();
 
 			if (!isFullyRestoredAndSynced) {
+				syncProfileWallets(true);
 				await senderWallet.synchroniser().votes();
 			}
 
 			form.trigger("senderAddress");
 			toasts.dismiss();
+
+			const errors = sendVote
+				.senderAddress({ network: activeNetwork, profile: activeProfile, votes })
+				.validate(senderWallet.address());
+
+			if (Object.keys(errors).length > 0) {
+				toasts.warning(errors);
+				return;
+			}
 
 			if (senderWallet.voting().current().length === 0) {
 				setUnvotes([]);
@@ -137,15 +174,37 @@ export const SendVoteSidePanel = ({
 			}
 		};
 
-		void updateWallet();
-	}, [activeNetwork, activeProfile, form, getValues, setUnvotes]);
+		updateWallet();
+	}, [senderAddress]);
+
+	useKeydown("Enter", () => {
+		const isButton = (document.activeElement as any)?.type === "button";
+
+		if (isButton || isNextDisabled || activeTab >= Step.AuthenticationStep) {
+			return;
+		}
+
+		return handleNext();
+	});
 
 	const handleBack = () => {
+		// Abort any existing listener
 		abortReference.current.abort();
 
-		if (activeTab === Step.FormStep) {
-			onOpenChange(false);
-			return;
+		if (activeTab === Step.FormStep || (activeTab === Step.ReviewStep && skipFormStep)) {
+			const parameters = new URLSearchParams();
+
+			if (!wallet) {
+				return navigate(`/profiles/${activeProfile.id()}/dashboard`);
+			}
+
+			appendParameters(parameters, "unvote", unvoteValidators);
+			appendParameters(parameters, "vote", voteValidators);
+
+			return navigate({
+				pathname: `/profiles/${activeProfile.id()}/wallets/${wallet.id()}/votes`,
+				search: `?${parameters}`,
+			});
 		}
 
 		setActiveTab(activeTab - 1);
@@ -166,7 +225,7 @@ export const SendVoteSidePanel = ({
 				setActiveTab(Step.ErrorStep);
 				return;
 			}
-			void handleSubmit(onSubmit)();
+			void handleSubmit(submitForm)();
 		}
 
 		setActiveTab(newIndex);
@@ -181,35 +240,34 @@ export const SendVoteSidePanel = ({
 				const walletVotes = wallet.voting().current();
 
 				if (type === "vote") {
-					isConfirmed =
-						votes.length > 0 &&
-						walletVotes.some(({ wallet }) => wallet?.address() === votes[0].wallet?.address());
+					isConfirmed = walletVotes.some(({ wallet }) => wallet?.address() === votes[0].wallet?.address());
 				}
 
 				if (type === "unvote") {
-					isConfirmed =
-						unvotes.length > 0 &&
-						!walletVotes.some(({ wallet }) => wallet?.address() === unvotes[0].wallet?.address());
+					isConfirmed = !walletVotes.some(({ wallet }) => wallet?.address() === unvotes[0].wallet?.address());
 				}
 
 				if (type === "combined") {
-					const voteConfirmed =
-						votes.length > 0 &&
-						walletVotes.some(({ wallet }) => wallet?.address() === votes[0].wallet?.address());
-					const unvoteConfirmed =
-						unvotes.length > 0 &&
-						!walletVotes.some(({ wallet }) => wallet?.address() === unvotes[0].wallet?.address());
+					const voteConfirmed = walletVotes.some(
+						({ wallet }) => wallet?.address() === votes[0].wallet?.address(),
+					);
+
+					const unvoteConfirmed = !walletVotes.some(
+						({ wallet }) => wallet?.address() === unvotes[0].wallet?.address(),
+					);
+
 					isConfirmed = voteConfirmed && unvoteConfirmed;
 				}
 
+				/* istanbul ignore else -- @preserve */
 				if (isConfirmed) {
 					clearInterval(interval);
-					resolve(undefined);
+					resolve("");
 				}
 			}, 1000);
 		});
 
-	const onSubmit = async () => {
+	const submitForm = async () => {
 		clearErrors("mnemonic");
 		const {
 			mnemonic,
@@ -243,6 +301,7 @@ export const SendVoteSidePanel = ({
 			};
 
 			const senderWallet = activeProfile.wallets().findByAddressWithNetwork(senderAddress, network.id());
+
 			assertWallet(senderWallet);
 
 			if (unvotes.length > 0 && votes.length > 0) {
@@ -256,7 +315,10 @@ export const SendVoteSidePanel = ({
 									amount: unvote.amount,
 									id: unvote.wallet?.address(),
 								})),
-								votes: votes.map((vote) => ({ amount: vote.amount, id: vote.wallet?.address() })),
+								votes: votes.map((vote) => ({
+									amount: vote.amount,
+									id: vote.wallet?.address(),
+								})),
 							},
 						},
 						senderWallet,
@@ -264,13 +326,21 @@ export const SendVoteSidePanel = ({
 					);
 
 					const voteResponse = await activeWallet.transaction().broadcast(uuid);
+
 					handleBroadcastError(voteResponse);
+
 					await persist();
+
 					addPendingTransaction(transaction);
+
 					setTransaction(transaction);
+
 					setActiveTab(Step.SummaryStep);
+
 					await confirmSendVote(activeWallet, "combined");
-				} else {
+				}
+
+				if (senderWallet.network().votingMethod() === "split") {
 					const unvoteResult = await transactionBuilder.build(
 						"vote",
 						{
@@ -287,8 +357,11 @@ export const SendVoteSidePanel = ({
 					);
 
 					const unvoteResponse = await activeWallet.transaction().broadcast(unvoteResult.uuid);
+
 					handleBroadcastError(unvoteResponse);
+
 					await persist();
+
 					await confirmSendVote(activeWallet, "unvote");
 
 					const voteResult = await transactionBuilder.build(
@@ -296,7 +369,10 @@ export const SendVoteSidePanel = ({
 						{
 							...voteTransactionInput,
 							data: {
-								votes: votes.map((vote) => ({ amount: vote.amount, id: vote.wallet?.address() })),
+								votes: votes.map((vote) => ({
+									amount: vote.amount,
+									id: vote.wallet?.address(),
+								})),
 							},
 						},
 						senderWallet,
@@ -304,11 +380,17 @@ export const SendVoteSidePanel = ({
 					);
 
 					const voteResponse = await activeWallet.transaction().broadcast(voteResult.uuid);
+
 					handleBroadcastError(voteResponse);
+
 					await persist();
+
 					addPendingTransaction(voteResult.transaction);
+
 					setTransaction(voteResult.transaction);
+
 					setActiveTab(Step.SummaryStep);
+
 					await confirmSendVote(activeWallet, "vote");
 				}
 			} else {
@@ -324,21 +406,32 @@ export const SendVoteSidePanel = ({
 										id: unvote.wallet?.address(),
 									})),
 								}
-							: { votes: votes.map((vote) => ({ amount: vote.amount, id: vote.wallet?.address() })) },
+							: {
+									votes: votes.map((vote) => ({
+										amount: vote.amount,
+										id: vote.wallet?.address(),
+									})),
+								},
 					},
 					senderWallet,
 					{ abortSignal },
 				);
 
 				const response = await activeWallet.transaction().broadcast(uuid);
+
 				handleBroadcastError(response);
+
 				await persist();
+
 				addPendingTransaction(transaction);
+
 				setTransaction(transaction);
+
 				setActiveTab(Step.SummaryStep);
+
 				await confirmSendVote(activeWallet, isUnvote ? "unvote" : "vote");
 			}
-		} catch (error: any) {
+		} catch (error) {
 			setErrorMessage(JSON.stringify({ message: error.message, type: error.name }));
 			setActiveTab(Step.ErrorStep);
 		}
@@ -350,27 +443,29 @@ export const SendVoteSidePanel = ({
 	const hasErrors = Object.values(errors).length > 0;
 	const isNextDisabled = isDirty ? hasErrors : true;
 
-	const getTitle = () => {
-		if (activeTab === Step.ErrorStep) {
-			return t("TRANSACTION.ERROR.TITLE");
-		}
+	const skipFormStep = initialStep === Step.ReviewStep;
+	const stepsCount = skipFormStep ? 3 : 4;
+	const activeIndex = skipFormStep ? activeTab - 1 : activeTab;
 
-		if (activeTab === Step.AuthenticationStep) {
-			return t("TRANSACTION.AUTHENTICATION_STEP.TITLE");
+	const getTitle = () => {
+		if (activeTab === Step.FormStep) {
+			return t("TRANSACTION.PAGE_VOTE.FORM_STEP.TITLE");
 		}
 
 		if (activeTab === Step.ReviewStep) {
 			return t("TRANSACTION.REVIEW_STEP.TITLE");
 		}
 
-		if (activeTab === Step.SummaryStep) {
-			return t("TRANSACTION.SUCCESS.CREATED");
+		if (activeTab === Step.AuthenticationStep) {
+			return t("TRANSACTION.AUTHENTICATION_STEP.TITLE");
 		}
-
-		return t("TRANSACTION.TRANSACTION_TYPES.VOTE");
 	};
 
 	const getSubtitle = () => {
+		if (activeTab === Step.FormStep) {
+			return t("TRANSACTION.PAGE_VOTE.FORM_STEP.DESCRIPTION");
+		}
+
 		if (activeTab === Step.ReviewStep) {
 			return t("TRANSACTION.REVIEW_STEP.DESCRIPTION");
 		}
@@ -378,53 +473,50 @@ export const SendVoteSidePanel = ({
 		if (activeTab === Step.AuthenticationStep) {
 			return t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_SECRET");
 		}
-
-		return;
 	};
 
 	const getTitleIcon = () => {
-		if (activeTab === Step.SummaryStep) {
+		if (activeTab === Step.FormStep) {
 			return (
 				<ThemeIcon
-					lightIcon="CheckmarkDoubleCircle"
-					darkIcon="CheckmarkDoubleCircle"
-					dimIcon="CheckmarkDoubleCircle"
 					dimensions={[24, 24]}
-					className={cn("text-theme-success-600")}
+					lightIcon="SendTransactionLight"
+					darkIcon="SendTransactionDark"
+					dimIcon="SendTransactionDim"
 				/>
 			);
-		}
-
-		if (activeTab === Step.AuthenticationStep) {
-			if (activeWallet?.isLedger()) {
-				return (
-					<ThemeIcon
-						lightIcon="LedgerLight"
-						darkIcon="LedgerDark"
-						dimIcon="LedgerDim"
-						dimensions={[24, 24]}
-					/>
-				);
-			}
-
-			return <ThemeIcon lightIcon="Mnemonic" darkIcon="Mnemonic" dimIcon="Mnemonic" dimensions={[24, 24]} />;
 		}
 
 		if (activeTab === Step.ReviewStep) {
 			return (
 				<ThemeIcon
-					lightIcon="DocumentView"
-					darkIcon="DocumentView"
-					dimIcon="DocumentView"
 					dimensions={[24, 24]}
+					lightIcon="SendTransactionLight"
+					darkIcon="SendTransactionDark"
+					dimIcon="SendTransactionDim"
 				/>
 			);
 		}
 
-		return <ThemeIcon lightIcon="VoteLight" darkIcon="VoteDark" dimIcon="VoteDim" dimensions={[24, 24]} />;
+		if (activeTab === Step.AuthenticationStep) {
+			return (
+				<Icon
+					name="Mnemonic"
+					data-testid="icon-mnemonic"
+					className="text-theme-primary-600"
+					dimensions={[24, 24]}
+				/>
+			);
+		}
+	};
+
+	const onSubmit = () => {
+		void handleSubmit(submitForm)();
 	};
 
 	return (
+		// <Page pageTitle={t("TRANSACTION.TRANSACTION_TYPES.VOTE")} showBottomNavigationBar={false}>
+
 		<SidePanel
 			open={open}
 			onOpenChange={onOpenChange}
@@ -433,7 +525,7 @@ export const SendVoteSidePanel = ({
 			titleIcon={getTitleIcon()}
 			dataTestId="SendVoteSidePanel"
 			hasSteps
-			totalSteps={MAX_TABS - 1}
+			totalSteps={stepsCount}
 			activeStep={activeTab}
 			onBack={handleBack}
 			isLastStep={activeTab === Step.SummaryStep}
@@ -480,84 +572,73 @@ export const SendVoteSidePanel = ({
 				</SidePanelButtons>
 			}
 		>
-			<Form context={form} onSubmit={onSubmit}>
+			<Form context={form} onSubmit={submitForm}>
 				<Tabs activeId={activeTab}>
-					<StepsProvider steps={MAX_TABS - 1} activeStep={activeTab}>
-						<TabPanel tabId={Step.FormStep}>
-							<FormStep
-								isWalletFieldDisabled={!!wallet || isLoading}
-								profile={activeProfile}
+					<TabPanel tabId={Step.FormStep}>
+						<FormStep
+							isWalletFieldDisabled={!!wallet || isLoading}
+							profile={activeProfile}
+							unvotes={unvotes}
+							votes={votes}
+							wallet={activeWallet}
+							network={activeNetwork}
+							hideHeader
+						/>
+					</TabPanel>
+
+					<TabPanel tabId={Step.ReviewStep}>
+						{activeWallet && (
+							<ReviewStep
+								network={activeWallet.network()}
 								unvotes={unvotes}
 								votes={votes}
 								wallet={activeWallet}
-								network={activeNetwork}
-								hideHeader
-								onChange={({ sender }) => setWallet(sender)}
-							/>
-						</TabPanel>
-
-						<TabPanel tabId={Step.ReviewStep}>
-							{activeWallet && (
-								<ReviewStep
-									network={activeWallet.network()}
-									unvotes={unvotes}
-									votes={votes}
-									wallet={activeWallet}
-									profile={activeProfile}
-									hideHeader
-								/>
-							)}
-						</TabPanel>
-
-						<TabPanel tabId={Step.AuthenticationStep}>
-							{activeWallet && (
-								<AuthenticationStep
-									wallet={activeWallet}
-									ledgerDetails={
-										<VoteLedgerReview
-											profile={activeProfile}
-											wallet={activeWallet}
-											votes={votes}
-											unvotes={unvotes}
-											network={activeWallet.network()}
-										/>
-									}
-									ledgerIsAwaitingDevice={!hasDeviceAvailable}
-									ledgerIsAwaitingApp={!isConnected}
-									noHeading
-								/>
-							)}
-						</TabPanel>
-
-						<TabPanel tabId={Step.SummaryStep}>
-							{activeWallet && (
-								<TransactionSuccessful
-									transaction={transaction!}
-									senderWallet={activeWallet}
-									noHeading
-								/>
-							)}
-						</TabPanel>
-
-						<TabPanel tabId={Step.ErrorStep}>
-							<ErrorStep
-								onClose={() => onOpenChange(false)}
-								isBackDisabled={isSubmitting}
-								onBack={() => setActiveTab(Step.ReviewStep)}
-								errorMessage={errorMessage}
+								profile={activeProfile}
 								hideHeader
 							/>
-						</TabPanel>
-
-						{!hideStepNavigation && (
-							<div className="mt-2">
-								<button className="sr-only" type="submit" onClick={(e) => e.preventDefault()} />
-							</div>
 						)}
-					</StepsProvider>
+					</TabPanel>
+
+					<TabPanel tabId={Step.AuthenticationStep}>
+						{activeWallet && (
+							<AuthenticationStep
+								wallet={activeWallet}
+								ledgerDetails={
+									<VoteLedgerReview
+										profile={activeProfile}
+										wallet={activeWallet}
+										votes={votes}
+										unvotes={unvotes}
+										network={activeWallet.network()}
+									/>
+								}
+								ledgerIsAwaitingDevice={!hasDeviceAvailable}
+								ledgerIsAwaitingApp={hasDeviceAvailable && !isConnected}
+								noHeading
+							/>
+						)}
+					</TabPanel>
+
+					<TabPanel tabId={Step.SummaryStep}>
+						{activeWallet && (
+							<TransactionSuccessful transaction={transaction} senderWallet={activeWallet} />
+						)}
+					</TabPanel>
+
+					<TabPanel tabId={Step.ErrorStep}>
+						<ErrorStep
+							onClose={() => navigate(`/profiles/${activeProfile.id()}/dashboard`)}
+							isBackDisabled={isSubmitting}
+							onBack={() => {
+								setActiveTab(Step.ReviewStep);
+							}}
+							errorMessage={errorMessage}
+						/>
+					</TabPanel>
 				</Tabs>
 			</Form>
 		</SidePanel>
 	);
 };
 
+SendVoteSidePanel.displayName = "SendVote";

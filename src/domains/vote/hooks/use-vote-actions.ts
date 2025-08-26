@@ -6,6 +6,7 @@ import { VoteValidatorProperties } from "@/domains/vote/components/ValidatorsTab
 import { appendParameters } from "@/domains/vote/utils/url-parameters";
 import { ProfilePaths } from "@/router/paths";
 import { assertString } from "@/utils/assertions";
+import { useState } from "react";
 
 interface VoteActionsProperties {
 	profile: Contracts.IProfile;
@@ -23,6 +24,8 @@ export const useVoteActions = ({
 	hasWalletId,
 }: VoteActionsProperties) => {
 	const navigate = useNavigate();
+
+	const [showSendVotePanel, setShowSendVotePanel] = useState(false);
 
 	const navigateToSendVote = (unvotes: VoteValidatorProperties[], votes: VoteValidatorProperties[]) => {
 		const walletId = hasWalletId
@@ -47,5 +50,9 @@ export const useVoteActions = ({
 		});
 	};
 
-	return { navigateToSendVote };
+	const openSendVotePanel = (unvotes: VoteValidatorProperties[], votes: VoteValidatorProperties[]) => {
+		setShowSendVotePanel(true);
+	};
+
+	return { navigateToSendVote, openSendVotePanel, setShowSendVotePanel, showSendVotePanel };
 };
