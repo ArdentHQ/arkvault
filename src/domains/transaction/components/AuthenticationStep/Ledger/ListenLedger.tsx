@@ -20,11 +20,11 @@ export const ListenLedger = ({
 }) => {
 	const { t } = useTranslation();
 
-	const { listenDevice, hasDeviceAvailable, error: ledgerError, resetConnectionState } = useLedgerContext();
+	const { listenDevice, hasDeviceAvailable, error: ledgerError, resetConnectionState, ledgerDevice } = useLedgerContext();
 
 	useEffect(() => {
 		listenDevice();
-	}, [listenDevice]);
+	}, [listenDevice, ledgerDevice?.id]);
 
 	useEffect(() => {
 		// Error messages that are treated as "device not available".

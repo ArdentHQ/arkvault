@@ -56,7 +56,7 @@ export const SendTransferSidePanel = ({
 	const { activeNetwork } = useActiveNetwork({ profile: activeProfile });
 
 	const { fetchWalletUnconfirmedTransactions } = useTransaction();
-	const { hasDeviceAvailable, isConnected, connect } = useLedgerContext();
+	const { hasDeviceAvailable, isConnected, connect, ledgerDevice } = useLedgerContext();
 	const { addPendingTransaction } = usePendingTransactions();
 
 	const { hasReset: shouldResetForm, queryParameters: deepLinkParameters } = useTransactionQueryParameters();
@@ -98,10 +98,14 @@ export const SendTransferSidePanel = ({
 	});
 
 	useEffect(() => {
+		if (!isConnected && ledgerDevice?.id && isWaitingLedger.current) {
+			void connectLedger();
+		}
+
 		if (isConnected && isWaitingLedger.current) {
 			void handleSubmit(() => submit(true))();
 		}
-	}, [isConnected]);
+	}, [isConnected, ledgerDevice?.id]);
 
 	const connectLedger = useCallback(async () => {
 		if (wallet) {
@@ -500,13 +504,7 @@ export const SendTransferSidePanel = ({
 									ledgerIsAwaitingDevice={!hasDeviceAvailable}
 									ledgerIsAwaitingApp={!isConnected}
 									onDeviceNotAvailable={() => {
-										setErrorMessage(
-											JSON.stringify({
-												message: t("WALLETS.MODAL_LEDGER_WALLET.DEVICE_NOT_AVAILABLE"),
-												type: "failed",
-											}),
-										);
-										setActiveTab(SendTransferStep.ErrorStep);
+										// keep waiting when it is not available
 									}}
 									noHeading
 								/>
