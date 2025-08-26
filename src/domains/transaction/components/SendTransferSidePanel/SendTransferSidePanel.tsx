@@ -209,12 +209,10 @@ export const SendTransferSidePanel = ({
 
 		const isLedgerTransaction = nextStep === SendTransferStep.AuthenticationStep && senderWallet?.isLedger();
 
-		if (isLedgerTransaction) {
-			if (!isLedgerTransportSupported()) {
-				setErrorMessage(t("WALLETS.MODAL_LEDGER_WALLET.COMPATIBILITY_ERROR"));
-				setActiveTab(SendTransferStep.ErrorStep);
-				return;
-			}
+		if (isLedgerTransaction && !isLedgerTransportSupported()) {
+			setErrorMessage(t("WALLETS.MODAL_LEDGER_WALLET.COMPATIBILITY_ERROR"));
+			setActiveTab(SendTransferStep.ErrorStep);
+			return;
 		}
 
 		setActiveTab(nextStep);
