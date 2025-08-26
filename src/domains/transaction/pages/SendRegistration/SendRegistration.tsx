@@ -284,7 +284,10 @@ export const SendRegistration = () => {
 											wallet={activeWallet!}
 											ledgerIsAwaitingDevice={!hasDeviceAvailable}
 											ledgerIsAwaitingApp={!isConnected}
-											ledgerSupportedModels={[Contracts.WalletLedgerModel.NanoX, Contracts.WalletLedgerModel.NanoSP]}
+											ledgerSupportedModels={[
+												Contracts.WalletLedgerModel.NanoX,
+												Contracts.WalletLedgerModel.NanoSP,
+											]}
 											ledgerConnectedModel={ledgerDevice?.id}
 										/>
 									</TabPanel>
