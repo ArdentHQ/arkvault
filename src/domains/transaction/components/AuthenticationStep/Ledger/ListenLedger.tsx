@@ -20,7 +20,13 @@ export const ListenLedger = ({
 }) => {
 	const { t } = useTranslation();
 
-	const { listenDevice, hasDeviceAvailable, error: ledgerError, resetConnectionState, ledgerDevice } = useLedgerContext();
+	const {
+		listenDevice,
+		hasDeviceAvailable,
+		error: ledgerError,
+		resetConnectionState,
+		ledgerDevice,
+	} = useLedgerContext();
 
 	useEffect(() => {
 		listenDevice();
