@@ -2100,10 +2100,14 @@ exports[`Dashboard > should render 1`] = `
                             class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-14 my-1 pt-2"
                           >
                             <div
-                              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-20 truncate rounded px-1 py-[3px] whitespace-nowrap lg:max-w-40 dark:border"
+                              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-20 rounded px-1 py-[3px] lg:max-w-40 dark:border"
                               data-testid="TransactionRow__type"
                             >
-                              Transfer
+                              <span
+                                class="block truncate whitespace-nowrap"
+                              >
+                                Transfer
+                              </span>
                             </div>
                           </div>
                         </td>
@@ -2607,10 +2611,14 @@ exports[`Dashboard > should render 1`] = `
                             class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-14 my-1 pt-2"
                           >
                             <div
-                              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-20 truncate rounded px-1 py-[3px] whitespace-nowrap lg:max-w-40 dark:border"
+                              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-20 rounded px-1 py-[3px] lg:max-w-40 dark:border"
                               data-testid="TransactionRow__type"
                             >
-                              Registration
+                              <span
+                                class="block truncate whitespace-nowrap"
+                              >
+                                Registration
+                              </span>
                             </div>
                           </div>
                         </td>
@@ -3093,10 +3101,14 @@ exports[`Dashboard > should render 1`] = `
                             class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-14 my-1 pt-2"
                           >
                             <div
-                              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-20 truncate rounded px-1 py-[3px] whitespace-nowrap lg:max-w-40 dark:border"
+                              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-20 rounded px-1 py-[3px] lg:max-w-40 dark:border"
                               data-testid="TransactionRow__type"
                             >
-                              Username Registration
+                              <span
+                                class="block truncate whitespace-nowrap"
+                              >
+                                Username Registration
+                              </span>
                             </div>
                           </div>
                         </td>
@@ -3579,10 +3591,14 @@ exports[`Dashboard > should render 1`] = `
                             class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-14 my-1 pt-2"
                           >
                             <div
-                              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-20 truncate rounded px-1 py-[3px] whitespace-nowrap lg:max-w-40 dark:border"
+                              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-20 rounded px-1 py-[3px] lg:max-w-40 dark:border"
                               data-testid="TransactionRow__type"
                             >
-                              Username Resignation
+                              <span
+                                class="block truncate whitespace-nowrap"
+                              >
+                                Username Resignation
+                              </span>
                             </div>
                           </div>
                         </td>
@@ -4065,10 +4081,14 @@ exports[`Dashboard > should render 1`] = `
                             class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-14 my-1 pt-2"
                           >
                             <div
-                              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-20 truncate rounded px-1 py-[3px] whitespace-nowrap lg:max-w-40 dark:border"
+                              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-20 rounded px-1 py-[3px] lg:max-w-40 dark:border"
                               data-testid="TransactionRow__type"
                             >
-                              Username Registration
+                              <span
+                                class="block truncate whitespace-nowrap"
+                              >
+                                Username Registration
+                              </span>
                             </div>
                           </div>
                         </td>
@@ -4551,10 +4571,14 @@ exports[`Dashboard > should render 1`] = `
                             class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-14 my-1 pt-2"
                           >
                             <div
-                              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-20 truncate rounded px-1 py-[3px] whitespace-nowrap lg:max-w-40 dark:border"
+                              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-20 rounded px-1 py-[3px] lg:max-w-40 dark:border"
                               data-testid="TransactionRow__type"
                             >
-                              Vote
+                              <span
+                                class="block truncate whitespace-nowrap"
+                              >
+                                Vote
+                              </span>
                             </div>
                           </div>
                         </td>
@@ -5037,10 +5061,14 @@ exports[`Dashboard > should render 1`] = `
                             class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-14 my-1 pt-2"
                           >
                             <div
-                              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-20 truncate rounded px-1 py-[3px] whitespace-nowrap lg:max-w-40 dark:border"
+                              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-20 rounded px-1 py-[3px] lg:max-w-40 dark:border"
                               data-testid="TransactionRow__type"
                             >
-                              Vote
+                              <span
+                                class="block truncate whitespace-nowrap"
+                              >
+                                Vote
+                              </span>
                             </div>
                           </div>
                         </td>
@@ -5523,10 +5551,14 @@ exports[`Dashboard > should render 1`] = `
                             class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-14 my-1 pt-2"
                           >
                             <div
-                              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-20 truncate rounded px-1 py-[3px] whitespace-nowrap lg:max-w-40 dark:border"
+                              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-20 rounded px-1 py-[3px] lg:max-w-40 dark:border"
                               data-testid="TransactionRow__type"
                             >
-                              Transfer
+                              <span
+                                class="block truncate whitespace-nowrap"
+                              >
+                                Transfer
+                              </span>
                             </div>
                           </div>
                         </td>
@@ -6030,10 +6062,14 @@ exports[`Dashboard > should render 1`] = `
                             class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-14 my-1 pt-2"
                           >
                             <div
-                              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-20 truncate rounded px-1 py-[3px] whitespace-nowrap lg:max-w-40 dark:border"
+                              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-20 rounded px-1 py-[3px] lg:max-w-40 dark:border"
                               data-testid="TransactionRow__type"
                             >
-                              Multipayment
+                              <span
+                                class="block truncate whitespace-nowrap"
+                              >
+                                Multipayment
+                              </span>
                             </div>
                           </div>
                         </td>
@@ -6378,10 +6414,14 @@ exports[`Dashboard > should render 1`] = `
                             class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-14 my-1 pt-2"
                           >
                             <div
-                              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-20 truncate rounded px-1 py-[3px] whitespace-nowrap lg:max-w-40 dark:border"
+                              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-20 rounded px-1 py-[3px] lg:max-w-40 dark:border"
                               data-testid="TransactionRow__type"
                             >
-                              Transfer
+                              <span
+                                class="block truncate whitespace-nowrap"
+                              >
+                                Transfer
+                              </span>
                             </div>
                           </div>
                         </td>
