@@ -507,8 +507,8 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 
 			for (const transaction of response?.results ?? []) {
 				const matched =
-					wallets.find((w) => w.address().toLowerCase() === transaction.from?.toLowerCase?.()) ||
-					wallets.find((w) => w.address().toLowerCase() === transaction.to?.toLowerCase?.());
+					wallets.find((wallet) => wallet.address().toLowerCase() === transaction.from?.toLowerCase?.()) ||
+					wallets.find((wallet) => wallet.address().toLowerCase() === transaction.to?.toLowerCase?.());
 
 				/* istanbul ignore next -- @preserve */
 				if (!matched) {
