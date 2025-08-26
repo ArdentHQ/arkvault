@@ -1,6 +1,6 @@
 import { Services } from "@/app/lib/mainsail";
 import { Contracts, DTO } from "@/app/lib/profiles";
-import React, { useEffect, useMemo, useRef, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
@@ -30,6 +30,7 @@ import { Button } from "@/app/components/Button";
 import { Icon, ThemeIcon } from "@/app/components/Icon";
 import { useVoteFormContext } from "@/domains/vote/contexts/VoteFormContext";
 import { useConfirmedTransaction } from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
+import classNames from "classnames";
 
 enum Step {
 	FormStep = 1,
@@ -70,7 +71,7 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 	const { hasDeviceAvailable, isConnected } = useLedgerContext();
 	const { syncProfileWallets } = useProfileJobs(activeProfile);
 
-	const { clearErrors, formState, getValues, handleSubmit, register, setValue, watch } = form;
+	const { clearErrors, formState, getValues, handleSubmit, register, setValue, watch, reset: resetForm } = form;
 	const { isDirty, isSubmitting, errors } = formState;
 
 	const { fees } = watch();
@@ -181,6 +182,17 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 
 		return handleNext();
 	});
+
+	const onMountChange = useCallback(
+		(mounted: boolean) => {
+			if (!mounted) {
+				setActiveTab(initialStep);
+
+				return;
+			}
+		},
+		[initialStep],
+	);
 
 	const handleBack = () => {
 		// Abort any existing listener
@@ -483,7 +495,7 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 					darkIcon={isConfirmed ? "CheckmarkDoubleCircle" : "PendingTransaction"}
 					dimIcon={isConfirmed ? "CheckmarkDoubleCircle" : "PendingTransaction"}
 					dimensions={[24, 24]}
-					className={cn({
+					className={classNames({
 						"text-theme-primary-600": !isConfirmed,
 						"text-theme-success-600": isConfirmed,
 					})}
@@ -544,6 +556,7 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 			isLastStep={activeTab === Step.SummaryStep}
 			disableOutsidePress
 			disableEscapeKey={isSubmitting}
+			onMountChange={onMountChange}
 			footer={
 				<SidePanelButtons>
 					{activeTab !== Step.SummaryStep && (
