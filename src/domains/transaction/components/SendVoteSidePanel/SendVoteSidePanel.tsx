@@ -436,9 +436,6 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 		}
 	};
 
-	const hideStepNavigation =
-		activeTab === Step.ErrorStep || (activeTab === Step.AuthenticationStep && activeWallet?.isLedger());
-
 	const hasErrors = Object.values(errors).length > 0;
 	const isNextDisabled = isDirty ? hasErrors : true;
 
