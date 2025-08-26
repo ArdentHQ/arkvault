@@ -161,13 +161,18 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 				return;
 			}
 
-			if (senderWallet.voting().current().length === 0) {
-				setUnvotes([]);
+			let unvotes: Contracts.VoteRegistryItem[] = [];
+			try {
+				const current = senderWallet.voting().current();
+
+				if (current.length > 0) {
+					unvotes = current;
+				}
+			} catch {
+				// Nothing to do, we already set the unvotes to an empty array
 			}
 
-			if (senderWallet.voting().current().length > 0) {
-				setUnvotes(senderWallet.voting().current());
-			}
+			setUnvotes(unvotes);
 		};
 
 		updateWallet();
