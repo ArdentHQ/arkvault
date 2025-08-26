@@ -17,7 +17,6 @@ import { getErroredNetworks } from "@/utils/profile-utils";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { useEnvironmentContext } from "@/app/contexts";
 import { useValidators } from "@/domains/vote/hooks/use-validators";
-import { useVoteActions } from "@/domains/vote/hooks/use-vote-actions";
 import { useVoteFilters } from "@/domains/vote/hooks/use-vote-filters";
 import { useVoteQueryParameters } from "@/domains/vote/hooks/use-vote-query-parameters";
 import { ResetWhenUnmounted } from "@/app/components/SidePanel/ResetWhenUnmounted";
