@@ -126,8 +126,7 @@ export const TransactionTypeLabel = ({
 }: {
 	tooltipContent?: string;
 	children: React.ReactNode;
-	props: LabelProperties;
-}): JSX.Element => {
+} & LabelProperties): JSX.Element => {
 	const [isTruncated, setIsTruncated] = useState(false);
 	const textRef = useRef<HTMLSpanElement>(null);
 
