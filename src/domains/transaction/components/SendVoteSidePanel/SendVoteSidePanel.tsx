@@ -71,7 +71,7 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 	const { hasDeviceAvailable, isConnected } = useLedgerContext();
 	const { syncProfileWallets } = useProfileJobs(activeProfile);
 
-	const { clearErrors, formState, getValues, handleSubmit, register, setValue, watch, reset: resetForm } = form;
+	const { clearErrors, formState, getValues, handleSubmit, register, setValue, watch } = form;
 	const { isDirty, isSubmitting, errors } = formState;
 
 	const { fees } = watch();
