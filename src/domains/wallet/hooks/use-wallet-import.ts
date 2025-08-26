@@ -186,12 +186,12 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 		});
 		wallets.push(wallet);
 
-		if (!disableAddressSelection) {
-			if (addressViewPreference === AddressViewSelection.single) {
+		if (addressViewPreference === AddressViewSelection.single) {
+			if (!disableAddressSelection) {
 				profile.wallets().selectOne(wallet);
-			} else {
-				wallet.mutator().isSelected(true);
 			}
+		} else {
+			wallet.mutator().isSelected(true);
 		}
 
 		await persist();
