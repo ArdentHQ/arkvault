@@ -12,9 +12,11 @@ import { useLink } from "@/app/hooks/use-link";
 
 export const useWalletActions = ({
 	handleSignMessage,
+	handleSendTransfer,
 	wallets,
 }: {
 	handleSignMessage?: () => void;
+	handleSendTransfer?: () => void;
 	wallets: Contracts.IReadWriteWallet[];
 }) => {
 	const { persist } = useEnvironmentContext();
@@ -51,6 +53,11 @@ export const useWalletActions = ({
 
 			stopEventBubbling(event);
 
+			if (typeof handleSendTransfer === "function") {
+				handleSendTransfer();
+				return;
+			}
+
 			if (hasMultipleWallets) {
 				navigate(generatePath(ProfilePaths.SendTransfer, { profileId: profile.id() }));
 				return;
@@ -58,7 +65,7 @@ export const useWalletActions = ({
 
 			navigate(generatePath(ProfilePaths.SendTransferWallet, { profileId: profile.id(), walletId: wallet.id() }));
 		},
-		[stopEventBubbling, hasMultipleWallets, history, profile, wallet],
+		[stopEventBubbling, hasMultipleWallets, history, profile, wallet, handleSendTransfer],
 	);
 
 	const handleToggleStar = useCallback(

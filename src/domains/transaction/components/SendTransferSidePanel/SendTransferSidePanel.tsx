@@ -1,25 +1,20 @@
 import { Contracts, DTO } from "@/app/lib/profiles";
-import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useRef, useState, JSX } from "react";
 import { useTranslation } from "react-i18next";
-import { useLocation, useNavigate } from "react-router-dom";
-
 import { URLBuilder } from "@ardenthq/arkvault-url";
-import { FormStep } from "./FormStep";
-import { TransferLedgerReview } from "./LedgerReview";
-import { ReviewStep } from "./ReviewStep";
+import { FormStep } from "@/domains/transaction/pages/SendTransfer/FormStep";
+import { TransferLedgerReview } from "@/domains/transaction/pages/SendTransfer/LedgerReview";
+import { ReviewStep } from "@/domains/transaction/pages/SendTransfer/ReviewStep";
 import { SendTransferStep } from "@/domains/transaction/pages/SendTransfer/SendTransfer.contracts";
 import { useSendTransferForm } from "@/domains/transaction/hooks/use-send-transfer-form";
 import { usePendingTransactions } from "@/domains/transaction/hooks/use-pending-transactions";
 import { Form } from "@/app/components/Form";
-import { Page, Section } from "@/app/components/Layout";
 import { QRModal } from "@/app/components/QRModal";
-import { StepNavigation } from "@/app/components/StepNavigation";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { StepsProvider, useEnvironmentContext, useLedgerContext } from "@/app/contexts";
 import { useActiveProfile, useActiveWalletWhenNeeded } from "@/app/hooks";
 import { useKeyup } from "@/app/hooks/use-keyup";
 import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
-import { ConfirmSendTransaction } from "@/domains/transaction/components/ConfirmSendTransaction";
 import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
 import { useTransaction } from "@/domains/transaction/hooks";
 import { useTransactionQueryParameters } from "@/domains/transaction/hooks/use-transaction-query-parameters";
@@ -29,18 +24,28 @@ import { toasts } from "@/app/services";
 import { useSearchParametersValidation } from "@/app/hooks/use-search-parameters-validation";
 import { isLedgerTransportSupported } from "@/app/contexts/Ledger/transport";
 import { isValidUrl } from "@/utils/url-validation";
+import cn from "classnames";
 import {
 	TransferFormData,
 	TransferOverwriteModal,
 } from "@/domains/transaction/pages/SendTransfer/TransferOverwriteModal";
 import { TransactionSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
+import { SidePanel, SidePanelButtons } from "@/app/components/SidePanel/SidePanel";
+import { Button } from "@/app/components/Button";
+import { ConfirmSendTransaction } from "@/domains/transaction/components/ConfirmSendTransaction";
+import { ThemeIcon } from "@/app/components/Icon";
+import { useConfirmedTransaction } from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
 
 const MAX_TABS = 5;
 
-export const SendTransfer = () => {
-	const navigate = useNavigate();
-	const location = useLocation();
+export const SendTransferSidePanel = ({
+	open,
+	onOpenChange,
+}: {
+	open: boolean;
+	onOpenChange: (open: boolean) => void;
+}): JSX.Element => {
 	const { t } = useTranslation();
 
 	const { env } = useEnvironmentContext();
@@ -104,29 +109,40 @@ export const SendTransfer = () => {
 		}
 	}, [activeProfile, wallet]);
 
+	const resetState = useCallback(() => {
+		setActiveTab(firstTabIndex);
+
+		resetForm(() => {
+			setErrorMessage(undefined);
+			setUnconfirmedTransactions([]);
+			setTransaction(undefined);
+			setWallet(undefined);
+		});
+	}, [resetForm, firstTabIndex]);
+
+	const onMountChange = useCallback(
+		(mounted: boolean) => {
+			if (!mounted) {
+				resetState();
+				return;
+			}
+		},
+		[resetState],
+	);
+
 	useEffect(() => {
-		if (!shouldResetForm) {
+		if (!shouldResetForm || !open) {
 			return;
 		}
 
 		setActiveTab(firstTabIndex);
 
-		const resetValues = window.setTimeout(() =>
-			resetForm(() => {
-				setErrorMessage(undefined);
-				setUnconfirmedTransactions([]);
-				setTransaction(undefined);
-				setWallet(undefined);
-
-				// remove all query params
-				navigate(location.pathname);
-			}),
-		);
+		const resetValues = window.setTimeout(() => resetState());
 
 		return () => {
 			window.clearTimeout(resetValues);
 		};
-	}, [firstTabIndex, location, resetForm, shouldResetForm]);
+	}, [firstTabIndex, shouldResetForm, open, resetState]);
 
 	const [showOverwriteModal, setShowOverwriteModal] = useState(false);
 	const [overwriteData, setOverwriteData] = useState<TransferFormData>({} as TransferFormData);
@@ -154,7 +170,7 @@ export const SendTransfer = () => {
 
 				setTransaction(transaction);
 				setActiveTab(SendTransferStep.SummaryStep);
-			} catch (error) {
+			} catch (error: any) {
 				setErrorMessage(JSON.stringify({ message: error.message, type: error.name }));
 				setActiveTab(SendTransferStep.ErrorStep);
 			}
@@ -167,7 +183,8 @@ export const SendTransfer = () => {
 		abortReference.current.abort();
 
 		if (activeTab === firstTabIndex) {
-			return navigate(-1);
+			onOpenChange(false);
+			return;
 		}
 
 		setActiveTab(activeTab - 1);
@@ -257,14 +274,14 @@ export const SendTransfer = () => {
 
 		const formHasValues = Object.values(currentFormData).some(Boolean);
 
-		let newValues = {};
+		let newValues = {} as any;
 
 		for (const [qrKey, formKey] of Object.entries({
 			amount: "amount",
 			memo: "memo",
 			recipient: "recipientAddress",
 		})) {
-			const value = qrData.get(qrKey);
+			const value = (qrData as URLSearchParams).get(qrKey);
 
 			if (!value) {
 				continue;
@@ -273,7 +290,7 @@ export const SendTransfer = () => {
 			if (formHasValues) {
 				newValues = { ...newValues, [formKey]: value };
 			} else {
-				form.setValue(formKey, value, { shouldDirty: true, shouldValidate: true });
+				form.setValue(formKey as any, value, { shouldDirty: true, shouldValidate: true });
 			}
 		}
 
@@ -285,93 +302,231 @@ export const SendTransfer = () => {
 		toasts.success(t("TRANSACTION.QR_CODE_SUCCESS"));
 	};
 
-	const renderTabs = () => (
-		<StepsProvider steps={MAX_TABS - 1} activeStep={activeTab}>
-			<TabPanel tabId={SendTransferStep.FormStep}>
-				<FormStep
-					network={activeNetwork}
-					senderWallet={wallet}
-					profile={activeProfile}
-					deeplinkProps={deepLinkParameters}
-					onScan={() => setShowQRModal(true)}
-					onChange={({ sender }) => {
-						setWallet(sender);
-					}}
+	const { isConfirmed } = useConfirmedTransaction({
+		transactionId: transaction?.hash(),
+		wallet: wallet,
+	});
+
+	const getTitle = () => {
+		if (activeTab === SendTransferStep.ErrorStep) {
+			return t("TRANSACTION.ERROR.TITLE");
+		}
+
+		if (activeTab === SendTransferStep.AuthenticationStep) {
+			return t("TRANSACTION.AUTHENTICATION_STEP.TITLE");
+		}
+
+		if (activeTab === SendTransferStep.ReviewStep) {
+			return t("TRANSACTION.REVIEW_STEP.TITLE");
+		}
+
+		if (activeTab === SendTransferStep.SummaryStep) {
+			return isConfirmed ? t("TRANSACTION.SUCCESS.CREATED") : t("TRANSACTION.PENDING.TITLE");
+		}
+
+		return t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.TITLE");
+	};
+
+	const getSubtitle = () => {
+		if (activeTab === SendTransferStep.ReviewStep) {
+			return t("TRANSACTION.REVIEW_STEP.DESCRIPTION");
+		}
+
+		if (activeTab === SendTransferStep.AuthenticationStep) {
+			return t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_SECRET");
+		}
+
+		if (activeTab === SendTransferStep.FormStep) {
+			return t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.DESCRIPTION");
+		}
+
+		return;
+	};
+
+	const getTitleIcon = () => {
+		if (activeTab === SendTransferStep.SummaryStep) {
+			return (
+				<ThemeIcon
+					lightIcon={isConfirmed ? "CheckmarkDoubleCircle" : "PendingTransaction"}
+					darkIcon={isConfirmed ? "CheckmarkDoubleCircle" : "PendingTransaction"}
+					dimIcon={isConfirmed ? "CheckmarkDoubleCircle" : "PendingTransaction"}
+					dimensions={[24, 24]}
+					className={cn({
+						"text-theme-primary-600": !isConfirmed,
+						"text-theme-success-600": isConfirmed,
+					})}
 				/>
-			</TabPanel>
+			);
+		}
 
-			<TabPanel tabId={SendTransferStep.ReviewStep}>
-				<ReviewStep wallet={wallet!} network={activeNetwork} />
-			</TabPanel>
+		if (activeTab === SendTransferStep.AuthenticationStep) {
+			if (wallet?.isLedger()) {
+				return (
+					<ThemeIcon
+						lightIcon="LedgerLight"
+						darkIcon="LedgerDark"
+						dimIcon="LedgerDim"
+						dimensions={[24, 24]}
+					/>
+				);
+			}
 
-			<TabPanel tabId={SendTransferStep.AuthenticationStep}>
-				<AuthenticationStep
-					wallet={wallet!}
-					ledgerDetails={
-						<TransferLedgerReview
-							wallet={wallet!}
-							estimatedExpiration={lastEstimatedExpiration}
-							profile={activeProfile}
-						/>
-					}
-					ledgerIsAwaitingDevice={!hasDeviceAvailable}
-					ledgerIsAwaitingApp={!isConnected}
-					onDeviceNotAvailable={() => {
-						setErrorMessage(
-							JSON.stringify({
-								message: t("WALLETS.MODAL_LEDGER_WALLET.DEVICE_NOT_AVAILABLE"),
-								type: "failed",
-							}),
-						);
+			return <ThemeIcon lightIcon="Mnemonic" darkIcon="Mnemonic" dimIcon="Mnemonic" dimensions={[24, 24]} />;
+		}
 
-						setActiveTab(SendTransferStep.ErrorStep);
-					}}
+		if (activeTab === SendTransferStep.ReviewStep) {
+			return (
+				<ThemeIcon
+					lightIcon="DocumentView"
+					darkIcon="DocumentView"
+					dimIcon="DocumentView"
+					dimensions={[24, 24]}
 				/>
-			</TabPanel>
+			);
+		}
 
-			<TabPanel tabId={SendTransferStep.SummaryStep}>
-				<TransactionSuccessful transaction={transaction!} senderWallet={wallet!} />
-			</TabPanel>
-
-			<TabPanel tabId={SendTransferStep.ErrorStep}>
-				<ErrorStep
-					onClose={() => {
-						assertWallet(wallet);
-						navigate(`/profiles/${activeProfile.id()}/dashboard`);
-					}}
-					isBackDisabled={isSubmitting}
-					onBack={() => {
-						setActiveTab(SendTransferStep.FormStep);
-					}}
-					errorMessage={errorMessage}
-				/>
-			</TabPanel>
-
-			{!hideStepNavigation && (
-				<StepNavigation
-					onBackClick={handleBack}
-					onBackToWalletClick={() => {
-						assertWallet(wallet);
-						navigate(`/profiles/${activeProfile.id()}/dashboard`);
-					}}
-					onContinueClick={async () => await handleNext()}
-					onSend={() => {
-						void handleSubmit(() => submit())();
-					}}
-					isLoading={isSubmitting}
-					isNextDisabled={isNextDisabled}
-					size={4}
-					activeIndex={activeTab}
-				/>
-			)}
-		</StepsProvider>
-	);
+		return (
+			<ThemeIcon
+				lightIcon="SendTransactionLight"
+				darkIcon="SendTransactionDark"
+				dimIcon="SendTransactionDim"
+				dimensions={[24, 24]}
+			/>
+		);
+	};
 
 	return (
-		<Page pageTitle={t("TRANSACTION.TRANSACTION_TYPES.TRANSFER")} showBottomNavigationBar={false}>
-			<Section className="flex-1">
-				<Form className="mx-auto max-w-172" context={form}>
-					<Tabs activeId={activeTab}>{renderTabs()}</Tabs>
+		<>
+			<SidePanel
+				open={open}
+				onOpenChange={onOpenChange}
+				onMountChange={onMountChange}
+				title={getTitle()}
+				subtitle={getSubtitle()}
+				titleIcon={getTitleIcon()}
+				dataTestId="SendTransferSidePanel"
+				hasSteps
+				totalSteps={MAX_TABS - 1}
+				activeStep={activeTab}
+				onBack={handleBack}
+				isLastStep={activeTab === SendTransferStep.SummaryStep}
+				disableOutsidePress
+				disableEscapeKey={showQRModal || isConfirmModalOpen || showOverwriteModal}
+				footer={
+					<SidePanelButtons>
+						{activeTab !== SendTransferStep.SummaryStep && (
+							<Button
+								data-testid="SendTransfer__back-button"
+								variant="secondary"
+								onClick={handleBack}
+								disabled={isSubmitting}
+							>
+								{t("COMMON.BACK")}
+							</Button>
+						)}
+
+						{activeTab < SendTransferStep.AuthenticationStep && (
+							<Button
+								data-testid="SendTransfer__continue-button"
+								onClick={handleNext}
+								disabled={isNextDisabled || isSubmitting}
+							>
+								{t("COMMON.CONTINUE")}
+							</Button>
+						)}
+
+						{activeTab === SendTransferStep.AuthenticationStep && (
+							<Button
+								data-testid="SendTransfer__send-button"
+								onClick={() => {
+									void handleSubmit(() => submit())();
+								}}
+								disabled={isSubmitting}
+							>
+								{t("COMMON.SEND")}
+							</Button>
+						)}
+
+						{activeTab === SendTransferStep.SummaryStep && (
+							<Button data-testid="SendTransfer__close-button" onClick={() => onOpenChange(false)}>
+								{t("COMMON.CLOSE")}
+							</Button>
+						)}
+					</SidePanelButtons>
+				}
+			>
+				<Form context={form}>
+					<Tabs activeId={activeTab}>
+						<StepsProvider steps={MAX_TABS - 1} activeStep={activeTab}>
+							<TabPanel tabId={SendTransferStep.FormStep}>
+								<FormStep
+									network={activeNetwork}
+									senderWallet={wallet}
+									profile={activeProfile}
+									deeplinkProps={deepLinkParameters}
+									onScan={() => setShowQRModal(true)}
+									onChange={({ sender }) => {
+										setWallet(sender);
+									}}
+									hideHeader
+								/>
+							</TabPanel>
+
+							<TabPanel tabId={SendTransferStep.ReviewStep}>
+								<ReviewStep wallet={wallet!} network={activeNetwork} hideHeader />
+							</TabPanel>
+
+							<TabPanel tabId={SendTransferStep.AuthenticationStep}>
+								<AuthenticationStep
+									wallet={wallet!}
+									ledgerDetails={
+										<TransferLedgerReview
+											wallet={wallet!}
+											estimatedExpiration={lastEstimatedExpiration}
+											profile={activeProfile}
+										/>
+									}
+									ledgerIsAwaitingDevice={!hasDeviceAvailable}
+									ledgerIsAwaitingApp={!isConnected}
+									onDeviceNotAvailable={() => {
+										setErrorMessage(
+											JSON.stringify({
+												message: t("WALLETS.MODAL_LEDGER_WALLET.DEVICE_NOT_AVAILABLE"),
+												type: "failed",
+											}),
+										);
+										setActiveTab(SendTransferStep.ErrorStep);
+									}}
+									noHeading
+								/>
+							</TabPanel>
+
+							<TabPanel tabId={SendTransferStep.SummaryStep}>
+								<TransactionSuccessful transaction={transaction!} senderWallet={wallet!} noHeading />
+							</TabPanel>
+
+							<TabPanel tabId={SendTransferStep.ErrorStep}>
+								<ErrorStep
+									onClose={() => {
+										assertWallet(wallet);
+										onOpenChange(false);
+									}}
+									isBackDisabled={isSubmitting}
+									onBack={() => {
+										setActiveTab(SendTransferStep.FormStep);
+									}}
+									errorMessage={errorMessage}
+									hideHeader
+								/>
+							</TabPanel>
+
+							{!hideStepNavigation && (
+								<div className="mt-2">
+									<button className="sr-only" type="submit" onClick={(e) => e.preventDefault()} />
+								</div>
+							)}
+						</StepsProvider>
+					</Tabs>
 
 					<TransferOverwriteModal
 						isOpen={showOverwriteModal}
@@ -379,12 +534,12 @@ export const SendTransfer = () => {
 						onConfirm={(clearPrefilled: boolean) => {
 							if (clearPrefilled) {
 								for (const key of ["recipientAddress", "amount", "memo"]) {
-									form.setValue(key, undefined, { shouldDirty: true, shouldValidate: true });
+									form.setValue(key as any, undefined, { shouldDirty: true, shouldValidate: true });
 								}
 							}
 
 							for (const [key, value] of Object.entries(overwriteData)) {
-								form.setValue(key, value, { shouldDirty: true, shouldValidate: true });
+								form.setValue(key as any, value as any, { shouldDirty: true, shouldValidate: true });
 							}
 
 							setShowOverwriteModal(false);
@@ -406,13 +561,12 @@ export const SendTransfer = () => {
 						}}
 					/>
 				</Form>
-
-				<QRModal
-					isOpen={showQRModal}
-					onCancel={() => setShowQRModal(false)}
-					onRead={(text: string) => handleQRCodeRead(text)}
-				/>
-			</Section>
-		</Page>
+			</SidePanel>
+			<QRModal
+				isOpen={showQRModal}
+				onCancel={() => setShowQRModal(false)}
+				onRead={(text: string) => handleQRCodeRead(text)}
+			/>
+		</>
 	);
 };

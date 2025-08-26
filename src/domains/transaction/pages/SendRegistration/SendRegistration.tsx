@@ -172,7 +172,7 @@ export const SendRegistration = () => {
 			const { mnemonic, secondMnemonic, encryptionPassword, secret, secondSecret } = getValues();
 
 			if (activeWallet.isLedger()) {
-				await connect(activeProfile, activeWallet.networkId());
+				await connect(activeProfile);
 			}
 
 			const signatory = await activeWallet.signatoryFactory().make({

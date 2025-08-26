@@ -158,6 +158,21 @@ const formStepID = "SendTransfer__form-step";
 const sendAllID = "AddRecipient__send-all";
 const ariaInvalid = "aria-invalid";
 
+export const selectNthSenderAddress = async (index = 0) => {
+	const container = screen.getByTestId("sender-address");
+	await userEvent.click(within(container).getByTestId("SelectDropdown__input"));
+
+	const elementTestId = `SelectDropdown__option--${index}`;
+
+	await waitFor(() => {
+		expect(screen.getByTestId(elementTestId)).toBeInTheDocument();
+	});
+
+	await userEvent.click(screen.getByTestId(elementTestId));
+};
+
+export const selectFirstSenderAddress = async () => selectNthSenderAddress(0);
+
 describe("SendTransfer", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getMainsailProfileId());
@@ -432,7 +447,7 @@ describe("SendTransfer", () => {
 
 		// const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
 
-		expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address());
+		await selectFirstSenderAddress();
 
 		expect(backButton()).not.toHaveAttribute("disabled");
 
@@ -528,7 +543,7 @@ describe("SendTransfer", () => {
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
-		expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address());
+		await selectFirstSenderAddress();
 
 		expect(backButton()).not.toHaveAttribute("disabled");
 
@@ -620,7 +635,7 @@ describe("SendTransfer", () => {
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
-		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
+		await selectFirstSenderAddress();
 
 		expect(backButton()).not.toHaveAttribute("disabled");
 
@@ -737,7 +752,7 @@ describe("SendTransfer", () => {
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
-		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
+		await selectFirstSenderAddress();
 
 		await selectRecipient();
 
@@ -783,7 +798,7 @@ describe("SendTransfer", () => {
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
-		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
+		await selectFirstSenderAddress();
 
 		await selectRecipient();
 
@@ -856,7 +871,7 @@ describe("SendTransfer", () => {
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
-		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
+		await selectFirstSenderAddress();
 
 		await selectRecipient();
 
@@ -928,7 +943,7 @@ describe("SendTransfer", () => {
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
-		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
+		await selectFirstSenderAddress();
 
 		await selectRecipient();
 
@@ -975,7 +990,7 @@ describe("SendTransfer", () => {
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
-		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
+		await selectFirstSenderAddress();
 
 		expect(backButton()).not.toHaveAttribute("disabled");
 
@@ -1089,7 +1104,7 @@ describe("SendTransfer", () => {
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
-		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
+		await selectFirstSenderAddress();
 
 		await selectRecipient();
 
@@ -1156,7 +1171,7 @@ describe("SendTransfer", () => {
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
-		expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address());
+		await selectFirstSenderAddress();
 
 		expect(backButton()).not.toHaveAttribute("disabled");
 
@@ -1271,7 +1286,7 @@ describe("SendTransfer", () => {
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
-		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
+		await selectFirstSenderAddress();
 
 		await selectRecipient();
 

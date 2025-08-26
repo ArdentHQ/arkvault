@@ -34,6 +34,8 @@ interface SidePanelProps {
 	footer?: React.ReactNode;
 	onBack?: () => void;
 	isLastStep?: boolean;
+	disableOutsidePress?: boolean;
+	disableEscapeKey?: boolean;
 }
 
 export const SidePanelButtons = ({ className, ...properties }: React.HTMLAttributes<HTMLDivElement>): JSX.Element => (
@@ -63,6 +65,8 @@ export const SidePanel = ({
 	footer,
 	onBack,
 	isLastStep,
+	disableOutsidePress = false,
+	disableEscapeKey = false,
 }: SidePanelProps): JSX.Element => {
 	const popStateHandlerRef = useRef<() => void>(() => {});
 	const { refs, context } = useFloating({
@@ -73,7 +77,8 @@ export const SidePanel = ({
 	const click = useClick(context);
 	const role = useRole(context);
 	const dismiss = useDismiss(context, {
-		outsidePress: (event) => !(event.target as HTMLElement).closest(".Toastify"),
+		escapeKey: !disableEscapeKey,
+		outsidePress: disableOutsidePress ? false : (event) => !(event.target as HTMLElement).closest(".Toastify"),
 		outsidePressEvent: "pointerdown",
 	});
 

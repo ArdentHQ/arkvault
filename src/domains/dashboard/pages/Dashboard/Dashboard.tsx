@@ -14,6 +14,7 @@ import { WalletVote } from "@/domains/wallet/pages/WalletDetails/components";
 import { PortfolioHeader } from "@/domains/portfolio/components/PortfolioHeader";
 import { ResetWhenUnmounted } from "@/app/components/SidePanel/ResetWhenUnmounted";
 import { SignMessageSidePanel } from "@/domains/message/components/SignMessage/SignMessageSidePanel";
+import { SendTransferSidePanel } from "@/domains/transaction/components/SendTransferSidePanel/SendTransferSidePanel";
 import { useDeeplinkActionHandler } from "@/app/hooks";
 
 export const Dashboard = ({
@@ -28,6 +29,7 @@ export const Dashboard = ({
 	const [isUpdatingTransactions, setIsUpdatingTransactions] = useState(false);
 	const [isUpdatingWallet, setIsUpdatingWallet] = useState(false);
 	const [showSignMessagePanel, setShowSignMessagePanel] = useState(false);
+	const [showSendTransferPanel, setShowSendTransferPanel] = useState(false);
 
 	useDeeplinkActionHandler({
 		onSignMessage: () => {
@@ -120,6 +122,7 @@ export const Dashboard = ({
 						onCreateAddress={onCreateAddress}
 						onImportAddress={onImportAddress}
 						onSignMessage={setShowSignMessagePanel}
+						onSendTransfer={setShowSendTransferPanel}
 					/>
 				)}
 			</Section>
@@ -178,6 +181,10 @@ export const Dashboard = ({
 
 			<ResetWhenUnmounted>
 				<SignMessageSidePanel open={showSignMessagePanel} onOpenChange={setShowSignMessagePanel} />
+			</ResetWhenUnmounted>
+
+			<ResetWhenUnmounted>
+				<SendTransferSidePanel open={showSendTransferPanel} onOpenChange={setShowSendTransferPanel} />
 			</ResetWhenUnmounted>
 		</Page>
 	);

@@ -3,10 +3,9 @@ import { Contracts } from "@/app/lib/profiles";
 import React, { useEffect } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-
+import cn from "classnames";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { useBreakpoint } from "@/app/hooks";
-import { SelectAddress } from "@/domains/profile/components/SelectAddress";
 import { AddRecipient } from "@/domains/transaction/components/AddRecipient";
 import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
 import { StepHeader } from "@/app/components/StepHeader";
@@ -14,6 +13,8 @@ import { ThemeIcon, Icon } from "@/app/components/Icon";
 import { Button } from "@/app/components/Button";
 import { twMerge } from "tailwind-merge";
 import { WalletCapabilities } from "@/domains/portfolio/lib/wallet.capabilities";
+import { SelectAddressDropdown } from "@/domains/profile/components/SelectAddressDropdown";
+import { useActiveNetwork } from "@/app/hooks/use-active-network";
 
 const QRCodeButton = ({ ...props }: React.ButtonHTMLAttributes<HTMLButtonElement>) => (
 	<button
@@ -32,6 +33,8 @@ export const FormStep = ({
 	deeplinkProps,
 	onScan,
 	onChange,
+	// @TODO: always hide header once the side panel is fully implemented
+	hideHeader = false,
 }: {
 	network: Networks.Network;
 	senderWallet?: Contracts.IReadWriteWallet;
@@ -39,12 +42,15 @@ export const FormStep = ({
 	deeplinkProps: Record<string, string>;
 	onScan?: () => void;
 	onChange?: ({ sender }: { sender?: Contracts.IReadWriteWallet }) => void;
+	hideHeader?: boolean;
 }) => {
 	const { t } = useTranslation();
 
 	const { isXs } = useBreakpoint();
 
 	const { setValue, getValues, unregister } = useFormContext();
+
+	const { activeNetwork } = useActiveNetwork({ profile });
 
 	useEffect(() => {
 		unregister(["gasLimit", "gasPrice"]);
@@ -83,37 +89,43 @@ export const FormStep = ({
 
 	return (
 		<section data-testid="SendTransfer__form-step">
-			<StepHeader
-				title={t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.TITLE", { ticker: network.ticker() })}
-				titleIcon={
-					<ThemeIcon
-						dimensions={[24, 24]}
-						lightIcon="SendTransactionLight"
-						darkIcon="SendTransactionDark"
-						dimIcon="SendTransactionDim"
-					/>
-				}
-				subtitle={t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.DESCRIPTION")}
-				extra={
-					!isXs && (
-						<div className="hidden sm:flex sm:h-full sm:align-bottom">
-							<QRCodeButton
-								className="group"
-								type="button"
-								onClick={onScan}
-								data-testid="QRCodeModalButton"
-							>
-								<Icon size="lg" name="QRCode" />
-								<span className="text-base leading-5 font-semibold">
-									{t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.SCAN")}
-								</span>
-							</QRCodeButton>
-						</div>
-					)
-				}
-			/>
+			{!hideHeader && (
+				<StepHeader
+					title={t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.TITLE", { ticker: network.ticker() })}
+					titleIcon={
+						<ThemeIcon
+							dimensions={[24, 24]}
+							lightIcon="SendTransactionLight"
+							darkIcon="SendTransactionDark"
+							dimIcon="SendTransactionDim"
+						/>
+					}
+					subtitle={t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.DESCRIPTION")}
+					extra={
+						!isXs && (
+							<div className="hidden sm:flex sm:h-full sm:align-bottom">
+								<QRCodeButton
+									className="group"
+									type="button"
+									onClick={onScan}
+									data-testid="QRCodeModalButton"
+								>
+									<Icon size="lg" name="QRCode" />
+									<span className="text-base leading-5 font-semibold">
+										{t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.SCAN")}
+									</span>
+								</QRCodeButton>
+							</div>
+						)
+					}
+				/>
+			)}
 
-			<div className="space-y-4 pt-4">
+			<div
+				className={cn("space-y-4", {
+					"pt-4": !hideHeader,
+				})}
+			>
 				<FormField name="senderAddress">
 					<div data-testid="sender-address">
 						<div className="mb-2 flex items-center justify-between">
@@ -124,28 +136,28 @@ export const FormStep = ({
 							<Button
 								type="button"
 								variant="transparent"
-								className="text-theme-navy-600 block p-0 text-sm sm:hidden"
+								className="text-theme-navy-600 block p-0 text-sm"
 								onClick={onScan}
 							>
-								{t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.SCAN_FULL")}
+								<span className="hidden sm:block">
+									<Icon size="md" name="QRCode" />
+								</span>
+
+								<span>{t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.SCAN_FULL")}</span>
 							</Button>
 						</div>
 
-						<SelectAddress
-							showWalletAvatar={false}
-							wallet={
-								senderWallet
-									? {
-											address: senderWallet.address(),
-											network,
-										}
-									: undefined
-							}
-							wallets={profile.wallets().values()}
-							profile={profile}
+						<SelectAddressDropdown
 							disabled={profile.wallets().count() === 0}
-							onChange={handleSelectSender}
+							profile={profile}
+							onChange={(wallet) => {
+								handleSelectSender(wallet?.address() ?? "");
+							}}
+							wallets={profile.wallets().values()}
+							wallet={senderWallet}
+							defaultNetwork={activeNetwork}
 							disableAction={(wallet) => !WalletCapabilities(wallet).canSendTransfer()}
+							showBalance
 						/>
 					</div>
 				</FormField>

@@ -243,7 +243,7 @@ export const translations = {
 			MULTIPLE_UNAVAILBLE: "Multiple Recipient Transactions are not available from Ledger wallets.",
 			SCAN: "Scan",
 			SCAN_FULL: "Scan QR-Code",
-			TITLE: "Send {{ticker}}",
+			TITLE: "Send",
 		},
 		NETWORK_STEP: {
 			SUBTITLE: "Select a cryptoasset to send funds from.",
@@ -362,6 +362,7 @@ export const translations = {
 	TRANSACTION_DETAILS: "Transaction Details",
 	TRANSACTION_EXECUTION_ERROR: "Error encountered during contract execution.",
 	TRANSACTION_EXECUTION_ERROR_INSUFFICIENT_GAS: "Error encountered during contract execution: Insufficient Gas",
+	TRANSACTION_EXECUTION_ERROR_WITH_MESSAGE: "Error encountered during contract execution: {{error}}",
 	TRANSACTION_FEE: "Transaction Fee",
 	TRANSACTION_ID: "Transaction ID",
 	TRANSACTION_REMOVED: "Transaction successfully removed.",

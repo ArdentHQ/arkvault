@@ -77,6 +77,7 @@ export interface ClientTransactionsInput extends ClientPagination {
 	// Transaction Types
 	type?: TransactionType;
 	types?: TransactionType[];
+	fullReceipt?: boolean;
 }
 
 export interface ClientWalletsInput extends ClientPagination {

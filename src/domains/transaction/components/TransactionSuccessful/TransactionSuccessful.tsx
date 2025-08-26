@@ -12,9 +12,14 @@ interface TransactionSuccessfulProperties {
 	transaction: DTO.ExtendedSignedTransactionData;
 	senderWallet: Contracts.IReadWriteWallet;
 	children?: React.ReactNode;
+	noHeading?: boolean;
 }
 
-export const TransactionSuccessful = ({ transaction, senderWallet }: TransactionSuccessfulProperties) => {
+export const TransactionSuccessful = ({
+	transaction,
+	senderWallet,
+	noHeading = false,
+}: TransactionSuccessfulProperties) => {
 	const { t } = useTranslation();
 
 	const { isConfirmed, transaction: confirmedTransaction } = useConfirmedTransaction({
@@ -26,20 +31,22 @@ export const TransactionSuccessful = ({ transaction, senderWallet }: Transaction
 
 	return (
 		<section data-testid={isConfirmed ? "TransactionSuccessful" : "TransactionPending"}>
-			<StepHeader
-				title={titleText}
-				titleIcon={
-					<Icon
-						dimensions={[24, 24]}
-						name={isConfirmed ? "CheckmarkDoubleCircle" : "PendingTransaction"}
-						data-testid="icon-PendingTransaction"
-						className={cn({
-							"text-theme-primary-600": !isConfirmed,
-							"text-theme-success-600": isConfirmed,
-						})}
-					/>
-				}
-			/>
+			{!noHeading && (
+				<StepHeader
+					title={titleText}
+					titleIcon={
+						<Icon
+							dimensions={[24, 24]}
+							name={isConfirmed ? "CheckmarkDoubleCircle" : "PendingTransaction"}
+							data-testid="icon-PendingTransaction"
+							className={cn({
+								"text-theme-primary-600": !isConfirmed,
+								"text-theme-success-600": isConfirmed,
+							})}
+						/>
+					}
+				/>
+			)}
 
 			<div className="mt-4">
 				<TransactionDetailContent
