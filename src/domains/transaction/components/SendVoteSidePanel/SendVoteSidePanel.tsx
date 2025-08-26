@@ -188,10 +188,14 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 			if (!mounted) {
 				setActiveTab(initialStep);
 
+				if (activeTab === Step.SummaryStep) {
+					return navigate(`/profiles/${activeProfile.id()}/dashboard`);
+				}
+
 				return;
 			}
 		},
-		[initialStep],
+		[initialStep, activeTab],
 	);
 
 	const handleBack = () => {
@@ -203,10 +207,18 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 				return navigate(`/profiles/${activeProfile.id()}/dashboard`);
 			}
 
-			return onOpenChange(false);
+			return handleOpenChange(false);
 		}
 
 		setActiveTab(activeTab - 1);
+	};
+
+	const handleOpenChange = (open: boolean) => {
+		if (!open && activeTab === Step.SummaryStep) {
+			return navigate(`/profiles/${activeProfile.id()}/dashboard`);
+		}
+
+		onOpenChange(false);
 	};
 
 	const handleNext = () => {
@@ -541,7 +553,7 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 	return (
 		<SidePanel
 			open={open}
-			onOpenChange={onOpenChange}
+			onOpenChange={handleOpenChange}
 			title={getTitle()}
 			subtitle={getSubtitle()}
 			titleIcon={getTitleIcon()}
@@ -588,7 +600,7 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 					)}
 
 					{activeTab === Step.SummaryStep && (
-						<Button data-testid="SendVote__close-button" onClick={() => onOpenChange(false)}>
+						<Button data-testid="SendVote__close-button" onClick={() => handleOpenChange(false)}>
 							{t("COMMON.CLOSE")}
 						</Button>
 					)}
