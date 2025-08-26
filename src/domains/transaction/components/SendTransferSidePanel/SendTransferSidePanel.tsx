@@ -75,6 +75,8 @@ export const SendTransferSidePanel = ({
 	const { urlSearchParameters } = useTransactionURL();
 	const { buildSearchParametersError, validateSearchParameters } = useSearchParametersValidation();
 
+	const isWaitingLedger = useRef(false);
+
 	const {
 		form,
 		resetForm,
@@ -95,10 +97,16 @@ export const SendTransferSidePanel = ({
 		return handleNext();
 	});
 
+	useEffect(() => {
+		if (isConnected && isWaitingLedger.current) {
+			void handleSubmit(() => submit(true))();
+		}
+	}, [isConnected]);
+
 	const connectLedger = useCallback(async () => {
 		if (wallet) {
 			await connect(activeProfile);
-			void handleSubmit(() => submit(true))();
+			isWaitingLedger.current = true;
 		}
 	}, [wallet, activeProfile, connect]);
 
@@ -199,16 +207,21 @@ export const SendTransferSidePanel = ({
 
 		const nextStep = activeTab + 1;
 
-		if (nextStep === SendTransferStep.AuthenticationStep && senderWallet?.isLedger()) {
+		const isLedgerTransaction = nextStep === SendTransferStep.AuthenticationStep && senderWallet?.isLedger();
+
+		if (isLedgerTransaction) {
 			if (!isLedgerTransportSupported()) {
 				setErrorMessage(t("WALLETS.MODAL_LEDGER_WALLET.COMPATIBILITY_ERROR"));
 				setActiveTab(SendTransferStep.ErrorStep);
 				return;
 			}
-			await connectLedger();
 		}
 
 		setActiveTab(nextStep);
+
+		if (isLedgerTransaction) {
+			await connectLedger();
+		}
 	};
 
 	const hideStepNavigation =
