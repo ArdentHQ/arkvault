@@ -1090,44 +1090,38 @@ describe("useProfileTransactions", () => {
 	it("should handle polling when response.results is undefined", async () => {
 		const intervalMock = vi
 			.spyOn(global, "setInterval")
-			.mockImplementation((callback: (...args: any[]) => void, _ms?: number, ...args: any[]) => {
+			.mockImplementation((callback: (...arguments_: any[]) => void, _ms?: number, ...arguments_: any[]) => {
 				if (typeof callback === "function") {
-					callback(...args);
+					callback(...arguments_);
 				}
 				return {} as unknown as NodeJS.Timeout;
 			});
-	
+
 		const wallets = [profile.wallets().first()];
 		const addPendingTransactionFromUnconfirmed = vi.fn();
-	
-		vi.spyOn(
-			pendingTransactionsMock,
-			"usePendingTransactions",
-		).mockReturnValue({
+
+		vi.spyOn(pendingTransactionsMock, "usePendingTransactions").mockReturnValue({
 			addPendingTransaction: vi.fn(),
 			addPendingTransactionFromUnconfirmed,
 			pendingTransactions: [],
 			removePendingTransaction: vi.fn(),
 		} as any);
-	
+
 		const listSpy = vi
-			.spyOn(
-				pendingTransactionsServiceMock.PendingTransactionsService.prototype,
-				"listUnconfirmed",
-			)
+			.spyOn(pendingTransactionsServiceMock.PendingTransactionsService.prototype, "listUnconfirmed")
 			.mockResolvedValue({} as any);
-	
+
 		const { result } = renderHook(() => useProfileTransactions({ profile, wallets }), { wrapper });
-	
+
 		act(() => {
 			result.current.updateFilters({ activeMode: "all" });
 		});
-	
+
 		await waitFor(() => expect(result.current.isLoadingTransactions).toBe(true));
-	
+
 		expect(listSpy).toHaveBeenCalled();
 		expect(addPendingTransactionFromUnconfirmed).not.toHaveBeenCalled();
-	
+
 		intervalMock.mockRestore();
 	});
 });
