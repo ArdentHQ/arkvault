@@ -10,6 +10,9 @@ import { SignedTransactionData } from "@/app/lib/mainsail/signed-transaction.dto
 import { ExtendedSignedTransactionData } from "@/app/lib/profiles/signed-transaction.dto";
 import { IReadWriteWallet } from "@/app/lib/profiles/wallet.contract";
 import { ExtendedTransactionDTO } from "@/domains/transaction/components/TransactionTable";
+import { PendingTransactionsService } from "@/app/lib/mainsail/pending-transactions.service";
+import { HttpClient } from "@/app/lib/mainsail/http-client";
+import { get } from "@/app/lib/helpers";
 
 interface TransactionsState {
 	transactions: DTO.ExtendedConfirmedTransactionData[];
@@ -115,7 +118,10 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 	const LIMIT = limit;
 	const { types } = useTransactionTypes({ wallets });
 	const { syncOnChainUsernames } = useWalletAlias();
-	const { pendingTransactions, removePendingTransaction } = usePendingTransactions();
+
+	const { pendingTransactions, removePendingTransaction, addPendingTransactionFromUnconfirmed } =
+		usePendingTransactions();
+
 	const allTransactionTypes = [...types.core];
 
 	const [sortBy, setSortBy] = useState<SortBy>({ column: "date", desc: true });
@@ -378,12 +384,14 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 			isLoadingMore: false,
 			transactions: [...state.transactions, ...items],
 		}));
-	}, [activeMode, activeTransactionType, wallets.length, selectedTransactionTypes, orderBy]);
+	}, [activeMode, wallets, selectedTransactionTypes, fetchTransactions]);
 
-	/**
-	 * Run periodically every 30 seconds to check for new transactions
-	 */
-	const checkNewTransactions = async () => {
+	const checkNewTransactions = useCallback(async () => {
+		if (wallets.length === 0) {
+			/* istanbul ignore next -- @preserve */
+			return;
+		}
+
 		await syncWallets(wallets);
 		const response = await fetchTransactions({
 			cursor: 1,
@@ -416,22 +424,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 			isLoadingMore: false,
 			transactions: items,
 		}));
-	};
-
-	const hasEmptyResults = useMemo(() => {
-		if (selectedTransactionTypes?.length === 0) {
-			return true;
-		}
-
-		return allTransactions.length === 0 && !isLoadingTransactions;
-	}, [isLoadingTransactions, allTransactions.length]);
-
-	const addresses = wallets
-		.map((wallet) => wallet.address())
-		.toSorted((a, b) => a.localeCompare(b))
-		.join("-");
-
-	const transactionTypes = selectedTransactionTypes?.join("-");
+	}, [wallets, activeMode, activeTransactionType, selectedTransactionTypes, fetchTransactions, transactions]);
 
 	const jobs = useMemo(
 		() => [
@@ -440,7 +433,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 				interval: 15_000,
 			},
 		],
-		[addresses, activeMode, transactionTypes, activeTransactionType, transactions],
+		[checkNewTransactions],
 	);
 
 	const { start, stop } = useSynchronizer(jobs);
@@ -449,6 +442,110 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 		start();
 		return () => stop();
 	}, [start, stop]);
+
+	const hasEmptyResults = useMemo(() => {
+		if (selectedTransactionTypes?.length === 0) {
+			return true;
+		}
+		return allTransactions.length === 0 && !isLoadingTransactions;
+	}, [isLoadingTransactions, allTransactions.length]);
+
+	const pendingTransactionsService = useRef<PendingTransactionsService | null>(null);
+	const [isPendingServiceReady, setIsPendingServiceReady] = useState(false);
+
+	useEffect(() => {
+		if (!wallets || wallets.length === 0) {
+			pendingTransactionsService.current = null;
+			setIsPendingServiceReady(false);
+			return;
+		}
+		try {
+			const first = wallets[0];
+			const host = first.network().config().host("tx", first.profile());
+			const httpClient = new HttpClient(10_000);
+			pendingTransactionsService.current = new PendingTransactionsService({ host, httpClient });
+			setIsPendingServiceReady(true);
+		} catch (error) {
+			/* istanbul ignore next -- @preserve */
+			console.error("Failed to initialize PendingTransactionsService:", error);
+			pendingTransactionsService.current = null;
+			setIsPendingServiceReady(false);
+		}
+	}, [wallets]);
+
+	const getBlockTime = () => {
+		try {
+			const first = wallets[0];
+			if (!first) {
+				return 15_000;
+			}
+			const milestone = first.network().milestone?.();
+			const blockTime = get(milestone, "timeouts.blockTime") as unknown;
+			if (typeof blockTime === "number" && Number.isFinite(blockTime)) {
+				return blockTime;
+			}
+		} catch {
+			/* istanbul ignore next -- @preserve */
+			console.error("Failed to get block time");
+		}
+		return 15_000;
+	};
+
+	const walletsKey = useMemo(() => wallets.map((w) => w.address()).join("|"), [wallets]);
+	const blockTime = useMemo(() => getBlockTime(), [walletsKey]);
+
+	const fetchUnconfirmedAndLog = useCallback(async () => {
+		const service = pendingTransactionsService.current;
+		if (!service) {
+			/* istanbul ignore next -- @preserve */
+			return;
+		}
+
+		try {
+			const selectedAddresses = wallets.map((w) => w.address());
+			const response = await service.listUnconfirmed({ from: selectedAddresses, to: selectedAddresses });
+
+			for (const transaction of response?.results ?? []) {
+				const matched =
+					wallets.find((w) => w.address().toLowerCase() === transaction.from?.toLowerCase?.()) ||
+					wallets.find((w) => w.address().toLowerCase() === transaction.to?.toLowerCase?.());
+
+				/* istanbul ignore next -- @preserve */
+				if (!matched) {
+					continue;
+				}
+
+				const gasLimit = (transaction as any).gasLimit ?? (transaction as any).gas;
+
+				addPendingTransactionFromUnconfirmed({
+					...transaction,
+					gasLimit,
+					networkId: matched.networkId(),
+					walletAddress: matched.address(),
+				});
+			}
+		} catch (error) {
+			/* istanbul ignore next -- @preserve */
+			console.error("Failed to fetch unconfirmed transactions:", error);
+		}
+	}, [wallets, addPendingTransactionFromUnconfirmed]);
+
+	const pollingCallbackRef = useRef(fetchUnconfirmedAndLog);
+	useEffect(() => {
+		pollingCallbackRef.current = fetchUnconfirmedAndLog;
+	}, [fetchUnconfirmedAndLog]);
+
+	useEffect(() => {
+		if (!isPendingServiceReady) {
+			return;
+		}
+
+		const id = setInterval(() => {
+			pollingCallbackRef.current();
+		}, blockTime);
+
+		return () => clearInterval(id);
+	}, [isPendingServiceReady, blockTime]);
 
 	return {
 		activeMode,
