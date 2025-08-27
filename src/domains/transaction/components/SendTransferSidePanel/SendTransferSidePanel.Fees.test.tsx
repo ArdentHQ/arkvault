@@ -1,12 +1,4 @@
-import {
-	env,
-	getDefaultProfileId,
-	mockProfileWithPublicAndTestNetworks,
-	render,
-	screen,
-	waitFor,
-	within,
-} from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, screen, waitFor, within } from "@/utils/testing-library";
 import { requestMock, server } from "@/tests/mocks/server";
 
 import React from "react";
@@ -22,7 +14,6 @@ vi.mock("@/utils/delay", () => ({
 }));
 
 let profile: any;
-let resetProfileNetworksMock: () => void;
 
 const selectFirstRecipient = () => userEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
 const selectRecipient = () =>
@@ -54,8 +45,6 @@ describe("SendTransferSidePanel Fee Handling", () => {
 	});
 
 	beforeEach(() => {
-		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
-
 		server.use(
 			requestMock(
 				`https://dwallets-evm.mainsailhq.com/api/transactions/${transactionFixture.data.hash}`,
@@ -66,10 +55,6 @@ describe("SendTransferSidePanel Fee Handling", () => {
 			}),
 			requestMock("https://ark-live.arkvault.io/api/node/fees", nodeFeesFixture),
 		);
-	});
-
-	afterEach(() => {
-		resetProfileNetworksMock();
 	});
 
 	it("should recalculate amount when fee changes and send all is selected", async () => {
