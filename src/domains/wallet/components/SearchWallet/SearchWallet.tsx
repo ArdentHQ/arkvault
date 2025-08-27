@@ -92,7 +92,15 @@ export const SearchWallet: FC<SearchWalletProperties> = ({
 	);
 
 	return createPortal(
-		<Modal title={title} description={description} isOpen={isOpen} size={size} onClose={onClose} noButtons>
+		<Modal
+			title={title}
+			titleClass="text-theme-text"
+		  	description={description}
+		  	isOpen={isOpen}
+		 	size={size}
+		 	onClose={onClose}
+		 	noButtons
+		>
 			<div className="mt-4">
 				<HeaderSearchInput
 					placeholder={searchPlaceholder}
