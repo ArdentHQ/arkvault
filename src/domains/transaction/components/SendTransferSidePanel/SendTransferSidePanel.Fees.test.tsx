@@ -1,12 +1,7 @@
 import { env, getDefaultProfileId, render, screen, waitFor, within } from "@/utils/testing-library";
-import { requestMock, server } from "@/tests/mocks/server";
-
 import React from "react";
 import { SendTransferSidePanel } from "./SendTransferSidePanel";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
-import nodeFeesFixture from "@/tests/fixtures/coins/mainsail/devnet/node-fees.json";
-import transactionFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/transfer.json";
-import transactionsFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions.json";
 import userEvent from "@testing-library/user-event";
 
 vi.mock("@/utils/delay", () => ({
@@ -42,19 +37,6 @@ describe("SendTransferSidePanel Fee Handling", () => {
 		profile = env.profiles().findById(getDefaultProfileId());
 		await env.profiles().restore(profile);
 		await profile.sync();
-	});
-
-	beforeEach(() => {
-		server.use(
-			requestMock(
-				`https://dwallets-evm.mainsailhq.com/api/transactions/${transactionFixture.data.hash}`,
-				transactionFixture,
-			),
-			requestMock("https://dwallets-evm.mainsailhq.com/api/transactions", transactionsFixture, {
-				query: { address: profile.wallets().first().address() },
-			}),
-			requestMock("https://ark-live.arkvault.io/api/node/fees", nodeFeesFixture),
-		);
 	});
 
 	it("should recalculate amount when fee changes and send all is selected", async () => {
