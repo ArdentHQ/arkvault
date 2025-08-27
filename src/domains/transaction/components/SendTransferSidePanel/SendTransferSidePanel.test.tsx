@@ -5,7 +5,6 @@ import {
 	env,
 	getDefaultProfileId,
 	getDefaultWalletMnemonic,
-	mockProfileWithPublicAndTestNetworks,
 	render,
 	screen,
 	syncFees,
@@ -90,7 +89,6 @@ const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
 let firstWalletAddress: string;
-let resetProfileNetworksMock: () => void;
 
 const selectFirstRecipient = () => userEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
 const selectRecipient = () =>
@@ -144,7 +142,6 @@ describe("SendTransferSidePanel", () => {
 	});
 
 	beforeEach(() => {
-		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 		vi.spyOn(wallet, "balance").mockReturnValue(1_000_000_000_000_000_000);
 
 		vi.spyOn(useConfirmedTransactionMock, "useConfirmedTransaction").mockReturnValue({
@@ -155,7 +152,6 @@ describe("SendTransferSidePanel", () => {
 
 	afterEach(() => {
 		vi.restoreAllMocks();
-		resetProfileNetworksMock();
 	});
 
 	it("should send a single transfer via side panel", async () => {

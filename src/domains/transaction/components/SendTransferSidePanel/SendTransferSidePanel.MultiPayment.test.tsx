@@ -4,15 +4,7 @@ import React from "react";
 import { AddressService } from "@/app/lib/mainsail/address.service";
 import { SendTransferSidePanel } from "./SendTransferSidePanel";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
-import {
-	env,
-	getDefaultProfileId,
-	render,
-	screen,
-	waitFor,
-	within,
-	mockProfileWithPublicAndTestNetworks,
-} from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, screen, waitFor, within } from "@/utils/testing-library";
 
 const formStepID = "SendTransfer__form-step";
 const reviewStepID = "SendTransfer__review-step";
@@ -24,8 +16,6 @@ vi.mock("@/utils/delay", () => ({
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
-let resetProfileNetworksMock: () => void;
-
 const selectNthSenderAddress = async (index = 0) => {
 	const container = screen.getByTestId("sender-address");
 	await userEvent.click(within(container).getByTestId("SelectDropdown__input"));
@@ -52,13 +42,10 @@ describe("SendTransferSidePanel MultiPayment", () => {
 		wallet = profile.wallets().first();
 
 		vi.spyOn(AddressService.prototype, "validate").mockReturnValue(true);
-
-		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 	});
 
 	afterAll(() => {
 		vi.restoreAllMocks();
-		resetProfileNetworksMock();
 	});
 
 	it("should select two recipients", async () => {
