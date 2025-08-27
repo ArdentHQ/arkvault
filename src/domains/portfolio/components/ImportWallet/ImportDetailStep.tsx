@@ -195,7 +195,7 @@ const ImportInputField = ({
 				<Alert
 					title={t("WALLETS.PAGE_IMPORT_WALLET.IMPORT_DETAIL_STEP.MNEMONIC_TIP.TITLE")}
 					variant="info"
-					collapsible
+					collapsible={false}
 				>
 					<p>{t("WALLETS.PAGE_IMPORT_WALLET.IMPORT_DETAIL_STEP.MNEMONIC_TIP.GUIDELINES_TITLE")}</p>
 					<ol className="list-disc pl-5">
