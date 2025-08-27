@@ -128,7 +128,7 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 				);
 
 				if (viewType === InputFeeViewType.Advanced) {
-					setValue("gasLimit", GasLimit[type], { shouldDirty: true, shouldValidate: true });
+					setValue("gasLimit", estimatedGasLimit, { shouldDirty: true, shouldValidate: true });
 				}
 			}}
 			selectedFeeOption={inputFeeSettings.selectedFeeOption}
