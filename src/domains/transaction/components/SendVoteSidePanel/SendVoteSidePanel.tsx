@@ -52,9 +52,8 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 	assertNetwork(activeNetwork);
 
 	const networks = useMemo(() => activeProfile.availableNetworks(), [env]);
-	const wallet = useActiveWalletWhenNeeded(false);
 
-	const { votes, unvotes, setUnvotes, isLoading } = useVoteFormContext();
+	const { votes, unvotes, setUnvotes, isLoading, selectedWallet } = useVoteFormContext();
 
 	const { addPendingTransaction } = usePendingTransactions();
 
@@ -113,7 +112,7 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 		votes,
 		activeProfile,
 		activeNetwork,
-		wallet,
+		selectedWallet,
 	]);
 
 	useEffect(() => {
@@ -125,13 +124,13 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 			return;
 		}
 
-		setValue("senderAddress", wallet?.address(), { shouldDirty: true, shouldValidate: false });
-	}, [wallet, activeProfile]);
+		setValue("senderAddress", selectedWallet?.address(), { shouldDirty: true, shouldValidate: false });
+	}, [selectedWallet, activeProfile]);
 
 	useToggleFeeFields({
 		activeTab,
 		form,
-		wallet,
+		wallet: selectedWallet,
 	});
 
 	useEffect(() => {
@@ -208,7 +207,7 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 		abortReference.current.abort();
 
 		if (activeTab === Step.FormStep || (activeTab === Step.ReviewStep && skipFormStep)) {
-			if (!wallet) {
+			if (!selectedWallet) {
 				return navigate(`/profiles/${activeProfile.id()}/dashboard`);
 			}
 
@@ -462,7 +461,7 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 
 	const { isConfirmed } = useConfirmedTransaction({
 		transactionId: transaction?.hash(),
-		wallet: wallet,
+		wallet: selectedWallet,
 	});
 
 	const getTitle = () => {
@@ -616,7 +615,7 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 				<Tabs activeId={activeTab}>
 					<TabPanel tabId={Step.FormStep}>
 						<FormStep
-							isWalletFieldDisabled={!!wallet || isLoading}
+							isWalletFieldDisabled={!!selectedWallet || isLoading}
 							profile={activeProfile}
 							unvotes={unvotes}
 							votes={votes}

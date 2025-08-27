@@ -28,23 +28,21 @@ import { Networks } from "@/app/lib/mainsail";
 export const VotesPage: FC<{
 	profile: Contracts.IProfile;
 	network: Networks.Network;
-	wallet: Contracts.IReadWriteWallet;
-}> = ({ profile: activeProfile, network: activeNetwork, wallet: activeWallet }) => {
+}> = ({ profile: activeProfile, network: activeNetwork }) => {
 	const { t } = useTranslation();
 
 	const [showCreateAddressPanel, setShowCreateAddressPanel] = useState(false);
 	const [showImportAddressPanel, setShowImportAddressPanel] = useState(false);
 
-	const { showSendVotePanel, setShowSendVotePanel, openSendVotePanel } = useVoteFormContext();
+	const { showSendVotePanel, setShowSendVotePanel, openSendVotePanel, selectedWallet, setSelectedWallet } =
+		useVoteFormContext();
 
 	// @TODO: the hasWalletId alias is misleading because it indicates that it
 	// is a boolean but it's just a string or undefined and you still need to
 	// do an assertion or casting to ensure it has a value other than undefined
 	const { env } = useEnvironmentContext();
 
-	const hasWalletId = activeWallet && activeWallet.address();
-
-	const [selectedWallet, setSelectedWallet] = useState<Contracts.IReadWriteWallet | undefined>(activeWallet);
+	const hasWalletId: boolean = !!(selectedWallet && selectedWallet.address());
 
 	const { syncProfileWallets } = useProfileJobs(activeProfile);
 
@@ -66,7 +64,7 @@ export const VotesPage: FC<{
 		filter,
 		hasWalletId: !!hasWalletId,
 		profile: activeProfile,
-		wallet: activeWallet!, // @TODO
+		wallet: selectedWallet,
 	});
 
 	const {
@@ -92,9 +90,9 @@ export const VotesPage: FC<{
 
 	useEffect(() => {
 		if (hasWalletId) {
-			fetchValidators(activeWallet);
+			fetchValidators(selectedWallet!);
 		}
-	}, [activeWallet, fetchValidators, hasWalletId]);
+	}, [selectedWallet, fetchValidators, hasWalletId]);
 
 	useEffect(() => {
 		if (votes.length === 0) {
@@ -230,8 +228,8 @@ export const Votes: FC = () => {
 	const { activeNetwork } = useActiveNetwork({ profile: activeProfile });
 
 	return (
-		<VoteFormProvider profile={activeProfile} network={activeNetwork} wallet={activeWallet!}>
-			<VotesPage profile={activeProfile} network={activeNetwork} wallet={activeWallet!} />
+		<VoteFormProvider profile={activeProfile} network={activeNetwork} wallet={activeWallet}>
+			<VotesPage profile={activeProfile} network={activeNetwork} />
 		</VoteFormProvider>
 	);
 };

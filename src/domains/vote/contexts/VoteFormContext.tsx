@@ -6,20 +6,33 @@ import { Networks } from "@/app/lib/mainsail";
 interface Properties {
 	children: React.ReactNode;
 	profile: Contracts.IProfile;
-	wallet: Contracts.IReadWriteWallet;
 	network: Networks.Network;
+	wallet?: Contracts.IReadWriteWallet;
 }
 
-const VoteFormContext = React.createContext<any>(undefined);
+const VoteFormContext = React.createContext<
+	| {
+			showSendVotePanel: boolean;
+			setShowSendVotePanel: (show: boolean) => void;
+			votes: Contracts.VoteRegistryItem[];
+			unvotes: Contracts.VoteRegistryItem[];
+			setUnvotes: (unvotes: Contracts.VoteRegistryItem[]) => void;
+			isLoading: boolean;
+			openSendVotePanel: (unvotes: VoteValidatorProperties[], votes: VoteValidatorProperties[]) => void;
+			selectedWallet: Contracts.IReadWriteWallet | undefined;
+			setSelectedWallet: (wallet: Contracts.IReadWriteWallet | undefined) => void;
+	  }
+	| undefined
+>(undefined);
 
-export const VoteFormProvider = ({ profile, network, children }: Properties) => {
+export const VoteFormProvider = ({ profile, network, children, wallet }: Properties) => {
 	const [showSendVotePanel, setShowSendVotePanel] = useState(false);
 
 	const [voteValidators, setVoteValidators] = useState<VoteValidatorProperties[]>([]);
 	const [unvoteValidators, setUnvoteValidators] = useState<VoteValidatorProperties[]>([]);
 	const [votes, setVotes] = useState<Contracts.VoteRegistryItem[]>([]);
 	const [unvotes, setUnvotes] = useState<Contracts.VoteRegistryItem[]>([]);
-
+	const [selectedWallet, setSelectedWallet] = useState<Contracts.IReadWriteWallet | undefined>(wallet);
 	const [isLoading, setIsLoading] = useState(false);
 
 	useEffect(() => {
@@ -79,6 +92,8 @@ export const VoteFormProvider = ({ profile, network, children }: Properties) => 
 			value={{
 				isLoading,
 				openSendVotePanel,
+				selectedWallet,
+				setSelectedWallet,
 				setShowSendVotePanel: handleSetShowSendVotePanel,
 				setUnvotes,
 				showSendVotePanel,
