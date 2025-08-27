@@ -95,11 +95,11 @@ export const SearchWallet: FC<SearchWalletProperties> = ({
 		<Modal
 			title={title}
 			titleClass="text-theme-text"
-		  	description={description}
-		  	isOpen={isOpen}
-		 	size={size}
-		 	onClose={onClose}
-		 	noButtons
+			description={description}
+			isOpen={isOpen}
+			size={size}
+			onClose={onClose}
+			noButtons
 		>
 			<div className="mt-4">
 				<HeaderSearchInput
