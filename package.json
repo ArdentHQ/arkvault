@@ -2,7 +2,7 @@
 	"name": "arkvault",
 	"version": "1.18.0",
 	"engines": {
-		"node": ">=22"
+		"node": "22.x"
 	},
 	"private": true,
 	"description": "ARK Vault",
