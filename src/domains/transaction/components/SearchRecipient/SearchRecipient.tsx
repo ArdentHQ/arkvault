@@ -63,6 +63,7 @@ export const SearchRecipient: FC<SearchRecipientProperties> = ({
 		<Modal
 			isOpen={isOpen}
 			title={title || t("TRANSACTION.MODAL_SEARCH_RECIPIENT.TITLE")}
+			titleClass="text-theme-text"
 			description={description || t("TRANSACTION.MODAL_SEARCH_RECIPIENT.DESCRIPTION")}
 			size="3xl"
 			onClose={onClose}
