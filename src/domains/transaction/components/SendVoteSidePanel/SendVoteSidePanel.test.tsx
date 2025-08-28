@@ -1,5 +1,4 @@
 /* eslint-disable testing-library/no-unnecessary-act */ // @TODO remove and fix test
-
 import { Contracts, ReadOnlyWallet } from "@/app/lib/profiles";
 import {
 	act,
@@ -8,7 +7,6 @@ import {
 	getDefaultMainsailWalletId,
 	getDefaultWalletMnemonic,
 	mockNanoXTransport,
-	mockProfileWithPublicAndTestNetworks,
 	render,
 	screen,
 	syncValidators,
@@ -21,16 +19,14 @@ import { requestMock, server } from "@/tests/mocks/server";
 import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
 import React, { useEffect } from "react";
-// import { SendVote } from "./SendVote";
 import { Signatories } from "@/app/lib/mainsail";
 import { VoteValidatorProperties } from "@/domains/vote/components/ValidatorsTable/ValidatorsTable.contracts";
-// import { appendParameters } from "@/domains/vote/utils/url-parameters";
 import { data as validatorData } from "@/tests/fixtures/coins/mainsail/devnet/validators.json";
 import { toasts } from "@/app/services";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import userEvent from "@testing-library/user-event";
 import transactionFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/transfer.json";
-import { createExpect, expect, vi } from "vitest";
+import { expect, vi } from "vitest";
 import { SendVoteSidePanel } from "./SendVoteSidePanel";
 import { Networks } from "@/app/lib/networks";
 import { useVoteFormContext, VoteFormProvider } from "@/domains/vote/contexts/VoteFormContext";
@@ -122,6 +118,21 @@ const sendButton = () => screen.getByTestId("SendVote__send-button");
 const reviewStepID = "SendVote__review-step";
 const formStepID = "SendVote__form-step";
 const authenticationStepID = "AuthenticationStep";
+
+const selectNthSenderAddress = async (index = 0) => {
+	const container = screen.getByTestId("sender-address");
+	await userEvent.click(within(container).getByTestId("SelectDropdown__input"));
+
+	const elementTestId = `SelectDropdown__option--${index}`;
+
+	await waitFor(() => {
+		expect(screen.getByTestId(elementTestId)).toBeInTheDocument();
+	});
+
+	await userEvent.click(screen.getByTestId(elementTestId));
+};
+
+const selectFirstSenderAddress = async () => selectNthSenderAddress(0);
 
 const ComponentWraper = ({
 	votes,
@@ -596,7 +607,7 @@ describe("SendVote", () => {
 			<Component
 				activeProfile={profile}
 				activeNetwork={wallet.network()}
-				activeWallet={wallet}
+				activeWallet={undefined}
 				votes={[]}
 				unvotes={[]}
 			/>,
@@ -609,6 +620,12 @@ describe("SendVote", () => {
 		);
 
 		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
+
+		await waitFor(() =>
+			expect(
+				within(screen.getByTestId("sender-address")).getByTestId("SelectAddress__wrapper"),
+			).not.toBeDisabled(),
+		);
 
 		await userEvent.click(within(screen.getByTestId("sender-address")).getByTestId("SelectAddress__wrapper"));
 
@@ -849,7 +866,7 @@ describe("SendVote", () => {
 		votesMock.mockRestore();
 	});
 
-	it.only("should show error if wrong mnemonic", async () => {
+	it("should show error if wrong mnemonic", async () => {
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 
 		const votes: VoteValidatorProperties[] = [
