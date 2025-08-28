@@ -1,3 +1,4 @@
+/* eslint-disable testing-library/no-unnecessary-act */
 import { Contracts, ReadOnlyWallet } from "@/app/lib/profiles";
 import {
 	act,
