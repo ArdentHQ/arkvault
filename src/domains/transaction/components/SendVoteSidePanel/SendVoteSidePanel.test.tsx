@@ -261,8 +261,6 @@ describe("SendVote", () => {
 
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 
-		// const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
-
 		const votes: VoteValidatorProperties[] = [
 			{
 				amount: 10,
@@ -270,8 +268,6 @@ describe("SendVote", () => {
 			},
 		];
 
-		// console.log(`${voteURL}?${parameters}`);
-		// appendParameters(parameters, "vote", votes);
 		const { router } = render(
 			<Component activeProfile={profile} activeNetwork={wallet.network()} activeWallet={wallet} votes={votes} />,
 			{
