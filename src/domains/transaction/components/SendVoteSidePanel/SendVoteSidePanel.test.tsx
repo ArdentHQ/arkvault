@@ -133,7 +133,7 @@ const ComponentWraper = ({
 	const { openSendVotePanel, showSendVotePanel, setShowSendVotePanel } = useVoteFormContext();
 
 	useEffect(() => {
-		openSendVotePanel(votes, unvotes);
+		openSendVotePanel(unvotes, votes);
 	}, []);
 
 	return <SendVoteSidePanel open={showSendVotePanel} onOpenChange={setShowSendVotePanel} />;
