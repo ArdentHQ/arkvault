@@ -51,11 +51,11 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 	const gasLimit = BigNumber.make(getValues("gasLimit") ?? 0);
 
 	const [data, _isLoadingData] = useDebounce(properties.data, 700);
+	const recipientsCount = Array.isArray(data?.payments) ? data.payments.length : 1;
 
 	useEffect(() => {
 		/* istanbul ignore else -- @preserve */
 		const isMultiPayment = type === "multiPayment";
-		const recipientsCount = isMultiPayment && Array.isArray(data?.payments) ? data.payments.length : 1;
 		const fallbackGasLimit = isMultiPayment ? GasLimit.multiPayment.times(recipientsCount) : GasLimit[type];
 
 		const estimate = async () => {
@@ -76,7 +76,7 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 		};
 
 		void estimate();
-	}, [estimateGas, getValues, setValue, type]);
+	}, [estimateGas, getValues, setValue, type, recipientsCount]);
 
 	const dataDep = JSON.stringify(data ?? []);
 
