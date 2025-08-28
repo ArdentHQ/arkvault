@@ -22,7 +22,6 @@ import React, { useEffect } from "react";
 import { Signatories } from "@/app/lib/mainsail";
 import { VoteValidatorProperties } from "@/domains/vote/components/ValidatorsTable/ValidatorsTable.contracts";
 import { data as validatorData } from "@/tests/fixtures/coins/mainsail/devnet/validators.json";
-import { toasts } from "@/app/services";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import userEvent from "@testing-library/user-event";
 import transactionFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/transfer.json";
