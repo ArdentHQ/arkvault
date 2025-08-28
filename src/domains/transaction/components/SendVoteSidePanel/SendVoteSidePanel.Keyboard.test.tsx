@@ -9,22 +9,74 @@ import {
 	syncValidators,
 	syncFees,
 	waitFor,
+	within,
 } from "@/utils/testing-library";
 import { requestMock, server } from "@/tests/mocks/server";
 
 import { Contracts } from "@/app/lib/profiles";
 import React, { useEffect } from "react";
-import { SendVoteSidePanel } from "./SendVoteSidePanel";
 import { VoteValidatorProperties } from "@/domains/vote/components/ValidatorsTable/ValidatorsTable.contracts";
 import { data as validatorData } from "@/tests/fixtures/coins/mainsail/devnet/validators.json";
-import transactionFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/transfer.json";
 import userEvent from "@testing-library/user-event";
-import { AddressService } from "@/app/lib/mainsail/address.service";
+import transactionFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/transfer.json";
 import { expect, vi } from "vitest";
+import { AddressService } from "@/app/lib/mainsail/address.service";
+import { BigNumber } from "@/app/lib/helpers";
+import { DateTime } from "@/app/lib/intl";
+import { SendVoteSidePanel } from "./SendVoteSidePanel";
 import { Networks } from "@/app/lib/networks";
 import { useVoteFormContext, VoteFormProvider } from "@/domains/vote/contexts/VoteFormContext";
 
 const fixtureProfileId = getMainsailProfileId();
+
+const transactionMethodsFixture = {
+	blockHash: () => transactionFixture.data.blockHash,
+	convertedAmount: () => BigNumber.make(10),
+	data: () => transactionFixture.data,
+	explorerLink: () => `https://test.arkscan.io/transaction/${transactionFixture.data.id}`,
+	explorerLinkForBlock: () => `https://test.arkscan.io/block/${transactionFixture.data.id}`,
+	fee: () => +transactionFixture.data.fee / 1e18,
+	from: () => transactionFixture.data.from,
+	hash: () => transactionFixture.data.hash,
+	isConfirmed: () => false,
+	isMultiPayment: () => false,
+	isMultiSignatureRegistration: () => false,
+	isReturn: () => false,
+	isSecondSignature: () => false,
+	isSent: () => true,
+	isSuccess: () => true,
+	isTransfer: () => false,
+	isUnvote: () => false,
+	isUpdateValidator: () => false,
+	isUsernameRegistration: () => false,
+	isUsernameResignation: () => false,
+	isValidatorRegistration: () => false,
+	isValidatorResignation: () => false,
+	isVote: () => true,
+	isVoteCombination: () => false,
+	memo: () => transactionFixture.data.memo || undefined,
+	nonce: () => BigNumber.make(transactionFixture.data.nonce),
+	payments: () => [],
+	recipients: () => [],
+	sender: () => transactionFixture.data.sender,
+	timestamp: () => DateTime.make(transactionFixture.data.timestamp),
+	to: () => transactionFixture.data.to,
+	total: () => {
+		const value = BigNumber.make(transactionFixture.data.value);
+		const feeVal = BigNumber.make(transactionFixture.data.gasPrice).times(transactionFixture.data.gas);
+		return value.plus(feeVal);
+	},
+	usesMultiSignature: () => false,
+	value: () => +transactionFixture.data.value / 1e8,
+};
+
+const createVoteTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
+	// @ts-ignore
+	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
+		...transactionMethodsFixture,
+		type: () => "vote",
+		wallet: () => wallet,
+	});
 
 const passphrase = getDefaultWalletMnemonic();
 let profile: Contracts.IProfile;
@@ -35,21 +87,6 @@ const sendButton = () => screen.getByTestId("SendVote__send-button");
 
 const reviewStepID = "SendVote__review-step";
 const authenticationStepID = "AuthenticationStep";
-
-vi.mock("@/utils/delay", () => ({
-	delay: (callback: () => void) => callback(),
-}));
-
-vi.mock("@/utils/debounce", () => ({
-	debounceAsync: (callback: () => void) =>
-		async function (...arguments_: any) {
-			return new Promise((resolve) => {
-				setTimeout(() => {
-					resolve(callback.apply(this, arguments_));
-				}, 0);
-			});
-		},
-}));
 
 const ComponentWraper = ({
 	votes,
@@ -85,8 +122,13 @@ const Component = ({
 	</VoteFormProvider>
 );
 
-describe("SendVoteSidePanel Encryption", () => {
+describe("SendVoteSidePanel Keyboard", () => {
 	beforeAll(async () => {
+		vi.useFakeTimers({
+			shouldAdvanceTime: true,
+			toFake: ["setInterval", "clearInterval"],
+		});
+
 		profile = env.profiles().findById(getMainsailProfileId());
 
 		await env.profiles().restore(profile);
@@ -121,23 +163,18 @@ describe("SendVoteSidePanel Encryption", () => {
 			requestMock("https://ark-test-musig.arkvault.io/", { result: [] }, { method: "post" }),
 		);
 
-		vi.useFakeTimers();
+		vi.useFakeTimers({ shouldAdvanceTime: true });
 	});
 
 	afterEach(() => {
 		vi.useRealTimers();
 	});
 
-	it("should send a vote transaction using encryption password", async () => {
-		vi.useRealTimers();
-
-		const actsWithMnemonicMock = vi.spyOn(wallet, "actsWithMnemonic").mockReturnValue(false);
-		const actsWithWifWithEncryptionMock = vi.spyOn(wallet, "actsWithMnemonicWithEncryption").mockReturnValue(true);
-		const wifGetMock = vi.spyOn(wallet.signingKey(), "get").mockReturnValue(passphrase);
-
+	it.each(["with keyboard", "without keyboard"])("should send a vote transaction %s", async (inputMethod) => {
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
+		const walletVoteSyncMock = vi.spyOn(wallet.synchroniser(), "votes").mockResolvedValue(undefined);
 
-		const fromMnemonicMock = vi.spyOn(AddressService.prototype, "fromMnemonic").mockReturnValue({
+		const mnemonicMock = vi.spyOn(AddressService.prototype, "fromMnemonic").mockReturnValue({
 			address: wallet.address(),
 		});
 
@@ -159,7 +196,7 @@ describe("SendVoteSidePanel Encryption", () => {
 			{
 				route: {
 					pathname: voteURL,
-					search: "",
+					search: ``,
 				},
 			},
 		);
@@ -172,8 +209,25 @@ describe("SendVoteSidePanel Encryption", () => {
 			expect(screen.getAllByRole("radio")[1]).toBeChecked();
 		});
 
-		await waitFor(() => expect(continueButton()).not.toBeDisabled());
-		await userEvent.click(continueButton());
+		// Fee selection
+		await waitFor(() => {
+			expect(screen.getAllByRole("radio")[1]).toBeChecked();
+		});
+
+		await userEvent.click(within(screen.getAllByTestId("InputFee")[0]).getAllByRole("radio")[2]);
+
+		expect(screen.getAllByRole("radio")[2]).toBeChecked();
+
+		// remove focus from fee button
+		await userEvent.click(document.body);
+
+		await waitFor(() => expect(continueButton()).not.toBeDisabled(), { timeout: 3000 });
+
+		if (inputMethod === "with keyboard") {
+			await userEvent.keyboard("{enter}");
+		} else {
+			await userEvent.click(continueButton());
+		}
 
 		// AuthenticationStep
 		expect(screen.getByTestId(authenticationStepID)).toBeInTheDocument();
@@ -186,24 +240,37 @@ describe("SendVoteSidePanel Encryption", () => {
 			errors: {},
 			rejected: [],
 		});
+		const transactionMock = createVoteTransactionMock(wallet);
 
-		const passwordInput = screen.getByTestId("AuthenticationStep__encryption-password");
-		await userEvent.clear(passwordInput);
-		await userEvent.type(passwordInput, "password");
+		const passwordInput = screen.getByTestId("AuthenticationStep__mnemonic");
+		await userEvent.type(passwordInput, passphrase);
 
-		await waitFor(() => expect(passwordInput).toHaveValue("password"));
+		await waitFor(() => {
+			expect(passwordInput).toHaveValue(passphrase);
+		});
+
+		act(() => {
+			vi.advanceTimersByTime(1000);
+		});
 
 		await waitFor(() => expect(sendButton()).not.toBeDisabled());
 
 		await act(async () => {
-			await userEvent.click(sendButton());
+			if (inputMethod === "with keyboard") {
+				await userEvent.keyboard("{enter}");
+			} else {
+				await userEvent.click(sendButton());
+			}
 		});
+
+		await expect(screen.findByTestId("icon-PendingTransaction")).resolves.toBeVisible();
+
+		await act(() => vi.runOnlyPendingTimers());
 
 		signMock.mockRestore();
 		broadcastMock.mockRestore();
-		actsWithMnemonicMock.mockRestore();
-		actsWithWifWithEncryptionMock.mockRestore();
-		wifGetMock.mockRestore();
-		fromMnemonicMock.mockRestore();
+		transactionMock.mockRestore();
+		walletVoteSyncMock.mockRestore();
+		mnemonicMock.mockRestore();
 	});
 });
