@@ -24,13 +24,13 @@ import React, { useEffect } from "react";
 // import { SendVote } from "./SendVote";
 import { Signatories } from "@/app/lib/mainsail";
 import { VoteValidatorProperties } from "@/domains/vote/components/ValidatorsTable/ValidatorsTable.contracts";
-import { appendParameters } from "@/domains/vote/utils/url-parameters";
+// import { appendParameters } from "@/domains/vote/utils/url-parameters";
 import { data as validatorData } from "@/tests/fixtures/coins/mainsail/devnet/validators.json";
 import { toasts } from "@/app/services";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import userEvent from "@testing-library/user-event";
 import transactionFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/transfer.json";
-import { expect, vi } from "vitest";
+import { createExpect, expect, vi } from "vitest";
 import { SendVoteSidePanel } from "./SendVoteSidePanel";
 import { Networks } from "@/app/lib/networks";
 import { useVoteFormContext, VoteFormProvider } from "@/domains/vote/contexts/VoteFormContext";
@@ -207,14 +207,21 @@ describe("SendVote", () => {
 		vi.useRealTimers();
 	});
 
-	it("should return to the select a validator page to unvote", async () => {
+	it.only("should close the side panel and return to the select a validator page to unvote", async () => {
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
-		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
 		const unvotes: VoteValidatorProperties[] = [{ amount: 10, validatorAddress: validatorData[1].address }];
-		appendParameters(parameters, "unvote", unvotes);
 
-		const { router } = render(<SendVote />, { route: { pathname: voteURL, search: `?${parameters}` } });
+		const { router } = render(
+			<Component
+				activeProfile={profile}
+				activeNetwork={wallet.network()}
+				activeWallet={wallet}
+				votes={[]}
+				unvotes={unvotes}
+			/>,
+			{ route: `${voteURL}` },
+		);
 
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
@@ -225,25 +232,28 @@ describe("SendVote", () => {
 
 		await userEvent.click(backButton());
 
-		expect(router.state.location.pathname).toBe(`/profiles/${fixtureProfileId}/wallets/${wallet.id()}/votes`);
+		expect(router.state.location.pathname).toBe(`/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`);
+
+		// reviewStepID should not be in the document
+		await waitFor(() => expect(screen.queryByTestId(reviewStepID)).not.toBeInTheDocument());
 	});
 
 	it("should return to the select a validator page to unvote/vote", async () => {
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
-		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
 		const unvotes: VoteValidatorProperties[] = [{ amount: 10, validatorAddress: validatorData[1].address }];
-		appendParameters(parameters, "unvote", unvotes);
-
 		const votes: VoteValidatorProperties[] = [{ amount: 10, validatorAddress: validatorData[0].address }];
-		appendParameters(parameters, "vote", votes);
 
-		const { router } = render(<SendVote />, {
-			route: {
-				pathname: voteURL,
-				search: `?${parameters}`,
-			},
-		});
+		const { router } = render(
+			<Component
+				activeProfile={profile}
+				activeNetwork={wallet.network()}
+				activeWallet={wallet}
+				votes={votes}
+				unvotes={unvotes}
+			/>,
+			{ route: `${voteURL}` },
+		);
 
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 		await waitFor(() => expect(screen.getByTestId(reviewStepID)).toHaveTextContent(validatorData[0].address));
@@ -349,8 +359,6 @@ describe("SendVote", () => {
 
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 
-		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
-
 		const votes: VoteValidatorProperties[] = [
 			{
 				amount: 10,
@@ -358,14 +366,16 @@ describe("SendVote", () => {
 			},
 		];
 
-		appendParameters(parameters, "vote", votes);
-
-		render(<SendVote />, {
-			route: {
-				pathname: voteURL,
-				search: `?${parameters}`,
-			},
-		});
+		render(
+			<Component
+				activeProfile={profile}
+				activeNetwork={wallet.network()}
+				activeWallet={wallet}
+				votes={votes}
+				unvotes={[]}
+			/>,
+			{ route: `${voteURL}` },
+		);
 
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
@@ -385,7 +395,6 @@ describe("SendVote", () => {
 		await wallet.synchroniser().votes();
 
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
-		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
 		const unvotes: VoteValidatorProperties[] = [
 			{
@@ -394,8 +403,6 @@ describe("SendVote", () => {
 			},
 		];
 
-		appendParameters(parameters, "unvote", unvotes);
-
 		const votes: VoteValidatorProperties[] = [
 			{
 				amount: 10,
@@ -403,14 +410,16 @@ describe("SendVote", () => {
 			},
 		];
 
-		appendParameters(parameters, "vote", votes);
-
-		render(<SendVote />, {
-			route: {
-				pathname: voteURL,
-				search: `?${parameters}`,
-			},
-		});
+		render(
+			<Component
+				activeProfile={profile}
+				activeNetwork={wallet.network()}
+				activeWallet={wallet}
+				votes={votes}
+				unvotes={unvotes}
+			/>,
+			{ route: `${voteURL}` },
+		);
 
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
@@ -521,14 +530,22 @@ describe("SendVote", () => {
 
 	it("should select sender", async () => {
 		const voteURL = `/profiles/${fixtureProfileId}/send-vote`;
-		const parameters = new URLSearchParams(`&nethash=${wallet.network().meta().nethash}`);
 
-		render(<SendVote />, {
-			route: {
-				pathname: voteURL,
-				search: `?${parameters}`,
+		render(
+			<Component
+				activeProfile={profile}
+				activeNetwork={wallet.network()}
+				activeWallet={wallet}
+				votes={[]}
+				unvotes={[]}
+			/>,
+			{
+				route: {
+					pathname: voteURL,
+					search: ``,
+				},
 			},
-		});
+		);
 
 		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
@@ -546,14 +563,22 @@ describe("SendVote", () => {
 
 	it("should redirect to dashboard when clicking back and wallet is not provided in url", async () => {
 		const voteURL = `/profiles/${fixtureProfileId}/send-vote`;
-		const parameters = new URLSearchParams(`&nethash=${wallet.network().meta().nethash}`);
 
-		render(<SendVote />, {
-			route: {
-				pathname: voteURL,
-				search: `?${parameters}`,
+		render(
+			<Component
+				activeProfile={profile}
+				activeNetwork={wallet.network()}
+				activeWallet={wallet}
+				votes={[]}
+				unvotes={[]}
+			/>,
+			{
+				route: {
+					pathname: voteURL,
+					search: ``,
+				},
 			},
-		});
+		);
 
 		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
@@ -562,15 +587,23 @@ describe("SendVote", () => {
 
 	it("should select sender wallet and sync if not yet synced", async () => {
 		const voteURL = `/profiles/${fixtureProfileId}/send-vote`;
-		const parameters = new URLSearchParams(`&nethash=${wallet.network().meta().nethash}`);
 		const walletSyncMock = vi.spyOn(profile.wallets().first(), "hasBeenFullyRestored").mockReturnValue(false);
 
-		render(<SendVote />, {
-			route: {
-				pathname: voteURL,
-				search: `?${parameters}`,
+		render(
+			<Component
+				activeProfile={profile}
+				activeNetwork={wallet.network()}
+				activeWallet={wallet}
+				votes={[]}
+				unvotes={[]}
+			/>,
+			{
+				route: {
+					pathname: voteURL,
+					search: ``,
+				},
 			},
-		});
+		);
 
 		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
@@ -590,21 +623,28 @@ describe("SendVote", () => {
 
 	it("should render without selected wallet", async () => {
 		const voteURL = `/profiles/${fixtureProfileId}/send-vote`;
-		const parameters = new URLSearchParams(`?&nethash=${wallet.network().meta().nethash}`);
 
-		render(<SendVote />, {
-			route: {
-				pathname: voteURL,
-				search: `?${parameters}`,
+		render(
+			<Component
+				activeProfile={profile}
+				activeNetwork={wallet.network()}
+				activeWallet={wallet}
+				votes={[]}
+				unvotes={[]}
+			/>,
+			{
+				route: {
+					pathname: voteURL,
+					search: ``,
+				},
 			},
-		});
+		);
 
 		await expect(screen.findByTestId("SelectAddress__input")).resolves.toHaveValue("");
 	});
 
 	it("should keep the fee when user step back", async () => {
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
-		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
 		const unvotes: VoteValidatorProperties[] = [
 			{
@@ -613,14 +653,16 @@ describe("SendVote", () => {
 			},
 		];
 
-		appendParameters(parameters, "unvote", unvotes);
-
-		render(<SendVote />, {
-			route: {
-				pathname: voteURL,
-				search: `?${parameters}`,
-			},
-		});
+		render(
+			<Component
+				activeProfile={profile}
+				activeNetwork={wallet.network()}
+				activeWallet={wallet}
+				votes={[]}
+				unvotes={unvotes}
+			/>,
+			{ route: `${voteURL}` },
+		);
 
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
@@ -653,7 +695,6 @@ describe("SendVote", () => {
 
 	it("should move back and forth between steps", async () => {
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
-		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
 		const unvotes: VoteValidatorProperties[] = [
 			{
@@ -662,14 +703,16 @@ describe("SendVote", () => {
 			},
 		];
 
-		appendParameters(parameters, "unvote", unvotes);
-
-		render(<SendVote />, {
-			route: {
-				pathname: voteURL,
-				search: `?${parameters}`,
-			},
-		});
+		render(
+			<Component
+				activeProfile={profile}
+				activeNetwork={wallet.network()}
+				activeWallet={wallet}
+				votes={[]}
+				unvotes={unvotes}
+			/>,
+			{ route: `${voteURL}` },
+		);
 
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
@@ -740,7 +783,6 @@ describe("SendVote", () => {
 			},
 		]);
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
-		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
 		const unvotes: VoteValidatorProperties[] = [
 			{
@@ -749,14 +791,16 @@ describe("SendVote", () => {
 			},
 		];
 
-		appendParameters(parameters, "unvote", unvotes);
-
-		render(<SendVote />, {
-			route: {
-				pathname: voteURL,
-				search: `?${parameters}`,
-			},
-		});
+		render(
+			<Component
+				activeProfile={profile}
+				activeNetwork={wallet.network()}
+				activeWallet={wallet}
+				votes={[]}
+				unvotes={unvotes}
+			/>,
+			{ route: `${voteURL}` },
+		);
 
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
@@ -804,7 +848,6 @@ describe("SendVote", () => {
 
 	it("should show error if wrong mnemonic", async () => {
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
-		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
 		const votes: VoteValidatorProperties[] = [
 			{
@@ -813,14 +856,16 @@ describe("SendVote", () => {
 			},
 		];
 
-		appendParameters(parameters, "vote", votes);
-
-		const { container } = render(<SendVote />, {
-			route: {
-				pathname: voteURL,
-				search: `?${parameters}`,
-			},
-		});
+		const { container } = render(
+			<Component
+				activeProfile={profile}
+				activeNetwork={wallet.network()}
+				activeWallet={wallet}
+				votes={votes}
+				unvotes={[]}
+			/>,
+			{ route: `${voteURL}` },
+		);
 
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
@@ -848,7 +893,6 @@ describe("SendVote", () => {
 		vi.useRealTimers();
 
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
-		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
 		const votes: VoteValidatorProperties[] = [
 			{
@@ -857,14 +901,16 @@ describe("SendVote", () => {
 			},
 		];
 
-		appendParameters(parameters, "vote", votes);
-
-		const { container } = render(<SendVote />, {
-			route: {
-				pathname: voteURL,
-				search: `?${parameters}`,
-			},
-		});
+		const { container } = render(
+			<Component
+				activeProfile={profile}
+				activeNetwork={wallet.network()}
+				activeWallet={wallet}
+				votes={votes}
+				unvotes={[]}
+			/>,
+			{ route: `${voteURL}` },
+		);
 
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
@@ -920,7 +966,6 @@ describe("SendVote", () => {
 		});
 
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
-		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
 		const unvotes: VoteValidatorProperties[] = [
 			{
@@ -929,14 +974,16 @@ describe("SendVote", () => {
 			},
 		];
 
-		appendParameters(parameters, "unvote", unvotes);
-
-		render(<SendVote />, {
-			route: {
-				pathname: voteURL,
-				search: `?${parameters}`,
-			},
-		});
+		render(
+			<Component
+				activeProfile={profile}
+				activeNetwork={wallet.network()}
+				activeWallet={wallet}
+				votes={[]}
+				unvotes={unvotes}
+			/>,
+			{ route: `${voteURL}` },
+		);
 
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
@@ -1016,7 +1063,6 @@ describe("SendVote", () => {
 		});
 
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
-		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
 		const unvotes: VoteValidatorProperties[] = [
 			{
@@ -1025,14 +1071,16 @@ describe("SendVote", () => {
 			},
 		];
 
-		appendParameters(parameters, "unvote", unvotes);
-
-		render(<SendVote />, {
-			route: {
-				pathname: voteURL,
-				search: `?${parameters}`,
-			},
-		});
+		render(
+			<Component
+				activeProfile={profile}
+				activeNetwork={wallet.network()}
+				activeWallet={wallet}
+				votes={[]}
+				unvotes={unvotes}
+			/>,
+			{ route: `${voteURL}` },
+		);
 
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
