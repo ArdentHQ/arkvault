@@ -51,7 +51,7 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 	const gasLimit = BigNumber.make(getValues("gasLimit") ?? 0);
 
 	const [data, _isLoadingData] = useDebounce(properties.data, 700);
-	const recipientsCount = Array.isArray(data?.payments) ? data.payments.length : 1;
+	const recipientsCount = Array.isArray(properties.data?.payments) ? properties.data.payments.length : 1;
 
 	useEffect(() => {
 		/* istanbul ignore else -- @preserve */
