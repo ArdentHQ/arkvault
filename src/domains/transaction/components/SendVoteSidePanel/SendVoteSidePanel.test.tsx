@@ -549,7 +549,7 @@ describe("SendVote", () => {
 			<Component
 				activeProfile={profile}
 				activeNetwork={wallet.network()}
-				activeWallet={wallet}
+				activeWallet={undefined}
 				votes={[]}
 				unvotes={[]}
 			/>,
