@@ -9,11 +9,10 @@ import { useBreakpoint } from "@/app/hooks";
 import { twMerge } from "tailwind-merge";
 import { TimeAgo } from "@/app/components/TimeAgo";
 import { DateTime } from "@/app/lib/intl";
-import { Label } from "@/app/components/Label";
 import { useTransactionTypes } from "@/domains/transaction/hooks/use-transaction-types";
 import { TransactionRowAddressing } from "./TransactionRowAddressing";
 import { Amount } from "@/app/components/Amount";
-import { TransactionTotalLabel, TransactionFiatAmount } from "./TransactionAmount.blocks";
+import { TransactionTotalLabel, TransactionFiatAmount, TransactionTypeLabel } from "./TransactionAmount.blocks";
 import { TransactionRowId } from "./TransactionRowId";
 import cn from "classnames";
 
@@ -100,15 +99,14 @@ export const TransactionRow = memo(
 							!hideSender,
 					})}
 				>
-					<Label
+					<TransactionTypeLabel
 						color="secondary"
-						size="xs"
 						noBorder
-						className="max-w-20 truncate rounded px-1 py-[3px] whitespace-nowrap lg:max-w-40 dark:border"
-						data-testid="TransactionRow__type"
+						size="xs"
+						tooltipContent={getLabel(transaction.type())}
 					>
 						{getLabel(transaction.type())}
-					</Label>
+					</TransactionTypeLabel>
 				</TableCell>
 
 				<TableCell
