@@ -336,58 +336,6 @@ describe("SendVote", () => {
 		votingMock.mockRestore();
 	});
 
-	it.skip("should warning in toast if wallet is already voting the validator", async () => {
-		await wallet.synchroniser().votes();
-
-		const toastMock = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
-		const votesMock = vi.spyOn(wallet.voting(), "current").mockReturnValue([
-			{
-				amount: 10,
-				wallet: new ReadOnlyWallet({
-					address: validatorData[0].address,
-					explorerLink: "",
-					governanceIdentifier: "address",
-					isResignedvalidator: false,
-					isValidator: true,
-					publicKey: validatorData[0].publicKey,
-					rank: 1,
-					username: "arkx",
-				}),
-			},
-		]);
-
-		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
-
-		const votes: VoteValidatorProperties[] = [
-			{
-				amount: 10,
-				validatorAddress: validatorData[0].address,
-			},
-		];
-
-		render(
-			<Component
-				activeProfile={profile}
-				activeNetwork={wallet.network()}
-				activeWallet={wallet}
-				votes={votes}
-				unvotes={[]}
-			/>,
-			{ route: `${voteURL}` },
-		);
-
-		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
-
-		await waitFor(() => {
-			expect(toastMock).toHaveBeenCalledWith(
-				"Mainsail Wallet 1 is already voting for 0xB8Be76b31E402a2D89294Aa107056484Bef94362.",
-			);
-		});
-
-		votesMock.mockRestore();
-		toastMock.mockRestore();
-	});
-
 	it("should send a unvote & vote transaction and use split voting method", async () => {
 		const votesMock = vi.spyOn(wallet.voting(), "current").mockImplementation(votingMockImplementation);
 
