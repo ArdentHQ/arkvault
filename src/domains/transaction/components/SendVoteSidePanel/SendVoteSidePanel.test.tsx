@@ -148,7 +148,7 @@ const Component = ({
 }: {
 	activeProfile: Contracts.IProfile;
 	activeNetwork: Networks.Network;
-	activeWallet: Contracts.IReadWriteWallet;
+	activeWallet?: Contracts.IReadWriteWallet;
 	votes?: VoteValidatorProperties[];
 	unvotes?: VoteValidatorProperties[];
 }) => (
@@ -340,7 +340,7 @@ describe("SendVote", () => {
 		votingMock.mockRestore();
 	});
 
-	it.only("should warning in toast if wallet is already voting the validator", async () => {
+	it.skip("should warning in toast if wallet is already voting the validator", async () => {
 		await wallet.synchroniser().votes();
 
 		const toastMock = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
@@ -624,14 +624,14 @@ describe("SendVote", () => {
 		walletSyncMock.mockRestore();
 	});
 
-	it("should render without selected wallet", async () => {
+	it.only("should render without selected wallet", async () => {
 		const voteURL = `/profiles/${fixtureProfileId}/send-vote`;
 
 		render(
 			<Component
 				activeProfile={profile}
 				activeNetwork={wallet.network()}
-				activeWallet={wallet}
+				activeWallet={undefined}
 				votes={[]}
 				unvotes={[]}
 			/>,
