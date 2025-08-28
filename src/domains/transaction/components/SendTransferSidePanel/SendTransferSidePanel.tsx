@@ -347,7 +347,7 @@ export const SendTransferSidePanel = ({
 			return t("TRANSACTION.REVIEW_STEP.DESCRIPTION");
 		}
 
-		if (activeTab === SendTransferStep.AuthenticationStep) {
+		if (activeTab === SendTransferStep.AuthenticationStep && !wallet?.isLedger()) {
 			return t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_SECRET");
 		}
 

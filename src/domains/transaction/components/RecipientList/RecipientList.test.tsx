@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
@@ -59,6 +58,23 @@ describe("RecipientList", () => {
 				isEditable={true}
 				recipients={recipients}
 				showAmount={false}
+				showExchangeAmount={false}
+				ticker="ARK"
+				variant="condensed"
+			/>,
+			{
+				route: `/profiles/${profile.id()}`,
+			},
+		);
+		expect(container).toMatchSnapshot();
+	});
+
+	it("should render condensed variant with amount", () => {
+		const { container } = render(
+			<RecipientList
+				isEditable={true}
+				recipients={recipients}
+				showAmount={true}
 				showExchangeAmount={false}
 				ticker="ARK"
 				variant="condensed"
