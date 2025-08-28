@@ -660,7 +660,7 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 
 					<TabPanel tabId={Step.SummaryStep}>
 						{activeWallet && (
-							<TransactionSuccessful transaction={transaction} senderWallet={activeWallet} />
+							<TransactionSuccessful transaction={transaction} senderWallet={activeWallet} noHeading />
 						)}
 					</TabPanel>
 

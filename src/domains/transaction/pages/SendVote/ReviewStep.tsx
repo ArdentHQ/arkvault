@@ -53,7 +53,12 @@ export const ReviewStep = ({ unvotes, votes, wallet, profile, hideHeader = false
 					subtitle={t("TRANSACTION.REVIEW_STEP.DESCRIPTION")}
 				/>
 			)}
-			<div className="-mx-3 mt-4 space-y-3 sm:mx-0 sm:space-y-4">
+
+			<div
+				className={cn("space-y-3 sm:mx-0 sm:space-y-4", {
+					"mt-4": !hideHeader,
+				})}
+			>
 				<DetailWrapper label={t("TRANSACTION.ADDRESSING")}>
 					<div className="flex w-full items-center justify-between gap-4 space-x-2 sm:justify-start sm:gap-0 sm:space-x-0">
 						<DetailTitle
