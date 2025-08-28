@@ -366,6 +366,8 @@ describe("SendTransferSidePanel", () => {
 			connect: connectMock,
 			hasDeviceAvailable: true,
 			isConnected: true,
+			ledgerDevice: { id: "nanoSP" },
+			listenDevice: vi.fn(),
 		} as any);
 
 		vi.spyOn(pendingHook, "usePendingTransactions").mockReturnValue({

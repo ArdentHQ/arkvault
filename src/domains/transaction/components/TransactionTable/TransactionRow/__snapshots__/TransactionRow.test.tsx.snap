@@ -72,10 +72,14 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
             class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2 lg:w-24 lg:min-w-24 xl:min-w-38 xl:w-auto"
           >
             <div
-              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-20 truncate rounded px-1 py-[3px] whitespace-nowrap lg:max-w-40 dark:border"
+              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-20 rounded px-1 py-[3px] lg:max-w-40 dark:border"
               data-testid="TransactionRow__type"
             >
-              Transfer
+              <span
+                class="block truncate whitespace-nowrap"
+              >
+                Transfer
+              </span>
             </div>
           </div>
         </td>
@@ -526,10 +530,14 @@ exports[`TransactionRow > should render responsive (lg) 1`] = `
             class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2 lg:w-24 lg:min-w-24 xl:min-w-38 xl:w-auto"
           >
             <div
-              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-20 truncate rounded px-1 py-[3px] whitespace-nowrap lg:max-w-40 dark:border"
+              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-20 rounded px-1 py-[3px] lg:max-w-40 dark:border"
               data-testid="TransactionRow__type"
             >
-              Transfer
+              <span
+                class="block truncate whitespace-nowrap"
+              >
+                Transfer
+              </span>
             </div>
           </div>
         </td>
@@ -995,10 +1003,14 @@ exports[`TransactionRow > should render responsive (md) 1`] = `
             class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2 lg:w-24 lg:min-w-24 xl:min-w-38 xl:w-auto"
           >
             <div
-              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-20 truncate rounded px-1 py-[3px] whitespace-nowrap lg:max-w-40 dark:border"
+              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-20 rounded px-1 py-[3px] lg:max-w-40 dark:border"
               data-testid="TransactionRow__type"
             >
-              Transfer
+              <span
+                class="block truncate whitespace-nowrap"
+              >
+                Transfer
+              </span>
             </div>
           </div>
         </td>
@@ -1742,10 +1754,14 @@ exports[`TransactionRow > should render responsive (xl) 1`] = `
             class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2 lg:w-24 lg:min-w-24 xl:min-w-38 xl:w-auto"
           >
             <div
-              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-20 truncate rounded px-1 py-[3px] whitespace-nowrap lg:max-w-40 dark:border"
+              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-20 rounded px-1 py-[3px] lg:max-w-40 dark:border"
               data-testid="TransactionRow__type"
             >
-              Transfer
+              <span
+                class="block truncate whitespace-nowrap"
+              >
+                Transfer
+              </span>
             </div>
           </div>
         </td>
@@ -3030,10 +3046,14 @@ exports[`TransactionRow > should render with currency 1`] = `
             class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:min-h-11 xl:pt-3 min-h-[66px] py-1 my-0 md-lg:min-h-14 md-lg:pt-2 lg:w-24 lg:min-w-24 xl:min-w-38 xl:w-auto"
           >
             <div
-              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-20 truncate rounded px-1 py-[3px] whitespace-nowrap lg:max-w-40 dark:border"
+              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent dim:text-theme-dim-200 dim:border-theme-dim-700 text-xs leading-[15px] max-w-20 rounded px-1 py-[3px] lg:max-w-40 dark:border"
               data-testid="TransactionRow__type"
             >
-              Transfer
+              <span
+                class="block truncate whitespace-nowrap"
+              >
+                Transfer
+              </span>
             </div>
           </div>
         </td>

@@ -53,6 +53,7 @@ export enum WalletFlag {
 export enum WalletLedgerModel {
 	NanoX = "nanoX",
 	NanoS = "nanoS",
+	NanoSP = "nanoSP",
 }
 
 /**
