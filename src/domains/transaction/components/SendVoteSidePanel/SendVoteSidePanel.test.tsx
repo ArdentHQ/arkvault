@@ -119,21 +119,6 @@ const reviewStepID = "SendVote__review-step";
 const formStepID = "SendVote__form-step";
 const authenticationStepID = "AuthenticationStep";
 
-const selectNthSenderAddress = async (index = 0) => {
-	const container = screen.getByTestId("sender-address");
-	await userEvent.click(within(container).getByTestId("SelectDropdown__input"));
-
-	const elementTestId = `SelectDropdown__option--${index}`;
-
-	await waitFor(() => {
-		expect(screen.getByTestId(elementTestId)).toBeInTheDocument();
-	});
-
-	await userEvent.click(screen.getByTestId(elementTestId));
-};
-
-const selectFirstSenderAddress = async () => selectNthSenderAddress(0);
-
 const ComponentWraper = ({
 	votes,
 	unvotes,
