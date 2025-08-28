@@ -597,7 +597,7 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 						<Button
 							data-testid="SendVote__send-button"
 							onClick={() => void handleSubmit(onSubmit)()}
-							disabled={isSubmitting}
+							disabled={isNextDisabled || isSubmitting}
 						>
 							{t("COMMON.SEND")}
 						</Button>

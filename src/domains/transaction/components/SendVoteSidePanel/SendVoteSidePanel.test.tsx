@@ -624,7 +624,7 @@ describe("SendVote", () => {
 		walletSyncMock.mockRestore();
 	});
 
-	it.only("should render without selected wallet", async () => {
+	it("should render without selected wallet", async () => {
 		const voteURL = `/profiles/${fixtureProfileId}/send-vote`;
 
 		render(
@@ -849,7 +849,7 @@ describe("SendVote", () => {
 		votesMock.mockRestore();
 	});
 
-	it("should show error if wrong mnemonic", async () => {
+	it.only("should show error if wrong mnemonic", async () => {
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 
 		const votes: VoteValidatorProperties[] = [
