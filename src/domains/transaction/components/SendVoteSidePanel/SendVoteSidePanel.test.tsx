@@ -207,7 +207,7 @@ describe("SendVote", () => {
 		vi.useRealTimers();
 	});
 
-	it.only("should close the side panel and return to the select a validator page to unvote", async () => {
+	it("should close the side panel and return to the select a validator page to unvote", async () => {
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 
 		const unvotes: VoteValidatorProperties[] = [{ amount: 10, validatorAddress: validatorData[1].address }];
@@ -238,7 +238,7 @@ describe("SendVote", () => {
 		await waitFor(() => expect(screen.queryByTestId(reviewStepID)).not.toBeInTheDocument());
 	});
 
-	it("should return to the select a validator page to unvote/vote", async () => {
+	it("should close the side panel and return to the select a validator page to unvote/vote", async () => {
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 
 		const unvotes: VoteValidatorProperties[] = [{ amount: 10, validatorAddress: validatorData[1].address }];
@@ -262,10 +262,13 @@ describe("SendVote", () => {
 		await waitFor(() => expect(backButton()).not.toBeDisabled());
 
 		await userEvent.click(backButton());
-		expect(router.state.location.pathname).toBe(`/profiles/${fixtureProfileId}/wallets/${wallet.id()}/votes`);
+		expect(router.state.location.pathname).toBe(`/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`);
+
+		// reviewStepID should not be in the document
+		await waitFor(() => expect(screen.queryByTestId(reviewStepID)).not.toBeInTheDocument());
 	});
 
-	it.only("should send a vote transaction", async () => {
+	it("should send a vote transaction", async () => {
 		const votesMock = vi.spyOn(wallet.voting(), "current").mockReturnValue([]);
 		await wallet.synchroniser().votes();
 
@@ -337,7 +340,7 @@ describe("SendVote", () => {
 		votingMock.mockRestore();
 	});
 
-	it("should warning in toast if wallet is already voting the validator", async () => {
+	it.only("should warning in toast if wallet is already voting the validator", async () => {
 		await wallet.synchroniser().votes();
 
 		const toastMock = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
