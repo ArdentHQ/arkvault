@@ -75,7 +75,7 @@ export const SendTransferSidePanel = ({
 	const { urlSearchParameters } = useTransactionURL();
 	const { buildSearchParametersError, validateSearchParameters } = useSearchParametersValidation();
 
-	const isWaitingLedger = useRef(false);
+	const [isWaitingLedger, setIsWaitingLedger] = useState(false);
 
 	const {
 		form,
@@ -98,19 +98,19 @@ export const SendTransferSidePanel = ({
 	});
 
 	useEffect(() => {
-		if (!isConnected && ledgerDevice?.id && isWaitingLedger.current) {
+		if (!isConnected && ledgerDevice?.id && isWaitingLedger) {
 			void connectLedger();
 		}
 
-		if (isConnected && isWaitingLedger.current) {
+		if (isConnected && isWaitingLedger) {
 			void handleSubmit(() => submit(true))();
 		}
-	}, [isConnected, ledgerDevice?.id]);
+	}, [isConnected, ledgerDevice?.id, isWaitingLedger]);
 
 	const connectLedger = useCallback(async () => {
 		if (wallet) {
 			await connect(activeProfile);
-			isWaitingLedger.current = true;
+			setIsWaitingLedger(true);
 		}
 	}, [wallet, activeProfile, connect]);
 
