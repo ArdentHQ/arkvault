@@ -808,7 +808,7 @@ exports[`AuthenticationStep (message) > should specify ledger supported model 1`
           <strong>
             Ledger Nano S
           </strong>
-           is connected, but his operation requires a 
+           is connected, but this operation requires a 
           <strong>
             Ledger Nano X
           </strong>
@@ -1946,7 +1946,7 @@ exports[`AuthenticationStep (transaction) > should specify ledger supported mode
           <strong>
             Ledger Nano S
           </strong>
-           is connected, but his operation requires a 
+           is connected, but this operation requires a 
           <strong>
             Ledger Nano X
           </strong>
