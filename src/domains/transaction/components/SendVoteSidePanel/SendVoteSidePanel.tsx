@@ -67,7 +67,9 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 	const form = useForm({ mode: "onChange" });
 	const { senderAddress } = form.watch();
 
-	const { hasDeviceAvailable, isConnected } = useLedgerContext();
+	const { hasDeviceAvailable, isConnected, ledgerDevice, connect } = useLedgerContext();
+	const [isWaitingLedger, setIsWaitingLedger] = useState(false);
+
 	const { syncProfileWallets } = useProfileJobs(activeProfile);
 
 	const { clearErrors, formState, getValues, handleSubmit, register, setValue, watch } = form;
@@ -202,6 +204,25 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 		[initialStep, activeTab],
 	);
 
+	console.log(isConnected, ledgerDevice, isWaitingLedger, errors)
+	useEffect(() => {
+		if (!isConnected && ledgerDevice?.id && isWaitingLedger) {
+			void connectLedger();
+		}
+
+		if (isConnected && isWaitingLedger) {
+			void handleSubmit(submitForm)();
+			setIsWaitingLedger(false);
+		}
+	}, [isConnected, ledgerDevice?.id, isWaitingLedger]);
+
+	const connectLedger = useCallback(async () => {
+		if (activeWallet) {
+			setIsWaitingLedger(true);
+			await connect(activeProfile);
+		}
+	}, [activeWallet, activeProfile, connect]);
+
 	const handleBack = () => {
 		// Abort any existing listener
 		abortReference.current.abort();
@@ -225,7 +246,7 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 		onOpenChange(false);
 	};
 
-	const handleNext = () => {
+	const handleNext = async () => {
 		abortReference.current = new AbortController();
 
 		const newIndex = activeTab + 1;
@@ -234,16 +255,19 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 		const senderWallet = activeProfile.wallets().findByAddressWithNetwork(senderAddress, network.id());
 		assertWallet(senderWallet);
 
-		if (newIndex === Step.AuthenticationStep && senderWallet.isLedger()) {
-			if (!isLedgerTransportSupported()) {
-				setErrorMessage(t("WALLETS.MODAL_LEDGER_WALLET.COMPATIBILITY_ERROR"));
-				setActiveTab(Step.ErrorStep);
-				return;
-			}
-			void handleSubmit(submitForm)();
+		const isLedgerTransaction = newIndex === Step.AuthenticationStep && senderWallet.isLedger();
+
+		if (isLedgerTransaction && !isLedgerTransportSupported()) {
+			setErrorMessage(t("WALLETS.MODAL_LEDGER_WALLET.COMPATIBILITY_ERROR"));
+			setActiveTab(Step.ErrorStep);
+			return;
 		}
 
 		setActiveTab(newIndex);
+
+		if (isLedgerTransaction) {
+			await connectLedger()
+		}
 	};
 
 	const confirmSendVote = (wallet: Contracts.IReadWriteWallet, type: "unvote" | "vote" | "combined") =>
@@ -652,8 +676,11 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 									/>
 								}
 								ledgerIsAwaitingDevice={!hasDeviceAvailable}
-								ledgerIsAwaitingApp={hasDeviceAvailable && !isConnected}
+								ledgerIsAwaitingApp={!isConnected}
 								noHeading
+								onDeviceNotAvailable={() => {
+									//
+								}}
 							/>
 						)}
 					</TabPanel>
