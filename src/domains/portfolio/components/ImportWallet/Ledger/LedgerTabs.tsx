@@ -162,10 +162,10 @@ export const LedgerTabs = ({
 
 	return (
 		<>
-			<div className={showFooter ? "pb-20 h-full" : "h-full"}>
+			<div className={showFooter ? "h-full pb-20" : "h-full"}>
 				<Tabs id="ledgerTabs" activeId={activeTab}>
 					<div data-testid="LedgerTabs" className="h-full">
-						<div className="overflow-y-auto h-full">
+						<div className="h-full overflow-y-auto">
 							<TabPanel tabId={LedgerTabStep.ListenLedgerStep}>
 								<ListenLedger
 									noHeading
@@ -219,7 +219,7 @@ export const LedgerTabs = ({
 
 			{/* Normal toolbar footer (no error) */}
 			{showFooter && !showRetry && (
-				<div className="flex absolute right-0 bottom-0 left-0 flex-col px-6 py-4 w-full border-t bg-theme-background border-theme-secondary-300 dark:border-theme-dark-700">
+				<div className="bg-theme-background border-theme-secondary-300 dark:border-theme-dark-700 absolute right-0 bottom-0 left-0 flex w-full flex-col border-t px-6 py-4">
 					<ImportActionToolbar
 						showButtons={activeTab !== LedgerTabStep.LedgerImportStep}
 						onBack={handleBack}
@@ -235,8 +235,8 @@ export const LedgerTabs = ({
 
 			{/* Error-only footer (Back / Retry buttons) */}
 			{showFooter && showRetry && (
-				<div className="flex absolute right-0 bottom-0 left-0 flex-col px-6 py-4 w-full border-t bg-theme-background border-theme-secondary-300 dark:border-theme-dark-700">
-					<div className="flex gap-3 justify-end items-center w-full">
+				<div className="bg-theme-background border-theme-secondary-300 dark:border-theme-dark-700 absolute right-0 bottom-0 left-0 flex w-full flex-col border-t px-6 py-4">
+					<div className="flex w-full items-center justify-end gap-3">
 						<Button
 							type="button"
 							onClick={handleBack}
