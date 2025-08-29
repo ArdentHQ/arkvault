@@ -17,34 +17,36 @@ import { getErroredNetworks } from "@/utils/profile-utils";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { useEnvironmentContext } from "@/app/contexts";
 import { useValidators } from "@/domains/vote/hooks/use-validators";
-import { useVoteActions } from "@/domains/vote/hooks/use-vote-actions";
 import { useVoteFilters } from "@/domains/vote/hooks/use-vote-filters";
 import { useVoteQueryParameters } from "@/domains/vote/hooks/use-vote-query-parameters";
 import { ResetWhenUnmounted } from "@/app/components/SidePanel/ResetWhenUnmounted";
 import { useProfileJobs } from "@/app/hooks/use-profile-background-jobs";
+import { SendVoteSidePanel } from "@/domains/transaction/components/SendVoteSidePanel/SendVoteSidePanel";
+import { useVoteFormContext, VoteFormProvider } from "@/domains/vote/contexts/VoteFormContext";
+import { Networks } from "@/app/lib/mainsail";
 
-export const Votes: FC = () => {
+export const VotesPage: FC<{
+	profile: Contracts.IProfile;
+	network: Networks.Network;
+}> = ({ profile: activeProfile, network: activeNetwork }) => {
 	const { t } = useTranslation();
 
 	const [showCreateAddressPanel, setShowCreateAddressPanel] = useState(false);
 	const [showImportAddressPanel, setShowImportAddressPanel] = useState(false);
+
+	const { showSendVotePanel, setShowSendVotePanel, openSendVotePanel, selectedWallet, setSelectedWallet } =
+		useVoteFormContext();
 
 	// @TODO: the hasWalletId alias is misleading because it indicates that it
 	// is a boolean but it's just a string or undefined and you still need to
 	// do an assertion or casting to ensure it has a value other than undefined
 	const { env } = useEnvironmentContext();
 
-	const activeProfile = useActiveProfile();
-	const activeWallet = useActiveWalletWhenNeeded(false);
-	const hasWalletId = activeWallet && activeWallet.address();
-
-	const [selectedWallet, setSelectedWallet] = useState<Contracts.IReadWriteWallet | undefined>(activeWallet);
+	const hasWalletId: boolean = !!(selectedWallet && selectedWallet.address());
 
 	const { syncProfileWallets } = useProfileJobs(activeProfile);
 
 	const { filter, voteValidators, unvoteValidators } = useVoteQueryParameters();
-
-	const { activeNetwork } = useActiveNetwork({ profile: activeProfile });
 
 	const {
 		filteredWallets,
@@ -62,7 +64,7 @@ export const Votes: FC = () => {
 		filter,
 		hasWalletId: !!hasWalletId,
 		profile: activeProfile,
-		wallet: activeWallet!, // @TODO
+		wallet: selectedWallet,
 	});
 
 	const {
@@ -80,14 +82,6 @@ export const Votes: FC = () => {
 		voteFilter,
 	});
 
-	const { navigateToSendVote } = useVoteActions({
-		hasWalletId: !!hasWalletId,
-		profile: activeProfile,
-		selectedAddress,
-		selectedNetwork: activeNetwork.id(),
-		wallet: activeWallet!, // @TODO
-	});
-
 	useEffect(() => {
 		if (selectedAddress) {
 			fetchVotes(selectedAddress, activeNetwork.id());
@@ -96,9 +90,9 @@ export const Votes: FC = () => {
 
 	useEffect(() => {
 		if (hasWalletId) {
-			fetchValidators(activeWallet);
+			fetchValidators(selectedWallet!);
 		}
-	}, [activeWallet, fetchValidators, hasWalletId]);
+	}, [selectedWallet, fetchValidators, hasWalletId]);
 
 	useEffect(() => {
 		if (votes.length === 0) {
@@ -187,7 +181,7 @@ export const Votes: FC = () => {
 					unvoteValidators={unvoteValidators}
 					voteValidators={voteValidators}
 					selectedWallet={selectedWallet!}
-					onContinue={navigateToSendVote}
+					onContinue={openSendVotePanel}
 					setSearchQuery={setSearchQuery}
 					totalCurrentVotes={currentVotes.length}
 					selectedFilter={voteFilter}
@@ -216,9 +210,26 @@ export const Votes: FC = () => {
 			<ResetWhenUnmounted>
 				<CreateAddressesSidePanel open={showCreateAddressPanel} onOpenChange={setShowCreateAddressPanel} />
 			</ResetWhenUnmounted>
+
 			<ResetWhenUnmounted>
 				<ImportAddressesSidePanel open={showImportAddressPanel} onOpenChange={setShowImportAddressPanel} />
 			</ResetWhenUnmounted>
+
+			<ResetWhenUnmounted>
+				<SendVoteSidePanel open={showSendVotePanel} onOpenChange={setShowSendVotePanel} />
+			</ResetWhenUnmounted>
 		</Page>
+	);
+};
+
+export const Votes: FC = () => {
+	const activeProfile = useActiveProfile();
+	const activeWallet = useActiveWalletWhenNeeded(false);
+	const { activeNetwork } = useActiveNetwork({ profile: activeProfile });
+
+	return (
+		<VoteFormProvider profile={activeProfile} network={activeNetwork} wallet={activeWallet}>
+			<VotesPage profile={activeProfile} network={activeNetwork} />
+		</VoteFormProvider>
 	);
 };
