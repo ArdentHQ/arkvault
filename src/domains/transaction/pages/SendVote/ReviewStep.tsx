@@ -11,7 +11,7 @@ import cn from "classnames";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { FeeField } from "@/domains/transaction/components/FeeField";
 
-export const ReviewStep = ({ unvotes, votes, wallet, profile }: SendVoteStepProperties) => {
+export const ReviewStep = ({ unvotes, votes, wallet, profile, hideHeader = false }: SendVoteStepProperties) => {
 	const { t } = useTranslation();
 	const { unregister } = useFormContext();
 
@@ -39,19 +39,26 @@ export const ReviewStep = ({ unvotes, votes, wallet, profile }: SendVoteStepProp
 
 	return (
 		<section data-testid="SendVote__review-step">
-			<StepHeader
-				title={t("TRANSACTION.REVIEW_STEP.TITLE")}
-				titleIcon={
-					<ThemeIcon
-						dimensions={[24, 24]}
-						lightIcon="SendTransactionLight"
-						darkIcon="SendTransactionDark"
-						dimIcon="SendTransactionDim"
-					/>
-				}
-				subtitle={t("TRANSACTION.REVIEW_STEP.DESCRIPTION")}
-			/>
-			<div className="-mx-3 mt-4 space-y-3 sm:mx-0 sm:space-y-4">
+			{!hideHeader && (
+				<StepHeader
+					title={t("TRANSACTION.REVIEW_STEP.TITLE")}
+					titleIcon={
+						<ThemeIcon
+							dimensions={[24, 24]}
+							lightIcon="SendTransactionLight"
+							darkIcon="SendTransactionDark"
+							dimIcon="SendTransactionDim"
+						/>
+					}
+					subtitle={t("TRANSACTION.REVIEW_STEP.DESCRIPTION")}
+				/>
+			)}
+
+			<div
+				className={cn("space-y-3 sm:mx-0 sm:space-y-4", {
+					"mt-4": !hideHeader,
+				})}
+			>
 				<DetailWrapper label={t("TRANSACTION.ADDRESSING")}>
 					<div className="flex w-full items-center justify-between gap-4 space-x-2 sm:justify-start sm:gap-0 sm:space-x-0">
 						<DetailTitle

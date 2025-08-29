@@ -14,27 +14,37 @@ type FormStepProperties = {
 	profile: ProfilesContracts.IProfile;
 	wallet?: ProfilesContracts.IReadWriteWallet;
 	isWalletFieldDisabled?: boolean;
+	hideHeader?: boolean;
 } & Omit<SendVoteStepProperties, "wallet">;
 
-export const FormStep = ({ unvotes, votes, wallet, profile, isWalletFieldDisabled }: FormStepProperties) => {
+export const FormStep = ({
+	unvotes,
+	votes,
+	wallet,
+	profile,
+	isWalletFieldDisabled,
+	hideHeader = false,
+}: FormStepProperties) => {
 	const { t } = useTranslation();
 
 	const { setValue } = useFormContext();
 
 	return (
 		<section data-testid="SendVote__form-step" className="space-y-3 sm:space-y-4">
-			<StepHeader
-				title={t("TRANSACTION.PAGE_VOTE.FORM_STEP.TITLE")}
-				titleIcon={
-					<ThemeIcon
-						dimensions={[24, 24]}
-						lightIcon="SendTransactionLight"
-						darkIcon="SendTransactionDark"
-						dimIcon="SendTransactionDim"
-					/>
-				}
-				subtitle={t("TRANSACTION.PAGE_VOTE.FORM_STEP.DESCRIPTION")}
-			/>
+			{!hideHeader && (
+				<StepHeader
+					title={t("TRANSACTION.PAGE_VOTE.FORM_STEP.TITLE")}
+					titleIcon={
+						<ThemeIcon
+							dimensions={[24, 24]}
+							lightIcon="SendTransactionLight"
+							darkIcon="SendTransactionDark"
+							dimIcon="SendTransactionDim"
+						/>
+					}
+					subtitle={t("TRANSACTION.PAGE_VOTE.FORM_STEP.DESCRIPTION")}
+				/>
+			)}
 
 			<FormField name="senderAddress">
 				<FormLabel label={t("TRANSACTION.SENDER")} />
