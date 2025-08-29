@@ -234,7 +234,6 @@ export const SendRegistration = () => {
 
 		if (isNextStepAuthentication && activeWallet?.isLedger()) {
 			await connectLedger();
-			setIsWaitingLedger(true);
 		}
 	};
 
