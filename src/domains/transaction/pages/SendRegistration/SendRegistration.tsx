@@ -1,5 +1,5 @@
 import { Contracts, DTO } from "@/app/lib/profiles";
-import React, { useEffect, useLayoutEffect, useMemo, useState } from "react";
+import React, { useCallback, useEffect, useLayoutEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useLocation, useNavigate } from "react-router-dom";
 
@@ -39,6 +39,7 @@ export const SendRegistration = () => {
 	const [transaction, setTransaction] = useState(undefined as unknown as DTO.ExtendedSignedTransactionData);
 	const [registrationForm, setRegistrationForm] = useState<SendRegistrationForm>();
 	const [errorMessage, setErrorMessage] = useState<string | undefined>();
+	const [isWaitingLedger, setIsWaitingLedger] = useState(false);
 
 	const { env } = useEnvironmentContext();
 	const activeProfile = useActiveProfile();
@@ -144,16 +145,23 @@ export const SendRegistration = () => {
 		return (registrations[registrationType as keyof typeof registrations] || registrations.default)();
 	}, [registrationType]);
 
-	// Reset ledger authentication steps after reconnecting supported ledger
+	const connectLedger = useCallback(async () => {
+		if (activeWallet) {
+			await connect(activeProfile);
+			setIsWaitingLedger(true);
+		}
+	}, [activeWallet, activeProfile, connect]);
+
 	useEffect(() => {
-		if (registrationType !== "multiSignature") {
-			return;
+		if (!isConnected && hasDeviceAvailable && isWaitingLedger) {
+			void connectLedger();
 		}
 
-		if (isAuthenticationStep && activeWallet?.isLedger() && isLedgerModelSupported) {
-			handleSubmit();
+		if (isConnected && isLedgerModelSupported && isWaitingLedger) {
+			void handleSubmit();
+			setIsWaitingLedger(false);
 		}
-	}, [ledgerDevice]);
+	}, [hasDeviceAvailable, isLedgerModelSupported, isWaitingLedger]);
 
 	useKeydown("Enter", () => {
 		const isButton = (document.activeElement as any)?.type === "button";
@@ -170,10 +178,6 @@ export const SendRegistration = () => {
 
 		try {
 			const { mnemonic, secondMnemonic, encryptionPassword, secret, secondSecret } = getValues();
-
-			if (activeWallet.isLedger()) {
-				await connect(activeProfile);
-			}
 
 			const signatory = await activeWallet.signatoryFactory().make({
 				encryptionPassword,
@@ -222,16 +226,16 @@ export const SendRegistration = () => {
 		setActiveTab(activeTab - 1);
 	};
 
-	const handleNext = () => {
+	const handleNext = async () => {
 		const nextStep = activeTab + 1;
 		const isNextStepAuthentication = nextStep === authenticationStep;
 
-		// Skip authentication step
-		if (isNextStepAuthentication && activeWallet?.isLedger() && isLedgerModelSupported) {
-			handleSubmit();
-		}
-
 		setActiveTab(nextStep);
+
+		if (isNextStepAuthentication && activeWallet?.isLedger()) {
+			await connectLedger();
+			setIsWaitingLedger(true);
+		}
 	};
 
 	const hideStepNavigation = activeTab === 10 || (isAuthenticationStep && activeWallet?.isLedger());
