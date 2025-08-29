@@ -153,7 +153,7 @@ export const SendRegistration = () => {
 	}, [activeWallet, activeProfile, connect]);
 
 	useEffect(() => {
-		if (!isConnected && hasDeviceAvailable && isWaitingLedger) {
+		if (!isConnected && ledgerDevice?.id && isWaitingLedger) {
 			void connectLedger();
 		}
 
@@ -161,7 +161,7 @@ export const SendRegistration = () => {
 			void handleSubmit();
 			setIsWaitingLedger(false);
 		}
-	}, [hasDeviceAvailable, isLedgerModelSupported, isWaitingLedger]);
+	}, [ledgerDevice?.id, isConnected, isLedgerModelSupported, isWaitingLedger]);
 
 	useKeydown("Enter", () => {
 		const isButton = (document.activeElement as any)?.type === "button";
@@ -293,6 +293,9 @@ export const SendRegistration = () => {
 												Contracts.WalletLedgerModel.NanoSP,
 											]}
 											ledgerConnectedModel={ledgerDevice?.id}
+											onDeviceNotAvailable={() => {
+												//
+											}}
 										/>
 									</TabPanel>
 
