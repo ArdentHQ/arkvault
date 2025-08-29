@@ -5,7 +5,6 @@ import {
 	env,
 	getDefaultProfileId,
 	getDefaultWalletMnemonic,
-	mockProfileWithPublicAndTestNetworks,
 	render,
 	screen,
 	syncFees,
@@ -22,6 +21,11 @@ import { SendTransferSidePanel } from "./SendTransferSidePanel";
 import transactionFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/transfer.json";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import userEvent from "@testing-library/user-event";
+import * as LedgerTransportFactory from "@/app/contexts/Ledger/transport";
+import * as AppContexts from "@/app/contexts";
+import * as hooks from "@/domains/transaction/hooks";
+import * as pendingHook from "@/domains/transaction/hooks/use-pending-transactions";
+import * as appHooks from "@/app/hooks";
 
 const passphrase = getDefaultWalletMnemonic();
 const fixtureProfileId = getDefaultProfileId();
@@ -85,7 +89,6 @@ const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
 let firstWalletAddress: string;
-let resetProfileNetworksMock: () => void;
 
 const selectFirstRecipient = () => userEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
 const selectRecipient = () =>
@@ -139,7 +142,6 @@ describe("SendTransferSidePanel", () => {
 	});
 
 	beforeEach(() => {
-		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 		vi.spyOn(wallet, "balance").mockReturnValue(1_000_000_000_000_000_000);
 
 		vi.spyOn(useConfirmedTransactionMock, "useConfirmedTransaction").mockReturnValue({
@@ -150,7 +152,6 @@ describe("SendTransferSidePanel", () => {
 
 	afterEach(() => {
 		vi.restoreAllMocks();
-		resetProfileNetworksMock();
 	});
 
 	it("should send a single transfer via side panel", async () => {
@@ -206,5 +207,481 @@ describe("SendTransferSidePanel", () => {
 		signMock.mockRestore();
 		broadcastMock.mockRestore();
 		transactionMock.mockRestore();
+	});
+
+	it("should advance to ReviewStep on Enter when form valid and focus is not a button", async () => {
+		render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: `/profiles/${fixtureProfileId}/dashboard`,
+		});
+
+		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
+
+		await selectFirstSenderAddress();
+		await selectRecipient();
+		await expect(screen.findByTestId("Modal__inner")).resolves.toBeInTheDocument();
+		await selectFirstRecipient();
+		await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__input")[0]).toHaveValue(firstWalletAddress));
+
+		await userEvent.clear(screen.getByTestId("AddRecipient__amount"));
+		await userEvent.type(screen.getByTestId("AddRecipient__amount"), "1");
+		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("1"));
+
+		await waitFor(() => expect(continueButton()).not.toBeDisabled());
+		await userEvent.keyboard("{Enter}");
+
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
+	});
+
+	it("should do nothing on Enter when focus is on a button", async () => {
+		render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: `/profiles/${fixtureProfileId}/dashboard`,
+		});
+
+		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
+
+		screen.getByTestId("SendTransfer__back-button").focus();
+		await userEvent.keyboard("{Enter}");
+
+		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
+	});
+
+	it("should do nothing on Enter when next is disabled (invalid form)", async () => {
+		render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: `/profiles/${fixtureProfileId}/dashboard`,
+		});
+
+		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
+
+		await userEvent.keyboard("{Enter}");
+
+		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
+	});
+
+	it("should do nothing on Enter when at or past AuthenticationStep", async () => {
+		render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: `/profiles/${fixtureProfileId}/dashboard`,
+		});
+
+		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
+		await selectFirstSenderAddress();
+		await selectRecipient();
+		await expect(screen.findByTestId("Modal__inner")).resolves.toBeInTheDocument();
+		await selectFirstRecipient();
+		await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__input")[0]).toHaveValue(firstWalletAddress));
+
+		await userEvent.clear(screen.getByTestId("AddRecipient__amount"));
+		await userEvent.type(screen.getByTestId("AddRecipient__amount"), "1");
+		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("1"));
+
+		await waitFor(() => expect(continueButton()).not.toBeDisabled());
+		await userEvent.click(continueButton());
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
+
+		await userEvent.click(continueButton());
+		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
+
+		await userEvent.keyboard("{Enter}");
+		expect(screen.getByTestId("AuthenticationStep")).toBeInTheDocument();
+	});
+
+	it("should confirm unconfirmed modal and proceed to summary", async () => {
+		server.use(
+			requestMock(
+				`https://dwallets-evm.mainsailhq.com/api/transactions/8e4a8c3eaf2f9543a5bd61bb85ddd2205d5091597a77446c8b99692e0854b978`,
+				transactionFixture,
+			),
+		);
+
+		const useTransactionSpy = vi.spyOn(hooks, "useTransaction").mockReturnValue({
+			fetchWalletUnconfirmedTransactions: vi.fn().mockResolvedValue([signedTransactionMock]),
+		} as any);
+
+		vi.spyOn(pendingHook, "usePendingTransactions").mockReturnValue({
+			addPendingTransaction: vi.fn(),
+		} as any);
+
+		render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: `/profiles/${fixtureProfileId}/dashboard`,
+		});
+
+		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
+
+		await selectFirstSenderAddress();
+		await selectRecipient();
+		await expect(screen.findByTestId("Modal__inner")).resolves.toBeInTheDocument();
+		await selectFirstRecipient();
+		await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__input")[0]).toHaveValue(firstWalletAddress));
+
+		await userEvent.clear(screen.getByTestId("AddRecipient__amount"));
+		await userEvent.type(screen.getByTestId("AddRecipient__amount"), "1");
+		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("1"));
+
+		await waitFor(() => expect(continueButton()).not.toBeDisabled(), { interval: 5 });
+		await userEvent.click(continueButton());
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
+
+		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
+		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
+
+		await userEvent.click(continueButton());
+		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
+
+		await userEvent.clear(screen.getByTestId("AuthenticationStep__mnemonic"));
+		await userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
+		await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
+
+		const signMock = vi
+			.spyOn(wallet.transaction(), "signTransfer")
+			.mockReturnValue(Promise.resolve(transactionFixture.data.hash));
+		const broadcastMock = vi
+			.spyOn(wallet.transaction(), "broadcast")
+			.mockResolvedValue({ accepted: [transactionFixture.data.hash], errors: {}, rejected: [] });
+		const transactionMock = createTransactionMock(wallet);
+
+		await userEvent.click(sendButton());
+
+		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
+		await userEvent.click(screen.getByTestId("ConfirmSendTransaction__confirm"));
+
+		await waitFor(() => expect(screen.getByTestId("SendTransfer__close-button")).toBeVisible());
+
+		signMock.mockRestore();
+		broadcastMock.mockRestore();
+		transactionMock.mockRestore();
+		useTransactionSpy.mockRestore();
+	});
+
+	it("should connect ledger and auto submit when moving to AuthenticationStep", async () => {
+		server.use(
+			requestMock(
+				`https://dwallets-evm.mainsailhq.com/api/transactions/8e4a8c3eaf2f9543a5bd61bb85ddd2205d5091597a77446c8b99692e0854b978`,
+				transactionFixture,
+			),
+			requestMock(`https://dwallets-evm.mainsailhq.com/api/blocks*`, { data: {} }),
+		);
+
+		const transportSpy = vi.spyOn(LedgerTransportFactory, "isLedgerTransportSupported").mockReturnValue(true);
+		const connectMock = vi.fn().mockResolvedValue(undefined);
+		const ledgerCtxSpy = vi.spyOn(AppContexts, "useLedgerContext").mockReturnValue({
+			connect: connectMock,
+			hasDeviceAvailable: true,
+			isConnected: true,
+			ledgerDevice: { id: "nanoSP" },
+			listenDevice: vi.fn(),
+		} as any);
+
+		vi.spyOn(pendingHook, "usePendingTransactions").mockReturnValue({
+			addPendingTransaction: vi.fn(),
+		} as any);
+
+		vi.spyOn(wallet, "isLedger").mockReturnValue(true);
+		vi.spyOn(profile.ledger(), "isNanoX").mockResolvedValue(true);
+		vi.spyOn(profile.ledger(), "getPublicKey").mockResolvedValue(
+			"0335a27397927bfa1704116814474d39c2b933aabb990e7226389f022886e48deb",
+		);
+		const address = wallet.address();
+		const balance = wallet.balance();
+		const derivationPath = "m/44'/1'/1'/0/0";
+		vi.spyOn(wallet.data(), "get").mockImplementation((key) => {
+			if (key == Contracts.WalletData.Address) {
+				return address;
+			}
+			if (key == Contracts.WalletData.Balance) {
+				return balance;
+			}
+			if (key == Contracts.WalletData.DerivationPath) {
+				return derivationPath;
+			}
+		});
+		vi.spyOn(wallet, "balance").mockReturnValue(1_000_000_000_000_000_000);
+
+		render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: `/profiles/${fixtureProfileId}/dashboard`,
+		});
+
+		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
+
+		await selectFirstSenderAddress();
+
+		await selectRecipient();
+		await expect(screen.findByTestId("Modal__inner")).resolves.toBeInTheDocument();
+		await selectFirstRecipient();
+		await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__input")[0]).toHaveValue(firstWalletAddress));
+
+		await userEvent.clear(screen.getByTestId("AddRecipient__amount"));
+		await userEvent.type(screen.getByTestId("AddRecipient__amount"), "1");
+		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("1"));
+
+		await waitFor(() => expect(continueButton()).not.toBeDisabled(), { interval: 5 });
+		await userEvent.click(continueButton());
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
+
+		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
+		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
+
+		const signMock = vi
+			.spyOn(wallet.transaction(), "signTransfer")
+			.mockReturnValue(Promise.resolve(transactionFixture.data.hash));
+		const broadcastMock = vi
+			.spyOn(wallet.transaction(), "broadcast")
+			.mockResolvedValue({ accepted: [transactionFixture.data.hash], errors: {}, rejected: [] });
+		const transactionMock = createTransactionMock(wallet);
+
+		await userEvent.click(continueButton());
+
+		await waitFor(() => expect(connectMock).toHaveBeenCalled());
+		await waitFor(() => expect(signMock).toHaveBeenCalled());
+		await waitFor(() => expect(broadcastMock).toHaveBeenCalled());
+		await waitFor(() => expect(screen.getByTestId("SendTransfer__close-button")).toBeVisible());
+
+		transportSpy.mockRestore();
+		ledgerCtxSpy.mockRestore();
+		signMock.mockRestore();
+		broadcastMock.mockRestore();
+		transactionMock.mockRestore();
+	});
+
+	it("should auto-select sole wallet when none set", async () => {
+		const useActiveWalletSpy = vi.spyOn(appHooks, "useActiveWalletWhenNeeded").mockReturnValue(undefined as any);
+		const countSpy = vi.spyOn(profile.wallets(), "count").mockReturnValue(1 as any);
+		const valuesSpy = vi.spyOn(profile.wallets(), "values").mockReturnValue([wallet] as any);
+
+		render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: `/profiles/${fixtureProfileId}/dashboard`,
+		});
+
+		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
+		await waitFor(() =>
+			expect(within(screen.getByTestId("sender-address")).getByTestId("SelectDropdown__input")).toHaveValue(
+				firstWalletAddress,
+			),
+		);
+
+		useActiveWalletSpy.mockRestore();
+		countSpy.mockRestore();
+		valuesSpy.mockRestore();
+	});
+
+	it("should open unconfirmed transactions modal and close it", async () => {
+		const useTransactionSpy = vi.spyOn(hooks, "useTransaction").mockReturnValue({
+			fetchWalletUnconfirmedTransactions: vi.fn().mockResolvedValue([signedTransactionMock]),
+		} as any);
+
+		render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: `/profiles/${fixtureProfileId}/dashboard`,
+		});
+
+		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
+
+		await selectFirstSenderAddress();
+		await selectRecipient();
+		await expect(screen.findByTestId("Modal__inner")).resolves.toBeInTheDocument();
+		await selectFirstRecipient();
+		await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__input")[0]).toHaveValue(firstWalletAddress));
+
+		await userEvent.clear(screen.getByTestId("AddRecipient__amount"));
+		await userEvent.type(screen.getByTestId("AddRecipient__amount"), "1");
+		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("1"));
+
+		await waitFor(() => expect(continueButton()).not.toBeDisabled(), { interval: 5 });
+		await userEvent.click(continueButton());
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
+
+		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
+		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
+
+		await userEvent.click(continueButton());
+		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
+
+		await userEvent.clear(screen.getByTestId("AuthenticationStep__mnemonic"));
+		await userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
+		await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
+
+		await userEvent.click(sendButton());
+
+		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
+		await userEvent.click(screen.getByTestId("ConfirmSendTransaction__cancel"));
+		await waitFor(() => expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument());
+
+		useTransactionSpy.mockRestore();
+	});
+
+	it("should show ErrorStep on sign error and allow going back", async () => {
+		const onOpenChange = vi.fn();
+		render(<SendTransferSidePanel open={true} onOpenChange={onOpenChange} />, {
+			route: `/profiles/${fixtureProfileId}/dashboard`,
+		});
+
+		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
+
+		await selectFirstSenderAddress();
+		await selectRecipient();
+		await expect(screen.findByTestId("Modal__inner")).resolves.toBeInTheDocument();
+		await selectFirstRecipient();
+		await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__input")[0]).toHaveValue(firstWalletAddress));
+
+		await userEvent.clear(screen.getByTestId("AddRecipient__amount"));
+		await userEvent.type(screen.getByTestId("AddRecipient__amount"), "1");
+		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("1"));
+
+		await waitFor(() => expect(continueButton()).not.toBeDisabled(), { interval: 5 });
+		await userEvent.click(continueButton());
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
+
+		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
+		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
+
+		await userEvent.click(continueButton());
+		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
+
+		await userEvent.clear(screen.getByTestId("AuthenticationStep__mnemonic"));
+		await userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
+		await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
+
+		const signMock = vi.spyOn(wallet.transaction(), "signTransfer").mockImplementation(() => {
+			throw new Error("broadcast error");
+		});
+
+		await userEvent.click(sendButton());
+		await expect(screen.findByTestId("ErrorStep")).resolves.toBeVisible();
+
+		await userEvent.click(screen.getByTestId("ErrorStep__back-button"));
+		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
+
+		signMock.mockRestore();
+	});
+
+	it("should show ErrorStep on sign error and allow closing side panel", async () => {
+		const onOpenChange = vi.fn();
+		render(<SendTransferSidePanel open={true} onOpenChange={onOpenChange} />, {
+			route: `/profiles/${fixtureProfileId}/dashboard`,
+		});
+
+		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
+
+		await selectFirstSenderAddress();
+		await selectRecipient();
+		await expect(screen.findByTestId("Modal__inner")).resolves.toBeInTheDocument();
+		await selectFirstRecipient();
+		await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__input")[0]).toHaveValue(firstWalletAddress));
+
+		await userEvent.clear(screen.getByTestId("AddRecipient__amount"));
+		await userEvent.type(screen.getByTestId("AddRecipient__amount"), "1");
+		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("1"));
+
+		await waitFor(() => expect(continueButton()).not.toBeDisabled(), { interval: 5 });
+		await userEvent.click(continueButton());
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
+
+		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
+		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
+
+		await userEvent.click(continueButton());
+		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
+
+		await userEvent.clear(screen.getByTestId("AuthenticationStep__mnemonic"));
+		await userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
+		await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
+
+		const signMock = vi.spyOn(wallet.transaction(), "signTransfer").mockImplementation(() => {
+			throw new Error("broadcast error");
+		});
+
+		await userEvent.click(sendButton());
+		await expect(screen.findByTestId("ErrorStep")).resolves.toBeVisible();
+
+		await userEvent.click(screen.getByTestId("ErrorStep__close-button"));
+		await waitFor(() => expect(onOpenChange).toHaveBeenCalledWith(false));
+
+		signMock.mockRestore();
+	});
+
+	it("should show ErrorStep when device not available on AuthenticationStep", async () => {
+		vi.spyOn(LedgerTransportFactory, "isLedgerTransportSupported").mockReturnValue(false);
+		vi.spyOn(wallet, "isLedger").mockReturnValue(true);
+
+		render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: `/profiles/${fixtureProfileId}/dashboard`,
+		});
+
+		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
+
+		await selectFirstSenderAddress();
+		await selectRecipient();
+		await expect(screen.findByTestId("Modal__inner")).resolves.toBeInTheDocument();
+		await selectFirstRecipient();
+		await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__input")[0]).toHaveValue(firstWalletAddress));
+
+		await userEvent.clear(screen.getByTestId("AddRecipient__amount"));
+		await userEvent.type(screen.getByTestId("AddRecipient__amount"), "1");
+		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("1"));
+
+		await waitFor(() => expect(continueButton()).not.toBeDisabled(), { interval: 5 });
+		await userEvent.click(continueButton());
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
+
+		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
+		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
+
+		await userEvent.click(continueButton());
+
+		await expect(screen.findByTestId("ErrorStep")).resolves.toBeVisible();
+	});
+
+	it("should close side panel from summary step", async () => {
+		server.use(
+			requestMock(
+				`https://dwallets-evm.mainsailhq.com/api/transactions/8e4a8c3eaf2f9543a5bd61bb85ddd2205d5091597a77446c8b99692e0854b978`,
+				transactionFixture,
+			),
+			requestMock(`https://dwallets-evm.mainsailhq.com/api/blocks*`, { data: {} }),
+		);
+
+		const useTransactionSpy = vi.spyOn(hooks, "useTransaction").mockReturnValue({
+			fetchWalletUnconfirmedTransactions: vi.fn().mockResolvedValue([signedTransactionMock]),
+		} as any);
+		vi.spyOn(pendingHook, "usePendingTransactions").mockReturnValue({ addPendingTransaction: vi.fn() } as any);
+
+		const onOpenChange = vi.fn();
+		render(<SendTransferSidePanel open={true} onOpenChange={onOpenChange} />, {
+			route: `/profiles/${fixtureProfileId}/dashboard`,
+		});
+
+		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
+		await selectFirstSenderAddress();
+		await selectRecipient();
+		await expect(screen.findByTestId("Modal__inner")).resolves.toBeInTheDocument();
+		await selectFirstRecipient();
+		await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__input")[0]).toHaveValue(firstWalletAddress));
+		await userEvent.clear(screen.getByTestId("AddRecipient__amount"));
+		await userEvent.type(screen.getByTestId("AddRecipient__amount"), "1");
+		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("1"));
+		await waitFor(() => expect(continueButton()).not.toBeDisabled());
+		await userEvent.click(continueButton());
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
+		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
+		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
+		await userEvent.click(continueButton());
+		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
+		await userEvent.clear(screen.getByTestId("AuthenticationStep__mnemonic"));
+		await userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
+		await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
+		const signMock = vi
+			.spyOn(wallet.transaction(), "signTransfer")
+			.mockReturnValue(Promise.resolve(transactionFixture.data.hash));
+		const broadcastMock = vi
+			.spyOn(wallet.transaction(), "broadcast")
+			.mockResolvedValue({ accepted: [transactionFixture.data.hash], errors: {}, rejected: [] });
+		const transactionMock = createTransactionMock(wallet);
+		await userEvent.click(sendButton());
+		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
+		await userEvent.click(screen.getByTestId("ConfirmSendTransaction__confirm"));
+		await waitFor(() => expect(screen.getByTestId("SendTransfer__close-button")).toBeVisible());
+		await userEvent.click(screen.getByTestId("SendTransfer__close-button"));
+		await waitFor(() => expect(onOpenChange).toHaveBeenCalledWith(false));
+		signMock.mockRestore();
+		broadcastMock.mockRestore();
+		transactionMock.mockRestore();
+		useTransactionSpy.mockRestore();
 	});
 });

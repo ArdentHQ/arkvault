@@ -49,7 +49,7 @@ export const SendRegistration = () => {
 
 	const { isLedgerModelSupported } = useLedgerModelStatus({
 		connectedModel: ledgerDevice?.id,
-		supportedModels: [Contracts.WalletLedgerModel.NanoX],
+		supportedModels: [Contracts.WalletLedgerModel.NanoX, Contracts.WalletLedgerModel.NanoSP],
 	});
 
 	const form = useForm({ mode: "onChange" });
@@ -284,7 +284,10 @@ export const SendRegistration = () => {
 											wallet={activeWallet!}
 											ledgerIsAwaitingDevice={!hasDeviceAvailable}
 											ledgerIsAwaitingApp={!isConnected}
-											ledgerSupportedModels={[Contracts.WalletLedgerModel.NanoX]}
+											ledgerSupportedModels={[
+												Contracts.WalletLedgerModel.NanoX,
+												Contracts.WalletLedgerModel.NanoSP,
+											]}
 											ledgerConnectedModel={ledgerDevice?.id}
 										/>
 									</TabPanel>

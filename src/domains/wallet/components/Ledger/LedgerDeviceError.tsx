@@ -27,6 +27,7 @@ export const LedgerDeviceErrorContent = ({
 
 	const modelNames = {
 		[Contracts.WalletLedgerModel.NanoS]: t("WALLETS.MODAL_LEDGER_WALLET.LEDGER_NANO_S"),
+		[Contracts.WalletLedgerModel.NanoSP]: t("WALLETS.MODAL_LEDGER_WALLET.LEDGER_NANO_S_PLUS"),
 		[Contracts.WalletLedgerModel.NanoX]: t("WALLETS.MODAL_LEDGER_WALLET.LEDGER_NANO_X"),
 	};
 

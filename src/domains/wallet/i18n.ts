@@ -42,10 +42,11 @@ export const translations = {
 		CONNECT_SUCCESS: "Successfully connected.",
 		DEVICE_NOT_AVAILABLE: "Unable to detect Ledger device.",
 		DEVICE_NOT_SUPPORTED:
-			"A <bold>{{connectedModel}}</bold> is connected, but his operation requires a <bold>{{supportedModel}}</bold>. Connect the appropriate device to continue.",
+			"A <bold>{{connectedModel}}</bold> is connected, but this operation requires a <bold>{{supportedModel}}</bold>. Connect the appropriate device to continue.",
 		GENERIC_CONNECTION_ERROR:
 			"Unable to connect to Ledger device. Please ensure that all other applications that connect to your Ledger are closed.",
 		LEDGER_NANO_S: "Ledger Nano S",
+		LEDGER_NANO_S_PLUS: "Ledger Nano S Plus",
 		LEDGER_NANO_X: "Ledger Nano X",
 		NO_DEVICE_FOUND: "Ledger device has not been found in time.",
 		OPEN_APP: "Open the {{coin}} app on your device ...",

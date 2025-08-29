@@ -202,7 +202,7 @@ export class ConfirmedTransactionData {
 		}
 
 		if (this.isMultiPayment()) {
-			return this.recipients().some(({ address }: Contracts.MultiPaymentRecipient) => address === this.from());
+			return this.recipients().every(({ address }: Contracts.MultiPaymentRecipient) => address === this.from());
 		}
 
 		return false;

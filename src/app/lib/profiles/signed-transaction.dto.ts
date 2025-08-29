@@ -67,16 +67,7 @@ export class ExtendedSignedTransactionData {
 		}
 
 		if (this.isMultiPayment()) {
-			let isReturn = true;
-
-			for (const recipient of this.recipients().values()) {
-				if (recipient.address !== this.from()) {
-					isReturn = false;
-					break;
-				}
-			}
-
-			return isReturn;
+			return this.recipients().every(({ address }) => address === this.from());
 		}
 
 		return false;
