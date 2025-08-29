@@ -78,7 +78,7 @@ describe("usePendingTransactions", () => {
 		const mockTransaction = createMockTransaction(wallet);
 
 		act(() => {
-			result.current.addPendingTransaction(mockTransaction);
+			result.current.addPendingTransactionFromSigned(mockTransaction);
 		});
 
 		expect(result.current.pendingTransactions).toHaveLength(1);
@@ -98,11 +98,11 @@ describe("usePendingTransactions", () => {
 		});
 
 		act(() => {
-			result.current.addPendingTransaction(mockTransaction1);
+			result.current.addPendingTransactionFromSigned(mockTransaction1);
 		});
 
 		act(() => {
-			result.current.addPendingTransaction(mockTransaction2);
+			result.current.addPendingTransactionFromSigned(mockTransaction2);
 		});
 
 		expect(result.current.pendingTransactions).toHaveLength(2);
@@ -119,11 +119,11 @@ describe("usePendingTransactions", () => {
 
 		// Add the same transaction twice
 		act(() => {
-			result.current.addPendingTransaction(mockTransaction);
+			result.current.addPendingTransactionFromSigned(mockTransaction);
 		});
 
 		act(() => {
-			result.current.addPendingTransaction(mockTransaction);
+			result.current.addPendingTransactionFromSigned(mockTransaction);
 		});
 
 		// Should only have one transaction (duplicate replaced)
@@ -143,8 +143,8 @@ describe("usePendingTransactions", () => {
 
 		// Add two transactions
 		act(() => {
-			result.current.addPendingTransaction(mockTransaction1);
-			result.current.addPendingTransaction(mockTransaction2);
+			result.current.addPendingTransactionFromSigned(mockTransaction1);
+			result.current.addPendingTransactionFromSigned(mockTransaction2);
 		});
 
 		expect(result.current.pendingTransactions).toHaveLength(2);
@@ -164,7 +164,7 @@ describe("usePendingTransactions", () => {
 		const mockTransaction = createMockTransaction(wallet);
 
 		act(() => {
-			result.current.addPendingTransaction(mockTransaction);
+			result.current.addPendingTransactionFromSigned(mockTransaction);
 		});
 
 		expect(result.current.pendingTransactions).toHaveLength(1);
@@ -194,7 +194,7 @@ describe("usePendingTransactions", () => {
 		} as unknown as DTO.ExtendedSignedTransactionData;
 
 		act(() => {
-			result.current.addPendingTransaction(mockTransaction);
+			result.current.addPendingTransactionFromSigned(mockTransaction);
 		});
 
 		// Should not add the transaction and should remain empty

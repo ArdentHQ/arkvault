@@ -52,7 +52,7 @@ export const SendTransfer = () => {
 
 	const { fetchWalletUnconfirmedTransactions } = useTransaction();
 	const { hasDeviceAvailable, isConnected, connect } = useLedgerContext();
-	const { addPendingTransaction } = usePendingTransactions();
+	const { addPendingTransactionFromSigned } = usePendingTransactions();
 
 	const { hasReset: shouldResetForm, queryParameters: deepLinkParameters } = useTransactionQueryParameters();
 
@@ -150,7 +150,7 @@ export const SendTransfer = () => {
 			try {
 				const transaction = await submitForm(abortReference);
 
-				addPendingTransaction(transaction);
+				addPendingTransactionFromSigned(transaction);
 
 				setTransaction(transaction);
 				setActiveTab(SendTransferStep.SummaryStep);

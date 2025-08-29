@@ -56,7 +56,7 @@ export const SendVote = () => {
 		profile: activeProfile,
 	});
 
-	const { addPendingTransaction } = usePendingTransactions();
+	const { addPendingTransactionFromSigned } = usePendingTransactions();
 
 	const walletFromUrl = useActiveWalletWhenNeeded(false);
 	const initialStep = useMemo(() => (walletFromUrl ? Step.ReviewStep : Step.FormStep), [walletFromUrl]);
@@ -327,7 +327,7 @@ export const SendVote = () => {
 
 					await persist();
 
-					addPendingTransaction(transaction);
+					addPendingTransactionFromSigned(transaction);
 
 					setTransaction(transaction);
 
@@ -381,7 +381,7 @@ export const SendVote = () => {
 
 					await persist();
 
-					addPendingTransaction(voteResult.transaction);
+					addPendingTransactionFromSigned(voteResult.transaction);
 
 					setTransaction(voteResult.transaction);
 
@@ -419,7 +419,7 @@ export const SendVote = () => {
 
 				await persist();
 
-				addPendingTransaction(transaction);
+				addPendingTransactionFromSigned(transaction);
 
 				setTransaction(transaction);
 

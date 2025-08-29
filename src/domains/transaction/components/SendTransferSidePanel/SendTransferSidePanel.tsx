@@ -57,7 +57,7 @@ export const SendTransferSidePanel = ({
 
 	const { fetchWalletUnconfirmedTransactions } = useTransaction();
 	const { hasDeviceAvailable, isConnected, connect } = useLedgerContext();
-	const { addPendingTransaction } = usePendingTransactions();
+	const { addPendingTransactionFromSigned } = usePendingTransactions();
 
 	const { hasReset: shouldResetForm, queryParameters: deepLinkParameters } = useTransactionQueryParameters();
 
@@ -166,7 +166,7 @@ export const SendTransferSidePanel = ({
 			try {
 				const transaction = await submitForm(abortReference);
 
-				addPendingTransaction(transaction);
+				addPendingTransactionFromSigned(transaction);
 
 				setTransaction(transaction);
 				setActiveTab(SendTransferStep.SummaryStep);
@@ -175,7 +175,7 @@ export const SendTransferSidePanel = ({
 				setActiveTab(SendTransferStep.ErrorStep);
 			}
 		},
-		[fetchWalletUnconfirmedTransactions, submitForm, wallet, addPendingTransaction],
+		[fetchWalletUnconfirmedTransactions, submitForm, wallet, addPendingTransactionFromSigned],
 	);
 
 	const handleBack = () => {

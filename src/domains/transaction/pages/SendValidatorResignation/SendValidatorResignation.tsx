@@ -42,7 +42,7 @@ export const SendValidatorResignation = () => {
 
 	const { senderAddress, gasLimit, gasPrice } = watch();
 	const { common } = useValidation();
-	const { addPendingTransaction } = usePendingTransactions();
+	const { addPendingTransactionFromSigned } = usePendingTransactions();
 
 	const [activeTab, setActiveTab] = useState<Step>(Step.FormStep);
 	const [transaction, setTransaction] = useState(undefined as unknown as DTO.ExtendedSignedTransactionData);
@@ -144,7 +144,7 @@ export const SendValidatorResignation = () => {
 
 			const transactionData = activeWallet.transaction().transaction(signedTransactionId);
 
-			addPendingTransaction(transactionData);
+			addPendingTransactionFromSigned(transactionData);
 			setTransaction(transactionData);
 
 			handleNext();

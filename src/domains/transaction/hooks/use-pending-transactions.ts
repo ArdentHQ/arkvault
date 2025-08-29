@@ -13,7 +13,7 @@ export interface PendingTransactionData {
 
 interface UsePendingTransactionsReturn {
 	pendingTransactions: PendingTransactionData[];
-	addPendingTransaction: (transaction: DTO.ExtendedSignedTransactionData) => void;
+	addPendingTransactionFromSigned: (transaction: DTO.ExtendedSignedTransactionData) => void;
 	addPendingTransactionFromUnconfirmed: (
 		input: UnconfirmedTransaction & {
 			walletAddress: string;
@@ -30,7 +30,7 @@ export const usePendingTransactions = (): UsePendingTransactionsReturn => {
 		[],
 	);
 
-	const addPendingTransaction = useCallback(
+	const addPendingTransactionFromSigned = useCallback(
 		(transaction: DTO.ExtendedSignedTransactionData) => {
 			try {
 				const data = transaction.data();
@@ -99,7 +99,7 @@ export const usePendingTransactions = (): UsePendingTransactionsReturn => {
 	);
 
 	return {
-		addPendingTransaction,
+		addPendingTransactionFromSigned,
 		addPendingTransactionFromUnconfirmed,
 		pendingTransactions,
 		removePendingTransaction,

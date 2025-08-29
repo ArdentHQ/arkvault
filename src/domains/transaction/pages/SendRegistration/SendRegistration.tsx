@@ -43,7 +43,7 @@ export const SendRegistration = () => {
 	const { env } = useEnvironmentContext();
 	const activeProfile = useActiveProfile();
 	const { common, validatorRegistration } = useValidation();
-	const { addPendingTransaction } = usePendingTransactions();
+	const { addPendingTransactionFromSigned } = usePendingTransactions();
 
 	const { hasDeviceAvailable, isConnected, connect, ledgerDevice } = useLedgerContext();
 
@@ -191,7 +191,7 @@ export const SendRegistration = () => {
 					signatory,
 				});
 
-				addPendingTransaction(transaction);
+				addPendingTransactionFromSigned(transaction);
 				setTransaction(transaction);
 				handleNext();
 			}
@@ -204,7 +204,7 @@ export const SendRegistration = () => {
 					signatory,
 				});
 
-				addPendingTransaction(transaction);
+				addPendingTransactionFromSigned(transaction);
 				setTransaction(transaction);
 				handleNext();
 			}
