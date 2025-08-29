@@ -204,7 +204,7 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 		[initialStep, activeTab],
 	);
 
-	console.log(isConnected, ledgerDevice, isWaitingLedger, errors)
+	console.log(isConnected, ledgerDevice, isWaitingLedger, errors);
 	useEffect(() => {
 		if (!isConnected && ledgerDevice?.id && isWaitingLedger) {
 			void connectLedger();
@@ -266,7 +266,7 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 		setActiveTab(newIndex);
 
 		if (isLedgerTransaction) {
-			await connectLedger()
+			await connectLedger();
 		}
 	};
 
