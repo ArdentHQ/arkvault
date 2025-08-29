@@ -62,7 +62,7 @@ exports[`SearchRecipient > should call onAction when no address is selected 1`] 
             class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 border-b px-6 py-3.5"
           >
             <h2
-              class="mb-0 max-w-[calc(100%_-_32px)] text-lg leading-5 font-semibold md:pt-0 md:text-lg"
+              class="mb-0 max-w-[calc(100%_-_32px)] text-lg leading-5 font-semibold md:pt-0 md:text-lg text-theme-text"
             >
               Recipient Search
             </h2>
@@ -471,7 +471,7 @@ exports[`SearchRecipient > should render a modal 1`] = `
             class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 border-b px-6 py-3.5"
           >
             <h2
-              class="mb-0 max-w-[calc(100%_-_32px)] text-lg leading-5 font-semibold md:pt-0 md:text-lg"
+              class="mb-0 max-w-[calc(100%_-_32px)] text-lg leading-5 font-semibold md:pt-0 md:text-lg text-theme-text"
             >
               Recipient Search
             </h2>
@@ -878,7 +878,7 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
             class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 border-b px-6 py-3.5"
           >
             <h2
-              class="mb-0 max-w-[calc(100%_-_32px)] text-lg leading-5 font-semibold md:pt-0 md:text-lg"
+              class="mb-0 max-w-[calc(100%_-_32px)] text-lg leading-5 font-semibold md:pt-0 md:text-lg text-theme-text"
             >
               Modal title
             </h2>
@@ -1285,7 +1285,7 @@ exports[`SearchRecipient > should render with contact on desktop 1`] = `
             class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 border-b px-6 py-3.5"
           >
             <h2
-              class="mb-0 max-w-[calc(100%_-_32px)] text-lg leading-5 font-semibold md:pt-0 md:text-lg"
+              class="mb-0 max-w-[calc(100%_-_32px)] text-lg leading-5 font-semibold md:pt-0 md:text-lg text-theme-text"
             >
               Recipient Search
             </h2>
@@ -1592,7 +1592,7 @@ exports[`SearchRecipient > should render with contact on mobile 1`] = `
             class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 border-b px-6 py-3.5"
           >
             <h2
-              class="mb-0 max-w-[calc(100%_-_32px)] text-lg leading-5 font-semibold md:pt-0 md:text-lg"
+              class="mb-0 max-w-[calc(100%_-_32px)] text-lg leading-5 font-semibold md:pt-0 md:text-lg text-theme-text"
             >
               Recipient Search
             </h2>
@@ -1921,7 +1921,7 @@ exports[`SearchRecipient > should render with my address on desktop 1`] = `
             class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 border-b px-6 py-3.5"
           >
             <h2
-              class="mb-0 max-w-[calc(100%_-_32px)] text-lg leading-5 font-semibold md:pt-0 md:text-lg"
+              class="mb-0 max-w-[calc(100%_-_32px)] text-lg leading-5 font-semibold md:pt-0 md:text-lg text-theme-text"
             >
               Recipient Search
             </h2>
@@ -2228,7 +2228,7 @@ exports[`SearchRecipient > should render with my address on mobile 1`] = `
             class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 border-b px-6 py-3.5"
           >
             <h2
-              class="mb-0 max-w-[calc(100%_-_32px)] text-lg leading-5 font-semibold md:pt-0 md:text-lg"
+              class="mb-0 max-w-[calc(100%_-_32px)] text-lg leading-5 font-semibold md:pt-0 md:text-lg text-theme-text"
             >
               Recipient Search
             </h2>
@@ -2557,7 +2557,7 @@ exports[`SearchRecipient > should render with no alias if the recipient address 
             class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 border-b px-6 py-3.5"
           >
             <h2
-              class="mb-0 max-w-[calc(100%_-_32px)] text-lg leading-5 font-semibold md:pt-0 md:text-lg"
+              class="mb-0 max-w-[calc(100%_-_32px)] text-lg leading-5 font-semibold md:pt-0 md:text-lg text-theme-text"
             >
               Recipient Search
             </h2>
@@ -2864,7 +2864,7 @@ exports[`SearchRecipient > should render with selected address 1`] = `
             class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 border-b px-6 py-3.5"
           >
             <h2
-              class="mb-0 max-w-[calc(100%_-_32px)] text-lg leading-5 font-semibold md:pt-0 md:text-lg"
+              class="mb-0 max-w-[calc(100%_-_32px)] text-lg leading-5 font-semibold md:pt-0 md:text-lg text-theme-text"
             >
               Recipient Search
             </h2>
@@ -3271,7 +3271,7 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
             class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 border-b px-6 py-3.5"
           >
             <h2
-              class="mb-0 max-w-[calc(100%_-_32px)] text-lg leading-5 font-semibold md:pt-0 md:text-lg"
+              class="mb-0 max-w-[calc(100%_-_32px)] text-lg leading-5 font-semibold md:pt-0 md:text-lg text-theme-text"
             >
               Recipient Search
             </h2>
@@ -3678,7 +3678,7 @@ exports[`SearchRecipient > should render with selected address on mobile 1`] = `
             class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 border-b px-6 py-3.5"
           >
             <h2
-              class="mb-0 max-w-[calc(100%_-_32px)] text-lg leading-5 font-semibold md:pt-0 md:text-lg"
+              class="mb-0 max-w-[calc(100%_-_32px)] text-lg leading-5 font-semibold md:pt-0 md:text-lg text-theme-text"
             >
               Recipient Search
             </h2>

@@ -56,7 +56,7 @@ export const SendTransferSidePanel = ({
 	const { activeNetwork } = useActiveNetwork({ profile: activeProfile });
 
 	const { fetchWalletUnconfirmedTransactions } = useTransaction();
-	const { hasDeviceAvailable, isConnected, connect } = useLedgerContext();
+	const { hasDeviceAvailable, isConnected, connect, ledgerDevice } = useLedgerContext();
 	const { addPendingTransaction } = usePendingTransactions();
 
 	const { hasReset: shouldResetForm, queryParameters: deepLinkParameters } = useTransactionQueryParameters();
@@ -74,6 +74,8 @@ export const SendTransferSidePanel = ({
 
 	const { urlSearchParameters } = useTransactionURL();
 	const { buildSearchParametersError, validateSearchParameters } = useSearchParametersValidation();
+
+	const [isWaitingLedger, setIsWaitingLedger] = useState(false);
 
 	const {
 		form,
@@ -95,10 +97,20 @@ export const SendTransferSidePanel = ({
 		return handleNext();
 	});
 
+	useEffect(() => {
+		if (!isConnected && ledgerDevice?.id && isWaitingLedger) {
+			void connectLedger();
+		}
+
+		if (isConnected && isWaitingLedger) {
+			void handleSubmit(() => submit(true))();
+		}
+	}, [isConnected, ledgerDevice?.id, isWaitingLedger]);
+
 	const connectLedger = useCallback(async () => {
 		if (wallet) {
 			await connect(activeProfile);
-			void handleSubmit(() => submit(true))();
+			setIsWaitingLedger(true);
 		}
 	}, [wallet, activeProfile, connect]);
 
@@ -199,16 +211,19 @@ export const SendTransferSidePanel = ({
 
 		const nextStep = activeTab + 1;
 
-		if (nextStep === SendTransferStep.AuthenticationStep && senderWallet?.isLedger()) {
-			if (!isLedgerTransportSupported()) {
-				setErrorMessage(t("WALLETS.MODAL_LEDGER_WALLET.COMPATIBILITY_ERROR"));
-				setActiveTab(SendTransferStep.ErrorStep);
-				return;
-			}
-			await connectLedger();
+		const isLedgerTransaction = nextStep === SendTransferStep.AuthenticationStep && senderWallet?.isLedger();
+
+		if (isLedgerTransaction && !isLedgerTransportSupported()) {
+			setErrorMessage(t("WALLETS.MODAL_LEDGER_WALLET.COMPATIBILITY_ERROR"));
+			setActiveTab(SendTransferStep.ErrorStep);
+			return;
 		}
 
 		setActiveTab(nextStep);
+
+		if (isLedgerTransaction) {
+			await connectLedger();
+		}
 	};
 
 	const hideStepNavigation =
@@ -332,7 +347,7 @@ export const SendTransferSidePanel = ({
 			return t("TRANSACTION.REVIEW_STEP.DESCRIPTION");
 		}
 
-		if (activeTab === SendTransferStep.AuthenticationStep) {
+		if (activeTab === SendTransferStep.AuthenticationStep && !wallet?.isLedger()) {
 			return t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_SECRET");
 		}
 
@@ -489,13 +504,7 @@ export const SendTransferSidePanel = ({
 									ledgerIsAwaitingDevice={!hasDeviceAvailable}
 									ledgerIsAwaitingApp={!isConnected}
 									onDeviceNotAvailable={() => {
-										setErrorMessage(
-											JSON.stringify({
-												message: t("WALLETS.MODAL_LEDGER_WALLET.DEVICE_NOT_AVAILABLE"),
-												type: "failed",
-											}),
-										);
-										setActiveTab(SendTransferStep.ErrorStep);
+										// keep waiting when it is not available
 									}}
 									noHeading
 								/>

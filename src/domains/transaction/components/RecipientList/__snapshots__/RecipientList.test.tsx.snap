@@ -837,6 +837,464 @@ exports[`RecipientList > should render condensed variant 1`] = `
 </div>
 `;
 
+exports[`RecipientList > should render condensed variant with amount 1`] = `
+<div>
+  <div
+    class="recipient-list w-full"
+  >
+    <div
+      class="table-wrapper"
+      role="table"
+    >
+      <table
+        cellpadding="0"
+        class="w-full table-auto"
+      >
+        <thead>
+          <tr
+            role="row"
+          >
+            <th
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 first:rounded-tl-xl last:rounded-tr-xl"
+              colspan="1"
+              data-testid="table__th--0"
+              role="columnheader"
+            >
+              <div
+                class="flex flex-inline align-top hidden"
+              >
+                <div
+                  class=""
+                >
+                  Avatar
+                </div>
+              </div>
+            </th>
+            <th
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 first:rounded-tl-xl last:rounded-tr-xl"
+              colspan="1"
+              data-testid="table__th--1"
+              role="columnheader"
+            >
+              <div
+                class="flex flex-inline align-top hidden"
+              >
+                <div
+                  class=""
+                >
+                  Address
+                </div>
+              </div>
+            </th>
+            <th
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 first:rounded-tl-xl last:rounded-tr-xl"
+              colspan="1"
+              data-testid="table__th--2"
+              role="columnheader"
+            >
+              <div
+                class="flex flex-inline align-top hidden"
+              >
+                <div
+                  class=""
+                >
+                  Amount
+                </div>
+              </div>
+            </th>
+            <th
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 first:rounded-tl-xl last:rounded-tr-xl"
+              colspan="1"
+              data-testid="table__th--3"
+              role="columnheader"
+            >
+              <div
+                class="flex flex-inline align-top hidden"
+              >
+                <div
+                  class=""
+                >
+                  Action
+                </div>
+              </div>
+            </th>
+          </tr>
+        </thead>
+        <tbody
+          role="rowgroup"
+        >
+          <tr
+            class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
+            data-testid="recipient-list__recipient-list-item"
+          >
+            <td
+              class="mr-3 table-cell md:hidden"
+            >
+              <td
+                class="flex-1 shrink-0 pl-3 text-right"
+              >
+                <span
+                  class="whitespace-nowrap"
+                  data-testid="Amount"
+                >
+                  100 ARK
+                </span>
+              </td>
+            </td>
+            <td
+              class="hidden md:table-cell"
+            >
+              <div
+                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
+                data-testid="Avatar"
+              >
+                <div
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
+                >
+                  <img
+                    alt="FJKDSALJFKASLJFKSDAJD333FKFKDSAJFKSAJFKLASJKDFJ"
+                    src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%235CA481%22%2F%3E%3C%2Fsvg%3E"
+                    title="FJKDSALJFKASLJFKSDAJD333FKFKDSAJFKSAJFKLASJKDFJ"
+                  />
+                </div>
+              </div>
+            </td>
+            <td
+              class="w-28 flex-1 justify-end md:ml-4"
+            >
+              <div
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              >
+                <span
+                  class="font-semibold text-base text-theme-text"
+                  data-testid="Address__alias"
+                >
+                  <span
+                    class="no-ligatures transition-colors duration-200"
+                    data-testid="TruncateEnd"
+                  >
+                    Recipient 1
+                  </span>
+                </span>
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
+                  data-testid="Address__address"
+                >
+                  FJKDSALJFKASLJFKSDAJD333FKFKDSAJFKSAJFKLASJKDFJ
+                </span>
+              </div>
+            </td>
+            <td
+              class="ml-2 table-cell md:hidden"
+            >
+              <div
+                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-theme-background ring-0 shrink-0"
+                data-testid="Avatar"
+              >
+                <div
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
+                >
+                  <img
+                    alt="FJKDSALJFKASLJFKSDAJD333FKFKDSAJFKSAJFKLASJKDFJ"
+                    src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%235CA481%22%2F%3E%3C%2Fsvg%3E"
+                    title="FJKDSALJFKASLJFKSDAJD333FKFKDSAJFKSAJFKLASJKDFJ"
+                  />
+                </div>
+              </div>
+            </td>
+            <td
+              class="hidden md:table-cell"
+            >
+              <td
+                class="flex-1 shrink-0 pl-3 text-right"
+              >
+                <span
+                  class="whitespace-nowrap"
+                  data-testid="Amount"
+                >
+                  100 ARK
+                </span>
+              </td>
+            </td>
+          </tr>
+          <tr
+            class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
+            data-testid="recipient-list__recipient-list-item"
+          >
+            <td
+              class="mr-3 table-cell md:hidden"
+            >
+              <td
+                class="flex-1 shrink-0 pl-3 text-right"
+              >
+                <span
+                  class="whitespace-nowrap"
+                  data-testid="Amount"
+                >
+                  100 ARK
+                </span>
+              </td>
+            </td>
+            <td
+              class="hidden md:table-cell"
+            >
+              <div
+                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
+                data-testid="Avatar"
+              >
+                <div
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
+                >
+                  <img
+                    alt="AhFJKDSALJFKASLJFKSDEAJ333FKFKDSAJFKSAJFKLASJKDFJ"
+                    src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%236E6CEF%22%2F%3E%3C%2Fsvg%3E"
+                    title="AhFJKDSALJFKASLJFKSDEAJ333FKFKDSAJFKSAJFKLASJKDFJ"
+                  />
+                </div>
+              </div>
+            </td>
+            <td
+              class="w-28 flex-1 justify-end md:ml-4"
+            >
+              <div
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              >
+                <span
+                  class="font-semibold text-base text-theme-text"
+                  data-testid="Address__alias"
+                >
+                  <span
+                    class="no-ligatures transition-colors duration-200"
+                    data-testid="TruncateEnd"
+                  >
+                    Recipient 2
+                  </span>
+                </span>
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
+                  data-testid="Address__address"
+                >
+                  AhFJKDSALJFKASLJFKSDEAJ333FKFKDSAJFKSAJFKLASJKDFJ
+                </span>
+              </div>
+            </td>
+            <td
+              class="ml-2 table-cell md:hidden"
+            >
+              <div
+                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-theme-background ring-0 shrink-0"
+                data-testid="Avatar"
+              >
+                <div
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
+                >
+                  <img
+                    alt="AhFJKDSALJFKASLJFKSDEAJ333FKFKDSAJFKSAJFKLASJKDFJ"
+                    src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%236E6CEF%22%2F%3E%3C%2Fsvg%3E"
+                    title="AhFJKDSALJFKASLJFKSDEAJ333FKFKDSAJFKSAJFKLASJKDFJ"
+                  />
+                </div>
+              </div>
+            </td>
+            <td
+              class="hidden md:table-cell"
+            >
+              <td
+                class="flex-1 shrink-0 pl-3 text-right"
+              >
+                <span
+                  class="whitespace-nowrap"
+                  data-testid="Amount"
+                >
+                  100 ARK
+                </span>
+              </td>
+            </td>
+          </tr>
+          <tr
+            class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
+            data-testid="recipient-list__recipient-list-item"
+          >
+            <td
+              class="mr-3 table-cell md:hidden"
+            >
+              <td
+                class="flex-1 shrink-0 pl-3 text-right"
+              >
+                <span
+                  class="whitespace-nowrap"
+                  data-testid="Amount"
+                >
+                  100 ARK
+                </span>
+              </td>
+            </td>
+            <td
+              class="hidden md:table-cell"
+            >
+              <div
+                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
+                data-testid="Avatar"
+              >
+                <div
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
+                >
+                  <img
+                    alt="FAhFJKDSALJFKASLJFKSFDAJ333FKFKDSAJFKSAJFKLASJKDFJ"
+                    src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%2345A2EB%22%2F%3E%3C%2Fsvg%3E"
+                    title="FAhFJKDSALJFKASLJFKSFDAJ333FKFKDSAJFKSAJFKLASJKDFJ"
+                  />
+                </div>
+              </div>
+            </td>
+            <td
+              class="w-28 flex-1 justify-end md:ml-4"
+            >
+              <div
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              >
+                <span
+                  class="font-semibold text-base text-theme-text"
+                  data-testid="Address__alias"
+                >
+                  <span
+                    class="no-ligatures transition-colors duration-200"
+                    data-testid="TruncateEnd"
+                  >
+                    Recipient 3
+                  </span>
+                </span>
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
+                  data-testid="Address__address"
+                >
+                  FAhFJKDSALJFKASLJFKSFDAJ333FKFKDSAJFKSAJFKLASJKDFJ
+                </span>
+              </div>
+            </td>
+            <td
+              class="ml-2 table-cell md:hidden"
+            >
+              <div
+                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-theme-background ring-0 shrink-0"
+                data-testid="Avatar"
+              >
+                <div
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
+                >
+                  <img
+                    alt="FAhFJKDSALJFKASLJFKSFDAJ333FKFKDSAJFKSAJFKLASJKDFJ"
+                    src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%2345A2EB%22%2F%3E%3C%2Fsvg%3E"
+                    title="FAhFJKDSALJFKASLJFKSFDAJ333FKFKDSAJFKSAJFKLASJKDFJ"
+                  />
+                </div>
+              </div>
+            </td>
+            <td
+              class="hidden md:table-cell"
+            >
+              <td
+                class="flex-1 shrink-0 pl-3 text-right"
+              >
+                <span
+                  class="whitespace-nowrap"
+                  data-testid="Amount"
+                >
+                  100 ARK
+                </span>
+              </td>
+            </td>
+          </tr>
+          <tr
+            class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
+            data-testid="recipient-list__recipient-list-item"
+          >
+            <td
+              class="mr-3 table-cell md:hidden"
+            >
+              <td
+                class="flex-1 shrink-0 pl-3 text-right"
+              >
+                <span
+                  class="whitespace-nowrap"
+                  data-testid="Amount"
+                >
+                  100 ARK
+                </span>
+              </td>
+            </td>
+            <td
+              class="hidden md:table-cell"
+            >
+              <div
+                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
+                data-testid="Avatar"
+              >
+                <div
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
+                >
+                  <img
+                    alt="FAhFJKDSALJFKASLJFKSFDAJ333FKFKDSAJFKSAJFKLASJKDFJ"
+                    src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%2345A2EB%22%2F%3E%3C%2Fsvg%3E"
+                    title="FAhFJKDSALJFKASLJFKSFDAJ333FKFKDSAJFKSAJFKLASJKDFJ"
+                  />
+                </div>
+              </div>
+            </td>
+            <td
+              class="w-28 flex-1 justify-end md:ml-4"
+            >
+              <div
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              >
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                  data-testid="Address__address"
+                >
+                  FAhFJKDSALJFKASLJFKSFDAJ333FKFKDSAJFKSAJFKLASJKDFJ
+                </span>
+              </div>
+            </td>
+            <td
+              class="ml-2 table-cell md:hidden"
+            >
+              <div
+                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-theme-background ring-0 shrink-0"
+                data-testid="Avatar"
+              >
+                <div
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
+                >
+                  <img
+                    alt="FAhFJKDSALJFKASLJFKSFDAJ333FKFKDSAJFKSAJFKLASJKDFJ"
+                    src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%2345A2EB%22%2F%3E%3C%2Fsvg%3E"
+                    title="FAhFJKDSALJFKASLJFKSFDAJ333FKFKDSAJFKSAJFKLASJKDFJ"
+                  />
+                </div>
+              </div>
+            </td>
+            <td
+              class="hidden md:table-cell"
+            >
+              <td
+                class="flex-1 shrink-0 pl-3 text-right"
+              >
+                <span
+                  class="whitespace-nowrap"
+                  data-testid="Amount"
+                >
+                  100 ARK
+                </span>
+              </td>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`RecipientList > should render editable 1`] = `
 <div>
   <div

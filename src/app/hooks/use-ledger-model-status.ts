@@ -1,7 +1,10 @@
 import { Contracts } from "@/app/lib/profiles";
 import { useMemo } from "react";
 
-export type LedgerModel = Contracts.WalletLedgerModel.NanoS | Contracts.WalletLedgerModel.NanoX;
+export type LedgerModel =
+	| Contracts.WalletLedgerModel.NanoS
+	| Contracts.WalletLedgerModel.NanoX
+	| Contracts.WalletLedgerModel.NanoSP;
 
 interface ModelStatusProperties {
 	connectedModel?: LedgerModel;

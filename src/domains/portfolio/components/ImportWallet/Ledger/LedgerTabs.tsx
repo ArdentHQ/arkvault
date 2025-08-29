@@ -29,7 +29,7 @@ export const LedgerTabs = ({
 }: LedgerTabsProperties) => {
 	const activeProfile = useActiveProfile();
 	const { activeNetwork } = useActiveNetwork({ profile: activeProfile });
-	const { importWallet } = useWalletImport({ profile: activeProfile });
+	const { importWallets } = useWalletImport({ profile: activeProfile });
 
 	const navigate = useNavigate();
 	const { isBusy, disconnect, isAwaitingConnection, isAwaitingDeviceConfirmation, isConnected, listenDevice } =
@@ -51,23 +51,21 @@ export const LedgerTabs = ({
 			const deviceId = device?.id;
 			assertString(deviceId);
 
-			setImportedWallets(wallets);
+			await Promise.all(
+				wallets.map(({ path, address }, index) =>
+					importWallets({
+						disableAddressSelection: index !== 0, // set the very first address to be selected
+						ledgerOptions: {
+							deviceId,
+							path,
+						},
+						type: OptionsValue.LEDGER,
+						value: address,
+					}),
+				),
+			);
 
-			for (const network of activeProfile.availableNetworks()) {
-				await Promise.all(
-					wallets.map(({ path, address }) =>
-						importWallet({
-							ledgerOptions: {
-								deviceId,
-								path,
-							},
-							network,
-							type: OptionsValue.LEDGER,
-							value: address,
-						}),
-					),
-				);
-			}
+			setImportedWallets(wallets);
 		},
 		[activeProfile, listenDevice, importWallet],
 	);
@@ -102,7 +100,7 @@ export const LedgerTabs = ({
 		}
 
 		if (activeTab === LedgerTabStep.LedgerScanStep) {
-			await handleSubmit((data: any) => importWallets(data))();
+			await handleSubmit((data: any) => handleWalletImporting(data))();
 		}
 
 		const next = activeTab + 1;
