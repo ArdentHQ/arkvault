@@ -87,6 +87,15 @@ export const LedgerTabs = ({
 		}
 	});
 
+	const goToPreviousStep = useCallback(() => {
+		setShowRetry(false);
+		setActiveTab((prev) => {
+			const next = Math.max(LedgerTabStep.ListenLedgerStep, prev - 1);
+			onStepChange?.(next);
+			return next;
+		});
+	}, [onStepChange]);
+
 	const handleNext = useCallback(async () => {
 		if (showRetry) {
 			setShowRetry(false);
@@ -121,8 +130,10 @@ export const LedgerTabs = ({
 		const callback = retryFunctionReference.current;
 		if (callback) {
 			callback();
+		} else {
+			goToPreviousStep();
 		}
-	}, []);
+	}, [goToPreviousStep]);
 
 	const handleFinish = useCallback(() => {
 		navigate(`/profiles/${activeProfile.id()}/dashboard`);
@@ -135,22 +146,18 @@ export const LedgerTabs = ({
 	const handleBack = useCallback(() => {
 		setShowRetry(false);
 
-		switch (activeTab) {
-			case LedgerTabStep.LedgerImportStep: {
-				const prev = LedgerTabStep.LedgerScanStep;
-				setActiveTab(prev);
-				onStepChange?.(prev);
-				return;
-			}
-			default: {
-				if (onBack) {
-					return onBack();
-				}
-				return onCancel?.();
-			}
+		if (activeTab === LedgerTabStep.LedgerImportStep) {
+			const prev = LedgerTabStep.LedgerScanStep;
+			setActiveTab(prev);
+			onStepChange?.(prev);
+			return;
 		}
+		if (onBack) {
+			return onBack();
+		}
+		return onCancel?.();
 	}, [activeTab, onBack, onCancel, onStepChange]);
-	console.log({ isBusy, isSubmitting });
+
 	const showFooter = showRetry || [LedgerTabStep.LedgerScanStep, LedgerTabStep.LedgerImportStep].includes(activeTab);
 
 	return (
@@ -181,9 +188,7 @@ export const LedgerTabs = ({
 									}}
 									onFailed={() => {
 										registerRetry(() => {
-											setShowRetry(false);
-											setActiveTab(LedgerTabStep.LedgerConnectionStep);
-											onStepChange?.(LedgerTabStep.LedgerConnectionStep);
+											goToPreviousStep();
 										});
 									}}
 									network={activeNetwork}
@@ -246,7 +251,7 @@ export const LedgerTabs = ({
 							onClick={handleRetry}
 							variant="primary"
 							data-testid="LedgerFooter__retry"
-							disabled={isBusy || isSubmitting}
+							disabled={isSubmitting}
 						>
 							Retry
 						</Button>
