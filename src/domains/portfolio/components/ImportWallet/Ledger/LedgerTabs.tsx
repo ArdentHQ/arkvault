@@ -142,14 +142,6 @@ export const LedgerTabs = ({
 				onStepChange?.(prev);
 				return;
 			}
-			case LedgerTabStep.LedgerScanStep: {
-				const prev = LedgerTabStep.LedgerConnectionStep;
-				setActiveTab(prev);
-				onStepChange?.(prev);
-				return;
-			}
-			case LedgerTabStep.LedgerConnectionStep:
-			case LedgerTabStep.ListenLedgerStep:
 			default: {
 				if (onBack) {
 					return onBack();
@@ -158,15 +150,15 @@ export const LedgerTabs = ({
 			}
 		}
 	}, [activeTab, onBack, onCancel, onStepChange]);
-
+	console.log({ isBusy, isSubmitting });
 	const showFooter = showRetry || [LedgerTabStep.LedgerScanStep, LedgerTabStep.LedgerImportStep].includes(activeTab);
 
 	return (
 		<>
-			<div className={showFooter ? "h-full pb-20" : "h-full"}>
+			<div className={showFooter ? "pb-20 h-full" : "h-full"}>
 				<Tabs id="ledgerTabs" activeId={activeTab}>
 					<div data-testid="LedgerTabs" className="h-full">
-						<div className="h-full overflow-y-auto">
+						<div className="overflow-y-auto h-full">
 							<TabPanel tabId={LedgerTabStep.ListenLedgerStep}>
 								<ListenLedger
 									noHeading
@@ -222,7 +214,7 @@ export const LedgerTabs = ({
 
 			{/* Normal toolbar footer (no error) */}
 			{showFooter && !showRetry && (
-				<div className="bg-theme-background border-theme-secondary-300 dark:border-theme-dark-700 absolute right-0 bottom-0 left-0 flex w-full flex-col border-t px-6 py-4">
+				<div className="flex absolute right-0 bottom-0 left-0 flex-col px-6 py-4 w-full border-t bg-theme-background border-theme-secondary-300 dark:border-theme-dark-700">
 					<ImportActionToolbar
 						showButtons={activeTab !== LedgerTabStep.LedgerImportStep}
 						onBack={handleBack}
@@ -238,8 +230,8 @@ export const LedgerTabs = ({
 
 			{/* Error-only footer (Back / Retry buttons) */}
 			{showFooter && showRetry && (
-				<div className="bg-theme-background border-theme-secondary-300 dark:border-theme-dark-700 absolute right-0 bottom-0 left-0 flex w-full flex-col border-t px-6 py-4">
-					<div className="flex w-full items-center justify-end gap-3">
+				<div className="flex absolute right-0 bottom-0 left-0 flex-col px-6 py-4 w-full border-t bg-theme-background border-theme-secondary-300 dark:border-theme-dark-700">
+					<div className="flex gap-3 justify-end items-center w-full">
 						<Button
 							type="button"
 							onClick={handleBack}
