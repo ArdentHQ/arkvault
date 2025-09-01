@@ -52,11 +52,11 @@ const mockUnconfirmedTransactionsHook = async (unconfirmedTransactions: Unconfir
 
 	const unconfirmedSpy = vi.spyOn(unconfirmedHook, "useUnconfirmedTransactions").mockReturnValue({
 		addUnconfirmedTransaction: vi.fn(),
-		unconfirmedTransactions,
 		removeUnconfirmedTransaction,
+		unconfirmedTransactions,
 	});
 
-	return { unconfirmedSpy, removeUnconfirmedTransaction };
+	return { removeUnconfirmedTransaction, unconfirmedSpy };
 };
 
 describe("useProfileTransactions", () => {
@@ -810,8 +810,8 @@ describe("useProfileTransactions", () => {
 		unconfirmedSpy.mockReturnValue({
 			addUnconfirmedTransaction: vi.fn(),
 			addUnconfirmedTransactionFromUnconfirmed: vi.fn(),
-			unconfirmedTransactions: [],
 			removeUnconfirmedTransaction: vi.fn(),
+			unconfirmedTransactions: [],
 		});
 
 		const { result, rerender } = renderHook(({ wallets }) => useProfileTransactions({ profile, wallets }), {
@@ -850,8 +850,8 @@ describe("useProfileTransactions", () => {
 		unconfirmedSpy.mockReturnValue({
 			addUnconfirmedTransaction: vi.fn(),
 			addUnconfirmedTransactionFromUnconfirmed: vi.fn(),
-			unconfirmedTransactions: [],
 			removeUnconfirmedTransaction: vi.fn(),
+			unconfirmedTransactions: [],
 		});
 
 		const { result } = renderHook(() => useProfileTransactions({ profile, wallets: [mockWallet as any] }), {
@@ -891,8 +891,8 @@ describe("useProfileTransactions", () => {
 		unconfirmedSpy.mockReturnValue({
 			addUnconfirmedTransaction: vi.fn(),
 			addUnconfirmedTransactionFromUnconfirmed: vi.fn(),
-			unconfirmedTransactions: [],
 			removeUnconfirmedTransaction: vi.fn(),
+			unconfirmedTransactions: [],
 		});
 
 		const { result } = renderHook(() => useProfileTransactions({ profile, wallets: [mockWallet as any] }), {
@@ -930,8 +930,8 @@ describe("useProfileTransactions", () => {
 		vi.spyOn(unconfirmedTransactionsMock, "useUnconfirmedTransactions").mockReturnValue({
 			addUnconfirmedTransaction: vi.fn(),
 			addUnconfirmedTransactionFromUnconfirmed,
-			unconfirmedTransactions: [],
 			removeUnconfirmedTransaction: vi.fn(),
+			unconfirmedTransactions: [],
 		} as any);
 
 		const listSpy = vi
@@ -1000,8 +1000,8 @@ describe("useProfileTransactions", () => {
 		vi.spyOn(unconfirmedTransactionsMock, "useUnconfirmedTransactions").mockReturnValue({
 			addUnconfirmedTransaction: vi.fn(),
 			addUnconfirmedTransactionFromUnconfirmed,
-			unconfirmedTransactions: [],
 			removeUnconfirmedTransaction: vi.fn(),
+			unconfirmedTransactions: [],
 		} as any);
 
 		const { result } = renderHook(() => useProfileTransactions({ profile, wallets: [] }), { wrapper });
@@ -1050,8 +1050,8 @@ describe("useProfileTransactions", () => {
 		vi.spyOn(unconfirmedTransactionsMock, "useUnconfirmedTransactions").mockReturnValue({
 			addUnconfirmedTransaction: vi.fn(),
 			addUnconfirmedTransactionFromUnconfirmed,
-			unconfirmedTransactions: [],
 			removeUnconfirmedTransaction: vi.fn(),
+			unconfirmedTransactions: [],
 		} as any);
 
 		const listUnconfirmedSpy = vi.fn().mockResolvedValue({ results: [] });
@@ -1103,8 +1103,8 @@ describe("useProfileTransactions", () => {
 		vi.spyOn(unconfirmedTransactionsMock, "useUnconfirmedTransactions").mockReturnValue({
 			addUnconfirmedTransaction: vi.fn(),
 			addUnconfirmedTransactionFromUnconfirmed,
-			unconfirmedTransactions: [],
 			removeUnconfirmedTransaction: vi.fn(),
+			unconfirmedTransactions: [],
 		} as any);
 
 		const listSpy = vi

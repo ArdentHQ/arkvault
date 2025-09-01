@@ -93,7 +93,9 @@ export const useUnconfirmedTransactions = (): UseUnconfirmedTransactionsReturn =
 
 	const removeUnconfirmedTransaction = useCallback(
 		(hash: string) => {
-			setUnconfirmedTransactions((prev) => prev.filter(({ transaction }) => transaction.signedData.hash !== hash));
+			setUnconfirmedTransactions((prev) =>
+				prev.filter(({ transaction }) => transaction.signedData.hash !== hash),
+			);
 		},
 		[setUnconfirmedTransactions],
 	);
@@ -101,7 +103,7 @@ export const useUnconfirmedTransactions = (): UseUnconfirmedTransactionsReturn =
 	return {
 		addUnconfirmedTransactionFromSigned,
 		addUnconfirmedTransactionFromUnconfirmed,
-		unconfirmedTransactions,
 		removeUnconfirmedTransaction,
+		unconfirmedTransactions,
 	};
 };

@@ -217,7 +217,15 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 
 			return 0;
 		});
-	}, [transactions, unconfirmedTransactions, wallets, selectedTransactionTypes, activeMode, sortBy, allTransactionTypes]);
+	}, [
+		transactions,
+		unconfirmedTransactions,
+		wallets,
+		selectedTransactionTypes,
+		activeMode,
+		sortBy,
+		allTransactionTypes,
+	]);
 
 	const selectedWalletAddresses = wallets.map((wallet) => wallet.address()).join("-");
 

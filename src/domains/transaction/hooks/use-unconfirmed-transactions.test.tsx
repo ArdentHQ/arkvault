@@ -245,7 +245,9 @@ describe("useUnconfirmedTransactions", () => {
 
 		expect(result.current.unconfirmedTransactions).toHaveLength(1);
 		expect(result.current.unconfirmedTransactions[0].transaction.signedData.gasLimit).toBe(25000);
-		expect(result.current.unconfirmedTransactions[0].transaction.signedData.hash).toBe("different-hash-with-gaslimit");
+		expect(result.current.unconfirmedTransactions[0].transaction.signedData.hash).toBe(
+			"different-hash-with-gaslimit",
+		);
 	});
 
 	it("should prioritize gasLimit over gas when both are present", async () => {
@@ -330,7 +332,9 @@ describe("useUnconfirmedTransactions", () => {
 		});
 
 		expect(result.current.unconfirmedTransactions).toHaveLength(2);
-		expect(result.current.unconfirmedTransactions[0].transaction.signedData.hash).toBe(mockUnconfirmedTransaction.hash);
+		expect(result.current.unconfirmedTransactions[0].transaction.signedData.hash).toBe(
+			mockUnconfirmedTransaction.hash,
+		);
 		expect(result.current.unconfirmedTransactions[1].transaction.signedData.hash).toBe("different-hash-123");
 	});
 });

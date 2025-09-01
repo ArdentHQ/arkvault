@@ -640,7 +640,9 @@ describe("SendTransferSidePanel", () => {
 		const useTransactionSpy = vi.spyOn(hooks, "useTransaction").mockReturnValue({
 			fetchWalletUnconfirmedTransactions: vi.fn().mockResolvedValue([signedTransactionMock]),
 		} as any);
-		vi.spyOn(unconfirmedHook, "useUnconfirmedTransactions").mockReturnValue({ addUnconfirmedTransaction: vi.fn() } as any);
+		vi.spyOn(unconfirmedHook, "useUnconfirmedTransactions").mockReturnValue({
+			addUnconfirmedTransaction: vi.fn(),
+		} as any);
 
 		const onOpenChange = vi.fn();
 		render(<SendTransferSidePanel open={true} onOpenChange={onOpenChange} />, {
