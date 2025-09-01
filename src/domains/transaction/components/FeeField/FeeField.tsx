@@ -7,10 +7,10 @@ import { useDebounce, useFees } from "@/app/hooks";
 import { InputFee } from "@/domains/transaction/components/InputFee";
 import { InputFeeViewType } from "@/domains/transaction/components/InputFee/InputFee.contracts";
 import { BigNumber } from "@/app/lib/helpers";
-import { FeeTransactionType } from "@/app/lib/mainsail/fee.service";
+import { EncodeTransactionType } from "@/app/lib/mainsail/transaction-encoder";
 
 interface Properties {
-	type: FeeTransactionType;
+	type: EncodeTransactionType;
 	data: Record<string, any> | undefined;
 	network: Networks.Network;
 	profile: Contracts.IProfile;

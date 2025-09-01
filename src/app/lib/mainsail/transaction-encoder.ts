@@ -15,6 +15,7 @@ interface RecipientPaymentItem {
 export type EncodeTransactionType =
 	| "transfer"
 	| "multiPayment"
+	| "multiSignature"
 	| "vote"
 	| "validatorRegistration"
 	| "validatorResignation"
