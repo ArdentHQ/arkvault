@@ -30,6 +30,7 @@ export interface SendRegistrationSignOptions {
 export interface FormStepProperties {
 	wallet?: Contracts.IReadWriteWallet;
 	profile: Contracts.IProfile;
+	hideHeader?: boolean;
 }
 
 export interface SendRegistrationForm {

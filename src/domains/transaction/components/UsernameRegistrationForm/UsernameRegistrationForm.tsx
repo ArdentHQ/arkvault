@@ -17,17 +17,19 @@ const component = ({
 	activeTab,
 	wallet,
 	profile,
+	hideHeader = false,
 }: {
 	activeTab: number;
 	wallet?: Contracts.IReadWriteWallet;
 	profile: Contracts.IProfile;
+	hideHeader?: boolean;
 }) => (
 	<Tabs activeId={activeTab}>
 		<TabPanel tabId={FORM_STEP}>
-			<FormStep wallet={wallet} profile={profile} />
+			<FormStep wallet={wallet} profile={profile} hideHeader={hideHeader} />
 		</TabPanel>
 		<TabPanel tabId={REVIEW_STEP}>
-			<ReviewStep wallet={wallet!} profile={profile} />
+			<ReviewStep wallet={wallet!} profile={profile} hideHeader={hideHeader} />
 		</TabPanel>
 	</Tabs>
 );

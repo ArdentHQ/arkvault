@@ -1,15 +1,15 @@
 import { Contracts, DTO } from "@/app/lib/profiles";
 import React, { useCallback, useEffect, useLayoutEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import { useTranslation } from "react-i18next";
-import { SendRegistrationForm } from "./SendRegistration.contracts";
+import { SendRegistrationForm } from "@/domains/transaction/pages/SendRegistration/SendRegistration.contracts";
 import { usePendingTransactions } from "@/domains/transaction/hooks/use-pending-transactions";
 import { Form } from "@/app/components/Form";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { useEnvironmentContext, useLedgerContext } from "@/app/contexts";
-import { useActiveProfile, useActiveWalletWhenNeeded, useLedgerModelStatus, useValidation } from "@/app/hooks";
+import { useActiveProfile, useLedgerModelStatus, useValidation } from "@/app/hooks";
 import { useKeydown } from "@/app/hooks/use-keydown";
 import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
 import {
@@ -25,7 +25,6 @@ import {
 } from "@/domains/transaction/components/UsernameRegistrationForm";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { useToggleFeeFields } from "@/domains/transaction/hooks/useToggleFeeFields";
-import { getUrlParameter } from "@/utils/paths";
 import { useValidatorRegistrationLockedFee } from "@/domains/transaction/components/ValidatorRegistrationForm/hooks/useValidatorRegistrationLockedFee";
 import { SidePanel, SidePanelButtons } from "@/app/components/SidePanel/SidePanel";
 import { Button } from "@/app/components/Button";
@@ -66,7 +65,7 @@ export const SendRegistrationSidePanel = ({
 
 	const form = useForm({ mode: "onChange" });
 
-	const { formState, register, setValue, watch, getValues, trigger } = form;
+	const { formState, register, setValue, watch, getValues, trigger, reset: resetForm } = form;
 	const { isDirty, isSubmitting, isValid } = formState;
 
 	const { fees, isLoading, senderAddress } = watch();
@@ -74,22 +73,6 @@ export const SendRegistrationSidePanel = ({
 	const stepCount = registrationForm ? registrationForm.tabSteps + 2 : 1;
 	const authenticationStep = stepCount - 1;
 	const isAuthenticationStep = activeTab === authenticationStep;
-
-	// const registrationType = useMemo(
-	// 	() =>
-	// 		// try {
-	// 		// 	if (activeWalletFromUrl) {
-	// 		// 		return getUrlParameter(location.pathname, 5);
-	// 		// 	}
-
-	// 		// 	return getUrlParameter(location.pathname, 3);
-	// 		// } catch {
-	// 		// 	return;
-	// 		// }
-	// 		// @TODO: make this dynamic
-	// 		"usernameRegistration",
-	// 	[activeWalletFromUrl],
-	// );
 
 	const { activeNetwork: network } = useActiveNetwork({ profile: activeProfile });
 
@@ -134,27 +117,34 @@ export const SendRegistrationSidePanel = ({
 	});
 
 	useEffect(() => {
-		if (!activeWallet) {
+		if (!activeWallet || !registrationType) {
 			return;
 		}
 
 		setValue("senderAddress", activeWallet.address(), { shouldDirty: true, shouldValidate: true });
 
 		setValue("network", activeProfile.activeNetwork(), { shouldDirty: true, shouldValidate: true });
-	}, [activeWallet, env, setValue]);
+	}, [activeWallet, env, setValue, registrationType]);
 
 	useEffect(() => {
+		if (!registrationType) {
+			return;
+		}
+
 		setValue("lockedFee", validatorRegistrationFee, { shouldDirty: true, shouldValidate: true });
-	}, [validatorRegistrationFee]);
+	}, [validatorRegistrationFee, registrationType]);
 
 	useLayoutEffect(() => {
+		if (!registrationType) {
+			return;
+		}
+
 		const registrations = {
 			default: () => setRegistrationForm(ValidatorRegistrationForm),
 			usernameRegistration: () => setRegistrationForm(UsernameRegistrationForm),
 		};
 
-		// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
-		return (registrations[registrationType as keyof typeof registrations] || registrations.default)();
+		return registrations[registrationType]();
 	}, [registrationType]);
 
 	// Reset ledger authentication steps after reconnecting supported ledger
@@ -257,12 +247,12 @@ export const SendRegistrationSidePanel = ({
 			if (!mounted) {
 				setActiveTab(FORM_STEP);
 
-				// @TODO: see if we need to reset the form
-
-				return;
+				resetForm(() => {
+					setErrorMessage(undefined);
+				});
 			}
 		},
-		[activeTab],
+		[resetForm],
 	);
 
 	const getTitle = () => {
@@ -414,6 +404,7 @@ export const SendRegistrationSidePanel = ({
 								setActiveTab(FORM_STEP);
 							}}
 							errorMessage={errorMessage}
+							hideHeader
 						/>
 					</TabPanel>
 
@@ -423,6 +414,7 @@ export const SendRegistrationSidePanel = ({
 								activeTab={activeTab}
 								wallet={activeWallet}
 								profile={activeProfile}
+								hideHeader
 							/>
 
 							<TabPanel tabId={authenticationStep}>
@@ -435,11 +427,16 @@ export const SendRegistrationSidePanel = ({
 										Contracts.WalletLedgerModel.NanoSP,
 									]}
 									ledgerConnectedModel={ledgerDevice?.id}
+									noHeading
 								/>
 							</TabPanel>
 
 							<TabPanel tabId={stepCount}>
-								<TransactionSuccessful transaction={transaction} senderWallet={activeWallet!} />
+								<TransactionSuccessful
+									transaction={transaction}
+									senderWallet={activeWallet!}
+									noHeading
+								/>
 							</TabPanel>
 						</>
 					)}
