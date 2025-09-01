@@ -1,7 +1,6 @@
 import { Contracts, DTO } from "@/app/lib/profiles";
 import React, { useCallback, useEffect, useLayoutEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
 
 import { useTranslation } from "react-i18next";
 import { SendRegistrationForm } from "@/domains/transaction/pages/SendRegistration/SendRegistration.contracts";
@@ -45,7 +44,6 @@ export const SendRegistrationSidePanel = ({
 	onOpenChange: (open: boolean) => void;
 	registrationType?: "validatorRegistration" | "usernameRegistration";
 }) => {
-	const navigate = useNavigate();
 	const { t } = useTranslation();
 
 	const [activeTab, setActiveTab] = useState(FORM_STEP);
@@ -218,7 +216,8 @@ export const SendRegistrationSidePanel = ({
 
 	const handleBack = () => {
 		if (activeTab === FORM_STEP) {
-			return navigate(`/profiles/${activeProfile.id()}/dashboard`);
+			onOpenChange(false);
+			return;
 		}
 
 		setActiveTab(activeTab - 1);
@@ -433,7 +432,9 @@ export const SendRegistrationSidePanel = ({
 				<Tabs activeId={activeTab}>
 					<TabPanel tabId={ERROR_STEP}>
 						<ErrorStep
-							onClose={() => navigate(`/profiles/${activeProfile.id()}/dashboard`)}
+							onClose={() => {
+								onOpenChange(false);
+							}}
 							isBackDisabled={isSubmitting}
 							onBack={() => {
 								setActiveTab(FORM_STEP);
