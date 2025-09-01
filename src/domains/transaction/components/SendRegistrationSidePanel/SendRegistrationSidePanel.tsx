@@ -29,6 +29,11 @@ import { getUrlParameter } from "@/utils/paths";
 import { useValidatorRegistrationLockedFee } from "@/domains/transaction/components/ValidatorRegistrationForm/hooks/useValidatorRegistrationLockedFee";
 import { SidePanel, SidePanelButtons } from "@/app/components/SidePanel/SidePanel";
 import { Button } from "@/app/components/Button";
+import { ThemeIcon } from "@/app/components/Icon";
+
+export const FORM_STEP = 1;
+export const REVIEW_STEP = 2;
+export const ERROR_STEP = 10;
 
 export const SendRegistrationSidePanel = ({
 	open,
@@ -41,9 +46,8 @@ export const SendRegistrationSidePanel = ({
 }) => {
 	const navigate = useNavigate();
 	const { t } = useTranslation();
-	const location = useLocation();
 
-	const [activeTab, setActiveTab] = useState(1);
+	const [activeTab, setActiveTab] = useState(FORM_STEP);
 	const [transaction, setTransaction] = useState(undefined as unknown as DTO.ExtendedSignedTransactionData);
 	const [registrationForm, setRegistrationForm] = useState<SendRegistrationForm>();
 	const [errorMessage, setErrorMessage] = useState<string | undefined>();
@@ -215,12 +219,12 @@ export const SendRegistrationSidePanel = ({
 			}
 		} catch (error) {
 			setErrorMessage(JSON.stringify({ message: error.message, type: error.name }));
-			setActiveTab(10);
+			setActiveTab(ERROR_STEP);
 		}
 	};
 
 	const handleBack = () => {
-		if (activeTab === 1) {
+		if (activeTab === FORM_STEP) {
 			return navigate(`/profiles/${activeProfile.id()}/dashboard`);
 		}
 
@@ -251,7 +255,7 @@ export const SendRegistrationSidePanel = ({
 	const onMountChange = useCallback(
 		(mounted: boolean) => {
 			if (!mounted) {
-				setActiveTab(1);
+				setActiveTab(FORM_STEP);
 
 				// @TODO: see if we need to reset the form
 
@@ -266,15 +270,82 @@ export const SendRegistrationSidePanel = ({
 			return "";
 		}
 
+		if (activeTab === authenticationStep) {
+			return t("TRANSACTION.AUTHENTICATION_STEP.TITLE");
+		}
+
 		return {
-			default: t("TRANSACTION.TRANSACTION_TYPES.REGISTER_VALIDATOR"),
-			usernameRegistration: t("TRANSACTION.TRANSACTION_TYPES.REGISTER_USERNAME"),
-		}[registrationType];
+			default: {
+				[FORM_STEP]: activeWallet?.isValidator()
+					? t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.TITLE_UPDATE")
+					: t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.TITLE"),
+				[REVIEW_STEP]: t("TRANSACTION.REVIEW_STEP.TITLE"),
+			},
+			usernameRegistration: {
+				[FORM_STEP]: t("TRANSACTION.PAGE_USERNAME_REGISTRATION.FORM_STEP.TITLE"),
+				[REVIEW_STEP]: t("TRANSACTION.REVIEW_STEP.TITLE"),
+			},
+		}[registrationType][activeTab];
 	};
 
-	const getSubtitle = () => "@TODO";
+	const getSubtitle = () => {
+		if (activeTab === authenticationStep) {
+			return t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_SECRET");
+		}
 
-	const getTitleIcon = () => <></>;
+		if (activeTab === REVIEW_STEP) {
+			if (registrationType === "validatorRegistration") {
+				if (activeWallet?.isLegacyValidator()) {
+					return t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.DESCRIPTION_LEGACY");
+				}
+				if (activeWallet?.isValidator()) {
+					return t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.DESCRIPTION_UPDATE");
+				}
+				return t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.DESCRIPTION");
+			} else {
+				t("TRANSACTION.REVIEW_STEP.DESCRIPTION");
+			}
+		}
+
+		return t("TRANSACTION.PAGE_USERNAME_REGISTRATION.FORM_STEP.DESCRIPTION");
+	};
+
+	const getTitleIcon = () => {
+		if (activeTab === REVIEW_STEP) {
+			return (
+				<ThemeIcon
+					lightIcon="DocumentView"
+					darkIcon="DocumentView"
+					dimIcon="DocumentView"
+					dimensions={[24, 24]}
+				/>
+			);
+		}
+
+		if (activeTab === authenticationStep) {
+			if (activeWallet?.isLedger()) {
+				return (
+					<ThemeIcon
+						lightIcon="LedgerLight"
+						darkIcon="LedgerDark"
+						dimIcon="LedgerDim"
+						dimensions={[24, 24]}
+					/>
+				);
+			}
+
+			return <ThemeIcon lightIcon="Mnemonic" darkIcon="Mnemonic" dimIcon="Mnemonic" dimensions={[24, 24]} />;
+		}
+
+		return (
+			<ThemeIcon
+				dimensions={[24, 24]}
+				lightIcon="SendTransactionLight"
+				darkIcon="SendTransactionDark"
+				dimIcon="SendTransactionDim"
+			/>
+		);
+	};
 
 	return (
 		<SidePanel
@@ -335,12 +406,12 @@ export const SendRegistrationSidePanel = ({
 		>
 			<Form data-testid="Registration__form" context={form} onSubmit={handleSubmit}>
 				<Tabs activeId={activeTab}>
-					<TabPanel tabId={10}>
+					<TabPanel tabId={ERROR_STEP}>
 						<ErrorStep
 							onClose={() => navigate(`/profiles/${activeProfile.id()}/dashboard`)}
 							isBackDisabled={isSubmitting}
 							onBack={() => {
-								setActiveTab(1);
+								setActiveTab(FORM_STEP);
 							}}
 							errorMessage={errorMessage}
 						/>

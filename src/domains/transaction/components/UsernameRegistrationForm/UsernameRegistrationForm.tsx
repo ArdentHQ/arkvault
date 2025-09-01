@@ -8,6 +8,11 @@ import { TransactionDetail, TransactionFee } from "@/domains/transaction/compone
 import { SendRegistrationForm } from "@/domains/transaction/pages/SendRegistration/SendRegistration.contracts";
 import { handleBroadcastError } from "@/domains/transaction/utils";
 import { httpClient } from "@/app/services";
+import {
+	FORM_STEP,
+	REVIEW_STEP,
+} from "@/domains/transaction/components/SendRegistrationSidePanel/SendRegistrationSidePanel";
+
 const component = ({
 	activeTab,
 	wallet,
@@ -18,10 +23,10 @@ const component = ({
 	profile: Contracts.IProfile;
 }) => (
 	<Tabs activeId={activeTab}>
-		<TabPanel tabId={1}>
+		<TabPanel tabId={FORM_STEP}>
 			<FormStep wallet={wallet} profile={profile} />
 		</TabPanel>
-		<TabPanel tabId={2}>
+		<TabPanel tabId={REVIEW_STEP}>
 			<ReviewStep wallet={wallet!} profile={profile} />
 		</TabPanel>
 	</Tabs>
