@@ -381,7 +381,7 @@ export const SendRegistrationSidePanel = ({
 			title={getTitle()}
 			subtitle={getSubtitle()}
 			titleIcon={getTitleIcon()}
-			dataTestId="SendVoteSidePanel"
+			dataTestId="SendRegistrationSidePanel"
 			hasSteps
 			totalSteps={stepCount}
 			activeStep={activeTab}
