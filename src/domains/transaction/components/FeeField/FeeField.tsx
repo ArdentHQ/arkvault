@@ -7,18 +7,10 @@ import { useDebounce, useFees } from "@/app/hooks";
 import { InputFee } from "@/domains/transaction/components/InputFee";
 import { InputFeeViewType } from "@/domains/transaction/components/InputFee/InputFee.contracts";
 import { BigNumber } from "@/app/lib/helpers";
+import { FeeTransactionType } from "@/app/lib/mainsail/fee.service";
 
 interface Properties {
-	type:
-		| "transfer"
-		| "multiPayment"
-		| "vote"
-		| "validatorRegistration"
-		| "validatorResignation"
-		| "multiSignature"
-		| "usernameRegistration"
-		| "usernameResignation"
-		| "updateValidator";
+	type: FeeTransactionType;
 	data: Record<string, any> | undefined;
 	network: Networks.Network;
 	profile: Contracts.IProfile;
