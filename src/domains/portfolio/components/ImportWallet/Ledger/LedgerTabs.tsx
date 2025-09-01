@@ -45,7 +45,7 @@ export const LedgerTabs = ({
 	const [cancelling, setCancelling] = useState(false);
 	const retryFunctionReference = useRef<(() => void) | undefined>(undefined);
 
-	const importWallets = useCallback(
+	const handleWalletImporting = useCallback(
 		async ({ wallets }: { wallets: LedgerData[] }) => {
 			const device = await listenDevice();
 			const deviceId = device?.id;
@@ -67,7 +67,7 @@ export const LedgerTabs = ({
 
 			setImportedWallets(wallets);
 		},
-		[activeProfile, listenDevice, importWallet],
+		[activeProfile, listenDevice, importWallets],
 	);
 
 	const isNextDisabled = useMemo(() => isBusy || !isValid, [isBusy, isValid]);
