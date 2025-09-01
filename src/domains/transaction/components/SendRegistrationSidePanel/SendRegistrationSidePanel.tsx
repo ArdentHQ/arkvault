@@ -29,6 +29,8 @@ import { useValidatorRegistrationLockedFee } from "@/domains/transaction/compone
 import { SidePanel, SidePanelButtons } from "@/app/components/SidePanel/SidePanel";
 import { Button } from "@/app/components/Button";
 import { ThemeIcon } from "@/app/components/Icon";
+import { useConfirmedTransaction } from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
+import cn from "classnames";
 
 export const FORM_STEP = 1;
 export const REVIEW_STEP = 2;
@@ -72,6 +74,7 @@ export const SendRegistrationSidePanel = ({
 
 	const stepCount = registrationForm ? registrationForm.tabSteps + 2 : 1;
 	const authenticationStep = stepCount - 1;
+	const summaryStep = stepCount;
 	const isAuthenticationStep = activeTab === authenticationStep;
 
 	const { activeNetwork: network } = useActiveNetwork({ profile: activeProfile });
@@ -233,6 +236,11 @@ export const SendRegistrationSidePanel = ({
 		setActiveTab(nextStep);
 	};
 
+	const { isConfirmed } = useConfirmedTransaction({
+		transactionId: transaction?.hash(),
+		wallet: activeWallet,
+	});
+
 	const isNextDisabled = isDirty ? !isValid || !!isLoading : true;
 
 	const handleOpenChange = useCallback(
@@ -260,6 +268,14 @@ export const SendRegistrationSidePanel = ({
 			return "";
 		}
 
+		if (activeTab === ERROR_STEP) {
+			return t("TRANSACTION.ERROR.TITLE");
+		}
+
+		if (activeTab === summaryStep) {
+			return isConfirmed ? t("TRANSACTION.SUCCESS.CREATED") : t("TRANSACTION.PENDING.TITLE");
+		}
+
 		if (activeTab === authenticationStep) {
 			return t("TRANSACTION.AUTHENTICATION_STEP.TITLE");
 		}
@@ -279,6 +295,10 @@ export const SendRegistrationSidePanel = ({
 	};
 
 	const getSubtitle = () => {
+		if (activeTab === ERROR_STEP) {
+			return t("TRANSACTION.ERROR.DESCRIPTION");
+		}
+
 		if (activeTab === authenticationStep) {
 			return t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_SECRET");
 		}
@@ -297,10 +317,25 @@ export const SendRegistrationSidePanel = ({
 			}
 		}
 
-		return t("TRANSACTION.PAGE_USERNAME_REGISTRATION.FORM_STEP.DESCRIPTION");
+		return;
 	};
 
 	const getTitleIcon = () => {
+		if (activeTab === summaryStep) {
+			return (
+				<ThemeIcon
+					lightIcon={isConfirmed ? "CheckmarkDoubleCircle" : "PendingTransaction"}
+					darkIcon={isConfirmed ? "CheckmarkDoubleCircle" : "PendingTransaction"}
+					dimIcon={isConfirmed ? "CheckmarkDoubleCircle" : "PendingTransaction"}
+					dimensions={[24, 24]}
+					className={cn({
+						"text-theme-primary-600": !isConfirmed,
+						"text-theme-success-600": isConfirmed,
+					})}
+				/>
+			);
+		}
+
 		if (activeTab === REVIEW_STEP) {
 			return (
 				<ThemeIcon
@@ -349,7 +384,7 @@ export const SendRegistrationSidePanel = ({
 			totalSteps={stepCount}
 			activeStep={activeTab}
 			onBack={handleBack}
-			isLastStep={activeTab === stepCount}
+			isLastStep={activeTab === summaryStep}
 			disableOutsidePress
 			disableEscapeKey={isSubmitting}
 			onMountChange={onMountChange}
@@ -431,7 +466,7 @@ export const SendRegistrationSidePanel = ({
 								/>
 							</TabPanel>
 
-							<TabPanel tabId={stepCount}>
+							<TabPanel tabId={summaryStep}>
 								<TransactionSuccessful
 									transaction={transaction}
 									senderWallet={activeWallet!}

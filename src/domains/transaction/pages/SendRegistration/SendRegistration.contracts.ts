@@ -18,6 +18,7 @@ export interface SendRegistrationComponent {
 	activeTab: number;
 	wallet?: Contracts.IReadWriteWallet;
 	profile: Contracts.IProfile;
+	hideHeader?: boolean;
 }
 
 export interface SendRegistrationSignOptions {
