@@ -141,8 +141,8 @@ export const SendRegistrationSidePanel = ({
 		}
 
 		const registrations = {
-			default: () => setRegistrationForm(ValidatorRegistrationForm),
 			usernameRegistration: () => setRegistrationForm(UsernameRegistrationForm),
+			validatorRegistration: () => setRegistrationForm(ValidatorRegistrationForm),
 		};
 
 		return registrations[registrationType]();
@@ -280,14 +280,14 @@ export const SendRegistrationSidePanel = ({
 		}
 
 		return {
-			default: {
+			usernameRegistration: {
+				[FORM_STEP]: t("TRANSACTION.PAGE_USERNAME_REGISTRATION.FORM_STEP.TITLE"),
+				[REVIEW_STEP]: t("TRANSACTION.REVIEW_STEP.TITLE"),
+			},
+			validatorRegistration: {
 				[FORM_STEP]: activeWallet?.isValidator()
 					? t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.TITLE_UPDATE")
 					: t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.TITLE"),
-				[REVIEW_STEP]: t("TRANSACTION.REVIEW_STEP.TITLE"),
-			},
-			usernameRegistration: {
-				[FORM_STEP]: t("TRANSACTION.PAGE_USERNAME_REGISTRATION.FORM_STEP.TITLE"),
 				[REVIEW_STEP]: t("TRANSACTION.REVIEW_STEP.TITLE"),
 			},
 		}[registrationType][activeTab];
