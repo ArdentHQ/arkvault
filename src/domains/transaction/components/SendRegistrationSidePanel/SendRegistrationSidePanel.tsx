@@ -379,7 +379,7 @@ export const SendRegistrationSidePanel = ({
 					{activeTab === stepCount - 1 && (
 						<Button
 							data-testid="SendVote__send-button"
-							onClick={() => void handleSubmit(onSubmit)()}
+							onClick={() => void handleSubmit()}
 							disabled={isNextDisabled || isSubmitting}
 						>
 							{t("COMMON.SEND")}
