@@ -279,18 +279,17 @@ export const SendRegistrationSidePanel = ({
 			return t("TRANSACTION.AUTHENTICATION_STEP.TITLE");
 		}
 
-		return {
-			usernameRegistration: {
-				[FORM_STEP]: t("TRANSACTION.PAGE_USERNAME_REGISTRATION.FORM_STEP.TITLE"),
-				[REVIEW_STEP]: t("TRANSACTION.REVIEW_STEP.TITLE"),
-			},
-			validatorRegistration: {
-				[FORM_STEP]: activeWallet?.isValidator()
-					? t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.TITLE_UPDATE")
-					: t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.TITLE"),
-				[REVIEW_STEP]: t("TRANSACTION.REVIEW_STEP.TITLE"),
-			},
-		}[registrationType][activeTab];
+		if (activeTab === REVIEW_STEP) {
+			return t("TRANSACTION.REVIEW_STEP.TITLE");
+		}
+
+		if (registrationType === "validatorRegistration") {
+			return activeWallet?.isValidator()
+				? t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.TITLE_UPDATE")
+				: t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.TITLE");
+		} else {
+			return t("TRANSACTION.PAGE_USERNAME_REGISTRATION.FORM_STEP.TITLE");
+		}
 	};
 
 	const getSubtitle = () => {
@@ -298,25 +297,29 @@ export const SendRegistrationSidePanel = ({
 			return t("TRANSACTION.ERROR.DESCRIPTION");
 		}
 
+		if (activeTab === summaryStep) {
+			return;
+		}
+
 		if (activeTab === authenticationStep) {
 			return t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_SECRET");
 		}
 
 		if (activeTab === REVIEW_STEP) {
-			if (registrationType === "validatorRegistration") {
-				if (activeWallet?.isLegacyValidator()) {
-					return t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.DESCRIPTION_LEGACY");
-				}
-				if (activeWallet?.isValidator()) {
-					return t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.DESCRIPTION_UPDATE");
-				}
-				return t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.DESCRIPTION");
-			} else {
-				t("TRANSACTION.REVIEW_STEP.DESCRIPTION");
-			}
+			return t("TRANSACTION.REVIEW_STEP.DESCRIPTION");
 		}
 
-		return;
+		if (registrationType === "validatorRegistration") {
+			if (activeWallet?.isLegacyValidator()) {
+				return t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.DESCRIPTION_LEGACY");
+			}
+			if (activeWallet?.isValidator()) {
+				return t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.DESCRIPTION_UPDATE");
+			}
+			return t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.DESCRIPTION");
+		} else {
+			t("TRANSACTION.REVIEW_STEP.DESCRIPTION");
+		}
 	};
 
 	const getTitleIcon = () => {

@@ -59,11 +59,6 @@ export const useWalletActions = ({
 				return;
 			}
 
-			// if (typeof handleSendRegistration === "function") {
-			// 	handleSendRegistration();
-			// 	return;
-			// }
-
 			if (hasMultipleWallets) {
 				navigate(generatePath(ProfilePaths.SendTransfer, { profileId: profile.id() }));
 				return;
@@ -71,7 +66,7 @@ export const useWalletActions = ({
 
 			navigate(generatePath(ProfilePaths.SendTransferWallet, { profileId: profile.id(), walletId: wallet.id() }));
 		},
-		[stopEventBubbling, hasMultipleWallets, history, profile, wallet, handleSendTransfer, handleSendRegistration],
+		[stopEventBubbling, hasMultipleWallets, history, profile, wallet, handleSendTransfer],
 	);
 
 	const handleToggleStar = useCallback(
@@ -131,19 +126,7 @@ export const useWalletActions = ({
 			}
 
 			if (option.value === "validator-registration") {
-				let url = generatePath(ProfilePaths.SendValidatorRegistration, {
-					profileId: profile.id(),
-					walletId: wallet.id(),
-				});
-
-				if (hasMultipleWallets) {
-					url = generatePath(ProfilePaths.SendRegistrationProfile, {
-						profileId: profile.id(),
-						registrationType: "validatorRegistration",
-					});
-				}
-
-				navigate(url);
+				handleSendRegistration?.("validatorRegistration");
 			}
 
 			if (option.value === "validator-resignation") {
@@ -163,19 +146,6 @@ export const useWalletActions = ({
 
 			if (option.value === "username-registration") {
 				handleSendRegistration?.("usernameRegistration");
-				// let url = generatePath(ProfilePaths.SendUsernameRegistration, {
-				// 	profileId: profile.id(),
-				// 	walletId: wallet.id(),
-				// });
-
-				// if (hasMultipleWallets) {
-				// 	url = generatePath(ProfilePaths.SendRegistrationProfile, {
-				// 		profileId: profile.id(),
-				// 		registrationType: "usernameRegistration",
-				// 	});
-				// }
-
-				// navigate(url);
 			}
 
 			if (option.value === "username-resignation") {
