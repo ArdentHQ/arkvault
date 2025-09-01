@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 import { FormStep } from "@/domains/transaction/pages/SendVote/FormStep";
 import { VoteLedgerReview } from "@/domains/transaction/pages/SendVote/LedgerReview";
 import { ReviewStep } from "@/domains/transaction/pages/SendVote/ReviewStep";
-import { usePendingTransactions } from "@/domains/transaction/hooks/use-pending-transactions";
+import { useUnconfirmedTransactions } from "@/domains/transaction/hooks/use-unconfirmed-transactions";
 import { Form } from "@/app/components/Form";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { useEnvironmentContext, useLedgerContext } from "@/app/contexts";
@@ -55,7 +55,7 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 
 	const { votes, unvotes, setUnvotes, isLoading, selectedWallet } = useVoteFormContext();
 
-	const { addPendingTransaction } = usePendingTransactions();
+	const { addUnconfirmedTransactionFromSigned } = useUnconfirmedTransactions();
 
 	const walletFromUrl = useActiveWalletWhenNeeded(false);
 	const initialStep = useMemo(() => (walletFromUrl ? Step.ReviewStep : Step.FormStep), [walletFromUrl]);
@@ -346,7 +346,7 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 
 					await persist();
 
-					addPendingTransaction(transaction);
+					addUnconfirmedTransactionFromSigned(transaction);
 
 					setTransaction(transaction);
 
@@ -400,7 +400,7 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 
 					await persist();
 
-					addPendingTransaction(voteResult.transaction);
+					addUnconfirmedTransactionFromSigned(voteResult.transaction);
 
 					setTransaction(voteResult.transaction);
 
@@ -438,7 +438,7 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 
 				await persist();
 
-				addPendingTransaction(transaction);
+				addUnconfirmedTransactionFromSigned(transaction);
 
 				setTransaction(transaction);
 
@@ -504,9 +504,9 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 		if (activeTab === Step.SummaryStep) {
 			return (
 				<ThemeIcon
-					lightIcon={isConfirmed ? "CheckmarkDoubleCircle" : "PendingTransaction"}
-					darkIcon={isConfirmed ? "CheckmarkDoubleCircle" : "PendingTransaction"}
-					dimIcon={isConfirmed ? "CheckmarkDoubleCircle" : "PendingTransaction"}
+					lightIcon={isConfirmed ? "CheckmarkDoubleCircle" : "UnconfirmedTransaction"}
+					darkIcon={isConfirmed ? "CheckmarkDoubleCircle" : "UnconfirmedTransaction"}
+					dimIcon={isConfirmed ? "CheckmarkDoubleCircle" : "UnconfirmedTransaction"}
 					dimensions={[24, 24]}
 					className={classNames({
 						"text-theme-primary-600": !isConfirmed,

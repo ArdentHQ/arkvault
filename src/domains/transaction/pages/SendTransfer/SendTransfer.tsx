@@ -9,7 +9,7 @@ import { TransferLedgerReview } from "./LedgerReview";
 import { ReviewStep } from "./ReviewStep";
 import { SendTransferStep } from "@/domains/transaction/pages/SendTransfer/SendTransfer.contracts";
 import { useSendTransferForm } from "@/domains/transaction/hooks/use-send-transfer-form";
-import { usePendingTransactions } from "@/domains/transaction/hooks/use-pending-transactions";
+import { useUnconfirmedTransactions } from "@/domains/transaction/hooks/use-unconfirmed-transactions";
 import { Form } from "@/app/components/Form";
 import { Page, Section } from "@/app/components/Layout";
 import { QRModal } from "@/app/components/QRModal";
@@ -52,7 +52,7 @@ export const SendTransfer = () => {
 
 	const { fetchWalletUnconfirmedTransactions } = useTransaction();
 	const { hasDeviceAvailable, isConnected, connect } = useLedgerContext();
-	const { addPendingTransactionFromSigned } = usePendingTransactions();
+	const { addUnconfirmedTransactionFromSigned } = useUnconfirmedTransactions();
 
 	const { hasReset: shouldResetForm, queryParameters: deepLinkParameters } = useTransactionQueryParameters();
 
@@ -150,7 +150,7 @@ export const SendTransfer = () => {
 			try {
 				const transaction = await submitForm(abortReference);
 
-				addPendingTransactionFromSigned(transaction);
+				addUnconfirmedTransactionFromSigned(transaction);
 
 				setTransaction(transaction);
 				setActiveTab(SendTransferStep.SummaryStep);
@@ -159,7 +159,7 @@ export const SendTransfer = () => {
 				setActiveTab(SendTransferStep.ErrorStep);
 			}
 		},
-		[fetchWalletUnconfirmedTransactions, submitForm, wallet, addPendingTransaction],
+		[fetchWalletUnconfirmedTransactions, submitForm, wallet, addUnconfirmedTransactionFromSigned],
 	);
 
 	const handleBack = () => {

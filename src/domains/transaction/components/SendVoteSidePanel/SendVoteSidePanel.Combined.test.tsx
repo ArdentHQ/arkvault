@@ -325,7 +325,7 @@ describe("SendVoteSidePanel Combined", () => {
 
 		await waitFor(() => expect(broadcastMock).toHaveBeenNthCalledWith(2, transactionFixture.data.id));
 
-		await expect(screen.findByTestId("icon-PendingTransaction")).resolves.toBeVisible();
+		await expect(screen.findByTestId("icon-UnconfirmedTransaction")).resolves.toBeVisible();
 
 		signMock.mockRestore();
 		broadcastMock.mockRestore();

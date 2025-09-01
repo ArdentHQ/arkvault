@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 import { FormStep } from "./FormStep";
 import { VoteLedgerReview } from "./LedgerReview";
 import { ReviewStep } from "./ReviewStep";
-import { usePendingTransactions } from "@/domains/transaction/hooks/use-pending-transactions";
+import { useUnconfirmedTransactions } from "@/domains/transaction/hooks/use-unconfirmed-transactions";
 import { Form } from "@/app/components/Form";
 import { Page, Section } from "@/app/components/Layout";
 import { StepNavigation } from "@/app/components/StepNavigation";
@@ -56,7 +56,7 @@ export const SendVote = () => {
 		profile: activeProfile,
 	});
 
-	const { addPendingTransactionFromSigned } = usePendingTransactions();
+	const { addUnconfirmedTransactionFromSigned } = useUnconfirmedTransactions();
 
 	const walletFromUrl = useActiveWalletWhenNeeded(false);
 	const initialStep = useMemo(() => (walletFromUrl ? Step.ReviewStep : Step.FormStep), [walletFromUrl]);
@@ -327,7 +327,7 @@ export const SendVote = () => {
 
 					await persist();
 
-					addPendingTransactionFromSigned(transaction);
+					addUnconfirmedTransactionFromSigned(transaction);
 
 					setTransaction(transaction);
 
@@ -381,7 +381,7 @@ export const SendVote = () => {
 
 					await persist();
 
-					addPendingTransactionFromSigned(voteResult.transaction);
+					addUnconfirmedTransactionFromSigned(voteResult.transaction);
 
 					setTransaction(voteResult.transaction);
 
@@ -419,7 +419,7 @@ export const SendVote = () => {
 
 				await persist();
 
-				addPendingTransactionFromSigned(transaction);
+				addUnconfirmedTransactionFromSigned(transaction);
 
 				setTransaction(transaction);
 

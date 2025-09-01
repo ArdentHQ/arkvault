@@ -10,20 +10,20 @@ import SendTransactionLight from "./send-transaction-light.svg?react";
 import SendTransactionDark from "./send-transaction-dark.svg?react";
 import SendTransactionDim from "./send-transaction-dim.svg?react";
 import ConfirmTransaction from "./confirm-transaction.svg?react";
-import PendingTransaction from "./compass.svg?react";
+import UnconfirmedTransaction from "./compass.svg?react";
 import Mnemonic from "./mnemonic.svg?react";
 
 export const TransactionIcons: any = {
 	ConfirmTransaction,
 	Mnemonic,
 	Multipayment,
-	PendingTransaction,
 	Received,
 	Return,
 	SendTransactionDark,
 	SendTransactionDim,
 	SendTransactionLight,
 	Sent,
+	UnconfirmedTransaction,
 	Unvote,
 	Vote,
 };

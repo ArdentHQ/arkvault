@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { FormStep } from "./FormStep";
 import { ReviewStep } from "./ReviewStep";
-import { usePendingTransactions } from "@/domains/transaction/hooks/use-pending-transactions";
+import { useUnconfirmedTransactions } from "@/domains/transaction/hooks/use-unconfirmed-transactions";
 import { Form } from "@/app/components/Form";
 import { Page, Section } from "@/app/components/Layout";
 import { StepNavigation } from "@/app/components/StepNavigation";
@@ -42,7 +42,7 @@ export const SendValidatorResignation = () => {
 
 	const { senderAddress, gasLimit, gasPrice } = watch();
 	const { common } = useValidation();
-	const { addPendingTransactionFromSigned } = usePendingTransactions();
+	const { addUnconfirmedTransactionFromSigned } = useUnconfirmedTransactions();
 
 	const [activeTab, setActiveTab] = useState<Step>(Step.FormStep);
 	const [transaction, setTransaction] = useState(undefined as unknown as DTO.ExtendedSignedTransactionData);
@@ -144,7 +144,7 @@ export const SendValidatorResignation = () => {
 
 			const transactionData = activeWallet.transaction().transaction(signedTransactionId);
 
-			addPendingTransactionFromSigned(transactionData);
+			addUnconfirmedTransactionFromSigned(transactionData);
 			setTransaction(transactionData);
 
 			handleNext();

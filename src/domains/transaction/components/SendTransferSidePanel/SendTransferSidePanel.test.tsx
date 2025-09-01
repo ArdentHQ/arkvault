@@ -24,7 +24,7 @@ import userEvent from "@testing-library/user-event";
 import * as LedgerTransportFactory from "@/app/contexts/Ledger/transport";
 import * as AppContexts from "@/app/contexts";
 import * as hooks from "@/domains/transaction/hooks";
-import * as pendingHook from "@/domains/transaction/hooks/use-pending-transactions";
+import * as unconfirmedHook from "@/domains/transaction/hooks/use-unconfirmed-transactions";
 import * as appHooks from "@/app/hooks";
 
 const passphrase = getDefaultWalletMnemonic();
@@ -296,8 +296,8 @@ describe("SendTransferSidePanel", () => {
 			fetchWalletUnconfirmedTransactions: vi.fn().mockResolvedValue([signedTransactionMock]),
 		} as any);
 
-		vi.spyOn(pendingHook, "usePendingTransactions").mockReturnValue({
-			addPendingTransaction: vi.fn(),
+		vi.spyOn(unconfirmedHook, "useUnconfirmedTransactions").mockReturnValue({
+			addUnconfirmedTransaction: vi.fn(),
 		} as any);
 
 		render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} />, {
@@ -370,8 +370,8 @@ describe("SendTransferSidePanel", () => {
 			listenDevice: vi.fn(),
 		} as any);
 
-		vi.spyOn(pendingHook, "usePendingTransactions").mockReturnValue({
-			addPendingTransaction: vi.fn(),
+		vi.spyOn(unconfirmedHook, "useUnconfirmedTransactions").mockReturnValue({
+			addUnconfirmedTransaction: vi.fn(),
 		} as any);
 
 		vi.spyOn(wallet, "isLedger").mockReturnValue(true);
@@ -640,7 +640,7 @@ describe("SendTransferSidePanel", () => {
 		const useTransactionSpy = vi.spyOn(hooks, "useTransaction").mockReturnValue({
 			fetchWalletUnconfirmedTransactions: vi.fn().mockResolvedValue([signedTransactionMock]),
 		} as any);
-		vi.spyOn(pendingHook, "usePendingTransactions").mockReturnValue({ addPendingTransaction: vi.fn() } as any);
+		vi.spyOn(unconfirmedHook, "useUnconfirmedTransactions").mockReturnValue({ addUnconfirmedTransaction: vi.fn() } as any);
 
 		const onOpenChange = vi.fn();
 		render(<SendTransferSidePanel open={true} onOpenChange={onOpenChange} />, {

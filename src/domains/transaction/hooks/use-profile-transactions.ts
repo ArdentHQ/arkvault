@@ -1,7 +1,7 @@
 import { Contracts, DTO, Contracts as ProfileContracts } from "@/app/lib/profiles";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useSynchronizer, useWalletAlias } from "@/app/hooks";
-import { usePendingTransactions } from "@/domains/transaction/hooks/use-pending-transactions";
+import { useUnconfirmedTransactions } from "@/domains/transaction/hooks/use-unconfirmed-transactions";
 
 import { SortBy } from "@/app/components/Table";
 import { delay } from "@/utils/delay";
@@ -10,7 +10,7 @@ import { SignedTransactionData } from "@/app/lib/mainsail/signed-transaction.dto
 import { ExtendedSignedTransactionData } from "@/app/lib/profiles/signed-transaction.dto";
 import { IReadWriteWallet } from "@/app/lib/profiles/wallet.contract";
 import { ExtendedTransactionDTO } from "@/domains/transaction/components/TransactionTable";
-import { PendingTransactionsService } from "@/app/lib/mainsail/pending-transactions.service";
+import { UnconfirmedTransactionsService } from "@/app/lib/mainsail/unconfirmed-transactions.service";
 import { HttpClient } from "@/app/lib/mainsail/http-client";
 import { get } from "@/app/lib/helpers";
 
@@ -99,15 +99,15 @@ const getOrderByStr = ({ column, desc }: SortBy): string => {
 	return columnMap[column] + ":" + (desc ? "desc" : "asc");
 };
 
-const removeConfirmedPendingTransactions = (
+const removeConfirmedUnconfirmedTransactions = (
 	confirmedTransactions: DTO.ExtendedConfirmedTransactionData[],
-	removePendingTransaction: (hash: string) => void,
+	removeUnconfirmedTransaction: (hash: string) => void,
 ) => {
 	const confirmedHashes = new Set(confirmedTransactions.map((tx) => tx.hash()));
 
-	return (pendingHash: string) => {
-		if (confirmedHashes.has(pendingHash)) {
-			removePendingTransaction(pendingHash);
+	return (unconfirmedHash: string) => {
+		if (confirmedHashes.has(unconfirmedHash)) {
+			removeUnconfirmedTransaction(unconfirmedHash);
 		}
 	};
 };
@@ -119,8 +119,8 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 	const { types } = useTransactionTypes({ wallets });
 	const { syncOnChainUsernames } = useWalletAlias();
 
-	const { pendingTransactions, removePendingTransaction, addPendingTransactionFromUnconfirmed } =
-		usePendingTransactions();
+	const { unconfirmedTransactions, removeUnconfirmedTransaction, addUnconfirmedTransactionFromUnconfirmed } =
+		useUnconfirmedTransactions();
 
 	const allTransactionTypes = [...types.core];
 
@@ -165,11 +165,11 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 
 		const hasAllSelected = selectedTransactionTypes.length === allTransactionTypes.length;
 
-		const signedTransactions = pendingTransactions
+		const signedTransactions = unconfirmedTransactions
 			.filter(
-				(pendingTransaction) =>
-					walletAddresses.includes(pendingTransaction.walletAddress) &&
-					walletNetworkIds.includes(pendingTransaction.networkId),
+				(unconfirmedTransaction) =>
+					walletAddresses.includes(unconfirmedTransaction.walletAddress) &&
+					walletNetworkIds.includes(unconfirmedTransaction.networkId),
 			)
 			.map((tx): [SignedTransactionData, string] => [
 				new SignedTransactionData().configure(tx.transaction.signedData, tx.transaction.serialized),
@@ -217,7 +217,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 
 			return 0;
 		});
-	}, [transactions, pendingTransactions, wallets, selectedTransactionTypes, activeMode, sortBy, allTransactionTypes]);
+	}, [transactions, unconfirmedTransactions, wallets, selectedTransactionTypes, activeMode, sortBy, allTransactionTypes]);
 
 	const selectedWalletAddresses = wallets.map((wallet) => wallet.address()).join("-");
 
@@ -275,19 +275,19 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 	}, [selectedWalletAddresses, activeMode, activeTransactionType, timestamp, selectedTransactionTypes, orderBy]);
 
 	useEffect(() => {
-		if (transactions.length === 0 || pendingTransactions.length === 0) {
+		if (transactions.length === 0 || unconfirmedTransactions.length === 0) {
 			return;
 		}
 
-		const checkForConfirmedTransactions = removeConfirmedPendingTransactions(
+		const checkForConfirmedTransactions = removeConfirmedUnconfirmedTransactions(
 			transactions,
-			removePendingTransaction,
+			removeUnconfirmedTransaction,
 		);
 
-		for (const pendingTx of pendingTransactions) {
-			checkForConfirmedTransactions(pendingTx.transaction.signedData.hash);
+		for (const unconfirmedTx of unconfirmedTransactions) {
+			checkForConfirmedTransactions(unconfirmedTx.transaction.signedData.hash);
 		}
-	}, [transactions, pendingTransactions, removePendingTransaction]);
+	}, [transactions, unconfirmedTransactions, removeUnconfirmedTransaction]);
 
 	const updateFilters = useCallback(
 		({
@@ -450,26 +450,26 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 		return allTransactions.length === 0 && !isLoadingTransactions;
 	}, [isLoadingTransactions, allTransactions.length]);
 
-	const pendingTransactionsService = useRef<PendingTransactionsService | null>(null);
-	const [isPendingServiceReady, setIsPendingServiceReady] = useState(false);
+	const unconfirmedTransactionsService = useRef<UnconfirmedTransactionsService | null>(null);
+	const [isUnconfirmedTransactionsServiceReady, setIsUnconfirmedTransactionsServiceReady] = useState(false);
 
 	useEffect(() => {
 		if (!wallets || wallets.length === 0) {
-			pendingTransactionsService.current = null;
-			setIsPendingServiceReady(false);
+			unconfirmedTransactionsService.current = null;
+			setIsUnconfirmedTransactionsServiceReady(false);
 			return;
 		}
 		try {
 			const first = wallets[0];
 			const host = first.network().config().host("tx", first.profile());
 			const httpClient = new HttpClient(10_000);
-			pendingTransactionsService.current = new PendingTransactionsService({ host, httpClient });
-			setIsPendingServiceReady(true);
+			unconfirmedTransactionsService.current = new UnconfirmedTransactionsService({ host, httpClient });
+			setIsUnconfirmedTransactionsServiceReady(true);
 		} catch (error) {
 			/* istanbul ignore next -- @preserve */
-			console.error("Failed to initialize PendingTransactionsService:", error);
-			pendingTransactionsService.current = null;
-			setIsPendingServiceReady(false);
+			console.error("Failed to initialize UnconfirmedTransactionsService:", error);
+			unconfirmedTransactionsService.current = null;
+			setIsUnconfirmedTransactionsServiceReady(false);
 		}
 	}, [wallets]);
 
@@ -495,7 +495,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 	const blockTime = useMemo(() => getBlockTime(), [walletsKey]);
 
 	const fetchUnconfirmedAndLog = useCallback(async () => {
-		const service = pendingTransactionsService.current;
+		const service = unconfirmedTransactionsService.current;
 		if (!service) {
 			/* istanbul ignore next -- @preserve */
 			return;
@@ -517,7 +517,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 
 				const gasLimit = (transaction as any).gasLimit ?? (transaction as any).gas;
 
-				addPendingTransactionFromUnconfirmed({
+				addUnconfirmedTransactionFromUnconfirmed({
 					...transaction,
 					gasLimit,
 					networkId: matched.networkId(),
@@ -528,7 +528,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 			/* istanbul ignore next -- @preserve */
 			console.error("Failed to fetch unconfirmed transactions:", error);
 		}
-	}, [wallets, addPendingTransactionFromUnconfirmed]);
+	}, [wallets, addUnconfirmedTransactionFromUnconfirmed]);
 
 	const pollingCallbackRef = useRef(fetchUnconfirmedAndLog);
 	useEffect(() => {
@@ -536,7 +536,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 	}, [fetchUnconfirmedAndLog]);
 
 	useEffect(() => {
-		if (!isPendingServiceReady) {
+		if (!isUnconfirmedTransactionsServiceReady) {
 			return;
 		}
 
@@ -545,7 +545,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 		}, blockTime);
 
 		return () => clearInterval(id);
-	}, [isPendingServiceReady, blockTime]);
+	}, [isUnconfirmedTransactionsServiceReady, blockTime]);
 
 	return {
 		activeMode,

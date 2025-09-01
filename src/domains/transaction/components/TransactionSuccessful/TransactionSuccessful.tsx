@@ -37,8 +37,8 @@ export const TransactionSuccessful = ({
 					titleIcon={
 						<Icon
 							dimensions={[24, 24]}
-							name={isConfirmed ? "CheckmarkDoubleCircle" : "PendingTransaction"}
-							data-testid="icon-PendingTransaction"
+							name={isConfirmed ? "CheckmarkDoubleCircle" : "UnconfirmedTransaction"}
+							data-testid="icon-UnconfirmedTransaction"
 							className={cn({
 								"text-theme-primary-600": !isConfirmed,
 								"text-theme-success-600": isConfirmed,
