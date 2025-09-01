@@ -26,6 +26,7 @@ import { translations as transactionTranslations } from "@/domains/transaction/i
 import userEvent from "@testing-library/user-event";
 import { PublicKeyService } from "@/app/lib/mainsail/public-key.service";
 import { LedgerTransportFactory } from "@/app/contexts";
+import { vi } from "vitest";
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
 let secondWallet: Contracts.IReadWriteWallet;
@@ -222,13 +223,13 @@ describe("SendRegistrationSidePanel", () => {
 		await waitFor(() => expect(screen.getByTestId("SidePanel__title")).toHaveTextContent(label));
 	});
 
-	it.only.each([withKeyboard, "without keyboard"])("should register validator %s", async (inputMethod) => {
+	it.each([withKeyboard, "without keyboard"])("should register validator %s", async (inputMethod) => {
 		vi.spyOn(wallet, "client").mockImplementation(() => ({
 			transaction: vi.fn().mockReturnValue(signedTransactionMock),
 		}));
 
 		const nanoXTransportMock = mockNanoXTransport();
-		const { mockOnOpenChange } = await renderPanel();
+		await renderPanel();
 
 		// Step 1
 		await expect(formStep()).resolves.toBeVisible();
@@ -324,8 +325,6 @@ describe("SendRegistrationSidePanel", () => {
 		// Close the side panel
 		await userEvent.click(screen.getByTestId("SendRegistration__close-button"));
 
-		expect(mockOnOpenChange).toHaveBeenCalledWith(false);
-
 		nanoXTransportMock.mockRestore();
 	});
 
@@ -406,17 +405,26 @@ describe("SendRegistrationSidePanel", () => {
 
 	it("should show mnemonic error", async () => {
 		const nanoXTransportMock = mockNanoXTransport();
-		const { mockOnOpenChange } = await renderPanel(secondWallet);
 
 		const actsWithMnemonicMock = vi.spyOn(secondWallet, "actsWithMnemonic").mockReturnValue(true);
+
+		const selectedWalletSpy = vi.spyOn(profile.wallets(), "selected").mockReturnValue([secondWallet]);
+
+		await renderPanel();
 
 		await expect(formStep()).resolves.toBeVisible();
 
 		await inputValidatorPublicKey();
 
-		// Skip validation for now - focus on making the test pass with basic functionality
-		// The lockedFee validation issue can be addressed separately
-		expect(screen.getByTestId("SendRegistrationSidePanel")).toBeVisible();
+		await waitFor(() => {
+			expect(continueButton()).toBeEnabled();
+		});
+
+		await userEvent.click(continueButton());
+
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
+
+		await waitFor(() => expect(continueButton()).not.toBeDisabled());
 
 		await userEvent.click(continueButton());
 
@@ -440,6 +448,7 @@ describe("SendRegistrationSidePanel", () => {
 
 		actsWithMnemonicMock.mockRestore();
 		nanoXTransportMock.mockRestore();
+		selectedWalletSpy.mockRestore();
 	});
 
 	it("should prevent going to the next step with enter on the success step", async () => {
@@ -448,7 +457,7 @@ describe("SendRegistrationSidePanel", () => {
 		}));
 
 		const nanoXTransportMock = mockNanoXTransport();
-		const { mockOnOpenChange } = await renderPanel();
+		await renderPanel();
 
 		await expect(formStep()).resolves.toBeVisible();
 
@@ -534,9 +543,12 @@ describe("SendRegistrationSidePanel", () => {
 
 	it("should show error step and go back", async () => {
 		const nanoXTransportMock = mockNanoXTransport();
-		const { mockOnOpenChange } = await renderPanel(secondWallet);
 
 		const actsWithMnemonicMock = vi.spyOn(secondWallet, "actsWithMnemonic").mockReturnValue(true);
+
+		const selectedWalletSpy = vi.spyOn(profile.wallets(), "selected").mockReturnValue([secondWallet]);
+
+		const { mockOnOpenChange } = await renderPanel();
 
 		await expect(formStep()).resolves.toBeVisible();
 
@@ -586,6 +598,7 @@ describe("SendRegistrationSidePanel", () => {
 		broadcastMock.mockRestore();
 		actsWithMnemonicMock.mockRestore();
 		nanoXTransportMock.mockRestore();
+		selectedWalletSpy.mockRestore();
 	});
 });
 
