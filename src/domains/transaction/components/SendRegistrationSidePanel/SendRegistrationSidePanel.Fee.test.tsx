@@ -29,7 +29,6 @@ vi.mock("@/utils/delay", () => ({
 }));
 
 const renderPanel = async (
-	wallet: Contracts.IReadWriteWallet,
 	registrationType: "validatorRegistration" | "usernameRegistration" = "validatorRegistration",
 ) => {
 	const mockOnOpenChange = vi.fn();
@@ -49,7 +48,6 @@ const renderPanel = async (
 
 const continueButton = () => screen.getByTestId("SendRegistration__continue-button");
 const formStep = () => screen.findByTestId("ValidatorRegistrationForm_form-step");
-const sendButton = () => screen.getByTestId("SendRegistration__send-button");
 
 const reviewStepID = "ValidatorRegistrationForm__review-step";
 
@@ -102,7 +100,7 @@ describe("SendRegistrationSidePanel Fee", () => {
 		const nanoXTransportMock = mockNanoXTransport();
 		const selectedWalletSpy = vi.spyOn(profile.wallets(), "selected").mockReturnValue([wallet]);
 
-		await renderPanel(wallet);
+		await renderPanel();
 
 		await expect(formStep()).resolves.toBeVisible();
 
@@ -139,7 +137,7 @@ describe("SendRegistrationSidePanel Fee", () => {
 		const nanoXTransportMock = mockNanoXTransport();
 		const selectedWalletSpy = vi.spyOn(profile.wallets(), "selected").mockReturnValue([wallet]);
 
-		await renderPanel(wallet);
+		await renderPanel();
 
 		await expect(formStep()).resolves.toBeVisible();
 
@@ -183,7 +181,7 @@ describe("SendRegistrationSidePanel Fee", () => {
 		const nanoXTransportMock = mockNanoXTransport();
 		const selectedWalletSpy = vi.spyOn(profile.wallets(), "selected").mockReturnValue([wallet]);
 
-		await renderPanel(wallet);
+		await renderPanel();
 
 		await expect(formStep()).resolves.toBeVisible();
 
