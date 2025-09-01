@@ -48,7 +48,11 @@ export const TransactionSuccessful = ({
 				/>
 			)}
 
-			<div className="mt-4">
+			<div
+				className={cn({
+					"mt-4": !noHeading,
+				})}
+			>
 				<TransactionDetailContent
 					transactionItem={confirmedTransaction ?? transaction}
 					profile={senderWallet.profile()}

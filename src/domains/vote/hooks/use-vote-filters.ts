@@ -13,13 +13,13 @@ export const useVoteFilters = ({
 }: {
 	profile: Contracts.IProfile;
 	filter: FilterOption;
-	wallet: Contracts.IReadWriteWallet;
+	wallet?: Contracts.IReadWriteWallet;
 	hasWalletId: boolean;
 }) => {
 	const { getWalletAlias } = useWalletAlias();
-	const walletAddress = useMemo(() => (hasWalletId ? wallet.address() : ""), [hasWalletId, wallet]);
+	const walletAddress = useMemo(() => (hasWalletId ? wallet!.address() : ""), [hasWalletId, wallet]);
 	const walletMaxVotes = useMemo(
-		() => (hasWalletId ? wallet.network().maximumVotesPerWallet() : undefined),
+		() => (hasWalletId ? wallet!.network().maximumVotesPerWallet() : undefined),
 		[hasWalletId, wallet],
 	);
 	const { activeNetwork } = useActiveNetwork({ profile });
