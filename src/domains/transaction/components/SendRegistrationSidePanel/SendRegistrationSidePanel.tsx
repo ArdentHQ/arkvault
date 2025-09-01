@@ -1,33 +1,34 @@
 import { Contracts, DTO } from "@/app/lib/profiles";
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useCallback, useEffect, useLayoutEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
+import { useLocation, useNavigate } from "react-router-dom";
+
 import { useTranslation } from "react-i18next";
+import { SendRegistrationForm } from "./SendRegistration.contracts";
+import { usePendingTransactions } from "@/domains/transaction/hooks/use-pending-transactions";
 import { Form } from "@/app/components/Form";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
-import { SidePanel, SidePanelButtons } from "@/app/components/SidePanel/SidePanel";
-import { Button } from "@/app/components/Button";
+import { useEnvironmentContext, useLedgerContext } from "@/app/contexts";
+import { useActiveProfile, useActiveWalletWhenNeeded, useLedgerModelStatus, useValidation } from "@/app/hooks";
+import { useKeydown } from "@/app/hooks/use-keydown";
 import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
+import {
+	ValidatorRegistrationForm,
+	signValidatorRegistration,
+} from "@/domains/transaction/components/ValidatorRegistrationForm";
 import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
 import { TransactionSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
+import { assertWallet } from "@/utils/assertions";
+import {
+	signUsernameRegistration,
+	UsernameRegistrationForm,
+} from "@/domains/transaction/components/UsernameRegistrationForm";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
-import { useActiveProfile } from "@/app/hooks";
-import { useLedgerContext } from "@/app/contexts";
-import { usePendingTransactions } from "@/domains/transaction/hooks/use-pending-transactions";
-import { FormStep as ValidatorFormStep } from "@/domains/transaction/components/ValidatorRegistrationForm/FormStep";
-import { ReviewStep as ValidatorReviewStep } from "@/domains/transaction/components/ValidatorRegistrationForm/ReviewStep";
-import { FormStep as UsernameFormStep } from "@/domains/transaction/components/UsernameRegistrationForm/FormStep";
+import { useToggleFeeFields } from "@/domains/transaction/hooks/useToggleFeeFields";
 import { getUrlParameter } from "@/utils/paths";
-import { useLocation } from "react-router-dom";
-import { useKeydown } from "@/app/hooks/use-keydown";
-import { ThemeIcon } from "@/app/components/Icon";
-import cn from "classnames";
-import { useConfirmedTransaction } from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
-import { signValidatorRegistration } from "@/domains/transaction/components/ValidatorRegistrationForm";
-import { signUsernameRegistration } from "@/domains/transaction/components/UsernameRegistrationForm";
-import { useEnvironmentContext } from "@/app/contexts/Environment/Environment";
-
-const SUMMARY_STEP = 4;
-const ERROR_STEP = 5;
+import { useValidatorRegistrationLockedFee } from "@/domains/transaction/components/ValidatorRegistrationForm/hooks/useValidatorRegistrationLockedFee";
+import { SidePanel, SidePanelButtons } from "@/app/components/SidePanel/SidePanel";
+import { Button } from "@/app/components/Button";
 
 export const SendRegistrationSidePanel = ({
 	open,
@@ -36,95 +37,144 @@ export const SendRegistrationSidePanel = ({
 	open: boolean;
 	onOpenChange: (open: boolean) => void;
 }) => {
+	const navigate = useNavigate();
 	const { t } = useTranslation();
-	const { env } = useEnvironmentContext();
 	const location = useLocation();
-	const activeProfile = useActiveProfile();
-	const { activeNetwork } = useActiveNetwork({ profile: activeProfile });
-	const { addPendingTransaction } = usePendingTransactions();
-	const { hasDeviceAvailable, isConnected, connect, ledgerDevice } = useLedgerContext();
-
-	const form = useForm({ mode: "onChange" });
-	const { formState, getValues, register, setValue, watch } = form;
-	const { isDirty, isSubmitting, isValid } = formState;
-
-	const { senderAddress } = watch();
 
 	const [activeTab, setActiveTab] = useState(1);
+	const [transaction, setTransaction] = useState(undefined as unknown as DTO.ExtendedSignedTransactionData);
+	const [registrationForm, setRegistrationForm] = useState<SendRegistrationForm>();
 	const [errorMessage, setErrorMessage] = useState<string | undefined>();
-	const [transaction, setTransaction] = useState<DTO.ExtendedSignedTransactionData | undefined>(undefined);
+
+	const { env } = useEnvironmentContext();
+	const activeProfile = useActiveProfile();
+	const { common, validatorRegistration } = useValidation();
+	const { addPendingTransaction } = usePendingTransactions();
+
+	const { hasDeviceAvailable, isConnected, connect, ledgerDevice } = useLedgerContext();
+
+	const { isLedgerModelSupported } = useLedgerModelStatus({
+		connectedModel: ledgerDevice?.id,
+		supportedModels: [Contracts.WalletLedgerModel.NanoX, Contracts.WalletLedgerModel.NanoSP],
+	});
+
+	const form = useForm({ mode: "onChange" });
+
+	const { formState, register, setValue, watch, getValues, trigger } = form;
+	const { isDirty, isSubmitting, isValid } = formState;
+
+	const { fees, isLoading, senderAddress } = watch();
+
+	const stepCount = registrationForm ? registrationForm.tabSteps + 2 : 1;
+	const authenticationStep = stepCount - 1;
+	const isAuthenticationStep = activeTab === authenticationStep;
+
+	const activeWalletFromUrl = useActiveWalletWhenNeeded(false);
 
 	const registrationType = useMemo(() => {
 		try {
-			return getUrlParameter(location.pathname, 3) ?? "validatorRegistration";
+			if (activeWalletFromUrl) {
+				return getUrlParameter(location.pathname, 5);
+			}
+
+			return getUrlParameter(location.pathname, 3);
 		} catch {
-			return "validatorRegistration";
+			return;
 		}
-	}, [location.pathname]);
+	}, [activeWalletFromUrl]);
+
+	const { activeNetwork: network } = useActiveNetwork({ profile: activeProfile });
 
 	const activeWallet = useMemo(() => {
 		if (senderAddress) {
-			try {
-				return activeProfile.wallets().findByAddressWithNetwork(senderAddress, activeNetwork.id());
-			} catch {
-				return undefined;
-			}
+			return activeProfile.wallets().findByAddressWithNetwork(senderAddress, network.id());
 		}
-	}, [senderAddress, activeProfile, activeNetwork]);
 
-	// Basic registrations used by both flows
+		if (activeWalletFromUrl) {
+			return activeWalletFromUrl;
+		}
+	}, [activeProfile, activeWalletFromUrl, network, senderAddress]);
+
+	const { validatorRegistrationFee } = useValidatorRegistrationLockedFee({
+		profile: activeProfile,
+		wallet: activeWallet,
+	});
+
 	useEffect(() => {
+		register("fees");
+
+		register("inputFeeSettings");
+
 		register("network", { required: true });
 		register("senderAddress", { required: true });
-		register("fees");
-		register("inputFeeSettings");
-		register("suppressWarning");
-		register("lockedFee");
-		if (activeNetwork) {
-			setValue("network", activeNetwork, { shouldDirty: true, shouldValidate: true });
-		}
-	}, [register, activeNetwork, setValue]);
 
-	// Auto-select wallet if only one
-	useEffect(() => {
-		if (!senderAddress && activeProfile.wallets().count() === 1) {
-			setValue("senderAddress", activeProfile.wallets().first().address(), {
-				shouldDirty: true,
-				shouldValidate: true,
-			});
+		register("suppressWarning");
+		register("isLoading");
+
+		if (registrationType === "validatorRegistration") {
+			register("lockedFee", validatorRegistration.lockedFee(activeWallet, getValues));
 		}
-	}, [senderAddress, activeProfile, setValue]);
+	}, [register, activeWallet, common, fees, validatorRegistrationFee, validatorRegistration, registrationType]);
+
+	useEffect(() => {
+		trigger("lockedFee");
+	}, [senderAddress]);
+
+	useToggleFeeFields({
+		activeTab,
+		form,
+		wallet: activeWallet,
+	});
+
+	useEffect(() => {
+		if (!activeWallet) {
+			return;
+		}
+
+		setValue("senderAddress", activeWallet.address(), { shouldDirty: true, shouldValidate: true });
+
+		setValue("network", activeProfile.activeNetwork(), { shouldDirty: true, shouldValidate: true });
+	}, [activeWallet, env, setValue]);
+
+	useEffect(() => {
+		setValue("lockedFee", validatorRegistrationFee, { shouldDirty: true, shouldValidate: true });
+	}, [validatorRegistrationFee]);
+
+	useLayoutEffect(() => {
+		const registrations = {
+			default: () => setRegistrationForm(ValidatorRegistrationForm),
+			usernameRegistration: () => setRegistrationForm(UsernameRegistrationForm),
+		};
+
+		// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+		return (registrations[registrationType as keyof typeof registrations] || registrations.default)();
+	}, [registrationType]);
+
+	// Reset ledger authentication steps after reconnecting supported ledger
+	useEffect(() => {
+		if (registrationType !== "multiSignature") {
+			return;
+		}
+
+		if (isAuthenticationStep && activeWallet?.isLedger() && isLedgerModelSupported) {
+			handleSubmit();
+		}
+	}, [ledgerDevice]);
 
 	useKeydown("Enter", () => {
 		const isButton = (document.activeElement as any)?.type === "button";
-		if (isButton || isNextDisabled() || activeTab >= 3) return;
-		handleNext();
-	});
 
-	const isNextDisabled = () => (isDirty ? !isValid : true);
-
-	const handleBack = () => {
-		if (activeTab === 1) {
-			onOpenChange(false);
+		if (isButton || isNextDisabled || activeTab >= authenticationStep) {
 			return;
 		}
-		setActiveTab((v) => Math.max(1, v - 1));
-	};
 
-	const handleNext = () => {
-		const next = activeTab + 1;
-		const isAuth = next === 3;
-		if (isAuth && activeWallet?.isLedger()) {
-			// Auto submit for ledger
-			void onSubmit();
-		}
-		setActiveTab(next);
-	};
+		return handleNext();
+	});
 
-	const onSubmit = async () => {
+	const handleSubmit = async () => {
+		assertWallet(activeWallet);
+
 		try {
-			if (!activeWallet) return;
-
 			const { mnemonic, secondMnemonic, encryptionPassword, secret, secondSecret } = getValues();
 
 			if (activeWallet.isLedger()) {
@@ -139,88 +189,88 @@ export const SendRegistrationSidePanel = ({
 				secret,
 			});
 
-			let tx: DTO.ExtendedSignedTransactionData;
+			if (registrationType === "validatorRegistration") {
+				const transaction = await signValidatorRegistration({
+					env,
+					form,
+					profile: activeProfile,
+					signatory,
+				});
+
+				addPendingTransaction(transaction);
+				setTransaction(transaction);
+				handleNext();
+			}
 
 			if (registrationType === "usernameRegistration") {
-				const id = await signUsernameRegistration({ env, form, profile: activeProfile, signatory });
-				addPendingTransaction(id);
-				tx = id;
-			} else {
-				const id = await signValidatorRegistration({ env, form, profile: activeProfile, signatory });
-				addPendingTransaction(id);
-				tx = id;
-			}
+				const transaction = await signUsernameRegistration({
+					env,
+					form,
+					profile: activeProfile,
+					signatory,
+				});
 
-			setTransaction(tx);
-			setActiveTab(SUMMARY_STEP);
-		} catch (error: any) {
+				addPendingTransaction(transaction);
+				setTransaction(transaction);
+				handleNext();
+			}
+		} catch (error) {
 			setErrorMessage(JSON.stringify({ message: error.message, type: error.name }));
-			setActiveTab(ERROR_STEP);
+			setActiveTab(10);
 		}
 	};
 
-	const { isConfirmed } = useConfirmedTransaction({ transactionId: transaction?.hash(), wallet: activeWallet });
+	const handleBack = () => {
+		if (activeTab === 1) {
+			return navigate(`/profiles/${activeProfile.id()}/dashboard`);
+		}
+
+		setActiveTab(activeTab - 1);
+	};
+
+	const handleNext = () => {
+		const nextStep = activeTab + 1;
+		const isNextStepAuthentication = nextStep === authenticationStep;
+
+		// Skip authentication step
+		if (isNextStepAuthentication && activeWallet?.isLedger() && isLedgerModelSupported) {
+			handleSubmit();
+		}
+
+		setActiveTab(nextStep);
+	};
+
+	const hideStepNavigation = activeTab === 10 || (isAuthenticationStep && activeWallet?.isLedger());
+
+	const isNextDisabled = isDirty ? !isValid || !!isLoading : true;
+
+	const onMountChange = useCallback(
+		(mounted: boolean) => {
+			if (!mounted) {
+				setActiveTab(1);
+
+				// @TODO: see if we need to reset the form
+
+				return;
+			}
+		},
+		[activeTab],
+	);
 
 	const getTitle = () => {
-		if (activeTab === ERROR_STEP) return t("TRANSACTION.ERROR.TITLE");
-		if (activeTab === 3) return t("TRANSACTION.AUTHENTICATION_STEP.TITLE");
-		if (activeTab === SUMMARY_STEP)
-			return isConfirmed ? t("TRANSACTION.SUCCESS.CREATED") : t("TRANSACTION.PENDING.TITLE");
-		return t("TRANSACTION.REGISTRATION_STEP.TITLE");
+		if (!registrationType) {
+			return "";
+		}
+
+		return {
+			default: t("TRANSACTION.TRANSACTION_TYPES.REGISTER_VALIDATOR"),
+			usernameRegistration: t("TRANSACTION.TRANSACTION_TYPES.REGISTER_USERNAME"),
+		}[registrationType];
 	};
 
-	const getSubtitle = () => {
-		if (activeTab === 2) return t("TRANSACTION.REVIEW_STEP.DESCRIPTION");
-		if (activeTab === 3 && !activeWallet?.isLedger())
-			return t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_SECRET");
-		if (activeTab === 1) return t("TRANSACTION.REGISTRATION_STEP.DESCRIPTION");
-		return;
-	};
+	const getSubtitle = () => "@TODO";
 
-	const getTitleIcon = () => {
-		if (activeTab === SUMMARY_STEP) {
-			return (
-				<ThemeIcon
-					lightIcon={isConfirmed ? "CheckmarkDoubleCircle" : "PendingTransaction"}
-					darkIcon={isConfirmed ? "CheckmarkDoubleCircle" : "PendingTransaction"}
-					dimIcon={isConfirmed ? "CheckmarkDoubleCircle" : "PendingTransaction"}
-					dimensions={[24, 24]}
-					className={cn({ "text-theme-primary-600": !isConfirmed, "text-theme-success-600": isConfirmed })}
-				/>
-			);
-		}
-		if (activeTab === 3) {
-			if (activeWallet?.isLedger()) {
-				return (
-					<ThemeIcon
-						lightIcon="LedgerLight"
-						darkIcon="LedgerDark"
-						dimIcon="LedgerDim"
-						dimensions={[24, 24]}
-					/>
-				);
-			}
-			return <ThemeIcon lightIcon="Mnemonic" darkIcon="Mnemonic" dimIcon="Mnemonic" dimensions={[24, 24]} />;
-		}
-		if (activeTab === 2) {
-			return (
-				<ThemeIcon
-					lightIcon="DocumentView"
-					darkIcon="DocumentView"
-					dimIcon="DocumentView"
-					dimensions={[24, 24]}
-				/>
-			);
-		}
-		return (
-			<ThemeIcon
-				lightIcon="SendTransactionLight"
-				darkIcon="SendTransactionDark"
-				dimIcon="SendTransactionDim"
-				dimensions={[24, 24]}
-			/>
-		);
-	};
+	const getTitleIcon = () => <></>;
 
 	return (
 		<SidePanel
@@ -229,89 +279,115 @@ export const SendRegistrationSidePanel = ({
 			title={getTitle()}
 			subtitle={getSubtitle()}
 			titleIcon={getTitleIcon()}
-			dataTestId="SendRegistrationSidePanel"
+			dataTestId="SendVoteSidePanel"
 			hasSteps
-			totalSteps={4}
+			totalSteps={stepCount}
 			activeStep={activeTab}
 			onBack={handleBack}
-			isLastStep={activeTab === SUMMARY_STEP}
+			isLastStep={activeTab === Step.SummaryStep}
 			disableOutsidePress
 			disableEscapeKey={isSubmitting}
-		>
-			<Form data-testid="Registration__form" className="mx-auto max-w-172" context={form} onSubmit={onSubmit}>
-				<Tabs activeId={activeTab}>
-					<TabPanel tabId={ERROR_STEP}>
-						<ErrorStep
-							onClose={() => onOpenChange(false)}
-							isBackDisabled={isSubmitting}
-							onBack={() => setActiveTab(1)}
-							errorMessage={errorMessage}
-							hideHeader
-						/>
-					</TabPanel>
-
-					<TabPanel tabId={1}>
-						{/* Render both to satisfy tests for both flows */}
-						<ValidatorFormStep wallet={activeWallet!} profile={activeProfile} />
-						<UsernameFormStep wallet={activeWallet!} profile={activeProfile} />
-					</TabPanel>
-
-					<TabPanel tabId={2}>
-						<ValidatorReviewStep wallet={activeWallet!} profile={activeProfile} />
-					</TabPanel>
-
-					<TabPanel tabId={3}>
-						<AuthenticationStep
-							wallet={activeWallet!}
-							ledgerIsAwaitingDevice={!hasDeviceAvailable}
-							ledgerIsAwaitingApp={hasDeviceAvailable && !isConnected}
-						/>
-					</TabPanel>
-
-					<TabPanel tabId={SUMMARY_STEP}>
-						<TransactionSuccessful transaction={transaction!} senderWallet={activeWallet!} />
-					</TabPanel>
-
-					<SidePanelButtons>
+			onMountChange={onMountChange}
+			footer={
+				<SidePanelButtons>
+					{activeTab < stepCount && (
 						<Button
-							data-testid="SendRegistration__back-button"
+							data-testid="SendVote__back-button"
 							variant="secondary"
 							onClick={handleBack}
 							disabled={isSubmitting}
 						>
 							{t("COMMON.BACK")}
 						</Button>
+					)}
 
-						{activeTab < 3 && (
-							<Button
-								data-testid="SendRegistration__continue-button"
-								onClick={handleNext}
-								disabled={isNextDisabled()}
-							>
-								{t("COMMON.CONTINUE")}
-							</Button>
-						)}
+					{activeTab < stepCount - 1 && (
+						<Button
+							data-testid="SendVote__continue-button"
+							onClick={handleNext}
+							disabled={isNextDisabled || isSubmitting}
+						>
+							{t("COMMON.CONTINUE")}
+						</Button>
+					)}
 
-						{activeTab === 3 && (
-							<Button
-								data-testid="SendRegistration__send-button"
-								onClick={() => void onSubmit()}
-								disabled={isSubmitting}
-							>
-								{t("COMMON.SEND")}
-							</Button>
-						)}
+					{activeTab === stepCount - 1 && (
+						<Button
+							data-testid="SendVote__send-button"
+							onClick={() => void handleSubmit(onSubmit)()}
+							disabled={isNextDisabled || isSubmitting}
+						>
+							{t("COMMON.SEND")}
+						</Button>
+					)}
 
-						{activeTab === SUMMARY_STEP && (
-							<Button data-testid="SendRegistration__close-button" onClick={() => onOpenChange(false)}>
-								{t("COMMON.CLOSE")}
-							</Button>
-						)}
-					</SidePanelButtons>
+					{activeTab === stepCount && (
+						<Button data-testid="SendVote__close-button" onClick={() => handleOpenChange(false)}>
+							{t("COMMON.CLOSE")}
+						</Button>
+					)}
+				</SidePanelButtons>
+			}
+		>
+			{/* <Page pageTitle={getPageTitle()} showBottomNavigationBar={false}> */}
+			{/* <Section className="flex-1">
+				<StepsProvider steps={stepCount} activeStep={activeTab}> */}
+			<Form data-testid="Registration__form" className="mx-auto max-w-172" context={form} onSubmit={handleSubmit}>
+				<Tabs activeId={activeTab}>
+					<TabPanel tabId={10}>
+						<ErrorStep
+							onClose={() => navigate(`/profiles/${activeProfile.id()}/dashboard`)}
+							isBackDisabled={isSubmitting}
+							onBack={() => {
+								setActiveTab(1);
+							}}
+							errorMessage={errorMessage}
+						/>
+					</TabPanel>
+
+					{registrationForm && (
+						<>
+							<registrationForm.component
+								activeTab={activeTab}
+								wallet={activeWallet}
+								profile={activeProfile}
+							/>
+
+							<TabPanel tabId={authenticationStep}>
+								<AuthenticationStep
+									wallet={activeWallet!}
+									ledgerIsAwaitingDevice={!hasDeviceAvailable}
+									ledgerIsAwaitingApp={!isConnected}
+									ledgerSupportedModels={[
+										Contracts.WalletLedgerModel.NanoX,
+										Contracts.WalletLedgerModel.NanoSP,
+									]}
+									ledgerConnectedModel={ledgerDevice?.id}
+								/>
+							</TabPanel>
+
+							<TabPanel tabId={stepCount}>
+								<TransactionSuccessful transaction={transaction} senderWallet={activeWallet!} />
+							</TabPanel>
+						</>
+					)}
+
+					{/* {!hideStepNavigation && (
+								<StepNavigation
+									onBackClick={handleBack}
+									onBackToWalletClick={() => navigate(`/profiles/${activeProfile.id()}/dashboard`)}
+									onContinueClick={() => handleNext()}
+									isLoading={isSubmitting || isLoading}
+									isNextDisabled={isNextDisabled}
+									size={stepCount}
+									activeIndex={activeTab}
+								/>
+							)} */}
 				</Tabs>
 			</Form>
+			{/* </StepsProvider>
+			</Section>
+		</Page> */}
 		</SidePanel>
 	);
 };
-
-SendRegistrationSidePanel.displayName = "SendRegistrationSidePanel";
