@@ -26,9 +26,9 @@ export type EncodeTransactionType =
 export interface EncodeInputData {
 	senderAddress: string;
 	recipientAddress?: string;
-	recipients: RecipientPaymentItem[];
+	recipients?: RecipientPaymentItem[];
 	username?: string;
-	validatorPublicKey: string;
+	validatorPublicKey?: string;
 	voteAddresses?: string[];
 }
 
