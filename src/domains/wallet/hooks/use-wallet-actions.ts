@@ -1,4 +1,3 @@
-/* eslint-disable sonarjs/cognitive-complexity */
 import { Contracts } from "@/app/lib/profiles";
 import React, { useCallback, useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -18,7 +17,7 @@ export const useWalletActions = ({
 }: {
 	handleSignMessage?: () => void;
 	handleSendTransfer?: () => void;
-	handleSendRegistration?: () => void;
+	handleSendRegistration?: (registrationType?: "validatorRegistration" | "usernameRegistration") => void;
 	wallets: Contracts.IReadWriteWallet[];
 }) => {
 	const { persist } = useEnvironmentContext();
@@ -60,10 +59,10 @@ export const useWalletActions = ({
 				return;
 			}
 
-			if (typeof handleSendRegistration === "function") {
-				handleSendRegistration();
-				return;
-			}
+			// if (typeof handleSendRegistration === "function") {
+			// 	handleSendRegistration();
+			// 	return;
+			// }
 
 			if (hasMultipleWallets) {
 				navigate(generatePath(ProfilePaths.SendTransfer, { profileId: profile.id() }));
@@ -163,19 +162,20 @@ export const useWalletActions = ({
 			}
 
 			if (option.value === "username-registration") {
-				let url = generatePath(ProfilePaths.SendUsernameRegistration, {
-					profileId: profile.id(),
-					walletId: wallet.id(),
-				});
+				handleSendRegistration?.("usernameRegistration");
+				// let url = generatePath(ProfilePaths.SendUsernameRegistration, {
+				// 	profileId: profile.id(),
+				// 	walletId: wallet.id(),
+				// });
 
-				if (hasMultipleWallets) {
-					url = generatePath(ProfilePaths.SendRegistrationProfile, {
-						profileId: profile.id(),
-						registrationType: "usernameRegistration",
-					});
-				}
+				// if (hasMultipleWallets) {
+				// 	url = generatePath(ProfilePaths.SendRegistrationProfile, {
+				// 		profileId: profile.id(),
+				// 		registrationType: "usernameRegistration",
+				// 	});
+				// }
 
-				navigate(url);
+				// navigate(url);
 			}
 
 			if (option.value === "username-resignation") {

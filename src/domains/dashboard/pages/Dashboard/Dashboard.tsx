@@ -31,7 +31,10 @@ export const Dashboard = ({
 	const [isUpdatingWallet, setIsUpdatingWallet] = useState(false);
 	const [showSignMessagePanel, setShowSignMessagePanel] = useState(false);
 	const [showSendTransferPanel, setShowSendTransferPanel] = useState(false);
-	const [showSendRegistrationPanel, setShowSendRegistrationPanel] = useState(false);
+	const [showSendRegistrationPanel, setShowSendRegistrationPanel] = useState<
+		"validatorRegistration" | "usernameRegistration" | undefined
+	>(undefined);
+
 	useDeeplinkActionHandler({
 		onSignMessage: () => {
 			setShowSignMessagePanel(true);
@@ -191,8 +194,14 @@ export const Dashboard = ({
 
 			<ResetWhenUnmounted>
 				<SendRegistrationSidePanel
-					open={showSendRegistrationPanel}
-					onOpenChange={setShowSendRegistrationPanel}
+					open={showSendRegistrationPanel !== undefined}
+					registrationType={showSendRegistrationPanel}
+					onOpenChange={(open) => {
+						if (!open) {
+							setShowSendRegistrationPanel(undefined);
+							return;
+						}
+					}}
 				/>
 			</ResetWhenUnmounted>
 		</Page>

@@ -33,9 +33,11 @@ import { Button } from "@/app/components/Button";
 export const SendRegistrationSidePanel = ({
 	open,
 	onOpenChange,
+	registrationType,
 }: {
 	open: boolean;
 	onOpenChange: (open: boolean) => void;
+	registrationType?: "validatorRegistration" | "usernameRegistration";
 }) => {
 	const navigate = useNavigate();
 	const { t } = useTranslation();
@@ -69,19 +71,21 @@ export const SendRegistrationSidePanel = ({
 	const authenticationStep = stepCount - 1;
 	const isAuthenticationStep = activeTab === authenticationStep;
 
-	const activeWalletFromUrl = useActiveWalletWhenNeeded(false);
+	// const registrationType = useMemo(
+	// 	() =>
+	// 		// try {
+	// 		// 	if (activeWalletFromUrl) {
+	// 		// 		return getUrlParameter(location.pathname, 5);
+	// 		// 	}
 
-	const registrationType = useMemo(() => {
-		try {
-			if (activeWalletFromUrl) {
-				return getUrlParameter(location.pathname, 5);
-			}
-
-			return getUrlParameter(location.pathname, 3);
-		} catch {
-			return;
-		}
-	}, [activeWalletFromUrl]);
+	// 		// 	return getUrlParameter(location.pathname, 3);
+	// 		// } catch {
+	// 		// 	return;
+	// 		// }
+	// 		// @TODO: make this dynamic
+	// 		"usernameRegistration",
+	// 	[activeWalletFromUrl],
+	// );
 
 	const { activeNetwork: network } = useActiveNetwork({ profile: activeProfile });
 
@@ -90,10 +94,9 @@ export const SendRegistrationSidePanel = ({
 			return activeProfile.wallets().findByAddressWithNetwork(senderAddress, network.id());
 		}
 
-		if (activeWalletFromUrl) {
-			return activeWalletFromUrl;
-		}
-	}, [activeProfile, activeWalletFromUrl, network, senderAddress]);
+		const selectedWallets = activeProfile.wallets().selected() ?? [activeProfile.wallets().first()];
+		return selectedWallets.at(0);
+	}, [activeProfile, network, senderAddress]);
 
 	const { validatorRegistrationFee } = useValidatorRegistrationLockedFee({
 		profile: activeProfile,
@@ -152,10 +155,6 @@ export const SendRegistrationSidePanel = ({
 
 	// Reset ledger authentication steps after reconnecting supported ledger
 	useEffect(() => {
-		if (registrationType !== "multiSignature") {
-			return;
-		}
-
 		if (isAuthenticationStep && activeWallet?.isLedger() && isLedgerModelSupported) {
 			handleSubmit();
 		}
@@ -240,9 +239,14 @@ export const SendRegistrationSidePanel = ({
 		setActiveTab(nextStep);
 	};
 
-	const hideStepNavigation = activeTab === 10 || (isAuthenticationStep && activeWallet?.isLedger());
-
 	const isNextDisabled = isDirty ? !isValid || !!isLoading : true;
+
+	const handleOpenChange = useCallback(
+		(open: boolean) => {
+			onOpenChange(open);
+		},
+		[onOpenChange],
+	);
 
 	const onMountChange = useCallback(
 		(mounted: boolean) => {
@@ -284,7 +288,7 @@ export const SendRegistrationSidePanel = ({
 			totalSteps={stepCount}
 			activeStep={activeTab}
 			onBack={handleBack}
-			isLastStep={activeTab === Step.SummaryStep}
+			isLastStep={activeTab === stepCount}
 			disableOutsidePress
 			disableEscapeKey={isSubmitting}
 			onMountChange={onMountChange}
@@ -329,10 +333,7 @@ export const SendRegistrationSidePanel = ({
 				</SidePanelButtons>
 			}
 		>
-			{/* <Page pageTitle={getPageTitle()} showBottomNavigationBar={false}> */}
-			{/* <Section className="flex-1">
-				<StepsProvider steps={stepCount} activeStep={activeTab}> */}
-			<Form data-testid="Registration__form" className="mx-auto max-w-172" context={form} onSubmit={handleSubmit}>
+			<Form data-testid="Registration__form" context={form} onSubmit={handleSubmit}>
 				<Tabs activeId={activeTab}>
 					<TabPanel tabId={10}>
 						<ErrorStep
@@ -371,23 +372,8 @@ export const SendRegistrationSidePanel = ({
 							</TabPanel>
 						</>
 					)}
-
-					{/* {!hideStepNavigation && (
-								<StepNavigation
-									onBackClick={handleBack}
-									onBackToWalletClick={() => navigate(`/profiles/${activeProfile.id()}/dashboard`)}
-									onContinueClick={() => handleNext()}
-									isLoading={isSubmitting || isLoading}
-									isNextDisabled={isNextDisabled}
-									size={stepCount}
-									activeIndex={activeTab}
-								/>
-							)} */}
 				</Tabs>
 			</Form>
-			{/* </StepsProvider>
-			</Section>
-		</Page> */}
 		</SidePanel>
 	);
 };

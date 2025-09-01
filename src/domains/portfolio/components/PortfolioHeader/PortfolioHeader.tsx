@@ -52,7 +52,7 @@ export const PortfolioHeader = ({
 	onImportAddress?: (open: boolean) => void;
 	onSignMessage?: (open: boolean) => void;
 	onSendTransfer?: (open: boolean) => void;
-	onSendRegistration?: (open: boolean) => void;
+	onSendRegistration?: (registrationType?: "validatorRegistration" | "usernameRegistration") => void;
 	hasFocus?: boolean;
 }) => {
 	const [showAddressesPanel, setShowAddressesPanel] = useState(false);
@@ -72,8 +72,8 @@ export const PortfolioHeader = ({
 		onSendTransfer?.(true);
 	};
 
-	const handleSendRegistration = () => {
-		onSendRegistration?.(true);
+	const handleSendRegistration = (registrationType?: "validatorRegistration" | "usernameRegistration") => {
+		onSendRegistration?.(registrationType);
 	};
 
 	const { activeModal, setActiveModal, handleSelectOption, handleSend } = useWalletActions({
