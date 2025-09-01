@@ -35,7 +35,9 @@ vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
 }));
 
-const renderPanel = async (registrationType?: "validatorRegistration" | "usernameRegistration") => {
+const renderPanel = async (
+	registrationType: "validatorRegistration" | "usernameRegistration" = "validatorRegistration",
+) => {
 	const mockOnOpenChange = vi.fn();
 
 	const view = render(
@@ -209,7 +211,7 @@ describe("SendRegistrationSidePanel", () => {
 		);
 	});
 
-	it.only("should handle registrationType param (%s)", async () => {
+	it("should handle registrationType param (%s)", async () => {
 		const type = "validatorRegistration";
 		const label = "Register Validator";
 
@@ -220,13 +222,13 @@ describe("SendRegistrationSidePanel", () => {
 		await waitFor(() => expect(screen.getByTestId("SidePanel__title")).toHaveTextContent(label));
 	});
 
-	it.each([withKeyboard, "without keyboard"])("should register validator %s", async (inputMethod) => {
+	it.only.each([withKeyboard, "without keyboard"])("should register validator %s", async (inputMethod) => {
 		vi.spyOn(wallet, "client").mockImplementation(() => ({
 			transaction: vi.fn().mockReturnValue(signedTransactionMock),
 		}));
 
 		const nanoXTransportMock = mockNanoXTransport();
-		const { mockOnOpenChange } = await renderPanel(wallet);
+		const { mockOnOpenChange } = await renderPanel();
 
 		// Step 1
 		await expect(formStep()).resolves.toBeVisible();
@@ -446,7 +448,7 @@ describe("SendRegistrationSidePanel", () => {
 		}));
 
 		const nanoXTransportMock = mockNanoXTransport();
-		const { mockOnOpenChange } = await renderPanel(wallet);
+		const { mockOnOpenChange } = await renderPanel();
 
 		await expect(formStep()).resolves.toBeVisible();
 
@@ -519,7 +521,7 @@ describe("SendRegistrationSidePanel", () => {
 
 	it("should close the side panel when clicking back on form step", async () => {
 		const nanoXTransportMock = mockNanoXTransport();
-		const { mockOnOpenChange } = await renderPanel(wallet);
+		const { mockOnOpenChange } = await renderPanel();
 
 		await expect(formStep()).resolves.toBeVisible();
 

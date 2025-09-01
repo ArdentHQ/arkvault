@@ -394,7 +394,7 @@ export const SendRegistrationSidePanel = ({
 				<SidePanelButtons>
 					{activeTab < stepCount && (
 						<Button
-							data-testid="SendVote__back-button"
+							data-testid="SendRegistration__back-button"
 							variant="secondary"
 							onClick={handleBack}
 							disabled={isSubmitting}
@@ -405,7 +405,7 @@ export const SendRegistrationSidePanel = ({
 
 					{activeTab < stepCount - 1 && (
 						<Button
-							data-testid="SendVote__continue-button"
+							data-testid="SendRegistration__continue-button"
 							onClick={handleNext}
 							disabled={isNextDisabled || isSubmitting}
 						>
@@ -415,7 +415,7 @@ export const SendRegistrationSidePanel = ({
 
 					{activeTab === stepCount - 1 && (
 						<Button
-							data-testid="SendVote__send-button"
+							data-testid="SendRegistration__send-button"
 							onClick={() => void handleSubmit()}
 							disabled={isNextDisabled || isSubmitting}
 						>
@@ -424,7 +424,7 @@ export const SendRegistrationSidePanel = ({
 					)}
 
 					{activeTab === stepCount && (
-						<Button data-testid="SendVote__close-button" onClick={() => handleOpenChange(false)}>
+						<Button data-testid="SendRegistration__close-button" onClick={() => handleOpenChange(false)}>
 							{t("COMMON.CLOSE")}
 						</Button>
 					)}
