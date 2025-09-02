@@ -83,8 +83,8 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 
 	const { connectLedger } = useConnectLedger({
 		onReady: () => void handleSubmit(submitForm)(),
-		profile: activeProfile
-	})
+		profile: activeProfile,
+	});
 
 	const activeWallet = useMemo(
 		() => activeProfile.wallets().findByAddressWithNetwork(senderAddress, activeNetwork.id()),
