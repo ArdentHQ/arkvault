@@ -1,4 +1,3 @@
-// src/domains/transaction/hooks/use-unconfirmed-transactions.ts
 import { useCallback } from "react";
 import { useLocalStorage } from "usehooks-ts";
 import { DTO } from "@/app/lib/profiles";

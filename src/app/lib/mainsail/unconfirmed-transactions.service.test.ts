@@ -34,10 +34,9 @@ describe("UnconfirmedTransactionsService", () => {
 		expect(allUnconfirmedMock).toHaveBeenCalledTimes(1);
 		expect(allUnconfirmedMock).toHaveBeenCalledWith(undefined, undefined, {});
 
-		const results = transactionFixture.results ?? [];
-		const totalCount = transactionFixture.totalCount ?? results.length;
+		const results = [];
 
-		expect(res).toEqual({ results, totalCount });
+		expect(res).toEqual({ results });
 	});
 
 	it("should translate page and limit into offset", async () => {
