@@ -63,7 +63,7 @@ export class TransactionReceipt {
 
 		// Handle errors with no spaces (TakenUsername) - split on caps
 		if (error.indexOf(" ") === -1) {
-			return error.replace(/([A-Z])/g, " $1");
+			return error.replace(/([A-Z])/g, " $1").trim();
 		}
 
 		// Handle errors with spaces - capitalize the first letter
