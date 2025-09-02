@@ -884,10 +884,10 @@ describe("useProfileTransactions", () => {
 		const reconcileUnconfirmedForAddresses = vi.fn();
 
 		vi.spyOn(unconfirmedTransactionsMock, "useUnconfirmedTransactions").mockReturnValue({
-			addUnconfirmedTransactionFromSigned: vi.fn(),
 			addUnconfirmedTransactionFromApi,
-			removeUnconfirmedTransaction: vi.fn(),
+			addUnconfirmedTransactionFromSigned: vi.fn(),
 			reconcileUnconfirmedForAddresses,
+			removeUnconfirmedTransaction: vi.fn(),
 			unconfirmedTransactions: [],
 		} as any);
 
@@ -929,7 +929,7 @@ describe("useProfileTransactions", () => {
 		});
 		await waitFor(() => expect(result.current.isLoadingTransactions).toBe(true));
 
-		expect(listSpy).toHaveBeenCalledWith({ from: [walletAddress], to: [walletAddress], limit: 100 });
+		expect(listSpy).toHaveBeenCalledWith({ from: [walletAddress], limit: 100, to: [walletAddress] });
 
 		expect(addUnconfirmedTransactionFromApi).toHaveBeenCalledTimes(6);
 
