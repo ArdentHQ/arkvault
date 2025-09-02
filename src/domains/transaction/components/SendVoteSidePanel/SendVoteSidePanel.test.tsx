@@ -29,7 +29,6 @@ import { expect, vi } from "vitest";
 import { SendVoteSidePanel } from "./SendVoteSidePanel";
 import { Networks } from "@/app/lib/networks";
 import { useVoteFormContext, VoteFormProvider } from "@/domains/vote/contexts/VoteFormContext";
-import * as LedgerTransportFactory from "@/app/contexts/Ledger/transport";
 import * as AppContexts from "@/app/contexts";
 
 const fixtureProfileId = getMainsailProfileId();
