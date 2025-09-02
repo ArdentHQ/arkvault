@@ -29,6 +29,8 @@ import { expect, vi } from "vitest";
 import { SendVoteSidePanel } from "./SendVoteSidePanel";
 import { Networks } from "@/app/lib/networks";
 import { useVoteFormContext, VoteFormProvider } from "@/domains/vote/contexts/VoteFormContext";
+import * as LedgerTransportFactory from "@/app/contexts/Ledger/transport";
+import * as AppContexts from "@/app/contexts";
 
 const fixtureProfileId = getMainsailProfileId();
 
@@ -1102,5 +1104,106 @@ describe("SendVote", () => {
 		broadcastMock.mockRestore();
 		voteTransactionMock.mockRestore();
 		nanoXMock.mockRestore();
+	});
+
+	it("should connect ledger and auto submit when moving to AuthenticationStep", async () => {
+		process.env.REACT_APP_IS_UNIT = true;
+
+		// Mock Ledger context with initial state
+		const mockConnect = vi.fn();
+		const mockLedgerContext = {
+			hasDeviceAvailable: true,
+			isConnected: true,
+			ledgerDevice: { id: "nanoX" },
+			connect: mockConnect,
+			listenDevice: vi.fn(),
+		};
+
+		const ledgerContextSpy = vi.spyOn(AppContexts, "useLedgerContext").mockReturnValue(mockLedgerContext);
+
+		const signTransactionSpy = vi
+			.spyOn(wallet.transaction(), "signVote")
+			.mockReturnValue(Promise.resolve(transactionFixture.data.id));
+
+		const voteTransactionMock = createVoteTransactionMock(wallet);
+
+		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
+			accepted: [transactionFixture.data.id],
+			errors: {},
+			rejected: [],
+		});
+
+		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
+
+		const unvotes: VoteValidatorProperties[] = [
+			{
+				amount: 10,
+				validatorAddress: validatorData[0].address,
+			},
+		];
+
+		render(
+			<Component
+				activeProfile={profile}
+				activeNetwork={wallet.network()}
+				activeWallet={wallet}
+				votes={[]}
+				unvotes={unvotes}
+			/>,
+			{ route: `${voteURL}` },
+		);
+
+		vi.spyOn(wallet, "isLedger").mockReturnValue(true);
+		vi.spyOn(profile.ledger(), "isNanoX").mockResolvedValue(true);
+		vi.spyOn(profile.ledger(), "getPublicKey").mockResolvedValue(
+			"0335a27397927bfa1704116814474d39c2b933aabb990e7226389f022886e48deb",
+		);
+
+		const address = wallet.address();
+		const balance = wallet.balance();
+		const derivationPath = "m/44'/1'/1'/0/0";
+		const votes = wallet.voting().current();
+		const publicKey = wallet.publicKey();
+
+		const mockWalletData = vi.spyOn(wallet.data(), "get").mockImplementation((key) => {
+			if (key == Contracts.WalletData.Address) {
+				return address;
+			}
+			if (key == Contracts.WalletData.Address) {
+				return address;
+			}
+
+			if (key == Contracts.WalletData.Balance) {
+				return balance;
+			}
+
+			if (key == Contracts.WalletData.PublicKey) {
+				return publicKey;
+			}
+
+			if (key == Contracts.WalletData.Votes) {
+				return votes;
+			}
+
+			if (key == Contracts.WalletData.DerivationPath) {
+				return derivationPath;
+			}
+		});
+
+		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
+
+		await waitFor(() => expect(continueButton()).not.toBeDisabled());
+		await userEvent.click(continueButton());
+
+		// Should call connect when moving to AuthenticationStep with Ledger wallet
+		await waitFor(() => expect(mockConnect).toHaveBeenCalledWith(profile));
+
+		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
+
+		signTransactionSpy.mockRestore();
+		broadcastMock.mockRestore();
+		voteTransactionMock.mockRestore();
+		ledgerContextSpy.mockRestore();
+		mockWalletData.mockRestore();
 	});
 });
