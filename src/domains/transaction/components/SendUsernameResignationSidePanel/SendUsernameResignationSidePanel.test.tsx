@@ -238,7 +238,7 @@ describe("SendUsernameResignationSidePanel", () => {
 
 	it("should handle transaction error and go back", async () => {
 		const nanoXTransportMock = mockNanoXTransport();
-		const { mockOnOpenChange } = await renderPanel();
+		await renderPanel();
 
 		await expect(formStep()).resolves.toBeVisible();
 
