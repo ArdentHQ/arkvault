@@ -11,7 +11,6 @@ import { ExtendedSignedTransactionData } from "@/app/lib/profiles/signed-transac
 import { IReadWriteWallet } from "@/app/lib/profiles/wallet.contract";
 import { ExtendedTransactionDTO } from "@/domains/transaction/components/TransactionTable";
 import { UnconfirmedTransactionsService } from "@/app/lib/mainsail/unconfirmed-transactions.service";
-import { HttpClient } from "@/app/lib/mainsail/http-client";
 import { get } from "@/app/lib/helpers";
 
 interface TransactionsState {
@@ -468,10 +467,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 			return;
 		}
 		try {
-			const first = wallets[0];
-			const host = first.network().config().host("tx", first.profile());
-			const httpClient = new HttpClient(10_000);
-			unconfirmedTransactionsService.current = new UnconfirmedTransactionsService({ host, httpClient });
+			unconfirmedTransactionsService.current = new UnconfirmedTransactionsService({ config: profile.activeNetwork().config(), profile });
 			setIsUnconfirmedTransactionsServiceReady(true);
 		} catch (error) {
 			/* istanbul ignore next -- @preserve */

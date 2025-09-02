@@ -73,7 +73,6 @@ export const useUnconfirmedTransactions = (): UseUnconfirmedTransactionsReturn =
 				const unconfirmed: UnconfirmedTransactionData = {
 					networkId: input.networkId,
 					transaction: {
-						serialized: "",
 						signedData,
 					},
 					walletAddress: input.walletAddress,
