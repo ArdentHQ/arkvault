@@ -226,14 +226,14 @@ export const SendRegistration = () => {
 		setActiveTab(activeTab - 1);
 	};
 
-	const handleNext = async () => {
+	const handleNext = () => {
 		const nextStep = activeTab + 1;
 		const isNextStepAuthentication = nextStep === authenticationStep;
 
 		setActiveTab(nextStep);
 
 		if (isNextStepAuthentication && activeWallet?.isLedger()) {
-			await connectLedger();
+			void connectLedger();
 		}
 	};
 
