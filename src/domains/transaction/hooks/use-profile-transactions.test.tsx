@@ -881,11 +881,13 @@ describe("useProfileTransactions", () => {
 		const networkId = wallets[0].networkId();
 
 		const addUnconfirmedTransactionFromApi = vi.fn();
+		const reconcileUnconfirmedForAddresses = vi.fn();
 
 		vi.spyOn(unconfirmedTransactionsMock, "useUnconfirmedTransactions").mockReturnValue({
-			addUnconfirmedTransaction: vi.fn(),
+			addUnconfirmedTransactionFromSigned: vi.fn(),
 			addUnconfirmedTransactionFromApi,
 			removeUnconfirmedTransaction: vi.fn(),
+			reconcileUnconfirmedForAddresses,
 			unconfirmedTransactions: [],
 		} as any);
 
@@ -921,7 +923,7 @@ describe("useProfileTransactions", () => {
 		});
 		await waitFor(() => expect(result.current.isLoadingTransactions).toBe(true));
 
-		expect(listSpy).toHaveBeenCalledWith({ from: [walletAddress], to: [walletAddress] });
+		expect(listSpy).toHaveBeenCalledWith({ from: [walletAddress], to: [walletAddress], limit: 100 });
 
 		expect(addUnconfirmedTransactionFromApi).toHaveBeenCalledTimes(4);
 
@@ -935,6 +937,11 @@ describe("useProfileTransactions", () => {
 
 		expect(firstArgs.gasLimit).toBe("21000");
 		expect(secondArgs.gasLimit).toBe("99999");
+
+		expect(reconcileUnconfirmedForAddresses).toHaveBeenCalledWith(
+			[walletAddress], 
+			["UNCONF_FROM", "UNCONF_TO", "UNCONF_IGNORE"]
+		);
 
 		intervalMock.mockRestore();
 		global.setInterval = realSetInterval;
