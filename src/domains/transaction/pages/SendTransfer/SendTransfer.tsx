@@ -170,6 +170,11 @@ export const SendTransfer = () => {
 			return navigate(-1);
 		}
 
+		// Reset transaction state when going back from SummaryStep to prevent stale data
+		if (activeTab === SendTransferStep.SummaryStep) {
+			setTransaction(undefined);
+		}
+
 		setActiveTab(activeTab - 1);
 	};
 
@@ -330,7 +335,7 @@ export const SendTransfer = () => {
 			</TabPanel>
 
 			<TabPanel tabId={SendTransferStep.SummaryStep}>
-				<TransactionSuccessful transaction={transaction!} senderWallet={wallet!} />
+				{transaction && <TransactionSuccessful transaction={transaction} senderWallet={wallet!} />}
 			</TabPanel>
 
 			<TabPanel tabId={SendTransferStep.ErrorStep}>
@@ -341,6 +346,7 @@ export const SendTransfer = () => {
 					}}
 					isBackDisabled={isSubmitting}
 					onBack={() => {
+						setErrorMessage(undefined);
 						setActiveTab(SendTransferStep.FormStep);
 					}}
 					errorMessage={errorMessage}
