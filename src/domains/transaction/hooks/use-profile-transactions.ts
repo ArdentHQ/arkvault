@@ -467,7 +467,10 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 			return;
 		}
 		try {
-			unconfirmedTransactionsService.current = new UnconfirmedTransactionsService({ config: profile.activeNetwork().config(), profile });
+			unconfirmedTransactionsService.current = new UnconfirmedTransactionsService({
+				config: profile.activeNetwork().config(),
+				profile,
+			});
 			setIsUnconfirmedTransactionsServiceReady(true);
 		} catch (error) {
 			/* istanbul ignore next -- @preserve */

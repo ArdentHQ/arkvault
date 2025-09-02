@@ -3,13 +3,11 @@ import transactionFixture from "@/tests/fixtures/coins/mainsail/devnet/transacti
 
 let allUnconfirmedMock: any;
 
-vi.mock("@arkecosystem/typescript-client", () => {
-	return {
-		ArkClient: vi.fn().mockImplementation(() => ({
-			transactions: () => ({ allUnconfirmed: allUnconfirmedMock }),
-		})),
-	};
-});
+vi.mock("@arkecosystem/typescript-client", () => ({
+	ArkClient: vi.fn().mockImplementation(() => ({
+		transactions: () => ({ allUnconfirmed: allUnconfirmedMock }),
+	})),
+}));
 
 describe("UnconfirmedTransactionsService", () => {
 	let service: UnconfirmedTransactionsService;
@@ -36,9 +34,7 @@ describe("UnconfirmedTransactionsService", () => {
 		expect(allUnconfirmedMock).toHaveBeenCalledTimes(1);
 		expect(allUnconfirmedMock).toHaveBeenCalledWith(undefined, undefined, {});
 
-		const results =
-			transactionFixture.results ??
-			[];
+		const results = transactionFixture.results ?? [];
 		const totalCount = transactionFixture.totalCount ?? results.length;
 
 		expect(res).toEqual({ results, totalCount });
@@ -54,7 +50,7 @@ describe("UnconfirmedTransactionsService", () => {
 		const from = ["0x1111111111111111111111111111111111111111", "0x2222222222222222222222222222222222222222"];
 		const to = ["0xAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "0xBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"];
 
-		await service.listUnconfirmed({ from, to, limit: 25, page: 1 });
+		await service.listUnconfirmed({ from, limit: 25, page: 1, to });
 
 		expect(allUnconfirmedMock).toHaveBeenLastCalledWith(25, 0, { from, to });
 	});
