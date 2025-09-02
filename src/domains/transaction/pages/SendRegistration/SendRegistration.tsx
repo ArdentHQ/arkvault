@@ -29,6 +29,7 @@ import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { useToggleFeeFields } from "@/domains/transaction/hooks/useToggleFeeFields";
 import { getUrlParameter } from "@/utils/paths";
 import { useValidatorRegistrationLockedFee } from "@/domains/transaction/components/ValidatorRegistrationForm/hooks/useValidatorRegistrationLockedFee";
+import { useConnectLedger } from "@/domains/transaction/hooks/use-connect-ledger";
 
 export const SendRegistration = () => {
 	const navigate = useNavigate();
@@ -39,14 +40,13 @@ export const SendRegistration = () => {
 	const [transaction, setTransaction] = useState(undefined as unknown as DTO.ExtendedSignedTransactionData);
 	const [registrationForm, setRegistrationForm] = useState<SendRegistrationForm>();
 	const [errorMessage, setErrorMessage] = useState<string | undefined>();
-	const [isWaitingLedger, setIsWaitingLedger] = useState(false);
 
 	const { env } = useEnvironmentContext();
 	const activeProfile = useActiveProfile();
 	const { common, validatorRegistration } = useValidation();
 	const { addPendingTransaction } = usePendingTransactions();
 
-	const { hasDeviceAvailable, isConnected, connect, ledgerDevice } = useLedgerContext();
+	const { hasDeviceAvailable, isConnected, ledgerDevice } = useLedgerContext();
 
 	const { isLedgerModelSupported } = useLedgerModelStatus({
 		connectedModel: ledgerDevice?.id,
@@ -145,23 +145,11 @@ export const SendRegistration = () => {
 		return (registrations[registrationType as keyof typeof registrations] || registrations.default)();
 	}, [registrationType]);
 
-	const connectLedger = useCallback(async () => {
-		if (activeWallet) {
-			await connect(activeProfile);
-			setIsWaitingLedger(true);
-		}
-	}, [activeWallet, activeProfile, connect]);
-
-	useEffect(() => {
-		if (!isConnected && ledgerDevice?.id && isWaitingLedger) {
-			void connectLedger();
-		}
-
-		if (isConnected && isLedgerModelSupported && isWaitingLedger) {
-			void handleSubmit();
-			setIsWaitingLedger(false);
-		}
-	}, [ledgerDevice?.id, isConnected, isLedgerModelSupported, isWaitingLedger]);
+	const { connectLedger } = useConnectLedger({
+		isLedgerModelSupported,
+		onReady: () => void handleSubmit(),
+		profile: activeProfile,
+	});
 
 	useKeydown("Enter", () => {
 		const isButton = (document.activeElement as any)?.type === "button";
