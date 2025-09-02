@@ -72,7 +72,6 @@ export class TransactionAggregate implements ITransactionAggregate {
 
 		query.orderBy && historyKeys.push(query.orderBy);
 		query.limit && historyKeys.push(query.limit.toString());
-		query.fullReceipt = true;
 
 		if (query.types && query.types.length > 0) {
 			historyKeys.push(query.types.join(":"));

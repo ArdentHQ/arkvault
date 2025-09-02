@@ -55,15 +55,8 @@ export const TransactionConfirmations = ({
 							error: transaction
 								.data()
 								.receipt()
-								.error()
-								.replace(/([A-Z])/g, " $1"),
+								.prettyError()
 						})}
-					</p>
-				)}
-
-				{transaction.data().receipt().hasInsufficientGasError() && (
-					<p className="border-theme-danger-200 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dim:text-theme-dim-200 dim:border-theme-danger-400 border-t px-3 pt-2 font-semibold sm:px-6 sm:pt-4">
-						{t("TRANSACTION.TRANSACTION_EXECUTION_ERROR_INSUFFICIENT_GAS")}
 					</p>
 				)}
 			</div>
