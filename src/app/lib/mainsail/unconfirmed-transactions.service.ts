@@ -40,9 +40,8 @@ export class UnconfirmedTransactionsService {
 				: undefined);
 
 		const response = await this.#client.transactions().allUnconfirmed(limit, offset, requestParams);
-		const results = response.results ?? [];
-		const totalCount = response.totalCount ?? results.length;
+		const results = response.data ?? [];
 
-		return { results, totalCount };
+		return { results };
 	}
 }

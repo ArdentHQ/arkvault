@@ -268,7 +268,6 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 					transactions: items,
 				}));
 			} catch (error) {
-				/* istanbul ignore next -- @preserve */
 				console.error({ error });
 			}
 		};
@@ -458,26 +457,23 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 	}, [isLoadingTransactions, allTransactions.length]);
 
 	const unconfirmedTransactionsService = useRef<UnconfirmedTransactionsService | null>(null);
-	const [isUnconfirmedTransactionsServiceReady, setIsUnconfirmedTransactionsServiceReady] = useState(false);
 
 	useEffect(() => {
-		if (!wallets || wallets.length === 0) {
+		if (!wallets?.length) {
 			unconfirmedTransactionsService.current = null;
-			setIsUnconfirmedTransactionsServiceReady(false);
 			return;
 		}
+
 		try {
 			unconfirmedTransactionsService.current = new UnconfirmedTransactionsService({
 				config: profile.activeNetwork().config(),
 				profile,
 			});
-			setIsUnconfirmedTransactionsServiceReady(true);
 		} catch (error) {
 			/* istanbul ignore next -- @preserve */
 			{
 				console.error("Failed to initialize UnconfirmedTransactionsService:", error);
 				unconfirmedTransactionsService.current = null;
-				setIsUnconfirmedTransactionsServiceReady(false);
 			}
 		}
 	}, [wallets]);
@@ -503,10 +499,10 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 	const walletsKey = useMemo(() => wallets.map((w) => w.address()).join("|"), [wallets]);
 	const blockTime = useMemo(() => getBlockTime(), [walletsKey]);
 
-	const fetchUnconfirmedAndLog = useCallback(async () => {
+	const fetchUnconfirmedTransactions = useCallback(async () => {
 		const service = unconfirmedTransactionsService.current;
+		/* istanbul ignore next -- @preserve */
 		if (!service) {
-			/* istanbul ignore next -- @preserve */
 			return;
 		}
 
@@ -539,13 +535,14 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 		}
 	}, [wallets, addUnconfirmedTransactionFromUnconfirmed]);
 
-	const pollingCallbackRef = useRef(fetchUnconfirmedAndLog);
+	const pollingCallbackRef = useRef(fetchUnconfirmedTransactions);
 	useEffect(() => {
-		pollingCallbackRef.current = fetchUnconfirmedAndLog;
-	}, [fetchUnconfirmedAndLog]);
+		pollingCallbackRef.current = fetchUnconfirmedTransactions;
+	}, [fetchUnconfirmedTransactions]);
 
 	useEffect(() => {
-		if (!isUnconfirmedTransactionsServiceReady) {
+		const service = unconfirmedTransactionsService.current;
+		if (!service) {
 			return;
 		}
 
@@ -554,7 +551,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 		}, blockTime);
 
 		return () => clearInterval(id);
-	}, [isUnconfirmedTransactionsServiceReady, blockTime]);
+	}, [unconfirmedTransactionsService.current, blockTime]);
 
 	return {
 		activeMode,

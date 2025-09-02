@@ -923,7 +923,7 @@ describe("useProfileTransactions", () => {
 
 		expect(listSpy).toHaveBeenCalledWith({ from: [walletAddress], to: [walletAddress] });
 
-		expect(addUnconfirmedTransactionFromUnconfirmed).toHaveBeenCalledTimes(2);
+		expect(addUnconfirmedTransactionFromUnconfirmed).toHaveBeenCalledTimes(4);
 
 		const firstArgs = addUnconfirmedTransactionFromUnconfirmed.mock.calls[0][0];
 		const secondArgs = addUnconfirmedTransactionFromUnconfirmed.mock.calls[1][0];
