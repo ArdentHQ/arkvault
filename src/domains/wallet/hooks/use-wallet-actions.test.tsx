@@ -5,7 +5,7 @@ import { env, act, getMainsailProfileId, Providers, LocationTracker } from "@/ut
 import { DropdownOption } from "@/app/components/Dropdown";
 import * as useActiveProfileModule from "@/app/hooks/env";
 import { useWalletActions } from "@/domains/wallet/hooks/use-wallet-actions";
-import { vi } from "vitest";
+import { expect, vi } from "vitest";
 
 describe("useWalletActions", () => {
 	let profile: Contracts.IProfile;
@@ -57,13 +57,14 @@ describe("useWalletActions", () => {
 		let currentLocation = { pathname: "/" };
 
 		const mockHandleSendUsernameResignation = vi.fn();
-
+		const mockHandleSendValidatorResignation = vi.fn();
 		const {
 			result: { current },
 		} = renderHook(
 			() =>
 				useWalletActions({
 					handleSendUsernameResignation: mockHandleSendUsernameResignation,
+					handleSendValidatorResignation: mockHandleSendValidatorResignation,
 					wallets: [wallet, profile.wallets().last()],
 				}),
 			{
@@ -92,7 +93,7 @@ describe("useWalletActions", () => {
 			current.handleSelectOption({ value: "validator-resignation" } as DropdownOption);
 		});
 
-		expect(currentLocation.pathname).toBe(`/profiles/${profile.id()}/send-validator-resignation`);
+		expect(mockHandleSendValidatorResignation).toHaveBeenCalledTimes(1);
 
 		act(() => {
 			current.handleSelectOption({ value: "username-resignation" } as DropdownOption);
@@ -236,6 +237,40 @@ describe("useWalletActions", () => {
 		expect(() => {
 			act(() => {
 				current.handleSelectOption({ value: "username-resignation" } as DropdownOption);
+			});
+		}).not.toThrow();
+	});
+
+	it("should call handleSendValidatorResignation callback when provided", () => {
+		const mockHandleSendValidatorResignation = vi.fn();
+
+		const {
+			result: { current },
+		} = renderHook(
+			() =>
+				useWalletActions({
+					handleSendValidatorResignation: mockHandleSendValidatorResignation,
+					wallets: [wallet],
+				}),
+			{ wrapper },
+		);
+
+		act(() => {
+			current.handleSelectOption({ value: "validator-resignation" } as DropdownOption);
+		});
+
+		expect(mockHandleSendValidatorResignation).toHaveBeenCalledTimes(1);
+	});
+
+	it("should not call handleSendValidatorResignation callback when not provided", () => {
+		const {
+			result: { current },
+		} = renderHook(() => useWalletActions({ wallets: [wallet] }), { wrapper });
+
+		// Should not throw error when callback is not provided
+		expect(() => {
+			act(() => {
+				current.handleSelectOption({ value: "validator-resignation" } as DropdownOption);
 			});
 		}).not.toThrow();
 	});
