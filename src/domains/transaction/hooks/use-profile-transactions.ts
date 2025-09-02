@@ -118,7 +118,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 	const { types } = useTransactionTypes({ wallets });
 	const { syncOnChainUsernames } = useWalletAlias();
 
-	const { unconfirmedTransactions, removeUnconfirmedTransaction, addUnconfirmedTransactionFromUnconfirmed } =
+	const { unconfirmedTransactions, removeUnconfirmedTransaction, addUnconfirmedTransactionFromApi } =
 		useUnconfirmedTransactions();
 
 	const allTransactionTypes = [...types.core];
@@ -522,7 +522,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 
 				const gasLimit = (transaction as any).gasLimit ?? (transaction as any).gas;
 
-				addUnconfirmedTransactionFromUnconfirmed({
+				addUnconfirmedTransactionFromApi({
 					...transaction,
 					gasLimit,
 					networkId: matched.networkId(),
@@ -533,7 +533,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 			/* istanbul ignore next -- @preserve */
 			console.error("Failed to fetch unconfirmed transactions:", error);
 		}
-	}, [wallets, addUnconfirmedTransactionFromUnconfirmed]);
+	}, [wallets, addUnconfirmedTransactionFromApi]);
 
 	const pollingCallbackRef = useRef(fetchUnconfirmedTransactions);
 	useEffect(() => {

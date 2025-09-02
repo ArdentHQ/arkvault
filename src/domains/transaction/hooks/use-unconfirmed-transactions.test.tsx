@@ -205,7 +205,7 @@ describe("useUnconfirmedTransactions", () => {
 		const { result } = renderHook(() => useUnconfirmedTransactions());
 
 		act(() => {
-			result.current.addUnconfirmedTransactionFromUnconfirmed(mockUnconfirmedTransaction);
+			result.current.addUnconfirmedTransactionFromApi(mockUnconfirmedTransaction);
 		});
 
 		expect(result.current.unconfirmedTransactions).toHaveLength(1);
@@ -240,7 +240,7 @@ describe("useUnconfirmedTransactions", () => {
 		delete (mockWithGasLimit as any).gas;
 
 		act(() => {
-			result.current.addUnconfirmedTransactionFromUnconfirmed(mockWithGasLimit);
+			result.current.addUnconfirmedTransactionFromApi(mockWithGasLimit);
 		});
 
 		expect(result.current.unconfirmedTransactions).toHaveLength(1);
@@ -261,7 +261,7 @@ describe("useUnconfirmedTransactions", () => {
 		};
 
 		act(() => {
-			result.current.addUnconfirmedTransactionFromUnconfirmed(mockWithBoth);
+			result.current.addUnconfirmedTransactionFromApi(mockWithBoth);
 		});
 
 		expect(result.current.unconfirmedTransactions).toHaveLength(1);
@@ -278,7 +278,7 @@ describe("useUnconfirmedTransactions", () => {
 		delete (mockWithoutGas as any).gas;
 
 		act(() => {
-			result.current.addUnconfirmedTransactionFromUnconfirmed(mockWithoutGas);
+			result.current.addUnconfirmedTransactionFromApi(mockWithoutGas);
 		});
 
 		expect(result.current.unconfirmedTransactions).toHaveLength(1);
@@ -299,14 +299,14 @@ describe("useUnconfirmedTransactions", () => {
 		};
 
 		act(() => {
-			result.current.addUnconfirmedTransactionFromUnconfirmed(firstTransaction);
+			result.current.addUnconfirmedTransactionFromApi(firstTransaction);
 		});
 
 		expect(result.current.unconfirmedTransactions).toHaveLength(1);
 		expect(result.current.unconfirmedTransactions[0].transaction.signedData.value).toBe("100");
 
 		act(() => {
-			result.current.addUnconfirmedTransactionFromUnconfirmed(duplicateTransaction);
+			result.current.addUnconfirmedTransactionFromApi(duplicateTransaction);
 		});
 
 		expect(result.current.unconfirmedTransactions).toHaveLength(1);
@@ -324,11 +324,11 @@ describe("useUnconfirmedTransactions", () => {
 		};
 
 		act(() => {
-			result.current.addUnconfirmedTransactionFromUnconfirmed(transaction1);
+			result.current.addUnconfirmedTransactionFromApi(transaction1);
 		});
 
 		act(() => {
-			result.current.addUnconfirmedTransactionFromUnconfirmed(transaction2);
+			result.current.addUnconfirmedTransactionFromApi(transaction2);
 		});
 
 		expect(result.current.unconfirmedTransactions).toHaveLength(2);

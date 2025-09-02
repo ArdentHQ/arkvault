@@ -808,7 +808,7 @@ describe("useProfileTransactions", () => {
 
 		unconfirmedSpy.mockReturnValue({
 			addUnconfirmedTransaction: vi.fn(),
-			addUnconfirmedTransactionFromUnconfirmed: vi.fn(),
+			addUnconfirmedTransactionFromApi: vi.fn(),
 			removeUnconfirmedTransaction: vi.fn(),
 			unconfirmedTransactions: [],
 		});
@@ -848,7 +848,7 @@ describe("useProfileTransactions", () => {
 
 		unconfirmedSpy.mockReturnValue({
 			addUnconfirmedTransaction: vi.fn(),
-			addUnconfirmedTransactionFromUnconfirmed: vi.fn(),
+			addUnconfirmedTransactionFromApi: vi.fn(),
 			removeUnconfirmedTransaction: vi.fn(),
 			unconfirmedTransactions: [],
 		});
@@ -880,11 +880,11 @@ describe("useProfileTransactions", () => {
 		const walletAddress = wallets[0].address();
 		const networkId = wallets[0].networkId();
 
-		const addUnconfirmedTransactionFromUnconfirmed = vi.fn();
+		const addUnconfirmedTransactionFromApi = vi.fn();
 
 		vi.spyOn(unconfirmedTransactionsMock, "useUnconfirmedTransactions").mockReturnValue({
 			addUnconfirmedTransaction: vi.fn(),
-			addUnconfirmedTransactionFromUnconfirmed,
+			addUnconfirmedTransactionFromApi,
 			removeUnconfirmedTransaction: vi.fn(),
 			unconfirmedTransactions: [],
 		} as any);
@@ -923,10 +923,10 @@ describe("useProfileTransactions", () => {
 
 		expect(listSpy).toHaveBeenCalledWith({ from: [walletAddress], to: [walletAddress] });
 
-		expect(addUnconfirmedTransactionFromUnconfirmed).toHaveBeenCalledTimes(4);
+		expect(addUnconfirmedTransactionFromApi).toHaveBeenCalledTimes(4);
 
-		const firstArgs = addUnconfirmedTransactionFromUnconfirmed.mock.calls[0][0];
-		const secondArgs = addUnconfirmedTransactionFromUnconfirmed.mock.calls[1][0];
+		const firstArgs = addUnconfirmedTransactionFromApi.mock.calls[0][0];
+		const secondArgs = addUnconfirmedTransactionFromApi.mock.calls[1][0];
 
 		expect(firstArgs.walletAddress).toBe(walletAddress);
 		expect(firstArgs.networkId).toBe(networkId);
@@ -950,11 +950,11 @@ describe("useProfileTransactions", () => {
 				return {} as unknown as NodeJS.Timeout;
 			});
 
-		const addUnconfirmedTransactionFromUnconfirmed = vi.fn();
+		const addUnconfirmedTransactionFromApi = vi.fn();
 
 		vi.spyOn(unconfirmedTransactionsMock, "useUnconfirmedTransactions").mockReturnValue({
 			addUnconfirmedTransaction: vi.fn(),
-			addUnconfirmedTransactionFromUnconfirmed,
+			addUnconfirmedTransactionFromApi,
 			removeUnconfirmedTransaction: vi.fn(),
 			unconfirmedTransactions: [],
 		} as any);
@@ -967,7 +967,7 @@ describe("useProfileTransactions", () => {
 
 		await waitFor(() => expect(result.current.isLoadingTransactions).toBe(false));
 
-		expect(addUnconfirmedTransactionFromUnconfirmed).not.toHaveBeenCalled();
+		expect(addUnconfirmedTransactionFromApi).not.toHaveBeenCalled();
 
 		intervalMock.mockRestore();
 	});
@@ -1000,11 +1000,11 @@ describe("useProfileTransactions", () => {
 				return {} as unknown as NodeJS.Timeout;
 			});
 
-		const addUnconfirmedTransactionFromUnconfirmed = vi.fn();
+		const addUnconfirmedTransactionFromApi = vi.fn();
 
 		vi.spyOn(unconfirmedTransactionsMock, "useUnconfirmedTransactions").mockReturnValue({
 			addUnconfirmedTransaction: vi.fn(),
-			addUnconfirmedTransactionFromUnconfirmed,
+			addUnconfirmedTransactionFromApi,
 			removeUnconfirmedTransaction: vi.fn(),
 			unconfirmedTransactions: [],
 		} as any);
@@ -1037,7 +1037,7 @@ describe("useProfileTransactions", () => {
 		}
 
 		expect(listUnconfirmedSpy).toHaveBeenCalled();
-		expect(addUnconfirmedTransactionFromUnconfirmed).not.toHaveBeenCalled();
+		expect(addUnconfirmedTransactionFromApi).not.toHaveBeenCalled();
 
 		intervalMock.mockRestore();
 	});
@@ -1053,11 +1053,11 @@ describe("useProfileTransactions", () => {
 			});
 
 		const wallets = [profile.wallets().first()];
-		const addUnconfirmedTransactionFromUnconfirmed = vi.fn();
+		const addUnconfirmedTransactionFromApi = vi.fn();
 
 		vi.spyOn(unconfirmedTransactionsMock, "useUnconfirmedTransactions").mockReturnValue({
 			addUnconfirmedTransaction: vi.fn(),
-			addUnconfirmedTransactionFromUnconfirmed,
+			addUnconfirmedTransactionFromApi,
 			removeUnconfirmedTransaction: vi.fn(),
 			unconfirmedTransactions: [],
 		} as any);
@@ -1075,7 +1075,7 @@ describe("useProfileTransactions", () => {
 		await waitFor(() => expect(result.current.isLoadingTransactions).toBe(true));
 
 		expect(listSpy).toHaveBeenCalled();
-		expect(addUnconfirmedTransactionFromUnconfirmed).not.toHaveBeenCalled();
+		expect(addUnconfirmedTransactionFromApi).not.toHaveBeenCalled();
 
 		intervalMock.mockRestore();
 	});

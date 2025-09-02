@@ -1,3 +1,4 @@
+// src/domains/transaction/hooks/use-unconfirmed-transactions.ts
 import { useCallback } from "react";
 import { useLocalStorage } from "usehooks-ts";
 import { DTO } from "@/app/lib/profiles";
@@ -14,7 +15,7 @@ export interface UnconfirmedTransactionData {
 interface UseUnconfirmedTransactionsReturn {
 	unconfirmedTransactions: UnconfirmedTransactionData[];
 	addUnconfirmedTransactionFromSigned: (transaction: DTO.ExtendedSignedTransactionData) => void;
-	addUnconfirmedTransactionFromUnconfirmed: (
+	addUnconfirmedTransactionFromApi: (
 		input: UnconfirmedTransaction & {
 			walletAddress: string;
 			networkId: string;
@@ -54,7 +55,7 @@ export const useUnconfirmedTransactions = (): UseUnconfirmedTransactionsReturn =
 		[setUnconfirmedTransactions],
 	);
 
-	const addUnconfirmedTransactionFromUnconfirmed = useCallback(
+	const addUnconfirmedTransactionFromApi = useCallback(
 		(input: UnconfirmedTransaction & { walletAddress: string; networkId: string; gasLimit?: string | number }) => {
 			try {
 				const gasLimitLike = (input as any).gasLimit ?? input.gas;
@@ -101,7 +102,7 @@ export const useUnconfirmedTransactions = (): UseUnconfirmedTransactionsReturn =
 
 	return {
 		addUnconfirmedTransactionFromSigned,
-		addUnconfirmedTransactionFromUnconfirmed,
+		addUnconfirmedTransactionFromApi,
 		removeUnconfirmedTransaction,
 		unconfirmedTransactions,
 	};
