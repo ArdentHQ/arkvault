@@ -665,7 +665,7 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 								ledgerIsAwaitingApp={!isConnected}
 								noHeading
 								onDeviceNotAvailable={() => {
-									//
+									// do nothing, wait for ledger
 								}}
 							/>
 						)}

@@ -281,7 +281,7 @@ export const SendRegistration = () => {
 											]}
 											ledgerConnectedModel={ledgerDevice?.id}
 											onDeviceNotAvailable={() => {
-												//
+												// do nothing, wait for ledger
 											}}
 										/>
 									</TabPanel>
