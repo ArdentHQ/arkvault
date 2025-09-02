@@ -68,7 +68,7 @@ export const useWalletActions = ({
 
 			navigate(generatePath(ProfilePaths.SendTransferWallet, { profileId: profile.id(), walletId: wallet.id() }));
 		},
-		[stopEventBubbling, hasMultipleWallets, history, profile, wallet, handleSendTransfer],
+		[stopEventBubbling, hasMultipleWallets, navigate, profile, wallet, handleSendTransfer],
 	);
 
 	const handleToggleStar = useCallback(
@@ -102,7 +102,7 @@ export const useWalletActions = ({
 
 			return true;
 		},
-		[profile, history, wallet, persist, stopEventBubbling],
+		[profile, navigate, wallet, persist, stopEventBubbling],
 	);
 
 	const handleSelectOption = useCallback(
@@ -160,7 +160,16 @@ export const useWalletActions = ({
 
 			setActiveModal(option.value.toString() as WalletActionsModalType);
 		},
-		[wallet, history, profile, hasMultipleWallets, openExternal],
+		[
+			wallet,
+			navigate,
+			profile,
+			hasMultipleWallets,
+			openExternal,
+			handleSignMessage,
+			handleSendRegistration,
+			handleSendUsernameResignation,
+		],
 	);
 
 	return {

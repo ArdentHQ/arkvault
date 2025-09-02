@@ -56,20 +56,29 @@ describe("useWalletActions", () => {
 	it("should push right url to history if there are multiple wallets", () => {
 		let currentLocation = { pathname: "/" };
 
+		const mockHandleSendUsernameResignation = vi.fn();
+
 		const {
 			result: { current },
-		} = renderHook(() => useWalletActions({ wallets: [wallet, profile.wallets().last()] }), {
-			wrapper: ({ children }) => (
-				<Providers>
-					<LocationTracker
-						onLocationChange={(location) => {
-							currentLocation = location;
-						}}
-					/>
-					{children}
-				</Providers>
-			),
-		});
+		} = renderHook(
+			() =>
+				useWalletActions({
+					handleSendUsernameResignation: mockHandleSendUsernameResignation,
+					wallets: [wallet, profile.wallets().last()],
+				}),
+			{
+				wrapper: ({ children }) => (
+					<Providers>
+						<LocationTracker
+							onLocationChange={(location) => {
+								currentLocation = location;
+							}}
+						/>
+						{children}
+					</Providers>
+				),
+			},
+		);
 
 		expect(currentLocation.pathname).toBe("/");
 
@@ -89,7 +98,7 @@ describe("useWalletActions", () => {
 			current.handleSelectOption({ value: "username-resignation" } as DropdownOption);
 		});
 
-		expect(currentLocation.pathname).toBe(`/profiles/${profile.id()}/send-username-resignation`);
+		expect(mockHandleSendUsernameResignation).toHaveBeenCalledTimes(1);
 	});
 
 	it("should call handleSendRegistration callback for validator registration", () => {
@@ -195,5 +204,39 @@ describe("useWalletActions", () => {
 		});
 
 		expect(mockHandleSignMessage).toHaveBeenCalledTimes(1);
+	});
+
+	it("should call handleSendUsernameResignation callback when provided", () => {
+		const mockHandleSendUsernameResignation = vi.fn();
+
+		const {
+			result: { current },
+		} = renderHook(
+			() =>
+				useWalletActions({
+					handleSendUsernameResignation: mockHandleSendUsernameResignation,
+					wallets: [wallet],
+				}),
+			{ wrapper },
+		);
+
+		act(() => {
+			current.handleSelectOption({ value: "username-resignation" } as DropdownOption);
+		});
+
+		expect(mockHandleSendUsernameResignation).toHaveBeenCalledTimes(1);
+	});
+
+	it("should not call handleSendUsernameResignation callback when not provided", () => {
+		const {
+			result: { current },
+		} = renderHook(() => useWalletActions({ wallets: [wallet] }), { wrapper });
+
+		// Should not throw error when callback is not provided
+		expect(() => {
+			act(() => {
+				current.handleSelectOption({ value: "username-resignation" } as DropdownOption);
+			});
+		}).not.toThrow();
 	});
 });
