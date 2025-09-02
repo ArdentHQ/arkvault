@@ -212,6 +212,11 @@ export const ImportAddressesSidePanel = ({
 		handleOpenChange(false);
 	};
 
+	const handleReturnToSelection = React.useCallback(() => {
+		setActiveTab(ImportAddressStep.MethodStep);
+		setLedgerActiveTab(LedgerTabStep.ListenLedgerStep);
+	}, []);
+
 	const isNextDisabled = useMemo(() => {
 		if (activeTab === ImportAddressStep.ImportDetailStep && useEncryption) {
 			return !isValid || !acceptResponsibility;
@@ -308,6 +313,7 @@ export const ImportAddressesSidePanel = ({
 										handleOpenChange(false);
 									}}
 									onSubmit={handleFinish}
+									onBack={handleReturnToSelection}
 								/>
 							)}
 							{!isLedgerImport && importOption && (
