@@ -118,7 +118,7 @@ const reviewStepID = "SendVote__review-step";
 const formStepID = "SendVote__form-step";
 const authenticationStepID = "AuthenticationStep";
 
-const ComponentWraper = ({
+const ComponentWrapper = ({
 	votes,
 	unvotes,
 }: {
@@ -148,7 +148,7 @@ const Component = ({
 	unvotes?: VoteValidatorProperties[];
 }) => (
 	<VoteFormProvider profile={activeProfile} network={activeNetwork} wallet={activeWallet}>
-		<ComponentWraper votes={votes} unvotes={unvotes} />
+		<ComponentWrapper votes={votes} unvotes={unvotes} />
 	</VoteFormProvider>
 );
 
@@ -189,7 +189,6 @@ describe("SendVote", () => {
 				"https://dwallets-evm.mainsailhq.com/api/blocks/f7054cf37ce49e17cf2b06a0a868cac183bf78e2f1b4a6fe675f2412364fe0ae",
 				{ data: {} }, // Basic mock for block data
 			),
-			requestMock("https://ark-test-musig.arkvault.io/", { result: [] }, { method: "post" }),
 		);
 
 		vi.useFakeTimers({
