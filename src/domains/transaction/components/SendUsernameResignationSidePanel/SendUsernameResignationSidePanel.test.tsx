@@ -235,4 +235,158 @@ describe("SendUsernameResignationSidePanel", () => {
 
 		nanoXTransportMock.mockRestore();
 	});
+
+	it("should handle transaction error and go back", async () => {
+		const nanoXTransportMock = mockNanoXTransport();
+		const { mockOnOpenChange } = await renderPanel();
+
+		await expect(formStep()).resolves.toBeVisible();
+
+		await waitFor(() => expect(continueButton()).toBeEnabled());
+		await userEvent.click(continueButton());
+
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
+
+		await waitFor(() => expect(continueButton()).not.toBeDisabled());
+		await userEvent.click(continueButton());
+
+		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
+
+		const passwordInput = screen.getByTestId("AuthenticationStep__mnemonic");
+		await userEvent.type(passwordInput, passphrase);
+		await waitFor(() => expect(passwordInput).toHaveValue(passphrase));
+
+		await waitFor(() => expect(sendButton()).not.toBeDisabled());
+
+		const signMock = vi.spyOn(wallet.transaction(), "signUsernameResignation").mockImplementation(() => {
+			throw new Error("broadcast error");
+		});
+
+		await userEvent.click(sendButton());
+
+		await expect(screen.findByTestId("ErrorStep")).resolves.toBeVisible();
+
+		expect(screen.getByTestId("ErrorStep__errorMessage")).toHaveTextContent("broadcast error");
+
+		// Go back to form step
+		await userEvent.click(screen.getByTestId("ErrorStep__back-button"));
+
+		await expect(formStep()).resolves.toBeVisible();
+
+		signMock.mockRestore();
+		nanoXTransportMock.mockRestore();
+	});
+
+	it("should close the side panel when clicking back on form step", async () => {
+		const nanoXTransportMock = mockNanoXTransport();
+		const { mockOnOpenChange } = await renderPanel();
+
+		await expect(formStep()).resolves.toBeVisible();
+
+		await userEvent.click(screen.getByTestId("SendRegistration__back-button"));
+
+		expect(mockOnOpenChange).toHaveBeenCalledWith(false);
+
+		nanoXTransportMock.mockRestore();
+	});
+
+	it("should show mnemonic error with wrong passphrase", async () => {
+		const nanoXTransportMock = mockNanoXTransport();
+
+		await renderPanel();
+
+		await expect(formStep()).resolves.toBeVisible();
+
+		await waitFor(() => expect(continueButton()).toBeEnabled());
+		await userEvent.click(continueButton());
+
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
+
+		await waitFor(() => expect(continueButton()).not.toBeDisabled());
+		await userEvent.click(continueButton());
+
+		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
+
+		const passwordInput = screen.getByTestId("AuthenticationStep__mnemonic");
+		const wrongPassphrase = "wrong passphrase";
+
+		await userEvent.type(passwordInput, wrongPassphrase);
+		await waitFor(() => expect(passwordInput).toHaveValue(wrongPassphrase));
+
+		expect(sendButton()).toBeDisabled();
+
+		await waitFor(() => expect(screen.getByTestId("Input__error")).toBeVisible());
+
+		expect(screen.getByTestId("Input__error")).toHaveAttribute(
+			"data-errortext",
+			"This mnemonic does not correspond to your wallet",
+		);
+
+		nanoXTransportMock.mockRestore();
+	});
+
+	it("should prevent going to next step with enter on success step", async () => {
+		vi.spyOn(wallet, "client").mockImplementation(() => ({
+			transaction: vi.fn().mockReturnValue(signedTransactionMock),
+		}));
+
+		const nanoXTransportMock = mockNanoXTransport();
+		await renderPanel();
+
+		await expect(formStep()).resolves.toBeVisible();
+
+		await waitFor(() => expect(continueButton()).toBeEnabled());
+		await userEvent.click(continueButton());
+
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
+
+		await waitFor(() => expect(continueButton()).not.toBeDisabled());
+		await userEvent.keyboard("{enter}");
+
+		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
+
+		const passwordInput = screen.getByTestId("AuthenticationStep__mnemonic");
+		await userEvent.type(passwordInput, passphrase);
+		await waitFor(() => expect(passwordInput).toHaveValue(passphrase));
+
+		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
+
+		const signMock = vi
+			.spyOn(wallet.transaction(), "signUsernameResignation")
+			.mockReturnValue(Promise.resolve(UsernameResignationFixture.data.hash));
+		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
+			accepted: [UsernameResignationFixture.data.hash],
+			errors: {},
+			rejected: [],
+		});
+		const transactionMock = createUsernameResignationMock(wallet);
+
+		await userEvent.keyboard("{enter}");
+
+		await waitFor(() =>
+			expect(signMock).toHaveBeenCalledWith(
+				expect.objectContaining({
+					gasLimit: expect.any(BigNumber),
+					gasPrice: expect.any(BigNumber),
+					signatory: expect.any(Object),
+				}),
+			),
+		);
+
+		await waitFor(() => expect(broadcastMock).toHaveBeenCalledWith(UsernameResignationFixture.data.hash));
+		await waitFor(() => expect(transactionMock).toHaveBeenCalledWith(UsernameResignationFixture.data.hash));
+
+		signMock.mockRestore();
+		broadcastMock.mockRestore();
+		transactionMock.mockRestore();
+
+		await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();
+
+		await userEvent.keyboard("{enter}");
+
+		// Should stay on the same step, no navigation should occur
+		await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();
+
+		nanoXTransportMock.mockRestore();
+	});
 });
