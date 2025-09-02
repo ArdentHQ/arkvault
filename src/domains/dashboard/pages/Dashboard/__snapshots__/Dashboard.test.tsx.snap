@@ -6849,6 +6849,9 @@ exports[`Dashboard > should render 1`] = `
       <div
         style="display: contents;"
       />
+      <div
+        style="display: contents;"
+      />
     </div>
   </div>
 </DocumentFragment>
