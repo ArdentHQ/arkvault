@@ -100,8 +100,8 @@ export const useUnconfirmedTransactions = (): UseUnconfirmedTransactionsReturn =
 	);
 
 	return {
-		addUnconfirmedTransactionFromSigned,
 		addUnconfirmedTransactionFromApi,
+		addUnconfirmedTransactionFromSigned,
 		removeUnconfirmedTransaction,
 		unconfirmedTransactions,
 	};
