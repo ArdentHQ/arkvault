@@ -276,7 +276,7 @@ export const SendUsernameResignationSidePanel = ({
 			title={getTitle()}
 			subtitle={getSubtitle()}
 			titleIcon={getTitleIcon()}
-			dataTestId="SendRegistrationSidePanel"
+			dataTestId="SendUsernameResignationSidePanel"
 			hasSteps
 			totalSteps={stepCount}
 			activeStep={activeTab}
@@ -289,7 +289,7 @@ export const SendUsernameResignationSidePanel = ({
 				<SidePanelButtons>
 					{activeTab < stepCount && (
 						<Button
-							data-testid="SendRegistration__back-button"
+							data-testid="SendUsernameResignation__back-button"
 							variant="secondary"
 							onClick={handleBack}
 							disabled={isSubmitting}
@@ -300,7 +300,7 @@ export const SendUsernameResignationSidePanel = ({
 
 					{activeTab < stepCount - 1 && (
 						<Button
-							data-testid="SendRegistration__continue-button"
+							data-testid="SendUsernameResignation__continue-button"
 							onClick={handleNext}
 							disabled={!isValid || isSubmitting}
 						>
@@ -310,7 +310,7 @@ export const SendUsernameResignationSidePanel = ({
 
 					{activeTab === stepCount - 1 && (
 						<Button
-							data-testid="SendRegistration__send-button"
+							data-testid="SendUsernameResignation__send-button"
 							onClick={() => void handleSubmit()}
 							disabled={!isValid || isSubmitting}
 						>
@@ -319,7 +319,7 @@ export const SendUsernameResignationSidePanel = ({
 					)}
 
 					{activeTab === stepCount && (
-						<Button data-testid="SendRegistration__close-button" onClick={() => onOpenChange(false)}>
+						<Button data-testid="SendUsernameResignation__close-button" onClick={() => onOpenChange(false)}>
 							{t("COMMON.CLOSE")}
 						</Button>
 					)}

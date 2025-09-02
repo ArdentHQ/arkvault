@@ -39,7 +39,7 @@ const renderPanel = async () => {
 		withProviders: true,
 	});
 
-	await expect(screen.findByTestId("SendRegistrationSidePanel")).resolves.toBeVisible();
+	await expect(screen.findByTestId("SendUsernameResignationSidePanel")).resolves.toBeVisible();
 
 	return { ...view, mockOnOpenChange };
 };
@@ -100,9 +100,9 @@ const signedTransactionMock = {
 const createUsernameResignationMock = (wallet: Contracts.IReadWriteWallet) =>
 	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue(signedTransactionMock);
 
-const continueButton = () => screen.getByTestId("SendRegistration__continue-button");
+const continueButton = () => screen.getByTestId("SendUsernameResignation__continue-button");
 const formStep = () => screen.findByTestId("SendUsernameResignation__form-step");
-const sendButton = () => screen.getByTestId("SendRegistration__send-button");
+const sendButton = () => screen.getByTestId("SendUsernameResignation__send-button");
 
 const reviewStepID = "SendUsernameResignation__review-step";
 
@@ -170,7 +170,7 @@ describe("SendUsernameResignationSidePanel", () => {
 		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
 
 		// Navigate back to form step
-		await userEvent.click(screen.getByTestId("SendRegistration__back-button"));
+		await userEvent.click(screen.getByTestId("SendUsernameResignation__back-button"));
 		await expect(formStep()).resolves.toBeVisible();
 
 		// Continue to review step again
@@ -231,7 +231,7 @@ describe("SendUsernameResignationSidePanel", () => {
 		);
 
 		// Close the side panel
-		await userEvent.click(screen.getByTestId("SendRegistration__close-button"));
+		await userEvent.click(screen.getByTestId("SendUsernameResignation__close-button"));
 
 		nanoXTransportMock.mockRestore();
 	});
@@ -283,7 +283,7 @@ describe("SendUsernameResignationSidePanel", () => {
 
 		await expect(formStep()).resolves.toBeVisible();
 
-		await userEvent.click(screen.getByTestId("SendRegistration__back-button"));
+		await userEvent.click(screen.getByTestId("SendUsernameResignation__back-button"));
 
 		expect(mockOnOpenChange).toHaveBeenCalledWith(false);
 
