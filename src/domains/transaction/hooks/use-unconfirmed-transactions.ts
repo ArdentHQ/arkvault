@@ -1,8 +1,8 @@
 import { useCallback } from "react";
-import { useLocalStorage } from "usehooks-ts";
 import { DTO } from "@/app/lib/profiles";
-import { BigNumber } from "@/app/lib/helpers";
+import { useLocalStorage } from "usehooks-ts";
 import { RawTransactionData } from "@/app/lib/mainsail/signed-transaction.dto.contract";
+import { BigNumber } from "@/app/lib/helpers";
 import { UnconfirmedTransaction } from "@/app/lib/mainsail/unconfirmed-transaction.contract";
 
 export interface UnconfirmedTransactionData {
@@ -22,6 +22,7 @@ interface UseUnconfirmedTransactionsReturn {
 		},
 	) => void;
 	removeUnconfirmedTransaction: (hash: string) => void;
+	reconcileUnconfirmedForAddresses: (walletAddresses: string[], remoteHashes: string[]) => void;
 }
 
 export const useUnconfirmedTransactions = (): UseUnconfirmedTransactionsReturn => {
@@ -47,7 +48,6 @@ export const useUnconfirmedTransactions = (): UseUnconfirmedTransactionsReturn =
 					return [...filtered, unconfirmed];
 				});
 			} catch (error) {
-				/* istanbul ignore next -- @preserve */
 				console.error("Failed to add unconfirmed transaction:", error);
 			}
 		},
@@ -57,7 +57,7 @@ export const useUnconfirmedTransactions = (): UseUnconfirmedTransactionsReturn =
 	const addUnconfirmedTransactionFromApi = useCallback(
 		(input: UnconfirmedTransaction & { walletAddress: string; networkId: string; gasLimit?: string | number }) => {
 			try {
-				const gasLimitLike = (input as any).gasLimit ?? input.gas;
+				const gasLimitLike = input.gasLimit ?? input.gas;
 				const signedData: RawTransactionData = {
 					data: input.data,
 					from: input.from,
@@ -65,21 +65,20 @@ export const useUnconfirmedTransactions = (): UseUnconfirmedTransactionsReturn =
 					gasPrice: input.gasPrice as any,
 					hash: input.hash,
 					nonce: BigNumber.make(input.nonce),
-					senderPublicKey: (input as any).senderPublicKey,
+					senderPublicKey: input.senderPublicKey,
 					to: input.to,
 					value: input.value,
 				};
 
 				const unconfirmed: UnconfirmedTransactionData = {
 					networkId: input.networkId,
-					transaction: {
-						signedData,
-					},
+					transaction: { signedData },
 					walletAddress: input.walletAddress,
 				};
 
 				setUnconfirmedTransactions((prev) => {
-					const filtered = prev.filter((p) => p.transaction.signedData.hash !== input.hash);
+					const target = input.hash;
+					const filtered = prev.filter((p) => p.transaction.signedData.hash !== target);
 					return [...filtered, unconfirmed];
 				});
 			} catch (error) {
@@ -99,9 +98,27 @@ export const useUnconfirmedTransactions = (): UseUnconfirmedTransactionsReturn =
 		[setUnconfirmedTransactions],
 	);
 
+	const reconcileUnconfirmedForAddresses = useCallback(
+		(walletAddresses: string[], remoteHashes: string[]) => {
+			const scope = new Set(walletAddresses);
+			const keep = new Set(remoteHashes);
+
+			setUnconfirmedTransactions((prev) =>
+				prev.filter((u) => {
+					if (!scope.has(u.walletAddress)) {
+						return true;
+					}
+					return keep.has(u.transaction.signedData.hash);
+				}),
+			);
+		},
+		[setUnconfirmedTransactions],
+	);
+
 	return {
 		addUnconfirmedTransactionFromApi,
 		addUnconfirmedTransactionFromSigned,
+		reconcileUnconfirmedForAddresses,
 		removeUnconfirmedTransaction,
 		unconfirmedTransactions,
 	};

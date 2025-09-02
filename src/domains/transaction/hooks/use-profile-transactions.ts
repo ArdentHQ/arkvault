@@ -111,15 +111,39 @@ const removeConfirmedUnconfirmedTransactions = (
 	};
 };
 
+const getBlockTime = (wallets: Contracts.IReadWriteWallet[]): number => {
+	try {
+		const first = wallets[0];
+		if (!first) {
+			return 15_000;
+		}
+
+		const milestone = first.network().milestone?.();
+		const blockTime = get(milestone, "timeouts.blockTime") as unknown;
+		if (typeof blockTime === "number" && Number.isFinite(blockTime) && blockTime > 0) {
+			return Math.max(1000, Math.min(300_000, blockTime));
+		}
+	} catch (error) {
+		/* istanbul ignore next -- @preserve */
+		console.error("Failed to get block time:", error);
+	}
+	return 15_000;
+};
+
 export const useProfileTransactions = ({ profile, wallets, limit = 30 }: ProfileTransactionsProperties) => {
 	const isMounted = useRef(true);
 	const cursor = useRef(1);
 	const LIMIT = limit;
+
 	const { types } = useTransactionTypes({ wallets });
 	const { syncOnChainUsernames } = useWalletAlias();
 
-	const { unconfirmedTransactions, removeUnconfirmedTransaction, addUnconfirmedTransactionFromApi } =
-		useUnconfirmedTransactions();
+	const {
+		unconfirmedTransactions,
+		removeUnconfirmedTransaction,
+		addUnconfirmedTransactionFromApi,
+		reconcileUnconfirmedForAddresses,
+	} = useUnconfirmedTransactions();
 
 	const allTransactionTypes = [...types.core];
 
@@ -150,6 +174,27 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 		timestamp: undefined,
 		transactions: [],
 	});
+
+	const unconfirmedTransactionsService = useMemo(() => {
+		if (!wallets?.length || !profile) {
+			return null;
+		}
+
+		try {
+			return new UnconfirmedTransactionsService({
+				config: profile.activeNetwork().config(),
+				profile,
+			});
+		} catch (error) {
+			/* istanbul ignore next -- @preserve */
+			{
+				console.error("Failed to initialize UnconfirmedTransactionsService:", error);
+				return null;
+			}
+		}
+	}, [profile, wallets?.length > 0]);
+
+	const blockTime = useMemo(() => getBlockTime(wallets), [wallets[0]?.networkId()]);
 
 	const hasMorePages = (itemsLength: number, hasMorePages: boolean, itemsLimit = LIMIT) => {
 		if (itemsLength < itemsLimit) {
@@ -200,11 +245,9 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 			if (sortBy.column === "date") {
 				return sortBy.desc ? bTimestamp - aTimestamp : aTimestamp - bTimestamp;
 			}
-
 			if (sortBy.desc) {
 				const aIsSignedTransaction = a instanceof ExtendedSignedTransactionData;
 				const bIsSignedTransaction = b instanceof ExtendedSignedTransactionData;
-
 				/* istanbul ignore next -- @preserve */
 				if (aIsSignedTransaction && !bIsSignedTransaction) {
 					return -1;
@@ -239,7 +282,6 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 					wallets,
 				});
 
-				/* istanbul ignore next -- @preserve */
 				if (!isMounted.current) {
 					return;
 				}
@@ -432,6 +474,72 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 		}));
 	}, [wallets, activeMode, activeTransactionType, selectedTransactionTypes, fetchTransactions, transactions]);
 
+	const fetchUnconfirmedTransactions = useCallback(async () => {
+		/* istanbul ignore next -- @preserve */
+		if (!unconfirmedTransactionsService || wallets.length === 0) {
+			return;
+		}
+
+		try {
+			const selectedAddresses = wallets.map((w) => w.address());
+			const response = await unconfirmedTransactionsService.listUnconfirmed({
+				from: selectedAddresses,
+				limit: 100,
+				to: selectedAddresses,
+			});
+
+			const results = response?.results ?? [];
+			const remoteHashes = results.map((t: any) => t.hash).filter(Boolean);
+			reconcileUnconfirmedForAddresses(selectedAddresses, remoteHashes);
+
+			if (remoteHashes.length !== unconfirmedTransactions.length) {
+				setState((s) => ({ ...s, timestamp: Date.now() }));
+			}
+
+			for (const transaction of results) {
+				const matched = wallets.find((wallet) => {
+					const walletAddr = wallet.address().toLowerCase();
+					const txFrom = transaction.from?.toLowerCase?.();
+					const txTo = transaction.to?.toLowerCase?.();
+					return walletAddr === txFrom || walletAddr === txTo;
+				});
+
+				if (!matched) {
+					continue;
+				}
+
+				const gasLimit = transaction.gasLimit ?? transaction.gas ?? 0;
+
+				addUnconfirmedTransactionFromApi({
+					...transaction,
+					gasLimit,
+					networkId: matched.networkId(),
+					walletAddress: matched.address(),
+				});
+			}
+		} catch (error) {
+			console.error("Failed to fetch unconfirmed transactions:", error);
+		}
+	}, [
+		unconfirmedTransactionsService,
+		wallets,
+		addUnconfirmedTransactionFromApi,
+		reconcileUnconfirmedForAddresses,
+		unconfirmedTransactions.length,
+	]);
+
+	useEffect(() => {
+		if (!unconfirmedTransactionsService || wallets.length === 0) {
+			return;
+		}
+
+		fetchUnconfirmedTransactions();
+
+		const intervalId = setInterval(fetchUnconfirmedTransactions, blockTime);
+
+		return () => clearInterval(intervalId);
+	}, [unconfirmedTransactionsService, wallets.length, blockTime, fetchUnconfirmedTransactions]);
+
 	const jobs = useMemo(
 		() => [
 			{
@@ -455,103 +563,6 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 		}
 		return allTransactions.length === 0 && !isLoadingTransactions;
 	}, [isLoadingTransactions, allTransactions.length]);
-
-	const unconfirmedTransactionsService = useRef<UnconfirmedTransactionsService | null>(null);
-
-	useEffect(() => {
-		if (!wallets?.length) {
-			unconfirmedTransactionsService.current = null;
-			return;
-		}
-
-		try {
-			unconfirmedTransactionsService.current = new UnconfirmedTransactionsService({
-				config: profile.activeNetwork().config(),
-				profile,
-			});
-		} catch (error) {
-			/* istanbul ignore next -- @preserve */
-			{
-				console.error("Failed to initialize UnconfirmedTransactionsService:", error);
-				unconfirmedTransactionsService.current = null;
-			}
-		}
-	}, [wallets]);
-
-	const getBlockTime = () => {
-		try {
-			const first = wallets[0];
-			if (!first) {
-				return 15_000;
-			}
-			const milestone = first.network().milestone?.();
-			const blockTime = get(milestone, "timeouts.blockTime") as unknown;
-			if (typeof blockTime === "number" && Number.isFinite(blockTime)) {
-				return blockTime;
-			}
-		} catch {
-			/* istanbul ignore next -- @preserve */
-			console.error("Failed to get block time");
-		}
-		return 15_000;
-	};
-
-	const walletsKey = useMemo(() => wallets.map((w) => w.address()).join("|"), [wallets]);
-	const blockTime = useMemo(() => getBlockTime(), [walletsKey]);
-
-	const fetchUnconfirmedTransactions = useCallback(async () => {
-		const service = unconfirmedTransactionsService.current;
-		/* istanbul ignore next -- @preserve */
-		if (!service) {
-			return;
-		}
-
-		try {
-			const selectedAddresses = wallets.map((w) => w.address());
-			const response = await service.listUnconfirmed({ from: selectedAddresses, to: selectedAddresses });
-
-			for (const transaction of response?.results ?? []) {
-				const matched =
-					wallets.find((wallet) => wallet.address().toLowerCase() === transaction.from?.toLowerCase?.()) ||
-					wallets.find((wallet) => wallet.address().toLowerCase() === transaction.to?.toLowerCase?.());
-
-				/* istanbul ignore next -- @preserve */
-				if (!matched) {
-					continue;
-				}
-
-				const gasLimit = (transaction as any).gasLimit ?? (transaction as any).gas;
-
-				addUnconfirmedTransactionFromApi({
-					...transaction,
-					gasLimit,
-					networkId: matched.networkId(),
-					walletAddress: matched.address(),
-				});
-			}
-		} catch (error) {
-			/* istanbul ignore next -- @preserve */
-			console.error("Failed to fetch unconfirmed transactions:", error);
-		}
-	}, [wallets, addUnconfirmedTransactionFromApi]);
-
-	const pollingCallbackRef = useRef(fetchUnconfirmedTransactions);
-	useEffect(() => {
-		pollingCallbackRef.current = fetchUnconfirmedTransactions;
-	}, [fetchUnconfirmedTransactions]);
-
-	useEffect(() => {
-		const service = unconfirmedTransactionsService.current;
-		if (!service) {
-			return;
-		}
-
-		const id = setInterval(() => {
-			pollingCallbackRef.current();
-		}, blockTime);
-
-		return () => clearInterval(id);
-	}, [unconfirmedTransactionsService.current, blockTime]);
 
 	return {
 		activeMode,
