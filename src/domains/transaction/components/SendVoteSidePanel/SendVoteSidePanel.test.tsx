@@ -896,6 +896,60 @@ describe("SendVote", () => {
 		signMock.mockRestore();
 	});
 
+	it("should navigate back to review step when clicking back button in error step", async () => {
+		vi.useRealTimers();
+
+		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
+
+		const votes: VoteValidatorProperties[] = [
+			{
+				amount: 10,
+				validatorAddress: validatorData[0].address,
+			},
+		];
+
+		render(
+			<Component
+				activeProfile={profile}
+				activeNetwork={wallet.network()}
+				activeWallet={wallet}
+				votes={votes}
+				unvotes={[]}
+			/>,
+			{ route: `${voteURL}` },
+		);
+
+		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
+
+		await waitFor(() => expect(continueButton()).not.toBeDisabled());
+		await userEvent.click(continueButton());
+
+		// AuthenticationStep
+		await expect(screen.findByTestId(authenticationStepID)).resolves.toBeVisible();
+
+		const signMock = vi.spyOn(wallet.transaction(), "signVote").mockImplementation(() => {
+			throw new Error("broadcast error");
+		});
+
+		const passwordInput = screen.getByTestId("AuthenticationStep__mnemonic");
+		await userEvent.type(passwordInput, passphrase);
+		await waitFor(() => expect(passwordInput).toHaveValue(passphrase));
+
+		await waitFor(() => expect(sendButton()).not.toBeDisabled());
+
+		await userEvent.click(sendButton());
+
+		await expect(screen.findByTestId("ErrorStep")).resolves.toBeVisible();
+
+		await userEvent.click(screen.getByTestId("ErrorStep__back-button"));
+
+		// Should return to review step
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
+		expect(screen.queryByTestId("ErrorStep")).not.toBeInTheDocument();
+
+		signMock.mockRestore();
+	});
+
 	it("should send a vote transaction with a ledger wallet", async () => {
 		const nanoXMock = mockNanoXTransport();
 		const isLedgerSpy = vi.spyOn(wallet, "isLedger").mockImplementation(() => true);
