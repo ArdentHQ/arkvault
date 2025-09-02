@@ -1,8 +1,8 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
-
 import { generatePath } from "react-router";
+
 import { LedgerConnectionStep } from "./LedgerConnectionStep";
 import { LedgerImportStep } from "./LedgerImportStep";
 import { LedgerScanStep } from "./LedgerScanStep";
@@ -17,6 +17,7 @@ import { ProfilePaths } from "@/router/paths";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { ImportActionToolbar } from "@/domains/portfolio/components/ImportWallet/ImportAddressSidePanel.blocks";
 import { OptionsValue, useWalletImport } from "@/domains/wallet/hooks";
+import { Button } from "@/app/components/Button";
 
 export const LedgerTabs = ({
 	activeIndex = LedgerTabStep.ListenLedgerStep,
@@ -24,6 +25,7 @@ export const LedgerTabs = ({
 	onStepChange,
 	onCancel,
 	onSubmit,
+	onBack,
 }: LedgerTabsProperties) => {
 	const activeProfile = useActiveProfile();
 	const { activeNetwork } = useActiveNetwork({ profile: activeProfile });
@@ -39,11 +41,9 @@ export const LedgerTabs = ({
 	const [importedWallets, setImportedWallets] = useState<LedgerData[]>([]);
 	const [activeTab, setActiveTab] = useState<number>(activeIndex);
 
-	const isMultiple = useMemo(() => importedWallets.length > 1, [importedWallets]);
-
-	const [_, setShowRetry] = useState(false);
+	const [showRetry, setShowRetry] = useState(false);
 	const [cancelling, setCancelling] = useState(false);
-	const retryFunctionReference = useRef<() => void>(undefined);
+	const retryFunctionReference = useRef<(() => void) | undefined>(undefined);
 
 	const handleWalletImporting = useCallback(
 		async ({ wallets }: { wallets: LedgerData[] }) => {
@@ -67,7 +67,7 @@ export const LedgerTabs = ({
 
 			setImportedWallets(wallets);
 		},
-		[activeProfile, activeNetwork, listenDevice],
+		[activeProfile, listenDevice, importWallets],
 	);
 
 	const isNextDisabled = useMemo(() => isBusy || !isValid, [isBusy, isValid]);
@@ -85,14 +85,28 @@ export const LedgerTabs = ({
 		}
 	});
 
+	const goToPreviousStep = useCallback(() => {
+		setShowRetry(false);
+		setActiveTab((prev) => {
+			const next = Math.max(LedgerTabStep.ListenLedgerStep, prev - 1);
+			onStepChange?.(next);
+			return next;
+		});
+	}, [onStepChange]);
+
 	const handleNext = useCallback(async () => {
+		if (showRetry) {
+			setShowRetry(false);
+		}
+
 		if (activeTab === LedgerTabStep.LedgerScanStep) {
 			await handleSubmit((data: any) => handleWalletImporting(data))();
 		}
 
-		setActiveTab(activeTab + 1);
-		onStepChange?.(activeTab + 1);
-	}, [activeTab, handleSubmit, handleWalletImporting]);
+		const next = activeTab + 1;
+		setActiveTab(next);
+		onStepChange?.(next);
+	}, [activeTab, handleSubmit, importWallets, onStepChange, showRetry]);
 
 	useEffect(() => {
 		const cancel = async () => {
@@ -101,32 +115,48 @@ export const LedgerTabs = ({
 
 		if (cancelling && !isBusy) {
 			setCancelling(false);
-
 			cancel();
 		}
 	}, [cancelling, isBusy, disconnect, isAwaitingConnection, isAwaitingDeviceConfirmation, isConnected]);
 
-	const handleRetry = useCallback(
-		(callback?: () => void) => {
-			retryFunctionReference.current = callback;
-			setShowRetry(!!callback);
-		},
-		[retryFunctionReference, setShowRetry],
-	);
+	const registerRetry = useCallback((callback?: () => void) => {
+		retryFunctionReference.current = callback;
+		setShowRetry(!!callback);
+	}, []);
+
+	const handleRetry = useCallback(() => {
+		const callback = retryFunctionReference.current;
+		if (callback) {
+			callback();
+		} else {
+			goToPreviousStep();
+		}
+	}, [goToPreviousStep]);
 
 	const handleFinish = useCallback(() => {
 		navigate(`/profiles/${activeProfile.id()}/dashboard`);
-	}, [isMultiple, history, activeProfile, activeNetwork, importedWallets]);
+	}, [activeProfile, navigate]);
 
 	const handleDeviceNotAvailable = useCallback(() => {
 		navigate(generatePath(ProfilePaths.Dashboard, { profileId: activeProfile.id() }));
-	}, [history, activeProfile]);
+	}, [navigate, activeProfile]);
 
 	const handleBack = useCallback(() => {
-		onCancel?.();
-	}, [activeTab, history, listenDevice]);
+		setShowRetry(false);
 
-	const showFooter = [LedgerTabStep.LedgerScanStep, LedgerTabStep.LedgerImportStep].includes(activeTab);
+		if (activeTab === LedgerTabStep.LedgerImportStep) {
+			const prev = LedgerTabStep.LedgerScanStep;
+			setActiveTab(prev);
+			onStepChange?.(prev);
+			return;
+		}
+		if (onBack) {
+			return onBack();
+		}
+		return onCancel?.();
+	}, [activeTab, onBack, onCancel, onStepChange]);
+
+	const showFooter = showRetry || [LedgerTabStep.LedgerScanStep, LedgerTabStep.LedgerImportStep].includes(activeTab);
 
 	return (
 		<>
@@ -138,6 +168,7 @@ export const LedgerTabs = ({
 								<ListenLedger
 									noHeading
 									onDeviceAvailable={() => {
+										setShowRetry(false);
 										setActiveTab(LedgerTabStep.LedgerConnectionStep);
 										onStepChange?.(LedgerTabStep.LedgerConnectionStep);
 									}}
@@ -149,8 +180,14 @@ export const LedgerTabs = ({
 								<LedgerConnectionStep
 									cancelling={cancelling}
 									onConnect={() => {
+										setShowRetry(false);
 										setActiveTab(LedgerTabStep.LedgerScanStep);
 										onStepChange?.(LedgerTabStep.LedgerScanStep);
+									}}
+									onFailed={() => {
+										registerRetry(() => {
+											goToPreviousStep();
+										});
 									}}
 									network={activeNetwork}
 								/>
@@ -160,7 +197,7 @@ export const LedgerTabs = ({
 								<LedgerScanStep
 									cancelling={cancelling}
 									profile={activeProfile}
-									setRetryFn={handleRetry}
+									setRetryFn={registerRetry}
 									network={activeNetwork}
 								/>
 							</TabPanel>
@@ -178,7 +215,8 @@ export const LedgerTabs = ({
 				</Tabs>
 			</div>
 
-			{showFooter && (
+			{/* Normal toolbar footer (no error) */}
+			{showFooter && !showRetry && (
 				<div className="bg-theme-background border-theme-secondary-300 dark:border-theme-dark-700 absolute right-0 bottom-0 left-0 flex w-full flex-col border-t px-6 py-4">
 					<ImportActionToolbar
 						showButtons={activeTab !== LedgerTabStep.LedgerImportStep}
@@ -190,6 +228,32 @@ export const LedgerTabs = ({
 						showPortfoliobutton={activeTab === LedgerTabStep.LedgerImportStep}
 						onSubmit={onSubmit}
 					/>
+				</div>
+			)}
+
+			{/* Error-only footer (Back / Retry buttons) */}
+			{showFooter && showRetry && (
+				<div className="bg-theme-background border-theme-secondary-300 dark:border-theme-dark-700 absolute right-0 bottom-0 left-0 flex w-full flex-col border-t px-6 py-4">
+					<div className="flex w-full items-center justify-end gap-3">
+						<Button
+							type="button"
+							onClick={handleBack}
+							variant="secondary"
+							data-testid="LedgerFooter__backToSelection"
+						>
+							Back
+						</Button>
+
+						<Button
+							type="button"
+							onClick={handleRetry}
+							variant="primary"
+							data-testid="LedgerFooter__retry"
+							disabled={isSubmitting}
+						>
+							Retry
+						</Button>
+					</div>
 				</div>
 			)}
 		</>
