@@ -31,6 +31,7 @@ import { Icon, ThemeIcon } from "@/app/components/Icon";
 import { useVoteFormContext } from "@/domains/vote/contexts/VoteFormContext";
 import { useConfirmedTransaction } from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
 import classNames from "classnames";
+import { useConnectLedger } from "@/domains/transaction/hooks/use-connect-ledger";
 
 enum Step {
 	FormStep = 1,
@@ -67,8 +68,7 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 	const form = useForm({ mode: "onChange" });
 	const { senderAddress } = form.watch();
 
-	const { hasDeviceAvailable, isConnected, ledgerDevice, connect } = useLedgerContext();
-	const [isWaitingLedger, setIsWaitingLedger] = useState(false);
+	const { hasDeviceAvailable, isConnected } = useLedgerContext();
 
 	const { syncProfileWallets } = useProfileJobs(activeProfile);
 
@@ -80,6 +80,11 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 
 	const abortReference = useRef(new AbortController());
 	const transactionBuilder = useTransactionBuilder();
+
+	const { connectLedger } = useConnectLedger({
+		onReady: () => void handleSubmit(submitForm)(),
+		profile: activeProfile
+	})
 
 	const activeWallet = useMemo(
 		() => activeProfile.wallets().findByAddressWithNetwork(senderAddress, activeNetwork.id()),
@@ -203,24 +208,6 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 		},
 		[initialStep, activeTab],
 	);
-
-	useEffect(() => {
-		if (!isConnected && ledgerDevice?.id && isWaitingLedger) {
-			void connectLedger();
-		}
-
-		if (isConnected && isWaitingLedger) {
-			void handleSubmit(submitForm)();
-			setIsWaitingLedger(false);
-		}
-	}, [isConnected, ledgerDevice?.id, isWaitingLedger]);
-
-	const connectLedger = useCallback(async () => {
-		if (activeWallet) {
-			setIsWaitingLedger(true);
-			await connect(activeProfile);
-		}
-	}, [activeWallet, activeProfile, connect]);
 
 	const handleBack = () => {
 		// Abort any existing listener
