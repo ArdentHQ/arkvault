@@ -68,7 +68,7 @@ describe("useUnconfirmedTransactions", () => {
 		const { result } = renderHook(() => useUnconfirmedTransactions());
 
 		expect(result.current.unconfirmedTransactions).toEqual([]);
-		expect(typeof result.current.addUnconfirmedTransaction).toBe("function");
+		expect(typeof result.current.addUnconfirmedTransactionFromSigned).toBe("function");
 		expect(typeof result.current.removeUnconfirmedTransaction).toBe("function");
 	});
 
@@ -212,7 +212,6 @@ describe("useUnconfirmedTransactions", () => {
 		expect(result.current.unconfirmedTransactions[0]).toEqual({
 			networkId: "mainsail.devnet",
 			transaction: {
-				serialized: "",
 				signedData: {
 					data: mockUnconfirmedTransaction.data,
 					from: mockUnconfirmedTransaction.from,
