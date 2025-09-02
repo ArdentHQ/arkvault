@@ -155,7 +155,7 @@ export class TransactionService {
 		const unvote: { id: string } | undefined = get(input, "data.unvotes[0]");
 		const nonce = await this.#generateNonce(input);
 
-		if (unvote) {
+		if (unvote && !vote) {
 			const builder = await UnvoteBuilder.new()
 				.nonce(nonce)
 				.gasPrice(UnitConverter.parseUnits(input.gasPrice.toString(), "gwei"))
@@ -163,12 +163,10 @@ export class TransactionService {
 
 			await this.#sign(input, builder);
 
-			if (!vote) {
-				return new SignedTransactionData().configure(
-					builder.transaction.data,
-					builder.transaction.serialize().toString("hex"),
-				);
-			}
+			return new SignedTransactionData().configure(
+				builder.transaction.data,
+				builder.transaction.serialize().toString("hex"),
+			);
 		}
 
 		const builder = await VoteBuilder.new()
