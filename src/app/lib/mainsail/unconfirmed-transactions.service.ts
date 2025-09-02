@@ -1,47 +1,36 @@
-import { Http } from "@/app/lib/mainsail";
-import { HttpClient } from "@/app/lib/mainsail/http-client";
-import { UnconfirmedTransactionsResponse } from "./unconfirmed-transaction.contract";
+import { ArkClient } from "@arkecosystem/typescript-client";
+import type { ConfigRepository } from "@/app/lib/mainsail";
+import type { IProfile } from "@/app/lib/profiles/profile.contract";
 
-/**
- * Small wrapper to call /transactions/unconfirmed on the node.
- */
 export class UnconfirmedTransactionsService {
-	private readonly http: HttpClient;
-	private readonly host: string;
+	readonly #client: ArkClient;
 
-	constructor({ httpClient, host }: { httpClient: Http.HttpClient; host: string }) {
-		this.http = httpClient;
-		this.host = host.replace(/\/+$/, "");
+	constructor({ config, profile }: { config: ConfigRepository; profile: IProfile }) {
+		this.#client = new ArkClient({
+			api: config.host("tx", profile),
+			evm: config.host("evm", profile),
+		});
 	}
 
-	/**
-	 * Returns raw unconfirmed txs from node.
-	 */
-	public async listUnconfirmed(parameters?: { page?: number; limit?: number; from?: string[]; to?: string[] }) {
-		const qs = new URLSearchParams();
+	async listUnconfirmed(params?: {
+		page?: number; limit?: number; offset?: number;
+		from?: string[] | string; to?: string[] | string;
+	}) {
+		const normalize = (v?: string[] | string) =>
+			v == null ? undefined : (Array.isArray(v) ? v : v.split(",")).map(s => s.trim()).filter(Boolean);
 
-		if (parameters?.page != null) {
-			qs.set("page", String(parameters.page));
-		}
-		if (parameters?.limit != null) {
-			qs.set("limit", String(parameters.limit));
-		}
+		const requestParams: Record<string, unknown> = {};
+		const from = normalize(params?.from); if (from?.length) requestParams.from = from;
+		const to = normalize(params?.to); if (to?.length) requestParams.to = to;
 
-		if (parameters?.from?.length) {
-			for (const addr of parameters.from) {
-				qs.append("from", addr);
-			}
-		}
+		const limit = params?.limit;
+		const offset = (params?.offset) ??
+			(params?.page != null && params?.limit != null ? (params.page - 1) * params.limit : undefined);
 
-		if (parameters?.to?.length) {
-			for (const addr of parameters.to) {
-				qs.append("to", addr);
-			}
-		}
+		const response = await this.#client.transactions().allUnconfirmed(limit, offset, requestParams);
+		const results = (response).results ?? [];
+		const totalCount = (response).totalCount ?? results.length;
 
-		const url = `${this.host}/transactions/unconfirmed` + (qs.toString() ? `?${qs.toString()}` : "");
-
-		const res = await this.http.get(url, undefined as any, { ttl: 5_000 });
-		return res.json() as Promise<UnconfirmedTransactionsResponse>;
+		return { results, totalCount };
 	}
 }

@@ -1,85 +1,67 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-import { describe, it, expect, vi, beforeEach } from "vitest";
 import { UnconfirmedTransactionsService } from "@/app/lib/mainsail/unconfirmed-transactions.service";
 import transactionFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/unconfirmed.json";
 
+let allUnconfirmedMock: any;
+
+vi.mock("@arkecosystem/typescript-client", () => {
+	return {
+		ArkClient: vi.fn().mockImplementation(() => ({
+			transactions: () => ({ allUnconfirmed: allUnconfirmedMock }),
+		})),
+	};
+});
+
 describe("UnconfirmedTransactionsService", () => {
-	let getMock: ReturnType<typeof vi.fn>;
-	let httpClient: any;
+	let service: UnconfirmedTransactionsService;
 
 	beforeEach(() => {
-		getMock = vi.fn().mockResolvedValue({
-			json: vi.fn().mockResolvedValue(transactionFixture),
-		});
-		httpClient = { get: getMock };
+		allUnconfirmedMock = vi.fn().mockResolvedValue(transactionFixture);
+
+		const config = {
+			host: vi.fn((type: string) =>
+				type === "tx"
+					? "https://dwallets-evm.mainsailhq.com/tx/api"
+					: "https://dwallets-evm.mainsailhq.com/evm/api",
+			),
+		} as any;
+
+		const profile = {} as any;
+
+		service = new UnconfirmedTransactionsService({ config, profile });
 	});
 
-	it("should build URL without params and return fixture", async () => {
-		const service = new UnconfirmedTransactionsService({
-			host: "https://dwallets-evm.mainsailhq.com/tx/api/",
-			httpClient,
-		});
-
+	it("should call allUnconfirmed without params and map response", async () => {
 		const res = await service.listUnconfirmed();
 
-		expect(getMock).toHaveBeenCalledTimes(1);
-		expect(getMock).toHaveBeenCalledWith(
-			"https://dwallets-evm.mainsailhq.com/tx/api/transactions/unconfirmed",
-			undefined,
-			{ ttl: 5000 },
-		);
-		expect(res).toEqual(transactionFixture);
+		expect(allUnconfirmedMock).toHaveBeenCalledTimes(1);
+		expect(allUnconfirmedMock).toHaveBeenCalledWith(undefined, undefined, {});
+
+		const results =
+			transactionFixture.results ??
+			[];
+		const totalCount = transactionFixture.totalCount ?? results.length;
+
+		expect(res).toEqual({ results, totalCount });
 	});
 
-	it("should add page and limit query params", async () => {
-		const service = new UnconfirmedTransactionsService({
-			host: "https://dwallets-evm.mainsailhq.com/tx/api",
-			httpClient,
-		});
+	it("should translate page and limit into offset", async () => {
+		await service.listUnconfirmed({ limit: 50, page: 2 });
 
-		const res = await service.listUnconfirmed({ limit: 50, page: 2 });
-
-		expect(getMock).toHaveBeenCalledWith(
-			"https://dwallets-evm.mainsailhq.com/tx/api/transactions/unconfirmed?page=2&limit=50",
-			undefined,
-			{ ttl: 5000 },
-		);
-
-		expect(res).toEqual(transactionFixture);
+		expect(allUnconfirmedMock).toHaveBeenLastCalledWith(50, 50, {});
 	});
 
-	it("should add multiple from/to params in order", async () => {
-		const service = new UnconfirmedTransactionsService({
-			host: "https://dwallets-evm.mainsailhq.com/tx/api",
-			httpClient,
-		});
-
+	it("should pass multiple from/to arrays in request params", async () => {
 		const from = ["0x1111111111111111111111111111111111111111", "0x2222222222222222222222222222222222222222"];
 		const to = ["0xAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "0xBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"];
 
-		await service.listUnconfirmed({ from, limit: 25, page: 1, to });
+		await service.listUnconfirmed({ from, to, limit: 25, page: 1 });
 
-		const expectedUrl =
-			"https://dwallets-evm.mainsailhq.com/tx/api/transactions/unconfirmed" +
-			"?page=1&limit=25" +
-			`&from=${from[0]}&from=${from[1]}` +
-			`&to=${to[0]}&to=${to[1]}`;
-
-		expect(getMock).toHaveBeenCalledWith(expectedUrl, undefined, { ttl: 5000 });
+		expect(allUnconfirmedMock).toHaveBeenLastCalledWith(25, 0, { from, to });
 	});
 
-	it("should omit empty arrays (no query string for empty from/to)", async () => {
-		const service = new UnconfirmedTransactionsService({
-			host: "https://dwallets-evm.mainsailhq.com/tx/api",
-			httpClient,
-		});
-
+	it("should omit empty arrays for from/to", async () => {
 		await service.listUnconfirmed({ from: [], to: [] });
 
-		expect(getMock).toHaveBeenCalledWith(
-			"https://dwallets-evm.mainsailhq.com/tx/api/transactions/unconfirmed",
-			undefined,
-			{ ttl: 5000 },
-		);
+		expect(allUnconfirmedMock).toHaveBeenLastCalledWith(undefined, undefined, {});
 	});
 });
