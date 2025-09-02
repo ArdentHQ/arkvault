@@ -28,9 +28,9 @@ describe("useConnectLedger", () => {
 
 	it("should call onReady when ledger becomes connected after initiating connection", () => {
 		let contextValue = {
+			connect: mockConnect,
 			isConnected: false,
 			ledgerDevice: { id: "test-device" },
-			connect: mockConnect,
 		};
 
 		const contextSpy = vi.spyOn(AppContexts, "useLedgerContext").mockImplementation(() => contextValue);
@@ -60,18 +60,18 @@ describe("useConnectLedger", () => {
 
 	it("should not call onReady when ledger model is not supported", () => {
 		let contextValue = {
+			connect: mockConnect,
 			isConnected: false,
 			ledgerDevice: { id: "test-device" },
-			connect: mockConnect,
 		};
 
 		const contextSpy = vi.spyOn(AppContexts, "useLedgerContext").mockImplementation(() => contextValue);
 
 		const { result, rerender } = renderHook(() =>
 			useConnectLedger({
+				isLedgerModelSupported: false,
 				onReady,
 				profile: mockProfile,
-				isLedgerModelSupported: false,
 			}),
 		);
 
@@ -93,9 +93,9 @@ describe("useConnectLedger", () => {
 
 	it("should not call onReady without user initiating connection", () => {
 		const contextValue = {
+			connect: mockConnect,
 			isConnected: true,
 			ledgerDevice: { id: "test-device" },
-			connect: mockConnect,
 		};
 
 		vi.spyOn(AppContexts, "useLedgerContext").mockReturnValue(contextValue);
