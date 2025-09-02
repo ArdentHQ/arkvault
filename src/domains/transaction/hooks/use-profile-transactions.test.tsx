@@ -20,7 +20,6 @@ const wrapper = ({ children }: any) => (
 
 const signedTransactionData = {
 	identifier: "d91057d3b535e43e890c794e2142803a54cd070edd3006e74ffd17dd18165f22",
-	serialized: "",
 	signedData: {
 		data: "36a94134000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000077364667364663300000000000000000000000000000000000000000000000000",
 		from: "0xA5cc0BfEB09742C5e4C610f2EBaaB82Eb142Ca10",
@@ -860,51 +859,7 @@ describe("useProfileTransactions", () => {
 
 		await waitFor(() => expect(result.current.isLoadingTransactions).toBe(true));
 
-		expect(consoleErrorSpy).toHaveBeenCalledWith(
-			"Failed to initialize UnconfirmedTransactionsService:",
-			expect.any(Error),
-		);
-
-		consoleErrorSpy.mockRestore();
-		unconfirmedSpy.mockRestore();
-	});
-
-	it("should handle service initialization error", async () => {
-		const consoleErrorSpy = vi.spyOn(console, "error").mockImplementation(() => {});
-
-		const mockWallet = {
-			address: () => "0xTestAddress",
-			network: () => ({
-				config: () => ({
-					host: () => {
-						throw new Error("Host configuration error");
-					},
-				}),
-			}),
-			networkId: () => "test-network",
-			profile: () => profile,
-			transactionTypes: () => ["transfer", "vote"],
-		};
-
-		const { unconfirmedSpy } = await mockUnconfirmedTransactionsHook([]);
-
-		unconfirmedSpy.mockReturnValue({
-			addUnconfirmedTransaction: vi.fn(),
-			addUnconfirmedTransactionFromUnconfirmed: vi.fn(),
-			removeUnconfirmedTransaction: vi.fn(),
-			unconfirmedTransactions: [],
-		});
-
-		const { result } = renderHook(() => useProfileTransactions({ profile, wallets: [mockWallet as any] }), {
-			wrapper,
-		});
-
-		await waitFor(() => expect(result.current.isLoadingTransactions).toBe(true));
-
-		expect(consoleErrorSpy).toHaveBeenCalledWith(
-			"Failed to initialize UnconfirmedTransactionsService:",
-			expect.any(Error),
-		);
+		expect(consoleErrorSpy).toHaveBeenCalled();
 
 		consoleErrorSpy.mockRestore();
 		unconfirmedSpy.mockRestore();

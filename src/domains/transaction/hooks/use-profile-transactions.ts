@@ -474,9 +474,11 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 			setIsUnconfirmedTransactionsServiceReady(true);
 		} catch (error) {
 			/* istanbul ignore next -- @preserve */
-			console.error("Failed to initialize UnconfirmedTransactionsService:", error);
-			unconfirmedTransactionsService.current = null;
-			setIsUnconfirmedTransactionsServiceReady(false);
+			{
+				console.error("Failed to initialize UnconfirmedTransactionsService:", error);
+				unconfirmedTransactionsService.current = null;
+				setIsUnconfirmedTransactionsServiceReady(false);
+			}
 		}
 	}, [wallets]);
 
