@@ -13,11 +13,13 @@ export const useWalletActions = ({
 	handleSignMessage,
 	handleSendTransfer,
 	handleSendRegistration,
+	handleSendUsernameResignation,
 	wallets,
 }: {
 	handleSignMessage?: () => void;
 	handleSendTransfer?: () => void;
 	handleSendRegistration?: (registrationType?: "validatorRegistration" | "usernameRegistration") => void;
+	handleSendUsernameResignation?: () => void;
 	wallets: Contracts.IReadWriteWallet[];
 }) => {
 	const { persist } = useEnvironmentContext();
@@ -149,18 +151,7 @@ export const useWalletActions = ({
 			}
 
 			if (option.value === "username-resignation") {
-				let url = generatePath(ProfilePaths.SendUsernameResignation, {
-					profileId: profile.id(),
-					walletId: wallet.id(),
-				});
-
-				if (hasMultipleWallets) {
-					url = generatePath(ProfilePaths.SendUsernameResignationProfile, {
-						profileId: profile.id(),
-					});
-				}
-
-				navigate(url);
+				handleSendUsernameResignation?.();
 			}
 
 			if (option.value === "open-explorer") {

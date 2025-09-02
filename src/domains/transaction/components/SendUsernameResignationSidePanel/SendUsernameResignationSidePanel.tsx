@@ -10,7 +10,7 @@ import { usePendingTransactions } from "@/domains/transaction/hooks/use-pending-
 import { Form } from "@/app/components/Form";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { useEnvironmentContext } from "@/app/contexts";
-import { useActiveProfile, useActiveWalletWhenNeeded, useValidation } from "@/app/hooks";
+import { useActiveProfile, useValidation } from "@/app/hooks";
 import { useKeydown } from "@/app/hooks/use-keydown";
 import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
 import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
@@ -60,8 +60,6 @@ export const SendUsernameResignationSidePanel = ({
 
 	const activeProfile = useActiveProfile();
 
-	const activeWalletFromUrl = useActiveWalletWhenNeeded(false);
-
 	const { activeNetwork: network } = useActiveNetwork({ profile: activeProfile });
 
 	const [activeWallet, setActiveWallet] = useState(() => {
@@ -69,9 +67,8 @@ export const SendUsernameResignationSidePanel = ({
 			return activeProfile.wallets().findByAddressWithNetwork(senderAddress, network.id());
 		}
 
-		if (activeWalletFromUrl) {
-			return activeWalletFromUrl;
-		}
+		const selectedWallets = activeProfile.wallets().selected() ?? [activeProfile.wallets().first()];
+		return selectedWallets.at(0);
 	});
 
 	useEffect(() => {
@@ -171,6 +168,8 @@ export const SendUsernameResignationSidePanel = ({
 
 				resetForm(() => {
 					setErrorMessage(undefined);
+
+					setActiveWallet(undefined);
 				});
 			}
 		},

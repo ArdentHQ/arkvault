@@ -17,6 +17,7 @@ import { SignMessageSidePanel } from "@/domains/message/components/SignMessage/S
 import { SendTransferSidePanel } from "@/domains/transaction/components/SendTransferSidePanel/SendTransferSidePanel";
 import { useDeeplinkActionHandler } from "@/app/hooks";
 import { SendRegistrationSidePanel } from "@/domains/transaction/components/SendRegistrationSidePanel/SendRegistrationSidePanel";
+import { SendUsernameResignationSidePanel } from "@/domains/transaction/components/SendUsernameResignationSidePanel/SendUsernameResignationSidePanel";
 
 export const Dashboard = ({
 	onCreateAddress,
@@ -34,6 +35,7 @@ export const Dashboard = ({
 	const [showSendRegistrationPanel, setShowSendRegistrationPanel] = useState<
 		"validatorRegistration" | "usernameRegistration" | undefined
 	>(undefined);
+	const [showSendUsernameResignationPanel, setShowSendUsernameResignationPanel] = useState(false);
 
 	useDeeplinkActionHandler({
 		onSignMessage: () => {
@@ -128,6 +130,7 @@ export const Dashboard = ({
 						onSignMessage={setShowSignMessagePanel}
 						onSendTransfer={setShowSendTransferPanel}
 						onSendRegistration={setShowSendRegistrationPanel}
+						onSendUsernameResignation={setShowSendUsernameResignationPanel}
 					/>
 				)}
 			</Section>
@@ -202,6 +205,13 @@ export const Dashboard = ({
 							return;
 						}
 					}}
+				/>
+			</ResetWhenUnmounted>
+
+			<ResetWhenUnmounted>
+				<SendUsernameResignationSidePanel
+					open={showSendUsernameResignationPanel}
+					onOpenChange={setShowSendUsernameResignationPanel}
 				/>
 			</ResetWhenUnmounted>
 		</Page>
