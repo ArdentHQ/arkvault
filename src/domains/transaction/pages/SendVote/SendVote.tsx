@@ -62,7 +62,7 @@ export const SendVote = () => {
 	const initialStep = useMemo(() => (walletFromUrl ? Step.ReviewStep : Step.FormStep), [walletFromUrl]);
 	const [activeTab, setActiveTab] = useState<Step>(initialStep);
 
-	const [transaction, setTransaction] = useState(undefined as unknown as DTO.ExtendedSignedTransactionData);
+	const [transaction, setTransaction] = useState<DTO.ExtendedSignedTransactionData | undefined>(undefined);
 	const [errorMessage, setErrorMessage] = useState<string | undefined>();
 
 	const form = useForm({ mode: "onChange" });
@@ -201,6 +201,11 @@ export const SendVote = () => {
 				pathname: `/profiles/${activeProfile.id()}/wallets/${wallet.id()}/votes`,
 				search: `?${parameters}`,
 			});
+		}
+
+		// Reset transaction state when going back from SummaryStep to prevent stale data
+		if (activeTab === Step.SummaryStep) {
+			setTransaction(undefined);
 		}
 
 		setActiveTab(activeTab - 1);
@@ -492,7 +497,7 @@ export const SendVote = () => {
 							</TabPanel>
 
 							<TabPanel tabId={Step.SummaryStep}>
-								{activeWallet && (
+								{activeWallet && transaction && (
 									<TransactionSuccessful transaction={transaction} senderWallet={activeWallet} />
 								)}
 							</TabPanel>
@@ -502,6 +507,7 @@ export const SendVote = () => {
 									onClose={() => navigate(`/profiles/${activeProfile.id()}/dashboard`)}
 									isBackDisabled={isSubmitting}
 									onBack={() => {
+										setErrorMessage(undefined);
 										setActiveTab(Step.ReviewStep);
 									}}
 									errorMessage={errorMessage}
