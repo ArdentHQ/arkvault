@@ -899,19 +899,25 @@ describe("useProfileTransactions", () => {
 						from: walletAddress.toUpperCase(),
 						gasLimit: "21000",
 						hash: "UNCONF_FROM",
-						to: "0xAnother",
+						to: "ADDRESS_TO",
 					},
 					{
-						from: "0xAnother",
-						gas: "99999",
+						from: "ADDRESS_FROM",
+						gasLimit: "99999",
 						hash: "UNCONF_TO",
 						to: walletAddress.toLowerCase(),
 					},
 					{
-						from: "0xNope",
+						from: "ADDRESS_FROM",
 						gasLimit: "33333",
 						hash: "UNCONF_IGNORE",
-						to: "0xAlsoNope",
+						to: "ADDRESS_TO",
+					},
+					{
+						from: walletAddress.toLowerCase(),
+						gasLimit: undefined,
+						hash: "UNCONF_NO_GAS_LIMIT",
+						to: "ADDRESS_TO",
 					},
 				],
 			} as any);
@@ -925,7 +931,7 @@ describe("useProfileTransactions", () => {
 
 		expect(listSpy).toHaveBeenCalledWith({ from: [walletAddress], to: [walletAddress], limit: 100 });
 
-		expect(addUnconfirmedTransactionFromApi).toHaveBeenCalledTimes(4);
+		expect(addUnconfirmedTransactionFromApi).toHaveBeenCalledTimes(6);
 
 		const firstArgs = addUnconfirmedTransactionFromApi.mock.calls[0][0];
 		const secondArgs = addUnconfirmedTransactionFromApi.mock.calls[1][0];
@@ -940,7 +946,7 @@ describe("useProfileTransactions", () => {
 
 		expect(reconcileUnconfirmedForAddresses).toHaveBeenCalledWith(
 			[walletAddress], 
-			["UNCONF_FROM", "UNCONF_TO", "UNCONF_IGNORE"]
+			["UNCONF_FROM", "UNCONF_TO", "UNCONF_IGNORE", "UNCONF_NO_GAS_LIMIT"]
 		);
 
 		intervalMock.mockRestore();

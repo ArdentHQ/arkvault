@@ -508,7 +508,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 					continue;
 				}
 
-				const gasLimit = transaction.gasLimit ?? transaction.gas ?? 0;
+				const gasLimit = transaction.gasLimit ?? 0;
 
 				addUnconfirmedTransactionFromApi({
 					...transaction,
