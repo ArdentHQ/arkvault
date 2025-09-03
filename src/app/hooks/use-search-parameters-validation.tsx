@@ -10,7 +10,7 @@ import React from "react";
 import { generatePath } from "react-router-dom";
 import { truncate } from "@/app/lib/helpers";
 import { AddressService } from "@/app/lib/mainsail/address.service";
-import { manifest } from "@/app/lib/mainsail/manifest"
+import { manifest } from "@/app/lib/mainsail/manifest";
 
 interface RequiredParameters {
 	network?: string;
