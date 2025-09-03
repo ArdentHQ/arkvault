@@ -2039,7 +2039,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
                               class="mb-0 text-lg leading-[21px] md:text-2xl md:leading-[29px]"
                               data-testid="header__title"
                             >
-                              Resign Validator
+                              Validator Resignation
                             </h1>
                           </div>
                           <div
