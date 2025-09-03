@@ -5,6 +5,7 @@ import { env, act, getMainsailProfileId, Providers, LocationTracker } from "@/ut
 import { DropdownOption } from "@/app/components/Dropdown";
 import * as useActiveProfileModule from "@/app/hooks/env";
 import { useWalletActions } from "@/domains/wallet/hooks/use-wallet-actions";
+import { vi } from "vitest";
 
 describe("useWalletActions", () => {
 	let profile: Contracts.IProfile;
@@ -79,27 +80,120 @@ describe("useWalletActions", () => {
 		expect(currentLocation.pathname).toBe(`/profiles/${profile.id()}/send-transfer`);
 
 		act(() => {
-			current.handleSelectOption({ value: "validator-registration" } as DropdownOption);
-		});
-
-		expect(currentLocation.pathname).toBe(`/profiles/${profile.id()}/send-registration/validatorRegistration`);
-
-		act(() => {
 			current.handleSelectOption({ value: "validator-resignation" } as DropdownOption);
 		});
 
 		expect(currentLocation.pathname).toBe(`/profiles/${profile.id()}/send-validator-resignation`);
 
 		act(() => {
-			current.handleSelectOption({ value: "username-registration" } as DropdownOption);
-		});
-
-		expect(currentLocation.pathname).toBe(`/profiles/${profile.id()}/send-registration/usernameRegistration`);
-
-		act(() => {
 			current.handleSelectOption({ value: "username-resignation" } as DropdownOption);
 		});
 
 		expect(currentLocation.pathname).toBe(`/profiles/${profile.id()}/send-username-resignation`);
+	});
+
+	it("should call handleSendRegistration callback for validator registration", () => {
+		const mockHandleSendRegistration = vi.fn();
+
+		const {
+			result: { current },
+		} = renderHook(
+			() =>
+				useWalletActions({
+					handleSendRegistration: mockHandleSendRegistration,
+					wallets: [wallet],
+				}),
+			{ wrapper },
+		);
+
+		act(() => {
+			current.handleSelectOption({ value: "validator-registration" } as DropdownOption);
+		});
+
+		expect(mockHandleSendRegistration).toHaveBeenCalledWith("validatorRegistration");
+		expect(mockHandleSendRegistration).toHaveBeenCalledTimes(1);
+	});
+
+	it("should call handleSendRegistration callback for username registration", () => {
+		const mockHandleSendRegistration = vi.fn();
+
+		const {
+			result: { current },
+		} = renderHook(
+			() =>
+				useWalletActions({
+					handleSendRegistration: mockHandleSendRegistration,
+					wallets: [wallet],
+				}),
+			{ wrapper },
+		);
+
+		act(() => {
+			current.handleSelectOption({ value: "username-registration" } as DropdownOption);
+		});
+
+		expect(mockHandleSendRegistration).toHaveBeenCalledWith("usernameRegistration");
+		expect(mockHandleSendRegistration).toHaveBeenCalledTimes(1);
+	});
+
+	it("should not call handleSendRegistration callback when not provided", () => {
+		const {
+			result: { current },
+		} = renderHook(() => useWalletActions({ wallets: [wallet] }), { wrapper });
+
+		// Should not throw error when callback is not provided
+		expect(() => {
+			act(() => {
+				current.handleSelectOption({ value: "validator-registration" } as DropdownOption);
+			});
+		}).not.toThrow();
+
+		expect(() => {
+			act(() => {
+				current.handleSelectOption({ value: "username-registration" } as DropdownOption);
+			});
+		}).not.toThrow();
+	});
+
+	it("should call handleSendTransfer callback when provided", () => {
+		const mockHandleSendTransfer = vi.fn();
+
+		const {
+			result: { current },
+		} = renderHook(
+			() =>
+				useWalletActions({
+					handleSendTransfer: mockHandleSendTransfer,
+					wallets: [wallet],
+				}),
+			{ wrapper },
+		);
+
+		act(() => {
+			current.handleSend();
+		});
+
+		expect(mockHandleSendTransfer).toHaveBeenCalledTimes(1);
+	});
+
+	it("should call handleSignMessage callback when provided", () => {
+		const mockHandleSignMessage = vi.fn();
+
+		const {
+			result: { current },
+		} = renderHook(
+			() =>
+				useWalletActions({
+					handleSignMessage: mockHandleSignMessage,
+					wallets: [wallet],
+				}),
+			{ wrapper },
+		);
+
+		act(() => {
+			current.handleSelectOption({ value: "sign-message" } as DropdownOption);
+		});
+
+		expect(mockHandleSignMessage).toHaveBeenCalledTimes(1);
 	});
 });
