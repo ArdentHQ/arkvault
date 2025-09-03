@@ -10,6 +10,7 @@ import React from "react";
 import { generatePath } from "react-router-dom";
 import { truncate } from "@/app/lib/helpers";
 import { AddressService } from "@/app/lib/mainsail/address.service";
+import { manifest } from "@/app/lib/mainsail/manifest";
 
 interface RequiredParameters {
 	network?: string;
@@ -53,11 +54,11 @@ enum SearchParametersError {
 const defaultNetworks = {
 	"mainsail.devnet": {
 		displayName: "Mainsail Devnet",
-		nethash: "560f869ed6713745a12328e7214cb65077e645bb5e57b1e5b323bb915a51f114",
+		nethash: manifest.networks["mainsail.devnet"].meta!.nethash,
 	},
 	"mainsail.mainnet": {
 		displayName: "Mainsail",
-		nethash: "6e84d08bd299ed97c212c886c98a57e36545c8f5d645ca7eeae63a8bd62d8988",
+		nethash: manifest.networks["mainsail.mainnet"].meta!.nethash,
 	},
 };
 
