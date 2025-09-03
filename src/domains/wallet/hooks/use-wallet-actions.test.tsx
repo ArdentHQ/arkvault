@@ -239,4 +239,109 @@ describe("useWalletActions", () => {
 			});
 		}).not.toThrow();
 	});
+
+	it("should call handleSendRegistration callback for validator registration", () => {
+		const mockHandleSendRegistration = vi.fn();
+
+		const {
+			result: { current },
+		} = renderHook(
+			() =>
+				useWalletActions({
+					handleSendRegistration: mockHandleSendRegistration,
+					wallets: [wallet],
+				}),
+			{ wrapper },
+		);
+
+		act(() => {
+			current.handleSelectOption({ value: "validator-registration" } as DropdownOption);
+		});
+
+		expect(mockHandleSendRegistration).toHaveBeenCalledWith("validatorRegistration");
+		expect(mockHandleSendRegistration).toHaveBeenCalledTimes(1);
+	});
+
+	it("should call handleSendRegistration callback for username registration", () => {
+		const mockHandleSendRegistration = vi.fn();
+
+		const {
+			result: { current },
+		} = renderHook(
+			() =>
+				useWalletActions({
+					handleSendRegistration: mockHandleSendRegistration,
+					wallets: [wallet],
+				}),
+			{ wrapper },
+		);
+
+		act(() => {
+			current.handleSelectOption({ value: "username-registration" } as DropdownOption);
+		});
+
+		expect(mockHandleSendRegistration).toHaveBeenCalledWith("usernameRegistration");
+		expect(mockHandleSendRegistration).toHaveBeenCalledTimes(1);
+	});
+
+	it("should not call handleSendRegistration callback when not provided", () => {
+		const {
+			result: { current },
+		} = renderHook(() => useWalletActions({ wallets: [wallet] }), { wrapper });
+
+		// Should not throw error when callback is not provided
+		expect(() => {
+			act(() => {
+				current.handleSelectOption({ value: "validator-registration" } as DropdownOption);
+			});
+		}).not.toThrow();
+
+		expect(() => {
+			act(() => {
+				current.handleSelectOption({ value: "username-registration" } as DropdownOption);
+			});
+		}).not.toThrow();
+	});
+
+	it("should call handleSendTransfer callback when provided", () => {
+		const mockHandleSendTransfer = vi.fn();
+
+		const {
+			result: { current },
+		} = renderHook(
+			() =>
+				useWalletActions({
+					handleSendTransfer: mockHandleSendTransfer,
+					wallets: [wallet],
+				}),
+			{ wrapper },
+		);
+
+		act(() => {
+			current.handleSend();
+		});
+
+		expect(mockHandleSendTransfer).toHaveBeenCalledTimes(1);
+	});
+
+	it("should call handleSignMessage callback when provided", () => {
+		const mockHandleSignMessage = vi.fn();
+
+		const {
+			result: { current },
+		} = renderHook(
+			() =>
+				useWalletActions({
+					handleSignMessage: mockHandleSignMessage,
+					wallets: [wallet],
+				}),
+			{ wrapper },
+		);
+
+		act(() => {
+			current.handleSelectOption({ value: "sign-message" } as DropdownOption);
+		});
+
+		expect(mockHandleSignMessage).toHaveBeenCalledTimes(1);
+	});
 });
