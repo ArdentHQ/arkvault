@@ -751,7 +751,7 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                     </div>
                   </div>
                   <div
-                    class="-mx-3 mt-6 space-y-3 sm:mx-0 sm:mt-4 sm:space-y-4"
+                    class="space-y-3 sm:mx-0 sm:space-y-4 mt-6 sm:mt-4"
                   >
                     <div
                       data-testid="DetailWrapper"
@@ -3143,7 +3143,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                     </div>
                   </div>
                   <div
-                    class="-mx-3 mt-6 space-y-3 sm:mx-0 sm:mt-4 sm:space-y-4"
+                    class="space-y-3 sm:mx-0 sm:space-y-4 mt-6 sm:mt-4"
                   >
                     <div
                       data-testid="DetailWrapper"
