@@ -42,7 +42,12 @@ describe("FeeField", () => {
 	};
 
 	it("should render", async () => {
-		const { asFragment } = render(<Component type="transfer" data={{ amount: 1, recipientAddress: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6" }} />);
+		const { asFragment } = render(
+			<Component
+				type="transfer"
+				data={{ amount: 1, recipientAddress: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6" }}
+			/>,
+		);
 
 		await waitFor(() => expect(screen.getAllByTestId("Amount")).toHaveLength(3));
 
@@ -50,7 +55,12 @@ describe("FeeField", () => {
 	});
 
 	it("should change fee", async () => {
-		render(<Component type="transfer" data={{ amount: 1, recipientAddress: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6" }} />);
+		render(
+			<Component
+				type="transfer"
+				data={{ amount: 1, recipientAddress: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6" }}
+			/>,
+		);
 
 		await waitFor(() => expect(screen.getAllByTestId("Amount")).toHaveLength(3));
 
@@ -72,7 +82,12 @@ describe("FeeField", () => {
 		const estimateGas = vi.fn().mockResolvedValue(BigNumber.make(21_000));
 		const useFeesMock = vi.spyOn(useFeesHook, "useFees").mockImplementation(() => ({ calculate, estimateGas }));
 
-		render(<Component type="transfer" data={{ amount: 1, recipientAddress: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6" }} />);
+		render(
+			<Component
+				type="transfer"
+				data={{ amount: 1, recipientAddress: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6" }}
+			/>,
+		);
 
 		await waitFor(() => expect(screen.getAllByTestId("Amount")[0]).toHaveTextContent("1 ARK"));
 
@@ -92,7 +107,12 @@ describe("FeeField", () => {
 
 		const useFeesMock = vi.spyOn(useFeesHook, "useFees").mockImplementation(() => ({ calculate, estimateGas }));
 
-		render(<Component type="transfer" data={{ amount: 1, recipientAddress: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6" }} />);
+		render(
+			<Component
+				type="transfer"
+				data={{ amount: 1, recipientAddress: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6" }}
+			/>,
+		);
 
 		await userEvent.click(screen.getByText("Advanced"));
 

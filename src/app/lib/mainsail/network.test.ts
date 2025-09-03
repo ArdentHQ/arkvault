@@ -5,15 +5,14 @@ import { manifest as manifest } from "./manifest";
 import { ConfigRepository } from "./config.repository";
 import { server, requestMock } from "@/tests/mocks/server";
 import { env, getMainsailProfileId } from "@/utils/testing-library";
-import network from "./networks/mainsail.devnet";
 
 describe("Network", () => {
 	let networkInstance: Network;
-	let profile
+	let profile;
 
 	beforeEach(async () => {
 		profile = env.profiles().findById(getMainsailProfileId());
-		await env.profiles().restore(profile)
+		await env.profiles().restore(profile);
 
 		networkInstance = new Network(manifest, networkManifest, profile);
 	});
@@ -122,12 +121,20 @@ describe("Network", () => {
 	});
 
 	it("should use extended public key if meta.extendedPublicKey is true", () => {
-		const withExtendedPublicKey = new Network(manifest, { ...networkManifest, meta: { extendedPublicKey: true } }, profile);
+		const withExtendedPublicKey = new Network(
+			manifest,
+			{ ...networkManifest, meta: { extendedPublicKey: true } },
+			profile,
+		);
 		expect(withExtendedPublicKey.usesExtendedPublicKey()).toBe(true);
 	});
 
 	it("should not use extended public key if meta.extendedPublicKey is false or undefined", () => {
-		const noExtendedPkNetwork = new Network(manifest, { ...networkManifest, meta: { extendedPublicKey: false } }, profile);
+		const noExtendedPkNetwork = new Network(
+			manifest,
+			{ ...networkManifest, meta: { extendedPublicKey: false } },
+			profile,
+		);
 		expect(noExtendedPkNetwork.usesExtendedPublicKey()).toBe(false);
 	});
 
@@ -244,11 +251,11 @@ describe("Network", () => {
 	});
 
 	it("should throw an error if no full host is found during sync", async () => {
-		const hosts = networkManifest.hosts.map(host => ({ host: host.host, type: "unknown" }))
-		const devnetManifest = { ...networkManifest }
+		const hosts = networkManifest.hosts.map((host) => ({ host: host.host, type: "unknown" }));
+		const devnetManifest = { ...networkManifest };
 
 		const noHostNetwork = new Network(manifest, devnetManifest, profile);
-		devnetManifest.hosts = hosts
+		devnetManifest.hosts = hosts;
 
 		await expect(noHostNetwork.sync()).rejects.toThrow("Expected network host to be a url but received undefined");
 	});

@@ -5,7 +5,7 @@ import { Profile } from "@/app/lib/profiles/profile";
 import { Wallet } from "@/app/lib/profiles/wallet";
 import { env } from "@/utils/testing-library";
 import { DTO } from "@/app/lib/profiles";
-import manifest from "@/app/lib/mainsail/networks/mainsail.devnet"
+import manifest from "@/app/lib/mainsail/networks/mainsail.devnet";
 
 import {
 	assertArray,
