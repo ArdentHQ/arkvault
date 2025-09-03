@@ -1,7 +1,7 @@
 import { FormField, FormLabel } from "@/app/components/Form";
 import { Icon, ThemeIcon } from "@/app/components/Icon";
 import React, { ChangeEvent, useEffect } from "react";
-
+import cn from "classnames";
 import { Alert } from "@/app/components/Alert";
 import { FormStepProperties } from "@/domains/transaction/pages/SendRegistration/SendRegistration.contracts";
 import { InputDefault } from "@/app/components/Input";
@@ -15,7 +15,7 @@ import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { useValidation } from "@/app/hooks";
 
-export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: FormStepProperties) => {
+export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile, hideHeader = false }: FormStepProperties) => {
 	const { t } = useTranslation();
 
 	const { validatorRegistration } = useValidation();
@@ -61,22 +61,24 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 
 	return (
 		<section data-testid="ValidatorRegistrationForm_form-step">
-			<StepHeader
-				title={getTitle()}
-				subtitle={getSubtitle()}
-				titleIcon={
-					<ThemeIcon
-						dimensions={[24, 24]}
-						lightIcon="SendTransactionLight"
-						darkIcon="SendTransactionDark"
-						dimIcon="SendTransactionDim"
-					/>
-				}
-			/>
+			{!hideHeader && (
+				<StepHeader
+					title={getTitle()}
+					subtitle={getSubtitle()}
+					titleIcon={
+						<ThemeIcon
+							dimensions={[24, 24]}
+							lightIcon="SendTransactionLight"
+							darkIcon="SendTransactionDark"
+							dimIcon="SendTransactionDim"
+						/>
+					}
+				/>
+			)}
 
-			{errors.lockedFee && <Alert className="mt-4">{errors.lockedFee.message}</Alert>}
+			{errors.lockedFee && <Alert className={cn({ "mt-4": !hideHeader })}>{errors.lockedFee.message}</Alert>}
 
-			<FormField name="senderAddress" className="mt-6 sm:mt-4">
+			<FormField name="senderAddress" className={cn({ "mt-6 sm:mt-4": !hideHeader })}>
 				<FormLabel label={t("COMMON.SENDER")} />
 
 				<SelectAddress
