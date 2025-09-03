@@ -40,6 +40,7 @@ export const PortfolioHeader = ({
 	onSignMessage,
 	onSendTransfer,
 	onSendRegistration,
+	onSendUsernameResignation,
 	hasFocus,
 }: {
 	profile: Contracts.IProfile;
@@ -53,6 +54,7 @@ export const PortfolioHeader = ({
 	onSignMessage?: (open: boolean) => void;
 	onSendTransfer?: (open: boolean) => void;
 	onSendRegistration?: (registrationType?: "validatorRegistration" | "usernameRegistration") => void;
+	onSendUsernameResignation?: (open: boolean) => void;
 	hasFocus?: boolean;
 }) => {
 	const [showAddressesPanel, setShowAddressesPanel] = useState(false);
@@ -76,9 +78,14 @@ export const PortfolioHeader = ({
 		onSendRegistration?.(registrationType);
 	};
 
+	const handleSendUsernameResignation = () => {
+		onSendUsernameResignation?.(true);
+	};
+
 	const { activeModal, setActiveModal, handleSelectOption, handleSend } = useWalletActions({
 		handleSendRegistration,
 		handleSendTransfer,
+		handleSendUsernameResignation,
 		handleSignMessage,
 		wallets: selectedWallets,
 	});

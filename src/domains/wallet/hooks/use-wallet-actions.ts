@@ -13,11 +13,13 @@ export const useWalletActions = ({
 	handleSignMessage,
 	handleSendTransfer,
 	handleSendRegistration,
+	handleSendUsernameResignation,
 	wallets,
 }: {
 	handleSignMessage?: () => void;
 	handleSendTransfer?: () => void;
 	handleSendRegistration?: (registrationType?: "validatorRegistration" | "usernameRegistration") => void;
+	handleSendUsernameResignation?: () => void;
 	wallets: Contracts.IReadWriteWallet[];
 }) => {
 	const { persist } = useEnvironmentContext();
@@ -66,7 +68,7 @@ export const useWalletActions = ({
 
 			navigate(generatePath(ProfilePaths.SendTransferWallet, { profileId: profile.id(), walletId: wallet.id() }));
 		},
-		[stopEventBubbling, hasMultipleWallets, history, profile, wallet, handleSendTransfer],
+		[stopEventBubbling, hasMultipleWallets, navigate, profile, wallet, handleSendTransfer],
 	);
 
 	const handleToggleStar = useCallback(
@@ -100,7 +102,7 @@ export const useWalletActions = ({
 
 			return true;
 		},
-		[profile, history, wallet, persist, stopEventBubbling],
+		[profile, navigate, wallet, persist, stopEventBubbling],
 	);
 
 	const handleSelectOption = useCallback(
@@ -149,18 +151,7 @@ export const useWalletActions = ({
 			}
 
 			if (option.value === "username-resignation") {
-				let url = generatePath(ProfilePaths.SendUsernameResignation, {
-					profileId: profile.id(),
-					walletId: wallet.id(),
-				});
-
-				if (hasMultipleWallets) {
-					url = generatePath(ProfilePaths.SendUsernameResignationProfile, {
-						profileId: profile.id(),
-					});
-				}
-
-				navigate(url);
+				handleSendUsernameResignation?.();
 			}
 
 			if (option.value === "open-explorer") {
@@ -169,7 +160,16 @@ export const useWalletActions = ({
 
 			setActiveModal(option.value.toString() as WalletActionsModalType);
 		},
-		[wallet, history, profile, hasMultipleWallets, openExternal],
+		[
+			wallet,
+			navigate,
+			profile,
+			hasMultipleWallets,
+			openExternal,
+			handleSignMessage,
+			handleSendRegistration,
+			handleSendUsernameResignation,
+		],
 	);
 
 	return {
