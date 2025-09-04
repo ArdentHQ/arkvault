@@ -15,9 +15,10 @@ interface FormStepProperties {
 	senderWallet?: ProfilesContracts.IReadWriteWallet;
 	profile: ProfilesContracts.IProfile;
 	onWalletChange: (wallet: ProfilesContracts.IReadWriteWallet) => void;
+	hideHeader?: boolean;
 }
 
-export const FormStep = ({ senderWallet, profile, onWalletChange }: FormStepProperties) => {
+export const FormStep = ({ senderWallet, profile, onWalletChange, hideHeader = false }: FormStepProperties) => {
 	const { t } = useTranslation();
 
 	const { activeNetwork: network } = useActiveNetwork({ profile });
@@ -38,18 +39,20 @@ export const FormStep = ({ senderWallet, profile, onWalletChange }: FormStepProp
 
 	return (
 		<section data-testid="SendUsernameResignation__form-step" className="space-y-6 sm:space-y-4">
-			<StepHeader
-				title={t("TRANSACTION.PAGE_USERNAME_RESIGNATION.FORM_STEP.TITLE")}
-				titleIcon={
-					<ThemeIcon
-						dimensions={[24, 24]}
-						lightIcon="SendTransactionLight"
-						darkIcon="SendTransactionDark"
-						dimIcon="SendTransactionDim"
-					/>
-				}
-				subtitle={t("TRANSACTION.PAGE_USERNAME_RESIGNATION.FORM_STEP.DESCRIPTION")}
-			/>
+			{!hideHeader && (
+				<StepHeader
+					title={t("TRANSACTION.PAGE_USERNAME_RESIGNATION.FORM_STEP.TITLE")}
+					titleIcon={
+						<ThemeIcon
+							dimensions={[24, 24]}
+							lightIcon="SendTransactionLight"
+							darkIcon="SendTransactionDark"
+							dimIcon="SendTransactionDim"
+						/>
+					}
+					subtitle={t("TRANSACTION.PAGE_USERNAME_RESIGNATION.FORM_STEP.DESCRIPTION")}
+				/>
+			)}
 
 			<div className="space-y-3 sm:space-y-4">
 				<FormField name="senderAddress">

@@ -57,7 +57,7 @@ export class NetworkRepository {
 		const networks = manifest.networks as Record<string, NetworkManifest>;
 
 		return Object.values(networks)
-			.map((network) => new Networks.Network(manifest, network))
+			.map((network) => new Networks.Network(manifest, network, this.#profile))
 			.sort((a, b) => a.displayName().localeCompare(b.displayName()));
 	}
 }

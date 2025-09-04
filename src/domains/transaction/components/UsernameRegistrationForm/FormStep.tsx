@@ -13,8 +13,9 @@ import { ThemeIcon } from "@/app/components/Icon";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { WalletCapabilities } from "@/domains/portfolio/lib/wallet.capabilities";
 import { useEnvironmentContext } from "@/app/contexts";
+import cn from "classnames";
 
-export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: FormStepProperties) => {
+export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile, hideHeader = false }: FormStepProperties) => {
 	const { t } = useTranslation();
 
 	const { usernameRegistration } = useValidation();
@@ -62,21 +63,23 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 
 	return (
 		<section data-testid="UsernameRegistrationForm__form-step">
-			<StepHeader
-				title={t("TRANSACTION.PAGE_USERNAME_REGISTRATION.FORM_STEP.TITLE")}
-				subtitle={t("TRANSACTION.PAGE_USERNAME_REGISTRATION.FORM_STEP.DESCRIPTION")}
-				titleIcon={
-					<ThemeIcon
-						dimensions={[24, 24]}
-						lightIcon="SendTransactionLight"
-						darkIcon="SendTransactionDark"
-						dimIcon="SendTransactionDim"
-					/>
-				}
-			/>
+			{!hideHeader && (
+				<StepHeader
+					title={t("TRANSACTION.PAGE_USERNAME_REGISTRATION.FORM_STEP.TITLE")}
+					subtitle={t("TRANSACTION.PAGE_USERNAME_REGISTRATION.FORM_STEP.DESCRIPTION")}
+					titleIcon={
+						<ThemeIcon
+							dimensions={[24, 24]}
+							lightIcon="SendTransactionLight"
+							darkIcon="SendTransactionDark"
+							dimIcon="SendTransactionDim"
+						/>
+					}
+				/>
+			)}
 
 			{currentUsername ? (
-				<Alert className="mt-6">
+				<Alert className={cn({ "mt-6": !hideHeader })}>
 					<Trans
 						i18nKey="TRANSACTION.PAGE_USERNAME_REGISTRATION.FORM_STEP.INFO_ALREADY_REGISTERED"
 						values={{
@@ -86,7 +89,7 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 					/>
 				</Alert>
 			) : (
-				<Alert variant="info" className="mt-6">
+				<Alert variant="info" className={cn({ "mt-6": !hideHeader })}>
 					{t("TRANSACTION.PAGE_USERNAME_REGISTRATION.FORM_STEP.INFO")}
 				</Alert>
 			)}

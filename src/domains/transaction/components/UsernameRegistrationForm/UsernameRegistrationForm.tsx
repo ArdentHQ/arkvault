@@ -8,21 +8,28 @@ import { TransactionDetail, TransactionFee } from "@/domains/transaction/compone
 import { SendRegistrationForm } from "@/domains/transaction/pages/SendRegistration/SendRegistration.contracts";
 import { handleBroadcastError } from "@/domains/transaction/utils";
 import { httpClient } from "@/app/services";
+import {
+	FORM_STEP,
+	REVIEW_STEP,
+} from "@/domains/transaction/components/SendRegistrationSidePanel/SendRegistrationSidePanel";
+
 const component = ({
 	activeTab,
 	wallet,
 	profile,
+	hideHeader = false,
 }: {
 	activeTab: number;
 	wallet?: Contracts.IReadWriteWallet;
 	profile: Contracts.IProfile;
+	hideHeader?: boolean;
 }) => (
 	<Tabs activeId={activeTab}>
-		<TabPanel tabId={1}>
-			<FormStep wallet={wallet} profile={profile} />
+		<TabPanel tabId={FORM_STEP}>
+			<FormStep wallet={wallet} profile={profile} hideHeader={hideHeader} />
 		</TabPanel>
-		<TabPanel tabId={2}>
-			<ReviewStep wallet={wallet!} profile={profile} />
+		<TabPanel tabId={REVIEW_STEP}>
+			<ReviewStep wallet={wallet!} profile={profile} hideHeader={hideHeader} />
 		</TabPanel>
 	</Tabs>
 );

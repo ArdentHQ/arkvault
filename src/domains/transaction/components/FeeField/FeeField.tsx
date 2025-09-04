@@ -7,18 +7,10 @@ import { useDebounce, useFees } from "@/app/hooks";
 import { InputFee } from "@/domains/transaction/components/InputFee";
 import { InputFeeViewType } from "@/domains/transaction/components/InputFee/InputFee.contracts";
 import { BigNumber } from "@/app/lib/helpers";
+import { EncodeTransactionType } from "@/app/lib/mainsail/transaction-encoder";
 
 interface Properties {
-	type:
-		| "transfer"
-		| "multiPayment"
-		| "vote"
-		| "validatorRegistration"
-		| "validatorResignation"
-		| "multiSignature"
-		| "usernameRegistration"
-		| "usernameResignation"
-		| "updateValidator";
+	type: EncodeTransactionType;
 	data: Record<string, any> | undefined;
 	network: Networks.Network;
 	profile: Contracts.IProfile;
@@ -62,7 +54,10 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 			let gasLimit = fallbackGasLimit;
 
 			try {
-				gasLimit = await estimateGas({ data: { ...getValues(), ...data }, type });
+				gasLimit = await estimateGas({
+					data: { ...getValues(), ...data, senderAddress: data?.senderAddress! },
+					type,
+				});
 
 				if (gasLimit.isZero()) {
 					gasLimit = fallbackGasLimit;

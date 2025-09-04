@@ -4,12 +4,17 @@ import networkManifest from "./networks/mainsail.devnet";
 import { manifest as manifest } from "./manifest";
 import { ConfigRepository } from "./config.repository";
 import { server, requestMock } from "@/tests/mocks/server";
+import { env, getMainsailProfileId } from "@/utils/testing-library";
 
 describe("Network", () => {
 	let networkInstance: Network;
+	let profile;
 
-	beforeEach(() => {
-		networkInstance = new Network(manifest, networkManifest);
+	beforeEach(async () => {
+		profile = env.profiles().findById(getMainsailProfileId());
+		await env.profiles().restore(profile);
+
+		networkInstance = new Network(manifest, networkManifest, profile);
 	});
 
 	afterEach(() => {
@@ -38,7 +43,7 @@ describe("Network", () => {
 
 	it("should return the correct display name for test network", () => {
 		networkManifest.type = "test";
-		const testNetworkInstance = new Network(manifest, networkManifest);
+		const testNetworkInstance = new Network(manifest, networkManifest, profile);
 		expect(testNetworkInstance.displayName()).toBe(`${networkManifest.coin} ${networkManifest.name}`);
 	});
 
@@ -61,7 +66,7 @@ describe("Network", () => {
 
 	it("should identify as a test network", () => {
 		networkManifest.type = "test";
-		const testNetworkInstance = new Network(manifest, networkManifest);
+		const testNetworkInstance = new Network(manifest, networkManifest, profile);
 		expect(testNetworkInstance.isTest()).toBe(true);
 	});
 
@@ -74,7 +79,7 @@ describe("Network", () => {
 	});
 
 	it("should not allow voting if governance is not defined", () => {
-		const noGovernanceNetwork = new Network(manifest, { ...networkManifest, governance: undefined });
+		const noGovernanceNetwork = new Network(manifest, { ...networkManifest, governance: undefined }, profile);
 		expect(noGovernanceNetwork.allowsVoting()).toBe(false);
 	});
 
@@ -83,7 +88,7 @@ describe("Network", () => {
 	});
 
 	it("should return default voting method if not defined", () => {
-		const noMethodNetwork = new Network(manifest, { ...networkManifest, governance: undefined });
+		const noMethodNetwork = new Network(manifest, { ...networkManifest, governance: undefined }, profile);
 		expect(noMethodNetwork.votingMethod()).toBe("simple");
 	});
 
@@ -116,12 +121,20 @@ describe("Network", () => {
 	});
 
 	it("should use extended public key if meta.extendedPublicKey is true", () => {
-		const withExtendedPublicKey = new Network(manifest, { ...networkManifest, meta: { extendedPublicKey: true } });
+		const withExtendedPublicKey = new Network(
+			manifest,
+			{ ...networkManifest, meta: { extendedPublicKey: true } },
+			profile,
+		);
 		expect(withExtendedPublicKey.usesExtendedPublicKey()).toBe(true);
 	});
 
 	it("should not use extended public key if meta.extendedPublicKey is false or undefined", () => {
-		const noExtendedPkNetwork = new Network(manifest, { ...networkManifest, meta: { extendedPublicKey: false } });
+		const noExtendedPkNetwork = new Network(
+			manifest,
+			{ ...networkManifest, meta: { extendedPublicKey: false } },
+			profile,
+		);
 		expect(noExtendedPkNetwork.usesExtendedPublicKey()).toBe(false);
 	});
 
@@ -144,10 +157,10 @@ describe("Network", () => {
 	});
 
 	it("should correctly determine if it charges zero fees", () => {
-		const nonFreeNetwork = new Network(manifest, { ...networkManifest, fees: { type: undefined } });
+		const nonFreeNetwork = new Network(manifest, { ...networkManifest, fees: { type: undefined } }, profile);
 		expect(nonFreeNetwork.chargesZeroFees()).toBe(false);
 
-		const freeFeeNetwork = new Network(manifest, { ...networkManifest, fees: { type: "free" } });
+		const freeFeeNetwork = new Network(manifest, { ...networkManifest, fees: { type: "free" } }, profile);
 		expect(freeFeeNetwork.chargesZeroFees()).toBe(true);
 	});
 
@@ -164,7 +177,7 @@ describe("Network", () => {
 	});
 
 	it("should return true for usesMemo if transactions.memo is true", () => {
-		const networkWithMemo = new Network(manifest, { ...networkManifest, transactions: { memo: true } });
+		const networkWithMemo = new Network(manifest, { ...networkManifest, transactions: { memo: true } }, profile);
 		expect(networkWithMemo.usesMemo()).toBe(true);
 	});
 
@@ -186,7 +199,7 @@ describe("Network", () => {
 
 	it("should return empty object for meta if not defined", () => {
 		delete networkManifest.meta;
-		const noMetaNetwork = new Network(manifest, networkManifest);
+		const noMetaNetwork = new Network(manifest, networkManifest, profile);
 		expect(noMetaNetwork.meta()).toEqual({});
 	});
 
@@ -211,7 +224,7 @@ describe("Network", () => {
 	});
 
 	it("should return an empty array if no tokens are defined", () => {
-		const noTokensNetwork = new Network(manifest, { ...networkManifest, tokens: undefined });
+		const noTokensNetwork = new Network(manifest, { ...networkManifest, tokens: undefined }, profile);
 		expect(noTokensNetwork.tokens()).toEqual([]);
 	});
 
@@ -224,7 +237,7 @@ describe("Network", () => {
 	});
 
 	it("should not allow Ledger if feature flag is not present or empty", () => {
-		const noLedgerNetwork = new Network(manifest, { ...networkManifest, featureFlags: { Ledger: [] } });
+		const noLedgerNetwork = new Network(manifest, { ...networkManifest, featureFlags: { Ledger: [] } }, profile);
 		expect(noLedgerNetwork.allowsLedger()).toBe(false);
 	});
 
@@ -238,7 +251,12 @@ describe("Network", () => {
 	});
 
 	it("should throw an error if no full host is found during sync", async () => {
-		const noHostNetwork = new Network(manifest, { ...networkManifest, hosts: [] });
+		const hosts = networkManifest.hosts.map((host) => ({ host: host.host, type: "unknown" }));
+		const devnetManifest = { ...networkManifest };
+
+		const noHostNetwork = new Network(manifest, devnetManifest, profile);
+		devnetManifest.hosts = hosts;
+
 		await expect(noHostNetwork.sync()).rejects.toThrow("Expected network host to be a url but received undefined");
 	});
 

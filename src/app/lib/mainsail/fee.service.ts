@@ -5,9 +5,9 @@ import { BigNumber } from "@/app/lib/helpers";
 
 import { ArkClient } from "@arkecosystem/typescript-client";
 import { IProfile } from "@/app/lib/profiles/profile.contract";
-import { UnitConverter } from "@arkecosystem/typescript-crypto";
 import { EstimateGasPayload } from "@/app/lib/mainsail/fee.contract";
 import { hexToBigInt } from "viem";
+import { UnitConverter } from "@arkecosystem/typescript-crypto";
 
 interface Fees {
 	min: string;

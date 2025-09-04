@@ -2,7 +2,6 @@ import { Services } from "@/app/lib/mainsail";
 
 import { IProfile } from "./contracts.js";
 import { DataRepository } from "./data.repository.js";
-import { FeeService } from "@/app/lib/mainsail/fee.service.js";
 
 export class ProfileFeeService {
 	readonly #dataRepository: DataRepository = new DataRepository();
@@ -27,7 +26,6 @@ export class ProfileFeeService {
 
 	/** {@inheritDoc IFeeService.sync} */
 	public async sync(profile: IProfile): Promise<void> {
-		const feesService = new FeeService({ config: profile.activeNetwork().config(), profile });
-		this.#dataRepository.set(`${profile.activeNetwork().id()}.fees`, await feesService.all());
+		this.#dataRepository.set(`${profile.activeNetwork().id()}.fees`, await profile.activeNetwork().fees().all());
 	}
 }
