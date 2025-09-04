@@ -29,6 +29,7 @@ import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { useToggleFeeFields } from "@/domains/transaction/hooks/useToggleFeeFields";
 import { getUrlParameter } from "@/utils/paths";
 import { useValidatorRegistrationLockedFee } from "@/domains/transaction/components/ValidatorRegistrationForm/hooks/useValidatorRegistrationLockedFee";
+import { useConnectLedger } from "@/domains/transaction/hooks/use-connect-ledger";
 
 export const SendRegistration = () => {
 	const navigate = useNavigate();
@@ -45,7 +46,7 @@ export const SendRegistration = () => {
 	const { common, validatorRegistration } = useValidation();
 	const { addPendingTransaction } = usePendingTransactions();
 
-	const { hasDeviceAvailable, isConnected, connect, ledgerDevice } = useLedgerContext();
+	const { hasDeviceAvailable, isConnected, ledgerDevice } = useLedgerContext();
 
 	const { isLedgerModelSupported } = useLedgerModelStatus({
 		connectedModel: ledgerDevice?.id,
@@ -144,16 +145,11 @@ export const SendRegistration = () => {
 		return (registrations[registrationType as keyof typeof registrations] || registrations.default)();
 	}, [registrationType]);
 
-	// Reset ledger authentication steps after reconnecting supported ledger
-	useEffect(() => {
-		if (registrationType !== "multiSignature") {
-			return;
-		}
-
-		if (isAuthenticationStep && activeWallet?.isLedger() && isLedgerModelSupported) {
-			handleSubmit();
-		}
-	}, [ledgerDevice]);
+	const { connectLedger } = useConnectLedger({
+		isLedgerModelSupported,
+		onReady: () => void handleSubmit(),
+		profile: activeProfile,
+	});
 
 	useKeydown("Enter", () => {
 		const isButton = (document.activeElement as any)?.type === "button";
@@ -170,10 +166,6 @@ export const SendRegistration = () => {
 
 		try {
 			const { mnemonic, secondMnemonic, encryptionPassword, secret, secondSecret } = getValues();
-
-			if (activeWallet.isLedger()) {
-				await connect(activeProfile);
-			}
 
 			const signatory = await activeWallet.signatoryFactory().make({
 				encryptionPassword,
@@ -226,12 +218,11 @@ export const SendRegistration = () => {
 		const nextStep = activeTab + 1;
 		const isNextStepAuthentication = nextStep === authenticationStep;
 
-		// Skip authentication step
-		if (isNextStepAuthentication && activeWallet?.isLedger() && isLedgerModelSupported) {
-			handleSubmit();
-		}
-
 		setActiveTab(nextStep);
+
+		if (isNextStepAuthentication && activeWallet?.isLedger()) {
+			void connectLedger();
+		}
 	};
 
 	const hideStepNavigation = activeTab === 10 || (isAuthenticationStep && activeWallet?.isLedger());
@@ -289,6 +280,9 @@ export const SendRegistration = () => {
 												Contracts.WalletLedgerModel.NanoSP,
 											]}
 											ledgerConnectedModel={ledgerDevice?.id}
+											onDeviceNotAvailable={() => {
+												// do nothing, wait for ledger
+											}}
 										/>
 									</TabPanel>
 
