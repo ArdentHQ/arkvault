@@ -17,13 +17,13 @@ import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
 import { handleBroadcastError } from "@/domains/transaction/utils";
 import { TransactionSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
 import { assertWallet } from "@/utils/assertions";
-import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { useToggleFeeFields } from "@/domains/transaction/hooks/useToggleFeeFields";
 import { httpClient } from "@/app/services";
 import { SidePanel, SidePanelButtons } from "@/app/components/SidePanel/SidePanel";
 import { Button } from "@/app/components/Button";
 import { ThemeIcon } from "@/app/components/Icon";
 import { useConfirmedTransaction } from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
+import { useSelectsTransactionSender } from "@/domains/transaction/hooks/use-selects-transaction-sender";
 
 enum Step {
 	FormStep = 1,
@@ -60,16 +60,8 @@ export const SendUsernameResignationSidePanel = ({
 
 	const activeProfile = useActiveProfile();
 
-	const { activeNetwork: network } = useActiveNetwork({ profile: activeProfile });
-
-	const [activeWallet, setActiveWallet] = useState(() => {
-		if (senderAddress) {
-			return activeProfile.wallets().findByAddressWithNetwork(senderAddress, network.id());
-		}
-
-		const selectedWallets = activeProfile.wallets().selected() ?? [activeProfile.wallets().first()];
-		return selectedWallets.at(0);
-	});
+	const [mounted, setMounted] = useState(open);
+	const { activeWallet, setActiveWallet } = useSelectsTransactionSender({ active: mounted });
 
 	useEffect(() => {
 		register("fees");
@@ -163,10 +155,12 @@ export const SendUsernameResignationSidePanel = ({
 
 	const onMountChange = useCallback(
 		(mounted: boolean) => {
-			if (!mounted) {
-				setActiveTab(Step.FormStep);
+			setMounted(mounted);
 
+			if (!mounted) {
 				resetForm(() => {
+					setActiveTab(Step.FormStep);
+
 					setErrorMessage(undefined);
 
 					setActiveWallet(undefined);
