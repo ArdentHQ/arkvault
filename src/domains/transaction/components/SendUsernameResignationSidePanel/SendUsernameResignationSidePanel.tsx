@@ -79,14 +79,6 @@ export const SendUsernameResignationSidePanel = ({
 		wallet: activeWallet,
 	});
 
-	useEffect(() => {
-		if (!activeWallet || activeWallet.address() === senderAddress) {
-			return;
-		}
-
-		setValue("senderAddress", activeWallet.address(), { shouldDirty: true, shouldValidate: true });
-	}, [activeWallet, senderAddress, setValue]);
-
 	useKeydown("Enter", () => {
 		const isButton = (document.activeElement as any)?.type === "button";
 
