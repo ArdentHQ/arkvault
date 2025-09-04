@@ -1,4 +1,4 @@
-import { Contracts, DTO } from "@/app/lib/profiles";
+import { DTO } from "@/app/lib/profiles";
 import React, { useCallback, useEffect, useMemo, useRef, useState, JSX } from "react";
 import { useTranslation } from "react-i18next";
 import { URLBuilder } from "@ardenthq/arkvault-url";
