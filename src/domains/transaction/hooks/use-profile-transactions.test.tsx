@@ -5,13 +5,12 @@ import { useProfileTransactions } from "./use-profile-transactions";
 import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
 import { env, getDefaultProfileId } from "@/utils/testing-library";
 import * as hooksMock from "@/app/hooks";
-import { afterEach, expect, vi } from "vitest";
+import { expect, vi } from "vitest";
 import { RawTransactionData } from "@/app/lib/mainsail/signed-transaction.dto.contract";
 import { UnconfirmedTransactionData } from "./use-unconfirmed-transactions";
 import { IProfile } from "@/app/lib/profiles/profile.contract";
 import * as unconfirmedTransactionsMock from "./use-unconfirmed-transactions";
 import * as unconfirmedTransactionsServiceMock from "@/app/lib/mainsail/unconfirmed-transactions.service";
-import unconfirmedFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/unconfirmed.json";
 
 const wrapper = ({ children }: any) => (
 	<EnvironmentProvider env={env}>
@@ -61,31 +60,13 @@ const mockUnconfirmedTransactionsHook = async (unconfirmedTransactions: Unconfir
 
 describe("useProfileTransactions", () => {
 	let profile: IProfile;
-	let listUnconfirmedSpy: ReturnType<typeof vi.spyOn>;
 
 	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
 	});
 
-	beforeEach(() => {
-		listUnconfirmedSpy = vi
-		  .spyOn(
-			unconfirmedTransactionsServiceMock.UnconfirmedTransactionsService.prototype,
-			"listUnconfirmed",
-		  )
-		  .mockResolvedValue({
-			results: (unconfirmedFixture.results ?? []).map((r: any) => ({
-			  from: r.from,
-			  to: r.to,
-			  hash: r.hash,
-			  gasLimit: r.gasLimit,
-			})),
-		  } as any);
-	});
-
 	afterEach(() => {
 		vi.useRealTimers();
-		listUnconfirmedSpy.mockRestore();
 	});
 
 	it("should return an empty state for no wallets", async () => {
@@ -964,8 +945,8 @@ describe("useProfileTransactions", () => {
 		expect(secondArgs.gasLimit).toBe("99999");
 
 		expect(reconcileUnconfirmedForAddresses).toHaveBeenCalledWith(
-			[walletAddress],
-			["UNCONF_FROM", "UNCONF_TO", "UNCONF_IGNORE", "UNCONF_NO_GAS_LIMIT"],
+			[walletAddress], 
+			["UNCONF_FROM", "UNCONF_TO", "UNCONF_IGNORE", "UNCONF_NO_GAS_LIMIT"]
 		);
 
 		intervalMock.mockRestore();
