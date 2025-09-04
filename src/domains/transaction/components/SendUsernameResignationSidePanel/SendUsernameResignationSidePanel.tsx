@@ -45,10 +45,10 @@ export const SendUsernameResignationSidePanel = ({
 
 	const form = useForm({ mode: "onChange" });
 
-	const { formState, getValues, register, watch, setValue, reset: resetForm } = form;
+	const { formState, getValues, register, watch, reset: resetForm } = form;
 	const { isValid, isSubmitting } = formState;
 
-	const { senderAddress, gasLimit, gasPrice } = watch();
+	const { gasLimit, gasPrice } = watch();
 	const { common } = useValidation();
 	const { addPendingTransaction } = usePendingTransactions();
 
