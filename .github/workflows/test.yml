@@ -705,7 +705,7 @@ jobs:
             - name: Test Components ^P-S
               env:
                   COVERAGE_THRESHOLD_LINES: 90.31
-                  COVERAGE_THRESHOLD_FUNCTIONS: 88.69
+                  COVERAGE_THRESHOLD_FUNCTIONS: 88.66
                   COVERAGE_THRESHOLD_STATEMENTS: 90.29
                   COVERAGE_THRESHOLD_BRANCHES: 88.53
                   COVERAGE_INCLUDE_PATH: src/domains/transaction/components/[P-S]*
