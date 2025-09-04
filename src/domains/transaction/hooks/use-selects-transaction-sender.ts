@@ -7,7 +7,7 @@ export const useSelectsTransactionSender = ({
 	onWalletChange,
 }: {
 	active: boolean;
-	onWalletChange: (wallet?: Contracts.IReadWriteWallet) => void;
+	onWalletChange?: (wallet?: Contracts.IReadWriteWallet) => void;
 }) => {
 	const activeProfile = useActiveProfile();
 
