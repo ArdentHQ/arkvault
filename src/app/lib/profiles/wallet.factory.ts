@@ -102,6 +102,8 @@ export class WalletFactory implements IWalletFactory {
 		const seed = BIP39.toSeed(mnemonic!);
 
 		const hdKey = HDKey.fromMasterSeed(seed);
+
+		// @ts-expect-error
 		const account = hdKeyToAccount(hdKey, {
 			path: derivationPath,
 		});
