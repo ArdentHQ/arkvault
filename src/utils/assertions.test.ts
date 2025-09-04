@@ -5,6 +5,7 @@ import { Profile } from "@/app/lib/profiles/profile";
 import { Wallet } from "@/app/lib/profiles/wallet";
 import { env } from "@/utils/testing-library";
 import { DTO } from "@/app/lib/profiles";
+import manifest from "@/app/lib/mainsail/networks/mainsail.devnet";
 
 import {
 	assertArray,
@@ -128,7 +129,7 @@ describe("#assertReadOnlyWallet", () => {
 describe("#assertNetwork", () => {
 	it("should pass with a network instance", () => {
 		// @ts-ignore
-		expect(() => assertNetwork(new Networks.Network())).not.toThrow();
+		expect(() => assertNetwork(new Networks.Network({}, manifest, profile))).not.toThrow();
 	});
 
 	it("should fail without a network instance", () => {
