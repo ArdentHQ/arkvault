@@ -103,8 +103,8 @@ export class WalletFactory implements IWalletFactory {
 
 		const hdKey = HDKey.fromMasterSeed(seed);
 
-		// @ts-expect-error
 		const account = hdKeyToAccount(hdKey, {
+			// @ts-expect-error we need ARK coin type
 			path: derivationPath,
 		});
 
