@@ -19,10 +19,11 @@ export interface IGenerateOptions {
  *
  * @type IGenerateHDOptions
  */
-export type IGenerateHDOptions = IGenerateOptions & HDOptions & {
-	coin?: string;
-	mnemonic?: string;
-}
+export type IGenerateHDOptions = IGenerateOptions &
+	HDOptions & {
+		coin?: string;
+		mnemonic?: string;
+	};
 
 /**
  * Defines the options for an import with a mnemonic.
