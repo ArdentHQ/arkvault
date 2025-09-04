@@ -11,6 +11,7 @@ import { UnconfirmedTransactionData } from "./use-unconfirmed-transactions";
 import { IProfile } from "@/app/lib/profiles/profile.contract";
 import * as unconfirmedTransactionsMock from "./use-unconfirmed-transactions";
 import * as unconfirmedTransactionsServiceMock from "@/app/lib/mainsail/unconfirmed-transactions.service";
+import unconfirmedFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/unconfirmed.json";
 
 const wrapper = ({ children }: any) => (
 	<EnvironmentProvider env={env}>
@@ -60,13 +61,25 @@ const mockUnconfirmedTransactionsHook = async (unconfirmedTransactions: Unconfir
 
 describe("useProfileTransactions", () => {
 	let profile: IProfile;
+	let allUnconfirmedMock: any;
+
+	vi.mock("@arkecosystem/typescript-client", () => ({
+		ArkClient: vi.fn().mockImplementation(() => ({
+			transactions: () => ({ allUnconfirmed: allUnconfirmedMock }),
+		})),
+	}));
 
 	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
 	});
 
+	beforeEach(() => {
+		allUnconfirmedMock = vi.fn().mockResolvedValue(unconfirmedFixture);
+	});
+
 	afterEach(() => {
 		vi.useRealTimers();
+		vi.clearAllMocks();
 	});
 
 	it("should return an empty state for no wallets", async () => {
@@ -831,7 +844,7 @@ describe("useProfileTransactions", () => {
 		const consoleErrorSpy = vi.spyOn(console, "error").mockImplementation(() => {});
 
 		const mockWallet = {
-			address: () => "TEST_ADDRESS",
+			address: () => "0xTestAddress",
 			network: () => ({
 				config: () => ({
 					host: () => {
