@@ -945,8 +945,8 @@ describe("useProfileTransactions", () => {
 		expect(secondArgs.gasLimit).toBe("99999");
 
 		expect(reconcileUnconfirmedForAddresses).toHaveBeenCalledWith(
-			[walletAddress], 
-			["UNCONF_FROM", "UNCONF_TO", "UNCONF_IGNORE", "UNCONF_NO_GAS_LIMIT"]
+			[walletAddress],
+			["UNCONF_FROM", "UNCONF_TO", "UNCONF_IGNORE", "UNCONF_NO_GAS_LIMIT"],
 		);
 
 		intervalMock.mockRestore();
