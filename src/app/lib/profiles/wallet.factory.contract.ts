@@ -1,6 +1,7 @@
 import { Services } from "@/app/lib/mainsail";
 
 import { IReadWriteWallet } from "./contracts.js";
+import { HDOptions } from "viem";
 
 /**
  * Defines the options needed to generate a wallet.
@@ -11,6 +12,16 @@ export interface IGenerateOptions {
 	locale?: string;
 	wordCount?: number;
 	withPublicKey?: boolean;
+}
+
+/**
+ * Defines the options needed to generate a wallet.
+ *
+ * @type IGenerateHDOptions
+ */
+export type IGenerateHDOptions = IGenerateOptions & HDOptions & {
+	coin?: string;
+	mnemonic?: string;
 }
 
 /**
@@ -102,6 +113,8 @@ export interface IWalletFactory {
 	 * @memberof IWalletFactory
 	 */
 	generate(options?: IGenerateOptions): Promise<{ mnemonic: string; wallet: IReadWriteWallet }>;
+
+	generateHD(options?: IGenerateHDOptions): Promise<{ mnemonic: string; wallet: IReadWriteWallet }>;
 
 	/**
 	 * Imports a wallet from a mnemonic, using the BIP39 proposal.
