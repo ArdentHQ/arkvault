@@ -97,13 +97,13 @@ export class WalletFactory implements IWalletFactory {
 		// Determine coin type - default to ARK (111)
 		const coinType = coin === "ETH" ? "60'" : "111'";
 
-		const derivationPath = `m/44'/${coinType}/${accountIndex}'/${changeIndex}/${addressIndex}`;
+		const derivationPath = `m/44'/${coinType}/${accountIndex}'/${changeIndex}/${addressIndex}` as const;
 
 		const seed = BIP39.toSeed(mnemonic!);
 
 		const hdKey = HDKey.fromMasterSeed(seed);
 		const account = hdKeyToAccount(hdKey, {
-			path: derivationPath!,
+			path: derivationPath,
 		});
 
 		const wallet: IReadWriteWallet = new Wallet(UUID.random(), {}, this.#profile);
