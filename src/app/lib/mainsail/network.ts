@@ -10,6 +10,8 @@ import {
 } from "./network.models";
 import { ConfigKey, ConfigRepository } from ".";
 import { ArkClient } from "@arkecosystem/typescript-client";
+import { FeeService } from "./fee.service";
+import { Contracts } from "@/app/lib/profiles";
 
 export class Network {
 	/**
@@ -18,6 +20,20 @@ export class Network {
 	 * @memberof Network
 	 */
 	readonly #coin: CoinManifest;
+
+	/**
+	 * The profile associated with fees config.
+	 *
+	 * @memberof Network
+	 */
+	readonly #profile: Contracts.IProfile;
+
+	/**
+	 * The fee service instance.
+	 *
+	 * @memberof Network
+	 */
+	readonly #feeService: FeeService;
 
 	/**
 	 * The manifest of the network.
@@ -40,10 +56,12 @@ export class Network {
 	 * @param {NetworkManifest} network
 	 * @memberof Network
 	 */
-	public constructor(coin: CoinManifest, network: NetworkManifest) {
+	public constructor(coin: CoinManifest, network: NetworkManifest, profile: Contracts.IProfile) {
 		this.#coin = coin;
 		this.#network = network;
+		this.#profile = profile;
 		this.#config = new ConfigRepository({ network });
+		this.#feeService = new FeeService({ config: this.#config, profile: this.#profile });
 	}
 
 	/**
@@ -425,5 +443,14 @@ export class Network {
 		}
 
 		return milestone.data;
+	}
+	/**
+	 * Returns the fee service of the network.
+	 *
+	 * @returns {FeeService}
+	 * @memberof Network
+	 */
+	fees(): FeeService {
+		return this.#feeService;
 	}
 }

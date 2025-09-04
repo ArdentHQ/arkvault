@@ -6,12 +6,14 @@ import { SendVoteStepProperties } from "./SendVote.contracts";
 import { TotalAmountBox } from "@/domains/transaction/components/TotalAmountBox";
 import { TransactionDetail } from "@/domains/transaction/components/TransactionDetail";
 import { VoteList } from "@/domains/vote/components/VoteList";
+import { calculateGasFee } from "@/domains/transaction/components/InputFee/InputFee";
 
 export const VoteLedgerReview = ({ wallet, votes, unvotes }: SendVoteStepProperties) => {
 	const { getValues } = useFormContext();
 	const { t } = useTranslation();
 
-	const fee = getValues("fee");
+	const { gasPrice, gasLimit } = getValues(["gasLimit", "gasPrice"]);
+	const fee = calculateGasFee(gasPrice, gasLimit);
 
 	return (
 		<>

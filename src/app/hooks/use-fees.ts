@@ -1,15 +1,9 @@
-import { ConsensusAbi, MultiPaymentAbi, UsernamesAbi } from "@mainsail/evm-contracts";
-import { ContractAddresses, UnitConverter } from "@arkecosystem/typescript-crypto";
-import { encodeFunctionData, numberToHex } from "viem";
-
 import { BigNumber } from "@/app/lib/helpers";
-import { Network } from "@/app/lib/mainsail/network";
 import { Contracts } from "@/app/lib/profiles";
-import { EstimateGasPayload } from "@/app/lib/mainsail/fee.contract";
-import { FeeService } from "@/app/lib/mainsail/fee.service";
 import { TransactionFees } from "@/types";
 import { useCallback } from "react";
 import { useEnvironmentContext } from "@/app/contexts";
+import { EncodeInputData, EncodeTransactionType, TransactionEncoder } from "@/app/lib/mainsail/transaction-encoder";
 
 interface CreateStubTransactionProperties {
 	getData: () => Record<string, any>;
@@ -23,8 +17,8 @@ interface CalculateBySizeProperties {
 }
 
 interface EstimateGasProperties {
-	data: Record<string, any>;
-	type: string;
+	data: EncodeInputData;
+	type: EncodeTransactionType;
 }
 
 interface CalculateProperties {
@@ -32,116 +26,6 @@ interface CalculateProperties {
 	data?: Record<string, any>;
 	network: string;
 	type: string;
-}
-
-export function getEstimateGasParams(
-	network: Network,
-	formData: Record<string, any>,
-	type: string,
-): EstimateGasPayload {
-	const {
-		senderAddress,
-		recipientAddress,
-		recipients: recipientList,
-		username,
-		validatorPublicKey,
-		voteAddresses,
-	} = formData;
-
-	const paramBuilders: Record<string, () => Omit<EstimateGasPayload, "from">> = {
-		multiPayment: () => {
-			const recipients: string[] = [];
-			const amounts: BigNumber[] = [];
-
-			for (const payment of recipientList) {
-				recipients.push(payment.address);
-				// @TODO https://app.clickup.com/t/86dwvx1ya get rid of extra BigNumber.make
-				amounts.push(BigNumber.make(UnitConverter.parseUnits(payment.amount, "ark").toString()));
-			}
-
-			const value = numberToHex(BigNumber.sum(amounts).toBigInt());
-
-			const data = encodeFunctionData({
-				abi: MultiPaymentAbi.abi,
-				args: [recipients, amounts],
-				functionName: "pay",
-			});
-
-			return { data, to: ContractAddresses.MULTIPAYMENT, value };
-		},
-		transfer: () => ({ to: recipientAddress as string }),
-		updateValidator: () => {
-			const data = encodeFunctionData({
-				abi: ConsensusAbi.abi,
-				args: [`0x${validatorPublicKey}`],
-				functionName: "updateValidator",
-			});
-
-			return {
-				data,
-				to: ContractAddresses.CONSENSUS,
-			};
-		},
-		usernameRegistration: () => {
-			const data = encodeFunctionData({
-				abi: UsernamesAbi.abi,
-				args: [username],
-				functionName: "registerUsername",
-			});
-
-			return { data, to: ContractAddresses.USERNAMES };
-		},
-		usernameResignation: () => {
-			const data = encodeFunctionData({
-				abi: UsernamesAbi.abi,
-				args: [],
-				functionName: "resignUsername",
-			});
-
-			return { data, to: ContractAddresses.USERNAMES };
-		},
-		validatorRegistration: () => {
-			const data = encodeFunctionData({
-				abi: ConsensusAbi.abi,
-				args: [`0x${validatorPublicKey}`],
-				functionName: "registerValidator",
-			});
-
-			const value = network.milestone()["validatorRegistrationFee"] ?? 0;
-
-			return {
-				data,
-				to: ContractAddresses.CONSENSUS,
-				value: numberToHex(BigNumber.make(value).toBigInt()),
-			};
-		},
-		validatorResignation: () => {
-			const data = encodeFunctionData({
-				abi: ConsensusAbi.abi,
-				args: [],
-				functionName: "resignValidator",
-			});
-
-			return { data, to: ContractAddresses.CONSENSUS };
-		},
-		vote: () => {
-			const vote = (voteAddresses as string[]).at(0);
-			const isVote = !!vote;
-
-			const data = encodeFunctionData({
-				abi: ConsensusAbi.abi,
-				args: isVote ? [vote] : [],
-				functionName: isVote ? "vote" : "unvote",
-			});
-
-			return { data, to: ContractAddresses.CONSENSUS };
-		},
-	};
-
-	return {
-		from: senderAddress,
-		...paramBuilders[type](),
-	};
 }
 
 export const useFees = (profile: Contracts.IProfile) => {
@@ -173,7 +57,7 @@ export const useFees = (profile: Contracts.IProfile) => {
 					type,
 				});
 
-				const fees = new FeeService({ config: profile.activeNetwork().config(), profile });
+				const fees = profile.activeNetwork().fees();
 
 				const [min, avg, max] = await Promise.all([
 					fees.calculate(transaction, { priority: "slow" }),
@@ -199,8 +83,13 @@ export const useFees = (profile: Contracts.IProfile) => {
 
 	const estimateGas = useCallback(
 		async ({ type, data: formData }: EstimateGasProperties) => {
-			const fees = new FeeService({ config: profile.activeNetwork().config(), profile });
-			const gas = await fees.estimateGas(getEstimateGasParams(profile.activeNetwork(), formData, type));
+			const gas = await profile
+				.activeNetwork()
+				.fees()
+				.estimateGas({
+					from: formData.senderAddress,
+					...new TransactionEncoder(profile.activeNetwork()).byType(formData, type),
+				});
 
 			// Add 20% buffer on the gas, in case the estimate is too low.
 			// @see https://app.clickup.com/t/86dxe6nxx
