@@ -1,5 +1,5 @@
 import { Contracts, DTO } from "@/app/lib/profiles";
-import React, { useCallback, useEffect, useLayoutEffect, useMemo, useState } from "react";
+import React, { useCallback, useEffect, useLayoutEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 
 import { useTranslation } from "react-i18next";
