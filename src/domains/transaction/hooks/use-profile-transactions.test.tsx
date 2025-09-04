@@ -69,18 +69,15 @@ describe("useProfileTransactions", () => {
 
 	beforeEach(() => {
 		listUnconfirmedSpy = vi
-		  .spyOn(
-			unconfirmedTransactionsServiceMock.UnconfirmedTransactionsService.prototype,
-			"listUnconfirmed",
-		  )
-		  .mockResolvedValue({
-			results: (unconfirmedFixture.results ?? []).map((r: any) => ({
-			  from: r.from,
-			  to: r.to,
-			  hash: r.hash,
-			  gasLimit: r.gasLimit,
-			})),
-		  } as any);
+			.spyOn(unconfirmedTransactionsServiceMock.UnconfirmedTransactionsService.prototype, "listUnconfirmed")
+			.mockResolvedValue({
+				results: (unconfirmedFixture.results ?? []).map((r: any) => ({
+					from: r.from,
+					gasLimit: r.gasLimit,
+					hash: r.hash,
+					to: r.to,
+				})),
+			} as any);
 	});
 
 	afterEach(() => {
