@@ -96,11 +96,11 @@ export class WalletFactory implements IWalletFactory {
 
 		const derivationPath = `m/44'/${coinType}/${accountIndex}'/${changeIndex}/${addressIndex}`;
 
-		const seed = BIP39.toSeed(mnemonic);
+		const seed = BIP39.toSeed(mnemonic!);
 
 		const hdKey = HDKey.fromMasterSeed(seed);
 		const account = hdKeyToAccount(hdKey, {
-			path: derivationPath,
+			path: derivationPath!,
 		});
 
 		const wallet: IReadWriteWallet = new Wallet(UUID.random(), {}, this.#profile);
