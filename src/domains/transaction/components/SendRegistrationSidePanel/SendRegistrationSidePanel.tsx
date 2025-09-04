@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 
 import { useTranslation } from "react-i18next";
 import { SendRegistrationForm } from "@/domains/transaction/pages/SendRegistration/SendRegistration.contracts";
-import { usePendingTransactions } from "@/domains/transaction/hooks/use-pending-transactions";
+import { useUnconfirmedTransactions } from "@/domains/transaction/hooks/use-unconfirmed-transactions";
 import { Form } from "@/app/components/Form";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { useEnvironmentContext, useLedgerContext } from "@/app/contexts";
@@ -54,7 +54,7 @@ export const SendRegistrationSidePanel = ({
 	const { env } = useEnvironmentContext();
 	const activeProfile = useActiveProfile();
 	const { common, validatorRegistration } = useValidation();
-	const { addPendingTransaction } = usePendingTransactions();
+	const { addUnconfirmedTransactionFromSigned } = useUnconfirmedTransactions();
 
 	const { hasDeviceAvailable, isConnected, connect, ledgerDevice } = useLedgerContext();
 
@@ -191,7 +191,7 @@ export const SendRegistrationSidePanel = ({
 					signatory,
 				});
 
-				addPendingTransaction(transaction);
+				addUnconfirmedTransactionFromSigned(transaction);
 				setTransaction(transaction);
 				handleNext();
 			}
@@ -204,7 +204,7 @@ export const SendRegistrationSidePanel = ({
 					signatory,
 				});
 
-				addPendingTransaction(transaction);
+				addUnconfirmedTransactionFromSigned(transaction);
 				setTransaction(transaction);
 				handleNext();
 			}
