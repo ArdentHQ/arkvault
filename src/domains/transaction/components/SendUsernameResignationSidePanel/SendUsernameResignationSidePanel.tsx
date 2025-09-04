@@ -45,7 +45,7 @@ export const SendUsernameResignationSidePanel = ({
 
 	const form = useForm({ mode: "onChange" });
 
-	const { formState, getValues, register, watch, reset: resetForm } = form;
+	const { formState, getValues, register, watch, reset: resetForm, setValue } = form;
 	const { isValid, isSubmitting } = formState;
 
 	const { gasLimit, gasPrice } = watch();
@@ -61,7 +61,12 @@ export const SendUsernameResignationSidePanel = ({
 	const activeProfile = useActiveProfile();
 
 	const [mounted, setMounted] = useState(open);
-	const { activeWallet, setActiveWallet } = useSelectsTransactionSender({ active: mounted });
+	const { activeWallet, setActiveWallet } = useSelectsTransactionSender({
+		active: mounted,
+		onWalletChange: (wallet) => {
+			setValue("senderAddress", wallet?.address(), { shouldDirty: true, shouldValidate: true });
+		},
+	});
 
 	useEffect(() => {
 		register("fees");
@@ -154,8 +159,6 @@ export const SendUsernameResignationSidePanel = ({
 					setActiveTab(Step.FormStep);
 
 					setErrorMessage(undefined);
-
-					setActiveWallet(undefined);
 				});
 			}
 		},

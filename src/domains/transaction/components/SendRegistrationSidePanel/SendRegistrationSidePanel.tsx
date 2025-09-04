@@ -22,7 +22,6 @@ import {
 	signUsernameRegistration,
 	UsernameRegistrationForm,
 } from "@/domains/transaction/components/UsernameRegistrationForm";
-import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { useToggleFeeFields } from "@/domains/transaction/hooks/useToggleFeeFields";
 import { useValidatorRegistrationLockedFee } from "@/domains/transaction/components/ValidatorRegistrationForm/hooks/useValidatorRegistrationLockedFee";
 import { SidePanel, SidePanelButtons } from "@/app/components/SidePanel/SidePanel";
@@ -30,6 +29,7 @@ import { Button } from "@/app/components/Button";
 import { ThemeIcon } from "@/app/components/Icon";
 import { useConfirmedTransaction } from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
 import cn from "classnames";
+import { useSelectsTransactionSender } from "@/domains/transaction/hooks/use-selects-transaction-sender";
 
 export const FORM_STEP = 1;
 export const REVIEW_STEP = 2;
@@ -75,16 +75,15 @@ export const SendRegistrationSidePanel = ({
 	const summaryStep = stepCount;
 	const isAuthenticationStep = activeTab === authenticationStep;
 
-	const { activeNetwork: network } = useActiveNetwork({ profile: activeProfile });
+	const [mounted, setMounted] = useState(open);
+	const { activeWallet } = useSelectsTransactionSender({
+		active: mounted,
+		onWalletChange: (wallet) => {
+			setValue("senderAddress", wallet?.address(), { shouldDirty: true, shouldValidate: true });
 
-	const activeWallet = useMemo(() => {
-		if (senderAddress) {
-			return activeProfile.wallets().findByAddressWithNetwork(senderAddress, network.id());
-		}
-
-		const selectedWallets = activeProfile.wallets().selected() ?? [activeProfile.wallets().first()];
-		return selectedWallets.at(0);
-	}, [activeProfile, network, senderAddress]);
+			setValue("network", wallet?.network(), { shouldDirty: true, shouldValidate: true });
+		},
+	});
 
 	const { validatorRegistrationFee } = useValidatorRegistrationLockedFee({
 		profile: activeProfile,
@@ -116,16 +115,6 @@ export const SendRegistrationSidePanel = ({
 		form,
 		wallet: activeWallet,
 	});
-
-	useEffect(() => {
-		if (!activeWallet || !registrationType) {
-			return;
-		}
-
-		setValue("senderAddress", activeWallet.address(), { shouldDirty: true, shouldValidate: true });
-
-		setValue("network", activeProfile.activeNetwork(), { shouldDirty: true, shouldValidate: true });
-	}, [activeWallet, env, setValue, registrationType]);
 
 	useEffect(() => {
 		if (!registrationType) {
@@ -251,10 +240,11 @@ export const SendRegistrationSidePanel = ({
 
 	const onMountChange = useCallback(
 		(mounted: boolean) => {
-			if (!mounted) {
-				setActiveTab(FORM_STEP);
+			setMounted(mounted);
 
+			if (!mounted) {
 				resetForm(() => {
+					setActiveTab(FORM_STEP);
 					setErrorMessage(undefined);
 				});
 			}

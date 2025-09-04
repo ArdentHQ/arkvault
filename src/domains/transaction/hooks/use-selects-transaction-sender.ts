@@ -1,7 +1,14 @@
 import { useActiveProfile } from "@/app/hooks";
 import { useEffect, useState } from "react";
+import { Contracts } from "@/app/lib/profiles";
 
-export const useSelectsTransactionSender = ({ active }: { active: boolean }) => {
+export const useSelectsTransactionSender = ({
+	active,
+	onWalletChange,
+}: {
+	active: boolean;
+	onWalletChange: (wallet?: Contracts.IReadWriteWallet) => void;
+}) => {
 	const activeProfile = useActiveProfile();
 
 	const guessActiveWallet = () => {
@@ -18,6 +25,10 @@ export const useSelectsTransactionSender = ({ active }: { active: boolean }) => 
 			setActiveWallet(undefined);
 		}
 	}, [active]);
+
+	useEffect(() => {
+		onWalletChange?.(activeWallet);
+	}, [activeWallet?.address()]);
 
 	return {
 		activeWallet,
