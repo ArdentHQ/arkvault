@@ -51,7 +51,7 @@ export const SendTransferSidePanel = ({
 
 	const { env } = useEnvironmentContext();
 
-	const [mounted, setMounted] = useState(open);
+	const [mounted, setMounted] = useState(false);
 	const { activeWallet: wallet, setActiveWallet: setWallet } = useSelectsTransactionSender({
 		active: mounted,
 	});

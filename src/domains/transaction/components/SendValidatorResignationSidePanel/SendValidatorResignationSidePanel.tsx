@@ -58,7 +58,7 @@ export const SendValidatorResignationSidePanel = ({
 
 	const activeProfile = useActiveProfile();
 
-	const [mounted, setMounted] = useState(open);
+	const [mounted, setMounted] = useState(false);
 
 	const { activeWallet, setActiveWallet } = useSelectsTransactionSender({
 		active: mounted,

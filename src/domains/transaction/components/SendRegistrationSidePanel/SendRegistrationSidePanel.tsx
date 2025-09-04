@@ -75,7 +75,7 @@ export const SendRegistrationSidePanel = ({
 	const summaryStep = stepCount;
 	const isAuthenticationStep = activeTab === authenticationStep;
 
-	const [mounted, setMounted] = useState(open);
+	const [mounted, setMounted] = useState(false);
 	const { activeWallet } = useSelectsTransactionSender({
 		active: mounted,
 		onWalletChange: (wallet) => {
