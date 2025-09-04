@@ -1,4 +1,3 @@
-/* eslint-disable sonarjs/cognitive-complexity */
 import { Contracts } from "@/app/lib/profiles";
 import React, { useCallback, useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -13,10 +12,14 @@ import { useLink } from "@/app/hooks/use-link";
 export const useWalletActions = ({
 	handleSignMessage,
 	handleSendTransfer,
+	handleSendRegistration,
+	handleSendUsernameResignation,
 	wallets,
 }: {
 	handleSignMessage?: () => void;
 	handleSendTransfer?: () => void;
+	handleSendRegistration?: (registrationType?: "validatorRegistration" | "usernameRegistration") => void;
+	handleSendUsernameResignation?: () => void;
 	wallets: Contracts.IReadWriteWallet[];
 }) => {
 	const { persist } = useEnvironmentContext();
@@ -65,7 +68,7 @@ export const useWalletActions = ({
 
 			navigate(generatePath(ProfilePaths.SendTransferWallet, { profileId: profile.id(), walletId: wallet.id() }));
 		},
-		[stopEventBubbling, hasMultipleWallets, history, profile, wallet, handleSendTransfer],
+		[stopEventBubbling, hasMultipleWallets, navigate, profile, wallet, handleSendTransfer],
 	);
 
 	const handleToggleStar = useCallback(
@@ -99,7 +102,7 @@ export const useWalletActions = ({
 
 			return true;
 		},
-		[profile, history, wallet, persist, stopEventBubbling],
+		[profile, navigate, wallet, persist, stopEventBubbling],
 	);
 
 	const handleSelectOption = useCallback(
@@ -125,19 +128,7 @@ export const useWalletActions = ({
 			}
 
 			if (option.value === "validator-registration") {
-				let url = generatePath(ProfilePaths.SendValidatorRegistration, {
-					profileId: profile.id(),
-					walletId: wallet.id(),
-				});
-
-				if (hasMultipleWallets) {
-					url = generatePath(ProfilePaths.SendRegistrationProfile, {
-						profileId: profile.id(),
-						registrationType: "validatorRegistration",
-					});
-				}
-
-				navigate(url);
+				handleSendRegistration?.("validatorRegistration");
 			}
 
 			if (option.value === "validator-resignation") {
@@ -156,34 +147,11 @@ export const useWalletActions = ({
 			}
 
 			if (option.value === "username-registration") {
-				let url = generatePath(ProfilePaths.SendUsernameRegistration, {
-					profileId: profile.id(),
-					walletId: wallet.id(),
-				});
-
-				if (hasMultipleWallets) {
-					url = generatePath(ProfilePaths.SendRegistrationProfile, {
-						profileId: profile.id(),
-						registrationType: "usernameRegistration",
-					});
-				}
-
-				navigate(url);
+				handleSendRegistration?.("usernameRegistration");
 			}
 
 			if (option.value === "username-resignation") {
-				let url = generatePath(ProfilePaths.SendUsernameResignation, {
-					profileId: profile.id(),
-					walletId: wallet.id(),
-				});
-
-				if (hasMultipleWallets) {
-					url = generatePath(ProfilePaths.SendUsernameResignationProfile, {
-						profileId: profile.id(),
-					});
-				}
-
-				navigate(url);
+				handleSendUsernameResignation?.();
 			}
 
 			if (option.value === "open-explorer") {
@@ -192,7 +160,16 @@ export const useWalletActions = ({
 
 			setActiveModal(option.value.toString() as WalletActionsModalType);
 		},
-		[wallet, history, profile, hasMultipleWallets, openExternal],
+		[
+			wallet,
+			navigate,
+			profile,
+			hasMultipleWallets,
+			openExternal,
+			handleSignMessage,
+			handleSendRegistration,
+			handleSendUsernameResignation,
+		],
 	);
 
 	return {

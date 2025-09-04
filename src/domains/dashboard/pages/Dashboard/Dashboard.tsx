@@ -16,6 +16,8 @@ import { ResetWhenUnmounted } from "@/app/components/SidePanel/ResetWhenUnmounte
 import { SignMessageSidePanel } from "@/domains/message/components/SignMessage/SignMessageSidePanel";
 import { SendTransferSidePanel } from "@/domains/transaction/components/SendTransferSidePanel/SendTransferSidePanel";
 import { useDeeplinkActionHandler } from "@/app/hooks";
+import { SendRegistrationSidePanel } from "@/domains/transaction/components/SendRegistrationSidePanel/SendRegistrationSidePanel";
+import { SendUsernameResignationSidePanel } from "@/domains/transaction/components/SendUsernameResignationSidePanel/SendUsernameResignationSidePanel";
 
 export const Dashboard = ({
 	onCreateAddress,
@@ -30,6 +32,10 @@ export const Dashboard = ({
 	const [isUpdatingWallet, setIsUpdatingWallet] = useState(false);
 	const [showSignMessagePanel, setShowSignMessagePanel] = useState(false);
 	const [showSendTransferPanel, setShowSendTransferPanel] = useState(false);
+	const [showSendRegistrationPanel, setShowSendRegistrationPanel] = useState<
+		"validatorRegistration" | "usernameRegistration" | undefined
+	>(undefined);
+	const [showSendUsernameResignationPanel, setShowSendUsernameResignationPanel] = useState(false);
 
 	useDeeplinkActionHandler({
 		onSignMessage: () => {
@@ -123,6 +129,8 @@ export const Dashboard = ({
 						onImportAddress={onImportAddress}
 						onSignMessage={setShowSignMessagePanel}
 						onSendTransfer={setShowSendTransferPanel}
+						onSendRegistration={setShowSendRegistrationPanel}
+						onSendUsernameResignation={setShowSendUsernameResignationPanel}
 					/>
 				)}
 			</Section>
@@ -185,6 +193,26 @@ export const Dashboard = ({
 
 			<ResetWhenUnmounted>
 				<SendTransferSidePanel open={showSendTransferPanel} onOpenChange={setShowSendTransferPanel} />
+			</ResetWhenUnmounted>
+
+			<ResetWhenUnmounted>
+				<SendRegistrationSidePanel
+					open={showSendRegistrationPanel !== undefined}
+					registrationType={showSendRegistrationPanel}
+					onOpenChange={(open) => {
+						if (!open) {
+							setShowSendRegistrationPanel(undefined);
+							return;
+						}
+					}}
+				/>
+			</ResetWhenUnmounted>
+
+			<ResetWhenUnmounted>
+				<SendUsernameResignationSidePanel
+					open={showSendUsernameResignationPanel}
+					onOpenChange={setShowSendUsernameResignationPanel}
+				/>
 			</ResetWhenUnmounted>
 		</Page>
 	);

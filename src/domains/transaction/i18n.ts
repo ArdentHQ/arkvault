@@ -252,11 +252,11 @@ export const translations = {
 	},
 	PAGE_USERNAME_REGISTRATION: {
 		FORM_STEP: {
-			DESCRIPTION: "Register a new username for an address on the network below.",
+			DESCRIPTION: "Register a new username address on the network below.",
 			INFO: "Username registrations are stored on-chain and publicly visible.",
 			INFO_ALREADY_REGISTERED:
 				"This address is currently registered to the username <bold>'{{username}}'</bold>. Registering a new username will overwrite the existing one, as only one username is allowed per address.",
-			TITLE: "Register Username",
+			TITLE: "Username Registration",
 		},
 	},
 	PAGE_USERNAME_RESIGNATION: {
