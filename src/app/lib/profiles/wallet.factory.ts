@@ -53,7 +53,10 @@ export class WalletFactory implements IWalletFactory {
 		coin,
 		accountIndex = 0,
 		changeIndex = 0,
-	}: Pick<IGenerateHDOptions, 'locale' | 'wordCount' | 'coin' | 'accountIndex' | 'changeIndex'>): Promise<{ mnemonic: string; wallet: IReadWriteWallet }> {
+	}: Pick<IGenerateHDOptions, "locale" | "wordCount" | "coin" | "accountIndex" | "changeIndex">): Promise<{
+		mnemonic: string;
+		wallet: IReadWriteWallet;
+	}> {
 		const mnemonic: string = BIP39.generate(locale, wordCount);
 
 		// Generate HD wallet with specified indices
@@ -74,7 +77,7 @@ export class WalletFactory implements IWalletFactory {
 		coin,
 		changeIndex = 0,
 		addressIndex = 0,
-	}: Omit<IGenerateHDOptions, 'locale' | 'wordCount'>): Promise<IReadWriteWallet> {
+	}: Omit<IGenerateHDOptions, "locale" | "wordCount">): Promise<IReadWriteWallet> {
 		return this.#createHDWallet({
 			accountIndex,
 			addressIndex,
@@ -90,7 +93,7 @@ export class WalletFactory implements IWalletFactory {
 		coin,
 		changeIndex = 0,
 		addressIndex = 0,
-	}: Omit<IGenerateHDOptions, 'locale' | 'wordCount'>): Promise<IReadWriteWallet> {
+	}: Omit<IGenerateHDOptions, "locale" | "wordCount">): Promise<IReadWriteWallet> {
 		// Determine coin type - default to ARK (111)
 		const coinType = coin === "ETH" ? "60'" : "111'";
 
