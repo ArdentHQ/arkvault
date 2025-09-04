@@ -86,6 +86,7 @@ export const FormStep = ({
 			sender,
 		});
 	};
+	console.log({ senderWallet })
 
 	return (
 		<section data-testid="SendTransfer__form-step">
@@ -164,7 +165,6 @@ export const FormStep = ({
 
 				<div data-testid="recipient-address">
 					<AddRecipient
-						disableMultiPaymentOption={senderWallet?.isLedger()}
 						onChange={(value: RecipientItem[]) => {
 							setValue("recipients", value, { shouldDirty: true, shouldValidate: true });
 						}}

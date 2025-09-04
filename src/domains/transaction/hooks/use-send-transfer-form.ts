@@ -15,6 +15,7 @@ import { precisionRound } from "@/utils/precision-round";
 import { useTransactionQueryParameters } from "@/domains/transaction/hooks/use-transaction-query-parameters";
 import { profileEnabledNetworkIds } from "@/utils/network-utils";
 import { calculateGasFee } from "@/domains/transaction/components/InputFee/InputFee";
+import { alias } from "@/domains/wallet/validations";
 
 export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 	const [lastEstimatedExpiration, setLastEstimatedExpiration] = useState<number | undefined>();
@@ -37,12 +38,16 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 
 	const formDefaultValues = useMemo<DefaultValues<SendTransferForm>>(
 		() => ({
-			amount: "",
-			recipients: [],
+			amount: "0.1",
+			recipients: activeProfile.wallets().values().map(recipient => ({
+				address: recipient.address(),
+				alias: undefined,
+				amount: 0.1
+			})),
 			remainingBalance: wallet?.balance(),
-			senderAddress: undefined,
+			senderAddress: activeProfile.wallets().selected().at(0)?.address()
 		}),
-		// eslint-disable-next-line react-hooks/exhaustive-deps
+
 		[],
 	);
 	const form = useForm<SendTransferForm>({
@@ -191,6 +196,10 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 	}, [queryParameters, setValue, networks, hasAnyParameters]);
 
 	useEffect(() => {
+		setValue("senderAddress", activeProfile.wallets().selected().at(0)?.address(), { shouldDirty: true, shouldValidate: true });
+	}, [activeProfile, setValue])
+
+	useEffect(() => {
 		if (!wallet) {
 			return;
 		}
@@ -213,7 +222,7 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 		setValue("amount", precisionRound(remaining, 18));
 
 		void trigger(["gasPrice", "gasLimit", "amount"]);
-	}, [gasLimitStr, gasPriceStr]); // eslint-disable-line react-hooks/exhaustive-deps
+	}, [gasLimitStr, gasPriceStr]);
 
 	return {
 		form,

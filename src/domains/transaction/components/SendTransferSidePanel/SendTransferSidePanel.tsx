@@ -115,6 +115,10 @@ export const SendTransferSidePanel = ({
 	}, [wallet, activeProfile, connect]);
 
 	useEffect(() => {
+		setWallet(activeProfile.wallets().selected().at(0));
+	}, [activeProfile, wallet]);
+
+	useEffect(() => {
 		if (activeProfile.wallets().count() === 1 && !wallet) {
 			const wallet = activeProfile.wallets().values()[0];
 			setWallet(wallet);
@@ -434,7 +438,6 @@ export const SendTransferSidePanel = ({
 								data-testid="SendTransfer__back-button"
 								variant="secondary"
 								onClick={handleBack}
-								disabled={isSubmitting}
 							>
 								{t("COMMON.BACK")}
 							</Button>
@@ -444,7 +447,6 @@ export const SendTransferSidePanel = ({
 							<Button
 								data-testid="SendTransfer__continue-button"
 								onClick={handleNext}
-								disabled={isNextDisabled || isSubmitting}
 							>
 								{t("COMMON.CONTINUE")}
 							</Button>
