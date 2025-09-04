@@ -20,6 +20,7 @@ import { Contracts } from "@/app/lib/profiles";
 import { DTO } from "@/app/lib/mainsail";
 import { isContractDeployment } from "@/domains/transaction/utils";
 import { SidePanel } from "@/app/components/SidePanel/SidePanel";
+import { useConfirmedTransaction } from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
 
 export const TransactionDetailContent = ({
 	transactionItem: transaction,
@@ -125,6 +126,14 @@ export const TransactionDetailSidePanel = ({
 
 	const [isOpen, setIsOpen] = useState(isSidePanelOpen);
 
+	const wallet = transactionItem.wallet();
+	const transactionId = transactionItem.hash();
+
+	const { isConfirmed, transaction: confirmedTransaction } = useConfirmedTransaction({
+		transactionId,
+		wallet,
+	});
+
 	useEffect(() => {
 		let timeoutId: NodeJS.Timeout | undefined;
 
@@ -139,7 +148,12 @@ export const TransactionDetailSidePanel = ({
 
 	return (
 		<SidePanel title={t("TRANSACTION.MODAL_TRANSACTION_DETAILS.TITLE")} open={isOpen} onOpenChange={setIsOpen}>
-			<TransactionDetailContent transactionItem={transactionItem} profile={profile} />
+			<TransactionDetailContent
+				transactionItem={confirmedTransaction ?? transactionItem}
+				profile={profile}
+				isConfirmed={isConfirmed}
+				confirmations={confirmedTransaction?.confirmations().toNumber()}
+			/>
 		</SidePanel>
 	);
 };
