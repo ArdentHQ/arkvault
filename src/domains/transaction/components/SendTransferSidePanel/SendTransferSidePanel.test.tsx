@@ -90,7 +90,6 @@ const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
 let firstWalletAddress: string;
-let useSearchParamsMock;
 
 const selectFirstRecipient = () => userEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
 const selectRecipient = () =>
@@ -144,9 +143,7 @@ describe("SendTransferSidePanel", () => {
 	});
 
 	beforeEach(() => {
-		useSearchParamsMock = vi
-			.spyOn(ReactRouter, "useSearchParams")
-			.mockReturnValue([new URLSearchParams(), vi.fn()]);
+		vi.spyOn(ReactRouter, "useSearchParams").mockReturnValue([new URLSearchParams(), vi.fn()]);
 
 		vi.spyOn(wallet, "balance").mockReturnValue(1_000_000_000_000_000_000);
 
