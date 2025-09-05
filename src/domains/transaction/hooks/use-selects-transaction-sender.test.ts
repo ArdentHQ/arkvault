@@ -136,4 +136,57 @@ describe("useSelectsTransactionSender", () => {
 
 		expect(result.current.activeWallet).toBe(newSelectedWallet);
 	});
+
+	it("should clear search params when active becomes false and method param exists", () => {
+		const searchParams = new URLSearchParams("method=transfer&other=value");
+		const setSearchParams = vi.fn();
+		vi.spyOn(ReactRouter, "useSearchParams").mockReturnValue([searchParams, setSearchParams]);
+
+		const { rerender } = renderHook(({ active }) => useSelectsTransactionSender({ active }), {
+			initialProps: { active: true },
+		});
+
+		expect(setSearchParams).not.toHaveBeenCalled();
+
+		rerender({ active: false });
+
+		expect(setSearchParams).toHaveBeenCalledWith(new URLSearchParams());
+	});
+
+	it("should not clear search params when active becomes false but method param does not exist", () => {
+		const searchParams = new URLSearchParams("other=value");
+		const setSearchParams = vi.fn();
+		vi.spyOn(ReactRouter, "useSearchParams").mockReturnValue([searchParams, setSearchParams]);
+
+		const { rerender } = renderHook(({ active }) => useSelectsTransactionSender({ active }), {
+			initialProps: { active: true },
+		});
+
+		expect(setSearchParams).not.toHaveBeenCalled();
+
+		rerender({ active: false });
+
+		expect(setSearchParams).not.toHaveBeenCalled();
+	});
+
+	it("should not clear search params when active becomes false and resetSearchParamsOnDeactivate is false", () => {
+		const searchParams = new URLSearchParams("method=transfer");
+		const setSearchParams = vi.fn();
+		vi.spyOn(ReactRouter, "useSearchParams").mockReturnValue([searchParams, setSearchParams]);
+
+		const { result, rerender } = renderHook(({ active }) => useSelectsTransactionSender({ active }), {
+			initialProps: { active: false },
+		});
+
+		// First activate to set resetSearchParamsOnDeactivate to true
+		rerender({ active: true });
+
+		// Mock search params again for the deactivation
+		vi.spyOn(ReactRouter, "useSearchParams").mockReturnValue([searchParams, setSearchParams]);
+
+		// Then deactivate
+		rerender({ active: false });
+
+		expect(setSearchParams).toHaveBeenCalledWith(new URLSearchParams());
+	});
 });
