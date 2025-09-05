@@ -186,7 +186,8 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 		});
 		wallets.push(wallet);
 
-		if (addressViewPreference === AddressViewSelection.single) {
+
+		if (profile.walletSelectionMode() === "single") {
 			if (!disableAddressSelection) {
 				profile.wallets().selectOne(wallet);
 			}
