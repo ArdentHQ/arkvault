@@ -212,4 +212,19 @@ describe("Dashboard", () => {
 			expect(screen.getByTestId("SignMessageSidePanel")).toBeVisible();
 		});
 	});
+
+	it("should render and handle send transfer deeplink", async () => {
+		render(<Dashboard />, {
+			route: `/profiles/${fixtureProfileId}/dashboard?method=transfer`,
+			withProfileSynchronizer: true,
+		});
+
+		await waitFor(() =>
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(8),
+		);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("SendTransferSidePanel")).toBeVisible();
+		});
+	});
 });
