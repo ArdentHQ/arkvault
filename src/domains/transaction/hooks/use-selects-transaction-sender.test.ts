@@ -23,6 +23,7 @@ describe("useSelectsTransactionSender", () => {
 
 	afterEach(() => {
 		vi.restoreAllMocks();
+		ransaction / hooks / use - selects - transaction - sender.test.ts;
 	});
 
 	beforeEach(() => {
@@ -174,7 +175,7 @@ describe("useSelectsTransactionSender", () => {
 		const setSearchParams = vi.fn();
 		vi.spyOn(ReactRouter, "useSearchParams").mockReturnValue([searchParams, setSearchParams]);
 
-		const { result, rerender } = renderHook(({ active }) => useSelectsTransactionSender({ active }), {
+		const { rerender } = renderHook(({ active }) => useSelectsTransactionSender({ active }), {
 			initialProps: { active: false },
 		});
 
