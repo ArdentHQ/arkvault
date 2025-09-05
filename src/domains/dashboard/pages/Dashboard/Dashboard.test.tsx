@@ -66,7 +66,7 @@ describe("Dashboard", () => {
 		mockTransactionsAggregate.mockRestore();
 	});
 
-	it.only("should render", async () => {
+	it("should render", async () => {
 		const { asFragment } = render(<Dashboard />, {
 			route: dashboardURL,
 			withProfileSynchronizer: true,
