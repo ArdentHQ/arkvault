@@ -299,7 +299,7 @@ describe("Welcome with deeplink", () => {
 		await userEvent.click(screen.getAllByTestId("ProfileRow__Link")[0]);
 
 		await waitFor(() => expect(toastWarningSpy).toHaveBeenCalledWith(commonTranslations.VALIDATING_URI));
-		await waitFor(() => expect(router.state.location.pathname).toBe(`/profiles/${fixtureProfileId}/send-transfer`));
+		await waitFor(() => expect(router.state.location.pathname).toBe(`/profiles/${fixtureProfileId}/dashboard`));
 		await waitFor(() => expect(router.state.location.search).toBe(route));
 
 		toastWarningSpy.mockRestore();
@@ -322,7 +322,7 @@ describe("Welcome with deeplink", () => {
 		await userEvent.click(screen.getAllByTestId("ProfileRow__Link")[0]);
 
 		await waitFor(() => expect(toastWarningSpy).toHaveBeenCalledWith(commonTranslations.VALIDATING_URI));
-		await waitFor(() => expect(router.state.location.pathname).toBe(`/profiles/${fixtureProfileId}/send-transfer`));
+		await waitFor(() => expect(router.state.location.pathname).toBe(`/profiles/${fixtureProfileId}/dashboard`));
 		await waitFor(() => expect(router.state.location.search).toBe(route));
 
 		toastWarningSpy.mockRestore();
@@ -358,7 +358,7 @@ describe("Welcome with deeplink", () => {
 		await waitFor(() => expect(toastWarningSpy).toHaveBeenCalledWith(commonTranslations.VALIDATING_URI));
 
 		// Automatically redirects to transfer page
-		await waitFor(() => expect(router.state.location.pathname).toBe(`/profiles/${fixtureProfileId}/send-transfer`));
+		await waitFor(() => expect(router.state.location.pathname).toBe(`/profiles/${fixtureProfileId}/dashboard`));
 
 		toastWarningSpy.mockRestore();
 		profilesSpy.mockRestore();

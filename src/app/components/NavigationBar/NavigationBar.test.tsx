@@ -367,7 +367,7 @@ describe("NavigationBar", () => {
 
 	it("should handle mobile menu home button", async () => {
 		const { router } = renderResponsiveWithRoute(<NavigationBar />, "xs", {
-			route: "/profiles/:profileId/send-transfer",
+			route: "/profiles/:profileId/dashboard",
 		});
 
 		await userEvent.click(screen.getByTestId("NavigationBar__buttons__mobile--home"));
