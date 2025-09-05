@@ -82,6 +82,8 @@ export const AddressesSidePanel = ({
 	const [activeMode, setActiveMode] = useState<AddressViewType>(profile.walletSelectionMode());
 
 	const [selectedAddresses, setSelectedAddresses] = useState<string[]>(profile.wallets().selected().map(wallet => wallet.address()));
+	console.log({ selectedAddresses })
+
 
 	/* istanbul ignore next -- @preserve */
 	const { isXs } = useBreakpoint();
@@ -106,6 +108,8 @@ export const AddressesSidePanel = ({
 
 		if (profile.walletSelectionMode() === "single") {
 			profile.wallets().selectOne(wallet)
+			setSelectedAddresses(profile.wallets().selected().map(wallet => wallet.address()))
+
 			onOpenChange(false);
 			onCloseFromParent([wallet.address()], activeMode);
 			await persist()
@@ -113,7 +117,18 @@ export const AddressesSidePanel = ({
 		}
 
 		const isSelected = wallet.isSelected()
+		const deselectsLastWallet = isSelected && selectedAddresses.length === 1 && selectedAddresses.includes(wallet.address())
+
+		if (deselectsLastWallet) {
+			// Trigger warning for minimum selection.
+			setSelectedAddresses([])
+			return
+		}
+
+		console.log("isSelected", isSelected)
 		wallet.mutator().isSelected(!isSelected)
+		console.log({ selectedAddresses: profile.wallets().selected().map(wallet => wallet.address()) })
+		setSelectedAddresses(profile.wallets().selected().map(wallet => wallet.address()))
 		await persist()
 
 		// if (activeMode === AddressViewSelection.single) {
@@ -454,7 +469,7 @@ export const AddressesSidePanel = ({
 							key={wallet.address()}
 							wallet={wallet}
 							toggleAddress={() => toggleSelection(wallet)}
-							isSelected={wallet.isSelected()}
+							isSelected={selectedAddresses.includes(wallet.address())}
 							isSingleView={activeMode === AddressViewSelection.single}
 							usesManageMode={isManageMode}
 							onDelete={(address: string) => setAddressToDelete(address)}
