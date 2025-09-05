@@ -19,11 +19,11 @@ export interface IGenerateOptions {
  *
  * @type IGenerateHDOptions
  */
-export type IGenerateHDOptions = IGenerateOptions &
-	HDOptions & {
-		coin?: string;
-		mnemonic?: string;
-	};
+export type IGenerateHDOptions = IGenerateOptions & {
+	coin?: string;
+	mnemonic?: string;
+	levels: Services.IdentityLevels;
+};
 
 /**
  * Defines the options for an import with a mnemonic.
@@ -37,6 +37,7 @@ export interface IMnemonicOptions {
 
 export interface IMnemonicDerivativeOptions extends IMnemonicOptions {
 	levels: Services.IdentityLevels;
+	coin?: string;
 }
 
 /**
