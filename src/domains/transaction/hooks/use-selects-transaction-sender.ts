@@ -1,6 +1,7 @@
 import { useActiveProfile } from "@/app/hooks";
 import { useEffect, useState } from "react";
 import { Contracts } from "@/app/lib/profiles";
+import { useSearchParams } from "react-router";
 
 export const useSelectsTransactionSender = ({
 	active,
@@ -9,6 +10,8 @@ export const useSelectsTransactionSender = ({
 	active: boolean;
 	onWalletChange?: (wallet?: Contracts.IReadWriteWallet) => void;
 }) => {
+	const [searchParams, setSearchParams] = useSearchParams();
+
 	const activeProfile = useActiveProfile();
 
 	const guessActiveWallet = () => {
@@ -23,6 +26,11 @@ export const useSelectsTransactionSender = ({
 			setActiveWallet(guessActiveWallet());
 		} else {
 			setActiveWallet(undefined);
+
+			if (searchParams.has("method")) {
+				searchParams.delete("method");
+				setSearchParams(searchParams);
+			}
 		}
 	}, [active]);
 
