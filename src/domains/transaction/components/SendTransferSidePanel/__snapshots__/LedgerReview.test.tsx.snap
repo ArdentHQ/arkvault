@@ -1,0 +1,849 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`TransferLedgerReview > should render 1`] = `
+<DocumentFragment>
+  <div
+    class="space-y-3 sm:space-y-4"
+  >
+    <div
+      data-testid="DetailWrapper"
+    >
+      <div
+        class="border-x-theme-primary-400 dim:border-x-theme-dim-navy-400 bg-theme-secondary-100 dim:bg-theme-dim-950 dim:sm:bg-transparent border-l-2 px-3 py-2 sm:border-none sm:bg-transparent sm:p-0 dark:bg-black dark:sm:bg-transparent"
+        data-testid="DetailLabel"
+      >
+        <div
+          class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold text-sm leading-[17px] sm:text-base sm:leading-5"
+          data-testid="DetailLabelText"
+        >
+          Addressing
+        </div>
+      </div>
+      <div
+        class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 overflow-hidden rounded-xl sm:border flex flex-col gap-3 mt-0 sm:mt-2"
+      >
+        <div
+          class="w-full p-3 break-words sm:px-6 sm:py-5 sm:in-[.condensed]:py-4"
+        >
+          <div
+            class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
+          >
+            <div
+              class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 w-20 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
+            >
+              From
+            </div>
+            <div
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
+            >
+              <span
+                class="font-semibold text-base text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
+                data-testid="Address__alias"
+              >
+                <span
+                  class="no-ligatures transition-colors duration-200"
+                  data-testid="TruncateEnd"
+                >
+                  Mainsail Wallet …
+                </span>
+              </span>
+              <div
+                class="relative grow leading-[17px] sm:leading-5 text-left"
+              >
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base absolute w-full"
+                  data-testid="Address__address"
+                >
+                  0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                </span>
+                <span>
+                   
+                </span>
+              </div>
+              <button
+                class="ring-focus relative cursor-pointer focus:outline-hidden"
+                data-ring-focus-margin="-m-1"
+                data-testid="clipboard-icon__wrapper"
+                type="button"
+              >
+                <div
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
+                >
+                  <div
+                    style="height: 16px; width: 16px;"
+                  >
+                    <svg
+                      id="copy"
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                        />
+                        <path
+                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      data-testid="DetailWrapper"
+    >
+      <div
+        class="border-x-theme-primary-400 dim:border-x-theme-dim-navy-400 bg-theme-secondary-100 dim:bg-theme-dim-950 dim:sm:bg-transparent border-l-2 px-3 py-2 sm:border-none sm:bg-transparent sm:p-0 dark:bg-black dark:sm:bg-transparent"
+        data-testid="DetailLabel"
+      >
+        <div
+          class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold text-sm leading-[17px] sm:text-base sm:leading-5"
+          data-testid="DetailLabelText"
+        >
+          <div
+            class="flex items-center space-x-2"
+            data-testid="LedgerReview__expiration"
+          >
+            <span>
+              Expiration
+            </span>
+            <div
+              class="questionmark bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:bg-theme-primary-700 dim:bg-theme-dim-700 dim:text-theme-dim-50 flex h-5 w-5 cursor-pointer items-center justify-center rounded-full hover:text-white"
+            >
+              <div>
+                <div
+                  style="height: 10px; width: 10px;"
+                >
+                  <svg
+                    id="question-mark-small"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 10 10"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M5 9h0M3.2 2.8C3.2 1.9 3.9 1 5 1s1.8.8 1.8 1.8c0 .8-.4 1.5-1.3 1.7-.3.2-.5.5-.5.8v.9"
+                      />
+                    </g>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 overflow-hidden rounded-xl sm:border mt-0 sm:mt-2"
+      >
+        <div
+          class="w-full p-3 break-words sm:px-6 sm:py-5 sm:in-[.condensed]:py-4"
+        >
+          123
+        </div>
+      </div>
+    </div>
+    <div
+      class="mt-2"
+    >
+      <div
+        data-testid="DetailWrapper"
+      >
+        <div
+          class="border-x-theme-primary-400 dim:border-x-theme-dim-navy-400 bg-theme-secondary-100 dim:bg-theme-dim-950 dim:sm:bg-transparent border-l-2 px-3 py-2 sm:border-none sm:bg-transparent sm:p-0 dark:bg-black dark:sm:bg-transparent"
+          data-testid="DetailLabel"
+        >
+          <div
+            class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold text-sm leading-[17px] sm:text-base sm:leading-5"
+            data-testid="DetailLabelText"
+          >
+            Transaction Summary
+          </div>
+        </div>
+        <div
+          class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 overflow-hidden rounded-xl sm:border rounded-xl mt-0 sm:mt-2"
+        >
+          <div
+            class="w-full p-3 break-words sm:px-6 sm:py-5 sm:in-[.condensed]:py-4"
+          >
+            <div
+              class="flex flex-col gap-3"
+            >
+              <div
+                class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
+                data-testid="AmountSection"
+              >
+                <div
+                  class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-36"
+                >
+                  Amount
+                </div>
+                <div
+                  class="flex flex-row items-center gap-2"
+                >
+                  <span
+                    class="whitespace-nowrap font-semibold"
+                    data-testid="Amount"
+                  >
+                    0 ARK
+                  </span>
+                </div>
+              </div>
+              <div
+                class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
+              >
+                <div
+                  class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-36"
+                >
+                  Fee
+                </div>
+                <div
+                  class="flex flex-row items-center gap-2"
+                >
+                  <span
+                    class="whitespace-nowrap font-semibold"
+                    data-testid="Amount"
+                  >
+                    0 ARK
+                  </span>
+                </div>
+              </div>
+              <div
+                class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
+              >
+                <div
+                  class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-36"
+                >
+                  Total
+                </div>
+                <div
+                  class="flex flex-row items-center gap-2"
+                >
+                  <span
+                    class="whitespace-nowrap font-semibold"
+                    data-testid="Amount"
+                  >
+                    0 ARK
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-theme-secondary-300 dark:bg-theme-secondary-800 flex w-full flex-col px-6 py-3"
+          >
+            <div
+              class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
+            >
+              <div
+                class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 shrink-0 text-sm leading-[17px] font-semibold w-auto leading-4! sm:min-w-36 sm:text-sm"
+              >
+                Confirmation Time
+              </div>
+              <div
+                class="flex flex-row items-center gap-2 leading-4! lowercase sm:text-sm"
+              >
+                ~10s
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`TransferLedgerReview > should render skeleton while loading expiration 1`] = `
+<DocumentFragment>
+  <div
+    class="space-y-3 sm:space-y-4"
+  >
+    <div
+      data-testid="DetailWrapper"
+    >
+      <div
+        class="border-x-theme-primary-400 dim:border-x-theme-dim-navy-400 bg-theme-secondary-100 dim:bg-theme-dim-950 dim:sm:bg-transparent border-l-2 px-3 py-2 sm:border-none sm:bg-transparent sm:p-0 dark:bg-black dark:sm:bg-transparent"
+        data-testid="DetailLabel"
+      >
+        <div
+          class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold text-sm leading-[17px] sm:text-base sm:leading-5"
+          data-testid="DetailLabelText"
+        >
+          Addressing
+        </div>
+      </div>
+      <div
+        class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 overflow-hidden rounded-xl sm:border flex flex-col gap-3 mt-0 sm:mt-2"
+      >
+        <div
+          class="w-full p-3 break-words sm:px-6 sm:py-5 sm:in-[.condensed]:py-4"
+        >
+          <div
+            class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
+          >
+            <div
+              class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 w-20 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
+            >
+              From
+            </div>
+            <div
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
+            >
+              <span
+                class="font-semibold text-base text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
+                data-testid="Address__alias"
+              >
+                <span
+                  class="no-ligatures transition-colors duration-200"
+                  data-testid="TruncateEnd"
+                >
+                  Mainsail Wallet …
+                </span>
+              </span>
+              <div
+                class="relative grow leading-[17px] sm:leading-5 text-left"
+              >
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base absolute w-full"
+                  data-testid="Address__address"
+                >
+                  0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                </span>
+                <span>
+                   
+                </span>
+              </div>
+              <button
+                class="ring-focus relative cursor-pointer focus:outline-hidden"
+                data-ring-focus-margin="-m-1"
+                data-testid="clipboard-icon__wrapper"
+                type="button"
+              >
+                <div
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
+                >
+                  <div
+                    style="height: 16px; width: 16px;"
+                  >
+                    <svg
+                      id="copy"
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                        />
+                        <path
+                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      data-testid="DetailWrapper"
+    >
+      <div
+        class="border-x-theme-primary-400 dim:border-x-theme-dim-navy-400 bg-theme-secondary-100 dim:bg-theme-dim-950 dim:sm:bg-transparent border-l-2 px-3 py-2 sm:border-none sm:bg-transparent sm:p-0 dark:bg-black dark:sm:bg-transparent"
+        data-testid="DetailLabel"
+      >
+        <div
+          class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold text-sm leading-[17px] sm:text-base sm:leading-5"
+          data-testid="DetailLabelText"
+        >
+          <div
+            class="flex items-center space-x-2"
+            data-testid="LedgerReview__expiration"
+          >
+            <span>
+              Expiration
+            </span>
+            <div
+              class="questionmark bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:bg-theme-primary-700 dim:bg-theme-dim-700 dim:text-theme-dim-50 flex h-5 w-5 cursor-pointer items-center justify-center rounded-full hover:text-white"
+            >
+              <div>
+                <div
+                  style="height: 10px; width: 10px;"
+                >
+                  <svg
+                    id="question-mark-small"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 10 10"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M5 9h0M3.2 2.8C3.2 1.9 3.9 1 5 1s1.8.8 1.8 1.8c0 .8-.4 1.5-1.3 1.7-.3.2-.5.5-.5.8v.9"
+                      />
+                    </g>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 overflow-hidden rounded-xl sm:border mt-0 sm:mt-2"
+      >
+        <div
+          class="w-full p-3 break-words sm:px-6 sm:py-5 sm:in-[.condensed]:py-4"
+        >
+          <span
+            class="my-0.5 flex"
+            data-testid="TransferLedgerReview__expiration-skeleton"
+          >
+            <span
+              aria-busy="true"
+              aria-live="polite"
+              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+            >
+              <span
+                class="react-loading-skeleton"
+                style="width: 80px; height: 16px;"
+              >
+                ‌
+              </span>
+              <br />
+            </span>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      class="mt-2"
+    >
+      <div
+        data-testid="DetailWrapper"
+      >
+        <div
+          class="border-x-theme-primary-400 dim:border-x-theme-dim-navy-400 bg-theme-secondary-100 dim:bg-theme-dim-950 dim:sm:bg-transparent border-l-2 px-3 py-2 sm:border-none sm:bg-transparent sm:p-0 dark:bg-black dark:sm:bg-transparent"
+          data-testid="DetailLabel"
+        >
+          <div
+            class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold text-sm leading-[17px] sm:text-base sm:leading-5"
+            data-testid="DetailLabelText"
+          >
+            Transaction Summary
+          </div>
+        </div>
+        <div
+          class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 overflow-hidden rounded-xl sm:border rounded-xl mt-0 sm:mt-2"
+        >
+          <div
+            class="w-full p-3 break-words sm:px-6 sm:py-5 sm:in-[.condensed]:py-4"
+          >
+            <div
+              class="flex flex-col gap-3"
+            >
+              <div
+                class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
+                data-testid="AmountSection"
+              >
+                <div
+                  class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-36"
+                >
+                  Amount
+                </div>
+                <div
+                  class="flex flex-row items-center gap-2"
+                >
+                  <span
+                    class="whitespace-nowrap font-semibold"
+                    data-testid="Amount"
+                  >
+                    0 ARK
+                  </span>
+                </div>
+              </div>
+              <div
+                class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
+              >
+                <div
+                  class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-36"
+                >
+                  Fee
+                </div>
+                <div
+                  class="flex flex-row items-center gap-2"
+                >
+                  <span
+                    class="whitespace-nowrap font-semibold"
+                    data-testid="Amount"
+                  >
+                    0 ARK
+                  </span>
+                </div>
+              </div>
+              <div
+                class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
+              >
+                <div
+                  class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-36"
+                >
+                  Total
+                </div>
+                <div
+                  class="flex flex-row items-center gap-2"
+                >
+                  <span
+                    class="whitespace-nowrap font-semibold"
+                    data-testid="Amount"
+                  >
+                    0 ARK
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-theme-secondary-300 dark:bg-theme-secondary-800 flex w-full flex-col px-6 py-3"
+          >
+            <div
+              class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
+            >
+              <div
+                class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 shrink-0 text-sm leading-[17px] font-semibold w-auto leading-4! sm:min-w-36 sm:text-sm"
+              >
+                Confirmation Time
+              </div>
+              <div
+                class="flex flex-row items-center gap-2 leading-4! lowercase sm:text-sm"
+              >
+                ~10s
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`TransferLedgerReview > should render with memo 1`] = `
+<DocumentFragment>
+  <div
+    class="space-y-3 sm:space-y-4"
+  >
+    <div
+      data-testid="DetailWrapper"
+    >
+      <div
+        class="border-x-theme-primary-400 dim:border-x-theme-dim-navy-400 bg-theme-secondary-100 dim:bg-theme-dim-950 dim:sm:bg-transparent border-l-2 px-3 py-2 sm:border-none sm:bg-transparent sm:p-0 dark:bg-black dark:sm:bg-transparent"
+        data-testid="DetailLabel"
+      >
+        <div
+          class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold text-sm leading-[17px] sm:text-base sm:leading-5"
+          data-testid="DetailLabelText"
+        >
+          Addressing
+        </div>
+      </div>
+      <div
+        class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 overflow-hidden rounded-xl sm:border flex flex-col gap-3 mt-0 sm:mt-2"
+      >
+        <div
+          class="w-full p-3 break-words sm:px-6 sm:py-5 sm:in-[.condensed]:py-4"
+        >
+          <div
+            class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
+          >
+            <div
+              class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 w-20 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
+            >
+              From
+            </div>
+            <div
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
+            >
+              <span
+                class="font-semibold text-base text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
+                data-testid="Address__alias"
+              >
+                <span
+                  class="no-ligatures transition-colors duration-200"
+                  data-testid="TruncateEnd"
+                >
+                  Mainsail Wallet …
+                </span>
+              </span>
+              <div
+                class="relative grow leading-[17px] sm:leading-5 text-left"
+              >
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base absolute w-full"
+                  data-testid="Address__address"
+                >
+                  0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                </span>
+                <span>
+                   
+                </span>
+              </div>
+              <button
+                class="ring-focus relative cursor-pointer focus:outline-hidden"
+                data-ring-focus-margin="-m-1"
+                data-testid="clipboard-icon__wrapper"
+                type="button"
+              >
+                <div
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
+                >
+                  <div
+                    style="height: 16px; width: 16px;"
+                  >
+                    <svg
+                      id="copy"
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                        />
+                        <path
+                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      data-testid="DetailWrapper"
+    >
+      <div
+        class="border-x-theme-primary-400 dim:border-x-theme-dim-navy-400 bg-theme-secondary-100 dim:bg-theme-dim-950 dim:sm:bg-transparent border-l-2 px-3 py-2 sm:border-none sm:bg-transparent sm:p-0 dark:bg-black dark:sm:bg-transparent"
+        data-testid="DetailLabel"
+      >
+        <div
+          class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold text-sm leading-[17px] sm:text-base sm:leading-5"
+          data-testid="DetailLabelText"
+        >
+          <div
+            class="flex items-center space-x-2"
+            data-testid="LedgerReview__expiration"
+          >
+            <span>
+              Expiration
+            </span>
+            <div
+              class="questionmark bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:bg-theme-primary-700 dim:bg-theme-dim-700 dim:text-theme-dim-50 flex h-5 w-5 cursor-pointer items-center justify-center rounded-full hover:text-white"
+            >
+              <div>
+                <div
+                  style="height: 10px; width: 10px;"
+                >
+                  <svg
+                    id="question-mark-small"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 10 10"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M5 9h0M3.2 2.8C3.2 1.9 3.9 1 5 1s1.8.8 1.8 1.8c0 .8-.4 1.5-1.3 1.7-.3.2-.5.5-.5.8v.9"
+                      />
+                    </g>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 overflow-hidden rounded-xl sm:border mt-0 sm:mt-2"
+      >
+        <div
+          class="w-full p-3 break-words sm:px-6 sm:py-5 sm:in-[.condensed]:py-4"
+        >
+          123
+        </div>
+      </div>
+    </div>
+    <div
+      class="mt-2"
+    >
+      <div
+        data-testid="DetailWrapper"
+      >
+        <div
+          class="border-x-theme-primary-400 dim:border-x-theme-dim-navy-400 bg-theme-secondary-100 dim:bg-theme-dim-950 dim:sm:bg-transparent border-l-2 px-3 py-2 sm:border-none sm:bg-transparent sm:p-0 dark:bg-black dark:sm:bg-transparent"
+          data-testid="DetailLabel"
+        >
+          <div
+            class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold text-sm leading-[17px] sm:text-base sm:leading-5"
+            data-testid="DetailLabelText"
+          >
+            Transaction Summary
+          </div>
+        </div>
+        <div
+          class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 overflow-hidden rounded-xl sm:border rounded-xl mt-0 sm:mt-2"
+        >
+          <div
+            class="w-full p-3 break-words sm:px-6 sm:py-5 sm:in-[.condensed]:py-4"
+          >
+            <div
+              class="flex flex-col gap-3"
+            >
+              <div
+                class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
+                data-testid="AmountSection"
+              >
+                <div
+                  class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-36"
+                >
+                  Amount
+                </div>
+                <div
+                  class="flex flex-row items-center gap-2"
+                >
+                  <span
+                    class="whitespace-nowrap font-semibold"
+                    data-testid="Amount"
+                  >
+                    0 ARK
+                  </span>
+                </div>
+              </div>
+              <div
+                class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
+              >
+                <div
+                  class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-36"
+                >
+                  Fee
+                </div>
+                <div
+                  class="flex flex-row items-center gap-2"
+                >
+                  <span
+                    class="whitespace-nowrap font-semibold"
+                    data-testid="Amount"
+                  >
+                    0 ARK
+                  </span>
+                </div>
+              </div>
+              <div
+                class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
+              >
+                <div
+                  class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-36"
+                >
+                  Total
+                </div>
+                <div
+                  class="flex flex-row items-center gap-2"
+                >
+                  <span
+                    class="whitespace-nowrap font-semibold"
+                    data-testid="Amount"
+                  >
+                    0 ARK
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-theme-secondary-300 dark:bg-theme-secondary-800 flex w-full flex-col px-6 py-3"
+          >
+            <div
+              class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
+            >
+              <div
+                class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 shrink-0 text-sm leading-[17px] font-semibold w-auto leading-4! sm:min-w-36 sm:text-sm"
+              >
+                Confirmation Time
+              </div>
+              <div
+                class="flex flex-row items-center gap-2 leading-4! lowercase sm:text-sm"
+              >
+                ~10s
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
