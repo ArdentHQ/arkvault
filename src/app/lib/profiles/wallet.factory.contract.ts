@@ -39,9 +39,13 @@ export enum BIP44CoinType {
 	ETH = "60'",
 }
 
+export interface IMnemonicBIP44DerivativeOptions extends IMnemonicOptions {
+	levels: Services.IdentityLevels;
+	coin?: BIP44CoinType;
+}
+
 export interface IMnemonicDerivativeOptions extends IMnemonicOptions {
 	levels: Services.IdentityLevels;
-	coin?: BIP44CoinType | string;
 }
 
 /**
@@ -134,11 +138,11 @@ export interface IWalletFactory {
 	/**
 	 * Imports a wallet from a mnemonic, using the BIP44 proposal.
 	 *
-	 * @param {IMnemonicDerivativeOptions} options
+	 * @param {IMnemonicBIP44DerivativeOptions} options
 	 * @return {Promise<IReadWriteWallet>}
 	 * @memberof IWalletFactory
 	 */
-	fromMnemonicWithBIP44(options: IMnemonicDerivativeOptions): Promise<IReadWriteWallet>;
+	fromMnemonicWithBIP44(options: IMnemonicBIP44DerivativeOptions): Promise<IReadWriteWallet>;
 
 	/**
 	 * Imports a wallet from a mnemonic, using the BIP49 proposal.

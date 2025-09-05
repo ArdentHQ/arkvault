@@ -6,6 +6,7 @@ import {
 	IAddressWithDerivationPathOptions,
 	IGenerateHDOptions,
 	IGenerateOptions,
+	IMnemonicBIP44DerivativeOptions,
 	IMnemonicOptions,
 	IPrivateKeyOptions,
 	IProfile,
@@ -90,7 +91,7 @@ export class WalletFactory implements IWalletFactory {
 		mnemonic,
 		coin = BIP44CoinType.ARK,
 		levels,
-	}: IMnemonicDerivativeOptions): Promise<IReadWriteWallet> {
+	}: IMnemonicBIP44DerivativeOptions): Promise<IReadWriteWallet> {
 		const accountIndex = levels.account;
 		const changeIndex = levels.change ?? 0;
 		const addressIndex = levels.addressIndex ?? 0;
