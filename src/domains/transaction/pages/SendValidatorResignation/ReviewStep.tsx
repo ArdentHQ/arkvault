@@ -14,13 +14,16 @@ import { Amount } from "@/app/components/Amount";
 import { Tooltip } from "@/app/components/Tooltip";
 import { useValidatorResignationLockedFee } from "./hooks/useValidatorResignationLockedFee";
 import { BigNumber } from "@/app/lib/helpers";
+import cn from "classnames";
 
 export const ReviewStep = ({
 	senderWallet,
 	profile,
+	hideHeader = false,
 }: {
 	senderWallet: Contracts.IReadWriteWallet;
 	profile: Contracts.IProfile;
+	hideHeader?: boolean;
 }) => {
 	const { t } = useTranslation();
 
@@ -42,20 +45,26 @@ export const ReviewStep = ({
 
 	return (
 		<section data-testid="SendValidatorResignation__review-step">
-			<StepHeader
-				title={t("TRANSACTION.REVIEW_STEP.TITLE")}
-				subtitle={t("TRANSACTION.REVIEW_STEP.DESCRIPTION")}
-				titleIcon={
-					<ThemeIcon
-						dimensions={[24, 24]}
-						lightIcon="SendTransactionLight"
-						darkIcon="SendTransactionDark"
-						dimIcon="SendTransactionDim"
-					/>
-				}
-			/>
+			{!hideHeader && (
+				<StepHeader
+					title={t("TRANSACTION.REVIEW_STEP.TITLE")}
+					subtitle={t("TRANSACTION.REVIEW_STEP.DESCRIPTION")}
+					titleIcon={
+						<ThemeIcon
+							dimensions={[24, 24]}
+							lightIcon="SendTransactionLight"
+							darkIcon="SendTransactionDark"
+							dimIcon="SendTransactionDim"
+						/>
+					}
+				/>
+			)}
 
-			<div className="-mx-3 mt-6 space-y-3 sm:mx-0 sm:mt-4 sm:space-y-4">
+			<div
+				className={cn("space-y-3 sm:mx-0 sm:space-y-4", {
+					"mt-6 sm:mt-4": !hideHeader,
+				})}
+			>
 				<TransactionAddresses
 					labelClassName="w-auto sm:min-w-[178px]"
 					senderAddress={senderWallet.address()}

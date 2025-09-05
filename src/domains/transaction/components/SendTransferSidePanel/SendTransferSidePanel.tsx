@@ -1,4 +1,4 @@
-import { Contracts, DTO } from "@/app/lib/profiles";
+import { DTO } from "@/app/lib/profiles";
 import React, { useCallback, useEffect, useMemo, useRef, useState, JSX } from "react";
 import { useTranslation } from "react-i18next";
 import { URLBuilder } from "@ardenthq/arkvault-url";
@@ -12,7 +12,7 @@ import { Form } from "@/app/components/Form";
 import { QRModal } from "@/app/components/QRModal";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { StepsProvider, useEnvironmentContext, useLedgerContext } from "@/app/contexts";
-import { useActiveProfile, useActiveWalletWhenNeeded } from "@/app/hooks";
+import { useActiveProfile } from "@/app/hooks";
 import { useKeyup } from "@/app/hooks/use-keyup";
 import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
 import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
@@ -36,6 +36,7 @@ import { Button } from "@/app/components/Button";
 import { ConfirmSendTransaction } from "@/domains/transaction/components/ConfirmSendTransaction";
 import { ThemeIcon } from "@/app/components/Icon";
 import { useConfirmedTransaction } from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
+import { useSelectsTransactionSender } from "@/domains/transaction/hooks/use-selects-transaction-sender";
 
 const MAX_TABS = 5;
 
@@ -49,8 +50,11 @@ export const SendTransferSidePanel = ({
 	const { t } = useTranslation();
 
 	const { env } = useEnvironmentContext();
-	const activeWallet = useActiveWalletWhenNeeded(false);
-	const [wallet, setWallet] = useState<Contracts.IReadWriteWallet | undefined>(activeWallet);
+
+	const [mounted, setMounted] = useState(false);
+	const { activeWallet: wallet, setActiveWallet: setWallet } = useSelectsTransactionSender({
+		active: mounted,
+	});
 
 	const activeProfile = useActiveProfile();
 	const { activeNetwork } = useActiveNetwork({ profile: activeProfile });
@@ -134,6 +138,7 @@ export const SendTransferSidePanel = ({
 
 	const onMountChange = useCallback(
 		(mounted: boolean) => {
+			setMounted(mounted);
 			if (!mounted) {
 				resetState();
 				return;
