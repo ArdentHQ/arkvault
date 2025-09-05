@@ -19,7 +19,7 @@ export interface IGenerateOptions {
  * @type IGenerateHDOptions
  */
 export type IGenerateHDOptions = IGenerateOptions & {
-	coin?: string;
+	coin?: BIP44CoinType;
 	mnemonic?: string;
 	levels: Services.IdentityLevels;
 };
@@ -34,9 +34,14 @@ export interface IMnemonicOptions {
 	password?: string;
 }
 
+export enum BIP44CoinType {
+	ARK = "111'",
+	ETH = "60'",
+}
+
 export interface IMnemonicDerivativeOptions extends IMnemonicOptions {
 	levels: Services.IdentityLevels;
-	coin?: string;
+	coin?: BIP44CoinType;
 }
 
 /**

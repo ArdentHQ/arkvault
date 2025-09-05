@@ -1,6 +1,7 @@
 import { Enums } from "@/app/lib/mainsail";
 import { BIP39, UUID } from "@ardenthq/arkvault-crypto";
 import {
+	BIP44CoinType,
 	IAddressOptions,
 	IAddressWithDerivationPathOptions,
 	IGenerateHDOptions,
@@ -87,17 +88,14 @@ export class WalletFactory implements IWalletFactory {
 	/** {@inheritDoc IWalletFactory.fromMnemonicWithBIP44} */
 	public async fromMnemonicWithBIP44({
 		mnemonic,
-		coin,
+		coin = BIP44CoinType.ARK,
 		levels,
 	}: IMnemonicDerivativeOptions): Promise<IReadWriteWallet> {
-		// Determine coin type - default to ARK (111)
-		const coinType = coin === "ETH" ? "60'" : "111'";
-
 		const accountIndex = levels.account;
 		const changeIndex = levels.change ?? 0;
 		const addressIndex = levels.addressIndex ?? 0;
 
-		const derivationPath = `m/44'/${coinType}/${accountIndex}'/${changeIndex}/${addressIndex}` as const;
+		const derivationPath = `m/44'/${coin}/${accountIndex}'/${changeIndex}/${addressIndex}` as const;
 
 		const seed = BIP39.toSeed(mnemonic);
 
