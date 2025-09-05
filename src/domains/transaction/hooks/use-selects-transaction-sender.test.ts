@@ -23,7 +23,6 @@ describe("useSelectsTransactionSender", () => {
 
 	afterEach(() => {
 		vi.restoreAllMocks();
-		ransaction / hooks / use - selects - transaction - sender.test.ts;
 	});
 
 	beforeEach(() => {
