@@ -38,9 +38,13 @@ export const Dashboard = ({
 	>(undefined);
 	const [showSendUsernameResignationPanel, setShowSendUsernameResignationPanel] = useState(false);
 	const [showSendValidatorResignationPanel, setShowSendValidatorResignationPanel] = useState(false);
+
 	useDeeplinkActionHandler({
 		onSignMessage: () => {
 			setShowSignMessagePanel(true);
+		},
+		onTransfer: () => {
+			setShowSendTransferPanel(true);
 		},
 	});
 
