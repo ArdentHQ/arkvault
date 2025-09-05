@@ -22,8 +22,8 @@ import React from "react";
 import { SendValidatorResignationSidePanel } from "./SendValidatorResignationSidePanel";
 import userEvent from "@testing-library/user-event";
 import { PublicKeyService } from "@/app/lib/mainsail/public-key.service";
-import { expect, vi } from "vitest";
-
+import { afterAll, expect, vi } from "vitest";
+import * as ReactRouter from "react-router";
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
 const passphrase = getDefaultMainsailWalletMnemonic();
@@ -115,8 +115,13 @@ const sendButton = () => screen.getByTestId("SendRegistration__send-button");
 
 const reviewStepID = "SendValidatorResignation__review-step";
 
+let useSearchParamsMock;
 describe("SendValidatorResignationSidePanel", () => {
 	beforeAll(async () => {
+		useSearchParamsMock = vi
+			.spyOn(ReactRouter, "useSearchParams")
+			.mockReturnValue([new URLSearchParams(), vi.fn()]);
+
 		profile = env.profiles().findById(getMainsailProfileId())!;
 
 		await env.profiles().restore(profile);
@@ -158,6 +163,10 @@ describe("SendValidatorResignationSidePanel", () => {
 				ValidatorResignationFixture,
 			),
 		);
+	});
+
+	afterAll(() => {
+		useSearchParamsMock.mockRestore();
 	});
 
 	it("should show mnemonic authentication error", async () => {
