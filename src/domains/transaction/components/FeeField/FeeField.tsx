@@ -43,7 +43,8 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 	const gasLimit = BigNumber.make(getValues("gasLimit") ?? 0);
 
 	const [data, _isLoadingData] = useDebounce(properties.data, 700);
-	const recipientsCount = Array.isArray(properties.data?.payments) ? properties.data.payments.length : 1;
+	// const recipientsCount = Array.isArray(properties.data?.payments) ? properties.data.payments.length : 1;
+	const recipientsCount = profile.wallets().count()
 
 	useEffect(() => {
 		/* istanbul ignore else -- @preserve */
@@ -51,22 +52,23 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 		const fallbackGasLimit = isMultiPayment ? GasLimit.multiPayment.times(recipientsCount) : GasLimit[type];
 
 		const estimate = async () => {
-			let gasLimit = fallbackGasLimit;
+			const gasLimit = GasLimit.multiPayment.times(recipientsCount);
 
-			try {
-				gasLimit = await estimateGas({
-					data: { ...getValues(), ...data, senderAddress: data?.senderAddress! },
-					type,
-				});
-
-				if (gasLimit.isZero()) {
-					gasLimit = fallbackGasLimit;
-				}
-			} catch (error) {
-				console.warn(error);
-			}
+			// try {
+			// 	gasLimit = await estimateGas({
+			// 		data: { ...getValues(), ...data, senderAddress: data?.senderAddress! },
+			// 		type,
+			// 	});
+			//
+			// 	if (gasLimit.isZero()) {
+			// 		gasLimit = fallbackGasLimit;
+			// 	}
+			// } catch (error) {
+			// 	console.warn(error);
+			// }
 
 			setEstimatedGasLimit(gasLimit);
+			console.log({ gasLimit })
 			setValue("gasLimit", gasLimit, { shouldDirty: true, shouldValidate: true });
 		};
 
