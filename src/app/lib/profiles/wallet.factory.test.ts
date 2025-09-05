@@ -166,6 +166,7 @@ describe("WalletFactory", () => {
 			expect(wallet.data().get(WalletData.ImportMethod)).toBe(WalletImportMethod.BIP44.DERIVATION_PATH);
 			expect(wallet.data().get(WalletData.DerivationPath)).toBe("m/44'/111'/0'/0/0");
 			expect(wallet.data().get(WalletData.AddressIndex)).toBe(0);
+			expect(wallet.data().get(WalletData.PublicKey)).toBeTruthy();
 		});
 
 		it("should create a wallet from a mnemonic with ETH coin type", async () => {
