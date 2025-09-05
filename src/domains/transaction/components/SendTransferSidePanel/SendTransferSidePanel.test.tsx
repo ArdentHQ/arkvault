@@ -26,6 +26,7 @@ import * as AppContexts from "@/app/contexts";
 import * as hooks from "@/domains/transaction/hooks";
 import * as pendingHook from "@/domains/transaction/hooks/use-pending-transactions";
 import * as appHooks from "@/app/hooks";
+import * as ReactRouter from "react-router";
 
 const passphrase = getDefaultWalletMnemonic();
 const fixtureProfileId = getDefaultProfileId();
@@ -89,6 +90,7 @@ const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
 let firstWalletAddress: string;
+let useSearchParamsMock;
 
 const selectFirstRecipient = () => userEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
 const selectRecipient = () =>
@@ -142,6 +144,10 @@ describe("SendTransferSidePanel", () => {
 	});
 
 	beforeEach(() => {
+		useSearchParamsMock = vi
+			.spyOn(ReactRouter, "useSearchParams")
+			.mockReturnValue([new URLSearchParams(), vi.fn()]);
+
 		vi.spyOn(wallet, "balance").mockReturnValue(1_000_000_000_000_000_000);
 
 		vi.spyOn(useConfirmedTransactionMock, "useConfirmedTransaction").mockReturnValue({
