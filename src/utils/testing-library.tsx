@@ -284,7 +284,7 @@ export const createBIP44Path = (
 	coinType: BIP44CoinType,
 	account: number = 0,
 	change: number = 0,
-	addressIndex: number = 0
+	addressIndex: number = 0,
 ): string => `m/44'/${coinType}/${account}'/${change}/${addressIndex}`;
 
 export const breakpoints: {
