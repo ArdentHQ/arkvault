@@ -420,7 +420,7 @@ describe("useSearchParametersValidation", () => {
 				searchParameters: parameters,
 			}),
 		).toBe(
-			`/profiles/${profile.id()}/send-transfer?coin=mainsail&method=transfer&nethash=${
+			`/profiles/${profile.id()}/dashboard?method=transfer&coin=mainsail&method=transfer&nethash=${
 				profile.wallets().first().network().meta().nethash
 			}`,
 		);

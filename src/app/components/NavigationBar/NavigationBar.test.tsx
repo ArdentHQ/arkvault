@@ -271,7 +271,9 @@ describe("NavigationBar", () => {
 
 		await userEvent.click(sendButton);
 
-		expect(router.state.location.pathname).toBe(`/profiles/${mockProfile.id()}/send-transfer`);
+		expect(router.state.location.pathname + router.state.location.search).toBe(
+			`/profiles/${mockProfile.id()}/dashboard?method=transfer`,
+		);
 	});
 
 	it("should handle click to send button from mobile menu", async () => {
@@ -282,7 +284,9 @@ describe("NavigationBar", () => {
 
 		await userEvent.click(sendButton);
 
-		expect(router.state.location.pathname).toBe(`/profiles/${mockProfile.id()}/send-transfer`);
+		expect(router.state.location.pathname + router.state.location.search).toBe(
+			`/profiles/${mockProfile.id()}/dashboard?method=transfer`,
+		);
 	});
 
 	it("should handle receive funds", async () => {

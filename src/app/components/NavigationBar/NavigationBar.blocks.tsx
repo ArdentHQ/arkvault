@@ -304,7 +304,9 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 		return navigate(sendTransferPath);
 	}, [location]);
 
-	const receiveButtonClickHandler = useCallback(() => {}, [location]);
+	const receiveButtonClickHandler = useCallback(() => {
+		setSearchWalletIsOpen(true);
+	}, [location]);
 
 	const homeButtonHandler = useCallback(() => {
 		const dashboardPath = generatePath(ProfilePaths.Dashboard, { profileId: profile.id() });
