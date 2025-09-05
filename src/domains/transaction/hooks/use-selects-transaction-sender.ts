@@ -10,6 +10,7 @@ export const useSelectsTransactionSender = ({
 	active: boolean;
 	onWalletChange?: (wallet?: Contracts.IReadWriteWallet) => void;
 }) => {
+	const [resetSearchParamsOnDeactivate, setResetSearchParamsOnDeactivate] = useState(false);
 	const [searchParams, setSearchParams] = useSearchParams();
 
 	const activeProfile = useActiveProfile();
@@ -24,12 +25,13 @@ export const useSelectsTransactionSender = ({
 	useEffect(() => {
 		if (active) {
 			setActiveWallet(guessActiveWallet());
+
+			setResetSearchParamsOnDeactivate(true);
 		} else {
 			setActiveWallet(undefined);
 
-			if (searchParams.has("method")) {
-				searchParams.delete("method");
-				setSearchParams(searchParams);
+			if (resetSearchParamsOnDeactivate && searchParams.has("method")) {
+				setSearchParams(new URLSearchParams());
 			}
 		}
 	}, [active]);
