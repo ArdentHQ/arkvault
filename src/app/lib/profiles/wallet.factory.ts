@@ -93,7 +93,6 @@ export class WalletFactory implements IWalletFactory {
 		// Determine coin type - default to ARK (111)
 		const coinType = coin === "ETH" ? "60'" : "111'";
 
-		// Extract levels with defaults
 		const accountIndex = levels.account;
 		const changeIndex = levels.change ?? 0;
 		const addressIndex = levels.addressIndex ?? 0;
