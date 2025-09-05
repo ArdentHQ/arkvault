@@ -38,6 +38,7 @@ export const TransactionRoutes: RouteItem[] = [
 		exact: true,
 		path: ProfilePaths.SendUsernameResignationProfile,
 	},
+
 	{
 		component: SendVote,
 		exact: true,
