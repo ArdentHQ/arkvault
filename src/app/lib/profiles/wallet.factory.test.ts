@@ -95,7 +95,7 @@ describe("WalletFactory", () => {
 			const { mnemonic, wallet } = await subject.generateHD({
 				levels: { account: 0 },
 				locale: "english",
-				wordCount: 12
+				wordCount: 12,
 			});
 
 			expect(mnemonic).toBeTruthy();
@@ -111,7 +111,7 @@ describe("WalletFactory", () => {
 				coin: "ETH",
 				levels: { account: 0 },
 				locale: "english",
-				wordCount: 12
+				wordCount: 12,
 			});
 
 			expect(mnemonic.split(" ")).toHaveLength(12);
@@ -124,7 +124,7 @@ describe("WalletFactory", () => {
 			const { wallet } = await subject.generateHD({
 				levels: { account: 5 },
 				locale: "english",
-				wordCount: 12
+				wordCount: 12,
 			});
 
 			expect(wallet.data().get(WalletData.DerivationPath)).toBe("m/44'/111'/5'/0/0");
@@ -135,7 +135,7 @@ describe("WalletFactory", () => {
 			const { wallet } = await subject.generateHD({
 				levels: { account: 2, addressIndex: 3, change: 1 },
 				locale: "english",
-				wordCount: 12
+				wordCount: 12,
 			});
 
 			expect(wallet.data().get(WalletData.DerivationPath)).toBe("m/44'/111'/2'/1/3");
@@ -146,7 +146,7 @@ describe("WalletFactory", () => {
 			const { mnemonic, wallet } = await subject.generateHD({
 				levels: { account: 0 },
 				locale: "english",
-				wordCount: 24
+				wordCount: 24,
 			});
 
 			expect(mnemonic.split(" ")).toHaveLength(24);
@@ -158,7 +158,7 @@ describe("WalletFactory", () => {
 		it("should create a wallet from a mnemonic with default coin type", async () => {
 			const wallet = await subject.fromMnemonicWithBIP44({
 				levels: { account: 0 },
-				mnemonic
+				mnemonic,
 			});
 
 			expect(wallet).toBeInstanceOf(Wallet);
@@ -173,7 +173,7 @@ describe("WalletFactory", () => {
 			const wallet = await subject.fromMnemonicWithBIP44({
 				coin: "ETH",
 				levels: { account: 0 },
-				mnemonic
+				mnemonic,
 			});
 
 			expect(wallet).toBeInstanceOf(Wallet);
@@ -184,7 +184,7 @@ describe("WalletFactory", () => {
 		it("should create a wallet with custom derivation levels", async () => {
 			const wallet = await subject.fromMnemonicWithBIP44({
 				levels: { account: 1, addressIndex: 5, change: 1 },
-				mnemonic
+				mnemonic,
 			});
 
 			expect(wallet).toBeInstanceOf(Wallet);
@@ -196,7 +196,7 @@ describe("WalletFactory", () => {
 		it("should use default change and address index when not provided", async () => {
 			const wallet = await subject.fromMnemonicWithBIP44({
 				levels: { account: 2 },
-				mnemonic
+				mnemonic,
 			});
 
 			expect(wallet).toBeInstanceOf(Wallet);
@@ -207,12 +207,12 @@ describe("WalletFactory", () => {
 		it("should generate different addresses for different derivation paths", async () => {
 			const wallet1 = await subject.fromMnemonicWithBIP44({
 				levels: { account: 0 },
-				mnemonic
+				mnemonic,
 			});
 
 			const wallet2 = await subject.fromMnemonicWithBIP44({
 				levels: { account: 1 },
-				mnemonic
+				mnemonic,
 			});
 
 			expect(wallet1.address()).not.toBe(wallet2.address());
@@ -223,12 +223,12 @@ describe("WalletFactory", () => {
 		it("should generate different addresses for same mnemonic with different address indices", async () => {
 			const wallet1 = await subject.fromMnemonicWithBIP44({
 				levels: { account: 0, addressIndex: 0 },
-				mnemonic
+				mnemonic,
 			});
 
 			const wallet2 = await subject.fromMnemonicWithBIP44({
 				levels: { account: 0, addressIndex: 1 },
-				mnemonic
+				mnemonic,
 			});
 
 			expect(wallet1.address()).not.toBe(wallet2.address());
@@ -239,12 +239,12 @@ describe("WalletFactory", () => {
 		it("should generate same address for same mnemonic and derivation path", async () => {
 			const wallet1 = await subject.fromMnemonicWithBIP44({
 				levels: { account: 1, addressIndex: 2, change: 0 },
-				mnemonic
+				mnemonic,
 			});
 
 			const wallet2 = await subject.fromMnemonicWithBIP44({
 				levels: { account: 1, addressIndex: 2, change: 0 },
-				mnemonic
+				mnemonic,
 			});
 
 			expect(wallet1.address()).toBe(wallet2.address());
