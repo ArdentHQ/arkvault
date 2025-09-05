@@ -1,7 +1,6 @@
 import { Services } from "@/app/lib/mainsail";
 
 import { IReadWriteWallet } from "./contracts.js";
-import { HDOptions } from "viem";
 
 /**
  * Defines the options needed to generate a wallet.
