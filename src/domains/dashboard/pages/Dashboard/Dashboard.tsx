@@ -133,7 +133,6 @@ export const Dashboard = ({
 						onCreateAddress={onCreateAddress}
 						onImportAddress={onImportAddress}
 						onSignMessage={setShowSignMessagePanel}
-						onSendTransfer={setShowSendTransferPanel}
 						onSendRegistration={setShowSendRegistrationPanel}
 						onSendUsernameResignation={setShowSendUsernameResignationPanel}
 						onSendValidatorResignation={setShowSendValidatorResignationPanel}
