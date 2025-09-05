@@ -41,7 +41,7 @@ export enum BIP44CoinType {
 
 export interface IMnemonicDerivativeOptions extends IMnemonicOptions {
 	levels: Services.IdentityLevels;
-	coin?: BIP44CoinType;
+	coin?: BIP44CoinType | string;
 }
 
 /**
