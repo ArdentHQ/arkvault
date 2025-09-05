@@ -1,9 +1,10 @@
 import { Contracts } from "@/app/lib/profiles";
 import { renderHook, act } from "@testing-library/react";
-import { vi, expect, beforeEach, afterEach } from "vitest";
+import { vi, expect, beforeEach, afterEach, beforeAll } from "vitest";
 import * as useActiveProfileModule from "@/app/hooks/env";
 import { env, getMainsailProfileId } from "@/utils/testing-library";
 import { useSelectsTransactionSender } from "./use-selects-transaction-sender";
+import * as ReactRouter from "react-router";
 
 describe("useSelectsTransactionSender", () => {
 	let profile: Contracts.IProfile;
@@ -11,6 +12,7 @@ describe("useSelectsTransactionSender", () => {
 	let selectedWallet: Contracts.IReadWriteWallet;
 
 	beforeEach(async () => {
+		vi.spyOn(ReactRouter, "useSearchParams").mockReturnValue([new URLSearchParams(), vi.fn()]);
 		profile = env.profiles().findById(getMainsailProfileId());
 		wallet = profile.wallets().first();
 		selectedWallet = profile.wallets().last();
