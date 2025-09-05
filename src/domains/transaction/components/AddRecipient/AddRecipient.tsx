@@ -19,32 +19,24 @@ import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
-const TransferType = ({ isSingle, disableMultiple, onChange, maxRecipients }: ToggleButtonProperties) => {
+const TransferType = ({ isSingle, onChange, maxRecipients }: ToggleButtonProperties) => {
 	const { t } = useTranslation();
 
 	return (
 		<div className="flex items-center space-x-2">
-			<Tooltip
-				content={t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.MULTIPLE_UNAVAILBLE")}
-				disabled={!disableMultiple}
-			>
-				<span>
-					<Switch
-						size="sm"
-						disabled={disableMultiple}
-						value={isSingle}
-						onChange={onChange}
-						leftOption={{
-							label: t("TRANSACTION.SINGLE"),
-							value: true,
-						}}
-						rightOption={{
-							label: t("TRANSACTION.MULTIPLE"),
-							value: false,
-						}}
-					/>
-				</span>
-			</Tooltip>
+			<Switch
+				size="sm"
+				value={isSingle}
+				onChange={onChange}
+				leftOption={{
+					label: t("TRANSACTION.SINGLE"),
+					value: true,
+				}}
+				rightOption={{
+					label: t("TRANSACTION.MULTIPLE"),
+					value: false,
+				}}
+			/>
 
 			<Tooltip content={t("TRANSACTION.RECIPIENTS_HELPTEXT", { count: maxRecipients })}>
 				<div className="questionmark bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:bg-theme-primary-700 dim:bg-theme-dim-700 dim:text-theme-dim-50 flex h-5 w-5 cursor-pointer items-center justify-center rounded-full hover:text-white">
@@ -264,17 +256,17 @@ export const AddRecipient = ({
 	const amountAddons =
 		!errors.amount && !errors.gasPrice && !errors.gasLimit && isSenderFilled && !wallet?.network().isTest()
 			? {
-					end: {
-						content: (
-							<Amount
-								value={convert(amount || 0)}
-								ticker={exchangeTicker}
-								data-testid="AddRecipient__currency-balance"
-								className="whitespace-no-break text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold"
-							/>
-						),
-					},
-				}
+				end: {
+					content: (
+						<Amount
+							value={convert(amount || 0)}
+							ticker={exchangeTicker}
+							data-testid="AddRecipient__currency-balance"
+							className="whitespace-no-break text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold"
+						/>
+					),
+				},
+			}
 			: undefined;
 
 	return (
