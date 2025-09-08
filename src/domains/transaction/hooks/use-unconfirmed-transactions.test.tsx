@@ -321,34 +321,32 @@ describe("useUnconfirmedTransactions", () => {
 
 	it("reconcileUnconfirmedForAddresses keeps only remote hashes for scoped addresses and leaves others untouched", async () => {
 		const { result } = renderHook(() => useUnconfirmedTransactions());
-	
+
 		const addressA = wallet.address();
 		const addressB = "ADDRESS_B";
-	
-		const transaction1 = { ...mockUnconfirmedTransaction, walletAddress: addressA, hash: "hash-a1", nonce: "190" };
-		const transaction2 = { ...mockUnconfirmedTransaction, walletAddress: addressA, hash: "hash-a2", nonce: "191" };
-		const transaction3 = { ...mockUnconfirmedTransaction, walletAddress: addressB, hash: "hash-b1", nonce: "192" };
-	
+
+		const transaction1 = { ...mockUnconfirmedTransaction, hash: "hash-a1", nonce: "190", walletAddress: addressA };
+		const transaction2 = { ...mockUnconfirmedTransaction, hash: "hash-a2", nonce: "191", walletAddress: addressA };
+		const transaction3 = { ...mockUnconfirmedTransaction, hash: "hash-b1", nonce: "192", walletAddress: addressB };
+
 		act(() => {
 			result.current.addUnconfirmedTransactionFromApi(transaction1);
 			result.current.addUnconfirmedTransactionFromApi(transaction2);
 			result.current.addUnconfirmedTransactionFromApi(transaction3);
 		});
-	
+
 		expect(result.current.unconfirmedTransactions).toHaveLength(3);
-	
+
 		act(() => {
 			result.current.reconcileUnconfirmedForAddresses([addressA], ["hash-a2"]);
 		});
-	
+
 		const hashes = result.current.unconfirmedTransactions.map((u) => u.transaction.signedData.hash);
 		expect(hashes).toEqual(expect.arrayContaining(["hash-a2", "hash-b1"]));
 		expect(hashes).not.toContain("hash-a1");
-	
 
 		const remainingForB = result.current.unconfirmedTransactions.filter((u) => u.walletAddress === addressB);
 		expect(remainingForB).toHaveLength(1);
 		expect(remainingForB[0].transaction.signedData.hash).toBe("hash-b1");
 	});
-	
 });
