@@ -6,6 +6,8 @@ const wallet = {
 	alias: () => "Test Wallet",
 	currency: () => "ARK",
 	exchangeCurrency: () => "BTC",
+	gasLimit: () => 21000,
+	gasUsed: () => 21000,
 	isValidator: () => true,
 	isLedger: () => false,
 	isResignedValidator: () => false,
@@ -82,7 +84,7 @@ export const TransactionFixture = {
 	coin: () => undefined,
 	data: () => {
 		return {
-			data: () => {},
+			data: () => { },
 		};
 	},
 	get: () => "",
