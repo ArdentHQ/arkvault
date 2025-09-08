@@ -132,7 +132,6 @@ export const Dashboard = ({
 						onUpdate={setIsUpdatingWallet}
 						onCreateAddress={onCreateAddress}
 						onImportAddress={onImportAddress}
-						onSignMessage={setShowSignMessagePanel}
 						onSendRegistration={setShowSendRegistrationPanel}
 						onSendUsernameResignation={setShowSendUsernameResignationPanel}
 						onSendValidatorResignation={setShowSendValidatorResignationPanel}

@@ -102,7 +102,7 @@ export const useWalletActions = ({
 			}
 
 			if (option.value === "sign-message") {
-				handleSignMessage?.();
+				navigate(generatePath(ProfilePaths.SignMessage, { profileId: profile.id() }));
 			}
 
 			if (option.value === "verify-message") {

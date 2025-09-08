@@ -6,7 +6,7 @@ export enum ProfilePaths {
 	// Contacts
 	Contacts = "/profiles/:profileId/contacts",
 	// Messages
-	SignMessage = "/profiles/:profileId/dashboard",
+	SignMessage = "/profiles/:profileId/dashboard?method=sign",
 	VerifyMessage = "/profiles/:profileId/verify-message",
 	VerifyMessageWallet = "/profiles/:profileId/wallets/:walletId/verify-message",
 	// Transactions
