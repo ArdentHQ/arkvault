@@ -1,12 +1,10 @@
 import { DTO } from "@/app/lib/profiles";
 import React, { useCallback, useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
-import cn from "classnames";
 import { useTranslation } from "react-i18next";
-import { FormStep } from "@/domains/transaction/pages/SendUsernameResignation/FormStep";
-import { ReviewStep } from "@/domains/transaction/pages/SendUsernameResignation/ReviewStep";
-import { useUnconfirmedTransactions } from "@/domains/transaction/hooks/use-unconfirmed-transactions";
+import { FormStep } from "@/domains/transaction/pages/SendValidatorResignation/FormStep";
+import { ReviewStep } from "@/domains/transaction/pages/SendValidatorResignation/ReviewStep";
+import { usePendingTransactions } from "@/domains/transaction/hooks/use-pending-transactions";
 import { Form } from "@/app/components/Form";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { useEnvironmentContext } from "@/app/contexts";
@@ -23,6 +21,7 @@ import { SidePanel, SidePanelButtons } from "@/app/components/SidePanel/SidePane
 import { Button } from "@/app/components/Button";
 import { ThemeIcon } from "@/app/components/Icon";
 import { useConfirmedTransaction } from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
+import cn from "classnames";
 import { useSelectsTransactionSender } from "@/domains/transaction/hooks/use-selects-transaction-sender";
 
 enum Step {
@@ -33,14 +32,13 @@ enum Step {
 	ErrorStep,
 }
 
-export const SendUsernameResignationSidePanel = ({
+export const SendValidatorResignationSidePanel = ({
 	open,
 	onOpenChange,
 }: {
 	open: boolean;
 	onOpenChange: (open: boolean) => void;
 }) => {
-	const navigate = useNavigate();
 	const { t } = useTranslation();
 
 	const form = useForm({ mode: "onChange" });
@@ -50,7 +48,7 @@ export const SendUsernameResignationSidePanel = ({
 
 	const { gasLimit, gasPrice } = watch();
 	const { common } = useValidation();
-	const { addUnconfirmedTransactionFromSigned } = useUnconfirmedTransactions();
+	const { addPendingTransaction } = usePendingTransactions();
 
 	const [activeTab, setActiveTab] = useState<Step>(Step.FormStep);
 	const [transaction, setTransaction] = useState(undefined as unknown as DTO.ExtendedSignedTransactionData);
@@ -61,6 +59,7 @@ export const SendUsernameResignationSidePanel = ({
 	const activeProfile = useActiveProfile();
 
 	const [mounted, setMounted] = useState(false);
+
 	const { activeWallet, setActiveWallet } = useSelectsTransactionSender({
 		active: mounted,
 		onWalletChange: (wallet) => {
@@ -124,7 +123,7 @@ export const SendUsernameResignationSidePanel = ({
 				secret,
 			});
 
-			const signedTransactionId = await activeWallet.transaction().signUsernameResignation({
+			const signedTransactionId = await activeWallet.transaction().signValidatorResignation({
 				gasLimit,
 				gasPrice,
 				signatory,
@@ -138,7 +137,7 @@ export const SendUsernameResignationSidePanel = ({
 
 			const transactionData = activeWallet.transaction().transaction(signedTransactionId);
 
-			addUnconfirmedTransactionFromSigned(transactionData);
+			addPendingTransaction(transactionData);
 			setTransaction(transactionData);
 
 			handleNext();
@@ -147,23 +146,6 @@ export const SendUsernameResignationSidePanel = ({
 			setActiveTab(Step.ErrorStep);
 		}
 	};
-
-	const stepCount = 4;
-
-	const onMountChange = useCallback(
-		(mounted: boolean) => {
-			setMounted(mounted);
-
-			if (!mounted) {
-				resetForm(() => {
-					setActiveTab(Step.FormStep);
-
-					setErrorMessage(undefined);
-				});
-			}
-		},
-		[resetForm],
-	);
 
 	const { isConfirmed } = useConfirmedTransaction({
 		transactionId: transaction?.hash(),
@@ -187,7 +169,7 @@ export const SendUsernameResignationSidePanel = ({
 			return isConfirmed ? t("TRANSACTION.SUCCESS.CREATED") : t("TRANSACTION.PENDING.TITLE");
 		}
 
-		return t("TRANSACTION.PAGE_USERNAME_RESIGNATION.FORM_STEP.TITLE");
+		return t("TRANSACTION.PAGE_VALIDATOR_RESIGNATION.FORM_STEP.TITLE");
 	};
 
 	const getSubtitle = () => {
@@ -200,7 +182,7 @@ export const SendUsernameResignationSidePanel = ({
 		}
 
 		if (activeTab === Step.FormStep) {
-			return t("TRANSACTION.PAGE_USERNAME_RESIGNATION.FORM_STEP.DESCRIPTION");
+			return t("TRANSACTION.PAGE_VALIDATOR_RESIGNATION.FORM_STEP.DESCRIPTION");
 		}
 
 		return;
@@ -258,6 +240,25 @@ export const SendUsernameResignationSidePanel = ({
 		);
 	};
 
+	const stepCount = 4;
+
+	const onMountChange = useCallback(
+		(mounted: boolean) => {
+			setMounted(mounted);
+
+			if (!mounted) {
+				resetForm(() => {
+					setActiveTab(Step.FormStep);
+
+					setErrorMessage(undefined);
+
+					setActiveWallet(undefined);
+				});
+			}
+		},
+		[resetForm],
+	);
+
 	return (
 		<SidePanel
 			open={open}
@@ -265,7 +266,7 @@ export const SendUsernameResignationSidePanel = ({
 			title={getTitle()}
 			subtitle={getSubtitle()}
 			titleIcon={getTitleIcon()}
-			dataTestId="SendUsernameResignationSidePanel"
+			dataTestId="SendRegistrationSidePanel"
 			hasSteps
 			totalSteps={stepCount}
 			activeStep={activeTab}
@@ -278,7 +279,7 @@ export const SendUsernameResignationSidePanel = ({
 				<SidePanelButtons>
 					{activeTab < stepCount && (
 						<Button
-							data-testid="SendUsernameResignation__back-button"
+							data-testid="SendRegistration__back-button"
 							variant="secondary"
 							onClick={handleBack}
 							disabled={isSubmitting}
@@ -289,7 +290,7 @@ export const SendUsernameResignationSidePanel = ({
 
 					{activeTab < stepCount - 1 && (
 						<Button
-							data-testid="SendUsernameResignation__continue-button"
+							data-testid="SendRegistration__continue-button"
 							onClick={handleNext}
 							disabled={!isValid || isSubmitting}
 						>
@@ -299,7 +300,7 @@ export const SendUsernameResignationSidePanel = ({
 
 					{activeTab === stepCount - 1 && (
 						<Button
-							data-testid="SendUsernameResignation__send-button"
+							data-testid="SendRegistration__send-button"
 							onClick={() => void handleSubmit()}
 							disabled={!isValid || isSubmitting}
 						>
@@ -308,7 +309,7 @@ export const SendUsernameResignationSidePanel = ({
 					)}
 
 					{activeTab === stepCount && (
-						<Button data-testid="SendUsernameResignation__close-button" onClick={() => onOpenChange(false)}>
+						<Button data-testid="SendRegistration__close-button" onClick={() => onOpenChange(false)}>
 							{t("COMMON.CLOSE")}
 						</Button>
 					)}
@@ -340,7 +341,7 @@ export const SendUsernameResignationSidePanel = ({
 
 					<TabPanel tabId={Step.ErrorStep}>
 						<ErrorStep
-							onClose={() => navigate(`/profiles/${activeProfile.id()}/dashboard`)}
+							onClose={() => onOpenChange(false)}
 							isBackDisabled={isSubmitting || !isValid}
 							onBack={() => {
 								setActiveTab(Step.FormStep);

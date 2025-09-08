@@ -14,12 +14,14 @@ export const useWalletActions = ({
 	handleSendTransfer,
 	handleSendRegistration,
 	handleSendUsernameResignation,
+	handleSendValidatorResignation,
 	wallets,
 }: {
 	handleSignMessage?: () => void;
 	handleSendTransfer?: () => void;
 	handleSendRegistration?: (registrationType?: "validatorRegistration" | "usernameRegistration") => void;
 	handleSendUsernameResignation?: () => void;
+	handleSendValidatorResignation?: () => void;
 	wallets: Contracts.IReadWriteWallet[];
 }) => {
 	const { persist } = useEnvironmentContext();
@@ -132,18 +134,7 @@ export const useWalletActions = ({
 			}
 
 			if (option.value === "validator-resignation") {
-				let url = generatePath(ProfilePaths.SendValidatorResignation, {
-					profileId: profile.id(),
-					walletId: wallet.id(),
-				});
-
-				if (hasMultipleWallets) {
-					url = generatePath(ProfilePaths.SendValidatorResignationProfile, {
-						profileId: profile.id(),
-					});
-				}
-
-				navigate(url);
+				handleSendValidatorResignation?.();
 			}
 
 			if (option.value === "username-registration") {
