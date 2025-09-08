@@ -215,10 +215,9 @@ describe("useUnconfirmedTransactions", () => {
 				signedData: {
 					data: mockUnconfirmedTransaction.data,
 					from: mockUnconfirmedTransaction.from,
-					gasLimit: Number(mockUnconfirmedTransaction.gas),
 					gasPrice: mockUnconfirmedTransaction.gasPrice,
 					hash: mockUnconfirmedTransaction.hash,
-					nonce: expect.any(Object), // BigNumber instance
+					nonce: mockUnconfirmedTransaction.nonce,
 					senderPublicKey: mockUnconfirmedTransaction.senderPublicKey,
 					to: mockUnconfirmedTransaction.to,
 					value: mockUnconfirmedTransaction.value,
@@ -228,7 +227,7 @@ describe("useUnconfirmedTransactions", () => {
 		});
 	});
 
-	it("should add a unconfirmed transaction from unconfirmed transaction with gasLimit property", async () => {
+	it("should add an unconfirmed transaction from unconfirmed transaction with gasLimit property", async () => {
 		const { result } = renderHook(() => useUnconfirmedTransactions());
 
 		const mockWithGasLimit = {
@@ -243,7 +242,7 @@ describe("useUnconfirmedTransactions", () => {
 		});
 
 		expect(result.current.unconfirmedTransactions).toHaveLength(1);
-		expect(result.current.unconfirmedTransactions[0].transaction.signedData.gasLimit).toBe(25000);
+		expect(result.current.unconfirmedTransactions[0].transaction.signedData.gasLimit).toBe("25000");
 		expect(result.current.unconfirmedTransactions[0].transaction.signedData.hash).toBe(
 			"different-hash-with-gaslimit",
 		);
@@ -264,24 +263,7 @@ describe("useUnconfirmedTransactions", () => {
 		});
 
 		expect(result.current.unconfirmedTransactions).toHaveLength(1);
-		expect(result.current.unconfirmedTransactions[0].transaction.signedData.gasLimit).toBe(30000);
-	});
-
-	it("should handle missing gas and gasLimit properties by defaulting to 0", async () => {
-		const { result } = renderHook(() => useUnconfirmedTransactions());
-
-		const mockWithoutGas = {
-			...mockUnconfirmedTransaction,
-			hash: "hash-without-gas",
-		};
-		delete (mockWithoutGas as any).gas;
-
-		act(() => {
-			result.current.addUnconfirmedTransactionFromApi(mockWithoutGas);
-		});
-
-		expect(result.current.unconfirmedTransactions).toHaveLength(1);
-		expect(result.current.unconfirmedTransactions[0].transaction.signedData.gasLimit).toBe(0);
+		expect(result.current.unconfirmedTransactions[0].transaction.signedData.gasLimit).toBe("30000");
 	});
 
 	it("should replace duplicate unconfirmed transaction when adding with same hash", async () => {

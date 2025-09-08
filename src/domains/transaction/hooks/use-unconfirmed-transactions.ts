@@ -2,7 +2,6 @@ import { useCallback } from "react";
 import { DTO } from "@/app/lib/profiles";
 import { useLocalStorage } from "usehooks-ts";
 import { RawTransactionData } from "@/app/lib/mainsail/signed-transaction.dto.contract";
-import { BigNumber } from "@/app/lib/helpers";
 import { UnconfirmedTransaction } from "@/app/lib/mainsail/unconfirmed-transaction.contract";
 
 export interface UnconfirmedTransactionData {

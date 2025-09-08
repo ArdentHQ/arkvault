@@ -2,6 +2,7 @@ export interface UnconfirmedTransaction {
 	network: number;
 	nonce: string;
 	gasPrice: string;
+	gas: string;
 	to: string;
 	value: string;
 	data: string;
