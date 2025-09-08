@@ -33,7 +33,7 @@ export const TransactionGas = ({gasUsed, gasLimit}: {gasUsed: number, gasLimit: 
 				</div>
 			</MobileCard>
 
-			<div className="hidden sm:block">
+			<div className="hidden sm:block" data-testid="TransactionGas">
 				<Label color="neutral" size="xs">
 					{t("TRANSACTION.GAS_INFORMATION")}
 				</Label>
