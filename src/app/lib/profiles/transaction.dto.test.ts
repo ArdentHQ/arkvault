@@ -39,6 +39,8 @@ beforeEach(async () => {
 		recipients: () => [],
 		timestamp: () => DateTime.make("2021-01-01"),
 		value: () => BigNumber.make(10),
+		gasLimit: () => 21000,
+		gasUsed: () => 0.01,
 	} as any;
 });
 
@@ -211,6 +213,20 @@ describe("ExtendedConfirmedTransactionData", () => {
 			const subject = new ExtendedConfirmedTransactionData(wallet, dataMock);
 			subject[method as keyof ExtendedConfirmedTransactionData]();
 			expect(dataMock[method as keyof ConfirmedTransactionData]).toHaveBeenCalled();
+		});
+	});
+
+	describe("gasLimit", () => {
+		it("should return gas limit", () => {
+			const subject = new ExtendedConfirmedTransactionData(wallet, dataMock);
+			expect(subject.gasLimit()).toBe(21000);
+		});
+	});
+
+	describe("gasUsed", () => {
+		it("should return gas used", () => {
+			const subject = new ExtendedConfirmedTransactionData(wallet, dataMock);
+			expect(subject.gasUsed()).toBe(0.01);
 		});
 	});
 });

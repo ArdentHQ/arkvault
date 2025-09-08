@@ -435,4 +435,14 @@ describe("ConfirmedTransactionData", () => {
 		transaction.configure({ ...commonData, confirmations: 0 });
 		expect(transaction.isConfirmed()).toBe(false);
 	});
+
+	it("#gasLimit", () => {
+		transaction.configure(commonData);
+		expect(transaction.gasLimit()).toBe(21000);
+	});
+
+	it("#gasUsed", () => {
+		transaction.configure(commonData);
+		expect(transaction.gasUsed()).toBe(0.01);
+	});
 });
