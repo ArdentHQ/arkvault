@@ -33,6 +33,8 @@ export const TransactionFixture = {
 	votes: () => ["0xB8Be76b31E402a2D89294Aa107056484Bef94362"],
 	unvotes: () => ["0x03BC306C369A55c0336EB003bB07F29E5c150F36"],
 	from: () => "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
+	gasLimit: () => 21000,
+	gasUsed: () => 21000,
 	to: () => "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
 	recipients: () => [],
 	value: () => 100,
@@ -80,7 +82,7 @@ export const TransactionFixture = {
 	coin: () => undefined,
 	data: () => {
 		return {
-			data: () => {},
+			data: () => { },
 		};
 	},
 	get: () => "",
