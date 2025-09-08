@@ -22,7 +22,7 @@ describe("ConfirmedTransactionData", () => {
 			gasPrice: 10000000,
 			hash: "test_hash",
 			nonce: 1,
-			receipt: { status: 1 },
+			receipt: { status: 1, gasUsed: 0.01 },
 			senderPublicKey: "somePublicKey",
 			timestamp: new Date().getTime(),
 			to: "recipient_address",
