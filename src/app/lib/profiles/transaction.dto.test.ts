@@ -31,6 +31,8 @@ beforeEach(async () => {
 		...TransactionFixture,
 		blockHash: () => "block-hash",
 		fee: () => BigNumber.make(1),
+		gasLimit: () => 21000,
+		gasUsed: () => 0.01,
 		hash: () => "tx-hash",
 		isMultiPayment: () => false,
 		isReturn: () => false,
@@ -39,8 +41,6 @@ beforeEach(async () => {
 		recipients: () => [],
 		timestamp: () => DateTime.make("2021-01-01"),
 		value: () => BigNumber.make(10),
-		gasLimit: () => 21000,
-		gasUsed: () => 0.01,
 	} as any;
 });
 
