@@ -83,7 +83,7 @@ describe("Transaction utils", () => {
 				isValidatorRegistration: () => false,
 				isValidatorResignation: () => false,
 				isVote: () => false,
-				to: () => {},
+				to: () => { },
 			};
 			expect(isContractDeployment(transaction as any)).toBe(true);
 		});
@@ -96,7 +96,7 @@ describe("Transaction utils", () => {
 				isValidatorRegistration: () => true,
 				isValidatorResignation: () => false,
 				isVote: () => false,
-				to: () => {},
+				to: () => { },
 			};
 			expect(isContractDeployment(transaction as any)).toBe(false);
 		});
@@ -210,5 +210,35 @@ describe("getAuthenticationStepSubtitle", () => {
 
 		const subtitle = getAuthenticationStepSubtitle({ t, wallet });
 		expect(subtitle).toBe("Provide a message below and sign with your ledger.");
+	});
+
+	it("should return the correct subitlte when signing key exists", () => {
+		const profile = env.profiles().findById(getMainsailProfileId());
+		const wallet = profile.wallets().first();
+
+		vi.spyOn(wallet, "isLedger").mockReturnValue(false);
+		vi.spyOn(wallet, "actsWithSecret").mockReturnValue(false);
+		vi.spyOn(wallet.signingKey(), "exists").mockReturnValue(true);
+
+		const { result } = renderHook(() => useTranslation());
+		const { t } = result.current;
+
+		const subtitle = getAuthenticationStepSubtitle({ t, wallet });
+		expect(subtitle).toBe("Provide a message below and sign with your encryption password.");
+	});
+
+	it("should return the correct subitlte when signing key does not exist", () => {
+		const profile = env.profiles().findById(getMainsailProfileId());
+		const wallet = profile.wallets().first();
+
+		vi.spyOn(wallet, "isLedger").mockReturnValue(false);
+		vi.spyOn(wallet, "actsWithSecret").mockReturnValue(false);
+		vi.spyOn(wallet.signingKey(), "exists").mockReturnValue(false);
+
+		const { result } = renderHook(() => useTranslation());
+		const { t } = result.current;
+
+		const subtitle = getAuthenticationStepSubtitle({ t, wallet });
+		expect(subtitle).toBe("Provide a message below and sign with your mnemonic passphrase.");
 	});
 });
