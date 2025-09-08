@@ -1,3 +1,4 @@
+import { renderHook } from "@testing-library/react";
 import {
 	handleBroadcastError,
 	isNoDeviceError,
@@ -5,7 +6,11 @@ import {
 	getTransferType,
 	isContractDeployment,
 	withAbortPromise,
+	getAuthenticationStepSubtitle,
 } from "./utils";
+import { useTranslation } from "react-i18next";
+import { getMainsailProfileId } from "@/utils/testing-library";
+import { env } from "@/utils/testing-library";
 
 describe("Transaction utils", () => {
 	describe("isNoDeviceError", () => {
@@ -144,5 +149,66 @@ describe("Transaction utils", () => {
 			const wrappedPromise = withAbortPromise()(promise);
 			await expect(wrappedPromise).rejects.toBe("original error");
 		});
+	});
+});
+
+describe("getAuthenticationStepSubtitle", () => {
+	afterEach(() => {
+		vi.clearAllMocks();
+	});
+
+	it("should return the correct subtitle for wallet with mnemonic", () => {
+		const profile = env.profiles().findById(getMainsailProfileId());
+		const wallet = profile.wallets().first();
+
+		const { result } = renderHook(() => useTranslation());
+		const { t } = result.current;
+
+		const subtitle = getAuthenticationStepSubtitle({ t, wallet });
+		expect(subtitle).toBe("Provide a message below and sign with your mnemonic passphrase.");
+	});
+
+	it("should return the correct subtitle for wallet with secret", () => {
+		const profile = env.profiles().findById(getMainsailProfileId());
+		const wallet = profile.wallets().first();
+		vi.spyOn(wallet, "actsWithSecret").mockReturnValue(true);
+
+		const { result } = renderHook(() => useTranslation());
+		const { t } = result.current;
+
+		const subtitle = getAuthenticationStepSubtitle({ t, wallet });
+		expect(subtitle).toBe("Provide a message below and sign with your secret.");
+	});
+
+	it("should return the correct subtitle for wallet with encryption password", () => {
+		const profile = env.profiles().findById(getMainsailProfileId());
+		const wallet = profile.wallets().first();
+		vi.spyOn(wallet, "actsWithSecretWithEncryption").mockReturnValue(true);
+
+		const { result } = renderHook(() => useTranslation());
+		const { t } = result.current;
+
+		const subtitle = getAuthenticationStepSubtitle({ t, wallet });
+		expect(subtitle).toBe("Provide a message below and sign with your secret.");
+	});
+
+	it("should return the correct subtitle for wallet with no wallet", () => {
+		const { result } = renderHook(() => useTranslation());
+		const { t } = result.current;
+
+		const subtitle = getAuthenticationStepSubtitle({ t });
+		expect(subtitle).toBe("Select an address and sign.");
+	});
+
+	it("should return the correct subtitle for wallet with ledger", () => {
+		const profile = env.profiles().findById(getMainsailProfileId());
+		const wallet = profile.wallets().first();
+		vi.spyOn(wallet, "isLedger").mockReturnValue(true);
+
+		const { result } = renderHook(() => useTranslation());
+		const { t } = result.current;
+
+		const subtitle = getAuthenticationStepSubtitle({ t, wallet });
+		expect(subtitle).toBe("Provide a message below and sign with your ledger.");
 	});
 });
