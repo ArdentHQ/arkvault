@@ -331,4 +331,12 @@ export class ConfirmedTransactionData {
 	public isConfirmed(): boolean {
 		return this.confirmations().isGreaterThanOrEqualTo(1);
 	}
+
+	public gasLimit(): number {
+		return this.data.gas;
+	}
+
+	public gasUsed(): number {
+		return BigNumber.make(UnitConverter.formatUnits(this.data.gasPrice, "gwei")).toNumber();
+	}
 }
