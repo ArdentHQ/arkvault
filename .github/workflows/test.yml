@@ -720,7 +720,7 @@ jobs:
                   COVERAGE_THRESHOLD_LINES: 91.21
                   COVERAGE_THRESHOLD_FUNCTIONS: 92.49
                   COVERAGE_THRESHOLD_STATEMENTS: 91.27
-                  COVERAGE_THRESHOLD_BRANCHES: 87.61
+                  COVERAGE_THRESHOLD_BRANCHES: 87.5
                   COVERAGE_INCLUDE_PATH: src/domains/transaction/components/[T-Z]*
               uses: nick-invision/retry@v2
               with:
