@@ -84,7 +84,7 @@ export const TransactionFixture = {
 	coin: () => undefined,
 	data: () => {
 		return {
-			data: () => { },
+			data: () => {},
 		};
 	},
 	get: () => "",
