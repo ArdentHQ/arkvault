@@ -30,6 +30,7 @@ import { ThemeIcon } from "@/app/components/Icon";
 import { useConfirmedTransaction } from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
 import cn from "classnames";
 import { useSelectsTransactionSender } from "@/domains/transaction/hooks/use-selects-transaction-sender";
+import { getAuthenticationStepSubtitle } from "@/domains/transaction/utils";
 
 export const FORM_STEP = 1;
 export const REVIEW_STEP = 2;
@@ -292,7 +293,7 @@ export const SendRegistrationSidePanel = ({
 		}
 
 		if (activeTab === authenticationStep) {
-			return t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_SECRET");
+			return getAuthenticationStepSubtitle({ t, wallet: activeWallet });
 		}
 
 		if (activeTab === REVIEW_STEP) {

@@ -37,6 +37,7 @@ import { ConfirmSendTransaction } from "@/domains/transaction/components/Confirm
 import { ThemeIcon } from "@/app/components/Icon";
 import { useConfirmedTransaction } from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
 import { useSelectsTransactionSender } from "@/domains/transaction/hooks/use-selects-transaction-sender";
+import { getAuthenticationStepSubtitle } from "@/domains/transaction/utils";
 
 const MAX_TABS = 5;
 
@@ -352,8 +353,8 @@ export const SendTransferSidePanel = ({
 			return t("TRANSACTION.REVIEW_STEP.DESCRIPTION");
 		}
 
-		if (activeTab === SendTransferStep.AuthenticationStep && !wallet?.isLedger()) {
-			return t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_SECRET");
+		if (activeTab === SendTransferStep.AuthenticationStep) {
+			return getAuthenticationStepSubtitle({ t, wallet });
 		}
 
 		if (activeTab === SendTransferStep.FormStep) {
