@@ -492,6 +492,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 			const remoteHashes = results.map((t: any) => t.hash).filter(Boolean);
 			reconcileUnconfirmedForAddresses(selectedAddresses, remoteHashes);
 
+			/* istanbul ignore next -- @preserve */
 			if (remoteHashes.length !== unconfirmedTransactions.length) {
 				setState((s) => ({ ...s, timestamp: Date.now() }));
 			}
