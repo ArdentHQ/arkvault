@@ -57,14 +57,13 @@ export const useUnconfirmedTransactions = (): UseUnconfirmedTransactionsReturn =
 	const addUnconfirmedTransactionFromApi = useCallback(
 		(input: UnconfirmedTransaction & { walletAddress: string; networkId: string; gasLimit?: string | number }) => {
 			try {
-				const gasLimitLike = input.gasLimit ?? input.gas;
 				const signedData: RawTransactionData = {
 					data: input.data,
 					from: input.from,
-					gasLimit: Number(gasLimitLike ?? 0),
-					gasPrice: input.gasPrice as any,
+					gasLimit: input.gasLimit,
+					gasPrice: input.gasPrice,
 					hash: input.hash,
-					nonce: BigNumber.make(input.nonce),
+					nonce: input.nonce,
 					senderPublicKey: input.senderPublicKey,
 					to: input.to,
 					value: input.value,
