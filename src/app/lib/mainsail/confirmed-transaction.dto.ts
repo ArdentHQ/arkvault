@@ -337,6 +337,6 @@ export class ConfirmedTransactionData {
 	}
 
 	public gasUsed(): number {
-		return BigNumber.make(UnitConverter.formatUnits(this.data.gasPrice, "gwei")).toNumber();
+		return this.data.receipt.gasUsed;
 	}
 }

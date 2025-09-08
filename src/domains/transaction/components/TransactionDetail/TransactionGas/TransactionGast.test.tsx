@@ -15,4 +15,10 @@ describe("TransactionGas", () => {
 		expect(screen.getAllByText("21000")).toHaveLength(2);
 		expect(screen.getAllByText("0.01")).toHaveLength(2);
 	});
+
+	it("should display N/A if gas used is null", () => {
+		render(<TransactionGas gasLimit={21000} gasUsed={null} />);
+
+		expect(screen.getAllByText("N/A")).toHaveLength(2);
+	});
 });
