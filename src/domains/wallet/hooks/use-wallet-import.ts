@@ -9,6 +9,7 @@ import { assertString, assertWallet } from "@/utils/assertions";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { useAddressesPanel } from "@/domains/portfolio/hooks/use-address-panel";
 import { AddressViewSelection } from "@/domains/portfolio/components/AddressesSidePanel";
+import { BIP44CoinType } from "@/app/lib/profiles/wallet.factory.contract";
 
 type PrivateKey = string;
 type Mnemonic = string;
@@ -78,6 +79,7 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 				profile.wallets().push(
 					await profile.walletFactory().fromMnemonicWithBIP44({
 						...defaultOptions,
+						coin: BIP44CoinType.ARK,
 						levels: { account: 0 },
 						mnemonic: value,
 					}),

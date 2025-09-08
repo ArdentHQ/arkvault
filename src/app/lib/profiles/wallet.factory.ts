@@ -1,10 +1,12 @@
 import { Enums } from "@/app/lib/mainsail";
 import { BIP39, UUID } from "@ardenthq/arkvault-crypto";
-
 import {
+	BIP44CoinType,
 	IAddressOptions,
 	IAddressWithDerivationPathOptions,
+	IGenerateHDOptions,
 	IGenerateOptions,
+	IMnemonicBIP44DerivativeOptions,
 	IMnemonicOptions,
 	IPrivateKeyOptions,
 	IProfile,
@@ -19,6 +21,7 @@ import { IMnemonicDerivativeOptions, ISecretOptions } from "./wallet.factory.con
 import { Wallet } from "./wallet.js";
 import { PublicKeyService } from "@/app/lib/mainsail/public-key.service";
 import { AddressService } from "@/app/lib/mainsail/address.service";
+import { hdKeyToAccount, HDKey } from "viem/accounts";
 
 export class WalletFactory implements IWalletFactory {
 	readonly #profile: IProfile;
@@ -41,6 +44,18 @@ export class WalletFactory implements IWalletFactory {
 			const value = new PublicKeyService().fromMnemonic(mnemonic);
 			wallet.data().set(WalletData.PublicKey, value.publicKey);
 		}
+
+		return { mnemonic, wallet };
+	}
+
+	/** {@inheritDoc IWalletFactory.generateHD} */
+	public async generateHD({ locale, wordCount, coin, levels }: IGenerateHDOptions): Promise<{
+		mnemonic: string;
+		wallet: IReadWriteWallet;
+	}> {
+		const mnemonic: string = BIP39.generate(locale, wordCount);
+
+		const wallet = await this.fromMnemonicWithBIP44({ coin, levels, mnemonic });
 
 		return { mnemonic, wallet };
 	}
@@ -72,13 +87,36 @@ export class WalletFactory implements IWalletFactory {
 	}
 
 	/** {@inheritDoc IWalletFactory.fromMnemonicWithBIP44} */
-	public async fromMnemonicWithBIP44(options: IMnemonicDerivativeOptions): Promise<IReadWriteWallet> {
-		return this.#fromMnemonicWithDerivative({
-			derivationType: "bip44",
-			featureFlag: Enums.FeatureFlag.AddressMnemonicBip44,
-			importMethod: WalletImportMethod.BIP44.MNEMONIC,
-			options,
+	public async fromMnemonicWithBIP44({
+		mnemonic,
+		coin = BIP44CoinType.ARK,
+		levels,
+	}: IMnemonicBIP44DerivativeOptions): Promise<IReadWriteWallet> {
+		const accountIndex = levels.account;
+		const changeIndex = levels.change ?? 0;
+		const addressIndex = levels.addressIndex ?? 0;
+
+		const derivationPath = `m/44'/${coin}/${accountIndex}'/${changeIndex}/${addressIndex}` as const;
+
+		const seed = BIP39.toSeed(mnemonic);
+
+		const hdKey = HDKey.fromMasterSeed(seed);
+
+		const account = hdKeyToAccount(hdKey, {
+			// @ts-expect-error we need ARK coin type
+			path: derivationPath,
 		});
+
+		const wallet: IReadWriteWallet = new Wallet(UUID.random(), {}, this.#profile);
+
+		wallet.data().set(WalletData.DerivationPath, derivationPath);
+		wallet.data().set(WalletData.ImportMethod, WalletImportMethod.BIP44.DERIVATION_PATH);
+		wallet.data().set(WalletData.AddressIndex, addressIndex);
+		wallet.data().set(WalletData.PublicKey, account.publicKey);
+
+		await wallet.mutator().address({ address: account.address });
+
+		return wallet;
 	}
 
 	/** {@inheritDoc IWalletFactory.fromMnemonicWithBIP49} */
