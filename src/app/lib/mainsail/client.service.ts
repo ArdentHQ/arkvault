@@ -1,20 +1,19 @@
 /* eslint-disable sonarjs/cognitive-complexity */
 
 import { Collections, Contracts, DTO, Services } from "@/app/lib/mainsail";
-import { DateTime } from "@/app/lib/intl";
-import { UsernamesAbi } from "@mainsail/evm-contracts";
-import dotify from "node-dotify";
-
+import { ConfigKey, ConfigRepository } from "@/app/lib/mainsail";
+import { TransactionTypes, trimHexPrefix } from "./transaction-type.service";
 import { decodeFunctionResult, encodeFunctionData } from "viem";
 
-import { TransactionTypes, trimHexPrefix } from "./transaction-type.service";
 import { ArkClient } from "@arkecosystem/typescript-client";
-import { WalletData } from "./wallet.dto";
 import { ConfirmedTransactionData } from "./confirmed-transaction.dto";
 import { ConfirmedTransactionDataCollection } from "@/app/lib/mainsail/transactions.collection";
-import { SignedTransactionData } from "./signed-transaction.dto";
-import { ConfigKey, ConfigRepository } from "@/app/lib/mainsail";
+import { DateTime } from "@/app/lib/intl";
 import { IProfile } from "@/app/lib/profiles/profile.contract";
+import { SignedTransactionData } from "./signed-transaction.dto";
+import { UsernamesAbi } from "@mainsail/evm-contracts";
+import { WalletData } from "./wallet.dto";
+import dotify from "node-dotify";
 
 type searchParams<T extends Record<string, any> = {}> = T & { page: number; limit?: number };
 
@@ -57,6 +56,20 @@ export class ClientService {
 		const { limit = 10, page = 1, ...parameters } = searchParams;
 
 		const response = await this.#client.transactions().all(page, limit, parameters);
+
+		return new ConfirmedTransactionDataCollection(
+			response.data.map((transaction) => new ConfirmedTransactionData().configure(transaction)),
+			this.#createMetaPagination(response),
+		);
+	}
+
+	public async unconfirmedTransactions(
+		query?: Services.ClientTransactionsInput,
+	): Promise<Collections.ConfirmedTransactionDataCollection> {
+		const { searchParams } = this.#createSearchParams(query ?? {});
+		const { limit = 10, page = 1, ...parameters } = searchParams;
+
+		const response = await this.#client.transactions().allUnconfirmed(page, limit, parameters);
 
 		return new ConfirmedTransactionDataCollection(
 			response.data.map((transaction) => new ConfirmedTransactionData().configure(transaction)),

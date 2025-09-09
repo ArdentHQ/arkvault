@@ -1,17 +1,18 @@
 import { Contracts, DTO, Contracts as ProfileContracts } from "@/app/lib/profiles";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useSynchronizer, useWalletAlias } from "@/app/hooks";
-import { useUnconfirmedTransactions } from "@/domains/transaction/hooks/use-unconfirmed-transactions";
 
-import { SortBy } from "@/app/components/Table";
-import { delay } from "@/utils/delay";
-import { useTransactionTypes } from "./use-transaction-types";
-import { SignedTransactionData } from "@/app/lib/mainsail/signed-transaction.dto";
+import { ClientService } from "@/app/lib/mainsail/client.service";
 import { ExtendedSignedTransactionData } from "@/app/lib/profiles/signed-transaction.dto";
-import { IReadWriteWallet } from "@/app/lib/profiles/wallet.contract";
 import { ExtendedTransactionDTO } from "@/domains/transaction/components/TransactionTable";
+import { IReadWriteWallet } from "@/app/lib/profiles/wallet.contract";
+import { SignedTransactionData } from "@/app/lib/mainsail/signed-transaction.dto";
+import { SortBy } from "@/app/components/Table";
 import { UnconfirmedTransactionsService } from "@/app/lib/mainsail/unconfirmed-transactions.service";
+import { delay } from "@/utils/delay";
 import { get } from "@/app/lib/helpers";
+import { useTransactionTypes } from "./use-transaction-types";
+import { useUnconfirmedTransactions } from "@/domains/transaction/hooks/use-unconfirmed-transactions";
 
 interface TransactionsState {
 	transactions: DTO.ExtendedConfirmedTransactionData[];
