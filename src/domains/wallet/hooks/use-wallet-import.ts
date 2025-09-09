@@ -7,8 +7,6 @@ import { useEnvironmentContext } from "@/app/contexts";
 import { OptionsValue } from "./use-import-options";
 import { assertString, assertWallet } from "@/utils/assertions";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
-import { useAddressesPanel } from "@/domains/portfolio/hooks/use-address-panel";
-import { AddressViewSelection } from "@/domains/portfolio/components/AddressesSidePanel";
 
 type PrivateKey = string;
 type Mnemonic = string;
@@ -27,7 +25,6 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 	const { env, persist } = useEnvironmentContext();
 	const { syncAll } = useWalletSync({ env, profile });
 	const { activeNetwork } = useActiveNetwork({ profile });
-	const { addressViewPreference } = useAddressesPanel({ profile });
 
 	const importWalletByType = async ({
 		network,
@@ -185,7 +182,6 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 			value,
 		});
 		wallets.push(wallet);
-
 
 		if (profile.walletSelectionMode() === "single") {
 			if (!disableAddressSelection) {

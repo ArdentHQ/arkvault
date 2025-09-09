@@ -51,17 +51,17 @@ export class WalletRepository implements IWalletRepository {
 	/** {@inheritDoc IWalletRepository.selected} */
 	public selected(): IReadWriteWallet[] {
 		const allSelected = this.values().filter((wallet: IReadWriteWallet) => wallet.isSelected());
-		const firstSelected = allSelected.at(0)
+		const firstSelected = allSelected.at(0);
 
 		if (!firstSelected) {
-			return []
+			return [];
 		}
 
 		if (this.#profile.walletSelectionMode() === "single") {
-			return [firstSelected]
+			return [firstSelected];
 		}
 
-		return allSelected
+		return allSelected;
 	}
 
 	/** {@inheritDoc IWalletRepository.selectOne} */
@@ -77,7 +77,7 @@ export class WalletRepository implements IWalletRepository {
 	/** {@inheritDoc IWalletRepository.selectOnly} */
 	public selectOnly(wallets: IReadWriteWallet[]): void {
 		for (const wallet of this.values()) {
-			if (wallets.map(selectedWallet => selectedWallet.id()).includes(wallet.id())) {
+			if (wallets.map((selectedWallet) => selectedWallet.id()).includes(wallet.id())) {
 				wallet.mutator().isSelected(true);
 				continue;
 			}

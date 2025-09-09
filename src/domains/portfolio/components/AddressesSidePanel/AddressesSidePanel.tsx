@@ -1,5 +1,4 @@
-import { AddressViewSelection, AddressViewType, useAddressesPanel } from "@/domains/portfolio/hooks/use-address-panel";
-import React, { ChangeEvent, useCallback, useEffect, useState, JSX } from "react";
+import React, { ChangeEvent, useEffect, useState, JSX } from "react";
 import { Tab, TabList, Tabs } from "@/app/components/Tabs";
 import { useBreakpoint, useWalletAlias } from "@/app/hooks";
 
@@ -11,7 +10,6 @@ import { DeleteAddressMessage } from "@/domains/portfolio/components/AddressesSi
 import { Icon } from "@/app/components/Icon";
 import { Input } from "@/app/components/Input";
 import { SidePanel } from "@/app/components/SidePanel/SidePanel";
-import { TabId } from "@/app/components/Tabs/useTab";
 import { Tooltip } from "@/app/components/Tooltip";
 import cn from "classnames";
 import { t } from "i18next";
@@ -19,57 +17,24 @@ import { useLocalStorage } from "usehooks-ts";
 import { EmptyBlock } from "@/app/components/EmptyBlock";
 import { UpdateAddressName } from "@/domains/portfolio/components/AddressesSidePanel/UpdateAddressName";
 import { ProfileSetting } from "@/app/lib/profiles/profile.enum.contract";
-import { IReadWriteWallet } from "@/app/lib/profiles/wallet.contract";
-import { useEnvironmentContext } from "@/app/contexts";
+import { useWalletSelection } from "@/domains/portfolio/hooks/use-wallet-selection";
+import { AddressViewSelection, AddressViewType } from "@/app/lib/profiles/wallet.enum";
 
 export const AddressesSidePanel = ({
 	profile,
-	wallets,
-	defaultSelectedAddresses = [],
-	defaultSelectedWallet,
 	open,
+	onClose,
 	onOpenChange,
-	onClose: onCloseFromParent,
-	onDelete,
 	onMountChange,
 }: {
 	profile: Contracts.IProfile;
-	wallets: Contracts.IReadWriteWallet[];
-	defaultSelectedAddresses: string[];
-	defaultSelectedWallet?: Contracts.IReadWriteWallet;
 	open: boolean;
+	onClose?: () => void;
 	onOpenChange: (open: boolean) => void;
-	onClose: (addresses: string[], mode: AddressViewType) => void;
-	onDelete?: (addresses: string) => void;
 	onMountChange?: (mounted: boolean) => void;
 }): JSX.Element => {
-	const { persist } = useEnvironmentContext()
-
-	// const {
-	// 	singleSelectedAddress,
-	// 	multiSelectedAddresses,
-	// 	setAddressViewPreference,
-	// 	setSingleSelectedAddress,
-	// 	setMultiSelectedAddresses,
-	// 	resetAddressPanelSettings,
-	// } = useAddressesPanel({ profile });
-
-	// const onClose = (addresses: string[], mode: AddressViewType) => {
-	// 	if (addresses.length === 1) {
-	// 		setActiveMode(AddressViewSelection.single);
-	// 		resetAddressPanelSettings();
-	// 		onCloseFromParent(addresses, AddressViewSelection.single);
-	//
-	// 		return;
-	// 	}
-	//
-	// 	onCloseFromParent(addresses, mode);
-	// };
-
-	// const selectedAddressesFromPortfolio = profile
-	// 	.wallets()
-	// 	.selected()
-	// 	.map((wallet) => wallet.address());
+	/* istanbul ignore next -- @preserve */
+	const { isXs } = useBreakpoint();
 
 	const [isAnimating, setIsAnimating] = useState(false);
 	const [isManageMode, setManageMode] = useState<boolean>(false);
@@ -79,14 +44,17 @@ export const AddressesSidePanel = ({
 	const [manageHintHasShown, persistManageHint] = useLocalStorage("manage-hint", false);
 	const [searchQuery, setSearchQuery] = useState<string>("");
 
-	const [activeMode, setActiveMode] = useState<AddressViewType>(profile.walletSelectionMode());
+	const { getWalletAlias } = useWalletAlias();
 
-	const [selectedAddresses, setSelectedAddresses] = useState<string[]>(profile.wallets().selected().map(wallet => wallet.address()));
-	console.log({ selectedAddresses })
-
-
-	/* istanbul ignore next -- @preserve */
-	const { isXs } = useBreakpoint();
+	const {
+		handleDelete,
+		persistSelection,
+		toggleSelection,
+		activeMode,
+		setActiveMode,
+		setSelectedAddresses,
+		selectedAddresses,
+	} = useWalletSelection(profile);
 
 	const tabOptions = [
 		{
@@ -100,139 +68,6 @@ export const AddressesSidePanel = ({
 			value: AddressViewSelection.multiple,
 		},
 	];
-
-	const toggleSelection = async (wallet: IReadWriteWallet) => {
-		if (isManageMode) {
-			return;
-		}
-
-		if (profile.walletSelectionMode() === "single") {
-			profile.wallets().selectOne(wallet)
-			setSelectedAddresses(profile.wallets().selected().map(wallet => wallet.address()))
-
-			onOpenChange(false);
-			onCloseFromParent([wallet.address()], activeMode);
-			await persist()
-			return
-		}
-
-		const isSelected = wallet.isSelected()
-		const deselectsLastWallet = isSelected && selectedAddresses.length === 1 && selectedAddresses.includes(wallet.address())
-
-		if (deselectsLastWallet) {
-			// Trigger warning for minimum selection.
-			setSelectedAddresses([])
-			return
-		}
-
-		console.log("isSelected", isSelected)
-		wallet.mutator().isSelected(!isSelected)
-		console.log({ selectedAddresses: profile.wallets().selected().map(wallet => wallet.address()) })
-		setSelectedAddresses(profile.wallets().selected().map(wallet => wallet.address()))
-		await persist()
-
-		// if (activeMode === AddressViewSelection.single) {
-		// 	setSelectedAddresses([address]);
-		// 	await setSingleSelectedAddress([address]);
-		//
-		// 	onOpenChange(false);
-		// 	onClose([address], activeMode);
-		// } else {
-		// 	if (selectedAddresses.includes(address)) {
-		// 		const newSelection = selectedAddresses.filter((a) => a !== address);
-		// 		setSelectedAddresses(newSelection);
-		// 		await setMultiSelectedAddresses(newSelection);
-		// 	} else {
-		// 		const newSelection = [...selectedAddresses, address];
-		// 		setSelectedAddresses(newSelection);
-		// 		await setMultiSelectedAddresses(newSelection);
-		// 	}
-		// }
-	};
-
-	// useEffect(() => {
-	// 	const handleSingleViewInitialization = async () => {
-	// 		if (singleSelectedAddress.length > 0) {
-	// 			setSelectedAddresses(singleSelectedAddress);
-	// 			return;
-	// 		}
-	//
-	// 		const addressToUse = findFirstAvailableAddress();
-	//
-	// 		if (addressToUse) {
-	// 			setSelectedAddresses([addressToUse]);
-	// 			await setSingleSelectedAddress([addressToUse]);
-	// 		}
-	// 	};
-	//
-	// 	const findFirstAvailableAddress = () =>
-	// 		defaultSelectedWallet?.address() ||
-	// 		defaultSelectedAddresses[0] ||
-	// 		(wallets.length > 0 ? wallets[0].address() : undefined);
-	//
-	// 	const handleMultipleViewInitialization = async () => {
-	// 		if (multiSelectedAddresses.length === 0 && defaultSelectedAddresses.length > 0) {
-	// 			setSelectedAddresses(defaultSelectedAddresses);
-	// 			await setMultiSelectedAddresses(defaultSelectedAddresses);
-	// 		} else {
-	// 			setSelectedAddresses(multiSelectedAddresses);
-	// 		}
-	// 	};
-	//
-	// 	const initializeAddresses = async () => {
-	// 		if (activeMode === AddressViewSelection.single) {
-	// 			await handleSingleViewInitialization();
-	// 		} else if (activeMode === AddressViewSelection.multiple) {
-	// 			await handleMultipleViewInitialization();
-	// 		}
-	// 	};
-	//
-	// 	void initializeAddresses();
-	// }, []);
-
-	// Reset selected addresses when panel closes
-	// useEffect(() => {
-	// 	if (open) {
-	// 		setSelectedAddresses(
-	// 			activeMode === AddressViewSelection.single
-	// 				? [selectedAddressesFromPortfolio[selectedAddressesFromPortfolio.length - 1]]
-	// 				: selectedAddressesFromPortfolio,
-	// 		);
-	// 	} else {
-	// 		setSelectedAddresses(
-	// 			activeMode === AddressViewSelection.single ? singleSelectedAddress : multiSelectedAddresses,
-	// 		);
-	// 	}
-	// }, [open]);
-
-	// Sync local state with hook state when they change
-	// useEffect(() => {
-	// 	if (activeMode === AddressViewSelection.single) {
-	// 		setSelectedAddresses(singleSelectedAddress);
-	// 	} else {
-	// 		setSelectedAddresses(multiSelectedAddresses);
-	// 	}
-	// }, [activeMode, singleSelectedAddress, multiSelectedAddresses]);
-
-	// useEffect(() => {
-	// 	if (activeMode === AddressViewSelection.single) {
-	// 		const singleSelectedAddressIsInWallets = singleSelectedAddress.some((address) =>
-	// 			wallets.some((w) => w.address() === address),
-	// 		);
-	//
-	// 		if (!singleSelectedAddressIsInWallets) {
-	// 			setSelectedAddresses([wallets[0].address()]);
-	// 		}
-	// 	} else {
-	// 		const selectedMultiAddressesInWallets = multiSelectedAddresses.filter((address) =>
-	// 			wallets.some((w) => w.address() === address),
-	// 		);
-	//
-	// 		if (selectedMultiAddressesInWallets.length !== multiSelectedAddresses.length) {
-	// 			setSelectedAddresses(selectedMultiAddressesInWallets);
-	// 		}
-	// 	}
-	// }, [wallets, multiSelectedAddresses, singleSelectedAddress, activeMode]);
 
 	useEffect(() => {
 		if (!open || manageHintHasShown) {
@@ -249,28 +84,33 @@ export const AddressesSidePanel = ({
 		};
 	}, [manageHintHasShown, open]);
 
+	const closeSidepanel = async (selected: string[]) => {
+		persistSelection(selected);
+		onOpenChange(false);
+		onClose?.();
+	};
+
 	const disableManageState = () => {
 		setAddressToDelete(undefined);
 		setAddressToEdit(undefined);
 		setManageMode(false);
 	};
 
-	const { getWalletAlias } = useWalletAlias();
+	const addressesToShow = profile
+		.wallets()
+		.values()
+		.filter((wallet) => {
+			if (!searchQuery) {
+				return true;
+			}
 
-	const addressesToShow = wallets.filter((wallet) => {
-		if (!searchQuery) {
-			return true;
-		}
+			const query = searchQuery.toLowerCase();
+			const { alias } = getWalletAlias({ address: wallet.address(), network: wallet.network(), profile });
 
-		const query = searchQuery.toLowerCase();
-		const { alias } = getWalletAlias({ address: wallet.address(), network: wallet.network(), profile });
-
-		return wallet.address().toLowerCase().startsWith(query) || (alias && alias.toLowerCase().includes(query));
-	});
+			return wallet.address().toLowerCase().startsWith(query) || (alias && alias.toLowerCase().includes(query));
+		});
 
 	const isSelectAllDisabled = isManageMode || addressesToShow.length === 0;
-	// const isSelected = (wallet: Contracts.IReadWriteWallet) => selectedAddresses.includes(wallet.address());
-	const hasSelectedAddresses = () => selectedAddresses.length > 0;
 
 	const runErrorAnimation = () => {
 		setIsAnimating(true);
@@ -293,20 +133,24 @@ export const AddressesSidePanel = ({
 				setSearchQuery("");
 
 				if (!open) {
-					// TODO: fix.
-					// onCloseFromParent(selectedAddresses, activeMode);
+					closeSidepanel(selectedAddresses);
 				}
 			}}
 			dataTestId="AddressesSidePanel"
 			onMountChange={onMountChange}
 		>
 			<Tabs
-				className={cn("mb-3", { hidden: wallets.length === 1 })}
+				className={cn("mb-3", { hidden: profile.wallets().count() === 1 })}
 				activeId={activeMode}
 				onChange={(activeTab) => {
-					profile.settings().set(ProfileSetting.WalletSelectionMode, activeTab as AddressViewType)
-					setActiveMode(activeTab as AddressViewType)
-					setSelectedAddresses(profile.wallets().selected().map(wallet => wallet.address()))
+					setActiveMode(activeTab as AddressViewType);
+					profile.settings().set(ProfileSetting.WalletSelectionMode, activeTab as AddressViewType);
+					setSelectedAddresses(
+						profile
+							.wallets()
+							.selected()
+							.map((wallet) => wallet.address()),
+					);
 				}}
 				disabled={isManageMode}
 			>
@@ -364,9 +208,10 @@ export const AddressesSidePanel = ({
 							disabled={isSelectAllDisabled}
 							data-testid="SelectAllAddresses_Checkbox"
 							checked={!isSelectAllDisabled && selectedAddresses.length === addressesToShow.length}
-							onChange={(value) => {
-								console.log("onChange select all", { value })
-								// profile.wallets().selectAll()
+							onChange={() => {
+								const areAllSelected = selectedAddresses.length === addressesToShow.length;
+								const newSelection = areAllSelected ? [] : addressesToShow.map((w) => w.address());
+								setSelectedAddresses(newSelection);
 							}}
 						/>
 						<span className="font-semibold">{t("COMMON.SELECT_ALL")}</span>
@@ -461,14 +306,27 @@ export const AddressesSidePanel = ({
 						<AddressRow
 							profile={profile}
 							errorMessage={
-								!hasSelectedAddresses() && !isManageMode && index === 0
+								selectedAddresses.length === 0 && !isManageMode && index === 0
 									? "You need to have at least one address selected."
 									: undefined
 							}
-							isError={(!hasSelectedAddresses() && !isManageMode) || wallet.address() === addressToDelete}
+							isError={
+								(selectedAddresses.length === 0 && !isManageMode) ||
+								wallet.address() === addressToDelete
+							}
 							key={wallet.address()}
 							wallet={wallet}
-							toggleAddress={() => toggleSelection(wallet)}
+							toggleAddress={() => {
+								if (isManageMode) {
+									return;
+								}
+
+								// Automatically close if single mode.
+								const newSelection = toggleSelection(wallet);
+								if (profile.walletSelectionMode() === "single") {
+									closeSidepanel(newSelection);
+								}
+							}}
 							isSelected={selectedAddresses.includes(wallet.address())}
 							isSingleView={activeMode === AddressViewSelection.single}
 							usesManageMode={isManageMode}
@@ -488,7 +346,7 @@ export const AddressesSidePanel = ({
 								addressToDelete === wallet.address() ? (
 									<DeleteAddressMessage
 										onCancelDelete={disableManageState}
-										onConfirmDelete={() => onDelete?.(wallet.address())}
+										onConfirmDelete={() => void handleDelete(wallet)}
 									/>
 								) : undefined
 							}
