@@ -14,12 +14,7 @@ export interface UnconfirmedTransactionData {
 interface UseUnconfirmedTransactionsReturn {
 	unconfirmedTransactions: UnconfirmedTransactionData[];
 	addUnconfirmedTransactionFromSigned: (transaction: DTO.ExtendedSignedTransactionData) => void;
-	addUnconfirmedTransactionFromApi: (
-		input: UnconfirmedTransaction & {
-			walletAddress: string;
-			networkId: string;
-		},
-	) => void;
+	addUnconfirmedTransactionFromApi: (input: UnconfirmedTransactionData) => void;
 	removeUnconfirmedTransaction: (hash: string) => void;
 	reconcileUnconfirmedForAddresses: (walletAddresses: string[], remoteHashes: string[]) => void;
 }
@@ -54,22 +49,9 @@ export const useUnconfirmedTransactions = (): UseUnconfirmedTransactionsReturn =
 	);
 
 	const addUnconfirmedTransactionFromApi = useCallback(
-		(
-			input: ConfirmedTransactionData & { walletAddress: string; networkId: string; gasLimit?: string | number },
-		) => {
+		(input: UnconfirmedTransactionData) => {
 			try {
-				// TODO: improve typing here
-				const signedData: RawTransactionData = {
-					data: input.data.data,
-					from: input.data.from,
-					gasLimit: input.data.gasLimit,
-					gasPrice: input.data.gasPrice,
-					hash: input.data.hash,
-					nonce: input.data.nonce,
-					senderPublicKey: input.data.senderPublicKey,
-					to: input.data.to,
-					value: input.data.value,
-				};
+				const signedData: RawTransactionData = input.transaction;
 
 				const unconfirmed: UnconfirmedTransactionData = {
 					networkId: input.networkId,
@@ -79,7 +61,7 @@ export const useUnconfirmedTransactions = (): UseUnconfirmedTransactionsReturn =
 				console.log("Adding unconfirmed transaction from API:", unconfirmed);
 
 				setUnconfirmedTransactions((prev) => {
-					const target = input.hash;
+					const target = input.transaction.hash;
 					const filtered = prev.filter((p) => p.transaction.signedData.hash !== target);
 					return [...filtered, unconfirmed];
 				});

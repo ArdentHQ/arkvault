@@ -2,7 +2,6 @@ import { Contracts, DTO, Contracts as ProfileContracts } from "@/app/lib/profile
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useSynchronizer, useWalletAlias } from "@/app/hooks";
 
-import { ClientService } from "@/app/lib/mainsail/client.service";
 import { ExtendedSignedTransactionData } from "@/app/lib/profiles/signed-transaction.dto";
 import { ExtendedTransactionDTO } from "@/domains/transaction/components/TransactionTable";
 import { IReadWriteWallet } from "@/app/lib/profiles/wallet.contract";
@@ -503,8 +502,8 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 				console.log("Processing unconfirmed transaction:", transaction);
 				const matched = wallets.find((wallet) => {
 					const walletAddr = wallet.address().toLowerCase();
-					const txFrom = transaction.data.from?.toLowerCase?.();
-					const txTo = transaction.data.to?.toLowerCase?.();
+					const txFrom = transaction.from().toLowerCase();
+					const txTo = transaction.to().toLowerCase();
 					return walletAddr === txFrom || walletAddr === txTo;
 				});
 
@@ -517,9 +516,9 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 				console.log("Processing unconfirmed transaction:", transaction);
 
 				addUnconfirmedTransactionFromApi({
-					...transaction,
 					networkId: matched.networkId(),
 					walletAddress: matched.address(),
+					transaction: transaction.raw(),
 				});
 			}
 		} catch (error) {
