@@ -6,6 +6,7 @@ import { ClientService } from "@/app/lib/mainsail/client.service";
 import { ExtendedSignedTransactionData } from "@/app/lib/profiles/signed-transaction.dto";
 import { ExtendedTransactionDTO } from "@/domains/transaction/components/TransactionTable";
 import { IReadWriteWallet } from "@/app/lib/profiles/wallet.contract";
+import { Network } from "@/app/lib/mainsail/network";
 import { SignedTransactionData } from "@/app/lib/mainsail/signed-transaction.dto";
 import { SortBy } from "@/app/components/Table";
 import { UnconfirmedTransactionsService } from "@/app/lib/mainsail/unconfirmed-transactions.service";
@@ -112,23 +113,20 @@ const removeConfirmedUnconfirmedTransactions = (
 	};
 };
 
-const getBlockTime = (wallets: Contracts.IReadWriteWallet[]): number => {
-	try {
-		const first = wallets[0];
-		if (!first) {
-			return 15_000;
-		}
+const getBlockTime = (network: Network): number => {
+	const DEFAULT_BLOCK_TIME = 8_000; // Close to expected ARK block time
 
-		const milestone = first.network().milestone?.();
+	try {
+		const milestone = network.milestone();
 		const blockTime = get(milestone, "timeouts.blockTime") as unknown;
 		if (typeof blockTime === "number" && Number.isFinite(blockTime) && blockTime > 0) {
-			return Math.max(1000, Math.min(300_000, blockTime));
+			return Math.max(1000, blockTime); // Minimum of 1 second
 		}
 	} catch (error) {
 		/* istanbul ignore next -- @preserve */
 		console.error("Failed to get block time:", error);
 	}
-	return 15_000;
+	return DEFAULT_BLOCK_TIME;
 };
 
 export const useProfileTransactions = ({ profile, wallets, limit = 30 }: ProfileTransactionsProperties) => {
@@ -195,7 +193,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 		}
 	}, [profile, wallets?.length > 0]);
 
-	const blockTime = useMemo(() => getBlockTime(wallets), [wallets[0]?.networkId()]);
+	const blockTime = useMemo(() => getBlockTime(profile.activeNetwork()), [profile.activeNetwork()]);
 
 	const hasMorePages = (itemsLength: number, hasMorePages: boolean, itemsLimit = LIMIT) => {
 		if (itemsLength < itemsLimit) {
