@@ -7,6 +7,7 @@ import { useEnvironmentContext } from "@/app/contexts";
 import { OptionsValue } from "./use-import-options";
 import { assertString, assertWallet } from "@/utils/assertions";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
+import { AddressViewSelection } from "@/app/lib/profiles/wallet.enum";
 
 type PrivateKey = string;
 type Mnemonic = string;
@@ -183,7 +184,7 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 		});
 		wallets.push(wallet);
 
-		if (profile.walletSelectionMode() === "single") {
+		if (profile.walletSelectionMode() === AddressViewSelection.single) {
 			if (!disableAddressSelection) {
 				profile.wallets().selectOne(wallet);
 			}
