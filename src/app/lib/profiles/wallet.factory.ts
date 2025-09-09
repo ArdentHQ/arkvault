@@ -22,6 +22,7 @@ import { Wallet } from "./wallet.js";
 import { PublicKeyService } from "@/app/lib/mainsail/public-key.service";
 import { AddressService } from "@/app/lib/mainsail/address.service";
 import { hdKeyToAccount, HDKey } from "viem/accounts";
+import { MnemonicWithDerivationPathService } from "@/app/lib/mainsail/mnemonic-with-derivation-path.service";
 
 export class WalletFactory implements IWalletFactory {
 	readonly #profile: IProfile;
@@ -98,14 +99,7 @@ export class WalletFactory implements IWalletFactory {
 
 		const derivationPath = `m/44'/${coin}/${accountIndex}'/${changeIndex}/${addressIndex}` as const;
 
-		const seed = BIP39.toSeed(mnemonic);
-
-		const hdKey = HDKey.fromMasterSeed(seed);
-
-		const account = hdKeyToAccount(hdKey, {
-			// @ts-expect-error we need ARK coin type
-			path: derivationPath,
-		});
+		const account = MnemonicWithDerivationPathService.getAccount(mnemonic, derivationPath);
 
 		const wallet: IReadWriteWallet = new Wallet(UUID.random(), {}, this.#profile);
 
