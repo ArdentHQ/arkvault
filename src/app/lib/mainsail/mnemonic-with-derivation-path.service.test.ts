@@ -14,6 +14,7 @@ describe("MnemonicWithDerivationPathService", () => {
 		mockConfig = {
 			get: vi.fn().mockReturnValue(11812),
 		} as any;
+
 		service = new MnemonicWithDerivationPathService({ config: mockConfig });
 	});
 
