@@ -28,12 +28,9 @@ describe("AddressesSidePanel", () => {
 		render(
 			<AddressesSidePanel
 				profile={profile}
-				wallets={wallets.values()}
-				defaultSelectedAddresses={[]}
 				open={true}
 				onClose={vi.fn()}
 				onOpenChange={vi.fn()}
-				onDelete={vi.fn()}
 			/>,
 		);
 
@@ -47,19 +44,16 @@ describe("AddressesSidePanel", () => {
 		render(
 			<AddressesSidePanel
 				profile={profile}
-				wallets={wallets.values()}
-				defaultSelectedAddresses={[]}
 				open={true}
 				onClose={onClose}
 				onOpenChange={vi.fn()}
-				onDelete={vi.fn()}
 			/>,
 		);
 
 		await userEvent.click(screen.getAllByTestId("AddressRow")[0]);
 		await userEvent.click(screen.getByTestId(sidePanelCloseButton));
 
-		expect(onClose).toHaveBeenCalledWith([wallets.first().address()], "single");
+		expect(onClose).toHaveBeenCalled();
 	});
 
 	it("should select all displayed addresses when `select all` clicked", async () => {
@@ -68,31 +62,24 @@ describe("AddressesSidePanel", () => {
 		render(
 			<AddressesSidePanel
 				profile={profile}
-				wallets={wallets.values()}
-				defaultSelectedAddresses={[]}
 				open={true}
 				onClose={onClose}
 				onOpenChange={vi.fn()}
-				onDelete={vi.fn()}
 			/>,
 		);
 
 		await userEvent.click(screen.getByTestId("SelectAllAddresses"));
 		await userEvent.click(screen.getByTestId(sidePanelCloseButton));
 
-		expect(onClose).toHaveBeenCalledWith([wallets.first().address()], "single");
+		expect(onClose).toHaveBeenCalled();
 	});
 
 	it("should switch to delete mode when `manage` clicked", async () => {
 		render(
 			<AddressesSidePanel
 				profile={profile}
-				wallets={wallets.values()}
-				defaultSelectedAddresses={[]}
 				open={true}
-				onClose={vi.fn()}
 				onOpenChange={vi.fn()}
-				onDelete={vi.fn()}
 			/>,
 		);
 
@@ -105,12 +92,8 @@ describe("AddressesSidePanel", () => {
 		render(
 			<AddressesSidePanel
 				profile={profile}
-				wallets={wallets.values()}
-				defaultSelectedAddresses={[]}
 				open={true}
-				onClose={vi.fn()}
 				onOpenChange={vi.fn()}
-				onDelete={vi.fn()}
 			/>,
 		);
 
@@ -119,53 +102,13 @@ describe("AddressesSidePanel", () => {
 		expect(screen.getByTestId("SelectAllAddresses_Checkbox")).toBeDisabled();
 	});
 
-	it("should mark an address for deletion", async () => {
-		const onDelete = vi.fn();
-		const onClose = vi.fn();
-
-		render(
-			<AddressesSidePanel
-				profile={profile}
-				wallets={wallets.values()}
-				defaultSelectedAddresses={wallets.values().map((wallet) => wallet.address())}
-				open={true}
-				onClose={onClose}
-				onOpenChange={vi.fn()}
-				onDelete={onDelete}
-			/>,
-		);
-
-		// go into delete mode
-		await userEvent.click(screen.getByTestId("ManageAddresses"));
-
-		// click on the delete button
-		await userEvent.click(screen.getByTestId(`AddressRow--delete-${wallets.first().address()}`));
-
-		// confirm address deletion
-		await userEvent.click(screen.getByTestId("ConfirmDelete"));
-
-		expect(onDelete).toHaveBeenCalledWith(wallets.first().address());
-
-		await userEvent.click(screen.getByTestId(sidePanelCloseButton));
-
-		expect(onClose).toHaveBeenCalledWith([wallets.first().address()], "single");
-
-		// should reset back to select mode
-		expect(screen.getByTestId("ManageAddresses")).toBeInTheDocument();
-	});
-
 	it("should reset delete state when `cancel` clicked", async () => {
-		const onDelete = vi.fn();
 
 		render(
 			<AddressesSidePanel
 				profile={profile}
-				wallets={wallets.values()}
-				defaultSelectedAddresses={[]}
 				open={true}
-				onClose={vi.fn()}
 				onOpenChange={vi.fn()}
-				onDelete={onDelete}
 			/>,
 		);
 
@@ -179,20 +122,15 @@ describe("AddressesSidePanel", () => {
 
 		// should reset back to select mode
 		expect(screen.getByTestId("ManageAddresses")).toBeInTheDocument();
-
-		expect(onDelete).not.toHaveBeenCalled();
 	});
 
 	it("should filter wallets by address", async () => {
 		render(
 			<AddressesSidePanel
 				profile={profile}
-				wallets={wallets.values()}
-				defaultSelectedAddresses={[]}
 				open={true}
 				onClose={vi.fn()}
 				onOpenChange={vi.fn()}
-				onDelete={vi.fn()}
 			/>,
 		);
 
@@ -205,12 +143,9 @@ describe("AddressesSidePanel", () => {
 		render(
 			<AddressesSidePanel
 				profile={profile}
-				wallets={wallets.values()}
-				defaultSelectedAddresses={[]}
 				open={true}
 				onClose={vi.fn()}
 				onOpenChange={vi.fn()}
-				onDelete={vi.fn()}
 			/>,
 		);
 
@@ -231,12 +166,9 @@ describe("AddressesSidePanel", () => {
 		render(
 			<AddressesSidePanel
 				profile={profile}
-				wallets={wallets.values()}
-				defaultSelectedAddresses={[]}
 				open={true}
 				onClose={vi.fn()}
 				onOpenChange={vi.fn()}
-				onDelete={vi.fn()}
 			/>,
 		);
 
@@ -251,12 +183,9 @@ describe("AddressesSidePanel", () => {
 		render(
 			<AddressesSidePanel
 				profile={profile}
-				wallets={wallets.values()}
-				defaultSelectedAddresses={[]}
 				open={true}
 				onClose={vi.fn()}
 				onOpenChange={vi.fn()}
-				onDelete={vi.fn()}
 			/>,
 		);
 
@@ -273,12 +202,9 @@ describe("AddressesSidePanel", () => {
 		render(
 			<AddressesSidePanel
 				profile={profile}
-				wallets={wallets.values()}
-				defaultSelectedAddresses={[]}
 				open={true}
 				onClose={vi.fn()}
 				onOpenChange={vi.fn()}
-				onDelete={vi.fn()}
 			/>,
 		);
 
@@ -300,31 +226,25 @@ describe("AddressesSidePanel", () => {
 		render(
 			<AddressesSidePanel
 				profile={profile}
-				wallets={wallets.values()}
-				defaultSelectedAddresses={[wallets.first().address(), wallets.last().address()]}
 				open={true}
 				onClose={onClose}
 				onOpenChange={vi.fn()}
-				onDelete={vi.fn()}
 			/>,
 		);
 
 		await userEvent.click(screen.getAllByTestId("AddressRow")[0]);
 		await userEvent.click(screen.getByTestId(sidePanelCloseButton));
 
-		expect(onClose).toHaveBeenCalledWith([wallets.first().address()], "single");
+		expect(onClose).toHaveBeenCalled();
 	});
 
 	it("should toggle between single and multiple view", async () => {
 		render(
 			<AddressesSidePanel
 				profile={profile}
-				wallets={wallets.values()}
-				defaultSelectedAddresses={[]}
 				open={true}
 				onClose={vi.fn()}
 				onOpenChange={vi.fn()}
-				onDelete={vi.fn()}
 			/>,
 		);
 
@@ -340,13 +260,9 @@ describe("AddressesSidePanel", () => {
 		render(
 			<AddressesSidePanel
 				profile={profile}
-				wallets={[profile.wallets().first(), profile.wallets().last()]}
-				defaultSelectedAddresses={[profile.wallets().first().address(), profile.wallets().last().address()]}
-				defaultSelectedWallet={profile.wallets().first()}
 				open={true}
 				onClose={onClose}
 				onOpenChange={vi.fn()}
-				onDelete={vi.fn()}
 			/>,
 		);
 
@@ -359,6 +275,35 @@ describe("AddressesSidePanel", () => {
 		const closeButton = screen.getByTestId(sidePanelCloseButton);
 		await userEvent.click(closeButton);
 
-		expect(onClose).toHaveBeenCalledWith([profile.wallets().first().address()], "single");
+		expect(onClose).toHaveBeenCalled();
 	});
+
+	it("should mark an address for deletion", async () => {
+		const onClose = vi.fn();
+
+		render(
+			<AddressesSidePanel
+				profile={profile}
+				open={true}
+				onClose={onClose}
+				onOpenChange={vi.fn()}
+			/>,
+		);
+
+		// go into delete mode
+		await userEvent.click(screen.getByTestId("ManageAddresses"));
+
+		// click on the delete button
+		await userEvent.click(screen.getByTestId(`AddressRow--delete-${wallets.first().address()}`));
+
+		// confirm address deletion
+		await userEvent.click(screen.getByTestId("ConfirmDelete"));
+		await userEvent.click(screen.getByTestId(sidePanelCloseButton));
+
+		expect(onClose).toHaveBeenCalled();
+
+		// should reset back to select mode
+		expect(screen.getByTestId("ManageAddresses")).toBeInTheDocument();
+	});
+
 });
