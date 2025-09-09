@@ -18,7 +18,6 @@ interface UseUnconfirmedTransactionsReturn {
 		input: UnconfirmedTransaction & {
 			walletAddress: string;
 			networkId: string;
-			gasLimit?: string | number;
 		},
 	) => void;
 	removeUnconfirmedTransaction: (hash: string) => void;

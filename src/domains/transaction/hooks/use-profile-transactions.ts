@@ -516,13 +516,10 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 				}
 				console.log("Matched wallet:", matched.address(), "for transaction:", transaction);
 
-				const gasLimit = transaction.gasLimit ?? 0;
-
 				console.log("Processing unconfirmed transaction:", transaction);
 
 				addUnconfirmedTransactionFromApi({
 					...transaction,
-					gasLimit,
 					networkId: matched.networkId(),
 					walletAddress: matched.address(),
 				});
