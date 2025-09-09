@@ -106,6 +106,7 @@ export class WalletFactory implements IWalletFactory {
 		wallet.data().set(WalletData.ImportMethod, WalletImportMethod.BIP44.DERIVATION_PATH);
 		wallet.data().set(WalletData.AddressIndex, addressIndex);
 		wallet.data().set(WalletData.PublicKey, account.publicKey);
+		wallet.data().set(WalletData.Status, WalletFlag.Cold);
 
 		await wallet.mutator().address({ address: account.address });
 
