@@ -56,7 +56,6 @@ export const useUnconfirmedTransactions = (): UseUnconfirmedTransactionsReturn =
 					transaction: { signedData },
 					walletAddress: input.walletAddress,
 				};
-				console.log("Adding unconfirmed transaction from API:", unconfirmed);
 
 				setUnconfirmedTransactions((prev) => {
 					const target = input.transaction.hash;
