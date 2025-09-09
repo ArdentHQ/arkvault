@@ -288,8 +288,8 @@ export class TransactionService {
 		if (input.signatory.actsWithMnemonicWithDerivationPath()) {
 			address = await this.#mnemonicWithDerivationService.getAddress(
 				input.signatory.signingKey(),
-				input.signatory.path()
-			)
+				input.signatory.path(),
+			);
 		}
 
 		if (input.signatory.actsWithMnemonic() || input.signatory.actsWithConfirmationMnemonic()) {
@@ -364,7 +364,7 @@ export class TransactionService {
 			...transaction.data,
 			...signature,
 		};
-		console.log("mwd", transaction.data)
+		console.log("mwd", transaction.data);
 
 		transaction.data.hash = transaction.hash();
 	}

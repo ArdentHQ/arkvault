@@ -218,7 +218,10 @@ export const AuthenticationStep = ({
 	const title = t("TRANSACTION.AUTHENTICATION_STEP.TITLE");
 
 	const requireMnemonic =
-		wallet.actsWithMnemonic() || wallet.actsWithAddress() || wallet.actsWithPublicKey() || wallet.actsWithMnemonicWithDerivationPath();
+		wallet.actsWithMnemonic() ||
+		wallet.actsWithAddress() ||
+		wallet.actsWithPublicKey() ||
+		wallet.actsWithMnemonicWithDerivationPath();
 	const requireEncryptionPassword = wallet.actsWithMnemonicWithEncryption() || wallet.actsWithSecretWithEncryption();
 
 	const isTransaction = subject === "transaction";
