@@ -21,7 +21,6 @@ import { IMnemonicDerivativeOptions, ISecretOptions } from "./wallet.factory.con
 import { Wallet } from "./wallet.js";
 import { PublicKeyService } from "@/app/lib/mainsail/public-key.service";
 import { AddressService } from "@/app/lib/mainsail/address.service";
-import { hdKeyToAccount, HDKey } from "viem/accounts";
 import { MnemonicWithDerivationPathService } from "@/app/lib/mainsail/mnemonic-with-derivation-path.service";
 
 export class WalletFactory implements IWalletFactory {
