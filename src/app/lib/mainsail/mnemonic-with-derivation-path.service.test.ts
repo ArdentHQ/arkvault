@@ -1,9 +1,10 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
 import { MnemonicWithDerivationPathService } from "./mnemonic-with-derivation-path.service";
 import { ConfigRepository } from "./config.repository";
+import { getDefaultMainsailWalletMnemonic } from "@/utils/testing-library";
 
 const path = "m/44'/111'/0'/0/0";
-const mnemonic = "abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon about";
+const mnemonic = getDefaultMainsailWalletMnemonic();
 
 describe("MnemonicWithDerivationPathService", () => {
 	let service: MnemonicWithDerivationPathService;
