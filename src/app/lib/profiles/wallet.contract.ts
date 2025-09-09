@@ -333,6 +333,14 @@ export interface IReadWriteWallet {
 	isOwnedByTeam(): boolean;
 
 	/**
+	 * Determine if Hierarchical Deterministic (HD) wallet
+	 *
+	 * @return {boolean}
+	 * @memberof IReadWriteWallet
+	 */
+	isHDWallet(): boolean;
+
+	/**
 	 * Determine if the wallet belongs to a ledger.
 	 *
 	 * @return {boolean}
