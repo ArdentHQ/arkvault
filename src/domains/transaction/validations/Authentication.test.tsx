@@ -9,6 +9,7 @@ let wallet: Contracts.IReadWriteWallet;
 let walletWithPassword: Contracts.IReadWriteWallet;
 
 import { AddressService } from "@/app/lib/mainsail/address.service";
+import { MnemonicWithDerivationPathService } from "@/app/lib/mainsail/mnemonic-with-derivation-path.service";
 
 vi.mock("@/utils/debounce", () => ({
 	debounceAsync: (promise: Promise<any>) => promise,
@@ -23,15 +24,11 @@ describe("Authentication", () => {
 		await profile.sync();
 
 		wallet = await profile.walletFactory().fromMnemonicWithBIP39({
-			coin: "Mainsail",
 			mnemonic: MNEMONICS[0],
-			network: "mainsail.devnet",
 		});
 
 		walletWithPassword = await profile.walletFactory().fromMnemonicWithBIP39({
-			coin: "Mainsail",
 			mnemonic: MNEMONICS[1],
-			network: "mainsail.devnet",
 			password: "password",
 		});
 
@@ -52,6 +49,21 @@ describe("Authentication", () => {
 		await expect(mnemonic.validate.matchSenderAddress(MNEMONICS[0])).toBe(true);
 
 		fromMnemonicMock.mockRestore();
+	});
+
+	it("should validate mnemonic with derivation path", async () => {
+		const hdWalletMock = vi.spyOn(wallet, "isHDWallet").mockReturnValue(true);
+
+		const fromMnemonicMock = vi
+			.spyOn(MnemonicWithDerivationPathService, "getAccount")
+			.mockReturnValue({ address: wallet.address() });
+
+		const mnemonic = authentication(translationMock).mnemonic(wallet);
+
+		await expect(mnemonic.validate.matchSenderAddress(MNEMONICS[0])).toBe(true);
+
+		fromMnemonicMock.mockRestore();
+		hdWalletMock.mockRestore();
 	});
 
 	it("should fail mnemonic validation", async () => {

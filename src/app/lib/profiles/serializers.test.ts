@@ -23,6 +23,7 @@ describe("WalletSerialiser", () => {
 			{
 			  "data": {
 			    "ADDRESS": "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
+			    "ADDRESS_INDEX": undefined,
 			    "BALANCE": {
 			      "available": "95276532523250678785",
 			      "fees": "95276532523250678785",

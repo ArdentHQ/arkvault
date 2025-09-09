@@ -333,6 +333,14 @@ export interface IReadWriteWallet {
 	isOwnedByTeam(): boolean;
 
 	/**
+	 * Determine if Hierarchical Deterministic (HD) wallet
+	 *
+	 * @return {boolean}
+	 * @memberof IReadWriteWallet
+	 */
+	isHDWallet(): boolean;
+
+	/**
 	 * Determine if the wallet belongs to a ledger.
 	 *
 	 * @return {boolean}
@@ -655,6 +663,14 @@ export interface IReadWriteWallet {
 	 * @memberof IReadWriteWallet
 	 */
 	actsWithPublicKey(): boolean;
+
+	/**
+	 * Determines if the wallet has been imported with a mnemonic with a derivation path.
+	 *
+	 * @return {*}  {boolean}
+	 * @memberof IReadWriteWallet
+	 */
+	actsWithMnemonicWithDerivationPath(): boolean;
 
 	/**
 	 * Determines if the wallet has been imported with an address with a derivation path.

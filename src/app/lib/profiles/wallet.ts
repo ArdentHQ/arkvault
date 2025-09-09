@@ -340,8 +340,16 @@ export class Wallet implements IReadWriteWallet {
 	}
 
 	/** {@inheritDoc IReadWriteWallet.isLedger} */
+	public isHDWallet(): boolean {
+		return (
+			this.data().get(WalletData.DerivationPath) !== undefined &&
+			this.data().get(WalletData.AddressIndex) !== undefined
+		);
+	}
+
+	/** {@inheritDoc IReadWriteWallet.isLedger} */
 	public isLedger(): boolean {
-		return this.data().get(WalletData.DerivationPath) !== undefined;
+		return this.data().get(WalletData.DerivationPath) !== undefined && !this.isHDWallet();
 	}
 
 	/** {@inheritDoc IReadWriteWallet.isLedgerNanoX} */
@@ -575,6 +583,11 @@ export class Wallet implements IReadWriteWallet {
 	/** {@inheritDoc IReadWriteWallet.actsWithPublicKey} */
 	public actsWithPublicKey(): boolean {
 		return this.data().get(WalletData.ImportMethod) === WalletImportMethod.PublicKey;
+	}
+
+	/** {@inheritDoc IReadWriteWallet.actsWithMnemonicWithDerivationPath} */
+	public actsWithMnemonicWithDerivationPath(): boolean {
+		return this.data().get(WalletData.ImportMethod) === WalletImportMethod.BIP44.DERIVATION_PATH;
 	}
 
 	/** {@inheritDoc IReadWriteWallet.actsWithAddressWithDerivationPath} */
