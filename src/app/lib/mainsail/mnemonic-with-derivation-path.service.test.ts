@@ -11,7 +11,7 @@ describe("MnemonicWithDerivationPathService", () => {
 
 	beforeEach(() => {
 		mockConfig = {
-			get: vi.fn().mockReturnValue(1337),
+			get: vi.fn().mockReturnValue(11812),
 		} as any;
 		service = new MnemonicWithDerivationPathService({ config: mockConfig });
 	});
@@ -57,7 +57,7 @@ describe("MnemonicWithDerivationPathService", () => {
 	});
 
 	it("should use chainId from config", async () => {
-		const chainId = 1337;
+		const chainId = 11812;
 		mockConfig.get = vi.fn().mockReturnValue(chainId);
 
 		const data = {
