@@ -364,7 +364,6 @@ export class TransactionService {
 			...transaction.data,
 			...signature,
 		};
-		console.log("mwd", transaction.data);
 
 		transaction.data.hash = transaction.hash();
 	}

@@ -40,7 +40,6 @@ export class MnemonicWithDerivationPathService {
 		});
 
 		const parsedTransaction = parseTransaction(signature);
-		console.log({ parsedTransaction });
 
 		return {
 			r: parsedTransaction.r?.replace(/^0x/, ""),
