@@ -9,13 +9,15 @@ import { LedgerSignatory } from "./ledger.signatory";
 import { MnemonicSignatory } from "./mnemonic.signatory";
 import { SecretSignatory } from "./secret.signatory";
 import { IdentityOptions } from "./services";
+import { MnemonicWithDerivationPathSignatory } from "@/app/lib/mainsail/mnemonic-with-derivation-path.signatory";
 
 type SignatoryType =
 	| ConfirmationMnemonicSignatory
 	| ConfirmationSecretSignatory
 	| LedgerSignatory
 	| MnemonicSignatory
-	| SecretSignatory;
+	| SecretSignatory
+	| MnemonicWithDerivationPathSignatory;
 
 export class Signatory {
 	readonly #signatory: SignatoryType;
@@ -72,6 +74,10 @@ export class Signatory {
 			return this.#signatory.signingKey();
 		}
 
+		if (this.#signatory instanceof MnemonicWithDerivationPathSignatory) {
+			return this.#signatory.path();
+		}
+
 		throw new ForbiddenMethodCallException(this.constructor.name, this.path.name);
 	}
 
@@ -89,6 +95,10 @@ export class Signatory {
 
 	public actsWithMnemonic(): boolean {
 		return this.#signatory instanceof MnemonicSignatory;
+	}
+
+	public actsWithMnemonicWithDerivationPath(): boolean {
+		return this.#signatory instanceof MnemonicWithDerivationPathSignatory;
 	}
 
 	public actsWithConfirmationMnemonic(): boolean {

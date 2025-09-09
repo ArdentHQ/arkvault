@@ -20,6 +20,7 @@ import { ConfigRepository } from "@/app/lib/mainsail";
 import { IProfile } from "@/app/lib/profiles/profile.contract.js";
 import { Services } from "@/app/lib/mainsail";
 import { SignedTransactionData } from "./signed-transaction.dto";
+import { MnemonicWithDerivationPathService } from "@/app/lib/mainsail/mnemonic-with-derivation-path.service";
 
 interface ValidatedTransferInput extends Services.TransferInput {
 	gasPrice: BigNumber;
@@ -34,6 +35,7 @@ type TransactionsInputs =
 
 export class TransactionService {
 	readonly #ledgerService!: Services.LedgerService;
+	readonly #mnemonicWithDerivationService!: MnemonicWithDerivationPathService;
 	readonly #addressService!: AddressService;
 	readonly #clientService!: ClientService;
 
@@ -41,6 +43,7 @@ export class TransactionService {
 		this.#ledgerService = profile.ledger();
 		this.#addressService = new AddressService();
 		this.#clientService = new ClientService({ config, profile });
+		this.#mnemonicWithDerivationService = new MnemonicWithDerivationPathService();
 	}
 
 	#assertGasFee(input: TransactionsInputs): asserts input is ValidatedTransferInput {
@@ -282,6 +285,13 @@ export class TransactionService {
 	async #signerData(input: Services.TransactionInputs): Promise<{ address?: string }> {
 		let address: string | undefined;
 
+		if (input.signatory.actsWithMnemonicWithDerivationPath()) {
+			address = await this.#mnemonicWithDerivationService.getAddress(
+				input.signatory.signingKey(),
+				input.signatory.path()
+			)
+		}
+
 		if (input.signatory.actsWithMnemonic() || input.signatory.actsWithConfirmationMnemonic()) {
 			address = this.#addressService.fromMnemonic(input.signatory.signingKey()).address;
 		}
@@ -314,6 +324,10 @@ export class TransactionService {
 		const { address } = await this.#signerData(input);
 		builder.transaction.data.from = address;
 
+		if (input.signatory.actsWithMnemonicWithDerivationPath()) {
+			return this.#signMnemonicWithDerivationPath(input, builder.transaction);
+		}
+
 		if (input.signatory.actsWithLedger()) {
 			return this.#signWithLedger(input, builder.transaction);
 		}
@@ -335,6 +349,22 @@ export class TransactionService {
 			...transaction.data,
 			...signature,
 		};
+
+		transaction.data.hash = transaction.hash();
+	}
+
+	async #signMnemonicWithDerivationPath(input: Services.TransferInput, transaction: any): Promise<void> {
+		const signature = await this.#mnemonicWithDerivationService.sign(
+			input.signatory.signingKey(),
+			input.signatory.path(),
+			transaction.data,
+		);
+
+		transaction.data = {
+			...transaction.data,
+			...signature,
+		};
+		console.log("mwd", transaction.data)
 
 		transaction.data.hash = transaction.hash();
 	}

@@ -23,6 +23,16 @@ export class SignatoryFactory implements ISignatoryFactory {
 			return this.#wallet.signatory().confirmationMnemonic(mnemonic, secondMnemonic);
 		}
 
+		if (mnemonic && this.#wallet.actsWithMnemonicWithDerivationPath()) {
+			const derivationPath = this.#wallet.data().get(WalletData.DerivationPath);
+
+			if (typeof derivationPath !== "string") {
+				throw new TypeError("[derivationPath] must be string.");
+			}
+
+			return this.#wallet.signatory().mnemonicWithDerivationPath(mnemonic, derivationPath);
+		}
+
 		if (mnemonic) {
 			return this.#wallet.signatory().mnemonic(mnemonic);
 		}
