@@ -1,4 +1,4 @@
-import { BuildTransferDataProperties } from "@/domains/transaction/pages/SendTransfer/SendTransfer.contracts";
+import { BuildTransferDataProperties } from "@/domains/transaction/components/SendTransferSidePanel/SendTransfer.contracts";
 
 export const buildTransferData = ({ recipients, memo }: BuildTransferDataProperties) => {
 	let data: Record<string, any> = {};

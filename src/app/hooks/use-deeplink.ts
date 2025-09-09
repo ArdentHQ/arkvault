@@ -35,12 +35,22 @@ export const useDeeplink = () => {
 	};
 };
 
-export const useDeeplinkActionHandler = ({ onSignMessage }: { onSignMessage?: () => void }): void => {
+export const useDeeplinkActionHandler = ({
+	onSignMessage,
+	onTransfer,
+}: {
+	onSignMessage?: () => void;
+	onTransfer?: () => void;
+}): void => {
 	const queryParameters = useQueryParameters();
 
 	useEffect(() => {
 		if (queryParameters.get("method") === "sign") {
 			onSignMessage?.();
+		}
+
+		if (queryParameters.get("method") === "transfer") {
+			onTransfer?.();
 		}
 	}, [queryParameters]);
 };
