@@ -1,7 +1,5 @@
-import { ConfirmedTransactionData } from "@/app/lib/mainsail/confirmed-transaction.dto";
 import { DTO } from "@/app/lib/profiles";
 import { RawTransactionData } from "@/app/lib/mainsail/signed-transaction.dto.contract";
-import { UnconfirmedTransaction } from "@/app/lib/mainsail/unconfirmed-transaction.contract";
 import { useCallback } from "react";
 import { useLocalStorage } from "usehooks-ts";
 
@@ -16,7 +14,7 @@ interface UseUnconfirmedTransactionsReturn {
 	addUnconfirmedTransactionFromSigned: (transaction: DTO.ExtendedSignedTransactionData) => void;
 	addUnconfirmedTransactionFromApi: (input: UnconfirmedTransactionData) => void;
 	removeUnconfirmedTransaction: (hash: string) => void;
-	reconcileUnconfirmedForAddresses: (walletAddresses: string[], remoteHashes: string[]) => void;
+	cleanupUnconfirmedForAddresses: (walletAddresses: string[], remoteHashes: string[]) => void;
 }
 
 export const useUnconfirmedTransactions = (): UseUnconfirmedTransactionsReturn => {
@@ -82,17 +80,18 @@ export const useUnconfirmedTransactions = (): UseUnconfirmedTransactionsReturn =
 		[setUnconfirmedTransactions],
 	);
 
-	const reconcileUnconfirmedForAddresses = useCallback(
+	// Remove unconfirmed transactions for the given wallet addresses that are not in the remote hashes anymore
+	const cleanupUnconfirmedForAddresses = useCallback(
 		(walletAddresses: string[], remoteHashes: string[]) => {
 			const scope = new Set(walletAddresses);
 			const keep = new Set(remoteHashes);
 
 			setUnconfirmedTransactions((prev) =>
-				prev.filter((u) => {
-					if (!scope.has(u.walletAddress)) {
+				prev.filter((unconfirmedTransaction) => {
+					if (!scope.has(unconfirmedTransaction.walletAddress)) {
 						return true;
 					}
-					return keep.has(u.transaction.signedData.hash);
+					return keep.has(unconfirmedTransaction.transaction.signedData.hash);
 				}),
 			);
 		},
@@ -102,7 +101,7 @@ export const useUnconfirmedTransactions = (): UseUnconfirmedTransactionsReturn =
 	return {
 		addUnconfirmedTransactionFromApi,
 		addUnconfirmedTransactionFromSigned,
-		reconcileUnconfirmedForAddresses,
+		cleanupUnconfirmedForAddresses,
 		removeUnconfirmedTransaction,
 		unconfirmedTransactions,
 	};

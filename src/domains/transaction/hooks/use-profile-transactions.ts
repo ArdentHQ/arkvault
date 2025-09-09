@@ -140,7 +140,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 		unconfirmedTransactions,
 		removeUnconfirmedTransaction,
 		addUnconfirmedTransactionFromApi,
-		reconcileUnconfirmedForAddresses,
+		cleanupUnconfirmedForAddresses,
 	} = useUnconfirmedTransactions();
 
 	const allTransactionTypes = [...types.core];
@@ -486,12 +486,9 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 				to: selectedAddresses,
 			});
 
-			console.log("Fetched unconfirmed transactions:", response);
-
 			const results = response?.results ?? [];
 			const remoteHashes = results.map((t: any) => t.hash).filter(Boolean);
-			reconcileUnconfirmedForAddresses(selectedAddresses, remoteHashes);
-			console.log("Reconciled unconfirmed transactions. Remote hashes:", remoteHashes);
+			cleanupUnconfirmedForAddresses(selectedAddresses, remoteHashes);
 
 			/* istanbul ignore next -- @preserve */
 			if (remoteHashes.length !== unconfirmedTransactions.length) {
@@ -499,7 +496,6 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 			}
 
 			for (const transaction of results) {
-				console.log("Processing unconfirmed transaction:", transaction);
 				const matched = wallets.find((wallet) => {
 					const walletAddr = wallet.address().toLowerCase();
 					const txFrom = transaction.from().toLowerCase();
@@ -511,9 +507,6 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 					console.warn("No matching wallet found for transaction:", transaction);
 					continue;
 				}
-				console.log("Matched wallet:", matched.address(), "for transaction:", transaction);
-
-				console.log("Processing unconfirmed transaction:", transaction);
 
 				addUnconfirmedTransactionFromApi({
 					networkId: matched.networkId(),
@@ -528,7 +521,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 		unconfirmedTransactionsService,
 		wallets,
 		addUnconfirmedTransactionFromApi,
-		reconcileUnconfirmedForAddresses,
+		cleanupUnconfirmedForAddresses,
 		unconfirmedTransactions.length,
 	]);
 
