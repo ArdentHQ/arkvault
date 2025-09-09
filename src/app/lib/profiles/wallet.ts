@@ -341,7 +341,10 @@ export class Wallet implements IReadWriteWallet {
 
 	/** {@inheritDoc IReadWriteWallet.isLedger} */
 	public isHDWallet(): boolean {
-		return this.data().get(WalletData.DerivationPath) !== undefined && this.data().get(WalletData.AddressIndex) !== undefined;
+		return (
+			this.data().get(WalletData.DerivationPath) !== undefined &&
+			this.data().get(WalletData.AddressIndex) !== undefined
+		);
 	}
 
 	/** {@inheritDoc IReadWriteWallet.isLedger} */
