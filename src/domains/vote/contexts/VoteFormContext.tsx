@@ -4,6 +4,7 @@ import { VoteValidatorProperties } from "@/domains/vote/components/ValidatorsTab
 import { Networks } from "@/app/lib/mainsail";
 import { useDeeplinkActionHandler } from "@/app/hooks";
 import { useVoteQueryParameters } from "@/domains/vote/hooks/use-vote-query-parameters";
+import { useSearchParams } from "react-router";
 
 interface Properties {
 	children: React.ReactNode;
@@ -36,7 +37,7 @@ export const VoteFormProvider = ({ profile, network, children, wallet }: Propert
 	const [unvotes, setUnvotes] = useState<Contracts.VoteRegistryItem[]>([]);
 	const [selectedWallet, setSelectedWallet] = useState<Contracts.IReadWriteWallet | undefined>(wallet);
 	const [isLoading, setIsLoading] = useState(false);
-
+	const [searchParams, setSearchParams] = useSearchParams();
 	const voteQueryParameters = useVoteQueryParameters();
 
 	useDeeplinkActionHandler({
@@ -92,6 +93,11 @@ export const VoteFormProvider = ({ profile, network, children, wallet }: Propert
 			setUnvoteValidators([]);
 			setVotes([]);
 			setUnvotes([]);
+
+			if (searchParams.has("method")) {
+				searchParams.delete("method");
+				setSearchParams(new URLSearchParams());
+			}
 		}
 
 		setShowSendVotePanel(show);
