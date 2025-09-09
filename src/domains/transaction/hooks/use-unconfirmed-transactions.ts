@@ -1,8 +1,9 @@
-import { useCallback } from "react";
+import { ConfirmedTransactionData } from "@/app/lib/mainsail/confirmed-transaction.dto";
 import { DTO } from "@/app/lib/profiles";
-import { useLocalStorage } from "usehooks-ts";
 import { RawTransactionData } from "@/app/lib/mainsail/signed-transaction.dto.contract";
 import { UnconfirmedTransaction } from "@/app/lib/mainsail/unconfirmed-transaction.contract";
+import { useCallback } from "react";
+import { useLocalStorage } from "usehooks-ts";
 
 export interface UnconfirmedTransactionData {
 	transaction: RawTransactionData;
@@ -54,18 +55,21 @@ export const useUnconfirmedTransactions = (): UseUnconfirmedTransactionsReturn =
 	);
 
 	const addUnconfirmedTransactionFromApi = useCallback(
-		(input: UnconfirmedTransaction & { walletAddress: string; networkId: string; gasLimit?: string | number }) => {
+		(
+			input: ConfirmedTransactionData & { walletAddress: string; networkId: string; gasLimit?: string | number },
+		) => {
 			try {
+				// TODO: improve typing here
 				const signedData: RawTransactionData = {
-					data: input.data,
-					from: input.from,
-					gasLimit: input.gasLimit,
-					gasPrice: input.gasPrice,
-					hash: input.hash,
-					nonce: input.nonce,
-					senderPublicKey: input.senderPublicKey,
-					to: input.to,
-					value: input.value,
+					data: input.data.data,
+					from: input.data.from,
+					gasLimit: input.data.gasLimit,
+					gasPrice: input.data.gasPrice,
+					hash: input.data.hash,
+					nonce: input.data.nonce,
+					senderPublicKey: input.data.senderPublicKey,
+					to: input.data.to,
+					value: input.data.value,
 				};
 
 				const unconfirmed: UnconfirmedTransactionData = {
@@ -73,6 +77,7 @@ export const useUnconfirmedTransactions = (): UseUnconfirmedTransactionsReturn =
 					transaction: { signedData },
 					walletAddress: input.walletAddress,
 				};
+				console.log("Adding unconfirmed transaction from API:", unconfirmed);
 
 				setUnconfirmedTransactions((prev) => {
 					const target = input.hash;

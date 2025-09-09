@@ -489,9 +489,12 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 				to: selectedAddresses,
 			});
 
+			console.log("Fetched unconfirmed transactions:", response);
+
 			const results = response?.results ?? [];
 			const remoteHashes = results.map((t: any) => t.hash).filter(Boolean);
 			reconcileUnconfirmedForAddresses(selectedAddresses, remoteHashes);
+			console.log("Reconciled unconfirmed transactions. Remote hashes:", remoteHashes);
 
 			/* istanbul ignore next -- @preserve */
 			if (remoteHashes.length !== unconfirmedTransactions.length) {
@@ -499,18 +502,23 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 			}
 
 			for (const transaction of results) {
+				console.log("Processing unconfirmed transaction:", transaction);
 				const matched = wallets.find((wallet) => {
 					const walletAddr = wallet.address().toLowerCase();
-					const txFrom = transaction.from?.toLowerCase?.();
-					const txTo = transaction.to?.toLowerCase?.();
+					const txFrom = transaction.data.from?.toLowerCase?.();
+					const txTo = transaction.data.to?.toLowerCase?.();
 					return walletAddr === txFrom || walletAddr === txTo;
 				});
 
 				if (!matched) {
+					console.warn("No matching wallet found for transaction:", transaction);
 					continue;
 				}
+				console.log("Matched wallet:", matched.address(), "for transaction:", transaction);
 
 				const gasLimit = transaction.gasLimit ?? 0;
+
+				console.log("Processing unconfirmed transaction:", transaction);
 
 				addUnconfirmedTransactionFromApi({
 					...transaction,
