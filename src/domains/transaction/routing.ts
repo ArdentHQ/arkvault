@@ -4,7 +4,6 @@ import preloadLazy from "@/utils/preload-lazy";
 
 const SendValidatorResignation = preloadLazy(() => import("./pages/SendValidatorResignation"));
 const SendRegistration = preloadLazy(() => import("./pages/SendRegistration"));
-const SendVote = preloadLazy(() => import("./pages/SendVote"));
 const SendUsernameResignation = preloadLazy(() => import("./pages/SendUsernameResignation"));
 
 export const TransactionRoutes: RouteItem[] = [
@@ -37,16 +36,5 @@ export const TransactionRoutes: RouteItem[] = [
 		component: SendUsernameResignation,
 		exact: true,
 		path: ProfilePaths.SendUsernameResignationProfile,
-	},
-
-	{
-		component: SendVote,
-		exact: true,
-		path: ProfilePaths.SendVoteWallet,
-	},
-	{
-		component: SendVote,
-		exact: true,
-		path: ProfilePaths.SendVote,
 	},
 ];
