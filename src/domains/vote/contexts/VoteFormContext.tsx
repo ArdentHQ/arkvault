@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Contracts } from "@/app/lib/profiles";
 import { VoteValidatorProperties } from "@/domains/vote/components/ValidatorsTable/ValidatorsTable.contracts";
 import { Networks } from "@/app/lib/mainsail";
+import { useDeeplinkActionHandler } from "@/app/hooks";
+import { useValidatorsFromURL, useVoteQueryParameters } from "@/domains/vote/hooks/use-vote-query-parameters";
 
 interface Properties {
 	children: React.ReactNode;
@@ -34,6 +36,14 @@ export const VoteFormProvider = ({ profile, network, children, wallet }: Propert
 	const [unvotes, setUnvotes] = useState<Contracts.VoteRegistryItem[]>([]);
 	const [selectedWallet, setSelectedWallet] = useState<Contracts.IReadWriteWallet | undefined>(wallet);
 	const [isLoading, setIsLoading] = useState(false);
+
+	const voteQueryParameters = useVoteQueryParameters();
+
+	useDeeplinkActionHandler({
+		onVote: () => {
+			openSendVotePanel(voteQueryParameters.unvoteValidators, voteQueryParameters.voteValidators);
+		},
+	});
 
 	useEffect(() => {
 		const updateValidators = async () => {
