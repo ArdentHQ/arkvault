@@ -10,20 +10,20 @@ export class MnemonicWithDerivationPathService {
 		this.#config = config;
 	}
 
-	public async getPublicKey(mnemonic: string, path: string): Promise<string> {
-		const account = await this.getAccount(mnemonic, path);
+	public getPublicKey(mnemonic: string, path: string): string {
+		const account = MnemonicWithDerivationPathService.getAccount(mnemonic, path);
 		return account.publicKey as string;
 	}
 
-	public async getAddress(mnemonic: string, path: string): Promise<string> {
-		const account = await this.getAccount(mnemonic, path);
+	public getAddress(mnemonic: string, path: string): string {
+		const account = MnemonicWithDerivationPathService.getAccount(mnemonic, path);
 		return account.address;
 	}
 
 	public async sign(mnemonic: string, path: string, data: Record<string, any>): Promise<object> {
 		const chainId = this.#config.get("crypto.network.chainId") as number;
 
-		const account = await this.getAccount(mnemonic, path);
+		const account = MnemonicWithDerivationPathService.getAccount(mnemonic, path);
 
 		if (!account.signTransaction) {
 			throw new Error("Failed to create account!");
@@ -53,7 +53,7 @@ export class MnemonicWithDerivationPathService {
 	//
 	// }
 
-	public async getAccount(mnemonic: string, path: string): Promise<Account> {
+	public static getAccount(mnemonic: string, path: string): Account {
 		const seed = BIP39.toSeed(mnemonic);
 		const hdKey = HDKey.fromMasterSeed(seed);
 

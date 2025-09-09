@@ -3,6 +3,8 @@ import { Contracts } from "@/app/lib/profiles";
 
 import { debounceAsync } from "@/utils/debounce";
 import { AddressService } from "@/app/lib/mainsail/address.service";
+import { MnemonicWithDerivationPathService } from "@/app/lib/mainsail/mnemonic-with-derivation-path.service";
+import { WalletData } from "@/app/lib/profiles/wallet.enum";
 
 const requiredFieldMessage = "COMMON.VALIDATION.FIELD_REQUIRED";
 
@@ -50,7 +52,17 @@ export const authentication = (t: any) => {
 			validate: {
 				matchSenderAddress: (mnemonic: string) => {
 					try {
-						const { address } = new AddressService().fromMnemonic(mnemonic);
+						let address: string;
+
+						if (wallet.isHDWallet()) {
+							const account = MnemonicWithDerivationPathService.getAccount(
+								mnemonic,
+								wallet.data().get(WalletData.DerivationPath) as string
+							);
+							address = account.address;
+						} else {
+							address = new AddressService().fromMnemonic(mnemonic).address;
+						}
 
 						if (address === wallet.address()) {
 							return true;

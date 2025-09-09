@@ -286,7 +286,7 @@ export class TransactionService {
 		let address: string | undefined;
 
 		if (input.signatory.actsWithMnemonicWithDerivationPath()) {
-			address = await this.#mnemonicWithDerivationService.getAddress(
+			address = this.#mnemonicWithDerivationService.getAddress(
 				input.signatory.signingKey(),
 				input.signatory.path(),
 			);
