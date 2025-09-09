@@ -386,7 +386,10 @@ describe("Wallet", () => {
 	});
 
 	it("should check if is ledger", () => {
-		const spy = vi.spyOn(wallet.data(), "get").mockReturnValue("m/44'/0'/0'/0/0");
+		const spy = vi.spyOn(wallet.data(), "get").mockImplementation((key) => {
+			return (key === "DERIVATION_PATH") ? "m/44'/0'/0'/0/0" : undefined;
+		});
+
 		expect(wallet.isLedger()).toBe(true);
 		spy.mockRestore();
 	});
