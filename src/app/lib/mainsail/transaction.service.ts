@@ -43,7 +43,7 @@ export class TransactionService {
 		this.#ledgerService = profile.ledger();
 		this.#addressService = new AddressService();
 		this.#clientService = new ClientService({ config, profile });
-		this.#mnemonicWithDerivationService = new MnemonicWithDerivationPathService();
+		this.#mnemonicWithDerivationService = new MnemonicWithDerivationPathService({ config });
 	}
 
 	#assertGasFee(input: TransactionsInputs): asserts input is ValidatedTransferInput {

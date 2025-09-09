@@ -1,8 +1,15 @@
 import { BIP39 } from "@ardenthq/arkvault-crypto";
 import { Account, HDKey, hdKeyToAccount } from "viem/accounts";
 import { parseTransaction } from "viem";
+import { ConfigRepository } from "@/app/lib/mainsail/config.repository";
 
 export class MnemonicWithDerivationPathService {
+	#config: ConfigRepository;
+
+	constructor({ config }: { config: ConfigRepository }) {
+		this.#config = config;
+	}
+
 	public async getPublicKey(mnemonic: string, path: string): Promise<string> {
 		const account = await this.getAccount(mnemonic, path);
 		return account.publicKey as string;
@@ -14,6 +21,8 @@ export class MnemonicWithDerivationPathService {
 	}
 
 	public async sign(mnemonic: string, path: string, data: Record<string, any>): Promise<object> {
+		const chainId = this.#config.get("crypto.network.chainId") as number;
+
 		const account = await this.getAccount(mnemonic, path);
 
 		if (!account.signTransaction) {
@@ -21,7 +30,7 @@ export class MnemonicWithDerivationPathService {
 		}
 
 		const signature = await account.signTransaction({
-			chainId: 11812,
+			chainId,
 			gas: BigInt(data.gasLimit),
 			gasPrice: BigInt(data.gasPrice.toString()),
 			nonce: +data.nonce,
@@ -40,7 +49,6 @@ export class MnemonicWithDerivationPathService {
 		};
 	}
 
-	//
 	// public async signMessage(path: string, payload: string): Promise<string> {
 	//
 	// }
