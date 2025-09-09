@@ -57,7 +57,7 @@ export const authentication = (t: any) => {
 						if (wallet.isHDWallet()) {
 							const account = MnemonicWithDerivationPathService.getAccount(
 								mnemonic,
-								wallet.data().get(WalletData.DerivationPath) as string
+								wallet.data().get(WalletData.DerivationPath) as string,
 							);
 							address = account.address;
 						} else {
