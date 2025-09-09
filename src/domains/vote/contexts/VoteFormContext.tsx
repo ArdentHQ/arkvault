@@ -3,7 +3,7 @@ import { Contracts } from "@/app/lib/profiles";
 import { VoteValidatorProperties } from "@/domains/vote/components/ValidatorsTable/ValidatorsTable.contracts";
 import { Networks } from "@/app/lib/mainsail";
 import { useDeeplinkActionHandler } from "@/app/hooks";
-import { useValidatorsFromURL, useVoteQueryParameters } from "@/domains/vote/hooks/use-vote-query-parameters";
+import { useVoteQueryParameters } from "@/domains/vote/hooks/use-vote-query-parameters";
 
 interface Properties {
 	children: React.ReactNode;
