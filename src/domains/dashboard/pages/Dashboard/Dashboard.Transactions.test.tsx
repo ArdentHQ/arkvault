@@ -13,12 +13,15 @@ import {
 	mockProfileWithPublicAndTestNetworks,
 	getMainsailProfileId,
 } from "@/utils/testing-library";
-
+import { vi } from "vitest";
+import { afterAll } from "vitest";
+import * as ReactRouter from "react-router";
 let profile: Contracts.IProfile;
 let resetProfileNetworksMock: () => void;
 
 const fixtureProfileId = getMainsailProfileId();
 let dashboardURL: string;
+let useSearchParamsMock;
 
 vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
@@ -26,6 +29,10 @@ vi.mock("@/utils/delay", () => ({
 
 describe("Dashboard", () => {
 	beforeAll(async () => {
+		useSearchParamsMock = vi
+			.spyOn(ReactRouter, "useSearchParams")
+			.mockReturnValue([new URLSearchParams(), vi.fn()]);
+
 		profile = env.profiles().findById(fixtureProfileId);
 
 		await syncValidators(profile);
@@ -42,6 +49,10 @@ describe("Dashboard", () => {
 
 	afterEach(() => {
 		resetProfileNetworksMock();
+	});
+
+	afterAll(() => {
+		useSearchParamsMock.mockRestore();
 	});
 
 	it("should render loading state when profile is syncing", async () => {

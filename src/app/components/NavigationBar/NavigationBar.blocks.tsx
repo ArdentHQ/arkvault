@@ -299,12 +299,9 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 	const handleCloseReceiveFunds = useCallback(() => setSelectedWallet(undefined), [setSelectedWallet]);
 
 	const sendButtonClickHandler = useCallback(() => {
-		const sendTransferPath = `/profiles/${profile.id()}/send-transfer`;
+		const sendTransferPath = generatePath(ProfilePaths.SendTransfer, { profileId: profile.id() });
 
-		// add query param reset = 1 if already on send transfer page
-		/* istanbul ignore next: tested in e2e -- @preserve */
-		const reset = location.pathname === sendTransferPath ? 1 : 0;
-		navigate(`${sendTransferPath}?reset=${reset}`);
+		return navigate(sendTransferPath);
 	}, [location]);
 
 	const receiveButtonClickHandler = useCallback(() => {

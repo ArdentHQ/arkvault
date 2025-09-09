@@ -26,10 +26,12 @@ import { translations as transactionTranslations } from "@/domains/transaction/i
 import userEvent from "@testing-library/user-event";
 import { PublicKeyService } from "@/app/lib/mainsail/public-key.service";
 import { LedgerTransportFactory } from "@/app/contexts";
-import { vi } from "vitest";
+import { afterAll, vi } from "vitest";
+import * as ReactRouter from "react-router";
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
 let secondWallet: Contracts.IReadWriteWallet;
+let useSearchParamsMock;
 const passphrase = getDefaultMainsailWalletMnemonic();
 
 vi.mock("@/utils/delay", () => ({
@@ -156,6 +158,10 @@ const withKeyboard = "with keyboard";
 
 describe("SendRegistrationSidePanel", () => {
 	beforeAll(async () => {
+		useSearchParamsMock = vi
+			.spyOn(ReactRouter, "useSearchParams")
+			.mockReturnValue([new URLSearchParams(), vi.fn()]);
+
 		profile = env.profiles().findById(getMainsailProfileId());
 
 		await env.profiles().restore(profile);
@@ -210,6 +216,10 @@ describe("SendRegistrationSidePanel", () => {
 				ValidatorRegistrationFixture,
 			),
 		);
+	});
+
+	afterAll(() => {
+		useSearchParamsMock.mockRestore();
 	});
 
 	it("should handle registrationType param (%s)", async () => {

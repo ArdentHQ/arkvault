@@ -16,20 +16,24 @@ import { Dashboard } from "./Dashboard";
 import React from "react";
 import { translations as profileTranslations } from "@/domains/profile/i18n";
 import userEvent from "@testing-library/user-event";
-
+import * as ReactRouter from "react-router";
 let profile: Contracts.IProfile;
 let resetProfileNetworksMock: () => void;
 
 const fixtureProfileId = getMainsailProfileId();
 let dashboardURL: string;
 let mockTransactionsAggregate;
-
+let useSearchParamsMock;
 vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
 }));
 
 describe("Dashboard", () => {
 	beforeAll(async () => {
+		useSearchParamsMock = vi
+			.spyOn(ReactRouter, "useSearchParams")
+			.mockReturnValue([new URLSearchParams(), vi.fn()]);
+
 		profile = env.profiles().findById(fixtureProfileId);
 
 		await syncValidators(profile);
@@ -49,6 +53,7 @@ describe("Dashboard", () => {
 
 	afterAll(() => {
 		useRandomNumberHook.useRandomNumber.mockRestore();
+		useSearchParamsMock.mockRestore();
 	});
 
 	beforeEach(() => {
@@ -205,6 +210,21 @@ describe("Dashboard", () => {
 
 		await waitFor(() => {
 			expect(screen.getByTestId("SignMessageSidePanel")).toBeVisible();
+		});
+	});
+
+	it("should render and handle send transfer deeplink", async () => {
+		render(<Dashboard />, {
+			route: `/profiles/${fixtureProfileId}/dashboard?method=transfer`,
+			withProfileSynchronizer: true,
+		});
+
+		await waitFor(() =>
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(8),
+		);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("SendTransferSidePanel")).toBeVisible();
 		});
 	});
 });
