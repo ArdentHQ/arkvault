@@ -63,9 +63,7 @@ describe("PreloadMiddleware", () => {
 			vi.spyOn(route.component as any, "preload"),
 		);
 
-		const commonSpies = [...MessageRoutes].map((route) =>
-			vi.spyOn(route.component as any, "preload"),
-		);
+		const commonSpies = [...MessageRoutes].map((route) => vi.spyOn(route.component as any, "preload"));
 
 		const canActivate = subject.handler({ location: { pathname: "/" } } as any);
 
@@ -93,9 +91,7 @@ describe("PreloadMiddleware", () => {
 			vi.spyOn(route.component as any, "preload"),
 		);
 
-		const commonSpies = [...MessageRoutes].map((route) =>
-			vi.spyOn(route.component as any, "preload"),
-		);
+		const commonSpies = [...MessageRoutes].map((route) => vi.spyOn(route.component as any, "preload"));
 
 		const canActivate = subject.handler({ location: { pathname: "/profiles" } } as any);
 
