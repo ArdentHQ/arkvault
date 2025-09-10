@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
@@ -13,15 +12,21 @@ import {
 	getMainsailProfileId,
 } from "@/utils/testing-library";
 import { expect } from "vitest";
+import * as ReactRouter from "react-router";
 
 let profile: Contracts.IProfile;
 let resetProfileNetworksMock: () => void;
 
 const fixtureProfileId = getMainsailProfileId();
 let dashboardURL: string;
+let useSearchParamsMock;
 
 describe("Dashboard", () => {
 	beforeAll(async () => {
+		useSearchParamsMock = vi
+			.spyOn(ReactRouter, "useSearchParams")
+			.mockReturnValue([new URLSearchParams(), vi.fn()]);
+
 		profile = env.profiles().findById(fixtureProfileId);
 
 		await env.profiles().restore(profile);
@@ -32,6 +37,7 @@ describe("Dashboard", () => {
 
 	afterAll(() => {
 		useRandomNumberHook.useRandomNumber.mockRestore();
+		useSearchParamsMock.mockRestore();
 	});
 
 	beforeEach(() => {

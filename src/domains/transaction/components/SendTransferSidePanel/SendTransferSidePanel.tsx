@@ -2,10 +2,10 @@ import { DTO } from "@/app/lib/profiles";
 import React, { useCallback, useEffect, useMemo, useRef, useState, JSX } from "react";
 import { useTranslation } from "react-i18next";
 import { URLBuilder } from "@ardenthq/arkvault-url";
-import { FormStep } from "@/domains/transaction/pages/SendTransfer/FormStep";
-import { TransferLedgerReview } from "@/domains/transaction/pages/SendTransfer/LedgerReview";
-import { ReviewStep } from "@/domains/transaction/pages/SendTransfer/ReviewStep";
-import { SendTransferStep } from "@/domains/transaction/pages/SendTransfer/SendTransfer.contracts";
+import { FormStep } from "@/domains/transaction/components/SendTransferSidePanel/FormStep";
+import { TransferLedgerReview } from "@/domains/transaction/components/SendTransferSidePanel/LedgerReview";
+import { ReviewStep } from "@/domains/transaction/components/SendTransferSidePanel/ReviewStep";
+import { SendTransferStep } from "@/domains/transaction/components/SendTransferSidePanel/SendTransfer.contracts";
 import { useSendTransferForm } from "@/domains/transaction/hooks/use-send-transfer-form";
 import { usePendingTransactions } from "@/domains/transaction/hooks/use-pending-transactions";
 import { Form } from "@/app/components/Form";
@@ -28,7 +28,7 @@ import cn from "classnames";
 import {
 	TransferFormData,
 	TransferOverwriteModal,
-} from "@/domains/transaction/pages/SendTransfer/TransferOverwriteModal";
+} from "@/domains/transaction/components/SendTransferSidePanel/TransferOverwriteModal";
 import { TransactionSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { SidePanel, SidePanelButtons } from "@/app/components/SidePanel/SidePanel";
@@ -38,6 +38,7 @@ import { ThemeIcon } from "@/app/components/Icon";
 import { useConfirmedTransaction } from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
 import { useSelectsTransactionSender } from "@/domains/transaction/hooks/use-selects-transaction-sender";
 import { getAuthenticationStepSubtitle } from "@/domains/transaction/utils";
+import { useNavigate } from "react-router-dom";
 
 const MAX_TABS = 5;
 
@@ -137,15 +138,16 @@ export const SendTransferSidePanel = ({
 		});
 	}, [resetForm, firstTabIndex]);
 
+	const navigate = useNavigate();
+
 	const onMountChange = useCallback(
 		(mounted: boolean) => {
 			setMounted(mounted);
 			if (!mounted) {
 				resetState();
-				return;
 			}
 		},
-		[resetState],
+		[resetState, navigate],
 	);
 
 	useEffect(() => {
