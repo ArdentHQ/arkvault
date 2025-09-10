@@ -61,6 +61,8 @@ const signedTransactionMock = {
 		`https://mainsail-explorer.ihost.org/transactions/${UsernameResignationFixture.data.hash}`,
 	fee: () => BigNumber.make(107),
 	from: () => UsernameResignationFixture.data.from,
+	gasLimit: () => UsernameResignationFixture.data.gasLimit,
+	gasUsed: () => UsernameResignationFixture.data.gas,
 	hash: () => UsernameResignationFixture.data.hash,
 	isConfirmed: () => false,
 	isMultiPayment: () => false,

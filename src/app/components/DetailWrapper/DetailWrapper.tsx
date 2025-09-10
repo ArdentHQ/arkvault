@@ -16,10 +16,13 @@ export const DetailLabelText = ({ children, className }: { children: ReactNode; 
 	</div>
 );
 
-export const DetailLabel = ({ children }: { children: ReactNode }) => (
+export const DetailLabel = ({ children, className }: { children: ReactNode; className?: string }) => (
 	<div
 		data-testid="DetailLabel"
-		className="border-x-theme-primary-400 dim:border-x-theme-dim-navy-400 bg-theme-secondary-100 dim:bg-theme-dim-950 dim:sm:bg-transparent border-l-2 px-3 py-2 sm:border-none sm:bg-transparent sm:p-0 dark:bg-black dark:sm:bg-transparent"
+		className={twMerge(
+			"border-x-theme-primary-400 dim:border-x-theme-dim-navy-400 bg-theme-secondary-100 dim:bg-theme-dim-950 dim:sm:bg-transparent border-l-2 px-3 py-2 sm:border-none sm:bg-transparent sm:p-0 dark:bg-black dark:sm:bg-transparent",
+			className,
+		)}
 	>
 		<DetailLabelText>{children}</DetailLabelText>
 	</div>

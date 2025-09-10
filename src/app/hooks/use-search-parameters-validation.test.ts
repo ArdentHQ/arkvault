@@ -255,9 +255,9 @@ describe("useSearchParametersValidation", () => {
 				searchParameters: parameters,
 			}),
 		).toBe(
-			`/profiles/${profile.id()}/dashboard?coin=Mainsail&nethash=${
+			`/profiles/${profile.id()}/dashboard?method=sign&coin=Mainsail&nethash=${
 				profile.wallets().first().network().meta().nethash
-			}&method=sign&message=test`,
+			}&message=test`,
 		);
 	});
 
