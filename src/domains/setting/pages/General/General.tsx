@@ -47,7 +47,7 @@ export const GeneralSettings: React.FC = () => {
 	const { resetProfileTheme } = useTheme();
 
 	const { t } = useTranslation();
-	console.log(profile.settings().all())
+	console.log(profile.settings().all());
 
 	const getDefaultValues = (): Partial<GeneralSettingsState> => {
 		const settings = profile.settings();
@@ -216,17 +216,13 @@ export const GeneralSettings: React.FC = () => {
 			label: `${t("SETTINGS.GENERAL.OTHER.HD_WALLETS.TITLE")}`,
 			labelAddon: (
 				<span>
-					<Divider type="vertical" className="text-theme-secondary-300 dark:text-theme-dark-700 dim:text-theme-dim-700" />
-					<Link
-						isExternal
-						to="https://docs.mainsailhq.com/"
-						showExternalIcon={false}
-						className="text-base"
-					>
+					<Divider
+						type="vertical"
+						className="text-theme-secondary-300 dark:text-theme-dark-700 dim:text-theme-dim-700"
+					/>
+					<Link isExternal to="https://docs.mainsailhq.com/" showExternalIcon={false} className="text-base">
 						<span className="flex flex-row items-center gap-2">
-							<span>
-								{t("COMMON.LEARN_MORE")}
-							</span>
+							<span>{t("COMMON.LEARN_MORE")}</span>
 
 							<Icon
 								data-testid="Link__external"
