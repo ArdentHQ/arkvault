@@ -1,7 +1,8 @@
-import { act, env, getMainsailProfileId, renderHook } from "@/utils/testing-library";
 import { Contracts, DTO } from "@/app/lib/profiles";
-import { SignedTransactionData } from "@/app/lib/mainsail/signed-transaction.dto";
+import { act, env, getMainsailProfileId, renderHook } from "@/utils/testing-library";
+
 import { ExtendedSignedTransactionData } from "@/app/lib/profiles/signed-transaction.dto";
+import { SignedTransactionData } from "@/app/lib/mainsail/signed-transaction.dto";
 import { useUnconfirmedTransactions } from "./use-unconfirmed-transactions";
 
 const signedTransactionData = {
@@ -10,7 +11,7 @@ const signedTransactionData = {
 	signedData: {
 		data: "36a94134000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000077364667364663300000000000000000000000000000000000000000000000000",
 		from: "0xA5cc0BfEB09742C5e4C610f2EBaaB82Eb142Ca10",
-		gasLimit: "21592",
+		gasLimit: "1200000",
 		gasPrice: "5000000000",
 		hash: "d91057d3b535e43e890c794e2142803a54cd070edd3006e74ffd17dd18165f22",
 		nonce: "187",
@@ -26,17 +27,19 @@ const signedTransactionData = {
 
 const secondSignedTransactionHash = "e82068d4c535e43e890c794e2142803a54cd070edd3006e74ffd17dd18165f33";
 
-const mockUnconfirmedTransaction = {
-	data: "0x36a94134000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000077364667364663300000000000000000000000000000000000000000000000000",
-	from: "0xA5cc0BfEB09742C5e4C610f2EBaaB82Eb142Ca10",
-	gas: "21592",
-	gasPrice: "5000000000",
-	hash: "d91057d3b535e43e890c794e2142803a54cd070edd3006e74ffd17dd18165f22",
+const mockUnconfirmedTransactionData = {
 	networkId: "mainsail.devnet",
-	nonce: "187",
-	senderPublicKey: "022a40ea35d53eedf0341ffa17574fca844d69665ce35f224e9a6b1385575044fd",
-	to: "0x2c1DE3b4Dbb4aDebEbB5dcECAe825bE2a9fc6eb6",
-	value: "0",
+	transaction: {
+		data: "0x36a94134000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000077364667364663300000000000000000000000000000000000000000000000000",
+		from: "0xA5cc0BfEB09742C5e4C610f2EBaaB82Eb142Ca10",
+		gasLimit: "1200000",
+		gasPrice: "5000000000",
+		hash: "d91057d3b535e43e890c794e2142803a54cd070edd3006e74ffd17dd18165f22",
+		nonce: "187",
+		senderPublicKey: "022a40ea35d53eedf0341ffa17574fca844d69665ce35f224e9a6b1385575044fd",
+		to: "0x2c1DE3b4Dbb4aDebEbB5dcECAe825bE2a9fc6eb6",
+		value: "0",
+	},
 	walletAddress: "0xA5cc0BfEB09742C5e4C610f2EBaaB82Eb142Ca10",
 };
 
@@ -72,7 +75,7 @@ describe("useUnconfirmedTransactions", () => {
 		expect(typeof result.current.removeUnconfirmedTransaction).toBe("function");
 	});
 
-	it("should add a unconfirmed transaction", async () => {
+	it("should add an unconfirmed transaction", async () => {
 		const { result } = renderHook(() => useUnconfirmedTransactions());
 
 		const mockTransaction = createMockTransaction(wallet);
@@ -133,7 +136,7 @@ describe("useUnconfirmedTransactions", () => {
 		);
 	});
 
-	it("should remove a unconfirmed transaction by hash", async () => {
+	it("should remove an unconfirmed transaction by hash", async () => {
 		const { result } = renderHook(() => useUnconfirmedTransactions());
 
 		const mockTransaction1 = createMockTransaction(wallet);
@@ -201,82 +204,40 @@ describe("useUnconfirmedTransactions", () => {
 		expect(result.current.unconfirmedTransactions).toHaveLength(0);
 	});
 
-	it("should add a unconfirmed transaction from unconfirmed transaction with gas property", async () => {
+	it("should add an unconfirmed transaction from API data", async () => {
 		const { result } = renderHook(() => useUnconfirmedTransactions());
 
 		act(() => {
-			result.current.addUnconfirmedTransactionFromApi(mockUnconfirmedTransaction);
+			result.current.addUnconfirmedTransactionFromApi(mockUnconfirmedTransactionData);
 		});
 
 		expect(result.current.unconfirmedTransactions).toHaveLength(1);
 		expect(result.current.unconfirmedTransactions[0]).toEqual({
 			networkId: "mainsail.devnet",
 			transaction: {
-				signedData: {
-					data: mockUnconfirmedTransaction.data,
-					from: mockUnconfirmedTransaction.from,
-					gasPrice: mockUnconfirmedTransaction.gasPrice,
-					hash: mockUnconfirmedTransaction.hash,
-					nonce: mockUnconfirmedTransaction.nonce,
-					senderPublicKey: mockUnconfirmedTransaction.senderPublicKey,
-					to: mockUnconfirmedTransaction.to,
-					value: mockUnconfirmedTransaction.value,
-				},
+				signedData: mockUnconfirmedTransactionData.transaction,
 			},
-			walletAddress: mockUnconfirmedTransaction.walletAddress,
+			walletAddress: mockUnconfirmedTransactionData.walletAddress,
 		});
-	});
-
-	it("should add an unconfirmed transaction from unconfirmed transaction with gasLimit property", async () => {
-		const { result } = renderHook(() => useUnconfirmedTransactions());
-
-		const mockWithGasLimit = {
-			...mockUnconfirmedTransaction,
-			gasLimit: "25000",
-			hash: "different-hash-with-gaslimit",
-		};
-		delete (mockWithGasLimit as any).gas;
-
-		act(() => {
-			result.current.addUnconfirmedTransactionFromApi(mockWithGasLimit);
-		});
-
-		expect(result.current.unconfirmedTransactions).toHaveLength(1);
-		expect(result.current.unconfirmedTransactions[0].transaction.signedData.gasLimit).toBe("25000");
-		expect(result.current.unconfirmedTransactions[0].transaction.signedData.hash).toBe(
-			"different-hash-with-gaslimit",
-		);
-	});
-
-	it("should prioritize gasLimit over gas when both are present", async () => {
-		const { result } = renderHook(() => useUnconfirmedTransactions());
-
-		const mockWithBoth = {
-			...mockUnconfirmedTransaction,
-			gas: "21592",
-			gasLimit: "30000",
-			hash: "hash-with-both-gas-properties",
-		};
-
-		act(() => {
-			result.current.addUnconfirmedTransactionFromApi(mockWithBoth);
-		});
-
-		expect(result.current.unconfirmedTransactions).toHaveLength(1);
-		expect(result.current.unconfirmedTransactions[0].transaction.signedData.gasLimit).toBe("30000");
 	});
 
 	it("should replace duplicate unconfirmed transaction when adding with same hash", async () => {
 		const { result } = renderHook(() => useUnconfirmedTransactions());
 
 		const firstTransaction = {
-			...mockUnconfirmedTransaction,
-			value: "100",
+			...mockUnconfirmedTransactionData,
+			transaction: {
+				...mockUnconfirmedTransactionData.transaction,
+				value: "100",
+			},
 		};
 
 		const duplicateTransaction = {
-			...mockUnconfirmedTransaction,
-			value: "200",
+			...mockUnconfirmedTransactionData,
+			transaction: {
+				...mockUnconfirmedTransactionData.transaction,
+				value: "200",
+			},
 		};
 
 		act(() => {
@@ -297,11 +258,14 @@ describe("useUnconfirmedTransactions", () => {
 	it("should add multiple unconfirmed transactions with different hashes", async () => {
 		const { result } = renderHook(() => useUnconfirmedTransactions());
 
-		const transaction1 = mockUnconfirmedTransaction;
+		const transaction1 = mockUnconfirmedTransactionData;
 		const transaction2 = {
-			...mockUnconfirmedTransaction,
-			hash: "different-hash-123",
-			nonce: "188",
+			...mockUnconfirmedTransactionData,
+			transaction: {
+				...mockUnconfirmedTransactionData.transaction,
+				hash: "different-hash-123",
+				nonce: "188",
+			},
 		};
 
 		act(() => {
@@ -314,20 +278,32 @@ describe("useUnconfirmedTransactions", () => {
 
 		expect(result.current.unconfirmedTransactions).toHaveLength(2);
 		expect(result.current.unconfirmedTransactions[0].transaction.signedData.hash).toBe(
-			mockUnconfirmedTransaction.hash,
+			mockUnconfirmedTransactionData.transaction.hash,
 		);
 		expect(result.current.unconfirmedTransactions[1].transaction.signedData.hash).toBe("different-hash-123");
 	});
 
-	it("reconcileUnconfirmedForAddresses keeps only remote hashes for scoped addresses and leaves others untouched", async () => {
+	it("cleanupUnconfirmedForAddresses keeps only remote hashes for scoped addresses and leaves others untouched", async () => {
 		const { result } = renderHook(() => useUnconfirmedTransactions());
 
 		const addressA = wallet.address();
 		const addressB = "ADDRESS_B";
 
-		const transaction1 = { ...mockUnconfirmedTransaction, hash: "hash-a1", nonce: "190", walletAddress: addressA };
-		const transaction2 = { ...mockUnconfirmedTransaction, hash: "hash-a2", nonce: "191", walletAddress: addressA };
-		const transaction3 = { ...mockUnconfirmedTransaction, hash: "hash-b1", nonce: "192", walletAddress: addressB };
+		const transaction1 = {
+			...mockUnconfirmedTransactionData,
+			transaction: { ...mockUnconfirmedTransactionData.transaction, hash: "hash-a1", nonce: "190" },
+			walletAddress: addressA,
+		};
+		const transaction2 = {
+			...mockUnconfirmedTransactionData,
+			transaction: { ...mockUnconfirmedTransactionData.transaction, hash: "hash-a2", nonce: "191" },
+			walletAddress: addressA,
+		};
+		const transaction3 = {
+			...mockUnconfirmedTransactionData,
+			transaction: { ...mockUnconfirmedTransactionData.transaction, hash: "hash-b1", nonce: "192" },
+			walletAddress: addressB,
+		};
 
 		act(() => {
 			result.current.addUnconfirmedTransactionFromApi(transaction1);
@@ -338,7 +314,7 @@ describe("useUnconfirmedTransactions", () => {
 		expect(result.current.unconfirmedTransactions).toHaveLength(3);
 
 		act(() => {
-			result.current.reconcileUnconfirmedForAddresses([addressA], ["hash-a2"]);
+			result.current.cleanupUnconfirmedForAddresses([addressA], ["hash-a2"]);
 		});
 
 		const hashes = result.current.unconfirmedTransactions.map((u) => u.transaction.signedData.hash);
