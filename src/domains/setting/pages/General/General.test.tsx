@@ -23,7 +23,7 @@ import {
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import { renderHook } from "@testing-library/react";
 import { expect } from "vitest";
-import { ProfileSetting } from "../../../../app/lib/profiles/profile.enum.contract";
+import { ProfileSetting } from "@/app/lib/profiles/profile.enum.contract";
 
 const translations = buildTranslations();
 
