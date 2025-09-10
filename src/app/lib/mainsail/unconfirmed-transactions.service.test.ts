@@ -1,9 +1,11 @@
 import { HttpResponse, http } from "msw";
-import { beforeEach, describe, expect, it, vi } from "vitest";
+import { beforeEach, describe, expect, it } from "vitest";
 
 import { UnconfirmedTransactionsService } from "@/app/lib/mainsail/unconfirmed-transactions.service";
 import { server } from "@/tests/mocks/server";
 import transactionFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/unconfirmed.json";
+
+const UNCONFIRMED_ENDPOINT = "https://dwallets-evm.mainsailhq.com/tx/api/transactions/unconfirmed";
 
 const mockConfig = {
 	get: (key?: string) => {
@@ -34,7 +36,7 @@ describe("UnconfirmedTransactionsService", () => {
 
 	it("should call unconfirmed transactions without params and map response", async () => {
 		server.use(
-			http.get("https://dwallets-evm.mainsailhq.com/tx/api/transactions/unconfirmed", ({ request }) => {
+			http.get(UNCONFIRMED_ENDPOINT, ({ request }) => {
 				const url = new URL(request.url);
 				// Should have no specific query params for basic call
 				if (!url.searchParams.has("from") && !url.searchParams.has("to")) {
@@ -51,7 +53,7 @@ describe("UnconfirmedTransactionsService", () => {
 
 	it("should handle undefined parameters", async () => {
 		server.use(
-			http.get("https://dwallets-evm.mainsailhq.com/tx/api/transactions/unconfirmed", () => {
+			http.get(UNCONFIRMED_ENDPOINT, () => {
 				return HttpResponse.json(transactionFixture);
 			}),
 		);
@@ -63,7 +65,7 @@ describe("UnconfirmedTransactionsService", () => {
 
 	it("should pass limit parameter correctly", async () => {
 		server.use(
-			http.get("https://dwallets-evm.mainsailhq.com/tx/api/transactions/unconfirmed", ({ request }) => {
+			http.get(UNCONFIRMED_ENDPOINT, ({ request }) => {
 				const url = new URL(request.url);
 				const limit = url.searchParams.get("limit");
 
@@ -85,7 +87,7 @@ describe("UnconfirmedTransactionsService", () => {
 		const to = ["0xAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "0xBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"];
 
 		server.use(
-			http.get("https://dwallets-evm.mainsailhq.com/tx/api/transactions/unconfirmed", ({ request }) => {
+			http.get(UNCONFIRMED_ENDPOINT, ({ request }) => {
 				const url = new URL(request.url);
 				const limit = url.searchParams.get("limit");
 				const fromParam = url.searchParams.get("from");
@@ -112,7 +114,7 @@ describe("UnconfirmedTransactionsService", () => {
 
 	it("should omit empty arrays for from/to", async () => {
 		server.use(
-			http.get("https://dwallets-evm.mainsailhq.com/tx/api/transactions/unconfirmed", ({ request }) => {
+			http.get(UNCONFIRMED_ENDPOINT, ({ request }) => {
 				const url = new URL(request.url);
 				const fromParam = url.searchParams.get("from");
 				const toParam = url.searchParams.get("to");
@@ -135,7 +137,7 @@ describe("UnconfirmedTransactionsService", () => {
 		const from = ["0x1111111111111111111111111111111111111111"];
 
 		server.use(
-			http.get("https://dwallets-evm.mainsailhq.com/tx/api/transactions/unconfirmed", ({ request }) => {
+			http.get(UNCONFIRMED_ENDPOINT, ({ request }) => {
 				const url = new URL(request.url);
 				const fromParam = url.searchParams.get("from");
 				const toParam = url.searchParams.get("to");
@@ -157,7 +159,7 @@ describe("UnconfirmedTransactionsService", () => {
 		const to = ["0xAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"];
 
 		server.use(
-			http.get("https://dwallets-evm.mainsailhq.com/tx/api/transactions/unconfirmed", ({ request }) => {
+			http.get(UNCONFIRMED_ENDPOINT, ({ request }) => {
 				const url = new URL(request.url);
 				const fromParam = url.searchParams.get("from");
 				const toParam = url.searchParams.get("to");
@@ -177,7 +179,7 @@ describe("UnconfirmedTransactionsService", () => {
 
 	it("should handle missing page parameter", async () => {
 		server.use(
-			http.get("https://dwallets-evm.mainsailhq.com/tx/api/transactions/unconfirmed", ({ request }) => {
+			http.get(UNCONFIRMED_ENDPOINT, ({ request }) => {
 				const url = new URL(request.url);
 				const pageParam = url.searchParams.get("page");
 
