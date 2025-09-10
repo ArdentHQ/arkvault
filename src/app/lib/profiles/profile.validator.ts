@@ -101,6 +101,7 @@ export class ProfileValidator implements IProfileValidator {
 				[ProfileSetting.TimeFormat]: Joi.string().required(),
 				[ProfileSetting.UseNetworkWalletNames]: Joi.boolean().default(false),
 				[ProfileSetting.UseTestNetworks]: Joi.boolean().default(false),
+				[ProfileSetting.UseHDWallets]: Joi.boolean().default(false),
 				[ProfileSetting.Sessions]: Joi.object(),
 				[ProfileSetting.LastVisitedPage]: Joi.object(),
 				[ProfileSetting.WalletSelectionMode]: Joi.string().allow("single", "multiple").default("single"),

@@ -26,6 +26,7 @@ const baseSettings = {
 	TIME_FORMAT: "h:mm A",
 	USE_NETWORK_WALLET_NAMES: false,
 	USE_TEST_NETWORKS: false,
+	USE_HD_WALLETS: false,
 	WALLET_SELECTION_MODE: "single",
 };
 
