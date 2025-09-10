@@ -10,13 +10,7 @@ import { isUnit } from "@/utils/test-helpers";
 
 const getPreloadableRoutes = (path: string): RouteItem[] => {
 	if (path === "/") {
-		return [
-			...DashboardRoutes,
-			...ProfileRoutes,
-			...SettingRoutes,
-			...ContactRoutes,
-			...MessageRoutes,
-		];
+		return [...DashboardRoutes, ...ProfileRoutes, ...SettingRoutes, ...ContactRoutes, ...MessageRoutes];
 	}
 
 	if (path.startsWith("/profiles")) {
