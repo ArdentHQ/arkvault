@@ -1,16 +1,17 @@
-import { renderHook } from "@testing-library/react";
 import {
+	getAuthenticationStepSubtitle,
+	getTransferType,
 	handleBroadcastError,
+	isContractDeployment,
 	isNoDeviceError,
 	isRejectionError,
-	getTransferType,
-	isContractDeployment,
 	withAbortPromise,
-	getAuthenticationStepSubtitle,
 } from "./utils";
-import { useTranslation } from "react-i18next";
-import { getMainsailProfileId } from "@/utils/testing-library";
+
 import { env } from "@/utils/testing-library";
+import { getMainsailProfileId } from "@/utils/testing-library";
+import { renderHook } from "@testing-library/react";
+import { useTranslation } from "react-i18next";
 
 describe("Transaction utils", () => {
 	describe("isNoDeviceError", () => {
@@ -165,7 +166,7 @@ describe("getAuthenticationStepSubtitle", () => {
 		const { t } = result.current;
 
 		const subtitle = getAuthenticationStepSubtitle({ t, wallet });
-		expect(subtitle).toBe("Enter your mnemonic to authenticate the transaction.");
+		expect(subtitle).toBe("Enter your mnemonic passphrase to authenticate the transaction.");
 	});
 
 	it("should return the correct subtitle for wallet with secret", () => {
@@ -177,7 +178,7 @@ describe("getAuthenticationStepSubtitle", () => {
 		const { t } = result.current;
 
 		const subtitle = getAuthenticationStepSubtitle({ t, wallet });
-		expect(subtitle).toBe("Enter your secret to sign the transaction.");
+		expect(subtitle).toBe("Enter your secret to authenticate the transaction.");
 	});
 
 	it("should return the correct subtitle for wallet with encryption password", () => {
@@ -193,7 +194,7 @@ describe("getAuthenticationStepSubtitle", () => {
 		const { t } = result.current;
 
 		const subtitle = getAuthenticationStepSubtitle({ t, wallet });
-		expect(subtitle).toBe("Enter your encryption password to sign the transaction.");
+		expect(subtitle).toBe("Enter your encryption password to authenticate the transaction.");
 	});
 
 	it("should return the correct subtitle for wallet with no wallet", () => {
@@ -228,7 +229,7 @@ describe("getAuthenticationStepSubtitle", () => {
 		const { t } = result.current;
 
 		const subtitle = getAuthenticationStepSubtitle({ t, wallet });
-		expect(subtitle).toBe("Enter your encryption password to sign the transaction.");
+		expect(subtitle).toBe("Enter your encryption password to authenticate the transaction.");
 	});
 
 	it("should return the correct subitlte when signing key does not exist", () => {
@@ -243,6 +244,6 @@ describe("getAuthenticationStepSubtitle", () => {
 		const { t } = result.current;
 
 		const subtitle = getAuthenticationStepSubtitle({ t, wallet });
-		expect(subtitle).toBe("Enter your mnemonic to authenticate the transaction.");
+		expect(subtitle).toBe("Enter your mnemonic passphrase to authenticate the transaction.");
 	});
 });
