@@ -83,7 +83,7 @@ describe("Transaction utils", () => {
 				isValidatorRegistration: () => false,
 				isValidatorResignation: () => false,
 				isVote: () => false,
-				to: () => {},
+				to: () => { },
 			};
 			expect(isContractDeployment(transaction as any)).toBe(true);
 		});
@@ -96,7 +96,7 @@ describe("Transaction utils", () => {
 				isValidatorRegistration: () => true,
 				isValidatorResignation: () => false,
 				isVote: () => false,
-				to: () => {},
+				to: () => { },
 			};
 			expect(isContractDeployment(transaction as any)).toBe(false);
 		});
@@ -165,7 +165,7 @@ describe("getAuthenticationStepSubtitle", () => {
 		const { t } = result.current;
 
 		const subtitle = getAuthenticationStepSubtitle({ t, wallet });
-		expect(subtitle).toBe("Provide a message below and sign with your mnemonic passphrase.");
+		expect(subtitle).toBe("Enter your mnemonic to authenticate the transaction.");
 	});
 
 	it("should return the correct subtitle for wallet with secret", () => {
@@ -177,19 +177,23 @@ describe("getAuthenticationStepSubtitle", () => {
 		const { t } = result.current;
 
 		const subtitle = getAuthenticationStepSubtitle({ t, wallet });
-		expect(subtitle).toBe("Provide a message below and sign with your secret.");
+		expect(subtitle).toBe("Enter your secret to sign the transaction.");
 	});
 
 	it("should return the correct subtitle for wallet with encryption password", () => {
 		const profile = env.profiles().findById(getMainsailProfileId());
 		const wallet = profile.wallets().first();
+		vi.spyOn(wallet, "actsWithMnemonic").mockReturnValue(false);
+		vi.spyOn(wallet, "actsWithSecret").mockReturnValue(false);
+		// signing key is true
+		vi.spyOn(wallet.signingKey(), "exists").mockReturnValue(true);
 		vi.spyOn(wallet, "actsWithSecretWithEncryption").mockReturnValue(true);
 
 		const { result } = renderHook(() => useTranslation());
 		const { t } = result.current;
 
 		const subtitle = getAuthenticationStepSubtitle({ t, wallet });
-		expect(subtitle).toBe("Provide a message below and sign with your secret.");
+		expect(subtitle).toBe("Enter your encryption password to sign the transaction.");
 	});
 
 	it("should return the correct subtitle for wallet with no wallet", () => {
@@ -209,7 +213,7 @@ describe("getAuthenticationStepSubtitle", () => {
 		const { t } = result.current;
 
 		const subtitle = getAuthenticationStepSubtitle({ t, wallet });
-		expect(subtitle).toBe("Provide a message below and sign with your ledger.");
+		expect(subtitle).toBe("Check your Ledger device and sign the transaction.");
 	});
 
 	it("should return the correct subitlte when signing key exists", () => {
@@ -224,7 +228,7 @@ describe("getAuthenticationStepSubtitle", () => {
 		const { t } = result.current;
 
 		const subtitle = getAuthenticationStepSubtitle({ t, wallet });
-		expect(subtitle).toBe("Provide a message below and sign with your encryption password.");
+		expect(subtitle).toBe("Enter your encryption password to sign the transaction.");
 	});
 
 	it("should return the correct subitlte when signing key does not exist", () => {
@@ -239,6 +243,6 @@ describe("getAuthenticationStepSubtitle", () => {
 		const { t } = result.current;
 
 		const subtitle = getAuthenticationStepSubtitle({ t, wallet });
-		expect(subtitle).toBe("Provide a message below and sign with your mnemonic passphrase.");
+		expect(subtitle).toBe("Enter your mnemonic to authenticate the transaction.");
 	});
 });

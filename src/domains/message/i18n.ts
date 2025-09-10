@@ -5,9 +5,11 @@ export const translations = {
 
 	PAGE_SIGN_MESSAGE: {
 		AUTHENTICATION_STEP: {
-			DESCRIPTION_ENCRYPTION_PASSWORD: "Enter your encryption password to sign the message.",
-			DESCRIPTION_MNEMONIC: "Enter your mnemonic passphrase to sign the message.",
-			DESCRIPTION_SECRET: "Enter your secret to sign the message.",
+			DESCRIPTION_ENCRYPTION_PASSWORD: "Enter your encryption password to sign the transaction.",
+			DESCRIPTION_MNEMONIC: "Enter your mnemonic to authenticate the transaction.",
+			DESCRIPTION_SECRET: "Enter your secret to sign the transaction.",
+			DESCRIPTION_LEDGER: "Check your Ledger device and sign the transaction.",
+			DESCRIPTION_SELECT_WALLET: "Select an address and sign.",
 		},
 
 		COPY_JSON: "Copy JSON",
