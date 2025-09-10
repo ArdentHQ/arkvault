@@ -165,27 +165,6 @@ describe("useWalletActions", () => {
 		}).not.toThrow();
 	});
 
-	it("should call handleSignMessage callback when provided", () => {
-		const mockHandleSignMessage = vi.fn();
-
-		const {
-			result: { current },
-		} = renderHook(
-			() =>
-				useWalletActions({
-					handleSignMessage: mockHandleSignMessage,
-					wallets: [wallet],
-				}),
-			{ wrapper },
-		);
-
-		act(() => {
-			current.handleSelectOption({ value: "sign-message" } as DropdownOption);
-		});
-
-		expect(mockHandleSignMessage).toHaveBeenCalledTimes(1);
-	});
-
 	it("should call handleSendUsernameResignation callback when provided", () => {
 		const mockHandleSendUsernameResignation = vi.fn();
 

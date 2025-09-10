@@ -10,13 +10,11 @@ import { ProfilePaths } from "@/router/paths";
 import { useLink } from "@/app/hooks/use-link";
 
 export const useWalletActions = ({
-	handleSignMessage,
 	handleSendRegistration,
 	handleSendUsernameResignation,
 	handleSendValidatorResignation,
 	wallets,
 }: {
-	handleSignMessage?: () => void;
 	handleSendRegistration?: (registrationType?: "validatorRegistration" | "usernameRegistration") => void;
 	handleSendUsernameResignation?: () => void;
 	handleSendValidatorResignation?: () => void;
@@ -102,7 +100,7 @@ export const useWalletActions = ({
 			}
 
 			if (option.value === "sign-message") {
-				handleSignMessage?.();
+				navigate(generatePath(ProfilePaths.SignMessage, { profileId: profile.id() }));
 			}
 
 			if (option.value === "verify-message") {
@@ -145,7 +143,6 @@ export const useWalletActions = ({
 			profile,
 			hasMultipleWallets,
 			openExternal,
-			handleSignMessage,
 			handleSendRegistration,
 			handleSendUsernameResignation,
 		],

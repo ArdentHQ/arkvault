@@ -190,7 +190,7 @@ export const useSearchParametersValidation = () => {
 			path: ({ profile, searchParameters }: PathProperties) =>
 				`${generatePath(ProfilePaths.SignMessage, {
 					profileId: profile.id(),
-				})}?${searchParameters.toString()}`,
+				})}&${searchParameters.toString().replace("method=sign&", "")}`,
 			validate: validateSign,
 		},
 		transfer: {

@@ -37,7 +37,6 @@ export const PortfolioHeader = ({
 	onUpdate,
 	onCreateAddress,
 	onImportAddress,
-	onSignMessage,
 	onSendRegistration,
 	onSendUsernameResignation,
 	onSendValidatorResignation,
@@ -51,7 +50,6 @@ export const PortfolioHeader = ({
 	onUpdate?: (status: boolean) => void;
 	onCreateAddress?: (open: boolean) => void;
 	onImportAddress?: (open: boolean) => void;
-	onSignMessage?: (open: boolean) => void;
 	onSendRegistration?: (registrationType?: "validatorRegistration" | "usernameRegistration") => void;
 	onSendUsernameResignation?: (open: boolean) => void;
 	onSendValidatorResignation?: (open: boolean) => void;
@@ -66,9 +64,6 @@ export const PortfolioHeader = ({
 	assertWallet(wallet);
 
 	const isRestored = wallet.hasBeenFullyRestored();
-	const handleSignMessage = () => {
-		onSignMessage?.(true);
-	};
 
 	const handleSendRegistration = (registrationType?: "validatorRegistration" | "usernameRegistration") => {
 		onSendRegistration?.(registrationType);
@@ -86,7 +81,6 @@ export const PortfolioHeader = ({
 		handleSendRegistration,
 		handleSendUsernameResignation,
 		handleSendValidatorResignation,
-		handleSignMessage,
 		wallets: selectedWallets,
 	});
 
