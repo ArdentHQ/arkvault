@@ -19,11 +19,12 @@ import {
 import { server, requestMock } from "@/tests/mocks/server";
 
 import walletFixture from "@/tests/fixtures/coins/mainsail/devnet/wallets/0x8A3117649655714c296cd816691e01C5148922ed.json";
-
+import * as ReactRouter from "react-router";
+import { afterAll, vi } from "vitest";
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
 let secondWallet: Contracts.IReadWriteWallet;
-
+let useSearchParamsMock;
 vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
 }));
@@ -53,6 +54,10 @@ const reviewStepID = "ValidatorRegistrationForm__review-step";
 
 describe("SendRegistrationSidePanel Fee", () => {
 	beforeAll(async () => {
+		useSearchParamsMock = vi
+			.spyOn(ReactRouter, "useSearchParams")
+			.mockReturnValue([new URLSearchParams(), vi.fn()]);
+
 		profile = env.profiles().findById(getMainsailProfileId());
 
 		await env.profiles().restore(profile);
@@ -92,6 +97,10 @@ describe("SendRegistrationSidePanel Fee", () => {
 				{ method: "post" },
 			),
 		);
+	});
+
+	afterAll(() => {
+		useSearchParamsMock.mockRestore();
 	});
 
 	it("should set fee", async () => {

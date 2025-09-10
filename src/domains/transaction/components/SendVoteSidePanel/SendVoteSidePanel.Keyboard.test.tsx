@@ -19,14 +19,14 @@ import { VoteValidatorProperties } from "@/domains/vote/components/ValidatorsTab
 import { data as validatorData } from "@/tests/fixtures/coins/mainsail/devnet/validators.json";
 import userEvent from "@testing-library/user-event";
 import transactionFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/transfer.json";
-import { expect, vi } from "vitest";
+import { afterAll, expect, vi } from "vitest";
 import { AddressService } from "@/app/lib/mainsail/address.service";
 import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
 import { SendVoteSidePanel } from "./SendVoteSidePanel";
 import { Networks } from "@/app/lib/networks";
 import { useVoteFormContext, VoteFormProvider } from "@/domains/vote/contexts/VoteFormContext";
-
+import * as ReactRouter from "react-router";
 const fixtureProfileId = getMainsailProfileId();
 
 const transactionMethodsFixture = {
@@ -83,7 +83,7 @@ const createVoteTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 const passphrase = getDefaultWalletMnemonic();
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
-
+let useSearchParamsMock;
 const continueButton = () => screen.getByTestId("SendVote__continue-button");
 const sendButton = () => screen.getByTestId("SendVote__send-button");
 
@@ -126,6 +126,10 @@ const Component = ({
 
 describe("SendVoteSidePanel Keyboard", () => {
 	beforeAll(async () => {
+		useSearchParamsMock = vi
+			.spyOn(ReactRouter, "useSearchParams")
+			.mockReturnValue([new URLSearchParams(), vi.fn()]);
+
 		vi.useFakeTimers({
 			shouldAdvanceTime: true,
 			toFake: ["setInterval", "clearInterval"],
@@ -170,6 +174,10 @@ describe("SendVoteSidePanel Keyboard", () => {
 
 	afterEach(() => {
 		vi.useRealTimers();
+	});
+
+	afterAll(() => {
+		useSearchParamsMock.mockRestore();
 	});
 
 	it.each(["with keyboard", "without keyboard"])("should send a vote transaction %s", async (inputMethod) => {

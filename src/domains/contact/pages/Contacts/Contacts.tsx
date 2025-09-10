@@ -1,7 +1,7 @@
 import { Contracts } from "@/app/lib/profiles";
 import React, { FC, useCallback, useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { useNavigate } from "react-router-dom";
+import { generatePath, useNavigate } from "react-router-dom";
 import { Column } from "react-table";
 import { useFilteredContacts } from "./Contacts.helpers";
 import { ContactsHeader } from "./Contacts.blocks";
@@ -15,6 +15,7 @@ import { ContactListItemMobile } from "@/domains/contact/components/ContactListI
 import { ContactListItemOption } from "@/domains/contact/components/ContactListItem/ContactListItem.contracts";
 import { SearchableTableWrapper } from "@/app/components/SearchableTableWrapper";
 import { Button } from "@/app/components/Button";
+import { ProfilePaths } from "@/router/paths";
 
 export const Contacts: FC = () => {
 	const { state } = useEnvironmentContext();
@@ -85,9 +86,10 @@ export const Contacts: FC = () => {
 		(address: Contracts.IContactAddress) => {
 			const schema = { recipient: address.address() };
 			const queryParameters = new URLSearchParams(schema).toString();
-			const url = `/profiles/${activeProfile.id()}/send-transfer?${queryParameters}`;
+			const path =
+				generatePath(ProfilePaths.SendTransfer, { profileId: activeProfile.id() }) + `&${queryParameters}`;
 
-			navigate(url);
+			navigate(path);
 		},
 		[history, activeProfile],
 	);

@@ -21,16 +21,16 @@ import { data as validatorData } from "@/tests/fixtures/coins/mainsail/devnet/va
 import transactionFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/transfer.json";
 import userEvent from "@testing-library/user-event";
 import { AddressService } from "@/app/lib/mainsail/address.service";
-import { expect, vi } from "vitest";
+import { afterAll, expect, vi } from "vitest";
 import { Networks } from "@/app/lib/networks";
 import { useVoteFormContext, VoteFormProvider } from "@/domains/vote/contexts/VoteFormContext";
-
+import * as ReactRouter from "react-router";
 const fixtureProfileId = getMainsailProfileId();
 
 const passphrase = getDefaultWalletMnemonic();
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
-
+let useSearchParamsMock;
 const continueButton = () => screen.getByTestId("SendVote__continue-button");
 const sendButton = () => screen.getByTestId("SendVote__send-button");
 
@@ -88,6 +88,10 @@ const Component = ({
 
 describe("SendVoteSidePanel Encryption", () => {
 	beforeAll(async () => {
+		useSearchParamsMock = vi
+			.spyOn(ReactRouter, "useSearchParams")
+			.mockReturnValue([new URLSearchParams(), vi.fn()]);
+
 		profile = env.profiles().findById(getMainsailProfileId());
 
 		await env.profiles().restore(profile);
@@ -127,6 +131,9 @@ describe("SendVoteSidePanel Encryption", () => {
 
 	afterEach(() => {
 		vi.useRealTimers();
+	});
+	afterAll(() => {
+		useSearchParamsMock.mockRestore();
 	});
 
 	it("should send a vote transaction using encryption password", async () => {
