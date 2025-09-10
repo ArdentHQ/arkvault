@@ -52,11 +52,7 @@ describe("UnconfirmedTransactionsService", () => {
 	});
 
 	it("should handle undefined parameters", async () => {
-		server.use(
-			http.get(UNCONFIRMED_ENDPOINT, () => {
-				return HttpResponse.json(transactionFixture);
-			}),
-		);
+		server.use(http.get(UNCONFIRMED_ENDPOINT, () => HttpResponse.json(transactionFixture)));
 
 		const res = await service.listUnconfirmed(undefined);
 
@@ -77,7 +73,7 @@ describe("UnconfirmedTransactionsService", () => {
 			}),
 		);
 
-		const res = await service.listUnconfirmed({ limit: 50, from: [], to: [] });
+		const res = await service.listUnconfirmed({ from: [], limit: 50, to: [] });
 
 		expect(res.results.length).toEqual(4);
 	});
@@ -192,7 +188,7 @@ describe("UnconfirmedTransactionsService", () => {
 			}),
 		);
 
-		const res = await service.listUnconfirmed({ limit: 10, from: [], to: [] });
+		const res = await service.listUnconfirmed({ from: [], limit: 10, to: [] });
 
 		expect(res.results.length).toEqual(0);
 	});

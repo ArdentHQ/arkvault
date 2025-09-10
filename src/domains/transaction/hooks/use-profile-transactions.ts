@@ -510,8 +510,8 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 
 				addUnconfirmedTransactionFromApi({
 					networkId: matched.networkId(),
-					walletAddress: matched.address(),
 					transaction: transaction.raw(),
+					walletAddress: matched.address(),
 				});
 			}
 		} catch (error) {
