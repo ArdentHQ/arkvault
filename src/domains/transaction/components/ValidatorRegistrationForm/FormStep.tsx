@@ -3,7 +3,7 @@ import { Icon, ThemeIcon } from "@/app/components/Icon";
 import React, { ChangeEvent, useEffect } from "react";
 import cn from "classnames";
 import { Alert } from "@/app/components/Alert";
-import { FormStepProperties } from "@/domains/transaction/pages/SendRegistration/SendRegistration.contracts";
+import { FormStepProperties } from "@/domains/transaction/components/SendRegistrationSidePanel/SendRegistration.contracts";
 import { InputDefault } from "@/app/components/Input";
 import { Link } from "@/app/components/Link";
 import { SelectAddress } from "@/domains/profile/components/SelectAddress";
