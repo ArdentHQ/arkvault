@@ -1,4 +1,5 @@
 import { DTO, Services } from "@/app/lib/mainsail";
+
 import { Contracts } from "@/app/lib/profiles";
 import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
 import { TFunction } from "i18next";
@@ -65,18 +66,18 @@ export const withAbortPromise =
  */
 export const getAuthenticationStepSubtitle = ({ wallet, t }: { wallet?: Contracts.IReadWriteWallet; t: TFunction }) => {
 	if (!wallet) {
-		return t("MESSAGE.PAGE_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_SELECT_WALLET");
+		return t("TRANSACTION.FORM_STEP.DESCRIPTION_SELECT_WALLET");
 	}
 
 	if (wallet.isLedger()) {
-		return t("MESSAGE.PAGE_SIGN_MESSAGE.AUTHENTICATION_STEP.DESCRIPTION_LEDGER");
+		return t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_LEDGER");
 	}
 
 	if (wallet.actsWithSecret()) {
-		return t("MESSAGE.PAGE_SIGN_MESSAGE.AUTHENTICATION_STEP.DESCRIPTION_SECRET");
+		return t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_SECRET");
 	}
 
 	return wallet.signingKey().exists()
-		? t("MESSAGE.PAGE_SIGN_MESSAGE.AUTHENTICATION_STEP.DESCRIPTION_ENCRYPTION_PASSWORD")
-		: t("MESSAGE.PAGE_SIGN_MESSAGE.AUTHENTICATION_STEP.DESCRIPTION_MNEMONIC");
+		? t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_ENCRYPTION_PASSWORD")
+		: t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_MNEMONIC");
 };
