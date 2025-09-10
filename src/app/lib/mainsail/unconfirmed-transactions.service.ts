@@ -1,6 +1,5 @@
-import type { ConfigRepository, Networks } from "@/app/lib/mainsail";
-
 import { ClientService } from "./client.service.js";
+import type { ConfigRepository } from "@/app/lib/mainsail";
 import type { IProfile } from "@/app/lib/profiles/profile.contract";
 
 export class UnconfirmedTransactionsService {
