@@ -89,6 +89,9 @@ export const translations = {
 	FORM_STEP: {
 		DESCRIPTION_SELECT_WALLET: "Select an address and sign.",
 	},
+	GAS_INFORMATION: "Gas Information",
+	GAS_LIMIT: "Gas Limit",
+	GAS_USAGE: "Usage by Txn",
 	HINT_AMOUNT: "Including {{amount}} {{currency}} sent to itself.",
 	HINT_AMOUNT_EXCLUDING: "Excluding {{amount}} {{currency}} sent to self.",
 	ID: "ID",
@@ -193,6 +196,7 @@ export const translations = {
 	MODAL_TRANSFER_DETAIL: {
 		TITLE: "Transfer",
 	},
+	MORE_DETAILS: "More details",
 	MULTIPLE: "Multiple",
 	MULTIPLE_COUNT: "Multiple ({{count}})",
 	MULTISIGNATURE: {
