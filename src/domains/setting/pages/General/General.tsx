@@ -100,7 +100,6 @@ export const GeneralSettings: React.FC = () => {
 		};
 
 		initializeForm();
-
 	}, [isProfileRestored]);
 
 	useEffect(() => {
