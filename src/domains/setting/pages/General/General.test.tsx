@@ -523,7 +523,7 @@ describe("General Settings", () => {
 			route: `/profiles/${profile.id()}/settings`,
 		});
 
-		await expect(screen.findByTestId("AdvancedToggle__toggle-useHDWallets")).resolves.toBeVisible()
+		await expect(screen.findByTestId("AdvancedToggle__toggle-useHDWallets")).resolves.toBeVisible();
 
 		await userEvent.click(screen.getByTestId("AdvancedToggle__toggle-useHDWallets"));
 
