@@ -29,7 +29,7 @@ exports[`AuthenticationStep (message) > should request mnemonic if wallet was im
           class="text-theme-secondary-text mt-0.5 flex items-center text-xs leading-5 font-semibold sm:mt-1 sm:text-sm sm:leading-[17px] sm:font-normal md:text-base md:leading-5"
           data-testid="header__subtitle"
         >
-          Enter your mnemonic passphrase to sign the message.
+          MESSAGE.PAGE_SIGN_MESSAGE.AUTHENTICATION_STEP.DESCRIPTION_MNEMONIC
         </div>
       </div>
     </div>
@@ -190,7 +190,7 @@ exports[`AuthenticationStep (message) > should request mnemonic if wallet was im
           class="text-theme-secondary-text mt-0.5 flex items-center text-xs leading-5 font-semibold sm:mt-1 sm:text-sm sm:leading-[17px] sm:font-normal md:text-base md:leading-5"
           data-testid="header__subtitle"
         >
-          Enter your mnemonic passphrase to sign the message.
+          MESSAGE.PAGE_SIGN_MESSAGE.AUTHENTICATION_STEP.DESCRIPTION_MNEMONIC
         </div>
       </div>
     </div>
@@ -301,7 +301,7 @@ exports[`AuthenticationStep (message) > should request secret if wallet was impo
           class="text-theme-secondary-text mt-0.5 flex items-center text-xs leading-5 font-semibold sm:mt-1 sm:text-sm sm:leading-[17px] sm:font-normal md:text-base md:leading-5"
           data-testid="header__subtitle"
         >
-          Enter your secret to sign the message.
+          MESSAGE.PAGE_SIGN_MESSAGE.AUTHENTICATION_STEP.DESCRIPTION_SECRET
         </div>
       </div>
     </div>
