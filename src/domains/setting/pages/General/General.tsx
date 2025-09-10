@@ -47,7 +47,6 @@ export const GeneralSettings: React.FC = () => {
 	const { resetProfileTheme } = useTheme();
 
 	const { t } = useTranslation();
-	console.log(profile.settings().all());
 
 	const getDefaultValues = (): Partial<GeneralSettingsState> => {
 		const settings = profile.settings();
