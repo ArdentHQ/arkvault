@@ -100,7 +100,7 @@ export const GeneralSettings: React.FC = () => {
 		};
 
 		initializeForm();
-		// eslint-disable-next-line react-hooks/exhaustive-deps
+
 	}, [isProfileRestored]);
 
 	useEffect(() => {
@@ -212,6 +212,24 @@ export const GeneralSettings: React.FC = () => {
 
 	const advancedItems = [
 		{
+			label: t("SETTINGS.GENERAL.OTHER.SHOW_DEVELOPMENT_NETWORK.TITLE"),
+			labelAddon: (
+				<Toggle
+					name="showDevelopmentNetwork"
+					defaultChecked={showDevelopmentNetwork}
+					data-testid="AppearanceToggle__toggle-showDevelopmentNetwork"
+					onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
+						setValue("showDevelopmentNetwork", event.target.checked, {
+							shouldDirty: true,
+							shouldValidate: true,
+						})
+					}
+				/>
+			),
+			labelDescription: t("SETTINGS.GENERAL.OTHER.SHOW_DEVELOPMENT_NETWORK.DESCRIPTION"),
+		},
+		{
+			itemValueClass: "mt-1",
 			label: `${t("SETTINGS.GENERAL.OTHER.HD_WALLETS.TITLE")}`,
 			labelAddon: (
 				<span>
@@ -235,6 +253,7 @@ export const GeneralSettings: React.FC = () => {
 			),
 			labelDescription: `${t("SETTINGS.GENERAL.OTHER.HD_WALLETS.DESCRIPTION")}`,
 			labelHeaderClass: "justify-start space-x-0",
+			labelWrapperClass: "flex items-start",
 			value: (
 				<Toggle
 					name="useHDWallets"
@@ -248,23 +267,6 @@ export const GeneralSettings: React.FC = () => {
 					}
 				/>
 			),
-		},
-		{
-			label: t("SETTINGS.GENERAL.OTHER.SHOW_DEVELOPMENT_NETWORK.TITLE"),
-			labelAddon: (
-				<Toggle
-					name="showDevelopmentNetwork"
-					defaultChecked={showDevelopmentNetwork}
-					data-testid="AppearanceToggle__toggle-showDevelopmentNetwork"
-					onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
-						setValue("showDevelopmentNetwork", event.target.checked, {
-							shouldDirty: true,
-							shouldValidate: true,
-						})
-					}
-				/>
-			),
-			labelDescription: t("SETTINGS.GENERAL.OTHER.SHOW_DEVELOPMENT_NETWORK.DESCRIPTION"),
 		},
 	];
 

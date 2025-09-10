@@ -2331,6 +2331,56 @@ exports[`General Settings > should disable submit button when profile is not res
                               class="flex w-full flex-col space-y-2"
                             >
                               <div
+                                class="flex items-center justify-between space-x-5"
+                              >
+                                <span
+                                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
+                                  data-testid="list-divided-item__label"
+                                >
+                                  Show Development Network
+                                </span>
+                                <span>
+                                  <label
+                                    class="flex items-center cursor-pointer h-4"
+                                  >
+                                    <input
+                                      checked=""
+                                      class="toggle-input sr-only"
+                                      data-testid="AppearanceToggle__toggle-showDevelopmentNetwork"
+                                      name="showDevelopmentNetwork"
+                                      type="checkbox"
+                                    />
+                                    <div
+                                      class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
+                                    >
+                                      <span
+                                        class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 dim:bg-theme-dim-500 h-4 w-4 handle-inner"
+                                      />
+                                    </div>
+                                  </label>
+                                </span>
+                              </div>
+                              <span
+                                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-medium"
+                                data-testid="list-divided-item__label--description"
+                              >
+                                Display an option to switch to the development network in the navigation menu.
+                              </span>
+                            </div>
+                          </div>
+                        </li>
+                        <li
+                          class="flex w-full flex-col"
+                          data-testid="list-divided-item__wrapper"
+                        >
+                          <div
+                            class="flex items-start"
+                            data-testid="list-divided-item__inner-wrapper"
+                          >
+                            <div
+                              class="flex w-full flex-col space-y-2"
+                            >
+                              <div
                                 class="flex items-center justify-start space-x-0"
                               >
                                 <span
@@ -2400,7 +2450,9 @@ exports[`General Settings > should disable submit button when profile is not res
                                 Allows creation and import of Hierarchical Deterministic (HD) Wallets
                               </span>
                             </div>
-                            <div>
+                            <div
+                              class="mt-1"
+                            >
                               <span
                                 data-testid="list-divided-item__value"
                               >
@@ -2421,56 +2473,6 @@ exports[`General Settings > should disable submit button when profile is not res
                                     />
                                   </div>
                                 </label>
-                              </span>
-                            </div>
-                          </div>
-                        </li>
-                        <li
-                          class="flex w-full flex-col"
-                          data-testid="list-divided-item__wrapper"
-                        >
-                          <div
-                            class="flex justify-between items-center"
-                            data-testid="list-divided-item__inner-wrapper"
-                          >
-                            <div
-                              class="flex w-full flex-col space-y-2"
-                            >
-                              <div
-                                class="flex items-center justify-between space-x-5"
-                              >
-                                <span
-                                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
-                                  data-testid="list-divided-item__label"
-                                >
-                                  Show Development Network
-                                </span>
-                                <span>
-                                  <label
-                                    class="flex items-center cursor-pointer h-4"
-                                  >
-                                    <input
-                                      checked=""
-                                      class="toggle-input sr-only"
-                                      data-testid="AppearanceToggle__toggle-showDevelopmentNetwork"
-                                      name="showDevelopmentNetwork"
-                                      type="checkbox"
-                                    />
-                                    <div
-                                      class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
-                                    >
-                                      <span
-                                        class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 dim:bg-theme-dim-500 h-4 w-4 handle-inner"
-                                      />
-                                    </div>
-                                  </label>
-                                </span>
-                              </div>
-                              <span
-                                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-medium"
-                                data-testid="list-divided-item__label--description"
-                              >
-                                Display an option to switch to the development network in the navigation menu.
                               </span>
                             </div>
                           </div>
@@ -4983,6 +4985,56 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                               class="flex w-full flex-col space-y-2"
                             >
                               <div
+                                class="flex items-center justify-between space-x-5"
+                              >
+                                <span
+                                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
+                                  data-testid="list-divided-item__label"
+                                >
+                                  Show Development Network
+                                </span>
+                                <span>
+                                  <label
+                                    class="flex items-center cursor-pointer h-4"
+                                  >
+                                    <input
+                                      checked=""
+                                      class="toggle-input sr-only"
+                                      data-testid="AppearanceToggle__toggle-showDevelopmentNetwork"
+                                      name="showDevelopmentNetwork"
+                                      type="checkbox"
+                                    />
+                                    <div
+                                      class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
+                                    >
+                                      <span
+                                        class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 dim:bg-theme-dim-500 h-4 w-4 handle-inner"
+                                      />
+                                    </div>
+                                  </label>
+                                </span>
+                              </div>
+                              <span
+                                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-medium"
+                                data-testid="list-divided-item__label--description"
+                              >
+                                Display an option to switch to the development network in the navigation menu.
+                              </span>
+                            </div>
+                          </div>
+                        </li>
+                        <li
+                          class="flex w-full flex-col"
+                          data-testid="list-divided-item__wrapper"
+                        >
+                          <div
+                            class="flex items-start"
+                            data-testid="list-divided-item__inner-wrapper"
+                          >
+                            <div
+                              class="flex w-full flex-col space-y-2"
+                            >
+                              <div
                                 class="flex items-center justify-start space-x-0"
                               >
                                 <span
@@ -5052,7 +5104,9 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                 Allows creation and import of Hierarchical Deterministic (HD) Wallets
                               </span>
                             </div>
-                            <div>
+                            <div
+                              class="mt-1"
+                            >
                               <span
                                 data-testid="list-divided-item__value"
                               >
@@ -5073,56 +5127,6 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                     />
                                   </div>
                                 </label>
-                              </span>
-                            </div>
-                          </div>
-                        </li>
-                        <li
-                          class="flex w-full flex-col"
-                          data-testid="list-divided-item__wrapper"
-                        >
-                          <div
-                            class="flex justify-between items-center"
-                            data-testid="list-divided-item__inner-wrapper"
-                          >
-                            <div
-                              class="flex w-full flex-col space-y-2"
-                            >
-                              <div
-                                class="flex items-center justify-between space-x-5"
-                              >
-                                <span
-                                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
-                                  data-testid="list-divided-item__label"
-                                >
-                                  Show Development Network
-                                </span>
-                                <span>
-                                  <label
-                                    class="flex items-center cursor-pointer h-4"
-                                  >
-                                    <input
-                                      checked=""
-                                      class="toggle-input sr-only"
-                                      data-testid="AppearanceToggle__toggle-showDevelopmentNetwork"
-                                      name="showDevelopmentNetwork"
-                                      type="checkbox"
-                                    />
-                                    <div
-                                      class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
-                                    >
-                                      <span
-                                        class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 dim:bg-theme-dim-500 h-4 w-4 handle-inner"
-                                      />
-                                    </div>
-                                  </label>
-                                </span>
-                              </div>
-                              <span
-                                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-medium"
-                                data-testid="list-divided-item__label--description"
-                              >
-                                Display an option to switch to the development network in the navigation menu.
                               </span>
                             </div>
                           </div>
@@ -7589,6 +7593,56 @@ exports[`General Settings > should render 1`] = `
                               class="flex w-full flex-col space-y-2"
                             >
                               <div
+                                class="flex items-center justify-between space-x-5"
+                              >
+                                <span
+                                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
+                                  data-testid="list-divided-item__label"
+                                >
+                                  Show Development Network
+                                </span>
+                                <span>
+                                  <label
+                                    class="flex items-center cursor-pointer h-4"
+                                  >
+                                    <input
+                                      checked=""
+                                      class="toggle-input sr-only"
+                                      data-testid="AppearanceToggle__toggle-showDevelopmentNetwork"
+                                      name="showDevelopmentNetwork"
+                                      type="checkbox"
+                                    />
+                                    <div
+                                      class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
+                                    >
+                                      <span
+                                        class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 dim:bg-theme-dim-500 h-4 w-4 handle-inner"
+                                      />
+                                    </div>
+                                  </label>
+                                </span>
+                              </div>
+                              <span
+                                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-medium"
+                                data-testid="list-divided-item__label--description"
+                              >
+                                Display an option to switch to the development network in the navigation menu.
+                              </span>
+                            </div>
+                          </div>
+                        </li>
+                        <li
+                          class="flex w-full flex-col"
+                          data-testid="list-divided-item__wrapper"
+                        >
+                          <div
+                            class="flex items-start"
+                            data-testid="list-divided-item__inner-wrapper"
+                          >
+                            <div
+                              class="flex w-full flex-col space-y-2"
+                            >
+                              <div
                                 class="flex items-center justify-start space-x-0"
                               >
                                 <span
@@ -7658,7 +7712,9 @@ exports[`General Settings > should render 1`] = `
                                 Allows creation and import of Hierarchical Deterministic (HD) Wallets
                               </span>
                             </div>
-                            <div>
+                            <div
+                              class="mt-1"
+                            >
                               <span
                                 data-testid="list-divided-item__value"
                               >
@@ -7679,56 +7735,6 @@ exports[`General Settings > should render 1`] = `
                                     />
                                   </div>
                                 </label>
-                              </span>
-                            </div>
-                          </div>
-                        </li>
-                        <li
-                          class="flex w-full flex-col"
-                          data-testid="list-divided-item__wrapper"
-                        >
-                          <div
-                            class="flex justify-between items-center"
-                            data-testid="list-divided-item__inner-wrapper"
-                          >
-                            <div
-                              class="flex w-full flex-col space-y-2"
-                            >
-                              <div
-                                class="flex items-center justify-between space-x-5"
-                              >
-                                <span
-                                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
-                                  data-testid="list-divided-item__label"
-                                >
-                                  Show Development Network
-                                </span>
-                                <span>
-                                  <label
-                                    class="flex items-center cursor-pointer h-4"
-                                  >
-                                    <input
-                                      checked=""
-                                      class="toggle-input sr-only"
-                                      data-testid="AppearanceToggle__toggle-showDevelopmentNetwork"
-                                      name="showDevelopmentNetwork"
-                                      type="checkbox"
-                                    />
-                                    <div
-                                      class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
-                                    >
-                                      <span
-                                        class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 dim:bg-theme-dim-500 h-4 w-4 handle-inner"
-                                      />
-                                    </div>
-                                  </label>
-                                </span>
-                              </div>
-                              <span
-                                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-medium"
-                                data-testid="list-divided-item__label--description"
-                              >
-                                Display an option to switch to the development network in the navigation menu.
                               </span>
                             </div>
                           </div>
@@ -10196,6 +10202,56 @@ exports[`General Settings > should update profile 1`] = `
                               class="flex w-full flex-col space-y-2"
                             >
                               <div
+                                class="flex items-center justify-between space-x-5"
+                              >
+                                <span
+                                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
+                                  data-testid="list-divided-item__label"
+                                >
+                                  Show Development Network
+                                </span>
+                                <span>
+                                  <label
+                                    class="flex items-center cursor-pointer h-4"
+                                  >
+                                    <input
+                                      checked=""
+                                      class="toggle-input sr-only"
+                                      data-testid="AppearanceToggle__toggle-showDevelopmentNetwork"
+                                      name="showDevelopmentNetwork"
+                                      type="checkbox"
+                                    />
+                                    <div
+                                      class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
+                                    >
+                                      <span
+                                        class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 dim:bg-theme-dim-500 h-4 w-4 handle-inner"
+                                      />
+                                    </div>
+                                  </label>
+                                </span>
+                              </div>
+                              <span
+                                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-medium"
+                                data-testid="list-divided-item__label--description"
+                              >
+                                Display an option to switch to the development network in the navigation menu.
+                              </span>
+                            </div>
+                          </div>
+                        </li>
+                        <li
+                          class="flex w-full flex-col"
+                          data-testid="list-divided-item__wrapper"
+                        >
+                          <div
+                            class="flex items-start"
+                            data-testid="list-divided-item__inner-wrapper"
+                          >
+                            <div
+                              class="flex w-full flex-col space-y-2"
+                            >
+                              <div
                                 class="flex items-center justify-start space-x-0"
                               >
                                 <span
@@ -10265,7 +10321,9 @@ exports[`General Settings > should update profile 1`] = `
                                 Allows creation and import of Hierarchical Deterministic (HD) Wallets
                               </span>
                             </div>
-                            <div>
+                            <div
+                              class="mt-1"
+                            >
                               <span
                                 data-testid="list-divided-item__value"
                               >
@@ -10286,56 +10344,6 @@ exports[`General Settings > should update profile 1`] = `
                                     />
                                   </div>
                                 </label>
-                              </span>
-                            </div>
-                          </div>
-                        </li>
-                        <li
-                          class="flex w-full flex-col"
-                          data-testid="list-divided-item__wrapper"
-                        >
-                          <div
-                            class="flex justify-between items-center"
-                            data-testid="list-divided-item__inner-wrapper"
-                          >
-                            <div
-                              class="flex w-full flex-col space-y-2"
-                            >
-                              <div
-                                class="flex items-center justify-between space-x-5"
-                              >
-                                <span
-                                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
-                                  data-testid="list-divided-item__label"
-                                >
-                                  Show Development Network
-                                </span>
-                                <span>
-                                  <label
-                                    class="flex items-center cursor-pointer h-4"
-                                  >
-                                    <input
-                                      checked=""
-                                      class="toggle-input sr-only"
-                                      data-testid="AppearanceToggle__toggle-showDevelopmentNetwork"
-                                      name="showDevelopmentNetwork"
-                                      type="checkbox"
-                                    />
-                                    <div
-                                      class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
-                                    >
-                                      <span
-                                        class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 dim:bg-theme-dim-500 h-4 w-4 handle-inner"
-                                      />
-                                    </div>
-                                  </label>
-                                </span>
-                              </div>
-                              <span
-                                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-medium"
-                                data-testid="list-divided-item__label--description"
-                              >
-                                Display an option to switch to the development network in the navigation menu.
                               </span>
                             </div>
                           </div>
@@ -12803,6 +12811,56 @@ exports[`General Settings > should update the avatar when removing focus from na
                               class="flex w-full flex-col space-y-2"
                             >
                               <div
+                                class="flex items-center justify-between space-x-5"
+                              >
+                                <span
+                                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
+                                  data-testid="list-divided-item__label"
+                                >
+                                  Show Development Network
+                                </span>
+                                <span>
+                                  <label
+                                    class="flex items-center cursor-pointer h-4"
+                                  >
+                                    <input
+                                      checked=""
+                                      class="toggle-input sr-only"
+                                      data-testid="AppearanceToggle__toggle-showDevelopmentNetwork"
+                                      name="showDevelopmentNetwork"
+                                      type="checkbox"
+                                    />
+                                    <div
+                                      class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
+                                    >
+                                      <span
+                                        class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 dim:bg-theme-dim-500 h-4 w-4 handle-inner"
+                                      />
+                                    </div>
+                                  </label>
+                                </span>
+                              </div>
+                              <span
+                                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-medium"
+                                data-testid="list-divided-item__label--description"
+                              >
+                                Display an option to switch to the development network in the navigation menu.
+                              </span>
+                            </div>
+                          </div>
+                        </li>
+                        <li
+                          class="flex w-full flex-col"
+                          data-testid="list-divided-item__wrapper"
+                        >
+                          <div
+                            class="flex items-start"
+                            data-testid="list-divided-item__inner-wrapper"
+                          >
+                            <div
+                              class="flex w-full flex-col space-y-2"
+                            >
+                              <div
                                 class="flex items-center justify-start space-x-0"
                               >
                                 <span
@@ -12872,7 +12930,9 @@ exports[`General Settings > should update the avatar when removing focus from na
                                 Allows creation and import of Hierarchical Deterministic (HD) Wallets
                               </span>
                             </div>
-                            <div>
+                            <div
+                              class="mt-1"
+                            >
                               <span
                                 data-testid="list-divided-item__value"
                               >
@@ -12893,56 +12953,6 @@ exports[`General Settings > should update the avatar when removing focus from na
                                     />
                                   </div>
                                 </label>
-                              </span>
-                            </div>
-                          </div>
-                        </li>
-                        <li
-                          class="flex w-full flex-col"
-                          data-testid="list-divided-item__wrapper"
-                        >
-                          <div
-                            class="flex justify-between items-center"
-                            data-testid="list-divided-item__inner-wrapper"
-                          >
-                            <div
-                              class="flex w-full flex-col space-y-2"
-                            >
-                              <div
-                                class="flex items-center justify-between space-x-5"
-                              >
-                                <span
-                                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
-                                  data-testid="list-divided-item__label"
-                                >
-                                  Show Development Network
-                                </span>
-                                <span>
-                                  <label
-                                    class="flex items-center cursor-pointer h-4"
-                                  >
-                                    <input
-                                      checked=""
-                                      class="toggle-input sr-only"
-                                      data-testid="AppearanceToggle__toggle-showDevelopmentNetwork"
-                                      name="showDevelopmentNetwork"
-                                      type="checkbox"
-                                    />
-                                    <div
-                                      class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
-                                    >
-                                      <span
-                                        class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 dim:bg-theme-dim-500 h-4 w-4 handle-inner"
-                                      />
-                                    </div>
-                                  </label>
-                                </span>
-                              </div>
-                              <span
-                                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-medium"
-                                data-testid="list-divided-item__label--description"
-                              >
-                                Display an option to switch to the development network in the navigation menu.
                               </span>
                             </div>
                           </div>
@@ -15508,6 +15518,56 @@ exports[`General Settings > should update the avatar when removing focus from na
                               class="flex w-full flex-col space-y-2"
                             >
                               <div
+                                class="flex items-center justify-between space-x-5"
+                              >
+                                <span
+                                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
+                                  data-testid="list-divided-item__label"
+                                >
+                                  Show Development Network
+                                </span>
+                                <span>
+                                  <label
+                                    class="flex items-center cursor-pointer h-4"
+                                  >
+                                    <input
+                                      checked=""
+                                      class="toggle-input sr-only"
+                                      data-testid="AppearanceToggle__toggle-showDevelopmentNetwork"
+                                      name="showDevelopmentNetwork"
+                                      type="checkbox"
+                                    />
+                                    <div
+                                      class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
+                                    >
+                                      <span
+                                        class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 dim:bg-theme-dim-500 h-4 w-4 handle-inner"
+                                      />
+                                    </div>
+                                  </label>
+                                </span>
+                              </div>
+                              <span
+                                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-medium"
+                                data-testid="list-divided-item__label--description"
+                              >
+                                Display an option to switch to the development network in the navigation menu.
+                              </span>
+                            </div>
+                          </div>
+                        </li>
+                        <li
+                          class="flex w-full flex-col"
+                          data-testid="list-divided-item__wrapper"
+                        >
+                          <div
+                            class="flex items-start"
+                            data-testid="list-divided-item__inner-wrapper"
+                          >
+                            <div
+                              class="flex w-full flex-col space-y-2"
+                            >
+                              <div
                                 class="flex items-center justify-start space-x-0"
                               >
                                 <span
@@ -15577,7 +15637,9 @@ exports[`General Settings > should update the avatar when removing focus from na
                                 Allows creation and import of Hierarchical Deterministic (HD) Wallets
                               </span>
                             </div>
-                            <div>
+                            <div
+                              class="mt-1"
+                            >
                               <span
                                 data-testid="list-divided-item__value"
                               >
@@ -15598,56 +15660,6 @@ exports[`General Settings > should update the avatar when removing focus from na
                                     />
                                   </div>
                                 </label>
-                              </span>
-                            </div>
-                          </div>
-                        </li>
-                        <li
-                          class="flex w-full flex-col"
-                          data-testid="list-divided-item__wrapper"
-                        >
-                          <div
-                            class="flex justify-between items-center"
-                            data-testid="list-divided-item__inner-wrapper"
-                          >
-                            <div
-                              class="flex w-full flex-col space-y-2"
-                            >
-                              <div
-                                class="flex items-center justify-between space-x-5"
-                              >
-                                <span
-                                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
-                                  data-testid="list-divided-item__label"
-                                >
-                                  Show Development Network
-                                </span>
-                                <span>
-                                  <label
-                                    class="flex items-center cursor-pointer h-4"
-                                  >
-                                    <input
-                                      checked=""
-                                      class="toggle-input sr-only"
-                                      data-testid="AppearanceToggle__toggle-showDevelopmentNetwork"
-                                      name="showDevelopmentNetwork"
-                                      type="checkbox"
-                                    />
-                                    <div
-                                      class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
-                                    >
-                                      <span
-                                        class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 dim:bg-theme-dim-500 h-4 w-4 handle-inner"
-                                      />
-                                    </div>
-                                  </label>
-                                </span>
-                              </div>
-                              <span
-                                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-medium"
-                                data-testid="list-divided-item__label--description"
-                              >
-                                Display an option to switch to the development network in the navigation menu.
                               </span>
                             </div>
                           </div>
