@@ -14,7 +14,7 @@ import { useActiveProfile, useValidation } from "@/app/hooks";
 import { useKeydown } from "@/app/hooks/use-keydown";
 import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
 import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
-import { handleBroadcastError } from "@/domains/transaction/utils";
+import { getAuthenticationStepSubtitle, handleBroadcastError } from "@/domains/transaction/utils";
 import { TransactionSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
 import { assertWallet } from "@/utils/assertions";
 import { useToggleFeeFields } from "@/domains/transaction/hooks/useToggleFeeFields";
@@ -195,8 +195,8 @@ export const SendUsernameResignationSidePanel = ({
 			return t("TRANSACTION.REVIEW_STEP.DESCRIPTION");
 		}
 
-		if (activeTab === Step.AuthenticationStep && !activeWallet?.isLedger()) {
-			return t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_SECRET");
+		if (activeTab === Step.AuthenticationStep) {
+			return getAuthenticationStepSubtitle({ t, wallet: activeWallet });
 		}
 
 		if (activeTab === Step.FormStep) {

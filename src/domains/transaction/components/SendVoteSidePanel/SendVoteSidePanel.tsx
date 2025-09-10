@@ -17,7 +17,7 @@ import { useKeydown } from "@/app/hooks/use-keydown";
 import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
 import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
 import { useTransactionBuilder } from "@/domains/transaction/hooks";
-import { handleBroadcastError } from "@/domains/transaction/utils";
+import { getAuthenticationStepSubtitle, handleBroadcastError } from "@/domains/transaction/utils";
 import { assertNetwork, assertProfile, assertWallet } from "@/utils/assertions";
 import { toasts } from "@/app/services";
 import { isLedgerTransportSupported } from "@/app/contexts/Ledger/transport";
@@ -504,7 +504,7 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 		}
 
 		if (activeTab === Step.AuthenticationStep) {
-			return t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_SECRET");
+			return getAuthenticationStepSubtitle({ t, wallet: activeWallet });
 		}
 
 		return;
