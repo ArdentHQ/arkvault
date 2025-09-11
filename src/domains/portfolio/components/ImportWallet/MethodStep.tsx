@@ -6,7 +6,15 @@ import { ImportOption, useImportOptions } from "@/domains/wallet/hooks/use-impor
 import { useFormContext } from "react-hook-form";
 import cn from "classnames";
 
-export const MethodStep = ({ network, onSelect, profile }: { profile: Contracts.IProfile, network: Networks.Network; onSelect: () => Promise<void> }) => {
+export const MethodStep = ({
+	network,
+	onSelect,
+	profile,
+}: {
+	profile: Contracts.IProfile;
+	network: Networks.Network;
+	onSelect: () => Promise<void>;
+}) => {
 	const { options, advancedOptions } = useImportOptions(network.importMethods(), profile);
 
 	const form = useFormContext();
@@ -32,10 +40,16 @@ export const MethodStep = ({ network, onSelect, profile }: { profile: Contracts.
 
 			{advancedOptions.length > 0 && (
 				<>
-					<div className={cn("my-2 flex items-center",
-						"before:flex-1 before:border-t before:border-theme-secondary-300 dark:before:border-theme-dark-700 dim:before:border-theme-dim-700 before:border-dashed",
-						"after:flex-1 after:border-t after:border-theme-secondary-300 dark:after:border-theme-dark-700 dim:after:border-theme-dim-700 after:border-dashed")}>
-						<span className="px-3 text-theme-secondary-500 font-semibold text-sm leading-[17px]">Advanced</span>
+					<div
+						className={cn(
+							"my-2 flex items-center",
+							"before:border-theme-secondary-300 dark:before:border-theme-dark-700 dim:before:border-theme-dim-700 before:flex-1 before:border-t before:border-dashed",
+							"after:border-theme-secondary-300 dark:after:border-theme-dark-700 dim:after:border-theme-dim-700 after:flex-1 after:border-t after:border-dashed",
+						)}
+					>
+						<span className="text-theme-secondary-500 px-3 text-sm leading-[17px] font-semibold">
+							Advanced
+						</span>
 					</div>
 					<div className="space-y-2">
 						{advancedOptions.map((option, index) => (

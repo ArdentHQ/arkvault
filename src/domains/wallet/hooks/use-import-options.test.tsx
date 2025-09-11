@@ -1,18 +1,29 @@
 import { renderHook } from "@testing-library/react";
 
+import { Contracts } from "@/app/lib/profiles";
 import { OptionsValue, useImportOptions } from "./use-import-options";
+import { env, getMainsailProfileId } from "@/utils/testing-library";
 
 describe("useImportOptions", () => {
+	let profile: Contracts.IProfile;
+
+	beforeAll(() => {
+		profile = env.profiles().findById(getMainsailProfileId());
+	});
+
 	it("should return options and default option", () => {
 		const {
 			result: { current },
 		} = renderHook(() =>
-			useImportOptions({
-				address: {
-					default: true,
-					permissions: [],
+			useImportOptions(
+				{
+					address: {
+						default: true,
+						permissions: [],
+					},
 				},
-			}),
+				profile,
+			),
 		);
 
 		expect(current.options).toHaveLength(2);
@@ -24,16 +35,19 @@ describe("useImportOptions", () => {
 		const {
 			result: { current },
 		} = renderHook(() =>
-			useImportOptions({
-				address: {
-					default: true,
-					permissions: [],
+			useImportOptions(
+				{
+					address: {
+						default: true,
+						permissions: [],
+					},
+					secret: {
+						default: false,
+						permissions: [],
+					},
 				},
-				secret: {
-					default: false,
-					permissions: [],
-				},
-			}),
+				profile,
+			),
 		);
 
 		expect(current.options).toHaveLength(3);
@@ -49,16 +63,19 @@ describe("useImportOptions", () => {
 		const {
 			result: { current },
 		} = renderHook(() =>
-			useImportOptions({
-				bip38: {
-					default: false,
-					permissions: [],
+			useImportOptions(
+				{
+					bip38: {
+						default: false,
+						permissions: [],
+					},
+					bip84: {
+						default: true,
+						permissions: [],
+					},
 				},
-				bip84: {
-					default: true,
-					permissions: [],
-				},
-			}),
+				profile,
+			),
 		);
 
 		expect(current.options).toHaveLength(2);
@@ -69,16 +86,19 @@ describe("useImportOptions", () => {
 		const {
 			result: { current },
 		} = renderHook(() =>
-			useImportOptions({
-				address: {
-					default: false,
-					permissions: [],
+			useImportOptions(
+				{
+					address: {
+						default: false,
+						permissions: [],
+					},
+					secret: {
+						default: true,
+						permissions: [],
+					},
 				},
-				secret: {
-					default: true,
-					permissions: [],
-				},
-			}),
+				profile,
+			),
 		);
 
 		expect(current.defaultOption).contains({ label: "Secret", value: OptionsValue.SECRET });
@@ -88,16 +108,19 @@ describe("useImportOptions", () => {
 		const {
 			result: { current },
 		} = renderHook(() =>
-			useImportOptions({
-				address: {
-					default: false,
-					permissions: [],
+			useImportOptions(
+				{
+					address: {
+						default: false,
+						permissions: [],
+					},
+					discovery: {
+						default: false,
+						permissions: [],
+					},
 				},
-				discovery: {
-					default: false,
-					permissions: [],
-				},
-			}),
+				profile,
+			),
 		);
 
 		expect(current.defaultOption).contains({
