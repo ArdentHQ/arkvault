@@ -18,7 +18,7 @@ import { useQueryParameters } from "@/app/hooks/use-query-parameters";
 import { AuthenticationStep, LedgerAuthentication } from "@/domains/transaction/components/AuthenticationStep";
 import { SidePanel, SidePanelButtons } from "@/app/components/SidePanel/SidePanel";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
-import { AddressViewSelection } from "@/domains/portfolio/hooks/use-address-panel";
+import { AddressViewSelection } from "@/app/lib/profiles/wallet.enum";
 import { useSelectsTransactionSender } from "@/domains/transaction/hooks/use-selects-transaction-sender";
 
 enum Step {
