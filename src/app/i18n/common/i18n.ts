@@ -163,6 +163,7 @@ export const translations = {
 	HASH: "Hash",
 	HEIGHT: "Height",
 	HERE: "here",
+	HD_WALLET: "HD Wallet",
 	HIDE: "Hide",
 	HIDE_BALANCE: "Hide balance",
 	HIDE_WALLET_BUTTON_TEXT: "Hide text from wallet buttons",

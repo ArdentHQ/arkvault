@@ -3,6 +3,8 @@ import { Networks } from "@/app/lib/mainsail";
 import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { Icon } from "@/app/components/Icon";
+import { Contracts } from "@/app/lib/profiles";
+import { ProfileSetting } from "@/app/lib/profiles/profile.enum.contract";
 
 export enum OptionsValue {
 	ADDRESS = "address",
@@ -27,9 +29,13 @@ export interface ImportOption {
 interface ImportOptions {
 	defaultOption: ImportOption;
 	options: ImportOption[];
+	advancedOptions: ImportOption[];
 }
 
-export const useImportOptions = (methods: Networks.NetworkManifestImportMethods): ImportOptions => {
+export const useImportOptions = (
+	methods: Networks.NetworkManifestImportMethods,
+	profile: Contracts.IProfile,
+): ImportOptions => {
 	const { t } = useTranslation();
 
 	return useMemo(() => {
@@ -40,13 +46,6 @@ export const useImportOptions = (methods: Networks.NetworkManifestImportMethods)
 				icon: <Icon name="MnemonicImportMethod" size="lg" />,
 				label: t("COMMON.MNEMONIC_TYPE.BIP39"),
 				value: OptionsValue.BIP39,
-			},
-			{
-				description: t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.MNEMONIC_DESCRIPTION"),
-				header: t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.MNEMONIC_TITLE"),
-				icon: <Icon name="MnemonicImportMethod" size="lg" />,
-				label: t("COMMON.MNEMONIC_TYPE.BIP44"),
-				value: OptionsValue.BIP44,
 			},
 			{
 				description: t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.MNEMONIC_DESCRIPTION"),
@@ -99,6 +98,18 @@ export const useImportOptions = (methods: Networks.NetworkManifestImportMethods)
 			});
 		}
 
+		const advancedOptions: ImportOption[] = [];
+
+		if (profile.settings().get(ProfileSetting.UseHDWallets)) {
+			advancedOptions.push({
+				description: t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.HD_WALLET_DESCRIPTION"),
+				header: t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.HD_WALLET_TITLE"),
+				icon: <Icon name="HDWalletImportMethod" size="lg" />,
+				label: t("COMMON.HD_WALLET"),
+				value: OptionsValue.BIP44,
+			});
+		}
+
 		for (const option of allOptions) {
 			const methodName = Object.keys(methods).find((methodName) => methodName === option.value);
 
@@ -126,6 +137,6 @@ export const useImportOptions = (methods: Networks.NetworkManifestImportMethods)
 			defaultOption = options[0];
 		}
 
-		return { defaultOption, options };
+		return { advancedOptions, defaultOption, options };
 	}, [t, methods]);
 };

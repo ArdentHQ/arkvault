@@ -1,11 +1,13 @@
 import { Networks } from "@/app/lib/mainsail";
 import React from "react";
+import { Contracts } from "@/app/lib/profiles";
 
 import { ImportOption, useImportOptions } from "@/domains/wallet/hooks/use-import-options";
 import { useFormContext } from "react-hook-form";
+import cn from "classnames";
 
-export const MethodStep = ({ network, onSelect }: { network: Networks.Network; onSelect: () => Promise<void> }) => {
-	const { options } = useImportOptions(network.importMethods());
+export const MethodStep = ({ network, onSelect, profile }: { profile: Contracts.IProfile, network: Networks.Network; onSelect: () => Promise<void> }) => {
+	const { options, advancedOptions } = useImportOptions(network.importMethods(), profile);
 
 	const form = useFormContext();
 
@@ -27,6 +29,21 @@ export const MethodStep = ({ network, onSelect }: { network: Networks.Network; o
 					<Option onSelect={onOptionSelect} option={option} key={index} />
 				))}
 			</div>
+
+			{advancedOptions.length > 0 && (
+				<>
+					<div className={cn("my-2 flex items-center",
+						"before:flex-1 before:border-t before:border-theme-secondary-300 dark:before:border-theme-dark-700 dim:before:border-theme-dim-700 before:border-dashed",
+						"after:flex-1 after:border-t after:border-theme-secondary-300 dark:after:border-theme-dark-700 dim:after:border-theme-dim-700 after:border-dashed")}>
+						<span className="px-3 text-theme-secondary-500 font-semibold text-sm leading-[17px]">Advanced</span>
+					</div>
+					<div className="space-y-2">
+						{advancedOptions.map((option, index) => (
+							<Option onSelect={onOptionSelect} option={option} key={index} />
+						))}
+					</div>
+				</>
+			)}
 		</section>
 	);
 };
