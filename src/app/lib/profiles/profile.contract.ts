@@ -423,4 +423,14 @@ export interface IProfile {
 	 * @memberof IProfile
 	 */
 	totalBalance(): BigNumber;
+
+	/**
+	 * Find the alias of the address.
+	 *
+	 * @param {string} address
+	 * @param {string} networkId
+	 * @returns {Promise<void>}
+	 * @memberof IProfile
+	 */
+	findAliasByAddress(address: string, networkId?: string): string | undefined;
 }

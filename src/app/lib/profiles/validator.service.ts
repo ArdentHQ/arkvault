@@ -120,7 +120,7 @@ export class ValidatorService implements IValidatorService {
 				publicKey: validator.publicKey(),
 				rank: validator.rank(),
 				username: validator.username(),
-			});
+			}, this.#profile);
 		} catch {
 			return undefined;
 		}
@@ -147,7 +147,7 @@ export class ValidatorService implements IValidatorService {
 			publicKey: validator.publicKey,
 			rank: validator.rank as unknown as number,
 			username: validator.username,
-		});
+		}, this.#profile);
 	}
 
 	public async publicKeyExists(publicKey: string, network: Networks.Network): Promise<boolean> {

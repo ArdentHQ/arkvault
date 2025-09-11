@@ -1,14 +1,16 @@
-import { IReadWriteWallet, IReadWriteWalletAttributes, IVoteRegistry, WalletData } from "./contracts.js";
+import { IProfile, IReadWriteWallet, IReadWriteWalletAttributes, IVoteRegistry, WalletData } from "./contracts.js";
 import { AttributeBag } from "./helpers/attribute-bag.js";
 import { ReadOnlyWallet } from "./read-only-wallet.js";
 import { VoteRegistryItem } from "./vote-registry.contract.js";
 
 export class VoteRegistry implements IVoteRegistry {
 	readonly #wallet: IReadWriteWallet;
+	readonly #profile: IProfile;
 	readonly #attributes: AttributeBag<IReadWriteWalletAttributes>;
 
-	public constructor(wallet: IReadWriteWallet, attributes: AttributeBag<IReadWriteWalletAttributes>) {
+	public constructor(wallet: IReadWriteWallet, attributes: AttributeBag<IReadWriteWalletAttributes>, profile: IProfile) {
 		this.#wallet = wallet;
+		this.#profile = profile;
 		this.#attributes = attributes;
 	}
 
@@ -47,7 +49,7 @@ export class VoteRegistry implements IVoteRegistry {
 						isLegacyValidator: false,
 						isResignedValidator: false,
 						isValidator: true,
-					}),
+					}, this.#profile),
 				};
 			}
 

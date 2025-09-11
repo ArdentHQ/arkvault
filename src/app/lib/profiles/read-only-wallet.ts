@@ -1,5 +1,6 @@
 import { IReadOnlyWallet } from "./contracts.js";
 import { Avatar } from "./helpers/avatar.js";
+import { Contracts } from "./index.js";
 
 export interface ROWallet {
 	address: string;
@@ -15,14 +16,21 @@ export interface ROWallet {
 
 export class ReadOnlyWallet implements IReadOnlyWallet {
 	readonly #wallet: ROWallet;
+	readonly #profile: Contracts.IProfile;
 
-	public constructor(wallet: ROWallet) {
+	public constructor(wallet: ROWallet, profile: Contracts.IProfile) {
 		this.#wallet = wallet;
+		this.#profile = profile;
 	}
 
 	/** {@inheritDoc IReadOnlyWallet.address} */
 	public address(): string {
 		return this.#wallet.address;
+	}
+
+	/** {@inheritDoc IReadOnlyWallet.alias} */
+	public alias(): string | undefined {
+		return this.#profile.findAliasByAddress(this.address())
 	}
 
 	/** {@inheritDoc IReadOnlyWallet.publicKey} */

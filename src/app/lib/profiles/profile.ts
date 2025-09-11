@@ -51,6 +51,7 @@ import { ValidatorService } from "./validator.service.js";
 import { KnownWalletService } from "./known-wallet.service.js";
 import { ExchangeRateService } from "./exchange-rate.service.js";
 import { BigNumber } from "@/app/lib/helpers/bignumber.js";
+import { WalletAliasProvider } from "./profile.wallet.alias.js";
 
 export class Profile implements IProfile {
 	/**
@@ -558,5 +559,9 @@ export class Profile implements IProfile {
 		}
 
 		return balance;
+	}
+
+	public findAliasByAddress(address: string, networkId?: string): string | undefined {
+		return new WalletAliasProvider(this).findAliasByAddress(address, networkId)
 	}
 }
