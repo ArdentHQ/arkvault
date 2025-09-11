@@ -55,7 +55,7 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 
 			try {
 				gasLimit = await estimateGas({
-					data: { senderAddress: data?.senderAddress!, ...getValues(), ...data },
+					data: { ...getValues(), ...data, senderAddress: getValues('senderAddress') as string},
 					type,
 				});
 
