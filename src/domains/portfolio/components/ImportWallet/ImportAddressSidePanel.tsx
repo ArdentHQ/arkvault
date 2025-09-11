@@ -301,7 +301,7 @@ export const ImportAddressesSidePanel = ({
 				<Tabs activeId={activeTab}>
 					<div>
 						<TabPanel tabId={ImportAddressStep.MethodStep}>
-							<MethodStep network={activeNetwork} onSelect={handleNext} />
+							<MethodStep profile={activeProfile} network={activeNetwork} onSelect={handleNext} />
 						</TabPanel>
 
 						<TabPanel tabId={ImportAddressStep.ImportDetailStep}>

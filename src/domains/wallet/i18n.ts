@@ -183,6 +183,8 @@ export const translations = {
 
 		METHOD_STEP: {
 			ADDRESS_DESCRIPTION: "Import an address by entering your public address.",
+			HD_WALLET_DESCRIPTION: "Import an HD wallet and add addresses as needed",
+			HD_WALLET_TITLE: "HD Wallet",
 			LEDGER_DESCRIPTION: "Import address(es) via your Ledger hardware wallet.",
 			MNEMONIC_DESCRIPTION: "Import an address by entering your 12 or 24 mnemonic phrase.",
 			MNEMONIC_TITLE: "Import Mnemonic",

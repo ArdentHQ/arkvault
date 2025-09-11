@@ -131,6 +131,7 @@ import PersonDim from "./person-dim.svg?react";
 import CircleMinus from "./circle-minus.svg?react";
 import LedgerImportMethod from "./ledger-import-method.svg?react";
 import MnemonicImportMethod from "./mnemonic-import-method.svg?react";
+import HDWalletImportMethod from "./hd-wallet-import-option.svg?react";
 import MarkedTrash from "./marked-trash.svg?react";
 import SecretImportMethod from "./secret-import-method.svg?react";
 import AddressImportMethod from "./address-import-method.svg?react";
@@ -216,6 +217,7 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	Globe,
 	GlobePointer,
 	Grid,
+	HDWalletImportMethod,
 	HintSmall,
 	Hourglass,
 	ImportProfileDark,
