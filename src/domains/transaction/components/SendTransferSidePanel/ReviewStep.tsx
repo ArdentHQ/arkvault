@@ -195,7 +195,10 @@ export const ReviewStep = ({ wallet, network, hideHeader = false }: ReviewStepPr
 						{!!network && (
 							<FeeField
 								type={getFeeType(recipients?.length)}
-								data={feeTransactionData}
+								data={{
+									...feeTransactionData,
+									recipientsCount: recipients.length ?? 1,
+								}}
 								network={network}
 								profile={profile}
 							/>
