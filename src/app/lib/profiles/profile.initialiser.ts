@@ -37,6 +37,7 @@ export class ProfileInitialiser implements IProfileInitialiser {
 		this.#profile.settings().set(ProfileSetting.TimeFormat, "h:mm A");
 		this.#profile.settings().set(ProfileSetting.UseNetworkWalletNames, useNetworkWalletNames);
 		this.#profile.settings().set(ProfileSetting.UseTestNetworks, false);
+		this.#profile.settings().set(ProfileSetting.UseHDWallets, false);
 
 		this.#profile.status().markAsDirty();
 	}
