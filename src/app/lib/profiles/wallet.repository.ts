@@ -9,6 +9,7 @@ import {
 	IWalletExportOptions,
 	IWalletRepository,
 	WalletData,
+	WalletSetting,
 } from "./contracts.js";
 import { DataRepository } from "./data.repository";
 import { pqueue } from "./helpers/queue.js";
@@ -100,7 +101,7 @@ export class WalletRepository implements IWalletRepository {
 	/** {@inheritDoc IWalletRepository.findByAlias} */
 	public findByAlias(alias: string): IReadWriteWallet | undefined {
 		return this.values().find(
-			(wallet: IReadWriteWallet) => (wallet.alias() || "").toLowerCase() === alias.toLowerCase(),
+			(wallet: IReadWriteWallet) => (wallet.settings().get<string>(WalletSetting.Alias) || "").toLowerCase() === alias.toLowerCase(),
 		);
 	}
 
@@ -127,7 +128,9 @@ export class WalletRepository implements IWalletRepository {
 			const wallets: IReadWriteWallet[] = this.values();
 
 			for (const wallet of wallets) {
-				if (wallet.id() === id || !wallet.alias()) {
+				const alias = wallet.settings().get(WalletSetting.Alias)
+
+				if (wallet.id() === id || !alias) {
 					continue;
 				}
 

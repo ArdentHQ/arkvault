@@ -8,6 +8,7 @@ import { Form, FormField, FormLabel } from "@/app/components/Form";
 import { Input } from "@/app/components/Input";
 import { Button } from "@/app/components/Button";
 import { Divider } from "@/app/components/Divider";
+import { WalletSetting } from "@/app/lib/profiles/wallet.enum";
 
 interface UpdateAddressNameProperties {
 	onAfterSave: () => void;
@@ -22,7 +23,7 @@ interface UpdateAddressNameState {
 
 export const UpdateAddressName = ({ onAfterSave, onCancel, profile, wallet }: UpdateAddressNameProperties) => {
 	const getDefaultValues = (): UpdateAddressNameState => ({
-		name: wallet.alias() as string,
+		name: wallet.settings().get(WalletSetting.Alias) as string,
 	});
 
 	const form = useForm<UpdateAddressNameState>({
