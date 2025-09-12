@@ -2,8 +2,8 @@ import { Services } from "@/app/lib/mainsail";
 import React, { useCallback, useEffect, useMemo, useRef, useState, JSX } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-import { Contracts } from "@/app/lib/profiles";
 import { FormStep } from "./FormStep";
+
 import { SuccessStep } from "./SuccessStep";
 import { Clipboard } from "@/app/components/Clipboard";
 import { Button } from "@/app/components/Button";
@@ -11,14 +11,15 @@ import { Form } from "@/app/components/Form";
 import { Icon, ThemeIcon } from "@/app/components/Icon";
 import { Tabs, TabPanel } from "@/app/components/Tabs";
 import { StepsProvider, useLedgerContext } from "@/app/contexts";
-import { useActiveProfile, useActiveWalletWhenNeeded, useValidation } from "@/app/hooks";
+import { useActiveProfile, useValidation } from "@/app/hooks";
 import { useMessageSigner } from "@/domains/message/hooks/use-message-signer";
 import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
 import { useQueryParameters } from "@/app/hooks/use-query-parameters";
 import { AuthenticationStep, LedgerAuthentication } from "@/domains/transaction/components/AuthenticationStep";
 import { SidePanel, SidePanelButtons } from "@/app/components/SidePanel/SidePanel";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
-import { AddressViewSelection } from "@/domains/portfolio/hooks/use-address-panel";
+import { AddressViewSelection } from "@/app/lib/profiles/wallet.enum";
+import { useSelectsTransactionSender } from "@/domains/transaction/hooks/use-selects-transaction-sender";
 
 enum Step {
 	FormStep = 1,
@@ -39,23 +40,9 @@ export const SignMessageSidePanel = ({
 	const queryParameters = useQueryParameters();
 	const { activeNetwork } = useActiveNetwork({ profile: activeProfile });
 
-	const walletFromPath = useActiveWalletWhenNeeded(false);
-
-	const walletFromDeeplink = useMemo(() => {
-		const address = queryParameters.get("address");
-
-		if (!address || !activeNetwork) {
-			return;
-		}
-
-		return activeProfile.wallets().findByAddressWithNetwork(address, activeNetwork.id());
-	}, [queryParameters]);
-
 	const profileWallets = activeProfile.wallets().values();
 	const selectedWallets = activeProfile.wallets().selected();
 	const walletSelectionMode = activeProfile.walletSelectionMode();
-
-	const [selectedWallet, setSelectedWallet] = useState<Contracts.IReadWriteWallet | undefined>(undefined);
 
 	const selectableWallets = useMemo(() => {
 		if (walletSelectionMode === AddressViewSelection.single) {
@@ -69,7 +56,7 @@ export const SignMessageSidePanel = ({
 	const [authenticateLedger, setAuthenticateLedger] = useState<boolean>(false);
 
 	const initialState: Services.SignedMessage = {
-		message: queryParameters.get("message") || "",
+		message: "",
 		signatory: "",
 		signature: "",
 	};
@@ -87,50 +74,49 @@ export const SignMessageSidePanel = ({
 		mode: "onChange",
 	});
 
-	const { formState, getValues, handleSubmit, register, trigger, reset } = form;
+	const { formState, getValues, handleSubmit, register, setValue, reset: resetForm } = form;
 	const { isValid } = formState;
 
 	const { signMessage } = useValidation();
 
-	const selectWallet = useCallback(() => {
-		if (selectableWallets.length === 1) {
-			setSelectedWallet(selectableWallets[0]);
-			return;
-		}
-
-		setSelectedWallet(walletFromPath || walletFromDeeplink);
-	}, [selectableWallets, walletFromPath, walletFromDeeplink]);
+	const [mounted, setMounted] = useState(false);
+	const { activeWallet: selectedWallet, setActiveWallet: setSelectedWallet } = useSelectsTransactionSender({
+		active: mounted,
+	});
 
 	const resetState = useCallback(() => {
-		reset();
+		resetForm();
+		setErrorMessage(undefined);
 		setSelectedWallet(undefined);
 		setSignedMessage(initialState);
 		setActiveTab(Step.FormStep);
 		setAuthenticateLedger(false);
 		setErrorMessage(undefined);
-	}, [reset]);
+	}, [resetForm]);
 
 	const onMountChange = useCallback(
 		(mounted: boolean) => {
-			if (!mounted) {
+			setMounted(mounted);
+
+			if (mounted) {
+				const message = queryParameters.get("message") || "";
+
+				if (message) {
+					setValue("message", message, { shouldDirty: true, shouldValidate: true });
+
+					queryParameters.delete("message");
+				}
+			} else {
 				resetState();
 				return;
 			}
-
-			selectWallet();
 		},
-		[selectWallet, resetState],
+		[resetState],
 	);
 
 	useEffect(() => {
 		register("message", signMessage.message(selectedWallet?.isLedger()));
 	}, [selectedWallet, register, signMessage]);
-
-	useEffect(() => {
-		if (initialState.message) {
-			trigger("message");
-		}
-	}, [trigger]);
 
 	const { hasDeviceAvailable, isConnected, connect } = useLedgerContext();
 

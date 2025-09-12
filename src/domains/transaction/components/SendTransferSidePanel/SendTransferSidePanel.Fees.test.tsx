@@ -3,12 +3,14 @@ import React from "react";
 import { SendTransferSidePanel } from "./SendTransferSidePanel";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import userEvent from "@testing-library/user-event";
-
+import * as ReactRouter from "react-router";
+import { afterAll } from "vitest";
 vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
 }));
 
 let profile: any;
+let useSearchParamsMock;
 
 const selectFirstRecipient = () => userEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
 const selectRecipient = () =>
@@ -37,6 +39,13 @@ describe("SendTransferSidePanel Fee Handling", () => {
 		profile = env.profiles().findById(getDefaultProfileId());
 		await env.profiles().restore(profile);
 		await profile.sync();
+		useSearchParamsMock = vi
+			.spyOn(ReactRouter, "useSearchParams")
+			.mockReturnValue([new URLSearchParams(), vi.fn()]);
+	});
+
+	afterAll(() => {
+		useSearchParamsMock.mockRestore();
 	});
 
 	it("should recalculate amount when fee changes and send all is selected", async () => {

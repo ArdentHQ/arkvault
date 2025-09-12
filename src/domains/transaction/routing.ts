@@ -1,11 +1,9 @@
-import { ComponentType } from "react";
 import { ProfilePaths } from "@/router/paths";
 import { RouteItem } from "@/router/router.types";
 import preloadLazy from "@/utils/preload-lazy";
 
 const SendValidatorResignation = preloadLazy(() => import("./pages/SendValidatorResignation"));
 const SendRegistration = preloadLazy(() => import("./pages/SendRegistration"));
-const SendTransfer = preloadLazy(() => import("./pages/SendTransfer") as Promise<{ default: ComponentType<unknown> }>);
 const SendVote = preloadLazy(() => import("./pages/SendVote"));
 const SendUsernameResignation = preloadLazy(() => import("./pages/SendUsernameResignation"));
 
@@ -40,16 +38,7 @@ export const TransactionRoutes: RouteItem[] = [
 		exact: true,
 		path: ProfilePaths.SendUsernameResignationProfile,
 	},
-	{
-		component: SendTransfer,
-		exact: true,
-		path: ProfilePaths.SendTransferWallet,
-	},
-	{
-		component: SendTransfer,
-		exact: true,
-		path: ProfilePaths.SendTransfer,
-	},
+
 	{
 		component: SendVote,
 		exact: true,

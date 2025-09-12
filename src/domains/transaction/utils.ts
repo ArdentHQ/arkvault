@@ -48,35 +48,35 @@ export const isContractDeployment = (transaction: DTO.RawTransactionData) =>
 
 export const withAbortPromise =
 	(signal?: AbortSignal, callback?: () => void) =>
-	<T>(promise: Promise<T>) =>
-		new Promise<T>((resolve, reject) => {
-			if (signal) {
-				signal.addEventListener("abort", () => {
-					callback?.();
-					reject("ERR_ABORT");
-				});
-			}
+		<T>(promise: Promise<T>) =>
+			new Promise<T>((resolve, reject) => {
+				if (signal) {
+					signal.addEventListener("abort", () => {
+						callback?.();
+						reject("ERR_ABORT");
+					});
+				}
 
-			return promise.then(resolve).catch(reject);
-		});
+				return promise.then(resolve).catch(reject);
+			});
 
 /*
  * Get subtitle for authentication step
  */
 export const getAuthenticationStepSubtitle = ({ wallet, t }: { wallet?: Contracts.IReadWriteWallet; t: TFunction }) => {
 	if (!wallet) {
-		return t("MESSAGE.PAGE_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_SELECT_WALLET");
+		return t("TRANSACTION.FORM_STEP.DESCRIPTION_SELECT_WALLET");
 	}
 
 	if (wallet.isLedger()) {
-		return t("MESSAGE.PAGE_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_LEDGER");
+		return t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_LEDGER");
 	}
 
 	if (wallet.actsWithSecret()) {
-		return t("MESSAGE.PAGE_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_SECRET");
+		return t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_SECRET");
 	}
 
 	return wallet.signingKey().exists()
-		? t("MESSAGE.PAGE_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_ENCRYPTION_PASSWORD")
-		: t("MESSAGE.PAGE_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_MNEMONIC");
+		? t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_ENCRYPTION_PASSWORD")
+		: t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_MNEMONIC");
 };

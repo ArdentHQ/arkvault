@@ -1,16 +1,22 @@
 import { renderHook } from "@testing-library/react";
 import {
+	getAuthenticationStepSubtitle,
+	getTransferType,
 	handleBroadcastError,
+	isContractDeployment,
 	isNoDeviceError,
 	isRejectionError,
-	getTransferType,
-	isContractDeployment,
 	withAbortPromise,
 	getAuthenticationStepSubtitle,
 } from "./utils";
 import { useTranslation } from "react-i18next";
 import { getMainsailProfileId } from "@/utils/testing-library";
 import { env } from "@/utils/testing-library";
+
+import { env } from "@/utils/testing-library";
+import { getMainsailProfileId } from "@/utils/testing-library";
+import { renderHook } from "@testing-library/react";
+import { useTranslation } from "react-i18next";
 
 describe("Transaction utils", () => {
 	describe("isNoDeviceError", () => {
@@ -83,7 +89,7 @@ describe("Transaction utils", () => {
 				isValidatorRegistration: () => false,
 				isValidatorResignation: () => false,
 				isVote: () => false,
-				to: () => {},
+				to: () => { },
 			};
 			expect(isContractDeployment(transaction as any)).toBe(true);
 		});
@@ -96,7 +102,7 @@ describe("Transaction utils", () => {
 				isValidatorRegistration: () => true,
 				isValidatorResignation: () => false,
 				isVote: () => false,
-				to: () => {},
+				to: () => { },
 			};
 			expect(isContractDeployment(transaction as any)).toBe(false);
 		});
@@ -165,7 +171,7 @@ describe("getAuthenticationStepSubtitle", () => {
 		const { t } = result.current;
 
 		const subtitle = getAuthenticationStepSubtitle({ t, wallet });
-		expect(subtitle).toBe("Provide a message below and sign with your mnemonic passphrase.");
+		expect(subtitle).toBe("Enter your mnemonic passphrase to authenticate the transaction.");
 	});
 
 	it("should return the correct subtitle for wallet with secret", () => {
@@ -177,19 +183,23 @@ describe("getAuthenticationStepSubtitle", () => {
 		const { t } = result.current;
 
 		const subtitle = getAuthenticationStepSubtitle({ t, wallet });
-		expect(subtitle).toBe("Provide a message below and sign with your secret.");
+		expect(subtitle).toBe("Enter your secret to authenticate the transaction.");
 	});
 
 	it("should return the correct subtitle for wallet with encryption password", () => {
 		const profile = env.profiles().findById(getMainsailProfileId());
 		const wallet = profile.wallets().first();
+		vi.spyOn(wallet, "actsWithMnemonic").mockReturnValue(false);
+		vi.spyOn(wallet, "actsWithSecret").mockReturnValue(false);
+		// signing key is true
+		vi.spyOn(wallet.signingKey(), "exists").mockReturnValue(true);
 		vi.spyOn(wallet, "actsWithSecretWithEncryption").mockReturnValue(true);
 
 		const { result } = renderHook(() => useTranslation());
 		const { t } = result.current;
 
 		const subtitle = getAuthenticationStepSubtitle({ t, wallet });
-		expect(subtitle).toBe("Provide a message below and sign with your secret.");
+		expect(subtitle).toBe("Enter your encryption password to authenticate the transaction.");
 	});
 
 	it("should return the correct subtitle for wallet with no wallet", () => {
@@ -209,6 +219,36 @@ describe("getAuthenticationStepSubtitle", () => {
 		const { t } = result.current;
 
 		const subtitle = getAuthenticationStepSubtitle({ t, wallet });
-		expect(subtitle).toBe("Provide a message below and sign with your ledger.");
+		expect(subtitle).toBe("Check your Ledger device and sign the transaction.");
+	});
+
+	it("should return the correct subitlte when signing key exists", () => {
+		const profile = env.profiles().findById(getMainsailProfileId());
+		const wallet = profile.wallets().first();
+
+		vi.spyOn(wallet, "isLedger").mockReturnValue(false);
+		vi.spyOn(wallet, "actsWithSecret").mockReturnValue(false);
+		vi.spyOn(wallet.signingKey(), "exists").mockReturnValue(true);
+
+		const { result } = renderHook(() => useTranslation());
+		const { t } = result.current;
+
+		const subtitle = getAuthenticationStepSubtitle({ t, wallet });
+		expect(subtitle).toBe("Enter your encryption password to authenticate the transaction.");
+	});
+
+	it("should return the correct subitlte when signing key does not exist", () => {
+		const profile = env.profiles().findById(getMainsailProfileId());
+		const wallet = profile.wallets().first();
+
+		vi.spyOn(wallet, "isLedger").mockReturnValue(false);
+		vi.spyOn(wallet, "actsWithSecret").mockReturnValue(false);
+		vi.spyOn(wallet.signingKey(), "exists").mockReturnValue(false);
+
+		const { result } = renderHook(() => useTranslation());
+		const { t } = result.current;
+
+		const subtitle = getAuthenticationStepSubtitle({ t, wallet });
+		expect(subtitle).toBe("Enter your mnemonic passphrase to authenticate the transaction.");
 	});
 });

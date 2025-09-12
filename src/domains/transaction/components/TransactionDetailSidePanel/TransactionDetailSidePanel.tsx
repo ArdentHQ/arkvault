@@ -6,6 +6,7 @@ import {
 	TransactionDetails,
 	TransactionSummary,
 	TransactionType,
+	TransactionGas,
 } from "@/domains/transaction/components/TransactionDetail";
 
 import { Contracts } from "@/app/lib/profiles";
@@ -55,7 +56,7 @@ export const TransactionDetailContent = ({
 		"min-w-32": transaction.isVoteCombination() && !isValidatorRegistrationOrResignation,
 		"min-w-[138px]": isValidatorRegistrationOrResignation,
 	});
-
+	console.log({ transaction });
 	return (
 		<DetailsCondensed>
 			<TransactionId transaction={transaction} isConfirmed={isConfirmed} />
@@ -109,6 +110,16 @@ export const TransactionDetailContent = ({
 							transaction={transaction}
 						/>
 					</div>
+				</DetailPadded>
+			</div>
+
+			<div className="mt-6">
+				<DetailLabel className="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50">
+					{t("TRANSACTION.MORE_DETAILS")}
+				</DetailLabel>
+
+				<DetailPadded className="flex-1 mt-3 flex-1-mx-3 sm:ml-0">
+					<TransactionGas gasLimit={transaction.gasLimit()} gasUsed={transaction.gasUsed()} />
 				</DetailPadded>
 			</div>
 		</DetailsCondensed>

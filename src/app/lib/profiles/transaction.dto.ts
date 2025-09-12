@@ -286,4 +286,12 @@ export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTran
 	public isSuccess(): boolean {
 		return this.#data.isSuccess();
 	}
+
+	public gasLimit(): number {
+		return this.#data.gasLimit();
+	}
+
+	public gasUsed(): number {
+		return this.#data.gasUsed();
+	}
 }

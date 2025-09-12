@@ -29,7 +29,7 @@ import { expect, vi } from "vitest";
 import { SendVoteSidePanel } from "./SendVoteSidePanel";
 import { Networks } from "@/app/lib/networks";
 import { useVoteFormContext, VoteFormProvider } from "@/domains/vote/contexts/VoteFormContext";
-
+import * as ReactRouter from "react-router";
 const fixtureProfileId = getMainsailProfileId();
 
 const transactionMethodsFixture = {
@@ -40,6 +40,8 @@ const transactionMethodsFixture = {
 	explorerLinkForBlock: () => `https://test.arkscan.io/block/${transactionFixture.data.id}`,
 	fee: () => +transactionFixture.data.fee / 1e18,
 	from: () => transactionFixture.data.from,
+	gasLimit: () => transactionFixture.data.gasLimit,
+	gasUsed: () => transactionFixture.data.receipt.gasUsed,
 	hash: () => transactionFixture.data.hash,
 	isConfirmed: () => false,
 	isMultiPayment: () => false,
@@ -118,6 +120,7 @@ const reviewStepID = "SendVote__review-step";
 const formStepID = "SendVote__form-step";
 const authenticationStepID = "AuthenticationStep";
 
+let useSearchParamsMock;
 const ComponentWrapper = ({
 	votes,
 	unvotes,
@@ -154,6 +157,9 @@ const Component = ({
 
 describe("SendVote", () => {
 	beforeAll(async () => {
+		useSearchParamsMock = vi
+			.spyOn(ReactRouter, "useSearchParams")
+			.mockReturnValue([new URLSearchParams(), vi.fn()]);
 		profile = env.profiles().findById(getMainsailProfileId());
 
 		await env.profiles().restore(profile);
@@ -199,6 +205,10 @@ describe("SendVote", () => {
 
 	afterEach(() => {
 		vi.useRealTimers();
+	});
+
+	afterAll(() => {
+		useSearchParamsMock.mockRestore();
 	});
 
 	it("should close the side panel and return to the select a validator page to unvote", async () => {

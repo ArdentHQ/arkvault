@@ -5,7 +5,7 @@ import { AddressService } from "@/app/lib/mainsail/address.service";
 import { SendTransferSidePanel } from "./SendTransferSidePanel";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import { env, getDefaultProfileId, render, screen, waitFor, within } from "@/utils/testing-library";
-
+import * as ReactRouter from "react-router";
 const formStepID = "SendTransfer__form-step";
 const reviewStepID = "SendTransfer__review-step";
 const recipientAddButton = "AddRecipient__add-button";
@@ -35,6 +35,8 @@ const continueButton = () => screen.getByTestId("SendTransfer__continue-button")
 
 describe("SendTransferSidePanel MultiPayment", () => {
 	beforeAll(async () => {
+		vi.spyOn(ReactRouter, "useSearchParams").mockReturnValue([new URLSearchParams(), vi.fn()]);
+
 		profile = env.profiles().findById(getDefaultProfileId());
 		await env.profiles().restore(profile);
 		await profile.sync();

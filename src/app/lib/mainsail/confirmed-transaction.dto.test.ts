@@ -22,7 +22,7 @@ describe("ConfirmedTransactionData", () => {
 			gasPrice: 10000000,
 			hash: "test_hash",
 			nonce: 1,
-			receipt: { status: 1 },
+			receipt: { gasUsed: 0.01, status: 1 },
 			senderPublicKey: "somePublicKey",
 			timestamp: new Date().getTime(),
 			to: "recipient_address",
@@ -434,5 +434,15 @@ describe("ConfirmedTransactionData", () => {
 		expect(transaction.isConfirmed()).toBe(true);
 		transaction.configure({ ...commonData, confirmations: 0 });
 		expect(transaction.isConfirmed()).toBe(false);
+	});
+
+	it("#gasLimit", () => {
+		transaction.configure(commonData);
+		expect(transaction.gasLimit()).toBe(21000);
+	});
+
+	it("#gasUsed", () => {
+		transaction.configure(commonData);
+		expect(transaction.gasUsed()).toBe(0.01);
 	});
 });
