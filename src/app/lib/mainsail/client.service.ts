@@ -9,7 +9,6 @@ import { ArkClient } from "@arkecosystem/typescript-client";
 import { ConfirmedTransactionData } from "./confirmed-transaction.dto";
 import {
 	ConfirmedTransactionDataCollection,
-	UnconfirmedTransactionDataCollection,
 } from "@/app/lib/mainsail/transactions.collection";
 import { DateTime } from "@/app/lib/intl";
 import { IProfile } from "@/app/lib/profiles/profile.contract";
@@ -18,6 +17,7 @@ import { UsernamesAbi } from "@mainsail/evm-contracts";
 import { WalletData } from "./wallet.dto";
 import dotify from "node-dotify";
 import { UnconfirmedTransactionData } from "./unconfirmed-transaction.dto";
+import { UnconfirmedTransactionDataCollection } from '@/app/lib/mainsail/unconfirmed-transactions.collection';
 
 type searchParams<T extends Record<string, any> = {}> = T & { page: number; limit?: number };
 
@@ -126,11 +126,11 @@ export class ClientService {
 			used: hasVoted ? 1 : 0,
 			votes: hasVoted
 				? [
-						{
-							amount: 0,
-							id: vote,
-						},
-					]
+					{
+						amount: 0,
+						id: vote,
+					},
+				]
 				: [],
 		};
 	}

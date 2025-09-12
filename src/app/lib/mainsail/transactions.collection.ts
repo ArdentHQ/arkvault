@@ -1,5 +1,6 @@
 import { ConfirmedTransactionData } from "@/app/lib/mainsail/confirmed-transaction.dto";
 import { Paginator } from "./paginator";
+import { UnconfirmedTransactionData } from "./unconfirmed-transaction.dto";
 
 export class ConfirmedTransactionDataCollection extends Paginator<ConfirmedTransactionData> {
 	public findById(id: string): ConfirmedTransactionData | undefined {
