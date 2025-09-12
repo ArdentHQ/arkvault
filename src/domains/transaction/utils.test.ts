@@ -1,6 +1,5 @@
 import { renderHook } from "@testing-library/react";
 import {
-	getAuthenticationStepSubtitle,
 	getTransferType,
 	handleBroadcastError,
 	isContractDeployment,
@@ -12,11 +11,6 @@ import {
 import { useTranslation } from "react-i18next";
 import { getMainsailProfileId } from "@/utils/testing-library";
 import { env } from "@/utils/testing-library";
-
-import { env } from "@/utils/testing-library";
-import { getMainsailProfileId } from "@/utils/testing-library";
-import { renderHook } from "@testing-library/react";
-import { useTranslation } from "react-i18next";
 
 describe("Transaction utils", () => {
 	describe("isNoDeviceError", () => {
