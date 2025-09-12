@@ -1,7 +1,7 @@
 import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
-
+import { afterAll, expect, vi, MockInstance } from "vitest";
 import { translations as messageTranslations } from "@/domains/message/i18n";
 import {
 	env,
@@ -13,9 +13,11 @@ import {
 	MAINSAIL_MNEMONICS,
 } from "@/utils/testing-library";
 import { SignMessageSidePanel } from "./SignMessageSidePanel";
+import * as ReactRouter from "react-router";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
+let useSearchParamsMock: MockInstance;
 
 const mnemonic = MAINSAIL_MNEMONICS[0];
 
@@ -33,6 +35,10 @@ const expectHeading = async (text: string) => {
 describe("SignMessage with ledger", () => {
 	let dashboardRoute: string | undefined;
 	beforeAll(async () => {
+		useSearchParamsMock = vi
+			.spyOn(ReactRouter, "useSearchParams")
+			.mockReturnValue([new URLSearchParams(), vi.fn()]);
+
 		profile = await env.profiles().create("Test");
 
 		wallet = await profile.walletFactory().fromMnemonicWithBIP39({
@@ -41,6 +47,8 @@ describe("SignMessage with ledger", () => {
 
 		profile.wallets().push(wallet);
 
+		await env.profiles().restore(profile);
+
 		vi.spyOn(profile, "walletSelectionMode").mockReturnValue("multiple");
 
 		await triggerMessageSignOnce(wallet);
@@ -48,6 +56,7 @@ describe("SignMessage with ledger", () => {
 
 	afterAll(() => {
 		env.profiles().forget(profile.id());
+		useSearchParamsMock.mockRestore();
 	});
 
 	beforeEach(() => {
@@ -73,14 +82,13 @@ describe("SignMessage with ledger", () => {
 
 		const onOpenChangeMock = vi.fn();
 
-		render(<SignMessageSidePanel open={true} onOpenChange={onOpenChangeMock} onMountChange={vi.fn()} />, {
+		render(<SignMessageSidePanel open={true} onOpenChange={onOpenChangeMock} />, {
 			route: dashboardRoute,
 		});
 
 		await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
 
 		// The profile only have one address so we dont need to select any address
-
 		await userEvent.type(messageInput(), signMessage);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
@@ -124,7 +132,7 @@ describe("SignMessage with ledger", () => {
 
 		const ledgerListenMock = mockNanoXTransport();
 
-		render(<SignMessageSidePanel open={true} onOpenChange={vi.fn()} onMountChange={vi.fn()} />, {
+		render(<SignMessageSidePanel open={true} onOpenChange={vi.fn()} />, {
 			route: dashboardRoute,
 		});
 

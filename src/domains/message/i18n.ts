@@ -4,12 +4,6 @@ export const translations = {
 	},
 
 	PAGE_SIGN_MESSAGE: {
-		AUTHENTICATION_STEP: {
-			DESCRIPTION_ENCRYPTION_PASSWORD: "Enter your encryption password to sign the message.",
-			DESCRIPTION_MNEMONIC: "Enter your mnemonic passphrase to sign the message.",
-			DESCRIPTION_SECRET: "Enter your secret to sign the message.",
-		},
-
 		COPY_JSON: "Copy JSON",
 
 		ERROR_STEP: {

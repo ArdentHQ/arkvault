@@ -8,8 +8,8 @@ import { lowerCaseEquals } from "@/utils/equals";
 import { useEnvironmentContext } from "@/app/contexts";
 import { useActiveProfile, useNetworks, useValidation } from "@/app/hooks";
 import { useTransactionBuilder } from "@/domains/transaction/hooks/use-transaction-builder";
-import { SendTransferForm } from "@/domains/transaction/pages/SendTransfer";
-import { buildTransferData } from "@/domains/transaction/pages/SendTransfer/SendTransfer.helpers";
+import { SendTransferForm } from "@/domains/transaction/components/SendTransferSidePanel";
+import { buildTransferData } from "@/domains/transaction/components/SendTransferSidePanel/SendTransfer.helpers";
 import { getTransferType, handleBroadcastError } from "@/domains/transaction/utils";
 import { precisionRound } from "@/utils/precision-round";
 import { useTransactionQueryParameters } from "@/domains/transaction/hooks/use-transaction-query-parameters";
@@ -42,7 +42,7 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 			remainingBalance: wallet?.balance(),
 			senderAddress: undefined,
 		}),
-		// eslint-disable-next-line react-hooks/exhaustive-deps
+
 		[],
 	);
 	const form = useForm<SendTransferForm>({
@@ -213,7 +213,7 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 		setValue("amount", precisionRound(remaining, 18));
 
 		void trigger(["gasPrice", "gasLimit", "amount"]);
-	}, [gasLimitStr, gasPriceStr]); // eslint-disable-line react-hooks/exhaustive-deps
+	}, [gasLimitStr, gasPriceStr]);
 
 	return {
 		form,

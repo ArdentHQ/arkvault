@@ -1,15 +1,18 @@
 import { MAINSAIL_MNEMONICS, env, render, screen, triggerMessageSignOnce, waitFor } from "@/utils/testing-library";
-import { afterAll, expect, vi } from "vitest";
+import { afterAll, expect, vi, MockInstance } from "vitest";
 
 import { Contracts } from "@/app/lib/profiles";
 import React from "react";
 import { SignMessageSidePanel } from "./SignMessageSidePanel";
 import { translations as messageTranslations } from "@/domains/message/i18n";
 import userEvent from "@testing-library/user-event";
+import * as ReactRouter from "react-router";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
 let wallet2: Contracts.IReadWriteWallet;
+
+let useSearchParamsMock: MockInstance;
 
 const mnemonic = MAINSAIL_MNEMONICS[0];
 const secondMnemonic = MAINSAIL_MNEMONICS[1];
@@ -55,6 +58,10 @@ describe("SignMessageSidePanel", () => {
 	let dashboardRoute: string | undefined;
 
 	beforeAll(async () => {
+		useSearchParamsMock = vi
+			.spyOn(ReactRouter, "useSearchParams")
+			.mockReturnValue([new URLSearchParams(), vi.fn()]);
+
 		profile = await env.profiles().create("Example");
 
 		wallet = await profile.walletFactory().fromMnemonicWithBIP39({
@@ -75,6 +82,7 @@ describe("SignMessageSidePanel", () => {
 
 	afterAll(() => {
 		env.profiles().forget(profile.id());
+		useSearchParamsMock.mockRestore();
 	});
 
 	describe("Sign with Wallet", () => {

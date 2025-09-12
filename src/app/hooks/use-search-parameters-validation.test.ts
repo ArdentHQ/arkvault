@@ -255,9 +255,9 @@ describe("useSearchParametersValidation", () => {
 				searchParameters: parameters,
 			}),
 		).toBe(
-			`/profiles/${profile.id()}/dashboard?coin=Mainsail&nethash=${
+			`/profiles/${profile.id()}/dashboard?method=sign&coin=Mainsail&nethash=${
 				profile.wallets().first().network().meta().nethash
-			}&method=sign&message=test`,
+			}&message=test`,
 		);
 	});
 
@@ -407,7 +407,7 @@ describe("useSearchParametersValidation", () => {
 
 	it("should generate send transfer path", () => {
 		const parameters = new URLSearchParams(
-			"coin=mainsail&method=transfer&nethash=560f869ed6713745a12328e7214cb65077e645bb5e57b1e5b323bb915a51f114",
+			"method=transfer&coin=mainsail&nethash=560f869ed6713745a12328e7214cb65077e645bb5e57b1e5b323bb915a51f114",
 		);
 
 		const { result } = renderHook(() => useSearchParametersValidation());
@@ -420,7 +420,7 @@ describe("useSearchParametersValidation", () => {
 				searchParameters: parameters,
 			}),
 		).toBe(
-			`/profiles/${profile.id()}/send-transfer?coin=mainsail&method=transfer&nethash=${
+			`/profiles/${profile.id()}/dashboard?method=transfer&coin=mainsail&nethash=${
 				profile.wallets().first().network().meta().nethash
 			}`,
 		);

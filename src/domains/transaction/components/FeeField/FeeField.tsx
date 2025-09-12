@@ -7,18 +7,10 @@ import { useDebounce, useFees } from "@/app/hooks";
 import { InputFee } from "@/domains/transaction/components/InputFee";
 import { InputFeeViewType } from "@/domains/transaction/components/InputFee/InputFee.contracts";
 import { BigNumber } from "@/app/lib/helpers";
+import { EncodeTransactionType } from "@/app/lib/mainsail/transaction-encoder";
 
 interface Properties {
-	type:
-		| "transfer"
-		| "multiPayment"
-		| "vote"
-		| "validatorRegistration"
-		| "validatorResignation"
-		| "multiSignature"
-		| "usernameRegistration"
-		| "usernameResignation"
-		| "updateValidator";
+	type: EncodeTransactionType;
 	data: Record<string, any> | undefined;
 	network: Networks.Network;
 	profile: Contracts.IProfile;
@@ -51,7 +43,7 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 	const gasLimit = BigNumber.make(getValues("gasLimit") ?? 0);
 
 	const [data, _isLoadingData] = useDebounce(properties.data, 700);
-	const recipientsCount = Array.isArray(properties.data?.payments) ? properties.data.payments.length : 1;
+	const recipientsCount = properties.data?.recipientsCount ?? 1;
 
 	useEffect(() => {
 		/* istanbul ignore else -- @preserve */
@@ -62,7 +54,10 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 			let gasLimit = fallbackGasLimit;
 
 			try {
-				gasLimit = await estimateGas({ data: { ...getValues(), ...data }, type });
+				gasLimit = await estimateGas({
+					data: { ...getValues(), ...data, senderAddress: getValues("senderAddress") as string },
+					type,
+				});
 
 				if (gasLimit.isZero()) {
 					gasLimit = fallbackGasLimit;

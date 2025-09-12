@@ -248,4 +248,12 @@ export class ExtendedSignedTransactionData {
 	public isSuccess(): boolean {
 		return false;
 	}
+
+	public gasUsed(): number | null {
+		return null;
+	}
+
+	public gasLimit(): number {
+		return this.#data.gasLimit();
+	}
 }

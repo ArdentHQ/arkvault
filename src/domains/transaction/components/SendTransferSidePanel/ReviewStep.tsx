@@ -11,8 +11,8 @@ import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
 import { Networks } from "@/app/lib/mainsail";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { FeeField } from "@/domains/transaction/components/FeeField";
-import { getFeeType } from "@/domains/transaction/pages/SendTransfer/utils";
-import { buildTransferData } from "@/domains/transaction/pages/SendTransfer/SendTransfer.helpers";
+import { getFeeType } from "@/domains/transaction/components/SendTransferSidePanel/utils";
+import { buildTransferData } from "@/domains/transaction/components/SendTransferSidePanel/SendTransfer.helpers";
 import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
 import { Amount } from "@/app/components/Amount";
 import { BigNumber } from "@/app/lib/helpers";
@@ -195,7 +195,10 @@ export const ReviewStep = ({ wallet, network, hideHeader = false }: ReviewStepPr
 						{!!network && (
 							<FeeField
 								type={getFeeType(recipients?.length)}
-								data={feeTransactionData}
+								data={{
+									...feeTransactionData,
+									recipientsCount: recipients.length ?? 1,
+								}}
 								network={network}
 								profile={profile}
 							/>

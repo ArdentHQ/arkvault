@@ -26,6 +26,7 @@ import * as AppContexts from "@/app/contexts";
 import * as hooks from "@/domains/transaction/hooks";
 import * as pendingHook from "@/domains/transaction/hooks/use-pending-transactions";
 import * as appHooks from "@/app/hooks";
+import * as ReactRouter from "react-router";
 
 const passphrase = getDefaultWalletMnemonic();
 const fixtureProfileId = getDefaultProfileId();
@@ -44,6 +45,8 @@ const signedTransactionMock = {
 	explorerLinkForBlock: () => {},
 	fee: () => BigNumber.make(transactionFixture.data.gasPrice).times(transactionFixture.data.gas),
 	from: () => transactionFixture.data.from,
+	gasLimit: () => transactionFixture.data.gasLimit,
+	gasUsed: () => transactionFixture.data.receipt.gasUsed,
 	hash: () => transactionFixture.data.hash,
 	isConfirmed: () => false,
 	isMultiPayment: () => false,
@@ -142,6 +145,8 @@ describe("SendTransferSidePanel", () => {
 	});
 
 	beforeEach(() => {
+		vi.spyOn(ReactRouter, "useSearchParams").mockReturnValue([new URLSearchParams(), vi.fn()]);
+
 		vi.spyOn(wallet, "balance").mockReturnValue(1_000_000_000_000_000_000);
 
 		vi.spyOn(useConfirmedTransactionMock, "useConfirmedTransaction").mockReturnValue({

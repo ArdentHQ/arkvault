@@ -65,4 +65,7 @@ export interface SignedTransactionData {
 	username(): string;
 	validatorPublicKey(): string;
 	recipients(): MultiPaymentRecipient[];
+
+	gasLimit(): number;
+	gasUsed(): number;
 }
