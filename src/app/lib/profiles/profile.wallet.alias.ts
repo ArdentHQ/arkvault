@@ -12,9 +12,10 @@ export class WalletAliasProvider {
 			return this.#profile
 				.validators()
 				.all(this.#profile.activeNetwork().id())
-				.find((wallet) => wallet.address() === address)?.username()
+				.find((wallet) => wallet.address() === address)
+				?.username();
 		} catch {
-			return undefined
+			return undefined;
 		}
 	}
 
@@ -34,7 +35,7 @@ export class WalletAliasProvider {
 			const wallet = profile.wallets().findByAddressWithNetwork(address, networkId);
 			const onChainUsername = profile.usernames().username(networkId, address);
 
-			const validatorName = this.#validatorUsername(address)
+			const validatorName = this.#validatorUsername(address);
 
 			const localName = wallet ? wallet.displayName() : undefined;
 
