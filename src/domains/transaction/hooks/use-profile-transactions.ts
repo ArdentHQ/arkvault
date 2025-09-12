@@ -1,17 +1,18 @@
 import { Contracts, DTO, Contracts as ProfileContracts } from "@/app/lib/profiles";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useSynchronizer, useWalletAlias } from "@/app/hooks";
-import { useUnconfirmedTransactions } from "@/domains/transaction/hooks/use-unconfirmed-transactions";
 
-import { SortBy } from "@/app/components/Table";
-import { delay } from "@/utils/delay";
-import { useTransactionTypes } from "./use-transaction-types";
-import { SignedTransactionData } from "@/app/lib/mainsail/signed-transaction.dto";
 import { ExtendedSignedTransactionData } from "@/app/lib/profiles/signed-transaction.dto";
-import { IReadWriteWallet } from "@/app/lib/profiles/wallet.contract";
 import { ExtendedTransactionDTO } from "@/domains/transaction/components/TransactionTable";
+import { IReadWriteWallet } from "@/app/lib/profiles/wallet.contract";
+import { Network } from "@/app/lib/mainsail/network";
+import { SignedTransactionData } from "@/app/lib/mainsail/signed-transaction.dto";
+import { SortBy } from "@/app/components/Table";
 import { UnconfirmedTransactionsService } from "@/app/lib/mainsail/unconfirmed-transactions.service";
+import { delay } from "@/utils/delay";
 import { get } from "@/app/lib/helpers";
+import { useTransactionTypes } from "./use-transaction-types";
+import { useUnconfirmedTransactions } from "@/domains/transaction/hooks/use-unconfirmed-transactions";
 
 interface TransactionsState {
 	transactions: DTO.ExtendedConfirmedTransactionData[];
@@ -111,23 +112,20 @@ const removeConfirmedUnconfirmedTransactions = (
 	};
 };
 
-const getBlockTime = (wallets: Contracts.IReadWriteWallet[]): number => {
-	try {
-		const first = wallets[0];
-		if (!first) {
-			return 15_000;
-		}
+const getBlockTime = (network: Network): number => {
+	const DEFAULT_BLOCK_TIME = 8_000; // Close to expected ARK block time
 
-		const milestone = first.network().milestone?.();
+	try {
+		const milestone = network.milestone();
 		const blockTime = get(milestone, "timeouts.blockTime") as unknown;
 		if (typeof blockTime === "number" && Number.isFinite(blockTime) && blockTime > 0) {
-			return Math.max(1000, Math.min(300_000, blockTime));
+			return Math.max(1000, blockTime); // Minimum of 1 second
 		}
 	} catch (error) {
 		/* istanbul ignore next -- @preserve */
 		console.error("Failed to get block time:", error);
 	}
-	return 15_000;
+	return DEFAULT_BLOCK_TIME;
 };
 
 export const useProfileTransactions = ({ profile, wallets, limit = 30 }: ProfileTransactionsProperties) => {
@@ -142,7 +140,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 		unconfirmedTransactions,
 		removeUnconfirmedTransaction,
 		addUnconfirmedTransactionFromApi,
-		reconcileUnconfirmedForAddresses,
+		cleanupUnconfirmedForAddresses,
 	} = useUnconfirmedTransactions();
 
 	const allTransactionTypes = [...types.core];
@@ -194,7 +192,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 		}
 	}, [profile, wallets?.length > 0]);
 
-	const blockTime = useMemo(() => getBlockTime(wallets), [wallets[0]?.networkId()]);
+	const blockTime = useMemo(() => getBlockTime(profile.activeNetwork()), [profile.activeNetwork()]);
 
 	const hasMorePages = (itemsLength: number, hasMorePages: boolean, itemsLimit = LIMIT) => {
 		if (itemsLength < itemsLimit) {
@@ -490,7 +488,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 
 			const results = response?.results ?? [];
 			const remoteHashes = results.map((t: any) => t.hash).filter(Boolean);
-			reconcileUnconfirmedForAddresses(selectedAddresses, remoteHashes);
+			cleanupUnconfirmedForAddresses(selectedAddresses, remoteHashes);
 
 			/* istanbul ignore next -- @preserve */
 			if (remoteHashes.length !== unconfirmedTransactions.length) {
@@ -500,21 +498,19 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 			for (const transaction of results) {
 				const matched = wallets.find((wallet) => {
 					const walletAddr = wallet.address().toLowerCase();
-					const txFrom = transaction.from?.toLowerCase?.();
-					const txTo = transaction.to?.toLowerCase?.();
+					const txFrom = transaction.from().toLowerCase();
+					const txTo = transaction.to().toLowerCase();
 					return walletAddr === txFrom || walletAddr === txTo;
 				});
 
 				if (!matched) {
+					console.warn("No matching wallet found for transaction:", transaction);
 					continue;
 				}
 
-				const gasLimit = transaction.gasLimit ?? 0;
-
 				addUnconfirmedTransactionFromApi({
-					...transaction,
-					gasLimit,
 					networkId: matched.networkId(),
+					transaction: transaction.raw(),
 					walletAddress: matched.address(),
 				});
 			}
@@ -525,7 +521,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 		unconfirmedTransactionsService,
 		wallets,
 		addUnconfirmedTransactionFromApi,
-		reconcileUnconfirmedForAddresses,
+		cleanupUnconfirmedForAddresses,
 		unconfirmedTransactions.length,
 	]);
 
