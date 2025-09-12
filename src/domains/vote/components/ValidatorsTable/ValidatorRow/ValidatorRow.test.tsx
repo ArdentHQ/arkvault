@@ -14,19 +14,24 @@ let validator: Contracts.IReadOnlyWallet;
 const firstValidatorVoteButton = () => screen.getByTestId("ValidatorRow__toggle-0");
 
 describe("ValidatorRow", () => {
+	let profile: Contracts.IProfile;
+
 	beforeAll(() => {
-		const profile = env.profiles().findById(getMainsailProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 		wallet = profile.wallets().values()[0];
 
-		validator = new ReadOnlyWallet({
-			address: data[0].address,
-			explorerLink: "",
-			governanceIdentifier: "address",
-			isResignedValidator: false,
-			isValidator: true,
-			publicKey: data[0].publicKey,
-			username: data[0].username,
-		});
+		validator = new ReadOnlyWallet(
+			{
+				address: data[0].address,
+				explorerLink: "",
+				governanceIdentifier: "address",
+				isResignedValidator: false,
+				isValidator: true,
+				publicKey: data[0].publicKey,
+				username: data[0].username,
+			},
+			profile,
+		);
 	});
 
 	it("should render", () => {
@@ -111,25 +116,31 @@ describe("ValidatorRow", () => {
 	});
 
 	it("should render the selected vote", () => {
-		const secondValidator = new ReadOnlyWallet({
-			address: data[1].address,
-			explorerLink: "",
-			governanceIdentifier: "address",
-			isResignedValidator: false,
-			isValidator: true,
-			publicKey: data[1].publicKey,
-			username: "testusernaame",
-		});
+		const secondValidator = new ReadOnlyWallet(
+			{
+				address: data[1].address,
+				explorerLink: "",
+				governanceIdentifier: "address",
+				isResignedValidator: false,
+				isValidator: true,
+				publicKey: data[1].publicKey,
+				username: "testusernaame",
+			},
+			profile,
+		);
 
-		const thirdValidator = new ReadOnlyWallet({
-			address: data[2].address,
-			explorerLink: "",
-			governanceIdentifier: "address",
-			isResignedValidator: false,
-			isValidator: true,
-			publicKey: data[2].publicKey,
-			username: data[2].username,
-		});
+		const thirdValidator = new ReadOnlyWallet(
+			{
+				address: data[2].address,
+				explorerLink: "",
+				governanceIdentifier: "address",
+				isResignedValidator: false,
+				isValidator: true,
+				publicKey: data[2].publicKey,
+				username: data[2].username,
+			},
+			profile,
+		);
 
 		const { container, asFragment } = render(
 			<table>

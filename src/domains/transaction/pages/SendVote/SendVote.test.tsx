@@ -98,15 +98,18 @@ let wallet: Contracts.IReadWriteWallet;
 const votingMockImplementation = () => [
 	{
 		amount: 10,
-		wallet: new ReadOnlyWallet({
-			address: validatorData[1].address,
-			explorerLink: "",
-			governanceIdentifier: "address",
-			isResignedvalidator: false,
-			isValidator: true,
-			publicKey: validatorData[1].publicKey,
-			username: validatorData[1].username,
-		}),
+		wallet: new ReadOnlyWallet(
+			{
+				address: validatorData[1].address,
+				explorerLink: "",
+				governanceIdentifier: "address",
+				isResignedvalidator: false,
+				isValidator: true,
+				publicKey: validatorData[1].publicKey,
+				username: validatorData[1].username,
+			},
+			profile,
+		),
 	},
 ];
 
@@ -303,16 +306,19 @@ describe("SendVote", () => {
 		const votesMock = vi.spyOn(wallet.voting(), "current").mockReturnValue([
 			{
 				amount: 10,
-				wallet: new ReadOnlyWallet({
-					address: validatorData[0].address,
-					explorerLink: "",
-					governanceIdentifier: "address",
-					isResignedvalidator: false,
-					isValidator: true,
-					publicKey: validatorData[0].publicKey,
-					rank: 1,
-					username: "arkx",
-				}),
+				wallet: new ReadOnlyWallet(
+					{
+						address: validatorData[0].address,
+						explorerLink: "",
+						governanceIdentifier: "address",
+						isResignedvalidator: false,
+						isValidator: true,
+						publicKey: validatorData[0].publicKey,
+						rank: 1,
+						username: "arkx",
+					},
+					profile,
+				),
 			},
 		]);
 
@@ -685,27 +691,33 @@ describe("SendVote", () => {
 		const votesMock = vi.spyOn(wallet.voting(), "current").mockImplementation(() => [
 			{
 				amount: 10,
-				wallet: new ReadOnlyWallet({
-					address: validatorData[0].address,
-					explorerLink: "",
-					governanceIdentifier: "address",
-					isResignedvalidator: false,
-					isValidator: true,
-					publicKey: validatorData[0].publicKey,
-					username: validatorData[0].username,
-				}),
+				wallet: new ReadOnlyWallet(
+					{
+						address: validatorData[0].address,
+						explorerLink: "",
+						governanceIdentifier: "address",
+						isResignedvalidator: false,
+						isValidator: true,
+						publicKey: validatorData[0].publicKey,
+						username: validatorData[0].username,
+					},
+					profile,
+				),
 			},
 			{
 				amount: 10,
-				wallet: new ReadOnlyWallet({
-					address: validatorData[1].address,
-					explorerLink: "",
-					governanceIdentifier: "address",
-					isResignedvalidator: false,
-					isValidator: true,
-					publicKey: validatorData[1].publicKey,
-					username: validatorData[1].username,
-				}),
+				wallet: new ReadOnlyWallet(
+					{
+						address: validatorData[1].address,
+						explorerLink: "",
+						governanceIdentifier: "address",
+						isResignedvalidator: false,
+						isValidator: true,
+						publicKey: validatorData[1].publicKey,
+						username: validatorData[1].username,
+					},
+					profile,
+				),
 			},
 		]);
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;

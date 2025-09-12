@@ -26,12 +26,15 @@ describe("LedgerReview", () => {
 
 	it("should render for unvote transaction", () => {
 		const unvotes = [
-			new ReadOnlyWallet({
-				address: wallet.address(),
-				explorerLink: "",
-				publicKey: wallet.publicKey(),
-				username: "Test Username",
-			}),
+			new ReadOnlyWallet(
+				{
+					address: wallet.address(),
+					explorerLink: "",
+					publicKey: wallet.publicKey(),
+					username: "Test Username",
+				},
+				profile,
+			),
 		];
 
 		const { result } = renderForm();
@@ -50,12 +53,15 @@ describe("LedgerReview", () => {
 
 	it("should render for vote transaction", () => {
 		const votes = [
-			new ReadOnlyWallet({
-				address: wallet.address(),
-				explorerLink: "",
-				publicKey: wallet.publicKey(),
-				username: "Test Username",
-			}),
+			new ReadOnlyWallet(
+				{
+					address: wallet.address(),
+					explorerLink: "",
+					publicKey: wallet.publicKey(),
+					username: "Test Username",
+				},
+				profile,
+			),
 		];
 
 		const { result } = renderForm();
@@ -74,12 +80,15 @@ describe("LedgerReview", () => {
 
 	it("should render for unvote and vote transaction", () => {
 		const votes = [
-			new ReadOnlyWallet({
-				address: wallet.address(),
-				explorerLink: "",
-				publicKey: wallet.publicKey(),
-				username: "Test Username",
-			}),
+			new ReadOnlyWallet(
+				{
+					address: wallet.address(),
+					explorerLink: "",
+					publicKey: wallet.publicKey(),
+					username: "Test Username",
+				},
+				profile,
+			),
 		];
 
 		const { result } = renderForm();

@@ -70,7 +70,7 @@ describe("WalletSynchroniser", () => {
 			const votesMock = vi.fn().mockResolvedValue({
 				available: BigNumber.make(10),
 				used: BigNumber.make(20),
-				votes: [new ReadOnlyWallet(mockVoteData)],
+				votes: [new ReadOnlyWallet(mockVoteData, profile)],
 			});
 
 			vi.spyOn(wallet, "client").mockReturnValue({

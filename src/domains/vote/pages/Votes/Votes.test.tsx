@@ -106,16 +106,19 @@ describe("Votes", () => {
 		vi.spyOn(currentWallet.voting(), "current").mockReturnValue([
 			{
 				amount: 0,
-				wallet: new ReadOnlyWallet({
-					address: "0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2",
-					explorerLink: "",
-					governanceIdentifier: "address",
-					isResignedValidator: false,
-					isValidator: true,
-					publicKey: currentWallet.publicKey(),
-					rank: 52,
-					username: "arkx",
-				}),
+				wallet: new ReadOnlyWallet(
+					{
+						address: "0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2",
+						explorerLink: "",
+						governanceIdentifier: "address",
+						isResignedValidator: false,
+						isValidator: true,
+						publicKey: currentWallet.publicKey(),
+						rank: 52,
+						username: "arkx",
+					},
+					profile,
+				),
 			},
 		]);
 
@@ -170,16 +173,19 @@ describe("Votes", () => {
 		vi.spyOn(currentWallet.voting(), "current").mockReturnValue([
 			{
 				amount: 0,
-				wallet: new ReadOnlyWallet({
-					address: "D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr",
-					explorerLink: "",
-					governanceIdentifier: "address",
-					isResignedValidator: false,
-					isValidator: true,
-					publicKey: currentWallet.publicKey(),
-					rank: 52,
-					username: "arkx",
-				}),
+				wallet: new ReadOnlyWallet(
+					{
+						address: "D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr",
+						explorerLink: "",
+						governanceIdentifier: "address",
+						isResignedValidator: false,
+						isValidator: true,
+						publicKey: currentWallet.publicKey(),
+						rank: 52,
+						username: "arkx",
+					},
+					profile,
+				),
 			},
 		]);
 
@@ -450,16 +456,19 @@ describe("Votes", () => {
 		const walletSpy = vi.spyOn(currentWallet.voting(), "current").mockReturnValue([
 			{
 				amount: 0,
-				wallet: new ReadOnlyWallet({
-					address: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
-					explorerLink: "",
-					governanceIdentifier: "address",
-					isResignedValidator: true,
-					isValidator: true,
-					publicKey: currentWallet.publicKey(),
-					rank: 52,
-					username: "arkx",
-				}),
+				wallet: new ReadOnlyWallet(
+					{
+						address: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
+						explorerLink: "",
+						governanceIdentifier: "address",
+						isResignedValidator: true,
+						isValidator: true,
+						publicKey: currentWallet.publicKey(),
+						rank: 52,
+						username: "arkx",
+					},
+					profile,
+				),
 			},
 		]);
 		const route = `/profiles/${profile.id()}/wallets/${currentWallet.id()}/votes`;
