@@ -1,4 +1,3 @@
-import { Networks } from "@/app/lib/mainsail";
 import { Contracts as ProfileContracts } from "@/app/lib/profiles";
 
 export class WalletAliasProvider {
@@ -13,11 +12,9 @@ export class WalletAliasProvider {
 		const networkId = network ?? this.#profile.activeNetwork().id()
 
 		let alias: string | undefined;
-		console.log(address)
 
 		try {
 			if (profile.knownWallets().is(networkId, address)) {
-				console.log("known")
 				return profile.knownWallets().name(networkId, address)
 			}
 
@@ -26,27 +23,23 @@ export class WalletAliasProvider {
 			const wallet = profile.wallets().findByAddressWithNetwork(address, networkId);
 			const onChainUsername = profile.usernames().username(networkId, address);
 
+			const validator = profile.validators().all(networkId).find((wallet) => wallet.address() === address)
+			const validatorName = validator?.username()
+
 			const localName = wallet ? wallet.displayName() : undefined;
 
-			console.log({ localName })
 			if (localName) {
 				alias = localName;
 			}
 
-			console.log({ wallet })
-			const username = wallet ? wallet.username() : undefined;
-			console.log({ username })
+			const username = wallet ? wallet?.username() : undefined;
 
 			const contact = profile.contacts().findByAddress(address)[0];
-			const contactName = contact.name()
-
-			console.log({ contact })
+			const contactName = contact?.name()
 
 			alias = useNetworkWalletNames
-				? username || localName || contactName || onChainUsername
-				: localName || contactName || username || onChainUsername;
-
-			console.log({ alias })
+				? username || localName || contactName || onChainUsername || validatorName
+				: localName || contactName || username || onChainUsername || validatorName;
 
 			return alias
 		} catch {
