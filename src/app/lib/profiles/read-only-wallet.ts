@@ -43,11 +43,6 @@ export class ReadOnlyWallet implements IReadOnlyWallet {
 		return this.#wallet.username;
 	}
 
-	/** {@inheritDoc IReadOnlyWallet.usernameOrAddress} */
-	public usernameOrAddress(): string {
-		return this.username() ?? this.address();
-	}
-
 	/** {@inheritDoc IReadOnlyWallet.rank} */
 	public rank(): number | undefined {
 		return this.#wallet.rank;

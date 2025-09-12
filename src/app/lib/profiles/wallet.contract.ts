@@ -259,14 +259,6 @@ export interface IReadWriteWallet {
 	username(): string | undefined;
 
 	/**
-	 * Get the username if available or address.
-	 *
-	 * @return {(string | undefined)}
-	 * @memberof IReadWriteWallet
-	 */
-	usernameOrAddress(): string;
-
-	/**
 	 * Get the validator public key.
 	 *
 	 * @return {(string | undefined)}

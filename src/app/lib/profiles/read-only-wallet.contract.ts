@@ -30,14 +30,6 @@ export interface IReadOnlyWallet {
 	username(): string | undefined;
 
 	/**
-	 * Get the username if available or address.
-	 *
-	 * @returns {string}
-	 * @memberof IReadOnlyWallet
-	 */
-	usernameOrAddress(): string;
-
-	/**
 	 * Get the rank.
 	 *
 	 * @returns {(number | undefined)}

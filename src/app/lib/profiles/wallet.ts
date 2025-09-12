@@ -271,11 +271,6 @@ export class Wallet implements IReadWriteWallet {
 		return attributes.username();
 	}
 
-	/** {@inheritDoc IReadWriteWallet.usernameOrAddress} */
-	public usernameOrAddress(): string {
-		return this.username() ?? this.address();
-	}
-
 	/** {@inheritDoc IReadWriteWallet.validatorPublicKey} */
 	public validatorPublicKey(): string | undefined {
 		if (!this.#attributes.get<Contracts.WalletData>("wallet")) {
