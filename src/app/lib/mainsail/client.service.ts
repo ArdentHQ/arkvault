@@ -7,13 +7,17 @@ import { decodeFunctionResult, encodeFunctionData } from "viem";
 
 import { ArkClient } from "@arkecosystem/typescript-client";
 import { ConfirmedTransactionData } from "./confirmed-transaction.dto";
-import { ConfirmedTransactionDataCollection } from "@/app/lib/mainsail/transactions.collection";
+import {
+	ConfirmedTransactionDataCollection,
+	UnconfirmedTransactionDataCollection,
+} from "@/app/lib/mainsail/transactions.collection";
 import { DateTime } from "@/app/lib/intl";
 import { IProfile } from "@/app/lib/profiles/profile.contract";
 import { SignedTransactionData } from "./signed-transaction.dto";
 import { UsernamesAbi } from "@mainsail/evm-contracts";
 import { WalletData } from "./wallet.dto";
 import dotify from "node-dotify";
+import { UnconfirmedTransactionData } from "./unconfirmed-transaction.dto";
 
 type searchParams<T extends Record<string, any> = {}> = T & { page: number; limit?: number };
 
@@ -65,14 +69,14 @@ export class ClientService {
 
 	public async unconfirmedTransactions(
 		query?: Services.ClientTransactionsInput,
-	): Promise<Collections.ConfirmedTransactionDataCollection> {
+	): Promise<Collections.UnconfirmedTransactionDataCollection> {
 		const { searchParams } = this.#createSearchParams(query ?? {});
 		const { limit = 10, page = 1, ...parameters } = searchParams;
 
 		const response = await this.#client.transactions().allUnconfirmed(page, limit, parameters);
 
-		return new ConfirmedTransactionDataCollection(
-			response.data.map((transaction) => new ConfirmedTransactionData().configure(transaction)),
+		return new UnconfirmedTransactionDataCollection(
+			response.data.map((transaction) => new UnconfirmedTransactionData().configure(transaction)),
 			this.#createMetaPagination(response),
 		);
 	}
