@@ -83,7 +83,7 @@ describe("Transaction utils", () => {
 				isValidatorRegistration: () => false,
 				isValidatorResignation: () => false,
 				isVote: () => false,
-				to: () => { },
+				to: () => {},
 			};
 			expect(isContractDeployment(transaction as any)).toBe(true);
 		});
@@ -96,7 +96,7 @@ describe("Transaction utils", () => {
 				isValidatorRegistration: () => true,
 				isValidatorResignation: () => false,
 				isVote: () => false,
-				to: () => { },
+				to: () => {},
 			};
 			expect(isContractDeployment(transaction as any)).toBe(false);
 		});
