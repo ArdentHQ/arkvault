@@ -123,7 +123,10 @@ export class Wallet implements IReadWriteWallet {
 
 	/** {@inheritDoc IReadWriteWallet.alias} */
 	public alias(): string | undefined {
-		return new WalletAliasProvider(this.#profile).findAliasByAddress(this.address(), this.network().id()) ?? this.address()
+		return (
+			new WalletAliasProvider(this.#profile).findAliasByAddress(this.address(), this.network().id()) ??
+			this.address()
+		);
 	}
 
 	/** {@inheritDoc IReadWriteWallet.displayName} */

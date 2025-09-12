@@ -30,7 +30,7 @@ export class ReadOnlyWallet implements IReadOnlyWallet {
 
 	/** {@inheritDoc IReadOnlyWallet.alias} */
 	public alias(): string | undefined {
-		return this.#profile.findAliasByAddress(this.address()) ?? this.address()
+		return this.#profile.findAliasByAddress(this.address()) ?? this.address();
 	}
 
 	/** {@inheritDoc IReadOnlyWallet.publicKey} */
