@@ -562,6 +562,6 @@ export class Profile implements IProfile {
 	}
 
 	public findAliasByAddress(address: string, networkId?: string): string | undefined {
-		return new WalletAliasProvider(this).findAliasByAddress(address, networkId)
+		return new WalletAliasProvider(this).findAliasByAddress(address, networkId);
 	}
 }

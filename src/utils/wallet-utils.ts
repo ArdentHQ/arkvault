@@ -10,7 +10,9 @@ export const sortWallets = (wallets: Contracts.IReadWriteWallet[]) =>
 			a.network().coinName().localeCompare(b.network().coinName()) ||
 			Number(a.network().isTest()) - Number(b.network().isTest()) ||
 			Number(b.isStarred()) - Number(a.isStarred()) ||
-			(a.settings().get(WalletSetting.Alias) as string | undefined ?? "").localeCompare(b.settings().get(WalletSetting.Alias) ?? ""),
+			((a.settings().get(WalletSetting.Alias) as string | undefined) ?? "").localeCompare(
+				b.settings().get(WalletSetting.Alias) ?? "",
+			),
 	);
 
 export const isLedgerWalletCompatible = (wallet: Contracts.IReadWriteWallet) => {

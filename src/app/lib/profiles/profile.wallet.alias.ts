@@ -9,13 +9,13 @@ export class WalletAliasProvider {
 
 	public findAliasByAddress(address: string, network?: string): string | undefined {
 		const profile = this.#profile;
-		const networkId = network ?? this.#profile.activeNetwork().id()
+		const networkId = network ?? this.#profile.activeNetwork().id();
 
 		let alias: string | undefined;
 
 		try {
 			if (profile.knownWallets().is(networkId, address)) {
-				return profile.knownWallets().name(networkId, address)
+				return profile.knownWallets().name(networkId, address);
 			}
 
 			const useNetworkWalletNames = profile.appearance().get("useNetworkWalletNames");
@@ -23,8 +23,11 @@ export class WalletAliasProvider {
 			const wallet = profile.wallets().findByAddressWithNetwork(address, networkId);
 			const onChainUsername = profile.usernames().username(networkId, address);
 
-			const validator = profile.validators().all(networkId).find((wallet) => wallet.address() === address)
-			const validatorName = validator?.username()
+			const validator = profile
+				.validators()
+				.all(networkId)
+				.find((wallet) => wallet.address() === address);
+			const validatorName = validator?.username();
 
 			const localName = wallet ? wallet.displayName() : undefined;
 
@@ -35,15 +38,15 @@ export class WalletAliasProvider {
 			const username = wallet ? wallet?.username() : undefined;
 
 			const contact = profile.contacts().findByAddress(address)[0];
-			const contactName = contact?.name()
+			const contactName = contact?.name();
 
 			alias = useNetworkWalletNames
 				? username || localName || contactName || onChainUsername || validatorName
 				: localName || contactName || username || onChainUsername || validatorName;
 
-			return alias
+			return alias;
 		} catch {
-			return alias
+			return alias;
 		}
 	}
 }

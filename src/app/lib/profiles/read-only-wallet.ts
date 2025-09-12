@@ -30,7 +30,7 @@ export class ReadOnlyWallet implements IReadOnlyWallet {
 
 	/** {@inheritDoc IReadOnlyWallet.alias} */
 	public alias(): string | undefined {
-		return this.#profile.findAliasByAddress(this.address())
+		return this.#profile.findAliasByAddress(this.address());
 	}
 
 	/** {@inheritDoc IReadOnlyWallet.publicKey} */
@@ -45,7 +45,7 @@ export class ReadOnlyWallet implements IReadOnlyWallet {
 
 	/** {@inheritDoc IReadOnlyWallet.usernameOrAddress} */
 	public usernameOrAddress(): string {
-		return this.username() ?? this.address()
+		return this.username() ?? this.address();
 	}
 
 	/** {@inheritDoc IReadOnlyWallet.rank} */

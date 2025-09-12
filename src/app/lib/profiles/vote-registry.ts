@@ -8,7 +8,11 @@ export class VoteRegistry implements IVoteRegistry {
 	readonly #profile: IProfile;
 	readonly #attributes: AttributeBag<IReadWriteWalletAttributes>;
 
-	public constructor(wallet: IReadWriteWallet, attributes: AttributeBag<IReadWriteWalletAttributes>, profile: IProfile) {
+	public constructor(
+		wallet: IReadWriteWallet,
+		attributes: AttributeBag<IReadWriteWalletAttributes>,
+		profile: IProfile,
+	) {
 		this.#wallet = wallet;
 		this.#profile = profile;
 		this.#attributes = attributes;
@@ -42,14 +46,17 @@ export class VoteRegistry implements IVoteRegistry {
 			if (votingAddress) {
 				return {
 					amount: 0,
-					wallet: new ReadOnlyWallet({
-						address: votingAddress,
-						explorerLink: this.#wallet.explorerLink(),
-						governanceIdentifier: "address",
-						isLegacyValidator: false,
-						isResignedValidator: false,
-						isValidator: true,
-					}, this.#profile),
+					wallet: new ReadOnlyWallet(
+						{
+							address: votingAddress,
+							explorerLink: this.#wallet.explorerLink(),
+							governanceIdentifier: "address",
+							isLegacyValidator: false,
+							isResignedValidator: false,
+							isValidator: true,
+						},
+						this.#profile,
+					),
 				};
 			}
 

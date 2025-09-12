@@ -123,7 +123,7 @@ export class Wallet implements IReadWriteWallet {
 
 	/** {@inheritDoc IReadWriteWallet.alias} */
 	public alias(): string | undefined {
-		return new WalletAliasProvider(this.#profile).findAliasByAddress(this.address(), this.network().id())
+		return new WalletAliasProvider(this.#profile).findAliasByAddress(this.address(), this.network().id());
 	}
 
 	/** {@inheritDoc IReadWriteWallet.displayName} */
@@ -273,7 +273,7 @@ export class Wallet implements IReadWriteWallet {
 
 	/** {@inheritDoc IReadWriteWallet.usernameOrAddress} */
 	public usernameOrAddress(): string {
-		return this.username() ?? this.address()
+		return this.username() ?? this.address();
 	}
 
 	/** {@inheritDoc IReadWriteWallet.validatorPublicKey} */

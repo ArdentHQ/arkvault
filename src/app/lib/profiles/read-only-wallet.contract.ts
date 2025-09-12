@@ -35,7 +35,7 @@ export interface IReadOnlyWallet {
 	 * @returns {string}
 	 * @memberof IReadOnlyWallet
 	 */
-	usernameOrAddress(): string
+	usernameOrAddress(): string;
 
 	/**
 	 * Get the rank.

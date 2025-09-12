@@ -122,7 +122,8 @@ export class WalletRepository implements IWalletRepository {
 	/** {@inheritDoc IWalletRepository.findByAlias} */
 	public findByAlias(alias: string): IReadWriteWallet | undefined {
 		return this.values().find(
-			(wallet: IReadWriteWallet) => (wallet.settings().get<string>(WalletSetting.Alias) || "").toLowerCase() === alias.toLowerCase(),
+			(wallet: IReadWriteWallet) =>
+				(wallet.settings().get<string>(WalletSetting.Alias) || "").toLowerCase() === alias.toLowerCase(),
 		);
 	}
 
@@ -149,7 +150,7 @@ export class WalletRepository implements IWalletRepository {
 			const wallets: IReadWriteWallet[] = this.values();
 
 			for (const wallet of wallets) {
-				const alias = wallet.settings().get(WalletSetting.Alias)
+				const alias = wallet.settings().get(WalletSetting.Alias);
 
 				if (wallet.id() === id || !alias) {
 					continue;
