@@ -7,6 +7,17 @@ export class WalletAliasProvider {
 		this.#profile = profile;
 	}
 
+	#validatorUsername(address: string): string | undefined {
+		try {
+			return this.#profile
+				.validators()
+				.all(this.#profile.activeNetwork().id())
+				.find((wallet) => wallet.address() === address)?.username()
+		} catch {
+			return undefined
+		}
+	}
+
 	public findAliasByAddress(address: string, network?: string): string | undefined {
 		const profile = this.#profile;
 		const networkId = network ?? this.#profile.activeNetwork().id();
@@ -23,11 +34,7 @@ export class WalletAliasProvider {
 			const wallet = profile.wallets().findByAddressWithNetwork(address, networkId);
 			const onChainUsername = profile.usernames().username(networkId, address);
 
-			const validator = profile
-				.validators()
-				.all(networkId)
-				.find((wallet) => wallet.address() === address);
-			const validatorName = validator?.username();
+			const validatorName = this.#validatorUsername(address)
 
 			const localName = wallet ? wallet.displayName() : undefined;
 
