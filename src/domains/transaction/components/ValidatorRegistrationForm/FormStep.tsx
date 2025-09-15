@@ -82,7 +82,6 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile, hideHe
 				<FormLabel label={t("COMMON.SENDER")} />
 
 				<SelectAddress
-					showWalletAvatar={false}
 					wallet={
 						wallet
 							? {

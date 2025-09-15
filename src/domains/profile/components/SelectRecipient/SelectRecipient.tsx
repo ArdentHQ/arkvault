@@ -21,7 +21,6 @@ type SelectRecipientProperties = {
 	disabled?: boolean;
 	isInvalid?: boolean;
 	showOptions?: boolean;
-	showWalletAvatar?: boolean;
 	contactSearchTitle?: string;
 	contactSearchDescription?: string;
 	placeholder?: string;
@@ -36,7 +35,6 @@ export const SelectRecipient = ({
 	disabled,
 	isInvalid,
 	showOptions = true,
-	showWalletAvatar = true,
 	network,
 	placeholder,
 	exceptMultiSignature,
@@ -153,38 +151,32 @@ export const SelectRecipient = ({
 					addons={{
 						end: showOptions
 							? {
+								content: (
+									<div
+										data-testid="SelectRecipient__select-recipient"
+										className={cn("flex items-center", {
+											"text-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 cursor-pointer rounded bg-transparent p-1 transition-colors dark:hover:text-white":
+												!disabled,
+										})}
+										onClick={openRecipients}
+									>
+										<Icon name="User" size="lg" />
+									</div>
+								),
+							}
+							: undefined,
+						start:
+							selectedAddressAlias?.alias
+								? {
 									content: (
-										<div
-											data-testid="SelectRecipient__select-recipient"
-											className={cn("flex items-center", {
-												"text-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 cursor-pointer rounded bg-transparent p-1 transition-colors dark:hover:text-white":
-													!disabled,
-											})}
-											onClick={openRecipients}
-										>
-											<Icon name="User" size="lg" />
+										<div className="flex items-center">
+											<TruncateEnd
+												text={selectedAddressAlias.alias}
+												showTooltip
+											/>
 										</div>
 									),
 								}
-							: undefined,
-						start:
-							selectedAddressAlias?.alias || showWalletAvatar
-								? {
-										content: (
-											<div className="flex items-center">
-												{showWalletAvatar && <ProfileAvatar address={selectedAddress} />}
-												{selectedAddressAlias?.alias && (
-													<TruncateEnd
-														className={cn({
-															"ml-2": showWalletAvatar,
-														})}
-														text={selectedAddressAlias.alias}
-														showTooltip
-													/>
-												)}
-											</div>
-										),
-									}
 								: undefined,
 					}}
 					renderLabel={(option) => <OptionLabel option={option} network={network} profile={profile} />}

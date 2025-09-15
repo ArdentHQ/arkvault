@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/require-await */
+
 import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
@@ -34,7 +34,7 @@ describe("SelectRecipient", () => {
 	});
 
 	it("should render without a wallet avatar", () => {
-		render(<SelectRecipient profile={profile} showWalletAvatar={false} />);
+		render(<SelectRecipient profile={profile} />);
 
 		expect(screen.queryByTestId("Avatar")).not.toBeInTheDocument();
 	});

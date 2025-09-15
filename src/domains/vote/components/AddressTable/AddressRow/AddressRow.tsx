@@ -4,7 +4,6 @@ import { useTranslation } from "react-i18next";
 
 import { Address } from "@/app/components/Address";
 import { Amount } from "@/app/components/Amount";
-import { Avatar } from "@/app/components/Avatar";
 import { Button } from "@/app/components/Button";
 import { Circle } from "@/app/components/Circle";
 import { TableCell, TableRow } from "@/app/components/Table";
@@ -83,20 +82,6 @@ export const WalletStatus = ({
 		>
 			{t("WALLETS.STATUS.ACTIVE")}
 		</div>
-	);
-};
-
-export const WalletAvatar = ({ wallet }: { wallet?: Contracts.IReadOnlyWallet }) => {
-	if (!wallet) {
-		return null;
-	}
-
-	return (
-		<Tooltip content={wallet.username()}>
-			<Link to={wallet.explorerLink()} isExternal className="flex">
-				<Avatar className="ring-theme-background ring-2" size="xs" address={wallet.address()} noShadow={true} />
-			</Link>
-		</Tooltip>
 	);
 };
 

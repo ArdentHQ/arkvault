@@ -57,7 +57,6 @@ export const FormStep = ({ senderWallet, profile, onWalletChange, hideHeader = f
 			<div className="space-y-3 sm:space-y-4">
 				<FormField name="senderAddress">
 					<SelectAddress
-						showWalletAvatar={false}
 						wallet={
 							senderWallet
 								? {
