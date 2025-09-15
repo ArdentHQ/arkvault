@@ -16,6 +16,7 @@ import {
 } from "@/utils/testing-library";
 import { useConfiguration } from "@/app/contexts";
 import { expect } from "vitest";
+import * as ReactRouter from "react-router";
 
 let emptyProfile: Contracts.IProfile;
 let profile: Contracts.IProfile;
@@ -47,6 +48,8 @@ const firstVoteButtonID = "ValidatorRow__toggle-0";
 
 const searchInputID = "SearchableTableWrapper__search-input";
 
+let useSearchParamsMock;
+
 describe("Votes", () => {
 	beforeAll(async () => {
 		emptyProfile = env.profiles().findById("cba050f1-880f-45f0-9af9-cfe48f406052");
@@ -63,10 +66,14 @@ describe("Votes", () => {
 
 	beforeEach(() => {
 		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
+		useSearchParamsMock = vi
+			.spyOn(ReactRouter, "useSearchParams")
+			.mockReturnValue([new URLSearchParams(), vi.fn()]);
 	});
 
 	afterEach(() => {
 		resetProfileNetworksMock();
+		useSearchParamsMock.mockRestore();
 	});
 
 	it("should render", async () => {

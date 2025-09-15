@@ -5,9 +5,9 @@ import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
-import { FormStep } from "@/domains/transaction/pages/SendVote/FormStep";
-import { VoteLedgerReview } from "@/domains/transaction/pages/SendVote/LedgerReview";
-import { ReviewStep } from "@/domains/transaction/pages/SendVote/ReviewStep";
+import { FormStep } from "@/domains/transaction/components/SendVoteSidePanel/FormStep";
+import { VoteLedgerReview } from "@/domains/transaction/components/SendVoteSidePanel/LedgerReview";
+import { ReviewStep } from "@/domains/transaction/components/SendVoteSidePanel/ReviewStep";
 import { usePendingTransactions } from "@/domains/transaction/hooks/use-pending-transactions";
 import { Form } from "@/app/components/Form";
 import { TabPanel, Tabs } from "@/app/components/Tabs";

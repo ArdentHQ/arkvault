@@ -38,9 +38,11 @@ export const useDeeplink = () => {
 export const useDeeplinkActionHandler = ({
 	onSignMessage,
 	onTransfer,
+	onVote,
 }: {
 	onSignMessage?: () => void;
 	onTransfer?: () => void;
+	onVote?: () => void;
 }): void => {
 	const queryParameters = useQueryParameters();
 
@@ -51,6 +53,10 @@ export const useDeeplinkActionHandler = ({
 
 		if (queryParameters.get("method") === "transfer") {
 			onTransfer?.();
+		}
+
+		if (queryParameters.get("method") === "vote") {
+			onVote?.();
 		}
 	}, [queryParameters]);
 };
