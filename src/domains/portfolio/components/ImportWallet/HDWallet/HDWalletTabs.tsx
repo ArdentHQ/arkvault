@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useMemo, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 
@@ -15,6 +15,7 @@ import {
 import { ImportDetailStep } from "@/domains/portfolio/components/ImportWallet/ImportDetailStep";
 import { ImportActionToolbar } from "@/domains/portfolio/components/ImportWallet/ImportAddressSidePanel.blocks";
 import { SelectAddressStep } from "@/domains/portfolio/components/ImportWallet/HDWallet/SelectAddressStep";
+import { EncryptPasswordStep } from "@/domains/wallet/components/EncryptPasswordStep";
 
 export const HDWalletTabs = ({
 	activeIndex = HDWalletTabStep.SelectWalletStep,
@@ -30,17 +31,40 @@ export const HDWalletTabs = ({
 
 	const navigate = useNavigate();
 
-	const { formState, handleSubmit, getValues, setValue, register } = useFormContext();
-	const { isValid, isSubmitting } = formState;
+	const { formState, handleSubmit, getValues, register } = useFormContext();
+	const { isValid, isSubmitting, isDirty } = formState;
 
-	const { importOption } = getValues();
+	const isImporting = false;
+	const isEncrypting = false;
+	const { importOption, acceptResponsibility, useEncryption, encryptionPassword, confirmEncryptionPassword } =
+		getValues();
 
 	const [importedWallets, setImportedWallets] = useState<LedgerData[]>([]);
 	const [activeTab, setActiveTab] = useState<HDWalletTabStep>(HDWalletTabStep.SelectWalletStep);
 
 	const handleWalletImporting = useCallback(async ({ wallets }: { wallets: LedgerData[] }) => {}, []);
 
-	const isNextDisabled = !isValid;
+	const isNextDisabled = useMemo(() => {
+		if (activeTab === HDWalletTabStep.EnterMnemonicStep && useEncryption) {
+			return !isValid || !acceptResponsibility;
+		}
+
+		if (activeTab === HDWalletTabStep.EncryptPasswordStep) {
+			return isEncrypting || !isValid || !encryptionPassword || !confirmEncryptionPassword;
+		}
+
+		return !isValid;
+	}, [
+		activeTab,
+		acceptResponsibility,
+		useEncryption,
+		confirmEncryptionPassword,
+		encryptionPassword,
+		isDirty,
+		isEncrypting,
+		isImporting,
+		isValid,
+	]);
 
 	useKeydown("Enter", (event: KeyboardEvent) => {
 		const target = event.target as Element;
@@ -64,9 +88,13 @@ export const HDWalletTabs = ({
 	}, [onStepChange]);
 
 	const handleNext = useCallback(() => {
-		const next = activeTab + 1;
+		let next = activeTab + 1;
 
-		if (next === HDWalletTabStep.SelectAddressStep) {
+		if (activeTab === HDWalletTabStep.EnterMnemonicStep && (!useEncryption || !importOption.canBeEncrypted)) {
+			next = activeTab + 2;
+		}
+
+		if ([HDWalletTabStep.SelectAddressStep, HDWalletTabStep.EncryptPasswordStep].includes(next)) {
 			register({ name: "mnemonic", type: "string", value: getValues("value") });
 		}
 
@@ -109,6 +137,10 @@ export const HDWalletTabs = ({
 									network={activeNetwork}
 									importOption={importOption}
 								/>
+							</TabPanel>
+
+							<TabPanel tabId={HDWalletTabStep.EncryptPasswordStep}>
+								<EncryptPasswordStep />
 							</TabPanel>
 
 							<TabPanel tabId={HDWalletTabStep.SelectAddressStep}>

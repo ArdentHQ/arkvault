@@ -4,6 +4,7 @@ import { Networks } from "@/app/lib/mainsail";
 export enum HDWalletTabStep {
 	SelectWalletStep = 1,
 	EnterMnemonicStep,
+	EncryptPasswordStep,
 	SelectAddressStep,
 	ViewImportStep,
 }

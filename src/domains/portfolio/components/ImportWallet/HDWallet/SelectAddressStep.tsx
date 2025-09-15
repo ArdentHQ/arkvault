@@ -142,7 +142,7 @@ export const AddressesTable: FC<AddressTableProperties> = ({
 				{!showSkeleton && (
 					<div className="flex flex-col gap-3 px-6 pb-4">
 						<Button
-							data-testid="LedgerScanStep__scan-more"
+							data-testid="SelectAddressStep__load-more"
 							variant="secondary"
 							icon="Plus"
 							iconPosition="left"
@@ -150,7 +150,7 @@ export const AddressesTable: FC<AddressTableProperties> = ({
 							onClick={loadMore}
 						>
 							<span className="pl-1">
-								<Trans i18nKey="WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.ADD_NEW_ADDRESS" />
+								<Trans i18nKey="WALLETS.PAGE_IMPORT_WALLET.HD_WALLET_SELECT_ADDRESS_STEP.LOAD_MORE_ADDRESSES" />
 							</span>
 						</Button>
 					</div>
@@ -158,10 +158,7 @@ export const AddressesTable: FC<AddressTableProperties> = ({
 
 				{isLoading && (
 					<LedgerLoaderOverlay className="rounded-xl">
-						<Trans
-							i18nKey="WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.LOADING_WALLETS"
-							values={{ count: ADDRESSES_PER_BATCH }}
-						/>
+						<Trans i18nKey="WALLETS.PAGE_IMPORT_WALLET.HD_WALLET_SELECT_ADDRESS_STEP.LOADING_ADDRESSES" />
 					</LedgerLoaderOverlay>
 				)}
 			</div>
@@ -179,7 +176,7 @@ export const AddressesTable: FC<AddressTableProperties> = ({
 					>
 						<Checkbox
 							disabled={isLoading}
-							data-testid="LedgerScanStep__select-all-mobile"
+							data-testid="SelectAddressStep__select-all-mobile"
 							onChange={() => toggleSelectAll()}
 							checked={isAllSelected}
 						/>
@@ -215,7 +212,7 @@ export const AddressesTable: FC<AddressTableProperties> = ({
 						))}
 
 					<Button
-						data-testid="LedgerScanStep__scan-more-mobile"
+						data-testid="SelectAddressStep__scan-more-mobile"
 						variant="secondary"
 						icon="Plus"
 						iconPosition="left"
@@ -223,7 +220,7 @@ export const AddressesTable: FC<AddressTableProperties> = ({
 						onClick={loadMore}
 					>
 						<span className="pl-1">
-							<Trans i18nKey="WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.ADD_NEW_ADDRESS" />
+							<Trans i18nKey="WALLETS.PAGE_IMPORT_WALLET.HD_WALLET_SELECT_ADDRESS_STEP.LOAD_MORE_ADDRESSES" />
 						</span>
 					</Button>
 				</div>

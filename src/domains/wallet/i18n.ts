@@ -138,6 +138,11 @@ export const translations = {
 				"This password does not replace your mnemonic passphrase. You must ensure that your passphrase is properly recorded and backed up so that you do not lose access to your funds. You cannot use your encryption password to restore your profile, so it is vital that you have your mnemonic passphrase readily available should you run into any issues (such as losing access to your local profile or clearing your browser's cache).",
 		},
 
+		HD_WALLET_SELECT_ADDRESS_STEP: {
+			LOADING_ADDRESSES: "Loading Addresses",
+			LOAD_MORE_ADDRESSES: "Load More Addresses",
+		},
+
 		IMPORT_DETAIL_STEP: {
 			ENCRYPTION: {
 				CHECKBOX: "I understand and accept responsibility.",
