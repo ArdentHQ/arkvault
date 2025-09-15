@@ -93,15 +93,18 @@ let wallet: Contracts.IReadWriteWallet;
 const votingMockImplementation = (profile: Contracts.IProfile) => [
 	{
 		amount: 10,
-		wallet: new ReadOnlyWallet({
-			address: validatorData[1].address,
-			explorerLink: "",
-			governanceIdentifier: "address",
-			isResignedValidator: false,
-			isValidator: true,
-			publicKey: validatorData[1].publicKey,
-			username: validatorData[1].username,
-		}, profile),
+		wallet: new ReadOnlyWallet(
+			{
+				address: validatorData[1].address,
+				explorerLink: "",
+				governanceIdentifier: "address",
+				isResignedValidator: false,
+				isValidator: true,
+				publicKey: validatorData[1].publicKey,
+				username: validatorData[1].username,
+			},
+			profile,
+		),
 	},
 ];
 
@@ -157,7 +160,9 @@ describe("SendVote Combined", () => {
 	});
 
 	it("should send a unvote & vote transaction", async () => {
-		const votesMock = vi.spyOn(wallet.voting(), "current").mockImplementation(() => votingMockImplementation(profile));
+		const votesMock = vi
+			.spyOn(wallet.voting(), "current")
+			.mockImplementation(() => votingMockImplementation(profile));
 		await wallet.synchroniser().votes();
 
 		const mnemonicMock = vi.spyOn(AddressService.prototype, "fromMnemonic").mockReturnValue({

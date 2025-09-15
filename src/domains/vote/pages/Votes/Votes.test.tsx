@@ -281,16 +281,19 @@ describe("Votes", () => {
 		vi.spyOn(currentWallet.voting(), "current").mockReturnValue([
 			{
 				amount: 0,
-				wallet: new ReadOnlyWallet({
-					address: "0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2",
-					explorerLink: "",
-					governanceIdentifier: "address",
-					isResignedValidator: true,
-					isValidator: true,
-					publicKey: currentWallet.publicKey(),
-					rank: 52,
-					username: "arkx",
-				}, profile),
+				wallet: new ReadOnlyWallet(
+					{
+						address: "0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2",
+						explorerLink: "",
+						governanceIdentifier: "address",
+						isResignedValidator: true,
+						isValidator: true,
+						publicKey: currentWallet.publicKey(),
+						rank: 52,
+						username: "arkx",
+					},
+					profile,
+				),
 			},
 		]);
 
