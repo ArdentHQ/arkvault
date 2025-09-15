@@ -4,7 +4,6 @@ import { VoteItemProperties } from "./VoteList.contracts";
 import { VoteItemMobile } from "./VoteItemMobile";
 import { Address } from "@/app/components/Address";
 import { Amount } from "@/app/components/Amount";
-import { Avatar } from "@/app/components/Avatar";
 import { useBreakpoint } from "@/app/hooks";
 
 export const VoteItem = ({ wallet, amount = 0, currency, isNegativeAmount }: VoteItemProperties) => {
@@ -16,9 +15,7 @@ export const VoteItem = ({ wallet, amount = 0, currency, isNegativeAmount }: Vot
 
 	return (
 		<div className="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0">
-			<Avatar size="sm" address={wallet.address()} />
-
-			<div className="ml-4 w-28 flex-1">
+			<div className="w-28 flex-1">
 				<Address address={wallet.address()} walletName={wallet.username()} />
 			</div>
 

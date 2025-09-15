@@ -12,8 +12,6 @@ import { Icon } from "@/app/components/Icon";
 import { Amount } from "@/app/components/Amount";
 import { NetworkOption } from "@/app/components/NavigationBar/components/SelectNetwork/SelectNetwork.blocks";
 import { Tooltip } from "@/app/components/Tooltip";
-import { Circle } from "@/app/components/Circle";
-import { Avatar } from "@/app/components/Avatar";
 import { SearchWallet } from "@/domains/wallet/components/SearchWallet";
 import { SelectedWallet } from "@/domains/wallet/components/SearchWallet/SearchWallet.contracts";
 
@@ -30,19 +28,6 @@ type SelectAddressDropdownProperties = {
 	showBalance?: boolean;
 	showOptions?: boolean;
 } & Omit<React.InputHTMLAttributes<any>, "onChange">;
-
-export const ProfileAvatar = ({ address }: any) => {
-	if (!address) {
-		return (
-			<Circle
-				className="border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700"
-				size="sm"
-				noShadow
-			/>
-		);
-	}
-	return <Avatar address={address} size="sm" noShadow />;
-};
 
 export const OptionLabel = ({
 	option,
