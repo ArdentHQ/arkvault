@@ -12,7 +12,7 @@ import { TruncateEnd } from "@/app/components/TruncateEnd";
 import { useWalletAlias, WalletAliasResult } from "@/app/hooks/use-wallet-alias";
 import { AddressProperties, useProfileAddresses } from "@/domains/profile/hooks/use-profile-addresses";
 import { SearchRecipient } from "@/domains/transaction/components/SearchRecipient";
-import { OptionLabel, ProfileAvatar } from "@/domains/profile/components/SelectAddressDropdown";
+import { OptionLabel } from "@/domains/profile/components/SelectAddressDropdown";
 
 type SelectRecipientProperties = {
 	network?: Networks.Network;
