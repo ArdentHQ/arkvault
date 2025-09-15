@@ -9,21 +9,7 @@ exports[`VoteList > should render in lg 1`] = `
       class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
     >
       <div
-        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
-        data-testid="Avatar"
-      >
-        <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
-        >
-          <img
-            alt="0xB8Be76b31E402a2D89294Aa107056484Bef94362"
-            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%233898F9%22%2F%3E%3C%2Fsvg%3E"
-            title="0xB8Be76b31E402a2D89294Aa107056484Bef94362"
-          />
-        </div>
-      </div>
-      <div
-        class="ml-4 w-28 flex-1"
+        class="w-28 flex-1"
       >
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -41,21 +27,7 @@ exports[`VoteList > should render in lg 1`] = `
       class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
     >
       <div
-        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
-        data-testid="Avatar"
-      >
-        <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
-        >
-          <img
-            alt="0x03BC306C369A55c0336EB003bB07F29E5c150F36"
-            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
-            title="0x03BC306C369A55c0336EB003bB07F29E5c150F36"
-          />
-        </div>
-      </div>
-      <div
-        class="ml-4 w-28 flex-1"
+        class="w-28 flex-1"
       >
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -73,21 +45,7 @@ exports[`VoteList > should render in lg 1`] = `
       class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
     >
       <div
-        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
-        data-testid="Avatar"
-      >
-        <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
-        >
-          <img
-            alt="0x56F925416Ef2725646442D5E0150088bd7202aCd"
-            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%232A64E6%22%2F%3E%3C%2Fsvg%3E"
-            title="0x56F925416Ef2725646442D5E0150088bd7202aCd"
-          />
-        </div>
-      </div>
-      <div
-        class="ml-4 w-28 flex-1"
+        class="w-28 flex-1"
       >
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -114,21 +72,7 @@ exports[`VoteList > should render in md 1`] = `
       class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
     >
       <div
-        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
-        data-testid="Avatar"
-      >
-        <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
-        >
-          <img
-            alt="0xB8Be76b31E402a2D89294Aa107056484Bef94362"
-            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%233898F9%22%2F%3E%3C%2Fsvg%3E"
-            title="0xB8Be76b31E402a2D89294Aa107056484Bef94362"
-          />
-        </div>
-      </div>
-      <div
-        class="ml-4 w-28 flex-1"
+        class="w-28 flex-1"
       >
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -146,21 +90,7 @@ exports[`VoteList > should render in md 1`] = `
       class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
     >
       <div
-        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
-        data-testid="Avatar"
-      >
-        <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
-        >
-          <img
-            alt="0x03BC306C369A55c0336EB003bB07F29E5c150F36"
-            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
-            title="0x03BC306C369A55c0336EB003bB07F29E5c150F36"
-          />
-        </div>
-      </div>
-      <div
-        class="ml-4 w-28 flex-1"
+        class="w-28 flex-1"
       >
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -178,21 +108,7 @@ exports[`VoteList > should render in md 1`] = `
       class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
     >
       <div
-        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
-        data-testid="Avatar"
-      >
-        <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
-        >
-          <img
-            alt="0x56F925416Ef2725646442D5E0150088bd7202aCd"
-            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%232A64E6%22%2F%3E%3C%2Fsvg%3E"
-            title="0x56F925416Ef2725646442D5E0150088bd7202aCd"
-          />
-        </div>
-      </div>
-      <div
-        class="ml-4 w-28 flex-1"
+        class="w-28 flex-1"
       >
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -232,20 +148,6 @@ exports[`VoteList > should render in sm 1`] = `
           </span>
         </div>
       </div>
-      <div
-        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-theme-background ring-0 shrink-0"
-        data-testid="Avatar"
-      >
-        <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
-        >
-          <img
-            alt="0xB8Be76b31E402a2D89294Aa107056484Bef94362"
-            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%233898F9%22%2F%3E%3C%2Fsvg%3E"
-            title="0xB8Be76b31E402a2D89294Aa107056484Bef94362"
-          />
-        </div>
-      </div>
     </div>
     <div
       class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center justify-end space-x-4 border-b border-dashed py-4 pt-0 pb-0 last:border-b-0 md:pt-4 md:pb-4"
@@ -262,20 +164,6 @@ exports[`VoteList > should render in sm 1`] = `
           >
             0x03BC306C369A55c0336EB003bB07F29E5c150F36
           </span>
-        </div>
-      </div>
-      <div
-        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-theme-background ring-0 shrink-0"
-        data-testid="Avatar"
-      >
-        <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
-        >
-          <img
-            alt="0x03BC306C369A55c0336EB003bB07F29E5c150F36"
-            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
-            title="0x03BC306C369A55c0336EB003bB07F29E5c150F36"
-          />
         </div>
       </div>
     </div>
@@ -296,20 +184,6 @@ exports[`VoteList > should render in sm 1`] = `
           </span>
         </div>
       </div>
-      <div
-        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-theme-background ring-0 shrink-0"
-        data-testid="Avatar"
-      >
-        <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
-        >
-          <img
-            alt="0x56F925416Ef2725646442D5E0150088bd7202aCd"
-            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%232A64E6%22%2F%3E%3C%2Fsvg%3E"
-            title="0x56F925416Ef2725646442D5E0150088bd7202aCd"
-          />
-        </div>
-      </div>
     </div>
   </div>
 </DocumentFragment>
@@ -324,21 +198,7 @@ exports[`VoteList > should render in xl 1`] = `
       class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
     >
       <div
-        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
-        data-testid="Avatar"
-      >
-        <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
-        >
-          <img
-            alt="0xB8Be76b31E402a2D89294Aa107056484Bef94362"
-            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%233898F9%22%2F%3E%3C%2Fsvg%3E"
-            title="0xB8Be76b31E402a2D89294Aa107056484Bef94362"
-          />
-        </div>
-      </div>
-      <div
-        class="ml-4 w-28 flex-1"
+        class="w-28 flex-1"
       >
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -356,21 +216,7 @@ exports[`VoteList > should render in xl 1`] = `
       class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
     >
       <div
-        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
-        data-testid="Avatar"
-      >
-        <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
-        >
-          <img
-            alt="0x03BC306C369A55c0336EB003bB07F29E5c150F36"
-            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
-            title="0x03BC306C369A55c0336EB003bB07F29E5c150F36"
-          />
-        </div>
-      </div>
-      <div
-        class="ml-4 w-28 flex-1"
+        class="w-28 flex-1"
       >
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -388,21 +234,7 @@ exports[`VoteList > should render in xl 1`] = `
       class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
     >
       <div
-        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
-        data-testid="Avatar"
-      >
-        <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
-        >
-          <img
-            alt="0x56F925416Ef2725646442D5E0150088bd7202aCd"
-            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%232A64E6%22%2F%3E%3C%2Fsvg%3E"
-            title="0x56F925416Ef2725646442D5E0150088bd7202aCd"
-          />
-        </div>
-      </div>
-      <div
-        class="ml-4 w-28 flex-1"
+        class="w-28 flex-1"
       >
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -442,20 +274,6 @@ exports[`VoteList > should render in xs 1`] = `
           </span>
         </div>
       </div>
-      <div
-        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-theme-background ring-0 shrink-0"
-        data-testid="Avatar"
-      >
-        <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
-        >
-          <img
-            alt="0xB8Be76b31E402a2D89294Aa107056484Bef94362"
-            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%233898F9%22%2F%3E%3C%2Fsvg%3E"
-            title="0xB8Be76b31E402a2D89294Aa107056484Bef94362"
-          />
-        </div>
-      </div>
     </div>
     <div
       class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center justify-end space-x-4 border-b border-dashed py-4 pt-0 pb-0 last:border-b-0 md:pt-4 md:pb-4"
@@ -472,20 +290,6 @@ exports[`VoteList > should render in xs 1`] = `
           >
             0x03BC306C369A55c0336EB003bB07F29E5c150F36
           </span>
-        </div>
-      </div>
-      <div
-        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-theme-background ring-0 shrink-0"
-        data-testid="Avatar"
-      >
-        <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
-        >
-          <img
-            alt="0x03BC306C369A55c0336EB003bB07F29E5c150F36"
-            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
-            title="0x03BC306C369A55c0336EB003bB07F29E5c150F36"
-          />
         </div>
       </div>
     </div>
@@ -506,20 +310,6 @@ exports[`VoteList > should render in xs 1`] = `
           </span>
         </div>
       </div>
-      <div
-        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-theme-background ring-0 shrink-0"
-        data-testid="Avatar"
-      >
-        <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
-        >
-          <img
-            alt="0x56F925416Ef2725646442D5E0150088bd7202aCd"
-            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%232A64E6%22%2F%3E%3C%2Fsvg%3E"
-            title="0x56F925416Ef2725646442D5E0150088bd7202aCd"
-          />
-        </div>
-      </div>
     </div>
   </div>
 </DocumentFragment>
@@ -534,21 +324,7 @@ exports[`VoteList > should render with amount in lg 1`] = `
       class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
     >
       <div
-        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
-        data-testid="Avatar"
-      >
-        <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
-        >
-          <img
-            alt="0xB8Be76b31E402a2D89294Aa107056484Bef94362"
-            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%233898F9%22%2F%3E%3C%2Fsvg%3E"
-            title="0xB8Be76b31E402a2D89294Aa107056484Bef94362"
-          />
-        </div>
-      </div>
-      <div
-        class="ml-4 w-28 flex-1"
+        class="w-28 flex-1"
       >
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -576,21 +352,7 @@ exports[`VoteList > should render with amount in lg 1`] = `
       class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
     >
       <div
-        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
-        data-testid="Avatar"
-      >
-        <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
-        >
-          <img
-            alt="0x03BC306C369A55c0336EB003bB07F29E5c150F36"
-            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
-            title="0x03BC306C369A55c0336EB003bB07F29E5c150F36"
-          />
-        </div>
-      </div>
-      <div
-        class="ml-4 w-28 flex-1"
+        class="w-28 flex-1"
       >
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -618,21 +380,7 @@ exports[`VoteList > should render with amount in lg 1`] = `
       class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
     >
       <div
-        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
-        data-testid="Avatar"
-      >
-        <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
-        >
-          <img
-            alt="0x56F925416Ef2725646442D5E0150088bd7202aCd"
-            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%232A64E6%22%2F%3E%3C%2Fsvg%3E"
-            title="0x56F925416Ef2725646442D5E0150088bd7202aCd"
-          />
-        </div>
-      </div>
-      <div
-        class="ml-4 w-28 flex-1"
+        class="w-28 flex-1"
       >
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -669,21 +417,7 @@ exports[`VoteList > should render with amount in md 1`] = `
       class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
     >
       <div
-        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
-        data-testid="Avatar"
-      >
-        <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
-        >
-          <img
-            alt="0xB8Be76b31E402a2D89294Aa107056484Bef94362"
-            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%233898F9%22%2F%3E%3C%2Fsvg%3E"
-            title="0xB8Be76b31E402a2D89294Aa107056484Bef94362"
-          />
-        </div>
-      </div>
-      <div
-        class="ml-4 w-28 flex-1"
+        class="w-28 flex-1"
       >
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -711,21 +445,7 @@ exports[`VoteList > should render with amount in md 1`] = `
       class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
     >
       <div
-        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
-        data-testid="Avatar"
-      >
-        <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
-        >
-          <img
-            alt="0x03BC306C369A55c0336EB003bB07F29E5c150F36"
-            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
-            title="0x03BC306C369A55c0336EB003bB07F29E5c150F36"
-          />
-        </div>
-      </div>
-      <div
-        class="ml-4 w-28 flex-1"
+        class="w-28 flex-1"
       >
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -753,21 +473,7 @@ exports[`VoteList > should render with amount in md 1`] = `
       class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
     >
       <div
-        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
-        data-testid="Avatar"
-      >
-        <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
-        >
-          <img
-            alt="0x56F925416Ef2725646442D5E0150088bd7202aCd"
-            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%232A64E6%22%2F%3E%3C%2Fsvg%3E"
-            title="0x56F925416Ef2725646442D5E0150088bd7202aCd"
-          />
-        </div>
-      </div>
-      <div
-        class="ml-4 w-28 flex-1"
+        class="w-28 flex-1"
       >
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -827,20 +533,6 @@ exports[`VoteList > should render with amount in sm 1`] = `
           </span>
         </div>
       </div>
-      <div
-        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-theme-background ring-0 shrink-0"
-        data-testid="Avatar"
-      >
-        <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
-        >
-          <img
-            alt="0xB8Be76b31E402a2D89294Aa107056484Bef94362"
-            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%233898F9%22%2F%3E%3C%2Fsvg%3E"
-            title="0xB8Be76b31E402a2D89294Aa107056484Bef94362"
-          />
-        </div>
-      </div>
     </div>
     <div
       class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center justify-end space-x-4 border-b border-dashed py-4 pt-0 pb-0 last:border-b-0 md:pt-4 md:pb-4"
@@ -867,20 +559,6 @@ exports[`VoteList > should render with amount in sm 1`] = `
           >
             0x03BC306C369A55c0336EB003bB07F29E5c150F36
           </span>
-        </div>
-      </div>
-      <div
-        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-theme-background ring-0 shrink-0"
-        data-testid="Avatar"
-      >
-        <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
-        >
-          <img
-            alt="0x03BC306C369A55c0336EB003bB07F29E5c150F36"
-            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
-            title="0x03BC306C369A55c0336EB003bB07F29E5c150F36"
-          />
         </div>
       </div>
     </div>
@@ -911,20 +589,6 @@ exports[`VoteList > should render with amount in sm 1`] = `
           </span>
         </div>
       </div>
-      <div
-        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-theme-background ring-0 shrink-0"
-        data-testid="Avatar"
-      >
-        <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
-        >
-          <img
-            alt="0x56F925416Ef2725646442D5E0150088bd7202aCd"
-            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%232A64E6%22%2F%3E%3C%2Fsvg%3E"
-            title="0x56F925416Ef2725646442D5E0150088bd7202aCd"
-          />
-        </div>
-      </div>
     </div>
   </div>
 </DocumentFragment>
@@ -939,21 +603,7 @@ exports[`VoteList > should render with amount in xl 1`] = `
       class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
     >
       <div
-        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
-        data-testid="Avatar"
-      >
-        <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
-        >
-          <img
-            alt="0xB8Be76b31E402a2D89294Aa107056484Bef94362"
-            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%233898F9%22%2F%3E%3C%2Fsvg%3E"
-            title="0xB8Be76b31E402a2D89294Aa107056484Bef94362"
-          />
-        </div>
-      </div>
-      <div
-        class="ml-4 w-28 flex-1"
+        class="w-28 flex-1"
       >
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -981,21 +631,7 @@ exports[`VoteList > should render with amount in xl 1`] = `
       class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
     >
       <div
-        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
-        data-testid="Avatar"
-      >
-        <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
-        >
-          <img
-            alt="0x03BC306C369A55c0336EB003bB07F29E5c150F36"
-            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
-            title="0x03BC306C369A55c0336EB003bB07F29E5c150F36"
-          />
-        </div>
-      </div>
-      <div
-        class="ml-4 w-28 flex-1"
+        class="w-28 flex-1"
       >
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -1023,21 +659,7 @@ exports[`VoteList > should render with amount in xl 1`] = `
       class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
     >
       <div
-        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
-        data-testid="Avatar"
-      >
-        <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
-        >
-          <img
-            alt="0x56F925416Ef2725646442D5E0150088bd7202aCd"
-            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%232A64E6%22%2F%3E%3C%2Fsvg%3E"
-            title="0x56F925416Ef2725646442D5E0150088bd7202aCd"
-          />
-        </div>
-      </div>
-      <div
-        class="ml-4 w-28 flex-1"
+        class="w-28 flex-1"
       >
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -1097,20 +719,6 @@ exports[`VoteList > should render with amount in xs 1`] = `
           </span>
         </div>
       </div>
-      <div
-        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-theme-background ring-0 shrink-0"
-        data-testid="Avatar"
-      >
-        <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
-        >
-          <img
-            alt="0xB8Be76b31E402a2D89294Aa107056484Bef94362"
-            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%233898F9%22%2F%3E%3C%2Fsvg%3E"
-            title="0xB8Be76b31E402a2D89294Aa107056484Bef94362"
-          />
-        </div>
-      </div>
     </div>
     <div
       class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center justify-end space-x-4 border-b border-dashed py-4 pt-0 pb-0 last:border-b-0 md:pt-4 md:pb-4"
@@ -1139,20 +747,6 @@ exports[`VoteList > should render with amount in xs 1`] = `
           </span>
         </div>
       </div>
-      <div
-        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-theme-background ring-0 shrink-0"
-        data-testid="Avatar"
-      >
-        <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
-        >
-          <img
-            alt="0x03BC306C369A55c0336EB003bB07F29E5c150F36"
-            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
-            title="0x03BC306C369A55c0336EB003bB07F29E5c150F36"
-          />
-        </div>
-      </div>
     </div>
     <div
       class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center justify-end space-x-4 border-b border-dashed py-4 pt-0 pb-0 last:border-b-0 md:pt-4 md:pb-4"
@@ -1179,20 +773,6 @@ exports[`VoteList > should render with amount in xs 1`] = `
           >
             0x56F925416Ef2725646442D5E0150088bd7202aCd
           </span>
-        </div>
-      </div>
-      <div
-        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-theme-background ring-0 shrink-0"
-        data-testid="Avatar"
-      >
-        <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
-        >
-          <img
-            alt="0x56F925416Ef2725646442D5E0150088bd7202aCd"
-            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%232A64E6%22%2F%3E%3C%2Fsvg%3E"
-            title="0x56F925416Ef2725646442D5E0150088bd7202aCd"
-          />
         </div>
       </div>
     </div>
