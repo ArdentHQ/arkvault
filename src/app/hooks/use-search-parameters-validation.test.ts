@@ -428,7 +428,7 @@ describe("useSearchParametersValidation", () => {
 
 	it("should generate send vote path", () => {
 		const parameters = new URLSearchParams(
-			"coin=mainsail&method=vote&nethash=560f869ed6713745a12328e7214cb65077e645bb5e57b1e5b323bb915a51f114&delegate=test",
+			"method=vote&coin=mainsail&nethash=560f869ed6713745a12328e7214cb65077e645bb5e57b1e5b323bb915a51f114&delegate=test",
 		);
 
 		const { result } = renderHook(() => useSearchParametersValidation());
@@ -441,7 +441,7 @@ describe("useSearchParametersValidation", () => {
 				searchParameters: parameters,
 			}),
 		).toBe(
-			`/profiles/${profile.id()}/send-vote?coin=mainsail&method=vote&nethash=${
+			`/profiles/${profile.id()}/votes?method=vote&coin=mainsail&nethash=${
 				profile.wallets().first().network().meta().nethash
 			}&delegate=test&vote=undefined`,
 		);

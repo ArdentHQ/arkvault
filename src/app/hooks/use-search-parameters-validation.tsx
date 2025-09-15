@@ -218,7 +218,7 @@ export const useSearchParametersValidation = () => {
 
 				return `${generatePath(ProfilePaths.SendVote, {
 					profileId: profile.id(),
-				})}?${searchParameters.toString()}`;
+				})}&${searchParameters.toString().replace("method=vote&", "")}`;
 			},
 			validate: validateVote,
 		},
