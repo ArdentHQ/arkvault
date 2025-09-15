@@ -290,7 +290,7 @@ describe("Votes", () => {
 					publicKey: currentWallet.publicKey(),
 					rank: 52,
 					username: "arkx",
-				}),
+				}, profile),
 			},
 		]);
 

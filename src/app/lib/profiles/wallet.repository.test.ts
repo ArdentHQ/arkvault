@@ -1,5 +1,5 @@
 import { describe, expect, it, beforeEach, afterEach, vi } from "vitest";
-import { IProfile, IReadWriteWallet, IWalletRepository, WalletData } from "./contracts";
+import { IProfile, IReadWriteWallet, IWalletRepository, WalletData, WalletSetting } from "./contracts";
 import { env, MAINSAIL_MNEMONICS } from "@/utils/testing-library";
 import * as queue from "./helpers/queue";
 import { DataRepository } from "./data.repository";
@@ -86,12 +86,12 @@ describe("WalletRepository", () => {
 
 	it("should update a wallet's alias", () => {
 		subject.update(wallet.id(), { alias: "New Alias" });
-		expect(wallet.alias()).toBe("New Alias");
+		expect(wallet.settings().get(WalletSetting.Alias)).toBe("New Alias");
 	});
 
 	it("should update a wallet's alias with empty string", () => {
 		subject.update(wallet.id(), { alias: "" });
-		expect(wallet.alias()).toBe(undefined);
+		expect(wallet.settings().get(WalletSetting.Alias)).toBe(undefined);
 	});
 
 	it("should throw when updating a wallet with an existing alias", async () => {
