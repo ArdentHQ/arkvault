@@ -44,7 +44,7 @@ describe("SelectAddress", () => {
 	});
 
 	it("should render without a wallet avatar", () => {
-		render(<SelectAddress showWalletAvatar={false} wallets={wallets} profile={profile} />);
+		render(<SelectAddress wallets={wallets} profile={profile} />);
 
 		expect(screen.queryByTestId("Avatar")).not.toBeInTheDocument();
 	});
