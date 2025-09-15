@@ -20,7 +20,7 @@ export const useConfirmedTransaction = ({
 		const checkConfirmed = (): void => {
 			const id = setInterval(async () => {
 				try {
-					const transaction = await wallet.client().transaction(transactionId, { fullReceipt: true });
+					const transaction = await wallet.client().transaction(transactionId);
 					setIsConfirmed(true);
 					setTransaction(new ExtendedConfirmedTransactionData(wallet, transaction));
 					clearInterval(id);

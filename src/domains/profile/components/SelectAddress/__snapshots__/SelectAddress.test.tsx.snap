@@ -9,7 +9,7 @@ exports[`SelectAddress > should render disabled 1`] = `
     type="button"
   >
     <span
-      class="absolute inset-y-0 flex items-center border border-transparent right-13 left-14"
+      class="absolute inset-y-0 left-4 flex items-center border border-transparent right-13"
     >
       <div
         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -18,9 +18,6 @@ exports[`SelectAddress > should render disabled 1`] = `
     <div
       class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 dim:border-theme-dim-700 dim:bg-theme-dim-950 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
     >
-      <div
-        class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-8 w-8 px-2 py-1 text-sm ring-0 border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 dim:border-theme-dim-700 dim:bg-theme-dim-700 ring-theme-background duration-100"
-      />
       <div
         class="relative flex h-full flex-1 invisible"
       >
@@ -92,7 +89,7 @@ exports[`SelectAddress > should render empty 1`] = `
     type="button"
   >
     <span
-      class="absolute inset-y-0 flex items-center border border-transparent right-13 left-14"
+      class="absolute inset-y-0 left-4 flex items-center border border-transparent right-13"
     >
       <div
         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -101,9 +98,6 @@ exports[`SelectAddress > should render empty 1`] = `
     <div
       class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
     >
-      <div
-        class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-8 w-8 px-2 py-1 text-sm ring-0 border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 dim:border-theme-dim-700 dim:bg-theme-dim-700 ring-theme-background duration-100"
-      />
       <div
         class="relative flex h-full flex-1 invisible"
       >
@@ -174,7 +168,7 @@ exports[`SelectAddress > should render invalid 1`] = `
     type="button"
   >
     <span
-      class="absolute inset-y-0 flex items-center border border-transparent right-13 left-14 right-24"
+      class="absolute inset-y-0 left-4 flex items-center border border-transparent right-13 right-24"
     >
       <div
         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -183,9 +177,6 @@ exports[`SelectAddress > should render invalid 1`] = `
     <div
       class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
     >
-      <div
-        class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-8 w-8 px-2 py-1 text-sm ring-0 border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 dim:border-theme-dim-700 dim:bg-theme-dim-700 ring-theme-background duration-100"
-      />
       <div
         class="relative flex h-full flex-1 invisible"
       >
@@ -305,7 +296,7 @@ exports[`SelectAddress > should render with preselected address 1`] = `
     type="button"
   >
     <span
-      class="absolute inset-y-0 flex items-center border border-transparent right-13 left-14"
+      class="absolute inset-y-0 left-4 flex items-center border border-transparent right-13"
     >
       <div
         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -321,20 +312,6 @@ exports[`SelectAddress > should render with preselected address 1`] = `
     <div
       class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
     >
-      <div
-        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm shrink-0"
-        data-testid="Avatar"
-      >
-        <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
-        >
-          <img
-            alt="0x659A76be283644AEc2003aa8ba26485047fd1BFB"
-            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%234381C0%22%2F%3E%3C%2Fsvg%3E"
-            title="0x659A76be283644AEc2003aa8ba26485047fd1BFB"
-          />
-        </div>
-      </div>
       <div
         class="relative flex h-full flex-1 invisible"
       >
@@ -405,7 +382,7 @@ exports[`SelectAddress > should render without user icon 1`] = `
     type="button"
   >
     <span
-      class="absolute inset-y-0 flex items-center border border-transparent right-4 left-14"
+      class="absolute inset-y-0 left-4 flex items-center border border-transparent right-4"
     >
       <div
         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -414,9 +391,6 @@ exports[`SelectAddress > should render without user icon 1`] = `
     <div
       class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
     >
-      <div
-        class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-8 w-8 px-2 py-1 text-sm ring-0 border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 dim:border-theme-dim-700 dim:bg-theme-dim-700 ring-theme-background duration-100"
-      />
       <div
         class="relative flex h-full flex-1 invisible"
       >

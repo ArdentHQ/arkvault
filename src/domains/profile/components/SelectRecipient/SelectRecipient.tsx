@@ -12,7 +12,7 @@ import { TruncateEnd } from "@/app/components/TruncateEnd";
 import { useWalletAlias, WalletAliasResult } from "@/app/hooks/use-wallet-alias";
 import { AddressProperties, useProfileAddresses } from "@/domains/profile/hooks/use-profile-addresses";
 import { SearchRecipient } from "@/domains/transaction/components/SearchRecipient";
-import { OptionLabel, ProfileAvatar } from "@/domains/profile/components/SelectAddressDropdown";
+import { OptionLabel } from "@/domains/profile/components/SelectAddressDropdown";
 
 type SelectRecipientProperties = {
 	network?: Networks.Network;
@@ -21,7 +21,6 @@ type SelectRecipientProperties = {
 	disabled?: boolean;
 	isInvalid?: boolean;
 	showOptions?: boolean;
-	showWalletAvatar?: boolean;
 	contactSearchTitle?: string;
 	contactSearchDescription?: string;
 	placeholder?: string;
@@ -36,7 +35,6 @@ export const SelectRecipient = ({
 	disabled,
 	isInvalid,
 	showOptions = true,
-	showWalletAvatar = true,
 	network,
 	placeholder,
 	exceptMultiSignature,
@@ -167,25 +165,15 @@ export const SelectRecipient = ({
 									),
 								}
 							: undefined,
-						start:
-							selectedAddressAlias?.alias || showWalletAvatar
-								? {
-										content: (
-											<div className="flex items-center">
-												{showWalletAvatar && <ProfileAvatar address={selectedAddress} />}
-												{selectedAddressAlias?.alias && (
-													<TruncateEnd
-														className={cn({
-															"ml-2": showWalletAvatar,
-														})}
-														text={selectedAddressAlias.alias}
-														showTooltip
-													/>
-												)}
-											</div>
-										),
-									}
-								: undefined,
+						start: selectedAddressAlias?.alias
+							? {
+									content: (
+										<div className="flex items-center">
+											<TruncateEnd text={selectedAddressAlias.alias} showTooltip />
+										</div>
+									),
+								}
+							: undefined,
 					}}
 					renderLabel={(option) => <OptionLabel option={option} network={network} profile={profile} />}
 				/>

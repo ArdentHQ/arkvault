@@ -213,7 +213,6 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({
 							<FormLabel label={t("TRANSACTION.SENDER")} />
 							<div data-testid="sender-address">
 								<SelectAddress
-									showWalletAvatar={false}
 									wallet={
 										senderWallet
 											? {
