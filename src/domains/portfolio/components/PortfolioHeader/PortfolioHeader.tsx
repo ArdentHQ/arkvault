@@ -16,7 +16,6 @@ import { WalletActions } from "@/domains/portfolio/components/WalletHeader/Walle
 import { Skeleton } from "@/app/components/Skeleton";
 import { ViewingAddressInfo } from "./PortfolioHeader.blocks";
 import { assertWallet } from "@/utils/assertions";
-import { useEnvironmentContext } from "@/app/contexts";
 import { WalletActionsModals } from "@/domains/wallet/components/WalletActionsModals/WalletActionsModals";
 import { AddressesSidePanel } from "@/domains/portfolio/components/AddressesSidePanel";
 import { useLocalStorage } from "usehooks-ts";
@@ -24,8 +23,6 @@ import { Tooltip } from "@/app/components/Tooltip";
 import cn from "classnames";
 import { Trans } from "react-i18next";
 import { ResetWhenUnmounted } from "@/app/components/SidePanel/ResetWhenUnmounted";
-import { AddressViewType, resetViewPreferences } from "@/domains/portfolio/hooks/use-address-panel";
-import { ProfileSetting } from "@/app/lib/profiles/profile.enum.contract";
 import { TruncateMiddle } from "@/app/components/TruncateMiddle";
 
 export const PortfolioHeader = ({
@@ -59,7 +56,7 @@ export const PortfolioHeader = ({
 
 	const allWallets = profile.wallets().values();
 
-	const selectedWallets = profile.wallets().selected() ?? [profile.wallets().first()];
+	const selectedWallets = profile.wallets().selected();
 	const wallet = selectedWallets.at(0);
 	assertWallet(wallet);
 
@@ -87,8 +84,6 @@ export const PortfolioHeader = ({
 	const { primaryOptions, secondaryOptions, additionalOptions, registrationOptions } =
 		useWalletOptions(selectedWallets);
 
-	const { persist } = useEnvironmentContext();
-
 	const [showHint, setShowHint] = useState<boolean>(false);
 	const [hintHasShown, persistHintShown] = useLocalStorage<boolean | undefined>("single-address-hint", undefined);
 
@@ -110,21 +105,6 @@ export const PortfolioHeader = ({
 			clearTimeout(id);
 		};
 	}, [hasFocus, hintHasShown, profile.walletSelectionMode(), profile.wallets().count()]);
-
-	const onDeleteAddress = async (address: string) => {
-		for (const wallet of profile.wallets().values()) {
-			if (address === wallet.address()) {
-				profile.wallets().forget(wallet.id());
-				profile.notifications().transactions().forgetByRecipient(wallet.address());
-			}
-		}
-
-		if (profile.wallets().values().length === 0) {
-			resetViewPreferences(profile);
-		}
-
-		await persist();
-	};
 
 	const handleViewAddress = () => {
 		if (allWallets.length > 1) {
@@ -440,32 +420,7 @@ export const PortfolioHeader = ({
 			</div>
 
 			<ResetWhenUnmounted>
-				<AddressesSidePanel
-					profile={profile}
-					wallets={allWallets}
-					defaultSelectedAddresses={profile
-						.wallets()
-						.selected()
-						.map((wallet) => wallet.address())}
-					defaultSelectedWallet={wallet}
-					onClose={async (addresses, newMode: AddressViewType) => {
-						for (const wallet of profile.wallets().values()) {
-							if (addresses.includes(wallet.address())) {
-								wallet.mutator().isSelected(true);
-								continue;
-							}
-							wallet.mutator().isSelected(false);
-						}
-
-						profile.settings().set(ProfileSetting.WalletSelectionMode, newMode);
-						await persist();
-					}}
-					open={showAddressesPanel}
-					onOpenChange={setShowAddressesPanel}
-					onDelete={(address) => {
-						void onDeleteAddress(address);
-					}}
-				/>
+				<AddressesSidePanel profile={profile} open={showAddressesPanel} onOpenChange={setShowAddressesPanel} />
 			</ResetWhenUnmounted>
 
 			<WalletActionsModals

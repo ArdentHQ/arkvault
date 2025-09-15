@@ -50,13 +50,34 @@ export class WalletRepository implements IWalletRepository {
 
 	/** {@inheritDoc IWalletRepository.selected} */
 	public selected(): IReadWriteWallet[] {
-		return this.values().filter((wallet: IReadWriteWallet) => wallet.isSelected());
+		const allSelected = this.values().filter((wallet: IReadWriteWallet) => wallet.isSelected());
+		const firstSelected = allSelected.at(0);
+
+		if (!firstSelected) {
+			return [];
+		}
+
+		if (this.#profile.walletSelectionMode() === "single") {
+			return [firstSelected];
+		}
+
+		return allSelected;
 	}
 
 	/** {@inheritDoc IWalletRepository.selectOne} */
 	public selectOne(selected: IReadWriteWallet): void {
+		this.selectOnly([selected]);
+	}
+
+	/** {@inheritDoc IWalletRepository.selectAll} */
+	public selectAll(): void {
+		this.selectOnly(this.values());
+	}
+
+	/** {@inheritDoc IWalletRepository.selectOnly} */
+	public selectOnly(wallets: IReadWriteWallet[]): void {
 		for (const wallet of this.values()) {
-			if (wallet.id() === selected.id()) {
+			if (wallets.map((selectedWallet) => selectedWallet.id()).includes(wallet.id())) {
 				wallet.mutator().isSelected(true);
 				continue;
 			}
