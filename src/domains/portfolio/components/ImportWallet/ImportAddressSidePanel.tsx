@@ -43,7 +43,7 @@ export const ImportAddressesSidePanel = ({
 	const { persist } = useEnvironmentContext();
 	const [activeTab, setActiveTab] = useState<ImportAddressStep>(ImportAddressStep.MethodStep);
 	const [ledgerActiveTab, setLedgerActiveTab] = useState<LedgerTabStep>(LedgerTabStep.ListenLedgerStep);
-	const [HDWalletActiveTab, setHDWalletActiveTab] = useState<HDWalletTabStep>(HDWalletTabStep.SelectWalletStep);
+	const [HDWalletActiveTab, setHDWalletActiveTab] = useState<HDWalletTabStep>(HDWalletTabStep.SelectAccountStep);
 	const [importedWallet, setImportedWallet] = useState<Contracts.IReadWriteWallet | undefined>(undefined);
 	const [walletGenerationInput, setWalletGenerationInput] = useState<WalletGenerationInput>();
 
@@ -94,7 +94,7 @@ export const ImportAddressesSidePanel = ({
 	useKeydown("Enter", () => {
 		const isButton = (document.activeElement as any)?.type === "button";
 
-		if (!isLedgerImport && !isButton && !isNextDisabled && activeTab <= ImportAddressStep.EncryptPasswordStep) {
+		if (!isLedgerImport && !isHDWalletImport && !isButton && !isNextDisabled && activeTab <= ImportAddressStep.EncryptPasswordStep) {
 			handleNext();
 		}
 	});
@@ -219,7 +219,7 @@ export const ImportAddressesSidePanel = ({
 	const handleReturnToSelection = React.useCallback(() => {
 		setActiveTab(ImportAddressStep.MethodStep);
 		setLedgerActiveTab(LedgerTabStep.ListenLedgerStep);
-		setHDWalletActiveTab(HDWalletTabStep.SelectWalletStep);
+		setHDWalletActiveTab(HDWalletTabStep.SelectAccountStep);
 	}, []);
 
 	const isNextDisabled = useMemo(() => {

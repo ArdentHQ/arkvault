@@ -1,12 +1,13 @@
 import { Contracts } from "@/app/lib/profiles";
 import { Networks } from "@/app/lib/mainsail";
+import { Services } from "@/app/lib/mainsail";
 
 export enum HDWalletTabStep {
-	SelectWalletStep = 1,
+	SelectAccountStep = 1,
 	EnterMnemonicStep,
 	EncryptPasswordStep,
 	SelectAddressStep,
-	ViewImportStep,
+	SummaryStep,
 }
 
 export interface HDWalletTabsProperties {
@@ -34,4 +35,5 @@ export interface AddressData {
 	path: string;
 	balance?: number;
 	isNew?: boolean;
+	levels: Services.IdentityLevels;
 }

@@ -3,12 +3,12 @@ import { useFormContext } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 
 import { TabPanel, Tabs } from "@/app/components/Tabs";
-import { LedgerData } from "@/app/contexts";
 import { useActiveProfile } from "@/app/hooks";
 import { useKeydown } from "@/app/hooks/use-keydown";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
-import { useWalletImport } from "@/domains/wallet/hooks";
+import { OptionsValue, useWalletImport } from "@/domains/wallet/hooks";
 import {
+	AddressData,
 	HDWalletTabsProperties,
 	HDWalletTabStep,
 } from "@/domains/portfolio/components/ImportWallet/HDWallet/HDWalletsTabs.contracts";
@@ -16,9 +16,12 @@ import { ImportDetailStep } from "@/domains/portfolio/components/ImportWallet/Im
 import { ImportActionToolbar } from "@/domains/portfolio/components/ImportWallet/ImportAddressSidePanel.blocks";
 import { SelectAddressStep } from "@/domains/portfolio/components/ImportWallet/HDWallet/SelectAddressStep";
 import { EncryptPasswordStep } from "@/domains/wallet/components/EncryptPasswordStep";
+import { LedgerImportStep } from "@/domains/portfolio/components/ImportWallet/Ledger/LedgerImportStep";
+import { WalletData, WalletImportMethod } from "@/app/lib/profiles/wallet.enum";
+import { useEnvironmentContext } from "@/app/contexts";
 
 export const HDWalletTabs = ({
-	activeIndex = HDWalletTabStep.SelectWalletStep,
+	activeIndex = HDWalletTabStep.SelectAccountStep,
 	onClickEditWalletName,
 	onStepChange,
 	onCancel,
@@ -29,20 +32,56 @@ export const HDWalletTabs = ({
 	const { activeNetwork } = useActiveNetwork({ profile: activeProfile });
 	const { importWallets } = useWalletImport({ profile: activeProfile });
 
-	const navigate = useNavigate();
+	const { persist } = useEnvironmentContext();
 
-	const { formState, handleSubmit, getValues, register } = useFormContext();
+	const navigate = useNavigate();
+	const [isImporting, setIsImporting] = useState(false);
+
+	const { formState, handleSubmit, getValues, register, unregister } = useFormContext();
 	const { isValid, isSubmitting, isDirty } = formState;
 
-	const isImporting = false;
-	const isEncrypting = false;
-	const { importOption, acceptResponsibility, useEncryption, encryptionPassword, confirmEncryptionPassword } =
-		getValues();
+	const {
+		mnemonic,
+		importOption,
+		acceptResponsibility,
+		useEncryption,
+		encryptionPassword,
+		confirmEncryptionPassword,
+		password,
+	} = getValues();
 
-	const [importedWallets, setImportedWallets] = useState<LedgerData[]>([]);
-	const [activeTab, setActiveTab] = useState<HDWalletTabStep>(HDWalletTabStep.SelectWalletStep);
+	console.log(getValues(["value", "mnemonic", "encryptionPassword", "password"]));
 
-	const handleWalletImporting = useCallback(async ({ wallets }: { wallets: LedgerData[] }) => {}, []);
+	const [importedWallets, setImportedWallets] = useState<AddressData[]>([]);
+	const [activeTab, setActiveTab] = useState<HDWalletTabStep>(HDWalletTabStep.SelectAccountStep);
+
+	const handleWalletImporting = useCallback(
+		async ({ selectedAddresses }: { selectedAddresses: AddressData[] }) => {
+			const addresses = selectedAddresses;
+
+			await Promise.all(
+				addresses.map(async ({ levels }, index) => {
+					const wallets = await importWallets({
+						disableAddressSelection: index !== 0, // set the very first address to be selected
+						levels,
+						type: OptionsValue.BIP44,
+						value: mnemonic as string,
+					});
+
+					const wallet = wallets[0];
+
+					if (password) {
+						wallet.data().set(WalletData.ImportMethod, WalletImportMethod.BIP44.MNEMONIC_WITH_ENCRYPTION);
+						await wallet.signingKey().set(mnemonic, password);
+					}
+				}),
+			);
+
+			await persist();
+			setImportedWallets(addresses);
+		},
+		[activeProfile, importWallets, mnemonic, password],
+	);
 
 	const isNextDisabled = useMemo(() => {
 		if (activeTab === HDWalletTabStep.EnterMnemonicStep && useEncryption) {
@@ -50,7 +89,7 @@ export const HDWalletTabs = ({
 		}
 
 		if (activeTab === HDWalletTabStep.EncryptPasswordStep) {
-			return isEncrypting || !isValid || !encryptionPassword || !confirmEncryptionPassword;
+			return !isValid || !encryptionPassword || !confirmEncryptionPassword;
 		}
 
 		return !isValid;
@@ -61,54 +100,65 @@ export const HDWalletTabs = ({
 		confirmEncryptionPassword,
 		encryptionPassword,
 		isDirty,
-		isEncrypting,
 		isImporting,
 		isValid,
 	]);
 
 	useKeydown("Enter", (event: KeyboardEvent) => {
 		const target = event.target as Element;
-		const isComponentChild = target.closest("#ledgerTabs") !== null || target.tagName === "BODY";
+		const isComponentChild = target.closest("#HDWalletTabs") !== null || target.tagName === "BODY";
 
-		// if (isComponentChild && !isNextDisabled && !isSubmitting) {
-		// 	if (activeTab < HDWalletTabStep.SelectWalletStep) {
-		// 		handleNext();
-		// 	} else {
-		// 		handleFinish();
-		// 	}
-		// }
+		if (isComponentChild && !isNextDisabled && !isSubmitting) {
+			if (activeTab < HDWalletTabStep.SummaryStep) {
+				handleNext();
+			} else {
+				navigate(`/profiles/${activeProfile.id()}/dashboard`);
+			}
+		}
 	});
 
-	const goToPreviousStep = useCallback(() => {
-		setActiveTab((prev) => {
-			const next = Math.max(HDWalletTabStep.SelectWalletStep, prev - 1);
-			onStepChange?.(next);
-			return next;
-		});
-	}, [onStepChange]);
-
-	const handleNext = useCallback(() => {
+	const handleNext = useCallback(async () => {
 		let next = activeTab + 1;
 
 		if (activeTab === HDWalletTabStep.EnterMnemonicStep && (!useEncryption || !importOption.canBeEncrypted)) {
 			next = activeTab + 2;
 		}
 
-		if ([HDWalletTabStep.SelectAddressStep, HDWalletTabStep.EncryptPasswordStep].includes(next)) {
-			register({ name: "mnemonic", type: "string", value: getValues("value") });
+		if ([HDWalletTabStep.EncryptPasswordStep, HDWalletTabStep.SelectAddressStep].includes(next)) {
+			const { value, encryptionPassword } = getValues();
+
+			if (value) {
+				register({ name: "mnemonic", type: "string", value });
+			}
+
+			if (encryptionPassword) {
+				register({ name: "password", type: "string", value: encryptionPassword });
+			}
+		}
+
+		if (activeTab === HDWalletTabStep.SelectAddressStep) {
+			setIsImporting(true);
+			await handleSubmit((data: any) => handleWalletImporting(data))();
+
+			setIsImporting(false);
 		}
 
 		setActiveTab(next);
 		onStepChange?.(next);
+
+		return () => {
+			unregister(['mnemonic', 'password']);
+		}
 	}, [activeTab, handleSubmit, importWallets, onStepChange]);
 
-	const handleFinish = useCallback(() => {
-		navigate(`/profiles/${activeProfile.id()}/dashboard`);
-	}, [activeProfile, navigate]);
-
 	const handleBack = useCallback(() => {
-		if (activeTab !== HDWalletTabStep.SelectWalletStep) {
-			const prev = activeTab - 1;
+		if (activeTab !== HDWalletTabStep.SelectAccountStep) {
+			let prev = activeTab - 1;
+
+			if (activeTab === HDWalletTabStep.SelectAddressStep && !useEncryption) {
+				prev--;
+			}
+
 			setActiveTab(prev);
 			onStepChange?.(prev);
 			return;
@@ -127,7 +177,7 @@ export const HDWalletTabs = ({
 				<Tabs id="HDWalletTabs" activeId={activeTab}>
 					<div data-testid="HDWalletTabs--child" className="h-full">
 						<div className="h-full">
-							<TabPanel tabId={HDWalletTabStep.SelectWalletStep}>
+							<TabPanel tabId={HDWalletTabStep.SelectAccountStep}>
 								// select or import new HD wallet
 							</TabPanel>
 
@@ -147,7 +197,14 @@ export const HDWalletTabs = ({
 								<SelectAddressStep network={activeNetwork} profile={activeProfile} />
 							</TabPanel>
 
-							<TabPanel tabId={HDWalletTabStep.ViewImportStep}>// import</TabPanel>
+							<TabPanel tabId={HDWalletTabStep.SummaryStep}>
+								<LedgerImportStep
+									network={activeNetwork}
+									wallets={importedWallets}
+									profile={activeProfile}
+									onClickEditWalletName={onClickEditWalletName}
+								/>
+							</TabPanel>
 						</div>
 					</div>
 				</Tabs>
@@ -157,13 +214,13 @@ export const HDWalletTabs = ({
 			<div className="bg-theme-background border-theme-secondary-300 dark:border-theme-dark-700 absolute right-0 bottom-0 left-0 flex w-full flex-col border-t px-6 py-4">
 				<div className="bg-theme-background border-theme-secondary-300 dark:border-theme-dark-700 absolute right-0 bottom-0 left-0 flex w-full flex-col border-t px-6 py-4">
 					<ImportActionToolbar
-						showButtons={true}
+						showButtons={activeTab < HDWalletTabStep.SummaryStep}
 						onBack={handleBack}
 						isContinueDisabled={isNextDisabled || isSubmitting}
 						isLoading={isSubmitting}
 						onContinue={handleNext}
 						isSubmitDisabled={isSubmitting}
-						showPortfoliobutton={activeTab === HDWalletTabStep.ViewImportStep}
+						showPortfoliobutton={activeTab === HDWalletTabStep.SummaryStep}
 						onSubmit={onSubmit}
 					/>
 				</div>

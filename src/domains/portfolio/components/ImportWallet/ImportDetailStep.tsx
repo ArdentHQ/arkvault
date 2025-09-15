@@ -169,6 +169,11 @@ const ImportInputField = ({
 	if (type.startsWith("bip")) {
 		const findAddress = async (mnemonic: string) => {
 			try {
+				// disable address checking for BIP44 import option
+				if (type === OptionsValue.BIP44) {
+					return "";
+				}
+
 				const wallet = await profile.walletFactory().fromMnemonicWithBIP39({ mnemonic });
 				const isValid = new AddressService().validate(wallet.address());
 

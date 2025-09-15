@@ -10,7 +10,6 @@ import { Amount } from "@/app/components/Amount";
 import { Checkbox } from "@/app/components/Checkbox";
 import { Skeleton } from "@/app/components/Skeleton";
 import { Table, TableCell, TableRow } from "@/app/components/Table";
-import { LedgerData } from "@/app/contexts/Ledger";
 import { Button } from "@/app/components/Button";
 import cn from "classnames";
 import {
@@ -41,7 +40,7 @@ export const AddressesTable: FC<AddressTableProperties> = ({
 
 	const isAllSelected = !isLoading && wallets.length > 0 && selectedWallets.length === wallets.length;
 
-	const columns = useMemo<Column<LedgerData>[]>(
+	const columns = useMemo<Column<AddressData>[]>(
 		() => [
 			{
 				Header: (
@@ -77,7 +76,7 @@ export const AddressesTable: FC<AddressTableProperties> = ({
 	const showSkeleton = isLoading;
 
 	const data = useMemo(() => {
-		const skeletonRows = Array.from<LedgerData>({ length: ADDRESSES_PER_BATCH }).fill({} as LedgerData);
+		const skeletonRows = Array.from<AddressData>({ length: ADDRESSES_PER_BATCH }).fill({} as AddressData);
 		return showSkeleton ? skeletonRows : wallets;
 	}, [wallets, showSkeleton]);
 
@@ -267,19 +266,21 @@ export const SelectAddressStep = ({
 		setIsLoading(true);
 
 		const generateWallet = async (index: number) => {
+			const levels = {
+				account: 0,
+				addressIndex: index,
+				change: 0,
+			};
+
 			const wallet = await profile.walletFactory().fromMnemonicWithBIP44({
 				coin: BIP44CoinType.ARK,
-				levels: {
-					account: 0,
-					addressIndex: index,
-					change: 0,
-				},
+				levels,
 				mnemonic,
 			});
 
 			await wallet.synchroniser().identity();
 
-			return wallet;
+			return { levels, wallet };
 		};
 
 		const promises = Array.from({ length: ADDRESSES_PER_BATCH }, (_, index) => generateWallet(index + startIndex));
@@ -287,9 +288,10 @@ export const SelectAddressStep = ({
 
 		setLastAddressIndex((prevAddressIndex) => prevAddressIndex + ADDRESSES_PER_BATCH);
 
-		let newAddresses: AddressData[] = results.map((wallet) => ({
+		let newAddresses: AddressData[] = results.map(({ wallet, levels }) => ({
 			address: wallet.address(),
 			balance: wallet.balance(),
+			levels,
 			path: wallet.data().get(WalletData.DerivationPath) as string,
 		}));
 
@@ -297,7 +299,7 @@ export const SelectAddressStep = ({
 			const allAddressesEmpty = newAddresses.every((address) => address.balance === 0);
 
 			if (allAddressesEmpty) {
-				newAddresses = addresses.slice(0, 1);
+				newAddresses = newAddresses.slice(0, 1);
 			}
 		}
 
@@ -308,15 +310,18 @@ export const SelectAddressStep = ({
 	};
 
 	useEffect(() => {
-		register("wallets", { required: true, validate: (value) => Array.isArray(value) && value.length > 0 });
+		register("selectedAddresses", {
+			required: true,
+			validate: (value) => Array.isArray(value) && value.length > 0,
+		});
 
 		return () => {
-			unregister("wallets");
+			unregister("selectedAddresses");
 		};
 	}, [register, unregister]);
 
 	useEffect(() => {
-		setValue("wallets", selectedAddresses, { shouldDirty: true, shouldValidate: true });
+		setValue("selectedAddresses", selectedAddresses, { shouldDirty: true, shouldValidate: true });
 	}, [selectedAddresses, setValue]);
 
 	useEffect(() => {
