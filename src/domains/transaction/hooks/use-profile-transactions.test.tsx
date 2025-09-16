@@ -7,7 +7,6 @@ import { env, getDefaultProfileId } from "@/utils/testing-library";
 import * as hooksMock from "@/app/hooks";
 import { expect, vi } from "vitest";
 import { RawTransactionData } from "@/app/lib/mainsail/signed-transaction.dto.contract";
-import { UnconfirmedTransactionData } from "./use-unconfirmed-transactions";
 import { IProfile } from "@/app/lib/profiles/profile.contract";
 import * as unconfirmedTransactionsMock from "./use-unconfirmed-transactions";
 import * as unconfirmedTransactionsServiceMock from "@/app/lib/mainsail/unconfirmed-transactions.service";
@@ -46,17 +45,48 @@ const createMockedTransactionData = (overrides: Partial<RawTransactionData> = {}
 	},
 });
 
-const mockUnconfirmedTransactionsHook = async (unconfirmedTransactions: UnconfirmedTransactionData[] = []) => {
+// Helper to create nested unconfirmed transactions structure
+const createNestedUnconfirmedTransactions = (transactions: Array<{
+	networkId: string;
+	walletAddress: string;
+	transaction: RawTransactionData;
+}>) => {
+	const nested: any = {};
+	
+	transactions.forEach(({ networkId, walletAddress, transaction }) => {
+		if (!nested[networkId]) {
+			nested[networkId] = {};
+		}
+		if (!nested[networkId][walletAddress]) {
+			nested[networkId][walletAddress] = [];
+		}
+		nested[networkId][walletAddress].push(transaction);
+	});
+	
+	return nested;
+};
+
+const mockUnconfirmedTransactionsHook = async (unconfirmedTransactions: Array<{
+	networkId: string;
+	walletAddress: string;
+	transaction: RawTransactionData;
+}> = []) => {
 	const removeUnconfirmedTransaction = vi.fn();
+	const addUnconfirmedTransactionFromApi = vi.fn();
+	const cleanupUnconfirmedForAddresses = vi.fn();
 	const unconfirmedHook = await import("@/domains/transaction/hooks/use-unconfirmed-transactions");
 
+	const nestedTransactions = createNestedUnconfirmedTransactions(unconfirmedTransactions);
+
 	const unconfirmedSpy = vi.spyOn(unconfirmedHook, "useUnconfirmedTransactions").mockReturnValue({
-		addUnconfirmedTransaction: vi.fn(),
+		addUnconfirmedTransactionFromSigned: vi.fn(),
+		addUnconfirmedTransactionFromApi,
 		removeUnconfirmedTransaction,
-		unconfirmedTransactions,
+		cleanupUnconfirmedForAddresses,
+		unconfirmedTransactions: nestedTransactions,
 	});
 
-	return { removeUnconfirmedTransaction, unconfirmedSpy };
+	return { removeUnconfirmedTransaction, addUnconfirmedTransactionFromApi, cleanupUnconfirmedForAddresses, unconfirmedSpy };
 };
 
 describe("useProfileTransactions", () => {
@@ -218,7 +248,6 @@ describe("useProfileTransactions", () => {
 		await waitFor(() => expect(result.current.transactions).toHaveLength(10), { timeout: 1000 });
 
 		allMock.mockRestore();
-
 		sentMock.mockRestore();
 	});
 
@@ -271,8 +300,6 @@ describe("useProfileTransactions", () => {
 
 	it.skip("should run updates periodically", async () => {
 		// This test is skipped because it consistently times out in CI environments.
-		// The issue seems to be related to the interaction between `setInterval` in the hook
-		// and `vi.useFakeTimers()` in the test, which prevents the test from completing.
 		vi.useFakeTimers();
 		const allMock = vi.spyOn(profile.transactionAggregate(), "all").mockResolvedValue({
 			hasMorePages: () => false,
@@ -352,7 +379,6 @@ describe("useProfileTransactions", () => {
 		await waitFor(() => expect(result.current.transactions).toHaveLength(1));
 
 		useSynchronizerSpy.mockRestore();
-
 		allMock.mockRestore();
 	});
 
@@ -381,7 +407,6 @@ describe("useProfileTransactions", () => {
 		await waitFor(() => expect(result.current.transactions).toHaveLength(0));
 
 		useSynchronizerSpy.mockRestore();
-
 		allMock.mockRestore();
 	});
 
@@ -442,14 +467,12 @@ describe("useProfileTransactions", () => {
 			data: "",
 			from: walletAddress,
 			hash: "PENDING_TRANSFER",
-			networkId: firstWallet.networkId(),
 			to: "ADDRESS_TO",
 		});
 
 		const voteTransaction = createMockedTransactionData({
 			from: "ADDRESS_FROM",
 			hash: "PENDING_VOTE",
-			networkId: firstWallet.networkId(),
 			to: walletAddress,
 		});
 
@@ -490,7 +513,6 @@ describe("useProfileTransactions", () => {
 			from: walletAddress,
 			hash: "PENDING_FROM_ME",
 			to: "ADDRESS_TO",
-			walletAddress,
 		});
 
 		const receivedTransaction = createMockedTransactionData({
@@ -499,14 +521,17 @@ describe("useProfileTransactions", () => {
 			to: walletAddress,
 		});
 
-		const unconfirmedTransaction = {
-			networkId: firstWallet.networkId(),
-			walletAddress,
-		};
-
 		const { unconfirmedSpy } = await mockUnconfirmedTransactionsHook([
-			{ ...unconfirmedTransaction, transaction: sentTransaction },
-			{ ...unconfirmedTransaction, transaction: receivedTransaction },
+			{
+				networkId: firstWallet.networkId(),
+				transaction: sentTransaction,
+				walletAddress,
+			},
+			{
+				networkId: firstWallet.networkId(),
+				transaction: receivedTransaction,
+				walletAddress,
+			},
 		]);
 
 		const { result: sentTransactions } = renderHook(
@@ -610,14 +635,17 @@ describe("useProfileTransactions", () => {
 			value: 50,
 		});
 
-		const unconfirmedTransaction = {
-			networkId: firstWallet.networkId(),
-			walletAddress,
-		};
-
 		const { unconfirmedSpy } = await mockUnconfirmedTransactionsHook([
-			{ ...unconfirmedTransaction, transaction: transactionData1 },
-			{ ...unconfirmedTransaction, transaction: transactionData2 },
+			{
+				networkId: firstWallet.networkId(),
+				transaction: transactionData1,
+				walletAddress,
+			},
+			{
+				networkId: firstWallet.networkId(),
+				transaction: transactionData2,
+				walletAddress,
+			},
 		]);
 
 		const { result } = renderHook(() => useProfileTransactions({ profile, wallets }), { wrapper });
@@ -656,14 +684,17 @@ describe("useProfileTransactions", () => {
 			to: firstWallet.address(),
 		});
 
-		const unconfirmedTransaction = {
-			networkId: firstWallet.networkId(),
-			walletAddress: firstWallet.address(),
-		};
-
 		const { unconfirmedSpy } = await mockUnconfirmedTransactionsHook([
-			{ ...unconfirmedTransaction, transaction: older },
-			{ ...unconfirmedTransaction, transaction: newer },
+			{
+				networkId: firstWallet.networkId(),
+				transaction: older,
+				walletAddress: firstWallet.address(),
+			},
+			{
+				networkId: firstWallet.networkId(),
+				transaction: newer,
+				walletAddress: firstWallet.address(),
+			},
 		]);
 
 		const confirmedTransactionsMock = vi.spyOn(profile.transactionAggregate(), "all").mockResolvedValue({
@@ -713,14 +744,17 @@ describe("useProfileTransactions", () => {
 			to: firstWallet.address(),
 		});
 
-		const unconfirmedTransaction = {
-			networkId: firstWallet.networkId(),
-			walletAddress: firstWallet.address(),
-		};
-
 		const { unconfirmedSpy } = await mockUnconfirmedTransactionsHook([
-			{ ...unconfirmedTransaction, transaction: transactionData1 },
-			{ ...unconfirmedTransaction, transaction: transactionData2 },
+			{
+				networkId: firstWallet.networkId(),
+				transaction: transactionData1,
+				walletAddress: firstWallet.address(),
+			},
+			{
+				networkId: firstWallet.networkId(),
+				transaction: transactionData2,
+				walletAddress: firstWallet.address(),
+			},
 		]);
 
 		const confirmedTransactionsMock = vi.spyOn(profile.transactionAggregate(), "all").mockResolvedValue({
@@ -819,13 +853,6 @@ describe("useProfileTransactions", () => {
 		const wallet = profile.wallets().first();
 		const { unconfirmedSpy } = await mockUnconfirmedTransactionsHook([]);
 
-		unconfirmedSpy.mockReturnValue({
-			addUnconfirmedTransaction: vi.fn(),
-			addUnconfirmedTransactionFromApi: vi.fn(),
-			removeUnconfirmedTransaction: vi.fn(),
-			unconfirmedTransactions: [],
-		});
-
 		const { result, rerender } = renderHook(({ wallets }) => useProfileTransactions({ profile, wallets }), {
 			initialProps: { wallets: [wallet] },
 			wrapper,
@@ -859,13 +886,6 @@ describe("useProfileTransactions", () => {
 
 		const { unconfirmedSpy } = await mockUnconfirmedTransactionsHook([]);
 
-		unconfirmedSpy.mockReturnValue({
-			addUnconfirmedTransaction: vi.fn(),
-			addUnconfirmedTransactionFromApi: vi.fn(),
-			removeUnconfirmedTransaction: vi.fn(),
-			unconfirmedTransactions: [],
-		});
-
 		const { result } = renderHook(() => useProfileTransactions({ profile, wallets: [mockWallet as any] }), {
 			wrapper,
 		});
@@ -894,14 +914,14 @@ describe("useProfileTransactions", () => {
 		const networkId = wallets[0].networkId();
 
 		const addUnconfirmedTransactionFromApi = vi.fn();
-		const reconcileUnconfirmedForAddresses = vi.fn();
+		const cleanupUnconfirmedForAddresses = vi.fn();
 
 		vi.spyOn(unconfirmedTransactionsMock, "useUnconfirmedTransactions").mockReturnValue({
 			addUnconfirmedTransactionFromApi,
 			addUnconfirmedTransactionFromSigned: vi.fn(),
-			reconcileUnconfirmedForAddresses,
+			cleanupUnconfirmedForAddresses,
 			removeUnconfirmedTransaction: vi.fn(),
-			unconfirmedTransactions: [],
+			unconfirmedTransactions: {},
 		} as any);
 
 		const listSpy = vi
@@ -909,28 +929,32 @@ describe("useProfileTransactions", () => {
 			.mockResolvedValue({
 				results: [
 					{
-						from: walletAddress.toUpperCase(),
+						from: () => walletAddress.toUpperCase(),
 						gasLimit: "21000",
 						hash: "UNCONF_FROM",
-						to: "ADDRESS_TO",
+						raw: () => ({ hash: "UNCONF_FROM", gasLimit: "21000" }),
+						to: () => "ADDRESS_TO",
 					},
 					{
-						from: "ADDRESS_FROM",
+						from: () => "ADDRESS_FROM",
 						gasLimit: "99999",
 						hash: "UNCONF_TO",
-						to: walletAddress.toLowerCase(),
+						raw: () => ({ hash: "UNCONF_TO", gasLimit: "99999" }),
+						to: () => walletAddress.toLowerCase(),
 					},
 					{
-						from: "ADDRESS_FROM",
+						from: () => "ADDRESS_FROM",
 						gasLimit: "33333",
 						hash: "UNCONF_IGNORE",
-						to: "ADDRESS_TO",
+						raw: () => ({ hash: "UNCONF_IGNORE", gasLimit: "33333" }),
+						to: () => "ADDRESS_TO",
 					},
 					{
-						from: walletAddress.toLowerCase(),
+						from: () => walletAddress.toLowerCase(),
 						gasLimit: undefined,
 						hash: "UNCONF_NO_GAS_LIMIT",
-						to: "ADDRESS_TO",
+						raw: () => ({ hash: "UNCONF_NO_GAS_LIMIT" }),
+						to: () => "ADDRESS_TO",
 					},
 				],
 			} as any);
@@ -942,22 +966,22 @@ describe("useProfileTransactions", () => {
 		});
 		await waitFor(() => expect(result.current.isLoadingTransactions).toBe(true));
 
-		expect(listSpy).toHaveBeenCalledWith({ from: [walletAddress], limit: 100, to: [walletAddress] });
+		expect(listSpy).toHaveBeenCalledWith({ address: [walletAddress], limit: 100 });
 
 		expect(addUnconfirmedTransactionFromApi).toHaveBeenCalledTimes(6);
 
-		const firstArgs = addUnconfirmedTransactionFromApi.mock.calls[0][0];
-		const secondArgs = addUnconfirmedTransactionFromApi.mock.calls[1][0];
+		const firstCall = addUnconfirmedTransactionFromApi.mock.calls[0];
+		const secondCall = addUnconfirmedTransactionFromApi.mock.calls[1];
 
-		expect(firstArgs.walletAddress).toBe(walletAddress);
-		expect(firstArgs.networkId).toBe(networkId);
-		expect(secondArgs.walletAddress).toBe(walletAddress);
-		expect(secondArgs.networkId).toBe(networkId);
+		expect(firstCall[0]).toBe(networkId); // networkId
+		expect(firstCall[1]).toBe(walletAddress); // walletAddress
+		expect(firstCall[2]).toEqual({ hash: "UNCONF_FROM", gasLimit: "21000" }); // transaction
 
-		expect(firstArgs.gasLimit).toBe("21000");
-		expect(secondArgs.gasLimit).toBe("99999");
+		expect(secondCall[0]).toBe(networkId);
+		expect(secondCall[1]).toBe(walletAddress);
+		expect(secondCall[2]).toEqual({ hash: "UNCONF_TO", gasLimit: "99999" });
 
-		expect(reconcileUnconfirmedForAddresses).toHaveBeenCalledWith(
+		expect(cleanupUnconfirmedForAddresses).toHaveBeenCalledWith(
 			[walletAddress],
 			["UNCONF_FROM", "UNCONF_TO", "UNCONF_IGNORE", "UNCONF_NO_GAS_LIMIT"],
 		);
@@ -979,10 +1003,11 @@ describe("useProfileTransactions", () => {
 		const addUnconfirmedTransactionFromApi = vi.fn();
 
 		vi.spyOn(unconfirmedTransactionsMock, "useUnconfirmedTransactions").mockReturnValue({
-			addUnconfirmedTransaction: vi.fn(),
 			addUnconfirmedTransactionFromApi,
+			addUnconfirmedTransactionFromSigned: vi.fn(),
+			cleanupUnconfirmedForAddresses: vi.fn(),
 			removeUnconfirmedTransaction: vi.fn(),
-			unconfirmedTransactions: [],
+			unconfirmedTransactions: {},
 		} as any);
 
 		const { result } = renderHook(() => useProfileTransactions({ profile, wallets: [] }), { wrapper });
@@ -1029,10 +1054,11 @@ describe("useProfileTransactions", () => {
 		const addUnconfirmedTransactionFromApi = vi.fn();
 
 		vi.spyOn(unconfirmedTransactionsMock, "useUnconfirmedTransactions").mockReturnValue({
-			addUnconfirmedTransaction: vi.fn(),
 			addUnconfirmedTransactionFromApi,
+			addUnconfirmedTransactionFromSigned: vi.fn(),
+			cleanupUnconfirmedForAddresses: vi.fn(),
 			removeUnconfirmedTransaction: vi.fn(),
-			unconfirmedTransactions: [],
+			unconfirmedTransactions: {},
 		} as any);
 
 		const listUnconfirmedSpy = vi.fn().mockResolvedValue({ results: [] });
@@ -1082,10 +1108,11 @@ describe("useProfileTransactions", () => {
 		const addUnconfirmedTransactionFromApi = vi.fn();
 
 		vi.spyOn(unconfirmedTransactionsMock, "useUnconfirmedTransactions").mockReturnValue({
-			addUnconfirmedTransaction: vi.fn(),
 			addUnconfirmedTransactionFromApi,
+			addUnconfirmedTransactionFromSigned: vi.fn(),
+			cleanupUnconfirmedForAddresses: vi.fn(),
 			removeUnconfirmedTransaction: vi.fn(),
-			unconfirmedTransactions: [],
+			unconfirmedTransactions: {},
 		} as any);
 
 		const listSpy = vi
@@ -1104,5 +1131,29 @@ describe("useProfileTransactions", () => {
 		expect(addUnconfirmedTransactionFromApi).not.toHaveBeenCalled();
 
 		intervalMock.mockRestore();
+	});
+
+	it("should return default block time when milestone throws an error", async () => {
+		const mockNetwork = {
+			milestone: () => {
+				throw new Error("Milestone error");
+			},
+		};
+	
+		const activeNetworkSpy = vi.spyOn(profile, "activeNetwork").mockReturnValue(mockNetwork as any);
+		const consoleErrorSpy = vi.spyOn(console, "error").mockImplementation(() => {});
+	
+		const { result } = renderHook(() => useProfileTransactions({ profile, wallets: [] }), { wrapper });
+	
+		act(() => {
+			result.current.updateFilters({ activeMode: "all" });
+		});
+	
+		await waitFor(() => expect(result.current.isLoadingTransactions).toBe(false));
+	
+		expect(consoleErrorSpy).toHaveBeenCalledWith("Failed to get block time:", expect.any(Error));
+	
+		activeNetworkSpy.mockRestore();
+		consoleErrorSpy.mockRestore();
 	});
 });

@@ -3,41 +3,52 @@ import { RawTransactionData } from "@/app/lib/mainsail/signed-transaction.dto.co
 import { useCallback } from "react";
 import { useLocalStorage } from "usehooks-ts";
 
-export interface UnconfirmedTransactionData {
-	transaction: RawTransactionData;
-	walletAddress: string;
-	networkId: string;
+interface UnconfirmedTransactions {
+	[networkId: string]: {
+		[walletAddress: string]: RawTransactionData[];
+	};
 }
 
 interface UseUnconfirmedTransactionsReturn {
-	unconfirmedTransactions: UnconfirmedTransactionData[];
+	unconfirmedTransactions: UnconfirmedTransactions;
 	addUnconfirmedTransactionFromSigned: (transaction: DTO.ExtendedSignedTransactionData) => void;
-	addUnconfirmedTransactionFromApi: (input: UnconfirmedTransactionData) => void;
+	addUnconfirmedTransactionFromApi: (networkId: string, walletAddress: string, transaction: RawTransactionData) => void;
 	removeUnconfirmedTransaction: (hash: string) => void;
 	cleanupUnconfirmedForAddresses: (walletAddresses: string[], remoteHashes: string[]) => void;
 }
 
 export const useUnconfirmedTransactions = (): UseUnconfirmedTransactionsReturn => {
-	const [unconfirmedTransactions, setUnconfirmedTransactions] = useLocalStorage<UnconfirmedTransactionData[]>(
+	const [unconfirmedTransactions, setUnconfirmedTransactions] = useLocalStorage<UnconfirmedTransactions>(
 		"unconfirmed-transactions",
-		[],
+		{},
 	);
 
 	const addUnconfirmedTransactionFromSigned = useCallback(
 		(transaction: DTO.ExtendedSignedTransactionData) => {
 			try {
 				const data = transaction.data();
-				const unconfirmed: UnconfirmedTransactionData = {
-					networkId: transaction.wallet().networkId(),
-					transaction: data,
-					walletAddress: transaction.wallet().address(),
-				};
-
+				const networkId = transaction.wallet().networkId();
+				const walletAddress = transaction.wallet().address();
 				const newHash = transaction.hash();
 
 				setUnconfirmedTransactions((prev) => {
-					const filtered = prev.filter((p) => p.transaction.signedData.hash !== newHash);
-					return [...filtered, unconfirmed];
+					const updated = { ...prev };
+
+					if (!updated[networkId]) {
+						updated[networkId] = {};
+					}
+
+					if (!updated[networkId][walletAddress]) {
+						updated[networkId][walletAddress] = [];
+					}
+
+					updated[networkId][walletAddress] = updated[networkId][walletAddress].filter(
+						(tx) => tx.signedData.hash !== newHash
+					);
+
+					updated[networkId][walletAddress].push(data);
+
+					return updated;
 				});
 			} catch (error) {
 				console.error("Failed to add unconfirmed transaction:", error);
@@ -47,20 +58,28 @@ export const useUnconfirmedTransactions = (): UseUnconfirmedTransactionsReturn =
 	);
 
 	const addUnconfirmedTransactionFromApi = useCallback(
-		(input: UnconfirmedTransactionData) => {
+		(networkId: string, walletAddress: string, transaction: RawTransactionData) => {
 			try {
-				const signedData: RawTransactionData = input.transaction;
-
-				const unconfirmed: UnconfirmedTransactionData = {
-					networkId: input.networkId,
-					transaction: { signedData },
-					walletAddress: input.walletAddress,
-				};
+				const targetHash = transaction.hash;
 
 				setUnconfirmedTransactions((prev) => {
-					const target = input.transaction.hash;
-					const filtered = prev.filter((p) => p.transaction.signedData.hash !== target);
-					return [...filtered, unconfirmed];
+					const updated = { ...prev };
+
+					if (!updated[networkId]) {
+						updated[networkId] = {};
+					}
+
+					if (!updated[networkId][walletAddress]) {
+						updated[networkId][walletAddress] = [];
+					}
+
+					updated[networkId][walletAddress] = updated[networkId][walletAddress].filter(
+						(tx) => tx.signedData.hash !== targetHash
+					);
+
+					updated[networkId][walletAddress].push({ signedData: transaction });
+
+					return updated;
 				});
 			} catch (error) {
 				/* istanbul ignore next -- @preserve */
@@ -72,27 +91,59 @@ export const useUnconfirmedTransactions = (): UseUnconfirmedTransactionsReturn =
 
 	const removeUnconfirmedTransaction = useCallback(
 		(hash: string) => {
-			setUnconfirmedTransactions((prev) =>
-				prev.filter(({ transaction }) => transaction.signedData.hash !== hash),
-			);
+			setUnconfirmedTransactions((prev) => {
+				const updated = { ...prev };
+
+				Object.keys(updated).forEach((networkId) => {
+					Object.keys(updated[networkId]).forEach((walletAddress) => {
+						updated[networkId][walletAddress] = updated[networkId][walletAddress].filter(
+							(tx) => tx.signedData.hash !== hash
+						);
+
+						if (updated[networkId][walletAddress].length === 0) {
+							delete updated[networkId][walletAddress];
+						}
+					});
+
+					if (Object.keys(updated[networkId]).length === 0) {
+						delete updated[networkId];
+					}
+				});
+
+				return updated;
+			});
 		},
 		[setUnconfirmedTransactions],
 	);
 
-	// Remove unconfirmed transactions for the given wallet addresses that are not in the remote hashes anymore
 	const cleanupUnconfirmedForAddresses = useCallback(
 		(walletAddresses: string[], remoteHashes: string[]) => {
-			const scope = new Set(walletAddresses);
-			const keep = new Set(remoteHashes);
+			const addressScope = new Set(walletAddresses);
+			const keepHashes = new Set(remoteHashes);
 
-			setUnconfirmedTransactions((prev) =>
-				prev.filter((unconfirmedTransaction) => {
-					if (!scope.has(unconfirmedTransaction.walletAddress)) {
-						return true;
+			setUnconfirmedTransactions((prev) => {
+				const updated = { ...prev };
+
+				Object.keys(updated).forEach((networkId) => {
+					Object.keys(updated[networkId]).forEach((walletAddress) => {
+						if (addressScope.has(walletAddress)) {
+							updated[networkId][walletAddress] = updated[networkId][walletAddress].filter(
+								(tx) => keepHashes.has(tx.signedData.hash)
+							);
+
+							if (updated[networkId][walletAddress].length === 0) {
+								delete updated[networkId][walletAddress];
+							}
+						}
+					});
+
+					if (Object.keys(updated[networkId]).length === 0) {
+						delete updated[networkId];
 					}
-					return keep.has(unconfirmedTransaction.transaction.signedData.hash);
-				}),
-			);
+				});
+
+				return updated;
+			});
 		},
 		[setUnconfirmedTransactions],
 	);
