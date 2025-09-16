@@ -61,8 +61,6 @@ export const HDWalletTabs = ({
 		password,
 	} = getValues();
 
-	console.log(getValues(["value", "mnemonic", "encryptionPassword", "password"]));
-
 	const [importedWallets, setImportedWallets] = useState<AddressData[]>([]);
 	const [activeTab, setActiveTab] = useState<HDWalletTabStep>(HDWalletTabStep.SelectAccountStep);
 
@@ -167,6 +165,7 @@ export const HDWalletTabs = ({
 				await handleSubmit((data: any) => handleWalletImporting(data))();
 
 				setIsImporting(false);
+				setActiveTab(HDWalletTabStep.SummaryStep);
 			},
 		})[activeTab as Exclude<HDWalletTabStep, HDWalletTabStep.SummaryStep>]();
 
