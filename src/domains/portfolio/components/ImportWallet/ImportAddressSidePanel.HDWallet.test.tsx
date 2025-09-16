@@ -18,6 +18,11 @@ const route = `/profiles/${fixtureProfileId}/dashboard`;
 
 const mnemonic = getDefaultMainsailWalletMnemonic();
 
+// Test helper selectors
+const getMnemonicInput = () => screen.getByTestId("ImportWallet__mnemonic-input");
+const getContinueButton = () => screen.getByTestId("ImportWallet__continue-button");
+const getBackButton = () => screen.getByTestId("ImportWallet__back-button");
+
 describe("ImportAddressesSidePanel - HD Wallet Flow", () => {
 	let profile: Contracts.IProfile;
 	const onOpenChange = vi.fn();
@@ -74,14 +79,12 @@ describe("ImportAddressesSidePanel - HD Wallet Flow", () => {
 		expect(screen.getByTestId("ImportWallet__detail-step")).toBeInTheDocument();
 
 		// Enter mnemonic
-		const mnemonicInput = screen.getByTestId("ImportWallet__mnemonic-input");
-		await user.clear(mnemonicInput);
-		await user.type(mnemonicInput, mnemonic);
+		await user.clear(getMnemonicInput());
+		await user.paste(mnemonic);
 
 		// Continue to next step
-		const continueButton = screen.getByTestId("ImportWallet__continue-button");
-		await waitFor(() => expect(continueButton).toBeEnabled());
-		await user.click(continueButton);
+		await waitFor(() => expect(getContinueButton()).toBeEnabled());
+		await user.click(getContinueButton());
 
 		// Should navigate to address selection step
 		await waitFor(() => {
@@ -98,8 +101,7 @@ describe("ImportAddressesSidePanel - HD Wallet Flow", () => {
 		await user.click(screen.getByText("HD Wallet"));
 
 		// Enter mnemonic
-		const mnemonicInput = screen.getByTestId("ImportWallet__mnemonic-input");
-		await user.clear(mnemonicInput);
+		await user.clear(getMnemonicInput());
 		await user.paste(mnemonic);
 
 		// Enable encryption
@@ -111,9 +113,8 @@ describe("ImportAddressesSidePanel - HD Wallet Flow", () => {
 		await user.click(responsibilityCheckbox);
 
 		// Continue to encryption step
-		const continueButton = screen.getByTestId("ImportWallet__continue-button");
-		await waitFor(() => expect(continueButton).toBeEnabled());
-		await user.click(continueButton);
+		await waitFor(() => expect(getContinueButton()).toBeEnabled());
+		await user.click(getContinueButton());
 
 		// Should show encryption password step
 		await waitFor(() => {
@@ -130,13 +131,11 @@ describe("ImportAddressesSidePanel - HD Wallet Flow", () => {
 		await user.click(screen.getByText("HD Wallet"));
 
 		// Enter mnemonic and proceed to address selection
-		const mnemonicInput = screen.getByTestId("ImportWallet__mnemonic-input");
-		await user.clear(mnemonicInput);
+		await user.clear(getMnemonicInput());
 		await user.paste(mnemonic);
 
-		const continueButton = screen.getByTestId("ImportWallet__continue-button");
-		await waitFor(() => expect(continueButton).toBeEnabled());
-		await user.click(continueButton);
+		await waitFor(() => expect(getContinueButton()).toBeEnabled());
+		await user.click(getContinueButton());
 
 		// Should show address selection
 		await waitFor(() => {
@@ -152,6 +151,7 @@ describe("ImportAddressesSidePanel - HD Wallet Flow", () => {
 		const addressCheckbox = screen.getAllByTestId("SelectAddressStep__checkbox-row")[0];
 		await user.click(addressCheckbox);
 
+		const continueButton = getContinueButton();
 		// Continue with selected address
 		await waitFor(() => expect(continueButton).toBeEnabled());
 		await user.click(continueButton);
@@ -187,16 +187,14 @@ describe("ImportAddressesSidePanel - HD Wallet Flow", () => {
 		await user.click(screen.getByText("HD Wallet"));
 
 		// Enter mnemonic and go to next step
-		const mnemonicInput = screen.getByTestId("ImportWallet__mnemonic-input");
-		await user.clear(mnemonicInput);
-		await user.type(mnemonicInput, mnemonic);
+		await user.clear(getMnemonicInput());
+		await user.paste(mnemonic);
 
-		const continueButton = screen.getByTestId("ImportWallet__continue-button");
+		const continueButton = getContinueButton();
 		await user.click(continueButton);
 
 		// Navigate back
-		const backButton = screen.getByTestId("ImportWallet__back-button");
-		await user.click(backButton);
+		await user.click(getBackButton());
 
 		// Should return to method selection
 		await waitFor(() => {
@@ -228,25 +226,23 @@ describe("ImportAddressesSidePanel - HD Wallet Flow", () => {
 		await user.click(screen.getByText("HD Wallet"));
 
 		// Try to continue without entering mnemonic
-		const continueButton = screen.getByTestId("ImportWallet__continue-button");
-		expect(continueButton).toBeDisabled();
+		expect(getContinueButton()).toBeDisabled();
 
 		// Enter invalid mnemonic
-		const mnemonicInput = screen.getByTestId("ImportWallet__mnemonic-input");
-		await user.type(mnemonicInput, "invalid mnemonic");
+		await user.paste("invalid mnemonic");
 
 		// Button should still be disabled
 		await waitFor(() => {
-			expect(continueButton).toBeDisabled();
+			expect(getContinueButton()).toBeDisabled();
 		});
 
 		// Enter valid mnemonic
-		await user.clear(mnemonicInput);
-		await user.type(mnemonicInput, mnemonic);
+		await user.clear(getMnemonicInput());
+		await user.paste(mnemonic);
 
 		// Button should be enabled
 		await waitFor(() => {
-			expect(continueButton).toBeEnabled();
+			expect(getContinueButton()).toBeEnabled();
 		});
 	});
 
@@ -259,9 +255,8 @@ describe("ImportAddressesSidePanel - HD Wallet Flow", () => {
 		await user.click(screen.getByText("HD Wallet"));
 
 		// Enter mnemonic
-		const mnemonicInput = screen.getByTestId("ImportWallet__mnemonic-input");
-		await user.clear(mnemonicInput);
-		await user.type(mnemonicInput, mnemonic);
+		await user.clear(getMnemonicInput());
+		await user.paste(mnemonic);
 
 		// Press Enter to continue
 		await user.keyboard("{Enter}");
@@ -282,16 +277,15 @@ describe("ImportAddressesSidePanel - HD Wallet Flow", () => {
 
 		// Enter mnemonic
 		const mnemonicInput = screen.getByTestId("ImportWallet__mnemonic-input");
-		await user.clear(mnemonicInput);
-		await user.type(mnemonicInput, mnemonic);
+		await user.clear(getMnemonicInput());
+		await user.paste(mnemonic);
 
 		// Navigate to next step
-		const continueButton = screen.getByTestId("ImportWallet__continue-button");
+		const continueButton = getContinueButton();
 		await user.click(continueButton);
 
 		// Navigate back
-		const backButton = screen.getByTestId("ImportWallet__back-button");
-		await user.click(backButton);
+		await user.click(getBackButton());
 
 		// Mnemonic should still be there
 		expect(mnemonicInput).toHaveValue(mnemonic);
