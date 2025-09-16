@@ -86,7 +86,6 @@ export const FormStep = ({
 			sender,
 		});
 	};
-	console.log({ senderWallet })
 
 	return (
 		<section data-testid="SendTransfer__form-step">
