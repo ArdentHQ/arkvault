@@ -36,13 +36,15 @@ export const HDWalletTabs = ({
 	const navigate = useNavigate();
 	const [isImporting, setIsImporting] = useState(false);
 
-	const existingHDWallets = useMemo(() => {
-		return activeProfile
-			.wallets()
-			.values()
-			.filter((wallet) => wallet.isHDWallet())
-			.map((wallet) => wallet.address());
-	}, [activeProfile]);
+	const existingHDWallets = useMemo(
+		() =>
+			activeProfile
+				.wallets()
+				.values()
+				.filter((wallet) => wallet.isHDWallet())
+				.map((wallet) => wallet.address()),
+		[activeProfile],
+	);
 
 	const hasExistingHDWallets = existingHDWallets.length > 0;
 
