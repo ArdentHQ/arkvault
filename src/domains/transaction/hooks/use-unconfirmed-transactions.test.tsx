@@ -39,6 +39,8 @@ const mockUnconfirmedTransactionData = {
 	value: "0",
 };
 
+const TEST_NETWORK_ID = "mainsail.devnet";
+
 let wallet: Contracts.IReadWriteWallet;
 
 const createMockTransaction = (
@@ -53,32 +55,102 @@ const createMockTransaction = (
 	return new ExtendedSignedTransactionData(signedTransaction, wallet);
 };
 
-
+// Helper function to get flat transactions from nested structure
 const getFlatTransactions = (nested: any) => {
 	const flatTransactions: any[] = [];
-	Object.entries(nested).forEach(([networkId, wallets]: [string, any]) => {
-		Object.entries(wallets).forEach(([walletAddress, transactions]: [string, any]) => {
-			transactions.forEach((transaction) => {
+	for (const [networkId, wallets] of Object.entries(nested)) {
+		for (const [walletAddress, transactions] of Object.entries(wallets as any)) {
+			for (const transaction of transactions as any) {
 				flatTransactions.push({
 					networkId,
 					walletAddress,
 					transaction,
 				});
-			});
-		});
-	});
+			}
+		}
+	}
 	return flatTransactions;
 };
 
+// Helper function to count total transactions in nested structure
 const countTransactions = (nested: any): number => {
 	let count = 0;
-	Object.values(nested).forEach((wallets: any) => {
-		Object.values(wallets).forEach((transactions: any) => {
-			count += transactions.length;
-		});
-	});
+	for (const wallets of Object.values(nested)) {
+		for (const transactions of Object.values(wallets as any)) {
+			count += (transactions as any).length;
+		}
+	}
 	return count;
 };
+
+// Additional tests for cleanup edge cases
+describe("useUnconfirmedTransactions - Cleanup Tests", () => {
+	beforeEach(async () => {
+		wallet = env.profiles().findById(getMainsailProfileId()).wallets().first();
+		await wallet.synchroniser().identity();
+		localStorage.clear();
+		vi.clearAllMocks();
+	});
+
+	it("should delete empty wallet address when removing last transaction", async () => {
+		const { result } = renderHook(() => useUnconfirmedTransactions());
+
+		const walletAddress = wallet.address();
+		const mockTransaction = createMockTransaction(wallet);
+
+		// Add one transaction
+		act(() => {
+			result.current.addUnconfirmedTransactionFromSigned(mockTransaction);
+		});
+
+		// Verify transaction exists
+		expect(result.current.unconfirmedTransactions[TEST_NETWORK_ID]).toBeDefined();
+		expect(result.current.unconfirmedTransactions[TEST_NETWORK_ID][walletAddress]).toBeDefined();
+		expect(result.current.unconfirmedTransactions[TEST_NETWORK_ID][walletAddress]).toHaveLength(1);
+
+		// Remove the transaction
+		act(() => {
+			result.current.removeUnconfirmedTransaction(signedTransactionData.signedData.hash);
+		});
+
+		// Verify wallet address is deleted when empty
+		expect(result.current.unconfirmedTransactions[TEST_NETWORK_ID]).toBeDefined();
+		expect(result.current.unconfirmedTransactions[TEST_NETWORK_ID][walletAddress]).toBeUndefined();
+	});
+
+	it("should handle cleanup when wallet has mixed scope (some addresses in scope, some not)", async () => {
+		const { result } = renderHook(() => useUnconfirmedTransactions());
+
+		const walletAddressInScope = wallet.address();
+		const walletAddressOutOfScope = "OUT_OF_SCOPE_ADDRESS";
+
+		const transactionInScope = {
+			...mockUnconfirmedTransactionData,
+			hash: "hash-in-scope",
+		};
+		const transactionOutOfScope = {
+			...mockUnconfirmedTransactionData,
+			hash: "hash-out-of-scope",
+		};
+
+		// Add transactions to both wallets
+		act(() => {
+			result.current.addUnconfirmedTransactionFromApi(TEST_NETWORK_ID, walletAddressInScope, transactionInScope);
+			result.current.addUnconfirmedTransactionFromApi(TEST_NETWORK_ID, walletAddressOutOfScope, transactionOutOfScope);
+		});
+
+		// Cleanup only the in-scope wallet with no remote hashes
+		act(() => {
+			result.current.cleanupUnconfirmedForAddresses([walletAddressInScope], []);
+		});
+
+		// Verify in-scope wallet is deleted but out-of-scope wallet remains
+		expect(result.current.unconfirmedTransactions[TEST_NETWORK_ID]).toBeDefined();
+		expect(result.current.unconfirmedTransactions[TEST_NETWORK_ID][walletAddressInScope]).toBeUndefined();
+		expect(result.current.unconfirmedTransactions[TEST_NETWORK_ID][walletAddressOutOfScope]).toBeDefined();
+		expect(result.current.unconfirmedTransactions[TEST_NETWORK_ID][walletAddressOutOfScope]).toHaveLength(1);
+	});
+});
 
 describe("useUnconfirmedTransactions", () => {
 	beforeEach(async () => {
@@ -108,13 +180,12 @@ describe("useUnconfirmedTransactions", () => {
 
 		expect(countTransactions(result.current.unconfirmedTransactions)).toBe(1);
 		
-		const networkId = "mainsail.devnet";
 		const walletAddress = wallet.address();
 		
-		expect(result.current.unconfirmedTransactions[networkId]).toBeDefined();
-		expect(result.current.unconfirmedTransactions[networkId][walletAddress]).toBeDefined();
-		expect(result.current.unconfirmedTransactions[networkId][walletAddress]).toHaveLength(1);
-		expect(result.current.unconfirmedTransactions[networkId][walletAddress][0]).toEqual(signedTransactionData);
+		expect(result.current.unconfirmedTransactions[TEST_NETWORK_ID]).toBeDefined();
+		expect(result.current.unconfirmedTransactions[TEST_NETWORK_ID][walletAddress]).toBeDefined();
+		expect(result.current.unconfirmedTransactions[TEST_NETWORK_ID][walletAddress]).toHaveLength(1);
+		expect(result.current.unconfirmedTransactions[TEST_NETWORK_ID][walletAddress][0]).toEqual(signedTransactionData);
 	});
 
 	it("should add multiple unconfirmed transactions", async () => {
@@ -135,9 +206,8 @@ describe("useUnconfirmedTransactions", () => {
 
 		expect(countTransactions(result.current.unconfirmedTransactions)).toBe(2);
 		
-		const networkId = "mainsail.devnet";
 		const walletAddress = wallet.address();
-		const transactions = result.current.unconfirmedTransactions[networkId][walletAddress];
+		const transactions = result.current.unconfirmedTransactions[TEST_NETWORK_ID][walletAddress];
 		
 		expect(transactions).toHaveLength(2);
 		expect(transactions[0].signedData.hash).toBe(signedTransactionData.signedData.hash);
@@ -161,9 +231,8 @@ describe("useUnconfirmedTransactions", () => {
 		// Should only have one transaction (duplicate replaced)
 		expect(countTransactions(result.current.unconfirmedTransactions)).toBe(1);
 		
-		const networkId = "mainsail.devnet";
 		const walletAddress = wallet.address();
-		const transactions = result.current.unconfirmedTransactions[networkId][walletAddress];
+		const transactions = result.current.unconfirmedTransactions[TEST_NETWORK_ID][walletAddress];
 		
 		expect(transactions).toHaveLength(1);
 		expect(transactions[0].signedData.hash).toBe(signedTransactionData.signedData.hash);
@@ -192,9 +261,8 @@ describe("useUnconfirmedTransactions", () => {
 
 		expect(countTransactions(result.current.unconfirmedTransactions)).toBe(1);
 		
-		const networkId = "mainsail.devnet";
 		const walletAddress = wallet.address();
-		const transactions = result.current.unconfirmedTransactions[networkId][walletAddress];
+		const transactions = result.current.unconfirmedTransactions[TEST_NETWORK_ID][walletAddress];
 		
 		expect(transactions).toHaveLength(1);
 		expect(transactions[0].signedData.hash).toBe(secondSignedTransactionHash);
@@ -218,9 +286,8 @@ describe("useUnconfirmedTransactions", () => {
 
 		expect(countTransactions(result.current.unconfirmedTransactions)).toBe(1);
 		
-		const networkId = "mainsail.devnet";
 		const walletAddress = wallet.address();
-		const transactions = result.current.unconfirmedTransactions[networkId][walletAddress];
+		const transactions = result.current.unconfirmedTransactions[TEST_NETWORK_ID][walletAddress];
 		
 		expect(transactions[0].signedData.hash).toBe(signedTransactionData.signedData.hash);
 	});
@@ -249,16 +316,15 @@ describe("useUnconfirmedTransactions", () => {
 	it("should add an unconfirmed transaction from API data", async () => {
 		const { result } = renderHook(() => useUnconfirmedTransactions());
 
-		const networkId = "mainsail.devnet";
 		const walletAddress = "0xA5cc0BfEB09742C5e4C610f2EBaaB82Eb142Ca10";
 
 		act(() => {
-			result.current.addUnconfirmedTransactionFromApi(networkId, walletAddress, mockUnconfirmedTransactionData);
+			result.current.addUnconfirmedTransactionFromApi(TEST_NETWORK_ID, walletAddress, mockUnconfirmedTransactionData);
 		});
 
 		expect(countTransactions(result.current.unconfirmedTransactions)).toBe(1);
 		
-		const transactions = result.current.unconfirmedTransactions[networkId][walletAddress];
+		const transactions = result.current.unconfirmedTransactions[TEST_NETWORK_ID][walletAddress];
 		expect(transactions).toHaveLength(1);
 		expect(transactions[0]).toEqual({
 			signedData: mockUnconfirmedTransactionData,
@@ -268,7 +334,6 @@ describe("useUnconfirmedTransactions", () => {
 	it("should replace duplicate unconfirmed transaction when adding with same hash", async () => {
 		const { result } = renderHook(() => useUnconfirmedTransactions());
 
-		const networkId = "mainsail.devnet";
 		const walletAddress = "0xA5cc0BfEB09742C5e4C610f2EBaaB82Eb142Ca10";
 
 		const firstTransaction = {
@@ -282,24 +347,23 @@ describe("useUnconfirmedTransactions", () => {
 		};
 
 		act(() => {
-			result.current.addUnconfirmedTransactionFromApi(networkId, walletAddress, firstTransaction);
+			result.current.addUnconfirmedTransactionFromApi(TEST_NETWORK_ID, walletAddress, firstTransaction);
 		});
 
 		expect(countTransactions(result.current.unconfirmedTransactions)).toBe(1);
-		expect(result.current.unconfirmedTransactions[networkId][walletAddress][0].signedData.value).toBe("100");
+		expect(result.current.unconfirmedTransactions[TEST_NETWORK_ID][walletAddress][0].signedData.value).toBe("100");
 
 		act(() => {
-			result.current.addUnconfirmedTransactionFromApi(networkId, walletAddress, duplicateTransaction);
+			result.current.addUnconfirmedTransactionFromApi(TEST_NETWORK_ID, walletAddress, duplicateTransaction);
 		});
 
 		expect(countTransactions(result.current.unconfirmedTransactions)).toBe(1);
-		expect(result.current.unconfirmedTransactions[networkId][walletAddress][0].signedData.value).toBe("200");
+		expect(result.current.unconfirmedTransactions[TEST_NETWORK_ID][walletAddress][0].signedData.value).toBe("200");
 	});
 
 	it("should add multiple unconfirmed transactions with different hashes", async () => {
 		const { result } = renderHook(() => useUnconfirmedTransactions());
 
-		const networkId = "mainsail.devnet";
 		const walletAddress = "0xA5cc0BfEB09742C5e4C610f2EBaaB82Eb142Ca10";
 
 		const transaction1 = mockUnconfirmedTransactionData;
@@ -310,16 +374,16 @@ describe("useUnconfirmedTransactions", () => {
 		};
 
 		act(() => {
-			result.current.addUnconfirmedTransactionFromApi(networkId, walletAddress, transaction1);
+			result.current.addUnconfirmedTransactionFromApi(TEST_NETWORK_ID, walletAddress, transaction1);
 		});
 
 		act(() => {
-			result.current.addUnconfirmedTransactionFromApi(networkId, walletAddress, transaction2);
+			result.current.addUnconfirmedTransactionFromApi(TEST_NETWORK_ID, walletAddress, transaction2);
 		});
 
 		expect(countTransactions(result.current.unconfirmedTransactions)).toBe(2);
 		
-		const transactions = result.current.unconfirmedTransactions[networkId][walletAddress];
+		const transactions = result.current.unconfirmedTransactions[TEST_NETWORK_ID][walletAddress];
 		expect(transactions).toHaveLength(2);
 		expect(transactions[0].signedData.hash).toBe(mockUnconfirmedTransactionData.hash);
 		expect(transactions[1].signedData.hash).toBe("different-hash-123");
@@ -328,7 +392,6 @@ describe("useUnconfirmedTransactions", () => {
 	it("cleanupUnconfirmedForAddresses keeps only remote hashes for scoped addresses and leaves others untouched", async () => {
 		const { result } = renderHook(() => useUnconfirmedTransactions());
 
-		const networkId = "mainsail.devnet";
 		const addressA = wallet.address();
 		const addressB = "ADDRESS_B";
 
@@ -349,9 +412,9 @@ describe("useUnconfirmedTransactions", () => {
 		};
 
 		act(() => {
-			result.current.addUnconfirmedTransactionFromApi(networkId, addressA, transaction1);
-			result.current.addUnconfirmedTransactionFromApi(networkId, addressA, transaction2);
-			result.current.addUnconfirmedTransactionFromApi(networkId, addressB, transaction3);
+			result.current.addUnconfirmedTransactionFromApi(TEST_NETWORK_ID, addressA, transaction1);
+			result.current.addUnconfirmedTransactionFromApi(TEST_NETWORK_ID, addressA, transaction2);
+			result.current.addUnconfirmedTransactionFromApi(TEST_NETWORK_ID, addressB, transaction3);
 		});
 
 		expect(countTransactions(result.current.unconfirmedTransactions)).toBe(3);
@@ -374,7 +437,6 @@ describe("useUnconfirmedTransactions", () => {
 	it("should delete empty network when removing last wallet", async () => {
 		const { result } = renderHook(() => useUnconfirmedTransactions());
 
-		const networkId = "mainsail.devnet";
 		const walletAddress = wallet.address();
 		const mockTransaction = createMockTransaction(wallet);
 
@@ -382,20 +444,19 @@ describe("useUnconfirmedTransactions", () => {
 			result.current.addUnconfirmedTransactionFromSigned(mockTransaction);
 		});
 
-		expect(result.current.unconfirmedTransactions[networkId]).toBeDefined();
-		expect(result.current.unconfirmedTransactions[networkId][walletAddress]).toBeDefined();
+		expect(result.current.unconfirmedTransactions[TEST_NETWORK_ID]).toBeDefined();
+		expect(result.current.unconfirmedTransactions[TEST_NETWORK_ID][walletAddress]).toBeDefined();
 
 		act(() => {
 			result.current.removeUnconfirmedTransaction(signedTransactionData.signedData.hash);
 		});
 
-		expect(result.current.unconfirmedTransactions[networkId]).toBeUndefined();
+		expect(result.current.unconfirmedTransactions[TEST_NETWORK_ID]).toBeUndefined();
 	});
 
 	it("should delete empty wallet address during cleanup but keep network with other wallets", async () => {
 		const { result } = renderHook(() => useUnconfirmedTransactions());
 
-		const networkId = "mainsail.devnet";
 		const walletAddressA = wallet.address();
 		const walletAddressB = "OTHER_WALLET_ADDRESS";
 
@@ -409,27 +470,26 @@ describe("useUnconfirmedTransactions", () => {
 		};
 
 		act(() => {
-			result.current.addUnconfirmedTransactionFromApi(networkId, walletAddressA, transactionA);
-			result.current.addUnconfirmedTransactionFromApi(networkId, walletAddressB, transactionB);
+			result.current.addUnconfirmedTransactionFromApi(TEST_NETWORK_ID, walletAddressA, transactionA);
+			result.current.addUnconfirmedTransactionFromApi(TEST_NETWORK_ID, walletAddressB, transactionB);
 		});
 
-		expect(result.current.unconfirmedTransactions[networkId][walletAddressA]).toBeDefined();
-		expect(result.current.unconfirmedTransactions[networkId][walletAddressB]).toBeDefined();
+		expect(result.current.unconfirmedTransactions[TEST_NETWORK_ID][walletAddressA]).toBeDefined();
+		expect(result.current.unconfirmedTransactions[TEST_NETWORK_ID][walletAddressB]).toBeDefined();
 
 		act(() => {
 			result.current.cleanupUnconfirmedForAddresses([walletAddressA], []);
 		});
 
-		expect(result.current.unconfirmedTransactions[networkId]).toBeDefined();
-		expect(result.current.unconfirmedTransactions[networkId][walletAddressA]).toBeUndefined();
-		expect(result.current.unconfirmedTransactions[networkId][walletAddressB]).toBeDefined();
-		expect(result.current.unconfirmedTransactions[networkId][walletAddressB]).toHaveLength(1);
+		expect(result.current.unconfirmedTransactions[TEST_NETWORK_ID]).toBeDefined();
+		expect(result.current.unconfirmedTransactions[TEST_NETWORK_ID][walletAddressA]).toBeUndefined();
+		expect(result.current.unconfirmedTransactions[TEST_NETWORK_ID][walletAddressB]).toBeDefined();
+		expect(result.current.unconfirmedTransactions[TEST_NETWORK_ID][walletAddressB]).toHaveLength(1);
 	});
 
 	it("should delete empty network during cleanup when all wallets are cleaned up", async () => {
 		const { result } = renderHook(() => useUnconfirmedTransactions());
 
-		const networkId = "mainsail.devnet";
 		const walletAddressA = wallet.address();
 		const walletAddressB = "OTHER_WALLET_ADDRESS";
 
@@ -443,25 +503,25 @@ describe("useUnconfirmedTransactions", () => {
 		};
 
 		act(() => {
-			result.current.addUnconfirmedTransactionFromApi(networkId, walletAddressA, transactionA);
-			result.current.addUnconfirmedTransactionFromApi(networkId, walletAddressB, transactionB);
+			result.current.addUnconfirmedTransactionFromApi(TEST_NETWORK_ID, walletAddressA, transactionA);
+			result.current.addUnconfirmedTransactionFromApi(TEST_NETWORK_ID, walletAddressB, transactionB);
 		});
 
-		expect(result.current.unconfirmedTransactions[networkId]).toBeDefined();
-		expect(Object.keys(result.current.unconfirmedTransactions[networkId])).toHaveLength(2);
+		expect(result.current.unconfirmedTransactions[TEST_NETWORK_ID]).toBeDefined();
+		expect(Object.keys(result.current.unconfirmedTransactions[TEST_NETWORK_ID])).toHaveLength(2);
 
 		act(() => {
 			result.current.cleanupUnconfirmedForAddresses([walletAddressA, walletAddressB], []);
 		});
 
-		expect(result.current.unconfirmedTransactions[networkId]).toBeUndefined();
+		expect(result.current.unconfirmedTransactions[TEST_NETWORK_ID]).toBeUndefined();
 		expect(Object.keys(result.current.unconfirmedTransactions)).toHaveLength(0);
 	});
 
 	it("should preserve network structure when removing transactions across multiple networks", async () => {
 		const { result } = renderHook(() => useUnconfirmedTransactions());
 
-		const networkIdA = "mainsail.devnet";
+		const networkIdA = TEST_NETWORK_ID;
 		const networkIdB = "mainsail.testnet";
 		const walletAddress = wallet.address();
 
@@ -494,7 +554,6 @@ describe("useUnconfirmedTransactions", () => {
 	it("should handle removeUnconfirmedTransaction when transaction exists in multiple wallets", async () => {
 		const { result } = renderHook(() => useUnconfirmedTransactions());
 
-		const networkId = "mainsail.devnet";
 		const walletAddressA = wallet.address();
 		const walletAddressB = "OTHER_WALLET_ADDRESS";
 		const sharedHash = "shared-hash-123";
@@ -509,17 +568,17 @@ describe("useUnconfirmedTransactions", () => {
 		};
 
 		act(() => {
-			result.current.addUnconfirmedTransactionFromApi(networkId, walletAddressA, transactionA);
-			result.current.addUnconfirmedTransactionFromApi(networkId, walletAddressB, transactionB);
+			result.current.addUnconfirmedTransactionFromApi(TEST_NETWORK_ID, walletAddressA, transactionA);
+			result.current.addUnconfirmedTransactionFromApi(TEST_NETWORK_ID, walletAddressB, transactionB);
 		});
 
-		expect(result.current.unconfirmedTransactions[networkId][walletAddressA]).toHaveLength(1);
-		expect(result.current.unconfirmedTransactions[networkId][walletAddressB]).toHaveLength(1);
+		expect(result.current.unconfirmedTransactions[TEST_NETWORK_ID][walletAddressA]).toHaveLength(1);
+		expect(result.current.unconfirmedTransactions[TEST_NETWORK_ID][walletAddressB]).toHaveLength(1);
 
 		act(() => {
 			result.current.removeUnconfirmedTransaction(sharedHash);
 		});
 
-		expect(result.current.unconfirmedTransactions[networkId]).toBeUndefined();
+		expect(result.current.unconfirmedTransactions[TEST_NETWORK_ID]).toBeUndefined();
 	});
 });
