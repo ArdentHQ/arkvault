@@ -21,7 +21,6 @@ import { WalletData, WalletImportMethod } from "@/app/lib/profiles/wallet.enum";
 import { useEnvironmentContext } from "@/app/contexts";
 
 export const HDWalletTabs = ({
-	activeIndex = HDWalletTabStep.SelectAccountStep,
 	onClickEditWalletName,
 	onStepChange,
 	onCancel,

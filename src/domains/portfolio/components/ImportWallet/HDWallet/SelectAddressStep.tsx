@@ -262,26 +262,26 @@ export const SelectAddressStep = ({
 		}
 	};
 
+	const generateWallet = async (index: number) => {
+		const levels = {
+			account: 0,
+			addressIndex: index,
+			change: 0,
+		};
+
+		const wallet = await profile.walletFactory().fromMnemonicWithBIP44({
+			coin: BIP44CoinType.ARK,
+			levels,
+			mnemonic,
+		});
+
+		await wallet.synchroniser().identity();
+
+		return { levels, wallet };
+	};
+
 	const load = async (startIndex: number = 0, skipEmptyAddresses: boolean = false) => {
 		setIsLoading(true);
-
-		const generateWallet = async (index: number) => {
-			const levels = {
-				account: 0,
-				addressIndex: index,
-				change: 0,
-			};
-
-			const wallet = await profile.walletFactory().fromMnemonicWithBIP44({
-				coin: BIP44CoinType.ARK,
-				levels,
-				mnemonic,
-			});
-
-			await wallet.synchroniser().identity();
-
-			return { levels, wallet };
-		};
 
 		const promises = Array.from({ length: ADDRESSES_PER_BATCH }, (_, index) => generateWallet(index + startIndex));
 		const results = await Promise.all(promises);

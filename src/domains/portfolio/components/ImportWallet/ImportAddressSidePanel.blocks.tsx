@@ -117,7 +117,7 @@ export function useLedgerStepHeaderConfig(step: LedgerTabStep, importOption?: Im
 	}
 }
 
-export function useHDWalletStepHeaderConfig(step: HDWalletTabStep, importOption?: ImportOption): StepHeaderConfig {
+export function useHDWalletStepHeaderConfig(step: HDWalletTabStep): StepHeaderConfig {
 	const { t } = useTranslation();
 
 	switch (step) {

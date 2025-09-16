@@ -77,7 +77,7 @@ export const ImportAddressesSidePanel = ({
 
 	const stepConfig = useStepHeaderConfig(activeTab, importOption);
 	const ledgerConfig = useLedgerStepHeaderConfig(ledgerActiveTab, importOption);
-	const HDWalletConfig = useHDWalletStepHeaderConfig(HDWalletActiveTab, importOption);
+	const HDWalletConfig = useHDWalletStepHeaderConfig(HDWalletActiveTab);
 
 	const config = useMemo(() => {
 		if (isHDWalletImport) {
