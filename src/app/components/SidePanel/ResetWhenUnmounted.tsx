@@ -1,17 +1,14 @@
-import React, { useCallback, useState, ReactElement } from "react";
+import React, { cloneElement, Fragment, ReactElement, useEffect, useState } from "react";
 
-export function ResetWhenUnmounted({ children }: { children: ReactElement }) {
-	const [resetKey, setResetKey] = useState(0);
+export const ResetWhenUnmounted = ({ children }: { children: ReactElement }) => {
+	const [mounted, setMounted] = useState(true);
+	const [key, setKey] = useState(0);
 
-	const callbackRef = useCallback((element: Element | null) => {
-		if (element === null) {
-			setResetKey((previousKey) => previousKey + 1);
+	useEffect(() => {
+		if (!mounted) {
+			setKey((key) => key + 1);
 		}
-	}, []);
+	}, [mounted]);
 
-	return (
-		<div key={resetKey} ref={callbackRef} style={{ display: "contents" }}>
-			{children}
-		</div>
-	);
-}
+	return <Fragment key={key}>{cloneElement(children, { onMountChange: setMounted })}</Fragment>;
+};

@@ -19,7 +19,6 @@ import { EncryptPasswordStep } from "@/domains/wallet/components/EncryptPassword
 import { LedgerImportStep } from "@/domains/portfolio/components/ImportWallet/Ledger/LedgerImportStep";
 import { WalletData, WalletImportMethod } from "@/app/lib/profiles/wallet.enum";
 import { useEnvironmentContext } from "@/app/contexts";
-import { SelectAccountStep } from "@/domains/portfolio/components/ImportWallet/HDWallet/SelectAccountStep";
 
 export const HDWalletTabs = ({
 	onClickEditWalletName,
@@ -38,7 +37,9 @@ export const HDWalletTabs = ({
 	const [isImporting, setIsImporting] = useState(false);
 
 	const existingHDWallets = useMemo(() => {
-		return activeProfile.wallets().values()
+		return activeProfile
+			.wallets()
+			.values()
 			.filter((wallet) => wallet.isHDWallet())
 			.map((wallet) => wallet.address());
 	}, [activeProfile]);
@@ -116,6 +117,10 @@ export const HDWalletTabs = ({
 		if (!hasExistingHDWallets) {
 			setActiveTab(HDWalletTabStep.EnterMnemonicStep);
 		}
+
+		return () => {
+			unregister(["mnemonic", "password"]);
+		};
 	}, [hasExistingHDWallets]);
 
 	useKeydown("Enter", (event: KeyboardEvent) => {
@@ -131,39 +136,37 @@ export const HDWalletTabs = ({
 		}
 	});
 
-	const handleNext = useCallback(async () => {
-		let next = activeTab + 1;
+	const handleNext = () =>
+		({
+			[HDWalletTabStep.SelectAccountStep]: async () => {
+				// select enter mnemonic step when Import new HD wallet option selected
+				// or there are no existing HD wallets
+				setActiveTab(HDWalletTabStep.EnterMnemonicStep);
+			},
+			[HDWalletTabStep.EnterMnemonicStep]: async () => {
+				const { value } = getValues();
 
-		if (activeTab === HDWalletTabStep.EnterMnemonicStep && (!useEncryption || !importOption.canBeEncrypted)) {
-			next = activeTab + 2;
-		}
+				if (value) {
+					register({ name: "mnemonic", type: "string", value });
+				}
 
-		if ([HDWalletTabStep.EncryptPasswordStep, HDWalletTabStep.SelectAddressStep].includes(next)) {
-			const { value, encryptionPassword } = getValues();
+				setActiveTab(useEncryption ? HDWalletTabStep.EncryptPasswordStep : HDWalletTabStep.SelectAddressStep);
+			},
+			[HDWalletTabStep.EncryptPasswordStep]: async () => {
+				const { encryptionPassword } = getValues();
+				if (encryptionPassword) {
+					register({ name: "password", type: "string", value: encryptionPassword });
+				}
 
-			if (value) {
-				register({ name: "mnemonic", type: "string", value });
-			}
+				setActiveTab(HDWalletTabStep.SelectAddressStep);
+			},
+			[HDWalletTabStep.SelectAddressStep]: async () => {
+				setIsImporting(true);
+				await handleSubmit((data: any) => handleWalletImporting(data))();
 
-			if (encryptionPassword) {
-				register({ name: "password", type: "string", value: encryptionPassword });
-			}
-		}
-
-		if (activeTab === HDWalletTabStep.SelectAddressStep) {
-			setIsImporting(true);
-			await handleSubmit((data: any) => handleWalletImporting(data))();
-
-			setIsImporting(false);
-		}
-
-		setActiveTab(next);
-		onStepChange?.(next);
-
-		return () => {
-			unregister(["mnemonic", "password"]);
-		};
-	}, [activeTab, handleSubmit, importWallets, onStepChange]);
+				setIsImporting(false);
+			},
+		})[activeTab as Exclude<HDWalletTabStep, HDWalletTabStep.SummaryStep>]();
 
 	const handleBack = useCallback(() => {
 		if (activeTab !== HDWalletTabStep.SelectAccountStep) {
