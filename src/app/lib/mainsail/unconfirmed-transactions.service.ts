@@ -13,14 +13,15 @@ export class UnconfirmedTransactionsService {
 		this.#client = new ClientService({ config: this.#config, profile: this.#profile });
 	}
 
-	async listUnconfirmed(parameters?: { page?: number; limit?: number; from: string[]; to: string[] }) {
-		// TODO: use identifiers param instead once supported in mainsail, as it now filters based on from AND to which only works when sending to yourself
+	async listUnconfirmed(parameters?: { page?: number; limit?: number; address?: string[] }) {
 		const requestParams: Record<string, unknown> = {};
-		if (parameters && parameters.from.length > 0) {
-			requestParams.from = parameters.from.join(",");
+
+		if (parameters?.address && parameters.address.length > 0) {
+			requestParams.address = parameters.address.join(",");
 		}
-		if (parameters && parameters.to.length > 0) {
-			requestParams.to = parameters.to.join(",");
+
+		if (parameters?.page !== undefined) {
+			requestParams.page = parameters.page;
 		}
 
 		const limit = parameters?.limit;
@@ -31,7 +32,6 @@ export class UnconfirmedTransactionsService {
 		});
 
 		const results = response.items() ?? [];
-
 		return { results };
 	}
 }

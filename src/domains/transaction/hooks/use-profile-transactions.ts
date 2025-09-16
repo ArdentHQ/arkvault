@@ -481,9 +481,8 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 		try {
 			const selectedAddresses = wallets.map((w) => w.address());
 			const response = await unconfirmedTransactionsService.listUnconfirmed({
-				from: selectedAddresses,
+				address: selectedAddresses,
 				limit: 100,
-				to: selectedAddresses,
 			});
 
 			const results = response?.results ?? [];

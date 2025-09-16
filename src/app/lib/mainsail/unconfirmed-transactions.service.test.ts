@@ -39,7 +39,7 @@ describe("UnconfirmedTransactionsService", () => {
 			http.get(UNCONFIRMED_ENDPOINT, ({ request }) => {
 				const url = new URL(request.url);
 				// Should have no specific query params for basic call
-				if (!url.searchParams.has("from") && !url.searchParams.has("to")) {
+				if (!url.searchParams.has("address")) {
 					return HttpResponse.json(transactionFixture);
 				}
 				return HttpResponse.json({ data: [], meta: {} });
@@ -73,29 +73,18 @@ describe("UnconfirmedTransactionsService", () => {
 			}),
 		);
 
-		const res = await service.listUnconfirmed({ from: [], limit: 50, to: [] });
+		const res = await service.listUnconfirmed({ address: [], limit: 50 });
 
 		expect(res.results.length).toEqual(4);
 	});
 
-	it("should pass multiple from/to arrays as comma-separated strings", async () => {
-		const from = ["0x1111111111111111111111111111111111111111", "0x2222222222222222222222222222222222222222"];
-		const to = ["0xAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "0xBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"];
-
+	it("should omit empty arrays for address", async () => {
 		server.use(
 			http.get(UNCONFIRMED_ENDPOINT, ({ request }) => {
 				const url = new URL(request.url);
-				const limit = url.searchParams.get("limit");
-				const fromParam = url.searchParams.get("from");
-				const toParam = url.searchParams.get("to");
+				const addressParam = url.searchParams.get("address");
 
-				// Check that the from and to arrays are properly serialized as comma-separated strings
-				if (
-					limit === "25" &&
-					fromParam ===
-						"0x1111111111111111111111111111111111111111,0x2222222222222222222222222222222222222222" &&
-					toParam === "0xAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,0xBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
-				) {
+				if (!addressParam) {
 					return HttpResponse.json(transactionFixture);
 				}
 
@@ -103,20 +92,20 @@ describe("UnconfirmedTransactionsService", () => {
 			}),
 		);
 
-		const res = await service.listUnconfirmed({ from, limit: 25, to });
+		const res = await service.listUnconfirmed({ address: [] });
 
 		expect(res.results.length).toEqual(4);
 	});
 
-	it("should omit empty arrays for from/to", async () => {
+	it("should handle only address parameter", async () => {
+		const address = ["0x1111111111111111111111111111111111111111"];
+
 		server.use(
 			http.get(UNCONFIRMED_ENDPOINT, ({ request }) => {
 				const url = new URL(request.url);
-				const fromParam = url.searchParams.get("from");
-				const toParam = url.searchParams.get("to");
+				const addressParam = url.searchParams.get("address");
 
-				// Check that empty arrays result in no from/to parameters
-				if (!fromParam && !toParam) {
+				if (addressParam === "0x1111111111111111111111111111111111111111") {
 					return HttpResponse.json(transactionFixture);
 				}
 
@@ -124,63 +113,20 @@ describe("UnconfirmedTransactionsService", () => {
 			}),
 		);
 
-		const res = await service.listUnconfirmed({ from: [], to: [] });
+		const res = await service.listUnconfirmed({ address });
 
 		expect(res.results.length).toEqual(4);
 	});
 
-	it("should handle only from parameter", async () => {
-		const from = ["0x1111111111111111111111111111111111111111"];
-
-		server.use(
-			http.get(UNCONFIRMED_ENDPOINT, ({ request }) => {
-				const url = new URL(request.url);
-				const fromParam = url.searchParams.get("from");
-				const toParam = url.searchParams.get("to");
-
-				if (fromParam === "0x1111111111111111111111111111111111111111" && !toParam) {
-					return HttpResponse.json(transactionFixture);
-				}
-
-				return HttpResponse.json({ data: [], meta: {} });
-			}),
-		);
-
-		const res = await service.listUnconfirmed({ from, to: [] });
-
-		expect(res.results.length).toEqual(4);
-	});
-
-	it("should handle only to parameter", async () => {
-		const to = ["0xAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"];
-
-		server.use(
-			http.get(UNCONFIRMED_ENDPOINT, ({ request }) => {
-				const url = new URL(request.url);
-				const fromParam = url.searchParams.get("from");
-				const toParam = url.searchParams.get("to");
-
-				if (!fromParam && toParam === "0xAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA") {
-					return HttpResponse.json(transactionFixture);
-				}
-
-				return HttpResponse.json({ data: [], meta: {} });
-			}),
-		);
-
-		const res = await service.listUnconfirmed({ from: [], to });
-
-		expect(res.results.length).toEqual(4);
-	});
-
-	it("should handle missing page parameter", async () => {
+	it("should handle page parameter correctly", async () => {
 		server.use(
 			http.get(UNCONFIRMED_ENDPOINT, ({ request }) => {
 				const url = new URL(request.url);
 				const pageParam = url.searchParams.get("page");
+				const limitParam = url.searchParams.get("limit");
+				const addressParam = url.searchParams.get("address");
 
-				// Page parameter should not be passed since it's not in the service implementation
-				if (!pageParam) {
+				if (pageParam === "2" && limitParam === "10" && addressParam === "0x1111") {
 					return HttpResponse.json(transactionFixture);
 				}
 
@@ -188,8 +134,29 @@ describe("UnconfirmedTransactionsService", () => {
 			}),
 		);
 
-		const res = await service.listUnconfirmed({ from: [], limit: 10, to: [] });
+		const res = await service.listUnconfirmed({ page: 2, limit: 10, address: ["0x1111"] });
 
-		expect(res.results.length).toEqual(0);
+		expect(res.results.length).toEqual(4);
+	});
+
+	it("should handle multiple addresses", async () => {
+		server.use(
+			http.get(UNCONFIRMED_ENDPOINT, ({ request }) => {
+				const url = new URL(request.url);
+				const addressParam = url.searchParams.get("address");
+
+				if (addressParam === "0x1111,0x2222") {
+					return HttpResponse.json(transactionFixture);
+				}
+
+				return HttpResponse.json({ data: [], meta: {} });
+			}),
+		);
+
+		const res = await service.listUnconfirmed({
+			address: ["0x1111", "0x2222"]
+		});
+
+		expect(res.results.length).toEqual(4);
 	});
 });
