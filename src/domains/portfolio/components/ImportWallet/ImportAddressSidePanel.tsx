@@ -261,14 +261,14 @@ export const ImportAddressesSidePanel = ({
 	]);
 
 	const allSteps = useMemo(() => {
-		if (isHDWalletImport){
+		if (isHDWalletImport) {
 			const steps = [1, 2];
 
 			if (useEncryption) {
-				steps.push(3)
+				steps.push(3);
 			}
 
-			steps.push(4, 5)
+			steps.push(4, 5);
 
 			return steps;
 		}
