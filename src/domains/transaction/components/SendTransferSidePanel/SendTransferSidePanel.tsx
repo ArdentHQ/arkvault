@@ -444,7 +444,6 @@ export const SendTransferSidePanel = ({
 								onClick={handleBack}
 								disabled={isSubmitting}
 							>
-
 								{t("COMMON.BACK")}
 							</Button>
 						)}
