@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 
@@ -19,6 +19,7 @@ import { EncryptPasswordStep } from "@/domains/wallet/components/EncryptPassword
 import { LedgerImportStep } from "@/domains/portfolio/components/ImportWallet/Ledger/LedgerImportStep";
 import { WalletData, WalletImportMethod } from "@/app/lib/profiles/wallet.enum";
 import { useEnvironmentContext } from "@/app/contexts";
+import { SelectAccountStep } from "@/domains/portfolio/components/ImportWallet/HDWallet/SelectAccountStep";
 
 export const HDWalletTabs = ({
 	onClickEditWalletName,
@@ -35,6 +36,14 @@ export const HDWalletTabs = ({
 
 	const navigate = useNavigate();
 	const [isImporting, setIsImporting] = useState(false);
+
+	const existingHDWallets = useMemo(() => {
+		return activeProfile.wallets().values()
+			.filter((wallet) => wallet.isHDWallet())
+			.map((wallet) => wallet.address());
+	}, [activeProfile]);
+
+	const hasExistingHDWallets = existingHDWallets.length > 0;
 
 	const { formState, handleSubmit, getValues, register, unregister } = useFormContext();
 	const { isValid, isSubmitting, isDirty } = formState;
@@ -103,6 +112,12 @@ export const HDWalletTabs = ({
 		isValid,
 	]);
 
+	useEffect(() => {
+		if (!hasExistingHDWallets) {
+			setActiveTab(HDWalletTabStep.EnterMnemonicStep);
+		}
+	}, [hasExistingHDWallets]);
+
 	useKeydown("Enter", (event: KeyboardEvent) => {
 		const target = event.target as Element;
 		const isComponentChild = target.closest("#HDWalletTabs") !== null || target.tagName === "BODY";
@@ -158,6 +173,11 @@ export const HDWalletTabs = ({
 				prev--;
 			}
 
+			if (prev === HDWalletTabStep.SelectAccountStep && !hasExistingHDWallets) {
+				onBack?.();
+				return;
+			}
+
 			setActiveTab(prev);
 			onStepChange?.(prev);
 			return;
@@ -177,7 +197,7 @@ export const HDWalletTabs = ({
 					<div data-testid="HDWalletTabs--child" className="h-full">
 						<div className="h-full">
 							<TabPanel tabId={HDWalletTabStep.SelectAccountStep}>
-								// select or import new HD wallet
+								<SelectAccountStep network={activeNetwork} profile={activeProfile} />
 							</TabPanel>
 
 							<TabPanel tabId={HDWalletTabStep.EnterMnemonicStep}>
